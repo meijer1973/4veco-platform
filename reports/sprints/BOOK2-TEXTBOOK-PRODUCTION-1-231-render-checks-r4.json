@@ -1,0 +1,940 @@
+{
+  "paragraph": "2.3.1",
+  "manifest": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r4.json",
+  "manifest_raw_sha256": "9ef2c70ed3960d2551d9371182a071426280514ae4234abf5ae95b12a6e57fbc",
+  "status": "PASS",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pages": [
+        {
+          "page": 1,
+          "text_characters": 1503,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 2,
+          "text_characters": 1221,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 3,
+          "text_characters": 817,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 4,
+          "text_characters": 771,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 5,
+          "text_characters": 839,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 6,
+          "text_characters": 1700,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 7,
+          "text_characters": 737,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        },
+        {
+          "page": 8,
+          "text_characters": 1499,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 9,
+          "text_characters": 812,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 10,
+          "text_characters": 767,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 11,
+          "text_characters": 916,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        },
+        {
+          "page": 12,
+          "text_characters": 1487,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 13,
+          "text_characters": 1890,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 14,
+          "text_characters": 320,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "caption": "Figuur 1. Deelnemers 1, 2 en 3 kopen. Hun verschillen met de prijs zijn 8, 4 en 0 euro; samen is dat � 12 consumentensurplus. Deelnemer 4 koopt niet en telt niet mee.",
+          "src": "_assets/2.3.1_fig_1.svg",
+          "stem": "2.3.1_fig_1",
+          "alt": "Betalingsbereidheid en prijs van vier workshopdeelnemers."
+        },
+        {
+          "caption": "Figuur 2. De assen en twee snijpunten staan klaar: (0, 40) en (80, 0). De horizontale schaal telt kaartjes; de verticale schaal geeft euro per kaartje aan.",
+          "src": "_assets/2.3.1_fig_2.svg",
+          "stem": "2.3.1_fig_2",
+          "alt": "Assen en snijpunten van de vraag naar toegang tot de boekenbeurs."
+        },
+        {
+          "caption": "Figuur 3. Verbind de snijpunten tot de vraaglijn en voeg P = 10 toe. De hulplijn vanuit (60, 10) wijst Qd = 60 aan. Dit is een uitkomst bij een gegeven prijs.",
+          "src": "_assets/2.3.1_fig_3.svg",
+          "stem": "2.3.1_fig_3",
+          "alt": "Vraaglijn en gegeven prijs van toegang tot de boekenbeurs."
+        },
+        {
+          "caption": "Figuur 4. De gearceerde driehoek ligt boven P = 10 en onder de vraaglijn, van Q = 0 tot Q = 60. De rechthoek eronder is de gezamenlijke betaling. Beide bedragen hebben een andere betekenis.",
+          "src": "_assets/2.3.1_fig_4.svg",
+          "stem": "2.3.1_fig_4",
+          "alt": "Consumentensurplus boven de prijslijn van de boekenbeurs."
+        },
+        {
+          "caption": "Museum: de vraaglijn loopt door (0, 30) en (30, 0). Bij de gegeven prijs 10 worden 20 kaartjes verkocht. De gearceerde driehoek boven de prijslijn is het consumentensurplus.",
+          "src": "_assets/2.3.1_we_1.svg",
+          "stem": "2.3.1_we_1",
+          "alt": "Vraaglijn en consumentensurplus van museumbezoekers."
+        },
+        {
+          "caption": "Aquarium: de vraaglijn en de gegeven prijslijn zijn getekend. Het snijpunt is (32, 8). Het consumentensurplus is nog niet gearceerd.",
+          "src": "_assets/2.3.1_ex_1.svg",
+          "stem": "2.3.1_ex_1",
+          "alt": "Vraaglijn en gegeven prijs van aquariumkaartjes."
+        },
+        {
+          "caption": "Tuintour: de gegeven prijs is 10 en de gevraagde hoeveelheid 40. De gearceerde driehoek heeft een horizontale basis van 40 kaartjes en een loodrechte hoogte van 20 euro per kaartje.",
+          "src": "_assets/2.3.1_ex_2.svg",
+          "stem": "2.3.1_ex_2",
+          "alt": "Vraaglijn met prijs, hoeveelheid, basis en hoogte van de tuintour."
+        },
+        {
+          "caption": "Klimkennismaking: alleen de assen en de vraaglijn staan klaar. De prijslijn en het surplusgebied voeg je zelf toe.",
+          "src": "_assets/2.3.1_ex_3.svg",
+          "stem": "2.3.1_ex_3",
+          "alt": "Assen en vraaglijn van een klimkennismaking zonder prijslijn."
+        }
+      ],
+      "image_placements": [
+        {
+          "page": 2,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 3,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 4,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 5,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 7,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 9,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 10,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 11,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        }
+      ],
+      "generation_manifest": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-13a1291b1bd0-r4\\manifest.json",
+      "generation_manifest_raw_sha256": "c307a6b73b08ffbfc73c5a447a4bf9787b8c9884138395389427a709b5c16b08"
+    },
+    {
+      "kind": "opgaven",
+      "pages": [
+        {
+          "page": 1,
+          "text_characters": 1171,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 2,
+          "text_characters": 746,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        },
+        {
+          "page": 3,
+          "text_characters": 1508,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 4,
+          "text_characters": 821,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 5,
+          "text_characters": 775,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 6,
+          "text_characters": 924,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        },
+        {
+          "page": 7,
+          "text_characters": 1495,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 8,
+          "text_characters": 1898,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        },
+        {
+          "page": 9,
+          "text_characters": 328,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "caption": "Museum: de vraaglijn loopt door (0, 30) en (30, 0). Bij de gegeven prijs 10 worden 20 kaartjes verkocht. De gearceerde driehoek boven de prijslijn is het consumentensurplus.",
+          "src": "_assets/2.3.1_we_1.svg",
+          "stem": "2.3.1_we_1",
+          "alt": "Vraaglijn en consumentensurplus van museumbezoekers."
+        },
+        {
+          "caption": "Aquarium: de vraaglijn en de gegeven prijslijn zijn getekend. Het snijpunt is (32, 8). Het consumentensurplus is nog niet gearceerd.",
+          "src": "_assets/2.3.1_ex_1.svg",
+          "stem": "2.3.1_ex_1",
+          "alt": "Vraaglijn en gegeven prijs van aquariumkaartjes."
+        },
+        {
+          "caption": "Tuintour: de gegeven prijs is 10 en de gevraagde hoeveelheid 40. De gearceerde driehoek heeft een horizontale basis van 40 kaartjes en een loodrechte hoogte van 20 euro per kaartje.",
+          "src": "_assets/2.3.1_ex_2.svg",
+          "stem": "2.3.1_ex_2",
+          "alt": "Vraaglijn met prijs, hoeveelheid, basis en hoogte van de tuintour."
+        },
+        {
+          "caption": "Klimkennismaking: alleen de assen en de vraaglijn staan klaar. De prijslijn en het surplusgebied voeg je zelf toe.",
+          "src": "_assets/2.3.1_ex_3.svg",
+          "stem": "2.3.1_ex_3",
+          "alt": "Assen en vraaglijn van een klimkennismaking zonder prijslijn."
+        }
+      ],
+      "image_placements": [
+        {
+          "page": 2,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 4,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 5,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 6,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        }
+      ],
+      "generation_manifest": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-88ac44bb55b2-r4\\manifest.json",
+      "generation_manifest_raw_sha256": "7f9c6652a9dad2c3707b441a35541d0e04685af2738fa047d604f87abea932d0"
+    },
+    {
+      "kind": "antwoorden",
+      "pages": [
+        {
+          "page": 1,
+          "text_characters": 1559,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        },
+        {
+          "page": 2,
+          "text_characters": 929,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        },
+        {
+          "page": 3,
+          "text_characters": 983,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        },
+        {
+          "page": 4,
+          "text_characters": 938,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        },
+        {
+          "page": 5,
+          "text_characters": 1077,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        },
+        {
+          "page": 6,
+          "text_characters": 1173,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        },
+        {
+          "page": 7,
+          "text_characters": 1003,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        },
+        {
+          "page": 8,
+          "text_characters": 1089,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        },
+        {
+          "page": 9,
+          "text_characters": 1209,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        },
+        {
+          "page": 10,
+          "text_characters": 1852,
+          "minimum_text_pt": 12,
+          "fonts": [
+            "Arial",
+            "Arial-Bold",
+            "Arial-Italic"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "caption": "Aquarium: arceer de driehoek met hoekpunten (0, 24), (0, 8) en (32, 8). Basis 32 en hoogte 16 geven � 256 consumentensurplus.",
+          "src": "_assets/2.3.1_ex_4.svg",
+          "stem": "2.3.1_ex_4",
+          "alt": "Consumentensurplus van aquariumbezoekers bij acht euro."
+        },
+        {
+          "caption": "Tuintour: de driehoek tussen betalingsbereidheid en prijs heeft hoekpunten (0, 30), (0, 10) en (40, 10). De oppervlakte is � 400.",
+          "src": "_assets/2.3.1_ex_5.svg",
+          "stem": "2.3.1_ex_5",
+          "alt": "Consumentensurplus van deelnemers aan de tuintour."
+        },
+        {
+          "caption": "Klimkennismaking: de toegevoegde prijslijn P = 12 snijdt de vraaglijn bij (24, 12). De gearceerde driehoek is � 144 consumentensurplus.",
+          "src": "_assets/2.3.1_ex_6.svg",
+          "stem": "2.3.1_ex_6",
+          "alt": "Consumentensurplus van deelnemers aan de klimkennismaking."
+        },
+        {
+          "caption": "Bordspelmiddag: de vraaglijn en P = 5 kruisen bij (30, 5). De driehoek boven de prijs, tot aan de vraaglijn, geeft � 225 voordeel voor de kopers samen.",
+          "src": "_assets/2.3.1_ex_7.svg",
+          "stem": "2.3.1_ex_7",
+          "alt": "Vraaglijn en consumentensurplus van het bordspelmiddagbezoek."
+        },
+        {
+          "caption": "Skateclinic: de vraaglijn loopt van (0, 36) naar (72, 0). Bij (48, 12) eindigt het gearceerde surplusgebied; de oppervlakte is � 576.",
+          "src": "_assets/2.3.1_ex_8.svg",
+          "stem": "2.3.1_ex_8",
+          "alt": "Vraaglijn en consumentensurplus van deelnemers aan de skateclinic."
+        },
+        {
+          "caption": "Taalcaf�: het snijpunt (28, 14) begrenst het consumentensurplus. De gearceerde driehoek is � 196; de afzonderlijke betalingsrechthoek is � 392.",
+          "src": "_assets/2.3.1_ex_9.svg",
+          "stem": "2.3.1_ex_9",
+          "alt": "Vraaglijn en consumentensurplus van bezoekers aan het taalcaf�."
+        },
+        {
+          "caption": "Concertkaartjes: de vraaglijn loopt door (0, 50) en (100, 0), en P = 20 snijdt haar in (60, 20). De gearceerde driehoek boven de prijslijn is het consumentensurplus.",
+          "src": "_assets/2.3.1_ex_10.svg",
+          "stem": "2.3.1_ex_10",
+          "alt": "Vraaglijn en consumentensurplus van kopers van concertkaartjes."
+        }
+      ],
+      "image_placements": [
+        {
+          "page": 2,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 3,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 4,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 5,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 6,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 7,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        },
+        {
+          "page": 8,
+          "width_pt": 470.5511811023622,
+          "height_pt": 352.9133858267717,
+          "source_text_print_pt": 15.685039370078739
+        }
+      ],
+      "generation_manifest": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r4\\manifest.json",
+      "generation_manifest_raw_sha256": "6c04083c23eb506dd541d533190a865b8d98bca34d5844d9a3cb72cef4f9613b"
+    }
+  ],
+  "zip_archives": [
+    {
+      "kind": "paragraaf",
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus � paragraaf.zip",
+      "sha256": "edce55aed03969d8409b5af3d1225ecf50bc748fbc096da8a4f9b326d6b0e411",
+      "crc_test": "PASS",
+      "exact_safe_unique_membership": true,
+      "members": [
+        {
+          "name": "2.3.1 Consumentensurplus � paragraaf.html",
+          "size": 1941439,
+          "crc32": "b68faad1",
+          "sha256": "c3b3e3cc09d4b2e0ba9c326dabf60114378dc22e51e659affcdbbfd19392f5bd",
+          "bytes_match_file": true
+        },
+        {
+          "name": "2.3.1 Consumentensurplus � paragraaf.md",
+          "size": 17128,
+          "crc32": "f16f519e",
+          "sha256": "23a1f47f67f1ecbfbd8915bb281b537855d89ca31c7cf163ac7549575023d043",
+          "bytes_match_file": true
+        },
+        {
+          "name": "2.3.1 Consumentensurplus � paragraaf.pdf",
+          "size": 1142545,
+          "crc32": "31fe7f53",
+          "sha256": "13a1291b1bd0bc80b266b1b9c4c16cdcf03b92c4ecbe5a72f96940e364513a8d",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_1.png",
+          "size": 180461,
+          "crc32": "bbc16c28",
+          "sha256": "23d31f28e469b1a0f4b0432ba013dc724102a8062654d72d8e00d26bbb99e1d2",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_1.svg",
+          "size": 5839,
+          "crc32": "2a4f15ef",
+          "sha256": "60f91cf5fd9da887c840f9b02dbd99c6e9541800354643a7756370b2e258b660",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_2.png",
+          "size": 197326,
+          "crc32": "fe0ba664",
+          "sha256": "dcc9c5f89d17f3b53019f4215e643039471db1df0fa6197ba468d5c17c8e05e4",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_2.svg",
+          "size": 6296,
+          "crc32": "301d1bab",
+          "sha256": "2562f1ce54bb06b08ed1dbb5750ab7642e08b3f47155e0c6df556b362fc4ef50",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_3.png",
+          "size": 176945,
+          "crc32": "ff7b7d0c",
+          "sha256": "0e68e9d0014f3d5ea7f572f4712f81bda466fd64373b1fd5bfb3625b54e49216",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_3.svg",
+          "size": 5370,
+          "crc32": "1672a545",
+          "sha256": "7d2fcef8db60098d53ee1434d09ba57bdff6125e0f560a1050d6459eaf86c23f",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_1.png",
+          "size": 170633,
+          "crc32": "3bb602e9",
+          "sha256": "08f5a184ae07b31b0e383ae9be7efd621cabc252c5aaf6753307ef981abf7d60",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_1.svg",
+          "size": 5393,
+          "crc32": "aeabf2e5",
+          "sha256": "a6ac9ac39a7e60600c87b5851f3a42018e05e61eea28bb1cf5ba221cb7f91cc9",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_2.png",
+          "size": 144493,
+          "crc32": "3362c25e",
+          "sha256": "cc5447843fcf0c6334bcc4b6733942b6299424572b4bb0a4343462c7bed257f7",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_2.svg",
+          "size": 3984,
+          "crc32": "b50e3ccf",
+          "sha256": "5eec646f0a442692a769dcffacaf9f1275539ab90aa5146b52c5c18f447246a1",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_3.png",
+          "size": 179227,
+          "crc32": "ef1988f7",
+          "sha256": "94dc9f593e7533189d3f0b4afae992079eaa349f4c29fd4d7f0f1ba60e41f3a9",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_3.svg",
+          "size": 4696,
+          "crc32": "16124b0d",
+          "sha256": "d44e452653c0c6e5817b8b7cca913dc3e0d61de2426244c90357064366bcf76d",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_4.png",
+          "size": 196409,
+          "crc32": "7b3aa159",
+          "sha256": "e0b85f0c26d7434d9e1b3da8a60ffce94e22665dccf4b304192a2d2d12a83065",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_4.svg",
+          "size": 5355,
+          "crc32": "4c0aabe3",
+          "sha256": "f04a1051b0ebdcf4e49aeefa3d11889e2d019bc1a0bca3c9439a8c10f8eb5aef",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_we_1.png",
+          "size": 193731,
+          "crc32": "81d9e262",
+          "sha256": "8bf4724ae62323bb209059f52b28ac733d9b9274f7347f6f7a35ea076d89ef4e",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_we_1.svg",
+          "size": 6252,
+          "crc32": "56eb6bf3",
+          "sha256": "587fddfd013c9c29d943ed528b9a697e3f0043fa73c57944bfc2a428500bd38f",
+          "bytes_match_file": true
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus � opgaven.zip",
+      "sha256": "eacd1f1a97d286524e489f893ea1d2ca1c10766cfef1b5b51bdf3a33e1f618d9",
+      "crc_test": "PASS",
+      "exact_safe_unique_membership": true,
+      "members": [
+        {
+          "name": "2.3.1 Consumentensurplus � opgaven.html",
+          "size": 1012356,
+          "crc32": "88aeb56d",
+          "sha256": "430f2d2a47f44caf79690d816d28d49b3ed853f75254b686fed800e0a24f9c43",
+          "bytes_match_file": true
+        },
+        {
+          "name": "2.3.1 Consumentensurplus � opgaven.md",
+          "size": 10212,
+          "crc32": "07e64781",
+          "sha256": "7398d837c5d306c9b80d32bbb19acbfd259675e88be9246ee7dd44e20d1448d7",
+          "bytes_match_file": true
+        },
+        {
+          "name": "2.3.1 Consumentensurplus � opgaven.pdf",
+          "size": 632136,
+          "crc32": "e2dfeb6e",
+          "sha256": "88ac44bb55b23f136fec699bc2486c503834011cc9c031da29097debba86963c",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_1.png",
+          "size": 180461,
+          "crc32": "bbc16c28",
+          "sha256": "23d31f28e469b1a0f4b0432ba013dc724102a8062654d72d8e00d26bbb99e1d2",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_1.svg",
+          "size": 5839,
+          "crc32": "2a4f15ef",
+          "sha256": "60f91cf5fd9da887c840f9b02dbd99c6e9541800354643a7756370b2e258b660",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_2.png",
+          "size": 197326,
+          "crc32": "fe0ba664",
+          "sha256": "dcc9c5f89d17f3b53019f4215e643039471db1df0fa6197ba468d5c17c8e05e4",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_2.svg",
+          "size": 6296,
+          "crc32": "301d1bab",
+          "sha256": "2562f1ce54bb06b08ed1dbb5750ab7642e08b3f47155e0c6df556b362fc4ef50",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_3.png",
+          "size": 176945,
+          "crc32": "ff7b7d0c",
+          "sha256": "0e68e9d0014f3d5ea7f572f4712f81bda466fd64373b1fd5bfb3625b54e49216",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_3.svg",
+          "size": 5370,
+          "crc32": "1672a545",
+          "sha256": "7d2fcef8db60098d53ee1434d09ba57bdff6125e0f560a1050d6459eaf86c23f",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_we_1.png",
+          "size": 193731,
+          "crc32": "81d9e262",
+          "sha256": "8bf4724ae62323bb209059f52b28ac733d9b9274f7347f6f7a35ea076d89ef4e",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_we_1.svg",
+          "size": 6252,
+          "crc32": "56eb6bf3",
+          "sha256": "587fddfd013c9c29d943ed528b9a697e3f0043fa73c57944bfc2a428500bd38f",
+          "bytes_match_file": true
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus � antwoorden.zip",
+      "sha256": "ca051aa7055bde0ea31a49840bb74238cc13e75879c7b2ca3056c161b20107ca",
+      "crc_test": "PASS",
+      "exact_safe_unique_membership": true,
+      "members": [
+        {
+          "name": "2.3.1 Consumentensurplus � antwoorden.html",
+          "size": 1807480,
+          "crc32": "7f153f1f",
+          "sha256": "ed5a2f28756625f5a8d3e81724291d8f11a784f9a9689d1b50d86837f732132c",
+          "bytes_match_file": true
+        },
+        {
+          "name": "2.3.1 Consumentensurplus � antwoorden.md",
+          "size": 13132,
+          "crc32": "4d148aa5",
+          "sha256": "0a1d4b31690f1a053b7180136d387df524ff9ae0df355db273ca32443811d083",
+          "bytes_match_file": true
+        },
+        {
+          "name": "2.3.1 Consumentensurplus � antwoorden.pdf",
+          "size": 1128772,
+          "crc32": "1fe36b2f",
+          "sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_10.png",
+          "size": 195781,
+          "crc32": "49128e37",
+          "sha256": "ffbae805cee07ef35aa27eda49e381d0cddf610b8c8bdc2ade663d48a90cea63",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_10.svg",
+          "size": 5632,
+          "crc32": "4523afe7",
+          "sha256": "5e69ddb9e6d78ec600f2b1c4c707816573ca2e7e920d794a2ed78517c49d730e",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_4.png",
+          "size": 190622,
+          "crc32": "f7d08a5a",
+          "sha256": "915d4932e017a9450eb4fa107555ff5118d9fc0a1fd7f6e18047aa044720901d",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_4.svg",
+          "size": 6254,
+          "crc32": "e5ed6a6a",
+          "sha256": "6aebb9c03b9c09f2525e3173ca94f1630b4adfdec766ee9920da48a6ee1bfe81",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_5.png",
+          "size": 191910,
+          "crc32": "4904a621",
+          "sha256": "348ddd3794915072aebb07e9377352b0b4c6f9c41805c6c8b36f86f989e42fd5",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_5.svg",
+          "size": 6262,
+          "crc32": "18ced720",
+          "sha256": "cf72ed36989023a14db7ba43ca863e72bbd931d2949f2bdeadc6b1d24a8178b9",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_6.png",
+          "size": 190890,
+          "crc32": "7bd20d5d",
+          "sha256": "f13c25813b98e6db030f148e8235e138c1cea23e60a7b32f467724be8e8697ec",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_6.svg",
+          "size": 6250,
+          "crc32": "199da63f",
+          "sha256": "5f82afe966599380d37a2a1e3b5df2c00b5bf44efcd68649112f22faf6a8bd75",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_7.png",
+          "size": 189195,
+          "crc32": "0ff16436",
+          "sha256": "211111d91570da80f535c3374abc2a0ce1b9dde02ffb5415ed4568cf8e3fce4a",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_7.svg",
+          "size": 5114,
+          "crc32": "65743287",
+          "sha256": "76a740caeb741b93ea8fd2e3c9373c3addd0a153c8f416b796865675d6a21aea",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_8.png",
+          "size": 195346,
+          "crc32": "9e4bdc0b",
+          "sha256": "b7388f6d6e8d2136789ed64409bcc1681697e1df4cb4bef39106792658dfbe29",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_8.svg",
+          "size": 6271,
+          "crc32": "ce4d30d6",
+          "sha256": "b10efc6da3a045d7b8265bb5a1cd7f52f84ad7f66a91d91002d40ec2eb2684b8",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_9.png",
+          "size": 188384,
+          "crc32": "d0dc4041",
+          "sha256": "e5b1e54f4edfd441642f7898df8336211ab160b80c9ae913eb1a66a59be6bb2d",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_9.svg",
+          "size": 5321,
+          "crc32": "0b814b5e",
+          "sha256": "450e9ac8df21d693a25516b585b6b4f100f91465c1c0ae7419a0460c78397bd3",
+          "bytes_match_file": true
+        }
+      ]
+    }
+  ],
+  "all_generation_proof": "IMMUTABLE_PENDING",
+  "personal_visual_inspection": "NOT_SUPPLIED_BY_THIS_SCRIPT"
+}

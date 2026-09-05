@@ -1,0 +1,831 @@
+{
+  "paragraph": "2.3.1",
+  "kind": "BUILDER_PERSONAL_INSPECTION_NOT_INDEPENDENT_QC",
+  "inspector": "paragraph_231_builder",
+  "date": "2026-09-06",
+  "status": "PERSONALLY_INSPECTED_NO_REMAINING_VISIBLE_DEFECT_FOUND",
+  "independent_acceptance": "PENDING_NOT_ASSERTED",
+  "student_use_approval": "NOT_ASSERTED",
+  "method": "All 33 final r8 individual color pages and all 33 individual grayscale pages viewed using view_image at full-page normal reading scale (1241 x 1754, 150 dpi), not merely contact sheets. All 15 actual PNG figures personally viewed individually. Source SVG geometry/title/ink-box checks corroborate but do not substitute for viewing.",
+  "build_manifest": {
+    "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r8.json",
+    "sha256": "c771e115b70cfdf226b230ce890949adfe22a779701c14931033c3120cabdbb0",
+    "inspection_status": "PENDING_UNCHANGED"
+  },
+  "approved_plan_sha256_canonical_lf": "60d6a743681e1361478395a591b7c82e44acf8c4587a93c4cc842b036cf017b1",
+  "target_record_sha256": "a385e00b2fffea168089c32f796668e51ae45cb325504644392f79b20bde8571",
+  "input_sources": [
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\b2_231.py",
+      "sha256": "000459778d41ca03ab338117bcf2f6ae877c9c810230580944c6596bb3cdce8b"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\theory.md",
+      "sha256": "f6e32d2c162f1a1ea4d39c74f700f999c080bce605c1c5ca69cb71871f381b5f"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\exercises.md",
+      "sha256": "cb674c0ee320efb652f275db8c596a333be4097e677bbf00a7f0fa1b51f9b06b"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\answers.md",
+      "sha256": "facfc83ca80901e472b9d423326a397b4076e38ae9888aaf3700294ae6e99b48"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\target-answers.md",
+      "sha256": "10038195b37649c1c0ccc4b75881bf107f0edc4946fe7a9ba68913dae64ea0e0"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\assets.js",
+      "sha256": "5014b2dfd481dfba0a3885ee7746095c4216200879a53604749cd7bcbe812acf"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\test_source.py",
+      "sha256": "f9babbafdf97f69bf3bd52dca4ae39a91c71aa4aa61c46beb2eeede286875a17"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\check_render.py",
+      "sha256": "1b72a04d560fe72463898c472926b724aa78e9961f4dac9aeaac11b8816715a4"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\verify_rebuild.py",
+      "sha256": "4cae7995d9364de0993bf04d64934298027be96ae15567f97985525e4e32d04b"
+    }
+  ],
+  "thin_wrapper": {
+    "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\build_pdf.py",
+    "sha256": "d03c82f4371cd9f72d036e613ab58a81ad773b23579e5a2860359a445be37ee2"
+  },
+  "all42_raw_artifacts": {
+    "2.3.1 Consumentensurplus – paragraaf.md": "eb5c7c163099bd0ae7f6be44edf53e885de6ce78e4f37e647408e2c06aba5544",
+    "2.3.1 Consumentensurplus – paragraaf.html": "86077ee832f3ce9043ccf0077feb037e34974fbb248f465455f465e77cf4db68",
+    "2.3.1 Consumentensurplus – paragraaf.pdf": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+    "2.3.1 Consumentensurplus – paragraaf.zip": "cadb533baaed316964f354c3fcab330f572b33cb570d3facc137378f1d0936ac",
+    "2.3.1 Consumentensurplus – opgaven.md": "70669f6ed10a7465aea37f5f2298dd17708f6430a975fe32187135701122529e",
+    "2.3.1 Consumentensurplus – opgaven.html": "cd689d24c0f1b74af9085ce7de2cefac1139603dd21c7085a54b45c435c64055",
+    "2.3.1 Consumentensurplus – opgaven.pdf": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+    "2.3.1 Consumentensurplus – opgaven.zip": "fff819d917a73c8d6ba2314a49e971e9f1939f0b4478daa5b76e462e5fedb46d",
+    "2.3.1 Consumentensurplus – antwoorden.md": "0a1d4b31690f1a053b7180136d387df524ff9ae0df355db273ca32443811d083",
+    "2.3.1 Consumentensurplus – antwoorden.html": "ed5a2f28756625f5a8d3e81724291d8f11a784f9a9689d1b50d86837f732132c",
+    "2.3.1 Consumentensurplus – antwoorden.pdf": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+    "2.3.1 Consumentensurplus – antwoorden.zip": "ca051aa7055bde0ea31a49840bb74238cc13e75879c7b2ca3056c161b20107ca",
+    "_assets/2.3.1_fig_1.svg": "a6ac9ac39a7e60600c87b5851f3a42018e05e61eea28bb1cf5ba221cb7f91cc9",
+    "_assets/2.3.1_fig_1.png": "08f5a184ae07b31b0e383ae9be7efd621cabc252c5aaf6753307ef981abf7d60",
+    "_assets/2.3.1_fig_2.svg": "5eec646f0a442692a769dcffacaf9f1275539ab90aa5146b52c5c18f447246a1",
+    "_assets/2.3.1_fig_2.png": "cc5447843fcf0c6334bcc4b6733942b6299424572b4bb0a4343462c7bed257f7",
+    "_assets/2.3.1_fig_3.svg": "d44e452653c0c6e5817b8b7cca913dc3e0d61de2426244c90357064366bcf76d",
+    "_assets/2.3.1_fig_3.png": "94dc9f593e7533189d3f0b4afae992079eaa349f4c29fd4d7f0f1ba60e41f3a9",
+    "_assets/2.3.1_fig_4.svg": "f04a1051b0ebdcf4e49aeefa3d11889e2d019bc1a0bca3c9439a8c10f8eb5aef",
+    "_assets/2.3.1_fig_4.png": "e0b85f0c26d7434d9e1b3da8a60ffce94e22665dccf4b304192a2d2d12a83065",
+    "_assets/2.3.1_we_1.svg": "587fddfd013c9c29d943ed528b9a697e3f0043fa73c57944bfc2a428500bd38f",
+    "_assets/2.3.1_we_1.png": "8bf4724ae62323bb209059f52b28ac733d9b9274f7347f6f7a35ea076d89ef4e",
+    "_assets/2.3.1_ex_1.svg": "60f91cf5fd9da887c840f9b02dbd99c6e9541800354643a7756370b2e258b660",
+    "_assets/2.3.1_ex_1.png": "23d31f28e469b1a0f4b0432ba013dc724102a8062654d72d8e00d26bbb99e1d2",
+    "_assets/2.3.1_ex_2.svg": "2562f1ce54bb06b08ed1dbb5750ab7642e08b3f47155e0c6df556b362fc4ef50",
+    "_assets/2.3.1_ex_2.png": "dcc9c5f89d17f3b53019f4215e643039471db1df0fa6197ba468d5c17c8e05e4",
+    "_assets/2.3.1_ex_3.svg": "7d2fcef8db60098d53ee1434d09ba57bdff6125e0f560a1050d6459eaf86c23f",
+    "_assets/2.3.1_ex_3.png": "0e68e9d0014f3d5ea7f572f4712f81bda466fd64373b1fd5bfb3625b54e49216",
+    "_assets/2.3.1_ex_4.svg": "6aebb9c03b9c09f2525e3173ca94f1630b4adfdec766ee9920da48a6ee1bfe81",
+    "_assets/2.3.1_ex_4.png": "915d4932e017a9450eb4fa107555ff5118d9fc0a1fd7f6e18047aa044720901d",
+    "_assets/2.3.1_ex_5.svg": "cf72ed36989023a14db7ba43ca863e72bbd931d2949f2bdeadc6b1d24a8178b9",
+    "_assets/2.3.1_ex_5.png": "348ddd3794915072aebb07e9377352b0b4c6f9c41805c6c8b36f86f989e42fd5",
+    "_assets/2.3.1_ex_6.svg": "5f82afe966599380d37a2a1e3b5df2c00b5bf44efcd68649112f22faf6a8bd75",
+    "_assets/2.3.1_ex_6.png": "f13c25813b98e6db030f148e8235e138c1cea23e60a7b32f467724be8e8697ec",
+    "_assets/2.3.1_ex_7.svg": "76a740caeb741b93ea8fd2e3c9373c3addd0a153c8f416b796865675d6a21aea",
+    "_assets/2.3.1_ex_7.png": "211111d91570da80f535c3374abc2a0ce1b9dde02ffb5415ed4568cf8e3fce4a",
+    "_assets/2.3.1_ex_8.svg": "b10efc6da3a045d7b8265bb5a1cd7f52f84ad7f66a91d91002d40ec2eb2684b8",
+    "_assets/2.3.1_ex_8.png": "b7388f6d6e8d2136789ed64409bcc1681697e1df4cb4bef39106792658dfbe29",
+    "_assets/2.3.1_ex_9.svg": "450e9ac8df21d693a25516b585b6b4f100f91465c1c0ae7419a0460c78397bd3",
+    "_assets/2.3.1_ex_9.png": "e5b1e54f4edfd441642f7898df8336211ab160b80c9ae913eb1a66a59be6bb2d",
+    "_assets/2.3.1_ex_10.svg": "5e69ddb9e6d78ec600f2b1c4c707816573ca2e7e920d794a2ed78517c49d730e",
+    "_assets/2.3.1_ex_10.png": "ffbae805cee07ef35aa27eda49e381d0cddf610b8c8bdc2ade663d48a90cea63"
+  },
+  "native_pending_manifests": {
+    "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\manifest.json": "a639a27f7c7673e711935241556468a0a3bfeb038ac0a6f44822d46fe619e1a3",
+    "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r8\\manifest.json": "067b452b490205243e7f4400913256dc2f2e66a84c9fb6916c138d4993671ad9",
+    "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r8\\manifest.json": "07504ca624c5671a485b6f2504be7858bae902f2354756af509042c5160fe735"
+  },
+  "color_pages": [
+    {
+      "kind": "paragraaf",
+      "page": 1,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-001.png",
+      "sha256": "85eda8489f3983841a45533a1f4a6a2953ec39120c0e9d49f3dae71d31069927",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 2,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-002.png",
+      "sha256": "419c494bf103487d0a0c7412979e3b10cb3c3d851fb9962d0cd99e42cfa2c427",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 3,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-003.png",
+      "sha256": "7d0e1457d2cd41bb7c17340bb1461d8cd069c5642a579883362e56a3e56fde41",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 4,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-004.png",
+      "sha256": "4e8afc9f7bb6c17f4889bdc68fbbe91c09061ca1ab2db575127e12fbd6fd7a42",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 5,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-005.png",
+      "sha256": "44a803d3866ef95a81c24aece15365bc931bd123784abbd1586c845e6a3eb147",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 6,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-006.png",
+      "sha256": "75b1f419622fb4adfdf1e48b5d75b2a21f7c716003b73c374a164f52dd30c289",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 7,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-007.png",
+      "sha256": "6848fb7b6083976034ce1e7b0d40574aa753c1d2e2f378a2c40dd57c306e340b",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 8,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-008.png",
+      "sha256": "f55c0517cf6c6062e8afbff37f7a93b4709ac4756a0bba8898ab7e734fcb5bdb",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 9,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-009.png",
+      "sha256": "a397ad565f3bfb232ef313e360312282517cb823310dc7ef18558b827b00ef3f",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 10,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-010.png",
+      "sha256": "4e36215ba25088439b1dce2c0672c6afa59007ccd2678c6cfcc4895e8a59503f",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 11,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-011.png",
+      "sha256": "f1835f479cf77c4b2319a1511354d21e6de4341a9c3516a3d0d5f9f8df861fbd",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 12,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-012.png",
+      "sha256": "1272968c856fe87f443004a1ce9776ed72199c0ca93ca9965e0c43c0202f7892",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 13,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-013.png",
+      "sha256": "2c04fd299497cdd5dbfa99cf2152f539608e5878b1dd2ae474747622fe3591fa",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 14,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\pages\\page-014.png",
+      "sha256": "4a475707b3924190b04b13ba7974cdd88471d4c639f252e2e33b1fef7c30364a",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "opgaven",
+      "page": 1,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r8\\pages\\page-001.png",
+      "sha256": "a86532b046d30704688c756d50c7cd3bf028d2c3afe5ec5a75eeb4923a03ad8d",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "opgaven",
+      "page": 2,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r8\\pages\\page-002.png",
+      "sha256": "5679e6463e429adf744510ff48927fda4875ca96bdd9b949229b3b1d06c35baa",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "opgaven",
+      "page": 3,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r8\\pages\\page-003.png",
+      "sha256": "16d3a459e2133f58e4ba84820bd6496986e467eba8fa945b5fc2b8267d5b0204",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "opgaven",
+      "page": 4,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r8\\pages\\page-004.png",
+      "sha256": "3c964cb90c4aebfa152b9385a61c17497922ea06e8fa101fb5bde20ceb28c8a3",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "opgaven",
+      "page": 5,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r8\\pages\\page-005.png",
+      "sha256": "c4e695f5b67a7cbe178d05248cdb77914d6514f5683ffec74cd9aacb1f9c9188",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "opgaven",
+      "page": 6,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r8\\pages\\page-006.png",
+      "sha256": "44809b754e454521e93e2855588ee42038b365b9e03367baa716cb09e3048ce8",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "opgaven",
+      "page": 7,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r8\\pages\\page-007.png",
+      "sha256": "4871f6be0f7d5c986c98fe97d30052b4a88d076700fa28f8519f41d8f48b2a4a",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "opgaven",
+      "page": 8,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r8\\pages\\page-008.png",
+      "sha256": "7a4fcaec4519ef5476cdad2b29715618370313d7cafafb2a191f6313e44ebc15",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "opgaven",
+      "page": 9,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r8\\pages\\page-009.png",
+      "sha256": "33f937d340e3303b8d861af2fecc9defd1438987ac88ffbe9e3378bb87d7e340",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 1,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r8\\pages\\page-001.png",
+      "sha256": "bde0ee3b81939b245a665d211afe0c7cc87817195185dc5ca544f98e9a07ca8e",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 2,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r8\\pages\\page-002.png",
+      "sha256": "d7a9daef7601306c0d6e3c8e09497071c8922ec795a74941369ce95a03afd0ba",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 3,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r8\\pages\\page-003.png",
+      "sha256": "930cdc1ad36e5c375f04ed082b9a76c07afedf49ff91c8cf66b3f45196d9a632",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 4,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r8\\pages\\page-004.png",
+      "sha256": "d0d5f311553dd45202fff8e89abbee00ba0192d70a8998775ad310275c56fe8c",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 5,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r8\\pages\\page-005.png",
+      "sha256": "7e9f9672ca197b55466dac497ae74c5a2b0679916ed62cdfc7d31a6635d3fb06",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 6,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r8\\pages\\page-006.png",
+      "sha256": "6503c111d31d3d1320526e27fa2f14cc84beeae774da3b3d0b5f3c5698ca5972",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 7,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r8\\pages\\page-007.png",
+      "sha256": "8c158dc066fc1796b9988dde8e13cafe46c1d842df70e80856d8b5fd380bddcc",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 8,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r8\\pages\\page-008.png",
+      "sha256": "5a944678452dc1632162f2875cd420e40211e918119dd85c15af9b17c7b926c9",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 9,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r8\\pages\\page-009.png",
+      "sha256": "bfcbedbd4dd816fdb61ee9bce6c492d17302930e1202c1fd0d39125ce018763d",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 10,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r8\\pages\\page-010.png",
+      "sha256": "cb6fc9558ff416c24510d4a53c81b933b1b1b06c264f0872aab6c9a65cdaf1cb",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Readable text/notation, coherent figure/caption relation, no clipping/overlap or illegible type found."
+    }
+  ],
+  "grayscale_pages": [
+    {
+      "kind": "paragraaf",
+      "page": 1,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-001.png",
+      "sha256": "8ea526985038c46011d637959693491d7a8b409c91f80e96d1552d297c770e4d",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 2,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-002.png",
+      "sha256": "d2285cea0dc17043138e22b25688b6bdcaf2adb22da9cf45b96e736a6f93a0d2",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 3,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-003.png",
+      "sha256": "33c3f3ca32e59e04e17864aaf30cee72a7c01c8fb5cfed9de112e153ca9da3cc",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 4,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-004.png",
+      "sha256": "2e4115588d4c743f4f9837d2991147159550e01baa56a9a8a4f60b93d0f5e51e",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 5,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-005.png",
+      "sha256": "13aa264fad6353b89ab6ab3032ee3b301c2e44e7cc1344cf2c251a4115016dfd",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 6,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-006.png",
+      "sha256": "3b9cea8080a28746444181e3841180d71b52a1271e14f36f7e7b2ba62cb7ee87",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 7,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-007.png",
+      "sha256": "d6e4b6eaa7a0b4521604359aefa3fd27f84a0ccc836a9dbfeff46ac553c713fd",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 8,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-008.png",
+      "sha256": "51824357046f2ae936e87db15bc197d04dfe851bf1263ff248c334837f11bbfe",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 9,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-009.png",
+      "sha256": "0813d242ec72fae797928e314509741d123c58634e9c97c8434f982bcf2068ff",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 10,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-010.png",
+      "sha256": "0691df6f57c7cd4d917e9e520851639c608ec4dfaa081fa74e43c8fc1fd0c939",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 11,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-011.png",
+      "sha256": "b69dfd2c93f9c9fa0bf6303d5d484cab43220c9ca32e2400a11bfbef7399183a",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 12,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-012.png",
+      "sha256": "7638f335af4249ce03951ba1ea2236a2f74255a6eb3145db7403353f150704bb",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 13,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-013.png",
+      "sha256": "bb2330cecd92761d6cb1f52b88d0614372d86fbed5161fba611f692b48babe22",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 14,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\paragraaf\\page-014.png",
+      "sha256": "9411ec6d5b0f6fb68577ab0ce3bdfb1e981163749281204edbae264f8200e353",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "opgaven",
+      "page": 1,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\opgaven\\page-001.png",
+      "sha256": "fb74e7672f7e3811a65f8818a21d7456cfc1f69b9c0e53fedcd623d3119f0005",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "opgaven",
+      "page": 2,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\opgaven\\page-002.png",
+      "sha256": "89345a2d4da77eef1fd0425ba2ade7c209b32117ccb3a2310a35525d9c313fd2",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "opgaven",
+      "page": 3,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\opgaven\\page-003.png",
+      "sha256": "b540e6d7dfdb9970a866a1370e5b69cf69b32ca06a1fa3b6db1f2a2a157da40a",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "opgaven",
+      "page": 4,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\opgaven\\page-004.png",
+      "sha256": "b4b402d368a27c8bc9e7f27be9fcbc48caffa35caccda59abdaee8b6e1103bb1",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "opgaven",
+      "page": 5,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\opgaven\\page-005.png",
+      "sha256": "f78bce7cdf9e42a444cffd1085979512ac83849a104e6f6333edca25e5892949",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "opgaven",
+      "page": 6,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\opgaven\\page-006.png",
+      "sha256": "058dfabde08686854edab46544c95dd936e003b7756acbfcadb4257ee53c2c60",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "opgaven",
+      "page": 7,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\opgaven\\page-007.png",
+      "sha256": "97b487eb7b4df60d58be9fe14c53818b1163857d2225f1c69fcdc404327f8fd8",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "opgaven",
+      "page": 8,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\opgaven\\page-008.png",
+      "sha256": "ad459341dc37de81ab479ce419df817f96f332a1c57655f2dfacd3c636a56510",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "opgaven",
+      "page": 9,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\opgaven\\page-009.png",
+      "sha256": "9e97fe95ec7d34b2e3985b05ef1694badb69d88fa04fc17b08f50b4d9471e03b",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 1,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\antwoorden\\page-001.png",
+      "sha256": "4230ae514056dba39a1b9535d75ea1d7d76336bf357d6b722b7163172cbb4902",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 2,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\antwoorden\\page-002.png",
+      "sha256": "977d79a9ad6934f36f763e37a388c05a349d6be9400e26f672da845bbafcc314",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 3,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\antwoorden\\page-003.png",
+      "sha256": "de564918d942f6f446ad72b19dfbd2b03f60ec4e421e99b6ecfc54a9b88f8df9",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 4,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\antwoorden\\page-004.png",
+      "sha256": "d49397a7329c639db56ef7625f29d16a44d406f1b45859a78c0e330a5c4f7e99",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 5,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\antwoorden\\page-005.png",
+      "sha256": "693622454498abd0c7564869f1c010a21533ad04aacdd884283d523c9a40637c",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 6,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\antwoorden\\page-006.png",
+      "sha256": "b1465ad070b58822bd221a348a7f5e433e6ab5fdbe951abaaf4acb1db0d09927",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 7,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\antwoorden\\page-007.png",
+      "sha256": "65c6e26575e86251ec9a9a408a5cc3ae8340698499a4cb03f9b196e031f0b622",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 8,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\antwoorden\\page-008.png",
+      "sha256": "c92795b8c22f918b34fe845761fa23d14298c88655437884c36c7ca318a3047c",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 9,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\antwoorden\\page-009.png",
+      "sha256": "446655731838bfca0d86fe6ef33227bf1e17192b653d8499ac02492266f14cec",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 10,
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-grayscale-r8\\antwoorden\\page-010.png",
+      "sha256": "e586b8e326aa24a4cb66d71359cbe6fbc48b8614d38a606f377a6f8b572c89bc",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "personally_inspected": true,
+      "observation": "Text, labels and axes readable; hatching, dashed prices, solid demand and payment shading distinguishable wherever present."
+    }
+  ],
+  "actual_png_assets": [
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_fig_1.png",
+      "sha256": "08f5a184ae07b31b0e383ae9be7efd621cabc252c5aaf6753307ef981abf7d60",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_fig_2.png",
+      "sha256": "cc5447843fcf0c6334bcc4b6733942b6299424572b4bb0a4343462c7bed257f7",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_fig_3.png",
+      "sha256": "94dc9f593e7533189d3f0b4afae992079eaa349f4c29fd4d7f0f1ba60e41f3a9",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_fig_4.png",
+      "sha256": "e0b85f0c26d7434d9e1b3da8a60ffce94e22665dccf4b304192a2d2d12a83065",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_we_1.png",
+      "sha256": "8bf4724ae62323bb209059f52b28ac733d9b9274f7347f6f7a35ea076d89ef4e",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_1.png",
+      "sha256": "23d31f28e469b1a0f4b0432ba013dc724102a8062654d72d8e00d26bbb99e1d2",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_2.png",
+      "sha256": "dcc9c5f89d17f3b53019f4215e643039471db1df0fa6197ba468d5c17c8e05e4",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_3.png",
+      "sha256": "0e68e9d0014f3d5ea7f572f4712f81bda466fd64373b1fd5bfb3625b54e49216",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_4.png",
+      "sha256": "915d4932e017a9450eb4fa107555ff5118d9fc0a1fd7f6e18047aa044720901d",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_5.png",
+      "sha256": "348ddd3794915072aebb07e9377352b0b4c6f9c41805c6c8b36f86f989e42fd5",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_6.png",
+      "sha256": "f13c25813b98e6db030f148e8235e138c1cea23e60a7b32f467724be8e8697ec",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_7.png",
+      "sha256": "211111d91570da80f535c3374abc2a0ce1b9dde02ffb5415ed4568cf8e3fce4a",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_8.png",
+      "sha256": "b7388f6d6e8d2136789ed64409bcc1681697e1df4cb4bef39106792658dfbe29",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_9.png",
+      "sha256": "e5b1e54f4edfd441642f7898df8336211ab160b80c9ae913eb1a66a59be6bb2d",
+      "personally_inspected": true
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_10.png",
+      "sha256": "ffbae805cee07ef35aa27eda49e381d0cddf610b8c8bdc2ade663d48a90cea63",
+      "personally_inspected": true
+    }
+  ],
+  "observations": [
+    "All 15 figure titles, axis units, scales, endpoints and trade intersections match their local context. Source/answer separation is preserved: empty axes, unshaded price diagram, partially guided diagram, line-only diagram; no diagram is supplied for independent Opgaven 5-8.",
+    "Final r8 paragraaf pages 1-14, opgaven pages 1-9 and antwoorden pages 1-10 inspected in both color and grayscale. Figures are 166 mm wide, body/table/caption text >=12 pt and source Arial 30 pt labels map to 15.685039 pt.",
+    "Target entirety stays on paragraaf page 13 / opgaven page 8. Model answer and exactly three bonus criteria stay together on antwoorden page 10. Both short closing questions stay together on paragraaf page 14 / opgaven page 9.",
+    "The concise recap explicitly says 'Bij een lineaire vraaglijn' before the conditional triangle formula; independently requested by root preliminary reading, evaluated and incorporated within approved semantics.",
+    "Dense theory page 2 was initially suspected of footer overlap. Exact measurement disproved this: r4/r8 page-002 PNG hashes are identical; body bottom 777.3871459960938 pt < body limit 782.3622114526944 pt; actual footer 805.426..818.830 pt. This is not claimed as a repaired defect. Protective grouping and stronger margin negative tests were retained.",
+    "Real superseded r2 defects were target splitting and bonus criteria separated from their model answer. Fixed only in paragraph-owned structure. No shared pipeline or source font shrink.",
+    "Full r9, thin-wrapper r10 and native print-only reproduction preserve all 42 raw files and ZIP whole identity; full and thin preserve all color page PNG bytes. Native PENDING manifests remain immutable and separate from this actual inspection."
+  ],
+  "timing": {
+    "core_minutes": 52,
+    "support_route_minutes": 64,
+    "all_items_minutes": "76-80",
+    "observation": "UNOBSERVED_ESTIMATE_NOT_CLASSROOM_VALIDATED"
+  },
+  "native_profiles": [
+    {
+      "profile": "student-web",
+      "exit_code": 1,
+      "errors": [
+        "MISSING 2.3.1-review.md",
+        "MISSING 2.3.1-quality-ref.yaml"
+      ],
+      "warnings": 0,
+      "raw_stdout": "\nValidating paragraph 2.3.1 \"Consumentensurplus\"\nPath: C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\nMode: part-a\nProfile: student-web\n\n-- Part A textbook files --\n  OK Paragraph type: theory\n  OK paragraaf.md: 2.3.1 Consumentensurplus – paragraaf.md\n  OK opgaven.md: 2.3.1 Consumentensurplus – opgaven.md\n  OK antwoorden.md: 2.3.1 Consumentensurplus – antwoorden.md\n  OK 2.3.1 Consumentensurplus – paragraaf.html (1895.9 KB)\n  OK 2.3.1 Consumentensurplus – opgaven.html (988.6 KB)\n  OK 2.3.1 Consumentensurplus – antwoorden.html (1765.1 KB)\n  OK 2.3.1 Consumentensurplus – paragraaf.pdf (1116 KB)\n  OK 2.3.1 Consumentensurplus – opgaven.pdf (617 KB)\n  OK 2.3.1 Consumentensurplus – antwoorden.pdf (1102 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 15 image refs all resolve\n  OK _assets/: 15 SVGs, 15 PNGs\n\n-- Part A QC artifacts --\n  X MISSING Part A review report (2.3.1-review.md)\n  X MISSING quality_ref (2.3.1-quality-ref.yaml)\n\n==========================================\nFAIL Paragraph 2.3.1 \"Consumentensurplus\" failed: 2 error(s), 0 warning(s).\n\n"
+    },
+    {
+      "profile": "publisher-print",
+      "exit_code": 1,
+      "errors": [
+        "MISSING 2.3.1-review.md",
+        "MISSING 2.3.1-quality-ref.yaml"
+      ],
+      "warnings": 0,
+      "raw_stdout": "\nValidating paragraph 2.3.1 \"Consumentensurplus\"\nPath: C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\nMode: part-a\nProfile: publisher-print\n\n-- Part A textbook files --\n  OK Paragraph type: theory\n  OK paragraaf.md: 2.3.1 Consumentensurplus – paragraaf.md\n  OK opgaven.md: 2.3.1 Consumentensurplus – opgaven.md\n  OK antwoorden.md: 2.3.1 Consumentensurplus – antwoorden.md\n  OK 2.3.1 Consumentensurplus – paragraaf.pdf (1116 KB)\n  OK 2.3.1 Consumentensurplus – opgaven.pdf (617 KB)\n  OK 2.3.1 Consumentensurplus – antwoorden.pdf (1102 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 15 image refs all resolve\n  OK _assets/: 15 SVGs, 15 PNGs\n\n-- Part A QC artifacts --\n  X MISSING Part A review report (2.3.1-review.md)\n  X MISSING quality_ref (2.3.1-quality-ref.yaml)\n\n==========================================\nFAIL Paragraph 2.3.1 \"Consumentensurplus\" failed: 2 error(s), 0 warning(s).\n\n"
+    }
+  ],
+  "later_gates": [
+    "Independent paragraph and specialist review",
+    "Teacher/student/visual quality control",
+    "Root integration and current-head CI",
+    "Accepted quality reference and handoff",
+    "Classroom timing and attainment"
+  ]
+}

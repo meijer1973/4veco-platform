@@ -1,0 +1,350 @@
+{
+  "paragraph": "2.3.1",
+  "paragraph_folder": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus",
+  "lesson_root": "C:\\wt\\book2-231-production-20260905\\4veco-lessen",
+  "revision": "r10",
+  "proof_root": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1",
+  "target_record_sha256": "a385e00b2fffea168089c32f796668e51ae45cb325504644392f79b20bde8571",
+  "plan_sha256_canonical_lf": "60d6a743681e1361478395a591b7c82e44acf8c4587a93c4cc842b036cf017b1",
+  "root_continuation_commit": "0a168145a9b7d16942ba5718164149706055d422",
+  "authority_pins": [
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1-textbook-plan.md",
+      "sha256": "60d6a743681e1361478395a591b7c82e44acf8c4587a93c4cc842b036cf017b1",
+      "contract": "canonical_lf"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_book-plan.md",
+      "sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76",
+      "contract": "canonical_lf"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\_chapter-plan.md",
+      "sha256": "e8a07bfe212a6ae817db99fecb93e86812e1d9e9af533b7ef21591bbb9025dc7",
+      "contract": "canonical_lf"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\references\\owned\\course-blueprint-v6-three-year.md",
+      "sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e",
+      "contract": "canonical_lf"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\references\\owned\\course-blueprint-v5.md",
+      "sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7",
+      "contract": "canonical_lf"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\references\\authored\\course-target-exercises.json",
+      "sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "contract": "canonical_lf"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md",
+      "sha256": "c6ade2c6ba52ba147d89ada603e88b80086749529944a378b0a4cf44a213ef58",
+      "contract": "canonical_lf"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-r2-independent-review.md",
+      "sha256": "3bfc2f8bddb0659d3b83e5a15e993cb2282003ddc33e0b142dcf6c1263b3a652",
+      "contract": "canonical_lf"
+    }
+  ],
+  "input_sources": [
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\b2_231.py",
+      "sha256": "000459778d41ca03ab338117bcf2f6ae877c9c810230580944c6596bb3cdce8b"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\theory.md",
+      "sha256": "f6e32d2c162f1a1ea4d39c74f700f999c080bce605c1c5ca69cb71871f381b5f"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\exercises.md",
+      "sha256": "cb674c0ee320efb652f275db8c596a333be4097e677bbf00a7f0fa1b51f9b06b"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\answers.md",
+      "sha256": "facfc83ca80901e472b9d423326a397b4076e38ae9888aaf3700294ae6e99b48"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\target-answers.md",
+      "sha256": "10038195b37649c1c0ccc4b75881bf107f0edc4946fe7a9ba68913dae64ea0e0"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\assets.js",
+      "sha256": "5014b2dfd481dfba0a3885ee7746095c4216200879a53604749cd7bcbe812acf"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\test_source.py",
+      "sha256": "f9babbafdf97f69bf3bd52dca4ae39a91c71aa4aa61c46beb2eeede286875a17"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\check_render.py",
+      "sha256": "1b72a04d560fe72463898c472926b724aa78e9961f4dac9aeaac11b8816715a4"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\verify_rebuild.py",
+      "sha256": "4cae7995d9364de0993bf04d64934298027be96ae15567f97985525e4e32d04b"
+    }
+  ],
+  "thin_wrapper": {
+    "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\build_pdf.py",
+    "sha256": "d03c82f4371cd9f72d036e613ab58a81ad773b23579e5a2860359a445be37ee2"
+  },
+  "attempt": {
+    "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r10.json",
+    "sha256": "b46ed43b531571d6129d2cd4cf101eda7046f2d14dba55d3fa0c7cb97570f74d"
+  },
+  "runtime": {
+    "python": "C:\\Python314\\python.exe",
+    "python_version": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "inspection_status": "PENDING",
+  "documents": [
+    {
+      "source_md": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – paragraaf.md",
+      "source_sha256": "eb5c7c163099bd0ae7f6be44edf53e885de6ce78e4f37e647408e2c06aba5544",
+      "source_html": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – paragraaf.html",
+      "html_sha256": "86077ee832f3ce9043ccf0077feb037e34974fbb248f465455f465e77cf4db68",
+      "source_pdf": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – paragraaf.pdf",
+      "pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_fig_1.svg",
+          "sha256": "a6ac9ac39a7e60600c87b5851f3a42018e05e61eea28bb1cf5ba221cb7f91cc9"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_fig_1.png",
+          "sha256": "08f5a184ae07b31b0e383ae9be7efd621cabc252c5aaf6753307ef981abf7d60"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_fig_2.svg",
+          "sha256": "5eec646f0a442692a769dcffacaf9f1275539ab90aa5146b52c5c18f447246a1"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_fig_2.png",
+          "sha256": "cc5447843fcf0c6334bcc4b6733942b6299424572b4bb0a4343462c7bed257f7"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_fig_3.svg",
+          "sha256": "d44e452653c0c6e5817b8b7cca913dc3e0d61de2426244c90357064366bcf76d"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_fig_3.png",
+          "sha256": "94dc9f593e7533189d3f0b4afae992079eaa349f4c29fd4d7f0f1ba60e41f3a9"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_fig_4.svg",
+          "sha256": "f04a1051b0ebdcf4e49aeefa3d11889e2d019bc1a0bca3c9439a8c10f8eb5aef"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_fig_4.png",
+          "sha256": "e0b85f0c26d7434d9e1b3da8a60ffce94e22665dccf4b304192a2d2d12a83065"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_we_1.svg",
+          "sha256": "587fddfd013c9c29d943ed528b9a697e3f0043fa73c57944bfc2a428500bd38f"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_we_1.png",
+          "sha256": "8bf4724ae62323bb209059f52b28ac733d9b9274f7347f6f7a35ea076d89ef4e"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_1.svg",
+          "sha256": "60f91cf5fd9da887c840f9b02dbd99c6e9541800354643a7756370b2e258b660"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_1.png",
+          "sha256": "23d31f28e469b1a0f4b0432ba013dc724102a8062654d72d8e00d26bbb99e1d2"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_2.svg",
+          "sha256": "2562f1ce54bb06b08ed1dbb5750ab7642e08b3f47155e0c6df556b362fc4ef50"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_2.png",
+          "sha256": "dcc9c5f89d17f3b53019f4215e643039471db1df0fa6197ba468d5c17c8e05e4"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_3.svg",
+          "sha256": "7d2fcef8db60098d53ee1434d09ba57bdff6125e0f560a1050d6459eaf86c23f"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_3.png",
+          "sha256": "0e68e9d0014f3d5ea7f572f4712f81bda466fd64373b1fd5bfb3625b54e49216"
+        }
+      ],
+      "zip": {
+        "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – paragraaf.zip",
+        "sha256": "cadb533baaed316964f354c3fcab330f572b33cb570d3facc137378f1d0936ac"
+      },
+      "proof_directory": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r10"
+    },
+    {
+      "source_md": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – opgaven.md",
+      "source_sha256": "70669f6ed10a7465aea37f5f2298dd17708f6430a975fe32187135701122529e",
+      "source_html": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – opgaven.html",
+      "html_sha256": "cd689d24c0f1b74af9085ce7de2cefac1139603dd21c7085a54b45c435c64055",
+      "source_pdf": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – opgaven.pdf",
+      "pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_we_1.svg",
+          "sha256": "587fddfd013c9c29d943ed528b9a697e3f0043fa73c57944bfc2a428500bd38f"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_we_1.png",
+          "sha256": "8bf4724ae62323bb209059f52b28ac733d9b9274f7347f6f7a35ea076d89ef4e"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_1.svg",
+          "sha256": "60f91cf5fd9da887c840f9b02dbd99c6e9541800354643a7756370b2e258b660"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_1.png",
+          "sha256": "23d31f28e469b1a0f4b0432ba013dc724102a8062654d72d8e00d26bbb99e1d2"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_2.svg",
+          "sha256": "2562f1ce54bb06b08ed1dbb5750ab7642e08b3f47155e0c6df556b362fc4ef50"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_2.png",
+          "sha256": "dcc9c5f89d17f3b53019f4215e643039471db1df0fa6197ba468d5c17c8e05e4"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_3.svg",
+          "sha256": "7d2fcef8db60098d53ee1434d09ba57bdff6125e0f560a1050d6459eaf86c23f"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_3.png",
+          "sha256": "0e68e9d0014f3d5ea7f572f4712f81bda466fd64373b1fd5bfb3625b54e49216"
+        }
+      ],
+      "zip": {
+        "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – opgaven.zip",
+        "sha256": "fff819d917a73c8d6ba2314a49e971e9f1939f0b4478daa5b76e462e5fedb46d"
+      },
+      "proof_directory": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r10"
+    },
+    {
+      "source_md": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – antwoorden.md",
+      "source_sha256": "0a1d4b31690f1a053b7180136d387df524ff9ae0df355db273ca32443811d083",
+      "source_html": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – antwoorden.html",
+      "html_sha256": "ed5a2f28756625f5a8d3e81724291d8f11a784f9a9689d1b50d86837f732132c",
+      "source_pdf": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – antwoorden.pdf",
+      "pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_4.svg",
+          "sha256": "6aebb9c03b9c09f2525e3173ca94f1630b4adfdec766ee9920da48a6ee1bfe81"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_4.png",
+          "sha256": "915d4932e017a9450eb4fa107555ff5118d9fc0a1fd7f6e18047aa044720901d"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_5.svg",
+          "sha256": "cf72ed36989023a14db7ba43ca863e72bbd931d2949f2bdeadc6b1d24a8178b9"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_5.png",
+          "sha256": "348ddd3794915072aebb07e9377352b0b4c6f9c41805c6c8b36f86f989e42fd5"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_6.svg",
+          "sha256": "5f82afe966599380d37a2a1e3b5df2c00b5bf44efcd68649112f22faf6a8bd75"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_6.png",
+          "sha256": "f13c25813b98e6db030f148e8235e138c1cea23e60a7b32f467724be8e8697ec"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_7.svg",
+          "sha256": "76a740caeb741b93ea8fd2e3c9373c3addd0a153c8f416b796865675d6a21aea"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_7.png",
+          "sha256": "211111d91570da80f535c3374abc2a0ce1b9dde02ffb5415ed4568cf8e3fce4a"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_8.svg",
+          "sha256": "b10efc6da3a045d7b8265bb5a1cd7f52f84ad7f66a91d91002d40ec2eb2684b8"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_8.png",
+          "sha256": "b7388f6d6e8d2136789ed64409bcc1681697e1df4cb4bef39106792658dfbe29"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_9.svg",
+          "sha256": "450e9ac8df21d693a25516b585b6b4f100f91465c1c0ae7419a0460c78397bd3"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_9.png",
+          "sha256": "e5b1e54f4edfd441642f7898df8336211ab160b80c9ae913eb1a66a59be6bb2d"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_10.svg",
+          "sha256": "5e69ddb9e6d78ec600f2b1c4c707816573ca2e7e920d794a2ed78517c49d730e"
+        },
+        {
+          "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_10.png",
+          "sha256": "ffbae805cee07ef35aa27eda49e381d0cddf610b8c8bdc2ade663d48a90cea63"
+        }
+      ],
+      "zip": {
+        "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – antwoorden.zip",
+        "sha256": "ca051aa7055bde0ea31a49840bb74238cc13e75879c7b2ca3056c161b20107ca"
+      },
+      "proof_directory": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r10"
+    }
+  ],
+  "packet": {
+    "2.3.1 Consumentensurplus – paragraaf.md": "eb5c7c163099bd0ae7f6be44edf53e885de6ce78e4f37e647408e2c06aba5544",
+    "2.3.1 Consumentensurplus – paragraaf.html": "86077ee832f3ce9043ccf0077feb037e34974fbb248f465455f465e77cf4db68",
+    "2.3.1 Consumentensurplus – paragraaf.pdf": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+    "2.3.1 Consumentensurplus – paragraaf.zip": "cadb533baaed316964f354c3fcab330f572b33cb570d3facc137378f1d0936ac",
+    "2.3.1 Consumentensurplus – opgaven.md": "70669f6ed10a7465aea37f5f2298dd17708f6430a975fe32187135701122529e",
+    "2.3.1 Consumentensurplus – opgaven.html": "cd689d24c0f1b74af9085ce7de2cefac1139603dd21c7085a54b45c435c64055",
+    "2.3.1 Consumentensurplus – opgaven.pdf": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+    "2.3.1 Consumentensurplus – opgaven.zip": "fff819d917a73c8d6ba2314a49e971e9f1939f0b4478daa5b76e462e5fedb46d",
+    "2.3.1 Consumentensurplus – antwoorden.md": "0a1d4b31690f1a053b7180136d387df524ff9ae0df355db273ca32443811d083",
+    "2.3.1 Consumentensurplus – antwoorden.html": "ed5a2f28756625f5a8d3e81724291d8f11a784f9a9689d1b50d86837f732132c",
+    "2.3.1 Consumentensurplus – antwoorden.pdf": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+    "2.3.1 Consumentensurplus – antwoorden.zip": "ca051aa7055bde0ea31a49840bb74238cc13e75879c7b2ca3056c161b20107ca",
+    "_assets/2.3.1_fig_1.svg": "a6ac9ac39a7e60600c87b5851f3a42018e05e61eea28bb1cf5ba221cb7f91cc9",
+    "_assets/2.3.1_fig_1.png": "08f5a184ae07b31b0e383ae9be7efd621cabc252c5aaf6753307ef981abf7d60",
+    "_assets/2.3.1_fig_2.svg": "5eec646f0a442692a769dcffacaf9f1275539ab90aa5146b52c5c18f447246a1",
+    "_assets/2.3.1_fig_2.png": "cc5447843fcf0c6334bcc4b6733942b6299424572b4bb0a4343462c7bed257f7",
+    "_assets/2.3.1_fig_3.svg": "d44e452653c0c6e5817b8b7cca913dc3e0d61de2426244c90357064366bcf76d",
+    "_assets/2.3.1_fig_3.png": "94dc9f593e7533189d3f0b4afae992079eaa349f4c29fd4d7f0f1ba60e41f3a9",
+    "_assets/2.3.1_fig_4.svg": "f04a1051b0ebdcf4e49aeefa3d11889e2d019bc1a0bca3c9439a8c10f8eb5aef",
+    "_assets/2.3.1_fig_4.png": "e0b85f0c26d7434d9e1b3da8a60ffce94e22665dccf4b304192a2d2d12a83065",
+    "_assets/2.3.1_we_1.svg": "587fddfd013c9c29d943ed528b9a697e3f0043fa73c57944bfc2a428500bd38f",
+    "_assets/2.3.1_we_1.png": "8bf4724ae62323bb209059f52b28ac733d9b9274f7347f6f7a35ea076d89ef4e",
+    "_assets/2.3.1_ex_1.svg": "60f91cf5fd9da887c840f9b02dbd99c6e9541800354643a7756370b2e258b660",
+    "_assets/2.3.1_ex_1.png": "23d31f28e469b1a0f4b0432ba013dc724102a8062654d72d8e00d26bbb99e1d2",
+    "_assets/2.3.1_ex_2.svg": "2562f1ce54bb06b08ed1dbb5750ab7642e08b3f47155e0c6df556b362fc4ef50",
+    "_assets/2.3.1_ex_2.png": "dcc9c5f89d17f3b53019f4215e643039471db1df0fa6197ba468d5c17c8e05e4",
+    "_assets/2.3.1_ex_3.svg": "7d2fcef8db60098d53ee1434d09ba57bdff6125e0f560a1050d6459eaf86c23f",
+    "_assets/2.3.1_ex_3.png": "0e68e9d0014f3d5ea7f572f4712f81bda466fd64373b1fd5bfb3625b54e49216",
+    "_assets/2.3.1_ex_4.svg": "6aebb9c03b9c09f2525e3173ca94f1630b4adfdec766ee9920da48a6ee1bfe81",
+    "_assets/2.3.1_ex_4.png": "915d4932e017a9450eb4fa107555ff5118d9fc0a1fd7f6e18047aa044720901d",
+    "_assets/2.3.1_ex_5.svg": "cf72ed36989023a14db7ba43ca863e72bbd931d2949f2bdeadc6b1d24a8178b9",
+    "_assets/2.3.1_ex_5.png": "348ddd3794915072aebb07e9377352b0b4c6f9c41805c6c8b36f86f989e42fd5",
+    "_assets/2.3.1_ex_6.svg": "5f82afe966599380d37a2a1e3b5df2c00b5bf44efcd68649112f22faf6a8bd75",
+    "_assets/2.3.1_ex_6.png": "f13c25813b98e6db030f148e8235e138c1cea23e60a7b32f467724be8e8697ec",
+    "_assets/2.3.1_ex_7.svg": "76a740caeb741b93ea8fd2e3c9373c3addd0a153c8f416b796865675d6a21aea",
+    "_assets/2.3.1_ex_7.png": "211111d91570da80f535c3374abc2a0ce1b9dde02ffb5415ed4568cf8e3fce4a",
+    "_assets/2.3.1_ex_8.svg": "b10efc6da3a045d7b8265bb5a1cd7f52f84ad7f66a91d91002d40ec2eb2684b8",
+    "_assets/2.3.1_ex_8.png": "b7388f6d6e8d2136789ed64409bcc1681697e1df4cb4bef39106792658dfbe29",
+    "_assets/2.3.1_ex_9.svg": "450e9ac8df21d693a25516b585b6b4f100f91465c1c0ae7419a0460c78397bd3",
+    "_assets/2.3.1_ex_9.png": "e5b1e54f4edfd441642f7898df8336211ab160b80c9ae913eb1a66a59be6bb2d",
+    "_assets/2.3.1_ex_10.svg": "5e69ddb9e6d78ec600f2b1c4c707816573ca2e7e920d794a2ed78517c49d730e",
+    "_assets/2.3.1_ex_10.png": "ffbae805cee07ef35aa27eda49e381d0cddf610b8c8bdc2ade663d48a90cea63"
+  }
+}
