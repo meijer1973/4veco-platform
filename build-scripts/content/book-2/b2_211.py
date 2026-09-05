@@ -61,9 +61,11 @@ def serialize_target(record: dict) -> str:
 
 
 def serialize_target_answers(record: dict) -> str:
-    return "\n\n".join(["**Opgave 7**", *(
-        f"{q['label']}) {record['short_answer_model'][q['label']]}"
-        for q in record["target_exercise"]["subquestions"])])
+    source = (CONTENT / "target-answers.md").read_text(encoding="utf-8")
+    for question in record["target_exercise"]["subquestions"]:
+        label = question["label"]
+        source = source.replace("{{ANSWER_" + label + "}}", record["short_answer_model"][label])
+    return source
 
 
 def documents(record: dict) -> dict[str, str]:
@@ -81,6 +83,10 @@ def documents(record: dict) -> dict[str, str]:
         # Pandoc otherwise converts a) into an ordered list displayed as 1.
         # Escape presentation syntax, never the frozen prompt or source cells.
         value = re.sub(r"^([a-z])\) ", r"\1\\) ", value, flags=re.M)
+        # These three short calculation lines form one answer row, not three
+        # unrelated bullets to distribute across a page boundary.
+        value = re.sub(r"(?m)(^- GCK[^\n]*\n- GVK[^\n]*\n- GTK[^\n]*(?:\n|$))",
+                       r'::: {style="break-inside: avoid"}\n\n\1\n:::\n', value)
         result[kind] = layout_tables(value)
     return result
 
@@ -157,7 +163,7 @@ def asset_sources() -> dict[str, str]:
     parts = [text(24, 32, "Van totale naar gemiddelde kosten", size=27, bold=True),
              text(360, 70, "Dezelfde maand, dezelfde positieve Q", anchor="middle")]
     for x, total, average, color in [(125, "TCK", "GCK", ORANGE), (360, "TVK", "GVK", BLUE), (595, "TK", "GTK", PURPLE)]:
-        parts += [text(x, 125, total, size=32, anchor="middle", bold=True, color=color),
+        parts += [text(x, 125, total, size=32, anchor="middle", bold=True, color=ORANGE if total == "TK" else color),
                   text(x, 157, "euro/maand", size=22, anchor="middle"),
                   line(x, 173, x, 225, color, 3), line(x - 7, 215, x, 225, color, 3),
                   line(x + 7, 215, x, 225, color, 3),
@@ -251,7 +257,7 @@ def build(lesson_root: Path, proof_root: Path | None = None, *, sources_only: bo
                 built["proof_directory"] = str(proof_dir.resolve())
             records.append(built)
     inputs = [Path(__file__).resolve(), Path(__file__).with_name("print_pipeline.py"),
-              *(CONTENT / name for name in ("theory.md", "exercises.md", "answers.md"))]
+              *(CONTENT / name for name in ("theory.md", "exercises.md", "answers.md", "target-answers.md"))]
     return {"paragraph": "2.1.1", "target_record_sha256": TARGET_HASH,
             "plan_sha256": PLAN_HASH, "chapter_sha256": CHAPTER_HASH,
             "input_sources": [{"path": str(path), "sha256": digest(path)} for path in inputs],

@@ -72,7 +72,7 @@ De tabel wordt zichtbaar in een grafiek. Horizontaal staat Q in posters per
 maand; verticaal staan totale kosten in euro per maand. We tekenen alleen het
 bereik 40–80. Eerst zie je TCK: op iedere plek blijft het bedrag € 120.
 
-![Figuur 2. De constante maandkosten blijven binnen Q = 40–80 gelijk.](_assets/2.1.1_fig_2.svg)
+![Figuur 1. De constante maandkosten blijven binnen Q = 40–80 gelijk.](_assets/2.1.1_fig_2.svg)
 
 Lees nu eerst paneel A. We voegen alleen TVK toe: van € 80 bij Q = 40 naar
 € 160 bij Q = 80. Meer posters vragen hier meer materialen.
@@ -81,7 +81,7 @@ Lees daarna paneel B. Daar komt TK bij. Op iedere plek tel je TCK en TVK op.
 Bij Q = 80 is dat 120 + 160 = € 280 per maand. De verticale afstand van TVK
 naar TK is steeds de constante € 120.
 
-![Figuur 3. Paneel A voegt TVK toe; paneel B voegt daarna TK toe, op dezelfde schalen.](_assets/2.1.1_fig_3.svg)
+![Figuur 2. Paneel A voegt TVK toe; paneel B voegt daarna TK toe, op dezelfde schalen.](_assets/2.1.1_fig_3.svg)
 
 ### Totale kosten en kosten per poster
 
@@ -116,7 +116,7 @@ De eenheid verandert mee: (euro per maand) / (posters per maand) wordt
 **euro per poster**. GCK = € 3 per poster betekent dat iedere poster gemiddeld
 € 3 van de constante maandkosten draagt. Het is geen nieuwe rekening.
 
-![Figuur 1. Kies eerst het juiste totaal en deel daarna door dezelfde positieve Q.](_assets/2.1.1_fig_1.svg)
+![Figuur 3. Kies eerst het juiste totaal en deel daarna door dezelfde positieve Q.](_assets/2.1.1_fig_1.svg)
 
 | Q (posters per maand) | GCK (€/poster) | GVK (€/poster) | GTK (€/poster) |
 |---|---|---|---|
