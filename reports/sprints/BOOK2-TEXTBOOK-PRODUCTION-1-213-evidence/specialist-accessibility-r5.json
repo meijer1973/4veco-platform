@@ -1,0 +1,232 @@
+{
+  "reviewer": "paragraph_213_r5_specialist_qc",
+  "finding": "REVISE: short alt must be noun-first and at most 120 characters; manual functional review recorded separately",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "html_sha256": "fe608ea795c9d3a7d72ceccd2f7a3ad2b04aa17d424fb05621ba2d6294c525ca",
+      "lang": "nl",
+      "title": "2.1.3 Marginale kosten en marginale opbrengsten –\nparagraaf",
+      "headings": [
+        [
+          "h1",
+          "2.1.3 Marginale\nkosten en marginale opbrengsten"
+        ],
+        [
+          "h2",
+          "Van een totaal naar een\ntoename"
+        ],
+        [
+          "h2",
+          "Opbrengst van de extra\nproducten"
+        ],
+        [
+          "h2",
+          "Totale winst\nis niet de winsttoename per product"
+        ],
+        [
+          "h2",
+          "Uitgewerkt voorbeeld"
+        ],
+        [
+          "h2",
+          "Startopgaven"
+        ],
+        [
+          "h2",
+          "Begeleide inoefening"
+        ],
+        [
+          "h2",
+          "Zelfstandige oefening"
+        ],
+        [
+          "h2",
+          "Doeloefening"
+        ],
+        [
+          "h2",
+          "Denkertje / Bonusopgave"
+        ],
+        [
+          "h2",
+          "Herhaling / Herhaling en\ninterleaving"
+        ]
+      ],
+      "native_tables": 15,
+      "interactive_controls": 0,
+      "figures": [
+        {
+          "asset": "2.1.3_fig_1.png",
+          "png_sha256": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+          "alt": "Dezelfde dag: de tabelstappen van 0 naar 10 en van 10 naar 20 fotohouders, met TK 20, 50 en 100 euro.",
+          "characters": 101,
+          "caption": "Dezelfde dag: de tabelstappen van 0 naar 10 en van 10 naar 20 fotohouders, met TK 20, 50 en 100 euro.",
+          "alt_equals_normalized_caption": true,
+          "over_120": false,
+          "noun_first_manual_required": true
+        },
+        {
+          "asset": "2.1.3_fig_2.png",
+          "png_sha256": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+          "alt": "Dezelfde kostentabel met delta TK 30 en 50 euro, telkens delta Q 10, en MK 3 en 5 euro bij de rechter eindpunten.",
+          "characters": 113,
+          "caption": "Dezelfde kostentabel met delta TK 30 en 50 euro, telkens delta Q 10, en MK 3 en 5 euro bij de rechter eindpunten.",
+          "alt_equals_normalized_caption": true,
+          "over_120": false,
+          "noun_first_manual_required": true
+        },
+        {
+          "asset": "2.1.3_fig_3.png",
+          "png_sha256": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+          "alt": "Bij dezelfde hoeveelheden 0, 10 en 20 zijn de opbrengsten 0, 80 en 160 euro. Beide intervallen leveren 80 euro extra voor 10 extra producten: MO is telkens 8.",
+          "characters": 158,
+          "caption": "Bij dezelfde hoeveelheden 0, 10 en 20 zijn de opbrengsten 0, 80 en 160 euro. Beide intervallen leveren 80 euro extra voor 10 extra producten: MO is telkens 8.",
+          "alt_equals_normalized_caption": true,
+          "over_120": true,
+          "noun_first_manual_required": true
+        },
+        {
+          "asset": "2.1.3_fig_4.png",
+          "png_sha256": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+          "alt": "Twee intervalkaarten: winst van min 20 naar 30 geeft 50 gedeeld door 10 is 5; winst van 30 naar 60 geeft 30 gedeeld door 10 is 3. Dit is telkens MO min MK.",
+          "characters": 155,
+          "caption": "Twee intervalkaarten: winst van min 20 naar 30 geeft 50 gedeeld door 10 is 5; winst van 30 naar 60 geeft 30 gedeeld door 10 is 3. Dit is telkens MO min MK.",
+          "alt_equals_normalized_caption": true,
+          "over_120": true,
+          "noun_first_manual_required": true
+        },
+        {
+          "asset": "2.1.3_we_1.png",
+          "png_sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+          "alt": "Lus heeft over drie stappen MK 2 en MO 6; Bout heeft MK 2, 6 en 10 en MO 12. De eerste teller en noemer zijn uitgewerkt; waarden horen bij het rechter eindpunt.",
+          "characters": 160,
+          "caption": "Lus heeft over drie stappen MK 2 en MO 6; Bout heeft MK 2, 6 en 10 en MO 12. De eerste teller en noemer zijn uitgewerkt; waarden horen bij het rechter eindpunt.",
+          "alt_equals_normalized_caption": true,
+          "over_120": true,
+          "noun_first_manual_required": true
+        },
+        {
+          "asset": "2.1.3_ex_1.png",
+          "png_sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e",
+          "alt": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+          "characters": 60,
+          "caption": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+          "alt_equals_normalized_caption": true,
+          "over_120": false,
+          "noun_first_manual_required": true
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "html_sha256": "aa186c16833da51c8db0f6f9f866de2ba8957768b85932adce5fab0a761c5c3c",
+      "lang": "nl",
+      "title": "2.1.3 Marginale kosten en marginale opbrengsten –\nopgaven",
+      "headings": [
+        [
+          "h1",
+          "2.1.3\nMarginale kosten en marginale opbrengsten — opgaven"
+        ],
+        [
+          "h2",
+          "Uitgewerkt voorbeeld"
+        ],
+        [
+          "h2",
+          "Startopgaven"
+        ],
+        [
+          "h2",
+          "Begeleide inoefening"
+        ],
+        [
+          "h2",
+          "Zelfstandige oefening"
+        ],
+        [
+          "h2",
+          "Doeloefening"
+        ],
+        [
+          "h2",
+          "Denkertje / Bonusopgave"
+        ],
+        [
+          "h2",
+          "Herhaling / Herhaling en\ninterleaving"
+        ]
+      ],
+      "native_tables": 13,
+      "interactive_controls": 0,
+      "figures": [
+        {
+          "asset": "2.1.3_we_1.png",
+          "png_sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+          "alt": "Lus heeft over drie stappen MK 2 en MO 6; Bout heeft MK 2, 6 en 10 en MO 12. De eerste teller en noemer zijn uitgewerkt; waarden horen bij het rechter eindpunt.",
+          "characters": 160,
+          "caption": "Lus heeft over drie stappen MK 2 en MO 6; Bout heeft MK 2, 6 en 10 en MO 12. De eerste teller en noemer zijn uitgewerkt; waarden horen bij het rechter eindpunt.",
+          "alt_equals_normalized_caption": true,
+          "over_120": true,
+          "noun_first_manual_required": true
+        },
+        {
+          "asset": "2.1.3_ex_1.png",
+          "png_sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e",
+          "alt": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+          "characters": 60,
+          "caption": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+          "alt_equals_normalized_caption": true,
+          "over_120": false,
+          "noun_first_manual_required": true
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "html_sha256": "63f33b13456bd1cc044760f67ff3d7267d337df05adc863a07b7b2373041e1f7",
+      "lang": "nl",
+      "title": "2.1.3 Marginale kosten en marginale opbrengsten –\nantwoorden",
+      "headings": [
+        [
+          "h1",
+          "2.1.3\nMarginale kosten en marginale opbrengsten — antwoorden"
+        ],
+        [
+          "h2",
+          "Uitgewerkt voorbeeld"
+        ],
+        [
+          "h2",
+          "Startopgaven"
+        ],
+        [
+          "h2",
+          "Begeleide inoefening"
+        ],
+        [
+          "h2",
+          "Zelfstandige oefening"
+        ],
+        [
+          "h2",
+          "Doeloefening"
+        ],
+        [
+          "h2",
+          "Denkertje / Bonusopgave"
+        ],
+        [
+          "h2",
+          "Herhaling / Herhaling en\ninterleaving"
+        ]
+      ],
+      "native_tables": 7,
+      "interactive_controls": 0,
+      "figures": []
+    }
+  ],
+  "quality_unchanged_raw_sha256": "c96a4af45cfbf6c43ceda27ecf6dd231c75667ece58b378b9080975fe4be717f",
+  "quality_unchanged_LF_sha256": "c96a4af45cfbf6c43ceda27ecf6dd231c75667ece58b378b9080975fe4be717f",
+  "raw_media_manifest_note": "First media diagnostic retained embedded src and compared caption whitespace literally. Use this exact PNG hash mapping and normalized caption comparison for concise alt evidence; prior diagnostic remains unchanged."
+}
