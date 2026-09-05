@@ -295,7 +295,7 @@ def render_proof(record: dict, proof_dir: Path, *, pdftoppm: str = "pdftoppm", d
     # Recheck after rendering/contact-sheet capture. Never publish an apparent
     # provenance manifest when a source/output/asset changed during capture.
     verify_record_freshness(record)
-    (proof_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    (proof_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     return manifest
 
 
