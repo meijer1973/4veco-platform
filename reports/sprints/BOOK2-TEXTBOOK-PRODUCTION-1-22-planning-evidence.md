@@ -4,6 +4,12 @@ Date: 2026-09-05. Task: `BOOK2-TEXTBOOK-PRODUCTION-1-22`.
 Author: elasticity_planning. Accountable integrator: codex-root.
 Disposition: **drafts published for independent planning review; no acceptance or hold release**.
 
+This is the historical Round1 payload record at lesson commit `08e46af7066e367443d9a71944605e99688bda8d`.
+Independent review requested corrections to both alignment tables and §2.2.2
+guided target-e coverage. The current correction payload and revised timing are
+recorded in `BOOK2-TEXTBOOK-PRODUCTION-1-22-round2-correction-evidence.md`.
+The earlier hashes and 10-minute guided estimate below describe Round1 only.
+
 ## Scope and immutable payload
 
 This bounded subtask prepares the Chapter 2.2 plan and full §2.2.1/§2.2.2
