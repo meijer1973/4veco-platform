@@ -125,7 +125,7 @@ def inspect(lesson_root: Path, manifest_path: Path, rebuild=False):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--lesson-root', type=Path, default=builder.ROOT.parent/'4veco-lessen')
-    parser.add_argument('--manifest', type=Path, default=builder.ROOT/'reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-build.json')
+    parser.add_argument('--manifest', type=Path, default=builder.ROOT/'reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-build-r6.json')
     parser.add_argument('--rebuild', action='store_true')
     parser.add_argument('--output', type=Path)
     args = parser.parse_args()

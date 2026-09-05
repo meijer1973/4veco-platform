@@ -1,0 +1,187 @@
+{
+  "sprint_id": "BOOK2-TEXTBOOK-PRODUCTION-1",
+  "paragraph": "2.2.1",
+  "revision": "R6",
+  "inspector": "paragraph_221_builder",
+  "role": "BUILDER_CORRECTION_INSPECTION_NOT_INDEPENDENT_REVIEW",
+  "date": "2026-09-05",
+  "correction_authority": "Coordinator root authorized two independently requested bounded corrections after the reviewer inspected all 20 R5 pages and re-solved the operation chain. No plan/target/example/point/helper change authorized.",
+  "inspected_at_normal_reading_scale": true,
+  "method": "Individually opened all four changed R6 full-page 150dpi PNGs: paragraph pages 3, 4, 5 and exercises page 2. Every other final page transfers from the actual R5 builder inspection only after exact PNG SHA-256 equality, recorded per page below. Contact sheets do not supply inspection.",
+  "changed_pages_individually_inspected": 4,
+  "unchanged_pages_transferred_by_exact_png_sha256": 16,
+  "observed_visible_student_defects_on_changed_pages": 0,
+  "observations": [
+    "Misconception box occupies three printed lines beside the absolute-value explanation; wrong and correct readings are explicit.",
+    "Complete Onthouden recap remains five points and does not split; negative sign and formula conditions are explicit in both editions.",
+    "No clipping, overlap, broken glyph, lost question, missing asset or unreadable label observed on any changed page."
+  ],
+  "minimum_printed_text_pt_including_footer": 12,
+  "minimum_placed_figure_label_pt": 12.221,
+  "r5_inspection_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-builder-inspection.json",
+  "r5_inspection_sha256": "23175753d15c09aa68c07e9b25efa6c482a7823276a116f038860dcebfbf076a",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "source_md": "C:\\wt\\book2-221-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – paragraaf.md",
+      "source_sha256": "e7e4287645c26c3b79406a556c05a4c90dd10e10e3605b409b89a123df7fa281",
+      "html_sha256": "f9da8b42643393549f5a936daf390f52285e452c2c879e3c29f1c2a48f8170ae",
+      "pdf_sha256": "aafd07e6bb88dcb8833569f2c4d01809d6fcdc0f879d0c7a39c810dfabdbc440",
+      "proof_directory": "C:\\wt\\book2-221-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-aafd07e6bb88-r6",
+      "manifest_sha256": "808bd3f0757c4a314aa347c814b1ad2baf94ae898563eae170944286463603c4",
+      "prior_proof_directory": "C:\\wt\\book2-221-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-e493735b1dce-r5",
+      "prior_manifest_sha256": "1df854936ff152e58ab27cf64888ab38d252b68a212048aac1b7cc0e8aaf6d06",
+      "pages": [
+        {
+          "page": "page-001.png",
+          "sha256": "e423b8b6bcf3d4779bb9f74efd9e25d4707925bfbd063693c771c9e81d4bf1ef",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "e423b8b6bcf3d4779bb9f74efd9e25d4707925bfbd063693c771c9e81d4bf1ef"
+        },
+        {
+          "page": "page-002.png",
+          "sha256": "9d9adc88dd79f8008822e5e1052e114cf2ed42d62ab299bf955fdea5e54feb13",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "9d9adc88dd79f8008822e5e1052e114cf2ed42d62ab299bf955fdea5e54feb13"
+        },
+        {
+          "page": "page-003.png",
+          "sha256": "68100f2ca721b35c921d91d56e04ca05738e7eba4a92c1b6d05a4923996bb764",
+          "inspection": "INDIVIDUALLY_INSPECTED_R6",
+          "prior_page_sha256": "a2befa4bf28cc8c3ceb3b5cdba816890bb1efb8566f4aec9adb32c622b0fb79d"
+        },
+        {
+          "page": "page-004.png",
+          "sha256": "0467d1ffe60b8751fb1d55c7ccf7707d3b8f0ec6bf773525839b164acc4f1537",
+          "inspection": "INDIVIDUALLY_INSPECTED_R6",
+          "prior_page_sha256": "e73d2c78655d7f917f3eb9fa52bab55a154c3d42ea1545acab8c086d09857637"
+        },
+        {
+          "page": "page-005.png",
+          "sha256": "53fc0274df21a7f931e81238a67d18159aa3719091c236ec8a81b1ed10210bba",
+          "inspection": "INDIVIDUALLY_INSPECTED_R6",
+          "prior_page_sha256": "ae2993b507871a6e50cb22a1ed265af3365cff65362f9d3a2f57fb6fa89bb478"
+        },
+        {
+          "page": "page-006.png",
+          "sha256": "b496434b71a4be70cc321cbd380587e9c6c2bc6d379aac10f1402ca0072126ea",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "b496434b71a4be70cc321cbd380587e9c6c2bc6d379aac10f1402ca0072126ea"
+        },
+        {
+          "page": "page-007.png",
+          "sha256": "2718216eb860dcce1ea3a4482fc6aa06d8e836b9580cbe6e3a357f868854e356",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "2718216eb860dcce1ea3a4482fc6aa06d8e836b9580cbe6e3a357f868854e356"
+        },
+        {
+          "page": "page-008.png",
+          "sha256": "f59ac710c63db1317b9f98eabf1c10dedfaca776e5515215058bfc4bd5e749c3",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "f59ac710c63db1317b9f98eabf1c10dedfaca776e5515215058bfc4bd5e749c3"
+        },
+        {
+          "page": "page-009.png",
+          "sha256": "6dd4add2f8bf46d57364098ac5011372215f9cc8679d63d9525ebbc01cbe5281",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "6dd4add2f8bf46d57364098ac5011372215f9cc8679d63d9525ebbc01cbe5281"
+        },
+        {
+          "page": "page-010.png",
+          "sha256": "020346c9bf64a4be185d35b2f29dd51aa0b635fa9f091f5380ccb107d1165d49",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "020346c9bf64a4be185d35b2f29dd51aa0b635fa9f091f5380ccb107d1165d49"
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "source_md": "C:\\wt\\book2-221-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – opgaven.md",
+      "source_sha256": "1cfc07555223d79ab99d2d6f5387cd289ca75b28d2c71a5843870dd8bf2414d5",
+      "html_sha256": "05dd9a02bb59d1587357763bb43e12edc0bf64bd238d24f7f9edcf36c01ff87b",
+      "pdf_sha256": "e9def67106ce56f06ff5247bb3d56fe17dcd4297e65ab95ba6942453759761ee",
+      "proof_directory": "C:\\wt\\book2-221-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-opgaven-e9def67106ce-r6",
+      "manifest_sha256": "6bd485ed3d2e7b31743893f6e07fce37067d216cad3cffda32d05321e400e0ca",
+      "prior_proof_directory": "C:\\wt\\book2-221-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-opgaven-48af0e7d2f6f-r5",
+      "prior_manifest_sha256": "a4a7cfd586710aa21d40d12780e48a0fe9b7839cfa783b537231066706824ba6",
+      "pages": [
+        {
+          "page": "page-001.png",
+          "sha256": "4630c0bb8c90fbd067136a434f71a97f403bdd8d2cf3a5089b3473bc40b5cd64",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "4630c0bb8c90fbd067136a434f71a97f403bdd8d2cf3a5089b3473bc40b5cd64"
+        },
+        {
+          "page": "page-002.png",
+          "sha256": "30ed4f61bc4257f92d7f3546e2b98c733c8501e3097eda387cdd016da8b7bcaf",
+          "inspection": "INDIVIDUALLY_INSPECTED_R6",
+          "prior_page_sha256": "9c0e8bf32e3201ad811c8e273e82b376b5e77e09339d35e18ec6a912c570c329"
+        },
+        {
+          "page": "page-003.png",
+          "sha256": "3cc3f20b8ce59b613004df8417fdf03ead79f253b735537b238305341826c7f8",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "3cc3f20b8ce59b613004df8417fdf03ead79f253b735537b238305341826c7f8"
+        },
+        {
+          "page": "page-004.png",
+          "sha256": "e4edb785f4b8e83a73c150f80be79d4395a5584013b352d359d06422796b6613",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "e4edb785f4b8e83a73c150f80be79d4395a5584013b352d359d06422796b6613"
+        },
+        {
+          "page": "page-005.png",
+          "sha256": "6a7f62f821de777cdc7a7bd52f537aa8d5abcb5d202511c14d25a1e24419dab6",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "6a7f62f821de777cdc7a7bd52f537aa8d5abcb5d202511c14d25a1e24419dab6"
+        },
+        {
+          "page": "page-006.png",
+          "sha256": "60d0aaddfa8767239701f1e968e41e18c341cf6d59237bd13f868dfef33d6174",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "60d0aaddfa8767239701f1e968e41e18c341cf6d59237bd13f868dfef33d6174"
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "source_md": "C:\\wt\\book2-221-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – antwoorden.md",
+      "source_sha256": "f0a78820b4035347d49facac2febb8580c642f7f4bd2d59fcfb47d3233192f11",
+      "html_sha256": "a5f3de1ccefcc2eb543a970de8bafa9125e0c0131a8599623986ad1cec24137a",
+      "pdf_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d",
+      "proof_directory": "C:\\wt\\book2-221-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-antwoorden-d4a7c139d492-r6",
+      "manifest_sha256": "2099a348798eb7724dea7823ba2ba889a6a97ddbb1b2a9cb9520fc46310cc217",
+      "prior_proof_directory": "C:\\wt\\book2-221-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-antwoorden-d4a7c139d492-r5",
+      "prior_manifest_sha256": "7b2973e1c87930b9f7a2105752328ea2f056546fbe8d3213b61025a7474d15c1",
+      "pages": [
+        {
+          "page": "page-001.png",
+          "sha256": "760814941a5d1726dce72d62093fd964f056786310ea832942b7a2a7e7827551",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "760814941a5d1726dce72d62093fd964f056786310ea832942b7a2a7e7827551"
+        },
+        {
+          "page": "page-002.png",
+          "sha256": "6b39705a836c8cc3bdbe4fc8f9d302cbe5b0b41758d2106f8975ceabed2cb0eb",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "6b39705a836c8cc3bdbe4fc8f9d302cbe5b0b41758d2106f8975ceabed2cb0eb"
+        },
+        {
+          "page": "page-003.png",
+          "sha256": "e2ad4fbccb2354c2c75d3194bfd8288a4fb620b8422a48b16770fcc2e0910651",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "e2ad4fbccb2354c2c75d3194bfd8288a4fb620b8422a48b16770fcc2e0910651"
+        },
+        {
+          "page": "page-004.png",
+          "sha256": "97400edfb89401cf71c15f8ce8b83636cf00e11080eefd6987fc761d07d3cbf5",
+          "inspection": "TRANSFERRED_FROM_R5_EXACT_PNG_HASH",
+          "prior_page_sha256": "97400edfb89401cf71c15f8ce8b83636cf00e11080eefd6987fc761d07d3cbf5"
+        }
+      ]
+    }
+  ],
+  "generated_manifests_left_pending": true,
+  "independent_round2_review": "PENDING",
+  "no_acceptance_or_handoff_claim": true
+}

@@ -79,6 +79,10 @@ Voor de grootte gebruik je de **absolute waarde**, geschreven als |Ev|.
 Dat is de afstand tot nul: |−0,5| = 0,5 en |−2| = 2.
 Vergelijk die grootte met **1**, niet het negatieve getal zelf.
 
+> **Let op — veelgemaakte fout**<br>
+> **Fout:** “Ev = −2 is prijsinelastisch, want −2 < 1.”<br>
+> **Goed:** |−2| = 2 > 1: prijselastisch. Het minteken geeft tegengestelde richtingen aan.
+
 - **|Ev| < 1: prijsinelastische vraag.** De gevraagde hoeveelheid verandert
   procentueel minder sterk dan de prijs. De fruitbox heeft |Ev| = 0,5: een
   daling van 5% is in absolute waarde half zo groot als de prijsstijging van 10%.
