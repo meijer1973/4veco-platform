@@ -94,6 +94,12 @@ function expectFailure(files, fragment, options = {}) {
   expect(failures.some((failure) => failure.includes(fragment))).toBe(true);
 }
 
+function expectOnlyIntegrationAuthorityBlock(files, options = {}) {
+  const failures = findBookOutlineFailures(files, options);
+  expect(failures.length).toBeGreaterThan(0);
+  expect(failures.every((failure) => failure.includes('release requires a separate immutable owner integration decision'))).toBe(true);
+}
+
 function release(hold, evidence = {}) {
   hold.status = 'released';
   hold.release_evidence = {
@@ -517,7 +523,7 @@ describe('Book 2 outline currentness contract', () => {
     approveTargetReplacementInFiles(files, holdId, paragraph);
     expectFailure(files, 'content approval does not authorize target integration', { action: 'target_authority_integration', paragraph });
     integrateTargetHoldInFiles(files, holdId, paragraph);
-    expect(findBookOutlineFailures(files, { action: 'paragraph_production', paragraph })).toEqual([]);
+    expectOnlyIntegrationAuthorityBlock(files, { action: 'paragraph_production', paragraph });
   });
 
   test.each([
@@ -573,7 +579,7 @@ describe('Book 2 outline currentness contract', () => {
     }
 
     expectFailure(files, 'action chapter_production is blocked by open hold H-229-211-CANDIDATE', { action: 'chapter_production', chapter: '2.1' });
-    expect(findBookOutlineFailures(files, { action: 'lesson_authoring', paragraph: '2.1.2' })).toEqual([]);
+    expectOnlyIntegrationAuthorityBlock(files, { action: 'lesson_authoring', paragraph: '2.1.2' });
     expectFailure(files, 'action lesson_authoring is blocked by open hold H-229-211-CANDIDATE', { action: 'lesson_authoring', chapter: '2.1' });
     expectFailure(files, 'action lesson_authoring is blocked by open hold H-229-223-CANDIDATE', { action: 'lesson_authoring', paragraph: '2.2.3' });
 

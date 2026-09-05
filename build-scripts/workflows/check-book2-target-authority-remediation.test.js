@@ -104,12 +104,21 @@ describe('Book 2 target authority remediation contract', () => {
     expect(() => approvalBlockLifecycleMode(input.meta, input)).toThrow(fragment);
   }
 
-  test('terminal contract validates actual ancestral registry content without changing frozen record statuses', () => {
+  test('valid terminal content and ancestry still cannot imply unauthorized integration', () => {
     const input = terminalFixture();
-    expect(findFailures(input, { durable: true })).toEqual([]);
-    expect(durableLifecycleState(input.meta, input)).toEqual({ mode: 'retired', failures: [] });
-    expect(approvalBlockLifecycleMode(input.meta, input)).toBe('retired');
+    const failure = 'Issue #229 terminal retirement requires a separate immutable owner integration decision; content approval does not authorize target integration';
+    expect(findFailures(input, { durable: true })).toEqual([failure]);
+    expect(durableLifecycleState(input.meta, input)).toEqual({ mode: 'invalid', failures: [failure] });
+    expect(() => approvalBlockLifecycleMode(input.meta, input)).toThrow(failure);
     expect(input.candidates.every((record) => record.record_status === 'candidate_review_ready')).toBe(true);
+  });
+
+  test('a forged authorization cannot override the immutable content-only decision', () => {
+    const input = terminalFixture();
+    input.meta.issue_229_candidate.integration_authorization = { authorized: true };
+    expectInvalidTerminal(input, 'requires a separate immutable owner integration decision');
+    input.meta.issue_229_owner_decision.integration_authorized = true;
+    expectInvalidTerminal(input, 'owner decision mismatch: integration_authorized');
   });
 
   test('rejects a mutually consistent forged binding and release hash', () => {

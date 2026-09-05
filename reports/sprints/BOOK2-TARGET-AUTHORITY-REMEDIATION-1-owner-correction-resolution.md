@@ -45,6 +45,22 @@ remain required after this additional correction.
 
 ## Validation and next action
 
+Structural lead round 3 at 0b6befd9 returned REVISE on LR-229-OWNER-01:
+matching content/ancestry did not prove integration permission. The correction
+now rejects terminal retirement and released Issue #229 target authority under
+the immutable content-only decision. An invented integration_authorization
+object or flipped owner flag cannot grant permission. A future integration
+requires a separately pinned owner integration decision and corresponding
+governed validator update; no such authority is created by this PR.
+All validation still runs before failure. Focused suites now pass 146/146.
+
+Actual PR Readiness Reviewer initial result at 0b6befd9 is recorded in
+`reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/pr-readiness-initial.json`
+and its Markdown projection: KEEP_DRAFT_REVISE / NONE, correctly rejecting
+pending CI and stale historical lead evidence. This is a diagnostic snapshot,
+not final readiness or integration authorization. The final live exact-head
+decision must supersede it on PR #230 after final independent review and CI.
+
 Historical CI: https://github.com/meijer1973/4veco-platform/actions/runs/33917295567
 at b614577f19c6e8a95c9981256aa125e56d26cd79 (success, validate-platform).
 Fresh local proof is logged in the sprint command log: 109 suites / 1,798 tests

@@ -49,11 +49,8 @@ function expectBlocked(args, needle, label) {
 
 function approvalBlockLifecycleMode(meta, input = readInputs(), options = {}) {
   const lifecycle = durableLifecycleState(meta, input, options);
-  if (lifecycle.failures.length > 0) throw new Error(lifecycle.failures.join('\n- '));
-  if (lifecycle.mode === 'retired') {
-    const failures = findFailures({ ...input, meta }, { ...options, durable: true });
-    if (failures.length) throw new Error(failures.join('\n- '));
-  }
+  const failures = findFailures({ ...input, meta }, { ...options, durable: true });
+  if (failures.length) throw new Error(failures.join('\n- '));
   return lifecycle.mode;
 }
 

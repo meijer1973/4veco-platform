@@ -688,6 +688,10 @@ function checkHolds(failures, files, meta, options) {
     const subjectId = paragraphScopes.length === 1 ? paragraphScopes[0].slice('paragraph:'.length) : null;
     const pin = (meta.target_registry_pins || []).find((item) => item.id === subjectId);
     if (isTargetIntegrationHold) {
+      if (hold.status === 'released' && hold.id === CANDIDATE_HOLD_BY_PARAGRAPH[subjectId]
+          && meta.issue_229_owner_decision?.integration_authorized === false) {
+        failures.push(`${META_PATH}: ${hold.id} release requires a separate immutable owner integration decision`);
+      }
       if (hold.status === 'open' && hold.candidate_binding) checkCandidateBinding(failures, hold, pin);
       else checkTargetBinding(failures, hold, pin, holds);
       const transitionBinding = hold.candidate_binding || hold.target_binding;

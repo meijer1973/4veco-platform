@@ -261,6 +261,10 @@
   "owner_corrections": {
     "review": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
     "plan": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-corrections-plan.md",
-    "status": "verification_in_progress"
+    "status": "implemented_pending_final_lead_ci_readiness",
+    "independent_verification": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-verification.md",
+    "lead_round3": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round3.md",
+    "initial_readiness": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/pr-readiness-initial.json",
+    "final_exact_head_proof": "Final live CI/readiness proof is published on PR #230 to avoid a self-referential evidence-commit loop; use the SHA and decision digest recorded there."
   }
 }

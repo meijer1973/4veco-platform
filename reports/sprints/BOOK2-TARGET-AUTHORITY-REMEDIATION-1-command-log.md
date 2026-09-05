@@ -2348,3 +2348,170 @@ OK report JSON contract: 14 report(s)
 ```text
 
 ```
+## npm.cmd test -- --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:17:17.120Z`
+- finished_at: `2026-09-05T08:17:40.098Z`
+- duration_ms: `22978`
+- exit_code: `0`
+- stdout_sha256: `9b8bca8e9cebeed9f6268a117ac9e16af30d5e5fd6d8267687e539eab2cec148`
+- stderr_sha256: `81ff1399d0eb30ec1ff857c9e77c053e5795ba5309048f02b2e38579d157e9e5`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+
+Test Suites: 2 passed, 2 total
+Tests:       146 passed, 146 total
+Snapshots:   0 total
+Time:        22.038 s
+Ran all test suites matching build-scripts/workflows/check-book2-target-authority-remediation.test.js|build-scripts/workflows/check-book-outline-currentness.test.js.
+
+```
+## npm.cmd test -- --runInBand build-scripts/workflows/check-book-outline-currentness.test.js build-scripts/workflows/check-book2-target-authority-remediation.test.js
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:17:54.213Z`
+- finished_at: `2026-09-05T08:18:17.045Z`
+- duration_ms: `22832`
+- exit_code: `0`
+- stdout_sha256: `f85152cf3bd9514428988878661579ed41071120a5ad93d491e6cac3ae14f752`
+- stderr_sha256: `317c5f0ca6b1db3400ca43b879a8d6cb465184e53f1a64392e3833344521049d`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/check-book-outline-currentness.test.js build-scripts/workflows/check-book2-target-authority-remediation.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+
+Test Suites: 2 passed, 2 total
+Tests:       146 passed, 146 total
+Snapshots:   0 total
+Time:        22.026 s
+Ran all test suites matching build-scripts/workflows/check-book-outline-currentness.test.js|build-scripts/workflows/check-book2-target-authority-remediation.test.js.
+
+```
+## npm.cmd run check:book2-target-authority-remediation
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:20:00.369Z`
+- finished_at: `2026-09-05T08:20:11.889Z`
+- duration_ms: `11520`
+- exit_code: `0`
+- stdout_sha256: `6864c4a53e0cedbb3348c7f66f96f090d263058d76df7d280e1866f39dc5f1e7`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:book2-target-authority-remediation
+> node build-scripts/workflows/check-book2-target-authority-remediation.js --durable && node build-scripts/workflows/check-book2-candidate-approval-block.js
+
+Book 2 target authority remediation: PASS
+- mode: durable pending-candidate invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+Book 2 candidate approval block: PASS
+- structural and target-authority repair routes pass
+- approved use, integration, production, lesson authoring, and merge remain blocked
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:branch-protection
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:20:11.945Z`
+- finished_at: `2026-09-05T08:20:13.113Z`
+- duration_ms: `1168`
+- exit_code: `0`
+- stdout_sha256: `184fc4e6415cae8926086609114134aba5462d1f352c24642dd3447d59bb6094`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:branch-protection
+> node build-scripts/ci/check-branch-protection.js
+
+{
+  "repository": "meijer1973/4veco-platform",
+  "branch": "main",
+  "ok": true,
+  "expected": {
+    "required_status_checks": {
+      "strict": true,
+      "contexts": [
+        "validate-platform"
+      ]
+    },
+    "required_pull_request_reviews": {
+      "required_approving_review_count": 0,
+      "dismiss_stale_reviews": false,
+      "require_code_owner_reviews": false,
+      "require_last_push_approval": false
+    },
+    "enforce_admins": true,
+    "allow_force_pushes": false,
+    "allow_deletions": false,
+    "required_conversation_resolution": true
+  },
+  "observed": {
+    "required_status_checks": {
+      "strict": true,
+      "contexts": [
+        "validate-platform"
+      ]
+    },
+    "enforce_admins": true,
+    "allow_force_pushes": false,
+    "allow_deletions": false,
+    "required_conversation_resolution": true,
+    "required_pull_request_reviews": {
+      "available": true,
+      "required": true,
+      "required_approving_review_count": 0,
+      "dismiss_stale_reviews": false,
+      "require_code_owner_reviews": false,
+      "require_last_push_approval": false,
+      "bypass_allowances_observable": false,
+      "bypass_disabled": null,
+      "limitation": "bypass allowances not exposed in inspected response"
+    }
+  },
+  "failures": []
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```

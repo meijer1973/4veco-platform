@@ -105,6 +105,12 @@ function durableLifecycleState(meta, input = readInputs(), options = {}) {
 
   const failures = [];
   failures.push(...ownerDecision.validateOwnerDecision(meta.issue_229_owner_decision));
+  // The only recorded immutable owner decision approves content, not integration.
+  // A later integration needs its own reviewed/pinned authority contract; neither
+  // release metadata nor a real candidate commit can manufacture that permission.
+  if (meta.issue_229_owner_decision?.integration_authorized !== true) {
+    failures.push('Issue #229 terminal retirement requires a separate immutable owner integration decision; content approval does not authorize target integration');
+  }
   let expectedRecords;
   try { expectedRecords = ownerDecision.approvedRecords(); }
   catch (error) { return { mode: 'invalid', failures: [error.message] }; }

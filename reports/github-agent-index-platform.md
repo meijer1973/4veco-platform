@@ -1,12 +1,12 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T08:14:18.123Z
+Generated: 2026-09-05T08:20:54.215Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-target-exercise-audit-20260904`
-Source commit: `4799c107442db758705e5f10097575922a05ab22`
+Source commit: `0b6befd9808e35a3442129e7fc278390ce568649`
 Files indexed: 7631
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 

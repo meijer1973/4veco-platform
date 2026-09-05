@@ -144,6 +144,16 @@
       "role": "structural_lead_round_2",
       "result": "PASS WITH FLAGS",
       "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md"
+    },
+    {
+      "role": "owner_correction_independent_verification",
+      "result": "PASS",
+      "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-verification.md"
+    },
+    {
+      "role": "owner_correction_structural_lead_round3",
+      "result": "REVISE",
+      "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round3.md"
     }
   ],
   "holds": {
@@ -239,10 +249,10 @@
   ],
   "proof": {
     "lead_review": {
-      "path": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md",
-      "result": "PASS WITH FLAGS",
-      "reviewed_commit_sha": "c324fc7fb1bd9e7f82ce3b0b2bb1aa0a4feea995",
-      "reviewed_substantive_commit_sha": "6cd02e8d14aec293fc7cd5a662ed972d175e1a4e"
+      "path": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round3.md",
+      "result": "REVISE",
+      "reviewed_commit_sha": "0b6befd9808e35a3442129e7fc278390ce568649",
+      "scope": "Historical initial owner-correction review; LR-229-OWNER-01 is repaired and awaits the published round-4 recheck. Final exact-head reviewer evidence on PR #230 supersedes this snapshot."
     },
     "checkers": [
       {
@@ -274,6 +284,13 @@
     },
     "correction_ci": {
       "status": "pending_new_correction_head"
+    },
+    "readiness": {
+      "initial_json": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/pr-readiness-initial.json",
+      "initial_markdown": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/pr-readiness-initial.md",
+      "initial_route": "KEEP_DRAFT_REVISE",
+      "final_proof_location": "https://github.com/meijer1973/4veco-platform/pull/230",
+      "finalization_rule": "Publish final live reviewed-head decision on the PR after final lead recheck and green exact-head CI; do not rewrite a historical decision as current."
     }
   },
   "changed_paths": [
@@ -362,5 +379,6 @@
     "lessons_authorized": false,
     "phase_b_authorized": false,
     "merge_authorized": false
-  }
+  },
+  "final_integration_contract": "The frozen candidate_review_ready status is not final authority. Immutable content approval permits no integration. Terminal retirement and released target authority are rejected until a separate immutable owner integration decision is implemented; all content/evidence comparisons still run."
 }
