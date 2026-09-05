@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T21:08:15.492Z
+Generated: 2026-09-05T21:18:47.115Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `2cb95db7c17bb108f3c996e1ffd20201324e0728`
-Files indexed: 9144
+Source commit: `159b2f795e0237ca6e8ab8b915a55e874d737d5f`
+Files indexed: 9145
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2716,7 +2716,7 @@ Count: 1030
 
 ## reports
 
-Count: 6371
+Count: 6372
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6227,6 +6227,7 @@ Count: 6371
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-planning-review.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-prerequisite-inventory.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-212-bonus-correction-work-order.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-ALT-audit-r4.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-ALT-build-r4.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-ALT-builder-evidence.md
