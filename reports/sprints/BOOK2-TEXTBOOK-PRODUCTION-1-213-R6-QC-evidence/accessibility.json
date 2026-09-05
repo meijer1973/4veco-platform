@@ -1,0 +1,94 @@
+{
+  "result": "PASS for scoped structural/contrast checks, not blanket compliance",
+  "figures": [
+    {
+      "name": "2.1.3_ex_1.svg",
+      "title": "Eerste interval volledig gesteund; tweede interval met lege breuken en cellen",
+      "SVG_desc_present": false,
+      "long_description_location": "Full native prose, table and caption; personally evaluated in report",
+      "contrast_on_actual_background": {
+        "#1A5276": 7.9742091306560505,
+        "#1F2937": 14.004388752378489
+      }
+    },
+    {
+      "name": "2.1.3_fig_1.svg",
+      "title": "Twee intervallen in de kostentabel; Q in fotohouders per dag, TK in euro per dag",
+      "SVG_desc_present": false,
+      "long_description_location": "Full native prose, table and caption; personally evaluated in report",
+      "contrast_on_actual_background": {
+        "#1F2937": 14.004388752378489
+      }
+    },
+    {
+      "name": "2.1.3_fig_2.svg",
+      "title": "MK berekend en geplaatst bij het rechter eindpunt; eerste en tweede interval",
+      "SVG_desc_present": false,
+      "long_description_location": "Full native prose, table and caption; personally evaluated in report",
+      "contrast_on_actual_background": {
+        "#1F2937": 14.004388752378489
+      }
+    },
+    {
+      "name": "2.1.3_fig_3.svg",
+      "title": "MO in dezelfde hoeveelheidstabel; vaste prijs per fotohouder",
+      "SVG_desc_present": false,
+      "long_description_location": "Full native prose, table and caption; personally evaluated in report",
+      "contrast_on_actual_background": {
+        "#1A5276": 7.9742091306560505,
+        "#1F2937": 14.004388752378489
+      }
+    },
+    {
+      "name": "2.1.3_fig_4.svg",
+      "title": "Totale winst en gemiddelde winsttoename zijn verschillende grootheden",
+      "SVG_desc_present": false,
+      "long_description_location": "Full native prose, table and caption; personally evaluated in report",
+      "contrast_on_actual_background": {
+        "#1F2937": 14.004388752378489
+      }
+    },
+    {
+      "name": "2.1.3_we_1.svg",
+      "title": "Drie eindpuntrijen van Lus en Bout; constante en stijgende MK",
+      "SVG_desc_present": false,
+      "long_description_location": "Full native prose, table and caption; personally evaluated in report",
+      "contrast_on_actual_background": {
+        "#1A5276": 7.9742091306560505,
+        "#1F2937": 14.004388752378489
+      }
+    }
+  ],
+  "documents": [
+    {
+      "edition": "paragraaf",
+      "lang": "nl",
+      "h1_count": 1,
+      "semantic_tables": 15,
+      "consistent_column_counts": true,
+      "interactive_controls": 0
+    },
+    {
+      "edition": "opgaven",
+      "lang": "nl",
+      "h1_count": 1,
+      "semantic_tables": 13,
+      "consistent_column_counts": true,
+      "interactive_controls": 0
+    },
+    {
+      "edition": "antwoorden",
+      "lang": "nl",
+      "h1_count": 1,
+      "semantic_tables": 7,
+      "consistent_column_counts": true,
+      "interactive_controls": 0
+    }
+  ],
+  "excluded": [
+    "screen-reader execution",
+    "PDF/UA tagging",
+    "interactive browser/keyboard compliance",
+    "OCR; source is native text"
+  ]
+}

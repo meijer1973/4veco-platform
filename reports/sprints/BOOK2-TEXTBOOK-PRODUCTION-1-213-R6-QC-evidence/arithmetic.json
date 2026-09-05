@@ -1,0 +1,920 @@
+{
+  "result": "PASS",
+  "source": "actual current HTML tables; own finite-fraction implementation",
+  "tables": [
+    {
+      "edition": "paragraaf",
+      "table_index": 2,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-12",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "2",
+          "profit": "-4",
+          "MK": "2",
+          "MO": "6",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "4",
+          "profit": "4",
+          "MK": "2",
+          "MO": "6",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "6",
+          "profit": "12",
+          "MK": "2",
+          "MO": "6",
+          "profit_change_per_extra": "4"
+        }
+      ]
+    },
+    {
+      "edition": "paragraaf",
+      "table_index": 3,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-8",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "2",
+          "profit": "12",
+          "MK": "2",
+          "MO": "12",
+          "profit_change_per_extra": "10"
+        },
+        {
+          "Q": "4",
+          "profit": "24",
+          "MK": "6",
+          "MO": "12",
+          "profit_change_per_extra": "6"
+        },
+        {
+          "Q": "6",
+          "profit": "28",
+          "MK": "10",
+          "MO": "12",
+          "profit_change_per_extra": "2"
+        }
+      ]
+    },
+    {
+      "edition": "paragraaf",
+      "table_index": 4,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-12",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "2",
+          "profit": "-4",
+          "MK": "2",
+          "MO": "6",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "4",
+          "profit": "4",
+          "MK": "2",
+          "MO": "6",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "6",
+          "profit": "12",
+          "MK": "2",
+          "MO": "6",
+          "profit_change_per_extra": "4"
+        }
+      ]
+    },
+    {
+      "edition": "paragraaf",
+      "table_index": 5,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-8",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "2",
+          "profit": "12",
+          "MK": "2",
+          "MO": "12",
+          "profit_change_per_extra": "10"
+        },
+        {
+          "Q": "4",
+          "profit": "24",
+          "MK": "6",
+          "MO": "12",
+          "profit_change_per_extra": "6"
+        },
+        {
+          "Q": "6",
+          "profit": "28",
+          "MK": "10",
+          "MO": "12",
+          "profit_change_per_extra": "2"
+        }
+      ]
+    },
+    {
+      "edition": "paragraaf",
+      "table_index": 7,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-9",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "3",
+          "profit": "0",
+          "MK": "2",
+          "MO": "5",
+          "profit_change_per_extra": "3"
+        },
+        {
+          "Q": "6",
+          "profit": "9",
+          "MK": "2",
+          "MO": "5",
+          "profit_change_per_extra": "3"
+        }
+      ]
+    },
+    {
+      "edition": "paragraaf",
+      "table_index": 8,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-10",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "2",
+          "profit": "2",
+          "MK": "2",
+          "MO": "8",
+          "profit_change_per_extra": "6"
+        },
+        {
+          "Q": "6",
+          "profit": "10",
+          "MK": "6",
+          "MO": "8",
+          "profit_change_per_extra": "2"
+        }
+      ]
+    },
+    {
+      "edition": "paragraaf",
+      "table_index": 10,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-20",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "4",
+          "profit": "-4",
+          "MK": "1",
+          "MO": "5",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "8",
+          "profit": "12",
+          "MK": "1",
+          "MO": "5",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "12",
+          "profit": "28",
+          "MK": "1",
+          "MO": "5",
+          "profit_change_per_extra": "4"
+        }
+      ]
+    },
+    {
+      "edition": "paragraaf",
+      "table_index": 11,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-12",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "4",
+          "profit": "68",
+          "MK": "4",
+          "MO": "24",
+          "profit_change_per_extra": "20"
+        },
+        {
+          "Q": "8",
+          "profit": "116",
+          "MK": "12",
+          "MO": "24",
+          "profit_change_per_extra": "12"
+        },
+        {
+          "Q": "12",
+          "profit": "132",
+          "MK": "20",
+          "MO": "24",
+          "profit_change_per_extra": "4"
+        }
+      ]
+    },
+    {
+      "edition": "paragraaf",
+      "table_index": 12,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-200",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "10",
+          "profit": "-150",
+          "MK": "3",
+          "MO": "8",
+          "profit_change_per_extra": "5"
+        },
+        {
+          "Q": "20",
+          "profit": "-100",
+          "MK": "3",
+          "MO": "8",
+          "profit_change_per_extra": "5"
+        },
+        {
+          "Q": "30",
+          "profit": "-50",
+          "MK": "3",
+          "MO": "8",
+          "profit_change_per_extra": "5"
+        }
+      ]
+    },
+    {
+      "edition": "paragraaf",
+      "table_index": 13,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-100",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "5",
+          "profit": "25",
+          "MK": "5",
+          "MO": "30",
+          "profit_change_per_extra": "25"
+        },
+        {
+          "Q": "10",
+          "profit": "100",
+          "MK": "15",
+          "MO": "30",
+          "profit_change_per_extra": "15"
+        },
+        {
+          "Q": "15",
+          "profit": "125",
+          "MK": "25",
+          "MO": "30",
+          "profit_change_per_extra": "5"
+        }
+      ]
+    },
+    {
+      "edition": "opgaven",
+      "table_index": 0,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-12",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "2",
+          "profit": "-4",
+          "MK": "2",
+          "MO": "6",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "4",
+          "profit": "4",
+          "MK": "2",
+          "MO": "6",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "6",
+          "profit": "12",
+          "MK": "2",
+          "MO": "6",
+          "profit_change_per_extra": "4"
+        }
+      ]
+    },
+    {
+      "edition": "opgaven",
+      "table_index": 1,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-8",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "2",
+          "profit": "12",
+          "MK": "2",
+          "MO": "12",
+          "profit_change_per_extra": "10"
+        },
+        {
+          "Q": "4",
+          "profit": "24",
+          "MK": "6",
+          "MO": "12",
+          "profit_change_per_extra": "6"
+        },
+        {
+          "Q": "6",
+          "profit": "28",
+          "MK": "10",
+          "MO": "12",
+          "profit_change_per_extra": "2"
+        }
+      ]
+    },
+    {
+      "edition": "opgaven",
+      "table_index": 2,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-12",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "2",
+          "profit": "-4",
+          "MK": "2",
+          "MO": "6",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "4",
+          "profit": "4",
+          "MK": "2",
+          "MO": "6",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "6",
+          "profit": "12",
+          "MK": "2",
+          "MO": "6",
+          "profit_change_per_extra": "4"
+        }
+      ]
+    },
+    {
+      "edition": "opgaven",
+      "table_index": 3,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-8",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "2",
+          "profit": "12",
+          "MK": "2",
+          "MO": "12",
+          "profit_change_per_extra": "10"
+        },
+        {
+          "Q": "4",
+          "profit": "24",
+          "MK": "6",
+          "MO": "12",
+          "profit_change_per_extra": "6"
+        },
+        {
+          "Q": "6",
+          "profit": "28",
+          "MK": "10",
+          "MO": "12",
+          "profit_change_per_extra": "2"
+        }
+      ]
+    },
+    {
+      "edition": "opgaven",
+      "table_index": 5,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-9",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "3",
+          "profit": "0",
+          "MK": "2",
+          "MO": "5",
+          "profit_change_per_extra": "3"
+        },
+        {
+          "Q": "6",
+          "profit": "9",
+          "MK": "2",
+          "MO": "5",
+          "profit_change_per_extra": "3"
+        }
+      ]
+    },
+    {
+      "edition": "opgaven",
+      "table_index": 6,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-10",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "2",
+          "profit": "2",
+          "MK": "2",
+          "MO": "8",
+          "profit_change_per_extra": "6"
+        },
+        {
+          "Q": "6",
+          "profit": "10",
+          "MK": "6",
+          "MO": "8",
+          "profit_change_per_extra": "2"
+        }
+      ]
+    },
+    {
+      "edition": "opgaven",
+      "table_index": 8,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-20",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "4",
+          "profit": "-4",
+          "MK": "1",
+          "MO": "5",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "8",
+          "profit": "12",
+          "MK": "1",
+          "MO": "5",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "12",
+          "profit": "28",
+          "MK": "1",
+          "MO": "5",
+          "profit_change_per_extra": "4"
+        }
+      ]
+    },
+    {
+      "edition": "opgaven",
+      "table_index": 9,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-12",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "4",
+          "profit": "68",
+          "MK": "4",
+          "MO": "24",
+          "profit_change_per_extra": "20"
+        },
+        {
+          "Q": "8",
+          "profit": "116",
+          "MK": "12",
+          "MO": "24",
+          "profit_change_per_extra": "12"
+        },
+        {
+          "Q": "12",
+          "profit": "132",
+          "MK": "20",
+          "MO": "24",
+          "profit_change_per_extra": "4"
+        }
+      ]
+    },
+    {
+      "edition": "opgaven",
+      "table_index": 10,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-200",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "10",
+          "profit": "-150",
+          "MK": "3",
+          "MO": "8",
+          "profit_change_per_extra": "5"
+        },
+        {
+          "Q": "20",
+          "profit": "-100",
+          "MK": "3",
+          "MO": "8",
+          "profit_change_per_extra": "5"
+        },
+        {
+          "Q": "30",
+          "profit": "-50",
+          "MK": "3",
+          "MO": "8",
+          "profit_change_per_extra": "5"
+        }
+      ]
+    },
+    {
+      "edition": "opgaven",
+      "table_index": 11,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-100",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "5",
+          "profit": "25",
+          "MK": "5",
+          "MO": "30",
+          "profit_change_per_extra": "25"
+        },
+        {
+          "Q": "10",
+          "profit": "100",
+          "MK": "15",
+          "MO": "30",
+          "profit_change_per_extra": "15"
+        },
+        {
+          "Q": "15",
+          "profit": "125",
+          "MK": "25",
+          "MO": "30",
+          "profit_change_per_extra": "5"
+        }
+      ]
+    },
+    {
+      "edition": "antwoorden",
+      "table_index": 0,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-9",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "3",
+          "profit": "0",
+          "MK": "2",
+          "MO": "5",
+          "profit_change_per_extra": "3"
+        },
+        {
+          "Q": "6",
+          "profit": "9",
+          "MK": "2",
+          "MO": "5",
+          "profit_change_per_extra": "3"
+        }
+      ]
+    },
+    {
+      "edition": "antwoorden",
+      "table_index": 1,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-10",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "2",
+          "profit": "2",
+          "MK": "2",
+          "MO": "8",
+          "profit_change_per_extra": "6"
+        },
+        {
+          "Q": "6",
+          "profit": "10",
+          "MK": "6",
+          "MO": "8",
+          "profit_change_per_extra": "2"
+        }
+      ]
+    },
+    {
+      "edition": "antwoorden",
+      "table_index": 2,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-20",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "4",
+          "profit": "-4",
+          "MK": "1",
+          "MO": "5",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "8",
+          "profit": "12",
+          "MK": "1",
+          "MO": "5",
+          "profit_change_per_extra": "4"
+        },
+        {
+          "Q": "12",
+          "profit": "28",
+          "MK": "1",
+          "MO": "5",
+          "profit_change_per_extra": "4"
+        }
+      ]
+    },
+    {
+      "edition": "antwoorden",
+      "table_index": 3,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-12",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "4",
+          "profit": "68",
+          "MK": "4",
+          "MO": "24",
+          "profit_change_per_extra": "20"
+        },
+        {
+          "Q": "8",
+          "profit": "116",
+          "MK": "12",
+          "MO": "24",
+          "profit_change_per_extra": "12"
+        },
+        {
+          "Q": "12",
+          "profit": "132",
+          "MK": "20",
+          "MO": "24",
+          "profit_change_per_extra": "4"
+        }
+      ]
+    },
+    {
+      "edition": "antwoorden",
+      "table_index": 4,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-200",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "10",
+          "profit": "-150",
+          "MK": "3",
+          "MO": "8",
+          "profit_change_per_extra": "5"
+        },
+        {
+          "Q": "20",
+          "profit": "-100",
+          "MK": "3",
+          "MO": "8",
+          "profit_change_per_extra": "5"
+        },
+        {
+          "Q": "30",
+          "profit": "-50",
+          "MK": "3",
+          "MO": "8",
+          "profit_change_per_extra": "5"
+        }
+      ]
+    },
+    {
+      "edition": "antwoorden",
+      "table_index": 5,
+      "computed_rows": [
+        {
+          "Q": "0",
+          "profit": "-100",
+          "MK": "None",
+          "MO": "None",
+          "profit_change_per_extra": "None"
+        },
+        {
+          "Q": "5",
+          "profit": "25",
+          "MK": "5",
+          "MO": "30",
+          "profit_change_per_extra": "25"
+        },
+        {
+          "Q": "10",
+          "profit": "100",
+          "MK": "15",
+          "MO": "30",
+          "profit_change_per_extra": "15"
+        },
+        {
+          "Q": "15",
+          "profit": "125",
+          "MK": "25",
+          "MO": "30",
+          "profit_change_per_extra": "5"
+        }
+      ]
+    }
+  ],
+  "holder_bridge": [
+    [
+      "5",
+      "5"
+    ],
+    [
+      "3",
+      "3"
+    ]
+  ],
+  "bottle_bridge": [
+    "4",
+    "2"
+  ],
+  "organizers": [
+    [
+      "2",
+      "6",
+      "14"
+    ],
+    [
+      "2",
+      "6",
+      "4"
+    ],
+    [
+      "2",
+      "7",
+      "20"
+    ],
+    [
+      "2",
+      "7",
+      "10"
+    ]
+  ],
+  "bonus_K": [
+    "3",
+    "3"
+  ],
+  "bonus_L": [
+    "5",
+    "2"
+  ],
+  "Start1": [
+    26,
+    20,
+    -6,
+    "13/2"
+  ],
+  "closing": [
+    [
+      21,
+      21,
+      0,
+      7
+    ],
+    [
+      27,
+      42,
+      15,
+      "9/2"
+    ]
+  ],
+  "target_points": [
+    4,
+    3,
+    2,
+    4,
+    2
+  ],
+  "total": 15
+}

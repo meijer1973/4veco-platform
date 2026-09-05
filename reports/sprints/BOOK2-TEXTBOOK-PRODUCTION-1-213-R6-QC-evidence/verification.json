@@ -1,0 +1,97 @@
+{
+  "result": "PASS WITH FLAGS",
+  "actor": "paragraph_221_r8_independent_review",
+  "platform_base": "552fa94d6c42298c4856ecbf5abd6b586c876a94",
+  "lesson_base": "576c5f4bb919611466e4511d2b4938a8195f6972",
+  "quality_raw_sha256": "bf66b80dbef5ac57dd22e2ce3e69b2d673488a5600ef4350a9667d1cc8b7bfef",
+  "legacy_quality_raw_sha256": "c96a4af45cfbf6c43ceda27ecf6dd231c75667ece58b378b9080975fe4be717f",
+  "legacy_bytes_and_fields_preserved": true,
+  "current_review_sha256": "a70fd9571cea3afc5861d1b91dc99c102757767e0fb9d66da211602a90c82d66",
+  "specialist_report_sha256": "5ac2b23ed9a8f2d0fb55150a527e999f0131df4378b30209d1ee21fca8669450",
+  "evidence_sha256": {
+    "pass0.json": "165c85b28195e0c92e558b5b47dedddc15197bd6f51c6db5ccf3ed11d9f02551",
+    "bindings.json": "e34ebd64932a2d884a2a1e429850cedee4b3a1e9dca01c6ef5a9b601ed9f6c0e",
+    "protected-baseline.json": "55cb2e6fdaf4dfd7e91e03a1213a3d4e8e4f47006f8e533fab5c3084dbe3b840",
+    "delta.json": "0f018d5d756a28bd2b1d31fadae8c9cd38bc32478778c31f7f45562ecb6de6db",
+    "arithmetic.json": "7383bf2ce8ef5a553ed8e82784f75cf199a6290683e6810c9b570bd8dae980cd",
+    "render.json": "ebe88287490086c0bbebdf968d7f6aab611ea3be1414599b64650a759874edcb",
+    "rebuild.json": "41e6ea096f66ebd3b2cb11ff26d7f5e05bc9d69cbf373e80b43913bd6ab83e6f",
+    "media.json": "a107e98e1b0161f529503fe25e65fe313ed81c24fe231cfe2f25613f9ef4d419",
+    "personal-inspection.md": "38d86e111ca5c0cf8897ae1fc5f608a0b08a045057c5dd492a6781525f61060f",
+    "personal-inspection-bindings.json": "9ef9bcd395ccf463020982a4c6f97bac15974f512b42789877e99d93005a9eef",
+    "accessibility.json": "fce84e8eb8bdb3f14b655c9b6edcd07ed256c8633d103e7f524d6e6f25720355",
+    "draad-table-geometry.json": "2da3875866560dae3c3574b1bfa59e565fb9284518389297ea2e1e43d2a5875f",
+    "draad-table-direct-pdf.png": "692e427c2204ad44d677f4ac4b2b92f1769761f50f70c75abaa09b293ae65f2e"
+  },
+  "unchanged_protected_pins": [
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-textbook-plan.md",
+      "sha256": "4cf29ff1e70953f6d1f8399a65d63ad37031e6a129804ad555442bfb98624234"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_chapter-plan.md",
+      "sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-textbook-handoff.md",
+      "sha256": "724a080619f2f072151edf20980071b3bef18cd60d1904c78f4aa906be8917c8"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-textbook-handoff.md",
+      "sha256": "de2b8ed7dcc7a3c5c6eaac400892d2d37ac5212ccb3b9972fb004115a88c1fe2"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-review.md",
+      "sha256": "74ad2ed9c44d9aa05b6d6a680d5d273f2cad4b62e4bead5db303c006514238cd"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-quality-ref.yaml",
+      "sha256": "e168e3c2b8698d12b699fbf60e7691fbbc8a15d61bd46a7988704d3c896c805c"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-review.md",
+      "sha256": "a70fd9571cea3afc5861d1b91dc99c102757767e0fb9d66da211602a90c82d66"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\build_pdf.py",
+      "sha256": "8dc5d89378218c72139eb1f8e0d735d8e1f29a633cee6a66093a81720ae15ba9"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_book-plan.md",
+      "sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "sha256": "f53521ed8812a4c8b8c33c1d66b34e0afe8425c1dffb1723f37771372b2baa09"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\references\\authored\\course-target-exercises.json",
+      "sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\references\\authored\\book-outlines\\book-2-outline.md",
+      "sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\references\\authored\\book-outlines\\book-2-outline.meta.json",
+      "sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\build-scripts\\content\\book-2\\b2_213.py",
+      "sha256": "6a45771783de221c3d65b32d423c1f7e90c90e84a79d30c4e175bba8836b056a"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    }
+  ],
+  "source_artifact_hashes_still_exact": true,
+  "handoff": "absent, unchanged",
+  "companion": "absent, unchanged",
+  "flags": [
+    "213-R6-TIME",
+    "213-R6-BONUS-FORMAT",
+    "213-QC-INSPECTIE-FRESHNESS"
+  ],
+  "scopes": "Actual committed candidates recorded separately after payload commit"
+}

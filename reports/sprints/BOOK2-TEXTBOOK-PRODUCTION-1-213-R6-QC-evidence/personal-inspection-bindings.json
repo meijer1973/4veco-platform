@@ -1,0 +1,194 @@
+{
+  "actor": "paragraph_221_r8_independent_review",
+  "role": "distinct non-author specialist QC of 213 R6",
+  "personal_record_sha256": "38d86e111ca5c0cf8897ae1fc5f608a0b08a045057c5dd492a6781525f61060f",
+  "documents": [
+    {
+      "edition": "paragraaf",
+      "pdf_sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+      "fresh_pages": [
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-01.png",
+          "sha256": "1b461934c3fd5c9519572a985379f753223be62288631675cfa9d084dc518ac6"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-02.png",
+          "sha256": "f5b3b1f3fd2a80f8c98ef56bb892df648733b8b9e550dee8106dbc6673e881d4"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-03.png",
+          "sha256": "259cbd5a05f47b70d00795813ac71750a421c17931fd269a8a17a8c78e130cc5"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-04.png",
+          "sha256": "c65f51e3136c2d8ef6a68f8d2f7cb8dbb912fdc2da8a63a72aa5bff49b283d6e"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-05.png",
+          "sha256": "d401752356839f500b0c32ea70585a953a195978e16124b1c495c6e3fab88a7e"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-06.png",
+          "sha256": "90f31298fe89748309cbe613aff0bd50982f57dd8a9764984893a8cd4f522a55"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-07.png",
+          "sha256": "e44a2d79019f42202108a1efe6e801ce057fe7400d0df8904946b88acb09394c"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-08.png",
+          "sha256": "37007229bd4350a5cff8703beaa64c12118212ad1255e1a23da645a00e92267d"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-09.png",
+          "sha256": "f1160cf726570230df25ff58e834aa1af5adb419590fd5eb0ef59532ac1c6689"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-10.png",
+          "sha256": "29ce7ee7dd65cb9bd84df4fa4f32009c57f743086af71abfdde577fa10e9e9f0"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-11.png",
+          "sha256": "eaf11cf9668844a9211f017804040f9133674d7c7ec93a442eaadaaa4284cd04"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-12.png",
+          "sha256": "838e5b48036bd631319f3f0fdaa8e32a843eb2e936e78922d6d7f71c17824263"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-13.png",
+          "sha256": "72b151067a8cbae1976d3b125fb19c6b70726293fe7eca8b256ef120a10a5f08"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\paragraaf\\page-14.png",
+          "sha256": "83ef57f59d7cfc7ebc5e38ba3e2f26186b4902c5773e03f69f4b7eed11099ef0"
+        }
+      ],
+      "native_page_parity": true
+    },
+    {
+      "edition": "opgaven",
+      "pdf_sha256": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05",
+      "fresh_pages": [
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\opgaven\\page-1.png",
+          "sha256": "8dce5752b8b6f223d9ec3334349cbd8426705b1b11d2ad616885a7237a4ff02a"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\opgaven\\page-2.png",
+          "sha256": "866955304c64cf0873b478645fc92e14ffe4b93801cc959cace9d2993d99e0fc"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\opgaven\\page-3.png",
+          "sha256": "1de08ce2987bd5c875622cbb41aeb0784dbbca9b41b54f1ce6ba75a325d77758"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\opgaven\\page-4.png",
+          "sha256": "d2bace9d4ce1eaddf56936a7327a676d3ba44a86fc54d26d2505a2f528d59f31"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\opgaven\\page-5.png",
+          "sha256": "b166b196ebe8a1426d452fc4bcf803b2084c8c41ed51dd4b1e5078ebc48320b6"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\opgaven\\page-6.png",
+          "sha256": "471e09af924065c761fded16c8c74c77e0d9aebd7d83ff395b6d12344cf3918f"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\opgaven\\page-7.png",
+          "sha256": "b6ef874b19f6630f3aaefc62ef4f3874ebdbc3f7049fe77d34e7f0ad79b70845"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\opgaven\\page-8.png",
+          "sha256": "da00760a5d51eca93a00da72bf6396f092b69d1239448f956a071bbc8b60c54a"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\opgaven\\page-9.png",
+          "sha256": "59ccfb6970899b936e17c94812a03806f05150fb9af4c258c36fe2b7050386f6"
+        }
+      ],
+      "native_page_parity": true
+    },
+    {
+      "edition": "antwoorden",
+      "pdf_sha256": "aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a",
+      "fresh_pages": [
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\antwoorden\\page-1.png",
+          "sha256": "259f34326468953ae3e18c09422336bdd21c43a4ad9f8a8e20445c64bf0ce5d8"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\antwoorden\\page-2.png",
+          "sha256": "83f082c2f1283879eb5a3c36f9cbe2676f6d0147e4610d657aa661ef85dfd7c2"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\antwoorden\\page-3.png",
+          "sha256": "8e2b6ab15c8e7955f3ed62c815886e8cb0e6aa1fcdcf56d93b2964cf8eda5f8b"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\antwoorden\\page-4.png",
+          "sha256": "dc982562e8d61b6fb4b6f442d867dd402e31dab263c9b812088f74741c33b5c6"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\antwoorden\\page-5.png",
+          "sha256": "bb5cbe33a820f077f37bdba8c2776bf8982ff987d800a651c7f1ef190eea6942"
+        },
+        {
+          "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\pages\\antwoorden\\page-6.png",
+          "sha256": "fabcaf97d2af683937c8eda443ab6e230d5e4899a0c0f12fa829d9bf1613499d"
+        }
+      ],
+      "native_page_parity": true
+    }
+  ],
+  "grayscale_personally_viewed": [
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\grayscale\\page-002.png",
+      "sha256": "004084b5fdd9e0d334b9fff765cc78abc8354c08f1786cb6d901e059ddcd419f"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\grayscale\\page-003.png",
+      "sha256": "ad6d3fdd1bb7132efa6b95a685fa946966576595cb0918f6513d34088165b47a"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\grayscale\\page-005.png",
+      "sha256": "f7bb3c55c9de61deb3af2a59bdeaa52c25ce1fd0a951fe5812d5c84ca72b9413"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\grayscale\\page-007.png",
+      "sha256": "74448eeabc7213d0ace5df6b5ef3eca5c3200667fd1c9b26a8a741c8d23170c3"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence\\grayscale\\page-010.png",
+      "sha256": "3a0ad3a2dba523cfacb33c7c198c61ffa27352e1774aefe8c74d12d59a5f2d0d"
+    }
+  ],
+  "figures_personally_viewed": [
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_ex_1.png",
+      "sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_1.png",
+      "sha256": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_2.png",
+      "sha256": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_3.png",
+      "sha256": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_4.png",
+      "sha256": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609"
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_we_1.png",
+      "sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a"
+    }
+  ],
+  "native_proof_manifests": "Still PENDING, never rewritten; own observations and bindings supplied separately",
+  "diagnostic_retraction": "See personal-inspection.md and draad-table-geometry.json; no Draad defect exists."
+}
