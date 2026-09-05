@@ -1,0 +1,31 @@
+{
+  "source_pdf_sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c",
+  "render_dpi": 150,
+  "inspection_status": "PENDING",
+  "pages": [
+    {
+      "page": 2,
+      "figure": "fig_1",
+      "path": "C:\\wt\\book2-222-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-grayscale-r13\\paragraaf-page-002.png",
+      "sha256": "3bd3c6801ed79b6f2eb393ec1a2adab8bb94dac1ec9305afbc5a55fcd4b69698"
+    },
+    {
+      "page": 3,
+      "figure": "fig_2",
+      "path": "C:\\wt\\book2-222-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-grayscale-r13\\paragraaf-page-003.png",
+      "sha256": "6b6036c03b586210c9df7cd517d05db4bf513fcc0acf51438fcc5c206a63ac6d"
+    },
+    {
+      "page": 4,
+      "figure": "fig_3",
+      "path": "C:\\wt\\book2-222-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-grayscale-r13\\paragraaf-page-004.png",
+      "sha256": "4ff0a7053816e6e405901e12e9fb7e51945f7e5c41475a45f4c312116b68bb56"
+    },
+    {
+      "page": 6,
+      "figure": "we_1",
+      "path": "C:\\wt\\book2-222-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-grayscale-r13\\paragraaf-page-006.png",
+      "sha256": "4bfb284dfd0bae936370dcf71ca9fde199876b56cbf56d07aacdb4247d0fd4be"
+    }
+  ]
+}

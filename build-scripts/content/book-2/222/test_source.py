@@ -1,6 +1,7 @@
 """Exact §222 source, target, arithmetic and geometry probes; not acceptance."""
 import re
 import sys
+import tempfile
 import unittest
 import xml.etree.ElementTree as ET
 from fractions import Fraction as F
@@ -49,6 +50,64 @@ class Paragraph222Tests(unittest.TestCase):
                        '<br>\nverbinding met |Ev|', '<br>\ndat iedere eindige stap met interval-|Ev|'):
             self.assertIn(phrase, self.docs['antwoorden'])
         self.assertNotIn('white-space', self.docs['antwoorden'])
+
+    def test_opgave4b_signed_quantity_then_price_then_ratio(self):
+        source = (b.CONTENT/'answers.md').read_text(encoding='utf-8')
+        pairs = [
+            ('b) Schaatsbaan: ', '%ΔQ = (95 − 100) / 100 × 100% = −5%',
+             '%ΔP = (11 − 10) / 10 × 100% = +10%',
+             'Ev = −5% / +10% = **−0,5**: |Ev| = 0,5 < 1, prijsinelastisch over deze stap.'),
+            ('Badmintonhal: ', '%ΔQ = (120 − 100) / 100 × 100% = +20%',
+             '%ΔP = (9 − 10) / 10 × 100% = −10%',
+             'Ev = +20% / −10% = **−2**: |Ev| = 2 > 1, prijselastisch over deze stap.')]
+        def check(value):
+            for label, quantity, price, ratio in pairs:
+                self.assertIn(f'{label}{quantity};\n{price}.\n{ratio}', value)
+        check(source)
+        for label, quantity, price, ratio in pairs:
+            with self.subTest(price_first=label):
+                mutant = source.replace(f'{label}{quantity};\n{price}.', f'{label}{price};\n{quantity}.')
+                self.assertNotEqual(mutant, source)
+                with self.assertRaises(AssertionError):
+                    check(mutant)
+
+    def test_native_pandoc_short_alts_preserve_full_caption(self):
+        from bs4 import BeautifulSoup
+        from PIL import Image
+        from print_pipeline import prepare_html
+        caption = ('Concert: de nieuwe rechthoek is hoger maar kleiner van oppervlak. '
+                   'De gemeten interval-Ev is geen bewijs van de lokale classificatie bij elke prijs.')
+        alt = 'Omzetrechthoeken van het concert: na de prijsstijging is de omzet lager, ondanks interval-Ev = −0,8.'
+        def check(soup):
+            for image in soup.find_all('img'):
+                self.assertLessEqual(len(image['alt']), 120)
+                self.assertRegex(image['alt'], r'^(Oude omzet|Exacte oude|Schematisch overzicht|Omzetrechthoeken)')
+        with tempfile.TemporaryDirectory(prefix='222-alt-test-') as tmp:
+            path = Path(tmp)
+            (path/'_assets').mkdir()
+            for name, svg in self.assets.items():
+                (path/'_assets'/f'{name}.svg').write_text(svg, encoding='utf-8')
+                Image.new('RGB', (1, 1), 'white').save(path/'_assets'/f'{name}.png')
+            for kind, count in [('paragraaf', 4), ('opgaven', 1)]:
+                html, _ = prepare_html(self.docs[kind], path/f'{kind}.md')
+                soup = BeautifulSoup(html, 'html.parser')
+                self.assertEqual(len(soup.find_all('img')), count)
+                check(soup)
+                concert = soup.find('img', alt=alt)
+                self.assertIsNotNone(concert)
+                figcaption = concert.find_parent('figure').figcaption
+                self.assertEqual(re.sub(r'\s+', ' ', figcaption.get_text()).strip(), caption)
+                self.assertFalse(figcaption.has_attr('aria-hidden'))
+                concert['alt'] = caption  # The former R12 actual alt must fail.
+                with self.assertRaises(AssertionError):
+                    check(soup)
+
+    def test_all_svg_accessible_titles_are_short_noun_phrases(self):
+        for name, source in self.assets.items():
+            with self.subTest(asset=name):
+                title = ET.fromstring(source).find('{http://www.w3.org/2000/svg}title').text
+                self.assertLessEqual(len(title), 120)
+                self.assertRegex(title, r'^(Oude omzet|Twee aparte zaken|Schematische lokale omzetregel|Concert:)')
 
     def test_exact_shared_exercise_route(self):
         self.assertEqual(self.docs['paragraaf'].split('## Uitgewerkt voorbeeld')[1],self.docs['opgaven'].split('## Uitgewerkt voorbeeld')[1])
