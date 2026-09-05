@@ -71,6 +71,14 @@ accessibility pass then identified imperative fig1 alt/title. The provisional
 local inspection output was corrected to REVISE and regenerated before any
 commit or quality-ref mutation. This distinction is preserved in the report.
 
+The first staged publication diff check then exposed CRLF characters inside the
+runner's Markdown stdout excerpts and extra EOF blank lines in two copied
+diagnostic scripts. The shell continued to create the evidence commit despite
+that check's nonzero exit. A following normal correction commit normalizes only
+those display/formatting bytes and records this event; JSONL stdout/stderr
+excerpts and their raw hashes remain untouched. The final baseline diff check
+must pass before publication. No history rewrite or lesson mutation is used.
+
 ## Publication and next owner
 
 Publish platform evidence normally, followed by a separate deterministic

@@ -37,4 +37,3 @@ for (const [name, cwd, base, lane] of [
 }
 fs.writeFileSync(path.join(__dirname,'BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-scope.json'),
   JSON.stringify({method:'Exact review-only allowlist, then normal paired lane classifier on actual correction-base diff plus untracked files; no fixture or exception',...results},null,2)+'\n');
-
