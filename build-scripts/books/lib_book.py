@@ -1451,6 +1451,13 @@ def md_to_pdf(book_md: str, book_output_dir: Path, book_title_full: str, book: d
 def build_book(manifest_path: Path, lessen_root: Path, platform_root: Path):
     print(f"=== Loading manifest: {manifest_path.name} ===")
     manifest = load_manifest(manifest_path)
+    if manifest.get("print_profile"):
+        if manifest["print_profile"] != "book2-frozen-part-a" or manifest["book"]["nr"] != 2:
+            raise ValueError("Unsupported book print profile")
+        # Deliberately separate from the frozen Book 1 edition renderer.
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "content" / "book-2"))
+        from book_pipeline import build_book as build_frozen_book2
+        return build_frozen_book2(manifest_path, lessen_root, platform_root)
     versions = detect_toolchain_versions()
     print(
         "Toolchain "

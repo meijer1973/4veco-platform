@@ -159,7 +159,7 @@ def _embed_images(soup: BeautifulSoup, source: Path) -> list[dict]:
 def _wrap_exercises(soup: BeautifulSoup) -> None:
     """Wrap direct sibling blocks; never consume structural headings/front matter."""
     for paragraph in list(soup.find_all("p")):
-        if paragraph.find_parent(class_=["chapter-front", "exercise"]):
+        if paragraph.find_parent(class_=["chapter-front", "book-front", "book-back", "exercise"]):
             continue
         first = paragraph.find("strong", recursive=False)
         if not first or not re.match(r"^Opgave\s+\d+\b", first.get_text(" ", strip=True), re.I):
@@ -210,6 +210,8 @@ def prepare_html(markdown: str, source: Path, *, pandoc: str = "pandoc") -> tupl
     _protect_short_callouts(soup)
     style = soup.new_tag("style")
     style.string = CSS
+    if soup.find(class_="book-front"):
+        style.string += '\n.book-front h1 { string-set: document-title "Boek 2"; }\n'
     soup.head.append(style)
     soup.html["lang"] = "nl"
     return str(soup), assets
