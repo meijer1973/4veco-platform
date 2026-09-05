@@ -9144,3 +9144,91 @@ Book 2 target authority remediation: PASS
 ```text
 
 ```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base 2bf6260c5d4d799c5408f898d0dab126eff9e5ac --head 95c8e20a603c31e813840ae9561266fe635b02d9
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:41:32.456Z`
+- finished_at: `2026-09-05T21:41:32.582Z`
+- duration_ms: `126`
+- exit_code: `0`
+- stdout_sha256: `2ba47a178690fa1fcb1a510e872875d4622490ca2923ef53506d967a06016c40`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (shared)
+- shared platform: 3
+  - build-scripts/content/book-2/212/answers.md
+  - build-scripts/content/book-2/212/test_bonus.py
+  - build-scripts/content/book-2/212/test_metadata.py
+- review evidence: 56
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence.py
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/contact-sheet.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/manifest.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/pages/page-001.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/pages/page-002.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/pages/page-003.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/pages/page-004.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/pages/page-005.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/pages/page-006.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/contact-sheet.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/manifest.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-001.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-002.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-003.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-004.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-005.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-006.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-007.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/contact-sheet.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/manifest.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-001.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-002.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-003.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-004.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-005.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-006.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-007.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-008.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-009.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-010.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-011.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-012.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-013.png
+  - reports/sp
+...[truncated 1967 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --cwd ../4veco-lessen --lane textbook --base 917115c8da631d65eefbdb1f15c13b2291cd9e1d --head 6139336793edd9e79037fbae1be1586a5cc3a2ba
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:41:32.643Z`
+- finished_at: `2026-09-05T21:41:32.764Z`
+- duration_ms: `121`
+- exit_code: `0`
+- stdout_sha256: `97f063f3648a3c3b8e6991b2d3a2be88a5307f9d75138fa25336e17ddc10ffa5`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (textbook)
+- Part A textbook: 4
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.zip
+
+```
+
+### stderr excerpt
+
+```text
+
+```
