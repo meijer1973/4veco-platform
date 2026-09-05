@@ -1,0 +1,412 @@
+{
+  "result": "PASS",
+  "cases": {
+    "fotohouders": {
+      "profits": [
+        -20,
+        30,
+        60
+      ],
+      "intervals": [
+        {
+          "from": 0,
+          "right_endpoint": 10,
+          "delta_Q": 10,
+          "MK": "3",
+          "MO": "8",
+          "delta_profit_per_extra": "5"
+        },
+        {
+          "from": 10,
+          "right_endpoint": 20,
+          "delta_Q": 10,
+          "MK": "5",
+          "MO": "8",
+          "delta_profit_per_extra": "3"
+        }
+      ]
+    },
+    "Lus": {
+      "profits": [
+        -12,
+        -4,
+        4,
+        12
+      ],
+      "intervals": [
+        {
+          "from": 0,
+          "right_endpoint": 2,
+          "delta_Q": 2,
+          "MK": "2",
+          "MO": "6",
+          "delta_profit_per_extra": "4"
+        },
+        {
+          "from": 2,
+          "right_endpoint": 4,
+          "delta_Q": 2,
+          "MK": "2",
+          "MO": "6",
+          "delta_profit_per_extra": "4"
+        },
+        {
+          "from": 4,
+          "right_endpoint": 6,
+          "delta_Q": 2,
+          "MK": "2",
+          "MO": "6",
+          "delta_profit_per_extra": "4"
+        }
+      ]
+    },
+    "Bout": {
+      "profits": [
+        -8,
+        12,
+        24,
+        28
+      ],
+      "intervals": [
+        {
+          "from": 0,
+          "right_endpoint": 2,
+          "delta_Q": 2,
+          "MK": "2",
+          "MO": "12",
+          "delta_profit_per_extra": "10"
+        },
+        {
+          "from": 2,
+          "right_endpoint": 4,
+          "delta_Q": 2,
+          "MK": "6",
+          "MO": "12",
+          "delta_profit_per_extra": "6"
+        },
+        {
+          "from": 4,
+          "right_endpoint": 6,
+          "delta_Q": 2,
+          "MK": "10",
+          "MO": "12",
+          "delta_profit_per_extra": "2"
+        }
+      ]
+    },
+    "flessen": {
+      "profits": [
+        -8,
+        0,
+        4
+      ],
+      "intervals": [
+        {
+          "from": 0,
+          "right_endpoint": 2,
+          "delta_Q": 2,
+          "MK": "2",
+          "MO": "6",
+          "delta_profit_per_extra": "4"
+        },
+        {
+          "from": 2,
+          "right_endpoint": 4,
+          "delta_Q": 2,
+          "MK": "4",
+          "MO": "6",
+          "delta_profit_per_extra": "2"
+        }
+      ]
+    },
+    "patches": {
+      "profits": [
+        -9,
+        0,
+        9
+      ],
+      "intervals": [
+        {
+          "from": 0,
+          "right_endpoint": 3,
+          "delta_Q": 3,
+          "MK": "2",
+          "MO": "5",
+          "delta_profit_per_extra": "3"
+        },
+        {
+          "from": 3,
+          "right_endpoint": 6,
+          "delta_Q": 3,
+          "MK": "2",
+          "MO": "5",
+          "delta_profit_per_extra": "3"
+        }
+      ]
+    },
+    "onderzetters": {
+      "profits": [
+        -10,
+        2,
+        10
+      ],
+      "intervals": [
+        {
+          "from": 0,
+          "right_endpoint": 2,
+          "delta_Q": 2,
+          "MK": "2",
+          "MO": "8",
+          "delta_profit_per_extra": "6"
+        },
+        {
+          "from": 2,
+          "right_endpoint": 6,
+          "delta_Q": 4,
+          "MK": "6",
+          "MO": "8",
+          "delta_profit_per_extra": "2"
+        }
+      ]
+    },
+    "Draad": {
+      "profits": [
+        -20,
+        -4,
+        12,
+        28
+      ],
+      "intervals": [
+        {
+          "from": 0,
+          "right_endpoint": 4,
+          "delta_Q": 4,
+          "MK": "1",
+          "MO": "5",
+          "delta_profit_per_extra": "4"
+        },
+        {
+          "from": 4,
+          "right_endpoint": 8,
+          "delta_Q": 4,
+          "MK": "1",
+          "MO": "5",
+          "delta_profit_per_extra": "4"
+        },
+        {
+          "from": 8,
+          "right_endpoint": 12,
+          "delta_Q": 4,
+          "MK": "1",
+          "MO": "5",
+          "delta_profit_per_extra": "4"
+        }
+      ]
+    },
+    "Kaft": {
+      "profits": [
+        -12,
+        68,
+        116,
+        132
+      ],
+      "intervals": [
+        {
+          "from": 0,
+          "right_endpoint": 4,
+          "delta_Q": 4,
+          "MK": "4",
+          "MO": "24",
+          "delta_profit_per_extra": "20"
+        },
+        {
+          "from": 4,
+          "right_endpoint": 8,
+          "delta_Q": 4,
+          "MK": "12",
+          "MO": "24",
+          "delta_profit_per_extra": "12"
+        },
+        {
+          "from": 8,
+          "right_endpoint": 12,
+          "delta_Q": 4,
+          "MK": "20",
+          "MO": "24",
+          "delta_profit_per_extra": "4"
+        }
+      ]
+    },
+    "Linea": {
+      "profits": [
+        -200,
+        -150,
+        -100,
+        -50
+      ],
+      "intervals": [
+        {
+          "from": 0,
+          "right_endpoint": 10,
+          "delta_Q": 10,
+          "MK": "3",
+          "MO": "8",
+          "delta_profit_per_extra": "5"
+        },
+        {
+          "from": 10,
+          "right_endpoint": 20,
+          "delta_Q": 10,
+          "MK": "3",
+          "MO": "8",
+          "delta_profit_per_extra": "5"
+        },
+        {
+          "from": 20,
+          "right_endpoint": 30,
+          "delta_Q": 10,
+          "MK": "3",
+          "MO": "8",
+          "delta_profit_per_extra": "5"
+        }
+      ]
+    },
+    "Curva": {
+      "profits": [
+        -100,
+        25,
+        100,
+        125
+      ],
+      "intervals": [
+        {
+          "from": 0,
+          "right_endpoint": 5,
+          "delta_Q": 5,
+          "MK": "5",
+          "MO": "30",
+          "delta_profit_per_extra": "25"
+        },
+        {
+          "from": 5,
+          "right_endpoint": 10,
+          "delta_Q": 5,
+          "MK": "15",
+          "MO": "30",
+          "delta_profit_per_extra": "15"
+        },
+        {
+          "from": 10,
+          "right_endpoint": 15,
+          "delta_Q": 5,
+          "MK": "25",
+          "MO": "30",
+          "delta_profit_per_extra": "5"
+        }
+      ]
+    },
+    "organizers_basis": {
+      "profits": [
+        -2,
+        14
+      ],
+      "intervals": [
+        {
+          "from": 2,
+          "right_endpoint": 6,
+          "delta_Q": 4,
+          "MK": "2",
+          "MO": "6",
+          "delta_profit_per_extra": "4"
+        }
+      ]
+    },
+    "organizers_A": {
+      "profits": [
+        -12,
+        4
+      ],
+      "intervals": [
+        {
+          "from": 2,
+          "right_endpoint": 6,
+          "delta_Q": 4,
+          "MK": "2",
+          "MO": "6",
+          "delta_profit_per_extra": "4"
+        }
+      ]
+    },
+    "organizers_B": {
+      "profits": [
+        0,
+        20
+      ],
+      "intervals": [
+        {
+          "from": 2,
+          "right_endpoint": 6,
+          "delta_Q": 4,
+          "MK": "2",
+          "MO": "7",
+          "delta_profit_per_extra": "5"
+        }
+      ]
+    },
+    "organizers_beide": {
+      "profits": [
+        -10,
+        10
+      ],
+      "intervals": [
+        {
+          "from": 2,
+          "right_endpoint": 6,
+          "delta_Q": 4,
+          "MK": "2",
+          "MO": "7",
+          "delta_profit_per_extra": "5"
+        }
+      ]
+    }
+  },
+  "bonus": {
+    "K": [
+      "3",
+      "3"
+    ],
+    "L": [
+      "5",
+      "2"
+    ]
+  },
+  "Start1": {
+    "TK": 26,
+    "TO": 20,
+    "winst": -6,
+    "GTK": "13/2"
+  },
+  "Closing": {
+    "3": {
+      "TK": 21,
+      "TO": 21,
+      "winst": 0,
+      "GTK": "7"
+    },
+    "6": {
+      "TK": 27,
+      "TO": 42,
+      "winst": 15,
+      "GTK": "9/2"
+    }
+  },
+  "target_points": [
+    4,
+    3,
+    2,
+    4,
+    2
+  ],
+  "target_total": 15,
+  "visual_inspection": "NOT_SUPPLIED_BY_THIS_SCRIPT"
+}

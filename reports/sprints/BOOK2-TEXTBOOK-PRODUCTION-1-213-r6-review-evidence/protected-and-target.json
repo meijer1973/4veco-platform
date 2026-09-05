@@ -1,0 +1,277 @@
+{
+  "result": "PASS",
+  "pins": [
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-textbook-plan.md",
+      "raw_sha256": "4cf29ff1e70953f6d1f8399a65d63ad37031e6a129804ad555442bfb98624234",
+      "canonical_lf_sha256": "4cf29ff1e70953f6d1f8399a65d63ad37031e6a129804ad555442bfb98624234",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_chapter-plan.md",
+      "raw_sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116",
+      "canonical_lf_sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-textbook-handoff.md",
+      "raw_sha256": "724a080619f2f072151edf20980071b3bef18cd60d1904c78f4aa906be8917c8",
+      "canonical_lf_sha256": "724a080619f2f072151edf20980071b3bef18cd60d1904c78f4aa906be8917c8",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-textbook-handoff.md",
+      "raw_sha256": "de2b8ed7dcc7a3c5c6eaac400892d2d37ac5212ccb3b9972fb004115a88c1fe2",
+      "canonical_lf_sha256": "de2b8ed7dcc7a3c5c6eaac400892d2d37ac5212ccb3b9972fb004115a88c1fe2",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-review.md",
+      "raw_sha256": "74ad2ed9c44d9aa05b6d6a680d5d273f2cad4b62e4bead5db303c006514238cd",
+      "canonical_lf_sha256": "74ad2ed9c44d9aa05b6d6a680d5d273f2cad4b62e4bead5db303c006514238cd",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-quality-ref.yaml",
+      "raw_sha256": "e168e3c2b8698d12b699fbf60e7691fbbc8a15d61bd46a7988704d3c896c805c",
+      "canonical_lf_sha256": "e168e3c2b8698d12b699fbf60e7691fbbc8a15d61bd46a7988704d3c896c805c",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_book-plan.md",
+      "raw_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76",
+      "canonical_lf_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\build_pdf.py",
+      "raw_sha256": "8dc5d89378218c72139eb1f8e0d735d8e1f29a633cee6a66093a81720ae15ba9",
+      "canonical_lf_sha256": "8dc5d89378218c72139eb1f8e0d735d8e1f29a633cee6a66093a81720ae15ba9",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-quality-ref.yaml",
+      "raw_sha256": "c96a4af45cfbf6c43ceda27ecf6dd231c75667ece58b378b9080975fe4be717f",
+      "canonical_lf_sha256": "c96a4af45cfbf6c43ceda27ecf6dd231c75667ece58b378b9080975fe4be717f",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "raw_sha256": "f53521ed8812a4c8b8c33c1d66b34e0afe8425c1dffb1723f37771372b2baa09",
+      "canonical_lf_sha256": "f53521ed8812a4c8b8c33c1d66b34e0afe8425c1dffb1723f37771372b2baa09",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-platform\\references\\authored\\course-target-exercises.json",
+      "raw_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-platform\\references\\authored\\book-outlines\\book-2-outline.md",
+      "raw_sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-platform\\references\\authored\\book-outlines\\book-2-outline.meta.json",
+      "raw_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\b2_213.py",
+      "raw_sha256": "6a45771783de221c3d65b32d423c1f7e90c90e84a79d30c4e175bba8836b056a",
+      "unchanged_from_published_base": true
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+      "raw_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "unchanged_from_published_base": true
+    }
+  ],
+  "frozen_target": {
+    "id": "2.1.3",
+    "module": 2,
+    "chapter": 1,
+    "paragraph": 3,
+    "paragraph_title": "Marginale kosten en marginale opbrengsten",
+    "difficulty": "MEDIUM",
+    "target_exercise": {
+      "context": "Onderneming Linea heeft TK = 200 + 3Q en TO = 8Q. Onderneming Curva heeft TK = 100 + Q² en verkoopt ieder product voor € 30, zodat TO = 30Q. Bedragen zijn in euro. Bereken marginale waarden per extra product over ieder tabelinterval: MK = ΔTK/ΔQ en MO = ΔTO/ΔQ. Gebruik geen afgeleiden.",
+      "sources": [
+        {
+          "id": "tabel-linea",
+          "type": "table",
+          "columns": [
+            "Q",
+            "TK",
+            "TO",
+            "winst",
+            "MK",
+            "MO"
+          ],
+          "rows": [
+            [
+              "0",
+              "€200",
+              "€0",
+              "",
+              "—",
+              "—"
+            ],
+            [
+              "10",
+              "€230",
+              "€80",
+              "",
+              "",
+              ""
+            ],
+            [
+              "20",
+              "€260",
+              "€160",
+              "",
+              "",
+              ""
+            ],
+            [
+              "30",
+              "€290",
+              "€240",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "content": "Vul de lege cellen in. Noteer een intervalwaarde voor MK en MO steeds bij het rechter eindpunt."
+        },
+        {
+          "id": "tabel-curva",
+          "type": "table",
+          "columns": [
+            "Q",
+            "TK",
+            "TO",
+            "winst",
+            "MK",
+            "MO"
+          ],
+          "rows": [
+            [
+              "0",
+              "€100",
+              "€0",
+              "−€100",
+              "—",
+              "—"
+            ],
+            [
+              "5",
+              "€125",
+              "€150",
+              "€25",
+              "",
+              ""
+            ],
+            [
+              "10",
+              "€200",
+              "€300",
+              "€100",
+              "",
+              ""
+            ],
+            [
+              "15",
+              "€325",
+              "€450",
+              "€125",
+              "",
+              ""
+            ]
+          ],
+          "content": "Vul de lege cellen in. Noteer een intervalwaarde voor MK en MO steeds bij het rechter eindpunt."
+        }
+      ],
+      "subquestions": [
+        {
+          "label": "a",
+          "points": 4,
+          "prompt": "Vul in de tabel van Linea de winstkolom in."
+        },
+        {
+          "label": "b",
+          "points": 3,
+          "prompt": "Bereken voor Linea MK en MO over het eerste interval. Laat teller en noemer zien en vul dezelfde intervalwaarden in bij de rechter eindpunten Q=10, Q=20 en Q=30."
+        },
+        {
+          "label": "c",
+          "points": 2,
+          "prompt": "Leg uit waarom MO bij Linea constant is."
+        },
+        {
+          "label": "d",
+          "points": 4,
+          "prompt": "Bereken voor Curva MK over de drie intervallen en MO over het eerste interval. Vul de berekende MK- en MO-waarden in bij de juiste rechter eindpunten Q=5, Q=10 en Q=15."
+        },
+        {
+          "label": "e",
+          "points": 2,
+          "prompt": "Vergelijk het MK-patroon van Linea en Curva en leg uit wat MK en MO per extra product binnen een tabelinterval betekenen. Trek geen conclusie over de winstmaximaliserende afzet."
+        }
+      ]
+    },
+    "lesson_goals": [
+      "Je kunt MK als ΔTK/ΔQ en MO als ΔTO/ΔQ over een tabelinterval berekenen.",
+      "Je kunt gegeven totale kosten en totale opbrengsten gebruiken om een winstkolom in te vullen.",
+      "Je kunt constante en stijgende marginale patronen vergelijken zonder afgeleiden.",
+      "Je kunt uitleggen wat MK en MO per extra product binnen het genoemde tabelinterval betekenen."
+    ],
+    "required_skills": [
+      "A07",
+      "A08",
+      "A21"
+    ],
+    "prior_knowledge_assumed": [
+      "A07, A08 and A21 totals are retrieval-required; the interval method is taught as new formal learning."
+    ],
+    "new_skills_introduced": [
+      "Table-interval MK=ΔTK/ΔQ",
+      "Table-interval MO=ΔTO/ΔQ"
+    ],
+    "missing_units_flagged": [
+      "A dedicated pre-calculus table-interval unit for MK and MO.",
+      "Pattern comparison for linear versus quadratic total costs."
+    ],
+    "exam_codes": [
+      "A2.1",
+      "D1.14",
+      "D1.17",
+      "D1.19"
+    ],
+    "difficulty_notes": "Kandidaat voor circa 12 minuten met twee echte tabellen. De tweede tabel is vooraf grotendeels ingevuld; de intervalnoemer en rechter eindpunten blijven zichtbaar.",
+    "answer_form_expectations": [
+      "winstkolom",
+      "intervalbreuken met ΔQ op de rechter eindpunten",
+      "korte patroonverklaring",
+      "begrensde betekenis"
+    ],
+    "short_answer_model": {
+      "a": "Linea bij Q=0/10/20/30: winst=−€200/−€150/−€100/−€50.",
+      "b": "Eerste interval: MK=(230−200)/(10−0)=€3 per product en MO=(80−0)/(10−0)=€8 per product. Zet MK=€3 en MO=€8 bij de rechter eindpunten Q=10, Q=20 en Q=30.",
+      "c": "Linea heeft constant MK=€3 en MO=€8 per product. Bij een vaste prijs levert ieder extra verkocht product dezelfde extra opbrengst op.",
+      "d": "Curva: MK=(125−100)/(5−0)=€5 bij Q=5, MK=€15 bij Q=10 en MK=€25 bij Q=15. MO=(150−0)/(5−0)=€30 en staat als constante intervalwaarde bij Q=5, Q=10 en Q=15.",
+      "e": "Linea heeft constant MK; Curva heeft stijgend MK. MK is de gemiddelde extra totale kosten per extra product binnen het interval; MO is de gemiddelde extra totale opbrengst per extra product binnen het interval."
+    },
+    "source_ref": "references/owned/course-blueprint-v5.md §2.1.3",
+    "paragraph_kind": "theory",
+    "introduces_new_theory": true,
+    "record_status": "candidate_review_ready",
+    "v5_migration": {
+      "source_status": "candidate_review_ready",
+      "from_v4_id": "1.4.3",
+      "related_v4_ids": [],
+      "review_required_before_final": true
+    }
+  },
+  "frozen_target_record_sha256": "df4b7d7b0326445b386ae570b43eb50fc9fc431707e3992e44394323f959c3ef"
+}
