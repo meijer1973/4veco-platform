@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "../4veco-lessen",
+    "--lane",
+    "textbook",
+    "--base",
+    "6139336793edd9e79037fbae1be1586a5cc3a2ba",
+    "--head",
+    "91645da0247f793a8b6b19ae94a92c6bd8fee282",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform",
+  "expected_exit": 0,
+  "exit": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"lane\": \"textbook\",\n  \"categories\": {\n    \"partA_textbook\": [\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md\"\n    ],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": ""
+}
