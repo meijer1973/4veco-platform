@@ -122,3 +122,46 @@ by existing formatHoldProjectionRow and applied without semantic-outline edits.
   records remain unchanged. H-213-OPC2 is the only open hold and is out of scope.
 
 No future PR merge or student-output acceptance follows from this plan decision.
+
+## Independent follow-up checks and exemplar integration
+
+Independent reviewer `correction_plan_review` reported PASS for the exact
+two-hold release at e25a0cb0: only the authorized status/evidence fields and
+projection rows differ; currentness and durable authority pass, and the
+out-of-scope formal-output-choice negative remains closed. The same reviewer
+independently passed the LF proof serializer (613b4ca9), full 12-point footer
+floor (316d2f2d), and narrowly bounded rendered-proof classifier (8af296c5),
+including 20 print tests and 25 lane tests. These checks do not accept content.
+
+Root adopted the builder's five own §211 platform commits through
+16c3b1c53b73a563084297190ba58d7bf1bed679 and three own lesson commits through
+c37dfba8c68cbe86b3b12534e020fda6e2481ac5. Shared helper commits were not
+duplicated. Root personally inspected all 31 final R3 pages at full-page
+reading scale (15 paragraph, 9 exercises, 7 answers), including the opening
+recall bridge, frozen target table, answer scoring, and all 12-point footers.
+No additional visible defect was found. This root check is separate from the
+two independent reviewers' reports and does not substitute for either gate.
+
+Root's focused Python checks after adoption passed: 20 print, 6 chapter, and
+11 §211 source tests. The known future-WeasyPrint-69 deprecation warning was
+observed; no upgrade was made.
+
+### Superseded first-draft proof retention
+
+The first-draft generated manifests used raw CRLF bytes. Their old builder
+inspection records pin those exact bytes; normalizing them retrospectively
+would falsify their provenance. The fixed generator and R2/R3 manifests use LF.
+Root removed only these three superseded first-draft directories from its
+current integration tree after resolving and checking each exact path:
+
+- `211-antwoorden-9fce79c5c66c`
+- `211-opgaven-111c7436dedc`
+- `211-paragraaf-e136b26a4fcb`
+
+All are under `reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/`. Their
+complete unchanged 40-file evidence remains recoverable at root commit
+379624a7 and the published builder commit
+a1077e8c9c98c783db178fa2e2862f2c8de9a93d. Historical first-draft paths in the
+builder reports must be read at those commits, not as current acceptance.
+The R2 history, all R3 proof, student sources/assets/PDFs, and other worktrees
+remain untouched. No whitespace-rule waiver or proof-byte rewrite was used.
