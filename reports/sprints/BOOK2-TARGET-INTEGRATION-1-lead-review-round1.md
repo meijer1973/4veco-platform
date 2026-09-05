@@ -1,7 +1,7 @@
 # Lead Review Summary
 
 Sprint: `BOOK2-TARGET-INTEGRATION-1`
-Round: 1
+Round: lead review round 1
 Reviewer: correction_plan_review, independent read-only agent, 2026-09-05.
 
 ## Scope
@@ -57,6 +57,8 @@ owner handoff; it does permit completing those evidence steps.
 | Empirical classroom timing | minor_carry_flag | Classroom-proven timing claims | Target integration review | Actual observations in production follow-up |
 
 ## Blocking Findings
+
+Two blocking closure-evidence findings remained at this review.
 
 LR-231-01: Do not substitute the earlier 181-test checkpoint, independent activation
 suite or PR #230 CI for final PR #231 validation.

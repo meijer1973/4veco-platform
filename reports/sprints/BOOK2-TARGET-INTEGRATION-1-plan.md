@@ -100,9 +100,16 @@ No student-facing files generated in milestone 1. Exact outputs:
 - New integration helper/tests and changed lifecycle consumers/tests; metadata
   plus its human-readable lifecycle projection.
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md.
-- Review packet, readiness evidence and exact-head CI links under
-  reports/review-gates/GATE-BOOK2-TARGET-INTEGRATION-1/; generated repository maps,
-  URL index and dashboard when required by the normal tools.
+- Review packet under reports/review-gates/GATE-BOOK2-TARGET-INTEGRATION-1/.
+  Final exact-head CI, independent publication-delta lead addendum and applied
+  readiness are published on PR #231. The addendum is a new review artifact for
+  the finalized plan/result/packet/ledger, not inherited approval of those edits.
+  The original round-2 file retains its actual reviewed SHA. No repository edits
+  follow that final addendum; readiness uses its actual PR-comment URL and SHA.
+  Local machine readiness outputs live outside the repository in the paired
+  task directory. This avoids a self-referential evidence-commit cycle while
+  retaining inspectable remote proof. Generated maps, URL index and dashboard
+  remain committed and are refreshed by their normal tools.
 
 ## Operationalized sprint procedure
 
@@ -152,9 +159,12 @@ node build-scripts/workflows/check-book2-candidate-approval-block.js
 npm.cmd run check:book-outline-currentness -- --require-approved
 npm.cmd run check:book-outline-currentness -- --require-approved --action paragraph_production --paragraph 2.1.1
 npm.cmd run check:platform
-npm.cmd test -- --runInBand
 git diff --check
 ```
+
+`npm.cmd run check:platform` expands to `jest --runInBand`; the originally
+listed `npm.cmd test -- --runInBand` is the same complete suite and is not rerun
+under a second alias. This consolidation changes no test coverage or quality gate.
 
 Additionally enumerate all twelve integration actions and compare before/after
 holds. Assert H-221-PRIOR/H-22-ELASTIC-CONTRAST still block affected production;

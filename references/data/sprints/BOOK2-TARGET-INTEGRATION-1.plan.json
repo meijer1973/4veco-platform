@@ -3,7 +3,9 @@
   "sprint_id": "BOOK2-TARGET-INTEGRATION-1",
   "name": "Governed Book 2 target activation",
   "created": "2026-09-05",
-  "status": "planning_review_pending",
+  "status": "implementation_completed_human_gate_open",
+  "planning_review": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-planning-review.md",
+  "planning_review_result": "PASS",
   "issue": 229,
   "milestone_issue": 223,
   "platform_baseline": "ad27f9c30205042c01cacf0b362f4d3f87e6c7a9",
@@ -27,7 +29,6 @@
     "node build-scripts/workflows/check-book2-target-authority-remediation.js --durable",
     "node build-scripts/workflows/check-book2-candidate-approval-block.js",
     "npm.cmd run check:book-outline-currentness -- --require-approved",
-    "npm.cmd run check:platform",
-    "npm.cmd test -- --runInBand"
+    "npm.cmd run check:platform"
   ]
 }

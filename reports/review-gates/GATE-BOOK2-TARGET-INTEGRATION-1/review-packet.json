@@ -14,12 +14,14 @@
   "paired_prs": [],
   "review_autonomy": {
     "level": "L4",
-    "lead_review_result": "REVISE",
+    "lead_review_result": "PASS_WITH_FLAGS",
     "rationale": "Separate owner grant and authority-validator transition; future payload merge requires owner authorization."
   },
   "human_decision_required": true,
   "auto_merge_allowed_after_ci": false,
-  "status": "internal_review_in_progress",
+  "status": "structural_review_passed_final_publication_proof_required",
+  "status_scope": "Checked-in snapshot after round2; final exact-head lead delta review, CI and applied readiness are published on PR231 and must pass before human handoff.",
+  "final_publication_proof": {"location": "https://github.com/meijer1973/4veco-platform/pull/231", "lead_evidence": "Independent final published-delta addendum PR comment with exact SHA; preserve the original round2 file SHA.", "readiness": "Machine-generated exact-head readiness comment including decision digest and actual MARK_READY application.", "ci": "Required validate-platform on the final published head, not an earlier checkpoint.", "no_repository_edits_after_final_delta_review": true},
   "requested_decision": "Review the governed activation of the already approved frozen twelve-target package. After lead, CI and readiness, authorize the exact PR payload for merge commit with no admin bypass. No merge authority is inferred from the task grant.",
   "product_end_state_refs": ["../4veco-lessen/specifications/product-end-state.md"],
   "original_sprint_or_gate_spec_refs": [
@@ -49,7 +51,8 @@
     {"requirement": "All consumers reject partial/forged activation", "status": "met_69_independent_tests_and_full_suite"},
     {"requirement": "All five residual holds retained", "status": "met"},
     {"requirement": "Student output unchanged and continuation named", "status": "met"},
-    {"requirement": "Exact-head CI, lead and readiness", "status": "pending"}
+    {"requirement": "Reviewed-head CI and structural lead", "status": "met_469e605f_run33959681780_round2_pass_with_flags"},
+    {"requirement": "Final publication delta review, exact-head CI and readiness", "status": "required_external_before_handoff"}
   ],
   "rendered_output": {
     "status": "not_applicable_to_transition",
@@ -60,6 +63,10 @@
     "reports/sprints/BOOK2-TARGET-INTEGRATION-1-prerequisite-inventory.md",
     "reports/sprints/BOOK2-TARGET-INTEGRATION-1-implementation-review-corrections.md",
     "reports/sprints/BOOK2-TARGET-INTEGRATION-1-command-log.jsonl",
+    "reports/sprints/BOOK2-TARGET-INTEGRATION-1-lead-review-round1.md",
+    "reports/sprints/BOOK2-TARGET-INTEGRATION-1-lead-review-corrections.md",
+    "reports/sprints/BOOK2-TARGET-INTEGRATION-1-lead-review-round2.md",
+    "https://github.com/meijer1973/4veco-platform/actions/runs/33959681780",
     "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md"
   ],
   "stop_conditions": [
