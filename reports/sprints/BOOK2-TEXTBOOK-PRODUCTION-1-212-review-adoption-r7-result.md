@@ -52,3 +52,23 @@ the already independently reviewed S1 plan. The distinct builder changes only
 two incoming211 hashes and the named full-generator expectation, proves unchanged
 native output and fail-before-write behavior. Non-author delta review, separate
 current specialist QC and root acceptance follow, without new owner hold approval.
+
+## Actual committed scope and publication preparation
+
+Platform root payload2b757f911b7118ce09aeec5878133ea0dc34fa15 and lesson
+d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f have actual passing native committed
+scope: complete shared6eb34deb→2b757f91 has five source, four index,541 evidence
+paths and no unknown/failure/warning; textbook5e14325→d4e1910 is solely the
+canonical212 review. Exact own b512fd64→2b757f91 has140 paths:132 review imports
+plus eight named root plan/check/result/work-order/inventory/log files.
+Full native JSON and strict paths are retained in212-review-adoption-r7-scope.json.
+
+One inline node-e scope invocation lost its quoting through the native recorder
+and failed before the checker ran. A new explicit own helper then ran the
+unmodified checker correctly and preserved complete results. One no-match
+apply_patch attempt was rejected without edits. Neither failure changes source,
+scope policy or a prior evidence verdict. The original diagnostics stay logged.
+
+Fetch, explicit paired-root/ref/branch index refresh and normal push/ls-remote
+follow in a terminal generated-only tail. Current accepted211 pins and212
+canonical review remain exactly as the published work order. No further merge.

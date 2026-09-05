@@ -14287,3 +14287,93 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node -e "const {execFileSync}=require(\"child_process\"),a=require(\"assert/strict\");for(const [lane,base,head,cwd]of [[\"shared\",\"6eb34debb2210a2a4fa6718a13eaeefcacedc8f8\",\"2b757f911b7118ce09aeec5878133ea0dc34fa15\",null],[\"textbook\",\"5e14325d70b6cc6aee643d9b57395c92b0904ffb\",\"d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f\",\"../4veco-lessen\"]]){const args=[\"build-scripts/workflows/check-paragraph-lane-scope.js\",\"--lane\",lane,\"--base\",base,\"--head\",head,\"--json\"];if(cwd)args.push(\"--cwd\",cwd);const r=JSON.parse(execFileSync(process.execPath,args,{encoding:\"utf8\",maxBuffer:12000000}));a.equal(r.ok,true);console.log(JSON.stringify({lane,base,head,ok:r.ok,counts:Object.fromEntries(Object.entries(r.categories).map(([k,v])=>[k,v.length])),failures:r.failures,warnings:r.warnings}));}"
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:10:56.839Z`
+- finished_at: `2026-09-05T23:10:56.934Z`
+- duration_ms: `95`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `a39bc801b5bd8cbc1dc5a3caf71dae4cabec0a92d59e02903e788624b69403c0`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+[eval]:1
+const
+
+Unexpected token `<eof>`. Expected yield, an identifier, [ or {
+
+SyntaxError: Unexpected end of input
+    at makeContextifyScript (node:internal/vm:194:14)
+    at compileScript (node:internal/process/execution:388:10)
+    at evalTypeScript (node:internal/process/execution:260:22)
+    at node:internal/main/eval_string:71:3
+
+Node.js v24.13.1
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-review-adoption-r7-scope.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:11:26.582Z`
+- finished_at: `2026-09-05T23:11:26.820Z`
+- duration_ms: `238`
+- exit_code: `0`
+- stdout_sha256: `20277b2b506b380bf6c9a2074cbe27881e20f7058aefdddffeb5c4fb6207c486`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "own_paths": 140,
+  "comparisons": [
+    {
+      "lane": "shared",
+      "base": "6eb34debb2210a2a4fa6718a13eaeefcacedc8f8",
+      "head": "2b757f911b7118ce09aeec5878133ea0dc34fa15",
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 5,
+        "generated_indexes": 4,
+        "review_evidence": 541,
+        "unknown": 0
+      },
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "lane": "textbook",
+      "base": "5e14325d70b6cc6aee643d9b57395c92b0904ffb",
+      "head": "d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f",
+      "counts": {
+        "partA_textbook": 1,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      },
+      "failures": [],
+      "warnings": []
+    }
+  ]
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
