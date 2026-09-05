@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-book-outline-currentness.js",
+    "--require-approved",
+    "--action",
+    "production",
+    "--paragraph",
+    "2.1.2"
+  ],
+  "cwd": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform",
+  "expected_exit": 0,
+  "exit": 2,
+  "stdout": "",
+  "stderr": "Unknown action: production\n"
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-09-05T23:00:35.806Z",
+  "repository": "meijer1973/4veco-platform",
+  "head_sha": "be806c2900b74807ff6c6efb7debde3a15fdc95f",
+  "remote": "origin",
+  "remote_main_sha": "96416b6b5bd57094576e9aba0a42d682584ec479",
+  "origin_main_sha": "96416b6b5bd57094576e9aba0a42d682584ec479",
+  "remote_main_matches_origin_main": true,
+  "remote_main_is_ancestor_of_head": true,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "working_tree_sha256": "665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b",
+      "remote_main_sha256": "665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b"
+    },
+    {
+      "path": "docs/review/pr-readiness-routing-policy.md",
+      "working_tree_sha256": "0adc719b5e273c273a1f95a89a1837adfd5e79fb8ba10aace0f42c874b27f1a0",
+      "remote_main_sha256": "0adc719b5e273c273a1f95a89a1837adfd5e79fb8ba10aace0f42c874b27f1a0"
+    },
+    {
+      "path": "docs/review/pr-integration-lane-policy.md",
+      "working_tree_sha256": "6553c5eda6fb8fe12755f97feeca4d43bbd274d76ea74332c8a73d6513b128f9",
+      "remote_main_sha256": "6553c5eda6fb8fe12755f97feeca4d43bbd274d76ea74332c8a73d6513b128f9"
+    }
+  ]
+}

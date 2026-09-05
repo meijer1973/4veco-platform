@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-probes.py",
+    "build"
+  ],
+  "cwd": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform",
+  "expected_exit": 0,
+  "exit": 3221225477,
+  "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.1.2\nBook 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n{\"saved\": \"C:\\\\wt\\\\book2-212-r7-review-20260906\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\\\native-full-build.json\", \"sha256\": \"85184476400d4fc60357d4453464fb6dc4be097c8b45ba1120048534b797da50\"}\n",
+  "stderr": ""
+}

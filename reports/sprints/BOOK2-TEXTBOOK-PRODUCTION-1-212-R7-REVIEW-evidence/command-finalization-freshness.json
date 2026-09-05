@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/review-gates/finalization-freshness-proof.js",
+    "--output",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/finalization-freshness.json"
+  ],
+  "cwd": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform",
+  "expected_exit": 0,
+  "exit": 0,
+  "stdout": "{\n  \"schema_version\": 1,\n  \"generated_at_utc\": \"2026-09-05T23:00:35.806Z\",\n  \"repository\": \"meijer1973/4veco-platform\",\n  \"head_sha\": \"be806c2900b74807ff6c6efb7debde3a15fdc95f\",\n  \"remote\": \"origin\",\n  \"remote_main_sha\": \"96416b6b5bd57094576e9aba0a42d682584ec479\",\n  \"origin_main_sha\": \"96416b6b5bd57094576e9aba0a42d682584ec479\",\n  \"remote_main_matches_origin_main\": true,\n  \"remote_main_is_ancestor_of_head\": true,\n  \"files\": [\n    {\n      \"path\": \"AGENTS.md\",\n      \"working_tree_sha256\": \"665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b\",\n      \"remote_main_sha256\": \"665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b\"\n    },\n    {\n      \"path\": \"docs/review/pr-readiness-routing-policy.md\",\n      \"working_tree_sha256\": \"0adc719b5e273c273a1f95a89a1837adfd5e79fb8ba10aace0f42c874b27f1a0\",\n      \"remote_main_sha256\": \"0adc719b5e273c273a1f95a89a1837adfd5e79fb8ba10aace0f42c874b27f1a0\"\n    },\n    {\n      \"path\": \"docs/review/pr-integration-lane-policy.md\",\n      \"working_tree_sha256\": \"6553c5eda6fb8fe12755f97feeca4d43bbd274d76ea74332c8a73d6513b128f9\",\n      \"remote_main_sha256\": \"6553c5eda6fb8fe12755f97feeca4d43bbd274d76ea74332c8a73d6513b128f9\"\n    }\n  ]\n}\n",
+  "stderr": ""
+}

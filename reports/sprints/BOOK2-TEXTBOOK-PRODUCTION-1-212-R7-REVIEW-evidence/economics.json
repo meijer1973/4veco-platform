@@ -1,0 +1,536 @@
+{
+  "result": "PASS",
+  "full_target_record": {
+    "id": "2.1.2",
+    "module": 2,
+    "chapter": 1,
+    "paragraph": 2,
+    "paragraph_title": "Opbrengsten, winst en break-even",
+    "difficulty": "LIGHT",
+    "target_exercise": {
+      "context": "Bakkerij De Korenaar heeft TK = 500 + 0,80Q en verkoopt ieder brood voor een vaste prijs van € 1,50. Q is het aantal broden per maand; alle bedragen zijn in euro per maand tenzij anders vermeld.",
+      "subquestions": [
+        {
+          "label": "a",
+          "points": 2,
+          "prompt": "Stel de functie voor TO op. Leg voor Q>0 uit waarom GO in deze context gelijk is aan de prijs."
+        },
+        {
+          "label": "b",
+          "points": 2,
+          "prompt": "Bereken de winst bij Q=500 en bij Q=1.000."
+        },
+        {
+          "label": "c",
+          "points": 3,
+          "prompt": "Los algebraïsch TO=TK op. Noteer zowel de continue break-even-afzet als het eerste gehele aantal broden waarbij geen verlies ontstaat."
+        },
+        {
+          "label": "d",
+          "points": 4,
+          "prompt": "Teken TK en TO in één assenstelsel. Benoem beide assen met grootheid en eenheid, markeer het break-evenpunt en de winst- en verlieszone en geef bij Q=1.000 de winst van €200 weer als verticale afstand. Kleur geen oppervlakte als winst."
+        }
+      ]
+    },
+    "lesson_goals": [
+      "Je kunt TO, GO en winst berekenen en GO bij een vaste prijs verklaren.",
+      "Je kunt de break-even-afzet algebraïsch bepalen en een continue uitkomst onderscheiden van een geheel productaantal.",
+      "Je kunt TK en TO in één grafiek weergeven en winst- en verlieszones herkennen.",
+      "Je kunt winst bij een gegeven Q als verticale afstand tussen TO en TK weergeven."
+    ],
+    "required_skills": [
+      "A07",
+      "A08",
+      "A21"
+    ],
+    "prior_knowledge_assumed": [
+      "A08 and the §2.1.1 cost functions are retrieval-required."
+    ],
+    "new_skills_introduced": [
+      "A07",
+      "A21"
+    ],
+    "missing_units_flagged": [
+      "Linear break-even-afzet from TK and TO without a quadratic method.",
+      "Draw and interpret linear TK and TO in one graph, including break-even and vertical profit distance.",
+      "Explain GO=P under a constant unit price."
+    ],
+    "exam_codes": [
+      "A2.1",
+      "A2.10",
+      "A2.14",
+      "D1.14",
+      "D1.19",
+      "D1.20"
+    ],
+    "difficulty_notes": "Kandidaat voor circa 12 minuten: twee korte berekeningen, één algebraïsche oplossing en vijf minuten voor de complete grafiek.",
+    "answer_form_expectations": [
+      "functie en contextverklaring",
+      "twee winstberekeningen",
+      "algebra met afrondingsduiding",
+      "gelabelde grafiek met verticale winstafstand"
+    ],
+    "short_answer_model": {
+      "a": "TO=1,50Q. Omdat TO=P×Q en P constant is, geldt voor Q>0: GO=(P×Q)/Q=P=€1,50 per brood.",
+      "b": "Q=500: winst=€750−€900=−€150. Q=1.000: winst=€1.500−€1.300=€200.",
+      "c": "1,50Q=500+0,80Q, dus 0,70Q=500 en Q=714,2857…. In het continue model is de break-even-afzet Q=714,29; het eerste gehele aantal broden zonder verlies is 715 (winst €0,50).",
+      "d": "Horizontale as: hoeveelheid Q (broden per maand). Verticale as: TK en TO (€ per maand). TK start bij €500 en heeft helling 0,80; TO start bij €0 en heeft helling 1,50. Snijpunt: (714,29; 1.071,43). Links ligt de verlieszone en rechts de winstzone. Bij Q=1.000 is de verticale afstand €1.500−€1.300=€200."
+    },
+    "source_ref": "references/owned/course-blueprint-v5.md §2.1.2",
+    "paragraph_kind": "theory",
+    "introduces_new_theory": true,
+    "record_status": "candidate_review_ready",
+    "v5_migration": {
+      "source_status": "candidate_review_ready",
+      "from_v4_id": "1.3.3",
+      "related_v4_ids": [],
+      "review_required_before_final": true
+    }
+  },
+  "frozen_points": 11,
+  "cases": [
+    {
+      "context": "Theatre",
+      "break_even_Q": "20",
+      "break_even_total": "100",
+      "first_whole_without_loss": 20,
+      "rows": [
+        {
+          "Q": 0,
+          "TO": "0",
+          "TK": "60",
+          "profit": "-60",
+          "GO": "undefined"
+        },
+        {
+          "Q": 10,
+          "TO": "50",
+          "TK": "80",
+          "profit": "-30",
+          "GO": "5.0"
+        },
+        {
+          "Q": 20,
+          "TO": "100",
+          "TK": "100",
+          "profit": "0",
+          "GO": "5.0"
+        },
+        {
+          "Q": 30,
+          "TO": "150",
+          "TK": "120",
+          "profit": "30",
+          "GO": "5.0"
+        }
+      ]
+    },
+    {
+      "context": "Kayak",
+      "break_even_Q": "10/3",
+      "break_even_total": "70/3",
+      "first_whole_without_loss": 4,
+      "rows": [
+        {
+          "Q": 2,
+          "TO": "14",
+          "TK": "22",
+          "profit": "-8",
+          "GO": "7.0"
+        },
+        {
+          "Q": 3,
+          "TO": "21",
+          "TK": "23",
+          "profit": "-2",
+          "GO": "7.0"
+        },
+        {
+          "Q": 4,
+          "TO": "28",
+          "TK": "24",
+          "profit": "4",
+          "GO": "7.0"
+        },
+        {
+          "Q": 6,
+          "TO": "42",
+          "TK": "26",
+          "profit": "16",
+          "GO": "7.0"
+        }
+      ]
+    },
+    {
+      "context": "Soap",
+      "break_even_Q": "10/3",
+      "break_even_total": "40/3",
+      "first_whole_without_loss": 4,
+      "rows": [
+        {
+          "Q": 2,
+          "TO": "8",
+          "TK": "12",
+          "profit": "-4",
+          "GO": "4.0"
+        },
+        {
+          "Q": 3,
+          "TO": "12",
+          "TK": "13",
+          "profit": "-1",
+          "GO": "4.0"
+        },
+        {
+          "Q": 4,
+          "TO": "16",
+          "TK": "14",
+          "profit": "2",
+          "GO": "4.0"
+        },
+        {
+          "Q": 6,
+          "TO": "24",
+          "TK": "16",
+          "profit": "8",
+          "GO": "4.0"
+        }
+      ]
+    },
+    {
+      "context": "Pots",
+      "break_even_Q": "5",
+      "break_even_total": "20",
+      "first_whole_without_loss": 5,
+      "rows": [
+        {
+          "Q": 3,
+          "TO": "12",
+          "TK": "18",
+          "profit": "-6",
+          "GO": "4.0"
+        },
+        {
+          "Q": 4,
+          "TO": "16",
+          "TK": "19",
+          "profit": "-3",
+          "GO": "4.0"
+        },
+        {
+          "Q": 5,
+          "TO": "20",
+          "TK": "20",
+          "profit": "0",
+          "GO": "4.0"
+        },
+        {
+          "Q": 8,
+          "TO": "32",
+          "TK": "23",
+          "profit": "9",
+          "GO": "4.0"
+        }
+      ]
+    },
+    {
+      "context": "Minigolf",
+      "break_even_Q": "40/3",
+      "break_even_total": "160/3",
+      "first_whole_without_loss": 14,
+      "rows": [
+        {
+          "Q": 10,
+          "TO": "40",
+          "TK": "50",
+          "profit": "-10",
+          "GO": "4.0"
+        },
+        {
+          "Q": 13,
+          "TO": "52",
+          "TK": "53",
+          "profit": "-1",
+          "GO": "4.0"
+        },
+        {
+          "Q": 14,
+          "TO": "56",
+          "TK": "54",
+          "profit": "2",
+          "GO": "4.0"
+        },
+        {
+          "Q": 20,
+          "TO": "80",
+          "TK": "60",
+          "profit": "20",
+          "GO": "4.0"
+        }
+      ]
+    },
+    {
+      "context": "Bakery",
+      "break_even_Q": "5000/7",
+      "break_even_total": "7500/7",
+      "first_whole_without_loss": 715,
+      "rows": [
+        {
+          "Q": 500,
+          "TO": "750",
+          "TK": "900",
+          "profit": "-150",
+          "GO": "3/2"
+        },
+        {
+          "Q": 714,
+          "TO": "1071",
+          "TK": "5356/5",
+          "profit": "-1/5",
+          "GO": "3/2"
+        },
+        {
+          "Q": 715,
+          "TO": "2145/2",
+          "TK": "1072",
+          "profit": "1/2",
+          "GO": "3/2"
+        },
+        {
+          "Q": 1000,
+          "TO": "1500",
+          "TK": "1300",
+          "profit": "200",
+          "GO": "3/2"
+        }
+      ]
+    }
+  ],
+  "start_candle": [
+    18,
+    9,
+    6,
+    16,
+    8,
+    -2
+  ],
+  "dance_TO_TK_profit": [
+    [
+      50,
+      30,
+      20
+    ],
+    [
+      60,
+      30,
+      30
+    ],
+    [
+      50,
+      40,
+      10
+    ],
+    [
+      60,
+      40,
+      20
+    ]
+  ],
+  "closing_TCK_TVK_TK_GTK": [
+    24,
+    18,
+    42,
+    7
+  ],
+  "geometry": [
+    {
+      "asset": "2.1.2_fig_1",
+      "TK_endpoint_money": null,
+      "TO_endpoint_money": "150",
+      "break_even": null,
+      "vertical_profit": null,
+      "all_labels_source_pt": 30
+    },
+    {
+      "asset": "2.1.2_fig_2",
+      "TK_endpoint_money": "120",
+      "TO_endpoint_money": "150",
+      "break_even": null,
+      "vertical_profit": null,
+      "all_labels_source_pt": 30
+    },
+    {
+      "asset": "2.1.2_fig_3",
+      "TK_endpoint_money": "120",
+      "TO_endpoint_money": "150",
+      "break_even": "20",
+      "vertical_profit": null,
+      "all_labels_source_pt": 30
+    },
+    {
+      "asset": "2.1.2_fig_4",
+      "TK_endpoint_money": "120",
+      "TO_endpoint_money": "150",
+      "break_even": "20",
+      "vertical_profit": "30",
+      "all_labels_source_pt": 30
+    },
+    {
+      "asset": "2.1.2_we_1",
+      "TK_endpoint_money": "26",
+      "TO_endpoint_money": "42",
+      "break_even": "10/3",
+      "vertical_profit": "16",
+      "all_labels_source_pt": 30
+    },
+    {
+      "asset": "2.1.2_ex_1",
+      "TK_endpoint_money": "16",
+      "TO_endpoint_money": "24",
+      "break_even": "10/3",
+      "vertical_profit": "8",
+      "all_labels_source_pt": 30
+    },
+    {
+      "asset": "2.1.2_ex_2",
+      "TK_endpoint_money": "23",
+      "TO_endpoint_money": null,
+      "break_even": null,
+      "vertical_profit": null,
+      "all_labels_source_pt": 30
+    },
+    {
+      "asset": "2.1.2_ex_3",
+      "TK_endpoint_money": "23",
+      "TO_endpoint_money": "32",
+      "break_even": "5",
+      "vertical_profit": "9",
+      "all_labels_source_pt": 30
+    },
+    {
+      "asset": "2.1.2_ex_4",
+      "TK_endpoint_money": "60",
+      "TO_endpoint_money": "80",
+      "break_even": "40/3",
+      "vertical_profit": "20",
+      "all_labels_source_pt": 30
+    },
+    {
+      "asset": "2.1.2_ex_5",
+      "TK_endpoint_money": "1300",
+      "TO_endpoint_money": "1500",
+      "break_even": "5000/7",
+      "vertical_profit": "200",
+      "all_labels_source_pt": 30
+    }
+  ],
+  "bonus": {
+    "profit_both_euros_per_evening": 30,
+    "Q": 30,
+    "vertical_maxima": [
+      150,
+      300
+    ],
+    "native_pixel_gaps": [
+      36,
+      18
+    ],
+    "scale_length_ratio": 2
+  },
+  "all_actual_pdf_image_fonts": [
+    {
+      "edition": "paragraaf",
+      "page": 2,
+      "pixel_width": 2000,
+      "placed_text_pt": 18.8220458984375
+    },
+    {
+      "edition": "paragraaf",
+      "page": 4,
+      "pixel_width": 2000,
+      "placed_text_pt": 18.8220458984375
+    },
+    {
+      "edition": "paragraaf",
+      "page": 5,
+      "pixel_width": 2000,
+      "placed_text_pt": 18.8220458984375
+    },
+    {
+      "edition": "paragraaf",
+      "page": 6,
+      "pixel_width": 2000,
+      "placed_text_pt": 18.8220458984375
+    },
+    {
+      "edition": "paragraaf",
+      "page": 8,
+      "pixel_width": 2000,
+      "placed_text_pt": 18.8220458984375
+    },
+    {
+      "edition": "paragraaf",
+      "page": 10,
+      "pixel_width": 2000,
+      "placed_text_pt": 18.8220458984375
+    },
+    {
+      "edition": "paragraaf",
+      "page": 11,
+      "pixel_width": 2000,
+      "placed_text_pt": 18.8220458984375
+    },
+    {
+      "edition": "paragraaf",
+      "page": 14,
+      "pixel_width": 3000,
+      "placed_text_pt": 12.548030598958333
+    },
+    {
+      "edition": "opgaven",
+      "page": 2,
+      "pixel_width": 2000,
+      "placed_text_pt": 18.8220458984375
+    },
+    {
+      "edition": "opgaven",
+      "page": 4,
+      "pixel_width": 2000,
+      "placed_text_pt": 18.8220458984375
+    },
+    {
+      "edition": "opgaven",
+      "page": 5,
+      "pixel_width": 2000,
+      "placed_text_pt": 18.8220458984375
+    },
+    {
+      "edition": "opgaven",
+      "page": 7,
+      "pixel_width": 3000,
+      "placed_text_pt": 12.548030598958333
+    },
+    {
+      "edition": "antwoorden",
+      "page": 2,
+      "pixel_width": 2000,
+      "placed_text_pt": 18.8220458984375
+    },
+    {
+      "edition": "antwoorden",
+      "page": 4,
+      "pixel_width": 2000,
+      "placed_text_pt": 18.8220458984375
+    },
+    {
+      "edition": "antwoorden",
+      "page": 5,
+      "pixel_width": 2000,
+      "placed_text_pt": 18.8220458984375
+    }
+  ],
+  "timing_core_estimated": 54,
+  "supported_estimated": 67,
+  "all_items_estimated": 77,
+  "classroom_observed": false
+}
