@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/sprints/check-sprint-bundle.js",
+    "BOOK2-TEXTBOOK-PRODUCTION-1"
+  ],
+  "cwd": "C:\\wt\\book2-212-succession-20260906\\4veco-platform",
+  "started_at": "2026-09-05T23:31:00.613383+00:00",
+  "finished_at": "2026-09-05T23:31:00.877637+00:00",
+  "exit_code": 0,
+  "stdout": "OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active\n",
+  "stderr": "",
+  "stdout_sha256": "699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

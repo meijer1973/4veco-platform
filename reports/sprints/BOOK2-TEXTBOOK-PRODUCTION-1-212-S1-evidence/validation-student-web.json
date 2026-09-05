@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "node",
+    "scripts/validate-paragraph.js",
+    "--mode",
+    "part-a",
+    "--profile",
+    "student-web",
+    "C:\\wt\\book2-212-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even"
+  ],
+  "cwd": "C:\\wt\\book2-212-succession-20260906\\4veco-platform",
+  "started_at": "2026-09-05T23:30:58.427737+00:00",
+  "finished_at": "2026-09-05T23:30:58.516054+00:00",
+  "exit_code": 0,
+  "stdout": "\nValidating paragraph 2.1.2 \"Opbrengsten, winst en break-even\"\nPath: C:\\wt\\book2-212-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\nMode: part-a\nProfile: student-web\n\n-- Part A textbook files --\n  OK Paragraph type: theory\n  OK paragraaf.md: 2.1.2 Opbrengsten, winst en break-even – paragraaf.md\n  OK opgaven.md: 2.1.2 Opbrengsten, winst en break-even – opgaven.md\n  OK antwoorden.md: 2.1.2 Opbrengsten, winst en break-even – antwoorden.md\n  OK 2.1.2 Opbrengsten, winst en break-even – paragraaf.html (1336.0 KB)\n  OK 2.1.2 Opbrengsten, winst en break-even – opgaven.html (742.0 KB)\n  OK 2.1.2 Opbrengsten, winst en break-even – antwoorden.html (497.9 KB)\n  OK 2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf (1009 KB)\n  OK 2.1.2 Opbrengsten, winst en break-even – opgaven.pdf (563 KB)\n  OK 2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf (383 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 11 image refs all resolve\n  OK _assets/: 11 SVGs, 11 PNGs\n\n-- Part A QC artifacts --\n  OK Part A review: 2.1.2-review.md (verdict PASS WITH FLAGS)\n  OK Quality ref: 2.1.2-quality-ref.yaml (valid)\n\n==========================================\nOK Paragraph 2.1.2 \"Opbrengsten, winst en break-even\" PASSED all checks.\n\n",
+  "stderr": "",
+  "stdout_sha256": "f2838eab38b4387063d33c901cd4811c60a208cbd7bfcf24a3f5370efc20ff91",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

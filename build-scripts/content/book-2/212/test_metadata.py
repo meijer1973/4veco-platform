@@ -102,6 +102,14 @@ class MetadataTests(unittest.TestCase):
         start = '    for name, fixed, variable, price, qmax, ymax, qticks, yticks, qunit, period, complete in cases:'
         insertion = '    titles = {\n' + ''.join(f'        "{key}": "{value}",\n' for key,value in TITLES.items()) + '    }\n'
         expected = previous.replace(start,insertion+start).replace('name + ": TK en TO" if complete else "Bloempotten: alleen TK"', 'titles[name] if complete else "Bloempotten: alleen TK"')
+        old_review = 'PRIOR_REVIEW_HASH = "92b4a9462caf8316274fb58f8beef5c850147c44e6bf80b9a28fad442d9dbe96"'
+        new_review = 'PRIOR_REVIEW_HASH = "a75755c7c2e6cdffb2defcbb5403814cf854d87bfae9a8172dd768aadb5b8023"'
+        old_quality = 'PRIOR_QUALITY_HASH = "0dddb6e9d8f3a8da0e0f31e67dafabf53b99feb6ad86ce72039480dd7e12ea18"'
+        new_quality = 'PRIOR_QUALITY_HASH = "c85c44a53d46af87ad61500b83b0fd721fac43c97ffd1be3d512308158a4b9f5"'
+        self.assertEqual(expected.count(old_review), 1)
+        self.assertEqual(expected.count(old_quality), 1)
+        expected = expected.replace(old_review, new_review, 1)
+        expected = expected.replace(old_quality, new_quality, 1)
         self.assertEqual(current,expected)
 
 
