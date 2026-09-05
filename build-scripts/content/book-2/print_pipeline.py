@@ -39,6 +39,7 @@ li { margin-bottom: 1mm; }
 ul,ol { margin: 2mm 0 3mm; padding-left: 7mm; }
 strong { font-weight: 700; }
 blockquote,.recap,.summary { border-left: 3pt solid #1A5276; background: #eef4f7; margin: 3mm 0; padding: 3mm 4mm; }
+.callout-short { break-inside: avoid; }
 table { width: 100%; border-collapse: collapse; font-size: 12pt; margin: 3mm 0; }
 th,td { border: 0.5pt solid #94a5ad; padding: 2mm; vertical-align: top; overflow-wrap: anywhere; }
 th { background: #eaf1f5; font-weight: 700; text-align: left; }
@@ -181,6 +182,15 @@ def _wrap_exercises(soup: BeautifulSoup) -> None:
             wrapper["class"].append("exercise-short")
 
 
+def _protect_short_callouts(soup: BeautifulSoup) -> None:
+    """Keep a short definition/warning with its label, not an entire long box."""
+    for callout in soup.find_all("blockquote"):
+        if len(callout.get_text(" ", strip=True)) < 650 and not callout.find(["img", "table", "blockquote"]):
+            classes = list(callout.get("class", []))
+            if "callout-short" not in classes:
+                callout["class"] = classes + ["callout-short"]
+
+
 def prepare_html(markdown: str, source: Path, *, pandoc: str = "pandoc") -> tuple[str, list[dict]]:
     result = subprocess.run(
         [pandoc, "--from=markdown", "--to=html5", "--standalone", "--mathml",
@@ -197,6 +207,7 @@ def prepare_html(markdown: str, source: Path, *, pandoc: str = "pandoc") -> tupl
     validate_source_html(soup)
     assets = _embed_images(soup, source)
     _wrap_exercises(soup)
+    _protect_short_callouts(soup)
     style = soup.new_tag("style")
     style.string = CSS
     soup.head.append(style)
