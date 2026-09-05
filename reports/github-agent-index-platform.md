@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T12:08:28.049Z
+Generated: 2026-09-05T12:28:58.242Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `4b78edfaca8554937ef4abf3296ef2e4cd366be1`
-Files indexed: 7664
+Source commit: `1d3e145aa6ed36516f09e69f77d1dab61f1a023b`
+Files indexed: 7671
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 726
+Count: 729
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -193,6 +193,9 @@ Count: 726
 - build-scripts/content/book-1/build-presentation-v2.js
 - build-scripts/content/book-1/presentation-v2-registry.js
 - build-scripts/content/book-1/README.md
+- build-scripts/content/book-2/print_pipeline.py
+- build-scripts/content/book-2/README.md
+- build-scripts/content/book-2/test_print_pipeline.py
 - build-scripts/content/legacy-target/build-311-basisopgaven.js
 - build-scripts/content/legacy-target/build-infographic-311.js
 - build-scripts/content/legacy-target/inoefening-351-afsluiting.js
@@ -2634,7 +2637,7 @@ Count: 1030
 
 ## reports
 
-Count: 4947
+Count: 4951
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5339,11 +5342,15 @@ Count: 4947
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-planning-review.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-prerequisite-inventory.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-stage-1.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-baseline.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-planning-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round12.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
