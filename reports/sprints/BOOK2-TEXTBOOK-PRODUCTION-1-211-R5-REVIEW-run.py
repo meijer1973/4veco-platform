@@ -168,15 +168,25 @@ def final_checks():
 def scope():
     ph=dec(run(['git','rev-parse','HEAD']).stdout).strip(); lh=dec(run(['git','rev-parse','HEAD'],L).stdout).strip()
     record=dict(platform_payload=ph,lesson_payload=lh,comparisons=[])
-    for cwd,base,lane,head in [(ROOT,R4P,'shared',ph),(L,R4L,'textbook',lh),(ROOT,BASE,'shared',ph),(L,LB,'textbook',lh)]:
+    # Lane validation requires a complete lane-owned candidate; an evidence-only
+    # reviewer delta is separately constrained by the exact own-path audit below.
+    for cwd,base,lane,head in [(ROOT,R4P,'shared',ph),(L,R4L,'textbook',lh)]:
         args=['node','build-scripts/workflows/check-paragraph-lane-scope.js','--lane',lane,'--base',base,'--head',head,'--json']
         if cwd==L: args+=['--cwd',str(L)]
         record['comparisons'].append(json.loads(dec(run(args).stdout)))
+    diagnostic=run(['node','build-scripts/workflows/check-paragraph-lane-scope.js','--lane','shared','--base',BASE,'--head',ph,'--json'],required=False)
+    rejected=json.loads(dec(diagnostic.stdout))
+    assert diagnostic.returncode==1 and rejected['ok'] is False
+    assert rejected['failures']==[
+        'shared lane needs at least one shared platform change',
+        'generated index/report or review-evidence changes are allowed only with lane-owned changes']
+    assert rejected['categories']['shared_platform']==[] and rejected['categories']['unknown']==[]
+    record['expected_evidence_only_rejection']=dict(exit_code=diagnostic.returncode,result=rejected,meaning='Evidence-only delta is not a standalone shared implementation candidate; strict own-path audit follows. No waiver or fake lane anchor.')
     for cwd,base in [(ROOT,BASE),(L,LB)]:
         paths=dec(run(['git','-c','core.quotepath=false','diff','--name-only',base,'HEAD'],cwd).stdout).splitlines()
         if cwd==ROOT: assert paths and all(p.startswith('reports/sprints/'+PREFIX) for p in paths),paths
         else: assert paths==[str(REL/'2.1.1-review.md').replace('\\','/')],paths
         record[str(cwd)+'_own_paths']=paths
-    put('committed-scope.json',record)
+    put(sys.argv[2] if len(sys.argv)>2 else 'committed-scope.json',record)
 
 if __name__=='__main__': globals()[sys.argv[1]]()
