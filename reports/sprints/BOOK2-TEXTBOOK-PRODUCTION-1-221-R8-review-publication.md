@@ -40,10 +40,33 @@ sees the genuine three metadata artifacts plus this one canonical review.
 
 Readable command-log CRLF excerpts are normalized to LF before commit. Raw
 JSONL output hashes/exit codes are unchanged. This is formatting, not a waived
-check or edited output result. No task validator/test/rebuild failed; discovery
+check or edited output result. No paragraph-content validator/test/rebuild failed; discovery
 lookup failures and recovered truncated reads remain explicitly documented.
 
 All20 pages were personally viewed at full readable scale, plus3 figures and3
 grayscale pages. No inherited visual acceptance. Current QC/handoff remain R6
 byte-identical, historical R6/R7 records remain unchanged, and no dependent
 generator is repinned. No new PR or merge is authorized or performed.
+
+## Post-publication index-check diagnostic and correction
+
+After generated tail beeab1b37cee0bc29a7248f2b9ca4f49f34e7319, a bare
+`node build-scripts/reports/check-agent-index-freshness.js` in a new shell
+returned ok:false: the platform tail was accepted, but the lesson checker
+defaulted to origin/main f09fd6e88edc5049b026b16b0158e7e188091d2d instead
+of this explicitly paired review branch. The preceding shell's environment
+variables do not persist across command calls. The two subsequent read-only
+diff checks exited0, so that combined tool call's final exit code did not
+represent the intermediate failed freshness check. Both branch pushes happened
+before its corrected invocation; neither changed the already valid index bytes.
+
+This failure is retained, not relabelled PASS or attributed to lesson content.
+The recorded corrected invocation sets FOURVECO_LESSEN_ROOT to this sibling,
+FOURVECO_LESSEN_SOURCE_REF=HEAD and FOURVECO_LESSEN_SOURCE_BRANCH to this
+review branch in the same command call. It passes, accepting the isolated
+platform generated tail and exact lesson144938f source/branch. Its actual
+output, exit code and hashes are appended to the command log. There is no
+index-checker patch, waiver, target change or substituted fixture.
+
+This documentation/log follow-up is followed by a newly isolated generated
+index tail, again checked with the explicit paired-branch environment.

@@ -687,3 +687,61 @@ Paragraph lane scope: PASS (shared)
 ```text
 
 ```
+## node build-scripts/reports/check-agent-index-freshness.js
+
+- cwd: `C:\wt\book2-221-r8-review-20260905\4veco-platform`
+- started_at: `2026-09-05T19:49:36.223Z`
+- finished_at: `2026-09-05T19:49:36.514Z`
+- duration_ms: `291`
+- exit_code: `0`
+- stdout_sha256: `6d7b51019785b7544afecd25005fbe4407e7dfaf2514cbb5cd2e1dbf25d40fe8`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "ok": true,
+  "checks": [
+    {
+      "label": "4veco-platform",
+      "ok": true,
+      "skipped": false,
+      "failures": [],
+      "warnings": [
+        "4veco-platform index source_commit precedes generated-index-only ref beeab1b37cee0bc29a7248f2b9ca4f49f34e7319"
+      ],
+      "source_commit": "d4362705ce0c7f5e90d1e8a18e403f9e7e67a361",
+      "head": "beeab1b37cee0bc29a7248f2b9ca4f49f34e7319",
+      "source_ref": "HEAD",
+      "target_commit": "beeab1b37cee0bc29a7248f2b9ca4f49f34e7319",
+      "accepted_parent_generated_tail": true,
+      "accepted_generated_index_tail_ref": "beeab1b37cee0bc29a7248f2b9ca4f49f34e7319"
+    },
+    {
+      "label": "4veco-lessen",
+      "ok": true,
+      "skipped": false,
+      "failures": [],
+      "warnings": [],
+      "source_commit": "144938f325d875b5ca055f5bb0951c450af59842",
+      "head": "144938f325d875b5ca055f5bb0951c450af59842",
+      "source_ref": "HEAD",
+      "target_commit": "144938f325d875b5ca055f5bb0951c450af59842",
+      "accepted_parent_generated_tail": false,
+      "accepted_generated_index_tail_ref": null
+    }
+  ],
+  "failures": [],
+  "warnings": [
+    "4veco-platform index source_commit precedes generated-index-only ref beeab1b37cee0bc29a7248f2b9ca4f49f34e7319"
+  ]
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
