@@ -1,0 +1,684 @@
+{
+  "reviewer": "paragraph_212_qc",
+  "date": "2026-09-05",
+  "result": "PASS",
+  "automatic_visual_acceptance": false,
+  "authority": {
+    "target_sha256": "19b466dd6f7b541a3bb701d4de80ce13fe9ea58356313e24b23b21698093e1f9",
+    "status": "candidate_review_ready",
+    "plan_lf_sha256": "5e1d318dd1b841467ca297d67956304d1861e3eb68d1df56cc4d32f6434d34a4",
+    "chapter_lf_sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116"
+  },
+  "build_record_sha256": "b9e286b0f27fa65f92f24a8e379e10d5d39e5d41ec4334e5f72c8987cbbbb7b1",
+  "input_sources": [
+    {
+      "path": "build-scripts\\content\\book-2\\b2_212.py",
+      "builder_sha256": "34425535295be0ca88a01f0113bc282bf810e850ee678f9eb3dc1964786efc3a",
+      "qc_sha256": "34425535295be0ca88a01f0113bc282bf810e850ee678f9eb3dc1964786efc3a",
+      "matches_builder": true
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\print_pipeline.py",
+      "builder_sha256": "570cecd697a3123f145d30dfd25eae738d423baa317f2d6469a2dbaf59aeed2f",
+      "qc_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "matches_builder": false
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\212\\theory.md",
+      "builder_sha256": "06e5e35f2b2107197f46393ef07906eab009cf1ee6013c9f419fb33b9816b9ee",
+      "qc_sha256": "06e5e35f2b2107197f46393ef07906eab009cf1ee6013c9f419fb33b9816b9ee",
+      "matches_builder": true
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\212\\exercises.md",
+      "builder_sha256": "06e25b424b9ff7d3ae124d4896c2df418ae4c71d3fdba89997ccc82b02e39fd9",
+      "qc_sha256": "06e25b424b9ff7d3ae124d4896c2df418ae4c71d3fdba89997ccc82b02e39fd9",
+      "matches_builder": true
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\212\\answers.md",
+      "builder_sha256": "c377d0d5209acc3fdc168a29d90ab525b5a8edd4d4b20b3adbac5423f8796cc4",
+      "qc_sha256": "c377d0d5209acc3fdc168a29d90ab525b5a8edd4d4b20b3adbac5423f8796cc4",
+      "matches_builder": true
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\212\\target-answers.md",
+      "builder_sha256": "085fcfa5599e53bb89b1dee386b9ce69983f6dfb330495822b4e73e46bf0a615",
+      "qc_sha256": "085fcfa5599e53bb89b1dee386b9ce69983f6dfb330495822b4e73e46bf0a615",
+      "matches_builder": true
+    }
+  ],
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "hashes": {
+        "source_md": "f53521ed8812a4c8b8c33c1d66b34e0afe8425c1dffb1723f37771372b2baa09",
+        "source_html": "be9a3618444b65cc3aa5c2a33b94a81c5cbe864da7e7ea8fea63d746a60ef006",
+        "source_pdf": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2"
+      },
+      "zip_sha256": "9e08b74bfb676bd92f07c56ebbb7767d8c380b49a1754b981fd8b45a0def492a",
+      "zip_members": [
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – paragraaf.html",
+          "sha256": "be9a3618444b65cc3aa5c2a33b94a81c5cbe864da7e7ea8fea63d746a60ef006"
+        },
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+          "sha256": "f53521ed8812a4c8b8c33c1d66b34e0afe8425c1dffb1723f37771372b2baa09"
+        },
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+          "sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2"
+        },
+        {
+          "name": "_assets/2.1.2_ex_1.png",
+          "sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6"
+        },
+        {
+          "name": "_assets/2.1.2_ex_1.svg",
+          "sha256": "2f7a34bda5b89764e3946c9e489eb8c33b5079035e6e7913fa154da5f025aacf"
+        },
+        {
+          "name": "_assets/2.1.2_ex_2.png",
+          "sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa"
+        },
+        {
+          "name": "_assets/2.1.2_ex_2.svg",
+          "sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a"
+        },
+        {
+          "name": "_assets/2.1.2_ex_6.png",
+          "sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be"
+        },
+        {
+          "name": "_assets/2.1.2_ex_6.svg",
+          "sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884"
+        },
+        {
+          "name": "_assets/2.1.2_fig_1.png",
+          "sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02"
+        },
+        {
+          "name": "_assets/2.1.2_fig_1.svg",
+          "sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b"
+        },
+        {
+          "name": "_assets/2.1.2_fig_2.png",
+          "sha256": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93"
+        },
+        {
+          "name": "_assets/2.1.2_fig_2.svg",
+          "sha256": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f"
+        },
+        {
+          "name": "_assets/2.1.2_fig_3.png",
+          "sha256": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c"
+        },
+        {
+          "name": "_assets/2.1.2_fig_3.svg",
+          "sha256": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270"
+        },
+        {
+          "name": "_assets/2.1.2_fig_4.png",
+          "sha256": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd"
+        },
+        {
+          "name": "_assets/2.1.2_fig_4.svg",
+          "sha256": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910"
+        },
+        {
+          "name": "_assets/2.1.2_we_1.png",
+          "sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b"
+        },
+        {
+          "name": "_assets/2.1.2_we_1.svg",
+          "sha256": "6c20a342b6947663d741bc09e8104d8151774e1f784e9c43f8f8cc73d9ecfdea"
+        }
+      ],
+      "manifest_sha256": "db1a80500e15785ca605ff672704d3c66a22a0d15a256fff95a8582afd0f0ac5",
+      "proof_directory": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "page_hashes": [
+        {
+          "page": 1,
+          "sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1"
+        },
+        {
+          "page": 2,
+          "sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329"
+        },
+        {
+          "page": 3,
+          "sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d"
+        },
+        {
+          "page": 4,
+          "sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38"
+        },
+        {
+          "page": 5,
+          "sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55"
+        },
+        {
+          "page": 6,
+          "sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae"
+        },
+        {
+          "page": 7,
+          "sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72"
+        },
+        {
+          "page": 8,
+          "sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340"
+        },
+        {
+          "page": 9,
+          "sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc"
+        },
+        {
+          "page": 10,
+          "sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf"
+        },
+        {
+          "page": 11,
+          "sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7"
+        },
+        {
+          "page": 12,
+          "sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3"
+        },
+        {
+          "page": 13,
+          "sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd"
+        },
+        {
+          "page": 14,
+          "sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914"
+        }
+      ],
+      "embedded_pngs": 8,
+      "same_edition_parity": true
+    },
+    {
+      "kind": "opgaven",
+      "hashes": {
+        "source_md": "f96c6393ec72488d925d432dec256db714396f210107f5e5abd8f235bfccb938",
+        "source_html": "69e45f51c2c5690235e1d68f54dadf76818e190b9e10a96afbcfb50c2f71eb85",
+        "source_pdf": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a"
+      },
+      "zip_sha256": "d8e3e6714a09e50f6e702b2956f41ec37dfd73cb8b0044e8f90495738f5c1c20",
+      "zip_members": [
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – opgaven.html",
+          "sha256": "69e45f51c2c5690235e1d68f54dadf76818e190b9e10a96afbcfb50c2f71eb85"
+        },
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – opgaven.md",
+          "sha256": "f96c6393ec72488d925d432dec256db714396f210107f5e5abd8f235bfccb938"
+        },
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
+          "sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a"
+        },
+        {
+          "name": "_assets/2.1.2_ex_1.png",
+          "sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6"
+        },
+        {
+          "name": "_assets/2.1.2_ex_1.svg",
+          "sha256": "2f7a34bda5b89764e3946c9e489eb8c33b5079035e6e7913fa154da5f025aacf"
+        },
+        {
+          "name": "_assets/2.1.2_ex_2.png",
+          "sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa"
+        },
+        {
+          "name": "_assets/2.1.2_ex_2.svg",
+          "sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a"
+        },
+        {
+          "name": "_assets/2.1.2_ex_6.png",
+          "sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be"
+        },
+        {
+          "name": "_assets/2.1.2_ex_6.svg",
+          "sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884"
+        },
+        {
+          "name": "_assets/2.1.2_we_1.png",
+          "sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b"
+        },
+        {
+          "name": "_assets/2.1.2_we_1.svg",
+          "sha256": "6c20a342b6947663d741bc09e8104d8151774e1f784e9c43f8f8cc73d9ecfdea"
+        }
+      ],
+      "manifest_sha256": "701acab4c0210e2744a32dd5ee3a08388942d20ec97314208a121674843fbc9f",
+      "proof_directory": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "page_hashes": [
+        {
+          "page": 1,
+          "sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb"
+        },
+        {
+          "page": 2,
+          "sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5"
+        },
+        {
+          "page": 3,
+          "sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e"
+        },
+        {
+          "page": 4,
+          "sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4"
+        },
+        {
+          "page": 5,
+          "sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9"
+        },
+        {
+          "page": 6,
+          "sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac"
+        },
+        {
+          "page": 7,
+          "sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71"
+        }
+      ],
+      "embedded_pngs": 4,
+      "same_edition_parity": true
+    },
+    {
+      "kind": "antwoorden",
+      "hashes": {
+        "source_md": "d7dbebf97de900b7ecc4520e63c822201d39ce796c5c7e3aab83b4dcc9e900ee",
+        "source_html": "767bf8ee21be2b67676e0a80558d7bbe373cc7cab8c8ac0c96a0056f7228f221",
+        "source_pdf": "07a75d7b5b69344d38d5da9e5f2e0a3b964d86cc64c383b37809f8263fb33192"
+      },
+      "zip_sha256": "810166af6f45837381a4b8333bbff08d279773ccc4419b839c6a25b8e05d69d1",
+      "zip_members": [
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – antwoorden.html",
+          "sha256": "767bf8ee21be2b67676e0a80558d7bbe373cc7cab8c8ac0c96a0056f7228f221"
+        },
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – antwoorden.md",
+          "sha256": "d7dbebf97de900b7ecc4520e63c822201d39ce796c5c7e3aab83b4dcc9e900ee"
+        },
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+          "sha256": "07a75d7b5b69344d38d5da9e5f2e0a3b964d86cc64c383b37809f8263fb33192"
+        },
+        {
+          "name": "_assets/2.1.2_ex_3.png",
+          "sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643"
+        },
+        {
+          "name": "_assets/2.1.2_ex_3.svg",
+          "sha256": "c8c5df9cdeb2701abfa82361a61d12e89f27877c60648d6eb9f69e3c4cc8c434"
+        },
+        {
+          "name": "_assets/2.1.2_ex_4.png",
+          "sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33"
+        },
+        {
+          "name": "_assets/2.1.2_ex_4.svg",
+          "sha256": "5c2e430528e68bcacd1f1d2b224cad825dfea8b930a97e07dd29a59621ab9b9f"
+        },
+        {
+          "name": "_assets/2.1.2_ex_5.png",
+          "sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5"
+        },
+        {
+          "name": "_assets/2.1.2_ex_5.svg",
+          "sha256": "6b96a34c34a3dd6574f01898271b9cfd27f4c4966fa537116a2b89e9a8371bcf"
+        }
+      ],
+      "manifest_sha256": "a6c832c6ad3416fa6bd84599ed402c3efbd806556af543fe50163bd12d1b75c2",
+      "proof_directory": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "page_hashes": [
+        {
+          "page": 1,
+          "sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957"
+        },
+        {
+          "page": 2,
+          "sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554"
+        },
+        {
+          "page": 3,
+          "sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6"
+        },
+        {
+          "page": 4,
+          "sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5"
+        },
+        {
+          "page": 5,
+          "sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2"
+        },
+        {
+          "page": 6,
+          "sha256": "d381ea9948644e3fb98fbbb12436ba3d7d1b0df17d48ddb0df4e89b1455eeb73"
+        }
+      ],
+      "embedded_pngs": 3,
+      "same_edition_parity": true
+    }
+  ],
+  "scratch_render_directory": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-212-qc-poppler-nyd4fpxr",
+  "assets": [
+    {
+      "name": "2.1.2_fig_1",
+      "svg_sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+      "png_sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+      "svg_to_png_raw_parity": true,
+      "source_label_pt": 30
+    },
+    {
+      "name": "2.1.2_fig_2",
+      "svg_sha256": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f",
+      "png_sha256": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+      "svg_to_png_raw_parity": true,
+      "source_label_pt": 30
+    },
+    {
+      "name": "2.1.2_fig_3",
+      "svg_sha256": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270",
+      "png_sha256": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+      "svg_to_png_raw_parity": true,
+      "source_label_pt": 30
+    },
+    {
+      "name": "2.1.2_fig_4",
+      "svg_sha256": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910",
+      "png_sha256": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+      "svg_to_png_raw_parity": true,
+      "source_label_pt": 30
+    },
+    {
+      "name": "2.1.2_we_1",
+      "svg_sha256": "6c20a342b6947663d741bc09e8104d8151774e1f784e9c43f8f8cc73d9ecfdea",
+      "png_sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+      "svg_to_png_raw_parity": true,
+      "source_label_pt": 30
+    },
+    {
+      "name": "2.1.2_ex_1",
+      "svg_sha256": "2f7a34bda5b89764e3946c9e489eb8c33b5079035e6e7913fa154da5f025aacf",
+      "png_sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+      "svg_to_png_raw_parity": true,
+      "source_label_pt": 30
+    },
+    {
+      "name": "2.1.2_ex_2",
+      "svg_sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+      "png_sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+      "svg_to_png_raw_parity": true,
+      "source_label_pt": 30
+    },
+    {
+      "name": "2.1.2_ex_3",
+      "svg_sha256": "c8c5df9cdeb2701abfa82361a61d12e89f27877c60648d6eb9f69e3c4cc8c434",
+      "png_sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+      "svg_to_png_raw_parity": true,
+      "source_label_pt": 30
+    },
+    {
+      "name": "2.1.2_ex_4",
+      "svg_sha256": "5c2e430528e68bcacd1f1d2b224cad825dfea8b930a97e07dd29a59621ab9b9f",
+      "png_sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+      "svg_to_png_raw_parity": true,
+      "source_label_pt": 30
+    },
+    {
+      "name": "2.1.2_ex_5",
+      "svg_sha256": "6b96a34c34a3dd6574f01898271b9cfd27f4c4966fa537116a2b89e9a8371bcf",
+      "png_sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+      "svg_to_png_raw_parity": true,
+      "source_label_pt": 30
+    },
+    {
+      "name": "2.1.2_ex_6",
+      "svg_sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+      "png_sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+      "svg_to_png_raw_parity": true,
+      "source_label_pt": 30
+    }
+  ],
+  "mathematics": [
+    {
+      "context": "theatre",
+      "break_even_Q": "20",
+      "break_even_amount": "100",
+      "first_whole_without_loss": 20,
+      "cases": [
+        {
+          "Q": 0,
+          "TO": "0",
+          "TK": "60",
+          "profit": "-60"
+        },
+        {
+          "Q": 10,
+          "TO": "50",
+          "TK": "80",
+          "profit": "-30"
+        },
+        {
+          "Q": 20,
+          "TO": "100",
+          "TK": "100",
+          "profit": "0"
+        },
+        {
+          "Q": 30,
+          "TO": "150",
+          "TK": "120",
+          "profit": "30"
+        }
+      ]
+    },
+    {
+      "context": "kayak",
+      "break_even_Q": "10/3",
+      "break_even_amount": "70/3",
+      "first_whole_without_loss": 4,
+      "cases": [
+        {
+          "Q": 2,
+          "TO": "14",
+          "TK": "22",
+          "profit": "-8"
+        },
+        {
+          "Q": 3,
+          "TO": "21",
+          "TK": "23",
+          "profit": "-2"
+        },
+        {
+          "Q": 4,
+          "TO": "28",
+          "TK": "24",
+          "profit": "4"
+        },
+        {
+          "Q": 6,
+          "TO": "42",
+          "TK": "26",
+          "profit": "16"
+        }
+      ]
+    },
+    {
+      "context": "soap",
+      "break_even_Q": "10/3",
+      "break_even_amount": "40/3",
+      "first_whole_without_loss": 4,
+      "cases": [
+        {
+          "Q": 2,
+          "TO": "8",
+          "TK": "12",
+          "profit": "-4"
+        },
+        {
+          "Q": 3,
+          "TO": "12",
+          "TK": "13",
+          "profit": "-1"
+        },
+        {
+          "Q": 4,
+          "TO": "16",
+          "TK": "14",
+          "profit": "2"
+        },
+        {
+          "Q": 6,
+          "TO": "24",
+          "TK": "16",
+          "profit": "8"
+        }
+      ]
+    },
+    {
+      "context": "pots",
+      "break_even_Q": "5",
+      "break_even_amount": "20",
+      "first_whole_without_loss": 5,
+      "cases": [
+        {
+          "Q": 3,
+          "TO": "12",
+          "TK": "18",
+          "profit": "-6"
+        },
+        {
+          "Q": 4,
+          "TO": "16",
+          "TK": "19",
+          "profit": "-3"
+        },
+        {
+          "Q": 5,
+          "TO": "20",
+          "TK": "20",
+          "profit": "0"
+        },
+        {
+          "Q": 8,
+          "TO": "32",
+          "TK": "23",
+          "profit": "9"
+        }
+      ]
+    },
+    {
+      "context": "minigolf",
+      "break_even_Q": "40/3",
+      "break_even_amount": "160/3",
+      "first_whole_without_loss": 14,
+      "cases": [
+        {
+          "Q": 10,
+          "TO": "40",
+          "TK": "50",
+          "profit": "-10"
+        },
+        {
+          "Q": 13,
+          "TO": "52",
+          "TK": "53",
+          "profit": "-1"
+        },
+        {
+          "Q": 14,
+          "TO": "56",
+          "TK": "54",
+          "profit": "2"
+        },
+        {
+          "Q": 20,
+          "TO": "80",
+          "TK": "60",
+          "profit": "20"
+        }
+      ]
+    },
+    {
+      "context": "bakery",
+      "break_even_Q": "5000/7",
+      "break_even_amount": "7500/7",
+      "first_whole_without_loss": 715,
+      "cases": [
+        {
+          "Q": 500,
+          "TO": "750",
+          "TK": "900",
+          "profit": "-150"
+        },
+        {
+          "Q": 714,
+          "TO": "1071",
+          "TK": "5356/5",
+          "profit": "-1/5"
+        },
+        {
+          "Q": 715,
+          "TO": "2145/2",
+          "TK": "1072",
+          "profit": "1/2"
+        },
+        {
+          "Q": 1000,
+          "TO": "1500",
+          "TK": "1300",
+          "profit": "200"
+        }
+      ]
+    }
+  ],
+  "other_math": {
+    "candle": [
+      18,
+      9,
+      16,
+      8,
+      -2
+    ],
+    "dance_profits": [
+      20,
+      30,
+      10,
+      20
+    ],
+    "tool_hire": [
+      24,
+      18,
+      42,
+      7
+    ],
+    "core_minutes": 54,
+    "supported_minutes": 67,
+    "all_minutes": 77
+  },
+  "contrast_on_F7FAFC": {
+    "#6F3611": 9.058674427068146,
+    "#1A5276": 7.9742091306560505,
+    "#1F2937": 14.004388752378489,
+    "#E67E22": 2.7176644686493034
+  },
+  "grayscale": [
+    {
+      "kind": "target",
+      "sha256": "e21d06c7581840851c339a7408ac8b027cb53f26e74ff78c47bde24c7ffad73a",
+      "fresh_poppler_raw_match": true
+    },
+    {
+      "kind": "bonus",
+      "sha256": "7087ddffc8020bf49cd01bb2bc666507b90ac4125b858a08231040826d6f2876",
+      "fresh_poppler_raw_match": true
+    }
+  ]
+}
