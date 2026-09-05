@@ -64,7 +64,13 @@ plus eight named root plan/check/result/work-order/inventory/log files.
 Full native JSON and strict paths are retained in212-review-adoption-r7-scope.json.
 
 One inline node-e scope invocation lost its quoting through the native recorder
-and failed before the checker ran. A new explicit own helper then ran the
+and failed before the checker ran. Shell interpretation also created the empty
+untracked root file `[k`: inspected length0, SHA256
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,
+creation UTC2026-09-05T23:10:56. It was absent from the prior clean snapshot.
+Root removed only this accidental empty file with apply_patch; no user or
+student file was removed. Its full zero-byte content is recorded by that hash.
+A new explicit own helper then ran the
 unmodified checker correctly and preserved complete results. One no-match
 apply_patch attempt was rejected without edits. Neither failure changes source,
 scope policy or a prior evidence verdict. The original diagnostics stay logged.
