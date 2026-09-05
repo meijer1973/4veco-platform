@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T08:13:07.417Z
+Generated: 2026-09-05T08:14:18.123Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-target-exercise-audit-20260904`
-Source commit: `6d6f42226987f9ef9977f46dbb869455a88c25e2`
-Files indexed: 7629
+Source commit: `4799c107442db758705e5f10097575922a05ab22`
+Files indexed: 7631
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 723
+Count: 724
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -812,6 +812,7 @@ Count: 723
 - build-scripts/templates/template-textbook-paragraph-plan.md
 - build-scripts/templates/textbook-to-companion-handoff.md
 - build-scripts/tools/build-skill-tree-viewer.js
+- build-scripts/workflows/book2-owner-decision.js
 - build-scripts/workflows/check-blueprint-pedagogical-boundaries.js
 - build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js
 - build-scripts/workflows/check-book-outline-currentness.js
@@ -2628,7 +2629,7 @@ Count: 1027
 
 ## reports
 
-Count: 4918
+Count: 4919
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5290,6 +5291,7 @@ Count: 4918
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-corrections.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round1.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-correction-resolution.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-corrections-plan.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md
