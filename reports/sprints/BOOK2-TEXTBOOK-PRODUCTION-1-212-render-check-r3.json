@@ -1,0 +1,184 @@
+{
+  "paragraph": "2.1.2",
+  "automated_result": "PASS",
+  "inspection_status": "NOT_SUPPLIED_BY_THIS_SCRIPT",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pages": 14,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": 12.548030598958333,
+      "images": 8,
+      "pdf_sha256": "58deb867afeffda570b69867cb528052148a65a81a242f3632ddb96f78b9a652",
+      "html_sha256": "a72bbd961215c54b350233380f46a5a01de3a3cf69d795bc4ed169dde88ecf42",
+      "page_geometry_checks": [
+        {
+          "page": 1,
+          "text_characters": 2167,
+          "images": 0
+        },
+        {
+          "page": 2,
+          "text_characters": 675,
+          "images": 1
+        },
+        {
+          "page": 3,
+          "text_characters": 967,
+          "images": 0
+        },
+        {
+          "page": 4,
+          "text_characters": 897,
+          "images": 1
+        },
+        {
+          "page": 5,
+          "text_characters": 781,
+          "images": 1
+        },
+        {
+          "page": 6,
+          "text_characters": 1064,
+          "images": 1
+        },
+        {
+          "page": 7,
+          "text_characters": 1733,
+          "images": 0
+        },
+        {
+          "page": 8,
+          "text_characters": 838,
+          "images": 1
+        },
+        {
+          "page": 9,
+          "text_characters": 1683,
+          "images": 0
+        },
+        {
+          "page": 10,
+          "text_characters": 1256,
+          "images": 1
+        },
+        {
+          "page": 11,
+          "text_characters": 1097,
+          "images": 1
+        },
+        {
+          "page": 12,
+          "text_characters": 1355,
+          "images": 0
+        },
+        {
+          "page": 13,
+          "text_characters": 829,
+          "images": 0
+        },
+        {
+          "page": 14,
+          "text_characters": 1208,
+          "images": 1
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "pages": 7,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": 12.548030598958333,
+      "images": 4,
+      "pdf_sha256": "61a6a4405d5a1eaf53dd1cca15413e28f610ea56fae9bfa1f51b68e41f1889a0",
+      "html_sha256": "d79a20d04c02a58f02eb42d36d6cc6c356cbb7c20ed4e960d849c44da4889b79",
+      "page_geometry_checks": [
+        {
+          "page": 1,
+          "text_characters": 1857,
+          "images": 0
+        },
+        {
+          "page": 2,
+          "text_characters": 990,
+          "images": 1
+        },
+        {
+          "page": 3,
+          "text_characters": 1949,
+          "images": 0
+        },
+        {
+          "page": 4,
+          "text_characters": 962,
+          "images": 1
+        },
+        {
+          "page": 5,
+          "text_characters": 850,
+          "images": 1
+        },
+        {
+          "page": 6,
+          "text_characters": 1774,
+          "images": 0
+        },
+        {
+          "page": 7,
+          "text_characters": 1216,
+          "images": 1
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "pages": 6,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": 18.8220458984375,
+      "images": 3,
+      "pdf_sha256": "07a75d7b5b69344d38d5da9e5f2e0a3b964d86cc64c383b37809f8263fb33192",
+      "html_sha256": "767bf8ee21be2b67676e0a80558d7bbe373cc7cab8c8ac0c96a0056f7228f221",
+      "page_geometry_checks": [
+        {
+          "page": 1,
+          "text_characters": 2019,
+          "images": 0
+        },
+        {
+          "page": 2,
+          "text_characters": 959,
+          "images": 1
+        },
+        {
+          "page": 3,
+          "text_characters": 1708,
+          "images": 0
+        },
+        {
+          "page": 4,
+          "text_characters": 1345,
+          "images": 1
+        },
+        {
+          "page": 5,
+          "text_characters": 976,
+          "images": 1
+        },
+        {
+          "page": 6,
+          "text_characters": 995,
+          "images": 0
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "exact target text/goals/2-2-3-4 points",
+    "same exercise HTML source",
+    "all 1–9 question IDs",
+    "all text including footer at least12pt",
+    "placed figure text at least12pt",
+    "page-bounds smoke test",
+    "ZIP members equal current outputs"
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "record_type": "builder-inspection",
+  "paragraph": "2.1.2",
+  "artifact_id": "212-paragraaf-e94d42f66ab9-r5",
+  "inspector": "paragraph_212_builder",
+  "inspector_role": "BUILDER_NOT_INDEPENDENT_REVIEWER",
+  "date": "2026-09-05",
+  "result": "BUILDER_QA_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "accepted_for_student_use": false,
+  "source_md_sha256": "f53521ed8812a4c8b8c33c1d66b34e0afe8425c1dffb1723f37771372b2baa09",
+  "html_sha256": "be9a3618444b65cc3aa5c2a33b94a81c5cbe864da7e7ea8fea63d746a60ef006",
+  "pdf_sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+  "immutable_manifest": "manifest.json",
+  "immutable_manifest_sha256": "db1a80500e15785ca605ff672704d3c66a22a0d15a256fff95a8582afd0f0ac5",
+  "immutable_manifest_inspection_status": "PENDING",
+  "immutable_manifest_was_not_modified": true,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "page_sha256": {
+    "page-001.png": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1",
+    "page-002.png": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329",
+    "page-003.png": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d",
+    "page-004.png": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38",
+    "page-005.png": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55",
+    "page-006.png": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae",
+    "page-007.png": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72",
+    "page-008.png": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340",
+    "page-009.png": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc",
+    "page-010.png": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf",
+    "page-011.png": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7",
+    "page-012.png": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3",
+    "page-013.png": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd",
+    "page-014.png": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914"
+  },
+  "inspected_at_normal_reading_scale": true,
+  "inspection_method": "Personally opened every final R5 full-page PNG, not only contact sheets or PDF text extraction; actual placed text size checked separately.",
+  "visible_student_defects_observed": [],
+  "page_notes": [
+    {
+      "page": 1,
+      "note": "Opening question, four exact goals and prior-operation retrieval are readable; no isolated heading."
+    },
+    {
+      "page": 2,
+      "note": "TO numerical table matches the first TO-only graph; GO definition remains legible."
+    },
+    {
+      "page": 3,
+      "note": "GO explanation and profit example table keep units distinct; whitespace is acceptable."
+    },
+    {
+      "page": 4,
+      "note": "TK is added on unchanged axes; warning and algebraic break-even steps are readable."
+    },
+    {
+      "page": 5,
+      "note": "Crossing and zones correspond to the algebra; vertical-distance introduction is intact."
+    },
+    {
+      "page": 6,
+      "note": "Vertical profit bracket matches €30; warning rejects an area and states model limits."
+    },
+    {
+      "page": 7,
+      "note": "Continuous versus whole-number comparison and worked-example steps 1–4 are intact."
+    },
+    {
+      "page": 8,
+      "note": "Worked-example steps 5–6 and graph agree on Q ticks of two and €16 vertical difference."
+    },
+    {
+      "page": 9,
+      "note": "Five-bullet recap is unbroken, followed by the short paper route and start exercises."
+    },
+    {
+      "page": 10,
+      "note": "Optional fully guided soap case includes its complete graph and all prompts."
+    },
+    {
+      "page": 11,
+      "note": "Faded pots task supplies only axes/TK; TK and TO axis title anticipates the student's added TO."
+    },
+    {
+      "page": 12,
+      "note": "Combined-change table and prompts remain readable; independent minigolf task is intact."
+    },
+    {
+      "page": 13,
+      "note": "Frozen target context and all a–d prompts/2–2–3–4 points stay together with no answer figure."
+    },
+    {
+      "page": 14,
+      "note": "Both scale panels, optional bonus prompts and later/home cumulative retrieval fit readably."
+    }
+  ],
+  "grayscale_probes": [],
+  "grayscale_note": "Shared palette/pattern is additionally inspected in the target-answer and bonus grayscale probes in the other two final proof folders.",
+  "limitations": [
+    "Builder inspection does not replace independent paragraph review or independent quality control.",
+    "Classroom timing is estimated, not observed.",
+    "Untouched legacy review and quality-ref do not approve this newly generated payload."
+  ]
+}
