@@ -784,3 +784,61 @@ Book 2 target authority remediation: PASS
 ```text
 
 ```
+## node build-scripts/reports/check-agent-index-freshness.js
+
+- cwd: `C:\wt\book2-222-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T19:36:30.289Z`
+- finished_at: `2026-09-05T19:36:30.597Z`
+- duration_ms: `308`
+- exit_code: `0`
+- stdout_sha256: `c0b5a1957142e5e7d0aea857a411e10bde1780191a6ea8d48ad4a92c7b047dfb`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "ok": true,
+  "checks": [
+    {
+      "label": "4veco-platform",
+      "ok": true,
+      "skipped": false,
+      "failures": [],
+      "warnings": [
+        "4veco-platform index source_commit precedes generated-index-only ref e85c7e1a139985c5f986619b90e556d1cdf5a290"
+      ],
+      "source_commit": "89c2567a607dc06ecdffdb378c126051c33100b0",
+      "head": "e85c7e1a139985c5f986619b90e556d1cdf5a290",
+      "source_ref": "HEAD",
+      "target_commit": "e85c7e1a139985c5f986619b90e556d1cdf5a290",
+      "accepted_parent_generated_tail": true,
+      "accepted_generated_index_tail_ref": "e85c7e1a139985c5f986619b90e556d1cdf5a290"
+    },
+    {
+      "label": "4veco-lessen",
+      "ok": true,
+      "skipped": false,
+      "failures": [],
+      "warnings": [],
+      "source_commit": "0fa09fb112b7e9d661a904dbf6d54b5e9ac7fbbc",
+      "head": "0fa09fb112b7e9d661a904dbf6d54b5e9ac7fbbc",
+      "source_ref": "HEAD",
+      "target_commit": "0fa09fb112b7e9d661a904dbf6d54b5e9ac7fbbc",
+      "accepted_parent_generated_tail": false,
+      "accepted_generated_index_tail_ref": null
+    }
+  ],
+  "failures": [],
+  "warnings": [
+    "4veco-platform index source_commit precedes generated-index-only ref e85c7e1a139985c5f986619b90e556d1cdf5a290"
+  ]
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
