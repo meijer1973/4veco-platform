@@ -1,0 +1,268 @@
+{
+  "status": "PASS",
+  "actor": "paragraph_221_r8_independent_review",
+  "role": "independent paragraph reviewer",
+  "platform_base": "bac19f0f29d5493588a161f3182f33b731eee7d9",
+  "lessons_base": "45064bdfe0c1548f25f097eef648400382403cdf",
+  "bindings": {
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-BONUS-build-r5.json": "f1c4bcf969feeb813d9421a096752e1e452f4d4244cb5a8a3eb50a8e835a341a",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\b2_211.py": "621b68dea3e3e77608ae2b294dc6d6c47e01b525c2ca8b203e683b101e8e3d4f",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\211\\theory.md": "c945ae6634ebbcd4b6411ccbaa8394c5abcc5a1a6b85326588a28a7629c79dfe",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\211\\exercises.md": "a5e82f2cf9d0b89b749dd7590d7023f9ce8a780ce48402365a7bef2c628dd4b9",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\211\\answers.md": "86bde131fb02951fda0731d4f56cd1c31128aa80f19176e4e75849a65401b4a7",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\211\\target-answers.md": "e7ddb5385e91f18c24ca856e99a7bbd21a8de57b660be5335ef4cc4650280e94",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – paragraaf.md": "de7abc910f6ec940eb329abd003085921f32409956ec1e0450bcc4a5454eb6b5",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – paragraaf.html": "10721f1ad745b8e1358ba354c5ded64a74367f5081eaf1c676ecb88dbe10e44b",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – paragraaf.pdf": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_2.svg": "bbf506bd1be95e272a9bd31a42143147f58dc545c5ff243ff8d026b0d4c6c66d",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_2.png": "74f1384715e922ca04d10aa2978b852a98511044c6478f40e4bb260f72e0f8a8",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_3.svg": "a5a2e464a51461f78f1b98056520c5b3a32e9baef577424f405b64c4790326eb",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_3.png": "c516afb77ff0ae8a8adfd031140cf6f23b3b7f02bbb5a2980649e8a9f58de8b6",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_1.svg": "9043146770454ad70f5968185c49de46bee6036f5e4748a9caac8b78cebb1005",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_1.png": "21ca603069ffa83d885befa21696b1b0c7ea4a0f6fba8ed49021458000c8ba45",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_4.svg": "d49d97740e3747855613ea332df481caf9bb71071f75f08626502d1a474e518d",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_4.png": "c73e2eca425313c29eaf6bc1fbee0775971bfb08b6343d0ade52bbb70565701b",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_we_1.svg": "8f60486f0d66e0d728570e9d9f40851e6834d2c5cbf18db96ea091893b6d2530",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_we_1.png": "f62cfd52983743e0ceb36a5963dd30030d8c220e30f100c6f30ae47361700bc6",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_ex_1.svg": "c2854b76d42ee1a2654f4e13886e5184b17119786bff71b7b908bedf4aae83e3",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_ex_1.png": "fc76afb4f507cf8e09a62a9cf7a209ded71b93f87c72b97803d95afc6678f24f",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\manifest.json": "b8d14f27f2b361cbcad24723122c909c8c591a8f718bbd5d150156fcd71ab6d9",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-001.png": "87030bdf1a3a488614a7b6d0ff416d9a6747a4313bf2543e04c6c706728bb931",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-002.png": "9ec870cc1fad995863c1f64de5eb087cb39e10c2e03ec0091ff6b7335adbd0bb",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-003.png": "b5b7c16d919e8574fc2c8340f682bff8b42647c2a2aab0aa7eef43791d7b37f8",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-004.png": "2bf10d4e955d8a3e550cef5c58d8930e415a6693022bf8b66edfb8976cef391b",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-005.png": "4a5f0b08ffd3b4de246cedd74343da79102048e8e8b84b455cf34cb23c095b08",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-006.png": "40be04318742db356d11fff255fa1ec41db157cd0e7f5fd822b803e4f8277d7d",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-007.png": "6bf0b7a6fbdcb8933d95182b71c2a870d9a1b6c7a66826d6c35ca1875a410dc5",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-008.png": "027292161d798a897a2aeedaa1679169b1d6b46b90da5e221fdcbac2277e95e5",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-009.png": "d6211267c2c52ea8849f30e1470e1266dc9e86819c59c0ad75a04e62cac62846",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-010.png": "9d864c9b0783a0e83e6b58a55198d1f5bff02a435b208c814a22b88f940be2a0",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-011.png": "1d559076f6c91a5ae9c0a324d3a19502318cb2466b4243a00190ef1b338139be",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-012.png": "b448d6f5fe921f69489a5b833a3ff1249690043db1b9e6e30f72520b604bdc06",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-013.png": "f9b22bcdad2d331e5edcf43e2ebb0add294fa00b3f9c2441b82f18d88c0b193c",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-014.png": "e5e4f0e5f96d32db6ebd0c5eeec7dae6aa71b96c14ef68d706657296a0982c8f",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-015.png": "6d46b6ace8f0784f98e9ec6486ffe0514d4b50f492b3d11b18bf4852d8880460",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – opgaven.md": "bacccc1c9b063c4c786f2749d31993d94eb671fdc5bf0a899fb123d89bc0558b",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – opgaven.html": "9e27b80089dee95fa4ac61a3f07baaf95ff3650518943a730db122befec2a6f8",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – opgaven.pdf": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\manifest.json": "e5615a2689ea0e278795d14e0cc2462e685e9b1fa430a40c1715c2eb1dad1532",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-001.png": "0265dff094b5c47c408f27570bfdc82c7b26af885ab4615cff94943830b3c7bd",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-002.png": "80f498601d5685a964abb1ab14dd3a0b9e1355fbba2400c7e17bdebb653e91a0",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-003.png": "ca9cb50a8f074fe5d7f6e5b22c084aa22338485e48aedd8200c0d2ce7c82ead7",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-004.png": "824050d16b84d572995c2bc2f336e87996d663708bf18709bf1686ef54c24f94",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-005.png": "f9ddc86d86341a9c5db92152f71ceb1f0acc51f23a3b78fc2c454ddd9402f386",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-006.png": "8470277e2c61cc5cc8a9107063ad476d441b3e77b0d027a1be54e435d5bf106b",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-007.png": "c5464d633b525ce8a22dab994eab026340c4b4405ff7a105405730ac46dcfb07",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-008.png": "be8a312018558ae7d2f6c8863a6180199265a9ddab0becbdd84329edb2a40749",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-009.png": "4cbeef659c9a7122ee979f474c000385c6b434ad8408049cc9d58aee87722ba8",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – antwoorden.md": "f7572e3d4f2fc5bc092562eb06e76ebb0480fbbc8aa1ea01d3752a7251cbbdc9",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – antwoorden.html": "b2e86d7bae4d1bdbb7cd47a55cd6e83254398618f0954fe3ce09cdb75927c916",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – antwoorden.pdf": "498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\manifest.json": "f9931b00be4ef80a0539c5b9948073bb8655ebe820887ea2fb0e44d7e787ef04",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-001.png": "e64482170c9bf4117f064d72c81ccb73e5cb25220916188deb58867a0329a844",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-002.png": "821d393d65e82843b8f4b9d62f0fe4e4c75c57a4909ec9c3ac127a502c250591",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-003.png": "3aece13ce42a7ab19411768002f77629492a3be5c7865ec5732a9ffad3872b9a",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-004.png": "db38f2c267dff1647809ec28072a022f55fbf4d4bd4c214844f4e3404b0e64a0",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-005.png": "7c5579d04121743f7d9adee6140adf84dc5030e7da66c14c68948d5d3dcf2b51",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-006.png": "46b66e9cf590e2fa7414ed0347c3c4fdfa8014232931b731a0077f0f84657fc0",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-007.png": "36bedb4aa924e1990c8d5c61dd3a01710ff8c0a12d58e8ea65c132f31f2ab22b",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\build_pdf.py": "6ae0ea8829a68553d21e86408ca98bc6d79edebb046b146fef9ed521bf26c5b3",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-textbook-plan.md": "f46c7aa444ba6fef1f6f885b34bd52963fccac3cdc7b13b898eb6665219c4cd0",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_chapter-plan.md": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-review.md": "92b4a9462caf8316274fb58f8beef5c850147c44e6bf80b9a28fad442d9dbe96",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-quality-ref.yaml": "0dddb6e9d8f3a8da0e0f31e67dafabf53b99feb6ad86ce72039480dd7e12ea18",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-textbook-handoff.md": "724a080619f2f072151edf20980071b3bef18cd60d1904c78f4aa906be8917c8"
+  },
+  "native_files": [
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – antwoorden.html",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – antwoorden.md",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – antwoorden.pdf",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – opgaven.html",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – opgaven.md",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – opgaven.pdf",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – paragraaf.html",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – paragraaf.md",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – paragraaf.pdf",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_ex_1.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_ex_1.svg",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_1.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_1.svg",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_2.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_2.svg",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_3.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_3.svg",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_4.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_4.svg",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_we_1.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_we_1.svg"
+  ],
+  "pages": [
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-001.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-002.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-003.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-004.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-005.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-006.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-007.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-008.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-009.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-010.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-011.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-012.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-013.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-014.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-015.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-001.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-002.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-003.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-004.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-005.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-006.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-007.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-008.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-009.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-001.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-002.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-003.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-004.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-005.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-006.png",
+    "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-007.png"
+  ],
+  "target": {
+    "id": "2.1.1",
+    "module": 2,
+    "chapter": 1,
+    "paragraph": 1,
+    "paragraph_title": "Kostenstructuren",
+    "difficulty": "MEDIUM",
+    "target_exercise": {
+      "context": "Bakkerij De Korenaar produceert in één maand tussen 500 en 1.000 broden. Zolang de productiecapaciteit gelijk blijft, gebruikt de bakkerij dezelfde ruimte en ovens. Huur en verzekering kosten samen € 440 per maand. De netaansluiting en het energieabonnement kosten € 60 per maand. Meel en verpakking kosten samen € 0,70 per brood. Het elektriciteitsverbruik van de ovens kost binnen deze grenzen € 0,10 per brood. Q is het aantal broden per maand.",
+      "sources": [
+        {
+          "id": "classificatietabel",
+          "type": "table",
+          "columns": [
+            "kostencomponent",
+            "soort kosten",
+            "reden"
+          ],
+          "rows": [
+            [
+              "huur en verzekering",
+              "",
+              ""
+            ],
+            [
+              "netaansluiting en energieabonnement",
+              "",
+              ""
+            ],
+            [
+              "meel en verpakking",
+              "",
+              ""
+            ],
+            [
+              "elektriciteitsverbruik ovens",
+              "",
+              ""
+            ]
+          ],
+          "content": "Vul de lege cellen in."
+        }
+      ],
+      "subquestions": [
+        {
+          "label": "a",
+          "points": 4,
+          "prompt": "Vul de classificatietabel in: classificeer elk onderdeel als constante of variabele kosten en noteer per onderdeel kort hoe het totale bedrag reageert op een verandering van Q."
+        },
+        {
+          "label": "b",
+          "points": 3,
+          "prompt": "Stel de functies voor TCK, TVK en TK op."
+        },
+        {
+          "label": "c",
+          "points": 3,
+          "prompt": "Bereken bij Q = 500 de GCK, GVK en GTK. Noteer de volledige eenheden."
+        },
+        {
+          "label": "d",
+          "points": 3,
+          "prompt": "Bereken bij Q = 1.000 de GCK, GVK en GTK. Noteer de volledige eenheden."
+        },
+        {
+          "label": "e",
+          "points": 4,
+          "prompt": "Vergelijk eerst TCK, TVK en TK bij Q = 500 en Q = 1.000. Leg daarna met de uitkomsten uit waarom GCK halveert, GVK gelijk blijft en GTK niet halveert als Q verdubbelt. Begrens je uitleg tot één maand, Q = 500–1.000 en gelijkblijvende productiecapaciteit."
+        }
+      ]
+    },
+    "lesson_goals": [
+      "Je kunt kostencomponenten als constant of variabel classificeren op basis van hun gedrag binnen een genoemde periode en bij gelijkblijvende productiecapaciteit.",
+      "Je kunt uit een context de functies voor TCK, TVK en TK opstellen.",
+      "Je kunt gemiddelde kosten berekenen en met de juiste eenheid interpreteren.",
+      "Je kunt verklaren hoe totale en gemiddelde kosten veranderen als Q verandert, binnen de aannames van het model."
+    ],
+    "required_skills": [
+      "A08",
+      "A14",
+      "A50",
+      "A86",
+      "D38"
+    ],
+    "prior_knowledge_assumed": [
+      "A04: substitution and endpoint-unit checking only; formal economic cost classification and euro-per-period versus euro-per-product dimensions are new here."
+    ],
+    "new_skills_introduced": [
+      "A08",
+      "A14",
+      "A50",
+      "A86",
+      "D38"
+    ],
+    "missing_units_flagged": [
+      "Behaviour-based constant/variable classification within an explicit period and range.",
+      "D38 is semantically relevant, but its D02 prerequisite introduces deferred profit/MO=MK content and is not assumed here.",
+      "Conditional explanation of constant GVK under proportional variable cost."
+    ],
+    "exam_codes": [
+      "D1.16",
+      "D1.17",
+      "A2.10"
+    ],
+    "difficulty_notes": "Kandidaat voor circa 11 minuten: één classificatietabel, drie functies, twee compacte gemiddelde-kostenrijen en één begrensde vergelijking van totale en gemiddelde kosten.",
+    "answer_form_expectations": [
+      "classificatietabel met reden",
+      "drie functies",
+      "twee gemiddelde-kostenrijen met eenheid",
+      "totale-kostenvergelijking en drie begrensde gemiddelde-kostenverklaringen"
+    ],
+    "short_answer_model": {
+      "a": "Huur/verzekering en aansluiting/abonnement zijn constant: hun totale maandbedrag verandert niet met Q. Meel/verpakking en ovenverbruik zijn variabel: hun totale bedrag neemt per brood toe.",
+      "b": "TCK = 500; TVK = 0,80Q; TK = 500 + 0,80Q (bedragen in euro per maand).",
+      "c": "Bij Q=500: GCK=500/500=€1,00 per brood; GVK=0,80×500/500=€0,80 per brood; GTK=500/500+0,80=€1,80 per brood.",
+      "d": "Bij Q=1.000: GCK=€0,50 per brood; GVK=€0,80 per brood; GTK=€1,30 per brood.",
+      "e": "Bij Q=500 zijn TCK=€500, TVK=€400 en TK=€900 per maand; bij Q=1.000 zijn TCK=€500, TVK=€800 en TK=€1.300 per maand. TCK blijft gelijk, TVK verdubbelt en TK stijgt maar verdubbelt niet. GCK halveert van €1,00 naar €0,50 per brood doordat dezelfde TCK over tweemaal zoveel broden worden verdeeld. GVK blijft €0,80 doordat de variabele kosten per brood gelijk blijven. GTK daalt van €1,80 naar €1,30 en halveert niet, omdat alleen GCK halveert. Dit geldt binnen de genoemde maand, Q-grenzen en gelijkblijvende productiecapaciteit."
+    },
+    "source_ref": "references/owned/course-blueprint-v5.md §2.1.1",
+    "paragraph_kind": "theory",
+    "introduces_new_theory": true,
+    "record_status": "candidate_review_ready",
+    "v5_migration": {
+      "source_status": "candidate_review_ready",
+      "from_v4_id": "1.3.2",
+      "related_v4_ids": [],
+      "review_required_before_final": true
+    }
+  },
+  "target_record_sha256": "143f1053c98766b77d9d9ce573a5c8e976980f900387159312c3238288d71710",
+  "legacy_zip": {
+    "sha256": "bb951635865a5e7e321f562ef73c640c84948f99441385f217cf366d9e3e996d",
+    "unchanged": true,
+    "current_deliverable": false
+  }
+}
