@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "role": "paragraph_builder_self_qa",
+  "inspector": "released_pin_analysis",
+  "inspection_date": "2026-09-05",
+  "inspection_status": "BUILDER_SELF_QA_COMPLETE",
+  "independent_review_status": "PENDING",
+  "manifest": "manifest.json",
+  "manifest_sha256": "7e4d0041a12691f09c84c7794f5660bbb27176643bd66fb821a6974b888b13b0",
+  "pdf_sha256": "9fce79c5c66cf2ac05ea2ecad6ef3a121ae244cc2fbb684bb8400d336425c4e2",
+  "pages_inspected": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png"
+  ],
+  "inspected_at_normal_reading_scale": true,
+  "visible_student_defects": [],
+  "method": "Every full 150 dpi page PNG inspected individually. Final canonical capture compared by SHA-256 with those inspected pages; only paragraph page 5 differed and was inspected again after the TK label color correction. No product acceptance or teacher trial claimed."
+}
