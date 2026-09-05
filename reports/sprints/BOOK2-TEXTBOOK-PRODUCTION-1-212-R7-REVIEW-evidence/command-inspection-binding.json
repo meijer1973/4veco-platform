@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-probes.py",
+    "bind_inspection"
+  ],
+  "cwd": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform",
+  "expected_exit": 0,
+  "exit": 0,
+  "stdout": "{\"saved\": \"C:\\\\wt\\\\book2-212-r7-review-20260906\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\\\inspection-binding.json\", \"sha256\": \"d23a42b13b3ae436f80e327ee33746eba56a570aa9bbb099448e6dc12a00ff1c\"}\n",
+  "stderr": ""
+}

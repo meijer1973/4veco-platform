@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/sprints/emit-url-index.js"
+  ],
+  "cwd": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform",
+  "expected_exit": 0,
+  "exit": 0,
+  "stdout": "wrote reports/url-index.md\n",
+  "stderr": ""
+}
