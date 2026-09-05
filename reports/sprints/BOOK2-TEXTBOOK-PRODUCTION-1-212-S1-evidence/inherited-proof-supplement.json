@@ -1,0 +1,690 @@
+{
+  "platform_base": "572d1ea2ededaffd28afc44eeeca223252a58ec5",
+  "files": {
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r5/builder-inspection.json": {
+      "raw_sha256": "17e8c5b58f2ff76a2af0fcbdb72517dc945edf28ad2e55f6a7532c88ceac8259",
+      "git_blob_sha256": "17e8c5b58f2ff76a2af0fcbdb72517dc945edf28ad2e55f6a7532c88ceac8259"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r5/contact-sheet.png": {
+      "raw_sha256": "b9bc686be898c196373c3b0d9d7b34a7024ddf553527918fdbe63e3df5fb1cc7",
+      "git_blob_sha256": "b9bc686be898c196373c3b0d9d7b34a7024ddf553527918fdbe63e3df5fb1cc7"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r5/inspection.json": {
+      "raw_sha256": "54395793f75a37ccac72ed485d7ad4d3f250e23ead9d6eabfcf8e529098d2cd1",
+      "git_blob_sha256": "54395793f75a37ccac72ed485d7ad4d3f250e23ead9d6eabfcf8e529098d2cd1"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r5/manifest.json": {
+      "raw_sha256": "a6c832c6ad3416fa6bd84599ed402c3efbd806556af543fe50163bd12d1b75c2",
+      "git_blob_sha256": "a6c832c6ad3416fa6bd84599ed402c3efbd806556af543fe50163bd12d1b75c2"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r5/pages/page-001.png": {
+      "raw_sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957",
+      "git_blob_sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r5/pages/page-002.png": {
+      "raw_sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554",
+      "git_blob_sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r5/pages/page-003.png": {
+      "raw_sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6",
+      "git_blob_sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r5/pages/page-004.png": {
+      "raw_sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5",
+      "git_blob_sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r5/pages/page-005.png": {
+      "raw_sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2",
+      "git_blob_sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r5/pages/page-006.png": {
+      "raw_sha256": "d381ea9948644e3fb98fbbb12436ba3d7d1b0df17d48ddb0df4e89b1455eeb73",
+      "git_blob_sha256": "d381ea9948644e3fb98fbbb12436ba3d7d1b0df17d48ddb0df4e89b1455eeb73"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r6/contact-sheet.png": {
+      "raw_sha256": "b9bc686be898c196373c3b0d9d7b34a7024ddf553527918fdbe63e3df5fb1cc7",
+      "git_blob_sha256": "b9bc686be898c196373c3b0d9d7b34a7024ddf553527918fdbe63e3df5fb1cc7"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r6/manifest.json": {
+      "raw_sha256": "5a4c9b40f9a41eb074e18961ad07587ede4c60581ed26f44df22244b0a581d84",
+      "git_blob_sha256": "5a4c9b40f9a41eb074e18961ad07587ede4c60581ed26f44df22244b0a581d84"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r6/pages/page-001.png": {
+      "raw_sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957",
+      "git_blob_sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r6/pages/page-002.png": {
+      "raw_sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554",
+      "git_blob_sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r6/pages/page-003.png": {
+      "raw_sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6",
+      "git_blob_sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r6/pages/page-004.png": {
+      "raw_sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5",
+      "git_blob_sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r6/pages/page-005.png": {
+      "raw_sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2",
+      "git_blob_sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-antwoorden-07a75d7b5b69-r6/pages/page-006.png": {
+      "raw_sha256": "d381ea9948644e3fb98fbbb12436ba3d7d1b0df17d48ddb0df4e89b1455eeb73",
+      "git_blob_sha256": "d381ea9948644e3fb98fbbb12436ba3d7d1b0df17d48ddb0df4e89b1455eeb73"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r5/builder-inspection.json": {
+      "raw_sha256": "e071a7a8787bf06842303196fc2e0f984acb84b20a1fefce4d2bbc6c84f29e42",
+      "git_blob_sha256": "e071a7a8787bf06842303196fc2e0f984acb84b20a1fefce4d2bbc6c84f29e42"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r5/contact-sheet.png": {
+      "raw_sha256": "7e69d8666706aa84f311475cd146037cd2c48aab49ee10eb5f93ab242e238a0b",
+      "git_blob_sha256": "7e69d8666706aa84f311475cd146037cd2c48aab49ee10eb5f93ab242e238a0b"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r5/inspection.json": {
+      "raw_sha256": "5f186d799d490ada3c0241f609504d5bc1837cc41995b4a05eb05622fc289935",
+      "git_blob_sha256": "5f186d799d490ada3c0241f609504d5bc1837cc41995b4a05eb05622fc289935"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r5/manifest.json": {
+      "raw_sha256": "701acab4c0210e2744a32dd5ee3a08388942d20ec97314208a121674843fbc9f",
+      "git_blob_sha256": "701acab4c0210e2744a32dd5ee3a08388942d20ec97314208a121674843fbc9f"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r5/pages/page-001.png": {
+      "raw_sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb",
+      "git_blob_sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r5/pages/page-002.png": {
+      "raw_sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5",
+      "git_blob_sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r5/pages/page-003.png": {
+      "raw_sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e",
+      "git_blob_sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r5/pages/page-004.png": {
+      "raw_sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4",
+      "git_blob_sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r5/pages/page-005.png": {
+      "raw_sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9",
+      "git_blob_sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r5/pages/page-006.png": {
+      "raw_sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac",
+      "git_blob_sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r5/pages/page-007.png": {
+      "raw_sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71",
+      "git_blob_sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r6/contact-sheet.png": {
+      "raw_sha256": "7e69d8666706aa84f311475cd146037cd2c48aab49ee10eb5f93ab242e238a0b",
+      "git_blob_sha256": "7e69d8666706aa84f311475cd146037cd2c48aab49ee10eb5f93ab242e238a0b"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r6/manifest.json": {
+      "raw_sha256": "a229cd741a15d01bc32cd38484e5c9276d0430cf4c867a02a442c7bb286e15d4",
+      "git_blob_sha256": "a229cd741a15d01bc32cd38484e5c9276d0430cf4c867a02a442c7bb286e15d4"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r6/pages/page-001.png": {
+      "raw_sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb",
+      "git_blob_sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r6/pages/page-002.png": {
+      "raw_sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5",
+      "git_blob_sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r6/pages/page-003.png": {
+      "raw_sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e",
+      "git_blob_sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r6/pages/page-004.png": {
+      "raw_sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4",
+      "git_blob_sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r6/pages/page-005.png": {
+      "raw_sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9",
+      "git_blob_sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r6/pages/page-006.png": {
+      "raw_sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac",
+      "git_blob_sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-opgaven-94ebe5d35207-r6/pages/page-007.png": {
+      "raw_sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71",
+      "git_blob_sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/builder-inspection.json": {
+      "raw_sha256": "70c30f1fb5fca0ade5607c7c34f0491b8018ead915f7da729c0f2a1f4454692d",
+      "git_blob_sha256": "70c30f1fb5fca0ade5607c7c34f0491b8018ead915f7da729c0f2a1f4454692d"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/contact-sheet.png": {
+      "raw_sha256": "9d5ea8807c4ff87de731d9ff05e243b480bfb2c62ad79472b6ec265562c62187",
+      "git_blob_sha256": "9d5ea8807c4ff87de731d9ff05e243b480bfb2c62ad79472b6ec265562c62187"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/inspection.json": {
+      "raw_sha256": "885731ab6d4a2de1ed515bfc6b72a3ae2c8fd192f68ed171f697270be1a2c42d",
+      "git_blob_sha256": "885731ab6d4a2de1ed515bfc6b72a3ae2c8fd192f68ed171f697270be1a2c42d"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/manifest.json": {
+      "raw_sha256": "db1a80500e15785ca605ff672704d3c66a22a0d15a256fff95a8582afd0f0ac5",
+      "git_blob_sha256": "db1a80500e15785ca605ff672704d3c66a22a0d15a256fff95a8582afd0f0ac5"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-001.png": {
+      "raw_sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1",
+      "git_blob_sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-002.png": {
+      "raw_sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329",
+      "git_blob_sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-003.png": {
+      "raw_sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d",
+      "git_blob_sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-004.png": {
+      "raw_sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38",
+      "git_blob_sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-005.png": {
+      "raw_sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55",
+      "git_blob_sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-006.png": {
+      "raw_sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae",
+      "git_blob_sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-007.png": {
+      "raw_sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72",
+      "git_blob_sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-008.png": {
+      "raw_sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340",
+      "git_blob_sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-009.png": {
+      "raw_sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc",
+      "git_blob_sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-010.png": {
+      "raw_sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf",
+      "git_blob_sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-011.png": {
+      "raw_sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7",
+      "git_blob_sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-012.png": {
+      "raw_sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3",
+      "git_blob_sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-013.png": {
+      "raw_sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd",
+      "git_blob_sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r5/pages/page-014.png": {
+      "raw_sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914",
+      "git_blob_sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/contact-sheet.png": {
+      "raw_sha256": "9d5ea8807c4ff87de731d9ff05e243b480bfb2c62ad79472b6ec265562c62187",
+      "git_blob_sha256": "9d5ea8807c4ff87de731d9ff05e243b480bfb2c62ad79472b6ec265562c62187"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/manifest.json": {
+      "raw_sha256": "2a68aa5e0a12ba24991ac257949d978948e7ec1de688dc8bd2a2ad432b90f4ba",
+      "git_blob_sha256": "2a68aa5e0a12ba24991ac257949d978948e7ec1de688dc8bd2a2ad432b90f4ba"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-001.png": {
+      "raw_sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1",
+      "git_blob_sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-002.png": {
+      "raw_sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329",
+      "git_blob_sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-003.png": {
+      "raw_sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d",
+      "git_blob_sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-004.png": {
+      "raw_sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38",
+      "git_blob_sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-005.png": {
+      "raw_sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55",
+      "git_blob_sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-006.png": {
+      "raw_sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae",
+      "git_blob_sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-007.png": {
+      "raw_sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72",
+      "git_blob_sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-008.png": {
+      "raw_sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340",
+      "git_blob_sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-009.png": {
+      "raw_sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc",
+      "git_blob_sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-010.png": {
+      "raw_sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf",
+      "git_blob_sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-011.png": {
+      "raw_sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7",
+      "git_blob_sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-012.png": {
+      "raw_sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3",
+      "git_blob_sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-013.png": {
+      "raw_sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd",
+      "git_blob_sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd"
+    },
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-e94d42f66ab9-r6/pages/page-014.png": {
+      "raw_sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914",
+      "git_blob_sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/contact-sheet.png": {
+      "raw_sha256": "6a0b41df662eab12a127cf67676f16afba6ddde44d267cdaca1d45da8d2334bd",
+      "git_blob_sha256": "6a0b41df662eab12a127cf67676f16afba6ddde44d267cdaca1d45da8d2334bd"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/manifest.json": {
+      "raw_sha256": "9e6282bda633b3fa65b33d1cd58945f0c21958d7f756b1bb5c127613e31b6930",
+      "git_blob_sha256": "9e6282bda633b3fa65b33d1cd58945f0c21958d7f756b1bb5c127613e31b6930"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/pages/page-001.png": {
+      "raw_sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957",
+      "git_blob_sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/pages/page-002.png": {
+      "raw_sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554",
+      "git_blob_sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/pages/page-003.png": {
+      "raw_sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6",
+      "git_blob_sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/pages/page-004.png": {
+      "raw_sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5",
+      "git_blob_sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/pages/page-005.png": {
+      "raw_sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2",
+      "git_blob_sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/pages/page-006.png": {
+      "raw_sha256": "10064493da06147455efc290de36cc716f71241445bda748df7b8b0f8bdcdd5b",
+      "git_blob_sha256": "10064493da06147455efc290de36cc716f71241445bda748df7b8b0f8bdcdd5b"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/contact-sheet.png": {
+      "raw_sha256": "7e69d8666706aa84f311475cd146037cd2c48aab49ee10eb5f93ab242e238a0b",
+      "git_blob_sha256": "7e69d8666706aa84f311475cd146037cd2c48aab49ee10eb5f93ab242e238a0b"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/manifest.json": {
+      "raw_sha256": "064e709e58405380746852083d42fb853ffdf437c2135ffc1dbd664256b97df7",
+      "git_blob_sha256": "064e709e58405380746852083d42fb853ffdf437c2135ffc1dbd664256b97df7"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-001.png": {
+      "raw_sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb",
+      "git_blob_sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-002.png": {
+      "raw_sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5",
+      "git_blob_sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-003.png": {
+      "raw_sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e",
+      "git_blob_sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-004.png": {
+      "raw_sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4",
+      "git_blob_sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-005.png": {
+      "raw_sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9",
+      "git_blob_sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-006.png": {
+      "raw_sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac",
+      "git_blob_sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/pages/page-007.png": {
+      "raw_sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71",
+      "git_blob_sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/contact-sheet.png": {
+      "raw_sha256": "9d5ea8807c4ff87de731d9ff05e243b480bfb2c62ad79472b6ec265562c62187",
+      "git_blob_sha256": "9d5ea8807c4ff87de731d9ff05e243b480bfb2c62ad79472b6ec265562c62187"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/manifest.json": {
+      "raw_sha256": "cc15bbdf66204bcd296786ff97609fa871a11fce5aee1cb4779459799961a75f",
+      "git_blob_sha256": "cc15bbdf66204bcd296786ff97609fa871a11fce5aee1cb4779459799961a75f"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-001.png": {
+      "raw_sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1",
+      "git_blob_sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-002.png": {
+      "raw_sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329",
+      "git_blob_sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-003.png": {
+      "raw_sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d",
+      "git_blob_sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-004.png": {
+      "raw_sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38",
+      "git_blob_sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-005.png": {
+      "raw_sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55",
+      "git_blob_sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-006.png": {
+      "raw_sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae",
+      "git_blob_sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-007.png": {
+      "raw_sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72",
+      "git_blob_sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-008.png": {
+      "raw_sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340",
+      "git_blob_sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-009.png": {
+      "raw_sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc",
+      "git_blob_sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-010.png": {
+      "raw_sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf",
+      "git_blob_sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-011.png": {
+      "raw_sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7",
+      "git_blob_sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-012.png": {
+      "raw_sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3",
+      "git_blob_sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-013.png": {
+      "raw_sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd",
+      "git_blob_sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/pages/page-014.png": {
+      "raw_sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914",
+      "git_blob_sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r8/contact-sheet.png": {
+      "raw_sha256": "6a0b41df662eab12a127cf67676f16afba6ddde44d267cdaca1d45da8d2334bd",
+      "git_blob_sha256": "6a0b41df662eab12a127cf67676f16afba6ddde44d267cdaca1d45da8d2334bd"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r8/manifest.json": {
+      "raw_sha256": "ef1e993214d42ad9e5b7df228467e0b84ccd877f085d61b9f39143aa7312f288",
+      "git_blob_sha256": "ef1e993214d42ad9e5b7df228467e0b84ccd877f085d61b9f39143aa7312f288"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r8/pages/page-001.png": {
+      "raw_sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957",
+      "git_blob_sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r8/pages/page-002.png": {
+      "raw_sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554",
+      "git_blob_sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r8/pages/page-003.png": {
+      "raw_sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6",
+      "git_blob_sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r8/pages/page-004.png": {
+      "raw_sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5",
+      "git_blob_sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r8/pages/page-005.png": {
+      "raw_sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2",
+      "git_blob_sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r8/pages/page-006.png": {
+      "raw_sha256": "10064493da06147455efc290de36cc716f71241445bda748df7b8b0f8bdcdd5b",
+      "git_blob_sha256": "10064493da06147455efc290de36cc716f71241445bda748df7b8b0f8bdcdd5b"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/contact-sheet.png": {
+      "raw_sha256": "6a0b41df662eab12a127cf67676f16afba6ddde44d267cdaca1d45da8d2334bd",
+      "git_blob_sha256": "6a0b41df662eab12a127cf67676f16afba6ddde44d267cdaca1d45da8d2334bd"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/manifest.json": {
+      "raw_sha256": "18cf5274c716f93da88f5eab024566fa52d5c081f5bba696a0bb98e2d0131b1c",
+      "git_blob_sha256": "18cf5274c716f93da88f5eab024566fa52d5c081f5bba696a0bb98e2d0131b1c"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/pages/page-001.png": {
+      "raw_sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957",
+      "git_blob_sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/pages/page-002.png": {
+      "raw_sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554",
+      "git_blob_sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/pages/page-003.png": {
+      "raw_sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6",
+      "git_blob_sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/pages/page-004.png": {
+      "raw_sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5",
+      "git_blob_sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/pages/page-005.png": {
+      "raw_sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2",
+      "git_blob_sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/pages/page-006.png": {
+      "raw_sha256": "10064493da06147455efc290de36cc716f71241445bda748df7b8b0f8bdcdd5b",
+      "git_blob_sha256": "10064493da06147455efc290de36cc716f71241445bda748df7b8b0f8bdcdd5b"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r8/contact-sheet.png": {
+      "raw_sha256": "7e69d8666706aa84f311475cd146037cd2c48aab49ee10eb5f93ab242e238a0b",
+      "git_blob_sha256": "7e69d8666706aa84f311475cd146037cd2c48aab49ee10eb5f93ab242e238a0b"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r8/manifest.json": {
+      "raw_sha256": "8622b420668faedbf250dd8c16c8c0460308d92e19883fd16241d89545077e6d",
+      "git_blob_sha256": "8622b420668faedbf250dd8c16c8c0460308d92e19883fd16241d89545077e6d"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r8/pages/page-001.png": {
+      "raw_sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb",
+      "git_blob_sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r8/pages/page-002.png": {
+      "raw_sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5",
+      "git_blob_sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r8/pages/page-003.png": {
+      "raw_sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e",
+      "git_blob_sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r8/pages/page-004.png": {
+      "raw_sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4",
+      "git_blob_sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r8/pages/page-005.png": {
+      "raw_sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9",
+      "git_blob_sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r8/pages/page-006.png": {
+      "raw_sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac",
+      "git_blob_sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r8/pages/page-007.png": {
+      "raw_sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71",
+      "git_blob_sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/contact-sheet.png": {
+      "raw_sha256": "7e69d8666706aa84f311475cd146037cd2c48aab49ee10eb5f93ab242e238a0b",
+      "git_blob_sha256": "7e69d8666706aa84f311475cd146037cd2c48aab49ee10eb5f93ab242e238a0b"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/manifest.json": {
+      "raw_sha256": "9326dd654bc4d0cee9f2278df4ae8743ee888d53e0fae9ea1d184936d6f25234",
+      "git_blob_sha256": "9326dd654bc4d0cee9f2278df4ae8743ee888d53e0fae9ea1d184936d6f25234"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-001.png": {
+      "raw_sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb",
+      "git_blob_sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-002.png": {
+      "raw_sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5",
+      "git_blob_sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-003.png": {
+      "raw_sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e",
+      "git_blob_sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-004.png": {
+      "raw_sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4",
+      "git_blob_sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-005.png": {
+      "raw_sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9",
+      "git_blob_sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-006.png": {
+      "raw_sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac",
+      "git_blob_sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-007.png": {
+      "raw_sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71",
+      "git_blob_sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/contact-sheet.png": {
+      "raw_sha256": "9d5ea8807c4ff87de731d9ff05e243b480bfb2c62ad79472b6ec265562c62187",
+      "git_blob_sha256": "9d5ea8807c4ff87de731d9ff05e243b480bfb2c62ad79472b6ec265562c62187"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/manifest.json": {
+      "raw_sha256": "6c4a3a82b29fe7642ab170bb2865a6fea7c76d8cc6f7e4ea7a6f118731b5a7b1",
+      "git_blob_sha256": "6c4a3a82b29fe7642ab170bb2865a6fea7c76d8cc6f7e4ea7a6f118731b5a7b1"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-001.png": {
+      "raw_sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1",
+      "git_blob_sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-002.png": {
+      "raw_sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329",
+      "git_blob_sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-003.png": {
+      "raw_sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d",
+      "git_blob_sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-004.png": {
+      "raw_sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38",
+      "git_blob_sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-005.png": {
+      "raw_sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55",
+      "git_blob_sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-006.png": {
+      "raw_sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae",
+      "git_blob_sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-007.png": {
+      "raw_sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72",
+      "git_blob_sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-008.png": {
+      "raw_sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340",
+      "git_blob_sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-009.png": {
+      "raw_sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc",
+      "git_blob_sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-010.png": {
+      "raw_sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf",
+      "git_blob_sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-011.png": {
+      "raw_sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7",
+      "git_blob_sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-012.png": {
+      "raw_sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3",
+      "git_blob_sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-013.png": {
+      "raw_sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd",
+      "git_blob_sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r8/pages/page-014.png": {
+      "raw_sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914",
+      "git_blob_sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/contact-sheet.png": {
+      "raw_sha256": "9d5ea8807c4ff87de731d9ff05e243b480bfb2c62ad79472b6ec265562c62187",
+      "git_blob_sha256": "9d5ea8807c4ff87de731d9ff05e243b480bfb2c62ad79472b6ec265562c62187"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/manifest.json": {
+      "raw_sha256": "58111440dd05d57a10364eafc2998cecdc7550dc53a25bf8ab762214142805c5",
+      "git_blob_sha256": "58111440dd05d57a10364eafc2998cecdc7550dc53a25bf8ab762214142805c5"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-001.png": {
+      "raw_sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1",
+      "git_blob_sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-002.png": {
+      "raw_sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329",
+      "git_blob_sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-003.png": {
+      "raw_sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d",
+      "git_blob_sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-004.png": {
+      "raw_sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38",
+      "git_blob_sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-005.png": {
+      "raw_sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55",
+      "git_blob_sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-006.png": {
+      "raw_sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae",
+      "git_blob_sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-007.png": {
+      "raw_sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72",
+      "git_blob_sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-008.png": {
+      "raw_sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340",
+      "git_blob_sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-009.png": {
+      "raw_sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc",
+      "git_blob_sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-010.png": {
+      "raw_sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf",
+      "git_blob_sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-011.png": {
+      "raw_sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7",
+      "git_blob_sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-012.png": {
+      "raw_sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3",
+      "git_blob_sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-013.png": {
+      "raw_sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd",
+      "git_blob_sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd"
+    },
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-014.png": {
+      "raw_sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914",
+      "git_blob_sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914"
+    }
+  },
+  "reason": "Initial snapshot covered standard root only; this supplement binds all inherited nested proofs directly to immutable PBASE, after diagnostic r7 and before valid succession reproduction."
+}

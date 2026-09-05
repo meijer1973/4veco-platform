@@ -95,3 +95,22 @@ Defer: recap/range reminder, classroom observation54/67/77, independent delta
 review, distinct current QC and root handoff. These require their own relevant
 gates; they are not waived. PartB, chapter/book assembly and future PR merges
 remain outside this bounded task. No repeated owner hold decision is needed.
+
+## Own helper diagnostic and correction before valid reproduction
+
+The initial full native command exited0 and preserved all34 native bytes and
+archive members. Its driver then failed looking for inherited r9 review proofs
+under the standard proof root. Initial suffix discovery likewise omitted nested
+reviewer proof/evidence directories, selecting a locally absent standard r7 even
+though r7 already existed elsewhere. That entire attempt, its original immutable
+PENDING proofs, reservation and complete command/comparer failure are retained
+as diagnostic, not a valid globally reserved reproduction success.
+
+The own helper now searches all reports subtrees across registered worktrees,
+including nested reviewer proof directories and reservations/attempts. A separate
+immutable supplement verifies every inherited212 proof against exact PBASE Git
+blobs and current raw bytes; the original baseline is not rewritten. Comparison
+uses the original R7-REVIEW-evidence r9 path unchanged. Valid new proofs use the
+exclusive212-S1-evidence/proofs prefix and the truly next unused global suffix.
+This corrects only the own evidence helper; no original guard, pupil source,
+native output, old proof path, current review or acceptance gate is changed.

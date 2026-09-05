@@ -25,8 +25,8 @@ STEM = "2.1.2 Opbrengsten, winst en break-even"
 TARGET_HASH = "19b466dd6f7b541a3bb701d4de80ce13fe9ea58356313e24b23b21698093e1f9"
 PLAN_HASH = "5e1d318dd1b841467ca297d67956304d1861e3eb68d1df56cc4d32f6434d34a4"
 CHAPTER_HASH = "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116"
-PRIOR_REVIEW_HASH = "92b4a9462caf8316274fb58f8beef5c850147c44e6bf80b9a28fad442d9dbe96"
-PRIOR_QUALITY_HASH = "0dddb6e9d8f3a8da0e0f31e67dafabf53b99feb6ad86ce72039480dd7e12ea18"
+PRIOR_REVIEW_HASH = "a75755c7c2e6cdffb2defcbb5403814cf854d87bfae9a8172dd768aadb5b8023"
+PRIOR_QUALITY_HASH = "c85c44a53d46af87ad61500b83b0fd721fac43c97ffd1be3d512308158a4b9f5"
 HEADINGS = ["Uitgewerkt voorbeeld", "Startopgaven", "Begeleide inoefening",
             "Zelfstandige oefening", "Doeloefening", "Denkertje / Bonusopgave",
             "Herhaling / Herhaling en interleaving"]
