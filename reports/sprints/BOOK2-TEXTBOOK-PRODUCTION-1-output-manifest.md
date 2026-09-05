@@ -5,8 +5,8 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform adopted212 R7 review `8e00eee0252993bee69f94a3ebb1414e03b8ef49`,
-lessons `d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f`, including the exact
+Snapshot: platform §231 import/scope `11a352b9f91f6ddba97fa371b9568f9ffb95f771`,
+lessons `cf8a5fa5c3dcdb672d4231e0d97df535f1000abe`, including the exact
 root-only current211 acceptance/handoff at5e14325 in211-root-acceptance-r5.md.
 Current221 R8 and222 R13 acceptances remain unchanged.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
@@ -17,11 +17,11 @@ All paths below are relative to the lesson book root
 
 Expected: 27 theory + 6 consolidation + 6 chapter + 2 book = **41 PDFs**.
 At this checkpoint: **3 internally gate-closed current paragraph packages**:
-9 accepted-with-flags PDFs,9 adopted candidate PDFs,8 legacy unaccepted and15
+9 accepted-with-flags PDFs,12 adopted candidate PDFs,8 legacy unaccepted and12
 absent. §211 now has current R5 independent paragraph review, distinct specialist
 QC and root acceptance/handoff. §212 retains historical print/content acceptance
 but its current independent and successor gates remain; its three PDFs stay C. Physical
-root presence is 26, not 26 accepted. All eight legacy PDFs remain Git-blob-
+root presence is 29, not 29 accepted. All eight legacy PDFs remain Git-blob-
 identical to the baseline. Separate in-progress worktrees do not count here.
 
 §221 R8 and §213 R6 correct their short-alt/title metadata, retaining all49
@@ -44,6 +44,18 @@ reproduction passes. Its current independent paragraph review passes; distinct
 specialist/root gates and accepted-prerequisite succession remain.
 Their root reports distinguish actual source/page/rebuild checks from remaining
 independent paragraph, specialist and handoff gates. See review-corrections.md.
+
+§231 final r8 is now adopted as a candidate: all42 native files plus wrapper
+match the author's exact lesson commit, with33 pages14/9/10. Root's499 import
+bindings and15 source tests pass. The66 supplemental grayscale pages were
+relocated byte-identically under supported sprint-evidence paths with an exact
+original-commit/path/SHA-to-new-path mapping; all27 historical PENDING manifests
+and original failed/superseded records remain unchanged. Both actual new native
+platform/lesson scope checks pass. Root's fresh full reproduction, published
+canonical independent review adoption, distinct QC and handoff remain pending
+at this snapshot. Both actual structural profiles currently fail only for the
+missing canonical review and QC. Separate in-progress reviewer work is not
+silently accepted by this manifest. See231-root-import-result.md.
 
 Each PDF also requires matching generated `.md` and self-contained `.html`;
 paragraphs require their planned SVG/PNG pairs, thin builder, accepted plan,
@@ -86,9 +98,9 @@ No output is silently accepted through an older PASS or reviewed_final label.
 | 24 | 2.2.4 | antwoorden | L | `2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf` |
 | 25 | 2.2 | hoofdstuk | L | `2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – hoofdstuk.pdf` |
 | 26 | 2.2 | antwoorden | L | `2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – antwoorden.pdf` |
-| 27 | 2.3.1 | paragraaf | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf` |
-| 28 | 2.3.1 | opgaven | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.pdf` |
-| 29 | 2.3.1 | antwoorden | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.pdf` |
+| 27 | 2.3.1 | paragraaf | C | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf` |
+| 28 | 2.3.1 | opgaven | C | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.pdf` |
+| 29 | 2.3.1 | antwoorden | C | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.pdf` |
 | 30 | 2.3.2 | paragraaf | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf` |
 | 31 | 2.3.2 | opgaven | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – opgaven.pdf` |
 | 32 | 2.3.2 | antwoorden | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf` |
@@ -113,21 +125,24 @@ hashes alone are not student-quality acceptance.
 | 2.1.1 / paragraaf | `9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0` | R5 internal acceptance with flags; current review/QC/handoff complete |
 | 2.1.1 / opgaven | `97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953` | R5 internal acceptance with flags; current review/QC/handoff complete |
 | 2.1.1 / antwoorden | `498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce` | R5 internal acceptance with flags; current review/QC/handoff complete |
-| 2.1.2 / paragraaf | `e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2` | R5 historical print acceptance; short-alt correction/review pending |
-| 2.1.2 / opgaven | `94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a` | R5 historical print acceptance; short-alt correction/review pending |
-| 2.1.2 / antwoorden | `d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90` | R7 criteria corrected; current paragraph/QC/successor gates pending |
+| 2.1.2 / paragraaf | `e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2` | R7 current paragraph PASS; QC/root/successor gates pending |
+| 2.1.2 / opgaven | `94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a` | R7 current paragraph PASS; QC/root/successor gates pending |
+| 2.1.2 / antwoorden | `d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90` | R7 current paragraph PASS; QC/root/successor gates pending |
 | 2.2.1 / paragraaf | `98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6` | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.1 / opgaven | `a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af` | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.1 / antwoorden | `d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d` | R8 internal acceptance with flags; current review/QC/handoff complete |
-| 2.1.3 / paragraaf | `534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024` | R7 bonus corrected; independent review/QC/handoff/successor pending |
-| 2.1.3 / opgaven | `d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05` | R7 bonus corrected; independent review/QC/handoff/successor pending |
-| 2.1.3 / antwoorden | `d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787` | R7 bonus corrected; independent review/QC/handoff/successor pending |
+| 2.1.3 / paragraaf | `534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024` | R7 current paragraph PASS; QC/handoff/successor pending |
+| 2.1.3 / opgaven | `d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05` | R7 current paragraph PASS; QC/handoff/successor pending |
+| 2.1.3 / antwoorden | `d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787` | R7 current paragraph PASS; QC/handoff/successor pending |
 | 2.2.2 / paragraaf | `36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c` | R13 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.2 / opgaven | `0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555` | R13 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.2 / antwoorden | `61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2` | R13 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.3 / paragraaf | `ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb` | R3 candidate; paragraph pass, QC/handoff/successor pending |
 | 2.2.3 / opgaven | `50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80` | R3 candidate; paragraph pass, QC/handoff/successor pending |
 | 2.2.3 / antwoorden | `30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10` | R3 candidate; paragraph pass, QC/handoff/successor pending |
+| 2.3.1 / paragraaf | `088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e` | Final r8 candidate; root fresh rebuild/review adoption/QC/handoff pending |
+| 2.3.1 / opgaven | `4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341` | Final r8 candidate; root fresh rebuild/review adoption/QC/handoff pending |
+| 2.3.1 / antwoorden | `d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b` | Final r8 candidate; root fresh rebuild/review adoption/QC/handoff pending |
 
 Each accepted paragraph has `<id>-textbook-handoff.md` in its canonical folder,
 including exact source/review/quality bindings, concepts, exercises, visuals and
@@ -160,8 +175,9 @@ Historical212 teaching is unchanged by its metadata/bonus correction; root must
 link its eventual newly accepted package before final combined book closure.
 §223 also needs exact accepted-current-§221 successor input binding
 with unchanged pupil output proof before final combined reproduction.
-§214/§224 follow accepted prerequisite teaching. §231–§234 and all aggregate
-outputs remain pending their dependency/plan/review gates. Book front sources
+§214/§224 follow accepted prerequisite teaching. §231 is an imported candidate;
+§232–§234 and all aggregate outputs remain pending their dependency/plan/review
+gates. Book front sources
 alone passed independent R2; no back matter, actual book manifest or assembled
 book PDF has been accepted. Preserve paragraph/answer separation and never
 append duplicate opgaven to a complete paragraaf source.
@@ -179,9 +195,9 @@ membership, filesystem presence, raw SHA-256 of accepted/candidate PDFs and base
 Git-blob comparison for all legacy PDFs. An initial line-split probe failed to
 interpret Git's quoted Unicode paths and incorrectly counted zero baseline
 PDFs; it was discarded and replaced with NUL-delimited paths before this record.
-The corrected baseline and current tracked count is 26. The current refresh
-recomputed 41 unique planned paths, 26 present, eight baseline-identical legacy
-PDFs, 15 absent and all eighteen accepted/candidate PDF hashes. Current candidate status
+The corrected historical pre-§231 baseline/current tracked count was26. The
+§231 refresh checks41 unique planned paths,29 present, eight baseline-identical
+legacy PDFs,12 absent and all21 accepted/candidate PDF hashes. Current candidate status
 does not inherit a legacy acceptance label. No files were changed
 by inventory checks.
 

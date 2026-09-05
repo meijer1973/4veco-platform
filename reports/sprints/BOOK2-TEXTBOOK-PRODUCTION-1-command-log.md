@@ -14750,3 +14750,38 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-inventory.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:45:02.560Z`
+- finished_at: `2026-09-05T23:45:03.714Z`
+- duration_ms: `1154`
+- exit_code: `0`
+- stdout_sha256: `21e04b8fd0bb3185528b4ec4b4eed38ac5301e69357dddb60ff5317d7eb65d47`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "counts": {
+    "A": 9,
+    "C": 12,
+    "L": 8,
+    "P": 12
+  },
+  "present": 29,
+  "absent": 12,
+  "current_pdf_hashes": 21,
+  "legacy_exact": 8,
+  "output": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-inventory.json"
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
