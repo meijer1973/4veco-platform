@@ -14377,3 +14377,128 @@ Node.js v24.13.1
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-import-check.js prepare
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:31:15.979Z`
+- finished_at: `2026-09-05T23:31:37.961Z`
+- duration_ms: `21982`
+- exit_code: `0`
+- stdout_sha256: `807c5eb9c3f0e699d5e236cbf080c86602d225b00dcf7596a26ba74de1c6ff7c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "phase": "prepare",
+  "imports": 499,
+  "gray": 66,
+  "pending": 27,
+  "root_selected_views": 6,
+  "output": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-import-prepare.json",
+  "sha256": "a5d70bf29c18163fa62d8d5b809511b87aa171f0bdfad8b2937a3e79d54ec8eb"
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## pwsh -NoProfile -File reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-relocate.ps1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:31:50.347Z`
+- finished_at: `2026-09-05T23:31:54.148Z`
+- duration_ms: `3801`
+- exit_code: `0`
+- stdout_sha256: `00729722e243f1a0b21720447cb22695193de9c1fdc6c439faaa24a49af0a75c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+PASS: exactly 66 byte-identical supplemental PNGs relocated inside the claimed root worktree; original builder history/files untouched.
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-import-check.js after
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:31:54.196Z`
+- finished_at: `2026-09-05T23:32:13.173Z`
+- duration_ms: `18977`
+- exit_code: `0`
+- stdout_sha256: `b0e2f65e22444b5343b62b4f11ac5b7b6b0d18b6c7487d88399a5c559cc34590`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "phase": "after",
+  "imports": 499,
+  "gray": 66,
+  "pending": 27,
+  "root_selected_views": 6,
+  "output": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-import-after.json",
+  "sha256": "b0fd3d453dc6e657705242e83822070351ba9c172b893eff2f799814d97e0a5a"
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/231/test_source.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:33:23.846Z`
+- finished_at: `2026-09-05T23:33:25.326Z`
+- duration_ms: `1480`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `971e4701579ee35b2ebe9e18088612b6647de69c2bd143c2dc6e94090f489ec1`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+test_actual_native_name_regex_all30 (__main__.SourceTests.test_actual_native_name_regex_all30) ... ok
+test_actual_svg_economic_geometry_and_roles (__main__.SourceTests.test_actual_svg_economic_geometry_and_roles) ... ok
+test_actual_svg_labels_canvas_all_ink_boxes (__main__.SourceTests.test_actual_svg_labels_canvas_all_ink_boxes) ... ok
+test_all_model_calculations_independent_fractions (__main__.SourceTests.test_all_model_calculations_independent_fractions) ... ok
+test_all_task_numbers_and_no_device_or_time_metadata (__main__.SourceTests.test_all_task_numbers_and_no_device_or_time_metadata) ... ok
+test_authority_guard_rejects_each_changed_pin_before_processes (__main__.SourceTests.test_authority_guard_rejects_each_changed_pin_before_processes) ... ok
+test_bonus_model_then_exact_three_criteria_and_negative_fixtures (__main__.SourceTests.test_bonus_model_then_exact_three_criteria_and_negative_fixtures) ... ok
+test_discrete_and_model_boundary (__main__.SourceTests.test_discrete_and_model_boundary) ... ok
+test_every_actual_alt_caption_and_union (__main__.SourceTests.test_every_actual_alt_caption_and_union) ... ok
+test_exact_headings_route_and_recap (__main__.SourceTests.test_exact_headings_route_and_recap) ... ok
+test_fading_and_independent_surfaces (__main__.SourceTests.test_fading_and_independent_surfaces) ... ok
+test_fresh_revision_and_immutable_attempt_guards (__main__.SourceTests.test_fresh_revision_and_immutable_attempt_guards) ... ok
+test_frozen_goals_target_and_scoring (__main__.SourceTests.test_frozen_goals_target_and_scoring) ... ok
+test_no_false_predecessor_acceptance_or_changed_plan (__main__.SourceTests.test_no_false_predecessor_acceptance_or_changed_plan) ... ok
+test_print_margin_guard_rejects_body_in_footer_and_false_footer (__main__.SourceTests.test_print_margin_guard_rejects_body_in_footer_and_false_footer) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.870s
+
+OK
+
+```
