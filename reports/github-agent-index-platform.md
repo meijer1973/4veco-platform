@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T18:28:06.203Z
+Generated: 2026-09-05T18:57:35.304Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-221-r7-review-20260905`
-Source commit: `0786233a5ee25380287fa722d7e0345f9dc25b9b`
-Files indexed: 8003
+Source branch: `agent/book2-221-r7-qc-20260905`
+Source commit: `9f1fe318bc5ae971d6891340925756867137c5ba`
+Files indexed: 8019
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2671,7 +2671,7 @@ Count: 1030
 
 ## reports
 
-Count: 5255
+Count: 5271
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5651,6 +5651,22 @@ Count: 5255
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-evidence.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-execution.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-diagnostic-manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-execution.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-gates.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-grayscale-page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-grayscale-page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-grayscale-page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-inspection.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-inspection.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-probes.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-probes.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-render-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r7-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R7-REVIEW-command-log.jsonl
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R7-REVIEW-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check-r6.json
