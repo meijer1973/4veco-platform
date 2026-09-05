@@ -3,6 +3,11 @@
 Date: 2026-09-05. Accountable integrator: codex-root. Umbrella issue #229.
 Status: **AWAITING OWNER DECISION.** This file is a request, not a grant.
 
+Later disposition: the owner explicitly approved this exact package on2026-09-05.
+The original request above remains distinguishable from the separate actual
+grant recorded in22-owner-authorization.md. Lifecycle release uses that grant,
+not this request's former pending status.
+
 ## Requested decision
 
 Approve the exact independently reviewed Chapter2.2 / §2.2.1 / §2.2.2 teaching
