@@ -142,6 +142,74 @@ describe('check-paragraph-lane-scope', () => {
     expect(classifyPath(paragraph + '_paragraph-plan.md').category).toBe('partB_companion');
   });
 
+  test('recognizes all 33 exact Book 2 paragraph print archives only in the textbook lane', () => {
+    const book = 'Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/';
+    const chapters = [
+      ['2.1 Hoofdstuk Kosten en opbrengsten', [
+        '2.1.1 Kostenstructuren', '2.1.2 Opbrengsten, winst en break-even',
+        '2.1.3 Marginale kosten en marginale opbrengsten', '2.1.4 Gemengde opgaven',
+      ]],
+      ['2.2 Hoofdstuk Elasticiteit', [
+        '2.2.1 Prijselasticiteit', '2.2.2 Elasticiteit en omzet',
+        '2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit',
+        '2.2.4 Gemengde opgaven elasticiteit',
+      ]],
+      ['2.3 Hoofdstuk Surplus en welvaart', [
+        '2.3.1 Consumentensurplus', '2.3.2 Producentensurplus en totaal surplus',
+        '2.3.3 Pareto-efficientie en welvaartsverlies',
+        '2.3.4 Gemengde opgaven surplus en welvaart',
+      ]],
+    ];
+    const accepted = [];
+    for (const [chapter, paragraphs] of chapters) {
+      paragraphs.forEach((paragraph, index) => {
+        const kinds = index === 3 ? ['opgaven', 'antwoorden'] : ['paragraaf', 'opgaven', 'antwoorden'];
+        for (const kind of kinds) accepted.push(`${book}${chapter}/${paragraph}/${paragraph} – ${kind}.zip`);
+      });
+    }
+    expect(accepted).toHaveLength(33);
+    for (const filePath of accepted) {
+      expect(classifyPath(filePath).category).toBe('partA_textbook');
+      expect(classifyPath(filePath.replace(/–/g, '-')).category).toBe('partA_textbook');
+      expect(classifyPath(filePath.toUpperCase().replace(/\//g, '\\')).category).toBe('partA_textbook');
+    }
+    expect(checkLaneScope({ lane: 'textbook', changedPaths: accepted })).toMatchObject({ ok: true, failures: [] });
+    expect(checkLaneScope({ lane: 'companion', changedPaths: accepted }).ok).toBe(false);
+    expect(checkLaneScope({ lane: 'shared', changedPaths: accepted }).ok).toBe(false);
+  });
+
+  test('rejects noncanonical archive locations, identities, editions and companion bundles', () => {
+    const book = 'Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/';
+    const chapter = book + '2.1 Hoofdstuk Kosten en opbrengsten/';
+    const paragraph = chapter + '2.1.2 Opbrengsten, winst en break-even/';
+    const valid = paragraph + '2.1.2 Opbrengsten, winst en break-even – paragraaf.zip';
+    const rejected = [
+      valid.replace('Boek 2 -', 'Boek 1 -'), valid.replace('Hoofdstuk Kosten en opbrengsten', 'Hoofdstuk Anders'),
+      valid.replace('/2.1.2 Opbrengsten', '/2.2.2 Opbrengsten'),
+      valid.replace('2.1.2 Opbrengsten, winst en break-even –', '2.1.1 Kostenstructuren –'),
+      valid.replace(' – paragraaf.zip', ' alternatief – paragraaf.zip'),
+      valid.replace(' – paragraaf.zip', ' – oefeningen.zip'),
+      valid.replace(' – paragraaf.zip', ' – instapquiz.zip'),
+      valid.replace(' – paragraaf.zip', ' – hoofdstuk.zip'),
+      valid.replace(' – paragraaf.zip', ' – boek.zip'),
+      valid + '.js', valid + '/payload', valid.replace('.zip', '.7z'),
+      paragraph + 'nested/2.1.2 Opbrengsten, winst en break-even – paragraaf.zip',
+      paragraph + '../2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.zip',
+      paragraph + '2.1.2-textbook-plan.zip', paragraph + 'index.zip',
+      book + 'Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.zip',
+      chapter + '2.1 Kosten en opbrengsten – hoofdstuk.zip',
+      chapter + '2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – paragraaf.zip',
+      'reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/212-paragraaf-123456789abc/source.zip',
+      valid.replace(book, ''),
+    ];
+    for (const filePath of rejected) expect(classifyPath(filePath).category).toBe('unknown');
+    const exception = { allowed: true, reason: 'A labelled exception cannot classify unknown archives',
+      review_required: 'Independent review', human_visibility: true };
+    const result = checkLaneScope({ lane: 'textbook', changedPaths: [valid, ...rejected], exception });
+    expect(result.ok).toBe(false);
+    expect(result.failures.join('\n')).toMatch(/unknown paths require explicit classification/);
+  });
+
   test('textbook-only fixture passes textbook and fails companion', () => {
     const textbook = runCliQuiet(['--lane', 'textbook', '--fixture', fixture('textbook-only.json'), '--json']);
     const companion = runCliQuiet(['--lane', 'companion', '--fixture', fixture('textbook-only.json'), '--json']);

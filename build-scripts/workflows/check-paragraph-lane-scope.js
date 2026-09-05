@@ -6,6 +6,35 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const VALID_LANES = new Set(['textbook', 'companion', 'shared']);
+// Canonical Book 2 print-download derivatives only. This names 33 specific
+// files; it is not a generic ZIP or archive-content acceptance rule. Production
+// review must separately verify exact same-edition members and source hashes.
+const BOOK2_PARAGRAPH_ARCHIVES = new Set([
+  ['2.1 Hoofdstuk Kosten en opbrengsten', [
+    '2.1.1 Kostenstructuren',
+    '2.1.2 Opbrengsten, winst en break-even',
+    '2.1.3 Marginale kosten en marginale opbrengsten',
+    '2.1.4 Gemengde opgaven',
+  ]],
+  ['2.2 Hoofdstuk Elasticiteit', [
+    '2.2.1 Prijselasticiteit',
+    '2.2.2 Elasticiteit en omzet',
+    '2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit',
+    '2.2.4 Gemengde opgaven elasticiteit',
+  ]],
+  ['2.3 Hoofdstuk Surplus en welvaart', [
+    '2.3.1 Consumentensurplus',
+    '2.3.2 Producentensurplus en totaal surplus',
+    '2.3.3 Pareto-efficientie en welvaartsverlies',
+    '2.3.4 Gemengde opgaven surplus en welvaart',
+  ]],
+].flatMap(([chapter, paragraphs]) => paragraphs.flatMap((paragraph) => {
+  const editions = paragraph.split(' ')[0].endsWith('.4')
+    ? ['opgaven', 'antwoorden'] : ['paragraaf', 'opgaven', 'antwoorden'];
+  return editions.map((edition) => (
+    `Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/${chapter}/${paragraph}/${paragraph} - ${edition}.zip`
+  ).toLowerCase());
+})));
 const CATEGORY_LABELS = {
   partA_textbook: 'Part A textbook',
   partB_companion: 'Part B companion',
@@ -156,6 +185,7 @@ function isPartBCompanionPath(filePath) {
 function isPartATextbookPath(filePath) {
   const p = normalizedLower(filePath);
   const base = basenameLower(filePath).replace(/\u2013/g, '-');
+  if (BOOK2_PARAGRAPH_ARCHIVES.has(p.replace(/\u2013/g, '-'))) return true;
   const book2Root = 'boek 2 - kosten, opbrengsten, elasticiteit en surplus/';
   if (p === `${book2Root}_book-plan.md`) return true;
   if (p.startsWith(book2Root)) {

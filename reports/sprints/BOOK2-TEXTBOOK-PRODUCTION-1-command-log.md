@@ -627,3 +627,29 @@ Paragraph lane scope: PASS (textbook)
 ```text
 
 ```
+## node node_modules/jest/bin/jest.js --runInBand --runTestsByPath build-scripts/workflows/check-paragraph-lane-scope.test.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T15:42:16.608Z`
+- finished_at: `2026-09-05T15:42:36.373Z`
+- duration_ms: `19765`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `66593809b6f74a29b9cff1bf7935e50ab3ea2348d2190fbe06db6e2a2c3401e2`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Test Suites: 1 passed, 1 total
+Tests:       27 passed, 27 total
+Snapshots:   0 total
+Time:        7.344 s
+Ran all test suites within paths "build-scripts/workflows/check-paragraph-lane-scope.test.js".
+
+```
