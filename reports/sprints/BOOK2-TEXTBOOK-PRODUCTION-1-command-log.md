@@ -13001,3 +13001,184 @@ Paragraph lane scope: PASS (textbook)
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-remaining-dispatch-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:37:45.617Z`
+- finished_at: `2026-09-05T22:37:45.728Z`
+- duration_ms: `111`
+- exit_code: `0`
+- stdout_sha256: `54accf1090bfb5aad3a7d2019405327d951e225ea33e442c4f6e802154924282`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS",
+  "task": "root coordination only; no pupil authoring, repin or acceptance",
+  "work_order_sha256": "5a943ff17c1b9f20d98366cbfa9e2a0032f5d7a2f866f69ad0e6860cbbb4bcd5",
+  "dispatch_plan_sha256": "084bf9b368e8b57d38421976ef18258ba725c044c3ff6e72ee588a650d623362",
+  "accepted_221_inputs": [
+    {
+      "file": "2.2.1-textbook-handoff.md",
+      "previous": "216e139a6297b59cfb8e62f43eb3a79eb16efc1861e5fc989ad15562a4deb24c",
+      "accepted": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811",
+      "raw_equals_LF": true
+    },
+    {
+      "file": "2.2.1-review.md",
+      "previous": "24995a4d0e5d82327434be1dd94c789275728bdce840c6a7b5d63b59035258eb",
+      "accepted": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+      "raw_equals_LF": true
+    },
+    {
+      "file": "2.2.1-quality-ref.yaml",
+      "previous": "b6f1b389d11c20665577414c17e5ae49962083812d9d1bf474d16231db749508",
+      "accepted": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa",
+      "raw_equals_LF": true
+    },
+    {
+      "file": "2.2.1 Prijselasticiteit – paragraaf.md",
+      "previous": "e7e4287645c26c3b79406a556c05a4c90dd10e10e3605b409b89a123df7fa281",
+      "accepted": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db",
+      "raw_equals_LF": true
+    }
+  ],
+  "frozen_mixed_targets": {
+    "2.1.4": "fda623dc9a3620724bf9df22a3ef937fd26779fa49d4d2b0b7c6baa862753691",
+    "2.2.4": "4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519",
+    "2.3.4": "2ac151882b64b0d990ce5627ae35388d72eefde74c4e24562ef9a49a9355672c"
+  },
+  "points_each": 14,
+  "new_theory": false,
+  "independent_arithmetic": {
+    "SmoothBox": {
+      "qBE": 400,
+      "normalProfit": 900,
+      "GTK_exact": "26/7",
+      "mk": [
+        3,
+        3.5,
+        4
+      ],
+      "mo": [
+        5,
+        5,
+        5
+      ],
+      "growth": [
+        2,
+        1.5,
+        1
+      ]
+    },
+    "StreamPlus": {
+      "revenueOld": 500000,
+      "revenueNew": 516000,
+      "PremiumEi": "15/8",
+      "BudgetEi": "-1/2",
+      "Ek": "2/5",
+      "Q": [
+        14200,
+        14400
+      ]
+    },
+    "bicycles": {
+      "qe": 40,
+      "pe": 40,
+      "cs": 800,
+      "ps": 400,
+      "restrictedCS": 600,
+      "restrictedPS": 525,
+      "loss": 75,
+      "first_new_trade_WTP": 49,
+      "first_new_trade_MC": 35.5
+    }
+  },
+  "full_223_generation": "NOT_RUN: this is the pre-change work order; distinct builder must execute S1",
+  "future_paragraph_plans": "Require their own distinct builder and independent review",
+  "inventory_total": 41
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.2.3
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:37:45.790Z`
+- finished_at: `2026-09-05T22:37:47.971Z`
+- duration_ms: `2181`
+- exit_code: `0`
+- stdout_sha256: `f2edc181a31a887b06085b9665804897dfbcdb3c974cf7e92ce34ee80801f822`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.3
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:37:48.030Z`
+- finished_at: `2026-09-05T22:37:48.672Z`
+- duration_ms: `642`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TEXTBOOK-PRODUCTION-1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:37:48.713Z`
+- finished_at: `2026-09-05T22:37:48.899Z`
+- duration_ms: `186`
+- exit_code: `0`
+- stdout_sha256: `699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
