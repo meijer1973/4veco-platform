@@ -2,13 +2,15 @@
 import base64
 import tempfile
 import unittest
+from unittest.mock import patch
+import subprocess
 from pathlib import Path
 
 from bs4 import BeautifulSoup
 from PIL import Image
 from pypdf import PdfReader
 
-from print_pipeline import CSS, _embed_images, _wrap_exercises, build_document, prepare_html, render_proof
+from print_pipeline import CSS, _embed_images, _wrap_exercises, build_document, prepare_html, render_proof, validate_source_html
 
 
 class PrintPipelineTests(unittest.TestCase):
@@ -76,6 +78,23 @@ class PrintPipelineTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             prepare_html('# Cost\n\n<script src="https://example.com/a.js"></script>\n', self.source)
 
+    def test_raw_html_cannot_load_remote_resources_or_shrink_text(self):
+        for fragment in [
+            '<p style="background-image:url(https://example.invalid/a.png)">A</p>',
+            '<video src="https://example.invalid/a.mp4"></video>',
+            '<meta http-equiv="refresh" content="0;url=https://example.invalid/">',
+            '<p style="font-size:6pt">A</p>', '<style>p{font-size:6pt}</style>',
+            '<img alt="A" src="_assets/a.png" onerror="alert(1)">',
+            '<p style="width:calc(100% - 4px)">A</p>',
+            '<math mathsize="6pt"><mi>x</mi></math>',
+            '<a href="javascript:alert(1)">A</a>',
+        ]:
+            with self.subTest(fragment=fragment), self.assertRaises(ValueError):
+                validate_source_html(BeautifulSoup(fragment, "html.parser"))
+
+    def test_bounded_structural_inline_css_and_anchors_remain_supported(self):
+        validate_source_html(BeautifulSoup('<div class="page-break" style="break-before: page;"></div><table><colgroup><col style="width: 40%"></colgroup></table><a href="#p1">1</a>', "html.parser"))
+
     def test_body_table_and_front_readability_floor(self):
         self.assertIn("font-size: 12pt", CSS)
         self.assertNotIn("11pt", CSS)
@@ -96,6 +115,36 @@ class PrintPipelineTests(unittest.TestCase):
         self.assertFalse(proof["inspected_at_normal_reading_scale"])
         with self.assertRaises(ValueError):
             render_proof(record, self.root / "proof")
+        for field in ["source_sha256", "html_sha256", "pdf_sha256"]:
+            stale = {**record, field: "0" * 64}
+            with self.subTest(field=field), self.assertRaisesRegex(ValueError, "Stale proof input"):
+                render_proof(stale, self.root / "stale-proof")
+            self.assertFalse((self.root / "stale-proof").exists())
+        stale = {**record, "assets": [{**record["assets"][0], "sha256": "0" * 64}]}
+        with self.assertRaisesRegex(ValueError, "Stale proof asset"):
+            render_proof(stale, self.root / "stale-asset")
+
+    def test_input_change_during_capture_does_not_publish_manifest(self):
+        self.pair()
+        self.source.write_text('# Kosten\n\n![Cost diagram](_assets/2.1.1_fig_1.svg)\n', encoding="utf-8")
+        record = build_document(self.source)
+        real_run = subprocess.run
+        paths = [record["source_md"], record["source_html"], record["source_pdf"], record["assets"][0]["path"]]
+        for index, path in enumerate(paths):
+            changed = Path(path)
+            original = changed.read_bytes()
+            destination = self.root / f"interrupted-{index}"
+            def change_after_capture(*args, **kwargs):
+                result = real_run(*args, **kwargs)
+                changed.write_bytes(original + b"\n")
+                return result
+            try:
+                with self.subTest(path=path), patch("print_pipeline.subprocess.run", side_effect=change_after_capture):
+                    with self.assertRaisesRegex(ValueError, "Stale proof"):
+                        render_proof(record, destination)
+                    self.assertFalse((destination / "manifest.json").exists())
+            finally:
+                changed.write_bytes(original)
 
 
 if __name__ == "__main__":
