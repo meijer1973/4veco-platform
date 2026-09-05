@@ -17,6 +17,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 from bs4 import BeautifulSoup, Tag
+import tinycss2
 
 
 CSS = """
@@ -31,6 +32,7 @@ body { font-family: Arial, "DejaVu Sans", sans-serif; font-size: 12pt; line-heig
 h1 { string-set: document-title content(); font-size: 21pt; line-height: 1.15; color: #1A5276; margin: 0 0 6mm; }
 h2 { font-size: 16pt; line-height: 1.2; color: #1A5276; border-bottom: 0.5pt solid #a9bdca; padding-bottom: 2mm; margin: 7mm 0 3mm; }
 h3 { font-size: 13pt; color: #1A5276; margin: 4mm 0 2mm; }
+h4,h5,h6,small { font-size: 12pt; }
 h1,h2,h3,h4 { break-after: avoid; }
 p { margin: 0 0 2.5mm; orphans: 3; widows: 3; }
 li { margin-bottom: 1mm; }
@@ -64,6 +66,49 @@ math { font-size: 1em; }
 
 def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+ALLOWED_TAGS = set("html head body meta title p div span h1 h2 h3 h4 h5 h6 strong em b i u s del ins sup sub br hr blockquote pre code ul ol li dl dt dd table caption colgroup col thead tbody tfoot tr th td figure figcaption img a section header footer main nav aside small mark abbr time math semantics annotation mrow mi mn mo mtext mspace ms mfrac msqrt mroot mstyle merror mpadded mphantom mfenced menclose msub msup msubsup munder mover munderover mmultiscripts mprescripts none mtable mlabeledtr mtr mtd maligngroup malignmark".split())
+SAFE_INLINE_CSS = {
+    "break-before", "break-after", "break-inside", "page-break-before",
+    "page-break-after", "page-break-inside", "text-align", "vertical-align",
+    "width", "max-width", "height", "max-height",
+}
+
+
+def validate_source_html(soup: BeautifulSoup) -> None:
+    """Fail closed on active/resource HTML and unreviewed inline typography.
+
+Raw structural layout is supported. Stylesheets belong to the platform, not
+authored Markdown; arbitrary CSS can load resources or shrink reviewed text.
+"""
+    for tag in soup.find_all(True):
+        if tag.name not in ALLOWED_TAGS:
+            raise ValueError(f"Unsupported print-source element: {tag.name}")
+        for attribute in tag.attrs:
+            if attribute.lower().startswith("on") or attribute.lower() in {
+                "srcset", "poster", "background", "action", "formaction", "data", "http-equiv",
+            }:
+                raise ValueError(f"Active/resource attribute is forbidden: {attribute}")
+        if tag.has_attr("src") and tag.name != "img":
+            raise ValueError("Only paired local images may have src attributes")
+        if tag.has_attr("href"):
+            href = str(tag["href"])
+            if tag.name != "a" or not href.startswith("#"):
+                raise ValueError("Print HTML links must be internal document anchors")
+        if tag.has_attr("style"):
+            declarations = tinycss2.parse_declaration_list(tag["style"], skip_whitespace=True, skip_comments=True)
+            for declaration in declarations:
+                if declaration.type != "declaration" or declaration.lower_name not in SAFE_INLINE_CSS:
+                    raise ValueError("Inline style may only specify bounded structural layout")
+                if any(token.type not in {"ident", "number", "dimension", "percentage", "whitespace"}
+                       for token in declaration.value):
+                    raise ValueError("Inline layout cannot contain CSS functions or resources")
+                if declaration.important:
+                    raise ValueError("Inline important overrides are not accepted")
+        # MathML presentation attributes must not override the 12pt floor.
+        if any(tag.has_attr(a) for a in ("mathsize", "fontsize", "scriptlevel")):
+            raise ValueError("Authored math typography overrides are not accepted")
 
 
 def _embed_images(soup: BeautifulSoup, source: Path) -> list[dict]:
@@ -131,8 +176,7 @@ def prepare_html(markdown: str, source: Path, *, pandoc: str = "pandoc") -> tupl
         style.decompose()
     if soup.find(id="title-block-header"):
         raise ValueError("Duplicate Pandoc metadata title is forbidden")
-    if soup.find(["script", "iframe", "object", "embed", "link"]):
-        raise ValueError("Print source must not load scripts, embedded surfaces or external styles")
+    validate_source_html(soup)
     assets = _embed_images(soup, source)
     _wrap_exercises(soup)
     style = soup.new_tag("style")
@@ -162,10 +206,20 @@ def build_document(source: Path, *, pandoc: str = "pandoc") -> dict:
             "source_pdf": str(pdf_path), "pdf_sha256": digest(pdf_path), "assets": assets}
 
 
+def verify_record_freshness(record: dict) -> None:
+    for path_field, hash_field in (("source_md", "source_sha256"), ("source_html", "html_sha256"), ("source_pdf", "pdf_sha256")):
+        if digest(Path(record[path_field])) != record[hash_field]:
+            raise ValueError(f"Stale proof input: {path_field}")
+    for asset in record["assets"]:
+        if digest(Path(asset["path"])) != asset["sha256"]:
+            raise ValueError(f"Stale proof asset: {asset['path']}")
+
+
 def render_proof(record: dict, proof_dir: Path, *, pdftoppm: str = "pdftoppm", dpi: int = 150) -> dict:
     """Capture all pages; leave every inspection/acceptance field honestly pending."""
     from PIL import Image, ImageDraw
     from pypdf import PdfReader
+    verify_record_freshness(record)
     if proof_dir.exists() and any(proof_dir.iterdir()):
         raise ValueError("Proof destination is not empty; use a new output-hash directory")
     pages_dir = proof_dir / "pages"
@@ -202,6 +256,9 @@ def render_proof(record: dict, proof_dir: Path, *, pdftoppm: str = "pdftoppm", d
                 "contact_sheet": "contact-sheet.png", "pages_inspected": [],
                 "inspection_status": "PENDING", "visible_student_defects": None,
                 "inspected_at_normal_reading_scale": False, "warnings": []}
+    # Recheck after rendering/contact-sheet capture. Never publish an apparent
+    # provenance manifest when a source/output/asset changed during capture.
+    verify_record_freshness(record)
     (proof_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return manifest
 
