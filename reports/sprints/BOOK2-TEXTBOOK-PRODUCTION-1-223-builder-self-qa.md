@@ -171,8 +171,11 @@ Both `scripts/validate-paragraph.js --mode part-a --profile student-web` and
 review/quality PASS is **stale and explicitly excluded** from renewed acceptance.
 Builder preserved both files unchanged for the separate reviewers.
 Lesson committed lane scope against `7f6e662...` PASS: exactly21 Part A files,
-no companion/shared/evidence-category leak. Platform scope/publication tail
-will be reported after committing this bounded source/evidence payload.
+no companion/shared/evidence-category leak. Platform implementation commit
+`1d52021c30a9057727df1e2f4c05ae765914ed31` passes the shared lane against
+`e6f6db132c2f8c30d106cd621bf504973079de3b`: seven owned source/check files and
+43 review-evidence files, no unrelated or protected mutation. The lane name is
+the classifier's platform-source category, not permission to edit shared helpers.
 Paired `git diff --check` and scoped language checks PASS. Governance freshness
 PASS against origin/main `96416b6b5bd57094576e9aba0a42d682584ec479`, no differing
 entrypoints. Both fetches completed before publication; neither branch is behind
@@ -198,7 +201,16 @@ JSONs were moved, not deleted, to recoverable
 Every source path was resolved and validated beneath the own proof/evidence
 root before moving. R3 and all other paragraph evidence were untouched.
 
+Publication indexing is refreshed on this owned candidate pair using
+`npm.cmd run agent:index`, `node build-scripts/sprints/emit-url-index.js` and
+`npm.cmd run dashboard:internal`. Generated outputs are kept in a separate tail
+so root can adopt bounded source/output/evidence and regenerate combined indexes.
+The existing platform/lesson RESEARCH_AGENT_MAP and AGENT_GITHUB_ENTRY remain
+valid entry-point maps; no new top-level route, skill, authority or folder naming
+contract requires a manual map rewrite. The generated per-repository indexes
+and exact artifact map above provide the new file-level review route.
+
 Next: root assigns independent paragraph review, then specialist QC; those agents
 own fresh review/quality evidence. Root owns accepted handoff, combined index/map
-refresh, umbrella CI and package continuation. No PR was opened because the
+adoption, umbrella CI and package continuation. No PR was opened because the
 explicit subtask prohibits PR creation/merging; no integration grant is inferred.
