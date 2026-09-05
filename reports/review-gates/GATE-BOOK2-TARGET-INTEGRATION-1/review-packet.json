@@ -5,13 +5,16 @@
   "sprint_id": "BOOK2-TARGET-INTEGRATION-1",
   "date": "2026-09-05",
   "issue": 229,
+  "pr_number": 231,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/231",
+  "reviewed_substantive_head": "b772906721a7655e5fa8e59a1a0674b405efe6f9",
   "pr_throughput_class": "high_authority",
   "authority_class": "high_authority",
   "bundle_id": null,
   "paired_prs": [],
   "review_autonomy": {
     "level": "L4",
-    "lead_review_result": "PENDING",
+    "lead_review_result": "REVISE",
     "rationale": "Separate owner grant and authority-validator transition; future payload merge requires owner authorization."
   },
   "human_decision_required": true,
@@ -42,8 +45,8 @@
   },
   "core_requirement_checklist": [
     {"requirement": "Frozen package preserved", "status": "met"},
-    {"requirement": "Separate grant and provenance", "status": "implemented_under_independent_review"},
-    {"requirement": "All consumers reject partial/forged activation", "status": "implemented_under_independent_review"},
+    {"requirement": "Separate grant and provenance", "status": "met_independent_review_pass"},
+    {"requirement": "All consumers reject partial/forged activation", "status": "met_69_independent_tests_and_full_suite"},
     {"requirement": "All five residual holds retained", "status": "met"},
     {"requirement": "Student output unchanged and continuation named", "status": "met"},
     {"requirement": "Exact-head CI, lead and readiness", "status": "pending"}

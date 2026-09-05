@@ -3,6 +3,10 @@
   "sprint_id": "BOOK2-TARGET-INTEGRATION-1",
   "status": "verification_in_progress",
   "result_status": "local_transition_implemented_not_merged",
+  "pr": 231,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/231",
+  "reviewed_substantive_commit": "b772906721a7655e5fa8e59a1a0674b405efe6f9",
+  "local_validation": {"suites_passed": 110, "tests_passed": 1868, "suites_skipped": 6, "tests_skipped": 8, "scope": "working source payload equivalent to b7729067; not hosted exact-head CI"},
   "plan": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-plan.md",
   "baseline": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-baseline.md",
   "result": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-result.md",
@@ -22,6 +26,7 @@
   "human_review_required": true,
   "merge_authorized": false,
   "acceptance_tests": [
+    {"command": "npm.cmd run check:platform", "status": "passed"},
     {"command": "node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-INTEGRATION-1", "status": "passed"},
     {"command": "node build-scripts/workflows/check-book2-target-authority-remediation.js --durable", "status": "passed"},
     {"command": "node build-scripts/workflows/check-book2-candidate-approval-block.js", "status": "passed"},

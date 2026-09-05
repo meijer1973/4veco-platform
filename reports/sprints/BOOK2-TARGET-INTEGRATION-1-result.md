@@ -21,9 +21,11 @@ share the durable frozen-package/lifecycle contract, including scoped actions.
 See `reports/sprints/BOOK2-TARGET-INTEGRATION-1-command-log.jsonl` for actual
 exit codes, timestamps and output hashes, including honest initial failures.
 The original 146 regressions and first 35 new pending tests passed together.
-Expanded activation suite passed 66 tests; a subsequent strict-pending mutation
-addition and full platform suite are being verified. Durable, approval-block
-retirement and live approved-use/§2.1.1 CLI checks pass. Final results follow.
+Expanded activation suite independently passed 69 tests. Main check:platform
+passed 110 suites / 1,868 tests; 6 suites / 8 tests were skipped (491.102 seconds).
+Durable, approval-block retirement and live approved-use/§2.1.1 CLI checks pass.
+Structural lead round 1 found no source blocker and requests closure evidence
+only: final hosted CI, round2, complete bundle and applied readiness remain pending.
 
 ## Changed files
 
