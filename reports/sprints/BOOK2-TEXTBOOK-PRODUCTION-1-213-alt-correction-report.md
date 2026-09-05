@@ -184,3 +184,15 @@ timing/attainment, blanket accessibility certification or current Inspectie mapp
 is asserted. Root owns separately accepted prerequisite successors and any later
 explicit pin-update task. Next: distinct exact-candidate rereview and specialist
 QC, then root's gated continuation; no self-approval or merge authorization.
+
+## Committed candidate scope
+
+Platform payload `420326feb3961981f7673eddb0c8bf49469a75d8` contains the seven
+paragraph-owned source/check files and51 fresh evidence files. Lesson payload
+`56f43382946a079fdc5ff6f6e67d3d246b4e4e01` contains exactly the seven enumerated
+metadata/output changes. Committed platform shared-lane and lesson textbook-lane
+scope checks passed against their exact starting commits above. Both staged
+whitespace checks passed. The generated command-log Markdown was mechanically
+normalized to LF with trailing whitespace removed; raw JSONL evidence was not
+rewritten. A following evidence commit records these executed scope results;
+generated URL/agent-index files are kept in a separate tail, not content authority.
