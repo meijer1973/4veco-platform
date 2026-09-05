@@ -161,5 +161,5 @@ result = {'result':'PASS','role':'bounded correction builder, not independent re
           'native_proofs':proofs,'actual_total_pages':30,'human_inspection':'separate builder inspection Markdown'}
 output = OUT/'delta.json'
 assert not output.exists()
-output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps({'result':'PASS','output':str(output),'changed_artifacts':4,'unchanged_artifacts':20,'total_pages':30}))

@@ -92,6 +92,11 @@ codes in `BONUS-evidence-r7/command-log.jsonl` (including inherited PATH).
 - Read-only discovery attempts also included nonexistent guessed report paths
   and a Windows rg wildcard-path error; no writes or content conclusions followed
   from them. Truncated instruction reads were resumed in bounded chunks.
+- The first staged diff check detected CRLF line endings in the newly generated
+  delta JSON. The payload commit was already issued in that sequential tool
+  batch; a follow-up evidence-only commit fixes LF serialization and normalizes
+  that JSON without altering its parsed data. The original commit and logged
+  failing committed diff remain available; the final candidate diff must pass.
 
 No failed build, native render, rebuild, currentness, durable authority or
 profile run is hidden. Empirical timing54/66/78 remains unobserved. Part B,
