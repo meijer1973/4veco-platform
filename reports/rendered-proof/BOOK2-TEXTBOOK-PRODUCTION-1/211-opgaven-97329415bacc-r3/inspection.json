@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "role": "independent_visual_inspection",
+  "inspector": "elasticity_planning",
+  "inspection_date": "2026-09-05",
+  "reviewed_platform_commit": "16c3b1c53b73a563084297190ba58d7bf1bed679",
+  "reviewed_lesson_commit": "c37dfba8c68cbe86b3b12534e020fda6e2481ac5",
+  "manifest": "manifest.json",
+  "manifest_sha256": "8e5b0590eb82502c5486e4ec1a81c8bce8310d51f2fdd12a51d9f47fef5e0823",
+  "source_sha256": "4e6bf501e8ce7374d704999ba090ccbfd17c49c75bd9a3bb03be11d29675a5df",
+  "html_sha256": "4ae0b5824604aad3b3129f13c3e092651315164c0fa9f3f5dd4d2fb8eab40a87",
+  "pdf_sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953",
+  "render_dpi": 150,
+  "pages_inspected": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png",
+    "pages/page-008.png",
+    "pages/page-009.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "0265dff094b5c47c408f27570bfdc82c7b26af885ab4615cff94943830b3c7bd",
+    "page-002.png": "80f498601d5685a964abb1ab14dd3a0b9e1355fbba2400c7e17bdebb653e91a0",
+    "page-003.png": "ca9cb50a8f074fe5d7f6e5b22c084aa22338485e48aedd8200c0d2ce7c82ead7",
+    "page-004.png": "824050d16b84d572995c2bc2f336e87996d663708bf18709bf1686ef54c24f94",
+    "page-005.png": "f9ddc86d86341a9c5db92152f71ceb1f0acc51f23a3b78fc2c454ddd9402f386",
+    "page-006.png": "8470277e2c61cc5cc8a9107063ad476d441b3e77b0d027a1be54e435d5bf106b",
+    "page-007.png": "c5464d633b525ce8a22dab994eab026340c4b4405ff7a105405730ac46dcfb07",
+    "page-008.png": "be8a312018558ae7d2f6c8863a6180199265a9ddab0becbdd84329edb2a40749",
+    "page-009.png": "4cbeef659c9a7122ee979f474c000385c6b434ad8408049cc9d58aee87722ba8"
+  },
+  "inspection_status": "INSPECTED",
+  "inspected_at_normal_reading_scale": true,
+  "visible_student_defects": [],
+  "minimum_pdf_text_pt": 12,
+  "embedded_diagram_text_pt_lower_bound": 13.07,
+  "non_blocking_flags": [],
+  "method": "Every final R3 150 dpi full-page PNG was individually viewed at original page detail in the independent QC worktree. MD/HTML/PDF, referenced asset and rendered-page hashes were independently checked against this manifest. PDF text sizes were independently extracted using pdfplumber; diagram font sizes were checked using SVG viewBox scale and actual PDF image width. Builder self-QA, old proof and inherited quality records were not adopted as acceptance. This file records visual inspection only, not paragraph acceptance or a classroom trial."
+}

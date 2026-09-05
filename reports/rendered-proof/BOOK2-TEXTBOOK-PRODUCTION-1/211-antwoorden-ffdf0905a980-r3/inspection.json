@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "role": "independent_visual_inspection",
+  "inspector": "elasticity_planning",
+  "inspection_date": "2026-09-05",
+  "reviewed_platform_commit": "16c3b1c53b73a563084297190ba58d7bf1bed679",
+  "reviewed_lesson_commit": "c37dfba8c68cbe86b3b12534e020fda6e2481ac5",
+  "manifest": "manifest.json",
+  "manifest_sha256": "a5ca4ef02f99129fb10b4c6dcbb3ee5242b76b658a3b69d62a38d4bfb32f3afb",
+  "source_sha256": "57cc1ef3b5c5ae6d912291f9746a7f535906bb85207678bab8fc63dadf82ebfb",
+  "html_sha256": "d4d3db3265820003a45e71955b9f3f2188a6036860fdcdc8fbbc49b944bfd0ca",
+  "pdf_sha256": "ffdf0905a980b6c89b64207e90873d79edbf192c86c2280f3394caa25693998a",
+  "render_dpi": 150,
+  "pages_inspected": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "e64482170c9bf4117f064d72c81ccb73e5cb25220916188deb58867a0329a844",
+    "page-002.png": "821d393d65e82843b8f4b9d62f0fe4e4c75c57a4909ec9c3ac127a502c250591",
+    "page-003.png": "3aece13ce42a7ab19411768002f77629492a3be5c7865ec5732a9ffad3872b9a",
+    "page-004.png": "db38f2c267dff1647809ec28072a022f55fbf4d4bd4c214844f4e3404b0e64a0",
+    "page-005.png": "7c5579d04121743f7d9adee6140adf84dc5030e7da66c14c68948d5d3dcf2b51",
+    "page-006.png": "46b66e9cf590e2fa7414ed0347c3c4fdfa8014232931b731a0077f0f84657fc0",
+    "page-007.png": "581169e12262d1b519b5fac035e205bdb7b6119131ebbae8176e6b7be06d5855"
+  },
+  "inspection_status": "INSPECTED",
+  "inspected_at_normal_reading_scale": true,
+  "visible_student_defects": [],
+  "minimum_pdf_text_pt": 12,
+  "embedded_diagram_text_pt_lower_bound": null,
+  "non_blocking_flags": [],
+  "method": "Every final R3 150 dpi full-page PNG was individually viewed at original page detail in the independent QC worktree. MD/HTML/PDF, referenced asset and rendered-page hashes were independently checked against this manifest. PDF text sizes were independently extracted using pdfplumber; diagram font sizes were checked using SVG viewBox scale and actual PDF image width. Builder self-QA, old proof and inherited quality records were not adopted as acceptance. This file records visual inspection only, not paragraph acceptance or a classroom trial."
+}
