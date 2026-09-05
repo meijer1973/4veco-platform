@@ -1,0 +1,31 @@
+{
+  "role": "builder_self_inspection_only",
+  "builder": "paragraph_222_builder",
+  "date": "2026-09-05",
+  "independent_acceptance": "NOT_SUPPLIED",
+  "generation_manifest": "manifest.json",
+  "pdf_sha256": "0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555",
+  "pages_inspected": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "2f6bfd85d06607172b1d257c4a3c9de1878ca11c9b4208b14873bbdc11fc6ba0",
+    "page-002.png": "0ef45114138d6d56d80b1cac1ee578f91c0e741fa99e3ad490a0d649645dc842",
+    "page-003.png": "6a4a1bb3dc653b2772edb63817d172bce4be5801af703ee8ccba1ec54894145d",
+    "page-004.png": "c2592d9065876765b6c8beb12608334f722ac48c3dcd06eaa3855725096400bd",
+    "page-005.png": "71a5482aef92ee87afcffecb059d7feec1a01c8ad5597cb35f7039343d0c4c86",
+    "page-006.png": "d4e82d03960929d6ee49c4acc404302739a9d358f951e5c8dd174169bcd3d818"
+  },
+  "inspected_at_normal_reading_scale": true,
+  "builder_visible_student_defects": [],
+  "basis": "Full-page direct inspection: R7 pages1-3; R8 pages4-6. Every transferred raw page hash independently compared with this R8 generation and equal.",
+  "boundaries": [
+    "Generation manifest remains immutable PENDING.",
+    "Builder inspection is not independent paragraph review, specialist QC, classroom observation or handoff acceptance."
+  ]
+}

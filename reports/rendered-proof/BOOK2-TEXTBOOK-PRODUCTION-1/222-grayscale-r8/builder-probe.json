@@ -1,0 +1,13 @@
+{
+  "role": "builder_grayscale_self_inspection_only",
+  "builder": "paragraph_222_builder",
+  "date": "2026-09-05",
+  "pdf_sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c",
+  "render_command": "pdftoppm -f <page> -l <page> -singlefile -gray -png -r 150 <final paragraaf.pdf> <output>",
+  "probes": [
+    {"file": "paragraaf-page-003.png", "sha256": "6b6036c03b586210c9df7cd517d05db4bf513fcc0acf51438fcc5c206a63ac6d", "full_page_personally_inspected": true},
+    {"file": "paragraaf-page-006.png", "sha256": "4bfb284dfd0bae936370dcf71ca9fde199876b56cbf56d07aacdb4247d0fd4be", "full_page_personally_inspected": true}
+  ],
+  "builder_observation": "Essential solid and dashed outlines, filled revenue areas, numbers and direct labels remain distinct and legible without colour.",
+  "independent_acceptance": "NOT_SUPPLIED"
+}

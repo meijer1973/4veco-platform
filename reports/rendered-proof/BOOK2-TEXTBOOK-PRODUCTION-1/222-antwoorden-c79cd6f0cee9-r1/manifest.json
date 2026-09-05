@@ -1,0 +1,32 @@
+{
+  "source_md": "C:\\wt\\book2-222-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – antwoorden.md",
+  "source_sha256": "74693bbf8e1778331e7dbe799eec32275955251131b56037e9fc99ea40bdb422",
+  "source_html": "C:\\wt\\book2-222-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – antwoorden.html",
+  "html_sha256": "14e9f299c140fb0f1a0de7a2e02e2e746788b774904fbe4b0b41abbc9ac69072",
+  "source_pdf": "C:\\wt\\book2-222-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – antwoorden.pdf",
+  "pdf_sha256": "c79cd6f0cee9e6366e154a54a748898f1305edd07794186bf21dcffe6c3c5d77",
+  "assets": [],
+  "sprint_id": "BOOK2-TEXTBOOK-PRODUCTION-1",
+  "artifact_id": "222-antwoorden-c79cd6f0cee9-r1",
+  "render_dpi": 150,
+  "rendered_pages": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "955697f493bc701c7f1562f8594e4f4995cb11f6705edc3bce4458cedc115768",
+    "page-002.png": "7bf2147b456b14e9af54a8e6c0ec4bb417828c0e7ddc97d22abb526024527f40",
+    "page-003.png": "3ec2d99cfe331239e13f5f786cf341d255c3fa603e585c865872f381bb319ebe",
+    "page-004.png": "b4e291e79980cfeea72992ce5cb5e24543a41b87f487311c8a1a24682f4b86d5",
+    "page-005.png": "07ec210d142942f251f30fdba275200d556994ef7bc4d550b43427cbf840304f"
+  },
+  "contact_sheet": "contact-sheet.png",
+  "pages_inspected": [],
+  "inspection_status": "PENDING",
+  "visible_student_defects": null,
+  "inspected_at_normal_reading_scale": false,
+  "warnings": []
+}
