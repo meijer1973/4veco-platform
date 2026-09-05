@@ -1,0 +1,316 @@
+# Sprint BOOK2-TARGET-INTEGRATION-1: Command Log
+
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-INTEGRATION-1
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:36:06.776Z`
+- finished_at: `2026-09-05T09:36:06.994Z`
+- duration_ms: `218`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `212e70da1645e894bd4cb4475c183117355e9c53f2d1acfac28aa7b1859e41ec`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint bundle check failed: an active roadmap sprint ledger must include BOOK2-TARGET-INTEGRATION-1; checked references/reference-team-roadmap.md, docs/roadmaps/textbook/textbook-production-roadmap.md, docs/roadmaps/quality-standards/inspection-standards-roadmap.md, docs/roadmaps/quality-standards/international-quality-standards-roadmap.md, docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-INTEGRATION-1
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:39:35.674Z`
+- finished_at: `2026-09-05T09:39:35.855Z`
+- duration_ms: `181`
+- exit_code: `0`
+- stdout_sha256: `0f24556bf1e70e22d45cab763c15b0099f15f986584f372510657198e6f3bef5`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TARGET-INTEGRATION-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-candidate-approval-block.js
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:39:35.897Z`
+- finished_at: `2026-09-05T09:39:47.375Z`
+- duration_ms: `11478`
+- exit_code: `0`
+- stdout_sha256: `d7db860b04642be531ee76d6fbfa3eb7f6e93e96acd0add91f10a290b218b27e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 candidate approval block: PASS
+- structural and target-authority repair routes pass
+- target integration authorized; holds not yet released
+- approved use, production, lesson authoring, and merge remain blocked
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd test -- --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:39:54.330Z`
+- finished_at: `2026-09-05T09:40:58.311Z`
+- duration_ms: `63981`
+- exit_code: `0`
+- stdout_sha256: `9b8bca8e9cebeed9f6268a117ac9e16af30d5e5fd6d8267687e539eab2cec148`
+- stderr_sha256: `bd109e76ea616581b6c6c11e21341a3ca520071f33fec3fe4f10b275bba63895`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+
+Test Suites: 2 passed, 2 total
+Tests:       146 passed, 146 total
+Snapshots:   0 total
+Time:        27.158 s
+Ran all test suites matching build-scripts/workflows/check-book2-target-authority-remediation.test.js|build-scripts/workflows/check-book-outline-currentness.test.js.
+
+```
+## npm.cmd test -- --runInBand build-scripts/workflows/book2-integration-decision.test.js
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:42:00.696Z`
+- finished_at: `2026-09-05T09:42:08.008Z`
+- duration_ms: `7312`
+- exit_code: `1`
+- stdout_sha256: `bca10e062bdb0187c9414413cac16a9c410a25af3711263ed170ac3014d57d78`
+- stderr_sha256: `a1169cc3369733b2e957967916c3f08d6cb8ee851bd9e2346ab5340fbd4c3a77`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/book2-integration-decision.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+FAIL build-scripts/workflows/book2-integration-decision.test.js (6.388 s)
+  ● separate Book 2 immutable integration grant › 2.1.1 transitions from historical blocked to authorized pending, not production
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "references/authored/book-outlines/book-2-outline.meta.json: authority hash is stale for references/authored/course-target-exercises.json",
+    + ]
+
+      58 |     const input = pending(true);
+      59 |     expect(approvalBlockLifecycleMode(input.meta, input)).toBe('pending');
+    > 60 |     expect(currentness.findBookOutlineFailures(filesFor(input), { action: 'target_authority_integration', paragraph })).toEqual([]);
+         |                                                                                                                         ^
+      61 |     for (const action of ['paragraph_production', 'lesson_authoring']) {
+      62 |       expect(currentness.findBookOutlineFailures(filesFor(input), { action, paragraph }).join('\n')).toContain(holdId);
+      63 |     }
+
+      at toEqual (build-scripts/workflows/book2-integration-decision.test.js:60:121)
+
+  ● separate Book 2 immutable integration grant › 2.1.2 transitions from historical blocked to authorized pending, not production
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "references/authored/book-outlines/book-2-outline.meta.json: authority hash is stale for references/authored/course-target-exercises.json",
+    + ]
+
+      58 |     const input = pending(true);
+      59 |     expect(approvalBlockLifecycleMode(input.meta, input)).toBe('pending');
+    > 60 |     expect(currentness.findBookOutlineFailures(filesFor(input), { action: 'target_authority_integration', paragraph })).toEqual([]);
+         |                                                                                                                         ^
+      61 |     for (const action of ['paragraph_production', 'lesson_authoring']) {
+      62 |       expect(currentness.findBookOutlineFailures(filesFor(input), { action, paragraph }).join('\n')).toContain(holdId);
+      63 |     }
+
+      at toEqual (build-scripts/workflows/book2-integration-decision.test.js:60:121)
+
+  ● separate Book 2 immutable integration grant › 2.1.3 transitions from historical blocked to authorized pending, not production
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "references/authored/book-outlines/book-2-outline.meta.json: authority hash is stale for references/authored/course-target-exercises.json",
+    + ]
+
+      58 |     const input = pending(true);
+      59 |     expect(approvalBlockLifecycleMode(input.meta, input)).toBe('pending');
+    > 60 |     expect(currentness.findBookOutlineFailures(filesFor(input), { action: 'target_authority_integration', paragraph })).toEqual([]);
+         |                                                                                                                         ^
+      61 |     for (const action of ['paragraph_production', 'lesson_authoring']) {
+      62 |       expect(currentness.findBookOutlineFailures(filesFor(input), { action, paragraph }).join('\n')).toContain(holdId);
+      63 |     }
+
+      at toEqual (build-scripts/workflows/book2-integration-decision.test.js:60:121)
+
+  ● separate Book 2 immutable integration grant › 2.1.4 transitions from historical blocked to authorized pending, not production
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "references/authored/book-outlines/book-2-outline.meta.json: authority hash is stale for references/authored/course-target-exercises.json",
+    + ]
+
+      58 |     const input = pending(true);
+      59 |     expect(approvalBlockLifecycle
+...[truncated 9972 chars]
+```
+## npm.cmd test -- --runInBand build-scripts/workflows/book2-integration-decision.test.js
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:43:08.412Z`
+- finished_at: `2026-09-05T09:43:22.878Z`
+- duration_ms: `14466`
+- exit_code: `0`
+- stdout_sha256: `bca10e062bdb0187c9414413cac16a9c410a25af3711263ed170ac3014d57d78`
+- stderr_sha256: `515f0ccc9e3a5195e5728252892cd0f461d96f4f42830ec37d6366e3da449198`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/book2-integration-decision.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+Test Suites: 1 passed, 1 total
+Tests:       35 passed, 35 total
+Snapshots:   0 total
+Time:        13.552 s
+Ran all test suites matching build-scripts/workflows/book2-integration-decision.test.js.
+
+```
+## node build-scripts/workflows/check-book2-candidate-approval-block.js
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:43:22.924Z`
+- finished_at: `2026-09-05T09:43:41.158Z`
+- duration_ms: `18234`
+- exit_code: `0`
+- stdout_sha256: `d7db860b04642be531ee76d6fbfa3eb7f6e93e96acd0add91f10a290b218b27e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 candidate approval block: PASS
+- structural and target-authority repair routes pass
+- target integration authorized; holds not yet released
+- approved use, production, lesson authoring, and merge remain blocked
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-INTEGRATION-1
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:43:57.048Z`
+- finished_at: `2026-09-05T09:43:57.266Z`
+- duration_ms: `218`
+- exit_code: `0`
+- stdout_sha256: `0f24556bf1e70e22d45cab763c15b0099f15f986584f372510657198e6f3bef5`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TARGET-INTEGRATION-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd test -- --runInBand build-scripts/workflows/book2-integration-decision.test.js build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:44:24.855Z`
+- finished_at: `2026-09-05T09:45:01.621Z`
+- duration_ms: `36766`
+- exit_code: `0`
+- stdout_sha256: `c485fe95448ffb738a9867902c9127b613d91f0404305b32e98d25329b71a1a7`
+- stderr_sha256: `8b12aa94477754156433f49db4b086be20fe23f824593ca4149262607cd29417`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/book2-integration-decision.test.js build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+
+Test Suites: 3 passed, 3 total
+Tests:       181 passed, 181 total
+Snapshots:   0 total
+Time:        35.826 s, estimated 40 s
+Ran all test suites matching build-scripts/workflows/book2-integration-decision.test.js|build-scripts/workflows/check-book2-target-authority-remediation.test.js|build-scripts/workflows/check-book-outline-currentness.test.js.
+
+```

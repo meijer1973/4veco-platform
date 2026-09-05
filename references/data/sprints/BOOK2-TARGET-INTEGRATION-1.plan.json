@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "sprint_id": "BOOK2-TARGET-INTEGRATION-1",
+  "name": "Governed Book 2 target activation",
+  "created": "2026-09-05",
+  "status": "planning_review_pending",
+  "issue": 229,
+  "milestone_issue": 223,
+  "platform_baseline": "ad27f9c30205042c01cacf0b362f4d3f87e6c7a9",
+  "lesson_baseline": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+  "plan": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-plan.md",
+  "human_review_required": true,
+  "gate_id": "GATE-BOOK2-TARGET-INTEGRATION-1",
+  "review_packet": "reports/review-gates/GATE-BOOK2-TARGET-INTEGRATION-1/review-packet.json",
+  "valid_gate_statuses": ["APPROVE_FOR_INTEGRATION", "REVISE", "REJECT"],
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_human_gate",
+  "protected_reference_data_changes_allowed": false,
+  "target_registry_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "lesson_repository_writes_allowed": false,
+  "merge_allowed": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/BOOK2-TARGET-INTEGRATION-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-INTEGRATION-1",
+    "node build-scripts/workflows/check-book2-target-authority-remediation.js --durable",
+    "node build-scripts/workflows/check-book2-candidate-approval-block.js",
+    "npm.cmd run check:book-outline-currentness -- --require-approved",
+    "npm.cmd run check:platform",
+    "npm.cmd test -- --runInBand"
+  ]
+}

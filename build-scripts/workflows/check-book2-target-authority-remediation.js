@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 const ownerDecision = require('./book2-owner-decision');
+const integrationDecision = require('./book2-integration-decision');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const SPRINT = 'BOOK2-TARGET-AUTHORITY-REMEDIATION-1';
@@ -95,7 +96,10 @@ function requireMatch(errors, id, text, pattern, purpose) {
 function durableLifecycleState(meta, input = readInputs(), options = {}) {
   const candidate = meta && meta.issue_229_candidate;
   const approvalStatus = candidate && candidate.approval_status;
-  if (approvalStatus === DURABLE_PENDING_STATUS) return { mode: 'pending', failures: [] };
+  if (approvalStatus === DURABLE_PENDING_STATUS) {
+    const failures = integrationDecision.validatePendingDecision(meta);
+    return { mode: failures.length ? 'invalid' : 'pending', failures };
+  }
   if (approvalStatus !== DURABLE_TERMINAL_STATUS) {
     return {
       mode: 'invalid',
@@ -105,12 +109,7 @@ function durableLifecycleState(meta, input = readInputs(), options = {}) {
 
   const failures = [];
   failures.push(...ownerDecision.validateOwnerDecision(meta.issue_229_owner_decision));
-  // The only recorded immutable owner decision approves content, not integration.
-  // A later integration needs its own reviewed/pinned authority contract; neither
-  // release metadata nor a real candidate commit can manufacture that permission.
-  if (meta.issue_229_owner_decision?.integration_authorized !== true) {
-    failures.push('Issue #229 terminal retirement requires a separate immutable owner integration decision; content approval does not authorize target integration');
-  }
+  failures.push(...integrationDecision.validateIntegrationRelease(meta, null, options.gitRoot || ROOT));
   let expectedRecords;
   try { expectedRecords = ownerDecision.approvedRecords(); }
   catch (error) { return { mode: 'invalid', failures: [error.message] }; }
@@ -153,6 +152,7 @@ function durableLifecycleState(meta, input = readInputs(), options = {}) {
     }
     const approved = hold.target_binding.approved_replacement_sha256;
     const evidence = hold.release_evidence;
+    if (meta.issue_229_integration_decision) failures.push(...integrationDecision.validateReleaseBinding(meta, evidence));
     const bindingFields = ['blocked_baseline_sha256', 'approved_replacement_sha256', 'approval_ref', 'approved_by', 'approved_on'];
     const evidenceFields = ['resolved_via', 'released_by', 'released_on', 'evidence_ref', 'subject_id', 'subject_sha256', 'integrated_commit'];
     if (canonical(Object.keys(hold.target_binding).sort()) !== canonical(bindingFields.sort())

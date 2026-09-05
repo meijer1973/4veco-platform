@@ -62,7 +62,10 @@ afterAll(() => {
 });
 
 function cloneFiles() {
-  return Object.fromEntries(Object.entries(readFiles(root)).map(([file, value]) => [file, value === null ? null : Buffer.from(value)]));
+  const files = Object.fromEntries(Object.entries(readFiles(root)).map(([file, value]) => [file, value === null ? null : Buffer.from(value)]));
+  // Retain historical pending regression coverage independently of live activation.
+  for (const file of [META_PATH, OUTLINE_PATH]) files[file] = Buffer.from(ownerDecision.gitText(require('./book2-integration-decision').BASELINE_COMMIT, file));
+  return files;
 }
 
 function mutate(file, search, replacement = '') {
@@ -97,7 +100,7 @@ function expectFailure(files, fragment, options = {}) {
 function expectOnlyIntegrationAuthorityBlock(files, options = {}) {
   const failures = findBookOutlineFailures(files, options);
   expect(failures.length).toBeGreaterThan(0);
-  expect(failures.every((failure) => failure.includes('release requires a separate immutable owner integration decision'))).toBe(true);
+  expect(failures.every((failure) => failure.includes('requires a separate immutable owner integration decision'))).toBe(true);
 }
 
 function release(hold, evidence = {}) {

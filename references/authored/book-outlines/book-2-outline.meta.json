@@ -951,7 +951,23 @@
     "records": 12,
     "approval_status": "pending",
     "content_approval_status": "approved_frozen_package",
-    "integration_status": "not_authorized"
+    "integration_status": "authorized_pending_transition"
+  },
+  "issue_229_integration_decision": {
+    "decision": "authorize_frozen_book2_target_integration_then_part_a_production",
+    "transition_id": "BOOK2-TARGET-INTEGRATION-1",
+    "package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
+    "outline_sha256": "919c39f64dd212dba37b62902a5bb2e2ce6388c6020a0491e1621017ae2192a1",
+    "content_reviewed_head": "b614577f19c6e8a95c9981256aa125e56d26cd79",
+    "content_merge_commit": "ad27f9c30205042c01cacf0b362f4d3f87e6c7a9",
+    "decided_by": "meijer1973",
+    "decided_on": "2026-09-05",
+    "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+    "evidence_sha256": "6bfdbe09538c7cdd35acbed22e8cf1b8af60c0fcafa89bec33fdb55c0b84ba87",
+    "integration_authorized": true,
+    "lessons_authorized": true,
+    "merge_authorized": false,
+    "production_precondition": "governed_transition_merged_main_ci_passed_and_action_holds_released"
   },
   "issue_229_owner_decision": {
     "decision": "approve_target_content_only",
