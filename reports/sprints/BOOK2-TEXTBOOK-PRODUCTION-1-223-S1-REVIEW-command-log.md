@@ -255,3 +255,25 @@ PASS original reviewer32-page binding, all96 fresh pages, original20 native byte
 ```text
 
 ```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-S1-REVIEW-bind.py scope 90a4568861e98d3f16711e3776004b9334536af2
+
+- cwd: `C:\wt\book2-223-s1-review-20260906\4veco-platform`
+- started_at: `2026-09-05T23:45:59.234Z`
+- finished_at: `2026-09-05T23:46:00.594Z`
+- duration_ms: `1360`
+- exit_code: `0`
+- stdout_sha256: `549f4e8148ab4808b714116b25608bf3a515e47c08adcb991c8a15224a3b6c12`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+PASS actual 90a4568861e98d3f16711e3776004b9334536af2: 144 own evidence paths; honest narrow FAIL; genuine whole source PASS; lesson clean unchanged
+
+```
+
+### stderr excerpt
+
+```text
+
+```
