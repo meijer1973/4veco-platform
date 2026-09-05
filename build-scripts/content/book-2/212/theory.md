@@ -51,7 +51,7 @@ over de kosten of de winst.
 | 20 | 100 |
 | 30 | 150 |
 
-![Eerst alleen TO: de lijn gaat door (0; 0) en (30; 150). De verticale as toont een totaalbedrag per avond, geen prijs per bezoeker.](_assets/2.1.2_fig_1.svg)
+![Eerst alleen TO: de lijn gaat door (0; 0) en (30; 150). De verticale as toont een totaalbedrag per avond, geen prijs per bezoeker.](_assets/2.1.2_fig_1.svg){alt="Theater: totale opbrengst per avond bij 0 tot 30 bezoekers."}
 
 ## Opbrengst per bezoeker
 
@@ -88,7 +88,7 @@ Vergelijk steeds dezelfde Q en dezelfde periode.
 | 20 | 100 | 100 | 0 |
 | 30 | 150 | 120 | 30 |
 
-![Voeg TK toe op precies dezelfde assen. De gestreepte kostenlijn begint bij 60. Bij Q = 10 ligt TO onder TK: de opbrengst is kleiner dan de kosten.](_assets/2.1.2_fig_2.svg)
+![Voeg TK toe op precies dezelfde assen. De gestreepte kostenlijn begint bij 60. Bij Q = 10 ligt TO onder TK: de opbrengst is kleiner dan de kosten.](_assets/2.1.2_fig_2.svg){alt="Theater: TO en TK op dezelfde assen; bij 10 bezoekers is de opbrengst lager dan de kosten."}
 
 > **Let op: ontvangen is niet overhouden.**
 > “Er komt € 150 binnen, dus de winst is € 150” klinkt logisch als je alleen
@@ -122,7 +122,7 @@ In de grafiek is dezelfde gelijkheid het snijpunt: bij Q = 20 hebben beide
 lijnen hoogte 100. Links van dat punt ligt TO onder TK; rechts erboven.
 Die uitspraken gelden binnen dit model, met de genoemde vaste prijs en kosten.
 
-![Markeer nu het break-evenpunt (20; 100). Links ervan verlies, op het punt nul winst en rechts ervan winst; de schalen zijn niet veranderd.](_assets/2.1.2_fig_3.svg)
+![Markeer nu het break-evenpunt (20; 100). Links ervan verlies, op het punt nul winst en rechts ervan winst; de schalen zijn niet veranderd.](_assets/2.1.2_fig_3.svg){alt="Theater: break-even bij 20 bezoekers; links verlies en rechts winst binnen het model."}
 
 De algebra geeft het precieze punt; de grafiek maakt de drie situaties
 zichtbaar. Het zijn twee manieren om **dezelfde vergelijking** te lezen.
@@ -133,7 +133,7 @@ Kies één Q, bijvoorbeeld 30. Lees op diezelfde verticale lijn TO = 150 en
 TK = 120 af. Het hoogteverschil is 150 − 120 = **€ 30 per avond**.
 Het haakje in de figuur verbindt de twee hoogten bij dezelfde Q.
 
-![Voeg bij Q = 30 het verticale verschil van € 30 toe. Winst is hier een afstand in euro per avond, niet een ingekleurde oppervlakte.](_assets/2.1.2_fig_4.svg)
+![Voeg bij Q = 30 het verticale verschil van € 30 toe. Winst is hier een afstand in euro per avond, niet een ingekleurde oppervlakte.](_assets/2.1.2_fig_4.svg){alt="Theater: verticale winstafstand van 30 euro per avond bij 30 bezoekers, geen oppervlakte."}
 
 > **Let op: afstand, geen oppervlakte.**
 > Een ruimte tussen twee lijnen valt op, maar de verticale as geeft al euro

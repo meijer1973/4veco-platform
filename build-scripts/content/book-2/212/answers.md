@@ -113,7 +113,7 @@ Een mogelijke schaal is telkens 5 bezoekers en 20 euro. TK loopt door
 (13⅓; 53⅓). Binnen het gegeven bereik ligt links de verlieszone en rechts
 de winstzone. Het verticale haakje bij Q = 20 is 80 − 60 = € 20 per dag.
 
-![Opgave 6: een zelfstandig gemaakte grafiek bevat twee benoemde assen, twee gelabelde lijnen, break-even, zones en de verticale winstafstand bij Q = 20.](_assets/2.1.2_ex_4.svg)
+![Opgave 6: een zelfstandig gemaakte grafiek bevat twee benoemde assen, twee gelabelde lijnen, break-even, zones en de verticale winstafstand bij Q = 20.](_assets/2.1.2_ex_4.svg){alt="Minigolf: TK, TO, break-even en zones; verticale winstafstand bij 20 bezoekers per dag."}
 
 ## Doeloefening
 

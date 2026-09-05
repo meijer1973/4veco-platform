@@ -1,0 +1,63 @@
+{
+  "source_md": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – antwoorden.md",
+  "source_sha256": "4674ef72849b9b1adea404e938449d48cea5069813643e953dad2c9e0b20c035",
+  "source_html": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – antwoorden.html",
+  "html_sha256": "3bb83b2b2eb9b8349ed2553190a2d0288f8e75b1e0acaff06013a56f75ce971a",
+  "source_pdf": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+  "pdf_sha256": "07a75d7b5b69344d38d5da9e5f2e0a3b964d86cc64c383b37809f8263fb33192",
+  "assets": [
+    {
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_3.svg",
+      "sha256": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee"
+    },
+    {
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_3.png",
+      "sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643"
+    },
+    {
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_4.svg",
+      "sha256": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3"
+    },
+    {
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_4.png",
+      "sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33"
+    },
+    {
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_5.svg",
+      "sha256": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127"
+    },
+    {
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_5.png",
+      "sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5"
+    }
+  ],
+  "zip": {
+    "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – antwoorden.zip",
+    "sha256": "e44a6dd5c708ec58aed45b7ee7e7d6038743ab12cb4c4522d85857c662f9e4d6"
+  },
+  "sprint_id": "BOOK2-TEXTBOOK-PRODUCTION-1",
+  "artifact_id": "212-antwoorden-07a75d7b5b69-r6",
+  "render_dpi": 150,
+  "rendered_pages": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957",
+    "page-002.png": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554",
+    "page-003.png": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6",
+    "page-004.png": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5",
+    "page-005.png": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2",
+    "page-006.png": "d381ea9948644e3fb98fbbb12436ba3d7d1b0df17d48ddb0df4e89b1455eeb73"
+  },
+  "contact_sheet": "contact-sheet.png",
+  "pages_inspected": [],
+  "inspection_status": "PENDING",
+  "visible_student_defects": null,
+  "inspected_at_normal_reading_scale": false,
+  "warnings": []
+}

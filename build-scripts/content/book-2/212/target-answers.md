@@ -17,7 +17,7 @@ van een geheel aantal broden.
 
 d) **4 punten.** {{ANSWER_d}}
 
-![De doeloefening: het snijpunt ligt ongeveer bij (714,29; 1.071,43). Bij Q = 1.000 verbindt een verticale afstand de hoogten 1.300 en 1.500; dat verschil is € 200 per maand.](_assets/2.1.2_ex_5.svg)
+![De doeloefening: het snijpunt ligt ongeveer bij (714,29; 1.071,43). Bij Q = 1.000 verbindt een verticale afstand de hoogten 1.300 en 1.500; dat verschil is € 200 per maand.](_assets/2.1.2_ex_5.svg){alt="Bakkerij: TK en TO, break-even rond 714,29 broden en 200 euro verticale winstafstand bij 1.000 broden per maand."}
 
 | Onderdeel | Maximum | Verdeling |
 |---|---|---|
