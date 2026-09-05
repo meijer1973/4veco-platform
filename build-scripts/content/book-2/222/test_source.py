@@ -39,6 +39,17 @@ class Paragraph222Tests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'Frozen target changed'):
                 b.target_record()
 
+    def test_explanation_line_breaks_use_supported_pipeline_contract(self):
+        from print_pipeline import prepare_html
+        from bs4 import BeautifulSoup
+        document, _ = prepare_html(self.docs['antwoorden'], b.CONTENT/'answers.md')
+        soup = BeautifulSoup(document, 'html.parser')
+        self.assertEqual(len(soup.find_all('br')), 3)
+        for phrase in ('procentuele prijsverandering:<br>\n|Ev|',
+                       '<br>\nverbinding met |Ev|', '<br>\ndat iedere eindige stap met interval-|Ev|'):
+            self.assertIn(phrase, self.docs['antwoorden'])
+        self.assertNotIn('white-space', self.docs['antwoorden'])
+
     def test_exact_shared_exercise_route(self):
         self.assertEqual(self.docs['paragraaf'].split('## Uitgewerkt voorbeeld')[1],self.docs['opgaven'].split('## Uitgewerkt voorbeeld')[1])
         for kind in ('paragraaf','opgaven'):

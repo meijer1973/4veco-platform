@@ -1,0 +1,43 @@
+{
+  "source_md": "C:\\wt\\book2-222-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – opgaven.md",
+  "source_sha256": "da8d53ef8d0a3df8afeb8fd06d27d0bb7ee0fbae86e16be4ddf9389f39e369b1",
+  "source_html": "C:\\wt\\book2-222-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – opgaven.html",
+  "html_sha256": "e9ef48e62c960393e5f0310739d18bf07669cedea0633144a07c038f1f01ebe8",
+  "source_pdf": "C:\\wt\\book2-222-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – opgaven.pdf",
+  "pdf_sha256": "0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555",
+  "assets": [
+    {
+      "path": "C:\\wt\\book2-222-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_we_1.svg",
+      "sha256": "0969714dff8223c3f114496c748a584eccb3feed22e9c2e700c49d6c10def521"
+    },
+    {
+      "path": "C:\\wt\\book2-222-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_we_1.png",
+      "sha256": "c2b7ae2cacb1ffe93d942e93117b71222e6ef535bddb1a2b0af634130226dfce"
+    }
+  ],
+  "sprint_id": "BOOK2-TEXTBOOK-PRODUCTION-1",
+  "artifact_id": "222-opgaven-0a251a4973b1-r9",
+  "render_dpi": 150,
+  "rendered_pages": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "2f6bfd85d06607172b1d257c4a3c9de1878ca11c9b4208b14873bbdc11fc6ba0",
+    "page-002.png": "0ef45114138d6d56d80b1cac1ee578f91c0e741fa99e3ad490a0d649645dc842",
+    "page-003.png": "6a4a1bb3dc653b2772edb63817d172bce4be5801af703ee8ccba1ec54894145d",
+    "page-004.png": "c2592d9065876765b6c8beb12608334f722ac48c3dcd06eaa3855725096400bd",
+    "page-005.png": "71a5482aef92ee87afcffecb059d7feec1a01c8ad5597cb35f7039343d0c4c86",
+    "page-006.png": "d4e82d03960929d6ee49c4acc404302739a9d358f951e5c8dd174169bcd3d818"
+  },
+  "contact_sheet": "contact-sheet.png",
+  "pages_inspected": [],
+  "inspection_status": "PENDING",
+  "visible_student_defects": null,
+  "inspected_at_normal_reading_scale": false,
+  "warnings": []
+}
