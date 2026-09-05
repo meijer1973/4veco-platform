@@ -22,10 +22,10 @@ TARGET_HASH = "9a3a29bcedc16739b74b66b2bb8e136b37e86c7f5cfee3ee35ea37c4bdeed1c5"
 PLAN_HASH = "dd2f91d0035829986076b7d5e96b43fa9c45f3d3698da1d159a955634fa01497"
 CHAPTER_HASH = "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7"
 PRIOR_PINS = {
-    "2.2.1-textbook-handoff.md": "216e139a6297b59cfb8e62f43eb3a79eb16efc1861e5fc989ad15562a4deb24c",
-    "2.2.1-review.md": "24995a4d0e5d82327434be1dd94c789275728bdce840c6a7b5d63b59035258eb",
-    "2.2.1-quality-ref.yaml": "b6f1b389d11c20665577414c17e5ae49962083812d9d1bf474d16231db749508",
-    "2.2.1 Prijselasticiteit – paragraaf.md": "e7e4287645c26c3b79406a556c05a4c90dd10e10e3605b409b89a123df7fa281",
+    "2.2.1-textbook-handoff.md": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811",
+    "2.2.1-review.md": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+    "2.2.1-quality-ref.yaml": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa",
+    "2.2.1 Prijselasticiteit – paragraaf.md": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db",
 }
 HEADINGS = ["Uitgewerkt voorbeeld", "Startopgaven", "Begeleide inoefening", "Zelfstandige oefening",
             "Doeloefening", "Denkertje / Bonusopgave", "Herhaling / Herhaling en interleaving"]

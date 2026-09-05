@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Python314\\python.exe",
+    "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\build_pdf.py",
+    "--proof-root",
+    "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1",
+    "--proof-suffix",
+    "r5",
+    "--manifest",
+    "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-223-S1-thin-manifest.json"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "node:fs:2731\n    const out = binding.lstat(base, false, undefined, true /* throwIfNoEntry */);\n                        ^\n\nError: EISDIR: illegal operation on a directory, lstat 'C:'\n    at Object.realpathSync (node:fs:2731:25)\n    at toRealPath (node:internal/modules/helpers:62:13)\n    at Module._findPath (node:internal/modules/cjs/loader:775:22)\n    at resolveMainPath (node:internal/modules/run_main:35:21)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:146:20)\n    at node:internal/main/run_main_module:33:47 {\n  errno: -4068,\n  code: 'EISDIR',\n  syscall: 'lstat',\n  path: 'C:'\n}\n\nNode.js v24.13.1\nTraceback (most recent call last):\n  File \"\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\build_pdf.py\", line 10, in <module>\n    runpy.run_path(str(BUILDER), run_name=\"__main__\")\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_223.py\", line 284, in <module>\n    main()\n    ~~~~^^\n  File \"\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_223.py\", line 276, in main\n    result = build(args.lesson_root, args.proof_root, sources_only=args.sources_only, proof_suffix=args.proof_suffix)\n  File \"\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_223.py\", line 239, in build\n    subprocess.run(command, cwd=ROOT, check=True)\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\subprocess.py\", line 577, in run\n    raise CalledProcessError(retcode, process.args,\n                             output=stdout, stderr=stderr)\nsubprocess.CalledProcessError: Command '['node', 'build-scripts/workflows/check-book-outline-currentness.js', '--require-approved', '--action', 'paragraph_production', '--paragraph', '2.2.3']' returned non-zero exit status 1.\n"
+}

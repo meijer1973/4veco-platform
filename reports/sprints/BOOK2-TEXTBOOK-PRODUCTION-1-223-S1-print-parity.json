@@ -1,0 +1,53 @@
+{
+  "pass": true,
+  "native_raw_files_identical": 20,
+  "entire_paragraph_inventory_identical": true,
+  "pages_identical": 32,
+  "proof_inspection_status": "PENDING",
+  "fresh_personal_visual_acceptance": false,
+  "editions": {
+    "paragraaf": {
+      "pages": 15,
+      "zip_members": [
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html",
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+        "_assets/2.2.3_fig_1.png",
+        "_assets/2.2.3_fig_1.svg",
+        "_assets/2.2.3_fig_2.png",
+        "_assets/2.2.3_fig_2.svg",
+        "_assets/2.2.3_fig_3.png",
+        "_assets/2.2.3_fig_3.svg",
+        "_assets/2.2.3_fig_4.png",
+        "_assets/2.2.3_fig_4.svg"
+      ],
+      "all_page_raw_and_pixels_identical": true,
+      "fresh_manifest_sha256": "e0c887aa2edc0e42389fab7a0269fd15e54dde1605f41f6265b6755f9c0fec8d",
+      "pdf_sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb"
+    },
+    "opgaven": {
+      "pages": 10,
+      "zip_members": [
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.html",
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf",
+        "_assets/2.2.3_fig_4.png",
+        "_assets/2.2.3_fig_4.svg"
+      ],
+      "all_page_raw_and_pixels_identical": true,
+      "fresh_manifest_sha256": "162233a20f4120cfa40dab2d4cb5dcef62c6f2e0182c88f3f6cfbca202fce31a",
+      "pdf_sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80"
+    },
+    "antwoorden": {
+      "pages": 7,
+      "zip_members": [
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.html",
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf"
+      ],
+      "all_page_raw_and_pixels_identical": true,
+      "fresh_manifest_sha256": "e7368d35110ff1cdb373d07caa7fc5d695b103ce4d01b2019ebd4678c510dfb9",
+      "pdf_sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10"
+    }
+  }
+}
