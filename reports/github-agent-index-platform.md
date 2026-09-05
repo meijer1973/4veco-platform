@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T20:18:44.992Z
+Generated: 2026-09-05T20:24:19.795Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `96303ae194d60cdfb53d00aa0104574f3584c00a`
-Files indexed: 8926
+Source commit: `62fc7b508d87c776398e0b27e53e4edb8deb99a3`
+Files indexed: 8927
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2714,7 +2714,7 @@ Count: 1030
 
 ## reports
 
-Count: 6154
+Count: 6155
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6628,6 +6628,7 @@ Count: 6154
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-SHORT-ALT-command-log.jsonl
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-SHORT-ALT-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-short-alt-preflight.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-successor-binding-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-target-trace.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-timing-walkthrough.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-wave-2-production-release.md
