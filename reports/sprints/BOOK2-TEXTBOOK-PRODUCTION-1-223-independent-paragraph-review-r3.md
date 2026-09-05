@@ -243,8 +243,10 @@ claim is made here; root retains final combined CI and PR-readiness gates.
 
 An initial runner invocation mistakenly passed `--sprint-id` as a flag even
 though the runner expects a positional ID; its successful executions and two
-Windows path-quoting failures were preserved byte-for-byte in reviewer-owned
-`...-initial-runner-misaddressed.*` diagnostics. Correctly addressed fresh runs
+Windows path-quoting failures were preserved byte-for-byte in the reviewer-owned
+`...-initial-runner-misaddressed.jsonl` diagnostic. Markdown log displays were
+mechanically normalized to LF after Git flagged embedded CRLF as whitespace;
+JSONL excerpts and captured stdout/stderr digests are unchanged. Correctly addressed fresh runs
 and explicitly quoted paragraph paths provide the task log; nothing was erased
 or passed off as a content failure.
 
