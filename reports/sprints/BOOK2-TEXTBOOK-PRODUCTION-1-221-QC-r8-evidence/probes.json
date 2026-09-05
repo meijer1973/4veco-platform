@@ -1,0 +1,380 @@
+{
+  "reviewer": "paragraph_213_r6_independent_review",
+  "revision": "221 R8",
+  "mechanical_status": "PASS",
+  "visual_acceptance": "separate personally attributed report",
+  "html": [
+    {
+      "edition": "paragraaf",
+      "changes": [
+        {
+          "tag_index": 61,
+          "tag": "img",
+          "before": {
+            "alt": "Vergelijk de procentuele reacties op dezelfde schaal."
+          },
+          "after": {
+            "alt": "Procentuele prijs- en hoeveelheidsreacties op dezelfde schaal."
+          }
+        },
+        {
+          "tag_index": 62,
+          "tag": "figcaption",
+          "before": {
+            "aria-hidden": "true"
+          },
+          "after": {}
+        }
+      ],
+      "alts": [
+        {
+          "alt": "Procentuele prijs- en hoeveelheidsreacties op dezelfde schaal.",
+          "length": 62
+        },
+        {
+          "alt": "Dezelfde absolute-waardeschaal; twee verschillende classificaties.",
+          "length": 66
+        },
+        {
+          "alt": "Bowlplein: berekende percentages; klimhal: alleen de gemeten Ev.",
+          "length": 64
+        }
+      ],
+      "captions": [
+        "Vergelijk de procentuele reacties op dezelfde schaal.",
+        "Dezelfde absolute-waardeschaal; twee verschillende classificaties.",
+        "Bowlplein: berekende percentages; klimhal: alleen de gemeten Ev."
+      ],
+      "full_caption_words_punctuation_equal": true
+    },
+    {
+      "edition": "opgaven",
+      "changes": [],
+      "alts": [
+        {
+          "alt": "Bowlplein: berekende percentages; klimhal: alleen de gemeten Ev.",
+          "length": 64
+        }
+      ],
+      "captions": [
+        "Bowlplein: berekende percentages; klimhal: alleen de gemeten Ev."
+      ],
+      "full_caption_words_punctuation_equal": true
+    },
+    {
+      "edition": "antwoorden",
+      "changes": [],
+      "alts": [],
+      "captions": [],
+      "full_caption_words_punctuation_equal": true
+    }
+  ],
+  "svg": [
+    {
+      "name": "fig_1",
+      "title": "Procentuele prijs- en hoeveelheidsveranderingen met teken op één schaal",
+      "title_length": 71,
+      "svg_sha256": "1abc7cc2a150318a84341bf89886543cd94e5fc63dd120cf18244e62032536b2",
+      "png_sha256": "6f4009fe29fb88f442257e658fe6433809020ba824d17ee275a08701f37d0704",
+      "bar_values": [
+        10,
+        -5,
+        10,
+        -20
+      ],
+      "scales": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "max_channel_delta": 0
+    },
+    {
+      "name": "fig_2",
+      "title": "Twee vergelijkbare absolute-waardeschalen met grens één",
+      "title_length": 55,
+      "svg_sha256": "872bbd68352e746cb6637aa4dc5c806475fd7430a5957ee4bf9f08d6b1b5afbc",
+      "png_sha256": "589af699b6e024488be654185cfbf39b4a0d957cb59c11ecb452968a252164c0",
+      "bar_values": [
+        0.5,
+        2
+      ],
+      "scales": [
+        115,
+        115
+      ],
+      "max_channel_delta": 0
+    },
+    {
+      "name": "we_1",
+      "title": "De berekende Bowlpleinreactie en de gegeven klimhalratio, zonder verzonnen percentages",
+      "title_length": 86,
+      "svg_sha256": "f7de73e34576ab1bd571e778ff90ad7f45c305bbde6ff7489a1720228d2499a5",
+      "png_sha256": "396f5236c9c3cda581dece54f45d01004494e173c00532fc73a4b54c07a9df95",
+      "bar_values": [
+        25,
+        -10,
+        0.4,
+        1.5
+      ],
+      "scales": [
+        8,
+        8,
+        180,
+        180
+      ],
+      "max_channel_delta": 0
+    }
+  ],
+  "pages": [
+    {
+      "edition": "paragraaf",
+      "page": 1,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-01.png",
+      "sha256": "e423b8b6bcf3d4779bb9f74efd9e25d4707925bfbd063693c771c9e81d4bf1ef",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "edition": "paragraaf",
+      "page": 2,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-02.png",
+      "sha256": "9d9adc88dd79f8008822e5e1052e114cf2ed42d62ab299bf955fdea5e54feb13",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "edition": "paragraaf",
+      "page": 3,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-03.png",
+      "sha256": "68100f2ca721b35c921d91d56e04ca05738e7eba4a92c1b6d05a4923996bb764",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "edition": "paragraaf",
+      "page": 4,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-04.png",
+      "sha256": "0467d1ffe60b8751fb1d55c7ccf7707d3b8f0ec6bf773525839b164acc4f1537",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "edition": "paragraaf",
+      "page": 5,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-05.png",
+      "sha256": "53fc0274df21a7f931e81238a67d18159aa3719091c236ec8a81b1ed10210bba",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "edition": "paragraaf",
+      "page": 6,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-06.png",
+      "sha256": "eed82b34a9c59a04b62f594a8a0b65fab415fec0e469eb6147694e6fed7adb18",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "edition": "paragraaf",
+      "page": 7,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-07.png",
+      "sha256": "434966aec4ac1ad105c2f91537fc817d92b087e5fb79b8633137b03e90cc57d3",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "edition": "paragraaf",
+      "page": 8,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-08.png",
+      "sha256": "4a4ee716c41edca10642be8518e7e964708f6cc06f56b7e5e29558e95578504b",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "edition": "paragraaf",
+      "page": 9,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-09.png",
+      "sha256": "7536c680768107894c0fab18fc951aac467149431d94de6c7f5bd77657e6e6ff",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "edition": "paragraaf",
+      "page": 10,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-10.png",
+      "sha256": "95bfb6915156744f3fe53b1436fb4875a27dc95e7e8e6da8137fb7fcf6e0a8c3",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "edition": "opgaven",
+      "page": 1,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/opgaven/page-1.png",
+      "sha256": "4630c0bb8c90fbd067136a434f71a97f403bdd8d2cf3a5089b3473bc40b5cd64",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af"
+    },
+    {
+      "edition": "opgaven",
+      "page": 2,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/opgaven/page-2.png",
+      "sha256": "e3a804ee69a272e0ba12a289243ad43a2cd3580fa04b984d96ec41cb1b36d7b3",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af"
+    },
+    {
+      "edition": "opgaven",
+      "page": 3,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/opgaven/page-3.png",
+      "sha256": "7e73dae95da20aecced92ccc22d66990b19866eac426b5002778a12250e186e4",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af"
+    },
+    {
+      "edition": "opgaven",
+      "page": 4,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/opgaven/page-4.png",
+      "sha256": "8fdbb9b6cc8d3507d71a4d8cd73cd75cd9dd5ea6cb3721d225d7e1ac0f347089",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af"
+    },
+    {
+      "edition": "opgaven",
+      "page": 5,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/opgaven/page-5.png",
+      "sha256": "fa70fe045f16a558b85611caca8e71ce02b8151656b3fc7ddd394a8b27c5342a",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af"
+    },
+    {
+      "edition": "opgaven",
+      "page": 6,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/opgaven/page-6.png",
+      "sha256": "14d6ac179fb3aee0f456c7988ad3c1390f29338ac2b0d30b1f1b842bedd7990c",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 1,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/antwoorden/page-1.png",
+      "sha256": "760814941a5d1726dce72d62093fd964f056786310ea832942b7a2a7e7827551",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 2,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/antwoorden/page-2.png",
+      "sha256": "6b39705a836c8cc3bdbe4fc8f9d302cbe5b0b41758d2106f8975ceabed2cb0eb",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 3,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/antwoorden/page-3.png",
+      "sha256": "e2ad4fbccb2354c2c75d3194bfd8288a4fb620b8422a48b16770fcc2e0910651",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 4,
+      "fresh_capture": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/antwoorden/page-4.png",
+      "sha256": "97400edfb89401cf71c15f8ce8b83636cf00e11080eefd6987fc761d07d3cbf5",
+      "R7_R8_fresh_bytes_identical": true,
+      "pdf_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d"
+    }
+  ],
+  "source_delta": {
+    "two_metadata_substitutions_only": true,
+    "original_test_ASTs_unchanged": 10,
+    "new_tests": 2
+  },
+  "exact_HTML_byte_edits": [
+    {
+      "old_alt": "Vergelijk de procentuele reacties op dezelfde schaal.",
+      "new_alt": "Procentuele prijs- en hoeveelheidsreacties op dezelfde schaal."
+    },
+    {
+      "old_caption_markup": "<figcaption aria-hidden=\"true\">Vergelijk de procentuele reacties op\ndezelfde schaal.</figcaption>",
+      "new_caption_markup": "<figcaption>Vergelijk de procentuele reacties op dezelfde\nschaal.</figcaption>"
+    }
+  ],
+  "arithmetic": [
+    {
+      "context": "fruit",
+      "dQpercent": "-5",
+      "dPpercent": "10",
+      "Ev": "-1/2",
+      "classification": "inelastic"
+    },
+    {
+      "context": "rehearsal",
+      "dQpercent": "-20",
+      "dPpercent": "10",
+      "Ev": "-2",
+      "classification": "elastic"
+    },
+    {
+      "context": "Bowlplein",
+      "dQpercent": "-10",
+      "dPpercent": "25",
+      "Ev": "-2/5",
+      "classification": "inelastic"
+    },
+    {
+      "context": "repair",
+      "dQpercent": "-5",
+      "dPpercent": "10",
+      "Ev": "-1/2",
+      "classification": "inelastic"
+    },
+    {
+      "context": "arcade",
+      "dQpercent": "-30",
+      "dPpercent": "20",
+      "Ev": "-3/2",
+      "classification": "elastic"
+    },
+    {
+      "context": "pool",
+      "dQpercent": "10",
+      "dPpercent": "-20",
+      "Ev": "-1/2",
+      "classification": "inelastic"
+    },
+    {
+      "context": "Skatehal",
+      "dQpercent": "-30",
+      "dPpercent": "20",
+      "Ev": "-3/2",
+      "classification": "elastic"
+    },
+    {
+      "context": "Nova",
+      "dQpercent": "-16",
+      "dPpercent": "20",
+      "Ev": "-4/5",
+      "classification": "inelastic"
+    }
+  ],
+  "contrast": {
+    "ink_white": 14.528,
+    "ink_callout": 13.088,
+    "ink_table": 12.729,
+    "blue_white": 8.358,
+    "footer_white": 7.455,
+    "caption_white": 9.461
+  },
+  "protected_lesson_files": {
+    "2.2.1-review.md": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+    "2.2.1-quality-ref.yaml": "b6f1b389d11c20665577414c17e5ae49962083812d9d1bf474d16231db749508",
+    "2.2.1-textbook-handoff.md": "216e139a6297b59cfb8e62f43eb3a79eb16efc1861e5fc989ad15562a4deb24c",
+    "2.2.1-textbook-plan.md": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345"
+  },
+  "zip": "not applicable: no221ZIP contract or file"
+}
