@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "packet_id": "GATE-BOOK2-TARGET-INTEGRATION-1",
+  "gate_id": "GATE-BOOK2-TARGET-INTEGRATION-1",
+  "sprint_id": "BOOK2-TARGET-INTEGRATION-1",
+  "date": "2026-09-05",
+  "issue": 229,
+  "pr_number": 231,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/231",
+  "reviewed_substantive_head": "b772906721a7655e5fa8e59a1a0674b405efe6f9",
+  "pr_throughput_class": "high_authority",
+  "authority_class": "high_authority",
+  "bundle_id": null,
+  "paired_prs": [],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "PASS_WITH_FLAGS",
+    "rationale": "Separate owner grant and authority-validator transition; future payload merge requires owner authorization."
+  },
+  "human_decision_required": true,
+  "auto_merge_allowed_after_ci": false,
+  "status": "structural_review_passed_final_publication_proof_required",
+  "status_scope": "Checked-in snapshot after round2; final exact-head lead delta review, CI and applied readiness are published on PR231 and must pass before human handoff.",
+  "final_publication_proof": {"location": "https://github.com/meijer1973/4veco-platform/pull/231", "lead_evidence": "Independent final published-delta addendum PR comment with exact SHA; preserve the original round2 file SHA.", "readiness": "Machine-generated exact-head readiness comment including decision digest and actual MARK_READY application.", "ci": "Required validate-platform on the final published head, not an earlier checkpoint.", "no_repository_edits_after_final_delta_review": true},
+  "requested_decision": "Review the governed activation of the already approved frozen twelve-target package. After lead, CI and readiness, authorize the exact PR payload for merge commit with no admin bypass. No merge authority is inferred from the task grant.",
+  "product_end_state_refs": ["../4veco-lessen/specifications/product-end-state.md"],
+  "original_sprint_or_gate_spec_refs": [
+    "https://github.com/meijer1973/4veco-platform/issues/229",
+    "https://github.com/meijer1973/4veco-platform/issues/223",
+    "reports/sprints/BOOK2-TARGET-INTEGRATION-1-plan.md",
+    "reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md"
+  ],
+  "non_negotiable_requirements": [
+    "Frozen package, historical content/Ei/goal decisions and unrelated holds preserved.",
+    "Separate immutable integration grant; distinct post-authorization activation commit containing exact grant, pending holds, pins, actual outline semantics and frozen records.",
+    "Historical pending, authorized pending and fully released states; no scoped-action or partial-release bypass.",
+    "No lesson output before governed main transition plus CI; no future payload merge authority manufactured."
+  ],
+  "exact_identities": {
+    "package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
+    "outline_semantic_sha256": "919c39f64dd212dba37b62902a5bb2e2ce6388c6020a0491e1621017ae2192a1",
+    "authorization_commit": "6e35f4fe0aeaa448da9476469294ccd45775232d",
+    "authorization_evidence_sha256": "6bfdbe09538c7cdd35acbed22e8cf1b8af60c0fcafa89bec33fdb55c0b84ba87",
+    "activation_commit": "206c018478654db781cc879e7ea36adcd9ef600c",
+    "platform_baseline": "ad27f9c30205042c01cacf0b362f4d3f87e6c7a9",
+    "lesson_baseline": "f09fd6e88edc5049b026b16b0158e7e188091d2d"
+  },
+  "core_requirement_checklist": [
+    {"requirement": "Frozen package preserved", "status": "met"},
+    {"requirement": "Separate grant and provenance", "status": "met_independent_review_pass"},
+    {"requirement": "All consumers reject partial/forged activation", "status": "met_69_independent_tests_and_full_suite"},
+    {"requirement": "All five residual holds retained", "status": "met"},
+    {"requirement": "Student output unchanged and continuation named", "status": "met"},
+    {"requirement": "Reviewed-head CI and structural lead", "status": "met_469e605f_run33959681780_round2_pass_with_flags"},
+    {"requirement": "Final publication delta review, exact-head CI and readiness", "status": "required_external_before_handoff"}
+  ],
+  "rendered_output": {
+    "status": "not_applicable_to_transition",
+    "reason": "No student copy or visual assets change. Complete 41-PDF rendered review belongs to the gated production continuation."
+  },
+  "evidence_refs": [
+    "reports/sprints/BOOK2-TARGET-INTEGRATION-1-planning-review.md",
+    "reports/sprints/BOOK2-TARGET-INTEGRATION-1-prerequisite-inventory.md",
+    "reports/sprints/BOOK2-TARGET-INTEGRATION-1-implementation-review-corrections.md",
+    "reports/sprints/BOOK2-TARGET-INTEGRATION-1-command-log.jsonl",
+    "reports/sprints/BOOK2-TARGET-INTEGRATION-1-lead-review-round1.md",
+    "reports/sprints/BOOK2-TARGET-INTEGRATION-1-lead-review-corrections.md",
+    "reports/sprints/BOOK2-TARGET-INTEGRATION-1-lead-review-round2.md",
+    "https://github.com/meijer1973/4veco-platform/actions/runs/33959681780",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md"
+  ],
+  "stop_conditions": [
+    "Unresolved core/specification finding or failed exact-head CI",
+    "Changed frozen target, semantic, authorization, activation or historical evidence",
+    "Missing exact-payload merge authorization",
+    "Premature lesson production or unreviewed release of independent teaching/book/chapter holds"
+  ],
+  "review_questions": [
+    "Does the separate grant faithfully record the owner's verbatim statement and bounded subsequent production scope?",
+    "Do all three lifecycle states and their negative mutations fail closed across currentness and durable validators?",
+    "Does committed activation prove exact evidence, pending holds/pins, actual outline semantics and frozen content, with all releases naming the same commit?",
+    "Are the five remaining holds and main/CI-before-production condition preserved?",
+    "Is the reviewed exact payload authorized for the normal merge-commit integration lane without admin bypass?"
+  ],
+  "comment_prompt": "Comment on the complete packet with findings and exact evidence. The agent records each disposition; ambiguous/conflicting authority requires targeted follow-up. A content/implementation PASS is not payload merge authorization.",
+  "escalation_triggers": ["target_authority_transition", "authority_validator_change", "cross_repo_production_gate"]
+}

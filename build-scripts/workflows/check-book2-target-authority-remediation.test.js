@@ -5,7 +5,13 @@ const { approvalBlockLifecycleMode } = require('./check-book2-candidate-approval
 
 let baseline;
 
-beforeAll(() => { baseline = readInputs(); });
+beforeAll(() => {
+  baseline = readInputs();
+  // Historical pending regression fixtures must not change when live authority advances.
+  const owner = require('./book2-owner-decision');
+  const grant = require('./book2-integration-decision');
+  baseline.meta = JSON.parse(owner.gitText(grant.BASELINE_COMMIT, grant.META_PATH));
+});
 
 function clone() {
   return structuredClone(baseline);
@@ -106,7 +112,7 @@ describe('Book 2 target authority remediation contract', () => {
 
   test('valid terminal content and ancestry still cannot imply unauthorized integration', () => {
     const input = terminalFixture();
-    const failure = 'Issue #229 terminal retirement requires a separate immutable owner integration decision; content approval does not authorize target integration';
+    const failure = 'Issue #229 requires a separate immutable owner integration decision; content approval does not authorize target integration';
     expect(findFailures(input, { durable: true })).toEqual([failure]);
     expect(durableLifecycleState(input.meta, input)).toEqual({ mode: 'invalid', failures: [failure] });
     expect(() => approvalBlockLifecycleMode(input.meta, input)).toThrow(failure);

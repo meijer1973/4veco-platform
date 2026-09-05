@@ -5,6 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const { spawnSync } = require('child_process');
 const { durableLifecycleState, findFailures, readInputs } = require('./check-book2-target-authority-remediation');
+const { validateIntegrationDecision } = require('./book2-integration-decision');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const CHECKER = path.join(ROOT, 'build-scripts', 'workflows', 'check-book-outline-currentness.js');
@@ -63,9 +64,12 @@ function main() {
     return;
   }
   expectPass([], 'structural currentness');
+  const integrationAuthorized = validateIntegrationDecision(meta.issue_229_integration_decision).length === 0;
   for (const [paragraph, hold] of PARAGRAPHS) {
     expectPass(['--action', 'target_authority_repair', '--paragraph', paragraph], `${paragraph} repair`);
-    for (const action of ['target_authority_integration', 'paragraph_production', 'lesson_authoring']) {
+    if (integrationAuthorized) expectPass(['--action', 'target_authority_integration', '--paragraph', paragraph], `${paragraph} authorized integration`);
+    else expectBlocked(['--action', 'target_authority_integration', '--paragraph', paragraph], hold, `${paragraph} integration`);
+    for (const action of ['paragraph_production', 'lesson_authoring']) {
       expectBlocked(['--action', action, '--paragraph', paragraph], hold, `${paragraph} ${action}`);
     }
   }
@@ -73,7 +77,8 @@ function main() {
   expectBlocked(['--action', 'merge'], 'H-229-211-CANDIDATE', 'merge');
   console.log('Book 2 candidate approval block: PASS');
   console.log('- structural and target-authority repair routes pass');
-  console.log('- approved use, integration, production, lesson authoring, and merge remain blocked');
+  console.log(`- target integration ${integrationAuthorized ? 'authorized; holds not yet released' : 'blocked'}`);
+  console.log('- approved use, production, lesson authoring, and merge remain blocked');
 }
 
 if (require.main === module) {

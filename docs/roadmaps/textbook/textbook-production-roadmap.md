@@ -12,7 +12,7 @@ Scope: textbook improvement and writing work that prepares, builds, verifies, an
 
 ## Operating Goal
 
-Complete Issue #229 Phase A: independently review and validate the exact twelve-record candidate package, publish one draft platform PR, prove exact-head CI, and stop for the owner's explicit package decision. Do not write lessons, generate student output, integrate approved targets, or merge.
+Current 2026-09-05 decision: PR #230 merged at ad27f9c30205042c01cacf0b362f4d3f87e6c7a9 with green post-merge CI. The owner now authorizes the governed target transition, then complete Book 2 Part A production. Execute BOOK2-TARGET-INTEGRATION-1 first, preserving frozen package and historical content approval. Stop for its exact-payload governance merge authorization; lesson output begins only after its authorized main integration and green CI. The prior scope/ledger entries below are historical snapshots, superseded for current work by this decision and the top active row.
 
 ## Book 2 Print Series
 
@@ -56,6 +56,7 @@ When an active sprint exists, it sits at the top. When no sprint is active, the 
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
+| BOOK2-TARGET-INTEGRATION-1 | Governed Book 2 Target Activation | yes | Implementation/structural evidence complete: immutable grant, actual activation and twelve releases; independent verification and lead round2 PASS WITH FLAGS, full suite and reviewed-head CI green. Final published-delta review, final-head CI and applied readiness are required on PR231 before owner handoff. Not merged; five independent holds and the main/CI-before-lessons gate remain. |
 | BOOK2-TARGET-AUTHORITY-REMEDIATION-1 | Book 2 Target Authority Remediation | yes | Issue #229 Phase A complete with structural lead `PASS WITH FLAGS` on exact package `914d1a39…71310`; only empirical classroom timing is carried to Phase B. The owner approved frozen target content and Ei semantics; lifecycle/evidence corrections and fresh CI/readiness are in progress. Target integration, lesson work, Phase B, and merge remain unauthorized. |
 | B2-2.1.1-GOAL-TARGET-DESIGN-1 | Book 2 Paragraph 2.1.1 Goal And Target Design | yes | Both exact package hashes are owner-approved in PR #227 comment `5524345692`. `H-211-GATE0B1` is released; `H-211-TARGET-INTEGRATION` remains open with the approved replacement binding. The target registry and lesson are unchanged. Exact-head transition CI and separate payload authorization remain before governed PR #227 integration. |
 | BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | yes | Integrated through PR #226 merge `b6e75a558e7ddb34a3e36094a2ab8367249fa357`; post-merge CI run `33724859532` passed. The outline remains `approved_with_holds` at semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`. `H-OUTLINE-OWNER` and `H-MERGE-GOVERNANCE` are released; all 13 other holds remain open. |
@@ -99,4 +100,4 @@ Do not mutate `references/machine/`, `references/external/`, protected reference
 
 ## Next Action
 
-Stop for the owner's explicit approve/revise/reject decision on exact package `914d1a39…71310` and the Ei semantic supersession. Do not edit lessons, generate output, integrate targets, begin Phase B, or merge.
+Complete PR #231's external final published-delta review, exact-head CI and readiness proof. Request owner authorization for that exact payload; then use the governed merge-commit lane without admin bypass and verify post-merge main CI before reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md. The completed row records implementation/evidence, not merged authority or student production.

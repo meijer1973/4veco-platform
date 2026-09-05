@@ -1,6 +1,6 @@
 # Textbook Sprint Ledger
 
-Updated: 2026-09-04
+Updated: 2026-09-05
 Roadmap: `docs/roadmaps/textbook/textbook-production-roadmap.md`
 
 ## Current Rule
@@ -26,6 +26,7 @@ Every agent working from this ledger must use the repository sprint protocol bef
 
 | Sprint | Name | Completed | Current State | Required Next Action |
 |---|---|---|---|---|
+| BOOK2-TARGET-INTEGRATION-1 | Governed Book 2 Target Activation | yes | Implementation and structural evidence complete; independent verifier and round2 PASS WITH FLAGS, local 1,868 tests and reviewed-head CI green. Completion does not mean main integration or lesson production. | Require PR231 final published-delta review, exact-head CI and applied readiness; request new exact-payload merge authorization. Then governed merge plus green main CI before the combined Part A continuation. |
 | BOOK2-TARGET-AUTHORITY-REMEDIATION-1 | Book 2 Target Authority Remediation | yes | Issue #229 Phase A complete with structural lead `PASS WITH FLAGS` on exact package `914d1a39…71310`; only empirical classroom timing is carried to Phase B. The owner approved frozen content and Ei semantics on 2026-09-05; PR #230 lifecycle/evidence corrections are in progress. Twelve target integration holds stay open; lessons, Phase B and merge remain unauthorized. | Complete owner-requested corrections, fresh independent review, exact-head CI and PR readiness. Do not integrate, write lessons, begin Phase B, or merge. |
 | B2-2.1.1-GOAL-TARGET-DESIGN-1 | Book 2 Paragraph 2.1.1 Goal And Target Design | yes | Owner decisions in PR #227 comment `5524345692` approve exact goal hash `afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560` and target hash `709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34`. `H-211-GATE0B1` is released; `H-211-TARGET-INTEGRATION` remains open with the approved replacement binding. Registry and lesson state are unchanged. | Publish and validate the lifecycle transition, then stop for separate L4 payload authorization before governed PR #227 integration. Do not start Gate 0C, mutate the registry or lesson, begin paragraph production, or merge. |
 | BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | yes | Integrated through PR #226 merge `b6e75a558e7ddb34a3e36094a2ab8367249fa357`; post-merge CI run `33724859532` passed. The outline remains `approved_with_holds` at semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`. `H-OUTLINE-OWNER` and `H-MERGE-GOVERNANCE` are released; 13 content and lesson holds remain open. | Use the approved outline as the Gate 0B-1 design foundation. Do not repeat PR #226 integration work or treat the outline as lesson-production authority. |

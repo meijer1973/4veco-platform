@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const ownerDecision229 = require('./book2-owner-decision');
+const integrationDecision229 = require('./book2-integration-decision');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const OUTLINE_PATH = 'references/authored/book-outlines/book-2-outline.md';
@@ -688,16 +689,17 @@ function checkHolds(failures, files, meta, options) {
     const subjectId = paragraphScopes.length === 1 ? paragraphScopes[0].slice('paragraph:'.length) : null;
     const pin = (meta.target_registry_pins || []).find((item) => item.id === subjectId);
     if (isTargetIntegrationHold) {
-      if (hold.status === 'released' && hold.id === CANDIDATE_HOLD_BY_PARAGRAPH[subjectId]
-          && meta.issue_229_owner_decision?.integration_authorized === false) {
-        failures.push(`${META_PATH}: ${hold.id} release requires a separate immutable owner integration decision`);
+      if (hold.status === 'released' && hold.id === CANDIDATE_HOLD_BY_PARAGRAPH[subjectId]) {
+        const grantFailures = integrationDecision229.validateReleaseBinding(meta, hold.release_evidence);
+        failures.push(...grantFailures.map((failure) => `${META_PATH}: ${hold.id} release ${failure}`));
       }
       if (hold.status === 'open' && hold.candidate_binding) checkCandidateBinding(failures, hold, pin);
       else checkTargetBinding(failures, hold, pin, holds);
       const transitionBinding = hold.candidate_binding || hold.target_binding;
       if (options.action === 'target_authority_integration' && hold.status === 'open' && holdScopeMatches(hold, options)) {
-        if (meta.issue_229_owner_decision?.integration_authorized === false) {
-          failures.push(`${META_PATH}: ${hold.id} content approval does not authorize target integration`);
+        if (hold.id === CANDIDATE_HOLD_BY_PARAGRAPH[subjectId]) {
+          failures.push(...integrationDecision229.validateIntegrationDecision(meta.issue_229_integration_decision)
+            .map((failure) => `${META_PATH}: ${hold.id} ${failure}`));
         }
         if (hold.candidate_binding && hold.candidate_binding.candidate_status !== 'lead_reviewed_candidate') {
           failures.push(`${META_PATH}: action target_authority_integration requires lead_reviewed_candidate status for ${hold.id}`);
@@ -952,6 +954,18 @@ function findBookOutlineFailures(files = readFiles(), options = {}) {
   checkWorkflowSurfaces(failures, files, meta);
   checkApprovedMode(failures, meta, options.requireApproved === true);
   if (meta?.issue_229_owner_decision) failures.push(...ownerDecision229.validateEiDecision(meta));
+  if (meta?.issue_229_integration_decision) failures.push(...integrationDecision229.validateIntegrationDecision(meta.issue_229_integration_decision));
+  if (meta?.issue_229_candidate?.approval_status === 'pending') failures.push(...integrationDecision229.validatePendingDecision(meta));
+  if (meta?.issue_229_integration_decision) {
+    // One complete package/lifecycle contract for both entry points. A scoped
+    // action must not accept forged pending records or partial terminal release.
+    const durable = require('./check-book2-target-authority-remediation');
+    const input = durable.readInputs();
+    input.meta = meta;
+    input.registry = registry;
+    failures.push(...durable.findFailures(input, { durable: true,
+      gitRoot: options.gitRoot || files.__integrationGitRoot || options.root || ROOT }));
+  }
   return failures;
 }
 
@@ -1000,8 +1014,6 @@ function main() {
   if (options.chapter) console.log(`- chapter scope: ${options.chapter}`);
 }
 
-if (require.main === module) main();
-
 module.exports = {
   APPROVAL_PR_NUMBER,
   AUTHORITY_PATHS,
@@ -1025,3 +1037,7 @@ module.exports = {
   sha256CanonicalText,
   sha256SemanticAuthority,
 };
+
+// Publish the canonical semantic hasher before CLI validation reuses it through
+// the activation provenance helper.
+if (require.main === module) main();
