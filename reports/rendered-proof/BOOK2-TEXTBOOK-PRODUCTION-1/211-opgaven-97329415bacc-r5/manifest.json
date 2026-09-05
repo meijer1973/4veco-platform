@@ -1,0 +1,57 @@
+{
+  "source_md": "C:\\wt\\book2-211-bonus-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – opgaven.md",
+  "source_sha256": "bacccc1c9b063c4c786f2749d31993d94eb671fdc5bf0a899fb123d89bc0558b",
+  "source_html": "C:\\wt\\book2-211-bonus-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – opgaven.html",
+  "html_sha256": "9e27b80089dee95fa4ac61a3f07baaf95ff3650518943a730db122befec2a6f8",
+  "source_pdf": "C:\\wt\\book2-211-bonus-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – opgaven.pdf",
+  "pdf_sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953",
+  "assets": [
+    {
+      "path": "C:\\wt\\book2-211-bonus-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_we_1.svg",
+      "sha256": "8f60486f0d66e0d728570e9d9f40851e6834d2c5cbf18db96ea091893b6d2530"
+    },
+    {
+      "path": "C:\\wt\\book2-211-bonus-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_we_1.png",
+      "sha256": "f62cfd52983743e0ceb36a5963dd30030d8c220e30f100c6f30ae47361700bc6"
+    },
+    {
+      "path": "C:\\wt\\book2-211-bonus-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_ex_1.svg",
+      "sha256": "c2854b76d42ee1a2654f4e13886e5184b17119786bff71b7b908bedf4aae83e3"
+    },
+    {
+      "path": "C:\\wt\\book2-211-bonus-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_ex_1.png",
+      "sha256": "fc76afb4f507cf8e09a62a9cf7a209ded71b93f87c72b97803d95afc6678f24f"
+    }
+  ],
+  "sprint_id": "BOOK2-TEXTBOOK-PRODUCTION-1",
+  "artifact_id": "211-opgaven-97329415bacc-r5",
+  "render_dpi": 150,
+  "rendered_pages": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png",
+    "pages/page-008.png",
+    "pages/page-009.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "0265dff094b5c47c408f27570bfdc82c7b26af885ab4615cff94943830b3c7bd",
+    "page-002.png": "80f498601d5685a964abb1ab14dd3a0b9e1355fbba2400c7e17bdebb653e91a0",
+    "page-003.png": "ca9cb50a8f074fe5d7f6e5b22c084aa22338485e48aedd8200c0d2ce7c82ead7",
+    "page-004.png": "824050d16b84d572995c2bc2f336e87996d663708bf18709bf1686ef54c24f94",
+    "page-005.png": "f9ddc86d86341a9c5db92152f71ceb1f0acc51f23a3b78fc2c454ddd9402f386",
+    "page-006.png": "8470277e2c61cc5cc8a9107063ad476d441b3e77b0d027a1be54e435d5bf106b",
+    "page-007.png": "c5464d633b525ce8a22dab994eab026340c4b4405ff7a105405730ac46dcfb07",
+    "page-008.png": "be8a312018558ae7d2f6c8863a6180199265a9ddab0becbdd84329edb2a40749",
+    "page-009.png": "4cbeef659c9a7122ee979f474c000385c6b434ad8408049cc9d58aee87722ba8"
+  },
+  "contact_sheet": "contact-sheet.png",
+  "pages_inspected": [],
+  "inspection_status": "PENDING",
+  "visible_student_defects": null,
+  "inspected_at_normal_reading_scale": false,
+  "warnings": []
+}
