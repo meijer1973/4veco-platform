@@ -10537,3 +10537,93 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base 6eb34debb2210a2a4fa6718a13eaeefcacedc8f8 --head HEAD
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:58:41.640Z`
+- finished_at: `2026-09-05T21:58:41.782Z`
+- duration_ms: `142`
+- exit_code: `0`
+- stdout_sha256: `ef4febc87c09b3f471b7524bf1b36ea4777d683b4e846e9816535f63c459e033`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (shared)
+- shared platform: 2
+  - build-scripts/content/book-2/211/answers.md
+  - build-scripts/content/book-2/211/test_bonus.py
+- review evidence: 80
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-006.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-007.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-006.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-007.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-008.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-009.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-006.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-007.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-008.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-009.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-010.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-011.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-012.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-013.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-014.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-015.png
+  - r
+...[truncated 3581 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane textbook --cwd ../4veco-lessen --base 6a6c8183bd2e9b52d2898e587543f735e6e87299 --head HEAD
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:58:41.863Z`
+- finished_at: `2026-09-05T21:58:41.976Z`
+- duration_ms: `113`
+- exit_code: `0`
+- stdout_sha256: `e74c202251b1d2845e308886ffdbaeefb39d7562e4ae0960c405c822e5a14cdb`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (textbook)
+- Part A textbook: 3
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf
+
+```
+
+### stderr excerpt
+
+```text
+
+```
