@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T21:18:47.115Z
+Generated: 2026-09-05T21:31:13.437Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `159b2f795e0237ca6e8ab8b915a55e874d737d5f`
-Files indexed: 9145
+Source commit: `bdf0c0b3983fa6f776a505a6cab541e748a63dfd`
+Files indexed: 9206
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2716,7 +2716,7 @@ Count: 1030
 
 ## reports
 
-Count: 6372
+Count: 6433
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6686,6 +6686,7 @@ Count: 6372
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-root-verification.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-specialist-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-stage-1.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-acceptance-inventory-check.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-build-r1.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-build-r10.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-build-r11.json
@@ -6723,6 +6724,55 @@ Count: 6372
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-independent-render-check-r12.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-independent-review-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-independent-review-r12.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/2.2.2_fig_1-native.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/2.2.2_fig_2-native.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/2.2.2_fig_3-native.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/2.2.2_we_1-native.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/after-rebuild.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/antwoorden/page-1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/antwoorden/page-2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/antwoorden/page-3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/antwoorden/page-4.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/antwoorden/page-5.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/before.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/canonical-preservation.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/commands.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/committed-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/complete-route-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/diagnostic-history.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/diagnostic-manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/exact-probes.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/full-build.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/gray-p2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/gray-p3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/gray-p4.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/gray-p6.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/opgaven/page-1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/opgaven/page-2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/opgaven/page-3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/opgaven/page-4.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/opgaven/page-5.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/opgaven/page-6.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/paragraaf/page-01.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/paragraaf/page-02.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/paragraaf/page-03.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/paragraaf/page-04.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/paragraaf/page-05.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/paragraaf/page-06.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/paragraaf/page-07.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/paragraaf/page-08.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/paragraaf/page-09.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/paragraaf/page-10.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/pass0.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/personal-inspection.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence/render-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-final-check.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-preservation.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-probes.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-run.py
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence/2.2.2_fig_1-native.png
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence/2.2.2_fig_2-native.png
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence/2.2.2_fig_3-native.png
@@ -6778,8 +6828,11 @@ Count: 6372
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-render-check-r8.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-REVIEW-command-log.jsonl
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-REVIEW-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-acceptance-r13.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-build-r13.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-delta-r13.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-qc-adoption-r13.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-qc-rebuild-r13.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-r13-check.py
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-rebuild-r12.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-render-check-r12.json
@@ -6809,6 +6862,12 @@ Count: 6372
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-verification.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-1.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-2-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-checks.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-probes.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-review-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-check.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-checks.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-plan.md
@@ -6833,6 +6892,7 @@ Count: 6372
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-output-manifest.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-paragraph-archive-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-paragraph-archive-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-review-adoption-231-successor.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-planning-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-prerequisite-decisions.md
@@ -6847,6 +6907,7 @@ Count: 6372
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-SHORT-ALT-command-log.jsonl
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-SHORT-ALT-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-short-alt-preflight.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-successor-binding-independent-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-successor-binding-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-target-trace.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-timing-walkthrough.md
