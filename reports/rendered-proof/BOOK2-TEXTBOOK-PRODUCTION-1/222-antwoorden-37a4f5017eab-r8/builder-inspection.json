@@ -1,0 +1,29 @@
+{
+  "role": "builder_self_inspection_only",
+  "builder": "paragraph_222_builder",
+  "date": "2026-09-05",
+  "independent_acceptance": "NOT_SUPPLIED",
+  "generation_manifest": "manifest.json",
+  "pdf_sha256": "37a4f5017eab942b8fb0490c2d8cb25b0d8ad90d79d3229bdc5216e59e5e4362",
+  "pages_inspected": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "955697f493bc701c7f1562f8594e4f4995cb11f6705edc3bce4458cedc115768",
+    "page-002.png": "7bf2147b456b14e9af54a8e6c0ec4bb417828c0e7ddc97d22abb526024527f40",
+    "page-003.png": "3ec2d99cfe331239e13f5f786cf341d255c3fa603e585c865872f381bb319ebe",
+    "page-004.png": "931ffd72e269efda87f19003c902143414a992c7b4029550b8d21c83534d1f08",
+    "page-005.png": "21147d027cb3472e3cb2e549833a9f24a8d2a302e6cfad75e6652ca48bc42859"
+  },
+  "inspected_at_normal_reading_scale": true,
+  "builder_visible_student_defects": [],
+  "basis": "All five R8 full pages directly inspected.",
+  "boundaries": [
+    "Generation manifest remains immutable PENDING.",
+    "Builder inspection is not independent paragraph review, specialist QC, classroom observation or handoff acceptance."
+  ]
+}

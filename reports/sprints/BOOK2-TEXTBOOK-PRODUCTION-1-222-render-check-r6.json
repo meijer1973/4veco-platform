@@ -1,0 +1,42 @@
+{
+  "paragraph": "2.2.2",
+  "visual_acceptance": "NOT_SUPPLIED_BY_THIS_SCRIPT",
+  "automated_status": "PASS",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "3ec3c5cddd08bafb512dbe21748c9d32b62f04544301767bb8425070a7bba968",
+      "pages": 10,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": 14.378,
+      "proof_directory": "C:\\wt\\book2-222-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-paragraaf-3ec3c5cddd08-r6",
+      "all_page_hashes_match": true
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "68ee20cd9ad9c2fbdaf6925284f11a8c14007b18fe41ba72173c168780e58aba",
+      "pages": 6,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": 14.378,
+      "proof_directory": "C:\\wt\\book2-222-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-opgaven-68ee20cd9ad9-r6",
+      "all_page_hashes_match": true
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "37a4f5017eab942b8fb0490c2d8cb25b0d8ad90d79d3229bdc5216e59e5e4362",
+      "pages": 5,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": null,
+      "proof_directory": "C:\\wt\\book2-222-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-antwoorden-37a4f5017eab-r6",
+      "all_page_hashes_match": true
+    }
+  ],
+  "byte_identical_rebuild": true,
+  "checks": [
+    "exact frozen goals/context/a-f/2+2+2+2+2+1points/short answers",
+    "one exercise HTML definition in both editions",
+    "no leaked fences or active resources",
+    "every printed text/font and placed figure label meets12pt floor",
+    "all assets and all rendered page hashes fresh; manifests honestly pending"
+  ]
+}
