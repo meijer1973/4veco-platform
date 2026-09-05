@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-09-02",
+  "updated_on": "2026-09-05",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -76,14 +76,28 @@
     },
     {
       "roadmap_id": "textbook-production-roadmap",
-      "version": "v1.20-gate0b1-owner-approved-transition",
+      "version": "v1.21-book2-gated-part-a-production",
       "title": "Textbook Production Roadmap",
       "status": "active",
       "path": "docs/roadmaps/textbook/textbook-production-roadmap.md",
       "owner": "textbook_team",
+      "updated_on": "2026-09-05",
+      "supersedes": [
+        "docs/roadmaps/outdated/textbook-production-roadmap-v1.20-gate0b1-owner-approved-transition.md"
+      ],
+      "notes": "Active BOOK2-TEXTBOOK-PRODUCTION-1 under #229/#223 after authorized PR231 merge 96416b6b5bd57094576e9aba0a42d682584ec479 and green main CI33963305398. Frozen twelve targets and Ei semantics unchanged. Root/chapter prerequisites and owner-approved C22 teaching holds are released; only out-of-scope H-213-OPC2 remains open. §211 is the independently accepted internal exemplar; §212 and §221 production proceed through separate gates, §213 planning only, and §222 waits for reviewed §212/§221 teaching. Full 41-PDF package, paired compatibility/CI and final lead/human review remain pending. No target mutation, Part B, future merge, diagnostics/mastery/PV, broad product adoption or student/product-use authority follows from this status."
+    },
+    {
+      "roadmap_id": "textbook-production-roadmap",
+      "version": "v1.20-gate0b1-owner-approved-transition",
+      "title": "Textbook Production Roadmap",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/textbook-production-roadmap-v1.20-gate0b1-owner-approved-transition.md",
+      "owner": "textbook_team",
       "updated_on": "2026-09-03",
       "supersedes": [],
-      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 is integrated through PR #226 merge b6e75a558e7ddb34a3e36094a2ab8367249fa357 and post-merge CI run 33724859532 passed. The outline remains approved_with_holds at semantic hash 69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde. On 2026-09-03 the owner approved exact §2.1.1 goal hash afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560 and target hash 709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34 in PR #227 comment 5524345692. H-211-GATE0B1 is released; H-211-TARGET-INTEGRATION remains open with the approved replacement binding. The target registry and lesson remain unchanged. Exact-head transition CI and separate payload authorization remain before PR #227 integration. Paragraph production, target-specific guardrails, Gate 0C, merge, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
+      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 is integrated through PR #226 merge b6e75a558e7ddb34a3e36094a2ab8367249fa357 and post-merge CI run 33724859532 passed. The outline remains approved_with_holds at semantic hash 69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde. On 2026-09-03 the owner approved exact §2.1.1 goal hash afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560 and target hash 709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34 in PR #227 comment 5524345692. H-211-GATE0B1 is released; H-211-TARGET-INTEGRATION remains open with the approved replacement binding. The target registry and lesson remain unchanged. Exact-head transition CI and separate payload authorization remain before PR #227 integration. Paragraph production, target-specific guardrails, Gate 0C, merge, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked.",
+      "superseded_by": "docs/roadmaps/textbook/textbook-production-roadmap.md"
     },
     {
       "roadmap_id": "inspection-standards-compatibility",

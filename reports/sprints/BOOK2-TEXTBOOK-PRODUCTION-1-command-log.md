@@ -256,3 +256,35 @@ No §213 student production is permitted until independent plan acceptance and
 reviewed §212 teaching/handoff, followed by root release. H-213-OPC2 remains
 open and outside the agreed interval-MK/MO scope; no optimization teaching is
 being authorized through advance planning.
+
+## Current roadmap reconciliation and additional technical checks
+
+Root updated the live textbook roadmap/ledger and matching version-index
+projections to the actual combined production state. The full prior roadmap
+is preserved under docs/roadmaps/outdated as v1.20; canonical LF content was
+compared with the prior Git blob and is identical (SHA-256
+66c9e1d04ea9c633422a409ecfef253a9d6bdefa8a1e3db031d7fd0e8e26ef90).
+Historical rows remain intact and are labelled as historical decisions, not
+renewed acceptance or current blockers. Version-index validation PASS (153
+entries); internal dashboard generation completed, changing only its timestamp
+because its existing source selection does not include the textbook roadmap.
+No dashboard source-selection or governance change was made.
+
+Additional local focused regression: 20 print + 6 chapter + 13 book = 39 PASS
+in 15.061 seconds, plus 7 existing book-library tests PASS in 0.022 seconds.
+The new test-only lifecycle delta separately passed independent review at
+81923e55, as recorded in the book-pipeline-review report. These 46 checks are
+local Python checks, separate from platform Jest and required remote CI.
+
+Both coordinated lane checks passed after §212 plan adoption. Paired candidate
+agent indexes pass with explicit lesson HEAD/branch parameters. The global
+URL index retains the standard main-URL generator policy; an initial task-branch
+retarget was corrected with the standard generator, not a checker exception.
+
+Required platform CI always checks against lesson main; it must not silently
+consume this same-named candidate lesson branch. Final publication is therefore
+a cross_repo_bundle with immutable paired payloads and all three supported
+compatibility states. Candidate-pair local index freshness is not represented
+as default main-compatibility or remote CI. The existing trusted lesson-first
+generated-index refresh remains available at a later separately authorized
+integration gate; no workflow, bypass, merge or CI waiver is introduced here.

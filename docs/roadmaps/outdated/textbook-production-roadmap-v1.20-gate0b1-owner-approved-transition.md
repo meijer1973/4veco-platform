@@ -1,26 +1,22 @@
 # Textbook Production Roadmap
 
-Generated: 2026-09-05
+Generated: 2026-09-03
 Roadmap ID: `textbook-production-roadmap`
-Roadmap version: `v1.21-book2-gated-part-a-production`
+Roadmap version: `v1.20-gate0b1-owner-approved-transition`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Folder: `docs/roadmaps/textbook/`
 Sprint ledger: `docs/roadmaps/textbook/sprint-ledger.md`
 End-state draft: `docs/roadmaps/textbook/textbook-end-state.md`
-Scope: `BOOK2-TEXTBOOK-PRODUCTION-1` is active under Issue #229, with #223 as the first-exemplar milestone and codex-root as accountable coordinator. Produce and independently review the complete Book 2 Part A package: twelve paragraphs, three chapters and separate student/answer books, 41 PDFs in total. The twelve frozen target records and three-way Ei semantics remain unchanged; literal registry status stays `candidate_review_ready` with separate owner approval and governed activation evidence. Part B, target changes and future PR merges are not authorized by this production task.
+Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. `BOOK2-TARGET-AUTHORITY-REMEDIATION-1` is active under Issue #229 to repair all twelve Book 2 target records as one exact platform-only candidate package. The owner approved the frozen twelve-record content and three-way Ei semantics on 2026-09-05 and requested lifecycle/evidence corrections to PR #230. The approved outline stays `approved_with_holds` at superseding semantic hash `919c39f64dd212dba37b62902a5bb2e2ce6388c6020a0491e1621017ae2192a1`. Twelve target integration holds remain open; lesson writes, generated student output, target integration, merge, and Phase B remain unauthorized.
 
 ## Operating Goal
 
-PR #231 was owner-authorized at `086e6b212edc9260fa34f050e9b01b02ec04b035`, merged through the authorized merge-commit lane without admin bypass as `96416b6b5bd57094576e9aba0a42d682584ec479`, and verified by green post-merge main CI run `33963305398`. Do not repeat that integration. The root/chapter-plan prerequisites are reviewed and released. The owner separately approved the Chapter 2.2/§2.2.1/§2.2.2 plans at lesson commit `10334028bbadd537fc3790281e90bebdfa827c1e`, releasing H-221-PRIOR and H-22-ELASTIC-CONTRAST through published evidence. Only H-213-OPC2 remains open, for the formal output-choice extension outside this project.
+Current 2026-09-05 decision: PR #230 merged at ad27f9c30205042c01cacf0b362f4d3f87e6c7a9 with green post-merge CI. The owner now authorizes the governed target transition, then complete Book 2 Part A production. Execute BOOK2-TARGET-INTEGRATION-1 first, preserving frozen package and historical content approval. Stop for its exact-payload governance merge authorization; lesson output begins only after its authorized main integration and green CI. The prior scope/ledger entries below are historical snapshots, superseded for current work by this decision and the top active row.
 
-§2.1.1 is accepted as the internal exemplar after fresh independent paragraph review, separate QC, full-page inspection and both Part A validation profiles. Its accepted handoff is at lesson `7d46d26e54e96e05aa295e6dcfab22f57a2f270e`. §2.1.2's plan independently passed and production is released; §2.2.1 production runs in parallel because its actual prerequisites are Book 1 retrieval, not unfinished §2.1.2. §2.1.3 is planning only until reviewed §2.1.2 teaching/handoff. §2.2.2 waits for reviewed §2.1.2 and §2.2.1. No chapter/book output has yet been accepted. Classroom pacing and attainment remain observation-dependent.
+## Book 2 Print Series
 
-Current evidence: `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.md`, the per-plan review records and exact paragraph handoffs. The previous roadmap snapshot is retained under `docs/roadmaps/outdated/textbook-production-roadmap-v1.20-gate0b1-owner-approved-transition.md`. Historical ledger rows and the earlier production series below are preserved as history, not current authority or renewed acceptance of salvage drafts.
-
-## Historical Book 2 Print Series
-
-The earlier print-production series below records historical work. The current combined continuation rebuilds and reviews all three chapters under their actual prerequisites and the independently accepted first-exemplar gate; old file presence and verdicts do not count as fresh acceptance.
+The current print-production series proceeds through Book 2 one controlled chapter sequence at a time. Book 2 starts with costs, revenue, break-even, and marginal concepts because those foundations support elasticity and surplus. Chapter 2.1 is closed for now; Chapter 2.2 should begin with readiness before any paragraph writing.
 
 1. `B2-READY-1` - short readiness gate for Book 2 section 2.1.
 2. `B2-2.1-A` - first Chapter 2.1 vertical slice, now treated as draft production evidence rather than the final quality bar.
@@ -44,7 +40,7 @@ The earlier print-production series below records historical work. The current c
 
 `B2-2.2-READY-1` is closed as readiness only. It did not write paragraphs or regenerate lesson output. Human instruction opened `B2-2.2.1-HARDEN` on 2026-06-17 and `B2-2.2.2-HARDEN` on 2026-06-18. Human instruction on 2026-06-19 opened `GOAL-B2-2.2-CHAPTER-COMPLETE-1`, authorizing completion of 2.2.3, 2.2.4, Chapter 2.2 target promotion, and Chapter 2.2 QA in one governed batch before returning for human review. Do not start Chapter 2.3, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, or student/product-use work from this roadmap state.
 
-## Historical Work Lanes
+## Work Lanes
 
 | Lane | Priority | Scope | Blocking rule |
 |---|---|---|---|
@@ -60,7 +56,6 @@ When an active sprint exists, it sits at the top. When no sprint is active, the 
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
-| BOOK2-TEXTBOOK-PRODUCTION-1 | Book 2 Paper Textbook Production | no | Active combined #229/#223 continuation. PR231 and green main CI prerequisite complete; frozen targets unchanged. §2.1.1 internally accepted; §2.1.2 and §2.2.1 in production; §2.1.3 planning only. Later paragraph, chapter, book, paired compatibility/CI, independent lead and owner gates remain. No future merge authority. |
 | BOOK2-TARGET-INTEGRATION-1 | Governed Book 2 Target Activation | yes | Implementation/structural evidence complete: immutable grant, actual activation and twelve releases; independent verification and lead round2 PASS WITH FLAGS, full suite and reviewed-head CI green. Final published-delta review, final-head CI and applied readiness are required on PR231 before owner handoff. Not merged; five independent holds and the main/CI-before-lessons gate remain. |
 | BOOK2-TARGET-AUTHORITY-REMEDIATION-1 | Book 2 Target Authority Remediation | yes | Issue #229 Phase A complete with structural lead `PASS WITH FLAGS` on exact package `914d1a39…71310`; only empirical classroom timing is carried to Phase B. The owner approved frozen target content and Ei semantics; lifecycle/evidence corrections and fresh CI/readiness are in progress. Target integration, lesson work, Phase B, and merge remain unauthorized. |
 | B2-2.1.1-GOAL-TARGET-DESIGN-1 | Book 2 Paragraph 2.1.1 Goal And Target Design | yes | Both exact package hashes are owner-approved in PR #227 comment `5524345692`. `H-211-GATE0B1` is released; `H-211-TARGET-INTEGRATION` remains open with the approved replacement binding. The target registry and lesson are unchanged. Exact-head transition CI and separate payload authorization remain before governed PR #227 integration. |
@@ -85,7 +80,7 @@ When an active sprint exists, it sits at the top. When no sprint is active, the 
 | B2-2.1-A | Book 2 Chapter 2.1 Part A Vertical Slice | yes | Closed PASS WITH FLAGS after lead review. Built 2.1.1 through 2.1.4 as printed textbook output, generated paragraph/chapter PDFs and answer models, recorded review evidence, and passed paragraph/chapter/book validation. |
 | B2-READY-1 | Book 2 Section 2.1 Readiness Gate | yes | Closed PASS WITH FLAGS after lead review. It created the Book 2 production brief, Chapter 2.1 plan, target-exercise readiness check, notation/graph contract, Book 1 style extraction, textbook sprint ledger, and end-state draft. Carried flags: 2.1.4 placeholder, 2.1.1-2.1.3 migrated target review status, and end-state draft not locked. |
 
-## Historical B2-2.2-READY-1 Contract
+## B2-2.2-READY-1 Contract
 
 `B2-2.2-READY-1` must produce:
 
@@ -105,4 +100,4 @@ Do not mutate `references/machine/`, `references/external/`, protected reference
 
 ## Next Action
 
-Complete and independently review §2.1.2 and §2.2.1, resolving builder corrections before acceptance. Continue the published combined production plan through the remaining paragraph and chapter gates, then assemble and inspect both complete books. Keep H-213-OPC2 and unrelated product gates intact. Return the substantial 41-PDF package with exact reviewed sources, paired compatibility/CI and required lead/human review evidence. Any future merge requires separate exact-payload authorization.
+Complete PR #231's external final published-delta review, exact-head CI and readiness proof. Request owner authorization for that exact payload; then use the governed merge-commit lane without admin bypass and verify post-merge main CI before reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md. The completed row records implementation/evidence, not merged authority or student production.
