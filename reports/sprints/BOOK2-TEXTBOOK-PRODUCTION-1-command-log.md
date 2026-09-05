@@ -165,3 +165,94 @@ a1077e8c9c98c783db178fa2e2862f2c8de9a93d. Historical first-draft paths in the
 builder reports must be read at those commits, not as current acceptance.
 The R2 history, all R3 proof, student sources/assets/PDFs, and other worktrees
 remain untouched. No whitespace-rule waiver or proof-byte rewrite was used.
+
+## Accepted §211 internal exemplar and next paragraph gate
+
+Independent paragraph review by correction_plan_review: PASS WITH FLAGS on
+exact platform16c3b1c5 / lessonc37dfba8 R3 payload. Independent specialist QC by
+elasticity_planning: PASS WITH FLAGS on the same bytes; all 31 pages personally
+inspected, all calculations independently checked, no open core defect.
+Root recorded the actual paragraph review and adopted only the specialist's
+new commits b5ce54a1/daa2e19f and lesson quality-only8191e77c. Inherited June
+acceptance was replaced, not reused. The canonical verdict block was added
+without changing the judgment; five Markdown hard-break spaces from the source
+review were removed after the whitespace check identified them.
+
+Current lesson handoff head: 7d46d26e54e96e05aa295e6dcfab22f57a2f270e.
+Root reran student-web and publisher-print Part A profiles: both PASS, parsing
+the explicit PASS WITH FLAGS verdict and valid schema-v2 quality reference.
+The integrated shared platform and textbook lesson lanes both PASS, including
+all three independent inspection.json files. This resolves the isolated older
+QC baseline's disclosed classifier limitation without an exception or waiver.
+Root also remapped the canonical R3 manifest paths to its integrated pair and
+rehashed all 56 MD/HTML/PDF/asset/page entries: PASS. Review hash matches the
+quality record exactly:92b4a9462caf8316274fb58f8beef5c850147c44e6bf80b9a28fad442d9dbe96.
+
+The internal exemplar gate is complete. The 54-minute core remains an estimate,
+not observed classroom pacing; the optional supported route needs 66 minutes.
+The orange-stroke enhancement is non-blocking only for these exact redundant
+representations. No future essential-curve task inherits that judgment.
+
+§212 is assigned to separate paragraph_212_builder in paired worktrees
+C:/wt/book2-212-production-20260905/, branch agent/book2-212-production-20260905,
+claimed as BOOK2-TEXTBOOK-PRODUCTION-1-212. Its initial authority is planning
+only: exact template/alignment/visual/timing plan plus stage-1 evidence. Student
+authoring waits for the independent plan gate. Approved currentness212 PASS.
+
+Book tooling independently passed Round2 at d6583627 after the structural
+anchor correction; the book-pipeline-review report records actual findings and
+44 independently passing focused tests. No chapter/book output exists yet.
+The full combined package, exact-head CI, paired PRs and final owner gate are
+still pending; §211 is not being handed off as project completion.
+
+## Parallel §221 assignment and integrated regression
+
+Root assigned §221 to distinct paragraph_221_builder in the paired worktrees
+`C:/wt/book2-221-production-20260905/`, branch
+`agent/book2-221-production-20260905`, claimed as
+`BOOK2-TEXTBOOK-PRODUCTION-1-221`. The assignment starts from platform
+0e940acb7d1f1811da3d5627d0466affb7767c0e and lessons
+7d46d26e54e96e05aa295e6dcfab22f57a2f270e. The already independently reviewed,
+owner-approved §221 plan is unchanged; the external two-hold release governs
+its historical pending wording. The builder confirmed approved paragraph
+currentness and durable twelve-record authority before authoring.
+
+Independent reviewer correction_plan_review passed the §211 handoff at exact
+lesson head 7d46d26e: all nine output hashes, three proof-manifest hashes and
+review/quality binding match the accepted R3 payload. Timing and contrast flags,
+bounded registry mappings, duplicate-route avoidance and the distinction between
+technical companion eligibility and authorization remain explicit.
+
+The same reviewer independently confirmed the parallelism: §221's actual
+prerequisites are printed Book 1 old-base percentages, demand-factor distinctions
+and substitutes, not unfinished §212. §211 was accepted first. §222 still waits
+for independently reviewed §221 and §212 teaching/handoffs; parallel §221 does
+not release that content dependency. Each paragraph retains a distinct builder
+and independent plan/content/visual review gates.
+
+At integrated platform head 0e940acb, `npm.cmd run check:platform` completed
+successfully (exit 0): 110 passed / 6 skipped suites, 1,870 passed / 8 skipped
+tests, 1,878 total, 437.344 seconds. Expected negative-fixture diagnostics are
+not failures. The 44 focused Python print/chapter/book/legacy checks are separate
+local checks, not represented as part of this Jest suite or remote CI. Exact
+final-head branch CI remains pending.
+
+## §212 plan acceptance and bounded §213 preparation
+
+Root adopted the published §212 planning-only lesson commit48690ee5 as654c5e4
+and platform stage-1 evidence ca0b8c81/74368c6c as9bffd4bd/44f9f6a0. The
+independent correction_plan_review verdict is PASS on that exact plan, no
+required correction. The separate 212-plan-review report records the actual
+checks and root's production release conditional on importing the accepted
+§211 quality/handoff bindings and rerunning foundation preflight. Legacy §212
+student material remains unaccepted until fresh production and review.
+
+While §212 and §221 continue, root created paired worktrees
+`C:/wt/book2-213-production-20260905/`, branch
+`agent/book2-213-production-20260905`, from platform44f9f6a0 and lesson654c5e4.
+Distinct paragraph_213_builder is assigned planning only under
+BOOK2-TEXTBOOK-PRODUCTION-1-213: one §213 textbook plan and one stage-1 report.
+No §213 student production is permitted until independent plan acceptance and
+reviewed §212 teaching/handoff, followed by root release. H-213-OPC2 remains
+open and outside the agreed interval-MK/MO scope; no optimization teaching is
+being authorized through advance planning.
