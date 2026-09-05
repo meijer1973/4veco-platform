@@ -122,6 +122,12 @@ b) Bij L: MK over 0–4 = (40 − 20)/4 = **5**; over 4–12 = (56 − 40)/8 = *
 
 c) Nee. De tabel geeft alleen de totale verandering van Q = 4 naar Q = 12. Je mist de afzonderlijke totale kosten bij **Q = 5** (of de kostenverandering van 4 naar 5). Een gemiddelde over acht extra producten bepaalt niet de extra kosten van alleen het vijfde product.
 
+**Beoordelingscriteria — een sterk antwoord:**
+
+- **a)** Deelt de kostenverschillen door de juiste aantallen extra verpakkingen (4 en 8), vindt bij K MK = 3 en 3 euro per extra verpakking en weerlegt dat een grotere ΔTK altijd een grotere MK betekent.
+- **b)** Vergelijkt de dalende MK van L (5 naar 2) met de constante MK van K en legt uit waarom hetzelfde eindbedrag TK = € 56 niet hetzelfde marginale patroon bewijst.
+- **c)** Onderscheidt het intervalgemiddelde van de extra kosten van alleen de vijfde verpakking en benoemt de ontbrekende TK bij Q = 5 of de kostenverandering van 4 naar 5.
+
 ## Herhaling / Herhaling en interleaving
 
 **Opgave 9**
