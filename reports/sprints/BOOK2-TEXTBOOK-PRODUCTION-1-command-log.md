@@ -8459,3 +8459,493 @@ Paragraph lane scope: PASS (textbook)
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-qc-adoption-r13.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:21:46.065Z`
+- finished_at: `2026-09-05T21:21:46.309Z`
+- duration_ms: `244`
+- exit_code: `0`
+- stdout_sha256: `17746ec2df48c8f562ddaa16b709237f944d0e738ffa4032d8cdda777bd0cfe3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS",
+  "checks": 157,
+  "pages": 21,
+  "figures": 4,
+  "grayscale": 4,
+  "pdfs": 3,
+  "only_current_QC_addition": true,
+  "legacy_byte_prefix_unchanged": true,
+  "root_handoff": "NOT_YET_CREATED",
+  "visual_claim": "Exact attributed specialist bindings; no fresh root view claimed."
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/222/test_source.py -v
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:21:46.369Z`
+- finished_at: `2026-09-05T21:21:47.319Z`
+- duration_ms: `950`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `b792280e21e24bc61ca43a743ffde5c2182488564336380808cc527f65bbfe5d`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+test_all_four_assets_and_exact_revenue_geometry (__main__.Paragraph222Tests.test_all_four_assets_and_exact_revenue_geometry) ... ok
+test_all_observed_calculations_exact_rational (__main__.Paragraph222Tests.test_all_observed_calculations_exact_rational) ... ok
+test_all_svg_accessible_titles_are_short_noun_phrases (__main__.Paragraph222Tests.test_all_svg_accessible_titles_are_short_noun_phrases) ... ok
+test_exact_frozen_target_and_goals (__main__.Paragraph222Tests.test_exact_frozen_target_and_goals) ... ok
+test_exact_shared_exercise_route (__main__.Paragraph222Tests.test_exact_shared_exercise_route) ... ok
+test_explanation_line_breaks_use_supported_pipeline_contract (__main__.Paragraph222Tests.test_explanation_line_breaks_use_supported_pipeline_contract) ... ok
+test_frozen_registry_tamper_fails_closed (__main__.Paragraph222Tests.test_frozen_registry_tamper_fails_closed) ... ok
+test_full_faded_local_and_interval_chain (__main__.Paragraph222Tests.test_full_faded_local_and_interval_chain) ... ok
+test_local_conditions_and_no_numeric_small_cutoff (__main__.Paragraph222Tests.test_local_conditions_and_no_numeric_small_cutoff) ... ok
+test_manifest_relocation_preserves_hashes_and_scope (__main__.Paragraph222Tests.test_manifest_relocation_preserves_hashes_and_scope) ... ok
+test_native_pandoc_short_alts_preserve_full_caption (__main__.Paragraph222Tests.test_native_pandoc_short_alts_preserve_full_caption) ... ok
+test_opgave4b_signed_quantity_then_price_then_ratio (__main__.Paragraph222Tests.test_opgave4b_signed_quantity_then_price_then_ratio) ... ok
+test_safe_paths_and_deterministic_sources (__main__.Paragraph222Tests.test_safe_paths_and_deterministic_sources) ... ok
+test_schematic_has_all_directions_and_conditions (__main__.Paragraph222Tests.test_schematic_has_all_directions_and_conditions) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.471s
+
+OK
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/222/check_render.py --lesson-root ../4veco-lessen --manifest reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-build-r13.json --rebuild --output reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-qc-rebuild-r13.json
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:21:47.364Z`
+- finished_at: `2026-09-05T21:21:55.313Z`
+- duration_ms: `7949`
+- exit_code: `0`
+- stdout_sha256: `0ef28ad2d237d45128b2f78c5c5f44750dc87dac467208ca2e15f138010b1c89`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.2
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+{
+  "paragraph": "2.2.2",
+  "visual_acceptance": "NOT_SUPPLIED_BY_THIS_SCRIPT",
+  "automated_status": "PASS",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c",
+      "pages": 10,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": 14.378,
+      "proof_directory": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-paragraaf-36feb7873637-r13",
+      "all_page_hashes_match": true
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555",
+      "pages": 6,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": 14.378,
+      "proof_directory": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-opgaven-0a251a4973b1-r13",
+      "all_page_hashes_match": true
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2",
+      "pages": 5,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": null,
+      "proof_directory": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-antwoorden-61cbde67e815-r13",
+      "all_page_hashes_match": true
+    }
+  ],
+  "byte_identical_rebuild": true,
+  "checks": [
+    "exact frozen goals/context/a-f/2+2+2+2+2+1points/short answers",
+    "one exercise HTML definition in both editions",
+    "no leaked fences or active resources",
+    "every printed text/font and placed figure label meets12pt floor",
+    "all assets and all rendered page hashes fresh; manifests honestly pending"
+  ]
+}
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:22:31.496Z`
+- finished_at: `2026-09-05T21:22:31.574Z`
+- duration_ms: `78`
+- exit_code: `0`
+- stdout_sha256: `327d7eadbdbcd4939f67f5c7fe2bba97a0d31383b2bce4bcd4a16c9fcfea72e3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.2 "Elasticiteit en omzet"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.2 Elasticiteit en omzet
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.2 Elasticiteit en omzet – paragraaf.md
+  OK opgaven.md: 2.2.2 Elasticiteit en omzet – opgaven.md
+  OK antwoorden.md: 2.2.2 Elasticiteit en omzet – antwoorden.md
+  OK 2.2.2 Elasticiteit en omzet – paragraaf.html (400.8 KB)
+  OK 2.2.2 Elasticiteit en omzet – opgaven.html (140.1 KB)
+  OK 2.2.2 Elasticiteit en omzet – antwoorden.html (16.6 KB)
+  OK 2.2.2 Elasticiteit en omzet – paragraaf.pdf (313 KB)
+  OK 2.2.2 Elasticiteit en omzet – opgaven.pdf (119 KB)
+  OK 2.2.2 Elasticiteit en omzet – antwoorden.pdf (26 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 4 image refs all resolve
+  OK _assets/: 4 SVGs, 4 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.2-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.2-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.2 "Elasticiteit en omzet" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:22:31.621Z`
+- finished_at: `2026-09-05T21:22:31.683Z`
+- duration_ms: `62`
+- exit_code: `0`
+- stdout_sha256: `9b22c97f888573b97769294368390ceecd914985baec73c3cc6452228a85d0f3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.2 "Elasticiteit en omzet"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.2 Elasticiteit en omzet
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.2 Elasticiteit en omzet – paragraaf.md
+  OK opgaven.md: 2.2.2 Elasticiteit en omzet – opgaven.md
+  OK antwoorden.md: 2.2.2 Elasticiteit en omzet – antwoorden.md
+  OK 2.2.2 Elasticiteit en omzet – paragraaf.pdf (313 KB)
+  OK 2.2.2 Elasticiteit en omzet – opgaven.pdf (119 KB)
+  OK 2.2.2 Elasticiteit en omzet – antwoorden.pdf (26 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 4 image refs all resolve
+  OK _assets/: 4 SVGs, 4 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.2-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.2-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.2 "Elasticiteit en omzet" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.2.2
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:22:31.726Z`
+- finished_at: `2026-09-05T21:22:33.581Z`
+- duration_ms: `1855`
+- exit_code: `0`
+- stdout_sha256: `aa60a4cb23d1b92440304dd144a996965125533013bb34e25474645411d6cfe3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.2
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:22:33.625Z`
+- finished_at: `2026-09-05T21:22:34.187Z`
+- duration_ms: `562`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-acceptance-inventory-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:28:46.592Z`
+- finished_at: `2026-09-05T21:28:46.980Z`
+- duration_ms: `388`
+- exit_code: `0`
+- stdout_sha256: `f2f83315da10552f3a877b9d0b908187c8fe9ccce508046242a9ac632509a39d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS",
+  "canonical_records": 3,
+  "root_fields_only": true,
+  "lesson_changed_paths": [
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-handoff.md"
+  ],
+  "handoff_sections": 9,
+  "handoff_md_pdf_hashes": 6,
+  "counts": {
+    "A": 6,
+    "C": 12,
+    "L": 8,
+    "P": 15
+  },
+  "present": 26,
+  "current_pdf_hashes": 18,
+  "book_complete": false
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:28:47.029Z`
+- finished_at: `2026-09-05T21:28:47.104Z`
+- duration_ms: `75`
+- exit_code: `0`
+- stdout_sha256: `327d7eadbdbcd4939f67f5c7fe2bba97a0d31383b2bce4bcd4a16c9fcfea72e3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.2 "Elasticiteit en omzet"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.2 Elasticiteit en omzet
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.2 Elasticiteit en omzet – paragraaf.md
+  OK opgaven.md: 2.2.2 Elasticiteit en omzet – opgaven.md
+  OK antwoorden.md: 2.2.2 Elasticiteit en omzet – antwoorden.md
+  OK 2.2.2 Elasticiteit en omzet – paragraaf.html (400.8 KB)
+  OK 2.2.2 Elasticiteit en omzet – opgaven.html (140.1 KB)
+  OK 2.2.2 Elasticiteit en omzet – antwoorden.html (16.6 KB)
+  OK 2.2.2 Elasticiteit en omzet – paragraaf.pdf (313 KB)
+  OK 2.2.2 Elasticiteit en omzet – opgaven.pdf (119 KB)
+  OK 2.2.2 Elasticiteit en omzet – antwoorden.pdf (26 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 4 image refs all resolve
+  OK _assets/: 4 SVGs, 4 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.2-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.2-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.2 "Elasticiteit en omzet" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:28:47.146Z`
+- finished_at: `2026-09-05T21:28:47.211Z`
+- duration_ms: `65`
+- exit_code: `0`
+- stdout_sha256: `9b22c97f888573b97769294368390ceecd914985baec73c3cc6452228a85d0f3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.2 "Elasticiteit en omzet"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.2 Elasticiteit en omzet
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.2 Elasticiteit en omzet – paragraaf.md
+  OK opgaven.md: 2.2.2 Elasticiteit en omzet – opgaven.md
+  OK antwoorden.md: 2.2.2 Elasticiteit en omzet – antwoorden.md
+  OK 2.2.2 Elasticiteit en omzet – paragraaf.pdf (313 KB)
+  OK 2.2.2 Elasticiteit en omzet – opgaven.pdf (119 KB)
+  OK 2.2.2 Elasticiteit en omzet – antwoorden.pdf (26 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 4 image refs all resolve
+  OK _assets/: 4 SVGs, 4 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.2-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.2-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.2 "Elasticiteit en omzet" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.2.2
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:28:47.256Z`
+- finished_at: `2026-09-05T21:28:49.037Z`
+- duration_ms: `1781`
+- exit_code: `0`
+- stdout_sha256: `aa60a4cb23d1b92440304dd144a996965125533013bb34e25474645411d6cfe3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.2
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:28:49.072Z`
+- finished_at: `2026-09-05T21:28:49.634Z`
+- duration_ms: `562`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```

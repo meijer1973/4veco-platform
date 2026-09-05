@@ -243,6 +243,16 @@ three token line breaks remain. Specialist QC/handoff are still pending.
 Earlier canonical-FAIL progress entries are historical. Exact adoption and
 179-check root proof are in review-adoption-222r13-213r6.md.
 
+**§222 R13 current specialist and root acceptance — COMPLETE WITH FLAGS.**
+Distinct specialist PASS WITH FLAGS is adopted at27b9aee4 /7f65869, report
+3360264597075311ce9081b1dcb0c852e28bcff243cc2207a0112998e4b72687.
+Root157 exact binding checks,14 source tests, native9document/8asset rebuild,
+both actual PartA profiles and authority guards pass. Root-only current QC
+acceptance and complete handoff follow; specialist/legacy fields and all pupil
+bytes stay unchanged. See222-root-acceptance-r13.md. Earlier pending-QC entries
+are historical. Timing51.5/66.5/79.5 and attainment remain unobserved; final212
+package-successor linkage and full book/CI remain, not a new owner hold.
+
 ## Existing accepted flags, not concealed corrections
 
 - Classroom timing/attainment remains unobserved throughout.

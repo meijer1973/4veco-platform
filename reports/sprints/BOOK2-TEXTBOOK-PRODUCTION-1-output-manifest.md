@@ -5,8 +5,9 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform `86fe93e0d4d18a73c3907c79214ba9bc69a2e8ec`, lessons
-`ff658d865dca1ff2326527a8da22c04b7daeb49e`.
+Snapshot: platform specialist evidence `27b9aee4a3dc61f3e0d53ab68c73bb564805deba`,
+lessons specialist `7f65869b17a1b24fc47a68064fc60fcd72050422`, followed by
+root-only §222 acceptance/handoff recorded in222-root-acceptance-r13.md.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 All paths below are relative to the lesson book root
 `Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/`.
@@ -14,8 +15,8 @@ All paths below are relative to the lesson book root
 ## Counts and evidence rules
 
 Expected: 27 theory + 6 consolidation + 6 chapter + 2 book = **41 PDFs**.
-At this checkpoint: **1 internally gate-closed current paragraph package**:
-3 accepted-with-flags PDFs,15 adopted candidate PDFs,8 legacy unaccepted and15
+At this checkpoint: **2 internally gate-closed current paragraph packages**:
+6 accepted-with-flags PDFs,12 adopted candidate PDFs,8 legacy unaccepted and15
 absent. The six §211/§212 PDFs retain
 historical independent print/content acceptance, but their package accessibility
 gate is reopened for short-alt defects; they are conservatively C here. Physical
@@ -28,8 +29,8 @@ specialist PASS WITH FLAGS and root acceptance/handoff; its three editions are A
 §213 R6 has current paragraph PASS, but specialist QC requires the missing bonus
 assessment-criteria block. Its three editions remain C; no handoff exists.
 §222 R13 is adopted/root-rebuilt: exactly one answer page changes; the other20
-remain identical. Its current independent canonical paragraph review now passes;
-separate specialist QC and root handoff remain pending.
+remain identical. Its current independent paragraph and distinct specialist
+reviews pass with flags; root acceptance/handoff are complete. Its editions are A.
 §223 R3 remains an adopted paragraph-PASS candidate.
 §211 R4 is adopted/root-rebuilt with exact31page parity, pending a required
 bonus-criteria block and current paragraph rereview/QC. Its inherited stale opgaven.zip is explicitly excluded;
@@ -70,9 +71,9 @@ No output is silently accepted through an older PASS or reviewed_final label.
 | 14 | 2.2.1 | paragraaf | A | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf` |
 | 15 | 2.2.1 | opgaven | A | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf` |
 | 16 | 2.2.1 | antwoorden | A | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf` |
-| 17 | 2.2.2 | paragraaf | C | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf` |
-| 18 | 2.2.2 | opgaven | C | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf` |
-| 19 | 2.2.2 | antwoorden | C | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf` |
+| 17 | 2.2.2 | paragraaf | A | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf` |
+| 18 | 2.2.2 | opgaven | A | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf` |
+| 19 | 2.2.2 | antwoorden | A | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf` |
 | 20 | 2.2.3 | paragraaf | C | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf` |
 | 21 | 2.2.3 | opgaven | C | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf` |
 | 22 | 2.2.3 | antwoorden | C | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf` |
@@ -116,9 +117,9 @@ hashes alone are not student-quality acceptance.
 | 2.1.3 / paragraaf | `534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024` | R6 paragraph PASS; required bonus criteria and QC/handoff pending |
 | 2.1.3 / opgaven | `d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05` | R6 paragraph PASS; required bonus criteria and QC/handoff pending |
 | 2.1.3 / antwoorden | `aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a` | R6 paragraph PASS; required bonus criteria and QC/handoff pending |
-| 2.2.2 / paragraaf | `36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c` | R13 independent paragraph PASS; separate QC/handoff pending |
-| 2.2.2 / opgaven | `0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555` | R13 independent paragraph PASS; separate QC/handoff pending |
-| 2.2.2 / antwoorden | `61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2` | R13 independent paragraph PASS; separate QC/handoff pending |
+| 2.2.2 / paragraaf | `36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c` | R13 internal acceptance with flags; current review/QC/handoff complete |
+| 2.2.2 / opgaven | `0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555` | R13 internal acceptance with flags; current review/QC/handoff complete |
+| 2.2.2 / antwoorden | `61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2` | R13 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.3 / paragraaf | `ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb` | R3 candidate; paragraph pass, QC/handoff/successor pending |
 | 2.2.3 / opgaven | `50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80` | R3 candidate; paragraph pass, QC/handoff/successor pending |
 | 2.2.3 / antwoorden | `30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10` | R3 candidate; paragraph pass, QC/handoff/successor pending |
@@ -135,15 +136,17 @@ See221-root-acceptance-r8.md for exact current canonical and adoption bindings.
 
 ## Remaining production and acceptance
 
-Wave-two §213, §222 and §223 outputs are now adopted candidates C; their gate
+Wave-two §213 and §223 outputs remain adopted candidates C; their gate
 closure remains pending. §211 R4 and §212 R6 need their missing bonus-criteria
 blocks and current rereview/QC; both metadata corrections are root-adopted/rebuilt.
 §213 R6 requires a bonus-criteria correction followed by independent gates.
 §221 R8's internal review/QC/handoff gates are complete, with timing flags.
 Independent §223 R3 paragraph PASS WITH FLAGS is adopted; specialist and handoff
 gates remain. §222's former canonical FAIL is superseded by actual current R13
-independent PASS closing answer4b order and Concert short alt. Separate QC
-and root acceptance/handoff remain pending.
+independent PASS closing answer4b order and Concert short alt. Distinct QC
+and root acceptance/handoff now close, with timing flags; see222-root-acceptance-r13.md.
+Historical212 teaching is unchanged by its metadata/bonus correction; root must
+link its eventual newly accepted package before final combined book closure.
 §223 also needs exact accepted-current-§221 successor input binding
 with unchanged pupil output proof before final combined reproduction.
 §214/§224 follow accepted prerequisite teaching. §231–§234 and all aggregate
