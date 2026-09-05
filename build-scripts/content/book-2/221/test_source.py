@@ -1,5 +1,6 @@
 """Bounded source/calculation/geometry checks, not independent acceptance."""
 import re
+import subprocess
 import sys
 import unittest
 import xml.etree.ElementTree as ET
@@ -125,6 +126,46 @@ class Paragraph221Tests(unittest.TestCase):
         for suffix in ('../r2','r2/other','r0','second','r2\\other'):
             with self.assertRaisesRegex(ValueError,'Proof suffix'):
                 builder.build(Path('nonexistent-output'),proof_suffix=suffix)
+
+    def test_native_short_alternatives_preserve_full_visible_captions(self):
+        # Exercise the actual installed Pandoc reader/writer, not a Markdown
+        # regex that merely assumes alt= separates the caption from the alt.
+        expected = [
+            ('Procentuele prijs- en hoeveelheidsreacties op dezelfde schaal.',
+             'Vergelijk de procentuele reacties op dezelfde schaal.'),
+            ('Dezelfde absolute-waardeschaal; twee verschillende classificaties.',
+             'Dezelfde absolute-waardeschaal; twee verschillende classificaties.'),
+            ('Bowlplein: berekende percentages; klimhal: alleen de gemeten Ev.',
+             'Bowlplein: berekende percentages; klimhal: alleen de gemeten Ev.'),
+        ]
+        for kind, pairs in [('paragraaf', expected), ('opgaven', expected[2:]), ('antwoorden', [])]:
+            rendered = subprocess.run(['pandoc', '--from=markdown', '--to=html5'],
+                input=self.docs[kind], text=True, encoding='utf-8', capture_output=True, check=True)
+            soup = BeautifulSoup(rendered.stdout, 'html.parser')
+            figures = soup.find_all('figure')
+            self.assertEqual(len(figures), len(pairs))
+            for figure, (alternative, caption) in zip(figures, pairs):
+                self.assertEqual(figure.img['alt'], alternative)
+                # Pandoc wraps text nodes; normalize whitespace only, retaining
+                # every word and punctuation. Full HTML byte parity is checked
+                # separately against the actual baseline in builder evidence.
+                self.assertEqual(' '.join(figure.figcaption.get_text(' ', strip=True).split()), caption)
+                self.assertLessEqual(len(alternative), 120)
+                self.assertNotRegex(alternative, r'^(Vergelijk|Bekijk|Zie|Afbeelding van)\b')
+        self.assertIn('){alt="' + expected[0][0] + '"}', self.docs['paragraaf'])
+
+    def test_accessible_svg_titles_are_functional_noun_phrases(self):
+        # Pin the language-specific noun-phrase choices; length alone would
+        # incorrectly accept the original imperative first-figure title.
+        expected = {
+            '2.2.1_fig_1': 'Procentuele prijs- en hoeveelheidsveranderingen met teken op één schaal',
+            '2.2.1_fig_2': 'Twee vergelijkbare absolute-waardeschalen met grens één',
+            '2.2.1_we_1': 'De berekende Bowlpleinreactie en de gegeven klimhalratio, zonder verzonnen percentages',
+        }
+        for name, title in expected.items():
+            self.assertEqual(ET.fromstring(self.assets[name]).find('{http://www.w3.org/2000/svg}title').text, title)
+            self.assertLessEqual(len(title), 120)
+            self.assertNotRegex(title, r'^(Vergelijk|Bekijk|Zie|Afbeelding van)\b')
 
 
 if __name__ == '__main__':
