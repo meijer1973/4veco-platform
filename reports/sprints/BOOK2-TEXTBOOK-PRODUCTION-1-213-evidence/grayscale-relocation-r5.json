@@ -1,0 +1,42 @@
+{
+  "paragraph": "2.1.3",
+  "author": "paragraph_213_producer",
+  "purpose": "Path relocation of unchanged builder grayscale diagnostics into the existing authorized sprint-evidence namespace; not independent visual acceptance",
+  "historical_rebuild_report": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-rebuild-r5.json",
+  "historical_rebuild_report_sha256": "e8e2990195b77de0fa2175b5013db85032aa8c6e0560fbb8b63b48a80f8cce57",
+  "source_pdf_sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+  "capture_bytes_changed": false,
+  "historical_report_changed": false,
+  "mappings": [
+    {
+      "page": 2,
+      "historical_capture_path": "C:\\wt\\book2-213-output-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\213-grayscale-r5\\page-002.png",
+      "published_repository_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/grayscale-r5/page-002.png",
+      "sha256": "004084b5fdd9e0d334b9fff765cc78abc8354c08f1786cb6d901e059ddcd419f"
+    },
+    {
+      "page": 3,
+      "historical_capture_path": "C:\\wt\\book2-213-output-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\213-grayscale-r5\\page-003.png",
+      "published_repository_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/grayscale-r5/page-003.png",
+      "sha256": "ad6d3fdd1bb7132efa6b95a685fa946966576595cb0918f6513d34088165b47a"
+    },
+    {
+      "page": 5,
+      "historical_capture_path": "C:\\wt\\book2-213-output-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\213-grayscale-r5\\page-005.png",
+      "published_repository_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/grayscale-r5/page-005.png",
+      "sha256": "f7bb3c55c9de61deb3af2a59bdeaa52c25ce1fd0a951fe5812d5c84ca72b9413"
+    },
+    {
+      "page": 7,
+      "historical_capture_path": "C:\\wt\\book2-213-output-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\213-grayscale-r5\\page-007.png",
+      "published_repository_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/grayscale-r5/page-007.png",
+      "sha256": "74448eeabc7213d0ace5df6b5ef3eca5c3200667fd1c9b26a8a741c8d23170c3"
+    },
+    {
+      "page": 10,
+      "historical_capture_path": "C:\\wt\\book2-213-output-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\213-grayscale-r5\\page-010.png",
+      "published_repository_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/grayscale-r5/page-010.png",
+      "sha256": "3a0ad3a2dba523cfacb33c7c198c61ffa27352e1774aefe8c74d12d59a5f2d0d"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "source_md": "C:\\wt\\book2-213-output-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+  "source_sha256": "0df905cb3582b00e3cb47f477d156707891140d7b637b2fab20a158acee37e25",
+  "source_html": "C:\\wt\\book2-213-output-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html",
+  "html_sha256": "63f33b13456bd1cc044760f67ff3d7267d337df05adc863a07b7b2373041e1f7",
+  "source_pdf": "C:\\wt\\book2-213-output-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+  "pdf_sha256": "aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a",
+  "assets": [],
+  "zip": {
+    "path": "C:\\wt\\book2-213-output-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip",
+    "sha256": "0cfc714beb45b3ec087d0c891c28223e8431ba3e549abe9ec81dafba41494010"
+  },
+  "sprint_id": "BOOK2-TEXTBOOK-PRODUCTION-1",
+  "artifact_id": "213-antwoorden-aa3b6ccc9dbb-r5",
+  "render_dpi": 150,
+  "rendered_pages": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "259f34326468953ae3e18c09422336bdd21c43a4ad9f8a8e20445c64bf0ce5d8",
+    "page-002.png": "83f082c2f1283879eb5a3c36f9cbe2676f6d0147e4610d657aa661ef85dfd7c2",
+    "page-003.png": "8e2b6ab15c8e7955f3ed62c815886e8cb0e6aa1fcdcf56d93b2964cf8eda5f8b",
+    "page-004.png": "dc982562e8d61b6fb4b6f442d867dd402e31dab263c9b812088f74741c33b5c6",
+    "page-005.png": "bb5cbe33a820f077f37bdba8c2776bf8982ff987d800a651c7f1ef190eea6942",
+    "page-006.png": "fabcaf97d2af683937c8eda443ab6e230d5e4899a0c0f12fa829d9bf1613499d"
+  },
+  "contact_sheet": "contact-sheet.png",
+  "pages_inspected": [],
+  "inspection_status": "PENDING",
+  "visible_student_defects": null,
+  "inspected_at_normal_reading_scale": false,
+  "warnings": []
+}
