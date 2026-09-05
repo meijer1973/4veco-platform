@@ -1,0 +1,38 @@
+{
+  "reviewer": "paragraph_213_independent_review",
+  "pass": "0",
+  "result": "PASS",
+  "missing": [],
+  "unpaired": [],
+  "naming_flags": [],
+  "orphan_flags": [],
+  "assets": {
+    "2.1.3_ex_1.png": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e",
+    "2.1.3_ex_1.svg": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+    "2.1.3_fig_1.png": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+    "2.1.3_fig_1.svg": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819",
+    "2.1.3_fig_2.png": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+    "2.1.3_fig_2.svg": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53",
+    "2.1.3_fig_3.png": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+    "2.1.3_fig_3.svg": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc",
+    "2.1.3_fig_4.png": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+    "2.1.3_fig_4.svg": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773",
+    "2.1.3_we_1.png": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+    "2.1.3_we_1.svg": "700dc46322fb0fc527f1c2b84efdf018edd15f479f2e3bc25bdd496251d65461"
+  },
+  "required_files": {
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md": "9d4c45c529d0de5830889f384d73796964cdd67cae9dc96458c585c60f71a1b2",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html": "fe608ea795c9d3a7d72ceccd2f7a3ad2b04aa17d424fb05621ba2d6294c525ca",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.zip": "0dcad970f5684f644dd85fb720bb53b771303cb6586c27a71757c7d1f01010a0",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md": "f48f63e43bcb688c2a00ebdde98a955dc61d31209d8342e2aeba404730f44b85",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html": "aa186c16833da51c8db0f6f9f866de2ba8957768b85932adce5fab0a761c5c3c",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.zip": "89dc2596334fe8fcb5f11e058e785303493ec1e99c7735f8bc55611f419d9a12",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md": "0df905cb3582b00e3cb47f477d156707891140d7b637b2fab20a158acee37e25",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html": "63f33b13456bd1cc044760f67ff3d7267d337df05adc863a07b7b2373041e1f7",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf": "aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip": "0cfc714beb45b3ec087d0c891c28223e8431ba3e549abe9ec81dafba41494010",
+    "build_pdf.py": "8dc5d89378218c72139eb1f8e0d735d8e1f29a633cee6a66093a81720ae15ba9"
+  }
+}
