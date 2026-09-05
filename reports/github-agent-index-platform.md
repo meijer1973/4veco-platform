@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T17:25:05.995Z
+Generated: 2026-09-05T17:40:23.796Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `3ee7f86cb4aa3f1a62f7b189be7cd20219ddba3b`
-Files indexed: 7957
+Source commit: `865c30b2dde55ad747a4199228bc714f76a0f0dd`
+Files indexed: 7958
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2669,7 +2669,7 @@ Count: 1030
 
 ## reports
 
-Count: 5209
+Count: 5210
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5603,6 +5603,7 @@ Count: 5209
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-builder-self-qa.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-correction-matrix-r6.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-review-r2.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-presentation-correction-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-evidence.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-execution.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-plan.md
