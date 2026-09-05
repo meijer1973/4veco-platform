@@ -62,7 +62,7 @@
   ],
   "grayscale_probes": [
     {
-      "path": "builder-grayscale-target.png",
+      "path": "../../../sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-grayscale-target.png",
       "sha256": "e21d06c7581840851c339a7408ac8b027cb53f26e74ff78c47bde24c7ffad73a"
     }
   ],
