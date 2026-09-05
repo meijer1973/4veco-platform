@@ -1,4 +1,4 @@
-# Book 2 textbook production command log
+# Sprint BOOK2-TEXTBOOK-PRODUCTION-1: Command Log
 
 ## 2026-09-05: Integration and clean production preparation
 
@@ -288,3 +288,90 @@ compatibility states. Candidate-pair local index freshness is not represented
 as default main-compatibility or remote CI. The existing trusted lesson-first
 generated-index refresh remains available at a later separately authorized
 integration gate; no workflow, bypass, merge or CI waiver is introduced here.
+
+The active sprint-plan check passed, but the first active-bundle recheck at this
+stage failed because the original baseline used a generic title and omitted
+the prescribed Plan reference/Data integrity headings. Root read the validator
+and corrected only that document structure and explicit protected-data statement,
+preserving its historical starting facts, pending CI and five-hold snapshot.
+The original failure is retained here; no retrospective initial PASS is claimed.
+A current read-only diff from platform baseline96416b6b through9f269484 lists
+no changes under references/machine or references/external. Final --complete
+closure, result metadata, JSONL acceptance evidence and lead rounds remain
+required after the full package is actually ready, not at this intermediate gate.
+
+Structured JSONL command recording begins with the actual fresh executions
+below through the existing sprint command runner. Earlier Markdown observations
+remain historical tool evidence; no invented start/end timestamps or retrospective
+JSONL successes are assigned to them. Final claimed acceptance commands will be
+rerun through this runner against the completed package.
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan.md
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T14:54:54.917Z`
+- finished_at: `2026-09-05T14:54:55.018Z`
+- duration_ms: `101`
+- exit_code: `0`
+- stdout_sha256: `f36649c10e9879f3cceca6cc9d020d6275032b0f7f505d4f7ecf4e7635d67e87`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TEXTBOOK-PRODUCTION-1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T14:54:55.049Z`
+- finished_at: `2026-09-05T14:54:55.214Z`
+- duration_ms: `165`
+- exit_code: `0`
+- stdout_sha256: `699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T14:54:55.263Z`
+- finished_at: `2026-09-05T14:54:55.921Z`
+- duration_ms: `658`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
