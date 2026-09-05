@@ -141,6 +141,7 @@ class PrintPipelineTests(unittest.TestCase):
         self.assertEqual(len(pdf.pages), 1)
         self.assertIn("Kostenstructuren", pdf.pages[0].extract_text())
         proof = render_proof(record, self.root / "proof")
+        self.assertNotIn(b"\r", (self.root / "proof" / "manifest.json").read_bytes())
         self.assertEqual(proof["rendered_pages"], ["pages/page-001.png"])
         self.assertEqual(proof["inspection_status"], "PENDING")
         self.assertEqual(proof["pages_inspected"], [])
