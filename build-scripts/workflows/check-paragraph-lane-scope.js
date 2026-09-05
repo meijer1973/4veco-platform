@@ -152,6 +152,15 @@ function isPartBCompanionPath(filePath) {
 function isPartATextbookPath(filePath) {
   const p = normalizedLower(filePath);
   const base = basenameLower(filePath).replace(/\u2013/g, '-');
+  const book2Root = 'boek 2 - kosten, opbrengsten, elasticiteit en surplus/';
+  if (p === `${book2Root}_book-plan.md`) return true;
+  if (p.startsWith(book2Root)) {
+    const relative = p.slice(book2Root.length);
+    if (/^2\.[123] hoofdstuk [^/]+\/_chapter-plan\.md$/.test(relative)) return true;
+    const paragraphPlan = /^2\.([123]) hoofdstuk [^/]+\/2\.([123])\.([1234]) [^/]+\/2\.([123])\.([1234])-textbook-plan\.md$/.exec(relative);
+    if (paragraphPlan && paragraphPlan[1] === paragraphPlan[2]
+      && paragraphPlan[2] === paragraphPlan[4] && paragraphPlan[3] === paragraphPlan[5]) return true;
+  }
   if (base === 'build_pdf.py' || base === 'build_chapter.py') return true;
   if (/(^|\/)\d+\.\d+\.\d+-review\.md$/.test(p)) return true;
   if (/(^|\/)\d+\.\d+\.\d+-textbook-handoff\.md$/.test(p)) return true;
