@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "record_type": "builder-inspection",
+  "paragraph": "2.1.2",
+  "artifact_id": "212-antwoorden-07a75d7b5b69-r5",
+  "inspector": "paragraph_212_builder",
+  "inspector_role": "BUILDER_NOT_INDEPENDENT_REVIEWER",
+  "date": "2026-09-05",
+  "result": "BUILDER_QA_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "accepted_for_student_use": false,
+  "source_md_sha256": "d7dbebf97de900b7ecc4520e63c822201d39ce796c5c7e3aab83b4dcc9e900ee",
+  "html_sha256": "767bf8ee21be2b67676e0a80558d7bbe373cc7cab8c8ac0c96a0056f7228f221",
+  "pdf_sha256": "07a75d7b5b69344d38d5da9e5f2e0a3b964d86cc64c383b37809f8263fb33192",
+  "immutable_manifest": "manifest.json",
+  "immutable_manifest_sha256": "a6c832c6ad3416fa6bd84599ed402c3efbd806556af543fe50163bd12d1b75c2",
+  "immutable_manifest_inspection_status": "PENDING",
+  "immutable_manifest_was_not_modified": true,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "page_sha256": {
+    "page-001.png": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957",
+    "page-002.png": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554",
+    "page-003.png": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6",
+    "page-004.png": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5",
+    "page-005.png": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2",
+    "page-006.png": "d381ea9948644e3fb98fbbb12436ba3d7d1b0df17d48ddb0df4e89b1455eeb73"
+  },
+  "inspected_at_normal_reading_scale": true,
+  "inspection_method": "Personally opened every final R5 full-page PNG, not only contact sheets or PDF text extraction; actual placed text size checked separately.",
+  "visible_student_defects_observed": [],
+  "page_notes": [
+    {
+      "page": 1,
+      "note": "Start 1–2 and fully guided soap answers are complete, signed and correctly unit-labelled."
+    },
+    {
+      "page": 2,
+      "note": "Pots answers and completion graph agree on exact whole-number break-even Q5 and €9."
+    },
+    {
+      "page": 3,
+      "note": "Combined-change answers distinguish revenue from profit; independent minigolf calculation is readable."
+    },
+    {
+      "page": 4,
+      "note": "Minigolf graph and frozen target short-answer text are readable with 2–2–3–4 point labels."
+    },
+    {
+      "page": 5,
+      "note": "Target graph, 11-point allocation and model-boundary note are clean; no text clipping."
+    },
+    {
+      "page": 6,
+      "note": "Scale critique and cumulative retrieval answers are complete and readable."
+    }
+  ],
+  "grayscale_probes": [
+    {
+      "path": "builder-grayscale-target.png",
+      "sha256": "e21d06c7581840851c339a7408ac8b027cb53f26e74ff78c47bde24c7ffad73a"
+    }
+  ],
+  "grayscale_note": "Personally inspected the separately rendered grayscale probe; TK dashed/TO solid, dark labels, axes, intersection or vertical brackets remain distinct.",
+  "limitations": [
+    "Builder inspection does not replace independent paragraph review or independent quality control.",
+    "Classroom timing is estimated, not observed.",
+    "Untouched legacy review and quality-ref do not approve this newly generated payload."
+  ]
+}

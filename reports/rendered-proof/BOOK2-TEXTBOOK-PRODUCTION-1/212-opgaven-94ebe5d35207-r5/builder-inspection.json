@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "record_type": "builder-inspection",
+  "paragraph": "2.1.2",
+  "artifact_id": "212-opgaven-94ebe5d35207-r5",
+  "inspector": "paragraph_212_builder",
+  "inspector_role": "BUILDER_NOT_INDEPENDENT_REVIEWER",
+  "date": "2026-09-05",
+  "result": "BUILDER_QA_COMPLETE_AWAITING_INDEPENDENT_REVIEW",
+  "accepted_for_student_use": false,
+  "source_md_sha256": "f96c6393ec72488d925d432dec256db714396f210107f5e5abd8f235bfccb938",
+  "html_sha256": "69e45f51c2c5690235e1d68f54dadf76818e190b9e10a96afbcfb50c2f71eb85",
+  "pdf_sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+  "immutable_manifest": "manifest.json",
+  "immutable_manifest_sha256": "701acab4c0210e2744a32dd5ee3a08388942d20ec97314208a121674843fbc9f",
+  "immutable_manifest_inspection_status": "PENDING",
+  "immutable_manifest_was_not_modified": true,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "page_sha256": {
+    "page-001.png": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb",
+    "page-002.png": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5",
+    "page-003.png": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e",
+    "page-004.png": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4",
+    "page-005.png": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9",
+    "page-006.png": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac",
+    "page-007.png": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71"
+  },
+  "inspected_at_normal_reading_scale": true,
+  "inspection_method": "Personally opened every final R5 full-page PNG, not only contact sheets or PDF text extraction; actual placed text size checked separately.",
+  "visible_student_defects_observed": [],
+  "page_notes": [
+    {
+      "page": 1,
+      "note": "Worked-example steps 1–5 end cleanly; the previously orphaned step 6 heading is no longer here."
+    },
+    {
+      "page": 2,
+      "note": "Step 6 now stays with its explanation; graph and five-bullet recap remain intact."
+    },
+    {
+      "page": 3,
+      "note": "Short route, start tasks and optional guided soap context/formulas/a–b are readable."
+    },
+    {
+      "page": 4,
+      "note": "Soap graph/c and pots task context/a–d stay legible; pots source continues on facing page 5."
+    },
+    {
+      "page": 5,
+      "note": "Pots axes/TK source and combined-change context/table/a–b are readable."
+    },
+    {
+      "page": 6,
+      "note": "Combined-change c–d followed by intact independent and frozen target tasks; no leaked answer graph."
+    },
+    {
+      "page": 7,
+      "note": "Compact scale-comparison figure and bonus/cumulative prompts remain above 12pt and unclipped."
+    }
+  ],
+  "grayscale_probes": [
+    {
+      "path": "builder-grayscale-bonus.png",
+      "sha256": "7087ddffc8020bf49cd01bb2bc666507b90ac4125b858a08231040826d6f2876"
+    }
+  ],
+  "grayscale_note": "Personally inspected the separately rendered grayscale probe; TK dashed/TO solid, dark labels, axes, intersection or vertical brackets remain distinct.",
+  "limitations": [
+    "Builder inspection does not replace independent paragraph review or independent quality control.",
+    "Classroom timing is estimated, not observed.",
+    "Untouched legacy review and quality-ref do not approve this newly generated payload."
+  ]
+}
