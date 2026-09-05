@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T14:43:33.533Z
+Generated: 2026-09-05T14:55:48.596Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `f3b3647fa8a6e9403767a6883072df84dcf724ce`
-Files indexed: 7787
+Source commit: `e6fc0d787de431cd101567aaaf7a3b3c29d92a94`
+Files indexed: 7789
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2648,7 +2648,7 @@ Count: 1030
 
 ## reports
 
-Count: 5056
+Count: 5057
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5461,6 +5461,7 @@ Count: 5056
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-pipeline-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.jsonl
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan.md
@@ -7727,7 +7728,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 771
+Count: 772
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -8336,6 +8337,7 @@ Count: 771
 - docs/roadmaps/outdated/reference-team-roadmap-v3.49-multi-select-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.50-step-ordering-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.55-shared-task-context-runtime.md
+- docs/roadmaps/outdated/textbook-production-roadmap-v1.20-gate0b1-owner-approved-transition.md
 - docs/roadmaps/quality-standards/inspection-standards-roadmap.md
 - docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - docs/roadmaps/quality-standards/quality-standards-end-state.md
