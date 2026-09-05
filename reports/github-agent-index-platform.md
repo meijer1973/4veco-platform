@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T18:39:01.673Z
+Generated: 2026-09-05T19:10:38.682Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-213-independent-review-20260905`
-Source commit: `dfb81083ebca7c975792a3dbc0c50b627c8db898`
-Files indexed: 8058
+Source branch: `agent/book2-213-r5-qc-20260905`
+Source commit: `25e3bdf696b84f8005fe30ce435efd0be8d95c4d`
+Files indexed: 8113
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -937,7 +937,7 @@ Count: 25
 
 ## validators
 
-Count: 703
+Count: 704
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1476,6 +1476,7 @@ Count: 703
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-render-check-r4.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-render-check-r5.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-render-check-r5.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-render-check-r5.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-render-check-r4.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-render-check-r5.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check-r6.json
@@ -2680,7 +2681,7 @@ Count: 1030
 
 ## reports
 
-Count: 5302
+Count: 5357
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4281,6 +4282,43 @@ Count: 5302
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-6dcf11f39911-r4/pages/page-012.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-6dcf11f39911-r4/pages/page-013.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-6dcf11f39911-r4/pages/page-014.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/antwoorden.pdf
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/antwoorden/page-1.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/antwoorden/page-2.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/antwoorden/page-3.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/antwoorden/page-4.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/antwoorden/page-5.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/antwoorden/page-6.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/gray-10-10.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/gray-2-02.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/gray-3-03.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/gray-5-05.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/gray-7-07.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/opgaven.pdf
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/opgaven/page-1.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/opgaven/page-2.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/opgaven/page-3.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/opgaven/page-4.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/opgaven/page-5.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/opgaven/page-6.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/opgaven/page-7.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/opgaven/page-8.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/opgaven/page-9.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf.pdf
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-01.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-02.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-03.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-04.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-05.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-06.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-07.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-08.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-09.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-10.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-11.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-12.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-13.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5/paragraaf/page-14.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r5/contact-sheet.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r5/manifest.json
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r5/pages/page-001.png
@@ -5694,14 +5732,32 @@ Count: 5302
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-relocated-build-r5.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-render-check-r5.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-review-probes-r5.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-accessibility-r5.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-accessibility-r5.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-arithmetic-r5.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-media-manifest-r5.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-media-r5.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-pass0-r5.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-personal-inspection-r5.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-probes-r5.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-proof-bindings-r5.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-rebuild-r5.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-relocated-build-r5.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-render-check-r5.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-svg-metadata-r5.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-svg-metadata-r5.py
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-output-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-output-report.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-paragraph-review-plan-r5.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-paragraph-review-r5.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-plan-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R5-QC-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R5-QC-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R5-QC-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-rebuild-r5.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-render-check-r4.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-render-check-r5.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-specialist-review-r5.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-stage-1.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-decision-package.md
