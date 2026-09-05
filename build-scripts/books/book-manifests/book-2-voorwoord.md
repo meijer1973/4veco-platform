@@ -69,12 +69,12 @@ waarom een stap klopt. Succes!
 | [2.2](#book-boek-chapter-2-2) | Elasticiteit |
 | [2.2.1](#book-boek-paragraph-2-2-1) | Prijselasticiteit |
 | [2.2.2](#book-boek-paragraph-2-2-2) | Elasticiteit en omzet |
-| [2.2.3](#book-boek-paragraph-2-2-3) | Inkomenselasticiteit en kruiselingse elasticiteit |
+| [2.2.3](#book-boek-paragraph-2-2-3) | Inkomenselasticiteit en kruislingse elasticiteit |
 | [2.2.4](#book-boek-paragraph-2-2-4) | Gemengde opgaven elasticiteit |
 | [2.3](#book-boek-chapter-2-3) | Surplus en welvaart |
 | [2.3.1](#book-boek-paragraph-2-3-1) | Consumentensurplus |
 | [2.3.2](#book-boek-paragraph-2-3-2) | Producentensurplus en totaal surplus |
-| [2.3.3](#book-boek-paragraph-2-3-3) | Pareto-efficientie en welvaartsverlies |
+| [2.3.3](#book-boek-paragraph-2-3-3) | Pareto-efficiëntie en welvaartsverlies |
 | [2.3.4](#book-boek-paragraph-2-3-4) | Gemengde opgaven surplus en welvaart |
 
 Achterin: begrippenlijst, formule- en begrippenoverzicht en licentietekst.
