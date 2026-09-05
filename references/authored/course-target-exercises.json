@@ -1305,35 +1305,74 @@
       "paragraph_title": "Kostenstructuren",
       "difficulty": "MEDIUM",
       "target_exercise": {
-        "context": "Bakkerij De Korenaar produceert tussen 500 en 1.000 broden per maand en gebruikt binnen dit productiegebied dezelfde ruimte en ovens. Voor huur en verzekering betaalt de bakkerij samen €440 per maand; dit bedrag verandert niet wanneer de productie verandert. Voor de netaansluiting en het energieabonnement betaalt zij €60 per maand; ook dit bedrag verandert niet met het aantal broden. Meel en verpakking kosten samen €0,70 per brood. Het elektriciteitsverbruik van de ovens kost binnen dit productiegebied €0,10 per geproduceerd brood; bij elk extra brood nemen de totale elektriciteitskosten van het ovengebruik dus met €0,10 toe. Q is het aantal broden per maand.",
+        "context": "Bakkerij De Korenaar produceert in één maand tussen 500 en 1.000 broden. Zolang de productiecapaciteit gelijk blijft, gebruikt de bakkerij dezelfde ruimte en ovens. Huur en verzekering kosten samen € 440 per maand. De netaansluiting en het energieabonnement kosten € 60 per maand. Meel en verpakking kosten samen € 0,70 per brood. Het elektriciteitsverbruik van de ovens kost binnen deze grenzen € 0,10 per brood. Q is het aantal broden per maand.",
+        "sources": [
+          {
+            "id": "classificatietabel",
+            "type": "table",
+            "columns": [
+              "kostencomponent",
+              "soort kosten",
+              "reden"
+            ],
+            "rows": [
+              [
+                "huur en verzekering",
+                "",
+                ""
+              ],
+              [
+                "netaansluiting en energieabonnement",
+                "",
+                ""
+              ],
+              [
+                "meel en verpakking",
+                "",
+                ""
+              ],
+              [
+                "elektriciteitsverbruik ovens",
+                "",
+                ""
+              ]
+            ],
+            "content": "Vul de lege cellen in."
+          }
+        ],
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Deel de vier kostencomponenten in bij de constante of variabele kosten. Leg per component kort uit welk gedrag bij een verandering van Q de indeling bepaalt. Leg in ieder geval uit waarom de twee energiecomponenten niet in dezelfde categorie vallen."
+            "points": 4,
+            "prompt": "Vul de classificatietabel in: classificeer elk onderdeel als constante of variabele kosten en noteer per onderdeel kort hoe het totale bedrag reageert op een verandering van Q."
           },
           {
             "label": "b",
-            "prompt": "Stel de formules voor TCK, TVK en TK op als functie van Q."
+            "points": 3,
+            "prompt": "Stel de functies voor TCK, TVK en TK op."
           },
           {
             "label": "c",
-            "prompt": "Bereken bij Q = 500 de TCK, TVK, TK, GCK, GVK en GTK. Gebruik een tabel met per kostengrootheid de uitkomst en de volledige eenheid. Laat bij TVK, TK, GCK, GVK en GTK de formule en de invulling zien; TCK mag je rechtstreeks uit vraag b overnemen. Vat daarna in één korte zin samen wat de drie gemiddelde bedragen per brood voor de bakkerij betekenen."
+            "points": 3,
+            "prompt": "Bereken bij Q = 500 de GCK, GVK en GTK. Noteer de volledige eenheden."
           },
           {
             "label": "d",
-            "prompt": "Bereken bij Q = 1.000 de TK, GCK, GVK en GTK en noteer bij ieder antwoord de volledige eenheid. Gebruik de formules uit vraag b; laat alleen bij GTK de formule en de invulling opnieuw zien."
+            "points": 3,
+            "prompt": "Bereken bij Q = 1.000 de GCK, GVK en GTK. Noteer de volledige eenheden."
           },
           {
             "label": "e",
-            "prompt": "Een leerling zegt: ‘Als de productie verdubbelt, verdubbelen alle totale kosten en halveren alle gemiddelde kosten.’ Gebruik bij Q = 1.000 voor TCK €500 per maand en voor TVK €800 per maand; je hoeft die twee bedragen niet opnieuw te berekenen. Geef vervolgens voor TCK, TVK, TK, GCK, GVK en GTK afzonderlijk een compacte regel in de vorm ‘juist/onjuist — werkelijke verandering — korte economische oorzaak’. Verklaar daarbij afzonderlijk waardoor GCK verandert en onder welke aanname en binnen welk productiegebied GVK gelijk blijft. Gebruik je uitkomsten bij Q = 500 en Q = 1.000."
+            "points": 4,
+            "prompt": "Vergelijk eerst TCK, TVK en TK bij Q = 500 en Q = 1.000. Leg daarna met de uitkomsten uit waarom GCK halveert, GVK gelijk blijft en GTK niet halveert als Q verdubbelt. Begrens je uitleg tot één maand, Q = 500–1.000 en gelijkblijvende productiecapaciteit."
           }
         ]
       },
       "lesson_goals": [
-        "De leerling classificeert kostencomponenten als constant of variabel op basis van hoe het totale bedrag verandert wanneer Q verandert binnen de genoemde periode en het relevante productiegebied, en herkent dat één kostensoort zowel een constant als een variabel deel kan hebben.",
-        "De leerling stelt uit een context de functies voor TCK, TVK en TK op en gebruikt die functies bij een gegeven productieomvang.",
-        "De leerling berekent en interpreteert GCK, GVK en GTK en noteert totale kosten en gemiddelde kosten met de juiste eenheden.",
-        "De leerling vergelijkt en verklaart hoe totale en gemiddelde kosten veranderen wanneer Q verandert, waaronder spreiding van constante kosten en een constante GVK uitsluitend onder de aanname van constante variabele kosten per product."
+        "Je kunt kostencomponenten als constant of variabel classificeren op basis van hun gedrag binnen een genoemde periode en bij gelijkblijvende productiecapaciteit.",
+        "Je kunt uit een context de functies voor TCK, TVK en TK opstellen.",
+        "Je kunt gemiddelde kosten berekenen en met de juiste eenheid interpreteren.",
+        "Je kunt verklaren hoe totale en gemiddelde kosten veranderen als Q verandert, binnen de aannames van het model."
       ],
       "required_skills": [
         "A08",
@@ -1343,9 +1382,7 @@
         "D38"
       ],
       "prior_knowledge_assumed": [
-        "Substitution and basic arithmetic are retrieved from references/machine/micro-teaching-units.json#A04, whose prior_learning is previously_taught and whose reviewed lower-secondary assumption and procedure cover substitution, calculation order, intermediate steps, and endpoint-unit checking.",
-        "Only the generic habit of checking an endpoint unit is retrieved from A04; euro per month versus euro per loaf is taught as new formal economic learning in paragraph 2.1.1.",
-        "No prior formal cost-structure or average-cost mastery is assumed; Book 1 cost/profit exposure is preview_or_familiarity_only."
+        "A04: substitution and endpoint-unit checking only; formal economic cost classification and euro-per-period versus euro-per-product dimensions are new here."
       ],
       "new_skills_introduced": [
         "A08",
@@ -1355,61 +1392,38 @@
         "D38"
       ],
       "missing_units_flagged": [
-        "Classify cost components as constant or variable from how the total amount changes with Q within an explicit period and relevant production range, including a mixed expense category (concept-level candidate; D26 is not a semantic match).",
-        "Explain why GVK remains constant only when variable cost per product is constant (concept-level candidate; A50 and A86 cover the calculations but not the conditional economic explanation)."
+        "Behaviour-based constant/variable classification within an explicit period and range.",
+        "D38 is semantically relevant, but its D02 prerequisite introduces deferred profit/MO=MK content and is not assumed here.",
+        "Conditional explanation of constant GVK under proportional variable cost."
       ],
       "exam_codes": [
         "D1.16",
         "D1.17",
         "A2.10"
       ],
-      "difficulty_notes": "The target balances behaviour-based classification, function construction, one complete calculation set, one reduced comparison set, dimensions, spreading constant costs, conditional constant GVK, and integrated claim evaluation. The context bounds all conclusions to one month and 500–1,000 loaves with unchanged capacity. Design aim: 12–14 minutes, subject to recorded specialist timing evidence.",
+      "difficulty_notes": "Kandidaat voor circa 11 minuten: één classificatietabel, drie functies, twee compacte gemiddelde-kostenrijen en één begrensde vergelijking van totale en gemiddelde kosten.",
+      "answer_form_expectations": [
+        "classificatietabel met reden",
+        "drie functies",
+        "twee gemiddelde-kostenrijen met eenheid",
+        "totale-kostenvergelijking en drie begrensde gemiddelde-kostenverklaringen"
+      ],
+      "short_answer_model": {
+        "a": "Huur/verzekering en aansluiting/abonnement zijn constant: hun totale maandbedrag verandert niet met Q. Meel/verpakking en ovenverbruik zijn variabel: hun totale bedrag neemt per brood toe.",
+        "b": "TCK = 500; TVK = 0,80Q; TK = 500 + 0,80Q (bedragen in euro per maand).",
+        "c": "Bij Q=500: GCK=500/500=€1,00 per brood; GVK=0,80×500/500=€0,80 per brood; GTK=500/500+0,80=€1,80 per brood.",
+        "d": "Bij Q=1.000: GCK=€0,50 per brood; GVK=€0,80 per brood; GTK=€1,30 per brood.",
+        "e": "Bij Q=500 zijn TCK=€500, TVK=€400 en TK=€900 per maand; bij Q=1.000 zijn TCK=€500, TVK=€800 en TK=€1.300 per maand. TCK blijft gelijk, TVK verdubbelt en TK stijgt maar verdubbelt niet. GCK halveert van €1,00 naar €0,50 per brood doordat dezelfde TCK over tweemaal zoveel broden worden verdeeld. GVK blijft €0,80 doordat de variabele kosten per brood gelijk blijven. GTK daalt van €1,80 naar €1,30 en halveert niet, omdat alleen GCK halveert. Dit geldt binnen de genoemde maand, Q-grenzen en gelijkblijvende productiecapaciteit."
+      },
       "source_ref": "references/owned/course-blueprint-v5.md §2.1.1",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "reviewed_final",
+      "record_status": "candidate_review_ready",
       "v5_migration": {
-        "source_status": "reviewed_final",
+        "source_status": "candidate_review_ready",
         "from_v4_id": "1.3.2",
         "related_v4_ids": [],
-        "review_required_before_final": false
-      },
-      "review_evidence": {
-        "sprint_id": "B2-2.1.1-GOAL-TARGET-DESIGN-1",
-        "review_date": "2026-09-03",
-        "review_packet": "reports/review-gates/GATE-B2-2.1.1-GOAL-TARGET-DESIGN-1/review-packet.md",
-        "teacher_review": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-teacher-learning-quality-review.md",
-        "economic_review": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-economic-content-review.md",
-        "timing_evidence": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-timing-evidence.md",
-        "lead_review": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-lead-review-round2.md",
-        "decision_summary": "Clean-sheet replacement target aligns classification, functions, total and average cost calculations, dimensions, spreading constant costs, conditional constant GVK, and six-measure claim evaluation to the approved paragraph 2.1.1 outline.",
-        "authority_boundary": "Gate 0B-1 design and review evidence only. Exact owner approval is recorded outside this record; the target registry remains unchanged until a separate Gate 0C integration PR, and no lesson or paragraph production is authorized."
-      },
-      "target_quality_review": {
-        "sprint_id": "B2-2.1.1-GOAL-TARGET-DESIGN-1",
-        "review_date": "2026-09-03",
-        "disposition": "reviewed_final",
-        "operation_chain": [
-          "Classify four cost components from behaviour within the stated month and production range, including two different behaviours in the energy expense category.",
-          "Construct TCK, TVK, and TK functions from the bakery context.",
-          "Calculate and interpret total and average costs at Q = 500 with full dimensions.",
-          "Calculate a reduced comparison set at Q = 1,000 and use the supplied remaining totals for the claim evaluation.",
-          "Evaluate a six-measure claim and explain spreading constant costs and conditional constant GVK."
-        ],
-        "answer_form": [
-          "Four classifications with a behaviour-based justification per component.",
-          "Three symbolic functions of Q.",
-          "One complete formula-and-substitution set at Q = 500, representative renewed substitution at Q = 1,000, and every answer with euro per month or euro per loaf dimensions.",
-          "One contextual interpretation sentence for GCK, GVK, and GTK.",
-          "Six explicit judgments with values and causal economic explanation."
-        ],
-        "mtu_mapping_decision": "A08, A14, A50, A86, and D38 cover the live calculation and constant-cost-spreading chain. Behaviour-based mixed-category classification and the conditional GVK explanation remain explicit missing-unit candidates. D02 and D26 are excluded because their break-even/MO=MK and formal variable-cost-shape content conflicts with this paragraph's non-goals.",
-        "blocks": [],
-        "does_not_block": [
-          "Separate Gate 0C target-authority integration",
-          "Separate paragraph-production and lesson-authoring gates"
-        ],
-        "proof_required_to_close": "Owner approval must bind this exact proposed-record hash; Gate 0C must then integrate only that exact record, refresh the compact target pin, pass target-authority and post-integration checks, and record the integration commit."
+        "review_required_before_final": true
       }
     },
     {
@@ -1420,75 +1434,83 @@
       "paragraph_title": "Opbrengsten, winst en break-even",
       "difficulty": "LIGHT",
       "target_exercise": {
-        "context": "The bakery from §1.3.2 sells bread at €1.50 per loaf.",
+        "context": "Bakkerij De Korenaar heeft TK = 500 + 0,80Q en verkoopt ieder brood voor een vaste prijs van € 1,50. Q is het aantal broden per maand; alle bedragen zijn in euro per maand tenzij anders vermeld.",
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Write the formula for TO as a function of Q."
+            "points": 2,
+            "prompt": "Stel de functie voor TO op. Leg voor Q>0 uit waarom GO in deze context gelijk is aan de prijs."
           },
           {
             "label": "b",
-            "prompt": "Calculate TO and winst (TO − TK) at Q = 500 and Q = 1000."
+            "points": 2,
+            "prompt": "Bereken de winst bij Q=500 en bij Q=1.000."
           },
           {
             "label": "c",
-            "prompt": "Calculate GO (= TO/Q) at Q = 500. What do you notice?"
+            "points": 3,
+            "prompt": "Los algebraïsch TO=TK op. Noteer zowel de continue break-even-afzet als het eerste gehele aantal broden waarbij geen verlies ontstaat."
           },
           {
             "label": "d",
-            "prompt": "At which production level does the bakery exactly break even (winst = 0)? Show this with a calculation."
-          },
-          {
-            "label": "e",
-            "prompt": "Draw a graph with TK and TO. Mark the break-even point. Shade the area of winst when Q = 1000."
+            "points": 4,
+            "prompt": "Teken TK en TO in één assenstelsel. Benoem beide assen met grootheid en eenheid, markeer het break-evenpunt en de winst- en verlieszone en geef bij Q=1.000 de winst van €200 weer als verticale afstand. Kleur geen oppervlakte als winst."
           }
         ]
       },
       "lesson_goals": [
-        "Calculate TO = P × Q",
-        "Calculate GO = TO/Q (and notice GO = P at constant price)",
-        "Calculate winst = TO − TK",
-        "Find the break-even point algebraically (TO = TK)",
-        "Show TK and TO in a graph and identify winst/verlies zones"
+        "Je kunt TO, GO en winst berekenen en GO bij een vaste prijs verklaren.",
+        "Je kunt de break-even-afzet algebraïsch bepalen en een continue uitkomst onderscheiden van een geheel productaantal.",
+        "Je kunt TK en TO in één grafiek weergeven en winst- en verlieszones herkennen.",
+        "Je kunt winst bij een gegeven Q als verticale afstand tussen TO en TK weergeven."
       ],
       "required_skills": [
         "A07",
         "A08",
-        "A21",
-        "A22",
-        "A29",
-        "A40"
+        "A21"
       ],
       "prior_knowledge_assumed": [
-        "A08"
+        "A08 and the §2.1.1 cost functions are retrieval-required."
       ],
       "new_skills_introduced": [
         "A07",
-        "A21",
-        "A22",
-        "A29",
-        "A40"
+        "A21"
       ],
       "missing_units_flagged": [
-        "Observe GO = P at a constant price (concept-level, a single-step recognition)"
+        "Linear break-even-afzet from TK and TO without a quadratic method.",
+        "Draw and interpret linear TK and TO in one graph, including break-even and vertical profit distance.",
+        "Explain GO=P under a constant unit price."
       ],
       "exam_codes": [
         "A2.1",
         "A2.10",
-        "A2.11",
-        "A2.12",
-        "A2.15"
+        "A2.14",
+        "D1.14",
+        "D1.19",
+        "D1.20"
       ],
-      "difficulty_notes": "Lighter than §1.3.2 because fewer new concepts. The break-even calculation is straightforward algebra. The graph (exercise e) bridges to visual analysis. One lesson comfortable — good opportunity to check that §1.3.2's cost concepts stuck.",
+      "difficulty_notes": "Kandidaat voor circa 12 minuten: twee korte berekeningen, één algebraïsche oplossing en vijf minuten voor de complete grafiek.",
+      "answer_form_expectations": [
+        "functie en contextverklaring",
+        "twee winstberekeningen",
+        "algebra met afrondingsduiding",
+        "gelabelde grafiek met verticale winstafstand"
+      ],
+      "short_answer_model": {
+        "a": "TO=1,50Q. Omdat TO=P×Q en P constant is, geldt voor Q>0: GO=(P×Q)/Q=P=€1,50 per brood.",
+        "b": "Q=500: winst=€750−€900=−€150. Q=1.000: winst=€1.500−€1.300=€200.",
+        "c": "1,50Q=500+0,80Q, dus 0,70Q=500 en Q=714,2857…. In het continue model is de break-even-afzet Q=714,29; het eerste gehele aantal broden zonder verlies is 715 (winst €0,50).",
+        "d": "Horizontale as: hoeveelheid Q (broden per maand). Verticale as: TK en TO (€ per maand). TK start bij €500 en heeft helling 0,80; TO start bij €0 en heeft helling 1,50. Snijpunt: (714,29; 1.071,43). Links ligt de verlieszone en rechts de winstzone. Bij Q=1.000 is de verticale afstand €1.500−€1.300=€200."
+      },
       "source_ref": "references/owned/course-blueprint-v5.md §2.1.2",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "reviewed_final",
+      "record_status": "candidate_review_ready",
       "v5_migration": {
-        "source_status": "reviewed_final",
+        "source_status": "candidate_review_ready",
         "from_v4_id": "1.3.3",
         "related_v4_ids": [],
-        "review_required_before_final": false
+        "review_required_before_final": true
       }
     },
     {
@@ -1499,100 +1521,265 @@
       "paragraph_title": "Marginale kosten en marginale opbrengsten",
       "difficulty": "MEDIUM",
       "target_exercise": {
-        "context": "A firm has TK = 200 + 3Q (costs in €, Q in units) and sells at a fixed price of €8 per unit, so TO = 8Q. Students build a Q/TK/TO/Winst/MK/MO table and discover patterns.",
+        "context": "Onderneming Linea heeft TK = 200 + 3Q en TO = 8Q. Onderneming Curva heeft TK = 100 + Q² en verkoopt ieder product voor € 30, zodat TO = 30Q. Bedragen zijn in euro. Bereken marginale waarden per extra product over ieder tabelinterval: MK = ΔTK/ΔQ en MO = ΔTO/ΔQ. Gebruik geen afgeleiden.",
+        "sources": [
+          {
+            "id": "tabel-linea",
+            "type": "table",
+            "columns": [
+              "Q",
+              "TK",
+              "TO",
+              "winst",
+              "MK",
+              "MO"
+            ],
+            "rows": [
+              [
+                "0",
+                "€200",
+                "€0",
+                "",
+                "—",
+                "—"
+              ],
+              [
+                "10",
+                "€230",
+                "€80",
+                "",
+                "",
+                ""
+              ],
+              [
+                "20",
+                "€260",
+                "€160",
+                "",
+                "",
+                ""
+              ],
+              [
+                "30",
+                "€290",
+                "€240",
+                "",
+                "",
+                ""
+              ]
+            ],
+            "content": "Vul de lege cellen in. Noteer een intervalwaarde voor MK en MO steeds bij het rechter eindpunt."
+          },
+          {
+            "id": "tabel-curva",
+            "type": "table",
+            "columns": [
+              "Q",
+              "TK",
+              "TO",
+              "winst",
+              "MK",
+              "MO"
+            ],
+            "rows": [
+              [
+                "0",
+                "€100",
+                "€0",
+                "−€100",
+                "—",
+                "—"
+              ],
+              [
+                "5",
+                "€125",
+                "€150",
+                "€25",
+                "",
+                ""
+              ],
+              [
+                "10",
+                "€200",
+                "€300",
+                "€100",
+                "",
+                ""
+              ],
+              [
+                "15",
+                "€325",
+                "€450",
+                "€125",
+                "",
+                ""
+              ]
+            ],
+            "content": "Vul de lege cellen in. Noteer een intervalwaarde voor MK en MO steeds bij het rechter eindpunt."
+          }
+        ],
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Fill in the table for Q = 0, 10, 20, 30, 40, 50: compute TK, TO, winst, MK (= ΔTK when Q rises by 1) and MO (= ΔTO when Q rises by 1)."
+            "points": 4,
+            "prompt": "Vul in de tabel van Linea de winstkolom in."
           },
           {
             "label": "b",
-            "prompt": "What do you notice about MK? Is it constant or changing?"
+            "points": 3,
+            "prompt": "Bereken voor Linea MK en MO over het eerste interval. Laat teller en noemer zien en vul dezelfde intervalwaarden in bij de rechter eindpunten Q=10, Q=20 en Q=30."
           },
           {
             "label": "c",
-            "prompt": "What do you notice about MO? Why is this logical given a constant price?"
+            "points": 2,
+            "prompt": "Leg uit waarom MO bij Linea constant is."
           },
           {
             "label": "d",
-            "prompt": "A second firm has TK = 100 + Q² and sells at €30 per unit. Fill in a similar table for Q = 0, 5, 10, 15, 20. What happens to MK now?"
+            "points": 4,
+            "prompt": "Bereken voor Curva MK over de drie intervallen en MO over het eerste interval. Vul de berekende MK- en MO-waarden in bij de juiste rechter eindpunten Q=5, Q=10 en Q=15."
           },
           {
             "label": "e",
-            "prompt": "Explain in your own words: what does MK tell you? What does MO tell you?"
+            "points": 2,
+            "prompt": "Vergelijk het MK-patroon van Linea en Curva en leg uit wat MK en MO per extra product binnen een tabelinterval betekenen. Trek geen conclusie over de winstmaximaliserende afzet."
           }
         ]
       },
       "lesson_goals": [
-        "Define MK as the additional cost of producing one extra unit (ΔTK/ΔQ)",
-        "Define MO as the additional revenue from selling one extra unit (ΔTO/ΔQ)",
-        "Calculate MK and MO from a table using subtraction",
-        "Observe that MK is constant for linear TK, but increasing for quadratic TK",
-        "Observe that MO equals the price when price is constant",
-        "Build intuitive understanding of marginal thinking"
+        "Je kunt MK als ΔTK/ΔQ en MO als ΔTO/ΔQ over een tabelinterval berekenen.",
+        "Je kunt gegeven totale kosten en totale opbrengsten gebruiken om een winstkolom in te vullen.",
+        "Je kunt constante en stijgende marginale patronen vergelijken zonder afgeleiden.",
+        "Je kunt uitleggen wat MK en MO per extra product binnen het genoemde tabelinterval betekenen."
       ],
       "required_skills": [
         "A07",
         "A08",
-        "A12",
-        "A13",
         "A21"
       ],
       "prior_knowledge_assumed": [
-        "A07",
-        "A08",
-        "A21"
+        "A07, A08 and A21 totals are retrieval-required; the interval method is taught as new formal learning."
       ],
       "new_skills_introduced": [
-        "A12",
-        "A13"
+        "Table-interval MK=ΔTK/ΔQ",
+        "Table-interval MO=ΔTO/ΔQ"
       ],
       "missing_units_flagged": [
-        "Compute MK and MO from a table by taking differences (table-method, precedes A11/A12/A13 differentiation — the pre-calculus foundation sequence must NOT use calculus; a table-only variant should be its own unit)",
-        "Observe MK constant for linear TK vs increasing for quadratic TK (concept-level pattern recognition)",
-        "Observe MO = P when price is constant (concept-level)"
+        "A dedicated pre-calculus table-interval unit for MK and MO.",
+        "Pattern comparison for linear versus quadratic total costs."
       ],
       "exam_codes": [
-        "A2.11",
         "A2.1",
-        "D1.21"
+        "D1.14",
+        "D1.17",
+        "D1.19"
       ],
-      "difficulty_notes": "This paragraph introduces the concepts and calculation only — NOT yet the profit maximisation rule. Students work with tables and subtraction, discovering patterns. No differentiation yet. The quadratic cost function in exercise (d) prepares students for rising MK, which they will encounter later in the producer and market-power sequence. One lesson works well because the focus is on understanding, not on a complex procedure.",
+      "difficulty_notes": "Kandidaat voor circa 12 minuten met twee echte tabellen. De tweede tabel is vooraf grotendeels ingevuld; de intervalnoemer en rechter eindpunten blijven zichtbaar.",
+      "answer_form_expectations": [
+        "winstkolom",
+        "intervalbreuken met ΔQ op de rechter eindpunten",
+        "korte patroonverklaring",
+        "begrensde betekenis"
+      ],
+      "short_answer_model": {
+        "a": "Linea bij Q=0/10/20/30: winst=−€200/−€150/−€100/−€50.",
+        "b": "Eerste interval: MK=(230−200)/(10−0)=€3 per product en MO=(80−0)/(10−0)=€8 per product. Zet MK=€3 en MO=€8 bij de rechter eindpunten Q=10, Q=20 en Q=30.",
+        "c": "Linea heeft constant MK=€3 en MO=€8 per product. Bij een vaste prijs levert ieder extra verkocht product dezelfde extra opbrengst op.",
+        "d": "Curva: MK=(125−100)/(5−0)=€5 bij Q=5, MK=€15 bij Q=10 en MK=€25 bij Q=15. MO=(150−0)/(5−0)=€30 en staat als constante intervalwaarde bij Q=5, Q=10 en Q=15.",
+        "e": "Linea heeft constant MK; Curva heeft stijgend MK. MK is de gemiddelde extra totale kosten per extra product binnen het interval; MO is de gemiddelde extra totale opbrengst per extra product binnen het interval."
+      },
       "source_ref": "references/owned/course-blueprint-v5.md §2.1.3",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "reviewed_final",
+      "record_status": "candidate_review_ready",
       "v5_migration": {
-        "source_status": "reviewed_final",
+        "source_status": "candidate_review_ready",
         "from_v4_id": "1.4.3",
         "related_v4_ids": [],
-        "review_required_before_final": false
+        "review_required_before_final": true
       }
     },
     {
+      "id": "2.1.4",
+      "module": 2,
+      "chapter": 1,
+      "paragraph": 4,
+      "paragraph_title": "Gemengde opgaven: kosten en opbrengsten",
       "difficulty": "MIXED",
       "target_exercise": {
-        "context": "SmoothBox sells lunchboxes at a school festival. Students use one text source for normal production and one table source for rush production. They combine cost, revenue, profit, break-even, average-cost, and marginal-reasoning skills from 2.1.1-2.1.3, select the relevant source information, and write structured economic conclusions. The target introduces no new economic theory.",
+        "context": "SmoothBox verkoopt lunchboxen op een schoolfestival. Gebruik bron A voor normale productie tot en met de capaciteit en bron B voor extra spoedproductie. De opgave combineert alleen eerder onderwezen kosten-, opbrengst-, break-even- en marginale handelingen.",
+        "sources": [
+          {
+            "id": "bron-a",
+            "content": "Per festivaldag: TCK €1.200; variabele kosten €2 per lunchbox; verkoopprijs €5 per lunchbox; normale capaciteit 700 lunchboxen. Er worden 4.000 bezoekers verwacht."
+          },
+          {
+            "id": "bron-b",
+            "type": "table",
+            "columns": [
+              "Q",
+              "TK",
+              "TO"
+            ],
+            "rows": [
+              [
+                "700",
+                "€2.600",
+                "€3.500"
+              ],
+              [
+                "800",
+                "€2.900",
+                "€4.000"
+              ],
+              [
+                "900",
+                "€3.250",
+                "€4.500"
+              ],
+              [
+                "1.000",
+                "€3.650",
+                "€5.000"
+              ]
+            ],
+            "content": "Tabel met totale kosten en totale opbrengst tijdens spoedproductie."
+          },
+          {
+            "id": "basisgrafiek",
+            "content": "Een assenstelsel met horizontaal hoeveelheid Q (lunchboxen per dag) van 0 tot 1.000 en verticaal TK en TO (€ per dag) van €0 tot €5.000. De lijnen TK en TO en de punten uit bron A en B zijn al getekend en gelabeld; break-even en het gevraagde winstinterval zijn nog niet gemarkeerd."
+          }
+        ],
         "subquestions": [
           {
-            "label": "a",
-            "prompt": "Use the normal-production source to write the formulas for TCK, TVK, TK, and TO."
+            "label": "1",
+            "points": 2,
+            "prompt": "Selecteer uit bron A TCK, de variabele kosten per lunchbox en de prijs. Classificeer TCK als constant en de kosten per lunchbox als variabel. Noem ook het gegeven dat niet nodig is."
           },
           {
-            "label": "b",
-            "prompt": "Calculate TCK, TVK, TK, TO, profit, GTK, and GCK for two production quantities, and explain why GCK changes."
+            "label": "2",
+            "points": 2,
+            "prompt": "Stel voor 0 ≤ Q ≤ 700 de functies voor TK en TO op en bereken de break-even-afzet."
           },
           {
-            "label": "c",
-            "prompt": "Calculate and interpret the break-even output in words, including the meaning in a TK/TO graph."
+            "label": "3",
+            "points": 2,
+            "prompt": "Bereken bij Q=700 de winst en GTK, beide met eenheid."
           },
           {
-            "label": "d",
-            "prompt": "Use the rush-production table to calculate MK and MO per step."
+            "label": "4",
+            "points": 4,
+            "prompt": "Bereken met bron B voor elk spoedinterval MK en MO per lunchbox."
           },
           {
-            "label": "e",
-            "prompt": "Evaluate a claim about whether extra sales after break-even are always equally profitable, using MK, MO, and source evidence."
+            "label": "5",
+            "points": 2,
+            "prompt": "Markeer in de basisgrafiek het break-evenpunt en het bereik waarin de positieve verticale afstand tussen TO en TK het snelst groeit. Leg met MK en MO uit waarom en vergelijk normale productie met alle spoedintervallen."
+          },
+          {
+            "label": "6",
+            "points": 2,
+            "prompt": "Een leerling zegt: ‘Door de vaste verkoopprijs leveren alle extra groepen van 100 lunchboxen evenveel extra winst op.’ Beoordeel deze uitspraak met de uitkomsten van vraag 4."
           }
         ]
       },
@@ -1608,52 +1795,62 @@
         "no_new_theory": true
       },
       "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: kosten en opbrengsten.",
-        "Select relevant source information from text and table sources.",
-        "Choose between cost, revenue, average, break-even, and marginal operation families.",
-        "Write structured economic answers with calculation, unit, and conclusion."
+        "Je kunt relevante gegevens selecteren en kosten-, opbrengst- en break-evenhandelingen combineren.",
+        "Je kunt gemiddelde en marginale uitkomsten berekenen en met eenheid vergelijken.",
+        "Je kunt tabel- en grafiekrepresentaties verbinden om een winstontwikkeling te verklaren.",
+        "Je kunt een economische claim met berekeningen beoordelen zonder verder te gaan dan de gegevens."
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [
+      "required_skills": [
         "A07",
         "A08",
-        "A12",
-        "A13",
         "A14",
         "A21",
-        "A22",
-        "A29",
-        "A40",
-        "D02",
-        "D26"
+        "A50",
+        "A86",
+        "D38"
+      ],
+      "prior_knowledge_assumed": [
+        "All listed skills are retrieval from §§2.1.1–2.1.3; no optimization rule is assumed."
       ],
       "new_skills_introduced": [],
       "missing_units_flagged": [],
       "exam_codes": [
         "A2.1",
         "A2.10",
-        "A2.11",
-        "A2.12",
-        "A2.15",
+        "A2.14",
+        "D1.14",
         "D1.16",
         "D1.17",
+        "D1.19",
+        "D1.20",
         "D1.21"
       ],
-      "difficulty_notes": "Count-bearing consolidation paragraph reviewed by MIXED-OPGAVEN-TARGET-STANDARD-1. It introduces no new theory. The difficulty is transfer: students must read a richer business context, select the relevant source information, choose the right operation family, combine total/average/break-even/marginal reasoning, and formulate economic conclusions.",
-      "id": "2.1.4",
-      "module": 2,
-      "chapter": 1,
-      "paragraph": 4,
-      "paragraph_title": "Gemengde opgaven: kosten en opbrengsten",
+      "difficulty_notes": "Gemengde kandidaat voor circa 20 minuten met vijf vragen van twee punten en één vierpunts-intervaltabel. Iedere vraag vraagt één afgebakende bewijsstap.",
+      "answer_form_expectations": [
+        "bronselectie",
+        "functies en break-even-afzet",
+        "één rekenset",
+        "drie intervalberekeningen",
+        "grafiekmarkering met volledige vergelijking",
+        "claimbeoordeling"
+      ],
+      "short_answer_model": {
+        "1": "TCK=€1.200 per dag en is constant; de variabele kosten zijn €2 per lunchbox; P=€5 per lunchbox. De 4.000 bezoekers zijn niet nodig voor de gevraagde kost- en opbrengstfuncties.",
+        "2": "Voor 0≤Q≤700: TK=1.200+2Q en TO=5Q. Break-even: 5Q=1.200+2Q, dus Q=400 lunchboxen.",
+        "3": "Bij Q=700 is de winst €3.500−€2.600=€900 per dag en GTK=€2.600/700≈€3,71 per lunchbox.",
+        "4": "Spoedintervallen Q=700–800/800–900/900–1.000: MK=€3,00/€3,50/€4,00 per lunchbox; MO is steeds €5,00 per lunchbox.",
+        "5": "Break-even ligt bij Q=400. Bij normale productie van Q=400–700 geldt MO−MK=€5−€2=€3 per lunchbox. In de spoedintervallen is MO−MK achtereenvolgens €2,00, €1,50 en €1,00. De positieve verticale winstafstand groeit dus het snelst van Q=400 tot Q=700.",
+        "6": "Onjuist. Uit vraag 4 volgt dat MO−MK in de spoedintervallen daalt van €2,00 via €1,50 naar €1,00 per lunchbox. De extra winst per groep van 100 is dus €200, €150 en €100."
+      },
+      "source_ref": "references/owned/course-blueprint-v5.md §2.1.4",
       "paragraph_kind": "gemengde_opgaven",
       "introduces_new_theory": false,
-      "record_status": "reviewed_final",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.1.4",
+      "record_status": "candidate_review_ready",
       "v5_migration": {
-        "source_status": "reviewed_final",
+        "source_status": "candidate_review_ready",
         "from_v4_id": null,
         "related_v4_ids": [],
-        "review_required_before_final": false
+        "review_required_before_final": true
       }
     },
     {
@@ -1664,61 +1861,79 @@
       "paragraph_title": "Prijselasticiteit",
       "difficulty": "MEDIUM",
       "target_exercise": {
-        "context": "A cinema raises ticket prices from €10.00 to €12.00. The number of visitors drops from 500 to 420 per week.",
+        "context": "Bioscoop Nova verhoogt de ticketprijs van €10 naar €12; de gevraagde hoeveelheid daalt van 500 naar 420 tickets per week. Bij StreamNow is voor een andere prijsverhoging Ev=−2 gemeten. Gebruik voor Nova de oude waarde als noemer en Ev=%ΔQv/%ΔP.",
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Calculate the percentage change in price."
+            "points": 3,
+            "prompt": "Bereken voor Bioscoop Nova de procentuele prijsverandering, de procentuele verandering van de gevraagde hoeveelheid en Ev."
           },
           {
             "label": "b",
-            "prompt": "Calculate the percentage change in quantity demanded."
+            "points": 2,
+            "prompt": "Classificeer de vraag naar bioscoopkaartjes met |Ev| en leg in gewone taal uit wat Ev=−0,8 betekent."
           },
           {
             "label": "c",
-            "prompt": "Calculate the price elasticity of demand (Ev = %ΔQv / %ΔP)."
+            "points": 2,
+            "prompt": "Classificeer de vraag naar StreamNow met Ev=−2 en vergelijk de prijsgevoeligheid met die van Bioscoop Nova."
           },
           {
             "label": "d",
-            "prompt": "Is the demand for cinema tickets elastic or inelastic? Explain what this means in plain language."
-          },
-          {
-            "label": "e",
-            "prompt": "A petrol station raises its price from €1.80 to €1.90. Sales drop from 10,000 to 9,800 litres. Calculate Ev. Is petrol elastic or inelastic? Why does this make sense?"
+            "points": 2,
+            "prompt": "Geef één plausibele contextverklaring voor het verschil in prijsgevoeligheid. Baseer je verklaring niet op een andere elasticiteitssoort."
           }
         ]
       },
       "lesson_goals": [
-        "Calculate percentage changes for price and quantity",
-        "Apply the formula Ev = %ΔQv / %ΔP",
-        "Classify demand as elastic (|Ev| > 1) or inelastic (|Ev| < 1)",
-        "Explain intuitively why some goods are more elastic than others (substitutes, necessity vs luxury)"
+        "Je kunt procentuele prijs- en hoeveelheidsveranderingen met de oude waarde als noemer berekenen.",
+        "Je kunt Ev inclusief het teken berekenen.",
+        "Je kunt vraag met |Ev| classificeren als prijselastisch of prijsinelastisch.",
+        "Je kunt verschillen in prijsgevoeligheid met contextgegevens verklaren zonder verder te gaan dan de gegevens."
       ],
       "required_skills": [
         "A15",
+        "A38",
         "D06"
       ],
-      "prior_knowledge_assumed": [],
+      "prior_knowledge_assumed": [
+        "A38 percentage change and Book 1 demand/substitute reasoning are explicit retrieval, not silent mastery."
+      ],
       "new_skills_introduced": [
         "A15",
         "D06"
       ],
-      "missing_units_flagged": [],
+      "missing_units_flagged": [
+        "D06 carries a stale D1.3 exam-code mapping; this record follows the current D1.5–D1.6 syllabus operations.",
+        "A15 and A38 carry broad A2.5 metadata, but this target contains no percentage-point operation and does not claim A2.5 coverage."
+      ],
       "exam_codes": [
         "A2.4",
-        "A2.5",
-        "D1.3"
+        "D1.5",
+        "D1.6"
       ],
-      "difficulty_notes": "Reviewed-final for Chapter 2.2 completion. Student-facing 2.2.1 output represents the cinema and petrol target cases, keeps old-value denominators visible, preserves the signed Ev calculation, and uses |Ev| only for elastic/inelastic classification.",
+      "difficulty_notes": "Kandidaat voor circa 9 minuten: één volledige Ev-berekening, twee classificaties en één contextverklaring die niet verder gaat dan de gegevens.",
+      "answer_form_expectations": [
+        "procentberekening en Ev inclusief teken",
+        "classificatie in gewone taal",
+        "vergelijking",
+        "plausibele verklaring"
+      ],
+      "short_answer_model": {
+        "a": "%ΔP=(12−10)/10×100%=+20%; %ΔQv=(420−500)/500×100%=−16%; Ev=−16%/+20%=−0,8.",
+        "b": "|−0,8|<1: prijsinelastische vraag. De gevraagde hoeveelheid daalt procentueel minder dan de prijs stijgt.",
+        "c": "|−2|>1: prijselastische vraag. StreamNow reageert in deze waarneming procentueel sterker op de prijsverandering dan Bioscoop Nova.",
+        "d": "Bijvoorbeeld: streamingabonnementen hebben meer direct vergelijkbare alternatieven of zijn makkelijker uit te stellen. Dit is plausibel, niet door de cijfers bewezen."
+      },
       "source_ref": "references/owned/course-blueprint-v5.md §2.2.1",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "reviewed_final",
+      "record_status": "candidate_review_ready",
       "v5_migration": {
-        "source_status": "reviewed_final",
+        "source_status": "candidate_review_ready",
         "from_v4_id": "2.1.1",
         "related_v4_ids": [],
-        "review_required_before_final": false
+        "review_required_before_final": true
       }
     },
     {
@@ -1729,63 +1944,88 @@
       "paragraph_title": "Elasticiteit en omzet",
       "difficulty": "MEDIUM",
       "target_exercise": {
-        "context": "Uses the cinema and petrol cases from 2.2.1 to discover the Ev-to-omzet rule.",
+        "context": "Gebruik TO=P×Q. Bij Bioscoop Nova stijgt P van €10 naar €12 en daalt Q van 500 naar 420 per week; Ev=−0,8. Bij StreamNow stijgt P van €20 naar €22 en daalt Q van 1.000 naar 800 per maand; Ev=−2,0. Alle gegevens die je nodig hebt staan hier.",
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Cinema: price rises from EUR 10 to EUR 12 and visitors fall from 500 to 420. Calculate omzet before and after with TO = P x Q, where TO means totale opbrengst."
+            "points": 2,
+            "prompt": "Bereken voor Bioscoop Nova TO vóór en na de prijsverhoging."
           },
           {
             "label": "b",
-            "prompt": "Did omzet go up or down? Explain this using the elasticity calculated in 2.2.1."
+            "points": 2,
+            "prompt": "Bereken de procentuele verandering van TO bij Bioscoop Nova en verbind die uitkomst met Ev=−0,8."
           },
           {
             "label": "c",
-            "prompt": "The cinema owner wants higher omzet. Based on the Ev, should he automatically raise the price further? Give a bounded omzet-based explanation, not a profit claim."
+            "points": 2,
+            "prompt": "Bereken voor StreamNow TO vóór en na de prijsverhoging."
           },
           {
             "label": "d",
-            "prompt": "Petrol station: price rises from EUR 1.80 to EUR 1.90 and litres fall from 10,000 to 9,800. Calculate omzet before and after. Did the price increase help omzet? Why?"
+            "points": 2,
+            "prompt": "Bereken de procentuele verandering van TO bij StreamNow en verbind die uitkomst met Ev=−2."
           },
           {
             "label": "e",
-            "prompt": "Complete the rule: if demand is elastic, a price increase leads to lower omzet; if demand is inelastic, a price increase leads to higher omzet. Explain the rule in words."
+            "points": 2,
+            "prompt": "Formuleer de lokale omzetregel voor een kleine prijsstijging bij prijsinelastische en bij prijselastische vraag. Leg uit waarom je bij een grote, eindige verandering altijd TO vóór en na berekent."
+          },
+          {
+            "label": "f",
+            "points": 1,
+            "prompt": "Leg uit waarom uit deze omzetgegevens niet volgt dat de winst stijgt."
           }
         ]
       },
       "lesson_goals": [
-        "Calculate omzet = P x Q before and after a price change",
-        "Explain that elastic demand means quantity drops proportionally more than price rises -> omzet falls",
-        "Explain that inelastic demand means quantity drops proportionally less -> omzet rises",
-        "Apply the rule to advise a business on pricing strategy"
+        "Je kunt totale opbrengst vóór en na een prijsverandering berekenen.",
+        "Je kunt de lokale omzetrichting bij een kleine prijsverandering en prijselastische of prijsinelastische vraag verklaren.",
+        "Je kunt een waargenomen omzeteffect met Ev onderbouwen.",
+        "Je kunt uitleggen waarom omzetgegevens zonder kostengegevens geen winstconclusie dragen."
       ],
       "required_skills": [
-        "A07",
         "A15",
-        "D25"
+        "A85"
       ],
       "prior_knowledge_assumed": [
-        "A07",
-        "A15"
+        "A15 and A85 are retrieval-required."
       ],
       "new_skills_introduced": [
-        "D25"
+        "Local small-change revenue direction with a direct finite-change check"
       ],
-      "missing_units_flagged": [],
+      "missing_units_flagged": [
+        "The machine-unit library has no valid unit for the local Ev/TO rule. D25 concerns a different mathematical skill and must not be cited as coverage; finite changes require direct before/after revenue calculation."
+      ],
       "exam_codes": [
-        "A2.5",
+        "A2.4",
+        "D1.14",
         "D1.15"
       ],
-      "difficulty_notes": "Reviewed-final for Chapter 2.2 completion. The target remains bounded to omzet/totale opbrengst, uses TO = P x Q before and after, connects the direction of omzet to Ev and |Ev|, and does not claim profit evidence.",
+      "difficulty_notes": "Kandidaat voor circa 11 minuten. Iedere vraag levert één korte berekening of afgebakende conclusie op.",
+      "answer_form_expectations": [
+        "oude/nieuwe TO",
+        "procentuele TO-verandering met Ev",
+        "tweezijdige lokale regel",
+        "winstbeperking"
+      ],
+      "short_answer_model": {
+        "a": "TO oud=10×500=€5.000 per week; TO nieuw=12×420=€5.040 per week.",
+        "b": "TO stijgt met €40/€5.000×100%=0,8%. Dat past bij |Ev|=0,8<1: de procentuele daling van Q is kleiner dan de procentuele prijsstijging.",
+        "c": "TO oud=20×1.000=€20.000 per maand; TO nieuw=22×800=€17.600 per maand.",
+        "d": "%ΔTO=(17.600−20.000)/20.000×100%=−12%. TO daalt dus met 12%. Dat past bij |Ev|=2>1: de procentuele daling van Q is groter dan de procentuele prijsstijging.",
+        "e": "Lokale regel: bij een kleine prijsstijging stijgt TO bij prijsinelastische vraag en daalt TO bij prijselastische vraag. Bij een grote, eindige verandering kan het product van beide procentuele factoren afwijken; daarom bereken je TO vóór en na rechtstreeks.",
+        "f": "Winst is TO−TK. Omdat kostengegevens ontbreken, bewijzen de omzetgegevens geen hogere winst."
+      },
       "source_ref": "references/owned/course-blueprint-v5.md §2.2.2",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "reviewed_final",
+      "record_status": "candidate_review_ready",
       "v5_migration": {
-        "source_status": "reviewed_final",
+        "source_status": "candidate_review_ready",
         "from_v4_id": "2.1.2",
         "related_v4_ids": [],
-        "review_required_before_final": false
+        "review_required_before_final": true
       }
     },
     {
@@ -1793,40 +2033,61 @@
       "module": 2,
       "chapter": 2,
       "paragraph": 3,
-      "paragraph_title": "Inkomenselasticiteit en kruiselingse elasticiteit",
+      "paragraph_title": "Inkomenselasticiteit en kruislingse elasticiteit",
       "difficulty": "MEDIUM",
       "target_exercise": {
-        "context": "Income elasticity (Ei), cross elasticity (Ek), and multi-variable demand functions. Part C uses Qx = 100 - 2Px + 0.5Py + 0.01Y as an exam-style demand function with ceteris-paribus reasoning.",
+        "context": "Gebruik steeds de oude waarde als noemer. Voor inkomenselasticiteit geldt Ei=%ΔQv/%ΔY. De drie gebruikte categorieën zijn: Ei<0 inferieur goed, 0<Ei<1 normaal goed en Ei>1 luxegoed; Ei=0 en Ei=1 zijn grenswaarden. Voor kruislingse elasticiteit geldt Ek=%ΔQv van goed X/%ΔP van een ander goed Z. Noem bij Ek altijd beide goederen.",
+        "sources": [
+          {
+            "id": "inkomen",
+            "content": "Het gemiddelde inkomen stijgt 5%. De vraag naar maaltijdpakketten stijgt 8%; de vraag naar budgetnoedels daalt 3%."
+          },
+          {
+            "id": "koffie",
+            "content": "De koffieprijs stijgt 10%. De vraag naar thee stijgt 4%; de vraag naar koffiefilters daalt 6%."
+          },
+          {
+            "id": "functie",
+            "content": "Voor fitnessdienst X geldt Qx=100−2Px+0,5Pz+0,01Y. Qx is het aantal gevraagde abonnementen per maand, Px en Pz zijn maandprijzen in euro van fitnessdienst X en concurrerende sportdienst Z, en Y is het gemiddelde jaarinkomen in euro. Beginsituatie: Px=10, Pz=20 en Y=30.000."
+          }
+        ],
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Average household income rises by 5%. Demand for organic food rises by 8%. Demand for budget instant noodles drops by 3%. Calculate Ei for both products. Classify organic food as normal luxury or normal necessity. Classify instant noodles by the sign first; if Ei is negative, the correct conclusion is inferieur goed and the luxury/necessity split is not applied."
+            "points": 3,
+            "prompt": "Bereken met bron inkomen Ei voor maaltijdpakketten en budgetnoedels."
           },
           {
             "label": "b",
-            "prompt": "The price of coffee rises by 10%. Demand for tea rises by 4%. Demand for coffee filters drops by 6%. Calculate Ek for tea with respect to the coffee price, and for coffee filters with respect to the coffee price. Name the affected demand good and the other good whose price changes, then classify substitutes or complements."
+            "points": 2,
+            "prompt": "Classificeer beide goederen met de drie categorieën uit de context."
           },
           {
             "label": "c",
-            "prompt": "The demand for good X is Qx = 100 - 2Px + 0.5Py + 0.01Y, with Px = 10, Py = 20, Y = 30000. Calculate current Qx. Then let income rise to Y = 33000 while other factors stay unchanged; calculate new Qx and Ei. Then let Py rise from 20 to 24 while other factors return to their original values; calculate new Qx and Ek. Are X and Y substitutes or complements?"
+            "points": 4,
+            "prompt": "Bereken met bron koffie Ek voor de vraag naar thee ten opzichte van de koffieprijs en voor de vraag naar koffiefilters ten opzichte van de koffieprijs. Noem teller- en noemergoed en classificeer de relaties."
           },
           {
             "label": "d",
-            "prompt": "Using the demand function from (c), predict what happens to demand for X if a recession lowers income by 10%. Hold Px and Py constant and calculate the new Qx."
+            "points": 4,
+            "prompt": "Bereken Qx in de beginsituatie en nadat alleen Y stijgt naar 33.000. Bereken daarna %ΔQx, Ei en classificeer fitnessdienst X. Leg uit wat met Qx gebeurt en welke variabelen gelijk blijven."
+          },
+          {
+            "label": "e",
+            "points": 3,
+            "prompt": "Zet Y terug op 30.000. Bereken Qx nadat alleen Pz stijgt van 20 naar 24. Leg uit welke richting het verband tussen Pz en Qx heeft en welke variabelen gelijk blijven."
           }
         ]
       },
       "lesson_goals": [
-        "Calculate Ei = %dQd / %dIncome",
-        "Classify goods by the sign of Ei first: normal (Ei > 0) versus inferior (Ei < 0)",
-        "For normal goods only, distinguish necessity (0 < Ei < 1) from luxury (Ei > 1)",
-        "Calculate Ek = %dQd(good A) / %dP(good B)",
-        "Classify pairs as substitutes (Ek > 0) or complements (Ek < 0)",
-        "Read and use a demand function with multiple variables while holding other variables constant",
-        "Use elasticity and demand functions for bounded predictions"
+        "Je kunt Ei berekenen en een goed classificeren als inferieur goed, normaal goed of luxegoed.",
+        "Je kunt Ek berekenen, beide goederen noemen en substituten of complementen herkennen.",
+        "Je kunt een vraagfunctie met meerdere variabelen gebruiken terwijl de overige variabelen gelijk blijven.",
+        "Je kunt uit twee functie-uitkomsten afleiden hoe één veranderde variabele samenhangt met Q terwijl de andere variabelen gelijk blijven."
       ],
       "required_skills": [
         "A04",
+        "A15",
         "A16",
         "A17",
         "D11",
@@ -1834,8 +2095,7 @@
         "D27"
       ],
       "prior_knowledge_assumed": [
-        "A04",
-        "D27"
+        "A04 and D27 are retrieval-required; A15 from §2.2.1 supplies the percentage-change procedure; Ei and Ek are new formal learning."
       ],
       "new_skills_introduced": [
         "A16",
@@ -1843,115 +2103,160 @@
         "D11",
         "D12"
       ],
-      "missing_units_flagged": [],
+      "missing_units_flagged": [
+        "A16 and D12 use stale Ekr/kruiselasticiteit wording. This candidate follows the authored authority: kruislingse elasticiteit with notation Ek; CvTE specifies the term but no abbreviation.",
+        "A17 depends on A15, which is explicitly retrieved from §2.2.1.",
+        "A15, A16 and A17 carry broad A2.5 metadata, but this target contains no percentage-point operation and does not claim A2.5 coverage."
+      ],
       "exam_codes": [
         "A2.4",
-        "A2.5",
         "D1.7",
         "D1.8",
         "D1.9"
       ],
-      "difficulty_notes": "Reviewed-final for Chapter 2.2 completion. The inferior-good ambiguity from the migrated target is repaired: negative Ei is inferieur and is not forced into the luxury/necessity split. Demand-function work is explicitly ceteris paribus.",
+      "difficulty_notes": "Kandidaat voor circa 11 minuten. De bronpercentages leveren luxe en inferieur; de inkomensmutatie in de functie levert aanvullend de categorie normaal. De laatste functie-invulling vraagt richting en gelijkblijvende variabelen.",
+      "answer_form_expectations": [
+        "Ei inclusief teken",
+        "driewegclassificatie",
+        "Ek met benoemde goederen",
+        "functie-invulling met Ei-normaalclassificatie en een functie-invulling met richting"
+      ],
+      "short_answer_model": {
+        "a": "Maaltijdpakketten: Ei=+8%/+5%=+1,6. Budgetnoedels: Ei=−3%/+5%=−0,6.",
+        "b": "Maaltijdpakketten: luxegoed (Ei>1). Budgetnoedels: inferieur goed (Ei<0).",
+        "c": "Theevraag ten opzichte van koffieprijs: Ek=+4%/+10%=+0,4, dus thee en koffie zijn substituten. Vraag naar koffiefilters ten opzichte van koffieprijs: Ek=−6%/+10%=−0,6, dus koffiefilters en koffie zijn complementen.",
+        "d": "Qx oud=100−20+10+300=390 abonnementen per maand. Bij Y=33.000: Qx=420. %ΔQx=(420−390)/390×100%=7,69% en %ΔY=(33.000−30.000)/30.000×100%=10%. Ei=7,69%/10%=0,769, dus fitnessdienst X is hier een normaal goed. Qx stijgt met 30; Px en Pz blijven gelijk.",
+        "e": "Na reset geldt Qx=390. Bij Pz=24: Qx=100−20+12+300=392 abonnementen per maand. Een hogere prijs van sportdienst Z hangt in deze functie samen met een hogere vraag naar fitnessdienst X; Px en Y blijven gelijk."
+      },
       "source_ref": "references/owned/course-blueprint-v5.md §2.2.3",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "reviewed_final",
+      "record_status": "candidate_review_ready",
       "v5_migration": {
-        "source_status": "reviewed_final",
+        "source_status": "candidate_review_ready",
         "from_v4_id": "2.1.3",
         "related_v4_ids": [],
-        "review_required_before_final": false
+        "review_required_before_final": true
       }
     },
     {
-      "difficulty": "MIXED",
-      "target_exercise": {
-        "context": "StreamPlus considers whether to continue price increases. Students use a multi-source case with a price/subscriber table, income and subscription-type table, competitor-price structured source, irrelevant service-quality data, and a demand function. They select relevant information, combine Ev, TO before and after, Ei, Ek, demand-function reasoning, table interpretation, and a bounded economic advice. The target introduces no new economic theory.",
-        "subquestions": [
-          {
-            "label": "a",
-            "prompt": "Select the source data needed to calculate Ev for the standard subscription, and name at least one provided data point that is not needed for that calculation."
-          },
-          {
-            "label": "b",
-            "prompt": "Calculate %dP, %dQv, Ev, and classify the standard subscription demand as elastic or inelastic."
-          },
-          {
-            "label": "c",
-            "prompt": "Calculate TO before and after the price change and explain the omzet change using Ev."
-          },
-          {
-            "label": "d",
-            "prompt": "Use the income source to calculate Ei for Premium and Budget subscriptions; classify Premium as normal necessity/luxury where applicable and Budget by the negative Ei sign first."
-          },
-          {
-            "label": "e",
-            "prompt": "Use the competitor structured source to calculate Ek for StreamPlus with respect to the competitor price, then interpret the table direction as substitute or complement evidence."
-          },
-          {
-            "label": "f",
-            "prompt": "Use Q = 12000 - 400P + 0.1Y + 300Pc to calculate the base regional Q, then calculate the separate ceteris-paribus effects of higher income and a higher competitor price."
-          },
-          {
-            "label": "g",
-            "prompt": "Write a cautious economic advice about further price increases using at least two sources, and state what the sources do not prove about profit or long-term customer retention."
-          }
-        ]
-      },
-      "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: elasticiteit.",
-        "Select relevant source information from text, table, and structured competitor sources.",
-        "Choose between Ev, TO, Ei, Ek, and demand-function operation families.",
-        "Write structured economic answers with calculation, unit, classification, and conclusion.",
-        "Give bounded advice that uses source evidence without claiming profit evidence."
-      ],
-      "required_skills": [
-        "A04",
-        "A07",
-        "A15",
-        "A16",
-        "A17",
-        "D11",
-        "D12",
-        "D25",
-        "D27"
-      ],
-      "prior_knowledge_assumed": [
-        "A04",
-        "A07",
-        "A15",
-        "A16",
-        "A17",
-        "D11",
-        "D12",
-        "D25",
-        "D27"
-      ],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [],
-      "exam_codes": [
-        "A2.4",
-        "A2.5",
-        "D1.7",
-        "D1.8",
-        "D1.9",
-        "D1.15"
-      ],
-      "difficulty_notes": "Reviewed-final mixed-opgaven target for Chapter 2.2. It introduces no new theory. The difficulty is transfer: students read a richer context, ignore irrelevant data when needed, choose between Ev, TO, Ei, Ek, and a demand function, interpret table evidence, and write bounded advice.",
       "id": "2.2.4",
       "module": 2,
       "chapter": 2,
       "paragraph": 4,
       "paragraph_title": "Gemengde opgaven: elasticiteit",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "reviewed_final",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.2.4",
-      "v5_migration": {
-        "source_status": "reviewed_final",
-        "from_v4_id": null,
-        "related_v4_ids": [],
-        "review_required_before_final": false
+      "difficulty": "MIXED",
+      "target_exercise": {
+        "context": "StreamPlus onderzoekt één recente prijsverhoging en mogelijke vervolgstappen. Gebruik bij vragen 1 tot en met 5 telkens alleen de aangegeven bron. Combineer bij vraag 6 minstens twee bronnen. De gemeten Ev in bron A is gegeven; de opgave combineert eerder onderwezen handelingen en introduceert geen nieuwe formule.",
+        "sources": [
+          {
+            "id": "bron-a",
+            "type": "table",
+            "columns": [
+              "gegeven",
+              "oud",
+              "nieuw"
+            ],
+            "rows": [
+              [
+                "prijs Standaard",
+                "€10",
+                "€12"
+              ],
+              [
+                "abonnees",
+                "50.000",
+                "43.000"
+              ],
+              [
+                "appscore",
+                "4,6/5",
+                "4,6/5"
+              ]
+            ],
+            "content": "Tabel met oude en nieuwe prijs, aantal abonnees en appscore; de gemeten Ev is −0,7."
+          },
+          {
+            "id": "bron-b",
+            "type": "table",
+            "columns": [
+              "verandering",
+              "Premium",
+              "Budget"
+            ],
+            "rows": [
+              [
+                "inkomen",
+                "+8%",
+                "+8%"
+              ],
+              [
+                "gevraagde hoeveelheid",
+                "+15%",
+                "−4%"
+              ]
+            ],
+            "content": "Tabel met inkomens- en vraagverandering voor Premium en Budget."
+          },
+          {
+            "id": "bron-c",
+            "type": "table",
+            "columns": [
+              "gegeven",
+              "oud",
+              "nieuw"
+            ],
+            "rows": [
+              [
+                "prijs concurrerend abonnement",
+                "€8",
+                "€9"
+              ],
+              [
+                "vraag StreamPlus",
+                "basis",
+                "+5%"
+              ]
+            ],
+            "content": "Tabel voor de kruislingse elasticiteit van StreamPlus ten opzichte van het concurrerende abonnement."
+          },
+          {
+            "id": "bron-d",
+            "content": "Regionale vraagfunctie Q=12.000−400P+0,1Y+300Pc. Q is het aantal gevraagde abonnementen per maand, P en Pc zijn maandprijzen in euro en Y is het gemiddelde jaarinkomen in euro. Beginsituatie: P=12, Pc=10 en Y=40.000."
+          }
+        ],
+        "subquestions": [
+          {
+            "label": "1",
+            "points": 2,
+            "prompt": "Selecteer uit bron A de gegevens voor een controleberekening van Ev en noem het gegeven dat daarvoor niet nodig is."
+          },
+          {
+            "label": "2",
+            "points": 2,
+            "prompt": "Classificeer met de gegeven Ev=−0,7 de vraag en leg in gewone taal uit hoe sterk Q procentueel reageert op een prijsverandering."
+          },
+          {
+            "label": "3",
+            "points": 2,
+            "prompt": "Bereken met bron A TO vóór en na de prijsverhoging."
+          },
+          {
+            "label": "4",
+            "points": 4,
+            "prompt": "Bereken en classificeer met bron B Ei voor Premium en Budget en met bron C Ek van de vraag naar StreamPlus ten opzichte van de prijs van het concurrerende abonnement. Noem bij Ek beide diensten."
+          },
+          {
+            "label": "5",
+            "points": 2,
+            "prompt": "Bereken met bron D Q in de beginsituatie en nadat alleen Y stijgt naar €42.000 per jaar. Noem welke variabelen gelijk blijven."
+          },
+          {
+            "label": "6",
+            "points": 2,
+            "prompt": "Geef op basis van minstens twee bronnen een voorzichtig omzetadvies. Noem één conclusie die de bronnen ondersteunen en precies twee conclusies die zij niet bewijzen."
+          }
+        ]
       },
       "mixed_target_profile": {
         "integrates_paragraphs": [
@@ -1963,6 +2268,70 @@
         "answer_construction_required": true,
         "table_or_graph_interpretation_required": true,
         "no_new_theory": true
+      },
+      "lesson_goals": [
+        "Je kunt relevante tabelgegevens selecteren, Ev classificeren en uitleggen, en Ei en Ek berekenen en classificeren.",
+        "Je kunt totale opbrengst vóór en na een prijsverandering vergelijken.",
+        "Je kunt een vraagfunctie gebruiken als één variabele verandert en de andere variabelen gelijk blijven.",
+        "Je kunt met meerdere bronnen een omzetadvies formuleren zonder verder te gaan dan de gegevens."
+      ],
+      "required_skills": [
+        "A04",
+        "A15",
+        "A16",
+        "A17",
+        "A38",
+        "A85",
+        "D06",
+        "D11",
+        "D12",
+        "D27"
+      ],
+      "prior_knowledge_assumed": [
+        "All listed skills are retrieval from §§2.2.1–2.2.3."
+      ],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "A16 and D12 use stale Ekr/kruiselasticiteit wording. This candidate follows the authored authority: kruislingse elasticiteit with notation Ek.",
+        "The local Ev/TO rule has no valid machine-unit coverage; D25 is not cited.",
+        "A15, A16, A17 and A38 carry broad A2.5 metadata, but this target contains no percentage-point operation and does not claim A2.5 coverage."
+      ],
+      "exam_codes": [
+        "A2.4",
+        "D1.5",
+        "D1.6",
+        "D1.7",
+        "D1.8",
+        "D1.9",
+        "D1.14",
+        "D1.15"
+      ],
+      "difficulty_notes": "Gemengde kandidaat voor circa 20 minuten met vijf vragen van twee punten, één gecombineerde elasticiteitsvraag van vier punten en vier compacte bronnen.",
+      "answer_form_expectations": [
+        "bronselectie",
+        "Ev-uitleg in gewone taal",
+        "omzetvergelijking",
+        "gecombineerde Ei- en Ek-berekening",
+        "vraagfunctie-invulling",
+        "twee-bronnenadvies met beperkingen"
+      ],
+      "short_answer_model": {
+        "1": "Nodig: P €10→€12 en Q 50.000→43.000. De appscore 4,6/5 is niet nodig voor Ev.",
+        "2": "|Ev|=0,7<1, dus de vraag is prijsinelastisch. Bij een prijsverandering van 1% verandert Q in deze waarneming in tegengestelde richting met ongeveer 0,7%.",
+        "3": "TO oud=€10×50.000=€500.000; TO nieuw=€12×43.000=€516.000.",
+        "4": "Premium: Ei=15%/8%=1,875, luxegoed. Budget: Ei=−4%/8%=−0,5, inferieur goed. Voor StreamPlus geldt %ΔP concurrent=(9−8)/8×100%=12,5% en Ek=5%/12,5%=0,4. Teller: vraag naar StreamPlus; noemer: prijs van de concurrerende dienst. Positief, dus de diensten zijn substituten.",
+        "5": "Q oud=12.000−4.800+4.000+3.000=14.200 abonnementen per maand. Bij Y=€42.000 per jaar is Q=14.400 abonnementen per maand; P en Pc blijven gelijk.",
+        "6": "Voorzichtig: de onderzochte verhoging verhoogde TO met €16.000; bron A ondersteunt die conclusie en bron C laat substitutie met de concurrent zien. Niet bewezen zijn precies: dezelfde reactie bij een volgende prijsverhoging en een hogere winst, omdat kostengegevens ontbreken."
+      },
+      "source_ref": "references/owned/course-blueprint-v5.md §2.2.4",
+      "paragraph_kind": "gemengde_opgaven",
+      "introduces_new_theory": false,
+      "record_status": "candidate_review_ready",
+      "v5_migration": {
+        "source_status": "candidate_review_ready",
+        "from_v4_id": null,
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -1973,63 +2342,84 @@
       "paragraph_title": "Consumentensurplus",
       "difficulty": "MEDIUM",
       "target_exercise": {
-        "context": "The demand curve for concert tickets is P = 50 − 0.5Q (P in €, Q in tickets). The market price is €20.",
+        "context": "Voor concertkaartjes geldt de vraagfunctie P=50−0,5Q. P is de prijs in euro per kaartje en Q het aantal gevraagde kaartjes. De gegeven marktprijs is €20. Er zijn voldoende kaartjes beschikbaar; alle bij deze prijs gevraagde kaartjes worden verkocht aan de vragers met de hoogste betalingsbereidheid. Er is in deze opgave geen aanbodfunctie.",
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Calculate the equilibrium quantity demanded at this price."
+            "points": 2,
+            "prompt": "Bereken de gevraagde hoeveelheid bij P=€20. Noem dit niet de evenwichtshoeveelheid."
           },
           {
             "label": "b",
-            "prompt": "Draw the demand curve. Shade the area that represents the consumer surplus."
+            "points": 3,
+            "prompt": "Teken de vraaglijn en de horizontale prijslijn in één assenstelsel. Benoem de horizontale as als Q (kaartjes) en de verticale as als P (€ per kaartje). Noteer de snijpunten van de vraaglijn en het snijpunt met de prijslijn."
           },
           {
             "label": "c",
-            "prompt": "Calculate the consumer surplus. (Hint: it is a triangle.)"
+            "points": 2,
+            "prompt": "Arceer en benoem in je grafiek het consumentensurplus."
           },
           {
             "label": "d",
-            "prompt": "Explain in your own words what consumer surplus means. Why is it a measure of welfare for buyers?"
+            "points": 3,
+            "prompt": "Bereken het consumentensurplus als oppervlakte van een driehoek en noteer de eenheid."
+          },
+          {
+            "label": "e",
+            "points": 2,
+            "prompt": "Leg uit wat het berekende consumentensurplus voor de kopers als groep betekent."
           }
         ]
       },
       "lesson_goals": [
-        "Define consumer surplus as the difference between willingness to pay and actual price, summed over all buyers",
-        "Identify CS graphically as the triangle between the demand curve and the price line",
-        "Calculate CS as area of a triangle: ½ × base × height",
-        "Interpret CS as a measure of buyer welfare"
+        "Je kunt de gevraagde hoeveelheid bij een gegeven prijs uit een vraagfunctie berekenen.",
+        "Je kunt consumentensurplus in een vraag-prijsgrafiek herkennen en arceren.",
+        "Je kunt consumentensurplus als driehoeksoppervlakte berekenen.",
+        "Je kunt consumentensurplus als het gezamenlijke voordeel van alle kopers van de verkochte kaartjes interpreteren."
       ],
       "required_skills": [
         "A03",
+        "A05",
         "A10",
-        "A19",
-        "A30",
         "A40"
       ],
       "prior_knowledge_assumed": [
-        "A03",
-        "A10"
+        "A03, A05 and A10 are explicit retrieval; A40 and the demand-only surplus operation are new formal learning."
       ],
       "new_skills_introduced": [
-        "A19",
-        "A30",
-        "A40"
+        "A40",
+        "Demand-only consumer-surplus calculation at an exogenous price"
       ],
       "missing_units_flagged": [
-        "Verbal: interpret CS as aggregate willingness-to-pay minus paid-price (concept-level, welfare-framing)"
+        "A dedicated unit for demand-only consumer surplus at an exogenous price without a market-equilibrium prerequisite.",
+        "Interpret aggregate willingness-to-pay minus paid price over realized transactions."
       ],
       "exam_codes": [
         "A2.16",
         "A2.17",
         "D3.1"
       ],
-      "difficulty_notes": "The concept is visual and concrete. The calculation (triangle area) is simple geometry. The main stumbling block is correctly identifying which triangle — students sometimes shade the wrong area. One lesson comfortable.",
+      "difficulty_notes": "Kandidaat voor circa 10 minuten. Zonder aanbodfunctie wordt Q=60 niet als evenwicht benoemd; de context legt verkoop en toewijzing van alle 60 gevraagde kaartjes expliciet vast.",
+      "answer_form_expectations": [
+        "functie-oplossing",
+        "gelabelde grafiek",
+        "correct gebied",
+        "driehoeksberekening",
+        "koperinterpretatie"
+      ],
+      "short_answer_model": {
+        "a": "20=50−0,5Q, dus de gevraagde hoeveelheid (Qd) is 60 kaartjes; dit is geen berekend marktevenwicht.",
+        "b": "Horizontale as: Q (kaartjes). Verticale as: P (€ per kaartje). Vraaglijn door (Q=0,P=50) en (Q=100,P=0); prijslijn P=20; snijpunt bij Q=60.",
+        "c": "Driehoek boven P=20 en onder de vraaglijn, van Q=0 tot Q=60, gelabeld CS.",
+        "d": "CS=½×60×(50−20)=€900.",
+        "e": "€900 is de som van het verschil tussen betalingsbereidheid en werkelijk betaalde prijs over de 60 verkochte kaartjes."
+      },
       "source_ref": "references/owned/course-blueprint-v5.md §2.3.1",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "candidate_review_ready",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "candidate_review_ready",
         "from_v4_id": "2.2.1",
         "related_v4_ids": [],
         "review_required_before_final": true
@@ -2043,72 +2433,119 @@
       "paragraph_title": "Producentensurplus en totaal surplus",
       "difficulty": "MEDIUM",
       "target_exercise": {
-        "context": "The supply curve for concert tickets is P = 5 + 0.25Q. The demand curve is P = 50 − 0.5Q.",
+        "context": "Voor concertkaartjes geldt vraag P=50−0,5Q en aanbod P=5+0,25Q. P is in euro per kaartje en Q in kaartjes. Binnen dit marktmodel stelt de inverse aanbodlijn voor 0≤Q≤100 de marginale kosten van iedere opeenvolgende eenheid voor, ook als die eenheid in het evenwicht niet wordt verkocht.",
+        "sources": [
+          {
+            "id": "basisgrafiek",
+            "content": "Een assenstelsel met horizontaal Q (kaartjes) van 0 tot 100 en verticaal P (€ per kaartje) van €0 tot €50. De lijnen vraag en aanbod zijn volledig getekend en gelabeld; evenwicht, CS en PS zijn nog niet gemarkeerd."
+          },
+          {
+            "id": "marginale-vergelijking",
+            "type": "table",
+            "columns": [
+              "Q",
+              "betalingsbereidheid volgens vraaglijn",
+              "marginale kosten volgens aanbodlijn"
+            ],
+            "rows": [
+              [
+                "50",
+                "€25",
+                "€17,50"
+              ],
+              [
+                "70",
+                "€15",
+                "€22,50"
+              ]
+            ],
+            "content": "De waarden zijn met de gegeven vraag- en aanbodfunctie berekend."
+          }
+        ],
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Calculate the equilibrium price and quantity."
+            "points": 2,
+            "prompt": "Bereken de evenwichtsprijs en -hoeveelheid."
           },
           {
             "label": "b",
-            "prompt": "Draw both curves. Shade and label CS and PS in different colours."
+            "points": 2,
+            "prompt": "Markeer het evenwicht in de basisgrafiek en arceer en benoem CS en PS. Teken de lijnen niet opnieuw."
           },
           {
             "label": "c",
-            "prompt": "Calculate CS and PS separately."
+            "points": 3,
+            "prompt": "Bereken CS, PS en TS met basis, hoogte en eenheid."
           },
           {
             "label": "d",
-            "prompt": "Calculate the total surplus (TS = CS + PS)."
+            "points": 2,
+            "prompt": "Vergelijk met de tabel bij Q=50 en Q=70 de betalingsbereidheid met de marginale kosten en geef per hoeveelheid aan of één extra transactie TS verhoogt of verlaagt."
           },
           {
             "label": "e",
-            "prompt": "The supply curve represents the marginal cost of each additional ticket. Explain why producer surplus can also be read as: 'the difference between the price received and the marginal cost of production, summed over all units sold.' Show this in your graph."
-          },
-          {
-            "label": "f",
-            "prompt": "A promoter asks: 'Is this the best possible outcome for society?' Answer using the concept of total surplus."
+            "points": 2,
+            "prompt": "Leg uit waarom TS in dit model maximaal is bij Q=60 en waarom dit geen oordeel over een eerlijke verdeling oplevert."
           }
         ]
       },
       "lesson_goals": [
-        "Define producer surplus as the difference between actual price received and minimum acceptable price, summed over all sellers",
-        "Identify PS graphically (triangle between price line and supply curve)",
-        "Calculate PS as a triangle area",
-        "Calculate total surplus = CS + PS",
-        "Understand that the supply curve IS the marginal cost curve — so PS is the area between price and MC",
-        "Begin to understand that competitive equilibrium maximises total surplus"
+        "Je kunt het marktevenwicht berekenen en CS en PS grafisch herkennen.",
+        "Je kunt CS, PS en TS berekenen met de juiste oppervlakten en eenheden.",
+        "Je kunt binnen het gegeven model de aanbodlijn als marginale-kostenlijn gebruiken.",
+        "Je kunt met betalingsbereidheid en marginale kosten uitleggen waarom TS bij het evenwicht maximaal is, zonder daaruit een eerlijkheidsoordeel af te leiden."
       ],
       "required_skills": [
         "A06",
         "A10",
         "A19",
-        "D20"
+        "A40",
+        "D39"
       ],
       "prior_knowledge_assumed": [
-        "A06",
-        "A10",
-        "A19"
+        "A06 and A10 are retrieval-required; PS and total-surplus operations are new formal learning here."
       ],
       "new_skills_introduced": [
-        "D20"
+        "A19",
+        "A40",
+        "D39"
       ],
       "missing_units_flagged": [
-        "Reinterpret the supply curve as the marginal cost curve (concept-level; critical for monopoly welfare in §3.3.1)",
-        "Compute total surplus TS = CS + PS and recognise it as the competitive-equilibrium welfare metric (concept-level)"
+        "Bounded inverse-supply-as-marginal-cost interpretation over a stated quantity domain.",
+        "D39 matches the total-surplus operation but carries a stale D28 prerequisite.",
+        "Total surplus maximum versus fairness boundary."
       ],
       "exam_codes": [
         "A2.16",
         "A2.17",
-        "D3.1"
+        "D1.18",
+        "D3.1",
+        "D3.2",
+        "D3.3",
+        "D3.4"
       ],
-      "difficulty_notes": "The graphical work for PS mirrors CS — students pick it up quickly. The challenging element is exercise (e): connecting PS to marginal cost. The supply curve has been treated as 'willingness to sell' so far; now students must see it as the MC curve. This dual interpretation (supply = MC) is critical for later welfare effects of monopoly and market-power analysis. Spend time on this connection — it is more important than the triangle calculation itself. One lesson works if you prioritise the MC connection over drilling calculations.",
+      "difficulty_notes": "Kandidaat voor circa 11 minuten. De basisgrafiek is geleverd, de aanbod-als-MK-uitspraak is tot een genoemd domein beperkt en de welvaartsconclusie is geen eerlijkheidsoordeel.",
+      "answer_form_expectations": [
+        "evenwichtsvergelijking",
+        "markering in geleverde grafiek",
+        "surplusberekening",
+        "betalingsbereidheid-MK-vergelijking",
+        "begrensde conclusie"
+      ],
+      "short_answer_model": {
+        "a": "50−0,5Q=5+0,25Q; 45=0,75Q; Qe=60 en Pe=€20.",
+        "b": "Horizontale as: Q (kaartjes). Verticale as: P (€ per kaartje). Markeer het snijpunt (60,20). CS ligt boven P=20 en onder de vraaglijn; PS ligt onder P=20 en boven de aanbodlijn, beide tot Q=60.",
+        "c": "CS=½×60×(50−20)=€900. PS=½×60×(20−5)=€450. TS=€900+€450=€1.350.",
+        "d": "Q=50: betalingsbereidheid=€25 en MK=€17,50, dus één extra transactie voegt €7,50 surplus toe. Q=70: betalingsbereidheid=€15 en MK=€22,50, dus die extra transactie verlaagt TS met €7,50.",
+        "e": "Tot Q=60 is de betalingsbereidheid minstens MK; daarna is de betalingsbereidheid lager dan MK. Daarom is TS binnen dit model maximaal bij Q=60. TS zegt niet hoe het surplus verdeeld is en bevat geen volledig maatschappelijk oordeel."
+      },
       "source_ref": "references/owned/course-blueprint-v5.md §2.3.2",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "candidate_review_ready",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "candidate_review_ready",
         "from_v4_id": "2.2.2",
         "related_v4_ids": [],
         "review_required_before_final": true
@@ -2119,110 +2556,257 @@
       "module": 2,
       "chapter": 3,
       "paragraph": 3,
-      "paragraph_title": "Pareto-efficientie en welvaartsverlies",
+      "paragraph_title": "Pareto-efficiëntie en welvaartsverlies",
       "difficulty": "MEDIUM",
       "target_exercise": {
-        "context": "Using the market from §2.2.2 (equilibrium P = €20, Q = 60, TS = 1350): a forced price of €30 creates a welfare loss that students calculate and interpret.",
+        "context": "Gebruik opnieuw vraag P=50−0,5Q en aanbod P=5+0,25Q. Het vrije evenwicht is Q=60 en P=€20, met CS=€900, PS=€450 en TS=€1.350. Een kosteloos verruimbare reserveringsregel zet de prijs op €25 en beperkt boekingen tot 40 kaartjes, hoewel het platform technisch minstens 60 transacties kan verwerken. De 40 kaartjes gaan naar de vragers met de hoogste betalingsbereidheid en worden geleverd door de aanbieders met de laagste marginale kosten. Daardoor vinden precies 40 transacties plaats. Bij verruiming blijven de prijs en alle bestaande transacties ongewijzigd.",
+        "sources": [
+          {
+            "id": "basisgrafiek",
+            "content": "Een assenstelsel met horizontaal Q (kaartjes) van 0 tot 100 en verticaal P (€ per kaartje) van €0 tot €50. De lijnen vraag en aanbod, het vrije evenwicht (60,20), de prijslijn P=25 en de grens Q=40 zijn getekend en gelabeld; het welvaartsverlies is nog niet gearceerd."
+          }
+        ],
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Suppose the government forces the price to €30. Calculate the new Qd and Qs. Which one determines actual transactions? Why?"
+            "points": 2,
+            "prompt": "Omschrijf Pareto-efficiëntie binnen dit marktmodel: wanneer kan geen haalbare extra transactie of herverdeling iemand beter maken zonder iemand anders slechter te maken?"
           },
           {
             "label": "b",
-            "prompt": "Calculate CS and PS at the forced price of €30."
+            "points": 3,
+            "prompt": "Bereken bij P=€25 de gevraagde hoeveelheid (Qd) en aangeboden hoeveelheid (Qs). Leg met de reserveringsregel uit waarom het werkelijke aantal transacties 40 is en welke vragers en aanbieders handelen."
           },
           {
             "label": "c",
-            "prompt": "Calculate the new total surplus. How much surplus is lost compared to the free market equilibrium?"
+            "points": 4,
+            "prompt": "Bereken bij 40 transacties en P=€25 het CS en PS. Splits elk oppervlak zo nodig in een rechthoek en een driehoek; gebruik de allocatieregel."
           },
           {
             "label": "d",
-            "prompt": "The lost surplus is called deadweight loss (welvaartsverlies). Shade it in your graph."
+            "points": 4,
+            "prompt": "Bereken TS en het welvaartsverlies ten opzichte van het vrije evenwicht. Arceer het welvaartsverlies tussen Q=40 en Q=60 in de basisgrafiek en benoem basis en hoogte."
           },
           {
             "label": "e",
-            "prompt": "Explain in your own words what Pareto-efficient means. Why is the free market equilibrium Pareto-efficient and the situation at P = €30 not?"
+            "points": 2,
+            "prompt": "Pas je definitie uit vraag a toe op de 41e transactie. Leg met betalingsbereidheid, marginale kosten en de kosteloze verruiming uit waarom 40 transacties niet Pareto-efficiënt zijn."
+          },
+          {
+            "label": "f",
+            "points": 2,
+            "prompt": "Leg uit waarom een hoger TS of Pareto-efficiëntie niet automatisch betekent dat de verdeling eerlijk is."
           }
         ]
       },
       "lesson_goals": [
-        "Define Pareto-efficiency: no one can be made better off without making someone else worse off",
-        "Understand that the competitive equilibrium is Pareto-efficient (TS is maximised)",
-        "Calculate deadweight loss when price deviates from equilibrium",
-        "Recognise that any price above or below equilibrium creates deadweight loss",
-        "Identify deadweight loss graphically (the 'lost triangle')"
+        "Je kunt Pareto-efficiëntie binnen een expliciet marktmodel definiëren en toepassen.",
+        "Je kunt vraag, aanbod en werkelijke transacties onder een expliciete reserverings- en allocatieregel bepalen en twee surplusstaten vergelijken.",
+        "Je kunt welvaartsverlies berekenen en in een geleverde grafiek arceren.",
+        "Je kunt efficiëntie onderscheiden van een oordeel over eerlijke verdeling."
       ],
       "required_skills": [
+        "A06",
         "A10",
         "A19",
-        "A32",
-        "D20"
+        "A40",
+        "D20",
+        "D39"
       ],
       "prior_knowledge_assumed": [
-        "A10",
-        "A19",
-        "D20"
+        "A06, A10, A19, A40 and D39 are retrieval from §2.3.2."
       ],
       "new_skills_introduced": [
-        "A32"
+        "D20",
+        "Generic restriction-DWL calculation"
       ],
       "missing_units_flagged": [
-        "Determine the short-side rule (transactions at a forced price = min(Qd, Qs)) and name which side rations (concept-level + application)",
-        "Give a verbal Pareto-efficiency definition and argue why competitive equilibrium satisfies it (concept-level, mastery_target understand)"
+        "A dedicated generic unit for DWL under a non-tax quantity restriction.",
+        "Apply a removable booking limit and highest-willingness-to-pay/lowest-marginal-cost allocation rule.",
+        "D20 is scoped to Pareto-efficiency in market equilibrium; this restricted-state application needs broader unit coverage."
       ],
       "exam_codes": [
         "A2.16",
         "A2.17",
-        "D3.5"
+        "D1.18",
+        "D3.1",
+        "D3.2",
+        "D3.3",
+        "D3.4",
+        "D3.5",
+        "D3.6"
       ],
-      "difficulty_notes": "The Pareto concept is abstract but exercise (e) makes it concrete: 'can you improve someone's position without hurting another?' The deadweight loss calculation is straightforward (it's another triangle). The conceptual challenge is that students must see why transactions are 'lost.' One lesson works because the math is revision — the new element is the interpretation.",
+      "difficulty_notes": "Kandidaat voor circa 12 minuten. De prijs, bindende reserveringsgrens, technische haalbaarheid en allocatie zijn volledig bepaald; de redundante evenwichtscontrole is vervallen.",
+      "answer_form_expectations": [
+        "definitie",
+        "Qd-Qs-transactieketen",
+        "rechthoek-en-driehoek-surplus",
+        "TS en grafiekarcering",
+        "haalbare Paretoverbetering",
+        "eerlijkheidsgrens"
+      ],
+      "short_answer_model": {
+        "a": "Pareto-efficiënt betekent hier dat geen haalbare extra transactie of herverdeling iemand beter kan maken zonder minstens één ander slechter te maken, gegeven de model- en allocatieaannames.",
+        "b": "Bij P=25: Qd=50 en Qs=80. De boekingsgrens van 40 is dus strikt lager dan vraag en aanbod. Er handelen precies de 40 vragers met de hoogste betalingsbereidheid en de 40 aanbieders met de laagste marginale kosten.",
+        "c": "Bij Q=40 is de betalingsbereidheid €30 en MK €15. CS=rechthoek 40×(30−25)=€200 plus driehoek ½×40×(50−30)=€400, dus €600. PS=rechthoek 40×(25−15)=€400 plus driehoek ½×40×(15−5)=€200, dus €600.",
+        "d": "TS=600+600=€1.200 en welvaartsverlies=1.350−1.200=€150. Het verlies is de driehoek tussen vraag en aanbod van Q=40 tot Q=60: basis 20 kaartjes, hoogte bij Q=40 is 30−15=€15; ½×20×15=€150.",
+        "e": "Bij Q=41 is de betalingsbereidheid €29,50 en zijn de marginale kosten €15,25. Een transactie tegen bijvoorbeeld €25 maakt deze vrager en aanbieder beter af, schaadt bestaande partijen niet en is technisch haalbaar na de kosteloze verruiming. Daarom is de grens van 40 niet Pareto-efficiënt.",
+        "f": "Efficiëntie gaat over onbenutte wederzijdse voordelen of totaal surplus, niet over wie het surplus ontvangt. Voor eerlijkheid is een afzonderlijk verdelingsoordeel nodig."
+      },
       "source_ref": "references/owned/course-blueprint-v5.md §2.3.3",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "candidate_review_ready",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "candidate_review_ready",
         "from_v4_id": "2.2.3",
         "related_v4_ids": [],
         "review_required_before_final": true
       }
     },
     {
-      "difficulty": "MIXED",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 2.3.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
-        "subquestions": [
-          {
-            "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
-          }
-        ]
-      },
-      "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: surplus en welvaart."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
-      ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
       "id": "2.3.4",
       "module": 2,
       "chapter": 3,
       "paragraph": 4,
       "paragraph_title": "Gemengde opgaven: surplus en welvaart",
+      "difficulty": "MIXED",
+      "target_exercise": {
+        "context": "Op een eiland worden huurfietsen verhandeld. Gebruik vraag P=80−Q en aanbod P=20+0,5Q. Zonder beperking ontstaat een marktevenwicht. In het hoogseizoen zet een kosteloos verruimbare boekingsregel de transactieprijs op €45 en het aantal boekingen op maximaal 30, hoewel het platform technisch minstens 40 transacties kan verwerken. De 30 fietsen gaan naar de huurders met de hoogste betalingsbereidheid en worden aangeboden door de verhuurders met de laagste marginale kosten. Bij verruiming blijven de prijs en bestaande transacties ongewijzigd. Een bron vermeldt ook dat de meeste fietsen blauw zijn; dat gegeven is economisch niet relevant.",
+        "sources": [
+          {
+            "id": "basisgrafiek",
+            "content": "Een assenstelsel met horizontaal Q (huurfietsen) van 0 tot 80 en verticaal P (€ per huurfiets) van €0 tot €80. De lijnen vraag en aanbod zijn volledig getekend en gelabeld; het evenwicht, de prijslijn P=45, de grens Q=30 en de surplusgebieden zijn nog niet gemarkeerd."
+          },
+          {
+            "id": "hulpcijfers-boeking",
+            "type": "table",
+            "columns": [
+              "toestand",
+              "Qd",
+              "Qs",
+              "betalingsbereidheid",
+              "marginale kosten"
+            ],
+            "rows": [
+              [
+                "P=€45 en Q=30",
+                "35",
+                "50",
+                "€50 bij Q=30",
+                "€35 bij Q=30"
+              ],
+              [
+                "mogelijke 31e transactie",
+                "—",
+                "—",
+                "€49",
+                "€35,50"
+              ]
+            ],
+            "content": "Omdat Qd=35 en Qs=50, is de boekingsgrens van 30 bindend."
+          }
+        ],
+        "subquestions": [
+          {
+            "label": "1",
+            "points": 2,
+            "prompt": "Selecteer de gegevens die nodig zijn om het vrije evenwicht te berekenen, noem het irrelevante gegeven en bereken Pe en Qe."
+          },
+          {
+            "label": "2",
+            "points": 2,
+            "prompt": "Bereken bij het vrije evenwicht CS, PS en TS."
+          },
+          {
+            "label": "3",
+            "points": 4,
+            "prompt": "Bereken bij 30 transacties en P=€45 met de gegeven allocatieregel CS, PS en TS. Gebruik de hulpcijfers en alleen rechthoeken en driehoeken."
+          },
+          {
+            "label": "4",
+            "points": 2,
+            "prompt": "Bereken het welvaartsverlies en arceer dit in de basisgrafiek. Benoem basis en hoogte; teken de vraag- en aanbodlijn niet opnieuw."
+          },
+          {
+            "label": "5",
+            "points": 2,
+            "prompt": "Een verhuurder zegt: ‘PS is bij de beperking hoger, dus de uitkomst is Pareto-efficiënt.’ Beoordeel deze uitspraak met beide TS-waarden en de gegeven betalingsbereidheid en marginale kosten van de 31e transactie."
+          },
+          {
+            "label": "6",
+            "points": 2,
+            "prompt": "Leg uit waarom de efficiëntievergelijking niet bepaalt welke uitkomst eerlijker is."
+          }
+        ]
+      },
+      "mixed_target_profile": {
+        "integrates_paragraphs": [
+          "2.3.1",
+          "2.3.2",
+          "2.3.3"
+        ],
+        "source_selection_required": true,
+        "answer_construction_required": true,
+        "table_or_graph_interpretation_required": true,
+        "no_new_theory": true
+      },
+      "lesson_goals": [
+        "Je kunt uit bronnen een evenwicht bepalen en CS, PS en TS berekenen.",
+        "Je kunt surplus onder een expliciete boekingsgrens, prijs en allocatieregel berekenen.",
+        "Je kunt welvaartsverlies berekenen en in een geleverde grafiek arceren.",
+        "Je kunt een efficiëntieclaim beoordelen en efficiëntie onderscheiden van eerlijke verdeling."
+      ],
+      "required_skills": [
+        "A06",
+        "A10",
+        "A19",
+        "A40",
+        "D20",
+        "D39"
+      ],
+      "prior_knowledge_assumed": [
+        "All listed operations are retrieval from §§2.3.1–2.3.3."
+      ],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "A dedicated generic unit for DWL under a non-tax quantity restriction.",
+        "D39 matches the total-surplus operation but carries a stale D28 prerequisite.",
+        "D20 is scoped to Pareto-efficiency in market equilibrium; this restricted-state application needs broader unit coverage."
+      ],
+      "exam_codes": [
+        "A2.16",
+        "A2.17",
+        "D1.18",
+        "D3.1",
+        "D3.2",
+        "D3.3",
+        "D3.4",
+        "D3.5",
+        "D3.6"
+      ],
+      "difficulty_notes": "Gemengde kandidaat voor circa 18 minuten met precies zes vragen en een geleverde basisgrafiek. De boekingsgrens is strikt bindend en de opgave consolideert zonder nieuwe interventietheorie.",
+      "answer_form_expectations": [
+        "bronselectie en evenwicht",
+        "twee surplussets met rechthoeken en driehoeken",
+        "verliesberekening en arcering",
+        "Pareto-toepassing",
+        "eerlijkheidsgrens"
+      ],
+      "short_answer_model": {
+        "1": "Nodig: vraag- en aanbodfunctie. De kleur blauw is irrelevant. 80−Q=20+0,5Q; 60=1,5Q; Qe=40 en Pe=€40.",
+        "2": "CS=½×40×(80−40)=€800. PS=½×40×(40−20)=€400. TS=€1.200.",
+        "3": "Bij P=45 is Qd=35 en Qs=50; de grens van 30 is dus strikt bindend. Bij Q=30 is de betalingsbereidheid €50 en MK €35. CS=rechthoek 30×(50−45)=€150 plus driehoek ½×30×(80−50)=€450, dus €600. PS=rechthoek 30×(45−35)=€300 plus driehoek ½×30×(35−20)=€225, dus €525. TS=€1.125.",
+        "4": "Welvaartsverlies=1.200−1.125=€75. In de basisgrafiek: driehoek tussen vraag en aanbod van Q=30 tot Q=40; basis 10, hoogte bij Q=30 is 50−35=15; ½×10×15=75.",
+        "5": "Onjuist. PS stijgt van €400 naar €525, maar TS daalt van €1.200 naar €1.125. Bij Q=31 is de betalingsbereidheid €49 en MK €35,50; een extra transactie tegen €45 is na kosteloze verruiming haalbaar en maakt nieuwe partijen beter af zonder bestaande partijen te schaden. De uitkomst met 30 transacties is dus niet Pareto-efficiënt.",
+        "6": "De surplusberekening toont efficiëntie en verdeling van CS/PS, maar bevat geen norm voor een eerlijke verdeling. Daarvoor is een apart waardeoordeel nodig."
+      },
+      "source_ref": "references/owned/course-blueprint-v5.md §2.3.4",
       "paragraph_kind": "gemengde_opgaven",
       "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.3.4",
+      "record_status": "candidate_review_ready",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
+        "source_status": "candidate_review_ready",
         "from_v4_id": null,
         "related_v4_ids": [],
         "review_required_before_final": true

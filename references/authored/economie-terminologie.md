@@ -45,6 +45,13 @@ Canonical Dutch economic terms as defined by the **Syllabus Economie VWO 2026** 
 | 1.23 | marktevenwicht / evenwichtsprijs | — | market equilibrium / equilibrium price | gevraagde = aangeboden hoeveelheid |
 | 1.24 | evenwichtshoeveelheid / evenwichtsopbrengst | — | equilibrium quantity / equilibrium revenue | |
 
+**Ei-classificatie voor studentteksten:** gebruik uitsluitend de drie
+CvTE-categorieën `inferieur goed`, `normaal goed` en `luxegoed`. In de
+rekenroute geldt `Ei < 0` inferieur, `0 < Ei < 1` normaal en `Ei > 1` luxe.
+`Ei = 0` en `Ei = 1` zijn grenswaarden; ken zonder aanvullende canonieke
+autoriteit geen categorie toe. Gebruik `noodzakelijk goed` niet als
+Ei-categorie in deze route.
+
 **Key abbreviations from the syllabus (D1):**
 
 | Abbreviation | Dutch full term | English |

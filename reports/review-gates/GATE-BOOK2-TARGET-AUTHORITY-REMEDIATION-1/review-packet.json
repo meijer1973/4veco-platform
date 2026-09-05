@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "packet_id": "GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
+  "gate_id": "GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
+  "sprint_id": "BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
+  "date": "2026-09-05",
+  "issue": 229,
+  "pr_number": 230,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/230",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "high_authority",
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "PASS_WITH_FLAGS",
+    "rationale": "The exact twelve-record target-authority candidate and protected A17 correction require structural lead review, successful exact-head CI, and an explicit human owner decision before any governed integration."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "book2_target_authority",
+    "protected_A17_reference_change",
+    "outline_candidate_lifecycle",
+    "lesson_and_merge_boundary"
+  ],
+  "status": "content_approved_lifecycle_corrections_pending_fresh_lead_and_ci",
+  "route": "OWNER_CORRECTIONS_THEN_INDEPENDENT_PR_READINESS",
+  "requested_decision": "The owner approved the exact frozen target content and Ei rule on 2026-09-05. Review the lifecycle/evidence corrections to PR #230. Integration, lessons, Phase B and merge remain unauthorized.",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "https://github.com/meijer1973/4veco-platform/issues/229",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md",
+    "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.plan.json",
+    "references/authored/book-outlines/book-2-outline.md",
+    "references/authored/book-outlines/book-2-outline.meta.json",
+    "../Boek_2_doelopgaven_en_lesdoelen_audit.pdf"
+  ],
+  "non_negotiable_requirements": [
+    "Repair all twelve Book 2 records as one exact package.",
+    "Expose every promised learner operation in point-bearing prompts and short answers.",
+    "Use the canonical three-way Ei classification with explicit boundary values.",
+    "Preserve accurate economics, mathematics, units, graphs, tables, sources, and scoring.",
+    "Require specialist, finished-artifact, structural lead, full local, and exact-head CI proof.",
+    "Preserve owner-approved candidate bytes; keep twelve integration holds open and all lesson/integration/merge gates blocked. Release only the explicitly approved Ei semantic decision.",
+    "Do not modify the lesson repository or generate student-facing output."
+  ],
+  "stop_conditions": [
+    "Any unresolved core requirement or specialist disagreement.",
+    "Any candidate, registry, alignment, or evidence hash mismatch.",
+    "Any need to write lesson files or generate student output.",
+    "Any failure of focused, full local, or hosted exact-head validation.",
+    "Any attempted owner-approval, integration, merge, or Phase B claim without a separate explicit decision."
+  ],
+  "exact_identities": {
+    "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
+    "candidate_file_sha256": "aba9f8f0408905820cc94ed49eb5f8deef4a5ed4aca66e42d1fb171c935d3675",
+    "registry_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+    "alignment_json_sha256": "fc7f59c74bd695e7009785a0ca2762666547c8a4d5577fb25d215d5ec421ccaa",
+    "alignment_markdown_sha256": "a56f626d5f911594704a2a1c229e327d188829923987a503579b4cf85e2f5937",
+    "outline_semantic_sha256": "919c39f64dd212dba37b62902a5bb2e2ce6388c6020a0491e1621017ae2192a1",
+    "platform_baseline": "e5f89e730d65c4131d7dd09f805f0db94690e8e6",
+    "lesson_head": "f09fd6e88edc5049b026b16b0158e7e188091d2d"
+  },
+  "core_requirement_checklist": [
+    {
+      "requirement": "All twelve Book 2 records repaired as one exact package",
+      "status": "met"
+    },
+    {
+      "requirement": "Ei terminology resolves to inferieur, normaal, luxe with explicit boundary values",
+      "status": "met"
+    },
+    {
+      "requirement": "Every required operation is visible, answerable, and mapped bidirectionally",
+      "status": "met"
+    },
+    {
+      "requirement": "All answers, graphs, tables, units, and points are recalculated and checked",
+      "status": "met"
+    },
+    {
+      "requirement": "Mixed targets are coherent, complete, bounded, and introduce no new theory",
+      "status": "met"
+    },
+    {
+      "requirement": "Teacher, economics, student-language, and independent finished-artifact review pass",
+      "status": "met_on_corrected_exact_package"
+    },
+    {
+      "requirement": "Candidate state cannot imply owner approval or permit premature integration",
+      "status": "met"
+    },
+    {
+      "requirement": "Lesson repository and generated student output remain unchanged",
+      "status": "met"
+    },
+    {
+      "requirement": "Remote structural lead review",
+      "status": "historical_round2_met_new_correction_review_pending"
+    },
+    {
+      "requirement": "Historical owner-reviewed exact-head CI",
+      "status": "met_b614577_run_33917295567"
+    },
+    {
+      "requirement": "Human owner exact-package decision",
+      "status": "met_approved_content_only"
+    },
+    {
+      "requirement": "Owner-requested P1 lifecycle corrections and fresh exact-head CI/readiness",
+      "status": "in_progress"
+    }
+  ],
+  "specialist_reviews": [
+    {
+      "role": "economics_mathematical_precision",
+      "result": "PASS",
+      "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-post-lead-correction.md"
+    },
+    {
+      "role": "teacher_learning_quality",
+      "result": "PASS",
+      "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-post-lead-correction.md"
+    },
+    {
+      "role": "student_language_experience",
+      "result": "PASS",
+      "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-post-lead-correction.md"
+    },
+    {
+      "role": "finished_artifact_test_plan",
+      "result": "PASS",
+      "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-post-lead-correction.md"
+    },
+    {
+      "role": "structural_lead_round_1",
+      "result": "REVISE",
+      "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round1.md"
+    },
+    {
+      "role": "structural_lead_round_2",
+      "result": "PASS WITH FLAGS",
+      "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md"
+    },
+    {
+      "role": "owner_correction_independent_verification",
+      "result": "PASS",
+      "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-verification.md"
+    },
+    {
+      "role": "owner_correction_structural_lead_round3",
+      "result": "REVISE",
+      "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round3.md"
+    }
+  ],
+  "holds": {
+    "issue_229_candidate_holds": "open_for_all_twelve_paragraphs",
+    "H-229-EI-SUPERSESSION": "released_by_immutable_owner_semantic_decision",
+    "approved_target_use": "blocked",
+    "target_authority_integration": "blocked",
+    "paragraph_and_lesson_production": "blocked",
+    "merge": "blocked"
+  },
+  "authority_claims": {
+    "candidate_structural_readiness": true,
+    "goal_package_approved": false,
+    "replacement_targets_approved": true,
+    "target_registry_integration_authorized": false,
+    "lesson_repository_mutation_authorized": false,
+    "paragraph_production_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "product_authority": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "student_use_authorized": false,
+    "merge_authorized": false
+  },
+  "findings": [
+    {
+      "id": "LR-229-01",
+      "classification": "core_spec_failure",
+      "finding": "The first published head failed the commit-relative historical integration fixture.",
+      "status": "closed_by_b614577_successful_run_33917295567",
+      "blocks": [
+        "final routing until revalidated"
+      ],
+      "does_not_block": [
+        "publishing the corrected commit"
+      ],
+      "proof_required_to_close": "Focused/full local PASS and validate-platform success on the corrected exact head."
+    },
+    {
+      "id": "LR-229-02",
+      "classification": "core_spec_failure",
+      "finding": "§2.1.1 omitted a visible total-cost change operation.",
+      "status": "closed_by_renewed_specialist_and_lead_round2",
+      "blocks": [
+        "package approval until rereviewed"
+      ],
+      "does_not_block": [
+        "correction work"
+      ],
+      "proof_required_to_close": "Renewed specialist PASS and lead round 2 on package 914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310."
+    },
+    {
+      "id": "LR-229-03",
+      "classification": "core_spec_failure",
+      "finding": "§2.2.3 omitted an observable normal-good Ei classification.",
+      "status": "closed_by_renewed_specialist_and_lead_round2",
+      "blocks": [
+        "package approval until rereviewed"
+      ],
+      "does_not_block": [
+        "the canonical terminology decision"
+      ],
+      "proof_required_to_close": "Renewed specialist PASS and lead round 2 on the corrected function-derived Ei operation."
+    },
+    {
+      "id": "LR-229-05",
+      "classification": "scale_blocker",
+      "finding": "The sprint checker needed a durable CI mode that neither freezes unrelated future authority data nor retires before both the twelve target holds and the separate Ei semantic supersession hold are validly released.",
+      "status": "reopened_by_owner_review_terminal_hash_and_semantic_evidence_findings",
+      "blocks": [
+        "permanent CI integration in the original form"
+      ],
+      "does_not_block": [
+        "bounded sprint-scope proof"
+      ],
+      "proof_required_to_close": "Durable-mode unrelated-data, exact-package transition, open-Ei, invalid Ei evidence, and post-transition tests plus lead round 2."
+    }
+  ],
+  "carried_flags": [
+    {
+      "id": "LR-229-06",
+      "classification": "minor_carry_flag",
+      "flag": "Classroom timing, especially §2.3.3, remains specialist-calibrated rather than observed.",
+      "blocks": [
+        "classroom-proven timing claims"
+      ],
+      "does_not_block": [
+        "Phase A structural candidate review"
+      ],
+      "proof_required_to_close": "Representative Phase B learner/teacher timing and any resulting calibration."
+    }
+  ],
+  "proof": {
+    "lead_review": {
+      "path": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round3.md",
+      "result": "REVISE",
+      "reviewed_commit_sha": "0b6befd9808e35a3442129e7fc278390ce568649",
+      "scope": "Historical initial owner-correction review; LR-229-OWNER-01 is repaired and awaits the published round-4 recheck. Final exact-head reviewer evidence on PR #230 supersedes this snapshot."
+    },
+    "checkers": [
+      {
+        "command": "node scripts/check-course-target-exercises-v5.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/workflows/check-book2-target-authority-remediation.js",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd test -- --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/workflows/check-book2-candidate-approval-block.js",
+        "status": "passed"
+      }
+    ],
+    "ci": {
+      "required_contexts": [
+        "validate-platform"
+      ],
+      "status": "passed",
+      "reviewed_commit_sha": "b614577f19c6e8a95c9981256aa125e56d26cd79",
+      "run_id": 33917295567,
+      "url": "https://github.com/meijer1973/4veco-platform/actions/runs/33917295567",
+      "scope": "historical owner-reviewed content head; not proof of the new correction head"
+    },
+    "correction_ci": {
+      "status": "pending_new_correction_head"
+    },
+    "readiness": {
+      "initial_json": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/pr-readiness-initial.json",
+      "initial_markdown": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/pr-readiness-initial.md",
+      "initial_route": "KEEP_DRAFT_REVISE",
+      "final_proof_location": "https://github.com/meijer1973/4veco-platform/pull/230",
+      "finalization_rule": "Publish final live reviewed-head decision on the PR after final lead recheck and green exact-head CI; do not rewrite a historical decision as current."
+    }
+  },
+  "changed_paths": [
+    ".github/workflows/platform-ci.yml",
+    "build-scripts/workflows/check-book-outline-currentness.js",
+    "build-scripts/workflows/check-book-outline-currentness.test.js",
+    "build-scripts/workflows/check-book2-candidate-approval-block.js",
+    "build-scripts/workflows/check-book2-target-authority-remediation.js",
+    "build-scripts/workflows/check-book2-target-authority-remediation.test.js",
+    "docs/roadmaps/textbook/sprint-ledger.md",
+    "docs/roadmaps/textbook/textbook-production-roadmap.md",
+    "package.json",
+    "references/authored/book-outlines/book-2-outline.md",
+    "references/authored/book-outlines/book-2-outline.meta.json",
+    "references/authored/course-target-exercises.json",
+    "references/authored/economie-terminologie.md",
+    "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.alignment.json",
+    "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.candidates.json",
+    "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.plan.json",
+    "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.result.json",
+    "references/machine/micro-teaching-units.json",
+    "references/machine/micro-teaching-units.md",
+    "reports/github-agent-index-lessen.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-platform.md",
+    "reports/internal-dashboard/dashboard-data.json",
+    "reports/internal-dashboard/index.html",
+    "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.json",
+    "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json",
+    "reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json",
+    "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/bundle-urls.md",
+    "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
+    "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.md",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.json",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-alignment-matrix.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-baseline.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-command-log.jsonl",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-command-log.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-diff-summary.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-final.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-post-lead-correction.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-round-1.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-round-2.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-round-3.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-round-4.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-corrections.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-final.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-post-lead-correction.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-round-1.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-assignment.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-corrections.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round1.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-planning-review.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-result.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-specialist-corrections.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-final.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-post-lead-correction.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-round-1.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-round-2.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-round-3.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-round-4.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-final.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-post-lead-correction.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-round-1.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-round-2.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-round-3.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-round-4.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-terminology-decision.md",
+    "reports/url-index.md",
+    "scripts/check-course-target-exercises-v5.js",
+    "build-scripts/workflows/book2-owner-decision.js"
+  ],
+  "recommended_next_action": "Complete correction verification and structural lead review, publish the corrected head, obtain fresh validate-platform success and run PR Readiness Reviewer. No integration, lessons, Phase B or merge.",
+  "owner_review": {
+    "path": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
+    "content_decision": "approved_frozen_package",
+    "ei_decision": "approve_three_way_ei_unlabeled_zero_one",
+    "pr_decision": "request_changes",
+    "reviewed_commit_sha": "b614577f19c6e8a95c9981256aa125e56d26cd79",
+    "integration_authorized": false,
+    "lessons_authorized": false,
+    "phase_b_authorized": false,
+    "merge_authorized": false
+  },
+  "final_integration_contract": "The frozen candidate_review_ready status is not final authority. Immutable content approval permits no integration. Terminal retirement and released target authority are rejected until a separate immutable owner integration decision is implemented; all content/evidence comparisons still run."
+}

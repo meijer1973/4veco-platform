@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "reviewed_pr": {
+    "repo": "meijer1973/4veco-platform",
+    "number": 230,
+    "url": "https://github.com/meijer1973/4veco-platform/pull/230",
+    "base": "main",
+    "head_sha": "0b6befd9808e35a3442129e7fc278390ce568649",
+    "was_draft": true
+  },
+  "throughput": {
+    "class": "normal_sprint",
+    "authority_class": "high_authority",
+    "level": "L4"
+  },
+  "human_review_payload": "consequential_exception",
+  "consequence": "high",
+  "batching": {
+    "viable": false,
+    "target": null,
+    "reason": null
+  },
+  "route": "KEEP_DRAFT_REVISE",
+  "reason_codes": [
+    "merge_readiness_blocked",
+    "required_ci_context_missing_or_not_successful",
+    "lead_review_stale_after_substantive_change"
+  ],
+  "proof": {
+    "ci_head_sha": "0b6befd9808e35a3442129e7fc278390ce568649",
+    "ci_status": "missing_or_pending",
+    "ci_required_contexts": [
+      "validate-platform"
+    ],
+    "ci_missing_contexts": [
+      "validate-platform"
+    ],
+    "ci_checks": [
+      {
+        "name": "validate-platform",
+        "conclusion": "IN_PROGRESS"
+      }
+    ],
+    "lead_review_path": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md",
+    "lead_review_result": "PASS WITH FLAGS",
+    "lead_reviewed_sha": "c324fc7fb1bd9e7f82ce3b0b2bb1aa0a4feea995",
+    "lead_review_evidence_tail_allowed": false,
+    "lead_review_integration_authorization_inherited": false,
+    "lead_review_integration_delta_reviewed": false,
+    "post_lead_review_changed_paths": [
+      ".github/workflows/platform-ci.yml",
+      "build-scripts/workflows/book2-owner-decision.js",
+      "build-scripts/workflows/check-book-outline-currentness.js",
+      "build-scripts/workflows/check-book-outline-currentness.test.js",
+      "build-scripts/workflows/check-book2-candidate-approval-block.js",
+      "build-scripts/workflows/check-book2-target-authority-remediation.js",
+      "build-scripts/workflows/check-book2-target-authority-remediation.test.js",
+      "docs/roadmaps/textbook/sprint-ledger.md",
+      "docs/roadmaps/textbook/textbook-production-roadmap.md",
+      "references/authored/book-outlines/book-2-outline.md",
+      "references/authored/book-outlines/book-2-outline.meta.json",
+      "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.plan.json",
+      "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.result.json",
+      "reports/github-agent-index-lessen.json",
+      "reports/github-agent-index-lessen.md",
+      "reports/github-agent-index-platform.json",
+      "reports/github-agent-index-platform.md",
+      "reports/internal-dashboard/dashboard-data.json",
+      "reports/internal-dashboard/index.html",
+      "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.json",
+      "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json",
+      "reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json",
+      "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
+      "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.md",
+      "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json",
+      "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.json",
+      "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.md",
+      "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-command-log.jsonl",
+      "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-command-log.md",
+      "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-diff-summary.md",
+      "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round1.md",
+      "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md",
+      "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-correction-resolution.md",
+      "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-corrections-plan.md",
+      "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
+      "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-result.md",
+      "reports/url-index.md"
+    ],
+    "changed_paths_verified": true,
+    "checkers": [
+      {
+        "command": "node scripts/check-course-target-exercises-v5.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/workflows/check-book2-target-authority-remediation.js",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd test -- --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/workflows/check-book2-candidate-approval-block.js",
+        "status": "passed"
+      }
+    ],
+    "branch_protection": {
+      "required_approving_review_count": null,
+      "approval_count_source": null,
+      "approval_count_observable": false,
+      "requires_distinct_approval": null
+    },
+    "bundle": {
+      "required": false,
+      "delegated": false,
+      "ok": true,
+      "failures": [],
+      "summary": null
+    },
+    "bundle_delegated_ci": false,
+    "human_authorization": null,
+    "integration": null
+  },
+  "allowed_transition": "NONE",
+  "human_notification_required": false,
+  "corrections": [
+    "merge_readiness_blocked",
+    "required_ci_context_missing_or_not_successful",
+    "lead_review_stale_after_substantive_change"
+  ],
+  "escalation_signals": [
+    "review_autonomy_governance_change",
+    "workflow_surface_changed",
+    "protected_reference_touched",
+    "machine_external_reference_touched"
+  ]
+}

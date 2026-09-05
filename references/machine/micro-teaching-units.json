@@ -592,7 +592,7 @@
     "procedure": [
       "Bereken %ΔQ van het product en %ΔY van het inkomen met correct teken.",
       "Bereken Ei = %ΔQ / %ΔY.",
-      "Interpreteer: Ei < 0 = inferieur goed, 0 < Ei < 1 = noodzakelijk goed, Ei > 1 = luxegoed.",
+      "Interpreteer met de drie canonieke categorieën: Ei < 0 = inferieur goed, 0 < Ei < 1 = normaal goed, Ei > 1 = luxegoed. Ei = 0 en Ei = 1 zijn grenswaarden; ken zonder aanvullende autoriteit geen categorie toe.",
       "Controleer: noemer is %ΔY (inkomen), niet %ΔP — verwar niet met Ev."
     ],
     "pitfalls": [

@@ -1,0 +1,1470 @@
+{
+  "schema_version": 1,
+  "sprint_id": "BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
+  "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
+  "records": [
+    {
+      "id": "2.1.1",
+      "estimated_minutes": 11,
+      "budget_class": "theory_8_12",
+      "question_time_minutes": {
+        "a": 2,
+        "b": 2,
+        "c": 2,
+        "d": 2,
+        "e": 3
+      },
+      "question_budgets": [
+        {
+          "label": "a",
+          "minutes": 2,
+          "points": 4,
+          "observable_actions": [
+            "classificeert vier kostencomponenten",
+            "geeft per component een gedragsreden"
+          ]
+        },
+        {
+          "label": "b",
+          "minutes": 2,
+          "points": 3,
+          "observable_actions": [
+            "stelt TCK, TVK en TK op"
+          ]
+        },
+        {
+          "label": "c",
+          "minutes": 2,
+          "points": 3,
+          "observable_actions": [
+            "berekent drie gemiddelde kosten bij Q=500 met eenheid"
+          ]
+        },
+        {
+          "label": "d",
+          "minutes": 2,
+          "points": 3,
+          "observable_actions": [
+            "berekent drie gemiddelde kosten bij Q=1.000 met eenheid"
+          ]
+        },
+        {
+          "label": "e",
+          "minutes": 3,
+          "points": 4,
+          "observable_actions": [
+            "vergelijkt TCK, TVK en TK in twee Q-staten",
+            "verklaart GCK, GVK en GTK",
+            "noemt de modelgrenzen"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "goal": 1,
+          "questions": [
+            "a"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "D1.16",
+            "book-2-outline §2.1.1"
+          ],
+          "answer_form": "classificatietabel met gedragsreden",
+          "source_sufficiency": "vier kostencomponenten, maand, Q-bereik en gelijkblijvende capaciteit zijn gegeven",
+          "calculation_evidence": "twee constante en twee variabele componenten"
+        },
+        {
+          "goal": 2,
+          "questions": [
+            "b"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "A08",
+            "D1.16"
+          ],
+          "answer_form": "drie functies",
+          "source_sufficiency": "vaste som en twee kosten per brood zijn gegeven",
+          "calculation_evidence": "TCK=500; TVK=0,80Q; TK=500+0,80Q"
+        },
+        {
+          "goal": 3,
+          "questions": [
+            "c",
+            "d"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "A14",
+            "A50",
+            "A86",
+            "D38"
+          ],
+          "answer_form": "twee gemiddelde-kostenrijen met eenheid",
+          "source_sufficiency": "Q=500 en Q=1.000 zijn gegeven",
+          "calculation_evidence": "GCK 1,00/0,50; GVK 0,80/0,80; GTK 1,80/1,30"
+        },
+        {
+          "goal": 4,
+          "questions": [
+            "e"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "book-2-outline model conditions"
+          ],
+          "answer_form": "totale-kostenvergelijking en drie oorzakelijke gemiddelde-kostenoordelen met modelgrenzen",
+          "source_sufficiency": "beide Q-staten en proportionaliteitsaanname staan in context",
+          "calculation_evidence": "TCK 500→500; TVK 400→800; TK 900→1.300; GCK halveert; GVK blijft gelijk; GTK halveert niet"
+        }
+      ]
+    },
+    {
+      "id": "2.1.2",
+      "estimated_minutes": 12,
+      "budget_class": "theory_8_12",
+      "question_time_minutes": {
+        "a": 2,
+        "b": 2,
+        "c": 3,
+        "d": 5
+      },
+      "question_budgets": [
+        {
+          "label": "a",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "stelt TO op",
+            "verklaart GO=P voor Q>0"
+          ]
+        },
+        {
+          "label": "b",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "berekent twee winstuitkomsten"
+          ]
+        },
+        {
+          "label": "c",
+          "minutes": 3,
+          "points": 3,
+          "observable_actions": [
+            "lost TO=TK algebraïsch op",
+            "onderscheidt continue en gehele uitkomst"
+          ]
+        },
+        {
+          "label": "d",
+          "minutes": 5,
+          "points": 4,
+          "observable_actions": [
+            "tekent en labelt TK en TO",
+            "markeert break-even en winst/verlies",
+            "toont winst als verticale afstand"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "goal": 1,
+          "questions": [
+            "a",
+            "b"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "A07",
+            "A21",
+            "D1.14"
+          ],
+          "answer_form": "TO-functie, GO-verklaring en twee winstuitkomsten",
+          "source_sufficiency": "TK, vaste prijs en beide Q-waarden zijn gegeven",
+          "calculation_evidence": "TO=1,50Q; GO=P voor Q>0; winst −150/200"
+        },
+        {
+          "goal": 2,
+          "questions": [
+            "c"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "A08",
+            "D1.19"
+          ],
+          "answer_form": "algebra met continue en gehele uitkomst",
+          "source_sufficiency": "TK en TO zijn beschikbaar",
+          "calculation_evidence": "Q=714,29 continu; 715 eerste geheel zonder verlies"
+        },
+        {
+          "goal": 3,
+          "questions": [
+            "d"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "A21",
+            "D1.20"
+          ],
+          "answer_form": "gelabelde grafiek met zones",
+          "source_sufficiency": "beide lineaire functies en het break-evenpunt zijn berekend",
+          "calculation_evidence": "TK-start 500; TO-start 0; snijpunt 714,29"
+        },
+        {
+          "goal": 4,
+          "questions": [
+            "d"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "D1.20",
+            "book-2-outline §2.1.2"
+          ],
+          "answer_form": "verticale afstand met waarde",
+          "source_sufficiency": "Q=1.000 en beide functiewaarden zijn beschikbaar",
+          "calculation_evidence": "1.500−1.300=€200"
+        }
+      ]
+    },
+    {
+      "id": "2.1.3",
+      "estimated_minutes": 12,
+      "budget_class": "theory_8_12",
+      "question_time_minutes": {
+        "a": 2,
+        "b": 2,
+        "c": 1,
+        "d": 4,
+        "e": 3
+      },
+      "question_budgets": [
+        {
+          "label": "a",
+          "minutes": 2,
+          "points": 4,
+          "observable_actions": [
+            "vult vier winstcellen in"
+          ]
+        },
+        {
+          "label": "b",
+          "minutes": 2,
+          "points": 3,
+          "observable_actions": [
+            "berekent MK en MO met teller en noemer",
+            "plaatst waarden bij drie rechter eindpunten"
+          ]
+        },
+        {
+          "label": "c",
+          "minutes": 1,
+          "points": 2,
+          "observable_actions": [
+            "verklaart constante MO"
+          ]
+        },
+        {
+          "label": "d",
+          "minutes": 4,
+          "points": 4,
+          "observable_actions": [
+            "berekent drie MK-intervallen",
+            "berekent constante MO",
+            "plaatst waarden bij de rechter eindpunten"
+          ]
+        },
+        {
+          "label": "e",
+          "minutes": 3,
+          "points": 2,
+          "observable_actions": [
+            "vergelijkt beide MK-patronen",
+            "legt intervalbetekenis van MK en MO uit"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "goal": 1,
+          "questions": [
+            "b",
+            "d"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "D1.17",
+            "D1.19",
+            "book-2-outline §2.1.3"
+          ],
+          "answer_form": "intervalbreuken en invulling bij rechter eindpunten",
+          "source_sufficiency": "TK, TO, Q-intervallen en invulcellen zijn in twee tabellen gegeven",
+          "calculation_evidence": "Linea MK=3/MO=8; Curva MK=5/15/25 en MO=30"
+        },
+        {
+          "goal": 2,
+          "questions": [
+            "a"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "A07",
+            "A08",
+            "A21"
+          ],
+          "answer_form": "vier winstcellen",
+          "source_sufficiency": "TK en TO staan al in de Linea-tabel",
+          "calculation_evidence": "winst −200/−150/−100/−50"
+        },
+        {
+          "goal": 3,
+          "questions": [
+            "c",
+            "d",
+            "e"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "book-2-outline §2.1.3"
+          ],
+          "answer_form": "constant/stijgend patroon met korte oorzaak",
+          "source_sufficiency": "beide reeksen marginale waarden zijn berekend",
+          "calculation_evidence": "Linea constant; Curva stijgend; vaste prijs geeft constante MO"
+        },
+        {
+          "goal": 4,
+          "questions": [
+            "e"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "D1.17",
+            "D1.19"
+          ],
+          "answer_form": "begrensde betekenis per extra product binnen interval",
+          "source_sufficiency": "context definieert ΔTK/ΔQ en ΔTO/ΔQ zonder afgeleiden",
+          "calculation_evidence": "gemiddelde extra kosten en opbrengsten per product in een tabelinterval"
+        }
+      ]
+    },
+    {
+      "id": "2.1.4",
+      "estimated_minutes": 20,
+      "budget_class": "mixed_18_25",
+      "question_time_minutes": {
+        "1": 2,
+        "2": 3,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 3
+      },
+      "question_budgets": [
+        {
+          "label": "1",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "selecteert en classificeert de kostengegevens",
+            "noemt het irrelevante gegeven"
+          ]
+        },
+        {
+          "label": "2",
+          "minutes": 3,
+          "points": 2,
+          "observable_actions": [
+            "stelt TK en TO op",
+            "berekent break-even"
+          ]
+        },
+        {
+          "label": "3",
+          "minutes": 3,
+          "points": 2,
+          "observable_actions": [
+            "berekent winst en GTK bij Q=700"
+          ]
+        },
+        {
+          "label": "4",
+          "minutes": 4,
+          "points": 4,
+          "observable_actions": [
+            "berekent MK voor drie spoedintervallen",
+            "berekent MO voor drie spoedintervallen"
+          ]
+        },
+        {
+          "label": "5",
+          "minutes": 5,
+          "points": 2,
+          "observable_actions": [
+            "markeert break-even en snelste groeibereik",
+            "vergelijkt normale en drie spoedmarges"
+          ]
+        },
+        {
+          "label": "6",
+          "minutes": 3,
+          "points": 2,
+          "observable_actions": [
+            "beoordeelt de claim",
+            "onderbouwt met de marges uit vraag 4"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "goal": 1,
+          "questions": [
+            "1",
+            "2"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "§§2.1.1–2.1.2",
+            "D1.14",
+            "D1.16"
+          ],
+          "answer_form": "bronselectie, classificatie, functies en break-even",
+          "source_sufficiency": "bron A bevat vaste kosten, kosten per stuk, prijs en één irrelevant gegeven",
+          "calculation_evidence": "TK=1.200+2Q; TO=5Q; break-even Q=400"
+        },
+        {
+          "goal": 2,
+          "questions": [
+            "3",
+            "4"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "§§2.1.1–2.1.3",
+            "D1.17",
+            "D1.19"
+          ],
+          "answer_form": "één gemiddelde-kostenstaat en drie intervalberekeningen",
+          "source_sufficiency": "Q=700 en alle drie spoedintervallen staan in de bronnen",
+          "calculation_evidence": "winst 900; GTK 3,71; MK 3/3,5/4; MO steeds 5"
+        },
+        {
+          "goal": 3,
+          "questions": [
+            "5"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "§§2.1.2–2.1.3",
+            "D1.20",
+            "D1.21"
+          ],
+          "answer_form": "twee markeringen en volledige MK/MO-vergelijking",
+          "source_sufficiency": "basisgrafiek, normale functies en alle spoedintervallen zijn geleverd",
+          "calculation_evidence": "break-even Q=400; grootste groei in Q400–700 met marge 3 versus 2/1,5/1"
+        },
+        {
+          "goal": 4,
+          "questions": [
+            "6"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "§2.1.3",
+            "D1.21"
+          ],
+          "answer_form": "claimoordeel met drie reeds berekende marges",
+          "source_sufficiency": "vraag 4 levert alle benodigde intervaluitkomsten",
+          "calculation_evidence": "extra winst €200/€150/€100"
+        }
+      ]
+    },
+    {
+      "id": "2.2.1",
+      "estimated_minutes": 9,
+      "budget_class": "theory_8_12",
+      "question_time_minutes": {
+        "a": 3,
+        "b": 2,
+        "c": 2,
+        "d": 2
+      },
+      "question_budgets": [
+        {
+          "label": "a",
+          "minutes": 3,
+          "points": 3,
+          "observable_actions": [
+            "berekent twee procentuele veranderingen",
+            "berekent Ev met teken"
+          ]
+        },
+        {
+          "label": "b",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "classificeert Nova",
+            "legt Ev in gewone taal uit"
+          ]
+        },
+        {
+          "label": "c",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "classificeert StreamNow",
+            "vergelijkt prijsgevoeligheid"
+          ]
+        },
+        {
+          "label": "d",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "geeft één plausibele verklaring zonder bewijsclaim"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "goal": 1,
+          "questions": [
+            "a"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "A38",
+            "D1.5"
+          ],
+          "answer_form": "twee procentuele veranderingen",
+          "source_sufficiency": "oude en nieuwe prijs en hoeveelheid van Nova zijn gegeven",
+          "calculation_evidence": "+20% prijs en −16% hoeveelheid"
+        },
+        {
+          "goal": 2,
+          "questions": [
+            "a"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "A15",
+            "D1.5"
+          ],
+          "answer_form": "Ev inclusief teken",
+          "source_sufficiency": "beide procentuele veranderingen zijn berekend",
+          "calculation_evidence": "Ev=−0,8"
+        },
+        {
+          "goal": 3,
+          "questions": [
+            "b",
+            "c"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "D06",
+            "D1.6"
+          ],
+          "answer_form": "twee classificaties en gewone-taalbetekenis",
+          "source_sufficiency": "Ev=−0,8 en Ev=−2 zijn beschikbaar",
+          "calculation_evidence": "Nova prijsinelastisch; StreamNow prijselastisch"
+        },
+        {
+          "goal": 4,
+          "questions": [
+            "c",
+            "d"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "A2.4"
+          ],
+          "answer_form": "vergelijking en één plausibele contextverklaring",
+          "source_sufficiency": "twee contrasterende Ev-waarden en contexten zijn gegeven",
+          "calculation_evidence": "StreamNow reageert sterker; verklaring is plausibel en niet bewezen"
+        }
+      ]
+    },
+    {
+      "id": "2.2.2",
+      "estimated_minutes": 11,
+      "budget_class": "theory_8_12",
+      "question_time_minutes": {
+        "a": 2,
+        "b": 2,
+        "c": 2,
+        "d": 2,
+        "e": 2,
+        "f": 1
+      },
+      "question_budgets": [
+        {
+          "label": "a",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "berekent twee Nova-omzetten"
+          ]
+        },
+        {
+          "label": "b",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "berekent de procentuele TO-mutatie",
+            "verbindt die met Ev"
+          ]
+        },
+        {
+          "label": "c",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "berekent twee StreamNow-omzetten"
+          ]
+        },
+        {
+          "label": "d",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "berekent de getekende procentuele TO-mutatie",
+            "verbindt die met Ev"
+          ]
+        },
+        {
+          "label": "e",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "formuleert de lokale regel",
+            "grenst de claim af bij eindige veranderingen"
+          ]
+        },
+        {
+          "label": "f",
+          "minutes": 1,
+          "points": 1,
+          "observable_actions": [
+            "legt uit waarom omzet geen winst bewijst"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "goal": 1,
+          "questions": [
+            "a",
+            "c"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "A85",
+            "D1.14"
+          ],
+          "answer_form": "twee oude/nieuwe TO-paren",
+          "source_sufficiency": "P en Q voor beide toestanden zijn gegeven",
+          "calculation_evidence": "Nova 5.000→5.040; StreamNow 20.000→17.600"
+        },
+        {
+          "goal": 2,
+          "questions": [
+            "e"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "D1.15",
+            "book-2-outline §2.2.2"
+          ],
+          "answer_form": "tweezijdige lokale regel met eindige-veranderingsgrens",
+          "source_sufficiency": "beide Ev-klassen en directe omzetuitkomsten zijn beschikbaar",
+          "calculation_evidence": "klein/inelastisch: TO omhoog; klein/elastisch: TO omlaag; eindig: direct rekenen"
+        },
+        {
+          "goal": 3,
+          "questions": [
+            "b",
+            "d"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "A15",
+            "D1.15"
+          ],
+          "answer_form": "twee procentuele TO-veranderingen gekoppeld aan Ev",
+          "source_sufficiency": "oude en nieuwe TO plus Ev staan in de opgave",
+          "calculation_evidence": "+0,8% bij Ev −0,8; −12% bij Ev −2"
+        },
+        {
+          "goal": 4,
+          "questions": [
+            "f"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "book-2-outline evidence boundary"
+          ],
+          "answer_form": "één begrensde winstconclusie",
+          "source_sufficiency": "omzetgegevens zijn gegeven maar kostengegevens ontbreken",
+          "calculation_evidence": "TO alleen bewijst geen winststijging"
+        }
+      ]
+    },
+    {
+      "id": "2.2.3",
+      "estimated_minutes": 11,
+      "budget_class": "theory_8_12",
+      "question_time_minutes": {
+        "a": 2,
+        "b": 1,
+        "c": 3,
+        "d": 3,
+        "e": 2
+      },
+      "question_budgets": [
+        {
+          "label": "a",
+          "minutes": 2,
+          "points": 3,
+          "observable_actions": [
+            "berekent twee Ei-waarden met teken"
+          ]
+        },
+        {
+          "label": "b",
+          "minutes": 1,
+          "points": 2,
+          "observable_actions": [
+            "classificeert twee goederen"
+          ]
+        },
+        {
+          "label": "c",
+          "minutes": 3,
+          "points": 4,
+          "observable_actions": [
+            "berekent twee Ek-waarden",
+            "benoemt en classificeert beide goederenparen"
+          ]
+        },
+        {
+          "label": "d",
+          "minutes": 3,
+          "points": 4,
+          "observable_actions": [
+            "berekent twee functiewaarden",
+            "berekent Ei met oude waarden als noemer",
+            "classificeert normaal en benoemt richting en constanten"
+          ]
+        },
+        {
+          "label": "e",
+          "minutes": 2,
+          "points": 3,
+          "observable_actions": [
+            "berekent de Pz-mutatie",
+            "benoemt richting en constanten"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "goal": 1,
+          "questions": [
+            "a",
+            "b",
+            "d"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "A17",
+            "D11",
+            "D1.7"
+          ],
+          "answer_form": "drie Ei-berekeningen en classificaties",
+          "source_sufficiency": "bronpercentages, classificatiegrenzen en de inkomensfunctie met twee toestanden zijn gegeven",
+          "calculation_evidence": "Ei 1,6 luxe; Ei −0,6 inferieur; functie-Ei 0,769 normaal"
+        },
+        {
+          "goal": 2,
+          "questions": [
+            "c"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "A16",
+            "D12",
+            "D1.8",
+            "authored terminology: Ek"
+          ],
+          "answer_form": "twee Ek-berekeningen met beide goederen",
+          "source_sufficiency": "prijs- en hoeveelheidspercentages staan in bron koffie",
+          "calculation_evidence": "Ek 0,4 substituten; Ek −0,6 complementen"
+        },
+        {
+          "goal": 3,
+          "questions": [
+            "d",
+            "e"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "A04",
+            "D27",
+            "D1.9"
+          ],
+          "answer_form": "twee functie-invullingen met gelijkblijvende variabelen",
+          "source_sufficiency": "functie en beide eenvariabele-mutaties zijn volledig gegeven",
+          "calculation_evidence": "Qx 390→420 bij Y; Qx 390→392 bij Pz"
+        },
+        {
+          "goal": 4,
+          "questions": [
+            "d",
+            "e"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "D1.9",
+            "book-2-outline §2.2.3"
+          ],
+          "answer_form": "richting per veranderde variabele in gewone taal",
+          "source_sufficiency": "de twee functie-uitkomsten en gelijkblijvende variabelen zijn benoemd",
+          "calculation_evidence": "hogere Y en hogere Pz hangen hier elk samen met hogere Qx"
+        }
+      ]
+    },
+    {
+      "id": "2.2.4",
+      "estimated_minutes": 20,
+      "budget_class": "mixed_18_25",
+      "question_time_minutes": {
+        "1": 2,
+        "2": 3,
+        "3": 3,
+        "4": 5,
+        "5": 3,
+        "6": 4
+      },
+      "question_budgets": [
+        {
+          "label": "1",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "selecteert Ev-gegevens",
+            "noemt het irrelevante gegeven"
+          ]
+        },
+        {
+          "label": "2",
+          "minutes": 3,
+          "points": 2,
+          "observable_actions": [
+            "classificeert Ev",
+            "legt de reactie in gewone taal uit"
+          ]
+        },
+        {
+          "label": "3",
+          "minutes": 3,
+          "points": 2,
+          "observable_actions": [
+            "berekent TO voor en na"
+          ]
+        },
+        {
+          "label": "4",
+          "minutes": 5,
+          "points": 4,
+          "observable_actions": [
+            "berekent en classificeert twee Ei-waarden",
+            "berekent en classificeert Ek met beide diensten"
+          ]
+        },
+        {
+          "label": "5",
+          "minutes": 3,
+          "points": 2,
+          "observable_actions": [
+            "berekent twee functiewaarden",
+            "noemt gelijkblijvende variabelen"
+          ]
+        },
+        {
+          "label": "6",
+          "minutes": 4,
+          "points": 2,
+          "observable_actions": [
+            "formuleert één gedragen conclusie",
+            "noemt precies twee niet-gedragen conclusies"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "goal": 1,
+          "questions": [
+            "1",
+            "2",
+            "4"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "§§2.2.1–2.2.3",
+            "D1.5",
+            "D1.6",
+            "D1.7",
+            "D1.8"
+          ],
+          "answer_form": "bronselectie, gewone-taal-Ev en Ei/Ek-berekeningen met classificatie",
+          "source_sufficiency": "drie tabellen bevatten de elasticiteitsgegevens en één irrelevante waarde",
+          "calculation_evidence": "Ev −0,7 prijsinelastisch; Ei 1,875/−0,5; Ek 0,4"
+        },
+        {
+          "goal": 2,
+          "questions": [
+            "3"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "A85",
+            "D1.14"
+          ],
+          "answer_form": "oud/nieuw TO-paar",
+          "source_sufficiency": "prijs en abonnees staan in bron A",
+          "calculation_evidence": "TO 500.000→516.000"
+        },
+        {
+          "goal": 3,
+          "questions": [
+            "5"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "A04",
+            "D27",
+            "D1.9"
+          ],
+          "answer_form": "twee functiewaarden met gelijkblijvende variabelen",
+          "source_sufficiency": "bron D definieert functie, variabelen, eenheden en beide inkomens",
+          "calculation_evidence": "Q 14.200→14.400; P en Pc blijven gelijk"
+        },
+        {
+          "goal": 4,
+          "questions": [
+            "6"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "§2.2.2 evidence boundary"
+          ],
+          "answer_form": "één gedragen en precies twee niet-gedragen conclusies",
+          "source_sufficiency": "bron A draagt de waargenomen TO; bron C geeft substitutie maar geen toekomst- of kostengegevens",
+          "calculation_evidence": "TO steeg in waarneming; volgende reactie en hogere winst niet bewezen"
+        }
+      ]
+    },
+    {
+      "id": "2.3.1",
+      "estimated_minutes": 10,
+      "budget_class": "theory_8_12",
+      "question_time_minutes": {
+        "a": 2,
+        "b": 3,
+        "c": 1,
+        "d": 2,
+        "e": 2
+      },
+      "question_budgets": [
+        {
+          "label": "a",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "berekent Qd",
+            "benoemt dit niet als evenwicht"
+          ]
+        },
+        {
+          "label": "b",
+          "minutes": 3,
+          "points": 3,
+          "observable_actions": [
+            "tekent en labelt vraag- en prijslijn",
+            "noteert de snijpunten"
+          ]
+        },
+        {
+          "label": "c",
+          "minutes": 1,
+          "points": 2,
+          "observable_actions": [
+            "arceert en benoemt CS"
+          ]
+        },
+        {
+          "label": "d",
+          "minutes": 2,
+          "points": 3,
+          "observable_actions": [
+            "berekent CS als driehoek met eenheid"
+          ]
+        },
+        {
+          "label": "e",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "interpreteert CS voor alle verkochte kaartjes"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "goal": 1,
+          "questions": [
+            "a"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "A03",
+            "A05",
+            "D3.1"
+          ],
+          "answer_form": "functie-oplossing met juiste naam",
+          "source_sufficiency": "vraagfunctie en exogene prijs zijn gegeven",
+          "calculation_evidence": "Qd=60, niet evenwichtshoeveelheid"
+        },
+        {
+          "goal": 2,
+          "questions": [
+            "b",
+            "c"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "A40",
+            "D3.1"
+          ],
+          "answer_form": "gelabelde vraag/prijsgrafiek met gearceerd CS",
+          "source_sufficiency": "vraagfunctie, prijs en verkoopregel zijn gegeven",
+          "calculation_evidence": "CS-driehoek boven P=20 tot Q=60"
+        },
+        {
+          "goal": 3,
+          "questions": [
+            "d"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "A10",
+            "D3.1"
+          ],
+          "answer_form": "driehoeksberekening met euro-eenheid",
+          "source_sufficiency": "basis 60 en hoogte 30 volgen uit grafiek",
+          "calculation_evidence": "½×60×30=€900"
+        },
+        {
+          "goal": 4,
+          "questions": [
+            "e"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "D3.1",
+            "book-2-outline §2.3.1"
+          ],
+          "answer_form": "groepsinterpretatie",
+          "source_sufficiency": "verkoop aan hoogste betalingsbereidheid is expliciet",
+          "calculation_evidence": "som betalingsbereidheid minus betaalde prijs over verkochte kaartjes"
+        }
+      ]
+    },
+    {
+      "id": "2.3.2",
+      "estimated_minutes": 11,
+      "budget_class": "theory_8_12",
+      "question_time_minutes": {
+        "a": 2,
+        "b": 2,
+        "c": 3,
+        "d": 2,
+        "e": 2
+      },
+      "question_budgets": [
+        {
+          "label": "a",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "berekent Pe en Qe"
+          ]
+        },
+        {
+          "label": "b",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "markeert evenwicht",
+            "arceert en benoemt CS en PS"
+          ]
+        },
+        {
+          "label": "c",
+          "minutes": 3,
+          "points": 3,
+          "observable_actions": [
+            "berekent CS en PS",
+            "berekent TS met eenheden"
+          ]
+        },
+        {
+          "label": "d",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "vergelijkt de twee gegeven marginale paren",
+            "bepaalt per paar de TS-richting"
+          ]
+        },
+        {
+          "label": "e",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "verklaart het TS-maximum",
+            "scheidt efficiëntie van eerlijkheid"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "goal": 1,
+          "questions": [
+            "a",
+            "b"
+          ],
+          "classification": "retrieval_required_and_new_formal_learning",
+          "authority": [
+            "A06",
+            "A40",
+            "D3.1",
+            "D3.2"
+          ],
+          "answer_form": "evenwichtsvergelijking en twee grafiekgebieden",
+          "source_sufficiency": "vraag, aanbod en basisgrafiek zijn gegeven",
+          "calculation_evidence": "Qe=60; Pe=20; CS en PS correct gemarkeerd"
+        },
+        {
+          "goal": 2,
+          "questions": [
+            "c"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "A10",
+            "A19",
+            "D39",
+            "D3.1–D3.4"
+          ],
+          "answer_form": "CS-, PS- en TS-berekening met eenheden",
+          "source_sufficiency": "evenwicht en lijnsnijpunten zijn beschikbaar",
+          "calculation_evidence": "CS 900; PS 450; TS 1.350"
+        },
+        {
+          "goal": 3,
+          "questions": [
+            "d",
+            "e"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "D1.18",
+            "D3.3",
+            "book-2-outline model condition"
+          ],
+          "answer_form": "twee betalingsbereidheid/MK-vergelijkingen",
+          "source_sufficiency": "inverse aanbodlijn is expliciet en begrensd als MK; de twee afgeleide marginale paren staan in een tabel",
+          "calculation_evidence": "Q50: +7,50; Q70: −7,50"
+        },
+        {
+          "goal": 4,
+          "questions": [
+            "d",
+            "e"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "D3.3",
+            "D3.4"
+          ],
+          "answer_form": "maximumverklaring met eerlijkheidsgrens",
+          "source_sufficiency": "vergelijkingen aan weerszijden van Q=60 zijn gemaakt",
+          "calculation_evidence": "tot Q60 betalingsbereidheid≥MK; daarna lager; geen verdelingsoordeel"
+        }
+      ]
+    },
+    {
+      "id": "2.3.3",
+      "estimated_minutes": 12,
+      "budget_class": "theory_8_12",
+      "question_time_minutes": {
+        "a": 1,
+        "b": 2,
+        "c": 4,
+        "d": 2,
+        "e": 2,
+        "f": 1
+      },
+      "question_budgets": [
+        {
+          "label": "a",
+          "minutes": 1,
+          "points": 2,
+          "observable_actions": [
+            "definieert Pareto-efficiëntie binnen het model"
+          ]
+        },
+        {
+          "label": "b",
+          "minutes": 2,
+          "points": 3,
+          "observable_actions": [
+            "berekent Qd en Qs",
+            "past boekings- en allocatieregel toe"
+          ]
+        },
+        {
+          "label": "c",
+          "minutes": 4,
+          "points": 4,
+          "observable_actions": [
+            "berekent CS met twee deeloppervlakten",
+            "berekent PS met twee deeloppervlakten"
+          ]
+        },
+        {
+          "label": "d",
+          "minutes": 2,
+          "points": 4,
+          "observable_actions": [
+            "berekent TS en welvaartsverlies",
+            "arceert de gegeven verliesdriehoek met basis en hoogte"
+          ]
+        },
+        {
+          "label": "e",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "toont met Q41 een haalbare Paretoverbetering"
+          ]
+        },
+        {
+          "label": "f",
+          "minutes": 1,
+          "points": 2,
+          "observable_actions": [
+            "scheidt efficiëntie van eerlijkheid"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "goal": 1,
+          "questions": [
+            "a",
+            "e"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "D20",
+            "D3.5"
+          ],
+          "answer_form": "definitie en toepassing op één extra transactie",
+          "source_sufficiency": "technische haalbaarheid, kosteloze verruiming en onveranderde bestaande transacties zijn gegeven",
+          "calculation_evidence": "Q41: betalingsbereidheid 29,50 > MK 15,25, dus haalbare Paretoverbetering"
+        },
+        {
+          "goal": 2,
+          "questions": [
+            "b",
+            "c",
+            "d"
+          ],
+          "classification": "retrieval_required_and_new_formal_learning",
+          "authority": [
+            "§2.3.2",
+            "D1.18",
+            "D3.1–D3.4"
+          ],
+          "answer_form": "Qd/Qs/transactieketen en twee surplusberekeningen",
+          "source_sufficiency": "prijs, boekingsgrens en allocatieregel zijn gegeven",
+          "calculation_evidence": "Qd 50; Qs 80; transacties 40; CS 600; PS 600"
+        },
+        {
+          "goal": 3,
+          "questions": [
+            "d"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "D39",
+            "D3.5"
+          ],
+          "answer_form": "TS, welvaartsverlies en gearceerde driehoek",
+          "source_sufficiency": "vrije en beperkte toestand plus basisgrafiek zijn gegeven",
+          "calculation_evidence": "TS 1.200; verlies 150; basis 20 en hoogte 15"
+        },
+        {
+          "goal": 4,
+          "questions": [
+            "f"
+          ],
+          "classification": "new_formal_learning",
+          "authority": [
+            "D3.6"
+          ],
+          "answer_form": "korte eerlijkheidsgrens",
+          "source_sufficiency": "surplusverdeling en totale efficiëntie zijn afzonderlijk zichtbaar",
+          "calculation_evidence": "efficiëntie bepaalt niet wie surplus ontvangt"
+        }
+      ]
+    },
+    {
+      "id": "2.3.4",
+      "estimated_minutes": 18,
+      "budget_class": "mixed_18_25",
+      "question_time_minutes": {
+        "1": 2,
+        "2": 3,
+        "3": 4,
+        "4": 3,
+        "5": 3,
+        "6": 3
+      },
+      "question_budgets": [
+        {
+          "label": "1",
+          "minutes": 2,
+          "points": 2,
+          "observable_actions": [
+            "selecteert relevante gegevens",
+            "berekent vrij evenwicht"
+          ]
+        },
+        {
+          "label": "2",
+          "minutes": 3,
+          "points": 2,
+          "observable_actions": [
+            "berekent vrij CS, PS en TS"
+          ]
+        },
+        {
+          "label": "3",
+          "minutes": 4,
+          "points": 4,
+          "observable_actions": [
+            "berekent beperkt CS en PS met deeloppervlakten",
+            "berekent beperkt TS"
+          ]
+        },
+        {
+          "label": "4",
+          "minutes": 3,
+          "points": 2,
+          "observable_actions": [
+            "berekent welvaartsverlies",
+            "arceert de verliesdriehoek met basis en hoogte"
+          ]
+        },
+        {
+          "label": "5",
+          "minutes": 3,
+          "points": 2,
+          "observable_actions": [
+            "vergelijkt beide TS-waarden",
+            "past de gegeven Q31-marges toe op Pareto"
+          ]
+        },
+        {
+          "label": "6",
+          "minutes": 3,
+          "points": 2,
+          "observable_actions": [
+            "scheidt efficiëntie van eerlijkheid"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "goal": 1,
+          "questions": [
+            "1",
+            "2"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "§§2.3.1–2.3.2",
+            "D1.18",
+            "D3.1–D3.4"
+          ],
+          "answer_form": "bronselectie, evenwicht en drie surplussen",
+          "source_sufficiency": "vraag, aanbod en één irrelevant gegeven staan in de context",
+          "calculation_evidence": "Qe=40; Pe=40; CS 800; PS 400; TS 1.200"
+        },
+        {
+          "goal": 2,
+          "questions": [
+            "3"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "§2.3.3 allocatieregel",
+            "D1.18",
+            "D3.1–D3.4"
+          ],
+          "answer_form": "bindendheidscontrole en drie surplussen",
+          "source_sufficiency": "prijs, boekingsgrens en allocatieregel zijn gegeven",
+          "calculation_evidence": "Qd 35; Qs 50; CS 600; PS 525; TS 1.125"
+        },
+        {
+          "goal": 3,
+          "questions": [
+            "4"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "§2.3.3",
+            "D39",
+            "D3.5"
+          ],
+          "answer_form": "verliesberekening en arcering met basis/hoogte",
+          "source_sufficiency": "beide TS-waarden en basisgrafiek zijn beschikbaar",
+          "calculation_evidence": "verlies 75; driehoek Q30–40 met hoogte 15"
+        },
+        {
+          "goal": 4,
+          "questions": [
+            "5",
+            "6"
+          ],
+          "classification": "retrieval_required",
+          "authority": [
+            "§2.3.3",
+            "D20",
+            "D3.5",
+            "D3.6"
+          ],
+          "answer_form": "Pareto-claimbeoordeling en eerlijkheidsgrens",
+          "source_sufficiency": "PS en TS in beide staten, technische ruimte en kosteloze verruiming zijn gegeven",
+          "calculation_evidence": "hoger PS maar lager TS; Q31 heeft betalingsbereidheid 49 en MK 35,50; geen eerlijkheidsconclusie"
+        }
+      ]
+    }
+  ]
+}

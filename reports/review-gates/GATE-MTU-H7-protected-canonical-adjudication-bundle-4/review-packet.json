@@ -5,7 +5,7 @@
   "review_standard": "REV-STD-1",
   "status": "READY_FOR_HUMAN_REVIEW_PENDING_REMOTE_PR_PROOF",
   "route": "READY_FOR_HUMAN_REVIEW",
-  "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
+  "base_main_sha": "e5f89e730d65c4131d7dd09f805f0db94690e8e6",
   "requested_decision": "Review and, if satisfied, authorize integration of Bundle 4 as protected/canonical H7 adjudication preparation only. This payload decision must not authorize any candidate family or later protected-governance execution.",
   "decision_surfaces": {
     "payload_integration": "Authorize or reject integration of PR #204 at its reviewed payload head.",
@@ -35,7 +35,7 @@
     {
       "requirement": "Bundle 4 generation base is recorded as historical provenance",
       "status": "met",
-      "evidence": "eb8647c7310ab16d5871f2a399636f770dc63bf8"
+      "evidence": "e5f89e730d65c4131d7dd09f805f0db94690e8e6"
     },
     {
       "requirement": "Checker validates historical-base ancestry across feature, post-merge, and later-main states while retaining strict source-drift detection",

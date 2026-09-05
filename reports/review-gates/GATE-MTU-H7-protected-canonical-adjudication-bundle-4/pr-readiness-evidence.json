@@ -5,7 +5,7 @@
   "review_standard": "REV-STD-1",
   "status": "PENDING_EXACT_REMOTE_PR_READINESS_PROOF",
   "route": "READY_FOR_HUMAN_REVIEW",
-  "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
+  "base_main_sha": "e5f89e730d65c4131d7dd09f805f0db94690e8e6",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
     "external_source_mutation_authorized": false,

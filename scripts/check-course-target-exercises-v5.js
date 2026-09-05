@@ -21,6 +21,7 @@ const EXPECTED_TOTAL = 54;
 const EXPECTED_SOURCE = 'references/owned/course-blueprint-v5.md';
 const ALLOWED_STATUSES = new Set([
   'reviewed_final',
+  'candidate_review_ready',
   'migrated_from_v4_needs_v5_review',
   'placeholder_needs_review',
 ]);

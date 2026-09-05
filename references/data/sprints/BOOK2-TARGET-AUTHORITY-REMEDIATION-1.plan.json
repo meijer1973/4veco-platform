@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "sprint_id": "BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
+  "name": "Book 2 Target Authority Remediation",
+  "created": "2026-09-04",
+  "status": "phase_a_content_approved_owner_corrections",
+  "completed_on": "2026-09-04",
+  "issue": 229,
+  "platform_baseline": "e5f89e730d65c4131d7dd09f805f0db94690e8e6",
+  "lesson_baseline": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+  "plan": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md",
+  "baseline": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-baseline.md",
+  "alignment_matrix": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-alignment-matrix.md",
+  "human_review_required": true,
+  "gate_id": "GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_human_gate",
+  "review_packet": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
+  "valid_gate_statuses": [
+    "APPROVE_EXACT_PACKAGE",
+    "REVISE",
+    "REJECT"
+  ],
+  "protected_reference_data_changes_allowed": true,
+  "protected_reference_change_scope": [
+    "A17 Ei classification correction through unit-update.js only"
+  ],
+  "target_registry_changes_allowed": true,
+  "generated_lesson_output_allowed": false,
+  "lesson_repository_writes_allowed": false,
+  "merge_allowed": false,
+  "outline_pin": {
+    "path": "references/authored/book-outlines/book-2-outline.md",
+    "version": "book-2-outline-v3-review-ready",
+    "status": "approved_with_holds",
+    "semantic_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde"
+  },
+  "candidate_state_policy": "The exact 12-record candidate package carries non-approval bindings and open Issue #229 holds. Structural target-authority repair may pass; approved-use, target integration, paragraph production, lesson authoring, and merge must fail until exact owner approval. Historical released bindings remain immutable.",
+  "candidate_binding_fields": [
+    "blocked_baseline_sha256",
+    "candidate_replacement_sha256",
+    "candidate_package_sha256",
+    "candidate_evidence_ref",
+    "candidate_status",
+    "approved_replacement_sha256",
+    "approval_ref",
+    "approved_by",
+    "approved_on"
+  ],
+  "candidate_statuses": [
+    "implementation_candidate",
+    "specialist_reviewed_candidate",
+    "lead_reviewed_candidate"
+  ],
+  "planning_review": {
+    "verdict": "PASS_WITH_CORRECTIONS",
+    "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-planning-review.md",
+    "blocking_findings_resolved_before_implementation": true
+  },
+  "initial_specialist_review": {
+    "status": "superseded_by_lead_round1_candidate_corrections",
+    "candidate_package_sha256": "32f5325a542445eb093b0e645304afae7542b2c92e491c8bd09ace9fefa71441",
+    "economics_evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-final.md",
+    "teacher_evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-final.md",
+    "student_language_evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-final.md"
+  },
+  "initial_finished_artifact_verification": {
+    "status": "superseded_by_lead_round1_candidate_corrections",
+    "candidate_package_sha256": "32f5325a542445eb093b0e645304afae7542b2c92e491c8bd09ace9fefa71441",
+    "round_1": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-round-1.md",
+    "corrections": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-corrections.md",
+    "final": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-final.md"
+  },
+  "lead_review_round_1": {
+    "verdict": "REVISE",
+    "reviewed_commit_sha": "eade17cbe5c9dc52652b47289cd6f51e6d1748e6",
+    "reviewed_candidate_package_sha256": "32f5325a542445eb093b0e645304afae7542b2c92e491c8bd09ace9fefa71441",
+    "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round1.md",
+    "corrections": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-corrections.md"
+  },
+  "renewed_specialist_review": {
+    "status": "passed",
+    "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
+    "economics_evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-post-lead-correction.md",
+    "teacher_evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-post-lead-correction.md",
+    "student_language_evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-post-lead-correction.md"
+  },
+  "renewed_finished_artifact_verification": {
+    "status": "passed",
+    "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
+    "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-post-lead-correction.md"
+  },
+  "lead_review_round_2": {
+    "verdict": "PASS WITH FLAGS",
+    "reviewed_substantive_commit_sha": "6cd02e8d14aec293fc7cd5a662ed972d175e1a4e",
+    "reviewed_effective_commit_sha": "c324fc7fb1bd9e7f82ce3b0b2bb1aa0a4feea995",
+    "reviewed_candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
+    "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md",
+    "carried_flag": "Empirical classroom timing remains Phase B evidence."
+  },
+  "core_requirements": [
+    "Repair all twelve Book 2 records as one exact package.",
+    "Resolve Ei terminology to inferieur, normaal, luxe before target application.",
+    "Prove bidirectional lesson-goal and target-operation alignment.",
+    "Recalculate and check every short answer model, graph/table operation, unit, and point allocation.",
+    "Run teacher, economics, student-language, and lead round-one/correction/round-two review.",
+    "Keep the lesson repository and generated student output unchanged.",
+    "Publish one complete draft PR with exact-head CI and stop for owner decision."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
+    "node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1 --complete",
+    "node scripts/check-course-target-exercises-v5.js",
+    "node build-scripts/workflows/check-book2-target-authority-remediation.js",
+    "npm.cmd test -- --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js",
+    "npm.cmd run check:book-outline-currentness",
+    "node build-scripts/workflows/check-book2-candidate-approval-block.js",
+    "npm.cmd run check:part-a-exercise-authoring-contract",
+    "npm.cmd run check:blueprint-pedagogical-boundaries",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/references/check-reference-cli-coverage.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "npm.cmd run check:platform",
+    "git diff --check",
+    "git -C ../4veco-lessen status --short",
+    "git -C ../4veco-lessen diff --check"
+  ]
+}

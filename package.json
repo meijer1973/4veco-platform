@@ -29,6 +29,8 @@
     "check:blueprint-pedagogical-boundaries": "node build-scripts/workflows/check-blueprint-pedagogical-boundaries.js",
     "check:book-outline-currentness": "node build-scripts/workflows/check-book-outline-currentness.js",
     "test:book-outline-currentness": "jest build-scripts/workflows/check-book-outline-currentness.test.js --runInBand",
+    "check:book2-target-authority-remediation": "node build-scripts/workflows/check-book2-target-authority-remediation.js --durable && node build-scripts/workflows/check-book2-candidate-approval-block.js",
+    "test:book2-target-authority-remediation": "jest build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js --runInBand",
     "check:agent-index-freshness": "node build-scripts/reports/check-agent-index-freshness.js",
     "check:exercise-workflow-currentness": "node build-scripts/sprints/check-exercise-workflow-checker-cleanup.js",
     "check:exercise-authority-hygiene": "node build-scripts/sprints/check-exercise-authority-hygiene.js",
