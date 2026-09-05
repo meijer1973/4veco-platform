@@ -1,0 +1,25 @@
+// Actual committed R2 recheck scope, with author adoption distinguished from review writes.
+const fs=require('fs'),path=require('path'),cp=require('child_process'),assert=require('assert/strict');
+const root=path.resolve(__dirname,'../..'),lessons=path.resolve(root,'../4veco-lessen');
+const ownBase='68d110ad3c802515300ccccde5ead5744799b457',priorReview='d2208c5e8b4e3ac435d15e5964e3acff204cddcf';
+const lessonBase='80977d94dcf3705841b6541b7cde1ee91dd767ee',lessonHead='4fe0d742a3cd3c02ac1aaf6311dccc540970e2f5';
+const main='96416b6b5bd57094576e9aba0a42d682584ec479',payload=process.argv[2];assert(/^[a-f0-9]{40}$/.test(payload));
+const run=(exe,args,cwd=root)=>{const r=cp.spawnSync(exe,args,{cwd,encoding:'utf8',maxBuffer:64*1024*1024});return{exe,args,cwd,exit:r.status,stdout:r.stdout,stderr:r.stderr};};
+const git=(args,cwd=root)=>{const r=run('git',args,cwd);assert.equal(r.exit,0,r.stderr);return r.stdout.trim();};
+const files=(base,head,cwd=root)=>git(['diff','--name-only',base,head],cwd).split('\n').filter(Boolean).sort();
+const prefix='reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-';
+const ownExpected=['231-plan-r2-independent-operational-plan.md','231-plan-r2-independent-probes.js','231-plan-r2-independent-checks.json','231-plan-r2-independent-review.md','successor-binding-r2-independent-review.md','231-plan-r2-independent-scope.js'].map(x=>prefix+x).sort();
+assert.deepEqual(files(ownBase,payload),ownExpected);
+const imported=['231-planning-check.js','231-planning-plan.md','231-planning-r2-checks.json','231-planning-r2-response.md','231-planning-r2-scope.json'].map(x=>prefix+x).sort();
+assert.deepEqual(files(priorReview,ownBase),imported);
+for(const f of imported)assert.equal(git(['show',ownBase+':'+f]),git(['show','022e386be34798d91a5d9e27f46a326a1f65b7b4:'+f]),f);
+assert.deepEqual(files(priorReview,payload),[...imported,...ownExpected].sort());
+assert.equal(git(['rev-parse','HEAD'],lessons),lessonHead);assert.equal(git(['status','--porcelain'],lessons),'');
+const lessonPaths=files(lessonBase,lessonHead,lessons);assert.deepEqual(lessonPaths,['Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md']);
+assert.equal(git(['diff','--name-only',priorReview,payload,'--','reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-successor-binding-plan.md']),'');
+git(['merge-base','--is-ancestor',main,payload]);const lessonMain=git(['rev-parse','origin/main'],lessons);git(['merge-base','--is-ancestor',lessonMain,lessonHead],lessons);
+const configs=[['own_review_evidence_only',['--lane','shared','--base',ownBase,'--head',payload,'--json'],1],['all_R2_imports_and_review_evidence',['--lane','shared','--base',priorReview,'--head',payload,'--json'],1],['complete_platform_candidate',['--lane','shared','--base',main,'--head',payload,'--json'],0],['complete_lesson_candidate',['--cwd',lessons,'--lane','textbook','--base',lessonMain,'--head',lessonHead,'--json'],0],['exact_imported_plan_delta',['--cwd',lessons,'--lane','textbook','--base',lessonBase,'--head',lessonHead,'--json'],0]];
+const native=configs.map(([name,args,expected])=>{const r=run('node',['build-scripts/workflows/check-paragraph-lane-scope.js',...args]);assert.equal(r.exit,expected,r.stdout+r.stderr);const result=JSON.parse(r.stdout);assert.deepEqual(result.categories.unknown,[]);return{name,...r,result};});
+const result={date:'2026-09-06',timezone:'Europe/Amsterdam',kind:'post_payload_committed_independent_plan_rechecks',reviewer:'paragraph_213_r6_independent_review',payload,own_base:ownBase,previous_review_head:priorReview,author_adoption:{published_payload:'c1da594e44f426157d96864e39293581b34fc65d',published_scope:'022e386be34798d91a5d9e27f46a326a1f65b7b4',local_payload:'0ae9eeb6',local_scope:ownBase,exact_paths:imported,identity:'PASS',generated_index_tail:'EXCLUDED'},strict_own_path_audit:{result:'PASS',paths:ownExpected},lessons:{base:lessonBase,head:lessonHead,paths:lessonPaths,reviewer_edits:[],clean:true},root_successor_plan_imported:false,native,boundary:'Both narrow evidence-only shared lane failures retained honestly; complete-candidate PASS does not relabel them. No fake source, waiver or pupil/QC/handoff mutation.'};
+fs.writeFileSync(path.join(__dirname,'BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-r2-independent-scope.json'),JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify({payload,lessonHead,own_paths:ownExpected.length,imported_paths:imported.length,native:native.map(r=>({name:r.name,exit:r.exit,ok:r.result.ok,failures:r.result.failures}))},null,2));
