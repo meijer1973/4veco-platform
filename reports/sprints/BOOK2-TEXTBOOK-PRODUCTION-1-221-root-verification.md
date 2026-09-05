@@ -68,3 +68,12 @@ Read-only navigation mistakes were corrected without changes: root first
 looked for a lesson commit and the §213 report inside the §221 platform tree,
 then queried the correct repositories; an earlier root rebuild report has a
 `.json`, not `.md`, extension. These failed lookups are not passing evidence.
+
+The first root adoption evidence commit also included raw Windows CRLF from
+Python stdout inside the Markdown command-log excerpts. `git diff --check`
+reported those bytes, but the shell command sequence did not stop the commit.
+Root corrected this with an LF-only mechanical format of that one Markdown
+log (94 CR bytes), then reran diff validation with explicit failure stopping.
+The JSONL's original escaped output, timestamps, result codes and output hashes
+are unchanged. No proof manifest or student output was normalized. Subsequent
+commit commands stop on failed checks; this was not a clean first-pass diff.
