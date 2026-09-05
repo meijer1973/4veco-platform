@@ -4,6 +4,10 @@
 
 {{GOALS}}
 
+Je hebt al geoefend met invullen in een gegeven formule en met een totaal
+delen door het bijbehorende aantal. Die rekenstappen gebruik je hier opnieuw.
+Je leert nu welke productiekosten je moet kiezen en waarom.
+
 ## Twee keer zoveel posters: wat gebeurt er met de kosten?
 
 Een posteratelier wil deze maand 80 posters maken in plaats van 40. Dezelfde

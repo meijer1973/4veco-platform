@@ -31,20 +31,19 @@ def inspect(lesson_root):
         html_path, pdf_path = Path(str(stem) + ".html"), Path(str(stem) + ".pdf")
         soup = BeautifulSoup(html_path.read_text(encoding="utf-8"), "html.parser")
         pdf = PdfReader(pdf_path)
-        body_sizes = []
+        printed_sizes = []
         def visit(text, cm, tm, font, size):
-            y = tm[4] * cm[1] + tm[5] * cm[3] + cm[5]
-            if text.strip() and y > 54:
-                body_sizes.append(size * math.sqrt(abs(cm[0]*cm[3] - cm[1]*cm[2])))
+            if text.strip():
+                printed_sizes.append(size * math.sqrt(abs(cm[0]*cm[3] - cm[1]*cm[2])))
         pdf_text = normalize(" ".join(page.extract_text(visitor_text=visit) or "" for page in pdf.pages))
-        # Footers are intentionally9pt. Convert PDF font size through the
-        # current transform before checking the actual12pt content-area floor.
-        minimum = min(body_sizes)
-        assert minimum >= 11.99, (kind, "small body text", minimum)
+        # The12pt floor includes running footer and page counter, without
+        # exclusions. Convert through the actual PDF text transform.
+        minimum = min(printed_sizes)
+        assert minimum >= 11.99, (kind, "small printed text including footer", minimum)
         for number in range(1, 10):
             assert f"Opgave {number}" in pdf_text, (kind, "missing exercise", number)
         result["documents"].append({"kind": kind, "pages": len(pdf.pages),
-                                    "minimum_body_font_pt": round(minimum, 3),
+                                    "minimum_printed_font_pt_including_footer": round(minimum, 3),
                                     "pdf_sha256": builder.digest(pdf_path)})
         if kind in ("paragraaf", "opgaven"):
             start = soup.find("h2", id="uitgewerkt-voorbeeld")
@@ -67,7 +66,7 @@ def inspect(lesson_root):
             for goal in record["lesson_goals"]:
                 assert normalize(goal) in pdf_text
     assert exercise_fragments[0] == exercise_fragments[1], "exercise HTML editions drifted"
-    result["automated_checks"] = ["body typography >=12pt", "all exercises present",
+    result["automated_checks"] = ["all printed text including footer >=12pt", "all exercises present",
         "exact target context/prompts in HTML and PDF", "literal a-e plus4/3/3/3/4points",
         "exact supplied header/row cells", "four exact goals in paragraph PDF",
         "identical exercise HTML fragments"]
