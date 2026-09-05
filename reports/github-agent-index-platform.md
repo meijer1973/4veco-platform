@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T17:12:20.957Z
+Generated: 2026-09-05T17:25:05.995Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `43612a2e95d5d26fcae18782b42e8080964e162c`
-Files indexed: 7956
+Source commit: `3ee7f86cb4aa3f1a62f7b189be7cd20219ddba3b`
+Files indexed: 7957
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2669,7 +2669,7 @@ Count: 1030
 
 ## reports
 
-Count: 5208
+Count: 5209
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5634,6 +5634,7 @@ Count: 5208
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-planning-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-prerequisite-decisions.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-print-pipeline-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-review-corrections.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-roadmap-baseline-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-salvage-inventory.md
