@@ -1,0 +1,688 @@
+{
+  "status": "PASS",
+  "visual_acceptance": "NOT_SUPPLIED_BY_THIS_SCRIPT",
+  "source_delta": {
+    "theory.md": {
+      "old": "0c68b499e315644e3518df743d793917882b45fdef9c83b2949d6939a0d8bbee",
+      "new": "0c68b499e315644e3518df743d793917882b45fdef9c83b2949d6939a0d8bbee",
+      "exact_allowed_transformation": true
+    },
+    "exercises.md": {
+      "old": "961e0bbd1607920a085bddf82b556cd1083fc4bb6f7241324ad2d20ae5f7cc26",
+      "new": "81d1f326b0095eda29b1f939288e722f213a1fae03a5eb151af03881c3e88cde",
+      "exact_allowed_transformation": true
+    },
+    "answers.md": {
+      "old": "ab186995c8e92772751f66fae30d9db2202d23d5bb06181b70bb073ce2c0cadb",
+      "new": "a66e33507be37f166416ec9c16088964902dcb7529d5d7c7d2c47989f15bd9c6",
+      "exact_allowed_transformation": true
+    },
+    "target-answers.md": {
+      "old": "40ae9de6c220e0d2bde4b6771ea0807b5544be2506f724a0c2a566562be386fe",
+      "new": "40ae9de6c220e0d2bde4b6771ea0807b5544be2506f724a0c2a566562be386fe",
+      "exact_allowed_transformation": true
+    },
+    "build-scripts/content/book-2/b2_222.py": {
+      "byte_identical_R12": true,
+      "sha256": "42012511d3c77569f4aa6c30df6465eb77c8d204d8596a14a16ef453446bcafe"
+    },
+    "build-scripts/content/book-2/print_pipeline.py": {
+      "byte_identical_R12": true,
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    "build-scripts/content/book-2/222/check_render.py": {
+      "byte_identical_R12": true,
+      "sha256": "759bbbb9e2a0d6f307566953ed85cf89da5001d8df21f8d212ee5bc8a9ee59a4"
+    },
+    "references/authored/course-target-exercises.json": {
+      "byte_identical_R12": true,
+      "sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e"
+    }
+  },
+  "html": [
+    {
+      "kind": "paragraaf",
+      "exact_attribute_delta": [
+        {
+          "tag": "img",
+          "old_attributes": {
+            "alt": "Concert: de nieuwe rechthoek is hoger maar kleiner van oppervlak. De gemeten interval-Ev is geen bewijs van de lokale classificatie bij elke prijs."
+          },
+          "new_attributes": {
+            "alt": "Omzetrechthoeken van het concert: na de prijsstijging is de omzet lager, ondanks interval-Ev = −0,8."
+          }
+        },
+        {
+          "tag": "figcaption",
+          "old_attributes": {
+            "aria-hidden": "true"
+          },
+          "new_attributes": {}
+        }
+      ],
+      "all_captions": [
+        "Oude omzet van de speelgoedwinkel: breedte 100 spellen per week maal hoogte 5 euro per spel.",
+        "Exacte oude en nieuwe omzetrechthoeken op dezelfde schalen, voor twee afzonderlijke zaken.",
+        "Schematisch overzicht van de lokale omzetregel met beide prijsrichtingen en de voorwaarden.",
+        "Concert: de nieuwe rechthoek is hoger maar kleiner van oppervlak. De gemeten interval-Ev is geen bewijs van de lokale classificatie bij elke prijs."
+      ],
+      "all_actual_alts": [
+        {
+          "alt": "Oude omzet van de speelgoedwinkel: breedte 100 spellen per week maal hoogte 5 euro per spel.",
+          "length": 92
+        },
+        {
+          "alt": "Exacte oude en nieuwe omzetrechthoeken op dezelfde schalen, voor twee afzonderlijke zaken.",
+          "length": 90
+        },
+        {
+          "alt": "Schematisch overzicht van de lokale omzetregel met beide prijsrichtingen en de voorwaarden.",
+          "length": 91
+        },
+        {
+          "alt": "Omzetrechthoeken van het concert: na de prijsstijging is de omzet lager, ondanks interval-Ev = −0,8.",
+          "length": 100
+        }
+      ],
+      "normalized_complete_DOM_equal_after_only_named_reversal": true,
+      "normalized_DOM_sha256": "7830057f415df18df9f085b4c560eb5a7ecd0bc294807c6839c0ede5f1831969"
+    },
+    {
+      "kind": "opgaven",
+      "exact_attribute_delta": [
+        {
+          "tag": "img",
+          "old_attributes": {
+            "alt": "Concert: de nieuwe rechthoek is hoger maar kleiner van oppervlak. De gemeten interval-Ev is geen bewijs van de lokale classificatie bij elke prijs."
+          },
+          "new_attributes": {
+            "alt": "Omzetrechthoeken van het concert: na de prijsstijging is de omzet lager, ondanks interval-Ev = −0,8."
+          }
+        },
+        {
+          "tag": "figcaption",
+          "old_attributes": {
+            "aria-hidden": "true"
+          },
+          "new_attributes": {}
+        }
+      ],
+      "all_captions": [
+        "Concert: de nieuwe rechthoek is hoger maar kleiner van oppervlak. De gemeten interval-Ev is geen bewijs van de lokale classificatie bij elke prijs."
+      ],
+      "all_actual_alts": [
+        {
+          "alt": "Omzetrechthoeken van het concert: na de prijsstijging is de omzet lager, ondanks interval-Ev = −0,8.",
+          "length": 100
+        }
+      ],
+      "normalized_complete_DOM_equal_after_only_named_reversal": true,
+      "normalized_DOM_sha256": "7c2fe171919c477e05d49ec9b6bf7d796d139b1d68442d97e9a4a584ac649f59"
+    },
+    {
+      "kind": "antwoorden",
+      "exact_attribute_delta": [],
+      "all_captions": [],
+      "all_actual_alts": [],
+      "normalized_complete_DOM_equal_after_only_named_reversal": true,
+      "normalized_DOM_sha256": "4d60d5a0185188330b57e2781ac325b1cca1ea0f7a12c9943193f8dda127beb1"
+    }
+  ],
+  "assets": [
+    {
+      "name": "2.2.2_fig_1.svg",
+      "title": "Oude omzet als exacte rechthoek met prijs5 en afzet100",
+      "title_length": 54,
+      "svg_sha256": "a0aa6c793a59a731377d8b035b5a96fc8c064c61745843326947c6f4b95440c0",
+      "png_sha256": "bd9668804b5d22b9fe6d6fe8832376b4f8ba978c8042fb38d6e18fb1d88cd07e",
+      "native_byte_equal": true,
+      "pixel_maximum_delta": 0,
+      "exact_rectangle_geometry": [
+        {
+          "x": "110",
+          "y": "133",
+          "width": "470",
+          "height": "165",
+          "fill": "#dce8ef",
+          "stroke": "#182b3a",
+          "stroke-width": "2.5",
+          "data-p": "5",
+          "data-q": "100",
+          "data-to": "500",
+          "data-sx": "4.7",
+          "data-sy": "33",
+          "data-origin-x": "110",
+          "data-origin-y": "298",
+          "data-state": "new"
+        }
+      ]
+    },
+    {
+      "name": "2.2.2_fig_2.svg",
+      "title": "Twee aparte zaken met gelijke schalen; oude rand en nieuwe omzetrechthoek",
+      "title_length": 73,
+      "svg_sha256": "3f924bf77deaaa60b5b8fa03a5ffae5cc7ce959eed1e10f1ac364d2f5cb129a4",
+      "png_sha256": "a61138390a9f17dd6e4989c03dc5d147682cb820afebeffd178b199f7a68a91b",
+      "native_byte_equal": true,
+      "pixel_maximum_delta": 0,
+      "exact_rectangle_geometry": [
+        {
+          "x": "65",
+          "y": "137.5",
+          "width": "209",
+          "height": "137.5",
+          "fill": "#dce8ef",
+          "stroke": "#182b3a",
+          "stroke-width": "2.5",
+          "data-p": "5.5",
+          "data-q": "95",
+          "data-to": "522.5",
+          "data-sx": "2.2",
+          "data-sy": "25",
+          "data-origin-x": "65",
+          "data-origin-y": "275",
+          "data-state": "new"
+        },
+        {
+          "x": "65",
+          "y": "150",
+          "width": "220",
+          "height": "125",
+          "fill": "none",
+          "stroke": "#182b3a",
+          "stroke-width": "2.5",
+          "stroke-dasharray": "8 5",
+          "data-p": "5",
+          "data-q": "100",
+          "data-to": "500",
+          "data-sx": "2.2",
+          "data-sy": "25",
+          "data-origin-x": "65",
+          "data-origin-y": "275",
+          "data-state": "old"
+        },
+        {
+          "x": "425",
+          "y": "137.5",
+          "width": "176",
+          "height": "137.5",
+          "fill": "#dce8ef",
+          "stroke": "#182b3a",
+          "stroke-width": "2.5",
+          "data-p": "5.5",
+          "data-q": "80",
+          "data-to": "440",
+          "data-sx": "2.2",
+          "data-sy": "25",
+          "data-origin-x": "425",
+          "data-origin-y": "275",
+          "data-state": "new"
+        },
+        {
+          "x": "425",
+          "y": "150",
+          "width": "220",
+          "height": "125",
+          "fill": "none",
+          "stroke": "#182b3a",
+          "stroke-width": "2.5",
+          "stroke-dasharray": "8 5",
+          "data-p": "5",
+          "data-q": "100",
+          "data-to": "500",
+          "data-sx": "2.2",
+          "data-sy": "25",
+          "data-origin-x": "425",
+          "data-origin-y": "275",
+          "data-state": "old"
+        }
+      ]
+    },
+    {
+      "name": "2.2.2_fig_3.svg",
+      "title": "Schematische lokale omzetregel; beide prijsrichtingen en voorwaardelijke grens",
+      "title_length": 78,
+      "svg_sha256": "9c4b5044f1d6acd5d335011d1566c8e5eed1758094a4cf7d84e12d31e9fad1e6",
+      "png_sha256": "97511db0c5bc3d1d533b287b671961fdf91b6360fad4ad3afc1967547296b255",
+      "native_byte_equal": true,
+      "pixel_maximum_delta": 0,
+      "exact_rectangle_geometry": []
+    },
+    {
+      "name": "2.2.2_we_1.svg",
+      "title": "Concert: voor en na op dezelfde schalen; interval-Ev vervangt de productcontrole niet",
+      "title_length": 85,
+      "svg_sha256": "0969714dff8223c3f114496c748a584eccb3feed22e9c2e700c49d6c10def521",
+      "png_sha256": "c2b7ae2cacb1ffe93d942e93117b71222e6ef535bddb1a2b0af634130226dfce",
+      "native_byte_equal": true,
+      "pixel_maximum_delta": 0,
+      "exact_rectangle_geometry": [
+        {
+          "x": "65",
+          "y": "205",
+          "width": "220",
+          "height": "110",
+          "fill": "#dce8ef",
+          "stroke": "#182b3a",
+          "stroke-width": "2.5",
+          "data-p": "10",
+          "data-q": "100",
+          "data-to": "1000",
+          "data-sx": "2.2",
+          "data-sy": "11",
+          "data-origin-x": "65",
+          "data-origin-y": "315",
+          "data-state": "new"
+        },
+        {
+          "x": "65",
+          "y": "205",
+          "width": "220",
+          "height": "110",
+          "fill": "none",
+          "stroke": "#182b3a",
+          "stroke-width": "2.5",
+          "stroke-dasharray": "8 5",
+          "data-p": "10",
+          "data-q": "100",
+          "data-to": "1000",
+          "data-sx": "2.2",
+          "data-sy": "11",
+          "data-origin-x": "65",
+          "data-origin-y": "315",
+          "data-state": "old"
+        },
+        {
+          "x": "425",
+          "y": "150",
+          "width": "132",
+          "height": "165",
+          "fill": "#dce8ef",
+          "stroke": "#182b3a",
+          "stroke-width": "2.5",
+          "data-p": "15",
+          "data-q": "60",
+          "data-to": "900",
+          "data-sx": "2.2",
+          "data-sy": "11",
+          "data-origin-x": "425",
+          "data-origin-y": "315",
+          "data-state": "new"
+        },
+        {
+          "x": "425",
+          "y": "205",
+          "width": "220",
+          "height": "110",
+          "fill": "none",
+          "stroke": "#182b3a",
+          "stroke-width": "2.5",
+          "stroke-dasharray": "8 5",
+          "data-p": "10",
+          "data-q": "100",
+          "data-to": "1000",
+          "data-sx": "2.2",
+          "data-sy": "11",
+          "data-origin-x": "425",
+          "data-origin-y": "315",
+          "data-state": "old"
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "kind": "paragraaf",
+      "page": 1,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\paragraaf\\page-01.png",
+      "sha256": "4925b73bf780d7f69d8562dca5cae8b1713a4bbe91c712563fe7dab1828a70ed",
+      "R12_sha256": "4925b73bf780d7f69d8562dca5cae8b1713a4bbe91c712563fe7dab1828a70ed",
+      "changed": false
+    },
+    {
+      "kind": "paragraaf",
+      "page": 2,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\paragraaf\\page-02.png",
+      "sha256": "c7d9797869961a3b8eda9c2dd37f2e64132cb0024ce42b207cab39e8400b1636",
+      "R12_sha256": "c7d9797869961a3b8eda9c2dd37f2e64132cb0024ce42b207cab39e8400b1636",
+      "changed": false
+    },
+    {
+      "kind": "paragraaf",
+      "page": 3,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\paragraaf\\page-03.png",
+      "sha256": "0912960ef2866f25324280e30bf29f0825ab3b976a817286f13bf828971a5483",
+      "R12_sha256": "0912960ef2866f25324280e30bf29f0825ab3b976a817286f13bf828971a5483",
+      "changed": false
+    },
+    {
+      "kind": "paragraaf",
+      "page": 4,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\paragraaf\\page-04.png",
+      "sha256": "5556d250dc79d0d05db736f9835205946e71ef8b7e1d825e06072f00340c180f",
+      "R12_sha256": "5556d250dc79d0d05db736f9835205946e71ef8b7e1d825e06072f00340c180f",
+      "changed": false
+    },
+    {
+      "kind": "paragraaf",
+      "page": 5,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\paragraaf\\page-05.png",
+      "sha256": "2f48f10ff4ba79b997064ad987496760fb993167ec2a57f013eebcfa6917fa94",
+      "R12_sha256": "2f48f10ff4ba79b997064ad987496760fb993167ec2a57f013eebcfa6917fa94",
+      "changed": false
+    },
+    {
+      "kind": "paragraaf",
+      "page": 6,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\paragraaf\\page-06.png",
+      "sha256": "cd30d3cafe1722a972023a11e4bfdc06d3402c538ad667f701e938fa1b1efbaa",
+      "R12_sha256": "cd30d3cafe1722a972023a11e4bfdc06d3402c538ad667f701e938fa1b1efbaa",
+      "changed": false
+    },
+    {
+      "kind": "paragraaf",
+      "page": 7,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\paragraaf\\page-07.png",
+      "sha256": "1f758852e6e33041bcc917a8f3ecc77c1296806c088aabc56bb8add4579b0dd8",
+      "R12_sha256": "1f758852e6e33041bcc917a8f3ecc77c1296806c088aabc56bb8add4579b0dd8",
+      "changed": false
+    },
+    {
+      "kind": "paragraaf",
+      "page": 8,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\paragraaf\\page-08.png",
+      "sha256": "5348a507dd7036ad0a324e0c346276189132c27ea165c03bab2343bddd67d64e",
+      "R12_sha256": "5348a507dd7036ad0a324e0c346276189132c27ea165c03bab2343bddd67d64e",
+      "changed": false
+    },
+    {
+      "kind": "paragraaf",
+      "page": 9,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\paragraaf\\page-09.png",
+      "sha256": "5fbc1ba4d22f92df6ba7dd09605398291b5bff998886db624236a45cd1f84582",
+      "R12_sha256": "5fbc1ba4d22f92df6ba7dd09605398291b5bff998886db624236a45cd1f84582",
+      "changed": false
+    },
+    {
+      "kind": "paragraaf",
+      "page": 10,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\paragraaf\\page-10.png",
+      "sha256": "f7a5b93ecb7151a926351a0836485c875d5606ad35fde02edd88e73e6d54693c",
+      "R12_sha256": "f7a5b93ecb7151a926351a0836485c875d5606ad35fde02edd88e73e6d54693c",
+      "changed": false
+    },
+    {
+      "kind": "opgaven",
+      "page": 1,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\opgaven\\page-1.png",
+      "sha256": "2f6bfd85d06607172b1d257c4a3c9de1878ca11c9b4208b14873bbdc11fc6ba0",
+      "R12_sha256": "2f6bfd85d06607172b1d257c4a3c9de1878ca11c9b4208b14873bbdc11fc6ba0",
+      "changed": false
+    },
+    {
+      "kind": "opgaven",
+      "page": 2,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\opgaven\\page-2.png",
+      "sha256": "0ef45114138d6d56d80b1cac1ee578f91c0e741fa99e3ad490a0d649645dc842",
+      "R12_sha256": "0ef45114138d6d56d80b1cac1ee578f91c0e741fa99e3ad490a0d649645dc842",
+      "changed": false
+    },
+    {
+      "kind": "opgaven",
+      "page": 3,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\opgaven\\page-3.png",
+      "sha256": "6a4a1bb3dc653b2772edb63817d172bce4be5801af703ee8ccba1ec54894145d",
+      "R12_sha256": "6a4a1bb3dc653b2772edb63817d172bce4be5801af703ee8ccba1ec54894145d",
+      "changed": false
+    },
+    {
+      "kind": "opgaven",
+      "page": 4,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\opgaven\\page-4.png",
+      "sha256": "c2592d9065876765b6c8beb12608334f722ac48c3dcd06eaa3855725096400bd",
+      "R12_sha256": "c2592d9065876765b6c8beb12608334f722ac48c3dcd06eaa3855725096400bd",
+      "changed": false
+    },
+    {
+      "kind": "opgaven",
+      "page": 5,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\opgaven\\page-5.png",
+      "sha256": "71a5482aef92ee87afcffecb059d7feec1a01c8ad5597cb35f7039343d0c4c86",
+      "R12_sha256": "71a5482aef92ee87afcffecb059d7feec1a01c8ad5597cb35f7039343d0c4c86",
+      "changed": false
+    },
+    {
+      "kind": "opgaven",
+      "page": 6,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\opgaven\\page-6.png",
+      "sha256": "d4e82d03960929d6ee49c4acc404302739a9d358f951e5c8dd174169bcd3d818",
+      "R12_sha256": "d4e82d03960929d6ee49c4acc404302739a9d358f951e5c8dd174169bcd3d818",
+      "changed": false
+    },
+    {
+      "kind": "antwoorden",
+      "page": 1,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\antwoorden\\page-1.png",
+      "sha256": "42d2e22c04f6864fad0cf26c72afa70b4b175adfd4828a80882c475d31497131",
+      "R12_sha256": "42d2e22c04f6864fad0cf26c72afa70b4b175adfd4828a80882c475d31497131",
+      "changed": false
+    },
+    {
+      "kind": "antwoorden",
+      "page": 2,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\antwoorden\\page-2.png",
+      "sha256": "65ab004822fdc1eca242363f3b18c340e0cbace06ce03afbaf6545c4b6721043",
+      "R12_sha256": "7bf2147b456b14e9af54a8e6c0ec4bb417828c0e7ddc97d22abb526024527f40",
+      "changed": true
+    },
+    {
+      "kind": "antwoorden",
+      "page": 3,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\antwoorden\\page-3.png",
+      "sha256": "3ec2d99cfe331239e13f5f786cf341d255c3fa603e585c865872f381bb319ebe",
+      "R12_sha256": "3ec2d99cfe331239e13f5f786cf341d255c3fa603e585c865872f381bb319ebe",
+      "changed": false
+    },
+    {
+      "kind": "antwoorden",
+      "page": 4,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\antwoorden\\page-4.png",
+      "sha256": "3969896065943f5d6ff82d4b05fd81ea0acb87fb747a0ce602c907d558034bf8",
+      "R12_sha256": "3969896065943f5d6ff82d4b05fd81ea0acb87fb747a0ce602c907d558034bf8",
+      "changed": false
+    },
+    {
+      "kind": "antwoorden",
+      "page": 5,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\antwoorden\\page-5.png",
+      "sha256": "21147d027cb3472e3cb2e549833a9f24a8d2a302e6cfad75e6652ca48bc42859",
+      "R12_sha256": "21147d027cb3472e3cb2e549833a9f24a8d2a302e6cfad75e6652ca48bc42859",
+      "changed": false
+    }
+  ],
+  "arithmetic": [
+    {
+      "context": "toy",
+      "TOold": "500",
+      "TOnew": "1045/2",
+      "quantity_percentage": "-5",
+      "price_percentage": "10",
+      "TO_percentage": "4.5",
+      "Ev": "-.5",
+      "period": "week"
+    },
+    {
+      "context": "coffee",
+      "TOold": "500",
+      "TOnew": "440",
+      "quantity_percentage": "-20",
+      "price_percentage": "10",
+      "TO_percentage": "-12",
+      "Ev": "-2",
+      "period": "week"
+    },
+    {
+      "context": "pottery",
+      "TOold": "1000",
+      "TOnew": "1045",
+      "quantity_percentage": "-5",
+      "price_percentage": "10",
+      "TO_percentage": "4.5",
+      "Ev": "-.5",
+      "period": "week"
+    },
+    {
+      "context": "comic",
+      "TOold": "1000",
+      "TOnew": "880",
+      "quantity_percentage": "-20",
+      "price_percentage": "10",
+      "TO_percentage": "-12",
+      "Ev": "-2",
+      "period": "week"
+    },
+    {
+      "context": "concert",
+      "TOold": "1000",
+      "TOnew": "900",
+      "quantity_percentage": "-40",
+      "price_percentage": "50",
+      "TO_percentage": "-10",
+      "Ev": "-.8",
+      "period": "week"
+    },
+    {
+      "context": "museum",
+      "TOold": "400",
+      "TOnew": "418",
+      "quantity_percentage": "-5",
+      "price_percentage": "10",
+      "TO_percentage": "4.5",
+      "Ev": "-.5",
+      "period": "week"
+    },
+    {
+      "context": "laser",
+      "TOold": "400",
+      "TOnew": "352",
+      "quantity_percentage": "-20",
+      "price_percentage": "10",
+      "TO_percentage": "-12",
+      "Ev": "-2",
+      "period": "week"
+    },
+    {
+      "context": "skate",
+      "TOold": "1000",
+      "TOnew": "1045",
+      "quantity_percentage": "-5",
+      "price_percentage": "10",
+      "TO_percentage": "4.5",
+      "Ev": "-.5",
+      "period": "week"
+    },
+    {
+      "context": "badminton",
+      "TOold": "1000",
+      "TOnew": "1080",
+      "quantity_percentage": "20",
+      "price_percentage": "-10",
+      "TO_percentage": "8",
+      "Ev": "-2",
+      "period": "week"
+    },
+    {
+      "context": "photo",
+      "TOold": "20",
+      "TOnew": "18",
+      "quantity_percentage": "-40",
+      "price_percentage": "50",
+      "TO_percentage": "-10",
+      "Ev": "-.8",
+      "period": "week"
+    },
+    {
+      "context": "dance",
+      "TOold": "2000",
+      "TOnew": "2160",
+      "quantity_percentage": "-10",
+      "price_percentage": "20",
+      "TO_percentage": "8",
+      "Ev": "-.5",
+      "period": "week"
+    },
+    {
+      "context": "puzzle",
+      "TOold": "2000",
+      "TOnew": "1440",
+      "quantity_percentage": "-40",
+      "price_percentage": "20",
+      "TO_percentage": "-28",
+      "Ev": "-2",
+      "period": "week"
+    },
+    {
+      "context": "charity",
+      "TOold": "2000",
+      "TOnew": "1800",
+      "quantity_percentage": "-40",
+      "price_percentage": "50",
+      "TO_percentage": "-10",
+      "Ev": "-.8",
+      "period": "week"
+    },
+    {
+      "context": "Nova",
+      "TOold": "5000",
+      "TOnew": "5040",
+      "quantity_percentage": "-16",
+      "price_percentage": "20",
+      "TO_percentage": ".8",
+      "Ev": "-.8",
+      "period": "week"
+    },
+    {
+      "context": "StreamNow",
+      "TOold": "20000",
+      "TOnew": "17600",
+      "quantity_percentage": "-20",
+      "price_percentage": "10",
+      "TO_percentage": "-12",
+      "Ev": "-2",
+      "period": "month"
+    }
+  ],
+  "grayscale": [
+    {
+      "page": 2,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\gray-p2.png",
+      "sha256": "3bd3c6801ed79b6f2eb393ec1a2adab8bb94dac1ec9305afbc5a55fcd4b69698"
+    },
+    {
+      "page": 3,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\gray-p3.png",
+      "sha256": "6b6036c03b586210c9df7cd517d05db4bf513fcc0acf51438fcc5c206a63ac6d"
+    },
+    {
+      "page": 4,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\gray-p4.png",
+      "sha256": "4ff0a7053816e6e405901e12e9fb7e51945f7e5c41475a45f4c312116b68bb56"
+    },
+    {
+      "page": 6,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-review-evidence\\gray-p6.png",
+      "sha256": "4bfb284dfd0bae936370dcf71ca9fde199876b56cbf56d07aacdb4247d0fd4be"
+    }
+  ],
+  "retrieval": {
+    "bicycle_TO": 2400,
+    "bicycle_TO_percent": 5,
+    "closing_P_percent": 25
+  },
+  "timing": {
+    "core": 51.5,
+    "support": 66.5,
+    "all": 79.5,
+    "observed": false
+  }
+}
