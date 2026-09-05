@@ -165,3 +165,42 @@ a1077e8c9c98c783db178fa2e2862f2c8de9a93d. Historical first-draft paths in the
 builder reports must be read at those commits, not as current acceptance.
 The R2 history, all R3 proof, student sources/assets/PDFs, and other worktrees
 remain untouched. No whitespace-rule waiver or proof-byte rewrite was used.
+
+## Accepted §211 internal exemplar and next paragraph gate
+
+Independent paragraph review by correction_plan_review: PASS WITH FLAGS on
+exact platform16c3b1c5 / lessonc37dfba8 R3 payload. Independent specialist QC by
+elasticity_planning: PASS WITH FLAGS on the same bytes; all 31 pages personally
+inspected, all calculations independently checked, no open core defect.
+Root recorded the actual paragraph review and adopted only the specialist's
+new commits b5ce54a1/daa2e19f and lesson quality-only8191e77c. Inherited June
+acceptance was replaced, not reused. The canonical verdict block was added
+without changing the judgment; five Markdown hard-break spaces from the source
+review were removed after the whitespace check identified them.
+
+Current lesson handoff head: 7d46d26e54e96e05aa295e6dcfab22f57a2f270e.
+Root reran student-web and publisher-print Part A profiles: both PASS, parsing
+the explicit PASS WITH FLAGS verdict and valid schema-v2 quality reference.
+The integrated shared platform and textbook lesson lanes both PASS, including
+all three independent inspection.json files. This resolves the isolated older
+QC baseline's disclosed classifier limitation without an exception or waiver.
+Root also remapped the canonical R3 manifest paths to its integrated pair and
+rehashed all 56 MD/HTML/PDF/asset/page entries: PASS. Review hash matches the
+quality record exactly:92b4a9462caf8316274fb58f8beef5c850147c44e6bf80b9a28fad442d9dbe96.
+
+The internal exemplar gate is complete. The 54-minute core remains an estimate,
+not observed classroom pacing; the optional supported route needs 66 minutes.
+The orange-stroke enhancement is non-blocking only for these exact redundant
+representations. No future essential-curve task inherits that judgment.
+
+§212 is assigned to separate paragraph_212_builder in paired worktrees
+C:/wt/book2-212-production-20260905/, branch agent/book2-212-production-20260905,
+claimed as BOOK2-TEXTBOOK-PRODUCTION-1-212. Its initial authority is planning
+only: exact template/alignment/visual/timing plan plus stage-1 evidence. Student
+authoring waits for the independent plan gate. Approved currentness212 PASS.
+
+Book tooling independently passed Round2 at d6583627 after the structural
+anchor correction; the book-pipeline-review report records actual findings and
+44 independently passing focused tests. No chapter/book output exists yet.
+The full combined package, exact-head CI, paired PRs and final owner gate are
+still pending; §211 is not being handed off as project completion.

@@ -2,7 +2,7 @@
 
 ## Scope and status
 
-Author: codex-root. Date: 2026-09-05. Status: Round 1 REVISE; correction pending recheck.
+Author: codex-root. Date: 2026-09-05. Status: Round 2 PASS; tooling only.
 This is reusable assembly tooling, not completed chapter/book output or approval.
 The combined production plan already requires separate paper-only student and
 answer books, reviewed front/back matter, exact input provenance and 12-point
@@ -70,4 +70,11 @@ preservation, duplicate/missing targets and final front/body anchor collisions.
 An initial code-literal assertion incorrectly expected a trailing newline that
 Pandoc itself omits; the corrected test compares visible text before/after the
 structural transformation and separately checks the literal code string.
-Round 2 independent verdict is not yet available.
+Round 2 independent reviewer: `correction_plan_review`; exact commit
+d658362764315f6cc162f153c1caecca04ae9090. Verdict: PASS, B2-BOOK-01 closed.
+The reviewer repeated the implicit-heading, single-quoted-ID and literal-code
+failures and confirmed correct unique resolution/unchanged visible text. An
+additional aria-describedby probe passed. An unresolved final matter link was
+rejected by build_book before build_document; before/after inventory showed no
+book output mutation. Independently rerun suites: 11 book + 20 print + 6 chapter
++ 7 legacy = 44 PASS. No actual book/chapter output is accepted by this review.
