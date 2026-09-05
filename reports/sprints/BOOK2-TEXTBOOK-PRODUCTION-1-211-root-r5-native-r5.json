@@ -1,0 +1,33 @@
+{
+  "paragraph": "2.1.1",
+  "automated_checks": [
+    "all printed text including footer >=12pt",
+    "all exercises present",
+    "exact target context/prompts in HTML and PDF",
+    "literal a-e plus4/3/3/3/4points",
+    "exact supplied header/row cells",
+    "four exact goals in paragraph PDF",
+    "identical exercise HTML fragments"
+  ],
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pages": 15,
+      "minimum_printed_font_pt_including_footer": 12.0,
+      "pdf_sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0"
+    },
+    {
+      "kind": "opgaven",
+      "pages": 9,
+      "minimum_printed_font_pt_including_footer": 12.0,
+      "pdf_sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953"
+    },
+    {
+      "kind": "antwoorden",
+      "pages": 7,
+      "minimum_printed_font_pt_including_footer": 12.0,
+      "pdf_sha256": "498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce"
+    }
+  ],
+  "visual_review_status": "NOT_SUPPLIED_BY_THIS_SCRIPT"
+}

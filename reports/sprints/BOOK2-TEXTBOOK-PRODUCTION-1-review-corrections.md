@@ -261,6 +261,13 @@ current full-root generator still awaits accepted212 successor raw MD. Original
 valid builder pair has full+print proof. No guard relaxed or old canonical/QC
 promoted. See213-root-verification-r7.md; separate R7 paragraph/QC gates follow.
 
+**§211 R5 bounded bonus correction adopted; independent closure still pending.**
+Root adopted b0b3d5a1 /1432170: exact three-criteria insertion,21tests and21file
+full/print reproduction PASS. Root personally read the changed answer page7;
+the other30 pages and all assets remain exact. Both PartA profiles pass without
+promoting historical canonical review/QC/handoff. See211-root-verification-r5.md.
+The required missing-block finding is implemented, not independently closed yet.
+
 ## Existing accepted flags, not concealed corrections
 
 - Classroom timing/attainment remains unobserved throughout.

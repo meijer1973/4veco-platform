@@ -1,0 +1,21 @@
+{
+  "executed_by": "codex-root",
+  "root_platform_base": "6eb34debb2210a2a4fa6718a13eaeefcacedc8f8",
+  "root_lessons_base": "6a6c8183bd2e9b52d2898e587543f735e6e87299",
+  "original_builder_manifest_sha256": "f1c4bcf969feeb813d9421a096752e1e452f4d4244cb5a8a3eb50a8e835a341a",
+  "original_bounded_verifier_sha256": "8701f945da31d73ac3d2826080d3ebbd53533f1eaff197d6449fb5c216baf05f",
+  "root_mechanical_sha256": "c446923e3df6c3a1980d75d214467637a8d3afa70aa653e3cfc3bbe790c1fcd9",
+  "root_reproduction_sha256": "b1a1b02dd5088f75821ee0c6e229c602eb748c9a2436cdedc9d2c31adceee58f",
+  "changed_pages": [
+    [
+      "antwoorden",
+      "pages/page-007.png"
+    ]
+  ],
+  "unchanged_pages": 30,
+  "personal_visual_review": "Not supplied by this script; root separately inspects current answer page7 and cites earlier personal views only for byte-identical pages.",
+  "independent_paragraph_review": "PENDING",
+  "independent_specialist_QC": "PENDING",
+  "root_acceptance": "NOT_GRANTED",
+  "legacy_ZIP": "Unchanged historical archive excluded; no native211 ZIP output contract."
+}

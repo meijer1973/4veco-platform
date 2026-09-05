@@ -10335,3 +10335,205 @@ Paragraph lane scope: PASS (textbook)
 ```text
 
 ```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-root-r5-check.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:55:18.394Z`
+- finished_at: `2026-09-05T21:55:33.738Z`
+- duration_ms: `15344`
+- exit_code: `0`
+- stdout_sha256: `9065980f24c5c3525789b6989ff4c268a6a79b65c231fb3980e16a9b04b2d48e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.1.1
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+{"evidence": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-root-r5-mechanical-r5.json", "sha256": "c446923e3df6c3a1980d75d214467637a8d3afa70aa653e3cfc3bbe790c1fcd9", "pages": {"paragraaf": 15, "opgaven": 9, "antwoorden": 7}}
+{"evidence": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-root-r5-reproduction-r5.json", "sha256": "b1a1b02dd5088f75821ee0c6e229c602eb748c9a2436cdedc9d2c31adceee58f", "files": 21}
+{"result": "PASS", "full_and_print_native_files": 21, "pages": 31, "changed_pages": [["antwoorden", "pages/page-007.png"]], "binding": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-root-r5-binding.json"}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe -m unittest discover -s build-scripts/content/book-2/211 -p "test*.py" -v
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:55:41.017Z`
+- finished_at: `2026-09-05T21:55:43.694Z`
+- duration_ms: `2677`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `21e9d110b645e4415f4e7e9f67d49145e8b5eb3efdbafdcdcea05d6757e87cab`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+test_all_original_test_bodies_and_generator_remain_exact (test_bonus.BonusContractTests.test_all_original_test_bodies_and_generator_remain_exact) ... ok
+test_changed_existing_model_answer_is_rejected (test_bonus.BonusContractTests.test_changed_existing_model_answer_is_rejected) ... ok
+test_current_complete_sources_equal_exact_insertion (test_bonus.BonusContractTests.test_current_complete_sources_equal_exact_insertion) ... ok
+test_extra_criterion_is_rejected (test_bonus.BonusContractTests.test_extra_criterion_is_rejected) ... ok
+test_misplaced_block_is_rejected (test_bonus.BonusContractTests.test_misplaced_block_is_rejected) ... ok
+test_missing_one_criterion_is_rejected (test_bonus.BonusContractTests.test_missing_one_criterion_is_rejected) ... ok
+test_real_old_missing_block_is_rejected (test_bonus.BonusContractTests.test_real_old_missing_block_is_rejected) ... ok
+test_unrelated_source_drift_is_rejected (test_bonus.BonusContractTests.test_unrelated_source_drift_is_rejected) ... ok
+test_accessible_svg_titles_are_concise_noun_first (test_source.SourceContractTests.test_accessible_svg_titles_are_concise_noun_first) ... ok
+test_answer_coverage (test_source.SourceContractTests.test_answer_coverage) ... ok
+test_canonical_exercise_source_shared (test_source.SourceContractTests.test_canonical_exercise_source_shared) ... ok
+test_exact_four_goals (test_source.SourceContractTests.test_exact_four_goals) ... ok
+test_figures_add_one_relationship_at_a_time (test_source.SourceContractTests.test_figures_add_one_relationship_at_a_time) ... ok
+test_numeric_models_independently_recomputed (test_source.SourceContractTests.test_numeric_models_independently_recomputed) ... ok
+test_proof_revision_rejects_path_components_before_any_write (test_source.SourceContractTests.test_proof_revision_rejects_path_components_before_any_write) ... ok
+test_reproducible_sources_and_assets (test_source.SourceContractTests.test_reproducible_sources_and_assets) ... ok
+test_six_assets_and_every_reference (test_source.SourceContractTests.test_six_assets_and_every_reference) ... ok
+test_source_letters_are_not_pandoc_auto_lists (test_source.SourceContractTests.test_source_letters_are_not_pandoc_auto_lists) ... ok
+test_target_exact_source_and_points (test_source.SourceContractTests.test_target_exact_source_and_points) ... ok
+test_target_table_retains_every_frozen_cell (test_source.SourceContractTests.test_target_table_retains_every_frozen_cell) ... ok
+test_worked_image_native_short_alt_keeps_entire_caption (test_source.SourceContractTests.test_worked_image_native_short_alt_keeps_entire_caption) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 2.339s
+
+OK
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:56:14.413Z`
+- finished_at: `2026-09-05T21:56:14.510Z`
+- duration_ms: `97`
+- exit_code: `0`
+- stdout_sha256: `4fc27f991b8fac500c91ffc07a09671a5d48514bac4a3a017c104007c2f36838`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.1 "Kostenstructuren"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.1 Kostenstructuren – paragraaf.md
+  OK opgaven.md: 2.1.1 Kostenstructuren – opgaven.md
+  OK antwoorden.md: 2.1.1 Kostenstructuren – antwoorden.md
+  OK 2.1.1 Kostenstructuren – paragraaf.html (710.4 KB)
+  OK 2.1.1 Kostenstructuren – opgaven.html (245.1 KB)
+  OK 2.1.1 Kostenstructuren – antwoorden.html (18.8 KB)
+  OK 2.1.1 Kostenstructuren – paragraaf.pdf (518 KB)
+  OK 2.1.1 Kostenstructuren – opgaven.pdf (188 KB)
+  OK 2.1.1 Kostenstructuren – antwoorden.pdf (31 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 6 image refs all resolve
+  OK _assets/: 6 SVGs, 6 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.1 "Kostenstructuren" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:56:14.565Z`
+- finished_at: `2026-09-05T21:56:14.663Z`
+- duration_ms: `98`
+- exit_code: `0`
+- stdout_sha256: `f977ab456da0d2239f7aea063296f613f72130435d6db4b51b7dac122d3d7a6f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.1 "Kostenstructuren"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.1 Kostenstructuren – paragraaf.md
+  OK opgaven.md: 2.1.1 Kostenstructuren – opgaven.md
+  OK antwoorden.md: 2.1.1 Kostenstructuren – antwoorden.md
+  OK 2.1.1 Kostenstructuren – paragraaf.pdf (518 KB)
+  OK 2.1.1 Kostenstructuren – opgaven.pdf (188 KB)
+  OK 2.1.1 Kostenstructuren – antwoorden.pdf (31 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 6 image refs all resolve
+  OK _assets/: 6 SVGs, 6 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.1 "Kostenstructuren" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TEXTBOOK-PRODUCTION-1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:58:19.679Z`
+- finished_at: `2026-09-05T21:58:19.882Z`
+- duration_ms: `203`
+- exit_code: `0`
+- stdout_sha256: `699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```

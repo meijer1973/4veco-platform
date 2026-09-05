@@ -1,0 +1,458 @@
+{
+  "builder": "paragraph_211_bonus_correction_builder",
+  "platform_base": "2bf6260c5d4d799c5408f898d0dab126eff9e5ac",
+  "lessons_base": "6a6c8183bd2e9b52d2898e587543f735e6e87299",
+  "visual_acceptance": "NOT_SUPPLIED_BY_SCRIPT",
+  "assets": [
+    {
+      "asset": "2.1.1_ex_1",
+      "svg_sha256": "c2854b76d42ee1a2654f4e13886e5184b17119786bff71b7b908bedf4aae83e3",
+      "png_sha256": "fc76afb4f507cf8e09a62a9cf7a209ded71b93f87c72b97803d95afc6678f24f",
+      "native_sha256": "fc76afb4f507cf8e09a62a9cf7a209ded71b93f87c72b97803d95afc6678f24f",
+      "native_pixel_delta": 0,
+      "grayscale": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-root-r5-evidence\\grayscale\\2.1.1_ex_1.png",
+      "grayscale_sha256": "e29710d014fba3ed507eb5750ec056d9b54c1661e2550555c0446625377f189e"
+    },
+    {
+      "asset": "2.1.1_fig_1",
+      "svg_sha256": "9043146770454ad70f5968185c49de46bee6036f5e4748a9caac8b78cebb1005",
+      "png_sha256": "21ca603069ffa83d885befa21696b1b0c7ea4a0f6fba8ed49021458000c8ba45",
+      "native_sha256": "21ca603069ffa83d885befa21696b1b0c7ea4a0f6fba8ed49021458000c8ba45",
+      "native_pixel_delta": 0,
+      "grayscale": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-root-r5-evidence\\grayscale\\2.1.1_fig_1.png",
+      "grayscale_sha256": "4dec00358ff6d93e518e484b3194813cdee71b42cc09a46beee58d8cf7eb7d47"
+    },
+    {
+      "asset": "2.1.1_fig_2",
+      "svg_sha256": "bbf506bd1be95e272a9bd31a42143147f58dc545c5ff243ff8d026b0d4c6c66d",
+      "png_sha256": "74f1384715e922ca04d10aa2978b852a98511044c6478f40e4bb260f72e0f8a8",
+      "native_sha256": "74f1384715e922ca04d10aa2978b852a98511044c6478f40e4bb260f72e0f8a8",
+      "native_pixel_delta": 0,
+      "grayscale": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-root-r5-evidence\\grayscale\\2.1.1_fig_2.png",
+      "grayscale_sha256": "efdfbbd3a20fa84bfc478a45ff7a718d979ea6afd760a41ef983cc8f53320bda"
+    },
+    {
+      "asset": "2.1.1_fig_3",
+      "svg_sha256": "a5a2e464a51461f78f1b98056520c5b3a32e9baef577424f405b64c4790326eb",
+      "png_sha256": "c516afb77ff0ae8a8adfd031140cf6f23b3b7f02bbb5a2980649e8a9f58de8b6",
+      "native_sha256": "c516afb77ff0ae8a8adfd031140cf6f23b3b7f02bbb5a2980649e8a9f58de8b6",
+      "native_pixel_delta": 0,
+      "grayscale": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-root-r5-evidence\\grayscale\\2.1.1_fig_3.png",
+      "grayscale_sha256": "b30ba1b946482e77fcff42200e80867c1af70d8033caf8db4bc680db00819822"
+    },
+    {
+      "asset": "2.1.1_fig_4",
+      "svg_sha256": "d49d97740e3747855613ea332df481caf9bb71071f75f08626502d1a474e518d",
+      "png_sha256": "c73e2eca425313c29eaf6bc1fbee0775971bfb08b6343d0ade52bbb70565701b",
+      "native_sha256": "c73e2eca425313c29eaf6bc1fbee0775971bfb08b6343d0ade52bbb70565701b",
+      "native_pixel_delta": 0,
+      "grayscale": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-root-r5-evidence\\grayscale\\2.1.1_fig_4.png",
+      "grayscale_sha256": "73834172f3c8e19f77fd59bc9fa859e59db516e82ee332d351f688eb8f3f5024"
+    },
+    {
+      "asset": "2.1.1_we_1",
+      "svg_sha256": "8f60486f0d66e0d728570e9d9f40851e6834d2c5cbf18db96ea091893b6d2530",
+      "png_sha256": "f62cfd52983743e0ceb36a5963dd30030d8c220e30f100c6f30ae47361700bc6",
+      "native_sha256": "f62cfd52983743e0ceb36a5963dd30030d8c220e30f100c6f30ae47361700bc6",
+      "native_pixel_delta": 0,
+      "grayscale": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-root-r5-evidence\\grayscale\\2.1.1_we_1.png",
+      "grayscale_sha256": "6bb1678a370183174be2c3d5067f3415b6a249b4f03c268183231b1f9c745242"
+    }
+  ],
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "md_sha256": "de7abc910f6ec940eb329abd003085921f32409956ec1e0450bcc4a5454eb6b5",
+      "html_sha256": "10721f1ad745b8e1358ba354c5ded64a74367f5081eaf1c676ecb88dbe10e44b",
+      "pdf_sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0",
+      "R4_pdf_sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0",
+      "full_DOM_equal_after_exact_criteria_removal": true,
+      "pages": [
+        {
+          "page": "pages/page-001.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-001.png",
+          "sha256": "87030bdf1a3a488614a7b6d0ff416d9a6747a4313bf2543e04c6c706728bb931",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-002.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-002.png",
+          "sha256": "9ec870cc1fad995863c1f64de5eb087cb39e10c2e03ec0091ff6b7335adbd0bb",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-003.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-003.png",
+          "sha256": "b5b7c16d919e8574fc2c8340f682bff8b42647c2a2aab0aa7eef43791d7b37f8",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-004.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-004.png",
+          "sha256": "2bf10d4e955d8a3e550cef5c58d8930e415a6693022bf8b66edfb8976cef391b",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-005.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-005.png",
+          "sha256": "4a5f0b08ffd3b4de246cedd74343da79102048e8e8b84b455cf34cb23c095b08",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-006.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-006.png",
+          "sha256": "40be04318742db356d11fff255fa1ec41db157cd0e7f5fd822b803e4f8277d7d",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-007.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-007.png",
+          "sha256": "6bf0b7a6fbdcb8933d95182b71c2a870d9a1b6c7a66826d6c35ca1875a410dc5",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-008.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-008.png",
+          "sha256": "027292161d798a897a2aeedaa1679169b1d6b46b90da5e221fdcbac2277e95e5",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-009.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-009.png",
+          "sha256": "d6211267c2c52ea8849f30e1470e1266dc9e86819c59c0ad75a04e62cac62846",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-010.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-010.png",
+          "sha256": "9d864c9b0783a0e83e6b58a55198d1f5bff02a435b208c814a22b88f940be2a0",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-011.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-011.png",
+          "sha256": "1d559076f6c91a5ae9c0a324d3a19502318cb2466b4243a00190ef1b338139be",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-012.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-012.png",
+          "sha256": "b448d6f5fe921f69489a5b833a3ff1249690043db1b9e6e30f72520b604bdc06",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-013.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-013.png",
+          "sha256": "f9b22bcdad2d331e5edcf43e2ebb0add294fa00b3f9c2441b82f18d88c0b193c",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-014.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-014.png",
+          "sha256": "e5e4f0e5f96d32db6ebd0c5eeec7dae6aa71b96c14ef68d706657296a0982c8f",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-015.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-paragraaf-9837e3a85f31-r5\\pages\\page-015.png",
+          "sha256": "6d46b6ace8f0784f98e9ec6486ffe0514d4b50f492b3d11b18bf4852d8880460",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        }
+      ],
+      "old_page_count": 15,
+      "minimum_printed_text_pt": 12.0,
+      "placements": [
+        {
+          "page": 3,
+          "width_pt": 470.55118125,
+          "height_pt": 239.19685049999998,
+          "asset": "2.1.1_fig_2",
+          "minimum_placed_label_pt": 13.724409453125
+        },
+        {
+          "page": 4,
+          "width_pt": 470.55118125,
+          "height_pt": 486.23622075000003,
+          "asset": "2.1.1_fig_3",
+          "minimum_placed_label_pt": 13.724409453125
+        },
+        {
+          "page": 5,
+          "width_pt": 470.55118125,
+          "height_pt": 215.66929125000001,
+          "asset": "2.1.1_fig_1",
+          "minimum_placed_label_pt": 14.37795275
+        },
+        {
+          "page": 6,
+          "width_pt": 470.55118125,
+          "height_pt": 243.11811,
+          "asset": "2.1.1_fig_4",
+          "minimum_placed_label_pt": 13.07086612903226
+        },
+        {
+          "page": 8,
+          "width_pt": 470.55118125,
+          "height_pt": 259.45669275,
+          "asset": "2.1.1_we_1",
+          "minimum_placed_label_pt": 13.724409440176323
+        },
+        {
+          "page": 10,
+          "width_pt": 470.55118125,
+          "height_pt": 182.3385825,
+          "asset": "2.1.1_ex_1",
+          "minimum_placed_label_pt": 13.724409435483873
+        }
+      ],
+      "manifest_sha256": "b8d14f27f2b361cbcad24723122c909c8c591a8f718bbd5d150156fcd71ab6d9"
+    },
+    {
+      "kind": "opgaven",
+      "md_sha256": "bacccc1c9b063c4c786f2749d31993d94eb671fdc5bf0a899fb123d89bc0558b",
+      "html_sha256": "9e27b80089dee95fa4ac61a3f07baaf95ff3650518943a730db122befec2a6f8",
+      "pdf_sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953",
+      "R4_pdf_sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953",
+      "full_DOM_equal_after_exact_criteria_removal": true,
+      "pages": [
+        {
+          "page": "pages/page-001.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-001.png",
+          "sha256": "0265dff094b5c47c408f27570bfdc82c7b26af885ab4615cff94943830b3c7bd",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-002.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-002.png",
+          "sha256": "80f498601d5685a964abb1ab14dd3a0b9e1355fbba2400c7e17bdebb653e91a0",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-003.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-003.png",
+          "sha256": "ca9cb50a8f074fe5d7f6e5b22c084aa22338485e48aedd8200c0d2ce7c82ead7",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-004.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-004.png",
+          "sha256": "824050d16b84d572995c2bc2f336e87996d663708bf18709bf1686ef54c24f94",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-005.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-005.png",
+          "sha256": "f9ddc86d86341a9c5db92152f71ceb1f0acc51f23a3b78fc2c454ddd9402f386",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-006.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-006.png",
+          "sha256": "8470277e2c61cc5cc8a9107063ad476d441b3e77b0d027a1be54e435d5bf106b",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-007.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-007.png",
+          "sha256": "c5464d633b525ce8a22dab994eab026340c4b4405ff7a105405730ac46dcfb07",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-008.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-008.png",
+          "sha256": "be8a312018558ae7d2f6c8863a6180199265a9ddab0becbdd84329edb2a40749",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-009.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-opgaven-97329415bacc-r5\\pages\\page-009.png",
+          "sha256": "4cbeef659c9a7122ee979f474c000385c6b434ad8408049cc9d58aee87722ba8",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        }
+      ],
+      "old_page_count": 9,
+      "minimum_printed_text_pt": 12.0,
+      "placements": [
+        {
+          "page": 2,
+          "width_pt": 470.55118125,
+          "height_pt": 259.45669275,
+          "asset": "2.1.1_we_1",
+          "minimum_placed_label_pt": 13.724409440176323
+        },
+        {
+          "page": 4,
+          "width_pt": 470.55118125,
+          "height_pt": 182.3385825,
+          "asset": "2.1.1_ex_1",
+          "minimum_placed_label_pt": 13.724409435483873
+        }
+      ],
+      "manifest_sha256": "e5615a2689ea0e278795d14e0cc2462e685e9b1fa430a40c1715c2eb1dad1532"
+    },
+    {
+      "kind": "antwoorden",
+      "md_sha256": "f7572e3d4f2fc5bc092562eb06e76ebb0480fbbc8aa1ea01d3752a7251cbbdc9",
+      "html_sha256": "b2e86d7bae4d1bdbb7cd47a55cd6e83254398618f0954fe3ce09cdb75927c916",
+      "pdf_sha256": "498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce",
+      "R4_pdf_sha256": "ffdf0905a980b6c89b64207e90873d79edbf192c86c2280f3394caa25693998a",
+      "full_DOM_equal_after_exact_criteria_removal": true,
+      "pages": [
+        {
+          "page": "pages/page-001.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-001.png",
+          "sha256": "e64482170c9bf4117f064d72c81ccb73e5cb25220916188deb58867a0329a844",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-002.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-002.png",
+          "sha256": "821d393d65e82843b8f4b9d62f0fe4e4c75c57a4909ec9c3ac127a502c250591",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-003.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-003.png",
+          "sha256": "3aece13ce42a7ab19411768002f77629492a3be5c7865ec5732a9ffad3872b9a",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-004.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-004.png",
+          "sha256": "db38f2c267dff1647809ec28072a022f55fbf4d4bd4c214844f4e3404b0e64a0",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-005.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-005.png",
+          "sha256": "7c5579d04121743f7d9adee6140adf84dc5030e7da66c14c68948d5d3dcf2b51",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-006.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-006.png",
+          "sha256": "46b66e9cf590e2fa7414ed0347c3c4fdfa8014232931b731a0077f0f84657fc0",
+          "R4_exists": true,
+          "R4_bytes_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": "pages/page-007.png",
+          "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\211-antwoorden-498b9a863eef-r5\\pages\\page-007.png",
+          "sha256": "36bedb4aa924e1990c8d5c61dd3a01710ff8c0a12d58e8ea65c132f31f2ab22b",
+          "R4_exists": true,
+          "R4_bytes_equal": false,
+          "pixel_delta_bbox": [
+            141,
+            460,
+            1123,
+            1172
+          ]
+        }
+      ],
+      "old_page_count": 7,
+      "minimum_printed_text_pt": 12.0,
+      "placements": [],
+      "manifest_sha256": "f9931b00be4ef80a0539c5b9948073bb8655ebe820887ea2fb0e44d7e787ef04"
+    }
+  ],
+  "exact_lesson_changed_paths": [
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf"
+  ],
+  "protected": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-review.md",
+      "sha256": "92b4a9462caf8316274fb58f8beef5c850147c44e6bf80b9a28fad442d9dbe96"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-textbook-handoff.md",
+      "sha256": "724a080619f2f072151edf20980071b3bef18cd60d1904c78f4aa906be8917c8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-textbook-plan.md",
+      "sha256": "f46c7aa444ba6fef1f6f885b34bd52963fccac3cdc7b13b898eb6665219c4cd0"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-quality-ref.yaml",
+      "sha256": "0dddb6e9d8f3a8da0e0f31e67dafabf53b99feb6ad86ce72039480dd7e12ea18"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\build_pdf.py",
+      "sha256": "6ae0ea8829a68553d21e86408ca98bc6d79edebb046b146fef9ed521bf26c5b3"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_chapter-plan.md",
+      "sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_book-plan.md",
+      "sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76"
+    }
+  ],
+  "legacy_zip": {
+    "sha256": "bb951635865a5e7e321f562ef73c640c84948f99441385f217cf366d9e3e996d",
+    "unchanged": true,
+    "current_deliverable": false,
+    "reason": "No native 211 ZIP contract; historical archive excluded"
+  }
+}
