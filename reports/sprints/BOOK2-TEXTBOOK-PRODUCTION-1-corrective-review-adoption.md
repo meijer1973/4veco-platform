@@ -90,3 +90,30 @@ All18 adopted PDF packages remain candidates and the41PDF package remains
 unfinished. No target, plan, released hold, output-choice scope or merge
 authority changed. Classroom timing/attainment, PartB commissioning and the
 protected Inspectie refresh remain separately bounded follow-ups.
+
+## Later §213 R5 specialist adoption
+
+Original distinct specialist payload25e3bdf696b84f8005fe30ce435efd0be8d95c4d
+is adopted conflict-free as47c17f80130635b677fe5235467ee91ff2cd1b25. Its
+generated index4dac211a9283e9e292dd4fd2e06b8b1035a3e54c is excluded.
+Lessons were not changed. Root read the complete specialist report and separate
+personal-inspection record, then ran the new read-only
+`213-specialist-adoption-check.js` through the normal recorder: PASS for
+provenance only. All29 fresh specialist page hashes match root's original R5
+generation pages; all5 grayscale hashes and3 actual/copy/generation PDF bindings
+match. Canonical independent paragraph review and stale quality-ref remain exact.
+PENDING capture statuses are retained alongside the separate attributed personal
+observations, not rewritten as machine-generated acceptance.
+
+Teacher14/14 and student12/12 pass; visual/accessibility9/10 requires three
+concise HTML alternatives (fig3/fig4/we1, four edition occurrences) and the
+corresponding imperative we1 SVG title. The old reports remain exact history.
+Root's first broad diagnostic read exposed the media JSON's embedded bitmap
+data and was truncated; subsequent checks parse only named hash/path fields,
+not the enormous `alts[].src`. No evidence file was edited to conceal this.
+
+Distinct §222 correction builder now owns
+C:/wt/book2-222-correction-20260905 at ca05ec78/6362d259, implementing only the
+two canonical FAIL findings under its own plan. §213/§221 metadata builders
+have returned published candidates for separate independent review; those
+builder results do not close the original required specialist gates.

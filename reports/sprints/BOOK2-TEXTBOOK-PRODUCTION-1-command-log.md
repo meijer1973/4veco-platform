@@ -4350,3 +4350,367 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-specialist-adoption-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:25:50.193Z`
+- finished_at: `2026-09-05T19:25:50.379Z`
+- duration_ms: `186`
+- exit_code: `0`
+- stdout_sha256: `42237c1e2ff0d605fcf88a847876caca42a9e7823aba16ddcf6c8e9f9c5d4845`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS_FOR_ADOPTION_PROVENANCE_ONLY",
+  "quality_acceptance": "WITHHELD",
+  "specialist_verdict": "REVISE",
+  "fresh_page_pairs": 29,
+  "grayscale_bindings": 5,
+  "exact_pdf_copy_and_generation_bindings": 3,
+  "canonical_review_and_quality_unchanged": true,
+  "personal_inspection_record": "BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-personal-inspection-r5.md",
+  "no_capture_status_rewrite": true
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/221/test_source.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:26:16.278Z`
+- finished_at: `2026-09-05T19:26:16.915Z`
+- duration_ms: `637`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `4ac20fea79a4ae63c47c1357cb616efa3c8b0c34de0fa51731934ac6e763cddb`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+............
+----------------------------------------------------------------------
+Ran 12 tests in 0.241s
+
+OK
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/b2_221.py --manifest reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-root-build-r8.json
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:26:16.961Z`
+- finished_at: `2026-09-05T19:26:23.630Z`
+- duration_ms: `6669`
+- exit_code: `0`
+- stdout_sha256: `01c36a463644db8ea2e7319433f37bb53b10e47a71f5996868598ca017de8b57`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.1
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+{
+  "paragraph": "2.2.1",
+  "target_record_sha256": "61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288",
+  "plan_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345",
+  "chapter_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+  "input_sources": [
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\b2_221.py",
+      "sha256": "da9dee7e7392c1ee880e9ea582ec94ecc5ff8a2a4b38694ecf7ee0eaa6ec70b2"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\221\\theory.md",
+      "sha256": "2e5af204f2bb38226f793626d061b175527fe283808bcfa932a6883d19950ca4"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\221\\exercises.md",
+      "sha256": "d94e8f00ca51e6c33792216f6f59d60e95e4cdbf5d4ef10f918d030ef719fa8b"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\221\\answers.md",
+      "sha256": "583e083e66cfdbd14aee442da7fab1c19aa3fc999dcfe53f63d965e291198c1a"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\221\\target-answers.md",
+      "sha256": "59a17da108763172e5f590fca927a448fe12b07d5b5ff113b9ec7a82c80954b5"
+    }
+  ],
+  "inspection_status": "PENDING",
+  "documents": [
+    {
+      "source_md": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit \u2013 paragraaf.md",
+      "source_sha256": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db",
+      "source_html": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit \u2013 paragraaf.html",
+      "html_sha256": "ac568897e03adcc88aab6a8710771d189d1a6e4bb18b85e63fdc4b3d32a7140b",
+      "source_pdf": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit \u2013 paragraaf.pdf",
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_fig_1.svg",
+          "sha256": "1abc7cc2a150318a84341bf89886543cd94e5fc63dd120cf18244e62032536b2"
+        },
+        {
+          "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_fig_1.png",
+          "sha256": "6f4009fe29fb88f442257e658fe6433809020ba824d17ee275a08701f37d0704"
+        },
+        {
+          "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_fig_2.svg",
+
+...[truncated 3742 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-root-r8-bindings.js --bind-proof-links
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:27:20.649Z`
+- finished_at: `2026-09-05T19:27:20.890Z`
+- duration_ms: `241`
+- exit_code: `0`
+- stdout_sha256: `9391b86f1ae76a4892a7687ecb21cb0a90d2d8c403384f8ddee80a9b37a1b3ba`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS_FOR_CANDIDATE_BINDINGS",
+  "inventory_bindings": 61,
+  "exact_edition_triples": 3,
+  "own_prior_page_pairs": 20,
+  "all_pdfs_identical": true,
+  "exact_enumerated_native_html_delta": true,
+  "alts": [
+    {
+      "alternative": "Procentuele prijs- en hoeveelheidsreacties op dezelfde schaal.",
+      "characters": 62
+    },
+    {
+      "alternative": "Dezelfde absolute-waardeschaal; twee verschillende classificaties.",
+      "characters": 66
+    },
+    {
+      "alternative": "Bowlplein: berekende percentages; klimhal: alleen de gemeten Ev.",
+      "characters": 64
+    },
+    {
+      "alternative": "Bowlplein: berekende percentages; klimhal: alleen de gemeten Ev.",
+      "characters": 64
+    }
+  ],
+  "independent_gates": "PENDING",
+  "proof_links_written": true
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/221/check_render.py --manifest reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-root-build-r8.json --rebuild --output reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-root-render-check-r8.json
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:27:20.936Z`
+- finished_at: `2026-09-05T19:27:27.343Z`
+- duration_ms: `6407`
+- exit_code: `0`
+- stdout_sha256: `79b0259d9cd73bb1fd82e2969ec735871e067d9dc4d6d87b51c5b5e64275a008`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.1
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+{
+  "paragraph": "2.2.1",
+  "visual_acceptance": "NOT_SUPPLIED_BY_THIS_SCRIPT",
+  "automated_status": "PASS",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6",
+      "pages": 10,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": 12.221,
+      "proof_directory": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-98bf4923b4e3-r8",
+      "all_page_hashes_match": true
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af",
+      "pages": 6,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": 12.221,
+      "proof_directory": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-opgaven-a8119cc769c8-r8",
+      "all_page_hashes_match": true
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d",
+      "pages": 4,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": null,
+      "proof_directory": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-antwoorden-d4a7c139d492-r8",
+      "all_page_hashes_match": true
+    }
+  ],
+  "byte_identical_rebuild": true,
+  "checks": [
+    "exact frozen goals/context/a-d/3+2+2+2points/short answers",
+    "one exercise HTML definition in both editions",
+    "no leaked fences or active resources",
+    "every printed text/font and placed figure label meets12pt floor",
+    "all assets and all rendered page hashes fresh; manifests honestly pending"
+  ]
+}
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:27:46.983Z`
+- finished_at: `2026-09-05T19:27:47.081Z`
+- duration_ms: `98`
+- exit_code: `0`
+- stdout_sha256: `274e68f12f250b71740b750bf5676685a72b7c4ddba79ffe21d7e90608d01632`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.1 "Prijselasticiteit"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.1 Prijselasticiteit
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.1 Prijselasticiteit – paragraaf.md
+  OK opgaven.md: 2.2.1 Prijselasticiteit – opgaven.md
+  OK antwoorden.md: 2.2.1 Prijselasticiteit – antwoorden.md
+  OK 2.2.1 Prijselasticiteit – paragraaf.html (302.2 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.html (120.1 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.html (12.8 KB)
+  OK 2.2.1 Prijselasticiteit – paragraaf.pdf (241 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.pdf (104 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.pdf (23 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 3 image refs all resolve
+  OK _assets/: 3 SVGs, 3 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.1 "Prijselasticiteit" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:27:47.127Z`
+- finished_at: `2026-09-05T19:27:47.191Z`
+- duration_ms: `64`
+- exit_code: `0`
+- stdout_sha256: `484f1ff8a20ff23bace5e86b50d1d3625a12cff87ab7b87b3d13c13200f76daf`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.1 "Prijselasticiteit"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.1 Prijselasticiteit
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.1 Prijselasticiteit – paragraaf.md
+  OK opgaven.md: 2.2.1 Prijselasticiteit – opgaven.md
+  OK antwoorden.md: 2.2.1 Prijselasticiteit – antwoorden.md
+  OK 2.2.1 Prijselasticiteit – paragraaf.pdf (241 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.pdf (104 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.pdf (23 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 3 image refs all resolve
+  OK 2 companion asset(s) declared in _paragraph-plan.md
+  OK _assets/: 3 SVGs, 3 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.1 "Prijselasticiteit" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```

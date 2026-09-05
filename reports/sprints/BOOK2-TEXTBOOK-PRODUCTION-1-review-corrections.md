@@ -135,8 +135,8 @@ current paragraphs' actual generated HTML, not just Markdown captions.
 |---|---|---|
 | §211 R3 | we1:122characters | Reopen exact package accessibility acceptance; preserve historic review/print proof |
 | §212 R5 | fig1–4, ex1/2/4/5/6:130/146/138/131/137/131/151/172/159characters; fig1–4 also not noun-first | Same; nine concise alternatives, full visible captions preserved |
-| §213 R5 | fig3:158 and preposition-first; fig4:155; we1:160 | Specialist REVISE being completed; three alternatives |
-| §221 R7 | fig1 imperative short alt and accessible SVG title | Specialist REVISE being completed; one short alt/title |
+| §213 R5 | fig3:158 and preposition-first; fig4:155; we1:160; we1 SVG title imperative | Exact specialist REVISE adopted at47c17f80; three alternatives plus one accessible title |
+| §221 R7 | fig1 imperative short alt and accessible SVG title | Exact specialist REVISE adopted at8a87436b/e2bc6424; one short alt/title |
 | §222 R12 | we1 Concert:147characters | Included with procedure-order FAIL; preserve finite/local explanation |
 | §223 R3 | All four HTML short alts77/66/78/82characters, noun-first Figuur | No defect in this limited preflight; separate full specialist gate still required |
 
