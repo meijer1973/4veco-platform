@@ -133,8 +133,8 @@ current paragraphs' actual generated HTML, not just Markdown captions.
 
 | Paragraph | Confirmed unique short-alt defects | Required disposition |
 |---|---|---|
-| §211 R3 | we1:122characters | Reopen exact package accessibility acceptance; preserve historic review/print proof |
-| §212 R5 | fig1–4, ex1/2/4/5/6:130/146/138/131/137/131/151/172/159characters; fig1–4 also not noun-first | Same; nine concise alternatives, full visible captions preserved |
+| §211 R3 | we1:122characters; fig3 accessible title starts adverb Eerst | Reopen exact package accessibility acceptance; one short alt/one title, preserve historic review/print proof |
+| §212 R5 | fig1–4, ex1/2/4/5/6:130/146/138/131/137/131/151/172/159characters; fig1–4 also not noun-first; we1/ex1/ex3/ex4/ex5 accessible titles start machine IDs | Same; nine concise alternatives/five descriptive noun-first titles, full visible captions preserved |
 | §213 R5 | fig3:158 and preposition-first; fig4:155; we1:160; we1 SVG title imperative | Exact specialist REVISE adopted at47c17f80; three alternatives plus one accessible title |
 | §221 R7 | fig1 imperative short alt and accessible SVG title | Exact specialist REVISE adopted at8a87436b/e2bc6424; one short alt/title |
 | §222 R12 | we1 Concert:147characters | Included with procedure-order FAIL; preserve finite/local explanation |
@@ -158,6 +158,29 @@ although their prior exact-page observations remain valid. Their unchanged
 economic teaching still supports already released dependent work; later exact
 current-file prerequisite pins need a reviewed successor, not arbitrary hashes.
 All eighteen current PDFs remain candidates until the relevant final gates close.
+
+Later root direct audit read all17 actual §211/§212 SVG titles. In addition to
+the HTML findings, §211 fig3 starts `Eerst TVK toevoegen...`, not noun-first.
+Five §212 titles are generated as `<machine asset ID>: TK en TO` and need an
+actual descriptive context noun phrase, not an internal filename prefix. These
+are within the required corresponding-title audit, not figure/content changes.
+The distinct builders must preserve all geometry and full captions and prove
+actual PNG/PDF parity; no additional title defect or blanket SVG exemption is
+inferred. A Windows rg wildcard-file lookup failed read-only and was corrected
+to explicit directories with -g before the full source inspection.
+
+§221 R8 and §213 R6 metadata corrections are now adopted/root-rebuilt candidates
+(root verification-r8 and verification-r6 reports). All49 prior root page views
+transfer by actual byte-identical page pairs. Their independent rereviews are
+running; specialist and successor handoff gates still remain. The old REVISE
+records are preserved rather than relabelled after a builder's implementation.
+
+§222 R13 is now root-adopted/rebuilt and source/page-verified. Answer4b follows
+quantity then price, and Concert's full caption has a separate concise alt.
+Root personally viewed the sole changed answer page2;20 other page pairs are
+exact root-prior bytes. Both canonical FAIL findings are corrected candidates,
+not closed acceptance: both normal profiles still fail only on that unchanged
+review until distinct rereview. See222-root-verification-r13.md.
 
 ## Existing accepted flags, not concealed corrections
 

@@ -67,13 +67,15 @@ and distinct reviews. Answer-only ex_3/4/5 assets are excluded from student ZIP
 inventories. Nonblocking recap qualification omission does not remove correct
 model boundaries in body/answers. 27 pages and two grayscale probes reviewed.
 
-## §221 unchanged teaching trace — historical R6, current R7 paragraph pass
+## §221 unchanged teaching trace — current R8 metadata candidate
 
 The historical R6 source/output/review/quality pins remain in
 `2.2.1-textbook-handoff.md`. R7 changes only six timing/route phrases and has
 fresh independent paragraph PASS WITH FLAGS in `221-paragraph-review-r7.md`.
-Its separate specialist QC and successor handoff are still pending; do not
-use the historical handoff as approval of the current R7 artifact hashes.
+Its R7 specialist then required a short-alt/title correction. R8 is now
+root-adopted/rebuilt with identical printed pages and full visible captions;
+current rereview/QC/handoff remain pending. The historical handoff does not
+approve current R8 source/HTML hashes.
 
 | Frozen operation | Explicit teaching / modelling | Practice before target | Target / answer evidence |
 |---|---|---|---|
@@ -89,19 +91,23 @@ syllabus or mastery claims.
 
 ## Adopted candidate trace, not complete acceptance
 
-§213 R5 root source/render/rebuild verification covers all four goals and native
+§213 R6 root source/render/rebuild verification covers all four goals and native
 10/6 blank cells. Lus/Bout models profit and interval ratios; Start 2 fades the
 MO−MK profit-change bridge, guided patches/coasters retain denominator support,
 Draad/Kaft independently matches Linea/Curva's five operations and15points.
-The distinct paragraph PASS WITH FLAGS is adopted; specialist QC/handoff still needed.
+The R5 distinct paragraph PASS and specialist REVISE remain historical. R6
+corrects only metadata, retaining all29 PDF-page bytes and full captions;
+current independent rereview, specialist QC and handoff are still required.
 
-§222 R12 root verification covers exact P×Q totals and factors, own-price
+§222 R13 root verification covers exact P×Q totals and factors, own-price
 direction, local versus finite-change distinction, units/period and cost limits.
 Toy/coffee/pottery and the concert counterexample model these; guided and
 independent practice lead to Nova/Stream's six questions/11points. Final answer
 token correction is root-verified. Independent review has identified reversed
 percentage-calculation order in answer 4b relative to the approved C22 sequence;
-a bounded correction and renewed paragraph/QC gates remain required.
+R13 corrects exactly those two pairs and Concert's alternative, with all
+full captions and target mathematics intact. Root rebuilt and viewed the one
+changed answer page; canonical FAIL remains until distinct rereview/QC gates.
 
 §223 R3 independent paragraph PASS WITH FLAGS is now adopted. See
 223-independent-paragraph-review-r3.md for the full four-goal teaching-to-practice

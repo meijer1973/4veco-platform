@@ -1,0 +1,62 @@
+{
+  "paragraph": "2.1.3",
+  "source_manifest": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-root-build-r6.json",
+  "source_manifest_sha256": "1bf1fa6746c642d1a5f596f0b2bc873ee26872c0cb27dbd118cdf0bdb09c16d9",
+  "full_generator_rebuild": "PASS: all 24 artifact files byte identical",
+  "print_only_rebuild": "PASS: all 24 artifact files byte identical",
+  "artifacts": {
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.zip": "15ffc25da00d0f3bfc84f93224191a08c9ab31387f7dc873a8df85dc7b76b499",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html": "b78090ef65fb0544e46b59353660980a79e2bd2b5774ef64955154abe23a3c98",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.zip": "1a841ffb08f77e0a50559791707023c85d803f6aea263095449fd74fcf451dae",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md": "0df905cb3582b00e3cb47f477d156707891140d7b637b2fab20a158acee37e25",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html": "63f33b13456bd1cc044760f67ff3d7267d337df05adc863a07b7b2373041e1f7",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf": "aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip": "0cfc714beb45b3ec087d0c891c28223e8431ba3e549abe9ec81dafba41494010",
+    "_assets/2.1.3_fig_1.svg": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819",
+    "_assets/2.1.3_fig_1.png": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+    "_assets/2.1.3_fig_2.svg": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53",
+    "_assets/2.1.3_fig_2.png": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+    "_assets/2.1.3_fig_3.svg": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc",
+    "_assets/2.1.3_fig_3.png": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+    "_assets/2.1.3_fig_4.svg": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773",
+    "_assets/2.1.3_fig_4.png": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+    "_assets/2.1.3_we_1.svg": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d",
+    "_assets/2.1.3_we_1.png": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+    "_assets/2.1.3_ex_1.svg": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+    "_assets/2.1.3_ex_1.png": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e"
+  },
+  "grayscale_pdf_sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+  "grayscale_pages": [
+    {
+      "page": 2,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-root-grayscale-r6\\page-002.png",
+      "sha256": "004084b5fdd9e0d334b9fff765cc78abc8354c08f1786cb6d901e059ddcd419f"
+    },
+    {
+      "page": 3,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-root-grayscale-r6\\page-003.png",
+      "sha256": "ad6d3fdd1bb7132efa6b95a685fa946966576595cb0918f6513d34088165b47a"
+    },
+    {
+      "page": 5,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-root-grayscale-r6\\page-005.png",
+      "sha256": "f7bb3c55c9de61deb3af2a59bdeaa52c25ce1fd0a951fe5812d5c84ca72b9413"
+    },
+    {
+      "page": 7,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-root-grayscale-r6\\page-007.png",
+      "sha256": "74448eeabc7213d0ace5df6b5ef3eca5c3200667fd1c9b26a8a741c8d23170c3"
+    },
+    {
+      "page": 10,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-root-grayscale-r6\\page-010.png",
+      "sha256": "3a0ad3a2dba523cfacb33c7c198c61ffa27352e1774aefe8c74d12d59a5f2d0d"
+    }
+  ],
+  "visual_inspection": "NOT_SUPPLIED_BY_THIS_SCRIPT"
+}

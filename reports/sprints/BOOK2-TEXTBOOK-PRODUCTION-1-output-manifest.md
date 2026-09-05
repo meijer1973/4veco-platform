@@ -5,8 +5,8 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform `5f1a9ee2400badc4fc586440c0a7ff5b9a88bbfe`, lessons
-`4c4cd7d0c1d2e5242c818399a96dce3e26013e9c`.
+Snapshot: platform `fe609fabd8663f36778c5948209d3140df942adc`, lessons
+`a2bb4bcf199b8871eef21426f329efb6795e7dd8`.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 All paths below are relative to the lesson book root
 `Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/`.
@@ -21,11 +21,13 @@ gate is reopened for short-alt defects; they are conservatively C here. Physical
 root presence is 26, not 26 accepted. All eight legacy PDFs remain Git-blob-
 identical to the baseline. Separate in-progress worktrees do not count here.
 
-§221 R7 now replaces the historical R6 pupil editions and has a fresh adopted
-independent paragraph PASS WITH FLAGS; its specialist QC and successor handoff
-remain pending. All three R7 editions are conservatively C until that package
-gate closes, even though the answer PDF remains byte-identical to accepted R6.
-§213 R5, §222 R12 and §223 R3 are adopted/root-verified candidates, not legacy.
+§221 R8 and §213 R6 now correct their short-alt/title metadata, retaining all
+49 printed page bytes from R7/R5. Both are root-rebuilt candidates with current
+independent rereviews running; their prior specialist REVISE findings remain
+open until exact-candidate gates close. All three editions of each stay C.
+§222 R13 is adopted/root-rebuilt: exactly one answer page changes; the other20
+remain identical. Its canonical paragraph FAIL remains pending current rereview.
+§223 R3 remains an adopted paragraph-PASS candidate.
 Their root reports distinguish actual source/page/rebuild checks from remaining
 independent paragraph, specialist and handoff gates. See review-corrections.md.
 
@@ -100,15 +102,15 @@ hashes alone are not student-quality acceptance.
 | 2.1.2 / paragraaf | `e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2` | R5 historical print acceptance; short-alt correction/review pending |
 | 2.1.2 / opgaven | `94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a` | R5 historical print acceptance; short-alt correction/review pending |
 | 2.1.2 / antwoorden | `07a75d7b5b69344d38d5da9e5f2e0a3b964d86cc64c383b37809f8263fb33192` | R5 historical print acceptance; short-alt correction/review pending |
-| 2.2.1 / paragraaf | `98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6` | R7 candidate; paragraph pass, short-alt correction/QC/handoff pending |
-| 2.2.1 / opgaven | `a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af` | R7 candidate; paragraph pass, short-alt correction/QC/handoff pending |
-| 2.2.1 / antwoorden | `d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d` | R7 candidate; paragraph pass, short-alt correction/QC/handoff pending |
-| 2.1.3 / paragraaf | `534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024` | R5 candidate; paragraph pass, short-alt correction/QC/handoff pending |
-| 2.1.3 / opgaven | `d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05` | R5 candidate; paragraph pass, short-alt correction/QC/handoff pending |
-| 2.1.3 / antwoorden | `aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a` | R5 candidate; paragraph pass, short-alt correction/QC/handoff pending |
-| 2.2.2 / paragraaf | `36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c` | R12 candidate; answer-order correction/review/QC pending |
-| 2.2.2 / opgaven | `0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555` | R12 candidate; answer-order correction/review/QC pending |
-| 2.2.2 / antwoorden | `b68d0429a9d739d0587f7a1c95ca922e188061b4821920b1d0f6459766adc6ab` | R12 candidate; answer-order correction/review/QC pending |
+| 2.2.1 / paragraaf | `98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6` | R8 corrected candidate; rereview/QC/handoff pending |
+| 2.2.1 / opgaven | `a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af` | R8 corrected candidate; rereview/QC/handoff pending |
+| 2.2.1 / antwoorden | `d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d` | R8 corrected candidate; rereview/QC/handoff pending |
+| 2.1.3 / paragraaf | `534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024` | R6 corrected candidate; rereview/QC/handoff pending |
+| 2.1.3 / opgaven | `d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05` | R6 corrected candidate; rereview/QC/handoff pending |
+| 2.1.3 / antwoorden | `aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a` | R6 corrected candidate; rereview/QC/handoff pending |
+| 2.2.2 / paragraaf | `36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c` | R13 corrected candidate; canonical FAIL pending rereview/QC |
+| 2.2.2 / opgaven | `0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555` | R13 corrected candidate; canonical FAIL pending rereview/QC |
+| 2.2.2 / antwoorden | `61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2` | R13 corrected candidate; canonical FAIL pending rereview/QC |
 | 2.2.3 / paragraaf | `ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb` | R3 candidate; paragraph pass, QC/handoff/successor pending |
 | 2.2.3 / opgaven | `50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80` | R3 candidate; paragraph pass, QC/handoff/successor pending |
 | 2.2.3 / antwoorden | `30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10` | R3 candidate; paragraph pass, QC/handoff/successor pending |
@@ -120,18 +122,17 @@ inspection evidence; new short-alt findings do not erase those observations,
 but require corrected MD/HTML/asset lineage and renewed package gates. The separate 102 candidate pages (29 + 20 + 21 + 32) have
 root observation/rebuild reports; §221/§222 exact transfers from root's own
 prior views are distinguished from fresh independent full-page inspection.
-Historical §221 R6 handoff is not the current R7 handoff.
+Historical §221 R6 handoff is not a current R8 handoff.
 
 ## Remaining production and acceptance
 
 Wave-two §213, §222 and §223 outputs are now adopted candidates C; their gate
-closure remains pending. §211/§212/§213/§221/§222 need bounded short-alt
-corrections with full printed captions retained, generated-HTML checks and
-renewed exact-source reviews. §221 R7 requires fresh specialist QC and handoff.
-Independent §213/§223 paragraph reviews are now inspected and adopted as PASS
-WITH FLAGS; specialist and handoff gates remain. The §222 reviewer has reported
-an approved-procedure-order defect in answer 4b; its FAIL report and bounded
-builder correction are pending. §223 also needs exact accepted-R7 successor input binding
+closure remains pending. §211/§212 need bounded short-alt/title corrections;
+§213 R6/§221 R8 are corrected/root-verified but need new review/QC/handoff gates.
+Independent §223 R3 paragraph PASS WITH FLAGS is adopted; specialist and handoff
+gates remain. §222's canonical FAIL covers answer4b order and Concert short alt;
+the distinct R13 candidate is now root-adopted/verified, awaiting renewed review/QC.
+§223 also needs exact accepted-current-§221 successor input binding
 with unchanged pupil output proof before final combined reproduction.
 §214/§224 follow accepted prerequisite teaching. §231–§234 and all aggregate
 outputs remain pending their dependency/plan/review gates. Book front sources
