@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T21:02:52.368Z
+Generated: 2026-09-05T21:08:15.492Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `42697535988e108feb7befac37183e428b470251`
-Files indexed: 9138
+Source commit: `2cb95db7c17bb108f3c996e1ffd20201324e0728`
+Files indexed: 9144
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2716,7 +2716,7 @@ Count: 1030
 
 ## reports
 
-Count: 6365
+Count: 6371
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6808,6 +6808,12 @@ Count: 6365
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-verification.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-1.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-2-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-check.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-checks.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-plan-adoption.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-baseline.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-back-matter-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-front-draft.md
