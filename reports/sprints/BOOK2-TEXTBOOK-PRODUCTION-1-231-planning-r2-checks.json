@@ -1,0 +1,1304 @@
+{
+  "kind": "planning_r2_correction_checks_only",
+  "date": "2026-09-05",
+  "builder": "paragraph_231_builder",
+  "plan_path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md",
+  "plan_sha256_canonical_lf": "60d6a743681e1361478395a591b7c82e44acf8c4587a93c4cc842b036cf017b1",
+  "source_pins": [
+    {
+      "repository": "lessons",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "sha256_canonical_lf": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76"
+    },
+    {
+      "repository": "lessons",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md",
+      "sha256_canonical_lf": "e8a07bfe212a6ae817db99fecb93e86812e1d9e9af533b7ef21591bbb9025dc7"
+    },
+    {
+      "repository": "platform",
+      "file": "references/owned/course-blueprint-v6-three-year.md",
+      "sha256_canonical_lf": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e"
+    },
+    {
+      "repository": "platform",
+      "file": "references/owned/course-blueprint-v5.md",
+      "sha256_canonical_lf": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7"
+    },
+    {
+      "repository": "platform",
+      "file": "references/authored/course-target-exercises.json",
+      "sha256_canonical_lf": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e"
+    },
+    {
+      "repository": "platform",
+      "file": "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.candidates.json",
+      "sha256_json_stringify_ordered_array": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
+      "sha256_canonical_lf": "aba9f8f0408905820cc94ed49eb5f8deef4a5ed4aca66e42d1fb171c935d3675"
+    }
+  ],
+  "target_record_sha256": "a385e00b2fffea168089c32f796668e51ae45cb325504644392f79b20bde8571",
+  "exact_goals": 4,
+  "target_points": [
+    2,
+    3,
+    2,
+    3,
+    2
+  ],
+  "planned_image_alts": [
+    {
+      "stem": "2.3.1_fig_1",
+      "role": "Discrete opening, theory",
+      "alt": "Betalingsbereidheid en prijs van vier workshopdeelnemers.",
+      "characters": 57
+    },
+    {
+      "stem": "2.3.1_fig_2",
+      "role": "Theory axes/intercepts",
+      "alt": "Assen en snijpunten van de vraag naar toegang tot de boekenbeurs.",
+      "characters": 65
+    },
+    {
+      "stem": "2.3.1_fig_3",
+      "role": "Theory line+givenprice",
+      "alt": "Vraaglijn en gegeven prijs van toegang tot de boekenbeurs.",
+      "characters": 58
+    },
+    {
+      "stem": "2.3.1_fig_4",
+      "role": "Theory CS/payment contrast",
+      "alt": "Consumentensurplus boven de prijslijn van de boekenbeurs.",
+      "characters": 57
+    },
+    {
+      "stem": "2.3.1_we_1",
+      "role": "Fully worked museum example",
+      "alt": "Vraaglijn en consumentensurplus van museumbezoekers.",
+      "characters": 52
+    },
+    {
+      "stem": "2.3.1_ex_1",
+      "role": "Opgave 2 current check",
+      "alt": "Vraaglijn en gegeven prijs van aquariumkaartjes.",
+      "characters": 48
+    },
+    {
+      "stem": "2.3.1_ex_2",
+      "role": "Strong guided3",
+      "alt": "Vraaglijn met prijs, hoeveelheid, basis en hoogte van de tuintour.",
+      "characters": 66
+    },
+    {
+      "stem": "2.3.1_ex_3",
+      "role": "Faded guided4",
+      "alt": "Assen en vraaglijn van een klimkennismaking zonder prijslijn.",
+      "characters": 61
+    },
+    {
+      "stem": "2.3.1_ex_4",
+      "role": "Opgave 2 answer",
+      "alt": "Consumentensurplus van aquariumbezoekers bij acht euro.",
+      "characters": 55
+    },
+    {
+      "stem": "2.3.1_ex_5",
+      "role": "Guided3 answer",
+      "alt": "Consumentensurplus van deelnemers aan de tuintour.",
+      "characters": 50
+    },
+    {
+      "stem": "2.3.1_ex_6",
+      "role": "Guided4 answer",
+      "alt": "Consumentensurplus van deelnemers aan de klimkennismaking.",
+      "characters": 58
+    },
+    {
+      "stem": "2.3.1_ex_7",
+      "role": "Guided5 answer only",
+      "alt": "Vraaglijn en consumentensurplus van het bordspelmiddagbezoek.",
+      "characters": 61
+    },
+    {
+      "stem": "2.3.1_ex_8",
+      "role": "Independent6 answer only",
+      "alt": "Vraaglijn en consumentensurplus van deelnemers aan de skateclinic.",
+      "characters": 66
+    },
+    {
+      "stem": "2.3.1_ex_9",
+      "role": "Independent7 answer only",
+      "alt": "Vraaglijn en consumentensurplus van bezoekers aan het taalcafé.",
+      "characters": 63
+    },
+    {
+      "stem": "2.3.1_ex_10",
+      "role": "Exact target answer only",
+      "alt": "Vraaglijn en consumentensurplus van kopers van concertkaartjes.",
+      "characters": 63
+    }
+  ],
+  "native_name_check": {
+    "validator": "scripts/validate-paragraph.js",
+    "unchanged_since": "788145fbdbb8731c8dd7d836a07cf259932780e2",
+    "validator_canonical_lf_sha256": "6c46b2673d1bd9f291df8d295541efe0bebbbdd4eb847e2230dc0193237a0e7f",
+    "actual_regex": "/^2\\.3\\.1_(?:fig|ex|we|mc|news)_[A-Za-z0-9]+(?:_(?:slide|doc|summary|web_light|web_dark))?\\.(svg|png)$/",
+    "proposedNames": [
+      "2.3.1_fig_1.svg",
+      "2.3.1_fig_1.png",
+      "2.3.1_fig_2.svg",
+      "2.3.1_fig_2.png",
+      "2.3.1_fig_3.svg",
+      "2.3.1_fig_3.png",
+      "2.3.1_fig_4.svg",
+      "2.3.1_fig_4.png",
+      "2.3.1_we_1.svg",
+      "2.3.1_we_1.png",
+      "2.3.1_ex_1.svg",
+      "2.3.1_ex_1.png",
+      "2.3.1_ex_2.svg",
+      "2.3.1_ex_2.png",
+      "2.3.1_ex_3.svg",
+      "2.3.1_ex_3.png",
+      "2.3.1_ex_4.svg",
+      "2.3.1_ex_4.png",
+      "2.3.1_ex_5.svg",
+      "2.3.1_ex_5.png",
+      "2.3.1_ex_6.svg",
+      "2.3.1_ex_6.png",
+      "2.3.1_ex_7.svg",
+      "2.3.1_ex_7.png",
+      "2.3.1_ex_8.svg",
+      "2.3.1_ex_8.png",
+      "2.3.1_ex_9.svg",
+      "2.3.1_ex_9.png",
+      "2.3.1_ex_10.svg",
+      "2.3.1_ex_10.png"
+    ],
+    "all30_pass": true,
+    "roleMap": [
+      [
+        "start_2",
+        "ex_1"
+      ],
+      [
+        "guided_3",
+        "ex_2"
+      ],
+      [
+        "guided_4",
+        "ex_3"
+      ],
+      [
+        "answer_2",
+        "ex_4"
+      ],
+      [
+        "answer_3",
+        "ex_5"
+      ],
+      [
+        "answer_4",
+        "ex_6"
+      ],
+      [
+        "answer_5",
+        "ex_7"
+      ],
+      [
+        "answer_6",
+        "ex_8"
+      ],
+      [
+        "answer_7",
+        "ex_9"
+      ],
+      [
+        "target_answer",
+        "ex_10"
+      ]
+    ],
+    "student_answer_surface_check": "Plan roles only; actual MD/HTML reference checks mandatory after production"
+  },
+  "planned_model_calculations": [
+    {
+      "id": "theory_book_fair",
+      "inverse_demand": {
+        "a": 40,
+        "b": 0.5
+      },
+      "given_price": 10,
+      "qd": 60,
+      "qmax": 80,
+      "cs_euros": 900,
+      "payment_euros": 600,
+      "model_wtp_euros": 1500,
+      "vertexQPrice": [
+        [
+          0,
+          40
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          60,
+          10
+        ]
+      ],
+      "vertexPixels": [
+        [
+          160,
+          200
+        ],
+        [
+          160,
+          537.5
+        ],
+        [
+          820,
+          537.5
+        ]
+      ],
+      "tickSteps": {
+        "q": 20,
+        "p": 10
+      }
+    },
+    {
+      "id": "worked_museum",
+      "inverse_demand": {
+        "a": 30,
+        "b": 1
+      },
+      "given_price": 10,
+      "qd": 20,
+      "qmax": 30,
+      "cs_euros": 200,
+      "payment_euros": 200,
+      "model_wtp_euros": 400,
+      "vertexQPrice": [
+        [
+          0,
+          30
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          20,
+          10
+        ]
+      ],
+      "vertexPixels": [
+        [
+          160,
+          200
+        ],
+        [
+          160,
+          500
+        ],
+        [
+          746.6666666666666,
+          500
+        ]
+      ],
+      "tickSteps": {
+        "q": 5,
+        "p": 5
+      }
+    },
+    {
+      "id": "start_aquarium",
+      "inverse_demand": {
+        "a": 24,
+        "b": 0.5
+      },
+      "given_price": 8,
+      "qd": 32,
+      "qmax": 48,
+      "cs_euros": 256,
+      "payment_euros": 256,
+      "model_wtp_euros": 512,
+      "vertexQPrice": [
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          32,
+          8
+        ]
+      ],
+      "vertexPixels": [
+        [
+          160,
+          200
+        ],
+        [
+          160,
+          500
+        ],
+        [
+          746.6666666666666,
+          500
+        ]
+      ],
+      "tickSteps": {
+        "q": 8,
+        "p": 4
+      }
+    },
+    {
+      "id": "guided_garden",
+      "inverse_demand": {
+        "a": 30,
+        "b": 0.5
+      },
+      "given_price": 10,
+      "qd": 40,
+      "qmax": 60,
+      "cs_euros": 400,
+      "payment_euros": 400,
+      "model_wtp_euros": 800,
+      "vertexQPrice": [
+        [
+          0,
+          30
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          40,
+          10
+        ]
+      ],
+      "vertexPixels": [
+        [
+          160,
+          200
+        ],
+        [
+          160,
+          500
+        ],
+        [
+          746.6666666666666,
+          500
+        ]
+      ],
+      "tickSteps": {
+        "q": 10,
+        "p": 5
+      }
+    },
+    {
+      "id": "guided_climbing",
+      "inverse_demand": {
+        "a": 24,
+        "b": 0.5
+      },
+      "given_price": 12,
+      "qd": 24,
+      "qmax": 48,
+      "cs_euros": 144,
+      "payment_euros": 288,
+      "model_wtp_euros": 432,
+      "vertexQPrice": [
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          24,
+          12
+        ]
+      ],
+      "vertexPixels": [
+        [
+          160,
+          200
+        ],
+        [
+          160,
+          425
+        ],
+        [
+          600,
+          425
+        ]
+      ],
+      "tickSteps": {
+        "q": 8,
+        "p": 4
+      }
+    },
+    {
+      "id": "guided_boardgame",
+      "inverse_demand": {
+        "a": 20,
+        "b": 0.5
+      },
+      "given_price": 5,
+      "qd": 30,
+      "qmax": 40,
+      "cs_euros": 225,
+      "payment_euros": 150,
+      "model_wtp_euros": 375,
+      "vertexQPrice": [
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          30,
+          5
+        ]
+      ],
+      "vertexPixels": [
+        [
+          160,
+          200
+        ],
+        [
+          160,
+          537.5
+        ],
+        [
+          820,
+          537.5
+        ]
+      ],
+      "tickSteps": {
+        "q": 10,
+        "p": 5
+      }
+    },
+    {
+      "id": "independent_skate",
+      "inverse_demand": {
+        "a": 36,
+        "b": 0.5
+      },
+      "given_price": 12,
+      "qd": 48,
+      "qmax": 72,
+      "cs_euros": 576,
+      "payment_euros": 576,
+      "model_wtp_euros": 1152,
+      "vertexQPrice": [
+        [
+          0,
+          36
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          48,
+          12
+        ]
+      ],
+      "vertexPixels": [
+        [
+          160,
+          200
+        ],
+        [
+          160,
+          500
+        ],
+        [
+          746.6666666666666,
+          500
+        ]
+      ],
+      "tickSteps": {
+        "q": 12,
+        "p": 6
+      }
+    },
+    {
+      "id": "independent_language",
+      "inverse_demand": {
+        "a": 28,
+        "b": 0.5
+      },
+      "given_price": 14,
+      "qd": 28,
+      "qmax": 56,
+      "cs_euros": 196,
+      "payment_euros": 392,
+      "model_wtp_euros": 588,
+      "vertexQPrice": [
+        [
+          0,
+          28
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          28,
+          14
+        ]
+      ],
+      "vertexPixels": [
+        [
+          160,
+          200
+        ],
+        [
+          160,
+          425
+        ],
+        [
+          600,
+          425
+        ]
+      ],
+      "tickSteps": {
+        "q": 14,
+        "p": 7
+      }
+    },
+    {
+      "id": "target_concert",
+      "inverse_demand": {
+        "a": 50,
+        "b": 0.5
+      },
+      "given_price": 20,
+      "qd": 60,
+      "qmax": 100,
+      "cs_euros": 900,
+      "payment_euros": 1200,
+      "model_wtp_euros": 2100,
+      "vertexQPrice": [
+        [
+          0,
+          50
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          60,
+          20
+        ]
+      ],
+      "vertexPixels": [
+        [
+          160,
+          200
+        ],
+        [
+          160,
+          470
+        ],
+        [
+          688,
+          470
+        ]
+      ],
+      "tickSteps": {
+        "q": 20,
+        "p": 10
+      }
+    }
+  ],
+  "layout": {
+    "canvas": [
+      1200,
+      900
+    ],
+    "plot": [
+      160,
+      200,
+      1040,
+      650
+    ],
+    "source_font": "Arial regular 30pt",
+    "source_css_px": 40,
+    "print_width_mm": 166,
+    "print_height_mm": 124.5,
+    "printed_font_pt": 15.685039370078742,
+    "minimum_width_mm_for_12pt": 127,
+    "font_file_raw_sha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a",
+    "metrics": {
+      "4": [
+        0,
+        -29,
+        22,
+        0
+      ],
+      "6": [
+        0,
+        -29,
+        22,
+        0
+      ],
+      "8": [
+        0,
+        -29,
+        22,
+        0
+      ],
+      "10": [
+        0,
+        -29,
+        44,
+        0
+      ],
+      "14": [
+        0,
+        -29,
+        44,
+        0
+      ],
+      "18": [
+        0,
+        -29,
+        44,
+        0
+      ],
+      "20": [
+        0,
+        -29,
+        44,
+        0
+      ],
+      "100": [
+        0,
+        -29,
+        66,
+        0
+      ],
+      "Consumentensurplus": [
+        0,
+        -29,
+        375,
+        8
+      ],
+      "Betalingsbereidheid": [
+        0,
+        -29,
+        349,
+        8
+      ],
+      "P (€ per kaartje)": [
+        0,
+        -29,
+        284,
+        8
+      ],
+      "Q (kaartjes)": [
+        0,
+        -29,
+        207,
+        8
+      ],
+      "Vraaglijn": [
+        0,
+        -29,
+        155,
+        8
+      ],
+      "P=20": [
+        0,
+        -29,
+        94,
+        0
+      ],
+      "CS": [
+        0,
+        -29,
+        56,
+        0
+      ],
+      "Betaling": [
+        0,
+        -29,
+        144,
+        8
+      ],
+      "(0, 50)   (100, 0)   (60, 20)": [
+        0,
+        -29,
+        452,
+        8
+      ],
+      "Basis: 40 kaartjes; hoogte: 20 €/kaartje": [
+        0,
+        -29,
+        686,
+        8
+      ],
+      "Deelnemer": [
+        0,
+        -29,
+        195,
+        0
+      ],
+      "Gekocht: 1, 2 en 3; niet gekocht: 4": [
+        0,
+        -29,
+        604,
+        8
+      ]
+    },
+    "fixedLabels": [
+      {
+        "id": "title",
+        "ink": [
+          412.5,
+          31,
+          787.5,
+          68
+        ],
+        "reserved": [
+          80,
+          20,
+          1120,
+          80
+        ]
+      },
+      {
+        "id": "P_unit",
+        "ink": [
+          160,
+          106,
+          444,
+          143
+        ],
+        "reserved": [
+          160,
+          95,
+          1040,
+          155
+        ]
+      },
+      {
+        "id": "max_Q_tick",
+        "ink": [
+          1007,
+          686,
+          1073,
+          715
+        ],
+        "reserved": [
+          1000,
+          680,
+          1080,
+          735
+        ]
+      },
+      {
+        "id": "Q_unit",
+        "ink": [
+          496.5,
+          746,
+          703.5,
+          783
+        ],
+        "reserved": [
+          160,
+          745,
+          1040,
+          800
+        ]
+      },
+      {
+        "id": "target_coordinates",
+        "ink": [
+          374,
+          816,
+          826,
+          853
+        ],
+        "reserved": [
+          80,
+          810,
+          1120,
+          875
+        ]
+      },
+      {
+        "id": "guided_lengths",
+        "ink": [
+          257,
+          816,
+          943,
+          853
+        ],
+        "reserved": [
+          80,
+          810,
+          1120,
+          875
+        ]
+      },
+      {
+        "id": "demand_label",
+        "ink": [
+          441.6,
+          270,
+          596.6,
+          307
+        ],
+        "reserved": [
+          435,
+          260,
+          615,
+          320
+        ]
+      },
+      {
+        "id": "discrete_title",
+        "ink": [
+          425.5,
+          31,
+          774.5,
+          68
+        ],
+        "reserved": [
+          80,
+          20,
+          1120,
+          80
+        ]
+      },
+      {
+        "id": "discrete_categories",
+        "ink": [
+          502.5,
+          746,
+          697.5,
+          775
+        ],
+        "reserved": [
+          160,
+          745,
+          1040,
+          800
+        ]
+      },
+      {
+        "id": "discrete_purchase_footer",
+        "ink": [
+          298,
+          816,
+          902,
+          853
+        ],
+        "reserved": [
+          80,
+          810,
+          1120,
+          875
+        ]
+      },
+      {
+        "id": "WTP_18",
+        "ink": [
+          258,
+          204,
+          302,
+          233
+        ],
+        "reserved": [
+          230,
+          185,
+          330,
+          237
+        ]
+      },
+      {
+        "id": "WTP_14",
+        "ink": [
+          458,
+          294,
+          502,
+          323
+        ],
+        "reserved": [
+          430,
+          275,
+          530,
+          327
+        ]
+      },
+      {
+        "id": "WTP_10",
+        "ink": [
+          658,
+          384,
+          702,
+          413
+        ],
+        "reserved": [
+          630,
+          365,
+          730,
+          417
+        ]
+      },
+      {
+        "id": "WTP_6",
+        "ink": [
+          869,
+          474,
+          891,
+          503
+        ],
+        "reserved": [
+          830,
+          455,
+          930,
+          507
+        ]
+      },
+      {
+        "id": "bought_gap_8",
+        "ink": [
+          269,
+          320,
+          291,
+          349
+        ],
+        "reserved": [
+          230,
+          245,
+          330,
+          425
+        ]
+      },
+      {
+        "id": "bought_gap_4",
+        "ink": [
+          469,
+          365,
+          491,
+          394
+        ],
+        "reserved": [
+          430,
+          335,
+          530,
+          425
+        ]
+      }
+    ],
+    "labelClearances": [
+      {
+        "id": "theory_book_fair",
+        "csBox": [
+          250.8,
+          380.25,
+          306.8,
+          409.25
+        ],
+        "paymentBox": [
+          286,
+          570.375,
+          430,
+          607.375
+        ],
+        "priceBox": [
+          1060,
+          522.5,
+          1154,
+          551.5
+        ],
+        "cs_demand_clearance": 105.18181818181819,
+        "cs_price_clearance": 128.25
+      },
+      {
+        "id": "worked_museum",
+        "csBox": [
+          237.60000000000002,
+          356.99999999999994,
+          293.6,
+          385.99999999999994
+        ],
+        "paymentBox": [
+          264,
+          553.5,
+          408,
+          590.5
+        ],
+        "priceBox": [
+          1060,
+          485,
+          1154,
+          514
+        ],
+        "cs_demand_clearance": 88.68181818181813,
+        "cs_price_clearance": 114.00000000000006
+      },
+      {
+        "id": "start_aquarium",
+        "csBox": [
+          237.60000000000002,
+          357,
+          293.6,
+          386
+        ],
+        "paymentBox": [
+          264,
+          553.5,
+          408,
+          590.5
+        ],
+        "priceBox": [
+          1060,
+          485,
+          1154,
+          514
+        ],
+        "cs_demand_clearance": 88.68181818181819,
+        "cs_price_clearance": 114
+      },
+      {
+        "id": "guided_garden",
+        "csBox": [
+          237.60000000000002,
+          356.99999999999994,
+          293.6,
+          385.99999999999994
+        ],
+        "paymentBox": [
+          264,
+          553.5,
+          408,
+          590.5
+        ],
+        "priceBox": [
+          1060,
+          485,
+          1154,
+          514
+        ],
+        "cs_demand_clearance": 88.68181818181813,
+        "cs_price_clearance": 114.00000000000006
+      },
+      {
+        "id": "guided_climbing",
+        "csBox": [
+          211.2,
+          310.49999999999994,
+          267.2,
+          339.49999999999994
+        ],
+        "paymentBox": [
+          220,
+          519.75,
+          364,
+          556.75
+        ],
+        "priceBox": [
+          1060,
+          410,
+          1154,
+          439
+        ],
+        "cs_demand_clearance": 55.68181818181813,
+        "cs_price_clearance": 85.50000000000006
+      },
+      {
+        "id": "guided_boardgame",
+        "csBox": [
+          250.8,
+          380.25,
+          306.8,
+          409.25
+        ],
+        "paymentBox": [
+          286,
+          570.375,
+          430,
+          607.375
+        ],
+        "priceBox": [
+          1060,
+          522.5,
+          1154,
+          551.5
+        ],
+        "cs_demand_clearance": 105.18181818181819,
+        "cs_price_clearance": 128.25
+      },
+      {
+        "id": "independent_skate",
+        "csBox": [
+          237.60000000000002,
+          357,
+          293.6,
+          386
+        ],
+        "paymentBox": [
+          264,
+          553.5,
+          408,
+          590.5
+        ],
+        "priceBox": [
+          1060,
+          485,
+          1154,
+          514
+        ],
+        "cs_demand_clearance": 88.68181818181819,
+        "cs_price_clearance": 114
+      },
+      {
+        "id": "independent_language",
+        "csBox": [
+          211.2,
+          310.5,
+          267.2,
+          339.5
+        ],
+        "paymentBox": [
+          220,
+          519.75,
+          364,
+          556.75
+        ],
+        "priceBox": [
+          1060,
+          410,
+          1154,
+          439
+        ],
+        "cs_demand_clearance": 55.68181818181819,
+        "cs_price_clearance": 85.5
+      },
+      {
+        "id": "target_concert",
+        "csBox": [
+          227.04000000000002,
+          338.4,
+          283.04,
+          367.4
+        ],
+        "paymentBox": [
+          246.39999999999998,
+          540,
+          390.4,
+          577
+        ],
+        "priceBox": [
+          1060,
+          455,
+          1154,
+          484
+        ],
+        "cs_demand_clearance": 75.48181818181814,
+        "cs_price_clearance": 102.60000000000002
+      }
+    ],
+    "probe_command": {
+      "exe": "C:/Python314/python.exe",
+      "args": [
+        "-c",
+        "import json\nfrom PIL import ImageFont\nf=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',40)\ntexts=['Consumentensurplus','Betalingsbereidheid','P (€ per kaartje)','Q (kaartjes)','100','20','18','14','10','6','8','4','Vraaglijn','P=20','CS','Betaling','(0, 50)   (100, 0)   (60, 20)','Basis: 40 kaartjes; hoogte: 20 €/kaartje','Deelnemer','Gekocht: 1, 2 en 3; niet gekocht: 4']\nprint(json.dumps({t:f.getbbox(t,anchor='ls') for t in texts},ensure_ascii=False))"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"Consumentensurplus\": [0, -29, 375, 8], \"Betalingsbereidheid\": [0, -29, 349, 8], \"P (€ per kaartje)\": [0, -29, 284, 8], \"Q (kaartjes)\": [0, -29, 207, 8], \"100\": [0, -29, 66, 0], \"20\": [0, -29, 44, 0], \"18\": [0, -29, 44, 0], \"14\": [0, -29, 44, 0], \"10\": [0, -29, 44, 0], \"6\": [0, -29, 22, 0], \"8\": [0, -29, 22, 0], \"4\": [0, -29, 22, 0], \"Vraaglijn\": [0, -29, 155, 8], \"P=20\": [0, -29, 94, 0], \"CS\": [0, -29, 56, 0], \"Betaling\": [0, -29, 144, 8], \"(0, 50)   (100, 0)   (60, 20)\": [0, -29, 452, 8], \"Basis: 40 kaartjes; hoogte: 20 €/kaartje\": [0, -29, 686, 8], \"Deelnemer\": [0, -29, 195, 0], \"Gekocht: 1, 2 en 3; niet gekocht: 4\": [0, -29, 604, 8]}\r\n",
+      "stderr": ""
+    },
+    "acceptance": "PLANNING_METRICS_ONLY; no SVG, PNG, HTML or PDF created or visually accepted"
+  },
+  "core_minutes": 52,
+  "core_plus_support_minutes": 64,
+  "all_items_minutes": [
+    76,
+    80
+  ],
+  "core_timing_status": "UNOBSERVED_ESTIMATE",
+  "bonus_discrete_cs": {
+    "initial": 12,
+    "changed": 12
+  },
+  "requiredContract": [
+    "--lesson-root",
+    "--proof-root",
+    "--proof-suffix",
+    "--manifest",
+    "C:/Python314/python.exe",
+    "--profile student-web",
+    "--profile publisher-print",
+    "pages_inspected=[]",
+    "inspection_status=PENDING",
+    "visible_student_defects=null",
+    "raw SHA-256",
+    "CRC",
+    "all42 packet files",
+    "globally unused positive rN",
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/"
+  ],
+  "commands": [
+    {
+      "command": "npm.cmd run check:book-outline-currentness",
+      "exit_code": 0,
+      "stdout": "\n> 4veco-platform@1.0.0 check:book-outline-currentness\n> node build-scripts/workflows/check-book-outline-currentness.js\n\nBook 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: structural-currentness\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm.cmd run check:book-outline-currentness -- --action specialist_review --paragraph 2.3.1",
+      "exit_code": 0,
+      "stdout": "\n> 4veco-platform@1.0.0 check:book-outline-currentness\n> node build-scripts/workflows/check-book-outline-currentness.js --action specialist_review --paragraph 2.3.1\n\nBook 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: action:specialist_review\n- paragraph scope: 2.3.1\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm.cmd run check:book-outline-currentness -- --require-approved",
+      "exit_code": 0,
+      "stdout": "\n> 4veco-platform@1.0.0 check:book-outline-currentness\n> node build-scripts/workflows/check-book-outline-currentness.js --require-approved\n\nBook 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm.cmd run check:book-outline-currentness -- --require-approved --action paragraph_production --paragraph 2.3.1",
+      "exit_code": 0,
+      "stdout": "\n> 4veco-platform@1.0.0 check:book-outline-currentness\n> node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.3.1\n\nBook 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.3.1\n",
+      "stderr": ""
+    },
+    {
+      "command": "node build-scripts/workflows/check-book2-target-authority-remediation.js --durable",
+      "exit_code": 0,
+      "stdout": "Book 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n",
+      "stderr": ""
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "plan_selfcheck": "PASS",
+  "independent_plan_review": "R2_RECHECK_PENDING; v1 REVISE preserved",
+  "production": "NOT_STARTED",
+  "visual_inspection": "NOT_PERFORMED",
+  "classroom_attainment": "UNOBSERVED"
+}
