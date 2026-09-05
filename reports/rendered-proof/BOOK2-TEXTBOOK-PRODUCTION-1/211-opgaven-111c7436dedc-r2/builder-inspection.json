@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "role": "paragraph_builder_self_qa",
+  "inspector": "released_pin_analysis",
+  "inspection_date": "2026-09-05",
+  "inspection_status": "BUILDER_SELF_QA_COMPLETE",
+  "independent_review_status": "PENDING",
+  "manifest": "manifest.json",
+  "manifest_sha256": "2e8c313f7981d8db050098d65e9988179d8c965ee8b57bd0f5530fc467b76656",
+  "pdf_sha256": "111c7436dedc8d2d126894d90c10009d4e77c8f8f774b83b707012921f9e2308",
+  "supersedes_artifact": "211-opgaven-111c7436dedc",
+  "pages_inspected": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png",
+    "pages/page-008.png",
+    "pages/page-009.png"
+  ],
+  "carried_forward_by_identical_sha256": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png",
+    "pages/page-008.png",
+    "pages/page-009.png"
+  ],
+  "reinspected_pages": [],
+  "inspected_at_normal_reading_scale": true,
+  "visible_student_defects": [],
+  "method": "R2 all-page capture compared with R1 page SHA-256. Thirty byte-identical pages carry forward actual prior individual-page builder inspection. Changed answer page1 individually re-inspected at full 150dpi reading scale. Independent review remains pending."
+}
