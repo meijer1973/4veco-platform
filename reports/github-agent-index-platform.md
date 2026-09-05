@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T19:26:58.800Z
+Generated: 2026-09-05T19:55:12.115Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-213-alt-correction-20260905`
-Source commit: `9ae80c57898a21d803e348e0786546b23492105f`
-Files indexed: 8613
+Source branch: `agent/book2-213-r6-review-20260905`
+Source commit: `f401deb202585481ce1627e9b8fff5432168b7a3`
+Files indexed: 8635
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2708,7 +2708,7 @@ Count: 1030
 
 ## reports
 
-Count: 5841
+Count: 5863
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6172,11 +6172,33 @@ Count: 5841
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-relocated-build-r5.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-render-check-r5.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-review-probes-r5.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-independent-review-plan-r6.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-output-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-output-report.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-paragraph-review-plan-r5.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-paragraph-review-r5.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-paragraph-review-r6.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-plan-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/arithmetic.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/bindings.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/committed_scope.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/committed-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/committed-scope.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/grayscale/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/grayscale/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/grayscale/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/grayscale/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/grayscale/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/independent-delta.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/pass0.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/personal-inspection.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/protected-and-target.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/rebuild.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/relocated-build.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/render.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/review_probes.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/run_command.py
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-rebuild-r5.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-render-check-r4.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-render-check-r5.json
