@@ -117,3 +117,25 @@ C:/wt/book2-222-correction-20260905 at ca05ec78/6362d259, implementing only the
 two canonical FAIL findings under its own plan. §213/§221 metadata builders
 have returned published candidates for separate independent review; those
 builder results do not close the original required specialist gates.
+
+### Committed scope correction for specialist media
+
+The fresh aggregate committed shared-lane check at19d42aa7 failed on37 files
+under `reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5`.
+That namespace allows only the standard hash-named generation proof layout;
+the specialist's separate copies/fresh views were not classified. The original
+specialist's logged PASS checked its earlier HEAD, before its own media payload
+was committed, so it does not establish the scope of that later payload.
+The failing root command is retained; the queued later checks did not run.
+
+Root mechanically moved exactly37 files, with validated absolute source and
+destination inside its own worktree, to the existing permitted evidence prefix
+`reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-r5`.
+Every suffix and every byte is identical, including all3 PDF copies,29 personal
+page captures and5 grays. No file was discarded or overwritten. The old prefix
+in the immutable specialist report/captures maps exactly to this new prefix;
+the original layout remains available at original25e3bdf6/root47c17f80.
+The one-shot relocation script and command log contain all37 before/after hashes.
+The root provenance checker now resolves that explicit mapping and again passes
+29page pairs/5grays/3PDFs. No policy, exception, quality verdict or historical
+review is altered. Later scopes must run after the actual payload commit.

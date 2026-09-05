@@ -4714,3 +4714,237 @@ OK Paragraph 2.2.1 "Prijselasticiteit" PASSED all checks.
 ```text
 
 ```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base e923a9bc20b90c8b4fc461b28a54d8e481e13440 --head HEAD
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:29:47.339Z`
+- finished_at: `2026-09-05T19:29:47.473Z`
+- duration_ms: `134`
+- exit_code: `1`
+- stdout_sha256: `54d176173d8963e3341e15578d726438af52b4b29e6999cc3a0b809820785415`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: FAIL (shared)
+- shared platform: 4
+  - build-scripts/content/book-2/221/exercises.md
+  - build-scripts/content/book-2/221/test_source.py
+  - build-scripts/content/book-2/221/theory.md
+  - build-scripts/content/book-2/b2_221.py
+- generated index/report: 4
+  - reports/github-agent-index-lessen.json
+  - reports/github-agent-index-lessen.md
+  - reports/github-agent-index-platform.json
+  - reports/github-agent-index-platform.md
+- review evidence: 168
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r8/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r8/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r8/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r8/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r8/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r8/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-006.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r8/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r8/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r8/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r8/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r8/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r8/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r8/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r8/pages/page-006.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-
+...[truncated 17778 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## pwsh -NoProfile -File reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-relocate-specialist-proof.ps1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:31:17.145Z`
+- finished_at: `2026-09-05T19:31:18.477Z`
+- duration_ms: `1332`
+- exit_code: `0`
+- stdout_sha256: `b6e43fe4d6fa0087d3509d3e0e949910415b069c7654ca512a482bb58fb6efa3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS",
+  "operation": "byte-identical evidence relocation",
+  "old_prefix": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-specialist-r5",
+  "new_prefix": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-r5",
+  "files": [
+    {
+      "relative": "antwoorden.pdf",
+      "sha256": "aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a"
+    },
+    {
+      "relative": "gray-10-10.png",
+      "sha256": "3a0ad3a2dba523cfacb33c7c198c61ffa27352e1774aefe8c74d12d59a5f2d0d"
+    },
+    {
+      "relative": "gray-2-02.png",
+      "sha256": "004084b5fdd9e0d334b9fff765cc78abc8354c08f1786cb6d901e059ddcd419f"
+    },
+    {
+      "relative": "gray-3-03.png",
+      "sha256": "ad6d3fdd1bb7132efa6b95a685fa946966576595cb0918f6513d34088165b47a"
+    },
+    {
+      "relative": "gray-5-05.png",
+      "sha256": "f7bb3c55c9de61deb3af2a59bdeaa52c25ce1fd0a951fe5812d5c84ca72b9413"
+    },
+    {
+      "relative": "gray-7-07.png",
+      "sha256": "74448eeabc7213d0ace5df6b5ef3eca5c3200667fd1c9b26a8a741c8d23170c3"
+    },
+    {
+      "relative": "opgaven.pdf",
+      "sha256": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05"
+    },
+    {
+      "relative": "paragraaf.pdf",
+      "sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024"
+    },
+    {
+      "relative": "antwoorden\\page-1.png",
+      "sha256": "259f34326468953ae3e18c09422336bdd21c43a4ad9f8a8e20445c64bf0ce5d8"
+    },
+    {
+      "relative": "antwoorden\\page-2.png",
+      "sha256": "83f082c2f1283879eb5a3c36f9cbe2676f6d0147e4610d657aa661ef85dfd7c2"
+    },
+    {
+      "relative": "antwoorden\\page-3.png",
+      "sha256": "8e2b6ab15c8e7955f3ed62c815886e8cb0e6aa1fcdcf56d93b2964cf8eda5f8b"
+    },
+    {
+      "relative": "antwoorden\\page-4.png",
+      "sha256": "dc982562e8d61b6fb4b6f442d867dd402e31dab263c9b812088f74741c33b5c6"
+    },
+    {
+      "relative": "antwoorden\\page-5.png",
+      "sha256": "bb5cbe33a820f077f37bdba8c2776bf8982ff987d800a651c7f1ef190eea6942"
+    },
+    {
+      "relative": "antwoorden\\page-6.png",
+      "sha256": "fabcaf97d2af683937c8eda443ab6e230d5e4899a0c0f12fa829d9bf1613499d"
+    },
+    {
+      "relative": "opgaven\\page-1.png",
+      "sha256": "8dce5752b8b6f223d9ec3334349cbd8426705b1b11d2ad616885a7237a4ff02a"
+    },
+    {
+      "relative": "opgaven\\page-2.png",
+      "sha256": "866955304c64cf0873b478645fc92e14ffe4b93801cc959cace9d2993d99e0fc"
+    },
+    {
+      "relative": "opgaven\\page-3.png",
+      "sha256": "1de08ce2987bd5c875622cbb41aeb0784dbbca9b41b54f1ce6ba75a325d77758"
+    },
+    {
+      "relative": "opgaven\\page-4.png",
+      "sha256": "d2bace9d4ce1eaddf56936a7327a676d3ba44a86fc54d26d2505a2f528d59f31"
+    },
+    {
+      "relative": "opgaven\\page-5.png",
+      "sha256": "b166b196ebe8a1426d452fc4bcf803b2084c8c41ed51dd4b1e5078ebc48320b6"
+    },
+    {
+      "relative": "opgaven\\page-6.png",
+      "sha256": "471e09af924065c761fded16c8c74c77e0d9aebd7d83ff395b6d12344cf3918f"
+    },
+    {
+      "relative": "opgaven\\page-7.png",
+      "sha256": "b6ef874b19f6630f3aaefc62ef4f3874ebdbc3f7049fe77d34e7f0ad79b70845"
+    },
+    {
+      "relative": "opgaven\\page-8.png",
+      "sha256": "da00760a5d51eca93a00da72bf6396f092b69d1239448f956a071bbc8b60c54a"
+    },
+    {
+      "relative": "opgaven\\page-9.png",
+      "sha256": "59ccfb6970899b936e17c94812a03806f05150fb9af4c258c36fe2b7050386f6"
+    },
+    {
+      "relative": "paragraaf\\page-01.png",
+      "sha256": "1b461934c3fd5c9519572a985379f753223be62288631675cfa9d084dc518ac6"
+    },
+    {
+      "relative": "paragraaf\\page-02.png",
+      "sha256": "f5b3b1f3fd2a80f8c98ef56bb892df648733b8b9e550dee8106dbc6673e881d4"
+    },
+    {
+      "relative": "paragraaf\\page-03.png",
+      "sha256": "259cbd5a05f47b70d00795813ac71750a421c17931fd269a8a17a8c78e130cc5"
+    },
+    {
+      "relative": "paragraaf\\page-04.png",
+      "sha256": "c65f51e3136c2d
+...[truncated 1619 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-specialist-adoption-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:31:18.541Z`
+- finished_at: `2026-09-05T19:31:18.632Z`
+- duration_ms: `91`
+- exit_code: `0`
+- stdout_sha256: `42237c1e2ff0d605fcf88a847876caca42a9e7823aba16ddcf6c8e9f9c5d4845`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS_FOR_ADOPTION_PROVENANCE_ONLY",
+  "quality_acceptance": "WITHHELD",
+  "specialist_verdict": "REVISE",
+  "fresh_page_pairs": 29,
+  "grayscale_bindings": 5,
+  "exact_pdf_copy_and_generation_bindings": 3,
+  "canonical_review_and_quality_unchanged": true,
+  "personal_inspection_record": "BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/specialist-personal-inspection-r5.md",
+  "no_capture_status_rewrite": true
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
