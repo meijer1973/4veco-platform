@@ -1,0 +1,234 @@
+{
+  "paragraph": "2.2.3",
+  "revision": "R3",
+  "date": "2026-09-05",
+  "reviewer": "paragraph_223_independent_review",
+  "role": "INDEPENDENT_PARAGRAPH_REVIEW_NOT_BUILDER_QC_OR_ROOT_ACCEPTANCE",
+  "method": "Personally opened all 32 original full-page 150dpi PNGs using view_image detail original; each page was read individually, including four figures at their actual PDF placement. These manually authored observations were written after inspection, not inferred from tests/contact sheets/another reviewer.",
+  "result": "PASS: no visible blocking defect found",
+  "generation_manifests": "Immutable and unchanged; PENDING generation status is not overwritten",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb",
+      "proof_directory": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-paragraaf-ca27f8bd6cbb-r3",
+      "generation_manifest_sha256": "54a684ab32f7ac453f270867d18f70ccb097cecaa7e57f337fcc199772cab25d",
+      "pages": [
+        {
+          "page": 1,
+          "path": "pages/page-001.png",
+          "sha256": "b7366b3949b77bea438487125fa7ad150cf4907acff456f35f8293c292dca2e4",
+          "reviewer_observation": "Opening problem, four literal goals and prerequisite/positive-base conditions legible; lower-page income introduction continues to its intact table on p2."
+        },
+        {
+          "page": 2,
+          "path": "pages/page-002.png",
+          "sha256": "7b60b29e71112380498d52a744a2a97bedbbdf10c84469717eb5a5188c58de94",
+          "reviewer_observation": "Income table and figure 1 agree: shared signed zero, +10% income, +15/-5/+5 quantity bars. Direct labels, hatch and caption readable without color-only meaning."
+        },
+        {
+          "page": 3,
+          "path": "pages/page-003.png",
+          "sha256": "d58591dcacda670565ca5c1ec466225f5276596dfc8a9c88e98b553d2daa6ad9",
+          "reviewer_observation": "Three distinct Ei definition boxes and figure 2 agree. Open zero/one markers and sign-first warning readable; no necessity label or absolute-Ev classification imported."
+        },
+        {
+          "page": 4,
+          "path": "pages/page-004.png",
+          "sha256": "1a44e6d7bd5e37dc4c9543035184e52071477027ec8db3ae5513666d2a76beef",
+          "reviewer_observation": "Named-good Ek context, formula and intact four-column table readable. Both +0.5 substitute and -0.2 complement cases agree with text; no clipped table cell."
+        },
+        {
+          "page": 5,
+          "path": "pages/page-005.png",
+          "sha256": "4d2efeef982a923a3e1a8d1ea4436f7e6d806587f00b6b7ecf9b24c894ae36ff",
+          "reviewer_observation": "Figure 3 has correctly named numerator/denominator goods, legible fraction panels and fixed-price conditions. Own-price warning and monthly-Q/annual-Y definitions visible."
+        },
+        {
+          "page": 6,
+          "path": "pages/page-006.png",
+          "sha256": "42ff63b670575c8a5b88df1ccd8054e977ee7c159a23f0d93ae2fd4055e24299",
+          "reviewer_observation": "Annual-income coefficient explanation and printed formula retrieval readable. Combined-input misconception warning precedes complete income worked example."
+        },
+        {
+          "page": 7,
+          "path": "pages/page-007.png",
+          "sha256": "517aee1b7eb4049dbc03d24d9ea9144e7d9c23eea54b63f4f3518410bfd2d399",
+          "reviewer_observation": "Worked Ek example remains intact. Function inputs, term-by-term old/new substitutions and all three scenario-table rows are readable; table not split."
+        },
+        {
+          "page": 8,
+          "path": "pages/page-008.png",
+          "sha256": "b584d2ee68328f4097ccb3b473794348eacbf6c78c21ee176e4487ad886010fc",
+          "reviewer_observation": "Figure 4 matches 200/230/204 and its annual/monthly units. Steps 3-5 use old bases and explicit baseline reset; wrong/correct reset box intact."
+        },
+        {
+          "page": 9,
+          "path": "pages/page-009.png",
+          "sha256": "002ac1d25f4c85eab427202cb6dcb36acc92008b0a4d664a933acae4143ae20e",
+          "reviewer_observation": "Five-point non-heading recap intact before Start. Printed help/teacher-check wording is neutral; both Start tasks and all subquestions present without clipping."
+        },
+        {
+          "page": 10,
+          "path": "pages/page-010.png",
+          "sha256": "02c5034be29baa1fce9538fdf4d55b0577540d52f01014791bcc2878fcd38ecc",
+          "reviewer_observation": "Optional guidance is explicitly additional and skippable neutrally. Opgave 3 fades from supplied Ei result and named Ek frame to independent controller calculation."
+        },
+        {
+          "page": 11,
+          "path": "pages/page-011.png",
+          "sha256": "3a1703d5849281ee25d6ea6e806255c031666378b975b15a1b120cb985718a1d",
+          "reviewer_observation": "Opgave 4's partial function scaffolds and Opgave 5's complete unguided function chain are readable; all subquestions and reset givens present."
+        },
+        {
+          "page": 12,
+          "path": "pages/page-012.png",
+          "sha256": "97c3814148325ae31102f057722d2940cb637846558de828c428664215771a94",
+          "reviewer_observation": "Independent Opgave 6 table and a-d remain on one page. Both changed inputs and rebuttal prompt visible; no supplied answer or invented causal inference."
+        },
+        {
+          "page": 13,
+          "path": "pages/page-013.png",
+          "sha256": "ae3983d5735bd0cb1221d549b7efa286dde7ce349854881b1478f4efa3dec315",
+          "reviewer_observation": "Independent ratio Opgave 7 and full-function Opgave 8 are intact and legible. Units, income-only scenario and original-income reset remain explicit."
+        },
+        {
+          "page": 14,
+          "path": "pages/page-014.png",
+          "sha256": "b65a0ed32fe7adf10cbecc2c10ebc44c30d3e99245e0fa9d82c8a9c690e650b1",
+          "reviewer_observation": "Whole frozen target together: three sources and a-e, exactly 3/2/4/4/3 points. No leaked numerical answers, table/figure substitution or missing last line."
+        },
+        {
+          "page": 15,
+          "path": "pages/page-015.png",
+          "sha256": "98c5a06687663c0090aba1aae22774fe87c65c7a06cc7d9074f7873c53a9aee7",
+          "reviewer_observation": "Optional bonus and two cumulative closing tasks legible and separated. No new required calculation, device direction or pupil-facing timing estimate."
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80",
+      "proof_directory": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-opgaven-50cf2bbeaa19-r3",
+      "generation_manifest_sha256": "43f41e2c6377e13a629ad7f8b95aa38765906ae42d871bc763ffaadca9111128",
+      "pages": [
+        {
+          "page": 1,
+          "path": "pages/page-001.png",
+          "sha256": "ad28636a613509e762f0a03db9e6e743b3855e8e5a1d44a51f4e15ea05dbce06",
+          "reviewer_observation": "All three worked-example introductions readable; Ei/Ek solutions complete and function context retained before step 1 on p2. No duplicate metadata title."
+        },
+        {
+          "page": 2,
+          "path": "pages/page-002.png",
+          "sha256": "1b4243e42f49ccdf3328600fb103af97f8e25657fa80607422b4213de10d965e",
+          "reviewer_observation": "Worked steps 1-2, complete scenario table and figure 4 fit without collisions. Figure values/units match table and source."
+        },
+        {
+          "page": 3,
+          "path": "pages/page-003.png",
+          "sha256": "980173eec3c6c7284e2e7c4269d2bf03950f19c1d36e6ae012f0df46c4e4a387",
+          "reviewer_observation": "Worked steps 3-5 and reset misconception box readable. Intact five-bullet recap finishes before Start on p4, with no extra H2."
+        },
+        {
+          "page": 4,
+          "path": "pages/page-004.png",
+          "sha256": "d3963e513ac19b595f58308b85887c00ed9885cb86a6af1d133a5f40e396ab69",
+          "reviewer_observation": "Start route and both short checks intact. Retrieval and teacher rechecking are printed, with no mastery/routing label or answer leakage."
+        },
+        {
+          "page": 5,
+          "path": "pages/page-005.png",
+          "sha256": "b650610f50b04af50b3316be91f371e21701dd484426d195c91b9a9e731f9d03",
+          "reviewer_observation": "Optional guided route and Opgave 3 are readable. Same fading sequence as paragraph edition, including both named goods."
+        },
+        {
+          "page": 6,
+          "path": "pages/page-006.png",
+          "sha256": "dd2f40669daa814b4d8e220c00051d54974d5c1b171970235d18db88f9b23a4e",
+          "reviewer_observation": "Opgave 4 and Opgave 5 remain together with complete annual-income/monthly-output givens and reset questions."
+        },
+        {
+          "page": 7,
+          "path": "pages/page-007.png",
+          "sha256": "60c3b91eac06977b7bcb011897caecbcddaa77c23c606425330f4a03cc146f77",
+          "reviewer_observation": "Independent diagnostic Opgave 6 keeps all four rows and all a-d prompts together and readable."
+        },
+        {
+          "page": 8,
+          "path": "pages/page-008.png",
+          "sha256": "381c23bf3c62ec2dcb352ea11a98409b10ea760b6e386cf438ffbde6a1069ad0",
+          "reviewer_observation": "Independent Opgave 7 and Opgave 8 retain the full unscaffolded chain and fixed-variable requirements without omitted questions."
+        },
+        {
+          "page": 9,
+          "path": "pages/page-009.png",
+          "sha256": "c92fd39508d031bb617fd19009602092e1ed1e51577f88171d7d42283b68f9a8",
+          "reviewer_observation": "All literal target sources/questions and 16 points fit together. Last reset question is fully readable above the footer."
+        },
+        {
+          "page": 10,
+          "path": "pages/page-010.png",
+          "sha256": "476ce38e390159d37f8132379ba9065d89f9e898df12b76a8e13c7457c62f583",
+          "reviewer_observation": "Bonus and two closing questions are clearly optional/homework and readable; same source wording as paragraph edition."
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10",
+      "proof_directory": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-antwoorden-30cd682358c5-r3",
+      "generation_manifest_sha256": "b4b068c88c34fd00704f0a6ab3b8a9122f24c27a5b7ff2c582167968c6d75691",
+      "pages": [
+        {
+          "page": 1,
+          "path": "pages/page-001.png",
+          "sha256": "f1431ef12d232686db986daa76050fe865ab24e0f98a13c2d3b04fd3fc812332",
+          "reviewer_observation": "Rounding guidance, Start 1 and Start 2 answers legible. Old denominators, signed Ev, unit distinction, printed repair and named goods are preserved."
+        },
+        {
+          "page": 2,
+          "path": "pages/page-002.png",
+          "sha256": "75844b51d401c9edef9f76c6c442249503a9f654f06fdc17fe469fd7cdbe4d62",
+          "reviewer_observation": "Guided 3-4 answer chains readable; signs and names correct, Ei 0.625 rounds to 0.63 only at end, 162 resets from 160."
+        },
+        {
+          "page": 3,
+          "path": "pages/page-003.png",
+          "sha256": "83af2d3018f01977f7e9eac95357af24654cd2a7606ff6e38ad9a20ac84d2a62",
+          "reviewer_observation": "Guided 5 solution and independent diagnostic 6 answers intact. 200/220/205 and 200/210/205/215 distinctions are explicitly explained."
+        },
+        {
+          "page": 4,
+          "path": "pages/page-004.png",
+          "sha256": "cd79f2d4310f20655aa26ac7bb9b552301d821bf944502c2cc1400bdf38c3aaf",
+          "reviewer_observation": "Independent 7-8 calculations legible. Exact 100/9 percent and 5/9 Ei precede rounding; reset result 184 compared to original 180."
+        },
+        {
+          "page": 5,
+          "path": "pages/page-005.png",
+          "sha256": "be425cf9f17dd9e4b739783056a63b9420dd55b0d0a58ec7187f6b90a8c06d65",
+          "reviewer_observation": "Target a-c and scoring readable and grouped. Meal/noodle Ei signs and tea/filter versus coffee goods/relations match frozen target."
+        },
+        {
+          "page": 6,
+          "path": "pages/page-006.png",
+          "sha256": "ff465ba581b3eb38f9cd1e713efe6a72f2fe1425738201a847162780ac5c0969",
+          "reviewer_observation": "Target d-e calculation and scoring chains fit intact. Exact 10/13, annual Y without /12, monthly Q and reset 392 versus 390 are legible."
+        },
+        {
+          "page": 7,
+          "path": "pages/page-007.png",
+          "sha256": "3bfa11bf2b5a0dcc3238b77fbc31021fbf53edbeecbc7fd9641da55cac6bde19",
+          "reviewer_observation": "Bonus model answer/criteria and closing 11-12 are legible. Undefined Ei at unchanged income and 40-to-42 reservations explained without new theory."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Classroom pace and attainment unobserved; complete core remains a 54-minute desk estimate.",
+    "Specialist QC and root handoff remain separate.",
+    "Accepted-221 R7 successor binding requires later exact review; historical R3 R6 pins are retained.",
+    "No full PDF-UA/accessibility certification or final book/CI/merge acceptance."
+  ]
+}
