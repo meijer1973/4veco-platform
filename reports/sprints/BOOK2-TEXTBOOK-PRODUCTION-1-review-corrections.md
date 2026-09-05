@@ -71,9 +71,11 @@ Root's full R8 page inspection found three split absolute-Ev tokens across
 answer pages 1 and 4. Supported MathML experiments R9/R10 still split; no
 sanitizer/CSS monkeypatch was accepted. The builder's final R12 uses exactly
 three supported structural line breaks in owned explanatory output. All
-student PDF/page bytes and answer pages 2, 3, 5 remain exact R8 bytes. Root must
-view the two changed final pages and verify the exact transition before
-acceptance; a distinct paragraph reviewer and specialist QC remain required.
+student PDF/page bytes and answer pages 2, 3, 5 remain exact R8 bytes. Root
+subsequently viewed both changed pages and rehashed all 21 transitions: the
+tokens are intact and the other 19 pages match root's own full R8 inspection.
+See `222-root-verification.md` for exact pins and checks; a distinct paragraph
+reviewer and specialist QC remain required.
 Historical failed experiments remain evidence, not claimed accepted revisions.
 
 **B2-223-PREREQ-SUCCESSOR-01 — required before final combined reproducibility.**

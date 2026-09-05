@@ -1969,3 +1969,429 @@ Paragraph lane scope: PASS (textbook)
 ```text
 
 ```
+## C:/Python314/python.exe build-scripts/content/book-2/222/test_source.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T18:06:48.537Z`
+- finished_at: `2026-09-05T18:06:49.327Z`
+- duration_ms: `790`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `691660bd5122409151caf09996615822cea472a559d55ff79c047003a5a824b7`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.298s
+
+OK
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/222/check_render.py --rebuild --output reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-render-check-r12.json
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T18:06:49.373Z`
+- finished_at: `2026-09-05T18:06:56.966Z`
+- duration_ms: `7593`
+- exit_code: `1`
+- stdout_sha256: `c0519c4117d841b433a2f111811475da24172dd55e75e8e222306dff65070657`
+- stderr_sha256: `615b3d4b2c27f9df11165eea6a658f56ee51cfbdfdcd52f80aed42f43386f51f`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.2
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+Traceback (most recent call last):
+  File "C:\wt\book2-part-a-production-20260905\4veco-platform\build-scripts\content\book-2\222\check_render.py", line 159, in <module>
+    result = inspect(args.lesson_root, args.manifest, args.rebuild)
+  File "C:\wt\book2-part-a-production-20260905\4veco-platform\build-scripts\content\book-2\222\check_render.py", line 143, in inspect
+    assert before[field] == after[field], ('non-identical rebuild', field)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('non-identical rebuild', 'html_sha256')
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/b2_222.py --lesson-root ../4veco-lessen --manifest reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-rebuild-r12.json
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T18:07:14.263Z`
+- finished_at: `2026-09-05T18:07:20.033Z`
+- duration_ms: `5770`
+- exit_code: `0`
+- stdout_sha256: `00f761dbe1c13a8067e68c7c26669759bd9ea23f58fc3013ff1e772147c2530e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.2
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+{
+  "paragraph": "2.2.2",
+  "target_record_sha256": "8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e",
+  "plan_sha256": "6418491d45c43afdbd272c581bab12f8436ca1a84241663ba300e31b790825a8",
+  "chapter_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+  "input_sources": [
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\b2_222.py",
+      "sha256": "42012511d3c77569f4aa6c30df6465eb77c8d204d8596a14a16ef453446bcafe"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\222\\theory.md",
+      "sha256": "0c68b499e315644e3518df743d793917882b45fdef9c83b2949d6939a0d8bbee"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\222\\exercises.md",
+      "sha256": "961e0bbd1607920a085bddf82b556cd1083fc4bb6f7241324ad2d20ae5f7cc26"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\222\\answers.md",
+      "sha256": "ab186995c8e92772751f66fae30d9db2202d23d5bb06181b70bb073ce2c0cadb"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\222\\target-answers.md",
+      "sha256": "40ae9de6c220e0d2bde4b6771ea0807b5544be2506f724a0c2a566562be386fe"
+    }
+  ],
+  "inspection_status": "PENDING",
+  "documents": [
+    {
+      "source_md": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet \u2013 paragraaf.md",
+      "source_sha256": "a46510e08b516daca029504a25d9a710c99f16d583de64221b86e5ff6374e83c",
+      "source_html": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet \u2013 paragraaf.html",
+      "html_sha256": "1189050643f3728df42ed07b820a66eb0b1ae85e2b411c33332a622670a99c5e",
+      "source_pdf": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet \u2013 paragraaf.pdf",
+      "pdf_sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_fig_1.svg",
+          "sha256": "a0aa6c793a59a731377d8b035b5a96fc8c064c61745843326947c6f4b95440c0"
+        },
+        {
+          "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_fig_1.png",
+          "sha256": "bd9668804b5d22b9fe6d6fe8832376b4f8ba978c8042fb38d6e18fb1d88cd07e"
+        },
+        {
+          "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en
+...[truncated 4498 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/222/check_render.py --rebuild --output reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-render-check-r12.json
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T18:07:20.077Z`
+- finished_at: `2026-09-05T18:07:26.411Z`
+- duration_ms: `6334`
+- exit_code: `0`
+- stdout_sha256: `6eb63b2279634517b4b0b6d198c94d7e910e2d29fca11c4aacbc9c7911e50dd0`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.2
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+{
+  "paragraph": "2.2.2",
+  "visual_acceptance": "NOT_SUPPLIED_BY_THIS_SCRIPT",
+  "automated_status": "PASS",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c",
+      "pages": 10,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": 14.378,
+      "proof_directory": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-paragraaf-36feb7873637-r12",
+      "all_page_hashes_match": true
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555",
+      "pages": 6,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": 14.378,
+      "proof_directory": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-opgaven-0a251a4973b1-r12",
+      "all_page_hashes_match": true
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "b68d0429a9d739d0587f7a1c95ca922e188061b4821920b1d0f6459766adc6ab",
+      "pages": 5,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": null,
+      "proof_directory": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-antwoorden-b68d0429a9d7-r12",
+      "all_page_hashes_match": true
+    }
+  ],
+  "byte_identical_rebuild": true,
+  "checks": [
+    "exact frozen goals/context/a-f/2+2+2+2+2+1points/short answers",
+    "one exercise HTML definition in both editions",
+    "no leaked fences or active resources",
+    "every printed text/font and placed figure label meets12pt floor",
+    "all assets and all rendered page hashes fresh; manifests honestly pending"
+  ]
+}
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T18:08:15.987Z`
+- finished_at: `2026-09-05T18:08:16.048Z`
+- duration_ms: `61`
+- exit_code: `0`
+- stdout_sha256: `040d1d917c0e94609fb9e7d73bbeabefe795c4221f4e894ffbe661e296961d21`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.2 "Elasticiteit en omzet"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.2 Elasticiteit en omzet
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.2 Elasticiteit en omzet – paragraaf.md
+  OK opgaven.md: 2.2.2 Elasticiteit en omzet – opgaven.md
+  OK antwoorden.md: 2.2.2 Elasticiteit en omzet – antwoorden.md
+  OK 2.2.2 Elasticiteit en omzet – paragraaf.html (400.9 KB)
+  OK 2.2.2 Elasticiteit en omzet – opgaven.html (140.1 KB)
+  OK 2.2.2 Elasticiteit en omzet – antwoorden.html (16.6 KB)
+  OK 2.2.2 Elasticiteit en omzet – paragraaf.pdf (313 KB)
+  OK 2.2.2 Elasticiteit en omzet – opgaven.pdf (119 KB)
+  OK 2.2.2 Elasticiteit en omzet – antwoorden.pdf (26 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 4 image refs all resolve
+  OK _assets/: 4 SVGs, 4 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.2-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.2-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.2 "Elasticiteit en omzet" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T18:08:16.089Z`
+- finished_at: `2026-09-05T18:08:16.163Z`
+- duration_ms: `74`
+- exit_code: `0`
+- stdout_sha256: `9b22c97f888573b97769294368390ceecd914985baec73c3cc6452228a85d0f3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.2 "Elasticiteit en omzet"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.2 Elasticiteit en omzet
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.2 Elasticiteit en omzet – paragraaf.md
+  OK opgaven.md: 2.2.2 Elasticiteit en omzet – opgaven.md
+  OK antwoorden.md: 2.2.2 Elasticiteit en omzet – antwoorden.md
+  OK 2.2.2 Elasticiteit en omzet – paragraaf.pdf (313 KB)
+  OK 2.2.2 Elasticiteit en omzet – opgaven.pdf (119 KB)
+  OK 2.2.2 Elasticiteit en omzet – antwoorden.pdf (26 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 4 image refs all resolve
+  OK _assets/: 4 SVGs, 4 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.2-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.2-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.2 "Elasticiteit en omzet" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base 33e6310d4d08fd37e8c3b89bbae7a9ed21476bbe --head HEAD
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T18:08:56.693Z`
+- finished_at: `2026-09-05T18:08:56.848Z`
+- duration_ms: `155`
+- exit_code: `0`
+- stdout_sha256: `fd789087931f18bee7ba7da11612c9b0208b4a879cacd0e319b52c48a665966d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (shared)
+- shared platform: 7
+  - build-scripts/content/book-2/222/answers.md
+  - build-scripts/content/book-2/222/check_render.py
+  - build-scripts/content/book-2/222/exercises.md
+  - build-scripts/content/book-2/222/target-answers.md
+  - build-scripts/content/book-2/222/test_source.py
+  - build-scripts/content/book-2/222/theory.md
+  - build-scripts/content/book-2/b2_222.py
+- review evidence: 358
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r7/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r7/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r7/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r7/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r7/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r7/pages/page-004.png
+  - reports/rendered-proof/BOOK2
+...[truncated 32660 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane textbook --cwd ../4veco-lessen --base 1146bd026cc1652bf3c389ca78e10fec34361ab5 --head HEAD
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T18:08:56.908Z`
+- finished_at: `2026-09-05T18:08:57.019Z`
+- duration_ms: `111`
+- exit_code: `0`
+- stdout_sha256: `3e7026643361f946eb4af5d444633f0b85b8113eeb46bbdb37e553263fcb8efa`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (textbook)
+- Part A textbook: 18
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_1.png
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_1.svg
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_2.png
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_2.svg
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_3.png
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_3.svg
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_we_1.png
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_we_1.svg
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/build_pdf.py
+
+```
+
+### stderr excerpt
+
+```text
+
+```
