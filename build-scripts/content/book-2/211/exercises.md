@@ -44,7 +44,7 @@ TCK = 200; TVK = 2 × 200 = 400; TK = 200 + 400 = 600 euro per maand.
 
 :::
 
-![Hetzelfde constante maandbedrag wordt over meer reparaties verdeeld; totalen en gemiddelden houden verschillende eenheden.](_assets/2.1.1_we_1.svg)
+![Hetzelfde constante maandbedrag wordt over meer reparaties verdeeld; totalen en gemiddelden houden verschillende eenheden.](_assets/2.1.1_we_1.svg){alt="Totalen en gemiddelden bij 100 en 200 reparaties met dezelfde constante maandkosten"}
 
 **Stap 5: vergelijk en verklaar binnen de voorwaarden.**
 

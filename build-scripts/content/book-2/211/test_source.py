@@ -1,6 +1,7 @@
 """Bounded source/target/geometry regressions; not independent content approval."""
 import re
 import sys
+import subprocess
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -11,6 +12,36 @@ import b2_211 as builder
 
 
 class SourceContractTests(unittest.TestCase):
+    def test_worked_image_native_short_alt_keeps_entire_caption(self):
+        caption = ("Hetzelfde constante maandbedrag wordt over meer reparaties verdeeld; "
+                   "totalen en gemiddelden houden verschillende eenheden.")
+        expected_alt = "Totalen en gemiddelden bij 100 en 200 reparaties met dezelfde constante maandkosten"
+        for kind in ("paragraaf", "opgaven"):
+            line = next(line for line in self.docs[kind].splitlines()
+                        if "_assets/2.1.1_we_1.svg" in line)
+            self.assertEqual(line, f'![{caption}](_assets/2.1.1_we_1.svg){{alt="{expected_alt}"}}')
+            native = subprocess.run(["pandoc", "--from=markdown", "--to=html5"],
+                                    input=line, text=True, encoding="utf-8",
+                                    capture_output=True, check=True)
+            figure = BeautifulSoup(native.stdout, "html.parser").figure
+            self.assertEqual(figure.img["alt"], expected_alt)
+            self.assertLessEqual(len(figure.img["alt"]), 120)
+            self.assertEqual(" ".join(figure.figcaption.get_text().split()), caption)
+
+    def test_accessible_svg_titles_are_concise_noun_first(self):
+        expected = {
+            "2.1.1_fig_1": "Totale kosten gedeeld door Q geven gemiddelde kosten",
+            "2.1.1_fig_2": "TCK bij 40 en 80 posters",
+            "2.1.1_fig_3": "TVK en daarna TK toegevoegd op dezelfde schalen",
+            "2.1.1_fig_4": "GCK halveert, GVK blijft gelijk, GTK halveert niet",
+            "2.1.1_we_1": "Totalen en gemiddelden bij honderd en tweehonderd reparaties",
+            "2.1.1_ex_1": "Huur classificeren en totalen onderscheiden van kosten per badge",
+        }
+        for name, source in builder.asset_sources().items():
+            title = ET.fromstring(source).find("{http://www.w3.org/2000/svg}title").text
+            self.assertEqual(title, expected[name])
+            self.assertLessEqual(len(title), 120)
+
     def test_proof_revision_rejects_path_components_before_any_write(self):
         for value in ("../r2", "r2/other", "r0", "second", "r2\\other"):
             with self.subTest(value=value), self.assertRaisesRegex(ValueError, "Proof suffix"):

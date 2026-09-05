@@ -178,7 +178,7 @@ def asset_sources() -> dict[str, str]:
         total_panel(0, "A. Voeg TVK toe: 80 → 160", ("TCK", "TVK")) +
         line(24, 367, 696, 367, "#94a5ad") +
         total_panel(378, "B. Voeg TK toe: 200 → 280", ("TCK", "TVK", "TK")),
-        744, "Eerst TVK toevoegen en daarna TK op dezelfde schalen")
+        744, "TVK en daarna TK toegevoegd op dezelfde schalen")
     parts = [text(24, 32, "Wat gebeurt er per poster?", size=27, bold=True),
              text(305, 79, "Q = 40", anchor="middle", bold=True),
              text(580, 79, "Q = 80", anchor="middle", bold=True)]
