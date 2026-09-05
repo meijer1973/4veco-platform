@@ -206,8 +206,9 @@ assessment-criteria block required by skills/econ-exercise-builder.md §4.4.
 Root re-read the actual rule and source; the specialist's initial permissive
 classification was explicitly superseded by REVISE. Published specialist pair
 984547a17c966d3749d08ef34b92747de21eacbf /5d67998d1e1d1aa5497d59850b53aebc780eaa96
-preserves that history and restores the exact old canonical QC. Root has not yet
-adopted its supplemental report. Current disposition report SHA-256 is
+preserves that history and restores the exact old canonical QC. Root adopted
+the initial report and explicit REVISE successor at86fe93e0, without lesson QC
+mutation. Current disposition report SHA-256 is
 0ea14f249e35f3f56781c57ca2ad82abae2aacecf628063c5d2b03dd9c38663e.
 A distinct builder is assigned only the missing criteria block, regression,
 regeneration and rendered verification, then separate re-review/QC. Model
@@ -216,6 +217,31 @@ Draad column-collapse visual defect was disproved by identical actual page
 pixels and direct PDF word geometry; the specialist explicitly withdrew it.
 No §213 handoff or acceptance is claimed. The positive marginal bridge evidence
 still supports unaffected planning; owner holds are not reopened.
+
+**B2-211-BONUS-CRITERIA-01 and B2-212-BONUS-CRITERIA-01 — REQUIRED.**
+The root cross-paragraph source check after the213 finding read §4.4 and each
+current bonus answer in211/212/221/222/223. §211 R4 answers8a–c and §212 R6
+answers8a/b have correct full model answers but no subsequent2–4-bullet
+assessment-criteria block before Herhaling. §§221/222/223 have3/4/4 relevant
+criteria bullets; no missing-block finding applies to them. Preserve all prior
+content/print evidence. Add only the missing block in each affected paragraph
+through its own builder, with a negative regression, fresh generation/inspection
+and renewed independent gates. Do not alter targets, model answers, prior pins
+or approved plans. These are not waived flags. Current211/212 remain candidates.
+
+§212 R6 metadata correction is now adopted/root-rebuilt (48d2670a /591bfed):
+15tests, exact34artifact full/print reproduction,27 unchanged pages,11 zero-delta
+raster pairs and ZIP19/11/9 contracts pass. See212-root-verification-r6.md.
+The new required bonus block remains open before independent package closure.
+
+**§222 R13 independent paragraph re-review — both R12 findings CLOSED.**
+Current paragraph review9122a962d5108565a631d6cd51b1945ab0ddb1ef78c2b979cca15ac59010f01a
+was independently justified and adopted asff658d8. Both answer4b order and
+Concert alt findings close at the paragraph gate, with21 fresh personal
+pages/4figures/4grays, full source/DOM/math and14tests/rebuild evidence. Original
+three token line breaks remain. Specialist QC/handoff are still pending.
+Earlier canonical-FAIL progress entries are historical. Exact adoption and
+179-check root proof are in review-adoption-222r13-213r6.md.
 
 ## Existing accepted flags, not concealed corrections
 

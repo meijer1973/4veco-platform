@@ -16,12 +16,12 @@ The durable invariant and approved-use gates passed before wave-two release.
 
 | ID | Record SHA-256 | Goals | Point allocation | Total | Current product evidence |
 |---|---|---:|---|---:|---|
-| 2.1.1 | `143f1053c98766b77d9d9ce573a5c8e976980f900387159312c3238288d71710` | 4 | 4/3/3/3/4 | 17 | Historical internal Part A acceptance; short-alt package gate reopened |
-| 2.1.2 | `19b466dd6f7b541a3bb701d4de80ce13fe9ea58356313e24b23b21698093e1f9` | 4 | 2/2/3/4 | 11 | Historical internal Part A acceptance; short-alt package gate reopened |
+| 2.1.1 | `143f1053c98766b77d9d9ce573a5c8e976980f900387159312c3238288d71710` | 4 | 4/3/3/3/4 | 17 | R4 metadata corrected/root-verified; bonus criteria and renewed gates pending |
+| 2.1.2 | `19b466dd6f7b541a3bb701d4de80ce13fe9ea58356313e24b23b21698093e1f9` | 4 | 2/2/3/4 | 11 | R6 metadata corrected/root-verified; bonus criteria and renewed gates pending |
 | 2.1.3 | `df4b7d7b0326445b386ae570b43eb50fc9fc431707e3992e44394323f959c3ef` | 4 | 4/3/2/4/2 | 15 | R6 paragraph PASS; required bonus-criteria correction, QC/handoff pending |
 | 2.1.4 | `fda623dc9a3620724bf9df22a3ef937fd26779fa49d4d2b0b7c6baa862753691` | 4 | 2/2/2/4/2/2 | 14 | Paragraph plan/output gate pending |
 | 2.2.1 | `61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288` | 4 | 3/2/2/2 | 9 | R8 internal acceptance with flags; current review/QC/handoff complete |
-| 2.2.2 | `8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e` | 4 | 2/2/2/2/2/1 | 11 | R12 independent FAIL adopted: answer-order and short-alt corrections, rereview/QC/handoff pending |
+| 2.2.2 | `8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e` | 4 | 2/2/2/2/2/1 | 11 | R13 independent paragraph PASS adopted; both R12 findings closed; QC/handoff pending |
 | 2.2.3 | `9a3a29bcedc16739b74b66b2bb8e136b37e86c7f5cfee3ee35ea37c4bdeed1c5` | 4 | 3/2/4/4/3 | 16 | R3 adopted and independent paragraph PASS; QC/handoff/successor pins pending |
 | 2.2.4 | `4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519` | 4 | 2/2/2/4/2/2 | 14 | Paragraph plan/output gate pending |
 | 2.3.1 | `a385e00b2fffea168089c32f796668e51ae45cb325504644392f79b20bde8571` | 4 | 2/3/2/3/2 | 12 | Paragraph plan/output gate pending |
@@ -110,7 +110,8 @@ token correction is root-verified. Independent review has identified reversed
 percentage-calculation order in answer 4b relative to the approved C22 sequence;
 R13 corrects exactly those two pairs and Concert's alternative, with all
 full captions and target mathematics intact. Root rebuilt and viewed the one
-changed answer page; canonical FAIL remains until distinct rereview/QC gates.
+changed answer page; current independent R13 paragraph PASS closes both
+findings. Distinct specialist QC and root acceptance/handoff remain pending.
 
 §223 R3 independent paragraph PASS WITH FLAGS is now adopted. See
 223-independent-paragraph-review-r3.md for the full four-goal teaching-to-practice

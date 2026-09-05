@@ -5,8 +5,8 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform `8fdebb0d258cdaa1fd11f392265dd1038681a98c`, lessons
-`6ccc48911a6239dee25cffb8f29e9f42db442f9e`.
+Snapshot: platform `86fe93e0d4d18a73c3907c79214ba9bc69a2e8ec`, lessons
+`ff658d865dca1ff2326527a8da22c04b7daeb49e`.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 All paths below are relative to the lesson book root
 `Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/`.
@@ -28,12 +28,14 @@ specialist PASS WITH FLAGS and root acceptance/handoff; its three editions are A
 §213 R6 has current paragraph PASS, but specialist QC requires the missing bonus
 assessment-criteria block. Its three editions remain C; no handoff exists.
 §222 R13 is adopted/root-rebuilt: exactly one answer page changes; the other20
-remain identical. Its canonical paragraph FAIL remains pending current rereview.
+remain identical. Its current independent canonical paragraph review now passes;
+separate specialist QC and root handoff remain pending.
 §223 R3 remains an adopted paragraph-PASS candidate.
-§211 R4 is adopted/root-rebuilt with exact31page parity, pending current
-paragraph rereview/QC. Its inherited stale opgaven.zip is explicitly excluded;
+§211 R4 is adopted/root-rebuilt with exact31page parity, pending a required
+bonus-criteria block and current paragraph rereview/QC. Its inherited stale opgaven.zip is explicitly excluded;
 the native211 builder has no ZIP output contract. It is not a current student
-deliverable. §212's distinct metadata correction is in progress separately.
+deliverable. §212 R6 is now adopted/root-rebuilt: exact27page parity and34artifact
+full/print reproduction. Its bonus-criteria block and independent gates remain.
 Their root reports distinguish actual source/page/rebuild checks from remaining
 independent paragraph, specialist and handoff gates. See review-corrections.md.
 
@@ -111,12 +113,12 @@ hashes alone are not student-quality acceptance.
 | 2.2.1 / paragraaf | `98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6` | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.1 / opgaven | `a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af` | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.1 / antwoorden | `d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d` | R8 internal acceptance with flags; current review/QC/handoff complete |
-| 2.1.3 / paragraaf | `534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024` | R6 corrected candidate; rereview/QC/handoff pending |
-| 2.1.3 / opgaven | `d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05` | R6 corrected candidate; rereview/QC/handoff pending |
-| 2.1.3 / antwoorden | `aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a` | R6 corrected candidate; rereview/QC/handoff pending |
-| 2.2.2 / paragraaf | `36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c` | R13 corrected candidate; canonical FAIL pending rereview/QC |
-| 2.2.2 / opgaven | `0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555` | R13 corrected candidate; canonical FAIL pending rereview/QC |
-| 2.2.2 / antwoorden | `61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2` | R13 corrected candidate; canonical FAIL pending rereview/QC |
+| 2.1.3 / paragraaf | `534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024` | R6 paragraph PASS; required bonus criteria and QC/handoff pending |
+| 2.1.3 / opgaven | `d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05` | R6 paragraph PASS; required bonus criteria and QC/handoff pending |
+| 2.1.3 / antwoorden | `aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a` | R6 paragraph PASS; required bonus criteria and QC/handoff pending |
+| 2.2.2 / paragraaf | `36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c` | R13 independent paragraph PASS; separate QC/handoff pending |
+| 2.2.2 / opgaven | `0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555` | R13 independent paragraph PASS; separate QC/handoff pending |
+| 2.2.2 / antwoorden | `61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2` | R13 independent paragraph PASS; separate QC/handoff pending |
 | 2.2.3 / paragraaf | `ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb` | R3 candidate; paragraph pass, QC/handoff/successor pending |
 | 2.2.3 / opgaven | `50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80` | R3 candidate; paragraph pass, QC/handoff/successor pending |
 | 2.2.3 / antwoorden | `30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10` | R3 candidate; paragraph pass, QC/handoff/successor pending |
@@ -134,13 +136,14 @@ See221-root-acceptance-r8.md for exact current canonical and adoption bindings.
 ## Remaining production and acceptance
 
 Wave-two §213, §222 and §223 outputs are now adopted candidates C; their gate
-closure remains pending. §211 R4 needs current rereview/QC; §212's bounded
-short-alt/title correction is published separately but not yet root-adopted.
+closure remains pending. §211 R4 and §212 R6 need their missing bonus-criteria
+blocks and current rereview/QC; both metadata corrections are root-adopted/rebuilt.
 §213 R6 requires a bonus-criteria correction followed by independent gates.
 §221 R8's internal review/QC/handoff gates are complete, with timing flags.
 Independent §223 R3 paragraph PASS WITH FLAGS is adopted; specialist and handoff
-gates remain. §222's canonical FAIL covers answer4b order and Concert short alt;
-the distinct R13 candidate is now root-adopted/verified, awaiting renewed review/QC.
+gates remain. §222's former canonical FAIL is superseded by actual current R13
+independent PASS closing answer4b order and Concert short alt. Separate QC
+and root acceptance/handoff remain pending.
 §223 also needs exact accepted-current-§221 successor input binding
 with unchanged pupil output proof before final combined reproduction.
 §214/§224 follow accepted prerequisite teaching. §231–§234 and all aggregate
