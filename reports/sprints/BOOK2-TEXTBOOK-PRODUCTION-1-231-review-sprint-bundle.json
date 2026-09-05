@@ -1,0 +1,12 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/sprints/check-sprint-bundle.js",
+    "BOOK2-TEXTBOOK-PRODUCTION-1"
+  ],
+  "started": "2026-09-05T23:41:23.324Z",
+  "finished": "2026-09-05T23:41:23.549Z",
+  "status": 0,
+  "stdout": "OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active\n",
+  "stderr": ""
+}

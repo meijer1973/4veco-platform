@@ -1,0 +1,12 @@
+{
+  "command": "node",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-review-close.cjs",
+    "preflight"
+  ],
+  "started": "2026-09-05T23:41:53.933Z",
+  "finished": "2026-09-05T23:41:54.263Z",
+  "status": 0,
+  "stdout": "{\n  status: 'PASS_STRICT_REVIEW_ONLY_PATHS',\n  platform_paths: 182,\n  lesson_paths: 1\n}\n",
+  "stderr": ""
+}

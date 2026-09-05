@@ -1,0 +1,14 @@
+{
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "build-scripts/content/book-2/231/verify_rebuild.py",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r11.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-review-reproduction-result.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-review-evidence/grayscale-r11"
+  ],
+  "started": "2026-09-05T23:20:37.913Z",
+  "finished": "2026-09-05T23:21:21.061Z",
+  "status": 0,
+  "stdout": "{\r\n  \"paragraph\": \"2.3.1\",\r\n  \"visual_inspection\": \"NOT_SUPPLIED_BY_THIS_SCRIPT\",\r\n  \"status\": \"PASS\",\r\n  \"all42_raw_rebuilds\": \"IDENTICAL\"\r\n}\r\n",
+  "stderr": ""
+}

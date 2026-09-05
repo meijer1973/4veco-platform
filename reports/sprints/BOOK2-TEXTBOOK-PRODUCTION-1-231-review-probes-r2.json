@@ -1,0 +1,11 @@
+{
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-review-probes.py"
+  ],
+  "started": "2026-09-05T23:32:39.044Z",
+  "finished": "2026-09-05T23:32:39.662Z",
+  "status": 0,
+  "stdout": "{\r\n  \"status\": \"PASS\",\r\n  \"independent_mutations_rejected\": 19,\r\n  \"actual_svg_count\": 15,\r\n  \"independent_exact_CS_polygon_checks\": 10,\r\n  \"zip_member_counts\": {\r\n    \"paragraaf\": 19,\r\n    \"opgaven\": 11,\r\n    \"antwoorden\": 17\r\n  },\r\n  \"all_44_baseline_lesson_files_unchanged\": true,\r\n  \"nine_platform_source_files_unchanged\": true,\r\n  \"all_27_historical_native_manifests_unchanged\": true,\r\n  \"limitations\": \"Review-only independent probes; not shared-policy or full-CI certification. No pupil or authority files modified.\"\r\n}\r\n",
+  "stderr": "C:\\Python314\\Lib\\zipfile\\__init__.py:1721: UserWarning: Duplicate name: '2.3.1 Consumentensurplus – antwoorden.md'\r\n  return self._open_to_write(zinfo, force_zip64=force_zip64)\r\n"
+}

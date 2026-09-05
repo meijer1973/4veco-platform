@@ -1,0 +1,801 @@
+{
+  "status": "READ_ONLY_ADOPTION_SUPPORTED_WITH_CONSTRAINTS_NOT_SCOPE_PASS",
+  "subject": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+  "classifier_sha256": "4859543247573f65f5c1ad4f4f373af37c63d91b43fc900ed6702acfb9ce7f51",
+  "classifier_exports": [
+    "CATEGORY_LABELS",
+    "normalizePath",
+    "classifyPath",
+    "classifyChangedPaths",
+    "validateLaneScopeException",
+    "changedQualityRefBlocks",
+    "checkLaneScope",
+    "parseArgs",
+    "changedPathsFromGit",
+    "qualityRefChangesFromGit",
+    "formatSummary",
+    "runCli"
+  ],
+  "scope_baselines": {
+    "owned_platform_base": "3abef1a17131e36aa7047e461900c014dca73642",
+    "owned_lesson_base": "4fe0d742a3cd3c02ac1aaf6311dccc540970e2f5",
+    "complete_platform_base": "96416b6b5bd57094576e9aba0a42d682584ec479",
+    "complete_lesson_base": "f09fd6e88edc5049b026b16b0158e7e188091d2d"
+  },
+  "original_grayscale_count": 66,
+  "rows": [
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/antwoorden/page-001.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-001.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "09591db06fb0bee3550933fe787ee261db22fed2",
+      "bytes": 260391,
+      "sha256": "4230ae514056dba39a1b9535d75ea1d7d76336bf357d6b722b7163172cbb4902"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/antwoorden/page-002.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-002.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "9e2e19cabb24cb9c3ac4dcecb252418d28b787fd",
+      "bytes": 240822,
+      "sha256": "977d79a9ad6934f36f763e37a388c05a349d6be9400e26f672da845bbafcc314"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/antwoorden/page-003.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-003.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "03032ad0204561bcb7f53abf128fa1ce7a75dde9",
+      "bytes": 245420,
+      "sha256": "de564918d942f6f446ad72b19dfbd2b03f60ec4e421e99b6ecfc54a9b88f8df9"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/antwoorden/page-004.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-004.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "98582f0185e9e036990da5b1fb2c1afc37f8b88f",
+      "bytes": 236395,
+      "sha256": "d49397a7329c639db56ef7625f29d16a44d406f1b45859a78c0e330a5c4f7e99"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/antwoorden/page-005.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-005.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "391b616cfd26a570a5b17bbe1d0d20c79e6b10da",
+      "bytes": 268046,
+      "sha256": "693622454498abd0c7564869f1c010a21533ad04aacdd884283d523c9a40637c"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/antwoorden/page-006.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-006.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "a136e37adb2859099ea65e9c42bdf34776c5435e",
+      "bytes": 281341,
+      "sha256": "b1465ad070b58822bd221a348a7f5e433e6ab5fdbe951abaaf4acb1db0d09927"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/antwoorden/page-007.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-007.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "5130cbe71f4c235d166c89474863cd2de2e1c7ca",
+      "bytes": 251785,
+      "sha256": "65c6e26575e86251ec9a9a408a5cc3ae8340698499a4cb03f9b196e031f0b622"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/antwoorden/page-008.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-008.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "58e30c340800ad93b0ea0074edbd433115b184d0",
+      "bytes": 265857,
+      "sha256": "c92795b8c22f918b34fe845761fa23d14298c88655437884c36c7ca318a3047c"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/antwoorden/page-009.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-009.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "c272dcfdddfe2bf91f4fe1559dad9e13aaba101e",
+      "bytes": 212485,
+      "sha256": "446655731838bfca0d86fe6ef33227bf1e17192b653d8499ac02492266f14cec"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/antwoorden/page-010.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-010.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "3d4c3ee39d17265e1be24b0404e686b7e8a091aa",
+      "bytes": 299932,
+      "sha256": "e586b8e326aa24a4cb66d71359cbe6fbc48b8614d38a606f377a6f8b572c89bc"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/opgaven/page-001.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/opgaven/page-001.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "0b6b5f6de7b6195d0f0cae45a97ea63381a667f5",
+      "bytes": 193911,
+      "sha256": "fb74e7672f7e3811a65f8818a21d7456cfc1f69b9c0e53fedcd623d3119f0005"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/opgaven/page-002.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/opgaven/page-002.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "a9e6cc59abb69eb1b94d36bf1372106f6b653b99",
+      "bytes": 206893,
+      "sha256": "89345a2d4da77eef1fd0425ba2ade7c209b32117ccb3a2310a35525d9c313fd2"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/opgaven/page-003.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/opgaven/page-003.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "59ac7692116989b03fb48004097713aa8881664f",
+      "bytes": 260794,
+      "sha256": "f4d4ae4c7cf69c9059131dbc617c78b45b2ea8be16d210d5e1040b8950895025"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/opgaven/page-004.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/opgaven/page-004.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "6e86650f233a43f531e42074ff0e2df9fdf6e82c",
+      "bytes": 197420,
+      "sha256": "b4b402d368a27c8bc9e7f27be9fcbc48caffa35caccda59abdaee8b6e1103bb1"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/opgaven/page-005.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/opgaven/page-005.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "add44b683ccab8dcd3a0081d3322bc05c1708913",
+      "bytes": 215298,
+      "sha256": "f78bce7cdf9e42a444cffd1085979512ac83849a104e6f6333edca25e5892949"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/opgaven/page-006.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/opgaven/page-006.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "3325ea521a8b538a52f8e02d8f8a46c43d0afb18",
+      "bytes": 215308,
+      "sha256": "058dfabde08686854edab46544c95dd936e003b7756acbfcadb4257ee53c2c60"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/opgaven/page-007.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/opgaven/page-007.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "69dbb3edf2bafc38427018b39761d23c93526bd2",
+      "bytes": 245566,
+      "sha256": "97b487eb7b4df60d58be9fe14c53818b1163857d2225f1c69fcdc404327f8fd8"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/opgaven/page-008.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/opgaven/page-008.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "ec9f66b15f2e5a09e15b00cdd890988589084604",
+      "bytes": 319781,
+      "sha256": "9a5525262c36c10bad38852db380e75b31d063950111bae48f94a0a74ad5d396"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/opgaven/page-009.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/opgaven/page-009.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "7f801120c8fc22e0d82188dcf55f14da0a85a533",
+      "bytes": 62065,
+      "sha256": "f816b535094bfa4c69f2c0d0359c7f0fc70161197d851ce54b9531ec22536e29"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-001.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-001.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "872af85de74ba4969d17970981c007ec864b7c69",
+      "bytes": 242012,
+      "sha256": "8ea526985038c46011d637959693491d7a8b409c91f80e96d1552d297c770e4d"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-002.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-002.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "642f998477bdc9a2bbebae707988a232367de795",
+      "bytes": 246955,
+      "sha256": "d2285cea0dc17043138e22b25688b6bdcaf2adb22da9cf45b96e736a6f93a0d2"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-003.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-003.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "dbbc83ea4c876a55105596ee1c7376337247557b",
+      "bytes": 174998,
+      "sha256": "33c3f3ca32e59e04e17864aaf30cee72a7c01c8fb5cfed9de112e153ca9da3cc"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-004.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-004.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "162051be620a7adbdae1c444fcd458ab371ad818",
+      "bytes": 185992,
+      "sha256": "2e4115588d4c743f4f9837d2991147159550e01baa56a9a8a4f60b93d0f5e51e"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-005.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-005.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "797cf789b1ee6d36fa565a048b8ee714580e6b82",
+      "bytes": 230441,
+      "sha256": "13aa264fad6353b89ab6ab3032ee3b301c2e44e7cc1344cf2c251a4115016dfd"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-006.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-006.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "5cb3dd92dbda6e9502b5a489fe1f6af6f43e9aaa",
+      "bytes": 272796,
+      "sha256": "3b9cea8080a28746444181e3841180d71b52a1271e14f36f7e7b2ba62cb7ee87"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-007.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-007.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "e98bfbc5d2a73f4ac1ab14ca5afb45f5eb773d5e",
+      "bytes": 205142,
+      "sha256": "d6e4b6eaa7a0b4521604359aefa3fd27f84a0ccc836a9dbfeff46ac553c713fd"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-008.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-008.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "80f0bebfecd29f9e58b3c3bcdbbe89b89dd0811f",
+      "bytes": 259184,
+      "sha256": "eb3a92b26a839d26fc12cc6d4c15880d4cbcfeada9dacd2d95077a7f2336d118"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-009.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-009.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "4e6719dc958642e60e3c80989d6e0cd72741b0a6",
+      "bytes": 195991,
+      "sha256": "0813d242ec72fae797928e314509741d123c58634e9c97c8434f982bcf2068ff"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-010.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-010.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "049a0bff99f24dff1d0838ece18ea986100bd452",
+      "bytes": 213687,
+      "sha256": "0691df6f57c7cd4d917e9e520851639c608ec4dfaa081fa74e43c8fc1fd0c939"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-011.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-011.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "f85cf774f464a6f88d9a6c7b7b224d19408eabb7",
+      "bytes": 213056,
+      "sha256": "b69dfd2c93f9c9fa0bf6303d5d484cab43220c9ca32e2400a11bfbef7399183a"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-012.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-012.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "6e6f47aa032af89c1207dd3d78f1f86c37cfc24a",
+      "bytes": 244184,
+      "sha256": "7638f335af4249ce03951ba1ea2236a2f74255a6eb3145db7403353f150704bb"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-013.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-013.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "31bf4d6c9df28fca842d1edcee7d6305653f8b64",
+      "bytes": 318026,
+      "sha256": "7acd226eabab5acaadcc55cc6068ed5452ccb6b8d79b0f46e18aed85b169f7f9"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r4/paragraaf/page-014.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/paragraaf/page-014.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "815b6fb14085bbb31f63817f0aadba6c272a6afc",
+      "bytes": 60232,
+      "sha256": "94a935f8f8d5a5fdf443062785dfcf180db8e221247574bc82425ac39aa90140"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/antwoorden/page-001.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/antwoorden/page-001.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "09591db06fb0bee3550933fe787ee261db22fed2",
+      "bytes": 260391,
+      "sha256": "4230ae514056dba39a1b9535d75ea1d7d76336bf357d6b722b7163172cbb4902"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/antwoorden/page-002.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/antwoorden/page-002.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "9e2e19cabb24cb9c3ac4dcecb252418d28b787fd",
+      "bytes": 240822,
+      "sha256": "977d79a9ad6934f36f763e37a388c05a349d6be9400e26f672da845bbafcc314"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/antwoorden/page-003.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/antwoorden/page-003.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "03032ad0204561bcb7f53abf128fa1ce7a75dde9",
+      "bytes": 245420,
+      "sha256": "de564918d942f6f446ad72b19dfbd2b03f60ec4e421e99b6ecfc54a9b88f8df9"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/antwoorden/page-004.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/antwoorden/page-004.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "98582f0185e9e036990da5b1fb2c1afc37f8b88f",
+      "bytes": 236395,
+      "sha256": "d49397a7329c639db56ef7625f29d16a44d406f1b45859a78c0e330a5c4f7e99"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/antwoorden/page-005.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/antwoorden/page-005.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "391b616cfd26a570a5b17bbe1d0d20c79e6b10da",
+      "bytes": 268046,
+      "sha256": "693622454498abd0c7564869f1c010a21533ad04aacdd884283d523c9a40637c"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/antwoorden/page-006.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/antwoorden/page-006.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "a136e37adb2859099ea65e9c42bdf34776c5435e",
+      "bytes": 281341,
+      "sha256": "b1465ad070b58822bd221a348a7f5e433e6ab5fdbe951abaaf4acb1db0d09927"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/antwoorden/page-007.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/antwoorden/page-007.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "5130cbe71f4c235d166c89474863cd2de2e1c7ca",
+      "bytes": 251785,
+      "sha256": "65c6e26575e86251ec9a9a408a5cc3ae8340698499a4cb03f9b196e031f0b622"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/antwoorden/page-008.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/antwoorden/page-008.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "58e30c340800ad93b0ea0074edbd433115b184d0",
+      "bytes": 265857,
+      "sha256": "c92795b8c22f918b34fe845761fa23d14298c88655437884c36c7ca318a3047c"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/antwoorden/page-009.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/antwoorden/page-009.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "c272dcfdddfe2bf91f4fe1559dad9e13aaba101e",
+      "bytes": 212485,
+      "sha256": "446655731838bfca0d86fe6ef33227bf1e17192b653d8499ac02492266f14cec"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/antwoorden/page-010.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/antwoorden/page-010.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "3d4c3ee39d17265e1be24b0404e686b7e8a091aa",
+      "bytes": 299932,
+      "sha256": "e586b8e326aa24a4cb66d71359cbe6fbc48b8614d38a606f377a6f8b572c89bc"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/opgaven/page-001.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/opgaven/page-001.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "0b6b5f6de7b6195d0f0cae45a97ea63381a667f5",
+      "bytes": 193911,
+      "sha256": "fb74e7672f7e3811a65f8818a21d7456cfc1f69b9c0e53fedcd623d3119f0005"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/opgaven/page-002.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/opgaven/page-002.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "a9e6cc59abb69eb1b94d36bf1372106f6b653b99",
+      "bytes": 206893,
+      "sha256": "89345a2d4da77eef1fd0425ba2ade7c209b32117ccb3a2310a35525d9c313fd2"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/opgaven/page-003.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/opgaven/page-003.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "a8ba8c8a083890f185f1cf0900758217876383ce",
+      "bytes": 263577,
+      "sha256": "b540e6d7dfdb9970a866a1370e5b69cf69b32ca06a1fa3b6db1f2a2a157da40a"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/opgaven/page-004.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/opgaven/page-004.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "6e86650f233a43f531e42074ff0e2df9fdf6e82c",
+      "bytes": 197420,
+      "sha256": "b4b402d368a27c8bc9e7f27be9fcbc48caffa35caccda59abdaee8b6e1103bb1"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/opgaven/page-005.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/opgaven/page-005.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "add44b683ccab8dcd3a0081d3322bc05c1708913",
+      "bytes": 215298,
+      "sha256": "f78bce7cdf9e42a444cffd1085979512ac83849a104e6f6333edca25e5892949"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/opgaven/page-006.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/opgaven/page-006.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "3325ea521a8b538a52f8e02d8f8a46c43d0afb18",
+      "bytes": 215308,
+      "sha256": "058dfabde08686854edab46544c95dd936e003b7756acbfcadb4257ee53c2c60"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/opgaven/page-007.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/opgaven/page-007.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "69dbb3edf2bafc38427018b39761d23c93526bd2",
+      "bytes": 245566,
+      "sha256": "97b487eb7b4df60d58be9fe14c53818b1163857d2225f1c69fcdc404327f8fd8"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/opgaven/page-008.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/opgaven/page-008.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "91499777048ffa94ac94c0c934ce8aaa8deed1e1",
+      "bytes": 276135,
+      "sha256": "ad459341dc37de81ab479ce419df817f96f332a1c57655f2dfacd3c636a56510"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/opgaven/page-009.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/opgaven/page-009.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "518800a6fc16dd27b633d172b513364e93f9fd45",
+      "bytes": 106412,
+      "sha256": "9e97fe95ec7d34b2e3985b05ef1694badb69d88fa04fc17b08f50b4d9471e03b"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-001.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-001.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "872af85de74ba4969d17970981c007ec864b7c69",
+      "bytes": 242012,
+      "sha256": "8ea526985038c46011d637959693491d7a8b409c91f80e96d1552d297c770e4d"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-002.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-002.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "642f998477bdc9a2bbebae707988a232367de795",
+      "bytes": 246955,
+      "sha256": "d2285cea0dc17043138e22b25688b6bdcaf2adb22da9cf45b96e736a6f93a0d2"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-003.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-003.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "dbbc83ea4c876a55105596ee1c7376337247557b",
+      "bytes": 174998,
+      "sha256": "33c3f3ca32e59e04e17864aaf30cee72a7c01c8fb5cfed9de112e153ca9da3cc"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-004.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-004.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "162051be620a7adbdae1c444fcd458ab371ad818",
+      "bytes": 185992,
+      "sha256": "2e4115588d4c743f4f9837d2991147159550e01baa56a9a8a4f60b93d0f5e51e"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-005.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-005.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "797cf789b1ee6d36fa565a048b8ee714580e6b82",
+      "bytes": 230441,
+      "sha256": "13aa264fad6353b89ab6ab3032ee3b301c2e44e7cc1344cf2c251a4115016dfd"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-006.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-006.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "5cb3dd92dbda6e9502b5a489fe1f6af6f43e9aaa",
+      "bytes": 272796,
+      "sha256": "3b9cea8080a28746444181e3841180d71b52a1271e14f36f7e7b2ba62cb7ee87"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-007.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-007.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "e98bfbc5d2a73f4ac1ab14ca5afb45f5eb773d5e",
+      "bytes": 205142,
+      "sha256": "d6e4b6eaa7a0b4521604359aefa3fd27f84a0ccc836a9dbfeff46ac553c713fd"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-008.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-008.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "e346e01344b5ae5fbb0ee5f75cbfa5e2b06a32a6",
+      "bytes": 261808,
+      "sha256": "51824357046f2ae936e87db15bc197d04dfe851bf1263ff248c334837f11bbfe"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-009.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-009.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "4e6719dc958642e60e3c80989d6e0cd72741b0a6",
+      "bytes": 195991,
+      "sha256": "0813d242ec72fae797928e314509741d123c58634e9c97c8434f982bcf2068ff"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-010.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-010.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "049a0bff99f24dff1d0838ece18ea986100bd452",
+      "bytes": 213687,
+      "sha256": "0691df6f57c7cd4d917e9e520851639c608ec4dfaa081fa74e43c8fc1fd0c939"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-011.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-011.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "f85cf774f464a6f88d9a6c7b7b224d19408eabb7",
+      "bytes": 213056,
+      "sha256": "b69dfd2c93f9c9fa0bf6303d5d484cab43220c9ca32e2400a11bfbef7399183a"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-012.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-012.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "6e6f47aa032af89c1207dd3d78f1f86c37cfc24a",
+      "bytes": 244184,
+      "sha256": "7638f335af4249ce03951ba1ea2236a2f74255a6eb3145db7403353f150704bb"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-013.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-013.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "b9a7353aebffcf5f07f549597586bb259fbccd54",
+      "bytes": 274349,
+      "sha256": "bb2330cecd92761d6cb1f52b88d0614372d86fbed5161fba611f692b48babe22"
+    },
+    {
+      "old_path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-grayscale-r8/paragraaf/page-014.png",
+      "proposed_new_path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r8/paragraaf/page-014.png",
+      "source_commit": "85fa4910a7e6bcac69b36c38bffdf6c0d10d0c68",
+      "source_git_blob": "32ea4b24903baa1c3fabf47841af9f4802cfb048",
+      "bytes": 104580,
+      "sha256": "9411ec6d5b0f6fb68577ab0ce3bdfb1e981163749281204edbae264f8200e353"
+    }
+  ],
+  "native_manifests": [
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r10/manifest.json",
+      "sha256": "0f65bf7b973a392aad15ca3bed322505543a9b75f502864d589f60838976e718",
+      "pages": 10,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r3/manifest.json",
+      "sha256": "71a986fbb03ae3b055a3ae350e02601e2da58af4fb601dd7271db00e85f9dbb0",
+      "pages": 10,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r4/manifest.json",
+      "sha256": "6c04083c23eb506dd541d533190a865b8d98bca34d5844d9a3cb72cef4f9613b",
+      "pages": 10,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r5/manifest.json",
+      "sha256": "b8610d47338b94a84f732df2f767a3e32507a8fb82103f9f627f251dac4e432e",
+      "pages": 10,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r6/manifest.json",
+      "sha256": "a680e63fc510d0a8b5bfa5654d4897a9c27a5eb13b496f6da82933c3ab55866e",
+      "pages": 10,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r7/manifest.json",
+      "sha256": "3cb54ca30f9a9f320b5a9b9814da8da3dbf518b0b2bdba57a23e7e80ca700e6d",
+      "pages": 10,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r8/manifest.json",
+      "sha256": "07504ca624c5671a485b6f2504be7858bae902f2354756af509042c5160fe735",
+      "pages": 10,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r9/manifest.json",
+      "sha256": "3f471c99a13e9fb9733af2f1c62d13cf8bf88118caa4d98e78e0009bf7c83ea7",
+      "pages": 10,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-e82275346369-r2/manifest.json",
+      "sha256": "c53ee7bfe784b0513ddd892140248cd65aeb3701b7205110a76456435f6ff714",
+      "pages": 10,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-opgaven-4a7e87e641d5-r10/manifest.json",
+      "sha256": "10fdb5e664649d5b6f5f82c8c449fc87140a1b22ba8efe3a74a1f9f3fd374dcc",
+      "pages": 9,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-opgaven-4a7e87e641d5-r8/manifest.json",
+      "sha256": "067b452b490205243e7f4400913256dc2f2e66a84c9fb6916c138d4993671ad9",
+      "pages": 9,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-opgaven-4a7e87e641d5-r9/manifest.json",
+      "sha256": "7995c4c03f625f3159eb0749a97b1838466326abc576f01e6fb0f822562a99c6",
+      "pages": 9,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-opgaven-88ac44bb55b2-r3/manifest.json",
+      "sha256": "cde9f68271fde085fcd75920e4b225a818715fc26987b580bfd390b0d0bad6e7",
+      "pages": 9,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-opgaven-88ac44bb55b2-r4/manifest.json",
+      "sha256": "7f9c6652a9dad2c3707b441a35541d0e04685af2738fa047d604f87abea932d0",
+      "pages": 9,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-opgaven-88ac44bb55b2-r5/manifest.json",
+      "sha256": "d1a598042eb1d44a25eadcbe5b37013f711860c0b3b3bfc95db53759300ea88d",
+      "pages": 9,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-opgaven-88ac44bb55b2-r6/manifest.json",
+      "sha256": "89466219c1ca76372a0937bbfee601a3b0cbd979ab57cca10b9bc57b73637520",
+      "pages": 9,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-opgaven-9c8036028a28-r7/manifest.json",
+      "sha256": "e1adcab246473df469b0d9be6be69e7b5a73525ad12fcfb9cdd51c65e7c608da",
+      "pages": 9,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-opgaven-ed1062fd0fb4-r2/manifest.json",
+      "sha256": "a1fc678ecce9f1e5bde77f14101071020898c9ece4a8fbe9769e32a49166e46d",
+      "pages": 8,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-paragraaf-088102a97130-r10/manifest.json",
+      "sha256": "c06580750ac92c4080fd14a4dff20170fd9215e34591a18240f69d4f071f5c76",
+      "pages": 14,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-paragraaf-088102a97130-r8/manifest.json",
+      "sha256": "a639a27f7c7673e711935241556468a0a3bfeb038ac0a6f44822d46fe619e1a3",
+      "pages": 14,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-paragraaf-088102a97130-r9/manifest.json",
+      "sha256": "0ad645e88b4c9c86693f61d6f480e269b6ffd50002b066a81a5ebfecbd7820fc",
+      "pages": 14,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-paragraaf-13a1291b1bd0-r3/manifest.json",
+      "sha256": "fea87dcd382f3e5ce6b2d1789ab89d8b5bc4cc8b2cceb4e8fd8ef99c52e0a636",
+      "pages": 14,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-paragraaf-13a1291b1bd0-r4/manifest.json",
+      "sha256": "c307a6b73b08ffbfc73c5a447a4bf9787b8c9884138395389427a709b5c16b08",
+      "pages": 14,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-paragraaf-13a1291b1bd0-r5/manifest.json",
+      "sha256": "769d6d338a26b0d460cf7d84067080ced08f3dc258830eaceb9fe920d1dc9924",
+      "pages": 14,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-paragraaf-13a1291b1bd0-r6/manifest.json",
+      "sha256": "b9f26a087052f9ad2ce8af178b7a737913e3c184b3a5b7c014b4a4b7356b009a",
+      "pages": 14,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-paragraaf-1e2ba9560e25-r2/manifest.json",
+      "sha256": "4d2ad8cd803b8e8e5b554f5d7e0688ae656f8e3c9e8e639692896e8e8a975682",
+      "pages": 13,
+      "all_paths_are_color": true
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-paragraaf-9a19c80b67ea-r7/manifest.json",
+      "sha256": "3899a523371b72349ed0905ed90af02121eb0c7aa1fe098d2f9347be0793eee7",
+      "pages": 14,
+      "all_paths_are_color": true
+    }
+  ],
+  "reference_files": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-PRODUCTION-command-log.jsonl",
+      "sha256": "864127d505d874c2890b9ef7b24247f7ae073432f4e4f7ef9205eeb21e30f8c8"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-PRODUCTION-command-log.md",
+      "sha256": "c0e93e8ff48de3965a4165c0f52cf5bc042b7f387443fa2089dc7eb294482d92"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-builder-personal-inspection-r8.json",
+      "sha256": "4dc3090119fe09df14420508232cf2ecb48fa18ab4fd00a7e85dc42609e7852f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-production-audit.js",
+      "sha256": "4d0c8778a7ae8d1b10c4cf127c4f72a094cbeb0ef5a74cdd2e3d9130fb23b4c2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-production-candidate.md",
+      "sha256": "f83b13e8a7a94070bba3dde8bd8e00a3fb6dd7f4c1f76ae03aadadc3518df636"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-production-classifier-gap-r1.json",
+      "sha256": "37d405a3cf05c3b7873c146ff20c5571aafe8827846063e6437b738111999b8b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-production-scope-r1.json",
+      "sha256": "6252ef4f99bae94f8a61c9fd6f44207f96443cab5fa66b85ad5e28a23bc40e01"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-reproduction-r4.json",
+      "sha256": "adadf37569a2f5143262c1c05366635940b60f15122c9d30c36c2006ba53313e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-reproduction-r8.json",
+      "sha256": "15abfac6bec29cdfe5f367baaaa2463e5162676d4d1415cffe65a0b71c313da4"
+    }
+  ],
+  "reproduction_records": [
+    {
+      "revision": 4,
+      "keys": [
+        "paragraph",
+        "source_manifest",
+        "source_manifest_sha256",
+        "artifacts",
+        "zip_archives",
+        "steps",
+        "visual_inspection",
+        "status",
+        "all42_raw_rebuilds",
+        "all_page_grayscale",
+        "original_pending_manifest_hashes"
+      ]
+    },
+    {
+      "revision": 8,
+      "keys": [
+        "paragraph",
+        "source_manifest",
+        "source_manifest_sha256",
+        "artifacts",
+        "zip_archives",
+        "steps",
+        "visual_inspection",
+        "status",
+        "all42_raw_rebuilds",
+        "all_page_grayscale",
+        "original_pending_manifest_hashes"
+      ]
+    }
+  ],
+  "constraints": [
+    "Keep original published builder commits and branch; no history rewrite",
+    "Keep every native color page and PENDING manifest byte-identical",
+    "Import exact 66 bytes at proposed supported path, absence-check each destination, verify SHA and Git blob and edition/page",
+    "Do not rewrite old reproduction/inspection/scope records: add explicit relocation resolution",
+    "Retain original FAIL and superseded r4 status; do not claim r4 current proof",
+    "Evaluate genuine complete candidate scope with genuine source baseline, not arbitrary metadata-only synthetic anchor",
+    "No classifier/exception change; proposed mapping here is not an executed correction"
+  ]
+}

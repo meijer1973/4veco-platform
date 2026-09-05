@@ -1,0 +1,11 @@
+{
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-review-probes.py"
+  ],
+  "started": "2026-09-05T23:32:15.336Z",
+  "finished": "2026-09-05T23:32:15.491Z",
+  "status": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-231-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-review-probes.py\", line 104, in <module>\r\n    for s,text in svgs.items(): svg_contract(text,s)\r\n                                ~~~~~~~~~~~~^^^^^^^^\r\n  File \"C:\\wt\\book2-231-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-review-probes.py\", line 97, in svg_contract\r\n    assert econ==[(0,intercept),(0,price),(q,price)]\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError\r\n"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS_SUBSTANTIVE_RENDER_REVIEW",
+  "counts": {
+    "color_pages": 33,
+    "grayscale_pages": 33,
+    "native_figures": 15,
+    "additional_negative_probes": 4
+  },
+  "all66pagesAnd15NativeFiguresRehashed": true,
+  "record_sha256": "d761966ebae2e5bb9310a40523a64f24b7c16b8d298be2edcff9aa0d53319a68"
+}
