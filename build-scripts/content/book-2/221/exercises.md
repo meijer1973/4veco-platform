@@ -49,7 +49,7 @@ verklaren; deze cijfers bewijzen die oorzaak niet.
 
 Korte route: Startopgaven → Zelfstandige oefening → Doeloefening. Extra hulp nodig? Maak eerst Begeleide inoefening.
 
-Maak deze twee korte checks in ongeveer 5½ minuut. Controleer daarna je werk
+Maak deze twee korte checks. Controleer daarna je werk
 met het antwoordmodel. Lukt vooral de oude noemer of het teken nog niet, gebruik
 dan de gedrukte herinnering bij opgave 3 en bespreek een nieuwe berekening met
 je docent. Een fout hier is een aanwijzing om te oefenen, geen eindbeoordeling.
@@ -68,7 +68,7 @@ Een leerling noemt Ev=−2 prijsinelastisch, omdat −2 kleiner is dan 1. Verbet
 
 ## Begeleide inoefening
 
-Dit is de extra hulproute van ongeveer 10 minuten. Die komt boven op de kern;
+Dit is de extra hulproute. Die komt boven op de korte route;
 spreek zo nodig vervolgwerktijd of huiswerk af. Heb je deze hulp niet nodig? Ga dan verder met Zelfstandige oefening.
 
 **Opgave 3**
@@ -128,7 +128,7 @@ plausibele verklaring voor het verschil tussen deze twee situaties.
 ## Zelfstandige oefening
 
 Werk zonder hulp of antwoordmodel. Noteer je berekeningen en onderbouw elke
-conclusie. Richttijd: 11 minuten.
+conclusie.
 
 **Opgave 5**
 
@@ -150,7 +150,7 @@ Leg ook uit wat de cijfers niet bewijzen over die verklaring.
 
 ## Doeloefening
 
-Werk zelfstandig. Richttijd: 9 minuten. Totaal: 9 punten.
+Werk zelfstandig. Totaal: 9 punten.
 
 {{TARGET}}
 
@@ -163,12 +163,11 @@ prijs gelijk.” Beoordeel deze uitspraak. Leg uit wat één waargenomen
 prijsverandering wel laat zien en wat niet. Beschrijf daarbij een plausibele
 verandering in de beschikbare alternatieven voor klanten.
 
-Dit denkertje valt buiten de kernroute. Richttijd: 8 minuten.
+Dit denkertje valt buiten de korte route.
 
 ## Herhaling / Herhaling en interleaving
 
-Deze herhaling valt buiten de kernroute en kan als huiswerk. Richttijd samen:
-5 minuten.
+Deze herhaling valt buiten de korte route en kan als huiswerk.
 
 **Opgave 8**
 
