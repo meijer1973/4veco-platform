@@ -90,6 +90,16 @@ def documents(record: dict) -> dict[str, str]:
             ]:
                 value = re.sub(pattern, r'<div style="break-inside:avoid">\n\n\1\n</div>\n\n', value)
         if kind == 'antwoorden':
+            # Supported structural breaks at three explanation line hazards;
+            # no shared CSS override, authored word or frozen answer change.
+            for phrase, replacement in (
+                ('procentuele prijsverandering: |Ev|', 'procentuele prijsverandering:<br>\n|Ev|'),
+                ('verbinding met |Ev|', '<br>\nverbinding met |Ev|'),
+                ('dat iedere eindige stap met interval-|Ev|', '<br>\ndat iedere eindige stap met interval-|Ev|'),
+            ):
+                if value.count(phrase) != 1:
+                    raise ValueError('Expected one owned explanation typography anchor')
+                value = value.replace(phrase, replacement)
             value = re.sub(r'(?ms)(^[a-z]\\\) .*?)(?=^[a-z]\\\) |^## |^\*\*Opgave|\Z)',
                            r'<div style="break-inside:avoid">\n\n\1\n</div>\n\n', value)
         outputs[kind] = value

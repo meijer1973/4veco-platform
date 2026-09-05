@@ -1,0 +1,40 @@
+{
+  "role": "builder_self_inspection_only",
+  "builder": "paragraph_222_builder",
+  "date": "2026-09-05",
+  "independent_acceptance": "NOT_SUPPLIED",
+  "generation_manifest": "manifest.json",
+  "pdf_sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c",
+  "pages_inspected": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png",
+    "pages/page-008.png",
+    "pages/page-009.png",
+    "pages/page-010.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "4925b73bf780d7f69d8562dca5cae8b1713a4bbe91c712563fe7dab1828a70ed",
+    "page-002.png": "c7d9797869961a3b8eda9c2dd37f2e64132cb0024ce42b207cab39e8400b1636",
+    "page-003.png": "0912960ef2866f25324280e30bf29f0825ab3b976a817286f13bf828971a5483",
+    "page-004.png": "5556d250dc79d0d05db736f9835205946e71ef8b7e1d825e06072f00340c180f",
+    "page-005.png": "2f48f10ff4ba79b997064ad987496760fb993167ec2a57f013eebcfa6917fa94",
+    "page-006.png": "cd30d3cafe1722a972023a11e4bfdc06d3402c538ad667f701e938fa1b1efbaa",
+    "page-007.png": "1f758852e6e33041bcc917a8f3ecc77c1296806c088aabc56bb8add4579b0dd8",
+    "page-008.png": "5348a507dd7036ad0a324e0c346276189132c27ea165c03bab2343bddd67d64e",
+    "page-009.png": "5fbc1ba4d22f92df6ba7dd09605398291b5bff998886db624236a45cd1f84582",
+    "page-010.png": "f7a5b93ecb7151a926351a0836485c875d5606ad35fde02edd88e73e6d54693c"
+  },
+  "inspected_at_normal_reading_scale": true,
+  "builder_visible_student_defects": [],
+  "basis": "All R12 full-page PNG bytes rehashed and equal to R8 pages covered by the builder's documented direct views and verified raw transfers; no new page bytes. See R8 builder-inspection.json.",
+  "previous_inspection_record": "C:/wt/book2-222-production-20260905/4veco-platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r8/builder-inspection.json",
+  "boundaries": [
+    "Generation manifest remains immutable PENDING.",
+    "Builder inspection is not independent paragraph review, specialist QC, classroom observation or handoff acceptance."
+  ]
+}

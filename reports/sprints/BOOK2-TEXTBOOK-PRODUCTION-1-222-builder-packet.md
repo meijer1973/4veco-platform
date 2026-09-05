@@ -1,4 +1,4 @@
-# §2.2.2 builder packet — R8
+# §2.2.2 builder packet — R12
 
 2026-09-05. Builder: paragraph_222_builder. Task BOOK2-TEXTBOOK-PRODUCTION-1-222.
 Status: authored/rendered candidate for independent paragraph review and a
@@ -17,15 +17,15 @@ Stem: `2.2.2 Elasticiteit en omzet – `; three MD/HTML/PDF editions and thin
 |---|---:|---|
 | paragraaf | 10 | 36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c |
 | opgaven | 6 | 0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555 |
-| antwoorden | 5 | 37a4f5017eab942b8fb0490c2d8cb25b0d8ad90d79d3229bdc5216e59e5e4362 |
+| antwoorden | 5 | b68d0429a9d739d0587f7a1c95ca922e188061b4821920b1d0f6459766adc6ab |
 
 The full MD/HTML/PDF/source/asset hash map is
-`BOOK2-TEXTBOOK-PRODUCTION-1-222-build-r8.json`; all current R8 page hashes and
+`BOOK2-TEXTBOOK-PRODUCTION-1-222-build-r12.json`; all current R12 page hashes and
 honestly PENDING generation status remain in the three immutable manifests:
 
-- `reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r8/`
-- `reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-opgaven-0a251a4973b1-r8/`
-- `reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r8/`
+- `reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r12/`
+- `reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-opgaven-0a251a4973b1-r12/`
+- `reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-b68d0429a9d7-r12/`
 
 Each also has a separate `builder-inspection.json`, explicitly not independent
 acceptance. Final-page direct views/verified raw transfers cover all21 full
@@ -34,20 +34,31 @@ inspected at R6; pages3,8,9 at R7; page10 at R8. Opgaven pages1–3 were directl
 inspected at R7 and4–6 at R8; all five answers pages at R8. Every transfer was
 rechecked as exact PNG-byte equality with R8. Grayscale full-page probes3 and6
 in `222-grayscale-r8/` were also personally inspected: dashed old boundaries,
-filled new revenue, labels and arrows stay legible without colour.
+filled new revenue, labels and arrows stay legible without colour. Both student
+PDFs and every student page remain exact bytes in R12, so those grayscale probes
+remain applicable. R12 answers page4 was directly inspected; page1 is exact to
+the directly inspected R11 page1; pages2,3,5 remain exact to R8. The complete
+rehashed R8-to-R12 page map is `BOOK2-TEXTBOOK-PRODUCTION-1-222-r8-r12-page-transition.json`.
+Only answers pages1 and4 changed. All21 final full-page bytes are covered.
 
 Earlier R1–R7 proof directories/build manifests are generation history, not
 current artifacts or fresh acceptance. R1 had split supports/recap; R2–R5
 pagination iterations had avoidable blank pages; R6 exposed a Markdown
 completion-blank emphasis bug; R7 repaired the escaped blanks and legend
 spacing; R8 corrects singular `1 punt` in target display. The exact registry
-context/prompts/goals/points were never changed. Only R8 is offered for review.
+context/prompts/goals/points were never changed. R9/R10 tested supported MathML
+for three split absolute-Ev tokens, but actual PDF checks and full-page views
+still found the breaks. R11 used supported structural line breaks; R12 adjusted
+one break to avoid an isolated word. Only the three generated explanation
+breaks changed; all authored source words and frozen short answers are intact.
+No shared CSS/sanitizer override or monkeypatch was introduced. Only R12 is
+offered for review; earlier revisions remain immutable generation history.
 
 Rebuild from either paired checkout:
 
 ```powershell
 python build-scripts/content/book-2/b2_222.py --lesson-root ../4veco-lessen
-python build-scripts/content/book-2/222/check_render.py --rebuild --output reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-render-check-r8.json
+python build-scripts/content/book-2/222/check_render.py --rebuild --output reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-render-check-r12.json
 ```
 
 The checker safely relocates recorded source/proof paths to the explicitly
@@ -115,13 +126,15 @@ additional time. Normal teacher observation may require pacing adjustments.
 
 ## Checks and flags for the independent reviewers
 
-- Ten focused source tests PASS, including all15 old/new contexts, exact
+- Eleven focused source tests PASS, including all15 old/new contexts, exact
   rational percentages/ratios/products, retrieval calculations, counterexample
   factor multiplication, target tamper rejection, four-figure geometry,
-  safe suffixes, route/recap/fading, and cross-worktree manifest relocation.
+  safe suffixes, route/recap/fading, cross-worktree manifest relocation, and
+  supported structural breaks through the unchanged print sanitizer.
 - Actual render checker with second build PASS: byte-identical MD/HTML/PDF and
   SVG/PNG assets; complete exact target/goals/short answers; same exercise HTML
-  across student editions; literal guided blanks; all page hashes fresh.
+  across student editions; literal guided blanks; all page hashes fresh; no
+  absolute-Ev token split across PDF text lines.
 - Minimum actual body/table/footer type12.000pt; minimum placed figure
   label14.378pt. No builder-observed clipping, overlap, missing content,
   unresolved markup or answer leakage remains. Whole supports/recap and

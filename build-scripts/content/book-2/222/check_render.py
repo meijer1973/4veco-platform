@@ -77,6 +77,7 @@ def inspect(lesson_root: Path, manifest_path: Path, rebuild=False):
             value = page.extract_text(visitor_text=visit_text, visitor_operand_before=visit_op) or ''
             assert len(normalize(value)) > 80, (kind, 'blank or near-empty page', number)
             assert '\ufffd' not in value and ':::' not in value
+            assert not re.search(r'\|\s*\n\s*Ev\||\|Ev\s*\n\s*\|', value), (kind, number, 'split absolute-elasticity token')
             texts.append(value)
         text = normalize(' '.join(texts))
         assert min(font_sizes) >= 11.99, (kind, min(font_sizes))
@@ -115,6 +116,7 @@ def inspect(lesson_root: Path, manifest_path: Path, rebuild=False):
             for goal in target['lesson_goals']:
                 assert normalize(goal) in text
         if kind == 'antwoorden':
+            assert len(soup.find_all('br')) == 3
             for answer in target['short_answer_model'].values():
                 # A PDF line break may occur inside the compact frozen ratio,
                 # e.g. directly after '/'; ignore layout whitespace only.
@@ -150,7 +152,7 @@ def inspect(lesson_root: Path, manifest_path: Path, rebuild=False):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--lesson-root', type=Path, default=builder.ROOT.parent/'4veco-lessen')
-    parser.add_argument('--manifest', type=Path, default=builder.ROOT/'reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-build-r8.json')
+    parser.add_argument('--manifest', type=Path, default=builder.ROOT/'reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-build-r12.json')
     parser.add_argument('--rebuild', action='store_true')
     parser.add_argument('--output', type=Path)
     args = parser.parse_args()

@@ -1,0 +1,156 @@
+{
+  "revision": "R8 to R12",
+  "scope": "Only supported paragraph-owned structural breaks; no authored words, frozen target, shared helper, assets or student-document bytes changed.",
+  "independent_acceptance": "NOT_SUPPLIED",
+  "documents": [
+    {
+      "old_proof": "C:\\wt\\book2-222-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-paragraaf-36feb7873637-r8",
+      "final_proof": "C:\\wt\\book2-222-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-paragraaf-36feb7873637-r12",
+      "pdf_sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c",
+      "pages": [
+        {
+          "page": "page-001.png",
+          "old_sha256": "4925b73bf780d7f69d8562dca5cae8b1713a4bbe91c712563fe7dab1828a70ed",
+          "new_sha256": "4925b73bf780d7f69d8562dca5cae8b1713a4bbe91c712563fe7dab1828a70ed",
+          "unchanged": true
+        },
+        {
+          "page": "page-002.png",
+          "old_sha256": "c7d9797869961a3b8eda9c2dd37f2e64132cb0024ce42b207cab39e8400b1636",
+          "new_sha256": "c7d9797869961a3b8eda9c2dd37f2e64132cb0024ce42b207cab39e8400b1636",
+          "unchanged": true
+        },
+        {
+          "page": "page-003.png",
+          "old_sha256": "0912960ef2866f25324280e30bf29f0825ab3b976a817286f13bf828971a5483",
+          "new_sha256": "0912960ef2866f25324280e30bf29f0825ab3b976a817286f13bf828971a5483",
+          "unchanged": true
+        },
+        {
+          "page": "page-004.png",
+          "old_sha256": "5556d250dc79d0d05db736f9835205946e71ef8b7e1d825e06072f00340c180f",
+          "new_sha256": "5556d250dc79d0d05db736f9835205946e71ef8b7e1d825e06072f00340c180f",
+          "unchanged": true
+        },
+        {
+          "page": "page-005.png",
+          "old_sha256": "2f48f10ff4ba79b997064ad987496760fb993167ec2a57f013eebcfa6917fa94",
+          "new_sha256": "2f48f10ff4ba79b997064ad987496760fb993167ec2a57f013eebcfa6917fa94",
+          "unchanged": true
+        },
+        {
+          "page": "page-006.png",
+          "old_sha256": "cd30d3cafe1722a972023a11e4bfdc06d3402c538ad667f701e938fa1b1efbaa",
+          "new_sha256": "cd30d3cafe1722a972023a11e4bfdc06d3402c538ad667f701e938fa1b1efbaa",
+          "unchanged": true
+        },
+        {
+          "page": "page-007.png",
+          "old_sha256": "1f758852e6e33041bcc917a8f3ecc77c1296806c088aabc56bb8add4579b0dd8",
+          "new_sha256": "1f758852e6e33041bcc917a8f3ecc77c1296806c088aabc56bb8add4579b0dd8",
+          "unchanged": true
+        },
+        {
+          "page": "page-008.png",
+          "old_sha256": "5348a507dd7036ad0a324e0c346276189132c27ea165c03bab2343bddd67d64e",
+          "new_sha256": "5348a507dd7036ad0a324e0c346276189132c27ea165c03bab2343bddd67d64e",
+          "unchanged": true
+        },
+        {
+          "page": "page-009.png",
+          "old_sha256": "5fbc1ba4d22f92df6ba7dd09605398291b5bff998886db624236a45cd1f84582",
+          "new_sha256": "5fbc1ba4d22f92df6ba7dd09605398291b5bff998886db624236a45cd1f84582",
+          "unchanged": true
+        },
+        {
+          "page": "page-010.png",
+          "old_sha256": "f7a5b93ecb7151a926351a0836485c875d5606ad35fde02edd88e73e6d54693c",
+          "new_sha256": "f7a5b93ecb7151a926351a0836485c875d5606ad35fde02edd88e73e6d54693c",
+          "unchanged": true
+        }
+      ]
+    },
+    {
+      "old_proof": "C:\\wt\\book2-222-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-opgaven-0a251a4973b1-r8",
+      "final_proof": "C:\\wt\\book2-222-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-opgaven-0a251a4973b1-r12",
+      "pdf_sha256": "0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555",
+      "pages": [
+        {
+          "page": "page-001.png",
+          "old_sha256": "2f6bfd85d06607172b1d257c4a3c9de1878ca11c9b4208b14873bbdc11fc6ba0",
+          "new_sha256": "2f6bfd85d06607172b1d257c4a3c9de1878ca11c9b4208b14873bbdc11fc6ba0",
+          "unchanged": true
+        },
+        {
+          "page": "page-002.png",
+          "old_sha256": "0ef45114138d6d56d80b1cac1ee578f91c0e741fa99e3ad490a0d649645dc842",
+          "new_sha256": "0ef45114138d6d56d80b1cac1ee578f91c0e741fa99e3ad490a0d649645dc842",
+          "unchanged": true
+        },
+        {
+          "page": "page-003.png",
+          "old_sha256": "6a4a1bb3dc653b2772edb63817d172bce4be5801af703ee8ccba1ec54894145d",
+          "new_sha256": "6a4a1bb3dc653b2772edb63817d172bce4be5801af703ee8ccba1ec54894145d",
+          "unchanged": true
+        },
+        {
+          "page": "page-004.png",
+          "old_sha256": "c2592d9065876765b6c8beb12608334f722ac48c3dcd06eaa3855725096400bd",
+          "new_sha256": "c2592d9065876765b6c8beb12608334f722ac48c3dcd06eaa3855725096400bd",
+          "unchanged": true
+        },
+        {
+          "page": "page-005.png",
+          "old_sha256": "71a5482aef92ee87afcffecb059d7feec1a01c8ad5597cb35f7039343d0c4c86",
+          "new_sha256": "71a5482aef92ee87afcffecb059d7feec1a01c8ad5597cb35f7039343d0c4c86",
+          "unchanged": true
+        },
+        {
+          "page": "page-006.png",
+          "old_sha256": "d4e82d03960929d6ee49c4acc404302739a9d358f951e5c8dd174169bcd3d818",
+          "new_sha256": "d4e82d03960929d6ee49c4acc404302739a9d358f951e5c8dd174169bcd3d818",
+          "unchanged": true
+        }
+      ]
+    },
+    {
+      "old_proof": "C:\\wt\\book2-222-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-antwoorden-37a4f5017eab-r8",
+      "final_proof": "C:\\wt\\book2-222-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\222-antwoorden-b68d0429a9d7-r12",
+      "pdf_sha256": "b68d0429a9d739d0587f7a1c95ca922e188061b4821920b1d0f6459766adc6ab",
+      "pages": [
+        {
+          "page": "page-001.png",
+          "old_sha256": "955697f493bc701c7f1562f8594e4f4995cb11f6705edc3bce4458cedc115768",
+          "new_sha256": "42d2e22c04f6864fad0cf26c72afa70b4b175adfd4828a80882c475d31497131",
+          "unchanged": false
+        },
+        {
+          "page": "page-002.png",
+          "old_sha256": "7bf2147b456b14e9af54a8e6c0ec4bb417828c0e7ddc97d22abb526024527f40",
+          "new_sha256": "7bf2147b456b14e9af54a8e6c0ec4bb417828c0e7ddc97d22abb526024527f40",
+          "unchanged": true
+        },
+        {
+          "page": "page-003.png",
+          "old_sha256": "3ec2d99cfe331239e13f5f786cf341d255c3fa603e585c865872f381bb319ebe",
+          "new_sha256": "3ec2d99cfe331239e13f5f786cf341d255c3fa603e585c865872f381bb319ebe",
+          "unchanged": true
+        },
+        {
+          "page": "page-004.png",
+          "old_sha256": "931ffd72e269efda87f19003c902143414a992c7b4029550b8d21c83534d1f08",
+          "new_sha256": "3969896065943f5d6ff82d4b05fd81ea0acb87fb747a0ce602c907d558034bf8",
+          "unchanged": false
+        },
+        {
+          "page": "page-005.png",
+          "old_sha256": "21147d027cb3472e3cb2e549833a9f24a8d2a302e6cfad75e6652ca48bc42859",
+          "new_sha256": "21147d027cb3472e3cb2e549833a9f24a8d2a302e6cfad75e6652ca48bc42859",
+          "unchanged": true
+        }
+      ]
+    }
+  ],
+  "grayscale": "R8 grayscale probes remain exact applicable: paragraaf PDF and all page PNG bytes unchanged.",
+  "inspection_basis": "R12 answers page4 personally directly inspected; page1 exact to personally inspected R11 page1. Other19 page bytes exact to previously personally inspected R8 bindings."
+}

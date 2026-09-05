@@ -1,0 +1,30 @@
+{
+  "role": "builder_self_inspection_only",
+  "builder": "paragraph_222_builder",
+  "date": "2026-09-05",
+  "independent_acceptance": "NOT_SUPPLIED",
+  "generation_manifest": "manifest.json",
+  "pdf_sha256": "b68d0429a9d739d0587f7a1c95ca922e188061b4821920b1d0f6459766adc6ab",
+  "pages_inspected": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "42d2e22c04f6864fad0cf26c72afa70b4b175adfd4828a80882c475d31497131",
+    "page-002.png": "7bf2147b456b14e9af54a8e6c0ec4bb417828c0e7ddc97d22abb526024527f40",
+    "page-003.png": "3ec2d99cfe331239e13f5f786cf341d255c3fa603e585c865872f381bb319ebe",
+    "page-004.png": "3969896065943f5d6ff82d4b05fd81ea0acb87fb747a0ce602c907d558034bf8",
+    "page-005.png": "21147d027cb3472e3cb2e549833a9f24a8d2a302e6cfad75e6652ca48bc42859"
+  },
+  "inspected_at_normal_reading_scale": true,
+  "builder_visible_student_defects": [],
+  "basis": "R12 full page4 directly inspected. Page1 exact PNG-byte equality with personally inspected R11 page1; pages2,3,5 exact PNG-byte equality with personally inspected R8 full pages. Three requested token breaks repaired; no new visual defect found.",
+  "previous_inspection_record": "C:/wt/book2-222-production-20260905/4veco-platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r8/builder-inspection.json",
+  "boundaries": [
+    "Generation manifest remains immutable PENDING.",
+    "Builder inspection is not independent paragraph review, specialist QC, classroom observation or handoff acceptance."
+  ]
+}
