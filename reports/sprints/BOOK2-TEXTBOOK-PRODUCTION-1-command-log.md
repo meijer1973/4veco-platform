@@ -73,3 +73,25 @@ warning for future69.0; no remote resources are used and no upgrade performed.
 Lane-scope focused Jest:24tests PASS exit0. Exact Book2 root/chapter/paragraph
 planning filenames are now recognized; wrong IDs, outside-book paths, ZIPs and
 companion ownership remain rejected. No broad exception was added.
+
+## Exemplar authoring and full platform regression
+
+The independently reviewed §211 plan was integrated at lesson bf55c91 after
+two review rounds (canonical LF SHA-256
+f46c7aa444ba6fef1f6f885b34bd52963fccac3cdc7b13b898eb6665219c4cd0).
+The assigned builder was then authorized for stage2, not self-acceptance or
+independent quality-ref creation. Exact plan evidence is in the211-plan-review
+report. Student files and rendered acceptance remain under review.
+
+Full `npm.cmd run check:platform` completed exit0:110 suites passed,6 skipped;
+1,869 tests passed,8 skipped (1,877 total),455.221 seconds. This ran against
+the root platform through763b0433 before the later review-record commits and
+the bounded short-callout patch. Diagnostic fixture failures printed by the
+suite are expected negative tests, not failed suites.
+
+Shared print patch5a830c82 adds bounded short warning/definition keep-together
+behaviour. Python focused suite now19 tests PASS exit0, including a real
+two-page boundary fixture; long/table callouts remain splittable. The first
+test attempt failed only on a PDF line-wrap-sensitive assertion; normalized
+whitespace corrected the test without altering the rendering expectation.
+Independent patch review and final student-page acceptance remain separate.
