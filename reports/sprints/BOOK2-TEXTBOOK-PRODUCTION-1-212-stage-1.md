@@ -134,6 +134,7 @@ planning checks are not claims of source generation, rendering or final QC.
 | `check-paragraph-lane-scope.js --cwd ../4veco-lessen --lane textbook --base 9eb8a9782a7d0288c114f481878fe8661fa886db --head HEAD` | PASS: exactly one Part A textbook plan |
 | `git diff --name-only 9eb8a9782a7d0288c114f481878fe8661fa886db HEAD`, lessons | Only owned new paragraph plan; all legacy outputs unchanged |
 | Lesson commit/push and remote head comparison | Exact `48690ee5bc46b86e2a6b29ce3b8693ca756b8af2`; clean status |
+| Platform-only `check-paragraph-lane-scope.js --lane shared --base a2f60fe83af391b1d48f5794e31ed35d0a290668 --head HEAD` | FAIL by scope design: the only change is review evidence and shared lane requires a shared platform source change; not a standalone merge-ready platform package |
 
 Read-only discovery mistakes were corrected, not hidden: an initial registry
 probe used `.paragraphs` rather than actual `.exercises`; a guessed target
@@ -143,7 +144,10 @@ guessed §211 source filenames missed the existing descriptive/en-dash filename;
 one platform checker/path lookup was accidentally invoked from lessons and
 immediately repeated from the paired platform with PASS. These TypeError,
 missing-path and MODULE_NOT_FOUND results changed no files and are not counted
-as successful tests. No substantive validator failure was suppressed.
+as successful tests. The separate platform-only lane failure above is retained
+explicitly: the platform evidence must travel in the coordinated parent package
+with lane-owned source changes. Root was notified. This builder will not add an
+unrelated shared change or forge an exception merely to turn that check green.
 
 No full test suite, student-source generator, SVG/PNG export, PDF render or
 Part A paragraph validator was run for this planning-only stage. Those must
