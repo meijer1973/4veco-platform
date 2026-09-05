@@ -33,7 +33,7 @@ pages, never contact sheets alone. Paragraaf pages1,2,4,5,6,7 were directly
 inspected at R6; pages3,8,9 at R7; page10 at R8. Opgaven pages1–3 were directly
 inspected at R7 and4–6 at R8; all five answers pages at R8. Every transfer was
 rechecked as exact PNG-byte equality with R8. Grayscale full-page probes3 and6
-in `222-grayscale-r8/` were also personally inspected: dashed old boundaries,
+in `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-grayscale-r8/` were also personally inspected: dashed old boundaries,
 filled new revenue, labels and arrows stay legible without colour. Both student
 PDFs and every student page remain exact bytes in R12, so those grayscale probes
 remain applicable. R12 answers page4 was directly inspected; page1 is exact to
@@ -147,6 +147,9 @@ additional time. Normal teacher observation may require pacing adjustments.
   and durable twelve-target authority checks PASS. Root retains full-suite and
   exact remote-CI/compatibility decisions; this packet has no CI waiver or
   claim of final-head remote CI.
+- Lesson output scope is textbook lane; platform source/tooling/evidence scope
+  is shared lane. Grayscale diagnostic files were relocated unchanged into
+  the existing sprint-evidence namespace; no classifier exception was added.
 - Optional current Inspectie mapping omitted. No protected-reference refresh,
   compliance claim, machine-unit promotion or D25 coverage claim. The new local
   Ev/TO machine-unit gap remains explicit as in frozen target metadata.
