@@ -12058,3 +12058,853 @@ Paragraph lane scope: PASS (textbook)
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-r5-r7-review-adoption-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:24:50.232Z`
+- finished_at: `2026-09-05T22:24:54.304Z`
+- duration_ms: `4072`
+- exit_code: `0`
+- stdout_sha256: `419bbc4eaa4c084c9c66bde2ed6a193ba20b81254460d409b17075502929b451`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS",
+  "role": "root exact review adoption, not QC or fresh visual review",
+  "base": {
+    "platform": "6294118b9bfecc334800293a2883177fccb91e2a",
+    "lessons": "d1bd891c052f8a2eed5cf08cc62b921218ebff6c"
+  },
+  "imports": {
+    "platform": "0db3e8e40ccc4faeb69d1308d1104db5fe737916",
+    "lessons": "25fbd9ba66f6ead59f512ec2eec1fd95159d834f"
+  },
+  "imported_file_counts": [
+    61,
+    57
+  ],
+  "binding_count": 269,
+  "bindings": [
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-1.png",
+      "sha256": "e64482170c9bf4117f064d72c81ccb73e5cb25220916188deb58867a0329a844",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-2.png",
+      "sha256": "821d393d65e82843b8f4b9d62f0fe4e4c75c57a4909ec9c3ac127a502c250591",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-3.png",
+      "sha256": "3aece13ce42a7ab19411768002f77629492a3be5c7865ec5732a9ffad3872b9a",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-4.png",
+      "sha256": "db38f2c267dff1647809ec28072a022f55fbf4d4bd4c214844f4e3404b0e64a0",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-5.png",
+      "sha256": "7c5579d04121743f7d9adee6140adf84dc5030e7da66c14c68948d5d3dcf2b51",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-6.png",
+      "sha256": "46b66e9cf590e2fa7414ed0347c3c4fdfa8014232931b731a0077f0f84657fc0",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-7.png",
+      "sha256": "36bedb4aa924e1990c8d5c61dd3a01710ff8c0a12d58e8ea65c132f31f2ab22b",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/before.json",
+      "sha256": "be99ada17166b9eef13fcde442ace44376ec0364b68e45a2c96e418207860c61",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/commands.jsonl",
+      "sha256": "fc32c03a188094bfb535abb67f7f6b9680cc2b7f774481d95c9ec6e9df9f8435",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/committed-scope-diagnostic.json",
+      "sha256": "4fdbfd5cbbdca3c23f2b2197726b43139f454e653f2fad91bff7906c6542cf21",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/committed-scope.json",
+      "sha256": "730fb347d63cf30a1abcf6c75ba3a7ba3206a6dda580e66d8a31218c600a1544",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/diagnostic-manifest.json",
+      "sha256": "456f5ba7fcb2409eeb422b53f719170c93c583811b15f8d3f408e21db4d22da2",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TE
+...[truncated 80515 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:25:18.620Z`
+- finished_at: `2026-09-05T22:25:18.719Z`
+- duration_ms: `99`
+- exit_code: `0`
+- stdout_sha256: `4fc27f991b8fac500c91ffc07a09671a5d48514bac4a3a017c104007c2f36838`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.1 "Kostenstructuren"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.1 Kostenstructuren – paragraaf.md
+  OK opgaven.md: 2.1.1 Kostenstructuren – opgaven.md
+  OK antwoorden.md: 2.1.1 Kostenstructuren – antwoorden.md
+  OK 2.1.1 Kostenstructuren – paragraaf.html (710.4 KB)
+  OK 2.1.1 Kostenstructuren – opgaven.html (245.1 KB)
+  OK 2.1.1 Kostenstructuren – antwoorden.html (18.8 KB)
+  OK 2.1.1 Kostenstructuren – paragraaf.pdf (518 KB)
+  OK 2.1.1 Kostenstructuren – opgaven.pdf (188 KB)
+  OK 2.1.1 Kostenstructuren – antwoorden.pdf (31 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 6 image refs all resolve
+  OK _assets/: 6 SVGs, 6 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.1 "Kostenstructuren" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:25:18.767Z`
+- finished_at: `2026-09-05T22:25:18.837Z`
+- duration_ms: `70`
+- exit_code: `0`
+- stdout_sha256: `f977ab456da0d2239f7aea063296f613f72130435d6db4b51b7dac122d3d7a6f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.1 "Kostenstructuren"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.1 Kostenstructuren – paragraaf.md
+  OK opgaven.md: 2.1.1 Kostenstructuren – opgaven.md
+  OK antwoorden.md: 2.1.1 Kostenstructuren – antwoorden.md
+  OK 2.1.1 Kostenstructuren – paragraaf.pdf (518 KB)
+  OK 2.1.1 Kostenstructuren – opgaven.pdf (188 KB)
+  OK 2.1.1 Kostenstructuren – antwoorden.pdf (31 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 6 image refs all resolve
+  OK _assets/: 6 SVGs, 6 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.1 "Kostenstructuren" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.1.1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:25:18.890Z`
+- finished_at: `2026-09-05T22:25:18.953Z`
+- duration_ms: `63`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `bb40cbbda6fc9bf4de7ab58429ae88e8f52faa06e303e3e537b2673788c9248e`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+node:internal/modules/cjs/loader:1451
+  throw err;
+  ^
+
+Error: Cannot find module 'C:\wt\book2-part-a-production-20260905\4veco-platform\build-scripts\sprints\check-book-outline-currentness.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1448:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1234:25)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.13.1
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.1.1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:25:51.138Z`
+- finished_at: `2026-09-05T22:25:52.683Z`
+- duration_ms: `1545`
+- exit_code: `0`
+- stdout_sha256: `2588f67f1bb250f78fd94fc551099e1000c659528e8d3a89119566c3a55d52cd`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.1.1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.1.3
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:25:52.727Z`
+- finished_at: `2026-09-05T22:25:54.362Z`
+- duration_ms: `1635`
+- exit_code: `0`
+- stdout_sha256: `48277b0f2fe486714ff2c591064559f0bbbbe9bb1bcfa1353c2feef3efe14b35`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.1.3
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:25:54.409Z`
+- finished_at: `2026-09-05T22:25:54.476Z`
+- duration_ms: `67`
+- exit_code: `0`
+- stdout_sha256: `98bd0a69fe0a84b61cd2ed9635d378e905bb82e75b4279ce2e15b0986040379e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.3 "Marginale kosten en marginale opbrengsten"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.3 Marginale kosten en marginale opbrengsten
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md
+  OK opgaven.md: 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md
+  OK antwoorden.md: 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html (1263.7 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html (578.9 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html (20.4 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf (948 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf (442 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf (34 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 6 image refs all resolve
+  OK _assets/: 6 SVGs, 6 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.3-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.3-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.3 "Marginale kosten en marginale opbrengsten" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:25:54.519Z`
+- finished_at: `2026-09-05T22:25:54.582Z`
+- duration_ms: `63`
+- exit_code: `0`
+- stdout_sha256: `dc454777bafb685d317d638022b0c33c1356f990582381e94a5320e8e78539ff`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.3 "Marginale kosten en marginale opbrengsten"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.3 Marginale kosten en marginale opbrengsten
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md
+  OK opgaven.md: 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md
+  OK antwoorden.md: 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf (948 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf (442 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf (34 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 6 image refs all resolve
+  OK _assets/: 6 SVGs, 6 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.3-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.3-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.3 "Marginale kosten en marginale opbrengsten" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:25:54.626Z`
+- finished_at: `2026-09-05T22:25:55.161Z`
+- duration_ms: `535`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TEXTBOOK-PRODUCTION-1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:25:55.206Z`
+- finished_at: `2026-09-05T22:25:55.375Z`
+- duration_ms: `169`
+- exit_code: `0`
+- stdout_sha256: `699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe -m unittest discover -s build-scripts/content/book-2/211 -p "test_*.py" -v
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:25:55.414Z`
+- finished_at: `2026-09-05T22:25:57.777Z`
+- duration_ms: `2363`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `9dcc9dda8d273a61229a5a9854ca45a7bf9eb034a2b45dd7f3c792653d9574bd`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+test_all_original_test_bodies_and_generator_remain_exact (test_bonus.BonusContractTests.test_all_original_test_bodies_and_generator_remain_exact) ... ok
+test_changed_existing_model_answer_is_rejected (test_bonus.BonusContractTests.test_changed_existing_model_answer_is_rejected) ... ok
+test_current_complete_sources_equal_exact_insertion (test_bonus.BonusContractTests.test_current_complete_sources_equal_exact_insertion) ... ok
+test_extra_criterion_is_rejected (test_bonus.BonusContractTests.test_extra_criterion_is_rejected) ... ok
+test_misplaced_block_is_rejected (test_bonus.BonusContractTests.test_misplaced_block_is_rejected) ... ok
+test_missing_one_criterion_is_rejected (test_bonus.BonusContractTests.test_missing_one_criterion_is_rejected) ... ok
+test_real_old_missing_block_is_rejected (test_bonus.BonusContractTests.test_real_old_missing_block_is_rejected) ... ok
+test_unrelated_source_drift_is_rejected (test_bonus.BonusContractTests.test_unrelated_source_drift_is_rejected) ... ok
+test_accessible_svg_titles_are_concise_noun_first (test_source.SourceContractTests.test_accessible_svg_titles_are_concise_noun_first) ... ok
+test_answer_coverage (test_source.SourceContractTests.test_answer_coverage) ... ok
+test_canonical_exercise_source_shared (test_source.SourceContractTests.test_canonical_exercise_source_shared) ... ok
+test_exact_four_goals (test_source.SourceContractTests.test_exact_four_goals) ... ok
+test_figures_add_one_relationship_at_a_time (test_source.SourceContractTests.test_figures_add_one_relationship_at_a_time) ... ok
+test_numeric_models_independently_recomputed (test_source.SourceContractTests.test_numeric_models_independently_recomputed) ... ok
+test_proof_revision_rejects_path_components_before_any_write (test_source.SourceContractTests.test_proof_revision_rejects_path_components_before_any_write) ... ok
+test_reproducible_sources_and_assets (test_source.SourceContractTests.test_reproducible_sources_and_assets) ... ok
+test_six_assets_and_every_reference (test_source.SourceContractTests.test_six_assets_and_every_reference) ... ok
+test_source_letters_are_not_pandoc_auto_lists (test_source.SourceContractTests.test_source_letters_are_not_pandoc_auto_lists) ... ok
+test_target_exact_source_and_points (test_source.SourceContractTests.test_target_exact_source_and_points) ... ok
+test_target_table_retains_every_frozen_cell (test_source.SourceContractTests.test_target_table_retains_every_frozen_cell) ... ok
+test_worked_image_native_short_alt_keeps_entire_caption (test_source.SourceContractTests.test_worked_image_native_short_alt_keeps_entire_caption) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 2.048s
+
+OK
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/211/check_render.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:25:57.824Z`
+- finished_at: `2026-09-05T22:25:58.657Z`
+- duration_ms: `833`
+- exit_code: `0`
+- stdout_sha256: `2f2f228314401c3705aa5341d9e4deef008f80215df96c09b079929040abd5de`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "paragraph": "2.1.1",
+  "automated_checks": [
+    "all printed text including footer >=12pt",
+    "all exercises present",
+    "exact target context/prompts in HTML and PDF",
+    "literal a-e plus4/3/3/3/4points",
+    "exact supplied header/row cells",
+    "four exact goals in paragraph PDF",
+    "identical exercise HTML fragments"
+  ],
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pages": 15,
+      "minimum_printed_font_pt_including_footer": 12.0,
+      "pdf_sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0"
+    },
+    {
+      "kind": "opgaven",
+      "pages": 9,
+      "minimum_printed_font_pt_including_footer": 12.0,
+      "pdf_sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953"
+    },
+    {
+      "kind": "antwoorden",
+      "pages": 7,
+      "minimum_printed_font_pt_including_footer": 12.0,
+      "pdf_sha256": "498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce"
+    }
+  ],
+  "visual_review_status": "NOT_SUPPLIED_BY_THIS_SCRIPT"
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe -m unittest discover -s build-scripts/content/book-2/213 -p "test_*.py" -v
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:25:58.708Z`
+- finished_at: `2026-09-05T22:26:00.094Z`
+- duration_ms: `1386`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `c0d8879213fbfca64d74bf7ce0dafa4d0cf83d2c82f95a1881d7c45415957f63`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+test_bad_position_count_and_coverage_are_rejected (test_bonus_contract.BonusCriteriaTests.test_bad_position_count_and_coverage_are_rejected) ... ok
+test_current_source_contains_bounded_criteria (test_bonus_contract.BonusCriteriaTests.test_current_source_contains_bounded_criteria) ... ok
+test_native_answer_html_preserves_three_criteria (test_bonus_contract.BonusCriteriaTests.test_native_answer_html_preserves_three_criteria) ... ok
+test_old_missing_block_negative_fixture_is_rejected (test_bonus_contract.BonusCriteriaTests.test_old_missing_block_negative_fixture_is_rejected) ... ok
+test_altered_target_fails_closed (test_source.SourceTests.test_altered_target_fails_closed) ... ok
+test_bad_prerequisite_stops_before_process_or_output_write (test_source.SourceTests.test_bad_prerequisite_stops_before_process_or_output_write) ... ok
+test_common_exercise_source_and_no_live_or_timing_copy (test_source.SourceTests.test_common_exercise_source_and_no_live_or_timing_copy) ... ok
+test_discrete_arithmetic_all_cases (test_source.SourceTests.test_discrete_arithmetic_all_cases) ... ok
+test_exact_seven_exercise_headings (test_source.SourceTests.test_exact_seven_exercise_headings) ... ok
+test_formula_totals_independently (test_source.SourceTests.test_formula_totals_independently) ... ok
+test_frozen_target_and_native_cells (test_source.SourceTests.test_frozen_target_and_native_cells) ... ok
+test_initial_and_completed_tables_match_case_values (test_source.SourceTests.test_initial_and_completed_tables_match_case_values) ... ok
+test_native_pandoc_short_alts_keep_full_captions (test_source.SourceTests.test_native_pandoc_short_alts_keep_full_captions) ... ok
+test_original_long_alts_and_caption_loss_are_rejected (test_source.SourceTests.test_original_long_alts_and_caption_loss_are_rejected) ... ok
+test_retrieval_combination_and_unequal_intervals (test_source.SourceTests.test_retrieval_combination_and_unequal_intervals) ... ok
+test_six_assets_safe_geometry_large_type (test_source.SourceTests.test_six_assets_safe_geometry_large_type) ... ok
+test_six_exact_noun_first_accessible_titles (test_source.SourceTests.test_six_exact_noun_first_accessible_titles) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.911s
+
+OK
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/213/check_render.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:26:00.144Z`
+- finished_at: `2026-09-05T22:26:09.129Z`
+- duration_ms: `8985`
+- exit_code: `0`
+- stdout_sha256: `751e7a6bfea46577d1438a1238fd6100dea87e740f80ac51d0d1d3aeb8cba5a0`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "paragraph": "2.1.3",
+  "automated_result": "PASS",
+  "inspection_status": "NOT_SUPPLIED_BY_THIS_SCRIPT",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pages": 14,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": 15.685038248697916,
+      "images": 6,
+      "pdf_sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+      "html_sha256": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b",
+      "zip_sha256": "15ffc25da00d0f3bfc84f93224191a08c9ab31387f7dc873a8df85dc7b76b499",
+      "page_geometry_checks": [
+        {
+          "page": 1,
+          "text_characters": 1437,
+          "images": 0
+        },
+        {
+          "page": 2,
+          "text_characters": 990,
+          "images": 2
+        },
+        {
+          "page": 3,
+          "text_characters": 1535,
+          "images": 1
+        },
+        {
+          "page": 4,
+          "text_characters": 1604,
+          "images": 0
+        },
+        {
+          "page": 5,
+          "text_characters": 988,
+          "images": 1
+        },
+        {
+          "page": 6,
+          "text_characters": 1357,
+          "images": 0
+        },
+        {
+          "page": 7,
+          "text_characters": 828,
+          "images": 1
+        },
+        {
+          "page": 8,
+          "text_characters": 1434,
+          "images": 0
+        },
+        {
+          "page": 9,
+          "text_characters": 757,
+          "images": 0
+        },
+        {
+          "page": 10,
+          "text_characters": 969,
+          "images": 1
+        },
+        {
+          "page": 11,
+          "text_characters": 1384,
+          "images": 0
+        },
+        {
+          "page": 12,
+          "text_characters": 1058,
+          "images": 0
+        },
+        {
+          "page": 13,
+          "text_characters": 1066,
+          "images": 0
+        },
+        {
+          "page": 14,
+          "text_characters": 1496,
+          "images": 0
+        }
+      ],
+      "actual_html_alternatives": [
+        {
+          "asset": "2.1.3_fig_1",
+          "alt": "Dezelfde dag: de tabelstappen van 0 naar 10 en van 10 naar 20 fotohouders, met TK 20, 50 en 100 euro.",
+          "length": 101,
+          "caption": "Dezelfde dag: de tabelstappen van 0 naar 10 en van 10 naar 20 fotohouders, met TK 20, 50 en 100 euro.",
+          "caption_attributes": {
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "asset": "2.1.3_fig_2",
+          "alt": "Dezelfde kostentabel met delta TK 30 en 50 euro, telkens delta Q 10, en MK 3 en 5 euro bij de rechter eindpunten.",
+          "length": 113,
+          "caption": "Dezelfde kostentabel met delta TK 30 en 50 euro, telkens delta Q 10, en MK 3 en 5 euro bij de rechter eindpunten.",
+          "caption_attributes": {
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "asset": "2.1.3_fig_3",
+          "alt": "MO bij vaste prijs: 80 euro extra opbrengst voor 10 extra fotohouders in beide intervallen, dus 8 euro per houder.",
+          "length": 114,
+          "caption": "Bij dezelfde hoeveelheden 0, 10 en 20 zijn de opbrengsten 0, 80 en 160 euro. Beide intervallen leveren 80 euro extra voor 10 extra producten: MO is telkens 8.",
+          "caption_attributes": {}
+        },
+        {
+          "asset": "2.1.3_fig_4",
+          "alt": "Winsttoename per extra fotohouder: 5 euro in interval 0�10 en 3 euro in interval 10�20, telkens MO min MK.",
+          "length": 106,
+          "caption": "Twee intervalkaarten: winst van min 20 naar 30 geeft 50 gedeeld door 10 is 5; winst van 30 naar 60 geeft 30 gedeeld door 10 is 3. Dit is telkens MO min MK.",
+          "caption_attributes": {}
+        },
+        {
+          "asset": "2.1.3_we_1",
+          "alt": "Eindpuntrijen van Lus en Bout: MK 2/2/2 tegenover 2/6/10; MO steeds 6 en 12 euro per extra
+...[truncated 7952 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-r5-r7-review-adoption-check.js reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-r5-r7-review-adoption-bindings.json
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:27:57.224Z`
+- finished_at: `2026-09-05T22:28:01.063Z`
+- duration_ms: `3839`
+- exit_code: `0`
+- stdout_sha256: `419bbc4eaa4c084c9c66bde2ed6a193ba20b81254460d409b17075502929b451`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS",
+  "role": "root exact review adoption, not QC or fresh visual review",
+  "base": {
+    "platform": "6294118b9bfecc334800293a2883177fccb91e2a",
+    "lessons": "d1bd891c052f8a2eed5cf08cc62b921218ebff6c"
+  },
+  "imports": {
+    "platform": "0db3e8e40ccc4faeb69d1308d1104db5fe737916",
+    "lessons": "25fbd9ba66f6ead59f512ec2eec1fd95159d834f"
+  },
+  "imported_file_counts": [
+    61,
+    57
+  ],
+  "binding_count": 269,
+  "bindings": [
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-1.png",
+      "sha256": "e64482170c9bf4117f064d72c81ccb73e5cb25220916188deb58867a0329a844",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-2.png",
+      "sha256": "821d393d65e82843b8f4b9d62f0fe4e4c75c57a4909ec9c3ac127a502c250591",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-3.png",
+      "sha256": "3aece13ce42a7ab19411768002f77629492a3be5c7865ec5732a9ffad3872b9a",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-4.png",
+      "sha256": "db38f2c267dff1647809ec28072a022f55fbf4d4bd4c214844f4e3404b0e64a0",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-5.png",
+      "sha256": "7c5579d04121743f7d9adee6140adf84dc5030e7da66c14c68948d5d3dcf2b51",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-6.png",
+      "sha256": "46b66e9cf590e2fa7414ed0347c3c4fdfa8014232931b731a0077f0f84657fc0",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-7.png",
+      "sha256": "36bedb4aa924e1990c8d5c61dd3a01710ff8c0a12d58e8ea65c132f31f2ab22b",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/before.json",
+      "sha256": "be99ada17166b9eef13fcde442ace44376ec0364b68e45a2c96e418207860c61",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/commands.jsonl",
+      "sha256": "fc32c03a188094bfb535abb67f7f6b9680cc2b7f774481d95c9ec6e9df9f8435",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/committed-scope-diagnostic.json",
+      "sha256": "4fdbfd5cbbdca3c23f2b2197726b43139f454e653f2fad91bff7906c6542cf21",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/committed-scope.json",
+      "sha256": "730fb347d63cf30a1abcf6c75ba3a7ba3206a6dda580e66d8a31218c600a1544",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/diagnostic-manifest.json",
+      "sha256": "456f5ba7fcb2409eeb422b53f719170c93c583811b15f8d3f408e21db4d22da2",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TE
+...[truncated 80515 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```

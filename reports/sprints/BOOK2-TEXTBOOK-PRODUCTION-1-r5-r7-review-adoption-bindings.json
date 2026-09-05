@@ -1,0 +1,1643 @@
+{
+  "result": "PASS",
+  "role": "root exact review adoption, not QC or fresh visual review",
+  "base": {
+    "platform": "6294118b9bfecc334800293a2883177fccb91e2a",
+    "lessons": "d1bd891c052f8a2eed5cf08cc62b921218ebff6c"
+  },
+  "imports": {
+    "platform": "0db3e8e40ccc4faeb69d1308d1104db5fe737916",
+    "lessons": "25fbd9ba66f6ead59f512ec2eec1fd95159d834f"
+  },
+  "imported_file_counts": [
+    61,
+    57
+  ],
+  "binding_count": 269,
+  "bindings": [
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-1.png",
+      "sha256": "e64482170c9bf4117f064d72c81ccb73e5cb25220916188deb58867a0329a844",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-2.png",
+      "sha256": "821d393d65e82843b8f4b9d62f0fe4e4c75c57a4909ec9c3ac127a502c250591",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-3.png",
+      "sha256": "3aece13ce42a7ab19411768002f77629492a3be5c7865ec5732a9ffad3872b9a",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-4.png",
+      "sha256": "db38f2c267dff1647809ec28072a022f55fbf4d4bd4c214844f4e3404b0e64a0",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-5.png",
+      "sha256": "7c5579d04121743f7d9adee6140adf84dc5030e7da66c14c68948d5d3dcf2b51",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-6.png",
+      "sha256": "46b66e9cf590e2fa7414ed0347c3c4fdfa8014232931b731a0077f0f84657fc0",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-7.png",
+      "sha256": "36bedb4aa924e1990c8d5c61dd3a01710ff8c0a12d58e8ea65c132f31f2ab22b",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/before.json",
+      "sha256": "be99ada17166b9eef13fcde442ace44376ec0364b68e45a2c96e418207860c61",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/commands.jsonl",
+      "sha256": "fc32c03a188094bfb535abb67f7f6b9680cc2b7f774481d95c9ec6e9df9f8435",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/committed-scope-diagnostic.json",
+      "sha256": "4fdbfd5cbbdca3c23f2b2197726b43139f454e653f2fad91bff7906c6542cf21",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/committed-scope.json",
+      "sha256": "730fb347d63cf30a1abcf6c75ba3a7ba3206a6dda580e66d8a31218c600a1544",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/diagnostic-manifest.json",
+      "sha256": "456f5ba7fcb2409eeb422b53f719170c93c583811b15f8d3f408e21db4d22da2",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/final-preservation.json",
+      "sha256": "b3923045f9a2fa0a2d9765d17be7a234dd30c788a34a99d31c001dba0da784e3",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/full-build.json",
+      "sha256": "cc61a16387281e199e34c85cdb8f4cd8a61722886097f3aac8642836d5a5980e",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/grayscale/2.1.1_ex_1.png",
+      "sha256": "e29710d014fba3ed507eb5750ec056d9b54c1661e2550555c0446625377f189e",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/grayscale/2.1.1_fig_1.png",
+      "sha256": "4dec00358ff6d93e518e484b3194813cdee71b42cc09a46beee58d8cf7eb7d47",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/grayscale/2.1.1_fig_2.png",
+      "sha256": "efdfbbd3a20fa84bfc478a45ff7a718d979ea6afd760a41ef983cc8f53320bda",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/grayscale/2.1.1_fig_3.png",
+      "sha256": "b30ba1b946482e77fcff42200e80867c1af70d8033caf8db4bc680db00819822",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/grayscale/2.1.1_fig_4.png",
+      "sha256": "73834172f3c8e19f77fd59bc9fa859e59db516e82ee332d351f688eb8f3f5024",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/grayscale/2.1.1_we_1.png",
+      "sha256": "6bb1678a370183174be2c3d5067f3415b6a249b4f03c268183231b1f9c745242",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/historical-R3-review-snapshot.md",
+      "sha256": "92b4a9462caf8316274fb58f8beef5c850147c44e6bf80b9a28fad442d9dbe96",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/history-binding.json",
+      "sha256": "0a355a564cb0c22fa16f442329abc04cb521ec6c4f28306f16d3669fc046eb26",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/independent-probes-recheck.json",
+      "sha256": "e0718efa24b51b7c2c79737abab5ce494f89abc29758a6bad1e890d61de93a00",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/independent-probes.json",
+      "sha256": "e0718efa24b51b7c2c79737abab5ce494f89abc29758a6bad1e890d61de93a00",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/native/2.1.1_ex_1.png",
+      "sha256": "fc76afb4f507cf8e09a62a9cf7a209ded71b93f87c72b97803d95afc6678f24f",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/native/2.1.1_fig_1.png",
+      "sha256": "21ca603069ffa83d885befa21696b1b0c7ea4a0f6fba8ed49021458000c8ba45",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/native/2.1.1_fig_2.png",
+      "sha256": "74f1384715e922ca04d10aa2978b852a98511044c6478f40e4bb260f72e0f8a8",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/native/2.1.1_fig_3.png",
+      "sha256": "c516afb77ff0ae8a8adfd031140cf6f23b3b7f02bbb5a2980649e8a9f58de8b6",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/native/2.1.1_fig_4.png",
+      "sha256": "c73e2eca425313c29eaf6bc1fbee0775971bfb08b6343d0ade52bbb70565701b",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/native/2.1.1_we_1.png",
+      "sha256": "f62cfd52983743e0ceb36a5963dd30030d8c220e30f100c6f30ae47361700bc6",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/opgaven/page-1.png",
+      "sha256": "0265dff094b5c47c408f27570bfdc82c7b26af885ab4615cff94943830b3c7bd",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/opgaven/page-2.png",
+      "sha256": "80f498601d5685a964abb1ab14dd3a0b9e1355fbba2400c7e17bdebb653e91a0",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/opgaven/page-3.png",
+      "sha256": "ca9cb50a8f074fe5d7f6e5b22c084aa22338485e48aedd8200c0d2ce7c82ead7",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/opgaven/page-4.png",
+      "sha256": "824050d16b84d572995c2bc2f336e87996d663708bf18709bf1686ef54c24f94",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/opgaven/page-5.png",
+      "sha256": "f9ddc86d86341a9c5db92152f71ceb1f0acc51f23a3b78fc2c454ddd9402f386",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/opgaven/page-6.png",
+      "sha256": "8470277e2c61cc5cc8a9107063ad476d441b3e77b0d027a1be54e435d5bf106b",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/opgaven/page-7.png",
+      "sha256": "c5464d633b525ce8a22dab994eab026340c4b4405ff7a105405730ac46dcfb07",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/opgaven/page-8.png",
+      "sha256": "be8a312018558ae7d2f6c8863a6180199265a9ddab0becbdd84329edb2a40749",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/opgaven/page-9.png",
+      "sha256": "4cbeef659c9a7122ee979f474c000385c6b434ad8408049cc9d58aee87722ba8",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-01.png",
+      "sha256": "87030bdf1a3a488614a7b6d0ff416d9a6747a4313bf2543e04c6c706728bb931",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-02.png",
+      "sha256": "9ec870cc1fad995863c1f64de5eb087cb39e10c2e03ec0091ff6b7335adbd0bb",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-03.png",
+      "sha256": "b5b7c16d919e8574fc2c8340f682bff8b42647c2a2aab0aa7eef43791d7b37f8",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-04.png",
+      "sha256": "2bf10d4e955d8a3e550cef5c58d8930e415a6693022bf8b66edfb8976cef391b",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-05.png",
+      "sha256": "4a5f0b08ffd3b4de246cedd74343da79102048e8e8b84b455cf34cb23c095b08",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-06.png",
+      "sha256": "40be04318742db356d11fff255fa1ec41db157cd0e7f5fd822b803e4f8277d7d",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-07.png",
+      "sha256": "6bf0b7a6fbdcb8933d95182b71c2a870d9a1b6c7a66826d6c35ca1875a410dc5",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-08.png",
+      "sha256": "027292161d798a897a2aeedaa1679169b1d6b46b90da5e221fdcbac2277e95e5",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-09.png",
+      "sha256": "d6211267c2c52ea8849f30e1470e1266dc9e86819c59c0ad75a04e62cac62846",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-10.png",
+      "sha256": "9d864c9b0783a0e83e6b58a55198d1f5bff02a435b208c814a22b88f940be2a0",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-11.png",
+      "sha256": "1d559076f6c91a5ae9c0a324d3a19502318cb2466b4243a00190ef1b338139be",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-12.png",
+      "sha256": "b448d6f5fe921f69489a5b833a3ff1249690043db1b9e6e30f72520b604bdc06",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-13.png",
+      "sha256": "f9b22bcdad2d331e5edcf43e2ebb0add294fa00b3f9c2441b82f18d88c0b193c",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-14.png",
+      "sha256": "e5e4f0e5f96d32db6ebd0c5eeec7dae6aa71b96c14ef68d706657296a0982c8f",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/paragraaf/page-15.png",
+      "sha256": "6d46b6ace8f0784f98e9ec6486ffe0514d4b50f492b3d11b18bf4852d8880460",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/pass0.json",
+      "sha256": "932054eddd25f3b94000d3b62ca95412b42021a79b7bd19b9b3e0fedfb577a79",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/rebuild.json",
+      "sha256": "2b7fed130701d8878eb0c3550c21e07515249f98c1a12dc95e7d264fdf7c609f",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-plan.md",
+      "sha256": "2f21df21dca175b5ef52dc9e1385b7fd01d76c7137caa0341d35219a3e26458e",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-probes.py",
+      "sha256": "688b8ad5352327da05c8077cbfe1220906a2b5a61f8deb0a0697b3ed8962f190",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-report.md",
+      "sha256": "a75755c7c2e6cdffb2defcbb5403814cf854d87bfae9a8172dd768aadb5b8023",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-run.py",
+      "sha256": "920554f2c4e4400adfb170d65593c8500ee7d376dd7658ce1e9ea798e238981f",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-scope-publication.md",
+      "sha256": "8041ab659ba5d4ca521e3f960790e0f94cdc5dc9804cbe97789ee6424652673d",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/contact-sheet.png",
+      "sha256": "2c31ca4d883b4bad5868d25da8ab2186a02e2626b4ceaa72cdc74c5400514e6d",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/manifest.json",
+      "sha256": "c43059f872f83290c9046187c20573ff70fe416c11f9d296b994df500d3bfdd4",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-001.png",
+      "sha256": "92d57ae0facbeb2187e5aca0c9e390319a0a2491f52efea0b6e1ae5a648253ff",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-002.png",
+      "sha256": "1ee899ff06b72c2041cd4276c81606dacc0fe354e284e482d8439138e6318f01",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-003.png",
+      "sha256": "adca03ec729ebb932579f47466c3030b7803f574debbc68b9736a8897806b3b2",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-004.png",
+      "sha256": "852cad800fdce6f3ab1f949800fecb60b13a5bd329afb60a003cc36a319a79ac",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-005.png",
+      "sha256": "73b25b12ed958e44a1666c786f21cf40f183d871af7a92dc5bd7175f0f9eb102",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-006.png",
+      "sha256": "0134af1084fbbc81d699fac529a60bbe8fdbe1d29b571ff64a9147bd3af40b64",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-007.png",
+      "sha256": "908234041ad21c7ee406169a69ec8c88403454d45c1da7750d750287c5fd50a9",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/contact-sheet.png",
+      "sha256": "c6dafd1f83ac97b122a27623d69d71d5ad01376e4bf6203cf3c9efac598f7d2e",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/manifest.json",
+      "sha256": "4d590327e27b6af49b8b8f2b039b545da171040a9652db279d36748717d704a0",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-001.png",
+      "sha256": "8dce5752b8b6f223d9ec3334349cbd8426705b1b11d2ad616885a7237a4ff02a",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-002.png",
+      "sha256": "866955304c64cf0873b478645fc92e14ffe4b93801cc959cace9d2993d99e0fc",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-003.png",
+      "sha256": "1de08ce2987bd5c875622cbb41aeb0784dbbca9b41b54f1ce6ba75a325d77758",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-004.png",
+      "sha256": "d2bace9d4ce1eaddf56936a7327a676d3ba44a86fc54d26d2505a2f528d59f31",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-005.png",
+      "sha256": "b166b196ebe8a1426d452fc4bcf803b2084c8c41ed51dd4b1e5078ebc48320b6",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-006.png",
+      "sha256": "471e09af924065c761fded16c8c74c77e0d9aebd7d83ff395b6d12344cf3918f",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-007.png",
+      "sha256": "b6ef874b19f6630f3aaefc62ef4f3874ebdbc3f7049fe77d34e7f0ad79b70845",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-008.png",
+      "sha256": "da00760a5d51eca93a00da72bf6396f092b69d1239448f956a071bbc8b60c54a",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-009.png",
+      "sha256": "59ccfb6970899b936e17c94812a03806f05150fb9af4c258c36fe2b7050386f6",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/contact-sheet.png",
+      "sha256": "3f9f550afe9ed83693a4b0bf795231eed2e729b9ad8391f056dc287c2d7841d1",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/manifest.json",
+      "sha256": "9f38deb5fc8c6766e5eb7ffb821c1a76d5c5b118dd03440af82305f0b4fa3b36",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-001.png",
+      "sha256": "1b461934c3fd5c9519572a985379f753223be62288631675cfa9d084dc518ac6",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-002.png",
+      "sha256": "f5b3b1f3fd2a80f8c98ef56bb892df648733b8b9e550dee8106dbc6673e881d4",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-003.png",
+      "sha256": "259cbd5a05f47b70d00795813ac71750a421c17931fd269a8a17a8c78e130cc5",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-004.png",
+      "sha256": "c65f51e3136c2d8ef6a68f8d2f7cb8dbb912fdc2da8a63a72aa5bff49b283d6e",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-005.png",
+      "sha256": "d401752356839f500b0c32ea70585a953a195978e16124b1c495c6e3fab88a7e",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-006.png",
+      "sha256": "90f31298fe89748309cbe613aff0bd50982f57dd8a9764984893a8cd4f522a55",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-007.png",
+      "sha256": "e44a2d79019f42202108a1efe6e801ce057fe7400d0df8904946b88acb09394c",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-008.png",
+      "sha256": "37007229bd4350a5cff8703beaa64c12118212ad1255e1a23da645a00e92267d",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-009.png",
+      "sha256": "f1160cf726570230df25ff58e834aa1af5adb419590fd5eb0ef59532ac1c6689",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-010.png",
+      "sha256": "29ce7ee7dd65cb9bd84df4fa4f32009c57f743086af71abfdde577fa10e9e9f0",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-011.png",
+      "sha256": "eaf11cf9668844a9211f017804040f9133674d7c7ec93a442eaadaaa4284cd04",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-012.png",
+      "sha256": "838e5b48036bd631319f3f0fdaa8e32a843eb2e936e78922d6d7f71c17824263",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-013.png",
+      "sha256": "72b151067a8cbae1976d3b125fb19c6b70726293fe7eca8b256ef120a10a5f08",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-014.png",
+      "sha256": "83ef57f59d7cfc7ebc5e38ba3e2f26186b4902c5773e03f69f4b7eed11099ef0",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-independent-review-plan-r7.md",
+      "sha256": "e2376deb76da0c6163efbfcc71a7e0d90c0741a51f5e00d05b2887e5cefa30e9",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-paragraph-review-r7.md",
+      "sha256": "96a2750b906da3e23b57423730313061b8a46826dcad0cf9069ed03ca504b13f",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/arithmetic.json",
+      "sha256": "e870dd1151e400491c17b4cf36b0b83cfdfddca8d4b4e2f507ee35af97c690fd",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/command-log.jsonl",
+      "sha256": "aace909c4bfb3a3759e14bfefd4c6064ca2076182d2f0bc63e3d962b35a956ae",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/committed-scope.json",
+      "sha256": "04bf7a207e000efc6d9cc9a7b957fe5c574aae709f5446fcbe846b170abd7add",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/committed_scope.py",
+      "sha256": "d5ade851314326aef365315a71517af2cba3305205f6b5a34661963c679c29f7",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/delta.json",
+      "sha256": "88dcf0429cd42a555b491998aff3097bc13b0582dce65c2b61500a9cd1dc8a4a",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/grayscale/page-002.png",
+      "sha256": "004084b5fdd9e0d334b9fff765cc78abc8354c08f1786cb6d901e059ddcd419f",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/grayscale/page-003.png",
+      "sha256": "ad6d3fdd1bb7132efa6b95a685fa946966576595cb0918f6513d34088165b47a",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/grayscale/page-005.png",
+      "sha256": "f7bb3c55c9de61deb3af2a59bdeaa52c25ce1fd0a951fe5812d5c84ca72b9413",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/grayscale/page-007.png",
+      "sha256": "74448eeabc7213d0ace5df6b5ef3eca5c3200667fd1c9b26a8a741c8d23170c3",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/grayscale/page-010.png",
+      "sha256": "3a0ad3a2dba523cfacb33c7c198c61ffa27352e1774aefe8c74d12d59a5f2d0d",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/pass0.json",
+      "sha256": "090de0013e582e44809fc7650ae3003ace962f39f4c10fd1358010876b9e46ff",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/personal-bindings.json",
+      "sha256": "f960532dc9d473a9efbf49f31af337ada09edbc1471124a0085e02b7c1a1fc23",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/personal-inspection.md",
+      "sha256": "06874cc2f0aaffc05b88bcaf31e327df144a3e199ee8eff6febe856bca2a1368",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/publication.md",
+      "sha256": "fc2cfa4b15a8dfa9b4c5ca17c8bbddb3b6472146e706acb25b14c5e5ddac5964",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/rebuild.json",
+      "sha256": "1e20a496cca66ac50b8ade39bda01d07101e5477b1bc452c930ece350644d399",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/relocated-build.json",
+      "sha256": "d4daa5a4c9cdc4d9f82de353a1a9241647dc0c6226e811c62a5122477736095a",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/render.json",
+      "sha256": "106257b4c7e52fd30ecbe0b29b9081c281325d8304fad12b49e32a4f2bd2b570",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/review_probes.py",
+      "sha256": "55d94fe1f4d90f643560e3dc1e6fe851c493478c75be8dcd5f8296f66c936f3f",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/run_command.py",
+      "sha256": "1877c6daccdf3fc20b39a314d5f6be2216f1e84654b35b5b7248f02fa3aabaad",
+      "role": "exact published review evidence"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-review.md",
+      "sha256": "a75755c7c2e6cdffb2defcbb5403814cf854d87bfae9a8172dd768aadb5b8023",
+      "role": "current independent paragraph review, not QC"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md",
+      "sha256": "5064642034fac9763202d2424b87cef2f7cc909aaf3a6031b90d247ee44409c3",
+      "role": "current independent paragraph review, not QC"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-paragraph-review-r7.md",
+      "sha256": "96a2750b906da3e23b57423730313061b8a46826dcad0cf9069ed03ca504b13f",
+      "role": "full independent report"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-BONUS-build-r5.json",
+      "sha256": "f1c4bcf969feeb813d9421a096752e1e452f4d4244cb5a8a3eb50a8e835a341a",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/b2_211.py",
+      "sha256": "621b68dea3e3e77608ae2b294dc6d6c47e01b525c2ca8b203e683b101e8e3d4f",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/211/theory.md",
+      "sha256": "c945ae6634ebbcd4b6411ccbaa8394c5abcc5a1a6b85326588a28a7629c79dfe",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/211/exercises.md",
+      "sha256": "a5e82f2cf9d0b89b749dd7590d7023f9ce8a780ce48402365a7bef2c628dd4b9",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/211/answers.md",
+      "sha256": "86bde131fb02951fda0731d4f56cd1c31128aa80f19176e4e75849a65401b4a7",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/211/target-answers.md",
+      "sha256": "e7ddb5385e91f18c24ca856e99a7bbd21a8de57b660be5335ef4cc4650280e94",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md",
+      "sha256": "de7abc910f6ec940eb329abd003085921f32409956ec1e0450bcc4a5454eb6b5",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html",
+      "sha256": "10721f1ad745b8e1358ba354c5ded64a74367f5081eaf1c676ecb88dbe10e44b",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
+      "sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_2.svg",
+      "sha256": "bbf506bd1be95e272a9bd31a42143147f58dc545c5ff243ff8d026b0d4c6c66d",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_2.png",
+      "sha256": "74f1384715e922ca04d10aa2978b852a98511044c6478f40e4bb260f72e0f8a8",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_3.svg",
+      "sha256": "a5a2e464a51461f78f1b98056520c5b3a32e9baef577424f405b64c4790326eb",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_3.png",
+      "sha256": "c516afb77ff0ae8a8adfd031140cf6f23b3b7f02bbb5a2980649e8a9f58de8b6",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg",
+      "sha256": "9043146770454ad70f5968185c49de46bee6036f5e4748a9caac8b78cebb1005",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.png",
+      "sha256": "21ca603069ffa83d885befa21696b1b0c7ea4a0f6fba8ed49021458000c8ba45",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_4.svg",
+      "sha256": "d49d97740e3747855613ea332df481caf9bb71071f75f08626502d1a474e518d",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_4.png",
+      "sha256": "c73e2eca425313c29eaf6bc1fbee0775971bfb08b6343d0ade52bbb70565701b",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_we_1.svg",
+      "sha256": "8f60486f0d66e0d728570e9d9f40851e6834d2c5cbf18db96ea091893b6d2530",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_we_1.png",
+      "sha256": "f62cfd52983743e0ceb36a5963dd30030d8c220e30f100c6f30ae47361700bc6",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_ex_1.svg",
+      "sha256": "c2854b76d42ee1a2654f4e13886e5184b17119786bff71b7b908bedf4aae83e3",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_ex_1.png",
+      "sha256": "fc76afb4f507cf8e09a62a9cf7a209ded71b93f87c72b97803d95afc6678f24f",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/manifest.json",
+      "sha256": "b8d14f27f2b361cbcad24723122c909c8c591a8f718bbd5d150156fcd71ab6d9",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-001.png",
+      "sha256": "87030bdf1a3a488614a7b6d0ff416d9a6747a4313bf2543e04c6c706728bb931",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-002.png",
+      "sha256": "9ec870cc1fad995863c1f64de5eb087cb39e10c2e03ec0091ff6b7335adbd0bb",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-003.png",
+      "sha256": "b5b7c16d919e8574fc2c8340f682bff8b42647c2a2aab0aa7eef43791d7b37f8",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-004.png",
+      "sha256": "2bf10d4e955d8a3e550cef5c58d8930e415a6693022bf8b66edfb8976cef391b",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-005.png",
+      "sha256": "4a5f0b08ffd3b4de246cedd74343da79102048e8e8b84b455cf34cb23c095b08",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-006.png",
+      "sha256": "40be04318742db356d11fff255fa1ec41db157cd0e7f5fd822b803e4f8277d7d",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-007.png",
+      "sha256": "6bf0b7a6fbdcb8933d95182b71c2a870d9a1b6c7a66826d6c35ca1875a410dc5",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-008.png",
+      "sha256": "027292161d798a897a2aeedaa1679169b1d6b46b90da5e221fdcbac2277e95e5",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-009.png",
+      "sha256": "d6211267c2c52ea8849f30e1470e1266dc9e86819c59c0ad75a04e62cac62846",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-010.png",
+      "sha256": "9d864c9b0783a0e83e6b58a55198d1f5bff02a435b208c814a22b88f940be2a0",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-011.png",
+      "sha256": "1d559076f6c91a5ae9c0a324d3a19502318cb2466b4243a00190ef1b338139be",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-012.png",
+      "sha256": "b448d6f5fe921f69489a5b833a3ff1249690043db1b9e6e30f72520b604bdc06",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-013.png",
+      "sha256": "f9b22bcdad2d331e5edcf43e2ebb0add294fa00b3f9c2441b82f18d88c0b193c",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-014.png",
+      "sha256": "e5e4f0e5f96d32db6ebd0c5eeec7dae6aa71b96c14ef68d706657296a0982c8f",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-015.png",
+      "sha256": "6d46b6ace8f0784f98e9ec6486ffe0514d4b50f492b3d11b18bf4852d8880460",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md",
+      "sha256": "bacccc1c9b063c4c786f2749d31993d94eb671fdc5bf0a899fb123d89bc0558b",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html",
+      "sha256": "9e27b80089dee95fa4ac61a3f07baaf95ff3650518943a730db122befec2a6f8",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
+      "sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/manifest.json",
+      "sha256": "e5615a2689ea0e278795d14e0cc2462e685e9b1fa430a40c1715c2eb1dad1532",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-001.png",
+      "sha256": "0265dff094b5c47c408f27570bfdc82c7b26af885ab4615cff94943830b3c7bd",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-002.png",
+      "sha256": "80f498601d5685a964abb1ab14dd3a0b9e1355fbba2400c7e17bdebb653e91a0",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-003.png",
+      "sha256": "ca9cb50a8f074fe5d7f6e5b22c084aa22338485e48aedd8200c0d2ce7c82ead7",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-004.png",
+      "sha256": "824050d16b84d572995c2bc2f336e87996d663708bf18709bf1686ef54c24f94",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-005.png",
+      "sha256": "f9ddc86d86341a9c5db92152f71ceb1f0acc51f23a3b78fc2c454ddd9402f386",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-006.png",
+      "sha256": "8470277e2c61cc5cc8a9107063ad476d441b3e77b0d027a1be54e435d5bf106b",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-007.png",
+      "sha256": "c5464d633b525ce8a22dab994eab026340c4b4405ff7a105405730ac46dcfb07",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-008.png",
+      "sha256": "be8a312018558ae7d2f6c8863a6180199265a9ddab0becbdd84329edb2a40749",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-009.png",
+      "sha256": "4cbeef659c9a7122ee979f474c000385c6b434ad8408049cc9d58aee87722ba8",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md",
+      "sha256": "f7572e3d4f2fc5bc092562eb06e76ebb0480fbbc8aa1ea01d3752a7251cbbdc9",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html",
+      "sha256": "b2e86d7bae4d1bdbb7cd47a55cd6e83254398618f0954fe3ce09cdb75927c916",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf",
+      "sha256": "498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/manifest.json",
+      "sha256": "f9931b00be4ef80a0539c5b9948073bb8655ebe820887ea2fb0e44d7e787ef04",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-001.png",
+      "sha256": "e64482170c9bf4117f064d72c81ccb73e5cb25220916188deb58867a0329a844",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-002.png",
+      "sha256": "821d393d65e82843b8f4b9d62f0fe4e4c75c57a4909ec9c3ac127a502c250591",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-003.png",
+      "sha256": "3aece13ce42a7ab19411768002f77629492a3be5c7865ec5732a9ffad3872b9a",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-004.png",
+      "sha256": "db38f2c267dff1647809ec28072a022f55fbf4d4bd4c214844f4e3404b0e64a0",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-005.png",
+      "sha256": "7c5579d04121743f7d9adee6140adf84dc5030e7da66c14c68948d5d3dcf2b51",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-006.png",
+      "sha256": "46b66e9cf590e2fa7414ed0347c3c4fdfa8014232931b731a0077f0f84657fc0",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-007.png",
+      "sha256": "36bedb4aa924e1990c8d5c61dd3a01710ff8c0a12d58e8ea65c132f31f2ab22b",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/build_pdf.py",
+      "sha256": "6ae0ea8829a68553d21e86408ca98bc6d79edebb046b146fef9ed521bf26c5b3",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-plan.md",
+      "sha256": "f46c7aa444ba6fef1f6f885b34bd52963fccac3cdc7b13b898eb6665219c4cd0",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md",
+      "sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/historical-R3-review-snapshot.md",
+      "sha256": "92b4a9462caf8316274fb58f8beef5c850147c44e6bf80b9a28fad442d9dbe96",
+      "role": "preserved old review, explicitly superseded"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-quality-ref.yaml",
+      "sha256": "0dddb6e9d8f3a8da0e0f31e67dafabf53b99feb6ad86ce72039480dd7e12ea18",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md",
+      "sha256": "724a080619f2f072151edf20980071b3bef18cd60d1904c78f4aa906be8917c8",
+      "role": "reviewed 211 source/output/proof preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "sha256": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html",
+      "sha256": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+      "sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.zip",
+      "sha256": "15ffc25da00d0f3bfc84f93224191a08c9ab31387f7dc873a8df85dc7b76b499",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "sha256": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html",
+      "sha256": "b78090ef65fb0544e46b59353660980a79e2bd2b5774ef64955154abe23a3c98",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+      "sha256": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.zip",
+      "sha256": "1a841ffb08f77e0a50559791707023c85d803f6aea263095449fd74fcf451dae",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "sha256": "2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html",
+      "sha256": "3c536f28de7f95a133cf80b5f3e4a351912af5103cf5ed48772fdf9d550a11cb",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+      "sha256": "d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip",
+      "sha256": "9d1a0197cd02451e2168a31472ce5351aef9bd9169e8af535b261ba2353930a1",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_1.svg",
+      "sha256": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_1.png",
+      "sha256": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_2.svg",
+      "sha256": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_2.png",
+      "sha256": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_3.svg",
+      "sha256": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_3.png",
+      "sha256": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_4.svg",
+      "sha256": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_4.png",
+      "sha256": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_we_1.svg",
+      "sha256": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_we_1.png",
+      "sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_ex_1.svg",
+      "sha256": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_ex_1.png",
+      "sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e",
+      "role": "reviewed 213 native output preserved at root"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/personal-inspection.md",
+      "sha256": "06874cc2f0aaffc05b88bcaf31e327df144a3e199ee8eff6febe856bca2a1368",
+      "role": "attributed reviewer observations, not new root views"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/relocated-build.json",
+      "sha256": "d4daa5a4c9cdc4d9f82de353a1a9241647dc0c6226e811c62a5122477736095a",
+      "role": "immutable isolated full-build manifest"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/manifest.json",
+      "sha256": "9f38deb5fc8c6766e5eb7ffb821c1a76d5c5b118dd03440af82305f0b4fa3b36",
+      "role": "immutable PENDING native manifest"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-001.png",
+      "sha256": "1b461934c3fd5c9519572a985379f753223be62288631675cfa9d084dc518ac6",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-002.png",
+      "sha256": "f5b3b1f3fd2a80f8c98ef56bb892df648733b8b9e550dee8106dbc6673e881d4",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-003.png",
+      "sha256": "259cbd5a05f47b70d00795813ac71750a421c17931fd269a8a17a8c78e130cc5",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-004.png",
+      "sha256": "c65f51e3136c2d8ef6a68f8d2f7cb8dbb912fdc2da8a63a72aa5bff49b283d6e",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-005.png",
+      "sha256": "d401752356839f500b0c32ea70585a953a195978e16124b1c495c6e3fab88a7e",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-006.png",
+      "sha256": "90f31298fe89748309cbe613aff0bd50982f57dd8a9764984893a8cd4f522a55",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-007.png",
+      "sha256": "e44a2d79019f42202108a1efe6e801ce057fe7400d0df8904946b88acb09394c",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-008.png",
+      "sha256": "37007229bd4350a5cff8703beaa64c12118212ad1255e1a23da645a00e92267d",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-009.png",
+      "sha256": "f1160cf726570230df25ff58e834aa1af5adb419590fd5eb0ef59532ac1c6689",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-010.png",
+      "sha256": "29ce7ee7dd65cb9bd84df4fa4f32009c57f743086af71abfdde577fa10e9e9f0",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-011.png",
+      "sha256": "eaf11cf9668844a9211f017804040f9133674d7c7ec93a442eaadaaa4284cd04",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-012.png",
+      "sha256": "838e5b48036bd631319f3f0fdaa8e32a843eb2e936e78922d6d7f71c17824263",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-013.png",
+      "sha256": "72b151067a8cbae1976d3b125fb19c6b70726293fe7eca8b256ef120a10a5f08",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-014.png",
+      "sha256": "83ef57f59d7cfc7ebc5e38ba3e2f26186b4902c5773e03f69f4b7eed11099ef0",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/manifest.json",
+      "sha256": "4d590327e27b6af49b8b8f2b039b545da171040a9652db279d36748717d704a0",
+      "role": "immutable PENDING native manifest"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-001.png",
+      "sha256": "8dce5752b8b6f223d9ec3334349cbd8426705b1b11d2ad616885a7237a4ff02a",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-002.png",
+      "sha256": "866955304c64cf0873b478645fc92e14ffe4b93801cc959cace9d2993d99e0fc",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-003.png",
+      "sha256": "1de08ce2987bd5c875622cbb41aeb0784dbbca9b41b54f1ce6ba75a325d77758",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-004.png",
+      "sha256": "d2bace9d4ce1eaddf56936a7327a676d3ba44a86fc54d26d2505a2f528d59f31",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-005.png",
+      "sha256": "b166b196ebe8a1426d452fc4bcf803b2084c8c41ed51dd4b1e5078ebc48320b6",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-006.png",
+      "sha256": "471e09af924065c761fded16c8c74c77e0d9aebd7d83ff395b6d12344cf3918f",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-007.png",
+      "sha256": "b6ef874b19f6630f3aaefc62ef4f3874ebdbc3f7049fe77d34e7f0ad79b70845",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-008.png",
+      "sha256": "da00760a5d51eca93a00da72bf6396f092b69d1239448f956a071bbc8b60c54a",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-009.png",
+      "sha256": "59ccfb6970899b936e17c94812a03806f05150fb9af4c258c36fe2b7050386f6",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/manifest.json",
+      "sha256": "c43059f872f83290c9046187c20573ff70fe416c11f9d296b994df500d3bfdd4",
+      "role": "immutable PENDING native manifest"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-001.png",
+      "sha256": "92d57ae0facbeb2187e5aca0c9e390319a0a2491f52efea0b6e1ae5a648253ff",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-002.png",
+      "sha256": "1ee899ff06b72c2041cd4276c81606dacc0fe354e284e482d8439138e6318f01",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-003.png",
+      "sha256": "adca03ec729ebb932579f47466c3030b7803f574debbc68b9736a8897806b3b2",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-004.png",
+      "sha256": "852cad800fdce6f3ab1f949800fecb60b13a5bd329afb60a003cc36a319a79ac",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-005.png",
+      "sha256": "73b25b12ed958e44a1666c786f21cf40f183d871af7a92dc5bd7175f0f9eb102",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-006.png",
+      "sha256": "0134af1084fbbc81d699fac529a60bbe8fdbe1d29b571ff64a9147bd3af40b64",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-007.png",
+      "sha256": "908234041ad21c7ee406169a69ec8c88403454d45c1da7750d750287c5fd50a9",
+      "role": "actual reviewer full page"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/grayscale/page-002.png",
+      "sha256": "004084b5fdd9e0d334b9fff765cc78abc8354c08f1786cb6d901e059ddcd419f",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/grayscale/page-003.png",
+      "sha256": "ad6d3fdd1bb7132efa6b95a685fa946966576595cb0918f6513d34088165b47a",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/grayscale/page-005.png",
+      "sha256": "f7bb3c55c9de61deb3af2a59bdeaa52c25ce1fd0a951fe5812d5c84ca72b9413",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/grayscale/page-007.png",
+      "sha256": "74448eeabc7213d0ace5df6b5ef3eca5c3200667fd1c9b26a8a741c8d23170c3",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-review-evidence/grayscale/page-010.png",
+      "sha256": "3a0ad3a2dba523cfacb33c7c198c61ffa27352e1774aefe8c74d12d59a5f2d0d",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_1.png",
+      "sha256": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_2.png",
+      "sha256": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_3.png",
+      "sha256": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_4.png",
+      "sha256": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_we_1.png",
+      "sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_ex_1.png",
+      "sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/b2_213.py",
+      "sha256": "6a45771783de221c3d65b32d423c1f7e90c90e84a79d30c4e175bba8836b056a",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/213/theory.md",
+      "sha256": "df6e40009454bc43f4915fa3edbf8c613a888ebbd2d0b7b59414bd3f70b4d5e7",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/213/exercises.md",
+      "sha256": "bd16efcc6ac0ef9c2713b61587c8613fa353e98cc696e8a172ea931e11c35b32",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/213/answers.md",
+      "sha256": "91d6074e6b843a7d31e8ab03f7e3fc6a959408f64146fc4ef17c3fb6ca0b8d29",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/213/target-answers.md",
+      "sha256": "aa59a0ab3d69a1177ea90b521d510f34576480838b21e13f4f169c7812639f09",
+      "role": "213 source or observed graphic"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-quality-ref.yaml",
+      "sha256": "0dddb6e9d8f3a8da0e0f31e67dafabf53b99feb6ad86ce72039480dd7e12ea18",
+      "role": "historical QC unchanged, not current acceptance"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "sha256": "c96a4af45cfbf6c43ceda27ecf6dd231c75667ece58b378b9080975fe4be717f",
+      "role": "historical QC unchanged, not current acceptance"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md",
+      "sha256": "724a080619f2f072151edf20980071b3bef18cd60d1904c78f4aa906be8917c8",
+      "role": "historical handoff unchanged"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "sha256": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+      "role": "current root predecessor, not old isolated213 pin"
+    }
+  ],
+  "inventory": {
+    "accepted": 6,
+    "candidate": 12,
+    "legacy": 8,
+    "planned": 15,
+    "total": 41,
+    "physical_PDFs": 26
+  },
+  "new_QC_or_handoff": false,
+  "full_root_builds_212_213": "NOT_RUN: known stale predecessor bindings await separately reviewed S1 succession"
+}
