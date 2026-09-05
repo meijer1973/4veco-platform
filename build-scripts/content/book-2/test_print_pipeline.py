@@ -95,6 +95,15 @@ class PrintPipelineTests(unittest.TestCase):
     def test_bounded_structural_inline_css_and_anchors_remain_supported(self):
         validate_source_html(BeautifulSoup('<div class="page-break" style="break-before: page;"></div><table><colgroup><col style="width: 40%"></colgroup></table><a href="#p1">1</a>', "html.parser"))
 
+    def test_real_prepare_rejects_ping_and_math_shrinking_attributes(self):
+        for fragment in [
+            '<a href="#x" ping="https://example.invalid/track">A</a>',
+            '<math scriptsizemultiplier="0.1" scriptminsize="1pt"><mi>x</mi></math>',
+            '<math scriptminsize="1pt"><mi>x</mi></math>',
+        ]:
+            with self.subTest(fragment=fragment), self.assertRaises(ValueError):
+                prepare_html('# Kosten\n\n' + fragment + '\n', self.source)
+
     def test_body_table_and_front_readability_floor(self):
         self.assertIn("font-size: 12pt", CSS)
         self.assertNotIn("11pt", CSS)
@@ -155,6 +164,31 @@ class PrintPipelineTests(unittest.TestCase):
             return result
         with patch("print_pipeline.prepare_html", side_effect=mutate_after_read):
             with self.assertRaisesRegex(ValueError, "Stale proof input: source_md"):
+                build_document(self.source)
+
+    def test_build_records_consumed_html_snapshot_not_later_disk_bytes(self):
+        from weasyprint import HTML
+        self.source.write_text('# Original source\n', encoding="utf-8")
+        real_write = HTML.write_pdf
+        html_path = self.source.with_suffix(".html")
+        def mutate_during_render(renderer, *args, **kwargs):
+            result = real_write(renderer, *args, **kwargs)
+            html_path.write_text('<html><body>Changed HTML</body></html>', encoding="utf-8")
+            return result
+        with patch.object(HTML, "write_pdf", new=mutate_during_render):
+            with self.assertRaisesRegex(ValueError, "Stale proof input: source_html"):
+                build_document(self.source)
+
+    def test_build_records_generated_pdf_bytes_not_mutated_disk_bytes(self):
+        self.source.write_text('# Original source\n', encoding="utf-8")
+        real_write = Path.write_bytes
+        def mutate_pdf_write(path, data):
+            result = real_write(path, data)
+            if path.suffix == '.pdf':
+                real_write(path, data + b'\nchanged')
+            return result
+        with patch.object(Path, "write_bytes", new=mutate_pdf_write):
+            with self.assertRaisesRegex(ValueError, "Stale proof input: source_pdf"):
                 build_document(self.source)
 
 

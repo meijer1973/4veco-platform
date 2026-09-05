@@ -74,6 +74,22 @@ SAFE_INLINE_CSS = {
     "page-break-after", "page-break-inside", "text-align", "vertical-align",
     "width", "max-width", "height", "max-height",
 }
+GLOBAL_ATTRIBUTES = {"id", "class", "lang", "xml:lang", "title", "role", "style", "aria-label", "aria-hidden", "aria-describedby", "aria-labelledby"}
+ELEMENT_ATTRIBUTES = {
+    "html": {"xmlns"}, "meta": {"charset", "name", "content"},
+    "a": {"href"}, "img": {"src", "alt", "width", "height"},
+    "ol": {"start", "type", "reversed"}, "li": {"value"},
+    "th": {"scope", "colspan", "rowspan", "headers"},
+    "td": {"colspan", "rowspan", "headers"}, "col": {"span"},
+    "colgroup": {"span"}, "time": {"datetime"},
+    "math": {"xmlns", "display", "alttext"}, "annotation": {"encoding"},
+    "mo": {"stretchy", "fence", "separator", "form", "accent", "lspace", "rspace"},
+    "mi": {"mathvariant"}, "mspace": {"width", "height", "depth"},
+    "mover": {"accent"}, "munder": {"accentunder"},
+    "munderover": {"accent", "accentunder"},
+    "mtable": {"columnalign", "rowalign", "columnspacing", "rowspacing"},
+    "mtd": {"columnalign", "rowalign", "columnspan", "rowspan"},
+}
 
 
 def validate_source_html(soup: BeautifulSoup) -> None:
@@ -86,6 +102,8 @@ authored Markdown; arbitrary CSS can load resources or shrink reviewed text.
         if tag.name not in ALLOWED_TAGS:
             raise ValueError(f"Unsupported print-source element: {tag.name}")
         for attribute in tag.attrs:
+            if attribute not in GLOBAL_ATTRIBUTES | ELEMENT_ATTRIBUTES.get(tag.name, set()):
+                raise ValueError(f"Unsupported print-source attribute: {tag.name}.{attribute}")
             if attribute.lower().startswith("on") or attribute.lower() in {
                 "srcset", "poster", "background", "action", "formaction", "data", "http-equiv",
             }:
@@ -201,11 +219,14 @@ def build_document(source: Path, *, pandoc: str = "pandoc") -> dict:
         return default_url_fetcher(url, *args, **kwargs)
 
     html_path, pdf_path = source.with_suffix(".html"), source.with_suffix(".pdf")
-    html_path.write_text(html, encoding="utf-8", newline="\n")
-    HTML(string=html, url_fetcher=local_fetcher).write_pdf(pdf_path)
+    html = html.replace("\r\n", "\n").replace("\r", "\n")
+    html_bytes = html.encode("utf-8")
+    html_path.write_bytes(html_bytes)
+    pdf_bytes = HTML(string=html, url_fetcher=local_fetcher).write_pdf()
+    pdf_path.write_bytes(pdf_bytes)
     record = {"source_md": str(source), "source_sha256": source_hash,
-              "source_html": str(html_path), "html_sha256": digest(html_path),
-              "source_pdf": str(pdf_path), "pdf_sha256": digest(pdf_path), "assets": assets}
+              "source_html": str(html_path), "html_sha256": hashlib.sha256(html_bytes).hexdigest(),
+              "source_pdf": str(pdf_path), "pdf_sha256": hashlib.sha256(pdf_bytes).hexdigest(), "assets": assets}
     verify_record_freshness(record)
     return record
 
