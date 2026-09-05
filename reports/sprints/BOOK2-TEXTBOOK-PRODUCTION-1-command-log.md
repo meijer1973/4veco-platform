@@ -38,3 +38,38 @@ https://www.onderwijsinspectie.nl/onderwerpen/onderzoekskader-2021-wat-is-er-ver
 No protected reference was modified or falsely reverified. Optional Inspectie
 mapping/current-compliance claims are omitted; external-reference refresh is
 named follow-up. All product reviews remain mandatory.
+
+## Reviewed foundation plans and two scoped hold releases
+
+Lesson chapter21 plan commit7ad5dd19e1714bb68d48a55a11a032942a6615e4 passed
+independent round2 after exact plan paths and the bounded213→214 profit-change
+bridge were added. Root and chapter23 plans passed independent round1 and were
+published in lesson9a428e3d15be2ff8931b5a6d859051599aa663a8. Exact reviewed
+hashes and findings were published in platform77288fcbf6eddd58779052b66c97227076e1fcd9.
+Both production branches were pushed successfully, not merged.
+
+Only H-BOOK2-ROOT-PLAN and H-CHAPTER-23-PLAN were then released locally through
+their existing repair actions, actual codex-root actor/date and the immutable
+published review references. The canonical projection was regenerated using
+the existing formatHoldProjectionRow function and applied only to those rows.
+
+- Approved paragraph_production for211 and231: PASS exit0 after release.
+- Durable frozen target/lifecycle authority: PASS exit0, exact12records.
+- Semantic outline hash: unchanged919c39f64dd212dba37b62902a5bb2e2ce6388c6020a0491e1621017ae2192a1.
+- test:book-outline-currentness:94tests PASS, suite exit0.
+- Deliberate negative probes paragraph_production221 and whole_book_assembly:
+  FAIL as required, exactly H-221-PRIOR and H-22-ELASTIC-CONTRAST still block.
+- H-213-OPC2 remains open; historical approval and audit snapshot unchanged.
+
+## Shared Book2 print tooling checks (pre-product)
+
+Python unittest test_print_pipeline.py:10tests PASS exit0, including temporary
+real Pandoc/WeasyPrint PDF + Poppler page/contact-sheet generation. This is a
+technical fixture, not a student artifact or visual acceptance. Proof manifest
+correctly stays PENDING with no inspected pages or invented zero-defect claim.
+Supported WeasyPrint68.1 emitted its known default_url_fetcher deprecation
+warning for future69.0; no remote resources are used and no upgrade performed.
+
+Lane-scope focused Jest:24tests PASS exit0. Exact Book2 root/chapter/paragraph
+planning filenames are now recognized; wrong IDs, outside-book paths, ZIPs and
+companion ownership remain rejected. No broad exception was added.

@@ -900,7 +900,7 @@
     },
     {
       "id": "H-BOOK2-ROOT-PLAN",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "book:2"
@@ -919,11 +919,16 @@
         "book_plan_repair"
       ],
       "release_condition": "A lesson-authorized task creates and reviews the Book 2 root plan and records exact evidence.",
-      "release_evidence": null
+      "release_evidence": {
+        "resolved_via": "book_plan_repair",
+        "released_by": "codex-root",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/77288fcbf6eddd58779052b66c97227076e1fcd9/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md"
+      }
     },
     {
       "id": "H-CHAPTER-23-PLAN",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "chapter:2.3"
@@ -947,7 +952,12 @@
         "chapter_plan_repair"
       ],
       "release_condition": "A lesson-authorized task creates and reviews the Chapter 2.3 plan and records exact evidence.",
-      "release_evidence": null
+      "release_evidence": {
+        "resolved_via": "chapter_plan_repair",
+        "released_by": "codex-root",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/77288fcbf6eddd58779052b66c97227076e1fcd9/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md"
+      }
     },
     {
       "id": "H-MERGE-GOVERNANCE",
