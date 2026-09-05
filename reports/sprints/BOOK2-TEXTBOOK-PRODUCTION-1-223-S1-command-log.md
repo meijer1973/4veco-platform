@@ -572,3 +572,28 @@ Traceback (most recent call last):
 RuntimeError: Checks failed; full diagnostics preserved in prepublication-whitespace-diagnostic
 
 ```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-S1-checks.py scope --head 85c09a88190330036bc9fe9ac488762d8a8bb61a
+
+- cwd: `C:\wt\book2-223-succession-20260906\4veco-platform`
+- started_at: `2026-09-05T23:14:07.323Z`
+- finished_at: `2026-09-05T23:14:08.034Z`
+- duration_ms: `711`
+- exit_code: `0`
+- stdout_sha256: `9bcfbc63a3738f2013cc78f97634ec14213ab7c194473cfb2a71456eed235602`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+0: node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base 3510fc4dd30c9c01f44111ecc022ae239e855758 --head 85c09a88190330036bc9fe9ac488762d8a8bb61a
+0: git -C \\?\C:\wt\book2-223-succession-20260906\4veco-lessen diff --exit-code 25fbd9ba66f6ead59f512ec2eec1fd95159d834f HEAD
+0: git diff --check 3510fc4dd30c9c01f44111ecc022ae239e855758 85c09a88190330036bc9fe9ac488762d8a8bb61a
+0: git diff --name-status 3510fc4dd30c9c01f44111ecc022ae239e855758 85c09a88190330036bc9fe9ac488762d8a8bb61a
+
+```
+
+### stderr excerpt
+
+```text
+
+```
