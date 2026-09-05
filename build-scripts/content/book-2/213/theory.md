@@ -40,7 +40,7 @@ Iedere fotohouder wordt voor € 8 verkocht. Nu voegen we TO = 8Q toe aan dezelf
 
 > **MO = ΔTO/ΔQ**, met ΔQ > 0. Gebruik weer dezelfde begin- en eindhoeveelheid in teller en noemer. De eenheid is euro per extra product binnen dat interval.
 
-![Bij dezelfde hoeveelheden 0, 10 en 20 zijn de opbrengsten 0, 80 en 160 euro. Beide intervallen leveren 80 euro extra voor 10 extra producten: MO is telkens 8.](./_assets/2.1.3_fig_3.svg)
+![Bij dezelfde hoeveelheden 0, 10 en 20 zijn de opbrengsten 0, 80 en 160 euro. Beide intervallen leveren 80 euro extra voor 10 extra producten: MO is telkens 8.](./_assets/2.1.3_fig_3.svg){alt="MO bij vaste prijs: 80 euro extra opbrengst voor 10 extra fotohouders in beide intervallen, dus 8 euro per houder."}
 
 Bij 0–10: MO = (80 − 0)/(10 − 0) = **€ 8 per extra fotohouder**. Bij 10–20: MO = (160 − 80)/(20 − 10) = **€ 8 per extra fotohouder**. MO is constant doordat ieder extra verkocht product dezelfde vaste prijs van € 8 oplevert. Dit geldt hier dankzij de vaste prijs; het is geen uitspraak over iedere onderneming.
 
@@ -66,6 +66,6 @@ Bij **0–10** neemt de winst toe met 30 − (−20) = € 50. Per extra product
 
 Bij **10–20** neemt de winst toe met 60 − 30 = € 30. Per extra product: 30/10 = **€ 3**, hetzelfde als MO − MK = 8 − 5 = **€ 3**. De winst groeit in beide intervallen, maar per extra product minder in het tweede interval omdat MK stijgt terwijl MO gelijk blijft.
 
-![Twee intervalkaarten: winst van min 20 naar 30 geeft 50 gedeeld door 10 is 5; winst van 30 naar 60 geeft 30 gedeeld door 10 is 3. Dit is telkens MO min MK.](./_assets/2.1.3_fig_4.svg)
+![Twee intervalkaarten: winst van min 20 naar 30 geeft 50 gedeeld door 10 is 5; winst van 30 naar 60 geeft 30 gedeeld door 10 is 3. Dit is telkens MO min MK.](./_assets/2.1.3_fig_4.svg){alt="Winsttoename per extra fotohouder: 5 euro in interval 0–10 en 3 euro in interval 10–20, telkens MO min MK."}
 
 Deze vergelijking verklaart alleen de winstverandering binnen de gegeven intervallen. Ze vertelt niet welke afzet een onderneming moet kiezen. Buiten de tabel doen we geen uitspraak.

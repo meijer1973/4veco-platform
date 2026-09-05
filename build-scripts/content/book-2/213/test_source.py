@@ -11,11 +11,41 @@ from bs4 import BeautifulSoup
 from PIL import ImageFont
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import b2_213 as b
+import alt_contract as alt
+from print_pipeline import prepare_html
 
 def cells(table):
     return [[c.get_text() for c in row.find_all(['td','th'])] for row in table.find_all('tr')]
 
 class SourceTests(unittest.TestCase):
+    def test_native_pandoc_short_alts_keep_full_captions(self):
+        folder = b.ROOT.parent/'4veco-lessen'/b.LESSON_REL
+        for kind, markdown in b.documents(b.target_record()).items():
+            html, _ = prepare_html(markdown, folder/f'{b.STEM} – {kind}.md')
+            alt.verify_html(html, kind, folder)
+
+    def test_original_long_alts_and_caption_loss_are_rejected(self):
+        folder = b.ROOT.parent/'4veco-lessen'/b.LESSON_REL
+        html, _ = prepare_html(b.documents(b.target_record())['paragraaf'], folder/f'{b.STEM} – paragraaf.md')
+        for name in alt.CORRECTED:
+            soup = BeautifulSoup(html, 'html.parser')
+            image = soup.find_all('img')[list(alt.CAPTIONS).index(name)]
+            image['alt'] = alt.CAPTIONS[name]
+            with self.assertRaisesRegex(AssertionError, 'short alt drift'):
+                alt.verify_html(str(soup), 'paragraaf', folder)
+            image['alt'] = alt.SHORT_ALTS[name]
+            image.find_parent('figure').figcaption.string = 'Verkorte zichtbare tekst.'
+            with self.assertRaisesRegex(AssertionError, 'full caption drift'):
+                alt.verify_html(str(soup), 'paragraaf', folder)
+
+    def test_six_exact_noun_first_accessible_titles(self):
+        for name, source in b.asset_sources().items():
+            alt.verify_title(name, source)
+        old = b.asset_sources()['2.1.3_we_1'].replace(alt.TITLES['2.1.3_we_1'],
+            'Vergelijk de drie eindpuntrijen van Lus en Bout; constante en stijgende MK')
+        with self.assertRaisesRegex(AssertionError, 'accessible title drift'):
+            alt.verify_title('2.1.3_we_1', old)
+
     def test_altered_target_fails_closed(self):
         registry=json.loads((b.ROOT/'references/authored/course-target-exercises.json').read_text(encoding='utf-8-sig'))
         next(r for r in registry['exercises'] if r['id']=='2.1.3')['lesson_goals'][0]+=' changed'
