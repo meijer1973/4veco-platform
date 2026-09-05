@@ -19,6 +19,12 @@ absent. Physical root presence is 26, not 26 accepted. All 17 legacy PDFs are
 Git-blob-identical to the baseline and have no renewed current-target approval.
 Builders' separate in-progress worktrees do not count as integrated artifacts.
 
+Later root check B2-TIME-PRINT-01 requires removal of numeric pupil-time labels
+from §221 before final output/package acceptance; see review-corrections.md.
+The three §221 A rows below retain their historical R6 internal-review status
+and exact hashes, not an assertion that the new finding is closed. Conceptual
+prerequisite evidence remains valid while the bounded correction is prepared.
+
 Each PDF also requires matching generated `.md` and self-contained `.html`;
 paragraphs require their planned SVG/PNG pairs, thin builder, accepted plan,
 independent review/Part A quality record and handoff. Chapters/books require

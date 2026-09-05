@@ -1,0 +1,81 @@
+# Sprint BOOK2-TEXTBOOK-PRODUCTION-1: Review corrections
+
+Date: 2026-09-05. Accountable integrator: codex-root.
+Status: **ACTIVE — FINAL PACKAGE NOT READY**.
+This is a cumulative disposition index; exact original reviews remain immutable
+and attributed. Later findings do not rewrite earlier reviewers' observations.
+
+## Completed bounded review cycles
+
+| Finding / exact source | Correction and actual recheck | Disposition |
+|---|---|---|
+| §221 paragraph R1: missing explicit wrong/correct sign-versus-magnitude warning | R6 theory/paragraph p3; actual paragraph_221_review R2 verified correction | Closed; 221-paragraph-review-r2.md |
+| §221 paragraph R1: essential conditions/sign/dimensionless recap missing | R6 five-point recap, paragraph p5 / opgaven p2; same actual R2 review, separate full R6 QC | Closed; no math/target change |
+| §223 root plan file-contract check: proposed source stem used kruislingse | Builder d00757c9 preserves filesystem kruiselingse while student terminology stays kruislingse; distinct plan reviewer PASS | Closed; 223-plan-review.md |
+| Front-matter independent R1: visible §223 kruiselingse and §233 Pareto-efficientie in both TOCs | Exactly four display replacements at c50a8051; paragraph_212_qc R2 byte-level and Pandoc recheck | Closed, source-only; book-front-review-r2.md; no rendered-book acceptance |
+
+Earlier §211 plan/output and §212 build/layout iterations remain recorded in
+their specific plan, correction, build and specialist evidence. This index will
+be reconciled with all paragraph and lead rounds before final closure; it is
+not a claim that every historical iteration is enumerated here already.
+
+## Newly detected root presentation-contract issue
+
+**B2-TIME-PRINT-01 — required before final package acceptance.**
+
+The operational sprint plan's Outputs section states that print estimates and
+internal plan/review language stay out of student files. During the early §222
+source pass, root found `Maak deze korte checks in ongeveer 5½ minuut` in the
+new draft. Root then checked accepted §221 R6 and found six numeric timing
+passages in platform `build-scripts/content/book-2/221/exercises.md`:
+
+- Start: approximately 5½ minutes (line 52 at the current source).
+- Guided support: approximately 10 minutes (line 71).
+- Independent practice: 11 minutes (line 131).
+- Target: 9 minutes (line 153; its nine points must remain).
+- Bonus: 8 minutes (line 166).
+- Closing: 5 minutes (lines 170–171).
+
+Current §221 source is the accepted R6 body at platform
+`a292020300c38ea0c00c85bd103b52b2d1f9800b`; source and generated exercise route
+are shared by the paragraph and opgaven editions. Neither the exact target nor
+the answer edition requires a mathematical or pedagogical operation change.
+
+Root instructed paragraph_222_builder to remove its draft numeric time phrase
+before freezing. §221 needs a distinct bounded source correction, regeneration
+and renewed exact-output review, not a silent hand-patch to PDFs or an implied
+waiver of the production plan. Preserve neutral short/support-route guidance,
+continuation/homework wording, all exercises, goals, points and answer forms.
+Keep the full numeric timing equation and observation flag in the planning,
+builder, quality and handoff evidence; removing pupil estimates does not make
+classroom pacing observed or reduce the planned workload.
+
+This finding was missed by earlier paragraph/QC passes and detected by root's
+later cross-paragraph contract check. Their reports and R6 hashes are retained
+as historical exact-payload evidence, not rewritten into a claim that they
+noticed it. The new requirement blocks **final §221 output/package acceptance**
+until corrected and rechecked. It does not invalidate the unchanged accepted
+percentages/Ev prerequisite concepts or require stopping §222/§223 production.
+Their exact historical prerequisite source/review/handoff pins remain honest.
+
+§211/§212 authored theory/exercise/answer sources were checked for numeric
+minute/Richttijd wording: no matching passages. §223's current draft has no
+numeric pupil timing labels in the full source read. Every later final edition
+must still receive this contract check. No source/output correction has yet
+been made to §221 by this record; no false closure is asserted.
+
+## Existing accepted flags, not concealed corrections
+
+- Classroom timing/attainment remains unobserved throughout.
+- §212 R5 minor recap model/range qualification omission is explicitly
+  nonblocking because body/answers are correct; an enhancement would require
+  normal source/regeneration/review. It is not silently changed here.
+- §211 bounded redundant-orange contrast enhancement remains specific to that
+  accepted artifact, not a transferable exception for essential graph reading.
+- Optional current Inspectie mapping stays omitted pending separate protected
+  reference refresh. No stale compliance claim is accepted.
+
+Root must close the numeric pupil-time finding and reconcile all later review
+cycles, exact artifact pins, full output/target/timing inventories and final
+lead round 1 / corrections / round 2 before package readiness. No future PR
+merge is authorized, and no final CI or owner-ready claim is made here.
