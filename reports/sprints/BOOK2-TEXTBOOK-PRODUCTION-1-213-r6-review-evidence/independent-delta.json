@@ -1,0 +1,371 @@
+{
+  "result": "PASS",
+  "old_platform": "199772e2aa586fce0f71b647ed5188e568dba2e5",
+  "old_lessons": "4c4cd7d0c1d2e5242c818399a96dce3e26013e9c",
+  "inventory": [
+    {
+      "path": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "r5": "9d4c45c529d0de5830889f384d73796964cdd67cae9dc96458c585c60f71a1b2",
+      "r6": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d"
+    },
+    {
+      "path": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html",
+      "r5": "fe608ea795c9d3a7d72ceccd2f7a3ad2b04aa17d424fb05621ba2d6294c525ca",
+      "r6": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b"
+    },
+    {
+      "path": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+      "r5": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+      "r6": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024"
+    },
+    {
+      "path": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.zip",
+      "r5": "0dcad970f5684f644dd85fb720bb53b771303cb6586c27a71757c7d1f01010a0",
+      "r6": "15ffc25da00d0f3bfc84f93224191a08c9ab31387f7dc873a8df85dc7b76b499"
+    },
+    {
+      "path": "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "r5": "f48f63e43bcb688c2a00ebdde98a955dc61d31209d8342e2aeba404730f44b85",
+      "r6": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20"
+    },
+    {
+      "path": "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html",
+      "r5": "aa186c16833da51c8db0f6f9f866de2ba8957768b85932adce5fab0a761c5c3c",
+      "r6": "b78090ef65fb0544e46b59353660980a79e2bd2b5774ef64955154abe23a3c98"
+    },
+    {
+      "path": "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+      "r5": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05",
+      "r6": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05"
+    },
+    {
+      "path": "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.zip",
+      "r5": "89dc2596334fe8fcb5f11e058e785303493ec1e99c7735f8bc55611f419d9a12",
+      "r6": "1a841ffb08f77e0a50559791707023c85d803f6aea263095449fd74fcf451dae"
+    },
+    {
+      "path": "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "r5": "0df905cb3582b00e3cb47f477d156707891140d7b637b2fab20a158acee37e25",
+      "r6": "0df905cb3582b00e3cb47f477d156707891140d7b637b2fab20a158acee37e25"
+    },
+    {
+      "path": "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html",
+      "r5": "63f33b13456bd1cc044760f67ff3d7267d337df05adc863a07b7b2373041e1f7",
+      "r6": "63f33b13456bd1cc044760f67ff3d7267d337df05adc863a07b7b2373041e1f7"
+    },
+    {
+      "path": "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+      "r5": "aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a",
+      "r6": "aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a"
+    },
+    {
+      "path": "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip",
+      "r5": "0cfc714beb45b3ec087d0c891c28223e8431ba3e549abe9ec81dafba41494010",
+      "r6": "0cfc714beb45b3ec087d0c891c28223e8431ba3e549abe9ec81dafba41494010"
+    },
+    {
+      "path": "_assets/2.1.3_ex_1.png",
+      "r5": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e",
+      "r6": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e"
+    },
+    {
+      "path": "_assets/2.1.3_ex_1.svg",
+      "r5": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+      "r6": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b"
+    },
+    {
+      "path": "_assets/2.1.3_fig_1.png",
+      "r5": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+      "r6": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756"
+    },
+    {
+      "path": "_assets/2.1.3_fig_1.svg",
+      "r5": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819",
+      "r6": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819"
+    },
+    {
+      "path": "_assets/2.1.3_fig_2.png",
+      "r5": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+      "r6": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457"
+    },
+    {
+      "path": "_assets/2.1.3_fig_2.svg",
+      "r5": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53",
+      "r6": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53"
+    },
+    {
+      "path": "_assets/2.1.3_fig_3.png",
+      "r5": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+      "r6": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06"
+    },
+    {
+      "path": "_assets/2.1.3_fig_3.svg",
+      "r5": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc",
+      "r6": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc"
+    },
+    {
+      "path": "_assets/2.1.3_fig_4.png",
+      "r5": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+      "r6": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609"
+    },
+    {
+      "path": "_assets/2.1.3_fig_4.svg",
+      "r5": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773",
+      "r6": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773"
+    },
+    {
+      "path": "_assets/2.1.3_we_1.png",
+      "r5": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+      "r6": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a"
+    },
+    {
+      "path": "_assets/2.1.3_we_1.svg",
+      "r5": "700dc46322fb0fc527f1c2b84efdf018edd15f479f2e3bc25bdd496251d65461",
+      "r6": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d"
+    }
+  ],
+  "changed": [
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.zip",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.zip",
+    "_assets/2.1.3_we_1.svg"
+  ],
+  "all_actual_alts": [
+    {
+      "edition": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf",
+      "index": 0,
+      "asset": "2.1.3_fig_1",
+      "alt": "Dezelfde dag: de tabelstappen van 0 naar 10 en van 10 naar 20 fotohouders, met TK 20, 50 en 100 euro.",
+      "length": 101,
+      "old_alt": "Dezelfde dag: de tabelstappen van 0 naar 10 en van 10 naar 20 fotohouders, met TK 20, 50 en 100 euro.",
+      "caption": "Dezelfde dag: de tabelstappen van 0 naar 10 en van 10 naar 20 fotohouders, met TK 20, 50 en 100 euro.",
+      "old_caption_attributes": {
+        "aria-hidden": "true"
+      },
+      "new_caption_attributes": {
+        "aria-hidden": "true"
+      }
+    },
+    {
+      "edition": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf",
+      "index": 1,
+      "asset": "2.1.3_fig_2",
+      "alt": "Dezelfde kostentabel met delta TK 30 en 50 euro, telkens delta Q 10, en MK 3 en 5 euro bij de rechter eindpunten.",
+      "length": 113,
+      "old_alt": "Dezelfde kostentabel met delta TK 30 en 50 euro, telkens delta Q 10, en MK 3 en 5 euro bij de rechter eindpunten.",
+      "caption": "Dezelfde kostentabel met delta TK 30 en 50 euro, telkens delta Q 10, en MK 3 en 5 euro bij de rechter eindpunten.",
+      "old_caption_attributes": {
+        "aria-hidden": "true"
+      },
+      "new_caption_attributes": {
+        "aria-hidden": "true"
+      }
+    },
+    {
+      "edition": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf",
+      "index": 2,
+      "asset": "2.1.3_fig_3",
+      "alt": "MO bij vaste prijs: 80 euro extra opbrengst voor 10 extra fotohouders in beide intervallen, dus 8 euro per houder.",
+      "length": 114,
+      "old_alt": "Bij dezelfde hoeveelheden 0, 10 en 20 zijn de opbrengsten 0, 80 en 160 euro. Beide intervallen leveren 80 euro extra voor 10 extra producten: MO is telkens 8.",
+      "caption": "Bij dezelfde hoeveelheden 0, 10 en 20 zijn de opbrengsten 0, 80 en 160 euro. Beide intervallen leveren 80 euro extra voor 10 extra producten: MO is telkens 8.",
+      "old_caption_attributes": {
+        "aria-hidden": "true"
+      },
+      "new_caption_attributes": {}
+    },
+    {
+      "edition": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf",
+      "index": 3,
+      "asset": "2.1.3_fig_4",
+      "alt": "Winsttoename per extra fotohouder: 5 euro in interval 0–10 en 3 euro in interval 10–20, telkens MO min MK.",
+      "length": 106,
+      "old_alt": "Twee intervalkaarten: winst van min 20 naar 30 geeft 50 gedeeld door 10 is 5; winst van 30 naar 60 geeft 30 gedeeld door 10 is 3. Dit is telkens MO min MK.",
+      "caption": "Twee intervalkaarten: winst van min 20 naar 30 geeft 50 gedeeld door 10 is 5; winst van 30 naar 60 geeft 30 gedeeld door 10 is 3. Dit is telkens MO min MK.",
+      "old_caption_attributes": {
+        "aria-hidden": "true"
+      },
+      "new_caption_attributes": {}
+    },
+    {
+      "edition": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf",
+      "index": 4,
+      "asset": "2.1.3_we_1",
+      "alt": "Eindpuntrijen van Lus en Bout: MK 2/2/2 tegenover 2/6/10; MO steeds 6 en 12 euro per extra sleutelhanger.",
+      "length": 105,
+      "old_alt": "Lus heeft over drie stappen MK 2 en MO 6; Bout heeft MK 2, 6 en 10 en MO 12. De eerste teller en noemer zijn uitgewerkt; waarden horen bij het rechter eindpunt.",
+      "caption": "Lus heeft over drie stappen MK 2 en MO 6; Bout heeft MK 2, 6 en 10 en MO 12. De eerste teller en noemer zijn uitgewerkt; waarden horen bij het rechter eindpunt.",
+      "old_caption_attributes": {
+        "aria-hidden": "true"
+      },
+      "new_caption_attributes": {}
+    },
+    {
+      "edition": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf",
+      "index": 5,
+      "asset": "2.1.3_ex_1",
+      "alt": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+      "length": 60,
+      "old_alt": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+      "caption": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+      "old_caption_attributes": {
+        "aria-hidden": "true"
+      },
+      "new_caption_attributes": {
+        "aria-hidden": "true"
+      }
+    },
+    {
+      "edition": "2.1.3 Marginale kosten en marginale opbrengsten – opgaven",
+      "index": 0,
+      "asset": "2.1.3_we_1",
+      "alt": "Eindpuntrijen van Lus en Bout: MK 2/2/2 tegenover 2/6/10; MO steeds 6 en 12 euro per extra sleutelhanger.",
+      "length": 105,
+      "old_alt": "Lus heeft over drie stappen MK 2 en MO 6; Bout heeft MK 2, 6 en 10 en MO 12. De eerste teller en noemer zijn uitgewerkt; waarden horen bij het rechter eindpunt.",
+      "caption": "Lus heeft over drie stappen MK 2 en MO 6; Bout heeft MK 2, 6 en 10 en MO 12. De eerste teller en noemer zijn uitgewerkt; waarden horen bij het rechter eindpunt.",
+      "old_caption_attributes": {
+        "aria-hidden": "true"
+      },
+      "new_caption_attributes": {}
+    },
+    {
+      "edition": "2.1.3 Marginale kosten en marginale opbrengsten – opgaven",
+      "index": 1,
+      "asset": "2.1.3_ex_1",
+      "alt": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+      "length": 60,
+      "old_alt": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+      "caption": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+      "old_caption_attributes": {
+        "aria-hidden": "true"
+      },
+      "new_caption_attributes": {
+        "aria-hidden": "true"
+      }
+    }
+  ],
+  "all_svg_titles": [
+    {
+      "asset": "2.1.3_ex_1",
+      "title": "Eerste interval volledig gesteund; tweede interval met lege breuken en cellen",
+      "length": 77,
+      "old_title": "Eerste interval volledig gesteund; tweede interval met lege breuken en cellen",
+      "raw_sha256": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+      "all_other_svg_bytes_equal": true
+    },
+    {
+      "asset": "2.1.3_fig_1",
+      "title": "Twee intervallen in de kostentabel; Q in fotohouders per dag, TK in euro per dag",
+      "length": 80,
+      "old_title": "Twee intervallen in de kostentabel; Q in fotohouders per dag, TK in euro per dag",
+      "raw_sha256": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819",
+      "all_other_svg_bytes_equal": true
+    },
+    {
+      "asset": "2.1.3_fig_2",
+      "title": "MK berekend en geplaatst bij het rechter eindpunt; eerste en tweede interval",
+      "length": 76,
+      "old_title": "MK berekend en geplaatst bij het rechter eindpunt; eerste en tweede interval",
+      "raw_sha256": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53",
+      "all_other_svg_bytes_equal": true
+    },
+    {
+      "asset": "2.1.3_fig_3",
+      "title": "MO in dezelfde hoeveelheidstabel; vaste prijs per fotohouder",
+      "length": 60,
+      "old_title": "MO in dezelfde hoeveelheidstabel; vaste prijs per fotohouder",
+      "raw_sha256": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc",
+      "all_other_svg_bytes_equal": true
+    },
+    {
+      "asset": "2.1.3_fig_4",
+      "title": "Totale winst en gemiddelde winsttoename zijn verschillende grootheden",
+      "length": 69,
+      "old_title": "Totale winst en gemiddelde winsttoename zijn verschillende grootheden",
+      "raw_sha256": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773",
+      "all_other_svg_bytes_equal": true
+    },
+    {
+      "asset": "2.1.3_we_1",
+      "title": "Drie eindpuntrijen van Lus en Bout; constante en stijgende MK",
+      "length": 61,
+      "old_title": "Vergelijk de drie eindpuntrijen van Lus en Bout; constante en stijgende MK",
+      "raw_sha256": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d",
+      "all_other_svg_bytes_equal": true
+    }
+  ],
+  "zip_checks": [
+    {
+      "file": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.zip",
+      "members": [
+        "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html",
+        "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+        "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+        "_assets/2.1.3_ex_1.png",
+        "_assets/2.1.3_ex_1.svg",
+        "_assets/2.1.3_fig_1.png",
+        "_assets/2.1.3_fig_1.svg",
+        "_assets/2.1.3_fig_2.png",
+        "_assets/2.1.3_fig_2.svg",
+        "_assets/2.1.3_fig_3.png",
+        "_assets/2.1.3_fig_3.svg",
+        "_assets/2.1.3_fig_4.png",
+        "_assets/2.1.3_fig_4.svg",
+        "_assets/2.1.3_we_1.png",
+        "_assets/2.1.3_we_1.svg"
+      ],
+      "changed_members": [
+        "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html",
+        "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+        "_assets/2.1.3_we_1.svg"
+      ],
+      "CRC": "PASS"
+    },
+    {
+      "file": "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.zip",
+      "members": [
+        "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html",
+        "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+        "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+        "_assets/2.1.3_ex_1.png",
+        "_assets/2.1.3_ex_1.svg",
+        "_assets/2.1.3_we_1.png",
+        "_assets/2.1.3_we_1.svg"
+      ],
+      "changed_members": [
+        "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html",
+        "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+        "_assets/2.1.3_we_1.svg"
+      ],
+      "CRC": "PASS"
+    },
+    {
+      "file": "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip",
+      "members": [
+        "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html",
+        "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+        "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf"
+      ],
+      "changed_members": [],
+      "CRC": "PASS"
+    }
+  ],
+  "source_checks": [
+    {
+      "path": "build-scripts/content/book-2/213/theory.md",
+      "metadata_only": "PASS"
+    },
+    {
+      "path": "build-scripts/content/book-2/213/exercises.md",
+      "metadata_only": "PASS"
+    },
+    {
+      "path": "build-scripts/content/book-2/b2_213.py",
+      "metadata_only": "PASS"
+    }
+  ],
+  "normalized_DOM": "equal after exactly four independently checked alts/aria-hidden removals and whitespace normalization"
+}
