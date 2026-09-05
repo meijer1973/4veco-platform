@@ -622,3 +622,384 @@ Paragraph lane scope: PASS (textbook)
 ```text
 
 ```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\""
+
+- cwd: `C:\wt\book2-223-independent-review-20260905\4veco-platform`
+- started_at: `2026-09-05T18:27:36.827Z`
+- finished_at: `2026-09-05T18:27:36.892Z`
+- duration_ms: `65`
+- exit_code: `0`
+- stdout_sha256: `bbf6a26578430d4ca8ae7a43d64ae6d814c727c247cffe956425666aa1563c91`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.3 "Inkomenselasticiteit en kruiselingse elasticiteit"
+Path: C:\wt\book2-223-independent-review-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md
+  OK opgaven.md: 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md
+  OK antwoorden.md: 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md
+  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html (768.2 KB)
+  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.html (246.7 KB)
+  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.html (16.3 KB)
+  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf (590 KB)
+  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf (203 KB)
+  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf (28 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 4 image refs all resolve
+  OK _assets/: 4 SVGs, 4 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.3-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.3-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.3 "Inkomenselasticiteit en kruiselingse elasticiteit" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\""
+
+- cwd: `C:\wt\book2-223-independent-review-20260905\4veco-platform`
+- started_at: `2026-09-05T18:27:36.944Z`
+- finished_at: `2026-09-05T18:27:37.011Z`
+- duration_ms: `67`
+- exit_code: `0`
+- stdout_sha256: `08ad9bce952c7a232d5f58a996e6dec77466f686180302e88a471811f634414f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.3 "Inkomenselasticiteit en kruiselingse elasticiteit"
+Path: C:\wt\book2-223-independent-review-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md
+  OK opgaven.md: 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md
+  OK antwoorden.md: 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md
+  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf (590 KB)
+  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf (203 KB)
+  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf (28 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 4 image refs all resolve
+  OK _assets/: 4 SVGs, 4 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.3-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.3-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.3 "Inkomenselasticiteit en kruiselingse elasticiteit" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --cwd ../4veco-lessen --lane textbook --base 7f6e6622592af016e29e10ec7a9370f3f9b89ac4 --head HEAD
+
+- cwd: `C:\wt\book2-223-independent-review-20260905\4veco-platform`
+- started_at: `2026-09-05T18:28:02.283Z`
+- finished_at: `2026-09-05T18:28:02.370Z`
+- duration_ms: `87`
+- exit_code: `0`
+- stdout_sha256: `af05027b9a53c2dfdc9829445cfc04eb1c034b12a8f88daace3758ece8ee026b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (textbook)
+- Part A textbook: 22
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.zip
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.zip
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.zip
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_1.png
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_1.svg
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_2.png
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_2.svg
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_3.png
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_3.svg
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_4.png
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elas
+...[truncated 243 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check b23e0056511fc5b9b10f0b8e6bbe130d2599c36b HEAD
+
+- cwd: `C:\wt\book2-223-independent-review-20260905\4veco-platform`
+- started_at: `2026-09-05T18:28:02.403Z`
+- finished_at: `2026-09-05T18:28:02.451Z`
+- duration_ms: `48`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check 8dc54d78a222cff2225d88aae8c7d23141953cc1 HEAD
+
+- cwd: `C:\wt\book2-223-independent-review-20260905\4veco-platform`
+- started_at: `2026-09-05T18:28:02.493Z`
+- finished_at: `2026-09-05T18:28:02.553Z`
+- duration_ms: `60`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:agent-worktree-safety -- --task BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW --agent paragraph_223_independent_review --require-prefix "codex/,agent/"
+
+- cwd: `C:\wt\book2-223-independent-review-20260905\4veco-platform`
+- started_at: `2026-09-05T18:28:02.592Z`
+- finished_at: `2026-09-05T18:28:02.924Z`
+- duration_ms: `332`
+- exit_code: `2`
+- stdout_sha256: `58f76e15cbaf3bd4ed23b6d83713e266c4d38483875a4872f1f262612f5e52fe`
+- stderr_sha256: `07796cffe3b840fbbf111ec2dee5232ad4e16fe20b5bf7cf1d8a2644a27518c8`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:agent-worktree-safety
+> node build-scripts/ci/check-agent-worktree-safety.js --task BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW --agent paragraph_223_independent_review --require-prefix codex/,agent/
+
+
+```
+
+### stderr excerpt
+
+```text
+Agent worktree-safety check failed: missing mode: pass --claim, --check, or --release
+
+```
+## npm.cmd run check:agent-worktree-safety -- --task BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW --agent paragraph_223_independent_review --require-prefix "codex/,agent/" --worktree ../4veco-lessen --require-clean
+
+- cwd: `C:\wt\book2-223-independent-review-20260905\4veco-platform`
+- started_at: `2026-09-05T18:28:02.977Z`
+- finished_at: `2026-09-05T18:28:03.330Z`
+- duration_ms: `353`
+- exit_code: `2`
+- stdout_sha256: `6d7cda789e956e3be5b0215040b78c90433a10026b4ef936e72eaf5d1a3be32a`
+- stderr_sha256: `07796cffe3b840fbbf111ec2dee5232ad4e16fe20b5bf7cf1d8a2644a27518c8`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:agent-worktree-safety
+> node build-scripts/ci/check-agent-worktree-safety.js --task BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW --agent paragraph_223_independent_review --require-prefix codex/,agent/ --worktree ../4veco-lessen --require-clean
+
+
+```
+
+### stderr excerpt
+
+```text
+Agent worktree-safety check failed: missing mode: pass --claim, --check, or --release
+
+```
+## npm.cmd run check:agent-worktree-safety -- --check --task BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW --agent paragraph_223_independent_review --require-prefix "codex/,agent/"
+
+- cwd: `C:\wt\book2-223-independent-review-20260905\4veco-platform`
+- started_at: `2026-09-05T18:28:20.246Z`
+- finished_at: `2026-09-05T18:28:20.776Z`
+- duration_ms: `530`
+- exit_code: `0`
+- stdout_sha256: `ef7ff93fbeab4b3e74c509ffdbc20a9d44a48e78ae336a62d3d8187c38c13cd5`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:agent-worktree-safety
+> node build-scripts/ci/check-agent-worktree-safety.js --check --task BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW --agent paragraph_223_independent_review --require-prefix codex/,agent/
+
+{
+  "ok": true,
+  "mode": "check",
+  "repository": "4veco-platform",
+  "worktree_path": "C:/wt/book2-223-independent-review-20260905/4veco-platform",
+  "git_dir": "C:\\Projects\\4veco\\4veco-platform\\.git\\worktrees\\4veco-platform133",
+  "anchor_clone": false,
+  "task_id": "BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW",
+  "agent_id": "paragraph_223_independent_review",
+  "lock": {
+    "present": true,
+    "same_owner": true,
+    "same_task": true,
+    "stale": false,
+    "path": "C:\\Projects\\4veco\\4veco-platform\\.git\\worktrees\\4veco-platform133\\4veco-agent-worktree-lock.json",
+    "owner": "paragraph_223_independent_review",
+    "task_id": "BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW"
+  },
+  "branch": "agent/book2-223-independent-review-20260905",
+  "head_sha": "2cd6a4b8549748b47b54f862d9844067ee9b4100",
+  "on_main": false,
+  "detached_head": false,
+  "dirty": true,
+  "dirty_count": 2,
+  "ahead": 0,
+  "behind": 0,
+  "diverged": false,
+  "prefix_ok": true,
+  "required_prefixes": [
+    "codex/",
+    "agent/"
+  ],
+  "warnings": [
+    "working tree is dirty (2 items)"
+  ],
+  "failures": []
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:agent-worktree-safety -- --check --task BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW --agent paragraph_223_independent_review --require-prefix "codex/,agent/" --worktree ../4veco-lessen --require-clean
+
+- cwd: `C:\wt\book2-223-independent-review-20260905\4veco-platform`
+- started_at: `2026-09-05T18:28:20.809Z`
+- finished_at: `2026-09-05T18:28:21.275Z`
+- duration_ms: `466`
+- exit_code: `0`
+- stdout_sha256: `2772497a3dcca32c21bc170ae3135e9388b79bcb81d3d17efbc5bfe46c336c51`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:agent-worktree-safety
+> node build-scripts/ci/check-agent-worktree-safety.js --check --task BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW --agent paragraph_223_independent_review --require-prefix codex/,agent/ --worktree ../4veco-lessen --require-clean
+
+{
+  "ok": true,
+  "mode": "check",
+  "repository": "4veco-lessen",
+  "worktree_path": "C:/wt/book2-223-independent-review-20260905/4veco-lessen",
+  "git_dir": "C:\\Projects\\4veco\\4veco-lessen\\.git\\worktrees\\4veco-lessen78",
+  "anchor_clone": false,
+  "task_id": "BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW",
+  "agent_id": "paragraph_223_independent_review",
+  "lock": {
+    "present": true,
+    "same_owner": true,
+    "same_task": true,
+    "stale": false,
+    "path": "C:\\Projects\\4veco\\4veco-lessen\\.git\\worktrees\\4veco-lessen78\\4veco-agent-worktree-lock.json",
+    "owner": "paragraph_223_independent_review",
+    "task_id": "BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW"
+  },
+  "branch": "agent/book2-223-independent-review-20260905",
+  "head_sha": "bfb704f319384be85294b44ad47ee5cef47987d5",
+  "on_main": false,
+  "detached_head": false,
+  "dirty": false,
+  "dirty_count": 0,
+  "ahead": 0,
+  "behind": 0,
+  "diverged": false,
+  "prefix_ok": true,
+  "required_prefixes": [
+    "codex/",
+    "agent/"
+  ],
+  "warnings": [],
+  "failures": []
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-scope-language.js reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-plan.md reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-independent-paragraph-review-r3.md "\"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md\""
+
+- cwd: `C:\wt\book2-223-independent-review-20260905\4veco-platform`
+- started_at: `2026-09-05T18:29:13.460Z`
+- finished_at: `2026-09-05T18:29:13.517Z`
+- duration_ms: `57`
+- exit_code: `0`
+- stdout_sha256: `1ea203eda2cbf884f05c362ca9e69967d4219846334306e52d86da4d8adb6055`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK scope-language check: C:/wt/book2-223-independent-review-20260905/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-plan.md, C:/wt/book2-223-independent-review-20260905/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-independent-paragraph-review-r3.md, C:/wt/book2-223-independent-review-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
