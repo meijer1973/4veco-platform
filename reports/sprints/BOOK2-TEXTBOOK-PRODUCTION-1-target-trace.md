@@ -1,9 +1,9 @@
 # Sprint BOOK2-TEXTBOOK-PRODUCTION-1: Target trace
 
 Date: 2026-09-05. Accountable root: codex-root.
-Status: **ACTIVE CHECKPOINT — THREE PARAGRAPHS ACCEPTED, NOT FULL BOOK**.
-Platform snapshot `604e4544e68528321b54a9dd0ecb27a356bce3c3`, lessons
-`abe73479d900c1c3dd4cccb9c568305eb58c7a18`.
+Status: **ACTIVE CHECKPOINT — SIX ADOPTED CANDIDATES; ACCESSIBILITY CORRECTIONS OPEN**.
+Platform snapshot after root R7 and R3 review adoption; exact candidate PDF
+pins and gate states are in output-manifest.md. Full book remains incomplete.
 
 ## Frozen registry bindings
 
@@ -16,13 +16,13 @@ The durable invariant and approved-use gates passed before wave-two release.
 
 | ID | Record SHA-256 | Goals | Point allocation | Total | Current product evidence |
 |---|---|---:|---|---:|---|
-| 2.1.1 | `143f1053c98766b77d9d9ce573a5c8e976980f900387159312c3238288d71710` | 4 | 4/3/3/3/4 | 17 | Fresh internal Part A review/QC/handoff |
-| 2.1.2 | `19b466dd6f7b541a3bb701d4de80ce13fe9ea58356313e24b23b21698093e1f9` | 4 | 2/2/3/4 | 11 | Fresh internal Part A review/QC/handoff |
-| 2.1.3 | `df4b7d7b0326445b386ae570b43eb50fc9fc431707e3992e44394323f959c3ef` | 4 | 4/3/2/4/2 | 15 | Accepted plan; output production/review pending |
+| 2.1.1 | `143f1053c98766b77d9d9ce573a5c8e976980f900387159312c3238288d71710` | 4 | 4/3/3/3/4 | 17 | Historical internal Part A acceptance; short-alt package gate reopened |
+| 2.1.2 | `19b466dd6f7b541a3bb701d4de80ce13fe9ea58356313e24b23b21698093e1f9` | 4 | 2/2/3/4 | 11 | Historical internal Part A acceptance; short-alt package gate reopened |
+| 2.1.3 | `df4b7d7b0326445b386ae570b43eb50fc9fc431707e3992e44394323f959c3ef` | 4 | 4/3/2/4/2 | 15 | R5 adopted and independent paragraph PASS; QC/handoff pending |
 | 2.1.4 | `fda623dc9a3620724bf9df22a3ef937fd26779fa49d4d2b0b7c6baa862753691` | 4 | 2/2/2/4/2/2 | 14 | Paragraph plan/output gate pending |
-| 2.2.1 | `61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288` | 4 | 3/2/2/2 | 9 | Fresh internal Part A review/QC/handoff |
-| 2.2.2 | `8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e` | 4 | 2/2/2/2/2/1 | 11 | Accepted plan; output production/review pending |
-| 2.2.3 | `9a3a29bcedc16739b74b66b2bb8e136b37e86c7f5cfee3ee35ea37c4bdeed1c5` | 4 | 3/2/4/4/3 | 16 | Accepted plan; output production/review pending |
+| 2.2.1 | `61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288` | 4 | 3/2/2/2 | 9 | R7 adopted and independent paragraph PASS; fresh QC/handoff pending |
+| 2.2.2 | `8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e` | 4 | 2/2/2/2/2/1 | 11 | R12 adopted/root-verified; independent paragraph review/QC/handoff pending |
+| 2.2.3 | `9a3a29bcedc16739b74b66b2bb8e136b37e86c7f5cfee3ee35ea37c4bdeed1c5` | 4 | 3/2/4/4/3 | 16 | R3 adopted and independent paragraph PASS; QC/handoff/successor pins pending |
 | 2.2.4 | `4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519` | 4 | 2/2/2/4/2/2 | 14 | Paragraph plan/output gate pending |
 | 2.3.1 | `a385e00b2fffea168089c32f796668e51ae45cb325504644392f79b20bde8571` | 4 | 2/3/2/3/2 | 12 | Paragraph plan/output gate pending |
 | 2.3.2 | `54ce45a0cb044532717fe0cbbb6cfeae75e76b2656861bfea0d3821afc1843ce` | 4 | 2/2/3/2/2 | 11 | Paragraph plan/output gate pending |
@@ -35,7 +35,7 @@ frozen record itself; this trace does not replace it. No target is shortened or
 normalized to fit an older lesson. All accepted paragraph plans contain the
 full goal/operation/teaching/practice/answer alignment; later rows need the same.
 
-## Accepted §211 R3 trace
+## Historically accepted §211 R3 teaching trace — short-alt correction open
 
 Exact paragraph plan, review, specialist evidence and source hashes are bound
 in `2.1.1-textbook-handoff.md`.
@@ -51,7 +51,7 @@ Source scope excludes quadratic/U-shaped cost teaching, Q=0 average division,
 marginal derivation, profit optimization and imported broad machine prerequisites.
 Distinct independent paragraph and specialist verdicts PASS WITH FLAGS; 31 pages.
 
-## Accepted §212 R5 trace
+## Historically accepted §212 R5 teaching trace — short-alt correction open
 
 Exact source/output/review/quality pins are in `2.1.2-textbook-handoff.md`.
 
@@ -67,9 +67,13 @@ and distinct reviews. Answer-only ex_3/4/5 assets are excluded from student ZIP
 inventories. Nonblocking recap qualification omission does not remove correct
 model boundaries in body/answers. 27 pages and two grayscale probes reviewed.
 
-## Accepted §221 R6 trace
+## §221 unchanged teaching trace — historical R6, current R7 paragraph pass
 
-Exact source/output/review/quality pins are in `2.2.1-textbook-handoff.md`.
+The historical R6 source/output/review/quality pins remain in
+`2.2.1-textbook-handoff.md`. R7 changes only six timing/route phrases and has
+fresh independent paragraph PASS WITH FLAGS in `221-paragraph-review-r7.md`.
+Its separate specialist QC and successor handoff are still pending; do not
+use the historical handoff as approval of the current R7 artifact hashes.
 
 | Frozen operation | Explicit teaching / modelling | Practice before target | Target / answer evidence |
 |---|---|---|---|
@@ -82,6 +86,31 @@ No revenue/Ei/Ek/curve-slope task added here. R1 warning/recap findings were
 resolved by actual independent R2 review. Specialist separately inspected all
 20 R6 pages. Broad A15/A38 and stale D06 metadata do not justify unrelated
 syllabus or mastery claims.
+
+## Adopted candidate trace, not complete acceptance
+
+§213 R5 root source/render/rebuild verification covers all four goals and native
+10/6 blank cells. Lus/Bout models profit and interval ratios; Start 2 fades the
+MO−MK profit-change bridge, guided patches/coasters retain denominator support,
+Draad/Kaft independently matches Linea/Curva's five operations and15points.
+The distinct paragraph PASS WITH FLAGS is adopted; specialist QC/handoff still needed.
+
+§222 R12 root verification covers exact P×Q totals and factors, own-price
+direction, local versus finite-change distinction, units/period and cost limits.
+Toy/coffee/pottery and the concert counterexample model these; guided and
+independent practice lead to Nova/Stream's six questions/11points. Final answer
+token correction is root-verified. Independent review has identified reversed
+percentage-calculation order in answer 4b relative to the approved C22 sequence;
+a bounded correction and renewed paragraph/QC gates remain required.
+
+§223 R3 independent paragraph PASS WITH FLAGS is now adopted. See
+223-independent-paragraph-review-r3.md for the full four-goal teaching-to-practice
+matrix: direct signed Ei/Ek, named goods, one-input function substitution,
+percentages/category/explanation and baseline reset. Worked→guided/faded→
+independent6–8→target9 preserves all three sources/five questions/16points.
+Specialist QC/handoff and the exact accepted-successor binding still remain.
+These candidate traces do not promote stale quality records or complete book
+coverage. Frozen registry records have not been modified.
 
 ## Remaining trace and final gate
 

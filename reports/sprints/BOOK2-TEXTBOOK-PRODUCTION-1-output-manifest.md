@@ -5,8 +5,8 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform `604e4544e68528321b54a9dd0ecb27a356bce3c3`, lessons
-`abe73479d900c1c3dd4cccb9c568305eb58c7a18`.
+Snapshot: platform `5f1a9ee2400badc4fc586440c0a7ff5b9a88bbfe`, lessons
+`4c4cd7d0c1d2e5242c818399a96dce3e26013e9c`.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 All paths below are relative to the lesson book root
 `Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/`.
@@ -14,16 +14,20 @@ All paths below are relative to the lesson book root
 ## Counts and evidence rules
 
 Expected: 27 theory + 6 consolidation + 6 chapter + 2 book = **41 PDFs**.
-At this checkpoint: **9 internally accepted**, 17 legacy unaccepted and 15
-absent. Physical root presence is 26, not 26 accepted. All 17 legacy PDFs are
-Git-blob-identical to the baseline and have no renewed current-target approval.
-Builders' separate in-progress worktrees do not count as integrated artifacts.
+At this checkpoint: **0 fully gate-closed current paragraph packages**, 18 adopted
+candidate PDFs, 8 legacy unaccepted and 15 absent. The six §211/§212 PDFs retain
+historical independent print/content acceptance, but their package accessibility
+gate is reopened for short-alt defects; they are conservatively C here. Physical
+root presence is 26, not 26 accepted. All eight legacy PDFs remain Git-blob-
+identical to the baseline. Separate in-progress worktrees do not count here.
 
-Later root check B2-TIME-PRINT-01 requires removal of numeric pupil-time labels
-from §221 before final output/package acceptance; see review-corrections.md.
-The three §221 A rows below retain their historical R6 internal-review status
-and exact hashes, not an assertion that the new finding is closed. Conceptual
-prerequisite evidence remains valid while the bounded correction is prepared.
+§221 R7 now replaces the historical R6 pupil editions and has a fresh adopted
+independent paragraph PASS WITH FLAGS; its specialist QC and successor handoff
+remain pending. All three R7 editions are conservatively C until that package
+gate closes, even though the answer PDF remains byte-identical to accepted R6.
+§213 R5, §222 R12 and §223 R3 are adopted/root-verified candidates, not legacy.
+Their root reports distinguish actual source/page/rebuild checks from remaining
+independent paragraph, specialist and handoff gates. See review-corrections.md.
 
 Each PDF also requires matching generated `.md` and self-contained `.html`;
 paragraphs require their planned SVG/PNG pairs, thin builder, accepted plan,
@@ -32,6 +36,7 @@ accepted source assemblies, exact asset parity, their own complete render and
 independent review gates. Do not emit paragraaf.* for the three consolidations.
 
 A = fresh internal paragraph acceptance with flags; not final owner/CI approval.
+C = adopted/root-verified current candidate; one or more acceptance gates pending.
 L = baseline legacy file present, not accepted. P = pending/absent.
 No output is silently accepted through an older PASS or reviewed_final label.
 
@@ -39,28 +44,28 @@ No output is silently accepted through an older PASS or reviewed_final label.
 
 | # | ID | Edition | Status | Exact relative PDF path |
 |---:|---|---|:---:|---|
-| 1 | 2.1.1 | paragraaf | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf` |
-| 2 | 2.1.1 | opgaven | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf` |
-| 3 | 2.1.1 | antwoorden | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf` |
-| 4 | 2.1.2 | paragraaf | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf` |
-| 5 | 2.1.2 | opgaven | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf` |
-| 6 | 2.1.2 | antwoorden | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf` |
-| 7 | 2.1.3 | paragraaf | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf` |
-| 8 | 2.1.3 | opgaven | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf` |
-| 9 | 2.1.3 | antwoorden | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf` |
+| 1 | 2.1.1 | paragraaf | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf` |
+| 2 | 2.1.1 | opgaven | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf` |
+| 3 | 2.1.1 | antwoorden | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf` |
+| 4 | 2.1.2 | paragraaf | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf` |
+| 5 | 2.1.2 | opgaven | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf` |
+| 6 | 2.1.2 | antwoorden | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf` |
+| 7 | 2.1.3 | paragraaf | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf` |
+| 8 | 2.1.3 | opgaven | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf` |
+| 9 | 2.1.3 | antwoorden | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf` |
 | 10 | 2.1.4 | opgaven | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf` |
 | 11 | 2.1.4 | antwoorden | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf` |
 | 12 | 2.1 | hoofdstuk | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf` |
 | 13 | 2.1 | antwoorden | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.pdf` |
-| 14 | 2.2.1 | paragraaf | A | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf` |
-| 15 | 2.2.1 | opgaven | A | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf` |
-| 16 | 2.2.1 | antwoorden | A | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf` |
-| 17 | 2.2.2 | paragraaf | L | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf` |
-| 18 | 2.2.2 | opgaven | L | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf` |
-| 19 | 2.2.2 | antwoorden | L | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf` |
-| 20 | 2.2.3 | paragraaf | L | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf` |
-| 21 | 2.2.3 | opgaven | L | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf` |
-| 22 | 2.2.3 | antwoorden | L | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf` |
+| 14 | 2.2.1 | paragraaf | C | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf` |
+| 15 | 2.2.1 | opgaven | C | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf` |
+| 16 | 2.2.1 | antwoorden | C | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf` |
+| 17 | 2.2.2 | paragraaf | C | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf` |
+| 18 | 2.2.2 | opgaven | C | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf` |
+| 19 | 2.2.2 | antwoorden | C | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf` |
+| 20 | 2.2.3 | paragraaf | C | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf` |
+| 21 | 2.2.3 | opgaven | C | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf` |
+| 22 | 2.2.3 | antwoorden | C | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf` |
 | 23 | 2.2.4 | opgaven | L | `2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf` |
 | 24 | 2.2.4 | antwoorden | L | `2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf` |
 | 25 | 2.2 | hoofdstuk | L | `2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – hoofdstuk.pdf` |
@@ -81,34 +86,53 @@ No output is silently accepted through an older PASS or reviewed_final label.
 | 40 | book | boek | P | `Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.pdf` |
 | 41 | book | antwoorden | P | `Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.pdf` |
 
-## Exact accepted PDFs at this checkpoint
+## Exact accepted and candidate PDFs at this checkpoint
 
 The hashes below were freshly recomputed from the integrated root pair.
 All corresponding independent review/QC/handoff records remain required;
 hashes alone are not student-quality acceptance.
 
-| ID / edition | Raw PDF SHA-256 | Accepted revision |
+| ID / edition | Raw PDF SHA-256 | Current revision / gate |
 |---|---|---|
-| 2.1.1 / paragraaf | `9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0` | R3 |
-| 2.1.1 / opgaven | `97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953` | R3 |
-| 2.1.1 / antwoorden | `ffdf0905a980b6c89b64207e90873d79edbf192c86c2280f3394caa25693998a` | R3 |
-| 2.1.2 / paragraaf | `e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2` | R5 |
-| 2.1.2 / opgaven | `94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a` | R5 |
-| 2.1.2 / antwoorden | `07a75d7b5b69344d38d5da9e5f2e0a3b964d86cc64c383b37809f8263fb33192` | R5 |
-| 2.2.1 / paragraaf | `aafd07e6bb88dcb8833569f2c4d01809d6fcdc0f879d0c7a39c810dfabdbc440` | R6 |
-| 2.2.1 / opgaven | `e9def67106ce56f06ff5247bb3d56fe17dcd4297e65ab95ba6942453759761ee` | R6 |
-| 2.2.1 / antwoorden | `d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d` | R6 |
+| 2.1.1 / paragraaf | `9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0` | R3 historical print acceptance; short-alt correction/review pending |
+| 2.1.1 / opgaven | `97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953` | R3 historical print acceptance; short-alt correction/review pending |
+| 2.1.1 / antwoorden | `ffdf0905a980b6c89b64207e90873d79edbf192c86c2280f3394caa25693998a` | R3 historical print acceptance; short-alt correction/review pending |
+| 2.1.2 / paragraaf | `e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2` | R5 historical print acceptance; short-alt correction/review pending |
+| 2.1.2 / opgaven | `94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a` | R5 historical print acceptance; short-alt correction/review pending |
+| 2.1.2 / antwoorden | `07a75d7b5b69344d38d5da9e5f2e0a3b964d86cc64c383b37809f8263fb33192` | R5 historical print acceptance; short-alt correction/review pending |
+| 2.2.1 / paragraaf | `98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6` | R7 candidate; paragraph pass, short-alt correction/QC/handoff pending |
+| 2.2.1 / opgaven | `a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af` | R7 candidate; paragraph pass, short-alt correction/QC/handoff pending |
+| 2.2.1 / antwoorden | `d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d` | R7 candidate; paragraph pass, short-alt correction/QC/handoff pending |
+| 2.1.3 / paragraaf | `534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024` | R5 candidate; paragraph pass, short-alt correction/QC/handoff pending |
+| 2.1.3 / opgaven | `d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05` | R5 candidate; paragraph pass, short-alt correction/QC/handoff pending |
+| 2.1.3 / antwoorden | `aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a` | R5 candidate; paragraph pass, short-alt correction/QC/handoff pending |
+| 2.2.2 / paragraaf | `36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c` | R12 candidate; answer-order correction/review/QC pending |
+| 2.2.2 / opgaven | `0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555` | R12 candidate; answer-order correction/review/QC pending |
+| 2.2.2 / antwoorden | `b68d0429a9d739d0587f7a1c95ca922e188061b4821920b1d0f6459766adc6ab` | R12 candidate; answer-order correction/review/QC pending |
+| 2.2.3 / paragraaf | `ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb` | R3 candidate; paragraph pass, QC/handoff/successor pending |
+| 2.2.3 / opgaven | `50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80` | R3 candidate; paragraph pass, QC/handoff/successor pending |
+| 2.2.3 / antwoorden | `30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10` | R3 candidate; paragraph pass, QC/handoff/successor pending |
 
 Each accepted paragraph has `<id>-textbook-handoff.md` in its canonical folder,
 including exact source/review/quality bindings, concepts, exercises, visuals and
-carry-forward limits. All 78 current accepted pages (31 + 27 + 20) have actual
-root and independent inspection evidence; §221 paragraph/root R2 transfers are
-explicitly distinguished from fresh specialist full-page inspection.
+carry-forward limits. The 58 historically accepted pages (31 + 27) have actual root and independent
+inspection evidence; new short-alt findings do not erase those observations,
+but require corrected MD/HTML/asset lineage and renewed package gates. The separate 102 candidate pages (29 + 20 + 21 + 32) have
+root observation/rebuild reports; §221/§222 exact transfers from root's own
+prior views are distinguished from fresh independent full-page inspection.
+Historical §221 R6 handoff is not the current R7 handoff.
 
 ## Remaining production and acceptance
 
-Wave two builds §213, §222 and §223 from accepted plans/handoffs; existing root
-PDFs for those IDs remain L until new payloads pass all gates and are adopted.
+Wave-two §213, §222 and §223 outputs are now adopted candidates C; their gate
+closure remains pending. §211/§212/§213/§221/§222 need bounded short-alt
+corrections with full printed captions retained, generated-HTML checks and
+renewed exact-source reviews. §221 R7 requires fresh specialist QC and handoff.
+Independent §213/§223 paragraph reviews are now inspected and adopted as PASS
+WITH FLAGS; specialist and handoff gates remain. The §222 reviewer has reported
+an approved-procedure-order defect in answer 4b; its FAIL report and bounded
+builder correction are pending. §223 also needs exact accepted-R7 successor input binding
+with unchanged pupil output proof before final combined reproduction.
 §214/§224 follow accepted prerequisite teaching. §231–§234 and all aggregate
 outputs remain pending their dependency/plan/review gates. Book front sources
 alone passed independent R2; no back matter, actual book manifest or assembled
@@ -124,11 +148,14 @@ mapping are not asserted. No future merge authority is supplied.
 ## Inventory method and diagnostic correction
 
 Read-only Git `ls-tree -r -z --name-only` at baseline/HEAD, exact planned-path
-membership, filesystem presence, raw SHA-256 of accepted PDFs and baseline/HEAD
+membership, filesystem presence, raw SHA-256 of accepted/candidate PDFs and baseline/HEAD
 Git-blob comparison for all legacy PDFs. An initial line-split probe failed to
 interpret Git's quoted Unicode paths and incorrectly counted zero baseline
 PDFs; it was discarded and replaced with NUL-delimited paths before this record.
-The corrected baseline and current tracked count is 26. No files were changed
+The corrected baseline and current tracked count is 26. The current refresh
+recomputed 41 unique planned paths, 26 present, eight baseline-identical legacy
+PDFs, 15 absent and all eighteen accepted/candidate PDF hashes. Current candidate status
+does not inherit a legacy acceptance label. No files were changed
 by inventory checks.
 
 Post-write checks: planned/active sprint bundle PASS, approved-use currentness

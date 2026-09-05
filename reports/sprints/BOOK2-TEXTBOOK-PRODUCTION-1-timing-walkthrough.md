@@ -3,9 +3,9 @@
 Date: 2026-09-05. Accountable root: codex-root.
 Status: **ACTIVE — ESTIMATES, NO CLASSROOM OBSERVATION**.
 This combines actual accepted-source walkthroughs and clearly separated
-next-wave plan estimates. It is not an empirical 55-minute or attainment PASS.
+adopted candidate estimates. It is not an empirical 55-minute or attainment PASS.
 
-## Accepted source routes
+## Historically accepted source routes
 
 | Paragraph / exact accepted revision | Whole core equation in minutes | Optional guided support | Bonus / closing | Every printed item |
 |---|---|---:|---|---:|
@@ -30,21 +30,28 @@ Detailed actual-source allocations:
   acceptance retain the same core equation while restoring explicit warnings
   and recap conditions; old R5 PDF pins are not current R6 proof.
 
-These three exact payloads have fresh independent reviews and source/print
-evidence in their canonical handoffs. Reviewers judged design feasibility,
+New short-alt accessibility findings reopen the §211/§212 package gate without
+altering these workload estimates or erasing earlier page observations.
+The historical three payloads have independent reviews and source/print
+evidence in their canonical handoffs. §221 R7 now replaces R6 pupil output:
+exactly six numerical-time/route phrases change, no question or workload. Its
+fresh independent paragraph review retains the same 48.5/58.5/71.5 estimate;
+separate R7 specialist QC and successor handoff are not yet complete. Reviewers judged design feasibility,
 not students' actual reading speed, completion time or mastery. §211 and §212
 have only one minute below the planning ceiling. The apparent §221 reserve
 does not demonstrate actual questions/support will fit it.
 
-## Next wave: plan-only estimates until output review
+## Adopted candidates: actual source checked, final gates pending
 
-| Paragraph | Accepted plan core estimate | With guided support | All items | Current evidence status |
+| Paragraph | Candidate core estimate | With guided support | All items | Current evidence status |
 |---|---:|---:|---:|---|
-| §213 | 54 | 66 | 78 | Independently accepted plan, released for output; final-source workload not yet reviewed |
-| §222 | 51.5 | 66.5 | 79.5 | Owner-approved reviewed plan; direct finite/local-rule contrast must survive full source and render review |
-| §223 | 54 | 69 | 81 | Independent plan PASS WITH FLAGS; multivariable reset/explanation and target d are main pacing risks |
+| §213 | 54 | 66 | 78 | R5 root full-source/page/rebuild check and adopted independent paragraph PASS WITH FLAGS; QC/handoff pending |
+| §222 | 51.5 | 66.5 | 79.5 | R12 root full-source/page/rebuild check includes finite/local contrast; independent review/QC pending |
+| §223 | 54 | 69 | 81 | R3 independent paragraph PASS WITH FLAGS; reset/explanation and target d remain pacing risks; QC pending |
 
-No row here accepts not-yet-produced output. Builders must budget actual
+These are now produced/root-adopted candidates, not plan-only claims; no row
+alone grants completed artifact acceptance. Root reports and distinct paragraph
+reviews distinguish actual source walkthroughs from classroom observations. Builders must budget actual
 question-level reading/solving/writing and full instruction/example/recap/
 transition work against the final rendered source. Optional support is not
 removed and its time is not hidden in a nominal core. The rest of the book

@@ -72,7 +72,8 @@ the six approved replacements. Root adopted them as `4390c32f` / `d764870`,
 verified exact transformation, all artifact bindings and full rebuild, and
 personally inspected all ten changed pages. The other ten pages match root's
 own prior R6 views byte-for-byte. See `221-root-verification-r7.md`.
-Distinct R7 paragraph re-review is publishing; separate R7 specialist QC and
+Distinct R7 paragraph PASS WITH FLAGS is adopted at root `0e82e9f3` with
+transcript-format evidence `f3604df0` / lessons `d2e8fb1`; separate R7 specialist QC and
 successor handoff remain pending. The finding is **corrected and root-verified,
 not yet fully closed**. Historical R6 reports are not retroactively changed.
 
@@ -90,6 +91,18 @@ See `222-root-verification.md` for exact pins and checks; a distinct paragraph
 reviewer and specialist QC remain required.
 Historical failed experiments remain evidence, not claimed accepted revisions.
 
+**B2-222-PROCEDURE-01 — required paragraph correction.**
+The distinct paragraph reviewer reported answer Opgave 4b (R12 answers PDF
+page 2) computes percentage price change before quantity change for both the
+schaatsbaan and badmintonhal. The approved C22 teaching plan requires quantity
+then price throughout teaching/answers; the frozen target's question-order
+exception does not apply here. Numerical ratios/results are correct. The
+reviewer is completing a precise FAIL report. A distinct builder must reorder
+only these calculations, add a regression probe, regenerate and return for
+independent rereview; no target or approved plan change is authorized or needed.
+This newly reported finding is open, not claimed fixed by the earlier root
+render/source pass. Retain all historical R12 evidence and passing checks.
+
 **B2-223-PREREQ-SUCCESSOR-01 — required before final combined reproducibility.**
 The §223 R3 generator intentionally checks exact current §221 R6 paragraph,
 review, quality and handoff hashes. R7's presentation correction and subsequent
@@ -106,6 +119,42 @@ arbitrary hashes, modify target authority or reopen the released teaching holds.
 The same current-file pin check must be applied to other dependent generators
 before final assembly. This is not an owner decision or a reason to suspend
 the independently reviewable §223 economics/layout work now.
+
+## Cross-paragraph short-alt correction gate
+
+**B2-SHORT-ALT-01 — required, not an optional wording improvement.**
+The §221 distinct specialist identified imperative figure1 short alternative
+text, contrary to agents/accessibility-agent.md (noun-first, at most120characters).
+Root directly read this rule and extended a read-only preflight to all six
+current paragraphs' actual generated HTML, not just Markdown captions.
+
+| Paragraph | Confirmed unique short-alt defects | Required disposition |
+|---|---|---|
+| §211 R3 | we1:122characters | Reopen exact package accessibility acceptance; preserve historic review/print proof |
+| §212 R5 | fig1–4, ex1/2/4/5/6:130/146/138/131/137/131/151/172/159characters; fig1–4 also not noun-first | Same; nine concise alternatives, full visible captions preserved |
+| §213 R5 | fig3:158 and preposition-first; fig4:155; we1:160 | Specialist REVISE being completed; three alternatives |
+| §221 R7 | fig1 imperative short alt and accessible SVG title | Specialist REVISE being completed; one short alt/title |
+| §222 R12 | we1 Concert:147characters | Included with procedure-order FAIL; preserve finite/local explanation |
+| §223 R3 | All four HTML short alts77/66/78/82characters, noun-first Figuur | No defect in this limited preflight; separate full specialist gate still required |
+
+The same we1 appears in paragraaf and opgaven, not two distinct source defects.
+Root diagnostic: `BOOK2-TEXTBOOK-PRODUCTION-1-short-alt-preflight.js`.
+Existing substantive descriptions remain in captions/body. A native Pandoc3.9
+stdin probe confirms Markdown `![full caption](figure.svg){alt="short alternative"}`
+emits the short img alternative and keeps the full figcaption. This is a feasible
+bounded source route, not proof that every actual generator/ZIP/PDF is unchanged.
+Builders must verify actual output, semantic meaning, all SVG accessible titles,
+full caption preservation, fresh short-alt regressions, full reproduction and
+exact page/artifact deltas. No caption shortening, helper monkeypatch or relaxed
+validator is authorized. Frozen target source/prompt/answer/scoring stays intact;
+§212 target answer graphic may receive only the metadata attribute.
+
+Historical paragraph and specialist PASS records are not silently rewritten.
+The six §211/§212 PDFs now count as candidates at the aggregate package gate,
+although their prior exact-page observations remain valid. Their unchanged
+economic teaching still supports already released dependent work; later exact
+current-file prerequisite pins need a reviewed successor, not arbitrary hashes.
+All eighteen current PDFs remain candidates until the relevant final gates close.
 
 ## Existing accepted flags, not concealed corrections
 
