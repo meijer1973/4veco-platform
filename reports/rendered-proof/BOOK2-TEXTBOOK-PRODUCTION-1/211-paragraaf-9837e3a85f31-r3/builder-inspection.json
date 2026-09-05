@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "role": "paragraph_builder_self_qa",
+  "inspector": "released_pin_analysis",
+  "inspection_date": "2026-09-05",
+  "inspection_status": "BUILDER_SELF_QA_COMPLETE",
+  "independent_review_status": "PENDING",
+  "manifest": "manifest.json",
+  "manifest_sha256": "fd64c510e1b13f377e8c99d3429832cf8f360c4419294a7f25ab7b293d92c921",
+  "pdf_sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0",
+  "supersedes_artifact": "211-paragraaf-e136b26a4fcb-r2",
+  "pages_inspected": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png",
+    "pages/page-008.png",
+    "pages/page-009.png",
+    "pages/page-010.png",
+    "pages/page-011.png",
+    "pages/page-012.png",
+    "pages/page-013.png",
+    "pages/page-014.png",
+    "pages/page-015.png"
+  ],
+  "carried_forward_by_identical_sha256": [],
+  "inspected_at_normal_reading_scale": true,
+  "visible_student_defects": [],
+  "method": "Every R3 page PNG individually inspected again at full 150dpi reading scale after footer12pt change; no prior-page carry-forward. Paragraph opening recall bridge also re-inspected. All printed PDF text including footer12.0pt minimum, verified separately. Independent review remains pending."
+}

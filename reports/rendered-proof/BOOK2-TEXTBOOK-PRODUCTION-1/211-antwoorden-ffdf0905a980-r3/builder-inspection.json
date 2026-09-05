@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "role": "paragraph_builder_self_qa",
+  "inspector": "released_pin_analysis",
+  "inspection_date": "2026-09-05",
+  "inspection_status": "BUILDER_SELF_QA_COMPLETE",
+  "independent_review_status": "PENDING",
+  "manifest": "manifest.json",
+  "manifest_sha256": "a5ca4ef02f99129fb10b4c6dcbb3ee5242b76b658a3b69d62a38d4bfb32f3afb",
+  "pdf_sha256": "ffdf0905a980b6c89b64207e90873d79edbf192c86c2280f3394caa25693998a",
+  "supersedes_artifact": "211-antwoorden-979cba5ed213-r2",
+  "pages_inspected": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png"
+  ],
+  "carried_forward_by_identical_sha256": [],
+  "inspected_at_normal_reading_scale": true,
+  "visible_student_defects": [],
+  "method": "Every R3 page PNG individually inspected again at full 150dpi reading scale after footer12pt change; no prior-page carry-forward. Paragraph opening recall bridge also re-inspected. All printed PDF text including footer12.0pt minimum, verified separately. Independent review remains pending."
+}
