@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "task": "BOOK2-TEXTBOOK-PRODUCTION-1-221-QC",
+  "reviewer": "released_pin_analysis",
+  "reviewed_on": "2026-09-05",
+  "review_scope": "Independent specialist QC; current R6 pages individually displayed, no inherited inspection",
+  "manifest_path": "manifest.json",
+  "manifest_sha256": "2099a348798eb7724dea7823ba2ba889a6a97ddbb1b2a9cb9520fc46310cc217",
+  "pdf_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d",
+  "inspection_status": "PASS",
+  "pages_inspected": [
+    {
+      "page": 1,
+      "path": "pages/page-001.png",
+      "sha256": "760814941a5d1726dce72d62093fd964f056786310ea832942b7a2a7e7827551",
+      "method": "direct individual full-page PNG inspection",
+      "verdict": "PASS",
+      "notes": "Use-after-attempt note and Start answers complete; guided steps one-four legible; step five continues coherently."
+    },
+    {
+      "page": 2,
+      "path": "pages/page-002.png",
+      "sha256": "6b39705a836c8cc3bdbe4fc8f9d302cbe5b0b41758d2106f8975ceabed2cb0eb",
+      "method": "direct individual full-page PNG inspection",
+      "verdict": "PASS",
+      "notes": "Guided step five and both arcade/pool computations/explanations complete; independent steps one-three begin coherently."
+    },
+    {
+      "page": 3,
+      "path": "pages/page-003.png",
+      "sha256": "e2ad4fbccb2354c2c75d3194bfd8288a4fb620b8422a48b16770fcc2e0910651",
+      "method": "direct individual full-page PNG inspection",
+      "verdict": "PASS",
+      "notes": "Independent conclusion/context and target a-c with scoring and frozen answers readable; d continues at next page."
+    },
+    {
+      "page": 4,
+      "path": "pages/page-004.png",
+      "sha256": "97400edfb89401cf71c15f8ce8b83636cf00e11080eefd6987fc761d07d3cbf5",
+      "method": "direct individual full-page PNG inspection",
+      "verdict": "PASS",
+      "notes": "Target d and rubric intact; bonus model/criteria and both cumulative solutions complete."
+    }
+  ],
+  "hard_fails_open": 0,
+  "limitations": [
+    "No classroom pacing or attainment observation",
+    "No companion or interactive accessibility review",
+    "Original generation manifest remains PENDING and unchanged"
+  ]
+}

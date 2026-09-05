@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "task": "BOOK2-TEXTBOOK-PRODUCTION-1-221-QC",
+  "reviewer": "released_pin_analysis",
+  "reviewed_on": "2026-09-05",
+  "review_scope": "Independent specialist QC; current R6 pages individually displayed, no inherited inspection",
+  "manifest_path": "manifest.json",
+  "manifest_sha256": "6bd485ed3d2e7b31743893f6e07fce37067d216cad3cffda32d05321e400e0ca",
+  "pdf_sha256": "e9def67106ce56f06ff5247bb3d56fe17dcd4297e65ab95ba6942453759761ee",
+  "inspection_status": "PASS",
+  "pages_inspected": [
+    {
+      "page": 1,
+      "path": "pages/page-001.png",
+      "sha256": "4630c0bb8c90fbd067136a434f71a97f403bdd8d2cf3a5089b3473bc40b5cd64",
+      "method": "direct individual full-page PNG inspection",
+      "verdict": "PASS",
+      "notes": "Complete worked Bowlplein context, steps one-three and figure; continuation deliberate at next page."
+    },
+    {
+      "page": 2,
+      "path": "pages/page-002.png",
+      "sha256": "30ed4f61bc4257f92d7f3546e2b98c733c8501e3097eda387cdd016da8b7bcaf",
+      "method": "direct individual full-page PNG inspection",
+      "verdict": "PASS",
+      "notes": "Worked steps four-five and five-point recap intact; both Start tasks and support route fit below."
+    },
+    {
+      "page": 3,
+      "path": "pages/page-003.png",
+      "sha256": "3cc3f20b8ce59b613004df8417fdf03ead79f253b735537b238305341826c7f8",
+      "method": "direct individual full-page PNG inspection",
+      "verdict": "PASS",
+      "notes": "Optional guided route and full repair table/formula box and a-c intact."
+    },
+    {
+      "page": 4,
+      "path": "pages/page-004.png",
+      "sha256": "e4edb785f4b8e83a73c150f80be79d4395a5584013b352d359d06422796b6613",
+      "method": "direct individual full-page PNG inspection",
+      "verdict": "PASS",
+      "notes": "Faded arcade/pool and independent Skatehal tasks both complete; clear headings and tables."
+    },
+    {
+      "page": 5,
+      "path": "pages/page-005.png",
+      "sha256": "6a7f62f821de777cdc7a7bd52f537aa8d5abcb5d202511c14d25a1e24419dab6",
+      "method": "direct individual full-page PNG inspection",
+      "verdict": "PASS",
+      "notes": "Exact frozen target a-d and 3/2/2/2 allocation together on page."
+    },
+    {
+      "page": 6,
+      "path": "pages/page-006.png",
+      "sha256": "60d0aaddfa8767239701f1e968e41e18c341cf6d59237bd13f868dfef33d6174",
+      "method": "direct individual full-page PNG inspection",
+      "verdict": "PASS",
+      "notes": "Bonus plus two cumulative tasks complete, clearly outside core."
+    }
+  ],
+  "hard_fails_open": 0,
+  "limitations": [
+    "No classroom pacing or attainment observation",
+    "No companion or interactive accessibility review",
+    "Original generation manifest remains PENDING and unchanged"
+  ]
+}
