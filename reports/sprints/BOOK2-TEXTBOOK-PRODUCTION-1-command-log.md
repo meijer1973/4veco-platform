@@ -13757,3 +13757,59 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-root-publication-scope-r5.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:03:20.467Z`
+- finished_at: `2026-09-05T23:03:20.832Z`
+- duration_ms: `365`
+- exit_code: `0`
+- stdout_sha256: `9ac9fe80f9694b4f1d981625ebdbb1720333961b846fc4385b8d165f3d0f09ba`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "platform_payload": "994b6ec7eca2ef36fc522ac7862f7fdd24360d8c",
+  "lesson_acceptance": "5e14325d70b6cc6aee643d9b57395c92b0904ffb",
+  "strict_current_adoption_paths": 109,
+  "comparisons": [
+    {
+      "lane": "shared",
+      "base": "6eb34debb2210a2a4fa6718a13eaeefcacedc8f8",
+      "head": "994b6ec7eca2ef36fc522ac7862f7fdd24360d8c",
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 5,
+        "generated_indexes": 4,
+        "review_evidence": 401,
+        "unknown": 0
+      }
+    },
+    {
+      "lane": "textbook",
+      "base": "25fbd9ba66f6ead59f512ec2eec1fd95159d834f",
+      "head": "5e14325d70b6cc6aee643d9b57395c92b0904ffb",
+      "counts": {
+        "partA_textbook": 1,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 1,
+        "unknown": 0
+      }
+    }
+  ],
+  "waiver": false
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
