@@ -1,0 +1,99 @@
+{
+  "paragraph": "2.2.1",
+  "target_record_sha256": "61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288",
+  "plan_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345",
+  "chapter_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+  "input_sources": [
+    {
+      "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\b2_221.py",
+      "sha256": "5102e16b5b86b0b6ec56a7b8ebfd4fcfbc36add33d11c90176ed8b4f39fcc56f"
+    },
+    {
+      "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    {
+      "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\221\\theory.md",
+      "sha256": "d5ee20513a9e2222f3003b3659c9d395a49a706a3fb4191eef501afa33eae5d5"
+    },
+    {
+      "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\221\\exercises.md",
+      "sha256": "d94e8f00ca51e6c33792216f6f59d60e95e4cdbf5d4ef10f918d030ef719fa8b"
+    },
+    {
+      "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\221\\answers.md",
+      "sha256": "583e083e66cfdbd14aee442da7fab1c19aa3fc999dcfe53f63d965e291198c1a"
+    },
+    {
+      "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-platform\\build-scripts\\content\\book-2\\221\\target-answers.md",
+      "sha256": "59a17da108763172e5f590fca927a448fe12b07d5b5ff113b9ec7a82c80954b5"
+    }
+  ],
+  "inspection_status": "PENDING",
+  "documents": [
+    {
+      "source_md": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – paragraaf.md",
+      "source_sha256": "54e3be72a523ba19f5ed9affdd96004bdda73ce11d49b292bfbe0fd4b9ac2430",
+      "source_html": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – paragraaf.html",
+      "html_sha256": "9e47df0cf7f34317434ea53d8317ae14919e2eadc7da9da87aedc69598bdfbc1",
+      "source_pdf": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_fig_1.svg",
+          "sha256": "609c6ffad43818ad4c887d882bbd2bc4e1c23dc1dd0c41e50559e4fbc24ad8cb"
+        },
+        {
+          "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_fig_1.png",
+          "sha256": "6f4009fe29fb88f442257e658fe6433809020ba824d17ee275a08701f37d0704"
+        },
+        {
+          "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_fig_2.svg",
+          "sha256": "872bbd68352e746cb6637aa4dc5c806475fd7430a5957ee4bf9f08d6b1b5afbc"
+        },
+        {
+          "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_fig_2.png",
+          "sha256": "589af699b6e024488be654185cfbf39b4a0d957cb59c11ecb452968a252164c0"
+        },
+        {
+          "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_we_1.svg",
+          "sha256": "f7de73e34576ab1bd571e778ff90ad7f45c305bbde6ff7489a1720228d2499a5"
+        },
+        {
+          "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_we_1.png",
+          "sha256": "396f5236c9c3cda581dece54f45d01004494e173c00532fc73a4b54c07a9df95"
+        }
+      ],
+      "proof_directory": "C:\\wt\\book2-221-r7-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-98bf4923b4e3-r7"
+    },
+    {
+      "source_md": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – opgaven.md",
+      "source_sha256": "02eee54304567304e8ecb777762833165103e117ea1721a8a383ca0e470f4bb4",
+      "source_html": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – opgaven.html",
+      "html_sha256": "cfd3a40c19a2fc88cc9fbd127399581ca70215d8edb1350ef873eefba2e91ef0",
+      "source_pdf": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – opgaven.pdf",
+      "pdf_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_we_1.svg",
+          "sha256": "f7de73e34576ab1bd571e778ff90ad7f45c305bbde6ff7489a1720228d2499a5"
+        },
+        {
+          "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_we_1.png",
+          "sha256": "396f5236c9c3cda581dece54f45d01004494e173c00532fc73a4b54c07a9df95"
+        }
+      ],
+      "proof_directory": "C:\\wt\\book2-221-r7-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-opgaven-a8119cc769c8-r7"
+    },
+    {
+      "source_md": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – antwoorden.md",
+      "source_sha256": "f0a78820b4035347d49facac2febb8580c642f7f4bd2d59fcfb47d3233192f11",
+      "source_html": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – antwoorden.html",
+      "html_sha256": "a5f3de1ccefcc2eb543a970de8bafa9125e0c0131a8599623986ad1cec24137a",
+      "source_pdf": "C:\\wt\\book2-221-r7-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – antwoorden.pdf",
+      "pdf_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d",
+      "assets": [],
+      "proof_directory": "C:\\wt\\book2-221-r7-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-antwoorden-d4a7c139d492-r7"
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "paragraph": "2.2.1",
+  "revision": "r7",
+  "date": "2026-09-05",
+  "reviewer": "paragraph_221_r7_independent_review",
+  "role": "distinct independent paragraph reviewer, not builder or specialist QC",
+  "reviewed_platform": "f48cda9341213d12e4a92b9839d3fb18f07ce004",
+  "reviewed_lessons": "a1996c0faef2eff4605617cab6d38887858949b8",
+  "inspection_status": "PASS",
+  "verdict": "PASS WITH FLAGS",
+  "finding": "B2-TIME-PRINT-01",
+  "inspection_basis": "Personal full-page view_image calls of all20currentR7pages after exact-hash successful rebuild, then all3PNGassets separately. No inherited inspection or hash-only prior-page transfer.",
+  "generation_manifests": "IMMUTABLE_PENDING_UNCHANGED",
+  "build_manifest_raw_sha256": "1c7db4c5ec01730f1fa9b0dc4950afcf522b70d90c1f06ddcf8c756420c80c77",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6",
+      "proof_directory": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7",
+      "manifest_raw_sha256": "9ede157354a387923cdfed51f0c28f8fd33641c2c00e3bd854a4339bf0dabfdc",
+      "pages": [
+        {
+          "page": 1,
+          "path": "pages/page-001.png",
+          "raw_sha256": "e423b8b6bcf3d4779bb9f74efd9e25d4707925bfbd063693c771c9e81d4bf1ef",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Motivating comparison, all four goals and old-base explanation are legible. The four-row old/new table is intact with units and weekly periods; no footer collision.",
+          "visible_defects": []
+        },
+        {
+          "page": 2,
+          "path": "pages/page-002.png",
+          "raw_sha256": "9d9adc88dd79f8008822e5e1052e114cf2ed42d62ab299bf955fdea5e54feb13",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "The signed percentage figure uses the same zero and scale for both contexts, with clear +10/−5 and +10/−20 labels. The formula/conditions callout is complete and readable.",
+          "visible_defects": []
+        },
+        {
+          "page": 3,
+          "path": "pages/page-003.png",
+          "raw_sha256": "68100f2ca721b35c921d91d56e04ca05738e7eba4a92c1b6d05a4923996bb764",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "The incorrect −2<1 classification is explicitly corrected using absolute value. Both magnitude panels, threshold one and nearby explanatory text are legible; caption and footer stay separate.",
+          "visible_defects": []
+        },
+        {
+          "page": 4,
+          "path": "pages/page-004.png",
+          "raw_sha256": "0467d1ffe60b8751fb1d55c7ccf7707d3b8f0ec6bf773525839b164acc4f1537",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "The no-slope/no-universal-prediction boundary and plausible-not-proven reasoning are clear. Worked example context and first two calculation steps remain together before the next-page figure.",
+          "visible_defects": []
+        },
+        {
+          "page": 5,
+          "path": "pages/page-005.png",
+          "raw_sha256": "53fc0274df21a7f931e81238a67d18159aa3719091c236ec8a81b1ed10210bba",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Worked percentages and given-only Klimhal ratio are visually distinct. Steps3–5 and the full five-point recap are legible; the recap preserves old-base/domain, sign, ratio, bounded cause and forward link.",
+          "visible_defects": []
+        },
+        {
+          "page": 6,
+          "path": "pages/page-006.png",
+          "raw_sha256": "eed82b34a9c59a04b62f594a8a0b65fab415fec0e469eb6147694e6fed7adb18",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Start heading and neutral short/help-route instruction are visible. Both low-stakes checks and printed repair/teacher-check guidance are complete; the numerical Start time label is absent.",
+          "visible_defects": []
+        },
+        {
+          "page": 7,
+          "path": "pages/page-007.png",
+          "raw_sha256": "434966aec4ac1ad105c2f91537fc817d92b087e5fb79b8633137b03e90cc57d3",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Optional help note retains continuation/homework and neutral skip guidance without a numerical estimate. Task3 table, arithmetic reminder, worked first calculation and all three prompts fit together.",
+          "visible_defects": []
+        },
+        {
+          "page": 8,
+          "path": "pages/page-008.png",
+          "raw_sha256": "4a4ee716c41edca10642be8518e7e964708f6cc06f56b7e5e29558e95578504b",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Task4 table and reduced cue lead into the unscaffolded full target-chain task5. The independent instruction is nonnumeric and final prompt d remains wholly above the footer.",
+          "visible_defects": []
+        },
+        {
+          "page": 9,
+          "path": "pages/page-009.png",
+          "raw_sha256": "7536c680768107894c0fab18fc951aac467149431d94de6c7f5bd77657e6e6ff",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Target heading, total9, exact Nova/StreamNow context and all a–d prompts with 3/2/2/2 points are readable together. There is no timing label, figure or new scaffold.",
+          "visible_defects": []
+        },
+        {
+          "page": 10,
+          "path": "pages/page-010.png",
+          "raw_sha256": "95bfb6915156744f3fe53b1436fb4875a27dc95e7e8e6da8137fb7fcf6e0a8c3",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Bonus and closing sections preserve all tasks7–9. Both short-route/homework notes are nonnumeric; substitute and ceteris-paribus conditions remain legible.",
+          "visible_defects": []
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af",
+      "proof_directory": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7",
+      "manifest_raw_sha256": "5bff06be24569d8a7f4813a7dae6936008e805793832a95546bde2d36e9cef5b",
+      "pages": [
+        {
+          "page": 1,
+          "path": "pages/page-001.png",
+          "raw_sha256": "4630c0bb8c90fbd067136a434f71a97f403bdd8d2cf3a5089b3473bc40b5cd64",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "The title, Bowlplein context, first three steps and worked figure are readable. Signed calculations and given-only Klimhal ratio are not confused; the following-page continuation starts at a complete step.",
+          "visible_defects": []
+        },
+        {
+          "page": 2,
+          "path": "pages/page-002.png",
+          "raw_sha256": "e3a804ee69a272e0ba12a289243ad43a2cd3580fa04b984d96ec41cb1b36d7b3",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Steps4–5 and the full recap precede Start. Short/help guidance and both checks are complete; task2 and its final line clear the footer despite the dense page.",
+          "visible_defects": []
+        },
+        {
+          "page": 3,
+          "path": "pages/page-003.png",
+          "raw_sha256": "7e73dae95da20aecced92ccc22d66990b19866eac426b5002778a12250e186e4",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Guided route remains optional and nonnumeric, with continuation/homework advice. Task3 table, four-step reminder, given calculation and a–c prompts are intact.",
+          "visible_defects": []
+        },
+        {
+          "page": 4,
+          "path": "pages/page-004.png",
+          "raw_sha256": "8fdbb9b6cc8d3507d71a4d8cd73cd75cd9dd5ea6cb3721d225d7e1ac0f347089",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Task4 source table and all four prompts are clear; task5's independent instruction and all a–d prompts fit with separation from the footer. No numerical timing remains.",
+          "visible_defects": []
+        },
+        {
+          "page": 5,
+          "path": "pages/page-005.png",
+          "raw_sha256": "fa70fe045f16a558b85611caca8e71ce02b8151656b3fc7ddd394a8b27c5342a",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "The entire unchanged target context and four subquestions stay on one page, with visible total9 and all scoring values. No timing label or additional guidance appears.",
+          "visible_defects": []
+        },
+        {
+          "page": 6,
+          "path": "pages/page-006.png",
+          "raw_sha256": "14d6ac179fb3aee0f456c7988ad3c1390f29338ac2b0d30b1f1b842bedd7990c",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Bonus7 and closing8–9 remain complete. The nonnumeric short-route and homework guidance is legible; conditional substitute-price shift wording remains intact.",
+          "visible_defects": []
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d",
+      "proof_directory": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7",
+      "manifest_raw_sha256": "30d8c172d544e01b6efc050e309a0a6f762455cd01ff0210cf6dcef6035a2d72",
+      "pages": [
+        {
+          "page": 1,
+          "path": "pages/page-001.png",
+          "raw_sha256": "760814941a5d1726dce72d62093fd964f056786310ea832942b7a2a7e7827551",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Answer-after-attempt guidance, Start1–2 explanations and task3 steps1–4 are readable. Old bases/signs and absolute-value correction are explicit; task3 continues at a clean step boundary.",
+          "visible_defects": []
+        },
+        {
+          "page": 2,
+          "path": "pages/page-002.png",
+          "raw_sha256": "6b39705a836c8cc3bdbe4fc8f9d302cbe5b0b41758d2106f8975ceabed2cb0eb",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Task3 interpretation and all arcade/pool steps are complete, including the negative-price-change calculation. Independent task5 starts below its heading; step3 completes above the footer.",
+          "visible_defects": []
+        },
+        {
+          "page": 3,
+          "path": "pages/page-003.png",
+          "raw_sha256": "e2ad4fbccb2354c2c75d3194bfd8288a4fb620b8422a48b16770fcc2e0910651",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Independent task5 interpretation, comparison and bounded explanation are legible. Target6a–c retain the literal short model and scoring explanations; 6d continues as a whole block next page.",
+          "visible_defects": []
+        },
+        {
+          "page": 4,
+          "path": "pages/page-004.png",
+          "raw_sha256": "97400edfb89401cf71c15f8ce8b83636cf00e11080eefd6987fc761d07d3cbf5",
+          "personally_viewed_full_page": true,
+          "normal_reading_scale": true,
+          "observation": "Target6d supplies a bounded plausible explanation and marking criteria. Bonus criteria and both closing answers are legible, including +25/−20 and the left shift under substitute assumptions.",
+          "visible_defects": []
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "base": "2.2.1_fig_1",
+      "personally_viewed": true,
+      "observation": "Signed bar lengths, zero origin, hatching and numerical labels are readable; values +10/−5 and +10/−20 match the two source contexts."
+    },
+    {
+      "base": "2.2.1_fig_2",
+      "personally_viewed": true,
+      "observation": "Separate signed Ev text and absolute scales avoid a negative-number-order inference. Threshold1 and both classifications are legible, with equal magnitude scales."
+    },
+    {
+      "base": "2.2.1_we_1",
+      "personally_viewed": true,
+      "observation": "Computed Bowlplein percentages above and magnitude comparison below are separated. Klimhal's given-only Ev warning is clear; no missing or overlapping label."
+    }
+  ],
+  "mechanical_measurements": {
+    "minimum_print_text_including_footers_pt": 12,
+    "minimum_placed_figure_text_pt": 12.221,
+    "source_tests": 10,
+    "raw_hash_references_checked": 55,
+    "byte_identical_rebuild": true
+  },
+  "retained_flag": {
+    "classroom_timing_observed": false,
+    "core_minutes": 48.5,
+    "supported_minutes": 58.5,
+    "all_minutes": 71.5
+  },
+  "final_package_acceptance": "PENDING_SEPARATE_SPECIALIST_AND_ROOT_CORRECTION_CLOSURE",
+  "downstream_prerequisite_repins": "NOT_AUTHORIZED_BY_THIS_REVIEW; ROOT_SEPARATE_REVIEWED_DELTA",
+  "visible_student_defects": [],
+  "required_content_revisions": [],
+  "source_html_asset_evidence": "BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-probes-r7.json"
+}
