@@ -1,0 +1,365 @@
+{
+  "result": "PASS",
+  "role": "builder_personal_inspection_not_independent_review_or_QC",
+  "agent": "paragraph_212_bonus_correction_builder",
+  "report": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-inspection.md",
+  "report_sha256": "bf4098a4fe9476e221e014e587237de3b7a4f9cab9a06cb847f7973c822bd3a9",
+  "all_full_pages_personally_viewed": 27,
+  "all_colour_figures_personally_viewed": 11,
+  "all_fresh_grayscale_figures_personally_viewed": 11,
+  "changed_pages": [
+    [
+      "antwoorden",
+      "page-006.png"
+    ]
+  ],
+  "native_manifests": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-antwoorden-d55f1da66723-r7/manifest.json",
+      "sha256": "9e6282bda633b3fa65b33d1cd58945f0c21958d7f756b1bb5c127613e31b6930",
+      "native_status": "PENDING"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-opgaven-94ebe5d35207-r7/manifest.json",
+      "sha256": "064e709e58405380746852083d42fb853ffdf437c2135ffc1dbd664256b97df7",
+      "native_status": "PENDING"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/212-paragraaf-e94d42f66ab9-r7/manifest.json",
+      "sha256": "cc15bbdf66204bcd296786ff97609fa871a11fce5aee1cb4779459799961a75f",
+      "native_status": "PENDING"
+    }
+  ],
+  "evidence": {
+    "baseline.json": "560b928e69262c79f1afc3bb325df0e58f437c3b63d1c3393d1b8cd664b32001",
+    "build-r7.json": "aadfedcb49d0e533ec26c87fcdc6750a76fd1933e1396d1edd794a3706a8aec2",
+    "mechanical-r7.json": "9098f1f6fca5de526a431ad3862f22de6668c7604d4968a0c2088a09b074fb7d",
+    "render-check-r7.json": "bfa66abf5d67a8f16025386246d714fb82c5067ebbf541b3d9b1473328730cfc",
+    "reproduction-r7.json": "df4686015ffed45778f9f3b5cb6d8a2ebd65393e493006d4782eca84e506b99b"
+  },
+  "helper_sha256": "78453d199676cd488d833124b5726ff7d7e9b08cf43087af682421e7148fc2fe",
+  "native34": {
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.html": "85eff0548ce75161a2935e2bb3d0bb470f30ec10e95996c670605574d89454b5",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.zip": "e9d639f9119da0b118b58e9541f7d86ad9244960368cdaacc2f439b9c543d86f",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md": "df2cd3fe66af760b55b1f28a2f51ca9c7449b4f1704d5da278db064850eef002",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.html": "87c55209dd450e989476f2f9779feb88de9fac9bbc77a0805112a444ffb65a06",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.zip": "c72b108912247d2f190466f8bac4fdab54e001652097199d3939920739ae12e8",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md": "4ffcb70c96f2c0c178a06a6092ec6701c4323cc1ac697de4156bc7cf0d43b8b3",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.html": "be02782985485caca268df98af897104d78feec9737032cd14803c978a318a82",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.zip": "575fe9051596241c1bd0a29b5ca40bdd3ad4a357f6fd387508277362abe7a28e",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_1.svg": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_1.png": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_2.svg": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_2.png": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_3.svg": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_3.png": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_4.svg": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_4.png": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_we_1.svg": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_we_1.png": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_1.svg": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_1.png": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_2.svg": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_2.png": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_3.svg": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_3.png": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_4.svg": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_4.png": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_5.svg": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_5.png": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_6.svg": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_6.png": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be"
+  },
+  "pages": [
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-001.png",
+      "sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1",
+      "old_sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-002.png",
+      "sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329",
+      "old_sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-003.png",
+      "sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d",
+      "old_sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-004.png",
+      "sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38",
+      "old_sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-005.png",
+      "sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55",
+      "old_sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-006.png",
+      "sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae",
+      "old_sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-007.png",
+      "sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72",
+      "old_sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-008.png",
+      "sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340",
+      "old_sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-009.png",
+      "sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc",
+      "old_sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-010.png",
+      "sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf",
+      "old_sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-011.png",
+      "sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7",
+      "old_sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-012.png",
+      "sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3",
+      "old_sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-013.png",
+      "sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd",
+      "old_sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-014.png",
+      "sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914",
+      "old_sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-001.png",
+      "sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb",
+      "old_sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-002.png",
+      "sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5",
+      "old_sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-003.png",
+      "sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e",
+      "old_sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-004.png",
+      "sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4",
+      "old_sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-005.png",
+      "sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9",
+      "old_sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-006.png",
+      "sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac",
+      "old_sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-007.png",
+      "sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71",
+      "old_sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71",
+      "changed": false
+    },
+    {
+      "edition": "antwoorden",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7\\pages\\page-001.png",
+      "sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957",
+      "old_sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957",
+      "changed": false
+    },
+    {
+      "edition": "antwoorden",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7\\pages\\page-002.png",
+      "sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554",
+      "old_sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554",
+      "changed": false
+    },
+    {
+      "edition": "antwoorden",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7\\pages\\page-003.png",
+      "sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6",
+      "old_sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6",
+      "changed": false
+    },
+    {
+      "edition": "antwoorden",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7\\pages\\page-004.png",
+      "sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5",
+      "old_sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5",
+      "changed": false
+    },
+    {
+      "edition": "antwoorden",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7\\pages\\page-005.png",
+      "sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2",
+      "old_sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2",
+      "changed": false
+    },
+    {
+      "edition": "antwoorden",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7\\pages\\page-006.png",
+      "sha256": "10064493da06147455efc290de36cc716f71241445bda748df7b8b0f8bdcdd5b",
+      "old_sha256": "d381ea9948644e3fb98fbbb12436ba3d7d1b0df17d48ddb0df4e89b1455eeb73",
+      "changed": true
+    }
+  ],
+  "figures": [
+    {
+      "asset": "2.1.2_fig_1",
+      "svg_sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+      "png_sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_fig_1.png",
+      "gray_sha256": "69e506b08d9c858b0181dc5990ad3a82527f8a850c59ba4c6c418d6cd782e2bd"
+    },
+    {
+      "asset": "2.1.2_fig_2",
+      "svg_sha256": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f",
+      "png_sha256": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_fig_2.png",
+      "gray_sha256": "aeb85872cdb4953a88b381abfee56d232ba2a2ab51b905d8b5295b59525616f0"
+    },
+    {
+      "asset": "2.1.2_fig_3",
+      "svg_sha256": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270",
+      "png_sha256": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_fig_3.png",
+      "gray_sha256": "e238df1499f723eb3c35bfd959322118dd8cc075d7d84616cd574a58f08b7026"
+    },
+    {
+      "asset": "2.1.2_fig_4",
+      "svg_sha256": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910",
+      "png_sha256": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_fig_4.png",
+      "gray_sha256": "185bc19827f7d1c797d1c8729e107e60751ab35cf16be91048779e2a370c4a3f"
+    },
+    {
+      "asset": "2.1.2_we_1",
+      "svg_sha256": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df",
+      "png_sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_we_1.png",
+      "gray_sha256": "92f1fc22545eabfd241d01c951cc57998c0054161838ee37e73a2db8f16b3569"
+    },
+    {
+      "asset": "2.1.2_ex_1",
+      "svg_sha256": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+      "png_sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_ex_1.png",
+      "gray_sha256": "6b313621ff1b4b958317d5da3b824509c3046941b3873c4a7942e51857b9c3fc"
+    },
+    {
+      "asset": "2.1.2_ex_2",
+      "svg_sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+      "png_sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_ex_2.png",
+      "gray_sha256": "9aeb59a830341b716b42b0714255120333ec98cf05edb53c7ad747a109566416"
+    },
+    {
+      "asset": "2.1.2_ex_3",
+      "svg_sha256": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee",
+      "png_sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_ex_3.png",
+      "gray_sha256": "25b073c8a0d5a43bbf0c1e49690f08195e48a4a94549a64d748432e3eb11ac90"
+    },
+    {
+      "asset": "2.1.2_ex_4",
+      "svg_sha256": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3",
+      "png_sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_ex_4.png",
+      "gray_sha256": "d1621d76bfe963e3edb3e1f3e94d7b683e251c929fba8e7bfd0015ba39190d09"
+    },
+    {
+      "asset": "2.1.2_ex_5",
+      "svg_sha256": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127",
+      "png_sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_ex_5.png",
+      "gray_sha256": "3d0391c1ef5a0b00c766423fe99c73d4dc59de23d929f288ba77f7cc99ec0d84"
+    },
+    {
+      "asset": "2.1.2_ex_6",
+      "svg_sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+      "png_sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_ex_6.png",
+      "gray_sha256": "5320c53c6651a913f88f834ecb3f846a13d39fc8088e8d9c5dbe73f02f09b10f"
+    }
+  ],
+  "source_tests": {
+    "test_bonus.py": "b332e46158bbe1c2f82ca6bc147407dbb9cefb5f9f71fb3e8b5f97d130e1bcbe",
+    "test_metadata.py": "ce0a11711367e0b68ffc87fd16e486515e7baa27a4e8d84fe2489fbbd41080d1",
+    "test_source.py": "de4da12ec81968ab056a23f421b09d33a3289e3eed57ac340330c6595963bef3"
+  },
+  "independent_review_and_QC": "PENDING",
+  "classroom_timing": "UNOBSERVED_54_67_77"
+}

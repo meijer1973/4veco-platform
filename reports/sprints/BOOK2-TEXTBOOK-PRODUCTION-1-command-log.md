@@ -8459,3 +8459,688 @@ Paragraph lane scope: PASS (textbook)
 ```text
 
 ```
+## C:/Python314/python.exe -m unittest discover -s build-scripts/content/book-2/212 -p "test_*.py" -v
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:24:25.864Z`
+- finished_at: `2026-09-05T21:24:26.659Z`
+- duration_ms: `795`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `2dd55573f3737b2fa5908097c0ae8bf3c8f20991cb4a0cfef5a728571510f4dc`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+test_five_context_titles_and_old_negative_fixtures (test_metadata.MetadataTests.test_five_context_titles_and_old_negative_fixtures) ... ok
+test_nine_exact_native_insertions_and_unchanged_full_sources (test_metadata.MetadataTests.test_nine_exact_native_insertions_and_unchanged_full_sources) ... ok
+test_original_failing_alt_fixtures_remain_negative (test_metadata.MetadataTests.test_original_failing_alt_fixtures_remain_negative) ... ok
+test_short_alts_functional_and_bounded (test_metadata.MetadataTests.test_short_alts_functional_and_bounded) ... ok
+test_unchanged_generator_outside_title_loop (test_metadata.MetadataTests.test_unchanged_generator_outside_title_loop) ... ok
+test_eleven_assets_and_no_answer_leakage (test_source.SourceTests.test_eleven_assets_and_no_answer_leakage) ... ok
+test_exact_arithmetic_geometry (test_source.SourceTests.test_exact_arithmetic_geometry) ... ok
+test_font_and_contrast (test_source.SourceTests.test_font_and_contrast) ... ok
+test_frozen_target_goals_points_answers (test_source.SourceTests.test_frozen_target_goals_points_answers) ... ok
+test_no_letter_drift_or_online_dependencies (test_source.SourceTests.test_no_letter_drift_or_online_dependencies) ... ok
+test_other_arithmetic_and_timing (test_source.SourceTests.test_other_arithmetic_and_timing) ... ok
+test_progressive_graphs (test_source.SourceTests.test_progressive_graphs) ... ok
+test_repeatable (test_source.SourceTests.test_repeatable) ... ok
+test_single_exercise_source_and_headings (test_source.SourceTests.test_single_exercise_source_and_headings) ... ok
+test_unsafe_proof_suffix_before_write (test_source.SourceTests.test_unsafe_proof_suffix_before_write) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.361s
+
+OK
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/212/test_bonus.py BonusTests.test_current_exact_full_source_and_three_criteria -v
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:25:28.643Z`
+- finished_at: `2026-09-05T21:25:29.038Z`
+- duration_ms: `395`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `ca41417d0ec28cf660fba9077ecac8596ba978c30487d1e5eee7f5cd1c16ea3c`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+test_current_exact_full_source_and_three_criteria (__main__.BonusTests.test_current_exact_full_source_and_three_criteria) ... FAIL
+
+======================================================================
+FAIL: test_current_exact_full_source_and_three_criteria (__main__.BonusTests.test_current_exact_full_source_and_three_criteria)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\wt\book2-212-bonus-correction-20260905\4veco-platform\build-scripts\content\book-2\212\test_bonus.py", line 45, in test_current_exact_full_source_and_three_criteria
+    assert_exact_sources(self, self.sources)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\wt\book2-212-bonus-correction-20260905\4veco-platform\build-scripts\content\book-2\212\test_bonus.py", line 37, in assert_exact_sources
+    testcase.assertEqual(sources[name], expected, name)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '# 2.[5764 chars].\n\n## Herhaling / Herhaling en interleaving\[376 chars]e.\n' != '# 2.[5764 chars].\n\n**Beoordelingscriteria:**\n\n- Je onderbo[721 chars]e.\n'
+Diff is 6690 characters long. Set self.maxDiff to None to see it. : answers.md
+
+----------------------------------------------------------------------
+Ran 1 test in 0.092s
+
+FAILED (failures=1)
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence.py baseline
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:27:46.702Z`
+- finished_at: `2026-09-05T21:27:50.039Z`
+- duration_ms: `3337`
+- exit_code: `0`
+- stdout_sha256: `475dc49a83816194868c2d6e856f2e63037d204e5f077d67a656a16fde49d143`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\baseline.json", "sha256": "560b928e69262c79f1afc3bb325df0e58f437c3b63d1c3393d1b8cd664b32001"}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe -m unittest discover -s build-scripts/content/book-2/212 -p "test_*.py" -v
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:28:05.642Z`
+- finished_at: `2026-09-05T21:28:07.526Z`
+- duration_ms: `1884`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `f68b3a46300d0ca256bf7c8f45642372fc8cca5db397c1e3f80feaff61eef463`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+test_current_exact_full_source_and_three_criteria (test_bonus.BonusTests.test_current_exact_full_source_and_three_criteria) ... ok
+test_missing_extra_and_misplaced_criteria_rejected (test_bonus.BonusTests.test_missing_extra_and_misplaced_criteria_rejected) ... ok
+test_model_answer_and_unrelated_source_drift_rejected (test_bonus.BonusTests.test_model_answer_and_unrelated_source_drift_rejected) ... ok
+test_five_context_titles_and_old_negative_fixtures (test_metadata.MetadataTests.test_five_context_titles_and_old_negative_fixtures) ... ok
+test_nine_exact_native_insertions_and_unchanged_full_sources (test_metadata.MetadataTests.test_nine_exact_native_insertions_and_unchanged_full_sources) ... ok
+test_original_failing_alt_fixtures_remain_negative (test_metadata.MetadataTests.test_original_failing_alt_fixtures_remain_negative) ... ok
+test_short_alts_functional_and_bounded (test_metadata.MetadataTests.test_short_alts_functional_and_bounded) ... ok
+test_unchanged_generator_outside_title_loop (test_metadata.MetadataTests.test_unchanged_generator_outside_title_loop) ... ok
+test_eleven_assets_and_no_answer_leakage (test_source.SourceTests.test_eleven_assets_and_no_answer_leakage) ... ok
+test_exact_arithmetic_geometry (test_source.SourceTests.test_exact_arithmetic_geometry) ... ok
+test_font_and_contrast (test_source.SourceTests.test_font_and_contrast) ... ok
+test_frozen_target_goals_points_answers (test_source.SourceTests.test_frozen_target_goals_points_answers) ... ok
+test_no_letter_drift_or_online_dependencies (test_source.SourceTests.test_no_letter_drift_or_online_dependencies) ... ok
+test_other_arithmetic_and_timing (test_source.SourceTests.test_other_arithmetic_and_timing) ... ok
+test_progressive_graphs (test_source.SourceTests.test_progressive_graphs) ... ok
+test_repeatable (test_source.SourceTests.test_repeatable) ... ok
+test_single_exercise_source_and_headings (test_source.SourceTests.test_single_exercise_source_and_headings) ... ok
+test_unsafe_proof_suffix_before_write (test_source.SourceTests.test_unsafe_proof_suffix_before_write) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.483s
+
+OK
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/b2_212.py --lesson-root ../4veco-lessen --proof-root reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence --proof-suffix r7 --manifest reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/build-r7.json
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:28:16.272Z`
+- finished_at: `2026-09-05T21:28:33.930Z`
+- duration_ms: `17658`
+- exit_code: `0`
+- stdout_sha256: `933472f36b05dcd162d12a4523b483bda164a721053a9379a5147135dd2e6c6c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.1.2
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+{
+  "paragraph": "2.1.2",
+  "target_record_sha256": "19b466dd6f7b541a3bb701d4de80ce13fe9ea58356313e24b23b21698093e1f9",
+  "plan_sha256": "5e1d318dd1b841467ca297d67956304d1861e3eb68d1df56cc4d32f6434d34a4",
+  "chapter_sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116",
+  "input_sources": [
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\build-scripts\\content\\book-2\\b2_212.py",
+      "sha256": "079c1f40d750d7c23a2c24b1455a1c4820d9e8cf46467f36fe20f5c090363183"
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\build-scripts\\content\\book-2\\212\\theory.md",
+      "sha256": "c5c1ec88217f0e8910b05b5c968bab8e8cee8866db63e323681b6bb65e89e0b4"
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\build-scripts\\content\\book-2\\212\\exercises.md",
+      "sha256": "c03fc1f6939deeaae99753eab087dea82547626839849f0e52d494a8ec4ce533"
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\build-scripts\\content\\book-2\\212\\answers.md",
+      "sha256": "b67a0959f2fcba00d1399f26d51d866a2a40589b74f780384300eebd9ded8324"
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\build-scripts\\content\\book-2\\212\\target-answers.md",
+      "sha256": "da0092dad52dfce100257565e6efa8768fd92f7fbd8c45c5c15fc0dfb222161d"
+    }
+  ],
+  "inspection_status": "PENDING",
+  "documents": [
+    {
+      "source_md": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.md",
+      "source_sha256": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+      "source_html": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.html",
+      "html_sha256": "85eff0548ce75161a2935e2bb3d0bb470f30ec10e95996c670605574d89454b5",
+      "source_pdf": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.pdf",
+      "pdf_sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_fig_1.svg",
+          "sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b"
+        },
+        {
+          "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_fig_1.png",
+          "sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02"
+        },
+        {
+          "pat
+...[truncated 13726 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence.py verify
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:28:54.812Z`
+- finished_at: `2026-09-05T21:28:57.912Z`
+- duration_ms: `3100`
+- exit_code: `0`
+- stdout_sha256: `f76ffde11ccb558dec96bfd91c5823ac78d2d7876e0b1b05ab83a9c478d886aa`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\mechanical-r7.json", "sha256": "9098f1f6fca5de526a431ad3862f22de6668c7604d4968a0c2088a09b074fb7d"}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/212/check_render.py reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence/render-check-r7.json
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:28:57.962Z`
+- finished_at: `2026-09-05T21:28:59.818Z`
+- duration_ms: `1856`
+- exit_code: `0`
+- stdout_sha256: `b40d27954066429b90194dfb47be85c56d6f3c623101294917c41e3ad81e98bf`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "paragraph": "2.1.2",
+  "automated_result": "PASS",
+  "inspection_status": "NOT_SUPPLIED_BY_THIS_SCRIPT",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pages": 14,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": 12.548030598958333,
+      "images": 8,
+      "pdf_sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+      "html_sha256": "85eff0548ce75161a2935e2bb3d0bb470f30ec10e95996c670605574d89454b5",
+      "page_geometry_checks": [
+        {
+          "page": 1,
+          "text_characters": 2167,
+          "images": 0
+        },
+        {
+          "page": 2,
+          "text_characters": 675,
+          "images": 1
+        },
+        {
+          "page": 3,
+          "text_characters": 967,
+          "images": 0
+        },
+        {
+          "page": 4,
+          "text_characters": 897,
+          "images": 1
+        },
+        {
+          "page": 5,
+          "text_characters": 781,
+          "images": 1
+        },
+        {
+          "page": 6,
+          "text_characters": 1064,
+          "images": 1
+        },
+        {
+          "page": 7,
+          "text_characters": 1733,
+          "images": 0
+        },
+        {
+          "page": 8,
+          "text_characters": 840,
+          "images": 1
+        },
+        {
+          "page": 9,
+          "text_characters": 1683,
+          "images": 0
+        },
+        {
+          "page": 10,
+          "text_characters": 1256,
+          "images": 1
+        },
+        {
+          "page": 11,
+          "text_characters": 1097,
+          "images": 1
+        },
+        {
+          "page": 12,
+          "text_characters": 1355,
+          "images": 0
+        },
+        {
+          "page": 13,
+          "text_characters": 829,
+          "images": 0
+        },
+        {
+          "page": 14,
+          "text_characters": 1208,
+          "images": 1
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "pages": 7,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": 12.548030598958333,
+      "images": 4,
+      "pdf_sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+      "html_sha256": "87c55209dd450e989476f2f9779feb88de9fac9bbc77a0805112a444ffb65a06",
+      "page_geometry_checks": [
+        {
+          "page": 1,
+          "text_characters": 1824,
+          "images": 0
+        },
+        {
+          "page": 2,
+          "text_characters": 1025,
+          "images": 1
+        },
+        {
+          "page": 3,
+          "text_characters": 1949,
+          "images": 0
+        },
+        {
+          "page": 4,
+          "text_characters": 962,
+          "images": 1
+        },
+        {
+          "page": 5,
+          "text_characters": 850,
+          "images": 1
+        },
+        {
+          "page": 6,
+          "text_characters": 1774,
+          "images": 0
+        },
+        {
+          "page": 7,
+          "text_characters": 1216,
+          "images": 1
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "pages": 6,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": 18.8220458984375,
+      "images": 3,
+      "pdf_sha256": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90",
+      "html_sha256": "be02782985485caca268df98af897104d78feec9737032cd14803c978a318a82",
+      "page_geometry_checks": [
+        {
+          "page": 1,
+          "text_characters": 2019,
+          "images": 0
+        },
+        {
+          "page": 2,
+          "text_characters": 959,
+          "images": 1
+        },
+        {
+          "page": 3,
+          "text_characters": 1708,
+          "images": 0
+        },
+        {
+          "page": 4,
+          "text_characters": 1345,
+          "images": 1
+        },
+        {
+          "page": 5,
+          "text_characte
+...[truncated 463 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence.py rebuild
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:29:09.480Z`
+- finished_at: `2026-09-05T21:29:22.991Z`
+- duration_ms: `13511`
+- exit_code: `0`
+- stdout_sha256: `abe8e84f5f9be827e416ecd315fd3dcbadedf2a7df4886ad8e299c9f6c9dabbb`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.1.2
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+{"path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\reproduction-r7.json", "sha256": "df4686015ffed45778f9f3b5cb6d8a2ebd65393e493006d4782eca84e506b99b"}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-212-bonus-correction-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even\""
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:36:57.172Z`
+- finished_at: `2026-09-05T21:36:57.247Z`
+- duration_ms: `75`
+- exit_code: `0`
+- stdout_sha256: `605e5681c355cca74c4f0cd4306f67896f5662849b60f6116a29c4194d3fbca8`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.2 "Opbrengsten, winst en break-even"
+Path: C:\wt\book2-212-bonus-correction-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.2 Opbrengsten, winst en break-even
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.2 Opbrengsten, winst en break-even – paragraaf.md
+  OK opgaven.md: 2.1.2 Opbrengsten, winst en break-even – opgaven.md
+  OK antwoorden.md: 2.1.2 Opbrengsten, winst en break-even – antwoorden.md
+  OK 2.1.2 Opbrengsten, winst en break-even – paragraaf.html (1336.0 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – opgaven.html (742.0 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – antwoorden.html (497.9 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf (1009 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – opgaven.pdf (563 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf (383 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 11 image refs all resolve
+  OK _assets/: 11 SVGs, 11 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.2-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.2-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.2 "Opbrengsten, winst en break-even" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-212-bonus-correction-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even\""
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:36:57.290Z`
+- finished_at: `2026-09-05T21:36:57.356Z`
+- duration_ms: `66`
+- exit_code: `0`
+- stdout_sha256: `91794fea7b1433d0e527ae1afa8effcb5d9cd79b67f03e515276875591cd2de0`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.2 "Opbrengsten, winst en break-even"
+Path: C:\wt\book2-212-bonus-correction-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.2 Opbrengsten, winst en break-even
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.2 Opbrengsten, winst en break-even – paragraaf.md
+  OK opgaven.md: 2.1.2 Opbrengsten, winst en break-even – opgaven.md
+  OK antwoorden.md: 2.1.2 Opbrengsten, winst en break-even – antwoorden.md
+  OK 2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf (1009 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – opgaven.pdf (563 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf (383 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 11 image refs all resolve
+  OK _assets/: 11 SVGs, 11 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.2-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.2-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.2 "Opbrengsten, winst en break-even" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe -m unittest discover -s build-scripts/content/book-2/212 -p "test_*.py" -v
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:36:57.401Z`
+- finished_at: `2026-09-05T21:36:58.893Z`
+- duration_ms: `1492`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `0b44c85e44f53d5b6d9a8f77c1ff9707c7cd47130e17f3cb9950ff4bb230ebd9`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+test_current_exact_full_source_and_three_criteria (test_bonus.BonusTests.test_current_exact_full_source_and_three_criteria) ... ok
+test_missing_extra_and_misplaced_criteria_rejected (test_bonus.BonusTests.test_missing_extra_and_misplaced_criteria_rejected) ... ok
+test_model_answer_and_unrelated_source_drift_rejected (test_bonus.BonusTests.test_model_answer_and_unrelated_source_drift_rejected) ... ok
+test_five_context_titles_and_old_negative_fixtures (test_metadata.MetadataTests.test_five_context_titles_and_old_negative_fixtures) ... ok
+test_nine_exact_native_insertions_and_unchanged_full_sources (test_metadata.MetadataTests.test_nine_exact_native_insertions_and_unchanged_full_sources) ... ok
+test_original_failing_alt_fixtures_remain_negative (test_metadata.MetadataTests.test_original_failing_alt_fixtures_remain_negative) ... ok
+test_short_alts_functional_and_bounded (test_metadata.MetadataTests.test_short_alts_functional_and_bounded) ... ok
+test_unchanged_generator_outside_title_loop (test_metadata.MetadataTests.test_unchanged_generator_outside_title_loop) ... ok
+test_eleven_assets_and_no_answer_leakage (test_source.SourceTests.test_eleven_assets_and_no_answer_leakage) ... ok
+test_exact_arithmetic_geometry (test_source.SourceTests.test_exact_arithmetic_geometry) ... ok
+test_font_and_contrast (test_source.SourceTests.test_font_and_contrast) ... ok
+test_frozen_target_goals_points_answers (test_source.SourceTests.test_frozen_target_goals_points_answers) ... ok
+test_no_letter_drift_or_online_dependencies (test_source.SourceTests.test_no_letter_drift_or_online_dependencies) ... ok
+test_other_arithmetic_and_timing (test_source.SourceTests.test_other_arithmetic_and_timing) ... ok
+test_progressive_graphs (test_source.SourceTests.test_progressive_graphs) ... ok
+test_repeatable (test_source.SourceTests.test_repeatable) ... ok
+test_single_exercise_source_and_headings (test_source.SourceTests.test_single_exercise_source_and_headings) ... ok
+test_unsafe_proof_suffix_before_write (test_source.SourceTests.test_unsafe_proof_suffix_before_write) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.182s
+
+OK
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.1.2
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:36:58.936Z`
+- finished_at: `2026-09-05T21:37:00.912Z`
+- duration_ms: `1976`
+- exit_code: `0`
+- stdout_sha256: `436ef043a9db2fbcc091f49bcb00a0f4247450f7a7d48882bd5a2495677c1691`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.1.2
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:37:00.954Z`
+- finished_at: `2026-09-05T21:37:01.694Z`
+- duration_ms: `740`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence.py bind
+
+- cwd: `C:\wt\book2-212-bonus-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T21:37:01.738Z`
+- finished_at: `2026-09-05T21:37:02.229Z`
+- duration_ms: `491`
+- exit_code: `0`
+- stdout_sha256: `70b535ccd1dc5c3a22fa3de862cdfdc189a6a7fefd32ef5d4cc8b46244772699`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\visual-binding-r7.json", "sha256": "ef9c433205c72a9e8da5b9804ed7e90a6518190bdbd489f2a76a611ec84b0eb1"}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
