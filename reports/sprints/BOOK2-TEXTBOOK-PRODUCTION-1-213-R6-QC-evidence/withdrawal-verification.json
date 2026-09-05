@@ -1,0 +1,16 @@
+{
+  "result": "REVISE: R6-QC-F1 missing required bonus criteria block",
+  "actor": "paragraph_221_r8_independent_review",
+  "current_disposition_sha256": "0ea14f249e35f3f56781c57ca2ad82abae2aacecf628063c5d2b03dd9c38663e",
+  "initial_PASS_platform_commit": "1b7be114ab64efd38d5e23d75c7cfa2f1e5edab5",
+  "initial_QC_lesson_commit": "0fa54a0d278d7c0be7a315bbabf741bd1d735240",
+  "canonical_QC_raw_sha256": "c96a4af45cfbf6c43ceda27ecf6dd231c75667ece58b378b9080975fe4be717f",
+  "canonical_QC_state": "exact original legacy record, not current acceptance",
+  "canonical_review_raw_sha256": "a70fd9571cea3afc5861d1b91dc99c102757767e0fb9d66da211602a90c82d66",
+  "all_protected_pins_exact": true,
+  "all_source_output_asset_hashes_exact": true,
+  "handoff": "absent",
+  "earlier_verification": "retained as historical withdrawn state",
+  "unmet_required_deliverables": 1,
+  "source_correction_by_this_reviewer": false
+}
