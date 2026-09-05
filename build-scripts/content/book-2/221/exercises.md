@@ -37,7 +37,9 @@ verklaren; deze cijfers bewijzen die oorzaak niet.
 > **Onthouden**
 >
 > - Gebruik bij procentuele veranderingen steeds de **oude waarde** als noemer.
-> - Ev = %ΔQv / %ΔP; bewaar het teken en zet geen %-teken achter Ev.
+>   Oude P en Qv moeten positief zijn; de prijsverandering mag niet nul zijn.
+> - Ev = %ΔQv / %ΔP, zonder %-teken. Een negatieve Ev betekent:
+>   prijs en Qv bewegen in tegengestelde richting.
 > - Vergelijk |Ev| met 1: kleiner is prijsinelastisch, groter is prijselastisch.
 > - Verklaar het resultaat voor dit product en deze prijsverandering; een
 >   plausibele oorzaak is nog geen bewezen oorzaak.

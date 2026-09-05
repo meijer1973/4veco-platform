@@ -58,6 +58,21 @@ class Paragraph221Tests(unittest.TestCase):
         self.assertNotIn('_assets/', independent)
         self.assertNotIn('https:', text)
 
+    def test_review_corrections_misconception_box_and_five_point_recap(self):
+        theory = self.docs['paragraaf'].split('## Uitgewerkt voorbeeld')[0]
+        warning = theory.split('> **Let op — veelgemaakte fout**', 1)[1].split('\n\n', 1)[0]
+        self.assertIn('**Fout:** “Ev = −2 is prijsinelastisch, want −2 < 1.”', warning)
+        self.assertIn('**Goed:** |−2| = 2 > 1: prijselastisch.', warning)
+        self.assertIn('Het minteken geeft tegengestelde richtingen aan.', warning)
+        self.assertLess(theory.index('Let op — veelgemaakte fout'), theory.index('- **|Ev| < 1'))
+        for kind in ('paragraaf', 'opgaven'):
+            recap = self.docs[kind].split('> **Onthouden**', 1)[1].split('## Startopgaven')[0]
+            self.assertEqual(len(re.findall(r'^> - ', recap, re.M)), 5)
+            for phrase in ('oude waarde', 'Oude P en Qv moeten positief zijn',
+                           'prijsverandering mag niet nul zijn', 'negatieve Ev betekent',
+                           'tegengestelde richting', '§2.2.2'):
+                self.assertIn(phrase, recap)
+
     def test_three_assets_every_reference_and_proportional_geometry(self):
         self.assertEqual(set(self.assets), {'2.2.1_fig_1', '2.2.1_fig_2', '2.2.1_we_1'})
         self.assertEqual(set(re.findall(r'_assets/([^/)]+)\.svg', '\n'.join(self.docs.values()))), set(self.assets))
