@@ -1,0 +1,209 @@
+{
+  "status": "PASS",
+  "independent_mutations_rejected": 19,
+  "probes": [
+    {
+      "probe": "missing frozen goal",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "extra fifth goal",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "forged target points",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "missing target construction prompt",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "supplied graph inserted into unsupported target",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "actual HTML alt altered",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "actual caption dropped",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "actual embedded PNG corrupted",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "actual SVG title removed",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "wrong CS polygon geometry",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "wrong actual graph font",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "unshaded supplied graph leaks CS",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "line-only faded graph leaks price",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "ZIP bytes",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "ZIP traversal",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "ZIP extra",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "ZIP duplicate",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "native PENDING status forged",
+      "result": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "probe": "native rendered page hash drift",
+      "result": "REJECTED_AS_REQUIRED"
+    }
+  ],
+  "actual_image_occurrences": [
+    {
+      "edition": "paragraaf",
+      "asset": "_assets/2.3.1_fig_1.svg",
+      "alt": "Betalingsbereidheid en prijs van vier workshopdeelnemers.",
+      "caption": "Figuur 1. Deelnemers 1, 2 en 3 kopen. Hun verschillen met de prijs zijn 8, 4 en 0 euro; samen is dat € 12 consumentensurplus. Deelnemer 4 koopt niet en telt niet mee."
+    },
+    {
+      "edition": "paragraaf",
+      "asset": "_assets/2.3.1_fig_2.svg",
+      "alt": "Assen en snijpunten van de vraag naar toegang tot de boekenbeurs.",
+      "caption": "Figuur 2. De assen en twee snijpunten staan klaar: (0, 40) en (80, 0). De horizontale schaal telt kaartjes; de verticale schaal geeft euro per kaartje aan."
+    },
+    {
+      "edition": "paragraaf",
+      "asset": "_assets/2.3.1_fig_3.svg",
+      "alt": "Vraaglijn en gegeven prijs van toegang tot de boekenbeurs.",
+      "caption": "Figuur 3. Verbind de snijpunten tot de vraaglijn en voeg P = 10 toe. De hulplijn vanuit (60, 10) wijst Qd = 60 aan. Dit is een uitkomst bij een gegeven prijs."
+    },
+    {
+      "edition": "paragraaf",
+      "asset": "_assets/2.3.1_fig_4.svg",
+      "alt": "Consumentensurplus boven de prijslijn van de boekenbeurs.",
+      "caption": "Figuur 4. De gearceerde driehoek ligt boven P = 10 en onder de vraaglijn, van Q = 0 tot Q = 60. De rechthoek eronder is de gezamenlijke betaling. Beide bedragen hebben een andere betekenis."
+    },
+    {
+      "edition": "paragraaf",
+      "asset": "_assets/2.3.1_we_1.svg",
+      "alt": "Vraaglijn en consumentensurplus van museumbezoekers.",
+      "caption": "Museum: de vraaglijn loopt door (0, 30) en (30, 0). Bij de gegeven prijs 10 worden 20 kaartjes verkocht. De gearceerde driehoek boven de prijslijn is het consumentensurplus."
+    },
+    {
+      "edition": "paragraaf",
+      "asset": "_assets/2.3.1_ex_1.svg",
+      "alt": "Vraaglijn en gegeven prijs van aquariumkaartjes.",
+      "caption": "Aquarium: de vraaglijn en de gegeven prijslijn zijn getekend. Het snijpunt is (32, 8). Het consumentensurplus is nog niet gearceerd."
+    },
+    {
+      "edition": "paragraaf",
+      "asset": "_assets/2.3.1_ex_2.svg",
+      "alt": "Vraaglijn met prijs, hoeveelheid, basis en hoogte van de tuintour.",
+      "caption": "Tuintour: de gegeven prijs is 10 en de gevraagde hoeveelheid 40. De gearceerde driehoek heeft een horizontale basis van 40 kaartjes en een loodrechte hoogte van 20 euro per kaartje."
+    },
+    {
+      "edition": "paragraaf",
+      "asset": "_assets/2.3.1_ex_3.svg",
+      "alt": "Assen en vraaglijn van een klimkennismaking zonder prijslijn.",
+      "caption": "Klimkennismaking: alleen de assen en de vraaglijn staan klaar. De prijslijn en het surplusgebied voeg je zelf toe."
+    },
+    {
+      "edition": "opgaven",
+      "asset": "_assets/2.3.1_we_1.svg",
+      "alt": "Vraaglijn en consumentensurplus van museumbezoekers.",
+      "caption": "Museum: de vraaglijn loopt door (0, 30) en (30, 0). Bij de gegeven prijs 10 worden 20 kaartjes verkocht. De gearceerde driehoek boven de prijslijn is het consumentensurplus."
+    },
+    {
+      "edition": "opgaven",
+      "asset": "_assets/2.3.1_ex_1.svg",
+      "alt": "Vraaglijn en gegeven prijs van aquariumkaartjes.",
+      "caption": "Aquarium: de vraaglijn en de gegeven prijslijn zijn getekend. Het snijpunt is (32, 8). Het consumentensurplus is nog niet gearceerd."
+    },
+    {
+      "edition": "opgaven",
+      "asset": "_assets/2.3.1_ex_2.svg",
+      "alt": "Vraaglijn met prijs, hoeveelheid, basis en hoogte van de tuintour.",
+      "caption": "Tuintour: de gegeven prijs is 10 en de gevraagde hoeveelheid 40. De gearceerde driehoek heeft een horizontale basis van 40 kaartjes en een loodrechte hoogte van 20 euro per kaartje."
+    },
+    {
+      "edition": "opgaven",
+      "asset": "_assets/2.3.1_ex_3.svg",
+      "alt": "Assen en vraaglijn van een klimkennismaking zonder prijslijn.",
+      "caption": "Klimkennismaking: alleen de assen en de vraaglijn staan klaar. De prijslijn en het surplusgebied voeg je zelf toe."
+    },
+    {
+      "edition": "antwoorden",
+      "asset": "_assets/2.3.1_ex_4.svg",
+      "alt": "Consumentensurplus van aquariumbezoekers bij acht euro.",
+      "caption": "Aquarium: arceer de driehoek met hoekpunten (0, 24), (0, 8) en (32, 8). Basis 32 en hoogte 16 geven € 256 consumentensurplus."
+    },
+    {
+      "edition": "antwoorden",
+      "asset": "_assets/2.3.1_ex_5.svg",
+      "alt": "Consumentensurplus van deelnemers aan de tuintour.",
+      "caption": "Tuintour: de driehoek tussen betalingsbereidheid en prijs heeft hoekpunten (0, 30), (0, 10) en (40, 10). De oppervlakte is € 400."
+    },
+    {
+      "edition": "antwoorden",
+      "asset": "_assets/2.3.1_ex_6.svg",
+      "alt": "Consumentensurplus van deelnemers aan de klimkennismaking.",
+      "caption": "Klimkennismaking: de toegevoegde prijslijn P = 12 snijdt de vraaglijn bij (24, 12). De gearceerde driehoek is € 144 consumentensurplus."
+    },
+    {
+      "edition": "antwoorden",
+      "asset": "_assets/2.3.1_ex_7.svg",
+      "alt": "Vraaglijn en consumentensurplus van het bordspelmiddagbezoek.",
+      "caption": "Bordspelmiddag: de vraaglijn en P = 5 kruisen bij (30, 5). De driehoek boven de prijs, tot aan de vraaglijn, geeft € 225 voordeel voor de kopers samen."
+    },
+    {
+      "edition": "antwoorden",
+      "asset": "_assets/2.3.1_ex_8.svg",
+      "alt": "Vraaglijn en consumentensurplus van deelnemers aan de skateclinic.",
+      "caption": "Skateclinic: de vraaglijn loopt van (0, 36) naar (72, 0). Bij (48, 12) eindigt het gearceerde surplusgebied; de oppervlakte is € 576."
+    },
+    {
+      "edition": "antwoorden",
+      "asset": "_assets/2.3.1_ex_9.svg",
+      "alt": "Vraaglijn en consumentensurplus van bezoekers aan het taalcafé.",
+      "caption": "Taalcafé: het snijpunt (28, 14) begrenst het consumentensurplus. De gearceerde driehoek is € 196; de afzonderlijke betalingsrechthoek is € 392."
+    },
+    {
+      "edition": "antwoorden",
+      "asset": "_assets/2.3.1_ex_10.svg",
+      "alt": "Vraaglijn en consumentensurplus van kopers van concertkaartjes.",
+      "caption": "Concertkaartjes: de vraaglijn loopt door (0, 50) en (100, 0), en P = 20 snijdt haar in (60, 20). De gearceerde driehoek boven de prijslijn is het consumentensurplus."
+    }
+  ],
+  "actual_svg_count": 15,
+  "independent_exact_CS_polygon_checks": 10,
+  "zip_member_counts": {
+    "paragraaf": 19,
+    "opgaven": 11,
+    "antwoorden": 17
+  },
+  "all_44_baseline_lesson_files_unchanged": true,
+  "nine_platform_source_files_unchanged": true,
+  "all_27_historical_native_manifests_unchanged": true,
+  "limitations": "Review-only independent probes; not shared-policy or full-CI certification. No pupil or authority files modified."
+}
