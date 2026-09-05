@@ -52,6 +52,19 @@ required map/index refresh follows in a mechanical-only commit. Final local and
 remote SHAs and clean status are reported directly to root after that push.
 No dashboard/roadmap state changed, so no dashboard regeneration is required.
 
+The first default `agent:index` execution selected lesson `origin/main`; diff
+inspection detected that this would omit current Book2 branch files. That
+uncommitted interim index was regenerated through the existing generator using
+`FOURVECO_LESSEN_SOURCE_REF=901e18aaf8179b37daafd5fd2e45ed92db444a49` and
+`FOURVECO_LESSEN_SOURCE_BRANCH=agent/book2-212-alt-correction-20260905`.
+The corrected lesson inventory remains1850 files; its only delta is source
+identity/timestamp/scope wording. Platform additions are this task's53 new
+source/evidence paths. A fixed `FOURVECO_INDEX_GENERATED_AT` from the generated
+JSON permits deterministic regeneration; no generator was edited. The final
+index-only descendant contains just the four existing GitHub-agent index files.
+`emit-url-index.js` ran without a content delta; existing maps still resolve
+their unchanged entrypoint paths. No unrelated lesson inventory was deleted.
+
 `gh run list --branch agent/book2-212-alt-correction-20260905 --limit5` returned
 an empty array after payload push. Exact-head `platform-ci / validate-platform`
 is therefore NOT RUN/UNAVAILABLE, not PASS or waived. Root owns later applicable
