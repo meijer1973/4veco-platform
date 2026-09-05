@@ -5,8 +5,8 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform adopted211 R5 `b0b3d5a12f0b0e90ed36b127881c7b0d2c656ca3`,
-lessons `1432170`, including the published
+Snapshot: platform adopted212 R7 `88956b8693f4de0197a0b019bba5a18ee80b3cd2`,
+lessons `9da7c47b07144815f730ebbb9fd117805194ac6b`, including the published
 root-only §222 acceptance/handoff recorded in222-root-acceptance-r13.md.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 All paths below are relative to the lesson book root
@@ -37,8 +37,9 @@ reviews pass with flags; root acceptance/handoff are complete. Its editions are 
 page7 changes; the other30 pages remain exact. Current paragraph rereview/QC
 remain pending. Its inherited stale opgaven.zip is explicitly excluded;
 the native211 builder has no ZIP output contract. It is not a current student
-deliverable. §212 R6 is now adopted/root-rebuilt: exact27page parity and34artifact
-full/print reproduction. Its bonus-criteria block and independent gates remain.
+deliverable. §212 R7 adds its three bonus criteria and is adopted/root-rebuilt:
+only answer page6 changes, the other26 pages are exact, and34artifact full/print
+reproduction passes. Its independent gates and accepted-prerequisite succession remain.
 Their root reports distinguish actual source/page/rebuild checks from remaining
 independent paragraph, specialist and handoff gates. See review-corrections.md.
 
@@ -112,7 +113,7 @@ hashes alone are not student-quality acceptance.
 | 2.1.1 / antwoorden | `498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce` | R5 criteria corrected; current paragraph/QC gates pending |
 | 2.1.2 / paragraaf | `e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2` | R5 historical print acceptance; short-alt correction/review pending |
 | 2.1.2 / opgaven | `94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a` | R5 historical print acceptance; short-alt correction/review pending |
-| 2.1.2 / antwoorden | `07a75d7b5b69344d38d5da9e5f2e0a3b964d86cc64c383b37809f8263fb33192` | R5 historical print acceptance; short-alt correction/review pending |
+| 2.1.2 / antwoorden | `d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90` | R7 criteria corrected; current paragraph/QC/successor gates pending |
 | 2.2.1 / paragraaf | `98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6` | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.1 / opgaven | `a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af` | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.1 / antwoorden | `d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d` | R8 internal acceptance with flags; current review/QC/handoff complete |
@@ -140,8 +141,8 @@ See221-root-acceptance-r8.md for exact current canonical and adoption bindings.
 
 Wave-two §213 and §223 outputs remain adopted candidates C; their gate
 closure remains pending. §211 R5 has its missing bonus criteria and needs current
-rereview/QC. §212 R6 still needs its bonus block and current gates in this root
-snapshot; both metadata corrections are root-adopted/rebuilt.
+rereview/QC. §212 R7 has its bonus block and needs current independent gates and
+accepted-prerequisite succession; both metadata corrections are root-adopted/rebuilt.
 §213 R7 has the bonus-criteria correction; independent gates and exact accepted
 prerequisite succession remain. Current root print-only/source/render proof is
 not mislabeled a full generator rebuild while the old212 MD guard still differs.

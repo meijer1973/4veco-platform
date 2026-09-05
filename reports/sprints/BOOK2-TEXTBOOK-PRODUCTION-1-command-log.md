@@ -11400,3 +11400,399 @@ Paragraph lane scope: PASS (textbook)
 ```text
 
 ```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-r7-check.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:00:44.707Z`
+- finished_at: `2026-09-05T22:01:04.372Z`
+- duration_ms: `19665`
+- exit_code: `0`
+- stdout_sha256: `695ff743bc7985864c6ae15d9c5ba5e1c75d97e981eb9bbf5d4ff461d88502e2`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.1.2
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+{"path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-root-r7-evidence\\mechanical-r7.json", "sha256": "59c542b045e09893122035f9b3d225cf74bdf2aac13bb24a3bcb6b818740251e"}
+{"path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-root-r7-evidence\\reproduction-r7.json", "sha256": "8df928bd7fce15900a81aa63bd4c38fdfe7041b01be790ea6379d5429188dec4"}
+{"result": "PASS", "files": 34, "pages": 27, "changed_pages": [["antwoorden", "page-006.png"]], "binding_sha256": "5a16397cea897d70d4e304509f07aff3562eb33c1c059aecf4b9e63fddba0b3b"}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe -m unittest discover -s build-scripts/content/book-2/212 -p "test*.py" -v
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:01:10.110Z`
+- finished_at: `2026-09-05T22:01:11.669Z`
+- duration_ms: `1559`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `c775ae7c44a9bf48a06423288f217a6518dfe6b97973f1caa2eb481bc28f7f6e`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+test_current_exact_full_source_and_three_criteria (test_bonus.BonusTests.test_current_exact_full_source_and_three_criteria) ... ok
+test_missing_extra_and_misplaced_criteria_rejected (test_bonus.BonusTests.test_missing_extra_and_misplaced_criteria_rejected) ... ok
+test_model_answer_and_unrelated_source_drift_rejected (test_bonus.BonusTests.test_model_answer_and_unrelated_source_drift_rejected) ... ok
+test_five_context_titles_and_old_negative_fixtures (test_metadata.MetadataTests.test_five_context_titles_and_old_negative_fixtures) ... ok
+test_nine_exact_native_insertions_and_unchanged_full_sources (test_metadata.MetadataTests.test_nine_exact_native_insertions_and_unchanged_full_sources) ... ok
+test_original_failing_alt_fixtures_remain_negative (test_metadata.MetadataTests.test_original_failing_alt_fixtures_remain_negative) ... ok
+test_short_alts_functional_and_bounded (test_metadata.MetadataTests.test_short_alts_functional_and_bounded) ... ok
+test_unchanged_generator_outside_title_loop (test_metadata.MetadataTests.test_unchanged_generator_outside_title_loop) ... ok
+test_eleven_assets_and_no_answer_leakage (test_source.SourceTests.test_eleven_assets_and_no_answer_leakage) ... ok
+test_exact_arithmetic_geometry (test_source.SourceTests.test_exact_arithmetic_geometry) ... ok
+test_font_and_contrast (test_source.SourceTests.test_font_and_contrast) ... ok
+test_frozen_target_goals_points_answers (test_source.SourceTests.test_frozen_target_goals_points_answers) ... ok
+test_no_letter_drift_or_online_dependencies (test_source.SourceTests.test_no_letter_drift_or_online_dependencies) ... ok
+test_other_arithmetic_and_timing (test_source.SourceTests.test_other_arithmetic_and_timing) ... ok
+test_progressive_graphs (test_source.SourceTests.test_progressive_graphs) ... ok
+test_repeatable (test_source.SourceTests.test_repeatable) ... ok
+test_single_exercise_source_and_headings (test_source.SourceTests.test_single_exercise_source_and_headings) ... ok
+test_unsafe_proof_suffix_before_write (test_source.SourceTests.test_unsafe_proof_suffix_before_write) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.200s
+
+OK
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/212/check_render.py reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-native-r7.json
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:01:11.712Z`
+- finished_at: `2026-09-05T22:01:13.385Z`
+- duration_ms: `1673`
+- exit_code: `0`
+- stdout_sha256: `b40d27954066429b90194dfb47be85c56d6f3c623101294917c41e3ad81e98bf`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "paragraph": "2.1.2",
+  "automated_result": "PASS",
+  "inspection_status": "NOT_SUPPLIED_BY_THIS_SCRIPT",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pages": 14,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": 12.548030598958333,
+      "images": 8,
+      "pdf_sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+      "html_sha256": "85eff0548ce75161a2935e2bb3d0bb470f30ec10e95996c670605574d89454b5",
+      "page_geometry_checks": [
+        {
+          "page": 1,
+          "text_characters": 2167,
+          "images": 0
+        },
+        {
+          "page": 2,
+          "text_characters": 675,
+          "images": 1
+        },
+        {
+          "page": 3,
+          "text_characters": 967,
+          "images": 0
+        },
+        {
+          "page": 4,
+          "text_characters": 897,
+          "images": 1
+        },
+        {
+          "page": 5,
+          "text_characters": 781,
+          "images": 1
+        },
+        {
+          "page": 6,
+          "text_characters": 1064,
+          "images": 1
+        },
+        {
+          "page": 7,
+          "text_characters": 1733,
+          "images": 0
+        },
+        {
+          "page": 8,
+          "text_characters": 840,
+          "images": 1
+        },
+        {
+          "page": 9,
+          "text_characters": 1683,
+          "images": 0
+        },
+        {
+          "page": 10,
+          "text_characters": 1256,
+          "images": 1
+        },
+        {
+          "page": 11,
+          "text_characters": 1097,
+          "images": 1
+        },
+        {
+          "page": 12,
+          "text_characters": 1355,
+          "images": 0
+        },
+        {
+          "page": 13,
+          "text_characters": 829,
+          "images": 0
+        },
+        {
+          "page": 14,
+          "text_characters": 1208,
+          "images": 1
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "pages": 7,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": 12.548030598958333,
+      "images": 4,
+      "pdf_sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+      "html_sha256": "87c55209dd450e989476f2f9779feb88de9fac9bbc77a0805112a444ffb65a06",
+      "page_geometry_checks": [
+        {
+          "page": 1,
+          "text_characters": 1824,
+          "images": 0
+        },
+        {
+          "page": 2,
+          "text_characters": 1025,
+          "images": 1
+        },
+        {
+          "page": 3,
+          "text_characters": 1949,
+          "images": 0
+        },
+        {
+          "page": 4,
+          "text_characters": 962,
+          "images": 1
+        },
+        {
+          "page": 5,
+          "text_characters": 850,
+          "images": 1
+        },
+        {
+          "page": 6,
+          "text_characters": 1774,
+          "images": 0
+        },
+        {
+          "page": 7,
+          "text_characters": 1216,
+          "images": 1
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "pages": 6,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": 18.8220458984375,
+      "images": 3,
+      "pdf_sha256": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90",
+      "html_sha256": "be02782985485caca268df98af897104d78feec9737032cd14803c978a318a82",
+      "page_geometry_checks": [
+        {
+          "page": 1,
+          "text_characters": 2019,
+          "images": 0
+        },
+        {
+          "page": 2,
+          "text_characters": 959,
+          "images": 1
+        },
+        {
+          "page": 3,
+          "text_characters": 1708,
+          "images": 0
+        },
+        {
+          "page": 4,
+          "text_characters": 1345,
+          "images": 1
+        },
+        {
+          "page": 5,
+          "text_characte
+...[truncated 463 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:01:28.778Z`
+- finished_at: `2026-09-05T22:01:28.858Z`
+- duration_ms: `80`
+- exit_code: `0`
+- stdout_sha256: `e30cfd65afd4244a631f2f4aa071a299a8560a9e7ebddebaf72a6b2ff77c89c7`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.2 "Opbrengsten, winst en break-even"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.2 Opbrengsten, winst en break-even
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.2 Opbrengsten, winst en break-even – paragraaf.md
+  OK opgaven.md: 2.1.2 Opbrengsten, winst en break-even – opgaven.md
+  OK antwoorden.md: 2.1.2 Opbrengsten, winst en break-even – antwoorden.md
+  OK 2.1.2 Opbrengsten, winst en break-even – paragraaf.html (1336.0 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – opgaven.html (742.0 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – antwoorden.html (497.9 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf (1009 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – opgaven.pdf (563 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf (383 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 11 image refs all resolve
+  OK _assets/: 11 SVGs, 11 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.2-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.2-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.2 "Opbrengsten, winst en break-even" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:01:28.911Z`
+- finished_at: `2026-09-05T22:01:28.977Z`
+- duration_ms: `66`
+- exit_code: `0`
+- stdout_sha256: `4983103bfafb1add446b1f5ddf2c38e05e50fd547a634aa1d83f070567c7a0cf`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.2 "Opbrengsten, winst en break-even"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.2 Opbrengsten, winst en break-even
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.2 Opbrengsten, winst en break-even – paragraaf.md
+  OK opgaven.md: 2.1.2 Opbrengsten, winst en break-even – opgaven.md
+  OK antwoorden.md: 2.1.2 Opbrengsten, winst en break-even – antwoorden.md
+  OK 2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf (1009 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – opgaven.pdf (563 KB)
+  OK 2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf (383 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 11 image refs all resolve
+  OK _assets/: 11 SVGs, 11 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.2-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.2-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.2 "Opbrengsten, winst en break-even" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-bonus-adoption-inventory-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:03:52.739Z`
+- finished_at: `2026-09-05T22:03:52.820Z`
+- duration_ms: `81`
+- exit_code: `0`
+- stdout_sha256: `c3870f5116da6af2ddc6727f3109c12c3065d5491c708c0ff7008c52dcb915b9`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS",
+  "counts": {
+    "A": 6,
+    "C": 12,
+    "L": 8,
+    "P": 15
+  },
+  "present": 26,
+  "current_pdf_hashes": 18,
+  "canonical211212": "historical unchanged; no new acceptance",
+  "book_complete": false
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```

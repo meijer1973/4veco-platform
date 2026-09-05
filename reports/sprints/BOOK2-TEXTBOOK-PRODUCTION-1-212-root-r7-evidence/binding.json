@@ -1,0 +1,40 @@
+{
+  "result": "PASS",
+  "executed_by": "codex-root",
+  "platform_base": "b7b584e9157929b1efa521af0101a0795f34d2d9",
+  "lessons_base": "1432170d88341de6d8cd8b703a084f550a238251",
+  "original_evidence_hashes": {
+    "baseline.json": "560b928e69262c79f1afc3bb325df0e58f437c3b63d1c3393d1b8cd664b32001",
+    "build-r7.json": "aadfedcb49d0e533ec26c87fcdc6750a76fd1933e1396d1edd794a3706a8aec2",
+    "mechanical-r7.json": "9098f1f6fca5de526a431ad3862f22de6668c7604d4968a0c2088a09b074fb7d",
+    "render-check-r7.json": "bfa66abf5d67a8f16025386246d714fb82c5067ebbf541b3d9b1473328730cfc",
+    "reproduction-r7.json": "df4686015ffed45778f9f3b5cb6d8a2ebd65393e493006d4782eca84e506b99b",
+    "visual-binding-r7.json": "ef9c433205c72a9e8da5b9804ed7e90a6518190bdbd489f2a76a611ec84b0eb1"
+  },
+  "unchanged_builder_helper_sha256": "78453d199676cd488d833124b5726ff7d7e9b08cf43087af682421e7148fc2fe",
+  "root_evidence_hashes": {
+    "baseline.json": "9405e672559f2f9df66fc67e0c031de1336e2667d8e2a1d7e003f18b412e37dc",
+    "build-r7.json": "b4fa607ce5714c4be60926c38c40fc7a38791568386418091dfe075715b380bb",
+    "mechanical-r7.json": "59c542b045e09893122035f9b3d225cf74bdf2aac13bb24a3bcb6b818740251e",
+    "reproduction-r7.json": "8df928bd7fce15900a81aa63bd4c38fdfe7041b01be790ea6379d5429188dec4"
+  },
+  "actual_lesson_paths": [
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.html",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.zip"
+  ],
+  "changed_pages": [
+    [
+      "antwoorden",
+      "page-006.png"
+    ]
+  ],
+  "unchanged_pages": 26,
+  "full_and_print_native_files": 34,
+  "personal_visual_review": "Not supplied by script: root separately views answer page6; only exact unchanged bytes transfer prior personal views.",
+  "independent_paragraph_review": "PENDING",
+  "specialist_QC": "PENDING",
+  "root_acceptance": "NOT_GRANTED",
+  "classroom_timing": "UNOBSERVED_54_67_77"
+}

@@ -268,6 +268,14 @@ the other30 pages and all assets remain exact. Both PartA profiles pass without
 promoting historical canonical review/QC/handoff. See211-root-verification-r5.md.
 The required missing-block finding is implemented, not independently closed yet.
 
+**§212 R7 bounded bonus correction adopted; independent closure still pending.**
+Root adopted88956b86 /9da7c47b: three criteria, exactly bounded one-method
+metadata expectation evolution,18tests and34file full/print reproduction PASS.
+Only answer page6 changes; root personally read it and verified26 exact page
+transfers. All models and incoming211 pins remain unchanged. Both actual profiles
+pass without creating new acceptance. See212-root-verification-r7.md. Distinct
+paragraph review/QC and accepted-input successor review are still required.
+
 ## Existing accepted flags, not concealed corrections
 
 - Classroom timing/attainment remains unobserved throughout.
