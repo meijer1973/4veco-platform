@@ -1,0 +1,75 @@
+{
+  "source_md": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – opgaven.md",
+  "source_sha256": "55a3405f1ab3aae6de0ede40264882d047c96f7e5f1ae15db2a710fe3570614d",
+  "source_html": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – opgaven.html",
+  "html_sha256": "d06e07aa4262d683038aa7f10f60bde70e22a200bdc2704fdaa462977deae326",
+  "source_pdf": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – opgaven.pdf",
+  "pdf_sha256": "ed1062fd0fb45b74fc6ade48786fb99c00712879427d7014ace62e680e553cb5",
+  "assets": [
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_we_1.svg",
+      "sha256": "587fddfd013c9c29d943ed528b9a697e3f0043fa73c57944bfc2a428500bd38f"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_we_1.png",
+      "sha256": "8bf4724ae62323bb209059f52b28ac733d9b9274f7347f6f7a35ea076d89ef4e"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_1.svg",
+      "sha256": "60f91cf5fd9da887c840f9b02dbd99c6e9541800354643a7756370b2e258b660"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_1.png",
+      "sha256": "23d31f28e469b1a0f4b0432ba013dc724102a8062654d72d8e00d26bbb99e1d2"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_2.svg",
+      "sha256": "2562f1ce54bb06b08ed1dbb5750ab7642e08b3f47155e0c6df556b362fc4ef50"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_2.png",
+      "sha256": "dcc9c5f89d17f3b53019f4215e643039471db1df0fa6197ba468d5c17c8e05e4"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_3.svg",
+      "sha256": "7d2fcef8db60098d53ee1434d09ba57bdff6125e0f560a1050d6459eaf86c23f"
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\_assets\\2.3.1_ex_3.png",
+      "sha256": "0e68e9d0014f3d5ea7f572f4712f81bda466fd64373b1fd5bfb3625b54e49216"
+    }
+  ],
+  "zip": {
+    "path": "C:\\wt\\book2-231-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – opgaven.zip",
+    "sha256": "02e2cf739ffa78074fa2c830725cd546604e3b6699185b48c0322a6a89f451bb"
+  },
+  "sprint_id": "BOOK2-TEXTBOOK-PRODUCTION-1",
+  "artifact_id": "231-opgaven-ed1062fd0fb4-r2",
+  "render_dpi": 150,
+  "rendered_pages": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png",
+    "pages/page-008.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "1238c86e093677c27a942f9e3f6a7cb8fb76e7d9a33ece965343d2cff6d2096e",
+    "page-002.png": "ff710e5c3935ccd27380e6733fb063c08a342706399a94bb9df70275a63dfb66",
+    "page-003.png": "18615310cfb392d7a464c57419a1c878c890e9e65bc514e0b29e3a7ef1a890a4",
+    "page-004.png": "43d7ab03831c2d561d67a9ac3223f11d602ba5dc1b6364a62295838e2e9f6bae",
+    "page-005.png": "4e02f8df9c0b1f332a0f6a358fc6eee651192d9e709f99e49856e3fb768ed0ea",
+    "page-006.png": "68f679ccc792cce360bb390fe31508f9fef587301601fd4f59a66306942b0a60",
+    "page-007.png": "91f0dd4393aff45c4d8037bbb803a235841ca1dac591d9c714d674f8763c4883",
+    "page-008.png": "a8e6dfb27393c5042989eaa91389c2d1d8062b33a90afa3eebb7d027a6182d75"
+  },
+  "contact_sheet": "contact-sheet.png",
+  "pages_inspected": [],
+  "inspection_status": "PENDING",
+  "visible_student_defects": null,
+  "inspected_at_normal_reading_scale": false,
+  "warnings": []
+}
