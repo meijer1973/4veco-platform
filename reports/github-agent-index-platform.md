@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T18:02:48.197Z
+Generated: 2026-09-05T18:28:06.203Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-221-presentation-20260905`
-Source commit: `de57944f7b513582be33f0de4325449ad1832f9d`
-Files indexed: 7991
+Source branch: `agent/book2-221-r7-review-20260905`
+Source commit: `0786233a5ee25380287fa722d7e0345f9dc25b9b`
+Files indexed: 8003
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -929,7 +929,7 @@ Count: 25
 
 ## validators
 
-Count: 701
+Count: 702
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1467,6 +1467,7 @@ Count: 701
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-render-check-r3.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-render-check-r4.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-render-check-r5.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-render-check-r7.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check-r6.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check-r7.json
 - reports/sprints/CHECK-Q2-PLAN-baseline.md
@@ -2670,7 +2671,7 @@ Count: 1030
 
 ## reports
 
-Count: 5243
+Count: 5255
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5632,7 +5633,17 @@ Count: 5243
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-builder-self-qa.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-correction-matrix-r6.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paired-scope-r7.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-diagnostic-manifest-r7.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-gates-r7.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-inspection-r7.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-probes-r7.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-probes-r7.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-rebuild-default-runtime-r7.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-render-check-r7.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-review-r2.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-review-r7-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-review-r7.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-scope-r7.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-presentation-builder-execution-r7.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-presentation-builder-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-presentation-correction-plan.md
@@ -5640,6 +5651,8 @@ Count: 5243
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-evidence.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-execution.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R7-REVIEW-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R7-REVIEW-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check-r6.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check-r7.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check.json
