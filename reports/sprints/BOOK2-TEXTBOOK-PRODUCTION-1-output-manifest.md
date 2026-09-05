@@ -5,8 +5,8 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform `ad1425b37d4a02ec187088e2fa885fd5226ad9d6`, lessons
-`3745ef9757e6f10e5edd746dc4508ee73c596d6d`.
+Snapshot: platform `f44004683a20d12d25ee7b8008971416358d637a`, lessons
+`800c3540b15787aecec2e782e6da9b960664cadb`.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 All paths below are relative to the lesson book root
 `Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/`.
@@ -28,6 +28,10 @@ open until exact-candidate gates close. All three editions of each stay C.
 §222 R13 is adopted/root-rebuilt: exactly one answer page changes; the other20
 remain identical. Its canonical paragraph FAIL remains pending current rereview.
 §223 R3 remains an adopted paragraph-PASS candidate.
+§211 R4 is adopted/root-rebuilt with exact31page parity, pending current
+paragraph rereview/QC. Its inherited stale opgaven.zip is explicitly excluded;
+the native211 builder has no ZIP output contract. It is not a current student
+deliverable. §212's distinct metadata correction is in progress separately.
 Their root reports distinguish actual source/page/rebuild checks from remaining
 independent paragraph, specialist and handoff gates. See review-corrections.md.
 

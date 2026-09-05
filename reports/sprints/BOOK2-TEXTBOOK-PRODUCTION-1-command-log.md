@@ -6605,3 +6605,286 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## C:/Python314/python.exe build-scripts/content/book-2/211/test_source.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:11:26.394Z`
+- finished_at: `2026-09-05T20:11:26.825Z`
+- duration_ms: `431`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `2e382bbd1ecd8779e69397393d4264cef0f8188effab52bf753946ee3cdd74bd`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 0.070s
+
+OK
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/211/check_render.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:11:26.866Z`
+- finished_at: `2026-09-05T20:11:27.922Z`
+- duration_ms: `1056`
+- exit_code: `0`
+- stdout_sha256: `7889867cbfea5292907ba549cf17b57a2165375757c9e82ec4ca1df9ab0fc14d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "paragraph": "2.1.1",
+  "automated_checks": [
+    "all printed text including footer >=12pt",
+    "all exercises present",
+    "exact target context/prompts in HTML and PDF",
+    "literal a-e plus4/3/3/3/4points",
+    "exact supplied header/row cells",
+    "four exact goals in paragraph PDF",
+    "identical exercise HTML fragments"
+  ],
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pages": 15,
+      "minimum_printed_font_pt_including_footer": 12.0,
+      "pdf_sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0"
+    },
+    {
+      "kind": "opgaven",
+      "pages": 9,
+      "minimum_printed_font_pt_including_footer": 12.0,
+      "pdf_sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953"
+    },
+    {
+      "kind": "antwoorden",
+      "pages": 7,
+      "minimum_printed_font_pt_including_footer": 12.0,
+      "pdf_sha256": "ffdf0905a980b6c89b64207e90873d79edbf192c86c2280f3394caa25693998a"
+    }
+  ],
+  "visual_review_status": "NOT_SUPPLIED_BY_THIS_SCRIPT"
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-root-r4-check.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:12:43.715Z`
+- finished_at: `2026-09-05T20:12:56.958Z`
+- duration_ms: `13243`
+- exit_code: `1`
+- stdout_sha256: `19d745eb76517a7d5bb0d82394a87824752150f11b44e47845ac3c7dbb6f677e`
+- stderr_sha256: `ab4abcd8b122db1b1e284b8698c3a6caefc03c08602b684a97967981651ba811`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.1.1
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+{
+  "full_rebuild_identical": true,
+  "native_build_document_print_only_identical": true,
+  "files": {
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 paragraaf.md": "de7abc910f6ec940eb329abd003085921f32409956ec1e0450bcc4a5454eb6b5",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 paragraaf.html": "10721f1ad745b8e1358ba354c5ded64a74367f5081eaf1c676ecb88dbe10e44b",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 paragraaf.pdf": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 opgaven.md": "bacccc1c9b063c4c786f2749d31993d94eb671fdc5bf0a899fb123d89bc0558b",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 opgaven.html": "9e27b80089dee95fa4ac61a3f07baaf95ff3650518943a730db122befec2a6f8",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 opgaven.pdf": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 antwoorden.md": "57cc1ef3b5c5ae6d912291f9746a7f535906bb85207678bab8fc63dadf82ebfb",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 antwoorden.html": "d4d3db3265820003a45e71955b9f3f2188a6036860fdcdc8fbbc49b944bfd0ca",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 antwoorden.pdf": "ffdf0905a980b6c89b64207e90873d79edbf192c86c2280f3394caa25693998a",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_ex_1.png": "fc76afb4f507cf8e09a62a9cf7a209ded71b93f87c72b97803d95afc6678f24f",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_ex_1.svg": "c2854b76d42ee1a2654f4e13886e5184b17119786bff71b7b908bedf4aae83e3",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_1.png": "21ca603069ffa83d885befa21696b1b0c7ea4a0f6fba8ed49021458000c8ba45",
+    "C:\\wt\\book2-part-a-producti
+...[truncated 2474 chars]
+```
+
+### stderr excerpt
+
+```text
+Traceback (most recent call last):
+  File "C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-211-root-r4-check.py", line 62, in <module>
+    module.audit()
+    ~~~~~~~~~~~~^^
+  File "C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-211-ALT-verify.py", line 147, in audit
+    assert path.read_bytes() == previous(path), (path, "protected bytes changed")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (WindowsPath('C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten � opgaven.md'), 'protected bytes changed')
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-root-r4-check.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:13:49.234Z`
+- finished_at: `2026-09-05T20:14:01.443Z`
+- duration_ms: `12209`
+- exit_code: `0`
+- stdout_sha256: `0cd80d928bc95999735d10f4135657c844c38e295306d51dd1e6afd61c1afa55`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.1.1
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+{
+  "full_rebuild_identical": true,
+  "native_build_document_print_only_identical": true,
+  "files": {
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 paragraaf.md": "de7abc910f6ec940eb329abd003085921f32409956ec1e0450bcc4a5454eb6b5",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 paragraaf.html": "10721f1ad745b8e1358ba354c5ded64a74367f5081eaf1c676ecb88dbe10e44b",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 paragraaf.pdf": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 opgaven.md": "bacccc1c9b063c4c786f2749d31993d94eb671fdc5bf0a899fb123d89bc0558b",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 opgaven.html": "9e27b80089dee95fa4ac61a3f07baaf95ff3650518943a730db122befec2a6f8",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 opgaven.pdf": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 antwoorden.md": "57cc1ef3b5c5ae6d912291f9746a7f535906bb85207678bab8fc63dadf82ebfb",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 antwoorden.html": "d4d3db3265820003a45e71955b9f3f2188a6036860fdcdc8fbbc49b944bfd0ca",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 antwoorden.pdf": "ffdf0905a980b6c89b64207e90873d79edbf192c86c2280f3394caa25693998a",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_ex_1.png": "fc76afb4f507cf8e09a62a9cf7a209ded71b93f87c72b97803d95afc6678f24f",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_ex_1.svg": "c2854b76d42ee1a2654f4e13886e5184b17119786bff71b7b908bedf4aae83e3",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\_assets\\2.1.1_fig_1.png": "21ca603069ffa83d885befa21696b1b0c7ea4a0f6fba8ed49021458000c8ba45",
+    "C:\\wt\\book2-part-a-producti
+...[truncated 4930 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:15:05.121Z`
+- finished_at: `2026-09-05T20:15:05.197Z`
+- duration_ms: `76`
+- exit_code: `0`
+- stdout_sha256: `1286d7f34eaaa3efba28d3c4565b694e750e601310c5b2c1077b8531e494be92`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.1 "Kostenstructuren"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.1 Kostenstructuren – paragraaf.md
+  OK opgaven.md: 2.1.1 Kostenstructuren – opgaven.md
+  OK antwoorden.md: 2.1.1 Kostenstructuren – antwoorden.md
+  OK 2.1.1 Kostenstructuren – paragraaf.html (710.4 KB)
+  OK 2.1.1 Kostenstructuren – opgaven.html (245.1 KB)
+  OK 2.1.1 Kostenstructuren – antwoorden.html (18.3 KB)
+  OK 2.1.1 Kostenstructuren – paragraaf.pdf (518 KB)
+  OK 2.1.1 Kostenstructuren – opgaven.pdf (188 KB)
+  OK 2.1.1 Kostenstructuren – antwoorden.pdf (31 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 6 image refs all resolve
+  OK _assets/: 6 SVGs, 6 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.1 "Kostenstructuren" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:15:05.244Z`
+- finished_at: `2026-09-05T20:15:05.308Z`
+- duration_ms: `64`
+- exit_code: `0`
+- stdout_sha256: `f977ab456da0d2239f7aea063296f613f72130435d6db4b51b7dac122d3d7a6f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.1 "Kostenstructuren"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.1 Kostenstructuren – paragraaf.md
+  OK opgaven.md: 2.1.1 Kostenstructuren – opgaven.md
+  OK antwoorden.md: 2.1.1 Kostenstructuren – antwoorden.md
+  OK 2.1.1 Kostenstructuren – paragraaf.pdf (518 KB)
+  OK 2.1.1 Kostenstructuren – opgaven.pdf (188 KB)
+  OK 2.1.1 Kostenstructuren – antwoorden.pdf (31 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 6 image refs all resolve
+  OK _assets/: 6 SVGs, 6 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.1 "Kostenstructuren" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```

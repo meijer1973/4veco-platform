@@ -176,6 +176,12 @@ now adopted as PASS WITH FLAGS (213 R6 /221 R8); distinct current specialist
 checks are running and successor handoff gates still remain. The old REVISE
 records are preserved rather than relabelled after a builder's implementation.
 
+§211 R4 is now adopted/root-rebuilt and exact-source/DOM/page-verified. Its
+we1 alternative is83characters, while the full visible caption is unchanged;
+fig3 accessible title is noun-first. All31 printed pages remain byte-identical.
+See211-root-verification-r4.md. Current paragraph rereview and specialist QC
+remain pending; canonical R3 review/QC/handoff and all adjacent pins are unchanged.
+
 §222 R13 is now root-adopted/rebuilt and source/page-verified. Answer4b follows
 quantity then price, and Concert's full caption has a separate concise alt.
 Root personally viewed the sole changed answer page2;20 other page pairs are
