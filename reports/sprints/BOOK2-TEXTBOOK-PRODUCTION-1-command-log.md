@@ -9508,3 +9508,94 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base 5dd87192f242854d6db6af668a28c3e1c9677be3 --head HEAD
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:38:13.105Z`
+- finished_at: `2026-09-05T21:38:13.219Z`
+- duration_ms: `114`
+- exit_code: `0`
+- stdout_sha256: `62530894262d442542fa0580d5fb7976a502e395e0dc121341394fc6c937c27c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (shared)
+- shared platform: 2
+  - build-scripts/content/book-2/213/answers.md
+  - build-scripts/content/book-2/213/test_bonus_contract.py
+- review evidence: 64
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r7/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r7/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r7/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r7/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r7/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r7/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r7/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r7/pages/page-006.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r7/pages/page-007.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r7/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r7/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r7/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r7/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r7/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r7/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r7/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r7/pages/page-006.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r7/pages/page-007.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r7/pages/page-008.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r7/pages/page-009.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-006.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-007.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-008.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-009.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-010.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-011.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-012.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-013.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r7/pages/page-014.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-BONUS-build-r7.json
+  - reports/sprints/BOOK2-TE
+...[truncated 2097 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane textbook --cwd ../4veco-lessen --base f338159502438a0833f3d94e4956eeb8b0812a6d --head HEAD
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:38:13.272Z`
+- finished_at: `2026-09-05T21:38:13.357Z`
+- duration_ms: `85`
+- exit_code: `0`
+- stdout_sha256: `d6cfc302e234738dba15d4f805656f60c96cebb771674f3713196ac98b49b3bb`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (textbook)
+- Part A textbook: 4
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip
+
+```
+
+### stderr excerpt
+
+```text
+
+```
