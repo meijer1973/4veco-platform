@@ -236,3 +236,23 @@ tests, 1,878 total, 437.344 seconds. Expected negative-fixture diagnostics are
 not failures. The 44 focused Python print/chapter/book/legacy checks are separate
 local checks, not represented as part of this Jest suite or remote CI. Exact
 final-head branch CI remains pending.
+
+## §212 plan acceptance and bounded §213 preparation
+
+Root adopted the published §212 planning-only lesson commit48690ee5 as654c5e4
+and platform stage-1 evidence ca0b8c81/74368c6c as9bffd4bd/44f9f6a0. The
+independent correction_plan_review verdict is PASS on that exact plan, no
+required correction. The separate 212-plan-review report records the actual
+checks and root's production release conditional on importing the accepted
+§211 quality/handoff bindings and rerunning foundation preflight. Legacy §212
+student material remains unaccepted until fresh production and review.
+
+While §212 and §221 continue, root created paired worktrees
+`C:/wt/book2-213-production-20260905/`, branch
+`agent/book2-213-production-20260905`, from platform44f9f6a0 and lesson654c5e4.
+Distinct paragraph_213_builder is assigned planning only under
+BOOK2-TEXTBOOK-PRODUCTION-1-213: one §213 textbook plan and one stage-1 report.
+No §213 student production is permitted until independent plan acceptance and
+reviewed §212 teaching/handoff, followed by root release. H-213-OPC2 remains
+open and outside the agreed interval-MK/MO scope; no optimization teaching is
+being authorized through advance planning.
