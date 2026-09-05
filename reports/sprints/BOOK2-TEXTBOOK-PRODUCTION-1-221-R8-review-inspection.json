@@ -1,0 +1,456 @@
+{
+  "reviewer": "paragraph_221_r8_independent_review",
+  "date": "2026-09-05",
+  "revision": "R8",
+  "status": "PASS",
+  "specialist_QC": "NOT_PERFORMED",
+  "method": "Personal full-page view of every fresh150dpi page, not inherited page acceptance or a contact-sheet-only check.",
+  "pages": [
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-001.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\paragraaf\\pages\\page-001.png",
+      "raw_sha256": "e423b8b6bcf3d4779bb9f74efd9e25d4707925bfbd063693c771c9e81d4bf1ef",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-98bf4923b4e3-r8\\pages\\page-001.png",
+      "same_r7_page_bytes": true,
+      "page_number": 1,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Opening problem, four goals, old-base reminder and full four-row comparison table fit with clear footer separation."
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-002.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\paragraaf\\pages\\page-002.png",
+      "raw_sha256": "9d9adc88dd79f8008822e5e1052e114cf2ed42d62ab299bf955fdea5e54feb13",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-98bf4923b4e3-r8\\pages\\page-002.png",
+      "same_r7_page_bytes": true,
+      "page_number": 2,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Signed common-scale bars, all percentages and full original caption readable; ratio box retains conditions and dimensionless-result explanation."
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-003.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\paragraaf\\pages\\page-003.png",
+      "raw_sha256": "68100f2ca721b35c921d91d56e04ca05738e7eba4a92c1b6d05a4923996bb764",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-98bf4923b4e3-r8\\pages\\page-003.png",
+      "same_r7_page_bytes": true,
+      "page_number": 3,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Negative sign explanation, explicit wrong/correct warning, unit boundary and both classification panels legible; caption remains above footer."
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-004.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\paragraaf\\pages\\page-004.png",
+      "raw_sha256": "0467d1ffe60b8751fb1d55c7ccf7707d3b8f0ec6bf773525839b164acc4f1537",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-98bf4923b4e3-r8\\pages\\page-004.png",
+      "same_r7_page_bytes": true,
+      "page_number": 4,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "No-slope and bounded-mechanism teaching clear; worked example starts with observations then quantity-before-price percentages, without stranded heading."
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-005.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\paragraaf\\pages\\page-005.png",
+      "raw_sha256": "53fc0274df21a7f931e81238a67d18159aa3719091c236ec8a81b1ed10210bba",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-98bf4923b4e3-r8\\pages\\page-005.png",
+      "same_r7_page_bytes": true,
+      "page_number": 5,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Complete worked figure and caption, steps3-5 and all five recap bullets fit; zero and threshold one, given-only Klimhal notice and footer distinct."
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-006.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\paragraaf\\pages\\page-006.png",
+      "raw_sha256": "eed82b34a9c59a04b62f594a8a0b65fab415fec0e469eb6147694e6fed7adb18",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-98bf4923b4e3-r8\\pages\\page-006.png",
+      "same_r7_page_bytes": true,
+      "page_number": 6,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Printed short route, attempt-before-answer check and fresh teacher follow-up legible; all Start1a-c and Start2 visible with no numeric timing."
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-007.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\paragraaf\\pages\\page-007.png",
+      "raw_sha256": "434966aec4ac1ad105c2f91537fc817d92b087e5fb79b8633137b03e90cc57d3",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-98bf4923b4e3-r8\\pages\\page-007.png",
+      "same_r7_page_bytes": true,
+      "page_number": 7,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Neutral optional support, entire old/new table and four-step reminder stay together; first quantity calculation and three guided prompts intact."
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-008.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\paragraaf\\pages\\page-008.png",
+      "raw_sha256": "4a4ee716c41edca10642be8518e7e964708f6cc06f56b7e5e29558e95578504b",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-98bf4923b4e3-r8\\pages\\page-008.png",
+      "same_r7_page_bytes": true,
+      "page_number": 8,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Arcade/pool table and reduced cue clear; independent5a-d complete and unscaffolded; final5d is close to bottom but remains fully above footer with no overlap."
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-009.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\paragraaf\\pages\\page-009.png",
+      "raw_sha256": "7536c680768107894c0fab18fc951aac467149431d94de6c7f5bd77657e6e6ff",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-98bf4923b4e3-r8\\pages\\page-009.png",
+      "same_r7_page_bytes": true,
+      "page_number": 9,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Exact Nova/StreamNow target occupies one page: context, four subquestions,3/2/2/2 points and total9 all visible; no inserted graph or hint."
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-010.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\paragraaf\\pages\\page-010.png",
+      "raw_sha256": "95bfb6915156744f3fe53b1436fb4875a27dc95e7e8e6da8137fb7fcf6e0a8c3",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-98bf4923b4e3-r8\\pages\\page-010.png",
+      "same_r7_page_bytes": true,
+      "page_number": 10,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Bonus7 and closing8-9 complete; optional/homework boundaries visible; substitute assumption and final question not clipped."
+    },
+    {
+      "edition": "opgaven",
+      "page": "pages/page-001.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\opgaven\\pages\\page-001.png",
+      "raw_sha256": "4630c0bb8c90fbd067136a434f71a97f403bdd8d2cf3a5089b3473bc40b5cd64",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-opgaven-a8119cc769c8-r8\\pages\\page-001.png",
+      "same_r7_page_bytes": true,
+      "page_number": 1,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Exercise edition begins full Bowlplein context and steps1-3; computed/given figure and full caption readable; bottom ratio explanation clear."
+    },
+    {
+      "edition": "opgaven",
+      "page": "pages/page-002.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\opgaven\\pages\\page-002.png",
+      "raw_sha256": "e3a804ee69a272e0ba12a289243ad43a2cd3580fa04b984d96ec41cb1b36d7b3",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-opgaven-a8119cc769c8-r8\\pages\\page-002.png",
+      "same_r7_page_bytes": true,
+      "page_number": 2,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Worked steps4-5 lead directly into five-bullet recap then Start; printed route and all Start1a-c/2 fit above footer."
+    },
+    {
+      "edition": "opgaven",
+      "page": "pages/page-003.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\opgaven\\pages\\page-003.png",
+      "raw_sha256": "7e73dae95da20aecced92ccc22d66990b19866eac426b5002778a12250e186e4",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-opgaven-a8119cc769c8-r8\\pages\\page-003.png",
+      "same_r7_page_bytes": true,
+      "page_number": 3,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Guided task3 full table, reminder and quantity-first scaffold readable; neutral skip and continuation/homework directions present."
+    },
+    {
+      "edition": "opgaven",
+      "page": "pages/page-004.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\opgaven\\pages\\page-004.png",
+      "raw_sha256": "8fdbb9b6cc8d3507d71a4d8cd73cd75cd9dd5ea6cb3721d225d7e1ac0f347089",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-opgaven-a8119cc769c8-r8\\pages\\page-004.png",
+      "same_r7_page_bytes": true,
+      "page_number": 4,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Full arcade/pool comparison followed by independent5; last5d remains visible above footer without clipping or overlap."
+    },
+    {
+      "edition": "opgaven",
+      "page": "pages/page-005.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\opgaven\\pages\\page-005.png",
+      "raw_sha256": "fa70fe045f16a558b85611caca8e71ce02b8151656b3fc7ddd394a8b27c5342a",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-opgaven-a8119cc769c8-r8\\pages\\page-005.png",
+      "same_r7_page_bytes": true,
+      "page_number": 5,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "All frozen target context and four point-bearing prompts retained as one block; no timing label or student extra scaffold."
+    },
+    {
+      "edition": "opgaven",
+      "page": "pages/page-006.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\opgaven\\pages\\page-006.png",
+      "raw_sha256": "14d6ac179fb3aee0f456c7988ad3c1390f29338ac2b0d30b1f1b842bedd7990c",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-opgaven-a8119cc769c8-r8\\pages\\page-006.png",
+      "same_r7_page_bytes": true,
+      "page_number": 6,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Complete bonus and two accessible earlier-learning tasks with own-price versus substitute-price distinction; no loss at page end."
+    },
+    {
+      "edition": "antwoorden",
+      "page": "pages/page-001.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\antwoorden\\pages\\page-001.png",
+      "raw_sha256": "760814941a5d1726dce72d62093fd964f056786310ea832942b7a2a7e7827551",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-antwoorden-d4a7c139d492-r8\\pages\\page-001.png",
+      "same_r7_page_bytes": true,
+      "page_number": 1,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Answer-after-attempt note, full Start answers, misconception correction and repair steps1-4 readable; continuation occurs between steps."
+    },
+    {
+      "edition": "antwoorden",
+      "page": "pages/page-002.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\antwoorden\\pages\\page-002.png",
+      "raw_sha256": "6b39705a836c8cc3bdbe4fc8f9d302cbe5b0b41758d2106f8975ceabed2cb0eb",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-antwoorden-d4a7c139d492-r8\\pages\\page-002.png",
+      "same_r7_page_bytes": true,
+      "page_number": 2,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Repair step5 then all arcade/pool calculations and explanations; independent steps1-3 reach page end with no missing ratio or glyph."
+    },
+    {
+      "edition": "antwoorden",
+      "page": "pages/page-003.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\antwoorden\\pages\\page-003.png",
+      "raw_sha256": "e2ad4fbccb2354c2c75d3194bfd8288a4fb620b8422a48b16770fcc2e0910651",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-antwoorden-d4a7c139d492-r8\\pages\\page-003.png",
+      "same_r7_page_bytes": true,
+      "page_number": 3,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Independent5b-d continue coherently; exact target6a-c and marking allocations intact, including explicit quantity-before-price route before frozen short answer."
+    },
+    {
+      "edition": "antwoorden",
+      "page": "pages/page-004.png",
+      "fresh_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\antwoorden\\pages\\page-004.png",
+      "raw_sha256": "97400edfb89401cf71c15f8ce8b83636cf00e11080eefd6987fc761d07d3cbf5",
+      "published_r8_path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-antwoorden-d4a7c139d492-r8\\pages\\page-004.png",
+      "same_r7_page_bytes": true,
+      "page_number": 4,
+      "personally_viewed_full_page": true,
+      "normal_reading_scale": true,
+      "visible_defects": [],
+      "observation": "Target6d remains intact with two-point explanation; bonus evaluation criteria and both closing answers complete, including leftward umbrella demand shift."
+    }
+  ],
+  "figures": [
+    {
+      "stem": "2.2.1_fig_1",
+      "svg_sha256": "1abc7cc2a150318a84341bf89886543cd94e5fc63dd120cf18244e62032536b2",
+      "png_sha256": "6f4009fe29fb88f442257e658fe6433809020ba824d17ee275a08701f37d0704",
+      "title": "Procentuele prijs- en hoeveelheidsveranderingen met teken op één schaal",
+      "characters": 71,
+      "bars": [
+        {
+          "value": "10",
+          "scale": "8",
+          "zero": "460"
+        },
+        {
+          "value": "-5",
+          "scale": "8",
+          "zero": "460"
+        },
+        {
+          "value": "10",
+          "scale": "8",
+          "zero": "460"
+        },
+        {
+          "value": "-20",
+          "scale": "8",
+          "zero": "460"
+        }
+      ],
+      "fresh_raster_exact": true,
+      "personally_viewed": true,
+      "observation": "Personally viewed whole PNG: positive price bars share zero and scale with hatched negative quantity bars; +10/-5 and +10/-20 labels, axis and full text are clear."
+    },
+    {
+      "stem": "2.2.1_fig_2",
+      "svg_sha256": "872bbd68352e746cb6637aa4dc5c806475fd7430a5957ee4bf9f08d6b1b5afbc",
+      "png_sha256": "589af699b6e024488be654185cfbf39b4a0d957cb59c11ecb452968a252164c0",
+      "title": "Twee vergelijkbare absolute-waardeschalen met grens één",
+      "characters": 55,
+      "bars": [
+        {
+          "value": "1/2",
+          "scale": "115",
+          "zero": "34"
+        },
+        {
+          "value": "2",
+          "scale": "115",
+          "zero": "396"
+        }
+      ],
+      "fresh_raster_exact": true,
+      "personally_viewed": true,
+      "observation": "Personally viewed whole PNG: equal0-2 magnitude scales and labelled threshold1 distinguish0.5 from2; sign is preserved in Ev labels, not misused for classification."
+    },
+    {
+      "stem": "2.2.1_we_1",
+      "svg_sha256": "f7de73e34576ab1bd571e778ff90ad7f45c305bbde6ff7489a1720228d2499a5",
+      "png_sha256": "396f5236c9c3cda581dece54f45d01004494e173c00532fc73a4b54c07a9df95",
+      "title": "De berekende Bowlpleinreactie en de gegeven klimhalratio, zonder verzonnen percentages",
+      "characters": 86,
+      "bars": [
+        {
+          "value": "25",
+          "scale": "8",
+          "zero": "280"
+        },
+        {
+          "value": "-10",
+          "scale": "8",
+          "zero": "280"
+        },
+        {
+          "value": "2/5",
+          "scale": "180",
+          "zero": "330"
+        },
+        {
+          "value": "3/2",
+          "scale": "180",
+          "zero": "330"
+        }
+      ],
+      "fresh_raster_exact": true,
+      "personally_viewed": true,
+      "observation": "Personally viewed whole PNG: +25/-10 signed bars and ratio-0.4 coherent; lower0.4/1.5 comparison has clear zero/threshold and explicit no-invented-percentages Klimhal note."
+    }
+  ],
+  "documents": [
+    {
+      "source_md": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – paragraaf.md",
+      "source_sha256": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db",
+      "source_html": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – paragraaf.html",
+      "html_sha256": "ac568897e03adcc88aab6a8710771d189d1a6e4bb18b85e63fdc4b3d32a7140b",
+      "source_pdf": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_fig_1.svg",
+          "sha256": "1abc7cc2a150318a84341bf89886543cd94e5fc63dd120cf18244e62032536b2"
+        },
+        {
+          "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_fig_1.png",
+          "sha256": "6f4009fe29fb88f442257e658fe6433809020ba824d17ee275a08701f37d0704"
+        },
+        {
+          "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_fig_2.svg",
+          "sha256": "872bbd68352e746cb6637aa4dc5c806475fd7430a5957ee4bf9f08d6b1b5afbc"
+        },
+        {
+          "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_fig_2.png",
+          "sha256": "589af699b6e024488be654185cfbf39b4a0d957cb59c11ecb452968a252164c0"
+        },
+        {
+          "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_we_1.svg",
+          "sha256": "f7de73e34576ab1bd571e778ff90ad7f45c305bbde6ff7489a1720228d2499a5"
+        },
+        {
+          "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_we_1.png",
+          "sha256": "396f5236c9c3cda581dece54f45d01004494e173c00532fc73a4b54c07a9df95"
+        }
+      ],
+      "proof_directory": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\paragraaf",
+      "proof_manifest_sha256": "3f769a7a588d55a2e9f6879b53a42d6fae27eaa1ef4695bc32fc248df37aef10"
+    },
+    {
+      "source_md": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – opgaven.md",
+      "source_sha256": "02eee54304567304e8ecb777762833165103e117ea1721a8a383ca0e470f4bb4",
+      "source_html": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – opgaven.html",
+      "html_sha256": "cfd3a40c19a2fc88cc9fbd127399581ca70215d8edb1350ef873eefba2e91ef0",
+      "source_pdf": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – opgaven.pdf",
+      "pdf_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_we_1.svg",
+          "sha256": "f7de73e34576ab1bd571e778ff90ad7f45c305bbde6ff7489a1720228d2499a5"
+        },
+        {
+          "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\_assets\\2.2.1_we_1.png",
+          "sha256": "396f5236c9c3cda581dece54f45d01004494e173c00532fc73a4b54c07a9df95"
+        }
+      ],
+      "proof_directory": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\opgaven",
+      "proof_manifest_sha256": "7af27968cef9c261fc8a11404b53ea0ee44bb21dade3d647ed579e1e4417abe0"
+    },
+    {
+      "source_md": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – antwoorden.md",
+      "source_sha256": "f0a78820b4035347d49facac2febb8580c642f7f4bd2d59fcfb47d3233192f11",
+      "source_html": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – antwoorden.html",
+      "html_sha256": "a5f3de1ccefcc2eb543a970de8bafa9125e0c0131a8599623986ad1cec24137a",
+      "source_pdf": "C:\\wt\\book2-221-r8-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – antwoorden.pdf",
+      "pdf_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d",
+      "assets": [],
+      "proof_directory": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof\\antwoorden",
+      "proof_manifest_sha256": "82cb3729cc261ea6f128c641922fc72e04f4ed559daabc599b0c329cbac4f0ad"
+    }
+  ],
+  "grayscale": [
+    {
+      "page": 2,
+      "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-grayscale-page-002.png",
+      "raw_sha256": "fa6567b2b2274eaabc041f99b0a7c3f48260a0154fdc2f3ae114c68874236dc7",
+      "personally_viewed": true,
+      "observation": "Whole grayscale page personally viewed. Direct labels, signs, zero/threshold ticks and hatching preserve every required distinction without colour alone; no illegibility or clipping."
+    },
+    {
+      "page": 3,
+      "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-grayscale-page-003.png",
+      "raw_sha256": "2a1e5b16e0744177b2fd6684a27bd933b89ed4c2aad8bd12a006962e83dea476",
+      "personally_viewed": true,
+      "observation": "Whole grayscale page personally viewed. Direct labels, signs, zero/threshold ticks and hatching preserve every required distinction without colour alone; no illegibility or clipping."
+    },
+    {
+      "page": 5,
+      "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-grayscale-page-005.png",
+      "raw_sha256": "0e5cac18e99ddf243084531526f53de84923ced80e60a606bb05f1dd006b7dc4",
+      "personally_viewed": true,
+      "observation": "Whole grayscale page personally viewed. Direct labels, signs, zero/threshold ticks and hatching preserve every required distinction without colour alone; no illegibility or clipping."
+    }
+  ],
+  "generation_manifests": "Remain PENDING and unmodified; this distinct observation record supplies only paragraph-review visual evidence.",
+  "OCR": "Not applicable: native text PDFs; no confidence statistic fabricated.",
+  "limits": [
+    "Classroom timing/attainment unobserved",
+    "Not specialist acceptance, root handoff, PDF/UA or screen-reader certification"
+  ]
+}
