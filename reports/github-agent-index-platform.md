@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T10:04:35.777Z
+Generated: 2026-09-05T10:04:37.442Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-textbook-production-20260905`
-Source commit: `b55dff2d0b0003cce1c6ba5f1945a96d5a973ed1`
-Files indexed: 7656
+Source commit: `221acac50a7f9e8b9afadbd24584bef531b2c4b4`
+Files indexed: 7658
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2633,7 +2633,7 @@ Count: 1029
 
 ## reports
 
-Count: 4940
+Count: 4942
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5330,6 +5330,8 @@ Count: 4940
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-finished-verification.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-implementation-review-corrections.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-lead-review-assignment.md
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-lead-review-corrections.md
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-lead-review-round1.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-plan.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-planning-review.md
