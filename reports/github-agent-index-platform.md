@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T19:55:12.115Z
+Generated: 2026-09-05T20:33:44.827Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-213-r6-review-20260905`
-Source commit: `f401deb202585481ce1627e9b8fff5432168b7a3`
-Files indexed: 8635
+Source branch: `agent/book2-213-r6-qc-20260905`
+Source commit: `49bc63dd7205438f35786b8643782f96acecbfaa`
+Files indexed: 8696
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2708,7 +2708,7 @@ Count: 1030
 
 ## reports
 
-Count: 5863
+Count: 5924
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6179,6 +6179,67 @@ Count: 5863
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-paragraph-review-r5.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-paragraph-review-r6.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-plan-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-disposition-successor.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/accessibility.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/arithmetic.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/bindings.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/committed_scope.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/committed-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/delta.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/draad-table-direct-pdf.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/draad-table-geometry.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/grayscale/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/grayscale/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/grayscale/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/grayscale/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/grayscale/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/media.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/antwoorden/page-1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/antwoorden/page-2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/antwoorden/page-3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/antwoorden/page-4.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/antwoorden/page-5.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/antwoorden/page-6.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/opgaven/page-1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/opgaven/page-2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/opgaven/page-3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/opgaven/page-4.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/opgaven/page-5.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/opgaven/page-6.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/opgaven/page-7.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/opgaven/page-8.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/opgaven/page-9.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-01.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-02.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-03.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-04.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-05.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-06.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-07.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-08.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-09.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-10.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-11.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-12.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-13.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pages/paragraaf/page-14.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/pass0.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/personal-inspection-bindings.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/personal-inspection.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/protected-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/qc_probes.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/rebuild.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/relocated-build.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/render.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/verification.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/withdrawal-verification.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/withdrawal.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-report.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/arithmetic.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/bindings.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r6-review-evidence/command-log.jsonl
