@@ -1,0 +1,19 @@
+{
+  "command": [
+    "node",
+    "build-scripts/workflows/check-book-outline-currentness.js",
+    "--require-approved",
+    "--action",
+    "paragraph_production",
+    "--paragraph",
+    "2.2.3"
+  ],
+  "cwd": "C:\\wt\\book2-223-s1-review-20260906\\4veco-platform",
+  "start": "2026-09-05T23:35:20.001893+00:00",
+  "end": "2026-09-05T23:35:21.497847+00:00",
+  "path_first": "C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell",
+  "python": "C:\\Python314\\python.exe",
+  "exit_code": 0,
+  "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.2.3\n",
+  "stderr": ""
+}

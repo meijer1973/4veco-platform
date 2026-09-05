@@ -1,0 +1,124 @@
+{
+  "pass": true,
+  "original_inspection": {
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-inspection.json",
+    "sha256": "bd2c622a54fa4b3d66bd21a7234cabd7524ced43af25724912f4a230ff3a3d43"
+  },
+  "original_review": {
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-independent-paragraph-review-r3.md",
+    "sha256": "9e47e84323d1caa8e3ec5092eef99de0b3b5b18d136c9163594f95841eef8d60"
+  },
+  "original_build": {
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-build-r3.json",
+    "sha256": "f88345226b61e9e2dd9d0ace8067caf2847280c324ab313c9b26ca8d184aa565"
+  },
+  "all_96_fresh_page_bindings": true,
+  "all_20_native_files_equal_original_reviewed_lesson_git": "b23e0056511fc5b9b10f0b8e6bbe130d2599c36b",
+  "original_six_build_inputs_bound": true,
+  "sample_page_bindings": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb",
+      "fresh_manifest_sha256": "30feae12545458e0d48ab94752166585d9b16b91f5a5d20c1136595d4e75f50c",
+      "original_manifest_sha256": "54a684ab32f7ac453f270867d18f70ccb097cecaa7e57f337fcc199772cab25d",
+      "fresh_page": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-S1-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r8/pages/page-008.png",
+      "old_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-paragraaf-ca27f8bd6cbb-r3/pages/page-008.png",
+      "sha256": "b584d2ee68328f4097ccb3b473794348eacbf6c78c21ee176e4487ad886010fc",
+      "decoded_pixel": "7cfc095db525beb0f9c8cb1b66f1ec929e6c683cb3966c37b53b90ffee449282"
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80",
+      "fresh_manifest_sha256": "f2169634918321ed41621a664e4e6cb33050e2577ae101c9be660ad86c0f187d",
+      "original_manifest_sha256": "43f41e2c6377e13a629ad7f8b95aa38765906ae42d871bc763ffaadca9111128",
+      "fresh_page": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-S1-REVIEW-evidence/223-opgaven-50cf2bbeaa19-r8/pages/page-009.png",
+      "old_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-opgaven-50cf2bbeaa19-r3/pages/page-009.png",
+      "sha256": "c92fd39508d031bb617fd19009602092e1ed1e51577f88171d7d42283b68f9a8",
+      "decoded_pixel": "6023f6aef2ffbdd5097f8eff2550702ca1169801d1a3aeb96865bf15d8ca1ae0"
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10",
+      "fresh_manifest_sha256": "b14482f3b00df197aa191979e7664c9fd22d1949edb9fcbae7381a4fe064b415",
+      "original_manifest_sha256": "b4b068c88c34fd00704f0a6ab3b8a9122f24c27a5b7ff2c582167968c6d75691",
+      "fresh_page": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-S1-REVIEW-evidence/223-antwoorden-30cd682358c5-r8/pages/page-006.png",
+      "old_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-antwoorden-30cd682358c5-r3/pages/page-006.png",
+      "sha256": "ff465ba581b3eb38f9cd1e713efe6a72f2fe1425738201a847162780ac5c0969",
+      "decoded_pixel": "b45b6e7e1b786af055a561f000b9723f2bc357119e1a9c5726ef3f658797f912"
+    }
+  ],
+  "four_figures": {
+    "_assets/2.2.3_fig_1.png": {
+      "raw": "0b401e098bb2f56bb86663de908402a048a12a4b599b368e3489dc11bea95b65",
+      "pixels": "c8a8b5d6ab86451d97e7049862b2884f7be84cd50e239afe5590858ec36cb594",
+      "size": [
+        2000,
+        1280
+      ]
+    },
+    "_assets/2.2.3_fig_2.png": {
+      "raw": "59929543ec072f8d3e300d6f8b52e2510f0594d7dca5e5fd9e82dc0900a5c6a7",
+      "pixels": "2dff6e63cc098c150ff86e1403738aa1fc1608bf1a16af99fa15adb7ce610bb7",
+      "size": [
+        2000,
+        930
+      ]
+    },
+    "_assets/2.2.3_fig_3.png": {
+      "raw": "0290351674b94ff93b47586bd2fb4ba15b6bd18cf30d9dd7e44bd1f7ea2f6e4f",
+      "pixels": "10a4bc2ea32e9ebaf13884bec7b9aa0d4312e3914fe20256b3e8ee4320f94240",
+      "size": [
+        2000,
+        1460
+      ]
+    },
+    "_assets/2.2.3_fig_4.png": {
+      "raw": "e221b15c2409d16cac3ad2b7423700758b4c477f88a974059b106ca03ed5d8fd",
+      "pixels": "967da0ede902e17817fd828b0c339132f7a966093634b2acd78632ed05e80434",
+      "size": [
+        2000,
+        1334
+      ]
+    }
+  },
+  "own_inspection_sha256": "3b05131779b9d084d65fc0050f25cd90684958399900ce6d235c5d94bb40cdf4",
+  "accepted_221_markdown_delta": "diff --git \"a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit \\342\\200\\223 paragraaf.md\" \"b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit \\342\\200\\223 paragraaf.md\"\nindex a63bde2..f8776e3 100644\n--- \"a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit \\342\\200\\223 paragraaf.md\"\t\n+++ \"b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit \\342\\200\\223 paragraaf.md\"\t\n@@ -56,7 +56,7 @@ Beide prijsveranderingen zijn (11 − 10) / 10 × 100% = +10%.\n De figuur zet deze percentages op **dezelfde schaal**: rechts van nul is een\n toename, links een afname. De hoeveelheidsreactie is niet even groot.\n \n-![Vergelijk de procentuele reacties op dezelfde schaal.](_assets/2.2.1_fig_1.svg)\n+![Vergelijk de procentuele reacties op dezelfde schaal.](_assets/2.2.1_fig_1.svg){alt=\"Procentuele prijs- en hoeveelheidsreacties op dezelfde schaal.\"}\n \n ### Van twee percentages naar één verhouding\n \n@@ -183,7 +183,7 @@ verklaren; deze cijfers bewijzen die oorzaak niet.\n \n Korte route: Startopgaven → Zelfstandige oefening → Doeloefening. Extra hulp nodig? Maak eerst Begeleide inoefening.\n \n-Maak deze twee korte checks in ongeveer 5½ minuut. Controleer daarna je werk\n+Maak deze twee korte checks. Controleer daarna je werk\n met het antwoordmodel. Lukt vooral de oude noemer of het teken nog niet, gebruik\n dan de gedrukte herinnering bij opgave 3 en bespreek een nieuwe berekening met\n je docent. Een fout hier is een aanwijzing om te oefenen, geen eindbeoordeling.\n@@ -207,7 +207,7 @@ Een leerling noemt Ev=−2 prijsinelastisch, omdat −2 kleiner is dan 1. Verbet\n \n ## Begeleide inoefening\n \n-Dit is de extra hulproute van ongeveer 10 minuten. Die komt boven op de kern;\n+Dit is de extra hulproute. Die komt boven op de korte route;\n spreek zo nodig vervolgwerktijd of huiswerk af. Heb je deze hulp niet nodig? Ga dan verder met Zelfstandige oefening.\n \n **Opgave 3**\n@@ -291,7 +291,7 @@ plausibele verklaring voor het verschil tussen deze twee situaties.\n ## Zelfstandige oefening\n \n Werk zonder hulp of antwoordmodel. Noteer je berekeningen en onderbouw elke\n-conclusie. Richttijd: 11 minuten.\n+conclusie.\n \n **Opgave 5**\n \n@@ -318,7 +318,7 @@ Leg ook uit wat de cijfers niet bewijzen over die verklaring.\n \n ## Doeloefening\n \n-Werk zelfstandig. Richttijd: 9 minuten. Totaal: 9 punten.\n+Werk zelfstandig. Totaal: 9 punten.\n \n **Opgave 6**\n \n@@ -346,12 +346,11 @@ prijs gelijk.” Beoordeel deze uitspraak. Leg uit wat één waargenomen\n prijsverandering wel laat zien en wat niet. Beschrijf daarbij een plausibele\n verandering in de beschikbare alternatieven voor klanten.\n \n-Dit denkertje valt buiten de kernroute. Richttijd: 8 minuten.\n+Dit denkertje valt buiten de korte route.\n \n ## Herhaling / Herhaling en interleaving\n \n-Deze herhaling valt buiten de kernroute en kan als huiswerk. Richttijd samen:\n-5 minuten.\n+Deze herhaling valt buiten de korte route en kan als huiswerk.\n \n **Opgave 8**\n \n",
+  "current_sources": {
+    "generator": "5b18047a04ecd093a6d469fe5d69c049351f9c5ed21c3ad1b2aa336107d9f57c",
+    "unchanged_platform_files": {
+      "build-scripts/content/book-2/print_pipeline.py": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "build-scripts/content/book-2/223/check_render.py": "d8a5c5f706e8d4fa647374b7dd2f1d5d393fe0419c8ee8b0a3ca2fd2f7f0a92b",
+      "build-scripts/content/book-2/223/test_source.py": "a1f4a1a8d45e01a295ff61034e59d5d1d4bc1f992b6dc39f6a64b7963c7fc6af",
+      "build-scripts/content/book-2/223/theory.md": "8835a4d94097bff54aaf2f58308f4adbd7ac49005aee443f352fcecdb9a38048",
+      "build-scripts/content/book-2/223/exercises.md": "0a7a48bdb65bd0182c757e3af4edc734327d953319df422fe852648ae9823d1c",
+      "build-scripts/content/book-2/223/answers.md": "d68a20c6e494430327c583ba097e28902b32b29599fec9d775e8b1e5a6bf72cc",
+      "build-scripts/content/book-2/223/target-answers.md": "f122a7109e59dbb2ee80201e30002f846356a97fa7286d11abfaf8b496e14996"
+    },
+    "inputs": {
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md": {
+        "raw": "dd2f91d0035829986076b7d5e96b43fa9c45f3d3698da1d159a955634fa01497",
+        "canonical_lf": "dd2f91d0035829986076b7d5e96b43fa9c45f3d3698da1d159a955634fa01497"
+      },
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md": {
+        "raw": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+        "canonical_lf": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7"
+      },
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md": {
+        "raw": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811",
+        "canonical_lf": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811"
+      },
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md": {
+        "raw": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+        "canonical_lf": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63"
+      },
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml": {
+        "raw": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa",
+        "canonical_lf": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa"
+      },
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md": {
+        "raw": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db",
+        "canonical_lf": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db"
+      }
+    }
+  }
+}

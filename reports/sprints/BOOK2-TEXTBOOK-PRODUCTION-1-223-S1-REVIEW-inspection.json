@@ -1,0 +1,62 @@
+{
+  "paragraph": "2.2.3",
+  "revision": "S1 independent dependency delta",
+  "date": "2026-09-06",
+  "reviewer": "paragraph_223_successor_delta_review",
+  "role": "INDEPENDENT_BOUNDED_DELTA_REVIEW_NOT_CANONICAL_REVIEW_QC_OR_ROOT_ACCEPTANCE",
+  "reviewed_platform": "51c2f5132a2dd964490ddec89b6e926d90240dbd",
+  "reviewed_lessons": "25fbd9ba66f6ead59f512ec2eec1fd95159d834f",
+  "method": "Personally opened each of three fresh r8 full-page PNGs and its exact prior R3 full-page counterpart using view_image detail original. Also personally viewed each of the four full native figure PNGs, with byte and decoded-pixel identity to immutable R3-era lesson Git and original R3 asset evidence checked separately. These observations were manually written after those views. All 96 fresh route/page captures are mechanically compared, not claimed personally reread.",
+  "result": "PASS: no new visible defect or contradiction in the inspected dependency-delta samples",
+  "pages": [
+    {
+      "kind": "paragraaf",
+      "page": 8,
+      "sha256": "b584d2ee68328f4097ccb3b473794348eacbf6c78c21ee176e4487ad886010fc",
+      "observation": "Fresh and R3 page match visually. Figure 4 separates base 200, income change 230 and reset 204, retaining annual Y and monthly Q units. Step 3 gives 15/20 = 0.75; step 4 uses signed 0 < Ei < 1; step 5 restores Y = 30000 and fixes Px. The wrong/correct reset box is complete. No label, text or footer collision."
+    },
+    {
+      "kind": "opgaven",
+      "page": 9,
+      "sha256": "c92fd39508d031bb617fd19009602092e1ed1e51577f88171d7d42283b68f9a8",
+      "observation": "Fresh and R3 frozen target pages match visually: three sources, five a-e questions and 3/2/4/4/3 points (16 total) remain intact. Goods are named; annual Y and monthly Q remain distinct; Ei boundaries zero/one are excluded from requested categories. No supplied solution, missing source, clipped question or footer overlap."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 6,
+      "sha256": "ff465ba581b3eb38f9cd1e713efe6a72f2fe1425738201a847162780ac5c0969",
+      "observation": "Fresh and R3 target d-e answer page match visually. Old Q390, changed Q420, 100/13 percent and Ei10/13 approximately0.77 are legible with the marking explanation. Annual Y is not divided by12. The reset compares Q392 with original390, not420, with Px/Y fixed. The complete chains fit above the footer without clipping or overlap."
+    }
+  ],
+  "figures": [
+    {
+      "path": "_assets/2.2.3_fig_1.png",
+      "sha256": "0b401e098bb2f56bb86663de908402a048a12a4b599b368e3489dc11bea95b65",
+      "observation": "Common signed zero and equal bar scale; +10% income contrasts with +15/-5/+5% quantity. Hatching and direct signs/numbers make meaning redundant beyond colour. Labels are complete and separated."
+    },
+    {
+      "path": "_assets/2.2.3_fig_2.png",
+      "sha256": "59929543ec072f8d3e300d6f8b52e2510f0594d7dca5e5fd9e82dc0900a5c6a7",
+      "observation": "Signed -1 to2 scale with filled -0.5/0.5/1.5 cases and open0/1 boundaries. Ei<0, 0<Ei<1 and Ei>1 are visibly distinct and are not absolute-Ev classification. Labels and boundary markers remain legible."
+    },
+    {
+      "path": "_assets/2.2.3_fig_3.png",
+      "sha256": "0290351674b94ff93b47586bd2fb4ba15b6bd18cf30d9dd7e44bd1f7ea2f6e4f",
+      "observation": "Two intact fraction panels name the quantity good and other-price good. Digital demand +10/filmschijf price +20 gives +0.5 substitute; sleeve demand -4/+20 gives -0.2 complement. Fixed own prices and signed relation labels are readable, without panel collision."
+    },
+    {
+      "path": "_assets/2.2.3_fig_4.png",
+      "sha256": "e221b15c2409d16cac3ad2b7423700758b4c477f88a974059b106ca03ed5d8fd",
+      "observation": "The 200/230/204 scenario columns preserve the explicit reset to annual Y30000. All Q/month and Y/year labels and fixed-price conditions remain complete and separated."
+    }
+  ],
+  "historical_review": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-independent-paragraph-review-r3.md",
+  "historical_personal_inspection": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-inspection.json",
+  "canonical_review_sha256": "793c8460e7d20e8a2e40d7e8912c969c94a091e67fa25566c812264c8769539e",
+  "limitations": [
+    "Only three fresh full pages and their three R3 counterparts were personally compared in this bounded delta; the earlier independent review owns all32 original personal observations.",
+    "No new grayscale capture or PDF/UA certification is claimed. All four native figure pixels and all page pixels are unchanged.",
+    "Native generation manifests remain immutable PENDING, with empty inspected-page lists; this attributed record is separate.",
+    "Classroom timing and attainment remain unobserved. No new canonical review, specialist QC, handoff, root acceptance, PR or merge authority."
+  ]
+}

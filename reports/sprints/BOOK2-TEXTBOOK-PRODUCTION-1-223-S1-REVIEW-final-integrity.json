@@ -1,0 +1,43 @@
+{
+  "pass": true,
+  "25_paragraph_files_unchanged": true,
+  "source_inputs": {
+    "generator": "5b18047a04ecd093a6d469fe5d69c049351f9c5ed21c3ad1b2aa336107d9f57c",
+    "unchanged_platform_files": {
+      "build-scripts/content/book-2/print_pipeline.py": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "build-scripts/content/book-2/223/check_render.py": "d8a5c5f706e8d4fa647374b7dd2f1d5d393fe0419c8ee8b0a3ca2fd2f7f0a92b",
+      "build-scripts/content/book-2/223/test_source.py": "a1f4a1a8d45e01a295ff61034e59d5d1d4bc1f992b6dc39f6a64b7963c7fc6af",
+      "build-scripts/content/book-2/223/theory.md": "8835a4d94097bff54aaf2f58308f4adbd7ac49005aee443f352fcecdb9a38048",
+      "build-scripts/content/book-2/223/exercises.md": "0a7a48bdb65bd0182c757e3af4edc734327d953319df422fe852648ae9823d1c",
+      "build-scripts/content/book-2/223/answers.md": "d68a20c6e494430327c583ba097e28902b32b29599fec9d775e8b1e5a6bf72cc",
+      "build-scripts/content/book-2/223/target-answers.md": "f122a7109e59dbb2ee80201e30002f846356a97fa7286d11abfaf8b496e14996"
+    },
+    "inputs": {
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md": {
+        "raw": "dd2f91d0035829986076b7d5e96b43fa9c45f3d3698da1d159a955634fa01497",
+        "canonical_lf": "dd2f91d0035829986076b7d5e96b43fa9c45f3d3698da1d159a955634fa01497"
+      },
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md": {
+        "raw": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+        "canonical_lf": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7"
+      },
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md": {
+        "raw": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811",
+        "canonical_lf": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811"
+      },
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md": {
+        "raw": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+        "canonical_lf": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63"
+      },
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml": {
+        "raw": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa",
+        "canonical_lf": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa"
+      },
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md": {
+        "raw": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db",
+        "canonical_lf": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db"
+      }
+    }
+  },
+  "all_original_and_fresh_proof_unchanged": true
+}

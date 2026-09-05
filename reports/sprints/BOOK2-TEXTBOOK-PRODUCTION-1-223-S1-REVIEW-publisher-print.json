@@ -1,0 +1,19 @@
+{
+  "command": [
+    "node",
+    "scripts/validate-paragraph.js",
+    "--mode",
+    "part-a",
+    "--profile",
+    "publisher-print",
+    "\\\\?\\C:\\wt\\book2-223-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit"
+  ],
+  "cwd": "C:\\wt\\book2-223-s1-review-20260906\\4veco-platform",
+  "start": "2026-09-05T23:35:19.957252+00:00",
+  "end": "2026-09-05T23:35:20.001365+00:00",
+  "path_first": "C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell",
+  "python": "C:\\Python314\\python.exe",
+  "exit_code": 0,
+  "stdout": "\nValidating paragraph 2.2.3 \"Inkomenselasticiteit en kruiselingse elasticiteit\"\nPath: \\\\?\\C:\\wt\\book2-223-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\nMode: part-a\nProfile: publisher-print\n\n-- Part A textbook files --\n  OK Paragraph type: theory\n  OK paragraaf.md: 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md\n  OK opgaven.md: 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md\n  OK antwoorden.md: 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md\n  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf (590 KB)\n  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf (203 KB)\n  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf (28 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 4 image refs all resolve\n  OK _assets/: 4 SVGs, 4 PNGs\n\n-- Part A QC artifacts --\n  OK Part A review: 2.2.3-review.md (verdict PASS WITH FLAGS)\n  OK Quality ref: 2.2.3-quality-ref.yaml (valid)\n\n==========================================\nOK Paragraph 2.2.3 \"Inkomenselasticiteit en kruiselingse elasticiteit\" PASSED all checks.\n\n",
+  "stderr": ""
+}
