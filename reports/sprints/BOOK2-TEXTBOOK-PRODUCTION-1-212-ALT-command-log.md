@@ -160,3 +160,15 @@ Exit: 0. Expected: 0. Matched expected outcome.
 Command: ["git","diff","--check"]
 
 Exit: 0. Expected: 0. Matched expected outcome.
+
+### 2026-09-05T20:27:23.113Z: scope
+
+Command: ["node","build-scripts/workflows/check-paragraph-lane-scope.js","--lane","shared","--base","798cacfeeb40e4e0ba54d26f2b040cbdeec327a9","--head","89a8fc34f7c017b10af86d6b058bf6ba21328367"]
+
+Exit: 0. Expected: 0. Matched expected outcome.
+
+### 2026-09-05T20:27:23.181Z: scope
+
+Command: ["node","build-scripts/workflows/check-paragraph-lane-scope.js","--cwd","../4veco-lessen","--lane","textbook","--base","a2bb4bcf199b8871eef21426f329efb6795e7dd8","--head","901e18aaf8179b37daafd5fd2e45ed92db444a49"]
+
+Exit: 0. Expected: 0. Matched expected outcome.
