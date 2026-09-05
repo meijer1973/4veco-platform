@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "generator_raw_sha256": "5b18047a04ecd093a6d469fe5d69c049351f9c5ed21c3ad1b2aa336107d9f57c",
+  "entire_paragraph_inventory_unchanged": true,
+  "immutable_original_tests_and_four_sources_and_helper": true,
+  "all_six_required_inputs_current": true,
+  "historical_manifests_unchanged": true,
+  "nine_fresh_pending_manifests_unchanged": {
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-paragraaf-ca27f8bd6cbb-r4/manifest.json": "dfe10b8b5224fa61502b3398d724c6023698c4ccda3939bc4677eb4ba49aa626",
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-opgaven-50cf2bbeaa19-r4/manifest.json": "b518ed82667c6f7444dc8fa455b55701767bea02c9c19a76d3c0dedc48419248",
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-antwoorden-30cd682358c5-r4/manifest.json": "52735f94c1c8bcd3444bffbe85e385cf9d99fabc77247a4603ee2f29a11d0cdc",
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-paragraaf-ca27f8bd6cbb-r6/manifest.json": "d449ddc33acae2458736f7a9bb72a821b909558d2d81d151287be4a1ab2ec719",
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-opgaven-50cf2bbeaa19-r6/manifest.json": "002937e35922c8940c89f431d7500a11697b1fa89d77724cc3b0ba5861e1df92",
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-antwoorden-30cd682358c5-r6/manifest.json": "79c6d030c3f03cc4aa4b23e831e4d9c9d7164d90da50a55aee7db5744b9b0cba",
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-paragraaf-ca27f8bd6cbb-r7/manifest.json": "e0c887aa2edc0e42389fab7a0269fd15e54dde1605f41f6265b6755f9c0fec8d",
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-opgaven-50cf2bbeaa19-r7/manifest.json": "162233a20f4120cfa40dab2d4cb5dcef62c6f2e0182c88f3f6cfbca202fce31a",
+    "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/223-antwoorden-30cd682358c5-r7/manifest.json": "e7368d35110ff1cdb373d07caa7fc5d695b103ce4d01b2019ebd4678c510dfb9"
+  },
+  "unchanged_captures": 96,
+  "independent_review_or_QC": false
+}

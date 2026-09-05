@@ -1,0 +1,119 @@
+{
+  "paragraph": "2.2.3",
+  "target_record_sha256": "9a3a29bcedc16739b74b66b2bb8e136b37e86c7f5cfee3ee35ea37c4bdeed1c5",
+  "plan_sha256": "dd2f91d0035829986076b7d5e96b43fa9c45f3d3698da1d159a955634fa01497",
+  "chapter_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+  "accepted_221_lf_pins": {
+    "2.2.1-textbook-handoff.md": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811",
+    "2.2.1-review.md": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+    "2.2.1-quality-ref.yaml": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa",
+    "2.2.1 Prijselasticiteit – paragraaf.md": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db"
+  },
+  "input_sources": [
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_223.py",
+      "sha256": "5b18047a04ecd093a6d469fe5d69c049351f9c5ed21c3ad1b2aa336107d9f57c"
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\223\\theory.md",
+      "sha256": "8835a4d94097bff54aaf2f58308f4adbd7ac49005aee443f352fcecdb9a38048"
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\223\\exercises.md",
+      "sha256": "0a7a48bdb65bd0182c757e3af4edc734327d953319df422fe852648ae9823d1c"
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\223\\answers.md",
+      "sha256": "d68a20c6e494430327c583ba097e28902b32b29599fec9d775e8b1e5a6bf72cc"
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\223\\target-answers.md",
+      "sha256": "f122a7109e59dbb2ee80201e30002f846356a97fa7286d11abfaf8b496e14996"
+    }
+  ],
+  "inspection_status": "PENDING",
+  "documents": [
+    {
+      "source_md": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+      "source_sha256": "062b78d54c064e6dbb3765b8da77575da50fedcde6777551e10fb5842a14ebac",
+      "source_html": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html",
+      "html_sha256": "3b1725338d2cdb16edf616da76516b699d97055cf74cdfaca076eeaf94f2cc08",
+      "source_pdf": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+      "pdf_sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb",
+      "assets": [
+        {
+          "path": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\_assets\\2.2.3_fig_1.svg",
+          "sha256": "51b83ba543581f28030ec75ed4bca51f964837f85772076a8e4e9261620ea974"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\_assets\\2.2.3_fig_1.png",
+          "sha256": "0b401e098bb2f56bb86663de908402a048a12a4b599b368e3489dc11bea95b65"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\_assets\\2.2.3_fig_2.svg",
+          "sha256": "dbe07d11e771367a2bc55906448cbe3f484e312731602806915a3b5edac09319"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\_assets\\2.2.3_fig_2.png",
+          "sha256": "59929543ec072f8d3e300d6f8b52e2510f0594d7dca5e5fd9e82dc0900a5c6a7"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\_assets\\2.2.3_fig_3.svg",
+          "sha256": "5ac52a0e58b0ea22f58b0ea4e165a565b3e0621eb2198fd0952346b6b5e4c61f"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\_assets\\2.2.3_fig_3.png",
+          "sha256": "0290351674b94ff93b47586bd2fb4ba15b6bd18cf30d9dd7e44bd1f7ea2f6e4f"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\_assets\\2.2.3_fig_4.svg",
+          "sha256": "bf31583a5413e17043df437e38aa7fd066eac549cfccc3e8d060fabf7166b065"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\_assets\\2.2.3_fig_4.png",
+          "sha256": "e221b15c2409d16cac3ad2b7423700758b4c477f88a974059b106ca03ed5d8fd"
+        }
+      ],
+      "zip": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.zip",
+      "zip_sha256": "a4a9781929ccebd5b79089a6e6c008dd71ff3e8c0713fc1a47c22b1bd5567c4b",
+      "proof_directory": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\223-paragraaf-ca27f8bd6cbb-r6"
+    },
+    {
+      "source_md": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+      "source_sha256": "f680b6f72166ff66c06f3da42ed61e536614dfc12d50b0ab403264d284697d19",
+      "source_html": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.html",
+      "html_sha256": "cf691595eb0ea599ba90825f631d98eaa9cdf75526de4435d5ea569fea610893",
+      "source_pdf": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf",
+      "pdf_sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80",
+      "assets": [
+        {
+          "path": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\_assets\\2.2.3_fig_4.svg",
+          "sha256": "bf31583a5413e17043df437e38aa7fd066eac549cfccc3e8d060fabf7166b065"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\_assets\\2.2.3_fig_4.png",
+          "sha256": "e221b15c2409d16cac3ad2b7423700758b4c477f88a974059b106ca03ed5d8fd"
+        }
+      ],
+      "zip": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.zip",
+      "zip_sha256": "b94c81cda5abbe7d3f943f2a106dda1e6fff1bb2b286095ff2eb4fadb91e3831",
+      "proof_directory": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\223-opgaven-50cf2bbeaa19-r6"
+    },
+    {
+      "source_md": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+      "source_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+      "source_html": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.html",
+      "html_sha256": "3af048f800cfff79706e04bad324cbb7f7d84998952cb15b6e0cbfaab09d25a7",
+      "source_pdf": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf",
+      "pdf_sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10",
+      "assets": [],
+      "zip": "\\\\?\\C:\\wt\\book2-223-succession-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.zip",
+      "zip_sha256": "fbaccaa40565fac929b8a4c6b747b5ce69ef19b807bd9a1a6131e7b066e8b34c",
+      "proof_directory": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\223-antwoorden-30cd682358c5-r6"
+    }
+  ]
+}
