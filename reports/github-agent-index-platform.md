@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T22:12:36.508Z
+Generated: 2026-09-05T22:45:48.195Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-211-r5-review-20260905`
-Source commit: `7f1cd9d347ae2217483c6303395d4ae793b7c68e`
-Files indexed: 9264
+Source branch: `agent/book2-211-r5-qc-20260906`
+Source commit: `032414ee7d0159c6d94c199398e45f5b2a71e473`
+Files indexed: 9364
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2717,7 +2717,7 @@ Count: 1030
 
 ## reports
 
-Count: 6490
+Count: 6590
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4132,6 +4132,15 @@ Count: 6490
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-005.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-006.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r5/pages/page-007.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r6/contact-sheet.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r6/manifest.json
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r6/pages/page-001.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r6/pages/page-002.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r6/pages/page-003.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r6/pages/page-004.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r6/pages/page-005.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r6/pages/page-006.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-498b9a863eef-r6/pages/page-007.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-979cba5ed213-r2/builder-inspection.json
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-979cba5ed213-r2/contact-sheet.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-antwoorden-979cba5ed213-r2/manifest.json
@@ -4209,6 +4218,17 @@ Count: 6490
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-007.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-008.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r5/pages/page-009.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r6/contact-sheet.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r6/manifest.json
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r6/pages/page-001.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r6/pages/page-002.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r6/pages/page-003.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r6/pages/page-004.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r6/pages/page-005.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r6/pages/page-006.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r6/pages/page-007.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r6/pages/page-008.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-opgaven-97329415bacc-r6/pages/page-009.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r3/builder-inspection.json
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r3/contact-sheet.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r3/inspection.json
@@ -4262,6 +4282,23 @@ Count: 6490
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-013.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-014.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r5/pages/page-015.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/contact-sheet.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/manifest.json
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-001.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-002.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-003.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-004.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-005.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-006.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-007.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-008.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-009.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-010.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-011.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-012.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-013.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-014.png
+- reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-9837e3a85f31-r6/pages/page-015.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-e136b26a4fcb-r2/builder-inspection.json
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-e136b26a4fcb-r2/contact-sheet.png
 - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/211-paragraaf-e136b26a4fcb-r2/manifest.json
@@ -6309,6 +6346,69 @@ Count: 6490
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-plan-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-r2-correction.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-r3-correction.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/antwoorden/page-1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/antwoorden/page-2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/antwoorden/page-3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/antwoorden/page-4.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/antwoorden/page-5.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/antwoorden/page-6.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/antwoorden/page-7.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/before.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/commands.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/committed-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/diagnostic-manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/final-preservation.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/fresh-proof-selection.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/full-build.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/grayscale/2.1.1_ex_1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/grayscale/2.1.1_fig_1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/grayscale/2.1.1_fig_2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/grayscale/2.1.1_fig_3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/grayscale/2.1.1_fig_4.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/grayscale/2.1.1_we_1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/historical-QC-snapshot.yaml
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/history-binding.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/independent-probes.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/native/2.1.1_ex_1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/native/2.1.1_fig_1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/native/2.1.1_fig_2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/native/2.1.1_fig_3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/native/2.1.1_fig_4.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/native/2.1.1_we_1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/opgaven/page-1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/opgaven/page-2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/opgaven/page-3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/opgaven/page-4.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/opgaven/page-5.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/opgaven/page-6.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/opgaven/page-7.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/opgaven/page-8.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/opgaven/page-9.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-01.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-02.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-03.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-04.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-05.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-06.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-07.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-08.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-09.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-10.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-11.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-12.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-13.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-14.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/paragraaf/page-15.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/pass0.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/publication-checks.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-evidence/rebuild.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-probes.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-run.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-scope-publication.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-1.png
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-2.png
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence/antwoorden/page-3.png
