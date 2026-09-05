@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T09:55:14.439Z
+Generated: 2026-09-05T10:00:03.065Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-textbook-production-20260905`
-Source commit: `206c018478654db781cc879e7ea36adcd9ef600c`
-Files indexed: 7649
+Source commit: `b772906721a7655e5fa8e59a1a0674b405efe6f9`
+Files indexed: 7656
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1599,7 +1599,7 @@ Count: 695
 
 ## references
 
-Count: 1028
+Count: 1029
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/book-outlines/book-2-outline.md
@@ -1994,6 +1994,7 @@ Count: 1028
 - references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.plan.json
 - references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.result.json
 - references/data/sprints/BOOK2-TARGET-INTEGRATION-1.plan.json
+- references/data/sprints/BOOK2-TARGET-INTEGRATION-1.result.json
 - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.plan.json
 - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.result.json
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
@@ -2632,7 +2633,7 @@ Count: 1028
 
 ## reports
 
-Count: 4934
+Count: 4940
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4072,6 +4073,8 @@ Count: 4934
 - reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/pr-readiness-initial.md
 - reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json
 - reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.md
+- reports/review-gates/GATE-BOOK2-TARGET-INTEGRATION-1/bundle-urls.md
+- reports/review-gates/GATE-BOOK2-TARGET-INTEGRATION-1/review-packet.json
 - reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/bundle-urls.md
 - reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/review-packet.json
 - reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/review-packet.md
@@ -5323,11 +5326,15 @@ Count: 4934
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-baseline.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-command-log.jsonl
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-command-log.md
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-diff-summary.md
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-finished-verification.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-implementation-review-corrections.md
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-lead-review-assignment.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-plan.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-planning-review.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-prerequisite-inventory.md
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-result.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round12.md
