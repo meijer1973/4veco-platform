@@ -1,0 +1,32 @@
+// Bounded imported-plan/review identity, not generated-product acceptance.
+// HOW TO ADAPT: use a new exact adoption range and reviewed subject hashes.
+const fs=require('fs'),path=require('path'),cp=require('child_process'),crypto=require('crypto'),assert=require('assert/strict');
+const root=path.resolve(__dirname,'../..'),lessons=path.resolve(root,'../4veco-lessen');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const git=(args,cwd=root)=>cp.execFileSync('git',args,{cwd,maxBuffer:32*1024*1024});
+const lf=b=>b.toString('utf8').replace(/^\uFEFF/,'').replace(/\r\n?/g,'\n');
+const prefix='reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-';
+const base='cb6c21baffb9572edf3598fbdad2aa2c4370ed3c',head='1f2f5cce111e77dd53ad5a58ffd6338e89e30300';
+const files=git(['diff','--name-only','-z',base,head]).toString('utf8').split('\0').filter(Boolean);
+const expected=['231-planning-check.js','231-planning-plan.md','231-planning-r2-checks.json','231-planning-r2-response.md','231-planning-r2-scope.json','231-plan-r2-independent-checks.json','231-plan-r2-independent-operational-plan.md','231-plan-r2-independent-probes.js','231-plan-r2-independent-review.md','231-plan-r2-independent-scope.js','231-plan-r2-independent-scope.json','successor-binding-r2-independent-review.md'].map(p=>prefix+p);
+assert.deepEqual(files.sort(),expected.sort());
+for(const p of files)assert(fs.readFileSync(path.join(root,p)).equals(git(['show','5dff76d9f3c1f51a11f1b2f3a14076b40a104a85:'+p])),p);
+const subject='Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md';
+const plan=fs.readFileSync(path.join(lessons,subject));
+assert(plan.equals(git(['show','4fe0d742a3cd3c02ac1aaf6311dccc540970e2f5:'+subject],lessons)));
+assert.equal(sha(lf(plan)),'60d6a743681e1361478395a591b7c82e44acf8c4587a93c4cc842b036cf017b1');
+assert.equal(sha(lf(fs.readFileSync(path.join(root,prefix+'successor-binding-plan.md')))),'8acf6dd53026710b28f9130701bc9211b95a51897ee74f7fb4bf6583ef69cf8c');
+for(const [p,h]of [['231-plan-r2-independent-review.md','3bfc2f8bddb0659d3b83e5a15e993cb2282003ddc33e0b142dcf6c1263b3a652'],['successor-binding-r2-independent-review.md','27439df12c6c47f39318e42c79ebebc2c1b8b93dfefe444ac1f4edc2dcfed8c6']])assert.equal(sha(fs.readFileSync(path.join(root,prefix+p))),h);
+const registry=JSON.parse(fs.readFileSync(path.join(root,'references/authored/course-target-exercises.json'),'utf8'));
+const target=registry.exercises.find(r=>r.id==='2.3.1');assert.equal(sha(JSON.stringify(target)),'a385e00b2fffea168089c32f796668e51ae45cb325504644392f79b20bde8571');
+assert.deepEqual(target.target_exercise.subquestions.map(q=>q.points),[2,3,2,3,2]);
+const names=lf(plan).split('\n').filter(x=>/^\| `2\.3\.1_(?:fig|we|ex)_/.test(x)).map(x=>x.split('|')[1].trim().replaceAll('`',''));
+assert.equal(new Set(names).size,15);
+const validator=fs.readFileSync(path.join(root,'scripts/validate-paragraph.js'),'utf8');
+const start=validator.indexOf('  const SURFACE_SUFFIX_SRC ='),end=validator.indexOf('  for (const base of referencedBases)',start);
+assert(start>=0&&end>start);const regex=new Function('parNr',validator.slice(start,end)+'; return assetPattern;')('2.3.1');
+for(const name of names)for(const ext of ['svg','png'])assert(regex.test(name+'.'+ext));
+assert.equal((50-20)/.5,60);assert.equal(60*(50-20)/2,900);
+assert.equal((18-10)+(14-10)+(10-10),(14-6)+(10-6)+(6-6));
+const lessonChanges=git(['diff','--name-only','-z','9da7c47b07144815f730ebbb9fd117805194ac6b','d1bd891c052f8a2eed5cf08cc62b921218ebff6c'],lessons).toString('utf8').split('\0').filter(Boolean);assert.deepEqual(lessonChanges,[subject]);
+console.log(JSON.stringify({result:'PASS',imported_platform_files:files.length,lesson_plan_only:true,plan_sha256:sha(lf(plan)),native_names:30,independent_plan_decisions:'231 R2 and successor S1 PASS',student_product_acceptance:false},null,2));

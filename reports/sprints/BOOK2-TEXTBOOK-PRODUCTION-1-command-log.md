@@ -11884,3 +11884,85 @@ Paragraph lane scope: PASS (textbook)
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-adoption-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:08:00.183Z`
+- finished_at: `2026-09-05T22:08:00.888Z`
+- duration_ms: `705`
+- exit_code: `0`
+- stdout_sha256: `80f608eaa628d10a5bb05896b0ab9947a51f4ccb957ccf11730db753083e6eee`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS",
+  "imported_platform_files": 12,
+  "lesson_plan_only": true,
+  "plan_sha256": "60d6a743681e1361478395a591b7c82e44acf8c4587a93c4cc842b036cf017b1",
+  "native_names": 30,
+  "independent_plan_decisions": "231 R2 and successor S1 PASS",
+  "student_product_acceptance": false
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.3.1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:08:00.945Z`
+- finished_at: `2026-09-05T22:08:02.927Z`
+- duration_ms: `1982`
+- exit_code: `0`
+- stdout_sha256: `17c621a2434015110c4cb7717f5a302b74ab68762f2574dbcdd25e8895ecce87`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.3.1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:08:02.979Z`
+- finished_at: `2026-09-05T22:08:03.693Z`
+- duration_ms: `714`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
