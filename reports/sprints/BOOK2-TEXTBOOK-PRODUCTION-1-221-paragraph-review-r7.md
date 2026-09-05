@@ -230,6 +230,11 @@ Historical quality-ref presence in a structural pass is not R7 specialist QC.
   truncated-read recovery are recorded in the preimplementation review plan.
 - npm.cmd ci exited0 (385 packages); inherited audit reports 1low/1moderate/6high.
   No dependency update or vulnerability remediation is in this correction scope.
+- Staged diff checking found CRLF characters inside the logger's Markdown
+  excerpts after capture. The commit command continued after that diagnostic;
+  a separate corrective evidence commit normalizes the readable transcript to
+  LF before publication. The raw JSONL, captured hashes, failures and exit codes
+  are unchanged; the final whole review delta is checked again.
 
 Actual validator/rebuild attempts, exit codes and output hashes are retained in
 `BOOK2-TEXTBOOK-PRODUCTION-1-221-R7-REVIEW-command-log.jsonl` and its Markdown

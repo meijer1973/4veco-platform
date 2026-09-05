@@ -1,5 +1,8 @@
 # Sprint BOOK2-TEXTBOOK-PRODUCTION-1-221-R7-REVIEW: Command Log
 
+Readable transcript normalized to LF after capture. Exact captured output hashes,
+excerpts and exit codes remain in the unchanged JSONL companion.
+
 ## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-probes-r7.py
 
 - cwd: `C:\wt\book2-221-r7-review-20260905\4veco-platform`
