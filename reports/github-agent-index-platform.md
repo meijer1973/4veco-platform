@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T16:51:52.855Z
+Generated: 2026-09-05T16:58:38.889Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `c50a805172252c080d5c5796ce86ab1e2029fb62`
-Files indexed: 7949
+Source commit: `2e8cb04508bf5d8e062037ef8e0618597f572d65`
+Files indexed: 7951
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2669,7 +2669,7 @@ Count: 1030
 
 ## reports
 
-Count: 5201
+Count: 5203
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5619,6 +5619,7 @@ Count: 5201
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-baseline.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-front-draft.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-front-review-r1.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-front-review-r2.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-matter-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-pipeline-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md
@@ -5633,6 +5634,7 @@ Count: 5201
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-print-pipeline-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-roadmap-baseline-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-wave-2-production-release.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round12.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
