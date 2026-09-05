@@ -5,9 +5,9 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform adopted211 R5 QC `a288bed1008880c7601a431ad15a5f976d652256`,
-lessons specialist adoption `1fb8ce8555983dcb24a6192cc0a6a85ecc8c1c14`, followed
-by the exact root-only current211 acceptance/handoff in211-root-acceptance-r5.md.
+Snapshot: platform adopted212 R7 review `8e00eee0252993bee69f94a3ebb1414e03b8ef49`,
+lessons `d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f`, including the exact
+root-only current211 acceptance/handoff at5e14325 in211-root-acceptance-r5.md.
 Current221 R8 and222 R13 acceptances remain unchanged.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 All paths below are relative to the lesson book root
@@ -40,7 +40,8 @@ distinct specialist QC pass; root acceptance/handoff are complete. Its inherited
 the native211 builder has no ZIP output contract. It is not a current student
 deliverable. §212 R7 adds its three bonus criteria and is adopted/root-rebuilt:
 only answer page6 changes, the other26 pages are exact, and34artifact full/print
-reproduction passes. Its independent gates and accepted-prerequisite succession remain.
+reproduction passes. Its current independent paragraph review passes; distinct
+specialist/root gates and accepted-prerequisite succession remain.
 Their root reports distinguish actual source/page/rebuild checks from remaining
 independent paragraph, specialist and handoff gates. See review-corrections.md.
 
@@ -143,7 +144,8 @@ See221-root-acceptance-r8.md for exact current canonical and adoption bindings.
 Wave-two §213 and §223 outputs remain adopted candidates C; their gate
 closure remains pending. §211 R5 has complete current paragraph review, distinct
 specialist QC and root acceptance/handoff with flags; see211-root-acceptance-r5.md.
-§212 R7 has its bonus block and needs current independent gates and
+§212 R7 has its bonus block and current independent paragraph PASS; distinct
+specialist/root gates and
 accepted-prerequisite succession; both metadata corrections are root-adopted/rebuilt.
 §213 R7 has the bonus-criteria correction and current independent paragraph PASS;
 distinct QC/root acceptance and exact accepted
