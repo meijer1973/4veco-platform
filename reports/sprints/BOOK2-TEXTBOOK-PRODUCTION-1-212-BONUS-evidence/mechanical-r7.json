@@ -1,0 +1,1167 @@
+{
+  "result": "PASS",
+  "inspection": "NOT_SUPPLIED_BY_SCRIPT",
+  "protected_inventory": [
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/212/answers.md",
+      "sha256": "ce9b65ebc8a452940abe1b15d268b8f42ca83a72f011d28b2f54a1f2912cfe1e",
+      "after_sha256": "b67a0959f2fcba00d1399f26d51d866a2a40589b74f780384300eebd9ded8324",
+      "changed": true
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/212/check_render.py",
+      "sha256": "64e2fbfefeb580f43dbdb6979741dd332d1da009c3e744af818716039541b683",
+      "after_sha256": "64e2fbfefeb580f43dbdb6979741dd332d1da009c3e744af818716039541b683",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/212/exercises.md",
+      "sha256": "c03fc1f6939deeaae99753eab087dea82547626839849f0e52d494a8ec4ce533",
+      "after_sha256": "c03fc1f6939deeaae99753eab087dea82547626839849f0e52d494a8ec4ce533",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/212/target-answers.md",
+      "sha256": "da0092dad52dfce100257565e6efa8768fd92f7fbd8c45c5c15fc0dfb222161d",
+      "after_sha256": "da0092dad52dfce100257565e6efa8768fd92f7fbd8c45c5c15fc0dfb222161d",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/212/test_metadata.py",
+      "sha256": "418b4df0e0c5ee5e0a058acb091f5c3f99a2a28dcb146b27dcdc3aa599183432",
+      "after_sha256": "ce0a11711367e0b68ffc87fd16e486515e7baa27a4e8d84fe2489fbbd41080d1",
+      "changed": true
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/212/test_source.py",
+      "sha256": "de4da12ec81968ab056a23f421b09d33a3289e3eed57ac340330c6595963bef3",
+      "after_sha256": "de4da12ec81968ab056a23f421b09d33a3289e3eed57ac340330c6595963bef3",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/212/theory.md",
+      "sha256": "c5c1ec88217f0e8910b05b5c968bab8e8cee8866db63e323681b6bb65e89e0b4",
+      "after_sha256": "c5c1ec88217f0e8910b05b5c968bab8e8cee8866db63e323681b6bb65e89e0b4",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/b2_212.py",
+      "sha256": "079c1f40d750d7c23a2c24b1455a1c4820d9e8cf46467f36fe20f5c090363183",
+      "after_sha256": "079c1f40d750d7c23a2c24b1455a1c4820d9e8cf46467f36fe20f5c090363183",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "after_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "references/authored/book-outlines/book-2-outline.md",
+      "sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf",
+      "after_sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "references/authored/book-outlines/book-2-outline.meta.json",
+      "sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "after_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "references/authored/course-target-exercises.json",
+      "sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "after_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "references/owned/course-blueprint-pedagogical-boundaries.md",
+      "sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7",
+      "after_sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "scripts/validate-paragraph.js",
+      "sha256": "6c46b2673d1bd9f291df8d295541efe0bebbbdd4eb847e2230dc0193237a0e7f",
+      "after_sha256": "6c46b2673d1bd9f291df8d295541efe0bebbbdd4eb847e2230dc0193237a0e7f",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html",
+      "sha256": "d4d3db3265820003a45e71955b9f3f2188a6036860fdcdc8fbbc49b944bfd0ca",
+      "after_sha256": "d4d3db3265820003a45e71955b9f3f2188a6036860fdcdc8fbbc49b944bfd0ca",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md",
+      "sha256": "57cc1ef3b5c5ae6d912291f9746a7f535906bb85207678bab8fc63dadf82ebfb",
+      "after_sha256": "57cc1ef3b5c5ae6d912291f9746a7f535906bb85207678bab8fc63dadf82ebfb",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf",
+      "sha256": "ffdf0905a980b6c89b64207e90873d79edbf192c86c2280f3394caa25693998a",
+      "after_sha256": "ffdf0905a980b6c89b64207e90873d79edbf192c86c2280f3394caa25693998a",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html",
+      "sha256": "9e27b80089dee95fa4ac61a3f07baaf95ff3650518943a730db122befec2a6f8",
+      "after_sha256": "9e27b80089dee95fa4ac61a3f07baaf95ff3650518943a730db122befec2a6f8",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md",
+      "sha256": "bacccc1c9b063c4c786f2749d31993d94eb671fdc5bf0a899fb123d89bc0558b",
+      "after_sha256": "bacccc1c9b063c4c786f2749d31993d94eb671fdc5bf0a899fb123d89bc0558b",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
+      "sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953",
+      "after_sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.zip",
+      "sha256": "bb951635865a5e7e321f562ef73c640c84948f99441385f217cf366d9e3e996d",
+      "after_sha256": "bb951635865a5e7e321f562ef73c640c84948f99441385f217cf366d9e3e996d",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html",
+      "sha256": "10721f1ad745b8e1358ba354c5ded64a74367f5081eaf1c676ecb88dbe10e44b",
+      "after_sha256": "10721f1ad745b8e1358ba354c5ded64a74367f5081eaf1c676ecb88dbe10e44b",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md",
+      "sha256": "de7abc910f6ec940eb329abd003085921f32409956ec1e0450bcc4a5454eb6b5",
+      "after_sha256": "de7abc910f6ec940eb329abd003085921f32409956ec1e0450bcc4a5454eb6b5",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
+      "sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0",
+      "after_sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-quality-ref.yaml",
+      "sha256": "0dddb6e9d8f3a8da0e0f31e67dafabf53b99feb6ad86ce72039480dd7e12ea18",
+      "after_sha256": "0dddb6e9d8f3a8da0e0f31e67dafabf53b99feb6ad86ce72039480dd7e12ea18",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-review.md",
+      "sha256": "92b4a9462caf8316274fb58f8beef5c850147c44e6bf80b9a28fad442d9dbe96",
+      "after_sha256": "92b4a9462caf8316274fb58f8beef5c850147c44e6bf80b9a28fad442d9dbe96",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md",
+      "sha256": "724a080619f2f072151edf20980071b3bef18cd60d1904c78f4aa906be8917c8",
+      "after_sha256": "724a080619f2f072151edf20980071b3bef18cd60d1904c78f4aa906be8917c8",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-plan.md",
+      "sha256": "f46c7aa444ba6fef1f6f885b34bd52963fccac3cdc7b13b898eb6665219c4cd0",
+      "after_sha256": "f46c7aa444ba6fef1f6f885b34bd52963fccac3cdc7b13b898eb6665219c4cd0",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_ex_1.png",
+      "sha256": "fc76afb4f507cf8e09a62a9cf7a209ded71b93f87c72b97803d95afc6678f24f",
+      "after_sha256": "fc76afb4f507cf8e09a62a9cf7a209ded71b93f87c72b97803d95afc6678f24f",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_ex_1.svg",
+      "sha256": "c2854b76d42ee1a2654f4e13886e5184b17119786bff71b7b908bedf4aae83e3",
+      "after_sha256": "c2854b76d42ee1a2654f4e13886e5184b17119786bff71b7b908bedf4aae83e3",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.png",
+      "sha256": "21ca603069ffa83d885befa21696b1b0c7ea4a0f6fba8ed49021458000c8ba45",
+      "after_sha256": "21ca603069ffa83d885befa21696b1b0c7ea4a0f6fba8ed49021458000c8ba45",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg",
+      "sha256": "9043146770454ad70f5968185c49de46bee6036f5e4748a9caac8b78cebb1005",
+      "after_sha256": "9043146770454ad70f5968185c49de46bee6036f5e4748a9caac8b78cebb1005",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_2.png",
+      "sha256": "74f1384715e922ca04d10aa2978b852a98511044c6478f40e4bb260f72e0f8a8",
+      "after_sha256": "74f1384715e922ca04d10aa2978b852a98511044c6478f40e4bb260f72e0f8a8",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_2.svg",
+      "sha256": "bbf506bd1be95e272a9bd31a42143147f58dc545c5ff243ff8d026b0d4c6c66d",
+      "after_sha256": "bbf506bd1be95e272a9bd31a42143147f58dc545c5ff243ff8d026b0d4c6c66d",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_3.png",
+      "sha256": "c516afb77ff0ae8a8adfd031140cf6f23b3b7f02bbb5a2980649e8a9f58de8b6",
+      "after_sha256": "c516afb77ff0ae8a8adfd031140cf6f23b3b7f02bbb5a2980649e8a9f58de8b6",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_3.svg",
+      "sha256": "a5a2e464a51461f78f1b98056520c5b3a32e9baef577424f405b64c4790326eb",
+      "after_sha256": "a5a2e464a51461f78f1b98056520c5b3a32e9baef577424f405b64c4790326eb",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_4.png",
+      "sha256": "c73e2eca425313c29eaf6bc1fbee0775971bfb08b6343d0ade52bbb70565701b",
+      "after_sha256": "c73e2eca425313c29eaf6bc1fbee0775971bfb08b6343d0ade52bbb70565701b",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_4.svg",
+      "sha256": "d49d97740e3747855613ea332df481caf9bb71071f75f08626502d1a474e518d",
+      "after_sha256": "d49d97740e3747855613ea332df481caf9bb71071f75f08626502d1a474e518d",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_we_1.png",
+      "sha256": "f62cfd52983743e0ceb36a5963dd30030d8c220e30f100c6f30ae47361700bc6",
+      "after_sha256": "f62cfd52983743e0ceb36a5963dd30030d8c220e30f100c6f30ae47361700bc6",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_we_1.svg",
+      "sha256": "8f60486f0d66e0d728570e9d9f40851e6834d2c5cbf18db96ea091893b6d2530",
+      "after_sha256": "8f60486f0d66e0d728570e9d9f40851e6834d2c5cbf18db96ea091893b6d2530",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/build_pdf.py",
+      "sha256": "6ae0ea8829a68553d21e86408ca98bc6d79edebb046b146fef9ed521bf26c5b3",
+      "after_sha256": "6ae0ea8829a68553d21e86408ca98bc6d79edebb046b146fef9ed521bf26c5b3",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.html",
+      "sha256": "3bb83b2b2eb9b8349ed2553190a2d0288f8e75b1e0acaff06013a56f75ce971a",
+      "after_sha256": "be02782985485caca268df98af897104d78feec9737032cd14803c978a318a82",
+      "changed": true
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md",
+      "sha256": "4674ef72849b9b1adea404e938449d48cea5069813643e953dad2c9e0b20c035",
+      "after_sha256": "4ffcb70c96f2c0c178a06a6092ec6701c4323cc1ac697de4156bc7cf0d43b8b3",
+      "changed": true
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+      "sha256": "07a75d7b5b69344d38d5da9e5f2e0a3b964d86cc64c383b37809f8263fb33192",
+      "after_sha256": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90",
+      "changed": true
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.zip",
+      "sha256": "e44a6dd5c708ec58aed45b7ee7e7d6038743ab12cb4c4522d85857c662f9e4d6",
+      "after_sha256": "575fe9051596241c1bd0a29b5ca40bdd3ad4a357f6fd387508277362abe7a28e",
+      "changed": true
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.html",
+      "sha256": "87c55209dd450e989476f2f9779feb88de9fac9bbc77a0805112a444ffb65a06",
+      "after_sha256": "87c55209dd450e989476f2f9779feb88de9fac9bbc77a0805112a444ffb65a06",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md",
+      "sha256": "df2cd3fe66af760b55b1f28a2f51ca9c7449b4f1704d5da278db064850eef002",
+      "after_sha256": "df2cd3fe66af760b55b1f28a2f51ca9c7449b4f1704d5da278db064850eef002",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
+      "sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+      "after_sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.zip",
+      "sha256": "c72b108912247d2f190466f8bac4fdab54e001652097199d3939920739ae12e8",
+      "after_sha256": "c72b108912247d2f190466f8bac4fdab54e001652097199d3939920739ae12e8",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.html",
+      "sha256": "85eff0548ce75161a2935e2bb3d0bb470f30ec10e95996c670605574d89454b5",
+      "after_sha256": "85eff0548ce75161a2935e2bb3d0bb470f30ec10e95996c670605574d89454b5",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "sha256": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+      "after_sha256": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+      "sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+      "after_sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.zip",
+      "sha256": "e9d639f9119da0b118b58e9541f7d86ad9244960368cdaacc2f439b9c543d86f",
+      "after_sha256": "e9d639f9119da0b118b58e9541f7d86ad9244960368cdaacc2f439b9c543d86f",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml",
+      "sha256": "e168e3c2b8698d12b699fbf60e7691fbbc8a15d61bd46a7988704d3c896c805c",
+      "after_sha256": "e168e3c2b8698d12b699fbf60e7691fbbc8a15d61bd46a7988704d3c896c805c",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md",
+      "sha256": "74ad2ed9c44d9aa05b6d6a680d5d273f2cad4b62e4bead5db303c006514238cd",
+      "after_sha256": "74ad2ed9c44d9aa05b6d6a680d5d273f2cad4b62e4bead5db303c006514238cd",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "sha256": "de2b8ed7dcc7a3c5c6eaac400892d2d37ac5212ccb3b9972fb004115a88c1fe2",
+      "after_sha256": "de2b8ed7dcc7a3c5c6eaac400892d2d37ac5212ccb3b9972fb004115a88c1fe2",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-plan.md",
+      "sha256": "5e1d318dd1b841467ca297d67956304d1861e3eb68d1df56cc4d32f6434d34a4",
+      "after_sha256": "5e1d318dd1b841467ca297d67956304d1861e3eb68d1df56cc4d32f6434d34a4",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_1.png",
+      "sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+      "after_sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_1.svg",
+      "sha256": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+      "after_sha256": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_2.png",
+      "sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+      "after_sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_2.svg",
+      "sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+      "after_sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_3.png",
+      "sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+      "after_sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_3.svg",
+      "sha256": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee",
+      "after_sha256": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_4.png",
+      "sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+      "after_sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_4.svg",
+      "sha256": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3",
+      "after_sha256": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_5.png",
+      "sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+      "after_sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_5.svg",
+      "sha256": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127",
+      "after_sha256": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_6.png",
+      "sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+      "after_sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_6.svg",
+      "sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+      "after_sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_1.png",
+      "sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+      "after_sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_1.svg",
+      "sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+      "after_sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_2.png",
+      "sha256": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+      "after_sha256": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_2.svg",
+      "sha256": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f",
+      "after_sha256": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_3.png",
+      "sha256": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+      "after_sha256": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_3.svg",
+      "sha256": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270",
+      "after_sha256": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_4.png",
+      "sha256": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+      "after_sha256": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_4.svg",
+      "sha256": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910",
+      "after_sha256": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_we_1.png",
+      "sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+      "after_sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_we_1.svg",
+      "sha256": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df",
+      "after_sha256": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_paragraph-plan.md",
+      "sha256": "310846d98142bcef66951b4855779a3ddf1c5c03957d6c2c8caa62c4fe24c892",
+      "after_sha256": "310846d98142bcef66951b4855779a3ddf1c5c03957d6c2c8caa62c4fe24c892",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/build_pdf.py",
+      "sha256": "8bf1fab19138c303f8f68209dc2a35d401726f9ec6f3acbe5f8e052b6524e216",
+      "after_sha256": "8bf1fab19138c303f8f68209dc2a35d401726f9ec6f3acbe5f8e052b6524e216",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md",
+      "sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116",
+      "after_sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76",
+      "after_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76",
+      "changed": false
+    }
+  ],
+  "exact_changes": [
+    [
+      "lessons",
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.html"
+    ],
+    [
+      "lessons",
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md"
+    ],
+    [
+      "lessons",
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf"
+    ],
+    [
+      "lessons",
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.zip"
+    ],
+    [
+      "platform",
+      "build-scripts/content/book-2/212/answers.md"
+    ],
+    [
+      "platform",
+      "build-scripts/content/book-2/212/test_metadata.py"
+    ]
+  ],
+  "source_test_bodies_preserved": 10,
+  "metadata_other_test_bodies_preserved": 4,
+  "DOM": [
+    {
+      "edition": "paragraaf",
+      "complete_normalized_DOM_equal_after_exact_criteria_reversal": true,
+      "wrapper_delta": null
+    },
+    {
+      "edition": "opgaven",
+      "complete_normalized_DOM_equal_after_exact_criteria_reversal": true,
+      "wrapper_delta": null
+    },
+    {
+      "edition": "antwoorden",
+      "complete_normalized_DOM_equal_after_exact_criteria_reversal": true,
+      "wrapper_delta": "Native <650-character short-wrapper classification removed after exact added content; reversed solely for complete-DOM equality."
+    }
+  ],
+  "ZIP": [
+    {
+      "edition": "paragraaf",
+      "count": 19,
+      "all_current_bytes": true,
+      "members": [
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – paragraaf.html",
+          "sha256": "85eff0548ce75161a2935e2bb3d0bb470f30ec10e95996c670605574d89454b5",
+          "changed": false
+        },
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+          "sha256": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+          "changed": false
+        },
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+          "sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_1.png",
+          "sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_1.svg",
+          "sha256": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_2.png",
+          "sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_2.svg",
+          "sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_6.png",
+          "sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_6.svg",
+          "sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_fig_1.png",
+          "sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_fig_1.svg",
+          "sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_fig_2.png",
+          "sha256": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_fig_2.svg",
+          "sha256": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_fig_3.png",
+          "sha256": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_fig_3.svg",
+          "sha256": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_fig_4.png",
+          "sha256": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_fig_4.svg",
+          "sha256": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_we_1.png",
+          "sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_we_1.svg",
+          "sha256": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df",
+          "changed": false
+        }
+      ]
+    },
+    {
+      "edition": "opgaven",
+      "count": 11,
+      "all_current_bytes": true,
+      "members": [
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – opgaven.html",
+          "sha256": "87c55209dd450e989476f2f9779feb88de9fac9bbc77a0805112a444ffb65a06",
+          "changed": false
+        },
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – opgaven.md",
+          "sha256": "df2cd3fe66af760b55b1f28a2f51ca9c7449b4f1704d5da278db064850eef002",
+          "changed": false
+        },
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
+          "sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_1.png",
+          "sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_1.svg",
+          "sha256": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_2.png",
+          "sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_2.svg",
+          "sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_6.png",
+          "sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_6.svg",
+          "sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_we_1.png",
+          "sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_we_1.svg",
+          "sha256": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df",
+          "changed": false
+        }
+      ]
+    },
+    {
+      "edition": "antwoorden",
+      "count": 9,
+      "all_current_bytes": true,
+      "members": [
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – antwoorden.html",
+          "sha256": "be02782985485caca268df98af897104d78feec9737032cd14803c978a318a82",
+          "changed": true
+        },
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – antwoorden.md",
+          "sha256": "4ffcb70c96f2c0c178a06a6092ec6701c4323cc1ac697de4156bc7cf0d43b8b3",
+          "changed": true
+        },
+        {
+          "name": "2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+          "sha256": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90",
+          "changed": true
+        },
+        {
+          "name": "_assets/2.1.2_ex_3.png",
+          "sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_3.svg",
+          "sha256": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_4.png",
+          "sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_4.svg",
+          "sha256": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_5.png",
+          "sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+          "changed": false
+        },
+        {
+          "name": "_assets/2.1.2_ex_5.svg",
+          "sha256": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127",
+          "changed": false
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-001.png",
+      "sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1",
+      "old_sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-002.png",
+      "sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329",
+      "old_sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-003.png",
+      "sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d",
+      "old_sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-004.png",
+      "sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38",
+      "old_sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-005.png",
+      "sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55",
+      "old_sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-006.png",
+      "sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae",
+      "old_sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-007.png",
+      "sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72",
+      "old_sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-008.png",
+      "sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340",
+      "old_sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-009.png",
+      "sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc",
+      "old_sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-010.png",
+      "sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf",
+      "old_sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-011.png",
+      "sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7",
+      "old_sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-012.png",
+      "sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3",
+      "old_sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-013.png",
+      "sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd",
+      "old_sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd",
+      "changed": false
+    },
+    {
+      "edition": "paragraaf",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7\\pages\\page-014.png",
+      "sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914",
+      "old_sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-001.png",
+      "sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb",
+      "old_sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-002.png",
+      "sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5",
+      "old_sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-003.png",
+      "sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e",
+      "old_sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-004.png",
+      "sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4",
+      "old_sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-005.png",
+      "sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9",
+      "old_sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-006.png",
+      "sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac",
+      "old_sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac",
+      "changed": false
+    },
+    {
+      "edition": "opgaven",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7\\pages\\page-007.png",
+      "sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71",
+      "old_sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71",
+      "changed": false
+    },
+    {
+      "edition": "antwoorden",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7\\pages\\page-001.png",
+      "sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957",
+      "old_sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957",
+      "changed": false
+    },
+    {
+      "edition": "antwoorden",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7\\pages\\page-002.png",
+      "sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554",
+      "old_sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554",
+      "changed": false
+    },
+    {
+      "edition": "antwoorden",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7\\pages\\page-003.png",
+      "sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6",
+      "old_sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6",
+      "changed": false
+    },
+    {
+      "edition": "antwoorden",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7\\pages\\page-004.png",
+      "sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5",
+      "old_sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5",
+      "changed": false
+    },
+    {
+      "edition": "antwoorden",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7\\pages\\page-005.png",
+      "sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2",
+      "old_sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2",
+      "changed": false
+    },
+    {
+      "edition": "antwoorden",
+      "file": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7\\pages\\page-006.png",
+      "sha256": "10064493da06147455efc290de36cc716f71241445bda748df7b8b0f8bdcdd5b",
+      "old_sha256": "d381ea9948644e3fb98fbbb12436ba3d7d1b0df17d48ddb0df4e89b1455eeb73",
+      "changed": true
+    }
+  ],
+  "figures": [
+    {
+      "asset": "2.1.2_fig_1",
+      "svg_sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+      "png_sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_fig_1.png",
+      "gray_sha256": "69e506b08d9c858b0181dc5990ad3a82527f8a850c59ba4c6c418d6cd782e2bd"
+    },
+    {
+      "asset": "2.1.2_fig_2",
+      "svg_sha256": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f",
+      "png_sha256": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_fig_2.png",
+      "gray_sha256": "aeb85872cdb4953a88b381abfee56d232ba2a2ab51b905d8b5295b59525616f0"
+    },
+    {
+      "asset": "2.1.2_fig_3",
+      "svg_sha256": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270",
+      "png_sha256": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_fig_3.png",
+      "gray_sha256": "e238df1499f723eb3c35bfd959322118dd8cc075d7d84616cd574a58f08b7026"
+    },
+    {
+      "asset": "2.1.2_fig_4",
+      "svg_sha256": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910",
+      "png_sha256": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_fig_4.png",
+      "gray_sha256": "185bc19827f7d1c797d1c8729e107e60751ab35cf16be91048779e2a370c4a3f"
+    },
+    {
+      "asset": "2.1.2_we_1",
+      "svg_sha256": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df",
+      "png_sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_we_1.png",
+      "gray_sha256": "92f1fc22545eabfd241d01c951cc57998c0054161838ee37e73a2db8f16b3569"
+    },
+    {
+      "asset": "2.1.2_ex_1",
+      "svg_sha256": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+      "png_sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_ex_1.png",
+      "gray_sha256": "6b313621ff1b4b958317d5da3b824509c3046941b3873c4a7942e51857b9c3fc"
+    },
+    {
+      "asset": "2.1.2_ex_2",
+      "svg_sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+      "png_sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_ex_2.png",
+      "gray_sha256": "9aeb59a830341b716b42b0714255120333ec98cf05edb53c7ad747a109566416"
+    },
+    {
+      "asset": "2.1.2_ex_3",
+      "svg_sha256": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee",
+      "png_sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_ex_3.png",
+      "gray_sha256": "25b073c8a0d5a43bbf0c1e49690f08195e48a4a94549a64d748432e3eb11ac90"
+    },
+    {
+      "asset": "2.1.2_ex_4",
+      "svg_sha256": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3",
+      "png_sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_ex_4.png",
+      "gray_sha256": "d1621d76bfe963e3edb3e1f3e94d7b683e251c929fba8e7bfd0015ba39190d09"
+    },
+    {
+      "asset": "2.1.2_ex_5",
+      "svg_sha256": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127",
+      "png_sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_ex_5.png",
+      "gray_sha256": "3d0391c1ef5a0b00c766423fe99c73d4dc59de23d929f288ba77f7cc99ec0d84"
+    },
+    {
+      "asset": "2.1.2_ex_6",
+      "svg_sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+      "png_sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+      "pixel_max_delta": 0,
+      "gray": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\grayscale\\2.1.2_ex_6.png",
+      "gray_sha256": "5320c53c6651a913f88f834ecb3f846a13d39fc8088e8d9c5dbe73f02f09b10f"
+    }
+  ],
+  "native34": {
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.html": "85eff0548ce75161a2935e2bb3d0bb470f30ec10e95996c670605574d89454b5",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.zip": "e9d639f9119da0b118b58e9541f7d86ad9244960368cdaacc2f439b9c543d86f",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md": "df2cd3fe66af760b55b1f28a2f51ca9c7449b4f1704d5da278db064850eef002",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.html": "87c55209dd450e989476f2f9779feb88de9fac9bbc77a0805112a444ffb65a06",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.zip": "c72b108912247d2f190466f8bac4fdab54e001652097199d3939920739ae12e8",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md": "4ffcb70c96f2c0c178a06a6092ec6701c4323cc1ac697de4156bc7cf0d43b8b3",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.html": "be02782985485caca268df98af897104d78feec9737032cd14803c978a318a82",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.zip": "575fe9051596241c1bd0a29b5ca40bdd3ad4a357f6fd387508277362abe7a28e",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_1.svg": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_1.png": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_2.svg": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_2.png": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_3.svg": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_3.png": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_4.svg": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_4.png": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_we_1.svg": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_we_1.png": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_1.svg": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_1.png": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_2.svg": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_2.png": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_3.svg": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_3.png": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_4.svg": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_4.png": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_5.svg": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_5.png": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_6.svg": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_6.png": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be"
+  }
+}

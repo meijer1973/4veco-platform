@@ -132,6 +132,12 @@ b) Vergelijk eerst de grootheden en eenheden, de periode, de gekozen Q,
 de schaalverdeling en de bijbehorende hoogten van TO en TK. Trek daarna
 de geldbedragen af. Alleen lengtes in millimeters vergelijken is onvoldoende.
 
+**Beoordelingscriteria:**
+
+- Je onderbouwt dat de winst in beide grafieken bij Q = 30 gelijk is: € 30 per avond.
+- Je verklaart de halve papierafstand met de verticale schaal van 150 naar 300 euro, niet met veranderde winst.
+- Je vergelijkt grootheden, eenheden, periode, Q, schaal en TO/TK-bedragen; millimeters alleen zijn onvoldoende.
+
 ## Herhaling / Herhaling en interleaving
 
 **Opgave 9**

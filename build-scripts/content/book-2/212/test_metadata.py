@@ -55,7 +55,11 @@ class MetadataTests(unittest.TestCase):
         for name in SOURCES:
             previous = original('build-scripts/content/book-2/212/' + name)
             actual = (b.CONTENT / name).read_text(encoding='utf-8')
-            self.assertEqual(actual, source_replacement(previous), name)
+            expected = source_replacement(previous)
+            if name == 'answers.md':
+                from test_bonus import insertion
+                expected = insertion(expected)
+            self.assertEqual(actual, expected, name)
             count += len(re.findall(r'\{alt="', actual))
         self.assertEqual(count, 9)
 
