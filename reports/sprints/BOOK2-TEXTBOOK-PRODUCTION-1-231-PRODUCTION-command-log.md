@@ -1666,3 +1666,54 @@ AssertionError [ERR_ASSERTION]: {
 ```text
 
 ```
+## npm.cmd run agent:index
+
+- cwd: `C:\wt\book2-231-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:57:24.678Z`
+- finished_at: `2026-09-05T22:57:25.213Z`
+- duration_ms: `535`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\wt\book2-231-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:57:25.949Z`
+- finished_at: `2026-09-05T22:57:26.010Z`
+- duration_ms: `61`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
