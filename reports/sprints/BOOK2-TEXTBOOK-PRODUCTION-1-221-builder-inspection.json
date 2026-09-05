@@ -1,0 +1,116 @@
+{
+  "sprint_id": "BOOK2-TEXTBOOK-PRODUCTION-1",
+  "paragraph": "2.2.1",
+  "inspector": "paragraph_221_builder",
+  "role": "BUILDER_SELF_INSPECTION_NOT_INDEPENDENT_REVIEW",
+  "date": "2026-09-05",
+  "method": "Every one of the 20 R4 full-page 150dpi Poppler PNGs was individually opened and read at normal scale. R5 changes only answer pages 3–4; both were individually reopened and inspected after the correction. Rehashing proved the other 18 final R5 page PNGs are byte-identical to the individually inspected pages. Contact sheets were orientation only.",
+  "inspected_at_normal_reading_scale": true,
+  "all_final_pages_individually_inspected": true,
+  "final_visible_student_defects_observed": 0,
+  "checks": [
+    "no clipped or overlapping text/tables",
+    "all symbols, mathematical signs and € readable",
+    "all paired visuals present and legible at actual placement",
+    "dark essential strokes; labels and hatching retain meaning without color",
+    "exact target a–d and nine points readable on one page",
+    "answer 6d label and full model retained together",
+    "no blank pages, raw Markdown fences, missing images or stale output"
+  ],
+  "correction_history": [
+    "First-draft page grouping and overlong captions corrected through own source/layout only.",
+    "Draft fenced-div leakage around tables corrected with bounded structural HTML; no shared helper edited.",
+    "Dutch wording changed consistently to procentuele veranderingen met teken.",
+    "R4 answer 6d introductory label separated from model: corrected, R5 answer pages 3–4 reinspected."
+  ],
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "e493735b1dce12fc6135769b73c2e08f63fdecc7b84f041ddd0c456b9348fe6d",
+      "proof_directory": "C:\\wt\\book2-221-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-paragraaf-e493735b1dce-r5",
+      "source_sha256": "064cf4ecb7945fc986962100acae438d744138ecf7519fe565860af5cecd61e4",
+      "html_sha256": "65ecae182fe7d29c24c4d605e3d8193479e37bfb56821563dc441dc5c837b229",
+      "page_sha256": {
+        "page-001.png": "e423b8b6bcf3d4779bb9f74efd9e25d4707925bfbd063693c771c9e81d4bf1ef",
+        "page-002.png": "9d9adc88dd79f8008822e5e1052e114cf2ed42d62ab299bf955fdea5e54feb13",
+        "page-003.png": "a2befa4bf28cc8c3ceb3b5cdba816890bb1efb8566f4aec9adb32c622b0fb79d",
+        "page-004.png": "e73d2c78655d7f917f3eb9fa52bab55a154c3d42ea1545acab8c086d09857637",
+        "page-005.png": "ae2993b507871a6e50cb22a1ed265af3365cff65362f9d3a2f57fb6fa89bb478",
+        "page-006.png": "b496434b71a4be70cc321cbd380587e9c6c2bc6d379aac10f1402ca0072126ea",
+        "page-007.png": "2718216eb860dcce1ea3a4482fc6aa06d8e836b9580cbe6e3a357f868854e356",
+        "page-008.png": "f59ac710c63db1317b9f98eabf1c10dedfaca776e5515215058bfc4bd5e749c3",
+        "page-009.png": "6dd4add2f8bf46d57364098ac5011372215f9cc8679d63d9525ebbc01cbe5281",
+        "page-010.png": "020346c9bf64a4be185d35b2f29dd51aa0b635fa9f091f5380ccb107d1165d49"
+      },
+      "manifest_sha256": "1df854936ff152e58ab27cf64888ab38d252b68a212048aac1b7cc0e8aaf6d06",
+      "pages_inspected": [
+        "page-001.png",
+        "page-002.png",
+        "page-003.png",
+        "page-004.png",
+        "page-005.png",
+        "page-006.png",
+        "page-007.png",
+        "page-008.png",
+        "page-009.png",
+        "page-010.png"
+      ],
+      "page_disposition": "No visible defect observed by builder; independent review pending."
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "48af0e7d2f6fbd10b9f2ca19182e36fa1da8b125e045aba4111aa377e0087a82",
+      "proof_directory": "C:\\wt\\book2-221-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-opgaven-48af0e7d2f6f-r5",
+      "source_sha256": "ed10a8f791f91a60a48b4f866f34512865961066fb6c6fd1a3bef0ea15ac5ccd",
+      "html_sha256": "d2f0f0f478909023810ca07611d92d829dfe6b02462dabd6d6c4e7071247538f",
+      "page_sha256": {
+        "page-001.png": "4630c0bb8c90fbd067136a434f71a97f403bdd8d2cf3a5089b3473bc40b5cd64",
+        "page-002.png": "9c0e8bf32e3201ad811c8e273e82b376b5e77e09339d35e18ec6a912c570c329",
+        "page-003.png": "3cc3f20b8ce59b613004df8417fdf03ead79f253b735537b238305341826c7f8",
+        "page-004.png": "e4edb785f4b8e83a73c150f80be79d4395a5584013b352d359d06422796b6613",
+        "page-005.png": "6a7f62f821de777cdc7a7bd52f537aa8d5abcb5d202511c14d25a1e24419dab6",
+        "page-006.png": "60d0aaddfa8767239701f1e968e41e18c341cf6d59237bd13f868dfef33d6174"
+      },
+      "manifest_sha256": "a4a7cfd586710aa21d40d12780e48a0fe9b7839cfa783b537231066706824ba6",
+      "pages_inspected": [
+        "page-001.png",
+        "page-002.png",
+        "page-003.png",
+        "page-004.png",
+        "page-005.png",
+        "page-006.png"
+      ],
+      "page_disposition": "No visible defect observed by builder; independent review pending."
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d",
+      "proof_directory": "C:\\wt\\book2-221-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\221-antwoorden-d4a7c139d492-r5",
+      "source_sha256": "f0a78820b4035347d49facac2febb8580c642f7f4bd2d59fcfb47d3233192f11",
+      "html_sha256": "a5f3de1ccefcc2eb543a970de8bafa9125e0c0131a8599623986ad1cec24137a",
+      "page_sha256": {
+        "page-001.png": "760814941a5d1726dce72d62093fd964f056786310ea832942b7a2a7e7827551",
+        "page-002.png": "6b39705a836c8cc3bdbe4fc8f9d302cbe5b0b41758d2106f8975ceabed2cb0eb",
+        "page-003.png": "e2ad4fbccb2354c2c75d3194bfd8288a4fb620b8422a48b16770fcc2e0910651",
+        "page-004.png": "97400edfb89401cf71c15f8ce8b83636cf00e11080eefd6987fc761d07d3cbf5"
+      },
+      "manifest_sha256": "7b2973e1c87930b9f7a2105752328ea2f056546fbe8d3213b61025a7474d15c1",
+      "pages_inspected": [
+        "page-001.png",
+        "page-002.png",
+        "page-003.png",
+        "page-004.png"
+      ],
+      "page_disposition": "No visible defect observed by builder; independent review pending."
+    }
+  ],
+  "remaining_gates": [
+    "independent paragraph review",
+    "independent specialist QC and fresh quality-ref",
+    "coordinator handoff and gated integration"
+  ],
+  "observation_dependent_flags": [
+    "48.5-minute core is a component-based estimate, not observed classroom pacing; full optional guided route adds10 minutes."
+  ],
+  "generated_manifests_left_pending": true
+}
