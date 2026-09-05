@@ -573,3 +573,117 @@ Paragraph lane scope: PASS (shared)
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-review-gates.js
+
+- cwd: `C:\wt\book2-221-r8-review-20260905\4veco-platform`
+- started_at: `2026-09-05T19:46:39.114Z`
+- finished_at: `2026-09-05T19:46:43.370Z`
+- duration_ms: `4256`
+- exit_code: `0`
+- stdout_sha256: `c5f91dedb8f1e35ce095ccb4e6a3eab564154a648c10d369c743d6b422d4aa5d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.1 "Prijselasticiteit"
+Path: C:\wt\book2-221-r8-review-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.1 Prijselasticiteit
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.1 Prijselasticiteit – paragraaf.md
+  OK opgaven.md: 2.2.1 Prijselasticiteit – opgaven.md
+  OK antwoorden.md: 2.2.1 Prijselasticiteit – antwoorden.md
+  OK 2.2.1 Prijselasticiteit – paragraaf.html (302.2 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.html (120.1 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.html (12.8 KB)
+  OK 2.2.1 Prijselasticiteit – paragraaf.pdf (241 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.pdf (104 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.pdf (23 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 3 image refs all resolve
+  OK _assets/: 3 SVGs, 3 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.1 "Prijselasticiteit" PASSED all checks.
+
+
+Validating paragraph 2.2.1 "Prijselasticiteit"
+Path: C:\wt\book2-221-r8-review-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.1 Prijselasticiteit
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.1 Prijselasticiteit – paragraaf.md
+  OK opgaven.md: 2.2.1 Prijselasticiteit – opgaven.md
+  OK antwoorden.md: 2.2.1 Prijselasticiteit – antwoorden.md
+  OK 2.2.1 Prijselasticiteit – paragraaf.pdf (241 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.pdf (104 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.pdf (23 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 3 image refs all resolve
+  OK 2 companion asset(s) declared in _paragraph-plan.md
+  OK _assets/: 3 SVGs, 3 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.1 "Prijselasticiteit" PASSED all checks.
+
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.1
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.1
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+Paragraph lane scope: PASS (shared)
+- shared platform: 3
+  - build-scripts/content/book-2/221/test_source.py
+  - build-scripts/content/book-2/221/theory.md
+  - build-scripts/content/book-2/b2_221.py
+- generated index/report: 4
+  - reports/github-agent-index-lessen.json
+  - reports/github-agent-index-lessen.md
+  - reports/github-agent-index-platform.json
+  - reports/github-agent-index-platform.md
+- review evidence: 80
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r8/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r8/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r8/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r8/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r8/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r8/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r8/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r8/manifest.json
+  - re
+...[truncated 6987 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
