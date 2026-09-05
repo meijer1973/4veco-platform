@@ -112,8 +112,12 @@ The full required repository instructions/skills/references read in stage1
 remain governing; the textbook/exercise/PDF contracts and current shared print
 implementation were reread for production. Actual accepted §221 handoff and
 new independent §223 review were read. The installed PDF skill was fully read,
-bundled runtimes located, and its artifact-operation marker will run once before
-PDF authoring. Repository-approved Pandoc/WeasyPrint pipeline takes precedence
+bundled runtimes located. Operational correction: root had already executed the
+artifact-operation marker for the complete 41-PDF package. The builder nevertheless
+already executed one additional edit/3-PDF marker before authoring (exit 0), before
+recognizing that root coverage. This was redundant telemetry, not an extra output
+scope; no further marker will run and no undo is claimed. Final delivery remains
+root-owned and the package remains 41 PDFs. Repository-approved Pandoc/WeasyPrint takes precedence
 over the skill's generic ReportLab preference. Final paths follow this repository,
 not a generic output directory. Frozen minus signs/source strings remain intact.
 

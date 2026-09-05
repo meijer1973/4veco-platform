@@ -1,0 +1,238 @@
+{
+  "paragraph": "2.2.3",
+  "revision": "R3",
+  "author": "paragraph_223_builder",
+  "role": "BUILDER_SELF_QA_NOT_INDEPENDENT_ACCEPTANCE",
+  "date": "2026-09-05",
+  "method": "All 32 final full-page PNGs opened individually at normal reading scale with view_image; figures inspected in actual page placement, not contact-sheet-only. Source/PDF mechanical checks and byte-identical rebuild are separate.",
+  "result": "No visible blocking layout defect found by builder. Independent paragraph review and specialist QC remain required.",
+  "generation_manifests_unchanged": "PENDING",
+  "documents": [
+    {
+      "kind": "paragraaf.pdf",
+      "pdf_sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb",
+      "proof_directory": "C:\\wt\\book2-223-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\223-paragraaf-ca27f8bd6cbb-r3",
+      "manifest_sha256": "54a684ab32f7ac453f270867d18f70ccb097cecaa7e57f337fcc199772cab25d",
+      "pages_individually_inspected": [
+        {
+          "page": 1,
+          "path": "pages/page-001.png",
+          "sha256": "b7366b3949b77bea438487125fa7ad150cf4907acff456f35f8293c292dca2e4",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 2,
+          "path": "pages/page-002.png",
+          "sha256": "7b60b29e71112380498d52a744a2a97bedbbdf10c84469717eb5a5188c58de94",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 3,
+          "path": "pages/page-003.png",
+          "sha256": "d58591dcacda670565ca5c1ec466225f5276596dfc8a9c88e98b553d2daa6ad9",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 4,
+          "path": "pages/page-004.png",
+          "sha256": "1a44e6d7bd5e37dc4c9543035184e52071477027ec8db3ae5513666d2a76beef",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 5,
+          "path": "pages/page-005.png",
+          "sha256": "4d2efeef982a923a3e1a8d1ea4436f7e6d806587f00b6b7ecf9b24c894ae36ff",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 6,
+          "path": "pages/page-006.png",
+          "sha256": "42ff63b670575c8a5b88df1ccd8054e977ee7c159a23f0d93ae2fd4055e24299",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 7,
+          "path": "pages/page-007.png",
+          "sha256": "517aee1b7eb4049dbc03d24d9ea9144e7d9c23eea54b63f4f3518410bfd2d399",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 8,
+          "path": "pages/page-008.png",
+          "sha256": "b584d2ee68328f4097ccb3b473794348eacbf6c78c21ee176e4487ad886010fc",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 9,
+          "path": "pages/page-009.png",
+          "sha256": "002ac1d25f4c85eab427202cb6dcb36acc92008b0a4d664a933acae4143ae20e",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 10,
+          "path": "pages/page-010.png",
+          "sha256": "02c5034be29baa1fce9538fdf4d55b0577540d52f01014791bcc2878fcd38ecc",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 11,
+          "path": "pages/page-011.png",
+          "sha256": "3a1703d5849281ee25d6ea6e806255c031666378b975b15a1b120cb985718a1d",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 12,
+          "path": "pages/page-012.png",
+          "sha256": "97c3814148325ae31102f057722d2940cb637846558de828c428664215771a94",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 13,
+          "path": "pages/page-013.png",
+          "sha256": "ae3983d5735bd0cb1221d549b7efa286dde7ce349854881b1478f4efa3dec315",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 14,
+          "path": "pages/page-014.png",
+          "sha256": "b65a0ed32fe7adf10cbecc2c10ebc44c30d3e99245e0fa9d82c8a9c690e650b1",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 15,
+          "path": "pages/page-015.png",
+          "sha256": "98c5a06687663c0090aba1aae22774fe87c65c7a06cc7d9074f7873c53a9aee7",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        }
+      ]
+    },
+    {
+      "kind": "opgaven.pdf",
+      "pdf_sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80",
+      "proof_directory": "C:\\wt\\book2-223-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\223-opgaven-50cf2bbeaa19-r3",
+      "manifest_sha256": "43f41e2c6377e13a629ad7f8b95aa38765906ae42d871bc763ffaadca9111128",
+      "pages_individually_inspected": [
+        {
+          "page": 1,
+          "path": "pages/page-001.png",
+          "sha256": "ad28636a613509e762f0a03db9e6e743b3855e8e5a1d44a51f4e15ea05dbce06",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 2,
+          "path": "pages/page-002.png",
+          "sha256": "1b4243e42f49ccdf3328600fb103af97f8e25657fa80607422b4213de10d965e",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 3,
+          "path": "pages/page-003.png",
+          "sha256": "980173eec3c6c7284e2e7c4269d2bf03950f19c1d36e6ae012f0df46c4e4a387",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 4,
+          "path": "pages/page-004.png",
+          "sha256": "d3963e513ac19b595f58308b85887c00ed9885cb86a6af1d133a5f40e396ab69",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 5,
+          "path": "pages/page-005.png",
+          "sha256": "b650610f50b04af50b3316be91f371e21701dd484426d195c91b9a9e731f9d03",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 6,
+          "path": "pages/page-006.png",
+          "sha256": "dd2f40669daa814b4d8e220c00051d54974d5c1b171970235d18db88f9b23a4e",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 7,
+          "path": "pages/page-007.png",
+          "sha256": "60c3b91eac06977b7bcb011897caecbcddaa77c23c606425330f4a03cc146f77",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 8,
+          "path": "pages/page-008.png",
+          "sha256": "381c23bf3c62ec2dcb352ea11a98409b10ea760b6e386cf438ffbde6a1069ad0",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 9,
+          "path": "pages/page-009.png",
+          "sha256": "c92fd39508d031bb617fd19009602092e1ed1e51577f88171d7d42283b68f9a8",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 10,
+          "path": "pages/page-010.png",
+          "sha256": "476ce38e390159d37f8132379ba9065d89f9e898df12b76a8e13c7457c62f583",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden.pdf",
+      "pdf_sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10",
+      "proof_directory": "C:\\wt\\book2-223-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\223-antwoorden-30cd682358c5-r3",
+      "manifest_sha256": "b4b068c88c34fd00704f0a6ab3b8a9122f24c27a5b7ff2c582167968c6d75691",
+      "pages_individually_inspected": [
+        {
+          "page": 1,
+          "path": "pages/page-001.png",
+          "sha256": "f1431ef12d232686db986daa76050fe865ab24e0f98a13c2d3b04fd3fc812332",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 2,
+          "path": "pages/page-002.png",
+          "sha256": "75844b51d401c9edef9f76c6c442249503a9f654f06fdc17fe469fd7cdbe4d62",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 3,
+          "path": "pages/page-003.png",
+          "sha256": "83af2d3018f01977f7e9eac95357af24654cd2a7606ff6e38ad9a20ac84d2a62",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 4,
+          "path": "pages/page-004.png",
+          "sha256": "cd79f2d4310f20655aa26ac7bb9b552301d821bf944502c2cc1400bdf38c3aaf",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 5,
+          "path": "pages/page-005.png",
+          "sha256": "be425cf9f17dd9e4b739783056a63b9420dd55b0d0a58ec7187f6b90a8c06d65",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 6,
+          "path": "pages/page-006.png",
+          "sha256": "ff465ba581b3eb38f9cd1e713efe6a72f2fe1425738201a847162780ac5c0969",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        },
+        {
+          "page": 7,
+          "path": "pages/page-007.png",
+          "sha256": "3bfa11bf2b5a0dcc3238b77fbc31021fbf53edbeecbc7fd9641da55cac6bde19",
+          "builder_observation": "Readable at normal scale; no visible clipping, collision, missing image or glyph, or orphaned question label. Source/question grouping and footer remain legible."
+        }
+      ]
+    }
+  ],
+  "specific_observations": [
+    "Paragraph pages 2,3,5,8: signed common bar scale, open Ei=0/1 boundaries, named Ek goods, annual-Y/reset scenario panels are readable and undistorted.",
+    "Student target on paragraph page 14 and exercise page 9: all three sources and a–e/16 points together; no answer leakage.",
+    "Answer pages 5–6: a–c followed by d–e; detailed d keeps exact 10/13, final rounding, monthly-Q/annual-Y units and fixed prices; e resets to 390 baseline and gives 392.",
+    "Long worked-function sequence spans logical step boundaries; repeated table and figure show identical given inputs, not additional required operations."
+  ],
+  "remaining_flags": [
+    "54-minute core remains tight and unobserved in a classroom; support and optional work are outside this core.",
+    "Legacy review/quality PASS is stale and explicitly excluded from renewed acceptance."
+  ]
+}
