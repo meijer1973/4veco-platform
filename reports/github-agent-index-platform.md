@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T22:29:01.051Z
+Generated: 2026-09-05T22:39:30.529Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `90c08bf3f5ba2fe3aef7b4c4d6d4e4041ed29337`
-Files indexed: 9554
+Source commit: `0f87b12864cdaf1c70e965cdedae4be9d426657b`
+Files indexed: 9557
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2720,7 +2720,7 @@ Count: 1030
 
 ## reports
 
-Count: 6778
+Count: 6781
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -7193,6 +7193,7 @@ Count: 6778
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-verification.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-1.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-2-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-successor-work-order.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-checks.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-probes.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-review-plan.md
@@ -7245,6 +7246,8 @@ Count: 6778
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-r5-r7-review-adoption-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-r5-r7-review-adoption-result.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-r5-r7-review-adoption-scope.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-remaining-dispatch-check.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-remaining-paragraph-dispatch-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-review-adoption-222r13-213r6.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-review-adoption-222r13-213r6.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-review-adoption-checkpoint.js
