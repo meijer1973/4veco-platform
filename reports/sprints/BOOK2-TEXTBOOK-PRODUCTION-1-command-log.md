@@ -4002,3 +4002,100 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base e923a9bc20b90c8b4fc461b28a54d8e481e13440 --head HEAD
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T18:54:12.587Z`
+- finished_at: `2026-09-05T18:54:12.673Z`
+- duration_ms: `86`
+- exit_code: `0`
+- stdout_sha256: `3d0231108c7a63e9670b90969f90d54fcaa672c0abde9e8b2ea50bc8385e8490`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (shared)
+- shared platform: 1
+  - build-scripts/content/book-2/221/exercises.md
+- review evidence: 80
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-006.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-006.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-007.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-008.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-009.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-010.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-221-223-review-adoption.md
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-arithmetic-r5.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-pass0-r5.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-personal-inspection-r5.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-proof-bindings-r5.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-publication-checks-r5.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-rebuild-r5.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-relocated-build-r5.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-render-check-r5.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-evidence/independent-review-probes-r5.py
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-paragraph-review-plan-r5.md
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-paragraph-review-r5.md
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R7-REVIEW-command-log.jsonl
+  - reports/sprints/BOOK2-TEXTBO
+...[truncated 3091 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane textbook --cwd ../4veco-lessen --base 4d8cea1727865a9bf867078a3c26315d57016e72 --head HEAD
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T18:54:12.715Z`
+- finished_at: `2026-09-05T18:54:12.802Z`
+- duration_ms: `87`
+- exit_code: `0`
+- stdout_sha256: `a407b1015bc6860258d1b208278908b29089b68149d3afea1c37e839332ccf61`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (textbook)
+- Part A textbook: 9
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
