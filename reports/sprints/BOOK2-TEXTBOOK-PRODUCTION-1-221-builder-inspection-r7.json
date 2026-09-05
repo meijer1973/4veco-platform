@@ -1,0 +1,604 @@
+{
+  "paragraph": "2.2.1",
+  "revision": "r7",
+  "finding": "B2-TIME-PRINT-01",
+  "builder": "paragraph_221_presentation_builder",
+  "base_platform": "92862e370fd997634aa505c24b74c773c05039f4",
+  "base_lessons": "abe73479d900c1c3dd4cccb9c568305eb58c7a18",
+  "exact_six_replacements_only": true,
+  "replacement_pairs": [
+    [
+      "Maak deze twee korte checks in ongeveer 5½ minuut. Controleer daarna je werk",
+      "Maak deze twee korte checks. Controleer daarna je werk"
+    ],
+    [
+      "Dit is de extra hulproute van ongeveer 10 minuten. Die komt boven op de kern;",
+      "Dit is de extra hulproute. Die komt boven op de korte route;"
+    ],
+    [
+      "conclusie. Richttijd: 11 minuten.",
+      "conclusie."
+    ],
+    [
+      "Werk zelfstandig. Richttijd: 9 minuten. Totaal: 9 punten.",
+      "Werk zelfstandig. Totaal: 9 punten."
+    ],
+    [
+      "Dit denkertje valt buiten de kernroute. Richttijd: 8 minuten.",
+      "Dit denkertje valt buiten de korte route."
+    ],
+    [
+      "Deze herhaling valt buiten de kernroute en kan als huiswerk. Richttijd samen:\n5 minuten.",
+      "Deze herhaling valt buiten de korte route en kan als huiswerk."
+    ]
+  ],
+  "input_sources": [
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/b2_221.py",
+      "before_raw_sha256": "5102e16b5b86b0b6ec56a7b8ebfd4fcfbc36add33d11c90176ed8b4f39fcc56f",
+      "after_raw_sha256": "5102e16b5b86b0b6ec56a7b8ebfd4fcfbc36add33d11c90176ed8b4f39fcc56f",
+      "changed": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "before_raw_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "after_raw_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "changed": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/221/theory.md",
+      "before_raw_sha256": "d5ee20513a9e2222f3003b3659c9d395a49a706a3fb4191eef501afa33eae5d5",
+      "after_raw_sha256": "d5ee20513a9e2222f3003b3659c9d395a49a706a3fb4191eef501afa33eae5d5",
+      "changed": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/221/exercises.md",
+      "before_raw_sha256": "e5b37d2b3171a24da7bef24c82695c9ac469632039f4c310a09162653698e562",
+      "after_raw_sha256": "d94e8f00ca51e6c33792216f6f59d60e95e4cdbf5d4ef10f918d030ef719fa8b",
+      "changed": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/221/answers.md",
+      "before_raw_sha256": "583e083e66cfdbd14aee442da7fab1c19aa3fc999dcfe53f63d965e291198c1a",
+      "after_raw_sha256": "583e083e66cfdbd14aee442da7fab1c19aa3fc999dcfe53f63d965e291198c1a",
+      "changed": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/221/target-answers.md",
+      "before_raw_sha256": "59a17da108763172e5f590fca927a448fe12b07d5b5ff113b9ec7a82c80954b5",
+      "after_raw_sha256": "59a17da108763172e5f590fca927a448fe12b07d5b5ff113b9ec7a82c80954b5",
+      "changed": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/221/test_source.py",
+      "before_raw_sha256": "48c524d022f7d36c32e56e28a80788b4d34ac1d4777b8822e79ed23441acfeb9",
+      "after_raw_sha256": "48c524d022f7d36c32e56e28a80788b4d34ac1d4777b8822e79ed23441acfeb9",
+      "changed": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/content/book-2/221/check_render.py",
+      "before_raw_sha256": "d4faeba711a4bb0cb3afed8053d1c247418a44f971a6bd484945bff5aebc08b6",
+      "after_raw_sha256": "d4faeba711a4bb0cb3afed8053d1c247418a44f971a6bd484945bff5aebc08b6",
+      "changed": false
+    }
+  ],
+  "authority_and_historical_records": [
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/course-target-exercises.json",
+      "before_raw_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "after_raw_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "changed": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/book-outlines/book-2-outline.md",
+      "before_raw_sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf",
+      "after_raw_sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf",
+      "changed": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/book-outlines/book-2-outline.meta.json",
+      "before_raw_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "after_raw_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "changed": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md",
+      "before_raw_sha256": "14fbb4367e0a6567621efa225f3f8f71ef448949b25593d71a277d3a34c0d29b",
+      "after_raw_sha256": "14fbb4367e0a6567621efa225f3f8f71ef448949b25593d71a277d3a34c0d29b",
+      "changed": false
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+      "before_raw_sha256": "6bfdbe09538c7cdd35acbed22e8cf1b8af60c0fcafa89bec33fdb55c0b84ba87",
+      "after_raw_sha256": "6bfdbe09538c7cdd35acbed22e8cf1b8af60c0fcafa89bec33fdb55c0b84ba87",
+      "changed": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "before_raw_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+      "after_raw_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+      "changed": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "before_raw_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345",
+      "after_raw_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345",
+      "changed": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "before_raw_sha256": "24995a4d0e5d82327434be1dd94c789275728bdce840c6a7b5d63b59035258eb",
+      "after_raw_sha256": "24995a4d0e5d82327434be1dd94c789275728bdce840c6a7b5d63b59035258eb",
+      "changed": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "before_raw_sha256": "b6f1b389d11c20665577414c17e5ae49962083812d9d1bf474d16231db749508",
+      "after_raw_sha256": "b6f1b389d11c20665577414c17e5ae49962083812d9d1bf474d16231db749508",
+      "changed": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "before_raw_sha256": "216e139a6297b59cfb8e62f43eb3a79eb16efc1861e5fc989ad15562a4deb24c",
+      "after_raw_sha256": "216e139a6297b59cfb8e62f43eb3a79eb16efc1861e5fc989ad15562a4deb24c",
+      "changed": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/build_pdf.py",
+      "before_raw_sha256": "8455f6701fa609a305dba7b2c008250a919a225525d9f93b6fabc5853c55cc49",
+      "after_raw_sha256": "8455f6701fa609a305dba7b2c008250a919a225525d9f93b6fabc5853c55cc49",
+      "changed": false
+    }
+  ],
+  "canonical_outputs": [
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "before_raw_sha256": "e7e4287645c26c3b79406a556c05a4c90dd10e10e3605b409b89a123df7fa281",
+      "after_raw_sha256": "54e3be72a523ba19f5ed9affdd96004bdda73ce11d49b292bfbe0fd4b9ac2430",
+      "changed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.html",
+      "before_raw_sha256": "f9da8b42643393549f5a936daf390f52285e452c2c879e3c29f1c2a48f8170ae",
+      "after_raw_sha256": "9e47df0cf7f34317434ea53d8317ae14919e2eadc7da9da87aedc69598bdfbc1",
+      "changed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "before_raw_sha256": "aafd07e6bb88dcb8833569f2c4d01809d6fcdc0f879d0c7a39c810dfabdbc440",
+      "after_raw_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6",
+      "changed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+      "before_raw_sha256": "1cfc07555223d79ab99d2d6f5387cd289ca75b28d2c71a5843870dd8bf2414d5",
+      "after_raw_sha256": "02eee54304567304e8ecb777762833165103e117ea1721a8a383ca0e470f4bb4",
+      "changed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.html",
+      "before_raw_sha256": "05dd9a02bb59d1587357763bb43e12edc0bf64bd238d24f7f9edcf36c01ff87b",
+      "after_raw_sha256": "cfd3a40c19a2fc88cc9fbd127399581ca70215d8edb1350ef873eefba2e91ef0",
+      "changed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf",
+      "before_raw_sha256": "e9def67106ce56f06ff5247bb3d56fe17dcd4297e65ab95ba6942453759761ee",
+      "after_raw_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af",
+      "changed": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "before_raw_sha256": "f0a78820b4035347d49facac2febb8580c642f7f4bd2d59fcfb47d3233192f11",
+      "after_raw_sha256": "f0a78820b4035347d49facac2febb8580c642f7f4bd2d59fcfb47d3233192f11",
+      "changed": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.html",
+      "before_raw_sha256": "a5f3de1ccefcc2eb543a970de8bafa9125e0c0131a8599623986ad1cec24137a",
+      "after_raw_sha256": "a5f3de1ccefcc2eb543a970de8bafa9125e0c0131a8599623986ad1cec24137a",
+      "changed": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf",
+      "before_raw_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d",
+      "after_raw_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d",
+      "changed": false
+    }
+  ],
+  "assets": [
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_1.svg",
+      "before_raw_sha256": "609c6ffad43818ad4c887d882bbd2bc4e1c23dc1dd0c41e50559e4fbc24ad8cb",
+      "after_raw_sha256": "609c6ffad43818ad4c887d882bbd2bc4e1c23dc1dd0c41e50559e4fbc24ad8cb",
+      "changed": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_1.png",
+      "before_raw_sha256": "6f4009fe29fb88f442257e658fe6433809020ba824d17ee275a08701f37d0704",
+      "after_raw_sha256": "6f4009fe29fb88f442257e658fe6433809020ba824d17ee275a08701f37d0704",
+      "changed": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_2.svg",
+      "before_raw_sha256": "872bbd68352e746cb6637aa4dc5c806475fd7430a5957ee4bf9f08d6b1b5afbc",
+      "after_raw_sha256": "872bbd68352e746cb6637aa4dc5c806475fd7430a5957ee4bf9f08d6b1b5afbc",
+      "changed": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_2.png",
+      "before_raw_sha256": "589af699b6e024488be654185cfbf39b4a0d957cb59c11ecb452968a252164c0",
+      "after_raw_sha256": "589af699b6e024488be654185cfbf39b4a0d957cb59c11ecb452968a252164c0",
+      "changed": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_we_1.svg",
+      "before_raw_sha256": "f7de73e34576ab1bd571e778ff90ad7f45c305bbde6ff7489a1720228d2499a5",
+      "after_raw_sha256": "f7de73e34576ab1bd571e778ff90ad7f45c305bbde6ff7489a1720228d2499a5",
+      "changed": false
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_we_1.png",
+      "before_raw_sha256": "396f5236c9c3cda581dece54f45d01004494e173c00532fc73a4b54c07a9df95",
+      "after_raw_sha256": "396f5236c9c3cda581dece54f45d01004494e173c00532fc73a4b54c07a9df95",
+      "changed": false
+    }
+  ],
+  "page_change_map_and_builder_observations": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6",
+      "manifest_raw_sha256": "9ede157354a387923cdfed51f0c28f8fd33641c2c00e3bd854a4339bf0dabfdc",
+      "proof_directory": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7",
+      "pages": [
+        {
+          "page": 1,
+          "before_raw_sha256": "e423b8b6bcf3d4779bb9f74efd9e25d4707925bfbd063693c771c9e81d4bf1ef",
+          "after_raw_sha256": "e423b8b6bcf3d4779bb9f74efd9e25d4707925bfbd063693c771c9e81d4bf1ef",
+          "changed": false,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-001.png",
+          "personally_viewed_full_page": true,
+          "observation": "Motivation, four goals, old-base retrieval and complete old/new table readable; table rows and footer unclipped.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 2,
+          "before_raw_sha256": "9d9adc88dd79f8008822e5e1052e114cf2ed42d62ab299bf955fdea5e54feb13",
+          "after_raw_sha256": "9d9adc88dd79f8008822e5e1052e114cf2ed42d62ab299bf955fdea5e54feb13",
+          "changed": false,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-002.png",
+          "personally_viewed_full_page": true,
+          "observation": "Signed percentage chart and caption match nearby calculations; formula and conditions box stays together; no label overlap.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 3,
+          "before_raw_sha256": "68100f2ca721b35c921d91d56e04ca05738e7eba4a92c1b6d05a4923996bb764",
+          "after_raw_sha256": "68100f2ca721b35c921d91d56e04ca05738e7eba4a92c1b6d05a4923996bb764",
+          "changed": false,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-003.png",
+          "personally_viewed_full_page": true,
+          "observation": "Sign/magnitude warning, both classifications and paired threshold chart readable; caption and footer separated.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 4,
+          "before_raw_sha256": "0467d1ffe60b8751fb1d55c7ccf7707d3b8f0ec6bf773525839b164acc4f1537",
+          "after_raw_sha256": "0467d1ffe60b8751fb1d55c7ccf7707d3b8f0ec6bf773525839b164acc4f1537",
+          "changed": false,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-004.png",
+          "personally_viewed_full_page": true,
+          "observation": "Bounded explanation and worked-example heading/context/steps1-2 readable; continuation into figure on next page coherent.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 5,
+          "before_raw_sha256": "53fc0274df21a7f931e81238a67d18159aa3719091c236ec8a81b1ed10210bba",
+          "after_raw_sha256": "53fc0274df21a7f931e81238a67d18159aa3719091c236ec8a81b1ed10210bba",
+          "changed": false,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-005.png",
+          "personally_viewed_full_page": true,
+          "observation": "Worked figure, steps3-5 and intact five-point recap readable; conditions, sign and forward link preserved.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 6,
+          "before_raw_sha256": "b496434b71a4be70cc321cbd380587e9c6c2bc6d379aac10f1402ca0072126ea",
+          "after_raw_sha256": "eed82b34a9c59a04b62f594a8a0b65fab415fec0e469eb6147694e6fed7adb18",
+          "changed": true,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-006.png",
+          "personally_viewed_full_page": true,
+          "observation": "Short-route advice and Start1-2 complete; numeric Start estimate removed; neutral repair and teacher-check advice retained.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 7,
+          "before_raw_sha256": "2718216eb860dcce1ea3a4482fc6aa06d8e836b9580cbe6e3a357f868854e356",
+          "after_raw_sha256": "434966aec4ac1ad105c2f91537fc817d92b087e5fb79b8633137b03e90cc57d3",
+          "changed": true,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-007.png",
+          "personally_viewed_full_page": true,
+          "observation": "Guided heading, nonnumeric extra-help advice, table, reminder and all task3 prompts together; no clipping.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 8,
+          "before_raw_sha256": "f59ac710c63db1317b9f98eabf1c10dedfaca776e5515215058bfc4bd5e749c3",
+          "after_raw_sha256": "4a4ee716c41edca10642be8518e7e964708f6cc06f56b7e5e29558e95578504b",
+          "changed": true,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-008.png",
+          "personally_viewed_full_page": true,
+          "observation": "Faded task4 table/prompts and complete independent task5 fit; independent instruction ends at conclusie without time label; last prompt remains above footer.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 9,
+          "before_raw_sha256": "6dd4add2f8bf46d57364098ac5011372215f9cc8679d63d9525ebbc01cbe5281",
+          "after_raw_sha256": "7536c680768107894c0fab18fc951aac467149431d94de6c7f5bd77657e6e6ff",
+          "changed": true,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-009.png",
+          "personally_viewed_full_page": true,
+          "observation": "Target heading, visible total9, Nova/StreamNow context and all a-d prompts/3-2-2-2 points together; no time label or scaffold added.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 10,
+          "before_raw_sha256": "020346c9bf64a4be185d35b2f29dd51aa0b635fa9f091f5380ccb107d1165d49",
+          "after_raw_sha256": "95bfb6915156744f3fe53b1436fb4875a27dc95e7e8e6da8137fb7fcf6e0a8c3",
+          "changed": true,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-010.png",
+          "personally_viewed_full_page": true,
+          "observation": "Bonus and closing headings, nonnumeric short-route/homework notes and all tasks7-9 readable; no missing questions or stranded heading.",
+          "builder_visible_defects_found": []
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af",
+      "manifest_raw_sha256": "5bff06be24569d8a7f4813a7dae6936008e805793832a95546bde2d36e9cef5b",
+      "proof_directory": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7",
+      "pages": [
+        {
+          "page": 1,
+          "before_raw_sha256": "4630c0bb8c90fbd067136a434f71a97f403bdd8d2cf3a5089b3473bc40b5cd64",
+          "after_raw_sha256": "4630c0bb8c90fbd067136a434f71a97f403bdd8d2cf3a5089b3473bc40b5cd64",
+          "changed": false,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-001.png",
+          "personally_viewed_full_page": true,
+          "observation": "Worked context and steps1-3 with complete signed/magnitude figure/caption readable; continuation to step4 coherent.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 2,
+          "before_raw_sha256": "30ed4f61bc4257f92d7f3546e2b98c733c8501e3097eda387cdd016da8b7bcaf",
+          "after_raw_sha256": "e3a804ee69a272e0ba12a289243ad43a2cd3580fa04b984d96ec41cb1b36d7b3",
+          "changed": true,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-002.png",
+          "personally_viewed_full_page": true,
+          "observation": "Steps4-5, full five-point recap and Start1-2 remain complete; numeric Start label removed; task2 sits above footer without clipping.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 3,
+          "before_raw_sha256": "3cc3f20b8ce59b613004df8417fdf03ead79f253b735537b238305341826c7f8",
+          "after_raw_sha256": "7e73dae95da20aecced92ccc22d66990b19866eac426b5002778a12250e186e4",
+          "changed": true,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-003.png",
+          "personally_viewed_full_page": true,
+          "observation": "Guided task3 and printed old-base/sign reminder remain grouped; extra-help note uses korte route without numeric estimate.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 4,
+          "before_raw_sha256": "e4edb785f4b8e83a73c150f80be79d4395a5584013b352d359d06422796b6613",
+          "after_raw_sha256": "8fdbb9b6cc8d3507d71a4d8cd73cd75cd9dd5ea6cb3721d225d7e1ac0f347089",
+          "changed": true,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-004.png",
+          "personally_viewed_full_page": true,
+          "observation": "Task4 table and fading cue plus full independent task5 fit; changed conclusion instruction is nonnumeric; final d prompt clear above footer.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 5,
+          "before_raw_sha256": "6a7f62f821de777cdc7a7bd52f537aa8d5abcb5d202511c14d25a1e24419dab6",
+          "after_raw_sha256": "fa70fe045f16a558b85611caca8e71ce02b8151656b3fc7ddd394a8b27c5342a",
+          "changed": true,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-005.png",
+          "personally_viewed_full_page": true,
+          "observation": "Exact Nova/StreamNow target a-d, total9 and 3-2-2-2 points readable together; nine-minute label removed only.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 6,
+          "before_raw_sha256": "60d0aaddfa8767239701f1e968e41e18c341cf6d59237bd13f868dfef33d6174",
+          "after_raw_sha256": "14d6ac179fb3aee0f456c7988ad3c1390f29338ac2b0d30b1f1b842bedd7990c",
+          "changed": true,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-006.png",
+          "personally_viewed_full_page": true,
+          "observation": "Bonus7 and closing8-9 complete; both notes use korte route, no numeric estimate; homework and conditional substitution prompt retained.",
+          "builder_visible_defects_found": []
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d",
+      "manifest_raw_sha256": "30d8c172d544e01b6efc050e309a0a6f762455cd01ff0210cf6dcef6035a2d72",
+      "proof_directory": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7",
+      "pages": [
+        {
+          "page": 1,
+          "before_raw_sha256": "760814941a5d1726dce72d62093fd964f056786310ea832942b7a2a7e7827551",
+          "after_raw_sha256": "760814941a5d1726dce72d62093fd964f056786310ea832942b7a2a7e7827551",
+          "changed": false,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-001.png",
+          "personally_viewed_full_page": true,
+          "observation": "Answer-after-attempt note, Start1-2 and guided3 steps1-4 readable; continued step5 begins next page coherently.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 2,
+          "before_raw_sha256": "6b39705a836c8cc3bdbe4fc8f9d302cbe5b0b41758d2106f8975ceabed2cb0eb",
+          "after_raw_sha256": "6b39705a836c8cc3bdbe4fc8f9d302cbe5b0b41758d2106f8975ceabed2cb0eb",
+          "changed": false,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-002.png",
+          "personally_viewed_full_page": true,
+          "observation": "Guided3 conclusion and arcade/pool full signed calculations/explanations followed by independent5 steps1-3 readable; no clipping.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 3,
+          "before_raw_sha256": "e2ad4fbccb2354c2c75d3194bfd8288a4fb620b8422a48b16770fcc2e0910651",
+          "after_raw_sha256": "e2ad4fbccb2354c2c75d3194bfd8288a4fb620b8422a48b16770fcc2e0910651",
+          "changed": false,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-003.png",
+          "personally_viewed_full_page": true,
+          "observation": "Independent5 classification/meaning/context and target6a-c including exact short answers/scoring readable; target6d continues next page as whole block.",
+          "builder_visible_defects_found": []
+        },
+        {
+          "page": 4,
+          "before_raw_sha256": "97400edfb89401cf71c15f8ce8b83636cf00e11080eefd6987fc761d07d3cbf5",
+          "after_raw_sha256": "97400edfb89401cf71c15f8ce8b83636cf00e11080eefd6987fc761d07d3cbf5",
+          "changed": false,
+          "current_page": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-004.png",
+          "personally_viewed_full_page": true,
+          "observation": "Target6d bounded marking explanation, bonus model/criteria and all closing8-9 answers readable; footer clear.",
+          "builder_visible_defects_found": []
+        }
+      ]
+    }
+  ],
+  "all_three_pngs_personally_viewed": true,
+  "asset_observations": "All three PNGs viewed separately after all20pages. Direct signed and magnitude labels, hatching, threshold1, captions and given-only Klimhal condition clear. No clipped/overlapping label found. SVG generator read in full and exact10bar origins/widths checked.",
+  "proportional_geometry": [
+    {
+      "asset": "2.2.1_fig_1",
+      "value": 10.0,
+      "scale": 8.0,
+      "zero": 460.0,
+      "x": 460.0,
+      "width": 80.0
+    },
+    {
+      "asset": "2.2.1_fig_1",
+      "value": -5.0,
+      "scale": 8.0,
+      "zero": 460.0,
+      "x": 420.0,
+      "width": 40.0
+    },
+    {
+      "asset": "2.2.1_fig_1",
+      "value": 10.0,
+      "scale": 8.0,
+      "zero": 460.0,
+      "x": 460.0,
+      "width": 80.0
+    },
+    {
+      "asset": "2.2.1_fig_1",
+      "value": -20.0,
+      "scale": 8.0,
+      "zero": 460.0,
+      "x": 300.0,
+      "width": 160.0
+    },
+    {
+      "asset": "2.2.1_fig_2",
+      "value": 0.5,
+      "scale": 115.0,
+      "zero": 34.0,
+      "x": 34.0,
+      "width": 57.5
+    },
+    {
+      "asset": "2.2.1_fig_2",
+      "value": 2.0,
+      "scale": 115.0,
+      "zero": 396.0,
+      "x": 396.0,
+      "width": 230.0
+    },
+    {
+      "asset": "2.2.1_we_1",
+      "value": 25.0,
+      "scale": 8.0,
+      "zero": 280.0,
+      "x": 280.0,
+      "width": 200.0
+    },
+    {
+      "asset": "2.2.1_we_1",
+      "value": -10.0,
+      "scale": 8.0,
+      "zero": 280.0,
+      "x": 200.0,
+      "width": 80.0
+    },
+    {
+      "asset": "2.2.1_we_1",
+      "value": 0.4,
+      "scale": 180.0,
+      "zero": 330.0,
+      "x": 330.0,
+      "width": 72.0
+    },
+    {
+      "asset": "2.2.1_we_1",
+      "value": 1.5,
+      "scale": 180.0,
+      "zero": 330.0,
+      "x": 330.0,
+      "width": 270.0
+    }
+  ],
+  "inspection_basis": "Fresh personal full-page views of all20currentR7pages; no inherited reviewer page acceptance or hash-only visual transfer.",
+  "independent_r7_paragraph_review": "PENDING",
+  "independent_r7_specialist_qc": "PENDING",
+  "canonical_r6_review_quality_handoff": "UNMODIFIED_HISTORICAL_R6_ONLY",
+  "generation_manifests": "PENDING_UNMODIFIED",
+  "timing_observed": false,
+  "timing_estimates_unchanged": {
+    "core": 48.5,
+    "guided_extra": 10,
+    "bonus_extra": 8,
+    "closing_extra": 5,
+    "all": 71.5
+  }
+}
