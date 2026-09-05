@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "role": "paragraph_builder_self_qa",
+  "inspector": "released_pin_analysis",
+  "inspection_date": "2026-09-05",
+  "inspection_status": "BUILDER_SELF_QA_COMPLETE",
+  "independent_review_status": "PENDING",
+  "manifest": "manifest.json",
+  "manifest_sha256": "bff49326245db036466d3bfd8883225b495cb186391efbca36857da49329d938",
+  "pdf_sha256": "979cba5ed213ad2cc452e5931751e1903975d59a915e5ca16135eb56ed4c0234",
+  "supersedes_artifact": "211-antwoorden-9fce79c5c66c",
+  "pages_inspected": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png"
+  ],
+  "carried_forward_by_identical_sha256": [
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png"
+  ],
+  "reinspected_pages": [
+    "pages/page-001.png"
+  ],
+  "inspected_at_normal_reading_scale": true,
+  "visible_student_defects": [],
+  "method": "R2 all-page capture compared with R1 page SHA-256. Thirty byte-identical pages carry forward actual prior individual-page builder inspection. Changed answer page1 individually re-inspected at full 150dpi reading scale. Independent review remains pending."
+}

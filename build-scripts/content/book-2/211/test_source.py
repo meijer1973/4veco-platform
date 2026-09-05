@@ -11,6 +11,11 @@ import b2_211 as builder
 
 
 class SourceContractTests(unittest.TestCase):
+    def test_proof_revision_rejects_path_components_before_any_write(self):
+        for value in ("../r2", "r2/other", "r0", "second", "r2\\other"):
+            with self.subTest(value=value), self.assertRaisesRegex(ValueError, "Proof suffix"):
+                builder.build(Path("nonexistent-output"), proof_suffix=value)
+
     @classmethod
     def setUpClass(cls):
         cls.record = builder.target_record()

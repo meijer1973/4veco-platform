@@ -219,7 +219,10 @@ def asset_sources() -> dict[str, str]:
     return result
 
 
-def build(lesson_root: Path, proof_root: Path | None = None, *, sources_only: bool = False) -> dict:
+def build(lesson_root: Path, proof_root: Path | None = None, *, sources_only: bool = False,
+          proof_suffix: str = "") -> dict:
+    if proof_suffix and not re.fullmatch(r"r[1-9][0-9]*", proof_suffix):
+        raise ValueError("Proof suffix must be a revision such as r2")
     lesson_root = lesson_root.resolve(strict=True)
     destination = (lesson_root / LESSON_REL).resolve(strict=True)
     if destination.parent.parent.parent != lesson_root:
@@ -252,7 +255,8 @@ def build(lesson_root: Path, proof_root: Path | None = None, *, sources_only: bo
         if not sources_only:
             built = build_document(path)
             if proof_root:
-                proof_dir = proof_root / f"211-{kind}-{built['pdf_sha256'][:12]}"
+                suffix = f"-{proof_suffix}" if proof_suffix else ""
+                proof_dir = proof_root / f"211-{kind}-{built['pdf_sha256'][:12]}{suffix}"
                 render_proof(built, proof_dir)
                 built["proof_directory"] = str(proof_dir.resolve())
             records.append(built)
@@ -268,10 +272,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--lesson-root", type=Path, default=ROOT.parent / "4veco-lessen")
     parser.add_argument("--proof-root", type=Path)
+    parser.add_argument("--proof-suffix", default="", help="Fresh proof revision directory, e.g. r2")
     parser.add_argument("--sources-only", action="store_true")
     parser.add_argument("--manifest", type=Path, help="Write the exact build record, without review acceptance")
     args = parser.parse_args()
-    record = build(args.lesson_root, args.proof_root, sources_only=args.sources_only)
+    record = build(args.lesson_root, args.proof_root, sources_only=args.sources_only,
+                   proof_suffix=args.proof_suffix)
     if args.manifest:
         args.manifest.parent.mkdir(parents=True, exist_ok=True)
         args.manifest.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")

@@ -35,7 +35,7 @@ het aantal kaarten van die maand. GCK is dus niet nog een extra maandrekening.
 **Opgave 3**
 
 a) De verzekering is **constant**, omdat het totale bedrag € 30 blijft als Q
-verandert. Metaal en de speld zijn **variabel**: bij ieder extra badge nemen
+verandert. Metaal en de speld zijn **variabel**: bij iedere extra badge nemen
 hun totale bedragen elk met € 0,50 toe. De huurregel is al voorgedaan.
 De classificatie geldt voor deze maand, Q = 50–100 en dezelfde capaciteit.
 
