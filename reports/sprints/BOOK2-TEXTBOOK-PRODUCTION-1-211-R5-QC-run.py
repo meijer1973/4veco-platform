@@ -211,4 +211,21 @@ def scope():
         record[str(cwd)+'_own_paths']=paths
     put(sys.argv[2] if len(sys.argv)>2 else 'committed-scope.json',record)
 
+def publication_checks():
+    raw=run(['git','diff','--check',BASE,'HEAD'],required=False)
+    assert raw.returncode==2,raw.returncode
+    errors=[line for line in dec(raw.stdout).splitlines() if ': trailing whitespace.' in line]
+    assert errors and all(line.startswith('reports/sprints/'+PREFIX+'-command-log.md:') for line in errors),errors
+    log=ROOT/'reports/sprints'/f'{PREFIX}-command-log.md'
+    assert b'\r\n' in log.read_bytes()
+    for cwd,base in [(ROOT,BASE),(L,LB)]:
+        run(['git','-c','core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol','diff','--check',base,'HEAD'],cwd)
+    final=json.loads((E/'final-preservation.json').read_text(encoding='utf-8'))
+    current=P/'2.1.1-quality-ref.yaml'
+    assert sha(current.read_bytes())==final['canonical_quality_ref_sha256']
+    report=ROOT/'reports/sprints'/f'{PREFIX}-report.md'
+    assert 'specialist_report_sha256: "'+sha(report.read_bytes())+'"' in current.read_text(encoding='utf-8')
+    for d in manifest()['documents']: verify_record_freshness(d)
+    put('publication-checks.json',dict(status='PASS',default_whitespace_exit=raw.returncode,default_whitespace_findings=errors,diagnosis='Native recorder preserves child CRLF in Markdown excerpts; CR-at-EOL-aware check retains all other whitespace rules and passes. Evidence bytes/history are not normalized or removed.',report_sha256=sha(report.read_bytes()),quality_ref_sha256=sha(current.read_bytes()),native_outputs_still_exact=True))
+
 if __name__=='__main__': globals()[sys.argv[1]]()
