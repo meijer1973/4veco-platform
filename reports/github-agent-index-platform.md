@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T19:49:54.833Z
+Generated: 2026-09-05T20:24:32.103Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-221-r8-review-20260905`
-Source commit: `5a33b3e0bf46df10f31836aafeae3712c39bb6ab`
-Files indexed: 8641
+Source branch: `agent/book2-221-r8-qc-20260905`
+Source commit: `74b2cafabfb69b6d0300bd739d0354debfbbc4b9`
+Files indexed: 8681
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2707,7 +2707,7 @@ Count: 1030
 
 ## reports
 
-Count: 5871
+Count: 5911
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6207,6 +6207,46 @@ Count: 5871
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-evidence.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-execution.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/2.2.1_fig_1-reraster.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/2.2.1_fig_2-reraster.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/2.2.1_we_1-reraster.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/after-rebuild.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/antwoorden/page-1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/antwoorden/page-2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/antwoorden/page-3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/antwoorden/page-4.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/before.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/commands.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/committed-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/diagnostic-manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/full-build.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/gray-p2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/gray-p3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/gray-p5.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/opgaven/page-1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/opgaven/page-2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/opgaven/page-3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/opgaven/page-4.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/opgaven/page-5.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/opgaven/page-6.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-01.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-02.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-03.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-04.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-05.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-06.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-07.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-08.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-09.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/paragraaf/page-10.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/probes.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/render-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-probes.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-run.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-scope.py
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R7-REVIEW-command-log.jsonl
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R7-REVIEW-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-diagnostic-manifest.json

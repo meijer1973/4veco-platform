@@ -1,12 +1,12 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-09-05T19:49:54.959Z
+Generated: 2026-09-05T20:24:32.183Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-lessen`
-Source branch: `agent/book2-221-r8-review-20260905`
-Source commit: `144938f325d875b5ca055f5bb0951c450af59842`
+Source branch: `agent/book2-221-r8-qc-20260905`
+Source commit: `ad4e0520630e43fd1a8814130f14cff258c7c14f`
 Files indexed: 1850
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
