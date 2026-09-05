@@ -33,6 +33,8 @@ Final target stays whole on paragraaf13/opgaven8; bonus model and all three crit
 
 ## Checks, reproduction and preserved failures
 
+Publication scope caveat: strict owned-path and committed raw-byte checks cover the complete real candidate. The unchanged native shared-lane recognizer reports UNKNOWN for exactly66 preserved grayscale PNG proof paths under231-grayscale-r4/r8/<edition>/page-###.png; its normal color-proof /pages/ shape is recognized. Thus both narrow and whole-platform native scope checks FAIL solely on these genuine grayscale evidence paths, while the nine real paragraph source files classify correctly and both lesson scopes PASS. These are not waived, moved, deleted or disguised; root must resolve the classification at integration. The first over-strict audit assertion and its full stdout are preserved in the raw unique command log. Scope JSON records all actual files and both complete fetched baselines; a strict owned-path PASS does not turn the native FAIL into PASS.
+
 - Fifteen source tests PASS: independent fractional model arithmetic, exact target/goals/points, nine graph mappings, source/answer roles, all30 native names, actual alts/captions, fading, bonus positive/negative fixtures, authority mutation rejection before generation, next-unused immutable proof guards and footer false-positive negative tests.
 - Final actual render checks PASS for all42 files, all33 pages, font/margin/image/alt/caption/ZIP checks.
 - Full r9, thin-wrapper r10 and unchanged native print-only route reproduce all42 raw files. Full/thin also reproduce every color page PNG byte. ZIP membership is exact, safe, unique, sorted and timestamp-fixed; every member size/CRC/actual byte hash and each whole ZIP hash is preserved. No binary exclusions.
