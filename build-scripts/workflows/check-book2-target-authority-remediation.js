@@ -453,7 +453,7 @@ function main() {
     process.exit(1);
   }
   console.log('Book 2 target authority remediation: PASS');
-  console.log(`- mode: ${durable ? 'durable pending-candidate invariant' : 'Issue #229 sprint-scope proof'}`);
+  console.log(`- mode: ${durable ? 'durable frozen-package and lifecycle invariant' : 'Issue #229 sprint-scope proof'}`);
   console.log('- exact candidate records: 12');
   console.log('- goal/question alignment and workload budgets: complete');
   console.log(durable

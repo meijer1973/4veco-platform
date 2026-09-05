@@ -1014,8 +1014,6 @@ function main() {
   if (options.chapter) console.log(`- chapter scope: ${options.chapter}`);
 }
 
-if (require.main === module) main();
-
 module.exports = {
   APPROVAL_PR_NUMBER,
   AUTHORITY_PATHS,
@@ -1039,3 +1037,7 @@ module.exports = {
   sha256CanonicalText,
   sha256SemanticAuthority,
 };
+
+// Publish the canonical semantic hasher before CLI validation reuses it through
+// the activation provenance helper.
+if (require.main === module) main();

@@ -284,441 +284,474 @@
     },
     {
       "id": "H-229-211-CANDIDATE",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.1.1"
       ],
-      "summary": "Issue #229 carries a complete replacement for 2.1.1 as owner-approved frozen content; target integration and production remain blocked.",
-      "candidate_binding": {
+      "summary": "Issue #229 carries a complete replacement for 2.1.1 as owner-approved frozen content; target integration is evidenced by the separate owner grant and activation commit. Other action-specific production and merge gates remain.",
+      "blocks": [
+        "approved_goal_use",
+        "paragraph_production",
+        "lesson_authoring",
+        "merge"
+      ],
+      "permits": [
+        "goal_design",
+        "target_design",
+        "specialist_review",
+        "target_authority_repair",
+        "target_authority_integration"
+      ],
+      "resolution_actions": [
+        "target_authority_integration"
+      ],
+      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+        "subject_id": "2.1.1",
+        "subject_sha256": "143f1053c98766b77d9d9ce573a5c8e976980f900387159312c3238288d71710",
+        "integrated_commit": "206c018478654db781cc879e7ea36adcd9ef600c"
+      },
+      "target_binding": {
         "blocked_baseline_sha256": "709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34",
-        "candidate_replacement_sha256": "143f1053c98766b77d9d9ce573a5c8e976980f900387159312c3238288d71710",
-        "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
-        "candidate_evidence_ref": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
-        "candidate_status": "lead_reviewed_candidate",
         "approved_replacement_sha256": "143f1053c98766b77d9d9ce573a5c8e976980f900387159312c3238288d71710",
         "approval_ref": "https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
         "approved_by": "meijer1973",
         "approved_on": "2026-09-05"
-      },
-      "blocks": [
-        "approved_goal_use",
-        "paragraph_production",
-        "lesson_authoring",
-        "merge"
-      ],
-      "permits": [
-        "goal_design",
-        "target_design",
-        "specialist_review",
-        "target_authority_repair",
-        "target_authority_integration"
-      ],
-      "resolution_actions": [
-        "target_authority_integration"
-      ],
-      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
-      "release_evidence": null
+      }
     },
     {
       "id": "H-212-STALE-REF",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.1.2"
       ],
-      "summary": "Target context contains a stale bakery cross-reference instead of the current Book 2 dependency. Issue #229 carries the replacement as owner-approved frozen content; target integration and production remain blocked.",
-      "candidate_binding": {
+      "summary": "Target context contains a stale bakery cross-reference instead of the current Book 2 dependency. Issue #229 carries the replacement as owner-approved frozen content; target integration is evidenced by the separate owner grant and activation commit. Other action-specific production and merge gates remain.",
+      "blocks": [
+        "approved_goal_use",
+        "paragraph_production",
+        "lesson_authoring",
+        "merge"
+      ],
+      "permits": [
+        "goal_design",
+        "target_design",
+        "specialist_review",
+        "target_authority_repair",
+        "target_authority_integration"
+      ],
+      "resolution_actions": [
+        "target_authority_integration"
+      ],
+      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+        "subject_id": "2.1.2",
+        "subject_sha256": "19b466dd6f7b541a3bb701d4de80ce13fe9ea58356313e24b23b21698093e1f9",
+        "integrated_commit": "206c018478654db781cc879e7ea36adcd9ef600c"
+      },
+      "target_binding": {
         "blocked_baseline_sha256": "51de36d4b150bcabb51b8391aff15bf5b68610f140b80d12ca3f021e663ae4b5",
-        "candidate_replacement_sha256": "19b466dd6f7b541a3bb701d4de80ce13fe9ea58356313e24b23b21698093e1f9",
-        "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
-        "candidate_evidence_ref": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
-        "candidate_status": "lead_reviewed_candidate",
         "approved_replacement_sha256": "19b466dd6f7b541a3bb701d4de80ce13fe9ea58356313e24b23b21698093e1f9",
         "approval_ref": "https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
         "approved_by": "meijer1973",
         "approved_on": "2026-09-05"
-      },
-      "blocks": [
-        "approved_goal_use",
-        "paragraph_production",
-        "lesson_authoring",
-        "merge"
-      ],
-      "permits": [
-        "goal_design",
-        "target_design",
-        "specialist_review",
-        "target_authority_repair",
-        "target_authority_integration"
-      ],
-      "resolution_actions": [
-        "target_authority_integration"
-      ],
-      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
-      "release_evidence": null
+      }
     },
     {
       "id": "H-213-DELTAQ",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.1.3"
       ],
-      "summary": "Target interval wording must preserve MK and MO as delta total divided by delta quantity. Issue #229 carries the replacement as owner-approved frozen content; target integration and production remain blocked.",
-      "candidate_binding": {
+      "summary": "Target interval wording must preserve MK and MO as delta total divided by delta quantity. Issue #229 carries the replacement as owner-approved frozen content; target integration is evidenced by the separate owner grant and activation commit. Other action-specific production and merge gates remain.",
+      "blocks": [
+        "approved_goal_use",
+        "paragraph_production",
+        "lesson_authoring",
+        "merge"
+      ],
+      "permits": [
+        "goal_design",
+        "target_design",
+        "specialist_review",
+        "target_authority_repair",
+        "target_authority_integration"
+      ],
+      "resolution_actions": [
+        "target_authority_integration"
+      ],
+      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+        "subject_id": "2.1.3",
+        "subject_sha256": "df4b7d7b0326445b386ae570b43eb50fc9fc431707e3992e44394323f959c3ef",
+        "integrated_commit": "206c018478654db781cc879e7ea36adcd9ef600c"
+      },
+      "target_binding": {
         "blocked_baseline_sha256": "e06c097e50cb44ea41357125f224a60124c5a4d17f7eaeafae769f15bfe683fd",
-        "candidate_replacement_sha256": "df4b7d7b0326445b386ae570b43eb50fc9fc431707e3992e44394323f959c3ef",
-        "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
-        "candidate_evidence_ref": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
-        "candidate_status": "lead_reviewed_candidate",
         "approved_replacement_sha256": "df4b7d7b0326445b386ae570b43eb50fc9fc431707e3992e44394323f959c3ef",
         "approval_ref": "https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
         "approved_by": "meijer1973",
         "approved_on": "2026-09-05"
-      },
-      "blocks": [
-        "approved_goal_use",
-        "paragraph_production",
-        "lesson_authoring",
-        "merge"
-      ],
-      "permits": [
-        "goal_design",
-        "target_design",
-        "specialist_review",
-        "target_authority_repair",
-        "target_authority_integration"
-      ],
-      "resolution_actions": [
-        "target_authority_integration"
-      ],
-      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
-      "release_evidence": null
+      }
     },
     {
       "id": "H-229-214-CANDIDATE",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.1.4"
       ],
-      "summary": "Issue #229 carries a complete replacement for 2.1.4 as owner-approved frozen content; target integration and production remain blocked.",
-      "candidate_binding": {
+      "summary": "Issue #229 carries a complete replacement for 2.1.4 as owner-approved frozen content; target integration is evidenced by the separate owner grant and activation commit. Other action-specific production and merge gates remain.",
+      "blocks": [
+        "approved_goal_use",
+        "paragraph_production",
+        "lesson_authoring",
+        "merge"
+      ],
+      "permits": [
+        "goal_design",
+        "target_design",
+        "specialist_review",
+        "target_authority_repair",
+        "target_authority_integration"
+      ],
+      "resolution_actions": [
+        "target_authority_integration"
+      ],
+      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+        "subject_id": "2.1.4",
+        "subject_sha256": "fda623dc9a3620724bf9df22a3ef937fd26779fa49d4d2b0b7c6baa862753691",
+        "integrated_commit": "206c018478654db781cc879e7ea36adcd9ef600c"
+      },
+      "target_binding": {
         "blocked_baseline_sha256": "7a4a01e133dcdf828f4f9d7b06209d1c51ca29ff98d83876dc026f8ba973ac24",
-        "candidate_replacement_sha256": "fda623dc9a3620724bf9df22a3ef937fd26779fa49d4d2b0b7c6baa862753691",
-        "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
-        "candidate_evidence_ref": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
-        "candidate_status": "lead_reviewed_candidate",
         "approved_replacement_sha256": "fda623dc9a3620724bf9df22a3ef937fd26779fa49d4d2b0b7c6baa862753691",
         "approval_ref": "https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
         "approved_by": "meijer1973",
         "approved_on": "2026-09-05"
-      },
-      "blocks": [
-        "approved_goal_use",
-        "paragraph_production",
-        "lesson_authoring",
-        "merge"
-      ],
-      "permits": [
-        "goal_design",
-        "target_design",
-        "specialist_review",
-        "target_authority_repair",
-        "target_authority_integration"
-      ],
-      "resolution_actions": [
-        "target_authority_integration"
-      ],
-      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
-      "release_evidence": null
+      }
     },
     {
       "id": "H-229-221-CANDIDATE",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.2.1"
       ],
-      "summary": "Issue #229 carries a complete replacement for 2.2.1 as owner-approved frozen content; target integration and production remain blocked.",
-      "candidate_binding": {
+      "summary": "Issue #229 carries a complete replacement for 2.2.1 as owner-approved frozen content; target integration is evidenced by the separate owner grant and activation commit. Other action-specific production and merge gates remain.",
+      "blocks": [
+        "approved_goal_use",
+        "paragraph_production",
+        "lesson_authoring",
+        "merge"
+      ],
+      "permits": [
+        "goal_design",
+        "target_design",
+        "specialist_review",
+        "target_authority_repair",
+        "target_authority_integration"
+      ],
+      "resolution_actions": [
+        "target_authority_integration"
+      ],
+      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+        "subject_id": "2.2.1",
+        "subject_sha256": "61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288",
+        "integrated_commit": "206c018478654db781cc879e7ea36adcd9ef600c"
+      },
+      "target_binding": {
         "blocked_baseline_sha256": "4283adf5c6de9015c2daccc80b794183138ff4b7b9b5f4309bd7da80ef0304ed",
-        "candidate_replacement_sha256": "61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288",
-        "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
-        "candidate_evidence_ref": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
-        "candidate_status": "lead_reviewed_candidate",
         "approved_replacement_sha256": "61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288",
         "approval_ref": "https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
         "approved_by": "meijer1973",
         "approved_on": "2026-09-05"
-      },
-      "blocks": [
-        "approved_goal_use",
-        "paragraph_production",
-        "lesson_authoring",
-        "merge"
-      ],
-      "permits": [
-        "goal_design",
-        "target_design",
-        "specialist_review",
-        "target_authority_repair",
-        "target_authority_integration"
-      ],
-      "resolution_actions": [
-        "target_authority_integration"
-      ],
-      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
-      "release_evidence": null
+      }
     },
     {
       "id": "H-229-222-CANDIDATE",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.2.2"
       ],
-      "summary": "Issue #229 carries a complete replacement for 2.2.2 as owner-approved frozen content; target integration and production remain blocked.",
-      "candidate_binding": {
+      "summary": "Issue #229 carries a complete replacement for 2.2.2 as owner-approved frozen content; target integration is evidenced by the separate owner grant and activation commit. Other action-specific production and merge gates remain.",
+      "blocks": [
+        "approved_goal_use",
+        "paragraph_production",
+        "lesson_authoring",
+        "merge"
+      ],
+      "permits": [
+        "goal_design",
+        "target_design",
+        "specialist_review",
+        "target_authority_repair",
+        "target_authority_integration"
+      ],
+      "resolution_actions": [
+        "target_authority_integration"
+      ],
+      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+        "subject_id": "2.2.2",
+        "subject_sha256": "8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e",
+        "integrated_commit": "206c018478654db781cc879e7ea36adcd9ef600c"
+      },
+      "target_binding": {
         "blocked_baseline_sha256": "b939b9f4538d9e16f5eed3c8a1f9bca03b8a2380610776105a5c8d235795ffb1",
-        "candidate_replacement_sha256": "8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e",
-        "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
-        "candidate_evidence_ref": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
-        "candidate_status": "lead_reviewed_candidate",
         "approved_replacement_sha256": "8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e",
         "approval_ref": "https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
         "approved_by": "meijer1973",
         "approved_on": "2026-09-05"
-      },
-      "blocks": [
-        "approved_goal_use",
-        "paragraph_production",
-        "lesson_authoring",
-        "merge"
-      ],
-      "permits": [
-        "goal_design",
-        "target_design",
-        "specialist_review",
-        "target_authority_repair",
-        "target_authority_integration"
-      ],
-      "resolution_actions": [
-        "target_authority_integration"
-      ],
-      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
-      "release_evidence": null
+      }
     },
     {
       "id": "H-229-223-CANDIDATE",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.2.3"
       ],
-      "summary": "Issue #229 carries a complete replacement for 2.2.3 as owner-approved frozen content; target integration and production remain blocked.",
-      "candidate_binding": {
+      "summary": "Issue #229 carries a complete replacement for 2.2.3 as owner-approved frozen content; target integration is evidenced by the separate owner grant and activation commit. Other action-specific production and merge gates remain.",
+      "blocks": [
+        "approved_goal_use",
+        "paragraph_production",
+        "lesson_authoring",
+        "merge"
+      ],
+      "permits": [
+        "goal_design",
+        "target_design",
+        "specialist_review",
+        "target_authority_repair",
+        "target_authority_integration"
+      ],
+      "resolution_actions": [
+        "target_authority_integration"
+      ],
+      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+        "subject_id": "2.2.3",
+        "subject_sha256": "9a3a29bcedc16739b74b66b2bb8e136b37e86c7f5cfee3ee35ea37c4bdeed1c5",
+        "integrated_commit": "206c018478654db781cc879e7ea36adcd9ef600c"
+      },
+      "target_binding": {
         "blocked_baseline_sha256": "5455130e28d15c2b70a77d55df346ca04c5a19d6c25da158c615fddd68ba3a17",
-        "candidate_replacement_sha256": "9a3a29bcedc16739b74b66b2bb8e136b37e86c7f5cfee3ee35ea37c4bdeed1c5",
-        "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
-        "candidate_evidence_ref": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
-        "candidate_status": "lead_reviewed_candidate",
         "approved_replacement_sha256": "9a3a29bcedc16739b74b66b2bb8e136b37e86c7f5cfee3ee35ea37c4bdeed1c5",
         "approval_ref": "https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
         "approved_by": "meijer1973",
         "approved_on": "2026-09-05"
-      },
-      "blocks": [
-        "approved_goal_use",
-        "paragraph_production",
-        "lesson_authoring",
-        "merge"
-      ],
-      "permits": [
-        "goal_design",
-        "target_design",
-        "specialist_review",
-        "target_authority_repair",
-        "target_authority_integration"
-      ],
-      "resolution_actions": [
-        "target_authority_integration"
-      ],
-      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
-      "release_evidence": null
+      }
     },
     {
       "id": "H-229-224-CANDIDATE",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.2.4"
       ],
-      "summary": "Issue #229 carries a complete replacement for 2.2.4 as owner-approved frozen content; target integration and production remain blocked.",
-      "candidate_binding": {
+      "summary": "Issue #229 carries a complete replacement for 2.2.4 as owner-approved frozen content; target integration is evidenced by the separate owner grant and activation commit. Other action-specific production and merge gates remain.",
+      "blocks": [
+        "approved_goal_use",
+        "paragraph_production",
+        "lesson_authoring",
+        "merge"
+      ],
+      "permits": [
+        "goal_design",
+        "target_design",
+        "specialist_review",
+        "target_authority_repair",
+        "target_authority_integration"
+      ],
+      "resolution_actions": [
+        "target_authority_integration"
+      ],
+      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+        "subject_id": "2.2.4",
+        "subject_sha256": "4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519",
+        "integrated_commit": "206c018478654db781cc879e7ea36adcd9ef600c"
+      },
+      "target_binding": {
         "blocked_baseline_sha256": "5edc21a8f3977215674013fca251719d8000c34ab9736246f119a4ef21a1476b",
-        "candidate_replacement_sha256": "4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519",
-        "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
-        "candidate_evidence_ref": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
-        "candidate_status": "lead_reviewed_candidate",
         "approved_replacement_sha256": "4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519",
         "approval_ref": "https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
         "approved_by": "meijer1973",
         "approved_on": "2026-09-05"
-      },
-      "blocks": [
-        "approved_goal_use",
-        "paragraph_production",
-        "lesson_authoring",
-        "merge"
-      ],
-      "permits": [
-        "goal_design",
-        "target_design",
-        "specialist_review",
-        "target_authority_repair",
-        "target_authority_integration"
-      ],
-      "resolution_actions": [
-        "target_authority_integration"
-      ],
-      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
-      "release_evidence": null
+      }
     },
     {
       "id": "H-231-V5",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.3.1"
       ],
-      "summary": "Migrated target requires v5 review. Issue #229 carries the replacement as owner-approved frozen content; target integration and production remain blocked.",
-      "candidate_binding": {
+      "summary": "Migrated target requires v5 review. Issue #229 carries the replacement as owner-approved frozen content; target integration is evidenced by the separate owner grant and activation commit. Other action-specific production and merge gates remain.",
+      "blocks": [
+        "approved_goal_use",
+        "paragraph_production",
+        "lesson_authoring",
+        "merge"
+      ],
+      "permits": [
+        "goal_design",
+        "target_design",
+        "specialist_review",
+        "target_authority_repair",
+        "target_authority_integration"
+      ],
+      "resolution_actions": [
+        "target_authority_integration"
+      ],
+      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+        "subject_id": "2.3.1",
+        "subject_sha256": "a385e00b2fffea168089c32f796668e51ae45cb325504644392f79b20bde8571",
+        "integrated_commit": "206c018478654db781cc879e7ea36adcd9ef600c"
+      },
+      "target_binding": {
         "blocked_baseline_sha256": "078536130e88c1bc9c6a58fc492dc47ccf7a411bafc8b49b9571e1de238f0388",
-        "candidate_replacement_sha256": "a385e00b2fffea168089c32f796668e51ae45cb325504644392f79b20bde8571",
-        "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
-        "candidate_evidence_ref": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
-        "candidate_status": "lead_reviewed_candidate",
         "approved_replacement_sha256": "a385e00b2fffea168089c32f796668e51ae45cb325504644392f79b20bde8571",
         "approval_ref": "https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
         "approved_by": "meijer1973",
         "approved_on": "2026-09-05"
-      },
-      "blocks": [
-        "approved_goal_use",
-        "paragraph_production",
-        "lesson_authoring",
-        "merge"
-      ],
-      "permits": [
-        "goal_design",
-        "target_design",
-        "specialist_review",
-        "target_authority_repair",
-        "target_authority_integration"
-      ],
-      "resolution_actions": [
-        "target_authority_integration"
-      ],
-      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
-      "release_evidence": null
+      }
     },
     {
       "id": "H-232-V5",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.3.2"
       ],
-      "summary": "Migrated target and supply-as-MC boundary require v5 review. Issue #229 carries the replacement as owner-approved frozen content; target integration and production remain blocked.",
-      "candidate_binding": {
+      "summary": "Migrated target and supply-as-MC boundary require v5 review. Issue #229 carries the replacement as owner-approved frozen content; target integration is evidenced by the separate owner grant and activation commit. Other action-specific production and merge gates remain.",
+      "blocks": [
+        "approved_goal_use",
+        "paragraph_production",
+        "lesson_authoring",
+        "merge"
+      ],
+      "permits": [
+        "goal_design",
+        "target_design",
+        "specialist_review",
+        "target_authority_repair",
+        "target_authority_integration"
+      ],
+      "resolution_actions": [
+        "target_authority_integration"
+      ],
+      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+        "subject_id": "2.3.2",
+        "subject_sha256": "54ce45a0cb044532717fe0cbbb6cfeae75e76b2656861bfea0d3821afc1843ce",
+        "integrated_commit": "206c018478654db781cc879e7ea36adcd9ef600c"
+      },
+      "target_binding": {
         "blocked_baseline_sha256": "d1dba16d567f77717277206c1e01de3d69de5f3e5c2c68783835a81c1f7b9ab8",
-        "candidate_replacement_sha256": "54ce45a0cb044532717fe0cbbb6cfeae75e76b2656861bfea0d3821afc1843ce",
-        "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
-        "candidate_evidence_ref": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
-        "candidate_status": "lead_reviewed_candidate",
         "approved_replacement_sha256": "54ce45a0cb044532717fe0cbbb6cfeae75e76b2656861bfea0d3821afc1843ce",
         "approval_ref": "https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
         "approved_by": "meijer1973",
         "approved_on": "2026-09-05"
-      },
-      "blocks": [
-        "approved_goal_use",
-        "paragraph_production",
-        "lesson_authoring",
-        "merge"
-      ],
-      "permits": [
-        "goal_design",
-        "target_design",
-        "specialist_review",
-        "target_authority_repair",
-        "target_authority_integration"
-      ],
-      "resolution_actions": [
-        "target_authority_integration"
-      ],
-      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
-      "release_evidence": null
+      }
     },
     {
       "id": "H-233-V5-REF",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.3.3"
       ],
-      "summary": "Migrated target requires v5 review, source-reference repair, and qualified binding/transaction assumptions. Issue #229 carries the replacement as owner-approved frozen content; target integration and production remain blocked.",
-      "candidate_binding": {
+      "summary": "Migrated target requires v5 review, source-reference repair, and qualified binding/transaction assumptions. Issue #229 carries the replacement as owner-approved frozen content; target integration is evidenced by the separate owner grant and activation commit. Other action-specific production and merge gates remain.",
+      "blocks": [
+        "approved_goal_use",
+        "paragraph_production",
+        "lesson_authoring",
+        "merge"
+      ],
+      "permits": [
+        "goal_design",
+        "target_design",
+        "specialist_review",
+        "target_authority_repair",
+        "target_authority_integration"
+      ],
+      "resolution_actions": [
+        "target_authority_integration"
+      ],
+      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+        "subject_id": "2.3.3",
+        "subject_sha256": "eae9bcd6af7483a7ac9ccb2c57d5332b8cb96cd058853ac7ed9e25a3bdb5b0b2",
+        "integrated_commit": "206c018478654db781cc879e7ea36adcd9ef600c"
+      },
+      "target_binding": {
         "blocked_baseline_sha256": "7ae371e71b3f805daa084c4a0ddf32498f8ded36acfc2f7e97a0d5f443a2d833",
-        "candidate_replacement_sha256": "eae9bcd6af7483a7ac9ccb2c57d5332b8cb96cd058853ac7ed9e25a3bdb5b0b2",
-        "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
-        "candidate_evidence_ref": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
-        "candidate_status": "lead_reviewed_candidate",
         "approved_replacement_sha256": "eae9bcd6af7483a7ac9ccb2c57d5332b8cb96cd058853ac7ed9e25a3bdb5b0b2",
         "approval_ref": "https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
         "approved_by": "meijer1973",
         "approved_on": "2026-09-05"
-      },
-      "blocks": [
-        "approved_goal_use",
-        "paragraph_production",
-        "lesson_authoring",
-        "merge"
-      ],
-      "permits": [
-        "goal_design",
-        "target_design",
-        "specialist_review",
-        "target_authority_repair",
-        "target_authority_integration"
-      ],
-      "resolution_actions": [
-        "target_authority_integration"
-      ],
-      "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
-      "release_evidence": null
+      }
     },
     {
       "id": "H-234-PLACEHOLDER",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.3.4"
       ],
-      "summary": "Placeholder consolidation target must be replaced and reviewed without new theory. Issue #229 carries the replacement as owner-approved frozen content; target integration and production remain blocked.",
-      "candidate_binding": {
-        "blocked_baseline_sha256": "601f73e3ed958b4b6257e3ccad0a08c44138b2a2fa310bbcee8beedc120e856f",
-        "candidate_replacement_sha256": "2ac151882b64b0d990ce5627ae35388d72eefde74c4e24562ef9a49a9355672c",
-        "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
-        "candidate_evidence_ref": "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
-        "candidate_status": "lead_reviewed_candidate",
-        "approved_replacement_sha256": "2ac151882b64b0d990ce5627ae35388d72eefde74c4e24562ef9a49a9355672c",
-        "approval_ref": "https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
-        "approved_by": "meijer1973",
-        "approved_on": "2026-09-05"
-      },
+      "summary": "Placeholder consolidation target must be replaced and reviewed without new theory. Issue #229 carries the replacement as owner-approved frozen content; target integration is evidenced by the separate owner grant and activation commit. Other action-specific production and merge gates remain.",
       "blocks": [
         "approved_goal_use",
         "paragraph_production",
@@ -736,7 +769,22 @@
         "target_authority_integration"
       ],
       "release_condition": "The owner approves this exact candidate record as part of the exact twelve-record package; the approved binding is recorded, the target is integrated, post-integration checks pass, and the integration commit is recorded.",
-      "release_evidence": null
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+        "subject_id": "2.3.4",
+        "subject_sha256": "2ac151882b64b0d990ce5627ae35388d72eefde74c4e24562ef9a49a9355672c",
+        "integrated_commit": "206c018478654db781cc879e7ea36adcd9ef600c"
+      },
+      "target_binding": {
+        "blocked_baseline_sha256": "601f73e3ed958b4b6257e3ccad0a08c44138b2a2fa310bbcee8beedc120e856f",
+        "approved_replacement_sha256": "2ac151882b64b0d990ce5627ae35388d72eefde74c4e24562ef9a49a9355672c",
+        "approval_ref": "https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
+        "approved_by": "meijer1973",
+        "approved_on": "2026-09-05"
+      }
     },
     {
       "id": "H-213-OPC2",
@@ -945,13 +993,15 @@
     "mutation_test_command": "npm run test:book-outline-currentness"
   },
   "issue_229_candidate": {
-    "status": "lead_reviewed_candidate",
+    "status": "integrated",
     "package_path": "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.candidates.json",
     "package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
     "records": 12,
-    "approval_status": "pending",
+    "approval_status": "integrated",
     "content_approval_status": "approved_frozen_package",
-    "integration_status": "authorized_pending_transition"
+    "integration_status": "integrated",
+    "integrated_commit": "206c018478654db781cc879e7ea36adcd9ef600c",
+    "integration_evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/6e35f4fe0aeaa448da9476469294ccd45775232d/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md"
   },
   "issue_229_integration_decision": {
     "decision": "authorize_frozen_book2_target_integration_then_part_a_production",

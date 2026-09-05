@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T08:24:46.876Z
+Generated: 2026-09-05T09:55:14.439Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book2-target-exercise-audit-20260904`
-Source commit: `e8bdcaeab82108097ad967fadc4623d6693a0334`
-Files indexed: 7637
+Source branch: `codex/book2-textbook-production-20260905`
+Source commit: `206c018478654db781cc879e7ea36adcd9ef600c`
+Files indexed: 7649
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 724
+Count: 726
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -812,6 +812,8 @@ Count: 724
 - build-scripts/templates/template-textbook-paragraph-plan.md
 - build-scripts/templates/textbook-to-companion-handoff.md
 - build-scripts/tools/build-skill-tree-viewer.js
+- build-scripts/workflows/book2-integration-decision.js
+- build-scripts/workflows/book2-integration-decision.test.js
 - build-scripts/workflows/book2-owner-decision.js
 - build-scripts/workflows/check-blueprint-pedagogical-boundaries.js
 - build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js
@@ -1597,7 +1599,7 @@ Count: 695
 
 ## references
 
-Count: 1027
+Count: 1028
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/book-outlines/book-2-outline.md
@@ -1991,6 +1993,7 @@ Count: 1027
 - references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.candidates.json
 - references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.plan.json
 - references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.result.json
+- references/data/sprints/BOOK2-TARGET-INTEGRATION-1.plan.json
 - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.plan.json
 - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.result.json
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
@@ -2629,7 +2632,7 @@ Count: 1027
 
 ## reports
 
-Count: 4925
+Count: 4934
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5317,6 +5320,15 @@ Count: 4925
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-round-3.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-round-4.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-terminology-decision.md
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-baseline.md
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-command-log.jsonl
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-command-log.md
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-implementation-review-corrections.md
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-plan.md
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-planning-review.md
+- reports/sprints/BOOK2-TARGET-INTEGRATION-1-prerequisite-inventory.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round12.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md

@@ -46,6 +46,15 @@ function validatePendingDecision(meta) {
   const failures = decision || declared === 'authorized_pending_transition'
     ? validateIntegrationDecision(decision) : [];
   if (decision && declared !== 'authorized_pending_transition') failures.push('Issue #229 pending grant requires authorized_pending_transition status');
+  if (decision || declared === 'authorized_pending_transition') {
+    const expected = { ...JSON.parse(owner.gitText(BASELINE_COMMIT, META_PATH)).issue_229_candidate,
+      integration_status: 'authorized_pending_transition' };
+    const candidate = meta.issue_229_candidate || {};
+    if (!same(Object.keys(candidate).sort(), Object.keys(expected).sort())) failures.push('Issue #229 pending grant requires exact pending fields without terminal provenance');
+    for (const [key, value] of Object.entries(expected)) {
+      if (!same(candidate[key], value)) failures.push(`Issue #229 pending grant requires exact pending value: ${key}`);
+    }
+  }
   return failures;
 }
 
@@ -59,6 +68,7 @@ function validateActivationCommit(commit, root = ROOT) {
     if (owner.hash(owner.gitText(commit, EVIDENCE_PATH, root)) !== EVIDENCE_HASH) throw new Error('activation changed the immutable authorization evidence');
     const meta = JSON.parse(owner.gitText(commit, META_PATH, root));
     failures.push(...validateIntegrationDecision(meta.issue_229_integration_decision));
+    failures.push(...validatePendingDecision(meta));
     failures.push(...owner.validateOwnerDecision(meta.issue_229_owner_decision));
     failures.push(...owner.validateEiDecision(meta));
     if (meta.issue_229_candidate?.integration_status !== 'authorized_pending_transition'

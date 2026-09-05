@@ -314,3 +314,556 @@ Time:        35.826 s, estimated 40 s
 Ran all test suites matching build-scripts/workflows/book2-integration-decision.test.js|build-scripts/workflows/check-book2-target-authority-remediation.test.js|build-scripts/workflows/check-book-outline-currentness.test.js.
 
 ```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:46:21.610Z`
+- finished_at: `2026-09-05T09:46:22.279Z`
+- duration_ms: `669`
+- exit_code: `0`
+- stdout_sha256: `afa8ac74cd96f52a0fe1d17eb6e688af9a968faa8e826f1ff2e230bc613b6671`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable pending-candidate invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:book-outline-currentness -- --require-approved
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:46:22.334Z`
+- finished_at: `2026-09-05T09:46:24.644Z`
+- duration_ms: `2310`
+- exit_code: `1`
+- stdout_sha256: `c66a405b95aed462676f2d302bbaff5a75973e195f7d01dfde08a1887234cd95`
+- stderr_sha256: `78b246dcd03fdb93835d78080281aaa411c5e75c9657825453844d94c12fdf25`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:book-outline-currentness
+> node build-scripts/workflows/check-book-outline-currentness.js --require-approved
+
+
+```
+
+### stderr excerpt
+
+```text
+Book 2 outline currentness: FAIL
+- Issue #229 activation commit 206c018478654db781cc879e7ea36adcd9ef600c: Command failed: git show 206c018478654db781cc879e7ea36adcd9ef600c:undefined
+fatal: path 'undefined' does not exist in '206c018478654db781cc879e7ea36adcd9ef600c'
+
+
+```
+## node build-scripts/workflows/check-book2-candidate-approval-block.js
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:46:24.709Z`
+- finished_at: `2026-09-05T09:46:25.529Z`
+- duration_ms: `820`
+- exit_code: `0`
+- stdout_sha256: `a694a16c65758708891f83e59bd1d963f65eb96379cacd9f35032abde9b47cbf`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 candidate approval block: PASS
+- retired after fully evidenced Issue #229 target integration
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:book-outline-currentness -- --require-approved
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:49:36.383Z`
+- finished_at: `2026-09-05T09:49:39.665Z`
+- duration_ms: `3282`
+- exit_code: `0`
+- stdout_sha256: `21dd1994ef7a81604dd9cfa96c440071de816f864405daa1b7645ca8b3feabb2`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:book-outline-currentness
+> node build-scripts/workflows/check-book-outline-currentness.js --require-approved
+
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:book-outline-currentness -- --require-approved --action paragraph_production --paragraph 2.1.1
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:49:39.731Z`
+- finished_at: `2026-09-05T09:49:42.845Z`
+- duration_ms: `3114`
+- exit_code: `0`
+- stdout_sha256: `ee5e5072e8740217da11d4eee567c188a686ed7485a74bad49f341f95ce34f93`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:book-outline-currentness
+> node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.1.1
+
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.1.1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff ad27f9c30205042c01cacf0b362f4d3f87e6c7a9 -- references/authored/course-target-exercises.json references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.candidates.json references/machine references/external
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:49:42.915Z`
+- finished_at: `2026-09-05T09:49:42.996Z`
+- duration_ms: `81`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen status --short
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:49:43.058Z`
+- finished_at: `2026-09-05T09:49:43.148Z`
+- duration_ms: `90`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd test -- --runInBand build-scripts/workflows/book2-integration-decision.test.js
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:48:24.800Z`
+- finished_at: `2026-09-05T09:50:56.931Z`
+- duration_ms: `152131`
+- exit_code: `0`
+- stdout_sha256: `bca10e062bdb0187c9414413cac16a9c410a25af3711263ed170ac3014d57d78`
+- stderr_sha256: `fb44fd36d8dae35032daa32dd594427a932e81745a7534e184d34257fabbd4e4`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/book2-integration-decision.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+Test Suites: 1 passed, 1 total
+Tests:       66 passed, 66 total
+Snapshots:   0 total
+Time:        151.211 s
+Ran all test suites matching build-scripts/workflows/book2-integration-decision.test.js.
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:51:30.395Z`
+- finished_at: `2026-09-05T09:51:31.184Z`
+- duration_ms: `789`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-candidate-approval-block.js
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:51:31.240Z`
+- finished_at: `2026-09-05T09:51:32.242Z`
+- duration_ms: `1002`
+- exit_code: `0`
+- stdout_sha256: `a694a16c65758708891f83e59bd1d963f65eb96379cacd9f35032abde9b47cbf`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 candidate approval block: PASS
+- retired after fully evidenced Issue #229 target integration
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base origin/main --head HEAD
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:51:32.297Z`
+- finished_at: `2026-09-05T09:51:32.424Z`
+- duration_ms: `127`
+- exit_code: `0`
+- stdout_sha256: `16b60c3630671892d10ff7340c3df4204ef76bbc7d96852da17007a31b8b445b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (shared)
+- shared platform: 11
+  - build-scripts/workflows/book2-integration-decision.js
+  - build-scripts/workflows/book2-integration-decision.test.js
+  - build-scripts/workflows/check-book-outline-currentness.js
+  - build-scripts/workflows/check-book-outline-currentness.test.js
+  - build-scripts/workflows/check-book2-candidate-approval-block.js
+  - build-scripts/workflows/check-book2-target-authority-remediation.js
+  - build-scripts/workflows/check-book2-target-authority-remediation.test.js
+  - docs/roadmaps/textbook/sprint-ledger.md
+  - docs/roadmaps/textbook/textbook-production-roadmap.md
+  - references/authored/book-outlines/book-2-outline.meta.json
+  - references/data/sprints/BOOK2-TARGET-INTEGRATION-1.plan.json
+- review evidence: 9
+  - reports/sprints/BOOK2-TARGET-INTEGRATION-1-baseline.md
+  - reports/sprints/BOOK2-TARGET-INTEGRATION-1-command-log.jsonl
+  - reports/sprints/BOOK2-TARGET-INTEGRATION-1-command-log.md
+  - reports/sprints/BOOK2-TARGET-INTEGRATION-1-implementation-review-corrections.md
+  - reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md
+  - reports/sprints/BOOK2-TARGET-INTEGRATION-1-plan.md
+  - reports/sprints/BOOK2-TARGET-INTEGRATION-1-planning-review.md
+  - reports/sprints/BOOK2-TARGET-INTEGRATION-1-prerequisite-inventory.md
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:51:32.480Z`
+- finished_at: `2026-09-05T09:51:32.582Z`
+- duration_ms: `102`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run agent:index
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:53:46.554Z`
+- finished_at: `2026-09-05T09:53:47.221Z`
+- duration_ms: `667`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-gate-bundle-urls.js GATE-BOOK2-TARGET-INTEGRATION-1
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:53:47.270Z`
+- finished_at: `2026-09-05T09:53:47.353Z`
+- duration_ms: `83`
+- exit_code: `0`
+- stdout_sha256: `075266a3ab1f8f780d8ef28e86e2d28243608e6e2f97e4a79fbf734be7bd49b3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/review-gates/GATE-BOOK2-TARGET-INTEGRATION-1/bundle-urls.md (2 artifacts)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:53:47.392Z`
+- finished_at: `2026-09-05T09:53:47.459Z`
+- duration_ms: `67`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:53:47.496Z`
+- finished_at: `2026-09-05T09:53:47.832Z`
+- duration_ms: `336`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run finalization:freshness
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:54:50.192Z`
+- finished_at: `2026-09-05T09:54:51.364Z`
+- duration_ms: `1172`
+- exit_code: `0`
+- stdout_sha256: `374c9f632971524e464c2ee62e7a93655e85059fc6ee44a258c9a8f332b0ba6b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 finalization:freshness
+> node build-scripts/review-gates/finalization-freshness-proof.js
+
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-09-05T09:54:51.230Z",
+  "repository": "meijer1973/4veco-platform",
+  "head_sha": "206c018478654db781cc879e7ea36adcd9ef600c",
+  "remote": "origin",
+  "remote_main_sha": "ad27f9c30205042c01cacf0b362f4d3f87e6c7a9",
+  "origin_main_sha": "ad27f9c30205042c01cacf0b362f4d3f87e6c7a9",
+  "remote_main_matches_origin_main": true,
+  "remote_main_is_ancestor_of_head": true,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "working_tree_sha256": "665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b",
+      "remote_main_sha256": "665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b"
+    },
+    {
+      "path": "docs/review/pr-readiness-routing-policy.md",
+      "working_tree_sha256": "0adc719b5e273c273a1f95a89a1837adfd5e79fb8ba10aace0f42c874b27f1a0",
+      "remote_main_sha256": "0adc719b5e273c273a1f95a89a1837adfd5e79fb8ba10aace0f42c874b27f1a0"
+    },
+    {
+      "path": "docs/review/pr-integration-lane-policy.md",
+      "working_tree_sha256": "6553c5eda6fb8fe12755f97feeca4d43bbd274d76ea74332c8a73d6513b128f9",
+      "remote_main_sha256": "6553c5eda6fb8fe12755f97feeca4d43bbd274d76ea74332c8a73d6513b128f9"
+    }
+  ]
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:review-throughput -- reports/review-gates/GATE-BOOK2-TARGET-INTEGRATION-1/review-packet.json
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:54:51.411Z`
+- finished_at: `2026-09-05T09:54:51.828Z`
+- duration_ms: `417`
+- exit_code: `0`
+- stdout_sha256: `23ee559e25ac1e4d76751638fddabb882c15195f00b5bea077b0376a1d486234`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:review-throughput
+> node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-BOOK2-TARGET-INTEGRATION-1/review-packet.json
+
+OK review throughput packet: GATE-BOOK2-TARGET-INTEGRATION-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run agent:index
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:55:13.958Z`
+- finished_at: `2026-09-05T09:55:14.718Z`
+- duration_ms: `760`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\wt\book2-textbook-production-20260905\4veco-platform`
+- started_at: `2026-09-05T09:55:14.772Z`
+- finished_at: `2026-09-05T09:55:14.857Z`
+- duration_ms: `85`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```

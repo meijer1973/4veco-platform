@@ -5,6 +5,7 @@ const grant = require('./book2-integration-decision');
 const currentness = require('./check-book-outline-currentness');
 const remediation = require('./check-book2-target-authority-remediation');
 const { approvalBlockLifecycleMode, PARAGRAPHS } = require('./check-book2-candidate-approval-block');
+const ACTIVATION_COMMIT = '206c018478654db781cc879e7ea36adcd9ef600c';
 
 function pending(authorized = false) {
   const input = remediation.readInputs();
@@ -27,6 +28,28 @@ function filesFor(input) {
   meta.authority_sources.find((s) => s.path === grant.REGISTRY_PATH).sha256 = currentness.sha256CanonicalText(files[grant.REGISTRY_PATH]);
   files[grant.META_PATH] = JSON.stringify(meta);
   return files;
+}
+
+function released() {
+  const input = pending(true);
+  Object.assign(input.meta.issue_229_candidate, { status: 'integrated', approval_status: 'integrated',
+    integration_status: 'integrated', integrated_commit: ACTIVATION_COMMIT, integration_evidence_ref: grant.EVIDENCE_REF });
+  for (const hold of input.meta.holds.filter((h) => h.candidate_binding)) {
+    const b = hold.candidate_binding;
+    delete hold.candidate_binding;
+    hold.status = 'released';
+    hold.target_binding = Object.fromEntries(['blocked_baseline_sha256', 'approved_replacement_sha256', 'approval_ref', 'approved_by', 'approved_on'].map((key) => [key, b[key]]));
+    hold.release_evidence = { resolved_via: 'target_authority_integration', released_by: grant.EXPECTED.decided_by,
+      released_on: grant.EXPECTED.decided_on, evidence_ref: grant.EVIDENCE_REF, subject_id: hold.scope[0].slice(10),
+      subject_sha256: b.approved_replacement_sha256, integrated_commit: ACTIVATION_COMMIT };
+  }
+  return input;
+}
+
+function rejectedEverywhere(input, fragment) {
+  expect(remediation.findFailures(input, { durable: true }).join('\n')).toContain(fragment);
+  expect(() => approvalBlockLifecycleMode(input.meta, input)).toThrow(fragment);
+  expect(currentness.findBookOutlineFailures(filesFor(input), { action: 'paragraph_production', paragraph: '2.1.1' }).join('\n')).toContain(fragment);
 }
 
 describe('separate Book 2 immutable integration grant', () => {
@@ -94,9 +117,106 @@ describe('separate Book 2 immutable integration grant', () => {
     expect(currentness.findBookOutlineFailures(filesFor(input), { action: 'target_authority_integration', paragraph: record.id }).join('\n')).toContain('active registry Book 2 records must exactly equal the candidate package');
   });
 
+  test.each(['status', 'integrated_commit', 'integration_evidence_ref'])('authorized pending rejects terminal field %s', (field) => {
+    const input = pending(true); input.meta.issue_229_candidate[field] = field === 'status' ? 'integrated' : 'forged';
+    rejectedEverywhere(input, 'pending grant requires exact pending');
+  });
+
   test.each([owner.REVIEWED_HEAD, grant.BASELINE_COMMIT, grant.EVIDENCE_COMMIT, 'f'.repeat(40)])('rejects old/missing/non-activation commit %s', (commit) => {
     expect(grant.validateActivationCommit(commit).length).toBeGreaterThan(0);
   });
 });
 
-module.exports = { pending, filesFor };
+describe('fully evidenced Book 2 activation', () => {
+  test('all consumers accept the exact terminal package without changing frozen records', () => {
+    const input = released();
+    expect(grant.validateActivationCommit(ACTIVATION_COMMIT)).toEqual([]);
+    expect(remediation.findFailures(input, { durable: true })).toEqual([]);
+    expect(approvalBlockLifecycleMode(input.meta, input)).toBe('retired');
+    expect(currentness.findBookOutlineFailures(filesFor(input), { requireApproved: true, action: 'paragraph_production', paragraph: '2.1.1' })).toEqual([]);
+    expect(input.candidates.every((r) => r.record_status === 'candidate_review_ready')).toBe(true);
+    expect(owner.hash(JSON.stringify(input.registry.exercises.filter((r) => r.module === 2)))).toBe(owner.PACKAGE_HASH);
+  });
+
+  test.each(['status', 'approval_status', 'integration_status'])('rejects mixed terminal lifecycle %s', (field) => {
+    const input = released(); input.meta.issue_229_candidate[field] = 'pending';
+    const failures = remediation.findFailures(input, { durable: true });
+    expect(failures.length).toBeGreaterThan(0);
+    expect(() => approvalBlockLifecycleMode(input.meta, input)).toThrow();
+    expect(currentness.findBookOutlineFailures(filesFor(input), { action: 'paragraph_production', paragraph: '2.1.1' }).length).toBeGreaterThan(0);
+  });
+
+  test('rejects one released target plus eleven pending through scoped production too', () => {
+    const input = released(); const historical = pending(true);
+    for (const [, holdId] of PARAGRAPHS.slice(1)) {
+      input.meta.holds[input.meta.holds.findIndex((h) => h.id === holdId)] = historical.meta.holds.find((h) => h.id === holdId);
+    }
+    rejectedEverywhere(input, 'durable terminal state requires a released target binding');
+  });
+
+  test.each(PARAGRAPHS)('%s release must use the same activation and immutable reference', (_, holdId) => {
+    for (const field of ['integrated_commit', 'evidence_ref', 'released_by', 'released_on']) {
+      const input = released();
+      input.meta.holds.find((h) => h.id === holdId).release_evidence[field] = 'forged';
+      rejectedEverywhere(input, 'release must match the exact activation commit');
+    }
+  });
+
+  test('absent grant, changed top evidence, old activation and forged live content fail all consumers', () => {
+    const absent = released(); delete absent.meta.issue_229_integration_decision;
+    rejectedEverywhere(absent, 'requires a separate immutable owner integration decision');
+    const evidence = released(); evidence.meta.issue_229_candidate.integration_evidence_ref = 'forged';
+    rejectedEverywhere(evidence, 'top-level integration evidence must match');
+    const old = released(); old.meta.issue_229_candidate.integrated_commit = owner.REVIEWED_HEAD;
+    rejectedEverywhere(old, 'activation commit');
+    const changed = released(); changed.registry.exercises.find((r) => r.id === '2.1.1').lesson_goals[0] += ' altered';
+    rejectedEverywhere(changed, 'terminal registry must match the exact approved ordered package');
+  });
+
+  test.each([
+    ['H-221-PRIOR', { action: 'paragraph_production', paragraph: '2.2.1' }],
+    ['H-22-ELASTIC-CONTRAST', { action: 'paragraph_production', paragraph: '2.2.2' }],
+    ['H-CHAPTER-23-PLAN', { action: 'chapter_production', chapter: '2.3' }],
+    ['H-BOOK2-ROOT-PLAN', { action: 'whole_book_assembly' }],
+    ['H-213-OPC2', { action: 'formal_output_choice_teaching', paragraph: '2.1.3' }],
+  ])('preserves independent hold %s and permits its resolution', (holdId, options) => {
+    const input = released(); const hold = input.meta.holds.find((h) => h.id === holdId);
+    expect(hold).toEqual(pending().meta.holds.find((h) => h.id === holdId));
+    expect(currentness.findBookOutlineFailures(filesFor(input), options).join('\n')).toContain(holdId);
+    expect(currentness.findBookOutlineFailures(filesFor(input), { ...options, action: hold.resolution_actions[0] })).toEqual([]);
+  });
+
+  test.each(['holds', 'pins', 'grant', 'outline', 'evidence', 'registry', 'candidates'])('rejects corrupted activation snapshot %s', (kind) => {
+    const original = owner.gitText;
+    const spy = jest.spyOn(owner, 'gitText').mockImplementation((commit, file, root) => {
+      const text = original(commit, file, root);
+      if (commit !== ACTIVATION_COMMIT) return text;
+      if (kind === 'outline' && file === currentness.OUTLINE_PATH) return text + '\nUnapproved semantic change.\n';
+      if (kind === 'evidence' && file === grant.EVIDENCE_PATH) return text + ' altered';
+      if (file === grant.META_PATH) {
+        const meta = JSON.parse(text);
+        if (kind === 'holds') meta.holds.find((h) => h.candidate_binding).release_evidence = { forged: true };
+        if (kind === 'pins') meta.target_registry_pins[0].target_record_sha256 = 'f'.repeat(64);
+        if (kind === 'grant') meta.issue_229_integration_decision.merge_authorized = true;
+        return JSON.stringify(meta);
+      }
+      if (kind === 'registry' && file === grant.REGISTRY_PATH) {
+        const data = JSON.parse(text); data.exercises.find((r) => r.module === 2).lesson_goals[0] += ' forged'; return JSON.stringify(data);
+      }
+      if (kind === 'candidates' && file === owner.PACKAGE_PATH) {
+        const data = JSON.parse(text); data[0].lesson_goals[0] += ' forged'; return JSON.stringify(data);
+      }
+      return text;
+    });
+    try { expect(grant.validateActivationCommit(ACTIVATION_COMMIT).length).toBeGreaterThan(0); }
+    finally { spy.mockRestore(); }
+  });
+
+  test('live currentness CLI does not bypass semantic provenance through circular initialization', () => {
+    const { spawnSync } = require('child_process');
+    const path = require('path');
+    const result = spawnSync(process.execPath, [path.join(__dirname, 'check-book-outline-currentness.js'), '--require-approved'], { encoding: 'utf8' });
+    expect(result.stderr).toBe('');
+    expect(result.status).toBe(0);
+  });
+});

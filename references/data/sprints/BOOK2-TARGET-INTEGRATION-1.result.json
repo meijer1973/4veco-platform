@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "sprint_id": "BOOK2-TARGET-INTEGRATION-1",
+  "status": "verification_in_progress",
+  "result_status": "local_transition_implemented_not_merged",
+  "plan": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-plan.md",
+  "baseline": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-baseline.md",
+  "result": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-result.md",
+  "diff_summary": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-diff-summary.md",
+  "platform_baseline": "ad27f9c30205042c01cacf0b362f4d3f87e6c7a9",
+  "lesson_baseline": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+  "authorization_commit": "6e35f4fe0aeaa448da9476469294ccd45775232d",
+  "activation_commit": "206c018478654db781cc879e7ea36adcd9ef600c",
+  "package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
+  "outline_semantic_sha256": "919c39f64dd212dba37b62902a5bb2e2ce6388c6020a0491e1621017ae2192a1",
+  "protected_reference_data_changed": false,
+  "target_registry_changed": false,
+  "lesson_repository_changed": false,
+  "generated_lesson_output_changed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "human_review_required": true,
+  "merge_authorized": false,
+  "acceptance_tests": [
+    {"command": "node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-INTEGRATION-1", "status": "passed"},
+    {"command": "node build-scripts/workflows/check-book2-target-authority-remediation.js --durable", "status": "passed"},
+    {"command": "node build-scripts/workflows/check-book2-candidate-approval-block.js", "status": "passed"},
+    {"command": "npm.cmd run check:book-outline-currentness -- --require-approved", "status": "passed"},
+    {"command": "npm.cmd run check:book-outline-currentness -- --require-approved --action paragraph_production --paragraph 2.1.1", "status": "passed"},
+    {"command": "git -C ../4veco-lessen status --short", "status": "passed"}
+  ]
+}
