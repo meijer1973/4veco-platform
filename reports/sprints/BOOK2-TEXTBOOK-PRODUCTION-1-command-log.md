@@ -95,3 +95,30 @@ two-page boundary fixture; long/table callouts remain splittable. The first
 test attempt failed only on a PDF line-wrap-sensitive assertion; normalized
 whitespace corrected the test without altering the rendering expectation.
 Independent patch review and final student-page acceptance remain separate.
+
+## Owner-approved elasticity teaching transition
+
+Independent elasticity Round2 PASS binds lesson10334028bbadd537fc3790281e90bebdfa827c1e;
+root lesson79655211e8a947c826a3897fb07709ec0c1ed091 contains identical plan files.
+The corrected root lane checker passed all7 current lesson planning paths.
+Approved goal_owner_decision probes for221/222 both passed before the decision.
+
+The owner explicitly approved the exact plans and both teaching-hold releases
+in the active task on2026-09-05. The actual grant was published first at
+platform26a330cd1b3a306a801366d119a64474eb7782ed in22-owner-authorization.md.
+Only H-221-PRIOR and H-22-ELASTIC-CONTRAST were then set released via the
+existing goal_owner_decision action, actual meijer1973 actor/date and that
+immutable evidence reference. Their two Markdown projection rows were generated
+by existing formatHoldProjectionRow and applied without semantic-outline edits.
+
+- Approved paragraph_production221 and222: PASS exit0.
+- Approved whole_book_assembly currentness: PASS exit0. This removes lifecycle
+  holds only; actual paragraph/chapter review and output prerequisites remain.
+- Durable frozen twelve-record authority: PASS exit0.
+- Currentness focused suite:94 tests PASS exit0,15.747seconds.
+- Negative formal_output_choice_teaching213: correctly FAIL on H-213-OPC2.
+- Exact metadata diff probe: only the two authorized lifecycle entries differ;
+  historical audit presence/approvals, previous repair releases and all target
+  records remain unchanged. H-213-OPC2 is the only open hold and is out of scope.
+
+No future PR merge or student-output acceptance follows from this plan decision.

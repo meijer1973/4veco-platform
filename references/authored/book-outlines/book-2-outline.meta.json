@@ -811,7 +811,7 @@
     },
     {
       "id": "H-221-PRIOR",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.2.1"
@@ -831,11 +831,16 @@
         "goal_owner_decision"
       ],
       "release_condition": "An approved Part A plan pins retrieval and records any registry-normalization decision.",
-      "release_evidence": null
+      "release_evidence": {
+        "resolved_via": "goal_owner_decision",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/26a330cd1b3a306a801366d119a64474eb7782ed/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md"
+      }
     },
     {
       "id": "H-22-ELASTIC-CONTRAST",
-      "status": "open",
+      "status": "released",
       "severity": "blocking",
       "scope": [
         "paragraph:2.2.1",
@@ -856,7 +861,12 @@
         "goal_owner_decision"
       ],
       "release_condition": "Approved instruction and practice include reviewed elastic-contrast evidence.",
-      "release_evidence": null
+      "release_evidence": {
+        "resolved_via": "goal_owner_decision",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-05",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/blob/26a330cd1b3a306a801366d119a64474eb7782ed/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md"
+      }
     },
     {
       "id": "H-229-EI-SUPERSESSION",

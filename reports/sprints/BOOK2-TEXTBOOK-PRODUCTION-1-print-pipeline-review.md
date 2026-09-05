@@ -67,3 +67,19 @@ No blocking findings. This is not student-page acceptance.
 
 The subsequent chapter-assembly helper/provenance extension is a new change
 and is not covered by that pagination verdict; its independent review is pending.
+
+## Chapter assembly helper: Round1 REVISE, Round2 PASS
+
+Independent Round1 reviewedf486a376ef6d19e1a1a45ccde2da19b090bfcd7c and ran25
+tests successfully, but reproduced an unpinned-figure provenance gap: unchanged
+reviewed Markdown could pick up altered PNG/SVG bytes at preflight. Required
+correction: exact reviewed asset-pair pins, not merely newly observed hashes.
+
+Independent Round2 reviewed9ba9e679e0995675bcf072905bff003c5fc58712 and ran26
+tests successfully (6chapter,20print). Each paragraph now requires an explicit
+asset_sha256 map, empty for text-only sources. Discovered pairs across student
+and answer sources must match that map exactly before writes. Changed assets,
+missing pins and extra expected pins fail; capture-time freshness stays intact.
+No remaining blocker. Single-route assembly, answer separation, ordered input
+selection and source/asset provenance passed. No actual chapter was assembled
+or accepted; paragraph/chapter gates still apply.
