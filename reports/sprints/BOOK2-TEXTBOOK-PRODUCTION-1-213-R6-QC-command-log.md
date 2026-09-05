@@ -1,0 +1,180 @@
+# Sprint BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC: Command Log
+
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/qc_probes.py pass0
+
+- cwd: `C:\wt\book2-213-r6-qc-20260905\4veco-platform`
+- started_at: `2026-09-05T20:08:18.751Z`
+- finished_at: `2026-09-05T20:08:19.548Z`
+- duration_ms: `797`
+- exit_code: `0`
+- stdout_sha256: `52d6c6426838c768ee0132b735896bc7ba0898d9cf8a406bc9d069e9438f030c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"evidence": "pass0.json", "result": "PASS"}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/qc_probes.py bindings
+
+- cwd: `C:\wt\book2-213-r6-qc-20260905\4veco-platform`
+- started_at: `2026-09-05T20:08:19.596Z`
+- finished_at: `2026-09-05T20:08:20.801Z`
+- duration_ms: `1205`
+- exit_code: `0`
+- stdout_sha256: `693b91b05288c4622e3bc9f74c81668e873b4086e837375864aca9f8d65806af`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"evidence": "relocated-build.json", "result": "recorded"}
+{"evidence": "bindings.json", "result": "PASS"}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/qc_probes.py protected
+
+- cwd: `C:\wt\book2-213-r6-qc-20260905\4veco-platform`
+- started_at: `2026-09-05T20:08:20.846Z`
+- finished_at: `2026-09-05T20:08:21.783Z`
+- duration_ms: `937`
+- exit_code: `0`
+- stdout_sha256: `d6b7f1024a56e1650427a825957503e8ca08aee64f6a30474e56ef972377e58e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"evidence": "protected-baseline.json", "result": "PASS"}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/qc_probes.py delta
+
+- cwd: `C:\wt\book2-213-r6-qc-20260905\4veco-platform`
+- started_at: `2026-09-05T20:08:21.827Z`
+- finished_at: `2026-09-05T20:08:22.978Z`
+- duration_ms: `1151`
+- exit_code: `0`
+- stdout_sha256: `193a19b673a9d5695715ddd70ca177885ab6907fcca45c356341a67db2ba26ef`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"evidence": "delta.json", "result": "PASS"}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/qc_probes.py arithmetic
+
+- cwd: `C:\wt\book2-213-r6-qc-20260905\4veco-platform`
+- started_at: `2026-09-05T20:08:23.018Z`
+- finished_at: `2026-09-05T20:08:23.335Z`
+- duration_ms: `317`
+- exit_code: `0`
+- stdout_sha256: `99b93a75fdbc95a7a90e1365ab7efd9988e77eef971defda0ea3b44c46394994`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"evidence": "arithmetic.json", "result": "PASS"}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd ci
+
+- cwd: `C:\wt\book2-213-r6-qc-20260905\4veco-platform`
+- started_at: `2026-09-05T20:08:37.317Z`
+- finished_at: `2026-09-05T20:08:42.916Z`
+- duration_ms: `5599`
+- exit_code: `0`
+- stdout_sha256: `a09f0a0856038d0eaa2388fa31fd25ff6464c0c116d2b1f147bb0e246655826b`
+- stderr_sha256: `17bbdc15786962d0f0bdc45d914959fab1ad11152e6302038c7dd846aeb5d476`
+
+### stdout excerpt
+
+```text
+
+added 385 packages, and audited 386 packages in 5s
+
+57 packages are looking for funding
+  run `npm fund` for details
+
+8 vulnerabilities (1 low, 1 moderate, 6 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+```
+
+### stderr excerpt
+
+```text
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated whatwg-encoding@2.0.0: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R6-QC-evidence/qc_probes.py media
+
+- cwd: `C:\wt\book2-213-r6-qc-20260905\4veco-platform`
+- started_at: `2026-09-05T20:09:35.359Z`
+- finished_at: `2026-09-05T20:09:42.279Z`
+- duration_ms: `6920`
+- exit_code: `0`
+- stdout_sha256: `b102558096045aa18ee44b19b9268dd714bb770ad0917b7fce6b4f4c195ad4bb`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"label": "fresh-page-render-paragraaf", "exit_code": 0, "stdout": "", "stderr": ""}
+{"label": "fresh-page-render-opgaven", "exit_code": 0, "stdout": "", "stderr": ""}
+{"label": "fresh-page-render-antwoorden", "exit_code": 0, "stdout": "", "stderr": ""}
+{"evidence": "media.json", "result": "PASS"}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
