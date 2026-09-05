@@ -1,0 +1,867 @@
+{
+  "status": "PASS",
+  "automated_visual_acceptance": false,
+  "source": [
+    {
+      "path": "build-scripts/content/book-2/211/theory.md",
+      "old_sha256": "c945ae6634ebbcd4b6411ccbaa8394c5abcc5a1a6b85326588a28a7629c79dfe",
+      "new_sha256": "c945ae6634ebbcd4b6411ccbaa8394c5abcc5a1a6b85326588a28a7629c79dfe",
+      "exact_fixed_insertion": false,
+      "unchanged": true
+    },
+    {
+      "path": "build-scripts/content/book-2/211/exercises.md",
+      "old_sha256": "a5e82f2cf9d0b89b749dd7590d7023f9ce8a780ce48402365a7bef2c628dd4b9",
+      "new_sha256": "a5e82f2cf9d0b89b749dd7590d7023f9ce8a780ce48402365a7bef2c628dd4b9",
+      "exact_fixed_insertion": false,
+      "unchanged": true
+    },
+    {
+      "path": "build-scripts/content/book-2/211/answers.md",
+      "old_sha256": "34f0a59bc3d80cd3165f632e79a87d729b10a10f545c5e1e0be384776e85c272",
+      "new_sha256": "86bde131fb02951fda0731d4f56cd1c31128aa80f19176e4e75849a65401b4a7",
+      "exact_fixed_insertion": true,
+      "unchanged": false
+    },
+    {
+      "path": "build-scripts/content/book-2/211/target-answers.md",
+      "old_sha256": "e7ddb5385e91f18c24ca856e99a7bbd21a8de57b660be5335ef4cc4650280e94",
+      "new_sha256": "e7ddb5385e91f18c24ca856e99a7bbd21a8de57b660be5335ef4cc4650280e94",
+      "exact_fixed_insertion": false,
+      "unchanged": true
+    }
+  ],
+  "assets": [
+    {
+      "asset": "2.1.1_ex_1",
+      "svg_sha256": "c2854b76d42ee1a2654f4e13886e5184b17119786bff71b7b908bedf4aae83e3",
+      "png_sha256": "fc76afb4f507cf8e09a62a9cf7a209ded71b93f87c72b97803d95afc6678f24f",
+      "native_sha256": "fc76afb4f507cf8e09a62a9cf7a209ded71b93f87c72b97803d95afc6678f24f",
+      "native_pixel_delta": 0,
+      "grayscale_sha256": "e29710d014fba3ed507eb5750ec056d9b54c1661e2550555c0446625377f189e",
+      "title": "Huur classificeren en totalen onderscheiden van kosten per badge",
+      "title_chars": 64,
+      "minimum_source_font": 21.0
+    },
+    {
+      "asset": "2.1.1_fig_1",
+      "svg_sha256": "9043146770454ad70f5968185c49de46bee6036f5e4748a9caac8b78cebb1005",
+      "png_sha256": "21ca603069ffa83d885befa21696b1b0c7ea4a0f6fba8ed49021458000c8ba45",
+      "native_sha256": "21ca603069ffa83d885befa21696b1b0c7ea4a0f6fba8ed49021458000c8ba45",
+      "native_pixel_delta": 0,
+      "grayscale_sha256": "4dec00358ff6d93e518e484b3194813cdee71b42cc09a46beee58d8cf7eb7d47",
+      "title": "Totale kosten gedeeld door Q geven gemiddelde kosten",
+      "title_chars": 52,
+      "minimum_source_font": 22.0
+    },
+    {
+      "asset": "2.1.1_fig_2",
+      "svg_sha256": "bbf506bd1be95e272a9bd31a42143147f58dc545c5ff243ff8d026b0d4c6c66d",
+      "png_sha256": "74f1384715e922ca04d10aa2978b852a98511044c6478f40e4bb260f72e0f8a8",
+      "native_sha256": "74f1384715e922ca04d10aa2978b852a98511044c6478f40e4bb260f72e0f8a8",
+      "native_pixel_delta": 0,
+      "grayscale_sha256": "efdfbbd3a20fa84bfc478a45ff7a718d979ea6afd760a41ef983cc8f53320bda",
+      "title": "TCK bij 40 en 80 posters",
+      "title_chars": 24,
+      "minimum_source_font": 21.0
+    },
+    {
+      "asset": "2.1.1_fig_3",
+      "svg_sha256": "a5a2e464a51461f78f1b98056520c5b3a32e9baef577424f405b64c4790326eb",
+      "png_sha256": "c516afb77ff0ae8a8adfd031140cf6f23b3b7f02bbb5a2980649e8a9f58de8b6",
+      "native_sha256": "c516afb77ff0ae8a8adfd031140cf6f23b3b7f02bbb5a2980649e8a9f58de8b6",
+      "native_pixel_delta": 0,
+      "grayscale_sha256": "b30ba1b946482e77fcff42200e80867c1af70d8033caf8db4bc680db00819822",
+      "title": "TVK en daarna TK toegevoegd op dezelfde schalen",
+      "title_chars": 47,
+      "minimum_source_font": 21.0
+    },
+    {
+      "asset": "2.1.1_fig_4",
+      "svg_sha256": "d49d97740e3747855613ea332df481caf9bb71071f75f08626502d1a474e518d",
+      "png_sha256": "c73e2eca425313c29eaf6bc1fbee0775971bfb08b6343d0ade52bbb70565701b",
+      "native_sha256": "c73e2eca425313c29eaf6bc1fbee0775971bfb08b6343d0ade52bbb70565701b",
+      "native_pixel_delta": 0,
+      "grayscale_sha256": "73834172f3c8e19f77fd59bc9fa859e59db516e82ee332d351f688eb8f3f5024",
+      "title": "GCK halveert, GVK blijft gelijk, GTK halveert niet",
+      "title_chars": 50,
+      "minimum_source_font": 20.0
+    },
+    {
+      "asset": "2.1.1_we_1",
+      "svg_sha256": "8f60486f0d66e0d728570e9d9f40851e6834d2c5cbf18db96ea091893b6d2530",
+      "png_sha256": "f62cfd52983743e0ceb36a5963dd30030d8c220e30f100c6f30ae47361700bc6",
+      "native_sha256": "f62cfd52983743e0ceb36a5963dd30030d8c220e30f100c6f30ae47361700bc6",
+      "native_pixel_delta": 0,
+      "grayscale_sha256": "6bb1678a370183174be2c3d5067f3415b6a249b4f03c268183231b1f9c745242",
+      "title": "Totalen en gemiddelden bij honderd en tweehonderd reparaties",
+      "title_chars": 60,
+      "minimum_source_font": 21.0
+    }
+  ],
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0",
+      "md_sha256": "de7abc910f6ec940eb329abd003085921f32409956ec1e0450bcc4a5454eb6b5",
+      "html_sha256": "10721f1ad745b8e1358ba354c5ded64a74367f5081eaf1c676ecb88dbe10e44b",
+      "minimum_pdf_text_pt": 12.0,
+      "text_nodes_complete": 273,
+      "pages": [
+        {
+          "page": 1,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-01.png",
+          "sha256": "87030bdf1a3a488614a7b6d0ff416d9a6747a4313bf2543e04c6c706728bb931",
+          "R4_sha256": "87030bdf1a3a488614a7b6d0ff416d9a6747a4313bf2543e04c6c706728bb931",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 2,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-02.png",
+          "sha256": "9ec870cc1fad995863c1f64de5eb087cb39e10c2e03ec0091ff6b7335adbd0bb",
+          "R4_sha256": "9ec870cc1fad995863c1f64de5eb087cb39e10c2e03ec0091ff6b7335adbd0bb",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 3,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-03.png",
+          "sha256": "b5b7c16d919e8574fc2c8340f682bff8b42647c2a2aab0aa7eef43791d7b37f8",
+          "R4_sha256": "b5b7c16d919e8574fc2c8340f682bff8b42647c2a2aab0aa7eef43791d7b37f8",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 4,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-04.png",
+          "sha256": "2bf10d4e955d8a3e550cef5c58d8930e415a6693022bf8b66edfb8976cef391b",
+          "R4_sha256": "2bf10d4e955d8a3e550cef5c58d8930e415a6693022bf8b66edfb8976cef391b",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 5,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-05.png",
+          "sha256": "4a5f0b08ffd3b4de246cedd74343da79102048e8e8b84b455cf34cb23c095b08",
+          "R4_sha256": "4a5f0b08ffd3b4de246cedd74343da79102048e8e8b84b455cf34cb23c095b08",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 6,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-06.png",
+          "sha256": "40be04318742db356d11fff255fa1ec41db157cd0e7f5fd822b803e4f8277d7d",
+          "R4_sha256": "40be04318742db356d11fff255fa1ec41db157cd0e7f5fd822b803e4f8277d7d",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 7,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-07.png",
+          "sha256": "6bf0b7a6fbdcb8933d95182b71c2a870d9a1b6c7a66826d6c35ca1875a410dc5",
+          "R4_sha256": "6bf0b7a6fbdcb8933d95182b71c2a870d9a1b6c7a66826d6c35ca1875a410dc5",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 8,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-08.png",
+          "sha256": "027292161d798a897a2aeedaa1679169b1d6b46b90da5e221fdcbac2277e95e5",
+          "R4_sha256": "027292161d798a897a2aeedaa1679169b1d6b46b90da5e221fdcbac2277e95e5",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 9,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-09.png",
+          "sha256": "d6211267c2c52ea8849f30e1470e1266dc9e86819c59c0ad75a04e62cac62846",
+          "R4_sha256": "d6211267c2c52ea8849f30e1470e1266dc9e86819c59c0ad75a04e62cac62846",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 10,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-10.png",
+          "sha256": "9d864c9b0783a0e83e6b58a55198d1f5bff02a435b208c814a22b88f940be2a0",
+          "R4_sha256": "9d864c9b0783a0e83e6b58a55198d1f5bff02a435b208c814a22b88f940be2a0",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 11,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-11.png",
+          "sha256": "1d559076f6c91a5ae9c0a324d3a19502318cb2466b4243a00190ef1b338139be",
+          "R4_sha256": "1d559076f6c91a5ae9c0a324d3a19502318cb2466b4243a00190ef1b338139be",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 12,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-12.png",
+          "sha256": "b448d6f5fe921f69489a5b833a3ff1249690043db1b9e6e30f72520b604bdc06",
+          "R4_sha256": "b448d6f5fe921f69489a5b833a3ff1249690043db1b9e6e30f72520b604bdc06",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 13,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-13.png",
+          "sha256": "f9b22bcdad2d331e5edcf43e2ebb0add294fa00b3f9c2441b82f18d88c0b193c",
+          "R4_sha256": "f9b22bcdad2d331e5edcf43e2ebb0add294fa00b3f9c2441b82f18d88c0b193c",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 14,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-14.png",
+          "sha256": "e5e4f0e5f96d32db6ebd0c5eeec7dae6aa71b96c14ef68d706657296a0982c8f",
+          "R4_sha256": "e5e4f0e5f96d32db6ebd0c5eeec7dae6aa71b96c14ef68d706657296a0982c8f",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 15,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\paragraaf\\page-15.png",
+          "sha256": "6d46b6ace8f0784f98e9ec6486ffe0514d4b50f492b3d11b18bf4852d8880460",
+          "R4_sha256": "6d46b6ace8f0784f98e9ec6486ffe0514d4b50f492b3d11b18bf4852d8880460",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        }
+      ],
+      "placements": [
+        {
+          "page": 3,
+          "width_pt": 470.55118125,
+          "height_pt": 239.19685049999998,
+          "asset": "2.1.1_fig_2",
+          "minimum_label_pt": 13.724409453125
+        },
+        {
+          "page": 4,
+          "width_pt": 470.55118125,
+          "height_pt": 486.23622075000003,
+          "asset": "2.1.1_fig_3",
+          "minimum_label_pt": 13.724409453125
+        },
+        {
+          "page": 5,
+          "width_pt": 470.55118125,
+          "height_pt": 215.66929125000001,
+          "asset": "2.1.1_fig_1",
+          "minimum_label_pt": 14.37795275
+        },
+        {
+          "page": 6,
+          "width_pt": 470.55118125,
+          "height_pt": 243.11811,
+          "asset": "2.1.1_fig_4",
+          "minimum_label_pt": 13.07086612903226
+        },
+        {
+          "page": 8,
+          "width_pt": 470.55118125,
+          "height_pt": 259.45669275,
+          "asset": "2.1.1_we_1",
+          "minimum_label_pt": 13.724409440176323
+        },
+        {
+          "page": 10,
+          "width_pt": 470.55118125,
+          "height_pt": 182.3385825,
+          "asset": "2.1.1_ex_1",
+          "minimum_label_pt": 13.724409435483873
+        }
+      ],
+      "images": [
+        {
+          "asset": "2.1.1_fig_2",
+          "alt": "Figuur 1. De constante maandkosten blijven binnen Q = 40–80 gelijk.",
+          "alt_chars": 67,
+          "caption": "Figuur 1. De constante maandkosten blijven binnen Q = 40–80 gelijk.",
+          "figcaption_attributes": {
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "asset": "2.1.1_fig_3",
+          "alt": "Figuur 2. Paneel A voegt TVK toe; paneel B voegt daarna TK toe, op dezelfde schalen.",
+          "alt_chars": 84,
+          "caption": "Figuur 2. Paneel A voegt TVK toe; paneel B voegt daarna TK toe, op dezelfde schalen.",
+          "figcaption_attributes": {
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "asset": "2.1.1_fig_1",
+          "alt": "Figuur 3. Kies eerst het juiste totaal en deel daarna door dezelfde positieve Q.",
+          "alt_chars": 80,
+          "caption": "Figuur 3. Kies eerst het juiste totaal en deel daarna door dezelfde positieve Q.",
+          "figcaption_attributes": {
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "asset": "2.1.1_fig_4",
+          "alt": "Figuur 4. Alleen het constante deel per poster halveert; het variabele deel blijft hier gelijk.",
+          "alt_chars": 95,
+          "caption": "Figuur 4. Alleen het constante deel per poster halveert; het variabele deel blijft hier gelijk.",
+          "figcaption_attributes": {
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "asset": "2.1.1_we_1",
+          "alt": "Totalen en gemiddelden bij 100 en 200 reparaties met dezelfde constante maandkosten",
+          "alt_chars": 83,
+          "caption": "Hetzelfde constante maandbedrag wordt over meer reparaties verdeeld; totalen en gemiddelden houden verschillende eenheden.",
+          "figcaption_attributes": {}
+        },
+        {
+          "asset": "2.1.1_ex_1",
+          "alt": "De huurregel is voorgedaan. Maak daarna onderscheid tussen maandbedrag en bedrag per badge.",
+          "alt_chars": 91,
+          "caption": "De huurregel is voorgedaan. Maak daarna onderscheid tussen maandbedrag en bedrag per badge.",
+          "figcaption_attributes": {
+            "aria-hidden": "true"
+          }
+        }
+      ],
+      "R4_full_DOM_after_exact_insertion_reversal": true,
+      "R3_full_DOM_after_enumerated_metadata_reversal": true
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953",
+      "md_sha256": "bacccc1c9b063c4c786f2749d31993d94eb671fdc5bf0a899fb123d89bc0558b",
+      "html_sha256": "9e27b80089dee95fa4ac61a3f07baaf95ff3650518943a730db122befec2a6f8",
+      "minimum_pdf_text_pt": 12.0,
+      "text_nodes_complete": 175,
+      "pages": [
+        {
+          "page": 1,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\opgaven\\page-1.png",
+          "sha256": "0265dff094b5c47c408f27570bfdc82c7b26af885ab4615cff94943830b3c7bd",
+          "R4_sha256": "0265dff094b5c47c408f27570bfdc82c7b26af885ab4615cff94943830b3c7bd",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 2,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\opgaven\\page-2.png",
+          "sha256": "80f498601d5685a964abb1ab14dd3a0b9e1355fbba2400c7e17bdebb653e91a0",
+          "R4_sha256": "80f498601d5685a964abb1ab14dd3a0b9e1355fbba2400c7e17bdebb653e91a0",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 3,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\opgaven\\page-3.png",
+          "sha256": "ca9cb50a8f074fe5d7f6e5b22c084aa22338485e48aedd8200c0d2ce7c82ead7",
+          "R4_sha256": "ca9cb50a8f074fe5d7f6e5b22c084aa22338485e48aedd8200c0d2ce7c82ead7",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 4,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\opgaven\\page-4.png",
+          "sha256": "824050d16b84d572995c2bc2f336e87996d663708bf18709bf1686ef54c24f94",
+          "R4_sha256": "824050d16b84d572995c2bc2f336e87996d663708bf18709bf1686ef54c24f94",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 5,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\opgaven\\page-5.png",
+          "sha256": "f9ddc86d86341a9c5db92152f71ceb1f0acc51f23a3b78fc2c454ddd9402f386",
+          "R4_sha256": "f9ddc86d86341a9c5db92152f71ceb1f0acc51f23a3b78fc2c454ddd9402f386",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 6,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\opgaven\\page-6.png",
+          "sha256": "8470277e2c61cc5cc8a9107063ad476d441b3e77b0d027a1be54e435d5bf106b",
+          "R4_sha256": "8470277e2c61cc5cc8a9107063ad476d441b3e77b0d027a1be54e435d5bf106b",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 7,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\opgaven\\page-7.png",
+          "sha256": "c5464d633b525ce8a22dab994eab026340c4b4405ff7a105405730ac46dcfb07",
+          "R4_sha256": "c5464d633b525ce8a22dab994eab026340c4b4405ff7a105405730ac46dcfb07",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 8,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\opgaven\\page-8.png",
+          "sha256": "be8a312018558ae7d2f6c8863a6180199265a9ddab0becbdd84329edb2a40749",
+          "R4_sha256": "be8a312018558ae7d2f6c8863a6180199265a9ddab0becbdd84329edb2a40749",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 9,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\opgaven\\page-9.png",
+          "sha256": "4cbeef659c9a7122ee979f474c000385c6b434ad8408049cc9d58aee87722ba8",
+          "R4_sha256": "4cbeef659c9a7122ee979f474c000385c6b434ad8408049cc9d58aee87722ba8",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        }
+      ],
+      "placements": [
+        {
+          "page": 2,
+          "width_pt": 470.55118125,
+          "height_pt": 259.45669275,
+          "asset": "2.1.1_we_1",
+          "minimum_label_pt": 13.724409440176323
+        },
+        {
+          "page": 4,
+          "width_pt": 470.55118125,
+          "height_pt": 182.3385825,
+          "asset": "2.1.1_ex_1",
+          "minimum_label_pt": 13.724409435483873
+        }
+      ],
+      "images": [
+        {
+          "asset": "2.1.1_we_1",
+          "alt": "Totalen en gemiddelden bij 100 en 200 reparaties met dezelfde constante maandkosten",
+          "alt_chars": 83,
+          "caption": "Hetzelfde constante maandbedrag wordt over meer reparaties verdeeld; totalen en gemiddelden houden verschillende eenheden.",
+          "figcaption_attributes": {}
+        },
+        {
+          "asset": "2.1.1_ex_1",
+          "alt": "De huurregel is voorgedaan. Maak daarna onderscheid tussen maandbedrag en bedrag per badge.",
+          "alt_chars": 91,
+          "caption": "De huurregel is voorgedaan. Maak daarna onderscheid tussen maandbedrag en bedrag per badge.",
+          "figcaption_attributes": {
+            "aria-hidden": "true"
+          }
+        }
+      ],
+      "R4_full_DOM_after_exact_insertion_reversal": true,
+      "R3_full_DOM_after_enumerated_metadata_reversal": true
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce",
+      "md_sha256": "f7572e3d4f2fc5bc092562eb06e76ebb0480fbbc8aa1ea01d3752a7251cbbdc9",
+      "html_sha256": "b2e86d7bae4d1bdbb7cd47a55cd6e83254398618f0954fe3ce09cdb75927c916",
+      "minimum_pdf_text_pt": 12.0,
+      "text_nodes_complete": 287,
+      "pages": [
+        {
+          "page": 1,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\antwoorden\\page-1.png",
+          "sha256": "e64482170c9bf4117f064d72c81ccb73e5cb25220916188deb58867a0329a844",
+          "R4_sha256": "e64482170c9bf4117f064d72c81ccb73e5cb25220916188deb58867a0329a844",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 2,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\antwoorden\\page-2.png",
+          "sha256": "821d393d65e82843b8f4b9d62f0fe4e4c75c57a4909ec9c3ac127a502c250591",
+          "R4_sha256": "821d393d65e82843b8f4b9d62f0fe4e4c75c57a4909ec9c3ac127a502c250591",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 3,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\antwoorden\\page-3.png",
+          "sha256": "3aece13ce42a7ab19411768002f77629492a3be5c7865ec5732a9ffad3872b9a",
+          "R4_sha256": "3aece13ce42a7ab19411768002f77629492a3be5c7865ec5732a9ffad3872b9a",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 4,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\antwoorden\\page-4.png",
+          "sha256": "db38f2c267dff1647809ec28072a022f55fbf4d4bd4c214844f4e3404b0e64a0",
+          "R4_sha256": "db38f2c267dff1647809ec28072a022f55fbf4d4bd4c214844f4e3404b0e64a0",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 5,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\antwoorden\\page-5.png",
+          "sha256": "7c5579d04121743f7d9adee6140adf84dc5030e7da66c14c68948d5d3dcf2b51",
+          "R4_sha256": "7c5579d04121743f7d9adee6140adf84dc5030e7da66c14c68948d5d3dcf2b51",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 6,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\antwoorden\\page-6.png",
+          "sha256": "46b66e9cf590e2fa7414ed0347c3c4fdfa8014232931b731a0077f0f84657fc0",
+          "R4_sha256": "46b66e9cf590e2fa7414ed0347c3c4fdfa8014232931b731a0077f0f84657fc0",
+          "byte_equal": true,
+          "pixel_delta_bbox": null
+        },
+        {
+          "page": 7,
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-REVIEW-evidence\\antwoorden\\page-7.png",
+          "sha256": "36bedb4aa924e1990c8d5c61dd3a01710ff8c0a12d58e8ea65c132f31f2ab22b",
+          "R4_sha256": "581169e12262d1b519b5fac035e205bdb7b6119131ebbae8176e6b7be06d5855",
+          "byte_equal": false,
+          "pixel_delta_bbox": [
+            141,
+            460,
+            1123,
+            1172
+          ]
+        }
+      ],
+      "placements": [],
+      "images": [],
+      "R4_full_DOM_after_exact_insertion_reversal": true,
+      "R3_full_DOM_after_enumerated_metadata_reversal": true
+    }
+  ],
+  "tests": {
+    "old_bodies": 13,
+    "old_AST_and_file_exact": true,
+    "new_tests": 8,
+    "total": 21,
+    "new_names": [
+      "test_all_original_test_bodies_and_generator_remain_exact",
+      "test_changed_existing_model_answer_is_rejected",
+      "test_current_complete_sources_equal_exact_insertion",
+      "test_extra_criterion_is_rejected",
+      "test_misplaced_block_is_rejected",
+      "test_missing_one_criterion_is_rejected",
+      "test_real_old_missing_block_is_rejected",
+      "test_unrelated_source_drift_is_rejected"
+    ]
+  },
+  "bonus_criteria": [
+    "Je vergelijkt GVK = TVK/Q bij beide aantallen voor A en B, met euro per product als eenheid.",
+    "Je weerlegt ‘altijd constant’ met B en koppelt A’s gelijke GVK aan de gegeven € 1 aan variabele kosten per product.",
+    "Je geeft een mogelijke verklaring voor B zonder vaste kosten toe te voegen en benoemt dat twee waarnemingen geen unieke kostenfunctie bepalen."
+  ],
+  "changed_pages": [
+    [
+      "antwoorden",
+      7
+    ]
+  ],
+  "independent_math": {
+    "models": [
+      {
+        "context": "posters",
+        "rows": [
+          {
+            "Q": 40,
+            "TCK": "120",
+            "TVK": "80",
+            "TK": "200",
+            "GCK": "3",
+            "GVK": "2",
+            "GTK": "5"
+          },
+          {
+            "Q": 80,
+            "TCK": "120",
+            "TVK": "160",
+            "TK": "280",
+            "GCK": "3/2",
+            "GVK": "2",
+            "GTK": "7/2"
+          }
+        ],
+        "total_unit": "euro per maand",
+        "average_unit": "euro per relevant product"
+      },
+      {
+        "context": "fietsen",
+        "rows": [
+          {
+            "Q": 100,
+            "TCK": "200",
+            "TVK": "200",
+            "TK": "400",
+            "GCK": "2",
+            "GVK": "2",
+            "GTK": "4"
+          },
+          {
+            "Q": 200,
+            "TCK": "200",
+            "TVK": "400",
+            "TK": "600",
+            "GCK": "1",
+            "GVK": "2",
+            "GTK": "3"
+          }
+        ],
+        "total_unit": "euro per maand",
+        "average_unit": "euro per relevant product"
+      },
+      {
+        "context": "badges",
+        "rows": [
+          {
+            "Q": 50,
+            "TCK": "150",
+            "TVK": "50",
+            "TK": "200",
+            "GCK": "3",
+            "GVK": "1",
+            "GTK": "4"
+          },
+          {
+            "Q": 100,
+            "TCK": "150",
+            "TVK": "100",
+            "TK": "250",
+            "GCK": "3/2",
+            "GVK": "1",
+            "GTK": "5/2"
+          }
+        ],
+        "total_unit": "euro per maand",
+        "average_unit": "euro per relevant product"
+      },
+      {
+        "context": "boekenleggers",
+        "rows": [
+          {
+            "Q": 40,
+            "TCK": "80",
+            "TVK": "80",
+            "TK": "160",
+            "GCK": "2",
+            "GVK": "2",
+            "GTK": "4"
+          },
+          {
+            "Q": 80,
+            "TCK": "80",
+            "TVK": "160",
+            "TK": "240",
+            "GCK": "1",
+            "GVK": "2",
+            "GTK": "3"
+          }
+        ],
+        "total_unit": "euro per maand",
+        "average_unit": "euro per relevant product"
+      },
+      {
+        "context": "stickers",
+        "rows": [
+          {
+            "Q": 400,
+            "TCK": "240",
+            "TVK": "240",
+            "TK": "480",
+            "GCK": "3/5",
+            "GVK": "3/5",
+            "GTK": "6/5"
+          },
+          {
+            "Q": 800,
+            "TCK": "240",
+            "TVK": "480",
+            "TK": "720",
+            "GCK": "3/10",
+            "GVK": "3/5",
+            "GTK": "9/10"
+          }
+        ],
+        "total_unit": "euro per maand",
+        "average_unit": "euro per relevant product"
+      },
+      {
+        "context": "bakkerij",
+        "rows": [
+          {
+            "Q": 500,
+            "TCK": "500",
+            "TVK": "400",
+            "TK": "900",
+            "GCK": "1",
+            "GVK": "4/5",
+            "GTK": "9/5"
+          },
+          {
+            "Q": 1000,
+            "TCK": "500",
+            "TVK": "800",
+            "TK": "1300",
+            "GCK": "1/2",
+            "GVK": "4/5",
+            "GTK": "13/10"
+          }
+        ],
+        "total_unit": "euro per maand",
+        "average_unit": "euro per relevant product"
+      }
+    ],
+    "contract": {
+      "baseline": 400,
+      "A_alone": 420,
+      "B_alone": 420,
+      "both": 440,
+      "GTK": "22/5",
+      "effects": "reinforce: +20 +20"
+    },
+    "start_budget": [
+      50,
+      70,
+      "5"
+    ],
+    "bonus_GVK": {
+      "A": [
+        "1",
+        "1"
+      ],
+      "B": [
+        "2",
+        "5/2"
+      ]
+    },
+    "closing": [
+      90,
+      135,
+      "6",
+      "9/2"
+    ]
+  },
+  "geometry": [
+    {
+      "asset": "2.1.1_fig_2",
+      "panel_y0": 0,
+      "relation": "TCK",
+      "points": [
+        {
+          "Q": 40.0,
+          "cost": 120.0
+        },
+        {
+          "Q": 80.0,
+          "cost": 120.0
+        }
+      ],
+      "dash": "9 5"
+    },
+    {
+      "asset": "2.1.1_fig_3",
+      "panel_y0": 0,
+      "relation": "TCK",
+      "points": [
+        {
+          "Q": 40.0,
+          "cost": 120.0
+        },
+        {
+          "Q": 80.0,
+          "cost": 120.0
+        }
+      ],
+      "dash": "9 5"
+    },
+    {
+      "asset": "2.1.1_fig_3",
+      "panel_y0": 0,
+      "relation": "TVK",
+      "points": [
+        {
+          "Q": 40.0,
+          "cost": 79.9995
+        },
+        {
+          "Q": 80.0,
+          "cost": 160.0005
+        }
+      ],
+      "dash": "3 4"
+    },
+    {
+      "asset": "2.1.1_fig_3",
+      "panel_y0": 378,
+      "relation": "TCK",
+      "points": [
+        {
+          "Q": 40.0,
+          "cost": 120.0
+        },
+        {
+          "Q": 80.0,
+          "cost": 120.0
+        }
+      ],
+      "dash": "9 5"
+    },
+    {
+      "asset": "2.1.1_fig_3",
+      "panel_y0": 378,
+      "relation": "TVK",
+      "points": [
+        {
+          "Q": 40.0,
+          "cost": 79.99949999999997
+        },
+        {
+          "Q": 80.0,
+          "cost": 160.00050000000005
+        }
+      ],
+      "dash": "3 4"
+    },
+    {
+      "asset": "2.1.1_fig_3",
+      "panel_y0": 378,
+      "relation": "TK",
+      "points": [
+        {
+          "Q": 40.0,
+          "cost": 199.99949999999995
+        },
+        {
+          "Q": 80.0,
+          "cost": 280.0005
+        }
+      ],
+      "dash": ""
+    }
+  ],
+  "contrast": [
+    {
+      "foreground": "#E67E22",
+      "background": "#F7FAFC",
+      "ratio": 2.7176644686493034
+    },
+    {
+      "foreground": "#182b3a",
+      "background": "#F7FAFC",
+      "ratio": 13.860198377888079
+    },
+    {
+      "foreground": "#1A5276",
+      "background": "#F7FAFC",
+      "ratio": 7.9742091306560505
+    },
+    {
+      "foreground": "#8E44AD",
+      "background": "#F7FAFC",
+      "ratio": 5.595618596393527
+    },
+    {
+      "foreground": "#555555",
+      "background": "#ffffff",
+      "ratio": 7.455177810447525
+    },
+    {
+      "foreground": "#304958",
+      "background": "#ffffff",
+      "ratio": 9.461124891630009
+    }
+  ]
+}
