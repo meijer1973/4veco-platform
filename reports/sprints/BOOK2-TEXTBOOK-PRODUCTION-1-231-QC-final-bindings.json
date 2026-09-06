@@ -1,0 +1,38 @@
+{
+  "captured_at": "2026-09-06T00:54:29.989Z",
+  "platform_base": "35e0bebb75cc3987c43dd8f480e1b444bd877f4a",
+  "lessons_base": "219a977e495abe43c17949e7d8996aab4176faa0",
+  "canonical_quality_ref": {
+    "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml",
+    "raw_sha256": "fa445ffe766131eb883fd54357952e3d8f21c4b14ad426aaf673567433df6bbf",
+    "canonical_lf_sha256": "fa445ffe766131eb883fd54357952e3d8f21c4b14ad426aaf673567433df6bbf"
+  },
+  "report": {
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-report.md",
+    "raw_sha256": "cca0c93f3c699520d9cb70e9431ca9d1039e2e68f5a3924a73a398bfa316d117"
+  },
+  "references": [
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1-review.md",
+      "raw_sha256": "8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943"
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-personal-inspection-r17.json",
+      "raw_sha256": "0617dd369111e6174bfd50854dbef3dd781f6e9b99cb5e2d45a6971a1f460339"
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-native-reproduction.json",
+      "raw_sha256": "83594208af496279dbb421f7c86cf8efe16532f25bdb04435925a4bd518aa1b1"
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-probes-result.json",
+      "raw_sha256": "ef025a1c7b8ae627debd7426c2a7438e41fceefc7441e6c4dd1f7e48dd25f8ed"
+    }
+  ],
+  "unchanged_lesson45": 45,
+  "unchanged_old_sources_reports": 7852,
+  "source_authorship_changes": 0,
+  "root_validation": "PENDING",
+  "root_acceptance": "PENDING",
+  "handoff_renewal": "PENDING"
+}

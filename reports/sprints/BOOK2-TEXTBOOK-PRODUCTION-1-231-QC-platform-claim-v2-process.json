@@ -1,0 +1,20 @@
+{
+  "name": "platform-claim-v2",
+  "cwd": "C:\\wt\\book2-231-qc-20260906\\4veco-platform",
+  "command": "node",
+  "args": [
+    "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\build-scripts\\ci\\check-agent-worktree-safety.js",
+    "--check",
+    "--task",
+    "BOOK2-TEXTBOOK-PRODUCTION-1-231-QC",
+    "--agent",
+    "paragraph_231_specialist_qc",
+    "--require-prefix",
+    "codex/,agent/"
+  ],
+  "started_at": "2026-09-06T00:54:27.372Z",
+  "finished_at": "2026-09-06T00:54:27.637Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"mode\": \"check\",\n  \"repository\": \"4veco-platform\",\n  \"worktree_path\": \"C:/wt/book2-231-qc-20260906/4veco-platform\",\n  \"git_dir\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform165\",\n  \"anchor_clone\": false,\n  \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-231-QC\",\n  \"agent_id\": \"paragraph_231_specialist_qc\",\n  \"lock\": {\n    \"present\": true,\n    \"same_owner\": true,\n    \"same_task\": true,\n    \"stale\": false,\n    \"path\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform165\\\\4veco-agent-worktree-lock.json\",\n    \"owner\": \"paragraph_231_specialist_qc\",\n    \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-231-QC\"\n  },\n  \"branch\": \"agent/book2-231-qc-20260906\",\n  \"head_sha\": \"651df6307a4ffab02e104897b3a699842524290f\",\n  \"on_main\": false,\n  \"detached_head\": false,\n  \"dirty\": true,\n  \"dirty_count\": 42,\n  \"ahead\": 0,\n  \"behind\": 0,\n  \"diverged\": false,\n  \"prefix_ok\": true,\n  \"required_prefixes\": [\n    \"codex/\",\n    \"agent/\"\n  ],\n  \"warnings\": [\n    \"working tree is dirty (42 items)\"\n  ],\n  \"failures\": []\n}\n",
+  "stderr": ""
+}

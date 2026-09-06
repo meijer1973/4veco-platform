@@ -1,0 +1,6 @@
+{
+  "original_raw_sha256": "3900acbdf1c9d29035661d6a5e3b6c7cff8b0f1369cee89e10e962a16ebfd815",
+  "formatted_markdown_sha256": "0a7628d4d803d93c410f05cef38b50d836482bb43cf358309c12ac981d255c92",
+  "immutable_jsonl_sha256": "3c16a947ba720d677ed6810525cc58907164e20bd7324343e6681d7ff1426c1f",
+  "transformation": "Only own readable Markdown log CRLF to LF/trailing whitespace; original raw bytes archived, JSONL unchanged; no foreign evidence modified"
+}

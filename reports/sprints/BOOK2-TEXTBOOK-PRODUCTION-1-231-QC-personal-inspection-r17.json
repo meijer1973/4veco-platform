@@ -1,0 +1,1371 @@
+{
+  "reviewer": "paragraph_231_specialist_qc",
+  "role": "distinct independent specialist QC; not author, source reviewer, or root integrator",
+  "recorded_after_personal_inspection_at": "2026-09-06T00:46:31.407Z",
+  "verdict": "PASS WITH FLAGS",
+  "reviewed_platform_baseline": "35e0bebb75cc3987c43dd8f480e1b444bd877f4a",
+  "reviewed_lessons_baseline": "219a977e495abe43c17949e7d8996aab4176faa0",
+  "canonical_review_raw_lf_sha256": "8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943",
+  "approved_plan_lf_sha256": "60d6a743681e1361478395a591b7c82e44acf8c4587a93c4cc842b036cf017b1",
+  "probes_result_raw_sha256": "ef025a1c7b8ae627debd7426c2a7438e41fceefc7441e6c4dd1f7e48dd25f8ed",
+  "native_reproduction_raw_sha256": "83594208af496279dbb421f7c86cf8efe16532f25bdb04435925a4bd518aa1b1",
+  "manifests": [
+    {
+      "revision": "r17",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r17.json",
+      "raw_sha256": "ddb1a19810e263ab8af5e5457d8906b91332da5b6e3fcb66e7f5747ed41f862f",
+      "generation": [
+        {
+          "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\manifest.json",
+          "raw_sha256": "0ee7ec71e1d7159f87b4208f0563ba6fa3be896c89bfc82cb5ffbe47edc586ce",
+          "inspection_status": "PENDING"
+        },
+        {
+          "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r17\\manifest.json",
+          "raw_sha256": "8c4fc358b813766ac90de05582846f88a1e94c5e4b9acd359367abc4fcb7c46b",
+          "inspection_status": "PENDING"
+        },
+        {
+          "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r17\\manifest.json",
+          "raw_sha256": "c69bbe67ba9f2ea47e5a86b384a19540f77eb92f14f7ac0a216bc46b07e40d0a",
+          "inspection_status": "PENDING"
+        }
+      ]
+    },
+    {
+      "revision": "r18",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r18.json",
+      "raw_sha256": "da1ae39fb83f81f2ec89210e5471bbce213bba1fb7100eeb6087e72711923d9e",
+      "generation": [
+        {
+          "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r18\\manifest.json",
+          "raw_sha256": "9a0502924439f8467c9f3f29a5068fcd08531e27837f7486149420329ce07822",
+          "inspection_status": "PENDING"
+        },
+        {
+          "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r18\\manifest.json",
+          "raw_sha256": "5452102ae96ae847dca9993b065c41becbc40a6619a3743df5907f6794e72d6f",
+          "inspection_status": "PENDING"
+        },
+        {
+          "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r18\\manifest.json",
+          "raw_sha256": "a1244cd99170e29d79028cad2e80a7e840d25c01c8cc52afb6160c2ee080b5bb",
+          "inspection_status": "PENDING"
+        }
+      ]
+    },
+    {
+      "revision": "r19",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r19.json",
+      "raw_sha256": "eb0f92382f07ded6ba0f7574cde525e5750f272fe138ac1f32cb1328a62e8cde",
+      "generation": [
+        {
+          "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r19\\manifest.json",
+          "raw_sha256": "2d4057da45f7ee87323196742c037d68d0ea24b2e201918afa579fe2f99950d8",
+          "inspection_status": "PENDING"
+        },
+        {
+          "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r19\\manifest.json",
+          "raw_sha256": "1ccac2fa2056116e765afde5c64acd779b1cbcdaf28aee2eb5ce51b5cce3cd24",
+          "inspection_status": "PENDING"
+        },
+        {
+          "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r19\\manifest.json",
+          "raw_sha256": "9beaa2048693bcdb3dd0dd1ed1c356c18ecb97d01ff39fa35d98ddc17a5ca5d6",
+          "inspection_status": "PENDING"
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "kind": "paragraaf",
+      "page": 1,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-001.png",
+      "raw_sha256": "85eda8489f3983841a45533a1f4a6a2953ec39120c0e9d49f3dae71d31069927",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Unique title, workshop motivation and four numbered frozen goals clear. Four-row purchased-unit table intact:18/14/10/6 at10, CS8/4/0 and excluded nonbuyer. Figure introduction leads to complete caption on next page, not an orphan heading. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 1,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-001.png",
+      "raw_sha256": "8ea526985038c46011d637959693491d7a8b409c91f80e96d1552d297c770e4d",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Unique title, workshop motivation and four numbered frozen goals clear. Four-row purchased-unit table intact:18/14/10/6 at10, CS8/4/0 and excluded nonbuyer. Figure introduction leads to complete caption on next page, not an orphan heading. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 2,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-002.png",
+      "raw_sha256": "419c494bf103487d0a0c7412979e3b10cb3c3d851fb9962d0cd99e42cfa2c427",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Discrete bars/gaps8/4 and price10 remain distinct without color. Table-to-total12/30/42 and benefit-not-cash explanation legible. Continuous bounded model is introduced separately, not inferred from four bars. Dense lower text remains above footer. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 2,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-002.png",
+      "raw_sha256": "d2285cea0dc17043138e22b25688b6bdcaf2adb22da9cf45b96e736a6f93a0d2",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Discrete bars/gaps8/4 and price10 remain distinct without color. Table-to-total12/30/42 and benefit-not-cash explanation legible. Continuous bounded model is introduced separately, not inferred from four bars. Dense lower text remains above footer. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 3,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-003.png",
+      "raw_sha256": "7d0e1457d2cd41bb7c17340bb1461d8cd069c5642a579883362e56a3e56fde41",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Axes-only stage labels P euro/card, Q cards, (0,40),(80,0) are large. Substitution Q60 at given10 explained below, with highest-WTP full-sale premise. No premature shaded solution. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 3,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-003.png",
+      "raw_sha256": "33c3f3ca32e59e04e17864aaf30cee72a7c01c8fb5cfed9de112e153ca9da3cc",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Axes-only stage labels P euro/card, Q cards, (0,40),(80,0) are large. Substitution Q60 at given10 explained below, with highest-WTP full-sale premise. No premature shaded solution. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 4,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-004.png",
+      "raw_sha256": "4e8afc9f7bb6c17f4889bdc68fbbe91c09061ca1ab2db575127e12fbd6fd7a42",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Demand and given-price stage adds P10 and Q60 projection, no CS yet. Given-price quantity is explicitly not calculated equilibrium. Strip-to-area reasoning introduces next full triangle. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 4,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-004.png",
+      "raw_sha256": "2e4115588d4c743f4f9837d2991147159550e01baa56a9a8a4f60b93d0f5e51e",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Demand and given-price stage adds P10 and Q60 projection, no CS yet. Given-price quantity is explicitly not calculated equilibrium. Strip-to-area reasoning introduces next full triangle. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 5,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-005.png",
+      "raw_sha256": "44a803d3866ef95a81c24aece15365bc931bd123784abbd1586c845e6a3eb147",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Bookfair CS hatched above P10 and plain payment below; direct labels, base60 height30 and formula conditions match. Intact900/600/1500 table; dense page still readable without footer collision. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 5,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-005.png",
+      "raw_sha256": "13aa264fad6353b89ab6ab3032ee3b301c2e44e7cc1344cf2c251a4115016dfd",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Bookfair CS hatched above P10 and plain payment below; direct labels, base60 height30 and formula conditions match. Intact900/600/1500 table; dense page still readable without footer collision. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 6,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-006.png",
+      "raw_sha256": "75b1f419622fb4adfdf1e48b5d75b2a21f7c716003b73c374a164f52dd30c289",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Misconception warning separates payment and group benefit. Price-change claim stays conditional. Museum context/domain and steps1–3 retain axes/units and Q20, with no orphan heading. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 6,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-006.png",
+      "raw_sha256": "3b9cea8080a28746444181e3841180d71b52a1271e14f36f7e7b2ba62cb7ee87",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Misconception warning separates payment and group benefit. Price-change claim stays conditional. Museum context/domain and steps1–3 retain axes/units and Q20, with no orphan heading. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 7,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-007.png",
+      "raw_sha256": "6848fb7b6083976034ce1e7b0d40574aa753c1d2e2f378a2c40dd57c306e340b",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Museum figure shows Q20/P10 and correct CS triangle. Full caption and steps4–5 give200 euro group benefit, not per-person money. Text/figure progression is explicit. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 7,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-007.png",
+      "raw_sha256": "d6e4b6eaa7a0b4521604359aefa3fd27f84a0ccc836a9dbfeff46ac553c713fd",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Museum figure shows Q20/P10 and correct CS triangle. Full caption and steps4–5 give200 euro group benefit, not per-person money. Text/figure progression is explicit. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 8,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-008.png",
+      "raw_sha256": "f55c0517cf6c6062e8afbff37f7a93b4709ac4756a0bba8898ab7e734fcb5bdb",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Five-point non-heading recap directly after worked example and before Start. Neutral paper route. Start1 retrieves substitution/intercepts/axes and triangle8cm by6cm; Start2Noor6 and aquarium setup are accessible. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 8,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-008.png",
+      "raw_sha256": "51824357046f2ae936e87db15bc197d04dfe851bf1263ff248c334837f11bbfe",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Five-point non-heading recap directly after worked example and before Start. Neutral paper route. Start1 retrieves substitution/intercepts/axes and triangle8cm by6cm; Start2Noor6 and aquarium setup are accessible. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 9,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-009.png",
+      "raw_sha256": "a397ad565f3bfb232ef313e360312282517cb823310dc7ef18558b827b00ef3f",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Aquarium Start2 graph is deliberately unshaded: P8/Q32, axes and full caption clear. Questions ask area and critique of refund misconception. Optional guided route is explicitly skippable with neutral wording. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 9,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-009.png",
+      "raw_sha256": "0813d242ec72fae797928e314509741d123c58634e9c97c8434f982bcf2068ff",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Aquarium Start2 graph is deliberately unshaded: P8/Q32, axes and full caption clear. Questions ask area and critique of refund misconception. Optional guided route is explicitly skippable with neutral wording. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 10,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-010.png",
+      "raw_sha256": "4e36215ba25088439b1dce2c0672c6afa59007ccd2678c6cfcc4895e8a59503f",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Garden guided graph explicitly supplies base40/height20, P10/Q40 and CS region; fill-in prompts strong support. Climbing context leads to reduced-scaffold graph next page. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 10,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-010.png",
+      "raw_sha256": "0691df6f57c7cd4d917e9e520851639c608ec4dfaa081fa74e43c8fc1fd0c939",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Garden guided graph explicitly supplies base40/height20, P10/Q40 and CS region; fill-in prompts strong support. Climbing context leads to reduced-scaffold graph next page. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 11,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-011.png",
+      "raw_sha256": "f1835f479cf77c4b2319a1511354d21e6de4341a9c3516a3d0d5f9f8df861fbd",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Climbing graph supplies demand only, no P/CS answer. Learner adds P12 and shade. Boardgame supplies no graph and requires full chain, with after-work check sentence only. Fading is visible. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 11,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-011.png",
+      "raw_sha256": "b69dfd2c93f9c9fa0bf6303d5d484cab43220c9ca32e2400a11bfbef7399183a",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Climbing graph supplies demand only, no P/CS answer. Learner adds P12 and shade. Boardgame supplies no graph and requires full chain, with after-work check sentence only. Fading is visible. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 12,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-012.png",
+      "raw_sha256": "1272968c856fe87f443004a1ce9776ed72199c0ca93ca9965e0c43c0202f7892",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Independent skate and cafe exercises complete on page, no hint graph. Learner computes/draws/shades/explains. Cafe392 payment-confusion item uses intercept transfer; no unintroduced operation. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 12,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-012.png",
+      "raw_sha256": "7638f335af4249ce03951ba1ea2236a2f74255a6eb3145db7403353f150704bb",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Independent skate and cafe exercises complete on page, no hint graph. Learner computes/draws/shades/explains. Cafe392 payment-confusion item uses intercept transfer; no unintroduced operation. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 13,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-013.png",
+      "raw_sha256": "2c04fd299497cdd5dbfa99cf2152f539608e5878b1dd2ae474747622fe3591fa",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Frozen target Opg8 context and all five subquestions2/3/2/3/2 remain together, unhinted and without answer figure. Bonus9 genuinely changes buyers/full-sale assumption; complete prompt below target. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 13,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-013.png",
+      "raw_sha256": "bb2330cecd92761d6cb1f52b88d0614372d86fbed5161fba611f692b48babe22",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Frozen target Opg8 context and all five subquestions2/3/2/3/2 remain together, unhinted and without answer figure. Bonus9 genuinely changes buyers/full-sale assumption; complete prompt below target. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 14,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r17\\pages\\page-014.png",
+      "raw_sha256": "4a475707b3924190b04b13ba7974cdd88471d4c639f252e2e33b1fef7c30364a",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Two closing exercises remain together, accessible demand-coordinate and bought-unit retrieval, no new theory. Large terminal whitespace preserves the closing pair rather than producing an avoidable mid-task blank. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 14,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\paragraaf\\page-014.png",
+      "raw_sha256": "9411ec6d5b0f6fb68577ab0ce3bdfb1e981163749281204edbae264f8200e353",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Two closing exercises remain together, accessible demand-coordinate and bought-unit retrieval, no new theory. Large terminal whitespace preserves the closing pair rather than producing an avoidable mid-task blank. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 1,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r17\\pages\\page-001.png",
+      "raw_sha256": "a86532b046d30704688c756d50c7cd3bf028d2c3afe5ec5a75eeb4923a03ad8d",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Unique opgaven title and complete museum worked context/steps1–3. Same paper content as paragraph, sensible roomier pagination. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 1,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\opgaven\\page-001.png",
+      "raw_sha256": "fb74e7672f7e3811a65f8818a21d7456cfc1f69b9c0e53fedcd623d3119f0005",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Unique opgaven title and complete museum worked context/steps1–3. Same paper content as paragraph, sensible roomier pagination. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 2,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r17\\pages\\page-002.png",
+      "raw_sha256": "5679e6463e429adf744510ff48927fda4875ca96bdd9b949229b3b1d06c35baa",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Museum figure shows Q20/P10 and correct CS triangle. Full caption and steps4–5 give200 euro group benefit, not per-person money. Text/figure progression is explicit. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 2,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\opgaven\\page-002.png",
+      "raw_sha256": "89345a2d4da77eef1fd0425ba2ade7c209b32117ccb3a2310a35525d9c313fd2",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Museum figure shows Q20/P10 and correct CS triangle. Full caption and steps4–5 give200 euro group benefit, not per-person money. Text/figure progression is explicit. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 3,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r17\\pages\\page-003.png",
+      "raw_sha256": "16d3a459e2133f58e4ba84820bd6496986e467eba8fa945b5fc2b8267d5b0204",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Five-point non-heading recap directly after worked example and before Start. Neutral paper route. Start1 retrieves substitution/intercepts/axes and triangle8cm by6cm; Start2Noor6 and aquarium setup are accessible. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 3,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\opgaven\\page-003.png",
+      "raw_sha256": "b540e6d7dfdb9970a866a1370e5b69cf69b32ca06a1fa3b6db1f2a2a157da40a",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Five-point non-heading recap directly after worked example and before Start. Neutral paper route. Start1 retrieves substitution/intercepts/axes and triangle8cm by6cm; Start2Noor6 and aquarium setup are accessible. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 4,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r17\\pages\\page-004.png",
+      "raw_sha256": "3c964cb90c4aebfa152b9385a61c17497922ea06e8fa101fb5bde20ceb28c8a3",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Aquarium Start2 graph is deliberately unshaded: P8/Q32, axes and full caption clear. Questions ask area and critique of refund misconception. Optional guided route is explicitly skippable with neutral wording. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 4,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\opgaven\\page-004.png",
+      "raw_sha256": "b4b402d368a27c8bc9e7f27be9fcbc48caffa35caccda59abdaee8b6e1103bb1",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Aquarium Start2 graph is deliberately unshaded: P8/Q32, axes and full caption clear. Questions ask area and critique of refund misconception. Optional guided route is explicitly skippable with neutral wording. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 5,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r17\\pages\\page-005.png",
+      "raw_sha256": "c4e695f5b67a7cbe178d05248cdb77914d6514f5683ffec74cd9aacb1f9c9188",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Garden guided graph explicitly supplies base40/height20, P10/Q40 and CS region; fill-in prompts strong support. Climbing context leads to reduced-scaffold graph next page. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 5,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\opgaven\\page-005.png",
+      "raw_sha256": "f78bce7cdf9e42a444cffd1085979512ac83849a104e6f6333edca25e5892949",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Garden guided graph explicitly supplies base40/height20, P10/Q40 and CS region; fill-in prompts strong support. Climbing context leads to reduced-scaffold graph next page. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 6,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r17\\pages\\page-006.png",
+      "raw_sha256": "44809b754e454521e93e2855588ee42038b365b9e03367baa716cb09e3048ce8",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Climbing graph supplies demand only, no P/CS answer. Learner adds P12 and shade. Boardgame supplies no graph and requires full chain, with after-work check sentence only. Fading is visible. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 6,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\opgaven\\page-006.png",
+      "raw_sha256": "058dfabde08686854edab46544c95dd936e003b7756acbfcadb4257ee53c2c60",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Climbing graph supplies demand only, no P/CS answer. Learner adds P12 and shade. Boardgame supplies no graph and requires full chain, with after-work check sentence only. Fading is visible. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 7,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r17\\pages\\page-007.png",
+      "raw_sha256": "4871f6be0f7d5c986c98fe97d30052b4a88d076700fa28f8519f41d8f48b2a4a",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Independent skate and cafe exercises complete on page, no hint graph. Learner computes/draws/shades/explains. Cafe392 payment-confusion item uses intercept transfer; no unintroduced operation. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 7,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\opgaven\\page-007.png",
+      "raw_sha256": "97b487eb7b4df60d58be9fe14c53818b1163857d2225f1c69fcdc404327f8fd8",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Independent skate and cafe exercises complete on page, no hint graph. Learner computes/draws/shades/explains. Cafe392 payment-confusion item uses intercept transfer; no unintroduced operation. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 8,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r17\\pages\\page-008.png",
+      "raw_sha256": "7a4fcaec4519ef5476cdad2b29715618370313d7cafafb2a191f6313e44ebc15",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Frozen target Opg8 context and all five subquestions2/3/2/3/2 remain together, unhinted and without answer figure. Bonus9 genuinely changes buyers/full-sale assumption; complete prompt below target. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 8,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\opgaven\\page-008.png",
+      "raw_sha256": "ad459341dc37de81ab479ce419df817f96f332a1c57655f2dfacd3c636a56510",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Frozen target Opg8 context and all five subquestions2/3/2/3/2 remain together, unhinted and without answer figure. Bonus9 genuinely changes buyers/full-sale assumption; complete prompt below target. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 9,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r17\\pages\\page-009.png",
+      "raw_sha256": "33f937d340e3303b8d861af2fecc9defd1438987ac88ffbe9e3378bb87d7e340",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Two closing exercises remain together, accessible demand-coordinate and bought-unit retrieval, no new theory. Large terminal whitespace preserves the closing pair rather than producing an avoidable mid-task blank. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "opgaven",
+      "page": 9,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\opgaven\\page-009.png",
+      "raw_sha256": "9e97fe95ec7d34b2e3985b05ef1694badb69d88fa04fc17b08f50b4d9471e03b",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Two closing exercises remain together, accessible demand-coordinate and bought-unit retrieval, no new theory. Large terminal whitespace preserves the closing pair rather than producing an avoidable mid-task blank. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 1,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r17\\pages\\page-001.png",
+      "raw_sha256": "bde0ee3b81939b245a665d211afe0c7cc87817195185dc5ca544f98e9a07ca8e",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Exact arithmetic/no rounding rule and units upfront. Start1a/b/c complete including24cm² and Why. Noor6 and aquarium256 with base32/height16; figure continues next page without orphan heading. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 1,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\antwoorden\\page-001.png",
+      "raw_sha256": "4230ae514056dba39a1b9535d75ea1d7d76336bf357d6b722b7163172cbb4902",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Exact arithmetic/no rounding rule and units upfront. Start1a/b/c complete including24cm² and Why. Noor6 and aquarium256 with base32/height16; figure continues next page without orphan heading. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 2,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r17\\pages\\page-002.png",
+      "raw_sha256": "d7a9daef7601306c0d6e3c8e09497071c8922ec795a74941369ce95a03afd0ba",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Aquarium answer figure closed triangle and256 caption; Sem is corrected as group WTP-payment, not refund/per visitor. Garden Q40 and CS400 calculations and Why clear. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 2,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\antwoorden\\page-002.png",
+      "raw_sha256": "977d79a9ad6934f36f763e37a388c05a349d6be9400e26f672da845bbafcc314",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Aquarium answer figure closed triangle and256 caption; Sem is corrected as group WTP-payment, not refund/per visitor. Garden Q40 and CS400 calculations and Why clear. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 3,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r17\\pages\\page-003.png",
+      "raw_sha256": "930cdc1ad36e5c375f04ed082b9a76c07afedf49ff91c8cf66b3f45196d9a632",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Garden answer figure and400 group interpretation complete. Climbing Q24, axes48/24, CS144 and Why fully legible. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 3,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\antwoorden\\page-003.png",
+      "raw_sha256": "de564918d942f6f446ad72b19dfbd2b03f60ec4e421e99b6ecfc54a9b88f8df9",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Garden answer figure and400 group interpretation complete. Climbing Q24, axes48/24, CS144 and Why fully legible. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 4,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r17\\pages\\page-004.png",
+      "raw_sha256": "d0d5f311553dd45202fff8e89abbee00ba0192d70a8998775ad310275c56fe8c",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Climbing144 graph and group meaning match. Boardgame Q30 and CS225, axes40/20 and full shading steps are readable before answer graph next page. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 4,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\antwoorden\\page-004.png",
+      "raw_sha256": "d49397a7329c639db56ef7625f29d16a44d406f1b45859a78c0e330a5c4f7e99",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Climbing144 graph and group meaning match. Boardgame Q30 and CS225, axes40/20 and full shading steps are readable before answer graph next page. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 5,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r17\\pages\\page-005.png",
+      "raw_sha256": "7e9f9672ca197b55466dac497ae74c5a2b0679916ed62cdfc7d31a6635d3fb06",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Boardgame225 graph with Why addresses group/payment distinction. Skate Q48 and72/36 axes plus CS region0..48 are complete; continuation attribution remains clear. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 5,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\antwoorden\\page-005.png",
+      "raw_sha256": "693622454498abd0c7564869f1c010a21533ad04aacdd884283d523c9a40637c",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Boardgame225 graph with Why addresses group/payment distinction. Skate Q48 and72/36 axes plus CS region0..48 are complete; continuation attribution remains clear. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 6,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r17\\pages\\page-006.png",
+      "raw_sha256": "6503c111d31d3d1320526e27fa2f14cc84beeae774da3b3d0b5f3c5698ca5972",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Continued skate Why is a complete short paragraph with named skate graph immediately below. Figure576, units and not-equilibrium explanation clear. Cafe28/56 intercept reasoning and Q28 at14 legible. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 6,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\antwoorden\\page-006.png",
+      "raw_sha256": "b1465ad070b58822bd221a348a7f5e433e6ab5fdbe951abaaf4acb1db0d09927",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Continued skate Why is a complete short paragraph with named skate graph immediately below. Figure576, units and not-equilibrium explanation clear. Cafe28/56 intercept reasoning and Q28 at14 legible. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 7,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r17\\pages\\page-007.png",
+      "raw_sha256": "8c158dc066fc1796b9988dde8e13cafe46c1d842df70e80856d8b5fd380bddcc",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Cafe CS196 and payment392 have distinct hatch/plain regions and direct labels. All explanation complete. Target begins with a2points,Q60 explicitly not an equilibrium; no footer collision. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 7,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\antwoorden\\page-007.png",
+      "raw_sha256": "65c6e26575e86251ec9a9a408a5cc3ae8340698499a4cb03f9b196e031f0b622",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Cafe CS196 and payment392 have distinct hatch/plain regions and direct labels. All explanation complete. Target begins with a2points,Q60 explicitly not an equilibrium; no footer collision. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 8,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r17\\pages\\page-008.png",
+      "raw_sha256": "5a944678452dc1632162f2875cd420e40211e918119dd85c15af9b17c7b926c9",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Target b3 and c2 show axes/intercepts/price and exact region. Answer-only concert figure has CS bounded0..60 above20. d3 label and900 short answer stay together; expanded explanation follows next page. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 8,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\antwoorden\\page-008.png",
+      "raw_sha256": "c92795b8c22f918b34fe845761fa23d14298c88655437884c36c7ca318a3047c",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Target b3 and c2 show axes/intercepts/price and exact region. Answer-only concert figure has CS bounded0..60 above20. d3 label and900 short answer stay together; expanded explanation follows next page. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 9,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r17\\pages\\page-009.png",
+      "raw_sha256": "bfcbedbd4dd816fdb61ee9bce6c492d17302930e1202c1fd0d39125ce018763d",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Expanded target900 base60/height30 and e2 group-benefit-not-refund/revenue/per-person meaning complete. All five score table rows2/3/2/3/2=12 intact, legible and within page margins. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 9,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\antwoorden\\page-009.png",
+      "raw_sha256": "446655731838bfca0d86fe6ef33227bf1e17192b653d8499ac02492266f14cec",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Expanded target900 base60/height30 and e2 group-benefit-not-refund/revenue/per-person meaning complete. All five score table rows2/3/2/3/2=12 intact, legible and within page margins. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 10,
+      "mode": "color",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r17\\pages\\page-010.png",
+      "raw_sha256": "cb6fc9558ff416c24510d4a53c81b933b1b1b06c264f0872aab6c9a65cdaf1cb",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Bonus model answer complete with exactly three criteria together: actual12vs12 and highest-three counterfactual24; altered buyers/full-sale premise. Closing Q24 at6 and two buyers/CS3, including zero buyer and excluded nonbuyer; Book1 pointers printed. Footer identity and page count correct; grayscale does not remove essential information."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 10,
+      "mode": "grayscale",
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17\\antwoorden\\page-010.png",
+      "raw_sha256": "e586b8e326aa24a4cb66d71359cbe6fbc48b8614d38a606f377a6f8b572c89bc",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "personally_inspected": true,
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "observation": "Bonus model answer complete with exactly three criteria together: actual12vs12 and highest-three counterfactual24; altered buyers/full-sale premise. Closing Q24 at6 and two buyers/CS3, including zero buyer and excluded nonbuyer; Book1 pointers printed. Footer identity and page count correct; grayscale does not remove essential information."
+    }
+  ],
+  "figures": [
+    {
+      "stem": "2.3.1_fig_1",
+      "svg_raw_sha256": "a6ac9ac39a7e60600c87b5851f3a42018e05e61eea28bb1cf5ba221cb7f91cc9",
+      "png_raw_sha256": "08f5a184ae07b31b0e383ae9be7efd621cabc252c5aaf6753307ef981abf7d60",
+      "text_nodes": 20,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "fd3e70ea0d63cef7d0e1bd505db076e7edbe841ef6e90f894783a1c97ae3b364",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_fig_1.png",
+      "gray_raw_sha256": "876232324d84d8fce58f949cda311683f44d19e2aa2db60570e8c1de6d2e03d4",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Discrete participant categories remain bars, not a connected demand line. WTP18/14/10/6, price10, hatched gaps8/4, zero gap3 and unbought4 all explicit. Gray keeps hatches and purchase sentence clear."
+    },
+    {
+      "stem": "2.3.1_fig_2",
+      "svg_raw_sha256": "5eec646f0a442692a769dcffacaf9f1275539ab90aa5146b52c5c18f447246a1",
+      "png_raw_sha256": "cc5447843fcf0c6334bcc4b6733942b6299424572b4bb0a4343462c7bed257f7",
+      "text_nodes": 14,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "8df7faf18d5d8ba8a5f78518a93ad506619310c1e3596dba89f7fa1e3af9463d",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_fig_2.png",
+      "gray_raw_sha256": "3448a8d844e80cd0c44b35eac019fa741f987415c98442964c2e2079bade799e",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Axes-only stage deliberately omits demand/price/CS. P40,Q80 intercept dots, axes/units/ticks and coordinate summary clear in both modes."
+    },
+    {
+      "stem": "2.3.1_fig_3",
+      "svg_raw_sha256": "d44e452653c0c6e5817b8b7cca913dc3e0d61de2426244c90357064366bcf76d",
+      "png_raw_sha256": "94dc9f593e7533189d3f0b4afae992079eaa349f4c29fd4d7f0f1ba60e41f3a9",
+      "text_nodes": 16,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "d4d87c8df2283a101c8c94809ccebe895b3e0e37db149562dac37bc047675a3a",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_fig_3.png",
+      "gray_raw_sha256": "5a7a313861ae6738c4b763003e03262e69183e1c52b7ae4edd20f5654b0438e3",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Adds demand and P10/Q60 projection without CS. Solid demand, long-dash price, short-dash projection distinguish roles in gray."
+    },
+    {
+      "stem": "2.3.1_fig_4",
+      "svg_raw_sha256": "f04a1051b0ebdcf4e49aeefa3d11889e2d019bc1a0bca3c9439a8c10f8eb5aef",
+      "png_raw_sha256": "e0b85f0c26d7434d9e1b3da8a60ffce94e22665dccf4b304192a2d2d12a83065",
+      "text_nodes": 18,
+      "polygon_area_euro": 900,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "2a9bd4df43ffc4e6058718034cb51fc9b9fc74ff49e3dc2d6b805a2288e70904",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_fig_4.png",
+      "gray_raw_sha256": "0a35081c01745ed9dd9a4ff5c796647d1cdbdef13313aa9bbbcdf3d14e5dff95",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "CS triangle above10 and payment rectangle below10 have separate hatch/plain texture and labels. Region stops at60; intercepts40/80 and all coordinates readable."
+    },
+    {
+      "stem": "2.3.1_we_1",
+      "svg_raw_sha256": "587fddfd013c9c29d943ed528b9a697e3f0043fa73c57944bfc2a428500bd38f",
+      "png_raw_sha256": "8bf4724ae62323bb209059f52b28ac733d9b9274f7347f6f7a35ea076d89ef4e",
+      "text_nodes": 21,
+      "polygon_area_euro": 200.0000001136364,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "405b02a8d97c388649367b98a84846073e1e3825557e65b635d7ad3ef537cc23",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_we_1.png",
+      "gray_raw_sha256": "a40046f71e35fda1d921faa3e4d3cb1149de8375d2011039434620eaeb442d78",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Museum P10,Q20, intercepts30/30. Hatched CS200 triangle, clear direct labels and generous coordinate footer."
+    },
+    {
+      "stem": "2.3.1_ex_1",
+      "svg_raw_sha256": "60f91cf5fd9da887c840f9b02dbd99c6e9541800354643a7756370b2e258b660",
+      "png_raw_sha256": "23d31f28e469b1a0f4b0432ba013dc724102a8062654d72d8e00d26bbb99e1d2",
+      "text_nodes": 20,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "1bd1e1f2f27e50f6cbcbb991af31ba34221caae67fe8fa08d46a6b156fb69d26",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_ex_1.png",
+      "gray_raw_sha256": "e4673659f996d81db99c0fea09a6d27c2e119fd0ec8c5382c04aca85bacff691",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Aquarium supplied Start graph P8,Q32, intercepts24/48; no premature CS shading, correct support for comprehension task."
+    },
+    {
+      "stem": "2.3.1_ex_2",
+      "svg_raw_sha256": "2562f1ce54bb06b08ed1dbb5750ab7642e08b3f47155e0c6df556b362fc4ef50",
+      "png_raw_sha256": "dcc9c5f89d17f3b53019f4215e643039471db1df0fa6197ba468d5c17c8e05e4",
+      "text_nodes": 21,
+      "polygon_area_euro": 400.0000002272728,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "9b875068b768761c99824cca66941796bc2f61cd32557d9bdbc7880c94a797e3",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_ex_2.png",
+      "gray_raw_sha256": "52ae2b7d5fea2e8ea3f6384a194288a20772c8bc13335334169b50e8755c7e18",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Garden stronger guided graph with CS, P10/Q40, base40 and height20 explicitly given in bottom text; no text collision."
+    },
+    {
+      "stem": "2.3.1_ex_3",
+      "svg_raw_sha256": "7d2fcef8db60098d53ee1434d09ba57bdff6125e0f560a1050d6459eaf86c23f",
+      "png_raw_sha256": "0e68e9d0014f3d5ea7f572f4712f81bda466fd64373b1fd5bfb3625b54e49216",
+      "text_nodes": 19,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "a7ca120ac2e0fe2a7847e6ecb5a7c3627758d2339c3ef71c42536e88231b77b3",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_ex_3.png",
+      "gray_raw_sha256": "6c259d21e9cc2270a257309406f1d70dab89e473a87e13070ff4c6da5c1a9e4b",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Climbing faded scaffold has only demand and intercepts24/48, no price/projection/CS. Learner action remains necessary."
+    },
+    {
+      "stem": "2.3.1_ex_4",
+      "svg_raw_sha256": "6aebb9c03b9c09f2525e3173ca94f1630b4adfdec766ee9920da48a6ee1bfe81",
+      "png_raw_sha256": "915d4932e017a9450eb4fa107555ff5118d9fc0a1fd7f6e18047aa044720901d",
+      "text_nodes": 21,
+      "polygon_area_euro": 256.0000001454545,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "13574f008a4d7506e531637ca6bec448ae99658b3f124feecb08f8acbb1bd517",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_ex_4.png",
+      "gray_raw_sha256": "e1acf1c3181f7cb859c16baa278ad9e2f362ebc1b2c60c7709e11f017e694e11",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Aquarium answer CS256 shown above8, bounded0..32; full coordinate summary legible."
+    },
+    {
+      "stem": "2.3.1_ex_5",
+      "svg_raw_sha256": "cf72ed36989023a14db7ba43ca863e72bbd931d2949f2bdeadc6b1d24a8178b9",
+      "png_raw_sha256": "348ddd3794915072aebb07e9377352b0b4c6f9c41805c6c8b36f86f989e42fd5",
+      "text_nodes": 21,
+      "polygon_area_euro": 400.0000002272728,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "b7da586b84cca689b130853bd4effb6e60479182910c15dd6991e5ad19e4786a",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_ex_5.png",
+      "gray_raw_sha256": "414ab5c310728b56dc16e4a5ee1d7cb7abddeea7118215066d2e91068dbd8031",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Garden answer CS400 above10, bounded0..40; unlike guided image, footer gives coordinates rather than base/height."
+    },
+    {
+      "stem": "2.3.1_ex_6",
+      "svg_raw_sha256": "5f82afe966599380d37a2a1e3b5df2c00b5bf44efcd68649112f22faf6a8bd75",
+      "png_raw_sha256": "f13c25813b98e6db030f148e8235e138c1cea23e60a7b32f467724be8e8697ec",
+      "text_nodes": 21,
+      "polygon_area_euro": 144,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "7a9f17eb1986a80f63697de5205d01c51614bed087ac6648a04614cbcd3366de",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_ex_6.png",
+      "gray_raw_sha256": "e21ea655a1073f2cb715a116b9ac8ecccfc4a631d0354d15dd14f9bd367ea182",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Climbing answer CS144 above12, bounded0..24; direct P12,Q24 and coordinates visible without color."
+    },
+    {
+      "stem": "2.3.1_ex_7",
+      "svg_raw_sha256": "76a740caeb741b93ea8fd2e3c9373c3addd0a153c8f416b796865675d6a21aea",
+      "png_raw_sha256": "211111d91570da80f535c3374abc2a0ce1b9dde02ffb5415ed4568cf8e3fce4a",
+      "text_nodes": 17,
+      "polygon_area_euro": 225,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "a9819915817e4de7cb9908ed96ff4028da40bd97471fb1bcb1fdffa39dd73d70",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_ex_7.png",
+      "gray_raw_sha256": "42f99d21ba702be371fa95d3f5bdf6cdcaa8f6a11a1770091e3cea46059c6ada",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Boardgame answer CS225 above5, bounded0..30; tick scales20/40, label box and coordinate footer clear."
+    },
+    {
+      "stem": "2.3.1_ex_8",
+      "svg_raw_sha256": "b10efc6da3a045d7b8265bb5a1cd7f52f84ad7f66a91d91002d40ec2eb2684b8",
+      "png_raw_sha256": "b7388f6d6e8d2136789ed64409bcc1681697e1df4cb4bef39106792658dfbe29",
+      "text_nodes": 21,
+      "polygon_area_euro": 576.0000003272728,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "e5428d4fec1499e6ea0c9c7984ee4b4307383e6125158e1bdc9278f5b161fc8f",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_ex_8.png",
+      "gray_raw_sha256": "3c25da1e383274a4360b0893923761722046e01d27692f0608e8c889f45665ea",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Skate answer CS576 above12, bounded0..48; demand intercepts36/72 and coordinate summary readable."
+    },
+    {
+      "stem": "2.3.1_ex_9",
+      "svg_raw_sha256": "450e9ac8df21d693a25516b585b6b4f100f91465c1c0ae7419a0460c78397bd3",
+      "png_raw_sha256": "e5b1e54f4edfd441642f7898df8336211ab160b80c9ae913eb1a66a59be6bb2d",
+      "text_nodes": 18,
+      "polygon_area_euro": 196,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "50d3dec57524acc93616808f49d74c441db9f01162c3f11ea5d9c3db0a5cc804",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_ex_9.png",
+      "gray_raw_sha256": "67e5c61b057cf25e65c5923de2883c7427cc41fb9ebc27677c4d547408481fe6",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Cafe answer distinguishes hatched CS196 above14 from plain payment392 rectangle below; P14/Q28 and intercepts28/56 clear in grayscale."
+    },
+    {
+      "stem": "2.3.1_ex_10",
+      "svg_raw_sha256": "5e69ddb9e6d78ec600f2b1c4c707816573ca2e7e920d794a2ed78517c49d730e",
+      "png_raw_sha256": "ffbae805cee07ef35aa27eda49e381d0cddf610b8c8bdc2ade663d48a90cea63",
+      "text_nodes": 19,
+      "polygon_area_euro": 900,
+      "dimensions": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "cd9d0f0ab31908c05f0274357d8e449fb61d8e3ca0ec3b2ecd9edeefaf3443e8",
+      "gray_path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-figure-grayscale-r17\\2.3.1_ex_10.png",
+      "gray_raw_sha256": "60c63ca0232734ee19b8cc2855fa1e24fc3df5ec87131a45a27c281319b77d6e",
+      "personally_inspected_color": true,
+      "personally_inspected_grayscale": true,
+      "inspection_display": "Native PNG2400x1800 viewed independently at1824x1368; all19 placed views also inspected on full1241x1754 pages.",
+      "visible_student_defects": 0,
+      "observation": "Concert target answer only: P20,Q60, intercepts50/100 and CS triangle0..60. Native color/gray direct labels and complete coordinate summary clear."
+    }
+  ],
+  "personally_inspected_images": 96,
+  "visible_student_defects": 0,
+  "applicability": {
+    "paper_pdf_pages": "all33 inspected color and grayscale",
+    "native_figures": "all15 color and grayscale; all19 placed occurrences",
+    "keyboard_focus_hover_tap": "N/A: static paper textbook and noninteractive print HTML; no controls",
+    "ocr": "N/A: born-digital PDF/HTML, not scanned document",
+    "screen_reader": "Not exercised; source lang/headings/alts/captions checked, no PDF/UA or AT certification",
+    "mobile_companion": "out of scope PartB; not inspected",
+    "classroom_timing": "UNOBSERVED52core/64support/76-80all",
+    "inspectie": "optional mapping deferred; no current protected-reference compliance claim"
+  },
+  "root_validation": "PENDING",
+  "root_acceptance": "PENDING",
+  "handoff_renewal": "PENDING",
+  "production_ready": false,
+  "production_ready_with_flags": false
+}

@@ -1,0 +1,19 @@
+{
+  "name": "currentness-pre",
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-book-outline-currentness.js",
+    "--require-approved",
+    "--action",
+    "specialist_review",
+    "--paragraph",
+    "2.3.1"
+  ],
+  "cwd": "C:\\wt\\book2-231-qc-20260906\\4veco-platform",
+  "started_at": "2026-09-06T00:27:21.904Z",
+  "finished_at": "2026-09-06T00:27:23.538Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.3.1\n",
+  "stderr": ""
+}
