@@ -1,0 +1,13 @@
+{
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-dispatch-race.py"
+  ],
+  "cwd": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:31:44.831Z",
+  "ended_at": "2026-09-06T02:31:46.508Z",
+  "exit_code": 0,
+  "child_runtime": "Explicit Python314; MSYS-first child PATH only",
+  "stdout": "=== Loading manifest: book-2.json ===\r\n=== Loading manifest: book-2.json ===\r\n=== Loading manifest: book-2.json ===\r\n{\r\n  \"status\": \"PASS\",\r\n  \"count\": 8,\r\n  \"probes\": [\r\n    {\r\n      \"case\": \"CLI default exact three-positional call\",\r\n      \"status\": \"PASS\"\r\n    },\r\n    {\r\n      \"case\": \"CLI explicit forwarding\",\r\n      \"status\": \"PASS\"\r\n    },\r\n    {\r\n      \"case\": \"Unsupported explicit common dispatch 1/None\",\r\n      \"status\": \"PASS\",\r\n      \"error\": \"ValueError: Explicit proof namespaces require the frozen Book 2 print profile\"\r\n    },\r\n    {\r\n      \"case\": \"Unsupported explicit common dispatch 2/wrong-profile\",\r\n      \"status\": \"PASS\",\r\n      \"error\": \"ValueError: Unsupported book print profile\"\r\n    },\r\n    {\r\n      \"case\": \"Unsupported explicit common dispatch 1/book2-frozen-part-a\",\r\n      \"status\": \"PASS\",\r\n      \"error\": \"ValueError: Unsupported book print profile\"\r\n    },\r\n    {\r\n      \"case\": \"CLI missing-lessons rejected before dispatch\",\r\n      \"status\": \"PASS\"\r\n    },\r\n    {\r\n      \"case\": \"CLI missing-platform rejected before dispatch\",\r\n      \"status\": \"PASS\"\r\n    },\r\n    {\r\n      \"case\": \"Native junction retarget within permitted scope during authority is rejected\",\r\n      \"status\": \"PASS\",\r\n      \"error\": \"ValueError: Book proof namespace changed during input preflight\",\r\n      \"actual_gate_slots\": [\r\n        [\r\n          \"node\",\r\n          \"build-scripts/workflows/check-book-outline-currentness.js\",\r\n          \"--require-approved\",\r\n          \"--action\",\r\n          \"whole_book_assembly\"\r\n        ],\r\n        [\r\n          \"node\",\r\n          \"build-scripts/workflows/check-book2-target-authority-remediation.js\",\r\n          \"--durable\"\r\n        ]\r\n      ]\r\n    }\r\n  ]\r\n}\r\n",
+  "stderr": ""
+}

@@ -1,0 +1,14 @@
+{
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "build-scripts/books/test_lib_book.py",
+    "-v"
+  ],
+  "cwd": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:24:44.851Z",
+  "ended_at": "2026-09-06T02:24:45.004Z",
+  "exit_code": 0,
+  "child_runtime": "Explicit Python314; MSYS-first child PATH only",
+  "stdout": "",
+  "stderr": "test_block_anchors_precede_markdown_headings (__main__.BookBuilderRegressionTests.test_block_anchors_precede_markdown_headings) ... ok\r\ntest_cover_rendering_uses_escaped_decorative_image (__main__.BookBuilderRegressionTests.test_cover_rendering_uses_escaped_decorative_image) ... ok\r\ntest_exercise_css_keeps_fitting_exercises_together (__main__.BookBuilderRegressionTests.test_exercise_css_keeps_fitting_exercises_together) ... ok\r\ntest_exercise_wrapper_closes_at_each_content_boundary (__main__.BookBuilderRegressionTests.test_exercise_wrapper_closes_at_each_content_boundary) ... ok\r\ntest_markdown_and_html_images_are_embedded (__main__.BookBuilderRegressionTests.test_markdown_and_html_images_are_embedded) ... ok\r\ntest_stylesheet_removal_is_independent_of_pandoc_comment (__main__.BookBuilderRegressionTests.test_stylesheet_removal_is_independent_of_pandoc_comment) ... ok\r\ntest_toolchain_record_covers_reviewed_versions (__main__.BookBuilderRegressionTests.test_toolchain_record_covers_reviewed_versions) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 7 tests in 0.007s\r\n\r\nOK\r\n"
+}

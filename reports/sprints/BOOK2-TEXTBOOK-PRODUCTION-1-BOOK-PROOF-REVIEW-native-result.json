@@ -1,0 +1,569 @@
+{
+  "original_fixture_root": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz",
+  "archive": "BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-native-fixture.zip",
+  "archive_sha256": "9fe93063368d98dc1d958930ee78bc13657fccbef1e932e454c42e4a90f7c63a",
+  "member_bytes": {
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-antwoorden-82e53362b933/contact-sheet.png": "e09f80083c7f4861eb1e4aae4376bef037cbe72abf0b907cd51306c06d413a83",
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-antwoorden-82e53362b933/manifest.json": "99357a4e7f0e29f8d9a435dc33b26adbcefc39400f6736f17a0f6a02121fecab",
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-boek-3852967b5c0f/contact-sheet.png": "83bfd248e9740adf22ba3a5b86c762b94b708fc904a2767084eec2511799869b",
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-boek-3852967b5c0f/manifest.json": "27a259fc05ebc86efb65b1339a807c3358d13a5b2dafec9c8a3be5c373156e34",
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-boek-3852967b5c0f/pages/page-001.png": "0eb2245d1e2f6574b11291c53d1ede472cc68dd9e19b28c7c4f49946aee43f7a",
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-boek-3852967b5c0f/pages/page-002.png": "d71e708c6578e7ae0bd1e7e287ea3baeca83f55fcb5564d1b195b7ea5d64e6d4",
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-boek-3852967b5c0f/pages/page-003.png": "f4b66822d211a3c8431b23425ac33c7de58ca0853a2fbd834f7630e3209525eb",
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-boek-3852967b5c0f/pages/page-004.png": "d72f66865586cf3b6fd54f24c4655581cb01c1f8131eb6e000f2a1a52bf01f2d",
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-boek-3852967b5c0f/pages/page-005.png": "90f9c69a9b833e86ac32bddd06b814e2d7b26863203f99ba3a14658b3b87b4d3",
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-antwoorden-82e53362b933/pages/page-001.png": "c5a3424ef0d3db1ea19e65e257c1687891f86e526a6bfe7ba631a5d94e616d95",
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-antwoorden-82e53362b933/pages/page-002.png": "73ad9351e099af6d30c501d1b85615d3b36d539baa254b71890e9b1337d4ccaf",
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-antwoorden-82e53362b933/pages/page-003.png": "55c681589e7014e5a39d8064f43fa598c7923cfa3a26b7833d437d47c44344a6",
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-antwoorden-82e53362b933/pages/page-004.png": "f45f2007800d7cf84275d80fa5d065ceb1a7ad8bf192e16c847367bf11e4eb1d",
+    "platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-INDEPENDENT/r2/book-2-antwoorden-82e53362b933/pages/page-005.png": "aa7e0945245e2e6e1df13ab72a8dfb588f4735e49bcaae0a7f91baa746ce09f8",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-antwoorden-82e53362b933/contact-sheet.png": "e09f80083c7f4861eb1e4aae4376bef037cbe72abf0b907cd51306c06d413a83",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-antwoorden-82e53362b933/manifest.json": "99357a4e7f0e29f8d9a435dc33b26adbcefc39400f6736f17a0f6a02121fecab",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-boek-3852967b5c0f/contact-sheet.png": "83bfd248e9740adf22ba3a5b86c762b94b708fc904a2767084eec2511799869b",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-boek-3852967b5c0f/manifest.json": "27a259fc05ebc86efb65b1339a807c3358d13a5b2dafec9c8a3be5c373156e34",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-boek-3852967b5c0f/pages/page-001.png": "0eb2245d1e2f6574b11291c53d1ede472cc68dd9e19b28c7c4f49946aee43f7a",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-boek-3852967b5c0f/pages/page-002.png": "d71e708c6578e7ae0bd1e7e287ea3baeca83f55fcb5564d1b195b7ea5d64e6d4",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-boek-3852967b5c0f/pages/page-003.png": "f4b66822d211a3c8431b23425ac33c7de58ca0853a2fbd834f7630e3209525eb",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-boek-3852967b5c0f/pages/page-004.png": "d72f66865586cf3b6fd54f24c4655581cb01c1f8131eb6e000f2a1a52bf01f2d",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-boek-3852967b5c0f/pages/page-005.png": "90f9c69a9b833e86ac32bddd06b814e2d7b26863203f99ba3a14658b3b87b4d3",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-antwoorden-82e53362b933/pages/page-001.png": "c5a3424ef0d3db1ea19e65e257c1687891f86e526a6bfe7ba631a5d94e616d95",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-antwoorden-82e53362b933/pages/page-002.png": "73ad9351e099af6d30c501d1b85615d3b36d539baa254b71890e9b1337d4ccaf",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-antwoorden-82e53362b933/pages/page-003.png": "55c681589e7014e5a39d8064f43fa598c7923cfa3a26b7833d437d47c44344a6",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-antwoorden-82e53362b933/pages/page-004.png": "f45f2007800d7cf84275d80fa5d065ceb1a7ad8bf192e16c847367bf11e4eb1d",
+    "platform/reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/independent-r1/book-2-antwoorden-82e53362b933/pages/page-005.png": "aa7e0945245e2e6e1df13ab72a8dfb588f4735e49bcaae0a7f91baa746ce09f8",
+    "platform/build-scripts/books/book-manifests/antwoorden-back.md": "6380b956358351172aa003efc3756b1f48ecbda424e511034179ada5b47773d9",
+    "platform/build-scripts/books/book-manifests/antwoorden-front.md": "da521e855bceb12bf37ea17586df44f4f6dd4d156403c246bec8941955f3528f",
+    "platform/build-scripts/books/book-manifests/boek-back.md": "385317a3a7c0b7ecedea8749caf568a1ef092ba64beb3f0be3a3f3103d2ae345",
+    "platform/build-scripts/books/book-manifests/boek-front.md": "7df3584ce8a747367e3d45995a98f2066bb7e16b58238374f9acfc185fa12adf",
+    "platform/build-scripts/books/book-manifests/book-2.json": "b9a32f78b0d948b2fb04fec466d23c4f44015eb5952ad553b05898275722c01e",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.html": "0dc53d226e4b0d0256413aba0c659a2e737a00fb65d4cc6139911170252294cc",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.md": "562c124aca2bb42aa15430c5e5175eb0edaceb690b93e69b2c325d8a662c4262",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.pdf": "82e53362b933178ec3677a65c890dd9deb2734aa59f6002a95f50b58f7e7bd1c",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.html": "62428ba371e0dea7af6616939be886e1f659d02e9a691f1dac435766773891bf",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.md": "24fd73768df3a7ff11005a59039da8a7ff5d27b6c27cfaade55b35fcdd42ec56",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.pdf": "3852967b5c0f12b30f0fe064d1bc2c7bad6d5ac3eeb00d47fc36487928380af4",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md": "30365e9987ed40053735f703500c6dc71cc205b407a025713bdbab8249e179e1",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.md": "184af2eefadb08311500b4fafd16f96943f711c6b58682fd2d62ac76b2e09911",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.md": "ff12000b5b33490f6d9a4bc7ab920fee40962d9cfc428b8b307f68189b2e01ab",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – antwoorden.md": "b16f3058cbc3283cccccbee7afb5c7b741ebd05e1233c6e4c0a5517824023294",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – hoofdstuk.md": "f7eb2d9219a963b545024d0f73cabd2c8e55ff7752e2884b8805552dd29dbad7",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3 Surplus en welvaart – antwoorden.md": "ae07ede5382ace6573a3b9d2cc9bafb08b94cd1aa4274301dd471c6f63c5636a",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3 Surplus en welvaart – hoofdstuk.md": "1cd3b4a5c9d5d51ad828122840bfd712ea5ed9c6e3519eb5955cdbee94171964",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_assets/2.1.1_fig_1.png": "6aec3455d12fb4e5d90e58e70456981a3243b449faa9215d93431ab33134bea4",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_assets/2.1.1_fig_1.svg": "32c8ee0f52f39852e5615fa23f5880876133920cf37cc713008d8fe15299b263",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.1_fig_1.png": "6aec3455d12fb4e5d90e58e70456981a3243b449faa9215d93431ab33134bea4",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.1_fig_1.svg": "32c8ee0f52f39852e5615fa23f5880876133920cf37cc713008d8fe15299b263"
+  },
+  "mapping": "Archive members are paths relative to original_fixture_root; embedded manifests retain original absolute fixture paths unchanged. No real lesson authority.",
+  "first_records": [
+    {
+      "source_md": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.md",
+      "source_sha256": "24fd73768df3a7ff11005a59039da8a7ff5d27b6c27cfaade55b35fcdd42ec56",
+      "source_html": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.html",
+      "html_sha256": "62428ba371e0dea7af6616939be886e1f659d02e9a691f1dac435766773891bf",
+      "source_pdf": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.pdf",
+      "pdf_sha256": "3852967b5c0f12b30f0fe064d1bc2c7bad6d5ac3eeb00d47fc36487928380af4",
+      "assets": [
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_assets\\2.1.1_fig_1.svg",
+          "sha256": "32c8ee0f52f39852e5615fa23f5880876133920cf37cc713008d8fe15299b263"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_assets\\2.1.1_fig_1.png",
+          "sha256": "6aec3455d12fb4e5d90e58e70456981a3243b449faa9215d93431ab33134bea4"
+        }
+      ],
+      "assembly_inputs": [
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\book-2.json",
+          "sha256": "b9a32f78b0d948b2fb04fec466d23c4f44015eb5952ad553b05898275722c01e"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_book-plan.md",
+          "sha256": "30365e9987ed40053735f703500c6dc71cc205b407a025713bdbab8249e179e1"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\boek-front.md",
+          "sha256": "7df3584ce8a747367e3d45995a98f2066bb7e16b58238374f9acfc185fa12adf"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\boek-back.md",
+          "sha256": "385317a3a7c0b7ecedea8749caf568a1ef092ba64beb3f0be3a3f3103d2ae345"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1 Kosten en opbrengsten – hoofdstuk.md",
+          "sha256": "ff12000b5b33490f6d9a4bc7ab920fee40962d9cfc428b8b307f68189b2e01ab"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2 Elasticiteit – hoofdstuk.md",
+          "sha256": "f7eb2d9219a963b545024d0f73cabd2c8e55ff7752e2884b8805552dd29dbad7"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3 Surplus en welvaart – hoofdstuk.md",
+          "sha256": "1cd3b4a5c9d5d51ad828122840bfd712ea5ed9c6e3519eb5955cdbee94171964"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\antwoorden-front.md",
+          "sha256": "da521e855bceb12bf37ea17586df44f4f6dd4d156403c246bec8941955f3528f"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\antwoorden-back.md",
+          "sha256": "6380b956358351172aa003efc3756b1f48ecbda424e511034179ada5b47773d9"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1 Kosten en opbrengsten – antwoorden.md",
+          "sha256": "184af2eefadb08311500b4fafd16f96943f711c6b58682fd2d62ac76b2e09911"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2 Elasticiteit – antwoorden.md",
+          "sha256": "b16f3058cbc3283cccccbee7afb5c7b741ebd05e1233c6e4c0a5517824023294"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3 Surplus en welvaart – antwoorden.md",
+          "sha256": "ae07ede5382ace6573a3b9d2cc9bafb08b94cd1aa4274301dd471c6f63c5636a"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_assets\\2.1.1_fig_1.svg",
+          "sha256": "32c8ee0f52f39852e5615fa23f5880876133920cf37cc713008d8fe15299b263"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_assets\\2.1.1_fig_1.png",
+          "sha256": "6aec3455d12fb4e5d90e58e70456981a3243b449faa9215d93431ab33134bea4"
+        }
+      ],
+      "sprint_id": "BOOK2-TEXTBOOK-PRODUCTION-1",
+      "artifact_id": "book-2-boek-3852967b5c0f",
+      "render_dpi": 150,
+      "rendered_pages": [
+        "pages/page-001.png",
+        "pages/page-002.png",
+        "pages/page-003.png",
+        "pages/page-004.png",
+        "pages/page-005.png"
+      ],
+      "page_sha256": {
+        "page-001.png": "0eb2245d1e2f6574b11291c53d1ede472cc68dd9e19b28c7c4f49946aee43f7a",
+        "page-002.png": "d71e708c6578e7ae0bd1e7e287ea3baeca83f55fcb5564d1b195b7ea5d64e6d4",
+        "page-003.png": "f4b66822d211a3c8431b23425ac33c7de58ca0853a2fbd834f7630e3209525eb",
+        "page-004.png": "d72f66865586cf3b6fd54f24c4655581cb01c1f8131eb6e000f2a1a52bf01f2d",
+        "page-005.png": "90f9c69a9b833e86ac32bddd06b814e2d7b26863203f99ba3a14658b3b87b4d3"
+      },
+      "contact_sheet": "contact-sheet.png",
+      "pages_inspected": [],
+      "inspection_status": "PENDING",
+      "visible_student_defects": null,
+      "inspected_at_normal_reading_scale": false,
+      "warnings": []
+    },
+    {
+      "source_md": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.md",
+      "source_sha256": "562c124aca2bb42aa15430c5e5175eb0edaceb690b93e69b2c325d8a662c4262",
+      "source_html": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.html",
+      "html_sha256": "0dc53d226e4b0d0256413aba0c659a2e737a00fb65d4cc6139911170252294cc",
+      "source_pdf": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.pdf",
+      "pdf_sha256": "82e53362b933178ec3677a65c890dd9deb2734aa59f6002a95f50b58f7e7bd1c",
+      "assets": [],
+      "assembly_inputs": [
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\book-2.json",
+          "sha256": "b9a32f78b0d948b2fb04fec466d23c4f44015eb5952ad553b05898275722c01e"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_book-plan.md",
+          "sha256": "30365e9987ed40053735f703500c6dc71cc205b407a025713bdbab8249e179e1"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\boek-front.md",
+          "sha256": "7df3584ce8a747367e3d45995a98f2066bb7e16b58238374f9acfc185fa12adf"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\boek-back.md",
+          "sha256": "385317a3a7c0b7ecedea8749caf568a1ef092ba64beb3f0be3a3f3103d2ae345"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1 Kosten en opbrengsten – hoofdstuk.md",
+          "sha256": "ff12000b5b33490f6d9a4bc7ab920fee40962d9cfc428b8b307f68189b2e01ab"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2 Elasticiteit – hoofdstuk.md",
+          "sha256": "f7eb2d9219a963b545024d0f73cabd2c8e55ff7752e2884b8805552dd29dbad7"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3 Surplus en welvaart – hoofdstuk.md",
+          "sha256": "1cd3b4a5c9d5d51ad828122840bfd712ea5ed9c6e3519eb5955cdbee94171964"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\antwoorden-front.md",
+          "sha256": "da521e855bceb12bf37ea17586df44f4f6dd4d156403c246bec8941955f3528f"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\antwoorden-back.md",
+          "sha256": "6380b956358351172aa003efc3756b1f48ecbda424e511034179ada5b47773d9"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1 Kosten en opbrengsten – antwoorden.md",
+          "sha256": "184af2eefadb08311500b4fafd16f96943f711c6b58682fd2d62ac76b2e09911"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2 Elasticiteit – antwoorden.md",
+          "sha256": "b16f3058cbc3283cccccbee7afb5c7b741ebd05e1233c6e4c0a5517824023294"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3 Surplus en welvaart – antwoorden.md",
+          "sha256": "ae07ede5382ace6573a3b9d2cc9bafb08b94cd1aa4274301dd471c6f63c5636a"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_assets\\2.1.1_fig_1.svg",
+          "sha256": "32c8ee0f52f39852e5615fa23f5880876133920cf37cc713008d8fe15299b263"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_assets\\2.1.1_fig_1.png",
+          "sha256": "6aec3455d12fb4e5d90e58e70456981a3243b449faa9215d93431ab33134bea4"
+        }
+      ],
+      "sprint_id": "BOOK2-TEXTBOOK-PRODUCTION-1",
+      "artifact_id": "book-2-antwoorden-82e53362b933",
+      "render_dpi": 150,
+      "rendered_pages": [
+        "pages/page-001.png",
+        "pages/page-002.png",
+        "pages/page-003.png",
+        "pages/page-004.png",
+        "pages/page-005.png"
+      ],
+      "page_sha256": {
+        "page-001.png": "c5a3424ef0d3db1ea19e65e257c1687891f86e526a6bfe7ba631a5d94e616d95",
+        "page-002.png": "73ad9351e099af6d30c501d1b85615d3b36d539baa254b71890e9b1337d4ccaf",
+        "page-003.png": "55c681589e7014e5a39d8064f43fa598c7923cfa3a26b7833d437d47c44344a6",
+        "page-004.png": "f45f2007800d7cf84275d80fa5d065ceb1a7ad8bf192e16c847367bf11e4eb1d",
+        "page-005.png": "aa7e0945245e2e6e1df13ab72a8dfb588f4735e49bcaae0a7f91baa746ce09f8"
+      },
+      "contact_sheet": "contact-sheet.png",
+      "pages_inspected": [],
+      "inspection_status": "PENDING",
+      "visible_student_defects": null,
+      "inspected_at_normal_reading_scale": false,
+      "warnings": []
+    }
+  ],
+  "second_records": [
+    {
+      "source_md": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.md",
+      "source_sha256": "24fd73768df3a7ff11005a59039da8a7ff5d27b6c27cfaade55b35fcdd42ec56",
+      "source_html": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.html",
+      "html_sha256": "62428ba371e0dea7af6616939be886e1f659d02e9a691f1dac435766773891bf",
+      "source_pdf": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.pdf",
+      "pdf_sha256": "3852967b5c0f12b30f0fe064d1bc2c7bad6d5ac3eeb00d47fc36487928380af4",
+      "assets": [
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_assets\\2.1.1_fig_1.svg",
+          "sha256": "32c8ee0f52f39852e5615fa23f5880876133920cf37cc713008d8fe15299b263"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_assets\\2.1.1_fig_1.png",
+          "sha256": "6aec3455d12fb4e5d90e58e70456981a3243b449faa9215d93431ab33134bea4"
+        }
+      ],
+      "assembly_inputs": [
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\book-2.json",
+          "sha256": "b9a32f78b0d948b2fb04fec466d23c4f44015eb5952ad553b05898275722c01e"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_book-plan.md",
+          "sha256": "30365e9987ed40053735f703500c6dc71cc205b407a025713bdbab8249e179e1"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\boek-front.md",
+          "sha256": "7df3584ce8a747367e3d45995a98f2066bb7e16b58238374f9acfc185fa12adf"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\boek-back.md",
+          "sha256": "385317a3a7c0b7ecedea8749caf568a1ef092ba64beb3f0be3a3f3103d2ae345"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1 Kosten en opbrengsten – hoofdstuk.md",
+          "sha256": "ff12000b5b33490f6d9a4bc7ab920fee40962d9cfc428b8b307f68189b2e01ab"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2 Elasticiteit – hoofdstuk.md",
+          "sha256": "f7eb2d9219a963b545024d0f73cabd2c8e55ff7752e2884b8805552dd29dbad7"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3 Surplus en welvaart – hoofdstuk.md",
+          "sha256": "1cd3b4a5c9d5d51ad828122840bfd712ea5ed9c6e3519eb5955cdbee94171964"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\antwoorden-front.md",
+          "sha256": "da521e855bceb12bf37ea17586df44f4f6dd4d156403c246bec8941955f3528f"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\antwoorden-back.md",
+          "sha256": "6380b956358351172aa003efc3756b1f48ecbda424e511034179ada5b47773d9"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1 Kosten en opbrengsten – antwoorden.md",
+          "sha256": "184af2eefadb08311500b4fafd16f96943f711c6b58682fd2d62ac76b2e09911"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2 Elasticiteit – antwoorden.md",
+          "sha256": "b16f3058cbc3283cccccbee7afb5c7b741ebd05e1233c6e4c0a5517824023294"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3 Surplus en welvaart – antwoorden.md",
+          "sha256": "ae07ede5382ace6573a3b9d2cc9bafb08b94cd1aa4274301dd471c6f63c5636a"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_assets\\2.1.1_fig_1.svg",
+          "sha256": "32c8ee0f52f39852e5615fa23f5880876133920cf37cc713008d8fe15299b263"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_assets\\2.1.1_fig_1.png",
+          "sha256": "6aec3455d12fb4e5d90e58e70456981a3243b449faa9215d93431ab33134bea4"
+        }
+      ],
+      "sprint_id": "BOOK2-TEXTBOOK-PRODUCTION-1",
+      "artifact_id": "book-2-boek-3852967b5c0f",
+      "render_dpi": 150,
+      "rendered_pages": [
+        "pages/page-001.png",
+        "pages/page-002.png",
+        "pages/page-003.png",
+        "pages/page-004.png",
+        "pages/page-005.png"
+      ],
+      "page_sha256": {
+        "page-001.png": "0eb2245d1e2f6574b11291c53d1ede472cc68dd9e19b28c7c4f49946aee43f7a",
+        "page-002.png": "d71e708c6578e7ae0bd1e7e287ea3baeca83f55fcb5564d1b195b7ea5d64e6d4",
+        "page-003.png": "f4b66822d211a3c8431b23425ac33c7de58ca0853a2fbd834f7630e3209525eb",
+        "page-004.png": "d72f66865586cf3b6fd54f24c4655581cb01c1f8131eb6e000f2a1a52bf01f2d",
+        "page-005.png": "90f9c69a9b833e86ac32bddd06b814e2d7b26863203f99ba3a14658b3b87b4d3"
+      },
+      "contact_sheet": "contact-sheet.png",
+      "pages_inspected": [],
+      "inspection_status": "PENDING",
+      "visible_student_defects": null,
+      "inspected_at_normal_reading_scale": false,
+      "warnings": []
+    },
+    {
+      "source_md": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.md",
+      "source_sha256": "562c124aca2bb42aa15430c5e5175eb0edaceb690b93e69b2c325d8a662c4262",
+      "source_html": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.html",
+      "html_sha256": "0dc53d226e4b0d0256413aba0c659a2e737a00fb65d4cc6139911170252294cc",
+      "source_pdf": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.pdf",
+      "pdf_sha256": "82e53362b933178ec3677a65c890dd9deb2734aa59f6002a95f50b58f7e7bd1c",
+      "assets": [],
+      "assembly_inputs": [
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\book-2.json",
+          "sha256": "b9a32f78b0d948b2fb04fec466d23c4f44015eb5952ad553b05898275722c01e"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_book-plan.md",
+          "sha256": "30365e9987ed40053735f703500c6dc71cc205b407a025713bdbab8249e179e1"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\boek-front.md",
+          "sha256": "7df3584ce8a747367e3d45995a98f2066bb7e16b58238374f9acfc185fa12adf"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\boek-back.md",
+          "sha256": "385317a3a7c0b7ecedea8749caf568a1ef092ba64beb3f0be3a3f3103d2ae345"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1 Kosten en opbrengsten – hoofdstuk.md",
+          "sha256": "ff12000b5b33490f6d9a4bc7ab920fee40962d9cfc428b8b307f68189b2e01ab"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2 Elasticiteit – hoofdstuk.md",
+          "sha256": "f7eb2d9219a963b545024d0f73cabd2c8e55ff7752e2884b8805552dd29dbad7"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3 Surplus en welvaart – hoofdstuk.md",
+          "sha256": "1cd3b4a5c9d5d51ad828122840bfd712ea5ed9c6e3519eb5955cdbee94171964"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\antwoorden-front.md",
+          "sha256": "da521e855bceb12bf37ea17586df44f4f6dd4d156403c246bec8941955f3528f"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\platform\\build-scripts\\books\\book-manifests\\antwoorden-back.md",
+          "sha256": "6380b956358351172aa003efc3756b1f48ecbda424e511034179ada5b47773d9"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1 Kosten en opbrengsten – antwoorden.md",
+          "sha256": "184af2eefadb08311500b4fafd16f96943f711c6b58682fd2d62ac76b2e09911"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2 Elasticiteit – antwoorden.md",
+          "sha256": "b16f3058cbc3283cccccbee7afb5c7b741ebd05e1233c6e4c0a5517824023294"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3 Surplus en welvaart – antwoorden.md",
+          "sha256": "ae07ede5382ace6573a3b9d2cc9bafb08b94cd1aa4274301dd471c6f63c5636a"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_assets\\2.1.1_fig_1.svg",
+          "sha256": "32c8ee0f52f39852e5615fa23f5880876133920cf37cc713008d8fe15299b263"
+        },
+        {
+          "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_assets\\2.1.1_fig_1.png",
+          "sha256": "6aec3455d12fb4e5d90e58e70456981a3243b449faa9215d93431ab33134bea4"
+        }
+      ],
+      "sprint_id": "BOOK2-TEXTBOOK-PRODUCTION-1",
+      "artifact_id": "book-2-antwoorden-82e53362b933",
+      "render_dpi": 150,
+      "rendered_pages": [
+        "pages/page-001.png",
+        "pages/page-002.png",
+        "pages/page-003.png",
+        "pages/page-004.png",
+        "pages/page-005.png"
+      ],
+      "page_sha256": {
+        "page-001.png": "c5a3424ef0d3db1ea19e65e257c1687891f86e526a6bfe7ba631a5d94e616d95",
+        "page-002.png": "73ad9351e099af6d30c501d1b85615d3b36d539baa254b71890e9b1337d4ccaf",
+        "page-003.png": "55c681589e7014e5a39d8064f43fa598c7923cfa3a26b7833d437d47c44344a6",
+        "page-004.png": "f45f2007800d7cf84275d80fa5d065ceb1a7ad8bf192e16c847367bf11e4eb1d",
+        "page-005.png": "aa7e0945245e2e6e1df13ab72a8dfb588f4735e49bcaae0a7f91baa746ce09f8"
+      },
+      "contact_sheet": "contact-sheet.png",
+      "pages_inspected": [],
+      "inspection_status": "PENDING",
+      "visible_student_defects": null,
+      "inspected_at_normal_reading_scale": false,
+      "warnings": []
+    }
+  ],
+  "first_proof_unchanged": {
+    "book-2-antwoorden-82e53362b933/contact-sheet.png": "e09f80083c7f4861eb1e4aae4376bef037cbe72abf0b907cd51306c06d413a83",
+    "book-2-antwoorden-82e53362b933/manifest.json": "99357a4e7f0e29f8d9a435dc33b26adbcefc39400f6736f17a0f6a02121fecab",
+    "book-2-boek-3852967b5c0f/contact-sheet.png": "83bfd248e9740adf22ba3a5b86c762b94b708fc904a2767084eec2511799869b",
+    "book-2-boek-3852967b5c0f/manifest.json": "27a259fc05ebc86efb65b1339a807c3358d13a5b2dafec9c8a3be5c373156e34",
+    "book-2-boek-3852967b5c0f/pages/page-001.png": "0eb2245d1e2f6574b11291c53d1ede472cc68dd9e19b28c7c4f49946aee43f7a",
+    "book-2-boek-3852967b5c0f/pages/page-002.png": "d71e708c6578e7ae0bd1e7e287ea3baeca83f55fcb5564d1b195b7ea5d64e6d4",
+    "book-2-boek-3852967b5c0f/pages/page-003.png": "f4b66822d211a3c8431b23425ac33c7de58ca0853a2fbd834f7630e3209525eb",
+    "book-2-boek-3852967b5c0f/pages/page-004.png": "d72f66865586cf3b6fd54f24c4655581cb01c1f8131eb6e000f2a1a52bf01f2d",
+    "book-2-boek-3852967b5c0f/pages/page-005.png": "90f9c69a9b833e86ac32bddd06b814e2d7b26863203f99ba3a14658b3b87b4d3",
+    "book-2-antwoorden-82e53362b933/pages/page-001.png": "c5a3424ef0d3db1ea19e65e257c1687891f86e526a6bfe7ba631a5d94e616d95",
+    "book-2-antwoorden-82e53362b933/pages/page-002.png": "73ad9351e099af6d30c501d1b85615d3b36d539baa254b71890e9b1337d4ccaf",
+    "book-2-antwoorden-82e53362b933/pages/page-003.png": "55c681589e7014e5a39d8064f43fa598c7923cfa3a26b7833d437d47c44344a6",
+    "book-2-antwoorden-82e53362b933/pages/page-004.png": "f45f2007800d7cf84275d80fa5d065ceb1a7ad8bf192e16c847367bf11e4eb1d",
+    "book-2-antwoorden-82e53362b933/pages/page-005.png": "aa7e0945245e2e6e1df13ab72a8dfb588f4735e49bcaae0a7f91baa746ce09f8"
+  },
+  "native_six_files_unchanged": {
+    "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.md": "24fd73768df3a7ff11005a59039da8a7ff5d27b6c27cfaade55b35fcdd42ec56",
+    "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.html": "62428ba371e0dea7af6616939be886e1f659d02e9a691f1dac435766773891bf",
+    "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.pdf": "3852967b5c0f12b30f0fe064d1bc2c7bad6d5ac3eeb00d47fc36487928380af4",
+    "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.md": "562c124aca2bb42aa15430c5e5175eb0edaceb690b93e69b2c325d8a662c4262",
+    "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.html": "0dc53d226e4b0d0256413aba0c659a2e737a00fb65d4cc6139911170252294cc",
+    "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-entm1syz\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.pdf": "82e53362b933178ec3677a65c890dd9deb2734aa59f6002a95f50b58f7e7bd1c"
+  },
+  "page_parity": [
+    {
+      "artifact": "book-2-boek-3852967b5c0f",
+      "page": "pages/page-001.png",
+      "raw_sha256": "0eb2245d1e2f6574b11291c53d1ede472cc68dd9e19b28c7c4f49946aee43f7a",
+      "decoded_rgb_sha256": "2d2301da92640b6e0164c14e9d08cafaecffbdd4e18e4d817ca21672c653222e"
+    },
+    {
+      "artifact": "book-2-boek-3852967b5c0f",
+      "page": "pages/page-002.png",
+      "raw_sha256": "d71e708c6578e7ae0bd1e7e287ea3baeca83f55fcb5564d1b195b7ea5d64e6d4",
+      "decoded_rgb_sha256": "a09d3f58a4c8dc4e4f9e0cd82126f44a045417921cfe541d9199c4eb3e726f9c"
+    },
+    {
+      "artifact": "book-2-boek-3852967b5c0f",
+      "page": "pages/page-003.png",
+      "raw_sha256": "f4b66822d211a3c8431b23425ac33c7de58ca0853a2fbd834f7630e3209525eb",
+      "decoded_rgb_sha256": "bfe9e9b91bee45aca7ac0b3c978fecd55e991d74a09e98e4819aad7167b96566"
+    },
+    {
+      "artifact": "book-2-boek-3852967b5c0f",
+      "page": "pages/page-004.png",
+      "raw_sha256": "d72f66865586cf3b6fd54f24c4655581cb01c1f8131eb6e000f2a1a52bf01f2d",
+      "decoded_rgb_sha256": "afbd3f390f05919fef0d2ecb371e17e7f1c628fbfc1aba577521870a6434237c"
+    },
+    {
+      "artifact": "book-2-boek-3852967b5c0f",
+      "page": "pages/page-005.png",
+      "raw_sha256": "90f9c69a9b833e86ac32bddd06b814e2d7b26863203f99ba3a14658b3b87b4d3",
+      "decoded_rgb_sha256": "87b8f98bc0dc6d582dc01d6ad8e285184d35dcca2962bd7512d2800fd9a4a580"
+    },
+    {
+      "artifact": "book-2-antwoorden-82e53362b933",
+      "page": "pages/page-001.png",
+      "raw_sha256": "c5a3424ef0d3db1ea19e65e257c1687891f86e526a6bfe7ba631a5d94e616d95",
+      "decoded_rgb_sha256": "966c1145ae363bdbc5025abbe52427f51b67bd03c38754703823eb90fa003b94"
+    },
+    {
+      "artifact": "book-2-antwoorden-82e53362b933",
+      "page": "pages/page-002.png",
+      "raw_sha256": "73ad9351e099af6d30c501d1b85615d3b36d539baa254b71890e9b1337d4ccaf",
+      "decoded_rgb_sha256": "22d28909063e44fdc943a2e6cb00feb119cd77d41bca6a21c91cae859b652a53"
+    },
+    {
+      "artifact": "book-2-antwoorden-82e53362b933",
+      "page": "pages/page-003.png",
+      "raw_sha256": "55c681589e7014e5a39d8064f43fa598c7923cfa3a26b7833d437d47c44344a6",
+      "decoded_rgb_sha256": "9931395d2fff5d771cf53e1573c43fe00de3999a6c0d11864f955ca4feb30ac7"
+    },
+    {
+      "artifact": "book-2-antwoorden-82e53362b933",
+      "page": "pages/page-004.png",
+      "raw_sha256": "f45f2007800d7cf84275d80fa5d065ceb1a7ad8bf192e16c847367bf11e4eb1d",
+      "decoded_rgb_sha256": "b77f8e8469d24479ef54b2b5f3244da7ad77bdfcde4358e486babcd0609ec211"
+    },
+    {
+      "artifact": "book-2-antwoorden-82e53362b933",
+      "page": "pages/page-005.png",
+      "raw_sha256": "aa7e0945245e2e6e1df13ab72a8dfb588f4735e49bcaae0a7f91baa746ce09f8",
+      "decoded_rgb_sha256": "bd27a4f513bb77cdb3c004ea1cae216402303f207b92a0d0ddb368ac3c3aa9f3"
+    }
+  ],
+  "fixture_node_gate_calls": [
+    [
+      "node",
+      "build-scripts/workflows/check-book-outline-currentness.js",
+      "--require-approved",
+      "--action",
+      "whole_book_assembly"
+    ],
+    [
+      "node",
+      "build-scripts/workflows/check-book2-target-authority-remediation.js",
+      "--durable"
+    ],
+    [
+      "node",
+      "build-scripts/workflows/check-book-outline-currentness.js",
+      "--require-approved",
+      "--action",
+      "whole_book_assembly"
+    ],
+    [
+      "node",
+      "build-scripts/workflows/check-book2-target-authority-remediation.js",
+      "--durable"
+    ]
+  ],
+  "all_original_inputs_preserved": {
+    "platform/build-scripts/books/book-manifests/antwoorden-back.md": "6380b956358351172aa003efc3756b1f48ecbda424e511034179ada5b47773d9",
+    "platform/build-scripts/books/book-manifests/antwoorden-front.md": "da521e855bceb12bf37ea17586df44f4f6dd4d156403c246bec8941955f3528f",
+    "platform/build-scripts/books/book-manifests/boek-back.md": "385317a3a7c0b7ecedea8749caf568a1ef092ba64beb3f0be3a3f3103d2ae345",
+    "platform/build-scripts/books/book-manifests/boek-front.md": "7df3584ce8a747367e3d45995a98f2066bb7e16b58238374f9acfc185fa12adf",
+    "platform/build-scripts/books/book-manifests/book-2.json": "b9a32f78b0d948b2fb04fec466d23c4f44015eb5952ad553b05898275722c01e",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md": "30365e9987ed40053735f703500c6dc71cc205b407a025713bdbab8249e179e1",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.md": "184af2eefadb08311500b4fafd16f96943f711c6b58682fd2d62ac76b2e09911",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.md": "ff12000b5b33490f6d9a4bc7ab920fee40962d9cfc428b8b307f68189b2e01ab",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – antwoorden.md": "b16f3058cbc3283cccccbee7afb5c7b741ebd05e1233c6e4c0a5517824023294",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – hoofdstuk.md": "f7eb2d9219a963b545024d0f73cabd2c8e55ff7752e2884b8805552dd29dbad7",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3 Surplus en welvaart – antwoorden.md": "ae07ede5382ace6573a3b9d2cc9bafb08b94cd1aa4274301dd471c6f63c5636a",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3 Surplus en welvaart – hoofdstuk.md": "1cd3b4a5c9d5d51ad828122840bfd712ea5ed9c6e3519eb5955cdbee94171964",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.1_fig_1.png": "6aec3455d12fb4e5d90e58e70456981a3243b449faa9215d93431ab33134bea4",
+    "lessons/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.1_fig_1.svg": "32c8ee0f52f39852e5615fa23f5880876133920cf37cc713008d8fe15299b263"
+  },
+  "temp_fixture_cleanup": "TemporaryDirectory cleanup runs after evidence archive completion"
+}

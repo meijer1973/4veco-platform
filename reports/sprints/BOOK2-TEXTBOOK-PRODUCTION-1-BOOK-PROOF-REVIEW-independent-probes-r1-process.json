@@ -1,0 +1,13 @@
+{
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-probes.py"
+  ],
+  "cwd": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:28:30.189Z",
+  "ended_at": "2026-09-06T02:28:31.267Z",
+  "exit_code": 1,
+  "child_runtime": "Explicit Python314; MSYS-first child PATH only",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-probes.py\", line 214, in <module>\r\n    if __name__=='__main__':main()\r\n                            ~~~~^^\r\n  File \"C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-probes.py\", line 211, in main\r\n    binding=source_bindings();early_paths();gates_and_collisions();native()\r\n                              ~~~~~~~~~~~^^\r\n  File \"C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-probes.py\", line 86, in early_paths\r\n    else:p.symlink_to(Path(f.temp.name)/'missing',target_is_directory=True)\r\n         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Python314\\Lib\\pathlib\\__init__.py\", line 1213, in symlink_to\r\n    os.symlink(target, self, target_is_directory)\r\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nOSError: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\meije\\\\AppData\\\\Local\\\\Temp\\\\book2-book-test-caf7mdsn\\\\missing' -> 'C:\\\\Users\\\\meije\\\\AppData\\\\Local\\\\Temp\\\\book2-book-test-caf7mdsn\\\\platform\\\\reports\\\\rendered-proof\\\\BOOK2-TEXTBOOK-PRODUCTION-1\\\\dangling-link'\r\n"
+}

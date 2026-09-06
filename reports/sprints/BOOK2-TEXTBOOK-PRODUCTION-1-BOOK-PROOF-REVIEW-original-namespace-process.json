@@ -1,0 +1,20 @@
+{
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "build-scripts/content/book-2",
+    "-p",
+    "test_book_proof_namespace.py",
+    "-v"
+  ],
+  "cwd": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:23:58.596Z",
+  "ended_at": "2026-09-06T02:24:08.321Z",
+  "exit_code": 0,
+  "child_runtime": "Explicit Python314; MSYS-first child PATH only",
+  "stdout": "=== Loading manifest: book-2.json ===\r\n=== Loading manifest: book-2.json ===\r\n=== Loading manifest: book-2.json ===\r\n",
+  "stderr": "test_atomic_reservation_collision_precedes_student_writes (test_book_proof_namespace.BookProofNamespaceTests.test_atomic_reservation_collision_precedes_student_writes) ... ok\r\ntest_common_dispatch_forwards_only_explicit_book2_option (test_book_proof_namespace.BookProofNamespaceTests.test_common_dispatch_forwards_only_explicit_book2_option) ... ok\r\ntest_denied_authority_does_not_reserve_namespace_or_write_outputs (test_book_proof_namespace.BookProofNamespaceTests.test_denied_authority_does_not_reserve_namespace_or_write_outputs) ... ok\r\ntest_existing_cli_forwards_explicit_option_and_preserves_default_call (test_book_proof_namespace.BookProofNamespaceTests.test_existing_cli_forwards_explicit_option_and_preserves_default_call) ... ok\r\ntest_existing_empty_and_populated_namespaces_reject_before_preflight (test_book_proof_namespace.BookProofNamespaceTests.test_existing_empty_and_populated_namespaces_reject_before_preflight) ... ok\r\ntest_failed_render_consumes_namespace_and_cannot_overwrite_proof (test_book_proof_namespace.BookProofNamespaceTests.test_failed_render_consumes_namespace_and_cannot_overwrite_proof) ... ok\r\ntest_namespace_appearing_during_preflight_rejects_before_student_writes (test_book_proof_namespace.BookProofNamespaceTests.test_namespace_appearing_during_preflight_rejects_before_student_writes) ... ok\r\ntest_out_of_scope_and_broad_roots_reject_before_preflight (test_book_proof_namespace.BookProofNamespaceTests.test_out_of_scope_and_broad_roots_reject_before_preflight) ... ok\r\ntest_stale_input_does_not_reserve_namespace_or_invoke_authority (test_book_proof_namespace.BookProofNamespaceTests.test_stale_input_does_not_reserve_namespace_or_invoke_authority) ... ok\r\ntest_two_real_native_rebuilds_preserve_bytes_pixels_and_independent_proof (test_book_proof_namespace.BookProofNamespaceTests.test_two_real_native_rebuilds_preserve_bytes_pixels_and_independent_proof)\r\nStub only fixture authority: real Pandoc, WeasyPrint and Poppler twice. ... C:\\Users\\meije\\AppData\\Roaming\\Python\\Python314\\site-packages\\weasyprint\\urls.py:199: DeprecationWarning: default_url_fetcher is deprecated and will be removed in WeasyPrint 69.0, please use URLFetcher instead. For security reasons, HTTP redirects are not supported anymore with default_url_fetcher, but are with URLFetcher.\r\n\r\nSee https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#url-fetchers\r\n  warnings.warn(\r\nok\r\n\r\n----------------------------------------------------------------------\r\nRan 10 tests in 9.015s\r\n\r\nOK\r\n"
+}

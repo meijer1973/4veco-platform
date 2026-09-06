@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "reviewed_payload": "e5edeb270120bc9ae041673267adddcd5575766f",
+  "probes": [
+    {
+      "case": "CLI default exact three-positional call",
+      "status": "PASS"
+    },
+    {
+      "case": "CLI explicit forwarding",
+      "status": "PASS"
+    },
+    {
+      "case": "Unsupported explicit common dispatch 1/None",
+      "status": "PASS",
+      "error": "ValueError: Explicit proof namespaces require the frozen Book 2 print profile"
+    },
+    {
+      "case": "Unsupported explicit common dispatch 2/wrong-profile",
+      "status": "PASS",
+      "error": "ValueError: Unsupported book print profile"
+    },
+    {
+      "case": "Unsupported explicit common dispatch 1/book2-frozen-part-a",
+      "status": "PASS",
+      "error": "ValueError: Unsupported book print profile"
+    },
+    {
+      "case": "CLI missing-lessons rejected before dispatch",
+      "status": "PASS"
+    },
+    {
+      "case": "CLI missing-platform rejected before dispatch",
+      "status": "PASS"
+    },
+    {
+      "case": "Native junction retarget within permitted scope during authority is rejected",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace changed during input preflight",
+      "actual_gate_slots": [
+        [
+          "node",
+          "build-scripts/workflows/check-book-outline-currentness.js",
+          "--require-approved",
+          "--action",
+          "whole_book_assembly"
+        ],
+        [
+          "node",
+          "build-scripts/workflows/check-book2-target-authority-remediation.js",
+          "--durable"
+        ]
+      ]
+    }
+  ],
+  "count": 8,
+  "real_lesson_edits": 0,
+  "filesystem_transaction_claim": false
+}

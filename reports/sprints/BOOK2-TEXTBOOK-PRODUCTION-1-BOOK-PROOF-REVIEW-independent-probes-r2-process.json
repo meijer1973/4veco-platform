@@ -1,0 +1,13 @@
+{
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-probes.py"
+  ],
+  "cwd": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:29:23.052Z",
+  "ended_at": "2026-09-06T02:29:36.442Z",
+  "exit_code": 0,
+  "child_runtime": "Explicit Python314; MSYS-first child PATH only",
+  "stdout": "{\r\n  \"status\": \"PASS_TECHNICAL_PROBES\",\r\n  \"count\": 25,\r\n  \"probes\": [\r\n    \"Exact four payload files and all original preparation/default/Book1/test bytes\",\r\n    \"Early path rejection: outside\",\r\n    \"Early path rejection: broad platform\",\r\n    \"Early path rejection: broad standard root\",\r\n    \"Early path rejection: wrong task\",\r\n    \"Early path rejection: prefix lookalike\",\r\n    \"Early path rejection: traversal escape\",\r\n    \"Occupied empty\",\r\n    \"Occupied populated\",\r\n    \"Occupied plain-file\",\r\n    \"Dangling-symlink contract (SIMULATED; native WinError1314 retained)\",\r\n    \"Resolved native parent directory-junction escape\",\r\n    \"Allowed path validation is read-only\",\r\n    \"Allowed path validation is read-only\",\r\n    \"Relative path uses caller cwd without changing global runtime\",\r\n    \"Denied actual gate slot 1\",\r\n    \"Denied actual gate slot 2\",\r\n    \"Input drift during authority: manifest\",\r\n    \"Input drift during authority: front\",\r\n    \"Input drift during authority: chapter\",\r\n    \"Collision before aggregate writes: preflight-empty\",\r\n    \"Collision before aggregate writes: preflight-file\",\r\n    \"Collision before aggregate writes: atomic\",\r\n    \"Failed renderer consumes namespace; retry rejects without writes\",\r\n    \"Actual native double-build different permitted roots, exact six files/assets/all pages/first proof\"\r\n  ]\r\n}\r\n",
+  "stderr": ""
+}
