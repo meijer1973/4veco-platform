@@ -16256,3 +16256,91 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 5858: inval
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-scope.js cfb74bc20b4d073ed487ecc7752ffa6987602a4f
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T01:52:32.715Z`
+- finished_at: `2026-09-06T01:52:36.823Z`
+- duration_ms: `4108`
+- exit_code: `0`
+- stdout_sha256: `6c1a49894784f5b7a76ef2369c39dce98e1caeb4d51a04e982618a41dcfcf0a6`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "head": "cfb74bc20b4d073ed487ecc7752ffa6987602a4f",
+  "owned_paths": 43,
+  "scopes": [
+    {
+      "label": "incremental-platform",
+      "ok": false,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 43,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 80,
+        "generated_indexes": 6,
+        "review_evidence": 4196,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "incremental-lessons",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 1,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 204,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 5,
+        "unknown": 0
+      }
+    }
+  ],
+  "whitespace": {
+    "incremental_default_exit": 2,
+    "incremental_cr_at_eol_exit": 0,
+    "historical": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-command-log.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-command-log.md"
+    ],
+    "all_other_incremental_exit": 0,
+    "lesson_exit": 0,
+    "whole_default_exit": 2,
+    "all_actual_diagnostics_preserved": true
+  }
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
