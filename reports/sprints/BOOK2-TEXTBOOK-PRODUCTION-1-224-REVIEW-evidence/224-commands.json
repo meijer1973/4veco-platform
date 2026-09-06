@@ -1,0 +1,34 @@
+[
+  {
+    "label": "source-tests",
+    "exit_code": 0
+  },
+  {
+    "label": "native-checker",
+    "exit_code": 0
+  },
+  {
+    "label": "student-web",
+    "exit_code": 0
+  },
+  {
+    "label": "publisher-print",
+    "exit_code": 0
+  },
+  {
+    "label": "structural",
+    "exit_code": 0
+  },
+  {
+    "label": "approved",
+    "exit_code": 0
+  },
+  {
+    "label": "durable",
+    "exit_code": 0
+  },
+  {
+    "label": "bundle",
+    "exit_code": 0
+  }
+]

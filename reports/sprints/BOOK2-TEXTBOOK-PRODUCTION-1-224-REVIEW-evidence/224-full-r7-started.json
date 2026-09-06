@@ -1,0 +1,51 @@
+{
+  "created": "2026-09-06T05:46:19.379098+00:00",
+  "status": "STARTED_NOT_ACCEPTED",
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "C:\\wt\\book2-224-review-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_224.py",
+    "--lesson-root",
+    "C:\\wt\\book2-224-review-20260906\\4veco-lessen",
+    "--proof-root",
+    "C:\\wt\\book2-224-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence",
+    "--proof-suffix",
+    "r7",
+    "--manifest",
+    "C:\\wt\\book2-224-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence\\224-full-r7-manifest.json"
+  ],
+  "cwd": "C:\\wt\\book2-224-review-20260906\\4veco-platform",
+  "sources": [
+    {
+      "path": "build-scripts/content/book-2/b2_224.py",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "d5001620b81fc9ca2f390047367bf64885793b930b3763cba74b6babce842125"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/answers.md",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "f7c7fac3034c49b88788970fec6fa8ee66e66b0f02e29b63d23f1a02355bd164"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/check_render.py",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "a5f869c8b5ea43ddc14f38b5b7229db612d9141d99ec5514824288acdbad57c6"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/exercises.md",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "1003ef1ede3c61059e5e97c1d96b0a3e913f36799411f0e1b2ce62f16ad3bab9"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/target-answers.md",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "275af20f1a26d4d4205879e16fbe0f1fc1d69ff65cee024803c5694b367eb136"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/test_source.py",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "7594760c6aaf910d99ae5ee2e93fdd7736800256fc621890316fef638bc310c7"
+    }
+  ],
+  "reservation_raw_sha256": "bcb583145760f53ee3159c84e3fff0f6882d8015c55c95872893245ec07ce72f",
+  "path_raw_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c"
+}
