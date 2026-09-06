@@ -71,9 +71,10 @@ def preflight():
 def scan(rev,route):
     dest=P/(PRE+rev+'-'+route)
     n=b.namespace_check(dest,rev)
-    save('scan-'+rev,{'status':'PASS','namespace':n,'actor':'paragraph_214_builder','task':'BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW','branch':BR})
+    save('scan-next-'+route,{'status':'PASS','namespace':n,'actor':'paragraph_214_builder','task':'BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW','branch':BR})
 def native(rev,route):
-    n=js(P/(PRE+'scan-'+rev+'.json'))['namespace'];dest=P/n['proof_root']
+    n=js(P/(PRE+'scan-next-'+route+'.json'))['namespace'];dest=Path(n['proof_root'])
+    assert n['requested']==int(rev[1:])
     assert not dest.exists() and not Path(n['reservation']).exists()
     # Original generator performs a second global scan immediately before reserve.
     native_exact();e=env();anchor=git(P,'rev-parse','HEAD').decode().strip()
@@ -83,7 +84,7 @@ def native(rev,route):
     elif route=='direct':argv=[sys.executable,'-B','build-scripts/content/book-2/214/direct_print.py',*common]
     else:argv=[sys.executable,'-B','build-scripts/content/book-2/214/check_render.py',*common,'--rebuild','--output',str(P/(PRE+'native-check-'+rev+'.json'))]
     invocation={'actor':'paragraph_214_builder','task':'BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW','controller_commit':anchor,'argv':argv,'cwd':str(P),'PATH':e['PATH'],'PATH_inherited_unchanged':True,'paired':{k:v for k,v in e.items() if k.startswith('FOURVECO_')},'start':datetime.datetime.now(datetime.timezone.utc).isoformat()}
-    save('invocation-'+rev,invocation)
+    save('invocation-before-'+route,invocation)
     r=subprocess.run(argv,cwd=P,env=e,capture_output=True)
     save('process-'+rev,{**invocation,'exit_code':r.returncode,'stdout':r.stdout.decode('utf-8','replace'),'stderr':r.stderr.decode('utf-8','replace'),'finish':datetime.datetime.now(datetime.timezone.utc).isoformat()})
     assert r.returncode==0
