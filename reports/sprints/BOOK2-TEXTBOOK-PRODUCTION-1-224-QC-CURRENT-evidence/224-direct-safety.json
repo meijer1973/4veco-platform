@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "actor": "paragraph_214_builder",
+  "controller_commit": "c8d824dc58d2160b57f5c7b5b826aa67e5abeb11",
+  "controller_raw_sha256": "f4cc0baca71685e1f3ba4eaa0d27820dfaf234cfe0a4884b1b8b1ed3cc440a94",
+  "cases": [
+    {
+      "case": "empty-directory",
+      "real_run_entry": true,
+      "rejected": true,
+      "reason": "Direct destination already occupied: C:\\wt\\book2-224-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence\\224-namespace-fixture-3bot1iex\\224-direct-r999",
+      "preflight_writes": 0,
+      "Node_or_worker_calls": 0,
+      "native_writes": 0
+    },
+    {
+      "case": "populated-directory",
+      "real_run_entry": true,
+      "rejected": true,
+      "reason": "Direct destination already occupied: C:\\wt\\book2-224-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence\\224-namespace-fixture-3bot1iex\\224-direct-r999",
+      "preflight_writes": 0,
+      "Node_or_worker_calls": 0,
+      "native_writes": 0
+    },
+    {
+      "case": "file",
+      "real_run_entry": true,
+      "rejected": true,
+      "reason": "Direct destination already occupied: C:\\wt\\book2-224-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence\\224-namespace-fixture-3bot1iex\\224-direct-r999",
+      "preflight_writes": 0,
+      "Node_or_worker_calls": 0,
+      "native_writes": 0
+    },
+    {
+      "case": "invalid syntax r0",
+      "rejected": true
+    },
+    {
+      "case": "invalid syntax ../r1",
+      "rejected": true
+    },
+    {
+      "case": "invalid syntax r1/../../outside",
+      "rejected": true
+    }
+  ],
+  "positive_unused_namespace_preflight": true,
+  "actual_current_and_committed_inputs": 34,
+  "native_bytes_preserved": 15,
+  "new_native_run": false,
+  "historical_direct_r12_had_new_preflight": false,
+  "shared_worker_is_ungated_primitive": true,
+  "authorized_orchestration": "Current approved specialist/durable and complete source/current/committed input guards plus new pre-effect unused-destination check.",
+  "scope": "Own additive controller safety; no source, shared primitive, review, plan or target change."
+}

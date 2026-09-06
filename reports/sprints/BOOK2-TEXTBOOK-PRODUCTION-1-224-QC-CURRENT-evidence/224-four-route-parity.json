@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "published_comparator_sha256": "2e7844c35d4bdc0cebf0298d1a6c5fe677f307b193a9c6a5569f3b980fb56d9c",
+  "routes": [
+    {
+      "label": "full",
+      "revision": "r10",
+      "finished_sha256": "806f43cab49caeda50559ec0c44804eb21c55abc1ba8a2d7a1de56e2465fedb4",
+      "manifest_sha256": "d46d6549fc3118378d3fd72a58055e774a728f791050b22815bfb8b329f3c213",
+      "native_files": 15,
+      "raw_and_RGB_pages": 20,
+      "raw_and_RGB_figures": 4
+    },
+    {
+      "label": "thin",
+      "revision": "r11",
+      "finished_sha256": "947f1cd2977bffd8780f52a3f7b5f73199f0e0953d06f0e05f590d612803753d",
+      "manifest_sha256": "afbe00fdcddcf240db7d905595e7c06b58118bc84436c96395093d47a3a6ce1d",
+      "native_files": 15,
+      "raw_and_RGB_pages": 20,
+      "raw_and_RGB_figures": 4
+    },
+    {
+      "label": "direct",
+      "revision": "r12",
+      "finished_sha256": "119daca6cc454327b373c7114002377e643629d2718ecaf8bac4257eab28c6ca",
+      "manifest_sha256": "aecaa7aa75114e1737b2514ad73438bbc1a9b603a211c27ea39efdad5fc18a1b",
+      "native_files": 15,
+      "raw_and_RGB_pages": 20,
+      "raw_and_RGB_figures": 4
+    },
+    {
+      "label": "checker",
+      "revision": "r13",
+      "finished_sha256": "de1db43aa339c89b675280e100d8d3ea3d7272e20a9d7e3ab1a37981be92b845",
+      "manifest_sha256": "5367fb97354ffacc5ed8ad02f222367251dee1558679cbb5a31973033a2ecfc5",
+      "native_files": 15,
+      "raw_and_RGB_pages": 20,
+      "raw_and_RGB_figures": 4
+    }
+  ],
+  "manual_restore_or_copy": false,
+  "new_checker_native_route_is_additional": true
+}

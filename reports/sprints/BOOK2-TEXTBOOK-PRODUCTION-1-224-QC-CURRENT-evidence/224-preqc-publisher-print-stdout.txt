@@ -1,0 +1,25 @@
+
+Validating paragraph 2.2.4 "Gemengde opgaven elasticiteit"
+Path: C:\wt\book2-224-qc-current-20260906\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.4 Gemengde opgaven elasticiteit
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: consolidation
+  OK opgaven.md: 2.2.4 Gemengde opgaven elasticiteit – opgaven.md
+  OK antwoorden.md: 2.2.4 Gemengde opgaven elasticiteit – antwoorden.md
+  OK 2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf (254 KB)
+  OK 2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf (279 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 4 image refs all resolve
+  OK _assets/: 4 SVGs, 4 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.4-review.md (no explicit verdict, no FAIL markers)
+  OK Quality ref: 2.2.4-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.4 "Gemengde opgaven elasticiteit" PASSED all checks.
+

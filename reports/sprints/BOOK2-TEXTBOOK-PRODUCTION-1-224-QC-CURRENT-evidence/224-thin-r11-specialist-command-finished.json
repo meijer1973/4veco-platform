@@ -1,0 +1,9 @@
+{
+  "finished": "2026-09-06T07:29:18.860951+00:00",
+  "label": "specialist",
+  "exit_code": 0,
+  "seconds": 1.6702438999927836,
+  "stdout_sha256": "6546538caea644dd664bdd599315b7a06fb4e07ad9c140f4743bcc80f3778f33",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "PATH_unchanged": true
+}
