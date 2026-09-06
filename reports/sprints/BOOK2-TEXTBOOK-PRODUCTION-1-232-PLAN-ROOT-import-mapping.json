@@ -1,0 +1,96 @@
+{
+  "mapping": [
+    {
+      "repository": "4veco-platform",
+      "source_commit": "99d9803c9946e184b9d386c28edef22aeeaab972",
+      "adopted_parent": "a6452bdb94424ceef891de2a24e34a8295715326",
+      "adopted_commit": "be747d65277da90c7a335e94ee94039b19d0a2b0"
+    },
+    {
+      "repository": "4veco-platform",
+      "source_commit": "bb44cc15976b631289d83e7a344db829ed109e56",
+      "adopted_parent": "be747d65277da90c7a335e94ee94039b19d0a2b0",
+      "adopted_commit": "b732bf5664c0e75ba94c3ad677c9390650882f97"
+    },
+    {
+      "repository": "4veco-platform",
+      "source_commit": "3d6f64700590e14bb132355a168dcc7b24318901",
+      "adopted_parent": "b732bf5664c0e75ba94c3ad677c9390650882f97",
+      "adopted_commit": "65718cc5f3955726627dc2a23a67132fc70cb505"
+    },
+    {
+      "repository": "4veco-platform",
+      "source_commit": "69649b3eff09f42a51f9cfded8328d5e3e410401",
+      "adopted_parent": "65718cc5f3955726627dc2a23a67132fc70cb505",
+      "adopted_commit": "4e41dcb8b9ccde5f20f22f775b42860b6ff72c2a"
+    },
+    {
+      "repository": "4veco-platform",
+      "source_commit": "07209895b0d4b9253df51774520adf5c003e6008",
+      "adopted_parent": "4e41dcb8b9ccde5f20f22f775b42860b6ff72c2a",
+      "adopted_commit": "d61e0b7fd2fdebc1234c06c8963a041ddac2d603"
+    },
+    {
+      "repository": "4veco-platform",
+      "source_commit": "049c52976e749f233fe654618c9657f01aa988f4",
+      "adopted_parent": "d61e0b7fd2fdebc1234c06c8963a041ddac2d603",
+      "adopted_commit": "f99c0ee5f8d4cfdc330d687fd97f48106c47b0b0"
+    },
+    {
+      "repository": "4veco-platform",
+      "source_commit": "8a9113d4801f9c2d71b28e9e3b144a5485893858",
+      "adopted_parent": "f99c0ee5f8d4cfdc330d687fd97f48106c47b0b0",
+      "adopted_commit": "22fdf52673ac6c90a395edcdee2492bd996db20c"
+    },
+    {
+      "repository": "4veco-platform",
+      "source_commit": "2be84d80f7ab2dfa793ce8b2dc3742a438d4517e",
+      "adopted_parent": "22fdf52673ac6c90a395edcdee2492bd996db20c",
+      "adopted_commit": "dd57d7a33ea0d150e5dc455ab5ef5cee05c828eb"
+    },
+    {
+      "repository": "4veco-platform",
+      "source_commit": "17e04cea7ca688618149c2e50b8ec62ad55c80d8",
+      "adopted_parent": "dd57d7a33ea0d150e5dc455ab5ef5cee05c828eb",
+      "adopted_commit": "96307e33c2de98bf15ac6e9b4c9e82a0268ffbf3"
+    },
+    {
+      "repository": "4veco-platform",
+      "source_commit": "30a65abe8a2c572c09aa8dc1086c40c5e16b641f",
+      "adopted_parent": "96307e33c2de98bf15ac6e9b4c9e82a0268ffbf3",
+      "adopted_commit": "b541f15351aac5fa140581c94727c496a2f4704e"
+    },
+    {
+      "repository": "4veco-platform",
+      "source_commit": "9eefd24484ad7f69eb9c032328de23fedf650c5a",
+      "adopted_parent": "b541f15351aac5fa140581c94727c496a2f4704e",
+      "adopted_commit": "febacb6157deb02a942665727c820c936360c69b"
+    },
+    {
+      "repository": "4veco-platform",
+      "source_commit": "476ea399641631c6333c29c6153cd85d471dc78f",
+      "adopted_parent": "febacb6157deb02a942665727c820c936360c69b",
+      "adopted_commit": "6dcd757a28ba11e9363b2ff43f7ac5cfa4a4312f"
+    },
+    {
+      "repository": "4veco-platform",
+      "source_commit": "15ce2b4bb0ddaa7ce326f1c18d288895598d6fc2",
+      "adopted_parent": "6dcd757a28ba11e9363b2ff43f7ac5cfa4a4312f",
+      "adopted_commit": "4a45580776dc951d7e9894e3a5452ee264d9f80c"
+    },
+    {
+      "repository": "4veco-lessen",
+      "source_commit": "9daf4b8a9696fcdce1d485d85dbc0c59b7b6dbe6",
+      "adopted_parent": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "adopted_commit": "b606bd28fff4860c371f5a43a347daf4846abff8"
+    },
+    {
+      "repository": "4veco-lessen",
+      "source_commit": "266881cb2d9e7f078192a2a3bab230f9bfc4176e",
+      "adopted_parent": "b606bd28fff4860c371f5a43a347daf4846abff8",
+      "adopted_commit": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a"
+    }
+  ],
+  "original_platform_input": "a6452bdb94424ceef891de2a24e34a8295715326",
+  "original_lessons_input": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62"
+}

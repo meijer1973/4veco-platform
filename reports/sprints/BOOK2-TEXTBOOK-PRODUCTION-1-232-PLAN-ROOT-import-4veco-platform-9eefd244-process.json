@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "9eefd24484ad7f69eb9c032328de23fedf650c5a"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:14:45.144Z",
+  "ended": "2026-09-06T04:14:45.252Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 febacb61] plan(book2): commission distinct complete 232 F1 plan re-review\n Date: Sun Sep 6 05:19:29 2026 +0200\n 1 file changed, 118 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGZlYmFjYjYxXSBwbGFuKGJvb2syKTogY29tbWlzc2lvbiBkaXN0aW5jdCBjb21wbGV0ZSAyMzIgRjEgcGxhbiByZS1yZXZpZXcKIERhdGU6IFN1biBTZXAgNiAwNToxOToyOSAyMDI2ICswMjAwCiAxIGZpbGUgY2hhbmdlZCwgMTE4IGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzMi1GMS1SRVZJRVctcGxhbi5tZAo=",
+  "stderr_base64": ""
+}

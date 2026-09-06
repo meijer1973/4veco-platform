@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "049c52976e749f233fe654618c9657f01aa988f4"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:14:44.184Z",
+  "ended": "2026-09-06T04:14:44.320Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 f99c0ee5] review(book2): bind 232 review actual scope and publication\n Date: Sun Sep 6 04:50:54 2026 +0200\n 7 files changed, 411 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-actual-scope.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-custody-final-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-publication.md\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-scope-complete-lessons-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-scope-complete-platform-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-scope-own-lessons-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-scope-own-platform-process.json\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGY5OWMwZWU1XSByZXZpZXcoYm9vazIpOiBiaW5kIDIzMiByZXZpZXcgYWN0dWFsIHNjb3BlIGFuZCBwdWJsaWNhdGlvbgogRGF0ZTogU3VuIFNlcCA2IDA0OjUwOjU0IDIwMjYgKzAyMDAKIDcgZmlsZXMgY2hhbmdlZCwgNDExIGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzMi1QTEFOLVJFVklFVy1hY3R1YWwtc2NvcGUuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjMyLVBMQU4tUkVWSUVXLWN1c3RvZHktZmluYWwtcHJvY2Vzcy5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMzItUExBTi1SRVZJRVctcHVibGljYXRpb24ubWQKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzMi1QTEFOLVJFVklFVy1zY29wZS1jb21wbGV0ZS1sZXNzb25zLXByb2Nlc3MuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjMyLVBMQU4tUkVWSUVXLXNjb3BlLWNvbXBsZXRlLXBsYXRmb3JtLXByb2Nlc3MuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjMyLVBMQU4tUkVWSUVXLXNjb3BlLW93bi1sZXNzb25zLXByb2Nlc3MuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjMyLVBMQU4tUkVWSUVXLXNjb3BlLW93bi1wbGF0Zm9ybS1wcm9jZXNzLmpzb24K",
+  "stderr_base64": ""
+}

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "17e04cea7ca688618149c2e50b8ec62ad55c80d8"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:14:44.751Z",
+  "ended": "2026-09-06T04:14:44.914Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 96307e33] evidence(book2): publish exact 232 F1 scope and continuation limits\n Date: Sun Sep 6 05:11:33 2026 +0200\n 6 files changed, 250 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-actual-scope.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-publication.md\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-scope-complete-lessons-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-scope-complete-platform-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-scope-own-lessons-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-scope-own-platform-process.json\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDk2MzA3ZTMzXSBldmlkZW5jZShib29rMik6IHB1Ymxpc2ggZXhhY3QgMjMyIEYxIHNjb3BlIGFuZCBjb250aW51YXRpb24gbGltaXRzCiBEYXRlOiBTdW4gU2VwIDYgMDU6MTE6MzMgMjAyNiArMDIwMAogNiBmaWxlcyBjaGFuZ2VkLCAyNTAgaW5zZXJ0aW9ucygrKQogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjMyLVBMQU4tRjEtYWN0dWFsLXNjb3BlLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzMi1QTEFOLUYxLXB1YmxpY2F0aW9uLm1kCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMzItUExBTi1GMS1zY29wZS1jb21wbGV0ZS1sZXNzb25zLXByb2Nlc3MuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjMyLVBMQU4tRjEtc2NvcGUtY29tcGxldGUtcGxhdGZvcm0tcHJvY2Vzcy5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMzItUExBTi1GMS1zY29wZS1vd24tbGVzc29ucy1wcm9jZXNzLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzMi1QTEFOLUYxLXNjb3BlLW93bi1wbGF0Zm9ybS1wcm9jZXNzLmpzb24K",
+  "stderr_base64": ""
+}

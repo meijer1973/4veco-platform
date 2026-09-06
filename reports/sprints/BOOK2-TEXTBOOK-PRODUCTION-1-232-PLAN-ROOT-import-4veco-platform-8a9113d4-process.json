@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "8a9113d4801f9c2d71b28e9e3b144a5485893858"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:14:44.364Z",
+  "ended": "2026-09-06T04:14:44.500Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 22fdf526] plan(book2): bound 232 F1 guided-reasoning correction\n Date: Sun Sep 6 04:59:17 2026 +0200\n 1 file changed, 93 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDIyZmRmNTI2XSBwbGFuKGJvb2syKTogYm91bmQgMjMyIEYxIGd1aWRlZC1yZWFzb25pbmcgY29ycmVjdGlvbgogRGF0ZTogU3VuIFNlcCA2IDA0OjU5OjE3IDIwMjYgKzAyMDAKIDEgZmlsZSBjaGFuZ2VkLCA5MyBpbnNlcnRpb25zKCspCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMzItUExBTi1GMS1wbGFuLm1kCg==",
+  "stderr_base64": ""
+}

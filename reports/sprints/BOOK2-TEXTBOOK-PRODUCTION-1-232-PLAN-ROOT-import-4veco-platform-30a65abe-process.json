@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "30a65abe8a2c572c09aa8dc1086c40c5e16b641f"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:14:44.958Z",
+  "ended": "2026-09-06T04:14:45.100Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 b541f153] evidence(book2): retain final Windows stdout diagnostic for 232 F1\n Date: Sun Sep 6 05:13:31 2026 +0200\n 2 files changed, 48 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-checks-final-utf8-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-runtime-note.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGI1NDFmMTUzXSBldmlkZW5jZShib29rMik6IHJldGFpbiBmaW5hbCBXaW5kb3dzIHN0ZG91dCBkaWFnbm9zdGljIGZvciAyMzIgRjEKIERhdGU6IFN1biBTZXAgNiAwNToxMzozMSAyMDI2ICswMjAwCiAyIGZpbGVzIGNoYW5nZWQsIDQ4IGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzMi1QTEFOLUYxLWNoZWNrcy1maW5hbC11dGY4LXByb2Nlc3MuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjMyLVBMQU4tRjEtcnVudGltZS1ub3RlLm1kCg==",
+  "stderr_base64": ""
+}

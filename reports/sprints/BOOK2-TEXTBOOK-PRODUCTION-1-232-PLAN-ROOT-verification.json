@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "actor": "codex-root",
+  "custody": {
+    "result": [
+      {
+        "repository": "4veco-platform",
+        "prior_files_unchanged": 13429,
+        "actual_raw_tracked_exact": 13545
+      },
+      {
+        "repository": "4veco-lessen",
+        "prior_files_unchanged": 1903,
+        "actual_raw_tracked_exact": 1904
+      }
+    ],
+    "imported_files_exact": 116,
+    "plan_raw_sha256": "d0781ffb6d2966209c3a160309316ce92ebc0455fa51d4235ccc6840afa58935"
+  },
+  "attributed_author_negative_count": 96,
+  "attributed_distinct_review_assertions": 166,
+  "attributed_distinct_review_negative_count": 37,
+  "gates": [
+    {
+      "name": "structural",
+      "exit": 0
+    },
+    {
+      "name": "goal-design",
+      "exit": 0
+    },
+    {
+      "name": "durable",
+      "exit": 0
+    },
+    {
+      "name": "bundle",
+      "exit": 0
+    }
+  ],
+  "verdict": "PLAN PASS ADOPTED",
+  "production_release": "PENDING ACTUAL ACCEPTED213 MANIFEST AND INDEPENDENT RELEASE REVIEW",
+  "pupil_or_rendered_acceptance": false
+}
