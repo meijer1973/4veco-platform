@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T01:53:32.581Z
+Generated: 2026-09-06T02:16:12.523Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `f0e5388c76c0e413f214f1b3eeed2384a45f6f74`
-Files indexed: 11928
+Source commit: `48cc4a9b6bcc88f4cc6e07e01b9251bd8d662804`
+Files indexed: 11934
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 795
+Count: 796
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -260,6 +260,7 @@ Count: 795
 - build-scripts/content/book-2/print_pipeline.py
 - build-scripts/content/book-2/README.md
 - build-scripts/content/book-2/test_book_pipeline.py
+- build-scripts/content/book-2/test_book_proof_namespace.py
 - build-scripts/content/book-2/test_chapter_pipeline.py
 - build-scripts/content/book-2/test_print_pipeline.py
 - build-scripts/content/legacy-target/build-311-basisopgaven.js
@@ -2741,7 +2742,7 @@ Count: 1030
 
 ## reports
 
-Count: 9141
+Count: 9146
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -9604,6 +9605,11 @@ Count: 9141
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-front-review-r2.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-matter-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-pipeline-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-proof-namespace-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-proof-namespace-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-proof-namespace-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-proof-namespace-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-proof-namespace-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.jsonl
