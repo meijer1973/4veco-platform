@@ -99,7 +99,10 @@ Verify complete source-reference/asset union with no duplicate names, correct
 student/answer asset role separation and all four12-goal/front mappings. Exact
 later native contract is37 files: two MD/HTML/PDF editions,30SVG/PNG aggregate
 assets and one thin build_chapter.py. MODULE=BASE; no chapterZIP. Existing4
-aggregate asset files are a byte-exact subset;26 additions, no deletion. Same
+aggregate asset filenames are a subset, but their legacy bytes differ from
+accepted221: record all four old/new hashes, then later replace those four and
+add26, with no deletion. Initial r1's false byte-parity assumption and failing
+source remain preserved in create-r1-diagnostic.md/Git. Same
 front-scoped CSS appended only in each dedicated isolated chapter process on
 top of unchanged shared CSS for full/thin/owned-print. Generic standalone print
 CLI is not implicitly this chapter-aware authorized route. Old legacy11pt
