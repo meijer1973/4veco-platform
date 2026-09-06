@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "node",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-closure.cjs",
+    "scope",
+    "97cc22e144edf88204dabd1ab4bea88b57fbd5cc",
+    "ea0dd35d4f919ac5b3aae533cd9f9022ffa62282"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T09:24:38.594Z",
+  "finish": "2026-09-06T09:24:47.266Z",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "node:assert:152\r\n  throw new AssertionError(obj);\r\n  ^\r\n\r\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\r\n\r\nnull !== 0\r\n\r\n    at blobs (C:\\wt\\book2-232-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-closure.cjs:9:154)\r\n    at scope (C:\\wt\\book2-232-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-closure.cjs:14:191)\r\n    at Object.<anonymous> (C:\\wt\\book2-232-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-closure.cjs:19:97)\r\n    at Module._compile (node:internal/modules/cjs/loader:1804:14)\r\n    at Object..js (node:internal/modules/cjs/loader:1936:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1525:32)\r\n    at Module._load (node:internal/modules/cjs/loader:1327:12)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: null,\r\n  expected: 0,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.13.1\r\n",
+  "stdout_base64": "",
+  "stderr_base64": "bm9kZTphc3NlcnQ6MTUyDQogIHRocm93IG5ldyBBc3NlcnRpb25FcnJvcihvYmopOw0KICBeDQoNCkFzc2VydGlvbkVycm9yIFtFUlJfQVNTRVJUSU9OXTogRXhwZWN0ZWQgdmFsdWVzIHRvIGJlIHN0cmljdGx5IGVxdWFsOg0KDQpudWxsICE9PSAwDQoNCiAgICBhdCBibG9icyAoQzpcd3RcYm9vazItMjMyLWJ1aWxkLWN1cnJlbnQtMjAyNjA5MDZcNHZlY28tcGxhdGZvcm1ccmVwb3J0c1xzcHJpbnRzXEJPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMzItQlVJTEQtQ1VSUkVOVC1jbG9zdXJlLmNqczo5OjE1NCkNCiAgICBhdCBzY29wZSAoQzpcd3RcYm9vazItMjMyLWJ1aWxkLWN1cnJlbnQtMjAyNjA5MDZcNHZlY28tcGxhdGZvcm1ccmVwb3J0c1xzcHJpbnRzXEJPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMzItQlVJTEQtQ1VSUkVOVC1jbG9zdXJlLmNqczoxNDoxOTEpDQogICAgYXQgT2JqZWN0Ljxhbm9ueW1vdXM+IChDOlx3dFxib29rMi0yMzItYnVpbGQtY3VycmVudC0yMDI2MDkwNlw0dmVjby1wbGF0Zm9ybVxyZXBvcnRzXHNwcmludHNcQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzMi1CVUlMRC1DVVJSRU5ULWNsb3N1cmUuY2pzOjE5Ojk3KQ0KICAgIGF0IE1vZHVsZS5fY29tcGlsZSAobm9kZTppbnRlcm5hbC9tb2R1bGVzL2Nqcy9sb2FkZXI6MTgwNDoxNCkNCiAgICBhdCBPYmplY3QuLmpzIChub2RlOmludGVybmFsL21vZHVsZXMvY2pzL2xvYWRlcjoxOTM2OjEwKQ0KICAgIGF0IE1vZHVsZS5sb2FkIChub2RlOmludGVybmFsL21vZHVsZXMvY2pzL2xvYWRlcjoxNTI1OjMyKQ0KICAgIGF0IE1vZHVsZS5fbG9hZCAobm9kZTppbnRlcm5hbC9tb2R1bGVzL2Nqcy9sb2FkZXI6MTMyNzoxMikNCiAgICBhdCBUcmFjaW5nQ2hhbm5lbC50cmFjZVN5bmMgKG5vZGU6ZGlhZ25vc3RpY3NfY2hhbm5lbDozMjg6MTQpDQogICAgYXQgd3JhcE1vZHVsZUxvYWQgKG5vZGU6aW50ZXJuYWwvbW9kdWxlcy9janMvbG9hZGVyOjI0NToyNCkNCiAgICBhdCBNb2R1bGUuZXhlY3V0ZVVzZXJFbnRyeVBvaW50IFthcyBydW5NYWluXSAobm9kZTppbnRlcm5hbC9tb2R1bGVzL3J1bl9tYWluOjE1NDo1KSB7DQogIGdlbmVyYXRlZE1lc3NhZ2U6IHRydWUsDQogIGNvZGU6ICdFUlJfQVNTRVJUSU9OJywNCiAgYWN0dWFsOiBudWxsLA0KICBleHBlY3RlZDogMCwNCiAgb3BlcmF0b3I6ICdzdHJpY3RFcXVhbCcsDQogIGRpZmY6ICdzaW1wbGUnDQp9DQoNCk5vZGUuanMgdjI0LjEzLjENCg=="
+}
