@@ -1,0 +1,128 @@
+{
+  "payload": {
+    "P": "af335aae3753956740579975a089f6460c2ffbed",
+    "L": "56bb0f1e4f45b844304895cbbc3aee8770ec0829"
+  },
+  "strict": {
+    "P": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-bundle-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-check.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-design-check.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-design-check.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-durable-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-goal-design-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-governance-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-independent-r1.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-independent-r2.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-index-runtime.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-report.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-specialist-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-structural-process.json"
+    ],
+    "L": [],
+    "unknown": 0
+  },
+  "rows": [
+    {
+      "name": "own-P",
+      "base": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "head": "af335aae3753956740579975a089f6460c2ffbed",
+      "exit_code": 1,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 15,
+        "unknown": 0
+      },
+      "failures": [
+        "shared lane needs at least one shared platform change",
+        "generated index/report or review-evidence changes are allowed only with lane-owned changes"
+      ]
+    },
+    {
+      "name": "own-L",
+      "base": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "head": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "exit_code": 1,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      },
+      "failures": [
+        "no changed paths to classify",
+        "textbook lane needs at least one Part A textbook change"
+      ]
+    },
+    {
+      "name": "whole-P",
+      "base": "96416b6b5bd57094576e9aba0a42d682584ec479",
+      "head": "af335aae3753956740579975a089f6460c2ffbed",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 92,
+        "generated_indexes": 6,
+        "review_evidence": 7446,
+        "unknown": 0
+      },
+      "failures": []
+    },
+    {
+      "name": "whole-L",
+      "base": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 226,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 7,
+        "unknown": 0
+      },
+      "failures": []
+    }
+  ],
+  "custody": [
+    {
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "tree": "7745347e591f47f3dbc8b5daea02142e88fa1437",
+      "tracked_files": 15172,
+      "verified_files": 15168,
+      "bytes": 1884531723,
+      "nul_tree_sha256": "945a9f14ed7c0a373009260e74d33e6ba30bb1bb4203cc09b2c711496c623284",
+      "nul_names_sha256": "0cfca28d6d8c0f7802c1f75d86118fb537bc4809fec573907f33717157d39603",
+      "raw_record_digest_sha256": "1063fa326490848c12cb30fab5ff2d229207cc26cc55bb59f2a53ae7212cec7e",
+      "framed_raw_bytes_sha256": "090ac52e7c53b3e350a9a580879130787e77a58406e8a94fb0545521d57c9f7f",
+      "exceptions": [
+        "reports/github-agent-index-platform.json",
+        "reports/github-agent-index-platform.md",
+        "reports/github-agent-index-lessen.json",
+        "reports/github-agent-index-lessen.md"
+      ],
+      "raw_git_all_match": true
+    },
+    {
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "tree": "1ac51006ef970668e95fac109863b1014d16afca",
+      "tracked_files": 1915,
+      "verified_files": 1915,
+      "bytes": 165709052,
+      "nul_tree_sha256": "64f13d27cb4942dc0758e9e88551c57763c959bf5e0577548b59c718fa3d996f",
+      "nul_names_sha256": "adc814e1c32e02d524fea47e3f2c99bed979eae19130f2180daf4f44480a5154",
+      "raw_record_digest_sha256": "3d562cabc09894dde07cd6d9b29f849c3bd04f99c879b6df51e9818458219d79",
+      "framed_raw_bytes_sha256": "d46913c5e376c4fa392e609adffbad1d02a1fbba65320ccfecec3e2e97a1efe5",
+      "exceptions": [],
+      "raw_git_all_match": true
+    }
+  ]
+}
