@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "85e373b13e87442728def73946a9eab30577735a"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:27:08.399Z",
+  "ended": "2026-09-06T04:27:08.512Z",
+  "inherited_PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 a45b0768] test: independent 213 succession and reproduction controller\n Date: Sun Sep 6 06:03:19 2026 +0200\n 1 file changed, 236 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-check.py\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGE0NWIwNzY4XSB0ZXN0OiBpbmRlcGVuZGVudCAyMTMgc3VjY2Vzc2lvbiBhbmQgcmVwcm9kdWN0aW9uIGNvbnRyb2xsZXIKIERhdGU6IFN1biBTZXAgNiAwNjowMzoxOSAyMDI2ICswMjAwCiAxIGZpbGUgY2hhbmdlZCwgMjM2IGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIxMy1TMS1SRVZJRVctY2hlY2sucHkK",
+  "stderr_base64": ""
+}

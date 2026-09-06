@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "root_actor": "codex-root",
+  "custody": {
+    "rows": [
+      {
+        "repository": "platform",
+        "inherited_files_checked": 13584,
+        "generator_only_exception": true,
+        "actual_raw_git_exact": 13901
+      },
+      {
+        "repository": "lessons",
+        "inherited_files_checked": 1904,
+        "generator_only_exception": false,
+        "actual_raw_git_exact": 1904
+      }
+    ],
+    "imported_files": 318,
+    "lesson_changes": 0,
+    "canonical_review_unchanged": true,
+    "stale_qc_unchanged": true,
+    "handoff_absent": true
+  },
+  "actual_root_tests": 23,
+  "actual_root_figure_reraster": 6,
+  "gates": [
+    {
+      "name": "student-web",
+      "exit": 0
+    },
+    {
+      "name": "publisher-print",
+      "exit": 0
+    },
+    {
+      "name": "currentness",
+      "exit": 0
+    },
+    {
+      "name": "durable",
+      "exit": 0
+    },
+    {
+      "name": "bundle",
+      "exit": 0
+    }
+  ],
+  "attributed_distinct_probes": {
+    "real_negative": 16,
+    "valid_sentinel": 1,
+    "controller_negative": 27
+  },
+  "attributed_exact_page_comparisons": [
+    {
+      "mode": "full",
+      "revision": "r31",
+      "pages_bound": 30
+    },
+    {
+      "mode": "thin",
+      "revision": "r32",
+      "pages_bound": 30
+    },
+    {
+      "mode": "print",
+      "revision": "r33",
+      "pages_bound": 30
+    }
+  ],
+  "root_native_PDF_generation": 0,
+  "root_personal_views": 0,
+  "verdict": "TECHNICAL DELTA ADOPTED; DISTINCT CURRENT QC RELEASE AFTER PUBLICATION",
+  "root_paragraph_acceptance": "PENDING",
+  "production_ready": false
+}

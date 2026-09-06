@@ -1,0 +1,50 @@
+{
+  "mapping": [
+    {
+      "source": "4a554641292b6bc180b71f1d55bcdc83a35e591f",
+      "adopted_parent": "2b31eb371fc83858b03dad379a59db163b1349de",
+      "adopted": "24017d47b4bbd2c79b69cedd60e9327cd2be3099"
+    },
+    {
+      "source": "ff53e927a7da0d553c71a7fb914edfff276ba397",
+      "adopted_parent": "24017d47b4bbd2c79b69cedd60e9327cd2be3099",
+      "adopted": "f648ef59070e43499f1fcc397b201491aa0b2a79"
+    },
+    {
+      "source": "8fd54c00665f02c96806a85d453f0bd69cdd8394",
+      "adopted_parent": "f648ef59070e43499f1fcc397b201491aa0b2a79",
+      "adopted": "a9d7c5a1fff2daaf838811c0573531c1b92d7e44"
+    },
+    {
+      "source": "8fc91b3aae7afc03b9e7b6d128b659b412547f9d",
+      "adopted_parent": "a9d7c5a1fff2daaf838811c0573531c1b92d7e44",
+      "adopted": "cb9b13cc16eedd7c1e4987e90056c74202c80e0a"
+    },
+    {
+      "source": "f57af0874238ef951b5b03a16ecd411f87224482",
+      "adopted_parent": "cb9b13cc16eedd7c1e4987e90056c74202c80e0a",
+      "adopted": "678259a2620d78ae83e54054496415098aaccac8"
+    },
+    {
+      "source": "362d5460abf58d1be241e58a695b784e9953b290",
+      "adopted_parent": "678259a2620d78ae83e54054496415098aaccac8",
+      "adopted": "199e8c5d907415bddf7e41445766975f572db3bf"
+    },
+    {
+      "source": "85e373b13e87442728def73946a9eab30577735a",
+      "adopted_parent": "199e8c5d907415bddf7e41445766975f572db3bf",
+      "adopted": "a45b0768595a6af48b2ca6953e9bdf884d9f0cf1"
+    },
+    {
+      "source": "d54e0ff0afc517a3910fdbd9a276ae03bdbf9bcd",
+      "adopted_parent": "a45b0768595a6af48b2ca6953e9bdf884d9f0cf1",
+      "adopted": "7f4404562f835796f5d3648784aca345690147ce"
+    },
+    {
+      "source": "1fb2be8bebb342585ecca835fe54b8648025cddb",
+      "adopted_parent": "7f4404562f835796f5d3648784aca345690147ce",
+      "adopted": "ee8b7e133089f5cad6d38ac80c20284a7db12c9c"
+    }
+  ],
+  "lessons_unchanged": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a"
+}

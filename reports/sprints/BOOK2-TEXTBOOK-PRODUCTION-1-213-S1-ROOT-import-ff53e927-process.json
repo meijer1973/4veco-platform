@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "ff53e927a7da0d553c71a7fb914edfff276ba397"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:27:06.902Z",
+  "ended": "2026-09-06T04:27:07.077Z",
+  "inherited_PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 f648ef59] Bind exact 213 prerequisite succession with separate guards\n Date: Sun Sep 6 05:27:46 2026 +0200\n 3 files changed, 500 insertions(+), 5 deletions(-)\n create mode 100644 build-scripts/content/book-2/213/test_succession.py\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-run.py\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGY2NDhlZjU5XSBCaW5kIGV4YWN0IDIxMyBwcmVyZXF1aXNpdGUgc3VjY2Vzc2lvbiB3aXRoIHNlcGFyYXRlIGd1YXJkcwogRGF0ZTogU3VuIFNlcCA2IDA1OjI3OjQ2IDIwMjYgKzAyMDAKIDMgZmlsZXMgY2hhbmdlZCwgNTAwIGluc2VydGlvbnMoKyksIDUgZGVsZXRpb25zKC0pCiBjcmVhdGUgbW9kZSAxMDA2NDQgYnVpbGQtc2NyaXB0cy9jb250ZW50L2Jvb2stMi8yMTMvdGVzdF9zdWNjZXNzaW9uLnB5CiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTMtUzEtcnVuLnB5Cg==",
+  "stderr_base64": ""
+}

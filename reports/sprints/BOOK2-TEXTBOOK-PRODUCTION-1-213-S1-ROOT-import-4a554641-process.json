@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "4a554641292b6bc180b71f1d55bcdc83a35e591f"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:27:06.617Z",
+  "ended": "2026-09-06T04:27:06.812Z",
+  "inherited_PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 24017d47] Plan bounded 213 accepted-input succession\n Date: Sun Sep 6 05:21:59 2026 +0200\n 1 file changed, 143 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-operational-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDI0MDE3ZDQ3XSBQbGFuIGJvdW5kZWQgMjEzIGFjY2VwdGVkLWlucHV0IHN1Y2Nlc3Npb24KIERhdGU6IFN1biBTZXAgNiAwNToyMTo1OSAyMDI2ICswMjAwCiAxIGZpbGUgY2hhbmdlZCwgMTQzIGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIxMy1TMS1vcGVyYXRpb25hbC1wbGFuLm1kCg==",
+  "stderr_base64": ""
+}

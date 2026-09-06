@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "8fd54c00665f02c96806a85d453f0bd69cdd8394"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:27:07.136Z",
+  "ended": "2026-09-06T04:27:07.289Z",
+  "inherited_PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 a9d7c5a1] Correct succession evidence method count before native runs\n Date: Sun Sep 6 05:30:24 2026 +0200\n 2 files changed, 25 insertions(+), 2 deletions(-)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-controller-count-note.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGE5ZDdjNWExXSBDb3JyZWN0IHN1Y2Nlc3Npb24gZXZpZGVuY2UgbWV0aG9kIGNvdW50IGJlZm9yZSBuYXRpdmUgcnVucwogRGF0ZTogU3VuIFNlcCA2IDA1OjMwOjI0IDIwMjYgKzAyMDAKIDIgZmlsZXMgY2hhbmdlZCwgMjUgaW5zZXJ0aW9ucygrKSwgMiBkZWxldGlvbnMoLSkKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIxMy1TMS1jb250cm9sbGVyLWNvdW50LW5vdGUubWQK",
+  "stderr_base64": ""
+}
