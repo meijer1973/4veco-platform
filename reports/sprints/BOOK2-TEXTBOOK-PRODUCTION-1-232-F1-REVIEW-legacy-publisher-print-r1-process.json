@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "node",
+    "scripts/validate-paragraph.js",
+    "--mode",
+    "part-a",
+    "--profile",
+    "publisher-print",
+    "C:/wt/book2-232-f1-review-20260906/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus"
+  ],
+  "cwd": "C:\\wt\\book2-232-f1-review-20260906\\4veco-platform",
+  "started_utc": "2026-09-06T03:37:33.664Z",
+  "finished_utc": "2026-09-06T03:37:33.715Z",
+  "child_environment": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PATH": "inherited unchanged; no native rendering"
+  },
+  "exit_code": 1,
+  "stdout": "\nValidating paragraph 2.3.2 \"Producentensurplus en totaal surplus\"\nPath: C:\\wt\\book2-232-f1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\nMode: part-a\nProfile: publisher-print\n\n-- Part A textbook files --\n  OK Paragraph type: theory\n  X MISSING paragraaf.md\n  X MISSING opgaven.md\n  X MISSING antwoorden.md\n  X MISSING paragraaf.pdf\n  X MISSING opgaven.pdf\n  X MISSING antwoorden.pdf\n  X MISSING build_pdf.py\n\n-- Asset integrity --\n  X MISSING _assets/ folder\n\n-- Part A QC artifacts --\n  X MISSING Part A review report (2.3.2-review.md)\n  X MISSING quality_ref (2.3.2-quality-ref.yaml)\n\n==========================================\nFAIL Paragraph 2.3.2 \"Producentensurplus en totaal surplus\" failed: 10 error(s), 0 warning(s).\n\n",
+  "stderr": ""
+}
