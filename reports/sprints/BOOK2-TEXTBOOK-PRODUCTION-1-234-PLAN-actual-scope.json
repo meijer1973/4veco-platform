@@ -1,0 +1,105 @@
+{
+  "strict": {
+    "status": "PASS",
+    "unknown": 0,
+    "platform_base": "0c7c7e2f4375352b73871c58214b7f99ffc3b0b3",
+    "platform_head": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+    "lessons_base": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a",
+    "lessons_head": "a9662869395f449a4d5dce907bfe58976f94ed01",
+    "platform_paths": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r3-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r4-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-bundle-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-check.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-durable-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-final-integrity.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-goal-design-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-governance-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-lessons-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-platform-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-result.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-structural-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-supplemental233.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-tools.cjs"
+    ],
+    "lessons_paths": [
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md"
+    ]
+  },
+  "native": [
+    {
+      "label": "own-platform",
+      "exit": 1,
+      "ok": false,
+      "failures": [
+        "shared lane needs at least one shared platform change",
+        "generated index/report or review-evidence changes are allowed only with lane-owned changes"
+      ],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 18,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "own-lessons",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 1,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 84,
+        "generated_indexes": 6,
+        "review_evidence": 6231,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 208,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 6,
+        "unknown": 0
+      }
+    }
+  ],
+  "custody": {
+    "status": "PASS",
+    "raw_prior_files_unchanged": 15846,
+    "lesson_baseline_exceptions": [],
+    "platform_exceptions": [
+      "reports/github-agent-index-platform.json",
+      "reports/github-agent-index-platform.md",
+      "reports/github-agent-index-lessen.json",
+      "reports/github-agent-index-lessen.md"
+    ]
+  }
+}
