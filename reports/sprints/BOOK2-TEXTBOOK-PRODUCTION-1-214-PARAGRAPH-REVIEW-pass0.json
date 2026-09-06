@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "selected_native_count": 15,
+  "selected_MD_refs": [
+    "_assets/2.1.4_ex_1.svg",
+    "_assets/2.1.4_ex_3.svg",
+    "_assets/2.1.4_ex_2.svg",
+    "_assets/2.1.4_ex_4.svg"
+  ],
+  "all_selected_pairs_complete": true,
+  "legacy_excluded_assets": [
+    "_assets\\.gitkeep"
+  ],
+  "scope": "Approved two-edition15-file current contract; no legacy promotion/deletion"
+}

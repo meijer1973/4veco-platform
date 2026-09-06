@@ -16,3 +16,10 @@ self-consumption. This changes no source guard or original scan behavior.
 Every genuine run still re-scans inside the unchanged native source immediately
 before exclusive reservation; actual selected reservation paths will be listed
 below in a committed amendment after the scan and before use.
+
+The completed original scan observed maximum47 and selected48. Before the
+first genuine full run, authorize exactly
+`reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r48.json`
+and proof destination
+`reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW-r48-full`.
+The preserved scan-r47.json is a read-only attempted-id record, not a build.
