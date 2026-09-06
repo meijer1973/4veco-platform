@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T06:10:41.122Z
+Generated: 2026-09-06T06:13:46.940Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `agent/book2-224-review-20260906`
-Source commit: `ab5de28d34d31cc7aa7979ac929f4750996d6e53`
-Files indexed: 13828
-Scope: committed tree files from `git ls-tree -r --name-only ab5de28d34d31cc7aa7979ac929f4750996d6e53`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source commit: `7bf13d3ad7e8ea8280bd859ef4ea2cecfc5abe7d`
+Files indexed: 13830
+Scope: committed tree files from `git ls-tree -r --name-only 7bf13d3ad7e8ea8280bd859ef4ea2cecfc5abe7d`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -2752,7 +2752,7 @@ Count: 1030
 
 ## reports
 
-Count: 11033
+Count: 11035
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -11030,6 +11030,8 @@ Count: 11033
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-thin-r8-stdout.txt
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-view-inventory.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-finalize.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-index-diagnostic.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-index-diagnostic.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-index-runner.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-publication-checks.js
