@@ -97,3 +97,14 @@ after committing these diagnostic records; its source_commit still binds the
 actual immutable pre-index HEAD. Verify the full resulting file set against
 actual tracked Git paths. Lesson SOURCE_REF remains the exact commit above;
 all six paired environment values remain explicit on every invocation.
+
+The actual fallback inventory comparison then found exactly one extra path:
+the worktree .git pointer (13681 indexed versus13680 tracked, no missing paths).
+That attempt is rejected, with index hashes and the complete comparison in
+index-fallback.json. Final publication instead uses index-runner.js: only the
+read-only Git child-process stdout buffer is increased to64MiB in a task-owned
+process, which executes the unchanged native index script through Node's normal
+main-module loader. It verifies the shared script's entire bytes against the
+original task base first. No shared tool, Git policy or content guard is changed.
+Both final refs are exact committed hashes, not HEAD fallback. Verify index
+file sets against actual Git before committing the four-index-only tail.

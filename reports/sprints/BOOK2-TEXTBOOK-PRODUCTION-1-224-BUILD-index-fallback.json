@@ -1,0 +1,30 @@
+{
+  "actor": "paragraph_224_builder",
+  "attempt": "unchanged native HEAD fallback",
+  "source_commit": "aeef7117e7921182442233f8db7f1955a38da1b9",
+  "tracked": 13680,
+  "indexed": 13681,
+  "extra": [
+    ".git"
+  ],
+  "missing": [],
+  "indexes": [
+    {
+      "path": "reports/github-agent-index-platform.json",
+      "raw_sha256": "6e9600a2c58064c515a867c26900a1abaf7f7065bada559e000188bf04f4cf37"
+    },
+    {
+      "path": "reports/github-agent-index-platform.md",
+      "raw_sha256": "9662fb0f6ac1c3d1c95ed2bee05123b8003d3e88b4d142500060ed8f6c9ddd82"
+    },
+    {
+      "path": "reports/github-agent-index-lessen.json",
+      "raw_sha256": "823d91eff34f1b1f0b359358eccf28955822eb061c8b277e33378be941506c73"
+    },
+    {
+      "path": "reports/github-agent-index-lessen.md",
+      "raw_sha256": "ba0a7e9bd87046224c99f4a36830dc0008855610e4e6b8f98a7b1724b5183252"
+    }
+  ],
+  "decision": "Reject inaccurate fallback inventory. Generate exact explicit refs using unchanged shared native script, with only read-only Git child stdout maxBuffer increased in this task-owned process."
+}
