@@ -24,7 +24,7 @@ def text(s):
     b=BeautifulSoup(s,'html.parser'); root=b.body or b
     for n in root.find_all(['style','script','title']):n.decompose()
     return root.get_text(' ',strip=True)
-md={}; dom=[]; figures=[]; negatives=[]; probes=[]
+md={}; dom=[]; figures=[]; negatives=[]; probes=[]; reference_cases=[]; actual_references=set()
 for entry in inv['sources']:
     f=L/entry['path']; b=f.read_bytes(); assert sha(b)==entry['raw_sha256']
     s=b.decode('utf-8-sig'); md[f.name]=s
@@ -32,6 +32,26 @@ for entry in inv['sources']:
     h=f.with_suffix('.html'); actual=h.read_text(encoding='utf-8-sig')
     assert norm(text(candidate))==norm(text(actual)),f.name+' complete visible DOM'
     expected=BeautifulSoup(candidate,'html.parser'); actual_dom=BeautifulSoup(actual,'html.parser')
+    # Read actual source image occurrences independently of the preparation inventory.
+    source_images=BeautifulSoup(s,'html.parser').find_all('img')
+    refs=[x['src'] for x in source_images]
+    for ref in refs:
+        assert re.fullmatch(r'_assets/2\.2\.[1-4]_(?:fig|we|ex)_\d+\.png',ref)
+        actual_references.add((f.parent/ref).relative_to(L).as_posix())
+    def reference_contract(mutant):
+        parsed=BeautifulSoup(mutant,'html.parser')
+        assert [(x.get('src'),x.get('alt')) for x in parsed.find_all('img')]==[(x.get('src'),x.get('alt')) for x in source_images]
+        assert [x.get_text(' ',strip=True) for x in parsed.find_all('figcaption')]==[x.get_text(' ',strip=True) for x in BeautifulSoup(s,'html.parser').find_all('figcaption')]
+    reference_contract(s)
+    if refs:
+        mutants=[('missing actual first figure',s.replace(refs[0],'')),('forged existing-image reference',s.replace(refs[0],refs[-1] if refs[-1]!=refs[0] else '_assets/2.2.4_ex_4.png')),('unknown reference',s.replace(refs[0],'_assets/2.2.9_fig_9.png')),('misleading alt',s.replace(source_images[0]['alt'],'Alle veranderingen bewijzen altijd meer winst.'))]
+        caption=BeautifulSoup(s,'html.parser').find('figcaption')
+        if caption:mutants.append(('missing full printed caption',s.replace(str(caption),'',1)))
+        for label,mutant in mutants:
+            assert mutant!=s
+            try:reference_contract(mutant)
+            except AssertionError:reference_cases.append(f.name+': '+label)
+            else:raise AssertionError('reference counterexample accepted: '+label)
     ei=expected.find_all('img'); ai=actual_dom.find_all('img'); assert len(ei)==len(ai)
     imgs=[]
     for x,y in zip(ei,ai):
@@ -82,6 +102,7 @@ for entry in inv['assets']:
     if f.stem in ['2.2.4_ex_1','2.2.4_ex_2']:
         assert not re.search(r'2000|2\.000|1\.760|1000|1\.000|900|−12%|−10%',root.get_text()),'source answer leakage'
     figures.append({'path':entry['path'],'svg_sha256':sha(f.read_bytes()),'png_sha256':sha(png.read_bytes()),'native_size':im.size,'ink_bbox':bbox,'title':title,'intrinsic_min_font_px':min(float(t['font-size']) for t in root.find_all('text') if t.get_text()),'verified_values':values,'chapter_placed_font':'NOT_RENDERED'})
+assert actual_references=={x['path'] for x in inv['assets'] if x['path'].endswith('.png')}
 
 front=P/'build-scripts/content/book-2/22/front.html'; cssfile=front.with_name('front.css'); fs=front.read_text(encoding='utf-8'); css=cssfile.read_text(encoding='utf-8')
 goals=[g for n in range(1,4) for g in records[f'2.2.{n}']['lesson_goals']]
@@ -173,4 +194,4 @@ for i,page in enumerate(document.pages,1):
             assert b.position_x>=0 and b.position_y>=0 and b.position_x+b.width<=page.width+1e-6 and b.position_y+b.height<=page.height+1e-6
             boxes.append({'page':i,'text':b.text,'pt':pt,'box':[b.position_x,b.position_y,b.width,b.height]})
 assert len(document.pages)==1
-print(json.dumps({'verdict':'REVISE','finding':'F22-FRONT-TITLE-01','front_sha256':sha(front.read_bytes()),'css_sha256':sha(cssfile.read_bytes()),'canonical_titles':titles,'goals':goals,'intro':intro,'documents':dom,'target_checks':probes,'figures':figures,'negative_cases':negatives,'math_ledger':ledger,'layout_memory_only':{'pages':1,'boxes':boxes,'minimum_pt':min(b['pt'] for b in boxes)},'native_writes':0,'personal_chapter_views':0,'assembly_release':False},ensure_ascii=False,indent=2))
+print(json.dumps({'verdict':'REVISE','finding':'F22-FRONT-TITLE-01','front_sha256':sha(front.read_bytes()),'css_sha256':sha(cssfile.read_bytes()),'canonical_titles':titles,'goals':goals,'intro':intro,'documents':dom,'target_checks':probes,'figures':figures,'negative_cases':negatives,'reference_counterexamples':reference_cases,'independently_extracted_references':sorted(actual_references),'math_ledger':ledger,'layout_memory_only':{'pages':1,'boxes':boxes,'minimum_pt':min(b['pt'] for b in boxes)},'native_writes':0,'personal_chapter_views':0,'assembly_release':False},ensure_ascii=False,indent=2))
