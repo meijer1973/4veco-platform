@@ -117,6 +117,21 @@ def negative():
         assert not (fp/'reports/214-no-effects').exists()
     assert not root.exists()
     save('independent-guards',{'status':'PASS','actor':'paragraph_214_builder','fixture_files':len(originals),'selected_real_inputs':chosen,'cases':results,'routes':'Actual in-process full/thin-mode/direct entry functions; not OS CLIs; genuine positives recorded separately','all_fixture_bytes_restored_then_owned_temp_removed':True,'native_effects':0})
+def namespace_negative():
+    dest=P/(PRE+'r49-full');assert dest.is_dir()
+    before={str(f.relative_to(dest)):b.sha(b.raw(f)) for f in dest.rglob('*') if f.is_file()}
+    b.EVENTS.clear()
+    with ExitStack() as stack:
+        effects=[stack.enter_context(patch.object(Path,m,side_effect=AssertionError('Unexpected namespace effect '+m))) for m in ['mkdir','write_bytes','write_text','unlink','rmdir']]
+        try:b.namespace_check(dest,'r99999')
+        except ValueError as error:reason=str(error);assert reason=='Proof namespace must not yet exist'
+        else:raise AssertionError('Occupied proof namespace accepted')
+        for effect in effects:effect.assert_not_called()
+    after={str(f.relative_to(dest)):b.sha(b.raw(f)) for f in dest.rglob('*') if f.is_file()};assert before==after
+    events=[{'argv':e['argv'],'cwd':e['cwd'],'exit_code':e['exit_code'],'stdout_sha256':b.sha(e['stdout'].encode()),'stdout_bytes':len(e['stdout'].encode())} for e in b.EVENTS]
+    assert len(events)==2 and all(e['argv'][0]=='git' and 'worktree' in e['argv'] for e in events)
+    save('namespace-negative',{'status':'PASS','actor':'paragraph_214_builder','actual_original_namespace_function':True,'actual_global_registered_walk':True,'requested':99999,'not_reserved_or_consumed_by_file_name':True,'existing_destination':str(dest),'existing_files':len(before),'existing_tree_digest':b.sha(json.dumps(before,sort_keys=True).encode()),'rejection':reason,'actual_Git':events,'effects':0,'existing_proof_unchanged':True,'scope':'Original namespace function before reservation/worker; genuine full/thin/direct/checker positive authorization separately recorded.'})
 if sys.argv[1]=='content':content()
 elif sys.argv[1]=='negative':negative()
+elif sys.argv[1]=='namespace':namespace_negative()
 else:raise ValueError(sys.argv[1])
