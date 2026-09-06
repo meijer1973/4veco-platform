@@ -17646,3 +17646,31 @@ final-integrity: BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-final-integrity.json SH
 ```text
 
 ```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-check.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T03:43:20.146Z`
+- finished_at: `2026-09-06T03:43:38.012Z`
+- duration_ms: `17866`
+- exit_code: `0`
+- stdout_sha256: `fd95378ed6164e8fa8c9c801ba04fe2ed654ef7c4bc49ae901d627aec150d83e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+post-student-web: BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-post-student-web.json SHA256 23683af5658e766fdedf17bd6b1057966b9a2c3e2440a5c1dc1654d47e8d8e97
+post-publisher-print: BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-post-publisher-print.json SHA256 7224aef6b02a1e137bcfcbb0e9052e6221c8002b1c5defb9ba2b1c7f5ffa4279
+post-paragraph_production-currentness: BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-post-paragraph_production-currentness.json SHA256 e6992a756565804b7d432600de3a7483f7c36cacdf1cd63a0fe1984c40480d7b
+post-specialist_review-currentness: BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-post-specialist_review-currentness.json SHA256 0ae103e34f47d4b27aa3962e08ef3d8b64337e6e386adf45761b7347f0daedb5
+post-durable: BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-post-durable.json SHA256 29f1e313108ce6a230ee9405b6b29b9d890d713652eb5319c2739dd2f1e7ec0a
+post-bundle: BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-post-bundle.json SHA256 08d748d67a8e640fa9848adfa72d16182c009d35bd14d44a5e744ae00bc892b2
+check: BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-check.json SHA256 a43b64bb64949c9631812537d6e9291b25a601bb9e95c8113742c3bd692af258
+
+```
+
+### stderr excerpt
+
+```text
+
+```

@@ -5,8 +5,9 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform §212 native verification `14a62363855a4be3559288f1d962ac242c77c30d`,
-lessons `42996c60b4a93843dfe8488b8e5a3ea704871667`, including the exact
+Snapshot: platform §223 native verification `12c0d668c084789b73146f05db13aa7aaf337c63`,
+lessons acceptance `8a3d4018ad6a5082449a17c59f991cbdc93fbb62` with the exact
+root QC/handoff transition in223-root-acceptance.md, including the exact
 root-only current211 acceptance/handoff at5e14325 in211-root-acceptance-r5.md.
 Current221 R8 and222 R13 acceptances remain unchanged.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
@@ -16,8 +17,8 @@ All paths below are relative to the lesson book root
 ## Counts and evidence rules
 
 Expected: 27 theory + 6 consolidation + 6 chapter + 2 book = **41 PDFs**.
-At this checkpoint: **5 internally gate-closed current paragraph packages**:
-15 accepted-with-flags PDFs,6 adopted candidate PDFs,8 legacy unaccepted and12
+At this checkpoint: **6 internally gate-closed current paragraph packages**:
+18 accepted-with-flags PDFs,3 adopted candidate PDFs,8 legacy unaccepted and12
 absent. §211 now has current R5 independent paragraph review, distinct specialist
 QC and root acceptance/handoff. §212 now has current distinct specialist QC,
 root acceptance, closed S1 lineage and renewed handoff; its three PDFs are A. Physical
@@ -33,10 +34,13 @@ accepted212 successor/full-root rebuild remain. Its editions stay C; no handoff.
 §222 R13 is adopted/root-rebuilt: exactly one answer page changes; the other20
 remain identical. Its current independent paragraph and distinct specialist
 reviews pass with flags; root acceptance/handoff are complete. Its editions are A.
-§223 R3 remains an adopted paragraph-PASS candidate. Its four accepted221
-successor pins now have independent S1 delta PASS and root full/thin/print
-r11/r12/r13 reproduction: all20 native files,25 folder files and32 page raw
-hashes/pixels exact. Current specialist QC/root acceptance/handoff remain.
+§223 R3/S1 and the exact two-attribute ALT correction now have current
+independent paragraph and distinct specialist PASS WITH FLAGS, root acceptance
+and a complete handoff. Its four accepted221 pins and all20 native files are
+verified; root fullr28/thinr29/printr30 reproduce32 raw/RGB pages15/10/7 each.
+Both distinct72-view inspections remain attributed, and the reviewer-noun
+correction changes no pupil bytes. F223-LINEAGE is closed; timing54/69/81 stays
+UNOBSERVED. Its three PDFs are A; all historical failed/PENDING records remain.
 §211 R5 adds the required bonus criteria and is adopted/root-rebuilt: only answer
 page7 changes; the other30 pages remain exact. Current paragraph review and
 distinct specialist QC pass; root acceptance/handoff are complete. Its inherited stale opgaven.zip is explicitly excluded;
@@ -106,9 +110,9 @@ No output is silently accepted through an older PASS or reviewed_final label.
 | 17 | 2.2.2 | paragraaf | A | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf` |
 | 18 | 2.2.2 | opgaven | A | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf` |
 | 19 | 2.2.2 | antwoorden | A | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf` |
-| 20 | 2.2.3 | paragraaf | C | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf` |
-| 21 | 2.2.3 | opgaven | C | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf` |
-| 22 | 2.2.3 | antwoorden | C | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf` |
+| 20 | 2.2.3 | paragraaf | A | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf` |
+| 21 | 2.2.3 | opgaven | A | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf` |
+| 22 | 2.2.3 | antwoorden | A | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf` |
 | 23 | 2.2.4 | opgaven | L | `2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf` |
 | 24 | 2.2.4 | antwoorden | L | `2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf` |
 | 25 | 2.2 | hoofdstuk | L | `2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – hoofdstuk.pdf` |
@@ -152,9 +156,9 @@ hashes alone are not student-quality acceptance.
 | 2.2.2 / paragraaf | `36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c` | R13 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.2 / opgaven | `0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555` | R13 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.2 / antwoorden | `61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2` | R13 internal acceptance with flags; current review/QC/handoff complete |
-| 2.2.3 / paragraaf | `ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb` | R3 candidate; paragraph and S1 delta pass, QC/handoff pending |
-| 2.2.3 / opgaven | `50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80` | R3 candidate; paragraph and S1 delta pass, QC/handoff pending |
-| 2.2.3 / antwoorden | `30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10` | R3 candidate; paragraph and S1 delta pass, QC/handoff pending |
+| 2.2.3 / paragraaf | `ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb` | Current internal acceptance with flags; review/QC/handoff complete |
+| 2.2.3 / opgaven | `50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80` | Current internal acceptance with flags; review/QC/handoff complete |
+| 2.2.3 / antwoorden | `30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10` | Current internal acceptance with flags; review/QC/handoff complete |
 | 2.3.1 / paragraaf | `088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e` | Internal acceptance with flags; current review/QC/handoff complete |
 | 2.3.1 / opgaven | `4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341` | Internal acceptance with flags; current review/QC/handoff complete |
 | 2.3.1 / antwoorden | `d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b` | Internal acceptance with flags; current review/QC/handoff complete |
@@ -171,8 +175,9 @@ See221-root-acceptance-r8.md for exact current canonical and adoption bindings.
 
 ## Remaining production and acceptance
 
-Wave-two §213 and §223 outputs remain adopted candidates C; their gate
-closure remains pending. §211 R5 has complete current paragraph review, distinct
+Wave-two §213 remains the sole adopted candidate C; its gate
+closure remains pending. §223 now has current independent paragraph and
+specialist review, root acceptance and handoff with flags. §211 R5 has complete current paragraph review, distinct
 specialist QC and root acceptance/handoff with flags; see211-root-acceptance-r5.md.
 §212 R7 has its bonus block and current independent paragraph PASS. Current
 distinct specialist QC, root reproduction/acceptance and nine-section handoff
@@ -183,8 +188,8 @@ distinct QC/root acceptance and exact accepted
 prerequisite succession remain. Current root print-only/source/render proof is
 not mislabeled a full generator rebuild while the old212 MD guard still differs.
 §221 R8's internal review/QC/handoff gates are complete, with timing flags.
-Independent §223 R3 paragraph PASS WITH FLAGS is adopted; specialist and handoff
-gates remain. §222's former canonical FAIL is superseded by actual current R13
+Independent §223 paragraph and current specialist PASS WITH FLAGS are adopted;
+root native validation, acceptance and handoff close those gates. §222's former canonical FAIL is superseded by actual current R13
 independent PASS closing answer4b order and Concert short alt. Distinct QC
 and root acceptance/handoff now close, with timing flags; see222-root-acceptance-r13.md.
 Historical212 teaching is unchanged by its metadata/bonus correction; its now
@@ -192,7 +197,8 @@ accepted current package must be consumed through213's exact successor release
 and final combined book assembly.
 §223 exact accepted-current-§221 successor input binding now has independent
 delta PASS and unchanged root full/thin/print proof; see223-S1-root-result.md.
-Its current specialist QC and root acceptance/handoff remain separate gates.
+Its current specialist QC and root acceptance/handoff now pass with flags;
+see223-root-qc-result.md and223-root-acceptance.md. Final aggregate/CI gates remain.
 §214/§224 follow accepted prerequisite teaching. §231 is internally accepted
 with flags and current independent paragraph review, specialist QC and handoff;
 §232–§234 and all aggregate outputs remain pending their dependency/plan/review
@@ -215,7 +221,7 @@ Git-blob comparison for all legacy PDFs. An initial line-split probe failed to
 interpret Git's quoted Unicode paths and incorrectly counted zero baseline
 PDFs; it was discarded and replaced with NUL-delimited paths before this record.
 The corrected historical pre-§231 baseline/current tracked count was26. The
-current212 acceptance refresh checks41 unique planned paths,29 present, eight
+current223 acceptance refresh checks41 unique planned paths,29 present, eight
 baseline-identical legacy PDFs,12 absent and all21 accepted/candidate PDF hashes. Current candidate status
 does not inherit a legacy acceptance label. No files were changed
 by inventory checks.
