@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "label": "student-web",
+      "exit_code": 0
+    },
+    {
+      "label": "publisher-print",
+      "exit_code": 0
+    },
+    {
+      "label": "release",
+      "exit_code": 0
+    },
+    {
+      "label": "currentness",
+      "exit_code": 0
+    },
+    {
+      "label": "production",
+      "exit_code": 0
+    },
+    {
+      "label": "specialist",
+      "exit_code": 0
+    },
+    {
+      "label": "durable",
+      "exit_code": 0
+    },
+    {
+      "label": "bundle",
+      "exit_code": 0
+    },
+    {
+      "label": "url-map",
+      "exit_code": 0
+    },
+    {
+      "label": "governance",
+      "exit_code": 0
+    }
+  ],
+  "profiles_are_mechanical_not_root_acceptance": true
+}

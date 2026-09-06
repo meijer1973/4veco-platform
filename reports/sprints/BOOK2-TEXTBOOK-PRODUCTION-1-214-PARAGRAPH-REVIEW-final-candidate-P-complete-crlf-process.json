@@ -1,0 +1,27 @@
+{
+  "actor": "paragraph_214_builder",
+  "task": "BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW",
+  "argv": [
+    "git",
+    "-c",
+    "core.whitespace=cr-at-eol",
+    "diff",
+    "--check",
+    "96416b6b5bd57094576e9aba0a42d682584ec479..761b5372be6981b86c8f612bcb8c2554197c4ec9"
+  ],
+  "cwd": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-platform",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-platform",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-lessen",
+    "FOURVECO_PLATFORM_SOURCE_REF": "761b5372be6981b86c8f612bcb8c2554197c4ec9",
+    "FOURVECO_LESSEN_SOURCE_REF": "a49de2339b9cd2f9bdf77167720a154586ed7355",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-214-paragraph-review-20260906",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-214-paragraph-review-20260906"
+  },
+  "start": "2026-09-06T10:30:31.995Z",
+  "finish": "2026-09-06T10:30:41.884Z",
+  "exit_code": 2,
+  "error": null,
+  "stdout": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-command-log.md:519: trailing whitespace.\n+reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-command-log.md:62: \nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-publisher-print-stdout.txt:25: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-publisher-print-stdout.txt:25: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-student-web-stdout.txt:27: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-student-web-stdout.txt:27: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-publisher-print-stdout.txt:25: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-student-web-stdout.txt:27: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-evidence/224-post-publisher-print-stdout.txt:25: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-evidence/224-post-student-web-stdout.txt:27: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-evidence/224-pre-publisher-print-stdout.txt:25: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-evidence/224-pre-student-web-stdout.txt:27: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-REVIEW-command-log.md:696: trailing whitespace.\n+     \r\n",
+  "stderr": ""
+}

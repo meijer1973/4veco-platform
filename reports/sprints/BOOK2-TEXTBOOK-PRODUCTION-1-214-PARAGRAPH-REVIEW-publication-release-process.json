@@ -1,0 +1,24 @@
+{
+  "actor": "paragraph_214_builder",
+  "task": "BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW",
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-gate.cjs",
+    "214"
+  ],
+  "cwd": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-platform",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-platform",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-lessen",
+    "FOURVECO_PLATFORM_SOURCE_REF": "761b5372be6981b86c8f612bcb8c2554197c4ec9",
+    "FOURVECO_LESSEN_SOURCE_REF": "a49de2339b9cd2f9bdf77167720a154586ed7355",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-214-paragraph-review-20260906",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-214-paragraph-review-20260906"
+  },
+  "start": "2026-09-06T10:32:06.940Z",
+  "finish": "2026-09-06T10:32:11.416Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "{\"status\":\"PASS\",\"paragraph\":\"2.1.4\",\"release_sha256\":\"f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6\",\"candidate_sha256\":\"8adf329ff71e912335baa11d1e78a28afb8eb807de52306ffd867e35c7f0f376\",\"inputs\":48,\"native_effects\":0,\"permission\":\"Gated Part A authoring; current approved action/durable authority and all future review/acceptance gates still mandatory\"}\n",
+  "stderr": ""
+}

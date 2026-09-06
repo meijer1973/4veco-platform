@@ -1,0 +1,25 @@
+{
+  "actor": "paragraph_214_builder",
+  "task": "BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW",
+  "argv": [
+    "git",
+    "diff",
+    "--check",
+    "f09fd6e88edc5049b026b16b0158e7e188091d2d..a49de2339b9cd2f9bdf77167720a154586ed7355"
+  ],
+  "cwd": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-lessen",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-platform",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-lessen",
+    "FOURVECO_PLATFORM_SOURCE_REF": "ef7cb64d5401efba4428cdc99e4af5108a8d4a85",
+    "FOURVECO_LESSEN_SOURCE_REF": "a49de2339b9cd2f9bdf77167720a154586ed7355",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-214-paragraph-review-20260906",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-214-paragraph-review-20260906"
+  },
+  "start": "2026-09-06T10:28:51.816Z",
+  "finish": "2026-09-06T10:28:52.213Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "",
+  "stderr": ""
+}

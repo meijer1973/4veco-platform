@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "actor": "paragraph_214_builder",
+  "custody": [
+    {
+      "repository": "4veco-platform",
+      "base": "5cd6a5ac7a04cf452172f3f1a68c71c0ad4f7237",
+      "files": 16207,
+      "tree_NUL_sha256": "a94a6e1d046506c25b96c4ae76f7320a3c66aa36a545c5d30164063822754087",
+      "excluded": [
+        "reports/github-agent-index-lessen.json",
+        "reports/github-agent-index-lessen.md",
+        "reports/github-agent-index-platform.json",
+        "reports/github-agent-index-platform.md"
+      ],
+      "filename_and_expected_blob_digest": "d7bdf1c72232dc2f591dff29abe2ed11ddeab7fee62775988073da9509193639",
+      "actual_blob_sequence_sha256": "be32d2342c47f14c94c9b41b8d2cd50089a60768aeb2ce01cafd711ec10ff0b4",
+      "all_prior_raw_Git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "base": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+      "files": 1923,
+      "tree_NUL_sha256": "140b24e1d1ff14c257d62c6c98b76382ae6e6f60c83b10c0685fe6c609bdf8a4",
+      "excluded": [
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-review.md"
+      ],
+      "filename_and_expected_blob_digest": "d3865cc39099c79e1a35f64db501394eac053c77af0c1a351305c0b26f225f1f",
+      "actual_blob_sequence_sha256": "3073f26c90642ba837fb00714bafbe2676a61e1ba851547c9e74fad2bafedfaf",
+      "all_prior_raw_Git_exact": true
+    }
+  ],
+  "native": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md",
+      "bytes": 11615,
+      "sha256": "6e275609154b3d8ccec1e18410d7cd3a764385d3cf04c81ca4308e5865393e26",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.html",
+      "bytes": 353945,
+      "sha256": "e32385e10c407ac23caa7d8d2472b3b19881319ea34413cf49ba5a55c8ea256b",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+      "bytes": 359587,
+      "sha256": "c89e1c4f49491028d0cf171eb3219977b7545c127ad0a5c37f0f713df4136f48",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.md",
+      "bytes": 18912,
+      "sha256": "f94ec7bab34c3eea13d698e6ce44897dfb664b8c75d9a366b3a23920932d7285",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.html",
+      "bytes": 386375,
+      "sha256": "5ffc4cd3defb7e2a3b63c1b443593527067c961d1840c7e56a905c61d1a3df39",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+      "bytes": 401508,
+      "sha256": "f2951e2f969045b0c9d549c1f544fbd7d2a1679352169d3ac64d90ec799f27f8",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.svg",
+      "bytes": 10020,
+      "sha256": "09c2993d1d48f26b29bf49dd3abd221a118dcb8e4db9601081afbdb57a99ea4d",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.png",
+      "bytes": 121193,
+      "sha256": "2ed6ebe9bef5c400e9a8c5591d414b1d104dca4607485e84a5ea84bfb2626555",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.svg",
+      "bytes": 11753,
+      "sha256": "bf8ef4855b23010548de9cb7d290cba1125bb13a744623e77869e27d55c25eff",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.png",
+      "bytes": 137552,
+      "sha256": "58f81a1ff2c464e5471775620e9cf62fc9571b6078f9006b91e6b3f11cd44a05",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.svg",
+      "bytes": 9508,
+      "sha256": "7a41c0750657776681b163cad6be8471102f9ec9f2497a2d2e1e6c56492be92f",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.png",
+      "bytes": 132641,
+      "sha256": "e8a535367b33be710548f3515bede4e6e11247344d2cbddde36cf5b05b8ca63c",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.svg",
+      "bytes": 10314,
+      "sha256": "d89aa4d57479194f458a66770f3d803e0dc8fda7bacead016391c7393b4f152e",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.png",
+      "bytes": 134281,
+      "sha256": "62f7b1c492ec803c1bb2d50317197bdae912f2cb3908fd20c261cafb00678568",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/build_pdf.py",
+      "bytes": 802,
+      "sha256": "7ff2ed21b5f8f5f12fd7a4bd6ff3f7332a74a03e26a9ed45576aa614160640f0",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    }
+  ],
+  "root_output_manifest_sha256": "0417edf8efc7e1f9169d5456b52216801ea8138a28a521fc6dea5e041c94b372",
+  "root_acceptance": "PENDING"
+}
