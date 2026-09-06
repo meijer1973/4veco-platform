@@ -117,7 +117,7 @@ def build(lesson_root,source_commit,revision,reservation,route='full'):
     verified=gate.preflight(lesson_root,source_commit,ROOT)
     attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT)
     scan=gate.global_scan(ROOT,exclude=[reservation])
-    if any(int(revision[1:]) in hit['revisions'] for hit in scan['hits']):
+    if gate.revision_occupied(revision,scan,ROOT):
         raise ValueError('Revision occupied in registered global history')
     folder=lesson_root/LESSON_REL
     if not folder.is_dir():raise ValueError('Approved paragraph folder missing')
