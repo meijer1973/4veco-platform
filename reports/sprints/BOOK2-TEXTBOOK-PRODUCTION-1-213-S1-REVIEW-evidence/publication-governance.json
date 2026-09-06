@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "npm.cmd",
+    "run",
+    "check:governance-freshness"
+  ],
+  "cwd": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T04:18:29.287125+00:00",
+  "finished_at": "2026-09-06T04:18:30.518640+00:00",
+  "exit_code": 0,
+  "stdout": "\n> 4veco-platform@1.0.0 check:governance-freshness\n> node build-scripts/review-gates/check-governance-freshness.js\n\n{\n  \"ok\": true,\n  \"remote\": \"origin\",\n  \"remote_ref\": \"origin/main\",\n  \"origin_main_sha\": \"96416b6b5bd57094576e9aba0a42d682584ec479\",\n  \"head_sha\": \"85e373b13e87442728def73946a9eab30577735a\",\n  \"allow_policy_edit\": false,\n  \"files\": [\n    \"AGENTS.md\",\n    \"AGENT_GITHUB_ENTRY.md\",\n    \"docs/review/pr-readiness-routing-policy.md\",\n    \"docs/review/pr-integration-lane-policy.md\",\n    \"docs/review/pr-throughput-policy.md\",\n    \"package.json\",\n    \".github/workflows/platform-ci.yml\",\n    \"build-scripts/ci/check-branch-protection.js\"\n  ],\n  \"differing_files\": [],\n  \"failures\": []\n}\n",
+  "stderr": "",
+  "stdout_sha256": "29c196e93e9d3d58741e4099ea9297a93b352c09f1abe68ac2a597e3d6e80dfe",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "inherited_path_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "environment_overrides": null
+}

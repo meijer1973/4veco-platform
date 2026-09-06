@@ -1,0 +1,9 @@
+{
+  "original_command": "final-native-checker.json",
+  "original_preserved": true,
+  "diagnostic": "Original inherited Python stdout cp1252 was decoded as UTF-8 with replacement by own command wrapper; only the displayed non-ASCII transcript is lossy.",
+  "authoritative_result": "final-native-result-utf8.json",
+  "raw_sha256": "106257b4c7e52fd30ecbe0b29b9081c281325d8304fad12b49e32a4f2bd2b570",
+  "mechanism": "Unchanged checker supported UTF-8 result file; identical inherited PATH, no environment override, no PDF generation or source edit.",
+  "result": "PASS"
+}
