@@ -1,0 +1,32 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-234-plan-20260906\\4veco-platform",
+    "--lane",
+    "shared",
+    "--base",
+    "0c7c7e2f4375352b73871c58214b7f99ffc3b0b3",
+    "--head",
+    "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-234-plan-20260906\\4veco-platform",
+  "invocationSources": [],
+  "environment": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-234-plan-20260906\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-234-plan-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-234-plan-20260906\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "a9662869395f449a4d5dce907bfe58976f94ed01",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-234-plan-20260906"
+  },
+  "started_at": "2026-09-06T05:32:04.365Z",
+  "ended_at": "2026-09-06T05:32:04.475Z",
+  "exit_code": 1,
+  "stdout": "{\n  \"ok\": false,\n  \"lane\": \"shared\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r1-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r2-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r3-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r4-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-baseline.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-bundle-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-check.cjs\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-durable-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-final-integrity.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-goal-design-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-governance-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-lessons-claim-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-plan.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-platform-claim-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-result.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-structural-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-supplemental233.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-tools.cjs\"\n    ],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [\n    \"shared lane needs at least one shared platform change\",\n    \"generated index/report or review-evidence changes are allowed only with lane-owned changes\"\n  ],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": ""
+}
