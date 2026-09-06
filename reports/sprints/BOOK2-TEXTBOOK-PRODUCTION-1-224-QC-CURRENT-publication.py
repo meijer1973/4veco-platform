@@ -49,14 +49,14 @@ def custody():
     return {'status':'PASS','baseline_files':len(baseline['files']),'preserved':len(baseline['files'])-len(changed),'allowed_changes':changed,'actual_strict_owned':pending,'unknown':0}
 def claims(clean=False,record=True,label='claim'):
     for name,root in [('platform',P),('lessons',L)]:run(label+'-'+name,['node',str(P/'build-scripts/ci/check-agent-worktree-safety.js'),'--check','--task',TASK,'--agent',c.ACTOR,'--require-prefix','codex/,agent/',*(['--require-clean'] if clean else [])],cwd=root,record=record)
-def scopes(record=True,label='scope'):
+def scopes(record=True,label='scope',custody_result=None):
     rows=[]
     for name,root,lane,base in [('owned-platform',P,'shared',c.PBASE),('owned-lessons',L,'textbook',c.LBASE),('complete-platform',P,'shared','96416b6b5bd57094576e9aba0a42d682584ec479'),('complete-lessons',L,'textbook','f09fd6e88edc5049b026b16b0158e7e188091d2d')]:
         r=run(label+'-'+name,['node','build-scripts/workflows/check-paragraph-lane-scope.js','--cwd',str(root),'--lane',lane,'--base',base,'--head',head(root),'--json'],allowed=(0,1),record=record);v=json.loads(r['stdout'])
         assert len(v['categories']['unknown'])==0
         if name.startswith('complete'):assert r['exit_code']==0,v['failures']
         rows.append({'name':name,'base':base,'head':head(root),'exit_code':r['exit_code'],'ok':v['ok'],'failures':v['failures'],'category_counts':{k:len(x) for k,x in v['categories'].items()}})
-    result={'strict_owned':custody(),'native_scopes':rows}
+    result={'strict_owned':custody_result if custody_result is not None else custody(),'native_scopes':rows}
     if record:c.save(E/f'224-{label}.json',result)
     return result
 def integrity(label):
@@ -86,7 +86,7 @@ elif a.action=='stage':
         for i in range(0,len(pending),20):c.git(root,'add','--',*pending[i:i+20])
         check=subprocess.run(['git','diff','--cached','--check'],cwd=root,capture_output=True)
         if check.returncode:
-            preserved={str(E.relative_to(P)).replace('\\','/')+'/'+n for n in ['224-checker-r13-stdout.txt','224-direct-r12-stdout.txt','224-full-r10-stdout.txt','224-thin-r11-stdout.txt',*[f'224-{label}-{kind}-{stream}.txt' for label in ('preqc','finalqc') for kind,stream in [('native-readonly','stdout'),('publisher-print','stdout'),('source-tests','stderr'),('student-web','stdout')]]]}
+            preserved={str(E.relative_to(P)).replace('\\','/')+'/'+n for n in ['224-checker-r13-stdout.txt','224-direct-r12-stdout.txt','224-full-r10-stdout.txt','224-thin-r11-stdout.txt',*[f'224-{label}-{kind}-{stream}.txt' for label in ('preqc','finalqc','finalqc-r2') for kind,stream in [('native-readonly','stdout'),('publisher-print','stdout'),('source-tests','stderr'),('student-web','stdout')]]]}
             diagnostics=re.findall(r'^([^\n]+?):\d+: (?:trailing whitespace\.|new blank line at EOF\.)',check.stdout.decode('utf8'),re.M)
             assert root==P and check.returncode==2 and diagnostics and set(diagnostics)<=preserved
             print(json.dumps({'whitespace_exit':2,'preserved_raw_stream_paths':sorted(set(diagnostics)),'not_a_clean_whitespace_claim':True}))
@@ -102,4 +102,5 @@ elif a.action=='final':
         remote=c.git(root,'ls-remote','origin','refs/heads/'+BRANCH).decode().split()[0];assert head(root)==remote==c.git(root,'rev-parse','origin/'+BRANCH).decode().strip()
         pair.append({'repository':root.name,'head':head(root),'remote':remote,'clean':True})
     assert set(names(P,'diff','--name-only','-z','HEAD^..HEAD'))==INDEXES
-    print(json.dumps({'status':'PASS','pair':pair,'scope':scopes(record=False,label='final-scope'),'custody':custody(),'four_index_only_tail':True,'root_acceptance':'PENDING','production_ready':False}))
+    final_custody=custody()
+    print(json.dumps({'status':'PASS','pair':pair,'scope':scopes(record=False,label='final-scope',custody_result=final_custody),'custody':final_custody,'four_index_only_tail':True,'root_acceptance':'PENDING','production_ready':False}))
