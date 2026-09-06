@@ -713,3 +713,44 @@ Node.js v24.13.1
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-publish.cjs scope
+
+- cwd: `C:\wt\book2-231-qc-20260906\4veco-platform`
+- started_at: `2026-09-06T00:55:55.914Z`
+- finished_at: `2026-09-06T00:55:56.757Z`
+- duration_ms: `843`
+- exit_code: `0`
+- stdout_sha256: `7fee5019054313fc9520ed3d84604982a23310c46479e1471abeaea42abad6d9`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "name": "scope-own-platform",
+  "cwd": "C:\\wt\\book2-231-qc-20260906\\4veco-platform",
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-231-qc-20260906\\4veco-platform",
+    "--lane",
+    "shared",
+    "--base",
+    "35e0bebb75cc3987c43dd8f480e1b444bd877f4a",
+    "--head",
+    "e5665afd6981af0abdbe38549cf9a1e3cfa8b218",
+    "--json"
+  ],
+  "started_at": "2026-09-06T00:55:56.113Z",
+  "finished_at": "2026-09-06T00:55:56.197Z",
+  "exit_code": 1,
+  "stdout": "{\n  \"ok\": false,\n  \"lane\": \"shared\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r17/contact-sheet.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r17/manifest.json\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r17/pages/page-001.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r17/pages/page-002.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r17/pages/page-003.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r17/pages/page-004.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r17/pages/page-005.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r17/pages/page-006.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r17/pages/page-007.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r17/pages/page-008.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r17/pages/page-009.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r17/pages/page-010.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r18/contact-sheet.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r18/manifest.json\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r18/pages/page-001.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r18/pages/page-002.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r18/pages/page-003.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r18/pages/page-004.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r18/pages/page-005.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r18/pages/page-006.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r18/pages/page-007.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r18/pages/page-008.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r18/pages/page-009.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r18/pages/page-010.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r19/contact-sheet.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r19/manifest.json\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r19/pages/page-001.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r19/pages/page-002.png\",\n      \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwo
+...[truncated 384715 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```

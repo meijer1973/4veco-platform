@@ -1,0 +1,22 @@
+{
+  "name": "scope-own-lessons",
+  "cwd": "C:\\wt\\book2-231-qc-20260906\\4veco-platform",
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-231-qc-20260906\\4veco-lessen",
+    "--lane",
+    "textbook",
+    "--base",
+    "219a977e495abe43c17949e7d8996aab4176faa0",
+    "--head",
+    "1c71e6a88af7f73dba4777734ee6f2495fae9f87",
+    "--json"
+  ],
+  "started_at": "2026-09-06T00:55:56.199Z",
+  "finished_at": "2026-09-06T00:55:56.325Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"lane\": \"textbook\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml\"\n    ],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [\n    {\n      \"path\": \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml\",\n      \"blocks\": [\n        \"partA\"\n      ]\n    }\n  ],\n  \"failures\": [],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": ""
+}
