@@ -1,0 +1,107 @@
+{
+  "strict": {
+    "status": "PASS",
+    "platform_base": "c725c37d2081f6ac7846b8e172dcd7590f6611e9",
+    "platform_head": "476ea399641631c6333c29c6153cd85d471dc78f",
+    "lessons_base": "266881cb2d9e7f078192a2a3bab230f9bfc4176e",
+    "lessons_head": "266881cb2d9e7f078192a2a3bab230f9bfc4176e",
+    "platform_paths": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-author-readonly-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-check.py",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-bundle-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-claim-lessons-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-claim-platform-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-durable-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-goal-design-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-governance-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-structural-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-custody-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-independent-checks-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-independent-checks-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-legacy-publisher-print-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-legacy-student-web-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-publish.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-report.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-run.cjs"
+    ],
+    "lesson_paths": [],
+    "unknown": 0,
+    "lesson_changes": 0
+  },
+  "native": [
+    {
+      "label": "own-platform",
+      "base": "c725c37d2081f6ac7846b8e172dcd7590f6611e9",
+      "head": "476ea399641631c6333c29c6153cd85d471dc78f",
+      "exit": 1,
+      "ok": false,
+      "failures": [
+        "shared lane needs at least one shared platform change",
+        "generated index/report or review-evidence changes are allowed only with lane-owned changes"
+      ],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 19,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "own-lessons",
+      "base": "266881cb2d9e7f078192a2a3bab230f9bfc4176e",
+      "head": "266881cb2d9e7f078192a2a3bab230f9bfc4176e",
+      "exit": 1,
+      "ok": false,
+      "failures": [
+        "no changed paths to classify",
+        "textbook lane needs at least one Part A textbook change"
+      ],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "base": "96416b6b5bd57094576e9aba0a42d682584ec479",
+      "head": "476ea399641631c6333c29c6153cd85d471dc78f",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 80,
+        "generated_indexes": 6,
+        "review_evidence": 4262,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "base": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "266881cb2d9e7f078192a2a3bab230f9bfc4176e",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 204,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 5,
+        "unknown": 0
+      }
+    }
+  ],
+  "raw_prior_files_preserved": 13870,
+  "production_profiles": "NOT PASS: current232 output not yet produced; plan-only report records exact13/10 errors"
+}
