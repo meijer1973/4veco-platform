@@ -1,0 +1,325 @@
+{
+  "status": "PASS",
+  "target_sha256": "4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519",
+  "entire_original_order_target": {
+    "id": "2.2.4",
+    "module": 2,
+    "chapter": 2,
+    "paragraph": 4,
+    "paragraph_title": "Gemengde opgaven: elasticiteit",
+    "difficulty": "MIXED",
+    "target_exercise": {
+      "context": "StreamPlus onderzoekt één recente prijsverhoging en mogelijke vervolgstappen. Gebruik bij vragen 1 tot en met 5 telkens alleen de aangegeven bron. Combineer bij vraag 6 minstens twee bronnen. De gemeten Ev in bron A is gegeven; de opgave combineert eerder onderwezen handelingen en introduceert geen nieuwe formule.",
+      "sources": [
+        {
+          "id": "bron-a",
+          "type": "table",
+          "columns": [
+            "gegeven",
+            "oud",
+            "nieuw"
+          ],
+          "rows": [
+            [
+              "prijs Standaard",
+              "€10",
+              "€12"
+            ],
+            [
+              "abonnees",
+              "50.000",
+              "43.000"
+            ],
+            [
+              "appscore",
+              "4,6/5",
+              "4,6/5"
+            ]
+          ],
+          "content": "Tabel met oude en nieuwe prijs, aantal abonnees en appscore; de gemeten Ev is −0,7."
+        },
+        {
+          "id": "bron-b",
+          "type": "table",
+          "columns": [
+            "verandering",
+            "Premium",
+            "Budget"
+          ],
+          "rows": [
+            [
+              "inkomen",
+              "+8%",
+              "+8%"
+            ],
+            [
+              "gevraagde hoeveelheid",
+              "+15%",
+              "−4%"
+            ]
+          ],
+          "content": "Tabel met inkomens- en vraagverandering voor Premium en Budget."
+        },
+        {
+          "id": "bron-c",
+          "type": "table",
+          "columns": [
+            "gegeven",
+            "oud",
+            "nieuw"
+          ],
+          "rows": [
+            [
+              "prijs concurrerend abonnement",
+              "€8",
+              "€9"
+            ],
+            [
+              "vraag StreamPlus",
+              "basis",
+              "+5%"
+            ]
+          ],
+          "content": "Tabel voor de kruislingse elasticiteit van StreamPlus ten opzichte van het concurrerende abonnement."
+        },
+        {
+          "id": "bron-d",
+          "content": "Regionale vraagfunctie Q=12.000−400P+0,1Y+300Pc. Q is het aantal gevraagde abonnementen per maand, P en Pc zijn maandprijzen in euro en Y is het gemiddelde jaarinkomen in euro. Beginsituatie: P=12, Pc=10 en Y=40.000."
+        }
+      ],
+      "subquestions": [
+        {
+          "label": "1",
+          "points": 2,
+          "prompt": "Selecteer uit bron A de gegevens voor een controleberekening van Ev en noem het gegeven dat daarvoor niet nodig is."
+        },
+        {
+          "label": "2",
+          "points": 2,
+          "prompt": "Classificeer met de gegeven Ev=−0,7 de vraag en leg in gewone taal uit hoe sterk Q procentueel reageert op een prijsverandering."
+        },
+        {
+          "label": "3",
+          "points": 2,
+          "prompt": "Bereken met bron A TO vóór en na de prijsverhoging."
+        },
+        {
+          "label": "4",
+          "points": 4,
+          "prompt": "Bereken en classificeer met bron B Ei voor Premium en Budget en met bron C Ek van de vraag naar StreamPlus ten opzichte van de prijs van het concurrerende abonnement. Noem bij Ek beide diensten."
+        },
+        {
+          "label": "5",
+          "points": 2,
+          "prompt": "Bereken met bron D Q in de beginsituatie en nadat alleen Y stijgt naar €42.000 per jaar. Noem welke variabelen gelijk blijven."
+        },
+        {
+          "label": "6",
+          "points": 2,
+          "prompt": "Geef op basis van minstens twee bronnen een voorzichtig omzetadvies. Noem één conclusie die de bronnen ondersteunen en precies twee conclusies die zij niet bewijzen."
+        }
+      ]
+    },
+    "mixed_target_profile": {
+      "integrates_paragraphs": [
+        "2.2.1",
+        "2.2.2",
+        "2.2.3"
+      ],
+      "source_selection_required": true,
+      "answer_construction_required": true,
+      "table_or_graph_interpretation_required": true,
+      "no_new_theory": true
+    },
+    "lesson_goals": [
+      "Je kunt relevante tabelgegevens selecteren, Ev classificeren en uitleggen, en Ei en Ek berekenen en classificeren.",
+      "Je kunt totale opbrengst vóór en na een prijsverandering vergelijken.",
+      "Je kunt een vraagfunctie gebruiken als één variabele verandert en de andere variabelen gelijk blijven.",
+      "Je kunt met meerdere bronnen een omzetadvies formuleren zonder verder te gaan dan de gegevens."
+    ],
+    "required_skills": [
+      "A04",
+      "A15",
+      "A16",
+      "A17",
+      "A38",
+      "A85",
+      "D06",
+      "D11",
+      "D12",
+      "D27"
+    ],
+    "prior_knowledge_assumed": [
+      "All listed skills are retrieval from §§2.2.1–2.2.3."
+    ],
+    "new_skills_introduced": [],
+    "missing_units_flagged": [
+      "A16 and D12 use stale Ekr/kruiselasticiteit wording. This candidate follows the authored authority: kruislingse elasticiteit with notation Ek.",
+      "The local Ev/TO rule has no valid machine-unit coverage; D25 is not cited.",
+      "A15, A16, A17 and A38 carry broad A2.5 metadata, but this target contains no percentage-point operation and does not claim A2.5 coverage."
+    ],
+    "exam_codes": [
+      "A2.4",
+      "D1.5",
+      "D1.6",
+      "D1.7",
+      "D1.8",
+      "D1.9",
+      "D1.14",
+      "D1.15"
+    ],
+    "difficulty_notes": "Gemengde kandidaat voor circa 20 minuten met vijf vragen van twee punten, één gecombineerde elasticiteitsvraag van vier punten en vier compacte bronnen.",
+    "answer_form_expectations": [
+      "bronselectie",
+      "Ev-uitleg in gewone taal",
+      "omzetvergelijking",
+      "gecombineerde Ei- en Ek-berekening",
+      "vraagfunctie-invulling",
+      "twee-bronnenadvies met beperkingen"
+    ],
+    "short_answer_model": {
+      "1": "Nodig: P €10→€12 en Q 50.000→43.000. De appscore 4,6/5 is niet nodig voor Ev.",
+      "2": "|Ev|=0,7<1, dus de vraag is prijsinelastisch. Bij een prijsverandering van 1% verandert Q in deze waarneming in tegengestelde richting met ongeveer 0,7%.",
+      "3": "TO oud=€10×50.000=€500.000; TO nieuw=€12×43.000=€516.000.",
+      "4": "Premium: Ei=15%/8%=1,875, luxegoed. Budget: Ei=−4%/8%=−0,5, inferieur goed. Voor StreamPlus geldt %ΔP concurrent=(9−8)/8×100%=12,5% en Ek=5%/12,5%=0,4. Teller: vraag naar StreamPlus; noemer: prijs van de concurrerende dienst. Positief, dus de diensten zijn substituten.",
+      "5": "Q oud=12.000−4.800+4.000+3.000=14.200 abonnementen per maand. Bij Y=€42.000 per jaar is Q=14.400 abonnementen per maand; P en Pc blijven gelijk.",
+      "6": "Voorzichtig: de onderzochte verhoging verhoogde TO met €16.000; bron A ondersteunt die conclusie en bron C laat substitutie met de concurrent zien. Niet bewezen zijn precies: dezelfde reactie bij een volgende prijsverhoging en een hogere winst, omdat kostengegevens ontbreken."
+    },
+    "source_ref": "references/owned/course-blueprint-v5.md §2.2.4",
+    "paragraph_kind": "gemengde_opgaven",
+    "introduces_new_theory": false,
+    "record_status": "candidate_review_ready",
+    "v5_migration": {
+      "source_status": "candidate_review_ready",
+      "from_v4_id": null,
+      "related_v4_ids": [],
+      "review_required_before_final": true
+    }
+  },
+  "literal_goals_context_sources_prompts_and_model_verified": true,
+  "all_target_tables_exact_ordered_cells": true,
+  "dom_figures": [
+    {
+      "edition": "opgaven",
+      "alt": "Omzetrechthoeken van de telescoopverhuur: oude en nieuwe prijs en hoeveelheid.",
+      "alt_characters": 78,
+      "complete_visible_caption": "Figuur 1. Telescoopverhuur bij Sterrenplek. De hoogte toont de prijs per verhuring en de breedte het aantal verhuringen per week. Vergelijk de oude en nieuwe situatie op dezelfde schalen; de rechthoeken tonen prijs maal hoeveelheid."
+    },
+    {
+      "edition": "opgaven",
+      "alt": "Omzetrechthoeken van de verrekijkerverhuur: oude en nieuwe prijs en hoeveelheid.",
+      "alt_characters": 80,
+      "complete_visible_caption": "Figuur 2. Verrekijkerverhuur bij Sterrenplek. Beide rechthoeken zijn op dezelfde prijs- en hoeveelheidsschalen getekend als in figuur 1. Het zijn twee waargenomen situaties, geen getekende vraaglijn tussen de punten."
+    },
+    {
+      "edition": "antwoorden",
+      "alt": "Omzetvergelijking van de telescoopverhuur met bedragen en verandering.",
+      "alt_characters": 70,
+      "complete_visible_caption": "Figuur 3. Uitwerking van bron A. Met gelijke schalen zijn de rechthoeken €2.000 en €1.760 per week waard. De daling van €240 is 12% van de oude omzet; de oppervlakte is P maal Q en niet de helling van een lijn."
+    },
+    {
+      "edition": "antwoorden",
+      "alt": "Omzetvergelijking van de verrekijkerverhuur met de eindige veranderingsfactor.",
+      "alt_characters": 78,
+      "complete_visible_caption": "Figuur 4. Uitwerking van bron B. De oude en nieuwe omzet zijn €1.000 en €900 per week. De prijs- en hoeveelheidsfactor moeten worden vermenigvuldigd: 1,5 × 0,6 = 0,9. De figuur geeft geen lokale elasticiteit tussen beide waarnemingen."
+    }
+  ],
+  "svg_geometry": [
+    {
+      "figure": 1,
+      "title": "Omzetrechthoeken van de telescoopverhuur: oude en nieuwe prijs en hoeveelheid.",
+      "rectangles": [
+        [
+          100.0,
+          310.0,
+          300.0,
+          320.0
+        ],
+        [
+          700.0,
+          278.0,
+          240.0,
+          352.0
+        ]
+      ],
+      "raw_sha256": "d97092fd39f3c1e1f21745879bd4bc591dedfb72a94da22f5b371aeb8b38ee88"
+    },
+    {
+      "figure": 2,
+      "title": "Omzetrechthoeken van de verrekijkerverhuur: oude en nieuwe prijs en hoeveelheid.",
+      "rectangles": [
+        [
+          100.0,
+          470.0,
+          300.0,
+          160.0
+        ],
+        [
+          700.0,
+          390.0,
+          180.0,
+          240.0
+        ]
+      ],
+      "raw_sha256": "3cc3a5f7f1db7d1bdca66c1dd3dc602e260d92fe3e270428f888cb27dfbf9420"
+    },
+    {
+      "figure": 3,
+      "title": "Omzetvergelijking van de telescoopverhuur met bedragen en verandering.",
+      "rectangles": [
+        [
+          100.0,
+          310.0,
+          300.0,
+          320.0
+        ],
+        [
+          700.0,
+          278.0,
+          240.0,
+          352.0
+        ]
+      ],
+      "raw_sha256": "d094cd0803f0c023639aa70977909f3979bfeec46e763913c01bbd3b3d613e7e"
+    },
+    {
+      "figure": 4,
+      "title": "Omzetvergelijking van de verrekijkerverhuur met de eindige veranderingsfactor.",
+      "rectangles": [
+        [
+          100.0,
+          470.0,
+          300.0,
+          160.0
+        ],
+        [
+          700.0,
+          390.0,
+          180.0,
+          240.0
+        ]
+      ],
+      "raw_sha256": "ae2702581e6e88c8f82c87f0f3d2fec14a1b8cfa16afc7ebb25f010f9e945116"
+    }
+  ],
+  "essential_contrast": [
+    {
+      "foreground": "#2D3748",
+      "background": "#FFFFFF",
+      "ratio": 11.98884062340556
+    },
+    {
+      "foreground": "#7B2D8E",
+      "background": "#FFFFFF",
+      "ratio": 8.051702682234628
+    },
+    {
+      "foreground": "#7B2D8E",
+      "background": "#F3EBF5",
+      "ratio": 6.906361035211765
+    }
+  ],
+  "pale_fill_limit": "The old pale fill alone has no claimed contrast compliance; dark boundary, names and dashed versus solid/hatch carry all essential distinctions.",
+  "placed_label_pt": 15.68503937007874,
+  "independent_native_pdf_ua_or_assistive_technology_test": false
+}

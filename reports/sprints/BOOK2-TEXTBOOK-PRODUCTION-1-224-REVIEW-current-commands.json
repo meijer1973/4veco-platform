@@ -1,0 +1,166 @@
+{
+  "actor": "paragraph_231_specialist_qc",
+  "mode": "current",
+  "logs": [
+    {
+      "exe": "node",
+      "args": [
+        "scripts/validate-paragraph.js",
+        "--mode",
+        "part-a",
+        "--profile",
+        "student-web",
+        "C:\\wt\\book2-224-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit"
+      ],
+      "cwd": "C:\\wt\\book2-224-review-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "\nValidating paragraph 2.2.4 \"Gemengde opgaven elasticiteit\"\nPath: C:\\wt\\book2-224-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\nMode: part-a\nProfile: student-web\n\n-- Part A textbook files --\n  OK Paragraph type: consolidation\n  OK opgaven.md: 2.2.4 Gemengde opgaven elasticiteit – opgaven.md\n  OK antwoorden.md: 2.2.4 Gemengde opgaven elasticiteit – antwoorden.md\n  OK 2.2.4 Gemengde opgaven elasticiteit – opgaven.html (312.0 KB)\n  OK 2.2.4 Gemengde opgaven elasticiteit – antwoorden.html (345.8 KB)\n  OK 2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf (254 KB)\n  OK 2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf (279 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 4 image refs all resolve\n  OK _assets/: 4 SVGs, 4 PNGs\n\n-- Part A QC artifacts --\n  OK Part A review: 2.2.4-review.md (no explicit verdict, no FAIL markers)\n  OK Quality ref: 2.2.4-quality-ref.yaml (valid)\n\n==========================================\nOK Paragraph 2.2.4 \"Gemengde opgaven elasticiteit\" PASSED all checks.\n\n",
+      "stderr": "",
+      "stdout_base64": "ClZhbGlkYXRpbmcgcGFyYWdyYXBoIDIuMi40ICJHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdCIKUGF0aDogQzpcd3RcYm9vazItMjI0LXJldmlldy0yMDI2MDkwNlw0dmVjby1sZXNzZW5cQm9layAyIC0gS29zdGVuLCBvcGJyZW5nc3RlbiwgZWxhc3RpY2l0ZWl0IGVuIHN1cnBsdXNcMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXRcMi4yLjQgR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQKTW9kZTogcGFydC1hClByb2ZpbGU6IHN0dWRlbnQtd2ViCgotLSBQYXJ0IEEgdGV4dGJvb2sgZmlsZXMgLS0KICBPSyBQYXJhZ3JhcGggdHlwZTogY29uc29saWRhdGlvbgogIE9LIG9wZ2F2ZW4ubWQ6IDIuMi40IEdlbWVuZ2RlIG9wZ2F2ZW4gZWxhc3RpY2l0ZWl0IOKAkyBvcGdhdmVuLm1kCiAgT0sgYW50d29vcmRlbi5tZDogMi4yLjQgR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQg4oCTIGFudHdvb3JkZW4ubWQKICBPSyAyLjIuNCBHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdCDigJMgb3BnYXZlbi5odG1sICgzMTIuMCBLQikKICBPSyAyLjIuNCBHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdCDigJMgYW50d29vcmRlbi5odG1sICgzNDUuOCBLQikKICBPSyAyLjIuNCBHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdCDigJMgb3BnYXZlbi5wZGYgKDI1NCBLQikKICBPSyAyLjIuNCBHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdCDigJMgYW50d29vcmRlbi5wZGYgKDI3OSBLQikKICBPSyBidWlsZF9wZGYucHkKCi0tIEFzc2V0IGludGVncml0eSAtLQogIE9LIDQgaW1hZ2UgcmVmcyBhbGwgcmVzb2x2ZQogIE9LIF9hc3NldHMvOiA0IFNWR3MsIDQgUE5HcwoKLS0gUGFydCBBIFFDIGFydGlmYWN0cyAtLQogIE9LIFBhcnQgQSByZXZpZXc6IDIuMi40LXJldmlldy5tZCAobm8gZXhwbGljaXQgdmVyZGljdCwgbm8gRkFJTCBtYXJrZXJzKQogIE9LIFF1YWxpdHkgcmVmOiAyLjIuNC1xdWFsaXR5LXJlZi55YW1sICh2YWxpZCkKCj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQpPSyBQYXJhZ3JhcGggMi4yLjQgIkdlbWVuZ2RlIG9wZ2F2ZW4gZWxhc3RpY2l0ZWl0IiBQQVNTRUQgYWxsIGNoZWNrcy4KCg==",
+      "stderr_base64": ""
+    },
+    {
+      "exe": "node",
+      "args": [
+        "scripts/validate-paragraph.js",
+        "--mode",
+        "part-a",
+        "--profile",
+        "publisher-print",
+        "C:\\wt\\book2-224-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit"
+      ],
+      "cwd": "C:\\wt\\book2-224-review-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "\nValidating paragraph 2.2.4 \"Gemengde opgaven elasticiteit\"\nPath: C:\\wt\\book2-224-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\nMode: part-a\nProfile: publisher-print\n\n-- Part A textbook files --\n  OK Paragraph type: consolidation\n  OK opgaven.md: 2.2.4 Gemengde opgaven elasticiteit – opgaven.md\n  OK antwoorden.md: 2.2.4 Gemengde opgaven elasticiteit – antwoorden.md\n  OK 2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf (254 KB)\n  OK 2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf (279 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 4 image refs all resolve\n  OK _assets/: 4 SVGs, 4 PNGs\n\n-- Part A QC artifacts --\n  OK Part A review: 2.2.4-review.md (no explicit verdict, no FAIL markers)\n  OK Quality ref: 2.2.4-quality-ref.yaml (valid)\n\n==========================================\nOK Paragraph 2.2.4 \"Gemengde opgaven elasticiteit\" PASSED all checks.\n\n",
+      "stderr": "",
+      "stdout_base64": "ClZhbGlkYXRpbmcgcGFyYWdyYXBoIDIuMi40ICJHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdCIKUGF0aDogQzpcd3RcYm9vazItMjI0LXJldmlldy0yMDI2MDkwNlw0dmVjby1sZXNzZW5cQm9layAyIC0gS29zdGVuLCBvcGJyZW5nc3RlbiwgZWxhc3RpY2l0ZWl0IGVuIHN1cnBsdXNcMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXRcMi4yLjQgR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQKTW9kZTogcGFydC1hClByb2ZpbGU6IHB1Ymxpc2hlci1wcmludAoKLS0gUGFydCBBIHRleHRib29rIGZpbGVzIC0tCiAgT0sgUGFyYWdyYXBoIHR5cGU6IGNvbnNvbGlkYXRpb24KICBPSyBvcGdhdmVuLm1kOiAyLjIuNCBHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdCDigJMgb3BnYXZlbi5tZAogIE9LIGFudHdvb3JkZW4ubWQ6IDIuMi40IEdlbWVuZ2RlIG9wZ2F2ZW4gZWxhc3RpY2l0ZWl0IOKAkyBhbnR3b29yZGVuLm1kCiAgT0sgMi4yLjQgR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQg4oCTIG9wZ2F2ZW4ucGRmICgyNTQgS0IpCiAgT0sgMi4yLjQgR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQg4oCTIGFudHdvb3JkZW4ucGRmICgyNzkgS0IpCiAgT0sgYnVpbGRfcGRmLnB5CgotLSBBc3NldCBpbnRlZ3JpdHkgLS0KICBPSyA0IGltYWdlIHJlZnMgYWxsIHJlc29sdmUKICBPSyBfYXNzZXRzLzogNCBTVkdzLCA0IFBOR3MKCi0tIFBhcnQgQSBRQyBhcnRpZmFjdHMgLS0KICBPSyBQYXJ0IEEgcmV2aWV3OiAyLjIuNC1yZXZpZXcubWQgKG5vIGV4cGxpY2l0IHZlcmRpY3QsIG5vIEZBSUwgbWFya2VycykKICBPSyBRdWFsaXR5IHJlZjogMi4yLjQtcXVhbGl0eS1yZWYueWFtbCAodmFsaWQpCgo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KT0sgUGFyYWdyYXBoIDIuMi40ICJHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdCIgUEFTU0VEIGFsbCBjaGVja3MuCgo=",
+      "stderr_base64": ""
+    },
+    {
+      "exe": "node",
+      "args": [
+        "build-scripts/workflows/check-book-outline-currentness.js",
+        "--require-approved",
+        "--action",
+        "paragraph_production",
+        "--paragraph",
+        "2.2.4"
+      ],
+      "cwd": "C:\\wt\\book2-224-review-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.2.4\n",
+      "stderr": "",
+      "stdout_base64": "Qm9vayAyIG91dGxpbmUgY3VycmVudG5lc3M6IFBBU1MKLSBvdXRsaW5lOiByZWZlcmVuY2VzL2F1dGhvcmVkL2Jvb2stb3V0bGluZXMvYm9vay0yLW91dGxpbmUubWQKLSB0YXJnZXQgcGluczogMTIKLSBtb2RlOiBhcHByb3ZlZC11c2UKLSBwYXJhZ3JhcGggc2NvcGU6IDIuMi40Cg==",
+      "stderr_base64": ""
+    },
+    {
+      "exe": "node",
+      "args": [
+        "build-scripts/workflows/check-book2-target-authority-remediation.js",
+        "--durable"
+      ],
+      "cwd": "C:\\wt\\book2-224-review-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "Book 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n",
+      "stderr": "",
+      "stdout_base64": "Qm9vayAyIHRhcmdldCBhdXRob3JpdHkgcmVtZWRpYXRpb246IFBBU1MKLSBtb2RlOiBkdXJhYmxlIGZyb3plbi1wYWNrYWdlIGFuZCBsaWZlY3ljbGUgaW52YXJpYW50Ci0gZXhhY3QgY2FuZGlkYXRlIHJlY29yZHM6IDEyCi0gZ29hbC9xdWVzdGlvbiBhbGlnbm1lbnQgYW5kIHdvcmtsb2FkIGJ1ZGdldHM6IGNvbXBsZXRlCi0gdW5yZWxhdGVkLXJlY29yZCBzY29wZSBjaGVja3M6IGRlbGVnYXRlZCB0byB0aGUgUFItc2NvcGVkIHNwcmludCBndWFyZAo=",
+      "stderr_base64": ""
+    },
+    {
+      "exe": "node",
+      "args": [
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "BOOK2-TEXTBOOK-PRODUCTION-1"
+      ],
+      "cwd": "C:\\wt\\book2-224-review-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active\n",
+      "stderr": "",
+      "stdout_base64": "T0sgc3ByaW50IGJ1bmRsZTogQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xIHBsYW5uZWQvYWN0aXZlCg==",
+      "stderr_base64": ""
+    },
+    {
+      "exe": "git",
+      "args": [
+        "fetch",
+        "--prune",
+        "origin"
+      ],
+      "cwd": "C:\\wt\\book2-224-review-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "stdout_base64": "",
+      "stderr_base64": ""
+    },
+    {
+      "exe": "git",
+      "args": [
+        "fetch",
+        "--prune",
+        "origin"
+      ],
+      "cwd": "C:\\wt\\book2-224-review-20260906\\4veco-lessen",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "stdout_base64": "",
+      "stderr_base64": ""
+    },
+    {
+      "exe": "node",
+      "args": [
+        "build-scripts/ci/check-governance-freshness.js"
+      ],
+      "cwd": "C:\\wt\\book2-224-review-20260906\\4veco-platform",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/cjs/loader:1451\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:\\wt\\book2-224-review-20260906\\4veco-platform\\build-scripts\\ci\\check-governance-freshness.js'\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1448:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1234:25)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: []\r\n}\r\n\r\nNode.js v24.13.1\r\n",
+      "stdout_base64": "",
+      "stderr_base64": "bm9kZTppbnRlcm5hbC9tb2R1bGVzL2Nqcy9sb2FkZXI6MTQ1MQ0KICB0aHJvdyBlcnI7DQogIF4NCg0KRXJyb3I6IENhbm5vdCBmaW5kIG1vZHVsZSAnQzpcd3RcYm9vazItMjI0LXJldmlldy0yMDI2MDkwNlw0dmVjby1wbGF0Zm9ybVxidWlsZC1zY3JpcHRzXGNpXGNoZWNrLWdvdmVybmFuY2UtZnJlc2huZXNzLmpzJw0KICAgIGF0IE1vZHVsZS5fcmVzb2x2ZUZpbGVuYW1lIChub2RlOmludGVybmFsL21vZHVsZXMvY2pzL2xvYWRlcjoxNDQ4OjE1KQ0KICAgIGF0IGRlZmF1bHRSZXNvbHZlSW1wbCAobm9kZTppbnRlcm5hbC9tb2R1bGVzL2Nqcy9sb2FkZXI6MTA1OToxOSkNCiAgICBhdCByZXNvbHZlRm9yQ0pTV2l0aEhvb2tzIChub2RlOmludGVybmFsL21vZHVsZXMvY2pzL2xvYWRlcjoxMDY0OjIyKQ0KICAgIGF0IE1vZHVsZS5fbG9hZCAobm9kZTppbnRlcm5hbC9tb2R1bGVzL2Nqcy9sb2FkZXI6MTIzNDoyNSkNCiAgICBhdCBUcmFjaW5nQ2hhbm5lbC50cmFjZVN5bmMgKG5vZGU6ZGlhZ25vc3RpY3NfY2hhbm5lbDozMjg6MTQpDQogICAgYXQgd3JhcE1vZHVsZUxvYWQgKG5vZGU6aW50ZXJuYWwvbW9kdWxlcy9janMvbG9hZGVyOjI0NToyNCkNCiAgICBhdCBNb2R1bGUuZXhlY3V0ZVVzZXJFbnRyeVBvaW50IFthcyBydW5NYWluXSAobm9kZTppbnRlcm5hbC9tb2R1bGVzL3J1bl9tYWluOjE1NDo1KQ0KICAgIGF0IG5vZGU6aW50ZXJuYWwvbWFpbi9ydW5fbWFpbl9tb2R1bGU6MzM6NDcgew0KICBjb2RlOiAnTU9EVUxFX05PVF9GT1VORCcsDQogIHJlcXVpcmVTdGFjazogW10NCn0NCg0KTm9kZS5qcyB2MjQuMTMuMQ0K"
+    },
+    {
+      "exe": "node",
+      "args": [
+        "build-scripts/ci/check-agent-worktree-safety.js",
+        "--check",
+        "--worktree",
+        "C:\\wt\\book2-224-review-20260906\\4veco-platform",
+        "--task",
+        "BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW",
+        "--agent",
+        "paragraph_231_specialist_qc",
+        "--require-prefix",
+        "codex/,agent/"
+      ],
+      "cwd": "C:\\wt\\book2-224-review-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "{\n  \"ok\": true,\n  \"mode\": \"check\",\n  \"repository\": \"4veco-platform\",\n  \"worktree_path\": \"C:/wt/book2-224-review-20260906/4veco-platform\",\n  \"git_dir\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform185\",\n  \"anchor_clone\": false,\n  \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW\",\n  \"agent_id\": \"paragraph_231_specialist_qc\",\n  \"lock\": {\n    \"present\": true,\n    \"same_owner\": true,\n    \"same_task\": true,\n    \"stale\": false,\n    \"path\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform185\\\\4veco-agent-worktree-lock.json\",\n    \"owner\": \"paragraph_231_specialist_qc\",\n    \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW\"\n  },\n  \"branch\": \"agent/book2-224-review-20260906\",\n  \"head_sha\": \"2df56fa59da339fc361cb991d15853f77f5934e2\",\n  \"on_main\": false,\n  \"detached_head\": false,\n  \"dirty\": true,\n  \"dirty_count\": 7,\n  \"ahead\": 0,\n  \"behind\": 0,\n  \"diverged\": false,\n  \"prefix_ok\": true,\n  \"required_prefixes\": [\n    \"codex/\",\n    \"agent/\"\n  ],\n  \"warnings\": [\n    \"working tree is dirty (7 items)\"\n  ],\n  \"failures\": []\n}\n",
+      "stderr": "",
+      "stdout_base64": "ewogICJvayI6IHRydWUsCiAgIm1vZGUiOiAiY2hlY2siLAogICJyZXBvc2l0b3J5IjogIjR2ZWNvLXBsYXRmb3JtIiwKICAid29ya3RyZWVfcGF0aCI6ICJDOi93dC9ib29rMi0yMjQtcmV2aWV3LTIwMjYwOTA2LzR2ZWNvLXBsYXRmb3JtIiwKICAiZ2l0X2RpciI6ICJDOlxcUHJvamVjdHNcXDR2ZWNvXFw0dmVjby1wbGF0Zm9ybVxcLmdpdFxcd29ya3RyZWVzXFw0dmVjby1wbGF0Zm9ybTE4NSIsCiAgImFuY2hvcl9jbG9uZSI6IGZhbHNlLAogICJ0YXNrX2lkIjogIkJPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMjQtUkVWSUVXIiwKICAiYWdlbnRfaWQiOiAicGFyYWdyYXBoXzIzMV9zcGVjaWFsaXN0X3FjIiwKICAibG9jayI6IHsKICAgICJwcmVzZW50IjogdHJ1ZSwKICAgICJzYW1lX293bmVyIjogdHJ1ZSwKICAgICJzYW1lX3Rhc2siOiB0cnVlLAogICAgInN0YWxlIjogZmFsc2UsCiAgICAicGF0aCI6ICJDOlxcUHJvamVjdHNcXDR2ZWNvXFw0dmVjby1wbGF0Zm9ybVxcLmdpdFxcd29ya3RyZWVzXFw0dmVjby1wbGF0Zm9ybTE4NVxcNHZlY28tYWdlbnQtd29ya3RyZWUtbG9jay5qc29uIiwKICAgICJvd25lciI6ICJwYXJhZ3JhcGhfMjMxX3NwZWNpYWxpc3RfcWMiLAogICAgInRhc2tfaWQiOiAiQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1SRVZJRVciCiAgfSwKICAiYnJhbmNoIjogImFnZW50L2Jvb2syLTIyNC1yZXZpZXctMjAyNjA5MDYiLAogICJoZWFkX3NoYSI6ICIyZGY1NmZhNTlkYTMzOWZjMzYxY2I5OTFkMTU4NTNmNzdmNTkzNGUyIiwKICAib25fbWFpbiI6IGZhbHNlLAogICJkZXRhY2hlZF9oZWFkIjogZmFsc2UsCiAgImRpcnR5IjogdHJ1ZSwKICAiZGlydHlfY291bnQiOiA3LAogICJhaGVhZCI6IDAsCiAgImJlaGluZCI6IDAsCiAgImRpdmVyZ2VkIjogZmFsc2UsCiAgInByZWZpeF9vayI6IHRydWUsCiAgInJlcXVpcmVkX3ByZWZpeGVzIjogWwogICAgImNvZGV4LyIsCiAgICAiYWdlbnQvIgogIF0sCiAgIndhcm5pbmdzIjogWwogICAgIndvcmtpbmcgdHJlZSBpcyBkaXJ0eSAoNyBpdGVtcykiCiAgXSwKICAiZmFpbHVyZXMiOiBbXQp9Cg==",
+      "stderr_base64": ""
+    },
+    {
+      "exe": "node",
+      "args": [
+        "build-scripts/ci/check-agent-worktree-safety.js",
+        "--check",
+        "--worktree",
+        "C:\\wt\\book2-224-review-20260906\\4veco-lessen",
+        "--task",
+        "BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW",
+        "--agent",
+        "paragraph_231_specialist_qc",
+        "--require-prefix",
+        "codex/,agent/"
+      ],
+      "cwd": "C:\\wt\\book2-224-review-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "{\n  \"ok\": true,\n  \"mode\": \"check\",\n  \"repository\": \"4veco-lessen\",\n  \"worktree_path\": \"C:/wt/book2-224-review-20260906/4veco-lessen\",\n  \"git_dir\": \"C:\\\\Projects\\\\4veco\\\\4veco-lessen\\\\.git\\\\worktrees\\\\4veco-lessen130\",\n  \"anchor_clone\": false,\n  \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW\",\n  \"agent_id\": \"paragraph_231_specialist_qc\",\n  \"lock\": {\n    \"present\": true,\n    \"same_owner\": true,\n    \"same_task\": true,\n    \"stale\": false,\n    \"path\": \"C:\\\\Projects\\\\4veco\\\\4veco-lessen\\\\.git\\\\worktrees\\\\4veco-lessen130\\\\4veco-agent-worktree-lock.json\",\n    \"owner\": \"paragraph_231_specialist_qc\",\n    \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW\"\n  },\n  \"branch\": \"agent/book2-224-review-20260906\",\n  \"head_sha\": \"994657c8901729fcb138493be4e8c2e9590081bd\",\n  \"on_main\": false,\n  \"detached_head\": false,\n  \"dirty\": true,\n  \"dirty_count\": 1,\n  \"ahead\": 0,\n  \"behind\": 0,\n  \"diverged\": false,\n  \"prefix_ok\": true,\n  \"required_prefixes\": [\n    \"codex/\",\n    \"agent/\"\n  ],\n  \"warnings\": [\n    \"working tree is dirty (1 item)\"\n  ],\n  \"failures\": []\n}\n",
+      "stderr": "",
+      "stdout_base64": "ewogICJvayI6IHRydWUsCiAgIm1vZGUiOiAiY2hlY2siLAogICJyZXBvc2l0b3J5IjogIjR2ZWNvLWxlc3NlbiIsCiAgIndvcmt0cmVlX3BhdGgiOiAiQzovd3QvYm9vazItMjI0LXJldmlldy0yMDI2MDkwNi80dmVjby1sZXNzZW4iLAogICJnaXRfZGlyIjogIkM6XFxQcm9qZWN0c1xcNHZlY29cXDR2ZWNvLWxlc3NlblxcLmdpdFxcd29ya3RyZWVzXFw0dmVjby1sZXNzZW4xMzAiLAogICJhbmNob3JfY2xvbmUiOiBmYWxzZSwKICAidGFza19pZCI6ICJCT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjI0LVJFVklFVyIsCiAgImFnZW50X2lkIjogInBhcmFncmFwaF8yMzFfc3BlY2lhbGlzdF9xYyIsCiAgImxvY2siOiB7CiAgICAicHJlc2VudCI6IHRydWUsCiAgICAic2FtZV9vd25lciI6IHRydWUsCiAgICAic2FtZV90YXNrIjogdHJ1ZSwKICAgICJzdGFsZSI6IGZhbHNlLAogICAgInBhdGgiOiAiQzpcXFByb2plY3RzXFw0dmVjb1xcNHZlY28tbGVzc2VuXFwuZ2l0XFx3b3JrdHJlZXNcXDR2ZWNvLWxlc3NlbjEzMFxcNHZlY28tYWdlbnQtd29ya3RyZWUtbG9jay5qc29uIiwKICAgICJvd25lciI6ICJwYXJhZ3JhcGhfMjMxX3NwZWNpYWxpc3RfcWMiLAogICAgInRhc2tfaWQiOiAiQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1SRVZJRVciCiAgfSwKICAiYnJhbmNoIjogImFnZW50L2Jvb2syLTIyNC1yZXZpZXctMjAyNjA5MDYiLAogICJoZWFkX3NoYSI6ICI5OTQ2NTdjODkwMTcyOWZjYjEzODQ5M2JlNGU4YzJlOTU5MDA4MWJkIiwKICAib25fbWFpbiI6IGZhbHNlLAogICJkZXRhY2hlZF9oZWFkIjogZmFsc2UsCiAgImRpcnR5IjogdHJ1ZSwKICAiZGlydHlfY291bnQiOiAxLAogICJhaGVhZCI6IDAsCiAgImJlaGluZCI6IDAsCiAgImRpdmVyZ2VkIjogZmFsc2UsCiAgInByZWZpeF9vayI6IHRydWUsCiAgInJlcXVpcmVkX3ByZWZpeGVzIjogWwogICAgImNvZGV4LyIsCiAgICAiYWdlbnQvIgogIF0sCiAgIndhcm5pbmdzIjogWwogICAgIndvcmtpbmcgdHJlZSBpcyBkaXJ0eSAoMSBpdGVtKSIKICBdLAogICJmYWlsdXJlcyI6IFtdCn0K",
+      "stderr_base64": ""
+    }
+  ],
+  "status": "FAIL"
+}

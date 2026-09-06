@@ -1,0 +1,14 @@
+{
+  "label": "durable",
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-book2-target-authority-remediation.js",
+    "--durable"
+  ],
+  "cwd": "C:\\wt\\book2-224-review-20260906\\4veco-platform",
+  "exit_code": 0,
+  "stdout": "Book 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n",
+  "stderr": "",
+  "stdout_base64": "Qm9vayAyIHRhcmdldCBhdXRob3JpdHkgcmVtZWRpYXRpb246IFBBU1MKLSBtb2RlOiBkdXJhYmxlIGZyb3plbi1wYWNrYWdlIGFuZCBsaWZlY3ljbGUgaW52YXJpYW50Ci0gZXhhY3QgY2FuZGlkYXRlIHJlY29yZHM6IDEyCi0gZ29hbC9xdWVzdGlvbiBhbGlnbm1lbnQgYW5kIHdvcmtsb2FkIGJ1ZGdldHM6IGNvbXBsZXRlCi0gdW5yZWxhdGVkLXJlY29yZCBzY29wZSBjaGVja3M6IGRlbGVnYXRlZCB0byB0aGUgUFItc2NvcGVkIHNwcmludCBndWFyZAo=",
+  "stderr_base64": ""
+}

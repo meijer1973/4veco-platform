@@ -1,0 +1,18 @@
+{
+  "label": "approved",
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-book-outline-currentness.js",
+    "--require-approved",
+    "--action",
+    "paragraph_production",
+    "--paragraph",
+    "2.2.4"
+  ],
+  "cwd": "C:\\wt\\book2-224-review-20260906\\4veco-platform",
+  "exit_code": 0,
+  "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.2.4\n",
+  "stderr": "",
+  "stdout_base64": "Qm9vayAyIG91dGxpbmUgY3VycmVudG5lc3M6IFBBU1MKLSBvdXRsaW5lOiByZWZlcmVuY2VzL2F1dGhvcmVkL2Jvb2stb3V0bGluZXMvYm9vay0yLW91dGxpbmUubWQKLSB0YXJnZXQgcGluczogMTIKLSBtb2RlOiBhcHByb3ZlZC11c2UKLSBwYXJhZ3JhcGggc2NvcGU6IDIuMi40Cg==",
+  "stderr_base64": ""
+}
