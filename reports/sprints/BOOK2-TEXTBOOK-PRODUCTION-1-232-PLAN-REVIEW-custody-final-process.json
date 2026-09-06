@@ -1,0 +1,13 @@
+{
+  "command": "node",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-custody.cjs",
+    "verify"
+  ],
+  "cwd": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:50:04.639Z",
+  "ended_at": "2026-09-06T02:50:09.483Z",
+  "exit_code": 0,
+  "stdout": "PASS every prior raw file unchanged; exact four publication indexes are the only exception\n",
+  "stderr": ""
+}

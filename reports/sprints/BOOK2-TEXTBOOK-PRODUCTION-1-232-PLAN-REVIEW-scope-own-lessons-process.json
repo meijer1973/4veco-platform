@@ -1,0 +1,21 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-232-plan-review-20260906\\4veco-lessen",
+    "--lane",
+    "textbook",
+    "--base",
+    "9daf4b8a9696fcdce1d485d85dbc0c59b7b6dbe6",
+    "--head",
+    "9daf4b8a9696fcdce1d485d85dbc0c59b7b6dbe6",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:49:37.987Z",
+  "ended_at": "2026-09-06T02:49:38.056Z",
+  "exit_code": 1,
+  "stdout": "{\n  \"ok\": false,\n  \"lane\": \"textbook\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [\n    \"no changed paths to classify\",\n    \"textbook lane needs at least one Part A textbook change\"\n  ],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": ""
+}
