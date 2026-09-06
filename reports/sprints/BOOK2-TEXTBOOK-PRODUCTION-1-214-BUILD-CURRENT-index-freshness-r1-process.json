@@ -1,0 +1,16 @@
+{
+  "label": "index-freshness-r1",
+  "argv": [
+    "node",
+    "build-scripts/reports/check-agent-index-freshness.js"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:30:53.653Z",
+  "finish": "2026-09-06T08:30:53.867Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "{\n  \"ok\": true,\n  \"checks\": [\n    {\n      \"label\": \"4veco-platform\",\n      \"ok\": true,\n      \"skipped\": false,\n      \"failures\": [],\n      \"warnings\": [],\n      \"source_commit\": \"8e58aaed2239b5daa83838be76d8d67ecf64be42\",\n      \"head\": \"8e58aaed2239b5daa83838be76d8d67ecf64be42\",\n      \"source_ref\": \"HEAD\",\n      \"target_commit\": \"8e58aaed2239b5daa83838be76d8d67ecf64be42\",\n      \"accepted_parent_generated_tail\": false,\n      \"accepted_generated_index_tail_ref\": null\n    },\n    {\n      \"label\": \"4veco-lessen\",\n      \"ok\": true,\n      \"skipped\": false,\n      \"failures\": [],\n      \"warnings\": [],\n      \"source_commit\": \"84f821a3cde2e525c54593d7f36ea86b2c53dff9\",\n      \"head\": \"84f821a3cde2e525c54593d7f36ea86b2c53dff9\",\n      \"source_ref\": \"84f821a3cde2e525c54593d7f36ea86b2c53dff9\",\n      \"target_commit\": \"84f821a3cde2e525c54593d7f36ea86b2c53dff9\",\n      \"accepted_parent_generated_tail\": false,\n      \"accepted_generated_index_tail_ref\": null\n    }\n  ],\n  \"failures\": [],\n  \"warnings\": []\n}\n",
+  "stderr": "",
+  "stdout_base64": "ewogICJvayI6IHRydWUsCiAgImNoZWNrcyI6IFsKICAgIHsKICAgICAgImxhYmVsIjogIjR2ZWNvLXBsYXRmb3JtIiwKICAgICAgIm9rIjogdHJ1ZSwKICAgICAgInNraXBwZWQiOiBmYWxzZSwKICAgICAgImZhaWx1cmVzIjogW10sCiAgICAgICJ3YXJuaW5ncyI6IFtdLAogICAgICAic291cmNlX2NvbW1pdCI6ICI4ZTU4YWFlZDIyMzliNWRhYTgzODM4YmU3NmQ4ZDY3ZWNmNjRiZTQyIiwKICAgICAgImhlYWQiOiAiOGU1OGFhZWQyMjM5YjVkYWE4MzgzOGJlNzZkOGQ2N2VjZjY0YmU0MiIsCiAgICAgICJzb3VyY2VfcmVmIjogIkhFQUQiLAogICAgICAidGFyZ2V0X2NvbW1pdCI6ICI4ZTU4YWFlZDIyMzliNWRhYTgzODM4YmU3NmQ4ZDY3ZWNmNjRiZTQyIiwKICAgICAgImFjY2VwdGVkX3BhcmVudF9nZW5lcmF0ZWRfdGFpbCI6IGZhbHNlLAogICAgICAiYWNjZXB0ZWRfZ2VuZXJhdGVkX2luZGV4X3RhaWxfcmVmIjogbnVsbAogICAgfSwKICAgIHsKICAgICAgImxhYmVsIjogIjR2ZWNvLWxlc3NlbiIsCiAgICAgICJvayI6IHRydWUsCiAgICAgICJza2lwcGVkIjogZmFsc2UsCiAgICAgICJmYWlsdXJlcyI6IFtdLAogICAgICAid2FybmluZ3MiOiBbXSwKICAgICAgInNvdXJjZV9jb21taXQiOiAiODRmODIxYTNjZGUyZTUyNWM1NDU5M2Q3ZjM2ZWE4NmIyYzUzZGZmOSIsCiAgICAgICJoZWFkIjogIjg0ZjgyMWEzY2RlMmU1MjVjNTQ1OTNkN2YzNmVhODZiMmM1M2RmZjkiLAogICAgICAic291cmNlX3JlZiI6ICI4NGY4MjFhM2NkZTJlNTI1YzU0NTkzZDdmMzZlYTg2YjJjNTNkZmY5IiwKICAgICAgInRhcmdldF9jb21taXQiOiAiODRmODIxYTNjZGUyZTUyNWM1NDU5M2Q3ZjM2ZWE4NmIyYzUzZGZmOSIsCiAgICAgICJhY2NlcHRlZF9wYXJlbnRfZ2VuZXJhdGVkX3RhaWwiOiBmYWxzZSwKICAgICAgImFjY2VwdGVkX2dlbmVyYXRlZF9pbmRleF90YWlsX3JlZiI6IG51bGwKICAgIH0KICBdLAogICJmYWlsdXJlcyI6IFtdLAogICJ3YXJuaW5ncyI6IFtdCn0K",
+  "stderr_base64": ""
+}
