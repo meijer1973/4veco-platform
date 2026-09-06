@@ -31,7 +31,9 @@ waarneming niet met de afzonderlijke regionale maandvraag uit bron D.
 (2) Budget −0,5 en inferieur goed;
 (3) de prijsstijging van de concurrent 12,5% en Ek = 0,4;
 (4) de correcte teller/noemer met beide diensten en de positieve
-substitutenrelatie. Ei blijft getekend: neem niet de absolute waarde van Budget.
+substitutenrelatie. De teller en noemer zijn procentuele veranderingen, geen
+verhouding tussen hoeveelheid en prijs. Ei blijft getekend: neem niet de
+absolute waarde van Budget.
 
 <div class="page-break"></div>
 

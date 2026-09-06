@@ -23,7 +23,7 @@ Procentuele verandering TO = (1.760 − 2.000) / 2.000 × 100% = **−12%**.
 De servicebeoordeling 4,8 op 5 is niet nodig voor deze berekeningen.
 
 **Beoordeling: 1 punt** voor de beide juiste procentuele veranderingen en Ev;
-**1 punt** voor de juiste categorie met magnitude en proportionele betekenis;
+**1 punt** voor de juiste categorie met absolute waarde en proportionele betekenis;
 **1 punt** voor beide TO-bedragen en −12%; **1 punt** voor de juist benoemde
 oude/nieuwe figuurwaarden met eenheden en het niet-relevante gegeven.
 
@@ -163,8 +163,9 @@ De hulp hoort bij dezelfde vragen, zonder extra punten. Bij vraag 1 zijn de
 open invulplaatsen +10%, −20% / +10% = −2, €20 × 100 en €22 × 80.
 Bij vraag 2 vermenigvuldig je de prijs- en hoeveelheidsfactor; de intervalmeting
 bewijst geen lokale categorie op ieder tussenliggend punt. Bij vraag 3 is het
-inkomenspercentage de noemer. Bij vraag 4 is de teller de vraag naar filters
-en de noemer de prijs van telescopen. Bij vraag 5 is de eerste rij altijd
+inkomenspercentage de noemer. Bij vraag 4 is de teller de procentuele verandering
+van de vraag naar filters en de noemer de procentuele verandering van de prijs
+van telescopen. Bij vraag 5 is de eerste rij altijd
 Px = 10, Pc = 20, Y = 20.000 en Qx = 200. De volledige redenen en berekeningen
 staan bij vragen 1–5; hulpgebruik maakt een antwoord niet minder waard.
 

@@ -161,8 +161,9 @@ wel en niet over de regel voor een kleine lokale verandering?
 **Bij vraag 3.** Welke procentuele verandering hoort bij inkomen? Welke hoort
 bij de gevraagde hoeveelheid? Kies de juiste noemer voordat je deelt.
 
-**Bij vraag 4.** Vul eerst zonder getallen in: “vraag naar …” gedeeld door
-“prijs van …”. Gebruik de prijs van het andere genoemde goed, niet de eigen
+**Bij vraag 4.** Vul eerst zonder getallen in: “procentuele verandering van
+de vraag naar …” gedeeld door “procentuele verandering van de prijs van …”.
+Gebruik de prijs van het andere genoemde goed, niet de eigen
 prijs van het goed waarvan je de vraag onderzoekt.
 
 **Bij vraag 5.** Begin ieder afzonderlijk scenario opnieuw bij de eerste rij
