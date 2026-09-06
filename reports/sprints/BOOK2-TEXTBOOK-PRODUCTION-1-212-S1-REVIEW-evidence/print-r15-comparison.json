@@ -1,0 +1,787 @@
+{
+  "result": "PASS",
+  "mode": "print",
+  "revision": "r15",
+  "manifest_sha256": "b8aa3bb273565a4e9205e93eb0cf7a02881ca412a047abe1a4af36e432fbb6d8",
+  "native": {
+    "2.1.2 Opbrengsten, winst en break-even – paragraaf.md": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+    "2.1.2 Opbrengsten, winst en break-even – paragraaf.html": "85eff0548ce75161a2935e2bb3d0bb470f30ec10e95996c670605574d89454b5",
+    "2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+    "2.1.2 Opbrengsten, winst en break-even – paragraaf.zip": "e9d639f9119da0b118b58e9541f7d86ad9244960368cdaacc2f439b9c543d86f",
+    "2.1.2 Opbrengsten, winst en break-even – opgaven.md": "df2cd3fe66af760b55b1f28a2f51ca9c7449b4f1704d5da278db064850eef002",
+    "2.1.2 Opbrengsten, winst en break-even – opgaven.html": "87c55209dd450e989476f2f9779feb88de9fac9bbc77a0805112a444ffb65a06",
+    "2.1.2 Opbrengsten, winst en break-even – opgaven.pdf": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+    "2.1.2 Opbrengsten, winst en break-even – opgaven.zip": "c72b108912247d2f190466f8bac4fdab54e001652097199d3939920739ae12e8",
+    "2.1.2 Opbrengsten, winst en break-even – antwoorden.md": "4ffcb70c96f2c0c178a06a6092ec6701c4323cc1ac697de4156bc7cf0d43b8b3",
+    "2.1.2 Opbrengsten, winst en break-even – antwoorden.html": "be02782985485caca268df98af897104d78feec9737032cd14803c978a318a82",
+    "2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90",
+    "2.1.2 Opbrengsten, winst en break-even – antwoorden.zip": "575fe9051596241c1bd0a29b5ca40bdd3ad4a357f6fd387508277362abe7a28e",
+    "_assets/2.1.2_ex_1.png": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+    "_assets/2.1.2_ex_1.svg": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+    "_assets/2.1.2_ex_2.png": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+    "_assets/2.1.2_ex_2.svg": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+    "_assets/2.1.2_ex_3.png": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+    "_assets/2.1.2_ex_3.svg": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee",
+    "_assets/2.1.2_ex_4.png": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+    "_assets/2.1.2_ex_4.svg": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3",
+    "_assets/2.1.2_ex_5.png": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+    "_assets/2.1.2_ex_5.svg": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127",
+    "_assets/2.1.2_ex_6.png": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+    "_assets/2.1.2_ex_6.svg": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+    "_assets/2.1.2_fig_1.png": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+    "_assets/2.1.2_fig_1.svg": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+    "_assets/2.1.2_fig_2.png": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+    "_assets/2.1.2_fig_2.svg": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f",
+    "_assets/2.1.2_fig_3.png": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+    "_assets/2.1.2_fig_3.svg": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270",
+    "_assets/2.1.2_fig_4.png": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+    "_assets/2.1.2_fig_4.svg": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910",
+    "_assets/2.1.2_we_1.png": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+    "_assets/2.1.2_we_1.svg": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df"
+  },
+  "archives": {
+    "paragraaf": [
+      {
+        "name": "2.1.2 Opbrengsten, winst en break-even – paragraaf.html",
+        "crc": 3411373289,
+        "size": 1368020,
+        "sha256": "85eff0548ce75161a2935e2bb3d0bb470f30ec10e95996c670605574d89454b5",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+        "crc": 1683596495,
+        "size": 19621,
+        "sha256": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+        "crc": 2623352468,
+        "size": 1033206,
+        "sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_1.png",
+        "crc": 3090357838,
+        "size": 115864,
+        "sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_1.svg",
+        "crc": 3616123622,
+        "size": 3782,
+        "sha256": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_2.png",
+        "crc": 3373210638,
+        "size": 78057,
+        "sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_2.svg",
+        "crc": 1211375624,
+        "size": 3026,
+        "sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_6.png",
+        "crc": 2886610879,
+        "size": 245017,
+        "sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_6.svg",
+        "crc": 3346766745,
+        "size": 6634,
+        "sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_fig_1.png",
+        "crc": 2570629909,
+        "size": 85693,
+        "sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_fig_1.svg",
+        "crc": 3621410205,
+        "size": 2540,
+        "sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_fig_2.png",
+        "crc": 3207645291,
+        "size": 107780,
+        "sha256": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_fig_2.svg",
+        "crc": 3221829114,
+        "size": 2856,
+        "sha256": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_fig_3.png",
+        "crc": 1378531080,
+        "size": 125596,
+        "sha256": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_fig_3.svg",
+        "crc": 3027416942,
+        "size": 3346,
+        "sha256": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_fig_4.png",
+        "crc": 2518148123,
+        "size": 129598,
+        "sha256": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_fig_4.svg",
+        "crc": 3103453759,
+        "size": 3753,
+        "sha256": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_we_1.png",
+        "crc": 3566934058,
+        "size": 119293,
+        "sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_we_1.svg",
+        "crc": 467889169,
+        "size": 4192,
+        "sha256": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "opgaven": [
+      {
+        "name": "2.1.2 Opbrengsten, winst en break-even – opgaven.html",
+        "crc": 1259901231,
+        "size": 759777,
+        "sha256": "87c55209dd450e989476f2f9779feb88de9fac9bbc77a0805112a444ffb65a06",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "2.1.2 Opbrengsten, winst en break-even – opgaven.md",
+        "crc": 2514287774,
+        "size": 10988,
+        "sha256": "df2cd3fe66af760b55b1f28a2f51ca9c7449b4f1704d5da278db064850eef002",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
+        "crc": 3457823781,
+        "size": 576834,
+        "sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_1.png",
+        "crc": 3090357838,
+        "size": 115864,
+        "sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_1.svg",
+        "crc": 3616123622,
+        "size": 3782,
+        "sha256": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_2.png",
+        "crc": 3373210638,
+        "size": 78057,
+        "sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_2.svg",
+        "crc": 1211375624,
+        "size": 3026,
+        "sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_6.png",
+        "crc": 2886610879,
+        "size": 245017,
+        "sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_6.svg",
+        "crc": 3346766745,
+        "size": 6634,
+        "sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_we_1.png",
+        "crc": 3566934058,
+        "size": 119293,
+        "sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_we_1.svg",
+        "crc": 467889169,
+        "size": 4192,
+        "sha256": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "antwoorden": [
+      {
+        "name": "2.1.2 Opbrengsten, winst en break-even – antwoorden.html",
+        "crc": 3294481908,
+        "size": 509860,
+        "sha256": "be02782985485caca268df98af897104d78feec9737032cd14803c978a318a82",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "2.1.2 Opbrengsten, winst en break-even – antwoorden.md",
+        "crc": 3060488581,
+        "size": 9526,
+        "sha256": "4ffcb70c96f2c0c178a06a6092ec6701c4323cc1ac697de4156bc7cf0d43b8b3",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+        "crc": 2092240610,
+        "size": 391699,
+        "sha256": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_3.png",
+        "crc": 1312100467,
+        "size": 118033,
+        "sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_3.svg",
+        "crc": 2402387262,
+        "size": 4168,
+        "sha256": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_4.png",
+        "crc": 186716157,
+        "size": 125556,
+        "sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_4.svg",
+        "crc": 1377158099,
+        "size": 4168,
+        "sha256": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_5.png",
+        "crc": 1217455697,
+        "size": 128341,
+        "sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "_assets/2.1.2_ex_5.svg",
+        "crc": 2194220999,
+        "size": 4237,
+        "sha256": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127",
+        "timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "pages": [
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-001.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-001.png",
+      "sha256": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1",
+      "pixel_difference": false
+    },
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-002.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-002.png",
+      "sha256": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329",
+      "pixel_difference": false
+    },
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-003.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-003.png",
+      "sha256": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d",
+      "pixel_difference": false
+    },
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-004.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-004.png",
+      "sha256": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38",
+      "pixel_difference": false
+    },
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-005.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-005.png",
+      "sha256": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55",
+      "pixel_difference": false
+    },
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-006.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-006.png",
+      "sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae",
+      "pixel_difference": false
+    },
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-007.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-007.png",
+      "sha256": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72",
+      "pixel_difference": false
+    },
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-008.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-008.png",
+      "sha256": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340",
+      "pixel_difference": false
+    },
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-009.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-009.png",
+      "sha256": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc",
+      "pixel_difference": false
+    },
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-010.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-010.png",
+      "sha256": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf",
+      "pixel_difference": false
+    },
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-011.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-011.png",
+      "sha256": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7",
+      "pixel_difference": false
+    },
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-012.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-012.png",
+      "sha256": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3",
+      "pixel_difference": false
+    },
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-013.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-013.png",
+      "sha256": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd",
+      "pixel_difference": false
+    },
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-014.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/pages/page-014.png",
+      "sha256": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914",
+      "pixel_difference": false
+    },
+    {
+      "kind": "opgaven",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-001.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-opgaven-94ebe5d35207-r15/pages/page-001.png",
+      "sha256": "6dc41c28d34726aa444d7a3bd3aa5b702d00ce90720e60c48c81c6ddea0e35bb",
+      "pixel_difference": false
+    },
+    {
+      "kind": "opgaven",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-002.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-opgaven-94ebe5d35207-r15/pages/page-002.png",
+      "sha256": "824281e4ca44b952995639ed4450c0b548284e564361a41aa8d43cc907df15d5",
+      "pixel_difference": false
+    },
+    {
+      "kind": "opgaven",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-003.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-opgaven-94ebe5d35207-r15/pages/page-003.png",
+      "sha256": "2b6d7cb8ba30ed0a35393d8662935b1740bee5b3ef89e8da3bdc61588b00dd3e",
+      "pixel_difference": false
+    },
+    {
+      "kind": "opgaven",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-004.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-opgaven-94ebe5d35207-r15/pages/page-004.png",
+      "sha256": "2b0f64fb0aa8c3e7b3e0084433ff253d04670f0979690cc7038ed5b1ccbe71f4",
+      "pixel_difference": false
+    },
+    {
+      "kind": "opgaven",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-005.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-opgaven-94ebe5d35207-r15/pages/page-005.png",
+      "sha256": "ecb129e92c9348f64daee172e95a98980294942c86f28063492013a0ff7541b9",
+      "pixel_difference": false
+    },
+    {
+      "kind": "opgaven",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-006.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-opgaven-94ebe5d35207-r15/pages/page-006.png",
+      "sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac",
+      "pixel_difference": false
+    },
+    {
+      "kind": "opgaven",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-007.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-opgaven-94ebe5d35207-r15/pages/page-007.png",
+      "sha256": "98800e9f64ab2e6c10fa0e7b1e0c9b8d5b1a64e0d866cd25e5fe83e33d617e71",
+      "pixel_difference": false
+    },
+    {
+      "kind": "antwoorden",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/pages/page-001.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-antwoorden-d55f1da66723-r15/pages/page-001.png",
+      "sha256": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957",
+      "pixel_difference": false
+    },
+    {
+      "kind": "antwoorden",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/pages/page-002.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-antwoorden-d55f1da66723-r15/pages/page-002.png",
+      "sha256": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554",
+      "pixel_difference": false
+    },
+    {
+      "kind": "antwoorden",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/pages/page-003.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-antwoorden-d55f1da66723-r15/pages/page-003.png",
+      "sha256": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6",
+      "pixel_difference": false
+    },
+    {
+      "kind": "antwoorden",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/pages/page-004.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-antwoorden-d55f1da66723-r15/pages/page-004.png",
+      "sha256": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5",
+      "pixel_difference": false
+    },
+    {
+      "kind": "antwoorden",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/pages/page-005.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-antwoorden-d55f1da66723-r15/pages/page-005.png",
+      "sha256": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2",
+      "pixel_difference": false
+    },
+    {
+      "kind": "antwoorden",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/pages/page-006.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-antwoorden-d55f1da66723-r15/pages/page-006.png",
+      "sha256": "10064493da06147455efc290de36cc716f71241445bda748df7b8b0f8bdcdd5b",
+      "pixel_difference": false
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "result": "PASS",
+  "probes": [
+    {
+      "input": "2.1.1-review.md",
+      "problem": "missing",
+      "result": "REJECTED",
+      "exception": "FileNotFoundError",
+      "side_effect_calls": []
+    },
+    {
+      "input": "2.1.1-review.md",
+      "problem": "wrong",
+      "result": "REJECTED",
+      "exception": "ValueError",
+      "side_effect_calls": []
+    },
+    {
+      "input": "2.1.1-quality-ref.yaml",
+      "problem": "missing",
+      "result": "REJECTED",
+      "exception": "FileNotFoundError",
+      "side_effect_calls": []
+    },
+    {
+      "input": "2.1.1-quality-ref.yaml",
+      "problem": "wrong",
+      "result": "REJECTED",
+      "exception": "ValueError",
+      "side_effect_calls": []
+    },
+    {
+      "path": "build-scripts/content/book-2/b2_212.py",
+      "fixture_sha256": "8f3160fa7c04e1aebbf02687770ec33ac348efb6878c8cac8222df26bfb0e80e",
+      "result": "REJECTED"
+    },
+    {
+      "path": "build-scripts/content/book-2/212/theory.md",
+      "fixture_sha256": "c6edb66c02a103bc647419284e34fe1ed36f3341ede9851c23b56211396176ba",
+      "result": "REJECTED"
+    },
+    {
+      "path": "build-scripts/content/book-2/212/exercises.md",
+      "fixture_sha256": "e5e1ebf029df0373ff5f87e45a9ff8d42066b29f65eae81351c9121f40f20270",
+      "result": "REJECTED"
+    },
+    {
+      "path": "build-scripts/content/book-2/212/answers.md",
+      "fixture_sha256": "162cb8cdfd3d7a44ded9403b72efff75d05dca8f444c3361ad0df2c897bf4256",
+      "result": "REJECTED"
+    },
+    {
+      "path": "build-scripts/content/book-2/212/target-answers.md",
+      "fixture_sha256": "24550526d51c8b539c87128dbb39d0c91cba31607a745ec25d1e5fa807039f27",
+      "result": "REJECTED"
+    }
+  ],
+  "real_records_unchanged": true
+}

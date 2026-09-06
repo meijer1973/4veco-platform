@@ -1,0 +1,277 @@
+{
+  "result": "PASS",
+  "actor": "paragraph_212_successor_delta_review",
+  "scope": "Dependency-only delta review; not a replacement full economics/didactics review or specialist QC.",
+  "method": "Personally viewed fresh r13 page6 per edition and all11 current native figures with view_image; programmatic raw/RGB equality binds them to reviewed pixels.",
+  "native_manifests_preserved": true,
+  "source_subject": "698699c2cbf4588907a00667f0268852114bd5ef",
+  "lesson_subject": "d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f",
+  "figures": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_1.png",
+      "original_ref": "d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f",
+      "sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+      "rgb_sha256": "b9b5363656e058b84485a572fe7a75a8bcc56dee8d2e792aaea2bf32db0809e3",
+      "size": [
+        2000,
+        1260
+      ],
+      "pixel_difference": false,
+      "personally_viewed": true,
+      "observation": "TO origin, units per evening, blue line and axis labels clear."
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_2.png",
+      "original_ref": "d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f",
+      "sha256": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+      "rgb_sha256": "a881f9d5593f63851918823638766357bbbf0952b6008b5163f936c8c6912a71",
+      "size": [
+        2000,
+        1260
+      ],
+      "pixel_difference": false,
+      "personally_viewed": true,
+      "observation": "Same axes add TK, dashed distinction and intersection remain clear."
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_3.png",
+      "original_ref": "d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f",
+      "sha256": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+      "rgb_sha256": "658c465adf5b3eb2b37c5a08f2a7e6af166217188d88e114f30c70d1128436bd",
+      "size": [
+        2000,
+        1260
+      ],
+      "pixel_difference": false,
+      "personally_viewed": true,
+      "observation": "BE leader, loss and profit zones readable and unambiguous."
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_4.png",
+      "original_ref": "d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f",
+      "sha256": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+      "rgb_sha256": "9655a29d0581be57e7e877eae9f3fb44b7a88edfb9e0bf2d684d9da9e1acb78a",
+      "size": [
+        2000,
+        1260
+      ],
+      "pixel_difference": false,
+      "personally_viewed": true,
+      "observation": "Vertical EUR30 gap at Q30 is a distance, not an area; labels clear."
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_we_1.png",
+      "original_ref": "d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f",
+      "sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+      "rgb_sha256": "58a1640d4c7ca6a5608353671cb227f2042740561fa6532fdf3742eb7a35ae1b",
+      "size": [
+        2000,
+        1260
+      ],
+      "pixel_difference": false,
+      "personally_viewed": true,
+      "observation": "Rental/day BE intersection and EUR16 vertical gap readable."
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_1.png",
+      "original_ref": "d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f",
+      "sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+      "rgb_sha256": "4deda1c90150e9af70bc8bd7efb9c7273dac5c303e745ad06a597bb9e0ec158c",
+      "size": [
+        2000,
+        1260
+      ],
+      "pixel_difference": false,
+      "personally_viewed": true,
+      "observation": "Soap/day labels, BE and EUR8 bracket remain clear."
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_2.png",
+      "original_ref": "d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f",
+      "sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+      "rgb_sha256": "bb1209558c2b808b38b36997bb3ea0bc5c02929b24637fd45eed13b065a7a274",
+      "size": [
+        2000,
+        1260
+      ],
+      "pixel_difference": false,
+      "personally_viewed": true,
+      "observation": "TK-only jars/day scaffold intact; open plotting space retained."
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_3.png",
+      "original_ref": "d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f",
+      "sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+      "rgb_sha256": "c9d1bd41c92fa3e05e2ab11a7e567daeeee789d5fd2657c10d64872bef3ab81e",
+      "size": [
+        2000,
+        1260
+      ],
+      "pixel_difference": false,
+      "personally_viewed": true,
+      "observation": "Jars/day full model, BE and EUR9 vertical gap readable."
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_4.png",
+      "original_ref": "d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f",
+      "sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+      "rgb_sha256": "8b4b99ee12c2b8a8ab79cd1c10664b0fe27e43574d06f2c7db10f1d12c34675c",
+      "size": [
+        2000,
+        1260
+      ],
+      "pixel_difference": false,
+      "personally_viewed": true,
+      "observation": "Minigolf/day full model, BE and EUR20 gap readable."
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_5.png",
+      "original_ref": "d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f",
+      "sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+      "rgb_sha256": "c87503b40d827c2d87d35154425d9beea537480eb1c586b5acb840e008d7c5f2",
+      "size": [
+        2000,
+        1260
+      ],
+      "pixel_difference": false,
+      "personally_viewed": true,
+      "observation": "Bakery/month full model, BE and EUR200 gap readable; 1000 scale clear."
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_6.png",
+      "original_ref": "d4e1910d60964ee4b9ac97eefbf0e0ed202fc28f",
+      "sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+      "rgb_sha256": "5985c603cc65fd62721a5b952f69643091423048eecea865c2a6e37db5d68b59",
+      "size": [
+        3000,
+        1660
+      ],
+      "pixel_difference": false,
+      "personally_viewed": true,
+      "observation": "Both scale panels readable: same EUR30 gap, distinct 150/300 axes."
+    }
+  ],
+  "pages": [
+    {
+      "kind": "paragraaf",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-paragraaf-e94d42f66ab9-r9/pages/page-006.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r13/pages/page-006.png",
+      "sha256": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae",
+      "pixel_difference": false,
+      "rgb_sha256": "df8b4b598ce623bd3aa2606f752c0995fb027e9ebeb637b784fa883635145ea3",
+      "size": [
+        1241,
+        1754
+      ],
+      "personally_viewed": true,
+      "observation": "Theatre gap figure and full caption, distance-not-area warning, bounded model text and whole-unit subsection readable with no clipping or overlap."
+    },
+    {
+      "kind": "opgaven",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-opgaven-94ebe5d35207-r9/pages/page-006.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-opgaven-94ebe5d35207-r13/pages/page-006.png",
+      "sha256": "b7cf28a3b042bc54bab1f72619ec9034d958ea2c1e90538f174641cf8f7e02ac",
+      "pixel_difference": false,
+      "rgb_sha256": "cc67c2d878010e74d2cfc65f057f860a97096b07f739a90abb884ece61807387",
+      "size": [
+        1241,
+        1754
+      ],
+      "personally_viewed": true,
+      "observation": "Continuation 5c/d, independent minigolf 6a-d and entire bakery target 7a-d (2/2/3/4 points) clear; target not split and no answer scaffold."
+    },
+    {
+      "kind": "antwoorden",
+      "old": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence/212-antwoorden-d55f1da66723-r9/pages/page-006.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-antwoorden-d55f1da66723-r13/pages/page-006.png",
+      "sha256": "10064493da06147455efc290de36cc716f71241445bda748df7b8b0f8bdcdd5b",
+      "pixel_difference": false,
+      "rgb_sha256": "77e19655b3b4f38a2d1a2e074b903d645a764bc58e494d9b52cf5526fb7f2b15",
+      "size": [
+        1241,
+        1754
+      ],
+      "personally_viewed": true,
+      "observation": "Complete bonus 8a/b scale reasoning and three criteria; closing 9 TCK24/TVK18/TK42/GTK7 and unit explanation clear and unclipped."
+    }
+  ],
+  "proof_manifests": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r13/manifest.json",
+      "sha256": "e9168be8e9bf38d9697c8de399b3aa579060770a6011f33b5dac1545e1f1d638",
+      "inspection_status": "PENDING",
+      "pages_inspected": []
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-opgaven-94ebe5d35207-r13/manifest.json",
+      "sha256": "715aebcf78226ec22ff7a566af3e2cc0640605969bbb826ba509562b1dac76a9",
+      "inspection_status": "PENDING",
+      "pages_inspected": []
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-antwoorden-d55f1da66723-r13/manifest.json",
+      "sha256": "723c0a3d86c8f030df69f7133f273da9f9e9b7018ccf5732115b230c6dcda3c5",
+      "inspection_status": "PENDING",
+      "pages_inspected": []
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r14/manifest.json",
+      "sha256": "49784eb31b512e83577306efed14c1bf511a2b3cf073f1f5d0bbdff85b776628",
+      "inspection_status": "PENDING",
+      "pages_inspected": []
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-opgaven-94ebe5d35207-r14/manifest.json",
+      "sha256": "a4bde14dd33a5214486c3e694a74645d61a4b4a82d0c63404856a8b530205b40",
+      "inspection_status": "PENDING",
+      "pages_inspected": []
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-antwoorden-d55f1da66723-r14/manifest.json",
+      "sha256": "ef75e6f771305d2a71b8bf1d2db8cce301779f478f7f6feb2d035f52359b805e",
+      "inspection_status": "PENDING",
+      "pages_inspected": []
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-paragraaf-e94d42f66ab9-r15/manifest.json",
+      "sha256": "e1d2b6cb6f76d7a907b1111618410bdb99c0ec417dce241cfb7502be8aeb7d54",
+      "inspection_status": "PENDING",
+      "pages_inspected": []
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-opgaven-94ebe5d35207-r15/manifest.json",
+      "sha256": "56a43e9e576b05290f250973be49ca55d47636bd39f51c3a9b58a0e42f5c522a",
+      "inspection_status": "PENDING",
+      "pages_inspected": []
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence/proofs/212-antwoorden-d55f1da66723-r15/manifest.json",
+      "sha256": "a0ac86be9d606f93c98f2db93de09d739b21c168944c901eb5303eec09ed60cf",
+      "inspection_status": "PENDING",
+      "pages_inspected": []
+    }
+  ],
+  "evidence_sha256": {
+    "25-tests.json": "71966732d35554d68d53d779d9819b4124e1d3746fe0690c74956efc532d0117",
+    "active-bundle.json": "51fa417802372fa25a677bf58a3417dc92f7a742ba2e626dabc9d1dcd95fe3df",
+    "currentness.json": "3de208117909954e697e3370692533dfae474010c9179ebed07958f84e5a6b31",
+    "durable.json": "a17a2e3f68da9eac1f4c01afa3adce64975685b742988870f0ea46c711c019d4",
+    "full-r13-build.json": "2674eabd47387317e0daeabd9b0cfdce3e11c460b3224114d728b1af848864d2",
+    "full-r13-command.json": "2579f6b1b5953a4e1dbd642d3a68902b867dd7254f42744bff98a70bcec24664",
+    "full-r13-comparison.json": "7cda72b3113bc53e8dc4f4f05fd623a06fae088d8202942b8992b904469564e5",
+    "independent-negative-probes.json": "535f5f18aee8d69c7b7118a6709494f9959cf2288be1d03c9692c1a37680e995",
+    "initial-bindings.json": "449ab8edd7df027d29f6e77776d4294c11d0e738350515371dd5857fdb341909",
+    "native-checker.json": "07a13b182d47cefeb6c68dd24a248946b3ec5fc5cf6508d1955b97c7a0950bbf",
+    "print-r15-build.json": "b8aa3bb273565a4e9205e93eb0cf7a02881ca412a047abe1a4af36e432fbb6d8",
+    "print-r15-command.json": "f290fe6d3acc8eb465fa441e3198c0535db5f1a439e10687d0dce22f4b6873ba",
+    "print-r15-comparison.json": "a6b173a6b7c7a264e9affa70e41c82a459fd7d3a77a4cfe3b0120902ba175555",
+    "publisher-print.json": "4dd5112bc8631672920f38e92ff56834601cf531f33e244a1cc5c2d107974bd3",
+    "reservation-r13.json": "434111d3291a5bc33680502f74b975a3c365e8591396f256764115e31ed5ff6c",
+    "reservation-r14.json": "8bfd10e898c1faa21e6f906e54ed0e85d0a4a9fe6f31d5f567ed7c024d631703",
+    "reservation-r15.json": "2e38d9817ef3ab965090e090dabf2db83bb08610933ff2b2f8d8e7f6db920367",
+    "student-web.json": "d6bce6411a3049e1cbab1e7c00609eac3f167a584d4033e800cc87e742752873",
+    "thin-r14-build.json": "4f4645ed3222ceaac22f624db891e1e2acd99ade00b350ecbd9f824b00ab865e",
+    "thin-r14-command.json": "44fbd176ef20320f1bb56b1de8eb2d07070f028310291d84a2cb84e2dbc8948f",
+    "thin-r14-comparison.json": "69642a70cb19a8a7786b0e5298e297f25c209a64ce0847dcec089419a6050ea0"
+  }
+}

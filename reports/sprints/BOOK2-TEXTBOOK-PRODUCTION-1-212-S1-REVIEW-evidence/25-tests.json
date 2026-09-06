@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "build-scripts/content/book-2/212/",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "cwd": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T00:00:21.747295+00:00",
+  "finished_at": "2026-09-06T00:00:24.168417+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_current_exact_full_source_and_three_criteria (test_bonus.BonusTests.test_current_exact_full_source_and_three_criteria) ... ok\r\ntest_missing_extra_and_misplaced_criteria_rejected (test_bonus.BonusTests.test_missing_extra_and_misplaced_criteria_rejected) ... ok\r\ntest_model_answer_and_unrelated_source_drift_rejected (test_bonus.BonusTests.test_model_answer_and_unrelated_source_drift_rejected) ... ok\r\ntest_five_context_titles_and_old_negative_fixtures (test_metadata.MetadataTests.test_five_context_titles_and_old_negative_fixtures) ... ok\r\ntest_nine_exact_native_insertions_and_unchanged_full_sources (test_metadata.MetadataTests.test_nine_exact_native_insertions_and_unchanged_full_sources) ... ok\r\ntest_original_failing_alt_fixtures_remain_negative (test_metadata.MetadataTests.test_original_failing_alt_fixtures_remain_negative) ... ok\r\ntest_short_alts_functional_and_bounded (test_metadata.MetadataTests.test_short_alts_functional_and_bounded) ... ok\r\ntest_unchanged_generator_outside_title_loop (test_metadata.MetadataTests.test_unchanged_generator_outside_title_loop) ... ok\r\ntest_eleven_assets_and_no_answer_leakage (test_source.SourceTests.test_eleven_assets_and_no_answer_leakage) ... ok\r\ntest_exact_arithmetic_geometry (test_source.SourceTests.test_exact_arithmetic_geometry) ... ok\r\ntest_font_and_contrast (test_source.SourceTests.test_font_and_contrast) ... ok\r\ntest_frozen_target_goals_points_answers (test_source.SourceTests.test_frozen_target_goals_points_answers) ... ok\r\ntest_no_letter_drift_or_online_dependencies (test_source.SourceTests.test_no_letter_drift_or_online_dependencies) ... ok\r\ntest_other_arithmetic_and_timing (test_source.SourceTests.test_other_arithmetic_and_timing) ... ok\r\ntest_progressive_graphs (test_source.SourceTests.test_progressive_graphs) ... ok\r\ntest_repeatable (test_source.SourceTests.test_repeatable) ... ok\r\ntest_single_exercise_source_and_headings (test_source.SourceTests.test_single_exercise_source_and_headings) ... ok\r\ntest_unsafe_proof_suffix_before_write (test_source.SourceTests.test_unsafe_proof_suffix_before_write) ... ok\r\ntest_each_missing_or_unknown_input_rejected_before_process_mkdir_write (test_succession.SuccessionTests.test_each_missing_or_unknown_input_rejected_before_process_mkdir_write) ... ok\r\ntest_exact_complete_generator_from_both_immutable_baselines (test_succession.SuccessionTests.test_exact_complete_generator_from_both_immutable_baselines) ... ok\r\ntest_exact_original_tests_and_other_metadata_methods (test_succession.SuccessionTests.test_exact_original_tests_and_other_metadata_methods) ... ok\r\ntest_four_whole_sources_and_unrelated_source_rejection (test_succession.SuccessionTests.test_four_whole_sources_and_unrelated_source_rejection) ... ok\r\ntest_old_partial_unknown_and_unrelated_generators_rejected (test_succession.SuccessionTests.test_old_partial_unknown_and_unrelated_generators_rejected) ... ok\r\ntest_successor_files_are_exact_published_accepted_predecessor (test_succession.SuccessionTests.test_successor_files_are_exact_published_accepted_predecessor) ... ok\r\ntest_valid_actual_inputs_reach_first_governance_process_only (test_succession.SuccessionTests.test_valid_actual_inputs_reach_first_governance_process_only) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 25 tests in 2.021s\r\n\r\nOK\r\n",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e4d3bb498b00441895cb49f3ebe5d2c107031202da5ce5591a2ceca5d67490ee"
+}
