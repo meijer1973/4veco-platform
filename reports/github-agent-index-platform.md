@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T23:13:01.906Z
+Generated: 2026-09-06T00:19:27.968Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `367c892e572afca490a685f998c8db45a5167421`
-Files indexed: 9805
+Source branch: `agent/book2-214-production-20260906`
+Source commit: `6828f38dbac16aa9bcf7f92a76946bdc328cc732`
+Files indexed: 9814
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2721,7 +2721,7 @@ Count: 1030
 
 ## reports
 
-Count: 7029
+Count: 7038
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -7104,6 +7104,15 @@ Count: 7029
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-specialist-adoption-check.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-specialist-review-r5.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-stage-1.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-evidence.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-probes.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-decision-package.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-plan-review.md
