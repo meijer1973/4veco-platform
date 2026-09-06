@@ -1,0 +1,20 @@
+{
+  "label": "payload-platform-complete-whitespace-crlf",
+  "argv": [
+    "git",
+    "-c",
+    "core.whitespace=cr-at-eol",
+    "diff",
+    "--check",
+    "96416b6b5bd57094576e9aba0a42d682584ec479..ad5186e608637ccec881014f01c5b91e27bdbab4"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:28:54.569Z",
+  "finish": "2026-09-06T08:29:00.829Z",
+  "exit_code": 2,
+  "error": null,
+  "stdout": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-command-log.md:519: trailing whitespace.\n+reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-command-log.md:62: \nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-REVIEW-command-log.md:696: trailing whitespace.\n+     \r\n",
+  "stderr": "",
+  "stdout_base64": "cmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTItUzEtY29tbWFuZC1sb2cubWQ6NTE5OiB0cmFpbGluZyB3aGl0ZXNwYWNlLgorcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTItUzEtY29tbWFuZC1sb2cubWQ6NjI6IApyZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzMS1SRVZJRVctY29tbWFuZC1sb2cubWQ6Njk2OiB0cmFpbGluZyB3aGl0ZXNwYWNlLgorICAgICANCg==",
+  "stderr_base64": ""
+}

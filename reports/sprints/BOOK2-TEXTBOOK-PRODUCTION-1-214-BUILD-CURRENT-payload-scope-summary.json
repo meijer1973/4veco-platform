@@ -1,0 +1,81 @@
+{
+  "rows": [
+    {
+      "repo": "platform",
+      "kind": "own",
+      "base": "bc49af3353bf0ba3a061b2ef3e5ddec3c3a72abb",
+      "head": "ad5186e608637ccec881014f01c5b91e27bdbab4",
+      "exit_code": 0
+    },
+    {
+      "repo": "platform",
+      "kind": "own",
+      "mode": "native",
+      "exit_code": 0
+    },
+    {
+      "repo": "platform",
+      "kind": "own",
+      "mode": "crlf",
+      "exit_code": 0
+    },
+    {
+      "repo": "platform",
+      "kind": "complete",
+      "base": "96416b6b5bd57094576e9aba0a42d682584ec479",
+      "head": "ad5186e608637ccec881014f01c5b91e27bdbab4",
+      "exit_code": 0
+    },
+    {
+      "repo": "platform",
+      "kind": "complete",
+      "mode": "native",
+      "exit_code": 2
+    },
+    {
+      "repo": "platform",
+      "kind": "complete",
+      "mode": "crlf",
+      "exit_code": 2
+    },
+    {
+      "repo": "lessen",
+      "kind": "own",
+      "base": "f666bbb7dd258f1f01b38a20dd6ca3802848f8b7",
+      "head": "84f821a3cde2e525c54593d7f36ea86b2c53dff9",
+      "exit_code": 0
+    },
+    {
+      "repo": "lessen",
+      "kind": "own",
+      "mode": "native",
+      "exit_code": 0
+    },
+    {
+      "repo": "lessen",
+      "kind": "own",
+      "mode": "crlf",
+      "exit_code": 0
+    },
+    {
+      "repo": "lessen",
+      "kind": "complete",
+      "base": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "84f821a3cde2e525c54593d7f36ea86b2c53dff9",
+      "exit_code": 0
+    },
+    {
+      "repo": "lessen",
+      "kind": "complete",
+      "mode": "native",
+      "exit_code": 0
+    },
+    {
+      "repo": "lessen",
+      "kind": "complete",
+      "mode": "crlf",
+      "exit_code": 0
+    }
+  ],
+  "note": "Actual native classifier and raw/CRLF-aware whitespace diagnostics retained without exceptions or rewritten history."
+}

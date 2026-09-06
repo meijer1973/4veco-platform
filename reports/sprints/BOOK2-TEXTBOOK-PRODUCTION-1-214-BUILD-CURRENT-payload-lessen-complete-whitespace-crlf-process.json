@@ -1,0 +1,20 @@
+{
+  "label": "payload-lessen-complete-whitespace-crlf",
+  "argv": [
+    "git",
+    "-c",
+    "core.whitespace=cr-at-eol",
+    "diff",
+    "--check",
+    "f09fd6e88edc5049b026b16b0158e7e188091d2d..84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen",
+  "start": "2026-09-06T08:29:02.573Z",
+  "finish": "2026-09-06T08:29:02.984Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "",
+  "stderr": "",
+  "stdout_base64": "",
+  "stderr_base64": ""
+}
