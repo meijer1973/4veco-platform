@@ -5,7 +5,7 @@ const P=path.resolve(__dirname,'../..'),L=path.resolve(P,'../4veco-lessen'),bran
 const BP='b50d24d9fa4601499a1c1f45ee42d5c38763c62e',BL='3bc9e81828dcc57932dc871825aaa4cf4a975fe1',OP='d5aa09f260596ae47359dd1d5761a18fe9ffdd99';
 const R='reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-',pre=R+'22-INPUT-CANDIDATE-',B='Boek 2 - Kosten, opbrengsten, elasticiteit en surplus',CH=B+'/2.2 Hoofdstuk Elasticiteit';
 const RELEASE=R+'224-PRODUCTION-RELEASE-inputs.json',releaseHash='33c1473db0cbeec66e93557a72ab0586ccfcef29ba52b2a36148946c65598c7e',releaseCommit='6c3f46dbe97ce3eebe481e18bd25424a2de55aac';
-const PINNED_MANIFEST='BIND_AFTER_EXCLUSIVE_CREATE_BEFORE_FIRST_TEST';
+const PINNED_MANIFEST='d7cf3d9902edb65d22c4c21f31771db6b1e08db51ac8feac8dff57f400014469';
 const folders=['2.2.1 Prijselasticiteit','2.2.2 Elasticiteit en omzet','2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit','2.2.4 Gemengde opgaven elasticiteit'];
 const ids=folders.map(f=>f.slice(0,5)),f212=B+'/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even';
 const targets=['61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288','8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e','9a3a29bcedc16739b74b66b2bb8e136b37e86c7f5cfee3ee35ea37c4bdeed1c5','4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519'];
@@ -38,7 +38,10 @@ function inventory(get){
  }
  A.equal(documents.length,8);A.equal(assets.size,30);
  const old=Object.keys(trees['4veco-lessen']).filter(f=>f.startsWith(CH+'/_assets/'));A.equal(old.length,4);
- const prior=old.map(f=>{const a=assets.get(path.basename(f));A(a);const legacy=git(L,'show',BL+':'+f);A(read(L,f).equals(legacy));return{path:f,legacy_git_blob:trees['4veco-lessen'][f],legacy_raw_sha256:sha(legacy),accepted_source_path:a.path,accepted_raw_sha256:a.raw_sha256,replacement_required:sha(legacy)!==a.raw_sha256};});
+ // Old aggregate output is an immutable historical destination-state record,
+ // NOT a reusable input: future successful assembly deliberately replaces it.
+ // Whole baseline/preservation checks guard its bytes during candidate authoring.
+ const prior=old.map(f=>{const a=assets.get(path.basename(f));A(a);const legacy=git(L,'show',BL+':'+f);return{path:f,legacy_git_blob:trees['4veco-lessen'][f],legacy_raw_sha256:sha(legacy),accepted_source_path:a.path,accepted_raw_sha256:a.raw_sha256,replacement_required:sha(legacy)!==a.raw_sha256};});
  A.equal(prior.filter(a=>a.replacement_required).length,4);
  return{documents,assets:[...assets.values()],student:documents.filter(x=>x.role==='student').map(x=>x.path),answers:documents.filter(x=>x.role==='answers').map(x=>x.path),prior_aggregate_assets:prior,asset_additions:26,asset_replacements:4,asset_deletions:0};
 }
