@@ -7,7 +7,9 @@ from pathlib import Path
 from fractions import Fraction as F
 import base64, hashlib, json, re, sys, io
 sys.dont_write_bytecode=True
-P=Path(__file__).resolve().parents[2]; L=P.parent/'4veco-lessen'
+P=Path(__file__).resolve().parents[2]
+# Windows long-path prefix is DATA-only; script, cwd and runtime stay ordinary.
+L=Path('\\\\?\\'+str(P.parent/'4veco-lessen'))
 sys.path.insert(0,str(P/'build-scripts/content/book-2'))
 from bs4 import BeautifulSoup
 from PIL import Image, ImageChops
