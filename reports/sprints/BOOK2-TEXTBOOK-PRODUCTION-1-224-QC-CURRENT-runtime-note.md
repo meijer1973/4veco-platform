@@ -44,3 +44,9 @@ now also binds actual occurrence counts for these in-memory mutations. The
 original failed implementation is immutable at d6e01c49; this note preserves
 the actual tool diagnostic rather than pretending it was a file-backed log.
 The already successful separate personal record is not overwritten or relabelled.
+
+An initial combined apply_patch request used delete/add operations for the same
+canonical QC path and was rejected before any edit. The report and QC were then
+applied with separate valid add/update operations. This transport diagnostic
+caused no source or authority mutation. A dead, unreachable conditional in the
+new publication helper was simplified before its first execution.
