@@ -1,0 +1,1305 @@
+{
+  "result": "PASS",
+  "custody": {
+    "prior_raw_files": 14427,
+    "exact_imported_files": 162,
+    "native_files": 24,
+    "canonical_QC_exception": false,
+    "index_exception": false
+  },
+  "contrast": [
+    {
+      "role": "native text",
+      "foreground": "#1F2937",
+      "background": "#F7FAFC",
+      "ratio": 14.004388752378489,
+      "threshold": 4.5
+    },
+    {
+      "role": "native MO text",
+      "foreground": "#1A5276",
+      "background": "#F7FAFC",
+      "ratio": 7.9742091306560505,
+      "threshold": 4.5
+    },
+    {
+      "role": "native arrows/dividers",
+      "foreground": "#2D3748",
+      "background": "#F7FAFC",
+      "ratio": 11.437770260954183,
+      "threshold": 4.5
+    },
+    {
+      "role": "body",
+      "foreground": "#182b3a",
+      "background": "#ffffff",
+      "ratio": 14.527981028657424,
+      "threshold": 4.5
+    },
+    {
+      "role": "headings",
+      "foreground": "#1A5276",
+      "background": "#ffffff",
+      "ratio": 8.358405544435664,
+      "threshold": 4.5
+    },
+    {
+      "role": "footer",
+      "foreground": "#555",
+      "background": "#ffffff",
+      "ratio": 7.455177810447525,
+      "threshold": 4.5
+    },
+    {
+      "role": "blockquote body",
+      "foreground": "#182b3a",
+      "background": "#eef4f7",
+      "ratio": 13.08817653599219,
+      "threshold": 4.5
+    },
+    {
+      "role": "table header",
+      "foreground": "#182b3a",
+      "background": "#eaf1f5",
+      "ratio": 12.728668610543913,
+      "threshold": 4.5
+    },
+    {
+      "role": "caption",
+      "foreground": "#304958",
+      "background": "#ffffff",
+      "ratio": 9.461124891630009,
+      "threshold": 4.5
+    }
+  ],
+  "alternative_negatives": [
+    {
+      "name": "paragraaf/image1/alt-Bereken de u",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_1', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image1/alt-xxxxxxxxxxxx",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_1', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image1/alt-",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_1', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image1/caption-drift",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_1', 'full caption drift')"
+    },
+    {
+      "name": "paragraaf/image2/alt-Bereken de u",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_2', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image2/alt-xxxxxxxxxxxx",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_2', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image2/alt-",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_2', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image2/caption-drift",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_2', 'full caption drift')"
+    },
+    {
+      "name": "paragraaf/image3/alt-Bereken de u",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_3', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image3/alt-xxxxxxxxxxxx",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_3', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image3/alt-",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_3', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image3/caption-drift",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_3', 'full caption drift')"
+    },
+    {
+      "name": "paragraaf/image4/alt-Bereken de u",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_4', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image4/alt-xxxxxxxxxxxx",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_4', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image4/alt-",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_4', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image4/caption-drift",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_4', 'full caption drift')"
+    },
+    {
+      "name": "paragraaf/image5/alt-Bereken de u",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_we_1', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image5/alt-xxxxxxxxxxxx",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_we_1', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image5/alt-",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_we_1', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image5/caption-drift",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_we_1', 'full caption drift')"
+    },
+    {
+      "name": "paragraaf/image6/alt-Bereken de u",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_ex_1', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image6/alt-xxxxxxxxxxxx",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_ex_1', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image6/alt-",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_ex_1', 'short alt drift')"
+    },
+    {
+      "name": "paragraaf/image6/caption-drift",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_ex_1', 'full caption drift')"
+    },
+    {
+      "name": "distinct-long-caption-hidden",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('paragraaf', '2.1.3_fig_3', 'native distinct-caption semantics')"
+    },
+    {
+      "name": "opgaven/image1/alt-Bereken de u",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('opgaven', '2.1.3_we_1', 'short alt drift')"
+    },
+    {
+      "name": "opgaven/image1/alt-xxxxxxxxxxxx",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('opgaven', '2.1.3_we_1', 'short alt drift')"
+    },
+    {
+      "name": "opgaven/image1/alt-",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('opgaven', '2.1.3_we_1', 'short alt drift')"
+    },
+    {
+      "name": "opgaven/image1/caption-drift",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('opgaven', '2.1.3_we_1', 'full caption drift')"
+    },
+    {
+      "name": "opgaven/image2/alt-Bereken de u",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('opgaven', '2.1.3_ex_1', 'short alt drift')"
+    },
+    {
+      "name": "opgaven/image2/alt-xxxxxxxxxxxx",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('opgaven', '2.1.3_ex_1', 'short alt drift')"
+    },
+    {
+      "name": "opgaven/image2/alt-",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('opgaven', '2.1.3_ex_1', 'short alt drift')"
+    },
+    {
+      "name": "opgaven/image2/caption-drift",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('opgaven', '2.1.3_ex_1', 'full caption drift')"
+    },
+    {
+      "name": "2.1.3_fig_1/title-missing",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": ""
+    },
+    {
+      "name": "2.1.3_fig_1/aria-id-forged",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": ""
+    },
+    {
+      "name": "2.1.3_fig_2/title-missing",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": ""
+    },
+    {
+      "name": "2.1.3_fig_2/aria-id-forged",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": ""
+    },
+    {
+      "name": "2.1.3_fig_3/title-missing",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": ""
+    },
+    {
+      "name": "2.1.3_fig_3/aria-id-forged",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": ""
+    },
+    {
+      "name": "2.1.3_fig_4/title-missing",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": ""
+    },
+    {
+      "name": "2.1.3_fig_4/aria-id-forged",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": ""
+    },
+    {
+      "name": "2.1.3_we_1/title-missing",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": ""
+    },
+    {
+      "name": "2.1.3_we_1/aria-id-forged",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": ""
+    },
+    {
+      "name": "2.1.3_ex_1/title-missing",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": ""
+    },
+    {
+      "name": "2.1.3_ex_1/aria-id-forged",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": ""
+    }
+  ],
+  "actual_html_occurrences": [
+    {
+      "asset": "2.1.3_fig_1",
+      "alt": "Dezelfde dag: de tabelstappen van 0 naar 10 en van 10 naar 20 fotohouders, met TK 20, 50 en 100 euro.",
+      "length": 101,
+      "caption": "Dezelfde dag: de tabelstappen van 0 naar 10 en van 10 naar 20 fotohouders, met TK 20, 50 en 100 euro.",
+      "caption_attributes": {
+        "aria-hidden": "true"
+      }
+    },
+    {
+      "asset": "2.1.3_fig_2",
+      "alt": "Dezelfde kostentabel met delta TK 30 en 50 euro, telkens delta Q 10, en MK 3 en 5 euro bij de rechter eindpunten.",
+      "length": 113,
+      "caption": "Dezelfde kostentabel met delta TK 30 en 50 euro, telkens delta Q 10, en MK 3 en 5 euro bij de rechter eindpunten.",
+      "caption_attributes": {
+        "aria-hidden": "true"
+      }
+    },
+    {
+      "asset": "2.1.3_fig_3",
+      "alt": "MO bij vaste prijs: 80 euro extra opbrengst voor 10 extra fotohouders in beide intervallen, dus 8 euro per houder.",
+      "length": 114,
+      "caption": "Bij dezelfde hoeveelheden 0, 10 en 20 zijn de opbrengsten 0, 80 en 160 euro. Beide intervallen leveren 80 euro extra voor 10 extra producten: MO is telkens 8.",
+      "caption_attributes": {}
+    },
+    {
+      "asset": "2.1.3_fig_4",
+      "alt": "Winsttoename per extra fotohouder: 5 euro in interval 0–10 en 3 euro in interval 10–20, telkens MO min MK.",
+      "length": 106,
+      "caption": "Twee intervalkaarten: winst van min 20 naar 30 geeft 50 gedeeld door 10 is 5; winst van 30 naar 60 geeft 30 gedeeld door 10 is 3. Dit is telkens MO min MK.",
+      "caption_attributes": {}
+    },
+    {
+      "asset": "2.1.3_we_1",
+      "alt": "Eindpuntrijen van Lus en Bout: MK 2/2/2 tegenover 2/6/10; MO steeds 6 en 12 euro per extra sleutelhanger.",
+      "length": 105,
+      "caption": "Lus heeft over drie stappen MK 2 en MO 6; Bout heeft MK 2, 6 en 10 en MO 12. De eerste teller en noemer zijn uitgewerkt; waarden horen bij het rechter eindpunt.",
+      "caption_attributes": {}
+    },
+    {
+      "asset": "2.1.3_ex_1",
+      "alt": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+      "length": 60,
+      "caption": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+      "caption_attributes": {
+        "aria-hidden": "true"
+      }
+    },
+    {
+      "asset": "2.1.3_we_1",
+      "alt": "Eindpuntrijen van Lus en Bout: MK 2/2/2 tegenover 2/6/10; MO steeds 6 en 12 euro per extra sleutelhanger.",
+      "length": 105,
+      "caption": "Lus heeft over drie stappen MK 2 en MO 6; Bout heeft MK 2, 6 en 10 en MO 12. De eerste teller en noemer zijn uitgewerkt; waarden horen bij het rechter eindpunt.",
+      "caption_attributes": {}
+    },
+    {
+      "asset": "2.1.3_ex_1",
+      "alt": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+      "length": 60,
+      "caption": "Patches: uitgewerkt interval 0–3; vul interval 3–6 zelf aan.",
+      "caption_attributes": {
+        "aria-hidden": "true"
+      }
+    }
+  ],
+  "scope": "Static Part A paper and native HTML semantics; not PDF/UA, screen-reader user testing, device brightness calibration or interactive accessibility",
+  "decorative_lines": "Light heading/table rules are supplemental; dark labels, semantic header cells, alignment and whitespace carry meaning. Essential interval arrows/dividers exceed 4.5:1.",
+  "personal_report_sha256": "92993a41ec629b11c53028ff674d48cc7dd69d5a2cd581903faf929ffdb0e903",
+  "personal_views": [
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 1,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-001.png",
+      "raw_sha256": "1b461934c3fd5c9519572a985379f753223be62288631675cfa9d084dc518ac6",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-1"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 1,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-001.png",
+      "raw_sha256": "28d7c242037c8f397b213305e57fc9df4231da1012d3475dbfd20bd048495005",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-1"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 2,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-002.png",
+      "raw_sha256": "f5b3b1f3fd2a80f8c98ef56bb892df648733b8b9e550dee8106dbc6673e881d4",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-2"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 2,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-002.png",
+      "raw_sha256": "fe8277889a363331beecfa74dad590393231aa0188161b374419b21b51c4b915",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-2"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 3,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-003.png",
+      "raw_sha256": "259cbd5a05f47b70d00795813ac71750a421c17931fd269a8a17a8c78e130cc5",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-3"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 3,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-003.png",
+      "raw_sha256": "c4e14ef2c190c56059bfb2cc373fff10791336e8a9d16b1a4461171ec603ded8",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-3"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 4,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-004.png",
+      "raw_sha256": "c65f51e3136c2d8ef6a68f8d2f7cb8dbb912fdc2da8a63a72aa5bff49b283d6e",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-4"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 4,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-004.png",
+      "raw_sha256": "b90f1d97b0462ba2bae2fcdc686f02a107e31bff16faaf8dc5bddf2142e84420",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-4"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 5,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-005.png",
+      "raw_sha256": "d401752356839f500b0c32ea70585a953a195978e16124b1c495c6e3fab88a7e",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-5"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 5,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-005.png",
+      "raw_sha256": "38777250bc6f2b456131cd3a6a161e0fdc0580c5da61ace2ef97b28afe4d5c9a",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-5"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 6,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-006.png",
+      "raw_sha256": "90f31298fe89748309cbe613aff0bd50982f57dd8a9764984893a8cd4f522a55",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-6"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 6,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-006.png",
+      "raw_sha256": "c88201cba3cfeaef50e1accf137e8bef2b1f4fe3dcae21a9ff3c2b5d62ad340a",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-6"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 7,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-007.png",
+      "raw_sha256": "e44a2d79019f42202108a1efe6e801ce057fe7400d0df8904946b88acb09394c",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-7"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 7,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-007.png",
+      "raw_sha256": "9f418cceb44e25cfb3d3d673bca8a28c07a396ad16ca8f5cc762c15ca25cba9d",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-7"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 8,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-008.png",
+      "raw_sha256": "37007229bd4350a5cff8703beaa64c12118212ad1255e1a23da645a00e92267d",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-8"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 8,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-008.png",
+      "raw_sha256": "86fe30df0296ef157f930d7ac82b2b34ad8ae0d3e39b9c175fcae20f44c2d04d",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-8"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 9,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-009.png",
+      "raw_sha256": "f1160cf726570230df25ff58e834aa1af5adb419590fd5eb0ef59532ac1c6689",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-9"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 9,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-009.png",
+      "raw_sha256": "52b311cd8e6f01d414c8a53e4aa154e4c49825e0c59e745274d2b399eea04e38",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-9"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 10,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-010.png",
+      "raw_sha256": "29ce7ee7dd65cb9bd84df4fa4f32009c57f743086af71abfdde577fa10e9e9f0",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-10"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 10,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-010.png",
+      "raw_sha256": "2b2e7ddb61cc8954f6b08776f3b67383b6cbe4ec2283273c8dbd628a2ea09d25",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-10"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 11,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-011.png",
+      "raw_sha256": "eaf11cf9668844a9211f017804040f9133674d7c7ec93a442eaadaaa4284cd04",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-11"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 11,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-011.png",
+      "raw_sha256": "260de65eb07280da0b5a60bdef653f2ba902615294b89a8dc5504e73e9a044e9",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-11"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 12,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-012.png",
+      "raw_sha256": "838e5b48036bd631319f3f0fdaa8e32a843eb2e936e78922d6d7f71c17824263",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-12"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 12,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-012.png",
+      "raw_sha256": "e3655dc6134bb234887bdfa912b6bcbcdefead234671f4d3b5892b6f82359663",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-12"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 13,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-013.png",
+      "raw_sha256": "72b151067a8cbae1976d3b125fb19c6b70726293fe7eca8b256ef120a10a5f08",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-13"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 13,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-013.png",
+      "raw_sha256": "470a1505c99580785339bd7001d004936f9a870d91c18a6b49cd04ddb510aea3",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-13"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 14,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-paragraaf-534177c8280e-r34\\pages\\page-014.png",
+      "raw_sha256": "83ef57f59d7cfc7ebc5e38ba3e2f26186b4902c5773e03f69f4b7eed11099ef0",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-14"
+    },
+    {
+      "role": "full_page",
+      "kind": "paragraaf",
+      "page": 14,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\paragraaf-014.png",
+      "raw_sha256": "3cdbd35eff9909f10cbedec09eb6490e7857132c4d3b03d57cd33352a2a0eaa7",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "paragraaf-14"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 1,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-opgaven-d12487671bd2-r34\\pages\\page-001.png",
+      "raw_sha256": "8dce5752b8b6f223d9ec3334349cbd8426705b1b11d2ad616885a7237a4ff02a",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-1"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 1,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\opgaven-001.png",
+      "raw_sha256": "6bc88221e8253577da4b95bb6d1e60ec117f2693b5fd064ba24bc2be298e4de6",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-1"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 2,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-opgaven-d12487671bd2-r34\\pages\\page-002.png",
+      "raw_sha256": "866955304c64cf0873b478645fc92e14ffe4b93801cc959cace9d2993d99e0fc",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-2"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 2,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\opgaven-002.png",
+      "raw_sha256": "1a23d6dc964c8bb42a2e404b4e2082fbf06d8ad50eed852d875b4587a4364620",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-2"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 3,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-opgaven-d12487671bd2-r34\\pages\\page-003.png",
+      "raw_sha256": "1de08ce2987bd5c875622cbb41aeb0784dbbca9b41b54f1ce6ba75a325d77758",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-3"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 3,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\opgaven-003.png",
+      "raw_sha256": "0cbd1c8932f28903020b1a4f63939eb5e78281f455b1aea6fa02b0cd56818566",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-3"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 4,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-opgaven-d12487671bd2-r34\\pages\\page-004.png",
+      "raw_sha256": "d2bace9d4ce1eaddf56936a7327a676d3ba44a86fc54d26d2505a2f528d59f31",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-4"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 4,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\opgaven-004.png",
+      "raw_sha256": "c9370e9f80af063d30e8c815991cba4a076c3baeb7bb5e112b42970636f0f8ba",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-4"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 5,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-opgaven-d12487671bd2-r34\\pages\\page-005.png",
+      "raw_sha256": "b166b196ebe8a1426d452fc4bcf803b2084c8c41ed51dd4b1e5078ebc48320b6",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-5"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 5,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\opgaven-005.png",
+      "raw_sha256": "d2f148cc303f71f22cdbe048cd1bc5338572574ada11f1903bc148d0d5865f7a",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-5"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 6,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-opgaven-d12487671bd2-r34\\pages\\page-006.png",
+      "raw_sha256": "471e09af924065c761fded16c8c74c77e0d9aebd7d83ff395b6d12344cf3918f",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-6"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 6,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\opgaven-006.png",
+      "raw_sha256": "1c2f52b73c9d273b8875b8d86107c40e3ab82e2d645a863c4b4d8b6fa70b558a",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-6"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 7,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-opgaven-d12487671bd2-r34\\pages\\page-007.png",
+      "raw_sha256": "b6ef874b19f6630f3aaefc62ef4f3874ebdbc3f7049fe77d34e7f0ad79b70845",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-7"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 7,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\opgaven-007.png",
+      "raw_sha256": "eee8dbbbacc5ecf27f5af2551325aac39bef52ee3c1d41182eb845db0c1b67e9",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-7"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 8,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-opgaven-d12487671bd2-r34\\pages\\page-008.png",
+      "raw_sha256": "da00760a5d51eca93a00da72bf6396f092b69d1239448f956a071bbc8b60c54a",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-8"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 8,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\opgaven-008.png",
+      "raw_sha256": "fcae7009b1a3e83b3f6bd3a3dd130d5a3d341e3aefe8a7ca9917b843ad63c3b9",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-8"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 9,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-opgaven-d12487671bd2-r34\\pages\\page-009.png",
+      "raw_sha256": "59ccfb6970899b936e17c94812a03806f05150fb9af4c258c36fe2b7050386f6",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-9"
+    },
+    {
+      "role": "full_page",
+      "kind": "opgaven",
+      "page": 9,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\opgaven-009.png",
+      "raw_sha256": "91aa8ebf5cfa1de9b7d786161c4f74dd4115ee8250cb3027df2146d17cd64fc4",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "opgaven-9"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 1,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-antwoorden-d96f21c3abed-r34\\pages\\page-001.png",
+      "raw_sha256": "92d57ae0facbeb2187e5aca0c9e390319a0a2491f52efea0b6e1ae5a648253ff",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-1"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 1,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\antwoorden-001.png",
+      "raw_sha256": "0eb16a5f89b948c409315793065ba1589e5d7196d9d843f7017390b00ba575e1",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-1"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 2,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-antwoorden-d96f21c3abed-r34\\pages\\page-002.png",
+      "raw_sha256": "1ee899ff06b72c2041cd4276c81606dacc0fe354e284e482d8439138e6318f01",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-2"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 2,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\antwoorden-002.png",
+      "raw_sha256": "3a834b87ffcf34b5e5d4058b88d2d8cc73f1356e7ae9236ed76b17868ac7eb81",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-2"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 3,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-antwoorden-d96f21c3abed-r34\\pages\\page-003.png",
+      "raw_sha256": "adca03ec729ebb932579f47466c3030b7803f574debbc68b9736a8897806b3b2",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-3"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 3,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\antwoorden-003.png",
+      "raw_sha256": "1ac23fd7a63882b24383ba91c4b80656bbe4cd00fb09f0a7dbfcb648def220c6",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-3"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 4,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-antwoorden-d96f21c3abed-r34\\pages\\page-004.png",
+      "raw_sha256": "852cad800fdce6f3ab1f949800fecb60b13a5bd329afb60a003cc36a319a79ac",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-4"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 4,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\antwoorden-004.png",
+      "raw_sha256": "4b3a7bb755a5739d46f3fbed51a5c4667f3fadd7aa2db9e49567cae2b0cb0370",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-4"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 5,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-antwoorden-d96f21c3abed-r34\\pages\\page-005.png",
+      "raw_sha256": "73b25b12ed958e44a1666c786f21cf40f183d871af7a92dc5bd7175f0f9eb102",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-5"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 5,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\antwoorden-005.png",
+      "raw_sha256": "bdeda25008722868c037b035573c227b838b08f5442377dd2b43028499b0e137",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-5"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 6,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-antwoorden-d96f21c3abed-r34\\pages\\page-006.png",
+      "raw_sha256": "0134af1084fbbc81d699fac529a60bbe8fdbe1d29b571ff64a9147bd3af40b64",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-6"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 6,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\antwoorden-006.png",
+      "raw_sha256": "1e07059fa7a481984a6617e284795987d8139aacbbc8a28b27193c3eb82ddff0",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-6"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 7,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\proofs\\213-antwoorden-d96f21c3abed-r34\\pages\\page-007.png",
+      "raw_sha256": "908234041ad21c7ee406169a69ec8c88403454d45c1da7750d750287c5fd50a9",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-7"
+    },
+    {
+      "role": "full_page",
+      "kind": "antwoorden",
+      "page": 7,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\antwoorden-007.png",
+      "raw_sha256": "e52e3978f6a3776b037b3fd08c4fe3af6da29b4543a498ab6671d19315119a2c",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "antwoorden-7"
+    },
+    {
+      "role": "native_figure",
+      "kind": "2.1.3_fig_1",
+      "page": null,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_1.png",
+      "raw_sha256": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "2.1.3_fig_1"
+    },
+    {
+      "role": "native_figure",
+      "kind": "2.1.3_fig_1",
+      "page": null,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\asset-2.1.3_fig_1.png",
+      "raw_sha256": "43dfd89b654cdfaad338e32cb3731807010406bc31a725fcd26608b132fbf74c",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "2.1.3_fig_1"
+    },
+    {
+      "role": "native_figure",
+      "kind": "2.1.3_fig_2",
+      "page": null,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_2.png",
+      "raw_sha256": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "2.1.3_fig_2"
+    },
+    {
+      "role": "native_figure",
+      "kind": "2.1.3_fig_2",
+      "page": null,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\asset-2.1.3_fig_2.png",
+      "raw_sha256": "e3d95ed8f14d598efedcbcd5d3a8f4c65437ada18e4f260c6851b14a1040191c",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "2.1.3_fig_2"
+    },
+    {
+      "role": "native_figure",
+      "kind": "2.1.3_fig_3",
+      "page": null,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_3.png",
+      "raw_sha256": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "2.1.3_fig_3"
+    },
+    {
+      "role": "native_figure",
+      "kind": "2.1.3_fig_3",
+      "page": null,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\asset-2.1.3_fig_3.png",
+      "raw_sha256": "0be9b7b08414c9bd1d411bed663cc4423fd0079c207b1ebf457d513915df2a7d",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "2.1.3_fig_3"
+    },
+    {
+      "role": "native_figure",
+      "kind": "2.1.3_fig_4",
+      "page": null,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_4.png",
+      "raw_sha256": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "2.1.3_fig_4"
+    },
+    {
+      "role": "native_figure",
+      "kind": "2.1.3_fig_4",
+      "page": null,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\asset-2.1.3_fig_4.png",
+      "raw_sha256": "dab07cf30bcd3019f38a876815809708637ac05858aef8a2efd64782afd92c30",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "2.1.3_fig_4"
+    },
+    {
+      "role": "native_figure",
+      "kind": "2.1.3_we_1",
+      "page": null,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_we_1.png",
+      "raw_sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "2.1.3_we_1"
+    },
+    {
+      "role": "native_figure",
+      "kind": "2.1.3_we_1",
+      "page": null,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\asset-2.1.3_we_1.png",
+      "raw_sha256": "7cbd7564ace3c3da1d5d176a0e2cc0a811d2cd111b279db7f39165a54e48675f",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "2.1.3_we_1"
+    },
+    {
+      "role": "native_figure",
+      "kind": "2.1.3_ex_1",
+      "page": null,
+      "version": "color",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_ex_1.png",
+      "raw_sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "2.1.3_ex_1"
+    },
+    {
+      "role": "native_figure",
+      "kind": "2.1.3_ex_1",
+      "page": null,
+      "version": "gray",
+      "path": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\gray\\asset-2.1.3_ex_1.png",
+      "raw_sha256": "60367e9a6d7f5a27c6d9b41f2c9e2c835a5f8753bc164274fb52e26d88d1c5e6",
+      "inspected_by": "paragraph_231_specialist_qc",
+      "personally_viewed": true,
+      "visible_student_defects": 0,
+      "observation_key": "2.1.3_ex_1"
+    }
+  ],
+  "route_bindings": [
+    {
+      "route": "full",
+      "revision": "r34",
+      "reproduction_sha256": "37b3912300fccb00529073c506694f515bee29f6383aee4401da30d321881bdf",
+      "manifest_sha256": "e425df2ccb34524bd1c6315a7b0396e879b6c4414485f692c6843c73d99c68a6"
+    },
+    {
+      "route": "thin",
+      "revision": "r35",
+      "reproduction_sha256": "bdffbbbbab6ecf940e8c923871da9bd0406b7a81c43dfec6b4e588fa671d8348",
+      "manifest_sha256": "83611251a545585fad9603193fe3b7267b869591f344266f5f860cbe6529cbaa"
+    },
+    {
+      "route": "print",
+      "revision": "r36",
+      "reproduction_sha256": "be173059eb321f88761ce7c20a4ff03632df2226d8c54408bef4647b5d02af6c",
+      "manifest_sha256": "515f1d1c987f91876c2ce0fee6abfc569aed2663721fcc5303d8cb7cc403bd54"
+    }
+  ],
+  "immutable_pending_manifests_unchanged": true,
+  "root_acceptance": "PENDING",
+  "production_ready": false
+}

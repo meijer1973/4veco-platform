@@ -1,0 +1,29 @@
+id: 2.1.3
+title: Marginale kosten en marginale opbrengsten
+status: integrated_repository_sprint_pass_with_flags
+record_status_upstream: reviewed_final
+part_a_scope: true
+part_b_scope: false
+target_trace:
+  registry: references/authored/course-target-exercises.json
+  record_id: 2.1.3
+  source_ref: references/owned/course-blueprint-v5.md §2.1.3
+  target_status_promotion_sprint: B2-2.1-TARGET-V5-PROMOTE
+quality_summary:
+  target_exercise_aligned: true
+  subquestions_uppercase: true
+  markdown_first_source: true
+  visuals_present: true
+  pdfs_rendered_and_inspected: true
+  no_calculus_scope_creep: true
+  no_profit_maximisation_scope_creep: true
+  equality_case_explained_without_profit_maximisation_rule: true
+repository_sprint:
+  id: B2-2.1.3-HARDEN
+  lead_review_required: true
+  lead_review_final_verdict: PASS WITH FLAGS
+  imported_into_canonical_folder: true
+  rendered_outputs_regenerated: true
+  chapter_assembly_regenerated: true
+required_follow_up:
+  - Monitor Chapter 2.1 PDF-size warning during later chapter and book print assembly.

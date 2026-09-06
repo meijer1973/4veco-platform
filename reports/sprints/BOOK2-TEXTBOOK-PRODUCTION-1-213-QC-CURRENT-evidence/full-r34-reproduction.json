@@ -1,0 +1,530 @@
+{
+  "result": "PASS",
+  "mode": "full",
+  "revision": "r34",
+  "native": {
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.zip": "15ffc25da00d0f3bfc84f93224191a08c9ab31387f7dc873a8df85dc7b76b499",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html": "b78090ef65fb0544e46b59353660980a79e2bd2b5774ef64955154abe23a3c98",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.zip": "1a841ffb08f77e0a50559791707023c85d803f6aea263095449fd74fcf451dae",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md": "2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html": "3c536f28de7f95a133cf80b5f3e4a351912af5103cf5ed48772fdf9d550a11cb",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf": "d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip": "9d1a0197cd02451e2168a31472ce5351aef9bd9169e8af535b261ba2353930a1",
+    "_assets/2.1.3_fig_1.svg": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819",
+    "_assets/2.1.3_fig_1.png": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+    "_assets/2.1.3_fig_2.svg": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53",
+    "_assets/2.1.3_fig_2.png": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+    "_assets/2.1.3_fig_3.svg": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc",
+    "_assets/2.1.3_fig_3.png": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+    "_assets/2.1.3_fig_4.svg": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773",
+    "_assets/2.1.3_fig_4.png": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+    "_assets/2.1.3_we_1.svg": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d",
+    "_assets/2.1.3_we_1.png": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+    "_assets/2.1.3_ex_1.svg": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+    "_assets/2.1.3_ex_1.png": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e"
+  },
+  "archives": {
+    "paragraaf": [
+      {
+        "name": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html",
+        "crc": 2769216254,
+        "size": 1294027,
+        "sha256": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b"
+      },
+      {
+        "name": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+        "crc": 1452698486,
+        "size": 25128,
+        "sha256": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d"
+      },
+      {
+        "name": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+        "crc": 1778251976,
+        "size": 971242,
+        "sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024"
+      },
+      {
+        "name": "_assets/2.1.3_ex_1.png",
+        "crc": 4149041079,
+        "size": 161059,
+        "sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e"
+      },
+      {
+        "name": "_assets/2.1.3_ex_1.svg",
+        "crc": 2356447191,
+        "size": 1949,
+        "sha256": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b"
+      },
+      {
+        "name": "_assets/2.1.3_fig_1.png",
+        "crc": 385215492,
+        "size": 56160,
+        "sha256": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756"
+      },
+      {
+        "name": "_assets/2.1.3_fig_1.svg",
+        "crc": 4048298595,
+        "size": 1911,
+        "sha256": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819"
+      },
+      {
+        "name": "_assets/2.1.3_fig_2.png",
+        "crc": 1942027649,
+        "size": 121801,
+        "sha256": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457"
+      },
+      {
+        "name": "_assets/2.1.3_fig_2.svg",
+        "crc": 2138963679,
+        "size": 2517,
+        "sha256": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53"
+      },
+      {
+        "name": "_assets/2.1.3_fig_3.png",
+        "crc": 880866491,
+        "size": 129111,
+        "sha256": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06"
+      },
+      {
+        "name": "_assets/2.1.3_fig_3.svg",
+        "crc": 2719378145,
+        "size": 2699,
+        "sha256": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc"
+      },
+      {
+        "name": "_assets/2.1.3_fig_4.png",
+        "crc": 1811904173,
+        "size": 212559,
+        "sha256": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609"
+      },
+      {
+        "name": "_assets/2.1.3_fig_4.svg",
+        "crc": 774840679,
+        "size": 1961,
+        "sha256": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773"
+      },
+      {
+        "name": "_assets/2.1.3_we_1.png",
+        "crc": 667008458,
+        "size": 265858,
+        "sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a"
+      },
+      {
+        "name": "_assets/2.1.3_we_1.svg",
+        "crc": 2695493570,
+        "size": 2334,
+        "sha256": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d"
+      }
+    ],
+    "opgaven": [
+      {
+        "name": "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html",
+        "crc": 1334197422,
+        "size": 592817,
+        "sha256": "b78090ef65fb0544e46b59353660980a79e2bd2b5774ef64955154abe23a3c98"
+      },
+      {
+        "name": "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+        "crc": 1353927555,
+        "size": 18192,
+        "sha256": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20"
+      },
+      {
+        "name": "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+        "crc": 2028448267,
+        "size": 452235,
+        "sha256": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05"
+      },
+      {
+        "name": "_assets/2.1.3_ex_1.png",
+        "crc": 4149041079,
+        "size": 161059,
+        "sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e"
+      },
+      {
+        "name": "_assets/2.1.3_ex_1.svg",
+        "crc": 2356447191,
+        "size": 1949,
+        "sha256": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b"
+      },
+      {
+        "name": "_assets/2.1.3_we_1.png",
+        "crc": 667008458,
+        "size": 265858,
+        "sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a"
+      },
+      {
+        "name": "_assets/2.1.3_we_1.svg",
+        "crc": 2695493570,
+        "size": 2334,
+        "sha256": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d"
+      }
+    ],
+    "antwoorden": [
+      {
+        "name": "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html",
+        "crc": 1983455756,
+        "size": 20890,
+        "sha256": "3c536f28de7f95a133cf80b5f3e4a351912af5103cf5ed48772fdf9d550a11cb"
+      },
+      {
+        "name": "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+        "crc": 4091986174,
+        "size": 15509,
+        "sha256": "2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f"
+      },
+      {
+        "name": "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+        "crc": 976108921,
+        "size": 34428,
+        "sha256": "d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787"
+      }
+    ]
+  },
+  "pages": [
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-001.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-001.png",
+      "sha256": "1b461934c3fd5c9519572a985379f753223be62288631675cfa9d084dc518ac6",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-002.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-002.png",
+      "sha256": "f5b3b1f3fd2a80f8c98ef56bb892df648733b8b9e550dee8106dbc6673e881d4",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-003.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-003.png",
+      "sha256": "259cbd5a05f47b70d00795813ac71750a421c17931fd269a8a17a8c78e130cc5",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-004.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-004.png",
+      "sha256": "c65f51e3136c2d8ef6a68f8d2f7cb8dbb912fdc2da8a63a72aa5bff49b283d6e",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-005.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-005.png",
+      "sha256": "d401752356839f500b0c32ea70585a953a195978e16124b1c495c6e3fab88a7e",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-006.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-006.png",
+      "sha256": "90f31298fe89748309cbe613aff0bd50982f57dd8a9764984893a8cd4f522a55",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-007.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-007.png",
+      "sha256": "e44a2d79019f42202108a1efe6e801ce057fe7400d0df8904946b88acb09394c",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-008.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-008.png",
+      "sha256": "37007229bd4350a5cff8703beaa64c12118212ad1255e1a23da645a00e92267d",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-009.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-009.png",
+      "sha256": "f1160cf726570230df25ff58e834aa1af5adb419590fd5eb0ef59532ac1c6689",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-010.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-010.png",
+      "sha256": "29ce7ee7dd65cb9bd84df4fa4f32009c57f743086af71abfdde577fa10e9e9f0",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-011.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-011.png",
+      "sha256": "eaf11cf9668844a9211f017804040f9133674d7c7ec93a442eaadaaa4284cd04",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-012.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-012.png",
+      "sha256": "838e5b48036bd631319f3f0fdaa8e32a843eb2e936e78922d6d7f71c17824263",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-013.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-013.png",
+      "sha256": "72b151067a8cbae1976d3b125fb19c6b70726293fe7eca8b256ef120a10a5f08",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "paragraaf",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-paragraaf-534177c8280e-r8/pages/page-014.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-paragraaf-534177c8280e-r34/pages/page-014.png",
+      "sha256": "83ef57f59d7cfc7ebc5e38ba3e2f26186b4902c5773e03f69f4b7eed11099ef0",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "opgaven",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-001.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-opgaven-d12487671bd2-r34/pages/page-001.png",
+      "sha256": "8dce5752b8b6f223d9ec3334349cbd8426705b1b11d2ad616885a7237a4ff02a",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "opgaven",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-002.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-opgaven-d12487671bd2-r34/pages/page-002.png",
+      "sha256": "866955304c64cf0873b478645fc92e14ffe4b93801cc959cace9d2993d99e0fc",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "opgaven",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-003.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-opgaven-d12487671bd2-r34/pages/page-003.png",
+      "sha256": "1de08ce2987bd5c875622cbb41aeb0784dbbca9b41b54f1ce6ba75a325d77758",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "opgaven",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-004.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-opgaven-d12487671bd2-r34/pages/page-004.png",
+      "sha256": "d2bace9d4ce1eaddf56936a7327a676d3ba44a86fc54d26d2505a2f528d59f31",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "opgaven",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-005.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-opgaven-d12487671bd2-r34/pages/page-005.png",
+      "sha256": "b166b196ebe8a1426d452fc4bcf803b2084c8c41ed51dd4b1e5078ebc48320b6",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "opgaven",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-006.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-opgaven-d12487671bd2-r34/pages/page-006.png",
+      "sha256": "471e09af924065c761fded16c8c74c77e0d9aebd7d83ff395b6d12344cf3918f",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "opgaven",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-007.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-opgaven-d12487671bd2-r34/pages/page-007.png",
+      "sha256": "b6ef874b19f6630f3aaefc62ef4f3874ebdbc3f7049fe77d34e7f0ad79b70845",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "opgaven",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-008.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-opgaven-d12487671bd2-r34/pages/page-008.png",
+      "sha256": "da00760a5d51eca93a00da72bf6396f092b69d1239448f956a071bbc8b60c54a",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "opgaven",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-opgaven-d12487671bd2-r8/pages/page-009.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-opgaven-d12487671bd2-r34/pages/page-009.png",
+      "sha256": "59ccfb6970899b936e17c94812a03806f05150fb9af4c258c36fe2b7050386f6",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "antwoorden",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-001.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-antwoorden-d96f21c3abed-r34/pages/page-001.png",
+      "sha256": "92d57ae0facbeb2187e5aca0c9e390319a0a2491f52efea0b6e1ae5a648253ff",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "antwoorden",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-002.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-antwoorden-d96f21c3abed-r34/pages/page-002.png",
+      "sha256": "1ee899ff06b72c2041cd4276c81606dacc0fe354e284e482d8439138e6318f01",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "antwoorden",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-003.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-antwoorden-d96f21c3abed-r34/pages/page-003.png",
+      "sha256": "adca03ec729ebb932579f47466c3030b7803f574debbc68b9736a8897806b3b2",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "antwoorden",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-004.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-antwoorden-d96f21c3abed-r34/pages/page-004.png",
+      "sha256": "852cad800fdce6f3ab1f949800fecb60b13a5bd329afb60a003cc36a319a79ac",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "antwoorden",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-005.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-antwoorden-d96f21c3abed-r34/pages/page-005.png",
+      "sha256": "73b25b12ed958e44a1666c786f21cf40f183d871af7a92dc5bd7175f0f9eb102",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "antwoorden",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-006.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-antwoorden-d96f21c3abed-r34/pages/page-006.png",
+      "sha256": "0134af1084fbbc81d699fac529a60bbe8fdbe1d29b571ff64a9147bd3af40b64",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    },
+    {
+      "kind": "antwoorden",
+      "previous": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/213-antwoorden-d96f21c3abed-r8/pages/page-007.png",
+      "current": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence/proofs/213-antwoorden-d96f21c3abed-r34/pages/page-007.png",
+      "sha256": "908234041ad21c7ee406169a69ec8c88403454d45c1da7750d750287c5fd50a9",
+      "dimensions": [
+        1241,
+        1754
+      ],
+      "decoded_rgb_changed_pixels": 0
+    }
+  ],
+  "build_manifest_sha256": "e425df2ccb34524bd1c6315a7b0396e879b6c4414485f692c6843c73d99c68a6",
+  "custody": {
+    "prior_raw_files": 14427,
+    "exact_imported_files": 162,
+    "native_files": 24,
+    "canonical_QC_exception": false,
+    "index_exception": false
+  },
+  "personal_inspection_claimed": false
+}

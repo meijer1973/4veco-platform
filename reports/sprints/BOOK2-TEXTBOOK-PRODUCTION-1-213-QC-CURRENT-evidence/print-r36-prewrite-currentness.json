@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-book-outline-currentness.js",
+    "--require-approved",
+    "--action",
+    "paragraph_production",
+    "--paragraph",
+    "2.1.3"
+  ],
+  "cwd": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform",
+  "started_at": "2026-09-06T05:06:12.434771+00:00",
+  "finished_at": "2026-09-06T05:06:14.133938+00:00",
+  "exit_code": 0,
+  "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.1.3\n",
+  "stderr": "",
+  "stdout_sha256": "48277b0f2fe486714ff2c591064559f0bbbbe9bb1bcfa1353c2feef3efe14b35",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "inherited_path_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "child_overrides": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}
