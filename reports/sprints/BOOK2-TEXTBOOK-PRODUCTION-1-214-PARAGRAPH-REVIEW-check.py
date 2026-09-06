@@ -39,7 +39,7 @@ def custody(name):
     for root,ref in [(P,BP),(L,BL)]:
         stream=git(root,'ls-tree','-r','-z',ref)
         tree={v.split(b'\t',1)[1].decode():v.split(b'\t',1)[0].split()[2].decode() for v in stream.split(b'\0') if v}
-        excluded={n for n in tree if root==P and n in ['repo-file-index.json','repo-file-index.md','cross-repo-file-index.json','cross-repo-file-index.md']}
+        excluded={n for n in tree if root==P and n in ['reports/github-agent-index-platform.json','reports/github-agent-index-platform.md','reports/github-agent-index-lessen.json','reports/github-agent-index-lessen.md']}
         if root==L:excluded|={b.LESSON_REL+'/2.1.4-review.md'}
         names=sorted(set(tree)-excluded)
         lines=('\n'.join(json.dumps(n,ensure_ascii=False) for n in names)+'\n').encode()

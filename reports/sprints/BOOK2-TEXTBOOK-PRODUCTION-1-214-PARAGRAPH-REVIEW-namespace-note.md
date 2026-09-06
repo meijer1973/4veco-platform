@@ -52,3 +52,10 @@ and `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW-r51-direct
 The scan digest is db67da0c615a9447f3e25af2bbd702b62d832ade6683410bd99ffbadeb4ab0e6.
 Only unchanged214/direct_print.py is authorized; its generic print_pipeline
 child is an internal worker, not a standalone authorized route.
+
+Guarded direct51 completed exact15-native/20-page parity. Scan selects52
+(maximum51). Before the additional checker rebuild, list exactly
+`reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r52.json`
+and `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW-r52-checker`.
+Scan digest8b5812419968c1de0ff66745e09dc3bdbb5c5d8f7f49ca92f8a751de9e250cd7.
+Compare checker52 with original same-engine MuPDF46, not Poppler raw pixels.
