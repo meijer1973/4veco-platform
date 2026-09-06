@@ -1,0 +1,209 @@
+{
+  "result": "PASS",
+  "controller": {
+    "ref": "8fd54c00665f02c96806a85d453f0bd69cdd8394",
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-run.py",
+    "raw_sha256": "ad06a75b3ba79c9f2093df9d7e96b1db44c544cc7156e0f86015c607c09092cd",
+    "test_sha256": "84645329260b663e563e0fb5ce745d0ca86327f557d7971f26dda028cd1f48df",
+    "generator_sha256": "87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4"
+  },
+  "counterexamples": [
+    {
+      "name": "unrelated-controller-comment",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-run.py",
+      "actual_sha256": "ad06a75b3ba79c9f2093df9d7e96b1db44c544cc7156e0f86015c607c09092cd",
+      "counterexample_sha256": "8e446469c0d9060bc5df474b33adeee1d2f87069a38a3780e78e8c00a0ea2c9e",
+      "rejection": "Full controller drift against independently supplied immutable commit",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "controller-guard-bypass",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-run.py",
+      "actual_sha256": "ad06a75b3ba79c9f2093df9d7e96b1db44c544cc7156e0f86015c607c09092cd",
+      "counterexample_sha256": "6e433b89aeb027a1d4eb53e582f4f8728978b655bb0e947ae811c6a318822b0b",
+      "rejection": "Full controller drift against independently supplied immutable commit",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "succession-test-guard-drift",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\test_succession.py",
+      "actual_sha256": "84645329260b663e563e0fb5ce745d0ca86327f557d7971f26dda028cd1f48df",
+      "counterexample_sha256": "52c67d89785b36aff7188fba571ff5f50f4432bd9539d9a77571a9eeb5292b94",
+      "rejection": "Full succession guard changed",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "unrelated-generator-drift",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_213.py",
+      "actual_sha256": "87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4",
+      "counterexample_sha256": "8c312057801795b0158d0318c87a55877df3731294abb59332b8b72a6672c200",
+      "rejection": "Whole generator differs from exact five-literal succession",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "synchronized-input-pin-1",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_213.py",
+      "actual_sha256": "87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4",
+      "counterexample_sha256": "971742167a6bf17376280eca93fae84baa13e28910b5f6f443a43db5f88ab895",
+      "rejection": "Whole generator differs from exact five-literal succession",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "synchronized-input-pin-2",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_213.py",
+      "actual_sha256": "87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4",
+      "counterexample_sha256": "44a4ba0c469fb7a66522aeb7aee28722fea01b932de8823f60be300eb64dbf40",
+      "rejection": "Whole generator differs from exact five-literal succession",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "synchronized-input-pin-3",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_213.py",
+      "actual_sha256": "87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4",
+      "counterexample_sha256": "0810a19585d057fc9a5fdba122d9e57950f0f67c6454e5fc35266d0fbabfee0f",
+      "rejection": "Whole generator differs from exact five-literal succession",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "synchronized-input-pin-4",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_213.py",
+      "actual_sha256": "87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4",
+      "counterexample_sha256": "23f174c15a63e1b07c7dda7cb7ae9ea1752d84221f9391d6fb944595e4aae8de",
+      "rejection": "Whole generator differs from exact five-literal succession",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "synchronized-input-pin-5",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_213.py",
+      "actual_sha256": "87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4",
+      "counterexample_sha256": "c93f21bef6043006d745fd8aa245bdc1cdd37ef0b4fae5eb5317fdf6d149176e",
+      "rejection": "Whole generator differs from exact five-literal succession",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "preserved-source-or-guard:build-scripts/content/book-2/print_pipeline.py",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+      "actual_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "counterexample_sha256": "370f9f4ff5dbe5b813595e0b096c6dbb7105c4f99556aa2a54d0aae9e20f7e17",
+      "rejection": "Whole preserved source/guard drift",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "preserved-source-or-guard:references/authored/course-target-exercises.json",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\references\\authored\\course-target-exercises.json",
+      "actual_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "counterexample_sha256": "0116bffafe479ce84e35ca3456d401370a940468f4ff581a7c21cdd1fb9e6973",
+      "rejection": "Whole preserved source/guard drift",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "preserved-source-or-guard:build-scripts/content/book-2/213/theory.md",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\theory.md",
+      "actual_sha256": "df6e40009454bc43f4915fa3edbf8c613a888ebbd2d0b7b59414bd3f70b4d5e7",
+      "counterexample_sha256": "d319f1de0b1d1e078f5e86bebabb05018856876e2c140f33a6dc8052f51f55bb",
+      "rejection": "Whole preserved source/guard drift",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "preserved-source-or-guard:build-scripts/content/book-2/213/exercises.md",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\exercises.md",
+      "actual_sha256": "bd16efcc6ac0ef9c2713b61587c8613fa353e98cc696e8a172ea931e11c35b32",
+      "counterexample_sha256": "5a551cd2c905d3d88ae9bffb07fae0ece021718ccaa32ad2dfc18a2db340a77b",
+      "rejection": "Whole preserved source/guard drift",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "preserved-source-or-guard:build-scripts/content/book-2/213/answers.md",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\answers.md",
+      "actual_sha256": "91d6074e6b843a7d31e8ab03f7e3fc6a959408f64146fc4ef17c3fb6ca0b8d29",
+      "counterexample_sha256": "ef6783ee6bb9d9a122bf01fc81a23d8952a1f654f97b86addd961c9af6422768",
+      "rejection": "Whole preserved source/guard drift",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "preserved-source-or-guard:build-scripts/content/book-2/213/target-answers.md",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\target-answers.md",
+      "actual_sha256": "aa59a0ab3d69a1177ea90b521d510f34576480838b21e13f4f169c7812639f09",
+      "counterexample_sha256": "1afdb77a5aa93cf317d67c331fc7f4a69d7256d4113e0f7009281a909b8daa45",
+      "rejection": "Whole preserved source/guard drift",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "preserved-source-or-guard:build-scripts/content/book-2/213/test_source.py",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\test_source.py",
+      "actual_sha256": "f141eaebf5cba863632ed8dcb140bacb62f4f617ef0354a9074a9ae10b88bb69",
+      "counterexample_sha256": "2a21264195b906c2c28ff9430ed63476c10ac10a9c4d1d26b5b91c85285c4d33",
+      "rejection": "Whole preserved source/guard drift",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "preserved-source-or-guard:build-scripts/content/book-2/213/test_bonus_contract.py",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\test_bonus_contract.py",
+      "actual_sha256": "32c4d737ef543f891be10ee3e3b0bfbb6a600ac075596c89b9410ad6631d5ff0",
+      "counterexample_sha256": "9808f9ac41752451caeb2e1f86609227a8a472677b6e7898e899ae14668a59ee",
+      "rejection": "Whole preserved source/guard drift",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "preserved-source-or-guard:build-scripts/content/book-2/213/alt_contract.py",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\alt_contract.py",
+      "actual_sha256": "8eb42ace09eb20c6f2b2b1d769bc3ba38f213cb1c05075305f0a615b278e077c",
+      "counterexample_sha256": "034e7d4c199626a011c30a52fb94537467b10272982e38d6045b0cb80a8e2f85",
+      "rejection": "Whole preserved source/guard drift",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "preserved-source-or-guard:build-scripts/content/book-2/213/check_render.py",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\check_render.py",
+      "actual_sha256": "34ecb93568112b54d9e1f1d4ffe9799e8375f131205a12861c738a5f3b18ab60",
+      "counterexample_sha256": "f4e04ca179930f8b4f99868f0429f65ce3aafe3d7f6185629586ba23e250c2d2",
+      "rejection": "Whole preserved source/guard drift",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "preserved-source-or-guard:build-scripts/content/book-2/213/verify_alt_delta.py",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\verify_alt_delta.py",
+      "actual_sha256": "3b6322931b99198b872cd521e74f4ddb1f5a092ebc2b93fde3aedc6155171c56",
+      "counterexample_sha256": "c80f362e0dbe5e179bdc392c9e9ab00b0cde0291f69f47a77d8746bc60fbebf9",
+      "rejection": "Whole preserved source/guard drift",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    },
+    {
+      "name": "preserved-source-or-guard:build-scripts/content/book-2/213/verify_rebuild.py",
+      "actual_path": "\\\\?\\C:\\wt\\book2-213-succession-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\verify_rebuild.py",
+      "actual_sha256": "5f171c9554ce0f9ab026e294c16f9924d4fe659f76bb045682e715ae936f45d5",
+      "counterexample_sha256": "43d20a89ddc035ef15440219af12c2a5627d630cb0592e5c05eef894219cb767",
+      "rejection": "Whole preserved source/guard drift",
+      "injection": "candidate read bytes only; no real file changed",
+      "native_build_called": false
+    }
+  ],
+  "positive": {
+    "ref": "8fd54c00665f02c96806a85d453f0bd69cdd8394",
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-run.py",
+    "raw_sha256": "ad06a75b3ba79c9f2093df9d7e96b1db44c544cc7156e0f86015c607c09092cd",
+    "test_sha256": "84645329260b663e563e0fb5ce745d0ca86327f557d7971f26dda028cd1f48df",
+    "generator_sha256": "87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4"
+  },
+  "description": "Actual immutable Git controller predicate, fixed entire succession test hash, fixed full generator five-replacement derivation and preserved full-source checks reject injected counterexample bytes. No fabricated successful native build."
+}
