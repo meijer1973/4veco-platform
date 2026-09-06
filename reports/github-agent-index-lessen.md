@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-09-06T07:11:54.501Z
+Generated: 2026-09-06T07:42:29.384Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-lessen`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `f666bbb7dd258f1f01b38a20dd6ca3802848f8b7`
-Files indexed: 1912
-Scope: committed tree files from `git ls-tree -r --name-only f666bbb7dd258f1f01b38a20dd6ca3802848f8b7`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source commit: `56bb0f1e4f45b844304895cbbc3aee8770ec0829`
+Files indexed: 1913
+Scope: committed tree files from `git ls-tree -r --name-only 56bb0f1e4f45b844304895cbbc3aee8770ec0829`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -115,7 +115,7 @@ _No files indexed in this group._
 
 ## book folders
 
-Count: 1385
+Count: 1386
 
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
@@ -1502,10 +1502,11 @@ Count: 1385
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/build_pdf.py
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-plan.md
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md
 
 ## paragraph folders
 
-Count: 882
+Count: 883
 
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.png
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.svg
@@ -2389,10 +2390,11 @@ Count: 882
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/build_pdf.py
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-plan.md
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md
 
 ## generated artifacts
 
-Count: 1348
+Count: 1349
 
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.png
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.svg
@@ -3742,6 +3744,7 @@ Count: 1348
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-plan.md
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md
 
 ## other
 
