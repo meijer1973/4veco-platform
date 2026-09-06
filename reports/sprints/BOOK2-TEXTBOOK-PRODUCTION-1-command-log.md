@@ -15113,3 +15113,175 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-publication-scope.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:57:20.564Z`
+- finished_at: `2026-09-05T23:57:22.224Z`
+- duration_ms: `1660`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `06df065f0e151152e72638ad4a4ef34bd9a352f97081019502a8f798676c45a6`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+node:assert:152
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+2 !== 0
+
+    at git (C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-publication-scope.js:6:109)
+    at Object.<anonymous> (C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-publication-scope.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1804:14)
+    at Object..js (node:internal/modules/cjs/loader:1936:10)
+    at Module.load (node:internal/modules/cjs/loader:1525:32)
+    at Module._load (node:internal/modules/cjs/loader:1327:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 2,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.13.1
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-publication-scope.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:59:02.754Z`
+- finished_at: `2026-09-05T23:59:04.128Z`
+- duration_ms: `1374`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `11e0b687f0daf8a8629e8ad6a2dcdde18ae90d408870aa565914e4334360f98f`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  a(diagnosticPaths.every(l=>l.startsWith(historicalLog+':')))
+
+    at C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-publication-scope.js:21:318
+    at Array.map (<anonymous>)
+    at Object.<anonymous> (C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-publication-scope.js:21:3)
+    at Module._compile (node:internal/modules/cjs/loader:1804:14)
+    at Object..js (node:internal/modules/cjs/loader:1936:10)
+    at Module.load (node:internal/modules/cjs/loader:1525:32)
+    at Module._load (node:internal/modules/cjs/loader:1327:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.13.1
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-publication-scope.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T00:00:07.506Z`
+- finished_at: `2026-09-06T00:00:10.599Z`
+- duration_ms: `3093`
+- exit_code: `0`
+- stdout_sha256: `3f0f8f7e11cfbf698ea5d59e468b325a04fe1b3e3d7cc9cc574759d2d362e9cf`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "strict_own_paths": 822,
+  "checks": [
+    {
+      "name": "whole_root_231_platform",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 9,
+        "generated_indexes": 0,
+        "review_evidence": 813,
+        "unknown": 0
+      }
+    },
+    {
+      "name": "whole_root_231_lessons",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 44,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "name": "complete_platform",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 78,
+        "generated_indexes": 6,
+        "review_evidence": 2896,
+        "unknown": 0
+      }
+    },
+    {
+      "name": "complete_lessons",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 202,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 4,
+        "unknown": 0
+      }
+    }
+  ],
+  "output": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-publication-scope.json"
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
