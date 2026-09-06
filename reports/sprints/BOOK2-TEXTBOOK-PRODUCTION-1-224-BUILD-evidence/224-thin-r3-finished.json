@@ -1,0 +1,10 @@
+{
+  "finished": "2026-09-06T04:59:14.110374+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 16.42215359999682,
+  "stdout_sha256": "439b4826cc51573747c38607ca180c642b4ea3967fa4981863d3b786ba5f83e5",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "manifest": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-thin-r3-manifest.json",
+  "manifest_sha256": "7d7e72f6f9948519ca9e060bed92ed4d20cd6708cbab832157b30d73ba37bd44",
+  "path_unchanged": true
+}

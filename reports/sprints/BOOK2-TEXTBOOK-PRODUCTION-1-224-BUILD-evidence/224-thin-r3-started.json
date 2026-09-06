@@ -1,0 +1,51 @@
+{
+  "created": "2026-09-06T04:58:57.687324+00:00",
+  "status": "STARTED_NOT_ACCEPTED",
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\build_pdf.py",
+    "--lesson-root",
+    "C:\\wt\\book2-224-build-20260906\\4veco-lessen",
+    "--proof-root",
+    "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence",
+    "--proof-suffix",
+    "r3",
+    "--manifest",
+    "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-thin-r3-manifest.json"
+  ],
+  "cwd": "C:\\wt\\book2-224-build-20260906\\4veco-platform",
+  "sources": [
+    {
+      "path": "build-scripts/content/book-2/b2_224.py",
+      "commit": "aca14c61d258c05d668005d20bf0e4196de89ced",
+      "raw_sha256": "d5001620b81fc9ca2f390047367bf64885793b930b3763cba74b6babce842125"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/answers.md",
+      "commit": "aca14c61d258c05d668005d20bf0e4196de89ced",
+      "raw_sha256": "726e47fcfd92849dbc48594bb1412505c8f46f90c3a11310c854a08f02310d99"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/check_render.py",
+      "commit": "aca14c61d258c05d668005d20bf0e4196de89ced",
+      "raw_sha256": "a5f869c8b5ea43ddc14f38b5b7229db612d9141d99ec5514824288acdbad57c6"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/exercises.md",
+      "commit": "aca14c61d258c05d668005d20bf0e4196de89ced",
+      "raw_sha256": "f73ceb8fdc1b2f033a88ec203af8664dd33aa0325d8c2908669c0ae47599f130"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/target-answers.md",
+      "commit": "aca14c61d258c05d668005d20bf0e4196de89ced",
+      "raw_sha256": "c90a202726746fd43b6bcaf2e769809897a27230003a3f8dcdbb9125a39b67c9"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/test_source.py",
+      "commit": "aca14c61d258c05d668005d20bf0e4196de89ced",
+      "raw_sha256": "0b40cd22a4223a486799b775c911abea9e8995316cb4f3850fefdfeb41c5df31"
+    }
+  ],
+  "reservation_raw_sha256": "f43ffba09af9fe1a62c19ad6132cb1a83a1ca550120a6d38bc54942ee5ac9604",
+  "path_raw_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c"
+}

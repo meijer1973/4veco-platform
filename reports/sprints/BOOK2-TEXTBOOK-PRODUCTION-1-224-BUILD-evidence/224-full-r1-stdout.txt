@@ -1,0 +1,159 @@
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.4
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+{
+  "paragraph": "2.2.4",
+  "release_commit": "6c3f46dbe97ce3eebe481e18bd25424a2de55aac",
+  "release_sha256": "33c1473db0cbeec66e93557a72ab0586ccfcef29ba52b2a36148946c65598c7e",
+  "accepted_input_count": 34,
+  "target_sha256": "4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519",
+  "plan_sha256": "fcc55870ba93b18324c1f04fe61c0cd3642e0ad3dbbffe87d42de35382072257",
+  "inspection_status": "PENDING",
+  "documents": [
+    {
+      "source_md": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit \u2013 opgaven.md",
+      "source_sha256": "984952f105df482f82bcae8fe9d19c60c4f80f58325f1334536f6bb25b13bd8b",
+      "source_html": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit \u2013 opgaven.html",
+      "html_sha256": "d2499940d91d05cb34decd97ea0349c57734538e4779c9131056f00b50bb91f8",
+      "source_pdf": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit \u2013 opgaven.pdf",
+      "pdf_sha256": "c44060bedc33cfa11d0909d40fc6dade792813031bef903014308b52ba63edab",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_1.svg",
+          "sha256": "d97092fd39f3c1e1f21745879bd4bc591dedfb72a94da22f5b371aeb8b38ee88"
+        },
+        {
+          "path": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_1.png",
+          "sha256": "88c2d889c1884601ffb16861ef909bcf68c285999bfcf8881ddbdce39617f843"
+        },
+        {
+          "path": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_2.svg",
+          "sha256": "3cc3a5f7f1db7d1bdca66c1dd3dc602e260d92fe3e270428f888cb27dfbf9420"
+        },
+        {
+          "path": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_2.png",
+          "sha256": "8ad844aaf67bbdb31e3bd5162efec7165570952118cef0b8b400d03b1f429991"
+        }
+      ],
+      "proof_directory": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-c44060bedc33-r1"
+    },
+    {
+      "source_md": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit \u2013 antwoorden.md",
+      "source_sha256": "0c44a607cb222545b60f131cd861faf5193c6bbe818dd32bb5a0eb5641571592",
+      "source_html": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit \u2013 antwoorden.html",
+      "html_sha256": "cb1e0749543dc92bb60c1632fe3f3076d071c35dcebca2492454ab8017b79b57",
+      "source_pdf": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit \u2013 antwoorden.pdf",
+      "pdf_sha256": "67f0c04671f9fefba26c23fcf16048f4d3c161f15dcf0831997599e45ca8aaed",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_3.svg",
+          "sha256": "d094cd0803f0c023639aa70977909f3979bfeec46e763913c01bbd3b3d613e7e"
+        },
+        {
+          "path": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_3.png",
+          "sha256": "b07321e621ead8ecec3862b8895b754734eb138935e24d680a7d9f229bc9a8a6"
+        },
+        {
+          "path": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_4.svg",
+          "sha256": "ae2702581e6e88c8f82c87f0f3d2fec14a1b8cfa16afc7ebb25f010f9e945116"
+        },
+        {
+          "path": "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_4.png",
+          "sha256": "99c8d340c8ac7a9ab04f5fffa5d3b0c05d5b32ed6cfd226807ff8871a6096af1"
+        }
+      ],
+      "proof_directory": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-67f0c04671f9-r1"
+    }
+  ],
+  "native_files": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit \u2013 opgaven.md",
+      "sha256": "984952f105df482f82bcae8fe9d19c60c4f80f58325f1334536f6bb25b13bd8b"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit \u2013 opgaven.html",
+      "sha256": "d2499940d91d05cb34decd97ea0349c57734538e4779c9131056f00b50bb91f8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit \u2013 opgaven.pdf",
+      "sha256": "c44060bedc33cfa11d0909d40fc6dade792813031bef903014308b52ba63edab"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit \u2013 antwoorden.md",
+      "sha256": "0c44a607cb222545b60f131cd861faf5193c6bbe818dd32bb5a0eb5641571592"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit \u2013 antwoorden.html",
+      "sha256": "cb1e0749543dc92bb60c1632fe3f3076d071c35dcebca2492454ab8017b79b57"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit \u2013 antwoorden.pdf",
+      "sha256": "67f0c04671f9fefba26c23fcf16048f4d3c161f15dcf0831997599e45ca8aaed"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\build_pdf.py",
+      "sha256": "d6b03fff7cb66547d341a095c2d943f2cd11be2127b0aea2e0c321fbba812d5d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_1.svg",
+      "sha256": "d97092fd39f3c1e1f21745879bd4bc591dedfb72a94da22f5b371aeb8b38ee88"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_1.png",
+      "sha256": "88c2d889c1884601ffb16861ef909bcf68c285999bfcf8881ddbdce39617f843"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_2.svg",
+      "sha256": "3cc3a5f7f1db7d1bdca66c1dd3dc602e260d92fe3e270428f888cb27dfbf9420"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_2.png",
+      "sha256": "8ad844aaf67bbdb31e3bd5162efec7165570952118cef0b8b400d03b1f429991"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_3.svg",
+      "sha256": "d094cd0803f0c023639aa70977909f3979bfeec46e763913c01bbd3b3d613e7e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_3.png",
+      "sha256": "b07321e621ead8ecec3862b8895b754734eb138935e24d680a7d9f229bc9a8a6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_4.svg",
+      "sha256": "ae2702581e6e88c8f82c87f0f3d2fec14a1b8cfa16afc7ebb25f010f9e945116"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_4.png",
+      "sha256": "99c8d340c8ac7a9ab04f5fffa5d3b0c05d5b32ed6cfd226807ff8871a6096af1"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "build-scripts\\content\\book-2\\b2_224.py",
+      "sha256": "95e142257eef94e9d9f7583c7558598563dc8d27870cdb75da44242e90e0c727"
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\224\\answers.md",
+      "sha256": "18e048889915495abaa4f3ce5b3ee5e8fbb6724c47b6443c2fc460c1921340b1"
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\224\\exercises.md",
+      "sha256": "f73ceb8fdc1b2f033a88ec203af8664dd33aa0325d8c2908669c0ae47599f130"
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\224\\target-answers.md",
+      "sha256": "0ed00b99e9cf14ef74459a698a29ab8266c0c9599393e1248242714048974b44"
+    }
+  ]
+}
