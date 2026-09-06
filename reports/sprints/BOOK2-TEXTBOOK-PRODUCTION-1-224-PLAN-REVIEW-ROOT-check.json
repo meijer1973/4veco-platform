@@ -1,0 +1,813 @@
+{
+  "status": "PLAN TECHNICAL PASS",
+  "reviewer": "codex-root",
+  "author": "paragraph_224_builder",
+  "plan_sha256": "fcc55870ba93b18324c1f04fe61c0cd3642e0ad3dbbffe87d42de35382072257",
+  "lesson_base": "30f57bfad2096c7afa507da48db9d82ee35a3c23",
+  "lesson_head": "d0d84a5f411c23141954090f3bc1d234e7e45cd3",
+  "preserved_lesson_blob_count": 1901,
+  "imports": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-command-log.jsonl",
+      "commit": "db006571b6e784f2eb192ffcee6f8e44f0f1ad09",
+      "blob": "09b03becfe64875edf793a33a94b804eb61843e9",
+      "raw_sha256": "7845953fc01966dc0ee5d4f8aa0563e5077d30d87ca8c3b2148887907b264cec"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-command-log.md",
+      "commit": "db006571b6e784f2eb192ffcee6f8e44f0f1ad09",
+      "blob": "793eb78eeacc344d23d5626c245cf9f34b7ff597",
+      "raw_sha256": "a6bb778847fc0dbb494511b30e62943ee78fd80b1006a083cd572078e377c217"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.js",
+      "commit": "db006571b6e784f2eb192ffcee6f8e44f0f1ad09",
+      "blob": "57891469dcf38e39c4c6c020acc2bda24cd9d13d",
+      "raw_sha256": "7eb672145350970f6ffbee40261594cb32af1db43deb04621ce0c7c63d150484"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.json",
+      "commit": "db006571b6e784f2eb192ffcee6f8e44f0f1ad09",
+      "blob": "a6a20abab8788749377fc76c3c72972007639bfc",
+      "raw_sha256": "f882cc8fc290dda6766e3cdffcc4aaa8922ca2c54b89cc073374f286199bfe27"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-operational-plan.md",
+      "commit": "db006571b6e784f2eb192ffcee6f8e44f0f1ad09",
+      "blob": "07942e7756421eedc00f86a0cfc2eabba254708b",
+      "raw_sha256": "bd407aaa338d320ff62a39b8302f0a6d7081f3656319974022417fd84ea1b2f4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-publication.md",
+      "commit": "db006571b6e784f2eb192ffcee6f8e44f0f1ad09",
+      "blob": "0320273916f7263d264c46b21626e99159e23182",
+      "raw_sha256": "172d1902384ebfe2ce7b1d3c3d0ffec4c505f10f254dfa4fc763eca606e4dd00"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-result.md",
+      "commit": "db006571b6e784f2eb192ffcee6f8e44f0f1ad09",
+      "blob": "d0bb915af0cb98957d0dd06a89c16d330232cd82",
+      "raw_sha256": "416f68a94ddc1a8e833930763738cdedcb25706bcd68e0aa9dc180248c2bc80f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-scope.js",
+      "commit": "db006571b6e784f2eb192ffcee6f8e44f0f1ad09",
+      "blob": "09b84d25296143b5adb9db1ef5c259d6ce0bd8c3",
+      "raw_sha256": "a884b74628be0b551a6c475c28cca1faa17aff38edefc576e92c30ca169e7d96"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-scope.json",
+      "commit": "db006571b6e784f2eb192ffcee6f8e44f0f1ad09",
+      "blob": "08b7c8a8b27d699e7a385db7efa71412b779543c",
+      "raw_sha256": "03d9bb6e60028c54808dd3e1fccba57f1e99f4105438394dbd0c6a7d1d433e30"
+    }
+  ],
+  "checks": [
+    "exact reviewed plan raw SHA",
+    "plan has canonical LF",
+    "exact author plan bytes",
+    "current lesson head",
+    "lesson clean",
+    "only new lesson path",
+    "all nine author evidence files imported without byte changes",
+    "entire frozen target record",
+    "target role",
+    "point vector",
+    "independent parsed candidate contract",
+    "actual plan-text negative cases rejected",
+    "R1 quantity percent",
+    "R1 price percent",
+    "R1 Ev",
+    "R1 matched weekly TO",
+    "R1 TO percent",
+    "R2 interval Ev",
+    "R2 matched weekly TO",
+    "R2 TO percent",
+    "R2 finite product",
+    "R3 Ei",
+    "R4 complementary Ek",
+    "R5 baseline",
+    "R5 Y only",
+    "R5 reset Pc only",
+    "B1 both",
+    "R5 derived Ei",
+    "B1 controlled income and other-price contributions",
+    "T1 answer-only control",
+    "T3 exact observed totals",
+    "T4 luxury Ei",
+    "T4 inferior Ei",
+    "T4 competing price percent",
+    "T4 named-good Ek",
+    "T5 annual Q, no new elasticity question",
+    "C1 reverse percentage",
+    "C2 Ev",
+    "all disjoint Ei classes/boundaries",
+    "R6 all four local direction signs",
+    "twelve independent mathematical wrong-result witnesses",
+    "complete authored timing rows",
+    "time subtotal Opening/retrieval",
+    "time subtotal R1",
+    "time subtotal R2",
+    "time subtotal R3",
+    "time subtotal R4",
+    "time subtotal R5",
+    "time subtotal R6",
+    "time subtotal Target source orientation",
+    "time subtotal T1",
+    "time subtotal T2",
+    "time subtotal T3",
+    "time subtotal T4",
+    "time subtotal T5",
+    "time subtotal T6",
+    "time subtotal C1/C2 closing",
+    "time subtotal Final route check",
+    "authored full core",
+    "reviewer full desk budget",
+    "all four rectangle bounds",
+    "pixel area scale 100/20",
+    "pixel area scale 80/22",
+    "pixel area scale 100/10",
+    "pixel area scale 60/15",
+    "maintained figure aspect at166mm",
+    "source CSS font point conversion",
+    "four functional short figure alternatives",
+    "native two-edition inventory"
+  ],
+  "target_record": {
+    "id": "2.2.4",
+    "module": 2,
+    "chapter": 2,
+    "paragraph": 4,
+    "paragraph_title": "Gemengde opgaven: elasticiteit",
+    "difficulty": "MIXED",
+    "target_exercise": {
+      "context": "StreamPlus onderzoekt één recente prijsverhoging en mogelijke vervolgstappen. Gebruik bij vragen 1 tot en met 5 telkens alleen de aangegeven bron. Combineer bij vraag 6 minstens twee bronnen. De gemeten Ev in bron A is gegeven; de opgave combineert eerder onderwezen handelingen en introduceert geen nieuwe formule.",
+      "sources": [
+        {
+          "id": "bron-a",
+          "type": "table",
+          "columns": [
+            "gegeven",
+            "oud",
+            "nieuw"
+          ],
+          "rows": [
+            [
+              "prijs Standaard",
+              "€10",
+              "€12"
+            ],
+            [
+              "abonnees",
+              "50.000",
+              "43.000"
+            ],
+            [
+              "appscore",
+              "4,6/5",
+              "4,6/5"
+            ]
+          ],
+          "content": "Tabel met oude en nieuwe prijs, aantal abonnees en appscore; de gemeten Ev is −0,7."
+        },
+        {
+          "id": "bron-b",
+          "type": "table",
+          "columns": [
+            "verandering",
+            "Premium",
+            "Budget"
+          ],
+          "rows": [
+            [
+              "inkomen",
+              "+8%",
+              "+8%"
+            ],
+            [
+              "gevraagde hoeveelheid",
+              "+15%",
+              "−4%"
+            ]
+          ],
+          "content": "Tabel met inkomens- en vraagverandering voor Premium en Budget."
+        },
+        {
+          "id": "bron-c",
+          "type": "table",
+          "columns": [
+            "gegeven",
+            "oud",
+            "nieuw"
+          ],
+          "rows": [
+            [
+              "prijs concurrerend abonnement",
+              "€8",
+              "€9"
+            ],
+            [
+              "vraag StreamPlus",
+              "basis",
+              "+5%"
+            ]
+          ],
+          "content": "Tabel voor de kruislingse elasticiteit van StreamPlus ten opzichte van het concurrerende abonnement."
+        },
+        {
+          "id": "bron-d",
+          "content": "Regionale vraagfunctie Q=12.000−400P+0,1Y+300Pc. Q is het aantal gevraagde abonnementen per maand, P en Pc zijn maandprijzen in euro en Y is het gemiddelde jaarinkomen in euro. Beginsituatie: P=12, Pc=10 en Y=40.000."
+        }
+      ],
+      "subquestions": [
+        {
+          "label": "1",
+          "points": 2,
+          "prompt": "Selecteer uit bron A de gegevens voor een controleberekening van Ev en noem het gegeven dat daarvoor niet nodig is."
+        },
+        {
+          "label": "2",
+          "points": 2,
+          "prompt": "Classificeer met de gegeven Ev=−0,7 de vraag en leg in gewone taal uit hoe sterk Q procentueel reageert op een prijsverandering."
+        },
+        {
+          "label": "3",
+          "points": 2,
+          "prompt": "Bereken met bron A TO vóór en na de prijsverhoging."
+        },
+        {
+          "label": "4",
+          "points": 4,
+          "prompt": "Bereken en classificeer met bron B Ei voor Premium en Budget en met bron C Ek van de vraag naar StreamPlus ten opzichte van de prijs van het concurrerende abonnement. Noem bij Ek beide diensten."
+        },
+        {
+          "label": "5",
+          "points": 2,
+          "prompt": "Bereken met bron D Q in de beginsituatie en nadat alleen Y stijgt naar €42.000 per jaar. Noem welke variabelen gelijk blijven."
+        },
+        {
+          "label": "6",
+          "points": 2,
+          "prompt": "Geef op basis van minstens twee bronnen een voorzichtig omzetadvies. Noem één conclusie die de bronnen ondersteunen en precies twee conclusies die zij niet bewijzen."
+        }
+      ]
+    },
+    "mixed_target_profile": {
+      "integrates_paragraphs": [
+        "2.2.1",
+        "2.2.2",
+        "2.2.3"
+      ],
+      "source_selection_required": true,
+      "answer_construction_required": true,
+      "table_or_graph_interpretation_required": true,
+      "no_new_theory": true
+    },
+    "lesson_goals": [
+      "Je kunt relevante tabelgegevens selecteren, Ev classificeren en uitleggen, en Ei en Ek berekenen en classificeren.",
+      "Je kunt totale opbrengst vóór en na een prijsverandering vergelijken.",
+      "Je kunt een vraagfunctie gebruiken als één variabele verandert en de andere variabelen gelijk blijven.",
+      "Je kunt met meerdere bronnen een omzetadvies formuleren zonder verder te gaan dan de gegevens."
+    ],
+    "required_skills": [
+      "A04",
+      "A15",
+      "A16",
+      "A17",
+      "A38",
+      "A85",
+      "D06",
+      "D11",
+      "D12",
+      "D27"
+    ],
+    "prior_knowledge_assumed": [
+      "All listed skills are retrieval from §§2.2.1–2.2.3."
+    ],
+    "new_skills_introduced": [],
+    "missing_units_flagged": [
+      "A16 and D12 use stale Ekr/kruiselasticiteit wording. This candidate follows the authored authority: kruislingse elasticiteit with notation Ek.",
+      "The local Ev/TO rule has no valid machine-unit coverage; D25 is not cited.",
+      "A15, A16, A17 and A38 carry broad A2.5 metadata, but this target contains no percentage-point operation and does not claim A2.5 coverage."
+    ],
+    "exam_codes": [
+      "A2.4",
+      "D1.5",
+      "D1.6",
+      "D1.7",
+      "D1.8",
+      "D1.9",
+      "D1.14",
+      "D1.15"
+    ],
+    "difficulty_notes": "Gemengde kandidaat voor circa 20 minuten met vijf vragen van twee punten, één gecombineerde elasticiteitsvraag van vier punten en vier compacte bronnen.",
+    "answer_form_expectations": [
+      "bronselectie",
+      "Ev-uitleg in gewone taal",
+      "omzetvergelijking",
+      "gecombineerde Ei- en Ek-berekening",
+      "vraagfunctie-invulling",
+      "twee-bronnenadvies met beperkingen"
+    ],
+    "short_answer_model": {
+      "1": "Nodig: P €10→€12 en Q 50.000→43.000. De appscore 4,6/5 is niet nodig voor Ev.",
+      "2": "|Ev|=0,7<1, dus de vraag is prijsinelastisch. Bij een prijsverandering van 1% verandert Q in deze waarneming in tegengestelde richting met ongeveer 0,7%.",
+      "3": "TO oud=€10×50.000=€500.000; TO nieuw=€12×43.000=€516.000.",
+      "4": "Premium: Ei=15%/8%=1,875, luxegoed. Budget: Ei=−4%/8%=−0,5, inferieur goed. Voor StreamPlus geldt %ΔP concurrent=(9−8)/8×100%=12,5% en Ek=5%/12,5%=0,4. Teller: vraag naar StreamPlus; noemer: prijs van de concurrerende dienst. Positief, dus de diensten zijn substituten.",
+      "5": "Q oud=12.000−4.800+4.000+3.000=14.200 abonnementen per maand. Bij Y=€42.000 per jaar is Q=14.400 abonnementen per maand; P en Pc blijven gelijk.",
+      "6": "Voorzichtig: de onderzochte verhoging verhoogde TO met €16.000; bron A ondersteunt die conclusie en bron C laat substitutie met de concurrent zien. Niet bewezen zijn precies: dezelfde reactie bij een volgende prijsverhoging en een hogere winst, omdat kostengegevens ontbreken."
+    },
+    "source_ref": "references/owned/course-blueprint-v5.md §2.2.4",
+    "paragraph_kind": "gemengde_opgaven",
+    "introduces_new_theory": false,
+    "record_status": "candidate_review_ready",
+    "v5_migration": {
+      "source_status": "candidate_review_ready",
+      "from_v4_id": null,
+      "related_v4_ids": [],
+      "review_required_before_final": true
+    }
+  },
+  "actual_plan_text_mutations_rejected": [
+    "target source cell",
+    "target source heading",
+    "target source annual units",
+    "target selection changed to mandatory calculation",
+    "target extra question",
+    "target subtotal drift",
+    "target advice weakened",
+    "goal omitted",
+    "bonus controlled-comparison criterion omitted",
+    "bonus supplied-outcome comparison omitted",
+    "support mandatory",
+    "fading terminal independent route removed",
+    "theory edition introduced",
+    "speculative prerequisite release",
+    "bonus lacks model limit"
+  ],
+  "exact_rational_results": {
+    "R1 quantity percent": "-20",
+    "R1 price percent": "10",
+    "R1 Ev": "-2",
+    "R1 TO percent": "-12",
+    "R2 interval Ev": "-4/5",
+    "R2 TO percent": "-10",
+    "R2 finite product": "9/10",
+    "R3 Ei": "1/2",
+    "R4 complementary Ek": "-1/2",
+    "R5 baseline": "200",
+    "R5 Y only": "220",
+    "R5 reset Pc only": "204",
+    "B1 both": "224",
+    "R5 derived Ei": "1/2",
+    "T1 answer-only control": "-7/10",
+    "T4 luxury Ei": "15/8",
+    "T4 inferior Ei": "-1/2",
+    "T4 competing price percent": "25/2",
+    "T4 named-good Ek": "2/5",
+    "C1 reverse percentage": "-20",
+    "C2 Ev": "-1/2"
+  },
+  "mathematical_counterexamples": [
+    [
+      "wrong new-base denominator",
+      "-20",
+      "-25"
+    ],
+    [
+      "finite additive shortcut",
+      "9/10",
+      "11/10"
+    ],
+    [
+      "wrong telescope price source",
+      "-1/2",
+      "-1"
+    ],
+    [
+      "Ei coefficient",
+      "1/2",
+      "1/200"
+    ],
+    [
+      "unreset Pc comparison",
+      204,
+      224
+    ],
+    [
+      "Y divided by twelve",
+      14200,
+      10533.333333333332
+    ],
+    [
+      "regional Q as observed total",
+      14200,
+      43000
+    ],
+    [
+      "absolute Ei sign lost",
+      "inferieur",
+      "normaal"
+    ],
+    [
+      "ratio reversed",
+      "2/5",
+      "5/2"
+    ],
+    [
+      "reverse 25percent instead of20",
+      "-20",
+      "-25"
+    ],
+    [
+      "uncontrolled attribution",
+      24,
+      20
+    ],
+    [
+      "coefficient income unit lost",
+      "200",
+      "220"
+    ]
+  ],
+  "authored_timing": [
+    [
+      "Opening/retrieval",
+      "2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0.5",
+      "2.5"
+    ],
+    [
+      "R1",
+      "0.75",
+      "1.5",
+      "0.5",
+      "1.25",
+      "0.5",
+      "0",
+      "4.5"
+    ],
+    [
+      "R2",
+      "0.75",
+      "1.25",
+      "0.25",
+      "1.75",
+      "0.5",
+      "0",
+      "4.5"
+    ],
+    [
+      "R3",
+      "0.5",
+      "0.5",
+      "0",
+      "1",
+      "0.5",
+      "0",
+      "2.5"
+    ],
+    [
+      "R4",
+      "0.5",
+      "1",
+      "0.25",
+      "1.25",
+      "0.5",
+      "0",
+      "3.5"
+    ],
+    [
+      "R5",
+      "0.75",
+      "2.25",
+      "0.5",
+      "1.5",
+      "0.5",
+      "0",
+      "5.5"
+    ],
+    [
+      "R6",
+      "0.5",
+      "0",
+      "0",
+      "1.5",
+      "0.5",
+      "0.5",
+      "3"
+    ],
+    [
+      "Target source orientation",
+      "2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0.5",
+      "2.5"
+    ],
+    [
+      "T1",
+      "0.25",
+      "0",
+      "0.25",
+      "0.75",
+      "0.25",
+      "0",
+      "1.5"
+    ],
+    [
+      "T2",
+      "0.25",
+      "0",
+      "0",
+      "1",
+      "0.25",
+      "0",
+      "1.5"
+    ],
+    [
+      "T3",
+      "0.25",
+      "1",
+      "0",
+      "0.5",
+      "0.25",
+      "0",
+      "2"
+    ],
+    [
+      "T4",
+      "0.5",
+      "2.25",
+      "0",
+      "1.25",
+      "0.5",
+      "0",
+      "4.5"
+    ],
+    [
+      "T5",
+      "0.5",
+      "1.25",
+      "0",
+      "1",
+      "0.25",
+      "0",
+      "3"
+    ],
+    [
+      "T6",
+      "0.5",
+      "0",
+      "0.25",
+      "2",
+      "0.75",
+      "0",
+      "3.5"
+    ],
+    [
+      "C1/C2 closing",
+      "0.5",
+      "0.5",
+      "0",
+      "1",
+      "0.5",
+      "0",
+      "2.5"
+    ],
+    [
+      "Final route check",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1.5",
+      "0",
+      "1.5"
+    ]
+  ],
+  "reviewer_timing": [
+    {
+      "item": "Opening/retrieval",
+      "minutes": 2.5
+    },
+    {
+      "item": "R1",
+      "minutes": 5
+    },
+    {
+      "item": "R2",
+      "minutes": 5
+    },
+    {
+      "item": "R3",
+      "minutes": 3
+    },
+    {
+      "item": "R4",
+      "minutes": 3.5
+    },
+    {
+      "item": "R5",
+      "minutes": 7
+    },
+    {
+      "item": "R6",
+      "minutes": 4
+    },
+    {
+      "item": "Target source orientation",
+      "minutes": 2.5
+    },
+    {
+      "item": "T1",
+      "minutes": 1.5
+    },
+    {
+      "item": "T2",
+      "minutes": 1.5
+    },
+    {
+      "item": "T3",
+      "minutes": 2
+    },
+    {
+      "item": "T4",
+      "minutes": 5
+    },
+    {
+      "item": "T5",
+      "minutes": 3
+    },
+    {
+      "item": "T6",
+      "minutes": 4
+    },
+    {
+      "item": "C1/C2 closing",
+      "minutes": 2.5
+    },
+    {
+      "item": "Final route check",
+      "minutes": 1.5
+    }
+  ],
+  "timing": {
+    "author_core": 48.5,
+    "reviewer_core": 53.5,
+    "reviewer_supported": 63.5,
+    "reviewer_all": 71.5,
+    "observed": false
+  },
+  "geometry": {
+    "rectangles": [
+      {
+        "x0": 100,
+        "x1": 400,
+        "y0": 310,
+        "y1": 630,
+        "Q": 100,
+        "price": 20,
+        "TO": 2000,
+        "pixel_area": 96000
+      },
+      {
+        "x0": 700,
+        "x1": 940,
+        "y0": 278,
+        "y1": 630,
+        "Q": 80,
+        "price": 22,
+        "TO": 1760,
+        "pixel_area": 84480
+      },
+      {
+        "x0": 100,
+        "x1": 400,
+        "y0": 470,
+        "y1": 630,
+        "Q": 100,
+        "price": 10,
+        "TO": 1000,
+        "pixel_area": 48000
+      },
+      {
+        "x0": 700,
+        "x1": 880,
+        "y0": 390,
+        "y1": 630,
+        "Q": 60,
+        "price": 15,
+        "TO": 900,
+        "pixel_area": 43200
+      }
+    ],
+    "placed_pt": 15.68503937007874,
+    "actual_ink_and_render": "NOT RUN; future gate"
+  },
+  "titles": [
+    "Omzetrechthoeken van de telescoopverhuur: oude en nieuwe prijs en hoeveelheid.",
+    "Omzetrechthoeken van de verrekijkerverhuur: oude en nieuwe prijs en hoeveelheid.",
+    "Omzetvergelijking van de telescoopverhuur met bedragen en verandering.",
+    "Omzetvergelijking van de verrekijkerverhuur met de eindige veranderingsfactor."
+  ],
+  "native_files": [
+    "2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+    "2.2.4 Gemengde opgaven elasticiteit – opgaven.html",
+    "2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+    "2.2.4 Gemengde opgaven elasticiteit – antwoorden.md",
+    "2.2.4 Gemengde opgaven elasticiteit – antwoorden.html",
+    "2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+    "build_pdf.py",
+    "_assets/2.2.4_ex_1.svg",
+    "_assets/2.2.4_ex_1.png",
+    "_assets/2.2.4_ex_2.svg",
+    "_assets/2.2.4_ex_2.png",
+    "_assets/2.2.4_ex_3.svg",
+    "_assets/2.2.4_ex_3.png",
+    "_assets/2.2.4_ex_4.svg",
+    "_assets/2.2.4_ex_4.png"
+  ],
+  "prerequisite_pins": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "raw_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "raw_sha256": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "raw_sha256": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "raw_sha256": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "raw_sha256": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "raw_sha256": "f0a78820b4035347d49facac2febb8580c642f7f4bd2d59fcfb47d3233192f11"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-plan.md",
+      "raw_sha256": "6418491d45c43afdbd272c581bab12f8436ca1a84241663ba300e31b790825a8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-review.md",
+      "raw_sha256": "9122a962d5108565a631d6cd51b1945ab0ddb1ef78c2b979cca15ac59010f01a"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml",
+      "raw_sha256": "b15a630aa9f328816deaafd23f437a497ddfb03702a8151f705756b2d43fb432"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-handoff.md",
+      "raw_sha256": "135e1db69db4ee43e9cba735a50ff0e67e22987afd7b7c13ece2158651b56c82"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "raw_sha256": "573ba54a818018ccd565142efd81a79db2558d901e809ab1c35bc1676d238fc0"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "raw_sha256": "3c5db69f876940eff76af3027577e368548145dbc0b3b9bdddb62b0542041276"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "raw_sha256": "dd2f91d0035829986076b7d5e96b43fa9c45f3d3698da1d159a955634fa01497"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md",
+      "raw_sha256": "793c8460e7d20e8a2e40d7e8912c969c94a091e67fa25566c812264c8769539e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml",
+      "raw_sha256": "72b046c30f128448baf0b8794a538951e9c2105be1b62afee5be9cda3e4b1a77"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-handoff.md",
+      "status": "ABSENT; not accepted input"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+      "raw_sha256": "062b78d54c064e6dbb3765b8da77575da50fedcde6777551e10fb5842a14ebac"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+      "raw_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437"
+    }
+  ],
+  "production_release": "PENDING actual accepted223 + immutable release",
+  "student_visual_and_classroom_acceptance": "NOT CLAIMED"
+}
