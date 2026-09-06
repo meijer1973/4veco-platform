@@ -1,0 +1,309 @@
+{
+  "status": "INDEPENDENT_REVIEWS_VERIFIED_FOR_ROOT_ADOPTION",
+  "P": "5a1fb257985d27129951a798a81a771869dbc3b4",
+  "L": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+  "bindings": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-report.md",
+      "raw_sha256": "f3846d8f92be49c2cbe0263bb03d84ab4559df1c6792caf955dc12fab6012c3b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review-r1-process.json",
+      "raw_sha256": "ef9025add5e974445b4b111b6d6f1df28a42c8f92f8e36150eda926f9106c3ca"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-report.md",
+      "raw_sha256": "e7520852aca5b8c2bb0269d576f014055f7613ad8261be75404e6733e434dfda"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-independent-r2.json",
+      "raw_sha256": "506efb2c1beb4155d88f21171823ba18a376c61e0463a5649346116156f377d8"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-check.cjs",
+      "raw_sha256": "f8855dd748ecf5e8ce0bbc9dc8c6c68078b0b34e602a89479ce9ecbf312efc55"
+    }
+  ],
+  "imports": 53,
+  "processes": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-author-r1-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-bundle-r1-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-chapter-r1-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-durable-r1-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-governance-L-r1-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-governance-r1-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review-r1-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-structural-r1-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-url-map-r1-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-index-diagnostic-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-L-process.json",
+      "exit_code": 1,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-P-process.json",
+      "exit_code": 1,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-L-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-P-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-own-r1-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-cr-r1-process.json",
+      "exit_code": 2,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-r1-process.json",
+      "exit_code": 2,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-bundle-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": null
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-durable-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": null
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-goal-design-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": null
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-governance-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": null
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-specialist-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": null
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-structural-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": null
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-own-L-process.json",
+      "exit_code": 1,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": null
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-own-P-process.json",
+      "exit_code": 1,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": null
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-whole-L-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": null
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-whole-P-process.json",
+      "exit_code": 0,
+      "raw_streams_exact": true,
+      "embedded_source_hashes_exact": true,
+      "explicit_controller_commit": null
+    }
+  ],
+  "gates": [
+    {
+      "name": "structural",
+      "exit_code": 0
+    },
+    {
+      "name": "chapter",
+      "exit_code": 0
+    },
+    {
+      "name": "goal-design",
+      "exit_code": 0
+    },
+    {
+      "name": "specialist",
+      "exit_code": 0
+    },
+    {
+      "name": "durable",
+      "exit_code": 0
+    },
+    {
+      "name": "bundle",
+      "exit_code": 0
+    },
+    {
+      "name": "governance",
+      "exit_code": 0
+    },
+    {
+      "name": "authoring-contract",
+      "exit_code": 0
+    }
+  ],
+  "C22": {
+    "verdict": "PASS",
+    "finding_closed": "F22-FRONT-TITLE-01",
+    "cases": 42,
+    "author_cases": 47,
+    "memory_pages": 1,
+    "memory_text_boxes": 43,
+    "min_pt": 12
+  },
+  "plan234": {
+    "verdict": "INDEPENDENT_PLAN_CHECKS_PASS",
+    "finding_closed": "F2-PAPER-01",
+    "lines": 861,
+    "cases": 594,
+    "selected_inputs": 118
+  },
+  "inventory": {
+    "rows": 41,
+    "PDFs": 29,
+    "counts": {
+      "A": 23,
+      "C": 2,
+      "L": 4,
+      "P": 12
+    },
+    "all_rows_and_PDFs_unchanged": true,
+    "manifest_sha256": "0417edf8efc7e1f9169d5456b52216801ea8138a28a521fc6dea5e041c94b372"
+  },
+  "raw": {
+    "platform": {
+      "ref": "5cd6a5ac7a04cf452172f3f1a68c71c0ad4f7237",
+      "tree": "1cede0c42001745cd83e78bb13ca20affd202946",
+      "files": 16207,
+      "excluded": [
+        "reports/github-agent-index-platform.json",
+        "reports/github-agent-index-platform.md",
+        "reports/github-agent-index-lessen.json",
+        "reports/github-agent-index-lessen.md"
+      ],
+      "NUL_path_sha256": "45fd3c92a49a03f0c4727ee3380a684a1f05263e396f1bb4b5c3c54f0b95a338",
+      "path_blob_sha256": "d7bdf1c72232dc2f591dff29abe2ed11ddeab7fee62775988073da9509193639",
+      "all_current_raw_equal_Git": true
+    },
+    "lessons": {
+      "ref": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+      "tree": "42ddadefe84e9809e6f3749c406dca4fd990ff3d",
+      "files": 1924,
+      "excluded": [],
+      "NUL_path_sha256": "185888bcc67dd5f3be0fea6e85f2c84274ff7e111f9bbbc4d5b9e60aae7a59d9",
+      "path_blob_sha256": "1bc802938e59a1b91ea0d795adcb7c91687159db920772084ed1e0e06691b221",
+      "all_current_raw_equal_Git": true
+    }
+  },
+  "native_writes": 0,
+  "personal_views": 0,
+  "production_release": false
+}
