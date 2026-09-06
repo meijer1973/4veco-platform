@@ -1,0 +1,29 @@
+{
+  "command": "git",
+  "args": [
+    "diff",
+    "--check",
+    "30e42c450774d3600d9fe1f14002eefae670a8b0",
+    "HEAD"
+  ],
+  "cwd": "C:\\wt\\book2-22-consistency-review-20260906\\4veco-platform",
+  "start": "2026-09-06T08:46:11.902Z",
+  "end": "2026-09-06T08:46:11.943Z",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-22-consistency-review-20260906\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "d027475634e592307d4d06d2ea620d1feca4379e",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-22-consistency-review-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-22-consistency-review-20260906\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-22-consistency-review-20260906"
+  },
+  "controller_commit": "d027475634e592307d4d06d2ea620d1feca4379e",
+  "sources": [],
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "PATH_unchanged": true,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "stdout_base64": "",
+  "stderr_base64": ""
+}

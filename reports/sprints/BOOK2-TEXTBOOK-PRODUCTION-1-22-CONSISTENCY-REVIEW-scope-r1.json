@@ -1,0 +1,100 @@
+{
+  "strict": {
+    "P": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-bundle-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-chapter-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-check.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-durable-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-governance-L-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-governance-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-index-runtime.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-integrity-r1.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-personal.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-publication.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-report.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r3-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r4-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review.py",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-structural-r1-process.json"
+    ],
+    "L": [],
+    "unknown": 0
+  },
+  "scopes": [
+    {
+      "name": "own-P",
+      "base": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "head": "d027475634e592307d4d06d2ea620d1feca4379e",
+      "exit": 1,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 19,
+        "unknown": 0
+      },
+      "failures": [
+        "shared lane needs at least one shared platform change",
+        "generated index/report or review-evidence changes are allowed only with lane-owned changes"
+      ]
+    },
+    {
+      "name": "own-L",
+      "base": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "head": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "exit": 1,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      },
+      "failures": [
+        "no changed paths to classify",
+        "textbook lane needs at least one Part A textbook change"
+      ]
+    },
+    {
+      "name": "whole-P",
+      "base": "96416b6b5bd57094576e9aba0a42d682584ec479",
+      "head": "d027475634e592307d4d06d2ea620d1feca4379e",
+      "exit": 0,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 92,
+        "generated_indexes": 6,
+        "review_evidence": 7450,
+        "unknown": 0
+      },
+      "failures": []
+    },
+    {
+      "name": "whole-L",
+      "base": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "exit": 0,
+      "categories": {
+        "partA_textbook": 226,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 7,
+        "unknown": 0
+      },
+      "failures": []
+    }
+  ],
+  "whitespace": [
+    0,
+    2,
+    2
+  ]
+}
