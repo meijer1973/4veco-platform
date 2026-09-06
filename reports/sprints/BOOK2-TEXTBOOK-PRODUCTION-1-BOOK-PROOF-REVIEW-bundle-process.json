@@ -1,0 +1,14 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/sprints/check-sprint-bundle.js",
+    "BOOK2-TEXTBOOK-PRODUCTION-1"
+  ],
+  "cwd": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:24:47.710Z",
+  "ended_at": "2026-09-06T02:24:47.958Z",
+  "exit_code": 0,
+  "child_runtime": "Explicit Python314; MSYS-first child PATH only",
+  "stdout": "OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active\n",
+  "stderr": ""
+}

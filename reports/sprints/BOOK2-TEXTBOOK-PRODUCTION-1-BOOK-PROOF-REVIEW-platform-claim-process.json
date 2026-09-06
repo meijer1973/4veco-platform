@@ -1,0 +1,19 @@
+{
+  "command": "node",
+  "args": [
+    "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\build-scripts\\ci\\check-agent-worktree-safety.js",
+    "--check",
+    "--task",
+    "BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW",
+    "--agent",
+    "paragraph_231_specialist_qc",
+    "--require-prefix",
+    "codex/,agent/"
+  ],
+  "cwd": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:34:57.533Z",
+  "ended_at": "2026-09-06T02:34:57.794Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"mode\": \"check\",\n  \"repository\": \"4veco-platform\",\n  \"worktree_path\": \"C:/wt/book2-book-proof-review-20260906/4veco-platform\",\n  \"git_dir\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform173\",\n  \"anchor_clone\": false,\n  \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW\",\n  \"agent_id\": \"paragraph_231_specialist_qc\",\n  \"lock\": {\n    \"present\": true,\n    \"same_owner\": true,\n    \"same_task\": true,\n    \"stale\": false,\n    \"path\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform173\\\\4veco-agent-worktree-lock.json\",\n    \"owner\": \"paragraph_231_specialist_qc\",\n    \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW\"\n  },\n  \"branch\": \"agent/book2-book-proof-review-20260906\",\n  \"head_sha\": \"45b3ff0943ae870c6fbda474ed28132bafd10df4\",\n  \"on_main\": false,\n  \"detached_head\": false,\n  \"dirty\": true,\n  \"dirty_count\": 20,\n  \"ahead\": 0,\n  \"behind\": 0,\n  \"diverged\": false,\n  \"prefix_ok\": true,\n  \"required_prefixes\": [\n    \"codex/\",\n    \"agent/\"\n  ],\n  \"warnings\": [\n    \"working tree is dirty (20 items)\"\n  ],\n  \"failures\": []\n}\n",
+  "stderr": ""
+}

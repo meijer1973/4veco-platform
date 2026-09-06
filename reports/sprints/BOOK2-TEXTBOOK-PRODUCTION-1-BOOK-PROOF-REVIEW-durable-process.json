@@ -1,0 +1,14 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-book2-target-authority-remediation.js",
+    "--durable"
+  ],
+  "cwd": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:24:47.052Z",
+  "ended_at": "2026-09-06T02:24:47.671Z",
+  "exit_code": 0,
+  "child_runtime": "Explicit Python314; MSYS-first child PATH only",
+  "stdout": "Book 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n",
+  "stderr": ""
+}

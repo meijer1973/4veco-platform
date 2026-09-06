@@ -1,0 +1,212 @@
+{
+  "reviewer": "paragraph_231_specialist_qc",
+  "reviewed_payload": "e5edeb270120bc9ae041673267adddcd5575766f",
+  "status": "PASS_TECHNICAL_PROBES",
+  "probes": [
+    {
+      "probe": "Exact four payload files and all original preparation/default/Book1/test bytes",
+      "status": "PASS",
+      "bindings": [
+        {
+          "path": "build-scripts/books/build-book.py",
+          "raw_sha256": "804022f8ecae79798538588f9595d8409062d17010935335b97fcb78178f31e2",
+          "git_sha256": "804022f8ecae79798538588f9595d8409062d17010935335b97fcb78178f31e2"
+        },
+        {
+          "path": "build-scripts/books/lib_book.py",
+          "raw_sha256": "38858fca44192c4470c501adeca30f472ccde85a25ad714793fa8b3b1313e4f7",
+          "git_sha256": "38858fca44192c4470c501adeca30f472ccde85a25ad714793fa8b3b1313e4f7"
+        },
+        {
+          "path": "build-scripts/content/book-2/book_pipeline.py",
+          "raw_sha256": "263159ca85021c7d7addd2a628dbf2e4dc25e0f165c9a0ba11789ad3e15e6ab6",
+          "git_sha256": "263159ca85021c7d7addd2a628dbf2e4dc25e0f165c9a0ba11789ad3e15e6ab6"
+        },
+        {
+          "path": "build-scripts/content/book-2/test_book_proof_namespace.py",
+          "raw_sha256": "ba23a3ec99e3da5794ad49e2b4dfa4b68d75252613d5f4050be75cf248f9330b",
+          "git_sha256": "ba23a3ec99e3da5794ad49e2b4dfa4b68d75252613d5f4050be75cf248f9330b"
+        }
+      ],
+      "originals": [
+        "build-scripts/content/book-2/print_pipeline.py",
+        "build-scripts/content/book-2/chapter_pipeline.py",
+        "build-scripts/content/book-2/test_print_pipeline.py",
+        "build-scripts/content/book-2/test_chapter_pipeline.py",
+        "build-scripts/content/book-2/test_book_pipeline.py",
+        "build-scripts/books/test_lib_book.py",
+        "build-scripts/books/lib_book.test.js"
+      ]
+    },
+    {
+      "probe": "Early path rejection: outside",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace must stay inside platform task evidence"
+    },
+    {
+      "probe": "Early path rejection: broad platform",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace must stay inside platform task evidence"
+    },
+    {
+      "probe": "Early path rejection: broad standard root",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace must stay inside platform task evidence"
+    },
+    {
+      "probe": "Early path rejection: wrong task",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace must stay inside platform task evidence"
+    },
+    {
+      "probe": "Early path rejection: prefix lookalike",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace must stay inside platform task evidence"
+    },
+    {
+      "probe": "Early path rejection: traversal escape",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace must stay inside platform task evidence"
+    },
+    {
+      "probe": "Occupied empty",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace already exists; use a new reserved path"
+    },
+    {
+      "probe": "Occupied populated",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace already exists; use a new reserved path"
+    },
+    {
+      "probe": "Occupied plain-file",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace already exists; use a new reserved path"
+    },
+    {
+      "probe": "Dangling-symlink contract (SIMULATED; native WinError1314 retained)",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace already exists; use a new reserved path"
+    },
+    {
+      "probe": "Resolved native parent directory-junction escape",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace must stay inside platform task evidence",
+      "junction_stdout": "Junction created for C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-kav62j9y\\platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\linked-parent <<===>> C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-kav62j9y\\outside\n"
+    },
+    {
+      "probe": "Allowed path validation is read-only",
+      "status": "PASS",
+      "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-kav62j9y\\platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\accepted"
+    },
+    {
+      "probe": "Allowed path validation is read-only",
+      "status": "PASS",
+      "path": "C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-kav62j9y\\platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-REVIEW\\r1"
+    },
+    {
+      "probe": "Relative path uses caller cwd without changing global runtime",
+      "status": "PASS"
+    },
+    {
+      "probe": "Denied actual gate slot 1",
+      "status": "PASS",
+      "calls": [
+        [
+          "node",
+          "build-scripts/workflows/check-book-outline-currentness.js",
+          "--require-approved",
+          "--action",
+          "whole_book_assembly"
+        ]
+      ],
+      "error": "CalledProcessError: Command '['node', 'build-scripts/workflows/check-book-outline-currentness.js', '--require-approved', '--action', 'whole_book_assembly']' returned non-zero exit status 23."
+    },
+    {
+      "probe": "Denied actual gate slot 2",
+      "status": "PASS",
+      "calls": [
+        [
+          "node",
+          "build-scripts/workflows/check-book-outline-currentness.js",
+          "--require-approved",
+          "--action",
+          "whole_book_assembly"
+        ],
+        [
+          "node",
+          "build-scripts/workflows/check-book2-target-authority-remediation.js",
+          "--durable"
+        ]
+      ],
+      "error": "CalledProcessError: Command '['node', 'build-scripts/workflows/check-book2-target-authority-remediation.js', '--durable']' returned non-zero exit status 23."
+    },
+    {
+      "probe": "Input drift during authority: manifest",
+      "status": "PASS",
+      "error": "ValueError: Chapter input changed after preflight: C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-i2vhkiwa\\platform\\build-scripts\\books\\book-manifests\\book-2.json"
+    },
+    {
+      "probe": "Input drift during authority: front",
+      "status": "PASS",
+      "error": "ValueError: Chapter input changed after preflight: C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-qn90tae_\\platform\\build-scripts\\books\\book-manifests\\boek-front.md"
+    },
+    {
+      "probe": "Input drift during authority: chapter",
+      "status": "PASS",
+      "error": "ValueError: Chapter input changed after preflight: C:\\Users\\meije\\AppData\\Local\\Temp\\book2-book-test-74s1afmb\\lessons\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1 Kosten en opbrengsten – hoofdstuk.md"
+    },
+    {
+      "probe": "Collision before aggregate writes: preflight-empty",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace already exists; use a new reserved path"
+    },
+    {
+      "probe": "Collision before aggregate writes: preflight-file",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace already exists; use a new reserved path"
+    },
+    {
+      "probe": "Collision before aggregate writes: atomic",
+      "status": "PASS",
+      "error": "ValueError: Book proof namespace was concurrently reserved"
+    },
+    {
+      "probe": "Failed renderer consumes namespace; retry rejects without writes",
+      "status": "PASS",
+      "error": "ValueError: INJECTED RENDER FAILURE"
+    },
+    {
+      "probe": "Actual native double-build different permitted roots, exact six files/assets/all pages/first proof",
+      "status": "PASS",
+      "pages": 10,
+      "archive": "BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-native-fixture.zip"
+    }
+  ],
+  "source_bindings": [
+    {
+      "path": "build-scripts/books/build-book.py",
+      "raw_sha256": "804022f8ecae79798538588f9595d8409062d17010935335b97fcb78178f31e2",
+      "git_sha256": "804022f8ecae79798538588f9595d8409062d17010935335b97fcb78178f31e2"
+    },
+    {
+      "path": "build-scripts/books/lib_book.py",
+      "raw_sha256": "38858fca44192c4470c501adeca30f472ccde85a25ad714793fa8b3b1313e4f7",
+      "git_sha256": "38858fca44192c4470c501adeca30f472ccde85a25ad714793fa8b3b1313e4f7"
+    },
+    {
+      "path": "build-scripts/content/book-2/book_pipeline.py",
+      "raw_sha256": "263159ca85021c7d7addd2a628dbf2e4dc25e0f165c9a0ba11789ad3e15e6ab6",
+      "git_sha256": "263159ca85021c7d7addd2a628dbf2e4dc25e0f165c9a0ba11789ad3e15e6ab6"
+    },
+    {
+      "path": "build-scripts/content/book-2/test_book_proof_namespace.py",
+      "raw_sha256": "ba23a3ec99e3da5794ad49e2b4dfa4b68d75252613d5f4050be75cf248f9330b",
+      "git_sha256": "ba23a3ec99e3da5794ad49e2b4dfa4b68d75252613d5f4050be75cf248f9330b"
+    }
+  ],
+  "real_lesson_edits": 0,
+  "root_acceptance": "PENDING",
+  "student_visual_acceptance": "NOT_ASSESSED",
+  "fullCI": "PENDING"
+}
