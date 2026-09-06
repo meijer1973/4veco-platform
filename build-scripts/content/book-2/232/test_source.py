@@ -141,4 +141,12 @@ class SourceTests(unittest.TestCase):
             for wrong in [raw.replace('font-size="40"','font-size="30"',1),raw.replace('<title id="title">','<title id="title">FORGED ',1)]:
                 with self.assertRaises(ValueError):svg_check(Source(wrong),spec,self.spec['models'].get(spec['model']))
 
+    def test_namespace_announcement_is_not_occupied_proof(self):
+        def scan(root,name):return {'hits':[{'worktree':str(root),'path':name,'revisions':[40]}]}
+        self.assertFalse(b.gate.revision_occupied('r40',scan(b.ROOT,'reports/sprints/232-reserve-process.json')))
+        self.assertTrue(b.gate.revision_occupied('r40',scan(b.ROOT,'reports/sprints/232-reservation-r40.json')))
+        self.assertTrue(b.gate.revision_occupied('r40',scan(b.ROOT,'reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-abcdef012345-r40')))
+        self.assertTrue(b.gate.revision_occupied('r40',scan(b.ROOT.parent/'foreign','reports/sprints/232-reservations.json')))
+        self.assertTrue(b.gate.revision_occupied('r40',scan(b.ROOT,'reports/sprints/232-native-r40.json')))
+
 if __name__=='__main__':unittest.main()

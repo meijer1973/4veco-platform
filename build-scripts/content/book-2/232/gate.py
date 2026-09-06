@@ -172,3 +172,15 @@ def global_scan(platform_root=ROOT,exclude=()):
                 if nums:hits.append({'worktree':str(root),'path':rel,'revisions':sorted(nums)})
     return {'registered_worktrees':visited,'registered_listing_sha256':sha(listing.encode()),'hits':hits,
             'maximum':max([0]+[v for r in hits for v in r['revisions']])}
+
+def revision_occupied(revision,scan,platform_root=ROOT):
+    number=int(revision[1:]);own=os.path.normcase(os.path.abspath(platform_root))
+    for hit in scan['hits']:
+        if number not in hit['revisions']:continue
+        # Our command log may announce the just-reserved unused revision. It is
+        # not a second reservation. Actual revision-named files/directories still
+        # occupy it, as does ANY matching history in a different worktree.
+        same=os.path.normcase(os.path.abspath(hit['worktree']))==own
+        named=re.search(r'(?<![A-Za-z0-9])'+re.escape(revision)+r'(?![A-Za-z0-9])',hit['path'])
+        if not same or named:return True
+    return False
