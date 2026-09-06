@@ -1,0 +1,82 @@
+{
+  "commit": "bc49af3353bf0ba3a061b2ef3e5ddec3c3a72abb",
+  "purpose": "Read-only authority helpers and unchanged shared print worker; no additional accepted teaching",
+  "files": [
+    {
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "raw_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    {
+      "path": "build-scripts/workflows/book2-integration-decision.js",
+      "raw_sha256": "89382c0aba0d1351935299da4364ebf045172ccdd2c72e06f3139539eed312f4"
+    },
+    {
+      "path": "build-scripts/workflows/book2-integration-decision.test.js",
+      "raw_sha256": "a23b1c1d39cf1d765c2ceadc243230f687fc18df5427c141dc3f9d7197fcdb68"
+    },
+    {
+      "path": "build-scripts/workflows/book2-owner-decision.js",
+      "raw_sha256": "4baa12a86fdb7fb3a335ecb62be61a8df1d234d8659b016c3e4ec089e3f22c2e"
+    },
+    {
+      "path": "build-scripts/workflows/check-blueprint-pedagogical-boundaries.js",
+      "raw_sha256": "23879a54d713d5ad34b6d07238fb53f36dd67cb265933edc58a8a7842181cc15"
+    },
+    {
+      "path": "build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js",
+      "raw_sha256": "e61aa88eedcd586126936ce3f898ac8971a109b6d266f2926e6977e3bcad2365"
+    },
+    {
+      "path": "build-scripts/workflows/check-book-outline-currentness.js",
+      "raw_sha256": "a574e3e861d1c3ed20e1e31efafe9365a89bcf978ea5995d650f27703153bbd4"
+    },
+    {
+      "path": "build-scripts/workflows/check-book-outline-currentness.test.js",
+      "raw_sha256": "46ab3d6ba3eed7020b6f936faac9e02ab9e54a11a24b0f3bfaf65325133924f5"
+    },
+    {
+      "path": "build-scripts/workflows/check-book2-candidate-approval-block.js",
+      "raw_sha256": "2e675d5469837af2c5796ae4d3b72f22f9461b8eaa2a7b4666bd10613ab9057b"
+    },
+    {
+      "path": "build-scripts/workflows/check-book2-target-authority-remediation.js",
+      "raw_sha256": "cff6fe24e333db230161f166f323a8647e77499f71dc6d96e24b4bc346aaccf3"
+    },
+    {
+      "path": "build-scripts/workflows/check-book2-target-authority-remediation.test.js",
+      "raw_sha256": "f3a58b86a6ca482707e767619aebc5c6f23c7e52e03ea9b2f814a22e9b2a88f5"
+    },
+    {
+      "path": "build-scripts/workflows/check-paragraph-lane-scope.js",
+      "raw_sha256": "4859543247573f65f5c1ad4f4f373af37c63d91b43fc900ed6702acfb9ce7f51"
+    },
+    {
+      "path": "build-scripts/workflows/check-paragraph-lane-scope.test.js",
+      "raw_sha256": "c0fdbc188a7a674ef091eab674812c013d706f5e4b99883dc3c7c6665943a86a"
+    },
+    {
+      "path": "build-scripts/workflows/check-paragraph-workflow-wording.js",
+      "raw_sha256": "25ad7754ff722aaf472c0aae2e325b7de11b4e40af855a7dafc0fd2628e44d06"
+    },
+    {
+      "path": "build-scripts/workflows/check-paragraph-workflow-wording.test.js",
+      "raw_sha256": "22260e3ec0d81aa612bc60f6e5860a1405ca4124753776e63a6492624ce41bf2"
+    },
+    {
+      "path": "build-scripts/workflows/check-part-a-exercise-authoring-contract.js",
+      "raw_sha256": "c9cc74b59f4d76781d8a857c2733b4d113fd69a6e403247e6a5460452758132a"
+    },
+    {
+      "path": "build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js",
+      "raw_sha256": "b085a8b2bde27bb23a999c48631f8d010bc5f4ea53aa829f0069bf78e7a10ef0"
+    },
+    {
+      "path": "build-scripts/workflows/check-part-a-pdf-readiness.js",
+      "raw_sha256": "9527dc677b7fe7ae4c4579f599561d2363c08bb9f51800a071cae3f8e8b666db"
+    },
+    {
+      "path": "build-scripts/workflows/check-part-a-pdf-readiness.test.js",
+      "raw_sha256": "94d8e9f73de14ef5a1f67dd5b9d1565bb8cf198f6c0fc39ee0a23d934bc73514"
+    }
+  ]
+}

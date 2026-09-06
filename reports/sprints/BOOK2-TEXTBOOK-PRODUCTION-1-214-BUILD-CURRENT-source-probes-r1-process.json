@@ -1,0 +1,17 @@
+{
+  "label": "source-probes-r1",
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/214/test_source.py",
+    "SourceTests"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T07:46:04.197Z",
+  "finish": "2026-09-06T07:46:04.599Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "",
+  "stderr": "test_actual_svg_coordinates_labels_roles_fonts (__main__.SourceTests.test_actual_svg_coordinates_labels_roles_fonts) ... ok\r\ntest_all_smoothbox_models_and_bounded_positive_growth (__main__.SourceTests.test_all_smoothbox_models_and_bounded_positive_growth) ... ok\r\ntest_bonus_and_closing_complete_not_more_arithmetic (__main__.SourceTests.test_bonus_and_closing_complete_not_more_arithmetic) ... ok\r\ntest_ceiling_not_floor_and_rounding_counterexample (__main__.SourceTests.test_ceiling_not_floor_and_rounding_counterexample) ... ok\r\ntest_four_unequal_intervals_and_unknown_last_unit (__main__.SourceTests.test_four_unequal_intervals_and_unknown_last_unit) ... ok\r\ntest_light_all_total_average_values (__main__.SourceTests.test_light_all_total_average_values) ... ok\r\ntest_short_functional_alts_complete_caption (__main__.SourceTests.test_short_functional_alts_complete_caption) ... ok\r\ntest_source_architecture_and_fading (__main__.SourceTests.test_source_architecture_and_fading) ... ok\r\ntest_whole_record_and_complete_target (__main__.SourceTests.test_whole_record_and_complete_target) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 9 tests in 0.072s\r\n\r\nOK\r\n",
+  "stdout_base64": "",
+  "stderr_base64": "dGVzdF9hY3R1YWxfc3ZnX2Nvb3JkaW5hdGVzX2xhYmVsc19yb2xlc19mb250cyAoX19tYWluX18uU291cmNlVGVzdHMudGVzdF9hY3R1YWxfc3ZnX2Nvb3JkaW5hdGVzX2xhYmVsc19yb2xlc19mb250cykgLi4uIG9rDQp0ZXN0X2FsbF9zbW9vdGhib3hfbW9kZWxzX2FuZF9ib3VuZGVkX3Bvc2l0aXZlX2dyb3d0aCAoX19tYWluX18uU291cmNlVGVzdHMudGVzdF9hbGxfc21vb3RoYm94X21vZGVsc19hbmRfYm91bmRlZF9wb3NpdGl2ZV9ncm93dGgpIC4uLiBvaw0KdGVzdF9ib251c19hbmRfY2xvc2luZ19jb21wbGV0ZV9ub3RfbW9yZV9hcml0aG1ldGljIChfX21haW5fXy5Tb3VyY2VUZXN0cy50ZXN0X2JvbnVzX2FuZF9jbG9zaW5nX2NvbXBsZXRlX25vdF9tb3JlX2FyaXRobWV0aWMpIC4uLiBvaw0KdGVzdF9jZWlsaW5nX25vdF9mbG9vcl9hbmRfcm91bmRpbmdfY291bnRlcmV4YW1wbGUgKF9fbWFpbl9fLlNvdXJjZVRlc3RzLnRlc3RfY2VpbGluZ19ub3RfZmxvb3JfYW5kX3JvdW5kaW5nX2NvdW50ZXJleGFtcGxlKSAuLi4gb2sNCnRlc3RfZm91cl91bmVxdWFsX2ludGVydmFsc19hbmRfdW5rbm93bl9sYXN0X3VuaXQgKF9fbWFpbl9fLlNvdXJjZVRlc3RzLnRlc3RfZm91cl91bmVxdWFsX2ludGVydmFsc19hbmRfdW5rbm93bl9sYXN0X3VuaXQpIC4uLiBvaw0KdGVzdF9saWdodF9hbGxfdG90YWxfYXZlcmFnZV92YWx1ZXMgKF9fbWFpbl9fLlNvdXJjZVRlc3RzLnRlc3RfbGlnaHRfYWxsX3RvdGFsX2F2ZXJhZ2VfdmFsdWVzKSAuLi4gb2sNCnRlc3Rfc2hvcnRfZnVuY3Rpb25hbF9hbHRzX2NvbXBsZXRlX2NhcHRpb24gKF9fbWFpbl9fLlNvdXJjZVRlc3RzLnRlc3Rfc2hvcnRfZnVuY3Rpb25hbF9hbHRzX2NvbXBsZXRlX2NhcHRpb24pIC4uLiBvaw0KdGVzdF9zb3VyY2VfYXJjaGl0ZWN0dXJlX2FuZF9mYWRpbmcgKF9fbWFpbl9fLlNvdXJjZVRlc3RzLnRlc3Rfc291cmNlX2FyY2hpdGVjdHVyZV9hbmRfZmFkaW5nKSAuLi4gb2sNCnRlc3Rfd2hvbGVfcmVjb3JkX2FuZF9jb21wbGV0ZV90YXJnZXQgKF9fbWFpbl9fLlNvdXJjZVRlc3RzLnRlc3Rfd2hvbGVfcmVjb3JkX2FuZF9jb21wbGV0ZV90YXJnZXQpIC4uLiBvaw0KDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQpSYW4gOSB0ZXN0cyBpbiAwLjA3MnMNCg0KT0sNCg=="
+}

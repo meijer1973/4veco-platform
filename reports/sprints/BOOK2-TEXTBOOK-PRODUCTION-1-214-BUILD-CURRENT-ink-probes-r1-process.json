@@ -1,0 +1,17 @@
+{
+  "label": "ink-probes-r1",
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/214/test_source.py",
+    "SourceTests.test_actual_font_ink_boxes_before_generation"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T07:46:51.202Z",
+  "finish": "2026-09-06T07:46:51.659Z",
+  "exit_code": 1,
+  "error": null,
+  "stdout": "",
+  "stderr": "test_actual_font_ink_boxes_before_generation (__main__.SourceTests.test_actual_font_ink_boxes_before_generation) ... \r\n  test_actual_font_ink_boxes_before_generation (__main__.SourceTests.test_actual_font_ink_boxes_before_generation) (figure='2.1.4_ex_4.svg', labels=['TO: Q=0', 'BE (400; 2.000)']) ... FAIL\r\n\r\n======================================================================\r\nFAIL: test_actual_font_ink_boxes_before_generation (__main__.SourceTests.test_actual_font_ink_boxes_before_generation) (figure='2.1.4_ex_4.svg', labels=['TO: Q=0', 'BE (400; 2.000)'])\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\build-scripts\\content\\book-2\\214\\test_source.py\", line 178, in test_actual_font_ink_boxes_before_generation\r\n    self.assertFalse(a[0]<c[2]+4 and a[2]+4>c[0] and a[1]<c[3]+4 and a[3]+4>c[1])\r\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: True is not false\r\n\r\n----------------------------------------------------------------------\r\nRan 1 test in 0.064s\r\n\r\nFAILED (failures=1)\r\n",
+  "stdout_base64": "",
+  "stderr_base64": "dGVzdF9hY3R1YWxfZm9udF9pbmtfYm94ZXNfYmVmb3JlX2dlbmVyYXRpb24gKF9fbWFpbl9fLlNvdXJjZVRlc3RzLnRlc3RfYWN0dWFsX2ZvbnRfaW5rX2JveGVzX2JlZm9yZV9nZW5lcmF0aW9uKSAuLi4gDQogIHRlc3RfYWN0dWFsX2ZvbnRfaW5rX2JveGVzX2JlZm9yZV9nZW5lcmF0aW9uIChfX21haW5fXy5Tb3VyY2VUZXN0cy50ZXN0X2FjdHVhbF9mb250X2lua19ib3hlc19iZWZvcmVfZ2VuZXJhdGlvbikgKGZpZ3VyZT0nMi4xLjRfZXhfNC5zdmcnLCBsYWJlbHM9WydUTzogUT0wJywgJ0JFICg0MDA7IDIuMDAwKSddKSAuLi4gRkFJTA0KDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQpGQUlMOiB0ZXN0X2FjdHVhbF9mb250X2lua19ib3hlc19iZWZvcmVfZ2VuZXJhdGlvbiAoX19tYWluX18uU291cmNlVGVzdHMudGVzdF9hY3R1YWxfZm9udF9pbmtfYm94ZXNfYmVmb3JlX2dlbmVyYXRpb24pIChmaWd1cmU9JzIuMS40X2V4XzQuc3ZnJywgbGFiZWxzPVsnVE86IFE9MCcsICdCRSAoNDAwOyAyLjAwMCknXSkNCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NClRyYWNlYmFjayAobW9zdCByZWNlbnQgY2FsbCBsYXN0KToNCiAgRmlsZSAiQzpcd3RcYm9vazItMjE0LWJ1aWxkLWN1cnJlbnQtMjAyNjA5MDZcNHZlY28tcGxhdGZvcm1cYnVpbGQtc2NyaXB0c1xjb250ZW50XGJvb2stMlwyMTRcdGVzdF9zb3VyY2UucHkiLCBsaW5lIDE3OCwgaW4gdGVzdF9hY3R1YWxfZm9udF9pbmtfYm94ZXNfYmVmb3JlX2dlbmVyYXRpb24NCiAgICBzZWxmLmFzc2VydEZhbHNlKGFbMF08Y1syXSs0IGFuZCBhWzJdKzQ+Y1swXSBhbmQgYVsxXTxjWzNdKzQgYW5kIGFbM10rND5jWzFdKQ0KICAgIH5+fn5+fn5+fn5+fn5+fn5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eDQpBc3NlcnRpb25FcnJvcjogVHJ1ZSBpcyBub3QgZmFsc2UNCg0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0KUmFuIDEgdGVzdCBpbiAwLjA2NHMNCg0KRkFJTEVEIChmYWlsdXJlcz0xKQ0K"
+}
