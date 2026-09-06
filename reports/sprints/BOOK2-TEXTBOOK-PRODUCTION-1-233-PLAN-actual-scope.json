@@ -1,0 +1,95 @@
+{
+  "strict": {
+    "status": "PASS",
+    "platform_base": "c725c37d2081f6ac7846b8e172dcd7590f6611e9",
+    "platform_head": "3635c4f47025f717a1290ed792c31a9da34d05d6",
+    "lessons_base": "266881cb2d9e7f078192a2a3bab230f9bfc4176e",
+    "lessons_head": "192d6624524e7605ab9d8d26067927b95041386e",
+    "platform_paths": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-active-bundle-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r3-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r4-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r5-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-check.py",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-durable-targets-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-goal-design-currentness-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-governance-freshness-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-lessons-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-platform-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-report.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-structural-currentness-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-tools.cjs"
+    ],
+    "lessons_paths": [
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-plan.md"
+    ],
+    "unknown": 0,
+    "old_source_review_QC_handoff_authority_changes": 0
+  },
+  "native": [
+    {
+      "label": "own-platform",
+      "exit": 1,
+      "ok": false,
+      "failures": [
+        "shared lane needs at least one shared platform change",
+        "generated index/report or review-evidence changes are allowed only with lane-owned changes"
+      ],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 17,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "own-lessons",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 1,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 80,
+        "generated_indexes": 6,
+        "review_evidence": 4260,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 205,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 5,
+        "unknown": 0
+      }
+    }
+  ],
+  "raw_prior_files_unchanged": 13870
+}
