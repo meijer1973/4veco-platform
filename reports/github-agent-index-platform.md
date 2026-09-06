@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T06:50:06.404Z
+Generated: 2026-09-06T07:26:38.281Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-234-plan-f1-20260906`
-Source commit: `7086006c977d7d1318a2813b2bc5a1e808b1dd75`
-Files indexed: 14038
-Scope: committed tree files from `git ls-tree -r --name-only 7086006c977d7d1318a2813b2bc5a1e808b1dd75`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source branch: `agent/book2-234-plan-f1-review-20260906`
+Source commit: `8ed2366e8b2828da9610d292980f8671a7e19fb7`
+Files indexed: 14065
+Scope: committed tree files from `git ls-tree -r --name-only 8ed2366e8b2828da9610d292980f8671a7e19fb7`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -2761,7 +2761,7 @@ Count: 1030
 
 ## reports
 
-Count: 11248
+Count: 11275
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -11599,6 +11599,33 @@ Count: 11248
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-platform-claim-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-publication.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-attributed-F1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-attributed-original-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-audit.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-final-integrity-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-goal-design-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-independent-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-index-diagnostic-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-index-runtime.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-lessons-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-own-whitespace-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-platform-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope-own-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope-own-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope-whole-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope-whole-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-tools.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-whole-whitespace-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-complete-lessons-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-complete-platform-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-own-lessons-process.json
