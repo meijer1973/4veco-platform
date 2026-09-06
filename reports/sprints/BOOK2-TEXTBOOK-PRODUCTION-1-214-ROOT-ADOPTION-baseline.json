@@ -1,0 +1,1989 @@
+{
+  "operational_commit": "fc55f4834e66e0d8e4e48ea5fa3e09062b7f15ce",
+  "platform": {
+    "ref": "55f740cb79120e34b18260a8c0a15f9bf26d4c6c",
+    "tree": "7875235114039b43dc4b606579f78839fb866297",
+    "files": 15815,
+    "excluded": [],
+    "NUL_path_sha256": "f026d0ab1bceb691dab2a129274971c71c2067608892c70cf43bc143af20acaa",
+    "path_blob_sha256": "37534c1daa7e846c0443528e844ab53f5e9a9559ee74bde03fc9c370219954af",
+    "all_current_raw_equal_Git": true
+  },
+  "lessons": {
+    "ref": "9546548c4dbd271516366df946f3eb0a9eaa1e93",
+    "tree": "fd7e772a708a2fbd863a13f409f284908a8f863a",
+    "files": 1916,
+    "excluded": [],
+    "NUL_path_sha256": "56bd40449c0c19628abbaf1fc93df05244f3644869f06146c850655ce366ab65",
+    "path_blob_sha256": "893b547f83fad74a251aafbb84895614eecd4d5194f5dfb88816e33141f8b548",
+    "all_current_raw_equal_Git": true
+  },
+  "intended": [
+    {
+      "repository": "platform",
+      "original": "71287955762a7b1635ca3cbb14a315bac241349e",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-plan.md",
+          "old_blob": null,
+          "new_blob": "fe205427da0bda2cf909b9e36b00174749eb1b67"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "55df9c8cee82d86eed570c27172fd0c86fba931d",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-plan.md",
+          "old_blob": "fe205427da0bda2cf909b9e36b00174749eb1b67",
+          "new_blob": "4724b3e69c99d014e6b0826df1a98913472f2b9f"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "39ca053f7d789aa9c440ceba41c52db4c6c10a42",
+      "files": [
+        {
+          "path": "build-scripts/content/book-2/214/answers.md",
+          "old_blob": null,
+          "new_blob": "ee7b5b3fa19d89e84ec81a7f74eb2311165d54ed"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/check_render.py",
+          "old_blob": null,
+          "new_blob": "7190d5012d66ac196748b8fb1146b499e320228c"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/dependency-pins.json",
+          "old_blob": null,
+          "new_blob": "38f8c84c555a533bcbc3ebee9e28a903a648b1b9"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/direct_print.py",
+          "old_blob": null,
+          "new_blob": "bbbd1495bfc8b4800610c3a4207f9e188ae020fa"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/exercises.md",
+          "old_blob": null,
+          "new_blob": "31be355b322281c287a1eaabbc5318eb91566630"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/figures.py",
+          "old_blob": null,
+          "new_blob": "936965b46bc2736864d227f4c07498b2913fd1e8"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/raster.cjs",
+          "old_blob": null,
+          "new_blob": "849b04ea600b324fcd805bd1bc1f68b7e8b490ac"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/target-answers.md",
+          "old_blob": null,
+          "new_blob": "83318a5788a69b82c967532649a0d9cd4f334eed"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/test_source.py",
+          "old_blob": null,
+          "new_blob": "df4e56d2a86d46eafc1905d3ff6ef5aa9f616000"
+        },
+        {
+          "path": "build-scripts/content/book-2/b2_214.py",
+          "old_blob": null,
+          "new_blob": "3a5e4e79a3f053ac0aeaf3507452816ddb1766c3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-actual-runtime-process.json",
+          "old_blob": null,
+          "new_blob": "eb53f541e3a0e6e72354bc584923e489ec6cb5f1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-baseline.json",
+          "old_blob": null,
+          "new_blob": "543c78fe174fbb1b006474ff1235293c18bfd74c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-bundle-process.json",
+          "old_blob": null,
+          "new_blob": "e59922dfa29fcf425640f8fc3ff6c4d9aaa93cdb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-durable-process.json",
+          "old_blob": null,
+          "new_blob": "d67fe1375da7c99bc5677f9223e4c7944f51082f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-ink-probes-r1-process.json",
+          "old_blob": null,
+          "new_blob": "2342699a0c63d7b18e08c2849bb7751d985d1703"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-production-process.json",
+          "old_blob": null,
+          "new_blob": "2760a79cd14b48f4f28f20801dc116ddbe09ad5a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-release-process.json",
+          "old_blob": null,
+          "new_blob": "4d57cec26963526357f4ed81f1f48e97677764cd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-runtime-correction.json",
+          "old_blob": null,
+          "new_blob": "767534a392a65cd72941033208e1ac8ced72a518"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-source-probes-r1-process.json",
+          "old_blob": null,
+          "new_blob": "9a29ad7b5641d4ad130801863bd0a4f5ead2b75a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-source-probes-r2-process.json",
+          "old_blob": null,
+          "new_blob": "10bef1325fa2d88fac4cdb6e8930a50069e16c8b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-structural-process.json",
+          "old_blob": null,
+          "new_blob": "c51c7f59e3c07274c80d10e41306fe703758df03"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-tools.cjs",
+          "old_blob": null,
+          "new_blob": "ca7a8c64cc2476d7c3b89bf6f4a6cae8bc84c55b"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "99e111d53d24582880e6c6201c9915c9502e85a7",
+      "files": [
+        {
+          "path": "build-scripts/content/book-2/b2_214.py",
+          "old_blob": "3a5e4e79a3f053ac0aeaf3507452816ddb1766c3",
+          "new_blob": "086ffe95af16e13b30abe0a4f7673edaf35e1db0"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "8594d5dd8c7cae2821db6a51d9f2725d721f70eb",
+      "files": [
+        {
+          "path": "build-scripts/content/book-2/214/answers.md",
+          "old_blob": "ee7b5b3fa19d89e84ec81a7f74eb2311165d54ed",
+          "new_blob": "34489f35a445f6b59c177ef92ec61ea41f2aa3cc"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/direct_print.py",
+          "old_blob": "bbbd1495bfc8b4800610c3a4207f9e188ae020fa",
+          "new_blob": "cc3c89816e6e57da8258476645492c31cf564647"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/exercises.md",
+          "old_blob": "31be355b322281c287a1eaabbc5318eb91566630",
+          "new_blob": "37755a53aefd353496f33a9921f75b29db47625a"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/raster.cjs",
+          "old_blob": "849b04ea600b324fcd805bd1bc1f68b7e8b490ac",
+          "new_blob": "e5d8091a29503b3a5f2defd4fb7a85e14f5a3c0c"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/target-answers.md",
+          "old_blob": "83318a5788a69b82c967532649a0d9cd4f334eed",
+          "new_blob": "0de07354aeea51f9ca750fd93dfdb6a5f477b6cf"
+        },
+        {
+          "path": "build-scripts/content/book-2/b2_214.py",
+          "old_blob": "086ffe95af16e13b30abe0a4f7673edaf35e1db0",
+          "new_blob": "30775a5eeff786fc021823185a48a292fd53f595"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-namespace-scan-r1-process.json",
+          "old_blob": null,
+          "new_blob": "8b1b8e4c4242181a8184f2ad728afa423810c753"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-full-r40-process.json",
+          "old_blob": null,
+          "new_blob": "6bc490250a8d7b0d68909470a8b5494cf5796d38"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r40-failed-raw/2.1.4_ex_1.png",
+          "old_blob": null,
+          "new_blob": "28c78f93d38076ccd8a1e3c7c69161131ab8c658"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r40-failed-raw/2.1.4_ex_1.svg",
+          "old_blob": null,
+          "new_blob": "0b8fa6bea903be212017f8bf1f79c922236f644a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r40-failure-capture.json",
+          "old_blob": null,
+          "new_blob": "30c589fbfec5050de0470baeeb434fc1fe7f40f8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r40.json",
+          "old_blob": null,
+          "new_blob": "f6e838d32b4ce88ae121e68f18e80490979b9fb6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-tools.cjs",
+          "old_blob": "ca7a8c64cc2476d7c3b89bf6f4a6cae8bc84c55b",
+          "new_blob": "2ab3fdcf906ce5daaec3fd2bbe4535f314630a6e"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "86472fbd77d6bfdba6ee75848f647e96987cd8ce",
+      "files": [
+        {
+          "path": "build-scripts/content/book-2/b2_214.py",
+          "old_blob": "30775a5eeff786fc021823185a48a292fd53f595",
+          "new_blob": "08fbb4b78517ea0c45053830b127cc6872957603"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "a6e3963b5c801f95de1753b3873db27d3978387d",
+      "files": [
+        {
+          "path": "build-scripts/content/book-2/214/check_render.py",
+          "old_blob": "7190d5012d66ac196748b8fb1146b499e320228c",
+          "new_blob": "748eb4a29bd10b1ae551c3d4618dfbbe5c809682"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/exercises.md",
+          "old_blob": "37755a53aefd353496f33a9921f75b29db47625a",
+          "new_blob": "7301c457aea64bac32eeb20d6f2fd39bc29bb5c0"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/figures.py",
+          "old_blob": "936965b46bc2736864d227f4c07498b2913fd1e8",
+          "new_blob": "3d81fe41d98246e6799efc67532b815e7af3cc46"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/target-answers.md",
+          "old_blob": "0de07354aeea51f9ca750fd93dfdb6a5f477b6cf",
+          "new_blob": "a2d9087f91a02f2e04d841b69e185726cc34cfd4"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/test_source.py",
+          "old_blob": "df4e56d2a86d46eafc1905d3ff6ef5aa9f616000",
+          "new_blob": "7bfacd705eb9ee915376296bf2cdf89489ab55e0"
+        },
+        {
+          "path": "build-scripts/content/book-2/b2_214.py",
+          "old_blob": "08fbb4b78517ea0c45053830b127cc6872957603",
+          "new_blob": "744329200801f92d13c7f29cb6969d1fc1b23a2e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-geometry-probes-r1-process.json",
+          "old_blob": null,
+          "new_blob": "619add226e6fd529569875931299fae08c635650"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-geometry-probes-r2-process.json",
+          "old_blob": null,
+          "new_blob": "d1f22cb64fd79440b221cd5aca29f2c528984fee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-ink-probes-r2-process.json",
+          "old_blob": null,
+          "new_blob": "ef1f6af6f0b762386ded1f469a89126a35f508de"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r41-process.json",
+          "old_blob": null,
+          "new_blob": "bba8af10cd4ae9097d8a88926616036bd22ffedd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r41.json",
+          "old_blob": null,
+          "new_blob": "5b8cf4207ab5966add058d3a95ef61d5bef88dbd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-full-r41-process.json",
+          "old_blob": null,
+          "new_blob": "9bb0ed5412e5f276aedfcc5e3b58785b5804fe08"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "6bfda2d8315d8a0aa4572a8cc7f4c75a393dbd2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/manifest.json",
+          "old_blob": null,
+          "new_blob": "a84180da2564ff27ac28c90022501cf0f5dbbf33"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "1791997920985265a745228b981b4196d76b3c40"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "1d7cfed5ec2dc108115f4cb124be6a373c1e9d29"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "7679427c623af237fcd4b450aba070792736679b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "e3d6f92d1bc8c21dbffe7a33cf7de9656b14a7cd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "871796c307968452e8fe6e7c49ad01e9b5743bf5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "298c67b1591b91141e01bfdda2f4f981adae1aba"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "42f1121ff096949b490c11e9d9f76378eef329f3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "81064ddc647ebf12ddc7ca846b1fec286c6a7490"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "5ed5f2254cbc15ef15fe5208cb7d391962e64fdc"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "cb5343a16bca41010baead5c5d2f8a3aae5833ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-011.png",
+          "old_blob": null,
+          "new_blob": "690f20ffcdb08c779b59435e7f4458480b775f57"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "2da48d6322d113c0cfa8de7c858694876894b020"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/manifest.json",
+          "old_blob": null,
+          "new_blob": "255415fe777293a1f14355174b0fae541db2b9b4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "3661a4a4334ca7b8da17b8cfc1615e9edec22c76"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "4599ead92e74ee1df1c5b21e67b43a10341198cb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "70392cd2814abc80c2103fe3e32ca36a6505b821"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "a0564733ae1a137b73676ade1bffb3a19b48af05"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "2f5fa5f7c8628580dfd48334e115a13bbddea8fd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "891e7685c685c8c7bb7bab04d924154c809fe011"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "c640d7df7c97516b792bca65c1ebb10b73ae2cb1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "d7cfddede72a08517c85a424398af33bb54cecb8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "a289c127e9372ce31ec989d488b0ed203aa58b1f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b182e789673afa8c2cc571def86979c081520219"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/author-run.json",
+          "old_blob": null,
+          "new_blob": "48d9a2d5db8c9d8f423bfdcb20b11840d3a90f11"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native.json",
+          "old_blob": null,
+          "new_blob": "156b95ebd75cd736bb8e91f8ccb8de9480cf97e4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.html",
+          "old_blob": null,
+          "new_blob": "f2aa6a86666af30e1236af4286d435b145c0a8c1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.md",
+          "old_blob": null,
+          "new_blob": "c8532e0ec7614aa9f6b486deeb62193275d7b797"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.pdf",
+          "old_blob": null,
+          "new_blob": "648ee7f89ddebf3bfb091818741313c70c5019a4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.html",
+          "old_blob": null,
+          "new_blob": "cd1897b9e52fc98d75a2ab5c6ad8de58472f04ab"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.md",
+          "old_blob": null,
+          "new_blob": "8610890b10c499a1c80abb31c5f74bd8073710d1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.pdf",
+          "old_blob": null,
+          "new_blob": "cdb0b939029e9ecb2438bbb3a4993a0f7fa8f29d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_1.png",
+          "old_blob": null,
+          "new_blob": "97ac339b19c3dd2d7b2546f3724360b87d683afc"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_1.svg",
+          "old_blob": null,
+          "new_blob": "0b8fa6bea903be212017f8bf1f79c922236f644a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_2.png",
+          "old_blob": null,
+          "new_blob": "f0f082a531362fdec8bf438be433007746758f3b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_2.svg",
+          "old_blob": null,
+          "new_blob": "3fa9d2a9c7ae6980fd481033b461dee09e08a20c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_3.png",
+          "old_blob": null,
+          "new_blob": "d5cdbc9d99160ee88d4e979084fc48ee6ecf5266"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_3.svg",
+          "old_blob": null,
+          "new_blob": "372ec565aabb5f824c983fe0cb6b3e519c2b88e7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_4.png",
+          "old_blob": null,
+          "new_blob": "758f70193a2c15f02f2e8c4f162d1dd7d7633688"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_4.svg",
+          "old_blob": null,
+          "new_blob": "3095e8dbe15b71c3c537189095c8e83e8c4fd519"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/build_pdf.py",
+          "old_blob": null,
+          "new_blob": "846bf5e91648a6d3d2756c3fd9008fe32e7f870c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r41.json",
+          "old_blob": null,
+          "new_blob": "2fbc1d163d4bf4429845faaae70625a36d0f5b32"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-tools.cjs",
+          "old_blob": "2ab3fdcf906ce5daaec3fd2bbe4535f314630a6e",
+          "new_blob": "eb4e0959958a6670cb97a3d7a447eba6b9fb294c"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "0a96956dcc4d912923f6082cd608be81fddf944d",
+      "files": [
+        {
+          "path": "build-scripts/content/book-2/b2_214.py",
+          "old_blob": "744329200801f92d13c7f29cb6969d1fc1b23a2e",
+          "new_blob": "6eec5ba016c8c031e850068dae4c8dacbf28bad9"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "09e99f770b057d239e8d3d7c7e3185e830615cf7",
+      "files": [
+        {
+          "path": "build-scripts/content/book-2/214/check_render.py",
+          "old_blob": "748eb4a29bd10b1ae551c3d4618dfbbe5c809682",
+          "new_blob": "c003ad929037d371389078c14922a89becf34f5b"
+        },
+        {
+          "path": "build-scripts/content/book-2/214/test_source.py",
+          "old_blob": "7bfacd705eb9ee915376296bf2cdf89489ab55e0",
+          "new_blob": "43f14d40c8ba106e580f7320804fca7470fd01f3"
+        },
+        {
+          "path": "build-scripts/content/book-2/b2_214.py",
+          "old_blob": "6eec5ba016c8c031e850068dae4c8dacbf28bad9",
+          "new_blob": "8284e51c64ab4c7016a03dfeb4c0100f0bdfb4e3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-fraction-probe-r1-process.json",
+          "old_blob": null,
+          "new_blob": "0ddd7316e7de5a5dc40d42cbbd704609ab9f6a05"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-inspection.py",
+          "old_blob": null,
+          "new_blob": "40d3fb1165bc355131a3e952a6e0108e59c8b059"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r42-process.json",
+          "old_blob": null,
+          "new_blob": "85ce62fb3afe71e98404cc5abcfc417e94b06f14"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r42.json",
+          "old_blob": null,
+          "new_blob": "04d3d59b9b80f03df38f4c96813b05bff8a890ac"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-full-r42-process.json",
+          "old_blob": null,
+          "new_blob": "6f8732c26c7d8d21791b7e743f53552008aa7252"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-pre-native-commit-custody.json",
+          "old_blob": null,
+          "new_blob": "a1bf2790e361517ac92da84047fabf216041a89e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "698ee316f407e0a14850427263c2e488356c4d86"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/manifest.json",
+          "old_blob": null,
+          "new_blob": "82bfc57acf9b21ded7b3faa43ff28818aec7bd70"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "1791997920985265a745228b981b4196d76b3c40"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "1d7cfed5ec2dc108115f4cb124be6a373c1e9d29"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "7679427c623af237fcd4b450aba070792736679b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "f6884b1d7328999376f50651ddec4af7f5cabbdd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "871796c307968452e8fe6e7c49ad01e9b5743bf5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "298c67b1591b91141e01bfdda2f4f981adae1aba"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "42f1121ff096949b490c11e9d9f76378eef329f3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "81064ddc647ebf12ddc7ca846b1fec286c6a7490"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "14be0c79b3b6510f31623ed953d1650f62d9cb82"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b8659c8fa5a2558cfe0054828cee8165bb30fd46"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-011.png",
+          "old_blob": null,
+          "new_blob": "690f20ffcdb08c779b59435e7f4458480b775f57"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "86c4c170e2368abbaaa04856daae5c10b81dba49"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/manifest.json",
+          "old_blob": null,
+          "new_blob": "f320ecc449c88999abb938101a74e1b2b7e80796"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "66df0e70d27f5e79ac0b26db8da96f031f8ec297"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "e9e3768cda38a2ea327db0be99458dcea959518b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "baa0128e5fab165c9a0b983a96e32bb0d97d9928"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "6886df9fb77867fa99f4ecb1a777546b44f80e0d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "23609339bc1b9b6f7f595243481b642596943c53"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "93e5fb7ab58a888b813cf688294e56c2863f661e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "2ae05277846c4929339fb512a3fe682cc61d077a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "d71e263c909cd0f46fcfa3d42d08ef70e8521868"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "7bdebd235b1f30d487f3d462533546f502773a89"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/author-run.json",
+          "old_blob": null,
+          "new_blob": "6fef8a2b4ff87cabbcf4c5a3ad97876754f799f6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native.json",
+          "old_blob": null,
+          "new_blob": "397c00ed548676ec277cf41bc19abde37de5dddf"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – antwoorden.html",
+          "old_blob": null,
+          "new_blob": "3f15aa979f5ea66b056b59dea216d0287463ef19"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – antwoorden.md",
+          "old_blob": null,
+          "new_blob": "4262ec74360e2513d7ade05b73433549d016a82a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – antwoorden.pdf",
+          "old_blob": null,
+          "new_blob": "77044ccc35bc0d9a2fd8bef7e196ab2389c2ce01"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – opgaven.html",
+          "old_blob": null,
+          "new_blob": "5fe917c5fb197b18026a4086939763728fd53610"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – opgaven.md",
+          "old_blob": null,
+          "new_blob": "c32e8e233a3180b1a41380c3781ae986bf9c4d1b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – opgaven.pdf",
+          "old_blob": null,
+          "new_blob": "de66708e7a3dd7907757e57c486344697a67fa0e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_1.png",
+          "old_blob": null,
+          "new_blob": "fcf1c440e3ef3134f6a70a6dec89d233ad881fb6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_1.svg",
+          "old_blob": null,
+          "new_blob": "8af2cae2a9111c0516948343e0c869c9bf699d1a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_2.png",
+          "old_blob": null,
+          "new_blob": "8c71286c31b42f4987084a66f0fb5737b9bec40d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_2.svg",
+          "old_blob": null,
+          "new_blob": "3f41056798a77558e29463f1d974e9b8c6a0d692"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_3.png",
+          "old_blob": null,
+          "new_blob": "f4017c4ca222ec477cf79d0c40f3d2ceef8d266f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_3.svg",
+          "old_blob": null,
+          "new_blob": "d5ad04d67ca8bd87a57d631610125d44a6d12cef"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_4.png",
+          "old_blob": null,
+          "new_blob": "155c075b75c6371aa82ad8aa2506f291afe0b783"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_4.svg",
+          "old_blob": null,
+          "new_blob": "8fbce08fb2ee177d40a70ac9350ba389f5eafb85"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/build_pdf.py",
+          "old_blob": null,
+          "new_blob": "846bf5e91648a6d3d2756c3fd9008fe32e7f870c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views.json",
+          "old_blob": null,
+          "new_blob": "c910bb7719276397fc0819a747aacb4602832357"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/2.1.4_ex_1-gray.png",
+          "old_blob": null,
+          "new_blob": "9314b27f9553952e826f77d5f69e97b4bdaa413b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/2.1.4_ex_2-gray.png",
+          "old_blob": null,
+          "new_blob": "83593749ab7ec6ffb95989a757d04f353ae83e61"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/2.1.4_ex_3-gray.png",
+          "old_blob": null,
+          "new_blob": "ae9df67b46e7b6a69a4971c75f1c7b8ec13886cf"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/2.1.4_ex_4-gray.png",
+          "old_blob": null,
+          "new_blob": "e1900b5ad8a49c7a5364e0474b4ae02aca7aed84"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-001-gray.png",
+          "old_blob": null,
+          "new_blob": "145dffbc3ebea84b241aa0800a646a0b38b05822"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-002-gray.png",
+          "old_blob": null,
+          "new_blob": "4ccd60954e16927390e5c99dd9169e73b1d8f2b7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-003-gray.png",
+          "old_blob": null,
+          "new_blob": "2ba95ad7791ab835df1630dc10eecce515e48e41"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-004-gray.png",
+          "old_blob": null,
+          "new_blob": "274729963706a8b9de1d08d431b944edabc4201a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-005-gray.png",
+          "old_blob": null,
+          "new_blob": "c504ecd5c0181da6d2fb932036c690d8cf3410c6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-006-gray.png",
+          "old_blob": null,
+          "new_blob": "ace728f75585058f47e4d8f93b5836b666d6ca32"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-007-gray.png",
+          "old_blob": null,
+          "new_blob": "18d97a1acb4844f8b10acaf54bf1bdf364f536e6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-008-gray.png",
+          "old_blob": null,
+          "new_blob": "2cbc099f4db40e10b3c7d737ff4364e5f1344582"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-009-gray.png",
+          "old_blob": null,
+          "new_blob": "40edaff0568b355770ef9dc510ef4622ff6e654d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-010-gray.png",
+          "old_blob": null,
+          "new_blob": "8db7687e1131bf134be85465e93a642a7602920c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-011-gray.png",
+          "old_blob": null,
+          "new_blob": "9e49d1000591874fb8726789557f42c56035f60a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-001-gray.png",
+          "old_blob": null,
+          "new_blob": "0fc3fcc955902c83ae3fc999c2ff176379da8dc5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-002-gray.png",
+          "old_blob": null,
+          "new_blob": "e8821a119dffa2932144fbe7c1180d70631c1cc8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-003-gray.png",
+          "old_blob": null,
+          "new_blob": "60d284f09e6f085726ec59012a1ee1636054388f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-004-gray.png",
+          "old_blob": null,
+          "new_blob": "ea23ec59cb8bd33e5231cc9502e8dd8c3f11bffa"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-005-gray.png",
+          "old_blob": null,
+          "new_blob": "0039e8e8a230682a34fff32b7a1a88a12565eec3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-006-gray.png",
+          "old_blob": null,
+          "new_blob": "f033d04b883a7052d3003ff87187fd872a246511"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-007-gray.png",
+          "old_blob": null,
+          "new_blob": "b9d4823e0b3a93c95ae8aeacd8c23fdcbd3f6767"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-008-gray.png",
+          "old_blob": null,
+          "new_blob": "3f40fcf5280d9756591f46536bf8cf820e0b50aa"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-009-gray.png",
+          "old_blob": null,
+          "new_blob": "5309f6d8991440def61a6310e1cf760dd40d82be"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r42.json",
+          "old_blob": null,
+          "new_blob": "9a7fa76337d6ba5a3893a7bda21034376970321e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-tools.cjs",
+          "old_blob": "eb4e0959958a6670cb97a3d7a447eba6b9fb294c",
+          "new_blob": "bf613a6cc88217fd68d966dd4f1aac491f14aa4e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-view-capture-r42-process.json",
+          "old_blob": null,
+          "new_blob": "84bcbe98df7cfd11f2bdca63af5c5ac952d3168f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-visual-r42.md",
+          "old_blob": null,
+          "new_blob": "1e3df2dbaebb3c9330f41b970cb0331c34981b62"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "a62bc517c5c13b4f93bf836ad5bd37b9843e7c55",
+      "files": [
+        {
+          "path": "build-scripts/content/book-2/b2_214.py",
+          "old_blob": "8284e51c64ab4c7016a03dfeb4c0100f0bdfb4e3",
+          "new_blob": "8308162ff5690146b47f21ad651ee048f708813f"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "ad5186e608637ccec881014f01c5b91e27bdbab4",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-bundle-process.json",
+          "old_blob": null,
+          "new_blob": "fb65c0fe7d4bc274287c8ec2c41f84195295ec28"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-durable-process.json",
+          "old_blob": null,
+          "new_blob": "85e272158d15aa01a4823916b24f91bedf49ce36"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-gates.json",
+          "old_blob": null,
+          "new_blob": "4571337ea8166b1cfd905c45bd84004fe9ec2d70"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-part-a-publisher-print-process.json",
+          "old_blob": null,
+          "new_blob": "d768344c3dfe612f29e6fcca938650e4778a2561"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-part-a-student-web-process.json",
+          "old_blob": null,
+          "new_blob": "1eb92e5abd9d8ebc4729e132e2c6148f0c663925"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-production-process.json",
+          "old_blob": null,
+          "new_blob": "359e9a88e1de9193e148f16a2f2564c7374c8a48"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-release-process.json",
+          "old_blob": null,
+          "new_blob": "cad3a11326339420cd176d237f6544b52610a03a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-structural-process.json",
+          "old_blob": null,
+          "new_blob": "f7eb9db8bc849489173e6958710ddb58a311c133"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-url-map-process.json",
+          "old_blob": null,
+          "new_blob": "f8c9565b41f075a77500fef4ba395836c78ff4b5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-index-runtime.cjs",
+          "old_blob": null,
+          "new_blob": "d06926a854afae7df5ad0b813dce5fd5a816abff"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-log-cleanup.md",
+          "old_blob": null,
+          "new_blob": "b7e7d7f4067d1e413edba114edf04b6b4206ef02"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r46.json",
+          "old_blob": null,
+          "new_blob": "55a752add6abb932df3ac1e052ab0eef13c05e5f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-rebuild-r46-process.json",
+          "old_blob": null,
+          "new_blob": "695f9be0e85f14fcb5906fd77cf1b7458422c34e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-direct-r45-process.json",
+          "old_blob": null,
+          "new_blob": "1855008ceed6d24492a6f4ac4a845de0ee7f9246"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-full-r43-process.json",
+          "old_blob": null,
+          "new_blob": "f8cef9ad640cbc80a30bd0e345445a75cc875f97"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-parity-process.json",
+          "old_blob": null,
+          "new_blob": "da22bafe6846daeb0d800c178b60612f67b4470f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-parity.json",
+          "old_blob": null,
+          "new_blob": "68a9c25be006c2d5ce04bcbd129ffb37cdba84ef"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-thin-r44-process.json",
+          "old_blob": null,
+          "new_blob": "d8f713ba46d3f3f3c6e6a805595d0a19e214ab0b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-parity.py",
+          "old_blob": null,
+          "new_blob": "ac56210bc7ad145888f60a98b3767bedadd24866"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-post-native-final-custody.json",
+          "old_blob": null,
+          "new_blob": "24b96d78bf186fa05b519442d65479c048e85811"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "698ee316f407e0a14850427263c2e488356c4d86"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/manifest.json",
+          "old_blob": null,
+          "new_blob": "4c772e76c5859ed5412d6b426f54ac38ad8f4a59"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "1791997920985265a745228b981b4196d76b3c40"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "1d7cfed5ec2dc108115f4cb124be6a373c1e9d29"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "7679427c623af237fcd4b450aba070792736679b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "f6884b1d7328999376f50651ddec4af7f5cabbdd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "871796c307968452e8fe6e7c49ad01e9b5743bf5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "298c67b1591b91141e01bfdda2f4f981adae1aba"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "42f1121ff096949b490c11e9d9f76378eef329f3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "81064ddc647ebf12ddc7ca846b1fec286c6a7490"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "14be0c79b3b6510f31623ed953d1650f62d9cb82"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b8659c8fa5a2558cfe0054828cee8165bb30fd46"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-011.png",
+          "old_blob": null,
+          "new_blob": "690f20ffcdb08c779b59435e7f4458480b775f57"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "86c4c170e2368abbaaa04856daae5c10b81dba49"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/manifest.json",
+          "old_blob": null,
+          "new_blob": "d79dd9ad113b7451f11825f9a6ec60b5e0e69faa"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "66df0e70d27f5e79ac0b26db8da96f031f8ec297"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "e9e3768cda38a2ea327db0be99458dcea959518b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "baa0128e5fab165c9a0b983a96e32bb0d97d9928"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "6886df9fb77867fa99f4ecb1a777546b44f80e0d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "23609339bc1b9b6f7f595243481b642596943c53"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "93e5fb7ab58a888b813cf688294e56c2863f661e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "2ae05277846c4929339fb512a3fe682cc61d077a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "d71e263c909cd0f46fcfa3d42d08ef70e8521868"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "7bdebd235b1f30d487f3d462533546f502773a89"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/author-run.json",
+          "old_blob": null,
+          "new_blob": "5bb39b5fc792acce8ccf757038c142fbe53ef1bf"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "698ee316f407e0a14850427263c2e488356c4d86"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/manifest.json",
+          "old_blob": null,
+          "new_blob": "8731390cf5de23562131cd96d31bac152375ee9d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "1791997920985265a745228b981b4196d76b3c40"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "1d7cfed5ec2dc108115f4cb124be6a373c1e9d29"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "7679427c623af237fcd4b450aba070792736679b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "f6884b1d7328999376f50651ddec4af7f5cabbdd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "871796c307968452e8fe6e7c49ad01e9b5743bf5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "298c67b1591b91141e01bfdda2f4f981adae1aba"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "42f1121ff096949b490c11e9d9f76378eef329f3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "81064ddc647ebf12ddc7ca846b1fec286c6a7490"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "14be0c79b3b6510f31623ed953d1650f62d9cb82"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b8659c8fa5a2558cfe0054828cee8165bb30fd46"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-011.png",
+          "old_blob": null,
+          "new_blob": "690f20ffcdb08c779b59435e7f4458480b775f57"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "86c4c170e2368abbaaa04856daae5c10b81dba49"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/manifest.json",
+          "old_blob": null,
+          "new_blob": "9e35c9d150235e49970ad4fbbbfb1dc8394ff845"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "66df0e70d27f5e79ac0b26db8da96f031f8ec297"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "e9e3768cda38a2ea327db0be99458dcea959518b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "baa0128e5fab165c9a0b983a96e32bb0d97d9928"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "6886df9fb77867fa99f4ecb1a777546b44f80e0d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "23609339bc1b9b6f7f595243481b642596943c53"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "93e5fb7ab58a888b813cf688294e56c2863f661e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "2ae05277846c4929339fb512a3fe682cc61d077a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "d71e263c909cd0f46fcfa3d42d08ef70e8521868"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "7bdebd235b1f30d487f3d462533546f502773a89"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/author-run.json",
+          "old_blob": null,
+          "new_blob": "caf628cc2f68d651e2c66a975dae44a0bf8f22ed"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "698ee316f407e0a14850427263c2e488356c4d86"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/manifest.json",
+          "old_blob": null,
+          "new_blob": "d3432045c057e9e44f84e72ac5d5281ef4acee4f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "1791997920985265a745228b981b4196d76b3c40"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "1d7cfed5ec2dc108115f4cb124be6a373c1e9d29"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "7679427c623af237fcd4b450aba070792736679b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "f6884b1d7328999376f50651ddec4af7f5cabbdd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "871796c307968452e8fe6e7c49ad01e9b5743bf5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "298c67b1591b91141e01bfdda2f4f981adae1aba"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "42f1121ff096949b490c11e9d9f76378eef329f3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "81064ddc647ebf12ddc7ca846b1fec286c6a7490"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "14be0c79b3b6510f31623ed953d1650f62d9cb82"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b8659c8fa5a2558cfe0054828cee8165bb30fd46"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-011.png",
+          "old_blob": null,
+          "new_blob": "690f20ffcdb08c779b59435e7f4458480b775f57"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "86c4c170e2368abbaaa04856daae5c10b81dba49"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/manifest.json",
+          "old_blob": null,
+          "new_blob": "f76eb0f0c810b7b120a7b393e5c7a8206a6a4d11"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "66df0e70d27f5e79ac0b26db8da96f031f8ec297"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "e9e3768cda38a2ea327db0be99458dcea959518b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "baa0128e5fab165c9a0b983a96e32bb0d97d9928"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "6886df9fb77867fa99f4ecb1a777546b44f80e0d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "23609339bc1b9b6f7f595243481b642596943c53"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "93e5fb7ab58a888b813cf688294e56c2863f661e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "2ae05277846c4929339fb512a3fe682cc61d077a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "d71e263c909cd0f46fcfa3d42d08ef70e8521868"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "7bdebd235b1f30d487f3d462533546f502773a89"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/author-run.json",
+          "old_blob": null,
+          "new_blob": "6c46c9aac026ce87bfff588b65e78b509a69a8b9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "698ee316f407e0a14850427263c2e488356c4d86"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/manifest.json",
+          "old_blob": null,
+          "new_blob": "d824c2a9d99701aa46517c9786b4631894f463c3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "1791997920985265a745228b981b4196d76b3c40"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "1d7cfed5ec2dc108115f4cb124be6a373c1e9d29"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "7679427c623af237fcd4b450aba070792736679b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "f6884b1d7328999376f50651ddec4af7f5cabbdd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "871796c307968452e8fe6e7c49ad01e9b5743bf5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "298c67b1591b91141e01bfdda2f4f981adae1aba"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "42f1121ff096949b490c11e9d9f76378eef329f3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "81064ddc647ebf12ddc7ca846b1fec286c6a7490"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "14be0c79b3b6510f31623ed953d1650f62d9cb82"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b8659c8fa5a2558cfe0054828cee8165bb30fd46"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-011.png",
+          "old_blob": null,
+          "new_blob": "690f20ffcdb08c779b59435e7f4458480b775f57"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "86c4c170e2368abbaaa04856daae5c10b81dba49"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/manifest.json",
+          "old_blob": null,
+          "new_blob": "5854826501aca947eae4c8aaa379d02641aee8ed"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "66df0e70d27f5e79ac0b26db8da96f031f8ec297"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "e9e3768cda38a2ea327db0be99458dcea959518b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "baa0128e5fab165c9a0b983a96e32bb0d97d9928"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "6886df9fb77867fa99f4ecb1a777546b44f80e0d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "23609339bc1b9b6f7f595243481b642596943c53"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "93e5fb7ab58a888b813cf688294e56c2863f661e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "2ae05277846c4929339fb512a3fe682cc61d077a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "d71e263c909cd0f46fcfa3d42d08ef70e8521868"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "7bdebd235b1f30d487f3d462533546f502773a89"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/author-run.json",
+          "old_blob": null,
+          "new_blob": "6bd6ba660a15731b389268e50ef76dcb324f4ec2"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-report.md",
+          "old_blob": null,
+          "new_blob": "112ff027bc33fc5b9710be840da8e140c26cc70a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r43.json",
+          "old_blob": null,
+          "new_blob": "18e331051d389607656a603ba77060fb6c40a8e3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r44.json",
+          "old_blob": null,
+          "new_blob": "1932aa977d9eecab4c9520e10288a9e73c43fbf1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r45.json",
+          "old_blob": null,
+          "new_blob": "1b5bdc2c7d71cbe4ba6fc79995be24961a8de137"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r46.json",
+          "old_blob": null,
+          "new_blob": "e14d145b16057a4ded84e9c5d00d9990a6caf3bf"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-source-probes-r3-log-custody.json",
+          "old_blob": null,
+          "new_blob": "875b68e658af502e87a5577488732dfb18ab2fdd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-source-probes-r3-process.json.gz",
+          "old_blob": null,
+          "new_blob": "55f4b1b185dc2374cddb0e83cfa63e8dc0b7dba3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-tools.cjs",
+          "old_blob": "bf613a6cc88217fd68d966dd4f1aac491f14aa4e",
+          "new_blob": "bb145d3e05562d16e810c83c1255118b12b2b506"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "8e58aaed2239b5daa83838be76d8d67ecf64be42",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-index-transport-diagnostic-process.json",
+          "old_blob": null,
+          "new_blob": "a62adcf8fd5ef66e2a2e9679f82e6fda956618fe"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-lessen-complete-scope-process.json",
+          "old_blob": null,
+          "new_blob": "0697a19f6b8a61d4141063f682a00b886956a444"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-lessen-complete-whitespace-crlf-process.json",
+          "old_blob": null,
+          "new_blob": "d54768a84f9005fd2ac1cbe01c8908e3830f800b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-lessen-complete-whitespace-native-process.json",
+          "old_blob": null,
+          "new_blob": "45a35c78cfa52457ea226f97480bd091373d266f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-lessen-own-scope-process.json",
+          "old_blob": null,
+          "new_blob": "3662f8d32ea42af7069f6599c0511f40bce9b8fb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-lessen-own-whitespace-crlf-process.json",
+          "old_blob": null,
+          "new_blob": "b853d595b5d24c8ca8f82c1c1d17fef9b418928c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-lessen-own-whitespace-native-process.json",
+          "old_blob": null,
+          "new_blob": "8777457e9b442abc20e3f110ee13eaa373fc987d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-platform-complete-scope-process.json",
+          "old_blob": null,
+          "new_blob": "6ce475a4636d47e5da2887f76ea3e8057b9c43bb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-platform-complete-whitespace-crlf-process.json",
+          "old_blob": null,
+          "new_blob": "5b5bcc0df1c3d52c76509906d32aa7022040630d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-platform-complete-whitespace-native-process.json",
+          "old_blob": null,
+          "new_blob": "e6099683ebcfabdb70cacc990017f980e00f3328"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-platform-own-scope-process.json",
+          "old_blob": null,
+          "new_blob": "810b9bb728b2fc042e3f1fc27c88fb38b6e61fd9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-platform-own-whitespace-crlf-process.json",
+          "old_blob": null,
+          "new_blob": "574ab1ea93ccd509569925b183504993b6e7df4d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-platform-own-whitespace-native-process.json",
+          "old_blob": null,
+          "new_blob": "92829f21007ab76f54a8f1b013093c4e3d99b242"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-scope-summary.json",
+          "old_blob": null,
+          "new_blob": "12b176c64971147294ea7d843a73a1e0aa64a9f3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-publication.md",
+          "old_blob": null,
+          "new_blob": "2f8b801cea40ae436d685eb67ca70ae3a58514ad"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "dd8c63108276f57c7cdb790b372fe0d2a3de3d7a",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-bundle-process.json",
+          "old_blob": null,
+          "new_blob": "27c4ba1c67438b23120ff1b5d38b389a20262107"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-durable-process.json",
+          "old_blob": null,
+          "new_blob": "766aadad9545eebe79ed2e31f8b37b105f8c0b8d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-gates.json",
+          "old_blob": null,
+          "new_blob": "d63ca07522cefb5684d4de8cf675f0e365f31a47"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-part-a-publisher-print-process.json",
+          "old_blob": null,
+          "new_blob": "d9bca437b849bdabf5d56f44ad0e8e84acfcc5ef"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-part-a-student-web-process.json",
+          "old_blob": null,
+          "new_blob": "d5d6140a8c5a9e59075b5a91c7d12b499f9e23fe"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-production-process.json",
+          "old_blob": null,
+          "new_blob": "ebf947847b1b5ae14e4ad23c00dc828d6bc49fd6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-release-process.json",
+          "old_blob": null,
+          "new_blob": "f1b26cf32a02095d25b91553a34e2519818823d3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-structural-process.json",
+          "old_blob": null,
+          "new_blob": "f87cc3cd2ef054a198faa0e1a8fc8211402a2b19"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-url-map-process.json",
+          "old_blob": null,
+          "new_blob": "d64726781f5c3dcfe0321880c6827a0d5fa8c6f3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-index-freshness-r1-process.json",
+          "old_blob": null,
+          "new_blob": "55fd7bf625651710c4605ce6bb61b5afa4aec785"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-index-generate-r1-process.json",
+          "old_blob": null,
+          "new_blob": "3524c999d15c887965bb11d29c015f12128ee5f0"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-index-literal-inventory-r1-process.json",
+          "old_blob": null,
+          "new_blob": "dbd612f7edcb56966ee7ca2aa3f4959f421c616f"
+        }
+      ]
+    },
+    {
+      "repository": "lessons",
+      "original": "84f821a3cde2e525c54593d7f36ea86b2c53dff9",
+      "files": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.html",
+          "old_blob": "b0710ac5b313df6824775d7707e9a8febbfd2448",
+          "new_blob": "3f15aa979f5ea66b056b59dea216d0287463ef19"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.md",
+          "old_blob": "4057cd3e71d37a63cb77e4e963be008236a1fac4",
+          "new_blob": "4262ec74360e2513d7ade05b73433549d016a82a"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+          "old_blob": "23b66507062677c399fc354100f45c544a9d2bde",
+          "new_blob": "77044ccc35bc0d9a2fd8bef7e196ab2389c2ce01"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.html",
+          "old_blob": "d85c36728c7cea44688c50c9fb02a944178dee64",
+          "new_blob": "5fe917c5fb197b18026a4086939763728fd53610"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md",
+          "old_blob": "6849a172e869131139f9cb422e3fc2e25c7a8522",
+          "new_blob": "c32e8e233a3180b1a41380c3781ae986bf9c4d1b"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+          "old_blob": "de46b02b1d0c56e6087c6a18b643ef501c83fd9a",
+          "new_blob": "de66708e7a3dd7907757e57c486344697a67fa0e"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.png",
+          "old_blob": null,
+          "new_blob": "fcf1c440e3ef3134f6a70a6dec89d233ad881fb6"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.svg",
+          "old_blob": null,
+          "new_blob": "8af2cae2a9111c0516948343e0c869c9bf699d1a"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.png",
+          "old_blob": null,
+          "new_blob": "8c71286c31b42f4987084a66f0fb5737b9bec40d"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.svg",
+          "old_blob": null,
+          "new_blob": "3f41056798a77558e29463f1d974e9b8c6a0d692"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.png",
+          "old_blob": null,
+          "new_blob": "f4017c4ca222ec477cf79d0c40f3d2ceef8d266f"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.svg",
+          "old_blob": null,
+          "new_blob": "d5ad04d67ca8bd87a57d631610125d44a6d12cef"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.png",
+          "old_blob": null,
+          "new_blob": "155c075b75c6371aa82ad8aa2506f291afe0b783"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.svg",
+          "old_blob": null,
+          "new_blob": "8fbce08fb2ee177d40a70ac9350ba389f5eafb85"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/build_pdf.py",
+          "old_blob": "82eea98246b31baa925f650c31ba018793023525",
+          "new_blob": "846bf5e91648a6d3d2756c3fd9008fe32e7f870c"
+        }
+      ]
+    }
+  ],
+  "output_manifest": {
+    "raw_sha256": "caa3a8a4f0e10b620845b8341596df4ff27feefeffcbfc16e01b924844db7c46",
+    "raw_base64": "IyBTcHJpbnQgQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xOiBPdXRwdXQgbWFuaWZlc3QKCkRhdGU6IDIwMjYtMDktMDYuIEFjY291bnRhYmxlIGludGVncmF0b3I6IGNvZGV4LXJvb3QuClN0YXR1czogKipBQ1RJVkUgQ0hFQ0tQT0lOVCDigJQgTk9UIENPTVBMRVRFKiouIFRoaXMgbWFuaWZlc3QgcmVjb3JkcyB0aGUgZXhhY3QKNDEtUERGIG91dHB1dCBjb250cmFjdCBmcm9tIHRoZSBhcHByb3ZlZCBvcGVyYXRpb25hbC9yb290IHBsYW4gYW5kIHNlcGFyYXRlcwpmcmVzaCBpbnRlcm5hbCBhY2NlcHRhbmNlIGZyb20gb2xkIGZpbGUgcHJlc2VuY2UuCgpDdXJyZW50MjI0IHZlcmlmaWNhdGlvbjogcGxhdGZvcm0gYDhhOTJkY2Q3ODg0ZmFhM2NmODExNGY1MTI1YjYwYmIyMjg3NmMxZjJgLAp3aXRoIHJvb3Qtb25seSBRQy9oYW5kb2ZmIHRyYW5zaXRpb24gaW4yMjQtUUMtUk9PVC1hY2NlcHRhbmNlLm1kLiBJdHMgb3JpZ2luYWwKc3BlY2lhbGlzdCBRQyB3YXMgYWRvcHRlZCBhdCBsZXNzb24gYGFhMjA4N2EyMGM1YmVlNDQ2NWY5Yzk4ZDgzMDMxMTE2ZTk0Yzk2NjdgLgpFYXJsaWVyIHNuYXBzaG90OiBwbGF0Zm9ybSDCpzIxMyBuYXRpdmUgdmVyaWZpY2F0aW9uIGBhMjcyNGI0MmM3MTk2MmFlNjJhY2ZjMTI0MTFlZWE5ZmQyMTM4MGIwYCwKbGVzc29ucyBhY2NlcHRhbmNlIGAxY2YxYzFmOTcyZjE5Njc5MWZiMzdmNmJiZWU1MjNiN2EyZTNiNjc2YCB3aXRoIHRoZSBleGFjdApyb290IFFDL2hhbmRvZmYgdHJhbnNpdGlvbiBpbjIxMy1RQy1ST09ULWFjY2VwdGFuY2UubWQuIEN1cnJlbnQyMjMgYWNjZXB0YW5jZQppbjIyMy1yb290LWFjY2VwdGFuY2UubWQgcmVtYWlucyB1bmNoYW5nZWQsIGluY2x1ZGluZyB0aGUgZXhhY3QKcm9vdC1vbmx5IGN1cnJlbnQyMTEgYWNjZXB0YW5jZS9oYW5kb2ZmIGF0NWUxNDMyNSBpbjIxMS1yb290LWFjY2VwdGFuY2UtcjUubWQuCkN1cnJlbnQyMjEgUjggYW5kMjIyIFIxMyBhY2NlcHRhbmNlcyByZW1haW4gdW5jaGFuZ2VkLgpMZXNzb24gYmFzZWxpbmU6IGBmMDlmZDZlODhlZGM1MDQ5YjAyNmIxNmIwMTU4ZTdlMTg4MDkxZDJkYC4KQWxsIHBhdGhzIGJlbG93IGFyZSByZWxhdGl2ZSB0byB0aGUgbGVzc29uIGJvb2sgcm9vdApgQm9layAyIC0gS29zdGVuLCBvcGJyZW5nc3RlbiwgZWxhc3RpY2l0ZWl0IGVuIHN1cnBsdXMvYC4KCiMjIENvdW50cyBhbmQgZXZpZGVuY2UgcnVsZXMKCkV4cGVjdGVkOiAyNyB0aGVvcnkgKyA2IGNvbnNvbGlkYXRpb24gKyA2IGNoYXB0ZXIgKyAyIGJvb2sgPSAqKjQxIFBERnMqKi4KQXQgdGhpcyBjaGVja3BvaW50OiAqKjggaW50ZXJuYWxseSBnYXRlLWNsb3NlZCBjdXJyZW50IHBhcmFncmFwaCBwYWNrYWdlcyoqOgoyMyBhY2NlcHRlZC13aXRoLWZsYWdzIFBERnMsMCBhZG9wdGVkIGNhbmRpZGF0ZSBQREZzLDYgbGVnYWN5IHVuYWNjZXB0ZWQgYW5kMTIKYWJzZW50LiDCpzIxMSBub3cgaGFzIGN1cnJlbnQgUjUgaW5kZXBlbmRlbnQgcGFyYWdyYXBoIHJldmlldywgZGlzdGluY3Qgc3BlY2lhbGlzdApRQyBhbmQgcm9vdCBhY2NlcHRhbmNlL2hhbmRvZmYuIMKnMjEyIG5vdyBoYXMgY3VycmVudCBkaXN0aW5jdCBzcGVjaWFsaXN0IFFDLApyb290IGFjY2VwdGFuY2UsIGNsb3NlZCBTMSBsaW5lYWdlIGFuZCByZW5ld2VkIGhhbmRvZmY7IGl0cyB0aHJlZSBQREZzIGFyZSBBLiBQaHlzaWNhbApyb290IHByZXNlbmNlIGlzIDI5LCBub3QgMjkgYWNjZXB0ZWQuIEFsbCBzaXggcmVtYWluaW5nIGxlZ2FjeSBQREZzIHJlbWFpbiBHaXQtYmxvYi0KaWRlbnRpY2FsIHRvIHRoZSBiYXNlbGluZS4gU2VwYXJhdGUgaW4tcHJvZ3Jlc3Mgd29ya3RyZWVzIGRvIG5vdCBjb3VudCBoZXJlLgoKwqcyMjEgUjggYW5kIMKnMjEzIFI2IGNvcnJlY3QgdGhlaXIgc2hvcnQtYWx0L3RpdGxlIG1ldGFkYXRhLCByZXRhaW5pbmcgYWxsNDkKcHJpbnRlZCBwYWdlIGJ5dGVzIGZyb20gUjcvUjUuIMKnMjIxIFI4IG5vdyBoYXMgY3VycmVudCBpbmRlcGVuZGVudCBwYXJhZ3JhcGggYW5kCnNwZWNpYWxpc3QgUEFTUyBXSVRIIEZMQUdTIGFuZCByb290IGFjY2VwdGFuY2UvaGFuZG9mZjsgaXRzIHRocmVlIGVkaXRpb25zIGFyZSBBLgrCpzIxMyBSNyBub3cgYWRkcyB0aGUgcmVxdWlyZWQgYm9udXMgYXNzZXNzbWVudC1jcml0ZXJpYSBibG9jaywgd2l0aDMwIHRvdGFsIHBhZ2VzLgpJdHMgY3VycmVudCBpbmRlcGVuZGVudCBSNyBwYXJhZ3JhcGggcmV2aWV3LCBleGFjdCBmaXZlLXBpbiBhY2NlcHRlZDIxMS8yMTIKc3VjY2Vzc2lvbiBhbmQgZGlzdGluY3QgY3VycmVudCBzcGVjaWFsaXN0IFFDIHBhc3MuIFJvb3QgZnVsbHIzNy90aGlucjM4L3ByaW50cjM5CnJlcHJvZHVjZSBhbGwyNCBuYXRpdmUgZmlsZXMgYW5kOTAgcmF3L1JHQiBwYWdlIGNvbXBhcmlzb25zMTQvOS83IGVhY2guIEN1cnJlbnQKcm9vdCBhY2NlcHRhbmNlIGFuZCBuaW5lLXNlY3Rpb24gaGFuZG9mZiBjbG9zZSBpdHMgZ2F0ZXM7IGl0cyBlZGl0aW9ucyBhcmUgQS4KQWxsNzIgc3BlY2lhbGlzdCBwZXJzb25hbCB2aWV3cyByZW1haW4gYXR0cmlidXRlZCwgbm90IG5ldyByb290IHZpZXdzOwo1NC82Ni83OCB0aW1pbmcgaXMgVU5PQlNFUlZFRCBhbmQgSC0yMTMtT1BDMiByZW1haW5zIG9wZW4vZXhjbHVkZWQuCsKnMjIyIFIxMyBpcyBhZG9wdGVkL3Jvb3QtcmVidWlsdDogZXhhY3RseSBvbmUgYW5zd2VyIHBhZ2UgY2hhbmdlczsgdGhlIG90aGVyMjAKcmVtYWluIGlkZW50aWNhbC4gSXRzIGN1cnJlbnQgaW5kZXBlbmRlbnQgcGFyYWdyYXBoIGFuZCBkaXN0aW5jdCBzcGVjaWFsaXN0CnJldmlld3MgcGFzcyB3aXRoIGZsYWdzOyByb290IGFjY2VwdGFuY2UvaGFuZG9mZiBhcmUgY29tcGxldGUuIEl0cyBlZGl0aW9ucyBhcmUgQS4KwqcyMjMgUjMvUzEgYW5kIHRoZSBleGFjdCB0d28tYXR0cmlidXRlIEFMVCBjb3JyZWN0aW9uIG5vdyBoYXZlIGN1cnJlbnQKaW5kZXBlbmRlbnQgcGFyYWdyYXBoIGFuZCBkaXN0aW5jdCBzcGVjaWFsaXN0IFBBU1MgV0lUSCBGTEFHUywgcm9vdCBhY2NlcHRhbmNlCmFuZCBhIGNvbXBsZXRlIGhhbmRvZmYuIEl0cyBmb3VyIGFjY2VwdGVkMjIxIHBpbnMgYW5kIGFsbDIwIG5hdGl2ZSBmaWxlcyBhcmUKdmVyaWZpZWQ7IHJvb3QgZnVsbHIyOC90aGlucjI5L3ByaW50cjMwIHJlcHJvZHVjZTMyIHJhdy9SR0IgcGFnZXMxNS8xMC83IGVhY2guCkJvdGggZGlzdGluY3Q3Mi12aWV3IGluc3BlY3Rpb25zIHJlbWFpbiBhdHRyaWJ1dGVkLCBhbmQgdGhlIHJldmlld2VyLW5vdW4KY29ycmVjdGlvbiBjaGFuZ2VzIG5vIHB1cGlsIGJ5dGVzLiBGMjIzLUxJTkVBR0UgaXMgY2xvc2VkOyB0aW1pbmc1NC82OS84MSBzdGF5cwpVTk9CU0VSVkVELiBJdHMgdGhyZWUgUERGcyBhcmUgQTsgYWxsIGhpc3RvcmljYWwgZmFpbGVkL1BFTkRJTkcgcmVjb3JkcyByZW1haW4uCsKnMjExIFI1IGFkZHMgdGhlIHJlcXVpcmVkIGJvbnVzIGNyaXRlcmlhIGFuZCBpcyBhZG9wdGVkL3Jvb3QtcmVidWlsdDogb25seSBhbnN3ZXIKcGFnZTcgY2hhbmdlczsgdGhlIG90aGVyMzAgcGFnZXMgcmVtYWluIGV4YWN0LiBDdXJyZW50IHBhcmFncmFwaCByZXZpZXcgYW5kCmRpc3RpbmN0IHNwZWNpYWxpc3QgUUMgcGFzczsgcm9vdCBhY2NlcHRhbmNlL2hhbmRvZmYgYXJlIGNvbXBsZXRlLiBJdHMgaW5oZXJpdGVkIHN0YWxlIG9wZ2F2ZW4uemlwIGlzIGV4cGxpY2l0bHkgZXhjbHVkZWQ7CnRoZSBuYXRpdmUyMTEgYnVpbGRlciBoYXMgbm8gWklQIG91dHB1dCBjb250cmFjdC4gSXQgaXMgbm90IGEgY3VycmVudCBzdHVkZW50CmRlbGl2ZXJhYmxlLiDCpzIxMiBSNyBhZGRzIGl0cyB0aHJlZSBib251cyBjcml0ZXJpYSBhbmQgaXMgYWRvcHRlZC9yb290LXJlYnVpbHQ6Cm9ubHkgYW5zd2VyIHBhZ2U2IGNoYW5nZXMsIHRoZSBvdGhlcjI2IHBhZ2VzIGFyZSBleGFjdCwgYW5kMzRhcnRpZmFjdCBmdWxsL3ByaW50CnJlcHJvZHVjdGlvbiBwYXNzZXMuIEl0cyBjdXJyZW50IGluZGVwZW5kZW50IHBhcmFncmFwaCByZXZpZXcgYW5kIGRpc3RpbmN0CnNwZWNpYWxpc3Qvcm9vdCBnYXRlcyBwYXNzIHdpdGggcmV0YWluZWQgZmxhZ3MuIEl0cyB0d28gYWNjZXB0ZWQyMTEgaW5wdXQgcGlucyBub3cgaGF2ZSBpbmRlcGVuZGVudApTMSBkZWx0YSBQQVNTIGFuZCByb290IGZ1bGxyMTYvdGhpbnIxNy9wcmludHIxOCByZXByb2R1Y3Rpb246MzQgbmF0aXZlIGZpbGVzLAo0MCBmb2xkZXIgZmlsZXMgYW5kMjcgcmF3L3BpeGVsIHBhZ2VzIHVuY2hhbmdlZC4gQ3VycmVudCBzcGVjaWFsaXN0NzYgcGVyc29uYWwKY29sb3IvZ3JheXNjYWxlIHZpZXdzIHBhc3MuIFJvb3QgZnVsbHIyNC90aGlucjI1L3ByaW50cjI2IHJlcHJvZHVjZTM0IG5hdGl2ZSBmaWxlcwphbmQ4MSByYXcvUkdCIHBhZ2UgY29tcGFyaXNvbnM7IGJvdGggcHJvZmlsZXMvY3VycmVudG5lc3MvZHVyYWJsZS9hY3RpdmUtYnVuZGxlCnBhc3MgYWdhaW4gYWZ0ZXIgYWNjZXB0YW5jZS4gU2VlMjEyLXJvb3QtYWNjZXB0YW5jZS5tZCBhbmQyMTItUzEtcm9vdC1yZXN1bHQubWQuClRoZWlyIHJvb3QgcmVwb3J0cyBkaXN0aW5ndWlzaCBhY3R1YWwgc291cmNlL3BhZ2UvcmVidWlsZCBjaGVja3MgZnJvbSByZW1haW5pbmcKaW5kZXBlbmRlbnQgcGFyYWdyYXBoLCBzcGVjaWFsaXN0IGFuZCBoYW5kb2ZmIGdhdGVzLiBTZWUgcmV2aWV3LWNvcnJlY3Rpb25zLm1kLgoKwqcyMzEgZmluYWwgcjggaXMgbm93IGFkb3B0ZWQgYXMgYSBjYW5kaWRhdGU6IGFsbDQyIG5hdGl2ZSBmaWxlcyBwbHVzIHdyYXBwZXIKbWF0Y2ggdGhlIGF1dGhvcidzIGV4YWN0IGxlc3NvbiBjb21taXQsIHdpdGgzMyBwYWdlczE0LzkvMTAuIFJvb3QnczQ5OSBpbXBvcnQKYmluZGluZ3MgYW5kMTUgc291cmNlIHRlc3RzIHBhc3MuIFRoZTY2IHN1cHBsZW1lbnRhbCBncmF5c2NhbGUgcGFnZXMgd2VyZQpyZWxvY2F0ZWQgYnl0ZS1pZGVudGljYWxseSB1bmRlciBzdXBwb3J0ZWQgc3ByaW50LWV2aWRlbmNlIHBhdGhzIHdpdGggYW4gZXhhY3QKb3JpZ2luYWwtY29tbWl0L3BhdGgvU0hBLXRvLW5ldy1wYXRoIG1hcHBpbmc7IGFsbDI3IGhpc3RvcmljYWwgUEVORElORyBtYW5pZmVzdHMKYW5kIG9yaWdpbmFsIGZhaWxlZC9zdXBlcnNlZGVkIHJlY29yZHMgcmVtYWluIHVuY2hhbmdlZC4gQm90aCBhY3R1YWwgbmV3IG5hdGl2ZQpwbGF0Zm9ybS9sZXNzb24gc2NvcGUgY2hlY2tzIHBhc3MuIENhbm9uaWNhbCBpbmRlcGVuZGVudCBwYXJhZ3JhcGggUEFTUyBXSVRICkZMQUdTIGlzIGFkb3B0ZWQsIHdpdGg2NiBwZXJzb25hbCBjb2xvdXIvZ3JheXNjYWxlIHBhZ2VzIGFuZDE1IG5hdGl2ZSBmaWd1cmVzLgpSb290IGZyZXNoIHIxNCBmdWxsLCByMTUgZnVsbCwgcjE2IHRoaW4gYW5kIGRpcmVjdC1wcmludCBwYXJpdHkgcHJlc2VydmUgYWxsNDIKbmF0aXZlIGZpbGVzIGFuZCBhbGwzMyBjb2xvdXIgcGFnZXM7IHRoZSBhY3R1YWwgbmF0aXZlIGNoZWNrZXIgcGFzc2VzLiBUaGUKZGlzdGluY3Qgc3BlY2lhbGlzdCBRQyBub3cgcGFzc2VzIHdpdGggZmxhZ3MgYWZ0ZXIgcGVyc29uYWwgaW5zcGVjdGlvbiBvZiBhbGwKNjYgY29sb3VyL2dyYXlzY2FsZSBwYWdlcyBhbmQzMCBjb2xvdXIvZ3JheXNjYWxlIG5hdGl2ZSBmaWd1cmUgdmlld3MuIFJvb3QgZnJlc2gKZnVsbHIyMC90aGlucjIyL2RpcmVjdC1wcmludC9mdWxscjIxIHByb29mcyBwcmVzZXJ2ZSBhbGw0MiBuYXRpdmUgYnl0ZXMgYW5kOTkKcmVuZGVyZWQgY29sb3VyLXBhZ2UgaGFzaGVzL3BpeGVscy4gUm9vdCBhY2NlcHRhbmNlIGFuZCBuaW5lLXNlY3Rpb24gaGFuZG9mZiBhcmUKY29tcGxldGU7IGJvdGggYWN0dWFsIHByb2ZpbGVzIGFuZCBjdXJyZW50bmVzcy9kdXJhYmxlL2FjdGl2ZS1idW5kbGUgY2hlY2tzIHBhc3MKYWdhaW4gYWZ0ZXIgdGhlIG1ldGFkYXRhIHRyYW5zaXRpb24uIEl0cyB0aHJlZSBlZGl0aW9ucyBhcmUgQS4gQ2xhc3Nyb29tIHRpbWluZwpyZW1haW5zIFVOT0JTRVJWRUQ7IGZpbmFsIGNoYXB0ZXIvYm9vayByZXZpZXcgYW5kIG93bmVyL0NJIGdhdGVzIHJlbWFpbi4gU2VlCjIzMS1yb290LWFjY2VwdGFuY2UubWQgYW5kIHRoZSBwcmVzZXJ2ZWQgY2FuZGlkYXRlL2ltcG9ydC9RQyByZXBvcnRzLgoKRWFjaCBQREYgYWxzbyByZXF1aXJlcyBtYXRjaGluZyBnZW5lcmF0ZWQgYC5tZGAgYW5kIHNlbGYtY29udGFpbmVkIGAuaHRtbGA7CnBhcmFncmFwaHMgcmVxdWlyZSB0aGVpciBwbGFubmVkIFNWRy9QTkcgcGFpcnMsIHRoaW4gYnVpbGRlciwgYWNjZXB0ZWQgcGxhbiwKaW5kZXBlbmRlbnQgcmV2aWV3L1BhcnQgQSBxdWFsaXR5IHJlY29yZCBhbmQgaGFuZG9mZi4gQ2hhcHRlcnMvYm9va3MgcmVxdWlyZQphY2NlcHRlZCBzb3VyY2UgYXNzZW1ibGllcywgZXhhY3QgYXNzZXQgcGFyaXR5LCB0aGVpciBvd24gY29tcGxldGUgcmVuZGVyIGFuZAppbmRlcGVuZGVudCByZXZpZXcgZ2F0ZXMuIERvIG5vdCBlbWl0IHBhcmFncmFhZi4qIGZvciB0aGUgdGhyZWUgY29uc29saWRhdGlvbnMuCgrCpzIyNCBub3cgaGFzIGN1cnJlbnQgaW5kZXBlbmRlbnQgcGFyYWdyYXBoIGFuZCBkaXN0aW5jdCBzcGVjaWFsaXN0IFBBU1MgV0lUSApGTEFHUywgcm9vdCBmdWxscjE0L3RoaW5yMTUvZ3VhcmRlZC1kaXJlY3RyMTYgcmVwcm9kdWN0aW9uLCBpbnRlcm5hbCBhY2NlcHRhbmNlCmFuZCBhIGNvbXBsZXRlIG5pbmUtc2VjdGlvbiBoYW5kb2ZmLiBBbGwzMzAgYWRkaXRpb25hbCBzcGVjaWFsaXN0IGltcG9ydHMgYXJlCnJhdy9HaXQgZXhhY3Q7IHRoZSBlYXJsaWVyNDE4LXBhdGggYXV0aG9yL3JldmlldyBhZG9wdGlvbiByZW1haW5zIHByZXNlcnZlZCBpbgoyMjQtUk9PVC1BRE9QVElPTi1yZXN1bHQubWQuIFNpeCBzb3VyY2UgZmlsZXMsMTUgbmF0aXZlIGZpbGVzLDM0IGFjdHVhbCBjdXJyZW50CmFuZCBjb21taXR0ZWQgcmVsZWFzZSBpbnB1dHMsMTAgdGVzdHMgYW5kMTQxIHJlYWwgaW5wdXQvc291cmNlL25hbWVzcGFjZSBuZWdhdGl2ZXMKcGFzcy4gVGhyZWUgcm9vdCByb3V0ZXMgbWF0Y2ggYWxsMTUgbmF0aXZlIGJ5dGVzIGFuZDYwIHJhdy9SR0IgcGFnZSBjb21wYXJpc29uczsKYm90aCBQYXJ0IEEgcHJvZmlsZXMvY3VycmVudCBwcm9kdWN0aW9uL3NwZWNpYWxpc3QvZHVyYWJsZS9mdWxsIGJ1bmRsZSBwYXNzLgpBbGw0OCBzcGVjaWFsaXN0IGNvbG91ci9ncmF5c2NhbGUgb2JzZXJ2YXRpb25zIHJlbWFpbiBhdHRyaWJ1dGVkIGFuZCBhcmUgYm91bmQKdG8gY3VycmVudCByb290IGNvbG91ci9kZWNvZGVkLWdyYXkgcGFyaXR5OyByb290IHBlcnNvbmFsIHZpZXdzMC4gSGlzdG9yaWNhbApQRU5ESU5HIG1hbmlmZXN0cyBhbmQgdGhlIGVhcmxpZXIgZGlyZWN0LWNvbnRyb2xsZXIgbGltaXRhdGlvbnMgYXJlIHByZXNlcnZlZC4KSXRzIHR3byBQREZzIGFyZSBBLiA1My41LzYzLjUvNzEuNSBzdGF5cyBVTk9CU0VSVkVEOyBhZ2dyZWdhdGUgYWNjZXB0YW5jZSByZW1haW5zCnNlcGFyYXRlLiBTZWUyMjQtUUMtUk9PVC1yZXN1bHQubWQgYW5kMjI0LVFDLVJPT1QtYWNjZXB0YW5jZS5tZC4KCkEgPSBmcmVzaCBpbnRlcm5hbCBwYXJhZ3JhcGggYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBub3QgZmluYWwgb3duZXIvQ0kgYXBwcm92YWwuCkMgPSBhZG9wdGVkL3Jvb3QtdmVyaWZpZWQgY3VycmVudCBjYW5kaWRhdGU7IG9uZSBvciBtb3JlIGFjY2VwdGFuY2UgZ2F0ZXMgcGVuZGluZy4KTCA9IGJhc2VsaW5lIGxlZ2FjeSBmaWxlIHByZXNlbnQsIG5vdCBhY2NlcHRlZC4gUCA9IHBlbmRpbmcvYWJzZW50LgpObyBvdXRwdXQgaXMgc2lsZW50bHkgYWNjZXB0ZWQgdGhyb3VnaCBhbiBvbGRlciBQQVNTIG9yIHJldmlld2VkX2ZpbmFsIGxhYmVsLgoKIyMgRXhoYXVzdGl2ZSBQREYgaW52ZW50b3J5Cgp8ICMgfCBJRCB8IEVkaXRpb24gfCBTdGF0dXMgfCBFeGFjdCByZWxhdGl2ZSBQREYgcGF0aCB8CnwtLS06fC0tLXwtLS18Oi0tLTp8LS0tfAp8IDEgfCAyLjEuMSB8IHBhcmFncmFhZiB8IEEgfCBgMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xLjEgS29zdGVuc3RydWN0dXJlbi8yLjEuMSBLb3N0ZW5zdHJ1Y3R1cmVuIOKAkyBwYXJhZ3JhYWYucGRmYCB8CnwgMiB8IDIuMS4xIHwgb3BnYXZlbiB8IEEgfCBgMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xLjEgS29zdGVuc3RydWN0dXJlbi8yLjEuMSBLb3N0ZW5zdHJ1Y3R1cmVuIOKAkyBvcGdhdmVuLnBkZmAgfAp8IDMgfCAyLjEuMSB8IGFudHdvb3JkZW4gfCBBIHwgYDIuMSBIb29mZHN0dWsgS29zdGVuIGVuIG9wYnJlbmdzdGVuLzIuMS4xIEtvc3RlbnN0cnVjdHVyZW4vMi4xLjEgS29zdGVuc3RydWN0dXJlbiDigJMgYW50d29vcmRlbi5wZGZgIHwKfCA0IHwgMi4xLjIgfCBwYXJhZ3JhYWYgfCBBIHwgYDIuMSBIb29mZHN0dWsgS29zdGVuIGVuIG9wYnJlbmdzdGVuLzIuMS4yIE9wYnJlbmdzdGVuLCB3aW5zdCBlbiBicmVhay1ldmVuLzIuMS4yIE9wYnJlbmdzdGVuLCB3aW5zdCBlbiBicmVhay1ldmVuIOKAkyBwYXJhZ3JhYWYucGRmYCB8CnwgNSB8IDIuMS4yIHwgb3BnYXZlbiB8IEEgfCBgMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xLjIgT3BicmVuZ3N0ZW4sIHdpbnN0IGVuIGJyZWFrLWV2ZW4vMi4xLjIgT3BicmVuZ3N0ZW4sIHdpbnN0IGVuIGJyZWFrLWV2ZW4g4oCTIG9wZ2F2ZW4ucGRmYCB8CnwgNiB8IDIuMS4yIHwgYW50d29vcmRlbiB8IEEgfCBgMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xLjIgT3BicmVuZ3N0ZW4sIHdpbnN0IGVuIGJyZWFrLWV2ZW4vMi4xLjIgT3BicmVuZ3N0ZW4sIHdpbnN0IGVuIGJyZWFrLWV2ZW4g4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgNyB8IDIuMS4zIHwgcGFyYWdyYWFmIHwgQSB8IGAyLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuMyBNYXJnaW5hbGUga29zdGVuIGVuIG1hcmdpbmFsZSBvcGJyZW5nc3Rlbi8yLjEuMyBNYXJnaW5hbGUga29zdGVuIGVuIG1hcmdpbmFsZSBvcGJyZW5nc3RlbiDigJMgcGFyYWdyYWFmLnBkZmAgfAp8IDggfCAyLjEuMyB8IG9wZ2F2ZW4gfCBBIHwgYDIuMSBIb29mZHN0dWsgS29zdGVuIGVuIG9wYnJlbmdzdGVuLzIuMS4zIE1hcmdpbmFsZSBrb3N0ZW4gZW4gbWFyZ2luYWxlIG9wYnJlbmdzdGVuLzIuMS4zIE1hcmdpbmFsZSBrb3N0ZW4gZW4gbWFyZ2luYWxlIG9wYnJlbmdzdGVuIOKAkyBvcGdhdmVuLnBkZmAgfAp8IDkgfCAyLjEuMyB8IGFudHdvb3JkZW4gfCBBIHwgYDIuMSBIb29mZHN0dWsgS29zdGVuIGVuIG9wYnJlbmdzdGVuLzIuMS4zIE1hcmdpbmFsZSBrb3N0ZW4gZW4gbWFyZ2luYWxlIG9wYnJlbmdzdGVuLzIuMS4zIE1hcmdpbmFsZSBrb3N0ZW4gZW4gbWFyZ2luYWxlIG9wYnJlbmdzdGVuIOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDEwIHwgMi4xLjQgfCBvcGdhdmVuIHwgTCB8IGAyLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuNCBHZW1lbmdkZSBvcGdhdmVuLzIuMS40IEdlbWVuZ2RlIG9wZ2F2ZW4g4oCTIG9wZ2F2ZW4ucGRmYCB8CnwgMTEgfCAyLjEuNCB8IGFudHdvb3JkZW4gfCBMIHwgYDIuMSBIb29mZHN0dWsgS29zdGVuIGVuIG9wYnJlbmdzdGVuLzIuMS40IEdlbWVuZ2RlIG9wZ2F2ZW4vMi4xLjQgR2VtZW5nZGUgb3BnYXZlbiDigJMgYW50d29vcmRlbi5wZGZgIHwKfCAxMiB8IDIuMSB8IGhvb2Zkc3R1ayB8IEwgfCBgMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xIEtvc3RlbiBlbiBvcGJyZW5nc3RlbiDigJMgaG9vZmRzdHVrLnBkZmAgfAp8IDEzIHwgMi4xIHwgYW50d29vcmRlbiB8IEwgfCBgMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xIEtvc3RlbiBlbiBvcGJyZW5nc3RlbiDigJMgYW50d29vcmRlbi5wZGZgIHwKfCAxNCB8IDIuMi4xIHwgcGFyYWdyYWFmIHwgQSB8IGAyLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIuMSBQcmlqc2VsYXN0aWNpdGVpdC8yLjIuMSBQcmlqc2VsYXN0aWNpdGVpdCDigJMgcGFyYWdyYWFmLnBkZmAgfAp8IDE1IHwgMi4yLjEgfCBvcGdhdmVuIHwgQSB8IGAyLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIuMSBQcmlqc2VsYXN0aWNpdGVpdC8yLjIuMSBQcmlqc2VsYXN0aWNpdGVpdCDigJMgb3BnYXZlbi5wZGZgIHwKfCAxNiB8IDIuMi4xIHwgYW50d29vcmRlbiB8IEEgfCBgMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjEgUHJpanNlbGFzdGljaXRlaXQvMi4yLjEgUHJpanNlbGFzdGljaXRlaXQg4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgMTcgfCAyLjIuMiB8IHBhcmFncmFhZiB8IEEgfCBgMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjIgRWxhc3RpY2l0ZWl0IGVuIG9temV0LzIuMi4yIEVsYXN0aWNpdGVpdCBlbiBvbXpldCDigJMgcGFyYWdyYWFmLnBkZmAgfAp8IDE4IHwgMi4yLjIgfCBvcGdhdmVuIHwgQSB8IGAyLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIuMiBFbGFzdGljaXRlaXQgZW4gb216ZXQvMi4yLjIgRWxhc3RpY2l0ZWl0IGVuIG9temV0IOKAkyBvcGdhdmVuLnBkZmAgfAp8IDE5IHwgMi4yLjIgfCBhbnR3b29yZGVuIHwgQSB8IGAyLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIuMiBFbGFzdGljaXRlaXQgZW4gb216ZXQvMi4yLjIgRWxhc3RpY2l0ZWl0IGVuIG9temV0IOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDIwIHwgMi4yLjMgfCBwYXJhZ3JhYWYgfCBBIHwgYDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0LzIuMi4zIElua29tZW5zZWxhc3RpY2l0ZWl0IGVuIGtydWlzZWxpbmdzZSBlbGFzdGljaXRlaXQvMi4yLjMgSW5rb21lbnNlbGFzdGljaXRlaXQgZW4ga3J1aXNlbGluZ3NlIGVsYXN0aWNpdGVpdCDigJMgcGFyYWdyYWFmLnBkZmAgfAp8IDIxIHwgMi4yLjMgfCBvcGdhdmVuIHwgQSB8IGAyLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIuMyBJbmtvbWVuc2VsYXN0aWNpdGVpdCBlbiBrcnVpc2VsaW5nc2UgZWxhc3RpY2l0ZWl0LzIuMi4zIElua29tZW5zZWxhc3RpY2l0ZWl0IGVuIGtydWlzZWxpbmdzZSBlbGFzdGljaXRlaXQg4oCTIG9wZ2F2ZW4ucGRmYCB8CnwgMjIgfCAyLjIuMyB8IGFudHdvb3JkZW4gfCBBIHwgYDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0LzIuMi4zIElua29tZW5zZWxhc3RpY2l0ZWl0IGVuIGtydWlzZWxpbmdzZSBlbGFzdGljaXRlaXQvMi4yLjMgSW5rb21lbnNlbGFzdGljaXRlaXQgZW4ga3J1aXNlbGluZ3NlIGVsYXN0aWNpdGVpdCDigJMgYW50d29vcmRlbi5wZGZgIHwKfCAyMyB8IDIuMi40IHwgb3BnYXZlbiB8IEEgfCBgMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjQgR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQvMi4yLjQgR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQg4oCTIG9wZ2F2ZW4ucGRmYCB8CnwgMjQgfCAyLjIuNCB8IGFudHdvb3JkZW4gfCBBIHwgYDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0LzIuMi40IEdlbWVuZ2RlIG9wZ2F2ZW4gZWxhc3RpY2l0ZWl0LzIuMi40IEdlbWVuZ2RlIG9wZ2F2ZW4gZWxhc3RpY2l0ZWl0IOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDI1IHwgMi4yIHwgaG9vZmRzdHVrIHwgTCB8IGAyLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIgRWxhc3RpY2l0ZWl0IOKAkyBob29mZHN0dWsucGRmYCB8CnwgMjYgfCAyLjIgfCBhbnR3b29yZGVuIHwgTCB8IGAyLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIgRWxhc3RpY2l0ZWl0IOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDI3IHwgMi4zLjEgfCBwYXJhZ3JhYWYgfCBBIHwgYDIuMyBIb29mZHN0dWsgU3VycGx1cyBlbiB3ZWx2YWFydC8yLjMuMSBDb25zdW1lbnRlbnN1cnBsdXMvMi4zLjEgQ29uc3VtZW50ZW5zdXJwbHVzIOKAkyBwYXJhZ3JhYWYucGRmYCB8CnwgMjggfCAyLjMuMSB8IG9wZ2F2ZW4gfCBBIHwgYDIuMyBIb29mZHN0dWsgU3VycGx1cyBlbiB3ZWx2YWFydC8yLjMuMSBDb25zdW1lbnRlbnN1cnBsdXMvMi4zLjEgQ29uc3VtZW50ZW5zdXJwbHVzIOKAkyBvcGdhdmVuLnBkZmAgfAp8IDI5IHwgMi4zLjEgfCBhbnR3b29yZGVuIHwgQSB8IGAyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zLjEgQ29uc3VtZW50ZW5zdXJwbHVzLzIuMy4xIENvbnN1bWVudGVuc3VycGx1cyDigJMgYW50d29vcmRlbi5wZGZgIHwKfCAzMCB8IDIuMy4yIHwgcGFyYWdyYWFmIHwgUCB8IGAyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zLjIgUHJvZHVjZW50ZW5zdXJwbHVzIGVuIHRvdGFhbCBzdXJwbHVzLzIuMy4yIFByb2R1Y2VudGVuc3VycGx1cyBlbiB0b3RhYWwgc3VycGx1cyDigJMgcGFyYWdyYWFmLnBkZmAgfAp8IDMxIHwgMi4zLjIgfCBvcGdhdmVuIHwgUCB8IGAyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zLjIgUHJvZHVjZW50ZW5zdXJwbHVzIGVuIHRvdGFhbCBzdXJwbHVzLzIuMy4yIFByb2R1Y2VudGVuc3VycGx1cyBlbiB0b3RhYWwgc3VycGx1cyDigJMgb3BnYXZlbi5wZGZgIHwKfCAzMiB8IDIuMy4yIHwgYW50d29vcmRlbiB8IFAgfCBgMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy4yIFByb2R1Y2VudGVuc3VycGx1cyBlbiB0b3RhYWwgc3VycGx1cy8yLjMuMiBQcm9kdWNlbnRlbnN1cnBsdXMgZW4gdG90YWFsIHN1cnBsdXMg4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgMzMgfCAyLjMuMyB8IHBhcmFncmFhZiB8IFAgfCBgMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy4zIFBhcmV0by1lZmZpY2llbnRpZSBlbiB3ZWx2YWFydHN2ZXJsaWVzLzIuMy4zIFBhcmV0by1lZmZpY2llbnRpZSBlbiB3ZWx2YWFydHN2ZXJsaWVzIOKAkyBwYXJhZ3JhYWYucGRmYCB8CnwgMzQgfCAyLjMuMyB8IG9wZ2F2ZW4gfCBQIHwgYDIuMyBIb29mZHN0dWsgU3VycGx1cyBlbiB3ZWx2YWFydC8yLjMuMyBQYXJldG8tZWZmaWNpZW50aWUgZW4gd2VsdmFhcnRzdmVybGllcy8yLjMuMyBQYXJldG8tZWZmaWNpZW50aWUgZW4gd2VsdmFhcnRzdmVybGllcyDigJMgb3BnYXZlbi5wZGZgIHwKfCAzNSB8IDIuMy4zIHwgYW50d29vcmRlbiB8IFAgfCBgMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy4zIFBhcmV0by1lZmZpY2llbnRpZSBlbiB3ZWx2YWFydHN2ZXJsaWVzLzIuMy4zIFBhcmV0by1lZmZpY2llbnRpZSBlbiB3ZWx2YWFydHN2ZXJsaWVzIOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDM2IHwgMi4zLjQgfCBvcGdhdmVuIHwgUCB8IGAyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zLjQgR2VtZW5nZGUgb3BnYXZlbiBzdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy40IEdlbWVuZ2RlIG9wZ2F2ZW4gc3VycGx1cyBlbiB3ZWx2YWFydCDigJMgb3BnYXZlbi5wZGZgIHwKfCAzNyB8IDIuMy40IHwgYW50d29vcmRlbiB8IFAgfCBgMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy40IEdlbWVuZ2RlIG9wZ2F2ZW4gc3VycGx1cyBlbiB3ZWx2YWFydC8yLjMuNCBHZW1lbmdkZSBvcGdhdmVuIHN1cnBsdXMgZW4gd2VsdmFhcnQg4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgMzggfCAyLjMgfCBob29mZHN0dWsgfCBQIHwgYDIuMyBIb29mZHN0dWsgU3VycGx1cyBlbiB3ZWx2YWFydC8yLjMgU3VycGx1cyBlbiB3ZWx2YWFydCDigJMgaG9vZmRzdHVrLnBkZmAgfAp8IDM5IHwgMi4zIHwgYW50d29vcmRlbiB8IFAgfCBgMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMyBTdXJwbHVzIGVuIHdlbHZhYXJ0IOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDQwIHwgYm9vayB8IGJvZWsgfCBQIHwgYEJvZWsgMiBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1cyDigJMgYm9lay5wZGZgIHwKfCA0MSB8IGJvb2sgfCBhbnR3b29yZGVuIHwgUCB8IGBCb2VrIDIgS29zdGVuLCBvcGJyZW5nc3RlbiwgZWxhc3RpY2l0ZWl0IGVuIHN1cnBsdXMg4oCTIGFudHdvb3JkZW4ucGRmYCB8CgojIyBFeGFjdCBhY2NlcHRlZCBhbmQgY2FuZGlkYXRlIFBERnMgYXQgdGhpcyBjaGVja3BvaW50CgpUaGUgaGFzaGVzIGJlbG93IHdlcmUgZnJlc2hseSByZWNvbXB1dGVkIGZyb20gdGhlIGludGVncmF0ZWQgcm9vdCBwYWlyLgpBbGwgY29ycmVzcG9uZGluZyBpbmRlcGVuZGVudCByZXZpZXcvUUMvaGFuZG9mZiByZWNvcmRzIHJlbWFpbiByZXF1aXJlZDsKaGFzaGVzIGFsb25lIGFyZSBub3Qgc3R1ZGVudC1xdWFsaXR5IGFjY2VwdGFuY2UuCgp8IElEIC8gZWRpdGlvbiB8IFJhdyBQREYgU0hBLTI1NiB8IEN1cnJlbnQgcmV2aXNpb24gLyBnYXRlIHwKfC0tLXwtLS18LS0tfAp8IDIuMS4xIC8gcGFyYWdyYWFmIHwgYDk4MzdlM2E4NWYzMTI5YTUzMDlhMzZiMTdmZDEwMzA3MDJiYTkyZmM3ZWY0NjRhZjYwOWNiODc4ZTRkMmY4YjBgIHwgUjUgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBjdXJyZW50IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjEuMSAvIG9wZ2F2ZW4gfCBgOTczMjk0MTViYWNjMTUwNjc1YTMyN2FkMzE0NTViMjViOGU5ZTFiMDMwMTJlZjZiNjVkYWIxMGFiMWYwMjk1M2AgfCBSNSBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGN1cnJlbnQgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMS4xIC8gYW50d29vcmRlbiB8IGA0OThiOWE4NjNlZWY5YzBmZWVmZDUwZThhNTBlNzJhYTQxYzYyNmNhYWNhNzlmMGI5ODI2MWI4YjMxMDRlNWNlYCB8IFI1IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgY3VycmVudCByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4xLjIgLyBwYXJhZ3JhYWYgfCBgZTk0ZDQyZjY2YWI5OTY2YTNhMDI0Y2ZlZjA2MWMyMDg0ZmNjMWUyYTZlZjllNjFlNTBjNjk5YzkxNTVjZTdhMmAgfCBSNyBjdXJyZW50IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMS4yIC8gb3BnYXZlbiB8IGA5NGViZTVkMzUyMDdmNmM2MDVjYTI5NGE5ZTViZGNjZmE4YzFhMTBlNjcxNzk1NWUyMWFiYjM2MDZhNjA0MDZhYCB8IFI3IGN1cnJlbnQgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4xLjIgLyBhbnR3b29yZGVuIHwgYGQ1NWYxZGE2NjcyM2NkNmY5MzJjYmYwNzkzY2U3OWQ4ZDQxODhkMmQ5MDcyNDRmZDQwY2M2ZjZmYmFkNWFjOTBgIHwgUjcgY3VycmVudCBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjIuMSAvIHBhcmFncmFhZiB8IGA5OGJmNDkyM2I0ZTNiOGU0OWZhM2I5ZDFiN2RhZjcxMzkyYzZjNzZlZjhjZWE2M2FhYjEyYzQ0NzQ5Y2RhMWE2YCB8IFI4IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgY3VycmVudCByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4yLjEgLyBvcGdhdmVuIHwgYGE4MTE5Y2M3NjljOGY0ZDkxYTBkNDVjOWFiMmYyNWFiYzM4NzVlNTc4MzVkMTNjMDU2YWRmNmQzNWM2Mjk3YWZgIHwgUjggaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBjdXJyZW50IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjIuMSAvIGFudHdvb3JkZW4gfCBgZDRhN2MxMzlkNDkyNzZlODBjMjNmNGVkYTFjZmFiNzg0MWQwNjNiMjA0ZDdhOWJiNzBjZDIyNWE3OTZlNWI1ZGAgfCBSOCBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGN1cnJlbnQgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMS4zIC8gcGFyYWdyYWFmIHwgYDUzNDE3N2M4MjgwZWRkZDQ3ODVkY2UxNDkxODU2YzMzYzk2Y2Q2OThhZTU1OGI1MTM2YmRiMjA2YTc5YzcwMjRgIHwgUjcvUzEgY3VycmVudCBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjEuMyAvIG9wZ2F2ZW4gfCBgZDEyNDg3NjcxYmQyZjJjZmUzMjlmNTliYzljNDhjZmVjNWYwM2I4NzE2MjZjNWM0MDE2ZTg4YzI2NDZkNWYwNWAgfCBSNy9TMSBjdXJyZW50IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMS4zIC8gYW50d29vcmRlbiB8IGBkOTZmMjFjM2FiZWQ0NzFmM2ExMmRkMzE4Y2IxNDg1MDQzZmU1NTdlNGE0ZDRiNTQwMzQ0MDc3NjNhZTg3Nzg3YCB8IFI3L1MxIGN1cnJlbnQgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4yLjIgLyBwYXJhZ3JhYWYgfCBgMzZmZWI3ODczNjM3ZDBlNzFhZjUwZDQ5MzBhNzg5ZTNhOGFkYTZlYzc3Y2MzNzdiMDllMmFmMTc5YzNhZTk4Y2AgfCBSMTMgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBjdXJyZW50IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjIuMiAvIG9wZ2F2ZW4gfCBgMGEyNTFhNDk3M2IxYjliMGM0YWJjYTMwMzEwYTNlMGJkYTg4ODU1OGUwNzlmZDQ4OTUzMTlmYzQ5NjYxNDU1NWAgfCBSMTMgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBjdXJyZW50IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjIuMiAvIGFudHdvb3JkZW4gfCBgNjFjYmRlNjdlODE1NjUxNTAxMjgxODc1NzNhNzY2ZmZmYzliYzFkMDFmM2JkMjRjYmUzZGFjYjlkZGViNTJiMmAgfCBSMTMgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBjdXJyZW50IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjIuMyAvIHBhcmFncmFhZiB8IGBjYTI3ZjhiZDZjYmIzYjU5NmU1NjIxMjgwZDc2NjMxYzU1NjExMzRlOWU1M2MzNTU2NzI1YzMxM2ZkZjhhZWNiYCB8IEN1cnJlbnQgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4yLjMgLyBvcGdhdmVuIHwgYDUwY2YyYmJlYWExOThjNDVkMTgzMmNmNjExMmIwZjUwY2NiMGRmYzNkMTcxZjExMGIyYTA5ZjJiYjFmNjJmODBgIHwgQ3VycmVudCBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjIuMyAvIGFudHdvb3JkZW4gfCBgMzBjZDY4MjM1OGM1ZWViOGNiNmFmNTNjZjcyZTNlYmNmYzhmZWFmMTQ4NTZlM2Y2NzFhODUwZmU0NWRlMmUxMGAgfCBDdXJyZW50IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMi40IC8gb3BnYXZlbiB8IGA4ZWI4NGM2ZjEwYmI4MjQwMzNmZmVhNjY5YTA0YTM5M2JmNTdjMjViNDc1NzgwNTUyM2MwZjQ0YTE5YmFmYTBkYCB8IEN1cnJlbnQgcGFyYWdyYXBoL3NwZWNpYWxpc3Qvcm9vdCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGZ1bGxyMTQvdGhpbnIxNS9kaXJlY3RyMTYgYW5kIGhhbmRvZmYgY29tcGxldGUgfAp8IDIuMi40IC8gYW50d29vcmRlbiB8IGBmNmJhMzRmODlhZTBjNGE0YzBmMjZmMTJhZmIzOTJhZjUyNzFlMWVkZGUyOGJkZTY1ODU0YjkwMjg3ZGQ1N2Y4YCB8IEN1cnJlbnQgcGFyYWdyYXBoL3NwZWNpYWxpc3Qvcm9vdCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGZ1bGxyMTQvdGhpbnIxNS9kaXJlY3RyMTYgYW5kIGhhbmRvZmYgY29tcGxldGUgfAp8IDIuMy4xIC8gcGFyYWdyYWFmIHwgYDA4ODEwMmE5NzEzMGNjNjk5MDdiNzE0MmM4MTA1NmI2Zjk2NzJjYmZkMDlhODI4YzRjZWJhNWVhNGQ4MmNkNWVgIHwgSW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBjdXJyZW50IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjMuMSAvIG9wZ2F2ZW4gfCBgNGE3ZTg3ZTY0MWQ1NTgxMTdkMTU4ZjU3M2FhZjNiY2Q3ODM5NWIyMjQ5YWM3M2JmY2I4YTc0OTFiNmJlMzM0MWAgfCBJbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGN1cnJlbnQgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMy4xIC8gYW50d29vcmRlbiB8IGBkMTI5N2RlZTViMTgzNGU5OWQ2NjkxOWMyOTQ3N2ExOWY1MTY5ZmE2MmMzMDIzNTRkYjQzM2FlNDRkOGQ1ZjdiYCB8IEludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgY3VycmVudCByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CgpFYWNoIGFjY2VwdGVkIHBhcmFncmFwaCBoYXMgYDxpZD4tdGV4dGJvb2staGFuZG9mZi5tZGAgaW4gaXRzIGNhbm9uaWNhbCBmb2xkZXIsCmluY2x1ZGluZyBleGFjdCBzb3VyY2UvcmV2aWV3L3F1YWxpdHkgYmluZGluZ3MsIGNvbmNlcHRzLCBleGVyY2lzZXMsIHZpc3VhbHMgYW5kCmNhcnJ5LWZvcndhcmQgbGltaXRzLiBUaGUgNTggaGlzdG9yaWNhbGx5IGFjY2VwdGVkIHBhZ2VzICgzMSArIDI3KSBoYXZlIGFjdHVhbCByb290IGFuZCBpbmRlcGVuZGVudAppbnNwZWN0aW9uIGV2aWRlbmNlOyBuZXcgc2hvcnQtYWx0IGZpbmRpbmdzIGRvIG5vdCBlcmFzZSB0aG9zZSBvYnNlcnZhdGlvbnMsCmJ1dCByZXF1aXJlIGNvcnJlY3RlZCBNRC9IVE1ML2Fzc2V0IGxpbmVhZ2UgYW5kIHJlbmV3ZWQgcGFja2FnZSBnYXRlcy4gVGhlIHNlcGFyYXRlMTAzIHByb2R1Y2VkIHBhZ2VzICgzMCArIDIwICsgMjEgKyAzMikgaGF2ZQpyb290IG9ic2VydmF0aW9uL3JlYnVpbGQgcmVwb3J0czsgwqcyMjEvwqcyMjIgZXhhY3QgdHJhbnNmZXJzIGZyb20gcm9vdCdzIG93bgpwcmlvciB2aWV3cyBhcmUgZGlzdGluZ3Vpc2hlZCBmcm9tIGZyZXNoIGluZGVwZW5kZW50IGZ1bGwtcGFnZSBpbnNwZWN0aW9uLgrCpzIyMSBSOCBoYXMgaXRzIG93biBjdXJyZW50IGhhbmRvZmY7IHRoZSBlYXJsaWVyIFI2IGhhbmRvZmYgcmVtYWlucyBpbiBHaXQgaGlzdG9yeS4KU2VlMjIxLXJvb3QtYWNjZXB0YW5jZS1yOC5tZCBmb3IgZXhhY3QgY3VycmVudCBjYW5vbmljYWwgYW5kIGFkb3B0aW9uIGJpbmRpbmdzLgoKIyMgUmVtYWluaW5nIHByb2R1Y3Rpb24gYW5kIGFjY2VwdGFuY2UKCldhdmUtdHdvIMKnMjEzIG5vdyBoYXMgY3VycmVudCBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3MgYW5kIGEgY29tcGxldGUKaGFuZG9mZi4gwqcyMjQgbm93IGhhcyB0d28gaW50ZXJuYWxseSBhY2NlcHRlZCBBIFBERnMgd2l0aCBkaXN0aW5jdCBzcGVjaWFsaXN0CmFuZCByb290IGdhdGVzL2hhbmRvZmYgY29tcGxldGUuIMKnMjIzIGhhcyBjdXJyZW50IGluZGVwZW5kZW50IHBhcmFncmFwaCBhbmQKc3BlY2lhbGlzdCByZXZpZXcsIHJvb3QgYWNjZXB0YW5jZSBhbmQgaGFuZG9mZiB3aXRoIGZsYWdzLiDCpzIxMSBSNSBoYXMgY29tcGxldGUgY3VycmVudCBwYXJhZ3JhcGggcmV2aWV3LCBkaXN0aW5jdApzcGVjaWFsaXN0IFFDIGFuZCByb290IGFjY2VwdGFuY2UvaGFuZG9mZiB3aXRoIGZsYWdzOyBzZWUyMTEtcm9vdC1hY2NlcHRhbmNlLXI1Lm1kLgrCpzIxMiBSNyBoYXMgaXRzIGJvbnVzIGJsb2NrIGFuZCBjdXJyZW50IGluZGVwZW5kZW50IHBhcmFncmFwaCBQQVNTLiBDdXJyZW50CmRpc3RpbmN0IHNwZWNpYWxpc3QgUUMsIHJvb3QgcmVwcm9kdWN0aW9uL2FjY2VwdGFuY2UgYW5kIG5pbmUtc2VjdGlvbiBoYW5kb2ZmCmFyZSBjb21wbGV0ZSB3aXRoIGZsYWdzLiBJdHMgYWNjZXB0ZWQtcHJlcmVxdWlzaXRlIHN1Y2Nlc3Npb24gaXMgdmVyaWZpZWQgYW5kClMxIGxpbmVhZ2UgaXMgY2xvc2VkOyBoaXN0b3JpY2FsIGZhaWx1cmVzIGFuZCBQRU5ESU5HIHByb29mIHJlbWFpbiBwcmVzZXJ2ZWQuCsKnMjEzIFI3IGhhcyB0aGUgYm9udXMtY3JpdGVyaWEgY29ycmVjdGlvbiwgdW5jaGFuZ2VkIGluZGVwZW5kZW50IHBhcmFncmFwaCBQQVNTLAppbmRlcGVuZGVudGx5IHJldmlld2VkIGV4YWN0IGZpdmUtcGluIGFjY2VwdGVkMjExLzIxMiBzdWNjZXNzaW9uLCBkaXN0aW5jdApjdXJyZW50IHNwZWNpYWxpc3QgUUMgYW5kIGFjdHVhbCByb290IGZ1bGwvdGhpbi9kaXJlY3QgcmVwcm9kdWN0aW9uLiBNaW5pbWFsCnJvb3Qtb25seSBRQyBhY2NlcHRhbmNlIGFuZCBuaW5lLXNlY3Rpb24gaGFuZG9mZiBjbG9zZSB0aG9zZSBnYXRlcy4gSGlzdG9yaWNhbApwcmludC1vbmx5L3NvdXJjZSBwcm9vZiBhbmQgdGhlIG9sZDIxMiBndWFyZCBmYWlsdXJlIHJlbWFpbiB1bmNoYW5nZWQ7IHRoZXkgYXJlCm5vdCByZWxhYmVsZWQgYXMgZnVsbCBidWlsZHMuIFNlZTIxMy1RQy1ST09ULXJlc3VsdC5tZCBhbmQyMTMtUUMtUk9PVC1hY2NlcHRhbmNlLm1kLgrCpzIyMSBSOCdzIGludGVybmFsIHJldmlldy9RQy9oYW5kb2ZmIGdhdGVzIGFyZSBjb21wbGV0ZSwgd2l0aCB0aW1pbmcgZmxhZ3MuCkluZGVwZW5kZW50IMKnMjIzIHBhcmFncmFwaCBhbmQgY3VycmVudCBzcGVjaWFsaXN0IFBBU1MgV0lUSCBGTEFHUyBhcmUgYWRvcHRlZDsKcm9vdCBuYXRpdmUgdmFsaWRhdGlvbiwgYWNjZXB0YW5jZSBhbmQgaGFuZG9mZiBjbG9zZSB0aG9zZSBnYXRlcy4gwqcyMjIncyBmb3JtZXIgY2Fub25pY2FsIEZBSUwgaXMgc3VwZXJzZWRlZCBieSBhY3R1YWwgY3VycmVudCBSMTMKaW5kZXBlbmRlbnQgUEFTUyBjbG9zaW5nIGFuc3dlcjRiIG9yZGVyIGFuZCBDb25jZXJ0IHNob3J0IGFsdC4gRGlzdGluY3QgUUMKYW5kIHJvb3QgYWNjZXB0YW5jZS9oYW5kb2ZmIG5vdyBjbG9zZSwgd2l0aCB0aW1pbmcgZmxhZ3M7IHNlZTIyMi1yb290LWFjY2VwdGFuY2UtcjEzLm1kLgpIaXN0b3JpY2FsMjEyIHRlYWNoaW5nIGlzIHVuY2hhbmdlZCBieSBpdHMgbWV0YWRhdGEvYm9udXMgY29ycmVjdGlvbjsgaXRzIG5vdwphY2NlcHRlZCBjdXJyZW50IHBhY2thZ2UgbXVzdCBiZSBjb25zdW1lZCB0aHJvdWdoMjEzJ3MgZXhhY3Qgc3VjY2Vzc29yIHJlbGVhc2UKYW5kIGZpbmFsIGNvbWJpbmVkIGJvb2sgYXNzZW1ibHkuCsKnMjIzIGV4YWN0IGFjY2VwdGVkLWN1cnJlbnQtwqcyMjEgc3VjY2Vzc29yIGlucHV0IGJpbmRpbmcgbm93IGhhcyBpbmRlcGVuZGVudApkZWx0YSBQQVNTIGFuZCB1bmNoYW5nZWQgcm9vdCBmdWxsL3RoaW4vcHJpbnQgcHJvb2Y7IHNlZTIyMy1TMS1yb290LXJlc3VsdC5tZC4KSXRzIGN1cnJlbnQgc3BlY2lhbGlzdCBRQyBhbmQgcm9vdCBhY2NlcHRhbmNlL2hhbmRvZmYgbm93IHBhc3Mgd2l0aCBmbGFnczsKc2VlMjIzLXJvb3QtcWMtcmVzdWx0Lm1kIGFuZDIyMy1yb290LWFjY2VwdGFuY2UubWQuIEZpbmFsIGFnZ3JlZ2F0ZS9DSSBnYXRlcyByZW1haW4uCsKnMjE0IGZvbGxvd3MgYWNjZXB0ZWQgcHJlcmVxdWlzaXRlIHRlYWNoaW5nIGFuZCBoYXMgYSBzZXBhcmF0ZWx5IHB1Ymxpc2hlZCBhdXRob3IKY2FuZGlkYXRlIGF3YWl0aW5nIGRpc3RpbmN0IHJldmlldy9RQzsgaXQgaXMgbm90IHlldCBhZG9wdGVkIGludG8gdGhpcyBpbnZlbnRvcnkuCsKnMjI0J3MgY3VycmVudCBwYXJhZ3JhcGgvc3BlY2lhbGlzdCByZXZpZXdzLCByb290IHBvc2l0aXZlIG5hdGl2ZSByZXByb2R1Y3Rpb24sCmFjY2VwdGFuY2UgYW5kIGhhbmRvZmYgYXJlIGNvbXBsZXRlLiBDaGFwdGVyMi4yIHN0aWxsIHJlcXVpcmVzIGluZGVwZW5kZW50CmNvbnNpc3RlbmN5L2Zyb250IGNvcnJlY3Rpb24vcmVjaGVjayBhbmQgc2VwYXJhdGVseSByZXZpZXdlZCBhY2NlcHRlZCBpbnB1dHMsCnRoZW4gYWN0dWFsIGNoYXB0ZXIgcmVuZGVyaW5nIGFuZCByZXZpZXcuIMKnMjMxIGlzIGludGVybmFsbHkgYWNjZXB0ZWQKd2l0aCBmbGFncyBhbmQgY3VycmVudCBpbmRlcGVuZGVudCBwYXJhZ3JhcGggcmV2aWV3LCBzcGVjaWFsaXN0IFFDIGFuZCBoYW5kb2ZmOwrCpzIzMuKAk8KnMjM0IGFuZCBhbGwgYWdncmVnYXRlIG91dHB1dHMgcmVtYWluIHBlbmRpbmcgdGhlaXIgZGVwZW5kZW5jeS9wbGFuL3JldmlldwpnYXRlcy4gQm9vayBmcm9udCBzb3VyY2VzCmFsb25lIHBhc3NlZCBpbmRlcGVuZGVudCBSMjsgbm8gYmFjayBtYXR0ZXIsIGFjdHVhbCBib29rIG1hbmlmZXN0IG9yIGFzc2VtYmxlZApib29rIFBERiBoYXMgYmVlbiBhY2NlcHRlZC4gUHJlc2VydmUgcGFyYWdyYXBoL2Fuc3dlciBzZXBhcmF0aW9uIGFuZCBuZXZlcgphcHBlbmQgZHVwbGljYXRlIG9wZ2F2ZW4gdG8gYSBjb21wbGV0ZSBwYXJhZ3JhYWYgc291cmNlLgoKVXBkYXRlIHRoaXMgbWFuaWZlc3Qgb25seSBmcm9tIGV4YWN0IGFkb3B0ZWQgcGF5bG9hZC9wcm9vZiBldmlkZW5jZS4gRmluYWwKY2xvc3VyZSByZXF1aXJlcyBhbGwgNDEgYWNjZXB0ZWQgZmluYWwgUERGcyBwbHVzIHNvdXJjZS9hc3NldC9wcm9vZiBoYXNoZXMsCmluZGVwZW5kZW50IGZpbmlzaGVkIHZlcmlmaWNhdGlvbiBhbmQgbGVhZCByb3VuZHMsIHBhaXJlZCBjb21wYXRpYmlsaXR5L0NJIGFuZApub3JtYWwgcmVhZGluZXNzLiBDbGFzc3Jvb20gdGltaW5nL2F0dGFpbm1lbnQgYW5kIG9wdGlvbmFsIGN1cnJlbnQgSW5zcGVjdGllCm1hcHBpbmcgYXJlIG5vdCBhc3NlcnRlZC4gTm8gZnV0dXJlIG1lcmdlIGF1dGhvcml0eSBpcyBzdXBwbGllZC4KCiMjIEludmVudG9yeSBtZXRob2QgYW5kIGRpYWdub3N0aWMgY29ycmVjdGlvbgoKUmVhZC1vbmx5IEdpdCBgbHMtdHJlZSAtciAteiAtLW5hbWUtb25seWAgYXQgYmFzZWxpbmUvSEVBRCwgZXhhY3QgcGxhbm5lZC1wYXRoCm1lbWJlcnNoaXAsIGZpbGVzeXN0ZW0gcHJlc2VuY2UsIHJhdyBTSEEtMjU2IG9mIGFjY2VwdGVkL2NhbmRpZGF0ZSBQREZzIGFuZCBiYXNlbGluZS9IRUFECkdpdC1ibG9iIGNvbXBhcmlzb24gZm9yIGFsbCBsZWdhY3kgUERGcy4gQW4gaW5pdGlhbCBsaW5lLXNwbGl0IHByb2JlIGZhaWxlZCB0bwppbnRlcnByZXQgR2l0J3MgcXVvdGVkIFVuaWNvZGUgcGF0aHMgYW5kIGluY29ycmVjdGx5IGNvdW50ZWQgemVybyBiYXNlbGluZQpQREZzOyBpdCB3YXMgZGlzY2FyZGVkIGFuZCByZXBsYWNlZCB3aXRoIE5VTC1kZWxpbWl0ZWQgcGF0aHMgYmVmb3JlIHRoaXMgcmVjb3JkLgpUaGUgY29ycmVjdGVkIGhpc3RvcmljYWwgcHJlLcKnMjMxIGJhc2VsaW5lL2N1cnJlbnQgdHJhY2tlZCBjb3VudCB3YXMyNi4gVGhlCmN1cnJlbnQyMjQgcm9vdCBhY2NlcHRhbmNlIHJlZnJlc2ggY2hlY2tzNDEgdW5pcXVlIHBsYW5uZWQgcGF0aHMsMjkgcHJlc2VudCwgc2l4CmJhc2VsaW5lLWlkZW50aWNhbCBsZWdhY3kgUERGcywxMiBhYnNlbnQgYW5kIGFsbDIzIGFjY2VwdGVkIFBERiBoYXNoZXMuIEN1cnJlbnQKYWNjZXB0YW5jZSBuZXZlciBpbmhlcml0cyBhIGxlZ2FjeSBsYWJlbCB3aXRob3V0IGZyZXNoIGdhdGVzLiBObyBQREYgZmlsZXMgY2hhbmdlZApieSBpbnZlbnRvcnkgY2hlY2tzLgoKUG9zdC13cml0ZSBjaGVja3M6IHBsYW5uZWQvYWN0aXZlIHNwcmludCBidW5kbGUgUEFTUywgYXBwcm92ZWQtdXNlIGN1cnJlbnRuZXNzClBBU1MsIGR1cmFibGUgdHdlbHZlLXJlY29yZCBhdXRob3JpdHkgUEFTUywgNDEgbWFuaWZlc3Qgcm93cy91bmlxdWUgcGF0aHMgYW5kCmFsbCB0d2VsdmUgZnJlc2hseSBoYXNoZWQgdGFyZ2V0LXRyYWNlIGJpbmRpbmdzIFBBU1MsIHdoaXRlc3BhY2UgUEFTUy4gVGhlCmZpcnN0IHVuaXF1ZW5lc3Mgb25lLWxpbmVyIGxvc3QgYSBsaXRlcmFsIGJhY2t0aWNrIHRocm91Z2ggUG93ZXJTaGVsbCBlc2NhcGluZzsKaXRzIGZhaWx1cmUgd2FzIGNvcnJlY3RlZCB1c2luZyB0YWJsZS1jb2x1bW4gcGFyc2luZyBhbmQgcmVydW4gc3VjY2Vzc2Z1bGx5LgpObyBmYWlsZWQgcHJvYmUgaXMgdHJlYXRlZCBhcyBhY2NlcHRhbmNlIGFuZCBubyBjb21wbGV0ZS1idW5kbGUgY2xhaW0gaXMgbWFkZS4K"
+  },
+  "all_existing_PDFs": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.pdf",
+      "sha256": "9edc45ece7ab0be5b91b8f3217c5911777d55fcace21d128fa0d9b94803328c1"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf",
+      "sha256": "2550df96502178f03b2aa4026a40bae70394d95b5514b0f89a23506d6b77c8b5"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf",
+      "sha256": "498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
+      "sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
+      "sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+      "sha256": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
+      "sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+      "sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+      "sha256": "d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+      "sha256": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+      "sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+      "sha256": "7b4e156f807bd060d4e8dea748a2532e53fa98035f7d9310ec26961a202b7be7"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+      "sha256": "c0342c7b777d24f96c00cebcee4e55d079f0e33b0431ccc242be700589fb3acd"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – antwoorden.pdf",
+      "sha256": "14e98e8bb6de0d4864d8bf9dcb9fe6699da978a51acf1b3e6601ebaebf03776d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – hoofdstuk.pdf",
+      "sha256": "e4001a6a36ee48dc1610be359f656b8c9e84b7d5ee2c18ff4bfccaefcbaa25db"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf",
+      "sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf",
+      "sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf",
+      "sha256": "61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf",
+      "sha256": "0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf",
+      "sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf",
+      "sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf",
+      "sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+      "sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "sha256": "f6ba34f89ae0c4a4c0f26f12afb392af5271e1edde28bde65854b90287dd57f8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "sha256": "8eb84c6f10bb824033ffea669a04a393bf57c25b4757805523c0f44a19bafa0d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.pdf",
+      "sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.pdf",
+      "sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf",
+      "sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    }
+  ],
+  "gates": [
+    {
+      "name": "release",
+      "exit_code": 0
+    },
+    {
+      "name": "structural",
+      "exit_code": 0
+    },
+    {
+      "name": "production",
+      "exit_code": 0
+    },
+    {
+      "name": "specialist",
+      "exit_code": 0
+    },
+    {
+      "name": "durable",
+      "exit_code": 0
+    },
+    {
+      "name": "bundle",
+      "exit_code": 0
+    },
+    {
+      "name": "governance",
+      "exit_code": 0
+    }
+  ]
+}
