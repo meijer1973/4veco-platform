@@ -1,0 +1,33 @@
+{
+  "command": "node",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-gate.cjs",
+    "214"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "9c08a02814eee44763e3dfb313364ce2ca0bddbf",
+  "start": "2026-09-06T09:22:55.923Z",
+  "end": "2026-09-06T09:22:59.499Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "9c08a02814eee44763e3dfb313364ce2ca0bddbf",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-gate.cjs",
+      "sha256": "4f3c2ab8a5e877697952f7c951fdc712ff08d2f13c966a1ca86394690314fe5d",
+      "source_utf8": "'use strict';\n// Read-only full release/input gate. Native authors must additionally gate current action/durable authority.\nconst fs=require('fs'),path=require('path'),cp=require('child_process'),a=require('assert/strict'),crypto=require('crypto');\nconst P=path.resolve(__dirname,'../..'),L=path.resolve(P,'../4veco-lessen'),N='reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-';\nconst C='reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-',R='reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-';\nconst CP='9c6d8a7c1ee98b91a67f6d560beb8534f5dbde56',RP='8fc63fe32f030371195f022971a2d5d42ddedeb8';\nconst pins={214:'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6',232:'9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'};\nconst candidatePins={214:'8adf329ff71e912335baa11d1e78a28afb8eb807de52306ffd867e35c7f0f376',232:'113d3321a3b859d582a4febf6ff71cd259111d6c5d233047113b1455f6bcc5dc'};\nconst reviewPins={'report.md':'373adbb84185500dfc1c17d27976e0eb7d0ecfb5157bb24ccfe32849415489ed','independent.json':'8dadf8d9f0c233e1fa5201984419eb8e66bb077c32c6177befb844a2bd984491','lineage.json':'fdbe250068cc81235c5b3217171a66de5f0412c6350992a24405dd4beb557d40'};\nconst hash=b=>crypto.createHash('sha256').update(b).digest('hex'),readP=n=>fs.readFileSync(path.join(P,n));\nconst blob=(commit,n)=>cp.execFileSync('git',['show',commit+':'+n],{cwd:P,maxBuffer:128*1024*1024});\nfunction verifyRelease(key,readers={},onSuccess=()=>{}){\n a(['214','232'].includes(key),'unknown requested paragraph');a.match(pins[key]||'',/^[a-f0-9]{64}$/,'release not pinned');\n const readPlatform=readers.platform||readP,readInput=readers.input||(r=>fs.readFileSync(path.join(r.repository==='4veco-platform'?P:L,r.path)));\n const bytes=(readers.release||readP)(N+key+'-release.json');a.equal(hash(bytes),pins[key],'whole immutable root release');const grant=JSON.parse(bytes);\n a.equal(grant.decision,'RELEASED_FOR_GATED_PART_A_AUTHORING');a.equal(grant.accountable_actor,'codex-root');a.equal(grant.paragraph,key==='214'?'2.1.4':'2.3.2');a.equal(grant.schema_version,1);a.equal(grant.future_pr_merges_authorized,false);a.equal(grant.companion_commissioned,false);a.equal(grant.student_release,false);\n a.equal(grant.candidate.commit,CP);a.equal(grant.candidate.path,C+key+'-inputs.json');a.equal(grant.candidate.raw_sha256,candidatePins[key]);a.equal(grant.independent_review.commit,RP);a.equal(grant.independent_review.actor,'paragraph_224_builder');a.equal(grant.independent_review.verdict,'INPUT PASS');\n for(const[n,h]of Object.entries(reviewPins)){const b=readPlatform(R+n);a.equal(hash(b),h,n);a(b.equals(blob(RP,R+n)),n);a.equal(grant.independent_review.files.find(r=>r.path===R+n)?.raw_sha256,h,n);}\n const checker=readPlatform(C+'check.cjs');a.equal(hash(checker),'927a4d012404b4e00cabfe793e9db45e22fae0660b968a3e97b6c007851c4f4b');a(checker.equals(blob(CP,C+'check.cjs')));a(readP(C+'check.cjs').equals(checker),'loaded checker differs from verified bytes');\n const candidate=readPlatform(C+key+'-inputs.json');a.equal(hash(candidate),candidatePins[key]);a(candidate.equals(blob(CP,C+key+'-inputs.json')));\n const mod=require('./BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check.cjs');let reached=0;const manifest=mod.verifyManifest(candidate,key,readInput,()=>reached++);a.equal(reached,1);\n a.deepEqual(grant.output_contract,manifest.output_contract);a.deepEqual(grant.target,manifest.target);a.deepEqual(grant.plan,manifest.plan);a.deepEqual(grant.timing,manifest.timing);a.equal(grant.actual_input_count,manifest.inputs.length);\n onSuccess();return {grant,manifest};\n}\nmodule.exports={verifyRelease,pins,candidatePins,reviewPins,hash};\nif(require.main===module){const key=process.argv[2],r=verifyRelease(key);console.log(JSON.stringify({status:'PASS',paragraph:r.grant.paragraph,release_sha256:pins[key],candidate_sha256:candidatePins[key],inputs:r.manifest.inputs.length,native_effects:0,permission:'Gated Part A authoring; current approved action/durable authority and all future review/acceptance gates still mandatory'}));}\n"
+    }
+  ],
+  "exit_code": 0,
+  "stdout": "{\"status\":\"PASS\",\"paragraph\":\"2.1.4\",\"release_sha256\":\"f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6\",\"candidate_sha256\":\"8adf329ff71e912335baa11d1e78a28afb8eb807de52306ffd867e35c7f0f376\",\"inputs\":48,\"native_effects\":0,\"permission\":\"Gated Part A authoring; current approved action/durable authority and all future review/acceptance gates still mandatory\"}\n",
+  "stderr": "",
+  "stdout_base64": "eyJzdGF0dXMiOiJQQVNTIiwicGFyYWdyYXBoIjoiMi4xLjQiLCJyZWxlYXNlX3NoYTI1NiI6ImY3NzUyYWEzMTRmNmRiMGNkOGZkMmViMDc2NTQ3Yjk2ZjA2MjQ5ODZlOTY1NTMzOTVlNzY1YWRlYjkzZGVhZDYiLCJjYW5kaWRhdGVfc2hhMjU2IjoiOGFkZjMyOWZmNzFlOTEyMzM1YmFhMTFkMWU3OGEyOGFmYjhlYjgwN2RlNTIzMDZmZmQ4NjdlMzVjN2YwZjM3NiIsImlucHV0cyI6NDgsIm5hdGl2ZV9lZmZlY3RzIjowLCJwZXJtaXNzaW9uIjoiR2F0ZWQgUGFydCBBIGF1dGhvcmluZzsgY3VycmVudCBhcHByb3ZlZCBhY3Rpb24vZHVyYWJsZSBhdXRob3JpdHkgYW5kIGFsbCBmdXR1cmUgcmV2aWV3L2FjY2VwdGFuY2UgZ2F0ZXMgc3RpbGwgbWFuZGF0b3J5In0K",
+  "stderr_base64": ""
+}
