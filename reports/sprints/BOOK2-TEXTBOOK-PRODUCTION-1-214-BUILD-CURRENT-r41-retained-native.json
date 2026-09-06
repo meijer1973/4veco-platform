@@ -1,0 +1,97 @@
+{
+  "revision": "r41",
+  "rows": [
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.md",
+      "bytes": 11647,
+      "sha256": "9920cb3cffc763ecc1b23a87bec1bdd0e34457da1d8401dc8e62950e77fc587c"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.html",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.html",
+      "bytes": 364917,
+      "sha256": "41988b8d258ac850ed76ea33f169c469ded072c5d4b08017b70f7349f53f402b"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.pdf",
+      "bytes": 370921,
+      "sha256": "47aaa2e8e5b3e82e278f5f501a4e05f8a2138366d4169f0eec72a64590f255fa"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.md",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.md",
+      "bytes": 18880,
+      "sha256": "eaa6842625d7e06237dcb09f510913f8f4b5f92c8bfb552611e62ddcef7a74e9"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.html",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.html",
+      "bytes": 394759,
+      "sha256": "653efd9c431f5fffa9b3d8529f2e3e6026a010848c6a80c8a07715f46cc83685"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.pdf",
+      "bytes": 410653,
+      "sha256": "46e10136823452f229b513b3566af55fb96a5374bf33dd70c590369b24228975"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.svg",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_1.svg",
+      "bytes": 9876,
+      "sha256": "cb3b76c834c4c48d7e678f508b4498f891e7d3a4c3befa8cd003bf2abd458c4f"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.png",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_1.png",
+      "bytes": 127522,
+      "sha256": "fe36938140479f73c50a5d7c5492c6bcba6d8ccd713f436bd06ca1583500924a"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.svg",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_2.svg",
+      "bytes": 11609,
+      "sha256": "6a5f1b35a27c217fff79669e1c1355ab75a146e758524544b6e4e93f4cbeb719"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.png",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_2.png",
+      "bytes": 141681,
+      "sha256": "00a8bd79a4ab16c2c651737cfb3657cf6c4e7abdaf510796b346254cde36c770"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.svg",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_3.svg",
+      "bytes": 9286,
+      "sha256": "fea25c4f585f8e9f6d921cc16bad7f44596fc8d70152a20491922e823a4b4575"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.png",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_3.png",
+      "bytes": 134515,
+      "sha256": "f461d63a1e1d16f9429b9d1c5ff0be00934b28d0f297ec21ca41fa6ef9ed4454"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.svg",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_4.svg",
+      "bytes": 9988,
+      "sha256": "49acc2d42a54859ce21d39296e096e43211acc881ce6242e69577cf9a542d9f2"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.png",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_4.png",
+      "bytes": 136465,
+      "sha256": "8bf650a24731153b0c60b4326551344360620f5af4e326dd836dcad8aa1d5229"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/build_pdf.py",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/build_pdf.py",
+      "bytes": 802,
+      "sha256": "7ff2ed21b5f8f5f12fd7a4bd6ff3f7332a74a03e26a9ed45576aa614160640f0"
+    }
+  ],
+  "status": "INTERMEDIATE_NATIVE_BYTES_RETAINED_NOT_VISUAL_ACCEPTANCE",
+  "reason": "All source/output and image bytes retained before source-level layout revision; no restore-copy to canonical output."
+}

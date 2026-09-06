@@ -177,6 +177,19 @@ class SourceTests(unittest.TestCase):
                     with self.subTest(figure=name,labels=[text,other]):
                         self.assertFalse(a[0]<c[2]+4 and a[2]+4>c[0] and a[1]<c[3]+4 and a[3]+4>c[1])
 
+    def test_curves_and_leaders_clear_actual_whole_glyphs(self):
+        from PIL import ImageFont
+        font=ImageFont.truetype("C:/Windows/Fonts/arial.ttf",40)
+        check=b.load_owned("check_render")
+        for name,source in self.assets.items():
+            root=ET.fromstring(source);boxes=[]
+            for t in root.findall("s:text",NS):
+                anchor={"start":"ls","middle":"ms","end":"rs"}[t.attrib.get("text-anchor","start")]
+                left,top,right,bottom=font.getbbox(t.text,anchor=anchor)
+                x,y=float(t.attrib["x"]),float(t.attrib["y"])
+                boxes.append({"text":t.text,"ink_box":[x+left,y+top,x+right,y+bottom]})
+            with self.subTest(figure=name):self.assertEqual(check.line_text_collisions(root,boxes),[])
+
 
 class NativeEntryNegativeTests(unittest.TestCase):
     def test_immutable_real_missing_forged_and_synchronized_all_inputs_and_modules(self):
