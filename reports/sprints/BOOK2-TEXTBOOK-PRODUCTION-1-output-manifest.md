@@ -5,8 +5,8 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform §231 native verification `ea154615122f13710eb821b479d06259ab52e8d3`,
-lessons `3199ff2ae89b39a472b48ee0818de5b1c191063a`, including the exact
+Snapshot: platform §212 native verification `14a62363855a4be3559288f1d962ac242c77c30d`,
+lessons `42996c60b4a93843dfe8488b8e5a3ea704871667`, including the exact
 root-only current211 acceptance/handoff at5e14325 in211-root-acceptance-r5.md.
 Current221 R8 and222 R13 acceptances remain unchanged.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
@@ -16,11 +16,11 @@ All paths below are relative to the lesson book root
 ## Counts and evidence rules
 
 Expected: 27 theory + 6 consolidation + 6 chapter + 2 book = **41 PDFs**.
-At this checkpoint: **4 internally gate-closed current paragraph packages**:
-12 accepted-with-flags PDFs,9 adopted candidate PDFs,8 legacy unaccepted and12
+At this checkpoint: **5 internally gate-closed current paragraph packages**:
+15 accepted-with-flags PDFs,6 adopted candidate PDFs,8 legacy unaccepted and12
 absent. §211 now has current R5 independent paragraph review, distinct specialist
-QC and root acceptance/handoff. §212 retains historical print/content acceptance
-but its current specialist/root gates remain; its three PDFs stay C. Physical
+QC and root acceptance/handoff. §212 now has current distinct specialist QC,
+root acceptance, closed S1 lineage and renewed handoff; its three PDFs are A. Physical
 root presence is 29, not 29 accepted. All eight legacy PDFs remain Git-blob-
 identical to the baseline. Separate in-progress worktrees do not count here.
 
@@ -43,10 +43,13 @@ distinct specialist QC pass; root acceptance/handoff are complete. Its inherited
 the native211 builder has no ZIP output contract. It is not a current student
 deliverable. §212 R7 adds its three bonus criteria and is adopted/root-rebuilt:
 only answer page6 changes, the other26 pages are exact, and34artifact full/print
-reproduction passes. Its current independent paragraph review passes; distinct
-specialist/root gates remain. Its two accepted211 input pins now have independent
+reproduction passes. Its current independent paragraph review and distinct
+specialist/root gates pass with retained flags. Its two accepted211 input pins now have independent
 S1 delta PASS and root fullr16/thinr17/printr18 reproduction:34 native files,
-40 folder files and27 raw/pixel pages unchanged. See212-S1-root-result.md.
+40 folder files and27 raw/pixel pages unchanged. Current specialist76 personal
+color/grayscale views pass. Root fullr24/thinr25/printr26 reproduce34 native files
+and81 raw/RGB page comparisons; both profiles/currentness/durable/active-bundle
+pass again after acceptance. See212-root-acceptance.md and212-S1-root-result.md.
 Their root reports distinguish actual source/page/rebuild checks from remaining
 independent paragraph, specialist and handoff gates. See review-corrections.md.
 
@@ -87,9 +90,9 @@ No output is silently accepted through an older PASS or reviewed_final label.
 | 1 | 2.1.1 | paragraaf | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf` |
 | 2 | 2.1.1 | opgaven | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf` |
 | 3 | 2.1.1 | antwoorden | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf` |
-| 4 | 2.1.2 | paragraaf | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf` |
-| 5 | 2.1.2 | opgaven | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf` |
-| 6 | 2.1.2 | antwoorden | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf` |
+| 4 | 2.1.2 | paragraaf | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf` |
+| 5 | 2.1.2 | opgaven | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf` |
+| 6 | 2.1.2 | antwoorden | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf` |
 | 7 | 2.1.3 | paragraaf | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf` |
 | 8 | 2.1.3 | opgaven | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf` |
 | 9 | 2.1.3 | antwoorden | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf` |
@@ -137,9 +140,9 @@ hashes alone are not student-quality acceptance.
 | 2.1.1 / paragraaf | `9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0` | R5 internal acceptance with flags; current review/QC/handoff complete |
 | 2.1.1 / opgaven | `97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953` | R5 internal acceptance with flags; current review/QC/handoff complete |
 | 2.1.1 / antwoorden | `498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce` | R5 internal acceptance with flags; current review/QC/handoff complete |
-| 2.1.2 / paragraaf | `e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2` | R7 paragraph and S1 delta PASS; QC/root gates pending |
-| 2.1.2 / opgaven | `94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a` | R7 paragraph and S1 delta PASS; QC/root gates pending |
-| 2.1.2 / antwoorden | `d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90` | R7 paragraph and S1 delta PASS; QC/root gates pending |
+| 2.1.2 / paragraaf | `e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2` | R7 current internal acceptance with flags; review/QC/handoff complete |
+| 2.1.2 / opgaven | `94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a` | R7 current internal acceptance with flags; review/QC/handoff complete |
+| 2.1.2 / antwoorden | `d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90` | R7 current internal acceptance with flags; review/QC/handoff complete |
 | 2.2.1 / paragraaf | `98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6` | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.1 / opgaven | `a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af` | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.1 / antwoorden | `d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d` | R8 internal acceptance with flags; current review/QC/handoff complete |
@@ -171,10 +174,10 @@ See221-root-acceptance-r8.md for exact current canonical and adoption bindings.
 Wave-two §213 and §223 outputs remain adopted candidates C; their gate
 closure remains pending. §211 R5 has complete current paragraph review, distinct
 specialist QC and root acceptance/handoff with flags; see211-root-acceptance-r5.md.
-§212 R7 has its bonus block and current independent paragraph PASS; distinct
-specialist/root gates remain. Its accepted-prerequisite succession now has
-independent delta and current root reproduction proof; both metadata corrections
-are root-adopted/rebuilt. Old212 QC/handoff remain stale until their own renewal.
+§212 R7 has its bonus block and current independent paragraph PASS. Current
+distinct specialist QC, root reproduction/acceptance and nine-section handoff
+are complete with flags. Its accepted-prerequisite succession is verified and
+S1 lineage is closed; historical failures and PENDING proof remain preserved.
 §213 R7 has the bonus-criteria correction and current independent paragraph PASS;
 distinct QC/root acceptance and exact accepted
 prerequisite succession remain. Current root print-only/source/render proof is
@@ -184,8 +187,9 @@ Independent §223 R3 paragraph PASS WITH FLAGS is adopted; specialist and handof
 gates remain. §222's former canonical FAIL is superseded by actual current R13
 independent PASS closing answer4b order and Concert short alt. Distinct QC
 and root acceptance/handoff now close, with timing flags; see222-root-acceptance-r13.md.
-Historical212 teaching is unchanged by its metadata/bonus correction; root must
-link its eventual newly accepted package before final combined book closure.
+Historical212 teaching is unchanged by its metadata/bonus correction; its now
+accepted current package must be consumed through213's exact successor release
+and final combined book assembly.
 §223 exact accepted-current-§221 successor input binding now has independent
 delta PASS and unchanged root full/thin/print proof; see223-S1-root-result.md.
 Its current specialist QC and root acceptance/handoff remain separate gates.
@@ -211,8 +215,8 @@ Git-blob comparison for all legacy PDFs. An initial line-split probe failed to
 interpret Git's quoted Unicode paths and incorrectly counted zero baseline
 PDFs; it was discarded and replaced with NUL-delimited paths before this record.
 The corrected historical pre-§231 baseline/current tracked count was26. The
-§231 refresh checks41 unique planned paths,29 present, eight baseline-identical
-legacy PDFs,12 absent and all21 accepted/candidate PDF hashes. Current candidate status
+current212 acceptance refresh checks41 unique planned paths,29 present, eight
+baseline-identical legacy PDFs,12 absent and all21 accepted/candidate PDF hashes. Current candidate status
 does not inherit a legacy acceptance label. No files were changed
 by inventory checks.
 

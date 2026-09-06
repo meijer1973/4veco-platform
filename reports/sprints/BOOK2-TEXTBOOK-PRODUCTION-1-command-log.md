@@ -17085,3 +17085,114 @@ final-integrity.json 5d38a8227b5b5c0ef2cc61ae4ce91f6335eef2b1cda67d2d1f15cbc332e
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:59:35.807Z`
+- finished_at: `2026-09-06T02:59:37.201Z`
+- duration_ms: `1394`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `d767e1481561df269077f74b20652699a67b2f66104dfcfac903aa712274ad1a`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+node:fs:559
+  return binding.open(
+                 ^
+
+Error: ENOENT: no such file or directory, open 'C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.2 Opbrengsten, winst en break-even\0'
+    at Object.openSync (node:fs:559:18)
+    at Object.readFileSync (node:fs:443:35)
+    at raw (C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.js:8:82)
+    at Object.<anonymous> (C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.js:42:65)
+    at Module._compile (node:internal/modules/cjs/loader:1804:14)
+    at Object..js (node:internal/modules/cjs/loader:1936:10)
+    at Module.load (node:internal/modules/cjs/loader:1525:32)
+    at Module._load (node:internal/modules/cjs/loader:1327:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\0'
+}
+
+Node.js v24.13.1
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:59:50.470Z`
+- finished_at: `2026-09-06T02:59:59.684Z`
+- duration_ms: `9214`
+- exit_code: `0`
+- stdout_sha256: `66ae419e68783bab0bba585b4b0982f6555dc2e8636616550cfaf28d504cf326`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "verification_commit": "14a62363855a4be3559288f1d962ac242c77c30d",
+  "native_files_unchanged": 34,
+  "old_other_paragraph_files_unchanged": 38,
+  "old_other_lesson_files_unchanged": 1900,
+  "root_only_changed_fields": [
+    "root_validation",
+    "root_acceptance",
+    "handoff_renewal",
+    "production_ready_with_flags",
+    "current_succession.root_lineage_flag_closure"
+  ],
+  "specialist_other_fields_unchanged": true,
+  "original_imports_unchanged": 270,
+  "historical212files_unchanged": 771,
+  "committed_root_evidence_unchanged": 125,
+  "quality_ref_raw_sha256": "73bd2a2447b38c9d95cbc3bd69b8037e0f46b7564655b4513009fd6707b7b07d",
+  "handoff_raw_sha256": "4da6e5b4f0a70273d78c067f34484c8a5f6faf164b0f09c1559b9a73ff6611fe",
+  "handoff_sections": 9,
+  "commands": [
+    {
+      "name": "student-web",
+      "exit_code": 0
+    },
+    {
+      "name": "publisher-print",
+      "exit_code": 0
+    },
+    {
+      "name": "currentness-paragraph_production",
+      "exit_code": 0
+    },
+    {
+      "name": "currentness-specialist_review",
+      "exit_code": 0
+    },
+    {
+      "name": "durable",
+      "exit_code": 0
+    },
+    {
+      "name": "bundle",
+      "exit_code": 0
+    }
+  ]
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
