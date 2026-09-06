@@ -7,9 +7,16 @@ if(process.env.FOURVECO_PLATFORM_SOURCE_REF==='HEAD'||process.env.FOURVECO_LESSE
 const relative='build-scripts/reports/github-agent-index.js',entry=path.join(root,relative);
 const expected=real('git',['show','b777877deb69a2094b9eff575e16e791744e85f1:'+relative],{cwd:root});
 if(!fs.readFileSync(entry).equals(expected))throw Error('Shared index source changed');
+// Explicit output-format setting for only this process and its read-only Git
+// children. Preserve any existing runtime settings; never edit shared Git config.
+const settings=Number(process.env.GIT_CONFIG_COUNT||'0');
+if(!Number.isSafeInteger(settings)||settings<0)throw Error('Invalid runtime Git settings');
+process.env['GIT_CONFIG_KEY_'+settings]='core.quotePath';
+process.env['GIT_CONFIG_VALUE_'+settings]='false';
+process.env.GIT_CONFIG_COUNT=String(settings+1);
 cp.execFileSync=function(exe,args,options={}){
  if(exe!=='git'||!['ls-tree','ls-files','rev-parse','remote'].includes(args[0]))throw Error('Read-only native Git queries only');
  return real(exe,args,{...options,maxBuffer:64*1024*1024});
 };
-console.log('Unchanged native index script '+crypto.createHash('sha256').update(expected).digest('hex')+'; read-only Git stdout buffer67108864');
+console.log('Unchanged native index script '+crypto.createHash('sha256').update(expected).digest('hex')+'; read-only Git stdout buffer67108864; process-only core.quotePath=false');
 process.argv=[process.execPath,entry];require('module').runMain(entry);
