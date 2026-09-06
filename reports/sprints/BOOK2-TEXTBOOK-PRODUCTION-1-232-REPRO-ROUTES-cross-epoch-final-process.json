@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-probes.py",
+    "cross-epoch",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-native-r1000014.json",
+    "--tag",
+    "final-"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 0,
+  "stdout": "{\r\n  \"status\": \"PASS\",\r\n  \"old_committed_platform\": \"020def560795a0acab07dc11552b3e4abebf3d62\",\r\n  \"old_committed_lesson\": \"ea0dd35d4f919ac5b3aae533cd9f9022ffa62282\",\r\n  \"old_source_commit\": \"e0b47cab498102cd990e66318f5111602c32a6b6\",\r\n  \"current_manifest\": \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-native-r1000014.json\",\r\n  \"current_manifest_sha256\": \"5da67499190e254858cb8806ac91d5e0633c353c23a960516f8fe6d94a9f3b5d\",\r\n  \"native_files\": 41,\r\n  \"old_current_packet_equal\": true,\r\n  \"raw_and_decoded_pages\": 42,\r\n  \"old_pending_proofs\": [\r\n    {\r\n      \"path\": \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/manifest.json\",\r\n      \"sha256\": \"9fb084fe68ed75507fcf6a11f6726f0a2a54621d1dd7baf950cc3d3ce0bc6a69\"\r\n    },\r\n    {\r\n      \"path\": \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/manifest.json\",\r\n      \"sha256\": \"5f4d2054d762509d1ba6ce225462648150498b35a732562be4d566b16b5153a9\"\r\n    },\r\n    {\r\n      \"path\": \"reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/manifest.json\",\r\n      \"sha256\": \"78b91a2e158f479d32c826501a3208229bd826999114cb112977d8437f201c70\"\r\n    }\r\n  ],\r\n  \"old_personal_binding_sha256\": \"0d75d838d53f70ef4b419224d3bf165d77d8bd162449f86cef6949875ee335eb\",\r\n  \"original_author_views\": 112,\r\n  \"fresh_personal_views\": 0,\r\n  \"transfer_basis\": \"All old PDF/figure bytes identical to committed originals; no independent review credit.\"\r\n}\r\n",
+  "stderr": ""
+}

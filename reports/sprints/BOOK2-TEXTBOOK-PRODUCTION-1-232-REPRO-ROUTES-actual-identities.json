@@ -1,0 +1,115 @@
+[
+  {
+    "role": "author",
+    "status": "READONLY_VALID_ACTUAL_CLAIMS",
+    "identity": {
+      "role": "author",
+      "actor": "paragraph_231_specialist_qc",
+      "task": "BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT",
+      "prefix": "BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-",
+      "branch": "agent/book2-232-build-current-20260906",
+      "claims": [
+        {
+          "repository": "4veco-platform",
+          "worktree": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+          "git_dir": "C:\\Projects\\4veco\\4veco-platform\\.git\\worktrees\\4veco-platform192",
+          "claim_sha256": "d2367f544652f7c37924cb93eaf2d7619edbe68f5247629d8f390509c04333cc",
+          "claim_head": "bc49af3353bf0ba3a061b2ef3e5ddec3c3a72abb"
+        },
+        {
+          "repository": "4veco-lessen",
+          "worktree": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen",
+          "git_dir": "C:\\Projects\\4veco\\4veco-lessen\\.git\\worktrees\\4veco-lessen137",
+          "claim_sha256": "f9273ad2ea02defe8624b653e705f3801e6c9b40d0a7e8f81206d92123ea509d",
+          "claim_head": "f666bbb7dd258f1f01b38a20dd6ca3802848f8b7"
+        }
+      ]
+    }
+  },
+  {
+    "role": "correction",
+    "status": "READONLY_VALID_ACTUAL_CLAIMS",
+    "identity": {
+      "role": "correction",
+      "actor": "paragraph_231_specialist_qc",
+      "task": "BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES",
+      "prefix": "BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-",
+      "branch": "agent/book2-232-repro-routes-20260906",
+      "claims": [
+        {
+          "repository": "4veco-platform",
+          "worktree": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+          "git_dir": "C:\\Projects\\4veco\\4veco-platform\\.git\\worktrees\\4veco-platform199",
+          "claim_sha256": "14b69b30d616573fc6b52c8d1676ec5fdedc8ca272a5e75e7c1b168d2e4a3fcd",
+          "claim_head": "020def560795a0acab07dc11552b3e4abebf3d62"
+        },
+        {
+          "repository": "4veco-lessen",
+          "worktree": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-lessen",
+          "git_dir": "C:\\Projects\\4veco\\4veco-lessen\\.git\\worktrees\\4veco-lessen144",
+          "claim_sha256": "831b277f42d56b5b20e73f71544cfacdc14739814bb5f635d36f6699dc940c92",
+          "claim_head": "ea0dd35d4f919ac5b3aae533cd9f9022ffa62282"
+        }
+      ]
+    }
+  },
+  {
+    "role": "paragraph-review",
+    "status": "READONLY_VALID_ACTUAL_CLAIMS",
+    "identity": {
+      "role": "paragraph-review",
+      "actor": "paragraph_224_builder",
+      "task": "BOOK2-TEXTBOOK-PRODUCTION-1-232-PARAGRAPH-REVIEW",
+      "prefix": "BOOK2-TEXTBOOK-PRODUCTION-1-232-PARAGRAPH-REVIEW-",
+      "branch": "agent/book2-232-paragraph-review-20260906",
+      "claims": [
+        {
+          "repository": "4veco-platform",
+          "worktree": "C:\\wt\\book2-232-paragraph-review-20260906\\4veco-platform",
+          "git_dir": "C:\\Projects\\4veco\\4veco-platform\\.git\\worktrees\\4veco-platform196",
+          "claim_sha256": "bf1ffd129102a953f9bdea8aad4e49350707898449901dc4fbed21f2219e66ca",
+          "claim_head": "020def560795a0acab07dc11552b3e4abebf3d62"
+        },
+        {
+          "repository": "4veco-lessen",
+          "worktree": "C:\\wt\\book2-232-paragraph-review-20260906\\4veco-lessen",
+          "git_dir": "C:\\Projects\\4veco\\4veco-lessen\\.git\\worktrees\\4veco-lessen141",
+          "claim_sha256": "d34db791f68fcb666e111b24ccc457cb7d58eb6feeed6408ebd1f2b4b8d6c89c",
+          "claim_head": "ea0dd35d4f919ac5b3aae533cd9f9022ffa62282"
+        }
+      ]
+    }
+  },
+  {
+    "role": "specialist-qc",
+    "status": "FUTURE_UNCLAIMED_REJECTED",
+    "error": "Missing/unsafe assigned paired worktree"
+  },
+  {
+    "role": "root",
+    "status": "READONLY_VALID_ACTUAL_CLAIMS",
+    "identity": {
+      "role": "root",
+      "actor": "codex-root",
+      "task": "BOOK2-TEXTBOOK-PRODUCTION-1",
+      "prefix": "BOOK2-TEXTBOOK-PRODUCTION-1-232-QC-ROOT-",
+      "branch": "codex/book2-part-a-production-20260905",
+      "claims": [
+        {
+          "repository": "4veco-platform",
+          "worktree": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+          "git_dir": "C:\\Projects\\4veco\\4veco-platform\\.git\\worktrees\\4veco-platform120",
+          "claim_sha256": "7581a5da807cb54ca894c63eb6363d8e1fec721d9047f4c16fe2df304d45189c",
+          "claim_head": "96416b6b5bd57094576e9aba0a42d682584ec479"
+        },
+        {
+          "repository": "4veco-lessen",
+          "worktree": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+          "git_dir": "C:\\Projects\\4veco\\4veco-lessen\\.git\\worktrees\\4veco-lessen65",
+          "claim_sha256": "4bff472faad4d980d90c4809600306273d574ab3d04b60f6aefb324f6084197f",
+          "claim_head": "f09fd6e88edc5049b026b16b0158e7e188091d2d"
+        }
+      ]
+    }
+  }
+]

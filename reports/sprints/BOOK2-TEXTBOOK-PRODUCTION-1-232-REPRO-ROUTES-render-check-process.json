@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/232/check_render.py",
+    "--manifest",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-native-r1000007.json",
+    "--output",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-render-check.json",
+    "--execution-role",
+    "correction"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 0,
+  "stdout": "{\"status\": \"PASS\", \"documents\": [{\"kind\": \"paragraaf\", \"pages\": 19}, {\"kind\": \"opgaven\", \"pages\": 11}, {\"kind\": \"antwoorden\", \"pages\": 12}], \"figures\": 14}\r\n",
+  "stderr": ""
+}

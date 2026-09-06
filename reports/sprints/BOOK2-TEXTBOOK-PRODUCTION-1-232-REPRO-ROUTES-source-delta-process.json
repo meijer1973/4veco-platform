@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "node",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-close.cjs",
+    "delta"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 0,
+  "stdout": "{\"status\":\"PASS\",\"changed\":5,\"unchanged\":6,\"instructions\":35}\n",
+  "stderr": ""
+}

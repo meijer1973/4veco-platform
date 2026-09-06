@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-probes.py",
+    "negatives",
+    "4a367149e2dc0421318f1927685045d94022ba48"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-probes.py\", line 77, in <module>\r\n    elif a.mode=='negatives':negatives(a.input)\r\n                             ~~~~~~~~~^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-probes.py\", line 43, in negatives\r\n    if paths_before!=paths_after:raise AssertionError('Namespace output on rejection')\r\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: Namespace output on rejection\r\n"
+}

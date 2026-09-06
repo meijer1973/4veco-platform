@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/b2_232.py",
+    "--source-commit",
+    "4a367149e2dc0421318f1927685045d94022ba48",
+    "--revision",
+    "r1000009",
+    "--reservation",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-reservation-r1000009.json",
+    "--execution-role",
+    "correction",
+    "--route",
+    "direct"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 180, in <module>\r\n    if __name__=='__main__':main()\r\n                            ~~~~^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 179, in main\r\n    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route,a.execution_role)\r\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 156, in build\r\n    zip_document(record)\r\n    ~~~~~~~~~~~~^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 112, in zip_document\r\n    z.writestr(info,p.read_bytes(),compress_type=zipfile.ZIP_DEFLATED,compresslevel=9)\r\n                    ~~~~~~~~~~~~^^\r\n  File \"C:\\Python314\\Lib\\pathlib\\__init__.py\", line 777, in read_bytes\r\n    with self.open(mode='rb', buffering=0) as f:\r\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Python314\\Lib\\pathlib\\__init__.py\", line 771, in open\r\n    return io.open(self, mode, buffering, encoding, errors, newline)\r\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nFileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\wt\\\\book2-232-repro-routes-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.3 Hoofdstuk Surplus en welvaart\\\\2.3.2 Producentensurplus en totaal surplus\\\\2.3.2 Producentensurplus en totaal surplus \\ufffd paragraaf.html'\r\n"
+}

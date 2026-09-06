@@ -1,0 +1,15 @@
+// HOW TO ADAPT: exact owned pair, literal-NUL raw custody and recorded commands.
+const fs=require('fs'),path=require('path'),cp=require('child_process'),crypto=require('crypto');
+const P=path.resolve(__dirname,'../..'),L=path.resolve(P,'../4veco-lessen');
+const prefix='BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-';
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+function run(argv,cwd=P){const r=cp.spawnSync(argv[0],argv.slice(1),{cwd,encoding:null,maxBuffer:128*1024*1024});return {argv,cwd,status:r.status,error:r.error?.message,stdout:r.stdout?.toString('utf8'),stderr:r.stderr?.toString('utf8')};}
+function git(root,args){const r=cp.spawnSync('git',args,{cwd:root,encoding:null,maxBuffer:128*1024*1024});if(r.status!==0)throw Error(r.stderr);return r.stdout;}
+function save(name,obj){fs.writeFileSync(path.join(__dirname,prefix+name),JSON.stringify(obj,null,2)+'\n',{flag:'wx'});}
+function inventory(root){return git(root,['ls-files','-s','-z']).toString('utf8').split('\0').filter(Boolean).map(line=>{const [meta,name]=line.split('\t'),[mode,blob,stage]=meta.split(' '),raw=fs.readFileSync(path.join(root,name));if(stage!=='0')throw Error('Unmerged');return {path:name,mode,blob,raw_sha256:sha(raw),working_blob:crypto.createHash('sha1').update(Buffer.concat([Buffer.from(`blob ${raw.length}\0`),raw])).digest('hex')};});}
+const mode=process.argv[2];
+if(mode==='baseline')save('baseline.json',{P:{root:P,head:git(P,['rev-parse','HEAD']).toString().trim(),files:inventory(P)},L:{root:L,head:git(L,['rev-parse','HEAD']).toString().trim(),files:inventory(L)}});
+else if(mode==='run'){const name=process.argv[3],argv=process.argv.slice(4),result=run(argv);save(name,result);console.log(JSON.stringify({file:prefix+name,status:result.status,stdout:result.stdout?.slice(-2200),stderr:result.stderr?.slice(-1500)}));process.exitCode=result.status===null?1:result.status;}
+else if(mode==='custody'){const old=JSON.parse(fs.readFileSync(path.join(__dirname,prefix+'baseline.json'))),out={};for(const key of ['P','L']){const changed=[];for(const row of old[key].files){const file=path.join(old[key].root,row.path);if(!fs.existsSync(file)||sha(fs.readFileSync(file))!==row.raw_sha256)changed.push(row.path);}out[key]={count:old[key].files.length,changed};}save(process.argv[3]||'custody.json',out);console.log(JSON.stringify(out));}
+else if(mode==='gates'){for(const [label,args] of [['release',['reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-gate.cjs','232']],['structural',['build-scripts/workflows/check-book-outline-currentness.js']],['production',['build-scripts/workflows/check-book-outline-currentness.js','--require-approved','--action','paragraph_production','--paragraph','2.3.2']],['durable',['build-scripts/workflows/check-book2-target-authority-remediation.js','--durable']],['bundle',['build-scripts/sprints/check-sprint-bundle.js','BOOK2-TEXTBOOK-PRODUCTION-1']]]){const r=run([process.execPath,...args]);save(process.argv[3]+'-'+label+'.json',r);console.log(label+': '+r.status);if(r.status!==0)throw Error(label);}}
+else throw Error('baseline | run <unique.json> <argv> | custody [unique.json] | gates <tag>');

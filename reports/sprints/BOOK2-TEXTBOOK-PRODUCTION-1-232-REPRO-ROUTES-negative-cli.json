@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "route": "full",
+      "case": "foreign-role",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py",
+        "--source-commit",
+        "4a367149e2dc0421318f1927685045d94022ba48",
+        "--revision",
+        "r1000006",
+        "--reservation",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-absent.json",
+        "--execution-role",
+        "paragraph-review"
+      ],
+      "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 180, in <module>\r\n    if __name__=='__main__':main()\r\n                            ~~~~^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 179, in main\r\n    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route,a.execution_role)\r\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 118, in build\r\n    attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT,execution_role)\r\n                                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 191, in namespace_preflight\r\n    identity=execution_identity(execution_role,platform_root)\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 152, in execution_identity\r\n    raise ValueError('Wrong assigned platform worktree')\r\nValueError: Wrong assigned platform worktree\r\n"
+    },
+    {
+      "route": "full",
+      "case": "cross-prefix",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py",
+        "--source-commit",
+        "4a367149e2dc0421318f1927685045d94022ba48",
+        "--revision",
+        "r1000006",
+        "--reservation",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-reservation-r1000003.json",
+        "--execution-role",
+        "correction"
+      ],
+      "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 180, in <module>\r\n    if __name__=='__main__':main()\r\n                            ~~~~^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 179, in main\r\n    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route,a.execution_role)\r\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 118, in build\r\n    attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT,execution_role)\r\n                                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 195, in namespace_preflight\r\n    evidence_path(reservation,identity,platform_root)\r\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 187, in evidence_path\r\n    raise ValueError('Wrong execution-role evidence path')\r\nValueError: Wrong execution-role evidence path\r\n"
+    },
+    {
+      "route": "full",
+      "case": "missing-reservation",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py",
+        "--source-commit",
+        "4a367149e2dc0421318f1927685045d94022ba48",
+        "--revision",
+        "r1000006",
+        "--reservation",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-reservation-r1000006.json",
+        "--execution-role",
+        "correction"
+      ],
+      "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 180, in <module>\r\n    if __name__=='__main__':main()\r\n                            ~~~~^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 179, in main\r\n    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route,a.execution_role)\r\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 118, in build\r\n    attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT,execution_role)\r\n                                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 197, in namespace_preflight\r\n    r=json.loads(reservation.read_text(encoding='utf-8'))\r\n                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Python314\\Lib\\pathlib\\__init__.py\", line 787, in read_text\r\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\r\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Python314\\Lib\\pathlib\\__init__.py\", line 771, in open\r\n    return io.open(self, mode, buffering, encoding, errors, newline)\r\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nFileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\wt\\\\book2-232-repro-routes-20260906\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-reservation-r1000006.json'\r\n"
+    },
+    {
+      "route": "thin",
+      "case": "foreign-role",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\build_pdf.py",
+        "--source-commit",
+        "4a367149e2dc0421318f1927685045d94022ba48",
+        "--revision",
+        "r1000006",
+        "--reservation",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-absent.json",
+        "--execution-role",
+        "paragraph-review"
+      ],
+      "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 180, in <module>\r\n    if __name__=='__main__':main()\r\n                            ~~~~^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 179, in main\r\n    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route,a.execution_role)\r\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 118, in build\r\n    attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT,execution_role)\r\n                                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 191, in namespace_preflight\r\n    identity=execution_identity(execution_role,platform_root)\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 152, in execution_identity\r\n    raise ValueError('Wrong assigned platform worktree')\r\nValueError: Wrong assigned platform worktree\r\n"
+    },
+    {
+      "route": "thin",
+      "case": "cross-prefix",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\build_pdf.py",
+        "--source-commit",
+        "4a367149e2dc0421318f1927685045d94022ba48",
+        "--revision",
+        "r1000006",
+        "--reservation",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-reservation-r1000003.json",
+        "--execution-role",
+        "correction"
+      ],
+      "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 180, in <module>\r\n    if __name__=='__main__':main()\r\n                            ~~~~^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 179, in main\r\n    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route,a.execution_role)\r\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 118, in build\r\n    attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT,execution_role)\r\n                                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 195, in namespace_preflight\r\n    evidence_path(reservation,identity,platform_root)\r\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 187, in evidence_path\r\n    raise ValueError('Wrong execution-role evidence path')\r\nValueError: Wrong execution-role evidence path\r\n"
+    },
+    {
+      "route": "thin",
+      "case": "missing-reservation",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\build_pdf.py",
+        "--source-commit",
+        "4a367149e2dc0421318f1927685045d94022ba48",
+        "--revision",
+        "r1000006",
+        "--reservation",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-reservation-r1000006.json",
+        "--execution-role",
+        "correction"
+      ],
+      "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 180, in <module>\r\n    if __name__=='__main__':main()\r\n                            ~~~~^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 179, in main\r\n    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route,a.execution_role)\r\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 118, in build\r\n    attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT,execution_role)\r\n                                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 197, in namespace_preflight\r\n    r=json.loads(reservation.read_text(encoding='utf-8'))\r\n                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Python314\\Lib\\pathlib\\__init__.py\", line 787, in read_text\r\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\r\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Python314\\Lib\\pathlib\\__init__.py\", line 771, in open\r\n    return io.open(self, mode, buffering, encoding, errors, newline)\r\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nFileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\wt\\\\book2-232-repro-routes-20260906\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-reservation-r1000006.json'\r\n"
+    },
+    {
+      "route": "direct",
+      "case": "foreign-role",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py",
+        "--source-commit",
+        "4a367149e2dc0421318f1927685045d94022ba48",
+        "--revision",
+        "r1000006",
+        "--reservation",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-absent.json",
+        "--execution-role",
+        "paragraph-review",
+        "--route",
+        "direct"
+      ],
+      "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 180, in <module>\r\n    if __name__=='__main__':main()\r\n                            ~~~~^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 179, in main\r\n    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route,a.execution_role)\r\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 118, in build\r\n    attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT,execution_role)\r\n                                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 191, in namespace_preflight\r\n    identity=execution_identity(execution_role,platform_root)\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 152, in execution_identity\r\n    raise ValueError('Wrong assigned platform worktree')\r\nValueError: Wrong assigned platform worktree\r\n"
+    },
+    {
+      "route": "direct",
+      "case": "cross-prefix",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py",
+        "--source-commit",
+        "4a367149e2dc0421318f1927685045d94022ba48",
+        "--revision",
+        "r1000006",
+        "--reservation",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-reservation-r1000003.json",
+        "--execution-role",
+        "correction",
+        "--route",
+        "direct"
+      ],
+      "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 180, in <module>\r\n    if __name__=='__main__':main()\r\n                            ~~~~^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 179, in main\r\n    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route,a.execution_role)\r\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 118, in build\r\n    attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT,execution_role)\r\n                                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 195, in namespace_preflight\r\n    evidence_path(reservation,identity,platform_root)\r\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 187, in evidence_path\r\n    raise ValueError('Wrong execution-role evidence path')\r\nValueError: Wrong execution-role evidence path\r\n"
+    },
+    {
+      "route": "direct",
+      "case": "missing-reservation",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py",
+        "--source-commit",
+        "4a367149e2dc0421318f1927685045d94022ba48",
+        "--revision",
+        "r1000006",
+        "--reservation",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-reservation-r1000006.json",
+        "--execution-role",
+        "correction",
+        "--route",
+        "direct"
+      ],
+      "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 180, in <module>\r\n    if __name__=='__main__':main()\r\n                            ~~~~^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 179, in main\r\n    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route,a.execution_role)\r\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_232.py\", line 118, in build\r\n    attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT,execution_role)\r\n                                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 197, in namespace_preflight\r\n    r=json.loads(reservation.read_text(encoding='utf-8'))\r\n                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Python314\\Lib\\pathlib\\__init__.py\", line 787, in read_text\r\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\r\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Python314\\Lib\\pathlib\\__init__.py\", line 771, in open\r\n    return io.open(self, mode, buffering, encoding, errors, newline)\r\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nFileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\wt\\\\book2-232-repro-routes-20260906\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-reservation-r1000006.json'\r\n"
+    }
+  ],
+  "native_byte_changes": 0,
+  "owned_namespace_file_changes": 0
+}
