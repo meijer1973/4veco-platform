@@ -1,0 +1,31 @@
+{
+  "command": "git",
+  "args": [
+    "-c",
+    "core.whitespace=cr-at-eol",
+    "diff",
+    "--check",
+    "96416b6b5bd57094576e9aba0a42d682584ec479",
+    "HEAD"
+  ],
+  "cwd": "C:\\wt\\book2-22-front-recheck-20260906\\4veco-platform",
+  "start": "2026-09-06T09:17:54.091Z",
+  "end": "2026-09-06T09:18:00.879Z",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-22-front-recheck-20260906\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-22-front-recheck-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-22-front-recheck-20260906\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "9546548c4dbd271516366df946f3eb0a9eaa1e93",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-22-front-recheck-20260906"
+  },
+  "controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a",
+  "sources": [],
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "PATH_unchanged": true,
+  "exit_code": 2,
+  "stdout": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-command-log.md:519: trailing whitespace.\n+reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-command-log.md:62: \nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-publisher-print-stdout.txt:25: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-publisher-print-stdout.txt:25: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-student-web-stdout.txt:27: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-student-web-stdout.txt:27: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-publisher-print-stdout.txt:25: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-student-web-stdout.txt:27: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-evidence/224-post-publisher-print-stdout.txt:25: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-evidence/224-post-student-web-stdout.txt:27: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-evidence/224-pre-publisher-print-stdout.txt:25: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-evidence/224-pre-student-web-stdout.txt:27: new blank line at EOF.\nreports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-REVIEW-command-log.md:696: trailing whitespace.\n+     \r\n",
+  "stderr": "",
+  "stdout_base64": "cmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTItUzEtY29tbWFuZC1sb2cubWQ6NTE5OiB0cmFpbGluZyB3aGl0ZXNwYWNlLgorcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTItUzEtY29tbWFuZC1sb2cubWQ6NjI6IApyZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1RQy1DVVJSRU5ULWV2aWRlbmNlLzIyNC1maW5hbHFjLXB1Ymxpc2hlci1wcmludC1zdGRvdXQudHh0OjI1OiBuZXcgYmxhbmsgbGluZSBhdCBFT0YuCnJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjI0LVFDLUNVUlJFTlQtZXZpZGVuY2UvMjI0LWZpbmFscWMtcjItcHVibGlzaGVyLXByaW50LXN0ZG91dC50eHQ6MjU6IG5ldyBibGFuayBsaW5lIGF0IEVPRi4KcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMjQtUUMtQ1VSUkVOVC1ldmlkZW5jZS8yMjQtZmluYWxxYy1yMi1zdHVkZW50LXdlYi1zdGRvdXQudHh0OjI3OiBuZXcgYmxhbmsgbGluZSBhdCBFT0YuCnJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjI0LVFDLUNVUlJFTlQtZXZpZGVuY2UvMjI0LWZpbmFscWMtc3R1ZGVudC13ZWItc3Rkb3V0LnR4dDoyNzogbmV3IGJsYW5rIGxpbmUgYXQgRU9GLgpyZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1RQy1DVVJSRU5ULWV2aWRlbmNlLzIyNC1wcmVxYy1wdWJsaXNoZXItcHJpbnQtc3Rkb3V0LnR4dDoyNTogbmV3IGJsYW5rIGxpbmUgYXQgRU9GLgpyZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1RQy1DVVJSRU5ULWV2aWRlbmNlLzIyNC1wcmVxYy1zdHVkZW50LXdlYi1zdGRvdXQudHh0OjI3OiBuZXcgYmxhbmsgbGluZSBhdCBFT0YuCnJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjI0LVFDLVJPT1QtZXZpZGVuY2UvMjI0LXBvc3QtcHVibGlzaGVyLXByaW50LXN0ZG91dC50eHQ6MjU6IG5ldyBibGFuayBsaW5lIGF0IEVPRi4KcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMjQtUUMtUk9PVC1ldmlkZW5jZS8yMjQtcG9zdC1zdHVkZW50LXdlYi1zdGRvdXQudHh0OjI3OiBuZXcgYmxhbmsgbGluZSBhdCBFT0YuCnJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjI0LVFDLVJPT1QtZXZpZGVuY2UvMjI0LXByZS1wdWJsaXNoZXItcHJpbnQtc3Rkb3V0LnR4dDoyNTogbmV3IGJsYW5rIGxpbmUgYXQgRU9GLgpyZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1RQy1ST09ULWV2aWRlbmNlLzIyNC1wcmUtc3R1ZGVudC13ZWItc3Rkb3V0LnR4dDoyNzogbmV3IGJsYW5rIGxpbmUgYXQgRU9GLgpyZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzMS1SRVZJRVctY29tbWFuZC1sb2cubWQ6Njk2OiB0cmFpbGluZyB3aGl0ZXNwYWNlLgorICAgICANCg==",
+  "stderr_base64": ""
+}
