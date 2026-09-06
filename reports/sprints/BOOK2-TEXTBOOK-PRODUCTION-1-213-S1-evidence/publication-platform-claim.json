@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/ci/check-agent-worktree-safety.js",
+    "--check",
+    "--task",
+    "BOOK2-TEXTBOOK-PRODUCTION-1-213-S1",
+    "--agent",
+    "paragraph_224_builder",
+    "--require-prefix",
+    "codex/,agent/"
+  ],
+  "cwd": "C:\\wt\\book2-213-succession-20260906\\4veco-platform",
+  "started_at": "2026-09-06T03:42:24.024900+00:00",
+  "finished_at": "2026-09-06T03:42:24.207608+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"mode\": \"check\",\n  \"repository\": \"4veco-platform\",\n  \"worktree_path\": \"C:/wt/book2-213-succession-20260906/4veco-platform\",\n  \"git_dir\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform177\",\n  \"anchor_clone\": false,\n  \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-213-S1\",\n  \"agent_id\": \"paragraph_224_builder\",\n  \"lock\": {\n    \"present\": true,\n    \"same_owner\": true,\n    \"same_task\": true,\n    \"stale\": false,\n    \"path\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform177\\\\4veco-agent-worktree-lock.json\",\n    \"owner\": \"paragraph_224_builder\",\n    \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-213-S1\"\n  },\n  \"branch\": \"agent/book2-213-succession-20260906\",\n  \"head_sha\": \"8fc91b3aae7afc03b9e7b6d128b659b412547f9d\",\n  \"on_main\": false,\n  \"detached_head\": false,\n  \"dirty\": true,\n  \"dirty_count\": 9,\n  \"ahead\": 0,\n  \"behind\": 0,\n  \"diverged\": false,\n  \"prefix_ok\": true,\n  \"required_prefixes\": [\n    \"codex/\",\n    \"agent/\"\n  ],\n  \"warnings\": [\n    \"working tree is dirty (9 items)\"\n  ],\n  \"failures\": []\n}\n",
+  "stderr": "",
+  "stdout_sha256": "e5ef6a18ef211913db30a9f94283b45eef471c2b72d3611bb88711e0e663d172",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "inherited_path_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c"
+}

@@ -1,0 +1,860 @@
+{
+  "result": "PASS",
+  "controller": {
+    "ref": "8fd54c00665f02c96806a85d453f0bd69cdd8394",
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-run.py",
+    "raw_sha256": "ad06a75b3ba79c9f2093df9d7e96b1db44c544cc7156e0f86015c607c09092cd",
+    "test_sha256": "84645329260b663e563e0fb5ce745d0ca86327f557d7971f26dda028cd1f48df",
+    "generator_sha256": "87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4"
+  },
+  "platform_base": "50db4c5da142812f47bf02219e393447caedecfb",
+  "platform_head": "8fc91b3aae7afc03b9e7b6d128b659b412547f9d",
+  "lesson_base": "42996c60b4a93843dfe8488b8e5a3ea704871667",
+  "lesson_head": "42996c60b4a93843dfe8488b8e5a3ea704871667",
+  "owned_changed_paths": [
+    {
+      "path": "build-scripts/content/book-2/213/test_succession.py",
+      "raw_sha256": "84645329260b663e563e0fb5ce745d0ca86327f557d7971f26dda028cd1f48df",
+      "git_blob_sha256": "84645329260b663e563e0fb5ce745d0ca86327f557d7971f26dda028cd1f48df"
+    },
+    {
+      "path": "build-scripts/content/book-2/b2_213.py",
+      "raw_sha256": "87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4",
+      "git_blob_sha256": "87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-controller-count-note.md",
+      "raw_sha256": "aeb29071fa4d2c1f1f9b713ca807dcd5085bd705b80add112634da810b816935",
+      "git_blob_sha256": "aeb29071fa4d2c1f1f9b713ca807dcd5085bd705b80add112634da810b816935"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-controller-probes.py",
+      "raw_sha256": "3c51efce9a6f74a161c2d89423f01fa4fa1043d5274e6badb707cfb623cd7e69",
+      "git_blob_sha256": "3c51efce9a6f74a161c2d89423f01fa4fa1043d5274e6badb707cfb623cd7e69"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/baseline.json",
+      "raw_sha256": "b9394453d3a154e12cabf2764b5099ede2c3f8bc623bf1a6a60dac2cace3cf58",
+      "git_blob_sha256": "b9394453d3a154e12cabf2764b5099ede2c3f8bc623bf1a6a60dac2cace3cf58"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/controller-counterexamples.json",
+      "raw_sha256": "3bc31784635c0bec68e2a4a75f3fb95f6efce9ddfebf9259c642cc24e357ff8d",
+      "git_blob_sha256": "3bc31784635c0bec68e2a4a75f3fb95f6efce9ddfebf9259c642cc24e357ff8d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/final-validation-active-bundle.json",
+      "raw_sha256": "f8373f64efd45e54cf9d5a99ee958e5919e4f792f57d5b736575e522a0526e5c",
+      "git_blob_sha256": "f8373f64efd45e54cf9d5a99ee958e5919e4f792f57d5b736575e522a0526e5c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/final-validation-binding.json",
+      "raw_sha256": "a43f4377ffb79bce829f871b5522e2dc105b1963d0da1aec7ab53743d0187b9c",
+      "git_blob_sha256": "a43f4377ffb79bce829f871b5522e2dc105b1963d0da1aec7ab53743d0187b9c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/final-validation-currentness.json",
+      "raw_sha256": "f87859502c1736327bdce225160bf3243f0efef5e712b4397f8470ad3f8e206a",
+      "git_blob_sha256": "f87859502c1736327bdce225160bf3243f0efef5e712b4397f8470ad3f8e206a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/final-validation-durable.json",
+      "raw_sha256": "c89f4dd5f7254135d512d0dc7e43da12a3074eca6a2da7a0f689962934988f84",
+      "git_blob_sha256": "c89f4dd5f7254135d512d0dc7e43da12a3074eca6a2da7a0f689962934988f84"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/final-validation-focused-tests.json",
+      "raw_sha256": "a5cd0b3f662af790194c027e15204ed7ca72376edc0c750b8cab960f65c3a633",
+      "git_blob_sha256": "a5cd0b3f662af790194c027e15204ed7ca72376edc0c750b8cab960f65c3a633"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/final-validation-native-checker.json",
+      "raw_sha256": "cb0875b24e6d8ab5c85ae6921966b8cf2a6c27b9e090f37cddb24a243b59986e",
+      "git_blob_sha256": "cb0875b24e6d8ab5c85ae6921966b8cf2a6c27b9e090f37cddb24a243b59986e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/final-validation-publisher-print.json",
+      "raw_sha256": "e1d57be8842c711f4f2721298c45a8ece033d09efa212105c222d572c31964b9",
+      "git_blob_sha256": "e1d57be8842c711f4f2721298c45a8ece033d09efa212105c222d572c31964b9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/final-validation-student-web.json",
+      "raw_sha256": "5bccecf3271c37dd18bdad53d1308c78af735a057b9fa3b7cbf71111b2aa070f",
+      "git_blob_sha256": "5bccecf3271c37dd18bdad53d1308c78af735a057b9fa3b7cbf71111b2aa070f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/full-r27-command.json",
+      "raw_sha256": "722ca3a7218d8f7f210a582e9a20b429b811e292e0a4e2a8a7851d77d9a89fd7",
+      "git_blob_sha256": "722ca3a7218d8f7f210a582e9a20b429b811e292e0a4e2a8a7851d77d9a89fd7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/full-r28-build.json",
+      "raw_sha256": "1720ee7de73d0dcd53209bce880be57ecd58dbaf9b940b3e80d0b24450cf1521",
+      "git_blob_sha256": "1720ee7de73d0dcd53209bce880be57ecd58dbaf9b940b3e80d0b24450cf1521"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/full-r28-command.json",
+      "raw_sha256": "95f066a2340ecaa335ca8160df16200961339c4d5d7a37c608cbc49f110470f2",
+      "git_blob_sha256": "95f066a2340ecaa335ca8160df16200961339c4d5d7a37c608cbc49f110470f2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/full-r28-reproduction.json",
+      "raw_sha256": "3101590fbba3113e03f0ee1b2542717499ebb3e72eec8634ac35cce62ab71e53",
+      "git_blob_sha256": "3101590fbba3113e03f0ee1b2542717499ebb3e72eec8634ac35cce62ab71e53"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/prebuild-focused-tests.json",
+      "raw_sha256": "eca82b340b73fac53a7b6c98021dab28645cc0b15a2aea4a2829965343220c34",
+      "git_blob_sha256": "eca82b340b73fac53a7b6c98021dab28645cc0b15a2aea4a2829965343220c34"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/print-r30-build.json",
+      "raw_sha256": "57737e6e2d9ffd05e0b67bc55ff5a4eaeab3b80d56ac9d97f9a7b9bca3b55cc1",
+      "git_blob_sha256": "57737e6e2d9ffd05e0b67bc55ff5a4eaeab3b80d56ac9d97f9a7b9bca3b55cc1"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/print-r30-command.json",
+      "raw_sha256": "f2f20a99b72dc21929883ee179420b1b746d38bde2d2ecc26b0e6a63de3348d9",
+      "git_blob_sha256": "f2f20a99b72dc21929883ee179420b1b746d38bde2d2ecc26b0e6a63de3348d9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/print-r30-reproduction.json",
+      "raw_sha256": "ff20d592b24c6f83728291864902e51853aad8b2b64a319ed23dac48a5f72ed8",
+      "git_blob_sha256": "ff20d592b24c6f83728291864902e51853aad8b2b64a319ed23dac48a5f72ed8"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r28/contact-sheet.png",
+      "raw_sha256": "2c31ca4d883b4bad5868d25da8ab2186a02e2626b4ceaa72cdc74c5400514e6d",
+      "git_blob_sha256": "2c31ca4d883b4bad5868d25da8ab2186a02e2626b4ceaa72cdc74c5400514e6d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r28/manifest.json",
+      "raw_sha256": "f50006effabd709eade53426b4e1564af029869f8b9f3c4399e7219891e98a38",
+      "git_blob_sha256": "f50006effabd709eade53426b4e1564af029869f8b9f3c4399e7219891e98a38"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r28/pages/page-001.png",
+      "raw_sha256": "92d57ae0facbeb2187e5aca0c9e390319a0a2491f52efea0b6e1ae5a648253ff",
+      "git_blob_sha256": "92d57ae0facbeb2187e5aca0c9e390319a0a2491f52efea0b6e1ae5a648253ff"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r28/pages/page-002.png",
+      "raw_sha256": "1ee899ff06b72c2041cd4276c81606dacc0fe354e284e482d8439138e6318f01",
+      "git_blob_sha256": "1ee899ff06b72c2041cd4276c81606dacc0fe354e284e482d8439138e6318f01"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r28/pages/page-003.png",
+      "raw_sha256": "adca03ec729ebb932579f47466c3030b7803f574debbc68b9736a8897806b3b2",
+      "git_blob_sha256": "adca03ec729ebb932579f47466c3030b7803f574debbc68b9736a8897806b3b2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r28/pages/page-004.png",
+      "raw_sha256": "852cad800fdce6f3ab1f949800fecb60b13a5bd329afb60a003cc36a319a79ac",
+      "git_blob_sha256": "852cad800fdce6f3ab1f949800fecb60b13a5bd329afb60a003cc36a319a79ac"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r28/pages/page-005.png",
+      "raw_sha256": "73b25b12ed958e44a1666c786f21cf40f183d871af7a92dc5bd7175f0f9eb102",
+      "git_blob_sha256": "73b25b12ed958e44a1666c786f21cf40f183d871af7a92dc5bd7175f0f9eb102"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r28/pages/page-006.png",
+      "raw_sha256": "0134af1084fbbc81d699fac529a60bbe8fdbe1d29b571ff64a9147bd3af40b64",
+      "git_blob_sha256": "0134af1084fbbc81d699fac529a60bbe8fdbe1d29b571ff64a9147bd3af40b64"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r28/pages/page-007.png",
+      "raw_sha256": "908234041ad21c7ee406169a69ec8c88403454d45c1da7750d750287c5fd50a9",
+      "git_blob_sha256": "908234041ad21c7ee406169a69ec8c88403454d45c1da7750d750287c5fd50a9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r29/contact-sheet.png",
+      "raw_sha256": "2c31ca4d883b4bad5868d25da8ab2186a02e2626b4ceaa72cdc74c5400514e6d",
+      "git_blob_sha256": "2c31ca4d883b4bad5868d25da8ab2186a02e2626b4ceaa72cdc74c5400514e6d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r29/manifest.json",
+      "raw_sha256": "1e5cceec38a22c8b5646a6198eb5b02e050aab01876df4a3ac430be3619b1f0a",
+      "git_blob_sha256": "1e5cceec38a22c8b5646a6198eb5b02e050aab01876df4a3ac430be3619b1f0a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r29/pages/page-001.png",
+      "raw_sha256": "92d57ae0facbeb2187e5aca0c9e390319a0a2491f52efea0b6e1ae5a648253ff",
+      "git_blob_sha256": "92d57ae0facbeb2187e5aca0c9e390319a0a2491f52efea0b6e1ae5a648253ff"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r29/pages/page-002.png",
+      "raw_sha256": "1ee899ff06b72c2041cd4276c81606dacc0fe354e284e482d8439138e6318f01",
+      "git_blob_sha256": "1ee899ff06b72c2041cd4276c81606dacc0fe354e284e482d8439138e6318f01"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r29/pages/page-003.png",
+      "raw_sha256": "adca03ec729ebb932579f47466c3030b7803f574debbc68b9736a8897806b3b2",
+      "git_blob_sha256": "adca03ec729ebb932579f47466c3030b7803f574debbc68b9736a8897806b3b2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r29/pages/page-004.png",
+      "raw_sha256": "852cad800fdce6f3ab1f949800fecb60b13a5bd329afb60a003cc36a319a79ac",
+      "git_blob_sha256": "852cad800fdce6f3ab1f949800fecb60b13a5bd329afb60a003cc36a319a79ac"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r29/pages/page-005.png",
+      "raw_sha256": "73b25b12ed958e44a1666c786f21cf40f183d871af7a92dc5bd7175f0f9eb102",
+      "git_blob_sha256": "73b25b12ed958e44a1666c786f21cf40f183d871af7a92dc5bd7175f0f9eb102"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r29/pages/page-006.png",
+      "raw_sha256": "0134af1084fbbc81d699fac529a60bbe8fdbe1d29b571ff64a9147bd3af40b64",
+      "git_blob_sha256": "0134af1084fbbc81d699fac529a60bbe8fdbe1d29b571ff64a9147bd3af40b64"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r29/pages/page-007.png",
+      "raw_sha256": "908234041ad21c7ee406169a69ec8c88403454d45c1da7750d750287c5fd50a9",
+      "git_blob_sha256": "908234041ad21c7ee406169a69ec8c88403454d45c1da7750d750287c5fd50a9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r30/contact-sheet.png",
+      "raw_sha256": "2c31ca4d883b4bad5868d25da8ab2186a02e2626b4ceaa72cdc74c5400514e6d",
+      "git_blob_sha256": "2c31ca4d883b4bad5868d25da8ab2186a02e2626b4ceaa72cdc74c5400514e6d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r30/manifest.json",
+      "raw_sha256": "61b1cc5d45c56e2dcbcdb72c653340bb6201d4020f8039e966a38a20a0fd3243",
+      "git_blob_sha256": "61b1cc5d45c56e2dcbcdb72c653340bb6201d4020f8039e966a38a20a0fd3243"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r30/pages/page-001.png",
+      "raw_sha256": "92d57ae0facbeb2187e5aca0c9e390319a0a2491f52efea0b6e1ae5a648253ff",
+      "git_blob_sha256": "92d57ae0facbeb2187e5aca0c9e390319a0a2491f52efea0b6e1ae5a648253ff"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r30/pages/page-002.png",
+      "raw_sha256": "1ee899ff06b72c2041cd4276c81606dacc0fe354e284e482d8439138e6318f01",
+      "git_blob_sha256": "1ee899ff06b72c2041cd4276c81606dacc0fe354e284e482d8439138e6318f01"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r30/pages/page-003.png",
+      "raw_sha256": "adca03ec729ebb932579f47466c3030b7803f574debbc68b9736a8897806b3b2",
+      "git_blob_sha256": "adca03ec729ebb932579f47466c3030b7803f574debbc68b9736a8897806b3b2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r30/pages/page-004.png",
+      "raw_sha256": "852cad800fdce6f3ab1f949800fecb60b13a5bd329afb60a003cc36a319a79ac",
+      "git_blob_sha256": "852cad800fdce6f3ab1f949800fecb60b13a5bd329afb60a003cc36a319a79ac"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r30/pages/page-005.png",
+      "raw_sha256": "73b25b12ed958e44a1666c786f21cf40f183d871af7a92dc5bd7175f0f9eb102",
+      "git_blob_sha256": "73b25b12ed958e44a1666c786f21cf40f183d871af7a92dc5bd7175f0f9eb102"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r30/pages/page-006.png",
+      "raw_sha256": "0134af1084fbbc81d699fac529a60bbe8fdbe1d29b571ff64a9147bd3af40b64",
+      "git_blob_sha256": "0134af1084fbbc81d699fac529a60bbe8fdbe1d29b571ff64a9147bd3af40b64"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-antwoorden-d96f21c3abed-r30/pages/page-007.png",
+      "raw_sha256": "908234041ad21c7ee406169a69ec8c88403454d45c1da7750d750287c5fd50a9",
+      "git_blob_sha256": "908234041ad21c7ee406169a69ec8c88403454d45c1da7750d750287c5fd50a9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r28/contact-sheet.png",
+      "raw_sha256": "c6dafd1f83ac97b122a27623d69d71d5ad01376e4bf6203cf3c9efac598f7d2e",
+      "git_blob_sha256": "c6dafd1f83ac97b122a27623d69d71d5ad01376e4bf6203cf3c9efac598f7d2e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r28/manifest.json",
+      "raw_sha256": "99dff3ee34a2022ea2580839a7fb280fdfe816a9a25084d8ebe331f52a6cc417",
+      "git_blob_sha256": "99dff3ee34a2022ea2580839a7fb280fdfe816a9a25084d8ebe331f52a6cc417"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r28/pages/page-001.png",
+      "raw_sha256": "8dce5752b8b6f223d9ec3334349cbd8426705b1b11d2ad616885a7237a4ff02a",
+      "git_blob_sha256": "8dce5752b8b6f223d9ec3334349cbd8426705b1b11d2ad616885a7237a4ff02a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r28/pages/page-002.png",
+      "raw_sha256": "866955304c64cf0873b478645fc92e14ffe4b93801cc959cace9d2993d99e0fc",
+      "git_blob_sha256": "866955304c64cf0873b478645fc92e14ffe4b93801cc959cace9d2993d99e0fc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r28/pages/page-003.png",
+      "raw_sha256": "1de08ce2987bd5c875622cbb41aeb0784dbbca9b41b54f1ce6ba75a325d77758",
+      "git_blob_sha256": "1de08ce2987bd5c875622cbb41aeb0784dbbca9b41b54f1ce6ba75a325d77758"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r28/pages/page-004.png",
+      "raw_sha256": "d2bace9d4ce1eaddf56936a7327a676d3ba44a86fc54d26d2505a2f528d59f31",
+      "git_blob_sha256": "d2bace9d4ce1eaddf56936a7327a676d3ba44a86fc54d26d2505a2f528d59f31"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r28/pages/page-005.png",
+      "raw_sha256": "b166b196ebe8a1426d452fc4bcf803b2084c8c41ed51dd4b1e5078ebc48320b6",
+      "git_blob_sha256": "b166b196ebe8a1426d452fc4bcf803b2084c8c41ed51dd4b1e5078ebc48320b6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r28/pages/page-006.png",
+      "raw_sha256": "471e09af924065c761fded16c8c74c77e0d9aebd7d83ff395b6d12344cf3918f",
+      "git_blob_sha256": "471e09af924065c761fded16c8c74c77e0d9aebd7d83ff395b6d12344cf3918f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r28/pages/page-007.png",
+      "raw_sha256": "b6ef874b19f6630f3aaefc62ef4f3874ebdbc3f7049fe77d34e7f0ad79b70845",
+      "git_blob_sha256": "b6ef874b19f6630f3aaefc62ef4f3874ebdbc3f7049fe77d34e7f0ad79b70845"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r28/pages/page-008.png",
+      "raw_sha256": "da00760a5d51eca93a00da72bf6396f092b69d1239448f956a071bbc8b60c54a",
+      "git_blob_sha256": "da00760a5d51eca93a00da72bf6396f092b69d1239448f956a071bbc8b60c54a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r28/pages/page-009.png",
+      "raw_sha256": "59ccfb6970899b936e17c94812a03806f05150fb9af4c258c36fe2b7050386f6",
+      "git_blob_sha256": "59ccfb6970899b936e17c94812a03806f05150fb9af4c258c36fe2b7050386f6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r29/contact-sheet.png",
+      "raw_sha256": "c6dafd1f83ac97b122a27623d69d71d5ad01376e4bf6203cf3c9efac598f7d2e",
+      "git_blob_sha256": "c6dafd1f83ac97b122a27623d69d71d5ad01376e4bf6203cf3c9efac598f7d2e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r29/manifest.json",
+      "raw_sha256": "cc8646c5a071ba341714f64e8d987271e20bfd727cb70418a603821cb54bfac2",
+      "git_blob_sha256": "cc8646c5a071ba341714f64e8d987271e20bfd727cb70418a603821cb54bfac2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r29/pages/page-001.png",
+      "raw_sha256": "8dce5752b8b6f223d9ec3334349cbd8426705b1b11d2ad616885a7237a4ff02a",
+      "git_blob_sha256": "8dce5752b8b6f223d9ec3334349cbd8426705b1b11d2ad616885a7237a4ff02a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r29/pages/page-002.png",
+      "raw_sha256": "866955304c64cf0873b478645fc92e14ffe4b93801cc959cace9d2993d99e0fc",
+      "git_blob_sha256": "866955304c64cf0873b478645fc92e14ffe4b93801cc959cace9d2993d99e0fc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r29/pages/page-003.png",
+      "raw_sha256": "1de08ce2987bd5c875622cbb41aeb0784dbbca9b41b54f1ce6ba75a325d77758",
+      "git_blob_sha256": "1de08ce2987bd5c875622cbb41aeb0784dbbca9b41b54f1ce6ba75a325d77758"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r29/pages/page-004.png",
+      "raw_sha256": "d2bace9d4ce1eaddf56936a7327a676d3ba44a86fc54d26d2505a2f528d59f31",
+      "git_blob_sha256": "d2bace9d4ce1eaddf56936a7327a676d3ba44a86fc54d26d2505a2f528d59f31"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r29/pages/page-005.png",
+      "raw_sha256": "b166b196ebe8a1426d452fc4bcf803b2084c8c41ed51dd4b1e5078ebc48320b6",
+      "git_blob_sha256": "b166b196ebe8a1426d452fc4bcf803b2084c8c41ed51dd4b1e5078ebc48320b6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r29/pages/page-006.png",
+      "raw_sha256": "471e09af924065c761fded16c8c74c77e0d9aebd7d83ff395b6d12344cf3918f",
+      "git_blob_sha256": "471e09af924065c761fded16c8c74c77e0d9aebd7d83ff395b6d12344cf3918f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r29/pages/page-007.png",
+      "raw_sha256": "b6ef874b19f6630f3aaefc62ef4f3874ebdbc3f7049fe77d34e7f0ad79b70845",
+      "git_blob_sha256": "b6ef874b19f6630f3aaefc62ef4f3874ebdbc3f7049fe77d34e7f0ad79b70845"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r29/pages/page-008.png",
+      "raw_sha256": "da00760a5d51eca93a00da72bf6396f092b69d1239448f956a071bbc8b60c54a",
+      "git_blob_sha256": "da00760a5d51eca93a00da72bf6396f092b69d1239448f956a071bbc8b60c54a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r29/pages/page-009.png",
+      "raw_sha256": "59ccfb6970899b936e17c94812a03806f05150fb9af4c258c36fe2b7050386f6",
+      "git_blob_sha256": "59ccfb6970899b936e17c94812a03806f05150fb9af4c258c36fe2b7050386f6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r30/contact-sheet.png",
+      "raw_sha256": "c6dafd1f83ac97b122a27623d69d71d5ad01376e4bf6203cf3c9efac598f7d2e",
+      "git_blob_sha256": "c6dafd1f83ac97b122a27623d69d71d5ad01376e4bf6203cf3c9efac598f7d2e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r30/manifest.json",
+      "raw_sha256": "db5c8296646529863dc41af5b049a76c116e676466af5a36717ed46f059892ad",
+      "git_blob_sha256": "db5c8296646529863dc41af5b049a76c116e676466af5a36717ed46f059892ad"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r30/pages/page-001.png",
+      "raw_sha256": "8dce5752b8b6f223d9ec3334349cbd8426705b1b11d2ad616885a7237a4ff02a",
+      "git_blob_sha256": "8dce5752b8b6f223d9ec3334349cbd8426705b1b11d2ad616885a7237a4ff02a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r30/pages/page-002.png",
+      "raw_sha256": "866955304c64cf0873b478645fc92e14ffe4b93801cc959cace9d2993d99e0fc",
+      "git_blob_sha256": "866955304c64cf0873b478645fc92e14ffe4b93801cc959cace9d2993d99e0fc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r30/pages/page-003.png",
+      "raw_sha256": "1de08ce2987bd5c875622cbb41aeb0784dbbca9b41b54f1ce6ba75a325d77758",
+      "git_blob_sha256": "1de08ce2987bd5c875622cbb41aeb0784dbbca9b41b54f1ce6ba75a325d77758"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r30/pages/page-004.png",
+      "raw_sha256": "d2bace9d4ce1eaddf56936a7327a676d3ba44a86fc54d26d2505a2f528d59f31",
+      "git_blob_sha256": "d2bace9d4ce1eaddf56936a7327a676d3ba44a86fc54d26d2505a2f528d59f31"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r30/pages/page-005.png",
+      "raw_sha256": "b166b196ebe8a1426d452fc4bcf803b2084c8c41ed51dd4b1e5078ebc48320b6",
+      "git_blob_sha256": "b166b196ebe8a1426d452fc4bcf803b2084c8c41ed51dd4b1e5078ebc48320b6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r30/pages/page-006.png",
+      "raw_sha256": "471e09af924065c761fded16c8c74c77e0d9aebd7d83ff395b6d12344cf3918f",
+      "git_blob_sha256": "471e09af924065c761fded16c8c74c77e0d9aebd7d83ff395b6d12344cf3918f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r30/pages/page-007.png",
+      "raw_sha256": "b6ef874b19f6630f3aaefc62ef4f3874ebdbc3f7049fe77d34e7f0ad79b70845",
+      "git_blob_sha256": "b6ef874b19f6630f3aaefc62ef4f3874ebdbc3f7049fe77d34e7f0ad79b70845"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r30/pages/page-008.png",
+      "raw_sha256": "da00760a5d51eca93a00da72bf6396f092b69d1239448f956a071bbc8b60c54a",
+      "git_blob_sha256": "da00760a5d51eca93a00da72bf6396f092b69d1239448f956a071bbc8b60c54a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-opgaven-d12487671bd2-r30/pages/page-009.png",
+      "raw_sha256": "59ccfb6970899b936e17c94812a03806f05150fb9af4c258c36fe2b7050386f6",
+      "git_blob_sha256": "59ccfb6970899b936e17c94812a03806f05150fb9af4c258c36fe2b7050386f6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/contact-sheet.png",
+      "raw_sha256": "3f9f550afe9ed83693a4b0bf795231eed2e729b9ad8391f056dc287c2d7841d1",
+      "git_blob_sha256": "3f9f550afe9ed83693a4b0bf795231eed2e729b9ad8391f056dc287c2d7841d1"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/manifest.json",
+      "raw_sha256": "c36a359c8cc038c09efdb25eb7cf3b6bc2d12ef24b02b45a2ab0097d578f0c89",
+      "git_blob_sha256": "c36a359c8cc038c09efdb25eb7cf3b6bc2d12ef24b02b45a2ab0097d578f0c89"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-001.png",
+      "raw_sha256": "1b461934c3fd5c9519572a985379f753223be62288631675cfa9d084dc518ac6",
+      "git_blob_sha256": "1b461934c3fd5c9519572a985379f753223be62288631675cfa9d084dc518ac6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-002.png",
+      "raw_sha256": "f5b3b1f3fd2a80f8c98ef56bb892df648733b8b9e550dee8106dbc6673e881d4",
+      "git_blob_sha256": "f5b3b1f3fd2a80f8c98ef56bb892df648733b8b9e550dee8106dbc6673e881d4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-003.png",
+      "raw_sha256": "259cbd5a05f47b70d00795813ac71750a421c17931fd269a8a17a8c78e130cc5",
+      "git_blob_sha256": "259cbd5a05f47b70d00795813ac71750a421c17931fd269a8a17a8c78e130cc5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-004.png",
+      "raw_sha256": "c65f51e3136c2d8ef6a68f8d2f7cb8dbb912fdc2da8a63a72aa5bff49b283d6e",
+      "git_blob_sha256": "c65f51e3136c2d8ef6a68f8d2f7cb8dbb912fdc2da8a63a72aa5bff49b283d6e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-005.png",
+      "raw_sha256": "d401752356839f500b0c32ea70585a953a195978e16124b1c495c6e3fab88a7e",
+      "git_blob_sha256": "d401752356839f500b0c32ea70585a953a195978e16124b1c495c6e3fab88a7e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-006.png",
+      "raw_sha256": "90f31298fe89748309cbe613aff0bd50982f57dd8a9764984893a8cd4f522a55",
+      "git_blob_sha256": "90f31298fe89748309cbe613aff0bd50982f57dd8a9764984893a8cd4f522a55"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-007.png",
+      "raw_sha256": "e44a2d79019f42202108a1efe6e801ce057fe7400d0df8904946b88acb09394c",
+      "git_blob_sha256": "e44a2d79019f42202108a1efe6e801ce057fe7400d0df8904946b88acb09394c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-008.png",
+      "raw_sha256": "37007229bd4350a5cff8703beaa64c12118212ad1255e1a23da645a00e92267d",
+      "git_blob_sha256": "37007229bd4350a5cff8703beaa64c12118212ad1255e1a23da645a00e92267d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-009.png",
+      "raw_sha256": "f1160cf726570230df25ff58e834aa1af5adb419590fd5eb0ef59532ac1c6689",
+      "git_blob_sha256": "f1160cf726570230df25ff58e834aa1af5adb419590fd5eb0ef59532ac1c6689"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-010.png",
+      "raw_sha256": "29ce7ee7dd65cb9bd84df4fa4f32009c57f743086af71abfdde577fa10e9e9f0",
+      "git_blob_sha256": "29ce7ee7dd65cb9bd84df4fa4f32009c57f743086af71abfdde577fa10e9e9f0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-011.png",
+      "raw_sha256": "eaf11cf9668844a9211f017804040f9133674d7c7ec93a442eaadaaa4284cd04",
+      "git_blob_sha256": "eaf11cf9668844a9211f017804040f9133674d7c7ec93a442eaadaaa4284cd04"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-012.png",
+      "raw_sha256": "838e5b48036bd631319f3f0fdaa8e32a843eb2e936e78922d6d7f71c17824263",
+      "git_blob_sha256": "838e5b48036bd631319f3f0fdaa8e32a843eb2e936e78922d6d7f71c17824263"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-013.png",
+      "raw_sha256": "72b151067a8cbae1976d3b125fb19c6b70726293fe7eca8b256ef120a10a5f08",
+      "git_blob_sha256": "72b151067a8cbae1976d3b125fb19c6b70726293fe7eca8b256ef120a10a5f08"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r28/pages/page-014.png",
+      "raw_sha256": "83ef57f59d7cfc7ebc5e38ba3e2f26186b4902c5773e03f69f4b7eed11099ef0",
+      "git_blob_sha256": "83ef57f59d7cfc7ebc5e38ba3e2f26186b4902c5773e03f69f4b7eed11099ef0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/contact-sheet.png",
+      "raw_sha256": "3f9f550afe9ed83693a4b0bf795231eed2e729b9ad8391f056dc287c2d7841d1",
+      "git_blob_sha256": "3f9f550afe9ed83693a4b0bf795231eed2e729b9ad8391f056dc287c2d7841d1"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/manifest.json",
+      "raw_sha256": "df5063ed48e0856dad08632e6afca8a3629229315e847920913e6d2939647b0a",
+      "git_blob_sha256": "df5063ed48e0856dad08632e6afca8a3629229315e847920913e6d2939647b0a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-001.png",
+      "raw_sha256": "1b461934c3fd5c9519572a985379f753223be62288631675cfa9d084dc518ac6",
+      "git_blob_sha256": "1b461934c3fd5c9519572a985379f753223be62288631675cfa9d084dc518ac6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-002.png",
+      "raw_sha256": "f5b3b1f3fd2a80f8c98ef56bb892df648733b8b9e550dee8106dbc6673e881d4",
+      "git_blob_sha256": "f5b3b1f3fd2a80f8c98ef56bb892df648733b8b9e550dee8106dbc6673e881d4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-003.png",
+      "raw_sha256": "259cbd5a05f47b70d00795813ac71750a421c17931fd269a8a17a8c78e130cc5",
+      "git_blob_sha256": "259cbd5a05f47b70d00795813ac71750a421c17931fd269a8a17a8c78e130cc5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-004.png",
+      "raw_sha256": "c65f51e3136c2d8ef6a68f8d2f7cb8dbb912fdc2da8a63a72aa5bff49b283d6e",
+      "git_blob_sha256": "c65f51e3136c2d8ef6a68f8d2f7cb8dbb912fdc2da8a63a72aa5bff49b283d6e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-005.png",
+      "raw_sha256": "d401752356839f500b0c32ea70585a953a195978e16124b1c495c6e3fab88a7e",
+      "git_blob_sha256": "d401752356839f500b0c32ea70585a953a195978e16124b1c495c6e3fab88a7e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-006.png",
+      "raw_sha256": "90f31298fe89748309cbe613aff0bd50982f57dd8a9764984893a8cd4f522a55",
+      "git_blob_sha256": "90f31298fe89748309cbe613aff0bd50982f57dd8a9764984893a8cd4f522a55"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-007.png",
+      "raw_sha256": "e44a2d79019f42202108a1efe6e801ce057fe7400d0df8904946b88acb09394c",
+      "git_blob_sha256": "e44a2d79019f42202108a1efe6e801ce057fe7400d0df8904946b88acb09394c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-008.png",
+      "raw_sha256": "37007229bd4350a5cff8703beaa64c12118212ad1255e1a23da645a00e92267d",
+      "git_blob_sha256": "37007229bd4350a5cff8703beaa64c12118212ad1255e1a23da645a00e92267d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-009.png",
+      "raw_sha256": "f1160cf726570230df25ff58e834aa1af5adb419590fd5eb0ef59532ac1c6689",
+      "git_blob_sha256": "f1160cf726570230df25ff58e834aa1af5adb419590fd5eb0ef59532ac1c6689"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-010.png",
+      "raw_sha256": "29ce7ee7dd65cb9bd84df4fa4f32009c57f743086af71abfdde577fa10e9e9f0",
+      "git_blob_sha256": "29ce7ee7dd65cb9bd84df4fa4f32009c57f743086af71abfdde577fa10e9e9f0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-011.png",
+      "raw_sha256": "eaf11cf9668844a9211f017804040f9133674d7c7ec93a442eaadaaa4284cd04",
+      "git_blob_sha256": "eaf11cf9668844a9211f017804040f9133674d7c7ec93a442eaadaaa4284cd04"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-012.png",
+      "raw_sha256": "838e5b48036bd631319f3f0fdaa8e32a843eb2e936e78922d6d7f71c17824263",
+      "git_blob_sha256": "838e5b48036bd631319f3f0fdaa8e32a843eb2e936e78922d6d7f71c17824263"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-013.png",
+      "raw_sha256": "72b151067a8cbae1976d3b125fb19c6b70726293fe7eca8b256ef120a10a5f08",
+      "git_blob_sha256": "72b151067a8cbae1976d3b125fb19c6b70726293fe7eca8b256ef120a10a5f08"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r29/pages/page-014.png",
+      "raw_sha256": "83ef57f59d7cfc7ebc5e38ba3e2f26186b4902c5773e03f69f4b7eed11099ef0",
+      "git_blob_sha256": "83ef57f59d7cfc7ebc5e38ba3e2f26186b4902c5773e03f69f4b7eed11099ef0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/contact-sheet.png",
+      "raw_sha256": "3f9f550afe9ed83693a4b0bf795231eed2e729b9ad8391f056dc287c2d7841d1",
+      "git_blob_sha256": "3f9f550afe9ed83693a4b0bf795231eed2e729b9ad8391f056dc287c2d7841d1"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/manifest.json",
+      "raw_sha256": "fdca1719d2c2fffe40b4660a7753fbf9f27041007fb49da541d78fb168506876",
+      "git_blob_sha256": "fdca1719d2c2fffe40b4660a7753fbf9f27041007fb49da541d78fb168506876"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-001.png",
+      "raw_sha256": "1b461934c3fd5c9519572a985379f753223be62288631675cfa9d084dc518ac6",
+      "git_blob_sha256": "1b461934c3fd5c9519572a985379f753223be62288631675cfa9d084dc518ac6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-002.png",
+      "raw_sha256": "f5b3b1f3fd2a80f8c98ef56bb892df648733b8b9e550dee8106dbc6673e881d4",
+      "git_blob_sha256": "f5b3b1f3fd2a80f8c98ef56bb892df648733b8b9e550dee8106dbc6673e881d4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-003.png",
+      "raw_sha256": "259cbd5a05f47b70d00795813ac71750a421c17931fd269a8a17a8c78e130cc5",
+      "git_blob_sha256": "259cbd5a05f47b70d00795813ac71750a421c17931fd269a8a17a8c78e130cc5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-004.png",
+      "raw_sha256": "c65f51e3136c2d8ef6a68f8d2f7cb8dbb912fdc2da8a63a72aa5bff49b283d6e",
+      "git_blob_sha256": "c65f51e3136c2d8ef6a68f8d2f7cb8dbb912fdc2da8a63a72aa5bff49b283d6e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-005.png",
+      "raw_sha256": "d401752356839f500b0c32ea70585a953a195978e16124b1c495c6e3fab88a7e",
+      "git_blob_sha256": "d401752356839f500b0c32ea70585a953a195978e16124b1c495c6e3fab88a7e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-006.png",
+      "raw_sha256": "90f31298fe89748309cbe613aff0bd50982f57dd8a9764984893a8cd4f522a55",
+      "git_blob_sha256": "90f31298fe89748309cbe613aff0bd50982f57dd8a9764984893a8cd4f522a55"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-007.png",
+      "raw_sha256": "e44a2d79019f42202108a1efe6e801ce057fe7400d0df8904946b88acb09394c",
+      "git_blob_sha256": "e44a2d79019f42202108a1efe6e801ce057fe7400d0df8904946b88acb09394c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-008.png",
+      "raw_sha256": "37007229bd4350a5cff8703beaa64c12118212ad1255e1a23da645a00e92267d",
+      "git_blob_sha256": "37007229bd4350a5cff8703beaa64c12118212ad1255e1a23da645a00e92267d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-009.png",
+      "raw_sha256": "f1160cf726570230df25ff58e834aa1af5adb419590fd5eb0ef59532ac1c6689",
+      "git_blob_sha256": "f1160cf726570230df25ff58e834aa1af5adb419590fd5eb0ef59532ac1c6689"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-010.png",
+      "raw_sha256": "29ce7ee7dd65cb9bd84df4fa4f32009c57f743086af71abfdde577fa10e9e9f0",
+      "git_blob_sha256": "29ce7ee7dd65cb9bd84df4fa4f32009c57f743086af71abfdde577fa10e9e9f0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-011.png",
+      "raw_sha256": "eaf11cf9668844a9211f017804040f9133674d7c7ec93a442eaadaaa4284cd04",
+      "git_blob_sha256": "eaf11cf9668844a9211f017804040f9133674d7c7ec93a442eaadaaa4284cd04"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-012.png",
+      "raw_sha256": "838e5b48036bd631319f3f0fdaa8e32a843eb2e936e78922d6d7f71c17824263",
+      "git_blob_sha256": "838e5b48036bd631319f3f0fdaa8e32a843eb2e936e78922d6d7f71c17824263"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-013.png",
+      "raw_sha256": "72b151067a8cbae1976d3b125fb19c6b70726293fe7eca8b256ef120a10a5f08",
+      "git_blob_sha256": "72b151067a8cbae1976d3b125fb19c6b70726293fe7eca8b256ef120a10a5f08"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/proofs/213-paragraaf-534177c8280e-r30/pages/page-014.png",
+      "raw_sha256": "83ef57f59d7cfc7ebc5e38ba3e2f26186b4902c5773e03f69f4b7eed11099ef0",
+      "git_blob_sha256": "83ef57f59d7cfc7ebc5e38ba3e2f26186b4902c5773e03f69f4b7eed11099ef0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/real-input-counterexamples.json",
+      "raw_sha256": "e8a60923f9d18fb0f080222e6908126a93394950cc8698db8036d7013f72a8cd",
+      "git_blob_sha256": "e8a60923f9d18fb0f080222e6908126a93394950cc8698db8036d7013f72a8cd"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/reservation-r27.json",
+      "raw_sha256": "ccede37d4aa9d0192c6e957675f90715d7f3d0361c765f076d9065f45cc5180f",
+      "git_blob_sha256": "ccede37d4aa9d0192c6e957675f90715d7f3d0361c765f076d9065f45cc5180f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/reservation-r28.json",
+      "raw_sha256": "4add7622356e41a9c916e04b194512173e2e962bf106bb1f79f8ed7e89643fec",
+      "git_blob_sha256": "4add7622356e41a9c916e04b194512173e2e962bf106bb1f79f8ed7e89643fec"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/reservation-r29.json",
+      "raw_sha256": "2ab6fd6cc791d2c7813692de9148ac24e82b27fbc15352c218fa85d951381b6b",
+      "git_blob_sha256": "2ab6fd6cc791d2c7813692de9148ac24e82b27fbc15352c218fa85d951381b6b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/reservation-r30.json",
+      "raw_sha256": "0c30d11b7c7ab7487f9a8310efb3664edaca007c48a1eac16666ba5f4dd97484",
+      "git_blob_sha256": "0c30d11b7c7ab7487f9a8310efb3664edaca007c48a1eac16666ba5f4dd97484"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/thin-r29-build.json",
+      "raw_sha256": "b9fe168cddfdeae727ca4c001babbdb2d6ee1150cabbf9902edf077ceeb7e95d",
+      "git_blob_sha256": "b9fe168cddfdeae727ca4c001babbdb2d6ee1150cabbf9902edf077ceeb7e95d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/thin-r29-command.json",
+      "raw_sha256": "35c76003baeb6125fbd40c24d1c9dcc96b309287a1bcf8e2a58d26facf83905c",
+      "git_blob_sha256": "35c76003baeb6125fbd40c24d1c9dcc96b309287a1bcf8e2a58d26facf83905c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/thin-r29-reproduction.json",
+      "raw_sha256": "fd733e86ba660b1c7a7d80eadd5cbcc1888a9efaba6961f981f07c513e6a4e51",
+      "git_blob_sha256": "fd733e86ba660b1c7a7d80eadd5cbcc1888a9efaba6961f981f07c513e6a4e51"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-input-probes.py",
+      "raw_sha256": "74f10b1f4c6f889bbab63b5509cba2245f8374e952499d8270e8145df001bc40",
+      "git_blob_sha256": "74f10b1f4c6f889bbab63b5509cba2245f8374e952499d8270e8145df001bc40"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-operational-plan.md",
+      "raw_sha256": "a4983782b622cbe595e1903fbbe37dc5e2acb855d351e2b09023b0cf7052e745",
+      "git_blob_sha256": "a4983782b622cbe595e1903fbbe37dc5e2acb855d351e2b09023b0cf7052e745"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-personal-render-check.md",
+      "raw_sha256": "3b2ac87428e254b9107f8085a0ffbc8c188ae2d2e77728c462686235edf8cbe3",
+      "git_blob_sha256": "3b2ac87428e254b9107f8085a0ffbc8c188ae2d2e77728c462686235edf8cbe3"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-result.md",
+      "raw_sha256": "2f2400bbccea58d0cf8eac0f13ca1f235c1f4b40e398b7e79de3f60fac439f45",
+      "git_blob_sha256": "2f2400bbccea58d0cf8eac0f13ca1f235c1f4b40e398b7e79de3f60fac439f45"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-run.py",
+      "raw_sha256": "ad06a75b3ba79c9f2093df9d7e96b1db44c544cc7156e0f86015c607c09092cd",
+      "git_blob_sha256": "ad06a75b3ba79c9f2093df9d7e96b1db44c544cc7156e0f86015c607c09092cd"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-scope.py",
+      "raw_sha256": "74eb896e20f223c578cd6b9e99b472b220f2d1d03b35d71393609835c1fed990",
+      "git_blob_sha256": "74eb896e20f223c578cd6b9e99b472b220f2d1d03b35d71393609835c1fed990"
+    }
+  ],
+  "strict_owned_unknown": 0,
+  "inherited_counts": {
+    "platform": 12352,
+    "lessons": 1902
+  },
+  "old_raw_preservation": true,
+  "allowed_index_tail": false,
+  "actual_scopes": [
+    {
+      "repository": "platform",
+      "kind": "owned",
+      "base": "50db4c5da142812f47bf02219e393447caedecfb",
+      "head": "8fc91b3aae7afc03b9e7b6d128b659b412547f9d",
+      "native_verdict": "PASS",
+      "unknown": 0,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 2,
+        "generated_indexes": 0,
+        "review_evidence": 142,
+        "unknown": 0
+      },
+      "failures": []
+    },
+    {
+      "repository": "platform",
+      "kind": "complete",
+      "base": "96416b6b5bd57094576e9aba0a42d682584ec479",
+      "head": "8fc91b3aae7afc03b9e7b6d128b659b412547f9d",
+      "native_verdict": "PASS",
+      "unknown": 0,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 83,
+        "generated_indexes": 6,
+        "review_evidence": 4763,
+        "unknown": 0
+      },
+      "failures": []
+    },
+    {
+      "repository": "lessons",
+      "kind": "owned",
+      "base": "42996c60b4a93843dfe8488b8e5a3ea704871667",
+      "head": "42996c60b4a93843dfe8488b8e5a3ea704871667",
+      "native_verdict": "FAIL",
+      "unknown": 0,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      },
+      "failures": [
+        "no changed paths to classify",
+        "textbook lane needs at least one Part A textbook change"
+      ]
+    },
+    {
+      "repository": "lessons",
+      "kind": "complete",
+      "base": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "42996c60b4a93843dfe8488b8e5a3ea704871667",
+      "native_verdict": "PASS",
+      "unknown": 0,
+      "counts": {
+        "partA_textbook": 205,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 5,
+        "unknown": 0
+      },
+      "failures": []
+    }
+  ],
+  "whitespace": [
+    {
+      "mode": "native",
+      "exit_code": 0
+    },
+    {
+      "mode": "cr-at-eol",
+      "exit_code": 0
+    },
+    {
+      "mode": "source",
+      "exit_code": 0
+    }
+  ],
+  "native": {
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.zip": "15ffc25da00d0f3bfc84f93224191a08c9ab31387f7dc873a8df85dc7b76b499",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html": "b78090ef65fb0544e46b59353660980a79e2bd2b5774ef64955154abe23a3c98",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.zip": "1a841ffb08f77e0a50559791707023c85d803f6aea263095449fd74fcf451dae",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md": "2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html": "3c536f28de7f95a133cf80b5f3e4a351912af5103cf5ed48772fdf9d550a11cb",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf": "d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip": "9d1a0197cd02451e2168a31472ce5351aef9bd9169e8af535b261ba2353930a1",
+    "_assets/2.1.3_fig_1.svg": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819",
+    "_assets/2.1.3_fig_1.png": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+    "_assets/2.1.3_fig_2.svg": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53",
+    "_assets/2.1.3_fig_2.png": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+    "_assets/2.1.3_fig_3.svg": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc",
+    "_assets/2.1.3_fig_3.png": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+    "_assets/2.1.3_fig_4.svg": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773",
+    "_assets/2.1.3_fig_4.png": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+    "_assets/2.1.3_we_1.svg": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d",
+    "_assets/2.1.3_we_1.png": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+    "_assets/2.1.3_ex_1.svg": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+    "_assets/2.1.3_ex_1.png": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e"
+  },
+  "current_review_unchanged": true,
+  "stale_qc_unchanged": true,
+  "handoff_absent": true,
+  "no_independent_acceptance": true
+}
