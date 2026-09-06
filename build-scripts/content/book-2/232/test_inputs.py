@@ -106,4 +106,121 @@ class InputTests(unittest.TestCase):
         self.assertEqual(calls,[['node',b.gate.N+'gate.cjs','232']])
         self.cases.append({'label':'positive actual physical inputs and committed source reach exact full root gate first','native_success_claim':False})
 
+class ExecutionRoleTests(unittest.TestCase):
+    """Real temporary Git worktrees and claims, never actual foreign actor writes.
+
+    Only the fixed test pair basename is relocated. Actor/task/prefix semantics,
+    actual branch, Git registration, claim files and ancestry checks remain real.
+    No fixture constitutes pupil authority or successful foreign production.
+    """
+    def fixture(self,role):
+        temp=tempfile.TemporaryDirectory(prefix='book2-232-role-test-',dir='C:/wt')
+        self.addCleanup(temp.cleanup);base=Path(temp.name)
+        actor,suffix,_,evidence=b.gate.ROLES[role]
+        binding=(actor,suffix,base.name,evidence)
+        override=patch.dict(b.gate.ROLES,{role:binding});override.start();self.addCleanup(override.stop)
+        branch=('codex/' if role=='root' else 'agent/')+base.name
+        task='BOOK2-TEXTBOOK-PRODUCTION-1'+('-'+suffix if suffix else '')
+        locks=[]
+        for repo in ('4veco-platform','4veco-lessen'):
+            anchor=base/('anchor-'+repo);root=base/repo
+            def git(args,cwd=None):return subprocess.run(['git',*args],cwd=cwd,capture_output=True,check=True).stdout.decode().strip()
+            git(['init','--quiet',str(anchor)])
+            git(['-c','user.name=Technical Fixture','-c','user.email=fixture@example.invalid','commit','--quiet','--allow-empty','-m','Technical identity fixture'],anchor)
+            git(['worktree','add','--quiet','-b',branch,str(root)],anchor)
+            gitdir=Path(git(['rev-parse','--path-format=absolute','--git-dir'],root))
+            claim={'schema':'4veco-agent-worktree-lock.v1','agent_id':actor,'task_id':task,'status':'active',
+                   'branch':branch,'repo':repo,'worktree_path':str(root),'git_dir':str(gitdir),
+                   'head_sha':git(['rev-parse','HEAD'],root)}
+            path=gitdir/'4veco-agent-worktree-lock.json';path.write_text(json.dumps(claim),encoding='utf-8')
+            locks.append((path,claim,root))
+        return base/'4veco-platform',locks
+
+    def test_fixed_real_assignment_table(self):
+        self.assertEqual(b.gate.ROLES,{
+          'author':('paragraph_231_specialist_qc','232-BUILD-CURRENT','book2-232-build-current-20260906','232-BUILD-CURRENT'),
+          'correction':('paragraph_231_specialist_qc','232-REPRO-ROUTES','book2-232-repro-routes-20260906','232-REPRO-ROUTES'),
+          'paragraph-review':('paragraph_224_builder','232-PARAGRAPH-REVIEW','book2-232-paragraph-review-20260906','232-PARAGRAPH-REVIEW'),
+          'specialist-qc':('paragraph_214_builder','232-SPECIALIST-QC','book2-232-specialist-qc-20260906','232-SPECIALIST-QC'),
+          'root':('codex-root','','book2-part-a-production-20260905','232-QC-ROOT')})
+        with self.assertRaisesRegex(ValueError,'Unknown fixed execution role'):b.gate.execution_identity('any-actor')
+
+    def test_five_real_technical_pairs_and_each_claim_counterexample(self):
+        cases=[]
+        for role in list(b.gate.ROLES):
+            root,locks=self.fixture(role)
+            actual=b.gate.execution_identity(role,root);self.assertEqual(actual['role'],role)
+            for path,original,worktree in locks:
+                raw=path.read_bytes()
+                for field,value in [('agent_id','IMPERSONATED'),('task_id','WRONG_TASK'),('status','released'),
+                   ('schema','forged'),('repo','other'),('branch','agent/wrong'),('worktree_path',str(root/'other')),
+                   ('git_dir',str(root/'.git')),('head_sha','0'*40)]:
+                    bad=dict(original);bad[field]=value
+                    try:
+                        path.write_text(json.dumps(bad),encoding='utf-8')
+                        with self.assertRaises((ValueError,subprocess.CalledProcessError)):b.gate.execution_identity(role,root)
+                        cases.append([role,original['repo'],field])
+                    finally:path.write_bytes(raw)
+                try:
+                    path.unlink()
+                    with self.assertRaises(FileNotFoundError):b.gate.execution_identity(role,root)
+                finally:path.write_bytes(raw)
+                # Actual branch drift, not merely a forged branch field.
+                subprocess.run(['git','symbolic-ref','HEAD','refs/heads/agent/wrong'],cwd=worktree,check=True)
+                try:
+                    with self.assertRaisesRegex(ValueError,'Wrong actual assigned branch'):b.gate.execution_identity(role,root)
+                finally:subprocess.run(['git','symbolic-ref','HEAD','refs/heads/'+actual['branch']],cwd=worktree,check=True)
+            with self.assertRaisesRegex(ValueError,'Wrong assigned platform worktree'):b.gate.execution_identity(role,root/'other')
+            self.assertEqual(b.gate.execution_identity(role,root),actual)
+        print(json.dumps({'technical_claim_counterexamples':cases,'count':len(cases),'five_valid_technical_roles':True,'foreign_live_writes':0,'pupil_authority_claim':False}))
+
+    def test_exact_reservation_identity_and_all_route_prewrite_boundary(self):
+        for role in list(b.gate.ROLES):
+            root,locks=self.fixture(role);identity=b.gate.execution_identity(role,root)
+            folder=root/'reports/sprints';folder.mkdir(parents=True)
+            reservation=folder/(identity['prefix']+'reservation-r7.json')
+            payload={'actor':identity['actor'],'execution':identity,'status':'RESERVED_UNUSED','revision':'r7',
+                     'source_commit':'a'*40,'global_scan':{'maximum':6},'maximum_recorded_revision':6}
+            reservation.write_text(json.dumps(payload),encoding='utf-8')
+            attempt,native,proof=b.gate.namespace_preflight('r7',reservation,'a'*40,root,role)
+            self.assertEqual(attempt.name,identity['prefix']+'attempt-r7.json')
+            self.assertEqual(native.name,identity['prefix']+'native-r7.json')
+            variants=[]
+            for field,value in [('actor','wrong'),('status','CONSUMED'),('source_commit','b'*40),('revision','r8'),('maximum_recorded_revision',7),('global_scan',{})]:
+                wrong=json.loads(json.dumps(payload));wrong[field]=value;variants.append(wrong)
+            for field in ['role','actor','task','prefix','branch']:
+                wrong=json.loads(json.dumps(payload));wrong['execution'][field]='CROSS_ROLE';variants.append(wrong)
+            wrong=json.loads(json.dumps(payload));wrong['execution']['claims'][1]['claim_sha256']='0'*64;variants.append(wrong)
+            for wrong in variants:
+                reservation.write_text(json.dumps(wrong),encoding='utf-8')
+                for route in ['full','direct']:
+                    # Stub ONLY previously separately tested authority to reach the
+                    # real namespace predicate; effects and workers are tripwires.
+                    with patch.object(b,'ROOT',root),patch.object(b.gate,'preflight',return_value={}),patch.object(Path,'mkdir',side_effect=AssertionError('native mkdir')),patch.object(Path,'write_text',side_effect=AssertionError('native write')),patch.object(b,'describe',side_effect=AssertionError('worker')):
+                        with self.assertRaises(ValueError):b.build(root.parent/'4veco-lessen','a'*40,'r7',reservation,route,role)
+                self.assertFalse(attempt.exists());self.assertFalse(native.exists());self.assertFalse(proof.exists())
+            reservation.write_text(json.dumps(payload),encoding='utf-8')
+            with self.assertRaises(ValueError):b.gate.namespace_preflight('r7',folder/'cross-role.json','a'*40,root,role)
+            attempt.write_text('{}')
+            with self.assertRaisesRegex(ValueError,'Consumed namespace'):b.gate.namespace_preflight('r7',reservation,'a'*40,root,role)
+            attempt.unlink();occupied=proof/'232-opgaven-aaaaaaaaaaaa-r7';occupied.mkdir(parents=True)
+            with self.assertRaisesRegex(ValueError,'Occupied proof revision'):b.gate.namespace_preflight('r7',reservation,'a'*40,root,role)
+
+    def test_unchanged_pupil_functions_and_original_tests(self):
+        import ast
+        baseline='e0b47cab498102cd990e66318f5111602c32a6b6'
+        paths=['build-scripts/content/book-2/b2_232.py','build-scripts/content/book-2/232/test_inputs.py']
+        originals=b.gate.git_blobs(b.ROOT,[baseline+':'+p for p in paths])
+        old=ast.parse(originals[0]);new=ast.parse((b.ROOT/paths[0]).read_bytes())
+        functions=lambda tree:{n.name:ast.dump(n) for n in tree.body if isinstance(n,(ast.FunctionDef,ast.AsyncFunctionDef))}
+        before=functions(old);after=functions(new)
+        for name in before:
+            if name not in ('build','main'):self.assertEqual(before[name],after[name],name)
+        oldtests=originals[1].decode('utf-8').split("if __name__=='__main__':unittest.main()")[0]
+        current=(b.ROOT/paths[1]).read_text(encoding='utf-8')
+        self.assertEqual(current[:len(oldtests)],oldtests,'All original input test bytes retained')
+        untouched=['theory.md','exercises.md','answers.md','target-answers.md','assets.js','test_source.py']
+        raw=b.gate.git_blobs(b.ROOT,[baseline+':build-scripts/content/book-2/232/'+p for p in untouched])
+        for name,expected in zip(untouched,raw):self.assertEqual((b.CONTENT/name).read_bytes(),expected,name)
+
 if __name__=='__main__':unittest.main()

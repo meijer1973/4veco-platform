@@ -155,15 +155,17 @@ def check(manifest_path):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--manifest',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
-    p.add_argument('--rebuild',action='store_true');p.add_argument('--revision');p.add_argument('--reservation',type=Path);a=p.parse_args()
+    p.add_argument('--rebuild',action='store_true');p.add_argument('--revision');p.add_argument('--reservation',type=Path)
+    p.add_argument('--execution-role',choices=list(b.gate.ROLES),default='author');a=p.parse_args()
+    b.gate.evidence_path(a.output,b.gate.execution_identity(a.execution_role))
     if a.output.exists():raise ValueError('Fresh checker evidence required')
     try:
         result=check(a.manifest)
         if a.rebuild:
             if not a.revision or not a.reservation:raise ValueError('Fresh reserved checker rebuild required')
             old=load(a.manifest)
-            b.build(b.ROOT.parent/'4veco-lessen',old['source_commit'],a.revision,a.reservation)
-            new=b.ROOT/'reports/sprints'/(b.gate.PREFIX+'native-'+a.revision+'.json')
+            rebuilt=b.build(b.ROOT.parent/'4veco-lessen',old['source_commit'],a.revision,a.reservation,execution_role=a.execution_role)
+            new=Path(rebuilt['manifest_path'])
             result['rebuild']=parity([a.manifest,new]);result['rebuild_check']=check(new)
         save(a.output,result);print(json.dumps({'status':'PASS','documents':[{ 'kind':d['kind'],'pages':len(d['pages'])} for d in result['documents']],'figures':len(result['figures'])}))
     except Exception as e:

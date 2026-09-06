@@ -112,10 +112,10 @@ def zip_document(record):
             z.writestr(info,p.read_bytes(),compress_type=zipfile.ZIP_DEFLATED,compresslevel=9)
     record['zip']={'path':str(archive),'sha256':sha(archive.read_bytes()),'members':len(members)}
 
-def build(lesson_root,source_commit,revision,reservation,route='full'):
+def build(lesson_root,source_commit,revision,reservation,route='full',execution_role='author'):
     # Real immutable inputs are inspected before any read-only Node or author command.
     verified=gate.preflight(lesson_root,source_commit,ROOT)
-    attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT)
+    attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT,execution_role)
     scan=gate.global_scan(ROOT,exclude=[reservation])
     if gate.revision_occupied(revision,scan,ROOT):
         raise ValueError('Revision occupied in registered global history')
@@ -126,7 +126,11 @@ def build(lesson_root,source_commit,revision,reservation,route='full'):
         raise ValueError('Direct route requires the complete prior native packet')
     for p in packet_paths(folder):
         if p.exists() and (not p.is_file() or p.is_symlink()):raise ValueError('Unsafe output '+str(p))
+    # Repeat actual paired identity/reservation immediately before first effect.
+    gate.namespace_preflight(revision,reservation,source_commit,ROOT,execution_role)
+    execution=gate.execution_identity(execution_role,ROOT)
     state={'revision':revision,'source_commit':source_commit,'route':route,'runtime':sys.executable,'cwd':os.getcwd(),
+           'execution':execution,'attempt_path':str(attempt),'manifest_path':str(manifest_path),'proof_root':str(proof_root),
            'argv':sys.argv,'inherited_path':os.environ.get('PATH'),'checks':verified['checks'],
            'global_namespace_scan':scan,'status':'STARTED'}
     # Atomic exclusive attempt consumption, after every read-only gate and before worker effects.
@@ -158,6 +162,7 @@ def build(lesson_root,source_commit,revision,reservation,route='full'):
     # Recheck authority and authored bytes after all effects; no false complete manifest on drift.
     gate.verify_current(lesson_root,ROOT);gate.verify_source(source_commit,ROOT)
     manifest={'paragraph':'2.3.2','lesson_root':str(lesson_root),'paragraph_folder':str(folder),'route':route,'revision':revision,
+              'execution':execution,'manifest_path':str(manifest_path),'attempt_path':str(attempt),'proof_root':str(proof_root),
               'source_commit':source_commit,'source_files':verified['source'],'root_release_sha256':gate.PINS[gate.N+'232-release.json'],
               'plan_sha256':PLAN_HASH,'target_record_sha256':TARGET_HASH,'documents':records,'packet':final,
               'preflight':verified['checks'],'direct_child':child,'generation_status':'PENDING','production_ready':False,
@@ -169,6 +174,7 @@ def build(lesson_root,source_commit,revision,reservation,route='full'):
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--lesson-root',type=Path,default=ROOT.parent/'4veco-lessen')
     p.add_argument('--source-commit',required=True);p.add_argument('--revision',required=True);p.add_argument('--reservation',type=Path,required=True)
-    p.add_argument('--route',choices=['full','direct'],default='full');a=p.parse_args()
-    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route)
+    p.add_argument('--route',choices=['full','direct'],default='full')
+    p.add_argument('--execution-role',choices=list(gate.ROLES),default='author');a=p.parse_args()
+    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route,a.execution_role)
 if __name__=='__main__':main()

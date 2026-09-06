@@ -16,6 +16,15 @@ N = 'reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-'
 C = 'reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-'
 R = 'reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-'
 PREFIX = 'BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-'
+# Fixed task assignments, not an arbitrary actor/prefix override or a quality grant.
+# The root keeps its real umbrella claim; future specialist must actually claim its pair.
+ROLES = {
+ 'author': ('paragraph_231_specialist_qc','232-BUILD-CURRENT','book2-232-build-current-20260906','232-BUILD-CURRENT'),
+ 'correction': ('paragraph_231_specialist_qc','232-REPRO-ROUTES','book2-232-repro-routes-20260906','232-REPRO-ROUTES'),
+ 'paragraph-review': ('paragraph_224_builder','232-PARAGRAPH-REVIEW','book2-232-paragraph-review-20260906','232-PARAGRAPH-REVIEW'),
+ 'specialist-qc': ('paragraph_214_builder','232-SPECIALIST-QC','book2-232-specialist-qc-20260906','232-SPECIALIST-QC'),
+ 'root': ('codex-root','','book2-part-a-production-20260905','232-QC-ROOT'),
+}
 RELEASE_COMMIT = '5870a7a4c2d5dc9b170f385b976b0a49953b9be6'
 CANDIDATE_COMMIT = '9c6d8a7c1ee98b91a67f6d560beb8534f5dbde56'
 REVIEW_COMMIT = '8fc63fe32f030371195f022971a2d5d42ddedeb8'
@@ -126,17 +135,72 @@ def preflight(lesson_root,source_commit,platform_root=ROOT):
     verify_current(lesson_root,platform_root);verify_source(source_commit,platform_root)
     return {'manifest':manifest,'source_commit':source_commit,'source':source,'checks':checks}
 
-def namespace_preflight(revision,reservation,source_commit,platform_root=ROOT):
+def execution_identity(role='author',platform_root=ROOT):
+    """Read actual paired Git metadata/claims. No claim minting or role impersonation.
+
+    Local claim files provide single-account coordination, not hostile-OS identity.
+    Claim-time HEAD is checked as an ancestor, not confused with the current HEAD.
+    """
+    if role not in ROLES:raise ValueError('Unknown fixed execution role')
+    actor,suffix,pair,evidence=ROLES[role]
+    task='BOOK2-TEXTBOOK-PRODUCTION-1'+('-'+suffix if suffix else '')
+    prefix='BOOK2-TEXTBOOK-PRODUCTION-1-'+evidence+'-'
+    branch=('codex/' if role=='root' else 'agent/')+pair
+    expected=Path('C:/wt')/pair
+    def same(a,b):return os.path.normcase(os.path.abspath(a))==os.path.normcase(os.path.abspath(b))
+    if not same(platform_root,expected/'4veco-platform') or platform_root.is_symlink():
+        raise ValueError('Wrong assigned platform worktree')
+    claims=[]
+    for repo in ('4veco-platform','4veco-lessen'):
+        root=expected/repo
+        if not root.is_dir() or root.is_symlink():raise ValueError('Missing/unsafe assigned paired worktree')
+        def git(*args):
+            r=subprocess.run(['git',*args],cwd=root,capture_output=True,check=True)
+            return r.stdout.decode('utf-8').strip()
+        actual=git('rev-parse','--show-toplevel')
+        gitdir=Path(git('rev-parse','--path-format=absolute','--git-dir'))
+        common=Path(git('rev-parse','--path-format=absolute','--git-common-dir'))
+        if not same(actual,root) or same(gitdir,common):raise ValueError('Actual dedicated Git worktree required')
+        if git('symbolic-ref','--quiet','--short','HEAD')!=branch:raise ValueError('Wrong actual assigned branch')
+        records=git('worktree','list','--porcelain').split('\n\n')
+        if not any('worktree '+str(root).replace('\\','/') in r.splitlines() and 'branch refs/heads/'+branch in r.splitlines() for r in records):
+            raise ValueError('Missing exact registered worktree and branch')
+        claim_path=gitdir/'4veco-agent-worktree-lock.json'
+        if claim_path.is_symlink():raise ValueError('Unsafe claim path')
+        raw=claim_path.read_bytes();claim=json.loads(raw)
+        fields={'schema':'4veco-agent-worktree-lock.v1','agent_id':actor,'task_id':task,
+                'status':'active','branch':branch,'repo':repo}
+        if any(claim.get(k)!=v for k,v in fields.items()):raise ValueError('Wrong active paired claim identity')
+        if not same(claim.get('worktree_path',''),root) or not same(claim.get('git_dir',''),gitdir):
+            raise ValueError('Wrong claim worktree/gitdir binding')
+        claim_head=claim.get('head_sha','')
+        if not re.fullmatch('[0-9a-f]{40}',claim_head):raise ValueError('Missing claim-time commit')
+        git('merge-base','--is-ancestor',claim_head,'HEAD')
+        claims.append({'repository':repo,'worktree':str(root),'git_dir':str(gitdir),
+                       'claim_sha256':sha(raw),'claim_head':claim_head})
+    return {'role':role,'actor':actor,'task':task,'prefix':prefix,'branch':branch,'claims':claims}
+
+def evidence_path(path,identity,platform_root=ROOT):
+    """A role-owned direct child; no nested/cross-role/symlink evidence transport."""
+    parent=platform_root/'reports/sprints'
+    if path.parent.resolve()!=parent.resolve() or not path.name.startswith(identity['prefix']) or path.is_symlink():
+        raise ValueError('Wrong execution-role evidence path')
+    return path
+
+def namespace_preflight(revision,reservation,source_commit,platform_root=ROOT,execution_role='author'):
+    identity=execution_identity(execution_role,platform_root)
+    prefix=identity['prefix']
     if not re.fullmatch(r'r[1-9][0-9]*',revision):raise ValueError('Explicit positive revision required')
-    expected=platform_root/'reports/sprints'/(PREFIX+'reservation-'+revision+'.json')
+    expected=platform_root/'reports/sprints'/(prefix+'reservation-'+revision+'.json')
+    evidence_path(reservation,identity,platform_root)
     if reservation.resolve()!=expected.resolve():raise ValueError('Wrong reservation path')
     r=json.loads(reservation.read_text(encoding='utf-8'))
-    if r.get('revision')!=revision or r.get('source_commit')!=source_commit or r.get('actor')!='paragraph_231_specialist_qc' or r.get('status')!='RESERVED_UNUSED':
+    if r.get('revision')!=revision or r.get('source_commit')!=source_commit or r.get('actor')!=identity['actor'] or r.get('status')!='RESERVED_UNUSED' or r.get('execution')!=identity:
         raise ValueError('Wrong reservation identity')
     if not r.get('global_scan') or r.get('maximum_recorded_revision',0)>=int(revision[1:]):
         raise ValueError('Reservation lacks fresh global history')
-    attempt=platform_root/'reports/sprints'/(PREFIX+'attempt-'+revision+'.json')
-    manifest=platform_root/'reports/sprints'/(PREFIX+'native-'+revision+'.json')
+    attempt=platform_root/'reports/sprints'/(prefix+'attempt-'+revision+'.json')
+    manifest=platform_root/'reports/sprints'/(prefix+'native-'+revision+'.json')
     if attempt.exists() or manifest.exists():raise ValueError('Consumed namespace')
     proof=platform_root/'reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1'
     if proof.exists() and any(proof.glob('232-*-'+revision)):

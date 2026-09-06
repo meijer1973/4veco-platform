@@ -63,18 +63,20 @@ def parity(paths):
     return {'status':'PASS','manifests':[{'path':str(p),'sha256':b.sha(Path(p).read_bytes())} for p in paths],
             'native_files':41,'all_raw_and_decoded_pages':sum(len(x) for x in first['pages'].values()),'routes':len(paths),'first_pending_proofs':first['pending_proofs'],'archives':first['archives'],'pages':first['pages']}
 
-def reserve(source_commit):
+def reserve(source_commit,execution_role='author'):
     b.gate.verify_current(b.ROOT.parent/'4veco-lessen');b.gate.verify_source(source_commit)
+    identity=b.gate.execution_identity(execution_role)
     scan=b.gate.global_scan();revision='r'+str(scan['maximum']+1)
-    destination=b.ROOT/'reports/sprints'/(b.gate.PREFIX+'reservation-'+revision+'.json')
-    save(destination,{'actor':'paragraph_231_specialist_qc','status':'RESERVED_UNUSED','revision':revision,'source_commit':source_commit,'maximum_recorded_revision':scan['maximum'],'global_scan':scan})
+    destination=b.ROOT/'reports/sprints'/(identity['prefix']+'reservation-'+revision+'.json')
+    if b.gate.execution_identity(execution_role)!=identity:raise ValueError('Execution claim changed during reservation scan')
+    save(destination,{'actor':identity['actor'],'execution':identity,'status':'RESERVED_UNUSED','revision':revision,'source_commit':source_commit,'maximum_recorded_revision':scan['maximum'],'global_scan':scan})
     print(json.dumps({'reservation':str(destination),'revision':revision,'maximum':scan['maximum'],'registered_worktrees':len(scan['registered_worktrees'])}));return destination
 
-def grayscale(manifest_path,directory):
+def grayscale(manifest_path,directory,execution_role='author'):
     manifest=load(manifest_path);checked=validate_manifest(manifest)
+    identity=b.gate.execution_identity(execution_role)
     if directory.exists():raise ValueError('Fresh supplemental grayscale only')
-    expected=b.ROOT/'reports/sprints'
-    if expected.resolve() not in directory.resolve().parents or not directory.name.startswith(b.gate.PREFIX):raise ValueError('Owned supported supplemental path required')
+    b.gate.evidence_path(directory,identity)
     directory.mkdir();result=[]
     for kind,record in zip(b.KINDS,manifest['documents']):
         dest=directory/kind;dest.mkdir()
@@ -94,10 +96,13 @@ def grayscale(manifest_path,directory):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();sub=p.add_subparsers(dest='mode',required=True)
-    s=sub.add_parser('reserve');s.add_argument('--source-commit',required=True)
+    s=sub.add_parser('reserve');s.add_argument('--source-commit',required=True);s.add_argument('--execution-role',choices=list(b.gate.ROLES),default='author')
     s=sub.add_parser('parity');s.add_argument('--output',type=Path,required=True);s.add_argument('manifests',type=Path,nargs='+')
-    s=sub.add_parser('grayscale');s.add_argument('manifest',type=Path);s.add_argument('directory',type=Path);s.add_argument('--output',type=Path,required=True)
+    s=sub.add_parser('grayscale');s.add_argument('manifest',type=Path);s.add_argument('directory',type=Path);s.add_argument('--output',type=Path,required=True);s.add_argument('--execution-role',choices=list(b.gate.ROLES),default='author')
     a=p.parse_args()
-    if a.mode=='reserve':reserve(a.source_commit)
+    if a.mode=='reserve':reserve(a.source_commit,a.execution_role)
     elif a.mode=='parity':save(a.output,parity(a.manifests));print('Native, safe CRC ZIP, raw and RGB page parity PASS')
-    else:save(a.output,grayscale(a.manifest,a.directory));print('Fresh grayscale generated; no personal inspection asserted')
+    else:
+        b.gate.evidence_path(a.output,b.gate.execution_identity(a.execution_role))
+        if a.output.exists():raise ValueError('Fresh grayscale evidence required')
+        save(a.output,grayscale(a.manifest,a.directory,a.execution_role));print('Fresh grayscale generated; no personal inspection asserted')
