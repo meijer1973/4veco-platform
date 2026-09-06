@@ -1,0 +1,23 @@
+{
+  "root": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "--lane",
+    "textbook",
+    "--base",
+    "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+    "--head",
+    "9546548c4dbd271516366df946f3eb0a9eaa1e93",
+    "--json"
+  ],
+  "start": "2026-09-06T08:41:09.755Z",
+  "end": "2026-09-06T08:41:09.883Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"lane\": \"textbook\",\n  \"categories\": {\n    \"partA_textbook\": [\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-handoff.md\"\n    ],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-quality-ref.yaml\"\n    ],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [\n    {\n      \"path\": \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-quality-ref.yaml\",\n      \"blocks\": [\n        \"partA\"\n      ]\n    }\n  ],\n  \"failures\": [],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": "",
+  "stdout_base64": "ewogICJvayI6IHRydWUsCiAgImxhbmUiOiAidGV4dGJvb2siLAogICJjYXRlZ29yaWVzIjogewogICAgInBhcnRBX3RleHRib29rIjogWwogICAgICAiQm9layAyIC0gS29zdGVuLCBvcGJyZW5nc3RlbiwgZWxhc3RpY2l0ZWl0IGVuIHN1cnBsdXMvMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjQgR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQvMi4yLjQtdGV4dGJvb2staGFuZG9mZi5tZCIKICAgIF0sCiAgICAicGFydEJfY29tcGFuaW9uIjogW10sCiAgICAic2hhcmVkX3BsYXRmb3JtIjogW10sCiAgICAiZ2VuZXJhdGVkX2luZGV4ZXMiOiBbXSwKICAgICJyZXZpZXdfZXZpZGVuY2UiOiBbCiAgICAgICJCb2VrIDIgLSBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1cy8yLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIuNCBHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdC8yLjIuNC1xdWFsaXR5LXJlZi55YW1sIgogICAgXSwKICAgICJ1bmtub3duIjogW10KICB9LAogICJxdWFsaXR5UmVmQ2hhbmdlcyI6IFsKICAgIHsKICAgICAgInBhdGgiOiAiQm9layAyIC0gS29zdGVuLCBvcGJyZW5nc3RlbiwgZWxhc3RpY2l0ZWl0IGVuIHN1cnBsdXMvMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjQgR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQvMi4yLjQtcXVhbGl0eS1yZWYueWFtbCIsCiAgICAgICJibG9ja3MiOiBbCiAgICAgICAgInBhcnRBIgogICAgICBdCiAgICB9CiAgXSwKICAiZmFpbHVyZXMiOiBbXSwKICAid2FybmluZ3MiOiBbXSwKICAiZXhjZXB0aW9uIjogewogICAgInByZXNlbnQiOiBmYWxzZSwKICAgICJvayI6IGZhbHNlLAogICAgImZhaWx1cmVzIjogW10KICB9Cn0K",
+  "stderr_base64": ""
+}
