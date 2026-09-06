@@ -38,3 +38,9 @@ exactly `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservati
 and `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW-r49-full`.
 Its committed scan digest is 78a01e8ab774dadd5463addeb049448016354280c6d410299f0c9a59dfb161ba.
 The unchanged original source must still recheck global freshness before effects.
+
+Full49 completed with exact15-native and20-page parity. The next scan selects50
+(maximum49). Before thin execution, list exactly
+`reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r50.json`
+and `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW-r50-thin`.
+The scan digest is eb780173869b6c282b45615ac42ce5e977edb05e7b15befd58d39471f09a6d7f.
