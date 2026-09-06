@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "node",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-close.cjs",
+    "scope",
+    "350ab4075cd92b507be330e87ef3eff2c76981e7",
+    "ea0dd35d4f919ac5b3aae533cd9f9022ffa62282"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 0,
+  "stdout": "{\"strict\":\"PASS\",\"count\":474,\"scope\":[{\"label\":\"P_increment\",\"exit\":0},{\"label\":\"L_empty\",\"exit\":1},{\"label\":\"P_whole\",\"exit\":0},{\"label\":\"L_whole\",\"exit\":0},{\"label\":\"P_evidence_only\",\"exit\":1}],\"whitespace\":[{\"label\":\"P_increment\",\"exit\":0},{\"label\":\"L_empty\",\"exit\":0},{\"label\":\"P_whole\",\"exit\":2},{\"label\":\"L_whole\",\"exit\":0},{\"label\":\"P_evidence_only\",\"exit\":0}]}\n",
+  "stderr": ""
+}
