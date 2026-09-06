@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T03:11:35.693Z
+Generated: 2026-09-06T03:13:33.637Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `agent/book2-232-plan-f1-20260906`
-Source commit: `17e04cea7ca688618149c2e50b8ec62ad55c80d8`
-Files indexed: 11971
-Scope: committed tree files from `git ls-tree -r --name-only 17e04cea7ca688618149c2e50b8ec62ad55c80d8`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source commit: `30a65abe8a2c572c09aa8dc1086c40c5e16b641f`
+Files indexed: 11973
+Scope: committed tree files from `git ls-tree -r --name-only 30a65abe8a2c572c09aa8dc1086c40c5e16b641f`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -2741,7 +2741,7 @@ Count: 1030
 
 ## reports
 
-Count: 9184
+Count: 9186
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -9569,6 +9569,7 @@ Count: 9184
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-baseline.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-bundle-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-check.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-checks-final-utf8-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-checks-r1-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-checks-r2-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-custody-r1-process.json
@@ -9582,6 +9583,7 @@ Count: 9184
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-platform-claim-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-publication.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-runtime-note.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-scope-complete-lessons-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-scope-complete-platform-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-scope-own-lessons-process.json
