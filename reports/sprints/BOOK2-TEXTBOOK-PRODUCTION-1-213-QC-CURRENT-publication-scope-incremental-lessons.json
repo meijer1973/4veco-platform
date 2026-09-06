@@ -1,0 +1,21 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-213-qc-current-20260906\\4veco-lessen",
+    "--lane",
+    "textbook",
+    "--base",
+    "42996c60b4a93843dfe8488b8e5a3ea704871667",
+    "--head",
+    "65da7f3930c2afba69ccb715b472b726b1429180",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform",
+  "started_at": "2026-09-06T05:19:55.470Z",
+  "finished_at": "2026-09-06T05:19:55.590Z",
+  "exit": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"lane\": \"textbook\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml\"\n    ],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [\n    {\n      \"path\": \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml\",\n      \"blocks\": [\n        \"partA\"\n      ]\n    }\n  ],\n  \"failures\": [],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": ""
+}
