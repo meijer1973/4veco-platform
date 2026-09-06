@@ -1,0 +1,76 @@
+{
+  "result": "PASS",
+  "native": {
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.zip": "15ffc25da00d0f3bfc84f93224191a08c9ab31387f7dc873a8df85dc7b76b499",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html": "b78090ef65fb0544e46b59353660980a79e2bd2b5774ef64955154abe23a3c98",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.zip": "1a841ffb08f77e0a50559791707023c85d803f6aea263095449fd74fcf451dae",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md": "2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html": "3c536f28de7f95a133cf80b5f3e4a351912af5103cf5ed48772fdf9d550a11cb",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf": "d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip": "9d1a0197cd02451e2168a31472ce5351aef9bd9169e8af535b261ba2353930a1",
+    "_assets/2.1.3_fig_1.svg": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819",
+    "_assets/2.1.3_fig_1.png": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+    "_assets/2.1.3_fig_2.svg": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53",
+    "_assets/2.1.3_fig_2.png": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+    "_assets/2.1.3_fig_3.svg": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc",
+    "_assets/2.1.3_fig_3.png": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+    "_assets/2.1.3_fig_4.svg": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773",
+    "_assets/2.1.3_fig_4.png": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+    "_assets/2.1.3_we_1.svg": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d",
+    "_assets/2.1.3_we_1.png": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+    "_assets/2.1.3_ex_1.svg": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+    "_assets/2.1.3_ex_1.png": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e"
+  },
+  "source": {
+    "original_sha256": "6a45771783de221c3d65b32d423c1f7e90c90e84a79d30c4e175bba8836b056a",
+    "candidate_sha256": "87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4",
+    "five_once_only_literals": [
+      [
+        "724a080619f2f072151edf20980071b3bef18cd60d1904c78f4aa906be8917c8",
+        "0d14506e314a11fef0637cc66cf29036f174b94cafbf7fa5ede2eff88937500f"
+      ],
+      [
+        "de2b8ed7dcc7a3c5c6eaac400892d2d37ac5212ccb3b9972fb004115a88c1fe2",
+        "4da6e5b4f0a70273d78c067f34484c8a5f6faf164b0f09c1559b9a73ff6611fe"
+      ],
+      [
+        "74ad2ed9c44d9aa05b6d6a680d5d273f2cad4b62e4bead5db303c006514238cd",
+        "79429b9f1750710baae46751a5792e4a02e7c177888a01f5ca3a15c4039a78f7"
+      ],
+      [
+        "e168e3c2b8698d12b699fbf60e7691fbbc8a15d61bd46a7988704d3c896c805c",
+        "73bd2a2447b38c9d95cbc3bd69b8037e0f46b7564655b4513009fd6707b7b07d"
+      ],
+      [
+        "f53521ed8812a4c8b8c33c1d66b34e0afe8425c1dffb1723f37771372b2baa09",
+        "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8"
+      ]
+    ],
+    "preserved": {
+      "build-scripts/content/book-2/print_pipeline.py": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "references/authored/course-target-exercises.json": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "build-scripts/content/book-2/213/theory.md": "df6e40009454bc43f4915fa3edbf8c613a888ebbd2d0b7b59414bd3f70b4d5e7",
+      "build-scripts/content/book-2/213/exercises.md": "bd16efcc6ac0ef9c2713b61587c8613fa353e98cc696e8a172ea931e11c35b32",
+      "build-scripts/content/book-2/213/answers.md": "91d6074e6b843a7d31e8ab03f7e3fc6a959408f64146fc4ef17c3fb6ca0b8d29",
+      "build-scripts/content/book-2/213/target-answers.md": "aa59a0ab3d69a1177ea90b521d510f34576480838b21e13f4f169c7812639f09",
+      "build-scripts/content/book-2/213/test_source.py": "f141eaebf5cba863632ed8dcb140bacb62f4f617ef0354a9074a9ae10b88bb69",
+      "build-scripts/content/book-2/213/test_bonus_contract.py": "32c4d737ef543f891be10ee3e3b0bfbb6a600ac075596c89b9410ad6631d5ff0",
+      "build-scripts/content/book-2/213/alt_contract.py": "8eb42ace09eb20c6f2b2b1d769bc3ba38f213cb1c05075305f0a615b278e077c",
+      "build-scripts/content/book-2/213/check_render.py": "34ecb93568112b54d9e1f1d4ffe9799e8375f131205a12861c738a5f3b18ab60",
+      "build-scripts/content/book-2/213/verify_alt_delta.py": "3b6322931b99198b872cd521e74f4ddb1f5a092ebc2b93fde3aedc6155171c56",
+      "build-scripts/content/book-2/213/verify_rebuild.py": "5f171c9554ce0f9ab026e294c16f9924d4fe659f76bb045682e715ae936f45d5"
+    }
+  },
+  "inherited_counts": {
+    "platform": 12507,
+    "lessons": 1902
+  },
+  "review_unchanged": true,
+  "stale_qc_unchanged": true,
+  "handoff_absent": true
+}

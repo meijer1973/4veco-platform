@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "git",
+    "fetch",
+    "--prune",
+    "origin"
+  ],
+  "cwd": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T04:18:27.668424+00:00",
+  "finished_at": "2026-09-06T04:18:28.550171+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "inherited_path_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "environment_overrides": null
+}
