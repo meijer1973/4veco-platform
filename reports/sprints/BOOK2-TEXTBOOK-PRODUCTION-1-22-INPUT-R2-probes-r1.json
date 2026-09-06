@@ -1,0 +1,2358 @@
+{
+  "positives": 2,
+  "negative_cases": [
+    {
+      "name": "missing 4veco-platform/references/authored/course-target-exercises.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/references/authored/course-target-exercises.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/references/authored/course-target-exercises.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/references/authored/book-outlines/book-2-outline.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/references/authored/book-outlines/book-2-outline.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/references/authored/book-outlines/book-2-outline.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-check.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-check.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-check.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-final-integrity.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-final-integrity.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-final-integrity.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-check.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-check.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-check.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-publication.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-publication.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-publication.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-inputs.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-inputs.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-inputs.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-root-acceptance-r8.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-root-acceptance-r8.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-root-acceptance-r8.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/probes.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/probes.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-r8-evidence/probes.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-acceptance-r13.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-acceptance-r13.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-acceptance-r13.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-personal-inspection.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-personal-inspection.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-personal-inspection.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-acceptance.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-acceptance.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-acceptance.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-preaccept-integrity.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-preaccept-integrity.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-preaccept-integrity.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/references/owned/course-blueprint-v6-three-year.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/references/owned/course-blueprint-v6-three-year.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/references/owned/course-blueprint-v6-three-year.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/references/owned/course-blueprint-v5.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/references/owned/course-blueprint-v5.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/references/owned/course-blueprint-v5.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/references/authored/book-outlines/book-2-outline.meta.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/references/authored/book-outlines/book-2-outline.meta.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/references/authored/book-outlines/book-2-outline.meta.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-plan-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-plan-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-plan-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-root-verification-r8.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-root-verification-r8.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-root-verification-r8.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-qc-rebuild-r13.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-qc-rebuild-r13.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-root-qc-rebuild-r13.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-postaccept-check.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-postaccept-check.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-postaccept-check.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-checks.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-checks.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-checks.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-layout.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-layout.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-layout.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r4-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r4-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r4-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-baseline.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-baseline.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-baseline.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-personal.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-personal.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-personal.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-report.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review-r1-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review-r1-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review-r1-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-ROOT-r1-layout-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-ROOT-r1-layout-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-ROOT-r1-layout-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-decision.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-decision.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-decision.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-verification-r1.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-verification-r1.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-verification-r1.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/build-scripts/content/book-2/22/front.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/build-scripts/content/book-2/22/front.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/build-scripts/content/book-2/22/front.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/build-scripts/content/book-2/22/front.css",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/build-scripts/content/book-2/22/front.css",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/build-scripts/content/book-2/22/front.css",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/build-scripts/content/book-2/print_pipeline.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/build-scripts/content/book-2/print_pipeline.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/build-scripts/content/book-2/print_pipeline.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/build-scripts/content/book-2/chapter_pipeline.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/build-scripts/content/book-2/chapter_pipeline.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/build-scripts/content/book-2/chapter_pipeline.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/build-scripts/content/book-2/test_chapter_pipeline.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/build-scripts/content/book-2/test_chapter_pipeline.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/build-scripts/content/book-2/test_chapter_pipeline.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/build-scripts/content/book-2/b2_223.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/build-scripts/content/book-2/b2_223.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/build-scripts/content/book-2/b2_223.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/build-scripts/content/book-2/b2_224.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/build-scripts/content/book-2/b2_224.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/build-scripts/content/book-2/b2_224.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-inputs.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-inputs.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-inputs.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-check.cjs",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-check.cjs",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-check.cjs",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-probe.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-probe.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-probe.py",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-run.cjs",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-run.cjs",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-run.cjs",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-original-r1-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-original-r1-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-original-r1-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-tests-r2-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-tests-r2-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-tests-r2-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-corrected-r3-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-corrected-r3-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-corrected-r3-process.json",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-result.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.html",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_2.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_2.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_2.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_2.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_2.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_2.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_we_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_we_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_we_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_we_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_we_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_we_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_2.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_2.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_2.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_2.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_2.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_2.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_3.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_3.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_3.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_3.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_3.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_fig_3.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_we_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_we_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_we_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_we_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_we_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/_assets/2.2.2_we_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_2.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_2.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_2.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_2.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_2.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_2.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_3.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_3.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_3.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_3.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_3.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_3.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_4.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_4.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_4.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_4.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_4.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/_assets/2.2.3_fig_4.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_1.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_1.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_2.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_2.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_2.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_2.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_2.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_2.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_3.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_3.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_3.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_3.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_3.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_3.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_4.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_4.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_4.svg",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_4.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_4.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_4.png",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-plan.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "missing 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forged 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "synchronized whole input and manifest hash 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "partial",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "reordered",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "wrong actor",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "wrong chapter",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "false release",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "wrong decision",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "wrong commit",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "wrong role",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "empty inputs",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "duplicate student document",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "drop guided work",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "eleven point typography",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "generic print authorized",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "drop exact heading requirement",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "omit actual heading",
+      "rejected": true,
+      "success_callbacks": 0
+    },
+    {
+      "name": "forge actual heading",
+      "rejected": true,
+      "success_callbacks": 0
+    }
+  ],
+  "negative_count": 457,
+  "semantic_cases": [
+    {
+      "name": "2.2.1 wrong root identity",
+      "rejected": true,
+      "scope": "semantic predicate only, not production authorization"
+    },
+    {
+      "name": "2.2.1 not accepted",
+      "rejected": true,
+      "scope": "semantic predicate only, not production authorization"
+    },
+    {
+      "name": "2.2.1 wrong specialist",
+      "rejected": true,
+      "scope": "semantic predicate only, not production authorization"
+    },
+    {
+      "name": "2.2.2 wrong root identity",
+      "rejected": true,
+      "scope": "semantic predicate only, not production authorization"
+    },
+    {
+      "name": "2.2.2 not accepted",
+      "rejected": true,
+      "scope": "semantic predicate only, not production authorization"
+    },
+    {
+      "name": "2.2.2 wrong specialist",
+      "rejected": true,
+      "scope": "semantic predicate only, not production authorization"
+    },
+    {
+      "name": "2.2.3 wrong root identity",
+      "rejected": true,
+      "scope": "semantic predicate only, not production authorization"
+    },
+    {
+      "name": "2.2.3 not accepted",
+      "rejected": true,
+      "scope": "semantic predicate only, not production authorization"
+    },
+    {
+      "name": "2.2.3 wrong specialist",
+      "rejected": true,
+      "scope": "semantic predicate only, not production authorization"
+    },
+    {
+      "name": "2.2.4 wrong root identity",
+      "rejected": true,
+      "scope": "semantic predicate only, not production authorization"
+    },
+    {
+      "name": "2.2.4 not accepted",
+      "rejected": true,
+      "scope": "semantic predicate only, not production authorization"
+    },
+    {
+      "name": "2.2.4 wrong specialist",
+      "rejected": true,
+      "scope": "semantic predicate only, not production authorization"
+    }
+  ],
+  "semantic_negative_count": 12,
+  "inputs": 147,
+  "native_processes": 0,
+  "fixture_files_written": 0,
+  "boundary": "actual complete source bytes in memory; future genuine native entrypoint side-effect tests remain mandatory"
+}
