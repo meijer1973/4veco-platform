@@ -1,0 +1,23 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/review-gates/check-governance-freshness.js"
+  ],
+  "cwd": "C:\\wt\\book2-234-plan-20260906\\4veco-platform",
+  "invocationSources": [],
+  "environment": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-234-plan-20260906\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "3d8ff2ed471fe609dd7c20e75c9bc613458fb34e",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-234-plan-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-234-plan-20260906\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-234-plan-20260906"
+  },
+  "started_at": "2026-09-06T05:28:06.451Z",
+  "ended_at": "2026-09-06T05:28:07.384Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"remote\": \"origin\",\n  \"remote_ref\": \"origin/main\",\n  \"origin_main_sha\": \"96416b6b5bd57094576e9aba0a42d682584ec479\",\n  \"head_sha\": \"3d8ff2ed471fe609dd7c20e75c9bc613458fb34e\",\n  \"allow_policy_edit\": false,\n  \"files\": [\n    \"AGENTS.md\",\n    \"AGENT_GITHUB_ENTRY.md\",\n    \"docs/review/pr-readiness-routing-policy.md\",\n    \"docs/review/pr-integration-lane-policy.md\",\n    \"docs/review/pr-throughput-policy.md\",\n    \"package.json\",\n    \".github/workflows/platform-ci.yml\",\n    \"build-scripts/ci/check-branch-protection.js\"\n  ],\n  \"differing_files\": [],\n  \"failures\": []\n}\n",
+  "stderr": ""
+}

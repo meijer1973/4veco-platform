@@ -1,0 +1,24 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/sprints/check-sprint-bundle.js",
+    "BOOK2-TEXTBOOK-PRODUCTION-1"
+  ],
+  "cwd": "C:\\wt\\book2-234-plan-20260906\\4veco-platform",
+  "invocationSources": [],
+  "environment": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-234-plan-20260906\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "3d8ff2ed471fe609dd7c20e75c9bc613458fb34e",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-234-plan-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-234-plan-20260906\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-234-plan-20260906"
+  },
+  "started_at": "2026-09-06T05:28:06.202Z",
+  "ended_at": "2026-09-06T05:28:06.360Z",
+  "exit_code": 0,
+  "stdout": "OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active\n",
+  "stderr": ""
+}

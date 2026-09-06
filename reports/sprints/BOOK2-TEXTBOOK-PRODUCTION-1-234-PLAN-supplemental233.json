@@ -1,0 +1,29 @@
+{
+  "status": "READ_ONLY_PLAN_ADOPTION",
+  "platform_ref": "8a9f693c4ff13edc0af8e642861ac05442214266",
+  "lessons_ref": "167b833c88c5651327906ffdc322e44a9fcfc4a7",
+  "root_payload": "f26a3dcb52271ba0691cd35d647bb74ed6302000",
+  "rows": [
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-result.md",
+      "raw_sha256": "a6456e029096e5061043e475df1c5c077ac00a8a8fb579bf47cb65ee5c81f2c0",
+      "bytes": 6340,
+      "personally_read_complete": true
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-verification.json",
+      "raw_sha256": "4b3308af274be2495c54b0c558d3c40b077da947bf244e704760f4ba382433bd",
+      "bytes": 3098,
+      "personally_read_complete": true
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-publication.md",
+      "raw_sha256": "d15f6c5c34c97d6faac0d90c4f91863e13d80ca8f9c4434394a4d88b1a69347b",
+      "bytes": 2226,
+      "personally_read_complete": true
+    }
+  ],
+  "imported": false,
+  "source_production_released": false,
+  "actual_accepted_232_233_claim": false
+}
