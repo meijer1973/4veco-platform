@@ -1,0 +1,26 @@
+{
+  "actor": "paragraph_224_builder",
+  "ref": "43dd62450b2b3b8b3d1b3c01232945f688bb67f6",
+  "command": [
+    "git",
+    "ls-tree",
+    "-r",
+    "--name-only",
+    "43dd62450b2b3b8b3d1b3c01232945f688bb67f6",
+    "--"
+  ],
+  "default_buffer_failure": {
+    "code": "ENOBUFS",
+    "errno": -4060,
+    "syscall": "spawnSync git",
+    "status": null,
+    "message": "spawnSync git ENOBUFS"
+  },
+  "successful_read_only_retry": {
+    "maxBuffer": 67108864,
+    "byte_length": 1105385,
+    "raw_sha256": "442c0032011c585d56c9b2e24c1cc703455fa2a494bb0529c8874adb48d40e79",
+    "paths": 13678
+  },
+  "decision": "Keep shared index code exact. Use its existing explicit platform SOURCE_REF=HEAD route after clean commit and verify resulting full tracked inventory against actual Git. Keep lesson ref exact. Original generator failure wrote no indexes; subsequent stale freshness failure was expected, not PASS."
+}
