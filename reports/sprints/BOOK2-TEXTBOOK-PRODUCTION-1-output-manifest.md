@@ -5,7 +5,7 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform §231 review adoption `7c58c2b68330e0ec5e4f3246a0035beebf4251ce`,
+Snapshot: platform §223 S1 native verification `140dc9ba3bcb6e13ebf9f7b4d1e51013cb8c6e8e`,
 lessons `219a977e495abe43c17949e7d8996aab4176faa0`, including the exact
 root-only current211 acceptance/handoff at5e14325 in211-root-acceptance-r5.md.
 Current221 R8 and222 R13 acceptances remain unchanged.
@@ -33,7 +33,10 @@ accepted212 successor/full-root rebuild remain. Its editions stay C; no handoff.
 §222 R13 is adopted/root-rebuilt: exactly one answer page changes; the other20
 remain identical. Its current independent paragraph and distinct specialist
 reviews pass with flags; root acceptance/handoff are complete. Its editions are A.
-§223 R3 remains an adopted paragraph-PASS candidate.
+§223 R3 remains an adopted paragraph-PASS candidate. Its four accepted221
+successor pins now have independent S1 delta PASS and root full/thin/print
+r11/r12/r13 reproduction: all20 native files,25 folder files and32 page raw
+hashes/pixels exact. Current specialist QC/root acceptance/handoff remain.
 §211 R5 adds the required bonus criteria and is adopted/root-rebuilt: only answer
 page7 changes; the other30 pages remain exact. Current paragraph review and
 distinct specialist QC pass; root acceptance/handoff are complete. Its inherited stale opgaven.zip is explicitly excluded;
@@ -139,9 +142,9 @@ hashes alone are not student-quality acceptance.
 | 2.2.2 / paragraaf | `36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c` | R13 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.2 / opgaven | `0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555` | R13 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.2 / antwoorden | `61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2` | R13 internal acceptance with flags; current review/QC/handoff complete |
-| 2.2.3 / paragraaf | `ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb` | R3 candidate; paragraph pass, QC/handoff/successor pending |
-| 2.2.3 / opgaven | `50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80` | R3 candidate; paragraph pass, QC/handoff/successor pending |
-| 2.2.3 / antwoorden | `30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10` | R3 candidate; paragraph pass, QC/handoff/successor pending |
+| 2.2.3 / paragraaf | `ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb` | R3 candidate; paragraph and S1 delta pass, QC/handoff pending |
+| 2.2.3 / opgaven | `50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80` | R3 candidate; paragraph and S1 delta pass, QC/handoff pending |
+| 2.2.3 / antwoorden | `30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10` | R3 candidate; paragraph and S1 delta pass, QC/handoff pending |
 | 2.3.1 / paragraaf | `088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e` | Root-rebuilt candidate; current paragraph PASS; QC/handoff pending |
 | 2.3.1 / opgaven | `4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341` | Root-rebuilt candidate; current paragraph PASS; QC/handoff pending |
 | 2.3.1 / antwoorden | `d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b` | Root-rebuilt candidate; current paragraph PASS; QC/handoff pending |
@@ -175,8 +178,9 @@ independent PASS closing answer4b order and Concert short alt. Distinct QC
 and root acceptance/handoff now close, with timing flags; see222-root-acceptance-r13.md.
 Historical212 teaching is unchanged by its metadata/bonus correction; root must
 link its eventual newly accepted package before final combined book closure.
-§223 also needs exact accepted-current-§221 successor input binding
-with unchanged pupil output proof before final combined reproduction.
+§223 exact accepted-current-§221 successor input binding now has independent
+delta PASS and unchanged root full/thin/print proof; see223-S1-root-result.md.
+Its current specialist QC and root acceptance/handoff remain separate gates.
 §214/§224 follow accepted prerequisite teaching. §231 is an imported candidate;
 §232–§234 and all aggregate outputs remain pending their dependency/plan/review
 gates. Book front sources

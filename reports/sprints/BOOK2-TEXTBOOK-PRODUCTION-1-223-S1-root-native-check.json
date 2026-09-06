@@ -1,0 +1,321 @@
+{
+  "paragraph": "2.2.3",
+  "automated_status": "PASS",
+  "visual_acceptance": "NOT_SUPPLIED_BY_THIS_SCRIPT",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb",
+      "pages": 15,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": 14.117,
+      "proof_directory": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-223-S1-root-evidence\\223-paragraaf-ca27f8bd6cbb-r11",
+      "all_page_hashes_match": true,
+      "zip_members": [
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html",
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+        "_assets/2.2.3_fig_1.png",
+        "_assets/2.2.3_fig_1.svg",
+        "_assets/2.2.3_fig_2.png",
+        "_assets/2.2.3_fig_2.svg",
+        "_assets/2.2.3_fig_3.png",
+        "_assets/2.2.3_fig_3.svg",
+        "_assets/2.2.3_fig_4.png",
+        "_assets/2.2.3_fig_4.svg"
+      ],
+      "page_map": [
+        {
+          "page": 1,
+          "words": 314,
+          "exercises": [],
+          "opening": "2.2.3 Inkomenselasticiteit en kruislingse elasticiteit Dezelfde eigen prijs, toch een ande"
+        },
+        {
+          "page": 2,
+          "words": 128,
+          "exercises": [],
+          "opening": "Goed %ΔY %ΔQv Ei=%ΔQv/%ΔY Luxe picknickmanden +10% +15% +15%/+10%=1,5 Eenvoudige lunchpakk"
+        },
+        {
+          "page": 3,
+          "words": 175,
+          "exercises": [],
+          "opening": "Definitie: inferieur goed Een goed met Ei<0: inkomen en gevraagde hoeveelheid veranderen i"
+        },
+        {
+          "page": 4,
+          "words": 227,
+          "exercises": [],
+          "opening": "“Inferieur” is geen oordeel over kwaliteit of over de koper. Ook zegt de indeling niet of "
+        },
+        {
+          "page": 5,
+          "words": 174,
+          "exercises": [],
+          "opening": "Figuur 3: Elke verhouding benoemt een hoeveelheidsgoed én een ander prijsgoed. Let op - va"
+        },
+        {
+          "page": 6,
+          "words": 287,
+          "exercises": [],
+          "opening": "De coëfficiënten horen bij deze eenheden. De term 0,005Y levert een bijdrage aan abonnemen"
+        },
+        {
+          "page": 7,
+          "words": 312,
+          "exercises": [],
+          "opening": "2. De prijs van een ander goed verandert De prijs van papieren boeken stijgt 20%. De vraag"
+        },
+        {
+          "page": 8,
+          "words": 179,
+          "exercises": [],
+          "opening": "Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie. Stap 3 "
+        },
+        {
+          "page": 9,
+          "words": 311,
+          "exercises": [
+            "1",
+            "2"
+          ],
+          "opening": "Onthouden Gebruik (nieuw−oud)/oud× 100%. Oude Q, Y en P moeten positief zijn; de procentue"
+        },
+        {
+          "page": 10,
+          "words": 208,
+          "exercises": [
+            "3"
+          ],
+          "opening": "Begeleide inoefening Heb je deze hulp niet nodig? Ga dan verder met Zelfstandige oefening."
+        },
+        {
+          "page": 11,
+          "words": 239,
+          "exercises": [
+            "4",
+            "5"
+          ],
+          "opening": "Opgave 4 Voor naaicursusabonnementen X en een concurrerende handwerkcursus Z geldt Qx=90−2"
+        },
+        {
+          "page": 12,
+          "words": 174,
+          "exercises": [
+            "6"
+          ],
+          "opening": "Zelfstandige oefening Werk zonder hints of antwoordmodel. Laat je berekeningen en redenen "
+        },
+        {
+          "page": 13,
+          "words": 196,
+          "exercises": [
+            "7",
+            "8"
+          ],
+          "opening": "Opgave 7 Het inkomen stijgt 5%. De vraag naar begeleide wandeltochten stijgt 8%; die naar "
+        },
+        {
+          "page": 14,
+          "words": 274,
+          "exercises": [
+            "9"
+          ],
+          "opening": "Doeloefening Werk zelfstandig. Totaal:16 punten. Opgave 9 Gebruik steeds de oude waarde al"
+        },
+        {
+          "page": 15,
+          "words": 169,
+          "exercises": [
+            "10",
+            "11",
+            "12"
+          ],
+          "opening": "Denkertje / Bonusopgave Opgave 10 Een onderzoeker vindt voor een cursus Ei=0,75 en zegt: “"
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80",
+      "pages": 10,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": 14.117,
+      "proof_directory": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-223-S1-root-evidence\\223-opgaven-50cf2bbeaa19-r11",
+      "all_page_hashes_match": true,
+      "zip_members": [
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.html",
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf",
+        "_assets/2.2.3_fig_4.png",
+        "_assets/2.2.3_fig_4.svg"
+      ],
+      "page_map": [
+        {
+          "page": 1,
+          "words": 319,
+          "exercises": [],
+          "opening": "2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – opgaven Uitgewerkt voorbeeld 1. H"
+        },
+        {
+          "page": 2,
+          "words": 122,
+          "exercises": [],
+          "opening": "Stap 1 - Noteer de inputs en bereken de beginsituatie. Vervang iedere variabele. Bereken e"
+        },
+        {
+          "page": 3,
+          "words": 278,
+          "exercises": [],
+          "opening": "Stap 3 - Bereken de percentages en Ei. Gebruik de eigen oude waarde van iedere variabele: "
+        },
+        {
+          "page": 4,
+          "words": 207,
+          "exercises": [
+            "1",
+            "2"
+          ],
+          "opening": "Startopgaven Korte route: Startopgaven → Zelfstandige oefening → Doeloefening. Extra hulp "
+        },
+        {
+          "page": 5,
+          "words": 210,
+          "exercises": [
+            "3"
+          ],
+          "opening": "Begeleide inoefening Heb je deze hulp niet nodig? Ga dan verder met Zelfstandige oefening."
+        },
+        {
+          "page": 6,
+          "words": 241,
+          "exercises": [
+            "4",
+            "5"
+          ],
+          "opening": "Opgave 4 Voor naaicursusabonnementen X en een concurrerende handwerkcursus Z geldt Qx=90−2"
+        },
+        {
+          "page": 7,
+          "words": 176,
+          "exercises": [
+            "6"
+          ],
+          "opening": "Zelfstandige oefening Werk zonder hints of antwoordmodel. Laat je berekeningen en redenen "
+        },
+        {
+          "page": 8,
+          "words": 198,
+          "exercises": [
+            "7",
+            "8"
+          ],
+          "opening": "Opgave 7 Het inkomen stijgt 5%. De vraag naar begeleide wandeltochten stijgt 8%; die naar "
+        },
+        {
+          "page": 9,
+          "words": 276,
+          "exercises": [
+            "9"
+          ],
+          "opening": "Doeloefening Werk zelfstandig. Totaal:16 punten. Opgave 9 Gebruik steeds de oude waarde al"
+        },
+        {
+          "page": 10,
+          "words": 170,
+          "exercises": [
+            "10",
+            "11",
+            "12"
+          ],
+          "opening": "Denkertje / Bonusopgave Opgave 10 Een onderzoeker vindt voor een cursus Ei=0,75 en zegt: “"
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10",
+      "pages": 7,
+      "minimum_printed_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_label_pt": null,
+      "proof_directory": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-223-S1-root-evidence\\223-antwoorden-30cd682358c5-r11",
+      "all_page_hashes_match": true,
+      "zip_members": [
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.html",
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+        "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf"
+      ],
+      "page_map": [
+        {
+          "page": 1,
+          "words": 277,
+          "exercises": [
+            "1",
+            "2"
+          ],
+          "opening": "2.2.3 Inkomenselasticiteit en kruislingse elasticiteit - antwoorden Rond niet-exacte perce"
+        },
+        {
+          "page": 2,
+          "words": 284,
+          "exercises": [
+            "3",
+            "4"
+          ],
+          "opening": "Begeleide inoefening Opgave 3 a) Ei=12%/8%=1,5>1. De vraag naar premiumcacao stijgt procen"
+        },
+        {
+          "page": 3,
+          "words": 320,
+          "exercises": [
+            "5",
+            "6"
+          ],
+          "opening": "Opgave 5 a) Begin: Qx=120−2× 15+10+0,004× 25.000=120−30+10+100=200 abonnementen per maand."
+        },
+        {
+          "page": 4,
+          "words": 216,
+          "exercises": [
+            "7",
+            "8"
+          ],
+          "opening": "Opgave 7 a) Wandeltochten: Ei=+8%/+5%=1,6>1, hier een luxegoed. Papieren wandelroutes: Ei="
+        },
+        {
+          "page": 5,
+          "words": 250,
+          "exercises": [
+            "9"
+          ],
+          "opening": "Doeloefening Opgave 9 De drie bronnen en vijf vragen leveren samen 16 punten op. Gebruik b"
+        },
+        {
+          "page": 6,
+          "words": 255,
+          "exercises": [],
+          "opening": "d) (4 punten) Vervang alle variabelen en werk de termen eerst afzonderlijk uit: Qx oud=100"
+        },
+        {
+          "page": 7,
+          "words": 214,
+          "exercises": [
+            "10",
+            "11",
+            "12"
+          ],
+          "opening": "Denkertje / Bonusopgave Opgave 10 Een sterk modelantwoord: “Ei=0,75 beschrijft deze verand"
+        }
+      ]
+    }
+  ],
+  "byte_identical_rebuild": true,
+  "checks": [
+    "exact frozen goals/context/three sources/a–e/3+2+4+4+3 points",
+    "every short-answer entry, including exact-rational expanded d and rounded-model equivalence",
+    "identical exercise HTML editions; isolated deterministic ZIPs",
+    "every PDF text/placed figure label meets 12-point floor; no aspect distortion",
+    "all source/asset/page hashes current; generation manifests still honestly PENDING"
+  ]
+}
