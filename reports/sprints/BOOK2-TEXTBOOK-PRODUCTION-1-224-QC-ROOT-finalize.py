@@ -56,14 +56,15 @@ def specialist_views():
             assert im.convert('L').convert('RGB').tobytes()==gm.convert('RGB').tobytes()
         rows.append({'source':str(current),'specialist_gray_path':rel,'raw_sha256':row['raw_sha256'],'gray_sha256':row['gray_sha256'],'decoded_gray_equal_root_color_conversion':True})
     return {'actor':j['actor'],'attributed_personal_views':48,'root_personal_views':0,'whole_record_sha256':c.digest(path),'matched':rows}
-def preaccept():
+def preaccept(attempt):
+    assert attempt and re.fullmatch(r'r[1-9][0-9]*',attempt),'Explicit fresh preaccept attempt required'
     routes=exact_routes();views=specialist_views();probes=c.read(E/'224-independent-probes-r2.json');assert probes['status']=='PASS'
     assert len(probes['actual_guard_entry_negatives'])==109 and len(probes['whole_source_shared_controller_negatives'])==21 and len(probes['math_and_wrong_alternatives'])==40
     own=c.read(E/'224-root-source-namespace-probes.json');assert own['status']=='PASS' and len(own['cases'])==11
     assert c.read(E/'224-gates-pre.json')['status']=='PASS'
     for command in c.read(E/'224-gates-pre.json')['commands']:assert command['exit_code']==0
     # Root owns this read-only current-custody execution, including exact imports.
-    result,execution=c.command('root-custody',['node',str(P/(OUT+'check.cjs')),'custody'],E/'224-preaccept-custody')
+    result,execution=c.command('root-custody',['node',str(P/(OUT+'check.cjs')),'custody'],E/('224-preaccept-custody-'+attempt))
     assert execution['exit_code']==0
     assert c.digest(L/QC)=='b54386dcbd4ede38afd24f37a6a751d65054ace1807474240ff723b3123e08ca' and not (L/HAND).exists()
     baseline=c.read(P/(OUT+'baseline.json'));assert c.digest(P/M)==baseline['output_manifest']['raw_sha256']
@@ -103,7 +104,7 @@ def postaccept(verification):
     for token in [verification,c.digest(L/QC),q['review_raw_sha256'],'NOT_COMMISSIONED','UNOBSERVED','53.5/63.5/71.5','2/2/2/4/2/2']:assert token in hand,token
     for row in pre['native']:
         assert c.digest(L/row['path'])==row['sha256']
-        if '/_assets/' not in row['path']:assert row['sha256'] in hand,row['path']
+        if '/_assets/' not in row['path'].replace('\\','/'):assert row['sha256'] in hand,row['path']
     assert exact_routes()==pre['routes'] and specialist_views()==pre['specialist_views'] and n.guard(SOURCE)==pre['source']
     imports=c.read(P/(OUT+'verification.json'))['imports']
     for row in imports:
@@ -114,5 +115,6 @@ def postaccept(verification):
     c.save(P/(OUT+'postaccept-check.json'),{'status':'PASS','verification_commit':verification,'root_only_fields':sorted(allowed),'other_specialist_metadata_exact':True,'quality_ref_sha256':c.digest(L/QC),'handoff_sha256':c.digest(L/HAND),'handoff_sections':9,'inventory':state,'custody':custody,'root_native_routes':3,'root_raw_RGB_pages':60,'root_personal_views':0,'specialist_personal_views_attributed':48,'production_ready':False,'production_ready_with_flags':True})
     print('PASS root-only acceptance,9-section handoff,41rows23A/0C/6L/12P,29PDFbytes unchanged')
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('action',choices=['preaccept','postaccept']);parser.add_argument('--verification-commit');args=parser.parse_args()
-    preaccept() if args.action=='preaccept' else postaccept(args.verification_commit)
+    parser=argparse.ArgumentParser();parser.add_argument('action',choices=['preaccept','postaccept']);parser.add_argument('--verification-commit');parser.add_argument('--attempt');args=parser.parse_args()
+    assert c.raw(Path(__file__))==git(P,'show',head(P)+':'+OUT+'finalize.py'),'Commit exact owned finalizer before executing'
+    preaccept(args.attempt) if args.action=='preaccept' else postaccept(args.verification_commit)
