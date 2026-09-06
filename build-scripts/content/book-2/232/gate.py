@@ -167,8 +167,7 @@ def global_scan(platform_root=ROOT,exclude=()):
                 nums={int(v) for v in re.findall(r'(?<![A-Za-z0-9])r([1-9][0-9]*)(?![A-Za-z0-9])',rel)}
                 if name.endswith(('.json','.md','.txt','.log')) and p.is_file():
                     raw=data_path(p).read_bytes()
-                    if len(raw)<16*1024*1024:
-                        nums|={int(v) for v in re.findall(rb'(?<![A-Za-z0-9])r([1-9][0-9]*)(?![A-Za-z0-9])',raw)}
+                    nums|={int(v) for v in re.findall(rb'(?<![A-Za-z0-9])r([1-9][0-9]*)(?![A-Za-z0-9])',raw)}
                 if nums:hits.append({'worktree':str(root),'path':rel,'revisions':sorted(nums)})
     return {'registered_worktrees':visited,'registered_listing_sha256':sha(listing.encode()),'hits':hits,
             'maximum':max([0]+[v for r in hits for v in r['revisions']])}
