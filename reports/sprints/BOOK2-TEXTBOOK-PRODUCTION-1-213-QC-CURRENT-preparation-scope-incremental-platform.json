@@ -1,0 +1,19 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform",
+    "--lane",
+    "shared",
+    "--base",
+    "c96f126738b5e45d0d1c74e68efc35b7bd33c5dc",
+    "--head",
+    "de99700a90b230a949bdeaa356dabbc717a7cf62",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform",
+  "exit": 1,
+  "stdout": "{\n  \"ok\": false,\n  \"lane\": \"shared\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-baseline.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-lessons-claim-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-math-preparation-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-math-preparation.py\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-migration-plan-addendum.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-plan.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-platform-claim-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-preparation-publication.cjs\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-preparation-report.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-prepare.cjs\"\n    ],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [\n    \"shared lane needs at least one shared platform change\",\n    \"generated index/report or review-evidence changes are allowed only with lane-owned changes\"\n  ],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": ""
+}

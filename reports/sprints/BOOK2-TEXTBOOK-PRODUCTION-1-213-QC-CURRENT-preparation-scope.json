@@ -1,0 +1,62 @@
+{
+  "strict": {
+    "result": "PASS",
+    "platform_base": "c96f126738b5e45d0d1c74e68efc35b7bd33c5dc",
+    "platform_head": "de99700a90b230a949bdeaa356dabbc717a7cf62",
+    "lessons_base": "42996c60b4a93843dfe8488b8e5a3ea704871667",
+    "lessons_head": "42996c60b4a93843dfe8488b8e5a3ea704871667",
+    "platform_paths": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-lessons-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-math-preparation-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-math-preparation.py",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-migration-plan-addendum.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-platform-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-preparation-publication.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-preparation-report.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-prepare.cjs"
+    ],
+    "lessons_paths": [],
+    "unknown": 0
+  },
+  "native": [
+    {
+      "name": "incremental-platform",
+      "result": false,
+      "exit": 1,
+      "unknown": 0,
+      "failures": [
+        "shared lane needs at least one shared platform change",
+        "generated index/report or review-evidence changes are allowed only with lane-owned changes"
+      ]
+    },
+    {
+      "name": "incremental-lessons",
+      "result": false,
+      "exit": 1,
+      "unknown": 0,
+      "failures": [
+        "no changed paths to classify",
+        "textbook lane needs at least one Part A textbook change"
+      ]
+    },
+    {
+      "name": "whole-platform",
+      "result": true,
+      "exit": 0,
+      "unknown": 0,
+      "failures": []
+    },
+    {
+      "name": "whole-lessons",
+      "result": true,
+      "exit": 0,
+      "unknown": 0,
+      "failures": []
+    }
+  ],
+  "prior_raw_unchanged": 14405,
+  "native_QC_executed": false,
+  "gate": "CLOSED_PENDING_ROOT_EXACT_S1_PASS_IMPORT"
+}
