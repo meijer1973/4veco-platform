@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "platform": {
+    "base": "a6452bdb94424ceef891de2a24e34a8295715326",
+    "head": "525f4a8a7168f459b4ae65b12eccbde9b582205f"
+  },
+  "lessons": {
+    "base": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+    "head": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a"
+  },
+  "strict_custody": {
+    "result": [
+      {
+        "repository": "4veco-platform",
+        "prior_files_unchanged": 13429,
+        "actual_raw_tracked_exact": 13572
+      },
+      {
+        "repository": "4veco-lessen",
+        "prior_files_unchanged": 1903,
+        "actual_raw_tracked_exact": 1904
+      }
+    ],
+    "imported_files_exact": 116,
+    "plan_raw_sha256": "d0781ffb6d2966209c3a160309316ce92ebc0455fa51d4235ccc6840afa58935"
+  },
+  "scopes": [
+    {
+      "label": "increment-platform",
+      "exit": 1,
+      "ok": false,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 143,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "increment-lessons",
+      "exit": 0,
+      "ok": true,
+      "counts": {
+        "partA_textbook": 1,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "exit": 0,
+      "ok": true,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 83,
+        "generated_indexes": 6,
+        "review_evidence": 5840,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "exit": 0,
+      "ok": true,
+      "counts": {
+        "partA_textbook": 207,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 6,
+        "unknown": 0
+      }
+    }
+  ],
+  "whitespace": [
+    {
+      "label": "adoption-default",
+      "exit": 2
+    },
+    {
+      "label": "adoption-cr",
+      "exit": 0
+    },
+    {
+      "label": "root-only",
+      "exit": 0
+    },
+    {
+      "label": "lessons",
+      "exit": 0
+    },
+    {
+      "label": "complete-default",
+      "exit": 2
+    }
+  ],
+  "no_foreign_normalization": true
+}
