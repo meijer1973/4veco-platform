@@ -34,7 +34,7 @@ def run(mode):
     prepared=chapter.prepare_chapter(root,spec)
     assert len(prepared['inputs'])==8 and len(prepared['assets'])==30
     for row in assembly['documents']:
-        source=(L/row['path']).read_text(encoding='utf-8-sig').strip()
+        source=(L/row['path']).read_bytes().decode('utf-8-sig').strip()
         selected=prepared['answers_md' if row['role']=='answers' else 'student_md']
         assert selected.count(source)==1,row['path']
     assert {Path(a['path']).name:a['sha256'] for a in prepared['assets']}=={a['name']:a['raw_sha256'] for a in assembly['assets']}

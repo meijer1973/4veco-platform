@@ -113,7 +113,8 @@ class ChapterPipelineTests(unittest.TestCase):
             current = headings[role] + "\n" + old.split("\n", 1)[1]
             source.write_text(current, encoding="utf-8")
             paragraph[key] = digest(source)
-            sources[role] = current.strip()
+            # Text-mode writes use platform newlines; compare actual source bytes.
+            sources[role] = source.read_bytes().decode("utf-8-sig").strip()
         with self.assertRaisesRegex(ValueError, "Source heading does not identify"):
             prepare_chapter(self.chapter, self.spec)
         paragraph["source_headings"] = headings
