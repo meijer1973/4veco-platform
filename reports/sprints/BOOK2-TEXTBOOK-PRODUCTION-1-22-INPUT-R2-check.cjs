@@ -5,7 +5,7 @@ const P=path.resolve(__dirname,'../..'),L=path.resolve(P,'../4veco-lessen'),bran
 const BP='b65c38e5f753c723e68bb1475074f256c714fb82',BL='3bc9e81828dcc57932dc871825aaa4cf4a975fe1',OP='b65c38e5f753c723e68bb1475074f256c714fb82';
 const R='reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-',pre=R+'22-INPUT-R2-',B='Boek 2 - Kosten, opbrengsten, elasticiteit en surplus',CH=B+'/2.2 Hoofdstuk Elasticiteit';
 const RELEASE=R+'224-PRODUCTION-RELEASE-inputs.json',releaseHash='33c1473db0cbeec66e93557a72ab0586ccfcef29ba52b2a36148946c65598c7e',releaseCommit='6c3f46dbe97ce3eebe481e18bd25424a2de55aac';
-const PINNED_MANIFEST='UNBOUND_PENDING_EXCLUSIVE_CREATION';
+const PINNED_MANIFEST='6eb01f253b59d0e459eacfbc2ff124189e6600bd7d437c875b81aa4d701cf5ba';
 const folders=['2.2.1 Prijselasticiteit','2.2.2 Elasticiteit en omzet','2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit','2.2.4 Gemengde opgaven elasticiteit'];
 const ids=folders.map(f=>f.slice(0,5)),f212=B+'/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even';
 const targets=['61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288','8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e','9a3a29bcedc16739b74b66b2bb8e136b37e86c7f5cfee3ee35ea37c4bdeed1c5','4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519'];
