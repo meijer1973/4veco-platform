@@ -32,7 +32,9 @@ class InputTests(unittest.TestCase):
         for fixture,actual in [(cls.p,cls.original),(cls.l,cls.lessons)]:
             subprocess.run(['git','init','--quiet',str(fixture)],check=True)
             common=subprocess.run(['git','rev-parse','--path-format=absolute','--git-common-dir'],cwd=actual,capture_output=True,check=True).stdout.decode().strip()
-            (fixture/'.git/objects/info/alternates').write_text(str(Path(common)/'objects').replace('\\','/')+'\n',encoding='utf-8')
+            (fixture/'.git/objects/info/alternates').write_bytes((str(Path(common)/'objects').replace('\\','/')+'\n').encode('utf-8'))
+        cls.fixture_source_precheck=b.gate.verify_source(cls.source_commit,cls.p)
+        if len(cls.fixture_source_precheck)!=11:raise AssertionError('Original technical source fixture unavailable')
         cls.cases=[]
 
     @classmethod
@@ -57,6 +59,8 @@ class InputTests(unittest.TestCase):
                 with self.assertRaises((ValueError,FileNotFoundError)) as caught:
                     b.build(self.l,self.source_commit,'r999999',self.p/'unused-reservation.json',route)
                 self.assertTrue(str(caught.exception))
+                if source and not isinstance(caught.exception,FileNotFoundError):
+                    self.assertIn('Whole source differs from caller commit:',str(caught.exception))
         self.assertEqual(effects,[])
         self.cases.append({'label':label,'routes':['full','direct'],'before_native_effects':True})
 
