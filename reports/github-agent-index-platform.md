@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T06:01:01.264Z
+Generated: 2026-09-06T06:27:08.955Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `b4783e33000c1d4639904bc0a147fd9a0974e383`
-Files indexed: 14449
-Scope: committed tree files from `git ls-tree -r --name-only b4783e33000c1d4639904bc0a147fd9a0974e383`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source commit: `cabde2ba0b2a242334eee9a8a8fcae38b40a70ea`
+Files indexed: 14470
+Scope: committed tree files from `git ls-tree -r --name-only cabde2ba0b2a242334eee9a8a8fcae38b40a70ea`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -971,7 +971,7 @@ Count: 25
 
 ## validators
 
-Count: 751
+Count: 752
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1537,6 +1537,7 @@ Count: 751
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence/final-validation-student-web.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/publication-lessons-claim-check-corrected.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/publication-platform-claim-check-corrected.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check-r1-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-ALT-render-check-r8.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-render-check-r7.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check-r6.json
@@ -2762,7 +2763,7 @@ Count: 1030
 
 ## reports
 
-Count: 11659
+Count: 11680
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -9682,6 +9683,27 @@ Count: 11659
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-specialist-adoption-check.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-specialist-review-r5.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-stage-1.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-paragraph_production-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-specialist_review-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-232-inputs.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-232-paragraph_production-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-232-specialist_review-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-create-r1-diagnostic-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-create-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-run.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-scope.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-structural-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-command-log.jsonl
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-evidence.json
