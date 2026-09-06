@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "platform_base": "0b15d6bfa75fa62e00e5945e16a7cd8f9a7f6bf6",
+  "platform_head": "bb44cc15976b631289d83e7a344db829ed109e56",
+  "lessons_base": "3199ff2ae89b39a472b48ee0818de5b1c191063a",
+  "lessons_head": "9daf4b8a9696fcdce1d485d85dbc0c59b7b6dbe6",
+  "platform_paths": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-author-stage-inventory.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-bundle-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-check.py",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r1-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r2-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r3-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r4-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-result-r3.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-result-r4.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-result.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-durable-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-foundation-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-governance-final-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-lessons-claim-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-lessons-whitespace-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-plan.md",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-platform-claim-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-platform-whitespace-cr-eol-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-platform-whitespace-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-publish.cjs",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-report.md",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-run.cjs"
+  ],
+  "lessons_paths": [
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md"
+  ],
+  "unknown_paths": 0,
+  "source_native_asset_review_QC_handoff_target_edits": 0,
+  "role": "232plan-author",
+  "independent_plan_review": "PENDING",
+  "production_release": "PENDING"
+}
