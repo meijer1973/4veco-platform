@@ -37,6 +37,22 @@ def dot(x, y, role, fill=INK, r=6):
     return f'<circle cx="{n(x)}" cy="{n(y)}" r="{r}" fill="{fill}" stroke="{INK}" stroke-width="2" data-role="{role}"/>'
 
 
+def label_leader(px, py, x, y, value):
+    from PIL import ImageFont
+    font=ImageFont.truetype("C:/Windows/Fonts/arial.ttf",40)
+    left,top,right,bottom=font.getbbox(value,anchor="ls")
+    left,top,right,bottom=x+left,y+top,x+right,y+bottom
+    if py < top:
+        ex,ey=min(max(px,left),right),top-8
+    elif py > bottom:
+        ex,ey=min(max(px,left),right),bottom+8
+    elif px < left:
+        ex,ey=left-8,min(max(py,top),bottom)
+    else:
+        ex,ey=right+8,min(max(py,top),bottom)
+    return line(px,py,ex,ey,"source-leader",width=1.8)
+
+
 def figure(index):
     smooth = index >= 3
     answer = index % 2 == 0
@@ -63,7 +79,7 @@ def figure(index):
              line(160, 820, 1040, 820, "axis", width=4),
              text(600, 1026, "Q (lunchboxen per dag)" if smooth else "Q (montages per dag)", "middle", "axis-title")]
     if smooth:
-        body += [line(X(700), 150, X(700), 820, "normal-limit", width=2, dash="3 10"),
+        body += [line(X(700), Y(3500), X(700), 820, "normal-limit", width=2, dash="3 10"),
                  text(160, 108, "Normale grens 700: stippellijn", role="source-boundary")]
     else:
         body.append(text(160, 108, "Normale afspraken: 0–40 montages", role="source-boundary"))
@@ -75,20 +91,28 @@ def figure(index):
             body.append(dot(X(q), Y(tk if column == 1 else to), f"source-{identity}-{q}", color))
     # Explicit point identities in wide leader lanes, not small crowded text.
     labels = ([
-        (0, 1200, 220, 620, "TK: Q=0"), (0, 0, 220, 760, "TO: Q=0"),
-        (700, 2600, 510, 550, "TK: Q=700"), (700, 3500, 420, 335, "TO: Q=700"),
-        (800, 2900, 680, 620, "TK: Q=800"), (800, 4000, 550, 250, "TO: Q=800"),
+        (0, 1200, 220, 550, "TK: Q=0"), (0, 0, 230, 810, "TO: Q=0"),
+        (700, 2600, 530, 590, "TK: Q=700"), (700, 3500, 420, 335, "TO: Q=700"),
+        (800, 2900, 540, 670, "TK: Q=800"), (800, 4000, 550, 250, "TO: Q=800"),
         (900, 3250, 870, 535, "TK: Q=900"), (900, 4500, 665, 190, "TO: Q=900"),
-        (1000, 3650, 850, 440, "TK: Q=1000"), (1000, 5000, 860, 108, "TO: Q=1000"),
+        (1000, 3650, 900, 620, "TK: Q=1000"), (1000, 5000, 860, 108, "TO: Q=1000"),
     ] if smooth else [
-        (0, 100, 220, 620, "TK: Q=0"), (0, 0, 220, 770, "TO: Q=0"),
-        (20, 150, 265, 440, "TK: Q=20"), (20, 120, 320, 720, "TO: Q=20"),
+        (0, 100, 220, 655, "TK: Q=0"), (0, 0, 230, 810, "TO: Q=0"),
+        (20, 150, 265, 440, "TK: Q=20"), (20, 120, 400, 760, "TO: Q=20"),
         (40, 200, 635, 550, "TK: Q=40"), (40, 240, 475, 300, "TO: Q=40"),
         (45, 220, 870, 610, "TK: Q=45"), (45, 270, 740, 245, "TO: Q=45"),
         (55, 275, 1060, 325, "TK55"), (55, 330, 1060, 222, "TO55"),
     ])
     for q, euros, x, y, label in labels:
-        body.append(line(X(q), Y(euros), x+12, y+8, "source-leader", width=1.8))
+        if smooth and label == "TK: Q=1000":
+            body += [line(X(q),Y(euros),1180,Y(euros),"source-leader",width=1.8),
+                     line(1180,Y(euros),1180,600,"source-leader",width=1.8),
+                     line(1180,600,1134,600,"source-leader",width=1.8)]
+        elif not smooth and label == "TK: Q=45":
+            body += [line(X(q),Y(euros),1030,Y(euros),"source-leader",width=1.8),
+                     line(1030,Y(euros),1030,573,"source-leader",width=1.8)]
+        else:
+            body.append(label_leader(X(q),Y(euros),x,y,label))
         body.append(text(x, y, label, role="source-point-label"))
     if answer:
         beq, bem = (400, 2000) if smooth else (200/7, 1200/7)
@@ -100,12 +124,13 @@ def figure(index):
                  dot(X(beq), 915, "range-open", "white", 7),
                  dot(X(right), 915, "range-closed", INK, 7)]
         if smooth:
-            body += [text(170, 700, "BE (400; 2.000)", role="answer-label"),
-                     line(480, 690, X(beq), Y(bem), "answer-leader", width=2),
+            body += [text(850, 740, "BE (400; 2.000)", role="answer-label"),
+                     line(X(beq),Y(bem),X(beq),735,"answer-leader",width=2),
+                     line(X(beq),735,842,735,"answer-leader",width=2),
                      text(600, 974, "Snelste positieve groei: 400 < Q ≤ 700", "middle", "answer-label")]
         else:
-            body += [text(170, 510, "BE ≈ (28,57; 171,43)", role="answer-label"),
-                     line(530, 510, X(beq), Y(bem), "answer-leader", width=2),
+            body += [text(170, 360, "BE ≈ (28,57; 171,43)", role="answer-label"),
+                     line(560, 368, X(beq), Y(bem), "answer-leader", width=2),
                      line(X(40), Y(200), X(40), Y(240), "profit-distance", width=5),
                      line(X(40)-10, Y(200), X(40)+10, Y(200), "profit-cap"),
                      line(X(40)-10, Y(240), X(40)+10, Y(240), "profit-cap"),

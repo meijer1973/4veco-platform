@@ -41,4 +41,10 @@ else if(process.argv[2]==='capture-r40'){
  for(const rel of base.selected_native_paths.filter(p=>/2\.1\.4_ex_1\.(svg|png)$/.test(p))){const bytes=read(L,rel),target=path.join(dir,path.basename(rel));fs.writeFileSync(target,bytes,{flag:'wx'});a(fs.readFileSync(target).equals(bytes));rows.push({source:rel,evidence:path.relative(P,target).replaceAll('\\','/'),bytes:bytes.length,sha256:hash(bytes)});}
  write('r40-failure-capture',{status:'RETAINED_ACTUAL_NATIVE_FAILURE',rows,reason:'Sharp density96 expanded natural raster above1200x1050; actual dimensions guard rejected after firstSVG/PNG, before pupil MD/HTML/PDF. Preserve these failed bytes; explicit1200x1050 resampling is owned native conversion, no font-floor or plan waiver.',native_attempt_process:hash(read(P,'reports/sprints/'+N+'-native-full-r40-process.json')),limitation:'r40 retained terminal process records final child failure, not every earlier successful gate stdout. Future owned controller prints full event trail on failure. No fabricated earlier event log.',historical_whitespace:'39ca053f source commit check reported four new blank EOF lines; own current source removes them, historical shell diagnostic remains factual.'});
 }
+else if(process.argv[2]==='snapshot'){
+ const revision=process.argv[3];a.match(revision,/^r[0-9]+$/);const base=JSON.parse(read(P,'reports/sprints/'+N+'-baseline.json'));
+ const dir=path.join(__dirname,N+'-'+revision+'-retained-native');fs.mkdirSync(dir);const rows=[];
+ for(const rel of base.selected_native_paths){const b=read(L,rel),dest=path.join(dir,path.basename(rel));fs.writeFileSync(dest,b,{flag:'wx'});a(fs.readFileSync(dest).equals(b));rows.push({source:rel,evidence:path.relative(P,dest).replaceAll('\\','/'),bytes:b.length,sha256:hash(b)});}
+ write(revision+'-retained-native',{revision,rows,status:'INTERMEDIATE_NATIVE_BYTES_RETAINED_NOT_VISUAL_ACCEPTANCE',reason:'All source/output and image bytes retained before source-level layout revision; no restore-copy to canonical output.'});
+}
 else throw Error('Expected baseline or gates');

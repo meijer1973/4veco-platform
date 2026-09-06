@@ -1,0 +1,59 @@
+{
+  "source_md": "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\2.1.4 Gemengde opgaven – opgaven.md",
+  "source_sha256": "9920cb3cffc763ecc1b23a87bec1bdd0e34457da1d8401dc8e62950e77fc587c",
+  "source_html": "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\2.1.4 Gemengde opgaven – opgaven.html",
+  "html_sha256": "41988b8d258ac850ed76ea33f169c469ded072c5d4b08017b70f7349f53f402b",
+  "source_pdf": "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\2.1.4 Gemengde opgaven – opgaven.pdf",
+  "pdf_sha256": "47aaa2e8e5b3e82e278f5f501a4e05f8a2138366d4169f0eec72a64590f255fa",
+  "assets": [
+    {
+      "path": "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\_assets\\2.1.4_ex_1.svg",
+      "sha256": "cb3b76c834c4c48d7e678f508b4498f891e7d3a4c3befa8cd003bf2abd458c4f"
+    },
+    {
+      "path": "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\_assets\\2.1.4_ex_1.png",
+      "sha256": "fe36938140479f73c50a5d7c5492c6bcba6d8ccd713f436bd06ca1583500924a"
+    },
+    {
+      "path": "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\_assets\\2.1.4_ex_3.svg",
+      "sha256": "fea25c4f585f8e9f6d921cc16bad7f44596fc8d70152a20491922e823a4b4575"
+    },
+    {
+      "path": "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\_assets\\2.1.4_ex_3.png",
+      "sha256": "f461d63a1e1d16f9429b9d1c5ff0be00934b28d0f297ec21ca41fa6ef9ed4454"
+    }
+  ],
+  "sprint_id": "BOOK2-TEXTBOOK-PRODUCTION-1",
+  "artifact_id": "2.1.4-opgaven-r41-47aaa2e8e5b3",
+  "render_dpi": 150,
+  "rendered_pages": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png",
+    "pages/page-008.png",
+    "pages/page-009.png",
+    "pages/page-010.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "5fc9bcf1d35f9e4f02485b426232347f7de2999d570c38acbe74310ff99f33aa",
+    "page-002.png": "bdfc8c086b159e7d5defee5f50b2ea0620981022edd48ec96f957df020441853",
+    "page-003.png": "de3be351515adf183b221a4648e3b8b499801c1bd73f5365269bbf4ea0f207c8",
+    "page-004.png": "b6d1eb4bb80058dd62879e70daa1a0a432e7a624608c73632197181ee6f3d977",
+    "page-005.png": "78250e1df08c26a133736e498bb444de9e0cff54b2954472028da010157ddda1",
+    "page-006.png": "c878a5797c1d2ca2c6a66216b6352ed641f40ac5c2d82bf047f02ce279e2e39f",
+    "page-007.png": "ee5b0b453f79bd73dfe280b8bb5111bf8de1090ce9612c025c25d7dc85becab5",
+    "page-008.png": "47a03429bb2574fb5f0f813ed5f0cd13171924f00613a6718aef06f3d4c7813f",
+    "page-009.png": "7a449b16971a9738266ab22311cf1490c6f23e59f89b8a3516aff48a2fade7d6",
+    "page-010.png": "4c3f19777e3d57682ade48a43458c38f7ad88f96cb4aa580733cf3c40d2b9f30"
+  },
+  "contact_sheet": "contact-sheet.png",
+  "pages_inspected": [],
+  "inspection_status": "PENDING",
+  "visible_student_defects": null,
+  "inspected_at_normal_reading_scale": false,
+  "warnings": []
+}

@@ -15,6 +15,34 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import b2_214 as b
 
 
+def segment_hits_box(segment, box, margin=3):
+    x0,y0,x1,y1=segment;left,top,right,bottom=box
+    bounds=[(x0,x1-x0,left-margin,right+margin),(y0,y1-y0,top-margin,bottom+margin)]
+    low,high=0.,1.
+    for origin,delta,minimum,maximum in bounds:
+        if abs(delta)<1e-10:
+            if origin<minimum or origin>maximum:return False
+        else:
+            a,c=(minimum-origin)/delta,(maximum-origin)/delta
+            low=max(low,min(a,c));high=min(high,max(a,c))
+            if low>high:return False
+    return True
+
+
+def line_text_collisions(svg,boxes):
+    ns={"s":"http://www.w3.org/2000/svg"};segments=[];hits=[]
+    for e in svg.findall("s:line",ns):
+        if e.attrib.get("data-role")=="grid":continue
+        segments.append((e.attrib.get("data-role"),[float(e.attrib[k]) for k in ["x1","y1","x2","y2"]]))
+    for e in svg.findall("s:polyline",ns):
+        points=[list(map(float,v.split(","))) for v in e.attrib["points"].split()]
+        segments.extend((e.attrib.get("data-role"),a+c) for a,c in zip(points,points[1:]))
+    for role,segment in segments:
+        for box in boxes:
+            if segment_hits_box(segment,box["ink_box"]):hits.append({"line_role":role,"segment":segment,"text":box["text"],"ink_box":box["ink_box"]})
+    return hits
+
+
 def check(lessons):
     import fitz
     from PIL import Image, ImageFont
@@ -62,6 +90,8 @@ def check(lessons):
                 u,v=a["ink_box"],c["ink_box"]
                 if u[0]<v[2]+4 and u[2]+4>v[0] and u[1]<v[3]+4 and u[3]+4>v[1]:collisions.append([a["text"],c["text"]])
         if collisions:result["errors"].append({"figure":name,"ink_collisions":collisions})
+        line_hits=line_text_collisions(svg,boxes)
+        if line_hits:result["errors"].append({"figure":name,"line_text_collisions":line_hits})
         png=base/"_assets"/name.replace(".svg",".png")
         with Image.open(b.data_path(png)) as image:
             image=image.convert("RGB")

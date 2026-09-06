@@ -1,0 +1,18 @@
+{
+  "label": "geometry-probes-r2",
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/214/test_source.py",
+    "SourceTests.test_curves_and_leaders_clear_actual_whole_glyphs",
+    "SourceTests.test_actual_font_ink_boxes_before_generation"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T07:58:53.581Z",
+  "finish": "2026-09-06T07:58:54.045Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "",
+  "stderr": "test_curves_and_leaders_clear_actual_whole_glyphs (__main__.SourceTests.test_curves_and_leaders_clear_actual_whole_glyphs) ... ok\r\ntest_actual_font_ink_boxes_before_generation (__main__.SourceTests.test_actual_font_ink_boxes_before_generation) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 2 tests in 0.083s\r\n\r\nOK\r\n",
+  "stdout_base64": "",
+  "stderr_base64": "dGVzdF9jdXJ2ZXNfYW5kX2xlYWRlcnNfY2xlYXJfYWN0dWFsX3dob2xlX2dseXBocyAoX19tYWluX18uU291cmNlVGVzdHMudGVzdF9jdXJ2ZXNfYW5kX2xlYWRlcnNfY2xlYXJfYWN0dWFsX3dob2xlX2dseXBocykgLi4uIG9rDQp0ZXN0X2FjdHVhbF9mb250X2lua19ib3hlc19iZWZvcmVfZ2VuZXJhdGlvbiAoX19tYWluX18uU291cmNlVGVzdHMudGVzdF9hY3R1YWxfZm9udF9pbmtfYm94ZXNfYmVmb3JlX2dlbmVyYXRpb24pIC4uLiBvaw0KDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQpSYW4gMiB0ZXN0cyBpbiAwLjA4M3MNCg0KT0sNCg=="
+}

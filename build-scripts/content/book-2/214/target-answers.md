@@ -76,6 +76,8 @@ met alle drie spoedintervallen en passende verklaring (1). Geen winstoppervlak.
 
 ![SmoothBox, antwoord: break-even bij Q = 400 en TK = TO = 2.000 euro per dag. De positieve verticale afstand groeit het snelst voor 400 < Q ≤ 700, niet op het nulpunt zelf. De winsttoename per extra lunchbox is normaal 3 euro, daarna 2, 1,50 en 1 euro over de drie spoedintervallen. Dit is geen winstoppervlakte of advies over optimale afzet.](_assets/2.1.4_ex_4.svg){alt="SmoothBox: break-even (400; 2.000) en bereik 400 < Q ≤ 700 met de snelste positieve winstgroei."}
 
+<div class="page-break"></div>
+
 ### Vraag 6 — 2 punten
 
 {{ANSWER_6}}
