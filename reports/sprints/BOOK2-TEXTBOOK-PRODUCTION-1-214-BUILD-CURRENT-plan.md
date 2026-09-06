@@ -159,3 +159,29 @@ self-approve. Additional in-scope improvements are clearer source placement,
 less split attention and specific corrective answer feedback, not added tasks.
 Independent paragraph/specialist/root/aggregate and CI/lead/readiness remain
 required future work. No Part B, diagnostics/mastery, book acceptance or PR merge.
+
+## Root command-boundary decision recorded before implementation
+
+Root has now explicitly authorized an additive owned `214/direct_print.py`
+preflight orchestrator. The frozen canonical plan and all48 release inputs stay
+unchanged. The generic shared `print_pipeline.py` primitive is not independently
+gated and is NOT an authorized standalone paragraph214 production route.
+
+The authorized orchestrator must first validate the complete locally and
+committed-byte-bound release, input manifest, every input, dependency helper,
+source and controller. It then runs current `paragraph_production` and durable
+authority, verifies actual MD/asset derivation, checks and exclusively reserves
+its unused namespace/revision, and only then invokes the plan's exact unchanged
+shared CLI as its final child: the two exact MD arguments and unchanged
+`--proof-root` contract. No copied rendering or direct `build_document` call is
+permitted for this route. Bind the whole orchestrator and shared worker bytes.
+
+Real direct negatives exercise this authorized orchestrator and must demonstrate
+zero worker invocations and output effects. They must not imply the ungated
+shared CLI rejects invalid authority. Positive evidence records concrete parent
+and child argv and checks all15 native files plus all decoded pages for parity.
+If exact shared child CLI and unused namespace guarantees cannot both hold,
+stop that route before output and report. The distinct paragraph and specialist
+reviews must explicitly assess this implementation boundary. This decision is
+additional preflight around the existing template, not a canonical plan,
+teaching/output change, authority waiver or production self-acceptance.
