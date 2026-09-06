@@ -1,0 +1,48 @@
+{
+  "actor": "paragraph_214_builder",
+  "task": "BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW",
+  "controller_commit": "89d3d326a9feb69086c746ab774cda9a1d8002e7",
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-B",
+    "build-scripts/content/book-2/214/check_render.py",
+    "--lessons-root",
+    "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-lessen",
+    "--proof-root",
+    "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW-r52-checker",
+    "--proof-suffix",
+    "r52",
+    "--rebuild",
+    "--output",
+    "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW-native-check-r52.json"
+  ],
+  "cwd": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-platform",
+  "PATH": "C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\.codex\\tmp\\arg0\\codex-arg0uDve1V;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\libheif\\libheif\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\jxrlib\\jxrlib\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\override;C:\\Python314\\Scripts\\;C:\\Python314\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\GitHub CLI\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\meije\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\meije\\AppData\\Roaming\\npm;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WinGet\\Packages\\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\\poppler-25.07.0\\Library\\bin;C:\\Users\\meije\\AppData\\Local\\Pandoc\\;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\fallback;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\b592626b34cbe333;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\1e3e57cdf0634c02",
+  "PATH_inherited_unchanged": true,
+  "NODE_PATH_child_only": "C:/wt/book2-part-a-production-20260905/4veco-platform/node_modules",
+  "existing_packages": [
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\node_modules\\js-yaml\\package.json",
+      "sha256": "4cdbd7e882f90a7f551726d9ae3ecd8363fd31b39a9d2970dcd0ea46e24c8ede",
+      "version": "3.14.2"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\node_modules\\sharp\\package.json",
+      "sha256": "72e4c3a596b2cdd5648a2113c30e18b6b7e0f2ef9fec0e72b78818d93749e925",
+      "version": "0.35.2"
+    }
+  ],
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "89d3d326a9feb69086c746ab774cda9a1d8002e7",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-214-paragraph-review-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-214-paragraph-review-20260906"
+  },
+  "start": "2026-09-06T10:17:19.865100+00:00",
+  "exit_code": 0,
+  "stdout": "{\"status\": \"PASS\", \"files\": 15, \"pages\": [9, 11], \"errors\": []}\r\n",
+  "stderr": "",
+  "finish": "2026-09-06T10:17:46.141649+00:00"
+}

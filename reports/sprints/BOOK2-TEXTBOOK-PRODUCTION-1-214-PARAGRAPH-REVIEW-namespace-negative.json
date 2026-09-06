@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "actor": "paragraph_214_builder",
+  "actual_original_namespace_function": true,
+  "actual_global_registered_walk": true,
+  "requested": 99999,
+  "not_reserved_or_consumed_by_file_name": true,
+  "existing_destination": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW-r49-full",
+  "existing_files": 25,
+  "existing_tree_digest": "94464036f4317c19918549c2e35f9222d76c73475e52f9971c39957906f31f60",
+  "rejection": "Proof namespace must not yet exist",
+  "actual_Git": [
+    {
+      "argv": [
+        "git",
+        "worktree",
+        "list",
+        "--porcelain",
+        "-z"
+      ],
+      "cwd": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout_sha256": "b53c20ff4451691e5bfaeac099b7dfe791782086983c92fcda1104097aef860c",
+      "stdout_bytes": 38951
+    },
+    {
+      "argv": [
+        "git",
+        "worktree",
+        "list",
+        "--porcelain",
+        "-z"
+      ],
+      "cwd": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-lessen",
+      "exit_code": 0,
+      "stdout_sha256": "c85b857ed0c581074483e2a420ad6a3bab36b2c2ccca4adcc63c6cc6ef664318",
+      "stdout_bytes": 23682
+    }
+  ],
+  "effects": 0,
+  "existing_proof_unchanged": true,
+  "scope": "Original namespace function before reservation/worker; genuine full/thin/direct/checker positive authorization separately recorded."
+}

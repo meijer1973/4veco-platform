@@ -1,0 +1,23 @@
+{
+  "actor": "paragraph_214_builder",
+  "task": "BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW",
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "build-scripts/workflows/check-book-outline-currentness.js"
+  ],
+  "cwd": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-platform",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-platform",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-214-paragraph-review-20260906\\4veco-lessen",
+    "FOURVECO_PLATFORM_SOURCE_REF": "43c50c07d5971591957cb485c7d8417f21aeb322",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-214-paragraph-review-20260906",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-214-paragraph-review-20260906"
+  },
+  "start": "2026-09-06T10:20:18.828Z",
+  "finish": "2026-09-06T10:20:20.379Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: structural-currentness\n",
+  "stderr": ""
+}

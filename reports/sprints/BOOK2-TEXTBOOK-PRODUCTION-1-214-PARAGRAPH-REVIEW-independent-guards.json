@@ -1,0 +1,310 @@
+{
+  "status": "PASS",
+  "actor": "paragraph_214_builder",
+  "fixture_files": 75,
+  "selected_real_inputs": [
+    [
+      "4veco-platform",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json"
+    ],
+    [
+      "4veco-platform",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json"
+    ],
+    [
+      "4veco-platform",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md"
+    ],
+    [
+      "4veco-lessen",
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml"
+    ],
+    [
+      "4veco-lessen",
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md"
+    ],
+    [
+      "4veco-lessen",
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md"
+    ],
+    [
+      "4veco-platform",
+      "references/authored/course-target-exercises.json"
+    ]
+  ],
+  "cases": [
+    {
+      "case": "missing:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json",
+      "route": "full",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json'",
+      "effects": 0
+    },
+    {
+      "case": "missing:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json",
+      "route": "thin",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json'",
+      "effects": 0
+    },
+    {
+      "case": "missing:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json",
+      "route": "direct",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json'",
+      "effects": 0
+    },
+    {
+      "case": "forged:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json",
+      "route": "full",
+      "rejection": "Immutable release/module bytes: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json",
+      "effects": 0
+    },
+    {
+      "case": "forged:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json",
+      "route": "thin",
+      "rejection": "Immutable release/module bytes: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json",
+      "effects": 0
+    },
+    {
+      "case": "forged:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json",
+      "route": "direct",
+      "rejection": "Immutable release/module bytes: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json",
+      "effects": 0
+    },
+    {
+      "case": "missing:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json",
+      "route": "full",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json'",
+      "effects": 0
+    },
+    {
+      "case": "missing:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json",
+      "route": "thin",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json'",
+      "effects": 0
+    },
+    {
+      "case": "missing:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json",
+      "route": "direct",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json'",
+      "effects": 0
+    },
+    {
+      "case": "forged:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json",
+      "route": "full",
+      "rejection": "Immutable release/module bytes: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json",
+      "effects": 0
+    },
+    {
+      "case": "forged:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json",
+      "route": "thin",
+      "rejection": "Immutable release/module bytes: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json",
+      "effects": 0
+    },
+    {
+      "case": "forged:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json",
+      "route": "direct",
+      "rejection": "Immutable release/module bytes: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json",
+      "effects": 0
+    },
+    {
+      "case": "missing:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "route": "full",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md'",
+      "effects": 0
+    },
+    {
+      "case": "missing:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "route": "thin",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md'",
+      "effects": 0
+    },
+    {
+      "case": "missing:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "route": "direct",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md'",
+      "effects": 0
+    },
+    {
+      "case": "forged:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "route": "full",
+      "rejection": "Immutable release/module bytes: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "effects": 0
+    },
+    {
+      "case": "forged:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "route": "thin",
+      "rejection": "Immutable release/module bytes: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "effects": 0
+    },
+    {
+      "case": "forged:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "route": "direct",
+      "rejection": "Immutable release/module bytes: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "effects": 0
+    },
+    {
+      "case": "missing:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "route": "full",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.3 Marginale kosten en marginale opbrengsten\\\\2.1.3-quality-ref.yaml'",
+      "effects": 0
+    },
+    {
+      "case": "missing:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "route": "thin",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.3 Marginale kosten en marginale opbrengsten\\\\2.1.3-quality-ref.yaml'",
+      "effects": 0
+    },
+    {
+      "case": "missing:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "route": "direct",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.3 Marginale kosten en marginale opbrengsten\\\\2.1.3-quality-ref.yaml'",
+      "effects": 0
+    },
+    {
+      "case": "forged:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "route": "full",
+      "rejection": "Actual raw input: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "effects": 0
+    },
+    {
+      "case": "forged:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "route": "thin",
+      "rejection": "Actual raw input: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "effects": 0
+    },
+    {
+      "case": "forged:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "route": "direct",
+      "rejection": "Actual raw input: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "effects": 0
+    },
+    {
+      "case": "missing:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "route": "full",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.2 Opbrengsten, winst en break-even\\\\2.1.2-textbook-handoff.md'",
+      "effects": 0
+    },
+    {
+      "case": "missing:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "route": "thin",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.2 Opbrengsten, winst en break-even\\\\2.1.2-textbook-handoff.md'",
+      "effects": 0
+    },
+    {
+      "case": "missing:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "route": "direct",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.2 Opbrengsten, winst en break-even\\\\2.1.2-textbook-handoff.md'",
+      "effects": 0
+    },
+    {
+      "case": "forged:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "route": "full",
+      "rejection": "Actual raw input: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "effects": 0
+    },
+    {
+      "case": "forged:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "route": "thin",
+      "rejection": "Actual raw input: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "effects": 0
+    },
+    {
+      "case": "forged:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "route": "direct",
+      "rejection": "Actual raw input: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "effects": 0
+    },
+    {
+      "case": "missing:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md",
+      "route": "full",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\2.1.4-textbook-plan.md'",
+      "effects": 0
+    },
+    {
+      "case": "missing:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md",
+      "route": "thin",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\2.1.4-textbook-plan.md'",
+      "effects": 0
+    },
+    {
+      "case": "missing:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md",
+      "route": "direct",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\2.1.4-textbook-plan.md'",
+      "effects": 0
+    },
+    {
+      "case": "forged:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md",
+      "route": "full",
+      "rejection": "Actual raw input: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md",
+      "effects": 0
+    },
+    {
+      "case": "forged:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md",
+      "route": "thin",
+      "rejection": "Actual raw input: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md",
+      "effects": 0
+    },
+    {
+      "case": "forged:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md",
+      "route": "direct",
+      "rejection": "Actual raw input: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md",
+      "effects": 0
+    },
+    {
+      "case": "missing:references/authored/course-target-exercises.json",
+      "route": "full",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-platform\\\\references\\\\authored\\\\course-target-exercises.json'",
+      "effects": 0
+    },
+    {
+      "case": "missing:references/authored/course-target-exercises.json",
+      "route": "thin",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-platform\\\\references\\\\authored\\\\course-target-exercises.json'",
+      "effects": 0
+    },
+    {
+      "case": "missing:references/authored/course-target-exercises.json",
+      "route": "direct",
+      "rejection": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b214r-3ufiuylv\\\\4veco-platform\\\\references\\\\authored\\\\course-target-exercises.json'",
+      "effects": 0
+    },
+    {
+      "case": "forged:references/authored/course-target-exercises.json",
+      "route": "full",
+      "rejection": "Actual raw input: references/authored/course-target-exercises.json",
+      "effects": 0
+    },
+    {
+      "case": "forged:references/authored/course-target-exercises.json",
+      "route": "thin",
+      "rejection": "Actual raw input: references/authored/course-target-exercises.json",
+      "effects": 0
+    },
+    {
+      "case": "forged:references/authored/course-target-exercises.json",
+      "route": "direct",
+      "rejection": "Actual raw input: references/authored/course-target-exercises.json",
+      "effects": 0
+    },
+    {
+      "case": "combined grant and candidate unrelated-byte drift",
+      "route": "full",
+      "rejection": "Immutable release/module bytes: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json",
+      "effects": 0
+    },
+    {
+      "case": "combined grant and candidate unrelated-byte drift",
+      "route": "thin",
+      "rejection": "Immutable release/module bytes: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json",
+      "effects": 0
+    },
+    {
+      "case": "combined grant and candidate unrelated-byte drift",
+      "route": "direct",
+      "rejection": "Immutable release/module bytes: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json",
+      "effects": 0
+    }
+  ],
+  "routes": "Actual in-process full/thin-mode/direct entry functions; not OS CLIs; genuine positives recorded separately",
+  "all_fixture_bytes_restored_then_owned_temp_removed": true,
+  "native_effects": 0
+}
