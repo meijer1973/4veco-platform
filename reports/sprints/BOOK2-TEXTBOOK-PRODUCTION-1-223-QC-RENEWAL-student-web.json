@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "node",
+    "scripts/validate-paragraph.js",
+    "--mode",
+    "part-a",
+    "--profile",
+    "student-web",
+    "\\\\?\\C:\\wt\\book2-223-qc-renewal-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit"
+  ],
+  "cwd": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform",
+  "child_PATH": "C:/msys64/mingw64/bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\.codex\\tmp\\arg0\\codex-arg0uDve1V;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\libheif\\libheif\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\jxrlib\\jxrlib\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\override;C:\\Python314\\Scripts\\;C:\\Python314\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\GitHub CLI\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\meije\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\meije\\AppData\\Roaming\\npm;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WinGet\\Packages\\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\\poppler-25.07.0\\Library\\bin;C:\\Users\\meije\\AppData\\Local\\Pandoc\\;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\fallback;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\b592626b34cbe333;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\1e3e57cdf0634c02",
+  "profile": "223 Python314 MSYS-FIRST child only; no parent/global environment mutation",
+  "started_utc": "2026-09-06T02:56:16.121226+00:00",
+  "finished_utc": "2026-09-06T02:56:16.221220+00:00",
+  "exit_code": 0,
+  "expected_exit": 0,
+  "stdout": "\nValidating paragraph 2.2.3 \"Inkomenselasticiteit en kruiselingse elasticiteit\"\nPath: \\\\?\\C:\\wt\\book2-223-qc-renewal-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\nMode: part-a\nProfile: student-web\n\n-- Part A textbook files --\n  OK Paragraph type: theory\n  OK paragraaf.md: 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md\n  OK opgaven.md: 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md\n  OK antwoorden.md: 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md\n  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html (768.3 KB)\n  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.html (246.7 KB)\n  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.html (16.3 KB)\n  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf (590 KB)\n  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf (203 KB)\n  OK 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf (28 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 4 image refs all resolve\n  OK _assets/: 4 SVGs, 4 PNGs\n\n-- Part A QC artifacts --\n  OK Part A review: 2.2.3-review.md (verdict PASS WITH FLAGS)\n  OK Quality ref: 2.2.3-quality-ref.yaml (valid)\n\n==========================================\nOK Paragraph 2.2.3 \"Inkomenselasticiteit en kruiselingse elasticiteit\" PASSED all checks.\n\n",
+  "stderr": ""
+}
