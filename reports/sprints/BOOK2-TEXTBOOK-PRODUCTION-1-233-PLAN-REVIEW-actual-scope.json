@@ -1,0 +1,108 @@
+{
+  "strict": {
+    "status": "PASS",
+    "unknown": 0,
+    "platform_base": "8f702dd8d8f2428217d5220d8bae7336054dcaad",
+    "platform_head": "6f6a72c4c47746a3a5ca8334710a61b3d4975431",
+    "lessons_base": "192d6624524e7605ab9d8d26067927b95041386e",
+    "lessons_head": "192d6624524e7605ab9d8d26067927b95041386e",
+    "platform_paths": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-active-bundle-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-author-readonly-paths.py",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-author-readonly-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-author-readonly-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-check.py",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-custody-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-durable-targets-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-final-integrity.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-goal-design-currentness-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-governance-freshness-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-independent-checks-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-independent-checks-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-independent-checks-r3-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-lessons-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-platform-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-result.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-structural-currentness-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-tools.cjs"
+    ],
+    "lessons_paths": []
+  },
+  "native": [
+    {
+      "label": "own-platform",
+      "exit": 1,
+      "ok": false,
+      "failures": [
+        "shared lane needs at least one shared platform change",
+        "generated index/report or review-evidence changes are allowed only with lane-owned changes"
+      ],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 20,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "own-lessons",
+      "exit": 1,
+      "ok": false,
+      "failures": [
+        "no changed paths to classify",
+        "textbook lane needs at least one Part A textbook change"
+      ],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 80,
+        "generated_indexes": 6,
+        "review_evidence": 4286,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 205,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 5,
+        "unknown": 0
+      }
+    }
+  ],
+  "custody": {
+    "status": "PASS",
+    "raw_prior_files_unchanged": 13894,
+    "lesson_exceptions": [],
+    "platform_exceptions": [
+      "reports/github-agent-index-platform.json",
+      "reports/github-agent-index-platform.md",
+      "reports/github-agent-index-lessen.json",
+      "reports/github-agent-index-lessen.md"
+    ]
+  }
+}
