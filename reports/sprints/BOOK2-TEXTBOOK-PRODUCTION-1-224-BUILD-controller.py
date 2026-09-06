@@ -44,13 +44,9 @@ def write_new(path,value):
 
 
 def source_guard():
-    rows=[]
-    for relative in SOURCE_PATHS:
-        expected=git(ROOT,"show",SOURCE_COMMIT+":"+relative)
-        actual=(ROOT/relative).read_bytes()
-        if actual!=expected:raise ValueError("Whole committed source drift: "+relative)
-        rows.append({"path":relative,"commit":SOURCE_COMMIT,"raw_sha256":b.sha(actual)})
-    return rows
+    expected={relative:git(ROOT,"show",SOURCE_COMMIT+":"+relative) for relative in SOURCE_PATHS}
+    verify_bound_bytes(ROOT,expected)
+    return [{"path":relative,"commit":SOURCE_COMMIT,"raw_sha256":b.sha(raw)} for relative,raw in expected.items()]
 
 
 def verify_bound_bytes(root,expected):
