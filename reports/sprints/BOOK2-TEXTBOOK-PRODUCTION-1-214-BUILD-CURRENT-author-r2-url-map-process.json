@@ -1,0 +1,17 @@
+{
+  "label": "author-r2-url-map",
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "build-scripts/sprints/emit-url-index.js",
+    "--check"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:31:03.322Z",
+  "finish": "2026-09-06T08:31:03.454Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "OK url-index: reports/url-index.md is current\n",
+  "stderr": "",
+  "stdout_base64": "T0sgdXJsLWluZGV4OiByZXBvcnRzL3VybC1pbmRleC5tZCBpcyBjdXJyZW50Cg==",
+  "stderr_base64": ""
+}

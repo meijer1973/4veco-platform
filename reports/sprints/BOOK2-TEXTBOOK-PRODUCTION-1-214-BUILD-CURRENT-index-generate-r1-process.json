@@ -1,0 +1,18 @@
+{
+  "label": "index-generate-r1",
+  "argv": [
+    "node",
+    "-r",
+    "./reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-index-runtime.cjs",
+    "build-scripts/reports/github-agent-index.js"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:30:34.091Z",
+  "finish": "2026-09-06T08:30:34.579Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "Wrote reports\\github-agent-index-platform.md\nWrote reports\\github-agent-index-platform.json\nWrote reports\\github-agent-index-lessen.md\nWrote reports\\github-agent-index-lessen.json\n",
+  "stderr": "",
+  "stdout_base64": "V3JvdGUgcmVwb3J0c1xnaXRodWItYWdlbnQtaW5kZXgtcGxhdGZvcm0ubWQKV3JvdGUgcmVwb3J0c1xnaXRodWItYWdlbnQtaW5kZXgtcGxhdGZvcm0uanNvbgpXcm90ZSByZXBvcnRzXGdpdGh1Yi1hZ2VudC1pbmRleC1sZXNzZW4ubWQKV3JvdGUgcmVwb3J0c1xnaXRodWItYWdlbnQtaW5kZXgtbGVzc2VuLmpzb24K",
+  "stderr_base64": ""
+}

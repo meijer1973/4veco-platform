@@ -1,0 +1,47 @@
+{
+  "rows": [
+    {
+      "label": "part-a-student-web",
+      "exit_code": 0,
+      "process_sha256": "b246c9a22c38b12fdd7800718aecccd0f8974896209d425f7563601351e2c6d0"
+    },
+    {
+      "label": "part-a-publisher-print",
+      "exit_code": 0,
+      "process_sha256": "8795b4b6f4dcbfd74b32f105fee877e0d7077442ea5815e27159702aa245642d"
+    },
+    {
+      "label": "release",
+      "exit_code": 0,
+      "process_sha256": "f19edf3298617e06dacb346480fd0f6a8f79bc6a2acea3bef984d081b5f006fa"
+    },
+    {
+      "label": "structural",
+      "exit_code": 0,
+      "process_sha256": "ea1bd0e940999f84da00ff74408ff8495eb7a163648bdf2f9dd9bffaa165fc0f"
+    },
+    {
+      "label": "production",
+      "exit_code": 0,
+      "process_sha256": "10bb996e5ef9bc5b9f106b2491a4f2b315e828def10189064aa3a5f83510cdfe"
+    },
+    {
+      "label": "durable",
+      "exit_code": 0,
+      "process_sha256": "9b76571e30764c77f0576de43ab94769a60c935d580ae57385b3cbce7bee37bb"
+    },
+    {
+      "label": "bundle",
+      "exit_code": 0,
+      "process_sha256": "e2e2b800d45e7ff03d0f58ca0162db74fcd2b00eefba75b8710df6c3f4e6f28f"
+    },
+    {
+      "label": "url-map",
+      "exit_code": 0,
+      "process_sha256": "a4a0e2271f40cd8f29b9a96e30b05dacf9e17cde48933243f19fe05b54220e23"
+    }
+  ],
+  "platform": "8e58aaed2239b5daa83838be76d8d67ecf64be42",
+  "lessen": "84f821a3cde2e525c54593d7f36ea86b2c53dff9",
+  "profiles_are_mechanical_not_current_review": true
+}
