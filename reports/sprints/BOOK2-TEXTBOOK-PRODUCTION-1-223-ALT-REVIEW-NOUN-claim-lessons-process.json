@@ -1,0 +1,19 @@
+{
+  "command": "node",
+  "args": [
+    "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\build-scripts\\ci\\check-agent-worktree-safety.js",
+    "--check",
+    "--task",
+    "BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW",
+    "--agent",
+    "paragraph_224_builder",
+    "--require-prefix",
+    "codex/,agent/"
+  ],
+  "cwd": "C:\\wt\\book2-223-alt-review-20260906\\4veco-lessen",
+  "started_at": "2026-09-06T02:56:22.977Z",
+  "ended_at": "2026-09-06T02:56:23.134Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"mode\": \"check\",\n  \"repository\": \"4veco-lessen\",\n  \"worktree_path\": \"C:/wt/book2-223-alt-review-20260906/4veco-lessen\",\n  \"git_dir\": \"C:\\\\Projects\\\\4veco\\\\4veco-lessen\\\\.git\\\\worktrees\\\\4veco-lessen117\",\n  \"anchor_clone\": false,\n  \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW\",\n  \"agent_id\": \"paragraph_224_builder\",\n  \"lock\": {\n    \"present\": true,\n    \"same_owner\": true,\n    \"same_task\": true,\n    \"stale\": false,\n    \"path\": \"C:\\\\Projects\\\\4veco\\\\4veco-lessen\\\\.git\\\\worktrees\\\\4veco-lessen117\\\\4veco-agent-worktree-lock.json\",\n    \"owner\": \"paragraph_224_builder\",\n    \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW\"\n  },\n  \"branch\": \"agent/book2-223-alt-review-20260906\",\n  \"head_sha\": \"a52206c0cc9e2578b57e285909c77134bb47657e\",\n  \"on_main\": false,\n  \"detached_head\": false,\n  \"dirty\": true,\n  \"dirty_count\": 1,\n  \"ahead\": 0,\n  \"behind\": 0,\n  \"diverged\": false,\n  \"prefix_ok\": true,\n  \"required_prefixes\": [\n    \"codex/\",\n    \"agent/\"\n  ],\n  \"warnings\": [\n    \"working tree is dirty (1 item)\"\n  ],\n  \"failures\": []\n}\n",
+  "stderr": ""
+}
