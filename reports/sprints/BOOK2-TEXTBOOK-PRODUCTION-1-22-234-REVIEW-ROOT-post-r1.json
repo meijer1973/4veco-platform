@@ -1,0 +1,80 @@
+{
+  "status": "REVIEW_ADOPTION_ONLY_COMPLETE",
+  "P": "dddcb744349b42af5e884356b4621e5dfeb224f1",
+  "L": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+  "verification_sha256": "7df6e5601456be98917bb9ff9c608d08a79da248b01b8e269bc73a77a70aff74",
+  "gates": [
+    {
+      "name": "structural",
+      "exit_code": 0
+    },
+    {
+      "name": "chapter",
+      "exit_code": 0
+    },
+    {
+      "name": "goal-design",
+      "exit_code": 0
+    },
+    {
+      "name": "specialist",
+      "exit_code": 0
+    },
+    {
+      "name": "durable",
+      "exit_code": 0
+    },
+    {
+      "name": "bundle",
+      "exit_code": 0
+    },
+    {
+      "name": "governance",
+      "exit_code": 0
+    },
+    {
+      "name": "authoring-contract",
+      "exit_code": 0
+    }
+  ],
+  "inventory": {
+    "rows": 41,
+    "PDFs": 29,
+    "counts": {
+      "A": 23,
+      "C": 2,
+      "L": 4,
+      "P": 12
+    },
+    "all_rows_and_PDFs_unchanged": true,
+    "manifest_sha256": "1296c608e55cc2a573b072eddca0f98b7005ed779ff3d762b82af06777f3c067"
+  },
+  "raw": {
+    "platform": {
+      "ref": "5cd6a5ac7a04cf452172f3f1a68c71c0ad4f7237",
+      "tree": "1cede0c42001745cd83e78bb13ca20affd202946",
+      "files": 16206,
+      "excluded": [
+        "reports/github-agent-index-platform.json",
+        "reports/github-agent-index-platform.md",
+        "reports/github-agent-index-lessen.json",
+        "reports/github-agent-index-lessen.md",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-output-manifest.md"
+      ],
+      "NUL_path_sha256": "fc378569ab5310517189ecc899ac6446e63cb75a61f6170a7e71822718989e40",
+      "path_blob_sha256": "12b7be1d1231c9bcbf706e19c00cf4a66f91a7cc455153a66dbb4020ef59f5d2",
+      "all_current_raw_equal_Git": true
+    },
+    "lessons": {
+      "ref": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+      "tree": "42ddadefe84e9809e6f3749c406dca4fd990ff3d",
+      "files": 1924,
+      "excluded": [],
+      "NUL_path_sha256": "185888bcc67dd5f3be0fea6e85f2c84274ff7e111f9bbbc4d5b9e60aae7a59d9",
+      "path_blob_sha256": "1bc802938e59a1b91ea0d795adcb7c91687159db920772084ed1e0e06691b221",
+      "all_current_raw_equal_Git": true
+    }
+  },
+  "native_writes": 0,
+  "production_release": false
+}
