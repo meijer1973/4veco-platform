@@ -26,7 +26,7 @@ def rawtree(root,ref,exclude=()):
 def exact_routes():
     n.guard(SOURCE);routes=[]
     for label in ('full','thin','direct'):
-        paths=list(E.glob('224-'+label+'-r*-finished.json'));assert len(paths)==1,paths
+        paths=[f for f in E.glob('224-'+label+'-r*-finished.json') if re.fullmatch('224-'+label+r'-r[1-9][0-9]*-finished\.json',f.name)];assert len(paths)==1,paths
         file=paths[0];revision=re.search(r'-(r[1-9][0-9]*)-finished',file.name)[1];v=c.read(file);assert v['status']=='PASS' and int(revision[1:])>13
         stem=E/f'224-{label}-{revision}';manifest=Path(str(stem)+'-manifest.json');j=c.read(manifest)
         assert c.digest(manifest)==v['manifest_sha256'];assert j['inspection_status']=='PENDING'
@@ -43,7 +43,8 @@ def exact_routes():
 def specialist_views():
     path=P/(FOREIGN+'evidence/224-personal-inspection.json');assert c.digest(path)=='cb932ac10a5035e75e1e9aac10d975de4b205adc886da690559d8b658e9328de'
     j=c.read(path);assert j['actor']=='paragraph_214_builder' and j['actual_independent_views']==48 and j['transferred_prior_views']==0 and len(j['views'])==24
-    full=c.read(next(E.glob('224-full-r*-finished.json')))['pages'];lookup={(r['kind'],r['page']):r for r in full};rows=[]
+    fullpaths=[f for f in E.glob('224-full-r*-finished.json') if re.fullmatch(r'224-full-r[1-9][0-9]*-finished\.json',f.name)];assert len(fullpaths)==1
+    full=c.read(fullpaths[0])['pages'];lookup={(r['kind'],r['page']):r for r in full};rows=[]
     for row in j['views']:
         assert row['color_personally_inspected'] and row['grayscale_personally_inspected'] and row['visible_student_defects']==0 and row['personal_observation']
         if 'page' in row:current=Path(lookup[(row['kind'],row['page'])]['path'])

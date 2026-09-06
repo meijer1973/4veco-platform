@@ -30,3 +30,14 @@ Two read-only handoff/parity lookups also used incomplete names before rg
 identified the actual Marginale kosten en marginale opbrengsten folder and
 224-four-route-parity.json. They wrote nothing. The complete actual handoff,
 specialist observations and existing four-route structure were then read.
+
+The second read-only preacceptance attempt (session67675, exit1) verified the
+three native routes, all48 attributed colour/grayscale observations and prior
+root custody, then correctly rejected my still-uncommitted finalizer selector
+correction at the all-current-raw-Git check. The only tracked working-file
+difference was that owned finalizer; no lesson/source/PDF mismatch was found.
+Its current exact source is committed before the next correction. The completed
+224-preaccept-custody command records remain; a new explicit attempt suffix is
+required so they cannot be overwritten. The next helper also checks its own
+committed source at entry and normalizes native binding separators for handoff
+asset classification. These are root evidence fixes, not native regeneration.
