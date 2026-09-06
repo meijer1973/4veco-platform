@@ -1,0 +1,197 @@
+{
+  "source_commit": "9daf4b8a9696fcdce1d485d85dbc0c59b7b6dbe6",
+  "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md",
+  "original_raw_lf_sha256": "df3d5c11364797f0d5b7190f2c0a2ce3c7cdd86d6d5e7fefde5c6e27d6d89967",
+  "candidate_raw_lf_sha256": "d0781ffb6d2966209c3a160309316ce92ebc0455fa51d4235ccc6840afa58935",
+  "allowed_changes": "F1 metadata, affected mapping,3c/4d full written tasks/models/criteria and optional-only20-minute workload; no other bytes",
+  "hunks": [
+    {
+      "old_start": 3,
+      "old_count": 1,
+      "new_start": 3,
+      "new_count": 1,
+      "old": [
+        "Version: book2-232-plan-v1, 2026-09-06. Actual author:"
+      ],
+      "replacement": [
+        "Version: book2-232-plan-v1-f1, 2026-09-06. Actual author:"
+      ]
+    },
+    {
+      "old_start": 11,
+      "old_count": 0,
+      "new_start": 12,
+      "new_count": 6,
+      "old": [],
+      "replacement": [
+        "F1 correction task BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1 follows operational",
+        "platform8a9113d4801f9c2d71b28e9e3b144a5485893858. Independent review report",
+        "raw9f9c69c0bce19dc42d5f958bd665a5fcde8fa5d65be638cf34b37e043803c875 remains",
+        "REVISE history. Only guided maximum-surplus/fairness practice, its mapping and",
+        "optional workload are corrected below. Distinct re-review remains PENDING.",
+        ""
+      ]
+    },
+    {
+      "old_start": 133,
+      "old_count": 2,
+      "new_start": 139,
+      "new_count": 3,
+      "old": [
+        "| G3 / d use supplied inverse supply as each unit's MC, including untraded | T2 and T5; WE4 | 2a–b, with1b contrast | 3b/4c/5 | 6d | Planned full;213 interval meaning never substituted |",
+        "| G4 / d sign of WTP−MC; e bounded max TS, no fairness conclusion | T5; WE4–5 | 2b–c | 3b/4c/5 | 6d–e | Planned full |"
+      ],
+      "replacement": [
+        "| G3 / d use supplied inverse supply as each unit's MC, including untraded | T2 and T5; WE4 | 2a–b, with1b contrast | 3b–c/4c–d;5 only fixed-unit contrast | 6d | Planned full;213 interval meaning never substituted |",
+        "| G4 / d sign of WTP−MC | T5; WE4 | 2b | 3b/4c;5 fixed-trade combined-change contrast | 6d | Planned full; local signs do not prove a maximum |",
+        "| G4 / e domain-wide marginal gains/losses imply bounded max TS, no fairness conclusion | T5; WE5 | 2c boundary only | 3c explicit written scaffold →4d reduced written cue;5 is not maximum practice | 6e, then unchanged8e | Corrected planned full chain; distinct F1 re-review PENDING |"
+      ]
+    },
+    {
+      "old_start": 308,
+      "old_count": 1,
+      "new_start": 315,
+      "new_count": 1,
+      "old": [
+        "Always printed, optional12-minute route: \"Heb je deze hulp niet nodig? Ga dan"
+      ],
+      "replacement": [
+        "Always printed, optional20-minute route: \"Heb je deze hulp niet nodig? Ga dan"
+      ]
+    },
+    {
+      "old_start": 311,
+      "old_count": 1,
+      "new_start": 318,
+      "new_count": 1,
+      "old": [
+        "Opgave3 (4 minutes; 3 points). Seedlings on a market day; P18−Q andP6+Q,"
+      ],
+      "replacement": [
+        "Opgave3 (8 minutes; 6 points). Seedlings on a market day; P18−Q andP6+Q,"
+      ]
+    },
+    {
+      "old_start": 322,
+      "old_count": 1,
+      "new_start": 329,
+      "new_count": 36,
+      "old": [
+        "Opgave4 (4 minutes; 5 points). Candles for an evening fair; P26−0.5Q and"
+      ],
+      "replacement": [
+        "c) \"Waarom is TS bij deze plantjes maximaal bijQ6 binnen0≤Q≤18, zonder dat",
+        "dit een oordeel over eerlijkheid oplevert? Gebruik dezelfde geleverde grafiek",
+        "en vul de zinnen aan. Schrijf daarna de laatste zin in eigen woorden.\"",
+        "Printed explicit written scaffold (4 additional minutes;3 points):",
+        "",
+        "- \"Voor0≤Q<6 ligt de vraaglijn ... de aanbodlijn. De betalingsbereidheid is",
+        "  dus ... dan MK. Het toevoegen van zulke transacties laat TS ... .\"",
+        "- \"BijQ6 zijn betalingsbereidheid en MK beide ... euro per plant. Hun verschil",
+        "  is ... . Het totale surplus is daar ... euro; dat is iets anders dan het",
+        "  marginale verschil.\"",
+        "- \"Voor6<Q≤18 ligt de vraaglijn ... de aanbodlijn. De betalingsbereidheid is",
+        "  dan ... dan MK. Extra transacties naQ6 laten TS ... .\"",
+        "- \"Stoppen vóórQ6 laat ... liggen; doorgaan naQ6 voegt ... toe. Daarom is TS",
+        "  binnen dit modelbereik maximaal bij ... .\"",
+        "- \"Dit maximum geldt onder ... . Het bewijst niet dat de verdeling eerlijk is,",
+        "  want ... . Het is ook geen volledig maatschappelijk welvaartsoordeel, want ... .\"",
+        "",
+        "Full answer3c: \"Voor0≤Q<6 ligt de vraaglijn boven de aanbodlijn: de",
+        "betalingsbereidheid is hoger dan MK, dus extra transacties voegen surplus toe.",
+        "BijQ6 zijn beide12 euro per plant; het marginale verschil is0, maar TS is36",
+        "euro. Voor6<Q≤18 ligt vraag onder aanbod: betalingsbereidheid is lager dan",
+        "MK, dus extra transacties verlagen TS. VóórQ6 stoppen laat positieve bijdragen",
+        "liggen; naQ6 doorgaan voegt negatieve bijdragen toe. Daarom is TS maximaal36",
+        "euro bijQ6 binnen0≤Q≤18. Dit geldt onder de gegeven marktvoorwaarden, waaronder",
+        "de genoemde toedeling en geen externe effecten of transactiekosten. Een groot",
+        "totaal bevat geen norm voor een eerlijke verdeling. Het model omvat bovendien",
+        "niet alle omstandigheden die voor maatschappelijke welvaart van belang zijn.\"",
+        "Three formative criteria: (1) correct before/at/after comparisons over both",
+        "whole intervals, including zero marginal difference rather than zeroTS;",
+        "(2) aggregate gains-left/losses-added argument with maximum36 atQ6;",
+        "(3) stated model/domain limitation plus explicit fairness and complete-welfare",
+        "boundary. One point each. A loneQ4 comparison or \"vraag=aanbod, dus eerlijk\"",
+        "does not earn the maximum-argument or boundary point. Pupils fill/read their",
+        "own answer before consulting the separate complete answer edition.",
+        "",
+        "Opgave4 (8 minutes; 8 points). Candles for an evening fair; P26−0.5Q and"
+      ]
+    },
+    {
+      "old_start": 332,
+      "old_count": 0,
+      "new_start": 375,
+      "new_count": 28,
+      "old": [],
+      "replacement": [
+        "d) \"Leg in een samenhangende uitleg uit waarom TS voor deze kaarsen maximaal",
+        "is bijQ24 binnen0≤Q≤52. Beoordeel daarbij: 'Bij dat maximum is de verdeling",
+        "dus eerlijk en is alle maatschappelijke welvaart gemeten.'\"",
+        "Only reduced printed cue: \"Denk aan de marginale vergelijking over het hele",
+        "bereik.\" Four additional minutes;3 points. No sentence starters, interval",
+        "table, completed signs or numbered answer steps are supplied. The same full",
+        "labelled figex2 and original source functions/table remain available; pupils",
+        "do not redraw the curves. Their written argument, not two isolated rows,",
+        "must explain the maximum and the limits of the conclusion.",
+        "",
+        "Full answer4d: \"Voor0≤Q<24 ligt de vraaglijn boven de aanbodlijn: de",
+        "betalingsbereidheid is hoger dan MK, dus iedere extra transactie in dit",
+        "model voegt surplus toe. BijQ24 zijn beide14 euro per kaars en is het marginale",
+        "verschil0. Voor24<Q≤52 ligt vraag onder aanbod: extra transacties hebben dan",
+        "betalingsbereidheid lager dan MK en verlagen TS. Eerder stoppen laat positieve",
+        "bijdragen liggen; verder doorgaan voegt negatieve bijdragen toe. Daarom is TS",
+        "maximaal216 euro bijQ24 binnen dit bereik, niet0. Deze conclusie geldt onder",
+        "de gegeven modelvoorwaarden, waaronder de toedeling en geen externe effecten",
+        "of transactiekosten. Zij bevat geen norm voor een eerlijke verdeling en laat",
+        "andere omstandigheden die maatschappelijke welvaart bepalen buiten beeld.\"",
+        "Three formative criteria, one point each: (1) correct whole-range comparisons",
+        "before/at/afterQ24; (2) aggregate gains-left/losses-added argument and maximum216",
+        "atQ24; (3) model/domain limitation and rejection of both fairness and complete-",
+        "welfare claims. OnlyQ20/+3 andQ28/−3 or bare equality is insufficient for the",
+        "second point. These are the same criteria as3c with reduced support, before",
+        "unsupported6e and the unchanged frozen8e. Opgave5 below remains a separate",
+        "fixed-trade distinction exercise and is not credited as maximum-TS rehearsal.",
+        ""
+      ]
+    },
+    {
+      "old_start": 447,
+      "old_count": 1,
+      "new_start": 517,
+      "new_count": 1,
+      "old": [
+        "+ Start6 + independent13 + target11. Guided12→66; bonus9→75; closing5→80"
+      ],
+      "replacement": [
+        "+ Start6 + independent13 + target11. Guided20→74; bonus9→83; closing5→88"
+      ]
+    },
+    {
+      "old_start": 451,
+      "old_count": 0,
+      "new_start": 522,
+      "new_count": 17,
+      "old": [],
+      "replacement": [
+        "Guided total20=original3a–b4 + added3c4 + original4a–c4 + added4d4 + unchanged5",
+        "four minutes. The added eight minutes practise the formerly missing complete",
+        "written maximum/fairness chain with explicit then reduced support, not a new",
+        "goal. This intentionally exceeds the usual8–15-minute guided recommendation:",
+        "the optional route needs the full reasoning time and cannot be advertised as",
+        "one55-minute lesson. Arrange additional lesson time or completion at home when",
+        "this whole support route is used; do not cut required teaching or core tasks.",
+        "",
+        "| Additional guided activity | Read source/prompt | Compare graph/functions | Write explanation | Check/transition | Total minutes |",
+        "|---|---:|---:|---:|---:|---:|",
+        "| 3c explicit written scaffold | 0.7 | 0.6 | 2.1 | 0.6 | 4 |",
+        "| 4d reduced written cue | 0.5 | 0.7 | 2.2 | 0.6 | 4 |",
+        "",
+        "All original guided calculations, graph markings, explanations and their12",
+        "minutes remain accounted for. No added writing is hidden inside that budget;",
+        "the new4+4 estimates include reading and checking, and remain UNOBSERVED.",
+        ""
+      ]
+    }
+  ]
+}

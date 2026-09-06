@@ -1,0 +1,13 @@
+{
+  "command": "node",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-tools.cjs",
+    "custody"
+  ],
+  "cwd": "C:\\wt\\book2-232-plan-f1-20260906\\4veco-platform",
+  "started_at": "2026-09-06T03:07:30.236Z",
+  "ended_at": "2026-09-06T03:07:38.606Z",
+  "exit_code": 0,
+  "stdout": "{\"raw_prior_files_unchanged\":13843,\"canonical_plan_only_lesson_exception\":true,\"exact_four_index_exception\":true}\n",
+  "stderr": ""
+}
