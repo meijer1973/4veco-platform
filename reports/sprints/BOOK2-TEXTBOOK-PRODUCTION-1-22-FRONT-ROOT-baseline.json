@@ -1,0 +1,44 @@
+{
+  "operational_commit": "a82856a5014ab2be194911518e39014819719570",
+  "platform": {
+    "ref": "aacf2165fd05d15c441410de2c529e74c5c4a71f",
+    "tree": "289409d3fd05c3ca6865cc84ae3addf9a416e076",
+    "files": 15758,
+    "excluded": [],
+    "NUL_path_sha256": "779a75ead5be4b3ce3f7f29ab0b1d694acb31f31573e00b195560fdb6b488ad5",
+    "path_blob_sha256": "5a39a888b6e1840e6bf47472a94fbf0d1ec424466a4c7bd1b81faebef7aa8af5",
+    "all_actual_raw_equal_Git": true
+  },
+  "lessons": {
+    "ref": "9546548c4dbd271516366df946f3eb0a9eaa1e93",
+    "tree": "fd7e772a708a2fbd863a13f409f284908a8f863a",
+    "files": 1916,
+    "excluded": [],
+    "NUL_path_sha256": "56bd40449c0c19628abbaf1fc93df05244f3644869f06146c850655ce366ab65",
+    "path_blob_sha256": "d1c53a3e6c5ee0285abbce66038347266add24d7410567384a8367fddbaad42f",
+    "all_actual_raw_equal_Git": true
+  },
+  "output_manifest_sha256": "caa3a8a4f0e10b620845b8341596df4ff27feefeffcbfc16e01b924844db7c46",
+  "gates": [
+    {
+      "name": "structural",
+      "exit_code": 0
+    },
+    {
+      "name": "chapter-planning",
+      "exit_code": 0
+    },
+    {
+      "name": "durable",
+      "exit_code": 0
+    },
+    {
+      "name": "bundle",
+      "exit_code": 0
+    },
+    {
+      "name": "governance",
+      "exit_code": 0
+    }
+  ]
+}
