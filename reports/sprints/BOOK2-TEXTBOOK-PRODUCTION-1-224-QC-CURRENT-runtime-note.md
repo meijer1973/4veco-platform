@@ -25,3 +25,12 @@ Canonical root/chapter plans retain historical drafting/pending prose. Actual
 hold metadata, published approved plan release, predecessor QC/handoff and
 root adoption distinguish later accepted authority; the historical prose is
 not treated as current production denial or as a new owner grant.
+
+The first independently calculated probe record has correct values but four
+case labels numbered the cross-elasticity and function items one target item
+too high. Direct rereading of the complete frozen record confirmed T4 combines
+Ei/Ek, T5 is the function, and T6 is the advice. The owned helper labels are
+corrected before native work and a new r2 probe record is written, leaving the
+original successful numerical/failure-entry evidence unchanged. This is an
+evidence-label correction, not pupil or target repair. Reservation r10 was
+already exclusively captured after scanning 373 worktrees (prior maximum9).
