@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/books/test_lib_book.py",
+    "-v"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T03:10:39.317021+00:00",
+  "ended": "2026-09-06T03:10:39.479330+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_block_anchors_precede_markdown_headings (__main__.BookBuilderRegressionTests.test_block_anchors_precede_markdown_headings) ... ok\r\ntest_cover_rendering_uses_escaped_decorative_image (__main__.BookBuilderRegressionTests.test_cover_rendering_uses_escaped_decorative_image) ... ok\r\ntest_exercise_css_keeps_fitting_exercises_together (__main__.BookBuilderRegressionTests.test_exercise_css_keeps_fitting_exercises_together) ... ok\r\ntest_exercise_wrapper_closes_at_each_content_boundary (__main__.BookBuilderRegressionTests.test_exercise_wrapper_closes_at_each_content_boundary) ... ok\r\ntest_markdown_and_html_images_are_embedded (__main__.BookBuilderRegressionTests.test_markdown_and_html_images_are_embedded) ... ok\r\ntest_stylesheet_removal_is_independent_of_pandoc_comment (__main__.BookBuilderRegressionTests.test_stylesheet_removal_is_independent_of_pandoc_comment) ... ok\r\ntest_toolchain_record_covers_reviewed_versions (__main__.BookBuilderRegressionTests.test_toolchain_record_covers_reviewed_versions) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 7 tests in 0.027s\r\n\r\nOK\r\n",
+  "stdout_base64": "",
+  "stderr_base64": "dGVzdF9ibG9ja19hbmNob3JzX3ByZWNlZGVfbWFya2Rvd25faGVhZGluZ3MgKF9fbWFpbl9fLkJvb2tCdWlsZGVyUmVncmVzc2lvblRlc3RzLnRlc3RfYmxvY2tfYW5jaG9yc19wcmVjZWRlX21hcmtkb3duX2hlYWRpbmdzKSAuLi4gb2sNCnRlc3RfY292ZXJfcmVuZGVyaW5nX3VzZXNfZXNjYXBlZF9kZWNvcmF0aXZlX2ltYWdlIChfX21haW5fXy5Cb29rQnVpbGRlclJlZ3Jlc3Npb25UZXN0cy50ZXN0X2NvdmVyX3JlbmRlcmluZ191c2VzX2VzY2FwZWRfZGVjb3JhdGl2ZV9pbWFnZSkgLi4uIG9rDQp0ZXN0X2V4ZXJjaXNlX2Nzc19rZWVwc19maXR0aW5nX2V4ZXJjaXNlc190b2dldGhlciAoX19tYWluX18uQm9va0J1aWxkZXJSZWdyZXNzaW9uVGVzdHMudGVzdF9leGVyY2lzZV9jc3Nfa2VlcHNfZml0dGluZ19leGVyY2lzZXNfdG9nZXRoZXIpIC4uLiBvaw0KdGVzdF9leGVyY2lzZV93cmFwcGVyX2Nsb3Nlc19hdF9lYWNoX2NvbnRlbnRfYm91bmRhcnkgKF9fbWFpbl9fLkJvb2tCdWlsZGVyUmVncmVzc2lvblRlc3RzLnRlc3RfZXhlcmNpc2Vfd3JhcHBlcl9jbG9zZXNfYXRfZWFjaF9jb250ZW50X2JvdW5kYXJ5KSAuLi4gb2sNCnRlc3RfbWFya2Rvd25fYW5kX2h0bWxfaW1hZ2VzX2FyZV9lbWJlZGRlZCAoX19tYWluX18uQm9va0J1aWxkZXJSZWdyZXNzaW9uVGVzdHMudGVzdF9tYXJrZG93bl9hbmRfaHRtbF9pbWFnZXNfYXJlX2VtYmVkZGVkKSAuLi4gb2sNCnRlc3Rfc3R5bGVzaGVldF9yZW1vdmFsX2lzX2luZGVwZW5kZW50X29mX3BhbmRvY19jb21tZW50IChfX21haW5fXy5Cb29rQnVpbGRlclJlZ3Jlc3Npb25UZXN0cy50ZXN0X3N0eWxlc2hlZXRfcmVtb3ZhbF9pc19pbmRlcGVuZGVudF9vZl9wYW5kb2NfY29tbWVudCkgLi4uIG9rDQp0ZXN0X3Rvb2xjaGFpbl9yZWNvcmRfY292ZXJzX3Jldmlld2VkX3ZlcnNpb25zIChfX21haW5fXy5Cb29rQnVpbGRlclJlZ3Jlc3Npb25UZXN0cy50ZXN0X3Rvb2xjaGFpbl9yZWNvcmRfY292ZXJzX3Jldmlld2VkX3ZlcnNpb25zKSAuLi4gb2sNCg0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0KUmFuIDcgdGVzdHMgaW4gMC4wMjdzDQoNCk9LDQo=",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "9907d2c4686a76fc52db9149283c26d18fa85f0ce4f64f7b0f2008ec34b2b226"
+}

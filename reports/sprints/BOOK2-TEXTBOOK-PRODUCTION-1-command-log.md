@@ -17287,3 +17287,61 @@ Node.js v24.13.1
 ```text
 
 ```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-ROOT-check.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T03:09:44.593Z`
+- finished_at: `2026-09-06T03:09:48.433Z`
+- duration_ms: `3840`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `0034fe49d328609c134894f3b78a26d30c017c2b67ef442400df7d01bb69d24e`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Traceback (most recent call last):
+  File "C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-ROOT-check.py", line 84, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-ROOT-check.py", line 43, in main
+    r=read(name+'-process');assert r['exit_code']==0 and 'Ran '+str(count)+' tests' in r['stderr'] and '\nOK\n' in r['stderr']
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-ROOT-check.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T03:10:11.761Z`
+- finished_at: `2026-09-06T03:10:42.706Z`
+- duration_ms: `30945`
+- exit_code: `0`
+- stdout_sha256: `2eea515c3812b49c35682851d0ff47b74b982630b66eac523cafbbfc1a868a53`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+custody 396e9d9104960f267875769d0c0617f5f0710e498071818113d18553301a879b
+namespace 1013480a96fd18a027336818e20a7453a26d7484f2443f3276327cd2fa24a695
+pipelines 10430302ceb3c89f86df23a24967c3ab522019b09d168df8201068e7c793a5eb
+common e30ecb3c6200e0b54ff03a9a73932b32616483a402da6c87da89b65fb8058c18
+foundation 48c62cecc99fc5e586479e81a9e60c275867aaff3840b25c87ef0867970259cc
+durable 142198051598f06d029f3011da62b40958479fc2d646da5db92d0a78ac0f7ff8
+bundle 0b5342e8ddd7726878615df5f5cfb660fb6470e67a1a82fcf12d4d160716f89a
+result 63259c63261ae359dcaa776565c692b7716c081e95c7dc2004c44660799fec61
+
+```
+
+### stderr excerpt
+
+```text
+
+```

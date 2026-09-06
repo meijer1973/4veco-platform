@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-book-outline-currentness.js",
+    "--require-approved",
+    "--action",
+    "whole_book_assembly"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T03:10:39.489718+00:00",
+  "ended": "2026-09-06T03:10:41.330674+00:00",
+  "exit_code": 0,
+  "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n",
+  "stderr": "",
+  "stdout_base64": "Qm9vayAyIG91dGxpbmUgY3VycmVudG5lc3M6IFBBU1MKLSBvdXRsaW5lOiByZWZlcmVuY2VzL2F1dGhvcmVkL2Jvb2stb3V0bGluZXMvYm9vay0yLW91dGxpbmUubWQKLSB0YXJnZXQgcGluczogMTIKLSBtb2RlOiBhcHByb3ZlZC11c2UK",
+  "stderr_base64": "",
+  "stdout_sha256": "15d04f485b29072d4e5de572b6c4a351847ecdcbb8a7157ad9576e854d0de1a5",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

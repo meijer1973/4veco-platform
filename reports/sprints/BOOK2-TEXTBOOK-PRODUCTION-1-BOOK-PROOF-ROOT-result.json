@@ -1,0 +1,13 @@
+{
+  "status": "PASS_ROOT_TECHNICAL_ADOPTION_CHECK",
+  "source_payload": "e5edeb270120bc9ae041673267adddcd5575766f",
+  "import_count": 32,
+  "root_native_tests": 56,
+  "independent_groups": 33,
+  "archived_raw_rgb_pairs": 10,
+  "lesson_files_unchanged": 1902,
+  "historical_source_proof_git_diff_unchanged": true,
+  "root_personal_views": 0,
+  "student_assembly_acceptance": "NOT_GRANTED",
+  "fullCI": "PENDING"
+}
