@@ -1,0 +1,11 @@
+{
+  "command": [
+    "git",
+    "cherry-pick",
+    "362d5460abf58d1be241e58a695b784e9953b290"
+  ],
+  "cwd": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform",
+  "exit": 0,
+  "stdout": "[agent/book2-213-qc-current-20260906 c04be0e4] plan: independent 213 S1 succession delta review\n Date: Sun Sep 6 05:56:37 2026 +0200\n 1 file changed, 89 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-plan.md\n",
+  "stderr": ""
+}

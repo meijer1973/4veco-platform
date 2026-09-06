@@ -1,0 +1,11 @@
+{
+  "command": [
+    "git",
+    "cherry-pick",
+    "1fb2be8bebb342585ecca835fe54b8648025cddb"
+  ],
+  "cwd": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform",
+  "exit": 0,
+  "stdout": "[agent/book2-213-qc-current-20260906 753468b9] review: bind actual 213 succession review scopes and publication\n Date: Sun Sep 6 06:20:58 2026 +0200\n 15 files changed, 2112 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-exact-lessons-complete.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-exact-lessons-owned.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-exact-platform-complete.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-exact-platform-owned.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-exact-scope.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-exact-whitespace-cr-at-eol.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-exact-whitespace-native.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-lessons-complete.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-lessons-owned.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-platform-complete.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-platform-owned.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-scope.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-whitespace-cr-at-eol.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/actual-payload-whitespace-native.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-publication.md\n",
+  "stderr": ""
+}
