@@ -245,12 +245,19 @@ root or independent review. Distinct paragraph review, specialist QC, root nativ
 full/thin/direct reproduction/acceptance and handoff are PENDING. Its two PDFs
 are C; timings54/60/72 remain UNOBSERVED. See214-ROOT-ADOPTION-result.md.
 §224's current paragraph/specialist reviews, root positive native reproduction,
-acceptance and handoff are complete. Chapter2.2 still requires independent
-consistency/front correction/recheck and separately reviewed accepted inputs,
-then actual chapter rendering and review. §231 is internally accepted
+acceptance and handoff are complete. Chapter2.2's complete independent
+consistency review and distinct front correction recheck are now adopted;
+F22-FRONT-TITLE-01 is closed. Separately reviewed actual accepted inputs and
+root assembly release, then chapter rendering/review, remain required.
+§231 is internally accepted
 with flags and current independent paragraph review, specialist QC and handoff;
-§232–§234 and all aggregate outputs remain pending their dependency/plan/review
-gates. Book front sources
+§232–§234 and all aggregate outputs remain pending their dependency/production/review
+gates. §234's complete861-line plan now has adopted independent PLAN PASS WITH
+FLAGS, closing F2-PAPER-01 without changing its canonical plan bytes. Real
+accepted232/233 inputs, independent input-contract review and separate root
+production release are still required; timings54/78/87/92 stay UNOBSERVED.
+See22-234-REVIEW-ROOT-decision.json and result.md for both exact adopted outcomes.
+Book front sources
 alone passed independent R2; no back matter, actual book manifest or assembled
 book PDF has been accepted. Preserve paragraph/answer separation and never
 append duplicate opgaven to a complete paragraaf source.

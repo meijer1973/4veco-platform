@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "actor": "codex-root",
+  "task": "BOOK2-TEXTBOOK-PRODUCTION-1",
+  "date": "2026-09-06",
+  "verified_payload": {
+    "platform": "5536decf2a115a3d179a6b30fd07ac011846a0a9",
+    "lessons": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1"
+  },
+  "verification": {
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-verification-r1.json",
+    "raw_sha256": "7df6e5601456be98917bb9ff9c608d08a79da248b01b8e269bc73a77a70aff74"
+  },
+  "decisions": [
+    {
+      "subject": "chapter:2.2",
+      "scope": "complete_source_consistency_and_front_correction_review",
+      "decision": "ADOPT_INDEPENDENT_PASS",
+      "closed_finding": "F22-FRONT-TITLE-01",
+      "source_author": "codex-root",
+      "independent_reviewer": "paragraph_214_builder",
+      "independent_review": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-report.md",
+      "independent_review_raw_sha256": "f3846d8f92be49c2cbe0263bb03d84ab4559df1c6792caf955dc12fab6012c3b",
+      "original_reviewed_platform": "55f740cb79120e34b18260a8c0a15f9bf26d4c6c",
+      "original_reviewed_lessons": "9546548c4dbd271516366df946f3eb0a9eaa1e93",
+      "front_raw_sha256": "0b0c0a528b6ca4b2b6af988dc5c6ac28ae4f85faba383c4e0ef0f513cd477c9d",
+      "front_css_raw_sha256": "8d6380da0cf23bb07f19ac040ac06ec8bf6c1e486e16fcbc78b67de9034dcab4",
+      "prior_review_preserved_as_historical_revise": true,
+      "accepted_assembly_input_contract": "PENDING",
+      "production_release": false,
+      "native_acceptance": false
+    },
+    {
+      "subject": "paragraph:2.3.4",
+      "scope": "complete_861_line_plan_and_printed_Start1_feedback_route",
+      "decision": "ADOPT_INDEPENDENT_PLAN_PASS_WITH_FLAGS",
+      "closed_finding": "F2-PAPER-01",
+      "original_plan_author": "paragraph_214_builder",
+      "paper_correction_author": "codex-root",
+      "independent_reviewer": "paragraph_224_builder",
+      "independent_review": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-report.md",
+      "independent_review_raw_sha256": "e7520852aca5b8c2bb0269d576f014055f7613ad8261be75404e6733e434dfda",
+      "original_reviewed_platform": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "original_reviewed_lessons": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "plan_raw_sha256": "12d81b83f9be50ebdcf3460ce7ad60d2de5a788cb3da8d3a046c1449112922ea",
+      "target_record_sha256": "2ac151882b64b0d990ce5627ae35388d72eefde74c4e24562ef9a49a9355672c",
+      "prior_revise_and_candidate_plan_bytes_preserved": true,
+      "timing": {"status": "UNOBSERVED", "minutes": [54,78,87,92]},
+      "accepted_232_233_input_contract": "PENDING",
+      "production_release": false,
+      "native_acceptance": false
+    }
+  ],
+  "native_writes": 0,
+  "root_personal_views": 0,
+  "target_registry_changes": false,
+  "canonical_plan_changes": false,
+  "new_owner_hold": false,
+  "future_PR_merge_authorization": false
+}
