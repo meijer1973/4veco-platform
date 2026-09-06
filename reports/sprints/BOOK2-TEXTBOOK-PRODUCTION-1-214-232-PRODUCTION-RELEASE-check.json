@@ -1,0 +1,1598 @@
+{
+  "status": "PASS",
+  "decision": "CANDIDATE_FOR_INDEPENDENT_INPUT_REVIEW",
+  "manifests": {
+    "214": "8adf329ff71e912335baa11d1e78a28afb8eb807de52306ffd867e35c7f0f376",
+    "232": "113d3321a3b859d582a4febf6ff71cd259111d6c5d233047113b1455f6bcc5dc"
+  },
+  "checks": [
+    {
+      "key": "214",
+      "negative_actual_file_and_manifest_probes": [
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-plan.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-plan.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-plan.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-review.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-review.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-review.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-quality-ref.yaml missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-quality-ref.yaml forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-quality-ref.yaml synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-plan.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-plan.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-plan.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/owned/course-blueprint-v6-three-year.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/owned/course-blueprint-v6-three-year.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/owned/course-blueprint-v6-three-year.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/owned/course-blueprint-v5.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/owned/course-blueprint-v5.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/owned/course-blueprint-v5.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/course-target-exercises.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/course-target-exercises.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/course-target-exercises.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/book-outlines/book-2-outline.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/book-outlines/book-2-outline.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/book-outlines/book-2-outline.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/book-outlines/book-2-outline.meta.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/book-outlines/book-2-outline.meta.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/book-outlines/book-2-outline.meta.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-result.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-result.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-result.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-evidence.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-evidence.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-evidence.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-result.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-result.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-result.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-check.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-check.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-check.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "build-scripts/content/book-2/b2_213.py missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "build-scripts/content/book-2/b2_213.py forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "build-scripts/content/book-2/b2_213.py synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-root-acceptance-r5.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-root-acceptance-r5.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-root-acceptance-r5.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "partial",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "wrong paragraph",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "false release",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "wrong source commit",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reordered list",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "empty list",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "empty manifest",
+          "rejected": true,
+          "success_callbacks": 0
+        }
+      ],
+      "positive_callbacks": 2,
+      "fixture_removed": "C:\\wt\\book2-214-232-release-probes-iPMDrH",
+      "native_builder_calls": 0
+    },
+    {
+      "key": "232",
+      "negative_actual_file_and_manifest_probes": [
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-review.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-review.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-review.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-handoff.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-handoff.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-handoff.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/owned/course-blueprint-v6-three-year.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/owned/course-blueprint-v6-three-year.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/owned/course-blueprint-v6-three-year.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/owned/course-blueprint-v5.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/owned/course-blueprint-v5.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/owned/course-blueprint-v5.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/course-target-exercises.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/course-target-exercises.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/course-target-exercises.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/book-outlines/book-2-outline.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/book-outlines/book-2-outline.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/book-outlines/book-2-outline.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/book-outlines/book-2-outline.meta.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/book-outlines/book-2-outline.meta.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "references/authored/book-outlines/book-2-outline.meta.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-report.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-report.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-report.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-verification.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-verification.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-verification.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-result.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-result.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-result.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "build-scripts/content/book-2/b2_213.py missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "build-scripts/content/book-2/b2_213.py forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "build-scripts/content/book-2/b2_213.py synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance.md missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance.md forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance.md synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance-check.json missing",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance-check.json forged",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance-check.json synchronized input/hash drift",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "partial",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "wrong paragraph",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "false release",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "wrong source commit",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "reordered list",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "empty list",
+          "rejected": true,
+          "success_callbacks": 0
+        },
+        {
+          "label": "empty manifest",
+          "rejected": true,
+          "success_callbacks": 0
+        }
+      ],
+      "positive_callbacks": 2,
+      "fixture_removed": "C:\\wt\\book2-214-232-release-probes-lC1g8a",
+      "native_builder_calls": 0
+    }
+  ],
+  "current_gates": [
+    {
+      "name": "structural",
+      "exit_code": 0
+    },
+    {
+      "name": "214-paragraph_production",
+      "exit_code": 0
+    },
+    {
+      "name": "214-specialist_review",
+      "exit_code": 0
+    },
+    {
+      "name": "232-paragraph_production",
+      "exit_code": 0
+    },
+    {
+      "name": "232-specialist_review",
+      "exit_code": 0
+    },
+    {
+      "name": "durable",
+      "exit_code": 0
+    },
+    {
+      "name": "bundle",
+      "exit_code": 0
+    }
+  ],
+  "custody": [
+    {
+      "repository": "4veco-platform",
+      "baseline": "67c544392d215e40970798b30d63ddd44ee404ee",
+      "files": 14449,
+      "all_actual_raw_git_blobs_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "baseline": "1cf1c1f972f196791fb37f6bbee523b7a2e3b676",
+      "files": 1906,
+      "all_actual_raw_git_blobs_exact": true
+    }
+  ],
+  "lesson_changes": 0,
+  "native_generation": "NOT_RUN; future native entrypoint tests remain mandatory",
+  "required_next": "Distinct published independent review before root release"
+}

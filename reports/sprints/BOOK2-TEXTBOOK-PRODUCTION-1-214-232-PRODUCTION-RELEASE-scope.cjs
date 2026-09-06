@@ -1,0 +1,16 @@
+'use strict';
+const fs=require('fs'),path=require('path'),cp=require('child_process'),a=require('assert/strict');
+const P=path.resolve(__dirname,'../..'),L=path.resolve(P,'../4veco-lessen'),N='BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE';
+const BP='67c544392d215e40970798b30d63ddd44ee404ee',BL='1cf1c1f972f196791fb37f6bbee523b7a2e3b676',head=process.argv[2];a.match(head,/^[a-f0-9]{40}$/);
+const git=(cwd,...args)=>cp.execFileSync('git',args,{cwd,maxBuffer:128*1024*1024});
+a.equal(git(P,'rev-parse','HEAD').toString().trim(),head);a.equal(git(L,'rev-parse','HEAD').toString().trim(),BL);
+for(const cwd of[P,L])a.equal(git(cwd,'status','--porcelain').toString().trim(),'');
+const changed=git(P,'diff','--no-renames','--name-only','-z',BP,head).toString().split('\0').filter(Boolean);for(const n of changed)a(n.startsWith('reports/sprints/'+N+'-'),n);
+a.equal(git(L,'diff','--name-only',BL,'HEAD').toString().trim(),'');
+const baseline=JSON.parse(fs.readFileSync(path.join(__dirname,N+'-baseline.json'))),custody=[];
+for(const[repo,cwd]of[['4veco-platform',P],['4veco-lessen',L]]){const t=baseline.trees[repo],names=Object.keys(t),actual=cp.execFileSync('git',['-c','core.longpaths=true','hash-object','--no-filters','--stdin-paths'],{cwd,input:names.map(n=>JSON.stringify(n)).join('\n')+'\n',encoding:'utf8',maxBuffer:128*1024*1024}).trim().split(/\r?\n/);a.equal(names.length,actual.length);for(let i=0;i<names.length;i++)a.equal(actual[i],t[names[i]],names[i]);custody.push({repository:repo,original_files:actual.length,actual_raw_git_exact:true});}
+const commands=[],scopes=[];function run(label,args,expected){const r=cp.spawnSync(args[0],args.slice(1),{cwd:P,maxBuffer:128*1024*1024}),x={label,cwd:P,args,exit_code:r.status,stdout:r.stdout.toString('utf8'),stderr:r.stderr.toString('utf8'),stdout_base64:r.stdout.toString('base64'),stderr_base64:r.stderr.toString('base64')};commands.push(x);if(expected!==null)a.equal(r.status,expected,JSON.stringify(x));return x;}
+for(const[label,cwd,lane,b,h,e]of[['increment-platform',P,'shared',BP,head,1],['empty-lessons',L,'textbook',BL,BL,1],['complete-platform',P,'shared','96416b6b5bd57094576e9aba0a42d682584ec479',head,0],['complete-lessons',L,'textbook','f09fd6e88edc5049b026b16b0158e7e188091d2d',BL,0]]){const x=JSON.parse(run(label,['node','build-scripts/workflows/check-paragraph-lane-scope.js','--cwd',cwd,'--lane',lane,'--base',b,'--head',h,'--json'],e).stdout);a.equal(x.categories.unknown.length,0);a.equal(x.ok,e===0);scopes.push({label,result:x});}
+run('own-whitespace',['git','diff','--check',BP,head],0);run('historical-whitespace',['git','diff','--check','96416b6b5bd57094576e9aba0a42d682584ec479',head],null);run('historical-cr-whitespace',['git','-c','core.whitespace=cr-at-eol','diff','--check','96416b6b5bd57094576e9aba0a42d682584ec479',head],null);
+const x={status:'PASS',head,lessons:BL,changed,custody,scopes,commands};fs.writeFileSync(path.join(__dirname,N+'-scope.json'),JSON.stringify(x,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({status:'PASS',head,changed:changed.length,custody,scopes:scopes.map(s=>({label:s.label,ok:s.result.ok,counts:Object.fromEntries(Object.entries(s.result.categories).map(([k,v])=>[k,v.length]))})),whitespace:commands.filter(c=>c.label.includes('whitespace')).map(c=>({label:c.label,exit_code:c.exit_code}))},null,2));
