@@ -120,3 +120,12 @@ This avoids thousands of repeated Git processes while still comparing each
 whole actual file to all three committed blob identities and recording SHA256.
 The compact whole-baseline checker continues to use real batched hash-object.
 No source, native data, shared Git tool or evidence predicate is changed.
+
+Own native-custody attempt r1 completed eight actual42-page source/native/raw/RGB
+comparisons, then stopped at its cross-epoch list comparison: locally constructed
+relative paths used Windows separators while the original evidence uses POSIX
+separators. Independent exact reads confirm all three original proof SHA256s
+unchanged. Only the new root report's relative-path serialization is corrected
+to as_posix(); all original evidence and the failed r1 process stay untouched.
+Rerun as a fresh r2 evidence attempt, not a native revision. All24 source tests
+already passed unchanged; no student/control source changed in this correction.

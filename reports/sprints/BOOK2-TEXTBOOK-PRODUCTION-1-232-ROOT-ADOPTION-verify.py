@@ -86,7 +86,7 @@ def original_proof_checks(manifest):
         assert record['rendered_pages']==['pages/'+p.name for p in items]
         current={p.name:rgb(p) for p in items}
         assert {n:r['raw_sha256'] for n,r in current.items()}==record['page_sha256']
-        pages[kind]=current;proofs.append({'path':str((folder/'manifest.json').relative_to(P)),'sha256':sha(raw(folder/'manifest.json'))})
+        pages[kind]=current;proofs.append({'path':(folder/'manifest.json').relative_to(P).as_posix(),'sha256':sha(raw(folder/'manifest.json'))})
     assert [len(pages[k]) for k in b.KINDS]==[19,11,12]
     return pages,proofs
 
