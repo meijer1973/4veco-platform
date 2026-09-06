@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "--lane",
+    "textbook",
+    "--base",
+    "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a",
+    "--head",
+    "167b833c88c5651327906ffdc322e44a9fcfc4a7",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T05:00:47.650Z",
+  "ended": "2026-09-06T05:00:47.718Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "{\n  \"ok\": true,\n  \"lane\": \"textbook\",\n  \"categories\": {\n    \"partA_textbook\": [\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-plan.md\"\n    ],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": "",
+  "stdout_base64": "ewogICJvayI6IHRydWUsCiAgImxhbmUiOiAidGV4dGJvb2siLAogICJjYXRlZ29yaWVzIjogewogICAgInBhcnRBX3RleHRib29rIjogWwogICAgICAiQm9layAyIC0gS29zdGVuLCBvcGJyZW5nc3RlbiwgZWxhc3RpY2l0ZWl0IGVuIHN1cnBsdXMvMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy4zIFBhcmV0by1lZmZpY2llbnRpZSBlbiB3ZWx2YWFydHN2ZXJsaWVzLzIuMy4zLXRleHRib29rLXBsYW4ubWQiCiAgICBdLAogICAgInBhcnRCX2NvbXBhbmlvbiI6IFtdLAogICAgInNoYXJlZF9wbGF0Zm9ybSI6IFtdLAogICAgImdlbmVyYXRlZF9pbmRleGVzIjogW10sCiAgICAicmV2aWV3X2V2aWRlbmNlIjogW10sCiAgICAidW5rbm93biI6IFtdCiAgfSwKICAicXVhbGl0eVJlZkNoYW5nZXMiOiBbXSwKICAiZmFpbHVyZXMiOiBbXSwKICAid2FybmluZ3MiOiBbXSwKICAiZXhjZXB0aW9uIjogewogICAgInByZXNlbnQiOiBmYWxzZSwKICAgICJvayI6IGZhbHNlLAogICAgImZhaWx1cmVzIjogW10KICB9Cn0K",
+  "stderr_base64": ""
+}

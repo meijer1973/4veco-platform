@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "head": "f26a3dcb52271ba0691cd35d647bb74ed6302000",
+  "lessons": "167b833c88c5651327906ffdc322e44a9fcfc4a7",
+  "custody": {
+    "rows": [
+      {
+        "repository": "4veco-platform",
+        "inherited": 13947,
+        "actual_raw_git_exact": 14015
+      },
+      {
+        "repository": "4veco-lessen",
+        "inherited": 1904,
+        "actual_raw_git_exact": 1905
+      }
+    ],
+    "original_import_files": 50,
+    "only_lesson_change": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-plan.md",
+    "plan_raw_sha256": "0870d848b21017fedde86fb8d738bbe6afa21f68f8c1190905a8c0f2e3b8be19"
+  },
+  "scopes": [
+    {
+      "label": "increment-platform",
+      "exit": 1,
+      "ok": false,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 68,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "increment-lessons",
+      "exit": 0,
+      "ok": true,
+      "counts": {
+        "partA_textbook": 1,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "exit": 0,
+      "ok": true,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 84,
+        "generated_indexes": 6,
+        "review_evidence": 6282,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "exit": 0,
+      "ok": true,
+      "counts": {
+        "partA_textbook": 208,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 6,
+        "unknown": 0
+      }
+    }
+  ],
+  "whitespace": [
+    {
+      "label": "adoption",
+      "exit": 0
+    },
+    {
+      "label": "adoption-cr",
+      "exit": 0
+    },
+    {
+      "label": "root-only",
+      "exit": 0
+    },
+    {
+      "label": "lessons",
+      "exit": 0
+    },
+    {
+      "label": "complete",
+      "exit": 2
+    }
+  ],
+  "no_foreign_normalization": true
+}
