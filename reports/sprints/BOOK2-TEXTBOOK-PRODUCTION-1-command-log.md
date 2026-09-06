@@ -17345,3 +17345,73 @@ result 63259c63261ae359dcaa776565c692b7716c081e95c7dc2004c44660799fec61
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-ROOT-scope.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T03:13:12.976Z`
+- finished_at: `2026-09-06T03:13:22.016Z`
+- duration_ms: `9040`
+- exit_code: `0`
+- stdout_sha256: `72038327cd026f8905319c7018180ceb6f717be2866f7fcd6b44459048231682`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "owned_paths": 45,
+  "scopes": [
+    {
+      "label": "incremental-platform",
+      "ok": false,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 45,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 82,
+        "generated_indexes": 6,
+        "review_evidence": 4664,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 205,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 5,
+        "unknown": 0
+      }
+    }
+  ],
+  "whitespace": {
+    "incremental_default_exit": 0,
+    "complete_default_exit": 2,
+    "complete_cr_at_eol_exit": 2,
+    "actual_diagnostics_preserved": true
+  },
+  "lesson_files_unchanged": 1902
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
