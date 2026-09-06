@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/sprints/check-sprint-bundle.js",
+    "BOOK2-TEXTBOOK-PRODUCTION-1"
+  ],
+  "cwd": "C:\\wt\\book2-232-f1-review-20260906\\4veco-platform",
+  "started_utc": "2026-09-06T03:36:21.693Z",
+  "finished_utc": "2026-09-06T03:36:21.903Z",
+  "child_environment": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PATH": "inherited unchanged; no native rendering"
+  },
+  "exit_code": 0,
+  "stdout": "OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active\n",
+  "stderr": ""
+}

@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "node",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-run.cjs",
+    "custody"
+  ],
+  "cwd": "C:\\wt\\book2-232-f1-review-20260906\\4veco-platform",
+  "started_utc": "2026-09-06T03:37:34.532Z",
+  "finished_utc": "2026-09-06T03:38:01.046Z",
+  "child_environment": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PATH": "inherited unchanged; no native rendering"
+  },
+  "exit_code": 0,
+  "stdout": "{\"pass\":true,\"raw_input_files_preserved\":13870,\"lesson_changes\":0,\"historical_json_preserved\":69,\"only_platform_changes_own_or_four_indexes\":true,\"rendered_generation\":false}\n",
+  "stderr": ""
+}
