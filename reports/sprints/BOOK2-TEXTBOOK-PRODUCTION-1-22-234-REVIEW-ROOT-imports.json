@@ -1,0 +1,345 @@
+{
+  "mapping": [
+    {
+      "original": "f36404f61511b8a4a86c29faaea443131e8c613f",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-plan.md",
+          "old_blob": null,
+          "new_blob": "b77a02cdc35b48b383c9f28764a484625a289513"
+        }
+      ],
+      "adopted": "28d94d91b7544dcdb5778dcca8d674a196c8dde2"
+    },
+    {
+      "original": "d438fe13fd5a909df3712d0c571e2cedd599a00b",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-check.cjs",
+          "old_blob": null,
+          "new_blob": "1ca7ee46c63f5e900bae0b73098d72269e58b0b8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review.py",
+          "old_blob": null,
+          "new_blob": "49c3f6f1ea489c49cc55c0c3709bf427606f5ae0"
+        }
+      ],
+      "adopted": "3efc067c9b651c7a7af18ced38e1a887d4f459fd"
+    },
+    {
+      "original": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-author-r1-process.json",
+          "old_blob": null,
+          "new_blob": "50063ca280e3e1e461705ae316476cc5df512f91"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-baseline.json",
+          "old_blob": null,
+          "new_blob": "829cc157d96cabea67fec3d1161634fe423df1ed"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-bundle-r1-process.json",
+          "old_blob": null,
+          "new_blob": "d4f5e18432d3cfcc423f2b9926889b335b5e1606"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-chapter-r1-process.json",
+          "old_blob": null,
+          "new_blob": "ad4bf8a5d85cd81eed1e3c9f867c0edf48c7c79e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-durable-r1-process.json",
+          "old_blob": null,
+          "new_blob": "e97ef4046beeb6eebf2c5ab4e18a4e9e9fd57af4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-governance-L-r1-process.json",
+          "old_blob": null,
+          "new_blob": "3efe9e2896a35115f7d504e0b6315401c7e0ada4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-governance-r1-process.json",
+          "old_blob": null,
+          "new_blob": "e277d9e2e6ac26f2f5f558e6ab131ea4fcacbe5e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-index-runtime.cjs",
+          "old_blob": null,
+          "new_blob": "520b4998dae278d51e0bfb30a750c62a1cb92ec5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-publication.cjs",
+          "old_blob": null,
+          "new_blob": "68ddfcf590a5f4b5b70437531a72fbb8d9e5e0ae"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-report.md",
+          "old_blob": null,
+          "new_blob": "75383e8d4533ccc941f31718b551fed88d3e80ea"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review-r1-process.json",
+          "old_blob": null,
+          "new_blob": "ba0aae2f6d5bdff3744eb9dfefbcb0e83cf814de"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-structural-r1-process.json",
+          "old_blob": null,
+          "new_blob": "f9d21a88a5bf3d4fe958ea5719ef5e0f96f0e10b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-url-map-r1-process.json",
+          "old_blob": null,
+          "new_blob": "5ceb94ef25d3b414125d8895f7a258617e8108b6"
+        }
+      ],
+      "adopted": "7b0a876f9f6394d5adc841c2a257eca35150142a"
+    },
+    {
+      "original": "0ba05e02765af2ed1b45c7260168fe7113629691",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-index-diagnostic-process.json",
+          "old_blob": null,
+          "new_blob": "a51ebe4dea28533a3e3e1278e4ed0d4cf62e9b9d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-integrity-r1.json",
+          "old_blob": null,
+          "new_blob": "c035a7f77c2817b6f23176a816d123e48bf95ac7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-publication.md",
+          "old_blob": null,
+          "new_blob": "57ce1de885ad97a2c81f52f637dae363ea9e6597"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-L-process.json",
+          "old_blob": null,
+          "new_blob": "cb78fc98140f708fccf5ae30a6a5b2dddc90e544"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-P-process.json",
+          "old_blob": null,
+          "new_blob": "2f2d755c51f2ecfa47a07f34f0f89f414a789ec1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-L-process.json",
+          "old_blob": null,
+          "new_blob": "4b9ca8e599f95c1595b5977571f54d304d5f87f4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-P-process.json",
+          "old_blob": null,
+          "new_blob": "af627c67be739cd082eae2cdd6bbfc13b4e415cf"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1.json",
+          "old_blob": null,
+          "new_blob": "ff76d7cf9d140c0cf2df8dd90addae0b6526f67c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-own-r1-process.json",
+          "old_blob": null,
+          "new_blob": "2aa15937529c68a877793896575d9f1e007c5c3c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-cr-r1-process.json",
+          "old_blob": null,
+          "new_blob": "8c40282b220c58d3a48429723dfabdc3e801baa3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-r1-process.json",
+          "old_blob": null,
+          "new_blob": "21bdda709f4c5d31ff7b8adf4e6e732ee5e73d54"
+        }
+      ],
+      "adopted": "fd3cc7bd71c34ac2e6ebea96f95a3f9bd5a9c6c2"
+    },
+    {
+      "original": "d723de91c63176b7606e175d5da10cdebf8cfb10",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-prepublication.json",
+          "old_blob": null,
+          "new_blob": "02700ed272a3795621cf454209198e1efc02e3d6"
+        }
+      ],
+      "adopted": "2de51a0ab55b401f14489d603bb586188ad15706"
+    },
+    {
+      "original": "ce6d15cac2a4f5c2a874c6eec6df8531d0543e0a",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-plan.md",
+          "old_blob": null,
+          "new_blob": "a645fdea18d7dba78087bece033ac1078525d48d"
+        }
+      ],
+      "adopted": "dabbf6c715dc3ea3324e0d691d7744f5c511993c"
+    },
+    {
+      "original": "a88857b4470afaa5da5d4b40ea1c21d4fb988131",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-baseline.json",
+          "old_blob": null,
+          "new_blob": "64419df35f675d30d4c45c549c38b1058957d8a7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-bundle-process.json",
+          "old_blob": null,
+          "new_blob": "838f4e0357d5affaea2553646da18231eab4335f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-check.cjs",
+          "old_blob": null,
+          "new_blob": "d5a89f1f6051c394e4a5f78c34a23e78ebc3b10e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-durable-process.json",
+          "old_blob": null,
+          "new_blob": "fc191af4e670b29db2418d3e5c2c3b81c1f689a7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-goal-design-process.json",
+          "old_blob": null,
+          "new_blob": "b9d5ba44a43562e90b38c8348fb51cc5efc612f9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-governance-process.json",
+          "old_blob": null,
+          "new_blob": "6000601dbb2f62b89e2653dbe5c4f32d6daf5a74"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-independent-r1.json",
+          "old_blob": null,
+          "new_blob": "e39cd98fc71459ed88b4da7a8341502bb5f13bab"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-specialist-process.json",
+          "old_blob": null,
+          "new_blob": "77be9c5e1a1a499104d332069b212e898f29cccd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-structural-process.json",
+          "old_blob": null,
+          "new_blob": "2bb0a7aa6c5f2eb94a2905ac858e673ea0750561"
+        }
+      ],
+      "adopted": "aac0639a688deb34d7b613218eec795083207995"
+    },
+    {
+      "original": "af335aae3753956740579975a089f6460c2ffbed",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-check.cjs",
+          "old_blob": "d5a89f1f6051c394e4a5f78c34a23e78ebc3b10e",
+          "new_blob": "71b3579b4501e21ec8d9935151d73459b03d4615"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-design-check.cjs",
+          "old_blob": null,
+          "new_blob": "16a9e3142c3aec5c46e78f7237b601ec848fb31e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-design-check.json",
+          "old_blob": null,
+          "new_blob": "52c1a47fc28b8addeff307504a83246dabc083e6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-independent-r2.json",
+          "old_blob": null,
+          "new_blob": "61157e1b4cb80ab927c6509a54092e206526a637"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-index-runtime.cjs",
+          "old_blob": null,
+          "new_blob": "500f75f549d47d7a139d3c670b0fbc48f9910e13"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-report.md",
+          "old_blob": null,
+          "new_blob": "f011901479ce0549d6f054cdb81a060c81f77153"
+        }
+      ],
+      "adopted": "ca4afe366226c676fe033447df800bd77eb94958"
+    },
+    {
+      "original": "5db9d118bc772ecc30e00b984bb6790d0f1e0793",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-check.cjs",
+          "old_blob": null,
+          "new_blob": "bcc6c0ff86a1b897fb58303fde22813221403791"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-checks.json",
+          "old_blob": null,
+          "new_blob": "2a631d709a37b8a1874c7217a9a69b47594cafeb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication.md",
+          "old_blob": null,
+          "new_blob": "b0e92a7b4e50c4650c0ed3fa74d7654321a8db75"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-own-L-process.json",
+          "old_blob": null,
+          "new_blob": "3247b0e57b696f005efcbd9987c398800c4f3af1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-own-P-process.json",
+          "old_blob": null,
+          "new_blob": "a93c8eb019b642e8a63891b05a884502bf14bc5d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-whole-L-process.json",
+          "old_blob": null,
+          "new_blob": "80bf115185273ad6eb2c926df580a835bbbdf194"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-whole-P-process.json",
+          "old_blob": null,
+          "new_blob": "412c453a2fa9f39fddf8d6ec611a42f2c2fcc40b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope.json",
+          "old_blob": null,
+          "new_blob": "113e7794197ab23a4be1e59d2dd0bd3786122e30"
+        }
+      ],
+      "adopted": "b0e4f34f347564a293af816167189e101484bf50"
+    },
+    {
+      "original": "0991cc186300d72d18edded30f126480415bc1e9",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-index-capture.json",
+          "old_blob": null,
+          "new_blob": "8e93d99374624dfa131c63447de8104892739947"
+        }
+      ],
+      "adopted": "526e3beb5821a1d576f1f8c5d5571666a6774033"
+    },
+    {
+      "original": "c19450bb00cdc8ded7bcd37dea9175e27c977b66",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-check.cjs",
+          "old_blob": "bcc6c0ff86a1b897fb58303fde22813221403791",
+          "new_blob": "21a3a8ec7d154884c3545b61d30915819beeee5d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-r2.md",
+          "old_blob": null,
+          "new_blob": "c2ccdf7bebc7ca28c8538eceef5f81447831c487"
+        }
+      ],
+      "adopted": "2b77d57d4fe36d10c512e25f79f983f495052fc3"
+    }
+  ]
+}

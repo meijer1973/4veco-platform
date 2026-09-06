@@ -1,0 +1,28 @@
+{
+  "command": "git",
+  "args": [
+    "cherry-pick",
+    "-x",
+    "0ba05e02765af2ed1b45c7260168fe7113629691"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "fd3cc7bd71c34ac2e6ebea96f95a3f9bd5a9c6c2",
+  "start": "2026-09-06T09:50:27.470Z",
+  "end": "2026-09-06T09:50:27.657Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "7b0a876f9f6394d5adc841c2a257eca35150142a",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 fd3cc7bd] Bind C22 front recheck custody scopes and publication diagnostics\n Date: Sun Sep 6 11:21:52 2026 +0200\n 11 files changed, 1299 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-index-diagnostic-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-integrity-r1.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-publication.md\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-L-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-P-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-L-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-P-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-own-r1-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-cr-r1-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-r1-process.json\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGZkM2NjN2JkXSBCaW5kIEMyMiBmcm9udCByZWNoZWNrIGN1c3RvZHkgc2NvcGVzIGFuZCBwdWJsaWNhdGlvbiBkaWFnbm9zdGljcwogRGF0ZTogU3VuIFNlcCA2IDExOjIxOjUyIDIwMjYgKzAyMDAKIDExIGZpbGVzIGNoYW5nZWQsIDEyOTkgaW5zZXJ0aW9ucygrKQogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjItRlJPTlQtUkVDSEVDSy1pbmRleC1kaWFnbm9zdGljLXByb2Nlc3MuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjItRlJPTlQtUkVDSEVDSy1pbnRlZ3JpdHktcjEuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjItRlJPTlQtUkVDSEVDSy1wdWJsaWNhdGlvbi5tZAogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjItRlJPTlQtUkVDSEVDSy1zY29wZS1yMS1vd24tTC1wcm9jZXNzLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyLUZST05ULVJFQ0hFQ0stc2NvcGUtcjEtb3duLVAtcHJvY2Vzcy5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMi1GUk9OVC1SRUNIRUNLLXNjb3BlLXIxLXdob2xlLUwtcHJvY2Vzcy5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMi1GUk9OVC1SRUNIRUNLLXNjb3BlLXIxLXdob2xlLVAtcHJvY2Vzcy5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMi1GUk9OVC1SRUNIRUNLLXNjb3BlLXIxLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyLUZST05ULVJFQ0hFQ0std2hpdGUtb3duLXIxLXByb2Nlc3MuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjItRlJPTlQtUkVDSEVDSy13aGl0ZS13aG9sZS1jci1yMS1wcm9jZXNzLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyLUZST05ULVJFQ0hFQ0std2hpdGUtd2hvbGUtcjEtcHJvY2Vzcy5qc29uCg==",
+  "stderr_base64": ""
+}

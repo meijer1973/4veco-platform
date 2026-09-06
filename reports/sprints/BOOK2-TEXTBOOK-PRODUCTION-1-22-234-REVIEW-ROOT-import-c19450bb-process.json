@@ -1,0 +1,28 @@
+{
+  "command": "git",
+  "args": [
+    "cherry-pick",
+    "-x",
+    "c19450bb00cdc8ded7bcd37dea9175e27c977b66"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "2b77d57d4fe36d10c512e25f79f983f495052fc3",
+  "start": "2026-09-06T09:50:29.714Z",
+  "end": "2026-09-06T09:50:29.944Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "526e3beb5821a1d576f1f8c5d5571666a6774033",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 2b77d57d] review: retain publication diagnostic and correct owned check argv\n Date: Sun Sep 6 11:09:40 2026 +0200\n 2 files changed, 37 insertions(+), 1 deletion(-)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-r2.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDJiNzdkNTdkXSByZXZpZXc6IHJldGFpbiBwdWJsaWNhdGlvbiBkaWFnbm9zdGljIGFuZCBjb3JyZWN0IG93bmVkIGNoZWNrIGFyZ3YKIERhdGU6IFN1biBTZXAgNiAxMTowOTo0MCAyMDI2ICswMjAwCiAyIGZpbGVzIGNoYW5nZWQsIDM3IGluc2VydGlvbnMoKyksIDEgZGVsZXRpb24oLSkKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzNC1QQVBFUi1SRVZJRVctcHVibGljYXRpb24tcjIubWQK",
+  "stderr_base64": ""
+}

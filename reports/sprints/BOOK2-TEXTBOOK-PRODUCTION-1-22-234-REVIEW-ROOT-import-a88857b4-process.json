@@ -1,0 +1,28 @@
+{
+  "command": "git",
+  "args": [
+    "cherry-pick",
+    "-x",
+    "a88857b4470afaa5da5d4b40ea1c21d4fb988131"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "aac0639a688deb34d7b613218eec795083207995",
+  "start": "2026-09-06T09:50:28.405Z",
+  "end": "2026-09-06T09:50:28.563Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "dabbf6c715dc3ea3324e0d691d7744f5c511993c",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 aac0639a] test: preserve independent 234 paper review first-run evidence\n Date: Sun Sep 6 10:56:13 2026 +0200\n 9 files changed, 4424 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-baseline.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-bundle-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-check.cjs\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-durable-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-goal-design-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-governance-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-independent-r1.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-specialist-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-structural-process.json\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGFhYzA2MzlhXSB0ZXN0OiBwcmVzZXJ2ZSBpbmRlcGVuZGVudCAyMzQgcGFwZXIgcmV2aWV3IGZpcnN0LXJ1biBldmlkZW5jZQogRGF0ZTogU3VuIFNlcCA2IDEwOjU2OjEzIDIwMjYgKzAyMDAKIDkgZmlsZXMgY2hhbmdlZCwgNDQyNCBpbnNlcnRpb25zKCspCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMzQtUEFQRVItUkVWSUVXLWJhc2VsaW5lLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzNC1QQVBFUi1SRVZJRVctYnVuZGxlLXByb2Nlc3MuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjM0LVBBUEVSLVJFVklFVy1jaGVjay5janMKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzNC1QQVBFUi1SRVZJRVctZHVyYWJsZS1wcm9jZXNzLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzNC1QQVBFUi1SRVZJRVctZ29hbC1kZXNpZ24tcHJvY2Vzcy5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMzQtUEFQRVItUkVWSUVXLWdvdmVybmFuY2UtcHJvY2Vzcy5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMzQtUEFQRVItUkVWSUVXLWluZGVwZW5kZW50LXIxLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzNC1QQVBFUi1SRVZJRVctc3BlY2lhbGlzdC1wcm9jZXNzLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzNC1QQVBFUi1SRVZJRVctc3RydWN0dXJhbC1wcm9jZXNzLmpzb24K",
+  "stderr_base64": ""
+}

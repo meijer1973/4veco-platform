@@ -1,0 +1,28 @@
+{
+  "command": "git",
+  "args": [
+    "cherry-pick",
+    "-x",
+    "f36404f61511b8a4a86c29faaea443131e8c613f"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "28d94d91b7544dcdb5778dcca8d674a196c8dde2",
+  "start": "2026-09-06T09:50:26.637Z",
+  "end": "2026-09-06T09:50:26.790Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "7b3073fceb3d033aadb845c29ff97e33c92bee0d",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 28d94d91] Plan independent bounded C22 front-title correction recheck\n Date: Sun Sep 6 11:09:47 2026 +0200\n 1 file changed, 81 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDI4ZDk0ZDkxXSBQbGFuIGluZGVwZW5kZW50IGJvdW5kZWQgQzIyIGZyb250LXRpdGxlIGNvcnJlY3Rpb24gcmVjaGVjawogRGF0ZTogU3VuIFNlcCA2IDExOjA5OjQ3IDIwMjYgKzAyMDAKIDEgZmlsZSBjaGFuZ2VkLCA4MSBpbnNlcnRpb25zKCspCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMi1GUk9OVC1SRUNIRUNLLXBsYW4ubWQK",
+  "stderr_base64": ""
+}

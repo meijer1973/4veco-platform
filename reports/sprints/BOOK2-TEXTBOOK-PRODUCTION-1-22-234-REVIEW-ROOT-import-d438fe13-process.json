@@ -1,0 +1,28 @@
+{
+  "command": "git",
+  "args": [
+    "cherry-pick",
+    "-x",
+    "d438fe13fd5a909df3712d0c571e2cedd599a00b"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "3efc067c9b651c7a7af18ced38e1a887d4f459fd",
+  "start": "2026-09-06T09:50:26.915Z",
+  "end": "2026-09-06T09:50:27.057Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "28d94d91b7544dcdb5778dcca8d674a196c8dde2",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 3efc067c] Add independent source-bound C22 front correction and continuity probes\n Date: Sun Sep 6 11:14:01 2026 +0200\n 2 files changed, 163 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-check.cjs\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review.py\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDNlZmMwNjdjXSBBZGQgaW5kZXBlbmRlbnQgc291cmNlLWJvdW5kIEMyMiBmcm9udCBjb3JyZWN0aW9uIGFuZCBjb250aW51aXR5IHByb2JlcwogRGF0ZTogU3VuIFNlcCA2IDExOjE0OjAxIDIwMjYgKzAyMDAKIDIgZmlsZXMgY2hhbmdlZCwgMTYzIGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyLUZST05ULVJFQ0hFQ0stY2hlY2suY2pzCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMi1GUk9OVC1SRUNIRUNLLXJldmlldy5weQo=",
+  "stderr_base64": ""
+}

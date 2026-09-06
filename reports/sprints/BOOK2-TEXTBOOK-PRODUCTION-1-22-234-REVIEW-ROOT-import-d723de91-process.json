@@ -1,0 +1,28 @@
+{
+  "command": "git",
+  "args": [
+    "cherry-pick",
+    "-x",
+    "d723de91c63176b7606e175d5da10cdebf8cfb10"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "2de51a0ab55b401f14489d603bb586188ad15706",
+  "start": "2026-09-06T09:50:27.778Z",
+  "end": "2026-09-06T09:50:27.980Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "fd3cc7bd71c34ac2e6ebea96f95a3f9bd5a9c6c2",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 2de51a0a] Seal C22 front recheck immutable prepublication bindings\n Date: Sun Sep 6 11:22:03 2026 +0200\n 1 file changed, 164 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-prepublication.json\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDJkZTUxYTBhXSBTZWFsIEMyMiBmcm9udCByZWNoZWNrIGltbXV0YWJsZSBwcmVwdWJsaWNhdGlvbiBiaW5kaW5ncwogRGF0ZTogU3VuIFNlcCA2IDExOjIyOjAzIDIwMjYgKzAyMDAKIDEgZmlsZSBjaGFuZ2VkLCAxNjQgaW5zZXJ0aW9ucygrKQogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjItRlJPTlQtUkVDSEVDSy1wcmVwdWJsaWNhdGlvbi5qc29uCg==",
+  "stderr_base64": ""
+}

@@ -1,0 +1,28 @@
+{
+  "command": "git",
+  "args": [
+    "cherry-pick",
+    "-x",
+    "0991cc186300d72d18edded30f126480415bc1e9"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "526e3beb5821a1d576f1f8c5d5571666a6774033",
+  "start": "2026-09-06T09:50:29.303Z",
+  "end": "2026-09-06T09:50:29.545Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "b0e4f34f347564a293af816167189e101484bf50",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 526e3beb] review: preserve exact paired index publication check\n Date: Sun Sep 6 11:07:18 2026 +0200\n 1 file changed, 69 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-index-capture.json\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDUyNmUzYmViXSByZXZpZXc6IHByZXNlcnZlIGV4YWN0IHBhaXJlZCBpbmRleCBwdWJsaWNhdGlvbiBjaGVjawogRGF0ZTogU3VuIFNlcCA2IDExOjA3OjE4IDIwMjYgKzAyMDAKIDEgZmlsZSBjaGFuZ2VkLCA2OSBpbnNlcnRpb25zKCspCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMzQtUEFQRVItUkVWSUVXLWluZGV4LWNhcHR1cmUuanNvbgo=",
+  "stderr_base64": ""
+}

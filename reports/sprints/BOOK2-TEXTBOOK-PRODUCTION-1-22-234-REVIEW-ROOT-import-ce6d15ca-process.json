@@ -1,0 +1,28 @@
+{
+  "command": "git",
+  "args": [
+    "cherry-pick",
+    "-x",
+    "ce6d15cac2a4f5c2a874c6eec6df8531d0543e0a"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "dabbf6c715dc3ea3324e0d691d7744f5c511993c",
+  "start": "2026-09-06T09:50:28.102Z",
+  "end": "2026-09-06T09:50:28.286Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "2de51a0ab55b401f14489d603bb586188ad15706",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 dabbf6c7] plan: independent 234 paper-route and whole-plan review\n Date: Sun Sep 6 10:42:56 2026 +0200\n 1 file changed, 111 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGRhYmJmNmM3XSBwbGFuOiBpbmRlcGVuZGVudCAyMzQgcGFwZXItcm91dGUgYW5kIHdob2xlLXBsYW4gcmV2aWV3CiBEYXRlOiBTdW4gU2VwIDYgMTA6NDI6NTYgMjAyNiArMDIwMAogMSBmaWxlIGNoYW5nZWQsIDExMSBpbnNlcnRpb25zKCspCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMzQtUEFQRVItUkVWSUVXLXBsYW4ubWQK",
+  "stderr_base64": ""
+}
