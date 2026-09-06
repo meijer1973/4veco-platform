@@ -87,7 +87,7 @@ def negative():
     chosen+=[('4veco-platform','references/authored/course-target-exercises.json')]
     assert len(set(chosen))==7
     results=[];direct=b.load_owned('direct_print')
-    with tempfile.TemporaryDirectory(prefix='book2-214-review-owned-fixture-',dir='C:/wt') as temp:
+    with tempfile.TemporaryDirectory(prefix='b214r-',dir='C:/wt') as temp:
         root=Path(temp);fp=root/'4veco-platform';fl=root/'4veco-lessen'
         for (repo,name),data in originals.items():
             path=b.data_path(root/repo/name);path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(data)
