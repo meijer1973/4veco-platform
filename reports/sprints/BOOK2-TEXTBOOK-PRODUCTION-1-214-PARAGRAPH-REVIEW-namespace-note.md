@@ -23,3 +23,12 @@ first genuine full run, authorize exactly
 and proof destination
 `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW-r48-full`.
 The preserved scan-r47.json is a read-only attempted-id record, not a build.
+
+Full attempt48 failed in the first read-only Node gate: this fresh worktree has
+no node_modules and js-yaml was unavailable. Entire invocation/process is retained;
+no reservation, proof directory, raster or pupil write occurred. Correct only
+the own controller's CHILD NODE_PATH to existing root node_modules. Bind exact
+js-yaml/sharp package paths/versions/hashes, not a new install or source edit.
+PATH stays inherited, Python314 and ordinary native CLI/cwd unchanged. Attempt48
+is consumed by its process evidence. Subsequent scan/argv names use numeric
+attempt text without an r-prefix and remain exclusive, preserving both old scans.
