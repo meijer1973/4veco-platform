@@ -1,0 +1,21 @@
+{
+  "command": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "build-scripts/content/book-2/223",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "cwd": "C:\\wt\\book2-223-qc-20260906\\4veco-platform",
+  "started": "2026-09-06T00:36:54.471230+00:00",
+  "ended": "2026-09-06T00:36:55.926139+00:00",
+  "path_first": "C:/msys64/mingw64/bin",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_contrast_and_redundant_non_color_meaning (test_source.Paragraph223Tests.test_contrast_and_redundant_non_color_meaning) ... ok\ntest_exact_rational_arithmetic_every_context (test_source.Paragraph223Tests.test_exact_rational_arithmetic_every_context) ... ok\ntest_four_assets_geometry_boundaries_and_actual_minimum_source_fonts (test_source.Paragraph223Tests.test_four_assets_geometry_boundaries_and_actual_minimum_source_fonts) ... ok\ntest_frozen_sources_goals_prompts_points_and_every_answer (test_source.Paragraph223Tests.test_frozen_sources_goals_prompts_points_and_every_answer) ... ok\ntest_headings_numbering_shared_exercises_and_recap (test_source.Paragraph223Tests.test_headings_numbering_shared_exercises_and_recap) ... ok\ntest_support_fades_and_combined_change_is_independent (test_source.Paragraph223Tests.test_support_fades_and_combined_change_is_independent) ... ok\ntest_tables_and_reproducibility (test_source.Paragraph223Tests.test_tables_and_reproducibility) ... ok\ntest_actual_accepted_inputs_match_exact_published_lesson_git_bytes (test_successor.Successor223Tests.test_actual_accepted_inputs_match_exact_published_lesson_git_bytes) ... ok\ntest_complete_original_seven_tests_and_four_sources_and_helper_immutable (test_successor.Successor223Tests.test_complete_original_seven_tests_and_four_sources_and_helper_immutable) ... ok\ntest_each_altered_or_unknown_input_fails_before_every_side_effect (test_successor.Successor223Tests.test_each_altered_or_unknown_input_fails_before_every_side_effect) ... ok\ntest_exact_four_literal_whole_generator_transition (test_successor.Successor223Tests.test_exact_four_literal_whole_generator_transition) ... ok\ntest_unrelated_generator_changes_are_rejected (test_successor.Successor223Tests.test_unrelated_generator_changes_are_rejected) ... ok\ntest_unrelated_source_and_original_test_mutations_are_rejected (test_successor.Successor223Tests.test_unrelated_source_and_original_test_mutations_are_rejected) ... ok\ntest_valid_inputs_advance_to_existing_first_authority_subprocess (test_successor.Successor223Tests.test_valid_inputs_advance_to_existing_first_authority_subprocess) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.824s\n\nOK\n",
+  "expected_exit": 0
+}

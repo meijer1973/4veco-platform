@@ -1,0 +1,25 @@
+{
+  "record_type": "Post-execution transcription of actual tool invocation; no fabricated timestamps or captured streams.",
+  "command": [
+    "C:/Python314/python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-check.py",
+    "print"
+  ],
+  "cwd": "C:\\wt\\book2-223-qc-20260906\\4veco-platform",
+  "path_first": "C:/msys64/mingw64/bin",
+  "exit_code_observed": 0,
+  "implementation": "File-backed Python entrypoint calls native.reproduce(print), shared build_document, deterministic_zip and render_proof directly in process; no inline node -e.",
+  "reservation": {
+    "file": "BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-reservation.json",
+    "sha256": "2ab0b268bd2986d7cd81fa8ed12e5f2f17b6022fc3a01f7597a85c156c9baad7"
+  },
+  "manifest": {
+    "file": "BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-manifest.json",
+    "sha256": "259fd034c46922e3810fdf4d0761abd58733b52eec78f7a845e75a5a01417314"
+  },
+  "parity": {
+    "file": "BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-parity.json",
+    "sha256": "176f7b37d5b5bf6221ab3681d7e36909aac6b2483666231dd628c94d436c8e27"
+  },
+  "limit": "Outer stdout was delivered in the tool transcript, not captured as a subprocess stream; function results and full command are durably bound here."
+}

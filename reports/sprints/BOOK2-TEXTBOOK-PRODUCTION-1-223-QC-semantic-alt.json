@@ -1,0 +1,59 @@
+{
+  "actor": "paragraph_214_builder",
+  "role": "independent223specialistQC",
+  "rows": [
+    {
+      "kind": "paragraaf",
+      "image": 1,
+      "alt": "Figuur 1: Dezelfde inkomensstijging, drie verschillende hoeveelheidsreacties.",
+      "characters": 77,
+      "caption": "Figuur 1: Dezelfde inkomensstijging, drie\nverschillende hoeveelheidsreacties.",
+      "html_sha256": "3b1725338d2cdb16edf616da76516b699d97055cf74cdfaca076eeaf94f2cc08",
+      "noun_first_functional_description": true,
+      "finding": null
+    },
+    {
+      "kind": "paragraaf",
+      "image": 2,
+      "alt": "Figuur 2: Zoek eerst het teken van Ei en daarna het juiste gebied.",
+      "characters": 66,
+      "caption": "Figuur 2: Zoek eerst het teken van Ei en\ndaarna het juiste gebied.",
+      "html_sha256": "3b1725338d2cdb16edf616da76516b699d97055cf74cdfaca076eeaf94f2cc08",
+      "noun_first_functional_description": false,
+      "finding": "B223-ALT-01"
+    },
+    {
+      "kind": "paragraaf",
+      "image": 3,
+      "alt": "Figuur 3: Elke verhouding benoemt een hoeveelheidsgoed én een ander prijsgoed.",
+      "characters": 78,
+      "caption": "Figuur 3: Elke verhouding benoemt een\nhoeveelheidsgoed én een ander prijsgoed.",
+      "html_sha256": "3b1725338d2cdb16edf616da76516b699d97055cf74cdfaca076eeaf94f2cc08",
+      "noun_first_functional_description": true,
+      "finding": null
+    },
+    {
+      "kind": "paragraaf",
+      "image": 4,
+      "alt": "Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.",
+      "characters": 82,
+      "caption": "Figuur 4: Vergelijk afzonderlijke\nveranderingen steeds met dezelfde beginsituatie.",
+      "html_sha256": "3b1725338d2cdb16edf616da76516b699d97055cf74cdfaca076eeaf94f2cc08",
+      "noun_first_functional_description": false,
+      "finding": "B223-ALT-01"
+    },
+    {
+      "kind": "opgaven",
+      "image": 1,
+      "alt": "Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.",
+      "characters": 82,
+      "caption": "Figuur 4: Vergelijk afzonderlijke\nveranderingen steeds met dezelfde beginsituatie.",
+      "html_sha256": "cf691595eb0ea599ba90825f631d98eaa9cdf75526de4435d5ea569fea610893",
+      "noun_first_functional_description": false,
+      "finding": "B223-ALT-01"
+    }
+  ],
+  "status": "REVISE",
+  "reason": "Fig2 and fig4 actual HTML alternatives are imperative captions, not noun-first functional descriptions.",
+  "required_fix": "Author explicit concise noun-first alternatives, preserve full visible captions and mathematics; regenerate and independently review exact delta."
+}

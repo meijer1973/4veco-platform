@@ -1,0 +1,150 @@
+{
+  "pass": true,
+  "native_manifests": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-evidence/223-antwoorden-30cd682358c5-r14/manifest.json",
+      "sha256": "f608494975ba81881ac230506064fb36f09ae45d0feb82a923ba2f05ed7f413d",
+      "pages": 7
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-evidence/223-antwoorden-30cd682358c5-r15/manifest.json",
+      "sha256": "a747c2a9f5d50f12df139ccd1fce6eeb0bab28426aa4b1afecbf74ca378d4090",
+      "pages": 7
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-evidence/223-antwoorden-30cd682358c5-r16/manifest.json",
+      "sha256": "f04b131e0178872e0e3b9805a31efd51ebd779825592e719755f753a2e4f236b",
+      "pages": 7
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-evidence/223-antwoorden-30cd682358c5-r18/manifest.json",
+      "sha256": "6c2079409bf6abb6ab9bc49bf6b4445561a892f54915ab50d70315ec6f6c58c0",
+      "pages": 7
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-evidence/223-opgaven-50cf2bbeaa19-r14/manifest.json",
+      "sha256": "847849076b2a73ab90724303cfade6b400abf2c1efc72b5e8d50642373f0b8ae",
+      "pages": 10
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-evidence/223-opgaven-50cf2bbeaa19-r15/manifest.json",
+      "sha256": "3011f1f67fe8c762f9b8776fa06b299dce5f23d0ce9d996c4e2f1823a4762674",
+      "pages": 10
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-evidence/223-opgaven-50cf2bbeaa19-r16/manifest.json",
+      "sha256": "3a5b2ea3fe3d13e290c3d5562923066073a8f4531093f5996d07b77efc8f991a",
+      "pages": 10
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-evidence/223-opgaven-50cf2bbeaa19-r18/manifest.json",
+      "sha256": "540ea8bad7a7db5938c66f2eead3da8875fa455b61d33cea6ed6e6f72c8cb362",
+      "pages": 10
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-evidence/223-paragraaf-ca27f8bd6cbb-r14/manifest.json",
+      "sha256": "f652f138d54ab79dd81da8556ae8625fb4b6285ce77f059c613721caa3b5de0f",
+      "pages": 15
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-evidence/223-paragraaf-ca27f8bd6cbb-r15/manifest.json",
+      "sha256": "9c9983935881f3521f3c1b56ca76b8a2e23e995ba8e742ab5d16231b9ce1fd44",
+      "pages": 15
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-evidence/223-paragraaf-ca27f8bd6cbb-r16/manifest.json",
+      "sha256": "e7fcab1717ee3879d2d72c0821a4dc2af9a40c3613eda86bf623a577a71d69f5",
+      "pages": 15
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-evidence/223-paragraaf-ca27f8bd6cbb-r18/manifest.json",
+      "sha256": "7f65b3f78ab60daebc9a373c191537e9debdb6ee42e16b3d1b0e2e77e38ac701",
+      "pages": 15
+    }
+  ],
+  "pending_manifests": 12,
+  "immutable_generated_pages": 128,
+  "personally_inspected_pages": "Only all32 r14 pages, each in color and grayscale; later identical pages are parity evidence, not extra claimed personal views.",
+  "prior_source_checks": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md",
+      "sha256": "c1449aa3fce3cda67bd7f0beb5a72a2340c149ecc3ce7dc797d2b9f1beea16a2",
+      "personally_read_lines": [
+        1,
+        54
+      ]
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "sha256": "b14131b1c3bd44f4718f7b819159a5728cb6a5ee07453ad3e053e2a654a4cb8f",
+      "personally_read_lines": [
+        126,
+        154
+      ]
+    }
+  ],
+  "own_evidence_files": {
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-baseline.json": "1554e958549a7ae991e3c400e41298bb84b83715d548d3c900aa047f5f97c7e3",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-blocking-finding.json": "e6609c89286ca15b2c3d5fa321af681847031bfa48605d2f8b35e45be699594a",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-bundle.json": "20b27ee3e8981098ce813d68604fa31cda23905b81d381fbe2253d57b826f4a4",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-check.py": "fd1a26e76797e74a1a2bd50af62d3e9ea77b4a30fffe9914ca9056a68bf44436",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-currentness.json": "b5d873bebb5014f089275ebfa3d1805a75e0dbb84b207472763d4fcb76f733af",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-durable.json": "2248c5c94f263144d892ccefe3276d9ae3d16ecd7a5df66da60c71913a022f8a",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-final-integrity.json": "3ed4dab5f8fdb9fa62f3387c47341f95bec8a1e1ca536811f6002094d5a52ed1",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-full-manifest.json": "8823c65109b3caded0cbd7548cca7da9f2a7a57f90eb82d67903dfd5e9d171a2",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-full-parity.json": "0ce87e2aefc5b1569f5a1a155d03c21bb008c3dc45dec40672b2cbafb6335e14",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-full-process.json": "e13a3e30eb468ab84f3fabd5e288262cd8e40042dc29cd59880736d230fef154",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-full-reservation.json": "dd94ba52aaf049a3a7b5bcf48ed856bca5b488fd828bf00e35b6b2b87f96c1b4",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-grayscale-binding.json": "f7b5fc2fa1cacd34f553a2951fffc68a921b0bce009a5c15c1a2f33a0973dfc4",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-independent-mathematics.json": "3313dd3b0ce743392ef6df208ed87114949c404a16831632c4dde3395c8e821f",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-native-check.json": "ebfa5b6d1e154dcaf6d3b9bfe4b9e3d2e3b3ed52b3113fdc2ad2a1cd23a95358",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-native-process.json": "20f8aaa97475ee0d3225de5ec0cf2fab5d6e3b122387bc78a820eee948fb7e4d",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-personal-inspection.json": "e16a4d04aa7e454acd21112bfeb20a78546c89387ef17a78b9f33ac8b6d418f8",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-plan.md": "1e0b369f39dd1c79cdf258d9861fdeb63364323574e6a1b4bf0c35709185a8a9",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-post-qc-integrity.json": "6d6ffb58206be15d5c364ee371c02e652102f9663170449ff7fcd85a1f75283e",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-post-qc-publisher-print.json": "2e1f2111e518022440cfccd77a5721d251b903f2c2d067b4615fba3929efdc68",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-post-qc-student-web.json": "03b978abeb42b8980c9c0c9535146ac76aa0712d3bc4bd5edfdb170aed121d4c",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-complete-process-r2.json": "d02b1ca473e8dd3129e48f697ac81d2e87297baa0a12613afbacab8bd4646167",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-complete-process.json": "115f88ac92761dc234f267a04c8b14393083cbaa33c4fff33a59c8917aa18648",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-invocation.json": "4acf04ed6a5c2fa12f2b760326cf4970eb6c99e767a36ea08ef440cae13cdffd",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-log-print-reservation.json": "9a40cdd2861798f021acf7d6295be983134b329cb952d232f595352e74501da7",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-log2-print-manifest.json": "eaa8d11e98304614b199ec6eecfa1d704582254ef9365f52fd2c51f3ff58b70c",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-log2-print-parity.json": "97fb9ffed7252d8fbc1cf4e14b1787005e01e12c1ca8d3857105b5a69a519233",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-log2-print-reservation.json": "2fc68eec12cae72b8b291573da269427490d0b6aad681060c95d45f04e938912",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-manifest.json": "259fd034c46922e3810fdf4d0761abd58733b52eec78f7a845e75a5a01417314",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-parity.json": "176f7b37d5b5bf6221ab3681d7e36909aac6b2483666231dd628c94d436c8e27",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-reservation.json": "2ab0b268bd2986d7cd81fa8ed12e5f2f17b6022fc3a01f7597a85c156c9baad7",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-publisher-print.json": "2ef95517ae165ac1bcbeff83cf0e275ec7679c22365f1aded482c230c2053ad3",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-report.md": "7b2a5377949cfcdca6654672db6784b2ee619718f92792fe09b15eb7a00bb431",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-semantic-alt.json": "855500656b5bdff3061af3d821406e9e8ffb7f197170172e05427d6508852c9b",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-specialist.py": "36c3fc55aff50e7f489e7d36e8e3eb13727834e337cc22abb0f7858d22913f70",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-student-web.json": "d18188676074156980cb34496e86deaa8cbc79383a7f9e4f1ecf134bcc084534",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-tests.json": "ff0dded8a32627db02dff6ef92786bd63031e1284611730ecd569775eb529202",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-thin-manifest.json": "792694e44bcb385af6938daf2684bd5cd6e8fa11dbd3ca6c2c34ef2461ede398",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-thin-parity.json": "31d5edcd9a87d572c7e9b00a12ff569afa73ceb1f3c227671983f629073a3422",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-thin-process.json": "5a3dc6940aec9d117df6763b33b269ec961fa3bf3361785c8fe6c12abf39e83f",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-thin-reservation.json": "d6406b1378868843dc80fbbcf3239ad1a51a8b0270f07d0cdacba05c2abee25f"
+  },
+  "qc_sha256": "6d93128f5cdcd363fc4a7e5a6e5d462162f130a18f4f01fd4656be22ef9e2586",
+  "report_sha256": "7b2a5377949cfcdca6654672db6784b2ee619718f92792fe09b15eb7a00bb431",
+  "source_binding": {
+    "source_sha256": {
+      "build-scripts/content/book-2/b2_223.py": "5b18047a04ecd093a6d469fe5d69c049351f9c5ed21c3ad1b2aa336107d9f57c",
+      "build-scripts/content/book-2/print_pipeline.py": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "build-scripts/content/book-2/223/check_render.py": "d8a5c5f706e8d4fa647374b7dd2f1d5d393fe0419c8ee8b0a3ca2fd2f7f0a92b",
+      "build-scripts/content/book-2/223/test_source.py": "a1f4a1a8d45e01a295ff61034e59d5d1d4bc1f992b6dc39f6a64b7963c7fc6af",
+      "build-scripts/content/book-2/223/theory.md": "8835a4d94097bff54aaf2f58308f4adbd7ac49005aee443f352fcecdb9a38048",
+      "build-scripts/content/book-2/223/exercises.md": "0a7a48bdb65bd0182c757e3af4edc734327d953319df422fe852648ae9823d1c",
+      "build-scripts/content/book-2/223/answers.md": "d68a20c6e494430327c583ba097e28902b32b29599fec9d775e8b1e5a6bf72cc",
+      "build-scripts/content/book-2/223/target-answers.md": "f122a7109e59dbb2ee80201e30002f846356a97fa7286d11abfaf8b496e14996"
+    },
+    "accepted221_raw_and_lf": {
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811",
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa",
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db"
+    }
+  },
+  "specialist_verdict": "REVISE",
+  "root_acceptance": "PENDING"
+}

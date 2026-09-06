@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Python314\\python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-specialist.py",
+    "print-logged-inner"
+  ],
+  "cwd": "C:\\wt\\book2-223-qc-20260906\\4veco-platform",
+  "started": "2026-09-06T00:50:57.892305+00:00",
+  "ended": "2026-09-06T00:51:00.197790+00:00",
+  "path_first": "C:/msys64/mingw64/bin",
+  "exit_code": 1,
+  "stdout": "print-log-print-reservation: BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-log-print-reservation.json SHA256 9a40cdd2861798f021acf7d6295be983134b329cb952d232f595352e74501da7\n",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-specialist.py\", line 239, in <module>\n    n.reproduce('print')\n    ~~~~~~~~~~~^^^^^^^^^\n  File \"C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-223-S1-root-check.py\", line 258, in reproduce\n    assert not manifest.exists()\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "expected_exit": 0
+}
