@@ -1,0 +1,17 @@
+{
+  "label": "fraction-probe-r1",
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/214/test_source.py",
+    "SourceTests.test_ceiling_not_floor_and_rounding_counterexample"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:11:35.783Z",
+  "finish": "2026-09-06T08:11:36.177Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "",
+  "stderr": "test_ceiling_not_floor_and_rounding_counterexample (__main__.SourceTests.test_ceiling_not_floor_and_rounding_counterexample) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 1 test in 0.047s\r\n\r\nOK\r\n",
+  "stdout_base64": "",
+  "stderr_base64": "dGVzdF9jZWlsaW5nX25vdF9mbG9vcl9hbmRfcm91bmRpbmdfY291bnRlcmV4YW1wbGUgKF9fbWFpbl9fLlNvdXJjZVRlc3RzLnRlc3RfY2VpbGluZ19ub3RfZmxvb3JfYW5kX3JvdW5kaW5nX2NvdW50ZXJleGFtcGxlKSAuLi4gb2sNCg0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0KUmFuIDEgdGVzdCBpbiAwLjA0N3MNCg0KT0sNCg=="
+}

@@ -47,4 +47,16 @@ else if(process.argv[2]==='snapshot'){
  for(const rel of base.selected_native_paths){const b=read(L,rel),dest=path.join(dir,path.basename(rel));fs.writeFileSync(dest,b,{flag:'wx'});a(fs.readFileSync(dest).equals(b));rows.push({source:rel,evidence:path.relative(P,dest).replaceAll('\\','/'),bytes:b.length,sha256:hash(b)});}
  write(revision+'-retained-native',{revision,rows,status:'INTERMEDIATE_NATIVE_BYTES_RETAINED_NOT_VISUAL_ACCEPTANCE',reason:'All source/output and image bytes retained before source-level layout revision; no restore-copy to canonical output.'});
 }
-else throw Error('Expected baseline or gates');
+else if(process.argv[2]==='custody'){
+ const label=process.argv[3];a.match(label,/^[a-z0-9-]+$/);const baseline=JSON.parse(read(P,'reports/sprints/'+N+'-baseline.json'));const results={};
+ for(const[repo,root]of Object.entries(roots)){
+  const except=repo==='4veco-platform'?['reports/github-agent-index-platform.json','reports/github-agent-index-platform.md','reports/github-agent-index-lessen.json','reports/github-agent-index-lessen.md']:baseline.selected_native_paths;
+  const checked=[];for(const row of baseline.repositories[repo].rows){if(except.includes(row.path))continue;a.equal(hash(read(root,row.path)),row.raw_sha256,row.path);checked.push({path:row.path,raw_sha256:row.raw_sha256});}
+  const diff=git(root,'diff','--name-only','-z',baseline.repositories[repo].baseline,'HEAD').toString().split('\0').filter(Boolean),dirty=git(root,'status','--porcelain=v1','-z','--untracked-files=all').toString().split('\0').filter(Boolean).map(x=>x.slice(3));
+  const allowed=p=>repo==='4veco-platform'?(p==='build-scripts/content/book-2/b2_214.py'||p.startsWith('build-scripts/content/book-2/214/')||p.startsWith('reports/sprints/'+N+'-')||except.includes(p)):except.includes(p);
+  for(const p of [...diff,...dirty])a(allowed(p),'Out-of-scope '+repo+':'+p);
+  results[repo]={head:git(root,'rev-parse','HEAD').toString().trim(),baseline:baseline.repositories[repo].baseline,prior_files:baseline.repositories[repo].rows.length,preserved:checked.length,checked,diff,dirty,strict_owned_paths:true};
+ }
+ write(label+'-custody',{status:'PASS',repositories:results,baseline_sha256:hash(read(P,'reports/sprints/'+N+'-baseline.json'))});console.log(JSON.stringify({status:'PASS',preserved:Object.fromEntries(Object.entries(results).map(([r,x])=>[r,x.preserved]))}));
+}
+else throw Error('Expected baseline, gates, command, snapshot or custody');
