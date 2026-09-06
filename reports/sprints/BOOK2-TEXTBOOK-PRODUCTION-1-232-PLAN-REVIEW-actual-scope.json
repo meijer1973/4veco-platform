@@ -1,0 +1,245 @@
+{
+  "subject": {
+    "status": "PASS",
+    "platform_base": "8e2c8aff7d71875ce38740be410d2d771c1516b3",
+    "platform_head": "07209895b0d4b9253df51774520adf5c003e6008",
+    "lessons_base": "9daf4b8a9696fcdce1d485d85dbc0c59b7b6dbe6",
+    "lessons_head": "9daf4b8a9696fcdce1d485d85dbc0c59b7b6dbe6",
+    "platform_paths": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-author-readonly-extended-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-author-readonly-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-bundle-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-check.py",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-custody-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-custody.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-custody.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-durable-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-fetch-lessons-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-fetch-platform-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-foundation-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-governance-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-independent-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-independent-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-independent-r3-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-independent-r4-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-lessons-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-owned-whitespace-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-platform-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-publish.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-report.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-run.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-stage-inventory.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-structural-process.json"
+    ],
+    "lessons_paths": [],
+    "unknown_paths": 0,
+    "canonical_plan_source_pupil_registry_prior_evidence_edits": 0
+  },
+  "actual_scopes": [
+    {
+      "name": "own-platform",
+      "base": "8e2c8aff7d71875ce38740be410d2d771c1516b3",
+      "head": "07209895b0d4b9253df51774520adf5c003e6008",
+      "status": "FAIL",
+      "exit": 1,
+      "unknown": 0,
+      "failures": [
+        "shared lane needs at least one shared platform change",
+        "generated index/report or review-evidence changes are allowed only with lane-owned changes"
+      ],
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 25,
+        "unknown": 0
+      }
+    },
+    {
+      "name": "own-lessons",
+      "base": "9daf4b8a9696fcdce1d485d85dbc0c59b7b6dbe6",
+      "head": "9daf4b8a9696fcdce1d485d85dbc0c59b7b6dbe6",
+      "status": "FAIL",
+      "exit": 1,
+      "unknown": 0,
+      "failures": [
+        "no changed paths to classify",
+        "textbook lane needs at least one Part A textbook change"
+      ],
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "name": "complete-platform",
+      "base": "96416b6b5bd57094576e9aba0a42d682584ec479",
+      "head": "07209895b0d4b9253df51774520adf5c003e6008",
+      "status": "PASS",
+      "exit": 0,
+      "unknown": 0,
+      "failures": [],
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 80,
+        "generated_indexes": 6,
+        "review_evidence": 4210,
+        "unknown": 0
+      }
+    },
+    {
+      "name": "complete-lessons",
+      "base": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "9daf4b8a9696fcdce1d485d85dbc0c59b7b6dbe6",
+      "status": "PASS",
+      "exit": 0,
+      "unknown": 0,
+      "failures": [],
+      "counts": {
+        "partA_textbook": 204,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 5,
+        "unknown": 0
+      }
+    }
+  ],
+  "payload_evidence": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-author-readonly-extended-process.json",
+      "bytes": 7165,
+      "raw_sha256": "eeecfe7af6131ab48506f5b6ca0812de6a8561b015aa34d8b2e648b01a78005b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-author-readonly-process.json",
+      "bytes": 1364,
+      "raw_sha256": "e3f7217abf9a7880992f90147bc1cf19a1b479e861a27562cb6105ac2a890de8"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-bundle-process.json",
+      "bytes": 392,
+      "raw_sha256": "6143431d888058341494e94228d3293227c8a299dbb03bc5e40b3be48d91165a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-check.py",
+      "bytes": 13124,
+      "raw_sha256": "58da952d9f9514043e5e21ead9f4e5423e8e5680d24845ac4ecf060db00d8d9c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-custody-r1-process.json",
+      "bytes": 541,
+      "raw_sha256": "be274bd0ba64566f1cdfbf48e3627d3db1211e3663c4686fceba50e048bc7e24"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-custody.cjs",
+      "bytes": 7561,
+      "raw_sha256": "67e5027301701c614b194b0efa803202b4102371f821f0e3a412239ea333be1d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-custody.json",
+      "bytes": 3358825,
+      "raw_sha256": "70f47d0fe875b073f3f8da700d7eb092cf7ec8664fcccbc71b4533593208909f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-durable-process.json",
+      "bytes": 597,
+      "raw_sha256": "a5596514208b10b7cb7156a5c7456eeb105f98fc8dc41c6920b562c9e65af798"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-fetch-lessons-process.json",
+      "bytes": 282,
+      "raw_sha256": "2f3bb7176511265425900056e3cb721dacbed0641b7ad80c021f8c54fb86130e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-fetch-platform-process.json",
+      "bytes": 284,
+      "raw_sha256": "0af0b71e37ee2284331ae078f83badfc203e1d7057f1bc0f1c3ead457984a070"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-foundation-process.json",
+      "bytes": 566,
+      "raw_sha256": "68d28af016db3e7ce788be93744a93656f5f0529434fd8b2f2768cf6b01394d5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-governance-process.json",
+      "bytes": 952,
+      "raw_sha256": "1aeecf84b333d9933bbbe4b98072d9feff3353f031d8eaefa728cd501ddd6a3a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-independent-r1-process.json",
+      "bytes": 1172,
+      "raw_sha256": "59b7a3aeb43aa8b5330596ebdd17cef982b2887add01623d30f05070a7f377a8"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-independent-r2-process.json",
+      "bytes": 1180,
+      "raw_sha256": "d433da9d67ae731912bd2c12558c3d90a491271b066210ea17c8a3a0ddb463b4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-independent-r3-process.json",
+      "bytes": 11923,
+      "raw_sha256": "2a0b480339ee3631a80810d80ef9e28f46d2d148503ea39fbf091845682c45d5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-independent-r4-process.json",
+      "bytes": 12261,
+      "raw_sha256": "e4ad6bc5b53cd688de12ca53c746846c6d5847964ef0a71a6f61e532895c29a6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-lessons-claim-process.json",
+      "bytes": 1693,
+      "raw_sha256": "eced46825fc1a19e615d7ccd1f4a74970c68ef6ab56b14c8be2425ed458ddabf"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-owned-whitespace-process.json",
+      "bytes": 333,
+      "raw_sha256": "874443a9158084c67effa320c5266c3566db2585fa52604dde497c1181db68a9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-plan.md",
+      "bytes": 5986,
+      "raw_sha256": "4a041b0fc2f30dc5536124808283881da8bced8b96cbe3241b0a3d626e4d230d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-platform-claim-process.json",
+      "bytes": 1753,
+      "raw_sha256": "274ece065f34dcc6fadae60cfc055cb92084533612e3858bd1ed94ec1b18149c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-publish.cjs",
+      "bytes": 6211,
+      "raw_sha256": "3fc283d292d172752b0612b63d1b8de12f8b0ff61d0f98944877f3fe887eff1a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-report.md",
+      "bytes": 18885,
+      "raw_sha256": "9f9c69c0bce19dc42d5f958bd665a5fcde8fa5d65be638cf34b37e043803c875"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-run.cjs",
+      "bytes": 878,
+      "raw_sha256": "c4354ef689ac4caca3ba183aff6588b4f6d4748646b52d3e80852a6811333c9d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-stage-inventory.json",
+      "bytes": 2449,
+      "raw_sha256": "324182d9f1c3a1d7ee5f418f05b54c69ae18ae89b796867aba155399babe8d93"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-structural-process.json",
+      "bytes": 457,
+      "raw_sha256": "119f98cab24e73a09fb664af76f89773d68135dda4f47965c674dc8e58dd734e"
+    }
+  ],
+  "verdict": "PLAN REVISE F1",
+  "production_release": "PENDING",
+  "lessons_changes": 0
+}

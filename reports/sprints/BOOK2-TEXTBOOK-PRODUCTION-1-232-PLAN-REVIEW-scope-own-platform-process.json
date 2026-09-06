@@ -1,0 +1,21 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform",
+    "--lane",
+    "shared",
+    "--base",
+    "8e2c8aff7d71875ce38740be410d2d771c1516b3",
+    "--head",
+    "07209895b0d4b9253df51774520adf5c003e6008",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:49:37.860Z",
+  "ended_at": "2026-09-06T02:49:37.935Z",
+  "exit_code": 1,
+  "stdout": "{\n  \"ok\": false,\n  \"lane\": \"shared\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-author-readonly-extended-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-author-readonly-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-bundle-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-check.py\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-custody-r1-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-custody.cjs\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-custody.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-durable-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-fetch-lessons-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-fetch-platform-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-foundation-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-governance-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-independent-r1-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-independent-r2-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-independent-r3-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-independent-r4-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-lessons-claim-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-owned-whitespace-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-plan.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-platform-claim-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-publish.cjs\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-report.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-run.cjs\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-stage-inventory.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-structural-process.json\"\n    ],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [\n    \"shared lane needs at least one shared platform change\",\n    \"generated index/report or review-evidence changes are allowed only with lane-owned changes\"\n  ],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": ""
+}
