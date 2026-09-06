@@ -1,0 +1,118 @@
+{
+  "strict": {
+    "status": "PASS",
+    "unknown": 0,
+    "base": {
+      "P": "2fcbd586a1d51cb3b07df48536e29ce8e0e35026",
+      "L": "e90d5c122a44fb0fd547339cf48558680cbc6ace"
+    },
+    "head": {
+      "P": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+      "L": "e90d5c122a44fb0fd547339cf48558680cbc6ace"
+    },
+    "platform_paths": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-attributed-F1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-attributed-original-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-bundle-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-check.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-durable-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-goal-design-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-governance-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-independent-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-index-diagnostic-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-index-runtime.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-lessons-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-platform-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-report.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-structural-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-tools.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-whole-whitespace-process.json"
+    ],
+    "lesson_paths": []
+  },
+  "native": [
+    {
+      "label": "own-platform",
+      "base": "2fcbd586a1d51cb3b07df48536e29ce8e0e35026",
+      "head": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+      "exit": 1,
+      "ok": false,
+      "failures": [
+        "shared lane needs at least one shared platform change",
+        "generated index/report or review-evidence changes are allowed only with lane-owned changes"
+      ],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 18,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "own-lessons",
+      "base": "e90d5c122a44fb0fd547339cf48558680cbc6ace",
+      "head": "e90d5c122a44fb0fd547339cf48558680cbc6ace",
+      "exit": 1,
+      "ok": false,
+      "failures": [
+        "no changed paths to classify",
+        "textbook lane needs at least one Part A textbook change"
+      ],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "whole-platform",
+      "base": "96416b6b5bd57094576e9aba0a42d682584ec479",
+      "head": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 84,
+        "generated_indexes": 6,
+        "review_evidence": 6323,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "whole-lessons",
+      "base": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "e90d5c122a44fb0fd547339cf48558680cbc6ace",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 208,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 6,
+        "unknown": 0
+      }
+    }
+  ],
+  "custody": {
+    "status": "PASS",
+    "raw_prior_files_unchanged": 15939,
+    "platform_exceptions": [
+      "reports/github-agent-index-platform.json",
+      "reports/github-agent-index-platform.md",
+      "reports/github-agent-index-lessen.json",
+      "reports/github-agent-index-lessen.md"
+    ],
+    "lesson_exceptions": []
+  }
+}
