@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T03:49:36.148Z
+Generated: 2026-09-06T04:08:10.085Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `d525f8f2dc4e0e339ed13e47047496244aa16879`
-Files indexed: 13417
+Source commit: `ff7d6bcc419b6d2ea24a13f16a1b010a605a6590`
+Files indexed: 13429
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2746,7 +2746,7 @@ Count: 1030
 
 ## reports
 
-Count: 10627
+Count: 10639
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -10626,6 +10626,18 @@ Count: 10627
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-scope.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-bundle.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-check.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-durable.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-inputs.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-production224.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-structural.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-001.png
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-002.png
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-003.png
