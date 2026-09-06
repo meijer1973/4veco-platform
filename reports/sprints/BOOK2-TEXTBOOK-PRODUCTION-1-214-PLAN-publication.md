@@ -27,10 +27,21 @@ These are different scope claims. The complete candidate PASS does not turn the
 own evidence-only rejection into PASS. Current source authority is unchanged.
 This scope tail itself adds only helper/scope JSON/this publication note under
 the unique214-PLAN prefix. A separate terminal commit will contain exactly
-AGENT_GITHUB_ENTRY.md, RESEARCH_AGENT_MAP.md, RESEARCH_AGENT_MAP_REFERENCES.md and
-reports/url-index.md, generated with exact owned paired refs/branches. Normal
+reports/github-agent-index-platform.md, reports/github-agent-index-platform.json,
+reports/github-agent-index-lessen.md and reports/github-agent-index-lessen.json,
+generated with exact owned paired refs/branches. Normal
 fetch/push and final remote equivalence/clean-claim results are returned in the
 final dispatch, not speculative commit IDs written into this pre-tail record.
+
+Publication-preflight correction: the original planned index-tail names in
+scope.js/scope.json were a mistaken forecast, not an actual changed-path result.
+The actual native agent:index output identified the four report files above.
+This explicit successor note supersedes only that forecast; the scope JSON's
+actual committed comparisons and hashes remain unchanged. Native emit-url-index
+was run with its normal main default and is byte-unchanged from the input; an
+unnecessary branch-specific generation was regenerated back through that same
+native command, never hand-patched. The final exact tail audit checks the four
+real report files. No source or canonical plan changed in this correction.
 
 No PR/merge/pupil generation. Root should assign independent plan review of
 the exact lesson payload. Production remains pending accepted plan, actual
