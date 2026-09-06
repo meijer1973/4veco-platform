@@ -2,7 +2,7 @@
 Adapted from own prior234 F1 publication, not executed in a foreign worktree.
 No historical log overwritten. Index tail is exactly four separate paths.
 """
-import argparse, base64, hashlib, importlib.util, json, os, subprocess, sys
+import argparse, base64, hashlib, importlib.util, json, os, re, subprocess, sys
 from pathlib import Path
 P=Path(__file__).resolve().parents[2];L=P.parent/'4veco-lessen';PREFIX='BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT'
 s=importlib.util.spec_from_file_location('pub224c',P/'reports/sprints'/(PREFIX+'-controller.py'));c=importlib.util.module_from_spec(s);s.loader.exec_module(c)
@@ -10,6 +10,12 @@ E=c.E;BRANCH='agent/book2-224-qc-current-20260906';TASK=PREFIX;CONTROLLER='c8d82
 INDEXES={f'reports/github-agent-index-{r}.{e}' for r in ('platform','lessen') for e in ('json','md')}
 def head(root):return c.git(root,'rev-parse','HEAD').decode().strip()
 def names(root,*args):return [x.decode() for x in c.git(root,*args).split(b'\0') if x]
+def raw_in_tree(root,relative):
+    # Absolute known owned root + actual NUL Git filename; data read only.
+    # Avoid repeated Path.resolve network/filesystem metadata for16,836 files.
+    assert not Path(relative).is_absolute() and '..' not in Path(relative).parts
+    path=root/relative
+    return Path('\\\\?\\'+str(path)).read_bytes() if os.name=='nt' else path.read_bytes()
 def environment():
     return {**os.environ,'PYTHONIOENCODING':'utf-8','PYTHONDONTWRITEBYTECODE':'1','FOURVECO_PLATFORM_ROOT':str(P),'FOURVECO_PLATFORM_SOURCE_REF':head(P),'FOURVECO_PLATFORM_SOURCE_BRANCH':BRANCH,'FOURVECO_LESSEN_ROOT':str(L),'FOURVECO_LESSEN_SOURCE_REF':head(L),'FOURVECO_LESSEN_SOURCE_BRANCH':BRANCH}
 def run(label,argv,cwd=P,allowed=(0,),record=True):
@@ -26,7 +32,7 @@ def run(label,argv,cwd=P,allowed=(0,),record=True):
 def custody():
     b=c.builder();baseline=c.read(E/'224-baseline.json');qc=(b.LESSON_REL/'2.2.4-quality-ref.yaml').as_posix();changed=[]
     for row in baseline['files']:
-        value=c.digest(P.parent/row['repository']/row['path'])
+        value=c.sha(raw_in_tree(P.parent/row['repository'],row['path']))
         if value==row['raw_sha256']:continue
         assert row['repository']=='4veco-platform' and row['path'] in INDEXES or row['repository']=='4veco-lessen' and row['path']==qc,row['path']
         changed.append({**row,'current_sha256':value})
@@ -59,7 +65,7 @@ def integrity(label):
         n=0
         for entry in c.git(root,'ls-tree','-rz','HEAD').split(b'\0'):
             if not entry:continue
-            meta,path=entry.split(b'\t',1);value=c.raw(root/path.decode())
+            meta,path=entry.split(b'\t',1);value=raw_in_tree(root,path.decode())
             assert hashlib.sha1(b'blob '+str(len(value)).encode()+b'\0'+value).hexdigest()==meta.split()[-1].decode(),path
             n+=1
         gitrows.append({'repository':root.name,'head':head(root),'raw_git_blobs':n})
@@ -78,7 +84,12 @@ elif a.action=='stage':
         pending=set(names(root,'diff','--name-only','-z'))|set(names(root,'diff','--cached','--name-only','-z'))|set(names(root,'ls-files','--others','--exclude-standard','-z'))
         pending=sorted(pending-INDEXES) if root==P else sorted(pending)
         for i in range(0,len(pending),20):c.git(root,'add','--',*pending[i:i+20])
-        assert subprocess.run(['git','diff','--cached','--check'],cwd=root,capture_output=True).returncode==0
+        check=subprocess.run(['git','diff','--cached','--check'],cwd=root,capture_output=True)
+        if check.returncode:
+            preserved={str(E.relative_to(P)).replace('\\','/')+'/'+n for n in ['224-checker-r13-stdout.txt','224-direct-r12-stdout.txt','224-full-r10-stdout.txt','224-thin-r11-stdout.txt',*[f'224-{label}-{kind}-{stream}.txt' for label in ('preqc','finalqc') for kind,stream in [('native-readonly','stdout'),('publisher-print','stdout'),('source-tests','stderr'),('student-web','stdout')]]]}
+            diagnostics=re.findall(r'^([^\n]+?):\d+: (?:trailing whitespace\.|new blank line at EOF\.)',check.stdout.decode('utf8'),re.M)
+            assert root==P and check.returncode==2 and diagnostics and set(diagnostics)<=preserved
+            print(json.dumps({'whitespace_exit':2,'preserved_raw_stream_paths':sorted(set(diagnostics)),'not_a_clean_whitespace_claim':True}))
 elif a.action=='indexes':
     run('indexes',['node','--require','./reports/sprints/'+PREFIX+'-index-runtime.cjs','build-scripts/reports/github-agent-index.js'],record=False)
     run('url-check',['node','build-scripts/sprints/emit-url-index.js','--check'],record=False)

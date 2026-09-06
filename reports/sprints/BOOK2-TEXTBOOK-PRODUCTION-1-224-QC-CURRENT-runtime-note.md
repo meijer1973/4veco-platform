@@ -50,3 +50,18 @@ canonical QC path and was rejected before any edit. The report and QC were then
 applied with separate valid add/update operations. This transport diagnostic
 caused no source or authority mutation. A dead, unreachable conditional in the
 new publication helper was simplified before its first execution.
+
+The first publication stage completed whole inherited custody and both claims,
+then stopped at its overly broad clean-whitespace assertion (tool2de250, exit1).
+Actual owned-whitespace-process.json preserves git's exit2:3,739 diagnostics
+across exactly12 unmodified raw stdout/stderr files (CRLF or native trailing
+spaces). No report/helper/QC or pupil source whitespace defect was reported.
+The stage now permits only those exact captured stream paths, keeping the
+nonzero diagnostic honest; it never cleans or overwrites their raw bytes.
+Complete-candidate historical whitespace exit2 is separately preserved.
+
+Future whole-file custody uses direct extended DATA paths composed solely from
+known absolute owned roots and actual NUL Git filenames, rejecting absolute or
+parent-traversal relative names. This removes redundant resolve/stat calls but
+still hashes every full file and verifies every Git blob. No inventory subset,
+source change or shared tool/environment modification is introduced.
