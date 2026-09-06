@@ -33,20 +33,20 @@ for entry in inv['sources']:
     assert norm(text(candidate))==norm(text(actual)),f.name+' complete visible DOM'
     expected=BeautifulSoup(candidate,'html.parser'); actual_dom=BeautifulSoup(actual,'html.parser')
     # Read actual source image occurrences independently of the preparation inventory.
-    source_images=BeautifulSoup(s,'html.parser').find_all('img')
-    refs=[x['src'] for x in source_images]
+    # Paragraph sources use the approved Markdown image syntax, not raw img tags.
+    image_pattern=r'!\[([^\n]*)\]\((_assets/[^)]+)\)(?:\{([^}]*)\})?'
+    source_images=re.findall(image_pattern,s)
+    refs=[x[1] for x in source_images]
     for ref in refs:
-        assert re.fullmatch(r'_assets/2\.2\.[1-4]_(?:fig|we|ex)_\d+\.png',ref)
-        actual_references.add((f.parent/ref).relative_to(L).as_posix())
+        assert re.fullmatch(r'_assets/2\.2\.[1-4]_(?:fig|we|ex)_\d+\.svg',ref)
+        actual_references.add((f.parent/ref).with_suffix('.png').relative_to(L).as_posix())
     def reference_contract(mutant):
-        parsed=BeautifulSoup(mutant,'html.parser')
-        assert [(x.get('src'),x.get('alt')) for x in parsed.find_all('img')]==[(x.get('src'),x.get('alt')) for x in source_images]
-        assert [x.get_text(' ',strip=True) for x in parsed.find_all('figcaption')]==[x.get_text(' ',strip=True) for x in BeautifulSoup(s,'html.parser').find_all('figcaption')]
+        assert re.findall(image_pattern,mutant)==source_images
     reference_contract(s)
     if refs:
-        mutants=[('missing actual first figure',s.replace(refs[0],'')),('forged existing-image reference',s.replace(refs[0],refs[-1] if refs[-1]!=refs[0] else '_assets/2.2.4_ex_4.png')),('unknown reference',s.replace(refs[0],'_assets/2.2.9_fig_9.png')),('misleading alt',s.replace(source_images[0]['alt'],'Alle veranderingen bewijzen altijd meer winst.'))]
-        caption=BeautifulSoup(s,'html.parser').find('figcaption')
-        if caption:mutants.append(('missing full printed caption',s.replace(str(caption),'',1)))
+        mutants=[('missing actual first figure',s.replace(refs[0],'')),('forged existing-image reference',s.replace(refs[0],refs[-1] if refs[-1]!=refs[0] else '_assets/2.2.4_ex_4.svg')),('unknown reference',s.replace(refs[0],'_assets/2.2.9_fig_9.svg')),('misleading caption',s.replace(source_images[0][0],'Alle veranderingen bewijzen altijd meer winst.')),('missing full printed caption',s.replace(source_images[0][0],'',1))]
+        alt=re.search(r'alt="([^"]+)"',source_images[0][2])
+        if alt:mutants.append(('misleading functional alt',s.replace(alt[1],'Alle veranderingen bewijzen altijd meer winst.')))
         for label,mutant in mutants:
             assert mutant!=s
             try:reference_contract(mutant)
