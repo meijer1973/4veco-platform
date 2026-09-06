@@ -1,0 +1,10 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),A=require('node:assert/strict');
+const P=path.resolve(__dirname,'../..'),L=path.resolve(P,'../4veco-lessen'),E=path.join(__dirname,'BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence'),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const qc=path.join(L,'Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-quality-ref.yaml');
+const old=fs.readFileSync(path.join(E,'224-old-flat-quality-ref.yaml')),draft=fs.readFileSync(path.join(E,'224-superseded-draft-QC.yaml')),current=fs.readFileSync(qc);
+A.equal(sha(old),'1d0ee8d2cff69e664d3fedee47e6c9dc0854bab8be51af58aedbbca1a38d02ab');A.equal(sha(draft),'0395dcecb1b4e280825fc8a488c9b3f3dc719fd5e93c56a9b5dd7613e25e8b21');
+const check=require(path.join(P,'build-scripts/workflows/check-paragraph-lane-scope.js'));
+const originalChanges=check.changedQualityRefBlocks(old.toString(),draft.toString()),currentChanges=check.changedQualityRefBlocks(old.toString(),current.toString());
+A.deepEqual(originalChanges,['partA','companion']);A.deepEqual(currentChanges,['partA']);A(!/^companion:/m.test(current.toString()));A(current.includes('NOT_COMMISSIONED'));
+console.log(JSON.stringify({status:'PASS',actual_original_draft_blocks:originalChanges,actual_current_blocks:currentChanges,old_raw_sha256:sha(old),superseded_draft_sha256:sha(draft),current_QC_sha256:sha(current),companion_block_preserved_absent:true,new_lane_exception:false},null,2));
