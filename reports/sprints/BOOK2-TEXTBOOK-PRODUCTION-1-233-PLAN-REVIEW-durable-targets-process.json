@@ -1,0 +1,23 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-book2-target-authority-remediation.js",
+    "--durable"
+  ],
+  "cwd": "C:\\wt\\book2-233-plan-review-20260906\\4veco-platform",
+  "environment": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-233-plan-review-20260906\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "bc2c422ce6fcaf9550700a9df8bfc09f7e91d9a7",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-233-plan-review-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-233-plan-review-20260906\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "192d6624524e7605ab9d8d26067927b95041386e",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-233-plan-review-20260906"
+  },
+  "started_at": "2026-09-06T04:41:25.874Z",
+  "ended_at": "2026-09-06T04:41:26.397Z",
+  "exit_code": 0,
+  "stdout": "Book 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n",
+  "stderr": ""
+}

@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "actor": "paragraph_214_builder",
+  "role": "independent233PlanReviewer",
+  "platform_input": "8f702dd8d8f2428217d5220d8bae7336054dcaad",
+  "lessons_input": "192d6624524e7605ab9d8d26067927b95041386e",
+  "working_platform_head": "bc2c422ce6fcaf9550700a9df8bfc09f7e91d9a7",
+  "pending_owned_paths": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-active-bundle-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-author-readonly-paths.py",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-author-readonly-r1-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-author-readonly-r2-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-baseline.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-check.py",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-custody-r1-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-durable-targets-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-goal-design-currentness-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-governance-freshness-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-independent-checks-r1-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-independent-checks-r2-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-independent-checks-r3-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-lessons-claim-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-platform-claim-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-result.md",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-structural-currentness-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-tools.cjs"
+  ],
+  "gates": [
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-independent-checks-r3-process.json",
+      "raw_sha256": "660945ae0ecbfcc2b6d14af5a2c438f17040c257e21a08f9fd7d6632c3500900",
+      "exit_code": 0
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-author-readonly-r2-process.json",
+      "raw_sha256": "7bea3985162b3e2f85831f380825b93a1f51d30c2f714b2a471e804dbaf98458",
+      "exit_code": 0
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-structural-currentness-process.json",
+      "raw_sha256": "dc204cc1d7f5687e01b1cd0363f16625c6c661642ec68f1ba767f11d0b854c51",
+      "exit_code": 0
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-goal-design-currentness-process.json",
+      "raw_sha256": "63d45d647ddd4a28cfb5551b5e7cca36b2fbfb9879bb4e37658e8cea8021516e",
+      "exit_code": 0
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-durable-targets-process.json",
+      "raw_sha256": "22f8666c956a5234ad0709dfb57a8f8162d2671effe508249ca9be876b1fd2c5",
+      "exit_code": 0
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-active-bundle-process.json",
+      "raw_sha256": "b232de22d749c9ff63d020fb42c5e66baa760bb6d853658e43ab1a1138ab3691",
+      "exit_code": 0
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-governance-freshness-process.json",
+      "raw_sha256": "52feaaf7e85960210620adeb7fcb5b1f326ddd716787571a832b63c1237c6d25",
+      "exit_code": 0
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-custody-r1-process.json",
+      "raw_sha256": "764d81355224c5c45ca5dfbad9ad2914230b00be4339a18917d466b79c255a2c",
+      "exit_code": 0
+    }
+  ],
+  "bindings": [
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-result.md",
+      "raw_sha256": "318655373cb06851934bb5191fe3af0b28df547ef7948870939abb106503e08d"
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-check.py",
+      "raw_sha256": "a9cef0d0a778aa7e3a2ce32ef66a4236de45fd22a0c6af507b24b2a953a0a7e1"
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-tools.cjs",
+      "raw_sha256": "82972036e12fc71c9d9b0646252aafa0aec852ce9da459e28604916279a38543"
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-author-readonly-paths.py",
+      "raw_sha256": "a92410a3179faddc8967e1780ecdd9c750a11b3da27a6310f1ded33824d720d2"
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-baseline.json",
+      "raw_sha256": "3a5c0689df6824a4623721b9c083a7b16b39dffda640654b68f157a69488cecb"
+    }
+  ],
+  "custody": {
+    "status": "PASS",
+    "raw_prior_files_unchanged": 13894,
+    "lesson_exceptions": [],
+    "platform_exceptions": [
+      "reports/github-agent-index-platform.json",
+      "reports/github-agent-index-platform.md",
+      "reports/github-agent-index-lessen.json",
+      "reports/github-agent-index-lessen.md"
+    ]
+  },
+  "plan_raw_sha256": "0870d848b21017fedde86fb8d738bbe6afa21f68f8c1190905a8c0f2e3b8be19",
+  "lesson_changes": [],
+  "old_author_readonly_failure_preserved": true,
+  "rendering_performed": false,
+  "root_validation": "PENDING",
+  "root_acceptance": "PENDING",
+  "production_release": "PENDING",
+  "classroom_timing": "UNOBSERVED"
+}
