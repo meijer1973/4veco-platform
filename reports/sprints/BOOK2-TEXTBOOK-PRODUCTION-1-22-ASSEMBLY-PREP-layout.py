@@ -19,7 +19,34 @@ sha=lambda b:hashlib.sha256(b).hexdigest()
 registry=json.loads((P/'references/authored/course-target-exercises.json').read_text(encoding='utf-8-sig'))
 goals=[goal for row in registry['exercises'] if row['id'] in ('2.2.1','2.2.2','2.2.3') for goal in row['lesson_goals']]
 source=front.read_text(encoding='utf-8');css=style.read_text(encoding='utf-8')
-titles=['Prijselasticiteit','Elasticiteit en omzet','Inkomenselasticiteit en kruiselingse elasticiteit','Gemengde opgaven elasticiteit']
+titles=['Prijselasticiteit','Elasticiteit en omzet','Inkomenselasticiteit en kruislingse elasticiteit','Gemengde opgaven elasticiteit']
+
+# F22-FRONT-TITLE-01: pupil headings, not legacy folder spellings, govern.
+# The already reviewed mixed title intentionally omits the registry's colon.
+# This is an explicit existing presentation mapping, not a target rewrite.
+inventory=json.loads((P/'reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-baseline.json').read_text(encoding='utf-8'))['source_inventory']['inputs']
+selected=[row for row in inventory if not row['path'].endswith(' – antwoorden.md')]
+assert len(selected)==4
+canonical_title_bindings=[]
+title_fixtures=[]
+
+def check_title_binding(i,md,frozen_title):
+    ident=f'2.2.{i+1}'
+    suffix=' – opgaven' if i==3 else ''
+    assert re.findall(r'^# (.+)$',md,re.M)==[ident+' '+titles[i]+suffix]
+    assert frozen_title==(titles[i] if i<3 else 'Gemengde opgaven: elasticiteit')
+
+for i,row in enumerate(selected):
+    filename=(P.parent/'4veco-lessen'/row['path']).resolve()
+    # DATA-only long path; ordinary script path, cwd and inherited PATH remain.
+    readable=Path('\\\\?\\'+str(filename)) if sys.platform=='win32' else filename
+    data=readable.read_bytes()
+    assert sha(data)==row['raw_sha256']
+    record=next(v for v in registry['exercises'] if v['id']==f'2.2.{i+1}')
+    md=data.decode('utf-8');frozen_title=record['paragraph_title']
+    check_title_binding(i,md,frozen_title)
+    canonical_title_bindings.append({'id':record['id'],'selected_MD':row['path'],'raw_sha256':sha(data),'pupil_title':titles[i],'frozen_title':frozen_title,'mapping':'exact' if i<3 else 'existing reviewed mixed display title omits colon'})
+    title_fixtures.append((i,md,frozen_title))
 def check_source(s):
     soup=BeautifulSoup(s,'html.parser'); print_pipeline.validate_source_html(soup)
     roots=[node for node in soup.contents if getattr(node,'name',None)]
@@ -74,6 +101,11 @@ rejects('global paragraph styling',lambda:check_css(css.replace('.chapter-front 
 rejects('similar but unscoped class',lambda:check_css(css.replace('.chapter-front h1','.chapter-frontier h1')))
 rejects('outside adjacent paragraph',lambda:check_css(css.replace('.chapter-front h1','.chapter-front + p')))
 rejects('compressed line height',lambda:check_css(css.replace('1.18','0.8')))
+rejects('legacy folder spelling is not pupil title',lambda:check_source(source.replace('Inkomenselasticiteit en kruislingse elasticiteit','Inkomenselasticiteit en kruiselingse elasticiteit')))
+for i,md,frozen_title in title_fixtures:
+    rejects(f'forged actual pupil H1 {i+1}',lambda i=i,md=md,t=frozen_title:check_title_binding(i,md.replace('# 2.2.','# 9.2.',1),t))
+    rejects(f'forged frozen title {i+1}',lambda i=i,md=md,t=frozen_title:check_title_binding(i,md,t+' Onjuist'))
+    rejects(f'forged front title {i+1}',lambda i=i:check_source(source.replace('<td>'+titles[i]+'</td>','<td>'+titles[i]+' Onjuist</td>')))
 assert sha((P/'build-scripts/content/book-2/print_pipeline.py').read_bytes())=='51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5'
 # Isolated process-local front selector extension, not a shared source edit.
 print_pipeline.CSS+='\n'+css
@@ -90,6 +122,6 @@ for number,page in enumerate(document.pages,1):
             assert b.position_x>=0 and b.position_y>=0 and b.position_x+b.width<=page.width+1e-6 and b.position_y+b.height<=page.height+1e-6
             boxes.append({'text':b.text,'pt':pt,'x':b.position_x,'y':b.position_y,'width':b.width,'height':b.height})
     pages.append({'page':number,'width':page.width,'height':page.height,'text_boxes':boxes})
-result={'status':'AUTHOR_FRONT_SOURCE_AND_IN_MEMORY_LAYOUT_CHECK','source_sha256':sha(front.read_bytes()),'style_sha256':sha(style.read_bytes()),'content':content,'font_rules':fonts,'negative_cases':negative,'page_count':len(pages),'pages':pages,'native_files_written':0,'personal_views':0,'visual_verdict':'NOT_REVIEWED','assembly_release':False}
+result={'status':'AUTHOR_FRONT_SOURCE_AND_IN_MEMORY_LAYOUT_CHECK','source_sha256':sha(front.read_bytes()),'style_sha256':sha(style.read_bytes()),'canonical_title_bindings':canonical_title_bindings,'content':content,'font_rules':fonts,'negative_cases':negative,'page_count':len(pages),'pages':pages,'native_files_written':0,'personal_views':0,'visual_verdict':'NOT_REVIEWED','assembly_release':False}
 print(json.dumps(result,ensure_ascii=False,indent=2))
 assert len(pages)==1,'Front must occupy one page; actual diagnostic retained'

@@ -1,0 +1,312 @@
+{
+  "mapping": [
+    {
+      "original": "2104f5456279cd29315933fa3cee7cd9024e9120",
+      "adopted": "487584a5c33a32c38f5e77ca771832aa26c8eb51",
+      "files": [
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-plan.md"
+      ]
+    },
+    {
+      "original": "f70e02f7dc1a8fe02678ae2ccc1e793c634804da",
+      "adopted": "08d33982da216c31a1fcfd4e59be1e70f362b414",
+      "files": [
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-check.cjs",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review.py"
+      ]
+    },
+    {
+      "original": "5e1ef1e5c59cce4cb31445a6943e154dabe2949f",
+      "adopted": "0324fc2d4c2478db2463a61ff3add0c140795954",
+      "files": [
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-baseline.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-check.cjs",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r1-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review.py"
+      ]
+    },
+    {
+      "original": "1f8174fc3719988feeb4715c751eac0c5a4d868a",
+      "adopted": "2999cd7965bb160e6dcf4b4909d782eaed2dee9f",
+      "files": [
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-check.cjs",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r2-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review.py"
+      ]
+    },
+    {
+      "original": "f8eef15ba368a8f38a0605a7e472d5be74a33808",
+      "adopted": "468ad9b5bf864b8147cf15ad288f382ca6d43d56",
+      "files": [
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-bundle-r1-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-chapter-r1-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-durable-r1-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-governance-L-r1-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-governance-r1-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-integrity-r1.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r3-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review.py",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-structural-r1-process.json"
+      ]
+    },
+    {
+      "original": "d027475634e592307d4d06d2ea620d1feca4379e",
+      "adopted": "320bc3a9545e9c13eba64ccf3af9407b220cd493",
+      "files": [
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-index-runtime.cjs",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-personal.md",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-publication.cjs",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-report.md",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r4-process.json"
+      ]
+    },
+    {
+      "original": "c0e4731971c87f8bb646bc88a94f6faa650bc891",
+      "adopted": "0d8f985de074ec44431c670e77366097087fe2dc",
+      "files": [
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-index-diagnostic-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-integrity-r2.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-publication.cjs",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-publication.md",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-own-L-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-own-P-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-whole-L-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-whole-P-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-own-r1-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-whole-cr-r1-process.json",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-whole-r1-process.json"
+      ]
+    },
+    {
+      "original": "4e3c99c313cc88c89ee50a055bbd97d21fac90a8",
+      "adopted": "d4e69278cd052c84c2fe25d30de7e0fabc59a8e3",
+      "files": [
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-prepublication.json"
+      ]
+    }
+  ],
+  "verification": {
+    "files": [
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-baseline.json",
+        "raw_sha256": "6ad4fe25b1b1a498132cb5b543aea766429ddf43f9b3cef4dba518c274830f09"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-bundle-r1-process.json",
+        "raw_sha256": "4cc10306309b801668e5d04327bae619cea2bafa8b4ec294e0c2c31145baf624"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-chapter-r1-process.json",
+        "raw_sha256": "8ef539c58a08c473bc00178f39b735fc9488f535cea8d82763f9dfcc37846d59"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-check.cjs",
+        "raw_sha256": "d55b5996c6e4822a39e09f35d5e9a1e6dade1a50d6838f9ec3d3124f89157859"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-durable-r1-process.json",
+        "raw_sha256": "fc3073426cd9aea4e2a93f1bb2ed4c574e2861de6fb51a1192d55d5b856e20da"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-governance-L-r1-process.json",
+        "raw_sha256": "162fcea6044ed750ce473a29aa6bd8fd86175766e6a49b280be69143824dea20"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-governance-r1-process.json",
+        "raw_sha256": "78a28001d6c12adc7bab73a302d5fd61fb845aca13046b86111b4914895e689d"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-index-diagnostic-process.json",
+        "raw_sha256": "e0d7ee00f5257560afa94eeb6c8d890e49fd5a8fbd7139add92b18573e1640cf"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-index-runtime.cjs",
+        "raw_sha256": "c5ff8deb015969dfe5e335038ab009bd36879134e54d215b9bbb659dd26fada1"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-integrity-r1.json",
+        "raw_sha256": "a2911b70d6471e463804fc2be6b8b5ca6bbb4771fe5c4c87f5334aa203da5bbe"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-integrity-r2.json",
+        "raw_sha256": "a2911b70d6471e463804fc2be6b8b5ca6bbb4771fe5c4c87f5334aa203da5bbe"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-personal.md",
+        "raw_sha256": "d2c30d0b3709748c7cbedb5e988bdb8379d0afb68c012b1ffd227ce306108058"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-plan.md",
+        "raw_sha256": "41405ccc271db488fd1af8c1a4c8ddf9c897165b09cbbcc0a95433ca18177817"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-prepublication.json",
+        "raw_sha256": "67742c44b7927ca0d7498e557d07e2516e1619bfcae0c06828d0ba0aab405037"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-publication.cjs",
+        "raw_sha256": "fa56f1ed6154b78bf84420224dd32658d7cf54fa6193d6b4ad8ff565205ecba8"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-publication.md",
+        "raw_sha256": "bcacc596cc8fae74613abc0789f3fd37e92ae970956cd95a519f5ee8312bff28"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-report.md",
+        "raw_sha256": "75587b17e5526d3af96ee2dc85fa66c724df5f77b6828afa88965b36cbef2024"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r1-process.json",
+        "raw_sha256": "3f723d0a68b6e2e42b1a200a5dab9b682edbe01658bd2bed3e121d52fbb39863"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r2-process.json",
+        "raw_sha256": "0dcadd73b0498d1e64a98bbc05d482b0bc950d5527925300183b20aa967c500b"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r3-process.json",
+        "raw_sha256": "808111f34621296a649315b8c86d2b97d9e38687788837758fd93abbdccef2a6"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r4-process.json",
+        "raw_sha256": "5d3cef248dcc80df6c74bdf05059f0514662aea0f62a975b1d34bad24fe7a317"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review.py",
+        "raw_sha256": "ed5ab51560ce3525c0eeb6ef2b41124ebb73fb1db28fe3f23199e2399658322a"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-own-L-process.json",
+        "raw_sha256": "1f159adfca2c4921d71654af8e1a2b10a293d2a46a5fc8bb7a2ad0bbc4a6a196"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-own-P-process.json",
+        "raw_sha256": "6790ce751f8858534e6662f33a07af82d1404ff817e24c4d7ba2ddaab72d5714"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-whole-L-process.json",
+        "raw_sha256": "d2b1bb013db8e2208d949c3eceadf02a26ca43e837f72b7e804369bc95ec6d17"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-whole-P-process.json",
+        "raw_sha256": "f68b89d62e69509aba62ce6d5d622b31ce499e83fdda10b3f1fe0780faca8555"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1.json",
+        "raw_sha256": "f109a2ac7d6d6f9e3f8bdd61c24f4eaf9cac7c43db0ac00d346bcef82743f361"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-structural-r1-process.json",
+        "raw_sha256": "751e16521870bb3a726bc2f62d7483bc95ea37e0bb0ed0548fbd761d8cdfe901"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-own-r1-process.json",
+        "raw_sha256": "bfed1848904dda62039f20760332ec53541fad912990f13e9b7b840f34c0cee1"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-whole-cr-r1-process.json",
+        "raw_sha256": "647473b4cbab89b269eea7d1addaf861bd8e4904ffeed1b2429e13f024ab91e3"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-whole-r1-process.json",
+        "raw_sha256": "801044b88ec3a9a409e04c3bec65a126bf61d8c925a1c0198a318a979704fab9"
+      }
+    ],
+    "processes": [
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-bundle-r1-process.json",
+        "exit_code": 0,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-chapter-r1-process.json",
+        "exit_code": 0,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-durable-r1-process.json",
+        "exit_code": 0,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-governance-L-r1-process.json",
+        "exit_code": 0,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-governance-r1-process.json",
+        "exit_code": 0,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-index-diagnostic-process.json",
+        "exit_code": 0,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r1-process.json",
+        "exit_code": 1,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r2-process.json",
+        "exit_code": 0,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r3-process.json",
+        "exit_code": 1,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r4-process.json",
+        "exit_code": 0,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-own-L-process.json",
+        "exit_code": 1,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-own-P-process.json",
+        "exit_code": 1,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-whole-L-process.json",
+        "exit_code": 0,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-whole-P-process.json",
+        "exit_code": 0,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-structural-r1-process.json",
+        "exit_code": 0,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-own-r1-process.json",
+        "exit_code": 0,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-whole-cr-r1-process.json",
+        "exit_code": 2,
+        "committed_source_and_raw_streams": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-whole-r1-process.json",
+        "exit_code": 2,
+        "committed_source_and_raw_streams": true
+      }
+    ],
+    "verdict": "REVISE",
+    "independent_personal_existing_figure_views": 15,
+    "root_personal_views": 0
+  }
+}
