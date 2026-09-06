@@ -5,7 +5,10 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform §213 native verification `a2724b42c71962ae62acfc12411eea9fd21380b0`,
+Current224 verification: platform `8a92dcd7884faa3cf8114f5125b60bb22876c1f2`,
+with root-only QC/handoff transition in224-QC-ROOT-acceptance.md. Its original
+specialist QC was adopted at lesson `aa2087a20c5bee4465f9c98d83031116e94c9667`.
+Earlier snapshot: platform §213 native verification `a2724b42c71962ae62acfc12411eea9fd21380b0`,
 lessons acceptance `1cf1c1f972f196791fb37f6bbee523b7a2e3b676` with the exact
 root QC/handoff transition in213-QC-ROOT-acceptance.md. Current223 acceptance
 in223-root-acceptance.md remains unchanged, including the exact
@@ -18,8 +21,8 @@ All paths below are relative to the lesson book root
 ## Counts and evidence rules
 
 Expected: 27 theory + 6 consolidation + 6 chapter + 2 book = **41 PDFs**.
-At this checkpoint: **7 internally gate-closed current paragraph packages**:
-21 accepted-with-flags PDFs,2 adopted candidate PDFs,6 legacy unaccepted and12
+At this checkpoint: **8 internally gate-closed current paragraph packages**:
+23 accepted-with-flags PDFs,0 adopted candidate PDFs,6 legacy unaccepted and12
 absent. §211 now has current R5 independent paragraph review, distinct specialist
 QC and root acceptance/handoff. §212 now has current distinct specialist QC,
 root acceptance, closed S1 lineage and renewed handoff; its three PDFs are A. Physical
@@ -87,18 +90,19 @@ independent review/Part A quality record and handoff. Chapters/books require
 accepted source assemblies, exact asset parity, their own complete render and
 independent review gates. Do not emit paragraaf.* for the three consolidations.
 
-§224 now has the current author's complete two10-page editions and canonical
-independent paragraph PASS WITH FLAGS, adopted unchanged into root lesson
-f666bbb7dd258f1f01b38a20dd6ca3802848f8b7. Root checked all418 imported paths,
-six source files,15 native files and34 actual immutable accepted inputs. Fresh
-10 source tests, read-only native output/DOM/ink checks, both Part A profiles,
-current production/specialist, durable and full-bundle gates pass. Root reran
-the unchanged reviewer's107 actual invalid-input,15 whole-file and21 math
-probes; this is attributed predicate reuse, not another independent review.
-All48 independent personal views remain attributed. No new root positive native
-rebuild occurred in adoption. Its two PDFs are C: DISTINCT specialist QC,
-root full/thin/direct reproduction, acceptance and handoff remain pending.
-53.5/63.5/71.5 timing stays UNOBSERVED. See224-ROOT-ADOPTION-result.md.
+§224 now has current independent paragraph and distinct specialist PASS WITH
+FLAGS, root fullr14/thinr15/guarded-directr16 reproduction, internal acceptance
+and a complete nine-section handoff. All330 additional specialist imports are
+raw/Git exact; the earlier418-path author/review adoption remains preserved in
+224-ROOT-ADOPTION-result.md. Six source files,15 native files,34 actual current
+and committed release inputs,10 tests and141 real input/source/namespace negatives
+pass. Three root routes match all15 native bytes and60 raw/RGB page comparisons;
+both Part A profiles/current production/specialist/durable/full bundle pass.
+All48 specialist colour/grayscale observations remain attributed and are bound
+to current root colour/decoded-gray parity; root personal views0. Historical
+PENDING manifests and the earlier direct-controller limitations are preserved.
+Its two PDFs are A. 53.5/63.5/71.5 stays UNOBSERVED; aggregate acceptance remains
+separate. See224-QC-ROOT-result.md and224-QC-ROOT-acceptance.md.
 
 A = fresh internal paragraph acceptance with flags; not final owner/CI approval.
 C = adopted/root-verified current candidate; one or more acceptance gates pending.
@@ -131,8 +135,8 @@ No output is silently accepted through an older PASS or reviewed_final label.
 | 20 | 2.2.3 | paragraaf | A | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf` |
 | 21 | 2.2.3 | opgaven | A | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf` |
 | 22 | 2.2.3 | antwoorden | A | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf` |
-| 23 | 2.2.4 | opgaven | C | `2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf` |
-| 24 | 2.2.4 | antwoorden | C | `2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf` |
+| 23 | 2.2.4 | opgaven | A | `2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf` |
+| 24 | 2.2.4 | antwoorden | A | `2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf` |
 | 25 | 2.2 | hoofdstuk | L | `2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – hoofdstuk.pdf` |
 | 26 | 2.2 | antwoorden | L | `2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – antwoorden.pdf` |
 | 27 | 2.3.1 | paragraaf | A | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf` |
@@ -177,8 +181,8 @@ hashes alone are not student-quality acceptance.
 | 2.2.3 / paragraaf | `ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb` | Current internal acceptance with flags; review/QC/handoff complete |
 | 2.2.3 / opgaven | `50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80` | Current internal acceptance with flags; review/QC/handoff complete |
 | 2.2.3 / antwoorden | `30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10` | Current internal acceptance with flags; review/QC/handoff complete |
-| 2.2.4 / opgaven | `8eb84c6f10bb824033ffea669a04a393bf57c25b4757805523c0f44a19bafa0d` | Adopted current paragraph-review candidate; specialist/root acceptance/handoff pending |
-| 2.2.4 / antwoorden | `f6ba34f89ae0c4a4c0f26f12afb392af5271e1edde28bde65854b90287dd57f8` | Adopted current paragraph-review candidate; specialist/root acceptance/handoff pending |
+| 2.2.4 / opgaven | `8eb84c6f10bb824033ffea669a04a393bf57c25b4757805523c0f44a19bafa0d` | Current paragraph/specialist/root acceptance with flags; fullr14/thinr15/directr16 and handoff complete |
+| 2.2.4 / antwoorden | `f6ba34f89ae0c4a4c0f26f12afb392af5271e1edde28bde65854b90287dd57f8` | Current paragraph/specialist/root acceptance with flags; fullr14/thinr15/directr16 and handoff complete |
 | 2.3.1 / paragraaf | `088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e` | Internal acceptance with flags; current review/QC/handoff complete |
 | 2.3.1 / opgaven | `4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341` | Internal acceptance with flags; current review/QC/handoff complete |
 | 2.3.1 / antwoorden | `d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b` | Internal acceptance with flags; current review/QC/handoff complete |
@@ -196,8 +200,8 @@ See221-root-acceptance-r8.md for exact current canonical and adoption bindings.
 ## Remaining production and acceptance
 
 Wave-two §213 now has current internal acceptance with flags and a complete
-handoff. §224 now has two adopted candidate C PDFs pending its distinct specialist
-and root gates. §223 has current independent paragraph and
+handoff. §224 now has two internally accepted A PDFs with distinct specialist
+and root gates/handoff complete. §223 has current independent paragraph and
 specialist review, root acceptance and handoff with flags. §211 R5 has complete current paragraph review, distinct
 specialist QC and root acceptance/handoff with flags; see211-root-acceptance-r5.md.
 §212 R7 has its bonus block and current independent paragraph PASS. Current
@@ -222,9 +226,12 @@ and final combined book assembly.
 delta PASS and unchanged root full/thin/print proof; see223-S1-root-result.md.
 Its current specialist QC and root acceptance/handoff now pass with flags;
 see223-root-qc-result.md and223-root-acceptance.md. Final aggregate/CI gates remain.
-§214 follows accepted prerequisite teaching. §224's imported current paragraph
-review and exact native package are candidates; its distinct specialist QC,
-root positive native reproduction, acceptance and handoff are next. §231 is internally accepted
+§214 follows accepted prerequisite teaching and has a separately published author
+candidate awaiting distinct review/QC; it is not yet adopted into this inventory.
+§224's current paragraph/specialist reviews, root positive native reproduction,
+acceptance and handoff are complete. Chapter2.2 still requires independent
+consistency/front correction/recheck and separately reviewed accepted inputs,
+then actual chapter rendering and review. §231 is internally accepted
 with flags and current independent paragraph review, specialist QC and handoff;
 §232–§234 and all aggregate outputs remain pending their dependency/plan/review
 gates. Book front sources
@@ -246,9 +253,9 @@ Git-blob comparison for all legacy PDFs. An initial line-split probe failed to
 interpret Git's quoted Unicode paths and incorrectly counted zero baseline
 PDFs; it was discarded and replaced with NUL-delimited paths before this record.
 The corrected historical pre-§231 baseline/current tracked count was26. The
-current224 adoption refresh checks41 unique planned paths,29 present, six
-baseline-identical legacy PDFs,12 absent and all23 accepted/candidate PDF hashes. Current candidate status
-does not inherit a legacy acceptance label. No files were changed
+current224 root acceptance refresh checks41 unique planned paths,29 present, six
+baseline-identical legacy PDFs,12 absent and all23 accepted PDF hashes. Current
+acceptance never inherits a legacy label without fresh gates. No PDF files changed
 by inventory checks.
 
 Post-write checks: planned/active sprint bundle PASS, approved-use currentness
