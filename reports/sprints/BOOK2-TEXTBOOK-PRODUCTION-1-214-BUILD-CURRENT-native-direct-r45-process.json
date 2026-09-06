@@ -1,0 +1,22 @@
+{
+  "label": "native-direct-r45",
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/214/direct_print.py",
+    "--lessons-root",
+    "C:/wt/book2-214-build-current-20260906/4veco-lessen",
+    "--proof-root",
+    "C:/wt/book2-214-build-current-20260906/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct",
+    "--proof-suffix",
+    "r45"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:22:42.286Z",
+  "finish": "2026-09-06T08:23:17.446Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "{\"status\": \"NATIVE_CAPTURE_COMPLETE_NOT_ACCEPTED\", \"route\": \"direct\", \"native_files\": 15}\r\n",
+  "stderr": "",
+  "stdout_base64": "eyJzdGF0dXMiOiAiTkFUSVZFX0NBUFRVUkVfQ09NUExFVEVfTk9UX0FDQ0VQVEVEIiwgInJvdXRlIjogImRpcmVjdCIsICJuYXRpdmVfZmlsZXMiOiAxNX0NCg==",
+  "stderr_base64": ""
+}

@@ -1,0 +1,22 @@
+{
+  "label": "native-full-r43",
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/b2_214.py",
+    "--lessons-root",
+    "C:/wt/book2-214-build-current-20260906/4veco-lessen",
+    "--proof-root",
+    "C:/wt/book2-214-build-current-20260906/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full",
+    "--proof-suffix",
+    "r43"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:17:47.552Z",
+  "finish": "2026-09-06T08:19:39.615Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "{\"status\": \"NATIVE_CAPTURE_COMPLETE_NOT_ACCEPTED\", \"route\": \"full\", \"native_files\": 15, \"pages\": [9, 11]}\r\n",
+  "stderr": "",
+  "stdout_base64": "eyJzdGF0dXMiOiAiTkFUSVZFX0NBUFRVUkVfQ09NUExFVEVfTk9UX0FDQ0VQVEVEIiwgInJvdXRlIjogImZ1bGwiLCAibmF0aXZlX2ZpbGVzIjogMTUsICJwYWdlcyI6IFs5LCAxMV19DQo=",
+  "stderr_base64": ""
+}

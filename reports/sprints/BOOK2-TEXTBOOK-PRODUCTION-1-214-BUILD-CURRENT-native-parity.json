@@ -1,0 +1,1845 @@
+{
+  "status": "PASS",
+  "native_files": 15,
+  "runs": [
+    {
+      "revision": "r42",
+      "route": "full",
+      "author_run_sha256": "aab511ca4292271df1e9fb24ad7709ae239b4a209e8d68deec397be3940016ee",
+      "source_commit": "a6e3963b5c801f95de1753b3873db27d3978387d",
+      "actual_registered_worktrees": 375,
+      "actual_nested_observations": 17926,
+      "highest": 41,
+      "requested": 42,
+      "manifests": [
+        {
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-opgaven-r42-c89e1c4f4949\\manifest.json",
+          "sha256": "727bb7421d496ade7f0358e528a25e08890901fcbb15a8cfe6ff3ffda8355a80",
+          "PENDING_preserved": true
+        },
+        {
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-antwoorden-r42-f2951e2f9690\\manifest.json",
+          "sha256": "22c64481092504a6d2bd3d36d9b57e661e2913a3d3b3a301e399b449d3efa542",
+          "PENDING_preserved": true
+        }
+      ],
+      "pages": [
+        {
+          "edition": "antwoorden",
+          "page": 1,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "144be3616592d296b9f4021fd8530524215b73d4d131e85f81e629affe2dcadd",
+          "RGB_sha256": "764fe962019761a54ead4132eb63afac65903e7644f54f7d2f2411f2f36a2f46",
+          "gray_RGB_sha256": "44294068375748533c2ea60019754be0e3ea1067abe1ed8c55905e4703cf59cf"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 2,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "1aa830d882f453998671c7cca3c0a9bffefe5d42d1cd824ea7fbb6b2e6ed5834",
+          "RGB_sha256": "eceee4bd62566a64dd6c196899efb1816101e3d123384ee2fac31e89e6d29a02",
+          "gray_RGB_sha256": "fb2d07ed315188e2aada5613be946d28793d0a0336866052781212eac3ee0bdd"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 3,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "2a92e2da93b8b0779b6eb754a5f5bff5031756a0beb2fc9a528c85932e1edb56",
+          "RGB_sha256": "fcf1e9e3f9c7e3f5cdd128ba70fe77b061d57d113441cfe3ba89f9a970dd7aca",
+          "gray_RGB_sha256": "db0033c60102cecb6b5bb14c3c3875028e07fde512ec0a1972c790877fc6c3b2"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 4,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "859beeaa18607214d306bd05ae5b499ea9a15d6151d1012de9aeebc492c71ccd",
+          "RGB_sha256": "3afd3152b8f9b430b6747dcba1c3b1886344fadc13dadfe30cd8c0136c5ed1c6",
+          "gray_RGB_sha256": "52829b2f97db27fec9222957b6a21bdd205011e37488bcb17ba369301ccc88e6"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 5,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "42abe895a032fcc28c711f6189e45ba12a7d4cb4ff0cd69b5f490b615013db5d",
+          "RGB_sha256": "0abd6ce97a5ccac8165bac2dab547cfdfcff8e5dec7db102d1ba4615ca608b59",
+          "gray_RGB_sha256": "67f22016103d4a6306b3f8b2b77ca8fb0653bb44876fa014c4016f8f477d6f0a"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 6,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "161d26bf12cc74c870a65801f6a7c1260aed51b56fd87d64cf0b2c830dbddc4e",
+          "RGB_sha256": "9a662012d444c3fcdc95e9d5c7bb59408e5127163fa46502f50cda96521e4b1c",
+          "gray_RGB_sha256": "effb83cb6540a197d56e257f4b22ab85ebc31e753adc81c973691a062ac6242b"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 7,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "e2a321657e8051c6a2474382f765a9850a2f1e2d0c348f587bbd7aff26487506",
+          "RGB_sha256": "e8e2bd85b074e6244d3ea1df5f1f846d4bef8a14fe6723db9ceddbed71b7d447",
+          "gray_RGB_sha256": "9e381937570fe2aade0fbe4058eab10d9974ea14fd6d3b63598fcc4cca0bd119"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 8,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "dbcd5d22c39e5a7ab65fb795576d9223f1182bdd7055e85d1d15c973780cf130",
+          "RGB_sha256": "2e609d2eca3cbc4f43f0b3ea240d8c4a84f8c7f5ec88c372f8feb744dde77934",
+          "gray_RGB_sha256": "127047824d2afc6133c589eb183228a3218632816bcce933bd0d4180af6ab340"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 9,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "115bea0cef0a51be92717d28cffb0e9eda74062d327e23bc4aeafb532e5e9b8c",
+          "RGB_sha256": "412e2802c0d76a671942fabdbdf05d8df32534da2a9f518333e694c8dc4acb11",
+          "gray_RGB_sha256": "66c26ecac98ef7ae3427657d4ad966abdb590ccdb2b15f85aba8d5a4003f8b9c"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 10,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "689b62e00fbcbe76f06856b7f4b3ad980f3f9c00557d3581ab141a0a7b34850a",
+          "RGB_sha256": "8aa99dcbb0b7c90821dccdd331566224a10d9e0d2b8983d5cb390ad8d7aaffb1",
+          "gray_RGB_sha256": "2d9572d67059b0dae36abbcf47350396ac689617dfd5f50f9f6f2147403aebce"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 11,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "ce032f425a346b225f9072b7941f5ba4db3a41389052889ecf7338aa4950fe56",
+          "RGB_sha256": "d64e365ff51ed0f0e59317ae2a8b8768e18412537007f90dd7cdbbc8a1ee4011",
+          "gray_RGB_sha256": "2f5ebf660e733259477c348736ec12fdbddc12a29ba01a8c22b198a4f2d9ed1d"
+        },
+        {
+          "edition": "opgaven",
+          "page": 1,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "e2ec5b997e794fd00aa140b6d4ecd2331a895620d8d088ee655c31f88624afcb",
+          "RGB_sha256": "75d4278662d48e075753bc06318effd80dc1df2c4d8ed260ea456b3d7d772d2a",
+          "gray_RGB_sha256": "78a9aca84e6beb8f207749c084df7e92b8ac48c21414f804a596eb7624934f5d"
+        },
+        {
+          "edition": "opgaven",
+          "page": 2,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "f5592009541270253b705b15c2b1819e516024592b86f45052f74e24d3524012",
+          "RGB_sha256": "65278ef8fdc744d1fde4003473b08f3c26324716bd1f0446c48c06a52c4de386",
+          "gray_RGB_sha256": "34d103b08cd2fca80a95d0ce8e124be10201abc32cea33472a8e1acf4dd0fee1"
+        },
+        {
+          "edition": "opgaven",
+          "page": 3,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "8d1fa26f3f0fb5a292b904821618e2ca42c4a4911f0bc5aa03fe41dde003faa7",
+          "RGB_sha256": "6ed26431c5e33605cb557483e90f675d0b1da72869800a437b38e91dead55825",
+          "gray_RGB_sha256": "227fd7835ccb4c4e36f7a0c484d32a7ea551a82582d003dac72c13d79bfda584"
+        },
+        {
+          "edition": "opgaven",
+          "page": 4,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "d46de72bda2383dc8345c2c3db8900aa0e5adb89cdd671a99e9a2651dff39cbc",
+          "RGB_sha256": "e8c965292b6760f6451c1344c24698f986671d4a4de053a7c1ea263e94b98807",
+          "gray_RGB_sha256": "32bdbd97f4cf4fd731ec3f2225845fa64e109cce0968e66a2e2dac85f107fc4e"
+        },
+        {
+          "edition": "opgaven",
+          "page": 5,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "85f34db598ab3c7156c943cb30a16cb9fbe64988b6ffc6fc09c99db23f89fcde",
+          "RGB_sha256": "50332aad2b8bc14fb224946956934f98c8df1eba98a9980bdc705479cbd1bc0b",
+          "gray_RGB_sha256": "a0e02abd8353d3bc901ecc7c53ee70dbbbf375258a6aac81ea05bac470ba8798"
+        },
+        {
+          "edition": "opgaven",
+          "page": 6,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "a8931581b9e63efbe4385a682c1809a4cb540fb0a41b1db74e2d8c60371f9e67",
+          "RGB_sha256": "61c0669d3b3cb473cc47fb0c274c57658f68bf8515aceb8b8de5439a18d55425",
+          "gray_RGB_sha256": "e064e2be82962dcd6dcb942011c64b2c3048b3adae0e5c7b8004b87112c31b5a"
+        },
+        {
+          "edition": "opgaven",
+          "page": 7,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "4598565976725092ecf21a83ba6720a719b11b3c5b43f09f2c3a5167d896cd1e",
+          "RGB_sha256": "e90721c5d159662d907a48b649bc84d7c6a4d4ebe0ad40cb26971799cb4d36aa",
+          "gray_RGB_sha256": "7f95ea909244a88b8ca6cf5038e9ec8659d56f5ae9169dd690b6a157b995569f"
+        },
+        {
+          "edition": "opgaven",
+          "page": 8,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "7b4041f5bde012f8be3a6873f427ff402bfea4f71f4bf195c213fc595f3ebdb0",
+          "RGB_sha256": "9a47a99a003bfae7fc09bf304122c3f9a3079896a4c2184dfdd6a4ed5618eeff",
+          "gray_RGB_sha256": "1382aeed27c8c9ac8b9af577920e837220709ccfb75641719cdfca6fe5e4261f"
+        },
+        {
+          "edition": "opgaven",
+          "page": 9,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "6336f404dc07c590a1380670c95a10ebe111377afc69e785a7474fe5814aceaf",
+          "RGB_sha256": "187224a7a9dd2891f29faf8fcc40d0509436e34a2ae2782c61c302355c2505a0",
+          "gray_RGB_sha256": "baec94a324b00389613588aa07379822a98f5c160b6f27c98a5a4d836aacc7d9"
+        }
+      ],
+      "native": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md",
+          "bytes": 11615,
+          "sha256": "6e275609154b3d8ccec1e18410d7cd3a764385d3cf04c81ca4308e5865393e26"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.html",
+          "bytes": 353945,
+          "sha256": "e32385e10c407ac23caa7d8d2472b3b19881319ea34413cf49ba5a55c8ea256b"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+          "bytes": 359587,
+          "sha256": "c89e1c4f49491028d0cf171eb3219977b7545c127ad0a5c37f0f713df4136f48"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.md",
+          "bytes": 18912,
+          "sha256": "f94ec7bab34c3eea13d698e6ce44897dfb664b8c75d9a366b3a23920932d7285"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.html",
+          "bytes": 386375,
+          "sha256": "5ffc4cd3defb7e2a3b63c1b443593527067c961d1840c7e56a905c61d1a3df39"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+          "bytes": 401508,
+          "sha256": "f2951e2f969045b0c9d549c1f544fbd7d2a1679352169d3ac64d90ec799f27f8"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.svg",
+          "bytes": 10020,
+          "sha256": "09c2993d1d48f26b29bf49dd3abd221a118dcb8e4db9601081afbdb57a99ea4d"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.png",
+          "bytes": 121193,
+          "sha256": "2ed6ebe9bef5c400e9a8c5591d414b1d104dca4607485e84a5ea84bfb2626555"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.svg",
+          "bytes": 11753,
+          "sha256": "bf8ef4855b23010548de9cb7d290cba1125bb13a744623e77869e27d55c25eff"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.png",
+          "bytes": 137552,
+          "sha256": "58f81a1ff2c464e5471775620e9cf62fc9571b6078f9006b91e6b3f11cd44a05"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.svg",
+          "bytes": 9508,
+          "sha256": "7a41c0750657776681b163cad6be8471102f9ec9f2497a2d2e1e6c56492be92f"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.png",
+          "bytes": 132641,
+          "sha256": "e8a535367b33be710548f3515bede4e6e11247344d2cbddde36cf5b05b8ca63c"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.svg",
+          "bytes": 10314,
+          "sha256": "d89aa4d57479194f458a66770f3d803e0dc8fda7bacead016391c7393b4f152e"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.png",
+          "bytes": 134281,
+          "sha256": "62f7b1c492ec803c1bb2d50317197bdae912f2cb3908fd20c261cafb00678568"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/build_pdf.py",
+          "bytes": 802,
+          "sha256": "7ff2ed21b5f8f5f12fd7a4bd6ff3f7332a74a03e26a9ed45576aa614160640f0"
+        }
+      ],
+      "parent_argv": [
+        "build-scripts/content/book-2/b2_214.py",
+        "--lessons-root",
+        "C:/wt/book2-214-build-current-20260906/4veco-lessen",
+        "--proof-root",
+        "C:/wt/book2-214-build-current-20260906/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full",
+        "--proof-suffix",
+        "r42"
+      ]
+    },
+    {
+      "revision": "r43",
+      "route": "full",
+      "author_run_sha256": "cc2c5d8325167d2be5b012f02a972051da09123d15bf7f831f7bd982b5cc5baf",
+      "source_commit": "09e99f770b057d239e8d3d7c7e3185e830615cf7",
+      "actual_registered_worktrees": 377,
+      "actual_nested_observations": 18063,
+      "highest": 42,
+      "requested": 43,
+      "manifests": [
+        {
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full\\2.1.4-opgaven-r43-c89e1c4f4949\\manifest.json",
+          "sha256": "0728f1ccb926a029a55363c62db02917a281ed38a06ef9e1b65fd1ffddaebb9a",
+          "PENDING_preserved": true
+        },
+        {
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full\\2.1.4-antwoorden-r43-f2951e2f9690\\manifest.json",
+          "sha256": "1e927d1495117a9f54c74eda465190aa621837ae5fc94f16d47af601ac32c9c6",
+          "PENDING_preserved": true
+        }
+      ],
+      "pages": [
+        {
+          "edition": "antwoorden",
+          "page": 1,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "144be3616592d296b9f4021fd8530524215b73d4d131e85f81e629affe2dcadd",
+          "RGB_sha256": "764fe962019761a54ead4132eb63afac65903e7644f54f7d2f2411f2f36a2f46",
+          "gray_RGB_sha256": "44294068375748533c2ea60019754be0e3ea1067abe1ed8c55905e4703cf59cf"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 2,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "1aa830d882f453998671c7cca3c0a9bffefe5d42d1cd824ea7fbb6b2e6ed5834",
+          "RGB_sha256": "eceee4bd62566a64dd6c196899efb1816101e3d123384ee2fac31e89e6d29a02",
+          "gray_RGB_sha256": "fb2d07ed315188e2aada5613be946d28793d0a0336866052781212eac3ee0bdd"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 3,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "2a92e2da93b8b0779b6eb754a5f5bff5031756a0beb2fc9a528c85932e1edb56",
+          "RGB_sha256": "fcf1e9e3f9c7e3f5cdd128ba70fe77b061d57d113441cfe3ba89f9a970dd7aca",
+          "gray_RGB_sha256": "db0033c60102cecb6b5bb14c3c3875028e07fde512ec0a1972c790877fc6c3b2"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 4,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "859beeaa18607214d306bd05ae5b499ea9a15d6151d1012de9aeebc492c71ccd",
+          "RGB_sha256": "3afd3152b8f9b430b6747dcba1c3b1886344fadc13dadfe30cd8c0136c5ed1c6",
+          "gray_RGB_sha256": "52829b2f97db27fec9222957b6a21bdd205011e37488bcb17ba369301ccc88e6"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 5,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "42abe895a032fcc28c711f6189e45ba12a7d4cb4ff0cd69b5f490b615013db5d",
+          "RGB_sha256": "0abd6ce97a5ccac8165bac2dab547cfdfcff8e5dec7db102d1ba4615ca608b59",
+          "gray_RGB_sha256": "67f22016103d4a6306b3f8b2b77ca8fb0653bb44876fa014c4016f8f477d6f0a"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 6,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "161d26bf12cc74c870a65801f6a7c1260aed51b56fd87d64cf0b2c830dbddc4e",
+          "RGB_sha256": "9a662012d444c3fcdc95e9d5c7bb59408e5127163fa46502f50cda96521e4b1c",
+          "gray_RGB_sha256": "effb83cb6540a197d56e257f4b22ab85ebc31e753adc81c973691a062ac6242b"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 7,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "e2a321657e8051c6a2474382f765a9850a2f1e2d0c348f587bbd7aff26487506",
+          "RGB_sha256": "e8e2bd85b074e6244d3ea1df5f1f846d4bef8a14fe6723db9ceddbed71b7d447",
+          "gray_RGB_sha256": "9e381937570fe2aade0fbe4058eab10d9974ea14fd6d3b63598fcc4cca0bd119"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 8,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "dbcd5d22c39e5a7ab65fb795576d9223f1182bdd7055e85d1d15c973780cf130",
+          "RGB_sha256": "2e609d2eca3cbc4f43f0b3ea240d8c4a84f8c7f5ec88c372f8feb744dde77934",
+          "gray_RGB_sha256": "127047824d2afc6133c589eb183228a3218632816bcce933bd0d4180af6ab340"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 9,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "115bea0cef0a51be92717d28cffb0e9eda74062d327e23bc4aeafb532e5e9b8c",
+          "RGB_sha256": "412e2802c0d76a671942fabdbdf05d8df32534da2a9f518333e694c8dc4acb11",
+          "gray_RGB_sha256": "66c26ecac98ef7ae3427657d4ad966abdb590ccdb2b15f85aba8d5a4003f8b9c"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 10,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "689b62e00fbcbe76f06856b7f4b3ad980f3f9c00557d3581ab141a0a7b34850a",
+          "RGB_sha256": "8aa99dcbb0b7c90821dccdd331566224a10d9e0d2b8983d5cb390ad8d7aaffb1",
+          "gray_RGB_sha256": "2d9572d67059b0dae36abbcf47350396ac689617dfd5f50f9f6f2147403aebce"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 11,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "ce032f425a346b225f9072b7941f5ba4db3a41389052889ecf7338aa4950fe56",
+          "RGB_sha256": "d64e365ff51ed0f0e59317ae2a8b8768e18412537007f90dd7cdbbc8a1ee4011",
+          "gray_RGB_sha256": "2f5ebf660e733259477c348736ec12fdbddc12a29ba01a8c22b198a4f2d9ed1d"
+        },
+        {
+          "edition": "opgaven",
+          "page": 1,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "e2ec5b997e794fd00aa140b6d4ecd2331a895620d8d088ee655c31f88624afcb",
+          "RGB_sha256": "75d4278662d48e075753bc06318effd80dc1df2c4d8ed260ea456b3d7d772d2a",
+          "gray_RGB_sha256": "78a9aca84e6beb8f207749c084df7e92b8ac48c21414f804a596eb7624934f5d"
+        },
+        {
+          "edition": "opgaven",
+          "page": 2,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "f5592009541270253b705b15c2b1819e516024592b86f45052f74e24d3524012",
+          "RGB_sha256": "65278ef8fdc744d1fde4003473b08f3c26324716bd1f0446c48c06a52c4de386",
+          "gray_RGB_sha256": "34d103b08cd2fca80a95d0ce8e124be10201abc32cea33472a8e1acf4dd0fee1"
+        },
+        {
+          "edition": "opgaven",
+          "page": 3,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "8d1fa26f3f0fb5a292b904821618e2ca42c4a4911f0bc5aa03fe41dde003faa7",
+          "RGB_sha256": "6ed26431c5e33605cb557483e90f675d0b1da72869800a437b38e91dead55825",
+          "gray_RGB_sha256": "227fd7835ccb4c4e36f7a0c484d32a7ea551a82582d003dac72c13d79bfda584"
+        },
+        {
+          "edition": "opgaven",
+          "page": 4,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "d46de72bda2383dc8345c2c3db8900aa0e5adb89cdd671a99e9a2651dff39cbc",
+          "RGB_sha256": "e8c965292b6760f6451c1344c24698f986671d4a4de053a7c1ea263e94b98807",
+          "gray_RGB_sha256": "32bdbd97f4cf4fd731ec3f2225845fa64e109cce0968e66a2e2dac85f107fc4e"
+        },
+        {
+          "edition": "opgaven",
+          "page": 5,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "85f34db598ab3c7156c943cb30a16cb9fbe64988b6ffc6fc09c99db23f89fcde",
+          "RGB_sha256": "50332aad2b8bc14fb224946956934f98c8df1eba98a9980bdc705479cbd1bc0b",
+          "gray_RGB_sha256": "a0e02abd8353d3bc901ecc7c53ee70dbbbf375258a6aac81ea05bac470ba8798"
+        },
+        {
+          "edition": "opgaven",
+          "page": 6,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "a8931581b9e63efbe4385a682c1809a4cb540fb0a41b1db74e2d8c60371f9e67",
+          "RGB_sha256": "61c0669d3b3cb473cc47fb0c274c57658f68bf8515aceb8b8de5439a18d55425",
+          "gray_RGB_sha256": "e064e2be82962dcd6dcb942011c64b2c3048b3adae0e5c7b8004b87112c31b5a"
+        },
+        {
+          "edition": "opgaven",
+          "page": 7,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "4598565976725092ecf21a83ba6720a719b11b3c5b43f09f2c3a5167d896cd1e",
+          "RGB_sha256": "e90721c5d159662d907a48b649bc84d7c6a4d4ebe0ad40cb26971799cb4d36aa",
+          "gray_RGB_sha256": "7f95ea909244a88b8ca6cf5038e9ec8659d56f5ae9169dd690b6a157b995569f"
+        },
+        {
+          "edition": "opgaven",
+          "page": 8,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "7b4041f5bde012f8be3a6873f427ff402bfea4f71f4bf195c213fc595f3ebdb0",
+          "RGB_sha256": "9a47a99a003bfae7fc09bf304122c3f9a3079896a4c2184dfdd6a4ed5618eeff",
+          "gray_RGB_sha256": "1382aeed27c8c9ac8b9af577920e837220709ccfb75641719cdfca6fe5e4261f"
+        },
+        {
+          "edition": "opgaven",
+          "page": 9,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "6336f404dc07c590a1380670c95a10ebe111377afc69e785a7474fe5814aceaf",
+          "RGB_sha256": "187224a7a9dd2891f29faf8fcc40d0509436e34a2ae2782c61c302355c2505a0",
+          "gray_RGB_sha256": "baec94a324b00389613588aa07379822a98f5c160b6f27c98a5a4d836aacc7d9"
+        }
+      ],
+      "native": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md",
+          "bytes": 11615,
+          "sha256": "6e275609154b3d8ccec1e18410d7cd3a764385d3cf04c81ca4308e5865393e26"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.html",
+          "bytes": 353945,
+          "sha256": "e32385e10c407ac23caa7d8d2472b3b19881319ea34413cf49ba5a55c8ea256b"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+          "bytes": 359587,
+          "sha256": "c89e1c4f49491028d0cf171eb3219977b7545c127ad0a5c37f0f713df4136f48"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.md",
+          "bytes": 18912,
+          "sha256": "f94ec7bab34c3eea13d698e6ce44897dfb664b8c75d9a366b3a23920932d7285"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.html",
+          "bytes": 386375,
+          "sha256": "5ffc4cd3defb7e2a3b63c1b443593527067c961d1840c7e56a905c61d1a3df39"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+          "bytes": 401508,
+          "sha256": "f2951e2f969045b0c9d549c1f544fbd7d2a1679352169d3ac64d90ec799f27f8"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.svg",
+          "bytes": 10020,
+          "sha256": "09c2993d1d48f26b29bf49dd3abd221a118dcb8e4db9601081afbdb57a99ea4d"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.png",
+          "bytes": 121193,
+          "sha256": "2ed6ebe9bef5c400e9a8c5591d414b1d104dca4607485e84a5ea84bfb2626555"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.svg",
+          "bytes": 11753,
+          "sha256": "bf8ef4855b23010548de9cb7d290cba1125bb13a744623e77869e27d55c25eff"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.png",
+          "bytes": 137552,
+          "sha256": "58f81a1ff2c464e5471775620e9cf62fc9571b6078f9006b91e6b3f11cd44a05"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.svg",
+          "bytes": 9508,
+          "sha256": "7a41c0750657776681b163cad6be8471102f9ec9f2497a2d2e1e6c56492be92f"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.png",
+          "bytes": 132641,
+          "sha256": "e8a535367b33be710548f3515bede4e6e11247344d2cbddde36cf5b05b8ca63c"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.svg",
+          "bytes": 10314,
+          "sha256": "d89aa4d57479194f458a66770f3d803e0dc8fda7bacead016391c7393b4f152e"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.png",
+          "bytes": 134281,
+          "sha256": "62f7b1c492ec803c1bb2d50317197bdae912f2cb3908fd20c261cafb00678568"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/build_pdf.py",
+          "bytes": 802,
+          "sha256": "7ff2ed21b5f8f5f12fd7a4bd6ff3f7332a74a03e26a9ed45576aa614160640f0"
+        }
+      ],
+      "parent_argv": [
+        "build-scripts/content/book-2/b2_214.py",
+        "--lessons-root",
+        "C:/wt/book2-214-build-current-20260906/4veco-lessen",
+        "--proof-root",
+        "C:/wt/book2-214-build-current-20260906/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full",
+        "--proof-suffix",
+        "r43"
+      ]
+    },
+    {
+      "revision": "r44",
+      "route": "thin",
+      "author_run_sha256": "5c5d24b9d40d280302afab32f8505fd1b44f16f1763011513be8680c4636f7bf",
+      "source_commit": "09e99f770b057d239e8d3d7c7e3185e830615cf7",
+      "actual_registered_worktrees": 377,
+      "actual_nested_observations": 18133,
+      "highest": 43,
+      "requested": 44,
+      "manifests": [
+        {
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin\\2.1.4-opgaven-r44-c89e1c4f4949\\manifest.json",
+          "sha256": "48f383beb21b904c0e873e3949e45d4ecddff61141fc0d4be578bc206181cd41",
+          "PENDING_preserved": true
+        },
+        {
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin\\2.1.4-antwoorden-r44-f2951e2f9690\\manifest.json",
+          "sha256": "952556a71df7f1ab48c7910150e8987f31c7bdca6bcd2cc279be1b1950263bb4",
+          "PENDING_preserved": true
+        }
+      ],
+      "pages": [
+        {
+          "edition": "antwoorden",
+          "page": 1,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "144be3616592d296b9f4021fd8530524215b73d4d131e85f81e629affe2dcadd",
+          "RGB_sha256": "764fe962019761a54ead4132eb63afac65903e7644f54f7d2f2411f2f36a2f46",
+          "gray_RGB_sha256": "44294068375748533c2ea60019754be0e3ea1067abe1ed8c55905e4703cf59cf"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 2,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "1aa830d882f453998671c7cca3c0a9bffefe5d42d1cd824ea7fbb6b2e6ed5834",
+          "RGB_sha256": "eceee4bd62566a64dd6c196899efb1816101e3d123384ee2fac31e89e6d29a02",
+          "gray_RGB_sha256": "fb2d07ed315188e2aada5613be946d28793d0a0336866052781212eac3ee0bdd"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 3,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "2a92e2da93b8b0779b6eb754a5f5bff5031756a0beb2fc9a528c85932e1edb56",
+          "RGB_sha256": "fcf1e9e3f9c7e3f5cdd128ba70fe77b061d57d113441cfe3ba89f9a970dd7aca",
+          "gray_RGB_sha256": "db0033c60102cecb6b5bb14c3c3875028e07fde512ec0a1972c790877fc6c3b2"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 4,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "859beeaa18607214d306bd05ae5b499ea9a15d6151d1012de9aeebc492c71ccd",
+          "RGB_sha256": "3afd3152b8f9b430b6747dcba1c3b1886344fadc13dadfe30cd8c0136c5ed1c6",
+          "gray_RGB_sha256": "52829b2f97db27fec9222957b6a21bdd205011e37488bcb17ba369301ccc88e6"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 5,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "42abe895a032fcc28c711f6189e45ba12a7d4cb4ff0cd69b5f490b615013db5d",
+          "RGB_sha256": "0abd6ce97a5ccac8165bac2dab547cfdfcff8e5dec7db102d1ba4615ca608b59",
+          "gray_RGB_sha256": "67f22016103d4a6306b3f8b2b77ca8fb0653bb44876fa014c4016f8f477d6f0a"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 6,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "161d26bf12cc74c870a65801f6a7c1260aed51b56fd87d64cf0b2c830dbddc4e",
+          "RGB_sha256": "9a662012d444c3fcdc95e9d5c7bb59408e5127163fa46502f50cda96521e4b1c",
+          "gray_RGB_sha256": "effb83cb6540a197d56e257f4b22ab85ebc31e753adc81c973691a062ac6242b"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 7,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "e2a321657e8051c6a2474382f765a9850a2f1e2d0c348f587bbd7aff26487506",
+          "RGB_sha256": "e8e2bd85b074e6244d3ea1df5f1f846d4bef8a14fe6723db9ceddbed71b7d447",
+          "gray_RGB_sha256": "9e381937570fe2aade0fbe4058eab10d9974ea14fd6d3b63598fcc4cca0bd119"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 8,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "dbcd5d22c39e5a7ab65fb795576d9223f1182bdd7055e85d1d15c973780cf130",
+          "RGB_sha256": "2e609d2eca3cbc4f43f0b3ea240d8c4a84f8c7f5ec88c372f8feb744dde77934",
+          "gray_RGB_sha256": "127047824d2afc6133c589eb183228a3218632816bcce933bd0d4180af6ab340"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 9,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "115bea0cef0a51be92717d28cffb0e9eda74062d327e23bc4aeafb532e5e9b8c",
+          "RGB_sha256": "412e2802c0d76a671942fabdbdf05d8df32534da2a9f518333e694c8dc4acb11",
+          "gray_RGB_sha256": "66c26ecac98ef7ae3427657d4ad966abdb590ccdb2b15f85aba8d5a4003f8b9c"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 10,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "689b62e00fbcbe76f06856b7f4b3ad980f3f9c00557d3581ab141a0a7b34850a",
+          "RGB_sha256": "8aa99dcbb0b7c90821dccdd331566224a10d9e0d2b8983d5cb390ad8d7aaffb1",
+          "gray_RGB_sha256": "2d9572d67059b0dae36abbcf47350396ac689617dfd5f50f9f6f2147403aebce"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 11,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "ce032f425a346b225f9072b7941f5ba4db3a41389052889ecf7338aa4950fe56",
+          "RGB_sha256": "d64e365ff51ed0f0e59317ae2a8b8768e18412537007f90dd7cdbbc8a1ee4011",
+          "gray_RGB_sha256": "2f5ebf660e733259477c348736ec12fdbddc12a29ba01a8c22b198a4f2d9ed1d"
+        },
+        {
+          "edition": "opgaven",
+          "page": 1,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "e2ec5b997e794fd00aa140b6d4ecd2331a895620d8d088ee655c31f88624afcb",
+          "RGB_sha256": "75d4278662d48e075753bc06318effd80dc1df2c4d8ed260ea456b3d7d772d2a",
+          "gray_RGB_sha256": "78a9aca84e6beb8f207749c084df7e92b8ac48c21414f804a596eb7624934f5d"
+        },
+        {
+          "edition": "opgaven",
+          "page": 2,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "f5592009541270253b705b15c2b1819e516024592b86f45052f74e24d3524012",
+          "RGB_sha256": "65278ef8fdc744d1fde4003473b08f3c26324716bd1f0446c48c06a52c4de386",
+          "gray_RGB_sha256": "34d103b08cd2fca80a95d0ce8e124be10201abc32cea33472a8e1acf4dd0fee1"
+        },
+        {
+          "edition": "opgaven",
+          "page": 3,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "8d1fa26f3f0fb5a292b904821618e2ca42c4a4911f0bc5aa03fe41dde003faa7",
+          "RGB_sha256": "6ed26431c5e33605cb557483e90f675d0b1da72869800a437b38e91dead55825",
+          "gray_RGB_sha256": "227fd7835ccb4c4e36f7a0c484d32a7ea551a82582d003dac72c13d79bfda584"
+        },
+        {
+          "edition": "opgaven",
+          "page": 4,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "d46de72bda2383dc8345c2c3db8900aa0e5adb89cdd671a99e9a2651dff39cbc",
+          "RGB_sha256": "e8c965292b6760f6451c1344c24698f986671d4a4de053a7c1ea263e94b98807",
+          "gray_RGB_sha256": "32bdbd97f4cf4fd731ec3f2225845fa64e109cce0968e66a2e2dac85f107fc4e"
+        },
+        {
+          "edition": "opgaven",
+          "page": 5,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "85f34db598ab3c7156c943cb30a16cb9fbe64988b6ffc6fc09c99db23f89fcde",
+          "RGB_sha256": "50332aad2b8bc14fb224946956934f98c8df1eba98a9980bdc705479cbd1bc0b",
+          "gray_RGB_sha256": "a0e02abd8353d3bc901ecc7c53ee70dbbbf375258a6aac81ea05bac470ba8798"
+        },
+        {
+          "edition": "opgaven",
+          "page": 6,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "a8931581b9e63efbe4385a682c1809a4cb540fb0a41b1db74e2d8c60371f9e67",
+          "RGB_sha256": "61c0669d3b3cb473cc47fb0c274c57658f68bf8515aceb8b8de5439a18d55425",
+          "gray_RGB_sha256": "e064e2be82962dcd6dcb942011c64b2c3048b3adae0e5c7b8004b87112c31b5a"
+        },
+        {
+          "edition": "opgaven",
+          "page": 7,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "4598565976725092ecf21a83ba6720a719b11b3c5b43f09f2c3a5167d896cd1e",
+          "RGB_sha256": "e90721c5d159662d907a48b649bc84d7c6a4d4ebe0ad40cb26971799cb4d36aa",
+          "gray_RGB_sha256": "7f95ea909244a88b8ca6cf5038e9ec8659d56f5ae9169dd690b6a157b995569f"
+        },
+        {
+          "edition": "opgaven",
+          "page": 8,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "7b4041f5bde012f8be3a6873f427ff402bfea4f71f4bf195c213fc595f3ebdb0",
+          "RGB_sha256": "9a47a99a003bfae7fc09bf304122c3f9a3079896a4c2184dfdd6a4ed5618eeff",
+          "gray_RGB_sha256": "1382aeed27c8c9ac8b9af577920e837220709ccfb75641719cdfca6fe5e4261f"
+        },
+        {
+          "edition": "opgaven",
+          "page": 9,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "6336f404dc07c590a1380670c95a10ebe111377afc69e785a7474fe5814aceaf",
+          "RGB_sha256": "187224a7a9dd2891f29faf8fcc40d0509436e34a2ae2782c61c302355c2505a0",
+          "gray_RGB_sha256": "baec94a324b00389613588aa07379822a98f5c160b6f27c98a5a4d836aacc7d9"
+        }
+      ],
+      "native": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md",
+          "bytes": 11615,
+          "sha256": "6e275609154b3d8ccec1e18410d7cd3a764385d3cf04c81ca4308e5865393e26"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.html",
+          "bytes": 353945,
+          "sha256": "e32385e10c407ac23caa7d8d2472b3b19881319ea34413cf49ba5a55c8ea256b"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+          "bytes": 359587,
+          "sha256": "c89e1c4f49491028d0cf171eb3219977b7545c127ad0a5c37f0f713df4136f48"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.md",
+          "bytes": 18912,
+          "sha256": "f94ec7bab34c3eea13d698e6ce44897dfb664b8c75d9a366b3a23920932d7285"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.html",
+          "bytes": 386375,
+          "sha256": "5ffc4cd3defb7e2a3b63c1b443593527067c961d1840c7e56a905c61d1a3df39"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+          "bytes": 401508,
+          "sha256": "f2951e2f969045b0c9d549c1f544fbd7d2a1679352169d3ac64d90ec799f27f8"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.svg",
+          "bytes": 10020,
+          "sha256": "09c2993d1d48f26b29bf49dd3abd221a118dcb8e4db9601081afbdb57a99ea4d"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.png",
+          "bytes": 121193,
+          "sha256": "2ed6ebe9bef5c400e9a8c5591d414b1d104dca4607485e84a5ea84bfb2626555"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.svg",
+          "bytes": 11753,
+          "sha256": "bf8ef4855b23010548de9cb7d290cba1125bb13a744623e77869e27d55c25eff"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.png",
+          "bytes": 137552,
+          "sha256": "58f81a1ff2c464e5471775620e9cf62fc9571b6078f9006b91e6b3f11cd44a05"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.svg",
+          "bytes": 9508,
+          "sha256": "7a41c0750657776681b163cad6be8471102f9ec9f2497a2d2e1e6c56492be92f"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.png",
+          "bytes": 132641,
+          "sha256": "e8a535367b33be710548f3515bede4e6e11247344d2cbddde36cf5b05b8ca63c"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.svg",
+          "bytes": 10314,
+          "sha256": "d89aa4d57479194f458a66770f3d803e0dc8fda7bacead016391c7393b4f152e"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.png",
+          "bytes": 134281,
+          "sha256": "62f7b1c492ec803c1bb2d50317197bdae912f2cb3908fd20c261cafb00678568"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/build_pdf.py",
+          "bytes": 802,
+          "sha256": "7ff2ed21b5f8f5f12fd7a4bd6ff3f7332a74a03e26a9ed45576aa614160640f0"
+        }
+      ],
+      "parent_argv": [
+        "C:/wt/book2-214-build-current-20260906/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/build_pdf.py",
+        "--platform-root",
+        "C:/wt/book2-214-build-current-20260906/4veco-platform",
+        "--lessons-root",
+        "C:/wt/book2-214-build-current-20260906/4veco-lessen",
+        "--proof-root",
+        "C:/wt/book2-214-build-current-20260906/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin",
+        "--proof-suffix",
+        "r44"
+      ]
+    },
+    {
+      "revision": "r45",
+      "route": "direct",
+      "author_run_sha256": "dbdd6b033121ce7e10b2fe4e933594248ec3a04fd1609058361ddc0a710bdbf0",
+      "source_commit": "09e99f770b057d239e8d3d7c7e3185e830615cf7",
+      "actual_registered_worktrees": 377,
+      "actual_nested_observations": 18194,
+      "highest": 44,
+      "requested": 45,
+      "manifests": [
+        {
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct\\2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949\\manifest.json",
+          "sha256": "3eb1ed7da06c76930d51131269264a6dabda6343bd064526c6c867528be77e60",
+          "PENDING_preserved": true
+        },
+        {
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct\\2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690\\manifest.json",
+          "sha256": "12adc59b631ed73b2eb6e637e6d345f5fe09bf04d7510948af509bdf8c10fc4d",
+          "PENDING_preserved": true
+        }
+      ],
+      "pages": [
+        {
+          "edition": "antwoorden",
+          "page": 1,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "144be3616592d296b9f4021fd8530524215b73d4d131e85f81e629affe2dcadd",
+          "RGB_sha256": "764fe962019761a54ead4132eb63afac65903e7644f54f7d2f2411f2f36a2f46",
+          "gray_RGB_sha256": "44294068375748533c2ea60019754be0e3ea1067abe1ed8c55905e4703cf59cf"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 2,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "1aa830d882f453998671c7cca3c0a9bffefe5d42d1cd824ea7fbb6b2e6ed5834",
+          "RGB_sha256": "eceee4bd62566a64dd6c196899efb1816101e3d123384ee2fac31e89e6d29a02",
+          "gray_RGB_sha256": "fb2d07ed315188e2aada5613be946d28793d0a0336866052781212eac3ee0bdd"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 3,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "2a92e2da93b8b0779b6eb754a5f5bff5031756a0beb2fc9a528c85932e1edb56",
+          "RGB_sha256": "fcf1e9e3f9c7e3f5cdd128ba70fe77b061d57d113441cfe3ba89f9a970dd7aca",
+          "gray_RGB_sha256": "db0033c60102cecb6b5bb14c3c3875028e07fde512ec0a1972c790877fc6c3b2"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 4,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "859beeaa18607214d306bd05ae5b499ea9a15d6151d1012de9aeebc492c71ccd",
+          "RGB_sha256": "3afd3152b8f9b430b6747dcba1c3b1886344fadc13dadfe30cd8c0136c5ed1c6",
+          "gray_RGB_sha256": "52829b2f97db27fec9222957b6a21bdd205011e37488bcb17ba369301ccc88e6"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 5,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "42abe895a032fcc28c711f6189e45ba12a7d4cb4ff0cd69b5f490b615013db5d",
+          "RGB_sha256": "0abd6ce97a5ccac8165bac2dab547cfdfcff8e5dec7db102d1ba4615ca608b59",
+          "gray_RGB_sha256": "67f22016103d4a6306b3f8b2b77ca8fb0653bb44876fa014c4016f8f477d6f0a"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 6,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "161d26bf12cc74c870a65801f6a7c1260aed51b56fd87d64cf0b2c830dbddc4e",
+          "RGB_sha256": "9a662012d444c3fcdc95e9d5c7bb59408e5127163fa46502f50cda96521e4b1c",
+          "gray_RGB_sha256": "effb83cb6540a197d56e257f4b22ab85ebc31e753adc81c973691a062ac6242b"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 7,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "e2a321657e8051c6a2474382f765a9850a2f1e2d0c348f587bbd7aff26487506",
+          "RGB_sha256": "e8e2bd85b074e6244d3ea1df5f1f846d4bef8a14fe6723db9ceddbed71b7d447",
+          "gray_RGB_sha256": "9e381937570fe2aade0fbe4058eab10d9974ea14fd6d3b63598fcc4cca0bd119"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 8,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "dbcd5d22c39e5a7ab65fb795576d9223f1182bdd7055e85d1d15c973780cf130",
+          "RGB_sha256": "2e609d2eca3cbc4f43f0b3ea240d8c4a84f8c7f5ec88c372f8feb744dde77934",
+          "gray_RGB_sha256": "127047824d2afc6133c589eb183228a3218632816bcce933bd0d4180af6ab340"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 9,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "115bea0cef0a51be92717d28cffb0e9eda74062d327e23bc4aeafb532e5e9b8c",
+          "RGB_sha256": "412e2802c0d76a671942fabdbdf05d8df32534da2a9f518333e694c8dc4acb11",
+          "gray_RGB_sha256": "66c26ecac98ef7ae3427657d4ad966abdb590ccdb2b15f85aba8d5a4003f8b9c"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 10,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "689b62e00fbcbe76f06856b7f4b3ad980f3f9c00557d3581ab141a0a7b34850a",
+          "RGB_sha256": "8aa99dcbb0b7c90821dccdd331566224a10d9e0d2b8983d5cb390ad8d7aaffb1",
+          "gray_RGB_sha256": "2d9572d67059b0dae36abbcf47350396ac689617dfd5f50f9f6f2147403aebce"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 11,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "ce032f425a346b225f9072b7941f5ba4db3a41389052889ecf7338aa4950fe56",
+          "RGB_sha256": "d64e365ff51ed0f0e59317ae2a8b8768e18412537007f90dd7cdbbc8a1ee4011",
+          "gray_RGB_sha256": "2f5ebf660e733259477c348736ec12fdbddc12a29ba01a8c22b198a4f2d9ed1d"
+        },
+        {
+          "edition": "opgaven",
+          "page": 1,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "e2ec5b997e794fd00aa140b6d4ecd2331a895620d8d088ee655c31f88624afcb",
+          "RGB_sha256": "75d4278662d48e075753bc06318effd80dc1df2c4d8ed260ea456b3d7d772d2a",
+          "gray_RGB_sha256": "78a9aca84e6beb8f207749c084df7e92b8ac48c21414f804a596eb7624934f5d"
+        },
+        {
+          "edition": "opgaven",
+          "page": 2,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "f5592009541270253b705b15c2b1819e516024592b86f45052f74e24d3524012",
+          "RGB_sha256": "65278ef8fdc744d1fde4003473b08f3c26324716bd1f0446c48c06a52c4de386",
+          "gray_RGB_sha256": "34d103b08cd2fca80a95d0ce8e124be10201abc32cea33472a8e1acf4dd0fee1"
+        },
+        {
+          "edition": "opgaven",
+          "page": 3,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "8d1fa26f3f0fb5a292b904821618e2ca42c4a4911f0bc5aa03fe41dde003faa7",
+          "RGB_sha256": "6ed26431c5e33605cb557483e90f675d0b1da72869800a437b38e91dead55825",
+          "gray_RGB_sha256": "227fd7835ccb4c4e36f7a0c484d32a7ea551a82582d003dac72c13d79bfda584"
+        },
+        {
+          "edition": "opgaven",
+          "page": 4,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "d46de72bda2383dc8345c2c3db8900aa0e5adb89cdd671a99e9a2651dff39cbc",
+          "RGB_sha256": "e8c965292b6760f6451c1344c24698f986671d4a4de053a7c1ea263e94b98807",
+          "gray_RGB_sha256": "32bdbd97f4cf4fd731ec3f2225845fa64e109cce0968e66a2e2dac85f107fc4e"
+        },
+        {
+          "edition": "opgaven",
+          "page": 5,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "85f34db598ab3c7156c943cb30a16cb9fbe64988b6ffc6fc09c99db23f89fcde",
+          "RGB_sha256": "50332aad2b8bc14fb224946956934f98c8df1eba98a9980bdc705479cbd1bc0b",
+          "gray_RGB_sha256": "a0e02abd8353d3bc901ecc7c53ee70dbbbf375258a6aac81ea05bac470ba8798"
+        },
+        {
+          "edition": "opgaven",
+          "page": 6,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "a8931581b9e63efbe4385a682c1809a4cb540fb0a41b1db74e2d8c60371f9e67",
+          "RGB_sha256": "61c0669d3b3cb473cc47fb0c274c57658f68bf8515aceb8b8de5439a18d55425",
+          "gray_RGB_sha256": "e064e2be82962dcd6dcb942011c64b2c3048b3adae0e5c7b8004b87112c31b5a"
+        },
+        {
+          "edition": "opgaven",
+          "page": 7,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "4598565976725092ecf21a83ba6720a719b11b3c5b43f09f2c3a5167d896cd1e",
+          "RGB_sha256": "e90721c5d159662d907a48b649bc84d7c6a4d4ebe0ad40cb26971799cb4d36aa",
+          "gray_RGB_sha256": "7f95ea909244a88b8ca6cf5038e9ec8659d56f5ae9169dd690b6a157b995569f"
+        },
+        {
+          "edition": "opgaven",
+          "page": 8,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "7b4041f5bde012f8be3a6873f427ff402bfea4f71f4bf195c213fc595f3ebdb0",
+          "RGB_sha256": "9a47a99a003bfae7fc09bf304122c3f9a3079896a4c2184dfdd6a4ed5618eeff",
+          "gray_RGB_sha256": "1382aeed27c8c9ac8b9af577920e837220709ccfb75641719cdfca6fe5e4261f"
+        },
+        {
+          "edition": "opgaven",
+          "page": 9,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "6336f404dc07c590a1380670c95a10ebe111377afc69e785a7474fe5814aceaf",
+          "RGB_sha256": "187224a7a9dd2891f29faf8fcc40d0509436e34a2ae2782c61c302355c2505a0",
+          "gray_RGB_sha256": "baec94a324b00389613588aa07379822a98f5c160b6f27c98a5a4d836aacc7d9"
+        }
+      ],
+      "native": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md",
+          "bytes": 11615,
+          "sha256": "6e275609154b3d8ccec1e18410d7cd3a764385d3cf04c81ca4308e5865393e26"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.html",
+          "bytes": 353945,
+          "sha256": "e32385e10c407ac23caa7d8d2472b3b19881319ea34413cf49ba5a55c8ea256b"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+          "bytes": 359587,
+          "sha256": "c89e1c4f49491028d0cf171eb3219977b7545c127ad0a5c37f0f713df4136f48"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.md",
+          "bytes": 18912,
+          "sha256": "f94ec7bab34c3eea13d698e6ce44897dfb664b8c75d9a366b3a23920932d7285"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.html",
+          "bytes": 386375,
+          "sha256": "5ffc4cd3defb7e2a3b63c1b443593527067c961d1840c7e56a905c61d1a3df39"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+          "bytes": 401508,
+          "sha256": "f2951e2f969045b0c9d549c1f544fbd7d2a1679352169d3ac64d90ec799f27f8"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.svg",
+          "bytes": 10020,
+          "sha256": "09c2993d1d48f26b29bf49dd3abd221a118dcb8e4db9601081afbdb57a99ea4d"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.png",
+          "bytes": 121193,
+          "sha256": "2ed6ebe9bef5c400e9a8c5591d414b1d104dca4607485e84a5ea84bfb2626555"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.svg",
+          "bytes": 11753,
+          "sha256": "bf8ef4855b23010548de9cb7d290cba1125bb13a744623e77869e27d55c25eff"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.png",
+          "bytes": 137552,
+          "sha256": "58f81a1ff2c464e5471775620e9cf62fc9571b6078f9006b91e6b3f11cd44a05"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.svg",
+          "bytes": 9508,
+          "sha256": "7a41c0750657776681b163cad6be8471102f9ec9f2497a2d2e1e6c56492be92f"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.png",
+          "bytes": 132641,
+          "sha256": "e8a535367b33be710548f3515bede4e6e11247344d2cbddde36cf5b05b8ca63c"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.svg",
+          "bytes": 10314,
+          "sha256": "d89aa4d57479194f458a66770f3d803e0dc8fda7bacead016391c7393b4f152e"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.png",
+          "bytes": 134281,
+          "sha256": "62f7b1c492ec803c1bb2d50317197bdae912f2cb3908fd20c261cafb00678568"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/build_pdf.py",
+          "bytes": 802,
+          "sha256": "7ff2ed21b5f8f5f12fd7a4bd6ff3f7332a74a03e26a9ed45576aa614160640f0"
+        }
+      ],
+      "parent_argv": [
+        "build-scripts/content/book-2/214/direct_print.py",
+        "--lessons-root",
+        "C:/wt/book2-214-build-current-20260906/4veco-lessen",
+        "--proof-root",
+        "C:/wt/book2-214-build-current-20260906/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct",
+        "--proof-suffix",
+        "r45"
+      ],
+      "exact_unchanged_shared_child": {
+        "argv": [
+          "C:\\Python314\\python.exe",
+          "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+          "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\2.1.4 Gemengde opgaven – opgaven.md",
+          "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\2.1.4 Gemengde opgaven – antwoorden.md",
+          "--proof-root",
+          "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct"
+        ],
+        "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+        "native_worker": true,
+        "start": "2026-09-06T08:23:07.650912+00:00",
+        "exit_code": 0,
+        "stdout": "{\"source_md\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\2.1.4 Gemengde opgaven – opgaven.md\", \"source_sha256\": \"6e275609154b3d8ccec1e18410d7cd3a764385d3cf04c81ca4308e5865393e26\", \"source_html\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\2.1.4 Gemengde opgaven – opgaven.html\", \"html_sha256\": \"e32385e10c407ac23caa7d8d2472b3b19881319ea34413cf49ba5a55c8ea256b\", \"source_pdf\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\2.1.4 Gemengde opgaven – opgaven.pdf\", \"pdf_sha256\": \"c89e1c4f49491028d0cf171eb3219977b7545c127ad0a5c37f0f713df4136f48\", \"assets\": [{\"path\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\_assets\\\\2.1.4_ex_1.svg\", \"sha256\": \"09c2993d1d48f26b29bf49dd3abd221a118dcb8e4db9601081afbdb57a99ea4d\"}, {\"path\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\_assets\\\\2.1.4_ex_1.png\", \"sha256\": \"2ed6ebe9bef5c400e9a8c5591d414b1d104dca4607485e84a5ea84bfb2626555\"}, {\"path\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\_assets\\\\2.1.4_ex_3.svg\", \"sha256\": \"7a41c0750657776681b163cad6be8471102f9ec9f2497a2d2e1e6c56492be92f\"}, {\"path\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\_assets\\\\2.1.4_ex_3.png\", \"sha256\": \"e8a535367b33be710548f3515bede4e6e11247344d2cbddde36cf5b05b8ca63c\"}], \"sprint_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1\", \"artifact_id\": \"2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949\", \"render_dpi\": 150, \"rendered_pages\": [\"pages/page-001.png\", \"pages/page-002.png\", \"pages/page-003.png\", \"pages/page-004.png\", \"pages/page-005.png\", \"pages/page-006.png\", \"pages/page-007.png\", \"pages/page-008.png\", \"pages/page-009.png\"], \"page_sha256\": {\"page-001.png\": \"e2ec5b997e794fd00aa140b6d4ecd2331a895620d8d088ee655c31f88624afcb\", \"page-002.png\": \"f5592009541270253b705b15c2b1819e516024592b86f45052f74e24d3524012\", \"page-003.png\": \"8d1fa26f3f0fb5a292b904821618e2ca42c4a4911f0bc5aa03fe41dde003faa7\", \"page-004.png\": \"d46de72bda2383dc8345c2c3db8900aa0e5adb89cdd671a99e9a2651dff39cbc\", \"page-005.png\": \"85f34db598ab3c7156c943cb30a16cb9fbe64988b6ffc6fc09c99db23f89fcde\", \"page-006.png\": \"a8931581b9e63efbe4385a682c1809a4cb540fb0a41b1db74e2d8c60371f9e67\", \"page-007.png\": \"4598565976725092ecf21a83ba6720a719b11b3c5b43f09f2c3a5167d896cd1e\", \"page-008.png\": \"7b4041f5bde012f8be3a6873f427ff402bfea4f71f4bf195c213fc595f3ebdb0\", \"page-009.png\": \"6336f404dc07c590a1380670c95a10ebe111377afc69e785a7474fe5814aceaf\"}, \"contact_sheet\": \"contact-sheet.png\", \"pages_inspected\": [], \"inspection_status\": \"PENDING\", \"visible_student_defects\": null, \"inspected_at_normal_reading_scale\": false, \"warnings\": []}\r\n{\"source_md\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\2.1.4 Gemengde opgaven – antwoorden.md\", \"source_sha256\": \"f94ec7bab34c3eea13d698e6ce44897dfb664b8c75d9a366b3a23920932d7285\", \"source_html\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\2.1.4 Gemengde opgaven – antwoorden.html\", \"html_sha256\": \"5ffc4cd3defb7e2a3b63c1b443593527067c961d1840c7e56a905c61d1a3df39\", \"source_pdf\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\2.1.4 Gemengde opgaven – antwoorden.pdf\", \"pdf_sha256\": \"f2951e2f969045b0c9d549c1f544fbd7d2a1679352169d3ac64d90ec799f27f8\", \"assets\": [{\"path\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\_assets\\\\2.1.4_ex_2.svg\", \"sha256\": \"bf8ef4855b23010548de9cb7d290cba1125bb13a744623e77869e27d55c25eff\"}, {\"path\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\_assets\\\\2.1.4_ex_2.png\", \"sha256\": \"58f81a1ff2c464e5471775620e9cf62fc9571b6078f9006b91e6b3f11cd44a05\"}, {\"path\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\_assets\\\\2.1.4_ex_4.svg\", \"sha256\": \"d89aa4d57479194f458a66770f3d803e0dc8fda7bacead016391c7393b4f152e\"}, {\"path\": \"C:\\\\wt\\\\book2-214-build-current-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.1 Hoofdstuk Kosten en opbrengsten\\\\2.1.4 Gemengde opgaven\\\\_assets\\\\2.1.4_ex_4.png\", \"sha256\": \"62f7b1c492ec803c1bb2d50317197bdae912f2cb3908fd20c261cafb00678568\"}], \"sprint_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1\", \"artifact_id\": \"2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690\", \"render_dpi\": 150, \"rendered_pages\": [\"pages/page-001.png\", \"pages/page-002.png\", \"pages/page-003.png\", \"pages/page-004.png\", \"pages/page-005.png\", \"pages/page-006.png\", \"pages/page-007.png\", \"pages/page-008.png\", \"pages/page-009.png\", \"pages/page-010.png\", \"pages/page-011.png\"], \"page_sha256\": {\"page-001.png\": \"144be3616592d296b9f4021fd8530524215b73d4d131e85f81e629affe2dcadd\", \"page-002.png\": \"1aa830d882f453998671c7cca3c0a9bffefe5d42d1cd824ea7fbb6b2e6ed5834\", \"page-003.png\": \"2a92e2da93b8b0779b6eb754a5f5bff5031756a0beb2fc9a528c85932e1edb56\", \"page-004.png\": \"859beeaa18607214d306bd05ae5b499ea9a15d6151d1012de9aeebc492c71ccd\", \"page-005.png\": \"42abe895a032fcc28c711f6189e45ba12a7d4cb4ff0cd69b5f490b615013db5d\", \"page-006.png\": \"161d26bf12cc74c870a65801f6a7c1260aed51b56fd87d64cf0b2c830dbddc4e\", \"page-007.png\": \"e2a321657e8051c6a2474382f765a9850a2f1e2d0c348f587bbd7aff26487506\", \"page-008.png\": \"dbcd5d22c39e5a7ab65fb795576d9223f1182bdd7055e85d1d15c973780cf130\", \"page-009.png\": \"115bea0cef0a51be92717d28cffb0e9eda74062d327e23bc4aeafb532e5e9b8c\", \"page-010.png\": \"689b62e00fbcbe76f06856b7f4b3ad980f3f9c00557d3581ab141a0a7b34850a\", \"page-011.png\": \"ce032f425a346b225f9072b7941f5ba4db3a41389052889ecf7338aa4950fe56\"}, \"contact_sheet\": \"contact-sheet.png\", \"pages_inspected\": [], \"inspection_status\": \"PENDING\", \"visible_student_defects\": null, \"inspected_at_normal_reading_scale\": false, \"warnings\": []}\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "revision": "r46",
+      "route": "checker",
+      "author_run_sha256": "7301201cca7d351b99ba443256a4b3e09661378226add6dd985a77a4a8a86104",
+      "source_commit": "09e99f770b057d239e8d3d7c7e3185e830615cf7",
+      "actual_registered_worktrees": 377,
+      "actual_nested_observations": 18226,
+      "highest": 45,
+      "requested": 46,
+      "manifests": [
+        {
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker\\2.1.4-opgaven-r46-c89e1c4f4949\\manifest.json",
+          "sha256": "2dfe22a835a11bc5e3f6da770f3adeb1905953e6a820cf1ed9c53f01dc30d252",
+          "PENDING_preserved": true
+        },
+        {
+          "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker\\2.1.4-antwoorden-r46-f2951e2f9690\\manifest.json",
+          "sha256": "dc02cde0f71ff94a07cf024485126e43b4af6274cea3cea57ed282921e352e50",
+          "PENDING_preserved": true
+        }
+      ],
+      "pages": [
+        {
+          "edition": "antwoorden",
+          "page": 1,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "144be3616592d296b9f4021fd8530524215b73d4d131e85f81e629affe2dcadd",
+          "RGB_sha256": "764fe962019761a54ead4132eb63afac65903e7644f54f7d2f2411f2f36a2f46",
+          "gray_RGB_sha256": "44294068375748533c2ea60019754be0e3ea1067abe1ed8c55905e4703cf59cf"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 2,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "1aa830d882f453998671c7cca3c0a9bffefe5d42d1cd824ea7fbb6b2e6ed5834",
+          "RGB_sha256": "eceee4bd62566a64dd6c196899efb1816101e3d123384ee2fac31e89e6d29a02",
+          "gray_RGB_sha256": "fb2d07ed315188e2aada5613be946d28793d0a0336866052781212eac3ee0bdd"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 3,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "2a92e2da93b8b0779b6eb754a5f5bff5031756a0beb2fc9a528c85932e1edb56",
+          "RGB_sha256": "fcf1e9e3f9c7e3f5cdd128ba70fe77b061d57d113441cfe3ba89f9a970dd7aca",
+          "gray_RGB_sha256": "db0033c60102cecb6b5bb14c3c3875028e07fde512ec0a1972c790877fc6c3b2"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 4,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "859beeaa18607214d306bd05ae5b499ea9a15d6151d1012de9aeebc492c71ccd",
+          "RGB_sha256": "3afd3152b8f9b430b6747dcba1c3b1886344fadc13dadfe30cd8c0136c5ed1c6",
+          "gray_RGB_sha256": "52829b2f97db27fec9222957b6a21bdd205011e37488bcb17ba369301ccc88e6"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 5,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "42abe895a032fcc28c711f6189e45ba12a7d4cb4ff0cd69b5f490b615013db5d",
+          "RGB_sha256": "0abd6ce97a5ccac8165bac2dab547cfdfcff8e5dec7db102d1ba4615ca608b59",
+          "gray_RGB_sha256": "67f22016103d4a6306b3f8b2b77ca8fb0653bb44876fa014c4016f8f477d6f0a"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 6,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "161d26bf12cc74c870a65801f6a7c1260aed51b56fd87d64cf0b2c830dbddc4e",
+          "RGB_sha256": "9a662012d444c3fcdc95e9d5c7bb59408e5127163fa46502f50cda96521e4b1c",
+          "gray_RGB_sha256": "effb83cb6540a197d56e257f4b22ab85ebc31e753adc81c973691a062ac6242b"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 7,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "e2a321657e8051c6a2474382f765a9850a2f1e2d0c348f587bbd7aff26487506",
+          "RGB_sha256": "e8e2bd85b074e6244d3ea1df5f1f846d4bef8a14fe6723db9ceddbed71b7d447",
+          "gray_RGB_sha256": "9e381937570fe2aade0fbe4058eab10d9974ea14fd6d3b63598fcc4cca0bd119"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 8,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "dbcd5d22c39e5a7ab65fb795576d9223f1182bdd7055e85d1d15c973780cf130",
+          "RGB_sha256": "2e609d2eca3cbc4f43f0b3ea240d8c4a84f8c7f5ec88c372f8feb744dde77934",
+          "gray_RGB_sha256": "127047824d2afc6133c589eb183228a3218632816bcce933bd0d4180af6ab340"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 9,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "115bea0cef0a51be92717d28cffb0e9eda74062d327e23bc4aeafb532e5e9b8c",
+          "RGB_sha256": "412e2802c0d76a671942fabdbdf05d8df32534da2a9f518333e694c8dc4acb11",
+          "gray_RGB_sha256": "66c26ecac98ef7ae3427657d4ad966abdb590ccdb2b15f85aba8d5a4003f8b9c"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 10,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "689b62e00fbcbe76f06856b7f4b3ad980f3f9c00557d3581ab141a0a7b34850a",
+          "RGB_sha256": "8aa99dcbb0b7c90821dccdd331566224a10d9e0d2b8983d5cb390ad8d7aaffb1",
+          "gray_RGB_sha256": "2d9572d67059b0dae36abbcf47350396ac689617dfd5f50f9f6f2147403aebce"
+        },
+        {
+          "edition": "antwoorden",
+          "page": 11,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "ce032f425a346b225f9072b7941f5ba4db3a41389052889ecf7338aa4950fe56",
+          "RGB_sha256": "d64e365ff51ed0f0e59317ae2a8b8768e18412537007f90dd7cdbbc8a1ee4011",
+          "gray_RGB_sha256": "2f5ebf660e733259477c348736ec12fdbddc12a29ba01a8c22b198a4f2d9ed1d"
+        },
+        {
+          "edition": "opgaven",
+          "page": 1,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "e2ec5b997e794fd00aa140b6d4ecd2331a895620d8d088ee655c31f88624afcb",
+          "RGB_sha256": "75d4278662d48e075753bc06318effd80dc1df2c4d8ed260ea456b3d7d772d2a",
+          "gray_RGB_sha256": "78a9aca84e6beb8f207749c084df7e92b8ac48c21414f804a596eb7624934f5d"
+        },
+        {
+          "edition": "opgaven",
+          "page": 2,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "f5592009541270253b705b15c2b1819e516024592b86f45052f74e24d3524012",
+          "RGB_sha256": "65278ef8fdc744d1fde4003473b08f3c26324716bd1f0446c48c06a52c4de386",
+          "gray_RGB_sha256": "34d103b08cd2fca80a95d0ce8e124be10201abc32cea33472a8e1acf4dd0fee1"
+        },
+        {
+          "edition": "opgaven",
+          "page": 3,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "8d1fa26f3f0fb5a292b904821618e2ca42c4a4911f0bc5aa03fe41dde003faa7",
+          "RGB_sha256": "6ed26431c5e33605cb557483e90f675d0b1da72869800a437b38e91dead55825",
+          "gray_RGB_sha256": "227fd7835ccb4c4e36f7a0c484d32a7ea551a82582d003dac72c13d79bfda584"
+        },
+        {
+          "edition": "opgaven",
+          "page": 4,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "d46de72bda2383dc8345c2c3db8900aa0e5adb89cdd671a99e9a2651dff39cbc",
+          "RGB_sha256": "e8c965292b6760f6451c1344c24698f986671d4a4de053a7c1ea263e94b98807",
+          "gray_RGB_sha256": "32bdbd97f4cf4fd731ec3f2225845fa64e109cce0968e66a2e2dac85f107fc4e"
+        },
+        {
+          "edition": "opgaven",
+          "page": 5,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "85f34db598ab3c7156c943cb30a16cb9fbe64988b6ffc6fc09c99db23f89fcde",
+          "RGB_sha256": "50332aad2b8bc14fb224946956934f98c8df1eba98a9980bdc705479cbd1bc0b",
+          "gray_RGB_sha256": "a0e02abd8353d3bc901ecc7c53ee70dbbbf375258a6aac81ea05bac470ba8798"
+        },
+        {
+          "edition": "opgaven",
+          "page": 6,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "a8931581b9e63efbe4385a682c1809a4cb540fb0a41b1db74e2d8c60371f9e67",
+          "RGB_sha256": "61c0669d3b3cb473cc47fb0c274c57658f68bf8515aceb8b8de5439a18d55425",
+          "gray_RGB_sha256": "e064e2be82962dcd6dcb942011c64b2c3048b3adae0e5c7b8004b87112c31b5a"
+        },
+        {
+          "edition": "opgaven",
+          "page": 7,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "4598565976725092ecf21a83ba6720a719b11b3c5b43f09f2c3a5167d896cd1e",
+          "RGB_sha256": "e90721c5d159662d907a48b649bc84d7c6a4d4ebe0ad40cb26971799cb4d36aa",
+          "gray_RGB_sha256": "7f95ea909244a88b8ca6cf5038e9ec8659d56f5ae9169dd690b6a157b995569f"
+        },
+        {
+          "edition": "opgaven",
+          "page": 8,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "7b4041f5bde012f8be3a6873f427ff402bfea4f71f4bf195c213fc595f3ebdb0",
+          "RGB_sha256": "9a47a99a003bfae7fc09bf304122c3f9a3079896a4c2184dfdd6a4ed5618eeff",
+          "gray_RGB_sha256": "1382aeed27c8c9ac8b9af577920e837220709ccfb75641719cdfca6fe5e4261f"
+        },
+        {
+          "edition": "opgaven",
+          "page": 9,
+          "size": [
+            1241,
+            1754
+          ],
+          "file_sha256": "6336f404dc07c590a1380670c95a10ebe111377afc69e785a7474fe5814aceaf",
+          "RGB_sha256": "187224a7a9dd2891f29faf8fcc40d0509436e34a2ae2782c61c302355c2505a0",
+          "gray_RGB_sha256": "baec94a324b00389613588aa07379822a98f5c160b6f27c98a5a4d836aacc7d9"
+        }
+      ],
+      "native": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md",
+          "bytes": 11615,
+          "sha256": "6e275609154b3d8ccec1e18410d7cd3a764385d3cf04c81ca4308e5865393e26"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.html",
+          "bytes": 353945,
+          "sha256": "e32385e10c407ac23caa7d8d2472b3b19881319ea34413cf49ba5a55c8ea256b"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+          "bytes": 359587,
+          "sha256": "c89e1c4f49491028d0cf171eb3219977b7545c127ad0a5c37f0f713df4136f48"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.md",
+          "bytes": 18912,
+          "sha256": "f94ec7bab34c3eea13d698e6ce44897dfb664b8c75d9a366b3a23920932d7285"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.html",
+          "bytes": 386375,
+          "sha256": "5ffc4cd3defb7e2a3b63c1b443593527067c961d1840c7e56a905c61d1a3df39"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+          "bytes": 401508,
+          "sha256": "f2951e2f969045b0c9d549c1f544fbd7d2a1679352169d3ac64d90ec799f27f8"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.svg",
+          "bytes": 10020,
+          "sha256": "09c2993d1d48f26b29bf49dd3abd221a118dcb8e4db9601081afbdb57a99ea4d"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.png",
+          "bytes": 121193,
+          "sha256": "2ed6ebe9bef5c400e9a8c5591d414b1d104dca4607485e84a5ea84bfb2626555"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.svg",
+          "bytes": 11753,
+          "sha256": "bf8ef4855b23010548de9cb7d290cba1125bb13a744623e77869e27d55c25eff"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.png",
+          "bytes": 137552,
+          "sha256": "58f81a1ff2c464e5471775620e9cf62fc9571b6078f9006b91e6b3f11cd44a05"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.svg",
+          "bytes": 9508,
+          "sha256": "7a41c0750657776681b163cad6be8471102f9ec9f2497a2d2e1e6c56492be92f"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.png",
+          "bytes": 132641,
+          "sha256": "e8a535367b33be710548f3515bede4e6e11247344d2cbddde36cf5b05b8ca63c"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.svg",
+          "bytes": 10314,
+          "sha256": "d89aa4d57479194f458a66770f3d803e0dc8fda7bacead016391c7393b4f152e"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.png",
+          "bytes": 134281,
+          "sha256": "62f7b1c492ec803c1bb2d50317197bdae912f2cb3908fd20c261cafb00678568"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/build_pdf.py",
+          "bytes": 802,
+          "sha256": "7ff2ed21b5f8f5f12fd7a4bd6ff3f7332a74a03e26a9ed45576aa614160640f0"
+        }
+      ],
+      "parent_argv": [
+        "build-scripts/content/book-2/214/check_render.py",
+        "--lessons-root",
+        "C:/wt/book2-214-build-current-20260906/4veco-lessen",
+        "--output",
+        "C:/wt/book2-214-build-current-20260906/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r46.json",
+        "--rebuild",
+        "--proof-root",
+        "C:/wt/book2-214-build-current-20260906/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker",
+        "--proof-suffix",
+        "r46"
+      ]
+    }
+  ],
+  "source": [
+    {
+      "path": "build-scripts/content/book-2/b2_214.py",
+      "sha256": "980fc8eccf8f933ebdeafc2021a66fc103ff8d322fff27bc20bd95d2cddfa2a2",
+      "bytes": 19865,
+      "whole_committed_derivation": true
+    },
+    {
+      "path": "build-scripts/content/book-2/214/exercises.md",
+      "sha256": "18650be37c3925be221e77cc19752a3dbc24deab7bc659eba02ea419a376d3dc",
+      "bytes": 8540,
+      "whole_committed_derivation": true
+    },
+    {
+      "path": "build-scripts/content/book-2/214/answers.md",
+      "sha256": "377ee83ad59e5842a3900cd06d0865674244108a663004ce27d077c5c8821321",
+      "bytes": 11272,
+      "whole_committed_derivation": true
+    },
+    {
+      "path": "build-scripts/content/book-2/214/target-answers.md",
+      "sha256": "2a75a3ad3b7c8a7ac1d464726faa6669a6ca19f1ab4d4485f6897552b4156f2d",
+      "bytes": 4403,
+      "whole_committed_derivation": true
+    },
+    {
+      "path": "build-scripts/content/book-2/214/figures.py",
+      "sha256": "d896aa7998d62f69224d694557f5b73940653af516af1f536657fa88d3662f23",
+      "bytes": 8485,
+      "whole_committed_derivation": true
+    },
+    {
+      "path": "build-scripts/content/book-2/214/raster.cjs",
+      "sha256": "8518a78f9d213d599e7d53bab6dfbee5be66ed505d7b89e88291f1f587247d29",
+      "bytes": 592,
+      "whole_committed_derivation": true
+    },
+    {
+      "path": "build-scripts/content/book-2/214/dependency-pins.json",
+      "sha256": "98b3fbae167dc01ff590c60b194be869c9f0cb7c83efccb0007a5f3556cf8f6b",
+      "bytes": 3573,
+      "whole_committed_derivation": true
+    },
+    {
+      "path": "build-scripts/content/book-2/214/direct_print.py",
+      "sha256": "a4834bc3c72e314beb4a9277e72288862e2aca599604de1a4639a68fd8b477ee",
+      "bytes": 2117,
+      "whole_committed_derivation": true
+    },
+    {
+      "path": "build-scripts/content/book-2/214/test_source.py",
+      "sha256": "d9d15811a6b03bd4b755b8706e0d96b689153c440ff61df61b5573cfc3a46f79",
+      "bytes": 22453,
+      "whole_committed_derivation": true
+    },
+    {
+      "path": "build-scripts/content/book-2/214/check_render.py",
+      "sha256": "3ac7ab5d8def6a7bb3188c36809b59c0a2e403886b77826c3d0713f95808350f",
+      "bytes": 7606,
+      "whole_committed_derivation": true
+    }
+  ],
+  "current_native": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md",
+      "bytes": 11615,
+      "sha256": "6e275609154b3d8ccec1e18410d7cd3a764385d3cf04c81ca4308e5865393e26",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.html",
+      "bytes": 353945,
+      "sha256": "e32385e10c407ac23caa7d8d2472b3b19881319ea34413cf49ba5a55c8ea256b",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+      "bytes": 359587,
+      "sha256": "c89e1c4f49491028d0cf171eb3219977b7545c127ad0a5c37f0f713df4136f48",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.md",
+      "bytes": 18912,
+      "sha256": "f94ec7bab34c3eea13d698e6ce44897dfb664b8c75d9a366b3a23920932d7285",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.html",
+      "bytes": 386375,
+      "sha256": "5ffc4cd3defb7e2a3b63c1b443593527067c961d1840c7e56a905c61d1a3df39",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+      "bytes": 401508,
+      "sha256": "f2951e2f969045b0c9d549c1f544fbd7d2a1679352169d3ac64d90ec799f27f8",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.svg",
+      "bytes": 10020,
+      "sha256": "09c2993d1d48f26b29bf49dd3abd221a118dcb8e4db9601081afbdb57a99ea4d",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.png",
+      "bytes": 121193,
+      "sha256": "2ed6ebe9bef5c400e9a8c5591d414b1d104dca4607485e84a5ea84bfb2626555",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.svg",
+      "bytes": 11753,
+      "sha256": "bf8ef4855b23010548de9cb7d290cba1125bb13a744623e77869e27d55c25eff",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.png",
+      "bytes": 137552,
+      "sha256": "58f81a1ff2c464e5471775620e9cf62fc9571b6078f9006b91e6b3f11cd44a05",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.svg",
+      "bytes": 9508,
+      "sha256": "7a41c0750657776681b163cad6be8471102f9ec9f2497a2d2e1e6c56492be92f",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.png",
+      "bytes": 132641,
+      "sha256": "e8a535367b33be710548f3515bede4e6e11247344d2cbddde36cf5b05b8ca63c",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.svg",
+      "bytes": 10314,
+      "sha256": "d89aa4d57479194f458a66770f3d803e0dc8fda7bacead016391c7393b4f152e",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.png",
+      "bytes": 134281,
+      "sha256": "62f7b1c492ec803c1bb2d50317197bdae912f2cb3908fd20c261cafb00678568",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/build_pdf.py",
+      "bytes": 802,
+      "sha256": "7ff2ed21b5f8f5f12fd7a4bd6ff3f7332a74a03e26a9ed45576aa614160640f0",
+      "actual_native_L_commit": "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+    }
+  ],
+  "personal_view_transfer": "All20color+20gray pages and4color+4gray figures personally viewed in r42; later exact raw/decoded parity below, not a claim of separately viewing every duplicate.",
+  "visual_evidence": {
+    "views_sha256": "cab4dac4e7883c1f8c3050061e8729d456c0c6fd804fb52d4883c81394776bc3",
+    "observations_sha256": "1cb8093a5dc0d8edb3f95e0049e9663f6b782aefddfaef8e52187c75fd28f482",
+    "pages": 20,
+    "figures": 4,
+    "color_and_gray": true
+  },
+  "source_test_log": {
+    "gzip_sha256": "1f7d1c4808f530a0a265b08f935756c7fc9dd328b2bb6556aaf72fe1f0cb9296",
+    "decompressed_sha256": "062d65ff80c22026cd5d1eb26072523100bef75e86fe66de073f6212f3bc8576",
+    "decompressed_bytes": 302044775,
+    "lossless": true
+  }
+}

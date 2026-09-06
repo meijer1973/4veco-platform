@@ -59,4 +59,28 @@ else if(process.argv[2]==='custody'){
  }
  write(label+'-custody',{status:'PASS',repositories:results,baseline_sha256:hash(read(P,'reports/sprints/'+N+'-baseline.json'))});console.log(JSON.stringify({status:'PASS',preserved:Object.fromEntries(Object.entries(results).map(([r,x])=>[r,x.preserved]))}));
 }
-else throw Error('Expected baseline, gates, command, snapshot or custody');
+else if(process.argv[2]==='final-gates'){
+ const tag=process.argv[3];a.match(tag,/^[a-z0-9-]+$/);const base=JSON.parse(read(P,'reports/sprints/'+N+'-baseline.json'));const folder=path.dirname(path.join(L,base.selected_native_paths[0]));const rows=[];
+ for(const[label,args]of [['part-a-student-web',['scripts/validate-paragraph.js','--mode','part-a','--profile','student-web',folder]],['part-a-publisher-print',['scripts/validate-paragraph.js','--mode','part-a','--profile','publisher-print',folder]],['release',['reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-gate.cjs','214']],['structural',['build-scripts/workflows/check-book-outline-currentness.js']],['production',['build-scripts/workflows/check-book-outline-currentness.js','--require-approved','--action','paragraph_production','--paragraph','2.1.4']],['durable',['build-scripts/workflows/check-book2-target-authority-remediation.js','--durable']],['bundle',['build-scripts/sprints/check-sprint-bundle.js','BOOK2-TEXTBOOK-PRODUCTION-1']],['url-map',['build-scripts/sprints/emit-url-index.js','--check']]]){
+  const r=run(tag+'-'+label,process.execPath,args);rows.push({label,exit_code:r.exit_code,process_sha256:hash(read(P,'reports/sprints/'+N+'-'+tag+'-'+label+'-process.json'))});
+ }
+ write(tag+'-gates',{rows,platform:env().FOURVECO_PLATFORM_SOURCE_REF,lessen:env().FOURVECO_LESSEN_SOURCE_REF,profiles_are_mechanical_not_current_review:true});
+}
+else if(process.argv[2]==='scopes'){
+ const tag=process.argv[3];a.match(tag,/^[a-z0-9-]+$/);const rows=[];
+ for(const[repo,root,lane,own,complete]of [['platform',P,'shared',BP,'96416b6b5bd57094576e9aba0a42d682584ec479'],['lessen',L,'textbook',BL,'f09fd6e88edc5049b026b16b0158e7e188091d2d']]){
+  const head=git(root,'rev-parse','HEAD').toString().trim();
+  for(const[kind,base]of [['own',own],['complete',complete]]){
+   const r=run(tag+'-'+repo+'-'+kind+'-scope',process.execPath,['build-scripts/workflows/check-paragraph-lane-scope.js','--cwd',root,'--lane',lane,'--base',base,'--head',head,'--json']);rows.push({repo,kind,base,head,exit_code:r.exit_code});
+   for(const[mode,args]of [['native',['diff','--check',base+'..'+head]],['crlf',['-c','core.whitespace=cr-at-eol','diff','--check',base+'..'+head]]]){const w=run(tag+'-'+repo+'-'+kind+'-whitespace-'+mode,'git',args,root);rows.push({repo,kind,mode,exit_code:w.exit_code});}
+  }
+ }
+ write(tag+'-scope-summary',{rows,note:'Actual native classifier and raw/CRLF-aware whitespace diagnostics retained without exceptions or rewritten history.'});
+}
+else if(process.argv[2]==='pack-source-log'){
+ const z=require('node:zlib'),name=N+'-source-probes-r3-process.json',file=path.join(__dirname,name),raw=fs.readFileSync(file),compressed=z.gzipSync(raw,{level:9});
+ a.equal(hash(raw),'062d65ff80c22026cd5d1eb26072523100bef75e86fe66de073f6212f3bc8576');a(z.gunzipSync(compressed).equals(raw));
+ fs.writeFileSync(file+'.gz',compressed,{flag:'wx'});a(z.gunzipSync(fs.readFileSync(file+'.gz')).equals(raw));
+ write('source-probes-r3-log-custody',{raw_path:file,raw_bytes:raw.length,raw_sha256:hash(raw),durable_gzip_path:file+'.gz',gzip_bytes:compressed.length,gzip_sha256:hash(compressed),lossless_roundtrip:true,reason:'Raw complete process JSON repeats actual Git blob stdout and its base64 encoding; exceeds GitHub100MB limit. Durable gzip retains every original byte. Only uncommitted disposable raw duplicate may be cleaned with native resolved-path checks; no historical evidence is rewritten.'});console.log(JSON.stringify({raw_bytes:raw.length,gzip_bytes:compressed.length,raw_sha256:hash(raw),gzip_sha256:hash(compressed)}));
+}
+else throw Error('Expected baseline, gates, command, snapshot, custody, final-gates, scopes or pack-source-log');
