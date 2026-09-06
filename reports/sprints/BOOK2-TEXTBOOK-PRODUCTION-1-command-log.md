@@ -15471,3 +15471,25 @@ final-integrity: BOOK2-TEXTBOOK-PRODUCTION-1-223-S1-root-final-integrity.json SH
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-S1-root-scope.js f327653f7065f378581ba0f14ad1f38e3480fda6
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T00:25:11.975Z`
+- finished_at: `2026-09-06T00:25:13.451Z`
+- duration_ms: `1476`
+- exit_code: `0`
+- stdout_sha256: `8c01471d1c2d663f9f4d80af63942caed1766d476f06013d6717a113cded226f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"pass":true,"head":"f327653f7065f378581ba0f14ad1f38e3480fda6","owned_paths":430,"native_scopes":[{"label":"incremental-platform","ok":true},{"label":"complete-platform","ok":true},{"label":"complete-lessons","ok":true}],"whitespace":{"default_exit":0,"scoped_cr_at_eol_exit":0}}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
