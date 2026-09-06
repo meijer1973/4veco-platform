@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T02:22:59.911Z
+Generated: 2026-09-06T02:59:02.527Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `agent/book2-223-alt-review-20260906`
-Source commit: `b77911881702508e059781f62469631bf83baa26`
-Files indexed: 11682
-Scope: committed tree files from `git ls-tree -r --name-only b77911881702508e059781f62469631bf83baa26`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source commit: `f49314d347a87ca7b4da0c46b5d2f6d3b32dfd8d`
+Files indexed: 11705
+Scope: committed tree files from `git ls-tree -r --name-only f49314d347a87ca7b4da0c46b5d2f6d3b32dfd8d`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -2732,7 +2732,7 @@ Count: 1030
 
 ## reports
 
-Count: 8895
+Count: 8918
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -8481,6 +8481,29 @@ Count: 8895
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-lessons-whitespace-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-native-check.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-native-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-actual-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-claim-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-claim-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-evidence.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-fetch-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-fetch-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-currentness-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-publisher-print-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-student-web-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-scope-complete-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-scope-complete-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-scope-own-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-scope-own-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-stage-inventory.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-whitespace-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-whitespace-platform-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-observations.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-pdf-artifact-marker.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-personal-inspection.json
