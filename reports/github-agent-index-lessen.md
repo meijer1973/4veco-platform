@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-09-06T02:16:12.624Z
+Generated: 2026-09-06T02:28:53.986Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-lessen`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `30f57bfad2096c7afa507da48db9d82ee35a3c23`
-Files indexed: 1899
+Source commit: `d0d84a5f411c23141954090f3bc1d234e7e45cd3`
+Files indexed: 1900
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -115,7 +115,7 @@ _No files indexed in this group._
 
 ## book folders
 
-Count: 1022
+Count: 1023
 
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
@@ -1101,6 +1101,7 @@ Count: 1022
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/.gitkeep
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-quality-ref.yaml
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-review.md
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/build_pdf.py
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/build_chapter.py
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md
@@ -1142,7 +1143,7 @@ Count: 1022
 
 ## paragraph folders
 
-Count: 869
+Count: 870
 
 - "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.html"
 - "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.md"
@@ -1977,6 +1978,7 @@ Count: 869
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/.gitkeep
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-quality-ref.yaml
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-review.md
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/build_pdf.py
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/_assets/2.3.1_ex_1.png
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/_assets/2.3.1_ex_1.svg
@@ -2016,7 +2018,7 @@ Count: 869
 
 ## generated artifacts
 
-Count: 974
+Count: 975
 
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.png
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.svg
@@ -2957,6 +2959,7 @@ Count: 974
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-quality-ref.yaml
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-review.md
+- Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/_assets/2.3.1_ex_1.png
 - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/_assets/2.3.1_ex_1.svg

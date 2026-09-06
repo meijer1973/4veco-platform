@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T02:16:12.523Z
+Generated: 2026-09-06T02:28:53.887Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `48cc4a9b6bcc88f4cc6e07e01b9251bd8d662804`
-Files indexed: 11934
+Source commit: `1bc46f29a19cc6461cec7c7a873b9d0b07e43a67`
+Files indexed: 11950
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2742,7 +2742,7 @@ Count: 1030
 
 ## reports
 
-Count: 9146
+Count: 9162
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -9187,6 +9187,22 @@ Count: 9146
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-1.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-2-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-successor-work-order.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-operational-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-check.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-001.png
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-002.png
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-003.png
