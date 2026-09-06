@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-232-f1-review-20260906\\4veco-platform",
+    "--lane",
+    "shared",
+    "--base",
+    "c725c37d2081f6ac7846b8e172dcd7590f6611e9",
+    "--head",
+    "476ea399641631c6333c29c6153cd85d471dc78f",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-232-f1-review-20260906\\4veco-platform",
+  "started_utc": "2026-09-06T03:44:18.964Z",
+  "finished_utc": "2026-09-06T03:44:19.042Z",
+  "exit_code": 1,
+  "stdout": "{\n  \"ok\": false,\n  \"lane\": \"shared\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-author-readonly-r1-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-baseline.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-check.py\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-bundle-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-claim-lessons-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-claim-platform-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-durable-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-goal-design-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-governance-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-structural-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-custody-r1-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-independent-checks-r1-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-independent-checks-r2-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-legacy-publisher-print-r1-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-legacy-student-web-r1-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-plan.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-publish.cjs\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-report.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-run.cjs\"\n    ],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [\n    \"shared lane needs at least one shared platform change\",\n    \"generated index/report or review-evidence changes are allowed only with lane-owned changes\"\n  ],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": ""
+}
