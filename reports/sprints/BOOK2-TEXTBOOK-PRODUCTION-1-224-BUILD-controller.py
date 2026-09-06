@@ -23,7 +23,7 @@ PREFIX="BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD"
 EVIDENCE=ROOT/"reports/sprints"/(PREFIX+"-evidence")
 PBASE="e42c2b276354aeb1eb903bfb480a5dad27d898b2"
 LBASE="8a3d4018ad6a5082449a17c59f991cbdc93fbb62"
-SOURCE_COMMIT="aca14c61d258c05d668005d20bf0e4196de89ced"
+SOURCE_COMMIT="9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab"
 SOURCE_PATHS=["build-scripts/content/book-2/b2_224.py", *["build-scripts/content/book-2/224/"+n for n in
               ("answers.md","check_render.py","exercises.md","target-answers.md","test_source.py")]]
 sys.path.insert(0,str(ROOT/"build-scripts/content/book-2"))
@@ -143,7 +143,8 @@ def execute(label,revision,mode):
     value={"finished":now(),"exit_code":result.returncode,"elapsed_seconds":time.monotonic()-start,
            "stdout_sha256":b.sha(result.stdout),"stderr_sha256":b.sha(result.stderr),
            "manifest":str(manifest),"manifest_sha256":b.digest(manifest) if manifest.is_file() else None,
-           "path_unchanged":started["path_raw_sha256"]==b.sha(os.environ["PATH"].encode())}
+           "path_unchanged":started["path_raw_sha256"]==b.sha(os.environ["PATH"].encode()),
+           "figure_pixels":figure_pixels() if result.returncode==0 else None}
     write_new(Path(str(prefix)+"-finished.json"),value)
     print(json.dumps(value));print(result.stderr.decode("utf-8",errors="replace")[-4000:])
     if result.returncode:raise SystemExit(result.returncode)
@@ -164,11 +165,27 @@ def pages(manifest):
     return output
 
 
+def figure_pixels():
+    from PIL import Image
+    rows=[]
+    for n in range(1,5):
+        path=LESSONS/b.LESSON_REL/"_assets"/f"2.2.4_ex_{n}.png"
+        with Image.open(path) as im:
+            rgb=im.convert("RGB")
+            rows.append({"figure":n,"raw_sha256":b.digest(path),"rgb_sha256":b.sha(rgb.tobytes()),"size":list(rgb.size)})
+    return rows
+
+
 def parity(paths):
     sources=source_guard()
     manifests=[json.loads(path.read_text(encoding="utf-8")) for path in paths]
     native=manifests[0]["native_files"]
     page_sets=[pages(m) for m in manifests]
+    figures=figure_pixels()
+    for path in paths:
+        finished=Path(str(path).replace("-manifest.json","-finished.json"))
+        if json.loads(finished.read_text(encoding="utf-8"))["figure_pixels"]!=figures:
+            raise ValueError("Actual per-route decoded figure pixels differ")
     comparable=lambda rows:[{k:v for k,v in row.items() if k!="path"} for row in rows]
     for manifest,rows in zip(manifests,page_sets):
         if manifest["native_files"]!=native:raise ValueError("15 native bytes differ between routes")
@@ -178,14 +195,15 @@ def parity(paths):
         if b.digest(LESSONS/row["path"])!=row["sha256"]:raise ValueError("Current native bytes drifted")
     value={"status":"PASS","sources":sources,"manifests":[{"path":str(p),"raw_sha256":b.digest(p)} for p in paths],
            "native_files":native,"page_sets":page_sets,"native_per_route":15,"complete_page_count_per_route":len(page_sets[0]),
-           "all_four_png_bytes_imply_exact_decoded_figure_parity":True}
+           "actual_figure_pixels_per_route":figures,"all_four_decoded_figure_pixels_equal":True}
     path=EVIDENCE/"224-parity.json";write_new(path,value);print(json.dumps({"path":str(path),"sha256":b.digest(path),"pages":len(page_sets[0])}))
 
 
-def views(manifest_path):
+def views(manifest_path,label=None):
     from PIL import Image
     manifest=json.loads(manifest_path.read_text(encoding="utf-8"));output=[]
-    directory=EVIDENCE/"224-personal-views";directory.mkdir(exist_ok=False)
+    suffix="-"+label if label else ""
+    directory=EVIDENCE/("224-personal-views"+suffix);directory.mkdir(exist_ok=False)
     for row in pages(manifest):
         with Image.open(row["path"]) as im:
             path=directory/f"{row['kind']}-page-{row['page']:03d}-gray.png";im.convert("L").convert("RGB").save(path)
@@ -195,7 +213,7 @@ def views(manifest_path):
         with Image.open(source) as im:
             path=directory/f"figure-{n}-gray.png";im.convert("L").convert("RGB").save(path)
         output.append({"figure":n,"path":str(source),"raw_sha256":b.digest(source),"gray_path":str(path),"gray_sha256":b.digest(path),"observation":"NOT_YET_RECORDED"})
-    path=EVIDENCE/"224-view-inventory.json";write_new(path,{"manifest_sha256":b.digest(manifest_path),"views":output})
+    path=EVIDENCE/("224-view-inventory"+suffix+".json");write_new(path,{"manifest_sha256":b.digest(manifest_path),"views":output})
     print(json.dumps({"inventory":str(path),"raw_sha256":b.digest(path),"items":len(output)}))
 
 
@@ -224,5 +242,5 @@ if __name__=="__main__":
     elif args.action=="reserve":reserve(args.label)
     elif args.action=="run":execute(args.label,args.revision,args.mode)
     elif args.action=="parity":parity(args.manifest)
-    elif args.action=="views":views(args.manifest[0])
+    elif args.action=="views":views(args.manifest[0],args.label)
     else:custody()
