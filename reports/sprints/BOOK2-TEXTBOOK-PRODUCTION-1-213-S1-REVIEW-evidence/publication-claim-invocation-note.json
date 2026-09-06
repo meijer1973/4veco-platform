@@ -1,0 +1,8 @@
+{
+  "original": "publication-platform-claim.json",
+  "original_exit_code": 2,
+  "cause": "Own prepublish helper omitted required --check mode; CLI rejected before reading or changing ownership.",
+  "correction": "Added explicit --check; fresh named read-only checks verify existing actor/task on both owned branches. No --claim, override or release.",
+  "historical_failure_preserved": true,
+  "result": "PASS"
+}

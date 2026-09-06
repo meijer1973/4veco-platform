@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "npm.cmd",
+    "run",
+    "check:agent-worktree-safety",
+    "--",
+    "--worktree",
+    "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform",
+    "--task",
+    "BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW",
+    "--agent",
+    "paragraph_214_builder",
+    "--require-prefix",
+    "codex/,agent/"
+  ],
+  "cwd": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T04:18:30.519198+00:00",
+  "finished_at": "2026-09-06T04:18:30.836730+00:00",
+  "exit_code": 2,
+  "stdout": "\n> 4veco-platform@1.0.0 check:agent-worktree-safety\n> node build-scripts/ci/check-agent-worktree-safety.js --worktree C:\\wt\\book2-213-s1-review-20260906\\4veco-platform --task BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW --agent paragraph_214_builder --require-prefix codex/,agent/\n\n",
+  "stderr": "Agent worktree-safety check failed: missing mode: pass --claim, --check, or --release\n",
+  "stdout_sha256": "f5ebf9b679e69e3ec29a2fe375783e06c965d2e73b0f6cd6080a28eb4ff5252a",
+  "stderr_sha256": "07796cffe3b840fbbf111ec2dee5232ad4e16fe20b5bf7cf1d8a2644a27518c8",
+  "inherited_path_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "environment_overrides": null
+}

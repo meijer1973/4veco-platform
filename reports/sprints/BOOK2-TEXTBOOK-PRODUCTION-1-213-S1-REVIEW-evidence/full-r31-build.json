@@ -1,0 +1,170 @@
+{
+  "paragraph": "2.1.3",
+  "target_record_sha256": "df4b7d7b0326445b386ae570b43eb50fc9fc431707e3992e44394323f959c3ef",
+  "plan_sha256": "4cf29ff1e70953f6d1f8399a65d63ad37031e6a129804ad555442bfb98624234",
+  "chapter_sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116",
+  "prerequisites": [
+    {
+      "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-textbook-plan.md",
+      "canonical_lf_sha256": "4cf29ff1e70953f6d1f8399a65d63ad37031e6a129804ad555442bfb98624234"
+    },
+    {
+      "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_chapter-plan.md",
+      "canonical_lf_sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116"
+    },
+    {
+      "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-textbook-handoff.md",
+      "canonical_lf_sha256": "0d14506e314a11fef0637cc66cf29036f174b94cafbf7fa5ede2eff88937500f"
+    },
+    {
+      "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-textbook-handoff.md",
+      "canonical_lf_sha256": "4da6e5b4f0a70273d78c067f34484c8a5f6faf164b0f09c1559b9a73ff6611fe"
+    },
+    {
+      "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-review.md",
+      "canonical_lf_sha256": "79429b9f1750710baae46751a5792e4a02e7c177888a01f5ca3a15c4039a78f7"
+    },
+    {
+      "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-quality-ref.yaml",
+      "canonical_lf_sha256": "73bd2a2447b38c9d95cbc3bd69b8037e0f46b7564655b4513009fd6707b7b07d"
+    }
+  ],
+  "prior_paragraph_md_raw_sha256": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+  "input_sources": [
+    {
+      "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_213.py",
+      "sha256": "87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4"
+    },
+    {
+      "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    {
+      "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\theory.md",
+      "sha256": "df6e40009454bc43f4915fa3edbf8c613a888ebbd2d0b7b59414bd3f70b4d5e7"
+    },
+    {
+      "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\exercises.md",
+      "sha256": "bd16efcc6ac0ef9c2713b61587c8613fa353e98cc696e8a172ea931e11c35b32"
+    },
+    {
+      "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\answers.md",
+      "sha256": "91d6074e6b843a7d31e8ab03f7e3fc6a959408f64146fc4ef17c3fb6ca0b8d29"
+    },
+    {
+      "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform\\build-scripts\\content\\book-2\\213\\target-answers.md",
+      "sha256": "aa59a0ab3d69a1177ea90b521d510f34576480838b21e13f4f169c7812639f09"
+    }
+  ],
+  "inspection_status": "PENDING",
+  "documents": [
+    {
+      "source_md": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "source_sha256": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d",
+      "source_html": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html",
+      "html_sha256": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b",
+      "source_pdf": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+      "pdf_sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_1.svg",
+          "sha256": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_1.png",
+          "sha256": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_2.svg",
+          "sha256": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_2.png",
+          "sha256": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_3.svg",
+          "sha256": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_3.png",
+          "sha256": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_4.svg",
+          "sha256": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_fig_4.png",
+          "sha256": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_we_1.svg",
+          "sha256": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_we_1.png",
+          "sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_ex_1.svg",
+          "sha256": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_ex_1.png",
+          "sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e"
+        }
+      ],
+      "zip": {
+        "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.zip",
+        "sha256": "15ffc25da00d0f3bfc84f93224191a08c9ab31387f7dc873a8df85dc7b76b499"
+      },
+      "proof_directory": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence\\proofs\\213-paragraaf-534177c8280e-r31"
+    },
+    {
+      "source_md": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "source_sha256": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20",
+      "source_html": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html",
+      "html_sha256": "b78090ef65fb0544e46b59353660980a79e2bd2b5774ef64955154abe23a3c98",
+      "source_pdf": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+      "pdf_sha256": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_we_1.svg",
+          "sha256": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_we_1.png",
+          "sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_ex_1.svg",
+          "sha256": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b"
+        },
+        {
+          "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\_assets\\2.1.3_ex_1.png",
+          "sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e"
+        }
+      ],
+      "zip": {
+        "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – opgaven.zip",
+        "sha256": "1a841ffb08f77e0a50559791707023c85d803f6aea263095449fd74fcf451dae"
+      },
+      "proof_directory": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence\\proofs\\213-opgaven-d12487671bd2-r31"
+    },
+    {
+      "source_md": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "source_sha256": "2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f",
+      "source_html": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html",
+      "html_sha256": "3c536f28de7f95a133cf80b5f3e4a351912af5103cf5ed48772fdf9d550a11cb",
+      "source_pdf": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+      "pdf_sha256": "d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787",
+      "assets": [],
+      "zip": {
+        "path": "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip",
+        "sha256": "9d1a0197cd02451e2168a31472ce5351aef9bd9169e8af535b261ba2353930a1"
+      },
+      "proof_directory": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence\\proofs\\213-antwoorden-d96f21c3abed-r31"
+    }
+  ]
+}

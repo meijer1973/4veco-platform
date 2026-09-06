@@ -1,0 +1,143 @@
+{
+  "actor": "paragraph_214_builder",
+  "role": "independent213S1DeltaReviewer",
+  "personal_report_sha256": "3e9e56f9a8a981e4e840c1c97550a24f01ff705c7b751328bd6827b52c630ea3",
+  "fresh_personal_full_page_views": 6,
+  "pages": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-paragraaf-534177c8280e-r31/pages/page-002.png",
+      "raw_sha256": "f5b3b1f3fd2a80f8c98ef56bb892df648733b8b9e550dee8106dbc6673e881d4",
+      "personally_viewed": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-paragraaf-534177c8280e-r31/pages/page-005.png",
+      "raw_sha256": "d401752356839f500b0c32ea70585a953a195978e16124b1c495c6e3fab88a7e",
+      "personally_viewed": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-opgaven-d12487671bd2-r31/pages/page-008.png",
+      "raw_sha256": "da00760a5d51eca93a00da72bf6396f092b69d1239448f956a071bbc8b60c54a",
+      "personally_viewed": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-opgaven-d12487671bd2-r31/pages/page-009.png",
+      "raw_sha256": "59ccfb6970899b936e17c94812a03806f05150fb9af4c258c36fe2b7050386f6",
+      "personally_viewed": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-antwoorden-d96f21c3abed-r31/pages/page-003.png",
+      "raw_sha256": "adca03ec729ebb932579f47466c3030b7803f574debbc68b9736a8897806b3b2",
+      "personally_viewed": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-antwoorden-d96f21c3abed-r31/pages/page-006.png",
+      "raw_sha256": "0134af1084fbbc81d699fac529a60bbe8fdbe1d29b571ff64a9147bd3af40b64",
+      "personally_viewed": true
+    }
+  ],
+  "all_pages_fresh_personally_viewed": false,
+  "prior_full_review_actor": "paragraph_213_r7_independent_review",
+  "prior_full_review_sha256": "5064642034fac9763202d2424b87cef2f7cc909aaf3a6031b90d247ee44409c3",
+  "attribution": "Prior full30-page/six-figure/five-gray observations belong to the named R7 reviewer, not this reviewer.",
+  "immutable_pending_manifests": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-antwoorden-d96f21c3abed-r31/manifest.json",
+      "raw_sha256": "8ff36fbe04ebb262ded0064d35171b2a6bb9e5a59f9dfe67bc6055843e384c1e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-antwoorden-d96f21c3abed-r32/manifest.json",
+      "raw_sha256": "487e8d055e115e79511dc4dbcca9b7e12613855064f63bfd8a3f7a77ac18e87c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-antwoorden-d96f21c3abed-r33/manifest.json",
+      "raw_sha256": "d97fa52d0fbb15379cd3c3faa9bc7762a0e9f340a1e5246bb040089fa21b62ef"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-opgaven-d12487671bd2-r31/manifest.json",
+      "raw_sha256": "47a365a6da27ccdea128254f978269baa9a6a124120cf739470dbd7d9ce1887c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-opgaven-d12487671bd2-r32/manifest.json",
+      "raw_sha256": "5da9ebbb0f07723b441d683d23ad66edfebb826dd4cec57acf5322b8859f5b9c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-opgaven-d12487671bd2-r33/manifest.json",
+      "raw_sha256": "36a89f484258417cd7d37acbbc967adec4b128885418458ec241752a12d4bef0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-paragraaf-534177c8280e-r31/manifest.json",
+      "raw_sha256": "86c7fc4de919183d4df8a77c30b22c27c6ab02d783438288c55937b5b7a52ca4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-paragraaf-534177c8280e-r32/manifest.json",
+      "raw_sha256": "b7d33440efff05bf09ee148e7ab22adf6329ab11cbc640b78e8c5c0c50adfc0b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/proofs/213-paragraaf-534177c8280e-r33/manifest.json",
+      "raw_sha256": "7eb5703598b09feceeb158dee8c6e2483336338e613521bdc833ef5c0d9ab095"
+    }
+  ],
+  "native": {
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+    "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.zip": "15ffc25da00d0f3bfc84f93224191a08c9ab31387f7dc873a8df85dc7b76b499",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html": "b78090ef65fb0544e46b59353660980a79e2bd2b5774ef64955154abe23a3c98",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05",
+    "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.zip": "1a841ffb08f77e0a50559791707023c85d803f6aea263095449fd74fcf451dae",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md": "2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html": "3c536f28de7f95a133cf80b5f3e4a351912af5103cf5ed48772fdf9d550a11cb",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf": "d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip": "9d1a0197cd02451e2168a31472ce5351aef9bd9169e8af535b261ba2353930a1",
+    "_assets/2.1.3_fig_1.svg": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819",
+    "_assets/2.1.3_fig_1.png": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+    "_assets/2.1.3_fig_2.svg": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53",
+    "_assets/2.1.3_fig_2.png": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+    "_assets/2.1.3_fig_3.svg": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc",
+    "_assets/2.1.3_fig_3.png": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+    "_assets/2.1.3_fig_4.svg": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773",
+    "_assets/2.1.3_fig_4.png": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+    "_assets/2.1.3_we_1.svg": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d",
+    "_assets/2.1.3_we_1.png": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+    "_assets/2.1.3_ex_1.svg": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+    "_assets/2.1.3_ex_1.png": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e"
+  },
+  "full_thin_print_reproduction": [
+    {
+      "path": "full-r31-reproduction.json",
+      "raw_sha256": "a06f9d8bf6844ea18a2fd158cc23e168ca4fc023ad2803fbb5fb13fbda2ae108"
+    },
+    {
+      "path": "print-r33-reproduction.json",
+      "raw_sha256": "e2e7cec3a4fe8fba29f2a3169698fd325e77f498da8bede62c5aa26dee346a42"
+    },
+    {
+      "path": "thin-r32-reproduction.json",
+      "raw_sha256": "dbc44423227a7caedb66ed4ebbbaab139d0c77f394fd8d2fb20c093078d68bdf"
+    }
+  ],
+  "minimum_type": [
+    {
+      "kind": "paragraaf",
+      "pages": 14,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": 15.685038248697916
+    },
+    {
+      "kind": "opgaven",
+      "pages": 9,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": 15.685038248697916
+    },
+    {
+      "kind": "antwoorden",
+      "pages": 7,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": null
+    }
+  ],
+  "current_canonical_review_unchanged": true,
+  "stale_qc_unchanged": true,
+  "handoff_absent": true
+}
