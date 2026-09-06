@@ -1,0 +1,3048 @@
+{
+  "verdict": "INDEPENDENT_PLAN_CHECKS_PASS",
+  "actor": "paragraph_224_builder",
+  "reviewed": {
+    "P": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+    "L": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+    "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md",
+    "raw_sha256": "12d81b83f9be50ebdcf3460ce7ad60d2de5a788cb3da8d3a046c1449112922ea",
+    "lines": 861
+  },
+  "four_edit_reversal": true,
+  "unchanged_model_sha256": "0216ddc1bf81b8699d4beb559e6a61d067931ba58429cffd211c80e3910971d0",
+  "paper_predicates": [
+    "pupil edition",
+    "location after own questions before next task",
+    "same or facing page",
+    "answers repeat complete model and criteria",
+    "attempt before optional checking",
+    "actual named destination",
+    "one existing low stakes check within original time",
+    "entire unchanged model and all four criteria",
+    "no former nonexistent referent",
+    "not forced routed or mastery feedback"
+  ],
+  "assertions": [
+    "all independent paper predicates valid",
+    "LF form valid",
+    "whole fixed 4 goals 6 questions 14 points",
+    "exact hold H-OUTLINE-OWNER",
+    "exact hold H-211-GATE0B1",
+    "exact hold H-211-TARGET-INTEGRATION",
+    "exact hold H-229-211-CANDIDATE",
+    "exact hold H-212-STALE-REF",
+    "exact hold H-213-DELTAQ",
+    "exact hold H-229-214-CANDIDATE",
+    "exact hold H-229-221-CANDIDATE",
+    "exact hold H-229-222-CANDIDATE",
+    "exact hold H-229-223-CANDIDATE",
+    "exact hold H-229-224-CANDIDATE",
+    "exact hold H-231-V5",
+    "exact hold H-232-V5",
+    "exact hold H-233-V5-REF",
+    "exact hold H-234-PLACEHOLDER",
+    "exact hold H-213-OPC2",
+    "exact hold H-221-PRIOR",
+    "exact hold H-22-ELASTIC-CONTRAST",
+    "exact hold H-229-EI-SUPERSESSION",
+    "exact hold H-BOOK2-ROOT-PLAN",
+    "exact hold H-CHAPTER-23-PLAN",
+    "exact hold H-MERGE-GOVERNANCE",
+    "exact prerequisite P01",
+    "exact prerequisite P02",
+    "exact prerequisite P03",
+    "exact prerequisite P04",
+    "exact prerequisite P05",
+    "exact prerequisite P06",
+    "exact prerequisite P07",
+    "exact prerequisite P08",
+    "exact prerequisite P09",
+    "exact prerequisite P10",
+    "exact prerequisite P11",
+    "exact prerequisite P12",
+    "exact prerequisite P13",
+    "exact prerequisite P14",
+    "exact prerequisite P15",
+    "complete market WE",
+    "complete market G3",
+    "complete market G4",
+    "complete market I6",
+    "complete market TARGET",
+    "functional alt we_1",
+    "functional alt we_2",
+    "functional alt ex_1",
+    "functional alt ex_2",
+    "functional alt ex_3",
+    "functional alt ex_4",
+    "functional alt ex_5",
+    "functional alt ex_6",
+    "functional alt ex_7",
+    "functional alt ex_8",
+    "functional alt ex_9",
+    "functional alt ex_10",
+    "functional alt ex_11"
+  ],
+  "negative_cases": [
+    {
+      "name": "paper removed leerlingboekje",
+      "rejected": true,
+      "reason": "pupil edition"
+    },
+    {
+      "name": "paper forged leerlingboekje",
+      "rejected": true,
+      "reason": "pupil edition"
+    },
+    {
+      "name": "paper removed vragen1a–d",
+      "rejected": true,
+      "reason": "location after own questions before next task"
+    },
+    {
+      "name": "paper forged vragen1a–d",
+      "rejected": true,
+      "reason": "location after own questions before next task"
+    },
+    {
+      "name": "paper removed vóór Opgave2",
+      "rejected": true,
+      "reason": "location after own questions before next task"
+    },
+    {
+      "name": "paper forged vóór Opgave2",
+      "rejected": true,
+      "reason": "location after own questions before next task"
+    },
+    {
+      "name": "paper removed direct ertegenover liggende pagina",
+      "rejected": true,
+      "reason": "same or facing page"
+    },
+    {
+      "name": "paper forged direct ertegenover liggende pagina",
+      "rejected": true,
+      "reason": "same or facing page"
+    },
+    {
+      "name": "paper removed antwoordenboekje herhaalt",
+      "rejected": true,
+      "reason": "answers repeat complete model and criteria"
+    },
+    {
+      "name": "paper forged antwoordenboekje herhaalt",
+      "rejected": true,
+      "reason": "answers repeat complete model and criteria"
+    },
+    {
+      "name": "paper removed Probeer eerst1a–d zelf",
+      "rejected": true,
+      "reason": "attempt before optional checking"
+    },
+    {
+      "name": "paper forged Probeer eerst1a–d zelf",
+      "rejected": true,
+      "reason": "attempt before optional checking"
+    },
+    {
+      "name": "paper removed Wil je daarna",
+      "rejected": true,
+      "reason": "attempt before optional checking"
+    },
+    {
+      "name": "paper forged Wil je daarna",
+      "rejected": true,
+      "reason": "attempt before optional checking"
+    },
+    {
+      "name": "paper removed Start1-terugblik hieronder",
+      "rejected": true,
+      "reason": "attempt before optional checking"
+    },
+    {
+      "name": "paper forged Start1-terugblik hieronder",
+      "rejected": true,
+      "reason": "attempt before optional checking"
+    },
+    {
+      "name": "paper removed Kaderkop in de leerlinguitgave",
+      "rejected": true,
+      "reason": "actual named destination"
+    },
+    {
+      "name": "paper forged Kaderkop in de leerlinguitgave",
+      "rejected": true,
+      "reason": "actual named destination"
+    },
+    {
+      "name": "paper removed bij Opgave1.",
+      "rejected": true,
+      "reason": "actual named destination"
+    },
+    {
+      "name": "paper forged bij Opgave1.",
+      "rejected": true,
+      "reason": "actual named destination"
+    },
+    {
+      "name": "paper removed bestaande4 minuten",
+      "rejected": true,
+      "reason": "one existing low stakes check within original time"
+    },
+    {
+      "name": "paper forged bestaande4 minuten",
+      "rejected": true,
+      "reason": "one existing low stakes check within original time"
+    },
+    {
+      "name": "paper removed geen extra uitleg of tweede",
+      "rejected": true,
+      "reason": "one existing low stakes check within original time"
+    },
+    {
+      "name": "paper forged geen extra uitleg of tweede",
+      "rejected": true,
+      "reason": "one existing low stakes check within original time"
+    },
+    {
+      "name": "paper removed CS=(18−12)+(12−12)=€6",
+      "rejected": true,
+      "reason": "entire unchanged model and all four criteria"
+    },
+    {
+      "name": "paper forged CS=(18−12)+(12−12)=€6",
+      "rejected": true,
+      "reason": "entire unchanged model and all four criteria"
+    },
+    {
+      "name": "paper removed elk één formatieve check",
+      "rejected": true,
+      "reason": "entire unchanged model and all four criteria"
+    },
+    {
+      "name": "paper forged elk één formatieve check",
+      "rejected": true,
+      "reason": "entire unchanged model and all four criteria"
+    },
+    {
+      "name": "original actual unresolved F1 plan",
+      "rejected": true,
+      "reason": "pupil edition"
+    },
+    {
+      "name": "name/reference only without edition instruction",
+      "rejected": true,
+      "reason": "pupil edition"
+    },
+    {
+      "name": "placement only retaining wrong referent",
+      "rejected": true,
+      "reason": "actual named destination"
+    },
+    {
+      "name": "forced remedial feedback",
+      "rejected": true,
+      "reason": "not forced routed or mastery feedback"
+    },
+    {
+      "name": "missing foundation P01",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P02",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P03",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P04",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P05",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P06",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P07",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P08",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P09",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P10",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P11",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P12",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P13",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P14",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "missing foundation P15",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(s.replace(r,'').includes(r))\n"
+    },
+    {
+      "name": "WE wrong computed cell 0",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n21 !== 20\n"
+    },
+    {
+      "name": "WE wrong computed cell 1",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n17 !== 16\n"
+    },
+    {
+      "name": "WE wrong computed cell 2",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n201 !== 200\n"
+    },
+    {
+      "name": "WE wrong computed cell 3",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n101 !== 100\n"
+    },
+    {
+      "name": "WE wrong computed cell 4",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n301 !== 300\n"
+    },
+    {
+      "name": "WE wrong computed cell 5",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n19 !== 18\n"
+    },
+    {
+      "name": "WE wrong computed cell 6",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n25 !== 24\n"
+    },
+    {
+      "name": "WE wrong computed cell 7",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n161 !== 160\n"
+    },
+    {
+      "name": "WE wrong computed cell 8",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n129 !== 128\n"
+    },
+    {
+      "name": "WE wrong computed cell 9",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n289 !== 288\n"
+    },
+    {
+      "name": "WE wrong computed cell 10",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n13 !== 12\n"
+    },
+    {
+      "name": "WE wrong computed cell 11",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n5 !== 4\n"
+    },
+    {
+      "name": "WE wrong computed cell 12",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n7 !== 6\n"
+    },
+    {
+      "name": "WE wrong computed cell 13",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n2 !== 1\n"
+    },
+    {
+      "name": "WE wrong computed cell 14",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n4.5 !== 3.5\n"
+    },
+    {
+      "name": "G3 wrong computed cell 0",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n25 !== 24\n"
+    },
+    {
+      "name": "G3 wrong computed cell 1",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n19 !== 18\n"
+    },
+    {
+      "name": "G3 wrong computed cell 2",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n145 !== 144\n"
+    },
+    {
+      "name": "G3 wrong computed cell 3",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n145 !== 144\n"
+    },
+    {
+      "name": "G3 wrong computed cell 4",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n289 !== 288\n"
+    },
+    {
+      "name": "G3 wrong computed cell 5",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n21 !== 20\n"
+    },
+    {
+      "name": "G3 wrong computed cell 6",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n29 !== 28\n"
+    },
+    {
+      "name": "G3 wrong computed cell 7",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n97 !== 96\n"
+    },
+    {
+      "name": "G3 wrong computed cell 8",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n161 !== 160\n"
+    },
+    {
+      "name": "G3 wrong computed cell 9",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n257 !== 256\n"
+    },
+    {
+      "name": "G3 wrong computed cell 10",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n33 !== 32\n"
+    },
+    {
+      "name": "G3 wrong computed cell 11",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n9 !== 8\n"
+    },
+    {
+      "name": "G3 wrong computed cell 12",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n9 !== 8\n"
+    },
+    {
+      "name": "G3 wrong computed cell 13",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n2.5 !== 1.5\n"
+    },
+    {
+      "name": "G3 wrong computed cell 14",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n6.5 !== 5.5\n"
+    },
+    {
+      "name": "G4 wrong computed cell 0",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n25 !== 24\n"
+    },
+    {
+      "name": "G4 wrong computed cell 1",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n19 !== 18\n"
+    },
+    {
+      "name": "G4 wrong computed cell 2",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n289 !== 288\n"
+    },
+    {
+      "name": "G4 wrong computed cell 3",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n145 !== 144\n"
+    },
+    {
+      "name": "G4 wrong computed cell 4",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n433 !== 432\n"
+    },
+    {
+      "name": "G4 wrong computed cell 5",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n23 !== 22\n"
+    },
+    {
+      "name": "G4 wrong computed cell 6",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n29 !== 28\n"
+    },
+    {
+      "name": "G4 wrong computed cell 7",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n241 !== 240\n"
+    },
+    {
+      "name": "G4 wrong computed cell 8",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n181 !== 180\n"
+    },
+    {
+      "name": "G4 wrong computed cell 9",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n421 !== 420\n"
+    },
+    {
+      "name": "G4 wrong computed cell 10",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n13 !== 12\n"
+    },
+    {
+      "name": "G4 wrong computed cell 11",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n5 !== 4\n"
+    },
+    {
+      "name": "G4 wrong computed cell 12",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n7 !== 6\n"
+    },
+    {
+      "name": "G4 wrong computed cell 13",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n2 !== 1\n"
+    },
+    {
+      "name": "G4 wrong computed cell 14",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n4.5 !== 3.5\n"
+    },
+    {
+      "name": "I6 wrong computed cell 0",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n33 !== 32\n"
+    },
+    {
+      "name": "I6 wrong computed cell 1",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n29 !== 28\n"
+    },
+    {
+      "name": "I6 wrong computed cell 2",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n513 !== 512\n"
+    },
+    {
+      "name": "I6 wrong computed cell 3",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n257 !== 256\n"
+    },
+    {
+      "name": "I6 wrong computed cell 4",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n769 !== 768\n"
+    },
+    {
+      "name": "I6 wrong computed cell 5",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n31 !== 30\n"
+    },
+    {
+      "name": "I6 wrong computed cell 6",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n37 !== 36\n"
+    },
+    {
+      "name": "I6 wrong computed cell 7",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n433 !== 432\n"
+    },
+    {
+      "name": "I6 wrong computed cell 8",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n289 !== 288\n"
+    },
+    {
+      "name": "I6 wrong computed cell 9",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n721 !== 720\n"
+    },
+    {
+      "name": "I6 wrong computed cell 10",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n49 !== 48\n"
+    },
+    {
+      "name": "I6 wrong computed cell 11",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n9 !== 8\n"
+    },
+    {
+      "name": "I6 wrong computed cell 12",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n13 !== 12\n"
+    },
+    {
+      "name": "I6 wrong computed cell 13",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n6 !== 5\n"
+    },
+    {
+      "name": "I6 wrong computed cell 14",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n6.5 !== 5.5\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 0",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n41 !== 40\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 1",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n41 !== 40\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 2",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n801 !== 800\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 3",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n401 !== 400\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 4",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n1201 !== 1200\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 5",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n36 !== 35\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 6",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n51 !== 50\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 7",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n601 !== 600\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 8",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n526 !== 525\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 9",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n1126 !== 1125\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 10",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n76 !== 75\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 11",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n11 !== 10\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 12",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n16 !== 15\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 13",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n5 !== 4\n"
+    },
+    {
+      "name": "TARGET wrong computed cell 14",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n\n10.5 !== 9.5\n"
+    },
+    {
+      "name": "Pareto omitted/false premise book",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(feasible({...valid,[k]:v}))\n"
+    },
+    {
+      "name": "Pareto omitted/false premise cap",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(feasible({...valid,[k]:v}))\n"
+    },
+    {
+      "name": "Pareto omitted/false premise wtp",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(feasible({...valid,[k]:v}))\n"
+    },
+    {
+      "name": "Pareto omitted/false premise mc",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(feasible({...valid,[k]:v}))\n"
+    },
+    {
+      "name": "Pareto omitted/false premise cost",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(feasible({...valid,[k]:v}))\n"
+    },
+    {
+      "name": "Pareto omitted/false premise oldUnchanged",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(feasible({...valid,[k]:v}))\n"
+    },
+    {
+      "name": "Pareto omitted/false premise otherHarm",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(feasible({...valid,[k]:v}))\n"
+    },
+    {
+      "name": "actual missing P:AGENTS.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:AGENTS.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:AGENTS.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '89f86fd04f413553b0546785c6dc7462625e9f1dc426e00d4a27a9b3dcad7e14'\n- '665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b'\n"
+    },
+    {
+      "name": "actual missing P:BUILD-PARAGRAPH.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:BUILD-PARAGRAPH.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '91ef6812ae766329e96c83d796c8bee7d319ad173998fa43d8718f48182b1c92'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:BUILD-PARAGRAPH.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'fa24cbe51ba5df07585097b329666149b7d6c1a8266d54b71485e2387d9d3edb'\n- '91ef6812ae766329e96c83d796c8bee7d319ad173998fa43d8718f48182b1c92'\n"
+    },
+    {
+      "name": "actual missing P:BUILD-CHAPTER.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:BUILD-CHAPTER.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'e59ccd7dcf2b39dace6373257d745df006595b28118f0f7fb4a12a20f7ea4e18'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:BUILD-CHAPTER.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '9072d0ec2e91e322edd2508e9b6de682fa1856d3788aa16e75aebba9e1c81bc3'\n- 'e59ccd7dcf2b39dace6373257d745df006595b28118f0f7fb4a12a20f7ea4e18'\n"
+    },
+    {
+      "name": "actual missing P:build-scripts/README.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:build-scripts/README.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '23765c9a7be731e8e9522c5d1add8c59f925b78baef17b27a130b3d5fef3d764'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:build-scripts/README.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'c84cece39da05d298e79d7f125cb42b0ff0a48bf4a1216890d6aadc18544a7f7'\n- '23765c9a7be731e8e9522c5d1add8c59f925b78baef17b27a130b3d5fef3d764'\n"
+    },
+    {
+      "name": "actual missing P:docs/workflows/paragraph-lane-vocabulary.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:docs/workflows/paragraph-lane-vocabulary.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '7d65a06459d7fb6ac39862836e5bc6b58d0e0786858a4fdbb477fbee1dd19bc5'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:docs/workflows/paragraph-lane-vocabulary.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '1ca9889b691bcd220177cf2c3a5f8e3e6f2494fdca78c10d3316b0366e2ac700'\n- '7d65a06459d7fb6ac39862836e5bc6b58d0e0786858a4fdbb477fbee1dd19bc5'\n"
+    },
+    {
+      "name": "actual missing P:docs/workflows/textbook-paragraph-lane.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:docs/workflows/textbook-paragraph-lane.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '14189b32f29e4987e1f0e23d776e4351147b2c25acf9b13ad0f43ac855bc9340'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:docs/workflows/textbook-paragraph-lane.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'cc7fc6907b6844d380c1473f28f9d75841dddd7198da6b0f453df9ea76a46c1c'\n- '14189b32f29e4987e1f0e23d776e4351147b2c25acf9b13ad0f43ac855bc9340'\n"
+    },
+    {
+      "name": "actual missing P:build-scripts/templates/template-textbook-paragraph-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:build-scripts/templates/template-textbook-paragraph-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'b301e1570b9884ef6b77008a560f6948d3d5889fbaf8864830156465c1266c6c'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:build-scripts/templates/template-textbook-paragraph-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '9397e9e52b3c36218eddc91f854034e403c838ba15aec9c1c0ac1054c98ddb52'\n- 'b301e1570b9884ef6b77008a560f6948d3d5889fbaf8864830156465c1266c6c'\n"
+    },
+    {
+      "name": "actual missing P:skills/econ-didactiek.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:skills/econ-didactiek.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'c2073f8310f2f74b9ca4c651309c7046dff1d355f6694aedae691c9e76f5aa6e'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:skills/econ-didactiek.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '4e4d5d7c4a0062ee4683668ea1d53571e6e74c01d378bd70162a468400e8982d'\n- 'c2073f8310f2f74b9ca4c651309c7046dff1d355f6694aedae691c9e76f5aa6e'\n"
+    },
+    {
+      "name": "actual missing P:skills/econ-exercise-builder.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:skills/econ-exercise-builder.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '27b8a1a09f3b87b57ce9608ccadfb0a5f32c47e62ae3436970aee58fc0464d5a'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:skills/econ-exercise-builder.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'e8d68016a9013faa41fcfc51eda5cddc6c488d1db2644b77715739b0aa35fd11'\n- '27b8a1a09f3b87b57ce9608ccadfb0a5f32c47e62ae3436970aee58fc0464d5a'\n"
+    },
+    {
+      "name": "actual missing P:skills/economic-graph.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:skills/economic-graph.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '2e4134e8e42cc97a07ca397191385f6e06cb0f8537a1c7abf355777d7efd3f19'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:skills/economic-graph.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '62c8455deb2f3d2b31dc93f72606259296b4750331c101cd338f789c1ec70052'\n- '2e4134e8e42cc97a07ca397191385f6e06cb0f8537a1c7abf355777d7efd3f19'\n"
+    },
+    {
+      "name": "actual missing P:skills/econ-pdf-builder.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:skills/econ-pdf-builder.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'b610c2479b24658167b799c4c3b8bb1d62b06787364508948deb8a72e5fabbd5'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:skills/econ-pdf-builder.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'ec0c2fdb408f99f68d9f71c79e31d4c39ce88c2d7b03f1f5dc1f915c25ce4e7f'\n- 'b610c2479b24658167b799c4c3b8bb1d62b06787364508948deb8a72e5fabbd5'\n"
+    },
+    {
+      "name": "actual missing P:references/authored/didactiek-principes.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:references/authored/didactiek-principes.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '058769f66876eac0ca0694b650d22ba1f23fa8a6ef0640f1a5003c2a60a96f07'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:references/authored/didactiek-principes.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'a9e0f4df2bdd028dc8810f375b30bc1d7ee91d2b414b792bb558e8bf82741af8'\n- '058769f66876eac0ca0694b650d22ba1f23fa8a6ef0640f1a5003c2a60a96f07'\n"
+    },
+    {
+      "name": "actual missing P:references/authored/economic_mathematical_precision_reference.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:references/authored/economic_mathematical_precision_reference.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '240f3c20259e989fd47f41a1970e0367e220e3bd1f035369c7f67050b1ca4bcb'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:references/authored/economic_mathematical_precision_reference.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'f96a228c57da8eb8108e01ed6b738ee863e1caf71c18e5405d3ae91fb9b0dfb4'\n- '240f3c20259e989fd47f41a1970e0367e220e3bd1f035369c7f67050b1ca4bcb'\n"
+    },
+    {
+      "name": "actual missing P:references/authored/economie-terminologie.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:references/authored/economie-terminologie.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '4653c010c3faffcf4c59ce48853e3928b6411b5d2e08f322235c2af75b9657a9'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:references/authored/economie-terminologie.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'f0bf39ee6892ba93ebb191bb7113116a8856e1e9416bdbd76c9ee7d90b84c25a'\n- '4653c010c3faffcf4c59ce48853e3928b6411b5d2e08f322235c2af75b9657a9'\n"
+    },
+    {
+      "name": "actual missing P:references/external/amstelveencollege_quality_standards.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:references/external/amstelveencollege_quality_standards.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '3959e089e3c26ef2e4dd6f183d28ffca6d69768013b4a5193358d46aaca7080e'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:references/external/amstelveencollege_quality_standards.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'a8f6d5080b0f8b44abe925b31908553089c2bd07409a56c099e8bcad02fcc78f'\n- '3959e089e3c26ef2e4dd6f183d28ffca6d69768013b4a5193358d46aaca7080e'\n"
+    },
+    {
+      "name": "actual missing P:references/owned/course-blueprint-pedagogical-boundaries.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:references/owned/course-blueprint-pedagogical-boundaries.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:references/owned/course-blueprint-pedagogical-boundaries.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '9fdaba253b20d4c7098244691115c88b828105f3096354213026342ab114e823'\n- '47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7'\n"
+    },
+    {
+      "name": "actual missing P:references/authored/textbook-rendered-page-acceptance-standard.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:references/authored/textbook-rendered-page-acceptance-standard.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'e57625f8c7f2912b4f9cf466a00d41b06c6deb76dc4534f74abfc0ffd0f5b29b'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:references/authored/textbook-rendered-page-acceptance-standard.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '38c940f60ab806f41d3695e5c5c02a067a24cffabb407bf7414be137dec6105b'\n- 'e57625f8c7f2912b4f9cf466a00d41b06c6deb76dc4534f74abfc0ffd0f5b29b'\n"
+    },
+    {
+      "name": "actual missing P:references/authored/textbook-figure-standard.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:references/authored/textbook-figure-standard.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '055b456a848296b75eea3b186241e9ed6e715175bdff4a541c09f89e9c91d311'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:references/authored/textbook-figure-standard.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'eeaa9341ca2fd2080c893e6c29a050a4acd1c96cd2ab3e6bfa55dd535a7a3de7'\n- '055b456a848296b75eea3b186241e9ed6e715175bdff4a541c09f89e9c91d311'\n"
+    },
+    {
+      "name": "actual missing P:references/authored/book-outlines/book-2-outline.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:references/authored/book-outlines/book-2-outline.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:references/authored/book-outlines/book-2-outline.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'b97cf8a6f1ab19617a3032c7835ee537da50e42e48b7e3af5221498e0a377747'\n- '8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf'\n"
+    },
+    {
+      "name": "actual missing P:references/authored/book-outlines/book-2-outline.meta.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:references/authored/book-outlines/book-2-outline.meta.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:references/authored/book-outlines/book-2-outline.meta.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '165f469ad91d55cc3b607badce93752746a83fe21f989156d27c6c0c97f1780c'\n- '6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-remaining-paragraph-dispatch-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-remaining-paragraph-dispatch-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '084bf9b368e8b57d38421976ef18258ba725c044c3ff6e72ee588a650d623362'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-remaining-paragraph-dispatch-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '28bf97704150b8dd71724f07f308232b66949c610b96af7361f93f88b7c149ef'\n- '084bf9b368e8b57d38421976ef18258ba725c044c3ff6e72ee588a650d623362'\n"
+    },
+    {
+      "name": "actual missing L:AGENTS.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:AGENTS.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '0128a5fc4b27a72a986f2e86620b689f00d3796f87d0caeac5faae9c7497835e'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:AGENTS.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '2fa54c2bd76dbb700e7b70c2451402f9b3fd3958d3f7281cb26db7a668677ff8'\n- '0128a5fc4b27a72a986f2e86620b689f00d3796f87d0caeac5faae9c7497835e'\n"
+    },
+    {
+      "name": "actual missing L:specifications/product-vision.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:specifications/product-vision.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '21d97f2dc980de77d6e2d423745e6a4d9553a3295f0f7a7d896261c9b95eec56'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:specifications/product-vision.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'd657deccf83c5380e724492de87b1768803280a69fe8ee06c5b0249da0da737c'\n- '21d97f2dc980de77d6e2d423745e6a4d9553a3295f0f7a7d896261c9b95eec56'\n"
+    },
+    {
+      "name": "actual missing L:specifications/product-end-state.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:specifications/product-end-state.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '78c739220f359a5d5301d7d854dd42a2f45181bb54b4772d66509377f4bbe6ab'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:specifications/product-end-state.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '3c5509d60641278f5c4503f2a1caa910d8ef9c170d1909d98e9f582ff6e18ff6'\n- '78c739220f359a5d5301d7d854dd42a2f45181bb54b4772d66509377f4bbe6ab'\n"
+    },
+    {
+      "name": "actual missing L:specifications/companion-core-specifications.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:specifications/companion-core-specifications.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '4f5bc43f623286a96afc1be59e53bd0c52bdf4d8c9479510c5a914efc7c6294e'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:specifications/companion-core-specifications.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'c7dcbdf946ef908ebcb3be423844f61f95517de2788fdda56d7ecfa4eb575b64'\n- '4f5bc43f623286a96afc1be59e53bd0c52bdf4d8c9479510c5a914efc7c6294e'\n"
+    },
+    {
+      "name": "actual missing P:skills/econ-textbook-paragraph.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:skills/econ-textbook-paragraph.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '814975befa57444dff09d9d339bef7cafe5fdd1eee0ff14f1a8b88ee73a38de4'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:skills/econ-textbook-paragraph.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'bc520ee4ad76c621bdcb74c6fe17993a3effdd7247e627ac3f48199cce5929e8'\n- '814975befa57444dff09d9d339bef7cafe5fdd1eee0ff14f1a8b88ee73a38de4'\n"
+    },
+    {
+      "name": "actual missing P:skills/econ-paragraph-review.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:skills/econ-paragraph-review.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '652628ddb9617d09bda02b2b57c3050e1fea0e1971079bfefe482264c8913853'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:skills/econ-paragraph-review.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '2ebbe5c40e9262c3eb6794491a628afb773a1bf5d502bb8a88bfb2fedcccbed6'\n- '652628ddb9617d09bda02b2b57c3050e1fea0e1971079bfefe482264c8913853'\n"
+    },
+    {
+      "name": "actual missing P:skills/econ-quality-control.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:skills/econ-quality-control.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'c7f2390c151b6fec9974d4d89f19cc62fcc6128d69e6dc2cc08480f4c95b956c'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:skills/econ-quality-control.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'c3154fbc3330a118729fab649abf6a446a987f8fefe11ed21240999fd4f5b909'\n- 'c7f2390c151b6fec9974d4d89f19cc62fcc6128d69e6dc2cc08480f4c95b956c'\n"
+    },
+    {
+      "name": "actual missing P:agents/teacher-learning-quality-review-agent.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:agents/teacher-learning-quality-review-agent.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'aee8fba13cb1877b2633459c1ab10b4e8259e9b4d0c3e8b183d11e35aec0dace'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:agents/teacher-learning-quality-review-agent.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '9ba1ab28d4fb3766c27f81f20f8796c5c3686e0d8d5943afbb9fd85f57f67456'\n- 'aee8fba13cb1877b2633459c1ab10b4e8259e9b4d0c3e8b183d11e35aec0dace'\n"
+    },
+    {
+      "name": "actual missing P:agents/student-experience-review-agent.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:agents/student-experience-review-agent.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '152b0bc4cb83a961f7349528fd818d5b038d8756e25765545b1d7b47c186b974'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:agents/student-experience-review-agent.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5d604214703ee9e8236d1c0c5d77e46bfc8981694794ae8ca563e8586ba2cbe9'\n- '152b0bc4cb83a961f7349528fd818d5b038d8756e25765545b1d7b47c186b974'\n"
+    },
+    {
+      "name": "actual missing P:agents/visual-qa-agent.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:agents/visual-qa-agent.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'c33675c5604a228af4b8e75e9f7ebb0133fad39e254d2a90015d9a36a7f19332'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:agents/visual-qa-agent.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '431b231b9a85d61edf9994fe052cfa3b5ab2c8e69e94bfb0da4edba6e35c2999'\n- 'c33675c5604a228af4b8e75e9f7ebb0133fad39e254d2a90015d9a36a7f19332'\n"
+    },
+    {
+      "name": "actual missing P:agents/accessibility-agent.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:agents/accessibility-agent.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '9a393755b227a3cde928071cdc3cf79ebb1c5d876a5d96f3c89b5d9a1066c79f'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:agents/accessibility-agent.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '195e4a537b5e3da6a5099f7f2c2d99f0cc44f153ea1f6841db7df12b0c075f77'\n- '9a393755b227a3cde928071cdc3cf79ebb1c5d876a5d96f3c89b5d9a1066c79f'\n"
+    },
+    {
+      "name": "actual missing P:docs/workflows/paragraph-quality-ref-schema-v2.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:docs/workflows/paragraph-quality-ref-schema-v2.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'e112c294f1d473de1f5a9492bc3ecb6d4154ab47372990ac6aaf8c5dec27caa6'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:docs/workflows/paragraph-quality-ref-schema-v2.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'c504c3705862ce63340ac3ddbcdae0e8cc54d7e4030503d922f881fcb10f6a10'\n- 'e112c294f1d473de1f5a9492bc3ecb6d4154ab47372990ac6aaf8c5dec27caa6'\n"
+    },
+    {
+      "name": "actual missing P:skills/econ-consolidation-builder.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:skills/econ-consolidation-builder.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'a2ac36654f7bd18c49d7f791850a0455c4e2772b434138f8b3ceb7bd94b03b09'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:skills/econ-consolidation-builder.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'ec8614290b0a419383fff1bcc7e0265675d64bef4342f99b051c0895da9c5fec'\n- 'a2ac36654f7bd18c49d7f791850a0455c4e2772b434138f8b3ceb7bd94b03b09'\n"
+    },
+    {
+      "name": "actual missing P:references/authored/gemengde-opgaven-target-standard.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:references/authored/gemengde-opgaven-target-standard.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '4a5416cc7ff1501b26f362bff4cf6c7712cc16412a9b1e405c0db63b9b886594'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:references/authored/gemengde-opgaven-target-standard.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '92b249d7448113fd30495e25085672c7db1f9fee2d7c3d550fa71b95ef19cde3'\n- '4a5416cc7ff1501b26f362bff4cf6c7712cc16412a9b1e405c0db63b9b886594'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '1597dea1034da744072005ba159f0a9f6bf1f7eb1a0e9963b1ebec6fe43e0b33'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '50706a1b52bbf77897b1e09b835d5d616bd1bcd1cf915749d61984a7e253fdc9'\n- '1597dea1034da744072005ba159f0a9f6bf1f7eb1a0e9963b1ebec6fe43e0b33'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'fa7730902ad304ae28c533000be2b1ece946d2269285b47098c6f272e83f9502'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'd61fcb11ab5a4dc853182d0e5a9b848663397c4b512c97d2b8d2741e4154c9fe'\n- 'fa7730902ad304ae28c533000be2b1ece946d2269285b47098c6f272e83f9502'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-baseline.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-baseline.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '3998a7ad08e467f6ee24e0e621901535e7f6b7c1f1f442c8cd235c198cdcab4e'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-baseline.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '21456017a6e6eeb8fec63cae9d2c6d995b95af275bc695ffa95eb0563a204d96'\n- '3998a7ad08e467f6ee24e0e621901535e7f6b7c1f1f442c8cd235c198cdcab4e'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-bundle-process.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-bundle-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '18d6d32bc78eee874793288d44943ccf8aa8a3082b3554c50ac2d2e1104d27a5'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-bundle-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '585dc3526c3db563f03b2d2884a59a6dbc7fe0da83acca9c52be2c733db3cb79'\n- '18d6d32bc78eee874793288d44943ccf8aa8a3082b3554c50ac2d2e1104d27a5'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-check.cjs",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-check.cjs",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'e6d544baf9b934bbabe77c8f1e994258638be81a3f9604af652c67a3a2d1922c'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-check.cjs",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '6e68e55f082e7ee0b1bdd7117516790370d88a831201254aaed6a4c377809dd8'\n- 'e6d544baf9b934bbabe77c8f1e994258638be81a3f9604af652c67a3a2d1922c'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-checks.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-checks.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '84e6b13a79ea2d4c645dc8609f9f614344ca41f62aeb39e77c8e0b6196f5d19a'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-checks.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '8981e83c4fcaee80593786a91588f94a291bca28813549be78cb70f0883e5f1c'\n- '84e6b13a79ea2d4c645dc8609f9f614344ca41f62aeb39e77c8e0b6196f5d19a'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-durable-process.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-durable-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '0e5a73c773987dc9137c691884e630dd2b82d8495e599c6e550d944f019ee8c6'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-durable-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '660bd6a71b1ae7b21483e573a2bc605a2c2f6b8b6613970a20f9db12093b4ae0'\n- '0e5a73c773987dc9137c691884e630dd2b82d8495e599c6e550d944f019ee8c6'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-finalize.cjs",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-finalize.cjs",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'c250cc88dba49199bf83495e5064e607716253207c1b1410f243932742472873'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-finalize.cjs",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '35c79e0a58dc7d1cc39f822990e20a3297ceb13fa49e2c622093f86fa40fc9c8'\n- 'c250cc88dba49199bf83495e5064e607716253207c1b1410f243932742472873'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-goal-design-process.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-goal-design-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'ce6f95d125a8a699e7f6afbbfcdd06a241b77123111bbb68f7def1af9a639981'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-goal-design-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'f9a9fa0d83dcc2428e981dae144bbc57c9a18ffc453a988c44cdbcf5eb1de5ed'\n- 'ce6f95d125a8a699e7f6afbbfcdd06a241b77123111bbb68f7def1af9a639981'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-governance-process.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-governance-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'ba5844ef1a2cd7e3d0e4f7a1dec58b85c490dbf5dd5dde10ec374e649823bd83'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-governance-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'c7da12d48298a4dbbe9aa349308d1e48ec8b517b81964bbe84fa583e8aec16a5'\n- 'ba5844ef1a2cd7e3d0e4f7a1dec58b85c490dbf5dd5dde10ec374e649823bd83'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-mapping.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-mapping.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '3d043dded6ac648adb8a354dfaa229d9c774896300d7a38976ebd9697f29c985'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-mapping.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'a0934cecce59618942e30fb084d16e51455a21a6f102d5f2918193773848c814'\n- '3d043dded6ac648adb8a354dfaa229d9c774896300d7a38976ebd9697f29c985'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-01.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-01.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '49ad001fc2e24d4139c4c70956734c3ed8f41a650990a86210c55ccc1222fcd0'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-01.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'd1e90477f1396bd9d8905dafb224f95f1bb26e4c650f45ec41ad3579153061c7'\n- '49ad001fc2e24d4139c4c70956734c3ed8f41a650990a86210c55ccc1222fcd0'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-02.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-02.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'fe8fa01e098bea2e6f51294ec12caf28ffc9121d5b03517ad39fce79a6b3efa5'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-02.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '22281ace8b64b3980d5327d21de9f190e71f5aef5f3c128316c0603f596c554d'\n- 'fe8fa01e098bea2e6f51294ec12caf28ffc9121d5b03517ad39fce79a6b3efa5'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-03.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-03.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'f0a650308c2b5838417c5ebe16542c7b66d7548992f5b4dbf3e9d4d4b53ea0df'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-03.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'ea06689b680f20e50c6efc2098e7180a73edcf0c2f8b64d133e73992ea340a93'\n- 'f0a650308c2b5838417c5ebe16542c7b66d7548992f5b4dbf3e9d4d4b53ea0df'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-04.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-04.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'f368d06455d99c5f36869f03de4b6d274cff24a8a3d2b4c3f0476c95cbd38aac'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-04.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'b1e3182082947320b7f6eae393a8d753bc4d629f5515424e2ecbe780485af459'\n- 'f368d06455d99c5f36869f03de4b6d274cff24a8a3d2b4c3f0476c95cbd38aac'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-05.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-05.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '4ddd04f7c080567d33f28117251a0f27222ec3f1af22ab8f4bccafd3ed9c5c3a'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-05.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'e2f7d76b44450f458026340b94884f0e7e64715d2fc4b64910cd1dd81f597644'\n- '4ddd04f7c080567d33f28117251a0f27222ec3f1af22ab8f4bccafd3ed9c5c3a'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-06.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-06.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '450ad5d60e7cd036138ffe2adc8c3905ae0093d4155846422a46715f1495e90e'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-06.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '2509c07927a26ea9d14b65792762be342fa8d115dd98845f1c8871128cba4ddc'\n- '450ad5d60e7cd036138ffe2adc8c3905ae0093d4155846422a46715f1495e90e'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-07.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-07.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '8af249284c27e7688e01579a1dbaab6b941eef2238e43fbb9862eab4599c11f3'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-07.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'f34f64bbf0ea9dbd72c649ae0d1b5cf32b95b04258d3b348ed80d90a5524f8a7'\n- '8af249284c27e7688e01579a1dbaab6b941eef2238e43fbb9862eab4599c11f3'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-08.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-08.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'c78cf88d4a2771b26818017ee83b0b9242ec1f6ffefd7d955416269a6e51fde1'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-08.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'e0c780de833167a89371ca74ed5c34b515a8f2795fade6f565d63c555e0eb117'\n- 'c78cf88d4a2771b26818017ee83b0b9242ec1f6ffefd7d955416269a6e51fde1'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-09.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-09.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '7b12b14896dc0cd7c11b1cdd752d6d2eb03a907c291c408f86110f9fb373f3e5'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-09.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'd2f3359ba4fd1395f9fc5a5b50b1a175287763f7c4a8d12d09fc1c90358d0afb'\n- '7b12b14896dc0cd7c11b1cdd752d6d2eb03a907c291c408f86110f9fb373f3e5'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-10.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-10.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '3017a4d959447ed46fb0be8582a20adadff6cd30e296d2b81b79393a5dd04137'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-10.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '99dfc3c7603009671ef451cec4b9e3581580908640d4287bd5c282a928a25c3d'\n- '3017a4d959447ed46fb0be8582a20adadff6cd30e296d2b81b79393a5dd04137'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-11.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-11.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '5e78aca65e02f60d4f0afb8dca7840f6af9303172c2a57d08966b7ffd7ddab2e'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-11.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '10f264ae5ff21f9d1afa318173aa834f21d723ed522a8a70e97dc5698ed6ba11'\n- '5e78aca65e02f60d4f0afb8dca7840f6af9303172c2a57d08966b7ffd7ddab2e'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-12.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-12.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '0716c1bd19bfbec5687a24fe3ba1f668beb13e6903ea4ca644e7b2db6c7080ce'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-12.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'ca9cc240062ccd76fd1484958302fe7c7869b960c78c1b8dc22889de92cec79f'\n- '0716c1bd19bfbec5687a24fe3ba1f668beb13e6903ea4ca644e7b2db6c7080ce'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-13.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-13.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'e191724ba69c9fb74b1db1b1dd20dcc4ecd42c94ee7972f7cb70ba4042b8ad3f'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-13.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '6e09a5cc5f01f1c76b59c655e8ac246cce8996d1b8bcc6a5521a19b16b7dc280'\n- 'e191724ba69c9fb74b1db1b1dd20dcc4ecd42c94ee7972f7cb70ba4042b8ad3f'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-14.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-14.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'b19a93e81ab40c3ba8b01de84f674cdfe1ae1cae7a95055a6e92128a9fae5b64'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-14.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '48f7d45bce9489dc6288e92490bb8bb6ad6e3fb7644b7bf1ac38e157ac6b549c'\n- 'b19a93e81ab40c3ba8b01de84f674cdfe1ae1cae7a95055a6e92128a9fae5b64'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-15.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-15.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '99801c6f7d13d7cbf784ed339fec8fec13b5c96de8195330a99b93001bcffb0e'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-15.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'a17cd87136a530db695aa1df49cbf3eb7172747c2a8f91861fd20da6a678bf1d'\n- '99801c6f7d13d7cbf784ed339fec8fec13b5c96de8195330a99b93001bcffb0e'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '2aa9dc5cae4c5e5a391d3b487619c729635a2a28ed92b911da6dc8c9c8213d7b'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'c36e5759b0462ab7b3666e7e8216f672df480fb17737539348aeabed9104e134'\n- '2aa9dc5cae4c5e5a391d3b487619c729635a2a28ed92b911da6dc8c9c8213d7b'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-prepublication.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-prepublication.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'd2b132ff14d47e50c45e48cbfcea3cf4bab562a06ea3c19cfb90ef32ddfadb4f'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-prepublication.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'c1eabb4db6df0644e3e3510f4f41a8a9d4c59ad128b8abe222e21ddcac9ef462'\n- 'd2b132ff14d47e50c45e48cbfcea3cf4bab562a06ea3c19cfb90ef32ddfadb4f'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-publication.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-publication.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '02b8d0a42bf3cfde014f14d7e25f2f03c2a8bbd38a3274929c1457b80109dd47'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-publication.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '00e93fc4777d74ce0dfb161ac75583a48e561760444a1ac4e7b1ddc41ba6f851'\n- '02b8d0a42bf3cfde014f14d7e25f2f03c2a8bbd38a3274929c1457b80109dd47'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-result.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-result.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '237dda01d9622aa9af64d95f4c1e2717e3d8595f45db7332405b44630d1e6631'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-result.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'b0c0377cb67a5aa379942422a83d9be7356d6bafa62107161f05815be8221c9d'\n- '237dda01d9622aa9af64d95f4c1e2717e3d8595f45db7332405b44630d1e6631'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-own-L-process.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-own-L-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '3191c0644a2c3a104f9571ddcb575ea0748012ba370cfac4615187577759a6d8'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-own-L-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '2a742e105131d0381830aeb4d1c85dfa7139fac3cfa258c72a162b83f8df2059'\n- '3191c0644a2c3a104f9571ddcb575ea0748012ba370cfac4615187577759a6d8'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-own-P-process.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-own-P-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '225000de7447daef9a5a7b3900a72afcf19e078dfd065768e1b1d882ab460144'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-own-P-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '143a89daec85d760d6de8481f5a665ea8aac9a36546040b2434fce9c5d3b457c'\n- '225000de7447daef9a5a7b3900a72afcf19e078dfd065768e1b1d882ab460144'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-whole-L-process.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-whole-L-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '85c0554c01720ad60769de8f45f7a942c188098569ead19d77da89ccccc45a70'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-whole-L-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '55fff43c40619d221e78f2a25dc030bfadbed423596147ca97a9736829f74bd5'\n- '85c0554c01720ad60769de8f45f7a942c188098569ead19d77da89ccccc45a70'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-whole-P-process.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-whole-P-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'baae4d37b558d4ce2e15db4a801fe30ebec81e7ac42864e35d9fdac537108b49'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-whole-P-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '07eb3078fe4dadf011125a0bef77ebe644f1bd4c34fc4f9c1cfe73bb898730f3'\n- 'baae4d37b558d4ce2e15db4a801fe30ebec81e7ac42864e35d9fdac537108b49'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'c4dc81fd33c8b989be23376aaec18ff6bbb36c8fd239298bf7c1236dfe2d3b35'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5d2087a6d1b57c9391e1de0776158243e6ae54ffdba952e5fb648b151ede3672'\n- 'c4dc81fd33c8b989be23376aaec18ff6bbb36c8fd239298bf7c1236dfe2d3b35'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-simulation.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-simulation.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'f4a03558d06073128ffdcaf3e130d1b7babf28b19402f44f654fb937aca0016d'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-simulation.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '632c3c3da378ab6b05cb3202e5c65c7e56bbe0c3f4fc85fc997602d6659575f4'\n- 'f4a03558d06073128ffdcaf3e130d1b7babf28b19402f44f654fb937aca0016d'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-structural-process.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-structural-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'e4f3e106df0104994f99d207f692362cc52c83637bbf767901077c4280c53256'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-structural-process.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'bb8c9285fa4a32b5a73aed5b9f52321b374be61955e97d966b73ace2bfc2cded'\n- 'e4f3e106df0104994f99d207f692362cc52c83637bbf767901077c4280c53256'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'fb5cf9ecb9374b40161e9d33511b179194a24599bb9f3dd22ab93af6a6d2fdab'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'a21984d5da481b414f62d7344f9b436c4ba88e93daec37e6e1b70f5a51339995'\n- 'fb5cf9ecb9374b40161e9d33511b179194a24599bb9f3dd22ab93af6a6d2fdab'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-publication.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-publication.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'dba5851d69fd5d6f02434fc5986d682716ca6cc07c076e5424f64c0ff5354b90'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-publication.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '564931629cb7231658a21225c5c196e51f6707e342d6a3e9d9c8561f46098bc5'\n- 'dba5851d69fd5d6f02434fc5986d682716ca6cc07c076e5424f64c0ff5354b90'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-report.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-report.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '3cac3da69d367d34aeb2804436b1933533916c621f36612a08461ef86f9ad7c1'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-report.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'c31756b9b8e5081e768900bf91570588b4a4a53fa741590e48693da234cddd0e'\n- '3cac3da69d367d34aeb2804436b1933533916c621f36612a08461ef86f9ad7c1'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '5b7f5e5c90ede0e12efbd5637bb23865abd11f2577c19f3497ce63fcb21a60df'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '39c0051b7d4a65638317c739de61d3e4ba01e81b20c881b68f084a56d6a913ea'\n- '5b7f5e5c90ede0e12efbd5637bb23865abd11f2577c19f3497ce63fcb21a60df'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-publication.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-publication.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '26c366d85c35d804ec48aac36c1ecec164c9ed7c6cb1818b53e13c317c9a5aec'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-publication.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '3f81b4ed9db0df6edf331225f62de42b6b3ec6c78fbecec4415221aa02d743b2'\n- '26c366d85c35d804ec48aac36c1ecec164c9ed7c6cb1818b53e13c317c9a5aec'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-report.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-report.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '0a656e3d743aa8affe53f83a2ede1e7d7e55eea50da43b1d02a13c5b6cf96184'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-report.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '38ed9eb4eb8ca9f1d1b0f429a51bdb1d6ea89961d29c0e2ab2e412d67dc987f2'\n- '0a656e3d743aa8affe53f83a2ede1e7d7e55eea50da43b1d02a13c5b6cf96184'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '36f413c9f66c04b89a214aeb172d2e09e835934c9c73b3583795b258422fb3e7'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '37ed39b2559044849c1eb9e1b0a30338fa4772844eabda2d84917ec633a6c191'\n- '36f413c9f66c04b89a214aeb172d2e09e835934c9c73b3583795b258422fb3e7'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-publication.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-publication.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '6259d0aeb86a395e5f7d6f853d5d1a3a199384759e1d99d6bd2e7183da96a5d3'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-publication.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '011b56c207f175e9e2e196e77d688d90c4b90075cfd50c851f53b0bf3623d5eb'\n- '6259d0aeb86a395e5f7d6f853d5d1a3a199384759e1d99d6bd2e7183da96a5d3'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-result.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-result.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '69788a4e206237ff469b453bc99b3b648f906de952feb7f801ab28613ba56a31'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-result.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '4ac912f7f41d565675c87d7691b994034b106c1b1fc69ec1806f157a13c63246'\n- '69788a4e206237ff469b453bc99b3b648f906de952feb7f801ab28613ba56a31'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '9847f3b74bf342b15ad15f767668b3bcb803c13db37b8dd5e991c98aabe050ba'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'f77f39e4fba8f22f0ed18be3c37991f35a700051b635d5316959bbefbe351155'\n- '9847f3b74bf342b15ad15f767668b3bcb803c13db37b8dd5e991c98aabe050ba'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-publication.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-publication.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'db02b0307bc96c5f6166ff1f92bb438936ea4825fdb72893d13ffefacef15a71'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-publication.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '311aa19c937525dc3461aeb7bf13a58aad01adfb6937ee929854b0f89333c589'\n- 'db02b0307bc96c5f6166ff1f92bb438936ea4825fdb72893d13ffefacef15a71'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-report.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-report.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '68a039cf8715603c49e7088b7e96bf6e8bde1511b3a286f57ac2061ffcc1d6fc'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-report.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '9ef5c9128d6141aa73c9f4e616586d0820fa89796bf5ef048f52a9ae0b4b2f6d'\n- '68a039cf8715603c49e7088b7e96bf6e8bde1511b3a286f57ac2061ffcc1d6fc'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '74b6038a1e190fc7eaaa01722a02acdac53bdc67aab0631b2c91a32e6a5ff54e'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '3bd34c7dc422df6f5185f03c719558799da8cd622bc8806cd4552df8799060b7'\n- '74b6038a1e190fc7eaaa01722a02acdac53bdc67aab0631b2c91a32e6a5ff54e'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-publication.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-publication.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '6d5367665a9e136da6756cf73c431e89e13acecfc041cbe010435aa84369ac45'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-publication.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'b685f689f978e9f498d39ee6ff86f067f78107f00b388c90da38bce400cec850'\n- '6d5367665a9e136da6756cf73c431e89e13acecfc041cbe010435aa84369ac45'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-result.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-result.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '80d6d08be2167d5dafed94f2705745784e41c3f16b99ac8d99f7ec9784701ad0'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-result.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '7aec94464cf4de81a0014cfa2fd22ede52a5e211449bfca7d65cd751b5a595af'\n- '80d6d08be2167d5dafed94f2705745784e41c3f16b99ac8d99f7ec9784701ad0'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '963779081724eecfbf19a6ad48c628f2ae2cc7128e17ec1f44c75c8d0d0fc4b2'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'a93303c68c7ecee378095a726417505cea9be3a9ad03e3c153342f560bf0252a'\n- '963779081724eecfbf19a6ad48c628f2ae2cc7128e17ec1f44c75c8d0d0fc4b2'\n"
+    },
+    {
+      "name": "actual missing P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '1f3d6019255ba85ab62989922ca733de90a289f7a0fd8add07752db16be140c3'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '81ed23f4162af12c803cb60a211fb2048c05d4fd9e13248ece9586a912dfefb0'\n- '1f3d6019255ba85ab62989922ca733de90a289f7a0fd8add07752db16be140c3'\n"
+    },
+    {
+      "name": "actual missing P:references/authored/course-target-exercises.json",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:references/authored/course-target-exercises.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'd3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:references/authored/course-target-exercises.json",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'a0fc5058611521b182063493dba6a2713cc5906b21de872827afdfe59e504791'\n- 'd3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e'\n"
+    },
+    {
+      "name": "actual missing P:references/owned/course-blueprint-v6-three-year.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:references/owned/course-blueprint-v6-three-year.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:references/owned/course-blueprint-v6-three-year.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'a846b649686548167ca49ba201a445178750258b923ef6f4566f23cdb0f29c7c'\n- '72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e'\n"
+    },
+    {
+      "name": "actual missing P:references/owned/course-blueprint-v5.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged P:references/owned/course-blueprint-v5.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash P:references/owned/course-blueprint-v5.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '6164c6929c503911d56bc312d7b6759a19a51ac6fcc998205f3fe048a25411f1'\n- '61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7'\n"
+    },
+    {
+      "name": "actual missing L:Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'b5ac11eac6b71178a2977896b5871f135d6fbc096ba429dbcae8a19a1a734d35'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'c887811df5cf14ca318f33a0c74bd03d07247e1d6875f9d0b0a3f58977d61519'\n- 'b5ac11eac6b71178a2977896b5871f135d6fbc096ba429dbcae8a19a1a734d35'\n"
+    },
+    {
+      "name": "actual missing L:Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'b38720605f513e42a37cb64ebf843fd27817c6f26dfc87cd327491cdc54ff42d'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '7354c1afb823f16167a7af86f91d94e941135a1a2fd483d7ee97966e50a67304'\n- 'b38720605f513e42a37cb64ebf843fd27817c6f26dfc87cd327491cdc54ff42d'\n"
+    },
+    {
+      "name": "actual missing L:Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'b14131b1c3bd44f4718f7b819159a5728cb6a5ee07453ad3e053e2a654a4cb8f'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'cb83e87808b72dbaf862b2a97bf8c0d117530a1e5ce3ab7a56290000cde480a9'\n- 'b14131b1c3bd44f4718f7b819159a5728cb6a5ee07453ad3e053e2a654a4cb8f'\n"
+    },
+    {
+      "name": "actual missing L:Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'e4e2717d088b20c3cbfc9c7944311a0b0bfdcf75a492335da5c3b0d0c027e898'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'fb6dd2062d03ebf258097d86fb7b1c0c365d08d06f54900097667b527011db73'\n- 'e4e2717d088b20c3cbfc9c7944311a0b0bfdcf75a492335da5c3b0d0c027e898'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '2a661850751875c52b6f15bc821182a6f9f6873deac0d1d8f2bd1bae3368c265'\n- '2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'b7c27d4b8f2a669f70c7d8f206e9af7751b6c3c5caaa0fad95a3e8336760348f'\n- '7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '9fd3b6b855f96d21530cb1fe41d5ed808dda4ce1694ed560c0fbbe55b5caa13e'\n- '358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'c63e0f885c2f09ad8b48b88bf0c9d8da7c5820b56874a942046b5c2aa1012cad'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5eecb51d1e8e89f1a10aac7af26a4cd18f26a9c66220eb5fd4a473556bf54ca4'\n- 'c63e0f885c2f09ad8b48b88bf0c9d8da7c5820b56874a942046b5c2aa1012cad'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '5064642034fac9763202d2424b87cef2f7cc909aaf3a6031b90d247ee44409c3'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '6ddc15979312f0e4f0f358c879b41ebc2ca3483c1da4b4d8d96cfcece037a753'\n- '5064642034fac9763202d2424b87cef2f7cc909aaf3a6031b90d247ee44409c3'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '0a056eced568ddab730b389842aa5b47ccf554d54b019d052d9e7a30ce51564d'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'd70e994910e275fea8e383586024296a977f5b3432ad4a17e934f1f71f03e47c'\n- '0a056eced568ddab730b389842aa5b47ccf554d54b019d052d9e7a30ce51564d'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '4cf29ff1e70953f6d1f8399a65d63ad37031e6a129804ad555442bfb98624234'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '884f474e709c2382a225bea049e3c0424cacd469ff033250e2bf125ee80863d2'\n- '4cf29ff1e70953f6d1f8399a65d63ad37031e6a129804ad555442bfb98624234'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_paragraph-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_paragraph-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '390035351a0f1fbfc3df39ed12841bfff78474fedcdb78adaa21591847a72543'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_paragraph-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'cb84a9a1b6ca54a39fbb10c0157cfb94737cadc2086706f39c4870127fb0664f'\n- '390035351a0f1fbfc3df39ed12841bfff78474fedcdb78adaa21591847a72543'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'a9b37b847dbf72d69f620c83c3316aeee20a8942c98b031b5909138985d01a13'\n- 'ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '0ec80f9c87c4fcc8d8ec6d16f5060d670690727e4079a983242ce44c622775d7'\n- '3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '0a1d4b31690f1a053b7180136d387df524ff9ae0df355db273ca32443811d083'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'fece4bf5f2f0dcf49cf09b5005f0cd0d54292e7d07056e40eecb5ab5e512d169'\n- '0a1d4b31690f1a053b7180136d387df524ff9ae0df355db273ca32443811d083'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '70669f6ed10a7465aea37f5f2298dd17708f6430a975fe32187135701122529e'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'd2d42e5cf3c3352fb6b1f818f966aa722b5eebef43dce50ccfc3457071c22c4f'\n- '70669f6ed10a7465aea37f5f2298dd17708f6430a975fe32187135701122529e'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'eb5c7c163099bd0ae7f6be44edf53e885de6ce78e4f37e647408e2c06aba5544'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'ddb1b77abc9f55c3db132a13ec784fdc1f5ff5d66015302d533f96b5a9155080'\n- 'eb5c7c163099bd0ae7f6be44edf53e885de6ce78e4f37e647408e2c06aba5544'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '312ca25c21bf6428ded5162f2d299b8e73da25219fbb914cad88dcb8ca47820a'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '88deaaa839e30edb90c4f0de204d654aecc8c4c144cd9bb112be71c8b9257d51'\n- '312ca25c21bf6428ded5162f2d299b8e73da25219fbb914cad88dcb8ca47820a'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-review.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-review.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-review.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'dcb88ef36d30ec8656574fec03ece0fb88ddd392e34e00798e241ea168cf00d0'\n- '8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-handoff.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-handoff.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '69bdae1f9dd0efaace0a90db57e6ac0f17db627f93fdb333b48dafeb36eebe79'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-handoff.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'f08af6d06b9f9b730acf53ca681ef44d2426fe56b408076d9ddf45f33ca91001'\n- '69bdae1f9dd0efaace0a90db57e6ac0f17db627f93fdb333b48dafeb36eebe79'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '60d6a743681e1361478395a591b7c82e44acf8c4587a93c4cc842b036cf017b1'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '4e5253adef8ee8b20f3d22293c73d5676f3160a5bd3c743d500852fb8ce3b131'\n- '60d6a743681e1361478395a591b7c82e44acf8c4587a93c4cc842b036cf017b1'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'd0781ffb6d2966209c3a160309316ce92ebc0455fa51d4235ccc6840afa58935'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'eeb8f152ef81b211c6e182e6e616c27337f9a64592bfb53c6bad953f2909f0d4'\n- 'd0781ffb6d2966209c3a160309316ce92ebc0455fa51d4235ccc6840afa58935'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '0870d848b21017fedde86fb8d738bbe6afa21f68f8c1190905a8c0f2e3b8be19'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'dce54f13c0315032a22159dda9aba3400a848e3a4eefea54a6bad4315cff4be9'\n- '0870d848b21017fedde86fb8d738bbe6afa21f68f8c1190905a8c0f2e3b8be19'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- '12d81b83f9be50ebdcf3460ce7ad60d2de5a788cb3da8d3a046c1449112922ea'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'b10c5fbe07037304b01fc7a78422246ba604f3a240e9e6b4860f1afb869fcff8'\n- '12d81b83f9be50ebdcf3460ce7ad60d2de5a788cb3da8d3a046c1449112922ea'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'e8a07bfe212a6ae817db99fecb93e86812e1d9e9af533b7ef21591bbb9025dc7'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'ebcbacddaacea3359e4da19b58e44e2037c6e4c71860418eb9ea0fca653e00ee'\n- 'e8a07bfe212a6ae817db99fecb93e86812e1d9e9af533b7ef21591bbb9025dc7'\n"
+    },
+    {
+      "name": "actual missing L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "rejected": true,
+      "reason": "The expression evaluated to a falsy value:\n\n  A(Buffer.isBuffer(b))\n"
+    },
+    {
+      "name": "actual forged L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '5fb6b3047c33f7c7cc95745d0cc287bd8a2ec918c9d86cedbdde31944c9c0610'\n- 'b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76'\n"
+    },
+    {
+      "name": "synchronized whole source and local hash L:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "rejected": true,
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '48a1dad34cf7973bb01f73797bdcf6d0b305199d9dfc87af690ceadc2e34cccc'\n- 'b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76'\n"
+    }
+  ],
+  "negative_count": 483,
+  "selected_source_count": 118,
+  "hold_rows": [
+    [
+      "H-OUTLINE-OWNER",
+      "released",
+      "ja: book:2",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-OUTLINE"
+    ],
+    [
+      "H-211-GATE0B1",
+      "released",
+      "nee: paragraph:2.1.1",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-211-GOAL"
+    ],
+    [
+      "H-211-TARGET-INTEGRATION",
+      "released",
+      "nee: paragraph:2.1.1",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-211-INTEGRATION"
+    ],
+    [
+      "H-229-211-CANDIDATE",
+      "released",
+      "nee: paragraph:2.1.1",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-PACKAGE; subject2.1.1"
+    ],
+    [
+      "H-212-STALE-REF",
+      "released",
+      "nee: paragraph:2.1.2",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-PACKAGE; subject2.1.2"
+    ],
+    [
+      "H-213-DELTAQ",
+      "released",
+      "nee: paragraph:2.1.3",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-PACKAGE; subject2.1.3"
+    ],
+    [
+      "H-229-214-CANDIDATE",
+      "released",
+      "nee: paragraph:2.1.4",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-PACKAGE; subject2.1.4"
+    ],
+    [
+      "H-229-221-CANDIDATE",
+      "released",
+      "nee: paragraph:2.2.1",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-PACKAGE; subject2.2.1"
+    ],
+    [
+      "H-229-222-CANDIDATE",
+      "released",
+      "nee: paragraph:2.2.2",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-PACKAGE; subject2.2.2"
+    ],
+    [
+      "H-229-223-CANDIDATE",
+      "released",
+      "nee: paragraph:2.2.3",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-PACKAGE; subject2.2.3"
+    ],
+    [
+      "H-229-224-CANDIDATE",
+      "released",
+      "nee: paragraph:2.2.4",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-PACKAGE; subject2.2.4"
+    ],
+    [
+      "H-231-V5",
+      "released",
+      "nee: paragraph:2.3.1",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-PACKAGE; subject2.3.1"
+    ],
+    [
+      "H-232-V5",
+      "released",
+      "nee: paragraph:2.3.2",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-PACKAGE; subject2.3.2"
+    ],
+    [
+      "H-233-V5-REF",
+      "released",
+      "nee: paragraph:2.3.3",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-PACKAGE; subject2.3.3"
+    ],
+    [
+      "H-234-PLACEHOLDER",
+      "released",
+      "ja: paragraph:2.3.4",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-PACKAGE; subject2.3.4; exactrecord2ac151882b64b0d990ce5627ae35388d72eefde74c4e24562ef9a49a9355672c"
+    ],
+    [
+      "H-213-OPC2",
+      "open",
+      "nee: paragraph:2.1.3 en route:long, beide buiten234",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "NOT_APPLICABLE",
+      "null; niet vrijgegeven"
+    ],
+    [
+      "H-221-PRIOR",
+      "released",
+      "nee: paragraph:2.2.1",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-22"
+    ],
+    [
+      "H-22-ELASTIC-CONTRAST",
+      "released",
+      "nee: paragraph:2.2.1/2.2.2",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-22"
+    ],
+    [
+      "H-229-EI-SUPERSESSION",
+      "released",
+      "nee: paragraph:2.2.3",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-EI"
+    ],
+    [
+      "H-BOOK2-ROOT-PLAN",
+      "released",
+      "ja: book:2",
+      "goal_design",
+      "nee",
+      "nee",
+      "nee",
+      "RELEASED",
+      "E-ROOT"
+    ],
+    [
+      "H-CHAPTER-23-PLAN",
+      "released",
+      "ja: chapter:2.3",
+      "goal_design",
+      "nee",
+      "ja",
+      "nee",
+      "RELEASED",
+      "E-C23"
+    ],
+    [
+      "H-MERGE-GOVERNANCE",
+      "released",
+      "ja: book:2, huidige actie is geen merge",
+      "goal_design",
+      "nee",
+      "nee",
+      "nee",
+      "RELEASED",
+      "E-MERGE; uitsluitend historische PR226"
+    ]
+  ],
+  "prerequisite_rows": [
+    "| P01 Functie substitueren, twee functies gelijkstellen, Q/P/assen/evenwicht onderscheiden | `previously_taught_retrieval_required` | Book1§1.1.3/1.2.3/1.3.2, expliciet herhaald in geaccepteerde231-theorie “Eerst de assen”, “Dan de vraaglijn” en “gevraagd is niet hetzelfde als evenwicht”;231-handoff§3/5. | WEa toont vergelijking en beide eenheden;3a invulhulp,4a verminderd,6a/7.1 zelfstandig; afsluiterA sluit vraagpunt≠evenwicht. Geen ononderwezen curveconstructie. |",
+    "| P02 Loodrechte ΔQ/ΔP, driehoek/rechthoek en totale gebiedseenheid kiezen | `previously_taught_retrieval_required` | Geaccepteerde231-theorie “Ten slotte het surplusgebied”, museumstappen3–5 en cafe-antwoord: hoogte verschil, betaling rechthoek, euro totaal; A10 is onderwezen/geoefend, geen attainment. | WEb en3b herinneren keuze/eenheden; uitgebreide trapeziumtoepassing valt afzonderlijk onderP10, niet stiekem onder Book1-zekerheid. |",
+    "| P03 Discreet CS optellen, nulkoper meenemen, nietkoper niet negatief tellen, betaling onderscheiden | `previously_taught_retrieval_required` | Geaccepteerde231 workshop18/14/10/6 bij10, expliciete tabel enCS12/betaling30/WTP42; slottaak11 en antwoorden. | Start1 volledig model met18/12/8/6, nul en betaling; optionele gedrukte herinnering; bonus vraagt transfer zonder routine. |",
+    "| P04 Continue vraaggebied onder gegeven allocatie onderscheiden van discrete som | `previously_taught_retrieval_required` | Geaccepteerde231 “Van losse kopers naar een doorlopende vraaglijn”, boekenbeurs en onafhankelijke/bonusopgaven; functie geldt ceteris paribus en verkopen aan hoogsteWTP. | Start1d enWEb bewaken bron/model;6/7 gebruiken expliciet continue gegeven lijnen; bonus verandert allocatie, niet zomaar een gladde curve maken. |",
+    "| P05 Interval ΔTK/ΔQ onderscheiden van totale/gemiddelde kosten en één eenheid | `previously_taught_retrieval_required` | Werkelijk geaccepteerde213-supplement: actuele handoff§4/5 en theorie/bonus; intervalratio is niet de kosten van de eindpunteenheid. | Alleen marginale taal/limiet interleaven; geen extra intervalrekenopgave of nieuwe outputkeuze. P06 moet afzonderlijk formeel zijn behandeld. |",
+    "| P06 Inverse aanbodwaarde als MK van opeenvolgende eenheden, ook buiten actuele handel | `new_formal_learning` | Root-geadopteerd232F1-plan: expliciete aanbod-MK-brug op heel domein, voorbeeld,3/4/6/doel en afsluiting; actuele232-leerlingbronnen/review/QC/handoff ONTBREKEND.213 levert deze nieuwe betekenis niet. | Geen reeds-onderwezen claim nu. Na apart geaccepteerde232: WEf/3f/4f/6f en afsluiterB halen precies deze betekenis op; aparte invoermanifestreview vereist. |",
+    "| P07 PS-gebied boven MK/onder prijs berekenen en van winst onderscheiden | `new_formal_learning` |232F1-plan expliciete PS-instructie/gebied/vastekostengrens; niet geaccepteerde leerlingstof op deze basis. | Pas na geaccepteerde232 herhalen inWEb/3b/4b/6b/7.2; vastekosten ontbreken, dus geen winstclaim. |",
+    "| P08 TS optellen en domeinbreed begrensd maximum met WTP−MK-tekens onderbouwen | `new_formal_learning` |232F1-plan gecorrigeerde expliciete3c/verminderde4d met volledig maximumargument; mijn eerdere afzonderlijke review is planreview, geen lesacceptatie. | Vereist daadwerkelijke232-formalisering vóór234; danWEf →3f →4f →6f, geen extra doelvraag, geen twee-punten-bewijs. |",
+    "| P09 Qd/Qs, bindende boeking, technische capaciteit en hoogste-WTP/laagste-MK-allocatie samen selecteren | `new_formal_learning` |233-geadopteerd plan: expliciete boekingsbron/allocatie/regel versus techniek; actuele233-teachingmanifest ONTBREKEND. Book1-tekort/overschot alleen dekt de nieuwe boekingsketen niet. | Na geaccepteerde233: WEc, Start2-toepassing,3c/4c/5 gecombineerde grenzen,6c/7.3. Geen nieuwe uitleg toevoegen in234 als eerdere keten ontbreekt. |",
+    "| P10 Beperkt CS/PS met rechthoek+driehoek binnen werkelijk Q berekenen | `new_formal_learning` |233-plan expliciete trapeziumdecomposities plus modellen/praktijk;232-vrije driehoeken bewijzen deze beperkte toepassing nog niet. | Na geaccepteerde233: WEc/3c volledig →4c verminderd →6c/7.3 zelfstandig; niet volle driehoek totQd/Qs. |",
+    "| P11 DWL als TS-verschil én verloren gebied met basis/hoogte exact arceren | `new_formal_learning` |233-plan met werkelijk gevraagd arceren in doel d en expliciet→verminderd oefenen; alleen planadoptie aanwezig. | Na geaccepteerde233: WEd/3d natrekken →4d/6d/7.4 zelf arceren; geleverde krommen blijven staan. |",
+    "| P12 Haalbare extra ruil en persoonsgewijs geen-nadeel voor Pareto-weerlegging bewijzen | `new_formal_learning` |233-plan: prijs tussen WTP/MK, boeking én capaciteit, kosteloze verruiming, onveranderde oude transacties en geen overige schade; niet slechts positiefTS. | Na geaccepteerde233: WEe/3e volledig,4e/5 minder hulp,6e/7.5 zelfstandig; bonus benoemt echte oude verliezers. |",
+    "| P13 Efficiëntie/CS-PS-verdeling onderscheiden van een eerlijkheidsnorm | `new_formal_learning` |232F1-plan volgeschreven maxTS/fairnessketen en233-plan Pareto/fairnessgrens; nog geen geaccepteerde232/233-pupilketens. | Na echte voorafgaande instructie: WEf/3f/4f/6f/7.6 en evaluatieve bonus; geen interpersoonlijke nutsvergelijking of norm uit euro's. |",
+    "| P14 Bronnen selecteren en formule/bewijs/eenheid verbinden aan volledige antwoordzin | `previously_taught_retrieval_required` | Geaccepteerde231 museumroute/model, zelfstandig6/7 en bonus allocatiekritiek; hoofdstukplan “Unified procedures”. Specifieke nieuwe bronketens blijvenP06–P13, niet door algemene vaardigheid gedekt. | Compacte vierstapsroutine/WE, expliciete3 →één cue4 →geen ondersteuning naast6/7; geen formulelijst zonder conclusie. |",
+    "| P15 Eerdere surplus-/welvaartsintuïtie uit Book1 als mogelijke herkenning | `preview_or_familiarity_only` | Pedagogical-boundaries en menselijke outline: Book1-surplusintuïtie is preview, geen formeleCS/PS/TS/Pareto/DWL-security. | Geen Covered-cel, doelhandeling of tijdsbesparing uit deze herkenning. Gebruik formele231–233-instructie; deze rij is een uitgesloten substituut, niet een vereiste previewles. |"
+  ],
+  "market_ledger": [
+    {
+      "name": "WE",
+      "functions": {
+        "demand": [
+          36,
+          -1
+        ],
+        "unitMC": [
+          6,
+          0.5
+        ]
+      },
+      "domain": [
+        0,
+        36
+      ],
+      "values": [
+        20,
+        16,
+        200,
+        100,
+        300,
+        18,
+        24,
+        160,
+        128,
+        288,
+        12,
+        4,
+        6,
+        1,
+        3.5
+      ],
+      "point_next": 4.5,
+      "continuous_next": 5.25
+    },
+    {
+      "name": "G3",
+      "functions": {
+        "demand": [
+          30,
+          -0.5
+        ],
+        "unitMC": [
+          6,
+          0.5
+        ]
+      },
+      "domain": [
+        0,
+        60
+      ],
+      "values": [
+        24,
+        18,
+        144,
+        144,
+        288,
+        20,
+        28,
+        96,
+        160,
+        256,
+        32,
+        8,
+        8,
+        1.5,
+        5.5
+      ],
+      "point_next": 7,
+      "continuous_next": 7.5
+    },
+    {
+      "name": "G4",
+      "functions": {
+        "demand": [
+          42,
+          -1
+        ],
+        "unitMC": [
+          6,
+          0.5
+        ]
+      },
+      "domain": [
+        0,
+        42
+      ],
+      "values": [
+        24,
+        18,
+        288,
+        144,
+        432,
+        22,
+        28,
+        240,
+        180,
+        420,
+        12,
+        4,
+        6,
+        1,
+        3.5
+      ],
+      "point_next": 4.5,
+      "continuous_next": 5.25
+    },
+    {
+      "name": "I6",
+      "functions": {
+        "demand": [
+          60,
+          -1
+        ],
+        "unitMC": [
+          12,
+          0.5
+        ]
+      },
+      "domain": [
+        0,
+        60
+      ],
+      "values": [
+        32,
+        28,
+        512,
+        256,
+        768,
+        30,
+        36,
+        432,
+        288,
+        720,
+        48,
+        8,
+        12,
+        5,
+        5.5
+      ],
+      "point_next": 10.5,
+      "continuous_next": 11.25
+    },
+    {
+      "name": "TARGET",
+      "functions": {
+        "demand": [
+          80,
+          -1
+        ],
+        "unitMC": [
+          20,
+          0.5
+        ]
+      },
+      "domain": [
+        0,
+        80
+      ],
+      "values": [
+        40,
+        40,
+        800,
+        400,
+        1200,
+        35,
+        50,
+        600,
+        525,
+        1125,
+        75,
+        10,
+        15,
+        4,
+        9.5
+      ],
+      "point_next": 13.5,
+      "continuous_next": 14.25
+    }
+  ],
+  "target_sha256": "2ac151882b64b0d990ce5627ae35388d72eefde74c4e24562ef9a49a9355672c",
+  "timing": {
+    "minutes": [
+      54,
+      78,
+      87,
+      92
+    ],
+    "status": "UNOBSERVED",
+    "optional_Start1_feedback_in_existing_minutes": 4
+  },
+  "native_contract": {
+    "native_files": 34,
+    "additional_wrapper": 1,
+    "zip_members": [
+      17,
+      23
+    ],
+    "figure_pairs": 13,
+    "placed_font_pt": 15.68503937007874,
+    "alts": [
+      [
+        "we_1",
+        "Verrekijkermarkt met vrij evenwicht en beide surplusgebieden.",
+        "Verrekijkers: Q0–36 verhuringen en P0–36 euro per verhuring; vraag36−Q en aanbod6+0,5Q. Vrij evenwichtQ20/P16; CS200 boven de prijs,PS100 eronder,TS300."
+      ],
+      [
+        "we_2",
+        "Verrekijkermarkt met boekingsgrens, prijs en gearceerd welvaartsverlies.",
+        "Verrekijkers bijP18 en16boekingen: CS160,PS128,TS288. Verlies tussen beide lijnenQ16–20,basis4,hoogte6,oppervlakte12; geen kosten door verruiming."
+      ],
+      [
+        "ex_1",
+        "Zitkussenmarkt met vrij evenwicht en twee surplusgebieden.",
+        "Zitkussens: Q0–60 en P0–40 euro per verhuring; vraag30−0,5Q,aanbod6+0,5Q. VrijQ24/P18;CS144,PS144,TS288."
+      ],
+      [
+        "ex_2",
+        "Zitkussenmarkt met boekingsgrens en voorgedaan verliesgebied.",
+        "Zitkussens bijP20 en16boekingen:CS96,PS160,TS256. VerliesQ16–24,basis8,hoogte8,oppervlakte32; dit is de expliciete gedrukte arceerhulp."
+      ],
+      [
+        "ex_3",
+        "Regenponchomarkt met gegeven vraag en aanbod om gebieden zelf te markeren.",
+        "Basisgrafiek regenponcho’s: Q0–42 poncho’s,P0–42 euro per poncho; volledige vraag42−Q en aanbod6+0,5Q. Geen evenwicht, bijzondere prijs-/hoeveelheidslijn of gebieden gemarkeerd."
+      ],
+      [
+        "ex_4",
+        "Lichtsnoerenmarkt met gegeven lijnen voor zelfstandige gebiedsmarkering.",
+        "Basisgrafiek lichtsnoeren: Q0–60 verhuringen,P0–60 euro per verhuring; volledige vraag60−Q en aanbod12+0,5Q. Geen antwoordmarkeringen; gebruik de boekingsbron bij de vragen."
+      ],
+      [
+        "ex_5",
+        "Huurfietsenmarkt met gegeven vraag en aanbod voor de doelopgave.",
+        "Basisgrafiek huurfietsen: Q0–80 fietsen,P0–80 euro per huurfiets; vraag80−Q en aanbod20+0,5Q volledig getekend en gelabeld. Evenwicht,prijslijnP45,grensQ30 en surplusgebieden nog niet gemarkeerd."
+      ],
+      [
+        "ex_6",
+        "Regenponchomarkt met opgelost vrij evenwicht en surplusgebieden.",
+        "Regenponcho’s vrij:Q24/P18,CS288,PS144,TS432; gebieden alleen0–24. Vraag42−Q,aanbod6+0,5Q; eenheden als in de basisgrafiek."
+      ],
+      [
+        "ex_7",
+        "Regenponchomarkt met boekingssurplus en gearceerd verlies.",
+        "Regenponcho’s bijP20/Q20:CS240,PS180,TS420. VerliesQ20–24,basis4,hoogte6,oppervlakte12; de gegeven lijnen blijven volledig zichtbaar."
+      ],
+      [
+        "ex_8",
+        "Lichtsnoerenmarkt met vrij evenwicht en beide surplusgebieden.",
+        "Lichtsnoeren vrij:Q32/P28,CS512,PS256,TS768; vraag60−Q,aanbod12+0,5Q. De surplusgebieden eindigen bij32verhuringen."
+      ],
+      [
+        "ex_9",
+        "Lichtsnoerenmarkt met boekingssurplus en gearceerd verlies.",
+        "Lichtsnoeren bijP30/Q24:CS432,PS288,TS720. Verlies tussen beide lijnenQ24–32,basis8,hoogte12,oppervlakte48."
+      ],
+      [
+        "ex_10",
+        "Huurfietsenmarkt met opgelost vrij evenwicht en surplusgebieden.",
+        "Huurfietsen vrij:Q40/P40,CS800,PS400,TS1200; vraag80−Q,aanbod20+0,5Q. Beide gebieden beslaan0–40fietsen; bedragen zijn totale euro’s."
+      ],
+      [
+        "ex_11",
+        "Huurfietsenmarkt met boekingsgrens en gearceerd verliesgebied.",
+        "Huurfietsen bijP45/Q30:CS600,PS525,TS1125. VerliesQ30–40,basis10fietsen,hoogte15euro per fiets,oppervlakte75euro. Alleen deze antwoordenfiguur bevat de gevraagde oplossing."
+      ]
+    ]
+  },
+  "future_gates": [
+    "actual accepted 232/233 teaching",
+    "distinct accepted-input manifest review",
+    "root production release",
+    "actual native full/thin/direct checker parity",
+    "all real pages and 13 figures color/gray personal inspection including actual Start1 box pagination",
+    "distinct paragraph review",
+    "distinct specialist QC",
+    "root acceptance/handoff"
+  ],
+  "native_builds": 0,
+  "personal_views": 0,
+  "production_release": false
+}

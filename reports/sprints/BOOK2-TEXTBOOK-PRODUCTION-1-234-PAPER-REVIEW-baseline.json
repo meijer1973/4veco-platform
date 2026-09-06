@@ -1,0 +1,1135 @@
+{
+  "actor": "paragraph_224_builder",
+  "operational_commit": "ce6d15cac2a4f5c2a874c6eec6df8531d0543e0a",
+  "repositories": [
+    {
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "tree": "7745347e591f47f3dbc8b5daea02142e88fa1437",
+      "tracked_files": 15172,
+      "verified_files": 15168,
+      "bytes": 1884531723,
+      "nul_tree_sha256": "945a9f14ed7c0a373009260e74d33e6ba30bb1bb4203cc09b2c711496c623284",
+      "nul_names_sha256": "0cfca28d6d8c0f7802c1f75d86118fb537bc4809fec573907f33717157d39603",
+      "raw_record_digest_sha256": "1063fa326490848c12cb30fab5ff2d229207cc26cc55bb59f2a53ae7212cec7e",
+      "framed_raw_bytes_sha256": "090ac52e7c53b3e350a9a580879130787e77a58406e8a94fb0545521d57c9f7f",
+      "exceptions": [
+        "reports/github-agent-index-platform.json",
+        "reports/github-agent-index-platform.md",
+        "reports/github-agent-index-lessen.json",
+        "reports/github-agent-index-lessen.md"
+      ],
+      "raw_git_all_match": true
+    },
+    {
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "tree": "1ac51006ef970668e95fac109863b1014d16afca",
+      "tracked_files": 1915,
+      "verified_files": 1915,
+      "bytes": 165709052,
+      "nul_tree_sha256": "64f13d27cb4942dc0758e9e88551c57763c959bf5e0577548b59c718fa3d996f",
+      "nul_names_sha256": "adc814e1c32e02d524fea47e3f2c99bed979eae19130f2180daf4f44480a5154",
+      "raw_record_digest_sha256": "3d562cabc09894dde07cd6d9b29f849c3bd04f99c879b6df51e9818458219d79",
+      "framed_raw_bytes_sha256": "d46913c5e376c4fa392e609adffbad1d02a1fbba65320ccfecec3e2e97a1efe5",
+      "exceptions": [],
+      "raw_git_all_match": true
+    }
+  ],
+  "selected_sources": [
+    {
+      "repository": "P",
+      "path": "AGENTS.md",
+      "prior_personal_read_raw": "665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 55097,
+      "git_blob": "68a7014992757233a3fc22b6633a07403255bd2b",
+      "raw_sha256": "665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b",
+      "lf_sha256": "665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b"
+    },
+    {
+      "repository": "P",
+      "path": "BUILD-PARAGRAPH.md",
+      "prior_personal_read_raw": "91ef6812ae766329e96c83d796c8bee7d319ad173998fa43d8718f48182b1c92",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 79500,
+      "git_blob": "89a9b2b37fa7586f5b2d7e8368194a388fbf6e1d",
+      "raw_sha256": "91ef6812ae766329e96c83d796c8bee7d319ad173998fa43d8718f48182b1c92",
+      "lf_sha256": "91ef6812ae766329e96c83d796c8bee7d319ad173998fa43d8718f48182b1c92"
+    },
+    {
+      "repository": "P",
+      "path": "BUILD-CHAPTER.md",
+      "prior_personal_read_raw": "e59ccd7dcf2b39dace6373257d745df006595b28118f0f7fb4a12a20f7ea4e18",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 10774,
+      "git_blob": "b1bc48cf9667aa5a7611df7b20cdcac2c093d7ac",
+      "raw_sha256": "e59ccd7dcf2b39dace6373257d745df006595b28118f0f7fb4a12a20f7ea4e18",
+      "lf_sha256": "e59ccd7dcf2b39dace6373257d745df006595b28118f0f7fb4a12a20f7ea4e18"
+    },
+    {
+      "repository": "P",
+      "path": "build-scripts/README.md",
+      "prior_personal_read_raw": "23765c9a7be731e8e9522c5d1add8c59f925b78baef17b27a130b3d5fef3d764",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 10182,
+      "git_blob": "7525c372fea88c4d3699951506580b44ab23bdf3",
+      "raw_sha256": "23765c9a7be731e8e9522c5d1add8c59f925b78baef17b27a130b3d5fef3d764",
+      "lf_sha256": "23765c9a7be731e8e9522c5d1add8c59f925b78baef17b27a130b3d5fef3d764"
+    },
+    {
+      "repository": "P",
+      "path": "docs/workflows/paragraph-lane-vocabulary.md",
+      "prior_personal_read_raw": "7d65a06459d7fb6ac39862836e5bc6b58d0e0786858a4fdbb477fbee1dd19bc5",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 2484,
+      "git_blob": "80e97fde8504993e2107f61ac2fd52f21fe4906d",
+      "raw_sha256": "7d65a06459d7fb6ac39862836e5bc6b58d0e0786858a4fdbb477fbee1dd19bc5",
+      "lf_sha256": "7d65a06459d7fb6ac39862836e5bc6b58d0e0786858a4fdbb477fbee1dd19bc5"
+    },
+    {
+      "repository": "P",
+      "path": "docs/workflows/textbook-paragraph-lane.md",
+      "prior_personal_read_raw": "14189b32f29e4987e1f0e23d776e4351147b2c25acf9b13ad0f43ac855bc9340",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 6979,
+      "git_blob": "ead62ee7ae546b6ca855dd8d9060642025610eb0",
+      "raw_sha256": "14189b32f29e4987e1f0e23d776e4351147b2c25acf9b13ad0f43ac855bc9340",
+      "lf_sha256": "14189b32f29e4987e1f0e23d776e4351147b2c25acf9b13ad0f43ac855bc9340"
+    },
+    {
+      "repository": "P",
+      "path": "build-scripts/templates/template-textbook-paragraph-plan.md",
+      "prior_personal_read_raw": "b301e1570b9884ef6b77008a560f6948d3d5889fbaf8864830156465c1266c6c",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 6553,
+      "git_blob": "352fcfdef9c3c19c0b1ea58e441ca58d48562f1b",
+      "raw_sha256": "b301e1570b9884ef6b77008a560f6948d3d5889fbaf8864830156465c1266c6c",
+      "lf_sha256": "b301e1570b9884ef6b77008a560f6948d3d5889fbaf8864830156465c1266c6c"
+    },
+    {
+      "repository": "P",
+      "path": "skills/econ-didactiek.md",
+      "prior_personal_read_raw": "c2073f8310f2f74b9ca4c651309c7046dff1d355f6694aedae691c9e76f5aa6e",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 22701,
+      "git_blob": "5a38065e42754e0490e541002ba4465bf3dbeda8",
+      "raw_sha256": "c2073f8310f2f74b9ca4c651309c7046dff1d355f6694aedae691c9e76f5aa6e",
+      "lf_sha256": "c2073f8310f2f74b9ca4c651309c7046dff1d355f6694aedae691c9e76f5aa6e"
+    },
+    {
+      "repository": "P",
+      "path": "skills/econ-exercise-builder.md",
+      "prior_personal_read_raw": "27b8a1a09f3b87b57ce9608ccadfb0a5f32c47e62ae3436970aee58fc0464d5a",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 25298,
+      "git_blob": "5504c8e8a325864978c76867b15b857c118df19d",
+      "raw_sha256": "27b8a1a09f3b87b57ce9608ccadfb0a5f32c47e62ae3436970aee58fc0464d5a",
+      "lf_sha256": "27b8a1a09f3b87b57ce9608ccadfb0a5f32c47e62ae3436970aee58fc0464d5a"
+    },
+    {
+      "repository": "P",
+      "path": "skills/economic-graph.md",
+      "prior_personal_read_raw": "2e4134e8e42cc97a07ca397191385f6e06cb0f8537a1c7abf355777d7efd3f19",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 33082,
+      "git_blob": "938d5e61c46de0d60b8bdeaf0aced2572715c2d0",
+      "raw_sha256": "2e4134e8e42cc97a07ca397191385f6e06cb0f8537a1c7abf355777d7efd3f19",
+      "lf_sha256": "2e4134e8e42cc97a07ca397191385f6e06cb0f8537a1c7abf355777d7efd3f19"
+    },
+    {
+      "repository": "P",
+      "path": "skills/econ-pdf-builder.md",
+      "prior_personal_read_raw": "b610c2479b24658167b799c4c3b8bb1d62b06787364508948deb8a72e5fabbd5",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 16851,
+      "git_blob": "81c7a8700c934d9eff3292dbb881372064c46562",
+      "raw_sha256": "b610c2479b24658167b799c4c3b8bb1d62b06787364508948deb8a72e5fabbd5",
+      "lf_sha256": "b610c2479b24658167b799c4c3b8bb1d62b06787364508948deb8a72e5fabbd5"
+    },
+    {
+      "repository": "P",
+      "path": "references/authored/didactiek-principes.md",
+      "prior_personal_read_raw": "058769f66876eac0ca0694b650d22ba1f23fa8a6ef0640f1a5003c2a60a96f07",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 65666,
+      "git_blob": "f4f99c02db184d082e423d3a9045ddd1f94d09ff",
+      "raw_sha256": "058769f66876eac0ca0694b650d22ba1f23fa8a6ef0640f1a5003c2a60a96f07",
+      "lf_sha256": "058769f66876eac0ca0694b650d22ba1f23fa8a6ef0640f1a5003c2a60a96f07"
+    },
+    {
+      "repository": "P",
+      "path": "references/authored/economic_mathematical_precision_reference.md",
+      "prior_personal_read_raw": "240f3c20259e989fd47f41a1970e0367e220e3bd1f035369c7f67050b1ca4bcb",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 19267,
+      "git_blob": "b735b7f91bace804b5cd9f88269e7451e3e7e4f6",
+      "raw_sha256": "240f3c20259e989fd47f41a1970e0367e220e3bd1f035369c7f67050b1ca4bcb",
+      "lf_sha256": "240f3c20259e989fd47f41a1970e0367e220e3bd1f035369c7f67050b1ca4bcb"
+    },
+    {
+      "repository": "P",
+      "path": "references/authored/economie-terminologie.md",
+      "prior_personal_read_raw": "4653c010c3faffcf4c59ce48853e3928b6411b5d2e08f322235c2af75b9657a9",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 26475,
+      "git_blob": "907ee2e9ccdaa0ebff7c9d5167ffe4fa952d82de",
+      "raw_sha256": "4653c010c3faffcf4c59ce48853e3928b6411b5d2e08f322235c2af75b9657a9",
+      "lf_sha256": "4653c010c3faffcf4c59ce48853e3928b6411b5d2e08f322235c2af75b9657a9"
+    },
+    {
+      "repository": "P",
+      "path": "references/external/amstelveencollege_quality_standards.md",
+      "prior_personal_read_raw": "3959e089e3c26ef2e4dd6f183d28ffca6d69768013b4a5193358d46aaca7080e",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 2747,
+      "git_blob": "c3ed5599228868020ce07a1959f940d683d82813",
+      "raw_sha256": "3959e089e3c26ef2e4dd6f183d28ffca6d69768013b4a5193358d46aaca7080e",
+      "lf_sha256": "3959e089e3c26ef2e4dd6f183d28ffca6d69768013b4a5193358d46aaca7080e"
+    },
+    {
+      "repository": "P",
+      "path": "references/owned/course-blueprint-pedagogical-boundaries.md",
+      "prior_personal_read_raw": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 10558,
+      "git_blob": "2b063132e72c5dd98088bc996057065f316efa4f",
+      "raw_sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7",
+      "lf_sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7"
+    },
+    {
+      "repository": "P",
+      "path": "references/authored/textbook-rendered-page-acceptance-standard.md",
+      "prior_personal_read_raw": "e57625f8c7f2912b4f9cf466a00d41b06c6deb76dc4534f74abfc0ffd0f5b29b",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 8478,
+      "git_blob": "121581973461fce3826a838658afbbdad785a03d",
+      "raw_sha256": "e57625f8c7f2912b4f9cf466a00d41b06c6deb76dc4534f74abfc0ffd0f5b29b",
+      "lf_sha256": "e57625f8c7f2912b4f9cf466a00d41b06c6deb76dc4534f74abfc0ffd0f5b29b"
+    },
+    {
+      "repository": "P",
+      "path": "references/authored/textbook-figure-standard.md",
+      "prior_personal_read_raw": "055b456a848296b75eea3b186241e9ed6e715175bdff4a541c09f89e9c91d311",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 8939,
+      "git_blob": "afcbf39fa420168d5ab2a97e7392c73a877c7625",
+      "raw_sha256": "055b456a848296b75eea3b186241e9ed6e715175bdff4a541c09f89e9c91d311",
+      "lf_sha256": "055b456a848296b75eea3b186241e9ed6e715175bdff4a541c09f89e9c91d311"
+    },
+    {
+      "repository": "P",
+      "path": "references/authored/book-outlines/book-2-outline.md",
+      "prior_personal_read_raw": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 55834,
+      "git_blob": "cc2d7c7e75e161bc6cc7f90b85afb92ac1009607",
+      "raw_sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf",
+      "lf_sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf"
+    },
+    {
+      "repository": "P",
+      "path": "references/authored/book-outlines/book-2-outline.meta.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 47642,
+      "git_blob": "a579466392a3e0a2733a3db51f3c3756245ef1b0",
+      "raw_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "lf_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-remaining-paragraph-dispatch-plan.md",
+      "prior_personal_read_raw": "084bf9b368e8b57d38421976ef18258ba725c044c3ff6e72ee588a650d623362",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 9811,
+      "git_blob": "6a62210894d36c8fe74aead73ea50e35f61c303d",
+      "raw_sha256": "084bf9b368e8b57d38421976ef18258ba725c044c3ff6e72ee588a650d623362",
+      "lf_sha256": "084bf9b368e8b57d38421976ef18258ba725c044c3ff6e72ee588a650d623362"
+    },
+    {
+      "repository": "L",
+      "path": "AGENTS.md",
+      "prior_personal_read_raw": "0128a5fc4b27a72a986f2e86620b689f00d3796f87d0caeac5faae9c7497835e",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 13024,
+      "git_blob": "edb6377aa26712574f025ff79286c9ffced2102e",
+      "raw_sha256": "0128a5fc4b27a72a986f2e86620b689f00d3796f87d0caeac5faae9c7497835e",
+      "lf_sha256": "0128a5fc4b27a72a986f2e86620b689f00d3796f87d0caeac5faae9c7497835e"
+    },
+    {
+      "repository": "L",
+      "path": "specifications/product-vision.md",
+      "prior_personal_read_raw": "21d97f2dc980de77d6e2d423745e6a4d9553a3295f0f7a7d896261c9b95eec56",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 8047,
+      "git_blob": "6602845b00a8408d619a0e2e1fbe0cd06dc1f234",
+      "raw_sha256": "21d97f2dc980de77d6e2d423745e6a4d9553a3295f0f7a7d896261c9b95eec56",
+      "lf_sha256": "21d97f2dc980de77d6e2d423745e6a4d9553a3295f0f7a7d896261c9b95eec56"
+    },
+    {
+      "repository": "L",
+      "path": "specifications/product-end-state.md",
+      "prior_personal_read_raw": "78c739220f359a5d5301d7d854dd42a2f45181bb54b4772d66509377f4bbe6ab",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 27292,
+      "git_blob": "480eedc9a901ab1d8862e22c6caedb5f70d26eb9",
+      "raw_sha256": "78c739220f359a5d5301d7d854dd42a2f45181bb54b4772d66509377f4bbe6ab",
+      "lf_sha256": "78c739220f359a5d5301d7d854dd42a2f45181bb54b4772d66509377f4bbe6ab"
+    },
+    {
+      "repository": "L",
+      "path": "specifications/companion-core-specifications.md",
+      "prior_personal_read_raw": "4f5bc43f623286a96afc1be59e53bd0c52bdf4d8c9479510c5a914efc7c6294e",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 31475,
+      "git_blob": "81cd8ac096430bc21cc86fc4f3acc0d2d5e7f2cb",
+      "raw_sha256": "4f5bc43f623286a96afc1be59e53bd0c52bdf4d8c9479510c5a914efc7c6294e",
+      "lf_sha256": "4f5bc43f623286a96afc1be59e53bd0c52bdf4d8c9479510c5a914efc7c6294e"
+    },
+    {
+      "repository": "P",
+      "path": "skills/econ-textbook-paragraph.md",
+      "prior_personal_read_raw": "814975befa57444dff09d9d339bef7cafe5fdd1eee0ff14f1a8b88ee73a38de4",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 30331,
+      "git_blob": "b48ff1f0d02748e6e4d1f98d6d892ac786562c3b",
+      "raw_sha256": "814975befa57444dff09d9d339bef7cafe5fdd1eee0ff14f1a8b88ee73a38de4",
+      "lf_sha256": "814975befa57444dff09d9d339bef7cafe5fdd1eee0ff14f1a8b88ee73a38de4"
+    },
+    {
+      "repository": "P",
+      "path": "skills/econ-paragraph-review.md",
+      "prior_personal_read_raw": "652628ddb9617d09bda02b2b57c3050e1fea0e1971079bfefe482264c8913853",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 31669,
+      "git_blob": "f64bb9a68d2a4eb8a2d84337a139f5050fd08114",
+      "raw_sha256": "652628ddb9617d09bda02b2b57c3050e1fea0e1971079bfefe482264c8913853",
+      "lf_sha256": "652628ddb9617d09bda02b2b57c3050e1fea0e1971079bfefe482264c8913853"
+    },
+    {
+      "repository": "P",
+      "path": "skills/econ-quality-control.md",
+      "prior_personal_read_raw": "c7f2390c151b6fec9974d4d89f19cc62fcc6128d69e6dc2cc08480f4c95b956c",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 28838,
+      "git_blob": "c8bfcbc010b96c2de38f6276e28d4a2edb3fd52a",
+      "raw_sha256": "c7f2390c151b6fec9974d4d89f19cc62fcc6128d69e6dc2cc08480f4c95b956c",
+      "lf_sha256": "c7f2390c151b6fec9974d4d89f19cc62fcc6128d69e6dc2cc08480f4c95b956c"
+    },
+    {
+      "repository": "P",
+      "path": "agents/teacher-learning-quality-review-agent.md",
+      "prior_personal_read_raw": "aee8fba13cb1877b2633459c1ab10b4e8259e9b4d0c3e8b183d11e35aec0dace",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 16675,
+      "git_blob": "9c9a746aaed369afab297a09ea677bc933525718",
+      "raw_sha256": "aee8fba13cb1877b2633459c1ab10b4e8259e9b4d0c3e8b183d11e35aec0dace",
+      "lf_sha256": "aee8fba13cb1877b2633459c1ab10b4e8259e9b4d0c3e8b183d11e35aec0dace"
+    },
+    {
+      "repository": "P",
+      "path": "agents/student-experience-review-agent.md",
+      "prior_personal_read_raw": "152b0bc4cb83a961f7349528fd818d5b038d8756e25765545b1d7b47c186b974",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 16348,
+      "git_blob": "307a642bd5952d1ccaa9c6c5d5325c4da7f0e4c8",
+      "raw_sha256": "152b0bc4cb83a961f7349528fd818d5b038d8756e25765545b1d7b47c186b974",
+      "lf_sha256": "152b0bc4cb83a961f7349528fd818d5b038d8756e25765545b1d7b47c186b974"
+    },
+    {
+      "repository": "P",
+      "path": "agents/visual-qa-agent.md",
+      "prior_personal_read_raw": "c33675c5604a228af4b8e75e9f7ebb0133fad39e254d2a90015d9a36a7f19332",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 5239,
+      "git_blob": "aa6baa1a8f299dfd3bccede4de7742e8c97edfd2",
+      "raw_sha256": "c33675c5604a228af4b8e75e9f7ebb0133fad39e254d2a90015d9a36a7f19332",
+      "lf_sha256": "c33675c5604a228af4b8e75e9f7ebb0133fad39e254d2a90015d9a36a7f19332"
+    },
+    {
+      "repository": "P",
+      "path": "agents/accessibility-agent.md",
+      "prior_personal_read_raw": "9a393755b227a3cde928071cdc3cf79ebb1c5d876a5d96f3c89b5d9a1066c79f",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 4263,
+      "git_blob": "2922c0f86aa5e51c9cdbf354a1852ee947011f3d",
+      "raw_sha256": "9a393755b227a3cde928071cdc3cf79ebb1c5d876a5d96f3c89b5d9a1066c79f",
+      "lf_sha256": "9a393755b227a3cde928071cdc3cf79ebb1c5d876a5d96f3c89b5d9a1066c79f"
+    },
+    {
+      "repository": "P",
+      "path": "docs/workflows/paragraph-quality-ref-schema-v2.md",
+      "prior_personal_read_raw": "e112c294f1d473de1f5a9492bc3ecb6d4154ab47372990ac6aaf8c5dec27caa6",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 2720,
+      "git_blob": "29cf3f7f0d46c360c5f220d0e11072d0d01a0bc6",
+      "raw_sha256": "e112c294f1d473de1f5a9492bc3ecb6d4154ab47372990ac6aaf8c5dec27caa6",
+      "lf_sha256": "e112c294f1d473de1f5a9492bc3ecb6d4154ab47372990ac6aaf8c5dec27caa6"
+    },
+    {
+      "repository": "P",
+      "path": "skills/econ-consolidation-builder.md",
+      "prior_personal_read_raw": "a2ac36654f7bd18c49d7f791850a0455c4e2772b434138f8b3ceb7bd94b03b09",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 15115,
+      "git_blob": "f8ca4ea4ec16aed00a6ec09dcacc5b4733538817",
+      "raw_sha256": "a2ac36654f7bd18c49d7f791850a0455c4e2772b434138f8b3ceb7bd94b03b09",
+      "lf_sha256": "a2ac36654f7bd18c49d7f791850a0455c4e2772b434138f8b3ceb7bd94b03b09"
+    },
+    {
+      "repository": "P",
+      "path": "references/authored/gemengde-opgaven-target-standard.md",
+      "prior_personal_read_raw": "4a5416cc7ff1501b26f362bff4cf6c7712cc16412a9b1e405c0db63b9b886594",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 6172,
+      "git_blob": "e6e5747cdc2f9161253a815569790f962fc759e2",
+      "raw_sha256": "4a5416cc7ff1501b26f362bff4cf6c7712cc16412a9b1e405c0db63b9b886594",
+      "lf_sha256": "4a5416cc7ff1501b26f362bff4cf6c7712cc16412a9b1e405c0db63b9b886594"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 3846,
+      "git_blob": "3bfdb40e49ab894bcf595b693f4045cf5e626548",
+      "raw_sha256": "1597dea1034da744072005ba159f0a9f6bf1f7eb1a0e9963b1ebec6fe43e0b33",
+      "lf_sha256": "1597dea1034da744072005ba159f0a9f6bf1f7eb1a0e9963b1ebec6fe43e0b33"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 7666,
+      "git_blob": "1c15c6dc671b42b831999169a59d808c82b13c2b",
+      "raw_sha256": "fa7730902ad304ae28c533000be2b1ece946d2269285b47098c6f272e83f9502",
+      "lf_sha256": "fa7730902ad304ae28c533000be2b1ece946d2269285b47098c6f272e83f9502"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-baseline.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 5241996,
+      "git_blob": "69bc4f49e20a6f2919dc54e888d4b6659b9684e1",
+      "raw_sha256": "3998a7ad08e467f6ee24e0e621901535e7f6b7c1f1f442c8cd235c198cdcab4e",
+      "lf_sha256": "3998a7ad08e467f6ee24e0e621901535e7f6b7c1f1f442c8cd235c198cdcab4e"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-bundle-process.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 27850,
+      "git_blob": "e322d754eaeb92d780ea6c5676f7797de0cd8989",
+      "raw_sha256": "18d6d32bc78eee874793288d44943ccf8aa8a3082b3554c50ac2d2e1104d27a5",
+      "lf_sha256": "18d6d32bc78eee874793288d44943ccf8aa8a3082b3554c50ac2d2e1104d27a5"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-check.cjs",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 13969,
+      "git_blob": "80c499201fc24e270ed0bd5846d3da322fcae4b4",
+      "raw_sha256": "e6d544baf9b934bbabe77c8f1e994258638be81a3f9604af652c67a3a2d1922c",
+      "lf_sha256": "e6d544baf9b934bbabe77c8f1e994258638be81a3f9604af652c67a3a2d1922c"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-checks.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 5503,
+      "git_blob": "5c7e820d35f992f225b2a4281e36352a9e0e1532",
+      "raw_sha256": "84e6b13a79ea2d4c645dc8609f9f614344ca41f62aeb39e77c8e0b6196f5d19a",
+      "lf_sha256": "84e6b13a79ea2d4c645dc8609f9f614344ca41f62aeb39e77c8e0b6196f5d19a"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-durable-process.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 39169,
+      "git_blob": "083c6a737e4b63b1baf87549425b3a6471ef4077",
+      "raw_sha256": "0e5a73c773987dc9137c691884e630dd2b82d8495e599c6e550d944f019ee8c6",
+      "lf_sha256": "0e5a73c773987dc9137c691884e630dd2b82d8495e599c6e550d944f019ee8c6"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-finalize.cjs",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 4266,
+      "git_blob": "1d68faf2d09390b37cd4ebc414858c24b9a22c60",
+      "raw_sha256": "c250cc88dba49199bf83495e5064e607716253207c1b1410f243932742472873",
+      "lf_sha256": "c250cc88dba49199bf83495e5064e607716253207c1b1410f243932742472873"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-goal-design-process.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 59550,
+      "git_blob": "1ae4fa0034446eab92c8329ad7dfe26bf8338482",
+      "raw_sha256": "ce6f95d125a8a699e7f6afbbfcdd06a241b77123111bbb68f7def1af9a639981",
+      "lf_sha256": "ce6f95d125a8a699e7f6afbbfcdd06a241b77123111bbb68f7def1af9a639981"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-governance-process.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 7377,
+      "git_blob": "795fb6eff46eb91b73c66c699a942a83e4c1a123",
+      "raw_sha256": "ba5844ef1a2cd7e3d0e4f7a1dec58b85c490dbf5dd5dde10ec374e649823bd83",
+      "lf_sha256": "ba5844ef1a2cd7e3d0e4f7a1dec58b85c490dbf5dd5dde10ec374e649823bd83"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-mapping.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 2704,
+      "git_blob": "61799c8ca93387defb9c76632833d99172007237",
+      "raw_sha256": "3d043dded6ac648adb8a354dfaa229d9c774896300d7a38976ebd9697f29c985",
+      "lf_sha256": "3d043dded6ac648adb8a354dfaa229d9c774896300d7a38976ebd9697f29c985"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-01.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 146,
+      "git_blob": "6c3c289667bcbd0858cd018d9158987f0f3088e7",
+      "raw_sha256": "49ad001fc2e24d4139c4c70956734c3ed8f41a650990a86210c55ccc1222fcd0",
+      "lf_sha256": "49ad001fc2e24d4139c4c70956734c3ed8f41a650990a86210c55ccc1222fcd0"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-02.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 146,
+      "git_blob": "ab343560d3b975ae6be0446e863d2693f7ee4581",
+      "raw_sha256": "fe8fa01e098bea2e6f51294ec12caf28ffc9121d5b03517ad39fce79a6b3efa5",
+      "lf_sha256": "fe8fa01e098bea2e6f51294ec12caf28ffc9121d5b03517ad39fce79a6b3efa5"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-03.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 146,
+      "git_blob": "829ce639abfa70a3395f32ec958eb67ed0c752b5",
+      "raw_sha256": "f0a650308c2b5838417c5ebe16542c7b66d7548992f5b4dbf3e9d4d4b53ea0df",
+      "lf_sha256": "f0a650308c2b5838417c5ebe16542c7b66d7548992f5b4dbf3e9d4d4b53ea0df"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-04.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 146,
+      "git_blob": "48f1c2d5ced3e4aa8eb06fb36dfdc21ffd94336e",
+      "raw_sha256": "f368d06455d99c5f36869f03de4b6d274cff24a8a3d2b4c3f0476c95cbd38aac",
+      "lf_sha256": "f368d06455d99c5f36869f03de4b6d274cff24a8a3d2b4c3f0476c95cbd38aac"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-05.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 146,
+      "git_blob": "21fe3ca91ff2084912f74b99f2b6216c0243beb1",
+      "raw_sha256": "4ddd04f7c080567d33f28117251a0f27222ec3f1af22ab8f4bccafd3ed9c5c3a",
+      "lf_sha256": "4ddd04f7c080567d33f28117251a0f27222ec3f1af22ab8f4bccafd3ed9c5c3a"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-06.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 146,
+      "git_blob": "d322b6d1f3f1a86ea170eddd0231eff1bd6a6385",
+      "raw_sha256": "450ad5d60e7cd036138ffe2adc8c3905ae0093d4155846422a46715f1495e90e",
+      "lf_sha256": "450ad5d60e7cd036138ffe2adc8c3905ae0093d4155846422a46715f1495e90e"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-07.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 146,
+      "git_blob": "55ac005dbf633bb647a76f0d9e7940bd2b2b21ed",
+      "raw_sha256": "8af249284c27e7688e01579a1dbaab6b941eef2238e43fbb9862eab4599c11f3",
+      "lf_sha256": "8af249284c27e7688e01579a1dbaab6b941eef2238e43fbb9862eab4599c11f3"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-08.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 146,
+      "git_blob": "de44668b1e8f9e6d562c8d17aca095209e4f618d",
+      "raw_sha256": "c78cf88d4a2771b26818017ee83b0b9242ec1f6ffefd7d955416269a6e51fde1",
+      "lf_sha256": "c78cf88d4a2771b26818017ee83b0b9242ec1f6ffefd7d955416269a6e51fde1"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-09.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 146,
+      "git_blob": "53693ff8a129d5eb8865de19e077efa26da978e0",
+      "raw_sha256": "7b12b14896dc0cd7c11b1cdd752d6d2eb03a907c291c408f86110f9fb373f3e5",
+      "lf_sha256": "7b12b14896dc0cd7c11b1cdd752d6d2eb03a907c291c408f86110f9fb373f3e5"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-10.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 146,
+      "git_blob": "31194c2606ddfca549311976e1d5f366b71ea512",
+      "raw_sha256": "3017a4d959447ed46fb0be8582a20adadff6cd30e296d2b81b79393a5dd04137",
+      "lf_sha256": "3017a4d959447ed46fb0be8582a20adadff6cd30e296d2b81b79393a5dd04137"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-11.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 146,
+      "git_blob": "93a8cb3c463088db660ee389eba93a5d0d05398e",
+      "raw_sha256": "5e78aca65e02f60d4f0afb8dca7840f6af9303172c2a57d08966b7ffd7ddab2e",
+      "lf_sha256": "5e78aca65e02f60d4f0afb8dca7840f6af9303172c2a57d08966b7ffd7ddab2e"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-12.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 146,
+      "git_blob": "58129b890128f48e50b9f135b5aa2c4bdf24eb3d",
+      "raw_sha256": "0716c1bd19bfbec5687a24fe3ba1f668beb13e6903ea4ca644e7b2db6c7080ce",
+      "lf_sha256": "0716c1bd19bfbec5687a24fe3ba1f668beb13e6903ea4ca644e7b2db6c7080ce"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-13.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 146,
+      "git_blob": "c11a26ef389323bce511eb79f0c7122b23fccc46",
+      "raw_sha256": "e191724ba69c9fb74b1db1b1dd20dcc4ecd42c94ee7972f7cb70ba4042b8ad3f",
+      "lf_sha256": "e191724ba69c9fb74b1db1b1dd20dcc4ecd42c94ee7972f7cb70ba4042b8ad3f"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-14.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 145,
+      "git_blob": "a0177c2e4f88991904ade88c2e93dc26dad2dc4e",
+      "raw_sha256": "b19a93e81ab40c3ba8b01de84f674cdfe1ae1cae7a95055a6e92128a9fae5b64",
+      "lf_sha256": "b19a93e81ab40c3ba8b01de84f674cdfe1ae1cae7a95055a6e92128a9fae5b64"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-import-step-15.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 145,
+      "git_blob": "5de36df1862feaf7f72e95b3a837018ace9fb55a",
+      "raw_sha256": "99801c6f7d13d7cbf784ed339fec8fec13b5c96de8195330a99b93001bcffb0e",
+      "lf_sha256": "99801c6f7d13d7cbf784ed339fec8fec13b5c96de8195330a99b93001bcffb0e"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-plan.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 6475,
+      "git_blob": "d6b058c514f0fc49e1ba5fe4cd2c2512153639dd",
+      "raw_sha256": "2aa9dc5cae4c5e5a391d3b487619c729635a2a28ed92b911da6dc8c9c8213d7b",
+      "lf_sha256": "2aa9dc5cae4c5e5a391d3b487619c729635a2a28ed92b911da6dc8c9c8213d7b"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-prepublication.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 1179895,
+      "git_blob": "f749569092c94da836e8055fc599df619672141d",
+      "raw_sha256": "d2b132ff14d47e50c45e48cbfcea3cf4bab562a06ea3c19cfb90ef32ddfadb4f",
+      "lf_sha256": "d2b132ff14d47e50c45e48cbfcea3cf4bab562a06ea3c19cfb90ef32ddfadb4f"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-publication.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 4815,
+      "git_blob": "b17668a683efff6ed2793a02117ac30d474c09cc",
+      "raw_sha256": "02b8d0a42bf3cfde014f14d7e25f2f03c2a8bbd38a3274929c1457b80109dd47",
+      "lf_sha256": "02b8d0a42bf3cfde014f14d7e25f2f03c2a8bbd38a3274929c1457b80109dd47"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-result.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 6760,
+      "git_blob": "29aa42061d11a3109f8a55a12f0ad22779494832",
+      "raw_sha256": "237dda01d9622aa9af64d95f4c1e2717e3d8595f45db7332405b44630d1e6631",
+      "lf_sha256": "237dda01d9622aa9af64d95f4c1e2717e3d8595f45db7332405b44630d1e6631"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-own-L-process.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 25288,
+      "git_blob": "f707453a20f85f28af1164169097b1e113fa2874",
+      "raw_sha256": "3191c0644a2c3a104f9571ddcb575ea0748012ba370cfac4615187577759a6d8",
+      "lf_sha256": "3191c0644a2c3a104f9571ddcb575ea0748012ba370cfac4615187577759a6d8"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-own-P-process.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 56252,
+      "git_blob": "f5229ee5d09d25f4dba84a5229892248634da4ba",
+      "raw_sha256": "225000de7447daef9a5a7b3900a72afcf19e078dfd065768e1b1d882ab460144",
+      "lf_sha256": "225000de7447daef9a5a7b3900a72afcf19e078dfd065768e1b1d882ab460144"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-whole-L-process.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 117567,
+      "git_blob": "a88e62ca9afa5d603f5a7ea2c45fa13244461d23",
+      "raw_sha256": "85c0554c01720ad60769de8f45f7a942c188098569ead19d77da89ccccc45a70",
+      "lf_sha256": "85c0554c01720ad60769de8f45f7a942c188098569ead19d77da89ccccc45a70"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope-whole-P-process.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 1906835,
+      "git_blob": "93069bf15386f050f718a588b9103dd013ef8bc6",
+      "raw_sha256": "baae4d37b558d4ce2e15db4a801fe30ebec81e7ac42864e35d9fdac537108b49",
+      "lf_sha256": "baae4d37b558d4ce2e15db4a801fe30ebec81e7ac42864e35d9fdac537108b49"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-scope.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 20905,
+      "git_blob": "d8921cf53719dd4847719a8f1f75d7a3d0636f5a",
+      "raw_sha256": "c4dc81fd33c8b989be23376aaec18ff6bbb36c8fd239298bf7c1236dfe2d3b35",
+      "lf_sha256": "c4dc81fd33c8b989be23376aaec18ff6bbb36c8fd239298bf7c1236dfe2d3b35"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-simulation.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 55342,
+      "git_blob": "7644fcaa49aeae17aa331b6ae1103c9e4de31b53",
+      "raw_sha256": "f4a03558d06073128ffdcaf3e130d1b7babf28b19402f44f654fb937aca0016d",
+      "lf_sha256": "f4a03558d06073128ffdcaf3e130d1b7babf28b19402f44f654fb937aca0016d"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-structural-process.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 59421,
+      "git_blob": "1c10e10aa0d0ef012876f48af22c44f83f4034aa",
+      "raw_sha256": "e4f3e106df0104994f99d207f692362cc52c83637bbf767901077c4280c53256",
+      "lf_sha256": "e4f3e106df0104994f99d207f692362cc52c83637bbf767901077c4280c53256"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-plan.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 6824,
+      "git_blob": "49c0800a039151faee90fb0e33024bba54336306",
+      "raw_sha256": "fb5cf9ecb9374b40161e9d33511b179194a24599bb9f3dd22ab93af6a6d2fdab",
+      "lf_sha256": "fb5cf9ecb9374b40161e9d33511b179194a24599bb9f3dd22ab93af6a6d2fdab"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-publication.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 5858,
+      "git_blob": "b3c944080f5ce9f4d845a544b602a81992157e5b",
+      "raw_sha256": "dba5851d69fd5d6f02434fc5986d682716ca6cc07c076e5424f64c0ff5354b90",
+      "lf_sha256": "dba5851d69fd5d6f02434fc5986d682716ca6cc07c076e5424f64c0ff5354b90"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-report.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 17745,
+      "git_blob": "63d220d5b6bbd2e2e5e8454ecf720a5954ecf86f",
+      "raw_sha256": "3cac3da69d367d34aeb2804436b1933533916c621f36612a08461ef86f9ad7c1",
+      "lf_sha256": "3cac3da69d367d34aeb2804436b1933533916c621f36612a08461ef86f9ad7c1"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-plan.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 6529,
+      "git_blob": "f1b8cc4f819885e076f352dad17af734ade2df06",
+      "raw_sha256": "5b7f5e5c90ede0e12efbd5637bb23865abd11f2577c19f3497ce63fcb21a60df",
+      "lf_sha256": "5b7f5e5c90ede0e12efbd5637bb23865abd11f2577c19f3497ce63fcb21a60df"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-publication.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 5152,
+      "git_blob": "ab43ce2dea5b36e851c5a818a0beb0ee120a07e6",
+      "raw_sha256": "26c366d85c35d804ec48aac36c1ecec164c9ed7c6cb1818b53e13c317c9a5aec",
+      "lf_sha256": "26c366d85c35d804ec48aac36c1ecec164c9ed7c6cb1818b53e13c317c9a5aec"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-report.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 10997,
+      "git_blob": "46980c92cfea8118020a1a322e69d4354e7ec101",
+      "raw_sha256": "0a656e3d743aa8affe53f83a2ede1e7d7e55eea50da43b1d02a13c5b6cf96184",
+      "lf_sha256": "0a656e3d743aa8affe53f83a2ede1e7d7e55eea50da43b1d02a13c5b6cf96184"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-plan.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 8975,
+      "git_blob": "41daad99d090fb28e56e68f907596c64f4d97813",
+      "raw_sha256": "36f413c9f66c04b89a214aeb172d2e09e835934c9c73b3583795b258422fb3e7",
+      "lf_sha256": "36f413c9f66c04b89a214aeb172d2e09e835934c9c73b3583795b258422fb3e7"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-publication.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 1780,
+      "git_blob": "e29bfa01adf807e99296cdc6363051f5e3ad6d29",
+      "raw_sha256": "6259d0aeb86a395e5f7d6f853d5d1a3a199384759e1d99d6bd2e7183da96a5d3",
+      "lf_sha256": "6259d0aeb86a395e5f7d6f853d5d1a3a199384759e1d99d6bd2e7183da96a5d3"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-result.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 3103,
+      "git_blob": "36c5bfd57925afa5863451123e78376c5d203459",
+      "raw_sha256": "69788a4e206237ff469b453bc99b3b648f906de952feb7f801ab28613ba56a31",
+      "lf_sha256": "69788a4e206237ff469b453bc99b3b648f906de952feb7f801ab28613ba56a31"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-plan.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 6353,
+      "git_blob": "98494a4341604a7942ba205d16b62fe685874f59",
+      "raw_sha256": "9847f3b74bf342b15ad15f767668b3bcb803c13db37b8dd5e991c98aabe050ba",
+      "lf_sha256": "9847f3b74bf342b15ad15f767668b3bcb803c13db37b8dd5e991c98aabe050ba"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-publication.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 4140,
+      "git_blob": "24f3f6828e51cac76f7232630b23a4e8d0cf2175",
+      "raw_sha256": "db02b0307bc96c5f6166ff1f92bb438936ea4825fdb72893d13ffefacef15a71",
+      "lf_sha256": "db02b0307bc96c5f6166ff1f92bb438936ea4825fdb72893d13ffefacef15a71"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-report.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 22837,
+      "git_blob": "345c2522430f77a6073b1616195897cd576dd96f",
+      "raw_sha256": "68a039cf8715603c49e7088b7e96bf6e8bde1511b3a286f57ac2061ffcc1d6fc",
+      "lf_sha256": "68a039cf8715603c49e7088b7e96bf6e8bde1511b3a286f57ac2061ffcc1d6fc"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-plan.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 6738,
+      "git_blob": "7dd9eb05c27c203a1c8b93d1e2f3912b44e476a1",
+      "raw_sha256": "74b6038a1e190fc7eaaa01722a02acdac53bdc67aab0631b2c91a32e6a5ff54e",
+      "lf_sha256": "74b6038a1e190fc7eaaa01722a02acdac53bdc67aab0631b2c91a32e6a5ff54e"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-publication.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 4820,
+      "git_blob": "6f881ebf180c6db93ed86a99f26e6abe4d17ab73",
+      "raw_sha256": "6d5367665a9e136da6756cf73c431e89e13acecfc041cbe010435aa84369ac45",
+      "lf_sha256": "6d5367665a9e136da6756cf73c431e89e13acecfc041cbe010435aa84369ac45"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-result.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 11511,
+      "git_blob": "23f8481f5ededda33254465f38e5db0e9949ad27",
+      "raw_sha256": "80d6d08be2167d5dafed94f2705745784e41c3f16b99ac8d99f7ec9784701ad0",
+      "lf_sha256": "80d6d08be2167d5dafed94f2705745784e41c3f16b99ac8d99f7ec9784701ad0"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 2326,
+      "git_blob": "058a73e82d9a0ff1eabd8b6f3429071561fc0832",
+      "raw_sha256": "963779081724eecfbf19a6ad48c628f2ae2cc7128e17ec1f44c75c8d0d0fc4b2",
+      "lf_sha256": "963779081724eecfbf19a6ad48c628f2ae2cc7128e17ec1f44c75c8d0d0fc4b2"
+    },
+    {
+      "repository": "P",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 2119,
+      "git_blob": "2dddfcb570ecc4951da2d0eb649b7736b86168f1",
+      "raw_sha256": "1f3d6019255ba85ab62989922ca733de90a289f7a0fd8add07752db16be140c3",
+      "lf_sha256": "1f3d6019255ba85ab62989922ca733de90a289f7a0fd8add07752db16be140c3"
+    },
+    {
+      "repository": "P",
+      "path": "references/authored/course-target-exercises.json",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 218381,
+      "git_blob": "5680842328576b63e2858ce8e354030a3a458410",
+      "raw_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "lf_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e"
+    },
+    {
+      "repository": "P",
+      "path": "references/owned/course-blueprint-v6-three-year.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 25536,
+      "git_blob": "a9bc725a3d42bc7bb98adf4b1dbcf1fb8717cfa3",
+      "raw_sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e",
+      "lf_sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e"
+    },
+    {
+      "repository": "P",
+      "path": "references/owned/course-blueprint-v5.md",
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "bytes": 19285,
+      "git_blob": "c5adbaf31feabba38998a0c878a02c9a609a02f2",
+      "raw_sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7",
+      "lf_sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 12529,
+      "git_blob": "d39cd39abbd4c0119feabd79f9706d4e1c4c6354",
+      "raw_sha256": "b5ac11eac6b71178a2977896b5871f135d6fbc096ba429dbcae8a19a1a734d35",
+      "lf_sha256": "b5ac11eac6b71178a2977896b5871f135d6fbc096ba429dbcae8a19a1a734d35"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 13926,
+      "git_blob": "9a8ebd969df6e7d5b137f4363416b3318a5b5926",
+      "raw_sha256": "b38720605f513e42a37cb64ebf843fd27817c6f26dfc87cd327491cdc54ff42d",
+      "lf_sha256": "b38720605f513e42a37cb64ebf843fd27817c6f26dfc87cd327491cdc54ff42d"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 17342,
+      "git_blob": "2cd5e43f3ab391620b4bec7da1a7b847e0580a57",
+      "raw_sha256": "b14131b1c3bd44f4718f7b819159a5728cb6a5ee07453ad3e053e2a654a4cb8f",
+      "lf_sha256": "b14131b1c3bd44f4718f7b819159a5728cb6a5ee07453ad3e053e2a654a4cb8f"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 11661,
+      "git_blob": "80bfa611540de8aab99f91e7d9cc4161e537d3fe",
+      "raw_sha256": "e4e2717d088b20c3cbfc9c7944311a0b0bfdcf75a492335da5c3b0d0c027e898",
+      "lf_sha256": "e4e2717d088b20c3cbfc9c7944311a0b0bfdcf75a492335da5c3b0d0c027e898"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 15509,
+      "git_blob": "602086ba74ba21c1aa72b60c070930d501194604",
+      "raw_sha256": "2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f",
+      "lf_sha256": "2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 18192,
+      "git_blob": "f94baf96001dcbc6db515efb969a4dfb6de8cb75",
+      "raw_sha256": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20",
+      "lf_sha256": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 25128,
+      "git_blob": "881671eb27a0dd2a3b7cf4962ef1082eb8df1beb",
+      "raw_sha256": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d",
+      "lf_sha256": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 5653,
+      "git_blob": "23b463d462c9ea90a520e4be8e6e6aacb3be8d06",
+      "raw_sha256": "c63e0f885c2f09ad8b48b88bf0c9d8da7c5820b56874a942046b5c2aa1012cad",
+      "lf_sha256": "c63e0f885c2f09ad8b48b88bf0c9d8da7c5820b56874a942046b5c2aa1012cad"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 11333,
+      "git_blob": "9325f27481607f6a60916bd1491d21ea2bd62cad",
+      "raw_sha256": "5064642034fac9763202d2424b87cef2f7cc909aaf3a6031b90d247ee44409c3",
+      "lf_sha256": "5064642034fac9763202d2424b87cef2f7cc909aaf3a6031b90d247ee44409c3"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 13682,
+      "git_blob": "042360706789dd76246eef16d3b491caa601e690",
+      "raw_sha256": "0a056eced568ddab730b389842aa5b47ccf554d54b019d052d9e7a30ce51564d",
+      "lf_sha256": "0a056eced568ddab730b389842aa5b47ccf554d54b019d052d9e7a30ce51564d"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 41136,
+      "git_blob": "6811f81726c2ca08c427fb305d5bab055707cde2",
+      "raw_sha256": "4cf29ff1e70953f6d1f8399a65d63ad37031e6a129804ad555442bfb98624234",
+      "lf_sha256": "4cf29ff1e70953f6d1f8399a65d63ad37031e6a129804ad555442bfb98624234"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_paragraph-plan.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 4655,
+      "git_blob": "4731dfae917d7feca1d26726536ceb41cf7453a3",
+      "raw_sha256": "390035351a0f1fbfc3df39ed12841bfff78474fedcdb78adaa21591847a72543",
+      "lf_sha256": "390035351a0f1fbfc3df39ed12841bfff78474fedcdb78adaa21591847a72543"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 12982,
+      "git_blob": "1e46b04be2e3deed94f5c14e4bf054bc42a4be5d",
+      "raw_sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116",
+      "lf_sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 14520,
+      "git_blob": "2f916810929010b50648a3cc568692e753cb43bc",
+      "raw_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+      "lf_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 13132,
+      "git_blob": "74cd17ad2f8113dabebaaaf1916a438002a2af83",
+      "raw_sha256": "0a1d4b31690f1a053b7180136d387df524ff9ae0df355db273ca32443811d083",
+      "lf_sha256": "0a1d4b31690f1a053b7180136d387df524ff9ae0df355db273ca32443811d083"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 10277,
+      "git_blob": "ade19327ddea91a53924072a0e999a5d28f0b461",
+      "raw_sha256": "70669f6ed10a7465aea37f5f2298dd17708f6430a975fe32187135701122529e",
+      "lf_sha256": "70669f6ed10a7465aea37f5f2298dd17708f6430a975fe32187135701122529e"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 17232,
+      "git_blob": "8a6ddd3ebecd0c2fc75bbf2739c7183b386e885f",
+      "raw_sha256": "eb5c7c163099bd0ae7f6be44edf53e885de6ce78e4f37e647408e2c06aba5544",
+      "lf_sha256": "eb5c7c163099bd0ae7f6be44edf53e885de6ce78e4f37e647408e2c06aba5544"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 6817,
+      "git_blob": "b7b7f2d733b066cb727f6924e9aab7a78cc485fe",
+      "raw_sha256": "312ca25c21bf6428ded5162f2d299b8e73da25219fbb914cad88dcb8ca47820a",
+      "lf_sha256": "312ca25c21bf6428ded5162f2d299b8e73da25219fbb914cad88dcb8ca47820a"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-review.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 14018,
+      "git_blob": "ecf16e3bc45f9c4759ba29559318d2ce2ee9eb99",
+      "raw_sha256": "8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943",
+      "lf_sha256": "8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-handoff.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 12695,
+      "git_blob": "4a26ad20c1666b01b78d8103eb342ede8b0798d3",
+      "raw_sha256": "69bdae1f9dd0efaace0a90db57e6ac0f17db627f93fdb333b48dafeb36eebe79",
+      "lf_sha256": "69bdae1f9dd0efaace0a90db57e6ac0f17db627f93fdb333b48dafeb36eebe79"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 62723,
+      "git_blob": "9a870cac615cf32095c9b7a0b129c8b2428a1546",
+      "raw_sha256": "60d6a743681e1361478395a591b7c82e44acf8c4587a93c4cc842b036cf017b1",
+      "lf_sha256": "60d6a743681e1361478395a591b7c82e44acf8c4587a93c4cc842b036cf017b1"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 58913,
+      "git_blob": "976c1ae949a38e9a30c9576873c809a5736859b6",
+      "raw_sha256": "d0781ffb6d2966209c3a160309316ce92ebc0455fa51d4235ccc6840afa58935",
+      "lf_sha256": "d0781ffb6d2966209c3a160309316ce92ebc0455fa51d4235ccc6840afa58935"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-plan.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 56024,
+      "git_blob": "472711f0d4697afcb157875f17811472cdaff467",
+      "raw_sha256": "0870d848b21017fedde86fb8d738bbe6afa21f68f8c1190905a8c0f2e3b8be19",
+      "lf_sha256": "0870d848b21017fedde86fb8d738bbe6afa21f68f8c1190905a8c0f2e3b8be19"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 76461,
+      "git_blob": "a1ebcda2365bb688dc05e8b6f43251c7758d3428",
+      "raw_sha256": "12d81b83f9be50ebdcf3460ce7ad60d2de5a788cb3da8d3a046c1449112922ea",
+      "lf_sha256": "12d81b83f9be50ebdcf3460ce7ad60d2de5a788cb3da8d3a046c1449112922ea"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 13480,
+      "git_blob": "222a40b1a68108d6c5853d65583ce7478371e9ce",
+      "raw_sha256": "e8a07bfe212a6ae817db99fecb93e86812e1d9e9af533b7ef21591bbb9025dc7",
+      "lf_sha256": "e8a07bfe212a6ae817db99fecb93e86812e1d9e9af533b7ef21591bbb9025dc7"
+    },
+    {
+      "repository": "L",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "bytes": 12783,
+      "git_blob": "ffd5250bdafe288ef11af8ae38b6d7dccd02dcf8",
+      "raw_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76",
+      "lf_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76"
+    }
+  ]
+}
