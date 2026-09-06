@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "build-scripts/content/book-2/232",
+    "-p",
+    "test_source.py",
+    "-v"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:40:28.383Z",
+  "finish": "2026-09-06T08:40:30.247Z",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_actual_svg_source_geometry_ink_and_counterexamples (test_source.SourceTests.test_actual_svg_source_geometry_ink_and_counterexamples) ... ok\r\ntest_all_six_market_chains_exact (test_source.SourceTests.test_all_six_market_chains_exact) ... ok\r\ntest_all_supplied_comparison_rows (test_source.SourceTests.test_all_supplied_comparison_rows) ... ok\r\ntest_caption_title_plan_and_asset_roles (test_source.SourceTests.test_caption_title_plan_and_asset_roles) ... ok\r\ntest_complete_frozen_plan_snapshot (test_source.SourceTests.test_complete_frozen_plan_snapshot) ... ok\r\ntest_complete_paper_and_answers (test_source.SourceTests.test_complete_paper_and_answers) ... ok\r\ntest_heading_whitespace_without_semantic_weakening (test_source.SourceTests.test_heading_whitespace_without_semantic_weakening) ... ok\r\ntest_marginal_point_not_next_unit_or_interval (test_source.SourceTests.test_marginal_point_not_next_unit_or_interval) ... ok\r\ntest_mug_and_bonus_transfer (test_source.SourceTests.test_mug_and_bonus_transfer) ... ok\r\ntest_namespace_announcement_is_not_occupied_proof (test_source.SourceTests.test_namespace_announcement_is_not_occupied_proof) ... ok\r\ntest_real_content_negative_counterexamples (test_source.SourceTests.test_real_content_negative_counterexamples) ... ok\r\ntest_retrieval_and_individual_boundaries (test_source.SourceTests.test_retrieval_and_individual_boundaries) ... ok\r\ntest_timing_inventory (test_source.SourceTests.test_timing_inventory) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 13 tests in 1.582s\r\n\r\nOK\r\n",
+  "stdout_base64": "",
+  "stderr_base64": "dGVzdF9hY3R1YWxfc3ZnX3NvdXJjZV9nZW9tZXRyeV9pbmtfYW5kX2NvdW50ZXJleGFtcGxlcyAodGVzdF9zb3VyY2UuU291cmNlVGVzdHMudGVzdF9hY3R1YWxfc3ZnX3NvdXJjZV9nZW9tZXRyeV9pbmtfYW5kX2NvdW50ZXJleGFtcGxlcykgLi4uIG9rDQp0ZXN0X2FsbF9zaXhfbWFya2V0X2NoYWluc19leGFjdCAodGVzdF9zb3VyY2UuU291cmNlVGVzdHMudGVzdF9hbGxfc2l4X21hcmtldF9jaGFpbnNfZXhhY3QpIC4uLiBvaw0KdGVzdF9hbGxfc3VwcGxpZWRfY29tcGFyaXNvbl9yb3dzICh0ZXN0X3NvdXJjZS5Tb3VyY2VUZXN0cy50ZXN0X2FsbF9zdXBwbGllZF9jb21wYXJpc29uX3Jvd3MpIC4uLiBvaw0KdGVzdF9jYXB0aW9uX3RpdGxlX3BsYW5fYW5kX2Fzc2V0X3JvbGVzICh0ZXN0X3NvdXJjZS5Tb3VyY2VUZXN0cy50ZXN0X2NhcHRpb25fdGl0bGVfcGxhbl9hbmRfYXNzZXRfcm9sZXMpIC4uLiBvaw0KdGVzdF9jb21wbGV0ZV9mcm96ZW5fcGxhbl9zbmFwc2hvdCAodGVzdF9zb3VyY2UuU291cmNlVGVzdHMudGVzdF9jb21wbGV0ZV9mcm96ZW5fcGxhbl9zbmFwc2hvdCkgLi4uIG9rDQp0ZXN0X2NvbXBsZXRlX3BhcGVyX2FuZF9hbnN3ZXJzICh0ZXN0X3NvdXJjZS5Tb3VyY2VUZXN0cy50ZXN0X2NvbXBsZXRlX3BhcGVyX2FuZF9hbnN3ZXJzKSAuLi4gb2sNCnRlc3RfaGVhZGluZ193aGl0ZXNwYWNlX3dpdGhvdXRfc2VtYW50aWNfd2Vha2VuaW5nICh0ZXN0X3NvdXJjZS5Tb3VyY2VUZXN0cy50ZXN0X2hlYWRpbmdfd2hpdGVzcGFjZV93aXRob3V0X3NlbWFudGljX3dlYWtlbmluZykgLi4uIG9rDQp0ZXN0X21hcmdpbmFsX3BvaW50X25vdF9uZXh0X3VuaXRfb3JfaW50ZXJ2YWwgKHRlc3Rfc291cmNlLlNvdXJjZVRlc3RzLnRlc3RfbWFyZ2luYWxfcG9pbnRfbm90X25leHRfdW5pdF9vcl9pbnRlcnZhbCkgLi4uIG9rDQp0ZXN0X211Z19hbmRfYm9udXNfdHJhbnNmZXIgKHRlc3Rfc291cmNlLlNvdXJjZVRlc3RzLnRlc3RfbXVnX2FuZF9ib251c190cmFuc2ZlcikgLi4uIG9rDQp0ZXN0X25hbWVzcGFjZV9hbm5vdW5jZW1lbnRfaXNfbm90X29jY3VwaWVkX3Byb29mICh0ZXN0X3NvdXJjZS5Tb3VyY2VUZXN0cy50ZXN0X25hbWVzcGFjZV9hbm5vdW5jZW1lbnRfaXNfbm90X29jY3VwaWVkX3Byb29mKSAuLi4gb2sNCnRlc3RfcmVhbF9jb250ZW50X25lZ2F0aXZlX2NvdW50ZXJleGFtcGxlcyAodGVzdF9zb3VyY2UuU291cmNlVGVzdHMudGVzdF9yZWFsX2NvbnRlbnRfbmVnYXRpdmVfY291bnRlcmV4YW1wbGVzKSAuLi4gb2sNCnRlc3RfcmV0cmlldmFsX2FuZF9pbmRpdmlkdWFsX2JvdW5kYXJpZXMgKHRlc3Rfc291cmNlLlNvdXJjZVRlc3RzLnRlc3RfcmV0cmlldmFsX2FuZF9pbmRpdmlkdWFsX2JvdW5kYXJpZXMpIC4uLiBvaw0KdGVzdF90aW1pbmdfaW52ZW50b3J5ICh0ZXN0X3NvdXJjZS5Tb3VyY2VUZXN0cy50ZXN0X3RpbWluZ19pbnZlbnRvcnkpIC4uLiBvaw0KDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQpSYW4gMTMgdGVzdHMgaW4gMS41ODJzDQoNCk9LDQo="
+}

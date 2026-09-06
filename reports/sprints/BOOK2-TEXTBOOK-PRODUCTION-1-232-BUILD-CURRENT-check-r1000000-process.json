@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/232/check_render.py",
+    "--manifest",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r1000000.json",
+    "--output",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-check-r1000000.json"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:44:40.339Z",
+  "finish": "2026-09-06T08:44:46.212Z",
+  "exit_code": 0,
+  "stdout": "{\"status\": \"PASS\", \"documents\": [{\"kind\": \"paragraaf\", \"pages\": 19}, {\"kind\": \"opgaven\", \"pages\": 11}, {\"kind\": \"antwoorden\", \"pages\": 12}], \"figures\": 14}\r\n",
+  "stderr": "",
+  "stdout_base64": "eyJzdGF0dXMiOiAiUEFTUyIsICJkb2N1bWVudHMiOiBbeyJraW5kIjogInBhcmFncmFhZiIsICJwYWdlcyI6IDE5fSwgeyJraW5kIjogIm9wZ2F2ZW4iLCAicGFnZXMiOiAxMX0sIHsia2luZCI6ICJhbnR3b29yZGVuIiwgInBhZ2VzIjogMTJ9XSwgImZpZ3VyZXMiOiAxNH0NCg==",
+  "stderr_base64": ""
+}

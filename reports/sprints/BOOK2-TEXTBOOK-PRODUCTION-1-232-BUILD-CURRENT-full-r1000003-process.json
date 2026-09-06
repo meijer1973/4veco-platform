@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/b2_232.py",
+    "--source-commit",
+    "e0b47cab498102cd990e66318f5111602c32a6b6",
+    "--revision",
+    "r1000003",
+    "--reservation",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-reservation-r1000003.json"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:57:17.581Z",
+  "finish": "2026-09-06T08:58:24.670Z",
+  "exit_code": 0,
+  "stdout": "{\"manifest\": \"C:\\\\wt\\\\book2-232-build-current-20260906\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r1000003.json\", \"revision\": \"r1000003\", \"route\": \"full\", \"native_files\": 41, \"pdfs\": [\"c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6\", \"73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0\", \"c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b\"]}\r\n",
+  "stderr": "",
+  "stdout_base64": "eyJtYW5pZmVzdCI6ICJDOlxcd3RcXGJvb2syLTIzMi1idWlsZC1jdXJyZW50LTIwMjYwOTA2XFw0dmVjby1wbGF0Zm9ybVxccmVwb3J0c1xcc3ByaW50c1xcQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzMi1CVUlMRC1DVVJSRU5ULW5hdGl2ZS1yMTAwMDAwMy5qc29uIiwgInJldmlzaW9uIjogInIxMDAwMDAzIiwgInJvdXRlIjogImZ1bGwiLCAibmF0aXZlX2ZpbGVzIjogNDEsICJwZGZzIjogWyJjODJhOTQ1NGU0YWQ3MTVmYjY2M2U2ZThlZWI1NThhNjhlMjUwODcxNWFjOGZlZWE5ZjNhMjM2NzEyNzBmMWE2IiwgIjczZWE5NDc3ZDYzZWMyNmNjYzQ2NzM3YzQwMThiM2MzYzk4NmViNDUzNDdiYjM2YWViNGRkNTJhNDc2ODIyYTAiLCAiYzQ3MTc5ZTRiYTA0YjY1ZWMxYjUyOWZiZTQ1ODNmNGQyMmQ5YWRiNzUyOGYxZmU2ODFjYzY1YzQxNTAzN2QyYiJdfQ0K",
+  "stderr_base64": ""
+}

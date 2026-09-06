@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/232/verify_rebuild.py",
+    "reserve",
+    "--source-commit",
+    "e0b47cab498102cd990e66318f5111602c32a6b6"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T09:06:24.299Z",
+  "finish": "2026-09-06T09:07:32.936Z",
+  "exit_code": 0,
+  "stdout": "{\"reservation\": \"C:\\\\wt\\\\book2-232-build-current-20260906\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-reservation-r1000005.json\", \"revision\": \"r1000005\", \"maximum\": 1000004, \"registered_worktrees\": 228}\r\n",
+  "stderr": "",
+  "stdout_base64": "eyJyZXNlcnZhdGlvbiI6ICJDOlxcd3RcXGJvb2syLTIzMi1idWlsZC1jdXJyZW50LTIwMjYwOTA2XFw0dmVjby1wbGF0Zm9ybVxccmVwb3J0c1xcc3ByaW50c1xcQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzMi1CVUlMRC1DVVJSRU5ULXJlc2VydmF0aW9uLXIxMDAwMDA1Lmpzb24iLCAicmV2aXNpb24iOiAicjEwMDAwMDUiLCAibWF4aW11bSI6IDEwMDAwMDQsICJyZWdpc3RlcmVkX3dvcmt0cmVlcyI6IDIyOH0NCg==",
+  "stderr_base64": ""
+}

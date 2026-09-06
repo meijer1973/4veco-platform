@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-namespace-probes.py"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:44:19.842Z",
+  "finish": "2026-09-06T08:44:20.096Z",
+  "exit_code": 0,
+  "stdout": "{\"status\": \"PASS\", \"cases\": 18}\r\n",
+  "stderr": "",
+  "stdout_base64": "eyJzdGF0dXMiOiAiUEFTUyIsICJjYXNlcyI6IDE4fQ0K",
+  "stderr_base64": ""
+}

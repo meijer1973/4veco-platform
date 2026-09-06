@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/232/verify_rebuild.py",
+    "grayscale",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r1000003.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected",
+    "--output",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected.json"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:59:13.718Z",
+  "finish": "2026-09-06T08:59:27.836Z",
+  "exit_code": 0,
+  "stdout": "Fresh grayscale generated; no personal inspection asserted\r\n",
+  "stderr": "",
+  "stdout_base64": "RnJlc2ggZ3JheXNjYWxlIGdlbmVyYXRlZDsgbm8gcGVyc29uYWwgaW5zcGVjdGlvbiBhc3NlcnRlZA0K",
+  "stderr_base64": ""
+}

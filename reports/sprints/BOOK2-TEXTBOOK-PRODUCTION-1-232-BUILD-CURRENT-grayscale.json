@@ -1,0 +1,623 @@
+{
+  "manifest": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r1000001.json",
+  "sha256": "9415f26462def839607e9e91fe796f34a092adad475a324c2de3f85c819a75b1",
+  "items": [
+    {
+      "kind": "paragraaf",
+      "page": 1,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-001.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "9bd113032cb9842f96290dfde292cd65fb1301bc53f09fe183bda1b65604bc38",
+      "raw_sha256": "1e76c016c842ecfe63265ad9c462ae1ced7d87ce9f50c86f2ebf9630b8c97e40"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 2,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-002.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "d0d51e047638e949011de9dc3280004ea07bb4e94c9074fde6472ec778ec4680",
+      "raw_sha256": "f0f2f4539912d5d4fb66597a2777b0ed7689999fb29ada7ebe8554899914665d"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 3,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-003.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "03dcc8db24a78febd6c5389423bdb6126439c905040c6e0edbd0653000dcb789",
+      "raw_sha256": "7f9b1f2c850c5e398c897279d62addaeaab31404e86008ad65755c110e682bf8"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 4,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-004.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "28965d9dcf4250ff06fa64d87721d9fa944cc84893e3621f6e739cb3f885dd4d",
+      "raw_sha256": "79be1e73c70ddb0538d50a5c9c38a489e8d5824e66deae5271742b3476047835"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 5,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-005.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "647245121e8fa95b95f740c66fc006b781fe14e73e7135b8d749d4543a58c215",
+      "raw_sha256": "21ba1df108435e7e119c83d91f09b931f212778c0c3e07aafa1faf2e2bdb3082"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 6,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-006.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "1f8637751f623fe504f58db7691c64afd3f5c792ab83e912965dec4b3ee776b5",
+      "raw_sha256": "6682bd939579a552093e60691218cff5993c397114d5fc2a48e193db129c9099"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 7,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-007.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "aabe2f089b44704478e04f7ef30cfcec9abcc81b9185b56612117cfaaa570e74",
+      "raw_sha256": "6f959980c5c09bc42520121f7b35774fb738708c231a9fd3e4ffaf6bec03f158"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 8,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-008.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "d6be0cc3bec26ce8b7f2dbf0df1ab821db7fcb96590149da561493885625645b",
+      "raw_sha256": "8ba3af9ecba1d93aea7ba7b7a542818683d1bcdcdab412477fe11d13d78a0d01"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 9,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-009.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "f12bb5eff036683bd225786d2af98f4fa7c5c5db12a4a5ed501df9963df0ca9c",
+      "raw_sha256": "99ec3a5a3c34c057808707b52cef8e870b50918de7afbd46e043b5ff20bd7f7f"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 10,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-010.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "c83479a2186ec9ff1f10c51e75d26e82394acd27db303b7372eae7f399556bee",
+      "raw_sha256": "db83a87b6ea9a8aa547f782b1724f500a93f6c79608fe02845365bd2d5cf66cc"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 11,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-011.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "ceaf972ba30efdadcef3d3134d3e66e27edbcb6252e90f49c03fc7a542b6b02c",
+      "raw_sha256": "61af8a4deef2b92684e13697e0aa0744d7572e8b63075831c15ac5ae7e799b7e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 12,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-012.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "f2675d110d9e7ddf692294f236c82b594c2b38b9da5df8cd8a843a32ff3f94f2",
+      "raw_sha256": "777e1820dbb083a558b9ba52c51c4feaa6bf2944da92a91d5a5a9147b853aec6"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 13,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-013.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "773a3e5eec53c4c2fdac0dc6660ec14a6d50f334a78e776a0c30773370cc35e0",
+      "raw_sha256": "02df488ee4b3385dc466c0d9fc4112a078c8422787118a23fa062a5bb4a70eda"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 14,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-014.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "fcbd5ac69b5e1c7365897bd69a20d297341864efdc7288ee0b16c40261aaa72b",
+      "raw_sha256": "f7a0a98963d6c992032cb0b7b3d5ead1fcb4a3964631cb951712be2d4bc33a2d"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 15,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-015.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "3a7f88aa628a6ba88d98303e2a7b8270cb4000092b5a3859790c427b06b63ebd",
+      "raw_sha256": "efcaf691ba090c31e184fec91fa36043330c0e2d2650dce01ab439bfa951fd4f"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 16,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-016.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "f2c938d47388eb462605b1bc48c3e07f4dfaa46af2a58ad93593909285fa22a5",
+      "raw_sha256": "505573111be61070f5e0df9fcba2c31034a347b05fe4bfe31d563c00de860073"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 17,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-017.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "dffba9252182f50fa7f3b18014f02fe4b6b917d5ec92e36e9d154ae72fd72c1a",
+      "raw_sha256": "167056e28e4e0ea18fa51a9abf0326470f14faf30bf3352b14c9189a0047a296"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 18,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-018.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "029fc7950913c26a099c27793ed87b5428c3dacc66fe0f377b44fce53752ff29",
+      "raw_sha256": "244f669ba727bc9d4a2721bd88571fc7d9f6a54662339b281646e1159172a997"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 19,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\paragraaf\\page-019.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "c38d16c52342869444a9a99c1c254abd0762f7483c5f0911a887e9b44a922abd",
+      "raw_sha256": "1ce0bbf09e0dd74e47aed85dc47d81fb00ec0f446eb51ec60cec78451ce81bca"
+    },
+    {
+      "kind": "opgaven",
+      "page": 1,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\opgaven\\page-001.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "e4573760debc78448e35e183e74012d23eac407aa03ba74f352d70a9119b9d50",
+      "raw_sha256": "59bd79a67b726d47bf972f9fc517b011105bf514b1a4193bd98a707df5c5cbfa"
+    },
+    {
+      "kind": "opgaven",
+      "page": 2,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\opgaven\\page-002.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "167abbda42bdc6db8f3ed2bbc8f2c43f7a5e554b094ae550430b40e102502db9",
+      "raw_sha256": "bec331246b6537a45f3fe84e056458edc66a4b284bbea000ed1b0c4f8340a1ef"
+    },
+    {
+      "kind": "opgaven",
+      "page": 3,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\opgaven\\page-003.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "768dfbac64ca95ec4fff23d76985839b7d6b7fa01ec2161f36ab237e1afc75a5",
+      "raw_sha256": "66edb06cf519fa7799c090264427f3901aba59a87d79a3c5911955511e08287a"
+    },
+    {
+      "kind": "opgaven",
+      "page": 4,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\opgaven\\page-004.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "a12dd82312c58814a4502b57e24e7cff81abf80beb522e1895c2badaf4b31827",
+      "raw_sha256": "476c375777e9d1280a2996dd838e1c61ee41ac235951fd24c29667d34a969f42"
+    },
+    {
+      "kind": "opgaven",
+      "page": 5,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\opgaven\\page-005.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "39baf57f82dd40577c69d0a113cc2e6559b06d3917d1c4dbdfe0e95bc5852a0c",
+      "raw_sha256": "e9c78019f64e91e36bce3b01ed0a43b98d85a1446988ec0554e97e9f02b25a3b"
+    },
+    {
+      "kind": "opgaven",
+      "page": 6,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\opgaven\\page-006.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "5295483c2095bab71a58696518b086faa2ce783ef88335934a9a7962df1dd997",
+      "raw_sha256": "df135df21ee637323daf6570318782b754315ecc63a483069dc41cde9399216e"
+    },
+    {
+      "kind": "opgaven",
+      "page": 7,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\opgaven\\page-007.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "81f1dddd91d0573a1d687c2b46154ee0a6259853d8d04a35a797357254cfeb96",
+      "raw_sha256": "e79619371a53aaaa65d708be1633610c9fa33ab21ec5d613a589a84275d7e3e7"
+    },
+    {
+      "kind": "opgaven",
+      "page": 8,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\opgaven\\page-008.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "3a4504a38f61913edccf45d7f41a269d3033ade13fa266494865a82666d3e2b2",
+      "raw_sha256": "7751f38bf7768e2280523db570dad45d1fc55c0d043b9f57828d89a1a05d31c3"
+    },
+    {
+      "kind": "opgaven",
+      "page": 9,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\opgaven\\page-009.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "a9b64cd64eb1b0d926b6ead8121ac99a0bd8d6ed73dfc5349838b187752ef9bf",
+      "raw_sha256": "6e88ea3e10cb7e7450746ceffcd027522000aebee6fa7fc460bf0b52de1649ef"
+    },
+    {
+      "kind": "opgaven",
+      "page": 10,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\opgaven\\page-010.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "9a5166ff9617f4602c0d395012666e94f2f195077b44a1b6b863816517546e3f",
+      "raw_sha256": "0e29d3134160232887ddad77b043c8c6df913727d6479c2915c10e7605ffe3a6"
+    },
+    {
+      "kind": "opgaven",
+      "page": 11,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\opgaven\\page-011.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "006319dea246aea51dcaa0a02106dc0237d41898eb472451b9d97fbac1fbf1a6",
+      "raw_sha256": "3a75757a1683c267849ac273967bef8ef897767d1b5fac776c8ab42af8567441"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 1,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\antwoorden\\page-001.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "1b4a48bb6c0c19feb35813c57d528fef614ec77f6205967541747b4f8fff470a",
+      "raw_sha256": "0e6864174a24a2d0411eea624c057d34189320ba2a3a1db64a17cd3eba2c760e"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 2,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\antwoorden\\page-002.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "f4d40188a193d6e6c7d28183f6ef1376b9cb08dfb2f2b58ed4bf144c37f2aec8",
+      "raw_sha256": "18fe266e9f39117c8134be23b5ae4bc5a6d355018ecd21f230f463e59d4b307c"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 3,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\antwoorden\\page-003.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "9d5fd9442c374e7e21f7c6c65e2b2ca18ede7f23bcc4da77f94e311330cb9d94",
+      "raw_sha256": "2f6678018f3af7a2f21167195a1456b4c0a84d3ff50e5b0eca43aac9e536873a"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 4,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\antwoorden\\page-004.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "13c185db852c41a2c1dacd3acaef0676e391e90c056a1052f192ce26a0f0a034",
+      "raw_sha256": "d103236f0229d70e6e0c6bc0bb5210515fef89fc3b8cf6414de67259d078df83"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 5,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\antwoorden\\page-005.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "d9c990aab2ade29468f3145480b349ce10b70d9402fa4a1ec057e96c0138d810",
+      "raw_sha256": "052e5f1145de48f314b1eeb95cc3c82134b277b1689be4dac63db79abec897b4"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 6,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\antwoorden\\page-006.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "36a72eb0c26f2211aaf9ec4321050e8fd5a3e3fcf23d58219797c11883b57c83",
+      "raw_sha256": "a0007f6bb95823224b55d4f4bf20f1d0552032bb94277fa8128436177fa0b8a6"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 7,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\antwoorden\\page-007.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "102d81c9e6999fc84ef49e8027ee374a9dd89186c1ae049a4e40370e046912c8",
+      "raw_sha256": "4f08e6c2596b8e7d6cfbe16ab64a7df56950cd249f229bff50790cdfc5b59f46"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 8,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\antwoorden\\page-008.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "6132c428cbcfbd0650f05e022945be27af7bcf266b7498ad5e1123e63e784e21",
+      "raw_sha256": "8365c5962c5d51ff2dcb776ed877ede8abb92331b35cfa9efe0c7c9876866e43"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 9,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\antwoorden\\page-009.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "212a44f59d6ed261c961983b2e8a2b81dc8aad3f2084befff60a2fb08702ce41",
+      "raw_sha256": "f22ee3f754f37a4a9d91efb97af15da3d27f9b2c5f7b776b5058b8d549561b9a"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 10,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\antwoorden\\page-010.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "0e67a88d1305872e8fe61914509b3ec511bd108d7a75553844126f19f5791356",
+      "raw_sha256": "f7de24a79c82557c2ad1c55a8e5914c5165c771218897e5f90cf302bf08a2cdb"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 11,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\antwoorden\\page-011.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "7bb1518ca75cb0ae399a2af6c7f29276b4a0d0ac9239c283fb54a58002ff2ffb",
+      "raw_sha256": "35062b3eb74b9aeb4d1714d52ab213f4d989c0b31e817a3735576b99a19419b6"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 12,
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\antwoorden\\page-012.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "rgb_sha256": "2f1c6f0b8adf2e8457be7e047cce20b2c22cf891562e910c2d1cf9fdb70fe882",
+      "raw_sha256": "c7fd7dfc0b87bbbe2d70e91a29873d6aa4ef0cdbc7369a7fff55ca2285e1346f"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_fig_1",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_fig_1.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "d63579622fb72e6402be8488814aa94fbd3ac783ed2107d7475ecd89b3e7deba",
+      "raw_sha256": "94a7eb1850cd2da6c54627c21c4724922f0eb17e214632acfa9a45ed00c3016e"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_fig_2",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_fig_2.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "a429f4506620512dcae40d00ab649a21b297a4020c16d83e2af921d0afd1b7b7",
+      "raw_sha256": "cec1354fec5837ce633d169f3e62be5440f69dbda4d8457d5f983e902b9083cf"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_fig_3",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_fig_3.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "42cf2552716fd7b910b2c357bf1ef31f66b9dbf6020a6321a048585349e691ca",
+      "raw_sha256": "593681382e15f1abfcd95ac07e0022f286b3f54ebaa681b5eacf8905f123a854"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_fig_4",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_fig_4.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "f3fe15a23441e0a517dc3fa640876cd48c51b41e2bc0fb97d648ed93f98f3f44",
+      "raw_sha256": "ecb1a9944668b6e3e37f565de9385f62d6a2732b159a6b7138ab1dd967308707"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_fig_5",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_fig_5.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "34e114bae6b45cf024a7fa6cd66f5c3e5f36fb333d94d52d2a94d94a8994b4e2",
+      "raw_sha256": "c7aa7fdc8af0ba69800ace0e583a22e55b7946f2809e0907033d1de53c33fc8c"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_fig_6",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_fig_6.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "ed54d0c3f969c9b2100bf5a75a98558dd6f0fc34c54d10889a15370b9542602b",
+      "raw_sha256": "49b49a51de007aa5d04f9f68b655395ead14125fd0579a129bff8685b07921b3"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_we_1",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_we_1.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "538f468d0f1b75c004903a433b01c8f39845c680074d54655c8467936e5df123",
+      "raw_sha256": "92fa02cf7525a9a030ba2e2e89e1e7aae8eb1893206ee1df280c14f384f080b5"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_ex_1",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_ex_1.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "f084c42fae3c9bee7f2950c7b6043d4835609adba6cda1a02fdbcfd9b8a29159",
+      "raw_sha256": "f23e9c1948f284ac722fd027bec0f8e91a329276876336f727602a467aebcc03"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_ex_2",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_ex_2.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "c8f9320a29c444e832983a3349c3a7dedc0bd6a77baff5e8d44fdb285b14c1bd",
+      "raw_sha256": "ad2e66a3bfb809144ab1eeb706167824bdfb6611da7c045bb04ebef865112266"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_ex_3",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_ex_3.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "b7825db0b876be7f0f06e7b4b8f9a534e73b8dea949039f48984435e5cfcc06a",
+      "raw_sha256": "b0bd531d10f038f1c3c34cd22c9733a7dda35add64bfe7f65c577b151395bd8a"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_ex_4",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_ex_4.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "b2f96363918489b517d09612aa3c774aaa878ba9d26f80b361a97dea8f84204d",
+      "raw_sha256": "235542713376f5e4db5ea59b459c0bd4d8072e6b46b8e86aef918f4272508093"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_ex_5",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_ex_5.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "3d36469221763ff4a7c285c075b3c853743e93a8eebc3cd5b5039ad10ba5fb5d",
+      "raw_sha256": "2b74f11d52ba8d0dc324a4a67bd462fcfedfad09afe37e3aa1bc500f6f44e182"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_ex_6",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_ex_6.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "976ee3096f243456c6426521b0a6b482757a5ed7c31dc9fa86cefdc926d9f617",
+      "raw_sha256": "8a2f9367e7430ea144268914a35086c2bad319b52ee48373a9e438dd4bf71c11"
+    },
+    {
+      "kind": "native-figure",
+      "stem": "2.3.2_ex_7",
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale\\figures\\2.3.2_ex_7.png",
+      "size": [
+        2400,
+        1800
+      ],
+      "rgb_sha256": "998241c086d9432c4e169aa2bfc88bafa3f4e4a0d493f74cec5de64f111df3f2",
+      "raw_sha256": "0e47a7cb2fb066f9123b3a1e6dcd2ed6a9b8ef2e120b301528b2c2f24c18d792"
+    }
+  ],
+  "personal_inspection": "NOT_PERFORMED_BY_SCRIPT"
+}

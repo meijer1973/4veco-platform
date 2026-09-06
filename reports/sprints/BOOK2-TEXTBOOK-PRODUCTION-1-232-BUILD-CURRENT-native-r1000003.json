@@ -1,0 +1,370 @@
+{
+  "paragraph": "2.3.2",
+  "lesson_root": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen",
+  "paragraph_folder": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus",
+  "route": "full",
+  "revision": "r1000003",
+  "source_commit": "e0b47cab498102cd990e66318f5111602c32a6b6",
+  "source_files": [
+    {
+      "path": "build-scripts/content/book-2/b2_232.py",
+      "sha256": "2d65fe30097c3f2b0e46c692239284c0ac430291154c97d8319d84b70bab9bdf"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/theory.md",
+      "sha256": "202f6fa7ade01c5ee2992ed3befd90e980b03c001436b440b6f39189b2476e31"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/exercises.md",
+      "sha256": "309fe29449944f95d4522b72e0c38c7e5badada3378b1420113d73bd38bc7fd4"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/answers.md",
+      "sha256": "d1cef7e04625ecbcfa1f1c71c3d4d8db8a81d4baa3bde78e39dcb15fb30020c7"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/target-answers.md",
+      "sha256": "f5de2724cddf01e21bc987ffffccb3cfd4f7043534160958162dae75b4d93fc5"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/assets.js",
+      "sha256": "1c392eec294d34087aa67ee697b84d8f758bcdd4f21390ff487b19db5bdf4d5c"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/gate.py",
+      "sha256": "d0efc0ff9965c8ba042291ce1c84d325dec98b1cafeb24c0988f713b28cbf8a5"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/test_source.py",
+      "sha256": "36864062c938d7aea3e15df2a1a2c94ab2cd96a65f11bb03743c239e807f9acd"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/test_inputs.py",
+      "sha256": "f6fa3eec5a61db1dbf363a3ed85871edf8364556650abaac1170497a56c6f29d"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/check_render.py",
+      "sha256": "428e782dff20ce6566ad260847d253e98bdb247c82f3ff13dadc69ea60402b77"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/verify_rebuild.py",
+      "sha256": "ba99bfa9cacd02089b985fc0f4995f58e1ed34976b63d96af90489efd65109f0"
+    }
+  ],
+  "root_release_sha256": "9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18",
+  "plan_sha256": "d0781ffb6d2966209c3a160309316ce92ebc0455fa51d4235ccc6840afa58935",
+  "target_record_sha256": "54ce45a0cb044532717fe0cbbb6cfeae75e76b2656861bfea0d3821afc1843ce",
+  "documents": [
+    {
+      "source_md": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "source_sha256": "fe99e8136960505d30e041614ee301c3f8405efab38aff77a8fa89441a3238cb",
+      "source_html": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\2.3.2 Producentensurplus en totaal surplus – paragraaf.html",
+      "html_sha256": "23df621785b8b7ccd7978bf0ad6e12d30c3149ddfa7bae52085a4725460c1f47",
+      "source_pdf": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf",
+      "pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_fig_1.svg",
+          "sha256": "d2151650a6d9e3e398905541c5790d0e94883b0caf13052ffcbab3d7e3802210"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_fig_1.png",
+          "sha256": "f2170f43fe66f39e9b1ceb3cba7a3a1d873485ca659ef95275656ddd4eca6122"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_fig_2.svg",
+          "sha256": "01dd8a0f951fb89417861d46305c4713e6aca1458167f8babb76abdc3b68bc9d"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_fig_2.png",
+          "sha256": "5f8260b018da92b6fd70a3ded181b4fc355d1c0d1d4d1cad5fb2755f8ecc7374"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_fig_3.svg",
+          "sha256": "c1ddd42956fdb6e847d184d960d912a4fbad84693e23132a52df940513ef17f5"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_fig_3.png",
+          "sha256": "44fec3ae94e63d537a0a2e88ca411cd7e69971c45f9fa3a6e11e2ccd39d1e9f5"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_fig_4.svg",
+          "sha256": "c59855698d121d92379bcad4ce188ff85b05c85fd0a0cd76c852165eb6e510fe"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_fig_4.png",
+          "sha256": "46a1967cdad10599b7ace29b74088a07163165ba3061b5ba3d5f99ff099ccf9b"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_fig_5.svg",
+          "sha256": "c5016f6ea3a8ffbbc5f5a9958d404b5735897bad2032143f0744543e633b1f4c"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_fig_5.png",
+          "sha256": "20c323ef432da6cf6c15712ae1196565e1261d912341543779b1387a45fa8d13"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_fig_6.svg",
+          "sha256": "d795ae969b3862b7525868f28548d84a9f001bc067b7264bb11f507eac8a90b9"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_fig_6.png",
+          "sha256": "6e79bfb5994b459c6caf7f026ea9bbe01ac572f62d86eaf87e6e970406abee81"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_we_1.svg",
+          "sha256": "90cff2741102473ea2e52939a693a4c5f0c41697d2d66ff29ec06050d34f254a"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_we_1.png",
+          "sha256": "3912262e6968b8e46a3b11a8f02330e41923788cacbe80642b44f6948b898fc0"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_1.svg",
+          "sha256": "58af7a70027cb560765904b058a5573a5c8d3319835e64668bcd0c970482e187"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_1.png",
+          "sha256": "a99c48b363fbc2ee79cba72f07aa16f6e48bb93df935b60bdbd33b20e7a35b8f"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_2.svg",
+          "sha256": "26f2a05a8eac7028e7bdae6c381a5acab12d6e86fefb04cefcd567650d4c6f1a"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_2.png",
+          "sha256": "b02ee2a49b9e3246f9e66c5b29511d1b812f38c6e0cabe3575b978b150dcc512"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_3.svg",
+          "sha256": "ce135244463f92f1be5d8d29b9b56517c65325351b442b165bb45d67bc268984"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_3.png",
+          "sha256": "aef0ae29582b0f985f4d107b808db28815861733b7db36bff0971585fb231dfb"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_4.svg",
+          "sha256": "38b48a0b49a09931919aa897d6ba0d94b6cfd169dcb12e1a20f8297c44fb9468"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_4.png",
+          "sha256": "e40b4b9f8c8fd2cc2f00b1c87cb9ec78e4be1c020d02a8378e5b917f6c8b701e"
+        }
+      ],
+      "zip": {
+        "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\2.3.2 Producentensurplus en totaal surplus – paragraaf.zip",
+        "sha256": "a96fbf2b8cd544d317d9fc39977a7c98b8b44d4cd1d455fd35c158e9f8cb4d9b",
+        "members": 25
+      },
+      "proof_directory": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\232-paragraaf-c82a9454e4ad-r1000003"
+    },
+    {
+      "source_md": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\2.3.2 Producentensurplus en totaal surplus – opgaven.md",
+      "source_sha256": "586cf0cbb39b5c809c3caf80d195fc060599a50071be94e36f953cd896a7f7c2",
+      "source_html": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\2.3.2 Producentensurplus en totaal surplus – opgaven.html",
+      "html_sha256": "efdb8b99bd3faa9a44323e41efe2e67cd3840e4ad6c8cd37a30f3887236cc545",
+      "source_pdf": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\2.3.2 Producentensurplus en totaal surplus – opgaven.pdf",
+      "pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_we_1.svg",
+          "sha256": "90cff2741102473ea2e52939a693a4c5f0c41697d2d66ff29ec06050d34f254a"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_we_1.png",
+          "sha256": "3912262e6968b8e46a3b11a8f02330e41923788cacbe80642b44f6948b898fc0"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_1.svg",
+          "sha256": "58af7a70027cb560765904b058a5573a5c8d3319835e64668bcd0c970482e187"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_1.png",
+          "sha256": "a99c48b363fbc2ee79cba72f07aa16f6e48bb93df935b60bdbd33b20e7a35b8f"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_2.svg",
+          "sha256": "26f2a05a8eac7028e7bdae6c381a5acab12d6e86fefb04cefcd567650d4c6f1a"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_2.png",
+          "sha256": "b02ee2a49b9e3246f9e66c5b29511d1b812f38c6e0cabe3575b978b150dcc512"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_3.svg",
+          "sha256": "ce135244463f92f1be5d8d29b9b56517c65325351b442b165bb45d67bc268984"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_3.png",
+          "sha256": "aef0ae29582b0f985f4d107b808db28815861733b7db36bff0971585fb231dfb"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_4.svg",
+          "sha256": "38b48a0b49a09931919aa897d6ba0d94b6cfd169dcb12e1a20f8297c44fb9468"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_4.png",
+          "sha256": "e40b4b9f8c8fd2cc2f00b1c87cb9ec78e4be1c020d02a8378e5b917f6c8b701e"
+        }
+      ],
+      "zip": {
+        "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\2.3.2 Producentensurplus en totaal surplus – opgaven.zip",
+        "sha256": "cb517e4cf56fcb226beed602a2a4d0bf75ee92e8ee3e349030fc9e7c65c5e72e",
+        "members": 13
+      },
+      "proof_directory": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\232-opgaven-73ea9477d63e-r1000003"
+    },
+    {
+      "source_md": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\2.3.2 Producentensurplus en totaal surplus – antwoorden.md",
+      "source_sha256": "e97afda6782c7124af51fc76538bf47bb358a5ac91027ece65edb53d76529921",
+      "source_html": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\2.3.2 Producentensurplus en totaal surplus – antwoorden.html",
+      "html_sha256": "700d0128a3fb7a846400be5c7f275fde0106cb7a15025bd213f41e05960677b9",
+      "source_pdf": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf",
+      "pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_we_1.svg",
+          "sha256": "90cff2741102473ea2e52939a693a4c5f0c41697d2d66ff29ec06050d34f254a"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_we_1.png",
+          "sha256": "3912262e6968b8e46a3b11a8f02330e41923788cacbe80642b44f6948b898fc0"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_1.svg",
+          "sha256": "58af7a70027cb560765904b058a5573a5c8d3319835e64668bcd0c970482e187"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_1.png",
+          "sha256": "a99c48b363fbc2ee79cba72f07aa16f6e48bb93df935b60bdbd33b20e7a35b8f"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_5.svg",
+          "sha256": "3955fbecae47a67cba17060c5dc4d2c7cb02c8d14a4b457b66f0d8ca2d194177"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_5.png",
+          "sha256": "7e82d045cde97df46da316838dc1280b372ca7ca71e5d3bc36df5259165537a8"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_6.svg",
+          "sha256": "74a7fca31dfc757bc6a499b69da805703559dd5088906026aab853cb8b8fbe6e"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_6.png",
+          "sha256": "6198968c9c55d558c2bedf6f37a686f99bd8bc3e05bf1fc868bb35ac474ce12d"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_7.svg",
+          "sha256": "06f05d86529ff5bb17a08499431e5e522aad4cd597a8c3dd785071d605e6f2a3"
+        },
+        {
+          "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\_assets\\2.3.2_ex_7.png",
+          "sha256": "63164683e3f26defa8e5ec934e5a7e74411234cea160d16425318f5df508de7b"
+        }
+      ],
+      "zip": {
+        "path": "C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\2.3.2 Producentensurplus en totaal surplus – antwoorden.zip",
+        "sha256": "41f30f8166e60dfb217faf292d952ce084fb47c4ce4d68b15d228ee57c4e64b1",
+        "members": 13
+      },
+      "proof_directory": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\232-antwoorden-c47179e4ba04-r1000003"
+    }
+  ],
+  "packet": {
+    "2.3.2 Producentensurplus en totaal surplus – paragraaf.md": "fe99e8136960505d30e041614ee301c3f8405efab38aff77a8fa89441a3238cb",
+    "2.3.2 Producentensurplus en totaal surplus – paragraaf.html": "23df621785b8b7ccd7978bf0ad6e12d30c3149ddfa7bae52085a4725460c1f47",
+    "2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+    "2.3.2 Producentensurplus en totaal surplus – paragraaf.zip": "a96fbf2b8cd544d317d9fc39977a7c98b8b44d4cd1d455fd35c158e9f8cb4d9b",
+    "2.3.2 Producentensurplus en totaal surplus – opgaven.md": "586cf0cbb39b5c809c3caf80d195fc060599a50071be94e36f953cd896a7f7c2",
+    "2.3.2 Producentensurplus en totaal surplus – opgaven.html": "efdb8b99bd3faa9a44323e41efe2e67cd3840e4ad6c8cd37a30f3887236cc545",
+    "2.3.2 Producentensurplus en totaal surplus – opgaven.pdf": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+    "2.3.2 Producentensurplus en totaal surplus – opgaven.zip": "cb517e4cf56fcb226beed602a2a4d0bf75ee92e8ee3e349030fc9e7c65c5e72e",
+    "2.3.2 Producentensurplus en totaal surplus – antwoorden.md": "e97afda6782c7124af51fc76538bf47bb358a5ac91027ece65edb53d76529921",
+    "2.3.2 Producentensurplus en totaal surplus – antwoorden.html": "700d0128a3fb7a846400be5c7f275fde0106cb7a15025bd213f41e05960677b9",
+    "2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+    "2.3.2 Producentensurplus en totaal surplus – antwoorden.zip": "41f30f8166e60dfb217faf292d952ce084fb47c4ce4d68b15d228ee57c4e64b1",
+    "_assets/2.3.2_fig_1.svg": "d2151650a6d9e3e398905541c5790d0e94883b0caf13052ffcbab3d7e3802210",
+    "_assets/2.3.2_fig_1.png": "f2170f43fe66f39e9b1ceb3cba7a3a1d873485ca659ef95275656ddd4eca6122",
+    "_assets/2.3.2_fig_2.svg": "01dd8a0f951fb89417861d46305c4713e6aca1458167f8babb76abdc3b68bc9d",
+    "_assets/2.3.2_fig_2.png": "5f8260b018da92b6fd70a3ded181b4fc355d1c0d1d4d1cad5fb2755f8ecc7374",
+    "_assets/2.3.2_fig_3.svg": "c1ddd42956fdb6e847d184d960d912a4fbad84693e23132a52df940513ef17f5",
+    "_assets/2.3.2_fig_3.png": "44fec3ae94e63d537a0a2e88ca411cd7e69971c45f9fa3a6e11e2ccd39d1e9f5",
+    "_assets/2.3.2_fig_4.svg": "c59855698d121d92379bcad4ce188ff85b05c85fd0a0cd76c852165eb6e510fe",
+    "_assets/2.3.2_fig_4.png": "46a1967cdad10599b7ace29b74088a07163165ba3061b5ba3d5f99ff099ccf9b",
+    "_assets/2.3.2_fig_5.svg": "c5016f6ea3a8ffbbc5f5a9958d404b5735897bad2032143f0744543e633b1f4c",
+    "_assets/2.3.2_fig_5.png": "20c323ef432da6cf6c15712ae1196565e1261d912341543779b1387a45fa8d13",
+    "_assets/2.3.2_fig_6.svg": "d795ae969b3862b7525868f28548d84a9f001bc067b7264bb11f507eac8a90b9",
+    "_assets/2.3.2_fig_6.png": "6e79bfb5994b459c6caf7f026ea9bbe01ac572f62d86eaf87e6e970406abee81",
+    "_assets/2.3.2_we_1.svg": "90cff2741102473ea2e52939a693a4c5f0c41697d2d66ff29ec06050d34f254a",
+    "_assets/2.3.2_we_1.png": "3912262e6968b8e46a3b11a8f02330e41923788cacbe80642b44f6948b898fc0",
+    "_assets/2.3.2_ex_1.svg": "58af7a70027cb560765904b058a5573a5c8d3319835e64668bcd0c970482e187",
+    "_assets/2.3.2_ex_1.png": "a99c48b363fbc2ee79cba72f07aa16f6e48bb93df935b60bdbd33b20e7a35b8f",
+    "_assets/2.3.2_ex_2.svg": "26f2a05a8eac7028e7bdae6c381a5acab12d6e86fefb04cefcd567650d4c6f1a",
+    "_assets/2.3.2_ex_2.png": "b02ee2a49b9e3246f9e66c5b29511d1b812f38c6e0cabe3575b978b150dcc512",
+    "_assets/2.3.2_ex_3.svg": "ce135244463f92f1be5d8d29b9b56517c65325351b442b165bb45d67bc268984",
+    "_assets/2.3.2_ex_3.png": "aef0ae29582b0f985f4d107b808db28815861733b7db36bff0971585fb231dfb",
+    "_assets/2.3.2_ex_4.svg": "38b48a0b49a09931919aa897d6ba0d94b6cfd169dcb12e1a20f8297c44fb9468",
+    "_assets/2.3.2_ex_4.png": "e40b4b9f8c8fd2cc2f00b1c87cb9ec78e4be1c020d02a8378e5b917f6c8b701e",
+    "_assets/2.3.2_ex_5.svg": "3955fbecae47a67cba17060c5dc4d2c7cb02c8d14a4b457b66f0d8ca2d194177",
+    "_assets/2.3.2_ex_5.png": "7e82d045cde97df46da316838dc1280b372ca7ca71e5d3bc36df5259165537a8",
+    "_assets/2.3.2_ex_6.svg": "74a7fca31dfc757bc6a499b69da805703559dd5088906026aab853cb8b8fbe6e",
+    "_assets/2.3.2_ex_6.png": "6198968c9c55d558c2bedf6f37a686f99bd8bc3e05bf1fc868bb35ac474ce12d",
+    "_assets/2.3.2_ex_7.svg": "06f05d86529ff5bb17a08499431e5e522aad4cd597a8c3dd785071d605e6f2a3",
+    "_assets/2.3.2_ex_7.png": "63164683e3f26defa8e5ec934e5a7e74411234cea160d16425318f5df508de7b",
+    "build_pdf.py": "b277d0ff4b9aa8bb86c14a6102d339449ae9b786a74f11e55fdfd1fcb0be5aec"
+  },
+  "preflight": [
+    {
+      "argv": [
+        "node",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-gate.cjs",
+        "232"
+      ],
+      "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "{\"status\":\"PASS\",\"paragraph\":\"2.3.2\",\"release_sha256\":\"9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18\",\"candidate_sha256\":\"113d3321a3b859d582a4febf6ff71cd259111d6c5d233047113b1455f6bcc5dc\",\"inputs\":49,\"native_effects\":0,\"permission\":\"Gated Part A authoring; current approved action/durable authority and all future review/acceptance gates still mandatory\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "node",
+        "build-scripts/workflows/check-book-outline-currentness.js",
+        "--require-approved",
+        "--action",
+        "paragraph_production",
+        "--paragraph",
+        "2.3.2"
+      ],
+      "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.3.2\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "node",
+        "build-scripts/workflows/check-book2-target-authority-remediation.js",
+        "--durable"
+      ],
+      "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "Book 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n",
+      "stderr": ""
+    }
+  ],
+  "direct_child": null,
+  "generation_status": "PENDING",
+  "production_ready": false,
+  "root_validation": "PENDING",
+  "root_acceptance": "PENDING",
+  "handoff": "PENDING",
+  "timing": {
+    "core": 54,
+    "support": 74,
+    "bonus": 83,
+    "all": 88,
+    "observed": false
+  }
+}
