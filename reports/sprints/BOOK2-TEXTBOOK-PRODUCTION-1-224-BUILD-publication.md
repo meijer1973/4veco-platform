@@ -83,3 +83,17 @@ Next gate: independent complete paragraph review → a distinct specialist QC
 → root acceptance/handoff. The author stops here; classroom timing stays
 UNOBSERVED and the isolated failed-cleanup temporary fixture is disclosed in
 the correction log and result report.
+
+## Native index diagnostic after the scope commit
+
+The first exact-platform-ref index attempt failed before writing any index:
+the existing child-process default stdout buffer cannot contain this branch's
+complete ls-tree output. The commit exists. A read-only large-buffer diagnostic
+records the actual exception, output byte length/hash and file count in the
+separate index-diagnostic JSON; no shared tool or buffer setting is patched.
+The freshness check immediately afterwards accurately reported stale old
+indexes, not success. Use the existing explicit platform SOURCE_REF=HEAD path
+after committing these diagnostic records; its source_commit still binds the
+actual immutable pre-index HEAD. Verify the full resulting file set against
+actual tracked Git paths. Lesson SOURCE_REF remains the exact commit above;
+all six paired environment values remain explicit on every invocation.
