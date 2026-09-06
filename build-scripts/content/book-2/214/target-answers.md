@@ -94,4 +94,3 @@ niet voorbij 700 en voorspel niets voorbij het laatste bronpunt 1.000.
 
 Totaal: **2 + 2 + 2 + 4 + 2 + 2 = 14 punten**. Een zelfgekozen intervaltabel
 mag als werkvorm, maar is geen extra verplichte vraag of afzonderlijk punt.
-

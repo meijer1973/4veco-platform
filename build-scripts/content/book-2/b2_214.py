@@ -27,7 +27,7 @@ BASE_PLATFORM = "bc49af3353bf0ba3a061b2ef3e5ddec3c3a72abb"
 RELEASE_COMMIT = "5870a7a4c2d5dc9b170f385b976b0a49953b9be6"
 CANDIDATE_COMMIT = "9c6d8a7c1ee98b91a67f6d560beb8534f5dbde56"
 REVIEW_COMMIT = "8fc63fe32f030371195f022971a2d5d42ddedeb8"
-SOURCE_COMMIT = "39ca053f7d789aa9c440ceba41c52db4c6c10a42"
+SOURCE_COMMIT = "SOURCE_COMMIT_PENDING_214"
 SOURCE_SENTINEL = "SOURCE_COMMIT_" + "PENDING_214"
 DEPS_SHA256 = "98b3fbae167dc01ff590c60b194be869c9f0cb7c83efccb0007a5f3556cf8f6b"
 NATIVE_LESSONS_COMMIT = "PENDING_FIRST_NATIVE_LESSONS_COMMIT"
@@ -373,7 +373,11 @@ def main(argv=None):
     parser.add_argument("--proof-suffix",required=True)
     parser.add_argument("--route",choices=["full","thin"],default="full")
     args = parser.parse_args(argv)
-    result = build(args.lessons_root,args.proof_root,args.proof_suffix,route=args.route)
+    try:
+        result = build(args.lessons_root,args.proof_root,args.proof_suffix,route=args.route)
+    except Exception:
+        print(json.dumps({"failed_route":args.route,"suffix":args.proof_suffix,"processes":EVENTS},ensure_ascii=False),file=sys.stderr)
+        raise
     print(json.dumps({"status":"NATIVE_CAPTURE_COMPLETE_NOT_ACCEPTED","route":result["route"],
                       "native_files":len(result["native"]),"pages":[len(p["rendered_pages"]) for p in result["proofs"]]}))
 

@@ -185,4 +185,3 @@ Gebruik de lichtservice uit bron L2. Een leerling deelt bij Q = 45 het
 kostenverschil tussen 40 en 45 montages door 45 en noemt dit zowel GTK als MK.
 Bereken de juiste GTK bij Q = 45 en de juiste MK over 40–45. Leg met de
 teller, noemer en eenheid uit waarom het verschillende grootheden zijn.
-

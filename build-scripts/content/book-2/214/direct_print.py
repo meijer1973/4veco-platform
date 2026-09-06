@@ -37,7 +37,11 @@ def main():
     parser.add_argument("--proof-root",type=Path,required=True)
     parser.add_argument("--proof-suffix",required=True)
     args = parser.parse_args()
-    result = direct(args.lessons_root,args.proof_root,args.proof_suffix)
+    try:
+        result = direct(args.lessons_root,args.proof_root,args.proof_suffix)
+    except Exception:
+        print(json.dumps({"failed_route":"direct","suffix":args.proof_suffix,"processes":b.EVENTS},ensure_ascii=False),file=sys.stderr)
+        raise
     print(json.dumps({"status":"NATIVE_CAPTURE_COMPLETE_NOT_ACCEPTED","route":"direct","native_files":len(result["native"])}))
 
 
