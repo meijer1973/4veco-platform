@@ -1,11 +1,14 @@
 """Actual accepted C22 prepare only: no lesson, native or proof output writes."""
 import hashlib
 import json
+import os
 import sys
 from pathlib import Path
 
 P=Path(__file__).resolve().parents[2]
 L=P.parent/'4veco-lessen'
+# Data-only long-path spelling; Python command, __file__, imports and cwd stay ordinary.
+if os.name=='nt':L=Path('\\\\?\\'+str(L))
 sys.path.insert(0,str(P/'build-scripts/content/book-2'))
 import chapter_pipeline as chapter
 
