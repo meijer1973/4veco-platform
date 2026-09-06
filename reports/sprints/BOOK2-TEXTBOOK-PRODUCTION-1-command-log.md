@@ -16796,3 +16796,88 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-scope.js 71e285f990ebb6140f6e07a2b4ac232ba898ff9f
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:28:16.541Z`
+- finished_at: `2026-09-06T02:28:20.411Z`
+- duration_ms: `3870`
+- exit_code: `0`
+- stdout_sha256: `b7b0c63df2912b4acb0cfb386480cfbde61dff25192e552421eec7caf9cc6cdc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "head": "71e285f990ebb6140f6e07a2b4ac232ba898ff9f",
+  "owned_paths": 16,
+  "scopes": [
+    {
+      "label": "incremental-platform",
+      "ok": false,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 16,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 82,
+        "generated_indexes": 6,
+        "review_evidence": 4217,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "incremental-lessons",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 1,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 205,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 5,
+        "unknown": 0
+      }
+    }
+  ],
+  "whitespace": {
+    "incremental_default_exit": 0,
+    "incremental_cr_at_eol_exit": 0,
+    "historical": [],
+    "other_incremental_default_exit": 0,
+    "lessons_default_exit": 0,
+    "complete_default_exit": 2,
+    "actual_diagnostics_preserved": true
+  }
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
