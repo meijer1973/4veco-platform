@@ -38,7 +38,25 @@ if(white.status!==0) {
   assert(paths.length>0);
   for(const name of paths)assert(imported.has(name)&&name.endsWith('-command-log.md'),name);
 }
-assert.equal(crlf.status,0,'Any non-CR whitespace must be separately investigated');
+// This exact imported log preserves a prior whitespace diagnostic ending in a
+// space. Retain both failing whole-diff results, bind its original Git bytes,
+// and require a strict PASS for every other path; do not format audit history.
+const historicalLog='reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-command-log.md';
+assert.equal(crlf.status,2);
+assert.equal(crlf.stdout.replace(/\r\n/g,'\n'),historicalLog+':519: trailing whitespace.\n+'+historicalLog+':62: \n');
+const historicalBinding=baseline.imports.find(row=>row.path===historicalLog);
+assert.equal(historicalBinding.commit,'04969d33875ab2265b5101647e3584985ae91b87');
+assert.equal(historicalBinding.git_blob,'83ca631a13ffea2ced1a6b1adf35f8a9dcc3d866');
+const historicalBytes=cp.execFileSync('git',['show',historicalBinding.commit+':'+historicalLog],{cwd:root,maxBuffer:32*1024*1024});
+assert(fs.readFileSync(path.join(root,historicalLog)).equals(historicalBytes));
+assert.equal(crypto.createHash('sha256').update(historicalBytes).digest('hex'),'0b96e1b92b9e5e8f0913efa57487373723247f4363ac52b97e80bb73b30f04b1');
+const historicalWhitespacePaths=[...new Set([...white.stdout.matchAll(/^(.+?):\d+: (?:trailing whitespace|new blank line at EOF)\.?$/gm)].map(m=>m[1]))];
+for(const name of historicalWhitespacePaths) {
+  const binding=baseline.imports.find(row=>row.path===name);
+  const original=cp.execFileSync('git',['show',binding.commit+':'+name],{cwd:root,maxBuffer:32*1024*1024});
+  assert(fs.readFileSync(path.join(root,name)).equals(original));
+}
+run(['git','diff','--check',base,head,'--','.',...historicalWhitespacePaths.map(name=>':(exclude)'+name)]);
 const manifest=fs.readFileSync(path.join(__dirname,'BOOK2-TEXTBOOK-PRODUCTION-1-output-manifest.md'),'utf8');
 const book=path.join(lessons,'Boek 2 - Kosten, opbrengsten, elasticiteit en surplus');
 const rows=[...manifest.matchAll(/^\| (\d+) \| ([^|]+) \| ([^|]+) \| ([ACLP]) \| `([^`]+)` \|$/gm)];
@@ -59,7 +77,7 @@ for(const row of rows) {
 }
 assert.deepEqual(counts,{A:9,C:12,L:8,P:12});
 const output={pass:true,actual_payload:head,base,lessons:lesson,strict_owned_paths:changed,native_scopes:native,
-  lessons_incremental:'UNCHANGED',whitespace:{default_exit:white.status,scoped_cr_at_eol_exit:crlf.status,default_diagnostics_preserved:true},
+  lessons_incremental:'UNCHANGED',whitespace:{default_exit:white.status,scoped_cr_at_eol_exit:crlf.status,default_diagnostics_preserved:true,historicalWhitespacePaths,historicalBinding,all_other_paths_exit:0,note:'Whole-diff whitespace FAIL remains; source and all nonhistorical paths PASS. Initial root zero-exit assumption failed before evidence write; actual imported log line519 is a retained prior diagnostic with a final space, exact original Git bytes. No global setting or native scope waiver.'},
   inventory_counts:counts,inventory,commands};
 fs.writeFileSync(path.join(__dirname,prefix+'-scope.json'),JSON.stringify(output,null,2)+'\n',{flag:'wx'});
 console.log(JSON.stringify({pass:true,head,owned_paths:changed.length,scopes:native.map(n=>({label:n.label,counts:Object.fromEntries(Object.entries(n.result.categories).map(([k,v])=>[k,v.length]))})),whitespace:output.whitespace,inventory:counts}));

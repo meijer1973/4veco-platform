@@ -15658,3 +15658,72 @@ final-integrity.json: SHA256 bca1c73c571f835a889e78239fc6eef030e8c4a9ac86f081056
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-scope.js 62e19b6ec0782d2bda8025102a4ca66dca136d41
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T00:39:25.515Z`
+- finished_at: `2026-09-06T00:39:26.901Z`
+- duration_ms: `1386`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `9bf4354e299d4f6a5c8b1c2474a9e5f0e81aa6638f5800c53372abe9f4ad73eb`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+node:assert:152
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: Any non-CR whitespace must be separately investigated
+
+2 !== 0
+
+    at Object.<anonymous> (C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-scope.js:41:8)
+    at Module._compile (node:internal/modules/cjs/loader:1804:14)
+    at Object..js (node:internal/modules/cjs/loader:1936:10)
+    at Module.load (node:internal/modules/cjs/loader:1525:32)
+    at Module._load (node:internal/modules/cjs/loader:1327:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 2,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.13.1
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-scope.js 62e19b6ec0782d2bda8025102a4ca66dca136d41
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T00:50:35.328Z`
+- finished_at: `2026-09-06T00:50:37.474Z`
+- duration_ms: `2146`
+- exit_code: `0`
+- stdout_sha256: `d1435674c1b5a78ec3bb496680e87079d3da5efecd670a333647ce1925b741fd`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"pass":true,"head":"62e19b6ec0782d2bda8025102a4ca66dca136d41","owned_paths":439,"scopes":[{"label":"incremental-platform","counts":{"partA_textbook":0,"partB_companion":0,"shared_platform":3,"generated_indexes":0,"review_evidence":436,"unknown":0}},{"label":"complete-platform","counts":{"partA_textbook":0,"partB_companion":0,"shared_platform":80,"generated_indexes":6,"review_evidence":3759,"unknown":0}},{"label":"complete-lessons","counts":{"partA_textbook":202,"partB_companion":0,"shared_platform":0,"generated_indexes":0,"review_evidence":4,"unknown":0}}],"whitespace":{"default_exit":2,"scoped_cr_at_eol_exit":2,"default_diagnostics_preserved":true,"historicalWhitespacePaths":["reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-command-log.md","reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-command-log.md"],"historicalBinding":{"path":"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-command-log.md","commit":"04969d33875ab2265b5101647e3584985ae91b87","git_blob":"83ca631a13ffea2ced1a6b1adf35f8a9dcc3d866","sha256":"0b96e1b92b9e5e8f0913efa57487373723247f4363ac52b97e80bb73b30f04b1"},"all_other_paths_exit":0,"note":"Whole-diff whitespace FAIL remains; source and all nonhistorical paths PASS. Initial root zero-exit assumption failed before evidence write; actual imported log line519 is a retained prior diagnostic with a final space, exact original Git bytes. No global setting or native scope waiver."},"inventory":{"A":9,"C":12,"L":8,"P":12}}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
