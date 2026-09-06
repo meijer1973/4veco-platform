@@ -159,4 +159,17 @@ class SourceTests(unittest.TestCase):
         self.assertTrue(b.gate.revision_occupied('r40',scan(b.ROOT.parent/'foreign','reports/sprints/232-reservations.json')))
         self.assertTrue(b.gate.revision_occupied('r40',scan(b.ROOT,'reports/sprints/232-native-r40.json')))
 
+    def test_actual_nested_empty_and_large_registered_history(self):
+        import tempfile,subprocess
+        with tempfile.TemporaryDirectory(prefix='book2-232-history-probe-',dir='C:/wt') as name:
+            root=Path(name);subprocess.run(['git','init','--quiet',str(root)],check=True)
+            folder=root/'reports/sprints/232-nested';folder.mkdir(parents=True)
+            (folder/'empty-r44').mkdir()
+            (folder/'large-history.json').write_bytes(b' '* (16*1024*1024+1)+b' r45\n')
+            (folder/'lookalike.txt').write_bytes(b'wordr9999999 suffix r46letters\n')
+            actual=b.gate.global_scan(root)
+            self.assertEqual(actual['maximum'],45)
+            self.assertTrue(any(44 in h['revisions'] and 'empty-r44' in h['path'] for h in actual['hits']))
+            self.assertTrue(any(45 in h['revisions'] and 'large-history' in h['path'] for h in actual['hits']))
+
 if __name__=='__main__':unittest.main()
