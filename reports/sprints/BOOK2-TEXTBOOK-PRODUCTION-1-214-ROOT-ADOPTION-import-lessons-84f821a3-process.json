@@ -1,0 +1,30 @@
+{
+  "command": "git",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "84f821a3cde2e525c54593d7f36ea86b2c53dff9"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+  "controller_commit": "173438bb70d21ea5f9feb1e489730fba3de8c326",
+  "start": "2026-09-06T09:12:46.452Z",
+  "end": "2026-09-06T09:12:46.554Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "173438bb70d21ea5f9feb1e489730fba3de8c326",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "9546548c4dbd271516366df946f3eb0a9eaa1e93",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 3bc9e81] Author reviewed-plan paragraph 214 native exercises and answers\n Date: Sun Sep 6 10:16:46 2026 +0200\n 15 files changed, 1936 insertions(+), 2481 deletions(-)\n create mode 100644 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.png\n create mode 100644 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.svg\n create mode 100644 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.png\n create mode 100644 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.svg\n create mode 100644 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.png\n create mode 100644 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.svg\n create mode 100644 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.png\n create mode 100644 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.svg\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDNiYzllODFdIEF1dGhvciByZXZpZXdlZC1wbGFuIHBhcmFncmFwaCAyMTQgbmF0aXZlIGV4ZXJjaXNlcyBhbmQgYW5zd2VycwogRGF0ZTogU3VuIFNlcCA2IDEwOjE2OjQ2IDIwMjYgKzAyMDAKIDE1IGZpbGVzIGNoYW5nZWQsIDE5MzYgaW5zZXJ0aW9ucygrKSwgMjQ4MSBkZWxldGlvbnMoLSkKIGNyZWF0ZSBtb2RlIDEwMDY0NCBCb2VrIDIgLSBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1cy8yLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuNCBHZW1lbmdkZSBvcGdhdmVuL19hc3NldHMvMi4xLjRfZXhfMS5wbmcKIGNyZWF0ZSBtb2RlIDEwMDY0NCBCb2VrIDIgLSBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1cy8yLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuNCBHZW1lbmdkZSBvcGdhdmVuL19hc3NldHMvMi4xLjRfZXhfMS5zdmcKIGNyZWF0ZSBtb2RlIDEwMDY0NCBCb2VrIDIgLSBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1cy8yLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuNCBHZW1lbmdkZSBvcGdhdmVuL19hc3NldHMvMi4xLjRfZXhfMi5wbmcKIGNyZWF0ZSBtb2RlIDEwMDY0NCBCb2VrIDIgLSBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1cy8yLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuNCBHZW1lbmdkZSBvcGdhdmVuL19hc3NldHMvMi4xLjRfZXhfMi5zdmcKIGNyZWF0ZSBtb2RlIDEwMDY0NCBCb2VrIDIgLSBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1cy8yLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuNCBHZW1lbmdkZSBvcGdhdmVuL19hc3NldHMvMi4xLjRfZXhfMy5wbmcKIGNyZWF0ZSBtb2RlIDEwMDY0NCBCb2VrIDIgLSBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1cy8yLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuNCBHZW1lbmdkZSBvcGdhdmVuL19hc3NldHMvMi4xLjRfZXhfMy5zdmcKIGNyZWF0ZSBtb2RlIDEwMDY0NCBCb2VrIDIgLSBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1cy8yLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuNCBHZW1lbmdkZSBvcGdhdmVuL19hc3NldHMvMi4xLjRfZXhfNC5wbmcKIGNyZWF0ZSBtb2RlIDEwMDY0NCBCb2VrIDIgLSBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1cy8yLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuNCBHZW1lbmdkZSBvcGdhdmVuL19hc3NldHMvMi4xLjRfZXhfNC5zdmcK",
+  "stderr_base64": ""
+}

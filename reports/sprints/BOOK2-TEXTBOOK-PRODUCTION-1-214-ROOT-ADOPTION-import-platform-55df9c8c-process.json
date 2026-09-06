@@ -1,0 +1,30 @@
+{
+  "command": "git",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "55df9c8cee82d86eed570c27172fd0c86fba931d"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "5d73e76966973f54689a446b3ccad37ae16fc28c",
+  "start": "2026-09-06T09:12:41.299Z",
+  "end": "2026-09-06T09:12:41.472Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "86de2eaeab956e578d1dad564291e79e23a42a67",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "9546548c4dbd271516366df946f3eb0a9eaa1e93",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 5d73e769] Record reviewed guarded orchestration boundary for 214 direct print\n Date: Sun Sep 6 09:27:16 2026 +0200\n 1 file changed, 26 insertions(+)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDVkNzNlNzY5XSBSZWNvcmQgcmV2aWV3ZWQgZ3VhcmRlZCBvcmNoZXN0cmF0aW9uIGJvdW5kYXJ5IGZvciAyMTQgZGlyZWN0IHByaW50CiBEYXRlOiBTdW4gU2VwIDYgMDk6Mjc6MTYgMjAyNiArMDIwMAogMSBmaWxlIGNoYW5nZWQsIDI2IGluc2VydGlvbnMoKykK",
+  "stderr_base64": ""
+}

@@ -1,0 +1,30 @@
+{
+  "command": "git",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "39ca053f7d789aa9c440ceba41c52db4c6c10a42"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "ed828b838582862fa1166613565bfccfdb78c1c6",
+  "start": "2026-09-06T09:12:41.606Z",
+  "end": "2026-09-06T09:12:41.810Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "5d73e76966973f54689a446b3ccad37ae16fc28c",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "9546548c4dbd271516366df946f3eb0a9eaa1e93",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 ed828b83] Author complete governed paragraph 214 source and immutable baseline probes\n Date: Sun Sep 6 09:48:06 2026 +0200\n 22 files changed, 121118 insertions(+)\n create mode 100644 build-scripts/content/book-2/214/answers.md\n create mode 100644 build-scripts/content/book-2/214/check_render.py\n create mode 100644 build-scripts/content/book-2/214/dependency-pins.json\n create mode 100644 build-scripts/content/book-2/214/direct_print.py\n create mode 100644 build-scripts/content/book-2/214/exercises.md\n create mode 100644 build-scripts/content/book-2/214/figures.py\n create mode 100644 build-scripts/content/book-2/214/raster.cjs\n create mode 100644 build-scripts/content/book-2/214/target-answers.md\n create mode 100644 build-scripts/content/book-2/214/test_source.py\n create mode 100644 build-scripts/content/book-2/b2_214.py\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-actual-runtime-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-baseline.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-bundle-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-durable-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-ink-probes-r1-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-production-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-release-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-runtime-correction.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-source-probes-r1-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-source-probes-r2-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-structural-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-tools.cjs\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGVkODI4YjgzXSBBdXRob3IgY29tcGxldGUgZ292ZXJuZWQgcGFyYWdyYXBoIDIxNCBzb3VyY2UgYW5kIGltbXV0YWJsZSBiYXNlbGluZSBwcm9iZXMKIERhdGU6IFN1biBTZXAgNiAwOTo0ODowNiAyMDI2ICswMjAwCiAyMiBmaWxlcyBjaGFuZ2VkLCAxMjExMTggaW5zZXJ0aW9ucygrKQogY3JlYXRlIG1vZGUgMTAwNjQ0IGJ1aWxkLXNjcmlwdHMvY29udGVudC9ib29rLTIvMjE0L2Fuc3dlcnMubWQKIGNyZWF0ZSBtb2RlIDEwMDY0NCBidWlsZC1zY3JpcHRzL2NvbnRlbnQvYm9vay0yLzIxNC9jaGVja19yZW5kZXIucHkKIGNyZWF0ZSBtb2RlIDEwMDY0NCBidWlsZC1zY3JpcHRzL2NvbnRlbnQvYm9vay0yLzIxNC9kZXBlbmRlbmN5LXBpbnMuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IGJ1aWxkLXNjcmlwdHMvY29udGVudC9ib29rLTIvMjE0L2RpcmVjdF9wcmludC5weQogY3JlYXRlIG1vZGUgMTAwNjQ0IGJ1aWxkLXNjcmlwdHMvY29udGVudC9ib29rLTIvMjE0L2V4ZXJjaXNlcy5tZAogY3JlYXRlIG1vZGUgMTAwNjQ0IGJ1aWxkLXNjcmlwdHMvY29udGVudC9ib29rLTIvMjE0L2ZpZ3VyZXMucHkKIGNyZWF0ZSBtb2RlIDEwMDY0NCBidWlsZC1zY3JpcHRzL2NvbnRlbnQvYm9vay0yLzIxNC9yYXN0ZXIuY2pzCiBjcmVhdGUgbW9kZSAxMDA2NDQgYnVpbGQtc2NyaXB0cy9jb250ZW50L2Jvb2stMi8yMTQvdGFyZ2V0LWFuc3dlcnMubWQKIGNyZWF0ZSBtb2RlIDEwMDY0NCBidWlsZC1zY3JpcHRzL2NvbnRlbnQvYm9vay0yLzIxNC90ZXN0X3NvdXJjZS5weQogY3JlYXRlIG1vZGUgMTAwNjQ0IGJ1aWxkLXNjcmlwdHMvY29udGVudC9ib29rLTIvYjJfMjE0LnB5CiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTQtQlVJTEQtQ1VSUkVOVC1hY3R1YWwtcnVudGltZS1wcm9jZXNzLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIxNC1CVUlMRC1DVVJSRU5ULWJhc2VsaW5lLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIxNC1CVUlMRC1DVVJSRU5ULWJ1bmRsZS1wcm9jZXNzLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIxNC1CVUlMRC1DVVJSRU5ULWR1cmFibGUtcHJvY2Vzcy5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTQtQlVJTEQtQ1VSUkVOVC1pbmstcHJvYmVzLXIxLXByb2Nlc3MuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjE0LUJVSUxELUNVUlJFTlQtcHJvZHVjdGlvbi1wcm9jZXNzLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIxNC1CVUlMRC1DVVJSRU5ULXJlbGVhc2UtcHJvY2Vzcy5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTQtQlVJTEQtQ1VSUkVOVC1ydW50aW1lLWNvcnJlY3Rpb24uanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjE0LUJVSUxELUNVUlJFTlQtc291cmNlLXByb2Jlcy1yMS1wcm9jZXNzLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIxNC1CVUlMRC1DVVJSRU5ULXNvdXJjZS1wcm9iZXMtcjItcHJvY2Vzcy5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTQtQlVJTEQtQ1VSUkVOVC1zdHJ1Y3R1cmFsLXByb2Nlc3MuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjE0LUJVSUxELUNVUlJFTlQtdG9vbHMuY2pzCg==",
+  "stderr_base64": ""
+}

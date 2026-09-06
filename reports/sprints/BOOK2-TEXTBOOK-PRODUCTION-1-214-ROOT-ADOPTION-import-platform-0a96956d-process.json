@@ -1,0 +1,30 @@
+{
+  "command": "git",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "0a96956dcc4d912923f6082cd608be81fddf944d"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "ce72f3fe5c4ae51330c197b46c1dcd1721316b25",
+  "start": "2026-09-06T09:12:43.297Z",
+  "end": "2026-09-06T09:12:43.511Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "36dac5633ff9887d15a7776bf33e790075cb3236",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "9546548c4dbd271516366df946f3eb0a9eaa1e93",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 ce72f3fe] Bind glyph-clear paragraph 214 source epoch\n Date: Sun Sep 6 10:00:54 2026 +0200\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGNlNzJmM2ZlXSBCaW5kIGdseXBoLWNsZWFyIHBhcmFncmFwaCAyMTQgc291cmNlIGVwb2NoCiBEYXRlOiBTdW4gU2VwIDYgMTA6MDA6NTQgMjAyNiArMDIwMAogMSBmaWxlIGNoYW5nZWQsIDEgaW5zZXJ0aW9uKCspLCAxIGRlbGV0aW9uKC0pCg==",
+  "stderr_base64": ""
+}

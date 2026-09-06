@@ -1,0 +1,30 @@
+{
+  "command": "git",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "71287955762a7b1635ca3cbb14a315bac241349e"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "86de2eaeab956e578d1dad564291e79e23a42a67",
+  "start": "2026-09-06T09:12:41.000Z",
+  "end": "2026-09-06T09:12:41.179Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "24a5c9f174abc670abeb9254014abab1714ee10c",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "9546548c4dbd271516366df946f3eb0a9eaa1e93",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 86de2eae] Plan governed paragraph 214 native production and pre-effect checks\n Date: Sun Sep 6 09:19:31 2026 +0200\n 1 file changed, 161 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDg2ZGUyZWFlXSBQbGFuIGdvdmVybmVkIHBhcmFncmFwaCAyMTQgbmF0aXZlIHByb2R1Y3Rpb24gYW5kIHByZS1lZmZlY3QgY2hlY2tzCiBEYXRlOiBTdW4gU2VwIDYgMDk6MTk6MzEgMjAyNiArMDIwMAogMSBmaWxlIGNoYW5nZWQsIDE2MSBpbnNlcnRpb25zKCspCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTQtQlVJTEQtQ1VSUkVOVC1wbGFuLm1kCg==",
+  "stderr_base64": ""
+}
