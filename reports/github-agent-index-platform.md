@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T07:42:29.278Z
+Generated: 2026-09-06T08:13:26.544Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `21429b764eae786b68288b8a461dd0e38c713cfc`
-Files indexed: 15149
-Scope: committed tree files from `git ls-tree -r --name-only 21429b764eae786b68288b8a461dd0e38c713cfc`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source commit: `ce59e7256f1d191f0338506f2551806c21cdb767`
+Files indexed: 15172
+Scope: committed tree files from `git ls-tree -r --name-only ce59e7256f1d191f0338506f2551806c21cdb767`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 804
+Count: 806
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -222,6 +222,8 @@ Count: 804
 - build-scripts/content/book-2/213/theory.md
 - build-scripts/content/book-2/213/verify_alt_delta.py
 - build-scripts/content/book-2/213/verify_rebuild.py
+- build-scripts/content/book-2/22/front.css
+- build-scripts/content/book-2/22/front.html
 - build-scripts/content/book-2/221/answers.md
 - build-scripts/content/book-2/221/check_render.py
 - build-scripts/content/book-2/221/exercises.md
@@ -977,7 +979,7 @@ Count: 25
 
 ## validators
 
-Count: 757
+Count: 758
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1544,6 +1546,7 @@ Count: 757
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/publication-lessons-claim-check-corrected.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/publication-platform-claim-check-corrected.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-check-r1.cjs
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-ALT-render-check-r8.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-render-check-r7.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check-r6.json
@@ -2774,7 +2777,7 @@ Count: 1030
 
 ## reports
 
-Count: 12353
+Count: 12374
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -9832,6 +9835,27 @@ Count: 12353
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-scope.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-work-order.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-chapter-planning-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-check-r1.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-checks.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-finalize.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-layout-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-layout-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-layout.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-prepublication.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-scope-own-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-scope-own-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-scope-whole-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-scope-whole-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-structural-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-decision-package.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-plan-review.md
