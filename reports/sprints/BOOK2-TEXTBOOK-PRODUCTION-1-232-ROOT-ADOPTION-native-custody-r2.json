@@ -1,0 +1,4478 @@
+{
+  "status": "PASS",
+  "actor": "codex-root",
+  "role": "read_only_candidate_adoption_not_acceptance",
+  "source_commit": "abe79fa532c8701d646fb19f129ad892004fb821",
+  "source": [
+    {
+      "path": "build-scripts/content/book-2/b2_232.py",
+      "sha256": "940b624faa3df1b2af72f05aba41fcf7749e7c67096573feed424735aeaad8c8"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/theory.md",
+      "sha256": "202f6fa7ade01c5ee2992ed3befd90e980b03c001436b440b6f39189b2476e31"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/exercises.md",
+      "sha256": "309fe29449944f95d4522b72e0c38c7e5badada3378b1420113d73bd38bc7fd4"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/answers.md",
+      "sha256": "d1cef7e04625ecbcfa1f1c71c3d4d8db8a81d4baa3bde78e39dcb15fb30020c7"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/target-answers.md",
+      "sha256": "f5de2724cddf01e21bc987ffffccb3cfd4f7043534160958162dae75b4d93fc5"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/assets.js",
+      "sha256": "1c392eec294d34087aa67ee697b84d8f758bcdd4f21390ff487b19db5bdf4d5c"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/gate.py",
+      "sha256": "b5fbb58fb816313e140e54f03e808144fce507b12730f0f7d0a57e1a6aef49b2"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/test_source.py",
+      "sha256": "36864062c938d7aea3e15df2a1a2c94ab2cd96a65f11bb03743c239e807f9acd"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/test_inputs.py",
+      "sha256": "5a1b6c7263441b93ca3c13316ba57c799e426d15271aefa17f2db1c3f3aebc87"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/check_render.py",
+      "sha256": "004533ba997945f23ec1985049e6aed0df47f378e9b293ddd926e2e0bc314a24"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/verify_rebuild.py",
+      "sha256": "0bfabfadfe048f5aa26e579e48d8b2f8eaf69a69a60fc9bf3b368a828a141bd6"
+    }
+  ],
+  "inputs": 49,
+  "native_files": 41,
+  "packet": {
+    "2.3.2 Producentensurplus en totaal surplus – paragraaf.md": "fe99e8136960505d30e041614ee301c3f8405efab38aff77a8fa89441a3238cb",
+    "2.3.2 Producentensurplus en totaal surplus – paragraaf.html": "23df621785b8b7ccd7978bf0ad6e12d30c3149ddfa7bae52085a4725460c1f47",
+    "2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+    "2.3.2 Producentensurplus en totaal surplus – paragraaf.zip": "a96fbf2b8cd544d317d9fc39977a7c98b8b44d4cd1d455fd35c158e9f8cb4d9b",
+    "2.3.2 Producentensurplus en totaal surplus – opgaven.md": "586cf0cbb39b5c809c3caf80d195fc060599a50071be94e36f953cd896a7f7c2",
+    "2.3.2 Producentensurplus en totaal surplus – opgaven.html": "efdb8b99bd3faa9a44323e41efe2e67cd3840e4ad6c8cd37a30f3887236cc545",
+    "2.3.2 Producentensurplus en totaal surplus – opgaven.pdf": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+    "2.3.2 Producentensurplus en totaal surplus – opgaven.zip": "cb517e4cf56fcb226beed602a2a4d0bf75ee92e8ee3e349030fc9e7c65c5e72e",
+    "2.3.2 Producentensurplus en totaal surplus – antwoorden.md": "e97afda6782c7124af51fc76538bf47bb358a5ac91027ece65edb53d76529921",
+    "2.3.2 Producentensurplus en totaal surplus – antwoorden.html": "700d0128a3fb7a846400be5c7f275fde0106cb7a15025bd213f41e05960677b9",
+    "2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+    "2.3.2 Producentensurplus en totaal surplus – antwoorden.zip": "41f30f8166e60dfb217faf292d952ce084fb47c4ce4d68b15d228ee57c4e64b1",
+    "_assets/2.3.2_fig_1.svg": "d2151650a6d9e3e398905541c5790d0e94883b0caf13052ffcbab3d7e3802210",
+    "_assets/2.3.2_fig_1.png": "f2170f43fe66f39e9b1ceb3cba7a3a1d873485ca659ef95275656ddd4eca6122",
+    "_assets/2.3.2_fig_2.svg": "01dd8a0f951fb89417861d46305c4713e6aca1458167f8babb76abdc3b68bc9d",
+    "_assets/2.3.2_fig_2.png": "5f8260b018da92b6fd70a3ded181b4fc355d1c0d1d4d1cad5fb2755f8ecc7374",
+    "_assets/2.3.2_fig_3.svg": "c1ddd42956fdb6e847d184d960d912a4fbad84693e23132a52df940513ef17f5",
+    "_assets/2.3.2_fig_3.png": "44fec3ae94e63d537a0a2e88ca411cd7e69971c45f9fa3a6e11e2ccd39d1e9f5",
+    "_assets/2.3.2_fig_4.svg": "c59855698d121d92379bcad4ce188ff85b05c85fd0a0cd76c852165eb6e510fe",
+    "_assets/2.3.2_fig_4.png": "46a1967cdad10599b7ace29b74088a07163165ba3061b5ba3d5f99ff099ccf9b",
+    "_assets/2.3.2_fig_5.svg": "c5016f6ea3a8ffbbc5f5a9958d404b5735897bad2032143f0744543e633b1f4c",
+    "_assets/2.3.2_fig_5.png": "20c323ef432da6cf6c15712ae1196565e1261d912341543779b1387a45fa8d13",
+    "_assets/2.3.2_fig_6.svg": "d795ae969b3862b7525868f28548d84a9f001bc067b7264bb11f507eac8a90b9",
+    "_assets/2.3.2_fig_6.png": "6e79bfb5994b459c6caf7f026ea9bbe01ac572f62d86eaf87e6e970406abee81",
+    "_assets/2.3.2_we_1.svg": "90cff2741102473ea2e52939a693a4c5f0c41697d2d66ff29ec06050d34f254a",
+    "_assets/2.3.2_we_1.png": "3912262e6968b8e46a3b11a8f02330e41923788cacbe80642b44f6948b898fc0",
+    "_assets/2.3.2_ex_1.svg": "58af7a70027cb560765904b058a5573a5c8d3319835e64668bcd0c970482e187",
+    "_assets/2.3.2_ex_1.png": "a99c48b363fbc2ee79cba72f07aa16f6e48bb93df935b60bdbd33b20e7a35b8f",
+    "_assets/2.3.2_ex_2.svg": "26f2a05a8eac7028e7bdae6c381a5acab12d6e86fefb04cefcd567650d4c6f1a",
+    "_assets/2.3.2_ex_2.png": "b02ee2a49b9e3246f9e66c5b29511d1b812f38c6e0cabe3575b978b150dcc512",
+    "_assets/2.3.2_ex_3.svg": "ce135244463f92f1be5d8d29b9b56517c65325351b442b165bb45d67bc268984",
+    "_assets/2.3.2_ex_3.png": "aef0ae29582b0f985f4d107b808db28815861733b7db36bff0971585fb231dfb",
+    "_assets/2.3.2_ex_4.svg": "38b48a0b49a09931919aa897d6ba0d94b6cfd169dcb12e1a20f8297c44fb9468",
+    "_assets/2.3.2_ex_4.png": "e40b4b9f8c8fd2cc2f00b1c87cb9ec78e4be1c020d02a8378e5b917f6c8b701e",
+    "_assets/2.3.2_ex_5.svg": "3955fbecae47a67cba17060c5dc4d2c7cb02c8d14a4b457b66f0d8ca2d194177",
+    "_assets/2.3.2_ex_5.png": "7e82d045cde97df46da316838dc1280b372ca7ca71e5d3bc36df5259165537a8",
+    "_assets/2.3.2_ex_6.svg": "74a7fca31dfc757bc6a499b69da805703559dd5088906026aab853cb8b8fbe6e",
+    "_assets/2.3.2_ex_6.png": "6198968c9c55d558c2bedf6f37a686f99bd8bc3e05bf1fc868bb35ac474ce12d",
+    "_assets/2.3.2_ex_7.svg": "06f05d86529ff5bb17a08499431e5e522aad4cd597a8c3dd785071d605e6f2a3",
+    "_assets/2.3.2_ex_7.png": "63164683e3f26defa8e5ec934e5a7e74411234cea160d16425318f5df508de7b",
+    "build_pdf.py": "b277d0ff4b9aa8bb86c14a6102d339449ae9b786a74f11e55fdfd1fcb0be5aec"
+  },
+  "archives": [
+    {
+      "kind": "paragraaf",
+      "count": 25,
+      "members": [
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – paragraaf.html",
+          "sha256": "23df621785b8b7ccd7978bf0ad6e12d30c3149ddfa7bae52085a4725460c1f47",
+          "crc32": "25521854"
+        },
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+          "sha256": "fe99e8136960505d30e041614ee301c3f8405efab38aff77a8fa89441a3238cb",
+          "crc32": "e526dbc7"
+        },
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf",
+          "sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+          "crc32": "05229da4"
+        },
+        {
+          "name": "_assets/2.3.2_ex_1.png",
+          "sha256": "a99c48b363fbc2ee79cba72f07aa16f6e48bb93df935b60bdbd33b20e7a35b8f",
+          "crc32": "d35ac624"
+        },
+        {
+          "name": "_assets/2.3.2_ex_1.svg",
+          "sha256": "58af7a70027cb560765904b058a5573a5c8d3319835e64668bcd0c970482e187",
+          "crc32": "a9d5bef6"
+        },
+        {
+          "name": "_assets/2.3.2_ex_2.png",
+          "sha256": "b02ee2a49b9e3246f9e66c5b29511d1b812f38c6e0cabe3575b978b150dcc512",
+          "crc32": "75719de0"
+        },
+        {
+          "name": "_assets/2.3.2_ex_2.svg",
+          "sha256": "26f2a05a8eac7028e7bdae6c381a5acab12d6e86fefb04cefcd567650d4c6f1a",
+          "crc32": "37e62949"
+        },
+        {
+          "name": "_assets/2.3.2_ex_3.png",
+          "sha256": "aef0ae29582b0f985f4d107b808db28815861733b7db36bff0971585fb231dfb",
+          "crc32": "12f4b00d"
+        },
+        {
+          "name": "_assets/2.3.2_ex_3.svg",
+          "sha256": "ce135244463f92f1be5d8d29b9b56517c65325351b442b165bb45d67bc268984",
+          "crc32": "f41652b1"
+        },
+        {
+          "name": "_assets/2.3.2_ex_4.png",
+          "sha256": "e40b4b9f8c8fd2cc2f00b1c87cb9ec78e4be1c020d02a8378e5b917f6c8b701e",
+          "crc32": "881cd665"
+        },
+        {
+          "name": "_assets/2.3.2_ex_4.svg",
+          "sha256": "38b48a0b49a09931919aa897d6ba0d94b6cfd169dcb12e1a20f8297c44fb9468",
+          "crc32": "7b64360c"
+        },
+        {
+          "name": "_assets/2.3.2_fig_1.png",
+          "sha256": "f2170f43fe66f39e9b1ceb3cba7a3a1d873485ca659ef95275656ddd4eca6122",
+          "crc32": "73b09205"
+        },
+        {
+          "name": "_assets/2.3.2_fig_1.svg",
+          "sha256": "d2151650a6d9e3e398905541c5790d0e94883b0caf13052ffcbab3d7e3802210",
+          "crc32": "e8958748"
+        },
+        {
+          "name": "_assets/2.3.2_fig_2.png",
+          "sha256": "5f8260b018da92b6fd70a3ded181b4fc355d1c0d1d4d1cad5fb2755f8ecc7374",
+          "crc32": "6228de34"
+        },
+        {
+          "name": "_assets/2.3.2_fig_2.svg",
+          "sha256": "01dd8a0f951fb89417861d46305c4713e6aca1458167f8babb76abdc3b68bc9d",
+          "crc32": "94fdec63"
+        },
+        {
+          "name": "_assets/2.3.2_fig_3.png",
+          "sha256": "44fec3ae94e63d537a0a2e88ca411cd7e69971c45f9fa3a6e11e2ccd39d1e9f5",
+          "crc32": "96441b8f"
+        },
+        {
+          "name": "_assets/2.3.2_fig_3.svg",
+          "sha256": "c1ddd42956fdb6e847d184d960d912a4fbad84693e23132a52df940513ef17f5",
+          "crc32": "48f9bbcd"
+        },
+        {
+          "name": "_assets/2.3.2_fig_4.png",
+          "sha256": "46a1967cdad10599b7ace29b74088a07163165ba3061b5ba3d5f99ff099ccf9b",
+          "crc32": "aceef7b9"
+        },
+        {
+          "name": "_assets/2.3.2_fig_4.svg",
+          "sha256": "c59855698d121d92379bcad4ce188ff85b05c85fd0a0cd76c852165eb6e510fe",
+          "crc32": "7f5574a6"
+        },
+        {
+          "name": "_assets/2.3.2_fig_5.png",
+          "sha256": "20c323ef432da6cf6c15712ae1196565e1261d912341543779b1387a45fa8d13",
+          "crc32": "062448d7"
+        },
+        {
+          "name": "_assets/2.3.2_fig_5.svg",
+          "sha256": "c5016f6ea3a8ffbbc5f5a9958d404b5735897bad2032143f0744543e633b1f4c",
+          "crc32": "2c1fabcc"
+        },
+        {
+          "name": "_assets/2.3.2_fig_6.png",
+          "sha256": "6e79bfb5994b459c6caf7f026ea9bbe01ac572f62d86eaf87e6e970406abee81",
+          "crc32": "7765e221"
+        },
+        {
+          "name": "_assets/2.3.2_fig_6.svg",
+          "sha256": "d795ae969b3862b7525868f28548d84a9f001bc067b7264bb11f507eac8a90b9",
+          "crc32": "80e5c46c"
+        },
+        {
+          "name": "_assets/2.3.2_we_1.png",
+          "sha256": "3912262e6968b8e46a3b11a8f02330e41923788cacbe80642b44f6948b898fc0",
+          "crc32": "4104cd19"
+        },
+        {
+          "name": "_assets/2.3.2_we_1.svg",
+          "sha256": "90cff2741102473ea2e52939a693a4c5f0c41697d2d66ff29ec06050d34f254a",
+          "crc32": "ba6c3b1a"
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "count": 13,
+      "members": [
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – opgaven.html",
+          "sha256": "efdb8b99bd3faa9a44323e41efe2e67cd3840e4ad6c8cd37a30f3887236cc545",
+          "crc32": "9fc333d0"
+        },
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – opgaven.md",
+          "sha256": "586cf0cbb39b5c809c3caf80d195fc060599a50071be94e36f953cd896a7f7c2",
+          "crc32": "2d767516"
+        },
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – opgaven.pdf",
+          "sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+          "crc32": "3503d3b6"
+        },
+        {
+          "name": "_assets/2.3.2_ex_1.png",
+          "sha256": "a99c48b363fbc2ee79cba72f07aa16f6e48bb93df935b60bdbd33b20e7a35b8f",
+          "crc32": "d35ac624"
+        },
+        {
+          "name": "_assets/2.3.2_ex_1.svg",
+          "sha256": "58af7a70027cb560765904b058a5573a5c8d3319835e64668bcd0c970482e187",
+          "crc32": "a9d5bef6"
+        },
+        {
+          "name": "_assets/2.3.2_ex_2.png",
+          "sha256": "b02ee2a49b9e3246f9e66c5b29511d1b812f38c6e0cabe3575b978b150dcc512",
+          "crc32": "75719de0"
+        },
+        {
+          "name": "_assets/2.3.2_ex_2.svg",
+          "sha256": "26f2a05a8eac7028e7bdae6c381a5acab12d6e86fefb04cefcd567650d4c6f1a",
+          "crc32": "37e62949"
+        },
+        {
+          "name": "_assets/2.3.2_ex_3.png",
+          "sha256": "aef0ae29582b0f985f4d107b808db28815861733b7db36bff0971585fb231dfb",
+          "crc32": "12f4b00d"
+        },
+        {
+          "name": "_assets/2.3.2_ex_3.svg",
+          "sha256": "ce135244463f92f1be5d8d29b9b56517c65325351b442b165bb45d67bc268984",
+          "crc32": "f41652b1"
+        },
+        {
+          "name": "_assets/2.3.2_ex_4.png",
+          "sha256": "e40b4b9f8c8fd2cc2f00b1c87cb9ec78e4be1c020d02a8378e5b917f6c8b701e",
+          "crc32": "881cd665"
+        },
+        {
+          "name": "_assets/2.3.2_ex_4.svg",
+          "sha256": "38b48a0b49a09931919aa897d6ba0d94b6cfd169dcb12e1a20f8297c44fb9468",
+          "crc32": "7b64360c"
+        },
+        {
+          "name": "_assets/2.3.2_we_1.png",
+          "sha256": "3912262e6968b8e46a3b11a8f02330e41923788cacbe80642b44f6948b898fc0",
+          "crc32": "4104cd19"
+        },
+        {
+          "name": "_assets/2.3.2_we_1.svg",
+          "sha256": "90cff2741102473ea2e52939a693a4c5f0c41697d2d66ff29ec06050d34f254a",
+          "crc32": "ba6c3b1a"
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "count": 13,
+      "members": [
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – antwoorden.html",
+          "sha256": "700d0128a3fb7a846400be5c7f275fde0106cb7a15025bd213f41e05960677b9",
+          "crc32": "ea7365e2"
+        },
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – antwoorden.md",
+          "sha256": "e97afda6782c7124af51fc76538bf47bb358a5ac91027ece65edb53d76529921",
+          "crc32": "35afb085"
+        },
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf",
+          "sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+          "crc32": "e0362a7a"
+        },
+        {
+          "name": "_assets/2.3.2_ex_1.png",
+          "sha256": "a99c48b363fbc2ee79cba72f07aa16f6e48bb93df935b60bdbd33b20e7a35b8f",
+          "crc32": "d35ac624"
+        },
+        {
+          "name": "_assets/2.3.2_ex_1.svg",
+          "sha256": "58af7a70027cb560765904b058a5573a5c8d3319835e64668bcd0c970482e187",
+          "crc32": "a9d5bef6"
+        },
+        {
+          "name": "_assets/2.3.2_ex_5.png",
+          "sha256": "7e82d045cde97df46da316838dc1280b372ca7ca71e5d3bc36df5259165537a8",
+          "crc32": "581e017a"
+        },
+        {
+          "name": "_assets/2.3.2_ex_5.svg",
+          "sha256": "3955fbecae47a67cba17060c5dc4d2c7cb02c8d14a4b457b66f0d8ca2d194177",
+          "crc32": "24868584"
+        },
+        {
+          "name": "_assets/2.3.2_ex_6.png",
+          "sha256": "6198968c9c55d558c2bedf6f37a686f99bd8bc3e05bf1fc868bb35ac474ce12d",
+          "crc32": "c343b194"
+        },
+        {
+          "name": "_assets/2.3.2_ex_6.svg",
+          "sha256": "74a7fca31dfc757bc6a499b69da805703559dd5088906026aab853cb8b8fbe6e",
+          "crc32": "b5ff7d2a"
+        },
+        {
+          "name": "_assets/2.3.2_ex_7.png",
+          "sha256": "63164683e3f26defa8e5ec934e5a7e74411234cea160d16425318f5df508de7b",
+          "crc32": "2a0c8fef"
+        },
+        {
+          "name": "_assets/2.3.2_ex_7.svg",
+          "sha256": "06f05d86529ff5bb17a08499431e5e522aad4cd597a8c3dd785071d605e6f2a3",
+          "crc32": "f9f81388"
+        },
+        {
+          "name": "_assets/2.3.2_we_1.png",
+          "sha256": "3912262e6968b8e46a3b11a8f02330e41923788cacbe80642b44f6948b898fc0",
+          "crc32": "4104cd19"
+        },
+        {
+          "name": "_assets/2.3.2_we_1.svg",
+          "sha256": "90cff2741102473ea2e52939a693a4c5f0c41697d2d66ff29ec06050d34f254a",
+          "crc32": "ba6c3b1a"
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "revision": "r1000003",
+      "route": "full",
+      "source_commit": "e0b47cab498102cd990e66318f5111602c32a6b6",
+      "manifest_sha256": "e7b352f7080418b6c382a5f8ba3fb340229926b7020b7b8e70666039cfaa8461",
+      "pages": 42,
+      "all_native_raw_and_page_raw_RGB_equal": true,
+      "PENDING_proofs": [
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/manifest.json",
+          "sha256": "9fb084fe68ed75507fcf6a11f6726f0a2a54621d1dd7baf950cc3d3ce0bc6a69"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/manifest.json",
+          "sha256": "5f4d2054d762509d1ba6ce225462648150498b35a732562be4d566b16b5153a9"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/manifest.json",
+          "sha256": "78b91a2e158f479d32c826501a3208229bd826999114cb112977d8437f201c70"
+        }
+      ]
+    },
+    {
+      "revision": "r1000004",
+      "route": "full",
+      "source_commit": "e0b47cab498102cd990e66318f5111602c32a6b6",
+      "manifest_sha256": "afbd9e78847cc329e37ec8fadeafe49a80d724b72b19a3a9ec9d3c0ce4c6b155",
+      "pages": 42,
+      "all_native_raw_and_page_raw_RGB_equal": true,
+      "PENDING_proofs": [
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000004/manifest.json",
+          "sha256": "9c546091bc2bf4aa6de169efe47c832c47ee7f56e82ffda47ccdac41f6e2b045"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000004/manifest.json",
+          "sha256": "26b6f2c3cea9885145580a2c1e40a8a3cb44ee563f953dc563f483901eb80c65"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000004/manifest.json",
+          "sha256": "7e51faf408674575b33067e7b82cc0dfb952a035ebada6f030d3b4a2f666b96e"
+        }
+      ]
+    },
+    {
+      "revision": "r1000005",
+      "route": "direct",
+      "source_commit": "e0b47cab498102cd990e66318f5111602c32a6b6",
+      "manifest_sha256": "77f4d90a8dddae1d2c41b1f647b0dcdd620f859452d7cc5d02663bba8a8f71c9",
+      "pages": 42,
+      "all_native_raw_and_page_raw_RGB_equal": true,
+      "PENDING_proofs": [
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000005/manifest.json",
+          "sha256": "580b29f6618d6e05990e310a3b88f5dc4c9b303f05c186bcbe7c332b162f3074"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000005/manifest.json",
+          "sha256": "dfa4e7719c2fc1f6fbe703ab20c68760c111ef2659092aa611f9d3a921c13b77"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000005/manifest.json",
+          "sha256": "0b43117568b434f4d951fd9030fbb96a6dd25cb3d99fa9afd2699c2c180a4cbf"
+        }
+      ]
+    },
+    {
+      "revision": "r1000006",
+      "route": "full",
+      "source_commit": "e0b47cab498102cd990e66318f5111602c32a6b6",
+      "manifest_sha256": "7e70cb4c8799d663d80daf3f9f52630140dd69addbdf5d2ca6b96f9314d51a86",
+      "pages": 42,
+      "all_native_raw_and_page_raw_RGB_equal": true,
+      "PENDING_proofs": [
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000006/manifest.json",
+          "sha256": "b9f6a3c01a844e1690a7a1c6df97863dd33c7943e01739620087b24c33264c03"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000006/manifest.json",
+          "sha256": "94d35b96f767579e2b8b3e5ca0bbad5edc952c71dc9ca51f8205881aa3b513a1"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000006/manifest.json",
+          "sha256": "e19a8f8c677dec64774e63096e1957ed62165a222254680309625ba6ef59a3d4"
+        }
+      ]
+    },
+    {
+      "revision": "r1000011",
+      "route": "full",
+      "source_commit": "abe79fa532c8701d646fb19f129ad892004fb821",
+      "manifest_sha256": "c668d29d388c7df835516a5e99c03c54e1b197e7359c0bf0b27bda40bfbd9b46",
+      "pages": 42,
+      "all_native_raw_and_page_raw_RGB_equal": true,
+      "PENDING_proofs": [
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000011/manifest.json",
+          "sha256": "98cf0bd467e5656b755cda62d3e2520b272d8ffccb5d88e524301bd7b6a0a7e7"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000011/manifest.json",
+          "sha256": "a1829e7a6f0ac92991ef6be39b9bbac1e310732b624c741f25631b12908bafa4"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000011/manifest.json",
+          "sha256": "7d8f71b10ba9b6c1d203acddb6bc3e3a9d8e944a3a5b7bb3716d1d699e8c2f43"
+        }
+      ]
+    },
+    {
+      "revision": "r1000012",
+      "route": "full",
+      "source_commit": "abe79fa532c8701d646fb19f129ad892004fb821",
+      "manifest_sha256": "22189ad45d90348eda7c285a6a22c8a49288e20e2061af1d698b407cf8da7d70",
+      "pages": 42,
+      "all_native_raw_and_page_raw_RGB_equal": true,
+      "PENDING_proofs": [
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000012/manifest.json",
+          "sha256": "a8fa2f4278f18d232d54d281feca1aaf3c243b63a4b3fbc8e580375bb333e74d"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000012/manifest.json",
+          "sha256": "c610e041028d17a01063063bf5bc4fd59f2158c391e59ea24d161c4f4e463392"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000012/manifest.json",
+          "sha256": "9f5c5b784b23a7c481afe55b09a689ccae44e56866997aef045ac7cf8472d958"
+        }
+      ]
+    },
+    {
+      "revision": "r1000013",
+      "route": "direct",
+      "source_commit": "abe79fa532c8701d646fb19f129ad892004fb821",
+      "manifest_sha256": "3d1f751235126e961c79fc24c9a60ff3b399e19ce52b50456f10cba85e8c5965",
+      "pages": 42,
+      "all_native_raw_and_page_raw_RGB_equal": true,
+      "PENDING_proofs": [
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000013/manifest.json",
+          "sha256": "42b241920985c192c1f86a021bfdbdf3d96c2c90edd22f9ab245c53b349ab414"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000013/manifest.json",
+          "sha256": "f6e988e4668568997851539a520d582c2524eb85850b5e30223da41eabb0c137"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000013/manifest.json",
+          "sha256": "948cb0627c0db39a0a1b1cae9e1d303cf7d0b3d8922c1ebe83f9879b86a3bd04"
+        }
+      ]
+    },
+    {
+      "revision": "r1000014",
+      "route": "full",
+      "source_commit": "abe79fa532c8701d646fb19f129ad892004fb821",
+      "manifest_sha256": "5da67499190e254858cb8806ac91d5e0633c353c23a960516f8fe6d94a9f3b5d",
+      "pages": 42,
+      "all_native_raw_and_page_raw_RGB_equal": true,
+      "PENDING_proofs": [
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000014/manifest.json",
+          "sha256": "03ad7524f9162022c1c052681c5aa3df769d753bedcad1422d9c8bc6b19ac680"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000014/manifest.json",
+          "sha256": "c2106ccfbb50097c5c0f651f127e0ee59566bc539cc81021f8bfd974b960196c"
+        },
+        {
+          "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000014/manifest.json",
+          "sha256": "ff06975909848ca612b89b78bb08d2bc797b8412369dacee1125d1e6ba57ad36"
+        }
+      ]
+    }
+  ],
+  "stored_page_comparisons": 336,
+  "current_source_DOM_ink_checker": {
+    "status": "PASS",
+    "manifest": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-native-r1000014.json",
+    "sha256": "5da67499190e254858cb8806ac91d5e0633c353c23a960516f8fe6d94a9f3b5d",
+    "documents": [
+      {
+        "kind": "paragraaf",
+        "pages": [
+          {
+            "page": 1,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1431
+          },
+          {
+            "page": 2,
+            "minimum_text_pt": 12.0,
+            "text_characters": 737
+          },
+          {
+            "page": 3,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1046
+          },
+          {
+            "page": 4,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1619
+          },
+          {
+            "page": 5,
+            "minimum_text_pt": 12.0,
+            "text_characters": 437
+          },
+          {
+            "page": 6,
+            "minimum_text_pt": 12.0,
+            "text_characters": 593
+          },
+          {
+            "page": 7,
+            "minimum_text_pt": 12.0,
+            "text_characters": 474
+          },
+          {
+            "page": 8,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1743
+          },
+          {
+            "page": 9,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1314
+          },
+          {
+            "page": 10,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1320
+          },
+          {
+            "page": 11,
+            "minimum_text_pt": 12.0,
+            "text_characters": 2119
+          },
+          {
+            "page": 12,
+            "minimum_text_pt": 12.0,
+            "text_characters": 2115
+          },
+          {
+            "page": 13,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1193
+          },
+          {
+            "page": 14,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1232
+          },
+          {
+            "page": 15,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1430
+          },
+          {
+            "page": 16,
+            "minimum_text_pt": 12.0,
+            "text_characters": 904
+          },
+          {
+            "page": 17,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1220
+          },
+          {
+            "page": 18,
+            "minimum_text_pt": 12.0,
+            "text_characters": 805
+          },
+          {
+            "page": 19,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1256
+          }
+        ],
+        "placements": [
+          {
+            "page": 2,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 3,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 5,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 6,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 7,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 9,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 10,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 13,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 14,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 16,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 18,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          }
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "pages": [
+          {
+            "page": 1,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1710
+          },
+          {
+            "page": 2,
+            "minimum_text_pt": 12.0,
+            "text_characters": 771
+          },
+          {
+            "page": 3,
+            "minimum_text_pt": 12.0,
+            "text_characters": 2212
+          },
+          {
+            "page": 4,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1676
+          },
+          {
+            "page": 5,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1100
+          },
+          {
+            "page": 6,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1195
+          },
+          {
+            "page": 7,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1641
+          },
+          {
+            "page": 8,
+            "minimum_text_pt": 12.0,
+            "text_characters": 890
+          },
+          {
+            "page": 9,
+            "minimum_text_pt": 12.0,
+            "text_characters": 962
+          },
+          {
+            "page": 10,
+            "minimum_text_pt": 12.0,
+            "text_characters": 815
+          },
+          {
+            "page": 11,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1266
+          }
+        ],
+        "placements": [
+          {
+            "page": 2,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 5,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 6,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 8,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 10,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          }
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "pages": [
+          {
+            "page": 1,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1932
+          },
+          {
+            "page": 2,
+            "minimum_text_pt": 12.0,
+            "text_characters": 774
+          },
+          {
+            "page": 3,
+            "minimum_text_pt": 12.0,
+            "text_characters": 2551
+          },
+          {
+            "page": 4,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1217
+          },
+          {
+            "page": 5,
+            "minimum_text_pt": 12.0,
+            "text_characters": 2299
+          },
+          {
+            "page": 6,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1359
+          },
+          {
+            "page": 7,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1679
+          },
+          {
+            "page": 8,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1218
+          },
+          {
+            "page": 9,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1141
+          },
+          {
+            "page": 10,
+            "minimum_text_pt": 12.0,
+            "text_characters": 1353
+          },
+          {
+            "page": 11,
+            "minimum_text_pt": 12.0,
+            "text_characters": 2159
+          },
+          {
+            "page": 12,
+            "minimum_text_pt": 12.0,
+            "text_characters": 800
+          }
+        ],
+        "placements": [
+          {
+            "page": 2,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 4,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 6,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 8,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          },
+          {
+            "page": 10,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "placed_font_pt": 15.685039370078739
+          }
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "stem": "2.3.2_fig_1",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Eén paraplureparatie",
+            "bbox": [
+              415.0,
+              39.0,
+              785.0,
+              76.0
+            ]
+          },
+          {
+            "id": "wtp-label",
+            "text": "WTP: € 18",
+            "bbox": [
+              650.0,
+              226.0,
+              838.0,
+              255.0
+            ]
+          },
+          {
+            "id": "price-label",
+            "text": "Prijs: € 10",
+            "bbox": [
+              650.0,
+              466.0,
+              827.0,
+              503.0
+            ]
+          },
+          {
+            "id": "mc-label",
+            "text": "MK: € 7",
+            "bbox": [
+              650.0,
+              556.0,
+              787.0,
+              585.0
+            ]
+          },
+          {
+            "id": "cs-label",
+            "text": "CS: € 8",
+            "bbox": [
+              333.5,
+              336.0,
+              466.5,
+              365.0
+            ]
+          },
+          {
+            "id": "ps-label",
+            "text": "PS: € 3",
+            "bbox": [
+              334.5,
+              511.0,
+              465.5,
+              540.0
+            ]
+          },
+          {
+            "id": "ts-label",
+            "text": "TS: € 11",
+            "bbox": [
+              650.0,
+              351.0,
+              800.0,
+              380.0
+            ]
+          },
+          {
+            "id": "meaning",
+            "text": "Eén werkelijke transactie",
+            "bbox": [
+              380.0,
+              681.0,
+              820.0,
+              718.0
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      },
+      {
+        "stem": "2.3.2_fig_2",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Tulpenbossen",
+            "bbox": [
+              475.5078125,
+              39.0,
+              724.5078125,
+              76.0
+            ]
+          },
+          {
+            "id": "p-title",
+            "text": "P (€ per bos)",
+            "bbox": [
+              26.0,
+              335.4921875,
+              63.0,
+              564.4921875
+            ]
+          },
+          {
+            "id": "pnum-0",
+            "text": "0",
+            "bbox": [
+              133.0,
+              705.0,
+              155.0,
+              734.0
+            ]
+          },
+          {
+            "id": "pnum-6",
+            "text": "6",
+            "bbox": [
+              133.0,
+              597.0,
+              155.0,
+              626.0
+            ]
+          },
+          {
+            "id": "pnum-12",
+            "text": "12",
+            "bbox": [
+              111.0,
+              489.0,
+              155.0,
+              518.0
+            ]
+          },
+          {
+            "id": "pnum-18",
+            "text": "18",
+            "bbox": [
+              111.0,
+              381.0,
+              155.0,
+              410.0
+            ]
+          },
+          {
+            "id": "pnum-24",
+            "text": "24",
+            "bbox": [
+              111.0,
+              273.0,
+              155.0,
+              302.0
+            ]
+          },
+          {
+            "id": "pnum-30",
+            "text": "30",
+            "bbox": [
+              111.0,
+              165.0,
+              155.0,
+              194.0
+            ]
+          },
+          {
+            "id": "qnum-0",
+            "text": "0",
+            "bbox": [
+              169.0,
+              761.0,
+              191.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-10",
+            "text": "10",
+            "bbox": [
+              308.0,
+              761.0,
+              352.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-20",
+            "text": "20",
+            "bbox": [
+              458.0,
+              761.0,
+              502.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-30",
+            "text": "30",
+            "bbox": [
+              608.0,
+              761.0,
+              652.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-40",
+            "text": "40",
+            "bbox": [
+              758.0,
+              761.0,
+              802.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-50",
+            "text": "50",
+            "bbox": [
+              908.0,
+              761.0,
+              952.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-60",
+            "text": "60",
+            "bbox": [
+              1058.0,
+              761.0,
+              1102.0,
+              790.0
+            ]
+          },
+          {
+            "id": "q-title",
+            "text": "Q (bossen)",
+            "bbox": [
+              532.0,
+              831.0,
+              728.0,
+              868.0
+            ]
+          },
+          {
+            "id": "demand-label",
+            "text": "Vraag",
+            "bbox": [
+              874.0078125,
+              529.2,
+              980.0078125,
+              566.2
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      },
+      {
+        "stem": "2.3.2_fig_3",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Tulpenbossen",
+            "bbox": [
+              475.5078125,
+              39.0,
+              724.5078125,
+              76.0
+            ]
+          },
+          {
+            "id": "p-title",
+            "text": "P (€ per bos)",
+            "bbox": [
+              26.0,
+              335.4921875,
+              63.0,
+              564.4921875
+            ]
+          },
+          {
+            "id": "pnum-0",
+            "text": "0",
+            "bbox": [
+              133.0,
+              705.0,
+              155.0,
+              734.0
+            ]
+          },
+          {
+            "id": "pnum-6",
+            "text": "6",
+            "bbox": [
+              133.0,
+              597.0,
+              155.0,
+              626.0
+            ]
+          },
+          {
+            "id": "pnum-18",
+            "text": "18",
+            "bbox": [
+              111.0,
+              381.0,
+              155.0,
+              410.0
+            ]
+          },
+          {
+            "id": "pnum-24",
+            "text": "24",
+            "bbox": [
+              111.0,
+              273.0,
+              155.0,
+              302.0
+            ]
+          },
+          {
+            "id": "pnum-30",
+            "text": "30",
+            "bbox": [
+              111.0,
+              165.0,
+              155.0,
+              194.0
+            ]
+          },
+          {
+            "id": "qnum-0",
+            "text": "0",
+            "bbox": [
+              169.0,
+              761.0,
+              191.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-10",
+            "text": "10",
+            "bbox": [
+              308.0,
+              761.0,
+              352.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-20",
+            "text": "20",
+            "bbox": [
+              458.0,
+              761.0,
+              502.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-40",
+            "text": "40",
+            "bbox": [
+              758.0,
+              761.0,
+              802.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-50",
+            "text": "50",
+            "bbox": [
+              908.0,
+              761.0,
+              952.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-60",
+            "text": "60",
+            "bbox": [
+              1058.0,
+              761.0,
+              1102.0,
+              790.0
+            ]
+          },
+          {
+            "id": "pe-number",
+            "text": "14",
+            "bbox": [
+              111.0,
+              453.0,
+              155.0,
+              482.0
+            ]
+          },
+          {
+            "id": "qe-number",
+            "text": "32",
+            "bbox": [
+              638.0,
+              761.0,
+              682.0,
+              790.0
+            ]
+          },
+          {
+            "id": "q-title",
+            "text": "Q (bossen)",
+            "bbox": [
+              532.0,
+              831.0,
+              728.0,
+              868.0
+            ]
+          },
+          {
+            "id": "demand-label",
+            "text": "Vraag",
+            "bbox": [
+              874.0078125,
+              529.2,
+              980.0078125,
+              566.2
+            ]
+          },
+          {
+            "id": "supply-label",
+            "text": "Aanbod / MK",
+            "bbox": [
+              802.0,
+              306.6,
+              1033.0,
+              335.6
+            ]
+          },
+          {
+            "id": "e-label",
+            "text": "E",
+            "bbox": [
+              750.0,
+              369.0,
+              777.0,
+              398.0
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      },
+      {
+        "stem": "2.3.2_fig_4",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Tulpenbossen",
+            "bbox": [
+              475.5078125,
+              39.0,
+              724.5078125,
+              76.0
+            ]
+          },
+          {
+            "id": "p-title",
+            "text": "P (€ per bos)",
+            "bbox": [
+              26.0,
+              335.4921875,
+              63.0,
+              564.4921875
+            ]
+          },
+          {
+            "id": "pnum-0",
+            "text": "0",
+            "bbox": [
+              133.0,
+              705.0,
+              155.0,
+              734.0
+            ]
+          },
+          {
+            "id": "pnum-6",
+            "text": "6",
+            "bbox": [
+              133.0,
+              597.0,
+              155.0,
+              626.0
+            ]
+          },
+          {
+            "id": "pnum-18",
+            "text": "18",
+            "bbox": [
+              111.0,
+              381.0,
+              155.0,
+              410.0
+            ]
+          },
+          {
+            "id": "pnum-24",
+            "text": "24",
+            "bbox": [
+              111.0,
+              273.0,
+              155.0,
+              302.0
+            ]
+          },
+          {
+            "id": "pnum-30",
+            "text": "30",
+            "bbox": [
+              111.0,
+              165.0,
+              155.0,
+              194.0
+            ]
+          },
+          {
+            "id": "qnum-0",
+            "text": "0",
+            "bbox": [
+              169.0,
+              761.0,
+              191.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-10",
+            "text": "10",
+            "bbox": [
+              308.0,
+              761.0,
+              352.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-20",
+            "text": "20",
+            "bbox": [
+              458.0,
+              761.0,
+              502.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-40",
+            "text": "40",
+            "bbox": [
+              758.0,
+              761.0,
+              802.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-50",
+            "text": "50",
+            "bbox": [
+              908.0,
+              761.0,
+              952.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-60",
+            "text": "60",
+            "bbox": [
+              1058.0,
+              761.0,
+              1102.0,
+              790.0
+            ]
+          },
+          {
+            "id": "pe-number",
+            "text": "14",
+            "bbox": [
+              111.0,
+              453.0,
+              155.0,
+              482.0
+            ]
+          },
+          {
+            "id": "qe-number",
+            "text": "32",
+            "bbox": [
+              638.0,
+              761.0,
+              682.0,
+              790.0
+            ]
+          },
+          {
+            "id": "q-title",
+            "text": "Q (bossen)",
+            "bbox": [
+              532.0,
+              831.0,
+              728.0,
+              868.0
+            ]
+          },
+          {
+            "id": "demand-label",
+            "text": "Vraag",
+            "bbox": [
+              874.0078125,
+              529.2,
+              980.0078125,
+              566.2
+            ]
+          },
+          {
+            "id": "supply-label",
+            "text": "Aanbod / MK",
+            "bbox": [
+              802.0,
+              306.6,
+              1033.0,
+              335.6
+            ]
+          },
+          {
+            "id": "e-label",
+            "text": "E",
+            "bbox": [
+              750.0,
+              369.0,
+              777.0,
+              398.0
+            ]
+          },
+          {
+            "id": "cs-label",
+            "text": "CS",
+            "bbox": [
+              248.0,
+              337.8,
+              304.0,
+              366.8
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      },
+      {
+        "stem": "2.3.2_fig_5",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Tulpenbossen",
+            "bbox": [
+              475.5078125,
+              39.0,
+              724.5078125,
+              76.0
+            ]
+          },
+          {
+            "id": "p-title",
+            "text": "P (€ per bos)",
+            "bbox": [
+              26.0,
+              335.4921875,
+              63.0,
+              564.4921875
+            ]
+          },
+          {
+            "id": "pnum-0",
+            "text": "0",
+            "bbox": [
+              133.0,
+              705.0,
+              155.0,
+              734.0
+            ]
+          },
+          {
+            "id": "pnum-6",
+            "text": "6",
+            "bbox": [
+              133.0,
+              597.0,
+              155.0,
+              626.0
+            ]
+          },
+          {
+            "id": "pnum-18",
+            "text": "18",
+            "bbox": [
+              111.0,
+              381.0,
+              155.0,
+              410.0
+            ]
+          },
+          {
+            "id": "pnum-24",
+            "text": "24",
+            "bbox": [
+              111.0,
+              273.0,
+              155.0,
+              302.0
+            ]
+          },
+          {
+            "id": "pnum-30",
+            "text": "30",
+            "bbox": [
+              111.0,
+              165.0,
+              155.0,
+              194.0
+            ]
+          },
+          {
+            "id": "qnum-0",
+            "text": "0",
+            "bbox": [
+              169.0,
+              761.0,
+              191.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-10",
+            "text": "10",
+            "bbox": [
+              308.0,
+              761.0,
+              352.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-20",
+            "text": "20",
+            "bbox": [
+              458.0,
+              761.0,
+              502.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-40",
+            "text": "40",
+            "bbox": [
+              758.0,
+              761.0,
+              802.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-50",
+            "text": "50",
+            "bbox": [
+              908.0,
+              761.0,
+              952.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-60",
+            "text": "60",
+            "bbox": [
+              1058.0,
+              761.0,
+              1102.0,
+              790.0
+            ]
+          },
+          {
+            "id": "pe-number",
+            "text": "14",
+            "bbox": [
+              111.0,
+              453.0,
+              155.0,
+              482.0
+            ]
+          },
+          {
+            "id": "qe-number",
+            "text": "32",
+            "bbox": [
+              638.0,
+              761.0,
+              682.0,
+              790.0
+            ]
+          },
+          {
+            "id": "q-title",
+            "text": "Q (bossen)",
+            "bbox": [
+              532.0,
+              831.0,
+              728.0,
+              868.0
+            ]
+          },
+          {
+            "id": "demand-label",
+            "text": "Vraag",
+            "bbox": [
+              874.0078125,
+              529.2,
+              980.0078125,
+              566.2
+            ]
+          },
+          {
+            "id": "supply-label",
+            "text": "Aanbod / MK",
+            "bbox": [
+              802.0,
+              306.6,
+              1033.0,
+              335.6
+            ]
+          },
+          {
+            "id": "e-label",
+            "text": "E",
+            "bbox": [
+              750.0,
+              369.0,
+              777.0,
+              398.0
+            ]
+          },
+          {
+            "id": "cs-label",
+            "text": "CS",
+            "bbox": [
+              248.0,
+              337.8,
+              304.0,
+              366.8
+            ]
+          },
+          {
+            "id": "ps-label",
+            "text": "PS",
+            "bbox": [
+              249.0,
+              510.6,
+              303.0,
+              539.6
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      },
+      {
+        "stem": "2.3.2_fig_6",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Voordeel per transactie",
+            "bbox": [
+              395.015625,
+              39.0,
+              805.015625,
+              76.0
+            ]
+          },
+          {
+            "id": "group-title-0",
+            "text": "CS per gekochte eenheid",
+            "bbox": [
+              180.0,
+              196.0,
+              628.0,
+              233.0
+            ]
+          },
+          {
+            "id": "group-rule-0",
+            "text": "WTP − P",
+            "bbox": [
+              180.0,
+              251.0,
+              341.0,
+              280.0
+            ]
+          },
+          {
+            "id": "group-title-1",
+            "text": "PS per verkochte eenheid",
+            "bbox": [
+              180.0,
+              416.0,
+              637.0,
+              453.0
+            ]
+          },
+          {
+            "id": "group-rule-1",
+            "text": "P − MK",
+            "bbox": [
+              180.0,
+              471.0,
+              312.0,
+              500.0
+            ]
+          },
+          {
+            "id": "group-title-2",
+            "text": "TS per transactie",
+            "bbox": [
+              180.0,
+              636.0,
+              482.0,
+              673.0
+            ]
+          },
+          {
+            "id": "group-rule-2",
+            "text": "WTP − MK = CS + PS",
+            "bbox": [
+              180.0,
+              691.0,
+              574.0,
+              720.0
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      },
+      {
+        "stem": "2.3.2_we_1",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Sporthanddoeken",
+            "bbox": [
+              443.5,
+              39.0,
+              756.5,
+              76.0
+            ]
+          },
+          {
+            "id": "p-title",
+            "text": "P (€ per handdoek)",
+            "bbox": [
+              26.0,
+              280.4921875,
+              63.0,
+              619.4921875
+            ]
+          },
+          {
+            "id": "pnum-0",
+            "text": "0",
+            "bbox": [
+              133.0,
+              705.0,
+              155.0,
+              734.0
+            ]
+          },
+          {
+            "id": "pnum-10",
+            "text": "10",
+            "bbox": [
+              111.0,
+              570.0,
+              155.0,
+              599.0
+            ]
+          },
+          {
+            "id": "pnum-30",
+            "text": "30",
+            "bbox": [
+              111.0,
+              300.0,
+              155.0,
+              329.0
+            ]
+          },
+          {
+            "id": "pnum-40",
+            "text": "40",
+            "bbox": [
+              111.0,
+              165.0,
+              155.0,
+              194.0
+            ]
+          },
+          {
+            "id": "qnum-0",
+            "text": "0",
+            "bbox": [
+              169.0,
+              761.0,
+              191.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-6",
+            "text": "6",
+            "bbox": [
+              349.0,
+              761.0,
+              371.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-18",
+            "text": "18",
+            "bbox": [
+              698.0,
+              761.0,
+              742.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-24",
+            "text": "24",
+            "bbox": [
+              878.0,
+              761.0,
+              922.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-30",
+            "text": "30",
+            "bbox": [
+              1058.0,
+              761.0,
+              1102.0,
+              790.0
+            ]
+          },
+          {
+            "id": "pe-number",
+            "text": "18",
+            "bbox": [
+              111.0,
+              462.0,
+              155.0,
+              491.0
+            ]
+          },
+          {
+            "id": "qe-number",
+            "text": "12",
+            "bbox": [
+              518.0,
+              761.0,
+              562.0,
+              790.0
+            ]
+          },
+          {
+            "id": "q-title",
+            "text": "Q (handdoeken)",
+            "bbox": [
+              487.0,
+              831.0,
+              773.0,
+              868.0
+            ]
+          },
+          {
+            "id": "demand-label",
+            "text": "Vraag",
+            "bbox": [
+              874.0078125,
+              552.15,
+              980.0078125,
+              589.15
+            ]
+          },
+          {
+            "id": "supply-label",
+            "text": "Aanbod / MK",
+            "bbox": [
+              802.0,
+              392.9,
+              1033.0,
+              421.9
+            ]
+          },
+          {
+            "id": "e-label",
+            "text": "E",
+            "bbox": [
+              630.0,
+              358.0,
+              657.0,
+              387.0
+            ]
+          },
+          {
+            "id": "cs-label",
+            "text": "CS",
+            "bbox": [
+              224.0,
+              397.2,
+              280.0,
+              426.2
+            ]
+          },
+          {
+            "id": "ps-label",
+            "text": "PS",
+            "bbox": [
+              225.0,
+              526.8,
+              279.0,
+              555.8
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      },
+      {
+        "stem": "2.3.2_ex_1",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Plantjes",
+            "bbox": [
+              529.0,
+              39.0,
+              671.0,
+              76.0
+            ]
+          },
+          {
+            "id": "geometry-help",
+            "text": "Basis 6; hoogten 6 en 6",
+            "bbox": [
+              391.5,
+              96.0,
+              808.5,
+              133.0
+            ]
+          },
+          {
+            "id": "p-title",
+            "text": "P (€ per plantje)",
+            "bbox": [
+              26.0,
+              308.9921875,
+              63.0,
+              590.9921875
+            ]
+          },
+          {
+            "id": "pnum-0",
+            "text": "0",
+            "bbox": [
+              133.0,
+              705.0,
+              155.0,
+              734.0
+            ]
+          },
+          {
+            "id": "pnum-6",
+            "text": "6",
+            "bbox": [
+              133.0,
+              570.0,
+              155.0,
+              599.0
+            ]
+          },
+          {
+            "id": "pnum-18",
+            "text": "18",
+            "bbox": [
+              111.0,
+              300.0,
+              155.0,
+              329.0
+            ]
+          },
+          {
+            "id": "pnum-24",
+            "text": "24",
+            "bbox": [
+              111.0,
+              165.0,
+              155.0,
+              194.0
+            ]
+          },
+          {
+            "id": "qnum-0",
+            "text": "0",
+            "bbox": [
+              169.0,
+              761.0,
+              191.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-3",
+            "text": "3",
+            "bbox": [
+              319.0,
+              761.0,
+              341.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-9",
+            "text": "9",
+            "bbox": [
+              619.0,
+              761.0,
+              641.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-12",
+            "text": "12",
+            "bbox": [
+              758.0,
+              761.0,
+              802.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-15",
+            "text": "15",
+            "bbox": [
+              908.0,
+              761.0,
+              952.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-18",
+            "text": "18",
+            "bbox": [
+              1058.0,
+              761.0,
+              1102.0,
+              790.0
+            ]
+          },
+          {
+            "id": "pe-number",
+            "text": "12",
+            "bbox": [
+              111.0,
+              435.0,
+              155.0,
+              464.0
+            ]
+          },
+          {
+            "id": "qe-number",
+            "text": "6",
+            "bbox": [
+              469.0,
+              761.0,
+              491.0,
+              790.0
+            ]
+          },
+          {
+            "id": "q-title",
+            "text": "Q (plantjes)",
+            "bbox": [
+              527.5,
+              831.0,
+              732.5,
+              868.0
+            ]
+          },
+          {
+            "id": "demand-label",
+            "text": "Vraag",
+            "bbox": [
+              874.0078125,
+              552.15,
+              980.0078125,
+              589.15
+            ]
+          },
+          {
+            "id": "supply-label",
+            "text": "Aanbod / MK",
+            "bbox": [
+              802.0,
+              338.9,
+              1033.0,
+              367.9
+            ]
+          },
+          {
+            "id": "e-label",
+            "text": "E",
+            "bbox": [
+              570.0,
+              331.0,
+              597.0,
+              360.0
+            ]
+          },
+          {
+            "id": "cs-label",
+            "text": "CS",
+            "bbox": [
+              212.0,
+              381.0,
+              268.0,
+              410.0
+            ]
+          },
+          {
+            "id": "ps-label",
+            "text": "PS",
+            "bbox": [
+              213.0,
+              489.0,
+              267.0,
+              518.0
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      },
+      {
+        "stem": "2.3.2_ex_2",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Kaarsen",
+            "bbox": [
+              526.0,
+              39.0,
+              674.0,
+              68.0
+            ]
+          },
+          {
+            "id": "p-title",
+            "text": "P (€ per kaars)",
+            "bbox": [
+              26.0,
+              318.9921875,
+              63.0,
+              580.9921875
+            ]
+          },
+          {
+            "id": "pnum-0",
+            "text": "0",
+            "bbox": [
+              133.0,
+              705.0,
+              155.0,
+              734.0
+            ]
+          },
+          {
+            "id": "pnum-6.5",
+            "text": "6,5",
+            "bbox": [
+              100.0,
+              570.0,
+              155.0,
+              605.0
+            ]
+          },
+          {
+            "id": "pnum-13",
+            "text": "13",
+            "bbox": [
+              111.0,
+              435.0,
+              155.0,
+              464.0
+            ]
+          },
+          {
+            "id": "pnum-19.5",
+            "text": "19,5",
+            "bbox": [
+              78.0,
+              300.0,
+              155.0,
+              335.0
+            ]
+          },
+          {
+            "id": "pnum-26",
+            "text": "26",
+            "bbox": [
+              111.0,
+              165.0,
+              155.0,
+              194.0
+            ]
+          },
+          {
+            "id": "qnum-0",
+            "text": "0",
+            "bbox": [
+              169.0,
+              761.0,
+              191.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-13",
+            "text": "13",
+            "bbox": [
+              383.0,
+              761.0,
+              427.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-26",
+            "text": "26",
+            "bbox": [
+              608.0,
+              761.0,
+              652.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-39",
+            "text": "39",
+            "bbox": [
+              833.0,
+              761.0,
+              877.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-52",
+            "text": "52",
+            "bbox": [
+              1058.0,
+              761.0,
+              1102.0,
+              790.0
+            ]
+          },
+          {
+            "id": "q-title",
+            "text": "Q (kaarsen)",
+            "bbox": [
+              525.5,
+              831.0,
+              734.5,
+              868.0
+            ]
+          },
+          {
+            "id": "demand-label",
+            "text": "Vraag",
+            "bbox": [
+              874.0078125,
+              529.2,
+              980.0078125,
+              566.2
+            ]
+          },
+          {
+            "id": "supply-label",
+            "text": "Aanbod / MK",
+            "bbox": [
+              802.0,
+              248.44615399999998,
+              1033.0,
+              277.446154
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      },
+      {
+        "stem": "2.3.2_ex_3",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Fruitrepen",
+            "bbox": [
+              510.0,
+              39.0,
+              690.0,
+              76.0
+            ]
+          },
+          {
+            "id": "p-title",
+            "text": "P (€ per reep)",
+            "bbox": [
+              26.0,
+              327.9921875,
+              63.0,
+              571.9921875
+            ]
+          },
+          {
+            "id": "pnum-0",
+            "text": "0",
+            "bbox": [
+              133.0,
+              705.0,
+              155.0,
+              734.0
+            ]
+          },
+          {
+            "id": "pnum-6",
+            "text": "6",
+            "bbox": [
+              133.0,
+              615.0,
+              155.0,
+              644.0
+            ]
+          },
+          {
+            "id": "pnum-12",
+            "text": "12",
+            "bbox": [
+              111.0,
+              525.0,
+              155.0,
+              554.0
+            ]
+          },
+          {
+            "id": "pnum-18",
+            "text": "18",
+            "bbox": [
+              111.0,
+              435.0,
+              155.0,
+              464.0
+            ]
+          },
+          {
+            "id": "pnum-24",
+            "text": "24",
+            "bbox": [
+              111.0,
+              345.0,
+              155.0,
+              374.0
+            ]
+          },
+          {
+            "id": "pnum-30",
+            "text": "30",
+            "bbox": [
+              111.0,
+              255.0,
+              155.0,
+              284.0
+            ]
+          },
+          {
+            "id": "pnum-36",
+            "text": "36",
+            "bbox": [
+              111.0,
+              165.0,
+              155.0,
+              194.0
+            ]
+          },
+          {
+            "id": "qnum-0",
+            "text": "0",
+            "bbox": [
+              169.0,
+              761.0,
+              191.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-12",
+            "text": "12",
+            "bbox": [
+              308.0,
+              761.0,
+              352.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-24",
+            "text": "24",
+            "bbox": [
+              458.0,
+              761.0,
+              502.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-36",
+            "text": "36",
+            "bbox": [
+              608.0,
+              761.0,
+              652.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-48",
+            "text": "48",
+            "bbox": [
+              758.0,
+              761.0,
+              802.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-60",
+            "text": "60",
+            "bbox": [
+              908.0,
+              761.0,
+              952.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-72",
+            "text": "72",
+            "bbox": [
+              1058.0,
+              761.0,
+              1102.0,
+              790.0
+            ]
+          },
+          {
+            "id": "q-title",
+            "text": "Q (fruitrepen)",
+            "bbox": [
+              512.5,
+              831.0,
+              747.5,
+              868.0
+            ]
+          },
+          {
+            "id": "demand-label",
+            "text": "Vraag",
+            "bbox": [
+              874.0078125,
+              529.2,
+              980.0078125,
+              566.2
+            ]
+          },
+          {
+            "id": "supply-label",
+            "text": "Aanbod / MK",
+            "bbox": [
+              802.0,
+              324.6,
+              1033.0,
+              353.6
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      },
+      {
+        "stem": "2.3.2_ex_4",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Concertkaartjes",
+            "bbox": [
+              461.0,
+              39.0,
+              739.0,
+              76.0
+            ]
+          },
+          {
+            "id": "p-title",
+            "text": "P (€ per kaartje)",
+            "bbox": [
+              26.0,
+              307.9921875,
+              63.0,
+              591.9921875
+            ]
+          },
+          {
+            "id": "pnum-0",
+            "text": "0",
+            "bbox": [
+              133.0,
+              705.0,
+              155.0,
+              734.0
+            ]
+          },
+          {
+            "id": "pnum-10",
+            "text": "10",
+            "bbox": [
+              111.0,
+              597.0,
+              155.0,
+              626.0
+            ]
+          },
+          {
+            "id": "pnum-20",
+            "text": "20",
+            "bbox": [
+              111.0,
+              489.0,
+              155.0,
+              518.0
+            ]
+          },
+          {
+            "id": "pnum-30",
+            "text": "30",
+            "bbox": [
+              111.0,
+              381.0,
+              155.0,
+              410.0
+            ]
+          },
+          {
+            "id": "pnum-40",
+            "text": "40",
+            "bbox": [
+              111.0,
+              273.0,
+              155.0,
+              302.0
+            ]
+          },
+          {
+            "id": "pnum-50",
+            "text": "50",
+            "bbox": [
+              111.0,
+              165.0,
+              155.0,
+              194.0
+            ]
+          },
+          {
+            "id": "qnum-0",
+            "text": "0",
+            "bbox": [
+              169.0,
+              761.0,
+              191.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-20",
+            "text": "20",
+            "bbox": [
+              338.0,
+              761.0,
+              382.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-40",
+            "text": "40",
+            "bbox": [
+              518.0,
+              761.0,
+              562.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-60",
+            "text": "60",
+            "bbox": [
+              698.0,
+              761.0,
+              742.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-80",
+            "text": "80",
+            "bbox": [
+              878.0,
+              761.0,
+              922.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-100",
+            "text": "100",
+            "bbox": [
+              1047.0,
+              761.0,
+              1113.0,
+              790.0
+            ]
+          },
+          {
+            "id": "q-title",
+            "text": "Q (kaartjes)",
+            "bbox": [
+              526.5,
+              831.0,
+              733.5,
+              868.0
+            ]
+          },
+          {
+            "id": "demand-label",
+            "text": "Vraag",
+            "bbox": [
+              874.0078125,
+              529.2,
+              980.0078125,
+              566.2
+            ]
+          },
+          {
+            "id": "supply-label",
+            "text": "Aanbod / MK",
+            "bbox": [
+              802.0,
+              360.6,
+              1033.0,
+              389.6
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      },
+      {
+        "stem": "2.3.2_ex_5",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Kaarsen",
+            "bbox": [
+              526.0,
+              39.0,
+              674.0,
+              68.0
+            ]
+          },
+          {
+            "id": "p-title",
+            "text": "P (€ per kaars)",
+            "bbox": [
+              26.0,
+              318.9921875,
+              63.0,
+              580.9921875
+            ]
+          },
+          {
+            "id": "pnum-0",
+            "text": "0",
+            "bbox": [
+              133.0,
+              705.0,
+              155.0,
+              734.0
+            ]
+          },
+          {
+            "id": "pnum-6.5",
+            "text": "6,5",
+            "bbox": [
+              100.0,
+              570.0,
+              155.0,
+              605.0
+            ]
+          },
+          {
+            "id": "pnum-19.5",
+            "text": "19,5",
+            "bbox": [
+              78.0,
+              300.0,
+              155.0,
+              335.0
+            ]
+          },
+          {
+            "id": "pnum-26",
+            "text": "26",
+            "bbox": [
+              111.0,
+              165.0,
+              155.0,
+              194.0
+            ]
+          },
+          {
+            "id": "qnum-0",
+            "text": "0",
+            "bbox": [
+              169.0,
+              761.0,
+              191.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-13",
+            "text": "13",
+            "bbox": [
+              383.0,
+              761.0,
+              427.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-39",
+            "text": "39",
+            "bbox": [
+              833.0,
+              761.0,
+              877.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-52",
+            "text": "52",
+            "bbox": [
+              1058.0,
+              761.0,
+              1102.0,
+              790.0
+            ]
+          },
+          {
+            "id": "pe-number",
+            "text": "14",
+            "bbox": [
+              111.0,
+              414.230769,
+              155.0,
+              443.230769
+            ]
+          },
+          {
+            "id": "qe-number",
+            "text": "24",
+            "bbox": [
+              573.384615,
+              761.0,
+              617.384615,
+              790.0
+            ]
+          },
+          {
+            "id": "q-title",
+            "text": "Q (kaarsen)",
+            "bbox": [
+              525.5,
+              831.0,
+              734.5,
+              868.0
+            ]
+          },
+          {
+            "id": "demand-label",
+            "text": "Vraag",
+            "bbox": [
+              874.0078125,
+              529.2,
+              980.0078125,
+              566.2
+            ]
+          },
+          {
+            "id": "supply-label",
+            "text": "Aanbod / MK",
+            "bbox": [
+              802.0,
+              248.44615399999998,
+              1033.0,
+              277.446154
+            ]
+          },
+          {
+            "id": "e-label",
+            "text": "E",
+            "bbox": [
+              685.384615,
+              330.230769,
+              712.384615,
+              359.230769
+            ]
+          },
+          {
+            "id": "cs-label",
+            "text": "CS",
+            "bbox": [
+              235.07692300000002,
+              314.538462,
+              291.076923,
+              343.538462
+            ]
+          },
+          {
+            "id": "ps-label",
+            "text": "PS",
+            "bbox": [
+              236.07692300000002,
+              464.076923,
+              290.076923,
+              493.076923
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      },
+      {
+        "stem": "2.3.2_ex_6",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Fruitrepen",
+            "bbox": [
+              510.0,
+              39.0,
+              690.0,
+              76.0
+            ]
+          },
+          {
+            "id": "p-title",
+            "text": "P (€ per reep)",
+            "bbox": [
+              26.0,
+              327.9921875,
+              63.0,
+              571.9921875
+            ]
+          },
+          {
+            "id": "pnum-0",
+            "text": "0",
+            "bbox": [
+              133.0,
+              705.0,
+              155.0,
+              734.0
+            ]
+          },
+          {
+            "id": "pnum-6",
+            "text": "6",
+            "bbox": [
+              133.0,
+              615.0,
+              155.0,
+              644.0
+            ]
+          },
+          {
+            "id": "pnum-12",
+            "text": "12",
+            "bbox": [
+              111.0,
+              525.0,
+              155.0,
+              554.0
+            ]
+          },
+          {
+            "id": "pnum-24",
+            "text": "24",
+            "bbox": [
+              111.0,
+              345.0,
+              155.0,
+              374.0
+            ]
+          },
+          {
+            "id": "pnum-30",
+            "text": "30",
+            "bbox": [
+              111.0,
+              255.0,
+              155.0,
+              284.0
+            ]
+          },
+          {
+            "id": "pnum-36",
+            "text": "36",
+            "bbox": [
+              111.0,
+              165.0,
+              155.0,
+              194.0
+            ]
+          },
+          {
+            "id": "qnum-0",
+            "text": "0",
+            "bbox": [
+              169.0,
+              761.0,
+              191.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-12",
+            "text": "12",
+            "bbox": [
+              308.0,
+              761.0,
+              352.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-24",
+            "text": "24",
+            "bbox": [
+              458.0,
+              761.0,
+              502.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-48",
+            "text": "48",
+            "bbox": [
+              758.0,
+              761.0,
+              802.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-60",
+            "text": "60",
+            "bbox": [
+              908.0,
+              761.0,
+              952.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-72",
+            "text": "72",
+            "bbox": [
+              1058.0,
+              761.0,
+              1102.0,
+              790.0
+            ]
+          },
+          {
+            "id": "pe-number",
+            "text": "16",
+            "bbox": [
+              111.0,
+              465.0,
+              155.0,
+              494.0
+            ]
+          },
+          {
+            "id": "qe-number",
+            "text": "40",
+            "bbox": [
+              658.0,
+              761.0,
+              702.0,
+              790.0
+            ]
+          },
+          {
+            "id": "q-title",
+            "text": "Q (fruitrepen)",
+            "bbox": [
+              512.5,
+              831.0,
+              747.5,
+              868.0
+            ]
+          },
+          {
+            "id": "demand-label",
+            "text": "Vraag",
+            "bbox": [
+              874.0078125,
+              529.2,
+              980.0078125,
+              566.2
+            ]
+          },
+          {
+            "id": "supply-label",
+            "text": "Aanbod / MK",
+            "bbox": [
+              802.0,
+              324.6,
+              1033.0,
+              353.6
+            ]
+          },
+          {
+            "id": "e-label",
+            "text": "E",
+            "bbox": [
+              770.0,
+              381.0,
+              797.0,
+              410.0
+            ]
+          },
+          {
+            "id": "cs-label",
+            "text": "CS",
+            "bbox": [
+              252.0,
+              345.0,
+              308.0,
+              374.0
+            ]
+          },
+          {
+            "id": "ps-label",
+            "text": "PS",
+            "bbox": [
+              253.0,
+              525.0,
+              307.0,
+              554.0
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      },
+      {
+        "stem": "2.3.2_ex_7",
+        "text": [
+          {
+            "id": "scene",
+            "text": "Concertkaartjes",
+            "bbox": [
+              461.0,
+              39.0,
+              739.0,
+              76.0
+            ]
+          },
+          {
+            "id": "p-title",
+            "text": "P (€ per kaartje)",
+            "bbox": [
+              26.0,
+              307.9921875,
+              63.0,
+              591.9921875
+            ]
+          },
+          {
+            "id": "pnum-0",
+            "text": "0",
+            "bbox": [
+              133.0,
+              705.0,
+              155.0,
+              734.0
+            ]
+          },
+          {
+            "id": "pnum-10",
+            "text": "10",
+            "bbox": [
+              111.0,
+              597.0,
+              155.0,
+              626.0
+            ]
+          },
+          {
+            "id": "pnum-30",
+            "text": "30",
+            "bbox": [
+              111.0,
+              381.0,
+              155.0,
+              410.0
+            ]
+          },
+          {
+            "id": "pnum-40",
+            "text": "40",
+            "bbox": [
+              111.0,
+              273.0,
+              155.0,
+              302.0
+            ]
+          },
+          {
+            "id": "pnum-50",
+            "text": "50",
+            "bbox": [
+              111.0,
+              165.0,
+              155.0,
+              194.0
+            ]
+          },
+          {
+            "id": "qnum-0",
+            "text": "0",
+            "bbox": [
+              169.0,
+              761.0,
+              191.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-20",
+            "text": "20",
+            "bbox": [
+              338.0,
+              761.0,
+              382.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-40",
+            "text": "40",
+            "bbox": [
+              518.0,
+              761.0,
+              562.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-80",
+            "text": "80",
+            "bbox": [
+              878.0,
+              761.0,
+              922.0,
+              790.0
+            ]
+          },
+          {
+            "id": "qnum-100",
+            "text": "100",
+            "bbox": [
+              1047.0,
+              761.0,
+              1113.0,
+              790.0
+            ]
+          },
+          {
+            "id": "pe-number",
+            "text": "20",
+            "bbox": [
+              111.0,
+              489.0,
+              155.0,
+              518.0
+            ]
+          },
+          {
+            "id": "qe-number",
+            "text": "60",
+            "bbox": [
+              698.0,
+              761.0,
+              742.0,
+              790.0
+            ]
+          },
+          {
+            "id": "q-title",
+            "text": "Q (kaartjes)",
+            "bbox": [
+              526.5,
+              831.0,
+              733.5,
+              868.0
+            ]
+          },
+          {
+            "id": "demand-label",
+            "text": "Vraag",
+            "bbox": [
+              874.0078125,
+              529.2,
+              980.0078125,
+              566.2
+            ]
+          },
+          {
+            "id": "supply-label",
+            "text": "Aanbod / MK",
+            "bbox": [
+              802.0,
+              360.6,
+              1033.0,
+              389.6
+            ]
+          },
+          {
+            "id": "e-label",
+            "text": "E",
+            "bbox": [
+              810.0,
+              405.0,
+              837.0,
+              434.0
+            ]
+          },
+          {
+            "id": "cs-label",
+            "text": "CS",
+            "bbox": [
+              260.0,
+              359.4,
+              316.0,
+              388.4
+            ]
+          },
+          {
+            "id": "ps-label",
+            "text": "PS",
+            "bbox": [
+              261.0,
+              553.8,
+              315.0,
+              582.8
+            ]
+          }
+        ],
+        "supply_contrast": 4.500247327247552,
+        "geometry": "PASS"
+      }
+    ],
+    "personal_inspection": "NOT_PERFORMED_BY_SCRIPT",
+    "production_ready": false
+  },
+  "gray_records": [
+    {
+      "record": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected.json",
+      "sha256": "b56cc8f67655f4de8df13f46a0ae3d163aa33d6328768c6dcb5851e7fc42a9a5",
+      "rows": [
+        {
+          "identity": "paragraaf/1",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "9bd113032cb9842f96290dfde292cd65fb1301bc53f09fe183bda1b65604bc38",
+          "raw_sha256": "1e76c016c842ecfe63265ad9c462ae1ced7d87ce9f50c86f2ebf9630b8c97e40"
+        },
+        {
+          "identity": "paragraaf/2",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "d0d51e047638e949011de9dc3280004ea07bb4e94c9074fde6472ec778ec4680",
+          "raw_sha256": "f0f2f4539912d5d4fb66597a2777b0ed7689999fb29ada7ebe8554899914665d"
+        },
+        {
+          "identity": "paragraaf/3",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "03dcc8db24a78febd6c5389423bdb6126439c905040c6e0edbd0653000dcb789",
+          "raw_sha256": "7f9b1f2c850c5e398c897279d62addaeaab31404e86008ad65755c110e682bf8"
+        },
+        {
+          "identity": "paragraaf/4",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "90dbd7bf958cadfa21444d37267e384e9176965883eb797bd25d48a0890b4c9a",
+          "raw_sha256": "b78049d04c835a74c5ccce8288fefc5b4ad384baaab3908288c57eee5ed4316e"
+        },
+        {
+          "identity": "paragraaf/5",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "647245121e8fa95b95f740c66fc006b781fe14e73e7135b8d749d4543a58c215",
+          "raw_sha256": "21ba1df108435e7e119c83d91f09b931f212778c0c3e07aafa1faf2e2bdb3082"
+        },
+        {
+          "identity": "paragraaf/6",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "d4f694a772b9ddd11f6c3d07355bd84e963c5533434e6ba0a1d326cef8bd81a9",
+          "raw_sha256": "465c87468cf4628cbaa01159338524ac212c21e5393df4549026a5ce5812889d"
+        },
+        {
+          "identity": "paragraaf/7",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "8dd4d3c8aa48378de49d07d5cda87755215dac15f0305b7d7fbc30c32e62ced2",
+          "raw_sha256": "b5c49e2ed259698e7f3feafa2a1a878359804f056305c6dd95d28f965184d22f"
+        },
+        {
+          "identity": "paragraaf/8",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "d6be0cc3bec26ce8b7f2dbf0df1ab821db7fcb96590149da561493885625645b",
+          "raw_sha256": "8ba3af9ecba1d93aea7ba7b7a542818683d1bcdcdab412477fe11d13d78a0d01"
+        },
+        {
+          "identity": "paragraaf/9",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "f12bb5eff036683bd225786d2af98f4fa7c5c5db12a4a5ed501df9963df0ca9c",
+          "raw_sha256": "99ec3a5a3c34c057808707b52cef8e870b50918de7afbd46e043b5ff20bd7f7f"
+        },
+        {
+          "identity": "paragraaf/10",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "3013056df853165569c18b9b7246ab26d444b06421b8ab35691989b5f2a503ab",
+          "raw_sha256": "782f4675534b7bb06b8a76b50dcbeccbd142970b23e022582039e97ce7eb1c23"
+        },
+        {
+          "identity": "paragraaf/11",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "7ceae6b4409394871b1af8fd551e693f3d8c0c3d2c89349dc77103300012d040",
+          "raw_sha256": "ba8da1b626697903527d01c4ae0a252aa7f7a37fc577bc9c79d47a58b637c9d2"
+        },
+        {
+          "identity": "paragraaf/12",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "f2675d110d9e7ddf692294f236c82b594c2b38b9da5df8cd8a843a32ff3f94f2",
+          "raw_sha256": "777e1820dbb083a558b9ba52c51c4feaa6bf2944da92a91d5a5a9147b853aec6"
+        },
+        {
+          "identity": "paragraaf/13",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "d900758bc59e7833e843fa79fce63ecf9864494ae1f7a9da5a769cc71058d26a",
+          "raw_sha256": "ff55f3c63b774f3fdaf87d8b5767124d638d5aba845c1025a6662cb45d628e62"
+        },
+        {
+          "identity": "paragraaf/14",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "fcbd5ac69b5e1c7365897bd69a20d297341864efdc7288ee0b16c40261aaa72b",
+          "raw_sha256": "f7a0a98963d6c992032cb0b7b3d5ead1fcb4a3964631cb951712be2d4bc33a2d"
+        },
+        {
+          "identity": "paragraaf/15",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "f23cea169d2f66981251a1b47b6fa4e630cddfdd43e125733211971d1a107d22",
+          "raw_sha256": "8ce07b746488b170c1c30ab9adad933519464aa77feaada48e896c67be0ff44b"
+        },
+        {
+          "identity": "paragraaf/16",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "0cf8386b22de7c1b6b0bf2b54dca2469694530cdc33ae8bd12ecf99f23fc7245",
+          "raw_sha256": "ab4052399277dcd81e0924689f43ab2f62a7530e7d608d3b9d037363a3ba8b6b"
+        },
+        {
+          "identity": "paragraaf/17",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "dffba9252182f50fa7f3b18014f02fe4b6b917d5ec92e36e9d154ae72fd72c1a",
+          "raw_sha256": "167056e28e4e0ea18fa51a9abf0326470f14faf30bf3352b14c9189a0047a296"
+        },
+        {
+          "identity": "paragraaf/18",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "75bcb98d32362f52c538389e7b223b5568ec36116dcf2c78be7753be3ad21af9",
+          "raw_sha256": "55184babb7d9df0fbad146db214642965819a76de5412c6b5951edd54c549993"
+        },
+        {
+          "identity": "paragraaf/19",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "c38d16c52342869444a9a99c1c254abd0762f7483c5f0911a887e9b44a922abd",
+          "raw_sha256": "1ce0bbf09e0dd74e47aed85dc47d81fb00ec0f446eb51ec60cec78451ce81bca"
+        },
+        {
+          "identity": "opgaven/1",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "e4573760debc78448e35e183e74012d23eac407aa03ba74f352d70a9119b9d50",
+          "raw_sha256": "59bd79a67b726d47bf972f9fc517b011105bf514b1a4193bd98a707df5c5cbfa"
+        },
+        {
+          "identity": "opgaven/2",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "2af9edf08567653cf0da2005a8e95796ec9c2cad9eb7488f3e03e85489b7aa26",
+          "raw_sha256": "0c6725639d7fec36f82a99fab35581a58f773e021b5b56a78ae2e8b453e61da0"
+        },
+        {
+          "identity": "opgaven/3",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "768dfbac64ca95ec4fff23d76985839b7d6b7fa01ec2161f36ab237e1afc75a5",
+          "raw_sha256": "66edb06cf519fa7799c090264427f3901aba59a87d79a3c5911955511e08287a"
+        },
+        {
+          "identity": "opgaven/4",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "a12dd82312c58814a4502b57e24e7cff81abf80beb522e1895c2badaf4b31827",
+          "raw_sha256": "476c375777e9d1280a2996dd838e1c61ee41ac235951fd24c29667d34a969f42"
+        },
+        {
+          "identity": "opgaven/5",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "3d8fd45666ced0edcd6fda58f8fe30d738ca27dedc99a634d1e6afdc366629d1",
+          "raw_sha256": "73662199e61f7441cf9e22047c99040724b0230ad432646d3a2425c9f049d156"
+        },
+        {
+          "identity": "opgaven/6",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "5295483c2095bab71a58696518b086faa2ce783ef88335934a9a7962df1dd997",
+          "raw_sha256": "df135df21ee637323daf6570318782b754315ecc63a483069dc41cde9399216e"
+        },
+        {
+          "identity": "opgaven/7",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "6a5055c6c551097f229da68a5a6533faf6b3f30722dd7e4db751314c4f030554",
+          "raw_sha256": "840d0570ec3898a87b05b9a00ef4aa306084ba8416773c735b5a14d7690815ec"
+        },
+        {
+          "identity": "opgaven/8",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "db3d73e98f1c7f382f020998aebb574259c0a518b54b752269fe62540b154c7f",
+          "raw_sha256": "76e536d4d67012340827cf1d627228f0f54c9601a5aeedec00cc6236f5d1dbed"
+        },
+        {
+          "identity": "opgaven/9",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "9deb9c59afce70e4ffbcfea398ed35298619994861ad35e768a7e44df20aac71",
+          "raw_sha256": "952108a4a2bfc41c599468b1080ffb4e6173f96eb88ef9cf6e05e01215981eb8"
+        },
+        {
+          "identity": "opgaven/10",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "dfaa59af206a60871d0e3d0b578eb9ce0b847ba18ae2ac818419f2117669421b",
+          "raw_sha256": "70bc0f714bb05f7fc8390ebb77d5dcfba1cba1229e7743a1918fb7b98ec0251a"
+        },
+        {
+          "identity": "opgaven/11",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "006319dea246aea51dcaa0a02106dc0237d41898eb472451b9d97fbac1fbf1a6",
+          "raw_sha256": "3a75757a1683c267849ac273967bef8ef897767d1b5fac776c8ab42af8567441"
+        },
+        {
+          "identity": "antwoorden/1",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "1b4a48bb6c0c19feb35813c57d528fef614ec77f6205967541747b4f8fff470a",
+          "raw_sha256": "0e6864174a24a2d0411eea624c057d34189320ba2a3a1db64a17cd3eba2c760e"
+        },
+        {
+          "identity": "antwoorden/2",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "9cd1600aa37dc0c527ae30b449eecb278624d17739059e2ce7a5b14a85d21c02",
+          "raw_sha256": "6b394ce5a00fa290acd583c1cad011fa5821177453fcde9abcd8fc780f53e804"
+        },
+        {
+          "identity": "antwoorden/3",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "9d5fd9442c374e7e21f7c6c65e2b2ca18ede7f23bcc4da77f94e311330cb9d94",
+          "raw_sha256": "2f6678018f3af7a2f21167195a1456b4c0a84d3ff50e5b0eca43aac9e536873a"
+        },
+        {
+          "identity": "antwoorden/4",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "1d9fa883248f7c7c5bdc0d424adeefddf227d4a359d67a6b779c00591dfdf48d",
+          "raw_sha256": "d4a38ea0d4e11add15f60401e4edcd53c00c7051ed2265b663d259ce17b7937c"
+        },
+        {
+          "identity": "antwoorden/5",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "d9c990aab2ade29468f3145480b349ce10b70d9402fa4a1ec057e96c0138d810",
+          "raw_sha256": "052e5f1145de48f314b1eeb95cc3c82134b277b1689be4dac63db79abec897b4"
+        },
+        {
+          "identity": "antwoorden/6",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "b3faf4af9e067cc5f82ff43eed613a0f853f3cdffbe0ae9a3208940a7c1467c2",
+          "raw_sha256": "ef469cf8c8c8005c5ece86e6faeb662ce5f8773a4dc2f93e17a469fbc4a8a04f"
+        },
+        {
+          "identity": "antwoorden/7",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "10039bc07c2b6c5c81f0c7e6caa901bff3bc4993a340ae7c27d4bdb969762b56",
+          "raw_sha256": "34e719b7316c811ca458f27c4fd32738891c2d37d7de874d1656e44a88b5a02a"
+        },
+        {
+          "identity": "antwoorden/8",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "7f03983262821c83a5b379787bcf090e02ca189402650eda5f40e1b3117a18b9",
+          "raw_sha256": "392b4a2109aebf63a54308a968ce5ad6ae7c8264fedef45e6e124fa74c6b120e"
+        },
+        {
+          "identity": "antwoorden/9",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "212a44f59d6ed261c961983b2e8a2b81dc8aad3f2084befff60a2fb08702ce41",
+          "raw_sha256": "f22ee3f754f37a4a9d91efb97af15da3d27f9b2c5f7b776b5058b8d549561b9a"
+        },
+        {
+          "identity": "antwoorden/10",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "229cecd4b72b2832373402ccfb5f87b9c630bd00a783615e53714d15815e0343",
+          "raw_sha256": "3cf3b2395db27bb98fb4fb4d240cf37da967fca82122b1540ff8fea53d9e4554"
+        },
+        {
+          "identity": "antwoorden/11",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "7bb1518ca75cb0ae399a2af6c7f29276b4a0d0ac9239c283fb54a58002ff2ffb",
+          "raw_sha256": "35062b3eb74b9aeb4d1714d52ab213f4d989c0b31e817a3735576b99a19419b6"
+        },
+        {
+          "identity": "antwoorden/12",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "2f1c6f0b8adf2e8457be7e047cce20b2c22cf891562e910c2d1cf9fdb70fe882",
+          "raw_sha256": "c7fd7dfc0b87bbbe2d70e91a29873d6aa4ef0cdbc7369a7fff55ca2285e1346f"
+        },
+        {
+          "identity": "native-figure/2.3.2_fig_1",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "d63579622fb72e6402be8488814aa94fbd3ac783ed2107d7475ecd89b3e7deba",
+          "raw_sha256": "94a7eb1850cd2da6c54627c21c4724922f0eb17e214632acfa9a45ed00c3016e"
+        },
+        {
+          "identity": "native-figure/2.3.2_fig_2",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "a429f4506620512dcae40d00ab649a21b297a4020c16d83e2af921d0afd1b7b7",
+          "raw_sha256": "cec1354fec5837ce633d169f3e62be5440f69dbda4d8457d5f983e902b9083cf"
+        },
+        {
+          "identity": "native-figure/2.3.2_fig_3",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "42cf2552716fd7b910b2c357bf1ef31f66b9dbf6020a6321a048585349e691ca",
+          "raw_sha256": "593681382e15f1abfcd95ac07e0022f286b3f54ebaa681b5eacf8905f123a854"
+        },
+        {
+          "identity": "native-figure/2.3.2_fig_4",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "67cd5cd584e2862226f531e76ef1f21b961552e5cb3ee790337960d3516dc202",
+          "raw_sha256": "07311490fb3a8a3ff8f24af5e1d9306c006c86c51f06a74dc151717aac143b64"
+        },
+        {
+          "identity": "native-figure/2.3.2_fig_5",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "c3e2f46b0dc24f3585c98a999781f950efa459b7a571fe3915f3e9b2541dc753",
+          "raw_sha256": "87a621d4944ab8b8ae743c65a00ae093e84233ea981a6997c366dcd208d882c8"
+        },
+        {
+          "identity": "native-figure/2.3.2_fig_6",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "ed54d0c3f969c9b2100bf5a75a98558dd6f0fc34c54d10889a15370b9542602b",
+          "raw_sha256": "49b49a51de007aa5d04f9f68b655395ead14125fd0579a129bff8685b07921b3"
+        },
+        {
+          "identity": "native-figure/2.3.2_we_1",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "2992e0946883cd33c543790607ab2c5283895c50c31379a1f3efb767191ed3e1",
+          "raw_sha256": "99e9f2aab6fccfcb4467e2286093a7b22d06ecc3f84f5bf02a7f083949f00133"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_1",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "67a7a6ddcdd7b683c05cab484e6e3d8e8df21fc66652515aad2be365ac6037b5",
+          "raw_sha256": "f7f5135787ec8e534f31638403e162c6b7dfb717b02291019232b23ea8be8ade"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_2",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "c8f9320a29c444e832983a3349c3a7dedc0bd6a77baff5e8d44fdb285b14c1bd",
+          "raw_sha256": "ad2e66a3bfb809144ab1eeb706167824bdfb6611da7c045bb04ebef865112266"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_3",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "b7825db0b876be7f0f06e7b4b8f9a534e73b8dea949039f48984435e5cfcc06a",
+          "raw_sha256": "b0bd531d10f038f1c3c34cd22c9733a7dda35add64bfe7f65c577b151395bd8a"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_4",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "b2f96363918489b517d09612aa3c774aaa878ba9d26f80b361a97dea8f84204d",
+          "raw_sha256": "235542713376f5e4db5ea59b459c0bd4d8072e6b46b8e86aef918f4272508093"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_5",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "363699bcc4ffb77d290fa68095d9515d7f182d5d663326faed1f5afe5866bdf2",
+          "raw_sha256": "86eb68b9da038e1abe5df91ead6c7a276b3fdb4b9b8aa0f3cf936ec1ef2015ae"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_6",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "f103c3525c34b32a349352916f6b3d25e0221073b11d6a6ff27e4e98978883d7",
+          "raw_sha256": "0e2e3e0e91171305401e715c2b03919eeecc8edaf41b434d26b08ecd5ef12acb"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_7",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "58783abbc775b90314b8fbbb92d7c869466be58d83611fb1882718e3de93aae5",
+          "raw_sha256": "d24e85e4f6f1a6e70e56f49b82163e3759c5012b98ea7bc0b1968b926fdb69a3"
+        }
+      ]
+    },
+    {
+      "record": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-grayscale-final.json",
+      "sha256": "94a775cf23b89374d473cd891cde2a07617d23b0d48acb69653dfe1d6b01f8f9",
+      "rows": [
+        {
+          "identity": "paragraaf/1",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "9bd113032cb9842f96290dfde292cd65fb1301bc53f09fe183bda1b65604bc38",
+          "raw_sha256": "1e76c016c842ecfe63265ad9c462ae1ced7d87ce9f50c86f2ebf9630b8c97e40"
+        },
+        {
+          "identity": "paragraaf/2",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "d0d51e047638e949011de9dc3280004ea07bb4e94c9074fde6472ec778ec4680",
+          "raw_sha256": "f0f2f4539912d5d4fb66597a2777b0ed7689999fb29ada7ebe8554899914665d"
+        },
+        {
+          "identity": "paragraaf/3",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "03dcc8db24a78febd6c5389423bdb6126439c905040c6e0edbd0653000dcb789",
+          "raw_sha256": "7f9b1f2c850c5e398c897279d62addaeaab31404e86008ad65755c110e682bf8"
+        },
+        {
+          "identity": "paragraaf/4",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "90dbd7bf958cadfa21444d37267e384e9176965883eb797bd25d48a0890b4c9a",
+          "raw_sha256": "b78049d04c835a74c5ccce8288fefc5b4ad384baaab3908288c57eee5ed4316e"
+        },
+        {
+          "identity": "paragraaf/5",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "647245121e8fa95b95f740c66fc006b781fe14e73e7135b8d749d4543a58c215",
+          "raw_sha256": "21ba1df108435e7e119c83d91f09b931f212778c0c3e07aafa1faf2e2bdb3082"
+        },
+        {
+          "identity": "paragraaf/6",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "d4f694a772b9ddd11f6c3d07355bd84e963c5533434e6ba0a1d326cef8bd81a9",
+          "raw_sha256": "465c87468cf4628cbaa01159338524ac212c21e5393df4549026a5ce5812889d"
+        },
+        {
+          "identity": "paragraaf/7",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "8dd4d3c8aa48378de49d07d5cda87755215dac15f0305b7d7fbc30c32e62ced2",
+          "raw_sha256": "b5c49e2ed259698e7f3feafa2a1a878359804f056305c6dd95d28f965184d22f"
+        },
+        {
+          "identity": "paragraaf/8",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "d6be0cc3bec26ce8b7f2dbf0df1ab821db7fcb96590149da561493885625645b",
+          "raw_sha256": "8ba3af9ecba1d93aea7ba7b7a542818683d1bcdcdab412477fe11d13d78a0d01"
+        },
+        {
+          "identity": "paragraaf/9",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "f12bb5eff036683bd225786d2af98f4fa7c5c5db12a4a5ed501df9963df0ca9c",
+          "raw_sha256": "99ec3a5a3c34c057808707b52cef8e870b50918de7afbd46e043b5ff20bd7f7f"
+        },
+        {
+          "identity": "paragraaf/10",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "3013056df853165569c18b9b7246ab26d444b06421b8ab35691989b5f2a503ab",
+          "raw_sha256": "782f4675534b7bb06b8a76b50dcbeccbd142970b23e022582039e97ce7eb1c23"
+        },
+        {
+          "identity": "paragraaf/11",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "7ceae6b4409394871b1af8fd551e693f3d8c0c3d2c89349dc77103300012d040",
+          "raw_sha256": "ba8da1b626697903527d01c4ae0a252aa7f7a37fc577bc9c79d47a58b637c9d2"
+        },
+        {
+          "identity": "paragraaf/12",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "f2675d110d9e7ddf692294f236c82b594c2b38b9da5df8cd8a843a32ff3f94f2",
+          "raw_sha256": "777e1820dbb083a558b9ba52c51c4feaa6bf2944da92a91d5a5a9147b853aec6"
+        },
+        {
+          "identity": "paragraaf/13",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "d900758bc59e7833e843fa79fce63ecf9864494ae1f7a9da5a769cc71058d26a",
+          "raw_sha256": "ff55f3c63b774f3fdaf87d8b5767124d638d5aba845c1025a6662cb45d628e62"
+        },
+        {
+          "identity": "paragraaf/14",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "fcbd5ac69b5e1c7365897bd69a20d297341864efdc7288ee0b16c40261aaa72b",
+          "raw_sha256": "f7a0a98963d6c992032cb0b7b3d5ead1fcb4a3964631cb951712be2d4bc33a2d"
+        },
+        {
+          "identity": "paragraaf/15",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "f23cea169d2f66981251a1b47b6fa4e630cddfdd43e125733211971d1a107d22",
+          "raw_sha256": "8ce07b746488b170c1c30ab9adad933519464aa77feaada48e896c67be0ff44b"
+        },
+        {
+          "identity": "paragraaf/16",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "0cf8386b22de7c1b6b0bf2b54dca2469694530cdc33ae8bd12ecf99f23fc7245",
+          "raw_sha256": "ab4052399277dcd81e0924689f43ab2f62a7530e7d608d3b9d037363a3ba8b6b"
+        },
+        {
+          "identity": "paragraaf/17",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "dffba9252182f50fa7f3b18014f02fe4b6b917d5ec92e36e9d154ae72fd72c1a",
+          "raw_sha256": "167056e28e4e0ea18fa51a9abf0326470f14faf30bf3352b14c9189a0047a296"
+        },
+        {
+          "identity": "paragraaf/18",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "75bcb98d32362f52c538389e7b223b5568ec36116dcf2c78be7753be3ad21af9",
+          "raw_sha256": "55184babb7d9df0fbad146db214642965819a76de5412c6b5951edd54c549993"
+        },
+        {
+          "identity": "paragraaf/19",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "c38d16c52342869444a9a99c1c254abd0762f7483c5f0911a887e9b44a922abd",
+          "raw_sha256": "1ce0bbf09e0dd74e47aed85dc47d81fb00ec0f446eb51ec60cec78451ce81bca"
+        },
+        {
+          "identity": "opgaven/1",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "e4573760debc78448e35e183e74012d23eac407aa03ba74f352d70a9119b9d50",
+          "raw_sha256": "59bd79a67b726d47bf972f9fc517b011105bf514b1a4193bd98a707df5c5cbfa"
+        },
+        {
+          "identity": "opgaven/2",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "2af9edf08567653cf0da2005a8e95796ec9c2cad9eb7488f3e03e85489b7aa26",
+          "raw_sha256": "0c6725639d7fec36f82a99fab35581a58f773e021b5b56a78ae2e8b453e61da0"
+        },
+        {
+          "identity": "opgaven/3",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "768dfbac64ca95ec4fff23d76985839b7d6b7fa01ec2161f36ab237e1afc75a5",
+          "raw_sha256": "66edb06cf519fa7799c090264427f3901aba59a87d79a3c5911955511e08287a"
+        },
+        {
+          "identity": "opgaven/4",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "a12dd82312c58814a4502b57e24e7cff81abf80beb522e1895c2badaf4b31827",
+          "raw_sha256": "476c375777e9d1280a2996dd838e1c61ee41ac235951fd24c29667d34a969f42"
+        },
+        {
+          "identity": "opgaven/5",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "3d8fd45666ced0edcd6fda58f8fe30d738ca27dedc99a634d1e6afdc366629d1",
+          "raw_sha256": "73662199e61f7441cf9e22047c99040724b0230ad432646d3a2425c9f049d156"
+        },
+        {
+          "identity": "opgaven/6",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "5295483c2095bab71a58696518b086faa2ce783ef88335934a9a7962df1dd997",
+          "raw_sha256": "df135df21ee637323daf6570318782b754315ecc63a483069dc41cde9399216e"
+        },
+        {
+          "identity": "opgaven/7",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "6a5055c6c551097f229da68a5a6533faf6b3f30722dd7e4db751314c4f030554",
+          "raw_sha256": "840d0570ec3898a87b05b9a00ef4aa306084ba8416773c735b5a14d7690815ec"
+        },
+        {
+          "identity": "opgaven/8",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "db3d73e98f1c7f382f020998aebb574259c0a518b54b752269fe62540b154c7f",
+          "raw_sha256": "76e536d4d67012340827cf1d627228f0f54c9601a5aeedec00cc6236f5d1dbed"
+        },
+        {
+          "identity": "opgaven/9",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "9deb9c59afce70e4ffbcfea398ed35298619994861ad35e768a7e44df20aac71",
+          "raw_sha256": "952108a4a2bfc41c599468b1080ffb4e6173f96eb88ef9cf6e05e01215981eb8"
+        },
+        {
+          "identity": "opgaven/10",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "dfaa59af206a60871d0e3d0b578eb9ce0b847ba18ae2ac818419f2117669421b",
+          "raw_sha256": "70bc0f714bb05f7fc8390ebb77d5dcfba1cba1229e7743a1918fb7b98ec0251a"
+        },
+        {
+          "identity": "opgaven/11",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "006319dea246aea51dcaa0a02106dc0237d41898eb472451b9d97fbac1fbf1a6",
+          "raw_sha256": "3a75757a1683c267849ac273967bef8ef897767d1b5fac776c8ab42af8567441"
+        },
+        {
+          "identity": "antwoorden/1",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "1b4a48bb6c0c19feb35813c57d528fef614ec77f6205967541747b4f8fff470a",
+          "raw_sha256": "0e6864174a24a2d0411eea624c057d34189320ba2a3a1db64a17cd3eba2c760e"
+        },
+        {
+          "identity": "antwoorden/2",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "9cd1600aa37dc0c527ae30b449eecb278624d17739059e2ce7a5b14a85d21c02",
+          "raw_sha256": "6b394ce5a00fa290acd583c1cad011fa5821177453fcde9abcd8fc780f53e804"
+        },
+        {
+          "identity": "antwoorden/3",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "9d5fd9442c374e7e21f7c6c65e2b2ca18ede7f23bcc4da77f94e311330cb9d94",
+          "raw_sha256": "2f6678018f3af7a2f21167195a1456b4c0a84d3ff50e5b0eca43aac9e536873a"
+        },
+        {
+          "identity": "antwoorden/4",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "1d9fa883248f7c7c5bdc0d424adeefddf227d4a359d67a6b779c00591dfdf48d",
+          "raw_sha256": "d4a38ea0d4e11add15f60401e4edcd53c00c7051ed2265b663d259ce17b7937c"
+        },
+        {
+          "identity": "antwoorden/5",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "d9c990aab2ade29468f3145480b349ce10b70d9402fa4a1ec057e96c0138d810",
+          "raw_sha256": "052e5f1145de48f314b1eeb95cc3c82134b277b1689be4dac63db79abec897b4"
+        },
+        {
+          "identity": "antwoorden/6",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "b3faf4af9e067cc5f82ff43eed613a0f853f3cdffbe0ae9a3208940a7c1467c2",
+          "raw_sha256": "ef469cf8c8c8005c5ece86e6faeb662ce5f8773a4dc2f93e17a469fbc4a8a04f"
+        },
+        {
+          "identity": "antwoorden/7",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "10039bc07c2b6c5c81f0c7e6caa901bff3bc4993a340ae7c27d4bdb969762b56",
+          "raw_sha256": "34e719b7316c811ca458f27c4fd32738891c2d37d7de874d1656e44a88b5a02a"
+        },
+        {
+          "identity": "antwoorden/8",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "7f03983262821c83a5b379787bcf090e02ca189402650eda5f40e1b3117a18b9",
+          "raw_sha256": "392b4a2109aebf63a54308a968ce5ad6ae7c8264fedef45e6e124fa74c6b120e"
+        },
+        {
+          "identity": "antwoorden/9",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "212a44f59d6ed261c961983b2e8a2b81dc8aad3f2084befff60a2fb08702ce41",
+          "raw_sha256": "f22ee3f754f37a4a9d91efb97af15da3d27f9b2c5f7b776b5058b8d549561b9a"
+        },
+        {
+          "identity": "antwoorden/10",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "229cecd4b72b2832373402ccfb5f87b9c630bd00a783615e53714d15815e0343",
+          "raw_sha256": "3cf3b2395db27bb98fb4fb4d240cf37da967fca82122b1540ff8fea53d9e4554"
+        },
+        {
+          "identity": "antwoorden/11",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "7bb1518ca75cb0ae399a2af6c7f29276b4a0d0ac9239c283fb54a58002ff2ffb",
+          "raw_sha256": "35062b3eb74b9aeb4d1714d52ab213f4d989c0b31e817a3735576b99a19419b6"
+        },
+        {
+          "identity": "antwoorden/12",
+          "size": [
+            1241,
+            1754
+          ],
+          "rgb_sha256": "2f1c6f0b8adf2e8457be7e047cce20b2c22cf891562e910c2d1cf9fdb70fe882",
+          "raw_sha256": "c7fd7dfc0b87bbbe2d70e91a29873d6aa4ef0cdbc7369a7fff55ca2285e1346f"
+        },
+        {
+          "identity": "native-figure/2.3.2_fig_1",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "d63579622fb72e6402be8488814aa94fbd3ac783ed2107d7475ecd89b3e7deba",
+          "raw_sha256": "94a7eb1850cd2da6c54627c21c4724922f0eb17e214632acfa9a45ed00c3016e"
+        },
+        {
+          "identity": "native-figure/2.3.2_fig_2",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "a429f4506620512dcae40d00ab649a21b297a4020c16d83e2af921d0afd1b7b7",
+          "raw_sha256": "cec1354fec5837ce633d169f3e62be5440f69dbda4d8457d5f983e902b9083cf"
+        },
+        {
+          "identity": "native-figure/2.3.2_fig_3",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "42cf2552716fd7b910b2c357bf1ef31f66b9dbf6020a6321a048585349e691ca",
+          "raw_sha256": "593681382e15f1abfcd95ac07e0022f286b3f54ebaa681b5eacf8905f123a854"
+        },
+        {
+          "identity": "native-figure/2.3.2_fig_4",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "67cd5cd584e2862226f531e76ef1f21b961552e5cb3ee790337960d3516dc202",
+          "raw_sha256": "07311490fb3a8a3ff8f24af5e1d9306c006c86c51f06a74dc151717aac143b64"
+        },
+        {
+          "identity": "native-figure/2.3.2_fig_5",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "c3e2f46b0dc24f3585c98a999781f950efa459b7a571fe3915f3e9b2541dc753",
+          "raw_sha256": "87a621d4944ab8b8ae743c65a00ae093e84233ea981a6997c366dcd208d882c8"
+        },
+        {
+          "identity": "native-figure/2.3.2_fig_6",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "ed54d0c3f969c9b2100bf5a75a98558dd6f0fc34c54d10889a15370b9542602b",
+          "raw_sha256": "49b49a51de007aa5d04f9f68b655395ead14125fd0579a129bff8685b07921b3"
+        },
+        {
+          "identity": "native-figure/2.3.2_we_1",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "2992e0946883cd33c543790607ab2c5283895c50c31379a1f3efb767191ed3e1",
+          "raw_sha256": "99e9f2aab6fccfcb4467e2286093a7b22d06ecc3f84f5bf02a7f083949f00133"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_1",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "67a7a6ddcdd7b683c05cab484e6e3d8e8df21fc66652515aad2be365ac6037b5",
+          "raw_sha256": "f7f5135787ec8e534f31638403e162c6b7dfb717b02291019232b23ea8be8ade"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_2",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "c8f9320a29c444e832983a3349c3a7dedc0bd6a77baff5e8d44fdb285b14c1bd",
+          "raw_sha256": "ad2e66a3bfb809144ab1eeb706167824bdfb6611da7c045bb04ebef865112266"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_3",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "b7825db0b876be7f0f06e7b4b8f9a534e73b8dea949039f48984435e5cfcc06a",
+          "raw_sha256": "b0bd531d10f038f1c3c34cd22c9733a7dda35add64bfe7f65c577b151395bd8a"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_4",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "b2f96363918489b517d09612aa3c774aaa878ba9d26f80b361a97dea8f84204d",
+          "raw_sha256": "235542713376f5e4db5ea59b459c0bd4d8072e6b46b8e86aef918f4272508093"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_5",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "363699bcc4ffb77d290fa68095d9515d7f182d5d663326faed1f5afe5866bdf2",
+          "raw_sha256": "86eb68b9da038e1abe5df91ead6c7a276b3fdb4b9b8aa0f3cf936ec1ef2015ae"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_6",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "f103c3525c34b32a349352916f6b3d25e0221073b11d6a6ff27e4e98978883d7",
+          "raw_sha256": "0e2e3e0e91171305401e715c2b03919eeecc8edaf41b434d26b08ecd5ef12acb"
+        },
+        {
+          "identity": "native-figure/2.3.2_ex_7",
+          "size": [
+            2400,
+            1800
+          ],
+          "rgb_sha256": "58783abbc775b90314b8fbbb92d7c869466be58d83611fb1882718e3de93aae5",
+          "raw_sha256": "d24e85e4f6f1a6e70e56f49b82163e3759c5012b98ea7bc0b1968b926fdb69a3"
+        }
+      ]
+    }
+  ],
+  "attributed_author_views": 112,
+  "root_personal_views": 0,
+  "root_native_runs": 0,
+  "source_path_relocation": "in_memory_artifact_locations_only; original execution/source/claims and every file unchanged",
+  "independent_review": "PENDING",
+  "specialist_QC": "PENDING",
+  "root_acceptance": "PENDING",
+  "handoff": "PENDING",
+  "production_ready": false
+}
