@@ -1,0 +1,11 @@
+/* HOW TO ADAPT: chapter-front only; retain the approved 12pt floor.
+   Append to the unchanged print_pipeline.CSS only in the bound chapter process.
+   Do not apply these rules to paragraph content or edit the shared stylesheet. */
+.chapter-front { font-size: 12pt; line-height: 1.18; }
+.chapter-front h1 { font-size: 21pt; line-height: 1.15; margin: 0 0 4mm; }
+.chapter-front h2 { font-size: 16pt; line-height: 1.15; margin: 4mm 0 1.5mm; padding-bottom: 1mm; }
+.chapter-front p { font-size: 12pt; margin: 0 0 1.5mm; }
+.chapter-front table { font-size: 12pt; margin: 2mm 0; }
+.chapter-front th, .chapter-front td { padding: 1.2mm 2mm; }
+.chapter-front ul { font-size: 12pt; margin: 1.5mm 0; padding-left: 6mm; }
+.chapter-front li { font-size: 12pt; margin-bottom: 1mm; }
