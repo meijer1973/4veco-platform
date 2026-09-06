@@ -1,0 +1,21 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-232-production-20260906\\4veco-platform",
+    "--lane",
+    "shared",
+    "--base",
+    "0b15d6bfa75fa62e00e5945e16a7cd8f9a7f6bf6",
+    "--head",
+    "bb44cc15976b631289d83e7a344db829ed109e56",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-232-production-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:16:44.764Z",
+  "ended_at": "2026-09-06T02:16:44.847Z",
+  "exit_code": 1,
+  "stdout": "{\n  \"ok\": false,\n  \"lane\": \"shared\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-author-stage-inventory.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-bundle-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-check.py\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r1-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r2-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r3-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r4-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-result-r3.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-result-r4.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-result.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-durable-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-foundation-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-governance-final-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-lessons-claim-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-lessons-whitespace-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-plan.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-platform-claim-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-platform-whitespace-cr-eol-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-platform-whitespace-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-publish.cjs\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-report.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-run.cjs\"\n    ],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [\n    \"shared lane needs at least one shared platform change\",\n    \"generated index/report or review-evidence changes are allowed only with lane-owned changes\"\n  ],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": ""
+}
