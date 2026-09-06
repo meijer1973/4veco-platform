@@ -44,3 +44,27 @@ The controller's source binding advances to this actual committed successor,
 not an invented future hash. Fullr1 evidence remains exact. Reserve a new
 globally unused revision and repeat actual native generation, full page/figure
 inspection and final three-route parity on the corrected candidate.
+
+## Full page reading and percentage-help clarification
+
+All twenty r2 pages and four native figures were personally viewed in color
+and grayscale. The r2 inventory remains PENDING; separate observations will
+bind the final successor, not rewrite that inventory. Native r2/r3 outputs
+are preserved by lessons commit 44cfe1754a7fdf4c4377444c3602128c9b7b7e78.
+
+The optional question4 goods-name frame could be misread as a ratio of levels.
+Source successor 9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab explicitly says
+percentage changes in numerator and denominator, in the pupil help and its
+answer explanation. The target's own immutable short answer remains exact;
+the adjacent authored criterion clarifies the same percentage meaning.
+The R1 rubric replaces the English word magnitude with absolute waarde.
+No operation, given, figure, target, allocation or approved plan changes.
+
+The first draft of the separate source-probe runner rejected a non-unique
+mutation anchor before running native commands. Selecting the exact full
+sentence resolved that evidence-harness diagnostic; no pupil output was
+changed by it. The retained r2 check result reports its actual later run.
+
+The final controller binds the actual committed source successor and records
+decoded figure pixels immediately after every route. A fresh labeled view
+inventory preserves the entire earlier r2 inventory and all PENDING records.
