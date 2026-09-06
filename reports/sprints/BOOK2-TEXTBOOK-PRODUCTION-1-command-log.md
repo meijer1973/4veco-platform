@@ -17196,3 +17196,94 @@ Node.js v24.13.1
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-scope.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T03:03:23.229Z`
+- finished_at: `2026-09-06T03:03:53.080Z`
+- duration_ms: `29851`
+- exit_code: `0`
+- stdout_sha256: `5540233c6221ee113e58cd6addaf608223a1356fc40d879491656ce0eedf8e0c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "head": "c4e4ef72755b710ec14dfd94fde566a82a71efd1",
+  "owned_paths": 402,
+  "scopes": [
+    {
+      "label": "incremental-platform",
+      "ok": false,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 402,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "incremental-lessons",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 1,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 82,
+        "generated_indexes": 6,
+        "review_evidence": 4618,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 205,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 5,
+        "unknown": 0
+      }
+    }
+  ],
+  "whitespace": {
+    "incremental_default_exit": 0,
+    "incremental_cr_at_eol_exit": 0,
+    "lessons_default_exit": 0,
+    "complete_default_exit": 2,
+    "complete_cr_at_eol_exit": 2,
+    "actual_historical_diagnostics_preserved": true,
+    "no_foreign_normalization": true
+  },
+  "inventory": {
+    "A": 15,
+    "C": 6,
+    "L": 8,
+    "P": 12
+  }
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
