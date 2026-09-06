@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T02:16:12.523Z
+Generated: 2026-09-06T02:36:44.882Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `48cc4a9b6bcc88f4cc6e07e01b9251bd8d662804`
-Files indexed: 11934
-Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
+Source branch: `agent/book2-book-proof-review-20260906`
+Source commit: `10f29c9169205492b64ac9f2f30c127aa5325416`
+Files indexed: 11966
+Scope: committed tree files from `git ls-tree -r --name-only 10f29c9169205492b64ac9f2f30c127aa5325416`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -2742,7 +2742,7 @@ Count: 1030
 
 ## reports
 
-Count: 9146
+Count: 9178
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -9610,6 +9610,38 @@ Count: 9146
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-proof-namespace-result.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-proof-namespace-scope.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-proof-namespace-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-book-2-antwoorden-82e53362b933-contact.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-book-2-boek-3852967b5c0f-contact.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-dispatch-race-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-dispatch-race-result.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-dispatch-race.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-foundation-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-governance-final-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-independent-probes-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-independent-probes-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-lessons-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-lessons-push-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-native-fixture.zip
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-native-result.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-original-common-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-original-namespace-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-original-pipelines-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-platform-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-platform-push-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-probes-result.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-probes.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-publish.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-review-whitespace-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-run.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-scope-candidate-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-scope-candidate-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-scope-own-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-BOOK-PROOF-REVIEW-strict-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.jsonl
