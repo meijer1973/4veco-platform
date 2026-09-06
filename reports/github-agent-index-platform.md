@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T04:49:52.846Z
+Generated: 2026-09-06T05:01:51.998Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `6639cfa38edc8619f082a8d0e2be89ee59e347ac`
-Files indexed: 13947
+Source commit: `5abbfbb4f37e4c8a0d8fdede0a53a5d1b41ade10`
+Files indexed: 14027
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -971,7 +971,7 @@ Count: 25
 
 ## validators
 
-Count: 746
+Count: 751
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1556,6 +1556,11 @@ Count: 746
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-check-r3.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-render-check-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-evidence/native-check-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r3-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r4-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r5-process.json
 - reports/sprints/CHECK-Q2-PLAN-baseline.md
 - reports/sprints/CHECK-Q2-PLAN-diff-summary.md
 - reports/sprints/CHECK-Q2-PLAN-gate-handoff.md
@@ -2757,7 +2762,7 @@ Count: 1030
 
 ## reports
 
-Count: 11156
+Count: 11236
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -11560,6 +11565,86 @@ Count: 11156
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-scope-own-lessons-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-scope-own-platform-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-strict-own-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-active-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-actual-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r3-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r4-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-author-check-r5-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-check.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-durable-targets-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-goal-design-currentness-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-governance-freshness-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-lessons-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-platform-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-active-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-actual-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-author-readonly-paths.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-author-readonly-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-author-readonly-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-check.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-custody-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-durable-targets-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-final-integrity.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-goal-design-currentness-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-governance-freshness-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-independent-checks-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-independent-checks-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-independent-checks-r3-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-lessons-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-platform-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-platform-payload-push-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-scope-complete-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-scope-complete-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-scope-own-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-scope-own-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-structural-currentness-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-tools.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-author-original-readonly-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-check.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-goal-design-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-import-4veco-lessen-192d6624-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-import-4veco-platform-3635c4f4-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-import-4veco-platform-6f6a72c4-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-import-4veco-platform-9c55ba7f-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-import-4veco-platform-bc2c422c-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-import-4veco-platform-da58f078-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-import-4veco-platform-e0f05315-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-import-mapping.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-independent-current-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-scope-complete-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-scope-complete-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-scope-increment-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-scope-increment-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-verification.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-whitespace-adoption-cr-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-whitespace-adoption-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-whitespace-complete-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-whitespace-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-ROOT-whitespace-root-only-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-scope-complete-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-scope-complete-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-scope-own-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-scope-own-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-structural-currentness-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-tools.cjs
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-baseline.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-bundle-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-check.js
