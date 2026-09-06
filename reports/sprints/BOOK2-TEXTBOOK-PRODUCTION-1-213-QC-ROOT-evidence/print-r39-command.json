@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-native.py",
+    "print-worker",
+    "--revision",
+    "r39",
+    "--manifest",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-evidence\\print-r39-build.json"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started_at": "2026-09-06T05:44:04.712236+00:00",
+  "finished_at": "2026-09-06T05:44:37.852796+00:00",
+  "exit_code": 0,
+  "stdout": "print-r39-prewrite-currentness.json 0\r\nprint-r39-prewrite-durable.json 0\r\n",
+  "stderr": "",
+  "stdout_sha256": "5c81dc3cf362969d9fa275a7304217fb6facd987b4f653025a6a24f34c510b60",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "inherited_PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c"
+}
