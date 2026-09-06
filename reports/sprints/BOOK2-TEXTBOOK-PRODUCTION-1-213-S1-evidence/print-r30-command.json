@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "C:\\wt\\book2-213-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-run.py",
+    "print-worker",
+    "--controller-ref",
+    "8fd54c00665f02c96806a85d453f0bd69cdd8394",
+    "--revision",
+    "r30",
+    "--manifest",
+    "C:\\wt\\book2-213-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-evidence\\print-r30-build.json"
+  ],
+  "cwd": "C:\\wt\\book2-213-succession-20260906\\4veco-platform",
+  "started_at": "2026-09-06T03:37:49.213828+00:00",
+  "finished_at": "2026-09-06T03:38:08.788908+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "inherited_path_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c"
+}
