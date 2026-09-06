@@ -63,7 +63,7 @@ function graph(s){
   b+=text('supply-label',X(sl),sy+(below?115:-55),'Aanbod / MK','middle');
  }
  if(eq){b+=line('price',180,Y(P),X(Q),Y(P),C.ink,'12 8')+line('quantity',X(Q),Y(P),X(Q),720,C.ink,'12 8');
-  b+=`<circle id="equilibrium" cx="${n(X(Q))}" cy="${n(Y(P))}" r="6" fill="${C.ink}"/>`+text('e-label',X(Q)+90,Y(P)-70,'E');
+  b+=`<circle id="equilibrium" cx="${n(X(Q))}" cy="${n(Y(P))}" r="6" fill="${C.ink}"/>`+text('e-label',X(Q)+90,Y(P)-(m.d*m.qmax/m.pmax>.500001?90:70),'E');
  }
  if(cs){const q=.15*Q,cy=Y((P+m.a-m.b*q)/2);b+=`<rect x="${n(X(q)-33)}" y="${n(cy-22)}" width="66" height="42" fill="${C.bg}"/>`+text('cs-label',X(q),cy+14,'CS','middle');}
  if(ps){const q=.15*Q,cy=Y((P+m.c+m.d*q)/2);b+=`<rect x="${n(X(q)-33)}" y="${n(cy-22)}" width="66" height="42" fill="${C.bg}"/>`+text('ps-label',X(q),cy+14,'PS','middle');}
