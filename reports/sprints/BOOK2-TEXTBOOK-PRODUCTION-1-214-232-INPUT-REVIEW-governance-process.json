@@ -1,0 +1,26 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/ci/check-governance-freshness.js"
+  ],
+  "cwd": "C:\\wt\\book2-214-232-input-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T06:49:43.297Z",
+  "ended_at": "2026-09-06T06:49:43.328Z",
+  "sources": [],
+  "environment": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-214-232-input-review-20260906\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "dafe4fdcbc3c47a1d5fa2725d3c5478fe7de1ae0",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-214-232-input-review-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-214-232-input-review-20260906\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "1cf1c1f972f196791fb37f6bbee523b7a2e3b676",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-214-232-input-review-20260906",
+    "NODE_PATH": "C:/wt/book2-part-a-production-20260905/4veco-platform/node_modules"
+  },
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "node:internal/modules/cjs/loader:1451\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:\\wt\\book2-214-232-input-review-20260906\\4veco-platform\\build-scripts\\ci\\check-governance-freshness.js'\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1448:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1234:25)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: []\r\n}\r\n\r\nNode.js v24.13.1\r\n",
+  "stdout_base64": "",
+  "stderr_base64": "bm9kZTppbnRlcm5hbC9tb2R1bGVzL2Nqcy9sb2FkZXI6MTQ1MQ0KICB0aHJvdyBlcnI7DQogIF4NCg0KRXJyb3I6IENhbm5vdCBmaW5kIG1vZHVsZSAnQzpcd3RcYm9vazItMjE0LTIzMi1pbnB1dC1yZXZpZXctMjAyNjA5MDZcNHZlY28tcGxhdGZvcm1cYnVpbGQtc2NyaXB0c1xjaVxjaGVjay1nb3Zlcm5hbmNlLWZyZXNobmVzcy5qcycNCiAgICBhdCBNb2R1bGUuX3Jlc29sdmVGaWxlbmFtZSAobm9kZTppbnRlcm5hbC9tb2R1bGVzL2Nqcy9sb2FkZXI6MTQ0ODoxNSkNCiAgICBhdCBkZWZhdWx0UmVzb2x2ZUltcGwgKG5vZGU6aW50ZXJuYWwvbW9kdWxlcy9janMvbG9hZGVyOjEwNTk6MTkpDQogICAgYXQgcmVzb2x2ZUZvckNKU1dpdGhIb29rcyAobm9kZTppbnRlcm5hbC9tb2R1bGVzL2Nqcy9sb2FkZXI6MTA2NDoyMikNCiAgICBhdCBNb2R1bGUuX2xvYWQgKG5vZGU6aW50ZXJuYWwvbW9kdWxlcy9janMvbG9hZGVyOjEyMzQ6MjUpDQogICAgYXQgVHJhY2luZ0NoYW5uZWwudHJhY2VTeW5jIChub2RlOmRpYWdub3N0aWNzX2NoYW5uZWw6MzI4OjE0KQ0KICAgIGF0IHdyYXBNb2R1bGVMb2FkIChub2RlOmludGVybmFsL21vZHVsZXMvY2pzL2xvYWRlcjoyNDU6MjQpDQogICAgYXQgTW9kdWxlLmV4ZWN1dGVVc2VyRW50cnlQb2ludCBbYXMgcnVuTWFpbl0gKG5vZGU6aW50ZXJuYWwvbW9kdWxlcy9ydW5fbWFpbjoxNTQ6NSkNCiAgICBhdCBub2RlOmludGVybmFsL21haW4vcnVuX21haW5fbW9kdWxlOjMzOjQ3IHsNCiAgY29kZTogJ01PRFVMRV9OT1RfRk9VTkQnLA0KICByZXF1aXJlU3RhY2s6IFtdDQp9DQoNCk5vZGUuanMgdjI0LjEzLjENCg=="
+}
