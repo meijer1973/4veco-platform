@@ -32,7 +32,7 @@ def custody():
         changed.append({**row,'current_sha256':value})
     pending=[]
     for root,base in [(P,c.PBASE),(L,c.LBASE)]:
-        files=set(names(root,'diff','--name-only','-z',base))+set() if False else set(names(root,'diff','--name-only','-z',base))
+        files=set(names(root,'diff','--name-only','-z',base))
         files.update(names(root,'ls-files','--others','--exclude-standard','-z'))
         for path in files:
             assert (root==P and (path.startswith('reports/sprints/'+PREFIX+'-') or path in INDEXES)) or (root==L and path==qc),path
