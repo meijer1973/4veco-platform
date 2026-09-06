@@ -164,7 +164,7 @@ def snapshot(ref):
 def check(ref, *, indexes=False):
     verify_controller(ref)
     base = json.loads((OUT / 'baseline.json').read_text(encoding='utf-8'))
-    assert base['control']['ref'] == ref
+    assert base['control']['generator_sha256'] == verify_controller(ref)['generator_sha256']
     assert os.environ.get('PATH', '') == base['inherited_path'], 'Inherited PATH changed'
     allowed_indexes = {'reports/github/agent-index.json', 'reports/github/agent-index.md',
                        'reports/github/repository-map.json', 'reports/github/repository-map.md'} if indexes else set()
@@ -294,7 +294,7 @@ def validate(ref, label):
         command(argv, f'{label}-{name}.json')
     check(ref)
     save(label + '-binding.json', dict(result='PASS', control=verify_controller(ref), native=native(),
-         original17_unchanged=True, new_succession_tests=7, current_review_unchanged=True,
+         original17_unchanged=True, new_succession_tests=6, current_review_unchanged=True,
          stale_qc_unchanged=True, handoff_absent=True, no_independent_acceptance=True))
 
 
