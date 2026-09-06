@@ -1,0 +1,21 @@
+{
+  "status": "RETAINED_ACTUAL_NATIVE_FAILURE",
+  "rows": [
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.svg",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r40-failed-raw/2.1.4_ex_1.svg",
+      "bytes": 9876,
+      "sha256": "cb3b76c834c4c48d7e678f508b4498f891e7d3a4c3befa8cd003bf2abd458c4f"
+    },
+    {
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.png",
+      "evidence": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r40-failed-raw/2.1.4_ex_1.png",
+      "bytes": 178988,
+      "sha256": "26375470bf011e34440c4df5cdaa9987e179f9e86f33d6c0a78953c1388e20c9"
+    }
+  ],
+  "reason": "Sharp density96 expanded natural raster above1200x1050; actual dimensions guard rejected after firstSVG/PNG, before pupil MD/HTML/PDF. Preserve these failed bytes; explicit1200x1050 resampling is owned native conversion, no font-floor or plan waiver.",
+  "native_attempt_process": "017d029b4b9b937568456cce327b8f528037f8fd097d9f02e4e84cd90a224e89",
+  "limitation": "r40 retained terminal process records final child failure, not every earlier successful gate stdout. Future owned controller prints full event trail on failure. No fabricated earlier event log.",
+  "historical_whitespace": "39ca053f source commit check reported four new blank EOF lines; own current source removes them, historical shell diagnostic remains factual."
+}

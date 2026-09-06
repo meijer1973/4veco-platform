@@ -231,4 +231,3 @@ alleen de extra € 20 over de vijf extra montages. Het kostenverschil door 45
 delen is geen van beide gevraagde berekeningen. Beide uitkomsten zijn bedragen
 per montage, maar hun economische betekenis en gebruikte hoeveelheid verschillen.
 Lukt dit niet? Herhaal de gemiddelden uit §2.1.1 en het intervalvoorbeeld uit §2.1.3.
-

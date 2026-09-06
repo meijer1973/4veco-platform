@@ -35,4 +35,10 @@ else if(process.argv[2]==='runtime'){
 else if(process.argv[2]==='command'){
  const [label,exe,...args]=process.argv.slice(3);const r=run(label,exe,args);process.exitCode=r.exit_code||0;
 }
+else if(process.argv[2]==='capture-r40'){
+ const base=JSON.parse(read(P,'reports/sprints/'+N+'-baseline.json')),rows=[];
+ const dir=path.join(__dirname,N+'-r40-failed-raw');fs.mkdirSync(dir);
+ for(const rel of base.selected_native_paths.filter(p=>/2\.1\.4_ex_1\.(svg|png)$/.test(p))){const bytes=read(L,rel),target=path.join(dir,path.basename(rel));fs.writeFileSync(target,bytes,{flag:'wx'});a(fs.readFileSync(target).equals(bytes));rows.push({source:rel,evidence:path.relative(P,target).replaceAll('\\','/'),bytes:bytes.length,sha256:hash(bytes)});}
+ write('r40-failure-capture',{status:'RETAINED_ACTUAL_NATIVE_FAILURE',rows,reason:'Sharp density96 expanded natural raster above1200x1050; actual dimensions guard rejected after firstSVG/PNG, before pupil MD/HTML/PDF. Preserve these failed bytes; explicit1200x1050 resampling is owned native conversion, no font-floor or plan waiver.',native_attempt_process:hash(read(P,'reports/sprints/'+N+'-native-full-r40-process.json')),limitation:'r40 retained terminal process records final child failure, not every earlier successful gate stdout. Future owned controller prints full event trail on failure. No fabricated earlier event log.',historical_whitespace:'39ca053f source commit check reported four new blank EOF lines; own current source removes them, historical shell diagnostic remains factual.'});
+}
 else throw Error('Expected baseline or gates');
