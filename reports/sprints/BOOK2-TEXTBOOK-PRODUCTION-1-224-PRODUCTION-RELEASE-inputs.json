@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "id": "BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE",
+  "paragraph": "2.2.4",
+  "date": "2026-09-06",
+  "decision": "RELEASED_FOR_GATED_PART_A_AUTHORING",
+  "accountable_actor": "codex-root",
+  "operational_plan_commit": "6956fc3d20ae99bcf1eb2e537c62d8a37c93cf1d",
+  "authority": "Existing owner-granted BOOK2-TEXTBOOK-PRODUCTION-1 continuation under #229; independent224 plan PASS and actual accepted221/222/223. This is root execution of an existing grant, not a new owner decision.",
+  "immutable_input_pair": {
+    "platform": "e2ddb153c4da67b4707809ea9931f914805293dd",
+    "lessons": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62"
+  },
+  "plan": {
+    "raw_sha256": "fcc55870ba93b18324c1f04fe61c0cd3642e0ad3dbbffe87d42de35382072257",
+    "author": "paragraph_224_builder",
+    "independent_reviewer": "codex-root",
+    "verdict": "PLAN PASS",
+    "review_commit": "71e285f990ebb6140f6e07a2b4ac232ba898ff9f"
+  },
+  "target": {
+    "record_sha256": "4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519",
+    "record_status": "candidate_review_ready",
+    "points": [
+      2,
+      2,
+      2,
+      4,
+      2,
+      2
+    ],
+    "paragraph_kind": "gemengde_opgaven",
+    "introduces_new_theory": false,
+    "frozen_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310"
+  },
+  "predecessor_223": {
+    "status": "ACCEPTED WITH FLAGS",
+    "verification_commit": "12c0d668c084789b73146f05db13aa7aaf337c63",
+    "acceptance_lesson_commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+    "teaching_reconciliation": "Whole fixed ALT derivation plus raw/RGB full/thin/direct parity establishes unchanged printed teaching; exactly two short-alt attributes, administrative accepted-input succession and review-noun correction. No required224 coverage change.",
+    "lineage_flag": "CLOSED",
+    "timing": "UNOBSERVED"
+  },
+  "inputs": [
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "fcc55870ba93b18324c1f04fe61c0cd3642e0ad3dbbffe87d42de35382072257"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "02eee54304567304e8ecb777762833165103e117ea1721a8a383ca0e470f4bb4"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "f0a78820b4035347d49facac2febb8580c642f7f4bd2d59fcfb47d3233192f11"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-plan.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "6418491d45c43afdbd272c581bab12f8436ca1a84241663ba300e31b790825a8"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-review.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "9122a962d5108565a631d6cd51b1945ab0ddb1ef78c2b979cca15ac59010f01a"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "b15a630aa9f328816deaafd23f437a497ddfb03702a8151f705756b2d43fb432"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-handoff.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "135e1db69db4ee43e9cba735a50ff0e67e22987afd7b7c13ece2158651b56c82"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "573ba54a818018ccd565142efd81a79db2558d901e809ab1c35bc1676d238fc0"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "3d671a4f420cb21fa3ef3e42aaf9f797771758a41c3c658af3291af44cd6c318"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "3c5db69f876940eff76af3027577e368548145dbc0b3b9bdddb62b0542041276"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "dd2f91d0035829986076b7d5e96b43fa9c45f3d3698da1d159a955634fa01497"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "56883966bb05a60b395e6d53d9228d4e801072818c00b8634dd2c60a1de3121f"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "9cebc22fec47def140b8502dc6e5553cb10200e22a0cebae65a1c292a0693461"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-handoff.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "b2c79f67fd2c1aba0800f444db11b2e99240c623e44726086a3d061a01d35960"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "5e19fc4528f5644f8c0f94da601c88d923c017078559a4ad0e97163837bfa287"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "ffdbc7d62c86d4945c52fabf94629790c0b54783a9c67060b03522ee1c497fbf"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/course-target-exercises.json",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/book-outlines/book-2-outline.md",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "1f3d6019255ba85ab62989922ca733de90a289f7a0fd8add07752db16be140c3"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-result.md",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "5c2accb2603d5523427f90fcd22a76b30bf59a34f26412ee86a034dea0a18e77"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-check.json",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "3f7bc24ada16bbaedb94b30f249ea0daf71be8af52d1d5c171aac0d4641b0983"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-result.md",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "f3e5e803677b8d88267e67b6965bc8e8174eef92f45a054a263c7486d6f32dbd"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-final-integrity.json",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "99542fe8aff50812b2aa023cf179612ad6422ea3f4a82d66b7b449bc5f53d35f"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance.md",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "84b1fce638a5a0b377fc7611935ab2e2048a9c996e1cecfa7e0febf1970b0cc5"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-check.json",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "a43b64bb64949c9631812537d6e9291b25a601bb9e95c8113742c3bd692af258"
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-publication.md",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "c1029d5cd3fbc75c19f0a4193b7b8f050a48dfd729e312eda7d04652ef61359c"
+    }
+  ],
+  "fail_closed_contract": [
+    "Consumer must bind this complete manifest to its exact root publication Git commit and raw SHA from the release record; do not accept a replacement manifest with newly computed hashes.",
+    "All34 path/repository/commit/raw-byte bindings are required. Verify source commit blobs and actual files before output mkdir, subprocess, stale-file removal or generation. Reject missing, forged, stale, partial and synchronized content/hash drift.",
+    "Verify whole frozen224 record in original property order; exact goals/context/source tables/question prompts/points/answer forms. Run current approved paragraph_production gate and durable target authority after immutable input verification.",
+    "No legacy acceptance fallback, broad accepted-ref lists, catch-and-continue or hidden allowlist weakening. Future evidence corrections require a new bounded root release and relevant independent review."
+  ],
+  "output_contract": {
+    "lesson_directory": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit",
+    "editions": [
+      "opgaven",
+      "antwoorden"
+    ],
+    "extensions": [
+      "md",
+      "html",
+      "pdf"
+    ],
+    "svg_png_pairs": 4,
+    "native_files_including_wrapper": 15,
+    "zip": false,
+    "paragraaf_edition": false,
+    "minimum_printed_text_pt": 12
+  },
+  "remaining_gates": [
+    "Author operational work order and guarded native production",
+    "Independent complete paragraph review",
+    "Distinct specialist QC with actual all-page and native-figure color/grayscale inspection",
+    "Root native verification, acceptance and full handoff",
+    "Chapter/book aggregate review, current paired CI, lead rounds and readiness"
+  ],
+  "timing": {
+    "reviewer_core_minutes": 53.5,
+    "support_inclusive_minutes": 63.5,
+    "all_work_minutes": 71.5,
+    "observed": false
+  },
+  "prohibited": [
+    "Target-registry or approved-plan changes",
+    "PartB/companion commission",
+    "Future PR merges or admin bypass",
+    "Self-authored independent paragraph review/specialist QC",
+    "Claiming whole-book acceptance or observed classroom attainment"
+  ]
+}

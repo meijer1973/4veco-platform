@@ -1,0 +1,928 @@
+{
+  "status": "PASS",
+  "manifest_raw_sha256": "33c1473db0cbeec66e93557a72ab0586ccfcef29ba52b2a36148946c65598c7e",
+  "inputs": [
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76",
+      "git_blob": "ffd5250bdafe288ef11af8ae38b6d7dccd02dcf8",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+      "git_blob": "2f916810929010b50648a3cc568692e753cb43bc",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "fcc55870ba93b18324c1f04fe61c0cd3642e0ad3dbbffe87d42de35382072257",
+      "git_blob": "9e71d642fd93882d31ee6d0cbb0375d445d1a730",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345",
+      "git_blob": "69696ae3ff49550df5077f3d40aea44346a519da",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+      "git_blob": "682b15144646df05e782380282097cdfdc73b058",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa",
+      "git_blob": "46f562c992c8192bfdf7f392919f4a333a2a93c6",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811",
+      "git_blob": "6a5f4f428fade3383161998ef1bc0fb68735e44e",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db",
+      "git_blob": "f8776e3c737337cd9e65c703ff8da67d53c5d05e",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "02eee54304567304e8ecb777762833165103e117ea1721a8a383ca0e470f4bb4",
+      "git_blob": "ede8a7dfaf056891ea741074b8a02d621db61467",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "f0a78820b4035347d49facac2febb8580c642f7f4bd2d59fcfb47d3233192f11",
+      "git_blob": "8cb08407094c8a27ba29b900933373010b05e0db",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-plan.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "6418491d45c43afdbd272c581bab12f8436ca1a84241663ba300e31b790825a8",
+      "git_blob": "be79fb633c99dce40dc3ed3d2476cd4b12833f34",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-review.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "9122a962d5108565a631d6cd51b1945ab0ddb1ef78c2b979cca15ac59010f01a",
+      "git_blob": "aa0e700b51f5ee1bc7934bc623eae8bb68c8bb66",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "b15a630aa9f328816deaafd23f437a497ddfb03702a8151f705756b2d43fb432",
+      "git_blob": "9f37ffe58b3c27daf8f117be990d59e2a9c12d99",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-handoff.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "135e1db69db4ee43e9cba735a50ff0e67e22987afd7b7c13ece2158651b56c82",
+      "git_blob": "d107a6db14fa3b1f36be1bf6cc33583e67f46b11",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "573ba54a818018ccd565142efd81a79db2558d901e809ab1c35bc1676d238fc0",
+      "git_blob": "fd6274da2367a08aa266192b7884e7b250b64ea4",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "3d671a4f420cb21fa3ef3e42aaf9f797771758a41c3c658af3291af44cd6c318",
+      "git_blob": "12a8cf5580296d6eeab46cf0d332010750426a0b",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "3c5db69f876940eff76af3027577e368548145dbc0b3b9bdddb62b0542041276",
+      "git_blob": "d946117b89dff7bb409f570feabdfa0602b5691f",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "dd2f91d0035829986076b7d5e96b43fa9c45f3d3698da1d159a955634fa01497",
+      "git_blob": "beffcb457ad29be029b8609bfa3dbb250048a3e3",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "56883966bb05a60b395e6d53d9228d4e801072818c00b8634dd2c60a1de3121f",
+      "git_blob": "931613ae110d6f67205fc5e869f82958393716af",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "9cebc22fec47def140b8502dc6e5553cb10200e22a0cebae65a1c292a0693461",
+      "git_blob": "26ae10e463762e63e2a86e7ede67d89924197dab",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-handoff.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "b2c79f67fd2c1aba0800f444db11b2e99240c623e44726086a3d061a01d35960",
+      "git_blob": "9b01ced54fa2df8aedea320ccfd1b24146126d7c",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "5e19fc4528f5644f8c0f94da601c88d923c017078559a4ad0e97163837bfa287",
+      "git_blob": "628f83a9f3d802d20ed482dd09f28e215bc141d3",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "ffdbc7d62c86d4945c52fabf94629790c0b54783a9c67060b03522ee1c497fbf",
+      "git_blob": "5d91eff3894f3f87d5b871c47cdf1f79cd366373",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+      "commit": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "raw_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+      "git_blob": "720b3ae4b865eb62f3f2b00d8bb10a71fd253df0",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/course-target-exercises.json",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "git_blob": "5680842328576b63e2858ce8e354030a3a458410",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/book-outlines/book-2-outline.md",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf",
+      "git_blob": "cc2d7c7e75e161bc6cc7f90b85afb92ac1009607",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "1f3d6019255ba85ab62989922ca733de90a289f7a0fd8add07752db16be140c3",
+      "git_blob": "2dddfcb570ecc4951da2d0eb649b7736b86168f1",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-result.md",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "5c2accb2603d5523427f90fcd22a76b30bf59a34f26412ee86a034dea0a18e77",
+      "git_blob": "2c15edd63f2e4afc4e15232aff855477db0de03d",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-check.json",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "3f7bc24ada16bbaedb94b30f249ea0daf71be8af52d1d5c171aac0d4641b0983",
+      "git_blob": "4ba0910e0604520925ec75ff88ab90328a5bb27a",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-result.md",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "f3e5e803677b8d88267e67b6965bc8e8174eef92f45a054a263c7486d6f32dbd",
+      "git_blob": "2b3bcc2c91d815212b9644f0370fc3eb6139b129",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-final-integrity.json",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "99542fe8aff50812b2aa023cf179612ad6422ea3f4a82d66b7b449bc5f53d35f",
+      "git_blob": "02a2af5ddbae3bc05603613a701e2eabdcdc3182",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance.md",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "84b1fce638a5a0b377fc7611935ab2e2048a9c996e1cecfa7e0febf1970b0cc5",
+      "git_blob": "81519bcbca3436c90ba2186a514173e60385da37",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-check.json",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "a43b64bb64949c9631812537d6e9291b25a601bb9e95c8113742c3bd692af258",
+      "git_blob": "f43f0675473706675cd62df2993668a188d4608e",
+      "actual_raw_and_git_exact": true
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-publication.md",
+      "commit": "e2ddb153c4da67b4707809ea9931f914805293dd",
+      "raw_sha256": "c1029d5cd3fbc75c19f0a4193b7b8f050a48dfd729e312eda7d04652ef61359c",
+      "git_blob": "dd912fd1bafc00fa5a7cec1d87867ee44e34ed6f",
+      "actual_raw_and_git_exact": true
+    }
+  ],
+  "actual_negative_file_and_manifest_probes": [
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-plan.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-plan.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-plan.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-review.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-review.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-review.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-handoff.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-handoff.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-handoff.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-handoff.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-handoff.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-handoff.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/references/authored/course-target-exercises.json",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/references/authored/course-target-exercises.json",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/references/authored/course-target-exercises.json",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/references/authored/book-outlines/book-2-outline.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/references/authored/book-outlines/book-2-outline.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/references/authored/book-outlines/book-2-outline.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-result.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-result.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-result.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-check.json",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-check.json",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-check.json",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-result.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-result.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-result.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-final-integrity.json",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-final-integrity.json",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-final-integrity.json",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-check.json",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-check.json",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-check.json",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-publication.md",
+      "mode": "missing",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-publication.md",
+      "mode": "forged",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "key": "4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-publication.md",
+      "mode": "synchronized-file-and-manifest-hash-drift",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "mode": "empty-manifest",
+      "rejected": true,
+      "success_callback_calls": 0
+    },
+    {
+      "mode": "partial-input-list",
+      "rejected": true,
+      "success_callback_calls": 0
+    }
+  ],
+  "positive_callbacks": 2,
+  "live_files_changed": 0,
+  "temporary_fixture_removed": "C:\\wt\\book2-224-release-probes-cL5Heu",
+  "inherited223_six_postacceptance_gates": "Bound exact current root acceptance-check.json; unchanged inputs",
+  "fresh_gates": [
+    {
+      "name": "structural",
+      "exit_code": 0
+    },
+    {
+      "name": "production224",
+      "exit_code": 0
+    },
+    {
+      "name": "durable",
+      "exit_code": 0
+    },
+    {
+      "name": "bundle",
+      "exit_code": 0
+    }
+  ],
+  "native_generation": "NOT RUN; author must implement and test equivalent guards before all builder effects",
+  "exact_plan_review_and_current_predecessors": true,
+  "decision": "RELEASED_FOR_GATED_PART_A_AUTHORING",
+  "no_future_merge_authority": true
+}
