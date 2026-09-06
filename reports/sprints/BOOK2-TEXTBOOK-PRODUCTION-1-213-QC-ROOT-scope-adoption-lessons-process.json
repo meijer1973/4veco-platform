@@ -1,0 +1,23 @@
+{
+  "args": [
+    "node",
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "--lane",
+    "textbook",
+    "--base",
+    "167b833c88c5651327906ffdc322e44a9fcfc4a7",
+    "--head",
+    "1cf1c1f972f196791fb37f6bbee523b7a2e3b676",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T05:58:51.585Z",
+  "ended": "2026-09-06T05:58:51.692Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"lane\": \"textbook\",\n  \"categories\": {\n    \"partA_textbook\": [\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md\"\n    ],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml\"\n    ],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [\n    {\n      \"path\": \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml\",\n      \"blocks\": [\n        \"partA\"\n      ]\n    }\n  ],\n  \"failures\": [],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": "",
+  "stdout_base64": "ewogICJvayI6IHRydWUsCiAgImxhbmUiOiAidGV4dGJvb2siLAogICJjYXRlZ29yaWVzIjogewogICAgInBhcnRBX3RleHRib29rIjogWwogICAgICAiQm9layAyIC0gS29zdGVuLCBvcGJyZW5nc3RlbiwgZWxhc3RpY2l0ZWl0IGVuIHN1cnBsdXMvMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xLjMgTWFyZ2luYWxlIGtvc3RlbiBlbiBtYXJnaW5hbGUgb3BicmVuZ3N0ZW4vMi4xLjMtdGV4dGJvb2staGFuZG9mZi5tZCIKICAgIF0sCiAgICAicGFydEJfY29tcGFuaW9uIjogW10sCiAgICAic2hhcmVkX3BsYXRmb3JtIjogW10sCiAgICAiZ2VuZXJhdGVkX2luZGV4ZXMiOiBbXSwKICAgICJyZXZpZXdfZXZpZGVuY2UiOiBbCiAgICAgICJCb2VrIDIgLSBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1cy8yLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuMyBNYXJnaW5hbGUga29zdGVuIGVuIG1hcmdpbmFsZSBvcGJyZW5nc3Rlbi8yLjEuMy1xdWFsaXR5LXJlZi55YW1sIgogICAgXSwKICAgICJ1bmtub3duIjogW10KICB9LAogICJxdWFsaXR5UmVmQ2hhbmdlcyI6IFsKICAgIHsKICAgICAgInBhdGgiOiAiQm9layAyIC0gS29zdGVuLCBvcGJyZW5nc3RlbiwgZWxhc3RpY2l0ZWl0IGVuIHN1cnBsdXMvMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xLjMgTWFyZ2luYWxlIGtvc3RlbiBlbiBtYXJnaW5hbGUgb3BicmVuZ3N0ZW4vMi4xLjMtcXVhbGl0eS1yZWYueWFtbCIsCiAgICAgICJibG9ja3MiOiBbCiAgICAgICAgInBhcnRBIgogICAgICBdCiAgICB9CiAgXSwKICAiZmFpbHVyZXMiOiBbXSwKICAid2FybmluZ3MiOiBbXSwKICAiZXhjZXB0aW9uIjogewogICAgInByZXNlbnQiOiBmYWxzZSwKICAgICJvayI6IGZhbHNlLAogICAgImZhaWx1cmVzIjogW10KICB9Cn0K",
+  "stderr_base64": ""
+}

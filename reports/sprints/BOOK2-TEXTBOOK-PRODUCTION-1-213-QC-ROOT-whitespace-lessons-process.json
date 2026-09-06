@@ -1,0 +1,17 @@
+{
+  "args": [
+    "git",
+    "diff",
+    "--check",
+    "167b833c88c5651327906ffdc322e44a9fcfc4a7",
+    "1cf1c1f972f196791fb37f6bbee523b7a2e3b676"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+  "started": "2026-09-06T05:58:52.876Z",
+  "ended": "2026-09-06T05:58:52.904Z",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "stdout_base64": "",
+  "stderr_base64": ""
+}
