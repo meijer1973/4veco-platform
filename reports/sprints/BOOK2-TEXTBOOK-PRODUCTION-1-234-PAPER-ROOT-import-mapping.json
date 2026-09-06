@@ -1,0 +1,85 @@
+{
+  "mapping": [
+    {
+      "repository": "platform",
+      "original": "3d8ff2ed471fe609dd7c20e75c9bc613458fb34e",
+      "adopted": "62dd6ff5e3ac69bc5734b1efae9a0980bdc1ef69"
+    },
+    {
+      "repository": "platform",
+      "original": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+      "adopted": "7443795889babb875c7e715f416b4885c8ccc34c"
+    },
+    {
+      "repository": "platform",
+      "original": "7f876bd1a5c649fcad83db0747806fc6444e05e2",
+      "adopted": "43ad316bbc63efbcbe7267863b6bbcdb70e97454"
+    },
+    {
+      "repository": "platform",
+      "original": "056ce4e7b512cd94cebc7b0e7b38446378e3acb5",
+      "adopted": "41311a6573a0564497660f58a9db4f85bff4f0d6"
+    },
+    {
+      "repository": "platform",
+      "original": "b112e17d6eb37c1dcf9f405d6eb31534aca98fd9",
+      "adopted": "8630f6550438ab6d9f284c5c1321e2a52ede3910"
+    },
+    {
+      "repository": "platform",
+      "original": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+      "adopted": "e973572463202a6b3b560a18842659ca85a8715d"
+    },
+    {
+      "repository": "platform",
+      "original": "557d7fd2e3f79c9f084cd6ae91a43d3c04b59234",
+      "adopted": "13692102032fe1bf9ea9d228206e94e635b65ed5"
+    },
+    {
+      "repository": "platform",
+      "original": "4bda62caf3e15fa7215ad6ad90bf9af2635f10b3",
+      "adopted": "2fb8633a1e10adee7cf0897658eb5ea12d67954e"
+    },
+    {
+      "repository": "platform",
+      "original": "62504eaeda62552c08b5473670b471fc5d36f414",
+      "adopted": "e873883dd95b8f5a940f9a6673b75221c57dfc9c"
+    },
+    {
+      "repository": "platform",
+      "original": "7086006c977d7d1318a2813b2bc5a1e808b1dd75",
+      "adopted": "5597a80d8fe84b48bec1da1c2036b39dd55bae85"
+    },
+    {
+      "repository": "platform",
+      "original": "ff77b6f94579d94a746d9e44ae7da7f7e7e709d6",
+      "adopted": "50f7c417b1053282d4b9e90c0c645e5f5652a38a"
+    },
+    {
+      "repository": "platform",
+      "original": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+      "adopted": "1c0df7ccef66ef0ee71b595853797c37577488bc"
+    },
+    {
+      "repository": "platform",
+      "original": "8ed2366e8b2828da9610d292980f8671a7e19fb7",
+      "adopted": "d3ec3d201d84fcd8f5c91bfc57bd8e96f5947b44"
+    },
+    {
+      "repository": "lessons",
+      "original": "a9662869395f449a4d5dce907bfe58976f94ed01",
+      "adopted": "7fe81496b14caf566fc2152bb6194a665d8611ac"
+    },
+    {
+      "repository": "lessons",
+      "original": "e90d5c122a44fb0fd547339cf48558680cbc6ace",
+      "adopted": "1ae1b4aa6fe6eb73bac2da9f719dcf7946fa0882"
+    }
+  ],
+  "imported_paths": 120,
+  "prior_raw_unchanged": 16905,
+  "pair": {
+    "P": "d3ec3d201d84fcd8f5c91bfc57bd8e96f5947b44",
+    "L": "1ae1b4aa6fe6eb73bac2da9f719dcf7946fa0882"
+  }
+}

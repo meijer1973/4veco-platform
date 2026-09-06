@@ -1,0 +1,954 @@
+{
+  "platform": {
+    "steps": [
+      {
+        "commit": "3d8ff2ed471fe609dd7c20e75c9bc613458fb34e",
+        "parent": "0c7c7e2f4375352b73871c58214b7f99ffc3b0b3",
+        "paths": [
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-plan.md"
+        ]
+      },
+      {
+        "commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "parent": "3d8ff2ed471fe609dd7c20e75c9bc613458fb34e",
+        "paths": [
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r1-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r2-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r3-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r4-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-baseline.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-bundle-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-check.cjs",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-durable-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-final-integrity.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-goal-design-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-governance-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-lessons-claim-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-platform-claim-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-result.md",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-structural-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-supplemental233.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-tools.cjs"
+        ]
+      },
+      {
+        "commit": "7f876bd1a5c649fcad83db0747806fc6444e05e2",
+        "parent": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "paths": [
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-actual-scope.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-publication.md",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-scope-complete-lessons-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-scope-complete-platform-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-scope-own-lessons-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-scope-own-platform-process.json"
+        ]
+      },
+      {
+        "commit": "056ce4e7b512cd94cebc7b0e7b38446378e3acb5",
+        "parent": "7f876bd1a5c649fcad83db0747806fc6444e05e2",
+        "paths": [
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-buffered-r2-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-diagnostic-r1-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-inventory-r2-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-runtime-diagnostic.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-runtime-note.md",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-runtime-proof-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-runtime.cjs",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-tools.cjs"
+        ]
+      },
+      {
+        "commit": "b112e17d6eb37c1dcf9f405d6eb31534aca98fd9",
+        "parent": "d1fec4cb50b7d538b85291e2b773bb2663376cbe",
+        "paths": [
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-plan.md"
+        ]
+      },
+      {
+        "commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "parent": "b112e17d6eb37c1dcf9f405d6eb31534aca98fd9",
+        "paths": [
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-author-readonly-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-baseline.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-bundle-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-check.cjs",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-custody-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-durable-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-goal-design-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-governance-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-independent-r1-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-index-diagnostic-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-index-runtime.cjs",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-lessons-claim-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-platform-claim-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-report.md",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-specialist-review-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-structural-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-tools.cjs"
+        ]
+      },
+      {
+        "commit": "557d7fd2e3f79c9f084cd6ae91a43d3c04b59234",
+        "parent": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "paths": [
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-actual-scope.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-audit.cjs",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-complete-whitespace-cr-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-complete-whitespace-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-final-integrity-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-owned-whitespace-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-publication.md",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-scope-complete-lessons-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-scope-complete-platform-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-scope-own-lessons-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-scope-own-platform-process.json"
+        ]
+      },
+      {
+        "commit": "4bda62caf3e15fa7215ad6ad90bf9af2635f10b3",
+        "parent": "37b3bb0053939fa1b89fc7bbcee4476b16f7c916",
+        "paths": [
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-plan.md"
+        ]
+      },
+      {
+        "commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "parent": "4bda62caf3e15fa7215ad6ad90bf9af2635f10b3",
+        "paths": [
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-audit.cjs",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-baseline.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-bundle-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-final-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-r1-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-r2-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-r3-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check.cjs",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-complete-whitespace-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-durable-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-foundation-inputs.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-goal-design-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-governance-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-index-diagnostic-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-index-runtime.cjs",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-lessons-claim-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-original-author-current-readonly-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-original-author-final-readonly-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-original-author-readonly-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-platform-claim-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-report.md",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-structural-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-tools.cjs"
+        ]
+      },
+      {
+        "commit": "7086006c977d7d1318a2813b2bc5a1e808b1dd75",
+        "parent": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "paths": [
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-actual-scope.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-final-integrity-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-own-whitespace-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-publication.md",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-complete-lessons-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-complete-platform-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-own-lessons-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-own-platform-process.json"
+        ]
+      },
+      {
+        "commit": "ff77b6f94579d94a746d9e44ae7da7f7e7e709d6",
+        "parent": "2fcbd586a1d51cb3b07df48536e29ce8e0e35026",
+        "paths": [
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-plan.md"
+        ]
+      },
+      {
+        "commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "parent": "ff77b6f94579d94a746d9e44ae7da7f7e7e709d6",
+        "paths": [
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-attributed-F1-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-attributed-original-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-baseline.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-bundle-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-check.cjs",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-durable-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-goal-design-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-governance-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-independent-r1-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-index-diagnostic-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-index-runtime.cjs",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-lessons-claim-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-platform-claim-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-report.md",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-structural-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-tools.cjs",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-whole-whitespace-process.json"
+        ]
+      },
+      {
+        "commit": "8ed2366e8b2828da9610d292980f8671a7e19fb7",
+        "parent": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "paths": [
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-audit.cjs",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-final-integrity-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-own-whitespace-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-publication.md",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope-own-lessons-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope-own-platform-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope-whole-lessons-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope-whole-platform-process.json",
+          "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope.json"
+        ]
+      }
+    ],
+    "final": [
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-plan.md",
+        "source_commit": "3d8ff2ed471fe609dd7c20e75c9bc613458fb34e",
+        "git_blob": "7dd9eb05c27c203a1c8b93d1e2f3912b44e476a1",
+        "raw_sha256": "74b6038a1e190fc7eaaa01722a02acdac53bdc67aab0631b2c91a32e6a5ff54e"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r1-process.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "5643cc396847446c1f9bdc0364c956b74be31d61",
+        "raw_sha256": "bbda3c9118dbf8597d990b7b68c6a47e7799c5015e0c17b85519c93b4e16faf8"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r2-process.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "ee30be3b9f87bba0c7d53d57942391bf7f0ec605",
+        "raw_sha256": "5c5badcbcf76e6988bb3b7e3c124845c006bb36e8effb51fc546cfe230490d51"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r3-process.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "f2ad13a4deb4552c50baad71fcf4867c8c46d965",
+        "raw_sha256": "964551ae6ad4e3e94b0bb3db013afe857a290bf840f70aad16990065cbfb04fb"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r4-process.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "b4effe20bc77e27dfbcc588a1c5d2edaf1a029a0",
+        "raw_sha256": "0064d815acefa10b20ff7fec577859e42ae44b4ecad717b6bd6ee08771c6e435"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-baseline.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "d9c5396dbebabc426fab7e3c0b941674b16d4029",
+        "raw_sha256": "18db49ceb014d94118874c8e7ca17bdb90671e96378caee372bb2315f69e57c5"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-bundle-process.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "c823564b1500041e4f10a4a78d7286b5b9ea9c9a",
+        "raw_sha256": "cad546f256abdad9749fafa6eb7ecae8fd0fd0d3e763a1429f83e9467e8c020b"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-check.cjs",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "d0854ddd0146c3192d9c20103f4d62437cc7d19b",
+        "raw_sha256": "6336b701e532e1f841bca0b2cb7550504e165ebc06067875b4132e979bbb4755"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-durable-process.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "7c05c793e51af73fc52a795b6dd5d6f1b9848cf9",
+        "raw_sha256": "d0c07d34e99cd6beb03cb30c952924c9d9770ecca28250f12912948a59193ab7"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-final-integrity.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "0fe5404969f01bed4005c95f5bd6bf2c2ee44af8",
+        "raw_sha256": "7d8da20abd0fd82d68d3a7a8e8b6b7d86195d4e678e78e65a29cacb1fb594568"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-goal-design-process.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "c3fb96185fa931e969d156f8fc499cc11cf55989",
+        "raw_sha256": "e75d660ed605647b93a04e6ac687cfd598b4e08730b0c773099b10e774218345"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-governance-process.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "5d75efbda2689aaeb8bfd3e0effbdfa0a6e6cca8",
+        "raw_sha256": "871e77283f3ecf5cec1e68998772c9a69a53d2ad9a1483265ad19ce9c7094eaa"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-lessons-claim-process.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "7f947609d83e483491c458d8ec2a6ec79ca40396",
+        "raw_sha256": "d1563abde33c5555705ffed491271d125a2ac38646813e262e538d4f5f042c16"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-platform-claim-process.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "67e16c2e3a73d09c821f5dc8e65504f210a907ba",
+        "raw_sha256": "1d041075221c3f07d808b222a18b55516edad6200d6c21734ac1b569b8e0a97d"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-result.md",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "23f8481f5ededda33254465f38e5db0e9949ad27",
+        "raw_sha256": "80d6d08be2167d5dafed94f2705745784e41c3f16b99ac8d99f7ec9784701ad0"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-structural-process.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "2a26936282c6bd4ba7e4c1fb0c5ee41c5acd392f",
+        "raw_sha256": "760bb2aef7091a539ee9cff209e238dbf862a6a043c7090d3c2456030ee139e5"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-supplemental233.json",
+        "source_commit": "b45c36ff0cd82f418d56a5e355daf6f7a40ac39d",
+        "git_blob": "38e7e32b5211a47962799200e028ee3cde7d1319",
+        "raw_sha256": "a4ac9466eaee1b0a861829939978bdbf490360796a38aa6efd0394cebad0088c"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-tools.cjs",
+        "source_commit": "056ce4e7b512cd94cebc7b0e7b38446378e3acb5",
+        "git_blob": "aac1c09f3af047ef048142d67d8e70544664e187",
+        "raw_sha256": "cfb47da0dbc3264a8f4c7e432721df975e677380a5ec7dfb19fbcf1de21ab259"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-actual-scope.json",
+        "source_commit": "7f876bd1a5c649fcad83db0747806fc6444e05e2",
+        "git_blob": "a1f8fcf6822d75ecce6b667b16a2bb29a41a1a37",
+        "raw_sha256": "dc32e41661afc66c313a94d6c781a8252a3e0bd65f86fae7d7714a1c51848f07"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-publication.md",
+        "source_commit": "7f876bd1a5c649fcad83db0747806fc6444e05e2",
+        "git_blob": "6f881ebf180c6db93ed86a99f26e6abe4d17ab73",
+        "raw_sha256": "6d5367665a9e136da6756cf73c431e89e13acecfc041cbe010435aa84369ac45"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-scope-complete-lessons-process.json",
+        "source_commit": "7f876bd1a5c649fcad83db0747806fc6444e05e2",
+        "git_blob": "5bd3302c4c4b75250863150134a2c88f9720d859",
+        "raw_sha256": "7f76a0d27da0c541183b2673801650c753d5f9546aefa24a04a3a7d9eef9a2a7"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-scope-complete-platform-process.json",
+        "source_commit": "7f876bd1a5c649fcad83db0747806fc6444e05e2",
+        "git_blob": "16ec69aa3bc2a3d0f8f0c39118bf055abc30d81f",
+        "raw_sha256": "69c71530fcfcc06023ab19c75cce05af6c9d4b05b47c7896c5c65475439ce7d2"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-scope-own-lessons-process.json",
+        "source_commit": "7f876bd1a5c649fcad83db0747806fc6444e05e2",
+        "git_blob": "82b2a50c234d2814ad8db18a997dbd229c01501d",
+        "raw_sha256": "5332591fd248403f27b69917791168e9f758b1bda6db584ccac2f8c5804a1416"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-scope-own-platform-process.json",
+        "source_commit": "7f876bd1a5c649fcad83db0747806fc6444e05e2",
+        "git_blob": "64024542f28ad2495b4e023211041162ea156b96",
+        "raw_sha256": "3228d13fa8d5d2d08d3ab2df64ceaa0fbe3d06a2231b58d77f0ef94ad7e4e251"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-buffered-r2-process.json",
+        "source_commit": "056ce4e7b512cd94cebc7b0e7b38446378e3acb5",
+        "git_blob": "9b593cea106fe6402c489ebaa68847c2d3464cc9",
+        "raw_sha256": "e631ee18a06a37846daf4fc15ea15e9212009778d65d852128be7048d3eb9647"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-diagnostic-r1-process.json",
+        "source_commit": "056ce4e7b512cd94cebc7b0e7b38446378e3acb5",
+        "git_blob": "f938ba1c59087a3872e3fb81b084f9d439648b6e",
+        "raw_sha256": "aa6ea9d7bb447000bad67a9049b9a1d2ae5f1123c5d5de7942ad2103de92c643"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-inventory-r2-process.json",
+        "source_commit": "056ce4e7b512cd94cebc7b0e7b38446378e3acb5",
+        "git_blob": "bd02d6978a5da99171d0034c901acea9f983f407",
+        "raw_sha256": "160d1baada6e31d33c2184a1a28efacce3e2a3d3291155197cb34ef295940949"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-runtime-diagnostic.json",
+        "source_commit": "056ce4e7b512cd94cebc7b0e7b38446378e3acb5",
+        "git_blob": "15c8ac9e56066f501a3f2ff4d6c6bf2b5ac97c5a",
+        "raw_sha256": "fbbbe9478d76cf7b0e753b2df8654b2d4dbb7f482ca1c1fdf65852aeb05fde96"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-runtime-note.md",
+        "source_commit": "056ce4e7b512cd94cebc7b0e7b38446378e3acb5",
+        "git_blob": "e278ad7f7c940064ee6dd6228559ab8d7f8fc979",
+        "raw_sha256": "4e106b24e0edfb3afaa64969ffafebc4c69c3a303aa25407b46b4b49e90dfc84"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-runtime-proof-process.json",
+        "source_commit": "056ce4e7b512cd94cebc7b0e7b38446378e3acb5",
+        "git_blob": "d224591b5be6642028eb37d5a85a18651522a8b0",
+        "raw_sha256": "4b333d3b88753bdafe574a3bad63f7630e5db37a6e688d96665b99f1138312f2"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-runtime.cjs",
+        "source_commit": "056ce4e7b512cd94cebc7b0e7b38446378e3acb5",
+        "git_blob": "26fa89007b41dbfea837a09c3d9a4cb9b42bc914",
+        "raw_sha256": "f6ce43e48c82cdf1b3ad72f9391fe54ed7b1c5fd928825f44b1e381dcd77a7b9"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-plan.md",
+        "source_commit": "b112e17d6eb37c1dcf9f405d6eb31534aca98fd9",
+        "git_blob": "98494a4341604a7942ba205d16b62fe685874f59",
+        "raw_sha256": "9847f3b74bf342b15ad15f767668b3bcb803c13db37b8dd5e991c98aabe050ba"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-author-readonly-process.json",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "71e5c43d03a14c61f9ec6595b932a227feb69eb4",
+        "raw_sha256": "f5b21eac5cc918434a466c0bd5cf7f20bd613964bccf5bb5257a7f30a874bd37"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-baseline.json",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "05211eb56f17b1be98aaeb5d62dfbaec2f467129",
+        "raw_sha256": "dd2eccc34c1e0d0f86a30d4d6056594bd989228cbef6c92bb0bb062645db3855"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-bundle-process.json",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "7ca6a38b06c4f9ac76459b3461df6c5b0b33c166",
+        "raw_sha256": "0705cac690f672827fde8d96e5c4cc5987621c24693ce7139b359bbd5a3d2784"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-check.cjs",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "46762015c1127c7296982170608595f1284e91d3",
+        "raw_sha256": "ac88809d6e3f47f1384bff8bac34be06e4edd5816b0b953bd743ace277b1e0ee"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-custody-process.json",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "2b9a78951d62fbd66127d849866fd36df524d961",
+        "raw_sha256": "4a854ce79f17d4a6dd0dd3f8787fa13a389ba0348e0873ca927fbf56bd29e6d3"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-durable-process.json",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "03677ee1f902c618dc19c491ffbcf29109698371",
+        "raw_sha256": "70429fa712186201e93847ee76a862f9124c3164759a8dd318125c8d995e7818"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-goal-design-process.json",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "0dcb262b67e2030ff40285f9bc1188647b7530da",
+        "raw_sha256": "b9d5e39f638ad1287dc1d6d9926f21542727d2970a39c8fddc54e8ac12f0799d"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-governance-process.json",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "248581d5f9b7b52e15f7fe303b761ece0d040aea",
+        "raw_sha256": "70775b4c9e312677ab65834dc5f0fcf381ed1d1434ac96f62969102873b18b16"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-independent-r1-process.json",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "d3d55d0357c24df729dc3ebf60883c3e2677523b",
+        "raw_sha256": "56a5e92f27d4d303054c294699ee98070f993d16e19e3285c2cb63c6cc96ad6b"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-index-diagnostic-process.json",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "a8ecd038a796a77d3beb8c41acfe292007e7faa8",
+        "raw_sha256": "835b9bfe63ddbe9af7a4086a61932bb7893e98f0cab20c3f4b6711b0ef7a48e7"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-index-runtime.cjs",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "a37ffecd5f60f24dcc2dcfaecec2e0aa2894800a",
+        "raw_sha256": "def05710fb2b8d2a611df4e2a5458e0cdd01b901db25e9ed0f4049716c240f17"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-lessons-claim-process.json",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "06fc438441efc81a4ac661e55df5527274b6ec91",
+        "raw_sha256": "29437bd8d6fe6c6da7173b44c37f328b7c72ea8a2213634d287014a8427f5d00"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-platform-claim-process.json",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "3fb34335deef2507ecdcf9860483bf324e554aef",
+        "raw_sha256": "d644736e5e92f965474d667fc30a287885076f70e54cc1d427e37463023610ac"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-report.md",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "345c2522430f77a6073b1616195897cd576dd96f",
+        "raw_sha256": "68a039cf8715603c49e7088b7e96bf6e8bde1511b3a286f57ac2061ffcc1d6fc"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-specialist-review-process.json",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "0d7ceae0229ced6c6ef14c45264283e0d40e0c69",
+        "raw_sha256": "23626ed2ff30c23751187565dfd070893f3e2dd3ef04d08f66351ecaeacf3ee6"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-structural-process.json",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "838e0103cb7351d6cd027d0a5b97b1a704fba4f8",
+        "raw_sha256": "50c6bdc5b95f4fb8955c5626faa13bee5dccd090d2fc4f24cb62cd7c2582766a"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-tools.cjs",
+        "source_commit": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+        "git_blob": "6b752850fa424fda274ad852a77409bc5164abff",
+        "raw_sha256": "727bfd46eded364425ad403bff08e253bfc0e584ac5aca8146406d09315b347f"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-actual-scope.json",
+        "source_commit": "557d7fd2e3f79c9f084cd6ae91a43d3c04b59234",
+        "git_blob": "0ef15ecebae4fce53f0e0e987caef83c3cb3d944",
+        "raw_sha256": "d061fb0a2c10c7561d952e6bd6ac0300fb6e37171c8bc0dc4a0b5a6e32909e5a"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-audit.cjs",
+        "source_commit": "557d7fd2e3f79c9f084cd6ae91a43d3c04b59234",
+        "git_blob": "ad1bc943c9e8898c182cc14aa31eacfdd5eb6f54",
+        "raw_sha256": "4ad508cadf7411120606ade1aedef8ded0c171bc88bc8efb3b352669c35eeaef"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-complete-whitespace-cr-process.json",
+        "source_commit": "557d7fd2e3f79c9f084cd6ae91a43d3c04b59234",
+        "git_blob": "625d06a4d49f4ca3cc781f2f977393dabdbb91f7",
+        "raw_sha256": "30920d3988bfded669106bdce942b3bab9c94c24c194a3ec16ccd0a5648ed486"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-complete-whitespace-process.json",
+        "source_commit": "557d7fd2e3f79c9f084cd6ae91a43d3c04b59234",
+        "git_blob": "c0e5539a8cb1a1e0f7c1d0982f88b1dd6d5a996c",
+        "raw_sha256": "0820f7fcd047e6db2dd241f34f3320ef41f92a03e3b80fc3e9b173b8ddc2657f"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-final-integrity-process.json",
+        "source_commit": "557d7fd2e3f79c9f084cd6ae91a43d3c04b59234",
+        "git_blob": "8c81ef3346fb7d6e314d0a0a19ff3619cea9c061",
+        "raw_sha256": "0fba472e33fd5f778d2550dfca1620e49269ecad8c7ec1dd5774f91c0183231a"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-owned-whitespace-process.json",
+        "source_commit": "557d7fd2e3f79c9f084cd6ae91a43d3c04b59234",
+        "git_blob": "66e52523feb6d5c1f02ecc4160917732effa6cec",
+        "raw_sha256": "e933fdf16ff528a38c5d26e30065e419fa78329d6ec8ec49f127b24dbef4d14c"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-publication.md",
+        "source_commit": "557d7fd2e3f79c9f084cd6ae91a43d3c04b59234",
+        "git_blob": "24f3f6828e51cac76f7232630b23a4e8d0cf2175",
+        "raw_sha256": "db02b0307bc96c5f6166ff1f92bb438936ea4825fdb72893d13ffefacef15a71"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-scope-complete-lessons-process.json",
+        "source_commit": "557d7fd2e3f79c9f084cd6ae91a43d3c04b59234",
+        "git_blob": "67792acbac0b020985c1b00b6d19ad7df29737e4",
+        "raw_sha256": "9ea014b8e11379f88e3ac48947823db8cb742be0f110d8c5fa1b199ddd44bef8"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-scope-complete-platform-process.json",
+        "source_commit": "557d7fd2e3f79c9f084cd6ae91a43d3c04b59234",
+        "git_blob": "81cc419609e19dcc7fcebbcae695fa31a977205e",
+        "raw_sha256": "728d31e4e0709f8f5e9ced791fae68291415e0765c293f2b18f956fe18103026"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-scope-own-lessons-process.json",
+        "source_commit": "557d7fd2e3f79c9f084cd6ae91a43d3c04b59234",
+        "git_blob": "25dc98191b3e51329a3706feac8b37ba97fa40ab",
+        "raw_sha256": "4f0089f46ab3251d29e6b827a1534aa4d6922e1ddb9b76ac83ea3ee759313bf2"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-scope-own-platform-process.json",
+        "source_commit": "557d7fd2e3f79c9f084cd6ae91a43d3c04b59234",
+        "git_blob": "c71f14aca3b10280513176ac6d71c75deb46d2b5",
+        "raw_sha256": "58c0dcb6dc023c2a3997e8ee4dc21c6a665a8310b9d75009265ff291a15fd635"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-plan.md",
+        "source_commit": "4bda62caf3e15fa7215ad6ad90bf9af2635f10b3",
+        "git_blob": "f1b8cc4f819885e076f352dad17af734ade2df06",
+        "raw_sha256": "5b7f5e5c90ede0e12efbd5637bb23865abd11f2577c19f3497ce63fcb21a60df"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-audit.cjs",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "6f5d45420a300282871e47d31778266652d028ca",
+        "raw_sha256": "6484ae5479d3e5f64a5dde9a4f6fc203c23b2148fac9b77eab991df24fddda4a"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-baseline.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "797bbb4c7a128c64dd36d28b6a37c8de2d2c869c",
+        "raw_sha256": "76d08442b168e7aaf686d05ba9adb84223d63969bd586f619f83730fd95445f7"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-bundle-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "f887bbb71c6b13e98d6ac51ac427b61011299c0e",
+        "raw_sha256": "f59fe0eed7b8a7ccdd3e0eee6eacd747988c60796aa61517f89776f48bd11c06"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-final-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "9d9f6ccd5b38c94405948f678afe89846517489c",
+        "raw_sha256": "92442b0994c64c7cb485ee788fe5676aab02e72eaae7b40ea731b279bf60de30"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-r1-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "5548c6946e2e2ea8391531338bc220add197d29a",
+        "raw_sha256": "5601928484b462b474694bf4240bfa9151490a14b16235df297e868d30d5db7d"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-r2-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "d279fdfaa6cdb025946623cf19118e45f7db3c62",
+        "raw_sha256": "d03a4b6211596cf4c58de06e126531e381428f3b0c5c5feead949609afc0090b"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-r3-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "e6c345d6240b2bbf5a0f6fe46f6786e89abd47ba",
+        "raw_sha256": "64c0c24f6f242975b857c7b83ee1117bb54e2ef9dad03fcfae65f149865ec9be"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check.cjs",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "7d1e1cda531b388d97de1964100307650703d7fa",
+        "raw_sha256": "85b679339d679681863dad38eb0e21c78f487151a716d8502719503d4d4e848a"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-complete-whitespace-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "32c12b3c460d5133e18146bbc01afb18c1bb80b3",
+        "raw_sha256": "811bdfa34cd73c9962b8b0cd9a132b77fa5e53424965a560fbbb4e8bb2308d10"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-durable-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "01df4b16b2517fffd50301f28aed19f5952df28c",
+        "raw_sha256": "af6886f2cb303c41e3e054aad5dc05c7ba5ec14b8d483419464cfe011bececf4"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-foundation-inputs.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "cb3cd9de579041abac29095534a646818fb3029d",
+        "raw_sha256": "ad2de61e8e31aab3a451f8c472b625bcfe490a5ec88c3a0f2c0374809fed9167"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-goal-design-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "b9eb684b1a2daf3dbf27da30b1e14dbdf541597c",
+        "raw_sha256": "fd90f5bb1e362b179e148237d9f3159efce3586db69f67208c59ce31ea71fe7d"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-governance-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "73e956129c67ae8950f5d1b441498afb60da1531",
+        "raw_sha256": "c4418daaaacfad5e214b6eae3685c3eccd861cbe79ebec13397fa402572db0fd"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-index-diagnostic-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "d36afe7ba3cac2f9df459b65e7991876ffd1f784",
+        "raw_sha256": "6cbe2a214ab14174ba48af047ea7ac5c84a03d53ec035c2a9fef872bc9e0cd34"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-index-runtime.cjs",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "4780a857510797a5fc71c7c8b354d924a4f24ab9",
+        "raw_sha256": "5bc1b3ab17d5dd9f5cf4292aa4ac71fe8fbfadeb5af90a921bbe40659bd831e3"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-lessons-claim-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "f6d7840eec1ed624e2eab3988bac929f50a39e74",
+        "raw_sha256": "534873de2473eee1fe0fd0a26206b554daabe0ef6e23c8e8dd521bb625e97043"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-original-author-current-readonly-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "3cb3c7ffb5ac94fbdbcf824e7931f10607a10330",
+        "raw_sha256": "b338865dc75fd9c32d131c358b40ec585cf2b9de28efa0dc6413430c02250b07"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-original-author-final-readonly-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "2f7f6a608be7285fa203e4cf098b201172b422d7",
+        "raw_sha256": "7254fe484f2734a4e9da3380bbab240f7e6d18a86bef5318c96d83f8c9091cb4"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-original-author-readonly-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "028c23a238c85c7ba6ddf937922b3af005a03d00",
+        "raw_sha256": "173002f2049b2ec3f6593ee8c8ed823d17614edf3b91cb003c9e485cc582a728"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-platform-claim-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "9b04acea004484a77a6769dd04168202835cd36b",
+        "raw_sha256": "a2e0972279983910e2320f6f0dd6e5001c618ee6cb6e7f855856688cd2dfb22a"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-report.md",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "46980c92cfea8118020a1a322e69d4354e7ec101",
+        "raw_sha256": "0a656e3d743aa8affe53f83a2ede1e7d7e55eea50da43b1d02a13c5b6cf96184"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-structural-process.json",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "101359c10b9154d8eb20a65b3f2234ad6ef1a6f3",
+        "raw_sha256": "13e459b638f360b0c2d3779c37355ccfb6cc5cd6b3f64343f132de6c5d446a81"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-tools.cjs",
+        "source_commit": "62504eaeda62552c08b5473670b471fc5d36f414",
+        "git_blob": "b57f249aef7188f85e118616eddc4af99ccee486",
+        "raw_sha256": "860b5bcc721c805bc57945020067b302e5fed30044514143fbce4c45909ba19d"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-actual-scope.json",
+        "source_commit": "7086006c977d7d1318a2813b2bc5a1e808b1dd75",
+        "git_blob": "ca21c441c9d3152afa90724aef59290a7e01bea4",
+        "raw_sha256": "41f3c92886a4bd5962839984fb0bacaf28f3da735ad070b4eb57225b301b1db0"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-final-integrity-process.json",
+        "source_commit": "7086006c977d7d1318a2813b2bc5a1e808b1dd75",
+        "git_blob": "ca8eea78b71e7a4db1549fa244bb7bcd92ace90c",
+        "raw_sha256": "51883a9ed3b2b3c3312132594ea2fff1905dfeb2d9582ae5e2abd720dd3c59d1"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-own-whitespace-process.json",
+        "source_commit": "7086006c977d7d1318a2813b2bc5a1e808b1dd75",
+        "git_blob": "a933c5d211cc53efd73da410d5b8657289d8e503",
+        "raw_sha256": "98cd4151b285078d47140f19d95c923996ab3102ce753909ae737f3e012d191b"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-publication.md",
+        "source_commit": "7086006c977d7d1318a2813b2bc5a1e808b1dd75",
+        "git_blob": "ab43ce2dea5b36e851c5a818a0beb0ee120a07e6",
+        "raw_sha256": "26c366d85c35d804ec48aac36c1ecec164c9ed7c6cb1818b53e13c317c9a5aec"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-complete-lessons-process.json",
+        "source_commit": "7086006c977d7d1318a2813b2bc5a1e808b1dd75",
+        "git_blob": "9a2a80fe0a0e1c10a98d96edde05f39306dfe31f",
+        "raw_sha256": "910f4949826cf10ba7e11adbd2ae72a54083b8f26e08dc09fdbf9c71b39ce360"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-complete-platform-process.json",
+        "source_commit": "7086006c977d7d1318a2813b2bc5a1e808b1dd75",
+        "git_blob": "cd97627abefb16794a518b5c1f841ef431a1b9f0",
+        "raw_sha256": "de526c07d6b99ff4e8b16ff9b095a978d7d61b77a42255a3b4a0cff9f2643cf5"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-own-lessons-process.json",
+        "source_commit": "7086006c977d7d1318a2813b2bc5a1e808b1dd75",
+        "git_blob": "cc2814f403552679a2e013dabf988d4e6c4fd046",
+        "raw_sha256": "c67c0f9c30c8009a7fa5564cd9948fbbc60b2a4d1e40011d6b7ca9baedaf6615"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-own-platform-process.json",
+        "source_commit": "7086006c977d7d1318a2813b2bc5a1e808b1dd75",
+        "git_blob": "e457e0cb6794a96095508b79379800b0ce04659d",
+        "raw_sha256": "efeed948c6ed4717a86bac038eac3e23cdceb432312cd8984a1334b65f690f8c"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-plan.md",
+        "source_commit": "ff77b6f94579d94a746d9e44ae7da7f7e7e709d6",
+        "git_blob": "49c0800a039151faee90fb0e33024bba54336306",
+        "raw_sha256": "fb5cf9ecb9374b40161e9d33511b179194a24599bb9f3dd22ab93af6a6d2fdab"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-attributed-F1-process.json",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "b92bdd916800f76ea5ae26dedeedb3f9abdc88ac",
+        "raw_sha256": "cf9a40a599cb035cd97086bcae5479177213fe464fc7a22c68e86053b79b5c6d"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-attributed-original-process.json",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "a1b2f52092af627907a320f336d662356fc279b4",
+        "raw_sha256": "7b0b556d419213b729961d580c4f1eac7f69bc722c5a0d3e2e38b81e94743cc5"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-baseline.json",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "aef92b96b9e94979eabaaed94e72615c44ace339",
+        "raw_sha256": "975026ed2ff7d66fabb1b20fef143b41aca27001935e62fbe5ec7f7b7f024f72"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-bundle-process.json",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "fb553957c54214f6e4e5bdb9e0b3fed8d6133d60",
+        "raw_sha256": "1e93df0efd205f37175818a6a722825b3ea18ed64c4077e3aa4fb122d909b3cf"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-check.cjs",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "6494c389e93a267db02be4bd2f92a79f508c84f2",
+        "raw_sha256": "1ec2dceeae3000bf3d2809b4546ac7795da8136ac24565795804864ea644ea7e"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-durable-process.json",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "fa1c678ad8732e2499ebd7f8aa5a444c74fa4eda",
+        "raw_sha256": "e2fa7f5e129ad33c0f58d0655d28372a9e419f49a3f6d5b819afa33872969ea6"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-goal-design-process.json",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "0eac3f5f2bc037a9450f16c1a2aacb7c2d3ca71b",
+        "raw_sha256": "83d55828e250bbac78462a5e4b43b1acada085bbd5eccf6c5dee532ae3480fec"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-governance-process.json",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "a03e314cd2c27885ecece756e141e177238ed342",
+        "raw_sha256": "46ac39584a71fb2baa922825b8fb421eb7a7afef022e433384e242a28459c5f6"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-independent-r1-process.json",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "1ea7152e1462ffeb36aba08cc417b83c0480fe54",
+        "raw_sha256": "20628fe944922b79066f3e97668f50c57a57d17a83a22b12b42aa0f88e882485"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-index-diagnostic-process.json",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "a5d8ce22a4b3827d7a8b1e82255317f983d8af37",
+        "raw_sha256": "27b20eaa59e3bb6487a36a93be0caab8ace83861003a576b48c0caa138f11c9d"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-index-runtime.cjs",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "b1a98052d105a910f1e677d61d2fd1337c8414c2",
+        "raw_sha256": "419701140be8a668d4f12b3eb30aabf66e09b98aee86457948e8ead2e49e24b4"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-lessons-claim-process.json",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "6667b4e8316403f24ba44ef3ebf92d655d569108",
+        "raw_sha256": "fa3fc5d20d25dc06941f70a16dc03eb7aa87305cf310f0bb55d344134011d894"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-platform-claim-process.json",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "4d68902ddb0cf51e3b8363ab87d80fe743b8f282",
+        "raw_sha256": "1cc792b48d9156fdf60b42494b3f6c883961d8e094d60f0b34334130cb42f0e6"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-report.md",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "63d220d5b6bbd2e2e5e8454ecf720a5954ecf86f",
+        "raw_sha256": "3cac3da69d367d34aeb2804436b1933533916c621f36612a08461ef86f9ad7c1"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-structural-process.json",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "3a59226ca29448987184ca7116fd5c75614fc0ec",
+        "raw_sha256": "b7d2f7b3caa576154f3e9f202f32c4192677af7ddd96108f609c246a67ee0b32"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-tools.cjs",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "3704ad723deaba04735da36b6217709609cf1c68",
+        "raw_sha256": "91b1840a63f4ec0433cc88401274bb18cd1f60bae6b966890e71e145e64d6a7d"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-whole-whitespace-process.json",
+        "source_commit": "2752ae5a2c8946ff3c72cba21fd74d9e1354068d",
+        "git_blob": "1ba89c1cccb5593229097d6f10d576151c69aca6",
+        "raw_sha256": "ce8970cbc1b1436a9ad2c05b8303b0bdd71fd5b4876c003beb5ffd2af8f5edaa"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-audit.cjs",
+        "source_commit": "8ed2366e8b2828da9610d292980f8671a7e19fb7",
+        "git_blob": "498c9358303289758296d003230dc275164264d1",
+        "raw_sha256": "e3cfa87cb2876bfa75e9f747563a6b0549e41cefed270472cb4779c3d20dca83"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-final-integrity-process.json",
+        "source_commit": "8ed2366e8b2828da9610d292980f8671a7e19fb7",
+        "git_blob": "d0c0464942128fee5845f6920bb7ca8b2ef9bc6f",
+        "raw_sha256": "9505d91ff608439a5ff0dd7482d15c27606ffd132212c9bc6a35242a409321a8"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-own-whitespace-process.json",
+        "source_commit": "8ed2366e8b2828da9610d292980f8671a7e19fb7",
+        "git_blob": "f9fca04b47339afbb8bc3d33ea158ffd0ce39c7f",
+        "raw_sha256": "d5b92e74affc171b60f68ccff12a34efb0a58f4a4f262ee4cbf205dd6980502e"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-publication.md",
+        "source_commit": "8ed2366e8b2828da9610d292980f8671a7e19fb7",
+        "git_blob": "b3c944080f5ce9f4d845a544b602a81992157e5b",
+        "raw_sha256": "dba5851d69fd5d6f02434fc5986d682716ca6cc07c076e5424f64c0ff5354b90"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope-own-lessons-process.json",
+        "source_commit": "8ed2366e8b2828da9610d292980f8671a7e19fb7",
+        "git_blob": "bd31d85996b8cbd56c78a538e693d24c9e1a13bc",
+        "raw_sha256": "f9a83e82ec29b17347c7e1e4217683eaa05c2bf315296d6181e9123d05892c81"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope-own-platform-process.json",
+        "source_commit": "8ed2366e8b2828da9610d292980f8671a7e19fb7",
+        "git_blob": "1189ba1c9b13dfdcd6308b8fe8874eced12e5aa9",
+        "raw_sha256": "4be87d2ef2e4a5afb90aadb4e6293b068d27462f8d23ffc849d0af8e2971defa"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope-whole-lessons-process.json",
+        "source_commit": "8ed2366e8b2828da9610d292980f8671a7e19fb7",
+        "git_blob": "ba566e4f2a8eb623b61c0eb00139c7299ebfa4e1",
+        "raw_sha256": "c85cb5263a3851e6f3e2858d2382a17984157692f3e289ea3abcd95aa38f7eb8"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope-whole-platform-process.json",
+        "source_commit": "8ed2366e8b2828da9610d292980f8671a7e19fb7",
+        "git_blob": "5015f15e29b8cb1f49c04eaedebf625c00f23056",
+        "raw_sha256": "14d09d4c8666a03be0bb14589485e5137fefb9a1e2ce0966cc7cac41a9dbc747"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-REVIEW-scope.json",
+        "source_commit": "8ed2366e8b2828da9610d292980f8671a7e19fb7",
+        "git_blob": "4d520f3480749208237442aaa9bce1dd121251c3",
+        "raw_sha256": "68b9146239e6b4be8b86fd07c5416069094d3a28ce974da2a02dca446b8670e1"
+      }
+    ]
+  },
+  "lessons": {
+    "steps": [
+      {
+        "commit": "a9662869395f449a4d5dce907bfe58976f94ed01",
+        "parent": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a",
+        "paths": [
+          "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md"
+        ]
+      },
+      {
+        "commit": "e90d5c122a44fb0fd547339cf48558680cbc6ace",
+        "parent": "a9662869395f449a4d5dce907bfe58976f94ed01",
+        "paths": [
+          "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md"
+        ]
+      }
+    ],
+    "final": [
+      {
+        "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md",
+        "source_commit": "e90d5c122a44fb0fd547339cf48558680cbc6ace",
+        "git_blob": "cfa8c61958f3d96d8d53aebe388695ed75d0ef2f",
+        "raw_sha256": "4b792ab6e6038165e7e1f9509699b23199f4592767de3e511ceb89e13331412a"
+      }
+    ]
+  },
+  "original_remote": {
+    "P": "4851c7602a870c08194cb940d42c2ef77d4df742",
+    "L": "e90d5c122a44fb0fd547339cf48558680cbc6ace"
+  },
+  "root_before": {
+    "P": "a9cae639a1c5ab98067d1c6e503af1ef4e8c4902",
+    "L": "f666bbb7dd258f1f01b38a20dd6ca3802848f8b7"
+  }
+}
