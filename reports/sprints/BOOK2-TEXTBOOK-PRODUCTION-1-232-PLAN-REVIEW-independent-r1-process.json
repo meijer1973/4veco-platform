@@ -1,0 +1,12 @@
+{
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-check.py"
+  ],
+  "cwd": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:40:34.715Z",
+  "ended_at": "2026-09-06T02:40:34.848Z",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-check.py\", line 128, in <module>\r\n    alts=contract(text)\r\n  File \"C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-check.py\", line 108, in contract\r\n    for f in fragments: need(f.lower() in low,'Missing contract: '+f)\r\n                        ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-check.py\", line 13, in need\r\n    if not x: raise ValueError(message)\r\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\r\nValueError: Missing contract: PS is not profit\r\n"
+}

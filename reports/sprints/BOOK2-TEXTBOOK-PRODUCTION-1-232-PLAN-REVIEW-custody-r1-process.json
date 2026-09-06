@@ -1,0 +1,13 @@
+{
+  "command": "node",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-REVIEW-custody.cjs",
+    "baseline"
+  ],
+  "cwd": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:43:30.238Z",
+  "ended_at": "2026-09-06T02:44:05.774Z",
+  "exit_code": 0,
+  "stdout": "{\"status\":\"PASS\",\"instructions\":32,\"prior_files\":[{\"repository\":\"platform\",\"count\":11915},{\"repository\":\"lessons\",\"count\":1901}],\"historical_records\":24,\"pins\":6,\"releases\":2}\n",
+  "stderr": ""
+}
