@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T09:07:18.896Z
+Generated: 2026-09-06T09:09:40.430Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `agent/book2-234-paper-review-20260906`
-Source commit: `0991cc186300d72d18edded30f126480415bc1e9`
-Files indexed: 15196
-Scope: committed tree files from `git ls-tree -r --name-only 0991cc186300d72d18edded30f126480415bc1e9`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source commit: `c19450bb00cdc8ded7bcd37dea9175e27c977b66`
+Files indexed: 15197
+Scope: committed tree files from `git ls-tree -r --name-only c19450bb00cdc8ded7bcd37dea9175e27c977b66`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -2777,7 +2777,7 @@ Count: 1030
 
 ## reports
 
-Count: 12398
+Count: 12399
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -12659,6 +12659,7 @@ Count: 12398
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-check.cjs
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-checks.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-r2.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-report.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-own-L-process.json
