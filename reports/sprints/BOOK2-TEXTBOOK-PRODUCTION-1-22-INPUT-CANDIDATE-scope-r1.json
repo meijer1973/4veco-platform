@@ -1,0 +1,324 @@
+{
+  "rows": [
+    {
+      "name": "own-P",
+      "base": "b50d24d9fa4601499a1c1f45ee42d5c38763c62e",
+      "head": "61f3f0e91464696e830c5ae8677eddba10fd69b4",
+      "exit_code": 1,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 29,
+        "unknown": 0
+      },
+      "failures": [
+        "shared lane needs at least one shared platform change",
+        "generated index/report or review-evidence changes are allowed only with lane-owned changes"
+      ]
+    },
+    {
+      "name": "own-L",
+      "base": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+      "head": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+      "exit_code": 1,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      },
+      "failures": [
+        "no changed paths to classify",
+        "textbook lane needs at least one Part A textbook change"
+      ]
+    },
+    {
+      "name": "whole-P",
+      "base": "96416b6b5bd57094576e9aba0a42d682584ec479",
+      "head": "61f3f0e91464696e830c5ae8677eddba10fd69b4",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 102,
+        "generated_indexes": 6,
+        "review_evidence": 8590,
+        "unknown": 0
+      },
+      "failures": []
+    },
+    {
+      "name": "whole-L",
+      "base": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 242,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 8,
+        "unknown": 0
+      },
+      "failures": []
+    }
+  ],
+  "white": [
+    {
+      "name": "own-P",
+      "exit_code": 0
+    },
+    {
+      "name": "own-L",
+      "exit_code": 0
+    },
+    {
+      "name": "whole-P",
+      "exit_code": 2
+    },
+    {
+      "name": "whole-L",
+      "exit_code": 0
+    }
+  ],
+  "strict": {
+    "platform": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-check-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-check.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-create-r1-diagnostic.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-create-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-finish.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-inputs.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-post-r1.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-precheck-notes.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-probes-r1.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.1-publisher-print-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.1-student-web-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.2-publisher-print-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.2-student-web-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.3-publisher-print-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.3-student-web-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.4-publisher-print-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.4-student-web-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-authoring-contract-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-bundle-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-chapter_planning-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-chapter_production-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-durable-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-governance-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-structural-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-result.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-run.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-verification-r1.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-scope-r1-own-L-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-scope-r1-own-P-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-scope-r1-whole-L-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-scope-r1-whole-P-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-white-r1-own-L-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-white-r1-own-P-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-white-r1-whole-L-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-white-r1-whole-P-process.json"
+    ],
+    "lessons": [],
+    "unknown": 0
+  },
+  "custody": {
+    "status": "CANDIDATE_VERIFIED_NOT_PRODUCTION_RELEASE",
+    "tested_source_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+    "checker_sha256": "a6f7986bfbea967f00049b0d8e6305613d43d70cd5a1ba82db256d4f9b22d55d",
+    "manifest_sha256": "d7cf3d9902edb65d22c4c21f31771db6b1e08db51ac8feac8dff57f400014469",
+    "verification_sha256": "c9e81161cf4aa7ca90ce1c562bd75c206803c3bdd7794d6b56ed4a8006a42e14",
+    "inputs": 138,
+    "platform_inputs": 54,
+    "lesson_inputs": 84,
+    "processes": [
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-create-r2-process.json",
+        "sha256": "58230585da90ffbb068a483606a1b8883001b3401f3e86f4d804279ff17eea0d",
+        "controller_commit": "fc53aa5aafefd93addf2bd3483e3d729a35f4376",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-check-r1-process.json",
+        "sha256": "2f66e07e6122ca4201fb96ad892811f3779ba43e52468b35e80c9f8a03b32372",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-structural-process.json",
+        "sha256": "dc957696bd98fd946ff3fdd37d895da3b906a6597bbfd31fb281105a8633271a",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-chapter_planning-process.json",
+        "sha256": "657567568b722209e5c94fe47a4e07e95e12d70e617043ef024dadfad523ecc7",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-chapter_production-process.json",
+        "sha256": "41f3aa5e474767182d2356d8c0df0ce4bf29bbe897d9f378350be130a5260cb2",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-durable-process.json",
+        "sha256": "4b6c3136159f200148bcbb69e367a3029d3e66aecf965630bf5105e41c131b6c",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-bundle-process.json",
+        "sha256": "5f209d031eb7ee87dcbf0f6cd2f53165666a10c326a91d45c170f6d1f72cca0e",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-governance-process.json",
+        "sha256": "0605765a60f4e27fba41a0b5afc3045706a07278f949be03209018d3696bafec",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-authoring-contract-process.json",
+        "sha256": "6fc7bb86f035522026d4a52eb009aac14579784b7d516246f09ece3329797a89",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.1-student-web-process.json",
+        "sha256": "cd4e6b87bf3fcabe116d19cbfccc17334e2090c74c2c2610e51707b4a51e6771",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.1-publisher-print-process.json",
+        "sha256": "046e3bbdd39b05a587e6a66a0b887500634c873c5802c3cee1ef8eeeba8e3978",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.2-student-web-process.json",
+        "sha256": "7847384588204f1d9cf526364dac934126670caacdc532422aa5d3e59235a3dc",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.2-publisher-print-process.json",
+        "sha256": "32428aab396c7f0a9798a31926c4d36961cd05a69c04cb0e3a506e1b8051fd46",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.3-student-web-process.json",
+        "sha256": "d19bdd42177340a10d66e7412e622d9dcf3aa3326973b9aeb132b1d5fdb45243",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.3-publisher-print-process.json",
+        "sha256": "29a23ba4062401391cecf1f6790bbd14a685eaa6495cb61b8c2178f91a0479db",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.4-student-web-process.json",
+        "sha256": "a638462fb560d19d57659db695f5e9a860cbb860584b46476427009bfc21cf92",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-r1-2.2.4-publisher-print-process.json",
+        "sha256": "51bfba7b3de2cf444a64ab53e0c158a39bc834d50db4b7b373e02ddb4a4a0803",
+        "controller_commit": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+        "raw_streams_and_source_binding": true
+      }
+    ],
+    "probes": {
+      "positives": 2,
+      "negatives": 427,
+      "semantic_negatives": 12,
+      "inputs": 138
+    },
+    "gates": [
+      {
+        "name": "structural",
+        "exit_code": 0
+      },
+      {
+        "name": "chapter_planning",
+        "exit_code": 0
+      },
+      {
+        "name": "chapter_production",
+        "exit_code": 0
+      },
+      {
+        "name": "durable",
+        "exit_code": 0
+      },
+      {
+        "name": "bundle",
+        "exit_code": 0
+      },
+      {
+        "name": "governance",
+        "exit_code": 0
+      },
+      {
+        "name": "authoring-contract",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.1-student-web",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.1-publisher-print",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.2-student-web",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.2-publisher-print",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.3-student-web",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.3-publisher-print",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.4-student-web",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.4-publisher-print",
+        "exit_code": 0
+      }
+    ],
+    "inventory": {
+      "rows": 41,
+      "physical_PDFs": 29,
+      "accepted_PDFs": 23,
+      "candidate_PDFs": 2,
+      "legacy_PDFs": 4,
+      "pending_PDFs": 12,
+      "manifest_sha256": "1296c608e55cc2a573b072eddca0f98b7005ed779ff3d762b82af06777f3c067"
+    },
+    "native_writes": 0,
+    "production_release": false
+  }
+}
