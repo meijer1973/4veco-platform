@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-platform",
+  "original": "1e35171b30711822037af7217d60f71fa18be819",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "1e35171b30711822037af7217d60f71fa18be819"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T06:45:19.585Z",
+  "finish": "2026-09-06T06:45:19.726Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 60bdd317] docs(book2): preserve 224 index fallback and exact-inventory runner\n Date: Sun Sep 6 07:24:53 2026 +0200\n 3 files changed, 68 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-fallback.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-runner.js\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDYwYmRkMzE3XSBkb2NzKGJvb2syKTogcHJlc2VydmUgMjI0IGluZGV4IGZhbGxiYWNrIGFuZCBleGFjdC1pbnZlbnRvcnkgcnVubmVyCiBEYXRlOiBTdW4gU2VwIDYgMDc6MjQ6NTMgMjAyNiArMDIwMAogMyBmaWxlcyBjaGFuZ2VkLCA2OCBpbnNlcnRpb25zKCspCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMjQtQlVJTEQtaW5kZXgtZmFsbGJhY2suanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjI0LUJVSUxELWluZGV4LXJ1bm5lci5qcwo=",
+  "stderr_base64": ""
+}

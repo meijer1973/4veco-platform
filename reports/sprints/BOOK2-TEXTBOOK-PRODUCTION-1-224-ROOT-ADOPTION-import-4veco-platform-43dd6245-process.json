@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-platform",
+  "original": "43dd62450b2b3b8b3d1b3c01232945f688bb67f6",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "43dd62450b2b3b8b3d1b3c01232945f688bb67f6"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T06:45:18.952Z",
+  "finish": "2026-09-06T06:45:19.264Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 f7b7ea29] docs(book2): bind 224 actual payload scope and publication\n Date: Sun Sep 6 07:21:32 2026 +0200\n 3 files changed, 9439 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-publication.md\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-scope.js\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-scope.json\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGY3YjdlYTI5XSBkb2NzKGJvb2syKTogYmluZCAyMjQgYWN0dWFsIHBheWxvYWQgc2NvcGUgYW5kIHB1YmxpY2F0aW9uCiBEYXRlOiBTdW4gU2VwIDYgMDc6MjE6MzIgMjAyNiArMDIwMAogMyBmaWxlcyBjaGFuZ2VkLCA5NDM5IGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1CVUlMRC1wdWJsaWNhdGlvbi5tZAogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjI0LUJVSUxELXNjb3BlLmpzCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMjQtQlVJTEQtc2NvcGUuanNvbgo=",
+  "stderr_base64": ""
+}

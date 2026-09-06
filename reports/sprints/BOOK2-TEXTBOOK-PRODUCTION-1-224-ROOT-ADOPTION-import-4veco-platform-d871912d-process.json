@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-platform",
+  "original": "d871912d3a0b5425a45e19d39d2742c6525a12b1",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "d871912d3a0b5425a45e19d39d2742c6525a12b1"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T06:45:16.609Z",
+  "finish": "2026-09-06T06:45:16.753Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 0393cf48] plan(book2): commit released 224 production work order\n Date: Sun Sep 6 06:35:14 2026 +0200\n 1 file changed, 236 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-operational-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDAzOTNjZjQ4XSBwbGFuKGJvb2syKTogY29tbWl0IHJlbGVhc2VkIDIyNCBwcm9kdWN0aW9uIHdvcmsgb3JkZXIKIERhdGU6IFN1biBTZXAgNiAwNjozNToxNCAyMDI2ICswMjAwCiAxIGZpbGUgY2hhbmdlZCwgMjM2IGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1CVUlMRC1vcGVyYXRpb25hbC1wbGFuLm1kCg==",
+  "stderr_base64": ""
+}

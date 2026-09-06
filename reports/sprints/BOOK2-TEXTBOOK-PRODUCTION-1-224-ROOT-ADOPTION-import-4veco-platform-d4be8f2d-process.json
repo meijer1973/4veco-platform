@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-platform",
+  "original": "d4be8f2d8a74a811d82e832f4b1bfc78c8665fd7",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "d4be8f2d8a74a811d82e832f4b1bfc78c8665fd7"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T06:45:17.023Z",
+  "finish": "2026-09-06T06:45:17.172Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 0c6a291f] test(book2): bind 224 complete baseline and native proof controller\n Date: Sun Sep 6 06:52:57 2026 +0200\n 2 files changed, 92503 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-baseline.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-controller.py\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDBjNmEyOTFmXSB0ZXN0KGJvb2syKTogYmluZCAyMjQgY29tcGxldGUgYmFzZWxpbmUgYW5kIG5hdGl2ZSBwcm9vZiBjb250cm9sbGVyCiBEYXRlOiBTdW4gU2VwIDYgMDY6NTI6NTcgMjAyNiArMDIwMAogMiBmaWxlcyBjaGFuZ2VkLCA5MjUwMyBpbnNlcnRpb25zKCspCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMjQtQlVJTEQtYmFzZWxpbmUuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjI0LUJVSUxELWNvbnRyb2xsZXIucHkK",
+  "stderr_base64": ""
+}

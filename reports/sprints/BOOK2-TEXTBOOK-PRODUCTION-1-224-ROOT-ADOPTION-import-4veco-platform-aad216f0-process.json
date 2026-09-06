@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-platform",
+  "original": "aad216f04728011e8f7d52c695b8ffad3edf6f96",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "aad216f04728011e8f7d52c695b8ffad3edf6f96"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T06:45:17.713Z",
+  "finish": "2026-09-06T06:45:17.862Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 19016e3d] test(book2): share actual 224 whole-source guard with negative probes\n Date: Sun Sep 6 06:56:08 2026 +0200\n 1 file changed, 3 insertions(+), 7 deletions(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDE5MDE2ZTNkXSB0ZXN0KGJvb2syKTogc2hhcmUgYWN0dWFsIDIyNCB3aG9sZS1zb3VyY2UgZ3VhcmQgd2l0aCBuZWdhdGl2ZSBwcm9iZXMKIERhdGU6IFN1biBTZXAgNiAwNjo1NjowOCAyMDI2ICswMjAwCiAxIGZpbGUgY2hhbmdlZCwgMyBpbnNlcnRpb25zKCspLCA3IGRlbGV0aW9ucygtKQo=",
+  "stderr_base64": ""
+}

@@ -1,0 +1,21 @@
+{
+  "actor": "codex-root",
+  "label": "publisher-print",
+  "argv": [
+    "node",
+    "scripts/validate-paragraph.js",
+    "--mode",
+    "part-a",
+    "--profile",
+    "publisher-print",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T06:47:11.445959+00:00",
+  "finished": "2026-09-06T06:47:11.487660+00:00",
+  "exit_code": 0,
+  "stdout": "\nValidating paragraph 2.2.4 \"Gemengde opgaven elasticiteit\"\nPath: C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\nMode: part-a\nProfile: publisher-print\n\n-- Part A textbook files --\n  OK Paragraph type: consolidation\n  OK opgaven.md: 2.2.4 Gemengde opgaven elasticiteit – opgaven.md\n  OK antwoorden.md: 2.2.4 Gemengde opgaven elasticiteit – antwoorden.md\n  OK 2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf (254 KB)\n  OK 2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf (279 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 4 image refs all resolve\n  OK _assets/: 4 SVGs, 4 PNGs\n\n-- Part A QC artifacts --\n  OK Part A review: 2.2.4-review.md (no explicit verdict, no FAIL markers)\n  OK Quality ref: 2.2.4-quality-ref.yaml (valid)\n\n==========================================\nOK Paragraph 2.2.4 \"Gemengde opgaven elasticiteit\" PASSED all checks.\n\n",
+  "stderr": "",
+  "stdout_base64": "ClZhbGlkYXRpbmcgcGFyYWdyYXBoIDIuMi40ICJHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdCIKUGF0aDogQzpcd3RcYm9vazItcGFydC1hLXByb2R1Y3Rpb24tMjAyNjA5MDVcNHZlY28tbGVzc2VuXEJvZWsgMiAtIEtvc3Rlbiwgb3BicmVuZ3N0ZW4sIGVsYXN0aWNpdGVpdCBlbiBzdXJwbHVzXDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0XDIuMi40IEdlbWVuZ2RlIG9wZ2F2ZW4gZWxhc3RpY2l0ZWl0Ck1vZGU6IHBhcnQtYQpQcm9maWxlOiBwdWJsaXNoZXItcHJpbnQKCi0tIFBhcnQgQSB0ZXh0Ym9vayBmaWxlcyAtLQogIE9LIFBhcmFncmFwaCB0eXBlOiBjb25zb2xpZGF0aW9uCiAgT0sgb3BnYXZlbi5tZDogMi4yLjQgR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQg4oCTIG9wZ2F2ZW4ubWQKICBPSyBhbnR3b29yZGVuLm1kOiAyLjIuNCBHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdCDigJMgYW50d29vcmRlbi5tZAogIE9LIDIuMi40IEdlbWVuZ2RlIG9wZ2F2ZW4gZWxhc3RpY2l0ZWl0IOKAkyBvcGdhdmVuLnBkZiAoMjU0IEtCKQogIE9LIDIuMi40IEdlbWVuZ2RlIG9wZ2F2ZW4gZWxhc3RpY2l0ZWl0IOKAkyBhbnR3b29yZGVuLnBkZiAoMjc5IEtCKQogIE9LIGJ1aWxkX3BkZi5weQoKLS0gQXNzZXQgaW50ZWdyaXR5IC0tCiAgT0sgNCBpbWFnZSByZWZzIGFsbCByZXNvbHZlCiAgT0sgX2Fzc2V0cy86IDQgU1ZHcywgNCBQTkdzCgotLSBQYXJ0IEEgUUMgYXJ0aWZhY3RzIC0tCiAgT0sgUGFydCBBIHJldmlldzogMi4yLjQtcmV2aWV3Lm1kIChubyBleHBsaWNpdCB2ZXJkaWN0LCBubyBGQUlMIG1hcmtlcnMpCiAgT0sgUXVhbGl0eSByZWY6IDIuMi40LXF1YWxpdHktcmVmLnlhbWwgKHZhbGlkKQoKPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ck9LIFBhcmFncmFwaCAyLjIuNCAiR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQiIFBBU1NFRCBhbGwgY2hlY2tzLgoK",
+  "stderr_base64": ""
+}

@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-platform",
+  "original": "2df56fa59da339fc361cb991d15853f77f5934e2",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "2df56fa59da339fc361cb991d15853f77f5934e2"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T06:45:19.806Z",
+  "finish": "2026-09-06T06:45:19.942Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 6cc91bd2] Plan distinct complete paragraph 224 review\n Date: Sun Sep 6 07:41:21 2026 +0200\n 1 file changed, 118 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDZjYzkxYmQyXSBQbGFuIGRpc3RpbmN0IGNvbXBsZXRlIHBhcmFncmFwaCAyMjQgcmV2aWV3CiBEYXRlOiBTdW4gU2VwIDYgMDc6NDE6MjEgMjAyNiArMDIwMAogMSBmaWxlIGNoYW5nZWQsIDExOCBpbnNlcnRpb25zKCspCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMjQtUkVWSUVXLXBsYW4ubWQK",
+  "stderr_base64": ""
+}

@@ -1,0 +1,2387 @@
+{
+  "status": "PASS",
+  "mapping": [
+    {
+      "repository": "4veco-platform",
+      "original": "d871912d3a0b5425a45e19d39d2742c6525a12b1",
+      "parent": "e42c2b276354aeb1eb903bfb480a5dad27d898b2",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-operational-plan.md",
+          "old_blob": null,
+          "new_blob": "d076a7c8561cc357d23fcdfbbad9893d0cb9269e"
+        }
+      ],
+      "adopted": "0393cf48973856eed597b9fa6b4e8f0c41c80cef"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "ee25376f00248b7c9dc8eb4c9b18e38e71f803aa",
+      "parent": "d871912d3a0b5425a45e19d39d2742c6525a12b1",
+      "files": [
+        {
+          "path": "build-scripts/content/book-2/224/answers.md",
+          "old_blob": null,
+          "new_blob": "41031ccbe06b622e6288c48aee3eb2ba07334232"
+        },
+        {
+          "path": "build-scripts/content/book-2/224/check_render.py",
+          "old_blob": null,
+          "new_blob": "a4e3bedea1f1cd11cc657c8a310cc42abbd696fe"
+        },
+        {
+          "path": "build-scripts/content/book-2/224/exercises.md",
+          "old_blob": null,
+          "new_blob": "b40287e0be9fee808aa1361db78ad375f40c6861"
+        },
+        {
+          "path": "build-scripts/content/book-2/224/target-answers.md",
+          "old_blob": null,
+          "new_blob": "29b59ecc5fbed4a62709de800aa47d53c5b81b6f"
+        },
+        {
+          "path": "build-scripts/content/book-2/224/test_source.py",
+          "old_blob": null,
+          "new_blob": "3159876bc36e2f82b791a8656626d50953dfa82b"
+        },
+        {
+          "path": "build-scripts/content/book-2/b2_224.py",
+          "old_blob": null,
+          "new_blob": "13fbbd08a26e9cd6a6a621b1abe76cf9d8c27f48"
+        }
+      ],
+      "adopted": "19439abe90b2cafb82c022cf69704b5385ddf17a"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "d4be8f2d8a74a811d82e832f4b1bfc78c8665fd7",
+      "parent": "ee25376f00248b7c9dc8eb4c9b18e38e71f803aa",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-baseline.json",
+          "old_blob": null,
+          "new_blob": "7c1ba2ede3476d106cd7732dbb1e3c5ce7f4855f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-controller.py",
+          "old_blob": null,
+          "new_blob": "f6b819dff3d840b03294e85d2804f01bf5e16e34"
+        }
+      ],
+      "adopted": "0c6a291ffa79e1f1ca3e725326b81f3e1060898a"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "aca14c61d258c05d668005d20bf0e4196de89ced",
+      "parent": "d4be8f2d8a74a811d82e832f4b1bfc78c8665fd7",
+      "files": [
+        {
+          "path": "build-scripts/content/book-2/224/answers.md",
+          "old_blob": "41031ccbe06b622e6288c48aee3eb2ba07334232",
+          "new_blob": "1bdc96809dda0667c1f9901739a91857ef8aaa5e"
+        },
+        {
+          "path": "build-scripts/content/book-2/224/target-answers.md",
+          "old_blob": "29b59ecc5fbed4a62709de800aa47d53c5b81b6f",
+          "new_blob": "cb2f46f8594cbb1ebdf954eb3d33c568583615d7"
+        },
+        {
+          "path": "build-scripts/content/book-2/b2_224.py",
+          "old_blob": "13fbbd08a26e9cd6a6a621b1abe76cf9d8c27f48",
+          "new_blob": "2da1736b5ac16db24912812ba01be1d374cd29ba"
+        }
+      ],
+      "adopted": "b7b41f2a1d21523bfa75d277a9dc6b3d8b25f501"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "74cec6f33d333bc4786eadcf54795b8fa1f5dfe1",
+      "parent": "aca14c61d258c05d668005d20bf0e4196de89ced",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-controller.py",
+          "old_blob": "f6b819dff3d840b03294e85d2804f01bf5e16e34",
+          "new_blob": "2ed28f18322a3cfb5414ad146c9a02e93a114faa"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-correction-log.md",
+          "old_blob": null,
+          "new_blob": "1a6805d7e7fe0d285963e9f7b45db97d2313420a"
+        }
+      ],
+      "adopted": "1d1a98ae2aceb6e5ce2eb678b65f0996f1b5dfa3"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "aad216f04728011e8f7d52c695b8ffad3edf6f96",
+      "parent": "74cec6f33d333bc4786eadcf54795b8fa1f5dfe1",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-controller.py",
+          "old_blob": "2ed28f18322a3cfb5414ad146c9a02e93a114faa",
+          "new_blob": "5f33b93927fe38ee49d6022c5463693a1994afa5"
+        }
+      ],
+      "adopted": "19016e3df774960516ff9910e4c385994e2f0bb8"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "parent": "aad216f04728011e8f7d52c695b8ffad3edf6f96",
+      "files": [
+        {
+          "path": "build-scripts/content/book-2/224/answers.md",
+          "old_blob": "1bdc96809dda0667c1f9901739a91857ef8aaa5e",
+          "new_blob": "bd3897cea147b5280b985a72b6c77e7bfeafe9bc"
+        },
+        {
+          "path": "build-scripts/content/book-2/224/exercises.md",
+          "old_blob": "b40287e0be9fee808aa1361db78ad375f40c6861",
+          "new_blob": "0d75bcadef6ed88715528eb22f0d50aa1f843cd9"
+        },
+        {
+          "path": "build-scripts/content/book-2/224/target-answers.md",
+          "old_blob": "cb2f46f8594cbb1ebdf954eb3d33c568583615d7",
+          "new_blob": "7a64816550cd9df40795f45780424deab7c8ecbe"
+        },
+        {
+          "path": "build-scripts/content/book-2/224/test_source.py",
+          "old_blob": "3159876bc36e2f82b791a8656626d50953dfa82b",
+          "new_blob": "3b006cac35dcf8bd496b80feb0e071d55040d8b5"
+        }
+      ],
+      "adopted": "ae608e28f559a9924a9ba99cd48eb16d41abc11f"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "0e2349ecf50e817482bf2f5c1d6d5aedc32c9323",
+      "parent": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-controller.py",
+          "old_blob": "5f33b93927fe38ee49d6022c5463693a1994afa5",
+          "new_blob": "0fb6e4c9187aedde4912bbc30f9f50a77da43ce2"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-correction-log.md",
+          "old_blob": "1a6805d7e7fe0d285963e9f7b45db97d2313420a",
+          "new_blob": "228e7aa0b054ee6a51f2f1c14b18017e465f356a"
+        }
+      ],
+      "adopted": "73558f1f63d982d85d0b528236828ea55c1d792a"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "parent": "0e2349ecf50e817482bf2f5c1d6d5aedc32c9323",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-checks.py",
+          "old_blob": null,
+          "new_blob": "daa80ced164f5d468e66c2e6d5bd52516d57af0c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "56c8ab9eff4dbb2df6e4cd233778c2c486440151"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/manifest.json",
+          "old_blob": null,
+          "new_blob": "51a8d3bd26174a4829b21659279ba5cb6ff108dc"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "5588b13795ddacf240b6e45680887c41bc873649"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "eb00a9eb749c724ce3453ae7862fac54952e33d9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "54549acdb4151c6fdfb50fd6afba5f050ee25a06"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "1e79d5e86e5233e006e726c3de2d03e0af25f17e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "d5de15b3b9a9bb86954ebe68d9eef5ee41294354"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ed58ad4fc111c7c4a7be425725ffcd856d60ebe8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "ed7ad204816326387ad41ebb7531ca7a80900d40"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/manifest.json",
+          "old_blob": null,
+          "new_blob": "3dd95537386ca16824658019aa69ac0ee12f225b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "5588b13795ddacf240b6e45680887c41bc873649"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "1e79d5e86e5233e006e726c3de2d03e0af25f17e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "47196a43adfe2ef3007a6c39fe7d12b9a0c1546e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "ed7ad204816326387ad41ebb7531ca7a80900d40"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/manifest.json",
+          "old_blob": null,
+          "new_blob": "0f70b152e0c9c4965e13473b9de8f0c00d7a6591"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "5588b13795ddacf240b6e45680887c41bc873649"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "1e79d5e86e5233e006e726c3de2d03e0af25f17e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "47196a43adfe2ef3007a6c39fe7d12b9a0c1546e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/manifest.json",
+          "old_blob": null,
+          "new_blob": "1695b440bf77ce8973237fe555d0f06e8290a032"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/manifest.json",
+          "old_blob": null,
+          "new_blob": "9afe4e63a1f5c644a1d921f87e92d5a257404075"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-checks-final.json",
+          "old_blob": null,
+          "new_blob": "2852d7fab8073fe813a5c593b6687dae8f93b2dc"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-checks-r2.json",
+          "old_blob": null,
+          "new_blob": "96383ed9a882684ccb41681b03206866c8961a89"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/manifest.json",
+          "old_blob": null,
+          "new_blob": "be094dc08a2fd3a67fc0888dd0cb5ada23d6d713"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/manifest.json",
+          "old_blob": null,
+          "new_blob": "252a828db0d643fd10e58b948960ebf47935cbe3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "96e36bea7d61a618c43888d90775987bf405810f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "4467ab90919955d768f278a279efdcb8af219648"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-finished.json",
+          "old_blob": null,
+          "new_blob": "a0dc5e370d84bcbb5939cdd44c37870f1a8d9507"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-manifest.json",
+          "old_blob": null,
+          "new_blob": "092be2c65c739a66a0cef663b39be7789ee5be34"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-started.json",
+          "old_blob": null,
+          "new_blob": "916410d1379c2d0efec8f0e8a4d47e2b943e71ff"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-stdout.txt",
+          "old_blob": null,
+          "new_blob": "132a954705be9c249d9ce348d6b3946606946e97"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-final-custody.json",
+          "old_blob": null,
+          "new_blob": "4d21bf3d05c297df44ee84121367f22a5f87191e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-finished.json",
+          "old_blob": null,
+          "new_blob": "801a731715f3711735182a9b565025a83dd6534e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-manifest.json",
+          "old_blob": null,
+          "new_blob": "6c04cf84fe9dd1e8cf27ab3b04ee5d0f3e6b7d6c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-started.json",
+          "old_blob": null,
+          "new_blob": "0edee29a133b3b2c8f05bc8c2e8aa75b53739e2c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-stdout.txt",
+          "old_blob": null,
+          "new_blob": "d07c3d34584f5e7abcee99406d5a7a5ee7b28ce0"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-finished.json",
+          "old_blob": null,
+          "new_blob": "34426991258dd23ac8521c956881afa124a77c9c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-manifest.json",
+          "old_blob": null,
+          "new_blob": "43885f07eff85fbe85d55a8333386a4162f91c33"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-started.json",
+          "old_blob": null,
+          "new_blob": "fdd30f281aa893ac66c66b449ef4767361de1087"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-stdout.txt",
+          "old_blob": null,
+          "new_blob": "16e155fe5a036777d80b22ede9b40ba50df79b20"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-finished.json",
+          "old_blob": null,
+          "new_blob": "beb0907d626e8ea63c80fa8aefd150d1d9e4cc53"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-manifest.json",
+          "old_blob": null,
+          "new_blob": "3eec89b1e7050dbd697d772906050b7d0e565ff7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-started.json",
+          "old_blob": null,
+          "new_blob": "f98d648f6070160058de9d4db3ba7e79ec980f2c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-stdout.txt",
+          "old_blob": null,
+          "new_blob": "4bc2631d0ace4d50dd43bdf71f443f00080f0bbc"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/manifest.json",
+          "old_blob": null,
+          "new_blob": "ebec44f8b76eb55f3cf869e838652d5490b8f2a7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "96e36bea7d61a618c43888d90775987bf405810f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "4467ab90919955d768f278a279efdcb8af219648"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/manifest.json",
+          "old_blob": null,
+          "new_blob": "3354ad1595b9dfaa73da7251096cb4bb1a740c61"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "96e36bea7d61a618c43888d90775987bf405810f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "4467ab90919955d768f278a279efdcb8af219648"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "416120e9fbd14ef2298da920c2b2b92cce8d0aa4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/manifest.json",
+          "old_blob": null,
+          "new_blob": "031d10ce022213c0dc1508113fb9660687ed9f10"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "96e36bea7d61a618c43888d90775987bf405810f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "4467ab90919955d768f278a279efdcb8af219648"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "a678efcdb028c1118e95f746cc91eb0843fc324c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "416120e9fbd14ef2298da920c2b2b92cce8d0aa4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/manifest.json",
+          "old_blob": null,
+          "new_blob": "9dbc773fdaf4702e5903cd06fede488e9630a94a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "96e36bea7d61a618c43888d90775987bf405810f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "4467ab90919955d768f278a279efdcb8af219648"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "a678efcdb028c1118e95f746cc91eb0843fc324c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "eca5e5b6cb2526ca6e67222d130a7a1970d203f7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/manifest.json",
+          "old_blob": null,
+          "new_blob": "e1799c399f3c525f01789f11a574890dd870b68a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "96e36bea7d61a618c43888d90775987bf405810f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "4467ab90919955d768f278a279efdcb8af219648"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "a678efcdb028c1118e95f746cc91eb0843fc324c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "d540ee669685dd8af246b6e82ca5d3817bb5677a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "018be45710c605542034d6cbdf2c429d5f2781b7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-parity.json",
+          "old_blob": null,
+          "new_blob": "3f1e2346c6e15c8c478c7c6552cc60036301c9a8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-001-gray.png",
+          "old_blob": null,
+          "new_blob": "895d01a903d4a426ae4037a3195b38ac6a2197bb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-002-gray.png",
+          "old_blob": null,
+          "new_blob": "ff2492cf664c660a2b39aab3ea1edca411113f72"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-003-gray.png",
+          "old_blob": null,
+          "new_blob": "f27df38932d86ff4b8e82f72ac6516b713226a02"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-004-gray.png",
+          "old_blob": null,
+          "new_blob": "063ddcddc8acf22ad545f66f250d145b8ac81eb6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-005-gray.png",
+          "old_blob": null,
+          "new_blob": "d6dbbf4090652ec09efba89566b520d89a40fb99"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-006-gray.png",
+          "old_blob": null,
+          "new_blob": "8802fb7e8917e431ff40451ad0bd2b3a0ba96fdc"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-007-gray.png",
+          "old_blob": null,
+          "new_blob": "8e998171cc50d844b465fa2bba0c8b1f476ace4e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-008-gray.png",
+          "old_blob": null,
+          "new_blob": "d41015f32a995d52bc9735a219c9ede66b58b5b0"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-009-gray.png",
+          "old_blob": null,
+          "new_blob": "f949bba52ca283c6e1f80ed51630303a2c066f03"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-010-gray.png",
+          "old_blob": null,
+          "new_blob": "f1cdb346ed2319eb580af0c897f625c1a9f290d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/figure-1-gray.png",
+          "old_blob": null,
+          "new_blob": "fb7515b0b9ad00691ab67ae12b05190cd51c4153"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/figure-2-gray.png",
+          "old_blob": null,
+          "new_blob": "c73189bf4e65fe187b248e3f48c5e8d8898283a6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/figure-3-gray.png",
+          "old_blob": null,
+          "new_blob": "aad0e812f24b7f22d2eae3de42c972f839be02d3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/figure-4-gray.png",
+          "old_blob": null,
+          "new_blob": "985583453391e9b6abe888d3442b89e33e9a673a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-001-gray.png",
+          "old_blob": null,
+          "new_blob": "88caa17e10ac8077c1e60320b9fe060a9e9737f5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-002-gray.png",
+          "old_blob": null,
+          "new_blob": "caaceed81677ef3d3e80ea7de421f95be9f0e531"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-003-gray.png",
+          "old_blob": null,
+          "new_blob": "47cf5b9eb67b699429c437ae330aff245a4c0df8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-004-gray.png",
+          "old_blob": null,
+          "new_blob": "ae6adf56b0adf94cd6b0d73f3b9699dd88ab274c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-005-gray.png",
+          "old_blob": null,
+          "new_blob": "0421ff6cebc45841f5907a27a4319208c5937e68"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-006-gray.png",
+          "old_blob": null,
+          "new_blob": "0d3392f0647dbb3254fb875133ea671c9c604cc7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-007-gray.png",
+          "old_blob": null,
+          "new_blob": "e0c5fb3e228cd2c063347690e0ca32a8b88ae55f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-008-gray.png",
+          "old_blob": null,
+          "new_blob": "154044ee6daeb51ffdd00f59effc202d79731d50"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-009-gray.png",
+          "old_blob": null,
+          "new_blob": "93b31c11084f6364ed751c4e77c6c9655991b8eb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-010-gray.png",
+          "old_blob": null,
+          "new_blob": "c0f46113eb4af00ebedceba570f8186233ae28c9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-001-gray.png",
+          "old_blob": null,
+          "new_blob": "56ec87943f1032c3021c39f26b5a2f226146e700"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-002-gray.png",
+          "old_blob": null,
+          "new_blob": "ff2492cf664c660a2b39aab3ea1edca411113f72"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-003-gray.png",
+          "old_blob": null,
+          "new_blob": "f27df38932d86ff4b8e82f72ac6516b713226a02"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-004-gray.png",
+          "old_blob": null,
+          "new_blob": "063ddcddc8acf22ad545f66f250d145b8ac81eb6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-005-gray.png",
+          "old_blob": null,
+          "new_blob": "d6dbbf4090652ec09efba89566b520d89a40fb99"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-006-gray.png",
+          "old_blob": null,
+          "new_blob": "8802fb7e8917e431ff40451ad0bd2b3a0ba96fdc"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-007-gray.png",
+          "old_blob": null,
+          "new_blob": "3c01ccddab0f41ceddf83a0314f9afebf1aba9a9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-008-gray.png",
+          "old_blob": null,
+          "new_blob": "bd443b6dbee485fad8e4b0fa943ef87c62a4f1e8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-009-gray.png",
+          "old_blob": null,
+          "new_blob": "f949bba52ca283c6e1f80ed51630303a2c066f03"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-010-gray.png",
+          "old_blob": null,
+          "new_blob": "f1cdb346ed2319eb580af0c897f625c1a9f290d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/figure-1-gray.png",
+          "old_blob": null,
+          "new_blob": "fb7515b0b9ad00691ab67ae12b05190cd51c4153"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/figure-2-gray.png",
+          "old_blob": null,
+          "new_blob": "c73189bf4e65fe187b248e3f48c5e8d8898283a6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/figure-3-gray.png",
+          "old_blob": null,
+          "new_blob": "aad0e812f24b7f22d2eae3de42c972f839be02d3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/figure-4-gray.png",
+          "old_blob": null,
+          "new_blob": "985583453391e9b6abe888d3442b89e33e9a673a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-001-gray.png",
+          "old_blob": null,
+          "new_blob": "88caa17e10ac8077c1e60320b9fe060a9e9737f5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-002-gray.png",
+          "old_blob": null,
+          "new_blob": "caaceed81677ef3d3e80ea7de421f95be9f0e531"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-003-gray.png",
+          "old_blob": null,
+          "new_blob": "47cf5b9eb67b699429c437ae330aff245a4c0df8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-004-gray.png",
+          "old_blob": null,
+          "new_blob": "ae6adf56b0adf94cd6b0d73f3b9699dd88ab274c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-005-gray.png",
+          "old_blob": null,
+          "new_blob": "0421ff6cebc45841f5907a27a4319208c5937e68"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-006-gray.png",
+          "old_blob": null,
+          "new_blob": "89fd8e4d70a26a9919cdd09427db59c25ca9b22c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-007-gray.png",
+          "old_blob": null,
+          "new_blob": "e0c5fb3e228cd2c063347690e0ca32a8b88ae55f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-008-gray.png",
+          "old_blob": null,
+          "new_blob": "154044ee6daeb51ffdd00f59effc202d79731d50"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-009-gray.png",
+          "old_blob": null,
+          "new_blob": "93b31c11084f6364ed751c4e77c6c9655991b8eb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-010-gray.png",
+          "old_blob": null,
+          "new_blob": "c0f46113eb4af00ebedceba570f8186233ae28c9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-directfinal-r6.json",
+          "old_blob": null,
+          "new_blob": "672cf3e4d07966baf1679a94934cd6546bb16918"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-full-r1.json",
+          "old_blob": null,
+          "new_blob": "648897354905bf7781722cc182b183f501787a75"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-full2-r2.json",
+          "old_blob": null,
+          "new_blob": "e8da5785bea2aff1a0145c76c08d2bcb367930df"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-fullfinal-r4.json",
+          "old_blob": null,
+          "new_blob": "a65bcff79d6304eeaf8d800a7b816b55fc7a7656"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-thin-r3.json",
+          "old_blob": null,
+          "new_blob": "1201a6fa28e07c7e3c456072deb52bc136bd16cd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-thinfinal-r5.json",
+          "old_blob": null,
+          "new_blob": "0222a49df6bfa7c60f3e6330c94a955b42258b6c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-finished.json",
+          "old_blob": null,
+          "new_blob": "e7f0e32b52d8b37af57c07938e79a25b80c92361"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-manifest.json",
+          "old_blob": null,
+          "new_blob": "7488804e068dbba68139484890112b26ace62eb1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-started.json",
+          "old_blob": null,
+          "new_blob": "f0a7969422039cc7b207d868103e3001a77ad8ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-stdout.txt",
+          "old_blob": null,
+          "new_blob": "e401862c77a7e85a628c78176297de46dd74dbc2"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-finished.json",
+          "old_blob": null,
+          "new_blob": "ceae4de770ad4c4775ba1fe1b8c0904840b6460d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-manifest.json",
+          "old_blob": null,
+          "new_blob": "084e84b00cb15cb1ff582038469411324951b85c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-started.json",
+          "old_blob": null,
+          "new_blob": "286ba507219e85b3090c87e93a941f5311627822"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-stdout.txt",
+          "old_blob": null,
+          "new_blob": "d90ff36bef20fbfaf3471f3c2e5278e273bde658"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-view-inventory-final.json",
+          "old_blob": null,
+          "new_blob": "ce9a73633de31ebd3bd184d67a4bba51b3fa1de5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-view-inventory.json",
+          "old_blob": null,
+          "new_blob": "9482d52f13e49e5618d8269d45450575a0126f6d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-observations.json",
+          "old_blob": null,
+          "new_blob": "e3174650fdcae2e33037f4ee8bc572f64d3a93e3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-result.md",
+          "old_blob": null,
+          "new_blob": "c9504e812b519de0f30df86e72c0b4e38ad33748"
+        }
+      ],
+      "adopted": "28afc2dd549ba23cbcf80f621e9b4abc364d574d"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "43dd62450b2b3b8b3d1b3c01232945f688bb67f6",
+      "parent": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-publication.md",
+          "old_blob": null,
+          "new_blob": "856ba7b7b0ca90943a5d68377cc33a80e8866e80"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-scope.js",
+          "old_blob": null,
+          "new_blob": "e245993d3d42b4592caa520afd40bb08372577ae"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-scope.json",
+          "old_blob": null,
+          "new_blob": "9e4a0041c7b2703e048ea244d2ae673e973d4ce3"
+        }
+      ],
+      "adopted": "f7b7ea290892c9b45d829ec09837fc78371e22d4"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "aeef7117e7921182442233f8db7f1955a38da1b9",
+      "parent": "43dd62450b2b3b8b3d1b3c01232945f688bb67f6",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-diagnostic.js",
+          "old_blob": null,
+          "new_blob": "b86c7c99587069bdae2d705b179b7678ef0a9b01"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-diagnostic.json",
+          "old_blob": null,
+          "new_blob": "13272ec6a420a6c46e74565b77c6593451a02fa7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-publication.md",
+          "old_blob": "856ba7b7b0ca90943a5d68377cc33a80e8866e80",
+          "new_blob": "76e09062f789c071fbb016029e004e3c85abb716"
+        }
+      ],
+      "adopted": "b46cdca49dc803493159b2aaa2164b0e0692136a"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "1e35171b30711822037af7217d60f71fa18be819",
+      "parent": "aeef7117e7921182442233f8db7f1955a38da1b9",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-fallback.json",
+          "old_blob": null,
+          "new_blob": "28ca888c4becd5aea35db65ec24d813c965fc57c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-runner.js",
+          "old_blob": null,
+          "new_blob": "d50f74696dd409fd8dfe5970879ef20a5ea57ffe"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-publication.md",
+          "old_blob": "76e09062f789c071fbb016029e004e3c85abb716",
+          "new_blob": "3a3c6785ff813577de8f74728fb032445324c861"
+        }
+      ],
+      "adopted": "60bdd317aa8fc4d0ee827b93f8e7a736255b554a"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "2df56fa59da339fc361cb991d15853f77f5934e2",
+      "parent": "b777877deb69a2094b9eff575e16e791744e85f1",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-plan.md",
+          "old_blob": null,
+          "new_blob": "2ca269f5897690dbf905f1a4656c7e7f05f13e5e"
+        }
+      ],
+      "adopted": "6cc91bd26639e69c91c1fda063c3f7d9e50b2af7"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "456969885a83b2627868e8d66a9f09396c815016",
+      "parent": "2df56fa59da339fc361cb991d15853f77f5934e2",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-baseline.json",
+          "old_blob": null,
+          "new_blob": "ea23e1121902110c7e6d88ab0ed9b3f06e3a3511"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-checks.py",
+          "old_blob": null,
+          "new_blob": "3472cbe27324c11c678ff04eb7b9d2a2bc7443ce"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-controller.py",
+          "old_blob": null,
+          "new_blob": "33f6a61a267f69b1dcfe98dcbcb6dd6836e91ed1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-current-commands.json",
+          "old_blob": null,
+          "new_blob": "b95d529cdd4828bd6c1a765f39b6f1981759059b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-current-r2-commands.json",
+          "old_blob": null,
+          "new_blob": "e3b9a590097e325e2c6136f112cb88c66dd0e266"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/manifest.json",
+          "old_blob": null,
+          "new_blob": "8fedccd92f7c97addbed3f7073213c5561995d85"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/manifest.json",
+          "old_blob": null,
+          "new_blob": "f7197cc028dda429ef38556185efea6cabdfa6c6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-approved.json",
+          "old_blob": null,
+          "new_blob": "b0a8b8524467cf1dde50031154e015cae854d464"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-bundle.json",
+          "old_blob": null,
+          "new_blob": "91e0c61a6cc662d58b416b1990103792c6309827"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-durable.json",
+          "old_blob": null,
+          "new_blob": "e2d5c90cc973bfde75e59908031fbcfc4292f16f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-native-checker.json",
+          "old_blob": null,
+          "new_blob": "54ed42cea46233777cc2acfcc8c5109d42ba96b8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-publisher-print.json",
+          "old_blob": null,
+          "new_blob": "5653aaf8659b034d7cb6dd0891bf6a3510083498"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-source-tests.json",
+          "old_blob": null,
+          "new_blob": "7458b7fc6cd11deaa09b05a7f9d72c7ba38bb326"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-structural.json",
+          "old_blob": null,
+          "new_blob": "d4dc4dc4fa518665475e77927dc8ae3071549f20"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-student-web.json",
+          "old_blob": null,
+          "new_blob": "edfc944c61fa9a972806dfce9d72ffbca8a74f1f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-commands.json",
+          "old_blob": null,
+          "new_blob": "acc9b7dac597a7b470641a9365f514dcaeba2015"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9-finished.json",
+          "old_blob": null,
+          "new_blob": "e15258969927c4e92566b63b1312570d1c742852"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9-manifest.json",
+          "old_blob": null,
+          "new_blob": "2d857254a09cf26c15bf13532c9932a0b09ea943"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9-started.json",
+          "old_blob": null,
+          "new_blob": "12427386fa6b3c36f17980816d91b635608aee31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9-stdout.txt",
+          "old_blob": null,
+          "new_blob": "33f86339d309e76b86c1ffb63ee9a45e7501027f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/manifest.json",
+          "old_blob": null,
+          "new_blob": "11c8404712874027f2358ea879a67134e4d66b32"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/manifest.json",
+          "old_blob": null,
+          "new_blob": "e930a4ed095ea54ae51e4987d54082ae6325e303"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "96e36bea7d61a618c43888d90775987bf405810f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "4467ab90919955d768f278a279efdcb8af219648"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-final-custody.json",
+          "old_blob": null,
+          "new_blob": "a7ccc8cea2490fdc95f152052d6cbfa54e0cf318"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-full-r7-finished.json",
+          "old_blob": null,
+          "new_blob": "08462269ee42701ed6888d7f36eaddde537d9565"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-full-r7-manifest.json",
+          "old_blob": null,
+          "new_blob": "350b4fea440f27631aae81974baa6b355c9ccbb5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-full-r7-started.json",
+          "old_blob": null,
+          "new_blob": "2498f1e2d9dc49d5b79f79a0e1042c85c51a47e8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-full-r7-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-full-r7-stdout.txt",
+          "old_blob": null,
+          "new_blob": "2766cd728a2d1a1cc15ab59fcff1609505002415"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-independent-probes.json",
+          "old_blob": null,
+          "new_blob": "743003e8026b02588f8d58c0296def342310ebf1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-legacy-review-binding.json",
+          "old_blob": null,
+          "new_blob": "85f7e6a11e6a03fe6937dfa8b73594d48473ebfe"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-legacy-review.md",
+          "old_blob": null,
+          "new_blob": "873e284e0e6254492698d0e733042fdf35d28fce"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/manifest.json",
+          "old_blob": null,
+          "new_blob": "fd527d7b703320590ffc4662fc046efb5c3e0c58"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "96e36bea7d61a618c43888d90775987bf405810f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "4467ab90919955d768f278a279efdcb8af219648"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/manifest.json",
+          "old_blob": null,
+          "new_blob": "097e2d4f554c4ee358a46cee1bb02bc5d1324e8c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "96e36bea7d61a618c43888d90775987bf405810f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "4467ab90919955d768f278a279efdcb8af219648"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-parity.json",
+          "old_blob": null,
+          "new_blob": "0d96c922f6674e2668b7b6bfe7b4068951e59761"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-inspection.json",
+          "old_blob": null,
+          "new_blob": "59f55eec81d71ca024e9cdd548b95ab75f2432db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-001-gray.png",
+          "old_blob": null,
+          "new_blob": "895d01a903d4a426ae4037a3195b38ac6a2197bb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-002-gray.png",
+          "old_blob": null,
+          "new_blob": "ff2492cf664c660a2b39aab3ea1edca411113f72"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-003-gray.png",
+          "old_blob": null,
+          "new_blob": "f27df38932d86ff4b8e82f72ac6516b713226a02"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-004-gray.png",
+          "old_blob": null,
+          "new_blob": "063ddcddc8acf22ad545f66f250d145b8ac81eb6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-005-gray.png",
+          "old_blob": null,
+          "new_blob": "d6dbbf4090652ec09efba89566b520d89a40fb99"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-006-gray.png",
+          "old_blob": null,
+          "new_blob": "8802fb7e8917e431ff40451ad0bd2b3a0ba96fdc"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-007-gray.png",
+          "old_blob": null,
+          "new_blob": "8e998171cc50d844b465fa2bba0c8b1f476ace4e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-008-gray.png",
+          "old_blob": null,
+          "new_blob": "d41015f32a995d52bc9735a219c9ede66b58b5b0"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-009-gray.png",
+          "old_blob": null,
+          "new_blob": "f949bba52ca283c6e1f80ed51630303a2c066f03"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-010-gray.png",
+          "old_blob": null,
+          "new_blob": "f1cdb346ed2319eb580af0c897f625c1a9f290d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/figure-1-gray.png",
+          "old_blob": null,
+          "new_blob": "fb7515b0b9ad00691ab67ae12b05190cd51c4153"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/figure-2-gray.png",
+          "old_blob": null,
+          "new_blob": "c73189bf4e65fe187b248e3f48c5e8d8898283a6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/figure-3-gray.png",
+          "old_blob": null,
+          "new_blob": "aad0e812f24b7f22d2eae3de42c972f839be02d3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/figure-4-gray.png",
+          "old_blob": null,
+          "new_blob": "985583453391e9b6abe888d3442b89e33e9a673a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-001-gray.png",
+          "old_blob": null,
+          "new_blob": "88caa17e10ac8077c1e60320b9fe060a9e9737f5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-002-gray.png",
+          "old_blob": null,
+          "new_blob": "caaceed81677ef3d3e80ea7de421f95be9f0e531"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-003-gray.png",
+          "old_blob": null,
+          "new_blob": "47cf5b9eb67b699429c437ae330aff245a4c0df8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-004-gray.png",
+          "old_blob": null,
+          "new_blob": "ae6adf56b0adf94cd6b0d73f3b9699dd88ab274c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-005-gray.png",
+          "old_blob": null,
+          "new_blob": "0421ff6cebc45841f5907a27a4319208c5937e68"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-006-gray.png",
+          "old_blob": null,
+          "new_blob": "0d3392f0647dbb3254fb875133ea671c9c604cc7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-007-gray.png",
+          "old_blob": null,
+          "new_blob": "e0c5fb3e228cd2c063347690e0ca32a8b88ae55f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-008-gray.png",
+          "old_blob": null,
+          "new_blob": "154044ee6daeb51ffdd00f59effc202d79731d50"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-009-gray.png",
+          "old_blob": null,
+          "new_blob": "93b31c11084f6364ed751c4e77c6c9655991b8eb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-010-gray.png",
+          "old_blob": null,
+          "new_blob": "c0f46113eb4af00ebedceba570f8186233ae28c9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-reservation-direct-r9.json",
+          "old_blob": null,
+          "new_blob": "4e1fa77ea6150decbc2c7c3db82016971953eeff"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-reservation-full-r7.json",
+          "old_blob": null,
+          "new_blob": "f83389661d9a1af395ac707f91114ac3d2c1f349"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-reservation-thin-r8.json",
+          "old_blob": null,
+          "new_blob": "a5c24fd9bd0bcfb82d22ca4d68c96cc4277dd9df"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-review-bindings.json",
+          "old_blob": null,
+          "new_blob": "b31e2c0f4ffd2651891f0c9c9704bb02dfea70b3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-target-dom-geometry.json",
+          "old_blob": null,
+          "new_blob": "c287a077203f3be9cf38901227b335dbe5af7626"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-thin-r8-finished.json",
+          "old_blob": null,
+          "new_blob": "dc47af282d704bcd427a602ce00b52e025eee719"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-thin-r8-manifest.json",
+          "old_blob": null,
+          "new_blob": "0acd9ab6706e2bf4fa3bafa57862e625dc54016e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-thin-r8-started.json",
+          "old_blob": null,
+          "new_blob": "8ccbcca97072a32d01fde0ab0b599350156cee3b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-thin-r8-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-thin-r8-stdout.txt",
+          "old_blob": null,
+          "new_blob": "a8f22dd281d0c555eac3eedb1ceb7b84e841b850"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-view-inventory.json",
+          "old_blob": null,
+          "new_blob": "d21966d9cbc7ddf0781357c03716ea0d52b73ee1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-finalize.py",
+          "old_blob": null,
+          "new_blob": "6e56f6881d0af7d307b58331b71e16c7a9f763a5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-publication-checks.js",
+          "old_blob": null,
+          "new_blob": "b9f1ddec66c42e1a2a926263bda5ca4dd63e3db8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-report.md",
+          "old_blob": null,
+          "new_blob": "89496e7a1b6bc3f2d96c1ef7d50854ed08199630"
+        }
+      ],
+      "adopted": "74b337696fa30cc34df9a88a5a06f3d31e54148d"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "ab5de28d34d31cc7aa7979ac929f4750996d6e53",
+      "parent": "456969885a83b2627868e8d66a9f09396c815016",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-index-runner.js",
+          "old_blob": null,
+          "new_blob": "9df1c81744c60fd3727b5b3b135978be53d2ea1d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-publication.md",
+          "old_blob": null,
+          "new_blob": "6f93174e6c8f8ffe09a002e04f87e77f35bcfaa9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-remote-commands.json",
+          "old_blob": null,
+          "new_blob": "f030bd47db9fc43808eedb5fc5956b6cbb1113ab"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-scope.js",
+          "old_blob": null,
+          "new_blob": "7821cc46a0216697493471e15a1c174a1fb982dc"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-scope.json",
+          "old_blob": null,
+          "new_blob": "9a774e087cf71c87007fb6f541e665a364e86ba6"
+        }
+      ],
+      "adopted": "81621b50d36aa711ba284cb3bd170f94612f527d"
+    },
+    {
+      "repository": "4veco-platform",
+      "original": "7bf13d3ad7e8ea8280bd859ef4ea2cecfc5abe7d",
+      "parent": "1e7b9c2999926ee1c26177dab31f9c417472ba6d",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-index-diagnostic.js",
+          "old_blob": null,
+          "new_blob": "af18982ee18896f140203df9784172f7003596d5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-index-diagnostic.json",
+          "old_blob": null,
+          "new_blob": "4db3685108bf31589da2c835b8ac26d9acc2f028"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-index-runner.js",
+          "old_blob": "9df1c81744c60fd3727b5b3b135978be53d2ea1d",
+          "new_blob": "f884c85b37356c8c05ca7f0d2cf7d706880a153c"
+        }
+      ],
+      "adopted": "ddc716af94ccec16b549d953efb7f8a811d555ee"
+    },
+    {
+      "repository": "4veco-lessen",
+      "original": "0dd56e093a3bb719523ff1d58221673eebae1ff2",
+      "parent": "8a3d4018ad6a5082449a17c59f991cbdc93fbb62",
+      "files": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.html",
+          "old_blob": "3ed0e35600607cde98ff13c9a5e051c60e0a7840",
+          "new_blob": "b5ec89525d5c303a0930b5165ac203afdf119936"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.md",
+          "old_blob": "de49a6a5e297bd8e2fb57365190710ac6c091e67",
+          "new_blob": "ec8c11fa7ab4725a918c4155bab22dbe38e6f39f"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+          "old_blob": "b1558afea098b99c321c121d02d2dd2ec112381a",
+          "new_blob": "4dc65e89ac843f709eeb30b8eaf3e018061dbad9"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.html",
+          "old_blob": "f1b8ab4a50e243149e20f354248e0a48391aa205",
+          "new_blob": "9d8bf060fa5b8143b53a14f1f25a0373cbd94c3c"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+          "old_blob": "a2321b01685720e3eab62770c115a876f5d7ee92",
+          "new_blob": "da86d68cc554f6051c7048bcb5864463d8cb2fda"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+          "old_blob": "3f65c05c7fdef195215a8737fa571fd7f3b5605e",
+          "new_blob": "39c70b22545e22f8f367f4ac27cfae965761284b"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_1.png",
+          "old_blob": null,
+          "new_blob": "a08d87b6c2e65c19f94571231cf5ca41f1914a64"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_1.svg",
+          "old_blob": null,
+          "new_blob": "ad0097ec945b4ff59e0ddd7e138042130cd36a6a"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_2.png",
+          "old_blob": null,
+          "new_blob": "e8f4cf636230190f352f654f3030ac94b9616ea8"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_2.svg",
+          "old_blob": null,
+          "new_blob": "353cd5cc0946c570340a7b2476c615671b1905ec"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_3.png",
+          "old_blob": null,
+          "new_blob": "5b45afb7982c6db6798c1218253785ef1c29677e"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_3.svg",
+          "old_blob": null,
+          "new_blob": "68bab1deaa0c7e095c95210ab51c9fd999710ca0"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_4.png",
+          "old_blob": null,
+          "new_blob": "4e4ec9ddc0b00c01bc561a18f7f9cd8acdba5e32"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_4.svg",
+          "old_blob": null,
+          "new_blob": "5cdf1d46568d069bace80d88893c936a47135e3c"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/build_pdf.py",
+          "old_blob": "83ffe0b7b8d6b18ee2d560698c1e807f02c38d1a",
+          "new_blob": "4be07a30071cae84161fb091a7f63769f1b50cc4"
+        }
+      ],
+      "adopted": "5e25105acb46a23eacecca208cb6c1dedd9ec60d"
+    },
+    {
+      "repository": "4veco-lessen",
+      "original": "44cfe1754a7fdf4c4377444c3602128c9b7b7e78",
+      "parent": "0dd56e093a3bb719523ff1d58221673eebae1ff2",
+      "files": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.html",
+          "old_blob": "b5ec89525d5c303a0930b5165ac203afdf119936",
+          "new_blob": "946daf6389785583d0e004dab84f238d9ddb1460"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.md",
+          "old_blob": "ec8c11fa7ab4725a918c4155bab22dbe38e6f39f",
+          "new_blob": "4eeaa8560b13135aa21353f6fe39aaa2a9bd8e15"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+          "old_blob": "4dc65e89ac843f709eeb30b8eaf3e018061dbad9",
+          "new_blob": "eb5fa1f070c57fabd55a3a29ce7e6bc56fee89ce"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.html",
+          "old_blob": "9d8bf060fa5b8143b53a14f1f25a0373cbd94c3c",
+          "new_blob": "48e2f22a5bc46c1498485a6e03ec551d74d6acd4"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+          "old_blob": "da86d68cc554f6051c7048bcb5864463d8cb2fda",
+          "new_blob": "4269f203e90ba0c850d1a7c1c28ccd9314625553"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+          "old_blob": "39c70b22545e22f8f367f4ac27cfae965761284b",
+          "new_blob": "f767d93fa00b589075e803be9662f9c6c80b032b"
+        }
+      ],
+      "adopted": "aa29e6fbdd15a909b095c4d63aa86dfa8b192b0d"
+    },
+    {
+      "repository": "4veco-lessen",
+      "original": "994657c8901729fcb138493be4e8c2e9590081bd",
+      "parent": "44cfe1754a7fdf4c4377444c3602128c9b7b7e78",
+      "files": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.html",
+          "old_blob": "946daf6389785583d0e004dab84f238d9ddb1460",
+          "new_blob": "e91c0869ec5385fb8aeccacb0af70df7caaf1259"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.md",
+          "old_blob": "4eeaa8560b13135aa21353f6fe39aaa2a9bd8e15",
+          "new_blob": "3a47ab26210b3bd5df78983de04da36965035d92"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+          "old_blob": "eb5fa1f070c57fabd55a3a29ce7e6bc56fee89ce",
+          "new_blob": "16fc9cfe83f3b1bfbfcfdd8db5e35d899b5a556f"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.html",
+          "old_blob": "48e2f22a5bc46c1498485a6e03ec551d74d6acd4",
+          "new_blob": "69a40b6400ffcd6fb8f4111990e4052689e5b27e"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+          "old_blob": "4269f203e90ba0c850d1a7c1c28ccd9314625553",
+          "new_blob": "12647275fda19e54964c08787160f97a6938b7a0"
+        },
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+          "old_blob": "f767d93fa00b589075e803be9662f9c6c80b032b",
+          "new_blob": "454f2a26bfea4106620353631a4006ccd2f7086a"
+        }
+      ],
+      "adopted": "3cde55dab4934243fcbcdfb2c3b6b772f9ad6973"
+    },
+    {
+      "repository": "4veco-lessen",
+      "original": "8fdf0e74885b19993998e69ac789e8bb91e860f8",
+      "parent": "994657c8901729fcb138493be4e8c2e9590081bd",
+      "files": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-review.md",
+          "old_blob": "873e284e0e6254492698d0e733042fdf35d28fce",
+          "new_blob": "18be40d2cacc51739af45b87ddf59ab0fbf5430b"
+        }
+      ],
+      "adopted": "f666bbb7dd258f1f01b38a20dd6ca3802848f8b7"
+    }
+  ],
+  "platform_head": "ddc716af94ccec16b549d953efb7f8a811d555ee",
+  "lessons_head": "f666bbb7dd258f1f01b38a20dd6ca3802848f8b7"
+}

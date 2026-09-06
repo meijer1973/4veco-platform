@@ -1,0 +1,3460 @@
+{
+  "status": "PASS",
+  "imported_paths": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-operational-plan.md",
+      "old_blob": null,
+      "new_blob": "d076a7c8561cc357d23fcdfbbad9893d0cb9269e",
+      "repository": "4veco-platform",
+      "commit": "d871912d3a0b5425a45e19d39d2742c6525a12b1",
+      "raw_sha256": "15012f7fb6a7d719f23563c5ed324e9fd5c012095c0d727a23d7977378fe8b1b"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/answers.md",
+      "old_blob": "1bdc96809dda0667c1f9901739a91857ef8aaa5e",
+      "new_blob": "bd3897cea147b5280b985a72b6c77e7bfeafe9bc",
+      "repository": "4veco-platform",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "f7c7fac3034c49b88788970fec6fa8ee66e66b0f02e29b63d23f1a02355bd164"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/check_render.py",
+      "old_blob": null,
+      "new_blob": "a4e3bedea1f1cd11cc657c8a310cc42abbd696fe",
+      "repository": "4veco-platform",
+      "commit": "ee25376f00248b7c9dc8eb4c9b18e38e71f803aa",
+      "raw_sha256": "a5f869c8b5ea43ddc14f38b5b7229db612d9141d99ec5514824288acdbad57c6"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/exercises.md",
+      "old_blob": "b40287e0be9fee808aa1361db78ad375f40c6861",
+      "new_blob": "0d75bcadef6ed88715528eb22f0d50aa1f843cd9",
+      "repository": "4veco-platform",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "1003ef1ede3c61059e5e97c1d96b0a3e913f36799411f0e1b2ce62f16ad3bab9"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/target-answers.md",
+      "old_blob": "cb2f46f8594cbb1ebdf954eb3d33c568583615d7",
+      "new_blob": "7a64816550cd9df40795f45780424deab7c8ecbe",
+      "repository": "4veco-platform",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "275af20f1a26d4d4205879e16fbe0f1fc1d69ff65cee024803c5694b367eb136"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/test_source.py",
+      "old_blob": "3159876bc36e2f82b791a8656626d50953dfa82b",
+      "new_blob": "3b006cac35dcf8bd496b80feb0e071d55040d8b5",
+      "repository": "4veco-platform",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "7594760c6aaf910d99ae5ee2e93fdd7736800256fc621890316fef638bc310c7"
+    },
+    {
+      "path": "build-scripts/content/book-2/b2_224.py",
+      "old_blob": "13fbbd08a26e9cd6a6a621b1abe76cf9d8c27f48",
+      "new_blob": "2da1736b5ac16db24912812ba01be1d374cd29ba",
+      "repository": "4veco-platform",
+      "commit": "aca14c61d258c05d668005d20bf0e4196de89ced",
+      "raw_sha256": "d5001620b81fc9ca2f390047367bf64885793b930b3763cba74b6babce842125"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-baseline.json",
+      "old_blob": null,
+      "new_blob": "7c1ba2ede3476d106cd7732dbb1e3c5ce7f4855f",
+      "repository": "4veco-platform",
+      "commit": "d4be8f2d8a74a811d82e832f4b1bfc78c8665fd7",
+      "raw_sha256": "d9d1dc425c8a625a5ebdcaa26720dcb63b5d276ec5099ec18c38d1f8ac761176"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-controller.py",
+      "old_blob": "5f33b93927fe38ee49d6022c5463693a1994afa5",
+      "new_blob": "0fb6e4c9187aedde4912bbc30f9f50a77da43ce2",
+      "repository": "4veco-platform",
+      "commit": "0e2349ecf50e817482bf2f5c1d6d5aedc32c9323",
+      "raw_sha256": "2ef5cedf8122ffeed1d8ef5013bc28257a83a99341ff79e771cea93e4cce05fd"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-correction-log.md",
+      "old_blob": "1a6805d7e7fe0d285963e9f7b45db97d2313420a",
+      "new_blob": "228e7aa0b054ee6a51f2f1c14b18017e465f356a",
+      "repository": "4veco-platform",
+      "commit": "0e2349ecf50e817482bf2f5c1d6d5aedc32c9323",
+      "raw_sha256": "2069d5fc0748fd52aab2975b2fa216c243cd625ec24d058edd378f6d072e65e2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-checks.py",
+      "old_blob": null,
+      "new_blob": "daa80ced164f5d468e66c2e6d5bd52516d57af0c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "c7d08606a0e5279211b73c4e9e43957ab5e385ac05bd4683ba97d54ab3d71f44"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "56c8ab9eff4dbb2df6e4cd233778c2c486440151",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "d4c016f0ff2bcc9b59078907708f124542e304cd4c6524aec15ababf929da5e5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/manifest.json",
+      "old_blob": null,
+      "new_blob": "51a8d3bd26174a4829b21659279ba5cb6ff108dc",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "12a46c3aa88129ee2000f4a5acd54ade64eb730f1ddf24c9f3b151313bad3fd5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "5588b13795ddacf240b6e45680887c41bc873649",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "454943f30e2ce306fe8bd103b2fa00f5546a6d39963754f6a0cdd68307ad4a45"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8288264af30527abf2a5df14c51c387b4a97a1821f48856067e8209a5a29315c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8267ae083e4791d964e042834acf77998b324cd685049b4f72a31f62d603123f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cc5312a08af75f7999a185876845fabd5f0fdb0da3100d9f6cefd269a0875d2b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "eb00a9eb749c724ce3453ae7862fac54952e33d9",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "fdaa01564a4cd732db1041323af5f2fc1eb5100c4c231d2c603809568c044357"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "54549acdb4151c6fdfb50fd6afba5f050ee25a06",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ebdcd9b7cf63de482e15d4ea7320e1d006b424852b1223fbdf1e980d1eef5b1b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "1e79d5e86e5233e006e726c3de2d03e0af25f17e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5c036dd27e41e1a8944da01594a94a8f309625519a7f5710b738a96c5ba37784"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "d5de15b3b9a9bb86954ebe68d9eef5ee41294354",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "3ec0bd94fe6e20c3c0a32ff1866cf48abf8f0ad183f74a9613c7cbc8833cd29f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "ed58ad4fc111c7c4a7be425725ffcd856d60ebe8",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "1704c5ae90c2d89cc52c671d21e79cb1514843d00fafa853e2e40645e5feef83"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ce3958cb01e03350cbefad400b544fedc87483de0cfcd200d5e495b42549321a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "ed7ad204816326387ad41ebb7531ca7a80900d40",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "59b1c70a8889eb9231fda8332bde2547f592485eccb8e35327a7dfd8a14390c6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/manifest.json",
+      "old_blob": null,
+      "new_blob": "3dd95537386ca16824658019aa69ac0ee12f225b",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "90ff3be3272565ff14a8b98ff12f75dc5565ea072f864efa94f5c83dcfbb0710"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "5588b13795ddacf240b6e45680887c41bc873649",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "454943f30e2ce306fe8bd103b2fa00f5546a6d39963754f6a0cdd68307ad4a45"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8288264af30527abf2a5df14c51c387b4a97a1821f48856067e8209a5a29315c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8267ae083e4791d964e042834acf77998b324cd685049b4f72a31f62d603123f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cc5312a08af75f7999a185876845fabd5f0fdb0da3100d9f6cefd269a0875d2b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5a27ee2ebd712719cffe49de26e404e37057c363aff41d3a3dd7c1d1de81e8cf"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "4fbe832fa90e6951225020fc49ab56cefed76b8f42e3112dade8ea251c3c52ce"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "1e79d5e86e5233e006e726c3de2d03e0af25f17e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5c036dd27e41e1a8944da01594a94a8f309625519a7f5710b738a96c5ba37784"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "47196a43adfe2ef3007a6c39fe7d12b9a0c1546e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "fbda05b4106dab71e0c978d95544669a33a2d87b0cb61d0e235fbc43986116bc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cf9476a7104ba9e3535fa5dff3672fa7534fd5e96bbd12acf5aef4b21ac3de69"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ce3958cb01e03350cbefad400b544fedc87483de0cfcd200d5e495b42549321a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "ed7ad204816326387ad41ebb7531ca7a80900d40",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "59b1c70a8889eb9231fda8332bde2547f592485eccb8e35327a7dfd8a14390c6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/manifest.json",
+      "old_blob": null,
+      "new_blob": "0f70b152e0c9c4965e13473b9de8f0c00d7a6591",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "243deebbe54f4301486f4406f94d42e5ca9439ee5970730ecc1c320e6d0b31a7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "5588b13795ddacf240b6e45680887c41bc873649",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "454943f30e2ce306fe8bd103b2fa00f5546a6d39963754f6a0cdd68307ad4a45"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8288264af30527abf2a5df14c51c387b4a97a1821f48856067e8209a5a29315c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8267ae083e4791d964e042834acf77998b324cd685049b4f72a31f62d603123f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cc5312a08af75f7999a185876845fabd5f0fdb0da3100d9f6cefd269a0875d2b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5a27ee2ebd712719cffe49de26e404e37057c363aff41d3a3dd7c1d1de81e8cf"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "4fbe832fa90e6951225020fc49ab56cefed76b8f42e3112dade8ea251c3c52ce"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "1e79d5e86e5233e006e726c3de2d03e0af25f17e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5c036dd27e41e1a8944da01594a94a8f309625519a7f5710b738a96c5ba37784"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "47196a43adfe2ef3007a6c39fe7d12b9a0c1546e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "fbda05b4106dab71e0c978d95544669a33a2d87b0cb61d0e235fbc43986116bc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cf9476a7104ba9e3535fa5dff3672fa7534fd5e96bbd12acf5aef4b21ac3de69"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ce3958cb01e03350cbefad400b544fedc87483de0cfcd200d5e495b42549321a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5cd446eb1a22d4d0d9731a45912869262bc6ad77f75c0d9617b952d4da22326f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/manifest.json",
+      "old_blob": null,
+      "new_blob": "1695b440bf77ce8973237fe555d0f06e8290a032",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "0219c04cd999d287dc4bd08c567f94ecaee6c5cb793305a85f322e9891ca12c3"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "584cdd292415d409b1c1c20723a86090ce680ca297fb52b5f447785f1c32c586"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8288264af30527abf2a5df14c51c387b4a97a1821f48856067e8209a5a29315c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8267ae083e4791d964e042834acf77998b324cd685049b4f72a31f62d603123f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cc5312a08af75f7999a185876845fabd5f0fdb0da3100d9f6cefd269a0875d2b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5a27ee2ebd712719cffe49de26e404e37057c363aff41d3a3dd7c1d1de81e8cf"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "4fbe832fa90e6951225020fc49ab56cefed76b8f42e3112dade8ea251c3c52ce"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5ac97b01ffaf5fe45a21ccfeffd52f3540f5d55214f088a62e68bb97e2822c45"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "068ef6dbaf6a7091fb6ea09b260b8850a1f6231356fd6e4fa0080be7141d2a11"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cf9476a7104ba9e3535fa5dff3672fa7534fd5e96bbd12acf5aef4b21ac3de69"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ce3958cb01e03350cbefad400b544fedc87483de0cfcd200d5e495b42549321a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5cd446eb1a22d4d0d9731a45912869262bc6ad77f75c0d9617b952d4da22326f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/manifest.json",
+      "old_blob": null,
+      "new_blob": "9afe4e63a1f5c644a1d921f87e92d5a257404075",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "47eadf998eb59080f3a0d12f34c7619233002158d922d521ec9b6f51eb47baf6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "584cdd292415d409b1c1c20723a86090ce680ca297fb52b5f447785f1c32c586"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8288264af30527abf2a5df14c51c387b4a97a1821f48856067e8209a5a29315c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8267ae083e4791d964e042834acf77998b324cd685049b4f72a31f62d603123f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cc5312a08af75f7999a185876845fabd5f0fdb0da3100d9f6cefd269a0875d2b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5a27ee2ebd712719cffe49de26e404e37057c363aff41d3a3dd7c1d1de81e8cf"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "4fbe832fa90e6951225020fc49ab56cefed76b8f42e3112dade8ea251c3c52ce"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5ac97b01ffaf5fe45a21ccfeffd52f3540f5d55214f088a62e68bb97e2822c45"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "068ef6dbaf6a7091fb6ea09b260b8850a1f6231356fd6e4fa0080be7141d2a11"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cf9476a7104ba9e3535fa5dff3672fa7534fd5e96bbd12acf5aef4b21ac3de69"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ce3958cb01e03350cbefad400b544fedc87483de0cfcd200d5e495b42549321a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-checks-final.json",
+      "old_blob": null,
+      "new_blob": "2852d7fab8073fe813a5c593b6687dae8f93b2dc",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "00ed7512d8a723e708c7aaad16b4aaa853166b0b0da46dad3360334341814779"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-checks-r2.json",
+      "old_blob": null,
+      "new_blob": "96383ed9a882684ccb41681b03206866c8961a89",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5e412aaf99ca2ac99bd452bc7af43a246989b31d9a48e11348267677c47e27e0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5cd446eb1a22d4d0d9731a45912869262bc6ad77f75c0d9617b952d4da22326f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/manifest.json",
+      "old_blob": null,
+      "new_blob": "be094dc08a2fd3a67fc0888dd0cb5ada23d6d713",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "d6b6bba88764d7b9d4f617b88a3af9d91274e44d7914bec3d4a1c269c85d7596"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "584cdd292415d409b1c1c20723a86090ce680ca297fb52b5f447785f1c32c586"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8288264af30527abf2a5df14c51c387b4a97a1821f48856067e8209a5a29315c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8267ae083e4791d964e042834acf77998b324cd685049b4f72a31f62d603123f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cc5312a08af75f7999a185876845fabd5f0fdb0da3100d9f6cefd269a0875d2b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5a27ee2ebd712719cffe49de26e404e37057c363aff41d3a3dd7c1d1de81e8cf"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "4fbe832fa90e6951225020fc49ab56cefed76b8f42e3112dade8ea251c3c52ce"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5ac97b01ffaf5fe45a21ccfeffd52f3540f5d55214f088a62e68bb97e2822c45"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "068ef6dbaf6a7091fb6ea09b260b8850a1f6231356fd6e4fa0080be7141d2a11"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cf9476a7104ba9e3535fa5dff3672fa7534fd5e96bbd12acf5aef4b21ac3de69"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ce3958cb01e03350cbefad400b544fedc87483de0cfcd200d5e495b42549321a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "c5232dc7fce80945827fa43092f23531ce7f0ffa8d813a5a57238153b308d693"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/manifest.json",
+      "old_blob": null,
+      "new_blob": "252a828db0d643fd10e58b948960ebf47935cbe3",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "680189fc66d2ace3caefa1e867ec70c8de64e78a3b619250c258cc4adc2e32e1"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "fde2df212620dab61d6a79eff3b68908e67f39e913e3bd7a651b048d24bd2efb"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8e854a7a4d094932670d93e59d2e5837f2e78533513261ede8e29fb8fb9116dc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ffd43c20a082db12e29e9991e51ba29e138d72d581c5e9acd390f1ef3ccad2af"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "96e36bea7d61a618c43888d90775987bf405810f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "dc3e8048cb8b7a2f858ba378516784c046f14c44959a94b1f96746d780cc96c9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "4467ab90919955d768f278a279efdcb8af219648",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cc0ec45f75205b7be388783b42e969cad69bcb75ddb3514da1b8f55d8700632d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "53c263e039d4057e045e08c2041cb14fbfbb4b0bd4ae52ff89b0e6b2da092bd4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8a845e4f9cfe86b11c37ed23fabb3079e64f8f099aca624e8ff4b78fe9278f20"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ad26f2bf3e7328abc02eb004f9ceabaf9b7a124508aa805bbe35d74de23545b7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "e42b3c202eaffec5f1e249555e8dd5a6b4086f4be11057bf4340e94996f480b9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "4ea2c7ff2bfee2c63e72e85cb44a9d4e4b222cae10228a555102397443216f86"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-finished.json",
+      "old_blob": null,
+      "new_blob": "a0dc5e370d84bcbb5939cdd44c37870f1a8d9507",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "e9b3efd6242ad0bf9210db0c879975ddeb4bca7d10c1ea44b2b5acbb847365f7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-manifest.json",
+      "old_blob": null,
+      "new_blob": "092be2c65c739a66a0cef663b39be7789ee5be34",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "77d6eec328e5467b8197566e94c439cb8fae0b53cf447e9cd67d08d97ffd1e06"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-started.json",
+      "old_blob": null,
+      "new_blob": "916410d1379c2d0efec8f0e8a4d47e2b943e71ff",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "2b5c1249aa5dc72be0570b4a8383edb274d5d46731f52fdbe419854bf8880f73"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-stderr.txt",
+      "old_blob": null,
+      "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-stdout.txt",
+      "old_blob": null,
+      "new_blob": "132a954705be9c249d9ce348d6b3946606946e97",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "bb204c474580bb03939fb9b247363d60f087b81a53e826b621016e06639f6d54"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-final-custody.json",
+      "old_blob": null,
+      "new_blob": "4d21bf3d05c297df44ee84121367f22a5f87191e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "2ac67360d2f70838bc1070682962cb3c543a4aeac4dd9bc40c0a96e4af8840a7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-finished.json",
+      "old_blob": null,
+      "new_blob": "801a731715f3711735182a9b565025a83dd6534e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "bb81ac97aa77d30ccff36bd2d3340b6aabb3482a99c61691d02a4a23aae6d11a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-manifest.json",
+      "old_blob": null,
+      "new_blob": "6c04cf84fe9dd1e8cf27ab3b04ee5d0f3e6b7d6c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "d6aaa55a22f107b834b827665d99d900e0aa20bb89d3bb75d58e193e93f18d98"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-started.json",
+      "old_blob": null,
+      "new_blob": "0edee29a133b3b2c8f05bc8c2e8aa75b53739e2c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "019fe2b794a0dc9b413f29aabd4702236cb71d670c7efaabd330fa6a9e9baf8e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-stderr.txt",
+      "old_blob": null,
+      "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-stdout.txt",
+      "old_blob": null,
+      "new_blob": "d07c3d34584f5e7abcee99406d5a7a5ee7b28ce0",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "a32dddf1043a96dc5bc60a0e64b8bf84c572666d3855447ff86a2bd914fc40e1"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-finished.json",
+      "old_blob": null,
+      "new_blob": "34426991258dd23ac8521c956881afa124a77c9c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "64a1a02f97dd9ded50221b90c3c562a8e621133bf8d51fd89dc9e071417ff7e8"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-manifest.json",
+      "old_blob": null,
+      "new_blob": "43885f07eff85fbe85d55a8333386a4162f91c33",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "b6d55e7b6d76b3ef3de015b8687165d9781e3dca6764bbafcc563498c4f3971b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-started.json",
+      "old_blob": null,
+      "new_blob": "fdd30f281aa893ac66c66b449ef4767361de1087",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "583cb25121eaa89b117cd77665909ac38363e2bdd589e3880580708cf1083c7d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-stderr.txt",
+      "old_blob": null,
+      "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-stdout.txt",
+      "old_blob": null,
+      "new_blob": "16e155fe5a036777d80b22ede9b40ba50df79b20",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "05e3c8d155c524ab126bf30191a66ba58daa8c84775d20bf4e9ede6a696f242e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-finished.json",
+      "old_blob": null,
+      "new_blob": "beb0907d626e8ea63c80fa8aefd150d1d9e4cc53",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8a46d83f282ecdcf5ab39ab42ca3482533bb4c31c4a768f08cce5f3ab17201e0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-manifest.json",
+      "old_blob": null,
+      "new_blob": "3eec89b1e7050dbd697d772906050b7d0e565ff7",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "850942ef8b1749644749fa95c7c98c233bd12ca5d9d1ab06f7645f37fd3eaa89"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-started.json",
+      "old_blob": null,
+      "new_blob": "f98d648f6070160058de9d4db3ba7e79ec980f2c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "af167fbbee29bde6a01176516e39d32eb0a807a8a7edce8837354b632b401c27"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-stderr.txt",
+      "old_blob": null,
+      "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-stdout.txt",
+      "old_blob": null,
+      "new_blob": "4bc2631d0ace4d50dd43bdf71f443f00080f0bbc",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "76c92d9ed6e73135ef07cf95095db33d7889e22e3a9b76b2a1ddc0d317f6e46a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "c5232dc7fce80945827fa43092f23531ce7f0ffa8d813a5a57238153b308d693"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/manifest.json",
+      "old_blob": null,
+      "new_blob": "ebec44f8b76eb55f3cf869e838652d5490b8f2a7",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "704ca735c80b0f6ad345aa097b23c3533b0d34e25e945fda6db041bdd1844f71"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "fde2df212620dab61d6a79eff3b68908e67f39e913e3bd7a651b048d24bd2efb"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8e854a7a4d094932670d93e59d2e5837f2e78533513261ede8e29fb8fb9116dc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ffd43c20a082db12e29e9991e51ba29e138d72d581c5e9acd390f1ef3ccad2af"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "96e36bea7d61a618c43888d90775987bf405810f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "dc3e8048cb8b7a2f858ba378516784c046f14c44959a94b1f96746d780cc96c9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "4467ab90919955d768f278a279efdcb8af219648",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cc0ec45f75205b7be388783b42e969cad69bcb75ddb3514da1b8f55d8700632d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "53c263e039d4057e045e08c2041cb14fbfbb4b0bd4ae52ff89b0e6b2da092bd4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8a845e4f9cfe86b11c37ed23fabb3079e64f8f099aca624e8ff4b78fe9278f20"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ad26f2bf3e7328abc02eb004f9ceabaf9b7a124508aa805bbe35d74de23545b7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "e42b3c202eaffec5f1e249555e8dd5a6b4086f4be11057bf4340e94996f480b9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "4ea2c7ff2bfee2c63e72e85cb44a9d4e4b222cae10228a555102397443216f86"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "c5232dc7fce80945827fa43092f23531ce7f0ffa8d813a5a57238153b308d693"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/manifest.json",
+      "old_blob": null,
+      "new_blob": "3354ad1595b9dfaa73da7251096cb4bb1a740c61",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "f6e210cc5431a55c2f3380fcee3a7d601fb386237cd53186d58dabeb00e9cf11"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "fde2df212620dab61d6a79eff3b68908e67f39e913e3bd7a651b048d24bd2efb"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8e854a7a4d094932670d93e59d2e5837f2e78533513261ede8e29fb8fb9116dc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ffd43c20a082db12e29e9991e51ba29e138d72d581c5e9acd390f1ef3ccad2af"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "96e36bea7d61a618c43888d90775987bf405810f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "dc3e8048cb8b7a2f858ba378516784c046f14c44959a94b1f96746d780cc96c9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "4467ab90919955d768f278a279efdcb8af219648",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cc0ec45f75205b7be388783b42e969cad69bcb75ddb3514da1b8f55d8700632d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "53c263e039d4057e045e08c2041cb14fbfbb4b0bd4ae52ff89b0e6b2da092bd4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8a845e4f9cfe86b11c37ed23fabb3079e64f8f099aca624e8ff4b78fe9278f20"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ad26f2bf3e7328abc02eb004f9ceabaf9b7a124508aa805bbe35d74de23545b7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "e42b3c202eaffec5f1e249555e8dd5a6b4086f4be11057bf4340e94996f480b9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "4ea2c7ff2bfee2c63e72e85cb44a9d4e4b222cae10228a555102397443216f86"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "416120e9fbd14ef2298da920c2b2b92cce8d0aa4",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "3a3dee81d1b0fbd60a98a21438031310e46fc951c59ff1ad28a98ef421be97a9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/manifest.json",
+      "old_blob": null,
+      "new_blob": "031d10ce022213c0dc1508113fb9660687ed9f10",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "548be14777f08543c4d5115b11901a77595099df4885c2bbe92ada6c2d899eac"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "fde2df212620dab61d6a79eff3b68908e67f39e913e3bd7a651b048d24bd2efb"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8e854a7a4d094932670d93e59d2e5837f2e78533513261ede8e29fb8fb9116dc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ffd43c20a082db12e29e9991e51ba29e138d72d581c5e9acd390f1ef3ccad2af"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "96e36bea7d61a618c43888d90775987bf405810f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "dc3e8048cb8b7a2f858ba378516784c046f14c44959a94b1f96746d780cc96c9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "4467ab90919955d768f278a279efdcb8af219648",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cc0ec45f75205b7be388783b42e969cad69bcb75ddb3514da1b8f55d8700632d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "a678efcdb028c1118e95f746cc91eb0843fc324c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "6b29cbf952b70beda9764ca196a1a8e573c88fa9a8d4dc8cd393ce19ea0a0101"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8a845e4f9cfe86b11c37ed23fabb3079e64f8f099aca624e8ff4b78fe9278f20"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ad26f2bf3e7328abc02eb004f9ceabaf9b7a124508aa805bbe35d74de23545b7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "e42b3c202eaffec5f1e249555e8dd5a6b4086f4be11057bf4340e94996f480b9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "4ea2c7ff2bfee2c63e72e85cb44a9d4e4b222cae10228a555102397443216f86"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "416120e9fbd14ef2298da920c2b2b92cce8d0aa4",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "3a3dee81d1b0fbd60a98a21438031310e46fc951c59ff1ad28a98ef421be97a9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/manifest.json",
+      "old_blob": null,
+      "new_blob": "9dbc773fdaf4702e5903cd06fede488e9630a94a",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "1ba405dce3ff3359ac93605bc663a72590c2c3f89eadb98ac0204e84109f115d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "fde2df212620dab61d6a79eff3b68908e67f39e913e3bd7a651b048d24bd2efb"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8e854a7a4d094932670d93e59d2e5837f2e78533513261ede8e29fb8fb9116dc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ffd43c20a082db12e29e9991e51ba29e138d72d581c5e9acd390f1ef3ccad2af"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "96e36bea7d61a618c43888d90775987bf405810f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "dc3e8048cb8b7a2f858ba378516784c046f14c44959a94b1f96746d780cc96c9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "4467ab90919955d768f278a279efdcb8af219648",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cc0ec45f75205b7be388783b42e969cad69bcb75ddb3514da1b8f55d8700632d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "a678efcdb028c1118e95f746cc91eb0843fc324c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "6b29cbf952b70beda9764ca196a1a8e573c88fa9a8d4dc8cd393ce19ea0a0101"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8a845e4f9cfe86b11c37ed23fabb3079e64f8f099aca624e8ff4b78fe9278f20"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ad26f2bf3e7328abc02eb004f9ceabaf9b7a124508aa805bbe35d74de23545b7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "e42b3c202eaffec5f1e249555e8dd5a6b4086f4be11057bf4340e94996f480b9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "4ea2c7ff2bfee2c63e72e85cb44a9d4e4b222cae10228a555102397443216f86"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "eca5e5b6cb2526ca6e67222d130a7a1970d203f7",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "85393f00cc99e7008f476a2391f1cf825bf0139345e8c1eb2827feadb3c6ed9c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/manifest.json",
+      "old_blob": null,
+      "new_blob": "e1799c399f3c525f01789f11a574890dd870b68a",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "bd99146bbe134e1a79bf362becde1c2d2a36bcd2890e50a80ce1bcafdd379aad"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "fde2df212620dab61d6a79eff3b68908e67f39e913e3bd7a651b048d24bd2efb"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "8e854a7a4d094932670d93e59d2e5837f2e78533513261ede8e29fb8fb9116dc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ffd43c20a082db12e29e9991e51ba29e138d72d581c5e9acd390f1ef3ccad2af"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "96e36bea7d61a618c43888d90775987bf405810f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "dc3e8048cb8b7a2f858ba378516784c046f14c44959a94b1f96746d780cc96c9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "4467ab90919955d768f278a279efdcb8af219648",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cc0ec45f75205b7be388783b42e969cad69bcb75ddb3514da1b8f55d8700632d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "a678efcdb028c1118e95f746cc91eb0843fc324c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "6b29cbf952b70beda9764ca196a1a8e573c88fa9a8d4dc8cd393ce19ea0a0101"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "d540ee669685dd8af246b6e82ca5d3817bb5677a",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "2900db09bee7d783cc8b3dddd540733c5d56f13f2a125e7dabc409d745eb170c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "018be45710c605542034d6cbdf2c429d5f2781b7",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "eef75b56ecad032bf4e12d3c52d3c52ad9cbc6c68a4452847dedffff62eba961"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "e42b3c202eaffec5f1e249555e8dd5a6b4086f4be11057bf4340e94996f480b9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "4ea2c7ff2bfee2c63e72e85cb44a9d4e4b222cae10228a555102397443216f86"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-parity.json",
+      "old_blob": null,
+      "new_blob": "3f1e2346c6e15c8c478c7c6552cc60036301c9a8",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "9e2449e2d7b1ec510b59913ce2e10c6457d4132e64d343568c6afa5915839758"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-001-gray.png",
+      "old_blob": null,
+      "new_blob": "895d01a903d4a426ae4037a3195b38ac6a2197bb",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "d88288ef3936c93fa8607c07f39a3519dd2c8292ac1cccdba60285e2ed7dd646"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-002-gray.png",
+      "old_blob": null,
+      "new_blob": "ff2492cf664c660a2b39aab3ea1edca411113f72",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "7a61779cda8045cb34785d3adccf0cef7b66809b7643ecab933b54660f513c75"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-003-gray.png",
+      "old_blob": null,
+      "new_blob": "f27df38932d86ff4b8e82f72ac6516b713226a02",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "896730ef4bc7e95010c4b7d51d3ce6d1f537e72c6750623662f64df94641576c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-004-gray.png",
+      "old_blob": null,
+      "new_blob": "063ddcddc8acf22ad545f66f250d145b8ac81eb6",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "9eb3eb6ceabbf27e0c252154cc293bc3c49aa7f807ee536588638bb39d910abd"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-005-gray.png",
+      "old_blob": null,
+      "new_blob": "d6dbbf4090652ec09efba89566b520d89a40fb99",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "11dafee8943943d5300ff41ebf778a53be21e0e67513ea96b1f45ea4398ffec9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-006-gray.png",
+      "old_blob": null,
+      "new_blob": "8802fb7e8917e431ff40451ad0bd2b3a0ba96fdc",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "9bfb093dd3313418b409a3b4bf77b5a7ea5a3502d719647aea8bc16054f2df98"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-007-gray.png",
+      "old_blob": null,
+      "new_blob": "8e998171cc50d844b465fa2bba0c8b1f476ace4e",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "d4954b84e115ccca3d3334e992f9451b4a26d565d2240c6086cb67b0257d03a8"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-008-gray.png",
+      "old_blob": null,
+      "new_blob": "d41015f32a995d52bc9735a219c9ede66b58b5b0",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "6425278b31b6c74a6099b129ac6c613259f81bb36871f579a0c0bdefc0575421"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-009-gray.png",
+      "old_blob": null,
+      "new_blob": "f949bba52ca283c6e1f80ed51630303a2c066f03",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cd35eb99a064b8c9522850359043486b56c10809d20537938a3b115e34c712d0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-010-gray.png",
+      "old_blob": null,
+      "new_blob": "f1cdb346ed2319eb580af0c897f625c1a9f290d4",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "fa7117d9d06189401d7d0190f3af14e32bf322f9a1b3507a08aacb903d37a8fe"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/figure-1-gray.png",
+      "old_blob": null,
+      "new_blob": "fb7515b0b9ad00691ab67ae12b05190cd51c4153",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cb9fd5e3935216412474c3af887d7d1ece8767513168bf7bb9755345b1328fcc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/figure-2-gray.png",
+      "old_blob": null,
+      "new_blob": "c73189bf4e65fe187b248e3f48c5e8d8898283a6",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "91e086d55ec4c88ee6d15ba4b38f44f5d8b738b9d1b4397a5197cdd184c805d2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/figure-3-gray.png",
+      "old_blob": null,
+      "new_blob": "aad0e812f24b7f22d2eae3de42c972f839be02d3",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "1de201816c35277ad51eeaeb3c25b76a1b62b7fbed5e408e846cc677709246a9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/figure-4-gray.png",
+      "old_blob": null,
+      "new_blob": "985583453391e9b6abe888d3442b89e33e9a673a",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "2fea69f7858af2dc4f7f5bd194866b91991f05668096088626d47467e2d443a3"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-001-gray.png",
+      "old_blob": null,
+      "new_blob": "88caa17e10ac8077c1e60320b9fe060a9e9737f5",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "68cca920997ccd1b2352f33d96fc8c8e42b904b681325ba3de6e28d387159e5d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-002-gray.png",
+      "old_blob": null,
+      "new_blob": "caaceed81677ef3d3e80ea7de421f95be9f0e531",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "6319b4235e9286da47b8aa3855996dbef86bbcc957a2916434b18d36b31961c1"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-003-gray.png",
+      "old_blob": null,
+      "new_blob": "47cf5b9eb67b699429c437ae330aff245a4c0df8",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "875386e23e934c26b24531d7b2586cd3d82619cde8bee3366cd22067990866f0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-004-gray.png",
+      "old_blob": null,
+      "new_blob": "ae6adf56b0adf94cd6b0d73f3b9699dd88ab274c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "948cdb686fe1046c567a7a451ec7065dc79c2e9ea4fc0355a5419bb9e1cbb8aa"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-005-gray.png",
+      "old_blob": null,
+      "new_blob": "0421ff6cebc45841f5907a27a4319208c5937e68",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cbde6259318e2c90618ed85a1f520b0a41981ada74821a7e184e093e5175bf5e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-006-gray.png",
+      "old_blob": null,
+      "new_blob": "0d3392f0647dbb3254fb875133ea671c9c604cc7",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "b8c1eacaf92b666ffd1cc05d805382298d27739da67924da57b6d5f17edac5d6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-007-gray.png",
+      "old_blob": null,
+      "new_blob": "e0c5fb3e228cd2c063347690e0ca32a8b88ae55f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "d0ddc8aacce085ec991588f504fc06fa2b590c159f96cc87c6f35136e1d94229"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-008-gray.png",
+      "old_blob": null,
+      "new_blob": "154044ee6daeb51ffdd00f59effc202d79731d50",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "33f0dc0b3e9f9ccbca713da2fbd70b4bc7aec3d6726ae6f8cf7a24679c9d39b3"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-009-gray.png",
+      "old_blob": null,
+      "new_blob": "93b31c11084f6364ed751c4e77c6c9655991b8eb",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "74edb80af43b815a09e65ab3430ba551308944d823c2ecc4e81ad7431b2e496e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-010-gray.png",
+      "old_blob": null,
+      "new_blob": "c0f46113eb4af00ebedceba570f8186233ae28c9",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "3948f8c1ab447f92d15f85d5f14c3b9945632ecd2d736717f374611ade0dfb66"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-001-gray.png",
+      "old_blob": null,
+      "new_blob": "56ec87943f1032c3021c39f26b5a2f226146e700",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "d572a6dbded17971ec9d1f743f990ed17352c4a90181968163df3358266f0323"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-002-gray.png",
+      "old_blob": null,
+      "new_blob": "ff2492cf664c660a2b39aab3ea1edca411113f72",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "7a61779cda8045cb34785d3adccf0cef7b66809b7643ecab933b54660f513c75"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-003-gray.png",
+      "old_blob": null,
+      "new_blob": "f27df38932d86ff4b8e82f72ac6516b713226a02",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "896730ef4bc7e95010c4b7d51d3ce6d1f537e72c6750623662f64df94641576c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-004-gray.png",
+      "old_blob": null,
+      "new_blob": "063ddcddc8acf22ad545f66f250d145b8ac81eb6",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "9eb3eb6ceabbf27e0c252154cc293bc3c49aa7f807ee536588638bb39d910abd"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-005-gray.png",
+      "old_blob": null,
+      "new_blob": "d6dbbf4090652ec09efba89566b520d89a40fb99",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "11dafee8943943d5300ff41ebf778a53be21e0e67513ea96b1f45ea4398ffec9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-006-gray.png",
+      "old_blob": null,
+      "new_blob": "8802fb7e8917e431ff40451ad0bd2b3a0ba96fdc",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "9bfb093dd3313418b409a3b4bf77b5a7ea5a3502d719647aea8bc16054f2df98"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-007-gray.png",
+      "old_blob": null,
+      "new_blob": "3c01ccddab0f41ceddf83a0314f9afebf1aba9a9",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "5bbc8bd1fc31ef4a34e70583d29d05eeeefde08848c2ea728cf253fde405c9fe"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-008-gray.png",
+      "old_blob": null,
+      "new_blob": "bd443b6dbee485fad8e4b0fa943ef87c62a4f1e8",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "b8ab11666aa132df53e50dfc3556c21316fdf274048af4b54d1b98eda8e7633e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-009-gray.png",
+      "old_blob": null,
+      "new_blob": "f949bba52ca283c6e1f80ed51630303a2c066f03",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cd35eb99a064b8c9522850359043486b56c10809d20537938a3b115e34c712d0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-010-gray.png",
+      "old_blob": null,
+      "new_blob": "f1cdb346ed2319eb580af0c897f625c1a9f290d4",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "fa7117d9d06189401d7d0190f3af14e32bf322f9a1b3507a08aacb903d37a8fe"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/figure-1-gray.png",
+      "old_blob": null,
+      "new_blob": "fb7515b0b9ad00691ab67ae12b05190cd51c4153",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cb9fd5e3935216412474c3af887d7d1ece8767513168bf7bb9755345b1328fcc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/figure-2-gray.png",
+      "old_blob": null,
+      "new_blob": "c73189bf4e65fe187b248e3f48c5e8d8898283a6",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "91e086d55ec4c88ee6d15ba4b38f44f5d8b738b9d1b4397a5197cdd184c805d2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/figure-3-gray.png",
+      "old_blob": null,
+      "new_blob": "aad0e812f24b7f22d2eae3de42c972f839be02d3",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "1de201816c35277ad51eeaeb3c25b76a1b62b7fbed5e408e846cc677709246a9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/figure-4-gray.png",
+      "old_blob": null,
+      "new_blob": "985583453391e9b6abe888d3442b89e33e9a673a",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "2fea69f7858af2dc4f7f5bd194866b91991f05668096088626d47467e2d443a3"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-001-gray.png",
+      "old_blob": null,
+      "new_blob": "88caa17e10ac8077c1e60320b9fe060a9e9737f5",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "68cca920997ccd1b2352f33d96fc8c8e42b904b681325ba3de6e28d387159e5d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-002-gray.png",
+      "old_blob": null,
+      "new_blob": "caaceed81677ef3d3e80ea7de421f95be9f0e531",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "6319b4235e9286da47b8aa3855996dbef86bbcc957a2916434b18d36b31961c1"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-003-gray.png",
+      "old_blob": null,
+      "new_blob": "47cf5b9eb67b699429c437ae330aff245a4c0df8",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "875386e23e934c26b24531d7b2586cd3d82619cde8bee3366cd22067990866f0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-004-gray.png",
+      "old_blob": null,
+      "new_blob": "ae6adf56b0adf94cd6b0d73f3b9699dd88ab274c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "948cdb686fe1046c567a7a451ec7065dc79c2e9ea4fc0355a5419bb9e1cbb8aa"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-005-gray.png",
+      "old_blob": null,
+      "new_blob": "0421ff6cebc45841f5907a27a4319208c5937e68",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cbde6259318e2c90618ed85a1f520b0a41981ada74821a7e184e093e5175bf5e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-006-gray.png",
+      "old_blob": null,
+      "new_blob": "89fd8e4d70a26a9919cdd09427db59c25ca9b22c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "b81a3640b74913819184b47f899e1332870f014efe036f4cd6cbed8abf4f9a45"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-007-gray.png",
+      "old_blob": null,
+      "new_blob": "e0c5fb3e228cd2c063347690e0ca32a8b88ae55f",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "d0ddc8aacce085ec991588f504fc06fa2b590c159f96cc87c6f35136e1d94229"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-008-gray.png",
+      "old_blob": null,
+      "new_blob": "154044ee6daeb51ffdd00f59effc202d79731d50",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "33f0dc0b3e9f9ccbca713da2fbd70b4bc7aec3d6726ae6f8cf7a24679c9d39b3"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-009-gray.png",
+      "old_blob": null,
+      "new_blob": "93b31c11084f6364ed751c4e77c6c9655991b8eb",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "74edb80af43b815a09e65ab3430ba551308944d823c2ecc4e81ad7431b2e496e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-010-gray.png",
+      "old_blob": null,
+      "new_blob": "c0f46113eb4af00ebedceba570f8186233ae28c9",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "3948f8c1ab447f92d15f85d5f14c3b9945632ecd2d736717f374611ade0dfb66"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-directfinal-r6.json",
+      "old_blob": null,
+      "new_blob": "672cf3e4d07966baf1679a94934cd6546bb16918",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "049d5889d28d386309cbb7d74d70cdcaea243b69d3e52786a6a04925d9bf4140"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-full-r1.json",
+      "old_blob": null,
+      "new_blob": "648897354905bf7781722cc182b183f501787a75",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "2ebdda2c0254e2e95056376800d4bb62e750c3824bc717e2b092d8f39212a0f1"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-full2-r2.json",
+      "old_blob": null,
+      "new_blob": "e8da5785bea2aff1a0145c76c08d2bcb367930df",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "d83a6dd81f1641aec37c240b5fe6b631a8b933f01f3bff50791198a52fc570ee"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-fullfinal-r4.json",
+      "old_blob": null,
+      "new_blob": "a65bcff79d6304eeaf8d800a7b816b55fc7a7656",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "ea6a1f2953f5d9866c426fc7bb07ae96555454b89d9ce4b50aef55d7061d2780"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-thin-r3.json",
+      "old_blob": null,
+      "new_blob": "1201a6fa28e07c7e3c456072deb52bc136bd16cd",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "f43ffba09af9fe1a62c19ad6132cb1a83a1ca550120a6d38bc54942ee5ac9604"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-thinfinal-r5.json",
+      "old_blob": null,
+      "new_blob": "0222a49df6bfa7c60f3e6330c94a955b42258b6c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "34f9e2007ac672fd8a0f118b1bfbacfbfed6a69fb45f255ccb7758aa95ca711c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-finished.json",
+      "old_blob": null,
+      "new_blob": "e7f0e32b52d8b37af57c07938e79a25b80c92361",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "7ec32b8f9bffa4411330419af622d61f10753e645cad4a1ee27503dd853aba9b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-manifest.json",
+      "old_blob": null,
+      "new_blob": "7488804e068dbba68139484890112b26ace62eb1",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "7d7e72f6f9948519ca9e060bed92ed4d20cd6708cbab832157b30d73ba37bd44"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-started.json",
+      "old_blob": null,
+      "new_blob": "f0a7969422039cc7b207d868103e3001a77ad8ee",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "80853dd86ca81ccc1bb90341441e6b8efe14923a38edd7662cd5a27a3daf5e35"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-stderr.txt",
+      "old_blob": null,
+      "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-stdout.txt",
+      "old_blob": null,
+      "new_blob": "e401862c77a7e85a628c78176297de46dd74dbc2",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "439b4826cc51573747c38607ca180c642b4ea3967fa4981863d3b786ba5f83e5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-finished.json",
+      "old_blob": null,
+      "new_blob": "ceae4de770ad4c4775ba1fe1b8c0904840b6460d",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "29dccda929de26705d35ac9df1432c679c3d5ae664b95fd5de92dba33c5199a6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-manifest.json",
+      "old_blob": null,
+      "new_blob": "084e84b00cb15cb1ff582038469411324951b85c",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "144c741bf51cb19ea51567e31c52120ea15e45f26aed202729194b80f5a1583c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-started.json",
+      "old_blob": null,
+      "new_blob": "286ba507219e85b3090c87e93a941f5311627822",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "1410b99658100ed928736a8078cf368938ce999e7414ca35a766208461040c3d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-stderr.txt",
+      "old_blob": null,
+      "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-stdout.txt",
+      "old_blob": null,
+      "new_blob": "d90ff36bef20fbfaf3471f3c2e5278e273bde658",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "1762d4046dcaf0886a21c711cb772ba7b96118eb937083db5033c17e7de3bc4b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-view-inventory-final.json",
+      "old_blob": null,
+      "new_blob": "ce9a73633de31ebd3bd184d67a4bba51b3fa1de5",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "a011b6ffd92acd8f528c6972fee5786d2a32d05fe3e85526e7358d3731346457"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-view-inventory.json",
+      "old_blob": null,
+      "new_blob": "9482d52f13e49e5618d8269d45450575a0126f6d",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "06078c68b2839034dddc9e455a1c8d1a475aed3a5134f0b5494eb277c64d7a22"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-observations.json",
+      "old_blob": null,
+      "new_blob": "e3174650fdcae2e33037f4ee8bc572f64d3a93e3",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "cd1d3e626d25b577543d83ec36e8f9ec8212c3925bfe2ded11254f1196a90765"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-result.md",
+      "old_blob": null,
+      "new_blob": "c9504e812b519de0f30df86e72c0b4e38ad33748",
+      "repository": "4veco-platform",
+      "commit": "d3e9551e4025f007e24a15982da7cdd7cd58ddd7",
+      "raw_sha256": "4a83e82cb2a90a33f0b380a974299410912e75301aff1a2f8243d99732c4dd92"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-publication.md",
+      "old_blob": "76e09062f789c071fbb016029e004e3c85abb716",
+      "new_blob": "3a3c6785ff813577de8f74728fb032445324c861",
+      "repository": "4veco-platform",
+      "commit": "1e35171b30711822037af7217d60f71fa18be819",
+      "raw_sha256": "a68aeec2c41fe4810c600e931cfad0b1b23325cce2b3d29dcc8e975a298c6044"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-scope.js",
+      "old_blob": null,
+      "new_blob": "e245993d3d42b4592caa520afd40bb08372577ae",
+      "repository": "4veco-platform",
+      "commit": "43dd62450b2b3b8b3d1b3c01232945f688bb67f6",
+      "raw_sha256": "ba8fa5aa399b44f30259ba01bd44ec0a21409a7e611bfca1ca516739986e06b5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-scope.json",
+      "old_blob": null,
+      "new_blob": "9e4a0041c7b2703e048ea244d2ae673e973d4ce3",
+      "repository": "4veco-platform",
+      "commit": "43dd62450b2b3b8b3d1b3c01232945f688bb67f6",
+      "raw_sha256": "3c8d72e4998f8ec80a7f949b71459d23f4baec3d20286246ee770b01219cc7ae"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-diagnostic.js",
+      "old_blob": null,
+      "new_blob": "b86c7c99587069bdae2d705b179b7678ef0a9b01",
+      "repository": "4veco-platform",
+      "commit": "aeef7117e7921182442233f8db7f1955a38da1b9",
+      "raw_sha256": "0ed85c576cfd8dd4b1175c5d792e2c04067ee66e9665e91bf41d19e0a33ae5f7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-diagnostic.json",
+      "old_blob": null,
+      "new_blob": "13272ec6a420a6c46e74565b77c6593451a02fa7",
+      "repository": "4veco-platform",
+      "commit": "aeef7117e7921182442233f8db7f1955a38da1b9",
+      "raw_sha256": "63ce319d6e24bae6cd6f88e04c9c09eb41f04a10c2da38289a4b01859976a32e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-fallback.json",
+      "old_blob": null,
+      "new_blob": "28ca888c4becd5aea35db65ec24d813c965fc57c",
+      "repository": "4veco-platform",
+      "commit": "1e35171b30711822037af7217d60f71fa18be819",
+      "raw_sha256": "4d5c0ed9e48c1192132ecf13ebee80afc192f5b4452d517a6f611385d7af4303"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-runner.js",
+      "old_blob": null,
+      "new_blob": "d50f74696dd409fd8dfe5970879ef20a5ea57ffe",
+      "repository": "4veco-platform",
+      "commit": "1e35171b30711822037af7217d60f71fa18be819",
+      "raw_sha256": "3a6106b69062d93f67054d30801b9f8877b9c6f5d8f477cf4c801d0bb7820259"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-plan.md",
+      "old_blob": null,
+      "new_blob": "2ca269f5897690dbf905f1a4656c7e7f05f13e5e",
+      "repository": "4veco-platform",
+      "commit": "2df56fa59da339fc361cb991d15853f77f5934e2",
+      "raw_sha256": "0bc9c2096d227e385deae6deaf6f25b976328f0a6f7b035986b02bee166fc1c2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-baseline.json",
+      "old_blob": null,
+      "new_blob": "ea23e1121902110c7e6d88ab0ed9b3f06e3a3511",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "4925bea52e35e9e1a4ef03e39c55bfaf181c0e30a2ec700c5647a85521e6b75e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-checks.py",
+      "old_blob": null,
+      "new_blob": "3472cbe27324c11c678ff04eb7b9d2a2bc7443ce",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "fddd59a5b77b01ef3ac03f532ec3a62979dca03bb8ab7859050d78649ceb94b1"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-controller.py",
+      "old_blob": null,
+      "new_blob": "33f6a61a267f69b1dcfe98dcbcb6dd6836e91ed1",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "ec9ac412e6c1bc7ada8174d4fc4778d86a4e4dd85f119ed2b1a04ff51c10c5dc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-current-commands.json",
+      "old_blob": null,
+      "new_blob": "b95d529cdd4828bd6c1a765f39b6f1981759059b",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "cb99b23a3f9c25af204da1e05a245b74a25cc79ff884f1792942dd0590cd5c27"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-current-r2-commands.json",
+      "old_blob": null,
+      "new_blob": "e3b9a590097e325e2c6136f112cb88c66dd0e266",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "00df94090c618c3a6b26430beb281df52ba6e2cc2e066b46150a6cd94cd0d6fe"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "5cd446eb1a22d4d0d9731a45912869262bc6ad77f75c0d9617b952d4da22326f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/manifest.json",
+      "old_blob": null,
+      "new_blob": "8fedccd92f7c97addbed3f7073213c5561995d85",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "d34edae963199716f66c935409247195a79c360189f1c35922059e0dd25dd34c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "584cdd292415d409b1c1c20723a86090ce680ca297fb52b5f447785f1c32c586"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8288264af30527abf2a5df14c51c387b4a97a1821f48856067e8209a5a29315c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8267ae083e4791d964e042834acf77998b324cd685049b4f72a31f62d603123f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "cc5312a08af75f7999a185876845fabd5f0fdb0da3100d9f6cefd269a0875d2b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "5a27ee2ebd712719cffe49de26e404e37057c363aff41d3a3dd7c1d1de81e8cf"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "4fbe832fa90e6951225020fc49ab56cefed76b8f42e3112dade8ea251c3c52ce"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "5ac97b01ffaf5fe45a21ccfeffd52f3540f5d55214f088a62e68bb97e2822c45"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "068ef6dbaf6a7091fb6ea09b260b8850a1f6231356fd6e4fa0080be7141d2a11"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "cf9476a7104ba9e3535fa5dff3672fa7534fd5e96bbd12acf5aef4b21ac3de69"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r7/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "ce3958cb01e03350cbefad400b544fedc87483de0cfcd200d5e495b42549321a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "5cd446eb1a22d4d0d9731a45912869262bc6ad77f75c0d9617b952d4da22326f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/manifest.json",
+      "old_blob": null,
+      "new_blob": "f7197cc028dda429ef38556185efea6cabdfa6c6",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "d9898d2b9e87d046bc266f5fc09c586a78864353120c56fddb90e4ad8f14bcf6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "584cdd292415d409b1c1c20723a86090ce680ca297fb52b5f447785f1c32c586"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8288264af30527abf2a5df14c51c387b4a97a1821f48856067e8209a5a29315c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8267ae083e4791d964e042834acf77998b324cd685049b4f72a31f62d603123f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "cc5312a08af75f7999a185876845fabd5f0fdb0da3100d9f6cefd269a0875d2b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "5a27ee2ebd712719cffe49de26e404e37057c363aff41d3a3dd7c1d1de81e8cf"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "4fbe832fa90e6951225020fc49ab56cefed76b8f42e3112dade8ea251c3c52ce"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "5ac97b01ffaf5fe45a21ccfeffd52f3540f5d55214f088a62e68bb97e2822c45"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "068ef6dbaf6a7091fb6ea09b260b8850a1f6231356fd6e4fa0080be7141d2a11"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "cf9476a7104ba9e3535fa5dff3672fa7534fd5e96bbd12acf5aef4b21ac3de69"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-antwoorden-f6ba34f89ae0-r8/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "ce3958cb01e03350cbefad400b544fedc87483de0cfcd200d5e495b42549321a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-approved.json",
+      "old_blob": null,
+      "new_blob": "b0a8b8524467cf1dde50031154e015cae854d464",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "ea967fc76fa817e4ce91424a4badc2a880c7c5d312a54e8dcec2c1d4dba40240"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-bundle.json",
+      "old_blob": null,
+      "new_blob": "91e0c61a6cc662d58b416b1990103792c6309827",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "c67dc0a3e87605566f381873138e35ee0e20bb1bf5fd76e0fe0f659d6725c1b6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-durable.json",
+      "old_blob": null,
+      "new_blob": "e2d5c90cc973bfde75e59908031fbcfc4292f16f",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "401de38f443826d8f007f8d99ddc40f067d71f5d126767ad84c97416e8feeffd"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-native-checker.json",
+      "old_blob": null,
+      "new_blob": "54ed42cea46233777cc2acfcc8c5109d42ba96b8",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "a7467724edada750619b93f39e9ebe1332556b8daf3de3a3af8645f0d8cca2bd"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-publisher-print.json",
+      "old_blob": null,
+      "new_blob": "5653aaf8659b034d7cb6dd0891bf6a3510083498",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8b41527e51b7ad4b22f8e3d333c68c41100eededbeed7c7becf7c97d4e4df75e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-source-tests.json",
+      "old_blob": null,
+      "new_blob": "7458b7fc6cd11deaa09b05a7f9d72c7ba38bb326",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "a2e31f063dad1f74dbf414bf81ea678b7f55e9abe9a0b1d5d5ecce4175376db6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-structural.json",
+      "old_blob": null,
+      "new_blob": "d4dc4dc4fa518665475e77927dc8ae3071549f20",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "e2dfe33720dd79947f8e57b315540e3fd69d8175c735458fb4300894907a6a5f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-command-student-web.json",
+      "old_blob": null,
+      "new_blob": "edfc944c61fa9a972806dfce9d72ffbca8a74f1f",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "be260f99163b0a668c87d46e3d24600430b9076b3c043217ee2affbc70ef15fb"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-commands.json",
+      "old_blob": null,
+      "new_blob": "acc9b7dac597a7b470641a9365f514dcaeba2015",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "972b5261f882b85c486a13d13a6858f6e42b5adf0ab75c674751d356760a0a8e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9-finished.json",
+      "old_blob": null,
+      "new_blob": "e15258969927c4e92566b63b1312570d1c742852",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "9a4b85802e1b5f60d2ebd674bfb8a08a4b39a0fb0971e70456908cdf8a58fd8b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9-manifest.json",
+      "old_blob": null,
+      "new_blob": "2d857254a09cf26c15bf13532c9932a0b09ea943",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "7f0bc58083b4d6432358301c97c117da980378f53b9f0b6a2f4bc4eb308e0223"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9-started.json",
+      "old_blob": null,
+      "new_blob": "12427386fa6b3c36f17980816d91b635608aee31",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "55c57f9de8043aa499b852c3a0cd7ef77eee032d536e7360e161ed51d6739711"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9-stderr.txt",
+      "old_blob": null,
+      "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9-stdout.txt",
+      "old_blob": null,
+      "new_blob": "33f86339d309e76b86c1ffb63ee9a45e7501027f",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "d2313309d9f415faf23943f2aea408727834ead919b2d3f5ba8d30a21fc3dfb2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "5cd446eb1a22d4d0d9731a45912869262bc6ad77f75c0d9617b952d4da22326f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/manifest.json",
+      "old_blob": null,
+      "new_blob": "11c8404712874027f2358ea879a67134e4d66b32",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "d4fbd48fbc97f571ce558b3b06bf3c68f5b5c0afaf0d5358fbeaabaf3e327432"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "584cdd292415d409b1c1c20723a86090ce680ca297fb52b5f447785f1c32c586"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8288264af30527abf2a5df14c51c387b4a97a1821f48856067e8209a5a29315c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8267ae083e4791d964e042834acf77998b324cd685049b4f72a31f62d603123f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "cc5312a08af75f7999a185876845fabd5f0fdb0da3100d9f6cefd269a0875d2b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "5a27ee2ebd712719cffe49de26e404e37057c363aff41d3a3dd7c1d1de81e8cf"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "4fbe832fa90e6951225020fc49ab56cefed76b8f42e3112dade8ea251c3c52ce"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "5ac97b01ffaf5fe45a21ccfeffd52f3540f5d55214f088a62e68bb97e2822c45"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "068ef6dbaf6a7091fb6ea09b260b8850a1f6231356fd6e4fa0080be7141d2a11"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "cf9476a7104ba9e3535fa5dff3672fa7534fd5e96bbd12acf5aef4b21ac3de69"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "ce3958cb01e03350cbefad400b544fedc87483de0cfcd200d5e495b42549321a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "c5232dc7fce80945827fa43092f23531ce7f0ffa8d813a5a57238153b308d693"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/manifest.json",
+      "old_blob": null,
+      "new_blob": "e930a4ed095ea54ae51e4987d54082ae6325e303",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "52d77b254626b69ecca41a8cba92900cf21c9a25c6c01b98d3f9599b0f57691c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "fde2df212620dab61d6a79eff3b68908e67f39e913e3bd7a651b048d24bd2efb"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8e854a7a4d094932670d93e59d2e5837f2e78533513261ede8e29fb8fb9116dc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "ffd43c20a082db12e29e9991e51ba29e138d72d581c5e9acd390f1ef3ccad2af"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "96e36bea7d61a618c43888d90775987bf405810f",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "dc3e8048cb8b7a2f858ba378516784c046f14c44959a94b1f96746d780cc96c9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "4467ab90919955d768f278a279efdcb8af219648",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "cc0ec45f75205b7be388783b42e969cad69bcb75ddb3514da1b8f55d8700632d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "53c263e039d4057e045e08c2041cb14fbfbb4b0bd4ae52ff89b0e6b2da092bd4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8a845e4f9cfe86b11c37ed23fabb3079e64f8f099aca624e8ff4b78fe9278f20"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "ad26f2bf3e7328abc02eb004f9ceabaf9b7a124508aa805bbe35d74de23545b7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "e42b3c202eaffec5f1e249555e8dd5a6b4086f4be11057bf4340e94996f480b9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-direct-r9/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "4ea2c7ff2bfee2c63e72e85cb44a9d4e4b222cae10228a555102397443216f86"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-final-custody.json",
+      "old_blob": null,
+      "new_blob": "a7ccc8cea2490fdc95f152052d6cbfa54e0cf318",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "c88b1a815f1c6f3f8de75cabfc0c47923d3b84fc6848ffba3ba7434eaa82f223"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-full-r7-finished.json",
+      "old_blob": null,
+      "new_blob": "08462269ee42701ed6888d7f36eaddde537d9565",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "b8b784ce81cd8d623230e8dab1da87242b135e25aaed8f419a2ab80a5fac26c1"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-full-r7-manifest.json",
+      "old_blob": null,
+      "new_blob": "350b4fea440f27631aae81974baa6b355c9ccbb5",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "da637ff2e0701463c70db85ccb6a4d63ffbad813c3c4d38795e69dc49402b9fe"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-full-r7-started.json",
+      "old_blob": null,
+      "new_blob": "2498f1e2d9dc49d5b79f79a0e1042c85c51a47e8",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "442ed31bb284256a1ed74fe970b39c73c127cf2e7085dbd54645d9f9b58fce1c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-full-r7-stderr.txt",
+      "old_blob": null,
+      "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-full-r7-stdout.txt",
+      "old_blob": null,
+      "new_blob": "2766cd728a2d1a1cc15ab59fcff1609505002415",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "4399942bbaf7b2ec4ad7f58a7b9719c651dd82e06b998566a98683d169fc0408"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-independent-probes.json",
+      "old_blob": null,
+      "new_blob": "743003e8026b02588f8d58c0296def342310ebf1",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "2b9ff63e7705e02f6bc19c39ae952a82648e215d9e92fda9431b46b74fcf9a6c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-legacy-review-binding.json",
+      "old_blob": null,
+      "new_blob": "85f7e6a11e6a03fe6937dfa8b73594d48473ebfe",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "06b187154d8dec80fdb0af49a3cc0d62ed5b900073a870aae943b9b537ddda33"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-legacy-review.md",
+      "old_blob": null,
+      "new_blob": "873e284e0e6254492698d0e733042fdf35d28fce",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "abe2cf8b142a20a50e9cc674a9ee1ad705f2b2ee1b205bad892cd7caefdfd197"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "c5232dc7fce80945827fa43092f23531ce7f0ffa8d813a5a57238153b308d693"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/manifest.json",
+      "old_blob": null,
+      "new_blob": "fd527d7b703320590ffc4662fc046efb5c3e0c58",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "35a31ba7d266bf76dbb9c07c35216d6c5c28241482331900c51bd6ed1cf7b121"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "fde2df212620dab61d6a79eff3b68908e67f39e913e3bd7a651b048d24bd2efb"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8e854a7a4d094932670d93e59d2e5837f2e78533513261ede8e29fb8fb9116dc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "ffd43c20a082db12e29e9991e51ba29e138d72d581c5e9acd390f1ef3ccad2af"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "96e36bea7d61a618c43888d90775987bf405810f",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "dc3e8048cb8b7a2f858ba378516784c046f14c44959a94b1f96746d780cc96c9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "4467ab90919955d768f278a279efdcb8af219648",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "cc0ec45f75205b7be388783b42e969cad69bcb75ddb3514da1b8f55d8700632d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "53c263e039d4057e045e08c2041cb14fbfbb4b0bd4ae52ff89b0e6b2da092bd4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8a845e4f9cfe86b11c37ed23fabb3079e64f8f099aca624e8ff4b78fe9278f20"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "ad26f2bf3e7328abc02eb004f9ceabaf9b7a124508aa805bbe35d74de23545b7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "e42b3c202eaffec5f1e249555e8dd5a6b4086f4be11057bf4340e94996f480b9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r7/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "4ea2c7ff2bfee2c63e72e85cb44a9d4e4b222cae10228a555102397443216f86"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/contact-sheet.png",
+      "old_blob": null,
+      "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "c5232dc7fce80945827fa43092f23531ce7f0ffa8d813a5a57238153b308d693"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/manifest.json",
+      "old_blob": null,
+      "new_blob": "097e2d4f554c4ee358a46cee1bb02bc5d1324e8c",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "5f85cdcc4705dbf9ce4ca5081c64cb22cc92d52cd6861abd4383233b92d0127c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-001.png",
+      "old_blob": null,
+      "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "fde2df212620dab61d6a79eff3b68908e67f39e913e3bd7a651b048d24bd2efb"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-002.png",
+      "old_blob": null,
+      "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8e854a7a4d094932670d93e59d2e5837f2e78533513261ede8e29fb8fb9116dc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-003.png",
+      "old_blob": null,
+      "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "ffd43c20a082db12e29e9991e51ba29e138d72d581c5e9acd390f1ef3ccad2af"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-004.png",
+      "old_blob": null,
+      "new_blob": "96e36bea7d61a618c43888d90775987bf405810f",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "dc3e8048cb8b7a2f858ba378516784c046f14c44959a94b1f96746d780cc96c9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-005.png",
+      "old_blob": null,
+      "new_blob": "4467ab90919955d768f278a279efdcb8af219648",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "cc0ec45f75205b7be388783b42e969cad69bcb75ddb3514da1b8f55d8700632d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-006.png",
+      "old_blob": null,
+      "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "53c263e039d4057e045e08c2041cb14fbfbb4b0bd4ae52ff89b0e6b2da092bd4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-007.png",
+      "old_blob": null,
+      "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8a845e4f9cfe86b11c37ed23fabb3079e64f8f099aca624e8ff4b78fe9278f20"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-008.png",
+      "old_blob": null,
+      "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "ad26f2bf3e7328abc02eb004f9ceabaf9b7a124508aa805bbe35d74de23545b7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-009.png",
+      "old_blob": null,
+      "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "e42b3c202eaffec5f1e249555e8dd5a6b4086f4be11057bf4340e94996f480b9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-opgaven-8eb84c6f10bb-r8/pages/page-010.png",
+      "old_blob": null,
+      "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "4ea2c7ff2bfee2c63e72e85cb44a9d4e4b222cae10228a555102397443216f86"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-parity.json",
+      "old_blob": null,
+      "new_blob": "0d96c922f6674e2668b7b6bfe7b4068951e59761",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "2e7844c35d4bdc0cebf0298d1a6c5fe677f307b193a9c6a5569f3b980fb56d9c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-inspection.json",
+      "old_blob": null,
+      "new_blob": "59f55eec81d71ca024e9cdd548b95ab75f2432db",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "b34576c53c206c4d3e194a734943ece6b9596f6f2224378423a75f1d68b225ce"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-001-gray.png",
+      "old_blob": null,
+      "new_blob": "895d01a903d4a426ae4037a3195b38ac6a2197bb",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "d88288ef3936c93fa8607c07f39a3519dd2c8292ac1cccdba60285e2ed7dd646"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-002-gray.png",
+      "old_blob": null,
+      "new_blob": "ff2492cf664c660a2b39aab3ea1edca411113f72",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "7a61779cda8045cb34785d3adccf0cef7b66809b7643ecab933b54660f513c75"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-003-gray.png",
+      "old_blob": null,
+      "new_blob": "f27df38932d86ff4b8e82f72ac6516b713226a02",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "896730ef4bc7e95010c4b7d51d3ce6d1f537e72c6750623662f64df94641576c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-004-gray.png",
+      "old_blob": null,
+      "new_blob": "063ddcddc8acf22ad545f66f250d145b8ac81eb6",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "9eb3eb6ceabbf27e0c252154cc293bc3c49aa7f807ee536588638bb39d910abd"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-005-gray.png",
+      "old_blob": null,
+      "new_blob": "d6dbbf4090652ec09efba89566b520d89a40fb99",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "11dafee8943943d5300ff41ebf778a53be21e0e67513ea96b1f45ea4398ffec9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-006-gray.png",
+      "old_blob": null,
+      "new_blob": "8802fb7e8917e431ff40451ad0bd2b3a0ba96fdc",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "9bfb093dd3313418b409a3b4bf77b5a7ea5a3502d719647aea8bc16054f2df98"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-007-gray.png",
+      "old_blob": null,
+      "new_blob": "8e998171cc50d844b465fa2bba0c8b1f476ace4e",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "d4954b84e115ccca3d3334e992f9451b4a26d565d2240c6086cb67b0257d03a8"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-008-gray.png",
+      "old_blob": null,
+      "new_blob": "d41015f32a995d52bc9735a219c9ede66b58b5b0",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "6425278b31b6c74a6099b129ac6c613259f81bb36871f579a0c0bdefc0575421"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-009-gray.png",
+      "old_blob": null,
+      "new_blob": "f949bba52ca283c6e1f80ed51630303a2c066f03",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "cd35eb99a064b8c9522850359043486b56c10809d20537938a3b115e34c712d0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/antwoorden-page-010-gray.png",
+      "old_blob": null,
+      "new_blob": "f1cdb346ed2319eb580af0c897f625c1a9f290d4",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "fa7117d9d06189401d7d0190f3af14e32bf322f9a1b3507a08aacb903d37a8fe"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/figure-1-gray.png",
+      "old_blob": null,
+      "new_blob": "fb7515b0b9ad00691ab67ae12b05190cd51c4153",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "cb9fd5e3935216412474c3af887d7d1ece8767513168bf7bb9755345b1328fcc"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/figure-2-gray.png",
+      "old_blob": null,
+      "new_blob": "c73189bf4e65fe187b248e3f48c5e8d8898283a6",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "91e086d55ec4c88ee6d15ba4b38f44f5d8b738b9d1b4397a5197cdd184c805d2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/figure-3-gray.png",
+      "old_blob": null,
+      "new_blob": "aad0e812f24b7f22d2eae3de42c972f839be02d3",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "1de201816c35277ad51eeaeb3c25b76a1b62b7fbed5e408e846cc677709246a9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/figure-4-gray.png",
+      "old_blob": null,
+      "new_blob": "985583453391e9b6abe888d3442b89e33e9a673a",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "2fea69f7858af2dc4f7f5bd194866b91991f05668096088626d47467e2d443a3"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-001-gray.png",
+      "old_blob": null,
+      "new_blob": "88caa17e10ac8077c1e60320b9fe060a9e9737f5",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "68cca920997ccd1b2352f33d96fc8c8e42b904b681325ba3de6e28d387159e5d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-002-gray.png",
+      "old_blob": null,
+      "new_blob": "caaceed81677ef3d3e80ea7de421f95be9f0e531",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "6319b4235e9286da47b8aa3855996dbef86bbcc957a2916434b18d36b31961c1"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-003-gray.png",
+      "old_blob": null,
+      "new_blob": "47cf5b9eb67b699429c437ae330aff245a4c0df8",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "875386e23e934c26b24531d7b2586cd3d82619cde8bee3366cd22067990866f0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-004-gray.png",
+      "old_blob": null,
+      "new_blob": "ae6adf56b0adf94cd6b0d73f3b9699dd88ab274c",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "948cdb686fe1046c567a7a451ec7065dc79c2e9ea4fc0355a5419bb9e1cbb8aa"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-005-gray.png",
+      "old_blob": null,
+      "new_blob": "0421ff6cebc45841f5907a27a4319208c5937e68",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "cbde6259318e2c90618ed85a1f520b0a41981ada74821a7e184e093e5175bf5e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-006-gray.png",
+      "old_blob": null,
+      "new_blob": "0d3392f0647dbb3254fb875133ea671c9c604cc7",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "b8c1eacaf92b666ffd1cc05d805382298d27739da67924da57b6d5f17edac5d6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-007-gray.png",
+      "old_blob": null,
+      "new_blob": "e0c5fb3e228cd2c063347690e0ca32a8b88ae55f",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "d0ddc8aacce085ec991588f504fc06fa2b590c159f96cc87c6f35136e1d94229"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-008-gray.png",
+      "old_blob": null,
+      "new_blob": "154044ee6daeb51ffdd00f59effc202d79731d50",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "33f0dc0b3e9f9ccbca713da2fbd70b4bc7aec3d6726ae6f8cf7a24679c9d39b3"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-009-gray.png",
+      "old_blob": null,
+      "new_blob": "93b31c11084f6364ed751c4e77c6c9655991b8eb",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "74edb80af43b815a09e65ab3430ba551308944d823c2ecc4e81ad7431b2e496e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-personal-views/opgaven-page-010-gray.png",
+      "old_blob": null,
+      "new_blob": "c0f46113eb4af00ebedceba570f8186233ae28c9",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "3948f8c1ab447f92d15f85d5f14c3b9945632ecd2d736717f374611ade0dfb66"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-reservation-direct-r9.json",
+      "old_blob": null,
+      "new_blob": "4e1fa77ea6150decbc2c7c3db82016971953eeff",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "c91eee22a6d6d5b709d4538176842c042382116ebcc98eba9e2254050f5051ca"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-reservation-full-r7.json",
+      "old_blob": null,
+      "new_blob": "f83389661d9a1af395ac707f91114ac3d2c1f349",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "bcb583145760f53ee3159c84e3fff0f6882d8015c55c95872893245ec07ce72f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-reservation-thin-r8.json",
+      "old_blob": null,
+      "new_blob": "a5c24fd9bd0bcfb82d22ca4d68c96cc4277dd9df",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "a14e1b78252a081d4b8280efc8432dab7b36f15dcad17a1c6364b69f1b3d346f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-review-bindings.json",
+      "old_blob": null,
+      "new_blob": "b31e2c0f4ffd2651891f0c9c9704bb02dfea70b3",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "643b29ce1bc932ef6752544665cad6cfdde08a6ba2f6280c0ef3d1fd84c475b6"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-target-dom-geometry.json",
+      "old_blob": null,
+      "new_blob": "c287a077203f3be9cf38901227b335dbe5af7626",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "76dc310e3b224557f75c49045c4606c595f65fd80d471e87ac1328dee22de8f8"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-thin-r8-finished.json",
+      "old_blob": null,
+      "new_blob": "dc47af282d704bcd427a602ce00b52e025eee719",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "7dff1aefc9f3a61973c456c7f3694b748ba357e85f72ed968c5aecef23216aa4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-thin-r8-manifest.json",
+      "old_blob": null,
+      "new_blob": "0acd9ab6706e2bf4fa3bafa57862e625dc54016e",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "8b41d2ed8181f067f62434c7a3b9aa8e5817278345f7659a1513eec7dd6c4df0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-thin-r8-started.json",
+      "old_blob": null,
+      "new_blob": "8ccbcca97072a32d01fde0ab0b599350156cee3b",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "1a6e492762f382c2471513b1f16df254a29c686282203e6e7d1e14a8f3515db5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-thin-r8-stderr.txt",
+      "old_blob": null,
+      "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-thin-r8-stdout.txt",
+      "old_blob": null,
+      "new_blob": "a8f22dd281d0c555eac3eedb1ceb7b84e841b850",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "526a0d643815cd166b044aafada8bce23a25515c545abd40dbc116a8e0df1a50"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-evidence/224-view-inventory.json",
+      "old_blob": null,
+      "new_blob": "d21966d9cbc7ddf0781357c03716ea0d52b73ee1",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "a8698aa1e5d78227cf699a3ebb223f5c231fe8238d7a8286243fdb39bb59ffb1"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-finalize.py",
+      "old_blob": null,
+      "new_blob": "6e56f6881d0af7d307b58331b71e16c7a9f763a5",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "5e1967d952e15d60f9b97b75ace743537a9ba1995c05af739ae5b0b85577d972"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-publication-checks.js",
+      "old_blob": null,
+      "new_blob": "b9f1ddec66c42e1a2a926263bda5ca4dd63e3db8",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "b20ca1f330a9ecc765c9cfd313f9eb9a4c491abf816a42b9bdc1f578f616118c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-report.md",
+      "old_blob": null,
+      "new_blob": "89496e7a1b6bc3f2d96c1ef7d50854ed08199630",
+      "repository": "4veco-platform",
+      "commit": "456969885a83b2627868e8d66a9f09396c815016",
+      "raw_sha256": "c6ab66b50a16456cec329bd8c15bf83eae070a54a8e26834ab94e4865168d725"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-index-runner.js",
+      "old_blob": "9df1c81744c60fd3727b5b3b135978be53d2ea1d",
+      "new_blob": "f884c85b37356c8c05ca7f0d2cf7d706880a153c",
+      "repository": "4veco-platform",
+      "commit": "7bf13d3ad7e8ea8280bd859ef4ea2cecfc5abe7d",
+      "raw_sha256": "b117066b8b91490f99560e860f478309d3d36aff9dd75871d8706954d2c6f3d7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-publication.md",
+      "old_blob": null,
+      "new_blob": "6f93174e6c8f8ffe09a002e04f87e77f35bcfaa9",
+      "repository": "4veco-platform",
+      "commit": "ab5de28d34d31cc7aa7979ac929f4750996d6e53",
+      "raw_sha256": "624adc846232fa9eaaf2aa454e9a402377ea2819ac96c4f5cdd6e3d952b70582"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-remote-commands.json",
+      "old_blob": null,
+      "new_blob": "f030bd47db9fc43808eedb5fc5956b6cbb1113ab",
+      "repository": "4veco-platform",
+      "commit": "ab5de28d34d31cc7aa7979ac929f4750996d6e53",
+      "raw_sha256": "6b69ce32a5fb43c454c100ec2ee42bab3decf4de0e4ab2e2b8448ae12a9616e9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-scope.js",
+      "old_blob": null,
+      "new_blob": "7821cc46a0216697493471e15a1c174a1fb982dc",
+      "repository": "4veco-platform",
+      "commit": "ab5de28d34d31cc7aa7979ac929f4750996d6e53",
+      "raw_sha256": "dc90dfa11b28df157e9401ccfcf6d93c5908d6eb98f758a7255dacd5714c7eb5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-scope.json",
+      "old_blob": null,
+      "new_blob": "9a774e087cf71c87007fb6f541e665a364e86ba6",
+      "repository": "4veco-platform",
+      "commit": "ab5de28d34d31cc7aa7979ac929f4750996d6e53",
+      "raw_sha256": "33213dbe823596870073c6899881b8ce3c5d297d21db7abaed0c977caef0f406"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-index-diagnostic.js",
+      "old_blob": null,
+      "new_blob": "af18982ee18896f140203df9784172f7003596d5",
+      "repository": "4veco-platform",
+      "commit": "7bf13d3ad7e8ea8280bd859ef4ea2cecfc5abe7d",
+      "raw_sha256": "5dc4ced5de5c60c3504882f38a4a286354efe1bf0e85361e493e0d2d03670ff2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-index-diagnostic.json",
+      "old_blob": null,
+      "new_blob": "4db3685108bf31589da2c835b8ac26d9acc2f028",
+      "repository": "4veco-platform",
+      "commit": "7bf13d3ad7e8ea8280bd859ef4ea2cecfc5abe7d",
+      "raw_sha256": "764b72327ce90badea881c68928a8ca7bedf3d998c48e63d1149802c3e6ae2a6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.html",
+      "old_blob": "946daf6389785583d0e004dab84f238d9ddb1460",
+      "new_blob": "e91c0869ec5385fb8aeccacb0af70df7caaf1259",
+      "repository": "4veco-lessen",
+      "commit": "994657c8901729fcb138493be4e8c2e9590081bd",
+      "raw_sha256": "ba6ccaa14aeba4924b511c48e80d563356398bc723a9fde84a3512be290bb53e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.md",
+      "old_blob": "4eeaa8560b13135aa21353f6fe39aaa2a9bd8e15",
+      "new_blob": "3a47ab26210b3bd5df78983de04da36965035d92",
+      "repository": "4veco-lessen",
+      "commit": "994657c8901729fcb138493be4e8c2e9590081bd",
+      "raw_sha256": "1cccda3c2068e2916d66c350f7fdcfc07383d1f897ae1cd28bad1f70b0c84de8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "old_blob": "eb5fa1f070c57fabd55a3a29ce7e6bc56fee89ce",
+      "new_blob": "16fc9cfe83f3b1bfbfcfdd8db5e35d899b5a556f",
+      "repository": "4veco-lessen",
+      "commit": "994657c8901729fcb138493be4e8c2e9590081bd",
+      "raw_sha256": "f6ba34f89ae0c4a4c0f26f12afb392af5271e1edde28bde65854b90287dd57f8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.html",
+      "old_blob": "48e2f22a5bc46c1498485a6e03ec551d74d6acd4",
+      "new_blob": "69a40b6400ffcd6fb8f4111990e4052689e5b27e",
+      "repository": "4veco-lessen",
+      "commit": "994657c8901729fcb138493be4e8c2e9590081bd",
+      "raw_sha256": "8fc29bc1e6b061051b80e08d2a62bc771d8bf873492fb3a8778f99a8964fe7bc"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+      "old_blob": "4269f203e90ba0c850d1a7c1c28ccd9314625553",
+      "new_blob": "12647275fda19e54964c08787160f97a6938b7a0",
+      "repository": "4veco-lessen",
+      "commit": "994657c8901729fcb138493be4e8c2e9590081bd",
+      "raw_sha256": "b5f0247abfc924c0bb0eace26d751ae4b25ba778252740e5d9210afdfa48d200"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "old_blob": "f767d93fa00b589075e803be9662f9c6c80b032b",
+      "new_blob": "454f2a26bfea4106620353631a4006ccd2f7086a",
+      "repository": "4veco-lessen",
+      "commit": "994657c8901729fcb138493be4e8c2e9590081bd",
+      "raw_sha256": "8eb84c6f10bb824033ffea669a04a393bf57c25b4757805523c0f44a19bafa0d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_1.png",
+      "old_blob": null,
+      "new_blob": "a08d87b6c2e65c19f94571231cf5ca41f1914a64",
+      "repository": "4veco-lessen",
+      "commit": "0dd56e093a3bb719523ff1d58221673eebae1ff2",
+      "raw_sha256": "88c2d889c1884601ffb16861ef909bcf68c285999bfcf8881ddbdce39617f843"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_1.svg",
+      "old_blob": null,
+      "new_blob": "ad0097ec945b4ff59e0ddd7e138042130cd36a6a",
+      "repository": "4veco-lessen",
+      "commit": "0dd56e093a3bb719523ff1d58221673eebae1ff2",
+      "raw_sha256": "d97092fd39f3c1e1f21745879bd4bc591dedfb72a94da22f5b371aeb8b38ee88"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_2.png",
+      "old_blob": null,
+      "new_blob": "e8f4cf636230190f352f654f3030ac94b9616ea8",
+      "repository": "4veco-lessen",
+      "commit": "0dd56e093a3bb719523ff1d58221673eebae1ff2",
+      "raw_sha256": "8ad844aaf67bbdb31e3bd5162efec7165570952118cef0b8b400d03b1f429991"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_2.svg",
+      "old_blob": null,
+      "new_blob": "353cd5cc0946c570340a7b2476c615671b1905ec",
+      "repository": "4veco-lessen",
+      "commit": "0dd56e093a3bb719523ff1d58221673eebae1ff2",
+      "raw_sha256": "3cc3a5f7f1db7d1bdca66c1dd3dc602e260d92fe3e270428f888cb27dfbf9420"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_3.png",
+      "old_blob": null,
+      "new_blob": "5b45afb7982c6db6798c1218253785ef1c29677e",
+      "repository": "4veco-lessen",
+      "commit": "0dd56e093a3bb719523ff1d58221673eebae1ff2",
+      "raw_sha256": "b07321e621ead8ecec3862b8895b754734eb138935e24d680a7d9f229bc9a8a6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_3.svg",
+      "old_blob": null,
+      "new_blob": "68bab1deaa0c7e095c95210ab51c9fd999710ca0",
+      "repository": "4veco-lessen",
+      "commit": "0dd56e093a3bb719523ff1d58221673eebae1ff2",
+      "raw_sha256": "d094cd0803f0c023639aa70977909f3979bfeec46e763913c01bbd3b3d613e7e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_4.png",
+      "old_blob": null,
+      "new_blob": "4e4ec9ddc0b00c01bc561a18f7f9cd8acdba5e32",
+      "repository": "4veco-lessen",
+      "commit": "0dd56e093a3bb719523ff1d58221673eebae1ff2",
+      "raw_sha256": "99c8d340c8ac7a9ab04f5fffa5d3b0c05d5b32ed6cfd226807ff8871a6096af1"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/_assets/2.2.4_ex_4.svg",
+      "old_blob": null,
+      "new_blob": "5cdf1d46568d069bace80d88893c936a47135e3c",
+      "repository": "4veco-lessen",
+      "commit": "0dd56e093a3bb719523ff1d58221673eebae1ff2",
+      "raw_sha256": "ae2702581e6e88c8f82c87f0f3d2fec14a1b8cfa16afc7ebb25f010f9e945116"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/build_pdf.py",
+      "old_blob": "83ffe0b7b8d6b18ee2d560698c1e807f02c38d1a",
+      "new_blob": "4be07a30071cae84161fb091a7f63769f1b50cc4",
+      "repository": "4veco-lessen",
+      "commit": "0dd56e093a3bb719523ff1d58221673eebae1ff2",
+      "raw_sha256": "d6b03fff7cb66547d341a095c2d943f2cd11be2127b0aea2e0c321fbba812d5d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-review.md",
+      "old_blob": "873e284e0e6254492698d0e733042fdf35d28fce",
+      "new_blob": "18be40d2cacc51739af45b87ddf59ab0fbf5430b",
+      "repository": "4veco-lessen",
+      "commit": "8fdf0e74885b19993998e69ac789e8bb91e860f8",
+      "raw_sha256": "49a04e6c6e34169fb4b0687e45c1f5fe3c3b49ceacfce06705a2b85c6458b40f"
+    }
+  ],
+  "custody": [
+    {
+      "repository": "4veco-platform",
+      "all_current_raw_git_exact": 14873,
+      "unchanged_old_not_imported": 14471
+    },
+    {
+      "repository": "4veco-lessen",
+      "all_current_raw_git_exact": 1914,
+      "unchanged_old_not_imported": 1898
+    }
+  ],
+  "source_files": [
+    {
+      "path": "build-scripts/content/book-2/b2_224.py",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "d5001620b81fc9ca2f390047367bf64885793b930b3763cba74b6babce842125"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/answers.md",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "f7c7fac3034c49b88788970fec6fa8ee66e66b0f02e29b63d23f1a02355bd164"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/check_render.py",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "a5f869c8b5ea43ddc14f38b5b7229db612d9141d99ec5514824288acdbad57c6"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/exercises.md",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "1003ef1ede3c61059e5e97c1d96b0a3e913f36799411f0e1b2ce62f16ad3bab9"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/target-answers.md",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "275af20f1a26d4d4205879e16fbe0f1fc1d69ff65cee024803c5694b367eb136"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/test_source.py",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "7594760c6aaf910d99ae5ee2e93fdd7736800256fc621890316fef638bc310c7"
+    }
+  ],
+  "native_files": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+      "sha256": "b5f0247abfc924c0bb0eace26d751ae4b25ba778252740e5d9210afdfa48d200"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – opgaven.html",
+      "sha256": "8fc29bc1e6b061051b80e08d2a62bc771d8bf873492fb3a8778f99a8964fe7bc"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "sha256": "8eb84c6f10bb824033ffea669a04a393bf57c25b4757805523c0f44a19bafa0d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – antwoorden.md",
+      "sha256": "1cccda3c2068e2916d66c350f7fdcfc07383d1f897ae1cd28bad1f70b0c84de8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – antwoorden.html",
+      "sha256": "ba6ccaa14aeba4924b511c48e80d563356398bc723a9fde84a3512be290bb53e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "sha256": "f6ba34f89ae0c4a4c0f26f12afb392af5271e1edde28bde65854b90287dd57f8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\build_pdf.py",
+      "sha256": "d6b03fff7cb66547d341a095c2d943f2cd11be2127b0aea2e0c321fbba812d5d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_1.svg",
+      "sha256": "d97092fd39f3c1e1f21745879bd4bc591dedfb72a94da22f5b371aeb8b38ee88"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_1.png",
+      "sha256": "88c2d889c1884601ffb16861ef909bcf68c285999bfcf8881ddbdce39617f843"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_2.svg",
+      "sha256": "3cc3a5f7f1db7d1bdca66c1dd3dc602e260d92fe3e270428f888cb27dfbf9420"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_2.png",
+      "sha256": "8ad844aaf67bbdb31e3bd5162efec7165570952118cef0b8b400d03b1f429991"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_3.svg",
+      "sha256": "d094cd0803f0c023639aa70977909f3979bfeec46e763913c01bbd3b3d613e7e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_3.png",
+      "sha256": "b07321e621ead8ecec3862b8895b754734eb138935e24d680a7d9f229bc9a8a6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_4.svg",
+      "sha256": "ae2702581e6e88c8f82c87f0f3d2fec14a1b8cfa16afc7ebb25f010f9e945116"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_4.png",
+      "sha256": "99c8d340c8ac7a9ab04f5fffa5d3b0c05d5b32ed6cfd226807ff8871a6096af1"
+    }
+  ],
+  "independent_binding_sha256": "643b29ce1bc932ef6752544665cad6cfdde08a6ba2f6280c0ef3d1fd84c475b6",
+  "current_review_sha256": "49a04e6c6e34169fb4b0687e45c1f5fe3c3b49ceacfce06705a2b85c6458b40f",
+  "specialist_qc": "PENDING",
+  "root_native_reproduction": "NOT_RUN_IN_ADOPTION",
+  "lesson_root": "f666bbb7dd258f1f01b38a20dd6ca3802848f8b7"
+}

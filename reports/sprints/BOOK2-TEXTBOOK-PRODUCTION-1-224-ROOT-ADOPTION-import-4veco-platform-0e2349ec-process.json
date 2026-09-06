@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-platform",
+  "original": "0e2349ecf50e817482bf2f5c1d6d5aedc32c9323",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "0e2349ecf50e817482bf2f5c1d6d5aedc32c9323"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T06:45:18.136Z",
+  "finish": "2026-09-06T06:45:18.261Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 73558f1f] test(book2): bind 224 help successor and per-route figure pixels\n Date: Sun Sep 6 07:06:52 2026 +0200\n 2 files changed, 49 insertions(+), 7 deletions(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDczNTU4ZjFmXSB0ZXN0KGJvb2syKTogYmluZCAyMjQgaGVscCBzdWNjZXNzb3IgYW5kIHBlci1yb3V0ZSBmaWd1cmUgcGl4ZWxzCiBEYXRlOiBTdW4gU2VwIDYgMDc6MDY6NTIgMjAyNiArMDIwMAogMiBmaWxlcyBjaGFuZ2VkLCA0OSBpbnNlcnRpb25zKCspLCA3IGRlbGV0aW9ucygtKQo=",
+  "stderr_base64": ""
+}

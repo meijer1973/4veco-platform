@@ -1,0 +1,21 @@
+{
+  "actor": "codex-root",
+  "label": "approved-specialist",
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-book-outline-currentness.js",
+    "--require-approved",
+    "--action",
+    "specialist_qc",
+    "--paragraph",
+    "2.2.4"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T06:47:14.748191+00:00",
+  "finished": "2026-09-06T06:47:14.788819+00:00",
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "Unknown action: specialist_qc\n",
+  "stdout_base64": "",
+  "stderr_base64": "VW5rbm93biBhY3Rpb246IHNwZWNpYWxpc3RfcWMK"
+}

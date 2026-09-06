@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-platform",
+  "original": "ab5de28d34d31cc7aa7979ac929f4750996d6e53",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "ab5de28d34d31cc7aa7979ac929f4750996d6e53"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T06:45:20.475Z",
+  "finish": "2026-09-06T06:45:20.811Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 81621b50] Publish exact paragraph 224 review scope and preserved diagnostics\n Date: Sun Sep 6 08:10:22 2026 +0200\n 5 files changed, 8341 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-index-runner.js\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-publication.md\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-remote-commands.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-scope.js\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-scope.json\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDgxNjIxYjUwXSBQdWJsaXNoIGV4YWN0IHBhcmFncmFwaCAyMjQgcmV2aWV3IHNjb3BlIGFuZCBwcmVzZXJ2ZWQgZGlhZ25vc3RpY3MKIERhdGU6IFN1biBTZXAgNiAwODoxMDoyMiAyMDI2ICswMjAwCiA1IGZpbGVzIGNoYW5nZWQsIDgzNDEgaW5zZXJ0aW9ucygrKQogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjI0LVJFVklFVy1pbmRleC1ydW5uZXIuanMKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1SRVZJRVctcHVibGljYXRpb24ubWQKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1SRVZJRVctcmVtb3RlLWNvbW1hbmRzLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1SRVZJRVctc2NvcGUuanMKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1SRVZJRVctc2NvcGUuanNvbgo=",
+  "stderr_base64": ""
+}

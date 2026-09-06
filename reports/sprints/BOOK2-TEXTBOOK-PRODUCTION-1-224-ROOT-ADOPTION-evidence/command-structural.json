@@ -1,0 +1,16 @@
+{
+  "actor": "codex-root",
+  "label": "structural",
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-book-outline-currentness.js"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T06:47:11.488450+00:00",
+  "finished": "2026-09-06T06:47:13.130739+00:00",
+  "exit_code": 0,
+  "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: structural-currentness\n",
+  "stderr": "",
+  "stdout_base64": "Qm9vayAyIG91dGxpbmUgY3VycmVudG5lc3M6IFBBU1MKLSBvdXRsaW5lOiByZWZlcmVuY2VzL2F1dGhvcmVkL2Jvb2stb3V0bGluZXMvYm9vay0yLW91dGxpbmUubWQKLSB0YXJnZXQgcGluczogMTIKLSBtb2RlOiBzdHJ1Y3R1cmFsLWN1cnJlbnRuZXNzCg==",
+  "stderr_base64": ""
+}

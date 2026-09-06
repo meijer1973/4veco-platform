@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-lessen",
+  "original": "44cfe1754a7fdf4c4377444c3602128c9b7b7e78",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "44cfe1754a7fdf4c4377444c3602128c9b7b7e78"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+  "start": "2026-09-06T06:45:21.348Z",
+  "finish": "2026-09-06T06:45:21.437Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 aa29e6f] content(book2): preserve 224 corrected pagination candidate\n Date: Sun Sep 6 07:06:06 2026 +0200\n 6 files changed, 26 insertions(+), 14 deletions(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGFhMjllNmZdIGNvbnRlbnQoYm9vazIpOiBwcmVzZXJ2ZSAyMjQgY29ycmVjdGVkIHBhZ2luYXRpb24gY2FuZGlkYXRlCiBEYXRlOiBTdW4gU2VwIDYgMDc6MDY6MDYgMjAyNiArMDIwMAogNiBmaWxlcyBjaGFuZ2VkLCAyNiBpbnNlcnRpb25zKCspLCAxNCBkZWxldGlvbnMoLSkK",
+  "stderr_base64": ""
+}

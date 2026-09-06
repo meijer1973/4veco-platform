@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-platform",
+  "original": "74cec6f33d333bc4786eadcf54795b8fa1f5dfe1",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "74cec6f33d333bc4786eadcf54795b8fa1f5dfe1"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T06:45:17.478Z",
+  "finish": "2026-09-06T06:45:17.629Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 1d1a98ae] test(book2): bind 224 page-grouping successor and retain first proof history\n Date: Sun Sep 6 06:55:45 2026 +0200\n 2 files changed, 55 insertions(+), 1 deletion(-)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-correction-log.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDFkMWE5OGFlXSB0ZXN0KGJvb2syKTogYmluZCAyMjQgcGFnZS1ncm91cGluZyBzdWNjZXNzb3IgYW5kIHJldGFpbiBmaXJzdCBwcm9vZiBoaXN0b3J5CiBEYXRlOiBTdW4gU2VwIDYgMDY6NTU6NDUgMjAyNiArMDIwMAogMiBmaWxlcyBjaGFuZ2VkLCA1NSBpbnNlcnRpb25zKCspLCAxIGRlbGV0aW9uKC0pCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMjQtQlVJTEQtY29ycmVjdGlvbi1sb2cubWQK",
+  "stderr_base64": ""
+}

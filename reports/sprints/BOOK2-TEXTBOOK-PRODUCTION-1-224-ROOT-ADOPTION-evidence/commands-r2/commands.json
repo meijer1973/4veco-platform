@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "actor": "codex-root",
+  "commands": [
+    {
+      "label": "source-tests",
+      "exit_code": 0
+    },
+    {
+      "label": "native-checker-read-only",
+      "exit_code": 0
+    },
+    {
+      "label": "student-web",
+      "exit_code": 0
+    },
+    {
+      "label": "publisher-print",
+      "exit_code": 0
+    },
+    {
+      "label": "structural",
+      "exit_code": 0
+    },
+    {
+      "label": "approved-production",
+      "exit_code": 0
+    },
+    {
+      "label": "approved-specialist",
+      "exit_code": 0
+    },
+    {
+      "label": "durable",
+      "exit_code": 0
+    },
+    {
+      "label": "bundle",
+      "exit_code": 0
+    }
+  ],
+  "actual_positive_native_rebuild": false,
+  "personal_views": 0
+}

@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-lessen",
+  "original": "994657c8901729fcb138493be4e8c2e9590081bd",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "994657c8901729fcb138493be4e8c2e9590081bd"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+  "start": "2026-09-06T06:45:21.495Z",
+  "finish": "2026-09-06T06:45:21.582Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 3cde55d] content(book2): publish final 224 percentage-help native candidate\n Date: Sun Sep 6 07:18:24 2026 +0200\n 6 files changed, 23 insertions(+), 16 deletions(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDNjZGU1NWRdIGNvbnRlbnQoYm9vazIpOiBwdWJsaXNoIGZpbmFsIDIyNCBwZXJjZW50YWdlLWhlbHAgbmF0aXZlIGNhbmRpZGF0ZQogRGF0ZTogU3VuIFNlcCA2IDA3OjE4OjI0IDIwMjYgKzAyMDAKIDYgZmlsZXMgY2hhbmdlZCwgMjMgaW5zZXJ0aW9ucygrKSwgMTYgZGVsZXRpb25zKC0pCg==",
+  "stderr_base64": ""
+}

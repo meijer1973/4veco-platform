@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-platform",
+  "original": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T06:45:17.942Z",
+  "finish": "2026-09-06T06:45:18.056Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 ae608e28] fix(book2): make 224 cross-elasticity help explicitly percentage based\n Date: Sun Sep 6 07:06:07 2026 +0200\n 4 files changed, 14 insertions(+), 6 deletions(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGFlNjA4ZTI4XSBmaXgoYm9vazIpOiBtYWtlIDIyNCBjcm9zcy1lbGFzdGljaXR5IGhlbHAgZXhwbGljaXRseSBwZXJjZW50YWdlIGJhc2VkCiBEYXRlOiBTdW4gU2VwIDYgMDc6MDY6MDcgMjAyNiArMDIwMAogNCBmaWxlcyBjaGFuZ2VkLCAxNCBpbnNlcnRpb25zKCspLCA2IGRlbGV0aW9ucygtKQo=",
+  "stderr_base64": ""
+}

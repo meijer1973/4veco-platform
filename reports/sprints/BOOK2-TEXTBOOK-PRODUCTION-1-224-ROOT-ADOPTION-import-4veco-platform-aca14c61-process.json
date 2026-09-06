@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-platform",
+  "original": "aca14c61d258c05d668005d20bf0e4196de89ced",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "aca14c61d258c05d668005d20bf0e4196de89ced"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T06:45:17.256Z",
+  "finish": "2026-09-06T06:45:17.390Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 b7b41f2a] fix(book2): keep 224 target sources and scoring on coherent pages\n Date: Sun Sep 6 06:54:50 2026 +0200\n 3 files changed, 12 insertions(+), 2 deletions(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGI3YjQxZjJhXSBmaXgoYm9vazIpOiBrZWVwIDIyNCB0YXJnZXQgc291cmNlcyBhbmQgc2NvcmluZyBvbiBjb2hlcmVudCBwYWdlcwogRGF0ZTogU3VuIFNlcCA2IDA2OjU0OjUwIDIwMjYgKzAyMDAKIDMgZmlsZXMgY2hhbmdlZCwgMTIgaW5zZXJ0aW9ucygrKSwgMiBkZWxldGlvbnMoLSkK",
+  "stderr_base64": ""
+}

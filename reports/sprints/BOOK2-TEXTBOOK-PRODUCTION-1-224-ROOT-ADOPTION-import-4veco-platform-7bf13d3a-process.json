@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-platform",
+  "original": "7bf13d3ad7e8ea8280bd859ef4ea2cecfc5abe7d",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "7bf13d3ad7e8ea8280bd859ef4ea2cecfc5abe7d"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T06:45:20.897Z",
+  "finish": "2026-09-06T06:45:21.149Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 ddc716af] Retain quoted-path index diagnostic and scope Git formatting to runner\n Date: Sun Sep 6 08:13:28 2026 +0200\n 3 files changed, 818 insertions(+), 1 deletion(-)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-index-diagnostic.js\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-REVIEW-index-diagnostic.json\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGRkYzcxNmFmXSBSZXRhaW4gcXVvdGVkLXBhdGggaW5kZXggZGlhZ25vc3RpYyBhbmQgc2NvcGUgR2l0IGZvcm1hdHRpbmcgdG8gcnVubmVyCiBEYXRlOiBTdW4gU2VwIDYgMDg6MTM6MjggMjAyNiArMDIwMAogMyBmaWxlcyBjaGFuZ2VkLCA4MTggaW5zZXJ0aW9ucygrKSwgMSBkZWxldGlvbigtKQogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjI0LVJFVklFVy1pbmRleC1kaWFnbm9zdGljLmpzCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMjQtUkVWSUVXLWluZGV4LWRpYWdub3N0aWMuanNvbgo=",
+  "stderr_base64": ""
+}

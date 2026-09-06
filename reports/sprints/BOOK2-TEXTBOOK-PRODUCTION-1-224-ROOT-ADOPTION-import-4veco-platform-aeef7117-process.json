@@ -1,0 +1,19 @@
+{
+  "repository": "4veco-platform",
+  "original": "aeef7117e7921182442233f8db7f1955a38da1b9",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "aeef7117e7921182442233f8db7f1955a38da1b9"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T06:45:19.352Z",
+  "finish": "2026-09-06T06:45:19.499Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 b46cdca4] docs(book2): retain 224 native index buffer diagnostic\n Date: Sun Sep 6 07:22:45 2026 +0200\n 3 files changed, 54 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-diagnostic.js\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-diagnostic.json\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGI0NmNkY2E0XSBkb2NzKGJvb2syKTogcmV0YWluIDIyNCBuYXRpdmUgaW5kZXggYnVmZmVyIGRpYWdub3N0aWMKIERhdGU6IFN1biBTZXAgNiAwNzoyMjo0NSAyMDI2ICswMjAwCiAzIGZpbGVzIGNoYW5nZWQsIDU0IGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1CVUlMRC1pbmRleC1kaWFnbm9zdGljLmpzCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMjQtQlVJTEQtaW5kZXgtZGlhZ25vc3RpYy5qc29uCg==",
+  "stderr_base64": ""
+}
