@@ -1,0 +1,39 @@
+'use strict';
+// HOW TO ADAPT: copy to a new declared planning gate; never rebind this evidence.
+// Fixed root planning-only release, no generated lesson or proof writes.
+const fs=require('fs'),path=require('path'),cp=require('child_process'),a=require('assert/strict'),crypto=require('crypto');
+const P=path.resolve(__dirname,'../..'),L=path.resolve(P,'../4veco-lessen'),prefix='BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE';
+const BP='f913b9af0ade9c5ea99b1e929cfe0544d7c392a6',BL='9f9729a9b4a55805d9e24bf53f712f1b02f6e00a';
+const B='Boek 2 - Kosten, opbrengsten, elasticiteit en surplus',C=B+'/2.3 Hoofdstuk Surplus en welvaart';
+const own='reports/sprints/'+prefix+'-',git=(cwd,...args)=>cp.execFileSync('git',args,{cwd,maxBuffer:128*1024*1024});
+const gs=(cwd,...args)=>git(cwd,...args).toString('utf8').trim(),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const names=(cwd,...args)=>git(cwd,...args).toString('utf8').split('\0').filter(Boolean);
+const save=(name,v)=>fs.writeFileSync(path.join(__dirname,prefix+'-'+name+'.json'),JSON.stringify(v,null,2)+'\n',{flag:'wx'});
+const read=name=>JSON.parse(fs.readFileSync(path.join(__dirname,prefix+'-'+name+'.json'),'utf8'));
+function tree(cwd,ref){return new Map(names(cwd,'ls-tree','-r','-z',ref).map(s=>{const i=s.indexOf('\t');return [s.slice(i+1),s.slice(0,i).split(' ')[2]];}));}
+function raw(cwd,t){const ns=[...t.keys()],bs=cp.execFileSync('git',['-c','core.longpaths=true','hash-object','--no-filters','--stdin-paths'],{cwd,input:ns.map(n=>JSON.stringify(n)).join('\n')+'\n',encoding:'utf8',maxBuffer:128*1024*1024}).trim().split(/\r?\n/);a.equal(ns.length,bs.length);ns.forEach((n,i)=>a.equal(bs[i],t.get(n),'Actual raw drift: '+n));return ns.length;}
+function custody(){const baseline=read('baseline'),counts=[];for(const[cwd,key]of[[P,'platform'],[L,'lessons']]){const t=tree(cwd,'HEAD');for(const[n,b]of baseline[key].tree)a.equal(t.get(n),b,'Prior file drift: '+n);counts.push({repository:key,inherited:baseline[key].tree.length,actual_raw_git_exact:raw(cwd,t)});}a.equal(gs(L,'rev-parse','HEAD'),BL);a.deepEqual(names(L,'diff','--name-only','-z',BL,'HEAD'),[]);a(names(P,'diff','--name-only','-z',BP,'HEAD').every(n=>n.startsWith(own)));return counts;}
+function command(name,argv,expected,cwd=P){const started=new Date().toISOString(),r=cp.spawnSync(argv[0],argv.slice(1),{cwd,env:{...process.env,PYTHONIOENCODING:'utf-8',PYTHONDONTWRITEBYTECODE:'1'},maxBuffer:128*1024*1024});const v={argv,cwd,started,ended:new Date().toISOString(),exit_code:r.status,error:r.error?String(r.error):null,stdout:(r.stdout||Buffer.alloc(0)).toString('utf8'),stderr:(r.stderr||Buffer.alloc(0)).toString('utf8'),stdout_base64:(r.stdout||Buffer.alloc(0)).toString('base64'),stderr_base64:(r.stderr||Buffer.alloc(0)).toString('base64')};save(name+'-process',v);if(expected!==null)a.equal(r.status,expected,JSON.stringify(v));return v;}
+if(process.argv[2]==='check'){
+ a.equal(gs(P,'rev-parse','HEAD'),BP);a.equal(gs(L,'rev-parse','HEAD'),BL);a.equal(gs(L,'status','--porcelain'),'');
+ const pt=tree(P,BP),lt=tree(L,BL);raw(P,pt);raw(L,lt);const targetPath=C+'/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md';a(!lt.has(targetPath));
+ save('baseline',{platform:{head:BP,tree:[...pt]},lessons:{head:BL,tree:[...lt]}});
+ const registry=fs.readFileSync(path.join(P,'references/authored/course-target-exercises.json'));a.equal(hash(registry),'d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e');
+ const target=JSON.parse(registry).exercises.find(x=>x.id==='2.3.4');a(target);a.equal(hash(JSON.stringify(target)),'2ac151882b64b0d990ce5627ae35388d72eefde74c4e24562ef9a49a9355672c');a.equal(target.paragraph_kind,'gemengde_opgaven');a.equal(target.introduces_new_theory,false);a.equal(target.record_status,'candidate_review_ready');a.equal(target.lesson_goals.length,4);a.deepEqual(target.target_exercise.subquestions.map(q=>q.points),[2,2,4,2,2,2]);a.equal(target.target_exercise.sources.length,2);a.deepEqual(target.mixed_target_profile.integrates_paragraphs,['2.3.1','2.3.2','2.3.3']);
+ const pins=[
+ [B+'/_book-plan.md','b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76'],
+ [C+'/_chapter-plan.md','e8a07bfe212a6ae817db99fecb93e86812e1d9e9af533b7ef21591bbb9025dc7'],
+ [C+'/2.3.1 Consumentensurplus/2.3.1-review.md','8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943'],
+ [C+'/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml','312ca25c21bf6428ded5162f2d299b8e73da25219fbb914cad88dcb8ca47820a'],
+ [C+'/2.3.1 Consumentensurplus/2.3.1-textbook-handoff.md','69bdae1f9dd0efaace0a90db57e6ac0f17db627f93fdb333b48dafeb36eebe79'],
+ [C+'/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md','d0781ffb6d2966209c3a160309316ce92ebc0455fa51d4235ccc6840afa58935']];
+ for(const[n,h]of pins){const bytes=fs.readFileSync(path.join(L,n));a.equal(hash(bytes),h,n);a(bytes.equals(git(L,'show',BL+':'+n)));}
+ const foreign={commit:'192d6624524e7605ab9d8d26067927b95041386e',file:C+'/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-plan.md',raw_sha256:'0870d848b21017fedde86fb8d738bbe6afa21f68f8c1190905a8c0f2e3b8be19'};a.equal(hash(git(L,'show',foreign.commit+':'+foreign.file)),foreign.raw_sha256);a(!lt.has(foreign.file));
+ const absence=[C+'/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-handoff.md',C+'/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-handoff.md',B+'/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md'];for(const n of absence)a(!fs.existsSync(path.join(L,n)),'Unexpected handoff: '+n);
+ const gates=[];for(const[name,args]of[['structural',['build-scripts/workflows/check-book-outline-currentness.js']],['goal-design',['build-scripts/workflows/check-book-outline-currentness.js','--require-approved','--action','goal_design','--paragraph','2.3.4']],['durable',['build-scripts/workflows/check-book2-target-authority-remediation.js','--durable']],['bundle',['build-scripts/sprints/check-sprint-bundle.js','BOOK2-TEXTBOOK-PRODUCTION-1']]])gates.push({name,exit:command(name,['node',...args],0).exit_code});
+ const result={status:'PASS',actor:'codex-root',action:'PLAN PREPARATION ONLY',head:BP,lessons:BL,target_sha256:hash(JSON.stringify(target)),pins:pins.map(([file,raw_sha256])=>({file,raw_sha256,commit:BL})),foreign233_candidate:foreign,absent_accepted_handoffs:absence,gates,custody:custody(),production_release:false,pupil_or_native_writes:false,independent_plan_review:'REQUIRED AFTER AUTHOR PUBLICATION',new_owner_hold:false};save('check',result);console.log(JSON.stringify(result));
+}else if(process.argv[2]==='scopes'){
+ const head=process.argv[3];a.match(head,/^[a-f0-9]{40}$/);a.equal(gs(P,'rev-parse','HEAD'),head);a.equal(gs(P,'status','--porcelain'),'');a.equal(gs(L,'status','--porcelain'),'');const counts=custody(),scopes=[];
+ for(const[label,cwd,lane,base,h,expected]of[['increment-platform',P,'shared',BP,head,1],['unchanged-lessons',L,'textbook',BL,BL,1],['complete-platform',P,'shared','96416b6b5bd57094576e9aba0a42d682584ec479',head,0],['complete-lessons',L,'textbook','f09fd6e88edc5049b026b16b0158e7e188091d2d',BL,0]]){const r=command('scope-'+label,['node','build-scripts/workflows/check-paragraph-lane-scope.js','--cwd',cwd,'--lane',lane,'--base',base,'--head',h,'--json'],expected);const v=JSON.parse(r.stdout);a.equal(v.categories.unknown.length,0);a.equal(v.ok,expected===0);scopes.push({label,exit:r.exit_code,ok:v.ok,counts:Object.fromEntries(Object.entries(v.categories).map(([k,rows])=>[k,rows.length]))});}
+ const w=command('whitespace',['git','diff','--check',BP,head],0),result={status:'PASS',head,lessons:BL,custody:counts,scopes,own_whitespace_exit:w.exit_code,no_foreign_changes:true};save('scope',result);console.log(JSON.stringify(result));
+}else throw Error('check/scopes only; fixed once-only evidence');

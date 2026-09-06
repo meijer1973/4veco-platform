@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "actor": "codex-root",
+  "action": "PLAN PREPARATION ONLY",
+  "head": "f913b9af0ade9c5ea99b1e929cfe0544d7c392a6",
+  "lessons": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a",
+  "target_sha256": "2ac151882b64b0d990ce5627ae35388d72eefde74c4e24562ef9a49a9355672c",
+  "pins": [
+    {
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "raw_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76",
+      "commit": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a"
+    },
+    {
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md",
+      "raw_sha256": "e8a07bfe212a6ae817db99fecb93e86812e1d9e9af533b7ef21591bbb9025dc7",
+      "commit": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a"
+    },
+    {
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-review.md",
+      "raw_sha256": "8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943",
+      "commit": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a"
+    },
+    {
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml",
+      "raw_sha256": "312ca25c21bf6428ded5162f2d299b8e73da25219fbb914cad88dcb8ca47820a",
+      "commit": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a"
+    },
+    {
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-handoff.md",
+      "raw_sha256": "69bdae1f9dd0efaace0a90db57e6ac0f17db627f93fdb333b48dafeb36eebe79",
+      "commit": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a"
+    },
+    {
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md",
+      "raw_sha256": "d0781ffb6d2966209c3a160309316ce92ebc0455fa51d4235ccc6840afa58935",
+      "commit": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a"
+    }
+  ],
+  "foreign233_candidate": {
+    "commit": "192d6624524e7605ab9d8d26067927b95041386e",
+    "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-plan.md",
+    "raw_sha256": "0870d848b21017fedde86fb8d738bbe6afa21f68f8c1190905a8c0f2e3b8be19"
+  },
+  "absent_accepted_handoffs": [
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-handoff.md",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3-textbook-handoff.md",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md"
+  ],
+  "gates": [
+    {
+      "name": "structural",
+      "exit": 0
+    },
+    {
+      "name": "goal-design",
+      "exit": 0
+    },
+    {
+      "name": "durable",
+      "exit": 0
+    },
+    {
+      "name": "bundle",
+      "exit": 0
+    }
+  ],
+  "custody": [
+    {
+      "repository": "platform",
+      "inherited": 13931,
+      "actual_raw_git_exact": 13931
+    },
+    {
+      "repository": "lessons",
+      "inherited": 1904,
+      "actual_raw_git_exact": 1904
+    }
+  ],
+  "production_release": false,
+  "pupil_or_native_writes": false,
+  "independent_plan_review": "REQUIRED AFTER AUTHOR PUBLICATION",
+  "new_owner_hold": false
+}
