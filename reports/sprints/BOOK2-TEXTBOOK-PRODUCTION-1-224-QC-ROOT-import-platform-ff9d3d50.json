@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "ff9d3d502d98070cd46cb3bb34d1228b7a8e60c4"
+  ],
+  "start": "2026-09-06T08:18:44.780Z",
+  "end": "2026-09-06T08:18:44.948Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 925a7a6f] Plan additive direct-proof namespace preflight safety closure\n Date: Sun Sep 6 09:46:54 2026 +0200\n 1 file changed, 30 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-direct-safety-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDkyNWE3YTZmXSBQbGFuIGFkZGl0aXZlIGRpcmVjdC1wcm9vZiBuYW1lc3BhY2UgcHJlZmxpZ2h0IHNhZmV0eSBjbG9zdXJlCiBEYXRlOiBTdW4gU2VwIDYgMDk6NDY6NTQgMjAyNiArMDIwMAogMSBmaWxlIGNoYW5nZWQsIDMwIGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1RQy1DVVJSRU5ULWRpcmVjdC1zYWZldHktcGxhbi5tZAo=",
+  "stderr_base64": ""
+}

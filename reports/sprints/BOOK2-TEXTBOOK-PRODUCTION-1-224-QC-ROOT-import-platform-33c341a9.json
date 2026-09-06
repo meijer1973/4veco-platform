@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "33c341a9db63e79efe24aef7ef9c929255407fcf"
+  ],
+  "start": "2026-09-06T08:18:46.620Z",
+  "end": "2026-09-06T08:18:46.803Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 421b97fa] Retain renewed QC raw streams and reuse one complete final custody result\n Date: Sun Sep 6 10:00:39 2026 +0200\n 1 file changed, 5 insertions(+), 4 deletions(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDQyMWI5N2ZhXSBSZXRhaW4gcmVuZXdlZCBRQyByYXcgc3RyZWFtcyBhbmQgcmV1c2Ugb25lIGNvbXBsZXRlIGZpbmFsIGN1c3RvZHkgcmVzdWx0CiBEYXRlOiBTdW4gU2VwIDYgMTA6MDA6MzkgMjAyNiArMDIwMAogMSBmaWxlIGNoYW5nZWQsIDUgaW5zZXJ0aW9ucygrKSwgNCBkZWxldGlvbnMoLSkK",
+  "stderr_base64": ""
+}

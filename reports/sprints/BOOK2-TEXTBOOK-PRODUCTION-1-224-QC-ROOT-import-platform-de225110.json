@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "de22511094aaffcd060a2545fa2a9703d5b7c9b0"
+  ],
+  "start": "2026-09-06T08:18:42.938Z",
+  "end": "2026-09-06T08:18:43.125Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 f17ce7fe] plan: bound current 224 independent specialist QC\n Date: Sun Sep 6 09:02:45 2026 +0200\n 1 file changed, 168 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGYxN2NlN2ZlXSBwbGFuOiBib3VuZCBjdXJyZW50IDIyNCBpbmRlcGVuZGVudCBzcGVjaWFsaXN0IFFDCiBEYXRlOiBTdW4gU2VwIDYgMDk6MDI6NDUgMjAyNiArMDIwMAogMSBmaWxlIGNoYW5nZWQsIDE2OCBpbnNlcnRpb25zKCspCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMjQtUUMtQ1VSUkVOVC1wbGFuLm1kCg==",
+  "stderr_base64": ""
+}

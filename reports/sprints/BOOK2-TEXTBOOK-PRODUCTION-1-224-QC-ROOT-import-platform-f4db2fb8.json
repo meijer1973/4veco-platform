@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "f4db2fb808e794352f89454c2819b15f875bcb5f"
+  ],
+  "start": "2026-09-06T08:18:45.665Z",
+  "end": "2026-09-06T08:18:45.864Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 40cf953a] Simplify publication custody expression and preserve authoring diagnostics\n Date: Sun Sep 6 09:51:23 2026 +0200\n 2 files changed, 7 insertions(+), 1 deletion(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDQwY2Y5NTNhXSBTaW1wbGlmeSBwdWJsaWNhdGlvbiBjdXN0b2R5IGV4cHJlc3Npb24gYW5kIHByZXNlcnZlIGF1dGhvcmluZyBkaWFnbm9zdGljcwogRGF0ZTogU3VuIFNlcCA2IDA5OjUxOjIzIDIwMjYgKzAyMDAKIDIgZmlsZXMgY2hhbmdlZCwgNyBpbnNlcnRpb25zKCspLCAxIGRlbGV0aW9uKC0pCg==",
+  "stderr_base64": ""
+}

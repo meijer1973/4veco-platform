@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "3b3c0c8ff4d7245a12105c1f940ec41229df006a"
+  ],
+  "start": "2026-09-06T08:18:43.861Z",
+  "end": "2026-09-06T08:18:44.055Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 7c4fdb0c] test(book2): correct specialist target probe labels\n Date: Sun Sep 6 09:21:56 2026 +0200\n 2 files changed, 14 insertions(+), 5 deletions(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDdjNGZkYjBjXSB0ZXN0KGJvb2syKTogY29ycmVjdCBzcGVjaWFsaXN0IHRhcmdldCBwcm9iZSBsYWJlbHMKIERhdGU6IFN1biBTZXAgNiAwOToyMTo1NiAyMDI2ICswMjAwCiAyIGZpbGVzIGNoYW5nZWQsIDE0IGluc2VydGlvbnMoKyksIDUgZGVsZXRpb25zKC0pCg==",
+  "stderr_base64": ""
+}

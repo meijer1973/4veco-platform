@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "d6e01c497f64b1f40d7f4668eb6deb275aeee58d"
+  ],
+  "start": "2026-09-06T08:18:44.177Z",
+  "end": "2026-09-06T08:18:44.356Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 b7d60669] Add independent 224 DOM geometry and personal evidence recorder\n Date: Sun Sep 6 09:34:18 2026 +0200\n 1 file changed, 148 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-precision.py\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGI3ZDYwNjY5XSBBZGQgaW5kZXBlbmRlbnQgMjI0IERPTSBnZW9tZXRyeSBhbmQgcGVyc29uYWwgZXZpZGVuY2UgcmVjb3JkZXIKIERhdGU6IFN1biBTZXAgNiAwOTozNDoxOCAyMDI2ICswMjAwCiAxIGZpbGUgY2hhbmdlZCwgMTQ4IGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1RQy1DVVJSRU5ULXByZWNpc2lvbi5weQo=",
+  "stderr_base64": ""
+}

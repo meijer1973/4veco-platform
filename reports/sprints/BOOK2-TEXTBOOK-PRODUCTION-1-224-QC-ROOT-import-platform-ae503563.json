@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "ae503563653b2ec948557241fccdf0974a9c994a"
+  ],
+  "start": "2026-09-06T08:18:43.240Z",
+  "end": "2026-09-06T08:18:43.427Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 1151a0f5] test(book2): bind independent 224 QC native controller\n Date: Sun Sep 6 09:14:35 2026 +0200\n 1 file changed, 213 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-controller.py\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDExNTFhMGY1XSB0ZXN0KGJvb2syKTogYmluZCBpbmRlcGVuZGVudCAyMjQgUUMgbmF0aXZlIGNvbnRyb2xsZXIKIERhdGU6IFN1biBTZXAgNiAwOToxNDozNSAyMDI2ICswMjAwCiAxIGZpbGUgY2hhbmdlZCwgMjEzIGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1RQy1DVVJSRU5ULWNvbnRyb2xsZXIucHkK",
+  "stderr_base64": ""
+}

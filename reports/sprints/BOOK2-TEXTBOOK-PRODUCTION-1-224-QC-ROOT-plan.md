@@ -84,7 +84,7 @@ the adopted partA QC while preserving specialist metadata and absent companion
 block; create a complete nine-section textbook handoff. Record production_ready
 false with explicit internal acceptance-with-flags, not observed classroom fit.
 Update only the two224 output rows C→A and corresponding count/provenance prose:
-23A/0C/6legacy/12pending,29 physically present; all other29 PDF bytes unchanged.
+23A/0C/6legacy/12pending,29 physically present; all29 existing PDF bytes unchanged.
 Rerun current gates after these precise authority/evidence edits.
 
 Keep timing53.5/63.5/71.5 UNOBSERVED, aggregate/full-CI/lead/readiness outstanding,

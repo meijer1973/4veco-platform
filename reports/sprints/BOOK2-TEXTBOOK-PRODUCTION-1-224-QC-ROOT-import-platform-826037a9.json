@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "826037a92825e62b89b1bb9857367efaac5876c1"
+  ],
+  "start": "2026-09-06T08:18:45.995Z",
+  "end": "2026-09-06T08:18:46.180Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 d9c5f2ca] Preserve exact raw-stream whitespace diagnostics in publication stage\n Date: Sun Sep 6 09:56:57 2026 +0200\n 2 files changed, 30 insertions(+), 4 deletions(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGQ5YzVmMmNhXSBQcmVzZXJ2ZSBleGFjdCByYXctc3RyZWFtIHdoaXRlc3BhY2UgZGlhZ25vc3RpY3MgaW4gcHVibGljYXRpb24gc3RhZ2UKIERhdGU6IFN1biBTZXAgNiAwOTo1Njo1NyAyMDI2ICswMjAwCiAyIGZpbGVzIGNoYW5nZWQsIDMwIGluc2VydGlvbnMoKyksIDQgZGVsZXRpb25zKC0pCg==",
+  "stderr_base64": ""
+}

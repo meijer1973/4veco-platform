@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "caa2f6cd7f9e17211bd5a4a9c37341dd8ead0357"
+  ],
+  "start": "2026-09-06T08:18:43.559Z",
+  "end": "2026-09-06T08:18:43.746Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 a9db22c1] test(book2): add independent 224 QC calculations and guards\n Date: Sun Sep 6 09:19:15 2026 +0200\n 3 files changed, 177 insertions(+), 2 deletions(-)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-checks.py\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-runtime-note.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGE5ZGIyMmMxXSB0ZXN0KGJvb2syKTogYWRkIGluZGVwZW5kZW50IDIyNCBRQyBjYWxjdWxhdGlvbnMgYW5kIGd1YXJkcwogRGF0ZTogU3VuIFNlcCA2IDA5OjE5OjE1IDIwMjYgKzAyMDAKIDMgZmlsZXMgY2hhbmdlZCwgMTc3IGluc2VydGlvbnMoKyksIDIgZGVsZXRpb25zKC0pCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMjQtUUMtQ1VSUkVOVC1jaGVja3MucHkKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1RQy1DVVJSRU5ULXJ1bnRpbWUtbm90ZS5tZAo=",
+  "stderr_base64": ""
+}

@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "a415977d12340a47fae8b9859b9755767bd5020c"
+  ],
+  "start": "2026-09-06T08:18:46.315Z",
+  "end": "2026-09-06T08:18:46.494Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 fe27ba3d] Bind unchanged companion absence in owned QC migration check\n Date: Sun Sep 6 09:59:45 2026 +0200\n 2 files changed, 19 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-qc-boundary.cjs\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGZlMjdiYTNkXSBCaW5kIHVuY2hhbmdlZCBjb21wYW5pb24gYWJzZW5jZSBpbiBvd25lZCBRQyBtaWdyYXRpb24gY2hlY2sKIERhdGU6IFN1biBTZXAgNiAwOTo1OTo0NSAyMDI2ICswMjAwCiAyIGZpbGVzIGNoYW5nZWQsIDE5IGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1RQy1DVVJSRU5ULXFjLWJvdW5kYXJ5LmNqcwo=",
+  "stderr_base64": ""
+}

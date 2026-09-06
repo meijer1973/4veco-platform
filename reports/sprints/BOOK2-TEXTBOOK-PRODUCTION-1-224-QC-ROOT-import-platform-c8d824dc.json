@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "c8d824dc58d2160b57f5c7b5b826aa67e5abeb11"
+  ],
+  "start": "2026-09-06T08:18:45.072Z",
+  "end": "2026-09-06T08:18:45.247Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 412d0dec] Reject occupied direct proof destinations before any worker effect\n Date: Sun Sep 6 09:46:55 2026 +0200\n 2 files changed, 54 insertions(+), 1 deletion(-)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-direct-safety.py\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDQxMmQwZGVjXSBSZWplY3Qgb2NjdXBpZWQgZGlyZWN0IHByb29mIGRlc3RpbmF0aW9ucyBiZWZvcmUgYW55IHdvcmtlciBlZmZlY3QKIERhdGU6IFN1biBTZXAgNiAwOTo0Njo1NSAyMDI2ICswMjAwCiAyIGZpbGVzIGNoYW5nZWQsIDU0IGluc2VydGlvbnMoKyksIDEgZGVsZXRpb24oLSkKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1RQy1DVVJSRU5ULWRpcmVjdC1zYWZldHkucHkK",
+  "stderr_base64": ""
+}

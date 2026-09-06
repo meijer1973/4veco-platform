@@ -1,0 +1,2021 @@
+{
+  "actor": "codex-root",
+  "operational_commit": "dea90631b095da82678fcfae948eb5c5196b2c73",
+  "repositories": {
+    "platform": {
+      "ref": "30e42c450774d3600d9fe1f14002eefae670a8b0",
+      "tree": "7745347e591f47f3dbc8b5daea02142e88fa1437",
+      "files": 15172,
+      "excluded": [],
+      "literal_NUL_path_sha256": "0cfca28d6d8c0f7802c1f75d86118fb537bc4809fec573907f33717157d39603",
+      "all_path_blob_sha256": "c19c08f9daf83424af95a932b4ace6c20748b782d0b258ac5a2144d6a04b3834",
+      "all_raw_Git_exact": true
+    },
+    "lessons": {
+      "ref": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "tree": "1ac51006ef970668e95fac109863b1014d16afca",
+      "files": 1915,
+      "excluded": [],
+      "literal_NUL_path_sha256": "adc814e1c32e02d524fea47e3f2c99bed979eae19130f2180daf4f44480a5154",
+      "all_path_blob_sha256": "573ff22c5ad8163d1ef82151d52f43965585c1a003eee6de87b5775e43d89c8c",
+      "all_raw_Git_exact": true
+    }
+  },
+  "intended": [
+    {
+      "repository": "platform",
+      "original": "de22511094aaffcd060a2545fa2a9703d5b7c9b0",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-plan.md",
+          "old_blob": null,
+          "new_blob": "1f23b415c280f05570a21b425f729d5ddfb4ef43"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "ae503563653b2ec948557241fccdf0974a9c994a",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-controller.py",
+          "old_blob": null,
+          "new_blob": "918ba02ca045673bc8928b079f783d0f7d8f8ed8"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "caa2f6cd7f9e17211bd5a4a9c37341dd8ead0357",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-checks.py",
+          "old_blob": null,
+          "new_blob": "d244a5fc597338e56dfe2519acac5036e2d952f9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-controller.py",
+          "old_blob": "918ba02ca045673bc8928b079f783d0f7d8f8ed8",
+          "new_blob": "b621f1bbf74326b436318d7ae7343c8c1a0de6ca"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-runtime-note.md",
+          "old_blob": null,
+          "new_blob": "77e6dbe3945c407c0b4e1a7aeda06d94bc5b79cd"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "3b3c0c8ff4d7245a12105c1f940ec41229df006a",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-checks.py",
+          "old_blob": "d244a5fc597338e56dfe2519acac5036e2d952f9",
+          "new_blob": "773664a2911732e5d32438c0a2540cf2681be644"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-runtime-note.md",
+          "old_blob": "77e6dbe3945c407c0b4e1a7aeda06d94bc5b79cd",
+          "new_blob": "d36a0c400a70655305b962728202872134d73703"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "d6e01c497f64b1f40d7f4668eb6deb275aeee58d",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-precision.py",
+          "old_blob": null,
+          "new_blob": "95fafb67b0868ccd61f98aef76a70d819eb5b75c"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "93d0c75ffbf7b1d1d87979ececf14960fbe7fa00",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-precision.py",
+          "old_blob": "95fafb67b0868ccd61f98aef76a70d819eb5b75c",
+          "new_blob": "44e8dac8ee972e575d7951c5c1f5beeaff017da6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-runtime-note.md",
+          "old_blob": "d36a0c400a70655305b962728202872134d73703",
+          "new_blob": "2fb0becc5eb0445341eb742878aa60469a59a2e8"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "ff9d3d502d98070cd46cb3bb34d1228b7a8e60c4",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-direct-safety-plan.md",
+          "old_blob": null,
+          "new_blob": "99be4d3f2d958a6b680718eb260f2c7cebbac787"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "c8d824dc58d2160b57f5c7b5b826aa67e5abeb11",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-controller.py",
+          "old_blob": "b621f1bbf74326b436318d7ae7343c8c1a0de6ca",
+          "new_blob": "384edda80aa8447424e606caba20de84a197b862"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-direct-safety.py",
+          "old_blob": null,
+          "new_blob": "de36838ed30fb247d0d9c592243f2692a8017ca6"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "eb1bf1e75a2f2babba354cbf0ca658e762205ef2",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-index-runtime.cjs",
+          "old_blob": null,
+          "new_blob": "fb637744c60d00f929d4716af548ed97f06c6f86"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-publication.py",
+          "old_blob": null,
+          "new_blob": "f86dd450318c67601d3c8e3720391ec4b9c7bb7f"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "f4db2fb808e794352f89454c2819b15f875bcb5f",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-publication.py",
+          "old_blob": "f86dd450318c67601d3c8e3720391ec4b9c7bb7f",
+          "new_blob": "6326dc5af6b340249ee149739c52082788e53033"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-runtime-note.md",
+          "old_blob": "2fb0becc5eb0445341eb742878aa60469a59a2e8",
+          "new_blob": "48eb73d66705c93a8be3a9becfb055f6e0576626"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "826037a92825e62b89b1bb9857367efaac5876c1",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-publication.py",
+          "old_blob": "6326dc5af6b340249ee149739c52082788e53033",
+          "new_blob": "8270383fb8f91ecc6cafe4e81cb39195bbdb0bc8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-runtime-note.md",
+          "old_blob": "48eb73d66705c93a8be3a9becfb055f6e0576626",
+          "new_blob": "ce2a5882492463ceb7a3a895d4cb8cf28cbb59a2"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "a415977d12340a47fae8b9859b9755767bd5020c",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-qc-boundary.cjs",
+          "old_blob": null,
+          "new_blob": "101b1d3f1669336e809a9d0832fcae5457199150"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-runtime-note.md",
+          "old_blob": "ce2a5882492463ceb7a3a895d4cb8cf28cbb59a2",
+          "new_blob": "2e28a293e58ea1a9a15db94d78b668e6f4e82bba"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "33c341a9db63e79efe24aef7ef9c929255407fcf",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-publication.py",
+          "old_blob": "8270383fb8f91ecc6cafe4e81cb39195bbdb0bc8",
+          "new_blob": "b06ce6be681e147247848b8ade3c02892fd2bfca"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "a9c8d727eec2b0799ede885cb4cc7ed1af9608b2",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r10/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r10/manifest.json",
+          "old_blob": null,
+          "new_blob": "a250f91470035aa95660114c5f7c856ebbfa3bd4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r10/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r10/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r10/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r10/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r10/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r10/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r10/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r10/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r10/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r10/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r11/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r11/manifest.json",
+          "old_blob": null,
+          "new_blob": "d75c171ccbaf2088f45ccbffdcbcebc29e30ee83"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r11/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r11/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r11/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r11/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r11/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r11/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r11/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r11/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r11/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-antwoorden-f6ba34f89ae0-r11/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-baseline.json",
+          "old_blob": null,
+          "new_blob": "76ce2b9232c8130b33475e0aaf112383469241f6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-antwoorden-r13/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-antwoorden-r13/manifest.json",
+          "old_blob": null,
+          "new_blob": "f509fbd0695e20e7c709c65fed47557345778de3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-antwoorden-r13/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-antwoorden-r13/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-antwoorden-r13/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-antwoorden-r13/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-antwoorden-r13/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-antwoorden-r13/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-antwoorden-r13/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-antwoorden-r13/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-antwoorden-r13/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-antwoorden-r13/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-opgaven-r13/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-opgaven-r13/manifest.json",
+          "old_blob": null,
+          "new_blob": "ee6b7ca5b21a5cae7fb8da3d03339066364c5a63"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-opgaven-r13/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-opgaven-r13/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-opgaven-r13/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-opgaven-r13/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "96e36bea7d61a618c43888d90775987bf405810f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-opgaven-r13/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "4467ab90919955d768f278a279efdcb8af219648"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-opgaven-r13/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-opgaven-r13/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-opgaven-r13/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-opgaven-r13/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-opgaven-r13/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-command-finished.json",
+          "old_blob": null,
+          "new_blob": "6196fb9218403e487794d56e52d2821359cc5daf"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-durable-command-finished.json",
+          "old_blob": null,
+          "new_blob": "3351b9ee925d75eae8266903bf70db62b4c23de8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-durable-started.json",
+          "old_blob": null,
+          "new_blob": "41edfdccd5d48e4b39b5dfd3401731349aaaec32"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-durable-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-durable-stdout.txt",
+          "old_blob": null,
+          "new_blob": "2f2e231a4cdb6030a21e96dca53c45bd852e3a91"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-finished.json",
+          "old_blob": null,
+          "new_blob": "9e2b1083d015bfd23cf8dee936b6a50476b71b23"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-manifest.json",
+          "old_blob": null,
+          "new_blob": "8fdde0f829c52b7305cb1d93ac8b63a52f93fdfe"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-preflight.json",
+          "old_blob": null,
+          "new_blob": "e27b028053d42791f7fc98a493f6234973e8fa7d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-specialist-command-finished.json",
+          "old_blob": null,
+          "new_blob": "c203e679beaec81479f6258c5f47390706923d3d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-specialist-started.json",
+          "old_blob": null,
+          "new_blob": "b79194856ef800f2550c43e18e80992c248635a8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-specialist-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-specialist-stdout.txt",
+          "old_blob": null,
+          "new_blob": "3021cbf38dd4f08ff9ee8ce6138fc24241634650"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-started.json",
+          "old_blob": null,
+          "new_blob": "72750c2f49bd10d713391e32cf0bf38c6d449989"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-checker-r13-stdout.txt",
+          "old_blob": null,
+          "new_blob": "bbad9e6922c59d086cffa9d98bc46ca6ca4ee975"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-complete-whitespace-process.json",
+          "old_blob": null,
+          "new_blob": "6f1cfac29498dd918aaf01da34f5ad086e1afe3e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-command-finished.json",
+          "old_blob": null,
+          "new_blob": "6cdfffe634ba97432b3c5ac11e4d6a6cc12dcb18"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-durable-command-finished.json",
+          "old_blob": null,
+          "new_blob": "5f980bbff3a1d9845ba732dcc40ffdc73814555c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-durable-started.json",
+          "old_blob": null,
+          "new_blob": "88e42c7cf3eff7c15e33b83120b72976f16c51b2"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-durable-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-durable-stdout.txt",
+          "old_blob": null,
+          "new_blob": "2f2e231a4cdb6030a21e96dca53c45bd852e3a91"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-finished.json",
+          "old_blob": null,
+          "new_blob": "6dd0002d946fab6f8565335570a2388b8a37b1f2"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-manifest.json",
+          "old_blob": null,
+          "new_blob": "bab49c21727d3675e5d1d2ef841dca00ee7ab8c4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-preflight.json",
+          "old_blob": null,
+          "new_blob": "956dcaf3a18857fd020371080fea90320d754f76"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-specialist-command-finished.json",
+          "old_blob": null,
+          "new_blob": "13b2ef39d285a5a30193629f1ecce5d612d2d327"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-specialist-started.json",
+          "old_blob": null,
+          "new_blob": "d7cb1e8ed534c8a7aadfcaaa5fc008b8eefd7351"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-specialist-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-specialist-stdout.txt",
+          "old_blob": null,
+          "new_blob": "3021cbf38dd4f08ff9ee8ce6138fc24241634650"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-started.json",
+          "old_blob": null,
+          "new_blob": "f0a593c5e1604cdd54fb0ee89473dd214e24a5be"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12-stdout.txt",
+          "old_blob": null,
+          "new_blob": "da99f29bf4c77cf87fdd4d2c5ec6096c4750f9f9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f926548e3223995981ad3cb976cf4088fe724d97"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/manifest.json",
+          "old_blob": null,
+          "new_blob": "54c746dcfd12770ad4590b4222d4e37eca889ea1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "40e70fb3b08ac032cb7a567542804f6f9a72e5ef"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "c87e5c2459b19f657130446099fe3d2e132b4f8e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "78c33c988ac75c1b73beec384c7bd3cd1d95a312"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "9907085223372b9bd747d55ae81fcaac04d04e31"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "cf75c74c3d2dadccd707e0f26dba4aaff0b53330"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "1122fa31cd39aba4462f6db80f0eebc29624c718"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "64a1fb2a1c2f8a750e1142bd63493d8ca34fab45"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ef23ad9c964245a930e9436b28880bad6162d7d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "6734f8ef38b6ee0a078970b2ba0fa0c71fd604ee"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "b2d0cfa3ec5cfdd9e46d2687e53bba6d88758d2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/manifest.json",
+          "old_blob": null,
+          "new_blob": "2f96442f262aefdc1687aad6fe7f4aa34bc14f0d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "96e36bea7d61a618c43888d90775987bf405810f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "4467ab90919955d768f278a279efdcb8af219648"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-r12/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-direct-safety.json",
+          "old_blob": null,
+          "new_blob": "936fa5f563cf1743010c66099a9115a467743354"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-approved-production-command-finished.json",
+          "old_blob": null,
+          "new_blob": "39e574541c34adee8de008d1850942942a1021c9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-approved-production-started.json",
+          "old_blob": null,
+          "new_blob": "2f6e41d0fad055879a87947715b8e1f6194e7201"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-approved-production-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-approved-production-stdout.txt",
+          "old_blob": null,
+          "new_blob": "3021cbf38dd4f08ff9ee8ce6138fc24241634650"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-approved-specialist-command-finished.json",
+          "old_blob": null,
+          "new_blob": "c4a8908a607b3762a0d1dfcceccbafbd6f3a98a0"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-approved-specialist-started.json",
+          "old_blob": null,
+          "new_blob": "268ba8c01178b798d38ad3f720d28e6a2acc052d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-approved-specialist-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-approved-specialist-stdout.txt",
+          "old_blob": null,
+          "new_blob": "3021cbf38dd4f08ff9ee8ce6138fc24241634650"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-bundle-command-finished.json",
+          "old_blob": null,
+          "new_blob": "3a832e3a1e959fc46358dd7df40d62139c2678a6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-bundle-started.json",
+          "old_blob": null,
+          "new_blob": "bd24634a5e0858dc1bc5fac134619d623aa1bc16"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-bundle-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-bundle-stdout.txt",
+          "old_blob": null,
+          "new_blob": "bc41ab5491bf2d28c9470cf9cf287b33781a523d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-durable-command-finished.json",
+          "old_blob": null,
+          "new_blob": "9a55668e50ee516e591f8989ed9bd9cf26cdc738"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-durable-started.json",
+          "old_blob": null,
+          "new_blob": "bbcd88fa1f595ac4917af97d82ef7dd3d65f367b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-durable-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-durable-stdout.txt",
+          "old_blob": null,
+          "new_blob": "2f2e231a4cdb6030a21e96dca53c45bd852e3a91"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-native-readonly-command-finished.json",
+          "old_blob": null,
+          "new_blob": "0c33a0bec806a28ce99b87a4c1ea560276dd3b9b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-native-readonly-started.json",
+          "old_blob": null,
+          "new_blob": "d1f73efd904b77ac36ab6d27bdb0f47808e526ab"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-native-readonly-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-native-readonly-stdout.txt",
+          "old_blob": null,
+          "new_blob": "a0cb51b2c2c5d8f860b4a97e1c85108c748d95d1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-publisher-print-command-finished.json",
+          "old_blob": null,
+          "new_blob": "b4636c2473a26b5c07ee8dd1ec9eea0fde241835"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-publisher-print-started.json",
+          "old_blob": null,
+          "new_blob": "962a5b870665a427c0cabf7410c0bc3decc96dae"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-publisher-print-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-publisher-print-stdout.txt",
+          "old_blob": null,
+          "new_blob": "c9291f5ff45b8a24afe7f8d80203950ce6634fcf"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-approved-production-command-finished.json",
+          "old_blob": null,
+          "new_blob": "0890966b1a4447fa21627c42e6589858822b305a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-approved-production-started.json",
+          "old_blob": null,
+          "new_blob": "41c80ce84dc743dcbda4b9aec6a2d2bbac1a6b61"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-approved-production-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-approved-production-stdout.txt",
+          "old_blob": null,
+          "new_blob": "3021cbf38dd4f08ff9ee8ce6138fc24241634650"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-approved-specialist-command-finished.json",
+          "old_blob": null,
+          "new_blob": "6e495a48cd39ba447852e56c8eecc57cbc742336"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-approved-specialist-started.json",
+          "old_blob": null,
+          "new_blob": "eec14cc0d68f2c814cd8258fae2d2ee07b5613cc"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-approved-specialist-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-approved-specialist-stdout.txt",
+          "old_blob": null,
+          "new_blob": "3021cbf38dd4f08ff9ee8ce6138fc24241634650"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-bundle-command-finished.json",
+          "old_blob": null,
+          "new_blob": "05083ef156acf0ad55912e481a9ff1e166c9e8af"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-bundle-started.json",
+          "old_blob": null,
+          "new_blob": "5956c71c7432f135558810b8ffa3f8bad5c81aa5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-bundle-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-bundle-stdout.txt",
+          "old_blob": null,
+          "new_blob": "bc41ab5491bf2d28c9470cf9cf287b33781a523d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-durable-command-finished.json",
+          "old_blob": null,
+          "new_blob": "8c36fbaf4106ba3784307caaa72da4317b6c2aa4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-durable-started.json",
+          "old_blob": null,
+          "new_blob": "5e1996e0cba675e2f1b21cd863c4c012eb91f364"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-durable-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-durable-stdout.txt",
+          "old_blob": null,
+          "new_blob": "2f2e231a4cdb6030a21e96dca53c45bd852e3a91"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-native-readonly-command-finished.json",
+          "old_blob": null,
+          "new_blob": "9d8d0161d03987175dd93b233a72408c090267c1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-native-readonly-started.json",
+          "old_blob": null,
+          "new_blob": "589fc2558b4b4afe74e0444ad4a4d8726afcd4cd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-native-readonly-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-native-readonly-stdout.txt",
+          "old_blob": null,
+          "new_blob": "a0cb51b2c2c5d8f860b4a97e1c85108c748d95d1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-publisher-print-command-finished.json",
+          "old_blob": null,
+          "new_blob": "3295f99b267dfde4578d93e1d3a9a066d050a3d9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-publisher-print-started.json",
+          "old_blob": null,
+          "new_blob": "c1f69c1e20d88514ad799602d0113619dedcf781"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-publisher-print-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-publisher-print-stdout.txt",
+          "old_blob": null,
+          "new_blob": "c9291f5ff45b8a24afe7f8d80203950ce6634fcf"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-source-tests-command-finished.json",
+          "old_blob": null,
+          "new_blob": "e083769a3733bb4d5e9bcad446db0d3319d48c20"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-source-tests-started.json",
+          "old_blob": null,
+          "new_blob": "a8761d39e430754d20c7b310837221d8a1dfa9c2"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-source-tests-stderr.txt",
+          "old_blob": null,
+          "new_blob": "f35c60db819e768f528a87848db07be828eaed99"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-source-tests-stdout.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-structural-command-finished.json",
+          "old_blob": null,
+          "new_blob": "3408bdf7e115146cc2046fe2803abfb9da1d2055"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-structural-started.json",
+          "old_blob": null,
+          "new_blob": "4feffe7e48206ae37bb16187b8b22c5ab2e4b201"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-structural-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-structural-stdout.txt",
+          "old_blob": null,
+          "new_blob": "22812d14c8b4425a10006ce2179d9c655a881058"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-student-web-command-finished.json",
+          "old_blob": null,
+          "new_blob": "d9dd4ced8b67191b4d704d9f6572c259c4c97aba"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-student-web-started.json",
+          "old_blob": null,
+          "new_blob": "28d2be83139d9037d29a430e163fa48f72d0f537"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-student-web-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-r2-student-web-stdout.txt",
+          "old_blob": null,
+          "new_blob": "115570d8f156b5f1e1389f6aefb1029772dee207"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-source-tests-command-finished.json",
+          "old_blob": null,
+          "new_blob": "2e5405b97099b72f6a2beee2ad2f3bfbace27103"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-source-tests-started.json",
+          "old_blob": null,
+          "new_blob": "d0f85d5402f25cf481c25e07434a040431a17462"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-source-tests-stderr.txt",
+          "old_blob": null,
+          "new_blob": "1e33e97f68733c90311cdfb33f6f83b6380bf5d6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-source-tests-stdout.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-structural-command-finished.json",
+          "old_blob": null,
+          "new_blob": "c082cb2d4b2625fb0511e30db6dea58797b5e8c8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-structural-started.json",
+          "old_blob": null,
+          "new_blob": "e39f6f5ba42406a857ab25391acd1232e83a9be9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-structural-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-structural-stdout.txt",
+          "old_blob": null,
+          "new_blob": "22812d14c8b4425a10006ce2179d9c655a881058"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-student-web-command-finished.json",
+          "old_blob": null,
+          "new_blob": "5f421bbd7e6c5dcb45edde9270c7dfcca34bac91"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-student-web-started.json",
+          "old_blob": null,
+          "new_blob": "193cf918080507fc430e30c53812d3b83e49dae9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-student-web-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-finalqc-student-web-stdout.txt",
+          "old_blob": null,
+          "new_blob": "115570d8f156b5f1e1389f6aefb1029772dee207"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-four-route-parity.json",
+          "old_blob": null,
+          "new_blob": "555cfcb8c96afb8649ce8a3fdc23d8eea06aba3a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-command-finished.json",
+          "old_blob": null,
+          "new_blob": "a937a837966214adf199c1bc157daeb7775926d5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-durable-command-finished.json",
+          "old_blob": null,
+          "new_blob": "dfd59c6a502ed45e0feb1315b3f5ed9ad0e58025"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-durable-started.json",
+          "old_blob": null,
+          "new_blob": "644eb130db50d40fe53123a178215a7336aeb35f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-durable-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-durable-stdout.txt",
+          "old_blob": null,
+          "new_blob": "2f2e231a4cdb6030a21e96dca53c45bd852e3a91"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-finished.json",
+          "old_blob": null,
+          "new_blob": "f1256bb028f10c1d16fb9693b4e400417bee6f13"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-manifest.json",
+          "old_blob": null,
+          "new_blob": "d4b35676af097273ac068005491901e2bf76c8fd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-preflight.json",
+          "old_blob": null,
+          "new_blob": "8050256ee4049434fa9a1a418d4f06c5c0b526b6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-specialist-command-finished.json",
+          "old_blob": null,
+          "new_blob": "39ee7c9c0a2208ae501320b9dc79aa9fbf3a0e4d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-specialist-started.json",
+          "old_blob": null,
+          "new_blob": "db4bc98d6b551f7c758128f9df7e82f654a61e2c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-specialist-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-specialist-stdout.txt",
+          "old_blob": null,
+          "new_blob": "3021cbf38dd4f08ff9ee8ce6138fc24241634650"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-started.json",
+          "old_blob": null,
+          "new_blob": "247c10a47cd942739b66a41789677fc343dd24ab"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-full-r10-stdout.txt",
+          "old_blob": null,
+          "new_blob": "4d3d3aa9557e57c6207d1a2244c4d900eb2a485a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-gates-finalqc-r2.json",
+          "old_blob": null,
+          "new_blob": "c10bb10d039ac71b9b3718ea1787c633fa0b68f8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-gates-finalqc.json",
+          "old_blob": null,
+          "new_blob": "832435ca473c7e3076e5f3279c6ee3cc7c7963e2"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-gates-preqc.json",
+          "old_blob": null,
+          "new_blob": "ed0d19747c29c90ffc1656a32d6d5c0f8470baec"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-governance-process.json",
+          "old_blob": null,
+          "new_blob": "4a2628617a5e49cd912ba3af96fdd7e59ee1b096"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-independent-probes-r2.json",
+          "old_blob": null,
+          "new_blob": "8972700f2e216328ba18fe5b57e446659939134c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-independent-probes.json",
+          "old_blob": null,
+          "new_blob": "1eeab92357c163fd32b08ddd061d8a527a0625a0"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-index-diagnostic-process.json",
+          "old_blob": null,
+          "new_blob": "d5acdf4312d4ad730e8aa9483b36a1eab8bf4151"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-old-flat-quality-ref.yaml",
+          "old_blob": null,
+          "new_blob": "eb27784289af6ecabc2ddca6d20c7347486924a2"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r10/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r10/manifest.json",
+          "old_blob": null,
+          "new_blob": "d6bbf4ef0b6538cc3fc4ae09d7a84898e2931e50"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r10/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r10/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r10/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r10/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "96e36bea7d61a618c43888d90775987bf405810f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r10/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "4467ab90919955d768f278a279efdcb8af219648"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r10/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r10/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r10/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r10/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r10/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r11/contact-sheet.png",
+          "old_blob": null,
+          "new_blob": "f610d61badc4c070f1c9ec6476858ce193520cb5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r11/manifest.json",
+          "old_blob": null,
+          "new_blob": "6a235b69166a30360deb6e97b171f31d305ed4ad"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r11/pages/page-001.png",
+          "old_blob": null,
+          "new_blob": "e15448b3d55acb698cd586ebfbe5d471bc625a66"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r11/pages/page-002.png",
+          "old_blob": null,
+          "new_blob": "35463ffa4bf3a62e00015c4660f1d2ff58c91971"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r11/pages/page-003.png",
+          "old_blob": null,
+          "new_blob": "f7333de10612d74687843bcc3f13215f2c5169db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r11/pages/page-004.png",
+          "old_blob": null,
+          "new_blob": "96e36bea7d61a618c43888d90775987bf405810f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r11/pages/page-005.png",
+          "old_blob": null,
+          "new_blob": "4467ab90919955d768f278a279efdcb8af219648"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r11/pages/page-006.png",
+          "old_blob": null,
+          "new_blob": "a94160e3eaa436cbcb4eb4e6dbcaca2aeabb25e5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r11/pages/page-007.png",
+          "old_blob": null,
+          "new_blob": "d5b303e83ddd1feae957bcc4715b90dbef5d422c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r11/pages/page-008.png",
+          "old_blob": null,
+          "new_blob": "ee621c044f6566b66e8c33b1b1fe93a21400cda7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r11/pages/page-009.png",
+          "old_blob": null,
+          "new_blob": "ccddd17bf46dba922e6fd0e332867d3c477b8181"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-opgaven-8eb84c6f10bb-r11/pages/page-010.png",
+          "old_blob": null,
+          "new_blob": "8bbaea063eb2e7a0670316a77a68248e3519977b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-owned-whitespace-process.json",
+          "old_blob": null,
+          "new_blob": "407b1b00dd5889bbe52b90afce0cab8a3efdb722"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-inspection.json",
+          "old_blob": null,
+          "new_blob": "b2d725a0fe463b0f219d6b83e0dec28eafa922b1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/antwoorden-001-gray.png",
+          "old_blob": null,
+          "new_blob": "895d01a903d4a426ae4037a3195b38ac6a2197bb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/antwoorden-002-gray.png",
+          "old_blob": null,
+          "new_blob": "ff2492cf664c660a2b39aab3ea1edca411113f72"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/antwoorden-003-gray.png",
+          "old_blob": null,
+          "new_blob": "f27df38932d86ff4b8e82f72ac6516b713226a02"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/antwoorden-004-gray.png",
+          "old_blob": null,
+          "new_blob": "063ddcddc8acf22ad545f66f250d145b8ac81eb6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/antwoorden-005-gray.png",
+          "old_blob": null,
+          "new_blob": "d6dbbf4090652ec09efba89566b520d89a40fb99"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/antwoorden-006-gray.png",
+          "old_blob": null,
+          "new_blob": "8802fb7e8917e431ff40451ad0bd2b3a0ba96fdc"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/antwoorden-007-gray.png",
+          "old_blob": null,
+          "new_blob": "8e998171cc50d844b465fa2bba0c8b1f476ace4e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/antwoorden-008-gray.png",
+          "old_blob": null,
+          "new_blob": "d41015f32a995d52bc9735a219c9ede66b58b5b0"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/antwoorden-009-gray.png",
+          "old_blob": null,
+          "new_blob": "f949bba52ca283c6e1f80ed51630303a2c066f03"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/antwoorden-010-gray.png",
+          "old_blob": null,
+          "new_blob": "f1cdb346ed2319eb580af0c897f625c1a9f290d4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/figure-1-gray.png",
+          "old_blob": null,
+          "new_blob": "fb7515b0b9ad00691ab67ae12b05190cd51c4153"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/figure-2-gray.png",
+          "old_blob": null,
+          "new_blob": "c73189bf4e65fe187b248e3f48c5e8d8898283a6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/figure-3-gray.png",
+          "old_blob": null,
+          "new_blob": "aad0e812f24b7f22d2eae3de42c972f839be02d3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/figure-4-gray.png",
+          "old_blob": null,
+          "new_blob": "985583453391e9b6abe888d3442b89e33e9a673a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/opgaven-001-gray.png",
+          "old_blob": null,
+          "new_blob": "88caa17e10ac8077c1e60320b9fe060a9e9737f5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/opgaven-002-gray.png",
+          "old_blob": null,
+          "new_blob": "caaceed81677ef3d3e80ea7de421f95be9f0e531"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/opgaven-003-gray.png",
+          "old_blob": null,
+          "new_blob": "47cf5b9eb67b699429c437ae330aff245a4c0df8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/opgaven-004-gray.png",
+          "old_blob": null,
+          "new_blob": "ae6adf56b0adf94cd6b0d73f3b9699dd88ab274c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/opgaven-005-gray.png",
+          "old_blob": null,
+          "new_blob": "0421ff6cebc45841f5907a27a4319208c5937e68"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/opgaven-006-gray.png",
+          "old_blob": null,
+          "new_blob": "0d3392f0647dbb3254fb875133ea671c9c604cc7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/opgaven-007-gray.png",
+          "old_blob": null,
+          "new_blob": "e0c5fb3e228cd2c063347690e0ca32a8b88ae55f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/opgaven-008-gray.png",
+          "old_blob": null,
+          "new_blob": "154044ee6daeb51ffdd00f59effc202d79731d50"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/opgaven-009-gray.png",
+          "old_blob": null,
+          "new_blob": "93b31c11084f6364ed751c4e77c6c9655991b8eb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-views/opgaven-010-gray.png",
+          "old_blob": null,
+          "new_blob": "c0f46113eb4af00ebedceba570f8186233ae28c9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-precision.json",
+          "old_blob": null,
+          "new_blob": "050bf33693b97a11236e40d12a475ad95e330e45"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-approved-production-command-finished.json",
+          "old_blob": null,
+          "new_blob": "e577f3e86656af087c7ce993a7a17c37ec52f33f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-approved-production-started.json",
+          "old_blob": null,
+          "new_blob": "af6ad62a884f9274a49158001af23579d12c665d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-approved-production-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-approved-production-stdout.txt",
+          "old_blob": null,
+          "new_blob": "3021cbf38dd4f08ff9ee8ce6138fc24241634650"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-approved-specialist-command-finished.json",
+          "old_blob": null,
+          "new_blob": "bd9254aa1d114d4cc4b8699e8f5910c7a30f47f3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-approved-specialist-started.json",
+          "old_blob": null,
+          "new_blob": "9a0aefb44d47304801ad96ef0f6142ee13d0824d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-approved-specialist-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-approved-specialist-stdout.txt",
+          "old_blob": null,
+          "new_blob": "3021cbf38dd4f08ff9ee8ce6138fc24241634650"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-bundle-command-finished.json",
+          "old_blob": null,
+          "new_blob": "f1d93a64b779421957076678a9c927addef72679"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-bundle-started.json",
+          "old_blob": null,
+          "new_blob": "fb4906a311c346c73abf47e9285d47c9460c8ec5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-bundle-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-bundle-stdout.txt",
+          "old_blob": null,
+          "new_blob": "bc41ab5491bf2d28c9470cf9cf287b33781a523d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-durable-command-finished.json",
+          "old_blob": null,
+          "new_blob": "add211bf634064eb8ebd70e7df76d525f96eb7ad"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-durable-started.json",
+          "old_blob": null,
+          "new_blob": "5c3e7591e98dd25699ce53486170937a76e992cb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-durable-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-durable-stdout.txt",
+          "old_blob": null,
+          "new_blob": "2f2e231a4cdb6030a21e96dca53c45bd852e3a91"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-native-readonly-command-finished.json",
+          "old_blob": null,
+          "new_blob": "ff75141261ec6d8f8152525979f06db7a5f3f2d0"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-native-readonly-started.json",
+          "old_blob": null,
+          "new_blob": "48f3f50377ec9909edf3f42eb77728ae90c68e3f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-native-readonly-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-native-readonly-stdout.txt",
+          "old_blob": null,
+          "new_blob": "a0cb51b2c2c5d8f860b4a97e1c85108c748d95d1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-publisher-print-command-finished.json",
+          "old_blob": null,
+          "new_blob": "9e7c6cac640a9880d1c7070b9bba6a4ae4a4a658"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-publisher-print-started.json",
+          "old_blob": null,
+          "new_blob": "d9262237ca9227f419040fbb17ed4974da165e75"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-publisher-print-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-publisher-print-stdout.txt",
+          "old_blob": null,
+          "new_blob": "c9291f5ff45b8a24afe7f8d80203950ce6634fcf"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-source-tests-command-finished.json",
+          "old_blob": null,
+          "new_blob": "d78395140acb2e8270ff05cff22a57862f3b05e4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-source-tests-started.json",
+          "old_blob": null,
+          "new_blob": "6b9d1b70d01e25c2725bc3e7ce46c0e44a3c7505"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-source-tests-stderr.txt",
+          "old_blob": null,
+          "new_blob": "0c477515223d09187ab972e5dcb05cf13049fa0c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-source-tests-stdout.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-structural-command-finished.json",
+          "old_blob": null,
+          "new_blob": "340d33c813a7535b813e952455561be1b0bcf7c7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-structural-started.json",
+          "old_blob": null,
+          "new_blob": "e6581089ebd347a2938ef2d9b14b412b9400d186"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-structural-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-structural-stdout.txt",
+          "old_blob": null,
+          "new_blob": "22812d14c8b4425a10006ce2179d9c655a881058"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-student-web-command-finished.json",
+          "old_blob": null,
+          "new_blob": "5bd08c79199e38460ca634ae70e58275094c7707"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-student-web-started.json",
+          "old_blob": null,
+          "new_blob": "122685486d373ed3083e62aa3e974fe2605f275d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-student-web-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-preqc-student-web-stdout.txt",
+          "old_blob": null,
+          "new_blob": "115570d8f156b5f1e1389f6aefb1029772dee207"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-qc-boundary-process.json",
+          "old_blob": null,
+          "new_blob": "caea575a6cb7c38dc4a3915d552f0bbd49dfc6c4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-reservation-checker-r13.json",
+          "old_blob": null,
+          "new_blob": "bd78589ddc1e5b8457c8c42668cbd40dd4959c0a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-reservation-direct-r12.json",
+          "old_blob": null,
+          "new_blob": "0112c0aa39cc3e90824e7bb6341adcbe59b98ad8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-reservation-full-r10.json",
+          "old_blob": null,
+          "new_blob": "b7680dd1b6c864292569c703048664dcd2748711"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-reservation-thin-r11.json",
+          "old_blob": null,
+          "new_blob": "29d80100d17dacd9a04ae1763d6cd9f67ae128f7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-root-import-custody.json",
+          "old_blob": null,
+          "new_blob": "f885024ca7c3837497ea387630975030cd0e1861"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-superseded-draft-QC.yaml",
+          "old_blob": null,
+          "new_blob": "d76a396d68d869f12560062e0f64c441d4582bc2"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-command-finished.json",
+          "old_blob": null,
+          "new_blob": "b7f332da3dafbf6d13575b18a00da1bb3bebcab2"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-durable-command-finished.json",
+          "old_blob": null,
+          "new_blob": "e28dad136b4f354b2d89e08a41e7e6eb0d452fa8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-durable-started.json",
+          "old_blob": null,
+          "new_blob": "340f5ad1c65f7d7a8a64d2884a4b973819be3a9e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-durable-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-durable-stdout.txt",
+          "old_blob": null,
+          "new_blob": "2f2e231a4cdb6030a21e96dca53c45bd852e3a91"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-finished.json",
+          "old_blob": null,
+          "new_blob": "24de0549db87d1127ce71af8cc7417a71b0d4fd4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-manifest.json",
+          "old_blob": null,
+          "new_blob": "0e5d8e90570aa9c781ec56643d055fdbcb14aca8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-preflight.json",
+          "old_blob": null,
+          "new_blob": "61373a3e3b627ac6668a80d1cfeb8a07abf1074e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-specialist-command-finished.json",
+          "old_blob": null,
+          "new_blob": "8c460c12ffcfd268918b67af63c855adc695285b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-specialist-started.json",
+          "old_blob": null,
+          "new_blob": "78ab7a20ec73a0bf2e5e0e8eaea56d87421441a4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-specialist-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-specialist-stdout.txt",
+          "old_blob": null,
+          "new_blob": "3021cbf38dd4f08ff9ee8ce6138fc24241634650"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-started.json",
+          "old_blob": null,
+          "new_blob": "da127da8f2f29a2413ac9f9da19eb6329ec82bb9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-stderr.txt",
+          "old_blob": null,
+          "new_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-thin-r11-stdout.txt",
+          "old_blob": null,
+          "new_blob": "d455c5a0460696e9850d66b2fa1a2a7632e47c2f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-view-inventory.json",
+          "old_blob": null,
+          "new_blob": "a8fcbd97cc4428a178c4301bde8207cdd48896ba"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-result.md",
+          "old_blob": null,
+          "new_blob": "b8418c3cf2d82b8dd397089ec91d81e3375db860"
+        }
+      ]
+    },
+    {
+      "repository": "platform",
+      "original": "a8682fcd3984d86d648b2be946aef7d3d65ddea9",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-final-integrity.json",
+          "old_blob": null,
+          "new_blob": "6662711141b2dabd33351294e9fbca1d4b207010"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-scope-complete-lessons-process.json",
+          "old_blob": null,
+          "new_blob": "bb1c5412e4d9a2a5dad978789ccb514b9362d3bb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-scope-complete-platform-process.json",
+          "old_blob": null,
+          "new_blob": "736da577736b823f26145945daf056983d7a5635"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-scope-owned-lessons-process.json",
+          "old_blob": null,
+          "new_blob": "5ec2f61b1c4324b5ca429f0f4be67760d5a46ac0"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-scope-owned-platform-process.json",
+          "old_blob": null,
+          "new_blob": "296cd9cc13cd3be80c2870956e99839d2621d03b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-scope.json",
+          "old_blob": null,
+          "new_blob": "62ed05ea5c544fe3815a196e79f8d613eae1e7a8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-publication.md",
+          "old_blob": null,
+          "new_blob": "835e293815dd3b9306783f43539c377afb55fc90"
+        }
+      ]
+    },
+    {
+      "repository": "lessons",
+      "original": "cdc3630256b99d4a49cd001151892b0009e824c5",
+      "files": [
+        {
+          "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-quality-ref.yaml",
+          "old_blob": "eb27784289af6ecabc2ddca6d20c7347486924a2",
+          "new_blob": "d781b3e31c449fe8135cb6b008a73db2bb9badda"
+        }
+      ]
+    }
+  ],
+  "native": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+      "sha256": "b5f0247abfc924c0bb0eace26d751ae4b25ba778252740e5d9210afdfa48d200"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – opgaven.html",
+      "sha256": "8fc29bc1e6b061051b80e08d2a62bc771d8bf873492fb3a8778f99a8964fe7bc"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "sha256": "8eb84c6f10bb824033ffea669a04a393bf57c25b4757805523c0f44a19bafa0d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – antwoorden.md",
+      "sha256": "1cccda3c2068e2916d66c350f7fdcfc07383d1f897ae1cd28bad1f70b0c84de8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – antwoorden.html",
+      "sha256": "ba6ccaa14aeba4924b511c48e80d563356398bc723a9fde84a3512be290bb53e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "sha256": "f6ba34f89ae0c4a4c0f26f12afb392af5271e1edde28bde65854b90287dd57f8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\build_pdf.py",
+      "sha256": "d6b03fff7cb66547d341a095c2d943f2cd11be2127b0aea2e0c321fbba812d5d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_1.svg",
+      "sha256": "d97092fd39f3c1e1f21745879bd4bc591dedfb72a94da22f5b371aeb8b38ee88"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_1.png",
+      "sha256": "88c2d889c1884601ffb16861ef909bcf68c285999bfcf8881ddbdce39617f843"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_2.svg",
+      "sha256": "3cc3a5f7f1db7d1bdca66c1dd3dc602e260d92fe3e270428f888cb27dfbf9420"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_2.png",
+      "sha256": "8ad844aaf67bbdb31e3bd5162efec7165570952118cef0b8b400d03b1f429991"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_3.svg",
+      "sha256": "d094cd0803f0c023639aa70977909f3979bfeec46e763913c01bbd3b3d613e7e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_3.png",
+      "sha256": "b07321e621ead8ecec3862b8895b754734eb138935e24d680a7d9f229bc9a8a6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_4.svg",
+      "sha256": "ae2702581e6e88c8f82c87f0f3d2fec14a1b8cfa16afc7ebb25f010f9e945116"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_4.png",
+      "sha256": "99c8d340c8ac7a9ab04f5fffa5d3b0c05d5b32ed6cfd226807ff8871a6096af1"
+    }
+  ],
+  "output_manifest": {
+    "raw_sha256": "0ff314d4dd6f79ceeaf3947e06f0ce32e13552a18121b0452d63401d4de36644",
+    "raw_base64": "IyBTcHJpbnQgQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xOiBPdXRwdXQgbWFuaWZlc3QKCkRhdGU6IDIwMjYtMDktMDYuIEFjY291bnRhYmxlIGludGVncmF0b3I6IGNvZGV4LXJvb3QuClN0YXR1czogKipBQ1RJVkUgQ0hFQ0tQT0lOVCDigJQgTk9UIENPTVBMRVRFKiouIFRoaXMgbWFuaWZlc3QgcmVjb3JkcyB0aGUgZXhhY3QKNDEtUERGIG91dHB1dCBjb250cmFjdCBmcm9tIHRoZSBhcHByb3ZlZCBvcGVyYXRpb25hbC9yb290IHBsYW4gYW5kIHNlcGFyYXRlcwpmcmVzaCBpbnRlcm5hbCBhY2NlcHRhbmNlIGZyb20gb2xkIGZpbGUgcHJlc2VuY2UuCgpTbmFwc2hvdDogcGxhdGZvcm0gwqcyMTMgbmF0aXZlIHZlcmlmaWNhdGlvbiBgYTI3MjRiNDJjNzE5NjJhZTYyYWNmYzEyNDExZWVhOWZkMjEzODBiMGAsCmxlc3NvbnMgYWNjZXB0YW5jZSBgMWNmMWMxZjk3MmYxOTY3OTFmYjM3ZjZiYmVlNTIzYjdhMmUzYjY3NmAgd2l0aCB0aGUgZXhhY3QKcm9vdCBRQy9oYW5kb2ZmIHRyYW5zaXRpb24gaW4yMTMtUUMtUk9PVC1hY2NlcHRhbmNlLm1kLiBDdXJyZW50MjIzIGFjY2VwdGFuY2UKaW4yMjMtcm9vdC1hY2NlcHRhbmNlLm1kIHJlbWFpbnMgdW5jaGFuZ2VkLCBpbmNsdWRpbmcgdGhlIGV4YWN0CnJvb3Qtb25seSBjdXJyZW50MjExIGFjY2VwdGFuY2UvaGFuZG9mZiBhdDVlMTQzMjUgaW4yMTEtcm9vdC1hY2NlcHRhbmNlLXI1Lm1kLgpDdXJyZW50MjIxIFI4IGFuZDIyMiBSMTMgYWNjZXB0YW5jZXMgcmVtYWluIHVuY2hhbmdlZC4KTGVzc29uIGJhc2VsaW5lOiBgZjA5ZmQ2ZTg4ZWRjNTA0OWIwMjZiMTZiMDE1OGU3ZTE4ODA5MWQyZGAuCkFsbCBwYXRocyBiZWxvdyBhcmUgcmVsYXRpdmUgdG8gdGhlIGxlc3NvbiBib29rIHJvb3QKYEJvZWsgMiAtIEtvc3Rlbiwgb3BicmVuZ3N0ZW4sIGVsYXN0aWNpdGVpdCBlbiBzdXJwbHVzL2AuCgojIyBDb3VudHMgYW5kIGV2aWRlbmNlIHJ1bGVzCgpFeHBlY3RlZDogMjcgdGhlb3J5ICsgNiBjb25zb2xpZGF0aW9uICsgNiBjaGFwdGVyICsgMiBib29rID0gKio0MSBQREZzKiouCkF0IHRoaXMgY2hlY2twb2ludDogKio3IGludGVybmFsbHkgZ2F0ZS1jbG9zZWQgY3VycmVudCBwYXJhZ3JhcGggcGFja2FnZXMqKjoKMjEgYWNjZXB0ZWQtd2l0aC1mbGFncyBQREZzLDIgYWRvcHRlZCBjYW5kaWRhdGUgUERGcyw2IGxlZ2FjeSB1bmFjY2VwdGVkIGFuZDEyCmFic2VudC4gwqcyMTEgbm93IGhhcyBjdXJyZW50IFI1IGluZGVwZW5kZW50IHBhcmFncmFwaCByZXZpZXcsIGRpc3RpbmN0IHNwZWNpYWxpc3QKUUMgYW5kIHJvb3QgYWNjZXB0YW5jZS9oYW5kb2ZmLiDCpzIxMiBub3cgaGFzIGN1cnJlbnQgZGlzdGluY3Qgc3BlY2lhbGlzdCBRQywKcm9vdCBhY2NlcHRhbmNlLCBjbG9zZWQgUzEgbGluZWFnZSBhbmQgcmVuZXdlZCBoYW5kb2ZmOyBpdHMgdGhyZWUgUERGcyBhcmUgQS4gUGh5c2ljYWwKcm9vdCBwcmVzZW5jZSBpcyAyOSwgbm90IDI5IGFjY2VwdGVkLiBBbGwgc2l4IHJlbWFpbmluZyBsZWdhY3kgUERGcyByZW1haW4gR2l0LWJsb2ItCmlkZW50aWNhbCB0byB0aGUgYmFzZWxpbmUuIFNlcGFyYXRlIGluLXByb2dyZXNzIHdvcmt0cmVlcyBkbyBub3QgY291bnQgaGVyZS4KCsKnMjIxIFI4IGFuZCDCpzIxMyBSNiBjb3JyZWN0IHRoZWlyIHNob3J0LWFsdC90aXRsZSBtZXRhZGF0YSwgcmV0YWluaW5nIGFsbDQ5CnByaW50ZWQgcGFnZSBieXRlcyBmcm9tIFI3L1I1LiDCpzIyMSBSOCBub3cgaGFzIGN1cnJlbnQgaW5kZXBlbmRlbnQgcGFyYWdyYXBoIGFuZApzcGVjaWFsaXN0IFBBU1MgV0lUSCBGTEFHUyBhbmQgcm9vdCBhY2NlcHRhbmNlL2hhbmRvZmY7IGl0cyB0aHJlZSBlZGl0aW9ucyBhcmUgQS4KwqcyMTMgUjcgbm93IGFkZHMgdGhlIHJlcXVpcmVkIGJvbnVzIGFzc2Vzc21lbnQtY3JpdGVyaWEgYmxvY2ssIHdpdGgzMCB0b3RhbCBwYWdlcy4KSXRzIGN1cnJlbnQgaW5kZXBlbmRlbnQgUjcgcGFyYWdyYXBoIHJldmlldywgZXhhY3QgZml2ZS1waW4gYWNjZXB0ZWQyMTEvMjEyCnN1Y2Nlc3Npb24gYW5kIGRpc3RpbmN0IGN1cnJlbnQgc3BlY2lhbGlzdCBRQyBwYXNzLiBSb290IGZ1bGxyMzcvdGhpbnIzOC9wcmludHIzOQpyZXByb2R1Y2UgYWxsMjQgbmF0aXZlIGZpbGVzIGFuZDkwIHJhdy9SR0IgcGFnZSBjb21wYXJpc29uczE0LzkvNyBlYWNoLiBDdXJyZW50CnJvb3QgYWNjZXB0YW5jZSBhbmQgbmluZS1zZWN0aW9uIGhhbmRvZmYgY2xvc2UgaXRzIGdhdGVzOyBpdHMgZWRpdGlvbnMgYXJlIEEuCkFsbDcyIHNwZWNpYWxpc3QgcGVyc29uYWwgdmlld3MgcmVtYWluIGF0dHJpYnV0ZWQsIG5vdCBuZXcgcm9vdCB2aWV3czsKNTQvNjYvNzggdGltaW5nIGlzIFVOT0JTRVJWRUQgYW5kIEgtMjEzLU9QQzIgcmVtYWlucyBvcGVuL2V4Y2x1ZGVkLgrCpzIyMiBSMTMgaXMgYWRvcHRlZC9yb290LXJlYnVpbHQ6IGV4YWN0bHkgb25lIGFuc3dlciBwYWdlIGNoYW5nZXM7IHRoZSBvdGhlcjIwCnJlbWFpbiBpZGVudGljYWwuIEl0cyBjdXJyZW50IGluZGVwZW5kZW50IHBhcmFncmFwaCBhbmQgZGlzdGluY3Qgc3BlY2lhbGlzdApyZXZpZXdzIHBhc3Mgd2l0aCBmbGFnczsgcm9vdCBhY2NlcHRhbmNlL2hhbmRvZmYgYXJlIGNvbXBsZXRlLiBJdHMgZWRpdGlvbnMgYXJlIEEuCsKnMjIzIFIzL1MxIGFuZCB0aGUgZXhhY3QgdHdvLWF0dHJpYnV0ZSBBTFQgY29ycmVjdGlvbiBub3cgaGF2ZSBjdXJyZW50CmluZGVwZW5kZW50IHBhcmFncmFwaCBhbmQgZGlzdGluY3Qgc3BlY2lhbGlzdCBQQVNTIFdJVEggRkxBR1MsIHJvb3QgYWNjZXB0YW5jZQphbmQgYSBjb21wbGV0ZSBoYW5kb2ZmLiBJdHMgZm91ciBhY2NlcHRlZDIyMSBwaW5zIGFuZCBhbGwyMCBuYXRpdmUgZmlsZXMgYXJlCnZlcmlmaWVkOyByb290IGZ1bGxyMjgvdGhpbnIyOS9wcmludHIzMCByZXByb2R1Y2UzMiByYXcvUkdCIHBhZ2VzMTUvMTAvNyBlYWNoLgpCb3RoIGRpc3RpbmN0NzItdmlldyBpbnNwZWN0aW9ucyByZW1haW4gYXR0cmlidXRlZCwgYW5kIHRoZSByZXZpZXdlci1ub3VuCmNvcnJlY3Rpb24gY2hhbmdlcyBubyBwdXBpbCBieXRlcy4gRjIyMy1MSU5FQUdFIGlzIGNsb3NlZDsgdGltaW5nNTQvNjkvODEgc3RheXMKVU5PQlNFUlZFRC4gSXRzIHRocmVlIFBERnMgYXJlIEE7IGFsbCBoaXN0b3JpY2FsIGZhaWxlZC9QRU5ESU5HIHJlY29yZHMgcmVtYWluLgrCpzIxMSBSNSBhZGRzIHRoZSByZXF1aXJlZCBib251cyBjcml0ZXJpYSBhbmQgaXMgYWRvcHRlZC9yb290LXJlYnVpbHQ6IG9ubHkgYW5zd2VyCnBhZ2U3IGNoYW5nZXM7IHRoZSBvdGhlcjMwIHBhZ2VzIHJlbWFpbiBleGFjdC4gQ3VycmVudCBwYXJhZ3JhcGggcmV2aWV3IGFuZApkaXN0aW5jdCBzcGVjaWFsaXN0IFFDIHBhc3M7IHJvb3QgYWNjZXB0YW5jZS9oYW5kb2ZmIGFyZSBjb21wbGV0ZS4gSXRzIGluaGVyaXRlZCBzdGFsZSBvcGdhdmVuLnppcCBpcyBleHBsaWNpdGx5IGV4Y2x1ZGVkOwp0aGUgbmF0aXZlMjExIGJ1aWxkZXIgaGFzIG5vIFpJUCBvdXRwdXQgY29udHJhY3QuIEl0IGlzIG5vdCBhIGN1cnJlbnQgc3R1ZGVudApkZWxpdmVyYWJsZS4gwqcyMTIgUjcgYWRkcyBpdHMgdGhyZWUgYm9udXMgY3JpdGVyaWEgYW5kIGlzIGFkb3B0ZWQvcm9vdC1yZWJ1aWx0Ogpvbmx5IGFuc3dlciBwYWdlNiBjaGFuZ2VzLCB0aGUgb3RoZXIyNiBwYWdlcyBhcmUgZXhhY3QsIGFuZDM0YXJ0aWZhY3QgZnVsbC9wcmludApyZXByb2R1Y3Rpb24gcGFzc2VzLiBJdHMgY3VycmVudCBpbmRlcGVuZGVudCBwYXJhZ3JhcGggcmV2aWV3IGFuZCBkaXN0aW5jdApzcGVjaWFsaXN0L3Jvb3QgZ2F0ZXMgcGFzcyB3aXRoIHJldGFpbmVkIGZsYWdzLiBJdHMgdHdvIGFjY2VwdGVkMjExIGlucHV0IHBpbnMgbm93IGhhdmUgaW5kZXBlbmRlbnQKUzEgZGVsdGEgUEFTUyBhbmQgcm9vdCBmdWxscjE2L3RoaW5yMTcvcHJpbnRyMTggcmVwcm9kdWN0aW9uOjM0IG5hdGl2ZSBmaWxlcywKNDAgZm9sZGVyIGZpbGVzIGFuZDI3IHJhdy9waXhlbCBwYWdlcyB1bmNoYW5nZWQuIEN1cnJlbnQgc3BlY2lhbGlzdDc2IHBlcnNvbmFsCmNvbG9yL2dyYXlzY2FsZSB2aWV3cyBwYXNzLiBSb290IGZ1bGxyMjQvdGhpbnIyNS9wcmludHIyNiByZXByb2R1Y2UzNCBuYXRpdmUgZmlsZXMKYW5kODEgcmF3L1JHQiBwYWdlIGNvbXBhcmlzb25zOyBib3RoIHByb2ZpbGVzL2N1cnJlbnRuZXNzL2R1cmFibGUvYWN0aXZlLWJ1bmRsZQpwYXNzIGFnYWluIGFmdGVyIGFjY2VwdGFuY2UuIFNlZTIxMi1yb290LWFjY2VwdGFuY2UubWQgYW5kMjEyLVMxLXJvb3QtcmVzdWx0Lm1kLgpUaGVpciByb290IHJlcG9ydHMgZGlzdGluZ3Vpc2ggYWN0dWFsIHNvdXJjZS9wYWdlL3JlYnVpbGQgY2hlY2tzIGZyb20gcmVtYWluaW5nCmluZGVwZW5kZW50IHBhcmFncmFwaCwgc3BlY2lhbGlzdCBhbmQgaGFuZG9mZiBnYXRlcy4gU2VlIHJldmlldy1jb3JyZWN0aW9ucy5tZC4KCsKnMjMxIGZpbmFsIHI4IGlzIG5vdyBhZG9wdGVkIGFzIGEgY2FuZGlkYXRlOiBhbGw0MiBuYXRpdmUgZmlsZXMgcGx1cyB3cmFwcGVyCm1hdGNoIHRoZSBhdXRob3IncyBleGFjdCBsZXNzb24gY29tbWl0LCB3aXRoMzMgcGFnZXMxNC85LzEwLiBSb290J3M0OTkgaW1wb3J0CmJpbmRpbmdzIGFuZDE1IHNvdXJjZSB0ZXN0cyBwYXNzLiBUaGU2NiBzdXBwbGVtZW50YWwgZ3JheXNjYWxlIHBhZ2VzIHdlcmUKcmVsb2NhdGVkIGJ5dGUtaWRlbnRpY2FsbHkgdW5kZXIgc3VwcG9ydGVkIHNwcmludC1ldmlkZW5jZSBwYXRocyB3aXRoIGFuIGV4YWN0Cm9yaWdpbmFsLWNvbW1pdC9wYXRoL1NIQS10by1uZXctcGF0aCBtYXBwaW5nOyBhbGwyNyBoaXN0b3JpY2FsIFBFTkRJTkcgbWFuaWZlc3RzCmFuZCBvcmlnaW5hbCBmYWlsZWQvc3VwZXJzZWRlZCByZWNvcmRzIHJlbWFpbiB1bmNoYW5nZWQuIEJvdGggYWN0dWFsIG5ldyBuYXRpdmUKcGxhdGZvcm0vbGVzc29uIHNjb3BlIGNoZWNrcyBwYXNzLiBDYW5vbmljYWwgaW5kZXBlbmRlbnQgcGFyYWdyYXBoIFBBU1MgV0lUSApGTEFHUyBpcyBhZG9wdGVkLCB3aXRoNjYgcGVyc29uYWwgY29sb3VyL2dyYXlzY2FsZSBwYWdlcyBhbmQxNSBuYXRpdmUgZmlndXJlcy4KUm9vdCBmcmVzaCByMTQgZnVsbCwgcjE1IGZ1bGwsIHIxNiB0aGluIGFuZCBkaXJlY3QtcHJpbnQgcGFyaXR5IHByZXNlcnZlIGFsbDQyCm5hdGl2ZSBmaWxlcyBhbmQgYWxsMzMgY29sb3VyIHBhZ2VzOyB0aGUgYWN0dWFsIG5hdGl2ZSBjaGVja2VyIHBhc3Nlcy4gVGhlCmRpc3RpbmN0IHNwZWNpYWxpc3QgUUMgbm93IHBhc3NlcyB3aXRoIGZsYWdzIGFmdGVyIHBlcnNvbmFsIGluc3BlY3Rpb24gb2YgYWxsCjY2IGNvbG91ci9ncmF5c2NhbGUgcGFnZXMgYW5kMzAgY29sb3VyL2dyYXlzY2FsZSBuYXRpdmUgZmlndXJlIHZpZXdzLiBSb290IGZyZXNoCmZ1bGxyMjAvdGhpbnIyMi9kaXJlY3QtcHJpbnQvZnVsbHIyMSBwcm9vZnMgcHJlc2VydmUgYWxsNDIgbmF0aXZlIGJ5dGVzIGFuZDk5CnJlbmRlcmVkIGNvbG91ci1wYWdlIGhhc2hlcy9waXhlbHMuIFJvb3QgYWNjZXB0YW5jZSBhbmQgbmluZS1zZWN0aW9uIGhhbmRvZmYgYXJlCmNvbXBsZXRlOyBib3RoIGFjdHVhbCBwcm9maWxlcyBhbmQgY3VycmVudG5lc3MvZHVyYWJsZS9hY3RpdmUtYnVuZGxlIGNoZWNrcyBwYXNzCmFnYWluIGFmdGVyIHRoZSBtZXRhZGF0YSB0cmFuc2l0aW9uLiBJdHMgdGhyZWUgZWRpdGlvbnMgYXJlIEEuIENsYXNzcm9vbSB0aW1pbmcKcmVtYWlucyBVTk9CU0VSVkVEOyBmaW5hbCBjaGFwdGVyL2Jvb2sgcmV2aWV3IGFuZCBvd25lci9DSSBnYXRlcyByZW1haW4uIFNlZQoyMzEtcm9vdC1hY2NlcHRhbmNlLm1kIGFuZCB0aGUgcHJlc2VydmVkIGNhbmRpZGF0ZS9pbXBvcnQvUUMgcmVwb3J0cy4KCkVhY2ggUERGIGFsc28gcmVxdWlyZXMgbWF0Y2hpbmcgZ2VuZXJhdGVkIGAubWRgIGFuZCBzZWxmLWNvbnRhaW5lZCBgLmh0bWxgOwpwYXJhZ3JhcGhzIHJlcXVpcmUgdGhlaXIgcGxhbm5lZCBTVkcvUE5HIHBhaXJzLCB0aGluIGJ1aWxkZXIsIGFjY2VwdGVkIHBsYW4sCmluZGVwZW5kZW50IHJldmlldy9QYXJ0IEEgcXVhbGl0eSByZWNvcmQgYW5kIGhhbmRvZmYuIENoYXB0ZXJzL2Jvb2tzIHJlcXVpcmUKYWNjZXB0ZWQgc291cmNlIGFzc2VtYmxpZXMsIGV4YWN0IGFzc2V0IHBhcml0eSwgdGhlaXIgb3duIGNvbXBsZXRlIHJlbmRlciBhbmQKaW5kZXBlbmRlbnQgcmV2aWV3IGdhdGVzLiBEbyBub3QgZW1pdCBwYXJhZ3JhYWYuKiBmb3IgdGhlIHRocmVlIGNvbnNvbGlkYXRpb25zLgoKwqcyMjQgbm93IGhhcyB0aGUgY3VycmVudCBhdXRob3IncyBjb21wbGV0ZSB0d28xMC1wYWdlIGVkaXRpb25zIGFuZCBjYW5vbmljYWwKaW5kZXBlbmRlbnQgcGFyYWdyYXBoIFBBU1MgV0lUSCBGTEFHUywgYWRvcHRlZCB1bmNoYW5nZWQgaW50byByb290IGxlc3NvbgpmNjY2YmJiN2RkMjU4ZjFmMDFiMzhhMjBkZDZjYTM4MDI4NDhmOGI3LiBSb290IGNoZWNrZWQgYWxsNDE4IGltcG9ydGVkIHBhdGhzLApzaXggc291cmNlIGZpbGVzLDE1IG5hdGl2ZSBmaWxlcyBhbmQzNCBhY3R1YWwgaW1tdXRhYmxlIGFjY2VwdGVkIGlucHV0cy4gRnJlc2gKMTAgc291cmNlIHRlc3RzLCByZWFkLW9ubHkgbmF0aXZlIG91dHB1dC9ET00vaW5rIGNoZWNrcywgYm90aCBQYXJ0IEEgcHJvZmlsZXMsCmN1cnJlbnQgcHJvZHVjdGlvbi9zcGVjaWFsaXN0LCBkdXJhYmxlIGFuZCBmdWxsLWJ1bmRsZSBnYXRlcyBwYXNzLiBSb290IHJlcmFuCnRoZSB1bmNoYW5nZWQgcmV2aWV3ZXInczEwNyBhY3R1YWwgaW52YWxpZC1pbnB1dCwxNSB3aG9sZS1maWxlIGFuZDIxIG1hdGgKcHJvYmVzOyB0aGlzIGlzIGF0dHJpYnV0ZWQgcHJlZGljYXRlIHJldXNlLCBub3QgYW5vdGhlciBpbmRlcGVuZGVudCByZXZpZXcuCkFsbDQ4IGluZGVwZW5kZW50IHBlcnNvbmFsIHZpZXdzIHJlbWFpbiBhdHRyaWJ1dGVkLiBObyBuZXcgcm9vdCBwb3NpdGl2ZSBuYXRpdmUKcmVidWlsZCBvY2N1cnJlZCBpbiBhZG9wdGlvbi4gSXRzIHR3byBQREZzIGFyZSBDOiBESVNUSU5DVCBzcGVjaWFsaXN0IFFDLApyb290IGZ1bGwvdGhpbi9kaXJlY3QgcmVwcm9kdWN0aW9uLCBhY2NlcHRhbmNlIGFuZCBoYW5kb2ZmIHJlbWFpbiBwZW5kaW5nLgo1My41LzYzLjUvNzEuNSB0aW1pbmcgc3RheXMgVU5PQlNFUlZFRC4gU2VlMjI0LVJPT1QtQURPUFRJT04tcmVzdWx0Lm1kLgoKQSA9IGZyZXNoIGludGVybmFsIHBhcmFncmFwaCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IG5vdCBmaW5hbCBvd25lci9DSSBhcHByb3ZhbC4KQyA9IGFkb3B0ZWQvcm9vdC12ZXJpZmllZCBjdXJyZW50IGNhbmRpZGF0ZTsgb25lIG9yIG1vcmUgYWNjZXB0YW5jZSBnYXRlcyBwZW5kaW5nLgpMID0gYmFzZWxpbmUgbGVnYWN5IGZpbGUgcHJlc2VudCwgbm90IGFjY2VwdGVkLiBQID0gcGVuZGluZy9hYnNlbnQuCk5vIG91dHB1dCBpcyBzaWxlbnRseSBhY2NlcHRlZCB0aHJvdWdoIGFuIG9sZGVyIFBBU1Mgb3IgcmV2aWV3ZWRfZmluYWwgbGFiZWwuCgojIyBFeGhhdXN0aXZlIFBERiBpbnZlbnRvcnkKCnwgIyB8IElEIHwgRWRpdGlvbiB8IFN0YXR1cyB8IEV4YWN0IHJlbGF0aXZlIFBERiBwYXRoIHwKfC0tLTp8LS0tfC0tLXw6LS0tOnwtLS18CnwgMSB8IDIuMS4xIHwgcGFyYWdyYWFmIHwgQSB8IGAyLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuMSBLb3N0ZW5zdHJ1Y3R1cmVuLzIuMS4xIEtvc3RlbnN0cnVjdHVyZW4g4oCTIHBhcmFncmFhZi5wZGZgIHwKfCAyIHwgMi4xLjEgfCBvcGdhdmVuIHwgQSB8IGAyLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuMSBLb3N0ZW5zdHJ1Y3R1cmVuLzIuMS4xIEtvc3RlbnN0cnVjdHVyZW4g4oCTIG9wZ2F2ZW4ucGRmYCB8CnwgMyB8IDIuMS4xIHwgYW50d29vcmRlbiB8IEEgfCBgMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xLjEgS29zdGVuc3RydWN0dXJlbi8yLjEuMSBLb3N0ZW5zdHJ1Y3R1cmVuIOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDQgfCAyLjEuMiB8IHBhcmFncmFhZiB8IEEgfCBgMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xLjIgT3BicmVuZ3N0ZW4sIHdpbnN0IGVuIGJyZWFrLWV2ZW4vMi4xLjIgT3BicmVuZ3N0ZW4sIHdpbnN0IGVuIGJyZWFrLWV2ZW4g4oCTIHBhcmFncmFhZi5wZGZgIHwKfCA1IHwgMi4xLjIgfCBvcGdhdmVuIHwgQSB8IGAyLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuMiBPcGJyZW5nc3Rlbiwgd2luc3QgZW4gYnJlYWstZXZlbi8yLjEuMiBPcGJyZW5nc3Rlbiwgd2luc3QgZW4gYnJlYWstZXZlbiDigJMgb3BnYXZlbi5wZGZgIHwKfCA2IHwgMi4xLjIgfCBhbnR3b29yZGVuIHwgQSB8IGAyLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuMiBPcGJyZW5nc3Rlbiwgd2luc3QgZW4gYnJlYWstZXZlbi8yLjEuMiBPcGJyZW5nc3Rlbiwgd2luc3QgZW4gYnJlYWstZXZlbiDigJMgYW50d29vcmRlbi5wZGZgIHwKfCA3IHwgMi4xLjMgfCBwYXJhZ3JhYWYgfCBBIHwgYDIuMSBIb29mZHN0dWsgS29zdGVuIGVuIG9wYnJlbmdzdGVuLzIuMS4zIE1hcmdpbmFsZSBrb3N0ZW4gZW4gbWFyZ2luYWxlIG9wYnJlbmdzdGVuLzIuMS4zIE1hcmdpbmFsZSBrb3N0ZW4gZW4gbWFyZ2luYWxlIG9wYnJlbmdzdGVuIOKAkyBwYXJhZ3JhYWYucGRmYCB8CnwgOCB8IDIuMS4zIHwgb3BnYXZlbiB8IEEgfCBgMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xLjMgTWFyZ2luYWxlIGtvc3RlbiBlbiBtYXJnaW5hbGUgb3BicmVuZ3N0ZW4vMi4xLjMgTWFyZ2luYWxlIGtvc3RlbiBlbiBtYXJnaW5hbGUgb3BicmVuZ3N0ZW4g4oCTIG9wZ2F2ZW4ucGRmYCB8CnwgOSB8IDIuMS4zIHwgYW50d29vcmRlbiB8IEEgfCBgMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xLjMgTWFyZ2luYWxlIGtvc3RlbiBlbiBtYXJnaW5hbGUgb3BicmVuZ3N0ZW4vMi4xLjMgTWFyZ2luYWxlIGtvc3RlbiBlbiBtYXJnaW5hbGUgb3BicmVuZ3N0ZW4g4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgMTAgfCAyLjEuNCB8IG9wZ2F2ZW4gfCBMIHwgYDIuMSBIb29mZHN0dWsgS29zdGVuIGVuIG9wYnJlbmdzdGVuLzIuMS40IEdlbWVuZ2RlIG9wZ2F2ZW4vMi4xLjQgR2VtZW5nZGUgb3BnYXZlbiDigJMgb3BnYXZlbi5wZGZgIHwKfCAxMSB8IDIuMS40IHwgYW50d29vcmRlbiB8IEwgfCBgMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xLjQgR2VtZW5nZGUgb3BnYXZlbi8yLjEuNCBHZW1lbmdkZSBvcGdhdmVuIOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDEyIHwgMi4xIHwgaG9vZmRzdHVrIHwgTCB8IGAyLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEgS29zdGVuIGVuIG9wYnJlbmdzdGVuIOKAkyBob29mZHN0dWsucGRmYCB8CnwgMTMgfCAyLjEgfCBhbnR3b29yZGVuIHwgTCB8IGAyLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEgS29zdGVuIGVuIG9wYnJlbmdzdGVuIOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDE0IHwgMi4yLjEgfCBwYXJhZ3JhYWYgfCBBIHwgYDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0LzIuMi4xIFByaWpzZWxhc3RpY2l0ZWl0LzIuMi4xIFByaWpzZWxhc3RpY2l0ZWl0IOKAkyBwYXJhZ3JhYWYucGRmYCB8CnwgMTUgfCAyLjIuMSB8IG9wZ2F2ZW4gfCBBIHwgYDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0LzIuMi4xIFByaWpzZWxhc3RpY2l0ZWl0LzIuMi4xIFByaWpzZWxhc3RpY2l0ZWl0IOKAkyBvcGdhdmVuLnBkZmAgfAp8IDE2IHwgMi4yLjEgfCBhbnR3b29yZGVuIHwgQSB8IGAyLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIuMSBQcmlqc2VsYXN0aWNpdGVpdC8yLjIuMSBQcmlqc2VsYXN0aWNpdGVpdCDigJMgYW50d29vcmRlbi5wZGZgIHwKfCAxNyB8IDIuMi4yIHwgcGFyYWdyYWFmIHwgQSB8IGAyLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIuMiBFbGFzdGljaXRlaXQgZW4gb216ZXQvMi4yLjIgRWxhc3RpY2l0ZWl0IGVuIG9temV0IOKAkyBwYXJhZ3JhYWYucGRmYCB8CnwgMTggfCAyLjIuMiB8IG9wZ2F2ZW4gfCBBIHwgYDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0LzIuMi4yIEVsYXN0aWNpdGVpdCBlbiBvbXpldC8yLjIuMiBFbGFzdGljaXRlaXQgZW4gb216ZXQg4oCTIG9wZ2F2ZW4ucGRmYCB8CnwgMTkgfCAyLjIuMiB8IGFudHdvb3JkZW4gfCBBIHwgYDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0LzIuMi4yIEVsYXN0aWNpdGVpdCBlbiBvbXpldC8yLjIuMiBFbGFzdGljaXRlaXQgZW4gb216ZXQg4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgMjAgfCAyLjIuMyB8IHBhcmFncmFhZiB8IEEgfCBgMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjMgSW5rb21lbnNlbGFzdGljaXRlaXQgZW4ga3J1aXNlbGluZ3NlIGVsYXN0aWNpdGVpdC8yLjIuMyBJbmtvbWVuc2VsYXN0aWNpdGVpdCBlbiBrcnVpc2VsaW5nc2UgZWxhc3RpY2l0ZWl0IOKAkyBwYXJhZ3JhYWYucGRmYCB8CnwgMjEgfCAyLjIuMyB8IG9wZ2F2ZW4gfCBBIHwgYDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0LzIuMi4zIElua29tZW5zZWxhc3RpY2l0ZWl0IGVuIGtydWlzZWxpbmdzZSBlbGFzdGljaXRlaXQvMi4yLjMgSW5rb21lbnNlbGFzdGljaXRlaXQgZW4ga3J1aXNlbGluZ3NlIGVsYXN0aWNpdGVpdCDigJMgb3BnYXZlbi5wZGZgIHwKfCAyMiB8IDIuMi4zIHwgYW50d29vcmRlbiB8IEEgfCBgMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjMgSW5rb21lbnNlbGFzdGljaXRlaXQgZW4ga3J1aXNlbGluZ3NlIGVsYXN0aWNpdGVpdC8yLjIuMyBJbmtvbWVuc2VsYXN0aWNpdGVpdCBlbiBrcnVpc2VsaW5nc2UgZWxhc3RpY2l0ZWl0IOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDIzIHwgMi4yLjQgfCBvcGdhdmVuIHwgQyB8IGAyLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIuNCBHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdC8yLjIuNCBHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdCDigJMgb3BnYXZlbi5wZGZgIHwKfCAyNCB8IDIuMi40IHwgYW50d29vcmRlbiB8IEMgfCBgMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjQgR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQvMi4yLjQgR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQg4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgMjUgfCAyLjIgfCBob29mZHN0dWsgfCBMIHwgYDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0LzIuMiBFbGFzdGljaXRlaXQg4oCTIGhvb2Zkc3R1ay5wZGZgIHwKfCAyNiB8IDIuMiB8IGFudHdvb3JkZW4gfCBMIHwgYDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0LzIuMiBFbGFzdGljaXRlaXQg4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgMjcgfCAyLjMuMSB8IHBhcmFncmFhZiB8IEEgfCBgMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy4xIENvbnN1bWVudGVuc3VycGx1cy8yLjMuMSBDb25zdW1lbnRlbnN1cnBsdXMg4oCTIHBhcmFncmFhZi5wZGZgIHwKfCAyOCB8IDIuMy4xIHwgb3BnYXZlbiB8IEEgfCBgMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy4xIENvbnN1bWVudGVuc3VycGx1cy8yLjMuMSBDb25zdW1lbnRlbnN1cnBsdXMg4oCTIG9wZ2F2ZW4ucGRmYCB8CnwgMjkgfCAyLjMuMSB8IGFudHdvb3JkZW4gfCBBIHwgYDIuMyBIb29mZHN0dWsgU3VycGx1cyBlbiB3ZWx2YWFydC8yLjMuMSBDb25zdW1lbnRlbnN1cnBsdXMvMi4zLjEgQ29uc3VtZW50ZW5zdXJwbHVzIOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDMwIHwgMi4zLjIgfCBwYXJhZ3JhYWYgfCBQIHwgYDIuMyBIb29mZHN0dWsgU3VycGx1cyBlbiB3ZWx2YWFydC8yLjMuMiBQcm9kdWNlbnRlbnN1cnBsdXMgZW4gdG90YWFsIHN1cnBsdXMvMi4zLjIgUHJvZHVjZW50ZW5zdXJwbHVzIGVuIHRvdGFhbCBzdXJwbHVzIOKAkyBwYXJhZ3JhYWYucGRmYCB8CnwgMzEgfCAyLjMuMiB8IG9wZ2F2ZW4gfCBQIHwgYDIuMyBIb29mZHN0dWsgU3VycGx1cyBlbiB3ZWx2YWFydC8yLjMuMiBQcm9kdWNlbnRlbnN1cnBsdXMgZW4gdG90YWFsIHN1cnBsdXMvMi4zLjIgUHJvZHVjZW50ZW5zdXJwbHVzIGVuIHRvdGFhbCBzdXJwbHVzIOKAkyBvcGdhdmVuLnBkZmAgfAp8IDMyIHwgMi4zLjIgfCBhbnR3b29yZGVuIHwgUCB8IGAyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zLjIgUHJvZHVjZW50ZW5zdXJwbHVzIGVuIHRvdGFhbCBzdXJwbHVzLzIuMy4yIFByb2R1Y2VudGVuc3VycGx1cyBlbiB0b3RhYWwgc3VycGx1cyDigJMgYW50d29vcmRlbi5wZGZgIHwKfCAzMyB8IDIuMy4zIHwgcGFyYWdyYWFmIHwgUCB8IGAyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zLjMgUGFyZXRvLWVmZmljaWVudGllIGVuIHdlbHZhYXJ0c3ZlcmxpZXMvMi4zLjMgUGFyZXRvLWVmZmljaWVudGllIGVuIHdlbHZhYXJ0c3ZlcmxpZXMg4oCTIHBhcmFncmFhZi5wZGZgIHwKfCAzNCB8IDIuMy4zIHwgb3BnYXZlbiB8IFAgfCBgMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy4zIFBhcmV0by1lZmZpY2llbnRpZSBlbiB3ZWx2YWFydHN2ZXJsaWVzLzIuMy4zIFBhcmV0by1lZmZpY2llbnRpZSBlbiB3ZWx2YWFydHN2ZXJsaWVzIOKAkyBvcGdhdmVuLnBkZmAgfAp8IDM1IHwgMi4zLjMgfCBhbnR3b29yZGVuIHwgUCB8IGAyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zLjMgUGFyZXRvLWVmZmljaWVudGllIGVuIHdlbHZhYXJ0c3ZlcmxpZXMvMi4zLjMgUGFyZXRvLWVmZmljaWVudGllIGVuIHdlbHZhYXJ0c3ZlcmxpZXMg4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgMzYgfCAyLjMuNCB8IG9wZ2F2ZW4gfCBQIHwgYDIuMyBIb29mZHN0dWsgU3VycGx1cyBlbiB3ZWx2YWFydC8yLjMuNCBHZW1lbmdkZSBvcGdhdmVuIHN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zLjQgR2VtZW5nZGUgb3BnYXZlbiBzdXJwbHVzIGVuIHdlbHZhYXJ0IOKAkyBvcGdhdmVuLnBkZmAgfAp8IDM3IHwgMi4zLjQgfCBhbnR3b29yZGVuIHwgUCB8IGAyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zLjQgR2VtZW5nZGUgb3BnYXZlbiBzdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy40IEdlbWVuZ2RlIG9wZ2F2ZW4gc3VycGx1cyBlbiB3ZWx2YWFydCDigJMgYW50d29vcmRlbi5wZGZgIHwKfCAzOCB8IDIuMyB8IGhvb2Zkc3R1ayB8IFAgfCBgMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMyBTdXJwbHVzIGVuIHdlbHZhYXJ0IOKAkyBob29mZHN0dWsucGRmYCB8CnwgMzkgfCAyLjMgfCBhbnR3b29yZGVuIHwgUCB8IGAyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zIFN1cnBsdXMgZW4gd2VsdmFhcnQg4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgNDAgfCBib29rIHwgYm9layB8IFAgfCBgQm9layAyIEtvc3Rlbiwgb3BicmVuZ3N0ZW4sIGVsYXN0aWNpdGVpdCBlbiBzdXJwbHVzIOKAkyBib2VrLnBkZmAgfAp8IDQxIHwgYm9vayB8IGFudHdvb3JkZW4gfCBQIHwgYEJvZWsgMiBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1cyDigJMgYW50d29vcmRlbi5wZGZgIHwKCiMjIEV4YWN0IGFjY2VwdGVkIGFuZCBjYW5kaWRhdGUgUERGcyBhdCB0aGlzIGNoZWNrcG9pbnQKClRoZSBoYXNoZXMgYmVsb3cgd2VyZSBmcmVzaGx5IHJlY29tcHV0ZWQgZnJvbSB0aGUgaW50ZWdyYXRlZCByb290IHBhaXIuCkFsbCBjb3JyZXNwb25kaW5nIGluZGVwZW5kZW50IHJldmlldy9RQy9oYW5kb2ZmIHJlY29yZHMgcmVtYWluIHJlcXVpcmVkOwpoYXNoZXMgYWxvbmUgYXJlIG5vdCBzdHVkZW50LXF1YWxpdHkgYWNjZXB0YW5jZS4KCnwgSUQgLyBlZGl0aW9uIHwgUmF3IFBERiBTSEEtMjU2IHwgQ3VycmVudCByZXZpc2lvbiAvIGdhdGUgfAp8LS0tfC0tLXwtLS18CnwgMi4xLjEgLyBwYXJhZ3JhYWYgfCBgOTgzN2UzYTg1ZjMxMjlhNTMwOWEzNmIxN2ZkMTAzMDcwMmJhOTJmYzdlZjQ2NGFmNjA5Y2I4NzhlNGQyZjhiMGAgfCBSNSBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGN1cnJlbnQgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMS4xIC8gb3BnYXZlbiB8IGA5NzMyOTQxNWJhY2MxNTA2NzVhMzI3YWQzMTQ1NWIyNWI4ZTllMWIwMzAxMmVmNmI2NWRhYjEwYWIxZjAyOTUzYCB8IFI1IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgY3VycmVudCByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4xLjEgLyBhbnR3b29yZGVuIHwgYDQ5OGI5YTg2M2VlZjljMGZlZWZkNTBlOGE1MGU3MmFhNDFjNjI2Y2FhY2E3OWYwYjk4MjYxYjhiMzEwNGU1Y2VgIHwgUjUgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBjdXJyZW50IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjEuMiAvIHBhcmFncmFhZiB8IGBlOTRkNDJmNjZhYjk5NjZhM2EwMjRjZmVmMDYxYzIwODRmY2MxZTJhNmVmOWU2MWU1MGM2OTljOTE1NWNlN2EyYCB8IFI3IGN1cnJlbnQgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4xLjIgLyBvcGdhdmVuIHwgYDk0ZWJlNWQzNTIwN2Y2YzYwNWNhMjk0YTllNWJkY2NmYThjMWExMGU2NzE3OTU1ZTIxYWJiMzYwNmE2MDQwNmFgIHwgUjcgY3VycmVudCBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjEuMiAvIGFudHdvb3JkZW4gfCBgZDU1ZjFkYTY2NzIzY2Q2ZjkzMmNiZjA3OTNjZTc5ZDhkNDE4OGQyZDkwNzI0NGZkNDBjYzZmNmZiYWQ1YWM5MGAgfCBSNyBjdXJyZW50IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMi4xIC8gcGFyYWdyYWFmIHwgYDk4YmY0OTIzYjRlM2I4ZTQ5ZmEzYjlkMWI3ZGFmNzEzOTJjNmM3NmVmOGNlYTYzYWFiMTJjNDQ3NDljZGExYTZgIHwgUjggaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBjdXJyZW50IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjIuMSAvIG9wZ2F2ZW4gfCBgYTgxMTljYzc2OWM4ZjRkOTFhMGQ0NWM5YWIyZjI1YWJjMzg3NWU1NzgzNWQxM2MwNTZhZGY2ZDM1YzYyOTdhZmAgfCBSOCBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGN1cnJlbnQgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMi4xIC8gYW50d29vcmRlbiB8IGBkNGE3YzEzOWQ0OTI3NmU4MGMyM2Y0ZWRhMWNmYWI3ODQxZDA2M2IyMDRkN2E5YmI3MGNkMjI1YTc5NmU1YjVkYCB8IFI4IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgY3VycmVudCByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4xLjMgLyBwYXJhZ3JhYWYgfCBgNTM0MTc3YzgyODBlZGRkNDc4NWRjZTE0OTE4NTZjMzNjOTZjZDY5OGFlNTU4YjUxMzZiZGIyMDZhNzljNzAyNGAgfCBSNy9TMSBjdXJyZW50IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMS4zIC8gb3BnYXZlbiB8IGBkMTI0ODc2NzFiZDJmMmNmZTMyOWY1OWJjOWM0OGNmZWM1ZjAzYjg3MTYyNmM1YzQwMTZlODhjMjY0NmQ1ZjA1YCB8IFI3L1MxIGN1cnJlbnQgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4xLjMgLyBhbnR3b29yZGVuIHwgYGQ5NmYyMWMzYWJlZDQ3MWYzYTEyZGQzMThjYjE0ODUwNDNmZTU1N2U0YTRkNGI1NDAzNDQwNzc2M2FlODc3ODdgIHwgUjcvUzEgY3VycmVudCBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjIuMiAvIHBhcmFncmFhZiB8IGAzNmZlYjc4NzM2MzdkMGU3MWFmNTBkNDkzMGE3ODllM2E4YWRhNmVjNzdjYzM3N2IwOWUyYWYxNzljM2FlOThjYCB8IFIxMyBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGN1cnJlbnQgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMi4yIC8gb3BnYXZlbiB8IGAwYTI1MWE0OTczYjFiOWIwYzRhYmNhMzAzMTBhM2UwYmRhODg4NTU4ZTA3OWZkNDg5NTMxOWZjNDk2NjE0NTU1YCB8IFIxMyBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGN1cnJlbnQgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMi4yIC8gYW50d29vcmRlbiB8IGA2MWNiZGU2N2U4MTU2NTE1MDEyODE4NzU3M2E3NjZmZmZjOWJjMWQwMWYzYmQyNGNiZTNkYWNiOWRkZWI1MmIyYCB8IFIxMyBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGN1cnJlbnQgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMi4zIC8gcGFyYWdyYWFmIHwgYGNhMjdmOGJkNmNiYjNiNTk2ZTU2MjEyODBkNzY2MzFjNTU2MTEzNGU5ZTUzYzM1NTY3MjVjMzEzZmRmOGFlY2JgIHwgQ3VycmVudCBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjIuMyAvIG9wZ2F2ZW4gfCBgNTBjZjJiYmVhYTE5OGM0NWQxODMyY2Y2MTEyYjBmNTBjY2IwZGZjM2QxNzFmMTEwYjJhMDlmMmJiMWY2MmY4MGAgfCBDdXJyZW50IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMi4zIC8gYW50d29vcmRlbiB8IGAzMGNkNjgyMzU4YzVlZWI4Y2I2YWY1M2NmNzJlM2ViY2ZjOGZlYWYxNDg1NmUzZjY3MWE4NTBmZTQ1ZGUyZTEwYCB8IEN1cnJlbnQgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4yLjQgLyBvcGdhdmVuIHwgYDhlYjg0YzZmMTBiYjgyNDAzM2ZmZWE2NjlhMDRhMzkzYmY1N2MyNWI0NzU3ODA1NTIzYzBmNDRhMTliYWZhMGRgIHwgQWRvcHRlZCBjdXJyZW50IHBhcmFncmFwaC1yZXZpZXcgY2FuZGlkYXRlOyBzcGVjaWFsaXN0L3Jvb3QgYWNjZXB0YW5jZS9oYW5kb2ZmIHBlbmRpbmcgfAp8IDIuMi40IC8gYW50d29vcmRlbiB8IGBmNmJhMzRmODlhZTBjNGE0YzBmMjZmMTJhZmIzOTJhZjUyNzFlMWVkZGUyOGJkZTY1ODU0YjkwMjg3ZGQ1N2Y4YCB8IEFkb3B0ZWQgY3VycmVudCBwYXJhZ3JhcGgtcmV2aWV3IGNhbmRpZGF0ZTsgc3BlY2lhbGlzdC9yb290IGFjY2VwdGFuY2UvaGFuZG9mZiBwZW5kaW5nIHwKfCAyLjMuMSAvIHBhcmFncmFhZiB8IGAwODgxMDJhOTcxMzBjYzY5OTA3YjcxNDJjODEwNTZiNmY5NjcyY2JmZDA5YTgyOGM0Y2ViYTVlYTRkODJjZDVlYCB8IEludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgY3VycmVudCByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4zLjEgLyBvcGdhdmVuIHwgYDRhN2U4N2U2NDFkNTU4MTE3ZDE1OGY1NzNhYWYzYmNkNzgzOTViMjI0OWFjNzNiZmNiOGE3NDkxYjZiZTMzNDFgIHwgSW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBjdXJyZW50IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjMuMSAvIGFudHdvb3JkZW4gfCBgZDEyOTdkZWU1YjE4MzRlOTlkNjY5MTljMjk0NzdhMTlmNTE2OWZhNjJjMzAyMzU0ZGI0MzNhZTQ0ZDhkNWY3YmAgfCBJbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGN1cnJlbnQgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAoKRWFjaCBhY2NlcHRlZCBwYXJhZ3JhcGggaGFzIGA8aWQ+LXRleHRib29rLWhhbmRvZmYubWRgIGluIGl0cyBjYW5vbmljYWwgZm9sZGVyLAppbmNsdWRpbmcgZXhhY3Qgc291cmNlL3Jldmlldy9xdWFsaXR5IGJpbmRpbmdzLCBjb25jZXB0cywgZXhlcmNpc2VzLCB2aXN1YWxzIGFuZApjYXJyeS1mb3J3YXJkIGxpbWl0cy4gVGhlIDU4IGhpc3RvcmljYWxseSBhY2NlcHRlZCBwYWdlcyAoMzEgKyAyNykgaGF2ZSBhY3R1YWwgcm9vdCBhbmQgaW5kZXBlbmRlbnQKaW5zcGVjdGlvbiBldmlkZW5jZTsgbmV3IHNob3J0LWFsdCBmaW5kaW5ncyBkbyBub3QgZXJhc2UgdGhvc2Ugb2JzZXJ2YXRpb25zLApidXQgcmVxdWlyZSBjb3JyZWN0ZWQgTUQvSFRNTC9hc3NldCBsaW5lYWdlIGFuZCByZW5ld2VkIHBhY2thZ2UgZ2F0ZXMuIFRoZSBzZXBhcmF0ZTEwMyBwcm9kdWNlZCBwYWdlcyAoMzAgKyAyMCArIDIxICsgMzIpIGhhdmUKcm9vdCBvYnNlcnZhdGlvbi9yZWJ1aWxkIHJlcG9ydHM7IMKnMjIxL8KnMjIyIGV4YWN0IHRyYW5zZmVycyBmcm9tIHJvb3QncyBvd24KcHJpb3Igdmlld3MgYXJlIGRpc3Rpbmd1aXNoZWQgZnJvbSBmcmVzaCBpbmRlcGVuZGVudCBmdWxsLXBhZ2UgaW5zcGVjdGlvbi4KwqcyMjEgUjggaGFzIGl0cyBvd24gY3VycmVudCBoYW5kb2ZmOyB0aGUgZWFybGllciBSNiBoYW5kb2ZmIHJlbWFpbnMgaW4gR2l0IGhpc3RvcnkuClNlZTIyMS1yb290LWFjY2VwdGFuY2UtcjgubWQgZm9yIGV4YWN0IGN1cnJlbnQgY2Fub25pY2FsIGFuZCBhZG9wdGlvbiBiaW5kaW5ncy4KCiMjIFJlbWFpbmluZyBwcm9kdWN0aW9uIGFuZCBhY2NlcHRhbmNlCgpXYXZlLXR3byDCpzIxMyBub3cgaGFzIGN1cnJlbnQgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzIGFuZCBhIGNvbXBsZXRlCmhhbmRvZmYuIMKnMjI0IG5vdyBoYXMgdHdvIGFkb3B0ZWQgY2FuZGlkYXRlIEMgUERGcyBwZW5kaW5nIGl0cyBkaXN0aW5jdCBzcGVjaWFsaXN0CmFuZCByb290IGdhdGVzLiDCpzIyMyBoYXMgY3VycmVudCBpbmRlcGVuZGVudCBwYXJhZ3JhcGggYW5kCnNwZWNpYWxpc3QgcmV2aWV3LCByb290IGFjY2VwdGFuY2UgYW5kIGhhbmRvZmYgd2l0aCBmbGFncy4gwqcyMTEgUjUgaGFzIGNvbXBsZXRlIGN1cnJlbnQgcGFyYWdyYXBoIHJldmlldywgZGlzdGluY3QKc3BlY2lhbGlzdCBRQyBhbmQgcm9vdCBhY2NlcHRhbmNlL2hhbmRvZmYgd2l0aCBmbGFnczsgc2VlMjExLXJvb3QtYWNjZXB0YW5jZS1yNS5tZC4KwqcyMTIgUjcgaGFzIGl0cyBib251cyBibG9jayBhbmQgY3VycmVudCBpbmRlcGVuZGVudCBwYXJhZ3JhcGggUEFTUy4gQ3VycmVudApkaXN0aW5jdCBzcGVjaWFsaXN0IFFDLCByb290IHJlcHJvZHVjdGlvbi9hY2NlcHRhbmNlIGFuZCBuaW5lLXNlY3Rpb24gaGFuZG9mZgphcmUgY29tcGxldGUgd2l0aCBmbGFncy4gSXRzIGFjY2VwdGVkLXByZXJlcXVpc2l0ZSBzdWNjZXNzaW9uIGlzIHZlcmlmaWVkIGFuZApTMSBsaW5lYWdlIGlzIGNsb3NlZDsgaGlzdG9yaWNhbCBmYWlsdXJlcyBhbmQgUEVORElORyBwcm9vZiByZW1haW4gcHJlc2VydmVkLgrCpzIxMyBSNyBoYXMgdGhlIGJvbnVzLWNyaXRlcmlhIGNvcnJlY3Rpb24sIHVuY2hhbmdlZCBpbmRlcGVuZGVudCBwYXJhZ3JhcGggUEFTUywKaW5kZXBlbmRlbnRseSByZXZpZXdlZCBleGFjdCBmaXZlLXBpbiBhY2NlcHRlZDIxMS8yMTIgc3VjY2Vzc2lvbiwgZGlzdGluY3QKY3VycmVudCBzcGVjaWFsaXN0IFFDIGFuZCBhY3R1YWwgcm9vdCBmdWxsL3RoaW4vZGlyZWN0IHJlcHJvZHVjdGlvbi4gTWluaW1hbApyb290LW9ubHkgUUMgYWNjZXB0YW5jZSBhbmQgbmluZS1zZWN0aW9uIGhhbmRvZmYgY2xvc2UgdGhvc2UgZ2F0ZXMuIEhpc3RvcmljYWwKcHJpbnQtb25seS9zb3VyY2UgcHJvb2YgYW5kIHRoZSBvbGQyMTIgZ3VhcmQgZmFpbHVyZSByZW1haW4gdW5jaGFuZ2VkOyB0aGV5IGFyZQpub3QgcmVsYWJlbGVkIGFzIGZ1bGwgYnVpbGRzLiBTZWUyMTMtUUMtUk9PVC1yZXN1bHQubWQgYW5kMjEzLVFDLVJPT1QtYWNjZXB0YW5jZS5tZC4KwqcyMjEgUjgncyBpbnRlcm5hbCByZXZpZXcvUUMvaGFuZG9mZiBnYXRlcyBhcmUgY29tcGxldGUsIHdpdGggdGltaW5nIGZsYWdzLgpJbmRlcGVuZGVudCDCpzIyMyBwYXJhZ3JhcGggYW5kIGN1cnJlbnQgc3BlY2lhbGlzdCBQQVNTIFdJVEggRkxBR1MgYXJlIGFkb3B0ZWQ7CnJvb3QgbmF0aXZlIHZhbGlkYXRpb24sIGFjY2VwdGFuY2UgYW5kIGhhbmRvZmYgY2xvc2UgdGhvc2UgZ2F0ZXMuIMKnMjIyJ3MgZm9ybWVyIGNhbm9uaWNhbCBGQUlMIGlzIHN1cGVyc2VkZWQgYnkgYWN0dWFsIGN1cnJlbnQgUjEzCmluZGVwZW5kZW50IFBBU1MgY2xvc2luZyBhbnN3ZXI0YiBvcmRlciBhbmQgQ29uY2VydCBzaG9ydCBhbHQuIERpc3RpbmN0IFFDCmFuZCByb290IGFjY2VwdGFuY2UvaGFuZG9mZiBub3cgY2xvc2UsIHdpdGggdGltaW5nIGZsYWdzOyBzZWUyMjItcm9vdC1hY2NlcHRhbmNlLXIxMy5tZC4KSGlzdG9yaWNhbDIxMiB0ZWFjaGluZyBpcyB1bmNoYW5nZWQgYnkgaXRzIG1ldGFkYXRhL2JvbnVzIGNvcnJlY3Rpb247IGl0cyBub3cKYWNjZXB0ZWQgY3VycmVudCBwYWNrYWdlIG11c3QgYmUgY29uc3VtZWQgdGhyb3VnaDIxMydzIGV4YWN0IHN1Y2Nlc3NvciByZWxlYXNlCmFuZCBmaW5hbCBjb21iaW5lZCBib29rIGFzc2VtYmx5LgrCpzIyMyBleGFjdCBhY2NlcHRlZC1jdXJyZW50LcKnMjIxIHN1Y2Nlc3NvciBpbnB1dCBiaW5kaW5nIG5vdyBoYXMgaW5kZXBlbmRlbnQKZGVsdGEgUEFTUyBhbmQgdW5jaGFuZ2VkIHJvb3QgZnVsbC90aGluL3ByaW50IHByb29mOyBzZWUyMjMtUzEtcm9vdC1yZXN1bHQubWQuCkl0cyBjdXJyZW50IHNwZWNpYWxpc3QgUUMgYW5kIHJvb3QgYWNjZXB0YW5jZS9oYW5kb2ZmIG5vdyBwYXNzIHdpdGggZmxhZ3M7CnNlZTIyMy1yb290LXFjLXJlc3VsdC5tZCBhbmQyMjMtcm9vdC1hY2NlcHRhbmNlLm1kLiBGaW5hbCBhZ2dyZWdhdGUvQ0kgZ2F0ZXMgcmVtYWluLgrCpzIxNCBmb2xsb3dzIGFjY2VwdGVkIHByZXJlcXVpc2l0ZSB0ZWFjaGluZy4gwqcyMjQncyBpbXBvcnRlZCBjdXJyZW50IHBhcmFncmFwaApyZXZpZXcgYW5kIGV4YWN0IG5hdGl2ZSBwYWNrYWdlIGFyZSBjYW5kaWRhdGVzOyBpdHMgZGlzdGluY3Qgc3BlY2lhbGlzdCBRQywKcm9vdCBwb3NpdGl2ZSBuYXRpdmUgcmVwcm9kdWN0aW9uLCBhY2NlcHRhbmNlIGFuZCBoYW5kb2ZmIGFyZSBuZXh0LiDCpzIzMSBpcyBpbnRlcm5hbGx5IGFjY2VwdGVkCndpdGggZmxhZ3MgYW5kIGN1cnJlbnQgaW5kZXBlbmRlbnQgcGFyYWdyYXBoIHJldmlldywgc3BlY2lhbGlzdCBRQyBhbmQgaGFuZG9mZjsKwqcyMzLigJPCpzIzNCBhbmQgYWxsIGFnZ3JlZ2F0ZSBvdXRwdXRzIHJlbWFpbiBwZW5kaW5nIHRoZWlyIGRlcGVuZGVuY3kvcGxhbi9yZXZpZXcKZ2F0ZXMuIEJvb2sgZnJvbnQgc291cmNlcwphbG9uZSBwYXNzZWQgaW5kZXBlbmRlbnQgUjI7IG5vIGJhY2sgbWF0dGVyLCBhY3R1YWwgYm9vayBtYW5pZmVzdCBvciBhc3NlbWJsZWQKYm9vayBQREYgaGFzIGJlZW4gYWNjZXB0ZWQuIFByZXNlcnZlIHBhcmFncmFwaC9hbnN3ZXIgc2VwYXJhdGlvbiBhbmQgbmV2ZXIKYXBwZW5kIGR1cGxpY2F0ZSBvcGdhdmVuIHRvIGEgY29tcGxldGUgcGFyYWdyYWFmIHNvdXJjZS4KClVwZGF0ZSB0aGlzIG1hbmlmZXN0IG9ubHkgZnJvbSBleGFjdCBhZG9wdGVkIHBheWxvYWQvcHJvb2YgZXZpZGVuY2UuIEZpbmFsCmNsb3N1cmUgcmVxdWlyZXMgYWxsIDQxIGFjY2VwdGVkIGZpbmFsIFBERnMgcGx1cyBzb3VyY2UvYXNzZXQvcHJvb2YgaGFzaGVzLAppbmRlcGVuZGVudCBmaW5pc2hlZCB2ZXJpZmljYXRpb24gYW5kIGxlYWQgcm91bmRzLCBwYWlyZWQgY29tcGF0aWJpbGl0eS9DSSBhbmQKbm9ybWFsIHJlYWRpbmVzcy4gQ2xhc3Nyb29tIHRpbWluZy9hdHRhaW5tZW50IGFuZCBvcHRpb25hbCBjdXJyZW50IEluc3BlY3RpZQptYXBwaW5nIGFyZSBub3QgYXNzZXJ0ZWQuIE5vIGZ1dHVyZSBtZXJnZSBhdXRob3JpdHkgaXMgc3VwcGxpZWQuCgojIyBJbnZlbnRvcnkgbWV0aG9kIGFuZCBkaWFnbm9zdGljIGNvcnJlY3Rpb24KClJlYWQtb25seSBHaXQgYGxzLXRyZWUgLXIgLXogLS1uYW1lLW9ubHlgIGF0IGJhc2VsaW5lL0hFQUQsIGV4YWN0IHBsYW5uZWQtcGF0aAptZW1iZXJzaGlwLCBmaWxlc3lzdGVtIHByZXNlbmNlLCByYXcgU0hBLTI1NiBvZiBhY2NlcHRlZC9jYW5kaWRhdGUgUERGcyBhbmQgYmFzZWxpbmUvSEVBRApHaXQtYmxvYiBjb21wYXJpc29uIGZvciBhbGwgbGVnYWN5IFBERnMuIEFuIGluaXRpYWwgbGluZS1zcGxpdCBwcm9iZSBmYWlsZWQgdG8KaW50ZXJwcmV0IEdpdCdzIHF1b3RlZCBVbmljb2RlIHBhdGhzIGFuZCBpbmNvcnJlY3RseSBjb3VudGVkIHplcm8gYmFzZWxpbmUKUERGczsgaXQgd2FzIGRpc2NhcmRlZCBhbmQgcmVwbGFjZWQgd2l0aCBOVUwtZGVsaW1pdGVkIHBhdGhzIGJlZm9yZSB0aGlzIHJlY29yZC4KVGhlIGNvcnJlY3RlZCBoaXN0b3JpY2FsIHByZS3CpzIzMSBiYXNlbGluZS9jdXJyZW50IHRyYWNrZWQgY291bnQgd2FzMjYuIFRoZQpjdXJyZW50MjI0IGFkb3B0aW9uIHJlZnJlc2ggY2hlY2tzNDEgdW5pcXVlIHBsYW5uZWQgcGF0aHMsMjkgcHJlc2VudCwgc2l4CmJhc2VsaW5lLWlkZW50aWNhbCBsZWdhY3kgUERGcywxMiBhYnNlbnQgYW5kIGFsbDIzIGFjY2VwdGVkL2NhbmRpZGF0ZSBQREYgaGFzaGVzLiBDdXJyZW50IGNhbmRpZGF0ZSBzdGF0dXMKZG9lcyBub3QgaW5oZXJpdCBhIGxlZ2FjeSBhY2NlcHRhbmNlIGxhYmVsLiBObyBmaWxlcyB3ZXJlIGNoYW5nZWQKYnkgaW52ZW50b3J5IGNoZWNrcy4KClBvc3Qtd3JpdGUgY2hlY2tzOiBwbGFubmVkL2FjdGl2ZSBzcHJpbnQgYnVuZGxlIFBBU1MsIGFwcHJvdmVkLXVzZSBjdXJyZW50bmVzcwpQQVNTLCBkdXJhYmxlIHR3ZWx2ZS1yZWNvcmQgYXV0aG9yaXR5IFBBU1MsIDQxIG1hbmlmZXN0IHJvd3MvdW5pcXVlIHBhdGhzIGFuZAphbGwgdHdlbHZlIGZyZXNobHkgaGFzaGVkIHRhcmdldC10cmFjZSBiaW5kaW5ncyBQQVNTLCB3aGl0ZXNwYWNlIFBBU1MuIFRoZQpmaXJzdCB1bmlxdWVuZXNzIG9uZS1saW5lciBsb3N0IGEgbGl0ZXJhbCBiYWNrdGljayB0aHJvdWdoIFBvd2VyU2hlbGwgZXNjYXBpbmc7Cml0cyBmYWlsdXJlIHdhcyBjb3JyZWN0ZWQgdXNpbmcgdGFibGUtY29sdW1uIHBhcnNpbmcgYW5kIHJlcnVuIHN1Y2Nlc3NmdWxseS4KTm8gZmFpbGVkIHByb2JlIGlzIHRyZWF0ZWQgYXMgYWNjZXB0YW5jZSBhbmQgbm8gY29tcGxldGUtYnVuZGxlIGNsYWltIGlzIG1hZGUuCg=="
+  },
+  "all_existing_PDFs": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.pdf",
+      "sha256": "9edc45ece7ab0be5b91b8f3217c5911777d55fcace21d128fa0d9b94803328c1"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf",
+      "sha256": "2550df96502178f03b2aa4026a40bae70394d95b5514b0f89a23506d6b77c8b5"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf",
+      "sha256": "498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
+      "sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
+      "sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+      "sha256": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
+      "sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+      "sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+      "sha256": "d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+      "sha256": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+      "sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+      "sha256": "7b4e156f807bd060d4e8dea748a2532e53fa98035f7d9310ec26961a202b7be7"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+      "sha256": "c0342c7b777d24f96c00cebcee4e55d079f0e33b0431ccc242be700589fb3acd"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – antwoorden.pdf",
+      "sha256": "14e98e8bb6de0d4864d8bf9dcb9fe6699da978a51acf1b3e6601ebaebf03776d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – hoofdstuk.pdf",
+      "sha256": "e4001a6a36ee48dc1610be359f656b8c9e84b7d5ee2c18ff4bfccaefcbaa25db"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf",
+      "sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf",
+      "sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf",
+      "sha256": "61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf",
+      "sha256": "0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf",
+      "sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf",
+      "sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf",
+      "sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+      "sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "sha256": "f6ba34f89ae0c4a4c0f26f12afb392af5271e1edde28bde65854b90287dd57f8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "sha256": "8eb84c6f10bb824033ffea669a04a393bf57c25b4757805523c0f44a19bafa0d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.pdf",
+      "sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.pdf",
+      "sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf",
+      "sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    }
+  ],
+  "old_QC": {
+    "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-quality-ref.yaml",
+    "raw_sha256": "1d0ee8d2cff69e664d3fedee47e6c9dc0854bab8be51af58aedbbca1a38d02ab",
+    "raw_base64": "cGFyYWdyYXBoOiAiMi4yLjQiCnRpdGxlOiAiR2VtZW5nZGUgb3BnYXZlbjogZWxhc3RpY2l0ZWl0IgpjaGFwdGVyOiAiMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQiCnJldmlld2VkX29uOiAiMjAyNi0wNi0xOSIKcmV2aWV3X21vZGU6ICJwYXJ0LWEiCnBhcmFncmFwaF9raW5kOiAiZ2VtZW5nZGVfb3BnYXZlbiIKaW50cm9kdWNlc19uZXdfdGhlb3J5OiBmYWxzZQp0YXJnZXRfZXhlcmNpc2Vfc3RhdHVzOiAicmV2aWV3ZWRfZmluYWwiCnRhcmdldF9zdGF0dXNfcHJvbW90aW9uX3NwcmludDogIkIyLTIuMi1UQVJHRVQtVjUtUFJPTU9URSIKcHJvZHVjdGlvbl9yZWFkeV93aXRoX2ZsYWdzOiBmYWxzZQpjb250ZW50OgogIG9wZ2F2ZW5fbWQ6IHRydWUKICBhbnR3b29yZGVuX21kOiB0cnVlCiAgb3BnYXZlbl9wZGY6IHRydWUKICBhbnR3b29yZGVuX3BkZjogdHJ1ZQogIGFuc3dlcl9zdHJ1Y3R1cmVfZ3VpZGFuY2U6IHRydWUKICBtaXhlZF9jb250ZXh0X3NvdXJjZXM6IHRydWUKICBzb3VyY2Vfc2VsZWN0aW9uX3JlcXVpcmVkOiB0cnVlCiAgdGFibGVfb3Jfc3RydWN0dXJlZF9zb3VyY2VfaW50ZXJwcmV0YXRpb25fcmVxdWlyZWQ6IHRydWUKICBpbnRlZ3JhdGVzX3ByaWNlX2VsYXN0aWNpdHk6IHRydWUKICBpbnRlZ3JhdGVzX3JldmVudWU6IHRydWUKICBpbnRlZ3JhdGVzX2luY29tZV9lbGFzdGljaXR5OiB0cnVlCiAgaW50ZWdyYXRlc19jcm9zc19lbGFzdGljaXR5OiB0cnVlCiAgaW50ZWdyYXRlc19kZW1hbmRfZnVuY3Rpb246IHRydWUKICBib3VuZGVkX2Vjb25vbWljX2FkdmljZTogdHJ1ZQphc3NldHM6CiAgdG90YWxfcmVmZXJlbmNlZDogMAogIG1pc3Npbmc6IFtdCiAgc3ZncG5nX3BhaXJlZDogdHJ1ZQogIG5hbWluZ19jb21wbGlhbnQ6IHRydWUKcmV2aWV3OgogIHZlcmRpY3Q6ICJQQVNTIgogIHVucmVzb2x2ZWRfYmxvY2tlcnM6IDAKICBmbGFnczogW10K"
+  }
+}

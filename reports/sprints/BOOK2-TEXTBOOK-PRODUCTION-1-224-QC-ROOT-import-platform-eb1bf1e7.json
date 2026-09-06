@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "eb1bf1e75a2f2babba354cbf0ca658e762205ef2"
+  ],
+  "start": "2026-09-06T08:18:45.362Z",
+  "end": "2026-09-06T08:18:45.537Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 460183fd] Add owned current QC custody scope and actual NUL index publication tools\n Date: Sun Sep 6 09:50:30 2026 +0200\n 2 files changed, 127 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-index-runtime.cjs\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-publication.py\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDQ2MDE4M2ZkXSBBZGQgb3duZWQgY3VycmVudCBRQyBjdXN0b2R5IHNjb3BlIGFuZCBhY3R1YWwgTlVMIGluZGV4IHB1YmxpY2F0aW9uIHRvb2xzCiBEYXRlOiBTdW4gU2VwIDYgMDk6NTA6MzAgMjAyNiArMDIwMAogMiBmaWxlcyBjaGFuZ2VkLCAxMjcgaW5zZXJ0aW9ucygrKQogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjI0LVFDLUNVUlJFTlQtaW5kZXgtcnVudGltZS5janMKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIyNC1RQy1DVVJSRU5ULXB1YmxpY2F0aW9uLnB5Cg==",
+  "stderr_base64": ""
+}
