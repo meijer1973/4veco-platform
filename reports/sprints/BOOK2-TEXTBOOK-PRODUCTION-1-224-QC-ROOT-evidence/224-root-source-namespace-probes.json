@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "actor": "codex-root",
+  "source": {
+    "root_source_commit": "432a820c030aa9bd7477e7dfb334f6e07388839e",
+    "root_files": [
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-native.py",
+        "raw_sha256": "3973bbdd06e1a5d7b09c09d19eaddad5cc2e7162820eeb3f3c79ecff2c7f7ad9"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-check.cjs",
+        "raw_sha256": "b6e3f831185298f715c7fc802c049914b274ef01b44314e92bb4e67d9b217642"
+      }
+    ],
+    "original_bound_files": [
+      {
+        "path": "build-scripts/content/book-2/b2_224.py",
+        "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+        "raw_sha256": "d5001620b81fc9ca2f390047367bf64885793b930b3763cba74b6babce842125"
+      },
+      {
+        "path": "build-scripts/content/book-2/224/answers.md",
+        "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+        "raw_sha256": "f7c7fac3034c49b88788970fec6fa8ee66e66b0f02e29b63d23f1a02355bd164"
+      },
+      {
+        "path": "build-scripts/content/book-2/224/check_render.py",
+        "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+        "raw_sha256": "a5f869c8b5ea43ddc14f38b5b7229db612d9141d99ec5514824288acdbad57c6"
+      },
+      {
+        "path": "build-scripts/content/book-2/224/exercises.md",
+        "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+        "raw_sha256": "1003ef1ede3c61059e5e97c1d96b0a3e913f36799411f0e1b2ce62f16ad3bab9"
+      },
+      {
+        "path": "build-scripts/content/book-2/224/target-answers.md",
+        "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+        "raw_sha256": "275af20f1a26d4d4205879e16fbe0f1fc1d69ff65cee024803c5694b367eb136"
+      },
+      {
+        "path": "build-scripts/content/book-2/224/test_source.py",
+        "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+        "raw_sha256": "7594760c6aaf910d99ae5ee2e93fdd7736800256fc621890316fef638bc310c7"
+      },
+      {
+        "path": "build-scripts/content/book-2/print_pipeline.py",
+        "commit": "143b8292363f3da6172ab1de9e58899df2b64dd3",
+        "raw_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-controller.py",
+        "commit": "0e2349ecf50e817482bf2f5c1d6d5aedc32c9323",
+        "raw_sha256": "2ef5cedf8122ffeed1d8ef5013bc28257a83a99341ff79e771cea93e4cce05fd"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-controller.py",
+        "commit": "c8d824dc58d2160b57f5c7b5b826aa67e5abeb11",
+        "raw_sha256": "f4cc0baca71685e1f3ba4eaa0d27820dfaf234cfe0a4884b1b8b1ed3cc440a94"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-checks.py",
+        "commit": "c8d824dc58d2160b57f5c7b5b826aa67e5abeb11",
+        "raw_sha256": "4a932b1ad6ec0dc271f4c239eb77434ddece12748aee99a6b6283e53168af1b5"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-native.py",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-native.py",
+      "mode": "forged",
+      "rejected": true
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-check.cjs",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "file": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-ROOT-check.cjs",
+      "mode": "forged",
+      "rejected": true
+    },
+    {
+      "mode": "combined-root-source-drift",
+      "rejected": true
+    },
+    {
+      "namespace": "empty-directory",
+      "real_root_run_entry": true,
+      "rejected": true,
+      "effects": 0
+    },
+    {
+      "namespace": "populated-directory",
+      "real_root_run_entry": true,
+      "rejected": true,
+      "effects": 0
+    },
+    {
+      "namespace": "file",
+      "real_root_run_entry": true,
+      "rejected": true,
+      "effects": 0
+    },
+    {
+      "invalid_revision": "r0",
+      "rejected": true
+    },
+    {
+      "invalid_revision": "../r1",
+      "rejected": true
+    },
+    {
+      "invalid_revision": "r1/../../outside",
+      "rejected": true
+    }
+  ],
+  "root_personal_views": 0,
+  "native_writes": 0,
+  "attribution": "Actual root rerun of unchanged specialist109 input/21 whole-file probes plus5 root whole-file and6 root namespace negatives; technical fixtures only."
+}

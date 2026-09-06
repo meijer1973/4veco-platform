@@ -1,0 +1,9 @@
+{
+  "finished": "2026-09-06T08:28:18.795274+00:00",
+  "label": "print",
+  "exit_code": 0,
+  "seconds": 7.01160830000299,
+  "stdout_sha256": "c0ef585d38a9a9b528e96b3822e1836b82741d07009d2fd402d03d6e594afff4",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "PATH_unchanged": true
+}

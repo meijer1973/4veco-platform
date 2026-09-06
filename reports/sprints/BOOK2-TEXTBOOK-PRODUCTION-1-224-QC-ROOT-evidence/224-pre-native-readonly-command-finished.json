@@ -1,0 +1,9 @@
+{
+  "finished": "2026-09-06T08:22:27.136226+00:00",
+  "label": "native-readonly",
+  "exit_code": 0,
+  "seconds": 1.7551451999897836,
+  "stdout_sha256": "31f0a8c95a95f391219d1c1e287079ff718382f0513a3e9475658c5eeb889e20",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "PATH_unchanged": true
+}

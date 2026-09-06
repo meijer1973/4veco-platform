@@ -1,0 +1,9 @@
+{
+  "finished": "2026-09-06T08:31:58.492928+00:00",
+  "label": "root-custody",
+  "exit_code": 0,
+  "seconds": 34.99067520000972,
+  "stdout_sha256": "51d4d326d4d8eb23e2aaf7e4c51713bc4b12e7c05c244997ede33e5edeb3af66",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "PATH_unchanged": true
+}

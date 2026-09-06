@@ -1,0 +1,9 @@
+{
+  "finished": "2026-09-06T08:22:27.257557+00:00",
+  "label": "student-web",
+  "exit_code": 0,
+  "seconds": 0.1196434000012232,
+  "stdout_sha256": "0fc410d861a6b520a8970d6531cd88515f2045d18d9ca40c718be2f0757dffcf",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "PATH_unchanged": true
+}

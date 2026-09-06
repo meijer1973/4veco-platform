@@ -1,0 +1,9 @@
+{
+  "finished": "2026-09-06T08:22:27.304996+00:00",
+  "label": "publisher-print",
+  "exit_code": 0,
+  "seconds": 0.04581579999648966,
+  "stdout_sha256": "d7c8d3c2e5b1154c9e54ffe25a30730a19e09f40a0a6043ee0b35956e8198368",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "PATH_unchanged": true
+}
