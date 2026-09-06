@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "platform_base": "b3773c9b2a085ff83e82d7e71384ef10337d7c9c",
+  "platform_head": "3b895475e54f72239d85daaf4967567001038644",
+  "lessons_base": "a52206c0cc9e2578b57e285909c77134bb47657e",
+  "lessons_head": "a52206c0cc9e2578b57e285909c77134bb47657e",
+  "platform_paths": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-plan.md",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-check.cjs",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-claim-lessons-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-claim-platform-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-evidence.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-fetch-lessons-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-fetch-platform-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-governance-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-bundle-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-currentness-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-durable-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-publisher-print-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-student-web-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-report.md"
+  ],
+  "lessons_paths": [
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md"
+  ],
+  "unknown": 0,
+  "source_output_PDF_QC_handoff_old_evidence_changes": 0
+}
