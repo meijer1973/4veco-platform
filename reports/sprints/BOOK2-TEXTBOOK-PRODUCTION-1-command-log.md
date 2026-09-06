@@ -16573,3 +16573,70 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-proof-namespace-scope.js e5edeb270120bc9ae041673267adddcd5575766f
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:15:32.405Z`
+- finished_at: `2026-09-06T02:15:36.284Z`
+- duration_ms: `3879`
+- exit_code: `0`
+- stdout_sha256: `20f04ea18bbd8f45a71917f885cb94cd65aaca25a2e2497bae18deadf1c26b7a`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "head": "e5edeb270120bc9ae041673267adddcd5575766f",
+  "owned_paths": 9,
+  "tests": 7,
+  "scopes": [
+    {
+      "label": "incremental-platform",
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 4,
+        "generated_indexes": 0,
+        "review_evidence": 5,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 82,
+        "generated_indexes": 6,
+        "review_evidence": 4201,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "counts": {
+        "partA_textbook": 204,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 5,
+        "unknown": 0
+      }
+    }
+  ],
+  "whitespace": {
+    "incremental_default_exit": 0,
+    "complete_default_exit": 2,
+    "complete_actual_diagnostics_preserved": true
+  }
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
