@@ -1,0 +1,563 @@
+# Sprint BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN: Command Log
+
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.js
+
+- cwd: `C:\wt\book2-224-production-20260906\4veco-platform`
+- started_at: `2026-09-06T00:28:36.167Z`
+- finished_at: `2026-09-06T00:28:38.996Z`
+- duration_ms: `2829`
+- exit_code: `0`
+- stdout_sha256: `9f564a7b37a50d154e71d77337013e3a40731b4073c84705e34c414ab5731cbb`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "phase": "pre-authoring baseline",
+  "checks": 19,
+  "legacy": 1898,
+  "legacy224": 10,
+  "core": 48.5,
+  "plan": null,
+  "pins": [
+    {
+      "repo": "P",
+      "file": "references/owned/course-blueprint-v6-three-year.md",
+      "raw_sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e",
+      "lf_sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e"
+    },
+    {
+      "repo": "P",
+      "file": "references/owned/course-blueprint-v5.md",
+      "raw_sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7",
+      "lf_sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7"
+    },
+    {
+      "repo": "P",
+      "file": "references/owned/course-blueprint-pedagogical-boundaries.md",
+      "raw_sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7",
+      "lf_sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7"
+    },
+    {
+      "repo": "P",
+      "file": "references/authored/course-target-exercises.json",
+      "raw_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "lf_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e"
+    },
+    {
+      "repo": "P",
+      "file": "references/authored/book-outlines/book-2-outline.meta.json",
+      "raw_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "lf_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "raw_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76",
+      "lf_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "raw_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+      "lf_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "raw_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345",
+      "lf_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "raw_sha256": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+      "lf_sha256": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "raw_sha256": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa",
+      "lf_sha256": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "raw_sha256": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811",
+      "lf_sha256": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "raw_sha256": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db",
+      "lf_sha256": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Ela
+...[truncated 5861 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.js
+
+- cwd: `C:\wt\book2-224-production-20260906\4veco-platform`
+- started_at: `2026-09-06T00:36:34.317Z`
+- finished_at: `2026-09-06T00:36:36.531Z`
+- duration_ms: `2214`
+- exit_code: `0`
+- stdout_sha256: `9c4236e1335b8781a2def796d4010dabc267ed021b1020c5db5387f67156854f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "phase": "canonical plan checks",
+  "checks": 22,
+  "legacy": 1898,
+  "legacy224": 10,
+  "core": 48.5,
+  "plan": {
+    "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+    "raw_sha256": "fcc55870ba93b18324c1f04fe61c0cd3642e0ad3dbbffe87d42de35382072257",
+    "lf_sha256": "fcc55870ba93b18324c1f04fe61c0cd3642e0ad3dbbffe87d42de35382072257"
+  },
+  "pins": [
+    {
+      "repo": "P",
+      "file": "references/owned/course-blueprint-v6-three-year.md",
+      "raw_sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e",
+      "lf_sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e"
+    },
+    {
+      "repo": "P",
+      "file": "references/owned/course-blueprint-v5.md",
+      "raw_sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7",
+      "lf_sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7"
+    },
+    {
+      "repo": "P",
+      "file": "references/owned/course-blueprint-pedagogical-boundaries.md",
+      "raw_sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7",
+      "lf_sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7"
+    },
+    {
+      "repo": "P",
+      "file": "references/authored/course-target-exercises.json",
+      "raw_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "lf_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e"
+    },
+    {
+      "repo": "P",
+      "file": "references/authored/book-outlines/book-2-outline.meta.json",
+      "raw_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "lf_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "raw_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76",
+      "lf_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "raw_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+      "lf_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "raw_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345",
+      "lf_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "raw_sha256": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+      "lf_sha256": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "raw_sha256": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa",
+      "lf_sha256": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "raw_sha256": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811",
+      "lf_sha256": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Pr
+...[truncated 6186 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js
+
+- cwd: `C:\wt\book2-224-production-20260906\4veco-platform`
+- started_at: `2026-09-06T00:36:36.965Z`
+- finished_at: `2026-09-06T00:36:38.759Z`
+- duration_ms: `1794`
+- exit_code: `0`
+- stdout_sha256: `853f95b103f377ced893df892e46c0922cbd89d74099a1c5979b31c0f4b9b24e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: structural-currentness
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --action goal_design --paragraph 2.2.4
+
+- cwd: `C:\wt\book2-224-production-20260906\4veco-platform`
+- started_at: `2026-09-06T00:36:50.505Z`
+- finished_at: `2026-09-06T00:36:52.366Z`
+- duration_ms: `1861`
+- exit_code: `0`
+- stdout_sha256: `5ba7ff00cfe74b38fe699d7078e41d3227db55a070d017f52e2715f855981d9d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: action:goal_design
+- paragraph scope: 2.2.4
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action goal_design --paragraph 2.2.4
+
+- cwd: `C:\wt\book2-224-production-20260906\4veco-platform`
+- started_at: `2026-09-06T00:36:53.318Z`
+- finished_at: `2026-09-06T00:36:55.727Z`
+- duration_ms: `2409`
+- exit_code: `0`
+- stdout_sha256: `6546538caea644dd664bdd599315b7a06fb4e07ad9c140f4743bcc80f3778f33`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.4
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.2.4
+
+- cwd: `C:\wt\book2-224-production-20260906\4veco-platform`
+- started_at: `2026-09-06T00:36:56.440Z`
+- finished_at: `2026-09-06T00:36:58.268Z`
+- duration_ms: `1828`
+- exit_code: `0`
+- stdout_sha256: `6546538caea644dd664bdd599315b7a06fb4e07ad9c140f4743bcc80f3778f33`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.4
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-224-production-20260906\4veco-platform`
+- started_at: `2026-09-06T00:36:58.975Z`
+- finished_at: `2026-09-06T00:36:59.595Z`
+- duration_ms: `620`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TEXTBOOK-PRODUCTION-1
+
+- cwd: `C:\wt\book2-224-production-20260906\4veco-platform`
+- started_at: `2026-09-06T00:37:00.336Z`
+- finished_at: `2026-09-06T00:37:00.581Z`
+- duration_ms: `245`
+- exit_code: `0`
+- stdout_sha256: `699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.js
+
+- cwd: `C:\wt\book2-224-production-20260906\4veco-platform`
+- started_at: `2026-09-06T00:37:59.989Z`
+- finished_at: `2026-09-06T00:38:02.577Z`
+- duration_ms: `2588`
+- exit_code: `0`
+- stdout_sha256: `d176088b0c79cbafc570e642a07e446b3897c374fb2f94c0657984dff57f15b2`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "phase": "canonical plan checks",
+  "checks": 31,
+  "legacy": 1898,
+  "legacy224": 10,
+  "core": 48.5,
+  "plan": {
+    "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+    "raw_sha256": "fcc55870ba93b18324c1f04fe61c0cd3642e0ad3dbbffe87d42de35382072257",
+    "lf_sha256": "fcc55870ba93b18324c1f04fe61c0cd3642e0ad3dbbffe87d42de35382072257"
+  },
+  "pins": [
+    {
+      "repo": "P",
+      "file": "references/owned/course-blueprint-v6-three-year.md",
+      "raw_sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e",
+      "lf_sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e"
+    },
+    {
+      "repo": "P",
+      "file": "references/owned/course-blueprint-v5.md",
+      "raw_sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7",
+      "lf_sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7"
+    },
+    {
+      "repo": "P",
+      "file": "references/owned/course-blueprint-pedagogical-boundaries.md",
+      "raw_sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7",
+      "lf_sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7"
+    },
+    {
+      "repo": "P",
+      "file": "references/authored/course-target-exercises.json",
+      "raw_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "lf_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e"
+    },
+    {
+      "repo": "P",
+      "file": "references/authored/book-outlines/book-2-outline.meta.json",
+      "raw_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "lf_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "raw_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76",
+      "lf_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "raw_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+      "lf_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "raw_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345",
+      "lf_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "raw_sha256": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+      "lf_sha256": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "raw_sha256": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa",
+      "lf_sha256": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "raw_sha256": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811",
+      "lf_sha256": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Pr
+...[truncated 6186 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.js
+
+- cwd: `C:\wt\book2-224-production-20260906\4veco-platform`
+- started_at: `2026-09-06T00:39:59.832Z`
+- finished_at: `2026-09-06T00:40:02.838Z`
+- duration_ms: `3006`
+- exit_code: `0`
+- stdout_sha256: `d176088b0c79cbafc570e642a07e446b3897c374fb2f94c0657984dff57f15b2`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "phase": "canonical plan checks",
+  "checks": 31,
+  "legacy": 1898,
+  "legacy224": 10,
+  "core": 48.5,
+  "plan": {
+    "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+    "raw_sha256": "fcc55870ba93b18324c1f04fe61c0cd3642e0ad3dbbffe87d42de35382072257",
+    "lf_sha256": "fcc55870ba93b18324c1f04fe61c0cd3642e0ad3dbbffe87d42de35382072257"
+  },
+  "pins": [
+    {
+      "repo": "P",
+      "file": "references/owned/course-blueprint-v6-three-year.md",
+      "raw_sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e",
+      "lf_sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e"
+    },
+    {
+      "repo": "P",
+      "file": "references/owned/course-blueprint-v5.md",
+      "raw_sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7",
+      "lf_sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7"
+    },
+    {
+      "repo": "P",
+      "file": "references/owned/course-blueprint-pedagogical-boundaries.md",
+      "raw_sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7",
+      "lf_sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7"
+    },
+    {
+      "repo": "P",
+      "file": "references/authored/course-target-exercises.json",
+      "raw_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "lf_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e"
+    },
+    {
+      "repo": "P",
+      "file": "references/authored/book-outlines/book-2-outline.meta.json",
+      "raw_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "lf_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "raw_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76",
+      "lf_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "raw_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+      "lf_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "raw_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345",
+      "lf_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "raw_sha256": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+      "lf_sha256": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "raw_sha256": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa",
+      "lf_sha256": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "raw_sha256": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811",
+      "lf_sha256": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811"
+    },
+    {
+      "repo": "L",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Pr
+...[truncated 6186 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
