@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "git",
+    "diff",
+    "--check",
+    "f913b9af0ade9c5ea99b1e929cfe0544d7c392a6",
+    "752283869e292e693fd28b99eb0369f4a9ff1f84"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:49:17.138Z",
+  "ended": "2026-09-06T04:49:17.181Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "",
+  "stderr": "",
+  "stdout_base64": "",
+  "stderr_base64": ""
+}

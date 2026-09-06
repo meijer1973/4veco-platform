@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "head": "752283869e292e693fd28b99eb0369f4a9ff1f84",
+  "lessons": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a",
+  "custody": [
+    {
+      "repository": "platform",
+      "inherited": 13931,
+      "actual_raw_git_exact": 13939
+    },
+    {
+      "repository": "lessons",
+      "inherited": 1904,
+      "actual_raw_git_exact": 1904
+    }
+  ],
+  "scopes": [
+    {
+      "label": "increment-platform",
+      "exit": 1,
+      "ok": false,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 8,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "unchanged-lessons",
+      "exit": 1,
+      "ok": false,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "exit": 0,
+      "ok": true,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 84,
+        "generated_indexes": 6,
+        "review_evidence": 6206,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "exit": 0,
+      "ok": true,
+      "counts": {
+        "partA_textbook": 207,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 6,
+        "unknown": 0
+      }
+    }
+  ],
+  "own_whitespace_exit": 0,
+  "no_foreign_changes": true
+}

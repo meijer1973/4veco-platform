@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "--lane",
+    "shared",
+    "--base",
+    "f913b9af0ade9c5ea99b1e929cfe0544d7c392a6",
+    "--head",
+    "752283869e292e693fd28b99eb0369f4a9ff1f84",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:49:16.394Z",
+  "ended": "2026-09-06T04:49:16.473Z",
+  "exit_code": 1,
+  "error": null,
+  "stdout": "{\n  \"ok\": false,\n  \"lane\": \"shared\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-baseline.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-bundle-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-check.js\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-check.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-durable-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-goal-design-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-result.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-structural-process.json\"\n    ],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [\n    \"shared lane needs at least one shared platform change\",\n    \"generated index/report or review-evidence changes are allowed only with lane-owned changes\"\n  ],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": "",
+  "stdout_base64": "ewogICJvayI6IGZhbHNlLAogICJsYW5lIjogInNoYXJlZCIsCiAgImNhdGVnb3JpZXMiOiB7CiAgICAicGFydEFfdGV4dGJvb2siOiBbXSwKICAgICJwYXJ0Ql9jb21wYW5pb24iOiBbXSwKICAgICJzaGFyZWRfcGxhdGZvcm0iOiBbXSwKICAgICJnZW5lcmF0ZWRfaW5kZXhlcyI6IFtdLAogICAgInJldmlld19ldmlkZW5jZSI6IFsKICAgICAgInJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjM0LVBMQU4tUkVMRUFTRS1iYXNlbGluZS5qc29uIiwKICAgICAgInJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjM0LVBMQU4tUkVMRUFTRS1idW5kbGUtcHJvY2Vzcy5qc29uIiwKICAgICAgInJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjM0LVBMQU4tUkVMRUFTRS1jaGVjay5qcyIsCiAgICAgICJyZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzNC1QTEFOLVJFTEVBU0UtY2hlY2suanNvbiIsCiAgICAgICJyZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzNC1QTEFOLVJFTEVBU0UtZHVyYWJsZS1wcm9jZXNzLmpzb24iLAogICAgICAicmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMzQtUExBTi1SRUxFQVNFLWdvYWwtZGVzaWduLXByb2Nlc3MuanNvbiIsCiAgICAgICJyZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzNC1QTEFOLVJFTEVBU0UtcmVzdWx0Lm1kIiwKICAgICAgInJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjM0LVBMQU4tUkVMRUFTRS1zdHJ1Y3R1cmFsLXByb2Nlc3MuanNvbiIKICAgIF0sCiAgICAidW5rbm93biI6IFtdCiAgfSwKICAicXVhbGl0eVJlZkNoYW5nZXMiOiBbXSwKICAiZmFpbHVyZXMiOiBbCiAgICAic2hhcmVkIGxhbmUgbmVlZHMgYXQgbGVhc3Qgb25lIHNoYXJlZCBwbGF0Zm9ybSBjaGFuZ2UiLAogICAgImdlbmVyYXRlZCBpbmRleC9yZXBvcnQgb3IgcmV2aWV3LWV2aWRlbmNlIGNoYW5nZXMgYXJlIGFsbG93ZWQgb25seSB3aXRoIGxhbmUtb3duZWQgY2hhbmdlcyIKICBdLAogICJ3YXJuaW5ncyI6IFtdLAogICJleGNlcHRpb24iOiB7CiAgICAicHJlc2VudCI6IGZhbHNlLAogICAgIm9rIjogZmFsc2UsCiAgICAiZmFpbHVyZXMiOiBbXQogIH0KfQo=",
+  "stderr_base64": ""
+}

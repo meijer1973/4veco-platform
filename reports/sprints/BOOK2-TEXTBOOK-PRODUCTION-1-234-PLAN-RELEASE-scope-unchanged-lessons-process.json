@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "--lane",
+    "textbook",
+    "--base",
+    "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a",
+    "--head",
+    "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:49:16.474Z",
+  "ended": "2026-09-06T04:49:16.544Z",
+  "exit_code": 1,
+  "error": null,
+  "stdout": "{\n  \"ok\": false,\n  \"lane\": \"textbook\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [\n    \"no changed paths to classify\",\n    \"textbook lane needs at least one Part A textbook change\"\n  ],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": "",
+  "stdout_base64": "ewogICJvayI6IGZhbHNlLAogICJsYW5lIjogInRleHRib29rIiwKICAiY2F0ZWdvcmllcyI6IHsKICAgICJwYXJ0QV90ZXh0Ym9vayI6IFtdLAogICAgInBhcnRCX2NvbXBhbmlvbiI6IFtdLAogICAgInNoYXJlZF9wbGF0Zm9ybSI6IFtdLAogICAgImdlbmVyYXRlZF9pbmRleGVzIjogW10sCiAgICAicmV2aWV3X2V2aWRlbmNlIjogW10sCiAgICAidW5rbm93biI6IFtdCiAgfSwKICAicXVhbGl0eVJlZkNoYW5nZXMiOiBbXSwKICAiZmFpbHVyZXMiOiBbCiAgICAibm8gY2hhbmdlZCBwYXRocyB0byBjbGFzc2lmeSIsCiAgICAidGV4dGJvb2sgbGFuZSBuZWVkcyBhdCBsZWFzdCBvbmUgUGFydCBBIHRleHRib29rIGNoYW5nZSIKICBdLAogICJ3YXJuaW5ncyI6IFtdLAogICJleGNlcHRpb24iOiB7CiAgICAicHJlc2VudCI6IGZhbHNlLAogICAgIm9rIjogZmFsc2UsCiAgICAiZmFpbHVyZXMiOiBbXQogIH0KfQo=",
+  "stderr_base64": ""
+}
