@@ -1,0 +1,66 @@
+{
+  "pass": true,
+  "imports": 867,
+  "preserved_current_platform_files": 13261,
+  "own_append_only_recorder_logs": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.jsonl",
+      "original_bytes": 736981,
+      "current_bytes": 746203,
+      "original_prefix_byte_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.md",
+      "original_bytes": 714091,
+      "current_bytes": 722891,
+      "original_prefix_byte_exact": true
+    }
+  ],
+  "preserved_current_lesson_files": 1902,
+  "native_files": 20,
+  "all_three_paths_raw_and_96_rendered_page_parity": true,
+  "new_generation_proofs": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-evidence/223-paragraaf-ca27f8bd6cbb-r28",
+      "manifest_sha256": "aede55730fe9bc0bedda2825609544ede9e297d737e356e7011888ddb87f8ded"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-evidence/223-opgaven-50cf2bbeaa19-r28",
+      "manifest_sha256": "1d44d181423737492b4718942f0490752fef1abda6d549e3ec17651b7044856b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-evidence/223-antwoorden-30cd682358c5-r28",
+      "manifest_sha256": "1a1bc2f2c4f512f32c51fd1e0e61e92d5166a6cb14d104d3eb62167f2dcc9c33"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-evidence/223-paragraaf-ca27f8bd6cbb-r29",
+      "manifest_sha256": "1e556bd4a74662080ad3d49db15bd6298c6ef7210f00a81e451ed97034953e10"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-evidence/223-opgaven-50cf2bbeaa19-r29",
+      "manifest_sha256": "2edb7a46051a6121ec41011a28c99ca26fa856d4d1b7a3951534d6d6c97a018f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-evidence/223-antwoorden-30cd682358c5-r29",
+      "manifest_sha256": "3988f953314d4f72b04dbac0df7015a5d73997ef1ec678a2ddafa46289081b43"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-evidence/223-paragraaf-ca27f8bd6cbb-r30",
+      "manifest_sha256": "cca857ad1d58bdf54c0ff02dc0e36e17d13db4221903432a7b62c56156676076"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-evidence/223-opgaven-50cf2bbeaa19-r30",
+      "manifest_sha256": "fbecc3582306007d452f96b5c10a9118337eb18f8731a682bac8f73984010ba5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-evidence/223-antwoorden-30cd682358c5-r30",
+      "manifest_sha256": "d0a2dec30da71ef5f4e7aa4ce9c08b46e07f238171095f90689592dfd9a140af"
+    }
+  ],
+  "distinct_reviewers_views": 144,
+  "root_personal_views": 0,
+  "root_acceptance": "PENDING",
+  "handoff": "ABSENT",
+  "current_review_sha256": "56883966bb05a60b395e6d53d9228d4e801072818c00b8634dd2c60a1de3121f",
+  "current_QC_sha256": "880508d4ae80f80afe4dbf567f34fa37fe607fca88fb8ea595be21b7d7e3f566"
+}

@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-book2-target-authority-remediation.js",
+    "--durable"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "child_PATH": "C:/msys64/mingw64/bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\.codex\\tmp\\arg0\\codex-arg0uDve1V;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\libheif\\libheif\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\jxrlib\\jxrlib\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\override;C:\\Python314\\Scripts\\;C:\\Python314\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\GitHub CLI\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\meije\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\meije\\AppData\\Roaming\\npm;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WinGet\\Packages\\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\\poppler-25.07.0\\Library\\bin;C:\\Users\\meije\\AppData\\Local\\Pandoc\\;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\fallback;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\b592626b34cbe333;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\1e3e57cdf0634c02",
+  "profile": "223 Python314 MSYS-FIRST child only; no parent/global environment mutation",
+  "started_utc": "2026-09-06T03:33:48.626219+00:00",
+  "finished_utc": "2026-09-06T03:33:49.343445+00:00",
+  "exit_code": 0,
+  "expected_exit": 0,
+  "stdout": "Book 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n",
+  "stderr": ""
+}

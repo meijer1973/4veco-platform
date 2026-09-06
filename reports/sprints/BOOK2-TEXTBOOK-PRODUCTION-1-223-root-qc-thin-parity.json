@@ -1,0 +1,591 @@
+{
+  "pass": true,
+  "native_files": 20,
+  "paragraph_files": {
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.html": "3af048f800cfff79706e04bad324cbb7f7d84998952cb15b6e0cbfaab09d25a7",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.zip": "fbaccaa40565fac929b8a4c6b747b5ce69ef19b807bd9a1a6131e7b066e8b34c",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.html": "0d8350bdd37bf146ffc316bebc792fcbee4f4526fd65fbfd1bbbd98576626b60",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md": "ffdbc7d62c86d4945c52fabf94629790c0b54783a9c67060b03522ee1c497fbf",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.zip": "d77b0b29194786adae5d87ad1ae83eb8ea081029c87c15787f9a5b205d8a2ac6",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html": "9ce0cfaede013511c2f292f432e34b3acaf525b891efb406030f1d532ed993f9",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md": "5e19fc4528f5644f8c0f94da601c88d923c017078559a4ad0e97163837bfa287",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.zip": "74e84bde67aba572f125e30c18c84849ecf19374d0e04c95bcdd555dcc73773a",
+    "2.2.3-quality-ref.yaml": "880508d4ae80f80afe4dbf567f34fa37fe607fca88fb8ea595be21b7d7e3f566",
+    "2.2.3-review.md": "56883966bb05a60b395e6d53d9228d4e801072818c00b8634dd2c60a1de3121f",
+    "2.2.3-textbook-plan.md": "dd2f91d0035829986076b7d5e96b43fa9c45f3d3698da1d159a955634fa01497",
+    "_assets/2.2.3_fig_1.png": "0b401e098bb2f56bb86663de908402a048a12a4b599b368e3489dc11bea95b65",
+    "_assets/2.2.3_fig_1.svg": "51b83ba543581f28030ec75ed4bca51f964837f85772076a8e4e9261620ea974",
+    "_assets/2.2.3_fig_2.png": "59929543ec072f8d3e300d6f8b52e2510f0594d7dca5e5fd9e82dc0900a5c6a7",
+    "_assets/2.2.3_fig_2.svg": "dbe07d11e771367a2bc55906448cbe3f484e312731602806915a3b5edac09319",
+    "_assets/2.2.3_fig_3.png": "0290351674b94ff93b47586bd2fb4ba15b6bd18cf30d9dd7e44bd1f7ea2f6e4f",
+    "_assets/2.2.3_fig_3.svg": "5ac52a0e58b0ea22f58b0ea4e165a565b3e0621eb2198fd0952346b6b5e4c61f",
+    "_assets/2.2.3_fig_4.png": "e221b15c2409d16cac3ad2b7423700758b4c477f88a974059b106ca03ed5d8fd",
+    "_assets/2.2.3_fig_4.svg": "bf31583a5413e17043df437e38aa7fd066eac549cfccc3e8d060fabf7166b065",
+    "_paragraph-plan.md": "bab60ca5c3019298d6722a94698cf2654cddb4e0c87b4742ceb3d925a5fd5f0c",
+    "build_pdf.py": "8c955509b8a8f42f0b8f27e6df58151a0947598268aa656197ae263a4f6f6000"
+  },
+  "whole_paragraph_files": 25,
+  "pages": 32,
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb",
+      "pages": [
+        {
+          "name": "page-001.png",
+          "raw_sha256": "b7366b3949b77bea438487125fa7ad150cf4907acff456f35f8293c292dca2e4",
+          "pixels_sha256": "8185298e29a3083cc80d8de12de9b1808d2cc238fd27aa09642ff99910e05913",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "ed6ca1f2c41f651436cba7c99bf28948a05178413b94310abcbbb85778df62ec"
+        },
+        {
+          "name": "page-002.png",
+          "raw_sha256": "7b60b29e71112380498d52a744a2a97bedbbdf10c84469717eb5a5188c58de94",
+          "pixels_sha256": "92a07609364a7ee36526ff4f9523b261633cf2621915921fb7070b3dbe1891ef",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "f96aa5166b1e8eb84007f768110ef8db85210b744fd154955a137a2994defdc1"
+        },
+        {
+          "name": "page-003.png",
+          "raw_sha256": "d58591dcacda670565ca5c1ec466225f5276596dfc8a9c88e98b553d2daa6ad9",
+          "pixels_sha256": "1e57c7be6ee7fac353b52e4b0542e3c8d6865329c04872b7a1c26ddbb8a66045",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "7259dd9350e198c6f12b387f76a93fb6f374972fe4d66d0d705a81d98b846a94"
+        },
+        {
+          "name": "page-004.png",
+          "raw_sha256": "1a44e6d7bd5e37dc4c9543035184e52071477027ec8db3ae5513666d2a76beef",
+          "pixels_sha256": "7ee8589c6bc4fd07ecdd06d81540b1bdb7d13bba4c38bbbaa953b9d6057706e9",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "cfefca94a89f28e55529aea3821b28bfac52cdf8eedb1e934fb12f0bd5f8f2f8"
+        },
+        {
+          "name": "page-005.png",
+          "raw_sha256": "4d2efeef982a923a3e1a8d1ea4436f7e6d806587f00b6b7ecf9b24c894ae36ff",
+          "pixels_sha256": "9a73cf7e24834b6d7cb9f328bd6cffb57877d5a778d7d36f05ab2baddc50db22",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "9f828687391b4a835f827e94e0921775592b7402975923a543e5878d86c01f53"
+        },
+        {
+          "name": "page-006.png",
+          "raw_sha256": "42ff63b670575c8a5b88df1ccd8054e977ee7c159a23f0d93ae2fd4055e24299",
+          "pixels_sha256": "f7b89f779c931ddcdf5f6d6464dc334a89c1a3b8a2d474eba6a40035b8c22b50",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "86e50338fdff2060905bd28911119cca147f17e1d7945e9a9867091f61422c95"
+        },
+        {
+          "name": "page-007.png",
+          "raw_sha256": "517aee1b7eb4049dbc03d24d9ea9144e7d9c23eea54b63f4f3518410bfd2d399",
+          "pixels_sha256": "aafe130da2f40631b5adace38e87c5f2a5711bc2934c0341fd6b865c455a8678",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "b2322a827723c68e87a6d6c943f955c9d062c6b062cd3ac0fded4ee0d0cc89a8"
+        },
+        {
+          "name": "page-008.png",
+          "raw_sha256": "b584d2ee68328f4097ccb3b473794348eacbf6c78c21ee176e4487ad886010fc",
+          "pixels_sha256": "7cfc095db525beb0f9c8cb1b66f1ec929e6c683cb3966c37b53b90ffee449282",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "f9db3476ed41597bf55ef3ac004c7db5c641c2fb028c03327280e90c51ec5007"
+        },
+        {
+          "name": "page-009.png",
+          "raw_sha256": "002ac1d25f4c85eab427202cb6dcb36acc92008b0a4d664a933acae4143ae20e",
+          "pixels_sha256": "941dbac30bd0c121de9aabf2a3387f519ef75c2b959162d2e601585b1dfccf90",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "d8ebd7588ecfbb9c55aec0ef6fe6a012d6fb2cbc64b39cdb167ad888606e2330"
+        },
+        {
+          "name": "page-010.png",
+          "raw_sha256": "02c5034be29baa1fce9538fdf4d55b0577540d52f01014791bcc2878fcd38ecc",
+          "pixels_sha256": "0bcec17dca346af62b169c112d159fc8f86adc125aedf0c8a8ba414824037ccb",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "fc9a504b0678cc96b885397f9a0ad6c72ed9ee43e06b9fa4f069ef76bc19a2bd"
+        },
+        {
+          "name": "page-011.png",
+          "raw_sha256": "3a1703d5849281ee25d6ea6e806255c031666378b975b15a1b120cb985718a1d",
+          "pixels_sha256": "f53ec2da39e6ae8463c4eb9dfe029f250bfd666c3c4aadbe3ef8ef649c94fec3",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "258b1d1a66bd31edafb12350672ef0613e7db35b9e0963541fcaf5bbb3a62ffb"
+        },
+        {
+          "name": "page-012.png",
+          "raw_sha256": "97c3814148325ae31102f057722d2940cb637846558de828c428664215771a94",
+          "pixels_sha256": "6f2a8589e80c78eb642e6a059ed5c44f67738d51efc82f35f783a9d7994a7653",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "a7e69bf0f37d173bab3c2c034682e37b13740f22099c2849a40c10d5df16cc3b"
+        },
+        {
+          "name": "page-013.png",
+          "raw_sha256": "ae3983d5735bd0cb1221d549b7efa286dde7ce349854881b1478f4efa3dec315",
+          "pixels_sha256": "8da826fcf59ab07cd666103161b2844d182b9bed3f56f5a347887bb2680875cb",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "5ac1cd0081e245279697ee50863edd0ff512292c0a8e2a4b2ec0817b482b8810"
+        },
+        {
+          "name": "page-014.png",
+          "raw_sha256": "b65a0ed32fe7adf10cbecc2c10ebc44c30d3e99245e0fa9d82c8a9c690e650b1",
+          "pixels_sha256": "a05d81ecb1f38ab6361dbb6e6a50e9da484f938e274ed87f576b2832d40baf15",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "8637a2b470ede7ed5f28e0c7562bc45e9e933d557879e76026a6034864acb071"
+        },
+        {
+          "name": "page-015.png",
+          "raw_sha256": "98c5a06687663c0090aba1aae22774fe87c65c7a06cc7d9074f7873c53a9aee7",
+          "pixels_sha256": "ea6cb7bbd1296bfb3244c0d8459dd1cbe1c7088877115865785b52d5c8a01668",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "696ca1691f17ff5b2911a7268e279f3fa74a1e6ead5e642bf9509fd2defca9eb"
+        }
+      ],
+      "zip_members": [
+        {
+          "name": "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html",
+          "before_sha256": "3b1725338d2cdb16edf616da76516b699d97055cf74cdfaca076eeaf94f2cc08",
+          "after_sha256": "9ce0cfaede013511c2f292f432e34b3acaf525b891efb406030f1d532ed993f9",
+          "crc": 3150538441
+        },
+        {
+          "name": "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+          "before_sha256": "062b78d54c064e6dbb3765b8da77575da50fedcde6777551e10fb5842a14ebac",
+          "after_sha256": "5e19fc4528f5644f8c0f94da601c88d923c017078559a4ad0e97163837bfa287",
+          "crc": 46891257
+        },
+        {
+          "name": "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+          "before_sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb",
+          "after_sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb",
+          "crc": 159928120
+        },
+        {
+          "name": "_assets/2.2.3_fig_1.png",
+          "before_sha256": "0b401e098bb2f56bb86663de908402a048a12a4b599b368e3489dc11bea95b65",
+          "after_sha256": "0b401e098bb2f56bb86663de908402a048a12a4b599b368e3489dc11bea95b65",
+          "crc": 3469422350
+        },
+        {
+          "name": "_assets/2.2.3_fig_1.svg",
+          "before_sha256": "51b83ba543581f28030ec75ed4bca51f964837f85772076a8e4e9261620ea974",
+          "after_sha256": "51b83ba543581f28030ec75ed4bca51f964837f85772076a8e4e9261620ea974",
+          "crc": 1239809613
+        },
+        {
+          "name": "_assets/2.2.3_fig_2.png",
+          "before_sha256": "59929543ec072f8d3e300d6f8b52e2510f0594d7dca5e5fd9e82dc0900a5c6a7",
+          "after_sha256": "59929543ec072f8d3e300d6f8b52e2510f0594d7dca5e5fd9e82dc0900a5c6a7",
+          "crc": 1115407186
+        },
+        {
+          "name": "_assets/2.2.3_fig_2.svg",
+          "before_sha256": "dbe07d11e771367a2bc55906448cbe3f484e312731602806915a3b5edac09319",
+          "after_sha256": "dbe07d11e771367a2bc55906448cbe3f484e312731602806915a3b5edac09319",
+          "crc": 4219922921
+        },
+        {
+          "name": "_assets/2.2.3_fig_3.png",
+          "before_sha256": "0290351674b94ff93b47586bd2fb4ba15b6bd18cf30d9dd7e44bd1f7ea2f6e4f",
+          "after_sha256": "0290351674b94ff93b47586bd2fb4ba15b6bd18cf30d9dd7e44bd1f7ea2f6e4f",
+          "crc": 701977978
+        },
+        {
+          "name": "_assets/2.2.3_fig_3.svg",
+          "before_sha256": "5ac52a0e58b0ea22f58b0ea4e165a565b3e0621eb2198fd0952346b6b5e4c61f",
+          "after_sha256": "5ac52a0e58b0ea22f58b0ea4e165a565b3e0621eb2198fd0952346b6b5e4c61f",
+          "crc": 888995426
+        },
+        {
+          "name": "_assets/2.2.3_fig_4.png",
+          "before_sha256": "e221b15c2409d16cac3ad2b7423700758b4c477f88a974059b106ca03ed5d8fd",
+          "after_sha256": "e221b15c2409d16cac3ad2b7423700758b4c477f88a974059b106ca03ed5d8fd",
+          "crc": 1298389532
+        },
+        {
+          "name": "_assets/2.2.3_fig_4.svg",
+          "before_sha256": "bf31583a5413e17043df437e38aa7fd066eac549cfccc3e8d060fabf7166b065",
+          "after_sha256": "bf31583a5413e17043df437e38aa7fd066eac549cfccc3e8d060fabf7166b065",
+          "crc": 4188611504
+        }
+      ],
+      "proof_directory": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-evidence/223-paragraaf-ca27f8bd6cbb-r29",
+      "manifest_sha256": "1e556bd4a74662080ad3d49db15bd6298c6ef7210f00a81e451ed97034953e10"
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80",
+      "pages": [
+        {
+          "name": "page-001.png",
+          "raw_sha256": "ad28636a613509e762f0a03db9e6e743b3855e8e5a1d44a51f4e15ea05dbce06",
+          "pixels_sha256": "7746bc0c4033e5dc82bcb9b03440aa6b4b4e5b3e7a201175317174d5a96fb5ee",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "3e9dbdee244d17e079838beff9f7249924df0dad70fce365cdbf62f537d871ad"
+        },
+        {
+          "name": "page-002.png",
+          "raw_sha256": "1b4243e42f49ccdf3328600fb103af97f8e25657fa80607422b4213de10d965e",
+          "pixels_sha256": "109ea41519a4e7b0d97330c755e039c17b34ffeb65e268e34d40d37307eb4488",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "834ce1a400bc297e5caf140fc05ef8e851e86a60994a6b282cf81a80fab693bd"
+        },
+        {
+          "name": "page-003.png",
+          "raw_sha256": "980173eec3c6c7284e2e7c4269d2bf03950f19c1d36e6ae012f0df46c4e4a387",
+          "pixels_sha256": "7bf1a4a9cebe76f30d69ed316e89009ddbd4ca27c6d5de51917c639898a0eec6",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "c0963e034ccd2b01ca32a766cfc837be2028c2e58fa228d35a92fc2bdba2bcb7"
+        },
+        {
+          "name": "page-004.png",
+          "raw_sha256": "d3963e513ac19b595f58308b85887c00ed9885cb86a6af1d133a5f40e396ab69",
+          "pixels_sha256": "04cc203be5f049f9c944a4e53b300a23ee6afa6bbf0856b967b90f7df4f1506b",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "eeb1e0b22f8e7290bac556a78e8bf8e7c04d0b39769fb422eea9450fea5054fa"
+        },
+        {
+          "name": "page-005.png",
+          "raw_sha256": "b650610f50b04af50b3316be91f371e21701dd484426d195c91b9a9e731f9d03",
+          "pixels_sha256": "35a81462f35ad9e87fa21181d39ae856c4f4e7e7228d73510b55d6a1821fa78d",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "82c0d9b5ab63db459b6c85b37566fd4bd8228af09faf9afbb60e3c7b54f479cc"
+        },
+        {
+          "name": "page-006.png",
+          "raw_sha256": "dd2f40669daa814b4d8e220c00051d54974d5c1b171970235d18db88f9b23a4e",
+          "pixels_sha256": "75d658c20346f0693561dbe5319037c6db10aceec35a8649465d5934e790d2a6",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "c63811106fa079b397a23b8fbea3750b33bfb2c25e2240e1eb2a1e3542261319"
+        },
+        {
+          "name": "page-007.png",
+          "raw_sha256": "60c3b91eac06977b7bcb011897caecbcddaa77c23c606425330f4a03cc146f77",
+          "pixels_sha256": "8761c561be0834537296b79c4c4e470852ac2e3c13395d4d042bfe63e9011268",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "7262c76a85c1483718c8d1306d79288b64e25d0350f5960e2ff2beb897653825"
+        },
+        {
+          "name": "page-008.png",
+          "raw_sha256": "381c23bf3c62ec2dcb352ea11a98409b10ea760b6e386cf438ffbde6a1069ad0",
+          "pixels_sha256": "e55eae128420eae2b8b12ae48673803341e8599055b4c29addc873266594b7aa",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "ad538b6770e7518dc0f0aa90e5f7502ed860d9601f44e0db0ad905dac048077f"
+        },
+        {
+          "name": "page-009.png",
+          "raw_sha256": "c92fd39508d031bb617fd19009602092e1ed1e51577f88171d7d42283b68f9a8",
+          "pixels_sha256": "6023f6aef2ffbdd5097f8eff2550702ca1169801d1a3aeb96865bf15d8ca1ae0",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "a85abbeb87c5e5afd404cfda7d6c950a84162bde887cf8b8a3f86cb38fe9b4ed"
+        },
+        {
+          "name": "page-010.png",
+          "raw_sha256": "476ce38e390159d37f8132379ba9065d89f9e898df12b76a8e13c7457c62f583",
+          "pixels_sha256": "0dda46ebc1f7d3fa6c349ab8df735ddc7f0f47e1403cd0baefd3d2b8ade166a0",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "6d010e3bdb85679f6f1cdc3b94e40f9d746dd8f11fc1726269dd044effe02393"
+        }
+      ],
+      "zip_members": [
+        {
+          "name": "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.html",
+          "before_sha256": "cf691595eb0ea599ba90825f631d98eaa9cdf75526de4435d5ea569fea610893",
+          "after_sha256": "0d8350bdd37bf146ffc316bebc792fcbee4f4526fd65fbfd1bbbd98576626b60",
+          "crc": 910911303
+        },
+        {
+          "name": "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+          "before_sha256": "f680b6f72166ff66c06f3da42ed61e536614dfc12d50b0ab403264d284697d19",
+          "after_sha256": "ffdbc7d62c86d4945c52fabf94629790c0b54783a9c67060b03522ee1c497fbf",
+          "crc": 3512550670
+        },
+        {
+          "name": "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf",
+          "before_sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80",
+          "after_sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80",
+          "crc": 699786615
+        },
+        {
+          "name": "_assets/2.2.3_fig_4.png",
+          "before_sha256": "e221b15c2409d16cac3ad2b7423700758b4c477f88a974059b106ca03ed5d8fd",
+          "after_sha256": "e221b15c2409d16cac3ad2b7423700758b4c477f88a974059b106ca03ed5d8fd",
+          "crc": 1298389532
+        },
+        {
+          "name": "_assets/2.2.3_fig_4.svg",
+          "before_sha256": "bf31583a5413e17043df437e38aa7fd066eac549cfccc3e8d060fabf7166b065",
+          "after_sha256": "bf31583a5413e17043df437e38aa7fd066eac549cfccc3e8d060fabf7166b065",
+          "crc": 4188611504
+        }
+      ],
+      "proof_directory": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-evidence/223-opgaven-50cf2bbeaa19-r29",
+      "manifest_sha256": "2edb7a46051a6121ec41011a28c99ca26fa856d4d1b7a3951534d6d6c97a018f"
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10",
+      "pages": [
+        {
+          "name": "page-001.png",
+          "raw_sha256": "f1431ef12d232686db986daa76050fe865ab24e0f98a13c2d3b04fd3fc812332",
+          "pixels_sha256": "958f70553dd103f5b43b97bf13726626b0e879ed87bba844533cc609b86a5644",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "8c94c28cabae230fb1872708b1dec6bf7f4ef51e74c08e7757748c167dbdf034"
+        },
+        {
+          "name": "page-002.png",
+          "raw_sha256": "75844b51d401c9edef9f76c6c442249503a9f654f06fdc17fe469fd7cdbe4d62",
+          "pixels_sha256": "9aef787ad7d95be0420253ba427440119900437c50b8a11cf150fab3fefd03e5",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "4d5da869d2ae4efbf4c5880d7ea5cffbae76463d94ab18a3f7c19e25b84116dd"
+        },
+        {
+          "name": "page-003.png",
+          "raw_sha256": "83af2d3018f01977f7e9eac95357af24654cd2a7606ff6e38ad9a20ac84d2a62",
+          "pixels_sha256": "051a63469f3e77ddf654f810a562c3ed845c4bb4c81936917be30c76181a5384",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "9dd7c9c22cdd4ff6f51f8d2040c7a37b8287532e34f06c28ddbbe3c239f80afc"
+        },
+        {
+          "name": "page-004.png",
+          "raw_sha256": "cd79f2d4310f20655aa26ac7bb9b552301d821bf944502c2cc1400bdf38c3aaf",
+          "pixels_sha256": "3724ee309a02849db99d20ef492143cba7e716bfaf6194e7cdd81854b67d905a",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "0e4f180421f85631fff565779fcc033148e749d508738df261c4e1505c8ad839"
+        },
+        {
+          "name": "page-005.png",
+          "raw_sha256": "be425cf9f17dd9e4b739783056a63b9420dd55b0d0a58ec7187f6b90a8c06d65",
+          "pixels_sha256": "02bcfdf2f123d17cb490e27aa0aa8d9aebb0558f72011f2a6be03d78f4c092fc",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "8e3f64714939f14bdccd391d296b0781c5a51dd3fc0900dc924d3baa2f1b3b73"
+        },
+        {
+          "name": "page-006.png",
+          "raw_sha256": "ff465ba581b3eb38f9cd1e713efe6a72f2fe1425738201a847162780ac5c0969",
+          "pixels_sha256": "b45b6e7e1b786af055a561f000b9723f2bc357119e1a9c5726ef3f658797f912",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "0833510f121de0c64265ff2847152152290930e578f05a63a937723ca3544dcf"
+        },
+        {
+          "name": "page-007.png",
+          "raw_sha256": "3bfa11bf2b5a0dcc3238b77fbc31021fbf53edbeecbc7fd9641da55cac6bde19",
+          "pixels_sha256": "3642398191b31d2c03a478960c359591d62317827b45346137baed475a42d2c3",
+          "size": [
+            1241,
+            1754
+          ],
+          "gray_pixels_sha256": "6cf426aa3efd64a061388d544b678f2f181e65cf534efafda47ae67e846f96f5"
+        }
+      ],
+      "zip_members": [
+        {
+          "name": "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.html",
+          "before_sha256": "3af048f800cfff79706e04bad324cbb7f7d84998952cb15b6e0cbfaab09d25a7",
+          "after_sha256": "3af048f800cfff79706e04bad324cbb7f7d84998952cb15b6e0cbfaab09d25a7",
+          "crc": 4140896886
+        },
+        {
+          "name": "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+          "before_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+          "after_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+          "crc": 868016418
+        },
+        {
+          "name": "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf",
+          "before_sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10",
+          "after_sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10",
+          "crc": 1256159017
+        }
+      ],
+      "proof_directory": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-evidence/223-antwoorden-30cd682358c5-r29",
+      "manifest_sha256": "3988f953314d4f72b04dbac0df7015a5d73997ef1ec678a2ddafa46289081b43"
+    }
+  ],
+  "figures": [
+    {
+      "number": 1,
+      "svg_sha256": "51b83ba543581f28030ec75ed4bca51f964837f85772076a8e4e9261620ea974",
+      "png_sha256": "0b401e098bb2f56bb86663de908402a048a12a4b599b368e3489dc11bea95b65",
+      "pixels_sha256": "c8a8b5d6ab86451d97e7049862b2884f7be84cd50e239afe5590858ec36cb594",
+      "gray_pixels_sha256": "c09f0cf9f0f1033f01be71a7ce725c28e00dea07a5d7da6ed4ed626e7edc28f4"
+    },
+    {
+      "number": 2,
+      "svg_sha256": "dbe07d11e771367a2bc55906448cbe3f484e312731602806915a3b5edac09319",
+      "png_sha256": "59929543ec072f8d3e300d6f8b52e2510f0594d7dca5e5fd9e82dc0900a5c6a7",
+      "pixels_sha256": "2dff6e63cc098c150ff86e1403738aa1fc1608bf1a16af99fa15adb7ce610bb7",
+      "gray_pixels_sha256": "b4542e13d5f5a35450ea4b1a12cf73f94190273873db387eba8fc05b869757d3"
+    },
+    {
+      "number": 3,
+      "svg_sha256": "5ac52a0e58b0ea22f58b0ea4e165a565b3e0621eb2198fd0952346b6b5e4c61f",
+      "png_sha256": "0290351674b94ff93b47586bd2fb4ba15b6bd18cf30d9dd7e44bd1f7ea2f6e4f",
+      "pixels_sha256": "10a4bc2ea32e9ebaf13884bec7b9aa0d4312e3914fe20256b3e8ee4320f94240",
+      "gray_pixels_sha256": "3e66a669dfced0d1b32af8c62d19d6f30fbc62fe7732c27e11d82aec948f9031"
+    },
+    {
+      "number": 4,
+      "svg_sha256": "bf31583a5413e17043df437e38aa7fd066eac549cfccc3e8d060fabf7166b065",
+      "png_sha256": "e221b15c2409d16cac3ad2b7423700758b4c477f88a974059b106ca03ed5d8fd",
+      "pixels_sha256": "967da0ede902e17817fd828b0c339132f7a966093634b2acd78632ed05e80434",
+      "gray_pixels_sha256": "ccf4cec88d5f261dbc023c68f7893a6f87d5cbbbd679a665eb498adf8106f13d"
+    }
+  ],
+  "complete_metadata_delta": [
+    {
+      "kind": "paragraaf",
+      "md_before_sha256": "062b78d54c064e6dbb3765b8da77575da50fedcde6777551e10fb5842a14ebac",
+      "md_after_sha256": "5e19fc4528f5644f8c0f94da601c88d923c017078559a4ad0e97163837bfa287",
+      "html_before_sha256": "3b1725338d2cdb16edf616da76516b699d97055cf74cdfaca076eeaf94f2cc08",
+      "html_after_sha256": "9ce0cfaede013511c2f292f432e34b3acaf525b891efb406030f1d532ed993f9",
+      "complete_native_derivation_equal": true,
+      "changes": [
+        {
+          "image": 2,
+          "before_alt": "Figuur 2: Zoek eerst het teken van Ei en daarna het juiste gebied.",
+          "after_alt": "Ei-schaal: inferieur bij Ei<0, normaal bij 0<Ei<1 en luxe bij Ei>1; open grenspunten 0 en 1 zonder categorie.",
+          "characters": 109,
+          "before_caption_html": "<figcaption aria-hidden=\"true\">Figuur 2: Zoek eerst het teken van Ei en\ndaarna het juiste gebied.</figcaption>",
+          "after_caption_html": "<figcaption>Figuur 2: Zoek eerst het teken van Ei en daarna het juiste\ngebied.</figcaption>"
+        },
+        {
+          "image": 4,
+          "before_alt": "Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.",
+          "after_alt": "Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.",
+          "characters": 118,
+          "before_caption_html": "<figcaption aria-hidden=\"true\">Figuur 4: Vergelijk afzonderlijke\nveranderingen steeds met dezelfde beginsituatie.</figcaption>",
+          "after_caption_html": "<figcaption>Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\ndezelfde beginsituatie.</figcaption>"
+        }
+      ],
+      "html_line_diff_binary_omitted": "--- input.html\n+++ candidate.html\n@@ -211,9 +211,9 @@\n een normaal goed die je in Boek 1 tegenkwam, is nog niet deze formele\n driecategorieënindeling.</p>\n <figure>\n-<img alt=\"Figuur 2: Zoek eerst het teken van Ei en daarna het juiste gebied.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n-<figcaption aria-hidden=\"true\">Figuur 2: Zoek eerst het teken van Ei en\n-daarna het juiste gebied.</figcaption>\n+<img alt=\"Ei-schaal: inferieur bij Ei&lt;0, normaal bij 0&lt;Ei&lt;1 en luxe bij Ei&gt;1; open grenspunten 0 en 1 zonder categorie.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n+<figcaption>Figuur 2: Zoek eerst het teken van Ei en daarna het juiste\n+gebied.</figcaption>\n </figure>\n <blockquote class=\"callout-short\">\n <p><strong>Let op - teken niet wegpoetsen</strong></p>\n@@ -490,9 +490,9 @@\n </tbody>\n </table>\n <figure>\n-<img alt=\"Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n-<figcaption aria-hidden=\"true\">Figuur 4: Vergelijk afzonderlijke\n-veranderingen steeds met dezelfde beginsituatie.</figcaption>\n+<img alt=\"Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n+<figcaption>Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\n+dezelfde beginsituatie.</figcaption>\n </figure>\n <p><strong>Stap 3 - Bereken de percentages en Ei.</strong> Gebruik de\n eigen oude waarde van iedere variabele:</p>\n"
+    },
+    {
+      "kind": "opgaven",
+      "md_before_sha256": "f680b6f72166ff66c06f3da42ed61e536614dfc12d50b0ab403264d284697d19",
+      "md_after_sha256": "ffdbc7d62c86d4945c52fabf94629790c0b54783a9c67060b03522ee1c497fbf",
+      "html_before_sha256": "cf691595eb0ea599ba90825f631d98eaa9cdf75526de4435d5ea569fea610893",
+      "html_after_sha256": "0d8350bdd37bf146ffc316bebc792fcbee4f4526fd65fbfd1bbbd98576626b60",
+      "complete_native_derivation_equal": true,
+      "changes": [
+        {
+          "image": 1,
+          "before_alt": "Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.",
+          "after_alt": "Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.",
+          "characters": 118,
+          "before_caption_html": "<figcaption aria-hidden=\"true\">Figuur 4: Vergelijk afzonderlijke\nveranderingen steeds met dezelfde beginsituatie.</figcaption>",
+          "after_caption_html": "<figcaption>Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\ndezelfde beginsituatie.</figcaption>"
+        }
+      ],
+      "html_line_diff_binary_omitted": "--- input.html\n+++ candidate.html\n@@ -189,9 +189,9 @@\n </tbody>\n </table>\n <figure>\n-<img alt=\"Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n-<figcaption aria-hidden=\"true\">Figuur 4: Vergelijk afzonderlijke\n-veranderingen steeds met dezelfde beginsituatie.</figcaption>\n+<img alt=\"Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n+<figcaption>Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\n+dezelfde beginsituatie.</figcaption>\n </figure>\n <p><strong>Stap 3 - Bereken de percentages en Ei.</strong> Gebruik de\n eigen oude waarde van iedere variabele:</p>\n"
+    },
+    {
+      "kind": "antwoorden",
+      "md_before_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+      "md_after_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+      "html_before_sha256": "3af048f800cfff79706e04bad324cbb7f7d84998952cb15b6e0cbfaab09d25a7",
+      "html_after_sha256": "3af048f800cfff79706e04bad324cbb7f7d84998952cb15b6e0cbfaab09d25a7",
+      "complete_native_derivation_equal": true,
+      "changes": [],
+      "html_line_diff_binary_omitted": ""
+    }
+  ],
+  "personal_inspection": "NOT_INFERRED",
+  "root_validation": "PENDING",
+  "root_acceptance": "PENDING",
+  "handoff_renewal": "PENDING"
+}

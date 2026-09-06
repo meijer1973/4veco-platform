@@ -1,0 +1,178 @@
+{
+  "pass": true,
+  "specialist_actor": "paragraph_214_builder",
+  "paragraph_actor": "paragraph_224_builder",
+  "distinct_attributed_views": 144,
+  "root_personal_views": 0,
+  "review_successor": {
+    "old_sha256": "e603b62ba2d77e1c33db6aeeaeb24d9b41ec7a136f26020bc3b5081e0a2e56a4",
+    "new_sha256": "56883966bb05a60b395e6d53d9228d4e801072818c00b8634dd2c60a1de3121f",
+    "lesson_source_commit": "6ba3bbdff3de31261b63d71ee992b33b07bce50d",
+    "platform_source_commits": [
+      "3b895475e54f72239d85daaf4967567001038644",
+      "e2f0165cdfac453ca4cc0746164214186f834b6b",
+      "f49314d347a87ca7b4da0c46b5d2f6d3b32dfd8d"
+    ],
+    "line": 135,
+    "from": "+30 meals/month",
+    "to": "+30 subscriptions/month",
+    "exact_full_byte_replacement_and_reverse": true,
+    "imported_reports": [
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-actual-scope.json",
+        "sha256": "578603932e05758966fd0f14cadb047b3e67b2ce2751ce9983da951b6b986079"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-check.cjs",
+        "sha256": "4f135261f4ca40dad3e9a2657bf34eda4650511c0a8b350f632db738ef7095c4"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-claim-lessons-process.json",
+        "sha256": "1cbccf2ae202b915f3500f9b5743a5260f253e2903e696b20980fd5a5949ee81"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-claim-platform-process.json",
+        "sha256": "42d98a689cbaa23ac11fdb5c8777edd343fc20ddf3f910a69d8f7050b4cf72dd"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-evidence.json",
+        "sha256": "96b1f81cda686ae94dbc30c587da1bbded878f6d9e0dd4ff69c37dd277610e21"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-fetch-lessons-process.json",
+        "sha256": "408664ca4069297719ebd74cb3597b20ce5bbaa6c2b87c02d00cb6d48267cc3f"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-fetch-platform-process.json",
+        "sha256": "8d1048c8e62cd1eb91acb759aabfc3bdb7c0cc90a36faead0317fc4d6d3d4e4a"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-governance-process.json",
+        "sha256": "8c2dfcafef43950156e5e666d4c07b56f7371197133d815bd59083d0d8fdc380"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-plan.md",
+        "sha256": "fbe888d8be79613c254c138421a41c6953c9d632a8a2960073ec1f7dbe9e57f4"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-bundle-process.json",
+        "sha256": "1f6ff02567f5d609b88ad7dd1bc3b14a51f365f5512a4fd74177a2e44e4a8d27"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-currentness-process.json",
+        "sha256": "52ee497138249929043fb247a474d0a98c10e98bb4e076a24743724991c4042c"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-durable-process.json",
+        "sha256": "183205ee3f6cbfa519a07e182e2265d312f07c29a21075ecebb15b382c10b369"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-publisher-print-process.json",
+        "sha256": "d11736cb6af5793dafd87d1a121463a991af23dd82ed6bae4b86c0e66ed53c8b"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-post-review-student-web-process.json",
+        "sha256": "ed969012f8629322b0e7f466b995d5ffe76b141f400f7cf1ceceaab4b62ac0f5"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-publication.md",
+        "sha256": "c6909cc34ac139641cd9fdbd7d974647b646457ed7c74f4229e5a206c19a4a98"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-report.md",
+        "sha256": "5021b5c1cce07c7fd6cff4225a967f2a02bbaacfbb302864d1979b29e84d739f"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-scope-complete-lessons-process.json",
+        "sha256": "704405225b645acffbeef27dd7fea0513db3544bdb04dedc1bbd54857a9b500e"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-scope-complete-platform-process.json",
+        "sha256": "77b4e362b6f2f60ed4a90b202a46cafadb443b2cfbdbba4836849f7feb05c526"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-scope-own-lessons-process.json",
+        "sha256": "fafd67b046b3ea1c25fd8c653692c32e3eaf8dba177904ff5c2cc56d9100b300"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-scope-own-platform-process.json",
+        "sha256": "3dc561079bbf43d396e4149181c6642ef6c8ce7d6d20063ea41defde693d9e90"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-stage-inventory.json",
+        "sha256": "7ddbd27513e197bd1b2f7723356b79e9233d997c19e9fa75a58eca2755594c0b"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-whitespace-lessons-process.json",
+        "sha256": "8ad4b71307f85ab58c6517fb27f392ee69a2d24e9c414b4804ac3f4a245d53af"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-NOUN-whitespace-platform-process.json",
+        "sha256": "759695806036592b3e646f8970879714852a889cc3c3052d7b58c8c07a83a630"
+      }
+    ],
+    "authorization": "root explicit bounded reviewer-only import after own operational note e32256cd",
+    "not_specialist_or_root_acceptance": true
+  },
+  "current_QC_sha256": "880508d4ae80f80afe4dbf567f34fa37fe607fca88fb8ea595be21b7d7e3f566",
+  "metadata": [
+    {
+      "kind": "paragraaf",
+      "md_before_sha256": "062b78d54c064e6dbb3765b8da77575da50fedcde6777551e10fb5842a14ebac",
+      "md_after_sha256": "5e19fc4528f5644f8c0f94da601c88d923c017078559a4ad0e97163837bfa287",
+      "html_before_sha256": "3b1725338d2cdb16edf616da76516b699d97055cf74cdfaca076eeaf94f2cc08",
+      "html_after_sha256": "9ce0cfaede013511c2f292f432e34b3acaf525b891efb406030f1d532ed993f9",
+      "complete_native_derivation_equal": true,
+      "changes": [
+        {
+          "image": 2,
+          "before_alt": "Figuur 2: Zoek eerst het teken van Ei en daarna het juiste gebied.",
+          "after_alt": "Ei-schaal: inferieur bij Ei<0, normaal bij 0<Ei<1 en luxe bij Ei>1; open grenspunten 0 en 1 zonder categorie.",
+          "characters": 109,
+          "before_caption_html": "<figcaption aria-hidden=\"true\">Figuur 2: Zoek eerst het teken van Ei en\ndaarna het juiste gebied.</figcaption>",
+          "after_caption_html": "<figcaption>Figuur 2: Zoek eerst het teken van Ei en daarna het juiste\ngebied.</figcaption>"
+        },
+        {
+          "image": 4,
+          "before_alt": "Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.",
+          "after_alt": "Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.",
+          "characters": 118,
+          "before_caption_html": "<figcaption aria-hidden=\"true\">Figuur 4: Vergelijk afzonderlijke\nveranderingen steeds met dezelfde beginsituatie.</figcaption>",
+          "after_caption_html": "<figcaption>Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\ndezelfde beginsituatie.</figcaption>"
+        }
+      ],
+      "html_line_diff_binary_omitted": "--- input.html\n+++ candidate.html\n@@ -211,9 +211,9 @@\n een normaal goed die je in Boek 1 tegenkwam, is nog niet deze formele\n driecategorieënindeling.</p>\n <figure>\n-<img alt=\"Figuur 2: Zoek eerst het teken van Ei en daarna het juiste gebied.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n-<figcaption aria-hidden=\"true\">Figuur 2: Zoek eerst het teken van Ei en\n-daarna het juiste gebied.</figcaption>\n+<img alt=\"Ei-schaal: inferieur bij Ei&lt;0, normaal bij 0&lt;Ei&lt;1 en luxe bij Ei&gt;1; open grenspunten 0 en 1 zonder categorie.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n+<figcaption>Figuur 2: Zoek eerst het teken van Ei en daarna het juiste\n+gebied.</figcaption>\n </figure>\n <blockquote class=\"callout-short\">\n <p><strong>Let op - teken niet wegpoetsen</strong></p>\n@@ -490,9 +490,9 @@\n </tbody>\n </table>\n <figure>\n-<img alt=\"Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n-<figcaption aria-hidden=\"true\">Figuur 4: Vergelijk afzonderlijke\n-veranderingen steeds met dezelfde beginsituatie.</figcaption>\n+<img alt=\"Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n+<figcaption>Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\n+dezelfde beginsituatie.</figcaption>\n </figure>\n <p><strong>Stap 3 - Bereken de percentages en Ei.</strong> Gebruik de\n eigen oude waarde van iedere variabele:</p>\n"
+    },
+    {
+      "kind": "opgaven",
+      "md_before_sha256": "f680b6f72166ff66c06f3da42ed61e536614dfc12d50b0ab403264d284697d19",
+      "md_after_sha256": "ffdbc7d62c86d4945c52fabf94629790c0b54783a9c67060b03522ee1c497fbf",
+      "html_before_sha256": "cf691595eb0ea599ba90825f631d98eaa9cdf75526de4435d5ea569fea610893",
+      "html_after_sha256": "0d8350bdd37bf146ffc316bebc792fcbee4f4526fd65fbfd1bbbd98576626b60",
+      "complete_native_derivation_equal": true,
+      "changes": [
+        {
+          "image": 1,
+          "before_alt": "Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.",
+          "after_alt": "Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.",
+          "characters": 118,
+          "before_caption_html": "<figcaption aria-hidden=\"true\">Figuur 4: Vergelijk afzonderlijke\nveranderingen steeds met dezelfde beginsituatie.</figcaption>",
+          "after_caption_html": "<figcaption>Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\ndezelfde beginsituatie.</figcaption>"
+        }
+      ],
+      "html_line_diff_binary_omitted": "--- input.html\n+++ candidate.html\n@@ -189,9 +189,9 @@\n </tbody>\n </table>\n <figure>\n-<img alt=\"Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n-<figcaption aria-hidden=\"true\">Figuur 4: Vergelijk afzonderlijke\n-veranderingen steeds met dezelfde beginsituatie.</figcaption>\n+<img alt=\"Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n+<figcaption>Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\n+dezelfde beginsituatie.</figcaption>\n </figure>\n <p><strong>Stap 3 - Bereken de percentages en Ei.</strong> Gebruik de\n eigen oude waarde van iedere variabele:</p>\n"
+    },
+    {
+      "kind": "antwoorden",
+      "md_before_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+      "md_after_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+      "html_before_sha256": "3af048f800cfff79706e04bad324cbb7f7d84998952cb15b6e0cbfaab09d25a7",
+      "html_after_sha256": "3af048f800cfff79706e04bad324cbb7f7d84998952cb15b6e0cbfaab09d25a7",
+      "complete_native_derivation_equal": true,
+      "changes": [],
+      "html_line_diff_binary_omitted": ""
+    }
+  ],
+  "target_arithmetic_root_recomputed": true,
+  "specialist_full_math_bound": true
+}
