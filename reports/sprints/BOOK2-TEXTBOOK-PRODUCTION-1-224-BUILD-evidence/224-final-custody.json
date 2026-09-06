@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "baseline_files": 15331,
+  "preserved": 15324,
+  "authorized_existing_changes": [
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.html",
+      "git_blob": "3ed0e35600607cde98ff13c9a5e051c60e0a7840",
+      "raw_sha256": "cf7e387a7809cd364d354c905a064cc9777c3beef615d9fb8a50f57bd37c0120",
+      "current_raw_sha256": "ba6ccaa14aeba4924b511c48e80d563356398bc723a9fde84a3512be290bb53e"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.md",
+      "git_blob": "de49a6a5e297bd8e2fb57365190710ac6c091e67",
+      "raw_sha256": "b94308d2ca8f5427c18177c220f79c4293f43a88f9b13e7c7cd7bc8084da412f",
+      "current_raw_sha256": "1cccda3c2068e2916d66c350f7fdcfc07383d1f897ae1cd28bad1f70b0c84de8"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "git_blob": "b1558afea098b99c321c121d02d2dd2ec112381a",
+      "raw_sha256": "adda78727645e1661abffc4c20f16465b2d7223d84dcb29b34f720729e022733",
+      "current_raw_sha256": "f6ba34f89ae0c4a4c0f26f12afb392af5271e1edde28bde65854b90287dd57f8"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.html",
+      "git_blob": "f1b8ab4a50e243149e20f354248e0a48391aa205",
+      "raw_sha256": "59f419a55d63ced8c2f3b928f5dc21c4511010f26a6da129f395a6117e6c4b68",
+      "current_raw_sha256": "8fc29bc1e6b061051b80e08d2a62bc771d8bf873492fb3a8778f99a8964fe7bc"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+      "git_blob": "a2321b01685720e3eab62770c115a876f5d7ee92",
+      "raw_sha256": "6ca4612641844657ca5c6b73f578455ebdeeaf9921e74dbcb5fc3d722911d4e1",
+      "current_raw_sha256": "b5f0247abfc924c0bb0eace26d751ae4b25ba778252740e5d9210afdfa48d200"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "git_blob": "3f65c05c7fdef195215a8737fa571fd7f3b5605e",
+      "raw_sha256": "bb7128ee3b9e770f46194d8549fcadca10193e5af3c74694379de5e94aa5511f",
+      "current_raw_sha256": "8eb84c6f10bb824033ffea669a04a393bf57c25b4757805523c0f44a19bafa0d"
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/build_pdf.py",
+      "git_blob": "83ffe0b7b8d6b18ee2d560698c1e807f02c38d1a",
+      "raw_sha256": "8bfdea7581130ab7c4d5e7a9ef617730bdae4b6dd78b7cb3f1032fcbeed2bef9",
+      "current_raw_sha256": "d6b03fff7cb66547d341a095c2d943f2cd11be2127b0aea2e0c321fbba812d5d"
+    }
+  ],
+  "sources": [
+    {
+      "path": "build-scripts/content/book-2/b2_224.py",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "d5001620b81fc9ca2f390047367bf64885793b930b3763cba74b6babce842125"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/answers.md",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "f7c7fac3034c49b88788970fec6fa8ee66e66b0f02e29b63d23f1a02355bd164"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/check_render.py",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "a5f869c8b5ea43ddc14f38b5b7229db612d9141d99ec5514824288acdbad57c6"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/exercises.md",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "1003ef1ede3c61059e5e97c1d96b0a3e913f36799411f0e1b2ce62f16ad3bab9"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/target-answers.md",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "275af20f1a26d4d4205879e16fbe0f1fc1d69ff65cee024803c5694b367eb136"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/test_source.py",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "7594760c6aaf910d99ae5ee2e93fdd7736800256fc621890316fef638bc310c7"
+    }
+  ]
+}

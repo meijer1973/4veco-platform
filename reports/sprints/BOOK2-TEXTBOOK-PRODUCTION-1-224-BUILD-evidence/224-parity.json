@@ -1,0 +1,820 @@
+{
+  "status": "PASS",
+  "sources": [
+    {
+      "path": "build-scripts/content/book-2/b2_224.py",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "d5001620b81fc9ca2f390047367bf64885793b930b3763cba74b6babce842125"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/answers.md",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "f7c7fac3034c49b88788970fec6fa8ee66e66b0f02e29b63d23f1a02355bd164"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/check_render.py",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "a5f869c8b5ea43ddc14f38b5b7229db612d9141d99ec5514824288acdbad57c6"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/exercises.md",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "1003ef1ede3c61059e5e97c1d96b0a3e913f36799411f0e1b2ce62f16ad3bab9"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/target-answers.md",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "275af20f1a26d4d4205879e16fbe0f1fc1d69ff65cee024803c5694b367eb136"
+    },
+    {
+      "path": "build-scripts/content/book-2/224/test_source.py",
+      "commit": "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab",
+      "raw_sha256": "7594760c6aaf910d99ae5ee2e93fdd7736800256fc621890316fef638bc310c7"
+    }
+  ],
+  "manifests": [
+    {
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-fullfinal-r4-manifest.json",
+      "raw_sha256": "850942ef8b1749644749fa95c7c98c233bd12ca5d9d1ab06f7645f37fd3eaa89"
+    },
+    {
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-thinfinal-r5-manifest.json",
+      "raw_sha256": "144c741bf51cb19ea51567e31c52120ea15e45f26aed202729194b80f5a1583c"
+    },
+    {
+      "path": "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-directfinal-r6-manifest.json",
+      "raw_sha256": "77d6eec328e5467b8197566e94c439cb8fae0b53cf447e9cd67d08d97ffd1e06"
+    }
+  ],
+  "native_files": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+      "sha256": "b5f0247abfc924c0bb0eace26d751ae4b25ba778252740e5d9210afdfa48d200"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – opgaven.html",
+      "sha256": "8fc29bc1e6b061051b80e08d2a62bc771d8bf873492fb3a8778f99a8964fe7bc"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "sha256": "8eb84c6f10bb824033ffea669a04a393bf57c25b4757805523c0f44a19bafa0d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – antwoorden.md",
+      "sha256": "1cccda3c2068e2916d66c350f7fdcfc07383d1f897ae1cd28bad1f70b0c84de8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – antwoorden.html",
+      "sha256": "ba6ccaa14aeba4924b511c48e80d563356398bc723a9fde84a3512be290bb53e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "sha256": "f6ba34f89ae0c4a4c0f26f12afb392af5271e1edde28bde65854b90287dd57f8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\build_pdf.py",
+      "sha256": "d6b03fff7cb66547d341a095c2d943f2cd11be2127b0aea2e0c321fbba812d5d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_1.svg",
+      "sha256": "d97092fd39f3c1e1f21745879bd4bc591dedfb72a94da22f5b371aeb8b38ee88"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_1.png",
+      "sha256": "88c2d889c1884601ffb16861ef909bcf68c285999bfcf8881ddbdce39617f843"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_2.svg",
+      "sha256": "3cc3a5f7f1db7d1bdca66c1dd3dc602e260d92fe3e270428f888cb27dfbf9420"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_2.png",
+      "sha256": "8ad844aaf67bbdb31e3bd5162efec7165570952118cef0b8b400d03b1f429991"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_3.svg",
+      "sha256": "d094cd0803f0c023639aa70977909f3979bfeec46e763913c01bbd3b3d613e7e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_3.png",
+      "sha256": "b07321e621ead8ecec3862b8895b754734eb138935e24d680a7d9f229bc9a8a6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_4.svg",
+      "sha256": "ae2702581e6e88c8f82c87f0f3d2fec14a1b8cfa16afc7ebb25f010f9e945116"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\_assets\\2.2.4_ex_4.png",
+      "sha256": "99c8d340c8ac7a9ab04f5fffa5d3b0c05d5b32ed6cfd226807ff8871a6096af1"
+    }
+  ],
+  "page_sets": [
+    [
+      {
+        "kind": "opgaven",
+        "page": 1,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r4\\pages\\page-001.png",
+        "raw_sha256": "fde2df212620dab61d6a79eff3b68908e67f39e913e3bd7a651b048d24bd2efb",
+        "rgb_sha256": "590a9c1e1b3f011d2c9e49eab8f44670420e1263bbdfe908353aa3e62d554773",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 2,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r4\\pages\\page-002.png",
+        "raw_sha256": "8e854a7a4d094932670d93e59d2e5837f2e78533513261ede8e29fb8fb9116dc",
+        "rgb_sha256": "e41ee546b9b6944735eae86db017b2966d5ffd241d76fbecdcca12d5abd1a469",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 3,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r4\\pages\\page-003.png",
+        "raw_sha256": "ffd43c20a082db12e29e9991e51ba29e138d72d581c5e9acd390f1ef3ccad2af",
+        "rgb_sha256": "82c7cdadf4979fa7f94daf18c8bd5a5e8bdba4fb438e55c3df6df64d66c5e845",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 4,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r4\\pages\\page-004.png",
+        "raw_sha256": "dc3e8048cb8b7a2f858ba378516784c046f14c44959a94b1f96746d780cc96c9",
+        "rgb_sha256": "553c374de86e7991d5b04d2b94698a9f2b8a44468633e275871ff407ba6fd04c",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 5,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r4\\pages\\page-005.png",
+        "raw_sha256": "cc0ec45f75205b7be388783b42e969cad69bcb75ddb3514da1b8f55d8700632d",
+        "rgb_sha256": "dab1cd17b286b3b85989cc82cbf914403ae1253017968042cf2b9869330db815",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 6,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r4\\pages\\page-006.png",
+        "raw_sha256": "53c263e039d4057e045e08c2041cb14fbfbb4b0bd4ae52ff89b0e6b2da092bd4",
+        "rgb_sha256": "734eba7ed6fdf673682f9c9b5f25d08e8258b252f9abedae7c7c171e824f4ff7",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 7,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r4\\pages\\page-007.png",
+        "raw_sha256": "8a845e4f9cfe86b11c37ed23fabb3079e64f8f099aca624e8ff4b78fe9278f20",
+        "rgb_sha256": "064bda484dd027e79c9b3067d02c8afddef4cdc923fb6bb7b74d37515bcfa331",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 8,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r4\\pages\\page-008.png",
+        "raw_sha256": "ad26f2bf3e7328abc02eb004f9ceabaf9b7a124508aa805bbe35d74de23545b7",
+        "rgb_sha256": "e51dce6adb52f804c8a141d2c335d8c6af40a9bf5cb3468dd0a1979cc30a6246",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 9,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r4\\pages\\page-009.png",
+        "raw_sha256": "e42b3c202eaffec5f1e249555e8dd5a6b4086f4be11057bf4340e94996f480b9",
+        "rgb_sha256": "44f4a480de484850775d958907a202362d9c04ed5e8e6bf8ba2cdf3e9b0b5f65",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 10,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r4\\pages\\page-010.png",
+        "raw_sha256": "4ea2c7ff2bfee2c63e72e85cb44a9d4e4b222cae10228a555102397443216f86",
+        "rgb_sha256": "84bab193cbf3abd7f5157106bbd0e88bbe232634d4b25913b53a674de5d6d7be",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 1,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r4\\pages\\page-001.png",
+        "raw_sha256": "584cdd292415d409b1c1c20723a86090ce680ca297fb52b5f447785f1c32c586",
+        "rgb_sha256": "9e631a4b56c45a4901735d2bb256983ff956f2a779a6ce037ac3d2d7a90a541e",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 2,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r4\\pages\\page-002.png",
+        "raw_sha256": "8288264af30527abf2a5df14c51c387b4a97a1821f48856067e8209a5a29315c",
+        "rgb_sha256": "13a139be80e716c03bb70a62c1c59abb0bae2f98c7d235b50abff53d38a7138b",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 3,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r4\\pages\\page-003.png",
+        "raw_sha256": "8267ae083e4791d964e042834acf77998b324cd685049b4f72a31f62d603123f",
+        "rgb_sha256": "241daa18d9c117b393544e0a62a311fa11cc6cbd9697bac2ef0c1613c0b3b526",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 4,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r4\\pages\\page-004.png",
+        "raw_sha256": "cc5312a08af75f7999a185876845fabd5f0fdb0da3100d9f6cefd269a0875d2b",
+        "rgb_sha256": "995637fcd68e04e0647a8572cfb2611d41b0ff9d02936aceb96c352e23bbc0d7",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 5,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r4\\pages\\page-005.png",
+        "raw_sha256": "5a27ee2ebd712719cffe49de26e404e37057c363aff41d3a3dd7c1d1de81e8cf",
+        "rgb_sha256": "1895757083951ce9a7051110c6b81f3e882c6791f70931b4d152f3964ad0da3f",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 6,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r4\\pages\\page-006.png",
+        "raw_sha256": "4fbe832fa90e6951225020fc49ab56cefed76b8f42e3112dade8ea251c3c52ce",
+        "rgb_sha256": "d2fb11b3836fca1ea2589500e5723c6bc96dea132dd2538b838fa7f7fad5b3a3",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 7,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r4\\pages\\page-007.png",
+        "raw_sha256": "5ac97b01ffaf5fe45a21ccfeffd52f3540f5d55214f088a62e68bb97e2822c45",
+        "rgb_sha256": "f1549cd65077b65063b5d21c1f9f73882a6ddf5c0b1da53c2cd030434f2b4bda",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 8,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r4\\pages\\page-008.png",
+        "raw_sha256": "068ef6dbaf6a7091fb6ea09b260b8850a1f6231356fd6e4fa0080be7141d2a11",
+        "rgb_sha256": "c6eff2cb8dd07849352675b4d921552deb0029cffd77d437da13eb0ba2c5e33e",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 9,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r4\\pages\\page-009.png",
+        "raw_sha256": "cf9476a7104ba9e3535fa5dff3672fa7534fd5e96bbd12acf5aef4b21ac3de69",
+        "rgb_sha256": "d6e5e57b25c68e48e094dd600af79c4a47fbe39b13ea8307782666b4ff310903",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 10,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r4\\pages\\page-010.png",
+        "raw_sha256": "ce3958cb01e03350cbefad400b544fedc87483de0cfcd200d5e495b42549321a",
+        "rgb_sha256": "f732a3e6bd1e997bdfbbbd9c8dd391d6111b98cd7f26baccf5190103ac84d0ad",
+        "size": [
+          1241,
+          1754
+        ]
+      }
+    ],
+    [
+      {
+        "kind": "opgaven",
+        "page": 1,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r5\\pages\\page-001.png",
+        "raw_sha256": "fde2df212620dab61d6a79eff3b68908e67f39e913e3bd7a651b048d24bd2efb",
+        "rgb_sha256": "590a9c1e1b3f011d2c9e49eab8f44670420e1263bbdfe908353aa3e62d554773",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 2,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r5\\pages\\page-002.png",
+        "raw_sha256": "8e854a7a4d094932670d93e59d2e5837f2e78533513261ede8e29fb8fb9116dc",
+        "rgb_sha256": "e41ee546b9b6944735eae86db017b2966d5ffd241d76fbecdcca12d5abd1a469",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 3,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r5\\pages\\page-003.png",
+        "raw_sha256": "ffd43c20a082db12e29e9991e51ba29e138d72d581c5e9acd390f1ef3ccad2af",
+        "rgb_sha256": "82c7cdadf4979fa7f94daf18c8bd5a5e8bdba4fb438e55c3df6df64d66c5e845",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 4,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r5\\pages\\page-004.png",
+        "raw_sha256": "dc3e8048cb8b7a2f858ba378516784c046f14c44959a94b1f96746d780cc96c9",
+        "rgb_sha256": "553c374de86e7991d5b04d2b94698a9f2b8a44468633e275871ff407ba6fd04c",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 5,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r5\\pages\\page-005.png",
+        "raw_sha256": "cc0ec45f75205b7be388783b42e969cad69bcb75ddb3514da1b8f55d8700632d",
+        "rgb_sha256": "dab1cd17b286b3b85989cc82cbf914403ae1253017968042cf2b9869330db815",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 6,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r5\\pages\\page-006.png",
+        "raw_sha256": "53c263e039d4057e045e08c2041cb14fbfbb4b0bd4ae52ff89b0e6b2da092bd4",
+        "rgb_sha256": "734eba7ed6fdf673682f9c9b5f25d08e8258b252f9abedae7c7c171e824f4ff7",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 7,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r5\\pages\\page-007.png",
+        "raw_sha256": "8a845e4f9cfe86b11c37ed23fabb3079e64f8f099aca624e8ff4b78fe9278f20",
+        "rgb_sha256": "064bda484dd027e79c9b3067d02c8afddef4cdc923fb6bb7b74d37515bcfa331",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 8,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r5\\pages\\page-008.png",
+        "raw_sha256": "ad26f2bf3e7328abc02eb004f9ceabaf9b7a124508aa805bbe35d74de23545b7",
+        "rgb_sha256": "e51dce6adb52f804c8a141d2c335d8c6af40a9bf5cb3468dd0a1979cc30a6246",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 9,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r5\\pages\\page-009.png",
+        "raw_sha256": "e42b3c202eaffec5f1e249555e8dd5a6b4086f4be11057bf4340e94996f480b9",
+        "rgb_sha256": "44f4a480de484850775d958907a202362d9c04ed5e8e6bf8ba2cdf3e9b0b5f65",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 10,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-opgaven-8eb84c6f10bb-r5\\pages\\page-010.png",
+        "raw_sha256": "4ea2c7ff2bfee2c63e72e85cb44a9d4e4b222cae10228a555102397443216f86",
+        "rgb_sha256": "84bab193cbf3abd7f5157106bbd0e88bbe232634d4b25913b53a674de5d6d7be",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 1,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r5\\pages\\page-001.png",
+        "raw_sha256": "584cdd292415d409b1c1c20723a86090ce680ca297fb52b5f447785f1c32c586",
+        "rgb_sha256": "9e631a4b56c45a4901735d2bb256983ff956f2a779a6ce037ac3d2d7a90a541e",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 2,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r5\\pages\\page-002.png",
+        "raw_sha256": "8288264af30527abf2a5df14c51c387b4a97a1821f48856067e8209a5a29315c",
+        "rgb_sha256": "13a139be80e716c03bb70a62c1c59abb0bae2f98c7d235b50abff53d38a7138b",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 3,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r5\\pages\\page-003.png",
+        "raw_sha256": "8267ae083e4791d964e042834acf77998b324cd685049b4f72a31f62d603123f",
+        "rgb_sha256": "241daa18d9c117b393544e0a62a311fa11cc6cbd9697bac2ef0c1613c0b3b526",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 4,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r5\\pages\\page-004.png",
+        "raw_sha256": "cc5312a08af75f7999a185876845fabd5f0fdb0da3100d9f6cefd269a0875d2b",
+        "rgb_sha256": "995637fcd68e04e0647a8572cfb2611d41b0ff9d02936aceb96c352e23bbc0d7",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 5,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r5\\pages\\page-005.png",
+        "raw_sha256": "5a27ee2ebd712719cffe49de26e404e37057c363aff41d3a3dd7c1d1de81e8cf",
+        "rgb_sha256": "1895757083951ce9a7051110c6b81f3e882c6791f70931b4d152f3964ad0da3f",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 6,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r5\\pages\\page-006.png",
+        "raw_sha256": "4fbe832fa90e6951225020fc49ab56cefed76b8f42e3112dade8ea251c3c52ce",
+        "rgb_sha256": "d2fb11b3836fca1ea2589500e5723c6bc96dea132dd2538b838fa7f7fad5b3a3",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 7,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r5\\pages\\page-007.png",
+        "raw_sha256": "5ac97b01ffaf5fe45a21ccfeffd52f3540f5d55214f088a62e68bb97e2822c45",
+        "rgb_sha256": "f1549cd65077b65063b5d21c1f9f73882a6ddf5c0b1da53c2cd030434f2b4bda",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 8,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r5\\pages\\page-008.png",
+        "raw_sha256": "068ef6dbaf6a7091fb6ea09b260b8850a1f6231356fd6e4fa0080be7141d2a11",
+        "rgb_sha256": "c6eff2cb8dd07849352675b4d921552deb0029cffd77d437da13eb0ba2c5e33e",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 9,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r5\\pages\\page-009.png",
+        "raw_sha256": "cf9476a7104ba9e3535fa5dff3672fa7534fd5e96bbd12acf5aef4b21ac3de69",
+        "rgb_sha256": "d6e5e57b25c68e48e094dd600af79c4a47fbe39b13ea8307782666b4ff310903",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 10,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-antwoorden-f6ba34f89ae0-r5\\pages\\page-010.png",
+        "raw_sha256": "ce3958cb01e03350cbefad400b544fedc87483de0cfcd200d5e495b42549321a",
+        "rgb_sha256": "f732a3e6bd1e997bdfbbbd9c8dd391d6111b98cd7f26baccf5190103ac84d0ad",
+        "size": [
+          1241,
+          1754
+        ]
+      }
+    ],
+    [
+      {
+        "kind": "opgaven",
+        "page": 1,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb\\pages\\page-001.png",
+        "raw_sha256": "fde2df212620dab61d6a79eff3b68908e67f39e913e3bd7a651b048d24bd2efb",
+        "rgb_sha256": "590a9c1e1b3f011d2c9e49eab8f44670420e1263bbdfe908353aa3e62d554773",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 2,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb\\pages\\page-002.png",
+        "raw_sha256": "8e854a7a4d094932670d93e59d2e5837f2e78533513261ede8e29fb8fb9116dc",
+        "rgb_sha256": "e41ee546b9b6944735eae86db017b2966d5ffd241d76fbecdcca12d5abd1a469",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 3,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb\\pages\\page-003.png",
+        "raw_sha256": "ffd43c20a082db12e29e9991e51ba29e138d72d581c5e9acd390f1ef3ccad2af",
+        "rgb_sha256": "82c7cdadf4979fa7f94daf18c8bd5a5e8bdba4fb438e55c3df6df64d66c5e845",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 4,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb\\pages\\page-004.png",
+        "raw_sha256": "dc3e8048cb8b7a2f858ba378516784c046f14c44959a94b1f96746d780cc96c9",
+        "rgb_sha256": "553c374de86e7991d5b04d2b94698a9f2b8a44468633e275871ff407ba6fd04c",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 5,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb\\pages\\page-005.png",
+        "raw_sha256": "cc0ec45f75205b7be388783b42e969cad69bcb75ddb3514da1b8f55d8700632d",
+        "rgb_sha256": "dab1cd17b286b3b85989cc82cbf914403ae1253017968042cf2b9869330db815",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 6,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb\\pages\\page-006.png",
+        "raw_sha256": "53c263e039d4057e045e08c2041cb14fbfbb4b0bd4ae52ff89b0e6b2da092bd4",
+        "rgb_sha256": "734eba7ed6fdf673682f9c9b5f25d08e8258b252f9abedae7c7c171e824f4ff7",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 7,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb\\pages\\page-007.png",
+        "raw_sha256": "8a845e4f9cfe86b11c37ed23fabb3079e64f8f099aca624e8ff4b78fe9278f20",
+        "rgb_sha256": "064bda484dd027e79c9b3067d02c8afddef4cdc923fb6bb7b74d37515bcfa331",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 8,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb\\pages\\page-008.png",
+        "raw_sha256": "ad26f2bf3e7328abc02eb004f9ceabaf9b7a124508aa805bbe35d74de23545b7",
+        "rgb_sha256": "e51dce6adb52f804c8a141d2c335d8c6af40a9bf5cb3468dd0a1979cc30a6246",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 9,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb\\pages\\page-009.png",
+        "raw_sha256": "e42b3c202eaffec5f1e249555e8dd5a6b4086f4be11057bf4340e94996f480b9",
+        "rgb_sha256": "44f4a480de484850775d958907a202362d9c04ed5e8e6bf8ba2cdf3e9b0b5f65",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "opgaven",
+        "page": 10,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb\\pages\\page-010.png",
+        "raw_sha256": "4ea2c7ff2bfee2c63e72e85cb44a9d4e4b222cae10228a555102397443216f86",
+        "rgb_sha256": "84bab193cbf3abd7f5157106bbd0e88bbe232634d4b25913b53a674de5d6d7be",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 1,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0\\pages\\page-001.png",
+        "raw_sha256": "584cdd292415d409b1c1c20723a86090ce680ca297fb52b5f447785f1c32c586",
+        "rgb_sha256": "9e631a4b56c45a4901735d2bb256983ff956f2a779a6ce037ac3d2d7a90a541e",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 2,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0\\pages\\page-002.png",
+        "raw_sha256": "8288264af30527abf2a5df14c51c387b4a97a1821f48856067e8209a5a29315c",
+        "rgb_sha256": "13a139be80e716c03bb70a62c1c59abb0bae2f98c7d235b50abff53d38a7138b",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 3,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0\\pages\\page-003.png",
+        "raw_sha256": "8267ae083e4791d964e042834acf77998b324cd685049b4f72a31f62d603123f",
+        "rgb_sha256": "241daa18d9c117b393544e0a62a311fa11cc6cbd9697bac2ef0c1613c0b3b526",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 4,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0\\pages\\page-004.png",
+        "raw_sha256": "cc5312a08af75f7999a185876845fabd5f0fdb0da3100d9f6cefd269a0875d2b",
+        "rgb_sha256": "995637fcd68e04e0647a8572cfb2611d41b0ff9d02936aceb96c352e23bbc0d7",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 5,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0\\pages\\page-005.png",
+        "raw_sha256": "5a27ee2ebd712719cffe49de26e404e37057c363aff41d3a3dd7c1d1de81e8cf",
+        "rgb_sha256": "1895757083951ce9a7051110c6b81f3e882c6791f70931b4d152f3964ad0da3f",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 6,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0\\pages\\page-006.png",
+        "raw_sha256": "4fbe832fa90e6951225020fc49ab56cefed76b8f42e3112dade8ea251c3c52ce",
+        "rgb_sha256": "d2fb11b3836fca1ea2589500e5723c6bc96dea132dd2538b838fa7f7fad5b3a3",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 7,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0\\pages\\page-007.png",
+        "raw_sha256": "5ac97b01ffaf5fe45a21ccfeffd52f3540f5d55214f088a62e68bb97e2822c45",
+        "rgb_sha256": "f1549cd65077b65063b5d21c1f9f73882a6ddf5c0b1da53c2cd030434f2b4bda",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 8,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0\\pages\\page-008.png",
+        "raw_sha256": "068ef6dbaf6a7091fb6ea09b260b8850a1f6231356fd6e4fa0080be7141d2a11",
+        "rgb_sha256": "c6eff2cb8dd07849352675b4d921552deb0029cffd77d437da13eb0ba2c5e33e",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 9,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0\\pages\\page-009.png",
+        "raw_sha256": "cf9476a7104ba9e3535fa5dff3672fa7534fd5e96bbd12acf5aef4b21ac3de69",
+        "rgb_sha256": "d6e5e57b25c68e48e094dd600af79c4a47fbe39b13ea8307782666b4ff310903",
+        "size": [
+          1241,
+          1754
+        ]
+      },
+      {
+        "kind": "antwoorden",
+        "page": 10,
+        "path": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-direct-r6\\2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0\\pages\\page-010.png",
+        "raw_sha256": "ce3958cb01e03350cbefad400b544fedc87483de0cfcd200d5e495b42549321a",
+        "rgb_sha256": "f732a3e6bd1e997bdfbbbd9c8dd391d6111b98cd7f26baccf5190103ac84d0ad",
+        "size": [
+          1241,
+          1754
+        ]
+      }
+    ]
+  ],
+  "native_per_route": 15,
+  "complete_page_count_per_route": 20,
+  "actual_figure_pixels_per_route": [
+    {
+      "figure": 1,
+      "raw_sha256": "88c2d889c1884601ffb16861ef909bcf68c285999bfcf8881ddbdce39617f843",
+      "rgb_sha256": "8f6d19224f90a186b1ce77b0362500af208a99a9b5562478bd2b05c4b22ea407",
+      "size": [
+        2400,
+        1800
+      ]
+    },
+    {
+      "figure": 2,
+      "raw_sha256": "8ad844aaf67bbdb31e3bd5162efec7165570952118cef0b8b400d03b1f429991",
+      "rgb_sha256": "736967a7eee745e04d6e4888cccfe575fac93cb95bb03fd81f99f13e727ec6c6",
+      "size": [
+        2400,
+        1800
+      ]
+    },
+    {
+      "figure": 3,
+      "raw_sha256": "b07321e621ead8ecec3862b8895b754734eb138935e24d680a7d9f229bc9a8a6",
+      "rgb_sha256": "341cda8d7f1cd84b62cb15ece58d435ac6083e454503478ffbd9029fd78393fc",
+      "size": [
+        2400,
+        1800
+      ]
+    },
+    {
+      "figure": 4,
+      "raw_sha256": "99c8d340c8ac7a9ab04f5fffa5d3b0c05d5b32ed6cfd226807ff8871a6096af1",
+      "rgb_sha256": "81a0c27634a24d95dcbbae105fe809ea7c3eea3c72a3d382940a6e607068467e",
+      "size": [
+        2400,
+        1800
+      ]
+    }
+  ],
+  "all_four_decoded_figure_pixels_equal": true
+}

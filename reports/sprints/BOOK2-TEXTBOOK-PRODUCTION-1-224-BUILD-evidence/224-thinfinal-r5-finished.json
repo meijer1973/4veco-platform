@@ -1,0 +1,48 @@
+{
+  "finished": "2026-09-06T05:08:13.209178+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 11.830875400002697,
+  "stdout_sha256": "1762d4046dcaf0886a21c711cb772ba7b96118eb937083db5033c17e7de3bc4b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "manifest": "C:\\wt\\book2-224-build-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-thinfinal-r5-manifest.json",
+  "manifest_sha256": "144c741bf51cb19ea51567e31c52120ea15e45f26aed202729194b80f5a1583c",
+  "path_unchanged": true,
+  "figure_pixels": [
+    {
+      "figure": 1,
+      "raw_sha256": "88c2d889c1884601ffb16861ef909bcf68c285999bfcf8881ddbdce39617f843",
+      "rgb_sha256": "8f6d19224f90a186b1ce77b0362500af208a99a9b5562478bd2b05c4b22ea407",
+      "size": [
+        2400,
+        1800
+      ]
+    },
+    {
+      "figure": 2,
+      "raw_sha256": "8ad844aaf67bbdb31e3bd5162efec7165570952118cef0b8b400d03b1f429991",
+      "rgb_sha256": "736967a7eee745e04d6e4888cccfe575fac93cb95bb03fd81f99f13e727ec6c6",
+      "size": [
+        2400,
+        1800
+      ]
+    },
+    {
+      "figure": 3,
+      "raw_sha256": "b07321e621ead8ecec3862b8895b754734eb138935e24d680a7d9f229bc9a8a6",
+      "rgb_sha256": "341cda8d7f1cd84b62cb15ece58d435ac6083e454503478ffbd9029fd78393fc",
+      "size": [
+        2400,
+        1800
+      ]
+    },
+    {
+      "figure": 4,
+      "raw_sha256": "99c8d340c8ac7a9ab04f5fffa5d3b0c05d5b32ed6cfd226807ff8871a6096af1",
+      "rgb_sha256": "81a0c27634a24d95dcbbae105fe809ea7c3eea3c72a3d382940a6e607068467e",
+      "size": [
+        2400,
+        1800
+      ]
+    }
+  ]
+}

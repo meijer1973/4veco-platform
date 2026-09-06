@@ -1,0 +1,1441 @@
+{
+  "actor": "paragraph_224_builder",
+  "independent_review": false,
+  "probes": {
+    "status": "PASS",
+    "cases": [
+      {
+        "case": "missing whole build-scripts/content/book-2/b2_224.py",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "unrelated whole build-scripts/content/book-2/b2_224.py",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "missing whole build-scripts/content/book-2/224/answers.md",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "unrelated whole build-scripts/content/book-2/224/answers.md",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "missing whole build-scripts/content/book-2/224/check_render.py",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "unrelated whole build-scripts/content/book-2/224/check_render.py",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "missing whole build-scripts/content/book-2/224/exercises.md",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "unrelated whole build-scripts/content/book-2/224/exercises.md",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "missing whole build-scripts/content/book-2/224/target-answers.md",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "unrelated whole build-scripts/content/book-2/224/target-answers.md",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "missing whole build-scripts/content/book-2/224/test_source.py",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "unrelated whole build-scripts/content/book-2/224/test_source.py",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "missing whole reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-controller.py",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "unrelated whole reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-controller.py",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "source service rating",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "boundary question",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "annual income unit",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "reset removed",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "extra target graph",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "fading removed",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "wrong revenue result",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "finite additive shortcut",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "wrong price source",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "wrong scenario base",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "coefficient as elasticity",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "boundary category drift",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "target limitations changed",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "unprovided target period",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "fixed target prices swapped",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "bonus fourth criterion changed",
+        "rejected": true,
+        "native_effects": 0
+      },
+      {
+        "case": "synchronized generator target pin and controller source-commit drift",
+        "rejected": true,
+        "native_effects": 0
+      }
+    ],
+    "total": 31,
+    "immutable_source_commit": "aca14c61d258c05d668005d20bf0e4196de89ced",
+    "immutable_controller_commit": "aad216f04728011e8f7d52c695b8ffad3edf6f96",
+    "whole_files": [
+      {
+        "path": "build-scripts/content/book-2/b2_224.py",
+        "sha256": "d5001620b81fc9ca2f390047367bf64885793b930b3763cba74b6babce842125"
+      },
+      {
+        "path": "build-scripts/content/book-2/224/answers.md",
+        "sha256": "726e47fcfd92849dbc48594bb1412505c8f46f90c3a11310c854a08f02310d99"
+      },
+      {
+        "path": "build-scripts/content/book-2/224/check_render.py",
+        "sha256": "a5f869c8b5ea43ddc14f38b5b7229db612d9141d99ec5514824288acdbad57c6"
+      },
+      {
+        "path": "build-scripts/content/book-2/224/exercises.md",
+        "sha256": "f73ceb8fdc1b2f033a88ec203af8664dd33aa0325d8c2908669c0ae47599f130"
+      },
+      {
+        "path": "build-scripts/content/book-2/224/target-answers.md",
+        "sha256": "c90a202726746fd43b6bcaf2e769809897a27230003a3f8dcdbb9125a39b67c9"
+      },
+      {
+        "path": "build-scripts/content/book-2/224/test_source.py",
+        "sha256": "0b40cd22a4223a486799b775c911abea9e8995316cb4f3850fefdfeb41c5df31"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-controller.py",
+        "sha256": "3dcb176950160214dce37a6cd1d8db70e1cd9f82b0315e6ca2bc8ac3dea81ce3"
+      }
+    ]
+  },
+  "commands": [
+    {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "build-scripts/content/book-2/224/test_source.py"
+      ],
+      "cwd": "C:\\wt\\book2-224-build-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_real_missing_forged_and_synchronized_34_inputs (__main__.ReleaseNegativeTests.test_real_missing_forged_and_synchronized_34_inputs) ... ok\r\ntest_all_rehearsal_points_support_and_bonus (__main__.SourceTests.test_all_rehearsal_points_support_and_bonus) ... ok\r\ntest_annual_reset_coefficient_combined_counterexamples (__main__.SourceTests.test_annual_reset_coefficient_combined_counterexamples) ... ok\r\ntest_assets_actual_geometry_fonts_and_role_separation (__main__.SourceTests.test_assets_actual_geometry_fonts_and_role_separation) ... ok\r\ntest_complete_target_serialization (__main__.SourceTests.test_complete_target_serialization) ... ok\r\ntest_exact_revenue_arithmetic_and_finite_counterexample (__main__.SourceTests.test_exact_revenue_arithmetic_and_finite_counterexample) ... ok\r\ntest_income_cross_sign_base_and_boundary_counterexamples (__main__.SourceTests.test_income_cross_sign_base_and_boundary_counterexamples) ... ok\r\ntest_printed_target_boundary_language (__main__.SourceTests.test_printed_target_boundary_language) ... ok\r\ntest_short_answers_goals_and_two_editions (__main__.SourceTests.test_short_answers_goals_and_two_editions) ... ok\r\ntest_whole_target_hash_original_order (__main__.SourceTests.test_whole_target_hash_original_order) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 10 tests in 3.428s\r\n\r\nOK\r\n",
+      "stdout_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_raw_sha256": "2ed4ff36cea1506c4ac122353dff7ae1ab44eed2a6426f99dff798285cfff39a"
+    },
+    {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "build-scripts/content/book-2/224/check_render.py",
+        "--lesson-root",
+        "C:\\wt\\book2-224-build-20260906\\4veco-lessen",
+        "--manifest",
+        "reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence\\224-full2-r2-manifest.json",
+        "--rebuild"
+      ],
+      "cwd": "C:\\wt\\book2-224-build-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.2.4\nBook 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n{\r\n  \"status\": \"PASS\",\r\n  \"paragraph\": \"2.2.4\",\r\n  \"manifest_sha256\": \"b6d55e7b6d76b3ef3de015b8687165d9781e3dca6764bbafcc563498c4f3971b\",\r\n  \"actual_additional_native_rebuild\": true,\r\n  \"documents\": [\r\n    {\r\n      \"kind\": \"opgaven\",\r\n      \"pages\": [\r\n        {\r\n          \"page\": 1,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 36,\r\n          \"text\": \"2.2.4 Gemengde opgaven elasticiteit –\\nopgaven\\nAanpak en korte herinnering\\nIn deze gemengde opgaven combineer je wat je in §§2.2.1–2.2.3 hebt geleerd. Er komt\\ngeen nieuwe theorie bij. Je onderzoekt eerst Sterrenplek en past daarna zelfstandig\\ndezelfde handelingen toe op StreamPlus.\\nNa het oefenen kun je dit:\\nJe kunt relevante tabelgegevens selecteren, Ev classificeren en uitleggen, en Ei en\\nEk berekenen en classificeren.\\nJe kunt totale opbrengst vóór en na een prijsverandering vergelijken.\\nJe kunt een vraagfunctie gebruiken als één variabele verandert en de andere\\nvariabelen gelijk blijven.\\nJe kunt met meerdere bronnen een omzetadvies formuleren zonder verder te gaan\\ndan de gegevens.\\nZo werk je. Maak de zes vragen over Sterrenplek in je schrift. Vermeld bij elke\\nberekening je aanpak, de ingevulde getallen, de uitkomst met eenheid en de betekenis.\\nGeef bij een uitleg een standpunt, een reden en de gebruikte bron of berekening. Lees\\nbij een figuur eerst de oude en nieuwe situatie en beide assen. Je hoeft geen grafiek\\nopnieuw te tekenen.\\nHaal terug wat je al weet. Een procentuele verandering gebruikt de oude waarde als\\nbasis. Het teken van Ev geeft de richting; voor de sterkte vergelijk je |Ev| met 1. TO = P\\n× Q. Ei vergelijkt een hoeveelheidsverandering met een inkomensverandering. Ek\\nvergelijkt de vraag naar het ene goed met de prijs van een ander goed: noem beide\\ngoederen. Begin bij een afzonderlijke verandering in een vraagfunctie opnieuw met de\\nopgegeven beginsituatie en controleer wat gelijk blijft.\\nDe hulp bij het lezen van bronnen staat na de zes vragen. Iedereen mag die gebruiken\\nals het nodig is; probeer eerst zelf. Bij StreamPlus kies je de aanpak zonder die hulp.\\nControleer daarna je antwoorden met het antwoordenboekje: verbeter niet alleen de\\nuitkomst, maar ook een ontbrekende reden of eenheid. De bonus is een extra uitdaging.\\nSluit af met de twee herhalingsvragen.\\n• \\n• \\n• \\n• \\n2.2.4 Gemengde opgaven elasticiteit – opgaven\\n1 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 2,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 17,\r\n          \"text\": \"Opgave 1 — Sterrenplek\\nSterrenplek verhuurt telescopen, verrekijkers en passende filters. Het bedrijf onderzoekt\\nverschillende prijs- en inkomensvergelijkingen. De bronnen A tot en met D gaan over\\nverhuur. Bron E beschrijft een afzonderlijk regionaal abonnementenmodel; dat zijn niet\\nde wekelijkse verhuuraantallen. Iedere bron is een eigen vergelijking, geen volgende\\nstap in één tijdlijn. Gebruik bij iedere vraag de genoemde bron.\\nBron A — Telescoopverhuur\\nDe figuur geeft de oude en nieuwe prijs en het aantal verhuringen per week. Andere\\nomstandigheden blijven gelijk. De servicebeoordeling is in beide situaties 4,8 op 5.\\nFiguur 1. Telescoopverhuur bij Sterrenplek. De hoogte toont de prijs per verhuring en de\\nbreedte het aantal verhuringen per week. Vergelijk de oude en nieuwe situatie op\\ndezelfde schalen; de rechthoeken tonen prijs maal hoeveelheid.\\nVraag 1 (4 punten). Lees uit de figuur de oude en nieuwe P en Q af, met eenheden.\\nBereken Ev, classificeer de vraag en leg uit wat de uitkomst over de procentuele reactie\\nzegt. Bereken vervolgens de procentuele verandering van TO. Welk gegeven uit bron A\\nheb je daarvoor niet nodig?\\n2.2.4 Gemengde opgaven elasticiteit – opgaven\\n2 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 3,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 15,\r\n          \"text\": \"Bron B — Verrekijkerverhuur\\nVoor een afzonderlijke prijsstap zijn hieronder beide situaties gegeven. Andere\\nomstandigheden blijven gelijk. De gemeten Ev over dit hele interval is −0,8.\\nFiguur 2. Verrekijkerverhuur bij Sterrenplek. Beide rechthoeken zijn op dezelfde prijs- en\\nhoeveelheidsschalen getekend als in figuur 1. Het zijn twee waargenomen situaties,\\ngeen getekende vraaglijn tussen de punten.\\nVraag 2 (4 punten). Vergelijk de richting van de omzetverandering in bron A en bron B.\\nBereken voor B de oude en nieuwe TO en de procentuele verandering. Vergelijk ook de\\nprijselasticiteitscategorieën. Laat met de prijsfactor en hoeveelheidsfactor zien hoe de\\nomzet in B verandert.\\nDe eigenaar zegt: “Bron B bewijst dat de regel voor een kleine prijsverandering bij\\nprijsinelastische vraag onjuist is.” Beoordeel deze uitspraak. Maak in je uitleg\\nonderscheid tussen de gemeten elasticiteit over het hele interval en de voorwaardelijke\\nregel voor een kleine lokale verandering.\\n2.2.4 Gemengde opgaven elasticiteit – opgaven\\n3 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 4,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 19,\r\n          \"text\": \"Bron C — Inkomen en telescoopsessies\\nIn een onderzoek stijgt het gemiddelde jaarinkomen met 10%. De gevraagde\\nhoeveelheid telescoopsessies stijgt met 5%. Alle andere omstandigheden blijven gelijk.\\nEen onderzoeker legt daarnaast twee afzonderlijke grensgevallen voor: een goed met Ei\\n= 0 en een goed met Ei = 1.\\nVraag 3 (2 punten). Bereken en classificeer Ei voor de telescoopsessies. Leg uit\\nwaarom een positieve Ei niet voldoende is om van een luxegoed te spreken. Geef ook\\naan of je in de hier gebruikte indeling aan Ei = 0 en Ei = 1 een categorie toekent.\\nBron D — Telescopen en passende filters\\nDeze vergelijking staat los van bron A. De prijs van een telescoopverhuring stijgt hier\\nvan €20 naar €24. De vraag naar passende filterverhuringen daalt van 200 naar 180 per\\nweek. De eigen prijs van de filterverhuringen en de overige omstandigheden blijven\\ngelijk.\\nVraag 4 (2 punten). Selecteer de twee veranderingen die je nodig hebt voor Ek van de\\nvraag naar filterverhuringen ten opzichte van de prijs van telescoopverhuringen.\\nBereken Ek. Leg met het teken en de namen van beide goederen uit of het om\\nsubstituten of complementen gaat.\\n2.2.4 Gemengde opgaven elasticiteit – opgaven\\n4 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 5,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 45,\r\n          \"text\": \"Bron E — Afzonderlijk regionaal abonnementenmodel\\nDe regionale vraag naar een abonnement van Sterrenplek wordt beschreven door:\\nQx = 100 − 2Px + Pc + 0,005Y\\nQx is het aantal gevraagde abonnementen per maand. Px is de eigen maandprijs en Pc\\nde maandprijs van een concurrerend abonnement, beide in euro. Y is het gemiddelde \\njaarinkomen in euro. De beginsituatie is Px = 10, Pc = 20 en Y = 20.000. Het model\\ngebruikt dus jaarinkomen, ook al is Qx een maandhoeveelheid.\\nVraag 5 (6 punten). Bereken Qx in de beginsituatie. Bereken daarna Qx als alleen Y\\nstijgt naar €24.000 per jaar. Bereken en classificeer Ei voor deze inkomensvergelijking.\\nHoeveel abonnementen per maand verandert Qx, en welke prijzen blijven gelijk?\\nBegin vervolgens opnieuw bij de beginsituatie. Bereken Qx als alleen Pc stijgt naar €24\\nper maand. Vergelijk de uitkomst met de oorspronkelijke Qx en beschrijf de richting van\\nhet verband tussen Pc en Qx. Noem wat in deze vergelijking gelijk blijft.\\nVraag 6 (2 punten). Vul in je schrift de vier richtingen in onderstaande tabel in. De tabel\\ngaat uitsluitend over de eerder geleerde voorwaardelijke regel voor een kleine lokale\\nprijsverandering, met de genoemde categorie en overige omstandigheden gelijk.\\nVraag \\nEigen prijs \\nRichting TO \\nPrijsinelastisch \\nStijgt \\n… \\nPrijsinelastisch \\nDaalt \\n… \\nPrijselastisch \\nStijgt \\n… \\nPrijselastisch \\nDaalt \\n… \\nGeef Sterrenplek vervolgens een voorzichtig omzetadvies met bron A of B én bron D of\\nE. Gebruik daadwerkelijk een uitkomst of verband uit beide bronnen. Leg ook uit\\nwaarom een omzetuitkomst zonder kostengegevens nog geen conclusie over winst\\noplevert.\\n2.2.4 Gemengde opgaven elasticiteit – opgaven\\n5 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 6,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 24,\r\n          \"text\": \"Hulp bij het lezen van bronnen (optioneel)\\nGebruik alleen de hulp die je nodig hebt. Schrijf daarna zelf een volledig antwoord. Deze\\nhulp verandert de vragen en hun punten niet.\\nBij vraag 1. Kijk in figuur 1 eerst naar “oud”, daarna naar “nieuw”. Schrijf P oud, P\\nnieuw, Q oud en Q nieuw op, elk met de eenheid van de as. Gebruik voor een\\nverandering: (nieuw − oud) / oud × 100%. Voor Q krijg je zo (80 − 100) / 100 × 100% =\\n−20%. Vul nu zelf aan: procentuele verandering P = …; Ev = … / … = …; TO oud = … ×\\n…; TO nieuw = … × ….\\nBij vraag 2. Vergelijk de twee producten P × Q. Wat zegt een intervalmeting wel en niet\\nover de regel voor een kleine lokale verandering?\\nBij vraag 3. Welke procentuele verandering hoort bij inkomen? Welke hoort bij de\\ngevraagde hoeveelheid? Kies de juiste noemer voordat je deelt.\\nBij vraag 4. Vul eerst zonder getallen in: “vraag naar …” gedeeld door “prijs van …”.\\nGebruik de prijs van het andere genoemde goed, niet de eigen prijs van het goed\\nwaarvan je de vraag onderzoekt.\\nBij vraag 5. Begin ieder afzonderlijk scenario opnieuw bij de eerste rij van je\\nberekening: de beginsituatie.\\nBij vraag 6 en de volgende doeloefening kies je zelf de aanpak. In het\\nantwoordenboekje staan de volledige uitwerkingen en beoordelingscriteria.\\n2.2.4 Gemengde opgaven elasticiteit – opgaven\\n6 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 7,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 27,\r\n          \"text\": \"Doeloefening — StreamPlus\\nStreamPlus onderzoekt één recente prijsverhoging en mogelijke vervolgstappen.\\nGebruik bij vragen 1 tot en met 5 telkens alleen de aangegeven bron. Combineer bij\\nvraag 6 minstens twee bronnen. De gemeten Ev in bron A is gegeven; de opgave\\ncombineert eerder onderwezen handelingen en introduceert geen nieuwe formule.\\nBron A\\nTabel met oude en nieuwe prijs, aantal abonnees en appscore; de gemeten Ev is −0,7.\\ngegeven \\noud \\nnieuw \\nprijs Standaard \\n€10 \\n€12 \\nabonnees \\n50.000 \\n43.000 \\nappscore \\n4,6/5 \\n4,6/5 \\nVraag 1 (2 punten). Selecteer uit bron A de gegevens voor een controleberekening van\\nEv en noem het gegeven dat daarvoor niet nodig is.\\nVraag 2 (2 punten). Classificeer met de gegeven Ev=−0,7 de vraag en leg in gewone\\ntaal uit hoe sterk Q procentueel reageert op een prijsverandering.\\nVraag 3 (2 punten). Bereken met bron A TO vóór en na de prijsverhoging.\\n2.2.4 Gemengde opgaven elasticiteit – opgaven\\n7 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 8,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 27,\r\n          \"text\": \"Bron B\\nTabel met inkomens- en vraagverandering voor Premium en Budget.\\nverandering \\nPremium \\nBudget \\ninkomen \\n+8% \\n+8% \\ngevraagde hoeveelheid \\n+15% \\n−4% \\nBron C\\nTabel voor de kruislingse elasticiteit van StreamPlus ten opzichte van het concurrerende\\nabonnement.\\ngegeven \\noud \\nnieuw \\nprijs concurrerend abonnement \\n€8 \\n€9 \\nvraag StreamPlus \\nbasis \\n+5% \\nVraag 4 (4 punten). Bereken en classificeer met bron B Ei voor Premium en Budget en\\nmet bron C Ek van de vraag naar StreamPlus ten opzichte van de prijs van het\\nconcurrerende abonnement. Noem bij Ek beide diensten.\\n2.2.4 Gemengde opgaven elasticiteit – opgaven\\n8 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 9,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 11,\r\n          \"text\": \"Bron D\\nRegionale vraagfunctie Q=12.000−400P+0,1Y+300Pc. Q is het aantal gevraagde\\nabonnementen per maand, P en Pc zijn maandprijzen in euro en Y is het gemiddelde\\njaarinkomen in euro. Beginsituatie: P=12, Pc=10 en Y=40.000.\\nVraag 5 (2 punten). Bereken met bron D Q in de beginsituatie en nadat alleen Y stijgt\\nnaar €42.000 per jaar. Noem welke variabelen gelijk blijven.\\nVraag 6 (2 punten). Geef op basis van minstens twee bronnen een voorzichtig\\nomzetadvies. Noem één conclusie die de bronnen ondersteunen en precies twee\\nconclusies die zij niet bewijzen.\\n2.2.4 Gemengde opgaven elasticiteit – opgaven\\n9 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 10,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 47,\r\n          \"text\": \"Denkertje / Bonusopgave\\nExtra uitdaging (4 punten). Voor het model uit bron E zijn vier uitkomsten gegeven. In\\nalle vier de rijen blijft Px = €10 per maand.\\nSituatie \\nY per jaar (€) \\nPc per maand\\n(€) \\nQx per\\nmaand \\nBeginsituatie \\n20.000 \\n20 \\n200 \\nAlleen Y verandert \\n24.000 \\n20 \\n220 \\nAlleen Pc verandert \\n20.000 \\n24 \\n204 \\nY en Pc veranderen \\n24.000 \\n24 \\n224 \\nEen medewerker zegt: “De stijging van 200 naar 224 bewijst dat alleen de\\ninkomensstijging 24 extra abonnementen veroorzaakt. Die reactie geldt dus ook buiten\\ndit model en bij toekomstige veranderingen.”\\nBeoordeel deze uitspraak. Kies een eerlijke vergelijking om de afzonderlijke\\ninkomensverandering binnen het model te onderzoeken en leg uit welke variabelen\\ndaarbij gelijk blijven. Gebruik ook de uitkomst 204 in je uitleg. Geef aan wat je met deze\\nmodeluitkomsten wel en niet kunt concluderen.\\nHerhaling / Herhaling en interleaving\\nHerhaling 1 (1 punt). Een prijs stijgt van €20 naar €25 en daalt daarna terug naar €20.\\nWaarom is de daling niet 25%? Bereken het juiste dalingspercentage en vermeld de\\nbasis.\\nHerhaling 2 (1 punt). Bij gelijkblijvend inkomen stijgt de prijs met 10% en daalt de\\ngevraagde hoeveelheid met 5%. Bereken Ev en leg uit waarom je met deze gegevens\\ngeen Ei kunt berekenen.\\nControleer je aanpak. Kijk terug: heb je de oude bases, de namen van de goederen, de\\neenheden en de gelijkblijvende variabelen vermeld? Verbeter met het antwoordenboekje\\néén stap die nog onvolledig was. Een goed advies blijft binnen wat de bronnen werkelijk\\nondersteunen.\\n2.2.4 Gemengde opgaven elasticiteit – opgaven\\n10 / 10\\n\"\r\n        }\r\n      ],\r\n      \"figures\": [\r\n        {\r\n          \"page\": 2,\r\n          \"width_pt\": 470.5511811023622,\r\n          \"height_pt\": 352.9133858267717,\r\n          \"label_pt\": 15.685039370078739\r\n        },\r\n        {\r\n          \"page\": 3,\r\n          \"width_pt\": 470.5511811023622,\r\n          \"height_pt\": 352.9133858267717,\r\n          \"label_pt\": 15.685039370078739\r\n        }\r\n      ],\r\n      \"pdf_sha256\": \"c43e028b16ea9005d8fb7b161c455fd41163ebcb4a0aca922875cd16a6ab39bb\"\r\n    },\r\n    {\r\n      \"kind\": \"antwoorden\",\r\n      \"pages\": [\r\n        {\r\n          \"page\": 1,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 33,\r\n          \"text\": \"2.2.4 Gemengde opgaven elasticiteit –\\nantwoorden\\nAntwoorden bij Sterrenplek\\nControleer niet alleen de uitkomst: een volledig antwoord laat de gekozen bron,\\nberekening en economische betekenis zien. Gelijkwaardige correcte redeneringen zijn\\ntoegestaan. De zes vragen tellen samen 20 punten.\\nVraag 1 — Telescoopverhuur (4 punten)\\nUit bron A / figuur 1: P oud = €20 en P nieuw = €22 per verhuring; Q oud = 100 en Q\\nnieuw = 80 verhuringen per week.\\nProcentuele verandering Q = (80 − 100) / 100 × 100% = −20%. Procentuele verandering\\nP = (22 − 20) / 20 × 100% = +10%. Dus Ev = −20% / +10% = −2. Omdat |Ev| = 2 > 1 is\\nde vraag prijselastisch. In deze vergelijking reageert Q procentueel tweemaal zo sterk\\nals P en in tegengestelde richting.\\nTO oud = €20 × 100 = €2.000 per week. TO nieuw = €22 × 80 = €1.760 per week.\\nProcentuele verandering TO = (1.760 − 2.000) / 2.000 × 100% = −12%. De\\nservicebeoordeling 4,8 op 5 is niet nodig voor deze berekeningen.\\nBeoordeling: 1 punt voor de beide juiste procentuele veranderingen en Ev; 1 punt voor\\nde juiste categorie met magnitude en proportionele betekenis; 1 punt voor beide TO-\\nbedragen en −12%; 1 punt voor de juist benoemde oude/nieuwe figuurwaarden met\\neenheden en het niet-relevante gegeven.\\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\\n1 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 2,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 3,\r\n          \"text\": \"Figuur 3. Uitwerking van bron A. Met gelijke schalen zijn de rechthoeken €2.000 en\\n€1.760 per week waard. De daling van €240 is 12% van de oude omzet; de oppervlakte\\nis P maal Q en niet de helling van een lijn.\\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\\n2 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 3,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 40,\r\n          \"text\": \"Vraag 2 — Verrekijkerverhuur (4 punten)\\nBron B / figuur 2 geeft P €10 → €15 per verhuring en Q 100 → 60 verhuringen per\\nweek. TO oud = €10 × 100 = €1.000 per week; TO nieuw = €15 × 60 = €900 per week.\\n(900 − 1.000) / 1.000 × 100% = −10%. Net als in A daalt de omzet.\\nIn A is de gemeten Ev = −2: |Ev| > 1, prijselastisch. In B is de gegeven interval-Ev =\\n−0,8: |Ev| < 1, prijsinelastisch. De prijsfactor in B is 15/10 = 1,5; de hoeveelheidsfactor is\\n60/100 = 0,6. De omzetfactor is 1,5 × 0,6 = 0,9: de nieuwe omzet is 90% van de oude.\\nJe mag +50% en −40% hier niet optellen tot een omzetstijging van 10%.\\nDe uitspraak van de eigenaar gaat te ver. Ev = −0,8 beschrijft de hele gemeten\\nprijsstap van 50%. Deze intervalwaarde bewijst niet dat de vraag overal lokaal\\nprijsinelastisch is. De eerder geleerde lokale regel geldt voorwaardelijk bij een kleine\\nprijsverandering, met de genoemde lokale categorie en overige omstandigheden gelijk.\\nZij beslist niet op basis van één intervalwaarde wat er over de hele grote stap gebeurt.\\nBron B is daarom geen weerlegging van die voorwaardelijke lokale regel. De bronnen\\ngeven geen universeel percentage waaronder iedere verandering “klein” is.\\nBeoordeling: 1 punt voor beide B-bedragen, −10% en dezelfde dalingsrichting als A; 1\\npunt voor de juiste vergelijking van categorieën; 1 punt voor de vermenigvuldigde\\nfactoren en betekenis; 1 punt voor het onderscheid tussen intervalmeting en\\nvoorwaardelijke lokale regel, zonder ongeldige veralgemening.\\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\\n3 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 4,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 3,\r\n          \"text\": \"Figuur 4. Uitwerking van bron B. De oude en nieuwe omzet zijn €1.000 en €900 per\\nweek. De prijs- en hoeveelheidsfactor moeten worden vermenigvuldigd: 1,5 × 0,6 = 0,9.\\nDe figuur geeft geen lokale elasticiteit tussen beide waarnemingen.\\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\\n4 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 5,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 45,\r\n          \"text\": \"Vraag 3 — Inkomen (2 punten)\\nBron C: Ei = +5% / +10% = 0,5. Omdat 0 < Ei < 1 zijn de telescoopsessies in deze\\nvergelijking een normaal goed. De vraag stijgt procentueel minder sterk dan het\\ninkomen. Positief alleen is onvoldoende voor een luxegoed: daarvoor moet Ei > 1 zijn.\\nEen inferieur goed heeft Ei < 0. In de hier gebruikte strikte indeling krijgen Ei = 0 en Ei =\\n1 geen categorie. Dat zegt niets over de kwaliteit of noodzakelijkheid van een goed.\\nBeoordeling: 1 punt voor de juiste verhouding, uitkomst en normale categorie; 1 punt\\nvoor de strikte luxedrempel en geen categorie bij beide grenzen.\\nVraag 4 — Twee genoemde goederen (2 punten)\\nGebruik bron D: vraag naar filterverhuringen 200 → 180 per week en prijs van \\ntelescoopverhuringen €20 → €24. Niet de eigen filterprijs en niet de telescoopprijs €22\\nuit de andere vergelijking in bron A.\\n%ΔQ filters = (180 − 200) / 200 × 100% = −10%. %ΔP telescopen = (24 − 20) / 20 ×\\n100% = +20%. Ek = −10% / +20% = −0,5. De negatieve kruislingse elasticiteit betekent\\ndat deze goederen complementen zijn in de gegeven vergelijking: bij de hogere\\ntelescoopprijs daalt de vraag naar passende filters, terwijl de eigen filterprijs gelijk blijft.\\nBeoordeling: 1 punt voor de twee juiste procentuele veranderingen en Ek, met\\nvraaggoed en prijsgoed correct benoemd; 1 punt voor complementen en de juiste\\nrichting met beide goederen en de vaste eigen filterprijs.\\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\\n5 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 6,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 48,\r\n          \"text\": \"Vraag 5 — Een variabele tegelijk (6 punten)\\nBron E gebruikt maandprijzen en jaarinkomen. Vul Y dus rechtstreeks in; deel het niet\\ndoor 12.\\nBeginsituatie: Qx = 100 − 2 × 10 + 20 + 0,005 × 20.000 = 100 − 20 + 20 + 100 = 200\\nabonnementen per maand.\\nAlleen Y verandert: Qx = 100 − 2 × 10 + 20 + 0,005 × 24.000 = 100 − 20 + 20 + 120 = \\n220 abonnementen per maand. %ΔQx = (220 − 200) / 200 × 100% = +10%. %ΔY =\\n(24.000 − 20.000) / 20.000 × 100% = +20%. Ei = +10% / +20% = 0,5, dus een normaal\\ngoed. Het is geen Ei van 0,005: dat getal is een coëfficiënt in de vraagfunctie. Qx stijgt\\nmet 20 abonnementen per maand; Px = 10 en Pc = 20 blijven gelijk. Y blijft een\\njaarbedrag, Qx een maandhoeveelheid.\\nTerug naar de beginsituatie, alleen Pc verandert: herstel Y = 20.000 en Px = 10, en\\nvul Pc = 24 in. Qx = 100 − 2 × 10 + 24 + 0,005 × 20.000 = 100 − 20 + 24 + 100 = 204\\nabonnementen per maand. Vergelijk met 200, niet met 220: de vraag neemt met 4\\nabonnementen per maand toe. Binnen deze vergelijking is het verband tussen Pc en Qx\\npositief. Px = 10 en Y = 20.000 blijven gelijk. Beide veranderingen tegelijk zouden een\\nandere vergelijking zijn.\\nBeoordeling: telkens 1 punt voor (1) 200 met correcte substitutie; (2) 220 met correcte\\nsubstitutie; (3) de twee percentages, Ei en categorie; (4) +20 per maand en de juiste\\nvaste prijzen/jaareenheid; (5) de geresette Pc-vergelijking met 204; (6) vergelijking met\\n200, positieve richting en de juiste vaste Px en Y.\\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\\n6 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 7,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 49,\r\n          \"text\": \"Vraag 6 — Voorzichtig advies (2 punten)\\nAlle onderstaande richtingen zijn voorwaardelijk: een kleine lokale prijsverandering bij\\nde genoemde categorie en overige omstandigheden gelijk.\\nVraag \\nEigen prijs \\nRichting TO \\nPrijsinelastisch \\nStijgt \\nStijgt \\nPrijsinelastisch \\nDaalt \\nDaalt \\nPrijselastisch \\nStijgt \\nDaalt \\nPrijselastisch \\nDaalt \\nStijgt \\nVoorbeeld van advies: verhoog de telescoopprijs niet automatisch opnieuw op basis\\nvan deze gegevens. In bron A daalde de gemeten omzet met €240 per week. Bron D\\nlaat bovendien zien dat een hogere telescoopprijs in die afzonderlijke vergelijking\\nsamengaat met minder vraag naar passende filters. Onderzoek eerst de reactie bij een\\nvolgende stap en de kosten. Een gegeven omzet zegt zonder kosten niets afdoends\\nover de winst. Dit is geen voorspelling dat de volgende prijsstap precies dezelfde reactie\\nzal oproepen.\\nEen gelijkwaardig advies mag B gebruiken (gemeten omzet €1.000 → €900) en/of E (de\\ngecontroleerde positieve Pc–Qx-relatie), zolang de twee vereiste soorten bronnen echt\\nworden gebruikt en de conclusie binnen hun gegevens blijft.\\nBeoordeling: 1 punt voor de vier juiste voorwaardelijke richtingen; 1 punt voor een\\nvoorzichtig advies met A of B én D of E, daadwerkelijk gebruik van beide bronnen en het\\nexpliciete ontbrekende-kostenvoorbehoud.\\nControle bij de optionele hulp\\nDe hulp hoort bij dezelfde vragen, zonder extra punten. Bij vraag 1 zijn de open\\ninvulplaatsen +10%, −20% / +10% = −2, €20 × 100 en €22 × 80. Bij vraag 2\\nvermenigvuldig je de prijs- en hoeveelheidsfactor; de intervalmeting bewijst geen lokale\\ncategorie op ieder tussenliggend punt. Bij vraag 3 is het inkomenspercentage de\\nnoemer. Bij vraag 4 is de teller de vraag naar filters en de noemer de prijs van\\ntelescopen. Bij vraag 5 is de eerste rij altijd Px = 10, Pc = 20, Y = 20.000 en Qx = 200.\\nDe volledige redenen en berekeningen staan bij vragen 1–5; hulpgebruik maakt een\\nantwoord niet minder waard.\\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\\n7 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 8,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 35,\r\n          \"text\": \"Doeloefening — StreamPlus (14 punten)\\nVraag 1 (2 punten)\\nNodig: P €10→€12 en Q 50.000→43.000. De appscore 4,6/5 is niet nodig voor Ev.\\nBeoordeling: 1 punt voor de oude/nieuwe P en Q; 1 punt voor het noemen van de\\nniet-benodigde appscore. Een controleberekening van Ev is niet gevraagd. Ter controle\\nachteraf: %ΔQ = −14%, %ΔP = +20%, Ev = −14% / +20% = −0,7.\\nVraag 2 (2 punten)\\n|Ev|=0,7<1, dus de vraag is prijsinelastisch. Bij een prijsverandering van 1% verandert Q\\nin deze waarneming in tegengestelde richting met ongeveer 0,7%.\\nBeoordeling: 1 punt voor |Ev| < 1 en prijsinelastisch; 1 punt voor de proportionele\\nuitleg met tegengestelde richting, begrensd tot deze waarneming. Dit is geen\\nvoorspelling van een volgende prijsverhoging.\\nVraag 3 (2 punten)\\nTO oud=€10×50.000=€500.000; TO nieuw=€12×43.000=€516.000.\\nBeoordeling: 1 punt per juist TO-bedrag met de juiste prijs maal hoeveelheid. De\\nonderzochte omzet stijgt met €16.000. Bron A noemt geen periode voor deze totale\\nabonneeaantallen; voeg geen maand- of jaartotaal toe. Verwar deze waarneming niet\\nmet de afzonderlijke regionale maandvraag uit bron D.\\nVraag 4 (4 punten)\\nPremium: Ei=15%/8%=1,875, luxegoed. Budget: Ei=−4%/8%=−0,5, inferieur goed. Voor\\nStreamPlus geldt %ΔP concurrent=(9−8)/8×100%=12,5% en Ek=5%/12,5%=0,4. Teller:\\nvraag naar StreamPlus; noemer: prijs van de concurrerende dienst. Positief, dus de\\ndiensten zijn substituten.\\nBeoordeling: telkens 1 punt voor (1) Premium 1,875 en luxegoed; (2) Budget −0,5 en\\ninferieur goed; (3) de prijsstijging van de concurrent 12,5% en Ek = 0,4; (4) de correcte\\nteller/noemer met beide diensten en de positieve substitutenrelatie. Ei blijft getekend:\\nneem niet de absolute waarde van Budget.\\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\\n8 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 9,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 28,\r\n          \"text\": \"Vraag 5 (2 punten)\\nQ oud=12.000−4.800+4.000+3.000=14.200 abonnementen per maand. Bij Y=€42.000\\nper jaar is Q=14.400 abonnementen per maand; P en Pc blijven gelijk.\\nUitgeschreven: Q oud = 12.000 − 400 × 12 + 0,1 × 40.000 + 300 × 10 = 12.000 − 4.800\\n+ 4.000 + 3.000 = 14.200. Q nieuw = 12.000 − 400 × 12 + 0,1 × 42.000 + 300 × 10 =\\n12.000 − 4.800 + 4.200 + 3.000 = 14.400 abonnementen per maand.\\nBeoordeling: 1 punt voor beide correcte substituties en uitkomsten; 1 punt voor P = 12\\nen Pc = 10 gelijk, met Y als jaarinkomen. Je deelt Y niet door 12; de functie gebruikt het\\njaarbedrag al. Er is hier geen extra Ei- of Ek-berekening en geen Pc-verandering\\ngevraagd.\\nVraag 6 (2 punten)\\nVoorzichtig: de onderzochte verhoging verhoogde TO met €16.000; bron A ondersteunt\\ndie conclusie en bron C laat substitutie met de concurrent zien. Niet bewezen zijn\\nprecies: dezelfde reactie bij een volgende prijsverhoging en een hogere winst, omdat\\nkostengegevens ontbreken.\\nBeoordeling: 1 punt voor een voorzichtig advies met werkelijk gebruik van minstens\\ntwee bronnen en een ondersteunde conclusie; 1 punt voor precies de twee genoemde\\nniet-bewezen conclusies: dezelfde reactie bij een volgende verhoging en een hogere\\nwinst zonder kostengegevens. Een gelijkwaardige formulering is toegestaan. Een bron\\nalleen noemen zonder haar gegeven of verband te gebruiken, is onvoldoende. De\\nongewijzigde appscore is geen bewijs voor een toekomstige vraagreactie of een\\nwinststijging.\\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\\n9 / 10\\n\"\r\n        },\r\n        {\r\n          \"page\": 10,\r\n          \"minimum_text_pt\": 12.0,\r\n          \"body_spans\": 51,\r\n          \"text\": \"Denkertje / Bonusopgave (4 punten)\\nDe uitspraak verwart een gecombineerde verandering met een afzonderlijke\\ninkomensverandering. In de laatste rij veranderen Y én Pc. De toename van 200 naar\\n224 kun je daarom niet volledig aan inkomen toeschrijven.\\nVergelijk voor inkomen de beginsituatie met de rij “Alleen Y verandert”: Y stijgt van\\n€20.000 naar €24.000 per jaar, terwijl Px = €10 en Pc = €20 per maand gelijk blijven.\\nQx stijgt van 200 naar 220, dus met 20 abonnementen per maand, niet 24.\\nDe uitkomst 204 hoort bij alleen Pc = €24 en ongewijzigd jaarinkomen. Zij laat zien\\nwaarom de gecombineerde vergelijking verschilt: ook de andere prijs is veranderd. De\\nuitkomst 224 past bij beide veranderingen in dit model, maar bewijst geen algemene\\nreactie buiten het model en geen identieke toekomstige reactie.\\nBeoordeling: vier afzonderlijke criteria, elk 1 punt.\\nBenoemt dat Y én Pc veranderen en verwerpt “24 alleen door inkomen”.\\nKiest 200 → 220, vermeldt de vaste Px/Pc en +20 abonnementen per maand.\\nGebruikt 204 om de afzonderlijke Pc-verandering en het verschil met de\\ngecombineerde vergelijking te verklaren.\\nBegrensde conclusie: modeluitkomst is geen algemene causale of toekomstige\\ngarantie buiten de gegeven vergelijking.\\nHerhaling / Herhaling en interleaving\\nHerhaling 1 (1 punt). De stijging is (25 − 20) / 20 × 100% = +25%. Bij de terugkeer is\\nde oude waarde echter €25: (20 − 25) / 25 × 100% = −20%. Eenzelfde euroverschil\\nheeft een andere procentuele betekenis bij een andere basis. Geef 1 punt voor −20%\\nmet de correcte basis en uitleg; alleen “niet 25%” is onvoldoende.\\nHerhaling 2 (1 punt). Ev = −5% / +10% = −0,5. Voor Ei is de inkomensverandering de\\nnoemer. Die is hier 0%, zodat de verhouding niet gedefinieerd is; delen door nul kan\\nniet. Geef 1 punt voor Ev en deze uitleg. De prijsstijging mag niet als inkomensstijging\\nworden gebruikt.\\n1. \\n2. \\n3. \\n4. \\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\\n10 / 10\\n\"\r\n        }\r\n      ],\r\n      \"figures\": [\r\n        {\r\n          \"page\": 2,\r\n          \"width_pt\": 470.5511811023622,\r\n          \"height_pt\": 352.9133858267717,\r\n          \"label_pt\": 15.685039370078739\r\n        },\r\n        {\r\n          \"page\": 4,\r\n          \"width_pt\": 470.5511811023622,\r\n          \"height_pt\": 352.9133858267717,\r\n          \"label_pt\": 15.685039370078739\r\n        }\r\n      ],\r\n      \"pdf_sha256\": \"7444910d136195ae75eab1c50ee08a885f727c2002b2e81448f0beefc76f6ea4\"\r\n    }\r\n  ],\r\n  \"assets\": [\r\n    {\r\n      \"name\": \"2.2.4_ex_1\",\r\n      \"svg_sha256\": \"d97092fd39f3c1e1f21745879bd4bc591dedfb72a94da22f5b371aeb8b38ee88\",\r\n      \"png_sha256\": \"88c2d889c1884601ffb16861ef909bcf68c285999bfcf8881ddbdce39617f843\",\r\n      \"ink_boxes\": [\r\n        {\r\n          \"text\": \"Telescoopverhuur\",\r\n          \"box\": [\r\n            30.0,\r\n            23.0,\r\n            374.0,\r\n            60.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Oud\",\r\n          \"box\": [\r\n            100.0,\r\n            83.0,\r\n            179.0,\r\n            112.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"P (€ per verhuring)\",\r\n          \"box\": [\r\n            100.0,\r\n            141.0,\r\n            430.0,\r\n            178.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            60.0,\r\n            615.0,\r\n            82.0,\r\n            644.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"10\",\r\n          \"box\": [\r\n            38.0,\r\n            455.0,\r\n            82.0,\r\n            484.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"20\",\r\n          \"box\": [\r\n            38.0,\r\n            295.0,\r\n            82.0,\r\n            324.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"25\",\r\n          \"box\": [\r\n            38.0,\r\n            215.0,\r\n            82.0,\r\n            244.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            89.0,\r\n            659.0,\r\n            111.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"60\",\r\n          \"box\": [\r\n            258.0,\r\n            659.0,\r\n            302.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"120\",\r\n          \"box\": [\r\n            427.0,\r\n            659.0,\r\n            493.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"100\",\r\n          \"box\": [\r\n            367.0,\r\n            720.0,\r\n            433.0,\r\n            749.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Q (verhuringen\",\r\n          \"box\": [\r\n            100.0,\r\n            777.0,\r\n            364.0,\r\n            814.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"per week)\",\r\n          \"box\": [\r\n            100.0,\r\n            827.0,\r\n            274.0,\r\n            864.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Nieuw\",\r\n          \"box\": [\r\n            700.0,\r\n            83.0,\r\n            818.0,\r\n            112.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"P (€ per verhuring)\",\r\n          \"box\": [\r\n            700.0,\r\n            141.0,\r\n            1030.0,\r\n            178.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            660.0,\r\n            615.0,\r\n            682.0,\r\n            644.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"10\",\r\n          \"box\": [\r\n            638.0,\r\n            455.0,\r\n            682.0,\r\n            484.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"20\",\r\n          \"box\": [\r\n            638.0,\r\n            295.0,\r\n            682.0,\r\n            324.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"25\",\r\n          \"box\": [\r\n            638.0,\r\n            215.0,\r\n            682.0,\r\n            244.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            689.0,\r\n            659.0,\r\n            711.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"60\",\r\n          \"box\": [\r\n            858.0,\r\n            659.0,\r\n            902.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"120\",\r\n          \"box\": [\r\n            1027.0,\r\n            659.0,\r\n            1093.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"80\",\r\n          \"box\": [\r\n            918.0,\r\n            720.0,\r\n            962.0,\r\n            749.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"22\",\r\n          \"box\": [\r\n            992.0,\r\n            263.0,\r\n            1036.0,\r\n            292.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Q (verhuringen\",\r\n          \"box\": [\r\n            700.0,\r\n            777.0,\r\n            964.0,\r\n            814.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"per week)\",\r\n          \"box\": [\r\n            700.0,\r\n            827.0,\r\n            874.0,\r\n            864.0\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"2.2.4_ex_2\",\r\n      \"svg_sha256\": \"3cc3a5f7f1db7d1bdca66c1dd3dc602e260d92fe3e270428f888cb27dfbf9420\",\r\n      \"png_sha256\": \"8ad844aaf67bbdb31e3bd5162efec7165570952118cef0b8b400d03b1f429991\",\r\n      \"ink_boxes\": [\r\n        {\r\n          \"text\": \"Verrekijkerverhuur\",\r\n          \"box\": [\r\n            29.0,\r\n            23.0,\r\n            386.0,\r\n            60.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Oud\",\r\n          \"box\": [\r\n            100.0,\r\n            83.0,\r\n            179.0,\r\n            112.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"P (€ per verhuring)\",\r\n          \"box\": [\r\n            100.0,\r\n            141.0,\r\n            430.0,\r\n            178.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            60.0,\r\n            615.0,\r\n            82.0,\r\n            644.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"10\",\r\n          \"box\": [\r\n            38.0,\r\n            455.0,\r\n            82.0,\r\n            484.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"20\",\r\n          \"box\": [\r\n            38.0,\r\n            295.0,\r\n            82.0,\r\n            324.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"25\",\r\n          \"box\": [\r\n            38.0,\r\n            215.0,\r\n            82.0,\r\n            244.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            89.0,\r\n            659.0,\r\n            111.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"60\",\r\n          \"box\": [\r\n            258.0,\r\n            659.0,\r\n            302.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"120\",\r\n          \"box\": [\r\n            427.0,\r\n            659.0,\r\n            493.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"100\",\r\n          \"box\": [\r\n            367.0,\r\n            720.0,\r\n            433.0,\r\n            749.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Q (verhuringen\",\r\n          \"box\": [\r\n            100.0,\r\n            777.0,\r\n            364.0,\r\n            814.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"per week)\",\r\n          \"box\": [\r\n            100.0,\r\n            827.0,\r\n            274.0,\r\n            864.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Nieuw\",\r\n          \"box\": [\r\n            700.0,\r\n            83.0,\r\n            818.0,\r\n            112.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"P (€ per verhuring)\",\r\n          \"box\": [\r\n            700.0,\r\n            141.0,\r\n            1030.0,\r\n            178.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            660.0,\r\n            615.0,\r\n            682.0,\r\n            644.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"10\",\r\n          \"box\": [\r\n            638.0,\r\n            455.0,\r\n            682.0,\r\n            484.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"20\",\r\n          \"box\": [\r\n            638.0,\r\n            295.0,\r\n            682.0,\r\n            324.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"25\",\r\n          \"box\": [\r\n            638.0,\r\n            215.0,\r\n            682.0,\r\n            244.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            689.0,\r\n            659.0,\r\n            711.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"60\",\r\n          \"box\": [\r\n            858.0,\r\n            659.0,\r\n            902.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"120\",\r\n          \"box\": [\r\n            1027.0,\r\n            659.0,\r\n            1093.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"15\",\r\n          \"box\": [\r\n            932.0,\r\n            375.0,\r\n            976.0,\r\n            404.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Q (verhuringen\",\r\n          \"box\": [\r\n            700.0,\r\n            777.0,\r\n            964.0,\r\n            814.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"per week)\",\r\n          \"box\": [\r\n            700.0,\r\n            827.0,\r\n            874.0,\r\n            864.0\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"2.2.4_ex_3\",\r\n      \"svg_sha256\": \"d094cd0803f0c023639aa70977909f3979bfeec46e763913c01bbd3b3d613e7e\",\r\n      \"png_sha256\": \"b07321e621ead8ecec3862b8895b754734eb138935e24d680a7d9f229bc9a8a6\",\r\n      \"ink_boxes\": [\r\n        {\r\n          \"text\": \"A\",\r\n          \"box\": [\r\n            30.0,\r\n            23.0,\r\n            59.0,\r\n            52.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"€2.000 → €1.760 per week; −12%\",\r\n          \"box\": [\r\n            568.0,\r\n            23.0,\r\n            1170.0,\r\n            60.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Oud\",\r\n          \"box\": [\r\n            100.0,\r\n            83.0,\r\n            179.0,\r\n            112.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"P (€ per verhuring)\",\r\n          \"box\": [\r\n            100.0,\r\n            141.0,\r\n            430.0,\r\n            178.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            60.0,\r\n            615.0,\r\n            82.0,\r\n            644.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"10\",\r\n          \"box\": [\r\n            38.0,\r\n            455.0,\r\n            82.0,\r\n            484.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"20\",\r\n          \"box\": [\r\n            38.0,\r\n            295.0,\r\n            82.0,\r\n            324.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"25\",\r\n          \"box\": [\r\n            38.0,\r\n            215.0,\r\n            82.0,\r\n            244.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            89.0,\r\n            659.0,\r\n            111.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"60\",\r\n          \"box\": [\r\n            258.0,\r\n            659.0,\r\n            302.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"120\",\r\n          \"box\": [\r\n            427.0,\r\n            659.0,\r\n            493.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"100\",\r\n          \"box\": [\r\n            367.0,\r\n            720.0,\r\n            433.0,\r\n            749.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Q (verhuringen\",\r\n          \"box\": [\r\n            100.0,\r\n            777.0,\r\n            364.0,\r\n            814.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"per week)\",\r\n          \"box\": [\r\n            100.0,\r\n            827.0,\r\n            274.0,\r\n            864.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Nieuw\",\r\n          \"box\": [\r\n            700.0,\r\n            83.0,\r\n            818.0,\r\n            112.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"P (€ per verhuring)\",\r\n          \"box\": [\r\n            700.0,\r\n            141.0,\r\n            1030.0,\r\n            178.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            660.0,\r\n            615.0,\r\n            682.0,\r\n            644.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"10\",\r\n          \"box\": [\r\n            638.0,\r\n            455.0,\r\n            682.0,\r\n            484.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"20\",\r\n          \"box\": [\r\n            638.0,\r\n            295.0,\r\n            682.0,\r\n            324.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"25\",\r\n          \"box\": [\r\n            638.0,\r\n            215.0,\r\n            682.0,\r\n            244.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            689.0,\r\n            659.0,\r\n            711.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"60\",\r\n          \"box\": [\r\n            858.0,\r\n            659.0,\r\n            902.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"120\",\r\n          \"box\": [\r\n            1027.0,\r\n            659.0,\r\n            1093.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"80\",\r\n          \"box\": [\r\n            918.0,\r\n            720.0,\r\n            962.0,\r\n            749.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"22\",\r\n          \"box\": [\r\n            992.0,\r\n            263.0,\r\n            1036.0,\r\n            292.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Q (verhuringen\",\r\n          \"box\": [\r\n            700.0,\r\n            777.0,\r\n            964.0,\r\n            814.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"per week)\",\r\n          \"box\": [\r\n            700.0,\r\n            827.0,\r\n            874.0,\r\n            864.0\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"2.2.4_ex_4\",\r\n      \"svg_sha256\": \"ae2702581e6e88c8f82c87f0f3d2fec14a1b8cfa16afc7ebb25f010f9e945116\",\r\n      \"png_sha256\": \"99c8d340c8ac7a9ab04f5fffa5d3b0c05d5b32ed6cfd226807ff8871a6096af1\",\r\n      \"ink_boxes\": [\r\n        {\r\n          \"text\": \"B\",\r\n          \"box\": [\r\n            30.0,\r\n            23.0,\r\n            59.0,\r\n            52.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"€1.000 → €900 per week; 1,5 × 0,6 = 0,9\",\r\n          \"box\": [\r\n            449.0,\r\n            23.0,\r\n            1170.0,\r\n            60.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Oud\",\r\n          \"box\": [\r\n            100.0,\r\n            83.0,\r\n            179.0,\r\n            112.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"P (€ per verhuring)\",\r\n          \"box\": [\r\n            100.0,\r\n            141.0,\r\n            430.0,\r\n            178.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            60.0,\r\n            615.0,\r\n            82.0,\r\n            644.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"10\",\r\n          \"box\": [\r\n            38.0,\r\n            455.0,\r\n            82.0,\r\n            484.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"20\",\r\n          \"box\": [\r\n            38.0,\r\n            295.0,\r\n            82.0,\r\n            324.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"25\",\r\n          \"box\": [\r\n            38.0,\r\n            215.0,\r\n            82.0,\r\n            244.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            89.0,\r\n            659.0,\r\n            111.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"60\",\r\n          \"box\": [\r\n            258.0,\r\n            659.0,\r\n            302.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"120\",\r\n          \"box\": [\r\n            427.0,\r\n            659.0,\r\n            493.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"100\",\r\n          \"box\": [\r\n            367.0,\r\n            720.0,\r\n            433.0,\r\n            749.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Q (verhuringen\",\r\n          \"box\": [\r\n            100.0,\r\n            777.0,\r\n            364.0,\r\n            814.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"per week)\",\r\n          \"box\": [\r\n            100.0,\r\n            827.0,\r\n            274.0,\r\n            864.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Nieuw\",\r\n          \"box\": [\r\n            700.0,\r\n            83.0,\r\n            818.0,\r\n            112.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"P (€ per verhuring)\",\r\n          \"box\": [\r\n            700.0,\r\n            141.0,\r\n            1030.0,\r\n            178.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            660.0,\r\n            615.0,\r\n            682.0,\r\n            644.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"10\",\r\n          \"box\": [\r\n            638.0,\r\n            455.0,\r\n            682.0,\r\n            484.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"20\",\r\n          \"box\": [\r\n            638.0,\r\n            295.0,\r\n            682.0,\r\n            324.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"25\",\r\n          \"box\": [\r\n            638.0,\r\n            215.0,\r\n            682.0,\r\n            244.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"0\",\r\n          \"box\": [\r\n            689.0,\r\n            659.0,\r\n            711.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"60\",\r\n          \"box\": [\r\n            858.0,\r\n            659.0,\r\n            902.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"120\",\r\n          \"box\": [\r\n            1027.0,\r\n            659.0,\r\n            1093.0,\r\n            688.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"15\",\r\n          \"box\": [\r\n            932.0,\r\n            375.0,\r\n            976.0,\r\n            404.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"Q (verhuringen\",\r\n          \"box\": [\r\n            700.0,\r\n            777.0,\r\n            964.0,\r\n            814.0\r\n          ]\r\n        },\r\n        {\r\n          \"text\": \"per week)\",\r\n          \"box\": [\r\n            700.0,\r\n            827.0,\r\n            874.0,\r\n            864.0\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  ],\r\n  \"personal_visual_review\": \"NOT_SUPPLIED_BY_THIS_SCRIPT\"\r\n}\r\n",
+      "stderr": "",
+      "stdout_raw_sha256": "ce4d5ec5062f1c4fd6ae68dd977b69381aea34c690097aec8bdbc8fc01b63c22",
+      "stderr_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/validate-paragraph.js",
+        "--mode",
+        "part-a",
+        "--profile",
+        "student-web",
+        "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit"
+      ],
+      "cwd": "C:\\wt\\book2-224-build-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "\nValidating paragraph 2.2.4 \"Gemengde opgaven elasticiteit\"\nPath: C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\nMode: part-a\nProfile: student-web\n\n-- Part A textbook files --\n  OK Paragraph type: consolidation\n  OK opgaven.md: 2.2.4 Gemengde opgaven elasticiteit – opgaven.md\n  OK antwoorden.md: 2.2.4 Gemengde opgaven elasticiteit – antwoorden.md\n  OK 2.2.4 Gemengde opgaven elasticiteit – opgaven.html (312.0 KB)\n  OK 2.2.4 Gemengde opgaven elasticiteit – antwoorden.html (345.7 KB)\n  OK 2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf (254 KB)\n  OK 2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf (279 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 4 image refs all resolve\n  OK _assets/: 4 SVGs, 4 PNGs\n\n-- Part A QC artifacts --\n  OK Part A review: 2.2.4-review.md (no explicit verdict, no FAIL markers)\n  OK Quality ref: 2.2.4-quality-ref.yaml (valid)\n\n==========================================\nOK Paragraph 2.2.4 \"Gemengde opgaven elasticiteit\" PASSED all checks.\n\n",
+      "stderr": "",
+      "stdout_raw_sha256": "09c04abb127fa634fb0cee0bbec66e479f37f1422877a60f37028734bd9ef8ca",
+      "stderr_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/validate-paragraph.js",
+        "--mode",
+        "part-a",
+        "--profile",
+        "publisher-print",
+        "C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit"
+      ],
+      "cwd": "C:\\wt\\book2-224-build-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "\nValidating paragraph 2.2.4 \"Gemengde opgaven elasticiteit\"\nPath: C:\\wt\\book2-224-build-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\nMode: part-a\nProfile: publisher-print\n\n-- Part A textbook files --\n  OK Paragraph type: consolidation\n  OK opgaven.md: 2.2.4 Gemengde opgaven elasticiteit – opgaven.md\n  OK antwoorden.md: 2.2.4 Gemengde opgaven elasticiteit – antwoorden.md\n  OK 2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf (254 KB)\n  OK 2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf (279 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 4 image refs all resolve\n  OK _assets/: 4 SVGs, 4 PNGs\n\n-- Part A QC artifacts --\n  OK Part A review: 2.2.4-review.md (no explicit verdict, no FAIL markers)\n  OK Quality ref: 2.2.4-quality-ref.yaml (valid)\n\n==========================================\nOK Paragraph 2.2.4 \"Gemengde opgaven elasticiteit\" PASSED all checks.\n\n",
+      "stderr": "",
+      "stdout_raw_sha256": "3b6fea5b2f0940f08b1ed8768d1392242dc0a302bb8e002f7ef8f24e84ff6b43",
+      "stderr_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "node",
+        "build-scripts/workflows/check-book-outline-currentness.js",
+        "--require-approved",
+        "--action",
+        "paragraph_production",
+        "--paragraph",
+        "2.2.4"
+      ],
+      "cwd": "C:\\wt\\book2-224-build-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.2.4\n",
+      "stderr": "",
+      "stdout_raw_sha256": "6546538caea644dd664bdd599315b7a06fb4e07ad9c140f4743bcc80f3778f33",
+      "stderr_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "node",
+        "build-scripts/workflows/check-book2-target-authority-remediation.js",
+        "--durable"
+      ],
+      "cwd": "C:\\wt\\book2-224-build-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "Book 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n",
+      "stderr": "",
+      "stdout_raw_sha256": "ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc",
+      "stderr_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "BOOK2-TEXTBOOK-PRODUCTION-1"
+      ],
+      "cwd": "C:\\wt\\book2-224-build-20260906\\4veco-platform",
+      "exit_code": 0,
+      "stdout": "OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active\n",
+      "stderr": "",
+      "stdout_raw_sha256": "699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d",
+      "stderr_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "rendered_native_checks": {
+    "status": "PASS",
+    "paragraph": "2.2.4",
+    "manifest_sha256": "b6d55e7b6d76b3ef3de015b8687165d9781e3dca6764bbafcc563498c4f3971b",
+    "actual_additional_native_rebuild": false,
+    "documents": [
+      {
+        "kind": "opgaven",
+        "pages": [
+          {
+            "page": 1,
+            "minimum_text_pt": 12.0,
+            "body_spans": 36,
+            "text": "2.2.4 Gemengde opgaven elasticiteit –\nopgaven\nAanpak en korte herinnering\nIn deze gemengde opgaven combineer je wat je in §§2.2.1–2.2.3 hebt geleerd. Er komt\ngeen nieuwe theorie bij. Je onderzoekt eerst Sterrenplek en past daarna zelfstandig\ndezelfde handelingen toe op StreamPlus.\nNa het oefenen kun je dit:\nJe kunt relevante tabelgegevens selecteren, Ev classificeren en uitleggen, en Ei en\nEk berekenen en classificeren.\nJe kunt totale opbrengst vóór en na een prijsverandering vergelijken.\nJe kunt een vraagfunctie gebruiken als één variabele verandert en de andere\nvariabelen gelijk blijven.\nJe kunt met meerdere bronnen een omzetadvies formuleren zonder verder te gaan\ndan de gegevens.\nZo werk je. Maak de zes vragen over Sterrenplek in je schrift. Vermeld bij elke\nberekening je aanpak, de ingevulde getallen, de uitkomst met eenheid en de betekenis.\nGeef bij een uitleg een standpunt, een reden en de gebruikte bron of berekening. Lees\nbij een figuur eerst de oude en nieuwe situatie en beide assen. Je hoeft geen grafiek\nopnieuw te tekenen.\nHaal terug wat je al weet. Een procentuele verandering gebruikt de oude waarde als\nbasis. Het teken van Ev geeft de richting; voor de sterkte vergelijk je |Ev| met 1. TO = P\n× Q. Ei vergelijkt een hoeveelheidsverandering met een inkomensverandering. Ek\nvergelijkt de vraag naar het ene goed met de prijs van een ander goed: noem beide\ngoederen. Begin bij een afzonderlijke verandering in een vraagfunctie opnieuw met de\nopgegeven beginsituatie en controleer wat gelijk blijft.\nDe hulp bij het lezen van bronnen staat na de zes vragen. Iedereen mag die gebruiken\nals het nodig is; probeer eerst zelf. Bij StreamPlus kies je de aanpak zonder die hulp.\nControleer daarna je antwoorden met het antwoordenboekje: verbeter niet alleen de\nuitkomst, maar ook een ontbrekende reden of eenheid. De bonus is een extra uitdaging.\nSluit af met de twee herhalingsvragen.\n• \n• \n• \n• \n2.2.4 Gemengde opgaven elasticiteit – opgaven\n1 / 10\n"
+          },
+          {
+            "page": 2,
+            "minimum_text_pt": 12.0,
+            "body_spans": 17,
+            "text": "Opgave 1 — Sterrenplek\nSterrenplek verhuurt telescopen, verrekijkers en passende filters. Het bedrijf onderzoekt\nverschillende prijs- en inkomensvergelijkingen. De bronnen A tot en met D gaan over\nverhuur. Bron E beschrijft een afzonderlijk regionaal abonnementenmodel; dat zijn niet\nde wekelijkse verhuuraantallen. Iedere bron is een eigen vergelijking, geen volgende\nstap in één tijdlijn. Gebruik bij iedere vraag de genoemde bron.\nBron A — Telescoopverhuur\nDe figuur geeft de oude en nieuwe prijs en het aantal verhuringen per week. Andere\nomstandigheden blijven gelijk. De servicebeoordeling is in beide situaties 4,8 op 5.\nFiguur 1. Telescoopverhuur bij Sterrenplek. De hoogte toont de prijs per verhuring en de\nbreedte het aantal verhuringen per week. Vergelijk de oude en nieuwe situatie op\ndezelfde schalen; de rechthoeken tonen prijs maal hoeveelheid.\nVraag 1 (4 punten). Lees uit de figuur de oude en nieuwe P en Q af, met eenheden.\nBereken Ev, classificeer de vraag en leg uit wat de uitkomst over de procentuele reactie\nzegt. Bereken vervolgens de procentuele verandering van TO. Welk gegeven uit bron A\nheb je daarvoor niet nodig?\n2.2.4 Gemengde opgaven elasticiteit – opgaven\n2 / 10\n"
+          },
+          {
+            "page": 3,
+            "minimum_text_pt": 12.0,
+            "body_spans": 15,
+            "text": "Bron B — Verrekijkerverhuur\nVoor een afzonderlijke prijsstap zijn hieronder beide situaties gegeven. Andere\nomstandigheden blijven gelijk. De gemeten Ev over dit hele interval is −0,8.\nFiguur 2. Verrekijkerverhuur bij Sterrenplek. Beide rechthoeken zijn op dezelfde prijs- en\nhoeveelheidsschalen getekend als in figuur 1. Het zijn twee waargenomen situaties,\ngeen getekende vraaglijn tussen de punten.\nVraag 2 (4 punten). Vergelijk de richting van de omzetverandering in bron A en bron B.\nBereken voor B de oude en nieuwe TO en de procentuele verandering. Vergelijk ook de\nprijselasticiteitscategorieën. Laat met de prijsfactor en hoeveelheidsfactor zien hoe de\nomzet in B verandert.\nDe eigenaar zegt: “Bron B bewijst dat de regel voor een kleine prijsverandering bij\nprijsinelastische vraag onjuist is.” Beoordeel deze uitspraak. Maak in je uitleg\nonderscheid tussen de gemeten elasticiteit over het hele interval en de voorwaardelijke\nregel voor een kleine lokale verandering.\n2.2.4 Gemengde opgaven elasticiteit – opgaven\n3 / 10\n"
+          },
+          {
+            "page": 4,
+            "minimum_text_pt": 12.0,
+            "body_spans": 19,
+            "text": "Bron C — Inkomen en telescoopsessies\nIn een onderzoek stijgt het gemiddelde jaarinkomen met 10%. De gevraagde\nhoeveelheid telescoopsessies stijgt met 5%. Alle andere omstandigheden blijven gelijk.\nEen onderzoeker legt daarnaast twee afzonderlijke grensgevallen voor: een goed met Ei\n= 0 en een goed met Ei = 1.\nVraag 3 (2 punten). Bereken en classificeer Ei voor de telescoopsessies. Leg uit\nwaarom een positieve Ei niet voldoende is om van een luxegoed te spreken. Geef ook\naan of je in de hier gebruikte indeling aan Ei = 0 en Ei = 1 een categorie toekent.\nBron D — Telescopen en passende filters\nDeze vergelijking staat los van bron A. De prijs van een telescoopverhuring stijgt hier\nvan €20 naar €24. De vraag naar passende filterverhuringen daalt van 200 naar 180 per\nweek. De eigen prijs van de filterverhuringen en de overige omstandigheden blijven\ngelijk.\nVraag 4 (2 punten). Selecteer de twee veranderingen die je nodig hebt voor Ek van de\nvraag naar filterverhuringen ten opzichte van de prijs van telescoopverhuringen.\nBereken Ek. Leg met het teken en de namen van beide goederen uit of het om\nsubstituten of complementen gaat.\n2.2.4 Gemengde opgaven elasticiteit – opgaven\n4 / 10\n"
+          },
+          {
+            "page": 5,
+            "minimum_text_pt": 12.0,
+            "body_spans": 45,
+            "text": "Bron E — Afzonderlijk regionaal abonnementenmodel\nDe regionale vraag naar een abonnement van Sterrenplek wordt beschreven door:\nQx = 100 − 2Px + Pc + 0,005Y\nQx is het aantal gevraagde abonnementen per maand. Px is de eigen maandprijs en Pc\nde maandprijs van een concurrerend abonnement, beide in euro. Y is het gemiddelde \njaarinkomen in euro. De beginsituatie is Px = 10, Pc = 20 en Y = 20.000. Het model\ngebruikt dus jaarinkomen, ook al is Qx een maandhoeveelheid.\nVraag 5 (6 punten). Bereken Qx in de beginsituatie. Bereken daarna Qx als alleen Y\nstijgt naar €24.000 per jaar. Bereken en classificeer Ei voor deze inkomensvergelijking.\nHoeveel abonnementen per maand verandert Qx, en welke prijzen blijven gelijk?\nBegin vervolgens opnieuw bij de beginsituatie. Bereken Qx als alleen Pc stijgt naar €24\nper maand. Vergelijk de uitkomst met de oorspronkelijke Qx en beschrijf de richting van\nhet verband tussen Pc en Qx. Noem wat in deze vergelijking gelijk blijft.\nVraag 6 (2 punten). Vul in je schrift de vier richtingen in onderstaande tabel in. De tabel\ngaat uitsluitend over de eerder geleerde voorwaardelijke regel voor een kleine lokale\nprijsverandering, met de genoemde categorie en overige omstandigheden gelijk.\nVraag \nEigen prijs \nRichting TO \nPrijsinelastisch \nStijgt \n… \nPrijsinelastisch \nDaalt \n… \nPrijselastisch \nStijgt \n… \nPrijselastisch \nDaalt \n… \nGeef Sterrenplek vervolgens een voorzichtig omzetadvies met bron A of B én bron D of\nE. Gebruik daadwerkelijk een uitkomst of verband uit beide bronnen. Leg ook uit\nwaarom een omzetuitkomst zonder kostengegevens nog geen conclusie over winst\noplevert.\n2.2.4 Gemengde opgaven elasticiteit – opgaven\n5 / 10\n"
+          },
+          {
+            "page": 6,
+            "minimum_text_pt": 12.0,
+            "body_spans": 24,
+            "text": "Hulp bij het lezen van bronnen (optioneel)\nGebruik alleen de hulp die je nodig hebt. Schrijf daarna zelf een volledig antwoord. Deze\nhulp verandert de vragen en hun punten niet.\nBij vraag 1. Kijk in figuur 1 eerst naar “oud”, daarna naar “nieuw”. Schrijf P oud, P\nnieuw, Q oud en Q nieuw op, elk met de eenheid van de as. Gebruik voor een\nverandering: (nieuw − oud) / oud × 100%. Voor Q krijg je zo (80 − 100) / 100 × 100% =\n−20%. Vul nu zelf aan: procentuele verandering P = …; Ev = … / … = …; TO oud = … ×\n…; TO nieuw = … × ….\nBij vraag 2. Vergelijk de twee producten P × Q. Wat zegt een intervalmeting wel en niet\nover de regel voor een kleine lokale verandering?\nBij vraag 3. Welke procentuele verandering hoort bij inkomen? Welke hoort bij de\ngevraagde hoeveelheid? Kies de juiste noemer voordat je deelt.\nBij vraag 4. Vul eerst zonder getallen in: “vraag naar …” gedeeld door “prijs van …”.\nGebruik de prijs van het andere genoemde goed, niet de eigen prijs van het goed\nwaarvan je de vraag onderzoekt.\nBij vraag 5. Begin ieder afzonderlijk scenario opnieuw bij de eerste rij van je\nberekening: de beginsituatie.\nBij vraag 6 en de volgende doeloefening kies je zelf de aanpak. In het\nantwoordenboekje staan de volledige uitwerkingen en beoordelingscriteria.\n2.2.4 Gemengde opgaven elasticiteit – opgaven\n6 / 10\n"
+          },
+          {
+            "page": 7,
+            "minimum_text_pt": 12.0,
+            "body_spans": 27,
+            "text": "Doeloefening — StreamPlus\nStreamPlus onderzoekt één recente prijsverhoging en mogelijke vervolgstappen.\nGebruik bij vragen 1 tot en met 5 telkens alleen de aangegeven bron. Combineer bij\nvraag 6 minstens twee bronnen. De gemeten Ev in bron A is gegeven; de opgave\ncombineert eerder onderwezen handelingen en introduceert geen nieuwe formule.\nBron A\nTabel met oude en nieuwe prijs, aantal abonnees en appscore; de gemeten Ev is −0,7.\ngegeven \noud \nnieuw \nprijs Standaard \n€10 \n€12 \nabonnees \n50.000 \n43.000 \nappscore \n4,6/5 \n4,6/5 \nVraag 1 (2 punten). Selecteer uit bron A de gegevens voor een controleberekening van\nEv en noem het gegeven dat daarvoor niet nodig is.\nVraag 2 (2 punten). Classificeer met de gegeven Ev=−0,7 de vraag en leg in gewone\ntaal uit hoe sterk Q procentueel reageert op een prijsverandering.\nVraag 3 (2 punten). Bereken met bron A TO vóór en na de prijsverhoging.\n2.2.4 Gemengde opgaven elasticiteit – opgaven\n7 / 10\n"
+          },
+          {
+            "page": 8,
+            "minimum_text_pt": 12.0,
+            "body_spans": 27,
+            "text": "Bron B\nTabel met inkomens- en vraagverandering voor Premium en Budget.\nverandering \nPremium \nBudget \ninkomen \n+8% \n+8% \ngevraagde hoeveelheid \n+15% \n−4% \nBron C\nTabel voor de kruislingse elasticiteit van StreamPlus ten opzichte van het concurrerende\nabonnement.\ngegeven \noud \nnieuw \nprijs concurrerend abonnement \n€8 \n€9 \nvraag StreamPlus \nbasis \n+5% \nVraag 4 (4 punten). Bereken en classificeer met bron B Ei voor Premium en Budget en\nmet bron C Ek van de vraag naar StreamPlus ten opzichte van de prijs van het\nconcurrerende abonnement. Noem bij Ek beide diensten.\n2.2.4 Gemengde opgaven elasticiteit – opgaven\n8 / 10\n"
+          },
+          {
+            "page": 9,
+            "minimum_text_pt": 12.0,
+            "body_spans": 11,
+            "text": "Bron D\nRegionale vraagfunctie Q=12.000−400P+0,1Y+300Pc. Q is het aantal gevraagde\nabonnementen per maand, P en Pc zijn maandprijzen in euro en Y is het gemiddelde\njaarinkomen in euro. Beginsituatie: P=12, Pc=10 en Y=40.000.\nVraag 5 (2 punten). Bereken met bron D Q in de beginsituatie en nadat alleen Y stijgt\nnaar €42.000 per jaar. Noem welke variabelen gelijk blijven.\nVraag 6 (2 punten). Geef op basis van minstens twee bronnen een voorzichtig\nomzetadvies. Noem één conclusie die de bronnen ondersteunen en precies twee\nconclusies die zij niet bewijzen.\n2.2.4 Gemengde opgaven elasticiteit – opgaven\n9 / 10\n"
+          },
+          {
+            "page": 10,
+            "minimum_text_pt": 12.0,
+            "body_spans": 47,
+            "text": "Denkertje / Bonusopgave\nExtra uitdaging (4 punten). Voor het model uit bron E zijn vier uitkomsten gegeven. In\nalle vier de rijen blijft Px = €10 per maand.\nSituatie \nY per jaar (€) \nPc per maand\n(€) \nQx per\nmaand \nBeginsituatie \n20.000 \n20 \n200 \nAlleen Y verandert \n24.000 \n20 \n220 \nAlleen Pc verandert \n20.000 \n24 \n204 \nY en Pc veranderen \n24.000 \n24 \n224 \nEen medewerker zegt: “De stijging van 200 naar 224 bewijst dat alleen de\ninkomensstijging 24 extra abonnementen veroorzaakt. Die reactie geldt dus ook buiten\ndit model en bij toekomstige veranderingen.”\nBeoordeel deze uitspraak. Kies een eerlijke vergelijking om de afzonderlijke\ninkomensverandering binnen het model te onderzoeken en leg uit welke variabelen\ndaarbij gelijk blijven. Gebruik ook de uitkomst 204 in je uitleg. Geef aan wat je met deze\nmodeluitkomsten wel en niet kunt concluderen.\nHerhaling / Herhaling en interleaving\nHerhaling 1 (1 punt). Een prijs stijgt van €20 naar €25 en daalt daarna terug naar €20.\nWaarom is de daling niet 25%? Bereken het juiste dalingspercentage en vermeld de\nbasis.\nHerhaling 2 (1 punt). Bij gelijkblijvend inkomen stijgt de prijs met 10% en daalt de\ngevraagde hoeveelheid met 5%. Bereken Ev en leg uit waarom je met deze gegevens\ngeen Ei kunt berekenen.\nControleer je aanpak. Kijk terug: heb je de oude bases, de namen van de goederen, de\neenheden en de gelijkblijvende variabelen vermeld? Verbeter met het antwoordenboekje\néén stap die nog onvolledig was. Een goed advies blijft binnen wat de bronnen werkelijk\nondersteunen.\n2.2.4 Gemengde opgaven elasticiteit – opgaven\n10 / 10\n"
+          }
+        ],
+        "figures": [
+          {
+            "page": 2,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "label_pt": 15.685039370078739
+          },
+          {
+            "page": 3,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "label_pt": 15.685039370078739
+          }
+        ],
+        "pdf_sha256": "c43e028b16ea9005d8fb7b161c455fd41163ebcb4a0aca922875cd16a6ab39bb"
+      },
+      {
+        "kind": "antwoorden",
+        "pages": [
+          {
+            "page": 1,
+            "minimum_text_pt": 12.0,
+            "body_spans": 33,
+            "text": "2.2.4 Gemengde opgaven elasticiteit –\nantwoorden\nAntwoorden bij Sterrenplek\nControleer niet alleen de uitkomst: een volledig antwoord laat de gekozen bron,\nberekening en economische betekenis zien. Gelijkwaardige correcte redeneringen zijn\ntoegestaan. De zes vragen tellen samen 20 punten.\nVraag 1 — Telescoopverhuur (4 punten)\nUit bron A / figuur 1: P oud = €20 en P nieuw = €22 per verhuring; Q oud = 100 en Q\nnieuw = 80 verhuringen per week.\nProcentuele verandering Q = (80 − 100) / 100 × 100% = −20%. Procentuele verandering\nP = (22 − 20) / 20 × 100% = +10%. Dus Ev = −20% / +10% = −2. Omdat |Ev| = 2 > 1 is\nde vraag prijselastisch. In deze vergelijking reageert Q procentueel tweemaal zo sterk\nals P en in tegengestelde richting.\nTO oud = €20 × 100 = €2.000 per week. TO nieuw = €22 × 80 = €1.760 per week.\nProcentuele verandering TO = (1.760 − 2.000) / 2.000 × 100% = −12%. De\nservicebeoordeling 4,8 op 5 is niet nodig voor deze berekeningen.\nBeoordeling: 1 punt voor de beide juiste procentuele veranderingen en Ev; 1 punt voor\nde juiste categorie met magnitude en proportionele betekenis; 1 punt voor beide TO-\nbedragen en −12%; 1 punt voor de juist benoemde oude/nieuwe figuurwaarden met\neenheden en het niet-relevante gegeven.\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\n1 / 10\n"
+          },
+          {
+            "page": 2,
+            "minimum_text_pt": 12.0,
+            "body_spans": 3,
+            "text": "Figuur 3. Uitwerking van bron A. Met gelijke schalen zijn de rechthoeken €2.000 en\n€1.760 per week waard. De daling van €240 is 12% van de oude omzet; de oppervlakte\nis P maal Q en niet de helling van een lijn.\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\n2 / 10\n"
+          },
+          {
+            "page": 3,
+            "minimum_text_pt": 12.0,
+            "body_spans": 40,
+            "text": "Vraag 2 — Verrekijkerverhuur (4 punten)\nBron B / figuur 2 geeft P €10 → €15 per verhuring en Q 100 → 60 verhuringen per\nweek. TO oud = €10 × 100 = €1.000 per week; TO nieuw = €15 × 60 = €900 per week.\n(900 − 1.000) / 1.000 × 100% = −10%. Net als in A daalt de omzet.\nIn A is de gemeten Ev = −2: |Ev| > 1, prijselastisch. In B is de gegeven interval-Ev =\n−0,8: |Ev| < 1, prijsinelastisch. De prijsfactor in B is 15/10 = 1,5; de hoeveelheidsfactor is\n60/100 = 0,6. De omzetfactor is 1,5 × 0,6 = 0,9: de nieuwe omzet is 90% van de oude.\nJe mag +50% en −40% hier niet optellen tot een omzetstijging van 10%.\nDe uitspraak van de eigenaar gaat te ver. Ev = −0,8 beschrijft de hele gemeten\nprijsstap van 50%. Deze intervalwaarde bewijst niet dat de vraag overal lokaal\nprijsinelastisch is. De eerder geleerde lokale regel geldt voorwaardelijk bij een kleine\nprijsverandering, met de genoemde lokale categorie en overige omstandigheden gelijk.\nZij beslist niet op basis van één intervalwaarde wat er over de hele grote stap gebeurt.\nBron B is daarom geen weerlegging van die voorwaardelijke lokale regel. De bronnen\ngeven geen universeel percentage waaronder iedere verandering “klein” is.\nBeoordeling: 1 punt voor beide B-bedragen, −10% en dezelfde dalingsrichting als A; 1\npunt voor de juiste vergelijking van categorieën; 1 punt voor de vermenigvuldigde\nfactoren en betekenis; 1 punt voor het onderscheid tussen intervalmeting en\nvoorwaardelijke lokale regel, zonder ongeldige veralgemening.\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\n3 / 10\n"
+          },
+          {
+            "page": 4,
+            "minimum_text_pt": 12.0,
+            "body_spans": 3,
+            "text": "Figuur 4. Uitwerking van bron B. De oude en nieuwe omzet zijn €1.000 en €900 per\nweek. De prijs- en hoeveelheidsfactor moeten worden vermenigvuldigd: 1,5 × 0,6 = 0,9.\nDe figuur geeft geen lokale elasticiteit tussen beide waarnemingen.\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\n4 / 10\n"
+          },
+          {
+            "page": 5,
+            "minimum_text_pt": 12.0,
+            "body_spans": 45,
+            "text": "Vraag 3 — Inkomen (2 punten)\nBron C: Ei = +5% / +10% = 0,5. Omdat 0 < Ei < 1 zijn de telescoopsessies in deze\nvergelijking een normaal goed. De vraag stijgt procentueel minder sterk dan het\ninkomen. Positief alleen is onvoldoende voor een luxegoed: daarvoor moet Ei > 1 zijn.\nEen inferieur goed heeft Ei < 0. In de hier gebruikte strikte indeling krijgen Ei = 0 en Ei =\n1 geen categorie. Dat zegt niets over de kwaliteit of noodzakelijkheid van een goed.\nBeoordeling: 1 punt voor de juiste verhouding, uitkomst en normale categorie; 1 punt\nvoor de strikte luxedrempel en geen categorie bij beide grenzen.\nVraag 4 — Twee genoemde goederen (2 punten)\nGebruik bron D: vraag naar filterverhuringen 200 → 180 per week en prijs van \ntelescoopverhuringen €20 → €24. Niet de eigen filterprijs en niet de telescoopprijs €22\nuit de andere vergelijking in bron A.\n%ΔQ filters = (180 − 200) / 200 × 100% = −10%. %ΔP telescopen = (24 − 20) / 20 ×\n100% = +20%. Ek = −10% / +20% = −0,5. De negatieve kruislingse elasticiteit betekent\ndat deze goederen complementen zijn in de gegeven vergelijking: bij de hogere\ntelescoopprijs daalt de vraag naar passende filters, terwijl de eigen filterprijs gelijk blijft.\nBeoordeling: 1 punt voor de twee juiste procentuele veranderingen en Ek, met\nvraaggoed en prijsgoed correct benoemd; 1 punt voor complementen en de juiste\nrichting met beide goederen en de vaste eigen filterprijs.\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\n5 / 10\n"
+          },
+          {
+            "page": 6,
+            "minimum_text_pt": 12.0,
+            "body_spans": 48,
+            "text": "Vraag 5 — Een variabele tegelijk (6 punten)\nBron E gebruikt maandprijzen en jaarinkomen. Vul Y dus rechtstreeks in; deel het niet\ndoor 12.\nBeginsituatie: Qx = 100 − 2 × 10 + 20 + 0,005 × 20.000 = 100 − 20 + 20 + 100 = 200\nabonnementen per maand.\nAlleen Y verandert: Qx = 100 − 2 × 10 + 20 + 0,005 × 24.000 = 100 − 20 + 20 + 120 = \n220 abonnementen per maand. %ΔQx = (220 − 200) / 200 × 100% = +10%. %ΔY =\n(24.000 − 20.000) / 20.000 × 100% = +20%. Ei = +10% / +20% = 0,5, dus een normaal\ngoed. Het is geen Ei van 0,005: dat getal is een coëfficiënt in de vraagfunctie. Qx stijgt\nmet 20 abonnementen per maand; Px = 10 en Pc = 20 blijven gelijk. Y blijft een\njaarbedrag, Qx een maandhoeveelheid.\nTerug naar de beginsituatie, alleen Pc verandert: herstel Y = 20.000 en Px = 10, en\nvul Pc = 24 in. Qx = 100 − 2 × 10 + 24 + 0,005 × 20.000 = 100 − 20 + 24 + 100 = 204\nabonnementen per maand. Vergelijk met 200, niet met 220: de vraag neemt met 4\nabonnementen per maand toe. Binnen deze vergelijking is het verband tussen Pc en Qx\npositief. Px = 10 en Y = 20.000 blijven gelijk. Beide veranderingen tegelijk zouden een\nandere vergelijking zijn.\nBeoordeling: telkens 1 punt voor (1) 200 met correcte substitutie; (2) 220 met correcte\nsubstitutie; (3) de twee percentages, Ei en categorie; (4) +20 per maand en de juiste\nvaste prijzen/jaareenheid; (5) de geresette Pc-vergelijking met 204; (6) vergelijking met\n200, positieve richting en de juiste vaste Px en Y.\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\n6 / 10\n"
+          },
+          {
+            "page": 7,
+            "minimum_text_pt": 12.0,
+            "body_spans": 49,
+            "text": "Vraag 6 — Voorzichtig advies (2 punten)\nAlle onderstaande richtingen zijn voorwaardelijk: een kleine lokale prijsverandering bij\nde genoemde categorie en overige omstandigheden gelijk.\nVraag \nEigen prijs \nRichting TO \nPrijsinelastisch \nStijgt \nStijgt \nPrijsinelastisch \nDaalt \nDaalt \nPrijselastisch \nStijgt \nDaalt \nPrijselastisch \nDaalt \nStijgt \nVoorbeeld van advies: verhoog de telescoopprijs niet automatisch opnieuw op basis\nvan deze gegevens. In bron A daalde de gemeten omzet met €240 per week. Bron D\nlaat bovendien zien dat een hogere telescoopprijs in die afzonderlijke vergelijking\nsamengaat met minder vraag naar passende filters. Onderzoek eerst de reactie bij een\nvolgende stap en de kosten. Een gegeven omzet zegt zonder kosten niets afdoends\nover de winst. Dit is geen voorspelling dat de volgende prijsstap precies dezelfde reactie\nzal oproepen.\nEen gelijkwaardig advies mag B gebruiken (gemeten omzet €1.000 → €900) en/of E (de\ngecontroleerde positieve Pc–Qx-relatie), zolang de twee vereiste soorten bronnen echt\nworden gebruikt en de conclusie binnen hun gegevens blijft.\nBeoordeling: 1 punt voor de vier juiste voorwaardelijke richtingen; 1 punt voor een\nvoorzichtig advies met A of B én D of E, daadwerkelijk gebruik van beide bronnen en het\nexpliciete ontbrekende-kostenvoorbehoud.\nControle bij de optionele hulp\nDe hulp hoort bij dezelfde vragen, zonder extra punten. Bij vraag 1 zijn de open\ninvulplaatsen +10%, −20% / +10% = −2, €20 × 100 en €22 × 80. Bij vraag 2\nvermenigvuldig je de prijs- en hoeveelheidsfactor; de intervalmeting bewijst geen lokale\ncategorie op ieder tussenliggend punt. Bij vraag 3 is het inkomenspercentage de\nnoemer. Bij vraag 4 is de teller de vraag naar filters en de noemer de prijs van\ntelescopen. Bij vraag 5 is de eerste rij altijd Px = 10, Pc = 20, Y = 20.000 en Qx = 200.\nDe volledige redenen en berekeningen staan bij vragen 1–5; hulpgebruik maakt een\nantwoord niet minder waard.\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\n7 / 10\n"
+          },
+          {
+            "page": 8,
+            "minimum_text_pt": 12.0,
+            "body_spans": 35,
+            "text": "Doeloefening — StreamPlus (14 punten)\nVraag 1 (2 punten)\nNodig: P €10→€12 en Q 50.000→43.000. De appscore 4,6/5 is niet nodig voor Ev.\nBeoordeling: 1 punt voor de oude/nieuwe P en Q; 1 punt voor het noemen van de\nniet-benodigde appscore. Een controleberekening van Ev is niet gevraagd. Ter controle\nachteraf: %ΔQ = −14%, %ΔP = +20%, Ev = −14% / +20% = −0,7.\nVraag 2 (2 punten)\n|Ev|=0,7<1, dus de vraag is prijsinelastisch. Bij een prijsverandering van 1% verandert Q\nin deze waarneming in tegengestelde richting met ongeveer 0,7%.\nBeoordeling: 1 punt voor |Ev| < 1 en prijsinelastisch; 1 punt voor de proportionele\nuitleg met tegengestelde richting, begrensd tot deze waarneming. Dit is geen\nvoorspelling van een volgende prijsverhoging.\nVraag 3 (2 punten)\nTO oud=€10×50.000=€500.000; TO nieuw=€12×43.000=€516.000.\nBeoordeling: 1 punt per juist TO-bedrag met de juiste prijs maal hoeveelheid. De\nonderzochte omzet stijgt met €16.000. Bron A noemt geen periode voor deze totale\nabonneeaantallen; voeg geen maand- of jaartotaal toe. Verwar deze waarneming niet\nmet de afzonderlijke regionale maandvraag uit bron D.\nVraag 4 (4 punten)\nPremium: Ei=15%/8%=1,875, luxegoed. Budget: Ei=−4%/8%=−0,5, inferieur goed. Voor\nStreamPlus geldt %ΔP concurrent=(9−8)/8×100%=12,5% en Ek=5%/12,5%=0,4. Teller:\nvraag naar StreamPlus; noemer: prijs van de concurrerende dienst. Positief, dus de\ndiensten zijn substituten.\nBeoordeling: telkens 1 punt voor (1) Premium 1,875 en luxegoed; (2) Budget −0,5 en\ninferieur goed; (3) de prijsstijging van de concurrent 12,5% en Ek = 0,4; (4) de correcte\nteller/noemer met beide diensten en de positieve substitutenrelatie. Ei blijft getekend:\nneem niet de absolute waarde van Budget.\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\n8 / 10\n"
+          },
+          {
+            "page": 9,
+            "minimum_text_pt": 12.0,
+            "body_spans": 28,
+            "text": "Vraag 5 (2 punten)\nQ oud=12.000−4.800+4.000+3.000=14.200 abonnementen per maand. Bij Y=€42.000\nper jaar is Q=14.400 abonnementen per maand; P en Pc blijven gelijk.\nUitgeschreven: Q oud = 12.000 − 400 × 12 + 0,1 × 40.000 + 300 × 10 = 12.000 − 4.800\n+ 4.000 + 3.000 = 14.200. Q nieuw = 12.000 − 400 × 12 + 0,1 × 42.000 + 300 × 10 =\n12.000 − 4.800 + 4.200 + 3.000 = 14.400 abonnementen per maand.\nBeoordeling: 1 punt voor beide correcte substituties en uitkomsten; 1 punt voor P = 12\nen Pc = 10 gelijk, met Y als jaarinkomen. Je deelt Y niet door 12; de functie gebruikt het\njaarbedrag al. Er is hier geen extra Ei- of Ek-berekening en geen Pc-verandering\ngevraagd.\nVraag 6 (2 punten)\nVoorzichtig: de onderzochte verhoging verhoogde TO met €16.000; bron A ondersteunt\ndie conclusie en bron C laat substitutie met de concurrent zien. Niet bewezen zijn\nprecies: dezelfde reactie bij een volgende prijsverhoging en een hogere winst, omdat\nkostengegevens ontbreken.\nBeoordeling: 1 punt voor een voorzichtig advies met werkelijk gebruik van minstens\ntwee bronnen en een ondersteunde conclusie; 1 punt voor precies de twee genoemde\nniet-bewezen conclusies: dezelfde reactie bij een volgende verhoging en een hogere\nwinst zonder kostengegevens. Een gelijkwaardige formulering is toegestaan. Een bron\nalleen noemen zonder haar gegeven of verband te gebruiken, is onvoldoende. De\nongewijzigde appscore is geen bewijs voor een toekomstige vraagreactie of een\nwinststijging.\n2.2.4 Gemengde opgaven elasticiteit – antwoorden\n9 / 10\n"
+          },
+          {
+            "page": 10,
+            "minimum_text_pt": 12.0,
+            "body_spans": 51,
+            "text": "Denkertje / Bonusopgave (4 punten)\nDe uitspraak verwart een gecombineerde verandering met een afzonderlijke\ninkomensverandering. In de laatste rij veranderen Y én Pc. De toename van 200 naar\n224 kun je daarom niet volledig aan inkomen toeschrijven.\nVergelijk voor inkomen de beginsituatie met de rij “Alleen Y verandert”: Y stijgt van\n€20.000 naar €24.000 per jaar, terwijl Px = €10 en Pc = €20 per maand gelijk blijven.\nQx stijgt van 200 naar 220, dus met 20 abonnementen per maand, niet 24.\nDe uitkomst 204 hoort bij alleen Pc = €24 en ongewijzigd jaarinkomen. Zij laat zien\nwaarom de gecombineerde vergelijking verschilt: ook de andere prijs is veranderd. De\nuitkomst 224 past bij beide veranderingen in dit model, maar bewijst geen algemene\nreactie buiten het model en geen identieke toekomstige reactie.\nBeoordeling: vier afzonderlijke criteria, elk 1 punt.\nBenoemt dat Y én Pc veranderen en verwerpt “24 alleen door inkomen”.\nKiest 200 → 220, vermeldt de vaste Px/Pc en +20 abonnementen per maand.\nGebruikt 204 om de afzonderlijke Pc-verandering en het verschil met de\ngecombineerde vergelijking te verklaren.\nBegrensde conclusie: modeluitkomst is geen algemene causale of toekomstige\ngarantie buiten de gegeven vergelijking.\nHerhaling / Herhaling en interleaving\nHerhaling 1 (1 punt). De stijging is (25 − 20) / 20 × 100% = +25%. Bij de terugkeer is\nde oude waarde echter €25: (20 − 25) / 25 × 100% = −20%. Eenzelfde euroverschil\nheeft een andere procentuele betekenis bij een andere basis. Geef 1 punt voor −20%\nmet de correcte basis en uitleg; alleen “niet 25%” is onvoldoende.\nHerhaling 2 (1 punt). Ev = −5% / +10% = −0,5. Voor Ei is de inkomensverandering de\nnoemer. Die is hier 0%, zodat de verhouding niet gedefinieerd is; delen door nul kan\nniet. Geef 1 punt voor Ev en deze uitleg. De prijsstijging mag niet als inkomensstijging\nworden gebruikt.\n1. \n2. \n3. \n4. \n2.2.4 Gemengde opgaven elasticiteit – antwoorden\n10 / 10\n"
+          }
+        ],
+        "figures": [
+          {
+            "page": 2,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "label_pt": 15.685039370078739
+          },
+          {
+            "page": 4,
+            "width_pt": 470.5511811023622,
+            "height_pt": 352.9133858267717,
+            "label_pt": 15.685039370078739
+          }
+        ],
+        "pdf_sha256": "7444910d136195ae75eab1c50ee08a885f727c2002b2e81448f0beefc76f6ea4"
+      }
+    ],
+    "assets": [
+      {
+        "name": "2.2.4_ex_1",
+        "svg_sha256": "d97092fd39f3c1e1f21745879bd4bc591dedfb72a94da22f5b371aeb8b38ee88",
+        "png_sha256": "88c2d889c1884601ffb16861ef909bcf68c285999bfcf8881ddbdce39617f843",
+        "ink_boxes": [
+          {
+            "text": "Telescoopverhuur",
+            "box": [
+              30.0,
+              23.0,
+              374.0,
+              60.0
+            ]
+          },
+          {
+            "text": "Oud",
+            "box": [
+              100.0,
+              83.0,
+              179.0,
+              112.0
+            ]
+          },
+          {
+            "text": "P (€ per verhuring)",
+            "box": [
+              100.0,
+              141.0,
+              430.0,
+              178.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              60.0,
+              615.0,
+              82.0,
+              644.0
+            ]
+          },
+          {
+            "text": "10",
+            "box": [
+              38.0,
+              455.0,
+              82.0,
+              484.0
+            ]
+          },
+          {
+            "text": "20",
+            "box": [
+              38.0,
+              295.0,
+              82.0,
+              324.0
+            ]
+          },
+          {
+            "text": "25",
+            "box": [
+              38.0,
+              215.0,
+              82.0,
+              244.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              89.0,
+              659.0,
+              111.0,
+              688.0
+            ]
+          },
+          {
+            "text": "60",
+            "box": [
+              258.0,
+              659.0,
+              302.0,
+              688.0
+            ]
+          },
+          {
+            "text": "120",
+            "box": [
+              427.0,
+              659.0,
+              493.0,
+              688.0
+            ]
+          },
+          {
+            "text": "100",
+            "box": [
+              367.0,
+              720.0,
+              433.0,
+              749.0
+            ]
+          },
+          {
+            "text": "Q (verhuringen",
+            "box": [
+              100.0,
+              777.0,
+              364.0,
+              814.0
+            ]
+          },
+          {
+            "text": "per week)",
+            "box": [
+              100.0,
+              827.0,
+              274.0,
+              864.0
+            ]
+          },
+          {
+            "text": "Nieuw",
+            "box": [
+              700.0,
+              83.0,
+              818.0,
+              112.0
+            ]
+          },
+          {
+            "text": "P (€ per verhuring)",
+            "box": [
+              700.0,
+              141.0,
+              1030.0,
+              178.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              660.0,
+              615.0,
+              682.0,
+              644.0
+            ]
+          },
+          {
+            "text": "10",
+            "box": [
+              638.0,
+              455.0,
+              682.0,
+              484.0
+            ]
+          },
+          {
+            "text": "20",
+            "box": [
+              638.0,
+              295.0,
+              682.0,
+              324.0
+            ]
+          },
+          {
+            "text": "25",
+            "box": [
+              638.0,
+              215.0,
+              682.0,
+              244.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              689.0,
+              659.0,
+              711.0,
+              688.0
+            ]
+          },
+          {
+            "text": "60",
+            "box": [
+              858.0,
+              659.0,
+              902.0,
+              688.0
+            ]
+          },
+          {
+            "text": "120",
+            "box": [
+              1027.0,
+              659.0,
+              1093.0,
+              688.0
+            ]
+          },
+          {
+            "text": "80",
+            "box": [
+              918.0,
+              720.0,
+              962.0,
+              749.0
+            ]
+          },
+          {
+            "text": "22",
+            "box": [
+              992.0,
+              263.0,
+              1036.0,
+              292.0
+            ]
+          },
+          {
+            "text": "Q (verhuringen",
+            "box": [
+              700.0,
+              777.0,
+              964.0,
+              814.0
+            ]
+          },
+          {
+            "text": "per week)",
+            "box": [
+              700.0,
+              827.0,
+              874.0,
+              864.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "2.2.4_ex_2",
+        "svg_sha256": "3cc3a5f7f1db7d1bdca66c1dd3dc602e260d92fe3e270428f888cb27dfbf9420",
+        "png_sha256": "8ad844aaf67bbdb31e3bd5162efec7165570952118cef0b8b400d03b1f429991",
+        "ink_boxes": [
+          {
+            "text": "Verrekijkerverhuur",
+            "box": [
+              29.0,
+              23.0,
+              386.0,
+              60.0
+            ]
+          },
+          {
+            "text": "Oud",
+            "box": [
+              100.0,
+              83.0,
+              179.0,
+              112.0
+            ]
+          },
+          {
+            "text": "P (€ per verhuring)",
+            "box": [
+              100.0,
+              141.0,
+              430.0,
+              178.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              60.0,
+              615.0,
+              82.0,
+              644.0
+            ]
+          },
+          {
+            "text": "10",
+            "box": [
+              38.0,
+              455.0,
+              82.0,
+              484.0
+            ]
+          },
+          {
+            "text": "20",
+            "box": [
+              38.0,
+              295.0,
+              82.0,
+              324.0
+            ]
+          },
+          {
+            "text": "25",
+            "box": [
+              38.0,
+              215.0,
+              82.0,
+              244.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              89.0,
+              659.0,
+              111.0,
+              688.0
+            ]
+          },
+          {
+            "text": "60",
+            "box": [
+              258.0,
+              659.0,
+              302.0,
+              688.0
+            ]
+          },
+          {
+            "text": "120",
+            "box": [
+              427.0,
+              659.0,
+              493.0,
+              688.0
+            ]
+          },
+          {
+            "text": "100",
+            "box": [
+              367.0,
+              720.0,
+              433.0,
+              749.0
+            ]
+          },
+          {
+            "text": "Q (verhuringen",
+            "box": [
+              100.0,
+              777.0,
+              364.0,
+              814.0
+            ]
+          },
+          {
+            "text": "per week)",
+            "box": [
+              100.0,
+              827.0,
+              274.0,
+              864.0
+            ]
+          },
+          {
+            "text": "Nieuw",
+            "box": [
+              700.0,
+              83.0,
+              818.0,
+              112.0
+            ]
+          },
+          {
+            "text": "P (€ per verhuring)",
+            "box": [
+              700.0,
+              141.0,
+              1030.0,
+              178.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              660.0,
+              615.0,
+              682.0,
+              644.0
+            ]
+          },
+          {
+            "text": "10",
+            "box": [
+              638.0,
+              455.0,
+              682.0,
+              484.0
+            ]
+          },
+          {
+            "text": "20",
+            "box": [
+              638.0,
+              295.0,
+              682.0,
+              324.0
+            ]
+          },
+          {
+            "text": "25",
+            "box": [
+              638.0,
+              215.0,
+              682.0,
+              244.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              689.0,
+              659.0,
+              711.0,
+              688.0
+            ]
+          },
+          {
+            "text": "60",
+            "box": [
+              858.0,
+              659.0,
+              902.0,
+              688.0
+            ]
+          },
+          {
+            "text": "120",
+            "box": [
+              1027.0,
+              659.0,
+              1093.0,
+              688.0
+            ]
+          },
+          {
+            "text": "15",
+            "box": [
+              932.0,
+              375.0,
+              976.0,
+              404.0
+            ]
+          },
+          {
+            "text": "Q (verhuringen",
+            "box": [
+              700.0,
+              777.0,
+              964.0,
+              814.0
+            ]
+          },
+          {
+            "text": "per week)",
+            "box": [
+              700.0,
+              827.0,
+              874.0,
+              864.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "2.2.4_ex_3",
+        "svg_sha256": "d094cd0803f0c023639aa70977909f3979bfeec46e763913c01bbd3b3d613e7e",
+        "png_sha256": "b07321e621ead8ecec3862b8895b754734eb138935e24d680a7d9f229bc9a8a6",
+        "ink_boxes": [
+          {
+            "text": "A",
+            "box": [
+              30.0,
+              23.0,
+              59.0,
+              52.0
+            ]
+          },
+          {
+            "text": "€2.000 → €1.760 per week; −12%",
+            "box": [
+              568.0,
+              23.0,
+              1170.0,
+              60.0
+            ]
+          },
+          {
+            "text": "Oud",
+            "box": [
+              100.0,
+              83.0,
+              179.0,
+              112.0
+            ]
+          },
+          {
+            "text": "P (€ per verhuring)",
+            "box": [
+              100.0,
+              141.0,
+              430.0,
+              178.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              60.0,
+              615.0,
+              82.0,
+              644.0
+            ]
+          },
+          {
+            "text": "10",
+            "box": [
+              38.0,
+              455.0,
+              82.0,
+              484.0
+            ]
+          },
+          {
+            "text": "20",
+            "box": [
+              38.0,
+              295.0,
+              82.0,
+              324.0
+            ]
+          },
+          {
+            "text": "25",
+            "box": [
+              38.0,
+              215.0,
+              82.0,
+              244.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              89.0,
+              659.0,
+              111.0,
+              688.0
+            ]
+          },
+          {
+            "text": "60",
+            "box": [
+              258.0,
+              659.0,
+              302.0,
+              688.0
+            ]
+          },
+          {
+            "text": "120",
+            "box": [
+              427.0,
+              659.0,
+              493.0,
+              688.0
+            ]
+          },
+          {
+            "text": "100",
+            "box": [
+              367.0,
+              720.0,
+              433.0,
+              749.0
+            ]
+          },
+          {
+            "text": "Q (verhuringen",
+            "box": [
+              100.0,
+              777.0,
+              364.0,
+              814.0
+            ]
+          },
+          {
+            "text": "per week)",
+            "box": [
+              100.0,
+              827.0,
+              274.0,
+              864.0
+            ]
+          },
+          {
+            "text": "Nieuw",
+            "box": [
+              700.0,
+              83.0,
+              818.0,
+              112.0
+            ]
+          },
+          {
+            "text": "P (€ per verhuring)",
+            "box": [
+              700.0,
+              141.0,
+              1030.0,
+              178.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              660.0,
+              615.0,
+              682.0,
+              644.0
+            ]
+          },
+          {
+            "text": "10",
+            "box": [
+              638.0,
+              455.0,
+              682.0,
+              484.0
+            ]
+          },
+          {
+            "text": "20",
+            "box": [
+              638.0,
+              295.0,
+              682.0,
+              324.0
+            ]
+          },
+          {
+            "text": "25",
+            "box": [
+              638.0,
+              215.0,
+              682.0,
+              244.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              689.0,
+              659.0,
+              711.0,
+              688.0
+            ]
+          },
+          {
+            "text": "60",
+            "box": [
+              858.0,
+              659.0,
+              902.0,
+              688.0
+            ]
+          },
+          {
+            "text": "120",
+            "box": [
+              1027.0,
+              659.0,
+              1093.0,
+              688.0
+            ]
+          },
+          {
+            "text": "80",
+            "box": [
+              918.0,
+              720.0,
+              962.0,
+              749.0
+            ]
+          },
+          {
+            "text": "22",
+            "box": [
+              992.0,
+              263.0,
+              1036.0,
+              292.0
+            ]
+          },
+          {
+            "text": "Q (verhuringen",
+            "box": [
+              700.0,
+              777.0,
+              964.0,
+              814.0
+            ]
+          },
+          {
+            "text": "per week)",
+            "box": [
+              700.0,
+              827.0,
+              874.0,
+              864.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "2.2.4_ex_4",
+        "svg_sha256": "ae2702581e6e88c8f82c87f0f3d2fec14a1b8cfa16afc7ebb25f010f9e945116",
+        "png_sha256": "99c8d340c8ac7a9ab04f5fffa5d3b0c05d5b32ed6cfd226807ff8871a6096af1",
+        "ink_boxes": [
+          {
+            "text": "B",
+            "box": [
+              30.0,
+              23.0,
+              59.0,
+              52.0
+            ]
+          },
+          {
+            "text": "€1.000 → €900 per week; 1,5 × 0,6 = 0,9",
+            "box": [
+              449.0,
+              23.0,
+              1170.0,
+              60.0
+            ]
+          },
+          {
+            "text": "Oud",
+            "box": [
+              100.0,
+              83.0,
+              179.0,
+              112.0
+            ]
+          },
+          {
+            "text": "P (€ per verhuring)",
+            "box": [
+              100.0,
+              141.0,
+              430.0,
+              178.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              60.0,
+              615.0,
+              82.0,
+              644.0
+            ]
+          },
+          {
+            "text": "10",
+            "box": [
+              38.0,
+              455.0,
+              82.0,
+              484.0
+            ]
+          },
+          {
+            "text": "20",
+            "box": [
+              38.0,
+              295.0,
+              82.0,
+              324.0
+            ]
+          },
+          {
+            "text": "25",
+            "box": [
+              38.0,
+              215.0,
+              82.0,
+              244.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              89.0,
+              659.0,
+              111.0,
+              688.0
+            ]
+          },
+          {
+            "text": "60",
+            "box": [
+              258.0,
+              659.0,
+              302.0,
+              688.0
+            ]
+          },
+          {
+            "text": "120",
+            "box": [
+              427.0,
+              659.0,
+              493.0,
+              688.0
+            ]
+          },
+          {
+            "text": "100",
+            "box": [
+              367.0,
+              720.0,
+              433.0,
+              749.0
+            ]
+          },
+          {
+            "text": "Q (verhuringen",
+            "box": [
+              100.0,
+              777.0,
+              364.0,
+              814.0
+            ]
+          },
+          {
+            "text": "per week)",
+            "box": [
+              100.0,
+              827.0,
+              274.0,
+              864.0
+            ]
+          },
+          {
+            "text": "Nieuw",
+            "box": [
+              700.0,
+              83.0,
+              818.0,
+              112.0
+            ]
+          },
+          {
+            "text": "P (€ per verhuring)",
+            "box": [
+              700.0,
+              141.0,
+              1030.0,
+              178.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              660.0,
+              615.0,
+              682.0,
+              644.0
+            ]
+          },
+          {
+            "text": "10",
+            "box": [
+              638.0,
+              455.0,
+              682.0,
+              484.0
+            ]
+          },
+          {
+            "text": "20",
+            "box": [
+              638.0,
+              295.0,
+              682.0,
+              324.0
+            ]
+          },
+          {
+            "text": "25",
+            "box": [
+              638.0,
+              215.0,
+              682.0,
+              244.0
+            ]
+          },
+          {
+            "text": "0",
+            "box": [
+              689.0,
+              659.0,
+              711.0,
+              688.0
+            ]
+          },
+          {
+            "text": "60",
+            "box": [
+              858.0,
+              659.0,
+              902.0,
+              688.0
+            ]
+          },
+          {
+            "text": "120",
+            "box": [
+              1027.0,
+              659.0,
+              1093.0,
+              688.0
+            ]
+          },
+          {
+            "text": "15",
+            "box": [
+              932.0,
+              375.0,
+              976.0,
+              404.0
+            ]
+          },
+          {
+            "text": "Q (verhuringen",
+            "box": [
+              700.0,
+              777.0,
+              964.0,
+              814.0
+            ]
+          },
+          {
+            "text": "per week)",
+            "box": [
+              700.0,
+              827.0,
+              874.0,
+              864.0
+            ]
+          }
+        ]
+      }
+    ],
+    "personal_visual_review": "NOT_SUPPLIED_BY_THIS_SCRIPT"
+  }
+}
