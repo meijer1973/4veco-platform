@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-execute.py",
+    "print-worker",
+    "--revision",
+    "r36",
+    "--manifest",
+    "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-evidence\\print-r36-build.json"
+  ],
+  "cwd": "C:\\wt\\book2-213-qc-current-20260906\\4veco-platform",
+  "started_at": "2026-09-06T05:06:09.551623+00:00",
+  "finished_at": "2026-09-06T05:06:25.119575+00:00",
+  "exit_code": 0,
+  "stdout": "print-r36-prewrite-currentness.json 0\r\nprint-r36-prewrite-durable.json 0\r\n",
+  "stderr": "",
+  "stdout_sha256": "7a7e491d5f881dc1a6110089e5408e3d338fccc605e7a0579cd9d8577b25626a",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "inherited_path_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "child_overrides": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}
