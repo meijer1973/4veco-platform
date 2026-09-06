@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/232/verify_rebuild.py",
+    "parity",
+    "--output",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-parity-four-final.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r1000003.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r1000004.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r1000005.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r1000006.json"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T09:13:31.419Z",
+  "finish": "2026-09-06T09:13:34.871Z",
+  "exit_code": 0,
+  "stdout": "Native, safe CRC ZIP, raw and RGB page parity PASS\r\n",
+  "stderr": "",
+  "stdout_base64": "TmF0aXZlLCBzYWZlIENSQyBaSVAsIHJhdyBhbmQgUkdCIHBhZ2UgcGFyaXR5IFBBU1MNCg==",
+  "stderr_base64": ""
+}

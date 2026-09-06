@@ -1,0 +1,316 @@
+{
+  "actor": "paragraph_231_specialist_qc",
+  "role": "source_author_personal_check_not_independent_review",
+  "source_commit": "e0b47cab498102cd990e66318f5111602c32a6b6",
+  "proof": "r1000003",
+  "method": "Personally viewed individual complete 150dpi full pages and all native PNG figures in color and grayscale. All 166mm placements also viewed in their full pages. No contact-sheet or prior-revision credit. Native files were displayed individually; tool resized 2400x1800 to 1824x1368 for display. No physical print or classroom observation.",
+  "observations": [
+    {
+      "kind": "paragraaf",
+      "pages": [
+        11,
+        13,
+        15
+      ],
+      "color": true,
+      "gray": false,
+      "proof": "r1000003",
+      "notes": [
+        "Whole worked-example header words, complete five-step reasoning and compact recap.",
+        "Continuous plant axis, quiet labels wholly inside triangles, guided base/height and F1 scaffold.",
+        "Whole mug header words, exact controlled cases and reduced full-domain writing prompt."
+      ]
+    },
+    {
+      "kind": "paragraaf",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "color": true,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Opening, four goals, PS and unknown fixed-cost boundary clear.",
+        "Quiet discrete labels and distinct hatch/dots; whole caption and CS/PS/TS table.",
+        "Demand-only graph, axes and new whole-domain successive-unit model explanation.",
+        "Interval-average distinction, complete assumptions, reflowed intact table and equilibrium steps."
+      ]
+    },
+    {
+      "kind": "paragraaf",
+      "pages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "color": true,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Equilibrium curve/projection values and first CS explanation coherent.",
+        "CS region label remains inside its triangle; full caption, calculation and units clear.",
+        "Both surplus regions and 448 payment comparison table clear; opaque line and patterns distinguish roles.",
+        "Whole-domain maximum, no PS/profit confusion, zero marginal versus total and finite-step boundary readable."
+      ]
+    },
+    {
+      "kind": "paragraaf",
+      "pages": [
+        9,
+        10,
+        12,
+        14
+      ],
+      "color": true,
+      "gray": false,
+      "proof": "r1000003",
+      "notes": [
+        "Whole-domain three-rule figure, boundaries and worked-example start intact.",
+        "Worked-example questions, steps and solved towels figure complete.",
+        "Two-function Start and printed prerequisite help before plant context.",
+        "Full first scaffold continues coherently; candle reduced-support supplied graph clear."
+      ]
+    },
+    {
+      "kind": "paragraaf",
+      "pages": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "color": false,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Noncolor roles, complete headings and model boundaries preserved.",
+        "Solved worked-example graph clear in grayscale.",
+        "Whole header words and recap readable without color.",
+        "Self-contained Start help and task separation clear."
+      ]
+    },
+    {
+      "kind": "paragraaf",
+      "pages": [
+        13,
+        14,
+        15
+      ],
+      "color": false,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Plant quiet labels inside triangle with continuous axes.",
+        "Supplied candle graph and full F1 scaffold readable.",
+        "Whole headers, reduced support and mug questions clear."
+      ]
+    },
+    {
+      "kind": "paragraaf",
+      "pages": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "color": true,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Fruit transfer context, supplied unmarked graph and table fit with whole words.",
+        "Independent tasks and fixed-cost warning; untouched target context remains legible.",
+        "Full supplied target graph/table and all marking instructions present without solution leakage.",
+        "Target fairness question, evaluative bonus, both substantive closing retrieval tasks readable."
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "color": true,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Complete five-question worked-example context and first two steps.",
+        "Solved towels figure with quiet interior labels and complete intact table.",
+        "Full domain maximum and compact recap followed by Start with printed MK help.",
+        "Retrieval and current check distinct; plant full-support context intact."
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "pages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "color": true,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Guided plant figure and full-range F1 sentence scaffold clear.",
+        "Continuation has both conclusion and boundaries, followed by unmarked candle graph.",
+        "Reduced-support full argument and mug four controlled cases; fruit context continues naturally.",
+        "Full fruit domain and unmarked graph/table, all calculation/marking instructions readable."
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "pages": [
+        9,
+        10,
+        11
+      ],
+      "color": true,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Independent maximum prompt, revenue/PS source task and unchanged target context.",
+        "Supplied target full graph/table and questions remain intact with no answer marks.",
+        "Target final explanation, optional evaluative bonus and two closing retrievals readable."
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "color": true,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Own-attempt instruction and complete worked context/first steps.",
+        "Solved graph, dimensions and complete table clean.",
+        "Maximum proof, recap and all three retrieval models/rubrics visible.",
+        "Current-check cost/norm boundaries and plant solved diagram intact."
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "pages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "color": true,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Full plant maximum and all three scoring criteria, candle dimensions complete.",
+        "Solved candle areas; domain-wide answer and first two criteria readable.",
+        "Third candle criterion preserved, all four mug computed cases, fruit equilibrium.",
+        "Solved fruit 400/200/600 areas and full independent answers including boundary rubric."
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "pages": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "color": true,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Revenue160/PS60 and missing profit costs; exact target equilibrium and markings models.",
+        "Solved target areas900/450/1350; preserved short answer plus point-versus-finite-interval explanation.",
+        "Complete full-domain target rubric; bonus14→16 and alternative17 with all three criteria.",
+        "Closing interval24/6=4 not tenth-unit, discrete equality buyer and CS3 explained."
+      ]
+    },
+    {
+      "kind": "native-figure",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "color": true,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Single transaction gap8/3, quiet opaque labels, no fake continuous curve.",
+        "Demand-only tulips with complete0..60 axes.",
+        "Added whole-domain supply with exact32/14 projections.",
+        "Isolated CS triangle ends at actual equilibrium with label clear of hatch and strokes."
+      ]
+    },
+    {
+      "kind": "native-figure",
+      "pages": [
+        5,
+        6
+      ],
+      "color": true,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Both tulip triangles with quiet interior labels, full0..60 domain.",
+        "Three formula boxes clear, source30pt and exact per-transaction distinctions."
+      ]
+    },
+    {
+      "kind": "native-figure",
+      "stems": [
+        "we_1",
+        "ex_1",
+        "ex_2",
+        "ex_3"
+      ],
+      "color": true,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Solved towels exact12/18 and both areas72, quiet labels.",
+        "Plant explicitbase6height6, labels and masks clear of axes.",
+        "Candle unmarked supplied full curves0..52 with readable units.",
+        "Fruit unmarked supplied full curves0..72 with no assessment-answer markings."
+      ]
+    },
+    {
+      "kind": "native-figure",
+      "stems": [
+        "ex_4",
+        "ex_5",
+        "ex_6",
+        "ex_7"
+      ],
+      "color": true,
+      "gray": true,
+      "proof": "r1000003",
+      "notes": [
+        "Target fully labelled supplied curves0..100 and no answers.",
+        "Solved candle24/14CS144PS72 with quiet labels.",
+        "Solved fruit40/16CS400PS200 with exact extents.",
+        "Solved target60/20CS900PS450 with discrete noncolor region patterns."
+      ]
+    }
+  ],
+  "visible_defects_remaining": [],
+  "diagnostics": [
+    "One native view lookup mistakenly requested fig_7, which is not in the contract. It failed without changing anything. Actual inventory is fig_1..6, we_1, ex_1..7; all these fourteen were then personally viewed in both modes.",
+    "Earlier r1000001 inspection and its three actual layout findings remain separately preserved. Current records use r1000003 only."
+  ],
+  "independent_review": "PENDING",
+  "specialist_qc": "PENDING",
+  "root_acceptance": "PENDING",
+  "handoff": "PENDING",
+  "production_ready": false
+}
+

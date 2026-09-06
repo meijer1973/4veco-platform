@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "node",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-closure.cjs",
+    "custody"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T09:14:01.891Z",
+  "finish": "2026-09-06T09:14:20.148Z",
+  "exit_code": 0,
+  "stdout": "{\"actor\":\"paragraph_231_specialist_qc\",\"source_commit\":\"e0b47cab498102cd990e66318f5111602c32a6b6\",\"rows\":[{\"repository\":\"platform\",\"baseline_head\":\"3cd7b23425c5977adb17bb99cfc399ec0e21225d\",\"prior_files\":14996,\"changed\":[]},{\"repository\":\"lessons\",\"baseline_head\":\"f666bbb7dd258f1f01b38a20dd6ca3802848f8b7\",\"prior_files\":1914,\"changed\":[]}],\"status\":\"PASS\"}\n",
+  "stderr": "",
+  "stdout_base64": "eyJhY3RvciI6InBhcmFncmFwaF8yMzFfc3BlY2lhbGlzdF9xYyIsInNvdXJjZV9jb21taXQiOiJlMGI0N2NhYjQ5ODEwMmNkOTkwZTY2MzE4ZjUxMTE2MDJjMzJhNmI2Iiwicm93cyI6W3sicmVwb3NpdG9yeSI6InBsYXRmb3JtIiwiYmFzZWxpbmVfaGVhZCI6IjNjZDdiMjM0MjVjNTk3N2FkYjE3YmI5OWNmYzM5OWVjMGUyMTIyNWQiLCJwcmlvcl9maWxlcyI6MTQ5OTYsImNoYW5nZWQiOltdfSx7InJlcG9zaXRvcnkiOiJsZXNzb25zIiwiYmFzZWxpbmVfaGVhZCI6ImY2NjZiYmI3ZGQyNThmMWYwMWIzOGEyMGRkNmNhMzgwMjg0OGY4YjciLCJwcmlvcl9maWxlcyI6MTkxNCwiY2hhbmdlZCI6W119XSwic3RhdHVzIjoiUEFTUyJ9Cg==",
+  "stderr_base64": ""
+}

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-cli-probes.py",
+    "cli-probes-source4"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:41:26.422Z",
+  "finish": "2026-09-06T08:42:04.300Z",
+  "exit_code": 0,
+  "stdout": "{\"physical_fixture\": \"C:\\\\wt\\\\book2-232-input-probes-o49pmcpm\", \"cases\": [], \"case_count\": 0, \"native_effects\": 0, \"live_input_mutations\": 0}\r\n{\"status\": \"PASS\", \"cases\": 172, \"output\": \"C:\\\\wt\\\\book2-232-build-current-20260906\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-cli-probes-source4.json\"}\r\n",
+  "stderr": "",
+  "stdout_base64": "eyJwaHlzaWNhbF9maXh0dXJlIjogIkM6XFx3dFxcYm9vazItMjMyLWlucHV0LXByb2Jlcy1vNDlwbWNwbSIsICJjYXNlcyI6IFtdLCAiY2FzZV9jb3VudCI6IDAsICJuYXRpdmVfZWZmZWN0cyI6IDAsICJsaXZlX2lucHV0X211dGF0aW9ucyI6IDB9DQp7InN0YXR1cyI6ICJQQVNTIiwgImNhc2VzIjogMTcyLCAib3V0cHV0IjogIkM6XFx3dFxcYm9vazItMjMyLWJ1aWxkLWN1cnJlbnQtMjAyNjA5MDZcXDR2ZWNvLXBsYXRmb3JtXFxyZXBvcnRzXFxzcHJpbnRzXFxCT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjMyLUJVSUxELUNVUlJFTlQtY2xpLXByb2Jlcy1zb3VyY2U0Lmpzb24ifQ0K",
+  "stderr_base64": ""
+}

@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/232/check_render.py",
+    "--manifest",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r41.json",
+    "--output",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-check-r41.json"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:31:17.420Z",
+  "finish": "2026-09-06T08:31:21.101Z",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-build-current-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\check_render.py\", line 139, in <module>\r\n    result=check(a.manifest)\r\n  File \"C:\\wt\\book2-232-build-current-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\check_render.py\", line 99, in check\r\n    if [h.get_text(' ',strip=True) for h in soup.find_all('h2')]!=b.HEADINGS:raise ValueError('Rendered seven headings')\r\n                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nValueError: Rendered seven headings\r\n",
+  "stdout_base64": "",
+  "stderr_base64": "VHJhY2ViYWNrIChtb3N0IHJlY2VudCBjYWxsIGxhc3QpOg0KICBGaWxlICJDOlx3dFxib29rMi0yMzItYnVpbGQtY3VycmVudC0yMDI2MDkwNlw0dmVjby1wbGF0Zm9ybVxidWlsZC1zY3JpcHRzXGNvbnRlbnRcYm9vay0yXDIzMlxjaGVja19yZW5kZXIucHkiLCBsaW5lIDEzOSwgaW4gPG1vZHVsZT4NCiAgICByZXN1bHQ9Y2hlY2soYS5tYW5pZmVzdCkNCiAgRmlsZSAiQzpcd3RcYm9vazItMjMyLWJ1aWxkLWN1cnJlbnQtMjAyNjA5MDZcNHZlY28tcGxhdGZvcm1cYnVpbGQtc2NyaXB0c1xjb250ZW50XGJvb2stMlwyMzJcY2hlY2tfcmVuZGVyLnB5IiwgbGluZSA5OSwgaW4gY2hlY2sNCiAgICBpZiBbaC5nZXRfdGV4dCgnICcsc3RyaXA9VHJ1ZSkgZm9yIGggaW4gc291cC5maW5kX2FsbCgnaDInKV0hPWIuSEVBRElOR1M6cmFpc2UgVmFsdWVFcnJvcignUmVuZGVyZWQgc2V2ZW4gaGVhZGluZ3MnKQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBeXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eDQpWYWx1ZUVycm9yOiBSZW5kZXJlZCBzZXZlbiBoZWFkaW5ncw0K"
+}

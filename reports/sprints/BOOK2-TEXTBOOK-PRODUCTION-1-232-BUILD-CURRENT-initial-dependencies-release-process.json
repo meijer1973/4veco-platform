@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-gate.cjs",
+    "232"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:03:44.327Z",
+  "finish": "2026-09-06T08:03:47.237Z",
+  "exit_code": 0,
+  "stdout": "{\"status\":\"PASS\",\"paragraph\":\"2.3.2\",\"release_sha256\":\"9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18\",\"candidate_sha256\":\"113d3321a3b859d582a4febf6ff71cd259111d6c5d233047113b1455f6bcc5dc\",\"inputs\":49,\"native_effects\":0,\"permission\":\"Gated Part A authoring; current approved action/durable authority and all future review/acceptance gates still mandatory\"}\n",
+  "stderr": "",
+  "stdout_base64": "eyJzdGF0dXMiOiJQQVNTIiwicGFyYWdyYXBoIjoiMi4zLjIiLCJyZWxlYXNlX3NoYTI1NiI6Ijk3MDViYTkzNWM5YzlmNzllM2I1OTgxYmEzZTkxMTlkYTM0Y2QzN2JmMTY1YWRjNTczMjNmMmM2MzY1ZDNhMTgiLCJjYW5kaWRhdGVfc2hhMjU2IjoiMTEzZDMzMjFhM2I4NTlkNTgyYTRmZWJmNmZmNzFjZDI1OTExMWQ2YzVkMjMzMDQ3MTEzYjE0NTVmNmJjYzVkYyIsImlucHV0cyI6NDksIm5hdGl2ZV9lZmZlY3RzIjowLCJwZXJtaXNzaW9uIjoiR2F0ZWQgUGFydCBBIGF1dGhvcmluZzsgY3VycmVudCBhcHByb3ZlZCBhY3Rpb24vZHVyYWJsZSBhdXRob3JpdHkgYW5kIGFsbCBmdXR1cmUgcmV2aWV3L2FjY2VwdGFuY2UgZ2F0ZXMgc3RpbGwgbWFuZGF0b3J5In0K",
+  "stderr_base64": ""
+}

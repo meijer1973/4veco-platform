@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "node",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-bind-personal.cjs"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T09:20:14.315Z",
+  "finish": "2026-09-06T09:20:14.492Z",
+  "exit_code": 0,
+  "stdout": "{\"status\":\"PASS\",\"bound_personal_views\":112,\"native_files\":41,\"source_files\":11}\n",
+  "stderr": "",
+  "stdout_base64": "eyJzdGF0dXMiOiJQQVNTIiwiYm91bmRfcGVyc29uYWxfdmlld3MiOjExMiwibmF0aXZlX2ZpbGVzIjo0MSwic291cmNlX2ZpbGVzIjoxMX0K",
+  "stderr_base64": ""
+}

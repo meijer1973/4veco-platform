@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "node",
+    "scripts/validate-paragraph.js",
+    "--mode",
+    "part-a",
+    "--profile",
+    "student-web",
+    "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T09:18:49.921Z",
+  "finish": "2026-09-06T09:18:50.010Z",
+  "exit_code": 1,
+  "stdout": "\nValidating paragraph 2.3.2 \"Producentensurplus en totaal surplus\"\nPath: C:\\wt\\book2-232-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\nMode: part-a\nProfile: student-web\n\n-- Part A textbook files --\n  OK Paragraph type: theory\n  OK paragraaf.md: 2.3.2 Producentensurplus en totaal surplus – paragraaf.md\n  OK opgaven.md: 2.3.2 Producentensurplus en totaal surplus – opgaven.md\n  OK antwoorden.md: 2.3.2 Producentensurplus en totaal surplus – antwoorden.md\n  OK 2.3.2 Producentensurplus en totaal surplus – paragraaf.html (2746.7 KB)\n  OK 2.3.2 Producentensurplus en totaal surplus – opgaven.html (1337.1 KB)\n  OK 2.3.2 Producentensurplus en totaal surplus – antwoorden.html (1410.0 KB)\n  OK 2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf (1645 KB)\n  OK 2.3.2 Producentensurplus en totaal surplus – opgaven.pdf (841 KB)\n  OK 2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf (909 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 14 image refs all resolve\n  OK _assets/: 14 SVGs, 14 PNGs\n\n-- Part A QC artifacts --\n  X MISSING Part A review report (2.3.2-review.md)\n  X MISSING quality_ref (2.3.2-quality-ref.yaml)\n\n==========================================\nFAIL Paragraph 2.3.2 \"Producentensurplus en totaal surplus\" failed: 2 error(s), 0 warning(s).\n\n",
+  "stderr": "",
+  "stdout_base64": "ClZhbGlkYXRpbmcgcGFyYWdyYXBoIDIuMy4yICJQcm9kdWNlbnRlbnN1cnBsdXMgZW4gdG90YWFsIHN1cnBsdXMiClBhdGg6IEM6XHd0XGJvb2syLTIzMi1idWlsZC1jdXJyZW50LTIwMjYwOTA2XDR2ZWNvLWxlc3NlblxCb2VrIDIgLSBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1c1wyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnRcMi4zLjIgUHJvZHVjZW50ZW5zdXJwbHVzIGVuIHRvdGFhbCBzdXJwbHVzCk1vZGU6IHBhcnQtYQpQcm9maWxlOiBzdHVkZW50LXdlYgoKLS0gUGFydCBBIHRleHRib29rIGZpbGVzIC0tCiAgT0sgUGFyYWdyYXBoIHR5cGU6IHRoZW9yeQogIE9LIHBhcmFncmFhZi5tZDogMi4zLjIgUHJvZHVjZW50ZW5zdXJwbHVzIGVuIHRvdGFhbCBzdXJwbHVzIOKAkyBwYXJhZ3JhYWYubWQKICBPSyBvcGdhdmVuLm1kOiAyLjMuMiBQcm9kdWNlbnRlbnN1cnBsdXMgZW4gdG90YWFsIHN1cnBsdXMg4oCTIG9wZ2F2ZW4ubWQKICBPSyBhbnR3b29yZGVuLm1kOiAyLjMuMiBQcm9kdWNlbnRlbnN1cnBsdXMgZW4gdG90YWFsIHN1cnBsdXMg4oCTIGFudHdvb3JkZW4ubWQKICBPSyAyLjMuMiBQcm9kdWNlbnRlbnN1cnBsdXMgZW4gdG90YWFsIHN1cnBsdXMg4oCTIHBhcmFncmFhZi5odG1sICgyNzQ2LjcgS0IpCiAgT0sgMi4zLjIgUHJvZHVjZW50ZW5zdXJwbHVzIGVuIHRvdGFhbCBzdXJwbHVzIOKAkyBvcGdhdmVuLmh0bWwgKDEzMzcuMSBLQikKICBPSyAyLjMuMiBQcm9kdWNlbnRlbnN1cnBsdXMgZW4gdG90YWFsIHN1cnBsdXMg4oCTIGFudHdvb3JkZW4uaHRtbCAoMTQxMC4wIEtCKQogIE9LIDIuMy4yIFByb2R1Y2VudGVuc3VycGx1cyBlbiB0b3RhYWwgc3VycGx1cyDigJMgcGFyYWdyYWFmLnBkZiAoMTY0NSBLQikKICBPSyAyLjMuMiBQcm9kdWNlbnRlbnN1cnBsdXMgZW4gdG90YWFsIHN1cnBsdXMg4oCTIG9wZ2F2ZW4ucGRmICg4NDEgS0IpCiAgT0sgMi4zLjIgUHJvZHVjZW50ZW5zdXJwbHVzIGVuIHRvdGFhbCBzdXJwbHVzIOKAkyBhbnR3b29yZGVuLnBkZiAoOTA5IEtCKQogIE9LIGJ1aWxkX3BkZi5weQoKLS0gQXNzZXQgaW50ZWdyaXR5IC0tCiAgT0sgMTQgaW1hZ2UgcmVmcyBhbGwgcmVzb2x2ZQogIE9LIF9hc3NldHMvOiAxNCBTVkdzLCAxNCBQTkdzCgotLSBQYXJ0IEEgUUMgYXJ0aWZhY3RzIC0tCiAgWCBNSVNTSU5HIFBhcnQgQSByZXZpZXcgcmVwb3J0ICgyLjMuMi1yZXZpZXcubWQpCiAgWCBNSVNTSU5HIHF1YWxpdHlfcmVmICgyLjMuMi1xdWFsaXR5LXJlZi55YW1sKQoKPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CkZBSUwgUGFyYWdyYXBoIDIuMy4yICJQcm9kdWNlbnRlbnN1cnBsdXMgZW4gdG90YWFsIHN1cnBsdXMiIGZhaWxlZDogMiBlcnJvcihzKSwgMCB3YXJuaW5nKHMpLgoK",
+  "stderr_base64": ""
+}

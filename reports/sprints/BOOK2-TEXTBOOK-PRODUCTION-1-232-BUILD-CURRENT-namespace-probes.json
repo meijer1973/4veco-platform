@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "unsafe revision r0",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Explicit positive revision"
+    },
+    {
+      "case": "unsafe revision r-1",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Explicit positive revision"
+    },
+    {
+      "case": "unsafe revision ../r42",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Explicit positive revision"
+    },
+    {
+      "case": "unsafe revision r42/other",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Explicit positive revision"
+    },
+    {
+      "case": "unsafe revision R42",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Explicit positive revision"
+    },
+    {
+      "case": "unsafe revision r42.json",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Explicit positive revision"
+    },
+    {
+      "case": "outside reservation",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Wrong reservation path"
+    },
+    {
+      "case": "forged revision",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Wrong reservation identity"
+    },
+    {
+      "case": "forged source_commit",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Wrong reservation identity"
+    },
+    {
+      "case": "forged actor",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Wrong reservation identity"
+    },
+    {
+      "case": "forged status",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Wrong reservation identity"
+    },
+    {
+      "case": "forged global_scan",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Reservation lacks fresh global history"
+    },
+    {
+      "case": "forged maximum_recorded_revision",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Reservation lacks fresh global history"
+    },
+    {
+      "case": "consumed BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-attempt-r42.json",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Consumed namespace"
+    },
+    {
+      "case": "consumed BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r42.json",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Consumed namespace"
+    },
+    {
+      "case": "occupied empty actual proof",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Occupied proof revision"
+    },
+    {
+      "case": "occupied populated actual proof",
+      "result": "REJECTED_BEFORE_EFFECTS",
+      "reason": "Occupied proof revision"
+    },
+    {
+      "case": "actual atomic attempt collision",
+      "result": "REJECTED_FIRST_BYTES_PRESERVED"
+    }
+  ],
+  "count": 18,
+  "production_runs": 0,
+  "scope": "actual namespace functions and exclusive file primitive; not hostile-filesystem transaction proof"
+}

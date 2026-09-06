@@ -1,0 +1,1242 @@
+{
+  "status": "PASS_COVERAGE_AND_BYTE_BINDING_ONLY",
+  "actor": "paragraph_231_specialist_qc",
+  "role": "source_author_personal_check_not_independent_review",
+  "source_commit": "e0b47cab498102cd990e66318f5111602c32a6b6",
+  "method": "Personally viewed individual complete 150dpi full pages and all native PNG figures in color and grayscale. All 166mm placements also viewed in their full pages. No contact-sheet or prior-revision credit. Native files were displayed individually; tool resized 2400x1800 to 1824x1368 for display. No physical print or classroom observation.",
+  "counts": {
+    "full_page_color": 42,
+    "full_page_gray": 42,
+    "native_figure_color": 14,
+    "native_figure_gray": 14,
+    "total": 112
+  },
+  "records": [
+    {
+      "kind": "paragraaf",
+      "id": 1,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-001.png",
+      "raw_sha256": "a7f92ab90cf6d97bd42743b42694024e87adcfa4731abe99f3a2efbd6cca93b6",
+      "personal_observation": "Opening, four goals, PS and unknown fixed-cost boundary clear.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 1,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-001.png",
+      "raw_sha256": "1e76c016c842ecfe63265ad9c462ae1ced7d87ce9f50c86f2ebf9630b8c97e40",
+      "personal_observation": "Opening, four goals, PS and unknown fixed-cost boundary clear.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "9bd113032cb9842f96290dfde292cd65fb1301bc53f09fe183bda1b65604bc38"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 2,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-002.png",
+      "raw_sha256": "8622b7412dc22c6ee78cae986e0af07268976d335e6f06a818eada569f663469",
+      "personal_observation": "Quiet discrete labels and distinct hatch/dots; whole caption and CS/PS/TS table.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 2,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-002.png",
+      "raw_sha256": "f0f2f4539912d5d4fb66597a2777b0ed7689999fb29ada7ebe8554899914665d",
+      "personal_observation": "Quiet discrete labels and distinct hatch/dots; whole caption and CS/PS/TS table.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "d0d51e047638e949011de9dc3280004ea07bb4e94c9074fde6472ec778ec4680"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 3,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-003.png",
+      "raw_sha256": "a959b902589167b7504d9808fbe25fb9c6f0a392a1dfe80be837b0bdc7a98e4c",
+      "personal_observation": "Demand-only graph, axes and new whole-domain successive-unit model explanation.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 3,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-003.png",
+      "raw_sha256": "7f9b1f2c850c5e398c897279d62addaeaab31404e86008ad65755c110e682bf8",
+      "personal_observation": "Demand-only graph, axes and new whole-domain successive-unit model explanation.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "03dcc8db24a78febd6c5389423bdb6126439c905040c6e0edbd0653000dcb789"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 4,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-004.png",
+      "raw_sha256": "6b7eddeca82026a672a66fa1de9137d40e184ce17ae102cecce3e73395aa0a8f",
+      "personal_observation": "Interval-average distinction, complete assumptions, reflowed intact table and equilibrium steps.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 4,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-004.png",
+      "raw_sha256": "b78049d04c835a74c5ccce8288fefc5b4ad384baaab3908288c57eee5ed4316e",
+      "personal_observation": "Interval-average distinction, complete assumptions, reflowed intact table and equilibrium steps.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "90dbd7bf958cadfa21444d37267e384e9176965883eb797bd25d48a0890b4c9a"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 5,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-005.png",
+      "raw_sha256": "ca18907cc9e4945bb2036569d988db292818894ab6209a47f449f9ec88fddb72",
+      "personal_observation": "Equilibrium curve/projection values and first CS explanation coherent.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 5,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-005.png",
+      "raw_sha256": "21ba1df108435e7e119c83d91f09b931f212778c0c3e07aafa1faf2e2bdb3082",
+      "personal_observation": "Equilibrium curve/projection values and first CS explanation coherent.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "647245121e8fa95b95f740c66fc006b781fe14e73e7135b8d749d4543a58c215"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 6,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-006.png",
+      "raw_sha256": "9f60157a10fbdbb536f23f89ac7c6f4e30d90cfc75137dce1363a0027764a7c9",
+      "personal_observation": "CS region label remains inside its triangle; full caption, calculation and units clear.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 6,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-006.png",
+      "raw_sha256": "465c87468cf4628cbaa01159338524ac212c21e5393df4549026a5ce5812889d",
+      "personal_observation": "CS region label remains inside its triangle; full caption, calculation and units clear.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "d4f694a772b9ddd11f6c3d07355bd84e963c5533434e6ba0a1d326cef8bd81a9"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 7,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-007.png",
+      "raw_sha256": "f45c9b867e7c583785488fda2c71561c719bf8781a956414f205fed068ad7fd1",
+      "personal_observation": "Both surplus regions and 448 payment comparison table clear; opaque line and patterns distinguish roles.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 7,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-007.png",
+      "raw_sha256": "b5c49e2ed259698e7f3feafa2a1a878359804f056305c6dd95d28f965184d22f",
+      "personal_observation": "Both surplus regions and 448 payment comparison table clear; opaque line and patterns distinguish roles.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "8dd4d3c8aa48378de49d07d5cda87755215dac15f0305b7d7fbc30c32e62ced2"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 8,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-008.png",
+      "raw_sha256": "4abeace256477939cc47058591539740a8d7f514db9a404f7613c9792fded7ab",
+      "personal_observation": "Whole-domain maximum, no PS/profit confusion, zero marginal versus total and finite-step boundary readable.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 8,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-008.png",
+      "raw_sha256": "8ba3af9ecba1d93aea7ba7b7a542818683d1bcdcdab412477fe11d13d78a0d01",
+      "personal_observation": "Whole-domain maximum, no PS/profit confusion, zero marginal versus total and finite-step boundary readable.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "d6be0cc3bec26ce8b7f2dbf0df1ab821db7fcb96590149da561493885625645b"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 9,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-009.png",
+      "raw_sha256": "a79c3f8239086082a59d120ef87bcdbebb526c7341cf8d631bdc6d9ae59e2a94",
+      "personal_observation": "Whole-domain three-rule figure, boundaries and worked-example start intact.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 9,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-009.png",
+      "raw_sha256": "99ec3a5a3c34c057808707b52cef8e870b50918de7afbd46e043b5ff20bd7f7f",
+      "personal_observation": "Noncolor roles, complete headings and model boundaries preserved.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "f12bb5eff036683bd225786d2af98f4fa7c5c5db12a4a5ed501df9963df0ca9c"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 10,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-010.png",
+      "raw_sha256": "019d7d23fcc30c453486b4eaa64b91ba0c74b1ddc6566bf45199a70066ebc872",
+      "personal_observation": "Worked-example questions, steps and solved towels figure complete.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 10,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-010.png",
+      "raw_sha256": "782f4675534b7bb06b8a76b50dcbeccbd142970b23e022582039e97ce7eb1c23",
+      "personal_observation": "Solved worked-example graph clear in grayscale.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "3013056df853165569c18b9b7246ab26d444b06421b8ab35691989b5f2a503ab"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 11,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-011.png",
+      "raw_sha256": "f5a10859d909d0685aa23ffd08ebf530d61dc94a4ba67ba8f6487c1c0ea7985f",
+      "personal_observation": "Whole worked-example header words, complete five-step reasoning and compact recap.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 11,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-011.png",
+      "raw_sha256": "ba8da1b626697903527d01c4ae0a252aa7f7a37fc577bc9c79d47a58b637c9d2",
+      "personal_observation": "Whole header words and recap readable without color.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "7ceae6b4409394871b1af8fd551e693f3d8c0c3d2c89349dc77103300012d040"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 12,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-012.png",
+      "raw_sha256": "e34446339cb96803f20a5b6f59eebcdebe9442beb43e46393cd2971c8f3100ec",
+      "personal_observation": "Two-function Start and printed prerequisite help before plant context.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 12,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-012.png",
+      "raw_sha256": "777e1820dbb083a558b9ba52c51c4feaa6bf2944da92a91d5a5a9147b853aec6",
+      "personal_observation": "Self-contained Start help and task separation clear.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "f2675d110d9e7ddf692294f236c82b594c2b38b9da5df8cd8a843a32ff3f94f2"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 13,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-013.png",
+      "raw_sha256": "b6853d9427f07d1f6288ccd0bfa883e9d43dfdb3999ebfc5b5efde4efdb9cd7c",
+      "personal_observation": "Continuous plant axis, quiet labels wholly inside triangles, guided base/height and F1 scaffold.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 13,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-013.png",
+      "raw_sha256": "ff55f3c63b774f3fdaf87d8b5767124d638d5aba845c1025a6662cb45d628e62",
+      "personal_observation": "Plant quiet labels inside triangle with continuous axes.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "d900758bc59e7833e843fa79fce63ecf9864494ae1f7a9da5a769cc71058d26a"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 14,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-014.png",
+      "raw_sha256": "6348b324823160ec41a3d1f94a26ac7f060e5693c20d0b103fa74c3b90303da7",
+      "personal_observation": "Full first scaffold continues coherently; candle reduced-support supplied graph clear.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 14,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-014.png",
+      "raw_sha256": "f7a0a98963d6c992032cb0b7b3d5ead1fcb4a3964631cb951712be2d4bc33a2d",
+      "personal_observation": "Supplied candle graph and full F1 scaffold readable.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "fcbd5ac69b5e1c7365897bd69a20d297341864efdc7288ee0b16c40261aaa72b"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 15,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-015.png",
+      "raw_sha256": "56e1ff5a026911557e813d15cc18f4d8c0a391d86b1b6bf751b3f94c9fc928d8",
+      "personal_observation": "Whole mug header words, exact controlled cases and reduced full-domain writing prompt.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 15,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-015.png",
+      "raw_sha256": "8ce07b746488b170c1c30ab9adad933519464aa77feaada48e896c67be0ff44b",
+      "personal_observation": "Whole headers, reduced support and mug questions clear.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "f23cea169d2f66981251a1b47b6fa4e630cddfdd43e125733211971d1a107d22"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 16,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-016.png",
+      "raw_sha256": "7ea97e461be321d7e20ace5789c468790bcb68c25b6b566dfc4bfe7063dca9e0",
+      "personal_observation": "Fruit transfer context, supplied unmarked graph and table fit with whole words.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 16,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-016.png",
+      "raw_sha256": "ab4052399277dcd81e0924689f43ab2f62a7530e7d608d3b9d037363a3ba8b6b",
+      "personal_observation": "Fruit transfer context, supplied unmarked graph and table fit with whole words.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "0cf8386b22de7c1b6b0bf2b54dca2469694530cdc33ae8bd12ecf99f23fc7245"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 17,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-017.png",
+      "raw_sha256": "09825745b0a6821071fec0688996ec1e64c0e7263714d4025cea447960d3a4e0",
+      "personal_observation": "Independent tasks and fixed-cost warning; untouched target context remains legible.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 17,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-017.png",
+      "raw_sha256": "167056e28e4e0ea18fa51a9abf0326470f14faf30bf3352b14c9189a0047a296",
+      "personal_observation": "Independent tasks and fixed-cost warning; untouched target context remains legible.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "dffba9252182f50fa7f3b18014f02fe4b6b917d5ec92e36e9d154ae72fd72c1a"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 18,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-018.png",
+      "raw_sha256": "93a44ffc36e86ee98094ad4d8653581a45bec2d04ee5a432a52ac555e0dcb8fd",
+      "personal_observation": "Full supplied target graph/table and all marking instructions present without solution leakage.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 18,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-018.png",
+      "raw_sha256": "55184babb7d9df0fbad146db214642965819a76de5412c6b5951edd54c549993",
+      "personal_observation": "Full supplied target graph/table and all marking instructions present without solution leakage.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "75bcb98d32362f52c538389e7b223b5568ec36116dcf2c78be7753be3ad21af9"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 19,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/pages/page-019.png",
+      "raw_sha256": "86f3532e586fc0cc6becc0e511ba8ffcd8f90b5c4c49c32186f3404892204e2f",
+      "personal_observation": "Target fairness question, evaluative bonus, both substantive closing retrieval tasks readable.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6"
+    },
+    {
+      "kind": "paragraaf",
+      "id": 19,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/paragraaf/page-019.png",
+      "raw_sha256": "1ce0bbf09e0dd74e47aed85dc47d81fb00ec0f446eb51ec60cec78451ce81bca",
+      "personal_observation": "Target fairness question, evaluative bonus, both substantive closing retrieval tasks readable.",
+      "source_pdf_sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+      "decoded_rgb_sha256": "c38d16c52342869444a9a99c1c254abd0762f7483c5f0911a887e9b44a922abd"
+    },
+    {
+      "kind": "opgaven",
+      "id": 1,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/pages/page-001.png",
+      "raw_sha256": "140b464970c6c4dbc62493128004fa1d38a8c9e143bd504cfa87ecb799bd17ca",
+      "personal_observation": "Complete five-question worked-example context and first two steps.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0"
+    },
+    {
+      "kind": "opgaven",
+      "id": 1,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/opgaven/page-001.png",
+      "raw_sha256": "59bd79a67b726d47bf972f9fc517b011105bf514b1a4193bd98a707df5c5cbfa",
+      "personal_observation": "Complete five-question worked-example context and first two steps.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+      "decoded_rgb_sha256": "e4573760debc78448e35e183e74012d23eac407aa03ba74f352d70a9119b9d50"
+    },
+    {
+      "kind": "opgaven",
+      "id": 2,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/pages/page-002.png",
+      "raw_sha256": "13ccf2411f998f04e27f6dbf04b09ffcbdf3be42a63b0bc792c0951235ec659e",
+      "personal_observation": "Solved towels figure with quiet interior labels and complete intact table.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0"
+    },
+    {
+      "kind": "opgaven",
+      "id": 2,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/opgaven/page-002.png",
+      "raw_sha256": "0c6725639d7fec36f82a99fab35581a58f773e021b5b56a78ae2e8b453e61da0",
+      "personal_observation": "Solved towels figure with quiet interior labels and complete intact table.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+      "decoded_rgb_sha256": "2af9edf08567653cf0da2005a8e95796ec9c2cad9eb7488f3e03e85489b7aa26"
+    },
+    {
+      "kind": "opgaven",
+      "id": 3,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/pages/page-003.png",
+      "raw_sha256": "1c302e34ddc641d7bdbd9285a06572099dfce21121159060c9bcbe3fcd747c7a",
+      "personal_observation": "Full domain maximum and compact recap followed by Start with printed MK help.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0"
+    },
+    {
+      "kind": "opgaven",
+      "id": 3,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/opgaven/page-003.png",
+      "raw_sha256": "66edb06cf519fa7799c090264427f3901aba59a87d79a3c5911955511e08287a",
+      "personal_observation": "Full domain maximum and compact recap followed by Start with printed MK help.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+      "decoded_rgb_sha256": "768dfbac64ca95ec4fff23d76985839b7d6b7fa01ec2161f36ab237e1afc75a5"
+    },
+    {
+      "kind": "opgaven",
+      "id": 4,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/pages/page-004.png",
+      "raw_sha256": "071407de3e93aa7d450970e112c79624a21b81991af900b44a29ea7765e0e856",
+      "personal_observation": "Retrieval and current check distinct; plant full-support context intact.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0"
+    },
+    {
+      "kind": "opgaven",
+      "id": 4,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/opgaven/page-004.png",
+      "raw_sha256": "476c375777e9d1280a2996dd838e1c61ee41ac235951fd24c29667d34a969f42",
+      "personal_observation": "Retrieval and current check distinct; plant full-support context intact.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+      "decoded_rgb_sha256": "a12dd82312c58814a4502b57e24e7cff81abf80beb522e1895c2badaf4b31827"
+    },
+    {
+      "kind": "opgaven",
+      "id": 5,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/pages/page-005.png",
+      "raw_sha256": "8df7a89ac8d0d3af8376deed883a19f0de22f84b1b0f839ded4915bd7f201ed8",
+      "personal_observation": "Guided plant figure and full-range F1 sentence scaffold clear.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0"
+    },
+    {
+      "kind": "opgaven",
+      "id": 5,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/opgaven/page-005.png",
+      "raw_sha256": "73662199e61f7441cf9e22047c99040724b0230ad432646d3a2425c9f049d156",
+      "personal_observation": "Guided plant figure and full-range F1 sentence scaffold clear.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+      "decoded_rgb_sha256": "3d8fd45666ced0edcd6fda58f8fe30d738ca27dedc99a634d1e6afdc366629d1"
+    },
+    {
+      "kind": "opgaven",
+      "id": 6,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/pages/page-006.png",
+      "raw_sha256": "1ad8236b08bf9565bfba23cb05d504cf40c41edae3a75a482f26ff6f8d7c0b8b",
+      "personal_observation": "Continuation has both conclusion and boundaries, followed by unmarked candle graph.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0"
+    },
+    {
+      "kind": "opgaven",
+      "id": 6,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/opgaven/page-006.png",
+      "raw_sha256": "df135df21ee637323daf6570318782b754315ecc63a483069dc41cde9399216e",
+      "personal_observation": "Continuation has both conclusion and boundaries, followed by unmarked candle graph.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+      "decoded_rgb_sha256": "5295483c2095bab71a58696518b086faa2ce783ef88335934a9a7962df1dd997"
+    },
+    {
+      "kind": "opgaven",
+      "id": 7,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/pages/page-007.png",
+      "raw_sha256": "80d551229b713f88070ff6196175779db8af33b7521d2a964714cfef58187660",
+      "personal_observation": "Reduced-support full argument and mug four controlled cases; fruit context continues naturally.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0"
+    },
+    {
+      "kind": "opgaven",
+      "id": 7,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/opgaven/page-007.png",
+      "raw_sha256": "840d0570ec3898a87b05b9a00ef4aa306084ba8416773c735b5a14d7690815ec",
+      "personal_observation": "Reduced-support full argument and mug four controlled cases; fruit context continues naturally.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+      "decoded_rgb_sha256": "6a5055c6c551097f229da68a5a6533faf6b3f30722dd7e4db751314c4f030554"
+    },
+    {
+      "kind": "opgaven",
+      "id": 8,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/pages/page-008.png",
+      "raw_sha256": "31a0d3000f1c0451717a693a19308f4e48b91fcad3eda00c94d050817bc05999",
+      "personal_observation": "Full fruit domain and unmarked graph/table, all calculation/marking instructions readable.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0"
+    },
+    {
+      "kind": "opgaven",
+      "id": 8,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/opgaven/page-008.png",
+      "raw_sha256": "76e536d4d67012340827cf1d627228f0f54c9601a5aeedec00cc6236f5d1dbed",
+      "personal_observation": "Full fruit domain and unmarked graph/table, all calculation/marking instructions readable.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+      "decoded_rgb_sha256": "db3d73e98f1c7f382f020998aebb574259c0a518b54b752269fe62540b154c7f"
+    },
+    {
+      "kind": "opgaven",
+      "id": 9,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/pages/page-009.png",
+      "raw_sha256": "198eadd67c10de132c875e18792d49c9837a07b1cdaf9646ee6c61b1f66aa627",
+      "personal_observation": "Independent maximum prompt, revenue/PS source task and unchanged target context.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0"
+    },
+    {
+      "kind": "opgaven",
+      "id": 9,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/opgaven/page-009.png",
+      "raw_sha256": "952108a4a2bfc41c599468b1080ffb4e6173f96eb88ef9cf6e05e01215981eb8",
+      "personal_observation": "Independent maximum prompt, revenue/PS source task and unchanged target context.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+      "decoded_rgb_sha256": "9deb9c59afce70e4ffbcfea398ed35298619994861ad35e768a7e44df20aac71"
+    },
+    {
+      "kind": "opgaven",
+      "id": 10,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/pages/page-010.png",
+      "raw_sha256": "fcf5461320789658c6d39aa494a0e3103dfb96ab605963816e36d34093629f5d",
+      "personal_observation": "Supplied target full graph/table and questions remain intact with no answer marks.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0"
+    },
+    {
+      "kind": "opgaven",
+      "id": 10,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/opgaven/page-010.png",
+      "raw_sha256": "70bc0f714bb05f7fc8390ebb77d5dcfba1cba1229e7743a1918fb7b98ec0251a",
+      "personal_observation": "Supplied target full graph/table and questions remain intact with no answer marks.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+      "decoded_rgb_sha256": "dfaa59af206a60871d0e3d0b578eb9ce0b847ba18ae2ac818419f2117669421b"
+    },
+    {
+      "kind": "opgaven",
+      "id": 11,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/pages/page-011.png",
+      "raw_sha256": "709a2b8c3a21e4bfa02067045fd371e505d0980b1b6bd0e89d4426ac226dccf5",
+      "personal_observation": "Target final explanation, optional evaluative bonus and two closing retrievals readable.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0"
+    },
+    {
+      "kind": "opgaven",
+      "id": 11,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/opgaven/page-011.png",
+      "raw_sha256": "3a75757a1683c267849ac273967bef8ef897767d1b5fac776c8ab42af8567441",
+      "personal_observation": "Target final explanation, optional evaluative bonus and two closing retrievals readable.",
+      "source_pdf_sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+      "decoded_rgb_sha256": "006319dea246aea51dcaa0a02106dc0237d41898eb472451b9d97fbac1fbf1a6"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 1,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/pages/page-001.png",
+      "raw_sha256": "2a0d267ab61eaf8147c1c5d0501dc2dd18ef3b62349d3ecc552d8fd072a1434c",
+      "personal_observation": "Own-attempt instruction and complete worked context/first steps.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 1,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/antwoorden/page-001.png",
+      "raw_sha256": "0e6864174a24a2d0411eea624c057d34189320ba2a3a1db64a17cd3eba2c760e",
+      "personal_observation": "Own-attempt instruction and complete worked context/first steps.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+      "decoded_rgb_sha256": "1b4a48bb6c0c19feb35813c57d528fef614ec77f6205967541747b4f8fff470a"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 2,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/pages/page-002.png",
+      "raw_sha256": "482a1c3989b084fdcf469e8898c433fd348d1ebe6e0c1bc012d2d46536542a2a",
+      "personal_observation": "Solved graph, dimensions and complete table clean.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 2,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/antwoorden/page-002.png",
+      "raw_sha256": "6b394ce5a00fa290acd583c1cad011fa5821177453fcde9abcd8fc780f53e804",
+      "personal_observation": "Solved graph, dimensions and complete table clean.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+      "decoded_rgb_sha256": "9cd1600aa37dc0c527ae30b449eecb278624d17739059e2ce7a5b14a85d21c02"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 3,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/pages/page-003.png",
+      "raw_sha256": "284053c0e2d2b323e3bed2ba68292de298ba26250f22303b724fb02c66b89fb1",
+      "personal_observation": "Maximum proof, recap and all three retrieval models/rubrics visible.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 3,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/antwoorden/page-003.png",
+      "raw_sha256": "2f6678018f3af7a2f21167195a1456b4c0a84d3ff50e5b0eca43aac9e536873a",
+      "personal_observation": "Maximum proof, recap and all three retrieval models/rubrics visible.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+      "decoded_rgb_sha256": "9d5fd9442c374e7e21f7c6c65e2b2ca18ede7f23bcc4da77f94e311330cb9d94"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 4,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/pages/page-004.png",
+      "raw_sha256": "4016b13660a5488473ecbef698be1d78e3218a9fbd13e46b48ee92c7bbcb504c",
+      "personal_observation": "Current-check cost/norm boundaries and plant solved diagram intact.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 4,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/antwoorden/page-004.png",
+      "raw_sha256": "d4a38ea0d4e11add15f60401e4edcd53c00c7051ed2265b663d259ce17b7937c",
+      "personal_observation": "Current-check cost/norm boundaries and plant solved diagram intact.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+      "decoded_rgb_sha256": "1d9fa883248f7c7c5bdc0d424adeefddf227d4a359d67a6b779c00591dfdf48d"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 5,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/pages/page-005.png",
+      "raw_sha256": "efb8a3739f7308b5f72633dc8b0eef1893e7561e5d76824a718a87481bcd59c5",
+      "personal_observation": "Full plant maximum and all three scoring criteria, candle dimensions complete.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 5,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/antwoorden/page-005.png",
+      "raw_sha256": "052e5f1145de48f314b1eeb95cc3c82134b277b1689be4dac63db79abec897b4",
+      "personal_observation": "Full plant maximum and all three scoring criteria, candle dimensions complete.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+      "decoded_rgb_sha256": "d9c990aab2ade29468f3145480b349ce10b70d9402fa4a1ec057e96c0138d810"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 6,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/pages/page-006.png",
+      "raw_sha256": "84f2dc3881b031f1fde9f61bae83bea26b2e4a4c93e826a82de2c963383ecb1b",
+      "personal_observation": "Solved candle areas; domain-wide answer and first two criteria readable.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 6,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/antwoorden/page-006.png",
+      "raw_sha256": "ef469cf8c8c8005c5ece86e6faeb662ce5f8773a4dc2f93e17a469fbc4a8a04f",
+      "personal_observation": "Solved candle areas; domain-wide answer and first two criteria readable.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+      "decoded_rgb_sha256": "b3faf4af9e067cc5f82ff43eed613a0f853f3cdffbe0ae9a3208940a7c1467c2"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 7,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/pages/page-007.png",
+      "raw_sha256": "71197bfed568a63110c2718d8ba3b7dfb7a50bf159261060c861a15b9d0b98cb",
+      "personal_observation": "Third candle criterion preserved, all four mug computed cases, fruit equilibrium.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 7,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/antwoorden/page-007.png",
+      "raw_sha256": "34e719b7316c811ca458f27c4fd32738891c2d37d7de874d1656e44a88b5a02a",
+      "personal_observation": "Third candle criterion preserved, all four mug computed cases, fruit equilibrium.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+      "decoded_rgb_sha256": "10039bc07c2b6c5c81f0c7e6caa901bff3bc4993a340ae7c27d4bdb969762b56"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 8,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/pages/page-008.png",
+      "raw_sha256": "8f0f913d9a76452a858e1881955b64797e8a7e749be9540bd840b2d62b52b53d",
+      "personal_observation": "Solved fruit 400/200/600 areas and full independent answers including boundary rubric.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 8,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/antwoorden/page-008.png",
+      "raw_sha256": "392b4a2109aebf63a54308a968ce5ad6ae7c8264fedef45e6e124fa74c6b120e",
+      "personal_observation": "Solved fruit 400/200/600 areas and full independent answers including boundary rubric.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+      "decoded_rgb_sha256": "7f03983262821c83a5b379787bcf090e02ca189402650eda5f40e1b3117a18b9"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 9,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/pages/page-009.png",
+      "raw_sha256": "e2ce88bc8258c0613fccd49223369f455f5bc359a931bc1a4c524c2501beeecd",
+      "personal_observation": "Revenue160/PS60 and missing profit costs; exact target equilibrium and markings models.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 9,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/antwoorden/page-009.png",
+      "raw_sha256": "f22ee3f754f37a4a9d91efb97af15da3d27f9b2c5f7b776b5058b8d549561b9a",
+      "personal_observation": "Revenue160/PS60 and missing profit costs; exact target equilibrium and markings models.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+      "decoded_rgb_sha256": "212a44f59d6ed261c961983b2e8a2b81dc8aad3f2084befff60a2fb08702ce41"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 10,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/pages/page-010.png",
+      "raw_sha256": "1caa594216de448349400dff74a744db87e6ff226cab059b1d0eb2cc339c6856",
+      "personal_observation": "Solved target areas900/450/1350; preserved short answer plus point-versus-finite-interval explanation.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 10,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/antwoorden/page-010.png",
+      "raw_sha256": "3cf3b2395db27bb98fb4fb4d240cf37da967fca82122b1540ff8fea53d9e4554",
+      "personal_observation": "Solved target areas900/450/1350; preserved short answer plus point-versus-finite-interval explanation.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+      "decoded_rgb_sha256": "229cecd4b72b2832373402ccfb5f87b9c630bd00a783615e53714d15815e0343"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 11,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/pages/page-011.png",
+      "raw_sha256": "5909ad6457811898f5dc8da3df74b5b18274ed1c17e28d5ff4924eb3e157029c",
+      "personal_observation": "Complete full-domain target rubric; bonus14→16 and alternative17 with all three criteria.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 11,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/antwoorden/page-011.png",
+      "raw_sha256": "35062b3eb74b9aeb4d1714d52ab213f4d989c0b31e817a3735576b99a19419b6",
+      "personal_observation": "Complete full-domain target rubric; bonus14→16 and alternative17 with all three criteria.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+      "decoded_rgb_sha256": "7bb1518ca75cb0ae399a2af6c7f29276b4a0d0ac9239c283fb54a58002ff2ffb"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 12,
+      "mode": "color",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/pages/page-012.png",
+      "raw_sha256": "a971e27ceffa312fba41e1932a06e024a37790bdec57032efc6e9f5129d33607",
+      "personal_observation": "Closing interval24/6=4 not tenth-unit, discrete equality buyer and CS3 explained.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b"
+    },
+    {
+      "kind": "antwoorden",
+      "id": 12,
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/antwoorden/page-012.png",
+      "raw_sha256": "c7fd7dfc0b87bbbe2d70e91a29873d6aa4ef0cdbc7369a7fff55ca2285e1346f",
+      "personal_observation": "Closing interval24/6=4 not tenth-unit, discrete equality buyer and CS3 explained.",
+      "source_pdf_sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+      "decoded_rgb_sha256": "2f1c6f0b8adf2e8457be7e047cce20b2c22cf891562e910c2d1cf9fdb70fe882"
+    },
+    {
+      "kind": "native-figure",
+      "id": "fig_1",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_fig_1.png",
+      "raw_sha256": "f2170f43fe66f39e9b1ceb3cba7a3a1d873485ca659ef95275656ddd4eca6122",
+      "personal_observation": "Single transaction gap8/3, quiet opaque labels, no fake continuous curve.",
+      "svg_sha256": "d2151650a6d9e3e398905541c5790d0e94883b0caf13052ffcbab3d7e3802210"
+    },
+    {
+      "kind": "native-figure",
+      "id": "fig_1",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_fig_1.png",
+      "raw_sha256": "94a7eb1850cd2da6c54627c21c4724922f0eb17e214632acfa9a45ed00c3016e",
+      "personal_observation": "Single transaction gap8/3, quiet opaque labels, no fake continuous curve.",
+      "decoded_rgb_sha256": "d63579622fb72e6402be8488814aa94fbd3ac783ed2107d7475ecd89b3e7deba"
+    },
+    {
+      "kind": "native-figure",
+      "id": "fig_2",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_fig_2.png",
+      "raw_sha256": "5f8260b018da92b6fd70a3ded181b4fc355d1c0d1d4d1cad5fb2755f8ecc7374",
+      "personal_observation": "Demand-only tulips with complete0..60 axes.",
+      "svg_sha256": "01dd8a0f951fb89417861d46305c4713e6aca1458167f8babb76abdc3b68bc9d"
+    },
+    {
+      "kind": "native-figure",
+      "id": "fig_2",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_fig_2.png",
+      "raw_sha256": "cec1354fec5837ce633d169f3e62be5440f69dbda4d8457d5f983e902b9083cf",
+      "personal_observation": "Demand-only tulips with complete0..60 axes.",
+      "decoded_rgb_sha256": "a429f4506620512dcae40d00ab649a21b297a4020c16d83e2af921d0afd1b7b7"
+    },
+    {
+      "kind": "native-figure",
+      "id": "fig_3",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_fig_3.png",
+      "raw_sha256": "44fec3ae94e63d537a0a2e88ca411cd7e69971c45f9fa3a6e11e2ccd39d1e9f5",
+      "personal_observation": "Added whole-domain supply with exact32/14 projections.",
+      "svg_sha256": "c1ddd42956fdb6e847d184d960d912a4fbad84693e23132a52df940513ef17f5"
+    },
+    {
+      "kind": "native-figure",
+      "id": "fig_3",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_fig_3.png",
+      "raw_sha256": "593681382e15f1abfcd95ac07e0022f286b3f54ebaa681b5eacf8905f123a854",
+      "personal_observation": "Added whole-domain supply with exact32/14 projections.",
+      "decoded_rgb_sha256": "42cf2552716fd7b910b2c357bf1ef31f66b9dbf6020a6321a048585349e691ca"
+    },
+    {
+      "kind": "native-figure",
+      "id": "fig_4",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_fig_4.png",
+      "raw_sha256": "46a1967cdad10599b7ace29b74088a07163165ba3061b5ba3d5f99ff099ccf9b",
+      "personal_observation": "Isolated CS triangle ends at actual equilibrium with label clear of hatch and strokes.",
+      "svg_sha256": "c59855698d121d92379bcad4ce188ff85b05c85fd0a0cd76c852165eb6e510fe"
+    },
+    {
+      "kind": "native-figure",
+      "id": "fig_4",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_fig_4.png",
+      "raw_sha256": "07311490fb3a8a3ff8f24af5e1d9306c006c86c51f06a74dc151717aac143b64",
+      "personal_observation": "Isolated CS triangle ends at actual equilibrium with label clear of hatch and strokes.",
+      "decoded_rgb_sha256": "67cd5cd584e2862226f531e76ef1f21b961552e5cb3ee790337960d3516dc202"
+    },
+    {
+      "kind": "native-figure",
+      "id": "fig_5",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_fig_5.png",
+      "raw_sha256": "20c323ef432da6cf6c15712ae1196565e1261d912341543779b1387a45fa8d13",
+      "personal_observation": "Both tulip triangles with quiet interior labels, full0..60 domain.",
+      "svg_sha256": "c5016f6ea3a8ffbbc5f5a9958d404b5735897bad2032143f0744543e633b1f4c"
+    },
+    {
+      "kind": "native-figure",
+      "id": "fig_5",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_fig_5.png",
+      "raw_sha256": "87a621d4944ab8b8ae743c65a00ae093e84233ea981a6997c366dcd208d882c8",
+      "personal_observation": "Both tulip triangles with quiet interior labels, full0..60 domain.",
+      "decoded_rgb_sha256": "c3e2f46b0dc24f3585c98a999781f950efa459b7a571fe3915f3e9b2541dc753"
+    },
+    {
+      "kind": "native-figure",
+      "id": "fig_6",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_fig_6.png",
+      "raw_sha256": "6e79bfb5994b459c6caf7f026ea9bbe01ac572f62d86eaf87e6e970406abee81",
+      "personal_observation": "Three formula boxes clear, source30pt and exact per-transaction distinctions.",
+      "svg_sha256": "d795ae969b3862b7525868f28548d84a9f001bc067b7264bb11f507eac8a90b9"
+    },
+    {
+      "kind": "native-figure",
+      "id": "fig_6",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_fig_6.png",
+      "raw_sha256": "49b49a51de007aa5d04f9f68b655395ead14125fd0579a129bff8685b07921b3",
+      "personal_observation": "Three formula boxes clear, source30pt and exact per-transaction distinctions.",
+      "decoded_rgb_sha256": "ed54d0c3f969c9b2100bf5a75a98558dd6f0fc34c54d10889a15370b9542602b"
+    },
+    {
+      "kind": "native-figure",
+      "id": "we_1",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_we_1.png",
+      "raw_sha256": "3912262e6968b8e46a3b11a8f02330e41923788cacbe80642b44f6948b898fc0",
+      "personal_observation": "Solved towels exact12/18 and both areas72, quiet labels.",
+      "svg_sha256": "90cff2741102473ea2e52939a693a4c5f0c41697d2d66ff29ec06050d34f254a"
+    },
+    {
+      "kind": "native-figure",
+      "id": "we_1",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_we_1.png",
+      "raw_sha256": "99e9f2aab6fccfcb4467e2286093a7b22d06ecc3f84f5bf02a7f083949f00133",
+      "personal_observation": "Solved towels exact12/18 and both areas72, quiet labels.",
+      "decoded_rgb_sha256": "2992e0946883cd33c543790607ab2c5283895c50c31379a1f3efb767191ed3e1"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_1",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_ex_1.png",
+      "raw_sha256": "a99c48b363fbc2ee79cba72f07aa16f6e48bb93df935b60bdbd33b20e7a35b8f",
+      "personal_observation": "Plant explicitbase6height6, labels and masks clear of axes.",
+      "svg_sha256": "58af7a70027cb560765904b058a5573a5c8d3319835e64668bcd0c970482e187"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_1",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_ex_1.png",
+      "raw_sha256": "f7f5135787ec8e534f31638403e162c6b7dfb717b02291019232b23ea8be8ade",
+      "personal_observation": "Plant explicitbase6height6, labels and masks clear of axes.",
+      "decoded_rgb_sha256": "67a7a6ddcdd7b683c05cab484e6e3d8e8df21fc66652515aad2be365ac6037b5"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_2",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_ex_2.png",
+      "raw_sha256": "b02ee2a49b9e3246f9e66c5b29511d1b812f38c6e0cabe3575b978b150dcc512",
+      "personal_observation": "Candle unmarked supplied full curves0..52 with readable units.",
+      "svg_sha256": "26f2a05a8eac7028e7bdae6c381a5acab12d6e86fefb04cefcd567650d4c6f1a"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_2",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_ex_2.png",
+      "raw_sha256": "ad2e66a3bfb809144ab1eeb706167824bdfb6611da7c045bb04ebef865112266",
+      "personal_observation": "Candle unmarked supplied full curves0..52 with readable units.",
+      "decoded_rgb_sha256": "c8f9320a29c444e832983a3349c3a7dedc0bd6a77baff5e8d44fdb285b14c1bd"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_3",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_ex_3.png",
+      "raw_sha256": "aef0ae29582b0f985f4d107b808db28815861733b7db36bff0971585fb231dfb",
+      "personal_observation": "Fruit unmarked supplied full curves0..72 with no assessment-answer markings.",
+      "svg_sha256": "ce135244463f92f1be5d8d29b9b56517c65325351b442b165bb45d67bc268984"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_3",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_ex_3.png",
+      "raw_sha256": "b0bd531d10f038f1c3c34cd22c9733a7dda35add64bfe7f65c577b151395bd8a",
+      "personal_observation": "Fruit unmarked supplied full curves0..72 with no assessment-answer markings.",
+      "decoded_rgb_sha256": "b7825db0b876be7f0f06e7b4b8f9a534e73b8dea949039f48984435e5cfcc06a"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_4",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_ex_4.png",
+      "raw_sha256": "e40b4b9f8c8fd2cc2f00b1c87cb9ec78e4be1c020d02a8378e5b917f6c8b701e",
+      "personal_observation": "Target fully labelled supplied curves0..100 and no answers.",
+      "svg_sha256": "38b48a0b49a09931919aa897d6ba0d94b6cfd169dcb12e1a20f8297c44fb9468"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_4",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_ex_4.png",
+      "raw_sha256": "235542713376f5e4db5ea59b459c0bd4d8072e6b46b8e86aef918f4272508093",
+      "personal_observation": "Target fully labelled supplied curves0..100 and no answers.",
+      "decoded_rgb_sha256": "b2f96363918489b517d09612aa3c774aaa878ba9d26f80b361a97dea8f84204d"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_5",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_ex_5.png",
+      "raw_sha256": "7e82d045cde97df46da316838dc1280b372ca7ca71e5d3bc36df5259165537a8",
+      "personal_observation": "Solved candle24/14CS144PS72 with quiet labels.",
+      "svg_sha256": "3955fbecae47a67cba17060c5dc4d2c7cb02c8d14a4b457b66f0d8ca2d194177"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_5",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_ex_5.png",
+      "raw_sha256": "86eb68b9da038e1abe5df91ead6c7a276b3fdb4b9b8aa0f3cf936ec1ef2015ae",
+      "personal_observation": "Solved candle24/14CS144PS72 with quiet labels.",
+      "decoded_rgb_sha256": "363699bcc4ffb77d290fa68095d9515d7f182d5d663326faed1f5afe5866bdf2"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_6",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_ex_6.png",
+      "raw_sha256": "6198968c9c55d558c2bedf6f37a686f99bd8bc3e05bf1fc868bb35ac474ce12d",
+      "personal_observation": "Solved fruit40/16CS400PS200 with exact extents.",
+      "svg_sha256": "74a7fca31dfc757bc6a499b69da805703559dd5088906026aab853cb8b8fbe6e"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_6",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_ex_6.png",
+      "raw_sha256": "0e2e3e0e91171305401e715c2b03919eeecc8edaf41b434d26b08ecd5ef12acb",
+      "personal_observation": "Solved fruit40/16CS400PS200 with exact extents.",
+      "decoded_rgb_sha256": "f103c3525c34b32a349352916f6b3d25e0221073b11d6a6ff27e4e98978883d7"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_7",
+      "mode": "color",
+      "path": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/_assets/2.3.2_ex_7.png",
+      "raw_sha256": "63164683e3f26defa8e5ec934e5a7e74411234cea160d16425318f5df508de7b",
+      "personal_observation": "Solved target60/20CS900PS450 with discrete noncolor region patterns.",
+      "svg_sha256": "06f05d86529ff5bb17a08499431e5e522aad4cd597a8c3dd785071d605e6f2a3"
+    },
+    {
+      "kind": "native-figure",
+      "id": "ex_7",
+      "mode": "gray",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected/figures/2.3.2_ex_7.png",
+      "raw_sha256": "d24e85e4f6f1a6e70e56f49b82163e3759c5012b98ea7bc0b1968b926fdb69a3",
+      "personal_observation": "Solved target60/20CS900PS450 with discrete noncolor region patterns.",
+      "decoded_rgb_sha256": "58783abbc775b90314b8fbbb92d7c869466be58d83611fb1882718e3de93aae5"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "build-scripts/content/book-2/b2_232.py",
+      "sha256": "2d65fe30097c3f2b0e46c692239284c0ac430291154c97d8319d84b70bab9bdf"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/theory.md",
+      "sha256": "202f6fa7ade01c5ee2992ed3befd90e980b03c001436b440b6f39189b2476e31"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/exercises.md",
+      "sha256": "309fe29449944f95d4522b72e0c38c7e5badada3378b1420113d73bd38bc7fd4"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/answers.md",
+      "sha256": "d1cef7e04625ecbcfa1f1c71c3d4d8db8a81d4baa3bde78e39dcb15fb30020c7"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/target-answers.md",
+      "sha256": "f5de2724cddf01e21bc987ffffccb3cfd4f7043534160958162dae75b4d93fc5"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/assets.js",
+      "sha256": "1c392eec294d34087aa67ee697b84d8f758bcdd4f21390ff487b19db5bdf4d5c"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/gate.py",
+      "sha256": "d0efc0ff9965c8ba042291ce1c84d325dec98b1cafeb24c0988f713b28cbf8a5"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/test_source.py",
+      "sha256": "36864062c938d7aea3e15df2a1a2c94ab2cd96a65f11bb03743c239e807f9acd"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/test_inputs.py",
+      "sha256": "f6fa3eec5a61db1dbf363a3ed85871edf8364556650abaac1170497a56c6f29d"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/check_render.py",
+      "sha256": "428e782dff20ce6566ad260847d253e98bdb247c82f3ff13dadc69ea60402b77"
+    },
+    {
+      "path": "build-scripts/content/book-2/232/verify_rebuild.py",
+      "sha256": "ba99bfa9cacd02089b985fc0f4995f58e1ed34976b63d96af90489efd65109f0"
+    }
+  ],
+  "native_packet": {
+    "2.3.2 Producentensurplus en totaal surplus – paragraaf.md": "fe99e8136960505d30e041614ee301c3f8405efab38aff77a8fa89441a3238cb",
+    "2.3.2 Producentensurplus en totaal surplus – paragraaf.html": "23df621785b8b7ccd7978bf0ad6e12d30c3149ddfa7bae52085a4725460c1f47",
+    "2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+    "2.3.2 Producentensurplus en totaal surplus – paragraaf.zip": "a96fbf2b8cd544d317d9fc39977a7c98b8b44d4cd1d455fd35c158e9f8cb4d9b",
+    "2.3.2 Producentensurplus en totaal surplus – opgaven.md": "586cf0cbb39b5c809c3caf80d195fc060599a50071be94e36f953cd896a7f7c2",
+    "2.3.2 Producentensurplus en totaal surplus – opgaven.html": "efdb8b99bd3faa9a44323e41efe2e67cd3840e4ad6c8cd37a30f3887236cc545",
+    "2.3.2 Producentensurplus en totaal surplus – opgaven.pdf": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+    "2.3.2 Producentensurplus en totaal surplus – opgaven.zip": "cb517e4cf56fcb226beed602a2a4d0bf75ee92e8ee3e349030fc9e7c65c5e72e",
+    "2.3.2 Producentensurplus en totaal surplus – antwoorden.md": "e97afda6782c7124af51fc76538bf47bb358a5ac91027ece65edb53d76529921",
+    "2.3.2 Producentensurplus en totaal surplus – antwoorden.html": "700d0128a3fb7a846400be5c7f275fde0106cb7a15025bd213f41e05960677b9",
+    "2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+    "2.3.2 Producentensurplus en totaal surplus – antwoorden.zip": "41f30f8166e60dfb217faf292d952ce084fb47c4ce4d68b15d228ee57c4e64b1",
+    "_assets/2.3.2_fig_1.svg": "d2151650a6d9e3e398905541c5790d0e94883b0caf13052ffcbab3d7e3802210",
+    "_assets/2.3.2_fig_1.png": "f2170f43fe66f39e9b1ceb3cba7a3a1d873485ca659ef95275656ddd4eca6122",
+    "_assets/2.3.2_fig_2.svg": "01dd8a0f951fb89417861d46305c4713e6aca1458167f8babb76abdc3b68bc9d",
+    "_assets/2.3.2_fig_2.png": "5f8260b018da92b6fd70a3ded181b4fc355d1c0d1d4d1cad5fb2755f8ecc7374",
+    "_assets/2.3.2_fig_3.svg": "c1ddd42956fdb6e847d184d960d912a4fbad84693e23132a52df940513ef17f5",
+    "_assets/2.3.2_fig_3.png": "44fec3ae94e63d537a0a2e88ca411cd7e69971c45f9fa3a6e11e2ccd39d1e9f5",
+    "_assets/2.3.2_fig_4.svg": "c59855698d121d92379bcad4ce188ff85b05c85fd0a0cd76c852165eb6e510fe",
+    "_assets/2.3.2_fig_4.png": "46a1967cdad10599b7ace29b74088a07163165ba3061b5ba3d5f99ff099ccf9b",
+    "_assets/2.3.2_fig_5.svg": "c5016f6ea3a8ffbbc5f5a9958d404b5735897bad2032143f0744543e633b1f4c",
+    "_assets/2.3.2_fig_5.png": "20c323ef432da6cf6c15712ae1196565e1261d912341543779b1387a45fa8d13",
+    "_assets/2.3.2_fig_6.svg": "d795ae969b3862b7525868f28548d84a9f001bc067b7264bb11f507eac8a90b9",
+    "_assets/2.3.2_fig_6.png": "6e79bfb5994b459c6caf7f026ea9bbe01ac572f62d86eaf87e6e970406abee81",
+    "_assets/2.3.2_we_1.svg": "90cff2741102473ea2e52939a693a4c5f0c41697d2d66ff29ec06050d34f254a",
+    "_assets/2.3.2_we_1.png": "3912262e6968b8e46a3b11a8f02330e41923788cacbe80642b44f6948b898fc0",
+    "_assets/2.3.2_ex_1.svg": "58af7a70027cb560765904b058a5573a5c8d3319835e64668bcd0c970482e187",
+    "_assets/2.3.2_ex_1.png": "a99c48b363fbc2ee79cba72f07aa16f6e48bb93df935b60bdbd33b20e7a35b8f",
+    "_assets/2.3.2_ex_2.svg": "26f2a05a8eac7028e7bdae6c381a5acab12d6e86fefb04cefcd567650d4c6f1a",
+    "_assets/2.3.2_ex_2.png": "b02ee2a49b9e3246f9e66c5b29511d1b812f38c6e0cabe3575b978b150dcc512",
+    "_assets/2.3.2_ex_3.svg": "ce135244463f92f1be5d8d29b9b56517c65325351b442b165bb45d67bc268984",
+    "_assets/2.3.2_ex_3.png": "aef0ae29582b0f985f4d107b808db28815861733b7db36bff0971585fb231dfb",
+    "_assets/2.3.2_ex_4.svg": "38b48a0b49a09931919aa897d6ba0d94b6cfd169dcb12e1a20f8297c44fb9468",
+    "_assets/2.3.2_ex_4.png": "e40b4b9f8c8fd2cc2f00b1c87cb9ec78e4be1c020d02a8378e5b917f6c8b701e",
+    "_assets/2.3.2_ex_5.svg": "3955fbecae47a67cba17060c5dc4d2c7cb02c8d14a4b457b66f0d8ca2d194177",
+    "_assets/2.3.2_ex_5.png": "7e82d045cde97df46da316838dc1280b372ca7ca71e5d3bc36df5259165537a8",
+    "_assets/2.3.2_ex_6.svg": "74a7fca31dfc757bc6a499b69da805703559dd5088906026aab853cb8b8fbe6e",
+    "_assets/2.3.2_ex_6.png": "6198968c9c55d558c2bedf6f37a686f99bd8bc3e05bf1fc868bb35ac474ce12d",
+    "_assets/2.3.2_ex_7.svg": "06f05d86529ff5bb17a08499431e5e522aad4cd597a8c3dd785071d605e6f2a3",
+    "_assets/2.3.2_ex_7.png": "63164683e3f26defa8e5ec934e5a7e74411234cea160d16425318f5df508de7b",
+    "build_pdf.py": "b277d0ff4b9aa8bb86c14a6102d339449ae9b786a74f11e55fdfd1fcb0be5aec"
+  },
+  "evidence": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-personal-views.json",
+      "raw_sha256": "23eac941585cbf7ff57aa8dad44b6b0b9f92610e87af8d3c37a36f273d05cf5d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r1000003.json",
+      "raw_sha256": "e7b352f7080418b6c382a5f8ba3fb340229926b7020b7b8e70666039cfaa8461"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r1000004.json",
+      "raw_sha256": "afbd9e78847cc329e37ec8fadeafe49a80d724b72b19a3a9ec9d3c0ce4c6b155"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r1000005.json",
+      "raw_sha256": "77f4d90a8dddae1d2c41b1f647b0dcdd620f859452d7cc5d02663bba8a8f71c9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-native-r1000006.json",
+      "raw_sha256": "7e70cb4c8799d663d80daf3f9f52630140dd69addbdf5d2ca6b96f9314d51a86"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-parity-four-final.json",
+      "raw_sha256": "f136026412845b26b05e30e6df3362a54c0c4749b60b69037f49302666a83257"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-checker-rebuild-r1000006.json",
+      "raw_sha256": "c4973dc885693e17004ddffa9185023095b13027bebc4936dd1dcd05b3df8273"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-final-check-corrected.json",
+      "raw_sha256": "9f71720de2c5d0f6c9a3f4b377ff4de741236e5b344465ce3bb39a77dc674a47"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-grayscale-corrected.json",
+      "raw_sha256": "b56cc8f67655f4de8df13f46a0ae3d163aa33d6328768c6dcb5851e7fc42a9a5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-all-tests-source6-process.json",
+      "raw_sha256": "1886a537c473cfe5445454056e78dca1b41c81fb7e0eee0a89c59bc0a2dbd142"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-cli-probes-source6.json",
+      "raw_sha256": "b42fe3f1054d888f4e1fd7ff4317ba4f829f86d4d06f0b149bc8f206171e40f8"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-namespace-probes.json",
+      "raw_sha256": "e9845ddc5ad59bc380770ecce0e601c20ccaa34eab0b835875c309856b2c1a69"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-final-custody-current.json",
+      "raw_sha256": "13c3cba327232f375802f9c8772bcd2a0254699b1bdc956158d259e1e6047057"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-final-release-process.json",
+      "raw_sha256": "74c9800efdac5a76d28cea5d6e7f3c0b680050dcfeaba8796836a0ff4c4ff573"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-final-structural-process.json",
+      "raw_sha256": "fde448f65a8701644f7f5196d9c7fc6642d1adb785d97d5a670581b0ca3b7672"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-final-production-process.json",
+      "raw_sha256": "63b38b574d339ad8ad32c82387018999c28dead8d63e3169322b4e55b356aea5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-final-durable-process.json",
+      "raw_sha256": "ada392858530b406d3510e9147b2bfedc298d51094a5eda5b2c9556ba2d1c5e8"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-final-bundle-process.json",
+      "raw_sha256": "f079d13f3e3f96200b9c12bce345d9f3afb9b5ff4248d943c188dd09d09c62b2"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-final-author-profile-student-process.json",
+      "raw_sha256": "ba19c2829600529296ab41ad0de35f068ae4a5963bdb6e235fdf54e111f0672f"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-final-author-profile-print-process.json",
+      "raw_sha256": "287914a19867e9375e75a0d30e85b3c65aebac8f62d773e36c94e89479cbdac1"
+    }
+  ],
+  "root_acceptance": "PENDING",
+  "independent_review": "PENDING",
+  "specialist_qc": "PENDING",
+  "handoff": "PENDING",
+  "production_ready": false
+}

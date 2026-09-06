@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "build-scripts/content/book-2/232",
+    "-p",
+    "test_source.py",
+    "-v"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:20:49.772Z",
+  "finish": "2026-09-06T08:20:50.112Z",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_all_six_market_chains_exact (test_source.SourceTests.test_all_six_market_chains_exact) ... ok\r\ntest_all_supplied_comparison_rows (test_source.SourceTests.test_all_supplied_comparison_rows) ... ok\r\ntest_caption_title_plan_and_asset_roles (test_source.SourceTests.test_caption_title_plan_and_asset_roles) ... ok\r\ntest_complete_frozen_plan_snapshot (test_source.SourceTests.test_complete_frozen_plan_snapshot) ... ok\r\ntest_complete_paper_and_answers (test_source.SourceTests.test_complete_paper_and_answers) ... ok\r\ntest_marginal_point_not_next_unit_or_interval (test_source.SourceTests.test_marginal_point_not_next_unit_or_interval) ... ok\r\ntest_mug_and_bonus_transfer (test_source.SourceTests.test_mug_and_bonus_transfer) ... ok\r\ntest_real_content_negative_counterexamples (test_source.SourceTests.test_real_content_negative_counterexamples) ... ok\r\ntest_retrieval_and_individual_boundaries (test_source.SourceTests.test_retrieval_and_individual_boundaries) ... ok\r\ntest_timing_inventory (test_source.SourceTests.test_timing_inventory) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 10 tests in 0.139s\r\n\r\nOK\r\n",
+  "stdout_base64": "",
+  "stderr_base64": "dGVzdF9hbGxfc2l4X21hcmtldF9jaGFpbnNfZXhhY3QgKHRlc3Rfc291cmNlLlNvdXJjZVRlc3RzLnRlc3RfYWxsX3NpeF9tYXJrZXRfY2hhaW5zX2V4YWN0KSAuLi4gb2sNCnRlc3RfYWxsX3N1cHBsaWVkX2NvbXBhcmlzb25fcm93cyAodGVzdF9zb3VyY2UuU291cmNlVGVzdHMudGVzdF9hbGxfc3VwcGxpZWRfY29tcGFyaXNvbl9yb3dzKSAuLi4gb2sNCnRlc3RfY2FwdGlvbl90aXRsZV9wbGFuX2FuZF9hc3NldF9yb2xlcyAodGVzdF9zb3VyY2UuU291cmNlVGVzdHMudGVzdF9jYXB0aW9uX3RpdGxlX3BsYW5fYW5kX2Fzc2V0X3JvbGVzKSAuLi4gb2sNCnRlc3RfY29tcGxldGVfZnJvemVuX3BsYW5fc25hcHNob3QgKHRlc3Rfc291cmNlLlNvdXJjZVRlc3RzLnRlc3RfY29tcGxldGVfZnJvemVuX3BsYW5fc25hcHNob3QpIC4uLiBvaw0KdGVzdF9jb21wbGV0ZV9wYXBlcl9hbmRfYW5zd2VycyAodGVzdF9zb3VyY2UuU291cmNlVGVzdHMudGVzdF9jb21wbGV0ZV9wYXBlcl9hbmRfYW5zd2VycykgLi4uIG9rDQp0ZXN0X21hcmdpbmFsX3BvaW50X25vdF9uZXh0X3VuaXRfb3JfaW50ZXJ2YWwgKHRlc3Rfc291cmNlLlNvdXJjZVRlc3RzLnRlc3RfbWFyZ2luYWxfcG9pbnRfbm90X25leHRfdW5pdF9vcl9pbnRlcnZhbCkgLi4uIG9rDQp0ZXN0X211Z19hbmRfYm9udXNfdHJhbnNmZXIgKHRlc3Rfc291cmNlLlNvdXJjZVRlc3RzLnRlc3RfbXVnX2FuZF9ib251c190cmFuc2ZlcikgLi4uIG9rDQp0ZXN0X3JlYWxfY29udGVudF9uZWdhdGl2ZV9jb3VudGVyZXhhbXBsZXMgKHRlc3Rfc291cmNlLlNvdXJjZVRlc3RzLnRlc3RfcmVhbF9jb250ZW50X25lZ2F0aXZlX2NvdW50ZXJleGFtcGxlcykgLi4uIG9rDQp0ZXN0X3JldHJpZXZhbF9hbmRfaW5kaXZpZHVhbF9ib3VuZGFyaWVzICh0ZXN0X3NvdXJjZS5Tb3VyY2VUZXN0cy50ZXN0X3JldHJpZXZhbF9hbmRfaW5kaXZpZHVhbF9ib3VuZGFyaWVzKSAuLi4gb2sNCnRlc3RfdGltaW5nX2ludmVudG9yeSAodGVzdF9zb3VyY2UuU291cmNlVGVzdHMudGVzdF90aW1pbmdfaW52ZW50b3J5KSAuLi4gb2sNCg0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0KUmFuIDEwIHRlc3RzIGluIDAuMTM5cw0KDQpPSw0K"
+}
