@@ -76,6 +76,14 @@ if(mode==='prepare'){
   const paths=changed(cwd,base);assert(label==='platform'?paths.every(s=>ownP(s,true)):JSON.stringify(paths.sort())===JSON.stringify([...lessonPaths].sort()));
   result.push({repository:label,head,remote,branch,clean:true,strict_scope:'PASS',paths:paths.length});
  }
+ for(const [label,cwd,lane,base]of [
+  ['own-platform',P,'shared',baseP],['own-lessons',L,'textbook',baseL],
+  ['candidate-platform',P,'shared','96416b6b5bd57094576e9aba0a42d682584ec479'],
+  ['candidate-lessons',L,'textbook','f09fd6e88edc5049b026b16b0158e7e188091d2d']]){
+  const response=run('terminal-scope-'+label,P,'node',['build-scripts/workflows/check-paragraph-lane-scope.js','--cwd',cwd,'--lane',lane,'--base',base,'--head',git(cwd,'rev-parse','HEAD'),'--json'],[0],false);
+  const scope=JSON.parse(response.stdout);assert(scope.ok);assert.equal(scope.categories.unknown.length,0);
+  console.log(JSON.stringify({scope:label,status:'PASS',unknown:0}));
+ }
  const tail=changed(P,'HEAD^');assert.deepEqual(tail.sort(),[...indexes].sort());
  console.log(JSON.stringify({terminal_pair:result,terminal_index_tail:tail,role:'223metadataauthor',independent_delta_review:'PENDING',specialist_renewal:'PENDING',root_validation:'PENDING',root_acceptance:'PENDING',handoff_renewal:'PENDING'},null,2));
 }else throw Error('Use prepare/scope/indexes/final');
