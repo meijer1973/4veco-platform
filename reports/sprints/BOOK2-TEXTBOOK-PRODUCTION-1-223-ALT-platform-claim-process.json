@@ -1,0 +1,19 @@
+{
+  "command": "node",
+  "args": [
+    "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\build-scripts\\ci\\check-agent-worktree-safety.js",
+    "--check",
+    "--task",
+    "BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT",
+    "--agent",
+    "paragraph_231_specialist_qc",
+    "--require-prefix",
+    "codex/,agent/"
+  ],
+  "cwd": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform",
+  "started_at": "2026-09-06T01:31:56.914Z",
+  "ended_at": "2026-09-06T01:31:57.162Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"mode\": \"check\",\n  \"repository\": \"4veco-platform\",\n  \"worktree_path\": \"C:/wt/book2-223-alt-correction-20260906/4veco-platform\",\n  \"git_dir\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform169\",\n  \"anchor_clone\": false,\n  \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT\",\n  \"agent_id\": \"paragraph_231_specialist_qc\",\n  \"lock\": {\n    \"present\": true,\n    \"same_owner\": true,\n    \"same_task\": true,\n    \"stale\": false,\n    \"path\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform169\\\\4veco-agent-worktree-lock.json\",\n    \"owner\": \"paragraph_231_specialist_qc\",\n    \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT\"\n  },\n  \"branch\": \"agent/book2-223-alt-correction-20260906\",\n  \"head_sha\": \"4592685f169f3ff5dc748ff7d8d4ede4b8bc4d05\",\n  \"on_main\": false,\n  \"detached_head\": false,\n  \"dirty\": true,\n  \"dirty_count\": 33,\n  \"ahead\": 0,\n  \"behind\": 0,\n  \"diverged\": false,\n  \"prefix_ok\": true,\n  \"required_prefixes\": [\n    \"codex/\",\n    \"agent/\"\n  ],\n  \"warnings\": [\n    \"working tree is dirty (33 items)\"\n  ],\n  \"failures\": []\n}\n",
+  "stderr": ""
+}

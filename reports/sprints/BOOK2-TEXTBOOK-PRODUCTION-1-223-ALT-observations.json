@@ -1,0 +1,65 @@
+{
+  "actor": "paragraph_231_specialist_qc",
+  "role": "223metadataauthor",
+  "kind": "personal author verification, not independent paragraph review or specialist QC",
+  "date": "2026-09-06",
+  "full_page_color_views": {
+    "paragraaf": [
+      "Title, four goals and retrieval box are readable; annual-income introduction continues naturally.",
+      "Three signed income responses, common percentage scale and figure 1 caption are legible and uncropped.",
+      "All three Ei definitions, open 0/1 boundaries and complete figure 2 caption are visible; warning box stays together.",
+      "Named numerator and other-price goods remain clear in the cross-elasticity table; no clipped cells.",
+      "Figure 3 retains both named ratios and ceteris-paribus conditions; annual income is explicitly named.",
+      "Annual-income coefficient clarification, reset explanation and worked income example are complete.",
+      "Named goods example and three baseline-comparison rows retain readable units and complete values.",
+      "Figure 4 retains all three scenarios, unchanged full caption and reset warning; no geometry or caption displacement.",
+      "Recap and start checks retain correct signed Ei boundaries, paper short route and neutral retry guidance.",
+      "Guided exercise 3 and its percentage reminder remain grouped, with faded help and readable goods names.",
+      "Guided substitution and independent reset steps for exercises 4/5 are complete and unclipped.",
+      "Four-row art-print comparison and all four questions are present with clearly readable units.",
+      "Independent exercises 7/8 are readable, retain annual income and explicit return to baseline.",
+      "Target exercise remains complete on its own page, with all five questions and 16 points visible.",
+      "Bonus remains outside the short route; retrieval exercises 11/12 and footer are complete."
+    ],
+    "opgaven": [
+      "Worked income and other-price examples remain readable; next model context begins without clipping.",
+      "Complete baseline table and figure 4 fit together; full original caption remains visible at the foot of the figure.",
+      "Worked percentages, original-base reset and recap boxes are complete and readable.",
+      "Start checks 1/2 retain complete wording and printed support route without layout defects.",
+      "Guided exercise 3 and its reminder box stay intact; no missing signs or clipped labels.",
+      "Exercises 4/5 preserve monthly quantities and annual income, complete fading and reset prompts.",
+      "Independent art-print table and four questions remain intact with ample reading space.",
+      "Independent exercises 7/8 preserve both named-price ratios and isolated-input comparison.",
+      "Frozen target has three sources, all five questions, exact 16-point distribution and no truncation.",
+      "Bonus and two retrieval exercises are complete; optional short-route boundary is visible."
+    ],
+    "antwoorden": [
+      "Rounding/units policy and complete start-check answers are legible with reasoning and printed retry guidance.",
+      "Guided answers retain signed ratios, explicit units, annual-income use and original-base reset; no overflow.",
+      "Exercise 5 and combined-change exercise 6 have complete bounded explanations and clear paragraph grouping.",
+      "Answers 7/8 preserve named goods, exact 5/9 calculation and return to original income; all text is visible.",
+      "Target answers a/b/c include classifications, named goods and explicit 3/2/4-point allocations.",
+      "Target d/e retain 390/420/392 quantities, 10/13 Ei, original-base reset and 4/3 points; no clipping.",
+      "Bonus criteria and retrieval answers are complete, with no invented necessity category or causal overclaim."
+    ]
+  },
+  "native_color_figure_views": [
+    "Figure 1: negative and positive bars, hatching and direct values remain readable on a common scale.",
+    "Figure 2: open 0 and 1 markers, three strict inequality regions and signed examples support the new short alternative.",
+    "Figure 3: quantity and other-price goods are explicitly named in both ratios, with conditions outside the boxes.",
+    "Figure 4: three separate scenarios show fixed inputs and reset income; the new short alternative describes that structure."
+  ],
+  "personal_grayscale_views": [
+    {"path": "paragraaf-page-003.png", "observation": "Open boundaries, strict regions and full caption remain clear without color."},
+    {"path": "paragraaf-page-008.png", "observation": "All three scenario boxes, labels, units and full caption remain legible in grayscale."},
+    {"path": "opgaven-page-002.png", "observation": "Table, scenario figure and unchanged full caption remain clear together in grayscale."},
+    {"path": "figure-2.png", "observation": "Open boundary dots and direct inequality labels distinguish all regions without hue."},
+    {"path": "figure-4.png", "observation": "Text and bordered panels distinguish the isolated changes and reset without hue."}
+  ],
+  "limits": "Only the listed 32 color pages, four native color figures, three grayscale pages and two grayscale figures were personally viewed. All 32 grayscale pages and four grayscale figures have separate mechanical exact-byte parity. This is not an independent reviewer completion or root acceptance.",
+  "printed_defects_found": [],
+  "root_validation": "PENDING",
+  "root_acceptance": "PENDING",
+  "handoff_renewal": "PENDING",
+  "timing": "54/69/81 minutes UNOBSERVED"
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:/Python314/python.exe",
+    "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-check.py",
+    "print-inner"
+  ],
+  "cwd": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform",
+  "started": "2026-09-06T01:25:41.768582+00:00",
+  "ended": "2026-09-06T01:25:52.230175+00:00",
+  "path_first": "C:/msys64/mingw64/bin",
+  "exit_code": 0,
+  "stdout": "print-manifest: BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-print-manifest.json SHA256 ec660c7526867832ef61a964689b31dd00369266efcfe4a61bece67fbe8df8c3\n",
+  "stderr": "",
+  "expected_exit": 0
+}

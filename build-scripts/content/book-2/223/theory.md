@@ -81,7 +81,7 @@ Bij **Ei=0** en **Ei=1** kennen we hier geen categorie toe: het zijn
 grenswaarden. De bredere omschrijving van een normaal goed die je in Boek 1
 tegenkwam, is nog niet deze formele driecategorieënindeling.
 
-![Figuur 2: Zoek eerst het teken van Ei en daarna het juiste gebied.](_assets/2.2.3_fig_2.svg)
+![Figuur 2: Zoek eerst het teken van Ei en daarna het juiste gebied.](_assets/2.2.3_fig_2.svg){alt="Ei-schaal: inferieur bij Ei<0, normaal bij 0<Ei<1 en luxe bij Ei>1; open grenspunten 0 en 1 zonder categorie."}
 
 > **Let op - teken niet wegpoetsen**
 >

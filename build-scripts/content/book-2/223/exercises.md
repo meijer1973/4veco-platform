@@ -60,7 +60,7 @@ met de eerste rij, niet met de vorige verandering.
 | Alleen Y hoger | 20 | 10 | 36.000 | 230 |
 | Terug naar begin; alleen Pz hoger | 20 | 14 | 30.000 | 204 |
 
-![Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.](_assets/2.2.3_fig_4.svg)
+![Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.](_assets/2.2.3_fig_4.svg){alt="Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs."}
 
 **Stap 3 - Bereken de percentages en Ei.** Gebruik de eigen oude waarde
 van iedere variabele:
