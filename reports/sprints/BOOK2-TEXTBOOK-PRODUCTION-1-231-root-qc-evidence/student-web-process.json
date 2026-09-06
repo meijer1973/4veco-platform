@@ -1,0 +1,17 @@
+{
+  "args": [
+    "node",
+    "scripts/validate-paragraph.js",
+    "--mode",
+    "part-a",
+    "--profile",
+    "student-web",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started_at": "2026-09-06T01:08:05.415680+00:00",
+  "finished_at": "2026-09-06T01:08:05.502069+00:00",
+  "exit_code": 0,
+  "stdout": "\nValidating paragraph 2.3.1 \"Consumentensurplus\"\nPath: C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\nMode: part-a\nProfile: student-web\n\n-- Part A textbook files --\n  OK Paragraph type: theory\n  OK paragraaf.md: 2.3.1 Consumentensurplus – paragraaf.md\n  OK opgaven.md: 2.3.1 Consumentensurplus – opgaven.md\n  OK antwoorden.md: 2.3.1 Consumentensurplus – antwoorden.md\n  OK 2.3.1 Consumentensurplus – paragraaf.html (1895.9 KB)\n  OK 2.3.1 Consumentensurplus – opgaven.html (988.6 KB)\n  OK 2.3.1 Consumentensurplus – antwoorden.html (1765.1 KB)\n  OK 2.3.1 Consumentensurplus – paragraaf.pdf (1116 KB)\n  OK 2.3.1 Consumentensurplus – opgaven.pdf (617 KB)\n  OK 2.3.1 Consumentensurplus – antwoorden.pdf (1102 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 15 image refs all resolve\n  OK _assets/: 15 SVGs, 15 PNGs\n\n-- Part A QC artifacts --\n  OK Part A review: 2.3.1-review.md (verdict PASS WITH FLAGS)\n  OK Quality ref: 2.3.1-quality-ref.yaml (valid)\n\n==========================================\nOK Paragraph 2.3.1 \"Consumentensurplus\" PASSED all checks.\n\n",
+  "stderr": ""
+}

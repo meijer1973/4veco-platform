@@ -1,0 +1,29 @@
+{
+  "args": [
+    "node",
+    "build-scripts/workflows/check-book-outline-currentness.js",
+    "--require-approved",
+    "--action",
+    "specialist_review",
+    "--paragraph",
+    "2.3.1"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started_at": "2026-09-06T01:10:01.527172+00:00",
+  "finished_at": "2026-09-06T01:10:03.096521+00:00",
+  "exit_code": 0,
+  "stdout": {
+    "raw_base64": "Qm9vayAyIG91dGxpbmUgY3VycmVudG5lc3M6IFBBU1MKLSBvdXRsaW5lOiByZWZlcmVuY2VzL2F1dGhvcmVkL2Jvb2stb3V0bGluZXMvYm9vay0yLW91dGxpbmUubWQKLSB0YXJnZXQgcGluczogMTIKLSBtb2RlOiBhcHByb3ZlZC11c2UKLSBwYXJhZ3JhcGggc2NvcGU6IDIuMy4xCg==",
+    "sha256": "17c621a2434015110c4cb7717f5a302b74ab68762f2574dbcdd25e8895ecce87",
+    "byte_count": 160,
+    "decoded": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.3.1\n",
+    "decoding": "utf-8 strict"
+  },
+  "stderr": {
+    "raw_base64": "",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "byte_count": 0,
+    "decoded": "",
+    "decoding": "utf-8 strict"
+  }
+}

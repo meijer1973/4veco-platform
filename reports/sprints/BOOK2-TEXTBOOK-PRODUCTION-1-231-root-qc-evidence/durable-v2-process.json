@@ -1,0 +1,25 @@
+{
+  "args": [
+    "node",
+    "build-scripts/workflows/check-book2-target-authority-remediation.js",
+    "--durable"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started_at": "2026-09-06T01:10:03.097175+00:00",
+  "finished_at": "2026-09-06T01:10:03.633173+00:00",
+  "exit_code": 0,
+  "stdout": {
+    "raw_base64": "Qm9vayAyIHRhcmdldCBhdXRob3JpdHkgcmVtZWRpYXRpb246IFBBU1MKLSBtb2RlOiBkdXJhYmxlIGZyb3plbi1wYWNrYWdlIGFuZCBsaWZlY3ljbGUgaW52YXJpYW50Ci0gZXhhY3QgY2FuZGlkYXRlIHJlY29yZHM6IDEyCi0gZ29hbC9xdWVzdGlvbiBhbGlnbm1lbnQgYW5kIHdvcmtsb2FkIGJ1ZGdldHM6IGNvbXBsZXRlCi0gdW5yZWxhdGVkLXJlY29yZCBzY29wZSBjaGVja3M6IGRlbGVnYXRlZCB0byB0aGUgUFItc2NvcGVkIHNwcmludCBndWFyZAo=",
+    "sha256": "ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc",
+    "byte_count": 257,
+    "decoded": "Book 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n",
+    "decoding": "utf-8 strict"
+  },
+  "stderr": {
+    "raw_base64": "",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "byte_count": 0,
+    "decoded": "",
+    "decoding": "utf-8 strict"
+  }
+}

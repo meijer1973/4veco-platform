@@ -15727,3 +15727,284 @@ Node.js v24.13.1
 ```text
 
 ```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-check.py baseline 32cee7977e90da3aa77ce107e0e6e003eb9be370
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T01:00:42.518Z`
+- finished_at: `2026-09-06T01:00:56.084Z`
+- duration_ms: `13566`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `f570e90b05f2b280dc15de35ecc99391445571c735ee1de164458f635214b046`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Traceback (most recent call last):
+  File "C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-check.py", line 172, in <module>
+    if mode=='baseline': baseline(sys.argv[2])
+                         ~~~~~~~~^^^^^^^^^^^^^
+  File "C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-check.py", line 123, in baseline
+    result=bindings(); folder=folder_snapshot(); assert len(folder)==46
+  File "C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-check.py", line 58, in bindings
+    for r,h in source['old_sources_and_history'].items(): assert raw(P/r)==h,r
+                                                                 ^^^^^^^^^^^
+AssertionError: reports/github-agent-index-lessen.json
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-check.py differences
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T01:01:57.712Z`
+- finished_at: `2026-09-06T01:02:46.308Z`
+- duration_ms: `48596`
+- exit_code: `0`
+- stdout_sha256: `38c077153eac343ee00baa11f1ffbfc887afb7a72e4bf2ed0edc0d4f28142f5d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+[
+  {
+    "path": "reports/github-agent-index-lessen.json",
+    "specialist_baseline_sha256": "82bfbb2e019dba092cccd9d3f91aa899cb91afdd9e9805e812145234ec0253cb",
+    "current_raw_sha256": "47bbcaa84e8c297eca9163fd6a86d7794ecacc987c3caf8265690d7d3a704b4c",
+    "root_published_f257_sha256": "47bbcaa84e8c297eca9163fd6a86d7794ecacc987c3caf8265690d7d3a704b4c",
+    "source_baseline_35e0_sha256": "82bfbb2e019dba092cccd9d3f91aa899cb91afdd9e9805e812145234ec0253cb"
+  },
+  {
+    "path": "reports/github-agent-index-lessen.md",
+    "specialist_baseline_sha256": "61722a6a93c6ea6500fadb9dfcbbc4427c35cd56c968e65b05bcfc780031f205",
+    "current_raw_sha256": "a414ceedaa50c4e8275f175b66774d301b169f1c635026af5cb1309bf64ae2b3",
+    "root_published_f257_sha256": "a414ceedaa50c4e8275f175b66774d301b169f1c635026af5cb1309bf64ae2b3",
+    "source_baseline_35e0_sha256": "61722a6a93c6ea6500fadb9dfcbbc4427c35cd56c968e65b05bcfc780031f205"
+  },
+  {
+    "path": "reports/github-agent-index-platform.json",
+    "specialist_baseline_sha256": "5c959f4dfdb5beb071d39892cd36e71e06995377c7c5353dc68b4b5b2d55171e",
+    "current_raw_sha256": "9f537cc132c01ff2b38fb92ab9a465f445903940c2ca3acca82e89840765f1ee",
+    "root_published_f257_sha256": "9f537cc132c01ff2b38fb92ab9a465f445903940c2ca3acca82e89840765f1ee",
+    "source_baseline_35e0_sha256": "5c959f4dfdb5beb071d39892cd36e71e06995377c7c5353dc68b4b5b2d55171e"
+  },
+  {
+    "path": "reports/github-agent-index-platform.md",
+    "specialist_baseline_sha256": "41f5539b905be12510deab8e7e8f184c373f921f57a994e5d0e804edc42d835e",
+    "current_raw_sha256": "8e9416133ce5073cd1b07659a802aca45487da4709f7261ae85554a9d1ca9ed7",
+    "root_published_f257_sha256": "8e9416133ce5073cd1b07659a802aca45487da4709f7261ae85554a9d1ca9ed7",
+    "source_baseline_35e0_sha256": "41f5539b905be12510deab8e7e8f184c373f921f57a994e5d0e804edc42d835e"
+  },
+  {
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.jsonl",
+    "specialist_baseline_sha256": "ff73e24c59d4a8a4dfa3dc25cf2fc674ca945f1e7a7a7ba32eaedc52e21c443e",
+    "current_raw_sha256": "b9098f1301bf672b6c9705a5758c5dbb12808a5c88f31dafbe9fdee4e9776a01",
+    "root_published_f257_sha256": "cc853295d882b0752337dbb777d5930f425dd03ec502dfcaf9617d2e9b60f62c",
+    "source_baseline_35e0_sha256": "ff73e24c59d4a8a4dfa3dc25cf2fc674ca945f1e7a7a7ba32eaedc52e21c443e"
+  },
+  {
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.md",
+    "specialist_baseline_sha256": "844e6423f7c85b6f4e26ede6dd78b71bbcfc4db151e8af844d62c6e54af271cf",
+    "current_raw_sha256": "e376ed592d879798cad024331e09f67c16778364b04114382ce376a93681f56f",
+    "root_published_f257_sha256": "1af65bc266e3083f23d787c59ca68e9b598f21381f334e8ef6d808e826d3e383",
+    "source_baseline_35e0_sha256": "844e6423f7c85b6f4e26ede6dd78b71bbcfc4db151e8af844d62c6e54af271cf"
+  },
+  {
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-output-manifest.md",
+    "specialist_baseline_sha256": "6a6191f0ed24e3e9363b30a44590acb9365e0b0c8d1d3bb97e20f49f3026c4e2",
+    "current_raw_sha256": "c61bfeec8d898e382c729f3791b9cd71f76e81a45f902ae0b6be9b3c4c707b5e",
+    "root_published_f257_sha256": "c61bfeec8d898e382c729f3791b9cd71f76e81a45f902ae0b6be9b3c4c707b5e",
+    "source_baseline_35e0_sha256": "6a6191f0ed24e3e9363b30a44590acb9365e0b0c8d1d3bb97e20f49f3026c4e2"
+  }
+]
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-check.py baseline 32cee7977e90da3aa77ce107e0e6e003eb9be370
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T01:04:49.421Z`
+- finished_at: `2026-09-06T01:05:32.566Z`
+- duration_ms: `43145`
+- exit_code: `0`
+- stdout_sha256: `332485d67b659a13bb8a9a56a427acfd8cb96f647520b1b272159a42187499c6`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"PASS": true, "imports": 209, "old_lesson_files": 45, "old_sources_history_unchanged": 7845, "root_coordination_exact_published_successors": 7, "personal_images": 96, "native_packet": 42, "original_mapping": 66, "old_pending": 45, "reserved": ["r20", "r21", "r22"]}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-check.py tests
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T01:05:52.302Z`
+- finished_at: `2026-09-06T01:05:53.806Z`
+- duration_ms: `1504`
+- exit_code: `0`
+- stdout_sha256: `b5bf2dc9130ed64195a92e033fced854281e368c3b25052fb22e3cd3500c583f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"command": "tests-process", "exit_code": 0}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-check.py full
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T01:05:53.854Z`
+- finished_at: `2026-09-06T01:06:16.636Z`
+- duration_ms: `22782`
+- exit_code: `0`
+- stdout_sha256: `f281e111787c0f58511de94efc7405c882b49b443bbfec28efe10dbd1c5e7687`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"command": "full-process", "exit_code": 0}
+{"status": "PASS", "revisions": [20], "pages": 33, "folder": 46, "native": 42}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-check.py verify
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T01:07:06.723Z`
+- finished_at: `2026-09-06T01:08:04.947Z`
+- duration_ms: `58224`
+- exit_code: `0`
+- stdout_sha256: `ac2aa43fa2cbebdaba40b6e2aef16556966dbd598a74221ff5f7f1ee8ea42c22`
+- stderr_sha256: `571b008347b990394107ccfc01858edb98aa18f2d018303a08063d35cdcd1a9a`
+
+### stdout excerpt
+
+```text
+{"command": "native-check-process", "exit_code": 0}
+{"command": "reproduction-process", "exit_code": 0}
+{"status": "PASS", "revisions": [20, 21, 22], "pages": 99, "folder": 46, "native": 42}
+
+```
+
+### stderr excerpt
+
+```text
+Exception in thread Thread-1 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 5858: invalid start byte
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-check.py gates
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T01:08:05.006Z`
+- finished_at: `2026-09-06T01:08:08.454Z`
+- duration_ms: `3448`
+- exit_code: `0`
+- stdout_sha256: `cdaf90c6d05f122ce880a7ba4f1d99e09f5f89de1ee6db01318ab09e28ca8ea7`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"command": "student-web-process", "exit_code": 0}
+{"command": "publisher-print-process", "exit_code": 0}
+{"command": "currentness-process", "exit_code": 0}
+{"command": "durable-process", "exit_code": 0}
+{"command": "bundle-process", "exit_code": 0}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-check.py integrity
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T01:08:08.504Z`
+- finished_at: `2026-09-06T01:08:17.453Z`
+- duration_ms: `8949`
+- exit_code: `0`
+- stdout_sha256: `032bb8204a035398d6c952e4422610bb64e9f03209ca0efc9983225c0732c38a`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"status": "PASS", "revisions": [20, 21, 22], "pages": 99, "folder": 46, "native": 42}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-check.py gates-v2
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T01:10:00.959Z`
+- finished_at: `2026-09-06T01:10:03.803Z`
+- duration_ms: `2844`
+- exit_code: `0`
+- stdout_sha256: `8126482279a1ffc1204ff334e5061b4122e551c26c8c406d5707ee5b3a642b70`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"command": "student-web-v2-process", "exit_code": 0, "stdout_bytes": 1191, "stderr_bytes": 0}
+{"command": "publisher-print-v2-process", "exit_code": 0, "stdout_bytes": 1014, "stderr_bytes": 0}
+{"command": "currentness-v2-process", "exit_code": 0, "stdout_bytes": 160, "stderr_bytes": 0}
+{"command": "durable-v2-process", "exit_code": 0, "stdout_bytes": 257, "stderr_bytes": 0}
+{"command": "bundle-v2-process", "exit_code": 0, "stdout_bytes": 61, "stderr_bytes": 0}
+
+```
+
+### stderr excerpt
+
+```text
+
+```

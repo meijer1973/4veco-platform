@@ -1,0 +1,15 @@
+{
+  "args": [
+    "C:/Python314/python.exe",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\verify_rebuild.py",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-evidence\\native\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r20.json",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-evidence\\reproduction.json",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-evidence\\grayscale-r20"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started_at": "2026-09-06T01:07:11.257603+00:00",
+  "finished_at": "2026-09-06T01:07:57.034622+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"paragraph\": \"2.3.1\",\n  \"visual_inspection\": \"NOT_SUPPLIED_BY_THIS_SCRIPT\",\n  \"status\": \"PASS\",\n  \"all42_raw_rebuilds\": \"IDENTICAL\"\n}\n",
+  "stderr": ""
+}

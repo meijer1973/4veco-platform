@@ -1,0 +1,16 @@
+{
+  "args": [
+    "C:/Python314/python.exe",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\231\\check_render.py",
+    "--lesson-root",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "--manifest",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-evidence\\native\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r20.json"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started_at": "2026-09-06T01:07:07.051714+00:00",
+  "finished_at": "2026-09-06T01:07:11.256936+00:00",
+  "exit_code": 0,
+  "stdout": null,
+  "stderr": ""
+}

@@ -4,7 +4,7 @@ Preserve historical runs; author a new checkpoint for any source/QC successor.
 from pathlib import Path, PurePosixPath
 from datetime import datetime, timezone
 from zipfile import ZipFile
-import hashlib, json, re, subprocess, sys, zlib
+import base64, hashlib, json, re, subprocess, sys, zlib
 import yaml
 from PIL import Image
 
@@ -47,6 +47,21 @@ def run(name,args):
     save(name+'.json',{'args':args,'cwd':str(P),'started_at':started,'finished_at':datetime.now(timezone.utc).isoformat(),'exit_code':r.returncode,'stdout':r.stdout,'stderr':r.stderr})
     print(json.dumps({'command':name,'exit_code':r.returncode}),flush=True)
     assert r.returncode==0,r.stdout+r.stderr
+    return r
+def run_bytes(name,args):
+    # Mixed Windows child-process encodings must never silently lose stdout.
+    assert not (E/(name+'.json')).exists()
+    started=datetime.now(timezone.utc).isoformat()
+    r=subprocess.run(args,cwd=P,capture_output=True)
+    streams={}
+    for key,data in [('stdout',r.stdout),('stderr',r.stderr)]:
+        try: decoded=data.decode('utf-8'); note='utf-8 strict'
+        except UnicodeDecodeError as error:
+            decoded=data.decode('utf-8',errors='backslashreplace'); note=str(error)+'; undecodable bytes escaped, exact raw base64 retained'
+        streams[key]={'raw_base64':base64.b64encode(data).decode('ascii'),'sha256':sha(data),'byte_count':len(data),'decoded':decoded,'decoding':note}
+    save(name+'.json',{'args':args,'cwd':str(P),'started_at':started,'finished_at':datetime.now(timezone.utc).isoformat(),'exit_code':r.returncode,**streams})
+    print(json.dumps({'command':name,'exit_code':r.returncode,'stdout_bytes':len(r.stdout),'stderr_bytes':len(r.stderr)}),flush=True)
+    assert r.returncode==0
     return r
 def folder_snapshot():
     return {p.relative_to(L).as_posix():raw(p) for p in D.rglob('*') if p.is_file() and '__pycache__' not in p.parts}
@@ -208,5 +223,10 @@ elif mode=='gates':
     run('currentness-process',['node','build-scripts/workflows/check-book-outline-currentness.js','--require-approved','--action','specialist_review','--paragraph','2.3.1'])
     run('durable-process',['node','build-scripts/workflows/check-book2-target-authority-remediation.js','--durable'])
     run('bundle-process',['node','build-scripts/sprints/check-sprint-bundle.js','BOOK2-TEXTBOOK-PRODUCTION-1'])
+elif mode=='gates-v2':
+    for profile in ['student-web','publisher-print']: run_bytes(profile+'-v2-process',['node','scripts/validate-paragraph.js','--mode','part-a','--profile',profile,str(D)])
+    run_bytes('currentness-v2-process',['node','build-scripts/workflows/check-book-outline-currentness.js','--require-approved','--action','specialist_review','--paragraph','2.3.1'])
+    run_bytes('durable-v2-process',['node','build-scripts/workflows/check-book2-target-authority-remediation.js','--durable'])
+    run_bytes('bundle-v2-process',['node','build-scripts/sprints/check-sprint-bundle.js','BOOK2-TEXTBOOK-PRODUCTION-1'])
 elif mode=='integrity': parity('final-integrity',[20,21,22])
 else: raise ValueError(mode)

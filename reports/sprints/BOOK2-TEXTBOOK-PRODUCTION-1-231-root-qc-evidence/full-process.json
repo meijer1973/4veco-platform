@@ -1,0 +1,20 @@
+{
+  "args": [
+    "C:/Python314/python.exe",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\b2_231.py",
+    "--lesson-root",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "--proof-root",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1",
+    "--proof-suffix",
+    "r20",
+    "--manifest",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-evidence\\native\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r20.json"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started_at": "2026-09-06T01:05:54.164381+00:00",
+  "finished_at": "2026-09-06T01:06:10.404942+00:00",
+  "exit_code": 0,
+  "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.3.1\nBook 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n{\"assets\":[\"2.3.1_fig_1\",\"2.3.1_fig_2\",\"2.3.1_fig_3\",\"2.3.1_fig_4\",\"2.3.1_we_1\",\"2.3.1_ex_1\",\"2.3.1_ex_2\",\"2.3.1_ex_3\",\"2.3.1_ex_4\",\"2.3.1_ex_5\",\"2.3.1_ex_6\",\"2.3.1_ex_7\",\"2.3.1_ex_8\",\"2.3.1_ex_9\",\"2.3.1_ex_10\"],\"pairs\":15,\"canvas\":[1200,900],\"png\":[2400,1800],\"font\":\"Arial regular 30pt\",\"visual_acceptance\":\"NOT_ASSERTED\"}\n{\n  \"paragraph\": \"2.3.1\",\n  \"revision\": \"r20\",\n  \"manifest\": \"C:\\\\wt\\\\book2-part-a-production-20260905\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-evidence\\\\native\\\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r20.json\",\n  \"packet_files\": 42,\n  \"inspection_status\": \"PENDING\"\n}\n",
+  "stderr": ""
+}

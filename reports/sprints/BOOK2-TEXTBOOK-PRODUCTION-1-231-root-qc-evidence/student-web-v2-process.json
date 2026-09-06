@@ -1,0 +1,29 @@
+{
+  "args": [
+    "node",
+    "scripts/validate-paragraph.js",
+    "--mode",
+    "part-a",
+    "--profile",
+    "student-web",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started_at": "2026-09-06T01:10:01.434517+00:00",
+  "finished_at": "2026-09-06T01:10:01.480244+00:00",
+  "exit_code": 0,
+  "stdout": {
+    "raw_base64": "ClZhbGlkYXRpbmcgcGFyYWdyYXBoIDIuMy4xICJDb25zdW1lbnRlbnN1cnBsdXMiClBhdGg6IEM6XHd0XGJvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1XDR2ZWNvLWxlc3NlblxCb2VrIDIgLSBLb3N0ZW4sIG9wYnJlbmdzdGVuLCBlbGFzdGljaXRlaXQgZW4gc3VycGx1c1wyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnRcMi4zLjEgQ29uc3VtZW50ZW5zdXJwbHVzCk1vZGU6IHBhcnQtYQpQcm9maWxlOiBzdHVkZW50LXdlYgoKLS0gUGFydCBBIHRleHRib29rIGZpbGVzIC0tCiAgT0sgUGFyYWdyYXBoIHR5cGU6IHRoZW9yeQogIE9LIHBhcmFncmFhZi5tZDogMi4zLjEgQ29uc3VtZW50ZW5zdXJwbHVzIOKAkyBwYXJhZ3JhYWYubWQKICBPSyBvcGdhdmVuLm1kOiAyLjMuMSBDb25zdW1lbnRlbnN1cnBsdXMg4oCTIG9wZ2F2ZW4ubWQKICBPSyBhbnR3b29yZGVuLm1kOiAyLjMuMSBDb25zdW1lbnRlbnN1cnBsdXMg4oCTIGFudHdvb3JkZW4ubWQKICBPSyAyLjMuMSBDb25zdW1lbnRlbnN1cnBsdXMg4oCTIHBhcmFncmFhZi5odG1sICgxODk1LjkgS0IpCiAgT0sgMi4zLjEgQ29uc3VtZW50ZW5zdXJwbHVzIOKAkyBvcGdhdmVuLmh0bWwgKDk4OC42IEtCKQogIE9LIDIuMy4xIENvbnN1bWVudGVuc3VycGx1cyDigJMgYW50d29vcmRlbi5odG1sICgxNzY1LjEgS0IpCiAgT0sgMi4zLjEgQ29uc3VtZW50ZW5zdXJwbHVzIOKAkyBwYXJhZ3JhYWYucGRmICgxMTE2IEtCKQogIE9LIDIuMy4xIENvbnN1bWVudGVuc3VycGx1cyDigJMgb3BnYXZlbi5wZGYgKDYxNyBLQikKICBPSyAyLjMuMSBDb25zdW1lbnRlbnN1cnBsdXMg4oCTIGFudHdvb3JkZW4ucGRmICgxMTAyIEtCKQogIE9LIGJ1aWxkX3BkZi5weQoKLS0gQXNzZXQgaW50ZWdyaXR5IC0tCiAgT0sgMTUgaW1hZ2UgcmVmcyBhbGwgcmVzb2x2ZQogIE9LIF9hc3NldHMvOiAxNSBTVkdzLCAxNSBQTkdzCgotLSBQYXJ0IEEgUUMgYXJ0aWZhY3RzIC0tCiAgT0sgUGFydCBBIHJldmlldzogMi4zLjEtcmV2aWV3Lm1kICh2ZXJkaWN0IFBBU1MgV0lUSCBGTEFHUykKICBPSyBRdWFsaXR5IHJlZjogMi4zLjEtcXVhbGl0eS1yZWYueWFtbCAodmFsaWQpCgo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KT0sgUGFyYWdyYXBoIDIuMy4xICJDb25zdW1lbnRlbnN1cnBsdXMiIFBBU1NFRCBhbGwgY2hlY2tzLgoK",
+    "sha256": "1278e721093df612fa174a5fc05de2aa845c578220708fbd452ca84a0aa94395",
+    "byte_count": 1191,
+    "decoded": "\nValidating paragraph 2.3.1 \"Consumentensurplus\"\nPath: C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\nMode: part-a\nProfile: student-web\n\n-- Part A textbook files --\n  OK Paragraph type: theory\n  OK paragraaf.md: 2.3.1 Consumentensurplus – paragraaf.md\n  OK opgaven.md: 2.3.1 Consumentensurplus – opgaven.md\n  OK antwoorden.md: 2.3.1 Consumentensurplus – antwoorden.md\n  OK 2.3.1 Consumentensurplus – paragraaf.html (1895.9 KB)\n  OK 2.3.1 Consumentensurplus – opgaven.html (988.6 KB)\n  OK 2.3.1 Consumentensurplus – antwoorden.html (1765.1 KB)\n  OK 2.3.1 Consumentensurplus – paragraaf.pdf (1116 KB)\n  OK 2.3.1 Consumentensurplus – opgaven.pdf (617 KB)\n  OK 2.3.1 Consumentensurplus – antwoorden.pdf (1102 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 15 image refs all resolve\n  OK _assets/: 15 SVGs, 15 PNGs\n\n-- Part A QC artifacts --\n  OK Part A review: 2.3.1-review.md (verdict PASS WITH FLAGS)\n  OK Quality ref: 2.3.1-quality-ref.yaml (valid)\n\n==========================================\nOK Paragraph 2.3.1 \"Consumentensurplus\" PASSED all checks.\n\n",
+    "decoding": "utf-8 strict"
+  },
+  "stderr": {
+    "raw_base64": "",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "byte_count": 0,
+    "decoded": "",
+    "decoding": "utf-8 strict"
+  }
+}
