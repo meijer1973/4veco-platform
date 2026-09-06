@@ -143,6 +143,12 @@ class SourceTests(unittest.TestCase):
             for old,new in [('id="cs-label-background"','id="missing-background"'),('id="ps-label-background"','id="missing-background"'),('id="supply"','stroke-opacity="0.99" id="supply"')]:
                 if old in raw:
                     with self.assertRaises(ValueError):svg_check(Source(raw.replace(old,new)),spec,self.spec['models'].get(spec['model']))
+            if spec['suffix']=='ex_1':
+                wrong=ET.fromstring(raw)
+                for e in wrong.iter():
+                    if e.attrib.get('id') in ('cs-label','cs-label-background'):e.set('x',str(float(e.attrib['x'])-15))
+                with self.assertRaisesRegex(ValueError,'Area label ink/background margin'):
+                    svg_check(Source(ET.tostring(wrong,encoding='unicode')),spec,self.spec['models'].get(spec['model']))
 
     def test_heading_whitespace_without_semantic_weakening(self):
         from check_render import heading_text,BeautifulSoup
@@ -150,6 +156,15 @@ class SourceTests(unittest.TestCase):
         self.assertEqual(heading_text(BeautifulSoup(raw.replace('en interleaving','en\ninterleaving'),'html.parser')),b.HEADINGS)
         for wrong in [raw.replace('interleaving','uitwerking'),raw.replace('<h2>','<h3>',1),raw+'<h2>Extra</h2>']:
             self.assertNotEqual(heading_text(BeautifulSoup(wrong,'html.parser')),b.HEADINGS)
+
+    def test_complete_table_words_and_bounded_widths(self):
+        from check_render import header_words_complete
+        self.assertTrue(header_words_complete(['Q','handdoeken'],['Q','(handdoeken)']))
+        self.assertFalse(header_words_complete(['Q','handdoeken'],['Q','(handdoeke','n)']))
+        self.assertFalse(header_words_complete(['Betalingsbereidheid'],['Betalingsbere','idheid']))
+        self.assertTrue(header_words_complete(['Betalingsbereidheid'],['Betalingsbereidheid (€)']))
+        self.assertIn('<col style="width:24%"><col style="width:38%"><col style="width:38%">',self.docs['opgaven'])
+        self.assertIn('<col style="width:34%"><col style="width:34%"><col style="width:16%"><col style="width:16%">',self.docs['opgaven'])
 
     def test_namespace_announcement_is_not_occupied_proof(self):
         def scan(root,name):return {'hits':[{'worktree':str(root),'path':name,'revisions':[40]}]}

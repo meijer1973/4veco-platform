@@ -58,7 +58,7 @@ def tables(markdown):
         rows=[[c.strip() for c in line.strip().strip('|').split('|')] for line in match.group().strip().splitlines()]
         headers,data=rows[0],rows[2:];count=len(headers)
         if any(len(row)!=count for row in data):raise ValueError('Irregular table')
-        widths=([18,41,41] if headers[0].startswith('Q') else [40,30,30]) if count==3 else [40,20,20,20]
+        widths=([24,38,38] if headers[0].startswith('Q') else [40,30,30]) if count==3 else [34,34,16,16]
         if len(widths)!=count:raise ValueError('Unplanned table width')
         return '<table style="break-inside:avoid"><colgroup>'+''.join(f'<col style="width:{w}%">' for w in widths)+'</colgroup><thead><tr>'+''.join('<th>'+html.escape(c)+'</th>' for c in headers)+'</tr></thead><tbody>\n'+'\n'.join('<tr>'+''.join('<td>'+html.escape(c)+'</td>' for c in row)+'</tr>' for row in data)+'\n</tbody></table>\n'
     return re.sub(r'(?m)^\|[^\n]+\|\n\|(?:\s*:?-+:?\s*\|)+\n(?:\|[^\n]+\|(?:\n|$))+',convert,markdown)

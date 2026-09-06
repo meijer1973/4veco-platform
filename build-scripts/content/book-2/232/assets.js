@@ -65,8 +65,8 @@ function graph(s){
  if(eq){b+=line('price',180,Y(P),X(Q),Y(P),C.ink,'12 8')+line('quantity',X(Q),Y(P),X(Q),720,C.ink,'12 8');
   b+=`<circle id="equilibrium" cx="${n(X(Q))}" cy="${n(Y(P))}" r="6" fill="${C.ink}"/>`+text('e-label',X(Q)+90,Y(P)-(m.d*m.qmax/m.pmax>.500001?90:70),'E');
  }
- if(cs){const q=.15*Q,cy=Y((P+m.a-m.b*q)/2);b+=`<rect id="cs-label-background" x="${n(X(q)-48)}" y="${n(cy-30)}" width="96" height="60" fill="${C.bg}"/>`+text('cs-label',X(q),cy+14,'CS','middle');}
- if(ps){const q=.15*Q,cy=Y((P+m.c+m.d*q)/2);b+=`<rect id="ps-label-background" x="${n(X(q)-48)}" y="${n(cy-30)}" width="96" height="60" fill="${C.bg}"/>`+text('ps-label',X(q),cy+14,'PS','middle');}
+ if(cs){const q=.2*Q,cy=Y((P+m.a-m.b*q)/2);b+=`<rect id="cs-label-background" x="${n(X(q)-48)}" y="${n(cy-30)}" width="96" height="60" fill="${C.bg}"/>`+text('cs-label',X(q),cy+14,'CS','middle');}
+ if(ps){const q=.2*Q,cy=Y((P+m.c+m.d*q)/2);b+=`<rect id="ps-label-background" x="${n(X(q)-48)}" y="${n(cy-30)}" width="96" height="60" fill="${C.bg}"/>`+text('ps-label',X(q),cy+14,'PS','middle');}
  return frame(s,b);
 }
 function discrete(s){let b=text('scene',600,68,'Eén paraplureparatie','middle');

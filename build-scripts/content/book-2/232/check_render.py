@@ -28,6 +28,9 @@ def contrast(a,c):
 def heading_text(soup):
     return [' '.join(h.get_text(' ',strip=True).split()) for h in soup.find_all('h2')]
 
+def header_words_complete(words,fragments):
+    return all(any(word in fragment for fragment in fragments) for word in words)
+
 def svg_check(path,spec,model):
     root=ET.fromstring(path.read_text(encoding='utf-8'));ns={'s':'http://www.w3.org/2000/svg'}
     if root.attrib.get('viewBox')!='0 0 1200 900' or root.attrib.get('role')!='img' or root.attrib.get('aria-labelledby')!='title desc':raise ValueError('Accessible SVG canvas')
@@ -79,12 +82,18 @@ def svg_check(path,spec,model):
                 expected_points=[[X(q),Y(p)] for q,p in vertices]
                 if any(abs(v-w)>1e-5 for ap,ep in zip(actual,expected_points) for v,w in zip(ap,ep)):raise ValueError('Wrong surplus polygon')
                 box=next(x['bbox'] for x in boxes if x['id']==key+'-label')
-                # Every ink corner must be ≥12 px inside all three edges.
-                for x,y in [(box[0],box[1]),(box[0],box[3]),(box[2],box[1]),(box[2],box[3])]:
+                # Signed half-planes: an outside box must not pass on distance.
+                x0,y0=expected_points[0];x1,y1=expected_points[1];x2,y2=expected_points[2]
+                direction=1 if (x1-x0)*(y2-y0)-(y1-y0)*(x2-x0)>0 else -1
+                background=elems[key+'-label-background'].attrib
+                rx,ry,rw,rh=[float(background[n]) for n in ['x','y','width','height']]
+                corners=[(x,y,12) for x,y in [(box[0],box[1]),(box[0],box[3]),(box[2],box[1]),(box[2],box[3])]]
+                corners += [(x,y,2) for x,y in [(rx,ry),(rx+rw,ry),(rx,ry+rh),(rx+rw,ry+rh)]]
+                for x,y,minimum in corners:
                     for k in range(3):
                         ax,ay=expected_points[k];bx,by=expected_points[(k+1)%3]
-                        d=abs((by-ay)*x-(bx-ax)*y+bx*ay-by*ax)/math.hypot(by-ay,bx-ax)
-                        if d<12:raise ValueError('Area label ink margin '+key)
+                        d=direction*((bx-ax)*(y-ay)-(by-ay)*(x-ax))/math.hypot(by-ay,bx-ax)
+                        if d<minimum:raise ValueError('Area label ink/background margin '+key)
         for row in boxes:
             if row['id'] not in ['demand-label','supply-label','e-label','cs-label','ps-label']:continue
             box=fitz.Rect(row['bbox']);box.x0-=14;box.x1+=14;box.y0-=14;box.y1+=14
@@ -125,6 +134,10 @@ def check(manifest_path):
         layout=HTML(string=Path(d['source_html']).read_text(encoding='utf-8')).render();placements=[]
         for i,page in enumerate(layout.pages,1):
             for box in page._page_box.descendants():
+                if type(box).__name__=='TableCellBox' and getattr(box,'element_tag',None)=='th':
+                    words=re.findall(r'\w+', ''.join(box.element.itertext()))
+                    fragments=[v.text for v in box.descendants() if type(v).__name__=='TextBox']
+                    if not header_words_complete(words,fragments):raise ValueError('Mid-word table header break')
                 if getattr(box,'element_tag',None)!='img':continue
                 w,h=box.width*.75,box.height*.75
                 if abs(w-166*72/25.4)>.2 or abs(h-124.5*72/25.4)>.2:raise ValueError('Wrong actual166mm placement')
