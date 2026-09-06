@@ -1,0 +1,31 @@
+{
+  "command": "git",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "ba7623f8670a156dce0b1e82844962c3caf262c8"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "c68f3c79bf6e985373bcbb65680e458378106fad",
+  "start": "2026-09-06T11:12:37.249Z",
+  "end": "2026-09-06T11:12:37.468Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "explicit_source_commit": "abe79fa532c8701d646fb19f129ad892004fb821",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "f6e6c7fee9ad46af94854735da67e624a003142a",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 c68f3c79] Record pre-implementation 232 Unicode child transport correction\n Date: Sun Sep 6 12:19:41 2026 +0200\n 1 file changed, 27 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-transport-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGM2OGYzYzc5XSBSZWNvcmQgcHJlLWltcGxlbWVudGF0aW9uIDIzMiBVbmljb2RlIGNoaWxkIHRyYW5zcG9ydCBjb3JyZWN0aW9uCiBEYXRlOiBTdW4gU2VwIDYgMTI6MTk6NDEgMjAyNiArMDIwMAogMSBmaWxlIGNoYW5nZWQsIDI3IGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzMi1SRVBSTy1ST1VURVMtdHJhbnNwb3J0LXBsYW4ubWQK",
+  "stderr_base64": ""
+}

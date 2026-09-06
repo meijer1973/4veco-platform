@@ -1,0 +1,31 @@
+{
+  "command": "git",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "02be6566ef43bf6c468c0a75a9f43c7ff3731e1d"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "c4a1073734e06c9dbbeb530ca830dc4ee43b7594",
+  "start": "2026-09-06T11:12:35.280Z",
+  "end": "2026-09-06T11:12:35.816Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "explicit_source_commit": "abe79fa532c8701d646fb19f129ad892004fb821",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "db9cda7575ee998acb5899dc7466af1e386d7f5d",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 c4a10737] Preserve scope diagnostic and batch immutable proof Git reads\n Date: Sun Sep 6 11:25:20 2026 +0200\n 3 files changed, 39 insertions(+), 1 deletion(-)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-final-claim-platform-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-scope-process.json\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGM0YTEwNzM3XSBQcmVzZXJ2ZSBzY29wZSBkaWFnbm9zdGljIGFuZCBiYXRjaCBpbW11dGFibGUgcHJvb2YgR2l0IHJlYWRzCiBEYXRlOiBTdW4gU2VwIDYgMTE6MjU6MjAgMjAyNiArMDIwMAogMyBmaWxlcyBjaGFuZ2VkLCAzOSBpbnNlcnRpb25zKCspLCAxIGRlbGV0aW9uKC0pCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMzItQlVJTEQtQ1VSUkVOVC1maW5hbC1jbGFpbS1wbGF0Zm9ybS1wcm9jZXNzLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIzMi1CVUlMRC1DVVJSRU5ULXNjb3BlLXByb2Nlc3MuanNvbgo=",
+  "stderr_base64": ""
+}

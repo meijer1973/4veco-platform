@@ -1,0 +1,31 @@
+{
+  "command": "git",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "9512c8c69cd099f32cd20eaa0f162586a03c42fa"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "cdcbf97ea0f8b15172f52fee9741410b9e3d4c33",
+  "start": "2026-09-06T11:12:30.278Z",
+  "end": "2026-09-06T11:12:30.488Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "explicit_source_commit": "abe79fa532c8701d646fb19f129ad892004fb821",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "d86d6d58714529189b884ada9f47b6b33e0650d2",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 cdcbf97e] fix(book2): give 232 figure ink measured clearance\n Date: Sun Sep 6 10:24:02 2026 +0200\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGNkY2JmOTdlXSBmaXgoYm9vazIpOiBnaXZlIDIzMiBmaWd1cmUgaW5rIG1lYXN1cmVkIGNsZWFyYW5jZQogRGF0ZTogU3VuIFNlcCA2IDEwOjI0OjAyIDIwMjYgKzAyMDAKIDEgZmlsZSBjaGFuZ2VkLCAxIGluc2VydGlvbigrKSwgMSBkZWxldGlvbigtKQo=",
+  "stderr_base64": ""
+}

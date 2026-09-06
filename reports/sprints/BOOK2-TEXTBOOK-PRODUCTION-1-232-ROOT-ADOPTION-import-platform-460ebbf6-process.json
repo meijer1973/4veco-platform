@@ -1,0 +1,31 @@
+{
+  "command": "git",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "460ebbf6ff3230ab8e4e38839393c5fc4e1c0a13"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "d86d6d58714529189b884ada9f47b6b33e0650d2",
+  "start": "2026-09-06T11:12:29.838Z",
+  "end": "2026-09-06T11:12:30.056Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "explicit_source_commit": "abe79fa532c8701d646fb19f129ad892004fb821",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "a0be11fa000670ed44caea3650f402f5328fc15d",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 d86d6d58] feat(book2): author gated current 232 native sources and checks\n Date: Sun Sep 6 10:23:13 2026 +0200\n 11 files changed, 1397 insertions(+)\n create mode 100644 build-scripts/content/book-2/232/answers.md\n create mode 100644 build-scripts/content/book-2/232/assets.js\n create mode 100644 build-scripts/content/book-2/232/check_render.py\n create mode 100644 build-scripts/content/book-2/232/exercises.md\n create mode 100644 build-scripts/content/book-2/232/gate.py\n create mode 100644 build-scripts/content/book-2/232/target-answers.md\n create mode 100644 build-scripts/content/book-2/232/test_inputs.py\n create mode 100644 build-scripts/content/book-2/232/test_source.py\n create mode 100644 build-scripts/content/book-2/232/theory.md\n create mode 100644 build-scripts/content/book-2/232/verify_rebuild.py\n create mode 100644 build-scripts/content/book-2/b2_232.py\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGQ4NmQ2ZDU4XSBmZWF0KGJvb2syKTogYXV0aG9yIGdhdGVkIGN1cnJlbnQgMjMyIG5hdGl2ZSBzb3VyY2VzIGFuZCBjaGVja3MKIERhdGU6IFN1biBTZXAgNiAxMDoyMzoxMyAyMDI2ICswMjAwCiAxMSBmaWxlcyBjaGFuZ2VkLCAxMzk3IGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCBidWlsZC1zY3JpcHRzL2NvbnRlbnQvYm9vay0yLzIzMi9hbnN3ZXJzLm1kCiBjcmVhdGUgbW9kZSAxMDA2NDQgYnVpbGQtc2NyaXB0cy9jb250ZW50L2Jvb2stMi8yMzIvYXNzZXRzLmpzCiBjcmVhdGUgbW9kZSAxMDA2NDQgYnVpbGQtc2NyaXB0cy9jb250ZW50L2Jvb2stMi8yMzIvY2hlY2tfcmVuZGVyLnB5CiBjcmVhdGUgbW9kZSAxMDA2NDQgYnVpbGQtc2NyaXB0cy9jb250ZW50L2Jvb2stMi8yMzIvZXhlcmNpc2VzLm1kCiBjcmVhdGUgbW9kZSAxMDA2NDQgYnVpbGQtc2NyaXB0cy9jb250ZW50L2Jvb2stMi8yMzIvZ2F0ZS5weQogY3JlYXRlIG1vZGUgMTAwNjQ0IGJ1aWxkLXNjcmlwdHMvY29udGVudC9ib29rLTIvMjMyL3RhcmdldC1hbnN3ZXJzLm1kCiBjcmVhdGUgbW9kZSAxMDA2NDQgYnVpbGQtc2NyaXB0cy9jb250ZW50L2Jvb2stMi8yMzIvdGVzdF9pbnB1dHMucHkKIGNyZWF0ZSBtb2RlIDEwMDY0NCBidWlsZC1zY3JpcHRzL2NvbnRlbnQvYm9vay0yLzIzMi90ZXN0X3NvdXJjZS5weQogY3JlYXRlIG1vZGUgMTAwNjQ0IGJ1aWxkLXNjcmlwdHMvY29udGVudC9ib29rLTIvMjMyL3RoZW9yeS5tZAogY3JlYXRlIG1vZGUgMTAwNjQ0IGJ1aWxkLXNjcmlwdHMvY29udGVudC9ib29rLTIvMjMyL3ZlcmlmeV9yZWJ1aWxkLnB5CiBjcmVhdGUgbW9kZSAxMDA2NDQgYnVpbGQtc2NyaXB0cy9jb250ZW50L2Jvb2stMi9iMl8yMzIucHkK",
+  "stderr_base64": ""
+}

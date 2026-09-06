@@ -1,0 +1,31 @@
+{
+  "command": "git",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "abe79fa532c8701d646fb19f129ad892004fb821"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "69eb76264929b95df29b773c1358887543ba218f",
+  "start": "2026-09-06T11:12:37.645Z",
+  "end": "2026-09-06T11:12:37.839Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "explicit_source_commit": "abe79fa532c8701d646fb19f129ad892004fb821",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "c68f3c79bf6e985373bcbb65680e458378106fad",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 69eb7626] Make exact 232 shared-print child Unicode protocol explicit\n Date: Sun Sep 6 12:25:29 2026 +0200\n 3 files changed, 26 insertions(+), 4 deletions(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDY5ZWI3NjI2XSBNYWtlIGV4YWN0IDIzMiBzaGFyZWQtcHJpbnQgY2hpbGQgVW5pY29kZSBwcm90b2NvbCBleHBsaWNpdAogRGF0ZTogU3VuIFNlcCA2IDEyOjI1OjI5IDIwMjYgKzAyMDAKIDMgZmlsZXMgY2hhbmdlZCwgMjYgaW5zZXJ0aW9ucygrKSwgNCBkZWxldGlvbnMoLSkK",
+  "stderr_base64": ""
+}

@@ -1,0 +1,31 @@
+{
+  "command": "git",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "d974d657f27da7a36febb024e1abd488c9d45c0f"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "controller_commit": "e1cc9a077a41e604d911e93651a6bb1a58823f02",
+  "start": "2026-09-06T11:12:30.697Z",
+  "end": "2026-09-06T11:12:30.902Z",
+  "PATH_unchanged": true,
+  "PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "explicit_source_commit": "abe79fa532c8701d646fb19f129ad892004fb821",
+  "paired": {
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "cdcbf97ea0f8b15172f52fee9741410b9e3d4c33",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "codex/book2-part-a-production-20260905",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "codex/book2-part-a-production-20260905"
+  },
+  "sources": [],
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 e1cc9a07] test(book2): bind 232 source probes to valid LF Git fixtures\n Date: Sun Sep 6 10:24:55 2026 +0200\n 1 file changed, 5 insertions(+), 1 deletion(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGUxY2M5YTA3XSB0ZXN0KGJvb2syKTogYmluZCAyMzIgc291cmNlIHByb2JlcyB0byB2YWxpZCBMRiBHaXQgZml4dHVyZXMKIERhdGU6IFN1biBTZXAgNiAxMDoyNDo1NSAyMDI2ICswMjAwCiAxIGZpbGUgY2hhbmdlZCwgNSBpbnNlcnRpb25zKCspLCAxIGRlbGV0aW9uKC0pCg==",
+  "stderr_base64": ""
+}

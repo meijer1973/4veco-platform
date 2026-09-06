@@ -109,3 +109,14 @@ re-review, not hand-edited PDFs or weakened tests. Continue the substantial41-PD
 task after this checkpoint. No new owner hold, human approval, PR merge or student
 commissioning is implied; H-213-OPC2 stays excluded. Stop on genuine authority,
 custody/ownership conflict or a required owner decision.
+
+## Own read-only transport refinement after completed imports
+
+All18 normal imports completed, and the original per-file raw Git-show verifier
+passed all1143 final paths (1102P/41L). Subsequent identical import checks use
+cached literal-NUL original/adopted/current trees and the exact unfiltered Git
+blob hash framing, with the actual repository object format asserted SHA1.
+This avoids thousands of repeated Git processes while still comparing each
+whole actual file to all three committed blob identities and recording SHA256.
+The compact whole-baseline checker continues to use real batched hash-object.
+No source, native data, shared Git tool or evidence predicate is changed.
