@@ -1,0 +1,96 @@
+{
+  "strict": {
+    "status": "PASS",
+    "platform_base": "049c52976e749f233fe654618c9657f01aa988f4",
+    "platform_head": "2be84d80f7ab2dfa793ce8b2dc3742a438d4517e",
+    "lessons_base": "9daf4b8a9696fcdce1d485d85dbc0c59b7b6dbe6",
+    "lessons_head": "266881cb2d9e7f078192a2a3bab230f9bfc4176e",
+    "platform_paths": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-allowed-delta.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-bundle-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-check.py",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-checks-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-checks-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-custody-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-durable-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-fetch-lessons-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-fetch-platform-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-foundation-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-governance-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-lessons-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-platform-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-report.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-structural-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-tools.cjs"
+    ],
+    "lessons_paths": [
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md"
+    ],
+    "unknown": 0,
+    "old_source_review_QC_handoff_authority_changes": 0
+  },
+  "native": [
+    {
+      "label": "own-platform",
+      "exit": 1,
+      "ok": false,
+      "failures": [
+        "shared lane needs at least one shared platform change",
+        "generated index/report or review-evidence changes are allowed only with lane-owned changes"
+      ],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 18,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "own-lessons",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 1,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 80,
+        "generated_indexes": 6,
+        "review_evidence": 4235,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 204,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 5,
+        "unknown": 0
+      }
+    }
+  ],
+  "raw_prior_files_unchanged": 13843
+}
