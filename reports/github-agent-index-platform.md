@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T03:13:33.637Z
+Generated: 2026-09-06T03:45:59.542Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-232-plan-f1-20260906`
-Source commit: `30a65abe8a2c572c09aa8dc1086c40c5e16b641f`
-Files indexed: 11973
-Scope: committed tree files from `git ls-tree -r --name-only 30a65abe8a2c572c09aa8dc1086c40c5e16b641f`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source branch: `agent/book2-232-f1-review-20260906`
+Source commit: `15ce2b4bb0ddaa7ce326f1c18d288895598d6fc2`
+Files indexed: 12001
+Scope: committed tree files from `git ls-tree -r --name-only 15ce2b4bb0ddaa7ce326f1c18d288895598d6fc2`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -2741,7 +2741,7 @@ Count: 1030
 
 ## reports
 
-Count: 9186
+Count: 9214
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -9553,6 +9553,34 @@ Count: 9186
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-review-adoption-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-review-bindings.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-review-check.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-actual-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-author-readonly-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-check.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-claim-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-claim-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-goal-design-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-current-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-custody-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-independent-checks-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-independent-checks-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-legacy-publisher-print-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-legacy-student-web-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-publication-governance-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-publish.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-run.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-scope-own-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-scope-own-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-scope-r2-complete-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-scope-r2-complete-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-scope-r2-own-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-scope-r2-own-platform-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-author-stage-inventory.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-bundle-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-check.py
