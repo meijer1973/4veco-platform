@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T00:02:03.490Z
+Generated: 2026-09-06T00:40:58.700Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `c423c8dbf6e0c0e5b66486f7e31ae829c945eb02`
-Files indexed: 10627
+Source branch: `agent/book2-224-production-20260906`
+Source commit: `db006571b6e784f2eb192ffcee6f8e44f0f1ad09`
+Files indexed: 10636
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2730,7 +2730,7 @@ Count: 1030
 
 ## reports
 
-Count: 7842
+Count: 7851
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -8036,6 +8036,15 @@ Count: 7842
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-1.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-2-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-successor-work-order.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-operational-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-001.png
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-002.png
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-adopted-evidence/grayscale-r4/antwoorden/page-003.png
