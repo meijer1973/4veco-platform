@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T01:42:36.514Z
+Generated: 2026-09-06T02:18:36.787Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `dab90d8806b7e63892bde88efb10f65d896d5c68`
-Files indexed: 11885
-Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
+Source branch: `agent/book2-232-production-20260906`
+Source commit: `3d6f64700590e14bb132355a168dcc7b24318901`
+Files indexed: 11915
+Scope: committed tree files from `git ls-tree -r --name-only 3d6f64700590e14bb132355a168dcc7b24318901`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -2741,7 +2741,7 @@ Count: 1030
 
 ## reports
 
-Count: 9098
+Count: 9128
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -9553,6 +9553,36 @@ Count: 9098
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-review-adoption-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-review-bindings.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-review-check.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-author-stage-inventory.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-check.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r3-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r4-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-result-r3.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-result-r4.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-result.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-foundation-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-governance-final-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-lessons-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-lessons-substantive-push-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-lessons-whitespace-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-platform-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-platform-substantive-push-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-platform-whitespace-cr-eol-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-platform-whitespace-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-publish.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-run.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-scope-candidate-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-scope-candidate-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-scope-own-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-scope-own-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-strict-own-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-baseline.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-bonus-adoption-inventory-check.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-back-matter-plan.md
