@@ -1,0 +1,26 @@
+'use strict';
+// HOW TO ADAPT: closes preparatory evidence only, no native QC gate unlock.
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const P=path.resolve(__dirname,'../..'),L=path.resolve(P,'../4veco-lessen');
+const prefix='reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-';
+const branch='agent/book2-213-qc-current-20260906',task='BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT',actor='paragraph_231_specialist_qc';
+const BP='c96f126738b5e45d0d1c74e68efc35b7bd33c5dc',BL='42996c60b4a93843dfe8488b8e5a3ea704871667';
+const indexes=['platform','lessen'].flatMap(r=>['json','md'].map(e=>`reports/github-agent-index-${r}.${e}`));
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const git=(cwd,...args)=>cp.execFileSync('git',args,{cwd,encoding:'utf8',maxBuffer:128*1024*1024}).trim();
+const list=(cwd,...args)=>git(cwd,...args).split('\0').filter(Boolean);
+const changed=(cwd,base)=>list(cwd,'diff','--name-only','-z',base+'..HEAD');
+const own=f=>f.startsWith(prefix)||indexes.includes(f);
+function save(name,v){fs.writeFileSync(path.join(P,prefix+name+'.json'),JSON.stringify(v,null,2)+'\n',{flag:'wx'});}
+function run(name,cwd,exe,args,allowed=[0],record=false,env=process.env){const r=cp.spawnSync(exe,args,{cwd,encoding:'utf8',maxBuffer:128*1024*1024,env});const v={command:exe,args,cwd,exit:r.status,stdout:r.stdout,stderr:r.stderr};if(record)save(name,v);console.log(name+': '+r.status);assert(allowed.includes(r.status),name);return v;}
+function env(){return {...process.env,FOURVECO_PLATFORM_ROOT:P,FOURVECO_PLATFORM_SOURCE_REF:git(P,'rev-parse','HEAD'),FOURVECO_PLATFORM_SOURCE_BRANCH:branch,FOURVECO_LESSEN_ROOT:L,FOURVECO_LESSEN_SOURCE_REF:git(L,'rev-parse','HEAD'),FOURVECO_LESSEN_SOURCE_BRANCH:branch};}
+function strict(){const p=changed(P,BP),l=changed(L,BL);assert(p.every(own));assert.deepEqual(l,[]);return {result:'PASS',platform_base:BP,platform_head:git(P,'rev-parse','HEAD'),lessons_base:BL,lessons_head:git(L,'rev-parse','HEAD'),platform_paths:p,lessons_paths:l,unknown:0};}
+function custody(){const b=JSON.parse(fs.readFileSync(path.join(P,prefix+'baseline.json')));let n=0;for(const repo of b.repositories){for(const row of repo.rows){if(repo.repository==='platform'&&indexes.includes(row.path))continue;assert.equal(sha(fs.readFileSync(path.join(repo.repository==='platform'?P:L,row.path))),row.raw_sha256,row.path);n++;}}return n;}
+function scopes(record){return [['incremental-platform',P,'shared',BP,1],['incremental-lessons',L,'textbook',BL,1],['whole-platform',P,'shared','96416b6b5bd57094576e9aba0a42d682584ec479',0],['whole-lessons',L,'textbook','f09fd6e88edc5049b026b16b0158e7e188091d2d',0]].map(([name,cwd,lane,base,exit])=>{const r=run('preparation-scope-'+name,P,'node',['build-scripts/workflows/check-paragraph-lane-scope.js','--cwd',cwd,'--lane',lane,'--base',base,'--head',git(cwd,'rev-parse','HEAD'),'--json'],[0,1],record),s=JSON.parse(r.stdout);assert.equal(s.categories.unknown.length,0);assert.equal(r.exit,exit);return {name,result:s.ok,exit:r.exit,unknown:0,failures:s.failures};});}
+function claims(clean){for(const root of [P,L])run('claim',root,'node',[path.join(P,'build-scripts/ci/check-agent-worktree-safety.js'),'--check','--task',task,'--agent',actor,'--require-prefix','codex/,agent/',...(clean?['--require-clean']:[])]);}
+const mode=process.argv[2];
+if(mode==='stage'){claims(false);assert.equal(git(L,'status','--porcelain'),'');const files=[...new Set([...list(P,'diff','--name-only','-z'),...list(P,'diff','--cached','--name-only','-z'),...list(P,'ls-files','--others','--exclude-standard','-z')])];assert(files.every(own));for(const f of files)git(P,'add','--',f);run('whitespace',P,'git',['diff','--cached','--check']);console.log('prior custody '+custody());}
+else if(mode==='scopes')save('preparation-scope',{strict:strict(),native:scopes(true),prior_raw_unchanged:custody(),native_QC_executed:false,gate:'CLOSED_PENDING_ROOT_EXACT_S1_PASS_IMPORT'});
+else if(mode==='indexes'){run('indexes',P,'node',['build-scripts/reports/github-agent-index.js'],[0],false,env());run('urls',P,'node',['build-scripts/sprints/emit-url-index.js'],[0],false,env());}
+else if(mode==='final'){run('index-check',P,'node',['build-scripts/reports/check-agent-index-freshness.js'],[0],false,env());run('url-check',P,'node',['build-scripts/sprints/emit-url-index.js','--check'],[0],false,env());claims(true);const pair=[P,L].map(root=>{assert.equal(git(root,'status','--porcelain'),'');assert.equal(git(root,'branch','--show-current'),branch);const head=git(root,'rev-parse','HEAD');assert.equal(head,git(root,'rev-parse','origin/'+branch));assert.equal(head,git(root,'ls-remote','origin','refs/heads/'+branch).split(/\s+/)[0]);return {repository:path.basename(root),head,remote_equal:true,clean:true};});assert.deepEqual(changed(P,'HEAD^').sort(),indexes.sort());console.log(JSON.stringify({pair,strict:strict(),scopes:scopes(false),prior_raw_unchanged:custody(),terminal_four_index_only:true,native_QC_executed:false,canonical_QC_changed:false,gate:'CLOSED_PENDING_ROOT_EXACT_S1_PASS_IMPORT'},null,2));}
+else throw Error('stage/scopes/indexes/final only; no native QC');
