@@ -44,3 +44,11 @@ Full49 completed with exact15-native and20-page parity. The next scan selects50
 `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r50.json`
 and `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW-r50-thin`.
 The scan digest is eb780173869b6c282b45615ac42ce5e977edb05e7b15befd58d39471f09a6d7f.
+
+Thin50 completed exact15-native/20-page parity. Next global scan selects51
+(maximum50). Before guarded direct execution, list exactly
+`reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r51.json`
+and `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW-r51-direct`.
+The scan digest is db67da0c615a9447f3e25af2bbd702b62d832ade6683410bd99ffbadeb4ab0e6.
+Only unchanged214/direct_print.py is authorized; its generic print_pipeline
+child is an internal worker, not a standalone authorized route.
