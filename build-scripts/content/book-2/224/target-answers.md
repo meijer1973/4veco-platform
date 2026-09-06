@@ -33,6 +33,8 @@ waarneming niet met de afzonderlijke regionale maandvraag uit bron D.
 (4) de correcte teller/noemer met beide diensten en de positieve
 substitutenrelatie. Ei blijft getekend: neem niet de absolute waarde van Budget.
 
+<div class="page-break"></div>
+
 ### Vraag 5 (2 punten)
 
 {{ANSWER_5}}

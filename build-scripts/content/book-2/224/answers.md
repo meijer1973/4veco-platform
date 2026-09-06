@@ -93,6 +93,8 @@ filterprijs gelijk blijft.
 met vraaggoed en prijsgoed correct benoemd; **1 punt** voor complementen en
 de juiste richting met beide goederen en de vaste eigen filterprijs.
 
+<div class="page-break"></div>
+
 ### Vraag 5 — Een variabele tegelijk (6 punten)
 
 Bron E gebruikt maandprijzen en **jaarinkomen**. Vul Y dus rechtstreeks in;
