@@ -15493,3 +15493,168 @@ final-integrity: BOOK2-TEXTBOOK-PRODUCTION-1-223-S1-root-final-integrity.json SH
 ```text
 
 ```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-check.py baseline
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T00:32:50.412Z`
+- finished_at: `2026-09-06T00:33:15.563Z`
+- duration_ms: `25151`
+- exit_code: `0`
+- stdout_sha256: `718871058643c05c3fb4a2213c3a48bfa9ddd092638c85473a10fae790e1bff7`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+baseline.json: SHA256 e8512d282cef9fb0432af71edda46c8334bb21eb050cc9a2516acc9d32dabb28
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-check.py tests
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T00:33:15.615Z`
+- finished_at: `2026-09-06T00:33:18.262Z`
+- duration_ms: `2647`
+- exit_code: `0`
+- stdout_sha256: `f87bb4397c51897be52ff93d8003b07f734810a24a26faf5256f0552737f579f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+tests.json: SHA256 27b8026847affdaa6dcd7e6bf2f631d42126f2129a6e9715f078fba05a95d226
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-check.py full
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T00:33:40.419Z`
+- finished_at: `2026-09-06T00:34:15.252Z`
+- duration_ms: `34833`
+- exit_code: `0`
+- stdout_sha256: `cb15dd6292c4dbcebd01edf8f55aa53d5401b283716e8e4baae7136ef4422ba9`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+full-reservation.json: SHA256 22a8b89fdde3e65c3021393dcd9a4fc46ec5063cd8e4930ecc3244a375bbd51b
+full-process.json: SHA256 c1f0c0e61afacc4952b70b9a89dd7e4a84330d9388a8a42c23150f354ad37605
+full-parity.json: SHA256 19fd44793e70a7e07056795d388fdbb98966c406405a0ac70f10d360d6711357
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-check.py thin
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T00:34:15.313Z`
+- finished_at: `2026-09-06T00:34:44.099Z`
+- duration_ms: `28786`
+- exit_code: `0`
+- stdout_sha256: `7ff9b6da4671119fe9bf3ad2584d89becb5bbd02baeff49b13346198acce701d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+thin-reservation.json: SHA256 e1ee81be183fc8f2dd5a33f638970f81a555323078d8a55dad9e1b0fa02ba53f
+thin-process.json: SHA256 fc07e51add6c52be758542e208688eac18d24185184c1c5552a0feedc76f94b6
+thin-parity.json: SHA256 263c6a2282876de6fdd359f87e6a5020930fbcf4d4f371969a3d88538bd60822
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-check.py print
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T00:34:44.180Z`
+- finished_at: `2026-09-06T00:35:06.840Z`
+- duration_ms: `22660`
+- exit_code: `0`
+- stdout_sha256: `fef3d64c56d385449058194b52e7a77d513a7588a6d181fb0e5bea789c49d815`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+print-reservation.json: SHA256 5c13dc383cc04df930f930960af324b8a9819b51e08c38b2b7accc4d56bd50a1
+print-process.json: SHA256 e56745956c62409d5b95dfeef1fabd77bdab3d026a07b69bcaa1c82b4b03211f
+print-parity.json: SHA256 2c9dbac1a9593bb24fc1073c16136c95cef7e21b8421ad16aca180cad4b771dc
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-check.py gates
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T00:35:06.890Z`
+- finished_at: `2026-09-06T00:35:12.265Z`
+- duration_ms: `5375`
+- exit_code: `0`
+- stdout_sha256: `dde045de897a1b00f55afeecfa8e258ad5b4a528fa7b571ac4c1f60e4b4977b2`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+native-process.json: SHA256 cd3cf0b7b6f435ac504afc00bd92ffff028944004c641f52ee4281bf9aa9e970
+student-web.json: SHA256 515abdf34b7fc5b49e6db454c2c4b3999e5a4acc95eae885a1e7d34ee0137839
+publisher-print.json: SHA256 8abeb6cdbb1690ae7f8fb3807c1ec6059902d41826f57538351b68b902a6da83
+currentness.json: SHA256 40978cefdbb2ed834be9f82d76c03dc4630b148a35b6fd8fd3ce46e66e9ac346
+durable.json: SHA256 827e8c32bc9aacc516736a03f6a5acd714ecfe685c6e9ba63700b057ca7fcf30
+bundle.json: SHA256 c87324eee043112fca2650622a8b6a13e94a98b2431963a870c30cbfc43e5483
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-check.py integrity
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T00:35:12.310Z`
+- finished_at: `2026-09-06T00:35:13.010Z`
+- duration_ms: `700`
+- exit_code: `0`
+- stdout_sha256: `d4017f2eaaf357f142db8155bfb7f2c7399da0344dac98bc3aeefa65b354b49e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+final-integrity.json: SHA256 bca1c73c571f835a889e78239fc6eef030e8c4a9ac86f081056c75b747e3e1f4
+
+```
+
+### stderr excerpt
+
+```text
+
+```

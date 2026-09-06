@@ -5,7 +5,7 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform §223 S1 native verification `140dc9ba3bcb6e13ebf9f7b4d1e51013cb8c6e8e`,
+Snapshot: platform §212 S1 native verification `0c3f8d633e94436c247a24ab66db10b83b1b6633`,
 lessons `219a977e495abe43c17949e7d8996aab4176faa0`, including the exact
 root-only current211 acceptance/handoff at5e14325 in211-root-acceptance-r5.md.
 Current221 R8 and222 R13 acceptances remain unchanged.
@@ -20,7 +20,7 @@ At this checkpoint: **3 internally gate-closed current paragraph packages**:
 9 accepted-with-flags PDFs,12 adopted candidate PDFs,8 legacy unaccepted and12
 absent. §211 now has current R5 independent paragraph review, distinct specialist
 QC and root acceptance/handoff. §212 retains historical print/content acceptance
-but its current independent and successor gates remain; its three PDFs stay C. Physical
+but its current specialist/root gates remain; its three PDFs stay C. Physical
 root presence is 29, not 29 accepted. All eight legacy PDFs remain Git-blob-
 identical to the baseline. Separate in-progress worktrees do not count here.
 
@@ -44,7 +44,9 @@ the native211 builder has no ZIP output contract. It is not a current student
 deliverable. §212 R7 adds its three bonus criteria and is adopted/root-rebuilt:
 only answer page6 changes, the other26 pages are exact, and34artifact full/print
 reproduction passes. Its current independent paragraph review passes; distinct
-specialist/root gates and accepted-prerequisite succession remain.
+specialist/root gates remain. Its two accepted211 input pins now have independent
+S1 delta PASS and root fullr16/thinr17/printr18 reproduction:34 native files,
+40 folder files and27 raw/pixel pages unchanged. See212-S1-root-result.md.
 Their root reports distinguish actual source/page/rebuild checks from remaining
 independent paragraph, specialist and handoff gates. See review-corrections.md.
 
@@ -130,9 +132,9 @@ hashes alone are not student-quality acceptance.
 | 2.1.1 / paragraaf | `9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0` | R5 internal acceptance with flags; current review/QC/handoff complete |
 | 2.1.1 / opgaven | `97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953` | R5 internal acceptance with flags; current review/QC/handoff complete |
 | 2.1.1 / antwoorden | `498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce` | R5 internal acceptance with flags; current review/QC/handoff complete |
-| 2.1.2 / paragraaf | `e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2` | R7 current paragraph PASS; QC/root/successor gates pending |
-| 2.1.2 / opgaven | `94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a` | R7 current paragraph PASS; QC/root/successor gates pending |
-| 2.1.2 / antwoorden | `d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90` | R7 current paragraph PASS; QC/root/successor gates pending |
+| 2.1.2 / paragraaf | `e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2` | R7 paragraph and S1 delta PASS; QC/root gates pending |
+| 2.1.2 / opgaven | `94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a` | R7 paragraph and S1 delta PASS; QC/root gates pending |
+| 2.1.2 / antwoorden | `d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90` | R7 paragraph and S1 delta PASS; QC/root gates pending |
 | 2.2.1 / paragraaf | `98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6` | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.1 / opgaven | `a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af` | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.1 / antwoorden | `d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d` | R8 internal acceptance with flags; current review/QC/handoff complete |
@@ -165,8 +167,9 @@ Wave-two §213 and §223 outputs remain adopted candidates C; their gate
 closure remains pending. §211 R5 has complete current paragraph review, distinct
 specialist QC and root acceptance/handoff with flags; see211-root-acceptance-r5.md.
 §212 R7 has its bonus block and current independent paragraph PASS; distinct
-specialist/root gates and
-accepted-prerequisite succession; both metadata corrections are root-adopted/rebuilt.
+specialist/root gates remain. Its accepted-prerequisite succession now has
+independent delta and current root reproduction proof; both metadata corrections
+are root-adopted/rebuilt. Old212 QC/handoff remain stale until their own renewal.
 §213 R7 has the bonus-criteria correction and current independent paragraph PASS;
 distinct QC/root acceptance and exact accepted
 prerequisite succession remain. Current root print-only/source/render proof is
