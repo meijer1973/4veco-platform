@@ -57,13 +57,20 @@ def check(lessons):
         doc=fitz.open(stream=b.raw(pdf),filetype="pdf")
         pages=[]
         for i,page in enumerate(doc,1):
+            placed=[]
+            for item in page.get_images(full=True):
+                for rect in page.get_image_rects(item[0]):
+                    mm=rect.width*25.4/72
+                    pt=40*rect.width/1200
+                    placed.append({"width_mm":mm,"height_mm":rect.height*25.4/72,"actual_placed_40px_pt":pt})
+                    if abs(mm-166)>.01 or pt<12:result["errors"].append({"edition":edition,"page":i,"placed_figure":placed[-1]})
             pix=page.get_pixmap(matrix=fitz.Matrix(150/72,150/72),alpha=False,colorspace=fitz.csRGB)
             spans=[s for block in page.get_text("dict")["blocks"] if "lines" in block for line in block["lines"] for s in line["spans"] if s["text"].strip()]
             small=[s for s in spans if s["size"]<11.99]
             outside=[s for s in spans if s["bbox"][0]<0 or s["bbox"][1]<0 or s["bbox"][2]>page.rect.width+.1 or s["bbox"][3]>page.rect.height+.1]
             if small:result["errors"].append({"pdf":edition,"page":i,"small":small})
             if outside:result["errors"].append({"pdf":edition,"page":i,"outside":outside})
-            pages.append({"page":i,"width":pix.width,"height":pix.height,"raw_RGB_sha256":b.sha(pix.samples),"minimum_text_pt":min((s["size"] for s in spans),default=None),"text":page.get_text()})
+            pages.append({"page":i,"width":pix.width,"height":pix.height,"raw_RGB_sha256":b.sha(pix.samples),"minimum_text_pt":min((s["size"] for s in spans),default=None),"text":page.get_text(),"placed_figures":placed})
         soup=BeautifulSoup(b.raw(pdf.with_suffix(".html")),"html.parser")
         imgs=soup.find_all("img")
         if len(imgs)!=2:result["errors"].append({"edition":edition,"image_count":len(imgs)})

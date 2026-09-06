@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1050" viewBox="0 0 1200 1050" role="img" aria-labelledby="title desc"><title id="title">SmoothBox: break-even en bereik met de snelste positieve winstgroei.</title><desc id="desc">Gegeven totale bedragen en bronpunten met assen in hoeveelheid per dag en euro per dag. Antwoordmarkeringen staan uitsluitend in deze antwoordfiguur.</desc><rect width="1200" height="1050" fill="white"/>
+<text x="160" y="50" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="axis-title">TK en TO (€ per dag)</text>
+<text x="1180" y="50" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="heading">SmoothBox</text>
+<line x1="150" y1="820" x2="160" y2="820" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="135" y="834" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">0</text>
+<line x1="150" y1="686" x2="160" y2="686" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="135" y="700" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">1000</text>
+<line x1="160" y1="686" x2="1040" y2="686" stroke="#CBD5E0" stroke-width="1" data-role="grid" stroke-dasharray="3 9"/>
+<line x1="150" y1="552" x2="160" y2="552" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="135" y="566" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">2000</text>
+<line x1="160" y1="552" x2="1040" y2="552" stroke="#CBD5E0" stroke-width="1" data-role="grid" stroke-dasharray="3 9"/>
+<line x1="150" y1="418" x2="160" y2="418" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="135" y="432" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">3000</text>
+<line x1="160" y1="418" x2="1040" y2="418" stroke="#CBD5E0" stroke-width="1" data-role="grid" stroke-dasharray="3 9"/>
+<line x1="150" y1="284" x2="160" y2="284" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="135" y="298" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">4000</text>
+<line x1="160" y1="284" x2="1040" y2="284" stroke="#CBD5E0" stroke-width="1" data-role="grid" stroke-dasharray="3 9"/>
+<line x1="150" y1="150" x2="160" y2="150" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="135" y="164" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">5000</text>
+<line x1="160" y1="150" x2="1040" y2="150" stroke="#CBD5E0" stroke-width="1" data-role="grid" stroke-dasharray="3 9"/>
+<line x1="160" y1="820" x2="160" y2="832" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="160" y="876" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">0</text>
+<line x1="336" y1="820" x2="336" y2="832" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="336" y="876" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">200</text>
+<line x1="512" y1="820" x2="512" y2="832" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="512" y="876" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">400</text>
+<line x1="688" y1="820" x2="688" y2="832" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="688" y="876" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">600</text>
+<line x1="864" y1="820" x2="864" y2="832" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="864" y="876" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">800</text>
+<line x1="1040" y1="820" x2="1040" y2="832" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="1040" y="876" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">1000</text>
+<line x1="160" y1="150" x2="160" y2="820" stroke="#1F2937" stroke-width="4" data-role="axis"/>
+<line x1="160" y1="820" x2="1040" y2="820" stroke="#1F2937" stroke-width="4" data-role="axis"/>
+<text x="600" y="1026" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="axis-title">Q (lunchboxen per dag)</text>
+<line x1="776" y1="351" x2="776" y2="820" stroke="#1F2937" stroke-width="2" data-role="normal-limit" stroke-dasharray="3 10"/>
+<text x="160" y="108" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-boundary">Normale grens 700: stippellijn</text>
+<polyline points="160,659.2 776,471.6 864,431.4 952,384.5 1040,330.9" fill="none" stroke="#2D3748" stroke-width="5" data-role="curve-TK" stroke-dasharray="16 11"/>
+<circle cx="160" cy="659.2" r="6" fill="#2D3748" stroke="#1F2937" stroke-width="2" data-role="source-TK-0"/>
+<circle cx="776" cy="471.6" r="6" fill="#2D3748" stroke="#1F2937" stroke-width="2" data-role="source-TK-700"/>
+<circle cx="864" cy="431.4" r="6" fill="#2D3748" stroke="#1F2937" stroke-width="2" data-role="source-TK-800"/>
+<circle cx="952" cy="384.5" r="6" fill="#2D3748" stroke="#1F2937" stroke-width="2" data-role="source-TK-900"/>
+<circle cx="1040" cy="330.9" r="6" fill="#2D3748" stroke="#1F2937" stroke-width="2" data-role="source-TK-1000"/>
+<polyline points="160,820 776,351 864,284 952,217 1040,150" fill="none" stroke="#1A5276" stroke-width="5" data-role="curve-TO"/>
+<circle cx="160" cy="820" r="6" fill="#1A5276" stroke="#1F2937" stroke-width="2" data-role="source-TO-0"/>
+<circle cx="776" cy="351" r="6" fill="#1A5276" stroke="#1F2937" stroke-width="2" data-role="source-TO-700"/>
+<circle cx="864" cy="284" r="6" fill="#1A5276" stroke="#1F2937" stroke-width="2" data-role="source-TO-800"/>
+<circle cx="952" cy="217" r="6" fill="#1A5276" stroke="#1F2937" stroke-width="2" data-role="source-TO-900"/>
+<circle cx="1040" cy="150" r="6" fill="#1A5276" stroke="#1F2937" stroke-width="2" data-role="source-TO-1000"/>
+<line x1="160" y1="659.2" x2="220" y2="560" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="220" y="550" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TK: Q=0</text>
+<line x1="160" y1="820" x2="230" y2="820" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="230" y="810" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TO: Q=0</text>
+<line x1="776" y1="471.6" x2="723" y2="553" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="530" y="590" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TK: Q=700</text>
+<line x1="776" y1="351" x2="617" y2="345" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="420" y="335" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TO: Q=700</text>
+<line x1="864" y1="431.4" x2="733" y2="633" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="540" y="670" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TK: Q=800</text>
+<line x1="864" y1="284" x2="747" y2="260" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="550" y="250" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TO: Q=800</text>
+<line x1="952" y1="384.5" x2="952" y2="498" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="870" y="535" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TK: Q=900</text>
+<line x1="952" y1="217" x2="862" y2="200" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="665" y="190" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TO: Q=900</text>
+<line x1="1040" y1="330.9" x2="1180" y2="330.9" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<line x1="1180" y1="330.9" x2="1180" y2="600" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<line x1="1180" y1="600" x2="1134" y2="600" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="900" y="620" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TK: Q=1000</text>
+<line x1="1040" y1="150" x2="1040" y2="118" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="860" y="108" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TO: Q=1000</text>
+<circle cx="512" cy="552" r="9" fill="white" stroke="#1F2937" stroke-width="2" data-role="break-even"/>
+<line x1="512" y1="552" x2="512" y2="820" stroke="#1F2937" stroke-width="2" data-role="answer-projection" stroke-dasharray="8 8"/>
+<line x1="512" y1="915" x2="776" y2="915" stroke="#1F2937" stroke-width="4" data-role="positive-fastest-range"/>
+<circle cx="512" cy="915" r="7" fill="white" stroke="#1F2937" stroke-width="2" data-role="range-open"/>
+<circle cx="776" cy="915" r="7" fill="#1F2937" stroke="#1F2937" stroke-width="2" data-role="range-closed"/>
+<text x="850" y="740" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="answer-label">BE (400; 2.000)</text>
+<line x1="512" y1="552" x2="512" y2="735" stroke="#1F2937" stroke-width="2" data-role="answer-leader"/>
+<line x1="512" y1="735" x2="842" y2="735" stroke="#1F2937" stroke-width="2" data-role="answer-leader"/>
+<text x="600" y="974" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="answer-label">Snelste positieve groei: 400 &lt; Q ≤ 700</text>
+</svg>

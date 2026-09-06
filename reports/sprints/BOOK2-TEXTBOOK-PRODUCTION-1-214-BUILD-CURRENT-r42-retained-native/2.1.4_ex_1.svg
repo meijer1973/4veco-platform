@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1050" viewBox="0 0 1200 1050" role="img" aria-labelledby="title desc"><title id="title">Lichtservice: gegeven TK, TO en bronpunten zonder antwoordmarkeringen.</title><desc id="desc">Gegeven totale bedragen en bronpunten met assen in hoeveelheid per dag en euro per dag. Geen gevraagde antwoordmarkeringen.</desc><rect width="1200" height="1050" fill="white"/>
+<text x="160" y="50" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="axis-title">TK en TO (€ per dag)</text>
+<text x="1180" y="50" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="heading">Lichtservice</text>
+<line x1="150" y1="820" x2="160" y2="820" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="135" y="834" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">0</text>
+<line x1="150" y1="708.333333" x2="160" y2="708.333333" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="135" y="722.333333" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">60</text>
+<line x1="160" y1="708.333333" x2="1040" y2="708.333333" stroke="#CBD5E0" stroke-width="1" data-role="grid" stroke-dasharray="3 9"/>
+<line x1="150" y1="596.666667" x2="160" y2="596.666667" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="135" y="610.666667" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">120</text>
+<line x1="160" y1="596.666667" x2="1040" y2="596.666667" stroke="#CBD5E0" stroke-width="1" data-role="grid" stroke-dasharray="3 9"/>
+<line x1="150" y1="485" x2="160" y2="485" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="135" y="499" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">180</text>
+<line x1="160" y1="485" x2="1040" y2="485" stroke="#CBD5E0" stroke-width="1" data-role="grid" stroke-dasharray="3 9"/>
+<line x1="150" y1="373.333333" x2="160" y2="373.333333" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="135" y="387.333333" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">240</text>
+<line x1="160" y1="373.333333" x2="1040" y2="373.333333" stroke="#CBD5E0" stroke-width="1" data-role="grid" stroke-dasharray="3 9"/>
+<line x1="150" y1="261.666667" x2="160" y2="261.666667" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="135" y="275.666667" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">300</text>
+<line x1="160" y1="261.666667" x2="1040" y2="261.666667" stroke="#CBD5E0" stroke-width="1" data-role="grid" stroke-dasharray="3 9"/>
+<line x1="150" y1="150" x2="160" y2="150" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="135" y="164" text-anchor="end" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">360</text>
+<line x1="160" y1="150" x2="1040" y2="150" stroke="#CBD5E0" stroke-width="1" data-role="grid" stroke-dasharray="3 9"/>
+<line x1="160" y1="820" x2="160" y2="832" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="160" y="876" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">0</text>
+<line x1="320" y1="820" x2="320" y2="832" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="320" y="876" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">10</text>
+<line x1="480" y1="820" x2="480" y2="832" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="480" y="876" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">20</text>
+<line x1="640" y1="820" x2="640" y2="832" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="640" y="876" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">30</text>
+<line x1="800" y1="820" x2="800" y2="832" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="800" y="876" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">40</text>
+<line x1="1040" y1="820" x2="1040" y2="832" stroke="#1F2937" stroke-width="3" data-role="tick"/>
+<text x="1040" y="876" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="tick-label">55</text>
+<line x1="960" y1="820" x2="960" y2="830" stroke="#1F2937" stroke-width="3" data-role="minor-tick"/>
+<line x1="160" y1="150" x2="160" y2="820" stroke="#1F2937" stroke-width="4" data-role="axis"/>
+<line x1="160" y1="820" x2="1040" y2="820" stroke="#1F2937" stroke-width="4" data-role="axis"/>
+<text x="600" y="1026" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="axis-title">Q (montages per dag)</text>
+<text x="160" y="108" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-boundary">Normale afspraken: 0–40 montages</text>
+<polyline points="160,633.888889 480,540.833333 800,447.777778 880,410.555556 1040,308.194444" fill="none" stroke="#2D3748" stroke-width="5" data-role="curve-TK" stroke-dasharray="16 11"/>
+<circle cx="160" cy="633.888889" r="6" fill="#2D3748" stroke="#1F2937" stroke-width="2" data-role="source-TK-0"/>
+<circle cx="480" cy="540.833333" r="6" fill="#2D3748" stroke="#1F2937" stroke-width="2" data-role="source-TK-20"/>
+<circle cx="800" cy="447.777778" r="6" fill="#2D3748" stroke="#1F2937" stroke-width="2" data-role="source-TK-40"/>
+<circle cx="880" cy="410.555556" r="6" fill="#2D3748" stroke="#1F2937" stroke-width="2" data-role="source-TK-45"/>
+<circle cx="1040" cy="308.194444" r="6" fill="#2D3748" stroke="#1F2937" stroke-width="2" data-role="source-TK-55"/>
+<polyline points="160,820 480,596.666667 800,373.333333 880,317.5 1040,205.833333" fill="none" stroke="#1A5276" stroke-width="5" data-role="curve-TO"/>
+<circle cx="160" cy="820" r="6" fill="#1A5276" stroke="#1F2937" stroke-width="2" data-role="source-TO-0"/>
+<circle cx="480" cy="596.666667" r="6" fill="#1A5276" stroke="#1F2937" stroke-width="2" data-role="source-TO-20"/>
+<circle cx="800" cy="373.333333" r="6" fill="#1A5276" stroke="#1F2937" stroke-width="2" data-role="source-TO-40"/>
+<circle cx="880" cy="317.5" r="6" fill="#1A5276" stroke="#1F2937" stroke-width="2" data-role="source-TO-45"/>
+<circle cx="1040" cy="205.833333" r="6" fill="#1A5276" stroke="#1F2937" stroke-width="2" data-role="source-TO-55"/>
+<line x1="160" y1="633.888889" x2="212" y2="633.888889" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="220" y="655" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TK: Q=0</text>
+<line x1="160" y1="820" x2="230" y2="820" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="230" y="810" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TO: Q=0</text>
+<line x1="480" y1="540.833333" x2="436" y2="450" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="265" y="440" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TK: Q=20</text>
+<line x1="480" y1="596.666667" x2="480" y2="723" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="400" y="760" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TO: Q=20</text>
+<line x1="800" y1="447.777778" x2="800" y2="513" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="635" y="550" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TK: Q=40</text>
+<line x1="800" y1="373.333333" x2="650" y2="310" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="475" y="300" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TO: Q=40</text>
+<line x1="880" y1="410.555556" x2="1030" y2="410.555556" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<line x1="1030" y1="410.555556" x2="1030" y2="573" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="870" y="610" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TK: Q=45</text>
+<line x1="880" y1="317.5" x2="880" y2="255" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="740" y="245" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TO: Q=45</text>
+<line x1="1040" y1="308.194444" x2="1052" y2="308.194444" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="1060" y="325" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TK55</text>
+<line x1="1040" y1="205.833333" x2="1052" y2="205.833333" stroke="#1F2937" stroke-width="1.8" data-role="source-leader"/>
+<text x="1060" y="222" text-anchor="start" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="source-point-label">TO55</text>
+<text x="600" y="934" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="legend">TK: gestreept · TO: doorgetrokken</text>
+<text x="600" y="982" text-anchor="middle" font-family="Arial" font-size="40px" font-weight="400" fill="#1F2937" data-role="legend">Bronpunten: Q bij TK of TO</text>
+</svg>

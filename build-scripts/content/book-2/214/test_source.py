@@ -14,6 +14,7 @@ from fractions import Fraction as F
 from pathlib import Path
 from unittest.mock import patch
 import unittest
+from contextlib import ExitStack
 import xml.etree.ElementTree as ET
 
 sys.dont_write_bytecode = True
@@ -79,6 +80,8 @@ class SourceTests(unittest.TestCase):
         q = F(100,1)/(6-F(5,2))
         self.assertEqual(q,F(200,7))
         self.assertEqual(6*q,F(1200,7))
+        self.assertIn("6 × 200/7 = **1200/7 ≈ € 171,43 per dag**",self.docs["antwoorden"])
+        self.assertNotIn("**100/7 ≈",self.docs["antwoorden"])
         self.assertEqual([6*x-(100+F(5,2)*x) for x in [20,40,28,29]],[-30,40,-2,F(3,2)])
         self.assertEqual(round(q),29)
         # Prior taught counterexample: nearest can lose while the ceiling does not.
@@ -224,6 +227,7 @@ class NativeEntryNegativeTests(unittest.TestCase):
             def reject_all():
                 for route in ["full","thin","direct"]:
                     with self.subTest(route=route), patch.object(b,"ROOT",roots["4veco-platform"]), \
+                         patch.object(b,"EVENTS",[]), \
                          patch.object(b.subprocess,"run",side_effect=AssertionError("subprocess before raw rejection")) as calls, \
                          patch.object(Path,"mkdir",side_effect=AssertionError("mkdir before rejection")) as mkdir, \
                          patch.object(Path,"write_bytes",side_effect=AssertionError("write before rejection")) as write, \
@@ -257,6 +261,84 @@ class NativeEntryNegativeTests(unittest.TestCase):
             for (repo,name),original in committed.items():self.assertEqual(b.raw(roots[repo]/name),original)
             self.assertFalse(proof.exists())
             print(json.dumps({"actual_routes":3,"unique_committed_fixture_files":len(committed),"missing_forged_cases":len(committed)*2*3,"synchronized_inputs":48*3,"partial_identity":9,"native_effects":0,"restored_all_fixture_bytes":True}))
+        self.assertFalse(temp.exists())
+
+
+class CommittedControllerNegativeTests(unittest.TestCase):
+    def test_real_git_custody_rejects_whole_source_and_synchronized_pin_drift(self):
+        # The only redirected operation maps fixture Git reads to the unchanged
+        # real repository object databases. Every Git show is actually run.
+        actual_p,actual_l,actual_content=b.ROOT,LESSONS,b.CONTENT
+        original_git=b.git
+        committed={}
+        for name,commit,h in b.MODULES:
+            data=original_git(actual_p,"show",commit+":"+name)
+            self.assertEqual(b.sha(data),h);committed[("4veco-platform",name)]=data
+        manifest=json.loads(committed[("4veco-platform",b.C+"214-inputs.json")])
+        for row in manifest["inputs"]:
+            root=actual_p if row["repository"]=="4veco-platform" else actual_l
+            data=original_git(root,"show",row["commit"]+":"+row["path"])
+            self.assertEqual(b.sha(data),row["raw_sha256"])
+            committed[(row["repository"],row["path"])]=data
+        deps=json.loads(b.raw(b.SOURCE/"dependency-pins.json"))
+        for row in deps["files"]:
+            committed[("4veco-platform",row["path"])]=original_git(actual_p,"show",b.BASE_PLATFORM+":"+row["path"])
+        for name in b.SOURCE_FILES:
+            data=original_git(actual_p,"show",b.SOURCE_COMMIT+":build-scripts/content/book-2/"+name)
+            if name=="b2_214.py":
+                before=('SOURCE_COMMIT = "'+b.SOURCE_SENTINEL+'"').encode()
+                self.assertEqual(data.count(before),1)
+                data=data.replace(before,('SOURCE_COMMIT = "'+b.SOURCE_COMMIT+'"').encode())
+            self.assertEqual(data,b.raw(actual_content/name),name)
+            committed[("4veco-platform","build-scripts/content/book-2/"+name)]=data
+        direct=b.load_owned("direct_print");results=[]
+        with tempfile.TemporaryDirectory(prefix="book2-214-controller-neg-",dir="C:/wt") as directory:
+            temp=Path(directory);p=temp/"4veco-platform";l=temp/"4veco-lessen"
+            for (repo,name),data in committed.items():
+                dest=b.data_path(temp/repo/name);dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(data)
+            proof=p/"reports"/"214-forbidden-output"
+            def actual_git(root,*args):
+                self.assertIn(args[0],["show","rev-parse","branch","worktree"])
+                return original_git(actual_p if root==p else actual_l,*args)
+            def reject(label,changes=None):
+                for route in ["full","thin","direct"]:
+                    with ExitStack() as stack:
+                        for key,value in {"ROOT":p,"CONTENT":p/"build-scripts/content/book-2","SOURCE":p/"build-scripts/content/book-2/214","git":actual_git,"EVENTS":[],**(changes or {})}.items():stack.enter_context(patch.object(b,key,value))
+                        effects=[stack.enter_context(patch.object(Path,key,side_effect=AssertionError("Forbidden native "+key))) for key in ["mkdir","write_bytes","write_text","unlink","rmdir"]]
+                        original_run=b.subprocess.run
+                        def git_only(argv,**kwargs):
+                            self.assertEqual(str(argv[0]),"git","Authority/native child must not execute for invalid source")
+                            return original_run(argv,**kwargs)
+                        stack.enter_context(patch.object(b.subprocess,"run",side_effect=git_only))
+                        with self.assertRaises((ValueError,FileNotFoundError,RuntimeError)) as caught:
+                            if route=="direct":direct.direct(l,proof,"r99999")
+                            elif route=="full":b.main(["--lessons-root",str(l),"--proof-root",str(proof),"--proof-suffix","r99999"])
+                            else:
+                                scope={"__name__":"thin_test"};exec(compile(b.wrapper_bytes(),"actual_thin_build_pdf.py","exec"),scope)
+                                with patch.object(sys,"argv",["build_pdf.py","--platform-root",str(p),"--lessons-root",str(l),"--proof-root",str(proof),"--proof-suffix","r99999"]):scope["main"]()
+                        for effect in effects:effect.assert_not_called()
+                        self.assertFalse(proof.exists())
+                        results.append({"case":label,"route":route,"rejection":str(caught.exception),"actual_readonly_git_calls":len(b.EVENTS),"native_effects":0})
+            for name in b.SOURCE_FILES:
+                target=b.data_path(p/"build-scripts/content/book-2"/name);original=target.read_bytes()
+                target.unlink();reject("missing-owned-source:"+name);target.write_bytes(original)
+                target.write_bytes(original+b"\n# UNRELATED CONTROLLER/SOURCE DRIFT\n")
+                reject("forged-owned-source:"+name);target.write_bytes(original)
+            # A source/template and its editable hash assertions changing
+            # together cannot replace the fixed committed source epoch.
+            test=p/"build-scripts/content/book-2/214/test_source.py";old_test=test.read_bytes()
+            answer=p/"build-scripts/content/book-2/214/answers.md";old_answer=answer.read_bytes()
+            answer.write_bytes(old_answer.replace(b"1200/7",b"100/7"));test.write_bytes(old_test+b"\n# synchronized expected prose altered\n")
+            reject("synchronized-answer-and-own-tests");answer.write_bytes(old_answer);test.write_bytes(old_test)
+            # Simulate mutable Python expected hashes being changed along with
+            # a forged root grant/candidate/controller module: Git is immutable.
+            for index in [0,1,2,3]:
+                name,commit,h=b.MODULES[index];target=b.data_path(p/name);original=target.read_bytes();forged=original+b"\n"
+                target.write_bytes(forged);mods=list(b.MODULES);mods[index]=(name,commit,b.sha(forged))
+                reject("synchronized-active-module-pin:"+name,{"MODULES":mods});target.write_bytes(original)
+            reject("wrong-active-source-epoch",{"SOURCE_COMMIT":b.BASE_PLATFORM})
+            for (repo,name),data in committed.items():self.assertEqual(b.raw(temp/repo/name),data)
+            print(json.dumps({"cases":results,"whole_source_files":len(b.SOURCE_FILES),"fixture_files":len(committed),"restored_all":True,"no_native_effects":True}))
         self.assertFalse(temp.exists())
 
 

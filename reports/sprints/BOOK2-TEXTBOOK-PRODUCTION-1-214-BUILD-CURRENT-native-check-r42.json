@@ -1,0 +1,1512 @@
+{
+  "native": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md",
+      "sha256": "6e275609154b3d8ccec1e18410d7cd3a764385d3cf04c81ca4308e5865393e26",
+      "bytes": 11615
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.html",
+      "sha256": "e32385e10c407ac23caa7d8d2472b3b19881319ea34413cf49ba5a55c8ea256b",
+      "bytes": 353945
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+      "sha256": "c89e1c4f49491028d0cf171eb3219977b7545c127ad0a5c37f0f713df4136f48",
+      "bytes": 359587
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.md",
+      "sha256": "f94ec7bab34c3eea13d698e6ce44897dfb664b8c75d9a366b3a23920932d7285",
+      "bytes": 18912
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.html",
+      "sha256": "5ffc4cd3defb7e2a3b63c1b443593527067c961d1840c7e56a905c61d1a3df39",
+      "bytes": 386375
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+      "sha256": "f2951e2f969045b0c9d549c1f544fbd7d2a1679352169d3ac64d90ec799f27f8",
+      "bytes": 401508
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.svg",
+      "sha256": "09c2993d1d48f26b29bf49dd3abd221a118dcb8e4db9601081afbdb57a99ea4d",
+      "bytes": 10020
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.png",
+      "sha256": "2ed6ebe9bef5c400e9a8c5591d414b1d104dca4607485e84a5ea84bfb2626555",
+      "bytes": 121193
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.svg",
+      "sha256": "bf8ef4855b23010548de9cb7d290cba1125bb13a744623e77869e27d55c25eff",
+      "bytes": 11753
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.png",
+      "sha256": "58f81a1ff2c464e5471775620e9cf62fc9571b6078f9006b91e6b3f11cd44a05",
+      "bytes": 137552
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.svg",
+      "sha256": "7a41c0750657776681b163cad6be8471102f9ec9f2497a2d2e1e6c56492be92f",
+      "bytes": 9508
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.png",
+      "sha256": "e8a535367b33be710548f3515bede4e6e11247344d2cbddde36cf5b05b8ca63c",
+      "bytes": 132641
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.svg",
+      "sha256": "d89aa4d57479194f458a66770f3d803e0dc8fda7bacead016391c7393b4f152e",
+      "bytes": 10314
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.png",
+      "sha256": "62f7b1c492ec803c1bb2d50317197bdae912f2cb3908fd20c261cafb00678568",
+      "bytes": 134281
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/build_pdf.py",
+      "sha256": "7ff2ed21b5f8f5f12fd7a4bd6ff3f7332a74a03e26a9ed45576aa614160640f0",
+      "bytes": 802
+    }
+  ],
+  "pdfs": [
+    {
+      "edition": "opgaven",
+      "sha256": "c89e1c4f49491028d0cf171eb3219977b7545c127ad0a5c37f0f713df4136f48",
+      "pages": [
+        {
+          "page": 1,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "ece7ed0f53ac7b7491bfd0bdd2bb5dbe29291bec671894844f7c81d92bf1a31e",
+          "minimum_text_pt": 12.0,
+          "text": "2.1.4 Gemengde opgaven – opgaven\nBij een bedrijf kunnen de totale kosten stijgen terwijl de kosten per product dalen. Een\ngroot winstbedrag is bovendien iets anders dan een snelle winsttoename. In deze\ngemengde opgaven verbind je wat je in §2.1.1–§2.1.3 hebt geoefend. Gebruik de\nbronnen en leg ook uit wat je uitkomst betekent.\nDit oefen je:\nJe kunt relevante gegevens selecteren en kosten-, opbrengst- en break-\nevenhandelingen combineren.\nJe kunt gemiddelde en marginale uitkomsten berekenen en met eenheid vergelijken.\nJe kunt tabel- en grafiekrepresentaties verbinden om een winstontwikkeling te\nverklaren.\nJe kunt een economische claim met berekeningen beoordelen zonder verder te\ngaan dan de gegevens.\nZo werk je met bronnen\nWerk eerst aan de lichtservice. Controleer daarna je aanpak met het aparte\nantwoordendocument en maak vervolgens SmoothBox zelfstandig. De bronnen en\ngrafieken blijven beschikbaar; je hoeft geen grafiek opnieuw te tekenen. Schrijf\nberekeningen en verklaringen in je schrift. Markeringen zet je in de meegeleverde\ngrafiek.\nNoteer bij een berekening je gekozen relatie, de ingevulde waarden, de uitkomst en de\neenheid. Vermeld bij een bron welke grootheid, hoeveelheid en periode je gebruikt.\nVerbind een grafiekpunt of lijn met de bijbehorende getallen. Onderbouw een oordeel en\ngeef aan binnen welk bereik het geldt.\nOptionele bronsteun voor iedereen\nHeb je deze steun niet nodig? Sla het kader en de herinneringsstrook over. Je\nmaakt dezelfde opgaven met dezelfde bronnen.\nBij 1a: lees eerst wat Q telt en bij welke dag de bedragen horen. Onderstreep\nbedragen per dag anders dan bedragen per montage. Kies daarna zelf welke\ngegevens voor de vraag nodig zijn.\nBij 1b–c: controleer je teller: totaal voor dezelfde Q of verandering tussen twee\nQ’s? Noteer de eenheid.\nBij 1d–f: noem je bron en begrens je conclusie.\n1. \n2. \n3. \n4. \n• \n• \n• \n2.1.4 Gemengde opgaven – opgaven\n1 / 9\n"
+        },
+        {
+          "page": 2,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "398e42950f30e1c406166e107d60687606f17e2655ee9772542870cfe3a188ee",
+          "minimum_text_pt": 12.0,
+          "text": "Herinneringsstrook — optioneel, alleen bij opgave 1\nDit zijn relaties die je eerder hebt gebruikt. Bedek of vouw deze strook dicht\nwanneer je zonder steun werkt; sluit hem voor opgave 2.\nTCK + TVK = TK. GCK = TCK/Q, GVK = TVK/Q, GTK = TK/Q, met Q > 0. TO = P ×\nQ. GO = TO/Q, met Q > 0. Winst = TO − TK. MK = ΔTK/ΔQ en MO = ΔTO/ΔQ:\ndezelfde begin- en eindhoeveelheid, met ΔQ > 0.\nWil je een eerder voorbeeld terugzien? Gebruik op papier het fietsvoorbeeld uit\n§2.1.1, de kajakverhuur uit §2.1.2 of de fotohouders en Lus/Bout uit §2.1.3.\n2.1.4 Gemengde opgaven – opgaven\n2 / 9\n"
+        },
+        {
+          "page": 3,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "06eeb3afa64c0a6f3cedbe62bfe3b55b6c708a269d444bf693ef6ba1e6b0766a",
+          "minimum_text_pt": 12.0,
+          "text": "Opgave 1 — Lichtservice bij de sportclub\nDe sportclub organiseert een avondrit en laat overdag fietslampjes monteren. De\nlichtservice rekent met verschillende mogelijke aantallen montages op dezelfde dag; de\ntabel gaat niet over opeenvolgende dagen. Iedere montage wordt direct betaald. Tot en\nmet 40 montages blijven de werkplek, het gereedschap en de onderstaande tarieven\ngelijk. Daarna kan de service extra montages laten uitvoeren; daarvoor gelden de\ntotaalbedragen in bron L2. Die extra bedragen mag je niet voorspellen met de normale\nkostenregel. De club heeft 800 leden, maar niet ieder lid laat een lampje monteren. Q is\nhet aantal gemaakte en betaalde montages per dag. De organisator wil begrijpen hoe\neen totaal, een gemiddelde per montage en een verandering per extra montage\nverschillen. Gebruik de bronnen om die verschillen uit te leggen.\nBron L1 — afspraken voor dezelfde dag\nAfspraak \nBedrag \nWerkplek en gereedschap, onafhankelijk van\nQ binnen 0–40 \n€ 80 per dag \nReservering stroomaansluiting, onafhankelijk\nvan Q binnen 0–40 \n€ 20 per dag \nLampje en bevestiging per montage \n€ 2 per montage \nExtra stroomverbruik per montage \n€ 0,50 per montage \nVerkoopprijs, ook bij extra montages \n€ 6 per montage \nBron L2 — mogelijke hoeveelheden op dezelfde dag\nQ (montages per dag) \nTK (€ per dag) \nTO (€ per dag) \n0 \n100 \n0 \n20 \n150 \n120 \n40 \n200 \n240 \n45 \n220 \n270 \n55 \n275 \n330 \n2.1.4 Gemengde opgaven – opgaven\n3 / 9\n"
+        },
+        {
+          "page": 4,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "7abcbf698d1aee5da74929f8fcbb63e0c701f462c02293fab017bd38998803d6",
+          "minimum_text_pt": 12.0,
+          "text": "Vragen 1a–c — gebruik L1 en L2\na) Classificeer de vier kostenonderdelen uit L1 als constant of variabel en geef per soort\neen reden binnen deze dag en capaciteit. Welk getal uit de context heb je niet nodig?\nStel voor 0 ≤ Q ≤ 40 TCK, TVK en TK op.\nb) Bereken GCK, GVK en GTK bij Q = 20 en Q = 40, met eenheden. Vergelijk eerst\nTCK, TVK en TK bij beide aantallen. Verklaar daarna wat er met elk van de drie\ngemiddelden gebeurt als Q verdubbelt. Begrens je uitleg.\nc) Stel voor normale productie TO op. Bereken bij Q = 40 GO en leg uit waarom GO hier\ngelijk is aan de prijs en waarom deze deling bij Q = 0 niet kan. Bereken de winst bij Q =\n20 en Q = 40. Bepaal algebraïsch de continue break-even-afzet en het eerste gehele\naantal montages zonder verlies; controleer dat gehele aantal en het vorige.\nBij de grafiek op de volgende bladzijde\nL3 is al getekend. TK is de gestreepte lijn en TO de doorgetrokken lijn. De gelabelde\nbronpunten komen uit L1 en L2. Tot en met 40 montages gelden de normale afspraken.\nDaarna verbinden rechte lijnstukken de gegeven tabelpunten; die verbinding bewijst niet\nwat één afzonderlijke extra montage kost.\n2.1.4 Gemengde opgaven – opgaven\n4 / 9\n"
+        },
+        {
+          "page": 5,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "08938cb754382e46ff96a6badf8216db4b264c79c454a5884013f8707f67e9a4",
+          "minimum_text_pt": 12.0,
+          "text": "Bron L3 en vraag 1d\nLichtservice: horizontaal Q van 0 tot 55 montages per dag; verticaal TK en TO van 0 tot\n360 euro per dag. TK is gestreept, TO doorgetrokken. De normale lijnen lopen tot 40;\ndaarna zijn de gegeven punten bij 40, 45 en 55 recht verbonden. Het snijpunt, de zones\nen de gevraagde winstafstand zijn nog niet gemarkeerd.\nd) Gebruik de al getekende grafiek L3: controleer de twee hoogten bij Q = 40 met L2.\nMarkeer het break-evenpunt en geef binnen 0–40 aan waar verlies, nul winst en winst\noptreden. Teken bij Q = 40 alleen de verticale winstafstand en leg uit waarom dit geen\noppervlakte is.\n2.1.4 Gemengde opgaven – opgaven\n5 / 9\n"
+        },
+        {
+          "page": 6,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "d6638ec79405acc8176e2b730e20771761c149c9ea1326c4fe0c9af00a9925a9",
+          "minimum_text_pt": 12.0,
+          "text": "Vragen 1e–f — gebruik L2 en L3\ne) Bereken met L2 MK en MO over 0–20, 20–40, 40–45 en 45–55. Noteer elk antwoord\nbij het rechter eindpunt en geef de eenheid. Vergelijk het constante en het stijgende MK-\npatroon. Leg uit wat de MK bij Q = 55 wel zegt en waarom die niet de afzonderlijke\nkosten van alleen montage 55 bewijst.\nf) Een leerling zegt: ‘Bij Q = 55 is de winst het hoogst van de tabel, dus daar groeit de\nwinst per extra montage ook het snelst.’ Beoordeel dit met de totale winst en MO − MK\nuit alle vier intervallen. Verbind je antwoord met de verticale afstand in L3. Adviseer\ngeen productieaantal.\nControle en overgang\nVergelijk je uitwerkingen van a–f met het aparte antwoordendocument. Welke fout zou je\nbij een nieuwe bron zelf herkennen? Herstel je berekening of uitleg en sluit het\nantwoordendocument en de herinneringsstrook. Maak de volgende opgave zelfstandig.\nDe bronnen blijven volledig beschikbaar.\n2.1.4 Gemengde opgaven – opgaven\n6 / 9\n"
+        },
+        {
+          "page": 7,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "730c60898f1071cddab15a148b7b1d73981a6ecdff5c58da61876c250520bdb0",
+          "minimum_text_pt": 12.0,
+          "text": "Doeloefening — Opgave 2: SmoothBox\nSmoothBox verkoopt lunchboxen op een schoolfestival. Gebruik bron A voor normale\nproductie tot en met de capaciteit en bron B voor extra spoedproductie. De opgave\ncombineert alleen eerder onderwezen kosten-, opbrengst-, break-even- en marginale\nhandelingen.\nBron A\nPer festivaldag: TCK €1.200; variabele kosten €2 per lunchbox; verkoopprijs €5 per\nlunchbox; normale capaciteit 700 lunchboxen. Er worden 4.000 bezoekers verwacht.\nBron B\nTabel met totale kosten en totale opbrengst tijdens spoedproductie.\nQ \nTK \nTO \n700 \n€2.600 \n€3.500 \n800 \n€2.900 \n€4.000 \n900 \n€3.250 \n€4.500 \n1.000 \n€3.650 \n€5.000 \nBasisgrafiek\nEen assenstelsel met horizontaal hoeveelheid Q (lunchboxen per dag) van 0 tot 1.000\nen verticaal TK en TO (€ per dag) van €0 tot €5.000. De lijnen TK en TO en de punten\nuit bron A en B zijn al getekend en gelabeld; break-even en het gevraagde winstinterval\nzijn nog niet gemarkeerd.\nSmoothBox — vragen 1–4\nVraag 1 (2 punten). Selecteer uit bron A TCK, de variabele kosten per lunchbox en de\nprijs. Classificeer TCK als constant en de kosten per lunchbox als variabel. Noem ook\nhet gegeven dat niet nodig is.\nVraag 2 (2 punten). Stel voor 0 ≤ Q ≤ 700 de functies voor TK en TO op en bereken de\nbreak-even-afzet.\nVraag 3 (2 punten). Bereken bij Q=700 de winst en GTK, beide met eenheid.\nVraag 4 (4 punten). Bereken met bron B voor elk spoedinterval MK en MO per\nlunchbox.\nGebruik voor de volgende twee vragen de basisgrafiek op de volgende bladzijde en\ndezelfde bronnen A en B. Laat de gegeven lijnen staan.\n2.1.4 Gemengde opgaven – opgaven\n7 / 9\n"
+        },
+        {
+          "page": 8,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "e50465e3bd8deee1aa9b68705eacf1a91ab9a03170418662851e1653c24386a0",
+          "minimum_text_pt": 12.0,
+          "text": "SmoothBox — basisgrafiek en vragen 5–6\nSmoothBox: de gestreepte TK-lijn en doorgetrokken TO-lijn zijn met de bronpunten\ngegeven. De neutrale stippellijn bij Q = 700 benoemt alleen de normale\ncapaciteitsgrens; daarna gelden de punten uit bron B. Het snijpunt en het gevraagde\nwinstinterval zijn niet gemarkeerd.\nVraag 5 (2 punten). Markeer in de basisgrafiek het break-evenpunt en het bereik waarin\nde positieve verticale afstand tussen TO en TK het snelst groeit. Leg met MK en MO uit\nwaarom en vergelijk normale productie met alle spoedintervallen.\nVraag 6 (2 punten). Een leerling zegt: ‘Door de vaste verkoopprijs leveren alle extra\ngroepen van 100 lunchboxen evenveel extra winst op.’ Beoordeel deze uitspraak met de\nuitkomsten van vraag 4.\n2.1.4 Gemengde opgaven – opgaven\n8 / 9\n"
+        },
+        {
+          "page": 9,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "08b843db87bee064e200612fd4870314ab99f3917a969de81400912a06b44fbb",
+          "minimum_text_pt": 12.0,
+          "text": "Denkertje / Bonusopgave\nOptioneel — nieuwe afspraken bij de lichtservice\nDe lichtservice vergelijkt nieuwe afspraken bij hetzelfde aantal montages. De\nreservering voor de aansluiting wordt € 20 per dag duurder. Ook wordt de prijs € 6,50\nper montage. De overige kosten blijven gelijk. Een leerling zegt: ‘Dan stijgen zowel MK\nals MO en is de totale winst bij 40 montages hoger.’ Beoordeel de hele uitspraak.\nGebruik afzonderlijk en samen de twee veranderingen en kies een gegeven interval om\nje marginale vergelijking te onderbouwen. Leg uit waarom een ander vast dagbedrag\ngeen variabele kosten wordt alleen doordat het contract verandert.\nHerhaling / Herhaling en interleaving\nKorte terugblik — totalen en veranderingen\nGebruik de lichtservice uit bron L2. Een leerling deelt bij Q = 45 het kostenverschil\ntussen 40 en 45 montages door 45 en noemt dit zowel GTK als MK. Bereken de juiste\nGTK bij Q = 45 en de juiste MK over 40–45. Leg met de teller, noemer en eenheid uit\nwaarom het verschillende grootheden zijn.\n2.1.4 Gemengde opgaven – opgaven\n9 / 9\n"
+        }
+      ],
+      "HTML_figures": [
+        {
+          "alt": "Lichtservice: gegeven TK- en TO-lijnen en bronpunten voor het markeren van break-even, zones en winstafstand.",
+          "length": 109,
+          "caption": "Lichtservice: horizontaal Q van 0 tot 55 montages per dag;\nverticaal TK en TO van 0 tot 360 euro per dag. TK is gestreept, TO\ndoorgetrokken. De normale lijnen lopen tot 40; daarna zijn de gegeven\npunten bij 40, 45 en 55 recht verbonden. Het snijpunt, de zones en de\ngevraagde winstafstand zijn nog niet gemarkeerd.",
+          "caption_aria_hidden": null
+        },
+        {
+          "alt": "SmoothBox: gegeven TK, TO, bronpunten en normale grens 700 voor het markeren van break-even en winstinterval.",
+          "length": 109,
+          "caption": "SmoothBox: de gestreepte TK-lijn en doorgetrokken TO-lijn\nzijn met de bronpunten gegeven. De neutrale stippellijn bij Q = 700\nbenoemt alleen de normale capaciteitsgrens; daarna gelden de punten uit\nbron B. Het snijpunt en het gevraagde winstinterval zijn niet\ngemarkeerd.",
+          "caption_aria_hidden": null
+        }
+      ]
+    },
+    {
+      "edition": "antwoorden",
+      "sha256": "f2951e2f969045b0c9d549c1f544fbd7d2a1679352169d3ac64d90ec799f27f8",
+      "pages": [
+        {
+          "page": 1,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "562dd3ce234625086a0ea78fc218e01e134713fabe17a11bf5431c7d3780bcb9",
+          "minimum_text_pt": 12.0,
+          "text": "2.1.4 Gemengde opgaven – antwoorden\nControleer de relatie, ingevulde waarden, uitkomst, eenheid en begrenzing. Rond niet\ntussentijds af. Geef een afgerond geldbedrag waar nodig met twee decimalen en een\nbenaderingsteken; een exacte breuk mag ook. De genoemde totalen gelden telkens\nvoor dezelfde dag. Een andere juiste rekenroute of een juiste uitleg in eigen woorden telt\nmee. Beoordeel de redenering na een rekenfout apart; tel dezelfde fout niet onnodig\nopnieuw aan.\nOpgave 1 — Lichtservice bij de sportclub\n1a — gegevens, gedrag en functies\nOnderdeel \nClassificatie \nReden binnen deze dag en\n0–40 montages \nWerkplek en\ngereedschap: € 80 per\ndag \nConstant \nHet totale dagbedrag\nverandert niet met Q. \nReservering aansluiting:\n€ 20 per dag \nConstant \nHet totale dagbedrag\nverandert niet met Q. \nLampje en bevestiging:\n€ 2 per montage \nVariabel \nHet totale bedrag stijgt bij\nelke extra montage. \nStroomverbruik: € 0,50\nper montage \nVariabel \nHet totale bedrag stijgt bij\nelke extra montage. \nDe 800 leden zijn niet de gemaakte en betaalde montages en zijn hier niet nodig. Voor 0\n≤ Q ≤ 40, met dezelfde capaciteit en afspraken:\nTCK = 80 + 20 = 100 euro per dag.\nTVK = (2 + 0,50)Q = 2,50Q euro per dag.\nTK = TCK + TVK = 100 + 2,50Q euro per dag.\nWaarom: constante kosten gaan over een gelijkblijvend totaal bij veranderende Q. Het\ntarief van € 2,50 per montage blijft hier gelijk, maar het variabele totaal groeit met Q. De\nnaam van een rekening bepaalt de classificatie niet.\nNakijken: vier classificaties, redenen over gedrag van totalen, het uitgesloten\nledenaantal, drie functies en het normale bereik. Gebruik deze normale kostenfunctie\nniet voorbij 40 montages.\n• \n• \n• \n2.1.4 Gemengde opgaven – antwoorden\n1 / 11\n"
+        },
+        {
+          "page": 2,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "7b2fa8fddfc5fb3bd43e20af9a21b37d0c29d535b656734998bf9e7f9c7e3f94",
+          "minimum_text_pt": 12.0,
+          "text": "1b — alle totalen en gemiddelden\nBereken eerst de totalen bij dezelfde Q:\nQ (montages per\ndag) \nTCK (€/dag) \nTVK (€/dag) \nTK (€/dag) \n20 \n100 \n2,50 × 20 = 50 \n100 + 50 = 150 \n40 \n100 \n2,50 × 40 = 100 \n100 + 100 = 200 \nDeel vervolgens elk passend totaal door diezelfde positieve Q:\nQ \nGCK (€/montage) \nGVK (€/montage) \nGTK (€/montage) \n20 \n100/20 = 5 \n50/20 = 2,50 \n150/20 = 7,50 \n40 \n100/40 = 2,50 \n100/40 = 2,50 \n200/40 = 5 \nVergelijking en waarom: TCK blijft € 100 per dag. TVK verdubbelt van € 50 naar € 100\nper dag. TK stijgt met € 50, van € 150 naar € 200 per dag, maar verdubbelt niet: het\nconstante deel blijft gelijk.\nGCK halveert van € 5 naar € 2,50 per montage doordat dezelfde € 100 over twee keer\nzoveel montages wordt verdeeld. GVK blijft € 2,50 per montage door het gelijkblijvende\nvariabele tarief. GTK daalt van € 7,50 naar € 5 per montage, niet naar € 3,75: alleen\nGCK halveert, terwijl GVK gelijk blijft. Dit geldt voor dezelfde dag, Q = 20–40 en\ndezelfde capaciteit en afspraken.\nNakijken: zes passende verhoudingen met eenheden, drie totale veranderingen en drie\nverklaarde gemiddelde veranderingen. Een verkeerd gemiddelde? Kies de bijbehorende\ntotale kosten en deel door dezelfde Q; zie §2.1.1.\n2.1.4 Gemengde opgaven – antwoorden\n2 / 11\n"
+        },
+        {
+          "page": 3,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "50e28b8a18c62b81b9901d35f83bff575a5d7f2b3f3928198215bf2364cf35d9",
+          "minimum_text_pt": 12.0,
+          "text": "1c — opbrengsten, winst en break-even\nVoor normale productie, 0 ≤ Q ≤ 40: TO = P × Q = 6Q euro per dag. Bij Q = 40: GO =\nTO/Q = 240/40 = € 6 per montage. Iedere betaalde montage levert dezelfde prijs op;\ndaarom is GO = 6Q/Q = 6 voor Q > 0. Bij Q = 0 bestaat TO = 0 wel, maar GO = 0/0 niet.\nWinst = TO − TK bij dezelfde Q:\nQ = 20: 120 − 150 = −€ 30 per dag, dus € 30 verlies.\nQ = 40: 240 − 200 = € 40 per dag.\nBreak-even: 6Q = 100 + 2,50Q → 3,50Q = 100 → Q = 100/3,50 = 200/7 ≈ 28,57\nmontages per dag. Beide totale bedragen zijn daar 6 × 200/7 = 1200/7 ≈ € 171,43 per\ndag.\nGeheel aantal\nmontages \nTO (€/dag) \nTK (€/dag) \nWinst (€/dag) \n28 \n6 × 28 = 168 \n100 + 2,50 × 28 =\n170 \n−2 \n29 \n6 × 29 = 174 \n100 + 2,50 × 29 =\n172,50 \n1,50 \nHet eerste gehele aantal zonder verlies is 29: 28 geeft nog verlies. Je zoekt het kleinste\ngehele aantal op of rechts van het ongeronde snijpunt. Naar beneden afronden geeft 28.\nGewoon afronden naar het dichtstbijzijnde gehele getal geeft hier óók 29, maar is niet\nde algemene regel voor geen verlies.\nWaarom: pas vanaf de kruising dekken de ontvangsten de totale kosten. Dit berekent\ngeen beste productieaantal. Nakijken: functie, GO en Q > 0, beide winstbedragen,\ngelijkheid, continue uitkomst en beide gehele controles. Twijfel bij gehele aantallen? Vul\nbeide buren in zoals bij de kajak in §2.1.2.\n• \n• \n2.1.4 Gemengde opgaven – antwoorden\n3 / 11\n"
+        },
+        {
+          "page": 4,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "f1475d88f5b7965d868acac14603b8e63759b79fb9c5a2bb259c30215c26765a",
+          "minimum_text_pt": 12.0,
+          "text": "1d — het gegeven beeld verbinden met bedragen\nLichtservice, antwoord: break-even bij (200/7; 1200/7), ongeveer (28,57; 171,43).\nBinnen 0–40 ligt links verlies en rechts winst, met nul winst op het snijpunt. Bij Q = 40\nverbindt het verticale haakje TK = 200 en TO = 240: 40 euro winst per dag. Het open\nbegin van de onderste bereikmarkering sluit de nulwinstgrens uit.\nL2 en L3 geven bij Q = 40 dezelfde hoogten: TK = € 200, TO = € 240 per dag. Markeer\n(200/7; 1200/7). Binnen 0–40: verlies bij Q < 200/7, nul winst bij Q = 200/7, winst bij\n200/7 < Q ≤ 40.\nWaarom: het verschil 240 − 200 = € 40 per dag hoort bij één Q, dus een verticale\nafstand. Een oppervlakte voegt een breedte langs Q toe; dat is niet de winst bij 40\nmontages. Nakijken: hoogten, assen/eenheden, snijpunt, begrensde zones en het\nverticale haakje zonder winstvlak.\n2.1.4 Gemengde opgaven – antwoorden\n4 / 11\n"
+        },
+        {
+          "page": 5,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "eb3cf3b5ef38ea88203affba40a094238ac683c8fad975b30885c99d76a03628",
+          "minimum_text_pt": 12.0,
+          "text": "1e — de vier echte tabelintervallen\nGebruik MK = ΔTK/ΔQ en MO = ΔTO/ΔQ, steeds dezelfde eindpunten.\nInterval; rechter Q \nMK (€/extra montage) \nMO (€/extra montage) \n0–20; Q = 20 \n(150 − 100)/(20 − 0) = 50/20\n= 2,50 \n(120 − 0)/20 = 6 \n20–40; Q = 40 \n(200 − 150)/(40 − 20) =\n50/20 = 2,50 \n(240 − 120)/20 = 6 \n40–45; Q = 45 \n(220 − 200)/(45 − 40) = 20/5\n= 4 \n(270 − 240)/5 = 6 \n45–55; Q = 55 \n(275 − 220)/(55 − 45) =\n55/10 = 5,50 \n(330 − 270)/10 = 6 \nElk bedrag geldt per extra montage binnen het genoemde interval. De aantallen extra\nmontages zijn 20, 20, 5 en 10, niet telkens hetzelfde. Bij Q = 0 staat een streepje: geen\nvoorafgaand tabelinterval, niet MK = MO = 0.\nMK is in de twee normale intervallen constant € 2,50; daarna stijgt MK naar € 4 en €\n5,50. MO blijft € 6 doordat iedere extra betaalde montage dezelfde prijs oplevert. MK = €\n5,50 bij Q = 55 betekent € 55 extra totale kosten verdeeld over tien extra montages in\n45–55. Je kent TK bij Q = 54 niet, dus niet de extra kosten van alleen montage 55.\nRechte verbindingen in L3 maken die ontbrekende afzonderlijke waarneming niet alsnog\nbekend.\nNakijken: alle tellers en positieve noemers, juiste rechter rijen, eenheden, patronen en\nbegrensde interpretatie. Alleen ΔTK berekend? Deel door de echte ΔQ; het\nfotohoudervoorbeeld en Lus/Bout uit §2.1.3 laten dat onderscheid zien.\n2.1.4 Gemengde opgaven – antwoorden\n5 / 11\n"
+        },
+        {
+          "page": 6,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "3dd511149a8214df81d11fdff8c400d6d6eab7e20f71f1e035395f704a0357cb",
+          "minimum_text_pt": 12.0,
+          "text": "1f — hoogste winst is niet snelste winstgroei\nDe uitspraak is onjuist. De totale winst is TO − TK bij één hoeveelheid:\nQ (montages per dag) \nWinst (€/dag) \n0 \n0 − 100 = −100 \n20 \n120 − 150 = −30 \n40 \n240 − 200 = 40 \n45 \n270 − 220 = 50 \n55 \n330 − 275 = 55 \nHet hoogste gegeven totale niveau is € 55 bij Q = 55. Vergelijk voor de groei per extra\nmontage echter alle intervallen:\nInterval \nΔwinst/ΔQ (€/extra\nmontage) \nControle: MO − MK \n0–20 \n(−30 − (−100))/20 = 3,50 \n6 − 2,50 = 3,50 \n20–40 \n(40 − (−30))/20 = 3,50 \n6 − 2,50 = 3,50 \n40–45 \n(50 − 40)/5 = 2 \n6 − 4 = 2 \n45–55 \n(55 − 50)/10 = 0,50 \n6 − 5,50 = 0,50 \nWaarom: de normale winsttoename per extra montage is het grootst. De positieve\nverticale afstand groeit het snelst voor 200/7 < Q ≤ 40; op het snijpunt zelf is die afstand\nnul. Bij Q = 55 is het getoonde totale winstniveau hoger, maar de laatste intervalgroei\nkleiner. L3 toont hoogten; voor hun verandering vergelijk je dezelfde twee\nhoeveelheden.\nNakijken: onderbouwde weerlegging, vier genormaliseerde vergelijkingen, niveau\ntegenover verandering en begrensde grafiekkoppeling. Vergelijk geen ongeschaalde\nverschillen bij ongelijke ΔQ. Dit geeft geen optimale afzet en geen voorspelling buiten de\ngegeven bronnen.\n2.1.4 Gemengde opgaven – antwoorden\n6 / 11\n"
+        },
+        {
+          "page": 7,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "591513b3f8da353d284cd835a64fb94f0bdf204375e2b76a0077f2cbbee51f7e",
+          "minimum_text_pt": 12.0,
+          "text": "Doeloefening — Opgave 2: SmoothBox\nVeertien punten — model, toelichting en nakijkcriteria\nVraag 1 — 2 punten\nTCK=€1.200 per dag en is constant; de variabele kosten zijn €2 per lunchbox; P=€5 per\nlunchbox. De 4.000 bezoekers zijn niet nodig voor de gevraagde kost- en\nopbrengstfuncties.\nTCK is het totale constante dagbedrag. De € 2 per lunchbox is het gelijkblijvende\nvariabele tarief in dit model; het bijbehorende totaal stijgt met Q. De verwachte\nbezoekers zijn niet de verkochte lunchboxen. Nakijken: de drie geselecteerde waarden\nmet classificaties (1 punt), de niet-benodigde bezoekers (1 punt).\nVraag 2 — 2 punten\nVoor 0≤Q≤700: TK=1.200+2Q en TO=5Q. Break-even: 5Q=1.200+2Q, dus Q=400\nlunchboxen.\nVoor 0 ≤ Q ≤ 700: TK = TCK + TVK = 1.200 + 2Q en TO = P × Q = 5Q, in euro per\nfestivaldag. Break-even: 5Q = 1.200 + 2Q → 3Q = 1.200 → Q = 400 lunchboxen per\ndag. Controle: TO = 5 × 400 = € 2.000 en TK = 1.200 + 2 × 400 = € 2.000 per dag. Nul\nwinst telt als geen verlies. Waarom: de ontvangsten dekken daar precies de totale\nkosten. Nakijken: beide correcte begrensde functies (1), gelijkheid en uitkomst (1).\nVraag 3 — 2 punten\nBij Q=700 is de winst €3.500−€2.600=€900 per dag en GTK=€2.600/700≈€3,71 per\nlunchbox.\nTO = 5 × 700 = € 3.500, TK = 1.200 + 2 × 700 = € 2.600 per dag. Winst = TO − TK =\n3.500 − 2.600 = € 900 per dag. GTK = TK/Q = 2.600/700 = 26/7 ≈ € 3,71 per lunchbox.\nWaarom: winst is een totaal verschil; GTK verdeelt alle kosten over alle 700\nlunchboxen. Nakijken: winst met eenheid (1), GTK met eenheid (1).\n2.1.4 Gemengde opgaven – antwoorden\n7 / 11\n"
+        },
+        {
+          "page": 8,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "e70a82d0e2cde8455f3a4c664fbf2d8401558ecca787c1fc6e26665bc5a476eb",
+          "minimum_text_pt": 12.0,
+          "text": "Vraag 4 — 4 punten\nSpoedintervallen Q=700–800/800–900/900–1.000: MK=€3,00/€3,50/€4,00 per lunchbox;\nMO is steeds €5,00 per lunchbox.\nSpoedinterval \nMK = ΔTK/ΔQ \nMO = ΔTO/ΔQ \n700–800 \n(2.900 − 2.600)/(800 − 700)\n= 300/100 = 3 \n(4.000 − 3.500)/100 = 5 \n800–900 \n(3.250 − 2.900)/(900 − 800)\n= 350/100 = 3,50 \n(4.500 − 4.000)/100 = 5 \n900–1.000 \n(3.650 − 3.250)/(1.000 −\n900) = 400/100 = 4 \n(5.000 − 4.500)/100 = 5 \nAlle uitkomsten zijn euro per extra lunchbox binnen dat interval. Waarom: ieder\ninterval bevat 100 extra lunchboxen. De extra totale kosten stijgen, terwijl iedere extra\nlunchbox dezelfde prijs van € 5 oplevert. Nakijken: per juiste MK met interval en divisor\n1 punt (samen 3); alle drie MO-waarden met de juiste normalisatie 1 punt. 300, 350 en\n400 zijn kostenverschillen, nog geen marginale kosten per extra lunchbox.\nVraag 5 — 2 punten\nBreak-even ligt bij Q=400. Bij normale productie van Q=400–700 geldt MO−MK=€5−\n€2=€3 per lunchbox. In de spoedintervallen is MO−MK achtereenvolgens €2,00, €1,50\nen €1,00. De positieve verticale winstafstand groeit dus het snelst van Q=400 tot Q=700.\nDe antwoordgrafiek op de volgende bladzijde markeert (400; 2.000) en 400 < Q ≤ 700.\nBij Q = 400 is de afstand nul; pas rechts ervan positief. Vergelijk normaal met alle drie\nspoedintervallen:\nBereik/interval \nMO − MK (€/extra lunchbox) \nNormale productie 0–700 \n5 − 2 = 3 \nSpoed 700–800 \n5 − 3 = 2 \nSpoed 800–900 \n5 − 3,50 = 1,50 \nSpoed 900–1.000 \n5 − 4 = 1 \nDe normale positieve winstafstand groeit dus het snelst. Verliesvermindering links van\n400 is niet al positieve winst; de kruising zelf heeft nul winst. Nakijken: break-even en\nbereikmarkering (1), vergelijking van normaal met alle drie spoedintervallen en\npassende verklaring (1). Geen winstoppervlak.\n2.1.4 Gemengde opgaven – antwoorden\n8 / 11\n"
+        },
+        {
+          "page": 9,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "7d39ed6644bd391ee049ee52ad084cc9dd893c5e3488e377c0ab899273c1f5ab",
+          "minimum_text_pt": 12.0,
+          "text": "SmoothBox — antwoord bij vraag 5\nSmoothBox, antwoord: break-even bij Q = 400 en TK = TO = 2.000 euro per dag. De\npositieve verticale afstand groeit het snelst voor 400 < Q ≤ 700, niet op het nulpunt zelf.\nDe winsttoename per extra lunchbox is normaal 3 euro, daarna 2, 1,50 en 1 euro over\nde drie spoedintervallen. Dit is geen winstoppervlakte of advies over optimale afzet.\n2.1.4 Gemengde opgaven – antwoorden\n9 / 11\n"
+        },
+        {
+          "page": 10,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "33b225c013be6ced6609c927003f64d386b259a5f77f48c35d17a0f801478a74",
+          "minimum_text_pt": 12.0,
+          "text": "Vraag 6 — 2 punten\nOnjuist. Uit vraag 4 volgt dat MO−MK in de spoedintervallen daalt van €2,00 via €1,50\nnaar €1,00 per lunchbox. De extra winst per groep van 100 is dus €200, €150 en €100.\nDe uitspraak is onjuist. Per groep van 100 is Δwinst = (MO − MK) × 100: 2 × 100 = €\n200, 1,50 × 100 = € 150, 1 × 100 = € 100 per dag. Constante extra opbrengst van € 500\nper groep betekent geen constante extra winst: extra kosten stijgen van € 300 naar €\n350 en € 400. De winstniveaus bij 700, 800, 900 en 1.000 zijn 900, 1.100, 1.250 en\n1.350 euro per dag; hun verschillen bevestigen de uitkomst.\nNakijken: dalende winsttoename per extra lunchbox 2/1,50/1 (1), de groepen\n200/150/100 met onderbouwde weerlegging (1). Het grootste gegeven winstniveau\nbewijst geen optimale afzet. Gebruik de normale kostenfunctie niet voorbij 700 en\nvoorspel niets voorbij het laatste bronpunt 1.000.\nTotaal: 2 + 2 + 2 + 4 + 2 + 2 = 14 punten. Een zelfgekozen intervaltabel mag als\nwerkvorm, maar is geen extra verplichte vraag of afzonderlijk punt.\n2.1.4 Gemengde opgaven – antwoorden\n10 / 11\n"
+        },
+        {
+          "page": 11,
+          "width": 1241,
+          "height": 1754,
+          "raw_RGB_sha256": "2e94022fe074b2f6e3fcc4b5e7902f9073c278f39bdf7eeec2afca386e5dda2c",
+          "minimum_text_pt": 12.0,
+          "text": "Denkertje / Bonusopgave\nModelantwoord\nBij dezelfde Q = 40 zijn de oorspronkelijke TO = 6 × 40 = € 240 en TK = 100 + 2,50 × 40\n= € 200 per dag: € 40 winst. Alleen de extra vaste € 20 geeft TK = € 220, TO = € 240 en\n€ 20 winst. Alleen de prijsverhoging geeft TO = 6,50 × 40 = € 260, TK = € 200 en € 60\nwinst. Samen: TO = € 260, TK = € 220, dus € 40 winst per dag. De effecten heffen\nelkaar bij deze Q op; de totale winst is niet hoger.\nKies bijvoorbeeld interval 20–40. Oorspronkelijk: MK = (200 − 150)/(40 − 20) = € 2,50 en\nMO = (240 − 120)/(40 − 20) = € 6, per extra montage. Met beide veranderingen zijn TK\nbij 20 en 40 respectievelijk € 170 en € 220; TO is € 130 en € 260. Dus MK = (220 − 170)/\n20 = € 2,50 en MO = (260 − 130)/20 = € 6,50, per extra montage binnen 20–40. De\nextra vaste € 20 valt weg bij aftrekken: (200 + 20) − (150 + 20) = 50. Alleen MO stijgt,\nniet MK. Ook een juiste vergelijking over 40–45 of 45–55 mag: MK blijft daar\nrespectievelijk 4 of 5,50, en MO wordt 6,50.\nHet nieuwe vaste dagbedrag blijft binnen dat contract gelijk als Q verandert. Een\nandere contractafspraak is iets anders dan veranderende Q binnen één contract; de\nkosten worden daardoor niet variabel. De conclusie houdt Q = 40 vast, neemt geen\nklantenreactie aan en adviseert geen afzet.\nBeoordelingscriteria — precies drie inhoudelijke criteria:\nJe onderbouwt het afzonderlijke én gezamenlijke winsteffect bij Q = 40 met de vier\nwinstbedragen 40, 20, 60 en 40 euro per dag.\nJe vergelijkt MK en MO over hetzelfde werkelijk gegeven interval met teller, noemer\nen eenheid, en verklaart waarom de vaste toeslag in ΔTK wegvalt.\nJe onderscheidt veranderende contracten van veranderende Q binnen één contract\nen begrenst je conclusie tot de gegeven afspraken en hoeveelheid.\nHerhaling / Herhaling en interleaving\nBij Q = 45: GTK = TK/Q = 220/45 = 44/9 ≈ € 4,89 per montage. Over 40–45: MK = (220\n− 200)/(45 − 40) = 20/5 = € 4 per extra montage binnen 40–45.\nWaarom: GTK verdeelt het totale dagbedrag over alle 45 montages. MK verdeelt alleen\nde extra € 20 over de vijf extra montages. Het kostenverschil door 45 delen is geen van\nbeide gevraagde berekeningen. Beide uitkomsten zijn bedragen per montage, maar hun\neconomische betekenis en gebruikte hoeveelheid verschillen. Lukt dit niet? Herhaal de\ngemiddelden uit §2.1.1 en het intervalvoorbeeld uit §2.1.3.\n• \n• \n• \n2.1.4 Gemengde opgaven – antwoorden\n11 / 11\n"
+        }
+      ],
+      "HTML_figures": [
+        {
+          "alt": "Lichtservice: break-even, verlies en winst binnen 0–40; verticale winstafstand 40 euro bij 40 montages.",
+          "length": 103,
+          "caption": "Lichtservice, antwoord: break-even bij (200/7; 1200/7),\nongeveer (28,57; 171,43). Binnen 0–40 ligt links verlies en rechts\nwinst, met nul winst op het snijpunt. Bij Q = 40 verbindt het verticale\nhaakje TK = 200 en TO = 240: 40 euro winst per dag. Het open begin van\nde onderste bereikmarkering sluit de nulwinstgrens uit.",
+          "caption_aria_hidden": null
+        },
+        {
+          "alt": "SmoothBox: break-even (400; 2.000) en bereik 400 < Q ≤ 700 met de snelste positieve winstgroei.",
+          "length": 95,
+          "caption": "SmoothBox, antwoord: break-even bij Q = 400 en TK = TO =\n2.000 euro per dag. De positieve verticale afstand groeit het snelst\nvoor 400 < Q ≤ 700, niet op het nulpunt zelf. De winsttoename per\nextra lunchbox is normaal 3 euro, daarna 2, 1,50 en 1 euro over de drie\nspoedintervallen. Dit is geen winstoppervlakte of advies over optimale\nafzet.",
+          "caption_aria_hidden": null
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "name": "2.1.4_ex_1.svg",
+      "SVG_sha256": "09c2993d1d48f26b29bf49dd3abd221a118dcb8e4db9601081afbdb57a99ea4d",
+      "PNG_sha256": "2ed6ebe9bef5c400e9a8c5591d414b1d104dca4607485e84a5ea84bfb2626555",
+      "RGB_sha256": "ceff7405f38aafe80c874ca7b2a935bf2ba651abead00bd6723d670fa13bde24",
+      "size": [
+        1200,
+        1050
+      ],
+      "source_font_px": 40,
+      "placed_font_pt": 15.68503937007874,
+      "ink_boxes": [
+        {
+          "text": "TK en TO (€ per dag)",
+          "role": "axis-title",
+          "ink_box": [
+            160.0,
+            21.0,
+            536.0,
+            58.0
+          ]
+        },
+        {
+          "text": "Lichtservice",
+          "role": "heading",
+          "ink_box": [
+            970.0,
+            21.0,
+            1180.0,
+            50.0
+          ]
+        },
+        {
+          "text": "0",
+          "role": "tick-label",
+          "ink_box": [
+            113.0,
+            805.0,
+            135.0,
+            834.0
+          ]
+        },
+        {
+          "text": "60",
+          "role": "tick-label",
+          "ink_box": [
+            91.0,
+            693.333333,
+            135.0,
+            722.333333
+          ]
+        },
+        {
+          "text": "120",
+          "role": "tick-label",
+          "ink_box": [
+            69.0,
+            581.666667,
+            135.0,
+            610.666667
+          ]
+        },
+        {
+          "text": "180",
+          "role": "tick-label",
+          "ink_box": [
+            69.0,
+            470.0,
+            135.0,
+            499.0
+          ]
+        },
+        {
+          "text": "240",
+          "role": "tick-label",
+          "ink_box": [
+            69.0,
+            358.333333,
+            135.0,
+            387.333333
+          ]
+        },
+        {
+          "text": "300",
+          "role": "tick-label",
+          "ink_box": [
+            69.0,
+            246.66666700000002,
+            135.0,
+            275.666667
+          ]
+        },
+        {
+          "text": "360",
+          "role": "tick-label",
+          "ink_box": [
+            69.0,
+            135.0,
+            135.0,
+            164.0
+          ]
+        },
+        {
+          "text": "0",
+          "role": "tick-label",
+          "ink_box": [
+            149.0,
+            847.0,
+            171.0,
+            876.0
+          ]
+        },
+        {
+          "text": "10",
+          "role": "tick-label",
+          "ink_box": [
+            298.0,
+            847.0,
+            342.0,
+            876.0
+          ]
+        },
+        {
+          "text": "20",
+          "role": "tick-label",
+          "ink_box": [
+            458.0,
+            847.0,
+            502.0,
+            876.0
+          ]
+        },
+        {
+          "text": "30",
+          "role": "tick-label",
+          "ink_box": [
+            618.0,
+            847.0,
+            662.0,
+            876.0
+          ]
+        },
+        {
+          "text": "40",
+          "role": "tick-label",
+          "ink_box": [
+            778.0,
+            847.0,
+            822.0,
+            876.0
+          ]
+        },
+        {
+          "text": "55",
+          "role": "tick-label",
+          "ink_box": [
+            1018.0,
+            847.0,
+            1062.0,
+            876.0
+          ]
+        },
+        {
+          "text": "Q (montages per dag)",
+          "role": "axis-title",
+          "ink_box": [
+            406.0,
+            997.0,
+            793.0,
+            1034.0
+          ]
+        },
+        {
+          "text": "Normale afspraken: 0–40 montages",
+          "role": "source-boundary",
+          "ink_box": [
+            160.0,
+            79.0,
+            790.0,
+            116.0
+          ]
+        },
+        {
+          "text": "TK: Q=0",
+          "role": "source-point-label",
+          "ink_box": [
+            220.0,
+            626.0,
+            369.0,
+            657.0
+          ]
+        },
+        {
+          "text": "TO: Q=0",
+          "role": "source-point-label",
+          "ink_box": [
+            230.0,
+            781.0,
+            383.0,
+            812.0
+          ]
+        },
+        {
+          "text": "TK: Q=20",
+          "role": "source-point-label",
+          "ink_box": [
+            265.0,
+            411.0,
+            436.0,
+            442.0
+          ]
+        },
+        {
+          "text": "TO: Q=20",
+          "role": "source-point-label",
+          "ink_box": [
+            400.0,
+            731.0,
+            575.0,
+            762.0
+          ]
+        },
+        {
+          "text": "TK: Q=40",
+          "role": "source-point-label",
+          "ink_box": [
+            635.0,
+            521.0,
+            806.0,
+            552.0
+          ]
+        },
+        {
+          "text": "TO: Q=40",
+          "role": "source-point-label",
+          "ink_box": [
+            475.0,
+            271.0,
+            650.0,
+            302.0
+          ]
+        },
+        {
+          "text": "TK: Q=45",
+          "role": "source-point-label",
+          "ink_box": [
+            870.0,
+            581.0,
+            1041.0,
+            612.0
+          ]
+        },
+        {
+          "text": "TO: Q=45",
+          "role": "source-point-label",
+          "ink_box": [
+            740.0,
+            216.0,
+            915.0,
+            247.0
+          ]
+        },
+        {
+          "text": "TK55",
+          "role": "source-point-label",
+          "ink_box": [
+            1060.0,
+            296.0,
+            1155.0,
+            325.0
+          ]
+        },
+        {
+          "text": "TO55",
+          "role": "source-point-label",
+          "ink_box": [
+            1060.0,
+            193.0,
+            1159.0,
+            222.0
+          ]
+        },
+        {
+          "text": "TK: gestreept · TO: doorgetrokken",
+          "role": "legend",
+          "ink_box": [
+            299.0,
+            905.0,
+            902.0,
+            942.0
+          ]
+        },
+        {
+          "text": "Bronpunten: Q bij TK of TO",
+          "role": "legend",
+          "ink_box": [
+            360.0,
+            953.0,
+            841.0,
+            990.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "2.1.4_ex_2.svg",
+      "SVG_sha256": "bf8ef4855b23010548de9cb7d290cba1125bb13a744623e77869e27d55c25eff",
+      "PNG_sha256": "58f81a1ff2c464e5471775620e9cf62fc9571b6078f9006b91e6b3f11cd44a05",
+      "RGB_sha256": "1c4d2229669041345dadff649882a0185334592e2b07a917c8758f1c3939ed02",
+      "size": [
+        1200,
+        1050
+      ],
+      "source_font_px": 40,
+      "placed_font_pt": 15.68503937007874,
+      "ink_boxes": [
+        {
+          "text": "TK en TO (€ per dag)",
+          "role": "axis-title",
+          "ink_box": [
+            160.0,
+            21.0,
+            536.0,
+            58.0
+          ]
+        },
+        {
+          "text": "Lichtservice",
+          "role": "heading",
+          "ink_box": [
+            970.0,
+            21.0,
+            1180.0,
+            50.0
+          ]
+        },
+        {
+          "text": "0",
+          "role": "tick-label",
+          "ink_box": [
+            113.0,
+            805.0,
+            135.0,
+            834.0
+          ]
+        },
+        {
+          "text": "60",
+          "role": "tick-label",
+          "ink_box": [
+            91.0,
+            693.333333,
+            135.0,
+            722.333333
+          ]
+        },
+        {
+          "text": "120",
+          "role": "tick-label",
+          "ink_box": [
+            69.0,
+            581.666667,
+            135.0,
+            610.666667
+          ]
+        },
+        {
+          "text": "180",
+          "role": "tick-label",
+          "ink_box": [
+            69.0,
+            470.0,
+            135.0,
+            499.0
+          ]
+        },
+        {
+          "text": "240",
+          "role": "tick-label",
+          "ink_box": [
+            69.0,
+            358.333333,
+            135.0,
+            387.333333
+          ]
+        },
+        {
+          "text": "300",
+          "role": "tick-label",
+          "ink_box": [
+            69.0,
+            246.66666700000002,
+            135.0,
+            275.666667
+          ]
+        },
+        {
+          "text": "360",
+          "role": "tick-label",
+          "ink_box": [
+            69.0,
+            135.0,
+            135.0,
+            164.0
+          ]
+        },
+        {
+          "text": "0",
+          "role": "tick-label",
+          "ink_box": [
+            149.0,
+            847.0,
+            171.0,
+            876.0
+          ]
+        },
+        {
+          "text": "10",
+          "role": "tick-label",
+          "ink_box": [
+            298.0,
+            847.0,
+            342.0,
+            876.0
+          ]
+        },
+        {
+          "text": "20",
+          "role": "tick-label",
+          "ink_box": [
+            458.0,
+            847.0,
+            502.0,
+            876.0
+          ]
+        },
+        {
+          "text": "30",
+          "role": "tick-label",
+          "ink_box": [
+            618.0,
+            847.0,
+            662.0,
+            876.0
+          ]
+        },
+        {
+          "text": "40",
+          "role": "tick-label",
+          "ink_box": [
+            778.0,
+            847.0,
+            822.0,
+            876.0
+          ]
+        },
+        {
+          "text": "55",
+          "role": "tick-label",
+          "ink_box": [
+            1018.0,
+            847.0,
+            1062.0,
+            876.0
+          ]
+        },
+        {
+          "text": "Q (montages per dag)",
+          "role": "axis-title",
+          "ink_box": [
+            406.0,
+            997.0,
+            793.0,
+            1034.0
+          ]
+        },
+        {
+          "text": "Normale afspraken: 0–40 montages",
+          "role": "source-boundary",
+          "ink_box": [
+            160.0,
+            79.0,
+            790.0,
+            116.0
+          ]
+        },
+        {
+          "text": "TK: Q=0",
+          "role": "source-point-label",
+          "ink_box": [
+            220.0,
+            626.0,
+            369.0,
+            657.0
+          ]
+        },
+        {
+          "text": "TO: Q=0",
+          "role": "source-point-label",
+          "ink_box": [
+            230.0,
+            781.0,
+            383.0,
+            812.0
+          ]
+        },
+        {
+          "text": "TK: Q=20",
+          "role": "source-point-label",
+          "ink_box": [
+            265.0,
+            411.0,
+            436.0,
+            442.0
+          ]
+        },
+        {
+          "text": "TO: Q=20",
+          "role": "source-point-label",
+          "ink_box": [
+            400.0,
+            731.0,
+            575.0,
+            762.0
+          ]
+        },
+        {
+          "text": "TK: Q=40",
+          "role": "source-point-label",
+          "ink_box": [
+            635.0,
+            521.0,
+            806.0,
+            552.0
+          ]
+        },
+        {
+          "text": "TO: Q=40",
+          "role": "source-point-label",
+          "ink_box": [
+            475.0,
+            271.0,
+            650.0,
+            302.0
+          ]
+        },
+        {
+          "text": "TK: Q=45",
+          "role": "source-point-label",
+          "ink_box": [
+            870.0,
+            581.0,
+            1041.0,
+            612.0
+          ]
+        },
+        {
+          "text": "TO: Q=45",
+          "role": "source-point-label",
+          "ink_box": [
+            740.0,
+            216.0,
+            915.0,
+            247.0
+          ]
+        },
+        {
+          "text": "TK55",
+          "role": "source-point-label",
+          "ink_box": [
+            1060.0,
+            296.0,
+            1155.0,
+            325.0
+          ]
+        },
+        {
+          "text": "TO55",
+          "role": "source-point-label",
+          "ink_box": [
+            1060.0,
+            193.0,
+            1159.0,
+            222.0
+          ]
+        },
+        {
+          "text": "BE ≈ (28,57; 171,43)",
+          "role": "answer-label",
+          "ink_box": [
+            170.0,
+            331.0,
+            536.0,
+            368.0
+          ]
+        },
+        {
+          "text": "W = 40",
+          "role": "answer-label",
+          "ink_box": [
+            870.0,
+            446.0,
+            997.0,
+            475.0
+          ]
+        },
+        {
+          "text": "Verlies: Q < 200/7",
+          "role": "answer-label",
+          "ink_box": [
+            180.0,
+            166.0,
+            499.0,
+            197.0
+          ]
+        },
+        {
+          "text": "Winst: 200/7 < Q ≤ 40",
+          "role": "answer-label",
+          "ink_box": [
+            180.0,
+            216.0,
+            565.0,
+            247.0
+          ]
+        },
+        {
+          "text": "Snelste positieve groei: 200/7 < Q ≤ 40",
+          "role": "answer-label",
+          "ink_box": [
+            257.0,
+            945.0,
+            942.0,
+            982.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "2.1.4_ex_3.svg",
+      "SVG_sha256": "7a41c0750657776681b163cad6be8471102f9ec9f2497a2d2e1e6c56492be92f",
+      "PNG_sha256": "e8a535367b33be710548f3515bede4e6e11247344d2cbddde36cf5b05b8ca63c",
+      "RGB_sha256": "47834c0e1f1e430f70e060f48b979f8eb477b5e570a1ee39f91aacc6abf0ea78",
+      "size": [
+        1200,
+        1050
+      ],
+      "source_font_px": 40,
+      "placed_font_pt": 15.68503937007874,
+      "ink_boxes": [
+        {
+          "text": "TK en TO (€ per dag)",
+          "role": "axis-title",
+          "ink_box": [
+            160.0,
+            21.0,
+            536.0,
+            58.0
+          ]
+        },
+        {
+          "text": "SmoothBox",
+          "role": "heading",
+          "ink_box": [
+            974.0,
+            21.0,
+            1180.0,
+            50.0
+          ]
+        },
+        {
+          "text": "0",
+          "role": "tick-label",
+          "ink_box": [
+            113.0,
+            805.0,
+            135.0,
+            834.0
+          ]
+        },
+        {
+          "text": "1000",
+          "role": "tick-label",
+          "ink_box": [
+            47.0,
+            671.0,
+            135.0,
+            700.0
+          ]
+        },
+        {
+          "text": "2000",
+          "role": "tick-label",
+          "ink_box": [
+            47.0,
+            537.0,
+            135.0,
+            566.0
+          ]
+        },
+        {
+          "text": "3000",
+          "role": "tick-label",
+          "ink_box": [
+            47.0,
+            403.0,
+            135.0,
+            432.0
+          ]
+        },
+        {
+          "text": "4000",
+          "role": "tick-label",
+          "ink_box": [
+            47.0,
+            269.0,
+            135.0,
+            298.0
+          ]
+        },
+        {
+          "text": "5000",
+          "role": "tick-label",
+          "ink_box": [
+            47.0,
+            135.0,
+            135.0,
+            164.0
+          ]
+        },
+        {
+          "text": "0",
+          "role": "tick-label",
+          "ink_box": [
+            149.0,
+            847.0,
+            171.0,
+            876.0
+          ]
+        },
+        {
+          "text": "200",
+          "role": "tick-label",
+          "ink_box": [
+            303.0,
+            847.0,
+            369.0,
+            876.0
+          ]
+        },
+        {
+          "text": "400",
+          "role": "tick-label",
+          "ink_box": [
+            479.0,
+            847.0,
+            545.0,
+            876.0
+          ]
+        },
+        {
+          "text": "600",
+          "role": "tick-label",
+          "ink_box": [
+            655.0,
+            847.0,
+            721.0,
+            876.0
+          ]
+        },
+        {
+          "text": "800",
+          "role": "tick-label",
+          "ink_box": [
+            831.0,
+            847.0,
+            897.0,
+            876.0
+          ]
+        },
+        {
+          "text": "1000",
+          "role": "tick-label",
+          "ink_box": [
+            996.0,
+            847.0,
+            1084.0,
+            876.0
+          ]
+        },
+        {
+          "text": "Q (lunchboxen per dag)",
+          "role": "axis-title",
+          "ink_box": [
+            392.0,
+            997.0,
+            808.0,
+            1034.0
+          ]
+        },
+        {
+          "text": "Normale grens 700: stippellijn",
+          "role": "source-boundary",
+          "ink_box": [
+            160.0,
+            79.0,
+            683.0,
+            116.0
+          ]
+        },
+        {
+          "text": "TK: Q=0",
+          "role": "source-point-label",
+          "ink_box": [
+            220.0,
+            521.0,
+            369.0,
+            552.0
+          ]
+        },
+        {
+          "text": "TO: Q=0",
+          "role": "source-point-label",
+          "ink_box": [
+            230.0,
+            781.0,
+            383.0,
+            812.0
+          ]
+        },
+        {
+          "text": "TK: Q=700",
+          "role": "source-point-label",
+          "ink_box": [
+            530.0,
+            561.0,
+            723.0,
+            592.0
+          ]
+        },
+        {
+          "text": "TO: Q=700",
+          "role": "source-point-label",
+          "ink_box": [
+            420.0,
+            306.0,
+            617.0,
+            337.0
+          ]
+        },
+        {
+          "text": "TK: Q=800",
+          "role": "source-point-label",
+          "ink_box": [
+            540.0,
+            641.0,
+            733.0,
+            672.0
+          ]
+        },
+        {
+          "text": "TO: Q=800",
+          "role": "source-point-label",
+          "ink_box": [
+            550.0,
+            221.0,
+            747.0,
+            252.0
+          ]
+        },
+        {
+          "text": "TK: Q=900",
+          "role": "source-point-label",
+          "ink_box": [
+            870.0,
+            506.0,
+            1063.0,
+            537.0
+          ]
+        },
+        {
+          "text": "TO: Q=900",
+          "role": "source-point-label",
+          "ink_box": [
+            665.0,
+            161.0,
+            862.0,
+            192.0
+          ]
+        },
+        {
+          "text": "TK: Q=1000",
+          "role": "source-point-label",
+          "ink_box": [
+            900.0,
+            591.0,
+            1115.0,
+            622.0
+          ]
+        },
+        {
+          "text": "TO: Q=1000",
+          "role": "source-point-label",
+          "ink_box": [
+            860.0,
+            79.0,
+            1079.0,
+            110.0
+          ]
+        },
+        {
+          "text": "TK: gestreept · TO: doorgetrokken",
+          "role": "legend",
+          "ink_box": [
+            299.0,
+            905.0,
+            902.0,
+            942.0
+          ]
+        },
+        {
+          "text": "Bronpunten: Q bij TK of TO",
+          "role": "legend",
+          "ink_box": [
+            360.0,
+            953.0,
+            841.0,
+            990.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "2.1.4_ex_4.svg",
+      "SVG_sha256": "d89aa4d57479194f458a66770f3d803e0dc8fda7bacead016391c7393b4f152e",
+      "PNG_sha256": "62f7b1c492ec803c1bb2d50317197bdae912f2cb3908fd20c261cafb00678568",
+      "RGB_sha256": "726fca4c0199e94ac63733ab9201031ef20edb0f091c85c1979b24ebdb5cb97a",
+      "size": [
+        1200,
+        1050
+      ],
+      "source_font_px": 40,
+      "placed_font_pt": 15.68503937007874,
+      "ink_boxes": [
+        {
+          "text": "TK en TO (€ per dag)",
+          "role": "axis-title",
+          "ink_box": [
+            160.0,
+            21.0,
+            536.0,
+            58.0
+          ]
+        },
+        {
+          "text": "SmoothBox",
+          "role": "heading",
+          "ink_box": [
+            974.0,
+            21.0,
+            1180.0,
+            50.0
+          ]
+        },
+        {
+          "text": "0",
+          "role": "tick-label",
+          "ink_box": [
+            113.0,
+            805.0,
+            135.0,
+            834.0
+          ]
+        },
+        {
+          "text": "1000",
+          "role": "tick-label",
+          "ink_box": [
+            47.0,
+            671.0,
+            135.0,
+            700.0
+          ]
+        },
+        {
+          "text": "2000",
+          "role": "tick-label",
+          "ink_box": [
+            47.0,
+            537.0,
+            135.0,
+            566.0
+          ]
+        },
+        {
+          "text": "3000",
+          "role": "tick-label",
+          "ink_box": [
+            47.0,
+            403.0,
+            135.0,
+            432.0
+          ]
+        },
+        {
+          "text": "4000",
+          "role": "tick-label",
+          "ink_box": [
+            47.0,
+            269.0,
+            135.0,
+            298.0
+          ]
+        },
+        {
+          "text": "5000",
+          "role": "tick-label",
+          "ink_box": [
+            47.0,
+            135.0,
+            135.0,
+            164.0
+          ]
+        },
+        {
+          "text": "0",
+          "role": "tick-label",
+          "ink_box": [
+            149.0,
+            847.0,
+            171.0,
+            876.0
+          ]
+        },
+        {
+          "text": "200",
+          "role": "tick-label",
+          "ink_box": [
+            303.0,
+            847.0,
+            369.0,
+            876.0
+          ]
+        },
+        {
+          "text": "400",
+          "role": "tick-label",
+          "ink_box": [
+            479.0,
+            847.0,
+            545.0,
+            876.0
+          ]
+        },
+        {
+          "text": "600",
+          "role": "tick-label",
+          "ink_box": [
+            655.0,
+            847.0,
+            721.0,
+            876.0
+          ]
+        },
+        {
+          "text": "800",
+          "role": "tick-label",
+          "ink_box": [
+            831.0,
+            847.0,
+            897.0,
+            876.0
+          ]
+        },
+        {
+          "text": "1000",
+          "role": "tick-label",
+          "ink_box": [
+            996.0,
+            847.0,
+            1084.0,
+            876.0
+          ]
+        },
+        {
+          "text": "Q (lunchboxen per dag)",
+          "role": "axis-title",
+          "ink_box": [
+            392.0,
+            997.0,
+            808.0,
+            1034.0
+          ]
+        },
+        {
+          "text": "Normale grens 700: stippellijn",
+          "role": "source-boundary",
+          "ink_box": [
+            160.0,
+            79.0,
+            683.0,
+            116.0
+          ]
+        },
+        {
+          "text": "TK: Q=0",
+          "role": "source-point-label",
+          "ink_box": [
+            220.0,
+            521.0,
+            369.0,
+            552.0
+          ]
+        },
+        {
+          "text": "TO: Q=0",
+          "role": "source-point-label",
+          "ink_box": [
+            230.0,
+            781.0,
+            383.0,
+            812.0
+          ]
+        },
+        {
+          "text": "TK: Q=700",
+          "role": "source-point-label",
+          "ink_box": [
+            530.0,
+            561.0,
+            723.0,
+            592.0
+          ]
+        },
+        {
+          "text": "TO: Q=700",
+          "role": "source-point-label",
+          "ink_box": [
+            420.0,
+            306.0,
+            617.0,
+            337.0
+          ]
+        },
+        {
+          "text": "TK: Q=800",
+          "role": "source-point-label",
+          "ink_box": [
+            540.0,
+            641.0,
+            733.0,
+            672.0
+          ]
+        },
+        {
+          "text": "TO: Q=800",
+          "role": "source-point-label",
+          "ink_box": [
+            550.0,
+            221.0,
+            747.0,
+            252.0
+          ]
+        },
+        {
+          "text": "TK: Q=900",
+          "role": "source-point-label",
+          "ink_box": [
+            870.0,
+            506.0,
+            1063.0,
+            537.0
+          ]
+        },
+        {
+          "text": "TO: Q=900",
+          "role": "source-point-label",
+          "ink_box": [
+            665.0,
+            161.0,
+            862.0,
+            192.0
+          ]
+        },
+        {
+          "text": "TK: Q=1000",
+          "role": "source-point-label",
+          "ink_box": [
+            900.0,
+            591.0,
+            1115.0,
+            622.0
+          ]
+        },
+        {
+          "text": "TO: Q=1000",
+          "role": "source-point-label",
+          "ink_box": [
+            860.0,
+            79.0,
+            1079.0,
+            110.0
+          ]
+        },
+        {
+          "text": "BE (400; 2.000)",
+          "role": "answer-label",
+          "ink_box": [
+            850.0,
+            711.0,
+            1128.0,
+            748.0
+          ]
+        },
+        {
+          "text": "Snelste positieve groei: 400 < Q ≤ 700",
+          "role": "answer-label",
+          "ink_box": [
+            263.0,
+            945.0,
+            937.0,
+            982.0
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "personal_visual_review": "NOT PERFORMED BY THIS CHECKER",
+  "status": "PASS"
+}

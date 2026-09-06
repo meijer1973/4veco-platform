@@ -1,0 +1,20 @@
+{
+  "label": "native-check-r42",
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/214/check_render.py",
+    "--lessons-root",
+    "C:/wt/book2-214-build-current-20260906/4veco-lessen",
+    "--output",
+    "C:/wt/book2-214-build-current-20260906/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r42.json"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:02:20.264Z",
+  "finish": "2026-09-06T08:02:21.243Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "{\"status\": \"PASS\", \"files\": 15, \"pages\": [9, 11], \"errors\": []}\r\n",
+  "stderr": "",
+  "stdout_base64": "eyJzdGF0dXMiOiAiUEFTUyIsICJmaWxlcyI6IDE1LCAicGFnZXMiOiBbOSwgMTFdLCAiZXJyb3JzIjogW119DQo=",
+  "stderr_base64": ""
+}

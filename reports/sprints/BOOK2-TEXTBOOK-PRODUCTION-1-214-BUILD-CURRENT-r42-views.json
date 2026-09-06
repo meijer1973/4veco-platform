@@ -1,0 +1,378 @@
+{
+  "status": "CAPTURED_FOR_PERSONAL_REVIEW_NOT_ACCEPTANCE",
+  "run_sha256": "aab511ca4292271df1e9fb24ad7709ae239b4a209e8d68deec397be3940016ee",
+  "pages": [
+    {
+      "edition": "opgaven",
+      "page": 1,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-opgaven-r42-c89e1c4f4949\\pages\\page-001.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\opgaven\\page-001-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "e2ec5b997e794fd00aa140b6d4ecd2331a895620d8d088ee655c31f88624afcb",
+      "color_RGB_sha256": "75d4278662d48e075753bc06318effd80dc1df2c4d8ed260ea456b3d7d772d2a",
+      "gray_file_sha256": "dbf83cfbd6b3e8084a2195a16357f43fb05130852c9cf79c3d48ae7b9b630889",
+      "gray_RGB_sha256": "78a9aca84e6beb8f207749c084df7e92b8ac48c21414f804a596eb7624934f5d"
+    },
+    {
+      "edition": "opgaven",
+      "page": 2,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-opgaven-r42-c89e1c4f4949\\pages\\page-002.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\opgaven\\page-002-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "f5592009541270253b705b15c2b1819e516024592b86f45052f74e24d3524012",
+      "color_RGB_sha256": "65278ef8fdc744d1fde4003473b08f3c26324716bd1f0446c48c06a52c4de386",
+      "gray_file_sha256": "a102ae0063f734ee1a3c3f3d505b2b0d1716580f212311c9e0e3c2b82da6bbad",
+      "gray_RGB_sha256": "34d103b08cd2fca80a95d0ce8e124be10201abc32cea33472a8e1acf4dd0fee1"
+    },
+    {
+      "edition": "opgaven",
+      "page": 3,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-opgaven-r42-c89e1c4f4949\\pages\\page-003.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\opgaven\\page-003-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "8d1fa26f3f0fb5a292b904821618e2ca42c4a4911f0bc5aa03fe41dde003faa7",
+      "color_RGB_sha256": "6ed26431c5e33605cb557483e90f675d0b1da72869800a437b38e91dead55825",
+      "gray_file_sha256": "97fbddbb86aa0feead4b49f748046b05360b540722299a9b46aa54f936083cc4",
+      "gray_RGB_sha256": "227fd7835ccb4c4e36f7a0c484d32a7ea551a82582d003dac72c13d79bfda584"
+    },
+    {
+      "edition": "opgaven",
+      "page": 4,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-opgaven-r42-c89e1c4f4949\\pages\\page-004.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\opgaven\\page-004-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "d46de72bda2383dc8345c2c3db8900aa0e5adb89cdd671a99e9a2651dff39cbc",
+      "color_RGB_sha256": "e8c965292b6760f6451c1344c24698f986671d4a4de053a7c1ea263e94b98807",
+      "gray_file_sha256": "3b9dae0d0fd8696422b0bc0f352b4ab43458269575dd7bf6eb73236c83b1f17e",
+      "gray_RGB_sha256": "32bdbd97f4cf4fd731ec3f2225845fa64e109cce0968e66a2e2dac85f107fc4e"
+    },
+    {
+      "edition": "opgaven",
+      "page": 5,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-opgaven-r42-c89e1c4f4949\\pages\\page-005.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\opgaven\\page-005-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "85f34db598ab3c7156c943cb30a16cb9fbe64988b6ffc6fc09c99db23f89fcde",
+      "color_RGB_sha256": "50332aad2b8bc14fb224946956934f98c8df1eba98a9980bdc705479cbd1bc0b",
+      "gray_file_sha256": "0b7defe958e840a406f89d26f7576fe325e4e5fc326278967c6992d717313023",
+      "gray_RGB_sha256": "a0e02abd8353d3bc901ecc7c53ee70dbbbf375258a6aac81ea05bac470ba8798"
+    },
+    {
+      "edition": "opgaven",
+      "page": 6,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-opgaven-r42-c89e1c4f4949\\pages\\page-006.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\opgaven\\page-006-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "a8931581b9e63efbe4385a682c1809a4cb540fb0a41b1db74e2d8c60371f9e67",
+      "color_RGB_sha256": "61c0669d3b3cb473cc47fb0c274c57658f68bf8515aceb8b8de5439a18d55425",
+      "gray_file_sha256": "eeb32f8d24f72fbd1d91a5ed65583151dd5d3199f87f804dfb2e206232a20512",
+      "gray_RGB_sha256": "e064e2be82962dcd6dcb942011c64b2c3048b3adae0e5c7b8004b87112c31b5a"
+    },
+    {
+      "edition": "opgaven",
+      "page": 7,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-opgaven-r42-c89e1c4f4949\\pages\\page-007.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\opgaven\\page-007-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "4598565976725092ecf21a83ba6720a719b11b3c5b43f09f2c3a5167d896cd1e",
+      "color_RGB_sha256": "e90721c5d159662d907a48b649bc84d7c6a4d4ebe0ad40cb26971799cb4d36aa",
+      "gray_file_sha256": "6666e76ba4d69cddefa757c200341e4ef63c2d5ae3d08b035c2724a786aba22d",
+      "gray_RGB_sha256": "7f95ea909244a88b8ca6cf5038e9ec8659d56f5ae9169dd690b6a157b995569f"
+    },
+    {
+      "edition": "opgaven",
+      "page": 8,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-opgaven-r42-c89e1c4f4949\\pages\\page-008.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\opgaven\\page-008-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "7b4041f5bde012f8be3a6873f427ff402bfea4f71f4bf195c213fc595f3ebdb0",
+      "color_RGB_sha256": "9a47a99a003bfae7fc09bf304122c3f9a3079896a4c2184dfdd6a4ed5618eeff",
+      "gray_file_sha256": "6c2502e33f3aa4a7440c0774d70fd386ebaf9b11b8c665748c2ed19c1a6430e7",
+      "gray_RGB_sha256": "1382aeed27c8c9ac8b9af577920e837220709ccfb75641719cdfca6fe5e4261f"
+    },
+    {
+      "edition": "opgaven",
+      "page": 9,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-opgaven-r42-c89e1c4f4949\\pages\\page-009.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\opgaven\\page-009-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "6336f404dc07c590a1380670c95a10ebe111377afc69e785a7474fe5814aceaf",
+      "color_RGB_sha256": "187224a7a9dd2891f29faf8fcc40d0509436e34a2ae2782c61c302355c2505a0",
+      "gray_file_sha256": "1d15b9efa43baf069d6c6d152baa7081189f0c83aef4de9b4effbe23747bc2d2",
+      "gray_RGB_sha256": "baec94a324b00389613588aa07379822a98f5c160b6f27c98a5a4d836aacc7d9"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 1,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-antwoorden-r42-f2951e2f9690\\pages\\page-001.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\antwoorden\\page-001-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "144be3616592d296b9f4021fd8530524215b73d4d131e85f81e629affe2dcadd",
+      "color_RGB_sha256": "764fe962019761a54ead4132eb63afac65903e7644f54f7d2f2411f2f36a2f46",
+      "gray_file_sha256": "a70ee370f66f9fabfdd5bfda4ae1922c20660e7757f3fd0667bc2700ad478677",
+      "gray_RGB_sha256": "44294068375748533c2ea60019754be0e3ea1067abe1ed8c55905e4703cf59cf"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 2,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-antwoorden-r42-f2951e2f9690\\pages\\page-002.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\antwoorden\\page-002-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "1aa830d882f453998671c7cca3c0a9bffefe5d42d1cd824ea7fbb6b2e6ed5834",
+      "color_RGB_sha256": "eceee4bd62566a64dd6c196899efb1816101e3d123384ee2fac31e89e6d29a02",
+      "gray_file_sha256": "53d74f9e7fdaefc0a8c3559c2842b5ccfc1b267cc1459afdd1c51ce789daa5b9",
+      "gray_RGB_sha256": "fb2d07ed315188e2aada5613be946d28793d0a0336866052781212eac3ee0bdd"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 3,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-antwoorden-r42-f2951e2f9690\\pages\\page-003.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\antwoorden\\page-003-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "2a92e2da93b8b0779b6eb754a5f5bff5031756a0beb2fc9a528c85932e1edb56",
+      "color_RGB_sha256": "fcf1e9e3f9c7e3f5cdd128ba70fe77b061d57d113441cfe3ba89f9a970dd7aca",
+      "gray_file_sha256": "f066187cac18abd0ded0c3d71eb22a2416b1231a2cab6e9f24c677095f0135c9",
+      "gray_RGB_sha256": "db0033c60102cecb6b5bb14c3c3875028e07fde512ec0a1972c790877fc6c3b2"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 4,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-antwoorden-r42-f2951e2f9690\\pages\\page-004.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\antwoorden\\page-004-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "859beeaa18607214d306bd05ae5b499ea9a15d6151d1012de9aeebc492c71ccd",
+      "color_RGB_sha256": "3afd3152b8f9b430b6747dcba1c3b1886344fadc13dadfe30cd8c0136c5ed1c6",
+      "gray_file_sha256": "cc39dbff5b97ea5a7f10634669439540ce70210a2e32900aaf92fb19dfd05627",
+      "gray_RGB_sha256": "52829b2f97db27fec9222957b6a21bdd205011e37488bcb17ba369301ccc88e6"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 5,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-antwoorden-r42-f2951e2f9690\\pages\\page-005.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\antwoorden\\page-005-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "42abe895a032fcc28c711f6189e45ba12a7d4cb4ff0cd69b5f490b615013db5d",
+      "color_RGB_sha256": "0abd6ce97a5ccac8165bac2dab547cfdfcff8e5dec7db102d1ba4615ca608b59",
+      "gray_file_sha256": "12b8b335fd3504c588c5a3efa04d56cb4e356a4ee45f1fa075223b683b98aaee",
+      "gray_RGB_sha256": "67f22016103d4a6306b3f8b2b77ca8fb0653bb44876fa014c4016f8f477d6f0a"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 6,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-antwoorden-r42-f2951e2f9690\\pages\\page-006.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\antwoorden\\page-006-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "161d26bf12cc74c870a65801f6a7c1260aed51b56fd87d64cf0b2c830dbddc4e",
+      "color_RGB_sha256": "9a662012d444c3fcdc95e9d5c7bb59408e5127163fa46502f50cda96521e4b1c",
+      "gray_file_sha256": "d66db2491a5bb3aa21b24cb65ec946698fecd9cf920e3cf5eb9b7d9c2bd8718c",
+      "gray_RGB_sha256": "effb83cb6540a197d56e257f4b22ab85ebc31e753adc81c973691a062ac6242b"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 7,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-antwoorden-r42-f2951e2f9690\\pages\\page-007.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\antwoorden\\page-007-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "e2a321657e8051c6a2474382f765a9850a2f1e2d0c348f587bbd7aff26487506",
+      "color_RGB_sha256": "e8e2bd85b074e6244d3ea1df5f1f846d4bef8a14fe6723db9ceddbed71b7d447",
+      "gray_file_sha256": "976623344634a3f4783057bdf9bcca727e272ea075f55d3d6424b027231f1342",
+      "gray_RGB_sha256": "9e381937570fe2aade0fbe4058eab10d9974ea14fd6d3b63598fcc4cca0bd119"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 8,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-antwoorden-r42-f2951e2f9690\\pages\\page-008.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\antwoorden\\page-008-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "dbcd5d22c39e5a7ab65fb795576d9223f1182bdd7055e85d1d15c973780cf130",
+      "color_RGB_sha256": "2e609d2eca3cbc4f43f0b3ea240d8c4a84f8c7f5ec88c372f8feb744dde77934",
+      "gray_file_sha256": "68a56a19dffb88a3dd0ed3dfb2dc356f675efd098bf19b2cc7d0bf7b62655efe",
+      "gray_RGB_sha256": "127047824d2afc6133c589eb183228a3218632816bcce933bd0d4180af6ab340"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 9,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-antwoorden-r42-f2951e2f9690\\pages\\page-009.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\antwoorden\\page-009-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "115bea0cef0a51be92717d28cffb0e9eda74062d327e23bc4aeafb532e5e9b8c",
+      "color_RGB_sha256": "412e2802c0d76a671942fabdbdf05d8df32534da2a9f518333e694c8dc4acb11",
+      "gray_file_sha256": "1b6751f33fcabd14901614b81ef3948b786e115e5c15985d09929a03c4e4e650",
+      "gray_RGB_sha256": "66c26ecac98ef7ae3427657d4ad966abdb590ccdb2b15f85aba8d5a4003f8b9c"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 10,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-antwoorden-r42-f2951e2f9690\\pages\\page-010.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\antwoorden\\page-010-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "689b62e00fbcbe76f06856b7f4b3ad980f3f9c00557d3581ab141a0a7b34850a",
+      "color_RGB_sha256": "8aa99dcbb0b7c90821dccdd331566224a10d9e0d2b8983d5cb390ad8d7aaffb1",
+      "gray_file_sha256": "486b48825732ded1452c57a13eb01fe6c84ec885e704d66ff57bfe18ce842961",
+      "gray_RGB_sha256": "2d9572d67059b0dae36abbcf47350396ac689617dfd5f50f9f6f2147403aebce"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 11,
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full\\2.1.4-antwoorden-r42-f2951e2f9690\\pages\\page-011.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\antwoorden\\page-011-gray.png",
+      "size": [
+        1241,
+        1754
+      ],
+      "color_file_sha256": "ce032f425a346b225f9072b7941f5ba4db3a41389052889ecf7338aa4950fe56",
+      "color_RGB_sha256": "d64e365ff51ed0f0e59317ae2a8b8768e18412537007f90dd7cdbbc8a1ee4011",
+      "gray_file_sha256": "298a9c4f05e119b39cc4ca1e7fd15cdcf57d644713ec564568d527d1cf0b58f3",
+      "gray_RGB_sha256": "2f5ebf660e733259477c348736ec12fdbddc12a29ba01a8c22b198a4f2d9ed1d"
+    }
+  ],
+  "figures": [
+    {
+      "name": "2.1.4_ex_1.png",
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\_assets\\2.1.4_ex_1.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\2.1.4_ex_1-gray.png",
+      "color_file_sha256": "2ed6ebe9bef5c400e9a8c5591d414b1d104dca4607485e84a5ea84bfb2626555",
+      "gray_file_sha256": "c110e7997ba096396622664b78d4552a9265fe78ae845684999d1ecc83d4b946",
+      "color_RGB_sha256": "ceff7405f38aafe80c874ca7b2a935bf2ba651abead00bd6723d670fa13bde24",
+      "gray_RGB_sha256": "3dad712b287728f492fb8ca4de50d041af41da948406c6efbe48373fa6336631"
+    },
+    {
+      "name": "2.1.4_ex_2.png",
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\_assets\\2.1.4_ex_2.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\2.1.4_ex_2-gray.png",
+      "color_file_sha256": "58f81a1ff2c464e5471775620e9cf62fc9571b6078f9006b91e6b3f11cd44a05",
+      "gray_file_sha256": "86ff126aa9ea105feaf32057a9a1991ffb052061b0c7b43d1f4eda660a3a91f0",
+      "color_RGB_sha256": "1c4d2229669041345dadff649882a0185334592e2b07a917c8758f1c3939ed02",
+      "gray_RGB_sha256": "810e8d15d82c9230848a26ab28da149c8b9b7699baf34def3df9bee55ca21354"
+    },
+    {
+      "name": "2.1.4_ex_3.png",
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\_assets\\2.1.4_ex_3.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\2.1.4_ex_3-gray.png",
+      "color_file_sha256": "e8a535367b33be710548f3515bede4e6e11247344d2cbddde36cf5b05b8ca63c",
+      "gray_file_sha256": "75f0ddbc3ca51e25e3add9a5ec59cc2b20e577d53200de1439489f2803213cea",
+      "color_RGB_sha256": "47834c0e1f1e430f70e060f48b979f8eb477b5e570a1ee39f91aacc6abf0ea78",
+      "gray_RGB_sha256": "cb8a5cf93c67172308087c9d88aee99daa02d443cc8691506d5080ab025c1b1e"
+    },
+    {
+      "name": "2.1.4_ex_4.png",
+      "color": "C:\\wt\\book2-214-build-current-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\_assets\\2.1.4_ex_4.png",
+      "gray": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views\\2.1.4_ex_4-gray.png",
+      "color_file_sha256": "62f7b1c492ec803c1bb2d50317197bdae912f2cb3908fd20c261cafb00678568",
+      "gray_file_sha256": "9129ba2dfba050f260916e18525f255cdca1177eab8a5d36f12f7f2e3234b2bf",
+      "color_RGB_sha256": "726fca4c0199e94ac63733ab9201031ef20edb0f091c85c1979b24ebdb5cb97a",
+      "gray_RGB_sha256": "232782808bac304c1546652bd73dcbc3333d1d6073fad3241cec845cbd134c8e"
+    }
+  ],
+  "pdf_placed_image_geometry": [
+    {
+      "edition": "opgaven",
+      "page": 5,
+      "bbox": [
+        68.031494140625,
+        81.75685119628906,
+        538.5826416015625,
+        493.4891357421875
+      ],
+      "width_mm": 165.99998813205295,
+      "height_mm": 145.2500003814697,
+      "actual_40px_text_pt": 15.685038248697916
+    },
+    {
+      "edition": "opgaven",
+      "page": 8,
+      "bbox": [
+        68.031494140625,
+        81.75685119628906,
+        538.5826416015625,
+        493.4891357421875
+      ],
+      "width_mm": 165.99998813205295,
+      "height_mm": 145.2500003814697,
+      "actual_40px_text_pt": 15.685038248697916
+    },
+    {
+      "edition": "antwoorden",
+      "page": 4,
+      "bbox": [
+        68.031494140625,
+        94.47543334960938,
+        538.5826416015625,
+        506.20770263671875
+      ],
+      "width_mm": 165.99998813205295,
+      "height_mm": 145.24999499850801,
+      "actual_40px_text_pt": 15.685038248697916
+    },
+    {
+      "edition": "antwoorden",
+      "page": 9,
+      "bbox": [
+        68.031494140625,
+        81.75685119628906,
+        538.5826416015625,
+        493.4891357421875
+      ],
+      "width_mm": 165.99998813205295,
+      "height_mm": 145.2500003814697,
+      "actual_40px_text_pt": 15.685038248697916
+    }
+  ]
+}
