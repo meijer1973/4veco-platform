@@ -1,0 +1,12 @@
+{
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-check.py"
+  ],
+  "cwd": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T02:40:34.900Z",
+  "ended_at": "2026-09-06T02:40:35.526Z",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-check.py\", line 267, in <module>\r\n    if __name__=='__main__':main()\r\n                            ~~~~^^\r\n  File \"C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-check.py\", line 248, in main\r\n    need(file.is_file(),'Prior path missing '+str(file))\r\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-check.py\", line 20, in need\r\n    raise ValueError(message)\r\nValueError: Prior path missing C:\\wt\\book2-232-plan-review-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.html\r\n"
+}
