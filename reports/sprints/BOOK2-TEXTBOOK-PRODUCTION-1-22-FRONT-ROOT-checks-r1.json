@@ -1,0 +1,109 @@
+{
+  "status": "ROOT_AUTHOR_CORRECTION_CHECKS_PASS_PENDING_DISTINCT_RECHECK",
+  "P": "cf97be21f580b2d32cf4085bd92a8546a6d4c74b",
+  "L": "9546548c4dbd271516366df946f3eb0a9eaa1e93",
+  "source": {
+    "front_sha256": "0b0c0a528b6ca4b2b6af988dc5c6ac28ae4f85faba383c4e0ef0f513cd477c9d",
+    "style_sha256": "8d6380da0cf23bb07f19ac040ac06ec8bf6c1e486e16fcbc78b67de9034dcab4",
+    "layout_sha256": "f0474d728d23e760753416c8c5268f480bf4c5fb2ce4578f1e2651c11014cbde",
+    "exact_single_front_replacement": true,
+    "canonical_targets_and_L_unchanged": true
+  },
+  "imported": 31,
+  "attributed_review_verdict": "REVISE",
+  "attributed_existing_figure_views": 15,
+  "root_personal_views": 0,
+  "gates": [
+    {
+      "name": "structural",
+      "exit_code": 0
+    },
+    {
+      "name": "chapter-planning",
+      "exit_code": 0
+    },
+    {
+      "name": "durable",
+      "exit_code": 0
+    },
+    {
+      "name": "bundle",
+      "exit_code": 0
+    },
+    {
+      "name": "governance",
+      "exit_code": 0
+    }
+  ],
+  "layout": {
+    "page_count": 1,
+    "text_boxes": 43,
+    "min_pt": 12,
+    "negative_cases": 47,
+    "canonical_title_bindings": [
+      {
+        "id": "2.2.1",
+        "selected_MD": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+        "raw_sha256": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db",
+        "pupil_title": "Prijselasticiteit",
+        "frozen_title": "Prijselasticiteit",
+        "mapping": "exact"
+      },
+      {
+        "id": "2.2.2",
+        "selected_MD": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+        "raw_sha256": "573ba54a818018ccd565142efd81a79db2558d901e809ab1c35bc1676d238fc0",
+        "pupil_title": "Elasticiteit en omzet",
+        "frozen_title": "Elasticiteit en omzet",
+        "mapping": "exact"
+      },
+      {
+        "id": "2.2.3",
+        "selected_MD": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+        "raw_sha256": "5e19fc4528f5644f8c0f94da601c88d923c017078559a4ad0e97163837bfa287",
+        "pupil_title": "Inkomenselasticiteit en kruislingse elasticiteit",
+        "frozen_title": "Inkomenselasticiteit en kruislingse elasticiteit",
+        "mapping": "exact"
+      },
+      {
+        "id": "2.2.4",
+        "selected_MD": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+        "raw_sha256": "b5f0247abfc924c0bb0eace26d751ae4b25ba778252740e5d9210afdfa48d200",
+        "pupil_title": "Gemengde opgaven elasticiteit",
+        "frozen_title": "Gemengde opgaven: elasticiteit",
+        "mapping": "existing reviewed mixed display title omits colon"
+      }
+    ]
+  },
+  "raw": {
+    "platform": {
+      "ref": "aacf2165fd05d15c441410de2c529e74c5c4a71f",
+      "tree": "289409d3fd05c3ca6865cc84ae3addf9a416e076",
+      "files": 15752,
+      "excluded": [
+        "build-scripts/content/book-2/22/front.html",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-layout.py",
+        "reports/github-agent-index-platform.json",
+        "reports/github-agent-index-platform.md",
+        "reports/github-agent-index-lessen.json",
+        "reports/github-agent-index-lessen.md"
+      ],
+      "NUL_path_sha256": "ac555b842a42d1b5ac3da09f254fd7ae3acc9a67684c4437af78370b931c7495",
+      "path_blob_sha256": "0c37a4efad90adfa80ca3d05b5e93b34427e3472c55be44b6a6d39d52a1cf70d",
+      "all_actual_raw_equal_Git": true
+    },
+    "lessons": {
+      "ref": "9546548c4dbd271516366df946f3eb0a9eaa1e93",
+      "tree": "fd7e772a708a2fbd863a13f409f284908a8f863a",
+      "files": 1916,
+      "excluded": [],
+      "NUL_path_sha256": "56bd40449c0c19628abbaf1fc93df05244f3644869f06146c850655ce366ab65",
+      "path_blob_sha256": "d1c53a3e6c5ee0285abbce66038347266add24d7410567384a8367fddbaad42f",
+      "all_actual_raw_equal_Git": true
+    }
+  },
+  "output_manifest_sha256": "caa3a8a4f0e10b620845b8341596df4ff27feefeffcbfc16e01b924844db7c46",
+  "native_writes": 0,
+  "assembly_release": false,
+  "independent_recheck": "PENDING"
+}
