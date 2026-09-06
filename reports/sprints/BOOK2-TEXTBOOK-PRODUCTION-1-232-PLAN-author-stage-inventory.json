@@ -1,0 +1,29 @@
+{
+  "platform_input": "0b15d6bfa75fa62e00e5945e16a7cd8f9a7f6bf6",
+  "lesson_input": "3199ff2ae89b39a472b48ee0818de5b1c191063a",
+  "platform_paths": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-plan.md",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-bundle-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-check.py",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r1-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r2-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r3-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-r4-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-result-r3.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-result-r4.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-checks-result.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-durable-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-foundation-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-governance-final-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-lessons-claim-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-platform-claim-process.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-publish.cjs",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-report.md",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-run.cjs"
+  ],
+  "lesson_paths": [
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md"
+  ],
+  "strict_owned_scope": "PASS",
+  "source_native_review_changes": 0
+}
