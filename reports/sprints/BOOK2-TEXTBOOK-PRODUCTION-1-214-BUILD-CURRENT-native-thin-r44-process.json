@@ -1,0 +1,24 @@
+{
+  "label": "native-thin-r44",
+  "argv": [
+    "C:/Python314/python.exe",
+    "C:/wt/book2-214-build-current-20260906/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/build_pdf.py",
+    "--platform-root",
+    "C:/wt/book2-214-build-current-20260906/4veco-platform",
+    "--lessons-root",
+    "C:/wt/book2-214-build-current-20260906/4veco-lessen",
+    "--proof-root",
+    "C:/wt/book2-214-build-current-20260906/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin",
+    "--proof-suffix",
+    "r44"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:20:27.125Z",
+  "finish": "2026-09-06T08:21:19.706Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "{\"status\": \"NATIVE_CAPTURE_COMPLETE_NOT_ACCEPTED\", \"route\": \"thin\", \"native_files\": 15, \"pages\": [9, 11]}\r\n",
+  "stderr": "",
+  "stdout_base64": "eyJzdGF0dXMiOiAiTkFUSVZFX0NBUFRVUkVfQ09NUExFVEVfTk9UX0FDQ0VQVEVEIiwgInJvdXRlIjogInRoaW4iLCAibmF0aXZlX2ZpbGVzIjogMTUsICJwYWdlcyI6IFs5LCAxMV19DQo=",
+  "stderr_base64": ""
+}

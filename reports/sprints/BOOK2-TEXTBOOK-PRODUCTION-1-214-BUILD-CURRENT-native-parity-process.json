@@ -1,0 +1,16 @@
+{
+  "label": "native-parity",
+  "argv": [
+    "C:/Python314/python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-parity.py"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:26:27.876Z",
+  "finish": "2026-09-06T08:26:32.567Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "{\"status\": \"PASS\", \"runs\": 5, \"native_files\": 15, \"pages_per_run\": 20, \"figures\": 4, \"source_files\": 10, \"observed_color_and_gray\": true, \"no_acceptance\": true}\r\n",
+  "stderr": "",
+  "stdout_base64": "eyJzdGF0dXMiOiAiUEFTUyIsICJydW5zIjogNSwgIm5hdGl2ZV9maWxlcyI6IDE1LCAicGFnZXNfcGVyX3J1biI6IDIwLCAiZmlndXJlcyI6IDQsICJzb3VyY2VfZmlsZXMiOiAxMCwgIm9ic2VydmVkX2NvbG9yX2FuZF9ncmF5IjogdHJ1ZSwgIm5vX2FjY2VwdGFuY2UiOiB0cnVlfQ0K",
+  "stderr_base64": ""
+}

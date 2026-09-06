@@ -1,0 +1,10 @@
+{
+  "raw_path": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-source-probes-r3-process.json",
+  "raw_bytes": 302044775,
+  "raw_sha256": "062d65ff80c22026cd5d1eb26072523100bef75e86fe66de073f6212f3bc8576",
+  "durable_gzip_path": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-source-probes-r3-process.json.gz",
+  "gzip_bytes": 64289362,
+  "gzip_sha256": "1f7d1c4808f530a0a265b08f935756c7fc9dd328b2bb6556aaf72fe1f0cb9296",
+  "lossless_roundtrip": true,
+  "reason": "Raw complete process JSON repeats actual Git blob stdout and its base64 encoding; exceeds GitHub100MB limit. Durable gzip retains every original byte. Only uncommitted disposable raw duplicate may be cleaned with native resolved-path checks; no historical evidence is rewritten."
+}

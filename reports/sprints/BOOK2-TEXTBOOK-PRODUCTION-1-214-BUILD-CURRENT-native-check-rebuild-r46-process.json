@@ -1,0 +1,25 @@
+{
+  "label": "native-check-rebuild-r46",
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/214/check_render.py",
+    "--lessons-root",
+    "C:/wt/book2-214-build-current-20260906/4veco-lessen",
+    "--output",
+    "C:/wt/book2-214-build-current-20260906/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r46.json",
+    "--rebuild",
+    "--proof-root",
+    "C:/wt/book2-214-build-current-20260906/4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker",
+    "--proof-suffix",
+    "r46"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:25:19.204Z",
+  "finish": "2026-09-06T08:25:59.733Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "{\"status\": \"PASS\", \"files\": 15, \"pages\": [9, 11], \"errors\": []}\r\n",
+  "stderr": "",
+  "stdout_base64": "eyJzdGF0dXMiOiAiUEFTUyIsICJmaWxlcyI6IDE1LCAicGFnZXMiOiBbOSwgMTFdLCAiZXJyb3JzIjogW119DQo=",
+  "stderr_base64": ""
+}
