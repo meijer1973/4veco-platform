@@ -1,0 +1,87 @@
+{
+  "status": "CANDIDATE_INVENTORY_VALID_NOT_ACCEPTED",
+  "P": "fac4d3e69fe74394d9edadbf98027ff6b4a60812",
+  "L": "3cdb04690e535691bf5b64b2051bbe352553e6b5",
+  "verification_attempt": "r2",
+  "verification": "f8eb1a19f9119752540fc26d320da559390666b301c2775a8e96e36dfaa0aec3",
+  "tests": "18fda31dcb5217ba5fc728522abd4f4099e1eef3227764ff495e381fb7bd04ac",
+  "inventory": {
+    "counts": {
+      "A": 23,
+      "C": 5,
+      "L": 4,
+      "P": 9
+    },
+    "physical_PDFs": 32,
+    "other_38_rows_unchanged": true,
+    "all_29_prior_PDFs_unchanged": true
+  },
+  "gates": [
+    {
+      "name": "release",
+      "exit_code": 0
+    },
+    {
+      "name": "structural",
+      "exit_code": 0
+    },
+    {
+      "name": "production",
+      "exit_code": 0
+    },
+    {
+      "name": "specialist",
+      "exit_code": 0
+    },
+    {
+      "name": "durable",
+      "exit_code": 0
+    },
+    {
+      "name": "bundle",
+      "exit_code": 0
+    },
+    {
+      "name": "governance",
+      "exit_code": 0
+    },
+    {
+      "name": "student-web",
+      "exit_code": 1
+    },
+    {
+      "name": "publisher-print",
+      "exit_code": 1
+    }
+  ],
+  "raw": {
+    "platform": {
+      "ref": "11dd724a3b1924f6006307410b9a8f9e7c54eba6",
+      "tree": "323382c4e98f7cf89d876797eb4b903b5ee92a75",
+      "files": 16392,
+      "excluded": [
+        "reports/github-agent-index-platform.json",
+        "reports/github-agent-index-platform.md",
+        "reports/github-agent-index-lessen.json",
+        "reports/github-agent-index-lessen.md",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-output-manifest.md"
+      ],
+      "NUL_path_sha256": "64547805455d6d102f55c81f13b583ff329c4c5d97c2391c3d7072ee6d4df0f9",
+      "path_blob_sha256": "b1ac579b1eb35bf988eca57c1e89a77101f333ecd045a9428e420f5583d45ce0",
+      "all_current_raw_equal_Git": true
+    },
+    "lessons": {
+      "ref": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+      "tree": "42ddadefe84e9809e6f3749c406dca4fd990ff3d",
+      "files": 1924,
+      "excluded": [],
+      "NUL_path_sha256": "185888bcc67dd5f3be0fea6e85f2c84274ff7e111f9bbbc4d5b9e60aae7a59d9",
+      "path_blob_sha256": "1bc802938e59a1b91ea0d795adcb7c91687159db920772084ed1e0e06691b221",
+      "all_current_raw_equal_Git": true
+    }
+  },
+  "manifest_sha256": "fd2b86c6b8536346f7a510d79a34b70635487b8edf5e4dab347ef1d353baf43b",
+  "root_native_runs": 0,
+  "root_personal_views": 0,
+  "independent_review": "PENDING"
+}
