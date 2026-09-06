@@ -5,6 +5,12 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
+Current214 author-candidate verification: platform
+`87fe8de86b4b46abf56d4b03ca0ad836f39fd592`, adopted native lesson
+`3bc9e81828dcc57932dc871825aaa4cf4a975fe1`. Distinct paragraph review,
+specialist QC, root native reproduction/acceptance and handoff remain PENDING;
+see214-ROOT-ADOPTION-result.md. The two214 PDFs are C, not A.
+
 Current224 verification: platform `8a92dcd7884faa3cf8114f5125b60bb22876c1f2`,
 with root-only QC/handoff transition in224-QC-ROOT-acceptance.md. Its original
 specialist QC was adopted at lesson `aa2087a20c5bee4465f9c98d83031116e94c9667`.
@@ -22,11 +28,11 @@ All paths below are relative to the lesson book root
 
 Expected: 27 theory + 6 consolidation + 6 chapter + 2 book = **41 PDFs**.
 At this checkpoint: **8 internally gate-closed current paragraph packages**:
-23 accepted-with-flags PDFs,0 adopted candidate PDFs,6 legacy unaccepted and12
+23 accepted-with-flags PDFs,2 adopted candidate PDFs,4 legacy unaccepted and12
 absent. §211 now has current R5 independent paragraph review, distinct specialist
 QC and root acceptance/handoff. §212 now has current distinct specialist QC,
 root acceptance, closed S1 lineage and renewed handoff; its three PDFs are A. Physical
-root presence is 29, not 29 accepted. All six remaining legacy PDFs remain Git-blob-
+root presence is 29, not 29 accepted. All four remaining legacy PDFs remain Git-blob-
 identical to the baseline. Separate in-progress worktrees do not count here.
 
 §221 R8 and §213 R6 correct their short-alt/title metadata, retaining all49
@@ -122,8 +128,8 @@ No output is silently accepted through an older PASS or reviewed_final label.
 | 7 | 2.1.3 | paragraaf | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf` |
 | 8 | 2.1.3 | opgaven | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf` |
 | 9 | 2.1.3 | antwoorden | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf` |
-| 10 | 2.1.4 | opgaven | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf` |
-| 11 | 2.1.4 | antwoorden | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf` |
+| 10 | 2.1.4 | opgaven | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf` |
+| 11 | 2.1.4 | antwoorden | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf` |
 | 12 | 2.1 | hoofdstuk | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf` |
 | 13 | 2.1 | antwoorden | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.pdf` |
 | 14 | 2.2.1 | paragraaf | A | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf` |
@@ -175,6 +181,8 @@ hashes alone are not student-quality acceptance.
 | 2.1.3 / paragraaf | `534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024` | R7/S1 current internal acceptance with flags; review/QC/handoff complete |
 | 2.1.3 / opgaven | `d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05` | R7/S1 current internal acceptance with flags; review/QC/handoff complete |
 | 2.1.3 / antwoorden | `d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787` | R7/S1 current internal acceptance with flags; review/QC/handoff complete |
+| 2.1.4 / opgaven | `c89e1c4f49491028d0cf171eb3219977b7545c127ad0a5c37f0f713df4136f48` | Current9-page author candidate; root source/byte checks pass; distinct review/QC/root acceptance pending |
+| 2.1.4 / antwoorden | `f2951e2f969045b0c9d549c1f544fbd7d2a1679352169d3ac64d90ec799f27f8` | Current11-page author candidate; root source/byte checks pass; distinct review/QC/root acceptance pending |
 | 2.2.2 / paragraaf | `36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c` | R13 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.2 / opgaven | `0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555` | R13 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.2 / antwoorden | `61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2` | R13 internal acceptance with flags; current review/QC/handoff complete |
@@ -226,8 +234,16 @@ and final combined book assembly.
 delta PASS and unchanged root full/thin/print proof; see223-S1-root-result.md.
 Its current specialist QC and root acceptance/handoff now pass with flags;
 see223-root-qc-result.md and223-root-acceptance.md. Final aggregate/CI gates remain.
-§214 follows accepted prerequisite teaching and has a separately published author
-candidate awaiting distinct review/QC; it is not yet adopted into this inventory.
+§214 follows the independently reviewed complete48-input release and actual
+accepted211/212/213 teaching. Its author candidate is now adopted:322 final
+source/native/evidence paths,10 source files and15 native files are raw/Git exact.
+Root13 source methods pass, including603 raw-input and78 whole-source/controller
+pre-effect cases. Five preserved author runs have100 identical raw/decoded
+Poppler pages; current root20 MuPDF pages match the original same-engine native
+checker. All48 author personal color/gray observations remain attributed, not
+root or independent review. Distinct paragraph review, specialist QC, root native
+full/thin/direct reproduction/acceptance and handoff are PENDING. Its two PDFs
+are C; timings54/60/72 remain UNOBSERVED. See214-ROOT-ADOPTION-result.md.
 §224's current paragraph/specialist reviews, root positive native reproduction,
 acceptance and handoff are complete. Chapter2.2 still requires independent
 consistency/front correction/recheck and separately reviewed accepted inputs,
@@ -253,8 +269,10 @@ Git-blob comparison for all legacy PDFs. An initial line-split probe failed to
 interpret Git's quoted Unicode paths and incorrectly counted zero baseline
 PDFs; it was discarded and replaced with NUL-delimited paths before this record.
 The corrected historical pre-§231 baseline/current tracked count was26. The
-current224 root acceptance refresh checks41 unique planned paths,29 present, six
-baseline-identical legacy PDFs,12 absent and all23 accepted PDF hashes. Current
+current214 author-candidate adoption refresh checks41 unique planned paths,
+29 present, four baseline-identical legacy PDFs,12 absent,all23 accepted and
+two current candidate PDF hashes. Other39 rows and27 other existing PDFs remain
+unchanged. Current
 acceptance never inherits a legacy label without fresh gates. No PDF files changed
 by inventory checks.
 
