@@ -78,6 +78,10 @@ for row in parity['current_native']:
 checker=b.load_owned('check_render').check(L)
 assert checker['status']=='PASS' and checker['errors']==[]
 assert [len(row['pages']) for row in checker['pdfs']]==[9,11]
+old_checker=P/(AUTHOR+'native-check-r46.json')
+assert sha(raw(old_checker))=='82b810f0736125cdeb5adba318951c921f749703fe336a3a24607b2ec9f8538a'
+# Compare MuPDF to the original MuPDF capture, not Poppler antialiasing.
+assert json.loads(json.dumps(checker))==read(old_checker)
 reference=None
 runs=[]
 for expected in parity['runs']:
@@ -115,6 +119,10 @@ for expected in parity['runs']:
     pages=[]
     for proof in record['proofs']:
         assert proof['inspection_status']=='PENDING' and proof['pages_inspected']==[]
+        for ext,key in [('md','source_sha256'),('html','html_sha256'),('pdf','pdf_sha256')]:
+            assert sha(raw(rebase(proof['source_'+ext])))==proof[key]
+        for asset in proof['assets']:
+            assert sha(raw(rebase(asset['path'])))==asset['sha256']
         assert Path(proof['artifact_id']).name==proof['artifact_id']
         folder=runroot/proof['artifact_id']
         assert read(folder/'manifest.json')==proof
@@ -136,7 +144,6 @@ assert len(runs)==5
 for edition in checker['pdfs']:
     for page in edition['pages']:
         ref=next(r for r in reference if r['edition']==edition['edition'] and r['page']==page['page'])
-        assert page['raw_RGB_sha256']==ref['RGB_sha256']
         assert [page['width'],page['height']]==ref['size']
 views=read(P/(AUTHOR+'r42-views.json'))
 assert sha(raw(P/(AUTHOR+'r42-views.json')))==parity['visual_evidence']['views_sha256']
