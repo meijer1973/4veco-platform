@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "head": "f63c00bbda0ee96e956c15deb00b2e59f84dff25",
+  "lessons": "9f9729a9b4a55805d9e24bf53f712f1b02f6e00a",
+  "custody": {
+    "rows": [
+      {
+        "repository": "platform",
+        "inherited_files_checked": 13584,
+        "generator_only_exception": true,
+        "actual_raw_git_exact": 13922
+      },
+      {
+        "repository": "lessons",
+        "inherited_files_checked": 1904,
+        "generator_only_exception": false,
+        "actual_raw_git_exact": 1904
+      }
+    ],
+    "imported_files": 318,
+    "lesson_changes": 0,
+    "canonical_review_unchanged": true,
+    "stale_qc_unchanged": true,
+    "handoff_absent": true
+  },
+  "scopes": [
+    {
+      "label": "increment-platform",
+      "exit": 0,
+      "ok": true,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 2,
+        "generated_indexes": 0,
+        "review_evidence": 337,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "unchanged-lessons",
+      "exit": 1,
+      "ok": false,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "exit": 0,
+      "ok": true,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 84,
+        "generated_indexes": 6,
+        "review_evidence": 6189,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "exit": 0,
+      "ok": true,
+      "counts": {
+        "partA_textbook": 207,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 6,
+        "unknown": 0
+      }
+    }
+  ],
+  "whitespace": [
+    {
+      "label": "increment",
+      "exit": 0
+    },
+    {
+      "label": "complete",
+      "exit": 2
+    }
+  ],
+  "no_foreign_normalization": true
+}
