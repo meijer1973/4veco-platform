@@ -1,0 +1,12 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/review-gates/check-governance-freshness.js"
+  ],
+  "cwd": "C:\\wt\\book2-233-plan-20260906\\4veco-platform",
+  "started_at": "2026-09-06T03:46:45.948Z",
+  "ended_at": "2026-09-06T03:46:46.896Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"remote\": \"origin\",\n  \"remote_ref\": \"origin/main\",\n  \"origin_main_sha\": \"96416b6b5bd57094576e9aba0a42d682584ec479\",\n  \"head_sha\": \"e0f0531597845d632d8ebe4c29be2ca5b551914d\",\n  \"allow_policy_edit\": false,\n  \"files\": [\n    \"AGENTS.md\",\n    \"AGENT_GITHUB_ENTRY.md\",\n    \"docs/review/pr-readiness-routing-policy.md\",\n    \"docs/review/pr-integration-lane-policy.md\",\n    \"docs/review/pr-throughput-policy.md\",\n    \"package.json\",\n    \".github/workflows/platform-ci.yml\",\n    \"build-scripts/ci/check-branch-protection.js\"\n  ],\n  \"differing_files\": [],\n  \"failures\": []\n}\n",
+  "stderr": ""
+}
