@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "actor": "codex-root",
+  "platform": "dc8b62c3f4d992dedcaf5f0863ebfe6cbce653be",
+  "lessons": "f666bbb7dd258f1f01b38a20dd6ca3802848f8b7",
+  "decisions": [
+    {
+      "key": "214",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json",
+      "raw_sha256": "f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6",
+      "inputs": 48
+    },
+    {
+      "key": "232",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-232-release.json",
+      "raw_sha256": "9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18",
+      "inputs": 49
+    }
+  ],
+  "current_gates": [
+    {
+      "label": "structural",
+      "exit_code": 0
+    },
+    {
+      "label": "214-paragraph_production",
+      "exit_code": 0
+    },
+    {
+      "label": "214-specialist_review",
+      "exit_code": 0
+    },
+    {
+      "label": "232-paragraph_production",
+      "exit_code": 0
+    },
+    {
+      "label": "232-specialist_review",
+      "exit_code": 0
+    },
+    {
+      "label": "durable",
+      "exit_code": 0
+    },
+    {
+      "label": "bundle",
+      "exit_code": 0
+    }
+  ],
+  "all_97_actual_input_rows_verified": true,
+  "unique_actual_inputs": 67,
+  "lesson_writes": 0,
+  "native_builds": 0
+}

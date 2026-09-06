@@ -1,0 +1,18 @@
+{
+  "original": "eb26a4a780b67a4707bf92526bd27fba159f763e",
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "eb26a4a780b67a4707bf92526bd27fba159f763e"
+  ],
+  "start": "2026-09-06T07:02:46.170Z",
+  "finish": "2026-09-06T07:02:46.330Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 557c6913] Publish actual input-review scopes and custody bindings\n Date: Sun Sep 6 08:57:15 2026 +0200\n 10 files changed, 617 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-actual-scope.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-final-binding.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-publication.md\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-scope-complete-lessons-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-scope-complete-platform-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-scope-own-lessons-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-scope-own-platform-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-whole-whitespace-cr-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-whole-whitespace-default-process.json\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDU1N2M2OTEzXSBQdWJsaXNoIGFjdHVhbCBpbnB1dC1yZXZpZXcgc2NvcGVzIGFuZCBjdXN0b2R5IGJpbmRpbmdzCiBEYXRlOiBTdW4gU2VwIDYgMDg6NTc6MTUgMjAyNiArMDIwMAogMTAgZmlsZXMgY2hhbmdlZCwgNjE3IGluc2VydGlvbnMoKykKIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIxNC0yMzItSU5QVVQtUkVWSUVXLWFjdHVhbC1zY29wZS5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTQtMjMyLUlOUFVULVJFVklFVy1maW5hbC1iaW5kaW5nLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIxNC0yMzItSU5QVVQtUkVWSUVXLXB1YmxpY2F0aW9uLm1kCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTQtMjMyLUlOUFVULVJFVklFVy1zY29wZS1jb21wbGV0ZS1sZXNzb25zLXByb2Nlc3MuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjE0LTIzMi1JTlBVVC1SRVZJRVctc2NvcGUtY29tcGxldGUtcGxhdGZvcm0tcHJvY2Vzcy5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTQtMjMyLUlOUFVULVJFVklFVy1zY29wZS1vd24tbGVzc29ucy1wcm9jZXNzLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIxNC0yMzItSU5QVVQtUkVWSUVXLXNjb3BlLW93bi1wbGF0Zm9ybS1wcm9jZXNzLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIxNC0yMzItSU5QVVQtUkVWSUVXLXdob2xlLXdoaXRlc3BhY2UtY3ItcHJvY2Vzcy5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTQtMjMyLUlOUFVULVJFVklFVy13aG9sZS13aGl0ZXNwYWNlLWRlZmF1bHQtcHJvY2Vzcy5qc29uCg==",
+  "stderr_base64": ""
+}

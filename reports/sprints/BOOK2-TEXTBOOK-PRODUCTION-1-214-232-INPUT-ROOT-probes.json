@@ -1,0 +1,3247 @@
+{
+  "status": "PASS",
+  "actor": "codex-root",
+  "whole_gate_sha256": "4f3c2ab8a5e877697952f7c951fdc712ff08d2f13c966a1ca86394690314fe5d",
+  "whole_probe_sha256": "baec457019aafcca1c80ee8a46d69a7634e047dab7906e70a0d8a02f282084ef",
+  "release_sha256": {
+    "214": "f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6",
+    "232": "9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18"
+  },
+  "candidate_sha256": {
+    "214": "8adf329ff71e912335baa11d1e78a28afb8eb807de52306ffd867e35c7f0f376",
+    "232": "113d3321a3b859d582a4febf6ff71cd259111d6c5d233047113b1455f6bcc5dc"
+  },
+  "rows": [
+    {
+      "key": "214",
+      "label": "actual current root files",
+      "kind": "positive",
+      "success_callbacks": 1,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "all original physical fixture files",
+      "kind": "positive",
+      "success_callbacks": 1,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_book-plan.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md\n+ actual - expected\n\n+ '81a23247b07f8e5ecc699f72f7f9bc697981bd7dfdde42f4072d8ddffde3de3a'\n- 'b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '0c28ff37142675c0d31e1f847fcbb7051598782df5fd46c7d225f59341e70aa3'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_chapter-plan.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md\n+ actual - expected\n\n+ 'f58b1769ac9b1bc8b43f77d0ce7e86b050494d00c47b5658e197f6ff4ed33a81'\n- 'ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '3b6a4658118e199d13be1940058b5bae68ae6a94a4808d1e9a786dec99829a00'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\2.1.4-textbook-plan.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md\n+ actual - expected\n\n+ '1048441bd20eea32a3f112d37b80fbd04655f7a7243e823fc758d744bfe86a07'\n- 'a6f71553e887acdf7b94be5d411303660b9fad2ef8745cb25986636aa49b4cc4'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '84a69480801886c9b488c4a3d82e1695d90d3f75e890c9e6ce0c0890d9468e59'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-textbook-plan.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-plan.md\n+ actual - expected\n\n+ 'd239bf891147270f0022697419e063294bff9d800251548afb544cd22661e92d'\n- 'f46c7aa444ba6fef1f6f885b34bd52963fccac3cdc7b13b898eb6665219c4cd0'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '621422cbd0e1aa43eeac0fcb9dfece3268bcc7a83728ae43db074b6cd7b62acc'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-review.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-review.md\n+ actual - expected\n\n+ '28e0cf8b450389cf1104e8ef3ca3f2ae35abd23c23676a65781e735134ae4efe'\n- 'a75755c7c2e6cdffb2defcbb5403814cf854d87bfae9a8172dd768aadb5b8023'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'feece28d8213b25b1478645a0d616fae62dd27b636c7e7c813f409101c5a68ac'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-quality-ref.yaml'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-quality-ref.yaml\n+ actual - expected\n\n+ '4ada09ae7432894ef58b258b470ca1107d6cbd1acb62f20afc1519fcf81001dd'\n- 'c85c44a53d46af87ad61500b83b0fd721fac43c97ffd1be3d512308158a4b9f5'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'f3829288b7700f87531d617c343dfcecf4c5dff8482a41e78bad49adaf2b150b'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-textbook-handoff.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md\n+ actual - expected\n\n+ '933030c2bfabd1278b563f93d25fe54db75ac136454cfb9db3f0fb2dc80ab884'\n- '0d14506e314a11fef0637cc66cf29036f174b94cafbf7fa5ede2eff88937500f'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'c5fd809c6fdee8deff1ba646b8a7d7e63c8cd39d3b403bfdc8513ecf8f962b05'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – paragraaf.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md\n+ actual - expected\n\n+ '618ce5c2838e653316ca54e339fdecf09b5baf2746428d128afbfad00f90ef1a'\n- 'de7abc910f6ec940eb329abd003085921f32409956ec1e0450bcc4a5454eb6b5'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '5d85e888ec380fe7e04ca6d420c841e3d8a852f15e0f37675d914dfc77ac3e02'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – opgaven.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md\n+ actual - expected\n\n+ '612d7b219ef3b33688c41b450a1afecaf1782bb7ffb918d0c4f77193455c2a56'\n- 'bacccc1c9b063c4c786f2749d31993d94eb671fdc5bf0a899fb123d89bc0558b'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'afcd436725b021673e8093d786d0fdeb3d4e89838f522b9c001cd228f53c4696'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – antwoorden.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md\n+ actual - expected\n\n+ '89ee738c99f49765f90337c5750761e4a5fa14b10b9b899e09074838e301d6bf'\n- 'f7572e3d4f2fc5bc092562eb06e76ebb0480fbbc8aa1ea01d3752a7251cbbdc9'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '4fbc6f12413911e9108f438b119e87fe35027065983aa5d176e3749c5618f4f3'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-textbook-plan.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-plan.md\n+ actual - expected\n\n+ 'd993af46d4ddc0b4b64c112acc5d77548e6f586a6523f34db3f379dba30785f3'\n- '5e1d318dd1b841467ca297d67956304d1861e3eb68d1df56cc4d32f6434d34a4'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '74830cd974538c90d31f82d926c37c60560105a958645658dbd38f101c97aba2'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-review.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md\n+ actual - expected\n\n+ 'bde711409b0daf3bf0b2a4cbfa07a3bec0ca869ff9d2f0091fbc5c01cc81e8ad'\n- '79429b9f1750710baae46751a5792e4a02e7c177888a01f5ca3a15c4039a78f7'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'cc874ff1ed3e2469967a254116c56e2484bd714cd2208294d6a78a08863fb836'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-quality-ref.yaml'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml\n+ actual - expected\n\n+ 'a01b4a9a9d4d20b60f9074c12ddc4a0ef283cf3c91ff723a97f9a9d03f0fe4c6'\n- '73bd2a2447b38c9d95cbc3bd69b8037e0f46b7564655b4513009fd6707b7b07d'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '46a7131d4f266b3d98b1a111e2df3a03c2339849cc33e2f228ca3953988cfb84'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-textbook-handoff.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md\n+ actual - expected\n\n+ '36cd642b21a0d6849bceda4c7bfc1bc2df8c19b7d3478beb0fec49517f56575c'\n- '4da6e5b4f0a70273d78c067f34484c8a5f6faf164b0f09c1559b9a73ff6611fe'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '2be3c26a6caa8a06034bc20ea454a94219554f63f02cf6c98ffb683bf765f631'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – paragraaf.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md\n+ actual - expected\n\n+ '0871a4b365f8747002d6f6372caa81f917fde8ddc3ba722bf1323cb94f30f549'\n- '9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '9e379fff795903460008ebe1a52c3f83f82cdb2709e92760237d6f284580a601'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – opgaven.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md\n+ actual - expected\n\n+ '729cd210e86fa933dbe63e322665fffa0fa6c6cfc25ad4a4e74c538f6d5bca06'\n- 'df2cd3fe66af760b55b1f28a2f51ca9c7449b4f1704d5da278db064850eef002'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'e479eca758a909c41242973b79605c3e164b43eaafc992b07ba160c5a0c2fbff'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – antwoorden.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md\n+ actual - expected\n\n+ 'e8973e5db7295701a2dcb7d309d3596ad14d5a1354d0f0dbd70290339ef2e7be'\n- '4ffcb70c96f2c0c178a06a6092ec6701c4323cc1ac697de4156bc7cf0d43b8b3'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '597d76b7e893ca4a2c2e96b84469911e057c71313855583b91862813b96877cf'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-textbook-plan.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md\n+ actual - expected\n\n+ '2effe2acdfa2c479ab6599adea8fd4c0a85966c6ff1a6cbc79c81567d28e0d28'\n- '4cf29ff1e70953f6d1f8399a65d63ad37031e6a129804ad555442bfb98624234'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '74dedb3eaa55452775c6ec776501b5f5febb27261ff389e40594dde7344713e9'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-review.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md\n+ actual - expected\n\n+ '71ef71e9c299dbc149bc557f176876d23eeabb89185cd1c715e5e1ff4be08175'\n- '5064642034fac9763202d2424b87cef2f7cc909aaf3a6031b90d247ee44409c3'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '3aa540a89bd4f24d35b28c73a1ac2ea485536602b6a9509d920211ee9a24716a'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-quality-ref.yaml'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml\n+ actual - expected\n\n+ '1b2676bee3a35a0746c6bf696493ca59e4a5be70549b77b87f5b38727d92fa0e'\n- 'c63e0f885c2f09ad8b48b88bf0c9d8da7c5820b56874a942046b5c2aa1012cad'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '1f882ab0a433f207a0def2f8dd6059781444e5032dc58f06816217357229ebe5'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-textbook-handoff.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md\n+ actual - expected\n\n+ '5f81c9de7473d63e4a287b0af9c2e079f559d36edd8fe0a8b846126c71e8b398'\n- '0a056eced568ddab730b389842aa5b47ccf554d54b019d052d9e7a30ce51564d'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'd74454d198f900b7248ccef1f8a96ded871cabc4fa1de97fb63d410ed446b27b'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md\n+ actual - expected\n\n+ '9d382f8911b5ab74c8ebd1ad9fabe634f334cd02ab5e4f0abeb79b93f253490f'\n- '358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'aea908a45b2137e381fcf48b3174c4fcfe69e1276febc770adf968e396bd0af5'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md\n+ actual - expected\n\n+ '1d1aafd6636d70d86ce46542745e8db6b3edd1857388b990c6901ecbfcbac978'\n- '7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'c9406da64eaa484cd052753c1e741ef8c446ae472aba4b18fec8fbedaf7cb1d2'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md\n+ actual - expected\n\n+ '3600e431514c6b530450fbee6888717e12d3babf22e816e45872dac3c656c407'\n- '2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '2a51557d60fb208c0b6603c10ca1470e89322fd6e044f9665b06b724dba3fb88'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/references/owned/course-blueprint-v6-three-year.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\references\\owned\\course-blueprint-v6-three-year.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/references/owned/course-blueprint-v6-three-year.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "references/owned/course-blueprint-v6-three-year.md\n+ actual - expected\n\n+ '3bac504a9f2fab00dbee371d23ed80d9551dd2b14ce7280ae2ea7797b39a3325'\n- '72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/references/owned/course-blueprint-v6-three-year.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'd970fd4ee45ab08226eb39c75e35da32cafc46ef478cceaf8127cbf87b7df3ed'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/references/owned/course-blueprint-v5.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\references\\owned\\course-blueprint-v5.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/references/owned/course-blueprint-v5.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "references/owned/course-blueprint-v5.md\n+ actual - expected\n\n+ 'f0c25655a96dbfd2c247ff05e51f15169e22f85474a4f936eb204404167c4d9d'\n- '61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/references/owned/course-blueprint-v5.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '20023486431a8ff64c6c0e18a0a7a46c0591a8cb6e84e7b3eb09333262ff6dc3'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/references/authored/course-target-exercises.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\references\\authored\\course-target-exercises.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/references/authored/course-target-exercises.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "references/authored/course-target-exercises.json\n+ actual - expected\n\n+ '9757547a4ff9d8d0bd893c1fe9551bc820de3c187104aa3e1b475adb30c1c17c'\n- 'd3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/references/authored/course-target-exercises.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '9521d837ff09733232e4ed48561c8beb86fbc44201c461d7e01a944f850f7155'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/references/authored/book-outlines/book-2-outline.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\references\\authored\\book-outlines\\book-2-outline.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/references/authored/book-outlines/book-2-outline.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "references/authored/book-outlines/book-2-outline.md\n+ actual - expected\n\n+ 'eb1bfa8990e41936530cbff9f73b46677e2626d0f7ab91264ecea140612c5477'\n- '8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/references/authored/book-outlines/book-2-outline.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '0f38f3324cb3cc801a7bad3d7b722ed365862ff7dd9c3c5d4ed793a89ac9474a'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/references/authored/book-outlines/book-2-outline.meta.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\references\\authored\\book-outlines\\book-2-outline.meta.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/references/authored/book-outlines/book-2-outline.meta.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "references/authored/book-outlines/book-2-outline.meta.json\n+ actual - expected\n\n+ 'e394ef374781ecaae019513a56ef323a9e2b19e108b3a145312c4cb5dbe5fcea'\n- '6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/references/authored/book-outlines/book-2-outline.meta.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'f57e61f02db2c6c16009ae01f4b7ef1d7078c871ec8fb2c30bccbd0b35d3489c'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TARGET-INTEGRATION-1-owner-authorization.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md\n+ actual - expected\n\n+ 'f69a2aad749cdbfa3267777eb9b164eec14c5a66dba5e160e918ef88dc261111'\n- '6bfdbe09538c7cdd35acbed22e8cf1b8af60c0fcafa89bec33fdb55c0b84ba87'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '01dd0ab8d7687549a45362d60c1ddfc4d6fe7c31af8dfe190a92197766f5e06a'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md\n+ actual - expected\n\n+ 'ca2656fbee8b7a0d3af54c3f8f372218d7a90743cd793e9127723da6359ae14e'\n- 'c6ade2c6ba52ba147d89ada603e88b80086749529944a378b0a4cf44a213ef58'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '5494318ed429c8c6ad2b29413424108d7f07c18b80bed91c7cf22f491d68ce3b'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md\n+ actual - expected\n\n+ '5cf11aa74a271bd4185941ecbf50b7eaf49da63c99f1061acbf16a66c1b465d1'\n- '1f3d6019255ba85ab62989922ca733de90a289f7a0fd8add07752db16be140c3'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'd3633489d1159ddb7ac2a7b3303e814aaf156d4c14b9063457e50d79f5e94ff0'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-result.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-result.md\n+ actual - expected\n\n+ '09b0b6c860a82b0ba05f879a9d28082601b4b1ccd8f9cf423311b2d2523dfbe1'\n- '35c868b0de2a5c06b6ba0acbcdddb622eb807f3ad23f07c7b1e8a311e84eed66'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'a63a636d9cb11d95c698daa76de1dc613bf6c58c00e0276e1aa35267289a1797'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-evidence.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-evidence.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-evidence.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-evidence.json\n+ actual - expected\n\n+ '44dfbaf7effc0af34b6022d3b7b98f5da427586a40f4c820efde83f977b1883e'\n- '85a846734794903082f0cd74f2ca46e306efe25857a9a930ebee5e2521384e33'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-evidence.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '27ae8e33c364a0b7f7383797c87518de27954ee23d7ef57ce0da04c235fc84d3'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-result.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-result.md\n+ actual - expected\n\n+ '4809baa8cb3952a5abe657259d764b5a7a7309c4e9cdb04b39b7e2a83ba8094b'\n- '18c3bdf4cd1fc517bbc5f1c03de03c1183d95e628b9f4d52cc873b30516a6fcc'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '50db7ec68083ca791bdcea0563a311b3eec63d4f363bd01785b1505eda1f0dc4'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-check.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-check.json\n+ actual - expected\n\n+ 'c26dff5b62870d39c0551401a960875190d07176a259cbcbd61b651852e1bb51'\n- 'd9384704c0f0c3f7574c8978d493b1b58ae4a8579dfc53b59a6ce0307dac1a63'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '1377c36087e4e2982342b407ad40e1e35416f17aa6b01ab2a1efea1588f77ebb'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md\n+ actual - expected\n\n+ 'ef6001f31307523b6a6f326f067506b8a1b707bbd8705b9653606859e507a447'\n- '55f4242785f1789d00927feac0fe5ed9eec630f78d7c59bb844357c3cc88408b'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'd6d9d6211722e23541c28cbf57eec8e5aedff3001d6af2bc98271fb0ec4266cd'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md\n+ actual - expected\n\n+ '4f10bbc72a96d2efd24cac7e38e5f264c6fbe6936913333e91c41cb3bec2cf98'\n- 'a2a03966e3d5b8de9dced4a178a0632dfe1b162867b9444db228140796d7c689'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'fead3a1aba13153f0de8014277e4ff070d78875c2847c4f8d2406a01003b2d7f'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md\n+ actual - expected\n\n+ 'dcdb22ee2bb3a68cf3214951fef1f71f3f857aa5377e64b6c01b2efb9a4f71b0'\n- '04d82281e1159c331122d722a12ee2ef7b793f85a53a47b0567997aedcc8d9d1'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '6898dc61a30d3033175442c8299b92eba6e3c89273406749e3170bdc1e2718ce'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md\n+ actual - expected\n\n+ 'd8fb5f472d4f91ac90c5bc9aa9ac017664c7484f907f013347045c8b2dd155f9'\n- 'fa7730902ad304ae28c533000be2b1ece946d2269285b47098c6f272e83f9502'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '0d664ac5d957ea4c5c1738c21b4e937aba212d8876ddcb4ff9e957a638d03678'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json\n+ actual - expected\n\n+ '4dc42f8cab26891752dcd3365ca70807f7d2f8fde3b5c22a1534787767284f60'\n- '95570be7bb0a213a4603e2e4fca7bc50b6b5eea2cdb59ae87eb4a3bdfd928bc4'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '3b9d22578ecfd77a94603a90c83112ef566f92b4336ee729421729534172ce86'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md\n+ actual - expected\n\n+ '44736be78df41a2d618f0123b9e4e8ce6b10bd8ac081c4bf886f21c0ae1a8194'\n- '1597dea1034da744072005ba159f0a9f6bf1f7eb1a0e9963b1ebec6fe43e0b33'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'cdefd1fba4adf57915ab21ffcd89e15f9f9637f00130f86a2e028bd08db3d75d'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json\n+ actual - expected\n\n+ '35cf118983d2ec3fc6591bfb916895c7372b067e4ceec9fb957fadcf5567f28f'\n- 'ee9cd22d301926db6c4b85ff651cee59ab574bf7aeb03c34bdd61b2140abf432'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '940635aaf8b55e2dae27603b5be1d7e3f6aa87efb317d1e7b01b4292cdafe4ad'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json\n+ actual - expected\n\n+ '16df8629d490109ac18ecb7fd811fb55037f2cc22e9339ae41af10b2eb22bc15'\n- 'ff0ac73ce5d35fddf8d8bdf5d148a7cc0f980de560566b98acabf11063417026'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'ba529bde97d6993dd5b1dcdbfbc81994bf4a307001cbda086811c6aa5c13c356'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/build-scripts/content/book-2/b2_213.py",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\build-scripts\\content\\book-2\\b2_213.py'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/build-scripts/content/book-2/b2_213.py",
+      "kind": "negative",
+      "rejected": true,
+      "error": "build-scripts/content/book-2/b2_213.py\n+ actual - expected\n\n+ 'd9c924920dd0ac73234282c914a55fbf0cda1bffc1e7e6c51c1222384340c111'\n- '87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/build-scripts/content/book-2/b2_213.py",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '628eecf1feef41c188d3ac23e5ab9743f22ddfabc4ab752d58dc946a2e84fc64'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-root-acceptance-r5.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-211-root-acceptance-r5.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-root-acceptance-r5.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-root-acceptance-r5.md\n+ actual - expected\n\n+ '3f5f7a3fa527606eaa324c2aa414c2b429032a6ed9e0dc4f6cc1f25af8deab62'\n- 'c0af671684cf55366222657b76a577099dde65b69242476acdd0a8bbac050632'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-root-acceptance-r5.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'eb422cf681ccfd5490d739aeb3656159d5c8ec6ca47c635cb39c09f719f84a0c'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance.md\n+ actual - expected\n\n+ 'a68b9c58d11700e66e2120fced5cd16efa1d2b1ecbd4054ec3c6c11507a635a9'\n- '74493b384982dd845cb974728f6142e3118be6a99e9d2d39bf55712b3f9d6c24'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '838d49e74661c1f590c54e4d6ca091ffaac57f8926ebeac5f4269f760ad8caec'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.json\n+ actual - expected\n\n+ '45c1c8771f64ba756136cc48bb2713cfb4959a3e421594b82ede3fb62ab4668d'\n- '2f09ef392c2523f6ae4fc70f4fb01f8a54359db7fdce39657d2f835d11be44db'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-acceptance-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '45188b2b10af307da333781d891cc9616c8e6f4ccf3365478bae734fcb4e6e05'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "pending decision",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '4a8ed2421a79dbe9163dd54c6d0aea6b42a131c135e9c2819b1d02b51c6e76ce'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "wrong actor",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'f13441eb4502adea64f5891a7ac4be2650d2a9cff2d2e0e2fabc057023c19f15'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "wrong paragraph",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '5492fcdd2c1faf060f476d2fe68d3bd11e993694327369057d9f85d6003e7c77'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "wrong candidate commit",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'aa3ebb96fed498864b1aea2419db5f46b5fa07e2108d6cfe6c8d93db38ca73a0'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "wrong manifest path",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '65ee5563ec77881cfdddf7f7b1fb67b13f61435db818e202c7073f98f70f62e3'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "wrong manifest hash",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '26aaea957c3cdecbaabd0179ff1249562ac678997ce20b6a627ab6a8ac710a0c'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "wrong reviewer",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'd67a036ae2679f0d55ba91987e8662f46ad1b4587fd14b706e534d11a5be3882'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged review verdict",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '123ab029e87d0803577dc78dacbb9bfc7e1357ae134b6e4a38294332f8d92a95'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "wrong review commit",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'abb0c5d965b5d4ac8b8e177821febe8e4537f93e18e6f1739a81c3c3bbb9e964'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "partial review files",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '773c070a409e44cdfdf676f1bd10085d7675f6fa76ae562e7900fc66b4ae71e3'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged review hash",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'a9cd15290d70b8e3f02f36413b30275880ccf13ac89dc4e29f47fec097e61019'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "semantic-only bypass",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '8f10d1ceb3e5d1a00cc2cfd2a21413e4db6a8a6e87de47c6b073b4ecda7bb331'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "unbounded outputs",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'a04af2a0dfcfca84e7884e6740bfac8b5d518ed4b4bf110a0c0bee54710e381c'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "observed timing",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'b8dbd4b1beae72cfa1ee1e3799e4794c99d7522c4eb3e61bae89d80b69bd19ac'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "target drift",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '4caca06387b73263a13b6f4e71590e310db3554b940a44d46e4c6b79b4d0087b'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "acceptance gates removed",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'bd1ee076a77983806f8fb1948b36e93e33fc8967484de9a17dbdbecf14cc2072'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "merge grant",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '8f0e5ec6751c199f463b27ca9ae88d56479c9938c0f7833a7bf50c9135a7bd44'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "partB commission",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'db3509360bd7cfa3ee927e99b7f9df430acaf9e4e019089e4edeba06406e2a26'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing root release",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-214-release.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "empty release",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "genuine other paragraph release",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n- 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check.cjs",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check.cjs'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check.cjs",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '58e9f9db62efc81f8f8a63cf6a1f08c51d6afad40fd83a4de277ea6ced8b6858'\n- '927a4d012404b4e00cabfe793e9db45e22fae0660b968a3e97b6c007851c4f4b'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-214-inputs.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '296f6645720eedc17a2e9c5d37fe668a02ffa62c4a40fc9cfaae4f594f023165'\n- '8adf329ff71e912335baa11d1e78a28afb8eb807de52306ffd867e35c7f0f376'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "report.md\n+ actual - expected\n\n+ '43f5e66dc0d1a6456d461ec8f90ff3da75e1c69055301932eaa02ab6ded21601'\n- '373adbb84185500dfc1c17d27976e0eb7d0ecfb5157bb24ccfe32849415489ed'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "independent.json\n+ actual - expected\n\n+ '6dce434ee25a5f0d8a959d24f2b280100297ddca4b839b42aa9c27307af83491'\n- '8dadf8d9f0c233e1fa5201984419eb8e66bb077c32c6177befb844a2bd984491'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "missing whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "forged whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "lineage.json\n+ actual - expected\n\n+ '98128b64bb97f855285ff0e3fac207a3b942f6757ebf3296195646c152f2b8e0'\n- 'fdbe250068cc81235c5b3217171a66de5f0412c6350992a24405dd4beb557d40'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "214",
+      "label": "all original fixture bytes restored",
+      "kind": "positive",
+      "success_callbacks": 1,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "actual current root files",
+      "kind": "positive",
+      "success_callbacks": 1,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "all original physical fixture files",
+      "kind": "positive",
+      "success_callbacks": 1,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\_book-plan.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md\n+ actual - expected\n\n+ '81a23247b07f8e5ecc699f72f7f9bc697981bd7dfdde42f4072d8ddffde3de3a'\n- 'b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '600073fa5784f4d93fd622dc9a0693b4603b5950533d7b6f94d259ef547ced53'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\_chapter-plan.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md\n+ actual - expected\n\n+ '7872efd754ac19d078db5579f75f9fdf78b4f9ae5885212eca6302be6e511537'\n- 'e8a07bfe212a6ae817db99fecb93e86812e1d9e9af533b7ef21591bbb9025dc7'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'd17af1cbd67d163f475fd3d065487e4a3909010f889b5d52b9f8f0fa1a0a76ec'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.2 Producentensurplus en totaal surplus\\2.3.2-textbook-plan.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md\n+ actual - expected\n\n+ 'a54d3a235f5d7aa04329bc6ad0898bc476571f8e9d64bfd41d04a1bda8c1c5cf'\n- 'd0781ffb6d2966209c3a160309316ce92ebc0455fa51d4235ccc6840afa58935'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'fa04cd8fb0f950dd44d5073474553f63bf745e327731bce964078b5965ffc046'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-textbook-plan.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md\n+ actual - expected\n\n+ '2effe2acdfa2c479ab6599adea8fd4c0a85966c6ff1a6cbc79c81567d28e0d28'\n- '4cf29ff1e70953f6d1f8399a65d63ad37031e6a129804ad555442bfb98624234'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '0aca34e8c62fa05c49a17bb6d83badfbcd9ae4578e23fdb6044930083123d190'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-review.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md\n+ actual - expected\n\n+ '71ef71e9c299dbc149bc557f176876d23eeabb89185cd1c715e5e1ff4be08175'\n- '5064642034fac9763202d2424b87cef2f7cc909aaf3a6031b90d247ee44409c3'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'e2306157b82348d74ea29d70b91081ad98757ac5c8246d0924c356b4f993d0c5'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-quality-ref.yaml'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml\n+ actual - expected\n\n+ '1b2676bee3a35a0746c6bf696493ca59e4a5be70549b77b87f5b38727d92fa0e'\n- 'c63e0f885c2f09ad8b48b88bf0c9d8da7c5820b56874a942046b5c2aa1012cad'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'a69171bdf327a14a2d2930676dc340bb2053c1eb651de50c2dea83fb0eb67a36'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-textbook-handoff.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md\n+ actual - expected\n\n+ '5f81c9de7473d63e4a287b0af9c2e079f559d36edd8fe0a8b846126c71e8b398'\n- '0a056eced568ddab730b389842aa5b47ccf554d54b019d052d9e7a30ce51564d'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'f6e9bbe7ee2201e4a3bf0e4a12c73cde5712b6af3581e1bf6f5596f6f14ed9e8'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md\n+ actual - expected\n\n+ '9d382f8911b5ab74c8ebd1ad9fabe634f334cd02ab5e4f0abeb79b93f253490f'\n- '358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'dd0fcaf52b8ef1207a311df330791b46a5c1bd5d9a71941ed9d72d978bd1faf5'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md\n+ actual - expected\n\n+ '1d1aafd6636d70d86ce46542745e8db6b3edd1857388b990c6901ecbfcbac978'\n- '7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '71980596247827ead5f5d9572a84ed1b8022541c2642776bcf40ec8d87c5ec5e'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md\n+ actual - expected\n\n+ '3600e431514c6b530450fbee6888717e12d3babf22e816e45872dac3c656c407'\n- '2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '8464e02427d2b47e630636a374c1bc42ae39c7d82dc5ab6bd71a99404cb34142'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1-textbook-plan.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md\n+ actual - expected\n\n+ '4c7a8c5fe54fad99a33ebb62107aacdbdd2cac2ce99de9e2acd9d6e20ab86090'\n- '60d6a743681e1361478395a591b7c82e44acf8c4587a93c4cc842b036cf017b1'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'ac46df090e0bd21cca7f3445d2f8b4b3ab9901a8dc7ab66b17492f9513467a05'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1-review.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-review.md\n+ actual - expected\n\n+ 'd0907bf7b5c1c2ca224fd0ff442354c58210bad052608687fcd39d6cda61e5f6'\n- '8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'aeaeca4decb3e323883650c52aa0f0dce7d307003eb28864a841764749d7fc31'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1-quality-ref.yaml'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml\n+ actual - expected\n\n+ '305ac06dbc63f38cc289fcf08e14ba0d7c06644b433fc6350b0a5b6f8ec4b168'\n- '312ca25c21bf6428ded5162f2d299b8e73da25219fbb914cad88dcb8ca47820a'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '861d3fb9f7cb851f40ee4f579d818caa5550755ada1131e1fb915b61327729dc'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1-textbook-handoff.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-handoff.md\n+ actual - expected\n\n+ 'c374c11c42ff90adfa636fb9df9fdc1e461682b894c7c6f1a8e9546d5521bf1e'\n- '69bdae1f9dd0efaace0a90db57e6ac0f17db627f93fdb333b48dafeb36eebe79'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '27f92563268d1250c343a51d67c6ad2b04ebe824ef3c54e3fa4554071c5c33cd'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – paragraaf.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md\n+ actual - expected\n\n+ '7c9222bf1cbe3d4c487490246b510e07d919a22cd8dd82a48e2e7a3526396c33'\n- 'eb5c7c163099bd0ae7f6be44edf53e885de6ce78e4f37e647408e2c06aba5544'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '6481fcab0c0ecd24c76c197ea7fd9521656b9362fbed9ea64df26ad2aa766ab1'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – opgaven.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.md\n+ actual - expected\n\n+ 'af1333f8c02b07b17f434498d0e88b6044d1105f47e6c323712346191ef5e821'\n- '70669f6ed10a7465aea37f5f2298dd17708f6430a975fe32187135701122529e'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'ab46f9e18b9aee0de228f1c2109c37e5cf0f8dd0084e2d749bd3381286d000b5'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – antwoorden.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.md\n+ actual - expected\n\n+ '68526153f9a4e7a5866d62248585d37f3263eb427ec618106b6bb782c2665fbc'\n- '0a1d4b31690f1a053b7180136d387df524ff9ae0df355db273ca32443811d083'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '70b20338e33c92ae5b532ad0a4a2114efccd7327bf69fa3f594a5180c949869d'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-textbook-handoff.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md\n+ actual - expected\n\n+ '933030c2bfabd1278b563f93d25fe54db75ac136454cfb9db3f0fb2dc80ab884'\n- '0d14506e314a11fef0637cc66cf29036f174b94cafbf7fa5ede2eff88937500f'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '14190cf674b829e99893dcd2991240a93a3ccda05756609d5bf51db0aef73359'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-textbook-handoff.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md\n+ actual - expected\n\n+ '36cd642b21a0d6849bceda4c7bfc1bc2df8c19b7d3478beb0fec49517f56575c'\n- '4da6e5b4f0a70273d78c067f34484c8a5f6faf164b0f09c1559b9a73ff6611fe'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '9dd3cd66f1d02c20b642214ca89d5ab5c0032ea0e4ea6e5a5aa2c4b48e4e5947'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-review.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md\n+ actual - expected\n\n+ 'bde711409b0daf3bf0b2a4cbfa07a3bec0ca869ff9d2f0091fbc5c01cc81e8ad'\n- '79429b9f1750710baae46751a5792e4a02e7c177888a01f5ca3a15c4039a78f7'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'f87668fde0a0364c98ab6b41a6a01c0cc4786f2f502eb4c202f3c3a73e2bce95'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-quality-ref.yaml'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml\n+ actual - expected\n\n+ 'a01b4a9a9d4d20b60f9074c12ddc4a0ef283cf3c91ff723a97f9a9d03f0fe4c6'\n- '73bd2a2447b38c9d95cbc3bd69b8037e0f46b7564655b4513009fd6707b7b07d'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'bc24bd815547190b05c164f8090797898156d4b7d98475f6deedabf1a43df971'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – paragraaf.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md\n+ actual - expected\n\n+ '0871a4b365f8747002d6f6372caa81f917fde8ddc3ba722bf1323cb94f30f549'\n- '9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '99982c001b167ca4a9f2bc8acbf959122c1412016d0f3c6aee1874eeea07bf7a'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_chapter-plan.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md\n+ actual - expected\n\n+ 'f58b1769ac9b1bc8b43f77d0ce7e86b050494d00c47b5658e197f6ff4ed33a81'\n- 'ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '9ea4bc135982d11c6a39aa617cb853ccae8ba19073c142f13a457a3f62eccb1e'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\\1.1 Hoofdstuk Economisch denken en rekenen\\1.1.3 Grafieken en tabellen\\1.1.3 Grafieken en tabellen – paragraaf.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md\n+ actual - expected\n\n+ '2679608da9fdf175d71ff7087829858dddb6fe8a125079c9be937b41afea8521'\n- 'b5ac11eac6b71178a2977896b5871f135d6fbc096ba429dbcae8a19a1a734d35'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'cf78b42ee9861ef16899387f4db24fa39cbbbdab39b794add4dd3c9ada453caf'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\\1.2 Hoofdstuk Vraag\\1.2.1 Individuele vraag\\1.2.1 Individuele vraag – paragraaf.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md\n+ actual - expected\n\n+ '90fe4a182b0e3d064558c5c2a3526b522674894ee86dac737e3d8cfe888044ca'\n- 'b38720605f513e42a37cb64ebf843fd27817c6f26dfc87cd327491cdc54ff42d'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '2d1f97184045b29cd06cc4e6e069c5d222b11492e5dec6de3dbaceec51685cb3'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\\1.3 Hoofdstuk Aanbod en marktevenwicht\\1.3.1 Aanbod\\1.3.1 Aanbod – paragraaf.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.md\n+ actual - expected\n\n+ 'aac7352d3d92585e9c6a80500f18c59ef96e745e9c7962e556f2cdb12973db7b'\n- 'e0acf01f27fed22ce55c3508cced3a1861d55823d198d61e27eb25e40e186d98'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'a0ebde2e10c95540a5fea1483ce0a22b8e97a981d561aa5abd2c58359af92e0b'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\\1.3 Hoofdstuk Aanbod en marktevenwicht\\1.3.2 Marktevenwicht\\1.3.2 Marktevenwicht – paragraaf.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md\n+ actual - expected\n\n+ '063350533c937456374be78d24592fe02dfc2000b80b6f6c5573d67567702ab3'\n- 'e4e2717d088b20c3cbfc9c7944311a0b0bfdcf75a492335da5c3b0d0c027e898'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '80d6eaf01ac5f45520415b5b50eede80fc5dfac12d735bc25e1f69bef681b11d'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/references/owned/course-blueprint-v6-three-year.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\references\\owned\\course-blueprint-v6-three-year.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/references/owned/course-blueprint-v6-three-year.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "references/owned/course-blueprint-v6-three-year.md\n+ actual - expected\n\n+ '3bac504a9f2fab00dbee371d23ed80d9551dd2b14ce7280ae2ea7797b39a3325'\n- '72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/references/owned/course-blueprint-v6-three-year.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'ba5053a822022a424eed51f427fdcbcc45649d3274eb2548a1a0957871507414'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/references/owned/course-blueprint-v5.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\references\\owned\\course-blueprint-v5.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/references/owned/course-blueprint-v5.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "references/owned/course-blueprint-v5.md\n+ actual - expected\n\n+ 'f0c25655a96dbfd2c247ff05e51f15169e22f85474a4f936eb204404167c4d9d'\n- '61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/references/owned/course-blueprint-v5.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '5e6a51bae0e2c0c8cd0069b4ca7fccc44e1f934b7a9bc122aae0df3da9c7e4f4'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/references/authored/course-target-exercises.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\references\\authored\\course-target-exercises.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/references/authored/course-target-exercises.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "references/authored/course-target-exercises.json\n+ actual - expected\n\n+ '9757547a4ff9d8d0bd893c1fe9551bc820de3c187104aa3e1b475adb30c1c17c'\n- 'd3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/references/authored/course-target-exercises.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'fdb43118e5f177e086488490fffbbe2c6f7605b43aeb412635abdf1179f1d160'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/references/authored/book-outlines/book-2-outline.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\references\\authored\\book-outlines\\book-2-outline.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/references/authored/book-outlines/book-2-outline.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "references/authored/book-outlines/book-2-outline.md\n+ actual - expected\n\n+ 'eb1bfa8990e41936530cbff9f73b46677e2626d0f7ab91264ecea140612c5477'\n- '8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/references/authored/book-outlines/book-2-outline.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'a442a54c80971161b58ff36ae00d5dad63337e8dff8f0d760175b18176273ad7'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/references/authored/book-outlines/book-2-outline.meta.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\references\\authored\\book-outlines\\book-2-outline.meta.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/references/authored/book-outlines/book-2-outline.meta.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "references/authored/book-outlines/book-2-outline.meta.json\n+ actual - expected\n\n+ 'e394ef374781ecaae019513a56ef323a9e2b19e108b3a145312c4cb5dbe5fcea'\n- '6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/references/authored/book-outlines/book-2-outline.meta.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'b5208412422e6633d58d0cecbd224622bfaccb3a32b350583a50800c71800c7a'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TARGET-INTEGRATION-1-owner-authorization.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md\n+ actual - expected\n\n+ 'f69a2aad749cdbfa3267777eb9b164eec14c5a66dba5e160e918ef88dc261111'\n- '6bfdbe09538c7cdd35acbed22e8cf1b8af60c0fcafa89bec33fdb55c0b84ba87'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'b6bb919235befbb5900380dd32c4090118cc61875c04addf0378d709fc876039'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md\n+ actual - expected\n\n+ 'ca2656fbee8b7a0d3af54c3f8f372218d7a90743cd793e9127723da6359ae14e'\n- 'c6ade2c6ba52ba147d89ada603e88b80086749529944a378b0a4cf44a213ef58'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '9e9fe00ea6e9078752ffc4b2de4798b7ed5f578747dede64a5fc2b855c371772'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md\n+ actual - expected\n\n+ '5cf11aa74a271bd4185941ecbf50b7eaf49da63c99f1061acbf16a66c1b465d1'\n- '1f3d6019255ba85ab62989922ca733de90a289f7a0fd8add07752db16be140c3'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '4683043ba3455a6270a87c4da620a6f0707b21517ef7dfaab50776021d775e25'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-report.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-report.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-report.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-report.md\n+ actual - expected\n\n+ 'b0b5707b4058ff462c3d2c0236652c2521a4c39260a52477f484ec6ea32c83b1'\n- 'e8873fde4a1e948a154231dbb1a995ba692cfefad8bd146b3597b3f483fde163'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-F1-REVIEW-report.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '92250ef7e1e6d7d2751d0e27c1bf936da1fffc9ccd9681d92970ecbb6f0fb081'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-verification.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-verification.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-verification.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-verification.json\n+ actual - expected\n\n+ '8bef0773cf6db492b1d840d919d78a2c12065b9dac1ea85e52393aeaff506bf2'\n- '788d0bbfa2bccae3876a154caafd2718c08ba83d868640611b52814d5a497355'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-verification.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '2a776caf52db5e2d58208a532268f4f1dc09751a635f95c94ae2853cb2139548'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-result.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-result.md\n+ actual - expected\n\n+ '54147e90b41ba0b454ff81c76af05652f1ffab42c505bcec2fd99beef9b49a41'\n- 'bd52bf8217b8479df2c1b3d612f56043edf852ea30d41e30e1e6ae114686171a'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-ROOT-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '297d0c548a6ba6d42c0cea0c83c61121cde47b12c7fa5f2176becdcd5d579efe'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md\n+ actual - expected\n\n+ '1d337abc1ed0f0d4e076c0acc5e2e4cc9fee0bb51d5e5a77c3e5c3087d09c44a'\n- '963779081724eecfbf19a6ad48c628f2ae2cc7128e17ec1f44c75c8d0d0fc4b2'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '1f1582879f70f14768923caf305ebb3177b7c9cb5775c2aa7f6ebeb450194b49'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md\n+ actual - expected\n\n+ '4f10bbc72a96d2efd24cac7e38e5f264c6fbe6936913333e91c41cb3bec2cf98'\n- 'a2a03966e3d5b8de9dced4a178a0632dfe1b162867b9444db228140796d7c689'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'bee0afd2f1d28c046ad924e6a1b8af6ecfbe33ac36010faeaa46ea0b0fb1b048'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md\n+ actual - expected\n\n+ 'dcdb22ee2bb3a68cf3214951fef1f71f3f857aa5377e64b6c01b2efb9a4f71b0'\n- '04d82281e1159c331122d722a12ee2ef7b793f85a53a47b0567997aedcc8d9d1'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-report.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'cff6f8c3dd3e261db656cf266a847789958c38b4938f31abf3aba11d3c35ab16'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md\n+ actual - expected\n\n+ 'd8fb5f472d4f91ac90c5bc9aa9ac017664c7484f907f013347045c8b2dd155f9'\n- 'fa7730902ad304ae28c533000be2b1ece946d2269285b47098c6f272e83f9502'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-result.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'b24ceec6c3dc6026a4742fae3594e2f2301b837bf8d72f1ee3be2279e04a3d1e'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json\n+ actual - expected\n\n+ '4dc42f8cab26891752dcd3365ca70807f7d2f8fde3b5c22a1534787767284f60'\n- '95570be7bb0a213a4603e2e4fca7bc50b6b5eea2cdb59ae87eb4a3bdfd928bc4'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-preaccept-integrity.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'fed98dfd0509a908a990fe8a9369433db1ec65c56d3d1d5f4579ce4411b5551a'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md\n+ actual - expected\n\n+ '44736be78df41a2d618f0123b9e4e8ce6b10bd8ac081c4bf886f21c0ae1a8194'\n- '1597dea1034da744072005ba159f0a9f6bf1f7eb1a0e9963b1ebec6fe43e0b33'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-acceptance.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '63e23cdc8ba57d2cecfd4e2d1f20387429eca705e49f600a09198df9bd56c255'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json\n+ actual - expected\n\n+ '35cf118983d2ec3fc6591bfb916895c7372b067e4ceec9fb957fadcf5567f28f'\n- 'ee9cd22d301926db6c4b85ff651cee59ab574bf7aeb03c34bdd61b2140abf432'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '5819d80f7f0953df334961f54260ee87772a07a5281f0130f37b259888d5878c'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json\n+ actual - expected\n\n+ '16df8629d490109ac18ecb7fd811fb55037f2cc22e9339ae41af10b2eb22bc15'\n- 'ff0ac73ce5d35fddf8d8bdf5d148a7cc0f980de560566b98acabf11063417026'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-postaccept-data-transport.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '5acd5ea7afc4c0fa1112f979214ce6b3ed3f065e093e3ce2af9d74769925e7b1'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/build-scripts/content/book-2/b2_213.py",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\build-scripts\\content\\book-2\\b2_213.py'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/build-scripts/content/book-2/b2_213.py",
+      "kind": "negative",
+      "rejected": true,
+      "error": "build-scripts/content/book-2/b2_213.py\n+ actual - expected\n\n+ 'd9c924920dd0ac73234282c914a55fbf0cda1bffc1e7e6c51c1222384340c111'\n- '87ce47b88520abbde45c18114816dae7630e31453c48e0c505c87b7e9b031ce4'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/build-scripts/content/book-2/b2_213.py",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'c0c66040fb949cf08e58f5176c452c052ebb0e24f0bc76f647621092cc3cfe86'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance.md\n+ actual - expected\n\n+ '889e07bc427390da6f1ab06ca9840dab68ccd81a255c3670e30e1f9c2e9fb1da'\n- '2b97cb6036df9e453d8522634abbb9370eba7cd315170979e5f1cb6324e1e5a2'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '1500584a2de18a3c94ec0fffb81db48f400c266303c2ea551954e7f8819aa506'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance-check.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged input 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance-check.json\n+ actual - expected\n\n+ 'fd94bc22c2f7835c9aee0a97e2fdee45e679daf13d23489630651d462fe18070'\n- '24989953c34c2c65e8b6ee6d057e99902b05f5901288e30a59e000b85f479dd4'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "synchronized input/manifest/grant 4veco-platform/reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance-check.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '5078a9b28a0a2ea2e068ff0d71325a5239bb1c3357955289856b49561475f892'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "pending decision",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'f751a5d757992cad80f8b1ca3c3e4a33fc2d8c04dac0ab6ba196a105eab65efb'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "wrong actor",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'fea93a228d866dd25436de494b9459b0184b243559b30976463cb693de8f7bcf'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "wrong paragraph",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'f57399bc9aa2c4dae35d99f0ba9ef0b6ae67827e9a10193bd9e88553e80b3178'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "wrong candidate commit",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'f341e2cd2633b2710304b1000cee20273f392bfcb65062c093e3fefdf11527d6'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "wrong manifest path",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'dba209f3dd055f596719791413f9bd5782432460b161ff5aa638e94dc817fea3'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "wrong manifest hash",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '928b41ad39a1682ef725cef857eb2dd98b7e431dbf37ee0ae608f7dc949606b2'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "wrong reviewer",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '30ad6b26cb4c69ba7368291d62bd2f187c9a9553cd5bf31f883ede1984843e3c'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged review verdict",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'e43c86a140549f66496eda4501564df5d16fb8d54a62e4c746d1b64def1f58fe'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "wrong review commit",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '3f1f9711b361a2d7fc282eeaf99183af52c2b16081c18ee2427aa5ed1a9b5753'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "partial review files",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '6c1381d20126692433a0b6103c3a5a5bf06853dbbac7c60a5c3277b987084acd'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged review hash",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '5af33fc2450b01113c54ac20c14fe3fd81296e35bd43896d37ed8f86c7bdcd9a'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "semantic-only bypass",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '5c884e93ce9550cffa40b3abe425af2064fd4857152fe867c947de16e1077c77'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "unbounded outputs",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'c0f99f1c8ad2fdbd3e2c652e60e0d3b9c60f772960ccc8cbe97502e1e99253ff'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "observed timing",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'b618ee3d5dd84ece0ce4221ce238f384b2707dfff5c726390e7bdf9ac42547fa'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "target drift",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '8bc97fb0c618ba91f0e8b96549ddf30814cd89a581bf04f5d51467d971f27f86'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "acceptance gates removed",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '72bb0ec9978c5c335cd57afb557ac684e680cd82c21872d1517213513a8e9cd9'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "merge grant",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ '7bc0cb7a4c34f0258403e4fb8cac691b696f0cc57d45c34b4295a35ea005c403'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "partB commission",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'd46704b74edb6d61d24c8b688d3512255890d051cb5cfb0ac885527879f22d5c'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing root release",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-232-release.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "empty release",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "genuine other paragraph release",
+      "kind": "negative",
+      "rejected": true,
+      "error": "whole immutable root release\n+ actual - expected\n\n+ 'f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6'\n- '9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check.cjs",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check.cjs'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check.cjs",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '58e9f9db62efc81f8f8a63cf6a1f08c51d6afad40fd83a4de277ea6ced8b6858'\n- '927a4d012404b4e00cabfe793e9db45e22fae0660b968a3e97b6c007851c4f4b'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-232-inputs.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-232-inputs.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-232-inputs.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '151f670e0749f3095805880ac63c483dedb814494a6a4459233a9cf8e0fdcf9b'\n- '113d3321a3b859d582a4febf6ff71cd259111d6c5d233047113b1455f6bcc5dc'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "kind": "negative",
+      "rejected": true,
+      "error": "report.md\n+ actual - expected\n\n+ '43f5e66dc0d1a6456d461ec8f90ff3da75e1c69055301932eaa02ab6ded21601'\n- '373adbb84185500dfc1c17d27976e0eb7d0ecfb5157bb24ccfe32849415489ed'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "independent.json\n+ actual - expected\n\n+ '6dce434ee25a5f0d8a959d24f2b280100297ddca4b839b42aa9c27307af83491'\n- '8dadf8d9f0c233e1fa5201984419eb8e66bb077c32c6177befb844a2bd984491'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "missing whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "ENOENT: no such file or directory, open 'C:\\wt\\book2-214-232-root-release-probes-mBXAPy\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage.json'",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "forged whole bound reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage.json",
+      "kind": "negative",
+      "rejected": true,
+      "error": "lineage.json\n+ actual - expected\n\n+ '98128b64bb97f855285ff0e3fac207a3b942f6757ebf3296195646c152f2b8e0'\n- 'fdbe250068cc81235c5b3217171a66de5f0412c6350992a24405dd4beb557d40'\n",
+      "success_callbacks": 0,
+      "native_or_file_effects": 0
+    },
+    {
+      "key": "232",
+      "label": "all original fixture bytes restored",
+      "kind": "positive",
+      "success_callbacks": 1,
+      "native_or_file_effects": 0
+    }
+  ],
+  "positives": 6,
+  "negatives": 353,
+  "actual_unique_input_files": 67,
+  "fixture": {
+    "exact_removed": "C:\\wt\\book2-214-232-root-release-probes-mBXAPy",
+    "all_original_bytes_restored_before_removal": true,
+    "files": 75,
+    "foreign_paths_changed": false
+  },
+  "native_builds": 0,
+  "fresh_independent_review": false,
+  "future_native_entrypoint_tests": "REQUIRED, NOT PROVED BY THESE RELEASE-GATE FIXTURES"
+}

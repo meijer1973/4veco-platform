@@ -1,0 +1,18 @@
+{
+  "original": "dafe4fdcbc3c47a1d5fa2725d3c5478fe7de1ae0",
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "dafe4fdcbc3c47a1d5fa2725d3c5478fe7de1ae0"
+  ],
+  "start": "2026-09-06T07:02:45.695Z",
+  "finish": "2026-09-06T07:02:45.824Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 9d18a0f2] review: plan independent 214 and 232 accepted-input gate\n Date: Sun Sep 6 08:32:43 2026 +0200\n 1 file changed, 101 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDlkMThhMGYyXSByZXZpZXc6IHBsYW4gaW5kZXBlbmRlbnQgMjE0IGFuZCAyMzIgYWNjZXB0ZWQtaW5wdXQgZ2F0ZQogRGF0ZTogU3VuIFNlcCA2IDA4OjMyOjQzIDIwMjYgKzAyMDAKIDEgZmlsZSBjaGFuZ2VkLCAxMDEgaW5zZXJ0aW9ucygrKQogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjE0LTIzMi1JTlBVVC1SRVZJRVctcGxhbi5tZAo=",
+  "stderr_base64": ""
+}

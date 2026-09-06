@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "id": "BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-232",
+  "paragraph": "2.3.2",
+  "date": "2026-09-06",
+  "decision": "RELEASED_FOR_GATED_PART_A_AUTHORING",
+  "accountable_actor": "codex-root",
+  "operational_plan_commit": "fdc55cecb52d5c3ccb81448012f2544927c7fa7e",
+  "root_review_adoption_commit": "dc8b62c3f4d992dedcaf5f0863ebfe6cbce653be",
+  "root_lessons_observed": "f666bbb7dd258f1f01b38a20dd6ca3802848f8b7",
+  "authority": "Execution of the existing owner-granted BOOK2-TEXTBOOK-PRODUCTION-1 gated Part A continuation under #229/#223; not a new target, owner hold, student release or PR merge grant.",
+  "candidate": {
+    "commit": "9c6d8a7c1ee98b91a67f6d560beb8534f5dbde56",
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-232-inputs.json",
+    "raw_sha256": "113d3321a3b859d582a4febf6ff71cd259111d6c5d233047113b1455f6bcc5dc",
+    "status_retained": "CANDIDATE_FOR_INDEPENDENT_INPUT_REVIEW; permission is supplied only by this separate root decision"
+  },
+  "independent_review": {
+    "actor": "paragraph_224_builder",
+    "verdict": "INPUT PASS",
+    "commit": "8fc63fe32f030371195f022971a2d5d42ddedeb8",
+    "files": [
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+        "raw_sha256": "373adbb84185500dfc1c17d27976e0eb7d0ecfb5157bb24ccfe32849415489ed"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent.json",
+        "raw_sha256": "8dadf8d9f0c233e1fa5201984419eb8e66bb077c32c6177befb844a2bd984491"
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage.json",
+        "raw_sha256": "fdbe250068cc81235c5b3217171a66de5f0412c6350992a24405dd4beb557d40"
+      }
+    ]
+  },
+  "complete_checker": {
+    "commit": "9c6d8a7c1ee98b91a67f6d560beb8534f5dbde56",
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check.cjs",
+    "raw_sha256": "927a4d012404b4e00cabfe793e9db45e22fae0660b968a3e97b6c007851c4f4b",
+    "required_entrypoint": "verifyManifest",
+    "semantic_only_use": "PROHIBITED: supplemental projection is not a standalone identity/authorization gate"
+  },
+  "actual_input_count": 49,
+  "immutable_input_pair": {
+    "platform": "67c544392d215e40970798b30d63ddd44ee404ee",
+    "lessons": "1cf1c1f972f196791fb37f6bbee523b7a2e3b676"
+  },
+  "accepted_predecessors": [
+    "2.1.3",
+    "2.3.1"
+  ],
+  "plan": {
+    "raw_sha256": "d0781ffb6d2966209c3a160309316ce92ebc0455fa51d4235ccc6840afa58935",
+    "author": "paragraph_231_specialist_qc",
+    "independent_reviewer": "paragraph_214_builder",
+    "status": "Independently accepted complete plan; historical pending prose retained"
+  },
+  "target": {
+    "record_sha256": "54ce45a0cb044532717fe0cbbb6cfeae75e76b2656861bfea0d3821afc1843ce",
+    "record_status": "candidate_review_ready",
+    "points": [
+      2,
+      2,
+      3,
+      2,
+      2
+    ],
+    "frozen_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310"
+  },
+  "output_contract": {
+    "lesson_directory": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus",
+    "editions": [
+      "paragraaf",
+      "opgaven",
+      "antwoorden"
+    ],
+    "extensions": [
+      "md",
+      "html",
+      "pdf",
+      "zip"
+    ],
+    "svg_png_pairs": 14,
+    "native_files_excluding_wrapper": 40,
+    "native_files_including_wrapper": 41,
+    "zip_members": [
+      25,
+      13,
+      13
+    ],
+    "minimum_printed_text_pt": 12
+  },
+  "timing": {
+    "core": 54,
+    "support": 74,
+    "with_bonus": 83,
+    "all": 88,
+    "observed": false
+  },
+  "production_contract": [
+    "Before native effects, verify this whole fixed release, exact immutable candidate/checker/review and every actual committed/raw/semantic input. Bind complete helper/source bytes to the actual published release commit; never use live self-reported hashes as authority.",
+    "Then run current approved paragraph_production or specialist_review and durable authority before native generation. The read-only release/input gate alone does not waive current action checks.",
+    "Test actual full, thin and direct entrypoints for invalid inputs before mkdir, removal, native subprocess or writes. Release fixture checks are not those future native proofs.",
+    "Do not consume additional unlisted accepted teaching or speculative future acceptance; bind and independently review newly necessary dependencies.",
+    "Preserve the complete approved plan, full writing/rubrics, exact target/points, native source/asset/ZIP geometry and at least12pt placed text. Class timing remains unobserved."
+  ],
+  "remaining_gates": [
+    "Native authoring and actual full/thin/direct positive/negative evidence",
+    "Complete independent paragraph review",
+    "Distinct specialist QC and personal all-page/all-figure color/grayscale inspection",
+    "Root current native reproduction, acceptance and nine-section handoff",
+    "Chapter/book aggregate production and independent review",
+    "Current paired compatibility/CI, structural lead rounds and readiness"
+  ],
+  "excluded_hold": "H-213-OPC2 formal output-choice extension remains outside this project",
+  "companion_commissioned": false,
+  "student_release": false,
+  "future_pr_merges_authorized": false,
+  "admin_bypass": "PROHIBITED",
+  "native_production_already_performed_by_this_release": false
+}

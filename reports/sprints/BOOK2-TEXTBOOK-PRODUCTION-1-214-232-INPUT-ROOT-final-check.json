@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "actor": "codex-root",
+  "platform": "dc8b62c3f4d992dedcaf5f0863ebfe6cbce653be",
+  "lessons": "f666bbb7dd258f1f01b38a20dd6ca3802848f8b7",
+  "imported_review_paths": 45,
+  "custody": [
+    {
+      "repository": "platform",
+      "unchanged_prior_raw_files": 14923
+    },
+    {
+      "repository": "lessons",
+      "unchanged_prior_raw_files": 1914
+    }
+  ],
+  "release_controls": [
+    {
+      "paragraph": "2.1.4",
+      "release_sha256": "f7752aa314f6db0cd8fd2eb076547b96f0624986e96553395e765adeb93dead6",
+      "inputs": 48,
+      "full_current_gate": "PASS"
+    },
+    {
+      "paragraph": "2.3.2",
+      "release_sha256": "9705ba935c9c9f79e3b5981ba3e9119da34cd37bf165adc57323f2c6365d3a18",
+      "inputs": 49,
+      "full_current_gate": "PASS"
+    }
+  ],
+  "probes": {
+    "positives": 6,
+    "negatives": 353,
+    "raw_sha256": "f3e846323fd900ce7d7a9f6612ae1ecdc1c40de556b566cd1a0ae5fcffa68129",
+    "native_builder_effect_tests": false
+  },
+  "gate_sha256": "4f3c2ab8a5e877697952f7c951fdc712ff08d2f13c966a1ca86394690314fe5d",
+  "creation_sha256": "9c4efa3e4aee3545df4d84be33478fdd2e871f97b3b02e5777dac3cda8982ad7",
+  "current_authority": [
+    {
+      "label": "structural",
+      "exit_code": 0
+    },
+    {
+      "label": "214-paragraph_production",
+      "exit_code": 0
+    },
+    {
+      "label": "214-specialist_review",
+      "exit_code": 0
+    },
+    {
+      "label": "232-paragraph_production",
+      "exit_code": 0
+    },
+    {
+      "label": "232-specialist_review",
+      "exit_code": 0
+    },
+    {
+      "label": "durable",
+      "exit_code": 0
+    },
+    {
+      "label": "bundle",
+      "exit_code": 0
+    }
+  ],
+  "lesson_writes": 0,
+  "output_inventory_unchanged": true,
+  "native_builds": 0,
+  "personal_views": 0,
+  "decision": "RELEASED_FOR_GATED_PART_A_AUTHORING only; subsequent independent paragraph/specialist/root/aggregate/CI gates required"
+}

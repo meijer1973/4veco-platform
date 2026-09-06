@@ -1,0 +1,265 @@
+{
+  "status": "PASS",
+  "platform": "dc8b62c3f4d992dedcaf5f0863ebfe6cbce653be",
+  "lessons": "f666bbb7dd258f1f01b38a20dd6ca3802848f8b7",
+  "rows": [
+    {
+      "original": "dafe4fdcbc3c47a1d5fa2725d3c5478fe7de1ae0",
+      "parent": "eafd9785801e8ec0b689d05dc0f92835f7f06ed0",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-plan.md",
+          "old_blob": null,
+          "new_blob": "78ab2a70829c9fefc63ed3d89eef9d91698655ea"
+        }
+      ],
+      "adopted": "9d18a0f2618e8065fcaeea1a44f78c9949145b4a"
+    },
+    {
+      "original": "8fc63fe32f030371195f022971a2d5d42ddedeb8",
+      "parent": "dafe4fdcbc3c47a1d5fa2725d3c5478fe7de1ae0",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-214-production-process.json",
+          "old_blob": null,
+          "new_blob": "6e31e57686dd958a33361ef667d3c193f9b7532a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-214-specialist-process.json",
+          "old_blob": null,
+          "new_blob": "5458bd0997e8742b39935f5856810f4cab95826a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-232-production-process.json",
+          "old_blob": null,
+          "new_blob": "27c6e7808bb42a62b4729bd0a3bdfe0f88e6665a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-232-specialist-process.json",
+          "old_blob": null,
+          "new_blob": "9a4ec96632f5cfbe848c7aa710bc35ef6572011f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-211-publisher-print-process.json",
+          "old_blob": null,
+          "new_blob": "75ad0340cd6acd41b5a9273144c709b1bf81ff7c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-211-student-web-process.json",
+          "old_blob": null,
+          "new_blob": "cf4acccb801d81e4fba8ca96f8bbdb201f337e4d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-212-publisher-print-process.json",
+          "old_blob": null,
+          "new_blob": "9f0520b95bce049edac278774e4628973da89459"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-212-student-web-process.json",
+          "old_blob": null,
+          "new_blob": "567f5a4c3350f8121013c953d296966d71e50137"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-213-publisher-print-process.json",
+          "old_blob": null,
+          "new_blob": "03eb56795ee45d2812020ccc80a5dbfd238fe389"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-213-student-web-process.json",
+          "old_blob": null,
+          "new_blob": "2f1d2cf89129b15239b813393c0ffaf527fd1fe4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-231-publisher-print-process.json",
+          "old_blob": null,
+          "new_blob": "233ae6a86b41b40a9fb17a60525165c89975790c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-231-student-web-process.json",
+          "old_blob": null,
+          "new_blob": "6247649ddebe2dd3a46111daa4e1029c9a59191c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-baseline.json",
+          "old_blob": null,
+          "new_blob": "83536f971a3e772e52b1486623ef82aa911d51c1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-bundle-process.json",
+          "old_blob": null,
+          "new_blob": "782851d455294dbd25165462d5de0d3f6c3a404a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-check.cjs",
+          "old_blob": null,
+          "new_blob": "9e919d9a67ef37094c6593391f92160773e30bf3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-durable-process.json",
+          "old_blob": null,
+          "new_blob": "73924247be45475d7eb0eec02fce3ddb31e85cf0"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-governance-process.json",
+          "old_blob": null,
+          "new_blob": "4b3cc71b4346772a311bad777ffe4a1210dc4f50"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-governance-r2-process.json",
+          "old_blob": null,
+          "new_blob": "07e7a099bf77ce4d1955800d93c391ff39db5a1f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent-r1-process.json",
+          "old_blob": null,
+          "new_blob": "b511727e948e57fd8c08b7f33fed71c0a1feb691"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent-r2-process.json",
+          "old_blob": null,
+          "new_blob": "f91e0c52835d3a7fd5fb87e582cf0f214fe8cc0e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent.json",
+          "old_blob": null,
+          "new_blob": "50c6dcd289dfffa4371a4f29133ff9457636d54f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-index-runtime.cjs",
+          "old_blob": null,
+          "new_blob": "1f16d4c07d341b9bd2923ba55261e1b5d82a6a8c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-index-transport-process.json",
+          "old_blob": null,
+          "new_blob": "f90ef711529f3891ae8c6e8276646ce6af81aa81"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lessons-claim-process.json",
+          "old_blob": null,
+          "new_blob": "152a1c31fbcf6c213b703461526cca5a16272580"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage-r1-process.json",
+          "old_blob": null,
+          "new_blob": "02cd16136fc536d395ebaedc54e2c27e2fbfd36f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage-r2-process.json",
+          "old_blob": null,
+          "new_blob": "f4bcdc3b8dd345f1e2f689a41e9d759807c2ed9a"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage.cjs",
+          "old_blob": null,
+          "new_blob": "4d13d911a35d03267be6684a57cd408a2e2a10cd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage.json",
+          "old_blob": null,
+          "new_blob": "e7339a208425b593d8758ba26e64ecf00464831c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-platform-claim-process.json",
+          "old_blob": null,
+          "new_blob": "2b7876ffac6ede4cf308ba970c7d2e350e7a30e5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+          "old_blob": null,
+          "new_blob": "c170667039f1f72e0e7156741406e1a07f6b0148"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-structural-process.json",
+          "old_blob": null,
+          "new_blob": "0f1990542dd2e4b95c3b17dfb668dcebd008b2a6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-tools.cjs",
+          "old_blob": null,
+          "new_blob": "3d2ff586776cefc17c0e91118044b89a262b12c5"
+        }
+      ],
+      "adopted": "cfe61cf6aca76de9ce897327c1dc711b6945f94e"
+    },
+    {
+      "original": "eb26a4a780b67a4707bf92526bd27fba159f763e",
+      "parent": "8fc63fe32f030371195f022971a2d5d42ddedeb8",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-actual-scope.json",
+          "old_blob": null,
+          "new_blob": "a87683abf6ee4f673e0955244aadf9b91aa87920"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-final-binding.json",
+          "old_blob": null,
+          "new_blob": "15904d8ef397d281a8d7d6c8234ecfe1e15b235c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-publication.md",
+          "old_blob": null,
+          "new_blob": "d34a0f3feccd61c1f5b1574f15a932f184801143"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-scope-complete-lessons-process.json",
+          "old_blob": null,
+          "new_blob": "9f84ab3a9c3b944f4ead13c30eba5b9855b42e99"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-scope-complete-platform-process.json",
+          "old_blob": null,
+          "new_blob": "5abc57541127379ea12fd157f879d4526b663bec"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-scope-own-lessons-process.json",
+          "old_blob": null,
+          "new_blob": "1eb4b0550271289fbc385f4ca872e224322b3064"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-scope-own-platform-process.json",
+          "old_blob": null,
+          "new_blob": "f73d27a37573a13024397bc38320049d5da6bd53"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-tools.cjs",
+          "old_blob": "3d2ff586776cefc17c0e91118044b89a262b12c5",
+          "new_blob": "cbfcc3618138537ce62ebdc159f6c1b7386c2496"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-whole-whitespace-cr-process.json",
+          "old_blob": null,
+          "new_blob": "e4ae95772e95f846ff943d3e391d653a78dfd661"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-whole-whitespace-default-process.json",
+          "old_blob": null,
+          "new_blob": "b3a4f6d663514971c38fa4881bce5a88a4f78925"
+        }
+      ],
+      "adopted": "557c69130ccad8f6579b404aa6de69ddfa0f783b"
+    },
+    {
+      "original": "22351c0223eeae69184ab8b9d511c2c92a3d44dc",
+      "parent": "eb26a4a780b67a4707bf92526bd27fba159f763e",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-cleanup-r1-process.json",
+          "old_blob": null,
+          "new_blob": "3c493d2f0f5a1804ce2fb0fd0e1fa3e6b0af2953"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-cleanup.md",
+          "old_blob": null,
+          "new_blob": "881b676906c69b454009e6e3d010e02a1edec3fb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-cleanup.ps1",
+          "old_blob": null,
+          "new_blob": "c2f9913322ed3e3c2aef2a947c5bd188f9695454"
+        }
+      ],
+      "adopted": "dc8b62c3f4d992dedcaf5f0863ebfe6cbce653be"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "label": "232-paragraph_production",
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "build-scripts/workflows/check-book-outline-currentness.js",
+    "--require-approved",
+    "--action",
+    "paragraph_production",
+    "--paragraph",
+    "2.3.2"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "start": "2026-09-06T07:05:04.708Z",
+  "finish": "2026-09-06T07:05:06.432Z",
+  "exit_code": 0,
+  "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.3.2\n",
+  "stderr": "",
+  "stdout_base64": "Qm9vayAyIG91dGxpbmUgY3VycmVudG5lc3M6IFBBU1MKLSBvdXRsaW5lOiByZWZlcmVuY2VzL2F1dGhvcmVkL2Jvb2stb3V0bGluZXMvYm9vay0yLW91dGxpbmUubWQKLSB0YXJnZXQgcGluczogMTIKLSBtb2RlOiBhcHByb3ZlZC11c2UKLSBwYXJhZ3JhcGggc2NvcGU6IDIuMy4yCg==",
+  "stderr_base64": ""
+}

@@ -1,0 +1,18 @@
+{
+  "original": "22351c0223eeae69184ab8b9d511c2c92a3d44dc",
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "argv": [
+    "-c",
+    "core.longpaths=true",
+    "cherry-pick",
+    "-x",
+    "22351c0223eeae69184ab8b9d511c2c92a3d44dc"
+  ],
+  "start": "2026-09-06T07:02:46.416Z",
+  "finish": "2026-09-06T07:02:46.578Z",
+  "exit_code": 0,
+  "stdout": "[codex/book2-part-a-production-20260905 dc8b62c3] Record verified cleanup of disposable input-review fixture\n Date: Sun Sep 6 08:59:57 2026 +0200\n 3 files changed, 94 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-cleanup-r1-process.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-cleanup.md\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-cleanup.ps1\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGRjOGI2MmMzXSBSZWNvcmQgdmVyaWZpZWQgY2xlYW51cCBvZiBkaXNwb3NhYmxlIGlucHV0LXJldmlldyBmaXh0dXJlCiBEYXRlOiBTdW4gU2VwIDYgMDg6NTk6NTcgMjAyNiArMDIwMAogMyBmaWxlcyBjaGFuZ2VkLCA5NCBpbnNlcnRpb25zKCspCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTQtMjMyLUlOUFVULVJFVklFVy1jbGVhbnVwLXIxLXByb2Nlc3MuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjE0LTIzMi1JTlBVVC1SRVZJRVctY2xlYW51cC5tZAogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjE0LTIzMi1JTlBVVC1SRVZJRVctY2xlYW51cC5wczEK",
+  "stderr_base64": ""
+}
