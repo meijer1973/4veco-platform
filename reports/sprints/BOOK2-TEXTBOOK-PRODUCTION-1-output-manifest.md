@@ -11,6 +11,14 @@ Current214 author-candidate verification: platform
 specialist QC, root native reproduction/acceptance and handoff remain PENDING;
 see214-ROOT-ADOPTION-result.md. The two214 PDFs are C, not A.
 
+Current232 corrected author-candidate verification: platform
+`1eb4f3852d2e652a98cd354b84dcad2f1775f68a`, adopted native lesson
+`3cdb04690e535691bf5b64b2051bbe352553e6b5`, source epoch
+`abe79fa532c8701d646fb19f129ad892004fb821`. All41 native files and the
+three19/11/12-page PDFs are exact original author bytes. Distinct paragraph
+review, specialist QC, root reproduction/acceptance and handoff remain PENDING.
+See232-ROOT-ADOPTION-result.md; its three PDFs are C, not A.
+
 Current224 verification: platform `8a92dcd7884faa3cf8114f5125b60bb22876c1f2`,
 with root-only QC/handoff transition in224-QC-ROOT-acceptance.md. Its original
 specialist QC was adopted at lesson `aa2087a20c5bee4465f9c98d83031116e94c9667`.
@@ -28,11 +36,11 @@ All paths below are relative to the lesson book root
 
 Expected: 27 theory + 6 consolidation + 6 chapter + 2 book = **41 PDFs**.
 At this checkpoint: **8 internally gate-closed current paragraph packages**:
-23 accepted-with-flags PDFs,2 adopted candidate PDFs,4 legacy unaccepted and12
+23 accepted-with-flags PDFs,5 adopted candidate PDFs,4 legacy unaccepted and9
 absent. §211 now has current R5 independent paragraph review, distinct specialist
 QC and root acceptance/handoff. §212 now has current distinct specialist QC,
 root acceptance, closed S1 lineage and renewed handoff; its three PDFs are A. Physical
-root presence is 29, not 29 accepted. All four remaining legacy PDFs remain Git-blob-
+root presence is 32, not 32 accepted. All four remaining legacy PDFs remain Git-blob-
 identical to the baseline. Separate in-progress worktrees do not count here.
 
 §221 R8 and §213 R6 correct their short-alt/title metadata, retaining all49
@@ -148,9 +156,9 @@ No output is silently accepted through an older PASS or reviewed_final label.
 | 27 | 2.3.1 | paragraaf | A | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf` |
 | 28 | 2.3.1 | opgaven | A | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.pdf` |
 | 29 | 2.3.1 | antwoorden | A | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.pdf` |
-| 30 | 2.3.2 | paragraaf | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf` |
-| 31 | 2.3.2 | opgaven | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – opgaven.pdf` |
-| 32 | 2.3.2 | antwoorden | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf` |
+| 30 | 2.3.2 | paragraaf | C | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf` |
+| 31 | 2.3.2 | opgaven | C | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – opgaven.pdf` |
+| 32 | 2.3.2 | antwoorden | C | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf` |
 | 33 | 2.3.3 | paragraaf | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3 Pareto-efficientie en welvaartsverlies – paragraaf.pdf` |
 | 34 | 2.3.3 | opgaven | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3 Pareto-efficientie en welvaartsverlies – opgaven.pdf` |
 | 35 | 2.3.3 | antwoorden | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3 Pareto-efficientie en welvaartsverlies – antwoorden.pdf` |
@@ -194,6 +202,9 @@ hashes alone are not student-quality acceptance.
 | 2.3.1 / paragraaf | `088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e` | Internal acceptance with flags; current review/QC/handoff complete |
 | 2.3.1 / opgaven | `4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341` | Internal acceptance with flags; current review/QC/handoff complete |
 | 2.3.1 / antwoorden | `d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b` | Internal acceptance with flags; current review/QC/handoff complete |
+| 2.3.2 / paragraaf | `c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6` | Current19-page corrected author candidate; root source/byte checks pass; independent review/QC/root acceptance pending |
+| 2.3.2 / opgaven | `73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0` | Current11-page corrected author candidate; root source/byte checks pass; independent review/QC/root acceptance pending |
+| 2.3.2 / antwoorden | `c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b` | Current12-page corrected author candidate; root source/byte checks pass; independent review/QC/root acceptance pending |
 
 Each accepted paragraph has `<id>-textbook-handoff.md` in its canonical folder,
 including exact source/review/quality bindings, concepts, exercises, visuals and
@@ -251,7 +262,18 @@ F22-FRONT-TITLE-01 is closed. Separately reviewed actual accepted inputs and
 root assembly release, then chapter rendering/review, remain required.
 §231 is internally accepted
 with flags and current independent paragraph review, specialist QC and handoff;
-§232–§234 and all aggregate outputs remain pending their dependency/production/review
+§232 now has an adopted current author candidate:1143 final imported paths,
+11 source files,41 native files and all49 actual accepted inputs are verified.
+Root24 source methods pass. Four original and four corrected author routes
+match all41 native bytes,336 stored raw/RGB page comparisons and ZIP25/13/13;
+the current unchanged source/DOM/ink checker passes all42 pages and14 figures.
+Both56-image grayscale sets and all112 original author observations are
+byte-bound; root personal views and native rebuilds in this adoption are zero.
+The five-file correction fixes role/child-protocol transport only; all pupil
+bytes are unchanged. Both Part A profiles correctly fail for missing independent
+review and QC; distinct review/QC/root reproduction/acceptance/handoff remain
+PENDING. Timings54/74/83/88 are UNOBSERVED. See232-ROOT-ADOPTION-result.md.
+§233–§234 and all aggregate outputs remain pending their dependency/production/review
 gates. §234's complete861-line plan now has adopted independent PLAN PASS WITH
 FLAGS, closing F2-PAPER-01 without changing its canonical plan bytes. Real
 accepted232/233 inputs, independent input-contract review and separate root
@@ -276,10 +298,10 @@ Git-blob comparison for all legacy PDFs. An initial line-split probe failed to
 interpret Git's quoted Unicode paths and incorrectly counted zero baseline
 PDFs; it was discarded and replaced with NUL-delimited paths before this record.
 The corrected historical pre-§231 baseline/current tracked count was26. The
-current214 author-candidate adoption refresh checks41 unique planned paths,
-29 present, four baseline-identical legacy PDFs,12 absent,all23 accepted and
-two current candidate PDF hashes. Other39 rows and27 other existing PDFs remain
-unchanged. Current
+earlier214 author-candidate adoption checked41 unique planned paths and29 present.
+Current232 adoption checks32 present, four baseline-identical legacy PDFs,
+nine absent, all23 accepted and five current candidate PDF hashes. Other38 rows
+and all29 previously existing PDFs remain unchanged. Current
 acceptance never inherits a legacy label without fresh gates. No PDF files changed
 by inventory checks.
 
