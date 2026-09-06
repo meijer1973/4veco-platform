@@ -561,3 +561,78 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-scope.js
+
+- cwd: `C:\wt\book2-224-production-20260906\4veco-platform`
+- started_at: `2026-09-06T00:40:08.669Z`
+- finished_at: `2026-09-06T00:40:09.001Z`
+- duration_ms: `332`
+- exit_code: `0`
+- stdout_sha256: `03d9bb6e60028c54808dd3e1fccba57f1e99f4105438394dbd0c6a7d1d433e30`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "platform_base": "35e0bebb75cc3987c43dd8f480e1b444bd877f4a",
+  "platform_payload": "3a8c57a3864c91c8914802caa0ec434728c4e3c7",
+  "lesson_base": "219a977e495abe43c17949e7d8996aab4176faa0",
+  "lesson_payload": "ca3d967b68c0e6da5d6589a1b56ef082c4f672f5",
+  "strict_owned_paths": "PASS",
+  "platform_paths": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-command-log.jsonl",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-command-log.md",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.js",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.json",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-operational-plan.md",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-result.md",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-scope.js"
+  ],
+  "lesson_paths": [
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md"
+  ],
+  "platform_native_shared": {
+    "args": [
+      "build-scripts/workflows/check-paragraph-lane-scope.js",
+      "--cwd",
+      "C:\\wt\\book2-224-production-20260906\\4veco-platform",
+      "--lane",
+      "shared",
+      "--base",
+      "35e0bebb75cc3987c43dd8f480e1b444bd877f4a",
+      "--head",
+      "3a8c57a3864c91c8914802caa0ec434728c4e3c7",
+      "--json"
+    ],
+    "exit_code": 1,
+    "stdout": "{\n  \"ok\": false,\n  \"lane\": \"shared\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-command-log.jsonl\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-command-log.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.js\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-operational-plan.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-result.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-scope.js\"\n    ],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [\n    \"shared lane needs at least one shared platform change\",\n    \"generated index/report or review-evidence changes are allowed only with lane-owned changes\"\n  ],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+    "stderr": ""
+  },
+  "lesson_native_textbook": {
+    "args": [
+      "build-scripts/workflows/check-paragraph-lane-scope.js",
+      "--cwd",
+      "C:\\wt\\book2-224-production-20260906\\4veco-lessen",
+      "--lane",
+      "textbook",
+      "--base",
+      "219a977e495abe43c17949e7d8996aab4176faa0",
+      "--head",
+      "ca3d967b68c0e6da5d6589a1b56ef082c4f672f5",
+      "--json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"lane\": \"textbook\",\n  \"categories\": {\n    \"partA_textbook\": [\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md\"\n    ],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+    "stderr": ""
+  },
+  "boundary": "An evidence-only platform native FAIL is retained verbatim, not waived by an invented anchor. Separate strictly owned actual paths are the task-scope proof. No source/target/native output, review/QC/handoff or PR change."
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
