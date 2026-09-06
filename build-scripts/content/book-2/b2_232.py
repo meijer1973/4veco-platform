@@ -148,7 +148,7 @@ def build(lesson_root,source_commit,revision,reservation,route='full',execution_
         for kind,value in native.items():
             if (folder/f'{STEM} – {kind}.md').read_bytes()!=value.encode():raise ValueError('Direct source mismatch')
         argv=[sys.executable,ROOT/'build-scripts/content/book-2/print_pipeline.py',*[folder/f'{STEM} – {kind}.md' for kind in KINDS]]
-        child=gate.command(argv);raw=child['stdout'];decoder=json.JSONDecoder();records=[]
+        child=gate.command(argv,utf8_protocol=True);raw=child['stdout'];decoder=json.JSONDecoder();records=[]
         while raw.strip():
             raw=raw.lstrip();value,end=decoder.raw_decode(raw);records.append(value);raw=raw[end:]
         if len(records)!=3:raise ValueError('Shared direct CLI record count')

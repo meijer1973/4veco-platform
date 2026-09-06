@@ -73,10 +73,15 @@ def verify_current(lesson_root, platform_root=ROOT):
             raise ValueError('Actual accepted input changed: '+row['path'])
     return manifest
 
-def command(argv, cwd=ROOT):
-    result=subprocess.run([str(v) for v in argv],cwd=cwd,capture_output=True)
+def command(argv, cwd=ROOT, *, utf8_protocol=False):
+    # Only the owned shared-Python print child opts into this explicit protocol.
+    # Do not change PATH, global environment, shared print source or other workers.
+    delta={'PYTHONIOENCODING':'utf-8'} if utf8_protocol else {}
+    result=subprocess.run([str(v) for v in argv],cwd=cwd,capture_output=True,
+                          env={**os.environ,**delta} if delta else None)
+    errors='strict' if utf8_protocol else 'replace'
     record={'argv':[str(v) for v in argv],'cwd':str(cwd),'exit_code':result.returncode,
-            'stdout':result.stdout.decode('utf-8',errors='replace'),'stderr':result.stderr.decode('utf-8',errors='replace')}
+            'environment_delta':delta,'stdout':result.stdout.decode('utf-8',errors=errors),'stderr':result.stderr.decode('utf-8',errors=errors)}
     if result.returncode:
         raise RuntimeError(json.dumps(record,ensure_ascii=False))
     return record
