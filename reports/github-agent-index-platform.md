@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T06:14:06.766Z
+Generated: 2026-09-06T06:50:06.404Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-234-plan-review-20260906`
-Source commit: `557d7fd2e3f79c9f084cd6ae91a43d3c04b59234`
-Files indexed: 14006
-Scope: committed tree files from `git ls-tree -r --name-only 557d7fd2e3f79c9f084cd6ae91a43d3c04b59234`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source branch: `agent/book2-234-plan-f1-20260906`
+Source commit: `7086006c977d7d1318a2813b2bc5a1e808b1dd75`
+Files indexed: 14038
+Scope: committed tree files from `git ls-tree -r --name-only 7086006c977d7d1318a2813b2bc5a1e808b1dd75`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -971,7 +971,7 @@ Count: 25
 
 ## validators
 
-Count: 746
+Count: 750
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1556,6 +1556,10 @@ Count: 746
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-check-r3.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-render-check-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-qc-evidence/native-check-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-final-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-r3-process.json
 - reports/sprints/CHECK-Q2-PLAN-baseline.md
 - reports/sprints/CHECK-Q2-PLAN-diff-summary.md
 - reports/sprints/CHECK-Q2-PLAN-gate-handoff.md
@@ -2757,7 +2761,7 @@ Count: 1030
 
 ## reports
 
-Count: 11216
+Count: 11248
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -11569,6 +11573,38 @@ Count: 11216
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-bundle-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-check.cjs
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-actual-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-audit.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-final-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check-r3-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-complete-whitespace-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-final-integrity-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-foundation-inputs.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-goal-design-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-index-diagnostic-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-index-runtime.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-lessons-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-original-author-current-readonly-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-original-author-final-readonly-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-original-author-readonly-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-own-whitespace-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-platform-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-complete-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-complete-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-own-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-scope-own-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-F1-tools.cjs
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-final-integrity.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-goal-design-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-governance-process.json
