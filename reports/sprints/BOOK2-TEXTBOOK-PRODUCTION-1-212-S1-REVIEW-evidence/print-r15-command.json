@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-probes.py",
+    "print-worker",
+    "--revision",
+    "r15",
+    "--manifest",
+    "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\print-r15-build.json"
+  ],
+  "cwd": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform",
+  "started_at": "2026-09-05T23:59:45.227583+00:00",
+  "finished_at": "2026-09-05T23:59:55.643777+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
