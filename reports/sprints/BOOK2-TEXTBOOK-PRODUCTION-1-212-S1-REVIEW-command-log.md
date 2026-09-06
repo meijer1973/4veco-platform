@@ -214,3 +214,32 @@ Independent inspection bound: 3 representative pages and 11 figures; all 9 nativ
 ```text
 
 ```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-scope.py df80dd0058cc4f0ffd5ec168389337f48894c6a1
+
+- cwd: `C:\wt\book2-212-s1-review-20260906\4veco-platform`
+- started_at: `2026-09-06T00:04:21.324Z`
+- finished_at: `2026-09-06T00:04:25.534Z`
+- duration_ms: `4210`
+- exit_code: `0`
+- stdout_sha256: `4b1ca0684474a7f0d6b49d922808f1e99fd5c8e75131232bf6f849bb53ca3ac8`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+scope-owned-evidence-only exit 1
+scope-complete-successor-candidate exit 0
+scope-whole-candidate exit 0
+scope-default-whitespace exit 2
+scope-cr-at-eol-whitespace exit 0
+scope-source-whitespace exit 0
+scope-25-tests exit 0
+Actual committed strict-own scope and genuine complete-candidate checks passed; lesson unchanged.
+
+```
+
+### stderr excerpt
+
+```text
+
+```
