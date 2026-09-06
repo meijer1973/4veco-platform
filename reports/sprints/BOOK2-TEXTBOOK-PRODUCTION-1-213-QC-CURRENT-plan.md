@@ -56,7 +56,13 @@ compliance claim or reference mutation; any required freshness gap is recorded
 separately and cannot become invented mapping evidence.
 
 Only eventual lesson edit allowed: current Part A specialist fields inside
-2.1.3-quality-ref.yaml. Do not alter companion fields or paragraph review.
+2.1.3-quality-ref.yaml. Root explicitly authorized migration of its legacy
+top-level record to schema-v2 current Part A after the exact S1 PASS import
+release. Preserve the exact old c96a4af4 bytes in immutable evidence, bind the
+full hash below, and state explicit supersession. Keep the companion
+no-commission boundary; do not fabricate companion acceptance. Set only
+current specialist evidence, production_ready:false and root validation,
+root acceptance and handoff renewal PENDING. Do not alter paragraph review.
 Only new platform files: unique213-QC-CURRENT evidence/helpers/logs and fresh
 normal native proofs from unchanged generators, plus separate exact4 indexes.
 No plan, source, generator, test, target, authority, other paragraph, root
