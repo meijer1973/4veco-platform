@@ -1,0 +1,21 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-232-plan-f1-20260906\\4veco-platform",
+    "--lane",
+    "shared",
+    "--base",
+    "049c52976e749f233fe654618c9657f01aa988f4",
+    "--head",
+    "2be84d80f7ab2dfa793ce8b2dc3742a438d4517e",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-232-plan-f1-20260906\\4veco-platform",
+  "started_at": "2026-09-06T03:10:11.769Z",
+  "ended_at": "2026-09-06T03:10:11.843Z",
+  "exit_code": 1,
+  "stdout": "{\n  \"ok\": false,\n  \"lane\": \"shared\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-allowed-delta.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-baseline.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-bundle-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-check.py\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-checks-r1-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-checks-r2-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-custody-r1-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-durable-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-fetch-lessons-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-fetch-platform-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-foundation-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-governance-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-lessons-claim-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-plan.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-platform-claim-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-report.md\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-structural-process.json\",\n      \"reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-tools.cjs\"\n    ],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [\n    \"shared lane needs at least one shared platform change\",\n    \"generated index/report or review-evidence changes are allowed only with lane-owned changes\"\n  ],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": ""
+}
