@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/ci/check-agent-worktree-safety.js",
+    "--check",
+    "--task",
+    "BOOK2-TEXTBOOK-PRODUCTION-1-213-S1",
+    "--agent",
+    "paragraph_224_builder",
+    "--require-prefix",
+    "codex/,agent/",
+    "--worktree",
+    "../4veco-lessen",
+    "--require-clean"
+  ],
+  "cwd": "C:\\wt\\book2-213-succession-20260906\\4veco-platform",
+  "started_at": "2026-09-06T03:42:24.208182+00:00",
+  "finished_at": "2026-09-06T03:42:24.367950+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"mode\": \"check\",\n  \"repository\": \"4veco-lessen\",\n  \"worktree_path\": \"C:/wt/book2-213-succession-20260906/4veco-lessen\",\n  \"git_dir\": \"C:\\\\Projects\\\\4veco\\\\4veco-lessen\\\\.git\\\\worktrees\\\\4veco-lessen122\",\n  \"anchor_clone\": false,\n  \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-213-S1\",\n  \"agent_id\": \"paragraph_224_builder\",\n  \"lock\": {\n    \"present\": true,\n    \"same_owner\": true,\n    \"same_task\": true,\n    \"stale\": false,\n    \"path\": \"C:\\\\Projects\\\\4veco\\\\4veco-lessen\\\\.git\\\\worktrees\\\\4veco-lessen122\\\\4veco-agent-worktree-lock.json\",\n    \"owner\": \"paragraph_224_builder\",\n    \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-213-S1\"\n  },\n  \"branch\": \"agent/book2-213-succession-20260906\",\n  \"head_sha\": \"42996c60b4a93843dfe8488b8e5a3ea704871667\",\n  \"on_main\": false,\n  \"detached_head\": false,\n  \"dirty\": false,\n  \"dirty_count\": 0,\n  \"ahead\": 0,\n  \"behind\": 0,\n  \"diverged\": false,\n  \"prefix_ok\": true,\n  \"required_prefixes\": [\n    \"codex/\",\n    \"agent/\"\n  ],\n  \"warnings\": [],\n  \"failures\": []\n}\n",
+  "stderr": "",
+  "stdout_sha256": "bf1b84620b08f2eef585fe7f63eba373ec8d9e8bced00819efb01203897a658d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "inherited_path_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c"
+}
