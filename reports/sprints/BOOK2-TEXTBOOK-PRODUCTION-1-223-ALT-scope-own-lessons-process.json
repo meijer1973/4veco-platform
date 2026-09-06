@@ -1,0 +1,21 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-223-alt-correction-20260906\\4veco-lessen",
+    "--lane",
+    "textbook",
+    "--base",
+    "6663532621e1347c12f691862ee85200665ad14f",
+    "--head",
+    "f52b039c00d16cf9ee59573b31cae39de96ce779",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform",
+  "started_at": "2026-09-06T01:33:52.234Z",
+  "ended_at": "2026-09-06T01:33:52.309Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"lane\": \"textbook\",\n  \"categories\": {\n    \"partA_textbook\": [\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.html\",\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md\",\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.zip\",\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html\",\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md\",\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.zip\"\n    ],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": ""
+}
