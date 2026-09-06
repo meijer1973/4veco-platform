@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T00:19:27.968Z
+Generated: 2026-09-06T01:08:05.173Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-214-production-20260906`
-Source commit: `6828f38dbac16aa9bcf7f92a76946bdc328cc732`
-Files indexed: 9814
+Source branch: `agent/book2-214-plan-review-20260906`
+Source commit: `23c49ce062f181fd48962f28183ac564ba76d31e`
+Files indexed: 9823
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2721,7 +2721,7 @@ Count: 1030
 
 ## reports
 
-Count: 7038
+Count: 7047
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -7111,6 +7111,15 @@ Count: 7038
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-probes.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-publication.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-evidence.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-operational-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-probes.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-scope.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md
