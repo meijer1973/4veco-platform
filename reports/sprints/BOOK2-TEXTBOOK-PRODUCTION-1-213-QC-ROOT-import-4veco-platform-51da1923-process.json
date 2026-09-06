@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "51da192330f93ac4262f9929ca8e4f1ca2d65fb4"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T05:29:08.486Z",
+  "ended": "2026-09-06T05:29:08.647Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "[codex/book2-part-a-production-20260905 933444dd] Record exact S1 imports and independent current QC controller\n Date: Sun Sep 6 06:47:32 2026 +0200\n 7 files changed, 87630 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-execute.py\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-import-1fb2be8b.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-import-362d5460.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-import-85e373b1.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-import-d54e0ff0.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-import-mapping.json\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-preimport-custody.json\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDkzMzQ0NGRkXSBSZWNvcmQgZXhhY3QgUzEgaW1wb3J0cyBhbmQgaW5kZXBlbmRlbnQgY3VycmVudCBRQyBjb250cm9sbGVyCiBEYXRlOiBTdW4gU2VwIDYgMDY6NDc6MzIgMjAyNiArMDIwMAogNyBmaWxlcyBjaGFuZ2VkLCA4NzYzMCBpbnNlcnRpb25zKCspCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTMtUUMtQ1VSUkVOVC1leGVjdXRlLnB5CiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTMtUUMtQ1VSUkVOVC1pbXBvcnQtMWZiMmJlOGIuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjEzLVFDLUNVUlJFTlQtaW1wb3J0LTM2MmQ1NDYwLmpzb24KIGNyZWF0ZSBtb2RlIDEwMDY0NCByZXBvcnRzL3NwcmludHMvQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xLTIxMy1RQy1DVVJSRU5ULWltcG9ydC04NWUzNzNiMS5qc29uCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTMtUUMtQ1VSUkVOVC1pbXBvcnQtZDU0ZTBmZjAuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjEzLVFDLUNVUlJFTlQtaW1wb3J0LW1hcHBpbmcuanNvbgogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjEzLVFDLUNVUlJFTlQtcHJlaW1wb3J0LWN1c3RvZHkuanNvbgo=",
+  "stderr_base64": "",
+  "inherited_PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c"
+}

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "2fcc05235cf579d0a27e271d2d7db1c48c1d9fc0"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T05:29:08.280Z",
+  "ended": "2026-09-06T05:29:08.434Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "[codex/book2-part-a-production-20260905 5c31a060] Bind exact released 213 QC import and execution order\n Date: Sun Sep 6 06:43:45 2026 +0200\n 2 files changed, 58 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-import.cjs\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-release-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDVjMzFhMDYwXSBCaW5kIGV4YWN0IHJlbGVhc2VkIDIxMyBRQyBpbXBvcnQgYW5kIGV4ZWN1dGlvbiBvcmRlcgogRGF0ZTogU3VuIFNlcCA2IDA2OjQzOjQ1IDIwMjYgKzAyMDAKIDIgZmlsZXMgY2hhbmdlZCwgNTggaW5zZXJ0aW9ucygrKQogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjEzLVFDLUNVUlJFTlQtaW1wb3J0LmNqcwogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjEzLVFDLUNVUlJFTlQtcmVsZWFzZS1wbGFuLm1kCg==",
+  "stderr_base64": "",
+  "inherited_PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c"
+}

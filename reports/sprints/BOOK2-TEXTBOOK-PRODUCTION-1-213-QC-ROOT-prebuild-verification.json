@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "custody": {
+    "rows": [
+      {
+        "repository": "platform",
+        "inherited_files": 14027,
+        "only_QC_exception": false,
+        "actual_raw_git_exact": 14261
+      },
+      {
+        "repository": "lessons",
+        "inherited_files": 1905,
+        "only_QC_exception": true,
+        "actual_raw_git_exact": 1905
+      }
+    ],
+    "own_original_imports": 234,
+    "already_root_review_files": 162,
+    "canonical_QC": "4b03c759fe240a008f9cf68a77df6ae197b8b92f37c58f66cdffaa13992dd316",
+    "root_acceptance": "PENDING"
+  },
+  "bound_evidence": {
+    "native_files": 24,
+    "actual_inputs": 7,
+    "attributed_specialist_views": 72,
+    "attributed_raw_RGB_pages": 90,
+    "physical_negative": 16,
+    "valid_sentinel": 1,
+    "controller_negative": 27,
+    "alternative_negative": 45,
+    "root_personal_views": 0
+  },
+  "root_tests": 23,
+  "root_figure_reraster": 6,
+  "gates": [
+    {
+      "name": "student-web",
+      "exit": 0
+    },
+    {
+      "name": "publisher-print",
+      "exit": 0
+    },
+    {
+      "name": "currentness",
+      "exit": 0
+    },
+    {
+      "name": "durable",
+      "exit": 0
+    },
+    {
+      "name": "bundle",
+      "exit": 0
+    }
+  ],
+  "root_acceptance": "PENDING",
+  "production_ready": false
+}

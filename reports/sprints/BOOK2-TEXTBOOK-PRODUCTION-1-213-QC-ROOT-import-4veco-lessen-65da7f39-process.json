@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "65da7f3930c2afba69ccb715b472b726b1429180"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+  "started": "2026-09-06T05:29:09.489Z",
+  "ended": "2026-09-06T05:29:09.550Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "[codex/book2-part-a-production-20260905 c5df5dd] Record distinct current 213 specialist QC in Part A schema v2\n Date: Sun Sep 6 07:19:45 2026 +0200\n 1 file changed, 89 insertions(+), 29 deletions(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGM1ZGY1ZGRdIFJlY29yZCBkaXN0aW5jdCBjdXJyZW50IDIxMyBzcGVjaWFsaXN0IFFDIGluIFBhcnQgQSBzY2hlbWEgdjIKIERhdGU6IFN1biBTZXAgNiAwNzoxOTo0NSAyMDI2ICswMjAwCiAxIGZpbGUgY2hhbmdlZCwgODkgaW5zZXJ0aW9ucygrKSwgMjkgZGVsZXRpb25zKC0pCg==",
+  "stderr_base64": "",
+  "inherited_PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c"
+}

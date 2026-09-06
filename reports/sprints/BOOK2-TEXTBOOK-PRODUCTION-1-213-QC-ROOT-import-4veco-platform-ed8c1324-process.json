@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "ed8c132493957aac09b79c712f7cabea8d75bb28"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T05:29:07.612Z",
+  "ended": "2026-09-06T05:29:07.802Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "[codex/book2-part-a-production-20260905 07f3b1c6] Specify authorized legacy 213 QC migration after review gate\n Date: Sun Sep 6 06:10:07 2026 +0200\n 1 file changed, 7 insertions(+), 1 deletion(-)\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDA3ZjNiMWM2XSBTcGVjaWZ5IGF1dGhvcml6ZWQgbGVnYWN5IDIxMyBRQyBtaWdyYXRpb24gYWZ0ZXIgcmV2aWV3IGdhdGUKIERhdGU6IFN1biBTZXAgNiAwNjoxMDowNyAyMDI2ICswMjAwCiAxIGZpbGUgY2hhbmdlZCwgNyBpbnNlcnRpb25zKCspLCAxIGRlbGV0aW9uKC0pCg==",
+  "stderr_base64": "",
+  "inherited_PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c"
+}

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "303fd43d43bc83f0a5eced04c77c623e40117478"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T05:29:07.190Z",
+  "ended": "2026-09-06T05:29:07.345Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "[codex/book2-part-a-production-20260905 fed1c41d] Plan distinct current 213 QC behind exact S1 review gate\n Date: Sun Sep 6 05:56:46 2026 +0200\n 1 file changed, 155 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IGZlZDFjNDFkXSBQbGFuIGRpc3RpbmN0IGN1cnJlbnQgMjEzIFFDIGJlaGluZCBleGFjdCBTMSByZXZpZXcgZ2F0ZQogRGF0ZTogU3VuIFNlcCA2IDA1OjU2OjQ2IDIwMjYgKzAyMDAKIDEgZmlsZSBjaGFuZ2VkLCAxNTUgaW5zZXJ0aW9ucygrKQogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjEzLVFDLUNVUlJFTlQtcGxhbi5tZAo=",
+  "stderr_base64": "",
+  "inherited_PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c"
+}

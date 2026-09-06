@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "de99700a90b230a949bdeaa356dabbc717a7cf62"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T05:29:07.862Z",
+  "ended": "2026-09-06T05:29:08.023Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "[codex/book2-part-a-production-20260905 47e21536] Preserve original QC plan and record migration as additive work order\n Date: Sun Sep 6 06:10:44 2026 +0200\n 2 files changed, 19 insertions(+), 7 deletions(-)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-migration-plan-addendum.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDQ3ZTIxNTM2XSBQcmVzZXJ2ZSBvcmlnaW5hbCBRQyBwbGFuIGFuZCByZWNvcmQgbWlncmF0aW9uIGFzIGFkZGl0aXZlIHdvcmsgb3JkZXIKIERhdGU6IFN1biBTZXAgNiAwNjoxMDo0NCAyMDI2ICswMjAwCiAyIGZpbGVzIGNoYW5nZWQsIDE5IGluc2VydGlvbnMoKyksIDcgZGVsZXRpb25zKC0pCiBjcmVhdGUgbW9kZSAxMDA2NDQgcmVwb3J0cy9zcHJpbnRzL0JPT0syLVRFWFRCT09LLVBST0RVQ1RJT04tMS0yMTMtUUMtQ1VSUkVOVC1taWdyYXRpb24tcGxhbi1hZGRlbmR1bS5tZAo=",
+  "stderr_base64": "",
+  "inherited_PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c"
+}

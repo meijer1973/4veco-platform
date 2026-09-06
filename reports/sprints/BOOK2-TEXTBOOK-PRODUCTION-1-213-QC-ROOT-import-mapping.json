@@ -1,0 +1,64 @@
+{
+  "mappings": [
+    {
+      "repository": "4veco-platform",
+      "source": "303fd43d43bc83f0a5eced04c77c623e40117478",
+      "parent": "cd2aaed18c4b539b46e5d12cfd760126731f784c",
+      "adopted": "fed1c41dea748898eb57797c1eaa13abed9348bb"
+    },
+    {
+      "repository": "4veco-platform",
+      "source": "8c529cffbced6ebb96489c9f183c66b14aa56628",
+      "parent": "fed1c41dea748898eb57797c1eaa13abed9348bb",
+      "adopted": "c0fa6e219e0a19bb25781ede326c05bac8b7d331"
+    },
+    {
+      "repository": "4veco-platform",
+      "source": "ed8c132493957aac09b79c712f7cabea8d75bb28",
+      "parent": "c0fa6e219e0a19bb25781ede326c05bac8b7d331",
+      "adopted": "07f3b1c616a51e623ceab8cfc3b5dde17a986ff2"
+    },
+    {
+      "repository": "4veco-platform",
+      "source": "de99700a90b230a949bdeaa356dabbc717a7cf62",
+      "parent": "07f3b1c616a51e623ceab8cfc3b5dde17a986ff2",
+      "adopted": "47e21536f9c93ae896287d158bdc60c0fb0abafd"
+    },
+    {
+      "repository": "4veco-platform",
+      "source": "9eaaf122fc3c09b240e88311a82b12a075994d51",
+      "parent": "47e21536f9c93ae896287d158bdc60c0fb0abafd",
+      "adopted": "0974c21e4cafab106b6a6ff586aeef08a03b044b"
+    },
+    {
+      "repository": "4veco-platform",
+      "source": "2fcc05235cf579d0a27e271d2d7db1c48c1d9fc0",
+      "parent": "0974c21e4cafab106b6a6ff586aeef08a03b044b",
+      "adopted": "5c31a060ecb9b63174d22c34aa0caff6510d6b0d"
+    },
+    {
+      "repository": "4veco-platform",
+      "source": "51da192330f93ac4262f9929ca8e4f1ca2d65fb4",
+      "parent": "5c31a060ecb9b63174d22c34aa0caff6510d6b0d",
+      "adopted": "933444dd108ce3a7569053bcc4ed871225287cd8"
+    },
+    {
+      "repository": "4veco-platform",
+      "source": "f0ec0fcbc825d36897ad7463f97c9143f2a15032",
+      "parent": "933444dd108ce3a7569053bcc4ed871225287cd8",
+      "adopted": "66828da209d4b4b1a1453155946e45f29392afe2"
+    },
+    {
+      "repository": "4veco-platform",
+      "source": "1d17229993420b5053ff275b51915dd059b8955a",
+      "parent": "66828da209d4b4b1a1453155946e45f29392afe2",
+      "adopted": "afe258058d8f1226652fd784ff870badce8883df"
+    },
+    {
+      "repository": "4veco-lessen",
+      "source": "65da7f3930c2afba69ccb715b472b726b1429180",
+      "parent": "167b833c88c5651327906ffdc322e44a9fcfc4a7",
+      "adopted": "c5df5dd276fa084f81bf9637e7f1ab4e33cfb24c"
+    }
+  ]
+}
