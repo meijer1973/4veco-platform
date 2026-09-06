@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-lessen",
+    "--lane",
+    "textbook",
+    "--base",
+    "a52206c0cc9e2578b57e285909c77134bb47657e",
+    "--head",
+    "fdce41899984a2c64efb88eb6da103181ddd6721",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform",
+  "started_utc": "2026-09-06T03:07:59.145Z",
+  "finished_utc": "2026-09-06T03:07:59.251Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"lane\": \"textbook\",\n  \"categories\": {\n    \"partA_textbook\": [\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md\"\n    ],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [\n      \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml\"\n    ],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [\n    {\n      \"path\": \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml\",\n      \"blocks\": [\n        \"partA\"\n      ]\n    }\n  ],\n  \"failures\": [],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": ""
+}
