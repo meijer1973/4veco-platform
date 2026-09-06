@@ -42,6 +42,11 @@ def main() -> None:
         default=".",
         help="Path to 4veco-platform root (default: current directory).",
     )
+    parser.add_argument(
+        "--proof-root",
+        type=Path,
+        help="Unused Book 2 task-evidence namespace for an independent native capture.",
+    )
     args = parser.parse_args()
 
     platform_root = Path(args.platform_root).resolve()
@@ -61,7 +66,10 @@ def main() -> None:
         sys.exit(f"ERROR: manifest not found: {manifest_path}")
 
     try:
-        build_book(manifest_path, lessen_root, platform_root)
+        if args.proof_root is None:
+            build_book(manifest_path, lessen_root, platform_root)
+        else:
+            build_book(manifest_path, lessen_root, platform_root, proof_root=args.proof_root)
     except FileNotFoundError as e:
         sys.exit(f"ERROR: {e}")
     except ValueError as e:

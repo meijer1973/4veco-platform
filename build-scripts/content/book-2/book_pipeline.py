@@ -164,7 +164,30 @@ def prepare_book(manifest_path: Path, lesson_root: Path, platform_root: Path) ->
     return prepared
 
 
-def build_book(manifest_path: Path, lesson_root: Path, platform_root: Path) -> list[dict]:
+def _unused_proof_root(proof_root: Path, platform_root: Path) -> Path:
+    """Validate an unused task evidence namespace without creating anything."""
+    requested = Path(proof_root)
+    if requested.exists() or requested.is_symlink():
+        raise ValueError("Book proof namespace already exists; use a new reserved path")
+    candidate = requested.resolve()
+    platform = platform_root.resolve(strict=True)
+    if not candidate.is_relative_to(platform):
+        raise ValueError("Book proof namespace must stay inside platform task evidence")
+    relative = candidate.relative_to(platform).parts
+    rendered = ("reports", "rendered-proof", "BOOK2-TEXTBOOK-PRODUCTION-1")
+    in_rendered = relative[:3] == rendered and len(relative) > 3
+    in_sprint = (len(relative) >= 3 and relative[:2] == ("reports", "sprints")
+                 and relative[2].startswith("BOOK2-TEXTBOOK-PRODUCTION-1-"))
+    if not (in_rendered or in_sprint):
+        raise ValueError("Book proof namespace must stay inside platform task evidence")
+    return candidate
+
+
+def build_book(manifest_path: Path, lesson_root: Path, platform_root: Path, *,
+               proof_root: Path | None = None) -> list[dict]:
+    # The explicit reviewer namespace is checked before even Pandoc preflight.
+    # Omission retains the existing default entrypoint and historical paths.
+    reserved_root = _unused_proof_root(proof_root, platform_root) if proof_root is not None else None
     prepared = prepare_book(manifest_path, lesson_root, platform_root)
     for args in (
         ["node", "build-scripts/workflows/check-book-outline-currentness.js", "--require-approved",
@@ -173,6 +196,15 @@ def build_book(manifest_path: Path, lesson_root: Path, platform_root: Path) -> l
     ):
         subprocess.run(args, cwd=platform_root, check=True)
     verify_chapter_inputs(prepared)
+    if reserved_root is not None:
+        if _unused_proof_root(proof_root, platform_root) != reserved_root:
+            raise ValueError("Book proof namespace changed during input preflight")
+        # Atomic final reservation precedes every aggregate asset/source write.
+        # Never recycle this namespace, including after a later failed render.
+        try:
+            reserved_root.mkdir(parents=True, exist_ok=False)
+        except FileExistsError as error:
+            raise ValueError("Book proof namespace was concurrently reserved") from error
     book_dir = Path(prepared["book_dir"])
     for asset in prepared["assets"]:
         data = Path(asset["path"]).read_bytes()
@@ -183,7 +215,7 @@ def build_book(manifest_path: Path, lesson_root: Path, platform_root: Path) -> l
         output.write_bytes(data)
         if digest(output) != asset["sha256"]:
             raise ValueError("Collected book asset differs from its reviewed source")
-    proof_root = platform_root / "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1"
+    capture_root = reserved_root if reserved_root is not None else platform_root / "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1"
     results = []
     for kind, markdown in prepared["documents"].items():
         output = book_dir / f"Boek 2 {TITLE} – {kind}.md"
@@ -191,7 +223,7 @@ def build_book(manifest_path: Path, lesson_root: Path, platform_root: Path) -> l
         record = build_document(output)
         record["assembly_inputs"] = prepared["inputs"] + prepared["assets"]
         verify_chapter_inputs(prepared)
-        proof = proof_root / f"book-2-{kind}-{record['pdf_sha256'][:12]}"
+        proof = capture_root / f"book-2-{kind}-{record['pdf_sha256'][:12]}"
         results.append(render_proof(record, proof))
     verify_chapter_inputs(prepared)
     return results

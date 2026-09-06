@@ -16344,3 +16344,232 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 5858: inval
 ```text
 
 ```
+## C:/Python314/python.exe -m unittest discover -s build-scripts/content/book-2 -p test_book_proof_namespace.py -v
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:01:25.722Z`
+- finished_at: `2026-09-06T02:01:34.679Z`
+- duration_ms: `8957`
+- exit_code: `0`
+- stdout_sha256: `2765dcbdc201038297bce404aa911b49b0f3a4496f4b6206cbe6fdc9b4e05f86`
+- stderr_sha256: `63813744b6497f82f97f04b070102beef9617bc0993bcb0ff604f889bb8c955f`
+
+### stdout excerpt
+
+```text
+=== Loading manifest: book-2.json ===
+=== Loading manifest: book-2.json ===
+=== Loading manifest: book-2.json ===
+
+```
+
+### stderr excerpt
+
+```text
+test_atomic_reservation_collision_precedes_student_writes (test_book_proof_namespace.BookProofNamespaceTests.test_atomic_reservation_collision_precedes_student_writes) ... ok
+test_common_dispatch_forwards_only_explicit_book2_option (test_book_proof_namespace.BookProofNamespaceTests.test_common_dispatch_forwards_only_explicit_book2_option) ... ok
+test_denied_authority_does_not_reserve_namespace_or_write_outputs (test_book_proof_namespace.BookProofNamespaceTests.test_denied_authority_does_not_reserve_namespace_or_write_outputs) ... ok
+test_existing_cli_forwards_explicit_option_and_preserves_default_call (test_book_proof_namespace.BookProofNamespaceTests.test_existing_cli_forwards_explicit_option_and_preserves_default_call) ... ok
+test_existing_empty_and_populated_namespaces_reject_before_preflight (test_book_proof_namespace.BookProofNamespaceTests.test_existing_empty_and_populated_namespaces_reject_before_preflight) ... ok
+test_failed_render_consumes_namespace_and_cannot_overwrite_proof (test_book_proof_namespace.BookProofNamespaceTests.test_failed_render_consumes_namespace_and_cannot_overwrite_proof) ... ok
+test_namespace_appearing_during_preflight_rejects_before_student_writes (test_book_proof_namespace.BookProofNamespaceTests.test_namespace_appearing_during_preflight_rejects_before_student_writes) ... ok
+test_out_of_scope_and_broad_roots_reject_before_preflight (test_book_proof_namespace.BookProofNamespaceTests.test_out_of_scope_and_broad_roots_reject_before_preflight) ... ok
+test_stale_input_does_not_reserve_namespace_or_invoke_authority (test_book_proof_namespace.BookProofNamespaceTests.test_stale_input_does_not_reserve_namespace_or_invoke_authority) ... ok
+test_two_real_native_rebuilds_preserve_bytes_pixels_and_independent_proof (test_book_proof_namespace.BookProofNamespaceTests.test_two_real_native_rebuilds_preserve_bytes_pixels_and_independent_proof)
+Stub only fixture authority: real Pandoc, WeasyPrint and Poppler twice. ... C:\Users\meije\AppData\Roaming\Python\Python314\site-packages\weasyprint\urls.py:199: DeprecationWarning: default_url_fetcher is deprecated and will be removed in WeasyPrint 69.0, please use URLFetcher instead. For security reasons, HTTP redirects are not supported anymore with default_url_fetcher, but are with URLFetcher.
+
+See https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#url-fetchers
+  warnings.warn(
+ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 8.422s
+
+OK
+
+```
+## C:/Python314/python.exe -m unittest discover -s build-scripts/content/book-2 -p "test_*pipeline.py" -v
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:02:05.587Z`
+- finished_at: `2026-09-06T02:02:20.333Z`
+- duration_ms: `14746`
+- exit_code: `0`
+- stdout_sha256: `b22351ac40df37e8fff4f87912116fc2af166b378cfcbf3f7bfde151f09c9997`
+- stderr_sha256: `b2d6d0e1910966f8b1a4a6d43e2627913a32a884275373512b562c5406e73103`
+
+### stdout excerpt
+
+```text
+=== Loading manifest: book-2.json ===
+=== Loading manifest: book-2.json ===
+
+```
+
+### stderr excerpt
+
+```text
+test_book_front_and_back_are_not_wrapped_as_exercises (test_book_pipeline.BookPipelineTests.test_book_front_and_back_are_not_wrapped_as_exercises) ... ok
+test_changed_or_unpinned_sources_fail_before_writes (test_book_pipeline.BookPipelineTests.test_changed_or_unpinned_sources_fail_before_writes) ... ok
+test_denied_assembly_authority_prevents_output_and_proof_writes (test_book_pipeline.BookPipelineTests.test_denied_assembly_authority_prevents_output_and_proof_writes) ... ok
+test_duplicate_unresolved_and_cross_matter_book_references_are_validated (test_book_pipeline.BookPipelineTests.test_duplicate_unresolved_and_cross_matter_book_references_are_validated) ... ok
+test_each_edition_requires_asset_map_and_both_exact_paired_bytes (test_book_pipeline.BookPipelineTests.test_each_edition_requires_asset_map_and_both_exact_paired_bytes) ... ok
+test_front_path_escape_active_html_and_typography_override_rejected (test_book_pipeline.BookPipelineTests.test_front_path_escape_active_html_and_typography_override_rejected) ... ok
+test_legacy_book_entry_dispatches_only_explicit_book2_profile (test_book_pipeline.BookPipelineTests.test_legacy_book_entry_dispatches_only_explicit_book2_profile) ... ok
+test_missing_paragraph_heading_and_authored_link_namespace (test_book_pipeline.BookPipelineTests.test_missing_paragraph_heading_and_authored_link_namespace) ... ok
+test_order_single_route_separate_answers_and_all_stable_toc_targets (test_book_pipeline.BookPipelineTests.test_order_single_route_separate_answers_and_all_stable_toc_targets) ... ok
+test_post_preflight_manifest_and_front_mutation_detected (test_book_pipeline.BookPipelineTests.test_post_preflight_manifest_and_front_mutation_detected) ... ok
+test_real_render_and_page_capture_bind_all_inputs_without_acceptance (test_book_pipeline.BookPipelineTests.test_real_render_and_page_capture_bind_all_inputs_without_acceptance)
+Only authority subprocesses are stubbed; this grants no real approval. ... C:\Users\meije\AppData\Roaming\Python\Python314\site-packages\weasyprint\urls.py:199: DeprecationWarning: default_url_fetcher is deprecated and will be removed in WeasyPrint 69.0, please use URLFetcher instead. For security reasons, HTTP redirects are not supported anymore with default_url_fetcher, but are with URLFetcher.
+
+See https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#url-fetchers
+  warnings.warn(
+ok
+test_structural_namespace_resolves_all_markdown_forms_and_preserves_code (test_book_pipeline.BookPipelineTests.test_structural_namespace_resolves_all_markdown_forms_and_preserves_code) ... ok
+test_wrong_book_missing_chapter_duplicate_order_or_plan_pin_rejected (test_book_pipeline.BookPipelineTests.test_wrong_book_missing_chapter_duplicate_order_or_plan_pin_rejected) ... ok
+test_assets_are_paired_namespaced_and_bound_to_original (test_chapter_pipeline.ChapterPipelineTests.test_assets_are_paired_namespaced_and_bound_to_original) ... ok
+test_front_active_html_and_wrong_book_are_rejected (test_chapter_pipeline.ChapterPipelineTests.test_front_active_html_and_wrong_book_are_rejected) ... ok
+test_missing_reviewed_asset_map_is_rejected_even_for_text_only_input (test_chapter_pipeline.ChapterPipelineTests.test_missing_reviewed_asset_map_is_rejected_even_for_text_only_input) ... ok
+test_single_route_and_separate_answers_preserve_order (test_chapter_pipeline.ChapterPipelineTests.test_single_route_and_separate_answers_preserve_order) ... ok
+test_source_mutation_after_preflight_is_rejected (test_chapter_pipeline.ChapterPipelineTests.test_source_mutation_after_preflight_is_rejected) ... ok
+test_wrong_order_duplicate_or_unpinned_input_is_rejected (test_chapter_pipeline.ChapterPipelineTests.test_wrong_order_duplicate_or_unpinned_input_is_rejected) ... ok
+test_assembly_source_change_during_capture_does_not_publish_manifest (test_print_pipeline.PrintPipelineTests.test_assembly_source_change_during_capture_does_not_publish_manifest) ... ok
+test_body_table_and_front_readability_floor (
+...[truncated 2903 chars]
+```
+## node node_modules/jest/bin/jest.js --runInBand build-scripts/books/lib_book.test.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:04:04.740Z`
+- finished_at: `2026-09-06T02:04:13.436Z`
+- duration_ms: `8696`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `fe8767b2c254fab209d5599f6778490322b61bef774ff560709458c92d72474b`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        2.604 s
+Ran all test suites matching build-scripts/books/lib_book.test.js.
+
+```
+## C:/Python314/python.exe build-scripts/books/build-book.py --help
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:04:13.484Z`
+- finished_at: `2026-09-06T02:04:13.603Z`
+- duration_ms: `119`
+- exit_code: `0`
+- stdout_sha256: `9ebc193143bd0c1dc11f48e3ab25c7335d2b0ad7aeee3eb5e5174cbc59e4264e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+usage: build-book.py [-h] --book BOOK [--lessen-root LESSEN_ROOT]
+                     [--platform-root PLATFORM_ROOT] [--proof-root PROOF_ROOT]
+
+Assemble a printable textbook from chapter outputs.
+
+options:
+  -h, --help            show this help message and exit
+  --book BOOK           Book number (1-4).
+  --lessen-root LESSEN_ROOT
+                        Path to 4veco-lessen root (default: ../4veco-lessen).
+  --platform-root PLATFORM_ROOT
+                        Path to 4veco-platform root (default: current
+                        directory).
+  --proof-root PROOF_ROOT
+                        Unused Book 2 task-evidence namespace for an
+                        independent native capture.
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action whole_book_assembly
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:04:13.651Z`
+- finished_at: `2026-09-06T02:04:15.280Z`
+- duration_ms: `1629`
+- exit_code: `0`
+- stdout_sha256: `15d04f485b29072d4e5de572b6c4a351847ecdcbb8a7157ad9576e854d0de1a5`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:04:15.325Z`
+- finished_at: `2026-09-06T02:04:15.870Z`
+- duration_ms: `545`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TEXTBOOK-PRODUCTION-1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:04:15.914Z`
+- finished_at: `2026-09-06T02:04:16.095Z`
+- duration_ms: `181`
+- exit_code: `0`
+- stdout_sha256: `699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```

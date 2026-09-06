@@ -1448,7 +1448,7 @@ def md_to_pdf(book_md: str, book_output_dir: Path, book_title_full: str, book: d
     else:
         print(f"No PDF engine available. HTML saved at: {html_path}", file=sys.stderr)
 
-def build_book(manifest_path: Path, lessen_root: Path, platform_root: Path):
+def build_book(manifest_path: Path, lessen_root: Path, platform_root: Path, *, proof_root: Path | None = None):
     print(f"=== Loading manifest: {manifest_path.name} ===")
     manifest = load_manifest(manifest_path)
     if manifest.get("print_profile"):
@@ -1457,7 +1457,11 @@ def build_book(manifest_path: Path, lessen_root: Path, platform_root: Path):
         # Deliberately separate from the frozen Book 1 edition renderer.
         sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "content" / "book-2"))
         from book_pipeline import build_book as build_frozen_book2
+        if proof_root is not None:
+            return build_frozen_book2(manifest_path, lessen_root, platform_root, proof_root=proof_root)
         return build_frozen_book2(manifest_path, lessen_root, platform_root)
+    if proof_root is not None:
+        raise ValueError("Explicit proof namespaces require the frozen Book 2 print profile")
     versions = detect_toolchain_versions()
     print(
         "Toolchain "
