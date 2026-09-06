@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T03:43:30.980Z
+Generated: 2026-09-06T04:12:05.817Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-213-succession-20260906`
-Source commit: `f57af0874238ef951b5b03a16ecd411f87224482`
-Files indexed: 12507
-Scope: committed tree files from `git ls-tree -r --name-only f57af0874238ef951b5b03a16ecd411f87224482`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source branch: `agent/book2-213-qc-current-20260906`
+Source commit: `9eaaf122fc3c09b240e88311a82b12a075994d51`
+Files indexed: 12523
+Scope: committed tree files from `git ls-tree -r --name-only 9eaaf122fc3c09b240e88311a82b12a075994d51`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -2754,7 +2754,7 @@ Count: 1030
 
 ## reports
 
-Count: 9718
+Count: 9734
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -8769,6 +8769,22 @@ Count: 9718
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-paragraph-review-r6.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-paragraph-review-r7.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-plan-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-lessons-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-math-preparation-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-math-preparation.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-migration-plan-addendum.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-platform-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-preparation-publication.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-preparation-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-preparation-scope-incremental-lessons.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-preparation-scope-incremental-platform.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-preparation-scope-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-preparation-scope-whole-lessons.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-preparation-scope-whole-platform.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-preparation-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-CURRENT-prepare.cjs
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R5-QC-command-log.jsonl
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R5-QC-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-R5-QC-plan.md
