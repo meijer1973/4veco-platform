@@ -206,6 +206,23 @@ class ExecutionRoleTests(unittest.TestCase):
             attempt.unlink();occupied=proof/'232-opgaven-aaaaaaaaaaaa-r7';occupied.mkdir(parents=True)
             with self.assertRaisesRegex(ValueError,'Occupied proof revision'):b.gate.namespace_preflight('r7',reservation,'a'*40,root,role)
 
+    def test_actual_child_unicode_protocol_without_path_or_global_changes(self):
+        filename='2.3.2 Producentensurplus en totaal surplus – paragraaf.html'
+        code='import json,os,sys;print(json.dumps({"name":'+repr(filename)+',"path":os.environ["PATH"],"encoding":sys.stdout.encoding},ensure_ascii=False))'
+        original_path=os.environ['PATH'];argv=[sys.executable,'-c',code]
+        with patch.dict(os.environ,{'PYTHONIOENCODING':'cp1252'}):
+            inherited=b.gate.command(argv)
+            self.assertNotEqual(json.loads(inherited['stdout'])['name'],filename)
+            fixed=b.gate.command(argv,utf8_protocol=True);actual=json.loads(fixed['stdout'])
+            self.assertEqual(actual,{'name':filename,'path':original_path,'encoding':'utf-8'})
+            self.assertEqual(fixed['argv'],argv);self.assertEqual(fixed['environment_delta'],{'PYTHONIOENCODING':'utf-8'})
+            self.assertEqual(inherited['environment_delta'],{});self.assertEqual(os.environ['PYTHONIOENCODING'],'cp1252')
+            self.assertEqual(os.environ['PATH'],original_path)
+        import ast
+        tree=ast.parse((b.ROOT/'build-scripts/content/book-2/b2_232.py').read_bytes())
+        opted=[n for n in ast.walk(tree) if isinstance(n,ast.Call) and any(k.arg=='utf8_protocol' for k in n.keywords)]
+        self.assertEqual(len(opted),1);self.assertEqual(ast.unparse(opted[0]),'gate.command(argv, utf8_protocol=True)')
+
     def test_unchanged_pupil_functions_and_original_tests(self):
         import ast
         baseline='e0b47cab498102cd990e66318f5111602c32a6b6'
