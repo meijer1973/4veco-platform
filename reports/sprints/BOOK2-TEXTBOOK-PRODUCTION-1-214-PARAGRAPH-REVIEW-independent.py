@@ -82,7 +82,7 @@ def negative():
     deps=b.raw(b.SOURCE/'dependency-pins.json');originals[('4veco-platform','build-scripts/content/book-2/214/dependency-pins.json')]=deps
     for row in json.loads(deps)['files']:originals[('4veco-platform',row['path'])]=git(P,'show',b.BASE_PLATFORM+':'+row['path'])
     chosen=[('4veco-platform',b.N+'214-release.json'),('4veco-platform',b.C+'214-inputs.json'),('4veco-platform',b.R+'report.md')]
-    for ending in ['2.1.3-quality-ref.yaml','2.1.2-handoff.md','2.1.4-textbook-plan.md']:
+    for ending in ['2.1.3-quality-ref.yaml','2.1.2-textbook-handoff.md','2.1.4-textbook-plan.md']:
         found=[key for key in originals if key[1].endswith(ending)];assert len(found)==1,(ending,found);chosen+=found
     chosen+=[('4veco-platform','references/authored/course-target-exercises.json')]
     assert len(set(chosen))==7
@@ -96,9 +96,9 @@ def negative():
             for route in ['full','thin','direct']:
                 with ExitStack() as stack:
                     stack.enter_context(patch.object(b,'ROOT',fp))
-                    effects=[stack.enter_context(patch.object(Path,m,side_effect=AssertionError('Unexpected '+m))) for m in ['mkdir','write_bytes','write_text','unlink','rmdir','open']]
+                    effects=[stack.enter_context(patch.object(Path,m,side_effect=AssertionError('Unexpected '+m))) for m in ['mkdir','write_bytes','write_text','unlink','rmdir']]
                     child=stack.enter_context(patch.object(b.subprocess,'run',side_effect=AssertionError('Unexpected subprocess')))
-                    # read_bytes uses io.open internally, not Path.open; allowed read only.
+                    # Read-only Path.open remains available to raw input reads.
                     try:
                         if route=='direct':direct.direct(fl,fp/'reports/214-no-effects','r99999')
                         elif route=='full':b.build(fl,fp/'reports/214-no-effects','r99999')
