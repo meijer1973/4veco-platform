@@ -69,6 +69,10 @@ class SourceTests(unittest.TestCase):
         self.assertIn("vier afzonderlijke criteria, elk 1 punt", self.docs["antwoorden"])
         self.assertIn("Bij vraag 6 en de volgende doeloefening kies je zelf de aanpak", self.docs["opgaven"])
         self.assertIn("iedereen", self.docs["opgaven"].lower())
+        self.assertIn("procentuele verandering van\nde vraag naar", self.docs["opgaven"])
+        self.assertIn("procentuele verandering van de prijs van", self.docs["opgaven"])
+        self.assertIn("De teller en noemer zijn procentuele veranderingen", self.docs["antwoorden"])
+        self.assertNotIn('“vraag naar …” gedeeld door', self.docs["opgaven"])
 
     def test_exact_revenue_arithmetic_and_finite_counterexample(self):
         pct = lambda old, new: 100 * F(new - old, old)
