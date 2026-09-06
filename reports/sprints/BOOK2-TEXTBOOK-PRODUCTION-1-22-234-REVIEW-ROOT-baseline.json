@@ -1,0 +1,518 @@
+{
+  "operational_commit": "be4e13939eda5c78092d5abbb653e1895edaf5ac",
+  "platform": {
+    "ref": "5cd6a5ac7a04cf452172f3f1a68c71c0ad4f7237",
+    "tree": "1cede0c42001745cd83e78bb13ca20affd202946",
+    "files": 16211,
+    "excluded": [],
+    "NUL_path_sha256": "a79c3f210baf350c9acf0310e90fed50761c84f2b7ff61cbe608d353ca157c01",
+    "path_blob_sha256": "4c25c4adba1d0ca8284d8609e3e85913b71fb10d165d6dcd5464c88d3eeb0126",
+    "all_current_raw_equal_Git": true
+  },
+  "lessons": {
+    "ref": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+    "tree": "42ddadefe84e9809e6f3749c406dca4fd990ff3d",
+    "files": 1924,
+    "excluded": [],
+    "NUL_path_sha256": "185888bcc67dd5f3be0fea6e85f2c84274ff7e111f9bbbc4d5b9e60aae7a59d9",
+    "path_blob_sha256": "1bc802938e59a1b91ea0d795adcb7c91687159db920772084ed1e0e06691b221",
+    "all_current_raw_equal_Git": true
+  },
+  "intended": [
+    {
+      "original": "f36404f61511b8a4a86c29faaea443131e8c613f",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-plan.md",
+          "old_blob": null,
+          "new_blob": "b77a02cdc35b48b383c9f28764a484625a289513"
+        }
+      ]
+    },
+    {
+      "original": "d438fe13fd5a909df3712d0c571e2cedd599a00b",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-check.cjs",
+          "old_blob": null,
+          "new_blob": "1ca7ee46c63f5e900bae0b73098d72269e58b0b8"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review.py",
+          "old_blob": null,
+          "new_blob": "49c3f6f1ea489c49cc55c0c3709bf427606f5ae0"
+        }
+      ]
+    },
+    {
+      "original": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-author-r1-process.json",
+          "old_blob": null,
+          "new_blob": "50063ca280e3e1e461705ae316476cc5df512f91"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-baseline.json",
+          "old_blob": null,
+          "new_blob": "829cc157d96cabea67fec3d1161634fe423df1ed"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-bundle-r1-process.json",
+          "old_blob": null,
+          "new_blob": "d4f5e18432d3cfcc423f2b9926889b335b5e1606"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-chapter-r1-process.json",
+          "old_blob": null,
+          "new_blob": "ad4bf8a5d85cd81eed1e3c9f867c0edf48c7c79e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-durable-r1-process.json",
+          "old_blob": null,
+          "new_blob": "e97ef4046beeb6eebf2c5ab4e18a4e9e9fd57af4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-governance-L-r1-process.json",
+          "old_blob": null,
+          "new_blob": "3efe9e2896a35115f7d504e0b6315401c7e0ada4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-governance-r1-process.json",
+          "old_blob": null,
+          "new_blob": "e277d9e2e6ac26f2f5f558e6ab131ea4fcacbe5e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-index-runtime.cjs",
+          "old_blob": null,
+          "new_blob": "520b4998dae278d51e0bfb30a750c62a1cb92ec5"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-publication.cjs",
+          "old_blob": null,
+          "new_blob": "68ddfcf590a5f4b5b70437531a72fbb8d9e5e0ae"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-report.md",
+          "old_blob": null,
+          "new_blob": "75383e8d4533ccc941f31718b551fed88d3e80ea"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review-r1-process.json",
+          "old_blob": null,
+          "new_blob": "ba0aae2f6d5bdff3744eb9dfefbcb0e83cf814de"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-structural-r1-process.json",
+          "old_blob": null,
+          "new_blob": "f9d21a88a5bf3d4fe958ea5719ef5e0f96f0e10b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-url-map-r1-process.json",
+          "old_blob": null,
+          "new_blob": "5ceb94ef25d3b414125d8895f7a258617e8108b6"
+        }
+      ]
+    },
+    {
+      "original": "0ba05e02765af2ed1b45c7260168fe7113629691",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-index-diagnostic-process.json",
+          "old_blob": null,
+          "new_blob": "a51ebe4dea28533a3e3e1278e4ed0d4cf62e9b9d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-integrity-r1.json",
+          "old_blob": null,
+          "new_blob": "c035a7f77c2817b6f23176a816d123e48bf95ac7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-publication.md",
+          "old_blob": null,
+          "new_blob": "57ce1de885ad97a2c81f52f637dae363ea9e6597"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-L-process.json",
+          "old_blob": null,
+          "new_blob": "cb78fc98140f708fccf5ae30a6a5b2dddc90e544"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-P-process.json",
+          "old_blob": null,
+          "new_blob": "2f2d755c51f2ecfa47a07f34f0f89f414a789ec1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-L-process.json",
+          "old_blob": null,
+          "new_blob": "4b9ca8e599f95c1595b5977571f54d304d5f87f4"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-P-process.json",
+          "old_blob": null,
+          "new_blob": "af627c67be739cd082eae2cdd6bbfc13b4e415cf"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1.json",
+          "old_blob": null,
+          "new_blob": "ff76d7cf9d140c0cf2df8dd90addae0b6526f67c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-own-r1-process.json",
+          "old_blob": null,
+          "new_blob": "2aa15937529c68a877793896575d9f1e007c5c3c"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-cr-r1-process.json",
+          "old_blob": null,
+          "new_blob": "8c40282b220c58d3a48429723dfabdc3e801baa3"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-r1-process.json",
+          "old_blob": null,
+          "new_blob": "21bdda709f4c5d31ff7b8adf4e6e732ee5e73d54"
+        }
+      ]
+    },
+    {
+      "original": "d723de91c63176b7606e175d5da10cdebf8cfb10",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-prepublication.json",
+          "old_blob": null,
+          "new_blob": "02700ed272a3795621cf454209198e1efc02e3d6"
+        }
+      ]
+    },
+    {
+      "original": "ce6d15cac2a4f5c2a874c6eec6df8531d0543e0a",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-plan.md",
+          "old_blob": null,
+          "new_blob": "a645fdea18d7dba78087bece033ac1078525d48d"
+        }
+      ]
+    },
+    {
+      "original": "a88857b4470afaa5da5d4b40ea1c21d4fb988131",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-baseline.json",
+          "old_blob": null,
+          "new_blob": "64419df35f675d30d4c45c549c38b1058957d8a7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-bundle-process.json",
+          "old_blob": null,
+          "new_blob": "838f4e0357d5affaea2553646da18231eab4335f"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-check.cjs",
+          "old_blob": null,
+          "new_blob": "d5a89f1f6051c394e4a5f78c34a23e78ebc3b10e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-durable-process.json",
+          "old_blob": null,
+          "new_blob": "fc191af4e670b29db2418d3e5c2c3b81c1f689a7"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-goal-design-process.json",
+          "old_blob": null,
+          "new_blob": "b9d5ba44a43562e90b38c8348fb51cc5efc612f9"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-governance-process.json",
+          "old_blob": null,
+          "new_blob": "6000601dbb2f62b89e2653dbe5c4f32d6daf5a74"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-independent-r1.json",
+          "old_blob": null,
+          "new_blob": "e39cd98fc71459ed88b4da7a8341502bb5f13bab"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-specialist-process.json",
+          "old_blob": null,
+          "new_blob": "77be9c5e1a1a499104d332069b212e898f29cccd"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-structural-process.json",
+          "old_blob": null,
+          "new_blob": "2bb0a7aa6c5f2eb94a2905ac858e673ea0750561"
+        }
+      ]
+    },
+    {
+      "original": "af335aae3753956740579975a089f6460c2ffbed",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-check.cjs",
+          "old_blob": "d5a89f1f6051c394e4a5f78c34a23e78ebc3b10e",
+          "new_blob": "71b3579b4501e21ec8d9935151d73459b03d4615"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-design-check.cjs",
+          "old_blob": null,
+          "new_blob": "16a9e3142c3aec5c46e78f7237b601ec848fb31e"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-design-check.json",
+          "old_blob": null,
+          "new_blob": "52c1a47fc28b8addeff307504a83246dabc083e6"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-independent-r2.json",
+          "old_blob": null,
+          "new_blob": "61157e1b4cb80ab927c6509a54092e206526a637"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-index-runtime.cjs",
+          "old_blob": null,
+          "new_blob": "500f75f549d47d7a139d3c670b0fbc48f9910e13"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-report.md",
+          "old_blob": null,
+          "new_blob": "f011901479ce0549d6f054cdb81a060c81f77153"
+        }
+      ]
+    },
+    {
+      "original": "5db9d118bc772ecc30e00b984bb6790d0f1e0793",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-check.cjs",
+          "old_blob": null,
+          "new_blob": "bcc6c0ff86a1b897fb58303fde22813221403791"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-checks.json",
+          "old_blob": null,
+          "new_blob": "2a631d709a37b8a1874c7217a9a69b47594cafeb"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication.md",
+          "old_blob": null,
+          "new_blob": "b0e92a7b4e50c4650c0ed3fa74d7654321a8db75"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-own-L-process.json",
+          "old_blob": null,
+          "new_blob": "3247b0e57b696f005efcbd9987c398800c4f3af1"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-own-P-process.json",
+          "old_blob": null,
+          "new_blob": "a93c8eb019b642e8a63891b05a884502bf14bc5d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-whole-L-process.json",
+          "old_blob": null,
+          "new_blob": "80bf115185273ad6eb2c926df580a835bbbdf194"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-whole-P-process.json",
+          "old_blob": null,
+          "new_blob": "412c453a2fa9f39fddf8d6ec611a42f2c2fcc40b"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope.json",
+          "old_blob": null,
+          "new_blob": "113e7794197ab23a4be1e59d2dd0bd3786122e30"
+        }
+      ]
+    },
+    {
+      "original": "0991cc186300d72d18edded30f126480415bc1e9",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-index-capture.json",
+          "old_blob": null,
+          "new_blob": "8e93d99374624dfa131c63447de8104892739947"
+        }
+      ]
+    },
+    {
+      "original": "c19450bb00cdc8ded7bcd37dea9175e27c977b66",
+      "files": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-check.cjs",
+          "old_blob": "bcc6c0ff86a1b897fb58303fde22813221403791",
+          "new_blob": "21a3a8ec7d154884c3545b61d30915819beeee5d"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-r2.md",
+          "old_blob": null,
+          "new_blob": "c2ccdf7bebc7ca28c8538eceef5f81447831c487"
+        }
+      ]
+    }
+  ],
+  "manifest": {
+    "sha256": "0417edf8efc7e1f9169d5456b52216801ea8138a28a521fc6dea5e041c94b372",
+    "raw_base64": "IyBTcHJpbnQgQk9PSzItVEVYVEJPT0stUFJPRFVDVElPTi0xOiBPdXRwdXQgbWFuaWZlc3QKCkRhdGU6IDIwMjYtMDktMDYuIEFjY291bnRhYmxlIGludGVncmF0b3I6IGNvZGV4LXJvb3QuClN0YXR1czogKipBQ1RJVkUgQ0hFQ0tQT0lOVCDigJQgTk9UIENPTVBMRVRFKiouIFRoaXMgbWFuaWZlc3QgcmVjb3JkcyB0aGUgZXhhY3QKNDEtUERGIG91dHB1dCBjb250cmFjdCBmcm9tIHRoZSBhcHByb3ZlZCBvcGVyYXRpb25hbC9yb290IHBsYW4gYW5kIHNlcGFyYXRlcwpmcmVzaCBpbnRlcm5hbCBhY2NlcHRhbmNlIGZyb20gb2xkIGZpbGUgcHJlc2VuY2UuCgpDdXJyZW50MjE0IGF1dGhvci1jYW5kaWRhdGUgdmVyaWZpY2F0aW9uOiBwbGF0Zm9ybQpgODdmZThkZTg2YjRiNDZhYmY1NmQ0YjAzY2EwYWQ4MzZmMzlmZDU5MmAsIGFkb3B0ZWQgbmF0aXZlIGxlc3NvbgpgM2JjOWU4MTgyOGRjYzU3OTMyZGM4NzE4MjVhYWE0Y2Y0YTk3NWZlMWAuIERpc3RpbmN0IHBhcmFncmFwaCByZXZpZXcsCnNwZWNpYWxpc3QgUUMsIHJvb3QgbmF0aXZlIHJlcHJvZHVjdGlvbi9hY2NlcHRhbmNlIGFuZCBoYW5kb2ZmIHJlbWFpbiBQRU5ESU5HOwpzZWUyMTQtUk9PVC1BRE9QVElPTi1yZXN1bHQubWQuIFRoZSB0d28yMTQgUERGcyBhcmUgQywgbm90IEEuCgpDdXJyZW50MjI0IHZlcmlmaWNhdGlvbjogcGxhdGZvcm0gYDhhOTJkY2Q3ODg0ZmFhM2NmODExNGY1MTI1YjYwYmIyMjg3NmMxZjJgLAp3aXRoIHJvb3Qtb25seSBRQy9oYW5kb2ZmIHRyYW5zaXRpb24gaW4yMjQtUUMtUk9PVC1hY2NlcHRhbmNlLm1kLiBJdHMgb3JpZ2luYWwKc3BlY2lhbGlzdCBRQyB3YXMgYWRvcHRlZCBhdCBsZXNzb24gYGFhMjA4N2EyMGM1YmVlNDQ2NWY5Yzk4ZDgzMDMxMTE2ZTk0Yzk2NjdgLgpFYXJsaWVyIHNuYXBzaG90OiBwbGF0Zm9ybSDCpzIxMyBuYXRpdmUgdmVyaWZpY2F0aW9uIGBhMjcyNGI0MmM3MTk2MmFlNjJhY2ZjMTI0MTFlZWE5ZmQyMTM4MGIwYCwKbGVzc29ucyBhY2NlcHRhbmNlIGAxY2YxYzFmOTcyZjE5Njc5MWZiMzdmNmJiZWU1MjNiN2EyZTNiNjc2YCB3aXRoIHRoZSBleGFjdApyb290IFFDL2hhbmRvZmYgdHJhbnNpdGlvbiBpbjIxMy1RQy1ST09ULWFjY2VwdGFuY2UubWQuIEN1cnJlbnQyMjMgYWNjZXB0YW5jZQppbjIyMy1yb290LWFjY2VwdGFuY2UubWQgcmVtYWlucyB1bmNoYW5nZWQsIGluY2x1ZGluZyB0aGUgZXhhY3QKcm9vdC1vbmx5IGN1cnJlbnQyMTEgYWNjZXB0YW5jZS9oYW5kb2ZmIGF0NWUxNDMyNSBpbjIxMS1yb290LWFjY2VwdGFuY2UtcjUubWQuCkN1cnJlbnQyMjEgUjggYW5kMjIyIFIxMyBhY2NlcHRhbmNlcyByZW1haW4gdW5jaGFuZ2VkLgpMZXNzb24gYmFzZWxpbmU6IGBmMDlmZDZlODhlZGM1MDQ5YjAyNmIxNmIwMTU4ZTdlMTg4MDkxZDJkYC4KQWxsIHBhdGhzIGJlbG93IGFyZSByZWxhdGl2ZSB0byB0aGUgbGVzc29uIGJvb2sgcm9vdApgQm9layAyIC0gS29zdGVuLCBvcGJyZW5nc3RlbiwgZWxhc3RpY2l0ZWl0IGVuIHN1cnBsdXMvYC4KCiMjIENvdW50cyBhbmQgZXZpZGVuY2UgcnVsZXMKCkV4cGVjdGVkOiAyNyB0aGVvcnkgKyA2IGNvbnNvbGlkYXRpb24gKyA2IGNoYXB0ZXIgKyAyIGJvb2sgPSAqKjQxIFBERnMqKi4KQXQgdGhpcyBjaGVja3BvaW50OiAqKjggaW50ZXJuYWxseSBnYXRlLWNsb3NlZCBjdXJyZW50IHBhcmFncmFwaCBwYWNrYWdlcyoqOgoyMyBhY2NlcHRlZC13aXRoLWZsYWdzIFBERnMsMiBhZG9wdGVkIGNhbmRpZGF0ZSBQREZzLDQgbGVnYWN5IHVuYWNjZXB0ZWQgYW5kMTIKYWJzZW50LiDCpzIxMSBub3cgaGFzIGN1cnJlbnQgUjUgaW5kZXBlbmRlbnQgcGFyYWdyYXBoIHJldmlldywgZGlzdGluY3Qgc3BlY2lhbGlzdApRQyBhbmQgcm9vdCBhY2NlcHRhbmNlL2hhbmRvZmYuIMKnMjEyIG5vdyBoYXMgY3VycmVudCBkaXN0aW5jdCBzcGVjaWFsaXN0IFFDLApyb290IGFjY2VwdGFuY2UsIGNsb3NlZCBTMSBsaW5lYWdlIGFuZCByZW5ld2VkIGhhbmRvZmY7IGl0cyB0aHJlZSBQREZzIGFyZSBBLiBQaHlzaWNhbApyb290IHByZXNlbmNlIGlzIDI5LCBub3QgMjkgYWNjZXB0ZWQuIEFsbCBmb3VyIHJlbWFpbmluZyBsZWdhY3kgUERGcyByZW1haW4gR2l0LWJsb2ItCmlkZW50aWNhbCB0byB0aGUgYmFzZWxpbmUuIFNlcGFyYXRlIGluLXByb2dyZXNzIHdvcmt0cmVlcyBkbyBub3QgY291bnQgaGVyZS4KCsKnMjIxIFI4IGFuZCDCpzIxMyBSNiBjb3JyZWN0IHRoZWlyIHNob3J0LWFsdC90aXRsZSBtZXRhZGF0YSwgcmV0YWluaW5nIGFsbDQ5CnByaW50ZWQgcGFnZSBieXRlcyBmcm9tIFI3L1I1LiDCpzIyMSBSOCBub3cgaGFzIGN1cnJlbnQgaW5kZXBlbmRlbnQgcGFyYWdyYXBoIGFuZApzcGVjaWFsaXN0IFBBU1MgV0lUSCBGTEFHUyBhbmQgcm9vdCBhY2NlcHRhbmNlL2hhbmRvZmY7IGl0cyB0aHJlZSBlZGl0aW9ucyBhcmUgQS4KwqcyMTMgUjcgbm93IGFkZHMgdGhlIHJlcXVpcmVkIGJvbnVzIGFzc2Vzc21lbnQtY3JpdGVyaWEgYmxvY2ssIHdpdGgzMCB0b3RhbCBwYWdlcy4KSXRzIGN1cnJlbnQgaW5kZXBlbmRlbnQgUjcgcGFyYWdyYXBoIHJldmlldywgZXhhY3QgZml2ZS1waW4gYWNjZXB0ZWQyMTEvMjEyCnN1Y2Nlc3Npb24gYW5kIGRpc3RpbmN0IGN1cnJlbnQgc3BlY2lhbGlzdCBRQyBwYXNzLiBSb290IGZ1bGxyMzcvdGhpbnIzOC9wcmludHIzOQpyZXByb2R1Y2UgYWxsMjQgbmF0aXZlIGZpbGVzIGFuZDkwIHJhdy9SR0IgcGFnZSBjb21wYXJpc29uczE0LzkvNyBlYWNoLiBDdXJyZW50CnJvb3QgYWNjZXB0YW5jZSBhbmQgbmluZS1zZWN0aW9uIGhhbmRvZmYgY2xvc2UgaXRzIGdhdGVzOyBpdHMgZWRpdGlvbnMgYXJlIEEuCkFsbDcyIHNwZWNpYWxpc3QgcGVyc29uYWwgdmlld3MgcmVtYWluIGF0dHJpYnV0ZWQsIG5vdCBuZXcgcm9vdCB2aWV3czsKNTQvNjYvNzggdGltaW5nIGlzIFVOT0JTRVJWRUQgYW5kIEgtMjEzLU9QQzIgcmVtYWlucyBvcGVuL2V4Y2x1ZGVkLgrCpzIyMiBSMTMgaXMgYWRvcHRlZC9yb290LXJlYnVpbHQ6IGV4YWN0bHkgb25lIGFuc3dlciBwYWdlIGNoYW5nZXM7IHRoZSBvdGhlcjIwCnJlbWFpbiBpZGVudGljYWwuIEl0cyBjdXJyZW50IGluZGVwZW5kZW50IHBhcmFncmFwaCBhbmQgZGlzdGluY3Qgc3BlY2lhbGlzdApyZXZpZXdzIHBhc3Mgd2l0aCBmbGFnczsgcm9vdCBhY2NlcHRhbmNlL2hhbmRvZmYgYXJlIGNvbXBsZXRlLiBJdHMgZWRpdGlvbnMgYXJlIEEuCsKnMjIzIFIzL1MxIGFuZCB0aGUgZXhhY3QgdHdvLWF0dHJpYnV0ZSBBTFQgY29ycmVjdGlvbiBub3cgaGF2ZSBjdXJyZW50CmluZGVwZW5kZW50IHBhcmFncmFwaCBhbmQgZGlzdGluY3Qgc3BlY2lhbGlzdCBQQVNTIFdJVEggRkxBR1MsIHJvb3QgYWNjZXB0YW5jZQphbmQgYSBjb21wbGV0ZSBoYW5kb2ZmLiBJdHMgZm91ciBhY2NlcHRlZDIyMSBwaW5zIGFuZCBhbGwyMCBuYXRpdmUgZmlsZXMgYXJlCnZlcmlmaWVkOyByb290IGZ1bGxyMjgvdGhpbnIyOS9wcmludHIzMCByZXByb2R1Y2UzMiByYXcvUkdCIHBhZ2VzMTUvMTAvNyBlYWNoLgpCb3RoIGRpc3RpbmN0NzItdmlldyBpbnNwZWN0aW9ucyByZW1haW4gYXR0cmlidXRlZCwgYW5kIHRoZSByZXZpZXdlci1ub3VuCmNvcnJlY3Rpb24gY2hhbmdlcyBubyBwdXBpbCBieXRlcy4gRjIyMy1MSU5FQUdFIGlzIGNsb3NlZDsgdGltaW5nNTQvNjkvODEgc3RheXMKVU5PQlNFUlZFRC4gSXRzIHRocmVlIFBERnMgYXJlIEE7IGFsbCBoaXN0b3JpY2FsIGZhaWxlZC9QRU5ESU5HIHJlY29yZHMgcmVtYWluLgrCpzIxMSBSNSBhZGRzIHRoZSByZXF1aXJlZCBib251cyBjcml0ZXJpYSBhbmQgaXMgYWRvcHRlZC9yb290LXJlYnVpbHQ6IG9ubHkgYW5zd2VyCnBhZ2U3IGNoYW5nZXM7IHRoZSBvdGhlcjMwIHBhZ2VzIHJlbWFpbiBleGFjdC4gQ3VycmVudCBwYXJhZ3JhcGggcmV2aWV3IGFuZApkaXN0aW5jdCBzcGVjaWFsaXN0IFFDIHBhc3M7IHJvb3QgYWNjZXB0YW5jZS9oYW5kb2ZmIGFyZSBjb21wbGV0ZS4gSXRzIGluaGVyaXRlZCBzdGFsZSBvcGdhdmVuLnppcCBpcyBleHBsaWNpdGx5IGV4Y2x1ZGVkOwp0aGUgbmF0aXZlMjExIGJ1aWxkZXIgaGFzIG5vIFpJUCBvdXRwdXQgY29udHJhY3QuIEl0IGlzIG5vdCBhIGN1cnJlbnQgc3R1ZGVudApkZWxpdmVyYWJsZS4gwqcyMTIgUjcgYWRkcyBpdHMgdGhyZWUgYm9udXMgY3JpdGVyaWEgYW5kIGlzIGFkb3B0ZWQvcm9vdC1yZWJ1aWx0Ogpvbmx5IGFuc3dlciBwYWdlNiBjaGFuZ2VzLCB0aGUgb3RoZXIyNiBwYWdlcyBhcmUgZXhhY3QsIGFuZDM0YXJ0aWZhY3QgZnVsbC9wcmludApyZXByb2R1Y3Rpb24gcGFzc2VzLiBJdHMgY3VycmVudCBpbmRlcGVuZGVudCBwYXJhZ3JhcGggcmV2aWV3IGFuZCBkaXN0aW5jdApzcGVjaWFsaXN0L3Jvb3QgZ2F0ZXMgcGFzcyB3aXRoIHJldGFpbmVkIGZsYWdzLiBJdHMgdHdvIGFjY2VwdGVkMjExIGlucHV0IHBpbnMgbm93IGhhdmUgaW5kZXBlbmRlbnQKUzEgZGVsdGEgUEFTUyBhbmQgcm9vdCBmdWxscjE2L3RoaW5yMTcvcHJpbnRyMTggcmVwcm9kdWN0aW9uOjM0IG5hdGl2ZSBmaWxlcywKNDAgZm9sZGVyIGZpbGVzIGFuZDI3IHJhdy9waXhlbCBwYWdlcyB1bmNoYW5nZWQuIEN1cnJlbnQgc3BlY2lhbGlzdDc2IHBlcnNvbmFsCmNvbG9yL2dyYXlzY2FsZSB2aWV3cyBwYXNzLiBSb290IGZ1bGxyMjQvdGhpbnIyNS9wcmludHIyNiByZXByb2R1Y2UzNCBuYXRpdmUgZmlsZXMKYW5kODEgcmF3L1JHQiBwYWdlIGNvbXBhcmlzb25zOyBib3RoIHByb2ZpbGVzL2N1cnJlbnRuZXNzL2R1cmFibGUvYWN0aXZlLWJ1bmRsZQpwYXNzIGFnYWluIGFmdGVyIGFjY2VwdGFuY2UuIFNlZTIxMi1yb290LWFjY2VwdGFuY2UubWQgYW5kMjEyLVMxLXJvb3QtcmVzdWx0Lm1kLgpUaGVpciByb290IHJlcG9ydHMgZGlzdGluZ3Vpc2ggYWN0dWFsIHNvdXJjZS9wYWdlL3JlYnVpbGQgY2hlY2tzIGZyb20gcmVtYWluaW5nCmluZGVwZW5kZW50IHBhcmFncmFwaCwgc3BlY2lhbGlzdCBhbmQgaGFuZG9mZiBnYXRlcy4gU2VlIHJldmlldy1jb3JyZWN0aW9ucy5tZC4KCsKnMjMxIGZpbmFsIHI4IGlzIG5vdyBhZG9wdGVkIGFzIGEgY2FuZGlkYXRlOiBhbGw0MiBuYXRpdmUgZmlsZXMgcGx1cyB3cmFwcGVyCm1hdGNoIHRoZSBhdXRob3IncyBleGFjdCBsZXNzb24gY29tbWl0LCB3aXRoMzMgcGFnZXMxNC85LzEwLiBSb290J3M0OTkgaW1wb3J0CmJpbmRpbmdzIGFuZDE1IHNvdXJjZSB0ZXN0cyBwYXNzLiBUaGU2NiBzdXBwbGVtZW50YWwgZ3JheXNjYWxlIHBhZ2VzIHdlcmUKcmVsb2NhdGVkIGJ5dGUtaWRlbnRpY2FsbHkgdW5kZXIgc3VwcG9ydGVkIHNwcmludC1ldmlkZW5jZSBwYXRocyB3aXRoIGFuIGV4YWN0Cm9yaWdpbmFsLWNvbW1pdC9wYXRoL1NIQS10by1uZXctcGF0aCBtYXBwaW5nOyBhbGwyNyBoaXN0b3JpY2FsIFBFTkRJTkcgbWFuaWZlc3RzCmFuZCBvcmlnaW5hbCBmYWlsZWQvc3VwZXJzZWRlZCByZWNvcmRzIHJlbWFpbiB1bmNoYW5nZWQuIEJvdGggYWN0dWFsIG5ldyBuYXRpdmUKcGxhdGZvcm0vbGVzc29uIHNjb3BlIGNoZWNrcyBwYXNzLiBDYW5vbmljYWwgaW5kZXBlbmRlbnQgcGFyYWdyYXBoIFBBU1MgV0lUSApGTEFHUyBpcyBhZG9wdGVkLCB3aXRoNjYgcGVyc29uYWwgY29sb3VyL2dyYXlzY2FsZSBwYWdlcyBhbmQxNSBuYXRpdmUgZmlndXJlcy4KUm9vdCBmcmVzaCByMTQgZnVsbCwgcjE1IGZ1bGwsIHIxNiB0aGluIGFuZCBkaXJlY3QtcHJpbnQgcGFyaXR5IHByZXNlcnZlIGFsbDQyCm5hdGl2ZSBmaWxlcyBhbmQgYWxsMzMgY29sb3VyIHBhZ2VzOyB0aGUgYWN0dWFsIG5hdGl2ZSBjaGVja2VyIHBhc3Nlcy4gVGhlCmRpc3RpbmN0IHNwZWNpYWxpc3QgUUMgbm93IHBhc3NlcyB3aXRoIGZsYWdzIGFmdGVyIHBlcnNvbmFsIGluc3BlY3Rpb24gb2YgYWxsCjY2IGNvbG91ci9ncmF5c2NhbGUgcGFnZXMgYW5kMzAgY29sb3VyL2dyYXlzY2FsZSBuYXRpdmUgZmlndXJlIHZpZXdzLiBSb290IGZyZXNoCmZ1bGxyMjAvdGhpbnIyMi9kaXJlY3QtcHJpbnQvZnVsbHIyMSBwcm9vZnMgcHJlc2VydmUgYWxsNDIgbmF0aXZlIGJ5dGVzIGFuZDk5CnJlbmRlcmVkIGNvbG91ci1wYWdlIGhhc2hlcy9waXhlbHMuIFJvb3QgYWNjZXB0YW5jZSBhbmQgbmluZS1zZWN0aW9uIGhhbmRvZmYgYXJlCmNvbXBsZXRlOyBib3RoIGFjdHVhbCBwcm9maWxlcyBhbmQgY3VycmVudG5lc3MvZHVyYWJsZS9hY3RpdmUtYnVuZGxlIGNoZWNrcyBwYXNzCmFnYWluIGFmdGVyIHRoZSBtZXRhZGF0YSB0cmFuc2l0aW9uLiBJdHMgdGhyZWUgZWRpdGlvbnMgYXJlIEEuIENsYXNzcm9vbSB0aW1pbmcKcmVtYWlucyBVTk9CU0VSVkVEOyBmaW5hbCBjaGFwdGVyL2Jvb2sgcmV2aWV3IGFuZCBvd25lci9DSSBnYXRlcyByZW1haW4uIFNlZQoyMzEtcm9vdC1hY2NlcHRhbmNlLm1kIGFuZCB0aGUgcHJlc2VydmVkIGNhbmRpZGF0ZS9pbXBvcnQvUUMgcmVwb3J0cy4KCkVhY2ggUERGIGFsc28gcmVxdWlyZXMgbWF0Y2hpbmcgZ2VuZXJhdGVkIGAubWRgIGFuZCBzZWxmLWNvbnRhaW5lZCBgLmh0bWxgOwpwYXJhZ3JhcGhzIHJlcXVpcmUgdGhlaXIgcGxhbm5lZCBTVkcvUE5HIHBhaXJzLCB0aGluIGJ1aWxkZXIsIGFjY2VwdGVkIHBsYW4sCmluZGVwZW5kZW50IHJldmlldy9QYXJ0IEEgcXVhbGl0eSByZWNvcmQgYW5kIGhhbmRvZmYuIENoYXB0ZXJzL2Jvb2tzIHJlcXVpcmUKYWNjZXB0ZWQgc291cmNlIGFzc2VtYmxpZXMsIGV4YWN0IGFzc2V0IHBhcml0eSwgdGhlaXIgb3duIGNvbXBsZXRlIHJlbmRlciBhbmQKaW5kZXBlbmRlbnQgcmV2aWV3IGdhdGVzLiBEbyBub3QgZW1pdCBwYXJhZ3JhYWYuKiBmb3IgdGhlIHRocmVlIGNvbnNvbGlkYXRpb25zLgoKwqcyMjQgbm93IGhhcyBjdXJyZW50IGluZGVwZW5kZW50IHBhcmFncmFwaCBhbmQgZGlzdGluY3Qgc3BlY2lhbGlzdCBQQVNTIFdJVEgKRkxBR1MsIHJvb3QgZnVsbHIxNC90aGlucjE1L2d1YXJkZWQtZGlyZWN0cjE2IHJlcHJvZHVjdGlvbiwgaW50ZXJuYWwgYWNjZXB0YW5jZQphbmQgYSBjb21wbGV0ZSBuaW5lLXNlY3Rpb24gaGFuZG9mZi4gQWxsMzMwIGFkZGl0aW9uYWwgc3BlY2lhbGlzdCBpbXBvcnRzIGFyZQpyYXcvR2l0IGV4YWN0OyB0aGUgZWFybGllcjQxOC1wYXRoIGF1dGhvci9yZXZpZXcgYWRvcHRpb24gcmVtYWlucyBwcmVzZXJ2ZWQgaW4KMjI0LVJPT1QtQURPUFRJT04tcmVzdWx0Lm1kLiBTaXggc291cmNlIGZpbGVzLDE1IG5hdGl2ZSBmaWxlcywzNCBhY3R1YWwgY3VycmVudAphbmQgY29tbWl0dGVkIHJlbGVhc2UgaW5wdXRzLDEwIHRlc3RzIGFuZDE0MSByZWFsIGlucHV0L3NvdXJjZS9uYW1lc3BhY2UgbmVnYXRpdmVzCnBhc3MuIFRocmVlIHJvb3Qgcm91dGVzIG1hdGNoIGFsbDE1IG5hdGl2ZSBieXRlcyBhbmQ2MCByYXcvUkdCIHBhZ2UgY29tcGFyaXNvbnM7CmJvdGggUGFydCBBIHByb2ZpbGVzL2N1cnJlbnQgcHJvZHVjdGlvbi9zcGVjaWFsaXN0L2R1cmFibGUvZnVsbCBidW5kbGUgcGFzcy4KQWxsNDggc3BlY2lhbGlzdCBjb2xvdXIvZ3JheXNjYWxlIG9ic2VydmF0aW9ucyByZW1haW4gYXR0cmlidXRlZCBhbmQgYXJlIGJvdW5kCnRvIGN1cnJlbnQgcm9vdCBjb2xvdXIvZGVjb2RlZC1ncmF5IHBhcml0eTsgcm9vdCBwZXJzb25hbCB2aWV3czAuIEhpc3RvcmljYWwKUEVORElORyBtYW5pZmVzdHMgYW5kIHRoZSBlYXJsaWVyIGRpcmVjdC1jb250cm9sbGVyIGxpbWl0YXRpb25zIGFyZSBwcmVzZXJ2ZWQuCkl0cyB0d28gUERGcyBhcmUgQS4gNTMuNS82My41LzcxLjUgc3RheXMgVU5PQlNFUlZFRDsgYWdncmVnYXRlIGFjY2VwdGFuY2UgcmVtYWlucwpzZXBhcmF0ZS4gU2VlMjI0LVFDLVJPT1QtcmVzdWx0Lm1kIGFuZDIyNC1RQy1ST09ULWFjY2VwdGFuY2UubWQuCgpBID0gZnJlc2ggaW50ZXJuYWwgcGFyYWdyYXBoIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgbm90IGZpbmFsIG93bmVyL0NJIGFwcHJvdmFsLgpDID0gYWRvcHRlZC9yb290LXZlcmlmaWVkIGN1cnJlbnQgY2FuZGlkYXRlOyBvbmUgb3IgbW9yZSBhY2NlcHRhbmNlIGdhdGVzIHBlbmRpbmcuCkwgPSBiYXNlbGluZSBsZWdhY3kgZmlsZSBwcmVzZW50LCBub3QgYWNjZXB0ZWQuIFAgPSBwZW5kaW5nL2Fic2VudC4KTm8gb3V0cHV0IGlzIHNpbGVudGx5IGFjY2VwdGVkIHRocm91Z2ggYW4gb2xkZXIgUEFTUyBvciByZXZpZXdlZF9maW5hbCBsYWJlbC4KCiMjIEV4aGF1c3RpdmUgUERGIGludmVudG9yeQoKfCAjIHwgSUQgfCBFZGl0aW9uIHwgU3RhdHVzIHwgRXhhY3QgcmVsYXRpdmUgUERGIHBhdGggfAp8LS0tOnwtLS18LS0tfDotLS06fC0tLXwKfCAxIHwgMi4xLjEgfCBwYXJhZ3JhYWYgfCBBIHwgYDIuMSBIb29mZHN0dWsgS29zdGVuIGVuIG9wYnJlbmdzdGVuLzIuMS4xIEtvc3RlbnN0cnVjdHVyZW4vMi4xLjEgS29zdGVuc3RydWN0dXJlbiDigJMgcGFyYWdyYWFmLnBkZmAgfAp8IDIgfCAyLjEuMSB8IG9wZ2F2ZW4gfCBBIHwgYDIuMSBIb29mZHN0dWsgS29zdGVuIGVuIG9wYnJlbmdzdGVuLzIuMS4xIEtvc3RlbnN0cnVjdHVyZW4vMi4xLjEgS29zdGVuc3RydWN0dXJlbiDigJMgb3BnYXZlbi5wZGZgIHwKfCAzIHwgMi4xLjEgfCBhbnR3b29yZGVuIHwgQSB8IGAyLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuMSBLb3N0ZW5zdHJ1Y3R1cmVuLzIuMS4xIEtvc3RlbnN0cnVjdHVyZW4g4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgNCB8IDIuMS4yIHwgcGFyYWdyYWFmIHwgQSB8IGAyLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuMiBPcGJyZW5nc3Rlbiwgd2luc3QgZW4gYnJlYWstZXZlbi8yLjEuMiBPcGJyZW5nc3Rlbiwgd2luc3QgZW4gYnJlYWstZXZlbiDigJMgcGFyYWdyYWFmLnBkZmAgfAp8IDUgfCAyLjEuMiB8IG9wZ2F2ZW4gfCBBIHwgYDIuMSBIb29mZHN0dWsgS29zdGVuIGVuIG9wYnJlbmdzdGVuLzIuMS4yIE9wYnJlbmdzdGVuLCB3aW5zdCBlbiBicmVhay1ldmVuLzIuMS4yIE9wYnJlbmdzdGVuLCB3aW5zdCBlbiBicmVhay1ldmVuIOKAkyBvcGdhdmVuLnBkZmAgfAp8IDYgfCAyLjEuMiB8IGFudHdvb3JkZW4gfCBBIHwgYDIuMSBIb29mZHN0dWsgS29zdGVuIGVuIG9wYnJlbmdzdGVuLzIuMS4yIE9wYnJlbmdzdGVuLCB3aW5zdCBlbiBicmVhay1ldmVuLzIuMS4yIE9wYnJlbmdzdGVuLCB3aW5zdCBlbiBicmVhay1ldmVuIOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDcgfCAyLjEuMyB8IHBhcmFncmFhZiB8IEEgfCBgMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xLjMgTWFyZ2luYWxlIGtvc3RlbiBlbiBtYXJnaW5hbGUgb3BicmVuZ3N0ZW4vMi4xLjMgTWFyZ2luYWxlIGtvc3RlbiBlbiBtYXJnaW5hbGUgb3BicmVuZ3N0ZW4g4oCTIHBhcmFncmFhZi5wZGZgIHwKfCA4IHwgMi4xLjMgfCBvcGdhdmVuIHwgQSB8IGAyLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuMyBNYXJnaW5hbGUga29zdGVuIGVuIG1hcmdpbmFsZSBvcGJyZW5nc3Rlbi8yLjEuMyBNYXJnaW5hbGUga29zdGVuIGVuIG1hcmdpbmFsZSBvcGJyZW5nc3RlbiDigJMgb3BnYXZlbi5wZGZgIHwKfCA5IHwgMi4xLjMgfCBhbnR3b29yZGVuIHwgQSB8IGAyLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuMyBNYXJnaW5hbGUga29zdGVuIGVuIG1hcmdpbmFsZSBvcGJyZW5nc3Rlbi8yLjEuMyBNYXJnaW5hbGUga29zdGVuIGVuIG1hcmdpbmFsZSBvcGJyZW5nc3RlbiDigJMgYW50d29vcmRlbi5wZGZgIHwKfCAxMCB8IDIuMS40IHwgb3BnYXZlbiB8IEMgfCBgMi4xIEhvb2Zkc3R1ayBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4vMi4xLjQgR2VtZW5nZGUgb3BnYXZlbi8yLjEuNCBHZW1lbmdkZSBvcGdhdmVuIOKAkyBvcGdhdmVuLnBkZmAgfAp8IDExIHwgMi4xLjQgfCBhbnR3b29yZGVuIHwgQyB8IGAyLjEgSG9vZmRzdHVrIEtvc3RlbiBlbiBvcGJyZW5nc3Rlbi8yLjEuNCBHZW1lbmdkZSBvcGdhdmVuLzIuMS40IEdlbWVuZ2RlIG9wZ2F2ZW4g4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgMTIgfCAyLjEgfCBob29mZHN0dWsgfCBMIHwgYDIuMSBIb29mZHN0dWsgS29zdGVuIGVuIG9wYnJlbmdzdGVuLzIuMSBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4g4oCTIGhvb2Zkc3R1ay5wZGZgIHwKfCAxMyB8IDIuMSB8IGFudHdvb3JkZW4gfCBMIHwgYDIuMSBIb29mZHN0dWsgS29zdGVuIGVuIG9wYnJlbmdzdGVuLzIuMSBLb3N0ZW4gZW4gb3BicmVuZ3N0ZW4g4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgMTQgfCAyLjIuMSB8IHBhcmFncmFhZiB8IEEgfCBgMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjEgUHJpanNlbGFzdGljaXRlaXQvMi4yLjEgUHJpanNlbGFzdGljaXRlaXQg4oCTIHBhcmFncmFhZi5wZGZgIHwKfCAxNSB8IDIuMi4xIHwgb3BnYXZlbiB8IEEgfCBgMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjEgUHJpanNlbGFzdGljaXRlaXQvMi4yLjEgUHJpanNlbGFzdGljaXRlaXQg4oCTIG9wZ2F2ZW4ucGRmYCB8CnwgMTYgfCAyLjIuMSB8IGFudHdvb3JkZW4gfCBBIHwgYDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0LzIuMi4xIFByaWpzZWxhc3RpY2l0ZWl0LzIuMi4xIFByaWpzZWxhc3RpY2l0ZWl0IOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDE3IHwgMi4yLjIgfCBwYXJhZ3JhYWYgfCBBIHwgYDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0LzIuMi4yIEVsYXN0aWNpdGVpdCBlbiBvbXpldC8yLjIuMiBFbGFzdGljaXRlaXQgZW4gb216ZXQg4oCTIHBhcmFncmFhZi5wZGZgIHwKfCAxOCB8IDIuMi4yIHwgb3BnYXZlbiB8IEEgfCBgMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjIgRWxhc3RpY2l0ZWl0IGVuIG9temV0LzIuMi4yIEVsYXN0aWNpdGVpdCBlbiBvbXpldCDigJMgb3BnYXZlbi5wZGZgIHwKfCAxOSB8IDIuMi4yIHwgYW50d29vcmRlbiB8IEEgfCBgMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjIgRWxhc3RpY2l0ZWl0IGVuIG9temV0LzIuMi4yIEVsYXN0aWNpdGVpdCBlbiBvbXpldCDigJMgYW50d29vcmRlbi5wZGZgIHwKfCAyMCB8IDIuMi4zIHwgcGFyYWdyYWFmIHwgQSB8IGAyLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIuMyBJbmtvbWVuc2VsYXN0aWNpdGVpdCBlbiBrcnVpc2VsaW5nc2UgZWxhc3RpY2l0ZWl0LzIuMi4zIElua29tZW5zZWxhc3RpY2l0ZWl0IGVuIGtydWlzZWxpbmdzZSBlbGFzdGljaXRlaXQg4oCTIHBhcmFncmFhZi5wZGZgIHwKfCAyMSB8IDIuMi4zIHwgb3BnYXZlbiB8IEEgfCBgMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjMgSW5rb21lbnNlbGFzdGljaXRlaXQgZW4ga3J1aXNlbGluZ3NlIGVsYXN0aWNpdGVpdC8yLjIuMyBJbmtvbWVuc2VsYXN0aWNpdGVpdCBlbiBrcnVpc2VsaW5nc2UgZWxhc3RpY2l0ZWl0IOKAkyBvcGdhdmVuLnBkZmAgfAp8IDIyIHwgMi4yLjMgfCBhbnR3b29yZGVuIHwgQSB8IGAyLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIuMyBJbmtvbWVuc2VsYXN0aWNpdGVpdCBlbiBrcnVpc2VsaW5nc2UgZWxhc3RpY2l0ZWl0LzIuMi4zIElua29tZW5zZWxhc3RpY2l0ZWl0IGVuIGtydWlzZWxpbmdzZSBlbGFzdGljaXRlaXQg4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgMjMgfCAyLjIuNCB8IG9wZ2F2ZW4gfCBBIHwgYDIuMiBIb29mZHN0dWsgRWxhc3RpY2l0ZWl0LzIuMi40IEdlbWVuZ2RlIG9wZ2F2ZW4gZWxhc3RpY2l0ZWl0LzIuMi40IEdlbWVuZ2RlIG9wZ2F2ZW4gZWxhc3RpY2l0ZWl0IOKAkyBvcGdhdmVuLnBkZmAgfAp8IDI0IHwgMi4yLjQgfCBhbnR3b29yZGVuIHwgQSB8IGAyLjIgSG9vZmRzdHVrIEVsYXN0aWNpdGVpdC8yLjIuNCBHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdC8yLjIuNCBHZW1lbmdkZSBvcGdhdmVuIGVsYXN0aWNpdGVpdCDigJMgYW50d29vcmRlbi5wZGZgIHwKfCAyNSB8IDIuMiB8IGhvb2Zkc3R1ayB8IEwgfCBgMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yIEVsYXN0aWNpdGVpdCDigJMgaG9vZmRzdHVrLnBkZmAgfAp8IDI2IHwgMi4yIHwgYW50d29vcmRlbiB8IEwgfCBgMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yIEVsYXN0aWNpdGVpdCDigJMgYW50d29vcmRlbi5wZGZgIHwKfCAyNyB8IDIuMy4xIHwgcGFyYWdyYWFmIHwgQSB8IGAyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zLjEgQ29uc3VtZW50ZW5zdXJwbHVzLzIuMy4xIENvbnN1bWVudGVuc3VycGx1cyDigJMgcGFyYWdyYWFmLnBkZmAgfAp8IDI4IHwgMi4zLjEgfCBvcGdhdmVuIHwgQSB8IGAyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zLjEgQ29uc3VtZW50ZW5zdXJwbHVzLzIuMy4xIENvbnN1bWVudGVuc3VycGx1cyDigJMgb3BnYXZlbi5wZGZgIHwKfCAyOSB8IDIuMy4xIHwgYW50d29vcmRlbiB8IEEgfCBgMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy4xIENvbnN1bWVudGVuc3VycGx1cy8yLjMuMSBDb25zdW1lbnRlbnN1cnBsdXMg4oCTIGFudHdvb3JkZW4ucGRmYCB8CnwgMzAgfCAyLjMuMiB8IHBhcmFncmFhZiB8IFAgfCBgMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy4yIFByb2R1Y2VudGVuc3VycGx1cyBlbiB0b3RhYWwgc3VycGx1cy8yLjMuMiBQcm9kdWNlbnRlbnN1cnBsdXMgZW4gdG90YWFsIHN1cnBsdXMg4oCTIHBhcmFncmFhZi5wZGZgIHwKfCAzMSB8IDIuMy4yIHwgb3BnYXZlbiB8IFAgfCBgMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy4yIFByb2R1Y2VudGVuc3VycGx1cyBlbiB0b3RhYWwgc3VycGx1cy8yLjMuMiBQcm9kdWNlbnRlbnN1cnBsdXMgZW4gdG90YWFsIHN1cnBsdXMg4oCTIG9wZ2F2ZW4ucGRmYCB8CnwgMzIgfCAyLjMuMiB8IGFudHdvb3JkZW4gfCBQIHwgYDIuMyBIb29mZHN0dWsgU3VycGx1cyBlbiB3ZWx2YWFydC8yLjMuMiBQcm9kdWNlbnRlbnN1cnBsdXMgZW4gdG90YWFsIHN1cnBsdXMvMi4zLjIgUHJvZHVjZW50ZW5zdXJwbHVzIGVuIHRvdGFhbCBzdXJwbHVzIOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDMzIHwgMi4zLjMgfCBwYXJhZ3JhYWYgfCBQIHwgYDIuMyBIb29mZHN0dWsgU3VycGx1cyBlbiB3ZWx2YWFydC8yLjMuMyBQYXJldG8tZWZmaWNpZW50aWUgZW4gd2VsdmFhcnRzdmVybGllcy8yLjMuMyBQYXJldG8tZWZmaWNpZW50aWUgZW4gd2VsdmFhcnRzdmVybGllcyDigJMgcGFyYWdyYWFmLnBkZmAgfAp8IDM0IHwgMi4zLjMgfCBvcGdhdmVuIHwgUCB8IGAyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zLjMgUGFyZXRvLWVmZmljaWVudGllIGVuIHdlbHZhYXJ0c3ZlcmxpZXMvMi4zLjMgUGFyZXRvLWVmZmljaWVudGllIGVuIHdlbHZhYXJ0c3ZlcmxpZXMg4oCTIG9wZ2F2ZW4ucGRmYCB8CnwgMzUgfCAyLjMuMyB8IGFudHdvb3JkZW4gfCBQIHwgYDIuMyBIb29mZHN0dWsgU3VycGx1cyBlbiB3ZWx2YWFydC8yLjMuMyBQYXJldG8tZWZmaWNpZW50aWUgZW4gd2VsdmFhcnRzdmVybGllcy8yLjMuMyBQYXJldG8tZWZmaWNpZW50aWUgZW4gd2VsdmFhcnRzdmVybGllcyDigJMgYW50d29vcmRlbi5wZGZgIHwKfCAzNiB8IDIuMy40IHwgb3BnYXZlbiB8IFAgfCBgMi4zIEhvb2Zkc3R1ayBTdXJwbHVzIGVuIHdlbHZhYXJ0LzIuMy40IEdlbWVuZ2RlIG9wZ2F2ZW4gc3VycGx1cyBlbiB3ZWx2YWFydC8yLjMuNCBHZW1lbmdkZSBvcGdhdmVuIHN1cnBsdXMgZW4gd2VsdmFhcnQg4oCTIG9wZ2F2ZW4ucGRmYCB8CnwgMzcgfCAyLjMuNCB8IGFudHdvb3JkZW4gfCBQIHwgYDIuMyBIb29mZHN0dWsgU3VycGx1cyBlbiB3ZWx2YWFydC8yLjMuNCBHZW1lbmdkZSBvcGdhdmVuIHN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zLjQgR2VtZW5nZGUgb3BnYXZlbiBzdXJwbHVzIGVuIHdlbHZhYXJ0IOKAkyBhbnR3b29yZGVuLnBkZmAgfAp8IDM4IHwgMi4zIHwgaG9vZmRzdHVrIHwgUCB8IGAyLjMgSG9vZmRzdHVrIFN1cnBsdXMgZW4gd2VsdmFhcnQvMi4zIFN1cnBsdXMgZW4gd2VsdmFhcnQg4oCTIGhvb2Zkc3R1ay5wZGZgIHwKfCAzOSB8IDIuMyB8IGFudHdvb3JkZW4gfCBQIHwgYDIuMyBIb29mZHN0dWsgU3VycGx1cyBlbiB3ZWx2YWFydC8yLjMgU3VycGx1cyBlbiB3ZWx2YWFydCDigJMgYW50d29vcmRlbi5wZGZgIHwKfCA0MCB8IGJvb2sgfCBib2VrIHwgUCB8IGBCb2VrIDIgS29zdGVuLCBvcGJyZW5nc3RlbiwgZWxhc3RpY2l0ZWl0IGVuIHN1cnBsdXMg4oCTIGJvZWsucGRmYCB8CnwgNDEgfCBib29rIHwgYW50d29vcmRlbiB8IFAgfCBgQm9layAyIEtvc3Rlbiwgb3BicmVuZ3N0ZW4sIGVsYXN0aWNpdGVpdCBlbiBzdXJwbHVzIOKAkyBhbnR3b29yZGVuLnBkZmAgfAoKIyMgRXhhY3QgYWNjZXB0ZWQgYW5kIGNhbmRpZGF0ZSBQREZzIGF0IHRoaXMgY2hlY2twb2ludAoKVGhlIGhhc2hlcyBiZWxvdyB3ZXJlIGZyZXNobHkgcmVjb21wdXRlZCBmcm9tIHRoZSBpbnRlZ3JhdGVkIHJvb3QgcGFpci4KQWxsIGNvcnJlc3BvbmRpbmcgaW5kZXBlbmRlbnQgcmV2aWV3L1FDL2hhbmRvZmYgcmVjb3JkcyByZW1haW4gcmVxdWlyZWQ7Cmhhc2hlcyBhbG9uZSBhcmUgbm90IHN0dWRlbnQtcXVhbGl0eSBhY2NlcHRhbmNlLgoKfCBJRCAvIGVkaXRpb24gfCBSYXcgUERGIFNIQS0yNTYgfCBDdXJyZW50IHJldmlzaW9uIC8gZ2F0ZSB8CnwtLS18LS0tfC0tLXwKfCAyLjEuMSAvIHBhcmFncmFhZiB8IGA5ODM3ZTNhODVmMzEyOWE1MzA5YTM2YjE3ZmQxMDMwNzAyYmE5MmZjN2VmNDY0YWY2MDljYjg3OGU0ZDJmOGIwYCB8IFI1IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgY3VycmVudCByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4xLjEgLyBvcGdhdmVuIHwgYDk3MzI5NDE1YmFjYzE1MDY3NWEzMjdhZDMxNDU1YjI1YjhlOWUxYjAzMDEyZWY2YjY1ZGFiMTBhYjFmMDI5NTNgIHwgUjUgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBjdXJyZW50IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjEuMSAvIGFudHdvb3JkZW4gfCBgNDk4YjlhODYzZWVmOWMwZmVlZmQ1MGU4YTUwZTcyYWE0MWM2MjZjYWFjYTc5ZjBiOTgyNjFiOGIzMTA0ZTVjZWAgfCBSNSBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGN1cnJlbnQgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMS4yIC8gcGFyYWdyYWFmIHwgYGU5NGQ0MmY2NmFiOTk2NmEzYTAyNGNmZWYwNjFjMjA4NGZjYzFlMmE2ZWY5ZTYxZTUwYzY5OWM5MTU1Y2U3YTJgIHwgUjcgY3VycmVudCBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjEuMiAvIG9wZ2F2ZW4gfCBgOTRlYmU1ZDM1MjA3ZjZjNjA1Y2EyOTRhOWU1YmRjY2ZhOGMxYTEwZTY3MTc5NTVlMjFhYmIzNjA2YTYwNDA2YWAgfCBSNyBjdXJyZW50IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMS4yIC8gYW50d29vcmRlbiB8IGBkNTVmMWRhNjY3MjNjZDZmOTMyY2JmMDc5M2NlNzlkOGQ0MTg4ZDJkOTA3MjQ0ZmQ0MGNjNmY2ZmJhZDVhYzkwYCB8IFI3IGN1cnJlbnQgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4yLjEgLyBwYXJhZ3JhYWYgfCBgOThiZjQ5MjNiNGUzYjhlNDlmYTNiOWQxYjdkYWY3MTM5MmM2Yzc2ZWY4Y2VhNjNhYWIxMmM0NDc0OWNkYTFhNmAgfCBSOCBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGN1cnJlbnQgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMi4xIC8gb3BnYXZlbiB8IGBhODExOWNjNzY5YzhmNGQ5MWEwZDQ1YzlhYjJmMjVhYmMzODc1ZTU3ODM1ZDEzYzA1NmFkZjZkMzVjNjI5N2FmYCB8IFI4IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgY3VycmVudCByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4yLjEgLyBhbnR3b29yZGVuIHwgYGQ0YTdjMTM5ZDQ5Mjc2ZTgwYzIzZjRlZGExY2ZhYjc4NDFkMDYzYjIwNGQ3YTliYjcwY2QyMjVhNzk2ZTViNWRgIHwgUjggaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBjdXJyZW50IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjEuMyAvIHBhcmFncmFhZiB8IGA1MzQxNzdjODI4MGVkZGQ0Nzg1ZGNlMTQ5MTg1NmMzM2M5NmNkNjk4YWU1NThiNTEzNmJkYjIwNmE3OWM3MDI0YCB8IFI3L1MxIGN1cnJlbnQgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4xLjMgLyBvcGdhdmVuIHwgYGQxMjQ4NzY3MWJkMmYyY2ZlMzI5ZjU5YmM5YzQ4Y2ZlYzVmMDNiODcxNjI2YzVjNDAxNmU4OGMyNjQ2ZDVmMDVgIHwgUjcvUzEgY3VycmVudCBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjEuMyAvIGFudHdvb3JkZW4gfCBgZDk2ZjIxYzNhYmVkNDcxZjNhMTJkZDMxOGNiMTQ4NTA0M2ZlNTU3ZTRhNGQ0YjU0MDM0NDA3NzYzYWU4Nzc4N2AgfCBSNy9TMSBjdXJyZW50IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMS40IC8gb3BnYXZlbiB8IGBjODllMWM0ZjQ5NDkxMDI4ZDBjZjE3MWViMzIxOTk3N2I3NTQ1YzEyN2FkMGE1YzM3ZjBmNzEzZGY0MTM2ZjQ4YCB8IEN1cnJlbnQ5LXBhZ2UgYXV0aG9yIGNhbmRpZGF0ZTsgcm9vdCBzb3VyY2UvYnl0ZSBjaGVja3MgcGFzczsgZGlzdGluY3QgcmV2aWV3L1FDL3Jvb3QgYWNjZXB0YW5jZSBwZW5kaW5nIHwKfCAyLjEuNCAvIGFudHdvb3JkZW4gfCBgZjI5NTFlMmY5NjkwNDViMGM5ZDU0OWMxZjU0NGZiZDdkMmExNjc5MzUyMTY5ZDNhYzY0ZDkwZWM3OTlmMjdmOGAgfCBDdXJyZW50MTEtcGFnZSBhdXRob3IgY2FuZGlkYXRlOyByb290IHNvdXJjZS9ieXRlIGNoZWNrcyBwYXNzOyBkaXN0aW5jdCByZXZpZXcvUUMvcm9vdCBhY2NlcHRhbmNlIHBlbmRpbmcgfAp8IDIuMi4yIC8gcGFyYWdyYWFmIHwgYDM2ZmViNzg3MzYzN2QwZTcxYWY1MGQ0OTMwYTc4OWUzYThhZGE2ZWM3N2NjMzc3YjA5ZTJhZjE3OWMzYWU5OGNgIHwgUjEzIGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgY3VycmVudCByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4yLjIgLyBvcGdhdmVuIHwgYDBhMjUxYTQ5NzNiMWI5YjBjNGFiY2EzMDMxMGEzZTBiZGE4ODg1NThlMDc5ZmQ0ODk1MzE5ZmM0OTY2MTQ1NTVgIHwgUjEzIGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgY3VycmVudCByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4yLjIgLyBhbnR3b29yZGVuIHwgYDYxY2JkZTY3ZTgxNTY1MTUwMTI4MTg3NTczYTc2NmZmZmM5YmMxZDAxZjNiZDI0Y2JlM2RhY2I5ZGRlYjUyYjJgIHwgUjEzIGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgY3VycmVudCByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4yLjMgLyBwYXJhZ3JhYWYgfCBgY2EyN2Y4YmQ2Y2JiM2I1OTZlNTYyMTI4MGQ3NjYzMWM1NTYxMTM0ZTllNTNjMzU1NjcyNWMzMTNmZGY4YWVjYmAgfCBDdXJyZW50IGludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAp8IDIuMi4zIC8gb3BnYXZlbiB8IGA1MGNmMmJiZWFhMTk4YzQ1ZDE4MzJjZjYxMTJiMGY1MGNjYjBkZmMzZDE3MWYxMTBiMmEwOWYyYmIxZjYyZjgwYCB8IEN1cnJlbnQgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4yLjMgLyBhbnR3b29yZGVuIHwgYDMwY2Q2ODIzNThjNWVlYjhjYjZhZjUzY2Y3MmUzZWJjZmM4ZmVhZjE0ODU2ZTNmNjcxYTg1MGZlNDVkZTJlMTBgIHwgQ3VycmVudCBpbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjIuNCAvIG9wZ2F2ZW4gfCBgOGViODRjNmYxMGJiODI0MDMzZmZlYTY2OWEwNGEzOTNiZjU3YzI1YjQ3NTc4MDU1MjNjMGY0NGExOWJhZmEwZGAgfCBDdXJyZW50IHBhcmFncmFwaC9zcGVjaWFsaXN0L3Jvb3QgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBmdWxscjE0L3RoaW5yMTUvZGlyZWN0cjE2IGFuZCBoYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjIuNCAvIGFudHdvb3JkZW4gfCBgZjZiYTM0Zjg5YWUwYzRhNGMwZjI2ZjEyYWZiMzkyYWY1MjcxZTFlZGRlMjhiZGU2NTg1NGI5MDI4N2RkNTdmOGAgfCBDdXJyZW50IHBhcmFncmFwaC9zcGVjaWFsaXN0L3Jvb3QgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBmdWxscjE0L3RoaW5yMTUvZGlyZWN0cjE2IGFuZCBoYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjMuMSAvIHBhcmFncmFhZiB8IGAwODgxMDJhOTcxMzBjYzY5OTA3YjcxNDJjODEwNTZiNmY5NjcyY2JmZDA5YTgyOGM0Y2ViYTVlYTRkODJjZDVlYCB8IEludGVybmFsIGFjY2VwdGFuY2Ugd2l0aCBmbGFnczsgY3VycmVudCByZXZpZXcvUUMvaGFuZG9mZiBjb21wbGV0ZSB8CnwgMi4zLjEgLyBvcGdhdmVuIHwgYDRhN2U4N2U2NDFkNTU4MTE3ZDE1OGY1NzNhYWYzYmNkNzgzOTViMjI0OWFjNzNiZmNiOGE3NDkxYjZiZTMzNDFgIHwgSW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzOyBjdXJyZW50IHJldmlldy9RQy9oYW5kb2ZmIGNvbXBsZXRlIHwKfCAyLjMuMSAvIGFudHdvb3JkZW4gfCBgZDEyOTdkZWU1YjE4MzRlOTlkNjY5MTljMjk0NzdhMTlmNTE2OWZhNjJjMzAyMzU0ZGI0MzNhZTQ0ZDhkNWY3YmAgfCBJbnRlcm5hbCBhY2NlcHRhbmNlIHdpdGggZmxhZ3M7IGN1cnJlbnQgcmV2aWV3L1FDL2hhbmRvZmYgY29tcGxldGUgfAoKRWFjaCBhY2NlcHRlZCBwYXJhZ3JhcGggaGFzIGA8aWQ+LXRleHRib29rLWhhbmRvZmYubWRgIGluIGl0cyBjYW5vbmljYWwgZm9sZGVyLAppbmNsdWRpbmcgZXhhY3Qgc291cmNlL3Jldmlldy9xdWFsaXR5IGJpbmRpbmdzLCBjb25jZXB0cywgZXhlcmNpc2VzLCB2aXN1YWxzIGFuZApjYXJyeS1mb3J3YXJkIGxpbWl0cy4gVGhlIDU4IGhpc3RvcmljYWxseSBhY2NlcHRlZCBwYWdlcyAoMzEgKyAyNykgaGF2ZSBhY3R1YWwgcm9vdCBhbmQgaW5kZXBlbmRlbnQKaW5zcGVjdGlvbiBldmlkZW5jZTsgbmV3IHNob3J0LWFsdCBmaW5kaW5ncyBkbyBub3QgZXJhc2UgdGhvc2Ugb2JzZXJ2YXRpb25zLApidXQgcmVxdWlyZSBjb3JyZWN0ZWQgTUQvSFRNTC9hc3NldCBsaW5lYWdlIGFuZCByZW5ld2VkIHBhY2thZ2UgZ2F0ZXMuIFRoZSBzZXBhcmF0ZTEwMyBwcm9kdWNlZCBwYWdlcyAoMzAgKyAyMCArIDIxICsgMzIpIGhhdmUKcm9vdCBvYnNlcnZhdGlvbi9yZWJ1aWxkIHJlcG9ydHM7IMKnMjIxL8KnMjIyIGV4YWN0IHRyYW5zZmVycyBmcm9tIHJvb3QncyBvd24KcHJpb3Igdmlld3MgYXJlIGRpc3Rpbmd1aXNoZWQgZnJvbSBmcmVzaCBpbmRlcGVuZGVudCBmdWxsLXBhZ2UgaW5zcGVjdGlvbi4KwqcyMjEgUjggaGFzIGl0cyBvd24gY3VycmVudCBoYW5kb2ZmOyB0aGUgZWFybGllciBSNiBoYW5kb2ZmIHJlbWFpbnMgaW4gR2l0IGhpc3RvcnkuClNlZTIyMS1yb290LWFjY2VwdGFuY2UtcjgubWQgZm9yIGV4YWN0IGN1cnJlbnQgY2Fub25pY2FsIGFuZCBhZG9wdGlvbiBiaW5kaW5ncy4KCiMjIFJlbWFpbmluZyBwcm9kdWN0aW9uIGFuZCBhY2NlcHRhbmNlCgpXYXZlLXR3byDCpzIxMyBub3cgaGFzIGN1cnJlbnQgaW50ZXJuYWwgYWNjZXB0YW5jZSB3aXRoIGZsYWdzIGFuZCBhIGNvbXBsZXRlCmhhbmRvZmYuIMKnMjI0IG5vdyBoYXMgdHdvIGludGVybmFsbHkgYWNjZXB0ZWQgQSBQREZzIHdpdGggZGlzdGluY3Qgc3BlY2lhbGlzdAphbmQgcm9vdCBnYXRlcy9oYW5kb2ZmIGNvbXBsZXRlLiDCpzIyMyBoYXMgY3VycmVudCBpbmRlcGVuZGVudCBwYXJhZ3JhcGggYW5kCnNwZWNpYWxpc3QgcmV2aWV3LCByb290IGFjY2VwdGFuY2UgYW5kIGhhbmRvZmYgd2l0aCBmbGFncy4gwqcyMTEgUjUgaGFzIGNvbXBsZXRlIGN1cnJlbnQgcGFyYWdyYXBoIHJldmlldywgZGlzdGluY3QKc3BlY2lhbGlzdCBRQyBhbmQgcm9vdCBhY2NlcHRhbmNlL2hhbmRvZmYgd2l0aCBmbGFnczsgc2VlMjExLXJvb3QtYWNjZXB0YW5jZS1yNS5tZC4KwqcyMTIgUjcgaGFzIGl0cyBib251cyBibG9jayBhbmQgY3VycmVudCBpbmRlcGVuZGVudCBwYXJhZ3JhcGggUEFTUy4gQ3VycmVudApkaXN0aW5jdCBzcGVjaWFsaXN0IFFDLCByb290IHJlcHJvZHVjdGlvbi9hY2NlcHRhbmNlIGFuZCBuaW5lLXNlY3Rpb24gaGFuZG9mZgphcmUgY29tcGxldGUgd2l0aCBmbGFncy4gSXRzIGFjY2VwdGVkLXByZXJlcXVpc2l0ZSBzdWNjZXNzaW9uIGlzIHZlcmlmaWVkIGFuZApTMSBsaW5lYWdlIGlzIGNsb3NlZDsgaGlzdG9yaWNhbCBmYWlsdXJlcyBhbmQgUEVORElORyBwcm9vZiByZW1haW4gcHJlc2VydmVkLgrCpzIxMyBSNyBoYXMgdGhlIGJvbnVzLWNyaXRlcmlhIGNvcnJlY3Rpb24sIHVuY2hhbmdlZCBpbmRlcGVuZGVudCBwYXJhZ3JhcGggUEFTUywKaW5kZXBlbmRlbnRseSByZXZpZXdlZCBleGFjdCBmaXZlLXBpbiBhY2NlcHRlZDIxMS8yMTIgc3VjY2Vzc2lvbiwgZGlzdGluY3QKY3VycmVudCBzcGVjaWFsaXN0IFFDIGFuZCBhY3R1YWwgcm9vdCBmdWxsL3RoaW4vZGlyZWN0IHJlcHJvZHVjdGlvbi4gTWluaW1hbApyb290LW9ubHkgUUMgYWNjZXB0YW5jZSBhbmQgbmluZS1zZWN0aW9uIGhhbmRvZmYgY2xvc2UgdGhvc2UgZ2F0ZXMuIEhpc3RvcmljYWwKcHJpbnQtb25seS9zb3VyY2UgcHJvb2YgYW5kIHRoZSBvbGQyMTIgZ3VhcmQgZmFpbHVyZSByZW1haW4gdW5jaGFuZ2VkOyB0aGV5IGFyZQpub3QgcmVsYWJlbGVkIGFzIGZ1bGwgYnVpbGRzLiBTZWUyMTMtUUMtUk9PVC1yZXN1bHQubWQgYW5kMjEzLVFDLVJPT1QtYWNjZXB0YW5jZS5tZC4KwqcyMjEgUjgncyBpbnRlcm5hbCByZXZpZXcvUUMvaGFuZG9mZiBnYXRlcyBhcmUgY29tcGxldGUsIHdpdGggdGltaW5nIGZsYWdzLgpJbmRlcGVuZGVudCDCpzIyMyBwYXJhZ3JhcGggYW5kIGN1cnJlbnQgc3BlY2lhbGlzdCBQQVNTIFdJVEggRkxBR1MgYXJlIGFkb3B0ZWQ7CnJvb3QgbmF0aXZlIHZhbGlkYXRpb24sIGFjY2VwdGFuY2UgYW5kIGhhbmRvZmYgY2xvc2UgdGhvc2UgZ2F0ZXMuIMKnMjIyJ3MgZm9ybWVyIGNhbm9uaWNhbCBGQUlMIGlzIHN1cGVyc2VkZWQgYnkgYWN0dWFsIGN1cnJlbnQgUjEzCmluZGVwZW5kZW50IFBBU1MgY2xvc2luZyBhbnN3ZXI0YiBvcmRlciBhbmQgQ29uY2VydCBzaG9ydCBhbHQuIERpc3RpbmN0IFFDCmFuZCByb290IGFjY2VwdGFuY2UvaGFuZG9mZiBub3cgY2xvc2UsIHdpdGggdGltaW5nIGZsYWdzOyBzZWUyMjItcm9vdC1hY2NlcHRhbmNlLXIxMy5tZC4KSGlzdG9yaWNhbDIxMiB0ZWFjaGluZyBpcyB1bmNoYW5nZWQgYnkgaXRzIG1ldGFkYXRhL2JvbnVzIGNvcnJlY3Rpb247IGl0cyBub3cKYWNjZXB0ZWQgY3VycmVudCBwYWNrYWdlIG11c3QgYmUgY29uc3VtZWQgdGhyb3VnaDIxMydzIGV4YWN0IHN1Y2Nlc3NvciByZWxlYXNlCmFuZCBmaW5hbCBjb21iaW5lZCBib29rIGFzc2VtYmx5LgrCpzIyMyBleGFjdCBhY2NlcHRlZC1jdXJyZW50LcKnMjIxIHN1Y2Nlc3NvciBpbnB1dCBiaW5kaW5nIG5vdyBoYXMgaW5kZXBlbmRlbnQKZGVsdGEgUEFTUyBhbmQgdW5jaGFuZ2VkIHJvb3QgZnVsbC90aGluL3ByaW50IHByb29mOyBzZWUyMjMtUzEtcm9vdC1yZXN1bHQubWQuCkl0cyBjdXJyZW50IHNwZWNpYWxpc3QgUUMgYW5kIHJvb3QgYWNjZXB0YW5jZS9oYW5kb2ZmIG5vdyBwYXNzIHdpdGggZmxhZ3M7CnNlZTIyMy1yb290LXFjLXJlc3VsdC5tZCBhbmQyMjMtcm9vdC1hY2NlcHRhbmNlLm1kLiBGaW5hbCBhZ2dyZWdhdGUvQ0kgZ2F0ZXMgcmVtYWluLgrCpzIxNCBmb2xsb3dzIHRoZSBpbmRlcGVuZGVudGx5IHJldmlld2VkIGNvbXBsZXRlNDgtaW5wdXQgcmVsZWFzZSBhbmQgYWN0dWFsCmFjY2VwdGVkMjExLzIxMi8yMTMgdGVhY2hpbmcuIEl0cyBhdXRob3IgY2FuZGlkYXRlIGlzIG5vdyBhZG9wdGVkOjMyMiBmaW5hbApzb3VyY2UvbmF0aXZlL2V2aWRlbmNlIHBhdGhzLDEwIHNvdXJjZSBmaWxlcyBhbmQxNSBuYXRpdmUgZmlsZXMgYXJlIHJhdy9HaXQgZXhhY3QuClJvb3QxMyBzb3VyY2UgbWV0aG9kcyBwYXNzLCBpbmNsdWRpbmc2MDMgcmF3LWlucHV0IGFuZDc4IHdob2xlLXNvdXJjZS9jb250cm9sbGVyCnByZS1lZmZlY3QgY2FzZXMuIEZpdmUgcHJlc2VydmVkIGF1dGhvciBydW5zIGhhdmUxMDAgaWRlbnRpY2FsIHJhdy9kZWNvZGVkClBvcHBsZXIgcGFnZXM7IGN1cnJlbnQgcm9vdDIwIE11UERGIHBhZ2VzIG1hdGNoIHRoZSBvcmlnaW5hbCBzYW1lLWVuZ2luZSBuYXRpdmUKY2hlY2tlci4gQWxsNDggYXV0aG9yIHBlcnNvbmFsIGNvbG9yL2dyYXkgb2JzZXJ2YXRpb25zIHJlbWFpbiBhdHRyaWJ1dGVkLCBub3QKcm9vdCBvciBpbmRlcGVuZGVudCByZXZpZXcuIERpc3RpbmN0IHBhcmFncmFwaCByZXZpZXcsIHNwZWNpYWxpc3QgUUMsIHJvb3QgbmF0aXZlCmZ1bGwvdGhpbi9kaXJlY3QgcmVwcm9kdWN0aW9uL2FjY2VwdGFuY2UgYW5kIGhhbmRvZmYgYXJlIFBFTkRJTkcuIEl0cyB0d28gUERGcwphcmUgQzsgdGltaW5nczU0LzYwLzcyIHJlbWFpbiBVTk9CU0VSVkVELiBTZWUyMTQtUk9PVC1BRE9QVElPTi1yZXN1bHQubWQuCsKnMjI0J3MgY3VycmVudCBwYXJhZ3JhcGgvc3BlY2lhbGlzdCByZXZpZXdzLCByb290IHBvc2l0aXZlIG5hdGl2ZSByZXByb2R1Y3Rpb24sCmFjY2VwdGFuY2UgYW5kIGhhbmRvZmYgYXJlIGNvbXBsZXRlLiBDaGFwdGVyMi4yIHN0aWxsIHJlcXVpcmVzIGluZGVwZW5kZW50CmNvbnNpc3RlbmN5L2Zyb250IGNvcnJlY3Rpb24vcmVjaGVjayBhbmQgc2VwYXJhdGVseSByZXZpZXdlZCBhY2NlcHRlZCBpbnB1dHMsCnRoZW4gYWN0dWFsIGNoYXB0ZXIgcmVuZGVyaW5nIGFuZCByZXZpZXcuIMKnMjMxIGlzIGludGVybmFsbHkgYWNjZXB0ZWQKd2l0aCBmbGFncyBhbmQgY3VycmVudCBpbmRlcGVuZGVudCBwYXJhZ3JhcGggcmV2aWV3LCBzcGVjaWFsaXN0IFFDIGFuZCBoYW5kb2ZmOwrCpzIzMuKAk8KnMjM0IGFuZCBhbGwgYWdncmVnYXRlIG91dHB1dHMgcmVtYWluIHBlbmRpbmcgdGhlaXIgZGVwZW5kZW5jeS9wbGFuL3JldmlldwpnYXRlcy4gQm9vayBmcm9udCBzb3VyY2VzCmFsb25lIHBhc3NlZCBpbmRlcGVuZGVudCBSMjsgbm8gYmFjayBtYXR0ZXIsIGFjdHVhbCBib29rIG1hbmlmZXN0IG9yIGFzc2VtYmxlZApib29rIFBERiBoYXMgYmVlbiBhY2NlcHRlZC4gUHJlc2VydmUgcGFyYWdyYXBoL2Fuc3dlciBzZXBhcmF0aW9uIGFuZCBuZXZlcgphcHBlbmQgZHVwbGljYXRlIG9wZ2F2ZW4gdG8gYSBjb21wbGV0ZSBwYXJhZ3JhYWYgc291cmNlLgoKVXBkYXRlIHRoaXMgbWFuaWZlc3Qgb25seSBmcm9tIGV4YWN0IGFkb3B0ZWQgcGF5bG9hZC9wcm9vZiBldmlkZW5jZS4gRmluYWwKY2xvc3VyZSByZXF1aXJlcyBhbGwgNDEgYWNjZXB0ZWQgZmluYWwgUERGcyBwbHVzIHNvdXJjZS9hc3NldC9wcm9vZiBoYXNoZXMsCmluZGVwZW5kZW50IGZpbmlzaGVkIHZlcmlmaWNhdGlvbiBhbmQgbGVhZCByb3VuZHMsIHBhaXJlZCBjb21wYXRpYmlsaXR5L0NJIGFuZApub3JtYWwgcmVhZGluZXNzLiBDbGFzc3Jvb20gdGltaW5nL2F0dGFpbm1lbnQgYW5kIG9wdGlvbmFsIGN1cnJlbnQgSW5zcGVjdGllCm1hcHBpbmcgYXJlIG5vdCBhc3NlcnRlZC4gTm8gZnV0dXJlIG1lcmdlIGF1dGhvcml0eSBpcyBzdXBwbGllZC4KCiMjIEludmVudG9yeSBtZXRob2QgYW5kIGRpYWdub3N0aWMgY29ycmVjdGlvbgoKUmVhZC1vbmx5IEdpdCBgbHMtdHJlZSAtciAteiAtLW5hbWUtb25seWAgYXQgYmFzZWxpbmUvSEVBRCwgZXhhY3QgcGxhbm5lZC1wYXRoCm1lbWJlcnNoaXAsIGZpbGVzeXN0ZW0gcHJlc2VuY2UsIHJhdyBTSEEtMjU2IG9mIGFjY2VwdGVkL2NhbmRpZGF0ZSBQREZzIGFuZCBiYXNlbGluZS9IRUFECkdpdC1ibG9iIGNvbXBhcmlzb24gZm9yIGFsbCBsZWdhY3kgUERGcy4gQW4gaW5pdGlhbCBsaW5lLXNwbGl0IHByb2JlIGZhaWxlZCB0bwppbnRlcnByZXQgR2l0J3MgcXVvdGVkIFVuaWNvZGUgcGF0aHMgYW5kIGluY29ycmVjdGx5IGNvdW50ZWQgemVybyBiYXNlbGluZQpQREZzOyBpdCB3YXMgZGlzY2FyZGVkIGFuZCByZXBsYWNlZCB3aXRoIE5VTC1kZWxpbWl0ZWQgcGF0aHMgYmVmb3JlIHRoaXMgcmVjb3JkLgpUaGUgY29ycmVjdGVkIGhpc3RvcmljYWwgcHJlLcKnMjMxIGJhc2VsaW5lL2N1cnJlbnQgdHJhY2tlZCBjb3VudCB3YXMyNi4gVGhlCmN1cnJlbnQyMTQgYXV0aG9yLWNhbmRpZGF0ZSBhZG9wdGlvbiByZWZyZXNoIGNoZWNrczQxIHVuaXF1ZSBwbGFubmVkIHBhdGhzLAoyOSBwcmVzZW50LCBmb3VyIGJhc2VsaW5lLWlkZW50aWNhbCBsZWdhY3kgUERGcywxMiBhYnNlbnQsYWxsMjMgYWNjZXB0ZWQgYW5kCnR3byBjdXJyZW50IGNhbmRpZGF0ZSBQREYgaGFzaGVzLiBPdGhlcjM5IHJvd3MgYW5kMjcgb3RoZXIgZXhpc3RpbmcgUERGcyByZW1haW4KdW5jaGFuZ2VkLiBDdXJyZW50CmFjY2VwdGFuY2UgbmV2ZXIgaW5oZXJpdHMgYSBsZWdhY3kgbGFiZWwgd2l0aG91dCBmcmVzaCBnYXRlcy4gTm8gUERGIGZpbGVzIGNoYW5nZWQKYnkgaW52ZW50b3J5IGNoZWNrcy4KClBvc3Qtd3JpdGUgY2hlY2tzOiBwbGFubmVkL2FjdGl2ZSBzcHJpbnQgYnVuZGxlIFBBU1MsIGFwcHJvdmVkLXVzZSBjdXJyZW50bmVzcwpQQVNTLCBkdXJhYmxlIHR3ZWx2ZS1yZWNvcmQgYXV0aG9yaXR5IFBBU1MsIDQxIG1hbmlmZXN0IHJvd3MvdW5pcXVlIHBhdGhzIGFuZAphbGwgdHdlbHZlIGZyZXNobHkgaGFzaGVkIHRhcmdldC10cmFjZSBiaW5kaW5ncyBQQVNTLCB3aGl0ZXNwYWNlIFBBU1MuIFRoZQpmaXJzdCB1bmlxdWVuZXNzIG9uZS1saW5lciBsb3N0IGEgbGl0ZXJhbCBiYWNrdGljayB0aHJvdWdoIFBvd2VyU2hlbGwgZXNjYXBpbmc7Cml0cyBmYWlsdXJlIHdhcyBjb3JyZWN0ZWQgdXNpbmcgdGFibGUtY29sdW1uIHBhcnNpbmcgYW5kIHJlcnVuIHN1Y2Nlc3NmdWxseS4KTm8gZmFpbGVkIHByb2JlIGlzIHRyZWF0ZWQgYXMgYWNjZXB0YW5jZSBhbmQgbm8gY29tcGxldGUtYnVuZGxlIGNsYWltIGlzIG1hZGUuCg==",
+    "rows": [
+      "| 1 | 2.1.1 | paragraaf | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf` |",
+      "| 2 | 2.1.1 | opgaven | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf` |",
+      "| 3 | 2.1.1 | antwoorden | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf` |",
+      "| 4 | 2.1.2 | paragraaf | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf` |",
+      "| 5 | 2.1.2 | opgaven | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf` |",
+      "| 6 | 2.1.2 | antwoorden | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf` |",
+      "| 7 | 2.1.3 | paragraaf | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf` |",
+      "| 8 | 2.1.3 | opgaven | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf` |",
+      "| 9 | 2.1.3 | antwoorden | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf` |",
+      "| 10 | 2.1.4 | opgaven | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf` |",
+      "| 11 | 2.1.4 | antwoorden | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf` |",
+      "| 12 | 2.1 | hoofdstuk | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf` |",
+      "| 13 | 2.1 | antwoorden | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.pdf` |",
+      "| 14 | 2.2.1 | paragraaf | A | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf` |",
+      "| 15 | 2.2.1 | opgaven | A | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf` |",
+      "| 16 | 2.2.1 | antwoorden | A | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf` |",
+      "| 17 | 2.2.2 | paragraaf | A | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf` |",
+      "| 18 | 2.2.2 | opgaven | A | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf` |",
+      "| 19 | 2.2.2 | antwoorden | A | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf` |",
+      "| 20 | 2.2.3 | paragraaf | A | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf` |",
+      "| 21 | 2.2.3 | opgaven | A | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf` |",
+      "| 22 | 2.2.3 | antwoorden | A | `2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf` |",
+      "| 23 | 2.2.4 | opgaven | A | `2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf` |",
+      "| 24 | 2.2.4 | antwoorden | A | `2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf` |",
+      "| 25 | 2.2 | hoofdstuk | L | `2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – hoofdstuk.pdf` |",
+      "| 26 | 2.2 | antwoorden | L | `2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – antwoorden.pdf` |",
+      "| 27 | 2.3.1 | paragraaf | A | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf` |",
+      "| 28 | 2.3.1 | opgaven | A | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.pdf` |",
+      "| 29 | 2.3.1 | antwoorden | A | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.pdf` |",
+      "| 30 | 2.3.2 | paragraaf | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf` |",
+      "| 31 | 2.3.2 | opgaven | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – opgaven.pdf` |",
+      "| 32 | 2.3.2 | antwoorden | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf` |",
+      "| 33 | 2.3.3 | paragraaf | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3 Pareto-efficientie en welvaartsverlies – paragraaf.pdf` |",
+      "| 34 | 2.3.3 | opgaven | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3 Pareto-efficientie en welvaartsverlies – opgaven.pdf` |",
+      "| 35 | 2.3.3 | antwoorden | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3 Pareto-efficientie en welvaartsverlies – antwoorden.pdf` |",
+      "| 36 | 2.3.4 | opgaven | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart – opgaven.pdf` |",
+      "| 37 | 2.3.4 | antwoorden | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart – antwoorden.pdf` |",
+      "| 38 | 2.3 | hoofdstuk | P | `2.3 Hoofdstuk Surplus en welvaart/2.3 Surplus en welvaart – hoofdstuk.pdf` |",
+      "| 39 | 2.3 | antwoorden | P | `2.3 Hoofdstuk Surplus en welvaart/2.3 Surplus en welvaart – antwoorden.pdf` |",
+      "| 40 | book | boek | P | `Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.pdf` |",
+      "| 41 | book | antwoorden | P | `Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.pdf` |"
+    ]
+  },
+  "PDFs": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.pdf",
+      "sha256": "9edc45ece7ab0be5b91b8f3217c5911777d55fcace21d128fa0d9b94803328c1"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf",
+      "sha256": "2550df96502178f03b2aa4026a40bae70394d95b5514b0f89a23506d6b77c8b5"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf",
+      "sha256": "498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
+      "sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
+      "sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+      "sha256": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
+      "sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+      "sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+      "sha256": "d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+      "sha256": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+      "sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+      "sha256": "f2951e2f969045b0c9d549c1f544fbd7d2a1679352169d3ac64d90ec799f27f8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+      "sha256": "c89e1c4f49491028d0cf171eb3219977b7545c127ad0a5c37f0f713df4136f48"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – antwoorden.pdf",
+      "sha256": "14e98e8bb6de0d4864d8bf9dcb9fe6699da978a51acf1b3e6601ebaebf03776d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – hoofdstuk.pdf",
+      "sha256": "e4001a6a36ee48dc1610be359f656b8c9e84b7d5ee2c18ff4bfccaefcbaa25db"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf",
+      "sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf",
+      "sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf",
+      "sha256": "61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf",
+      "sha256": "0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf",
+      "sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf",
+      "sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf",
+      "sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+      "sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "sha256": "f6ba34f89ae0c4a4c0f26f12afb392af5271e1edde28bde65854b90287dd57f8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "sha256": "8eb84c6f10bb824033ffea669a04a393bf57c25b4757805523c0f44a19bafa0d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.pdf",
+      "sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.pdf",
+      "sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf",
+      "sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    }
+  ]
+}
