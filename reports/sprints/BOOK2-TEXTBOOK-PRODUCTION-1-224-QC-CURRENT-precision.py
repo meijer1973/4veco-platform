@@ -50,9 +50,10 @@ def personal():
 def precision(commit,manifest):
     c.guard(commit);c.release_guard();c.native_guard();b=c.builder();folder=L/b.LESSON_REL;record=b.target_record();rows=[];neg=[]
     normalize=lambda s:' '.join(s.split())
-    def required(text,clauses):
+    def required(text,clauses,counts=None):
         for clause in clauses:
             if normalize(clause) not in normalize(text):raise ValueError('Missing/misleading required clause: '+clause)
+            if counts is not None and normalize(text).count(normalize(clause))!=counts[clause]:raise ValueError('Changed required occurrence count: '+clause)
     source=c.raw(P/'build-scripts/content/book-2/224/exercises.md').decode()
     answers=c.raw(P/'build-scripts/content/book-2/224/answers.md').decode()
     targetanswers=c.raw(P/'build-scripts/content/book-2/224/target-answers.md').decode()
@@ -77,11 +78,12 @@ def precision(commit,manifest):
     # Mutations are in-memory actual source copies, never live pupil files.
     for name,text,clauses in groups:
         required(text,clauses)
+        counts={clause:normalize(text).count(normalize(clause)) for clause in clauses}
         for clause in clauses:
             # Work on normalized actual text, so wrapping is not mistaken for semantics.
             for replacement in ('','ONJUISTE ALGEMENE GARANTIE'):
                 altered=normalize(text).replace(normalize(clause),replacement,1)
-                try:required(altered,clauses)
+                try:required(altered,clauses,counts)
                 except ValueError:neg.append({'source':name,'clause':clause,'mutation':replacement or 'missing','rejected':True})
                 else:raise AssertionError('Semantic fixture escaped')
     for kind in ('opgaven','antwoorden'):
