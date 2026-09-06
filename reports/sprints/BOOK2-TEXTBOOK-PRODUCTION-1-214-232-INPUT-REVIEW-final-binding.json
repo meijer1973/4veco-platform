@@ -1,0 +1,189 @@
+{
+  "actor": "paragraph_224_builder",
+  "task": "BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW",
+  "branch": "agent/book2-214-232-input-review-20260906",
+  "substantive_platform_commit": "8fc63fe32f030371195f022971a2d5d42ddedeb8",
+  "lessons_commit": "1cf1c1f972f196791fb37f6bbee523b7a2e3b676",
+  "decision": "INPUT PASS; separate root release required",
+  "files": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-214-production-process.json",
+      "raw_sha256": "34aec43dbb37d488748dc94912755a0490341d70531cf72d60311d12636f60c3"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-214-specialist-process.json",
+      "raw_sha256": "df10a3e039ca0d868e4b92c7e317fcca308c58ab182945c7b6e8539b5498431d"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-232-production-process.json",
+      "raw_sha256": "d570130f4f371bc6adaa9ee04ecfa7ed98c111e2b79b9d87050ec2a0061f8f50"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-232-specialist-process.json",
+      "raw_sha256": "a7f02bc38a3df2b8ea7348605d987919f687e16ab230ff5d040edb4fef74fcab"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-211-publisher-print-process.json",
+      "raw_sha256": "f66aefa1c4b78e4cf3f435d3ef9099357a2067dce8864afab728a7b7c07f0281"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-211-student-web-process.json",
+      "raw_sha256": "b74982255ae22fbd967a8cd55005af19ab06671f3a79d08c95b80021dfb5c81b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-212-publisher-print-process.json",
+      "raw_sha256": "8665e760b5a499aca25493db977b2efad89ff6bae02321a30f9e3eb09dd9983e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-212-student-web-process.json",
+      "raw_sha256": "5c6ed9a6a4fa799dd7352705da50c988bf19b18b65ad5a28d5fdb989c645103b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-213-publisher-print-process.json",
+      "raw_sha256": "974aac0fa3e7b757ef5055ab0dd4966cf9c02d49ebbc29f07cc090c63a8b1ee0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-213-student-web-process.json",
+      "raw_sha256": "e0bcb8ba341b4b7d6be49ffa9722c5d8e8f8c82a6244a26fd8b6a79ba612dc3c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-231-publisher-print-process.json",
+      "raw_sha256": "5a4d96d2094169fb84731bebe3aab1945a23a152e738a340734a6a062b877827"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-231-student-web-process.json",
+      "raw_sha256": "57712b942b4a35e3f51f5ffe31b33b235998832c835de6cf950ba8b2cf9dbcec"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-baseline.json",
+      "raw_sha256": "5b9ad3c78bc407e32b9a513d21b6066dd2a7c390478d72460745d4d41edf1615"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-bundle-process.json",
+      "raw_sha256": "1db0b91a27e7aa639f82df2ae776c78733aa736df4cc10a3e5aeb5475d3ab900"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-check.cjs",
+      "raw_sha256": "01b449bd2309c33113158fcc649f3dd255c69b37aa27f0782c9eb8819058c4e8"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-durable-process.json",
+      "raw_sha256": "2a1bf74a56169746da487c3f4695f6b55b198197d3406f351c673ceaea741d13"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-governance-process.json",
+      "raw_sha256": "e4ab112b009b42d31e89887248b86edbc06325beaaac8d5737a2696744cbce94"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-governance-r2-process.json",
+      "raw_sha256": "0e7c61bf4cfda16cae435fcbe9b8f2a9299cc33b7da26202fa91b2c3572177f9"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent-r1-process.json",
+      "raw_sha256": "87c2cac02db4a409da124102a64f71a309fffdc1cbc74f7c1bd9767ccc7a4808"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent-r2-process.json",
+      "raw_sha256": "97a49c167095a05ade8b451dc025a3fbc6baecff7b8dfe56c7d93ea67971eda4"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent.json",
+      "raw_sha256": "8dadf8d9f0c233e1fa5201984419eb8e66bb077c32c6177befb844a2bd984491"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-index-runtime.cjs",
+      "raw_sha256": "91bb931a715a2af86b5d2b49909071c999176776adeec1a46511ecbdcd1bb3e0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-index-transport-process.json",
+      "raw_sha256": "b8b4e38980a526a24740ac90f67e4812aa541fc3341d5b8038924826e10f2829"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lessons-claim-process.json",
+      "raw_sha256": "92ffff2d35207f39ebb9add8554cb790a278f7a6e9456457f799c18f7de18160"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage-r1-process.json",
+      "raw_sha256": "736dba9c052f4f1d2b4540cf4d52951d6acb32f9d3375f543784733235a6995c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage-r2-process.json",
+      "raw_sha256": "de828dee17617b493b4041deb7e3bee90fc3ece97afcc285d053f5b6b43ee8f5"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage.cjs",
+      "raw_sha256": "99573e19696329e6a8a8b4aa1bc367e626951e5d8d8f3ef936267070402e1b83"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage.json",
+      "raw_sha256": "fdbe250068cc81235c5b3217171a66de5f0412c6350992a24405dd4beb557d40"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-plan.md",
+      "raw_sha256": "680a09230b87b82f2c4e42ddef34df97eb71107a78bc363b4eebec67c6de39ff"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-platform-claim-process.json",
+      "raw_sha256": "586c9ae2ea0b84dcaa7ec05a2b8bb71af6be604b0543eaa4cf2abdc82c45e545"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "raw_sha256": "373adbb84185500dfc1c17d27976e0eb7d0ecfb5157bb24ccfe32849415489ed"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-structural-process.json",
+      "raw_sha256": "902193551704f66a11d008d5c8a90e817015f20c9f5a1571cd535cbaec7bc3dd"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-tools.cjs",
+      "raw_sha256": "ef6e0ab3d1414d56a854c361e7cc3fcf7e202077bfb26453e93338eb36ed43e3"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-actual-scope.json",
+      "raw_sha256": "80e5b16fa227d52e03993c392d8b57d66f372d7ac93fcd8e319422a509873f4a"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-publication.md",
+      "raw_sha256": "ac23519d265cb53e21cde1ec09fec595d3c78d429c64b5a36b04f3ca29421247"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-scope-complete-lessons-process.json",
+      "raw_sha256": "8046afabd3b52965725cc813f732cb7229b0e7792a509563038aae5b95aaacf0"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-scope-complete-platform-process.json",
+      "raw_sha256": "4237991b4e80dca59a7886001b13bb7f4979e37f27c9e0a114ca3ac64492a797"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-scope-own-lessons-process.json",
+      "raw_sha256": "8c80561a93cbb9886a0990fc979918dd85a8a5a22003965739e0f6df2f7c407e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-scope-own-platform-process.json",
+      "raw_sha256": "008e64a9bfa1cfdf243ca0c54aa990e2e206c12802ea2fe43a9f1afe33052e5c"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-whole-whitespace-cr-process.json",
+      "raw_sha256": "7dc36dfa331d876b215c0aad4e9fe83af90684ca6771bec7024b445632a6f7f7"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-whole-whitespace-default-process.json",
+      "raw_sha256": "0fb951cf1094a61409076d6d5faff7760bdfd7113b40b3dfaa0d78f42eb57a1c"
+    }
+  ],
+  "actual_payload_scope_sha256": "80e5b16fa227d52e03993c392d8b57d66f372d7ac93fcd8e319422a509873f4a",
+  "custody": {
+    "status": "PASS",
+    "raw_prior_files_unchanged": 16372,
+    "lesson_exceptions": [],
+    "platform_exceptions": [
+      "reports/github-agent-index-platform.json",
+      "reports/github-agent-index-platform.md",
+      "reports/github-agent-index-lessen.json",
+      "reports/github-agent-index-lessen.md"
+    ]
+  },
+  "root_manifest_checker_sha256": "927a4d012404b4e00cabfe793e9db45e22fae0660b968a3e97b6c007851c4f4b",
+  "production_release": false,
+  "native_builds": 0
+}

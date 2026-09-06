@@ -36,6 +36,11 @@ if(mode==='baseline'){
 else if(mode==='custody')console.log(JSON.stringify(custody()));
 else if(mode==='whitespace'){for(const [label,args]of [['whole-whitespace-default',['diff','--check','96416b6b5bd57094576e9aba0a42d682584ec479..HEAD']],['whole-whitespace-cr',['-c','core.whitespace=cr-at-eol','diff','--check','96416b6b5bd57094576e9aba0a42d682584ec479..HEAD']]])run(label,P,'git',args,[0,2]);}
 else if(mode==='scopes')save('actual-scope',{strict:strict(),native:scopes(),custody:custody()});
+else if(mode==='bind'){
+ const paths=[...new Set([...list(P,'ls-files','-z'),...list(P,'ls-files','--others','--exclude-standard','-z')])].filter(f=>f.startsWith(prefix+'-'));
+ const scope=JSON.parse(read(P,prefix+'-actual-scope.json'));assert.equal(scope.strict.platform_head,'8fc63fe32f030371195f022971a2d5d42ddedeb8');
+ save('final-binding',{actor,task,branch,substantive_platform_commit:rev(P),lessons_commit:rev(L),decision:'INPUT PASS; separate root release required',files:paths.map(f=>({path:f,raw_sha256:sha(read(P,f))})),actual_payload_scope_sha256:sha(read(P,prefix+'-actual-scope.json')),custody:scope.custody,root_manifest_checker_sha256:sha(read(P,'reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check.cjs')),production_release:false,native_builds:0});
+}
 else if(mode==='stage'){
  claims(false);assert.equal(git(L,'status','--porcelain').trim(),'');const pending=[...new Set([...list(P,'diff','--name-only','-z'),...list(P,'diff','--cached','--name-only','-z'),...list(P,'ls-files','--others','--exclude-standard','-z')])];assert(pending.every(owned));const selected=pending.filter(f=>!indexes.includes(f));for(let i=0;i<selected.length;i+=30)git(P,'add','--',...selected.slice(i,i+30));run('owned-whitespace',P,'git',['diff','--cached','--check'],[0],false);console.log(JSON.stringify(custody()));
 }else if(mode==='indexes'){

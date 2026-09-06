@@ -1,0 +1,129 @@
+{
+  "strict": {
+    "status": "PASS",
+    "unknown": 0,
+    "platform_base": "eafd9785801e8ec0b689d05dc0f92835f7f06ed0",
+    "platform_head": "8fc63fe32f030371195f022971a2d5d42ddedeb8",
+    "lessons_base": "1cf1c1f972f196791fb37f6bbee523b7a2e3b676",
+    "lessons_head": "1cf1c1f972f196791fb37f6bbee523b7a2e3b676",
+    "platform_paths": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-214-production-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-214-specialist-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-232-production-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-232-specialist-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-211-publisher-print-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-211-student-web-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-212-publisher-print-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-212-student-web-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-213-publisher-print-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-213-student-web-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-231-publisher-print-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-accepted-231-student-web-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-bundle-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-check.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-durable-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-governance-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-governance-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-independent.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-index-runtime.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-index-transport-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lessons-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-lineage.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-platform-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-report.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-structural-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-tools.cjs"
+    ],
+    "lesson_paths": []
+  },
+  "native": [
+    {
+      "label": "own-platform",
+      "base": "eafd9785801e8ec0b689d05dc0f92835f7f06ed0",
+      "head": "8fc63fe32f030371195f022971a2d5d42ddedeb8",
+      "exit": 1,
+      "ok": false,
+      "failures": [
+        "shared lane needs at least one shared platform change",
+        "generated index/report or review-evidence changes are allowed only with lane-owned changes"
+      ],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 33,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "own-lessons",
+      "base": "1cf1c1f972f196791fb37f6bbee523b7a2e3b676",
+      "head": "1cf1c1f972f196791fb37f6bbee523b7a2e3b676",
+      "exit": 1,
+      "ok": false,
+      "failures": [
+        "no changed paths to classify",
+        "textbook lane needs at least one Part A textbook change"
+      ],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "base": "96416b6b5bd57094576e9aba0a42d682584ec479",
+      "head": "8fc63fe32f030371195f022971a2d5d42ddedeb8",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 84,
+        "generated_indexes": 6,
+        "review_evidence": 6770,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "base": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "1cf1c1f972f196791fb37f6bbee523b7a2e3b676",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 209,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 7,
+        "unknown": 0
+      }
+    }
+  ],
+  "custody": {
+    "status": "PASS",
+    "raw_prior_files_unchanged": 16372,
+    "lesson_exceptions": [],
+    "platform_exceptions": [
+      "reports/github-agent-index-platform.json",
+      "reports/github-agent-index-platform.md",
+      "reports/github-agent-index-lessen.json",
+      "reports/github-agent-index-lessen.md"
+    ]
+  }
+}
