@@ -1,0 +1,59 @@
+{
+  "status": "CONFIRMED_GIT_INVENTORY_BUFFER_LIMIT_NOT_MISSING_REF",
+  "rows": [
+    {
+      "repository": "platform",
+      "root": "C:\\wt\\book2-234-plan-20260906\\4veco-platform",
+      "ref": "7f876bd1a5c649fcad83db0747806fc6444e05e2",
+      "args": [
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "7f876bd1a5c649fcad83db0747806fc6444e05e2",
+        "--"
+      ],
+      "default_1MiB": {
+        "exit": null,
+        "code": "ENOBUFS",
+        "message": "spawnSync git ENOBUFS",
+        "signal": "SIGTERM",
+        "stdout_bytes": 1064960,
+        "stderr": null
+      },
+      "complete_128MiB": {
+        "bytes": 1131710,
+        "raw_sha256": "e1a929f5431850eafc5767feb9b464262055b18e5ad43a12487c228c60f62dd3",
+        "line_count": 13970,
+        "nul_inventory_count": 13970,
+        "nul_inventory_sha256": "4f2fcba79ecf12cf363ceb91ae08e7497f8a12f51ec650af74cb564a18d320d8"
+      }
+    },
+    {
+      "repository": "lessons",
+      "root": "C:\\wt\\book2-234-plan-20260906\\4veco-lessen",
+      "ref": "a9662869395f449a4d5dce907bfe58976f94ed01",
+      "args": [
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "a9662869395f449a4d5dce907bfe58976f94ed01",
+        "--"
+      ],
+      "default_1MiB": {
+        "exit": 0,
+        "bytes": 204071,
+        "raw_sha256": "6ecc5e8fca96275519abc4d78778dc4a54930bbc28cad09eb1b66747d338ea47"
+      },
+      "complete_128MiB": {
+        "bytes": 204071,
+        "raw_sha256": "6ecc5e8fca96275519abc4d78778dc4a54930bbc28cad09eb1b66747d338ea47",
+        "line_count": 1905,
+        "nul_inventory_count": 1905,
+        "nul_inventory_sha256": "e4424ee19862439e149eade42ab8c1f4d6c0497083c554411de1962564a327c5"
+      }
+    }
+  ],
+  "index_source_raw_sha256": "44b235b2a65b36f28c316a7d9cee947e3ce049713ddcd53ced2321a7a9ec9b53",
+  "first_unrecorded_attempt_limitation": "Initial tools indexes mode discarded child output because record=false; only parent failure text was returned. A subsequent exact unchanged command is durably retained as index-diagnostic-r1. No false claim that first child stderr was preserved.",
+  "index_or_lesson_writes": false
+}

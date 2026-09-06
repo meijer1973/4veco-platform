@@ -1,0 +1,25 @@
+{
+  "command": "node",
+  "args": [
+    "--require",
+    "./reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-runtime.cjs",
+    "build-scripts/reports/github-agent-index.js"
+  ],
+  "cwd": "C:\\wt\\book2-234-plan-20260906\\4veco-platform",
+  "invocationSources": [],
+  "environment": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-234-plan-20260906\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "7f876bd1a5c649fcad83db0747806fc6444e05e2",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-234-plan-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-234-plan-20260906\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "a9662869395f449a4d5dce907bfe58976f94ed01",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-234-plan-20260906"
+  },
+  "started_at": "2026-09-06T05:37:34.458Z",
+  "ended_at": "2026-09-06T05:37:34.815Z",
+  "exit_code": 0,
+  "stdout": "Wrote reports\\github-agent-index-platform.md\nWrote reports\\github-agent-index-platform.json\nWrote reports\\github-agent-index-lessen.md\nWrote reports\\github-agent-index-lessen.json\n",
+  "stderr": ""
+}
