@@ -16165,3 +16165,94 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 5858: inval
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T01:50:53.771Z`
+- finished_at: `2026-09-06T01:50:59.064Z`
+- duration_ms: `5293`
+- exit_code: `0`
+- stdout_sha256: `9ac9b7c88ba6180b2d4ab731ad292832fdcd0218444cc78596efc636aceaabf1`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "decision": "PLAN_ACCEPTED_WITH_FLAGS",
+  "plan": {
+    "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-textbook-plan.md",
+    "sha256": "a6f71553e887acdf7b94be5d411303660b9fad2ef8745cb25986636aa49b4cc4",
+    "lines": 621,
+    "changed_lines": [
+      3,
+      276,
+      518,
+      519,
+      520,
+      524,
+      525,
+      547,
+      550,
+      551,
+      552,
+      591,
+      592,
+      593,
+      594,
+      595,
+      596
+    ]
+  },
+  "imports": 36,
+  "old_lesson_files_unchanged": 1900,
+  "checks": 1987,
+  "commands": [
+    {
+      "args": [
+        "build-scripts/workflows/check-book-outline-currentness.js",
+        "--require-approved",
+        "--action",
+        "goal_design",
+        "--paragraph",
+        "2.1.4"
+      ],
+      "exit_code": 0
+    },
+    {
+      "args": [
+        "build-scripts/workflows/check-book-outline-currentness.js",
+        "--require-approved",
+        "--action",
+        "specialist_review",
+        "--paragraph",
+        "2.1.4"
+      ],
+      "exit_code": 0
+    },
+    {
+      "args": [
+        "build-scripts/workflows/check-book2-target-authority-remediation.js",
+        "--durable"
+      ],
+      "exit_code": 0
+    },
+    {
+      "args": [
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "BOOK2-TEXTBOOK-PRODUCTION-1"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "production_release": "PENDING actual accepted212/213 and separate root release"
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
