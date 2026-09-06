@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "git",
+    "diff",
+    "--check",
+    "572d1ea2ededaffd28afc44eeeca223252a58ec5",
+    "df80dd0058cc4f0ffd5ec168389337f48894c6a1",
+    "--",
+    "build-scripts/"
+  ],
+  "cwd": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T00:04:22.324767+00:00",
+  "finished_at": "2026-09-06T00:04:22.353661+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
