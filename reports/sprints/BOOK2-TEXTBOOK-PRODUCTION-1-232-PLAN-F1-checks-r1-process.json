@@ -1,0 +1,12 @@
+{
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-check.py"
+  ],
+  "cwd": "C:\\wt\\book2-232-plan-f1-20260906\\4veco-platform",
+  "started_at": "2026-09-06T03:06:54.343Z",
+  "ended_at": "2026-09-06T03:06:54.523Z",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-plan-f1-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-check.py\", line 168, in <module>\r\n    reject(tag+' actual clause '+str(i+1)+' removed',lambda t=mutated:guided_contract(t))\r\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-plan-f1-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-F1-check.py\", line 162, in reject\r\n    raise AssertionError('Negative escaped: '+name)\r\nAssertionError: Negative escaped: 3c actual clause 16 removed\r\n"
+}
