@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/ci/check-agent-worktree-safety.js",
+    "--check",
+    "--task",
+    "BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES",
+    "--agent",
+    "paragraph_231_specialist_qc",
+    "--require-prefix",
+    "codex/,agent/",
+    "--worktree",
+    "C:/wt/book2-232-repro-routes-20260906/4veco-lessen"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"mode\": \"check\",\n  \"repository\": \"4veco-lessen\",\n  \"worktree_path\": \"C:/wt/book2-232-repro-routes-20260906/4veco-lessen\",\n  \"git_dir\": \"C:\\\\Projects\\\\4veco\\\\4veco-lessen\\\\.git\\\\worktrees\\\\4veco-lessen144\",\n  \"anchor_clone\": false,\n  \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES\",\n  \"agent_id\": \"paragraph_231_specialist_qc\",\n  \"lock\": {\n    \"present\": true,\n    \"same_owner\": true,\n    \"same_task\": true,\n    \"stale\": false,\n    \"path\": \"C:\\\\Projects\\\\4veco\\\\4veco-lessen\\\\.git\\\\worktrees\\\\4veco-lessen144\\\\4veco-agent-worktree-lock.json\",\n    \"owner\": \"paragraph_231_specialist_qc\",\n    \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES\"\n  },\n  \"branch\": \"agent/book2-232-repro-routes-20260906\",\n  \"head_sha\": \"ea0dd35d4f919ac5b3aae533cd9f9022ffa62282\",\n  \"on_main\": false,\n  \"detached_head\": false,\n  \"dirty\": false,\n  \"dirty_count\": 0,\n  \"ahead\": 0,\n  \"behind\": 0,\n  \"diverged\": false,\n  \"prefix_ok\": true,\n  \"required_prefixes\": [\n    \"codex/\",\n    \"agent/\"\n  ],\n  \"warnings\": [],\n  \"failures\": []\n}\n",
+  "stderr": ""
+}

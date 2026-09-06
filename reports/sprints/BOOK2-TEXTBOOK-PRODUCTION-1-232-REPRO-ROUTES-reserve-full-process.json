@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/232/verify_rebuild.py",
+    "reserve",
+    "--source-commit",
+    "4a367149e2dc0421318f1927685045d94022ba48",
+    "--execution-role",
+    "correction"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 0,
+  "stdout": "{\"reservation\": \"C:\\\\wt\\\\book2-232-repro-routes-20260906\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-reservation-r1000007.json\", \"revision\": \"r1000007\", \"maximum\": 1000006, \"registered_worktrees\": 233}\r\n",
+  "stderr": ""
+}

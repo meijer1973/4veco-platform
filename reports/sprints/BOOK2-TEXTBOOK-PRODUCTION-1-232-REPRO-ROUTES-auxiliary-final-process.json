@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-probes.py",
+    "auxiliary-negatives",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-native-r1000011.json",
+    "--tag",
+    "final-"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 0,
+  "stdout": "Four actual checker/grayscale role failures before output PASS\r\n",
+  "stderr": ""
+}

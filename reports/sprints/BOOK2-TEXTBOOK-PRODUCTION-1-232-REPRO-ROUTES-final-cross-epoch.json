@@ -1,0 +1,304 @@
+{
+  "status": "PASS",
+  "old_committed_platform": "020def560795a0acab07dc11552b3e4abebf3d62",
+  "old_committed_lesson": "ea0dd35d4f919ac5b3aae533cd9f9022ffa62282",
+  "old_source_commit": "e0b47cab498102cd990e66318f5111602c32a6b6",
+  "current_manifest": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-native-r1000014.json",
+  "current_manifest_sha256": "5da67499190e254858cb8806ac91d5e0633c353c23a960516f8fe6d94a9f3b5d",
+  "native_files": 41,
+  "old_current_packet_equal": true,
+  "raw_and_decoded_pages": 42,
+  "archives": [
+    {
+      "kind": "paragraaf",
+      "count": 25,
+      "members": [
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – paragraaf.html",
+          "sha256": "23df621785b8b7ccd7978bf0ad6e12d30c3149ddfa7bae52085a4725460c1f47",
+          "crc32": "25521854"
+        },
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+          "sha256": "fe99e8136960505d30e041614ee301c3f8405efab38aff77a8fa89441a3238cb",
+          "crc32": "e526dbc7"
+        },
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf",
+          "sha256": "c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6",
+          "crc32": "05229da4"
+        },
+        {
+          "name": "_assets/2.3.2_ex_1.png",
+          "sha256": "a99c48b363fbc2ee79cba72f07aa16f6e48bb93df935b60bdbd33b20e7a35b8f",
+          "crc32": "d35ac624"
+        },
+        {
+          "name": "_assets/2.3.2_ex_1.svg",
+          "sha256": "58af7a70027cb560765904b058a5573a5c8d3319835e64668bcd0c970482e187",
+          "crc32": "a9d5bef6"
+        },
+        {
+          "name": "_assets/2.3.2_ex_2.png",
+          "sha256": "b02ee2a49b9e3246f9e66c5b29511d1b812f38c6e0cabe3575b978b150dcc512",
+          "crc32": "75719de0"
+        },
+        {
+          "name": "_assets/2.3.2_ex_2.svg",
+          "sha256": "26f2a05a8eac7028e7bdae6c381a5acab12d6e86fefb04cefcd567650d4c6f1a",
+          "crc32": "37e62949"
+        },
+        {
+          "name": "_assets/2.3.2_ex_3.png",
+          "sha256": "aef0ae29582b0f985f4d107b808db28815861733b7db36bff0971585fb231dfb",
+          "crc32": "12f4b00d"
+        },
+        {
+          "name": "_assets/2.3.2_ex_3.svg",
+          "sha256": "ce135244463f92f1be5d8d29b9b56517c65325351b442b165bb45d67bc268984",
+          "crc32": "f41652b1"
+        },
+        {
+          "name": "_assets/2.3.2_ex_4.png",
+          "sha256": "e40b4b9f8c8fd2cc2f00b1c87cb9ec78e4be1c020d02a8378e5b917f6c8b701e",
+          "crc32": "881cd665"
+        },
+        {
+          "name": "_assets/2.3.2_ex_4.svg",
+          "sha256": "38b48a0b49a09931919aa897d6ba0d94b6cfd169dcb12e1a20f8297c44fb9468",
+          "crc32": "7b64360c"
+        },
+        {
+          "name": "_assets/2.3.2_fig_1.png",
+          "sha256": "f2170f43fe66f39e9b1ceb3cba7a3a1d873485ca659ef95275656ddd4eca6122",
+          "crc32": "73b09205"
+        },
+        {
+          "name": "_assets/2.3.2_fig_1.svg",
+          "sha256": "d2151650a6d9e3e398905541c5790d0e94883b0caf13052ffcbab3d7e3802210",
+          "crc32": "e8958748"
+        },
+        {
+          "name": "_assets/2.3.2_fig_2.png",
+          "sha256": "5f8260b018da92b6fd70a3ded181b4fc355d1c0d1d4d1cad5fb2755f8ecc7374",
+          "crc32": "6228de34"
+        },
+        {
+          "name": "_assets/2.3.2_fig_2.svg",
+          "sha256": "01dd8a0f951fb89417861d46305c4713e6aca1458167f8babb76abdc3b68bc9d",
+          "crc32": "94fdec63"
+        },
+        {
+          "name": "_assets/2.3.2_fig_3.png",
+          "sha256": "44fec3ae94e63d537a0a2e88ca411cd7e69971c45f9fa3a6e11e2ccd39d1e9f5",
+          "crc32": "96441b8f"
+        },
+        {
+          "name": "_assets/2.3.2_fig_3.svg",
+          "sha256": "c1ddd42956fdb6e847d184d960d912a4fbad84693e23132a52df940513ef17f5",
+          "crc32": "48f9bbcd"
+        },
+        {
+          "name": "_assets/2.3.2_fig_4.png",
+          "sha256": "46a1967cdad10599b7ace29b74088a07163165ba3061b5ba3d5f99ff099ccf9b",
+          "crc32": "aceef7b9"
+        },
+        {
+          "name": "_assets/2.3.2_fig_4.svg",
+          "sha256": "c59855698d121d92379bcad4ce188ff85b05c85fd0a0cd76c852165eb6e510fe",
+          "crc32": "7f5574a6"
+        },
+        {
+          "name": "_assets/2.3.2_fig_5.png",
+          "sha256": "20c323ef432da6cf6c15712ae1196565e1261d912341543779b1387a45fa8d13",
+          "crc32": "062448d7"
+        },
+        {
+          "name": "_assets/2.3.2_fig_5.svg",
+          "sha256": "c5016f6ea3a8ffbbc5f5a9958d404b5735897bad2032143f0744543e633b1f4c",
+          "crc32": "2c1fabcc"
+        },
+        {
+          "name": "_assets/2.3.2_fig_6.png",
+          "sha256": "6e79bfb5994b459c6caf7f026ea9bbe01ac572f62d86eaf87e6e970406abee81",
+          "crc32": "7765e221"
+        },
+        {
+          "name": "_assets/2.3.2_fig_6.svg",
+          "sha256": "d795ae969b3862b7525868f28548d84a9f001bc067b7264bb11f507eac8a90b9",
+          "crc32": "80e5c46c"
+        },
+        {
+          "name": "_assets/2.3.2_we_1.png",
+          "sha256": "3912262e6968b8e46a3b11a8f02330e41923788cacbe80642b44f6948b898fc0",
+          "crc32": "4104cd19"
+        },
+        {
+          "name": "_assets/2.3.2_we_1.svg",
+          "sha256": "90cff2741102473ea2e52939a693a4c5f0c41697d2d66ff29ec06050d34f254a",
+          "crc32": "ba6c3b1a"
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "count": 13,
+      "members": [
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – opgaven.html",
+          "sha256": "efdb8b99bd3faa9a44323e41efe2e67cd3840e4ad6c8cd37a30f3887236cc545",
+          "crc32": "9fc333d0"
+        },
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – opgaven.md",
+          "sha256": "586cf0cbb39b5c809c3caf80d195fc060599a50071be94e36f953cd896a7f7c2",
+          "crc32": "2d767516"
+        },
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – opgaven.pdf",
+          "sha256": "73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0",
+          "crc32": "3503d3b6"
+        },
+        {
+          "name": "_assets/2.3.2_ex_1.png",
+          "sha256": "a99c48b363fbc2ee79cba72f07aa16f6e48bb93df935b60bdbd33b20e7a35b8f",
+          "crc32": "d35ac624"
+        },
+        {
+          "name": "_assets/2.3.2_ex_1.svg",
+          "sha256": "58af7a70027cb560765904b058a5573a5c8d3319835e64668bcd0c970482e187",
+          "crc32": "a9d5bef6"
+        },
+        {
+          "name": "_assets/2.3.2_ex_2.png",
+          "sha256": "b02ee2a49b9e3246f9e66c5b29511d1b812f38c6e0cabe3575b978b150dcc512",
+          "crc32": "75719de0"
+        },
+        {
+          "name": "_assets/2.3.2_ex_2.svg",
+          "sha256": "26f2a05a8eac7028e7bdae6c381a5acab12d6e86fefb04cefcd567650d4c6f1a",
+          "crc32": "37e62949"
+        },
+        {
+          "name": "_assets/2.3.2_ex_3.png",
+          "sha256": "aef0ae29582b0f985f4d107b808db28815861733b7db36bff0971585fb231dfb",
+          "crc32": "12f4b00d"
+        },
+        {
+          "name": "_assets/2.3.2_ex_3.svg",
+          "sha256": "ce135244463f92f1be5d8d29b9b56517c65325351b442b165bb45d67bc268984",
+          "crc32": "f41652b1"
+        },
+        {
+          "name": "_assets/2.3.2_ex_4.png",
+          "sha256": "e40b4b9f8c8fd2cc2f00b1c87cb9ec78e4be1c020d02a8378e5b917f6c8b701e",
+          "crc32": "881cd665"
+        },
+        {
+          "name": "_assets/2.3.2_ex_4.svg",
+          "sha256": "38b48a0b49a09931919aa897d6ba0d94b6cfd169dcb12e1a20f8297c44fb9468",
+          "crc32": "7b64360c"
+        },
+        {
+          "name": "_assets/2.3.2_we_1.png",
+          "sha256": "3912262e6968b8e46a3b11a8f02330e41923788cacbe80642b44f6948b898fc0",
+          "crc32": "4104cd19"
+        },
+        {
+          "name": "_assets/2.3.2_we_1.svg",
+          "sha256": "90cff2741102473ea2e52939a693a4c5f0c41697d2d66ff29ec06050d34f254a",
+          "crc32": "ba6c3b1a"
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "count": 13,
+      "members": [
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – antwoorden.html",
+          "sha256": "700d0128a3fb7a846400be5c7f275fde0106cb7a15025bd213f41e05960677b9",
+          "crc32": "ea7365e2"
+        },
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – antwoorden.md",
+          "sha256": "e97afda6782c7124af51fc76538bf47bb358a5ac91027ece65edb53d76529921",
+          "crc32": "35afb085"
+        },
+        {
+          "name": "2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf",
+          "sha256": "c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b",
+          "crc32": "e0362a7a"
+        },
+        {
+          "name": "_assets/2.3.2_ex_1.png",
+          "sha256": "a99c48b363fbc2ee79cba72f07aa16f6e48bb93df935b60bdbd33b20e7a35b8f",
+          "crc32": "d35ac624"
+        },
+        {
+          "name": "_assets/2.3.2_ex_1.svg",
+          "sha256": "58af7a70027cb560765904b058a5573a5c8d3319835e64668bcd0c970482e187",
+          "crc32": "a9d5bef6"
+        },
+        {
+          "name": "_assets/2.3.2_ex_5.png",
+          "sha256": "7e82d045cde97df46da316838dc1280b372ca7ca71e5d3bc36df5259165537a8",
+          "crc32": "581e017a"
+        },
+        {
+          "name": "_assets/2.3.2_ex_5.svg",
+          "sha256": "3955fbecae47a67cba17060c5dc4d2c7cb02c8d14a4b457b66f0d8ca2d194177",
+          "crc32": "24868584"
+        },
+        {
+          "name": "_assets/2.3.2_ex_6.png",
+          "sha256": "6198968c9c55d558c2bedf6f37a686f99bd8bc3e05bf1fc868bb35ac474ce12d",
+          "crc32": "c343b194"
+        },
+        {
+          "name": "_assets/2.3.2_ex_6.svg",
+          "sha256": "74a7fca31dfc757bc6a499b69da805703559dd5088906026aab853cb8b8fbe6e",
+          "crc32": "b5ff7d2a"
+        },
+        {
+          "name": "_assets/2.3.2_ex_7.png",
+          "sha256": "63164683e3f26defa8e5ec934e5a7e74411234cea160d16425318f5df508de7b",
+          "crc32": "2a0c8fef"
+        },
+        {
+          "name": "_assets/2.3.2_ex_7.svg",
+          "sha256": "06f05d86529ff5bb17a08499431e5e522aad4cd597a8c3dd785071d605e6f2a3",
+          "crc32": "f9f81388"
+        },
+        {
+          "name": "_assets/2.3.2_we_1.png",
+          "sha256": "3912262e6968b8e46a3b11a8f02330e41923788cacbe80642b44f6948b898fc0",
+          "crc32": "4104cd19"
+        },
+        {
+          "name": "_assets/2.3.2_we_1.svg",
+          "sha256": "90cff2741102473ea2e52939a693a4c5f0c41697d2d66ff29ec06050d34f254a",
+          "crc32": "ba6c3b1a"
+        }
+      ]
+    }
+  ],
+  "old_pending_proofs": [
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-paragraaf-c82a9454e4ad-r1000003/manifest.json",
+      "sha256": "9fb084fe68ed75507fcf6a11f6726f0a2a54621d1dd7baf950cc3d3ce0bc6a69"
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-opgaven-73ea9477d63e-r1000003/manifest.json",
+      "sha256": "5f4d2054d762509d1ba6ce225462648150498b35a732562be4d566b16b5153a9"
+    },
+    {
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/232-antwoorden-c47179e4ba04-r1000003/manifest.json",
+      "sha256": "78b91a2e158f479d32c826501a3208229bd826999114cb112977d8437f201c70"
+    }
+  ],
+  "old_personal_binding_sha256": "0d75d838d53f70ef4b419224d3bf165d77d8bd162449f86cef6949875ee335eb",
+  "original_author_views": 112,
+  "fresh_personal_views": 0,
+  "transfer_basis": "All old PDF/figure bytes identical to committed originals; no independent review credit."
+}

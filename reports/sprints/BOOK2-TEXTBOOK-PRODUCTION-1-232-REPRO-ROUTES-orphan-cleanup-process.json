@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-probes.py",
+    "orphan"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 0,
+  "stdout": "{\"path\": \"C:\\\\wt\\\\book2-232-repro-routes-20260906\\\\4veco-lessen\\\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\\\2.3 Hoofdstuk Surplus en welvaart\\\\2.3.2 Producentensurplus en totaal surplus\\\\2.3.2 Producentensurplus en totaal surplus \\ufffd paragraaf.zip\", \"relative_path\": \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus \\ufffd paragraaf.zip\", \"raw_sha256\": \"8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85\", \"bytes_base64\": \"UEsFBgAAAAAAAAAAAAAAAAAAAAAAAA==\", \"length\": 22, \"origin\": \"Own failed guarded-direct r1000009; an empty ZIP under replacement-character filename.\", \"planned_native_files_changed\": 0, \"recoverable_from_this_record\": true, \"deletion\": \"Only the fully resolved verified own22-byte orphan, no recursion/restoration.\"}\r\n",
+  "stderr": ""
+}

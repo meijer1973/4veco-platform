@@ -1,0 +1,16 @@
+{
+  "P": {
+    "count": 15626,
+    "changed": [
+      "build-scripts/content/book-2/232/check_render.py",
+      "build-scripts/content/book-2/232/gate.py",
+      "build-scripts/content/book-2/232/test_inputs.py",
+      "build-scripts/content/book-2/232/verify_rebuild.py",
+      "build-scripts/content/book-2/b2_232.py"
+    ]
+  },
+  "L": {
+    "count": 1955,
+    "changed": []
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-probes.py",
+    "negatives",
+    "4a367149e2dc0421318f1927685045d94022ba48"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 0,
+  "stdout": "Nine actual full/thin/guarded-direct failures before native/namespace effects PASS\r\n",
+  "stderr": ""
+}

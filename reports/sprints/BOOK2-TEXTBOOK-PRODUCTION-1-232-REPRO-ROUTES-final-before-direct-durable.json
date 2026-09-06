@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "build-scripts/workflows/check-book2-target-authority-remediation.js",
+    "--durable"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 0,
+  "stdout": "Book 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n",
+  "stderr": ""
+}

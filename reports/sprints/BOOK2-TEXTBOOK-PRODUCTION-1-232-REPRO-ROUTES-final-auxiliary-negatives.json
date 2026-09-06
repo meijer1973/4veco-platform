@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "tool": "checker",
+      "case": "cross-role",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\check_render.py",
+        "--manifest",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-native-r1000011.json",
+        "--output",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-forbidden-auxiliary.json",
+        "--execution-role",
+        "paragraph-review"
+      ],
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\check_render.py\", line 160, in <module>\r\n    b.gate.evidence_path(a.output,b.gate.execution_identity(a.execution_role))\r\n                                  ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 157, in execution_identity\r\n    raise ValueError('Wrong assigned platform worktree')\r\nValueError: Wrong assigned platform worktree\r\n",
+      "output_created": false
+    },
+    {
+      "tool": "checker",
+      "case": "cross-prefix",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\check_render.py",
+        "--manifest",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-native-r1000011.json",
+        "--output",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-forbidden-auxiliary.json",
+        "--execution-role",
+        "correction"
+      ],
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\check_render.py\", line 160, in <module>\r\n    b.gate.evidence_path(a.output,b.gate.execution_identity(a.execution_role))\r\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 192, in evidence_path\r\n    raise ValueError('Wrong execution-role evidence path')\r\nValueError: Wrong execution-role evidence path\r\n",
+      "output_created": false
+    },
+    {
+      "tool": "grayscale",
+      "case": "cross-role",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\verify_rebuild.py",
+        "grayscale",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-native-r1000011.json",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-forbidden-grayscale",
+        "--output",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-forbidden-auxiliary.json",
+        "--execution-role",
+        "paragraph-review"
+      ],
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\verify_rebuild.py\", line 106, in <module>\r\n    b.gate.evidence_path(a.output,b.gate.execution_identity(a.execution_role))\r\n                                  ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 157, in execution_identity\r\n    raise ValueError('Wrong assigned platform worktree')\r\nValueError: Wrong assigned platform worktree\r\n",
+      "output_created": false
+    },
+    {
+      "tool": "grayscale",
+      "case": "cross-prefix",
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\verify_rebuild.py",
+        "grayscale",
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-native-r1000011.json",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-forbidden-grayscale",
+        "--output",
+        "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-forbidden-auxiliary.json",
+        "--execution-role",
+        "correction"
+      ],
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\verify_rebuild.py\", line 106, in <module>\r\n    b.gate.evidence_path(a.output,b.gate.execution_identity(a.execution_role))\r\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform\\build-scripts\\content\\book-2\\232\\gate.py\", line 192, in evidence_path\r\n    raise ValueError('Wrong execution-role evidence path')\r\nValueError: Wrong execution-role evidence path\r\n",
+      "output_created": false
+    }
+  ]
+}

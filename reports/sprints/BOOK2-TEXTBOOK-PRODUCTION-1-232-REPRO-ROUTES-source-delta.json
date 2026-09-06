@@ -1,0 +1,287 @@
+{
+  "status": "PASS",
+  "old_source": "e0b47cab498102cd990e66318f5111602c32a6b6",
+  "new_source": "4a367149e2dc0421318f1927685045d94022ba48",
+  "rows": [
+    {
+      "path": "build-scripts/content/book-2/b2_232.py",
+      "old_sha256": "2d65fe30097c3f2b0e46c692239284c0ac430291154c97d8319d84b70bab9bdf",
+      "new_sha256": "0d44899f9b2fcecdb84d09e7f032bdc79390eb766ec8a66caaeeb54db77578f2",
+      "changed": true
+    },
+    {
+      "path": "build-scripts/content/book-2/232/theory.md",
+      "old_sha256": "202f6fa7ade01c5ee2992ed3befd90e980b03c001436b440b6f39189b2476e31",
+      "new_sha256": "202f6fa7ade01c5ee2992ed3befd90e980b03c001436b440b6f39189b2476e31",
+      "changed": false
+    },
+    {
+      "path": "build-scripts/content/book-2/232/exercises.md",
+      "old_sha256": "309fe29449944f95d4522b72e0c38c7e5badada3378b1420113d73bd38bc7fd4",
+      "new_sha256": "309fe29449944f95d4522b72e0c38c7e5badada3378b1420113d73bd38bc7fd4",
+      "changed": false
+    },
+    {
+      "path": "build-scripts/content/book-2/232/answers.md",
+      "old_sha256": "d1cef7e04625ecbcfa1f1c71c3d4d8db8a81d4baa3bde78e39dcb15fb30020c7",
+      "new_sha256": "d1cef7e04625ecbcfa1f1c71c3d4d8db8a81d4baa3bde78e39dcb15fb30020c7",
+      "changed": false
+    },
+    {
+      "path": "build-scripts/content/book-2/232/target-answers.md",
+      "old_sha256": "f5de2724cddf01e21bc987ffffccb3cfd4f7043534160958162dae75b4d93fc5",
+      "new_sha256": "f5de2724cddf01e21bc987ffffccb3cfd4f7043534160958162dae75b4d93fc5",
+      "changed": false
+    },
+    {
+      "path": "build-scripts/content/book-2/232/assets.js",
+      "old_sha256": "1c392eec294d34087aa67ee697b84d8f758bcdd4f21390ff487b19db5bdf4d5c",
+      "new_sha256": "1c392eec294d34087aa67ee697b84d8f758bcdd4f21390ff487b19db5bdf4d5c",
+      "changed": false
+    },
+    {
+      "path": "build-scripts/content/book-2/232/gate.py",
+      "old_sha256": "d0efc0ff9965c8ba042291ce1c84d325dec98b1cafeb24c0988f713b28cbf8a5",
+      "new_sha256": "888aa3d04339be6beba3bf31455c1aa4edbe3113af70499b08fcf8c8dd8f1490",
+      "changed": true
+    },
+    {
+      "path": "build-scripts/content/book-2/232/test_source.py",
+      "old_sha256": "36864062c938d7aea3e15df2a1a2c94ab2cd96a65f11bb03743c239e807f9acd",
+      "new_sha256": "36864062c938d7aea3e15df2a1a2c94ab2cd96a65f11bb03743c239e807f9acd",
+      "changed": false
+    },
+    {
+      "path": "build-scripts/content/book-2/232/test_inputs.py",
+      "old_sha256": "f6fa3eec5a61db1dbf363a3ed85871edf8364556650abaac1170497a56c6f29d",
+      "new_sha256": "e61a7069224ab86d2e76cfd1b8bace6b77626db117c8be95cc1bb21c1b6f0dd9",
+      "changed": true
+    },
+    {
+      "path": "build-scripts/content/book-2/232/check_render.py",
+      "old_sha256": "428e782dff20ce6566ad260847d253e98bdb247c82f3ff13dadc69ea60402b77",
+      "new_sha256": "004533ba997945f23ec1985049e6aed0df47f378e9b293ddd926e2e0bc314a24",
+      "changed": true
+    },
+    {
+      "path": "build-scripts/content/book-2/232/verify_rebuild.py",
+      "old_sha256": "ba99bfa9cacd02089b985fc0f4995f58e1ed34976b63d96af90489efd65109f0",
+      "new_sha256": "0bfabfadfe048f5aa26e579e48d8b2f8eaf69a69a60fc9bf3b368a828a141bd6",
+      "changed": true
+    }
+  ],
+  "whole_diff_utf8": "diff --git a/build-scripts/content/book-2/232/check_render.py b/build-scripts/content/book-2/232/check_render.py\nindex b883b503..e91aab4b 100644\n--- a/build-scripts/content/book-2/232/check_render.py\n+++ b/build-scripts/content/book-2/232/check_render.py\n@@ -155,15 +155,17 @@ def check(manifest_path):\n \n if __name__=='__main__':\n     p=argparse.ArgumentParser();p.add_argument('--manifest',type=Path,required=True);p.add_argument('--output',type=Path,required=True)\n-    p.add_argument('--rebuild',action='store_true');p.add_argument('--revision');p.add_argument('--reservation',type=Path);a=p.parse_args()\n+    p.add_argument('--rebuild',action='store_true');p.add_argument('--revision');p.add_argument('--reservation',type=Path)\n+    p.add_argument('--execution-role',choices=list(b.gate.ROLES),default='author');a=p.parse_args()\n+    b.gate.evidence_path(a.output,b.gate.execution_identity(a.execution_role))\n     if a.output.exists():raise ValueError('Fresh checker evidence required')\n     try:\n         result=check(a.manifest)\n         if a.rebuild:\n             if not a.revision or not a.reservation:raise ValueError('Fresh reserved checker rebuild required')\n             old=load(a.manifest)\n-            b.build(b.ROOT.parent/'4veco-lessen',old['source_commit'],a.revision,a.reservation)\n-            new=b.ROOT/'reports/sprints'/(b.gate.PREFIX+'native-'+a.revision+'.json')\n+            rebuilt=b.build(b.ROOT.parent/'4veco-lessen',old['source_commit'],a.revision,a.reservation,execution_role=a.execution_role)\n+            new=Path(rebuilt['manifest_path'])\n             result['rebuild']=parity([a.manifest,new]);result['rebuild_check']=check(new)\n         save(a.output,result);print(json.dumps({'status':'PASS','documents':[{ 'kind':d['kind'],'pages':len(d['pages'])} for d in result['documents']],'figures':len(result['figures'])}))\n     except Exception as e:\ndiff --git a/build-scripts/content/book-2/232/gate.py b/build-scripts/content/book-2/232/gate.py\nindex 3aef41bb..30543749 100644\n--- a/build-scripts/content/book-2/232/gate.py\n+++ b/build-scripts/content/book-2/232/gate.py\n@@ -16,6 +16,15 @@ N = 'reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-ROOT-'\n C = 'reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-'\n R = 'reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-INPUT-REVIEW-'\n PREFIX = 'BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-'\n+# Fixed task assignments, not an arbitrary actor/prefix override or a quality grant.\n+# The root keeps its real umbrella claim; future specialist must actually claim its pair.\n+ROLES = {\n+ 'author': ('paragraph_231_specialist_qc','232-BUILD-CURRENT','book2-232-build-current-20260906','232-BUILD-CURRENT'),\n+ 'correction': ('paragraph_231_specialist_qc','232-REPRO-ROUTES','book2-232-repro-routes-20260906','232-REPRO-ROUTES'),\n+ 'paragraph-review': ('paragraph_224_builder','232-PARAGRAPH-REVIEW','book2-232-paragraph-review-20260906','232-PARAGRAPH-REVIEW'),\n+ 'specialist-qc': ('paragraph_214_builder','232-SPECIALIST-QC','book2-232-specialist-qc-20260906','232-SPECIALIST-QC'),\n+ 'root': ('codex-root','','book2-part-a-production-20260905','232-QC-ROOT'),\n+}\n RELEASE_COMMIT = '5870a7a4c2d5dc9b170f385b976b0a49953b9be6'\n CANDIDATE_COMMIT = '9c6d8a7c1ee98b91a67f6d560beb8534f5dbde56'\n REVIEW_COMMIT = '8fc63fe32f030371195f022971a2d5d42ddedeb8'\n@@ -126,17 +135,72 @@ def preflight(lesson_root,source_commit,platform_root=ROOT):\n     verify_current(lesson_root,platform_root);verify_source(source_commit,platform_root)\n     return {'manifest':manifest,'source_commit':source_commit,'source':source,'checks':checks}\n \n-def namespace_preflight(revision,reservation,source_commit,platform_root=ROOT):\n+def execution_identity(role='author',platform_root=ROOT):\n+    \"\"\"Read actual paired Git metadata/claims. No claim minting or role impersonation.\n+\n+    Local claim files provide single-account coordination, not hostile-OS identity.\n+    Claim-time HEAD is checked as an ancestor, not confused with the current HEAD.\n+    \"\"\"\n+    if role not in ROLES:raise ValueError('Unknown fixed execution role')\n+    actor,suffix,pair,evidence=ROLES[role]\n+    task='BOOK2-TEXTBOOK-PRODUCTION-1'+('-'+suffix if suffix else '')\n+    prefix='BOOK2-TEXTBOOK-PRODUCTION-1-'+evidence+'-'\n+    branch=('codex/' if role=='root' else 'agent/')+pair\n+    expected=Path('C:/wt')/pair\n+    def same(a,b):return os.path.normcase(os.path.abspath(a))==os.path.normcase(os.path.abspath(b))\n+    if not same(platform_root,expected/'4veco-platform') or platform_root.is_symlink():\n+        raise ValueError('Wrong assigned platform worktree')\n+    claims=[]\n+    for repo in ('4veco-platform','4veco-lessen'):\n+        root=expected/repo\n+        if not root.is_dir() or root.is_symlink():raise ValueError('Missing/unsafe assigned paired worktree')\n+        def git(*args):\n+            r=subprocess.run(['git',*args],cwd=root,capture_output=True,check=True)\n+            return r.stdout.decode('utf-8').strip()\n+        actual=git('rev-parse','--show-toplevel')\n+        gitdir=Path(git('rev-parse','--path-format=absolute','--git-dir'))\n+        common=Path(git('rev-parse','--path-format=absolute','--git-common-dir'))\n+        if not same(actual,root) or same(gitdir,common):raise ValueError('Actual dedicated Git worktree required')\n+        if git('symbolic-ref','--quiet','--short','HEAD')!=branch:raise ValueError('Wrong actual assigned branch')\n+        records=git('worktree','list','--porcelain').split('\\n\\n')\n+        if not any('worktree '+str(root).replace('\\\\','/') in r.splitlines() and 'branch refs/heads/'+branch in r.splitlines() for r in records):\n+            raise ValueError('Missing exact registered worktree and branch')\n+        claim_path=gitdir/'4veco-agent-worktree-lock.json'\n+        if claim_path.is_symlink():raise ValueError('Unsafe claim path')\n+        raw=claim_path.read_bytes();claim=json.loads(raw)\n+        fields={'schema':'4veco-agent-worktree-lock.v1','agent_id':actor,'task_id':task,\n+                'status':'active','branch':branch,'repo':repo}\n+        if any(claim.get(k)!=v for k,v in fields.items()):raise ValueError('Wrong active paired claim identity')\n+        if not same(claim.get('worktree_path',''),root) or not same(claim.get('git_dir',''),gitdir):\n+            raise ValueError('Wrong claim worktree/gitdir binding')\n+        claim_head=claim.get('head_sha','')\n+        if not re.fullmatch('[0-9a-f]{40}',claim_head):raise ValueError('Missing claim-time commit')\n+        git('merge-base','--is-ancestor',claim_head,'HEAD')\n+        claims.append({'repository':repo,'worktree':str(root),'git_dir':str(gitdir),\n+                       'claim_sha256':sha(raw),'claim_head':claim_head})\n+    return {'role':role,'actor':actor,'task':task,'prefix':prefix,'branch':branch,'claims':claims}\n+\n+def evidence_path(path,identity,platform_root=ROOT):\n+    \"\"\"A role-owned direct child; no nested/cross-role/symlink evidence transport.\"\"\"\n+    parent=platform_root/'reports/sprints'\n+    if path.parent.resolve()!=parent.resolve() or not path.name.startswith(identity['prefix']) or path.is_symlink():\n+        raise ValueError('Wrong execution-role evidence path')\n+    return path\n+\n+def namespace_preflight(revision,reservation,source_commit,platform_root=ROOT,execution_role='author'):\n+    identity=execution_identity(execution_role,platform_root)\n+    prefix=identity['prefix']\n     if not re.fullmatch(r'r[1-9][0-9]*',revision):raise ValueError('Explicit positive revision required')\n-    expected=platform_root/'reports/sprints'/(PREFIX+'reservation-'+revision+'.json')\n+    expected=platform_root/'reports/sprints'/(prefix+'reservation-'+revision+'.json')\n+    evidence_path(reservation,identity,platform_root)\n     if reservation.resolve()!=expected.resolve():raise ValueError('Wrong reservation path')\n     r=json.loads(reservation.read_text(encoding='utf-8'))\n-    if r.get('revision')!=revision or r.get('source_commit')!=source_commit or r.get('actor')!='paragraph_231_specialist_qc' or r.get('status')!='RESERVED_UNUSED':\n+    if r.get('revision')!=revision or r.get('source_commit')!=source_commit or r.get('actor')!=identity['actor'] or r.get('status')!='RESERVED_UNUSED' or r.get('execution')!=identity:\n         raise ValueError('Wrong reservation identity')\n     if not r.get('global_scan') or r.get('maximum_recorded_revision',0)>=int(revision[1:]):\n         raise ValueError('Reservation lacks fresh global history')\n-    attempt=platform_root/'reports/sprints'/(PREFIX+'attempt-'+revision+'.json')\n-    manifest=platform_root/'reports/sprints'/(PREFIX+'native-'+revision+'.json')\n+    attempt=platform_root/'reports/sprints'/(prefix+'attempt-'+revision+'.json')\n+    manifest=platform_root/'reports/sprints'/(prefix+'native-'+revision+'.json')\n     if attempt.exists() or manifest.exists():raise ValueError('Consumed namespace')\n     proof=platform_root/'reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1'\n     if proof.exists() and any(proof.glob('232-*-'+revision)):\ndiff --git a/build-scripts/content/book-2/232/test_inputs.py b/build-scripts/content/book-2/232/test_inputs.py\nindex 9dd09989..8fb97041 100644\n--- a/build-scripts/content/book-2/232/test_inputs.py\n+++ b/build-scripts/content/book-2/232/test_inputs.py\n@@ -106,4 +106,121 @@ class InputTests(unittest.TestCase):\n         self.assertEqual(calls,[['node',b.gate.N+'gate.cjs','232']])\n         self.cases.append({'label':'positive actual physical inputs and committed source reach exact full root gate first','native_success_claim':False})\n \n+class ExecutionRoleTests(unittest.TestCase):\n+    \"\"\"Real temporary Git worktrees and claims, never actual foreign actor writes.\n+\n+    Only the fixed test pair basename is relocated. Actor/task/prefix semantics,\n+    actual branch, Git registration, claim files and ancestry checks remain real.\n+    No fixture constitutes pupil authority or successful foreign production.\n+    \"\"\"\n+    def fixture(self,role):\n+        temp=tempfile.TemporaryDirectory(prefix='book2-232-role-test-',dir='C:/wt')\n+        self.addCleanup(temp.cleanup);base=Path(temp.name)\n+        actor,suffix,_,evidence=b.gate.ROLES[role]\n+        binding=(actor,suffix,base.name,evidence)\n+        override=patch.dict(b.gate.ROLES,{role:binding});override.start();self.addCleanup(override.stop)\n+        branch=('codex/' if role=='root' else 'agent/')+base.name\n+        task='BOOK2-TEXTBOOK-PRODUCTION-1'+('-'+suffix if suffix else '')\n+        locks=[]\n+        for repo in ('4veco-platform','4veco-lessen'):\n+            anchor=base/('anchor-'+repo);root=base/repo\n+            def git(args,cwd=None):return subprocess.run(['git',*args],cwd=cwd,capture_output=True,check=True).stdout.decode().strip()\n+            git(['init','--quiet',str(anchor)])\n+            git(['-c','user.name=Technical Fixture','-c','user.email=fixture@example.invalid','commit','--quiet','--allow-empty','-m','Technical identity fixture'],anchor)\n+            git(['worktree','add','--quiet','-b',branch,str(root)],anchor)\n+            gitdir=Path(git(['rev-parse','--path-format=absolute','--git-dir'],root))\n+            claim={'schema':'4veco-agent-worktree-lock.v1','agent_id':actor,'task_id':task,'status':'active',\n+                   'branch':branch,'repo':repo,'worktree_path':str(root),'git_dir':str(gitdir),\n+                   'head_sha':git(['rev-parse','HEAD'],root)}\n+            path=gitdir/'4veco-agent-worktree-lock.json';path.write_text(json.dumps(claim),encoding='utf-8')\n+            locks.append((path,claim,root))\n+        return base/'4veco-platform',locks\n+\n+    def test_fixed_real_assignment_table(self):\n+        self.assertEqual(b.gate.ROLES,{\n+          'author':('paragraph_231_specialist_qc','232-BUILD-CURRENT','book2-232-build-current-20260906','232-BUILD-CURRENT'),\n+          'correction':('paragraph_231_specialist_qc','232-REPRO-ROUTES','book2-232-repro-routes-20260906','232-REPRO-ROUTES'),\n+          'paragraph-review':('paragraph_224_builder','232-PARAGRAPH-REVIEW','book2-232-paragraph-review-20260906','232-PARAGRAPH-REVIEW'),\n+          'specialist-qc':('paragraph_214_builder','232-SPECIALIST-QC','book2-232-specialist-qc-20260906','232-SPECIALIST-QC'),\n+          'root':('codex-root','','book2-part-a-production-20260905','232-QC-ROOT')})\n+        with self.assertRaisesRegex(ValueError,'Unknown fixed execution role'):b.gate.execution_identity('any-actor')\n+\n+    def test_five_real_technical_pairs_and_each_claim_counterexample(self):\n+        cases=[]\n+        for role in list(b.gate.ROLES):\n+            root,locks=self.fixture(role)\n+            actual=b.gate.execution_identity(role,root);self.assertEqual(actual['role'],role)\n+            for path,original,worktree in locks:\n+                raw=path.read_bytes()\n+                for field,value in [('agent_id','IMPERSONATED'),('task_id','WRONG_TASK'),('status','released'),\n+                   ('schema','forged'),('repo','other'),('branch','agent/wrong'),('worktree_path',str(root/'other')),\n+                   ('git_dir',str(root/'.git')),('head_sha','0'*40)]:\n+                    bad=dict(original);bad[field]=value\n+                    try:\n+                        path.write_text(json.dumps(bad),encoding='utf-8')\n+                        with self.assertRaises((ValueError,subprocess.CalledProcessError)):b.gate.execution_identity(role,root)\n+                        cases.append([role,original['repo'],field])\n+                    finally:path.write_bytes(raw)\n+                try:\n+                    path.unlink()\n+                    with self.assertRaises(FileNotFoundError):b.gate.execution_identity(role,root)\n+                finally:path.write_bytes(raw)\n+                # Actual branch drift, not merely a forged branch field.\n+                subprocess.run(['git','symbolic-ref','HEAD','refs/heads/agent/wrong'],cwd=worktree,check=True)\n+                try:\n+                    with self.assertRaisesRegex(ValueError,'Wrong actual assigned branch'):b.gate.execution_identity(role,root)\n+                finally:subprocess.run(['git','symbolic-ref','HEAD','refs/heads/'+actual['branch']],cwd=worktree,check=True)\n+            with self.assertRaisesRegex(ValueError,'Wrong assigned platform worktree'):b.gate.execution_identity(role,root/'other')\n+            self.assertEqual(b.gate.execution_identity(role,root),actual)\n+        print(json.dumps({'technical_claim_counterexamples':cases,'count':len(cases),'five_valid_technical_roles':True,'foreign_live_writes':0,'pupil_authority_claim':False}))\n+\n+    def test_exact_reservation_identity_and_all_route_prewrite_boundary(self):\n+        for role in list(b.gate.ROLES):\n+            root,locks=self.fixture(role);identity=b.gate.execution_identity(role,root)\n+            folder=root/'reports/sprints';folder.mkdir(parents=True)\n+            reservation=folder/(identity['prefix']+'reservation-r7.json')\n+            payload={'actor':identity['actor'],'execution':identity,'status':'RESERVED_UNUSED','revision':'r7',\n+                     'source_commit':'a'*40,'global_scan':{'maximum':6},'maximum_recorded_revision':6}\n+            reservation.write_text(json.dumps(payload),encoding='utf-8')\n+            attempt,native,proof=b.gate.namespace_preflight('r7',reservation,'a'*40,root,role)\n+            self.assertEqual(attempt.name,identity['prefix']+'attempt-r7.json')\n+            self.assertEqual(native.name,identity['prefix']+'native-r7.json')\n+            variants=[]\n+            for field,value in [('actor','wrong'),('status','CONSUMED'),('source_commit','b'*40),('revision','r8'),('maximum_recorded_revision',7),('global_scan',{})]:\n+                wrong=json.loads(json.dumps(payload));wrong[field]=value;variants.append(wrong)\n+            for field in ['role','actor','task','prefix','branch']:\n+                wrong=json.loads(json.dumps(payload));wrong['execution'][field]='CROSS_ROLE';variants.append(wrong)\n+            wrong=json.loads(json.dumps(payload));wrong['execution']['claims'][1]['claim_sha256']='0'*64;variants.append(wrong)\n+            for wrong in variants:\n+                reservation.write_text(json.dumps(wrong),encoding='utf-8')\n+                for route in ['full','direct']:\n+                    # Stub ONLY previously separately tested authority to reach the\n+                    # real namespace predicate; effects and workers are tripwires.\n+                    with patch.object(b,'ROOT',root),patch.object(b.gate,'preflight',return_value={}),patch.object(Path,'mkdir',side_effect=AssertionError('native mkdir')),patch.object(Path,'write_text',side_effect=AssertionError('native write')),patch.object(b,'describe',side_effect=AssertionError('worker')):\n+                        with self.assertRaises(ValueError):b.build(root.parent/'4veco-lessen','a'*40,'r7',reservation,route,role)\n+                self.assertFalse(attempt.exists());self.assertFalse(native.exists());self.assertFalse(proof.exists())\n+            reservation.write_text(json.dumps(payload),encoding='utf-8')\n+            with self.assertRaises(ValueError):b.gate.namespace_preflight('r7',folder/'cross-role.json','a'*40,root,role)\n+            attempt.write_text('{}')\n+            with self.assertRaisesRegex(ValueError,'Consumed namespace'):b.gate.namespace_preflight('r7',reservation,'a'*40,root,role)\n+            attempt.unlink();occupied=proof/'232-opgaven-aaaaaaaaaaaa-r7';occupied.mkdir(parents=True)\n+            with self.assertRaisesRegex(ValueError,'Occupied proof revision'):b.gate.namespace_preflight('r7',reservation,'a'*40,root,role)\n+\n+    def test_unchanged_pupil_functions_and_original_tests(self):\n+        import ast\n+        baseline='e0b47cab498102cd990e66318f5111602c32a6b6'\n+        paths=['build-scripts/content/book-2/b2_232.py','build-scripts/content/book-2/232/test_inputs.py']\n+        originals=b.gate.git_blobs(b.ROOT,[baseline+':'+p for p in paths])\n+        old=ast.parse(originals[0]);new=ast.parse((b.ROOT/paths[0]).read_bytes())\n+        functions=lambda tree:{n.name:ast.dump(n) for n in tree.body if isinstance(n,(ast.FunctionDef,ast.AsyncFunctionDef))}\n+        before=functions(old);after=functions(new)\n+        for name in before:\n+            if name not in ('build','main'):self.assertEqual(before[name],after[name],name)\n+        oldtests=originals[1].decode('utf-8').split(\"if __name__=='__main__':unittest.main()\")[0]\n+        current=(b.ROOT/paths[1]).read_text(encoding='utf-8')\n+        self.assertEqual(current[:len(oldtests)],oldtests,'All original input test bytes retained')\n+        untouched=['theory.md','exercises.md','answers.md','target-answers.md','assets.js','test_source.py']\n+        raw=b.gate.git_blobs(b.ROOT,[baseline+':build-scripts/content/book-2/232/'+p for p in untouched])\n+        for name,expected in zip(untouched,raw):self.assertEqual((b.CONTENT/name).read_bytes(),expected,name)\n+\n if __name__=='__main__':unittest.main()\ndiff --git a/build-scripts/content/book-2/232/verify_rebuild.py b/build-scripts/content/book-2/232/verify_rebuild.py\nindex 6543ce08..1fe0b602 100644\n--- a/build-scripts/content/book-2/232/verify_rebuild.py\n+++ b/build-scripts/content/book-2/232/verify_rebuild.py\n@@ -63,18 +63,20 @@ def parity(paths):\n     return {'status':'PASS','manifests':[{'path':str(p),'sha256':b.sha(Path(p).read_bytes())} for p in paths],\n             'native_files':41,'all_raw_and_decoded_pages':sum(len(x) for x in first['pages'].values()),'routes':len(paths),'first_pending_proofs':first['pending_proofs'],'archives':first['archives'],'pages':first['pages']}\n \n-def reserve(source_commit):\n+def reserve(source_commit,execution_role='author'):\n     b.gate.verify_current(b.ROOT.parent/'4veco-lessen');b.gate.verify_source(source_commit)\n+    identity=b.gate.execution_identity(execution_role)\n     scan=b.gate.global_scan();revision='r'+str(scan['maximum']+1)\n-    destination=b.ROOT/'reports/sprints'/(b.gate.PREFIX+'reservation-'+revision+'.json')\n-    save(destination,{'actor':'paragraph_231_specialist_qc','status':'RESERVED_UNUSED','revision':revision,'source_commit':source_commit,'maximum_recorded_revision':scan['maximum'],'global_scan':scan})\n+    destination=b.ROOT/'reports/sprints'/(identity['prefix']+'reservation-'+revision+'.json')\n+    if b.gate.execution_identity(execution_role)!=identity:raise ValueError('Execution claim changed during reservation scan')\n+    save(destination,{'actor':identity['actor'],'execution':identity,'status':'RESERVED_UNUSED','revision':revision,'source_commit':source_commit,'maximum_recorded_revision':scan['maximum'],'global_scan':scan})\n     print(json.dumps({'reservation':str(destination),'revision':revision,'maximum':scan['maximum'],'registered_worktrees':len(scan['registered_worktrees'])}));return destination\n \n-def grayscale(manifest_path,directory):\n+def grayscale(manifest_path,directory,execution_role='author'):\n     manifest=load(manifest_path);checked=validate_manifest(manifest)\n+    identity=b.gate.execution_identity(execution_role)\n     if directory.exists():raise ValueError('Fresh supplemental grayscale only')\n-    expected=b.ROOT/'reports/sprints'\n-    if expected.resolve() not in directory.resolve().parents or not directory.name.startswith(b.gate.PREFIX):raise ValueError('Owned supported supplemental path required')\n+    b.gate.evidence_path(directory,identity)\n     directory.mkdir();result=[]\n     for kind,record in zip(b.KINDS,manifest['documents']):\n         dest=directory/kind;dest.mkdir()\n@@ -94,10 +96,13 @@ def grayscale(manifest_path,directory):\n \n if __name__=='__main__':\n     p=argparse.ArgumentParser();sub=p.add_subparsers(dest='mode',required=True)\n-    s=sub.add_parser('reserve');s.add_argument('--source-commit',required=True)\n+    s=sub.add_parser('reserve');s.add_argument('--source-commit',required=True);s.add_argument('--execution-role',choices=list(b.gate.ROLES),default='author')\n     s=sub.add_parser('parity');s.add_argument('--output',type=Path,required=True);s.add_argument('manifests',type=Path,nargs='+')\n-    s=sub.add_parser('grayscale');s.add_argument('manifest',type=Path);s.add_argument('directory',type=Path);s.add_argument('--output',type=Path,required=True)\n+    s=sub.add_parser('grayscale');s.add_argument('manifest',type=Path);s.add_argument('directory',type=Path);s.add_argument('--output',type=Path,required=True);s.add_argument('--execution-role',choices=list(b.gate.ROLES),default='author')\n     a=p.parse_args()\n-    if a.mode=='reserve':reserve(a.source_commit)\n+    if a.mode=='reserve':reserve(a.source_commit,a.execution_role)\n     elif a.mode=='parity':save(a.output,parity(a.manifests));print('Native, safe CRC ZIP, raw and RGB page parity PASS')\n-    else:save(a.output,grayscale(a.manifest,a.directory));print('Fresh grayscale generated; no personal inspection asserted')\n+    else:\n+        b.gate.evidence_path(a.output,b.gate.execution_identity(a.execution_role))\n+        if a.output.exists():raise ValueError('Fresh grayscale evidence required')\n+        save(a.output,grayscale(a.manifest,a.directory,a.execution_role));print('Fresh grayscale generated; no personal inspection asserted')\ndiff --git a/build-scripts/content/book-2/b2_232.py b/build-scripts/content/book-2/b2_232.py\nindex 9374c352..93656d6b 100644\n--- a/build-scripts/content/book-2/b2_232.py\n+++ b/build-scripts/content/book-2/b2_232.py\n@@ -112,10 +112,10 @@ def zip_document(record):\n             z.writestr(info,p.read_bytes(),compress_type=zipfile.ZIP_DEFLATED,compresslevel=9)\n     record['zip']={'path':str(archive),'sha256':sha(archive.read_bytes()),'members':len(members)}\n \n-def build(lesson_root,source_commit,revision,reservation,route='full'):\n+def build(lesson_root,source_commit,revision,reservation,route='full',execution_role='author'):\n     # Real immutable inputs are inspected before any read-only Node or author command.\n     verified=gate.preflight(lesson_root,source_commit,ROOT)\n-    attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT)\n+    attempt,manifest_path,proof_root=gate.namespace_preflight(revision,reservation,source_commit,ROOT,execution_role)\n     scan=gate.global_scan(ROOT,exclude=[reservation])\n     if gate.revision_occupied(revision,scan,ROOT):\n         raise ValueError('Revision occupied in registered global history')\n@@ -126,7 +126,11 @@ def build(lesson_root,source_commit,revision,reservation,route='full'):\n         raise ValueError('Direct route requires the complete prior native packet')\n     for p in packet_paths(folder):\n         if p.exists() and (not p.is_file() or p.is_symlink()):raise ValueError('Unsafe output '+str(p))\n+    # Repeat actual paired identity/reservation immediately before first effect.\n+    gate.namespace_preflight(revision,reservation,source_commit,ROOT,execution_role)\n+    execution=gate.execution_identity(execution_role,ROOT)\n     state={'revision':revision,'source_commit':source_commit,'route':route,'runtime':sys.executable,'cwd':os.getcwd(),\n+           'execution':execution,'attempt_path':str(attempt),'manifest_path':str(manifest_path),'proof_root':str(proof_root),\n            'argv':sys.argv,'inherited_path':os.environ.get('PATH'),'checks':verified['checks'],\n            'global_namespace_scan':scan,'status':'STARTED'}\n     # Atomic exclusive attempt consumption, after every read-only gate and before worker effects.\n@@ -158,6 +162,7 @@ def build(lesson_root,source_commit,revision,reservation,route='full'):\n     # Recheck authority and authored bytes after all effects; no false complete manifest on drift.\n     gate.verify_current(lesson_root,ROOT);gate.verify_source(source_commit,ROOT)\n     manifest={'paragraph':'2.3.2','lesson_root':str(lesson_root),'paragraph_folder':str(folder),'route':route,'revision':revision,\n+              'execution':execution,'manifest_path':str(manifest_path),'attempt_path':str(attempt),'proof_root':str(proof_root),\n               'source_commit':source_commit,'source_files':verified['source'],'root_release_sha256':gate.PINS[gate.N+'232-release.json'],\n               'plan_sha256':PLAN_HASH,'target_record_sha256':TARGET_HASH,'documents':records,'packet':final,\n               'preflight':verified['checks'],'direct_child':child,'generation_status':'PENDING','production_ready':False,\n@@ -169,6 +174,7 @@ def build(lesson_root,source_commit,revision,reservation,route='full'):\n def main():\n     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--lesson-root',type=Path,default=ROOT.parent/'4veco-lessen')\n     p.add_argument('--source-commit',required=True);p.add_argument('--revision',required=True);p.add_argument('--reservation',type=Path,required=True)\n-    p.add_argument('--route',choices=['full','direct'],default='full');a=p.parse_args()\n-    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route)\n+    p.add_argument('--route',choices=['full','direct'],default='full')\n+    p.add_argument('--execution-role',choices=list(gate.ROLES),default='author');a=p.parse_args()\n+    build(a.lesson_root.resolve(),a.source_commit,a.revision,a.reservation.resolve(),a.route,a.execution_role)\n if __name__=='__main__':main()\n",
+  "whole_diff_sha256": "848f60dad36224e2889c088592f2e81bd031eb12befd108c7a844e689b40cc11",
+  "instructions": [
+    {
+      "repository": "4veco-platform",
+      "path": "AGENTS.md",
+      "raw_sha256": "665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "BUILD-PARAGRAPH.md",
+      "raw_sha256": "91ef6812ae766329e96c83d796c8bee7d319ad173998fa43d8718f48182b1c92",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "BUILD-CHAPTER.md",
+      "raw_sha256": "e59ccd7dcf2b39dace6373257d745df006595b28118f0f7fb4a12a20f7ea4e18",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/README.md",
+      "raw_sha256": "23765c9a7be731e8e9522c5d1add8c59f925b78baef17b27a130b3d5fef3d764",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "docs/workflows/paragraph-lane-vocabulary.md",
+      "raw_sha256": "7d65a06459d7fb6ac39862836e5bc6b58d0e0786858a4fdbb477fbee1dd19bc5",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "docs/workflows/textbook-paragraph-lane.md",
+      "raw_sha256": "14189b32f29e4987e1f0e23d776e4351147b2c25acf9b13ad0f43ac855bc9340",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "build-scripts/templates/template-textbook-paragraph-plan.md",
+      "raw_sha256": "b301e1570b9884ef6b77008a560f6948d3d5889fbaf8864830156465c1266c6c",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "skills/econ-didactiek.md",
+      "raw_sha256": "c2073f8310f2f74b9ca4c651309c7046dff1d355f6694aedae691c9e76f5aa6e",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "skills/econ-exercise-builder.md",
+      "raw_sha256": "27b8a1a09f3b87b57ce9608ccadfb0a5f32c47e62ae3436970aee58fc0464d5a",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "skills/economic-graph.md",
+      "raw_sha256": "2e4134e8e42cc97a07ca397191385f6e06cb0f8537a1c7abf355777d7efd3f19",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "skills/econ-pdf-builder.md",
+      "raw_sha256": "b610c2479b24658167b799c4c3b8bb1d62b06787364508948deb8a72e5fabbd5",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/didactiek-principes.md",
+      "raw_sha256": "058769f66876eac0ca0694b650d22ba1f23fa8a6ef0640f1a5003c2a60a96f07",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/economic_mathematical_precision_reference.md",
+      "raw_sha256": "240f3c20259e989fd47f41a1970e0367e220e3bd1f035369c7f67050b1ca4bcb",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/economie-terminologie.md",
+      "raw_sha256": "4653c010c3faffcf4c59ce48853e3928b6411b5d2e08f322235c2af75b9657a9",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/external/amstelveencollege_quality_standards.md",
+      "raw_sha256": "3959e089e3c26ef2e4dd6f183d28ffca6d69768013b4a5193358d46aaca7080e",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/owned/course-blueprint-pedagogical-boundaries.md",
+      "raw_sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/textbook-rendered-page-acceptance-standard.md",
+      "raw_sha256": "e57625f8c7f2912b4f9cf466a00d41b06c6deb76dc4534f74abfc0ffd0f5b29b",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/textbook-figure-standard.md",
+      "raw_sha256": "055b456a848296b75eea3b186241e9ed6e715175bdff4a541c09f89e9c91d311",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/book-outlines/book-2-outline.md",
+      "raw_sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/book-outlines/book-2-outline.meta.json",
+      "raw_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-remaining-paragraph-dispatch-plan.md",
+      "raw_sha256": "084bf9b368e8b57d38421976ef18258ba725c044c3ff6e72ee588a650d623362",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "AGENTS.md",
+      "raw_sha256": "0128a5fc4b27a72a986f2e86620b689f00d3796f87d0caeac5faae9c7497835e",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "specifications/product-vision.md",
+      "raw_sha256": "21d97f2dc980de77d6e2d423745e6a4d9553a3295f0f7a7d896261c9b95eec56",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "specifications/product-end-state.md",
+      "raw_sha256": "78c739220f359a5d5301d7d854dd42a2f45181bb54b4772d66509377f4bbe6ab",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-lessen",
+      "path": "specifications/companion-core-specifications.md",
+      "raw_sha256": "4f5bc43f623286a96afc1be59e53bd0c52bdf4d8c9479510c5a914efc7c6294e",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "skills/econ-textbook-paragraph.md",
+      "raw_sha256": "814975befa57444dff09d9d339bef7cafe5fdd1eee0ff14f1a8b88ee73a38de4",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "skills/econ-paragraph-review.md",
+      "raw_sha256": "652628ddb9617d09bda02b2b57c3050e1fea0e1971079bfefe482264c8913853",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "skills/econ-quality-control.md",
+      "raw_sha256": "c7f2390c151b6fec9974d4d89f19cc62fcc6128d69e6dc2cc08480f4c95b956c",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "agents/teacher-learning-quality-review-agent.md",
+      "raw_sha256": "aee8fba13cb1877b2633459c1ab10b4e8259e9b4d0c3e8b183d11e35aec0dace",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "agents/student-experience-review-agent.md",
+      "raw_sha256": "152b0bc4cb83a961f7349528fd818d5b038d8756e25765545b1d7b47c186b974",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "agents/visual-qa-agent.md",
+      "raw_sha256": "c33675c5604a228af4b8e75e9f7ebb0133fad39e254d2a90015d9a36a7f19332",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "agents/accessibility-agent.md",
+      "raw_sha256": "9a393755b227a3cde928071cdc3cf79ebb1c5d876a5d96f3c89b5d9a1066c79f",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "docs/workflows/paragraph-quality-ref-schema-v2.md",
+      "raw_sha256": "e112c294f1d473de1f5a9492bc3ecb6d4154ab47372990ac6aaf8c5dec27caa6",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "skills/econ-consolidation-builder.md",
+      "raw_sha256": "a2ac36654f7bd18c49d7f791850a0455c4e2772b434138f8b3ceb7bd94b03b09",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    },
+    {
+      "repository": "4veco-platform",
+      "path": "references/authored/gemengde-opgaven-target-standard.md",
+      "raw_sha256": "4a5416cc7ff1501b26f362bff4cf6c7712cc16412a9b1e405c0db63b9b886594",
+      "reading": "Same actor complete personal read, byte-identical; not new reviewer credit."
+    }
+  ]
+}

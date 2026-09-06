@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "build-scripts/content/book-2/232/check_render.py",
+    "--manifest",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-native-r1000011.json",
+    "--output",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-final-checker.json",
+    "--rebuild",
+    "--revision",
+    "r1000014",
+    "--reservation",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-reservation-r1000014.json",
+    "--execution-role",
+    "correction"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 0,
+  "stdout": "{\"manifest\": \"C:\\\\wt\\\\book2-232-repro-routes-20260906\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-native-r1000014.json\", \"revision\": \"r1000014\", \"route\": \"full\", \"native_files\": 41, \"pdfs\": [\"c82a9454e4ad715fb663e6e8eeb558a68e2508715ac8feea9f3a23671270f1a6\", \"73ea9477d63ec26ccc46737c4018b3c3c986eb45347bb36aeb4dd52a476822a0\", \"c47179e4ba04b65ec1b529fbe4583f4d22d9adb7528f1fe681cc65c415037d2b\"]}\r\n{\"status\": \"PASS\", \"documents\": [{\"kind\": \"paragraaf\", \"pages\": 19}, {\"kind\": \"opgaven\", \"pages\": 11}, {\"kind\": \"antwoorden\", \"pages\": 12}], \"figures\": 14}\r\n",
+  "stderr": ""
+}

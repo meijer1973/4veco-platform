@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-REPRO-ROUTES-probes.py",
+    "failed-native"
+  ],
+  "cwd": "C:\\wt\\book2-232-repro-routes-20260906\\4veco-platform",
+  "status": 0,
+  "stdout": "{\"changed\": [], \"base64_failed_bytes_preserved\": true, \"restoration_performed\": false}\r\n",
+  "stderr": ""
+}
