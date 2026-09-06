@@ -1,0 +1,114 @@
+{
+  "strict": {
+    "status": "PASS",
+    "unknown": 0,
+    "platform_base": "d1fec4cb50b7d538b85291e2b773bb2663376cbe",
+    "platform_head": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+    "lessons_base": "a9662869395f449a4d5dce907bfe58976f94ed01",
+    "lessons_head": "a9662869395f449a4d5dce907bfe58976f94ed01",
+    "platform_paths": [
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-author-readonly-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-bundle-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-check.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-custody-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-durable-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-goal-design-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-governance-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-independent-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-index-diagnostic-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-index-runtime.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-lessons-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-platform-claim-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-report.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-specialist-review-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-structural-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-REVIEW-tools.cjs"
+    ],
+    "lesson_paths": []
+  },
+  "native": [
+    {
+      "label": "own-platform",
+      "base": "d1fec4cb50b7d538b85291e2b773bb2663376cbe",
+      "head": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+      "exit": 1,
+      "ok": false,
+      "failures": [
+        "shared lane needs at least one shared platform change",
+        "generated index/report or review-evidence changes are allowed only with lane-owned changes"
+      ],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 18,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "own-lessons",
+      "base": "a9662869395f449a4d5dce907bfe58976f94ed01",
+      "head": "a9662869395f449a4d5dce907bfe58976f94ed01",
+      "exit": 1,
+      "ok": false,
+      "failures": [
+        "no changed paths to classify",
+        "textbook lane needs at least one Part A textbook change"
+      ],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "base": "96416b6b5bd57094576e9aba0a42d682584ec479",
+      "head": "2f31bc145ce7ad79f3618620ca737857d2b73c0c",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 84,
+        "generated_indexes": 6,
+        "review_evidence": 6262,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "base": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "a9662869395f449a4d5dce907bfe58976f94ed01",
+      "exit": 0,
+      "ok": true,
+      "failures": [],
+      "categories": {
+        "partA_textbook": 208,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 6,
+        "unknown": 0
+      }
+    }
+  ],
+  "custody": {
+    "status": "PASS",
+    "raw_prior_files_unchanged": 15878,
+    "lesson_exceptions": [],
+    "platform_exceptions": [
+      "reports/github-agent-index-platform.json",
+      "reports/github-agent-index-platform.md",
+      "reports/github-agent-index-lessen.json",
+      "reports/github-agent-index-lessen.md"
+    ]
+  }
+}
