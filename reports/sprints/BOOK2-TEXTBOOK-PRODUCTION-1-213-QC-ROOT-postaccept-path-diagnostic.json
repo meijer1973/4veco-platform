@@ -1,0 +1,194 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-finalize.py",
+    "postaccept",
+    "--verification-commit",
+    "a2724b42c71962ae62acfc12411eea9fd21380b0"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-finalize.py\", line 130, in <module>\r\n    elif args.mode=='postaccept':postaccept(args.verification_commit)\r\n                                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-213-QC-ROOT-finalize.py\", line 115, in postaccept\r\n    p=book/row['relative'];assert p.exists()==(row['status']!='P')\r\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError\r\n",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "dd79ba2c2681eecfd9f483ba7c3b36a04f2bfc06dda0884d590434c0095fd172",
+  "original_checker_sha256": "48d96bffdaa9f8c176858540bdb30a40060bdf7007133cdeb3b2438d97cfe3eb",
+  "data_paths": [
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – paragraaf.pdf",
+      "length": 203,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – opgaven.pdf",
+      "length": 201,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – antwoorden.pdf",
+      "length": 204,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+      "length": 235,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
+      "length": 233,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+      "length": 236,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+      "length": 253,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+      "length": 251,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+      "length": 254,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\2.1.4 Gemengde opgaven – opgaven.pdf",
+      "length": 201,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.4 Gemengde opgaven\\2.1.4 Gemengde opgaven – antwoorden.pdf",
+      "length": 204,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1 Kosten en opbrengsten – hoofdstuk.pdf",
+      "length": 183,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1 Kosten en opbrengsten – antwoorden.pdf",
+      "length": 184,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "length": 196,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – opgaven.pdf",
+      "length": 194,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – antwoorden.pdf",
+      "length": 197,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – paragraaf.pdf",
+      "length": 204,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – opgaven.pdf",
+      "length": 202,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – antwoorden.pdf",
+      "length": 205,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+      "length": 260,
+      "normal_exists": false,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf",
+      "length": 258,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf",
+      "length": 261,
+      "normal_exists": false,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "length": 218,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.4 Gemengde opgaven elasticiteit\\2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "length": 221,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2 Elasticiteit – hoofdstuk.pdf",
+      "length": 165,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2 Elasticiteit – antwoorden.pdf",
+      "length": 166,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – paragraaf.pdf",
+      "length": 205,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – opgaven.pdf",
+      "length": 203,
+      "normal_exists": true,
+      "extended_exists": true
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – antwoorden.pdf",
+      "length": 206,
+      "normal_exists": true,
+      "extended_exists": true
+    }
+  ],
+  "first_failure": "Initial uncaptured invocation remains in tool trace; this exact rerun captures its actual failure, not reconstructed stderr",
+  "correction": "Data-path-only extended spelling for existing lesson reads/exists; no changed assertions, proof, input, pupil artifact, runtime PATH or CLI/CWD"
+}

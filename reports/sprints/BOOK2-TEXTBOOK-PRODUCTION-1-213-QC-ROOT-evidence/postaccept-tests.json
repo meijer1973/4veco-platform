@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "build-scripts/content/book-2/213",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started_at": "2026-09-06T05:56:38.905458+00:00",
+  "finished_at": "2026-09-06T05:56:43.768429+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_bad_position_count_and_coverage_are_rejected (test_bonus_contract.BonusCriteriaTests.test_bad_position_count_and_coverage_are_rejected) ... ok\r\ntest_current_source_contains_bounded_criteria (test_bonus_contract.BonusCriteriaTests.test_current_source_contains_bounded_criteria) ... ok\r\ntest_native_answer_html_preserves_three_criteria (test_bonus_contract.BonusCriteriaTests.test_native_answer_html_preserves_three_criteria) ... ok\r\ntest_old_missing_block_negative_fixture_is_rejected (test_bonus_contract.BonusCriteriaTests.test_old_missing_block_negative_fixture_is_rejected) ... ok\r\ntest_altered_target_fails_closed (test_source.SourceTests.test_altered_target_fails_closed) ... ok\r\ntest_bad_prerequisite_stops_before_process_or_output_write (test_source.SourceTests.test_bad_prerequisite_stops_before_process_or_output_write) ... ok\r\ntest_common_exercise_source_and_no_live_or_timing_copy (test_source.SourceTests.test_common_exercise_source_and_no_live_or_timing_copy) ... ok\r\ntest_discrete_arithmetic_all_cases (test_source.SourceTests.test_discrete_arithmetic_all_cases) ... ok\r\ntest_exact_seven_exercise_headings (test_source.SourceTests.test_exact_seven_exercise_headings) ... ok\r\ntest_formula_totals_independently (test_source.SourceTests.test_formula_totals_independently) ... ok\r\ntest_frozen_target_and_native_cells (test_source.SourceTests.test_frozen_target_and_native_cells) ... ok\r\ntest_initial_and_completed_tables_match_case_values (test_source.SourceTests.test_initial_and_completed_tables_match_case_values) ... ok\r\ntest_native_pandoc_short_alts_keep_full_captions (test_source.SourceTests.test_native_pandoc_short_alts_keep_full_captions) ... ok\r\ntest_original_long_alts_and_caption_loss_are_rejected (test_source.SourceTests.test_original_long_alts_and_caption_loss_are_rejected) ... ok\r\ntest_retrieval_combination_and_unequal_intervals (test_source.SourceTests.test_retrieval_combination_and_unequal_intervals) ... ok\r\ntest_six_assets_safe_geometry_large_type (test_source.SourceTests.test_six_assets_safe_geometry_large_type) ... ok\r\ntest_six_exact_noun_first_accessible_titles (test_source.SourceTests.test_six_exact_noun_first_accessible_titles) ... ok\r\ntest_all_original_sources_and_original17_test_bodies_remain_exact (test_succession.SuccessionTests.test_all_original_sources_and_original17_test_bodies_remain_exact) ... ok\r\ntest_exact_actual_seven_inputs_match_published_accepted_pair (test_succession.SuccessionTests.test_exact_actual_seven_inputs_match_published_accepted_pair) ... ok\r\ntest_exact_whole_generator_and_five_once_only_operations (test_succession.SuccessionTests.test_exact_whole_generator_and_five_once_only_operations) ... ok\r\ntest_fourteen_real_missing_and_forged_inputs_stop_before_native_sideeffects (test_succession.SuccessionTests.test_fourteen_real_missing_and_forged_inputs_stop_before_native_sideeffects) ... ok\r\ntest_unrelated_generator_guard_and_synchronized_drift_rejected (test_succession.SuccessionTests.test_unrelated_generator_guard_and_synchronized_drift_rejected) ... ok\r\ntest_valid_real_inputs_reach_governance_only_not_a_fake_successful_build (test_succession.SuccessionTests.test_valid_real_inputs_reach_governance_only_not_a_fake_successful_build) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 23 tests in 4.445s\r\n\r\nOK\r\n",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "b943039c50aa89c1f4352956e93f403118c0907ffd713ee76f1c38add0d6e688",
+  "inherited_PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c"
+}

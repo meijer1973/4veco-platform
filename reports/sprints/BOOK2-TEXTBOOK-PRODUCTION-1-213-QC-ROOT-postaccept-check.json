@@ -1,0 +1,355 @@
+{
+  "status": "PASS",
+  "verification_commit": "a2724b42c71962ae62acfc12411eea9fd21380b0",
+  "root_only_changed_fields": [
+    "handoff_renewal",
+    "production_ready_with_flags",
+    "root_acceptance",
+    "root_validation"
+  ],
+  "all_other_specialist_fields_exact": true,
+  "quality_ref_raw_sha256": "c63e0f885c2f09ad8b48b88bf0c9d8da7c5820b56874a942046b5c2aa1012cad",
+  "handoff_raw_sha256": "0a056eced568ddab730b389842aa5b47ccf554d54b019d052d9e7a30ce51564d",
+  "handoff_sections": 9,
+  "root_raw_RGB_pages": 90,
+  "root_personal_views": 0,
+  "prior_platform_raw_files": 14425,
+  "other_lesson_raw_files": 1904,
+  "imported_QC_files": 234,
+  "gates": [
+    "tests",
+    "native-checker",
+    "student-web",
+    "publisher-print",
+    "currentness",
+    "durable",
+    "bundle"
+  ],
+  "inventory": [
+    {
+      "number": 1,
+      "id": "2.1.1",
+      "edition": "paragraaf",
+      "status": "A",
+      "relative": "2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
+      "raw_sha256": "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0"
+    },
+    {
+      "number": 2,
+      "id": "2.1.1",
+      "edition": "opgaven",
+      "status": "A",
+      "relative": "2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
+      "raw_sha256": "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953"
+    },
+    {
+      "number": 3,
+      "id": "2.1.1",
+      "edition": "antwoorden",
+      "status": "A",
+      "relative": "2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf",
+      "raw_sha256": "498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce"
+    },
+    {
+      "number": 4,
+      "id": "2.1.2",
+      "edition": "paragraaf",
+      "status": "A",
+      "relative": "2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+      "raw_sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2"
+    },
+    {
+      "number": 5,
+      "id": "2.1.2",
+      "edition": "opgaven",
+      "status": "A",
+      "relative": "2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
+      "raw_sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a"
+    },
+    {
+      "number": 6,
+      "id": "2.1.2",
+      "edition": "antwoorden",
+      "status": "A",
+      "relative": "2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+      "raw_sha256": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90"
+    },
+    {
+      "number": 7,
+      "id": "2.1.3",
+      "edition": "paragraaf",
+      "status": "A",
+      "relative": "2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+      "raw_sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024"
+    },
+    {
+      "number": 8,
+      "id": "2.1.3",
+      "edition": "opgaven",
+      "status": "A",
+      "relative": "2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+      "raw_sha256": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05"
+    },
+    {
+      "number": 9,
+      "id": "2.1.3",
+      "edition": "antwoorden",
+      "status": "A",
+      "relative": "2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+      "raw_sha256": "d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787"
+    },
+    {
+      "number": 10,
+      "id": "2.1.4",
+      "edition": "opgaven",
+      "status": "L",
+      "relative": "2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+      "raw_sha256": "c0342c7b777d24f96c00cebcee4e55d079f0e33b0431ccc242be700589fb3acd"
+    },
+    {
+      "number": 11,
+      "id": "2.1.4",
+      "edition": "antwoorden",
+      "status": "L",
+      "relative": "2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+      "raw_sha256": "7b4e156f807bd060d4e8dea748a2532e53fa98035f7d9310ec26961a202b7be7"
+    },
+    {
+      "number": 12,
+      "id": "2.1",
+      "edition": "hoofdstuk",
+      "status": "L",
+      "relative": "2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf",
+      "raw_sha256": "2550df96502178f03b2aa4026a40bae70394d95b5514b0f89a23506d6b77c8b5"
+    },
+    {
+      "number": 13,
+      "id": "2.1",
+      "edition": "antwoorden",
+      "status": "L",
+      "relative": "2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.pdf",
+      "raw_sha256": "9edc45ece7ab0be5b91b8f3217c5911777d55fcace21d128fa0d9b94803328c1"
+    },
+    {
+      "number": 14,
+      "id": "2.2.1",
+      "edition": "paragraaf",
+      "status": "A",
+      "relative": "2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "raw_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6"
+    },
+    {
+      "number": 15,
+      "id": "2.2.1",
+      "edition": "opgaven",
+      "status": "A",
+      "relative": "2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf",
+      "raw_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af"
+    },
+    {
+      "number": 16,
+      "id": "2.2.1",
+      "edition": "antwoorden",
+      "status": "A",
+      "relative": "2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf",
+      "raw_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d"
+    },
+    {
+      "number": 17,
+      "id": "2.2.2",
+      "edition": "paragraaf",
+      "status": "A",
+      "relative": "2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf",
+      "raw_sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c"
+    },
+    {
+      "number": 18,
+      "id": "2.2.2",
+      "edition": "opgaven",
+      "status": "A",
+      "relative": "2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf",
+      "raw_sha256": "0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555"
+    },
+    {
+      "number": 19,
+      "id": "2.2.2",
+      "edition": "antwoorden",
+      "status": "A",
+      "relative": "2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf",
+      "raw_sha256": "61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2"
+    },
+    {
+      "number": 20,
+      "id": "2.2.3",
+      "edition": "paragraaf",
+      "status": "A",
+      "relative": "2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+      "raw_sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb"
+    },
+    {
+      "number": 21,
+      "id": "2.2.3",
+      "edition": "opgaven",
+      "status": "A",
+      "relative": "2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf",
+      "raw_sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80"
+    },
+    {
+      "number": 22,
+      "id": "2.2.3",
+      "edition": "antwoorden",
+      "status": "A",
+      "relative": "2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf",
+      "raw_sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10"
+    },
+    {
+      "number": 23,
+      "id": "2.2.4",
+      "edition": "opgaven",
+      "status": "L",
+      "relative": "2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "raw_sha256": "bb7128ee3b9e770f46194d8549fcadca10193e5af3c74694379de5e94aa5511f"
+    },
+    {
+      "number": 24,
+      "id": "2.2.4",
+      "edition": "antwoorden",
+      "status": "L",
+      "relative": "2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "raw_sha256": "adda78727645e1661abffc4c20f16465b2d7223d84dcb29b34f720729e022733"
+    },
+    {
+      "number": 25,
+      "id": "2.2",
+      "edition": "hoofdstuk",
+      "status": "L",
+      "relative": "2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – hoofdstuk.pdf",
+      "raw_sha256": "e4001a6a36ee48dc1610be359f656b8c9e84b7d5ee2c18ff4bfccaefcbaa25db"
+    },
+    {
+      "number": 26,
+      "id": "2.2",
+      "edition": "antwoorden",
+      "status": "L",
+      "relative": "2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – antwoorden.pdf",
+      "raw_sha256": "14e98e8bb6de0d4864d8bf9dcb9fe6699da978a51acf1b3e6601ebaebf03776d"
+    },
+    {
+      "number": 27,
+      "id": "2.3.1",
+      "edition": "paragraaf",
+      "status": "A",
+      "relative": "2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf",
+      "raw_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "number": 28,
+      "id": "2.3.1",
+      "edition": "opgaven",
+      "status": "A",
+      "relative": "2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.pdf",
+      "raw_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341"
+    },
+    {
+      "number": 29,
+      "id": "2.3.1",
+      "edition": "antwoorden",
+      "status": "A",
+      "relative": "2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.pdf",
+      "raw_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    },
+    {
+      "number": 30,
+      "id": "2.3.2",
+      "edition": "paragraaf",
+      "status": "P",
+      "relative": "2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf"
+    },
+    {
+      "number": 31,
+      "id": "2.3.2",
+      "edition": "opgaven",
+      "status": "P",
+      "relative": "2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – opgaven.pdf"
+    },
+    {
+      "number": 32,
+      "id": "2.3.2",
+      "edition": "antwoorden",
+      "status": "P",
+      "relative": "2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf"
+    },
+    {
+      "number": 33,
+      "id": "2.3.3",
+      "edition": "paragraaf",
+      "status": "P",
+      "relative": "2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3 Pareto-efficientie en welvaartsverlies – paragraaf.pdf"
+    },
+    {
+      "number": 34,
+      "id": "2.3.3",
+      "edition": "opgaven",
+      "status": "P",
+      "relative": "2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3 Pareto-efficientie en welvaartsverlies – opgaven.pdf"
+    },
+    {
+      "number": 35,
+      "id": "2.3.3",
+      "edition": "antwoorden",
+      "status": "P",
+      "relative": "2.3 Hoofdstuk Surplus en welvaart/2.3.3 Pareto-efficientie en welvaartsverlies/2.3.3 Pareto-efficientie en welvaartsverlies – antwoorden.pdf"
+    },
+    {
+      "number": 36,
+      "id": "2.3.4",
+      "edition": "opgaven",
+      "status": "P",
+      "relative": "2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart – opgaven.pdf"
+    },
+    {
+      "number": 37,
+      "id": "2.3.4",
+      "edition": "antwoorden",
+      "status": "P",
+      "relative": "2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart – antwoorden.pdf"
+    },
+    {
+      "number": 38,
+      "id": "2.3",
+      "edition": "hoofdstuk",
+      "status": "P",
+      "relative": "2.3 Hoofdstuk Surplus en welvaart/2.3 Surplus en welvaart – hoofdstuk.pdf"
+    },
+    {
+      "number": 39,
+      "id": "2.3",
+      "edition": "antwoorden",
+      "status": "P",
+      "relative": "2.3 Hoofdstuk Surplus en welvaart/2.3 Surplus en welvaart – antwoorden.pdf"
+    },
+    {
+      "number": 40,
+      "id": "book",
+      "edition": "boek",
+      "status": "P",
+      "relative": "Boek 2 Kosten, opbrengsten, elasticiteit en surplus – boek.pdf"
+    },
+    {
+      "number": 41,
+      "id": "book",
+      "edition": "antwoorden",
+      "status": "P",
+      "relative": "Boek 2 Kosten, opbrengsten, elasticiteit en surplus – antwoorden.pdf"
+    }
+  ],
+  "counts": {
+    "A": 21,
+    "C": 0,
+    "L": 8,
+    "P": 12
+  },
+  "physical_PDFs": 29,
+  "production_ready": false,
+  "production_ready_with_flags": true
+}
