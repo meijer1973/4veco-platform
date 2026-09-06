@@ -1,0 +1,738 @@
+{
+  "status": "NOMINAL_DESIGN_ARITHMETIC_PASS_NOT_RENDERED_QA",
+  "plan_raw_sha256": "12d81b83f9be50ebdcf3460ce7ad60d2de5a788cb3da8d3a046c1449112922ea",
+  "source_raw_sha256": "ab4b9f84670222078cbc0f7af0fa7fe8ef011ae1c1f221d61d717fbc81ff0706",
+  "source_utf8": "'use strict';\n// Independent nominal design arithmetic only: this is NOT rendered-glyph or page evidence.\nconst fs=require('node:fs'),path=require('node:path'),A=require('node:assert/strict'),c=require('node:crypto');\nconst P=path.resolve(__dirname,'../..'),L=path.resolve(P,'../4veco-lessen'),pre='reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-';\nconst hash=b=>c.createHash('sha256').update(b).digest('hex'),file='Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.4 Gemengde opgaven surplus en welvaart/2.3.4-textbook-plan.md',raw=fs.readFileSync(path.join(L,file));\nA.equal(hash(raw),'12d81b83f9be50ebdcf3460ce7ad60d2de5a788cb3da8d3a046c1449112922ea');const s=raw.toString('utf8');\nconst contexts=[['Een bezoekerscentrum','Broncijfers:',113],['Een openluchttheater','Hulptabel:',104],['Een festival verkoopt','Tabel:',107],['Een buurtcentrum','Broncijfers:',106]].map(([a,b,n])=>{const i=s.indexOf(a),j=s.indexOf(b,i),count=s.slice(i,j).trim().split(/\\s+/).length;A(i>=0&&j>i);A.equal(count,n);A(count>=100&&count<=250);return{start:a,stop:b,whitespace_words:count};});\nconst rows=[];for(const[name,a,b,c,d,Qmax,Pmax,pbook,qbook]of [['WE',36,1,6,.5,36,36,18,16],['G3',30,.5,6,.5,60,40,20,16],['G4',42,1,6,.5,42,42,20,20],['I6',60,1,12,.5,60,60,30,24],['target',80,1,20,.5,80,80,45,30]]){\n const qe=(a-c)/(b+d),pe=a-b*qe,xx=q=>180+780*q/Qmax,yy=p=>720-540*p/Pmax;\n for(const[variant,q,p]of [['free',qe,pe],['booking',qbook,pbook]]){\n  const centerQ=.22*q,x=xx(centerQ),rightQ=centerQ+44*Qmax/780,priceY=yy(p),demandY=yy(a-b*rightQ),supplyY=yy(c+d*rightQ);\n  for(const[area,cy]of [['CS',(demandY+priceY)/2],['PS',(priceY+supplyY)/2]]){\n   const corners=[];for(const dx of [-44,44])for(const dy of [-38,38]){const px=x+dx,py=cy+dy,Q=(px-180)*Qmax/780,P=(720-py)*Pmax/540;A(Q>=0&&Q<=q);if(area==='CS')A(P>=p&&P<=a-b*Q);else A(P<=p&&P>=c+d*Q);corners.push({x:px,y:py,Q,P});}\n   rows.push({name,variant,area,expanded_box_half_width:44,expanded_box_half_height:38,corners,nominal_clearance_pass:true});\n  }\n }\n}\nconst lum=hex=>{const [r,g,b]=hex.match(/[a-f0-9]{2}/gi).map(x=>parseInt(x,16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);return .2126*r+.7152*g+.0722*b;},bg=lum('F7FAFC');\nconst contrast=['2D3748','1A5276','1E8449'].map(color=>{const ratio=(bg+.05)/(lum(color)+.05);A(ratio>=4.5);return{color,background:'F7FAFC',ratio};});\nconst source=fs.readFileSync(__filename),result={status:'NOMINAL_DESIGN_ARITHMETIC_PASS_NOT_RENDERED_QA',plan_raw_sha256:hash(raw),source_raw_sha256:hash(source),source_utf8:source.toString('utf8'),contexts,expanded_region_boxes:rows,boxes:rows.length,corners:rows.reduce((n,r)=>n+r.corners.length,0),contrast,placed_font_pt:40/1200*166/25.4*72,actual_glyphs_measured:false,pages_viewed:0,figures_viewed:0,remaining:['actual glyph ink and line/leader clearances','actual all-page including Start1 same/facing pagination','actual color and grayscale visual review']};\nfs.writeFileSync(path.join(P,pre+'design-check.json'),JSON.stringify(result,null,2)+'\\n',{flag:'wx'});console.log(JSON.stringify({status:result.status,boxes:result.boxes,corners:result.corners,contexts,contrast}));\n",
+  "contexts": [
+    {
+      "start": "Een bezoekerscentrum",
+      "stop": "Broncijfers:",
+      "whitespace_words": 113
+    },
+    {
+      "start": "Een openluchttheater",
+      "stop": "Hulptabel:",
+      "whitespace_words": 104
+    },
+    {
+      "start": "Een festival verkoopt",
+      "stop": "Tabel:",
+      "whitespace_words": 107
+    },
+    {
+      "start": "Een buurtcentrum",
+      "stop": "Broncijfers:",
+      "whitespace_words": 106
+    }
+  ],
+  "expanded_region_boxes": [
+    {
+      "name": "WE",
+      "variant": "free",
+      "area": "CS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 231.33333333333337,
+          "y": 340.23076923076917,
+          "Q": 2.369230769230771,
+          "P": 25.317948717948724
+        },
+        {
+          "x": 231.33333333333337,
+          "y": 416.23076923076917,
+          "Q": 2.369230769230771,
+          "P": 20.251282051282057
+        },
+        {
+          "x": 319.33333333333337,
+          "y": 340.23076923076917,
+          "Q": 6.430769230769233,
+          "P": 25.317948717948724
+        },
+        {
+          "x": 319.33333333333337,
+          "y": 416.23076923076917,
+          "Q": 6.430769230769233,
+          "P": 20.251282051282057
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "WE",
+      "variant": "free",
+      "area": "PS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 231.33333333333337,
+          "y": 492.8846153846155,
+          "Q": 2.369230769230771,
+          "P": 15.141025641025635
+        },
+        {
+          "x": 231.33333333333337,
+          "y": 568.8846153846155,
+          "Q": 2.369230769230771,
+          "P": 10.074358974358969
+        },
+        {
+          "x": 319.33333333333337,
+          "y": 492.8846153846155,
+          "Q": 6.430769230769233,
+          "P": 15.141025641025635
+        },
+        {
+          "x": 319.33333333333337,
+          "y": 568.8846153846155,
+          "Q": 6.430769230769233,
+          "P": 10.074358974358969
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "WE",
+      "variant": "booking",
+      "area": "CS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 212.26666666666665,
+          "y": 318.63076923076926,
+          "Q": 1.4892307692307685,
+          "P": 26.757948717948718
+        },
+        {
+          "x": 212.26666666666665,
+          "y": 394.63076923076926,
+          "Q": 1.4892307692307685,
+          "P": 21.69128205128205
+        },
+        {
+          "x": 300.26666666666665,
+          "y": 318.63076923076926,
+          "Q": 5.55076923076923,
+          "P": 26.757948717948718
+        },
+        {
+          "x": 300.26666666666665,
+          "y": 394.63076923076926,
+          "Q": 5.55076923076923,
+          "P": 21.69128205128205
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "WE",
+      "variant": "booking",
+      "area": "PS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 212.26666666666665,
+          "y": 481.1846153846154,
+          "Q": 1.4892307692307685,
+          "P": 15.921025641025638
+        },
+        {
+          "x": 212.26666666666665,
+          "y": 557.1846153846154,
+          "Q": 1.4892307692307685,
+          "P": 10.854358974358972
+        },
+        {
+          "x": 300.26666666666665,
+          "y": 481.1846153846154,
+          "Q": 5.55076923076923,
+          "P": 15.921025641025638
+        },
+        {
+          "x": 300.26666666666665,
+          "y": 557.1846153846154,
+          "Q": 5.55076923076923,
+          "P": 10.854358974358972
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "G3",
+      "variant": "free",
+      "area": "CS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 204.64000000000001,
+          "y": 387.24307692307696,
+          "Q": 1.8953846153846168,
+          "P": 24.64866096866097
+        },
+        {
+          "x": 204.64000000000001,
+          "y": 463.24307692307696,
+          "Q": 1.8953846153846168,
+          "P": 19.01903133903134
+        },
+        {
+          "x": 292.64,
+          "y": 387.24307692307696,
+          "Q": 8.664615384615384,
+          "P": 24.64866096866097
+        },
+        {
+          "x": 292.64,
+          "y": 463.24307692307696,
+          "Q": 8.664615384615384,
+          "P": 19.01903133903134
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "G3",
+      "variant": "free",
+      "area": "PS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 204.64000000000001,
+          "y": 490.75692307692304,
+          "Q": 1.8953846153846168,
+          "P": 16.98096866096866
+        },
+        {
+          "x": 204.64000000000001,
+          "y": 566.756923076923,
+          "Q": 1.8953846153846168,
+          "P": 11.351339031339034
+        },
+        {
+          "x": 292.64,
+          "y": 490.75692307692304,
+          "Q": 8.664615384615384,
+          "P": 16.98096866096866
+        },
+        {
+          "x": 292.64,
+          "y": 566.756923076923,
+          "Q": 8.664615384615384,
+          "P": 11.351339031339034
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "G3",
+      "variant": "booking",
+      "area": "CS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 181.76,
+          "y": 367.8030769230769,
+          "Q": 0.1353846153846147,
+          "P": 26.08866096866097
+        },
+        {
+          "x": 181.76,
+          "y": 443.8030769230769,
+          "Q": 0.1353846153846147,
+          "P": 20.45903133903134
+        },
+        {
+          "x": 269.76,
+          "y": 367.8030769230769,
+          "Q": 6.904615384615384,
+          "P": 26.08866096866097
+        },
+        {
+          "x": 269.76,
+          "y": 443.8030769230769,
+          "Q": 6.904615384615384,
+          "P": 20.45903133903134
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "G3",
+      "variant": "booking",
+      "area": "PS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 181.76,
+          "y": 483.1969230769231,
+          "Q": 0.1353846153846147,
+          "P": 17.54096866096866
+        },
+        {
+          "x": 181.76,
+          "y": 559.1969230769231,
+          "Q": 0.1353846153846147,
+          "P": 11.911339031339029
+        },
+        {
+          "x": 269.76,
+          "y": 483.1969230769231,
+          "Q": 6.904615384615384,
+          "P": 17.54096866096866
+        },
+        {
+          "x": 269.76,
+          "y": 559.1969230769231,
+          "Q": 6.904615384615384,
+          "P": 11.911339031339029
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "G4",
+      "variant": "free",
+      "area": "CS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 234.05714285714288,
+          "y": 345.4593406593406,
+          "Q": 2.910769230769232,
+          "P": 29.13094017094017
+        },
+        {
+          "x": 234.05714285714288,
+          "y": 421.4593406593406,
+          "Q": 2.910769230769232,
+          "P": 23.21982905982906
+        },
+        {
+          "x": 322.0571428571429,
+          "y": 345.4593406593406,
+          "Q": 7.64923076923077,
+          "P": 29.13094017094017
+        },
+        {
+          "x": 322.0571428571429,
+          "y": 421.4593406593406,
+          "Q": 7.64923076923077,
+          "P": 23.21982905982906
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "G4",
+      "variant": "free",
+      "area": "PS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 234.05714285714288,
+          "y": 503.1274725274725,
+          "Q": 2.910769230769232,
+          "P": 16.86786324786325
+        },
+        {
+          "x": 234.05714285714288,
+          "y": 579.1274725274725,
+          "Q": 2.910769230769232,
+          "P": 10.95675213675214
+        },
+        {
+          "x": 322.0571428571429,
+          "y": 503.1274725274725,
+          "Q": 7.64923076923077,
+          "P": 16.86786324786325
+        },
+        {
+          "x": 322.0571428571429,
+          "y": 579.1274725274725,
+          "Q": 7.64923076923077,
+          "P": 10.95675213675214
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "G4",
+      "variant": "booking",
+      "area": "CS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 217.71428571428572,
+          "y": 326.94505494505495,
+          "Q": 2.0307692307692315,
+          "P": 30.57094017094017
+        },
+        {
+          "x": 217.71428571428572,
+          "y": 402.94505494505495,
+          "Q": 2.0307692307692315,
+          "P": 24.659829059829057
+        },
+        {
+          "x": 305.7142857142857,
+          "y": 326.94505494505495,
+          "Q": 6.769230769230769,
+          "P": 30.57094017094017
+        },
+        {
+          "x": 305.7142857142857,
+          "y": 402.94505494505495,
+          "Q": 6.769230769230769,
+          "P": 24.659829059829057
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "G4",
+      "variant": "booking",
+      "area": "PS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 217.71428571428572,
+          "y": 493.09890109890114,
+          "Q": 2.0307692307692315,
+          "P": 17.647863247863246
+        },
+        {
+          "x": 217.71428571428572,
+          "y": 569.0989010989011,
+          "Q": 2.0307692307692315,
+          "P": 11.736752136752134
+        },
+        {
+          "x": 305.7142857142857,
+          "y": 493.09890109890114,
+          "Q": 6.769230769230769,
+          "P": 17.647863247863246
+        },
+        {
+          "x": 305.7142857142857,
+          "y": 569.0989010989011,
+          "Q": 6.769230769230769,
+          "P": 11.736752136752134
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "I6",
+      "variant": "free",
+      "area": "CS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 227.51999999999998,
+          "y": 332.91076923076923,
+          "Q": 3.655384615384614,
+          "P": 43.009914529914525
+        },
+        {
+          "x": 227.51999999999998,
+          "y": 408.91076923076923,
+          "Q": 3.655384615384614,
+          "P": 34.56547008547008
+        },
+        {
+          "x": 315.52,
+          "y": 332.91076923076923,
+          "Q": 10.424615384615382,
+          "P": 43.009914529914525
+        },
+        {
+          "x": 315.52,
+          "y": 408.91076923076923,
+          "Q": 10.424615384615382,
+          "P": 34.56547008547008
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "I6",
+      "variant": "free",
+      "area": "PS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 227.51999999999998,
+          "y": 478.5446153846153,
+          "Q": 3.655384615384614,
+          "P": 26.828376068376073
+        },
+        {
+          "x": 227.51999999999998,
+          "y": 554.5446153846153,
+          "Q": 3.655384615384614,
+          "P": 18.38393162393163
+        },
+        {
+          "x": 315.52,
+          "y": 478.5446153846153,
+          "Q": 10.424615384615382,
+          "P": 26.828376068376073
+        },
+        {
+          "x": 315.52,
+          "y": 554.5446153846153,
+          "Q": 10.424615384615382,
+          "P": 18.38393162393163
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "I6",
+      "variant": "booking",
+      "area": "CS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 204.64000000000001,
+          "y": 315.9907692307693,
+          "Q": 1.8953846153846168,
+          "P": 44.88991452991453
+        },
+        {
+          "x": 204.64000000000001,
+          "y": 391.9907692307693,
+          "Q": 1.8953846153846168,
+          "P": 36.445470085470085
+        },
+        {
+          "x": 292.64,
+          "y": 315.9907692307693,
+          "Q": 8.664615384615384,
+          "P": 44.88991452991453
+        },
+        {
+          "x": 292.64,
+          "y": 391.9907692307693,
+          "Q": 8.664615384615384,
+          "P": 36.445470085470085
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "I6",
+      "variant": "booking",
+      "area": "PS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 204.64000000000001,
+          "y": 473.50461538461536,
+          "Q": 1.8953846153846168,
+          "P": 27.38837606837607
+        },
+        {
+          "x": 204.64000000000001,
+          "y": 549.5046153846154,
+          "Q": 1.8953846153846168,
+          "P": 18.943931623931626
+        },
+        {
+          "x": 292.64,
+          "y": 473.50461538461536,
+          "Q": 8.664615384615384,
+          "P": 27.38837606837607
+        },
+        {
+          "x": 292.64,
+          "y": 549.5046153846154,
+          "Q": 8.664615384615384,
+          "P": 18.943931623931626
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "target",
+      "variant": "free",
+      "area": "CS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 221.8,
+          "y": 321.9307692307692,
+          "Q": 4.287179487179488,
+          "P": 58.97321937321937
+        },
+        {
+          "x": 221.8,
+          "y": 397.9307692307692,
+          "Q": 4.287179487179488,
+          "P": 47.71396011396011
+        },
+        {
+          "x": 309.8,
+          "y": 321.9307692307692,
+          "Q": 13.312820512820513,
+          "P": 58.97321937321937
+        },
+        {
+          "x": 309.8,
+          "y": 397.9307692307692,
+          "Q": 13.312820512820513,
+          "P": 47.71396011396011
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "target",
+      "variant": "free",
+      "area": "PS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 221.8,
+          "y": 457.0346153846154,
+          "Q": 4.287179487179488,
+          "P": 38.95783475783476
+        },
+        {
+          "x": 221.8,
+          "y": 533.0346153846153,
+          "Q": 4.287179487179488,
+          "P": 27.698575498575504
+        },
+        {
+          "x": 309.8,
+          "y": 457.0346153846154,
+          "Q": 13.312820512820513,
+          "P": 38.95783475783476
+        },
+        {
+          "x": 309.8,
+          "y": 533.0346153846153,
+          "Q": 13.312820512820513,
+          "P": 27.698575498575504
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "target",
+      "variant": "booking",
+      "area": "CS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 200.35,
+          "y": 297.63076923076926,
+          "Q": 2.0871794871794864,
+          "P": 62.57321937321937
+        },
+        {
+          "x": 200.35,
+          "y": 373.63076923076926,
+          "Q": 2.0871794871794864,
+          "P": 51.313960113960114
+        },
+        {
+          "x": 288.35,
+          "y": 297.63076923076926,
+          "Q": 11.112820512820516,
+          "P": 62.57321937321937
+        },
+        {
+          "x": 288.35,
+          "y": 373.63076923076926,
+          "Q": 11.112820512820516,
+          "P": 51.313960113960114
+        }
+      ],
+      "nominal_clearance_pass": true
+    },
+    {
+      "name": "target",
+      "variant": "booking",
+      "area": "PS",
+      "expanded_box_half_width": 44,
+      "expanded_box_half_height": 38,
+      "corners": [
+        {
+          "x": 200.35,
+          "y": 443.87211538461537,
+          "Q": 2.0871794871794864,
+          "P": 40.907834757834756
+        },
+        {
+          "x": 200.35,
+          "y": 519.8721153846154,
+          "Q": 2.0871794871794864,
+          "P": 29.648575498575493
+        },
+        {
+          "x": 288.35,
+          "y": 443.87211538461537,
+          "Q": 11.112820512820516,
+          "P": 40.907834757834756
+        },
+        {
+          "x": 288.35,
+          "y": 519.8721153846154,
+          "Q": 11.112820512820516,
+          "P": 29.648575498575493
+        }
+      ],
+      "nominal_clearance_pass": true
+    }
+  ],
+  "boxes": 20,
+  "corners": 80,
+  "contrast": [
+    {
+      "color": "2D3748",
+      "background": "F7FAFC",
+      "ratio": 11.437770260954183
+    },
+    {
+      "color": "1A5276",
+      "background": "F7FAFC",
+      "ratio": 7.9742091306560505
+    },
+    {
+      "color": "1E8449",
+      "background": "F7FAFC",
+      "ratio": 4.500247327247551
+    }
+  ],
+  "placed_font_pt": 15.68503937007874,
+  "actual_glyphs_measured": false,
+  "pages_viewed": 0,
+  "figures_viewed": 0,
+  "remaining": [
+    "actual glyph ink and line/leader clearances",
+    "actual all-page including Start1 same/facing pagination",
+    "actual color and grayscale visual review"
+  ]
+}
