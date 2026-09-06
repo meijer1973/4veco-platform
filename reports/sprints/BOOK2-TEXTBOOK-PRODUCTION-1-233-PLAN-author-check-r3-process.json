@@ -1,0 +1,12 @@
+{
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-check.py"
+  ],
+  "cwd": "C:\\wt\\book2-233-plan-20260906\\4veco-platform",
+  "started_at": "2026-09-06T03:42:57.923Z",
+  "ended_at": "2026-09-06T03:43:00.311Z",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"C:\\wt\\book2-233-plan-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-check.py\", line 280, in <module>\r\n    ]: replace_once(label,old,new)\r\n       ~~~~~~~~~~~~^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-233-plan-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-check.py\", line 226, in replace_once\r\n    need(old in text, 'negative fixture exists: '+label)\r\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\wt\\book2-233-plan-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-check.py\", line 30, in need\r\n    raise AssertionError(message)\r\nAssertionError: negative fixture exists: missing reduced fairness\r\n"
+}
