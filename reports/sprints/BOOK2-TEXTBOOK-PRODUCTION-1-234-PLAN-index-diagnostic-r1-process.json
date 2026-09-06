@@ -1,0 +1,23 @@
+{
+  "command": "node",
+  "args": [
+    "build-scripts/reports/github-agent-index.js"
+  ],
+  "cwd": "C:\\wt\\book2-234-plan-20260906\\4veco-platform",
+  "invocationSources": [],
+  "environment": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-234-plan-20260906\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "7f876bd1a5c649fcad83db0747806fc6444e05e2",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-234-plan-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-234-plan-20260906\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "a9662869395f449a4d5dce907bfe58976f94ed01",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-234-plan-20260906"
+  },
+  "started_at": "2026-09-06T05:34:32.881Z",
+  "ended_at": "2026-09-06T05:34:32.991Z",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "C:\\wt\\book2-234-plan-20260906\\4veco-platform\\build-scripts\\reports\\github-agent-index.js:188\r\n      throw new Error(`Cannot index explicit source ref ${sourceRef} at ${root}`);\r\n      ^\r\n\r\nError: Cannot index explicit source ref 7f876bd1a5c649fcad83db0747806fc6444e05e2 at C:\\wt\\book2-234-plan-20260906\\4veco-platform\r\n    at listFiles (C:\\wt\\book2-234-plan-20260906\\4veco-platform\\build-scripts\\reports\\github-agent-index.js:188:13)\r\n    at buildIndex (C:\\wt\\book2-234-plan-20260906\\4veco-platform\\build-scripts\\reports\\github-agent-index.js:216:17)\r\n    at main (C:\\wt\\book2-234-plan-20260906\\4veco-platform\\build-scripts\\reports\\github-agent-index.js:301:20)\r\n    at Object.<anonymous> (C:\\wt\\book2-234-plan-20260906\\4veco-platform\\build-scripts\\reports\\github-agent-index.js:320:3)\r\n    at Module._compile (node:internal/modules/cjs/loader:1804:14)\r\n    at Object..js (node:internal/modules/cjs/loader:1936:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1525:32)\r\n    at Module._load (node:internal/modules/cjs/loader:1327:12)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\r\n\r\nNode.js v24.13.1\r\n"
+}
