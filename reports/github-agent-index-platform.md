@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T08:13:26.544Z
+Generated: 2026-09-06T09:07:18.896Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `ce59e7256f1d191f0338506f2551806c21cdb767`
-Files indexed: 15172
-Scope: committed tree files from `git ls-tree -r --name-only ce59e7256f1d191f0338506f2551806c21cdb767`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source branch: `agent/book2-234-paper-review-20260906`
+Source commit: `0991cc186300d72d18edded30f126480415bc1e9`
+Files indexed: 15196
+Scope: committed tree files from `git ls-tree -r --name-only 0991cc186300d72d18edded30f126480415bc1e9`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -2777,7 +2777,7 @@ Count: 1030
 
 ## reports
 
-Count: 12374
+Count: 12398
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -12644,6 +12644,30 @@ Count: 12374
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-scope-own-platform-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-structural-currentness-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-tools.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-design-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-design-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-goal-design-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-independent-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-independent-r2.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-index-capture.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-index-runtime.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-checks.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-own-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-own-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-whole-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-whole-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-specialist-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-structural-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-baseline.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-bundle-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-check.cjs
