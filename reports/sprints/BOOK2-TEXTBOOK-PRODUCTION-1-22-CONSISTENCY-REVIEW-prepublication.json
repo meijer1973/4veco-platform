@@ -1,0 +1,176 @@
+{
+  "status": "PREPUBLICATION_BOUND_REVISE",
+  "P": "c0e4731971c87f8bb646bc88a94f6faa650bc891",
+  "L": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+  "verdict": "REVISE",
+  "findings": [
+    "F22-FRONT-TITLE-01"
+  ],
+  "process_records": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-bundle-r1-process.json",
+      "sha256": "4cc10306309b801668e5d04327bae619cea2bafa8b4ec294e0c2c31145baf624",
+      "exit_code": 0,
+      "controller_commit": "1f8174fc3719988feeb4715c751eac0c5a4d868a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-chapter-r1-process.json",
+      "sha256": "8ef539c58a08c473bc00178f39b735fc9488f535cea8d82763f9dfcc37846d59",
+      "exit_code": 0,
+      "controller_commit": "1f8174fc3719988feeb4715c751eac0c5a4d868a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-durable-r1-process.json",
+      "sha256": "fc3073426cd9aea4e2a93f1bb2ed4c574e2861de6fb51a1192d55d5b856e20da",
+      "exit_code": 0,
+      "controller_commit": "1f8174fc3719988feeb4715c751eac0c5a4d868a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-governance-L-r1-process.json",
+      "sha256": "162fcea6044ed750ce473a29aa6bd8fd86175766e6a49b280be69143824dea20",
+      "exit_code": 0,
+      "controller_commit": "1f8174fc3719988feeb4715c751eac0c5a4d868a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-governance-r1-process.json",
+      "sha256": "78a28001d6c12adc7bab73a302d5fd61fb845aca13046b86111b4914895e689d",
+      "exit_code": 0,
+      "controller_commit": "1f8174fc3719988feeb4715c751eac0c5a4d868a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-index-diagnostic-process.json",
+      "sha256": "e0d7ee00f5257560afa94eeb6c8d890e49fd5a8fbd7139add92b18573e1640cf",
+      "exit_code": 0,
+      "controller_commit": "d027475634e592307d4d06d2ea620d1feca4379e",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r1-process.json",
+      "sha256": "3f723d0a68b6e2e42b1a200a5dab9b682edbe01658bd2bed3e121d52fbb39863",
+      "exit_code": 1,
+      "controller_commit": "f70e02f7dc1a8fe02678ae2ccc1e793c634804da",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r2-process.json",
+      "sha256": "0dcadd73b0498d1e64a98bbc05d482b0bc950d5527925300183b20aa967c500b",
+      "exit_code": 0,
+      "controller_commit": "5e1ef1e5c59cce4cb31445a6943e154dabe2949f",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r3-process.json",
+      "sha256": "808111f34621296a649315b8c86d2b97d9e38687788837758fd93abbdccef2a6",
+      "exit_code": 1,
+      "controller_commit": "1f8174fc3719988feeb4715c751eac0c5a4d868a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r4-process.json",
+      "sha256": "5d3cef248dcc80df6c74bdf05059f0514662aea0f62a975b1d34bad24fe7a317",
+      "exit_code": 0,
+      "controller_commit": "f8eef15ba368a8f38a0605a7e472d5be74a33808",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-own-L-process.json",
+      "sha256": "1f159adfca2c4921d71654af8e1a2b10a293d2a46a5fc8bb7a2ad0bbc4a6a196",
+      "exit_code": 1,
+      "controller_commit": "d027475634e592307d4d06d2ea620d1feca4379e",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-own-P-process.json",
+      "sha256": "6790ce751f8858534e6662f33a07af82d1404ff817e24c4d7ba2ddaab72d5714",
+      "exit_code": 1,
+      "controller_commit": "d027475634e592307d4d06d2ea620d1feca4379e",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-whole-L-process.json",
+      "sha256": "d2b1bb013db8e2208d949c3eceadf02a26ca43e837f72b7e804369bc95ec6d17",
+      "exit_code": 0,
+      "controller_commit": "d027475634e592307d4d06d2ea620d1feca4379e",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1-whole-P-process.json",
+      "sha256": "f68b89d62e69509aba62ce6d5d622b31ce499e83fdda10b3f1fe0780faca8555",
+      "exit_code": 0,
+      "controller_commit": "d027475634e592307d4d06d2ea620d1feca4379e",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-structural-r1-process.json",
+      "sha256": "751e16521870bb3a726bc2f62d7483bc95ea37e0bb0ed0548fbd761d8cdfe901",
+      "exit_code": 0,
+      "controller_commit": "1f8174fc3719988feeb4715c751eac0c5a4d868a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-own-r1-process.json",
+      "sha256": "bfed1848904dda62039f20760332ec53541fad912990f13e9b7b840f34c0cee1",
+      "exit_code": 0,
+      "controller_commit": "d027475634e592307d4d06d2ea620d1feca4379e",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-whole-cr-r1-process.json",
+      "sha256": "647473b4cbab89b269eea7d1addaf861bd8e4904ffeed1b2429e13f024ab91e3",
+      "exit_code": 2,
+      "controller_commit": "d027475634e592307d4d06d2ea620d1feca4379e",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-whole-r1-process.json",
+      "sha256": "801044b88ec3a9a409e04c3bec65a126bf61d8c925a1c0198a318a979704fab9",
+      "exit_code": 2,
+      "controller_commit": "d027475634e592307d4d06d2ea620d1feca4379e",
+      "source_and_stream_bindings_exact": true
+    }
+  ],
+  "ownraw": {
+    "files": 30,
+    "all_current_raw_equal_HEAD": true,
+    "digest": "7460ca73198194083484b7234b802004a6ba0a052186b26df183eab7dc7d2839"
+  },
+  "bindings": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-plan.md",
+      "sha256": "41405ccc271db488fd1af8c1a4c8ddf9c897165b09cbbcc0a95433ca18177817"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-personal.md",
+      "sha256": "d2c30d0b3709748c7cbedb5e988bdb8379d0afb68c012b1ffd227ce306108058"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-report.md",
+      "sha256": "75587b17e5526d3af96ee2dc85fa66c724df5f77b6828afa88965b36cbef2024"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-review-r4-process.json",
+      "sha256": "5d3cef248dcc80df6c74bdf05059f0514662aea0f62a975b1d34bad24fe7a317"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-integrity-r1.json",
+      "sha256": "a2911b70d6471e463804fc2be6b8b5ca6bbb4771fe5c4c87f5334aa203da5bbe"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-integrity-r2.json",
+      "sha256": "a2911b70d6471e463804fc2be6b8b5ca6bbb4771fe5c4c87f5334aa203da5bbe"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-scope-r1.json",
+      "sha256": "f109a2ac7d6d6f9e3f8bdd61c24f4eaf9cac7c43db0ac00d346bcef82743f361"
+    }
+  ],
+  "lesson_changes": 0,
+  "native_writes": 0,
+  "root_acceptance": "PENDING",
+  "assembly_release": false
+}
