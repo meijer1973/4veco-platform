@@ -167,10 +167,10 @@ def zip_document(record):
 def prerequisite_pins(destination):
     prior211 = destination.parent/'2.1.1 Kostenstructuren'; prior212 = destination.parent/'2.1.2 Opbrengsten, winst en break-even'
     return [(destination/'2.1.3-textbook-plan.md',PLAN_HASH),(destination.parent/'_chapter-plan.md',CHAPTER_HASH),
-        (prior211/'2.1.1-textbook-handoff.md','724a080619f2f072151edf20980071b3bef18cd60d1904c78f4aa906be8917c8'),
-        (prior212/'2.1.2-textbook-handoff.md','de2b8ed7dcc7a3c5c6eaac400892d2d37ac5212ccb3b9972fb004115a88c1fe2'),
-        (prior212/'2.1.2-review.md','74ad2ed9c44d9aa05b6d6a680d5d273f2cad4b62e4bead5db303c006514238cd'),
-        (prior212/'2.1.2-quality-ref.yaml','e168e3c2b8698d12b699fbf60e7691fbbc8a15d61bd46a7988704d3c896c805c')]
+        (prior211/'2.1.1-textbook-handoff.md','0d14506e314a11fef0637cc66cf29036f174b94cafbf7fa5ede2eff88937500f'),
+        (prior212/'2.1.2-textbook-handoff.md','4da6e5b4f0a70273d78c067f34484c8a5f6faf164b0f09c1559b9a73ff6611fe'),
+        (prior212/'2.1.2-review.md','79429b9f1750710baae46751a5792e4a02e7c177888a01f5ca3a15c4039a78f7'),
+        (prior212/'2.1.2-quality-ref.yaml','73bd2a2447b38c9d95cbc3bd69b8037e0f46b7564655b4513009fd6707b7b07d')]
 
 def build(lesson_root,proof_root=None,*,sources_only=False,proof_suffix=''):
     if proof_suffix and not re.fullmatch(r'r[1-9][0-9]*',proof_suffix):
@@ -183,7 +183,7 @@ def build(lesson_root,proof_root=None,*,sources_only=False,proof_suffix=''):
         if lf_hash(path)!=expected:
             raise ValueError(f'Required accepted source differs: {path}')
     prior_md = destination.parent/'2.1.2 Opbrengsten, winst en break-even'/'2.1.2 Opbrengsten, winst en break-even – paragraaf.md'
-    if digest(prior_md)!='f53521ed8812a4c8b8c33c1d66b34e0afe8425c1dffb1723f37771372b2baa09':
+    if digest(prior_md)!='9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8':
         raise ValueError('Accepted §212 paragraph source changed')
     for command in [
         ['node','build-scripts/workflows/check-book-outline-currentness.js','--require-approved','--action','paragraph_production','--paragraph','2.1.3'],
