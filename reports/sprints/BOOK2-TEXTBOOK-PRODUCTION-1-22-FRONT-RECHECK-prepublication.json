@@ -1,0 +1,164 @@
+{
+  "status": "PREPUBLICATION_BOUND_PASS",
+  "P": "0ba05e02765af2ed1b45c7260168fe7113629691",
+  "L": "9546548c4dbd271516366df946f3eb0a9eaa1e93",
+  "verdict": "PASS",
+  "finding_closed": "F22-FRONT-TITLE-01",
+  "findings": [],
+  "process_records": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-author-r1-process.json",
+      "sha256": "0ba5f7eeabc24f69f2296c17862f761ac4024852719cfaa3f73f3f7bac661782",
+      "exit_code": 0,
+      "controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-bundle-r1-process.json",
+      "sha256": "23c35baee7003d09f48db07e79f8bcc8fce242f1b00fa7b0c4bbddea40d78eaf",
+      "exit_code": 0,
+      "controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-chapter-r1-process.json",
+      "sha256": "acbc3122c55be6542677c7aadff9868cf9324b7256490a2a51824a7342e25c77",
+      "exit_code": 0,
+      "controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-durable-r1-process.json",
+      "sha256": "2f2c017a1ac20671d2267b2492eb067482097375a1bb34c7f6035f283b04a2b2",
+      "exit_code": 0,
+      "controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-governance-L-r1-process.json",
+      "sha256": "97a4abf8f4baa9e25561ddb6ec72935c3d0511599b2a9aa7906193d412fcd6c7",
+      "exit_code": 0,
+      "controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-governance-r1-process.json",
+      "sha256": "ac820cfaa0b56c943685d48ce9acb5c18ed0a017de23a5cdb9992af788d12bfb",
+      "exit_code": 0,
+      "controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-index-diagnostic-process.json",
+      "sha256": "a08aa83fed0cddee76b00c8891bfde51b9c8d90d4b71fdef0832be2157fb936b",
+      "exit_code": 0,
+      "controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review-r1-process.json",
+      "sha256": "ef9025add5e974445b4b111b6d6f1df28a42c8f92f8e36150eda926f9106c3ca",
+      "exit_code": 0,
+      "controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-L-process.json",
+      "sha256": "373406733159e53fae31eb37367e3968f48470eaab84f7336bee894194bea76e",
+      "exit_code": 1,
+      "controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-P-process.json",
+      "sha256": "9023f25e6ec5887221d1030d38aa9ed3d798132766452324c5c348a858c8c89f",
+      "exit_code": 1,
+      "controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-L-process.json",
+      "sha256": "cd5f95f49f0a46c393aa31f48d2ec2a7302c4284ea22b9a07b5e71637c548532",
+      "exit_code": 0,
+      "controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-P-process.json",
+      "sha256": "e4e67485b3b5c469355718b7705f0f2a8cdd42b258be37d0ff0be5e99e082a13",
+      "exit_code": 0,
+      "controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-structural-r1-process.json",
+      "sha256": "1381077d7e2e9442e8d7d5cc60d3e0cb0d5c09c3abc6fb99523fee9ed3ce6d0d",
+      "exit_code": 0,
+      "controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-url-map-r1-process.json",
+      "sha256": "74486ff996b15885f39cd4eeeb1d2b37f330ab4a0eb8d1eb645365ce2b607c07",
+      "exit_code": 0,
+      "controller_commit": "d438fe13fd5a909df3712d0c571e2cedd599a00b",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-own-r1-process.json",
+      "sha256": "f0c05ccd2af2800ebcc93a7d38a724e5c908d89555e9d9d4537a33f927f76891",
+      "exit_code": 0,
+      "controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-cr-r1-process.json",
+      "sha256": "3ca2413da002277f6882af49e18d291111de1b85f6f0156e30feeb54b2b5557f",
+      "exit_code": 2,
+      "controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a",
+      "source_and_stream_bindings_exact": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-r1-process.json",
+      "sha256": "9358cbd453bf5c46a08cf1cbda28b02213cd75459a7e63a702cc64ff95901b5a",
+      "exit_code": 2,
+      "controller_commit": "9332bdc70fa89ca77e5b7aea188efa61e0b38d6a",
+      "source_and_stream_bindings_exact": true
+    }
+  ],
+  "ownraw": {
+    "files": 27,
+    "all_current_raw_equal_HEAD": true,
+    "digest": "bf3228671a962d489e24859244b728e63de18854790dddccfb374745dfdccb2f"
+  },
+  "bindings": [
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-plan.md",
+      "sha256": "540f161d12dd8152dd6ce3b67cda54749743d4fe92b0a380a61a21325b351db3"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-report.md",
+      "sha256": "f3846d8f92be49c2cbe0263bb03d84ab4559df1c6792caf955dc12fab6012c3b"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review-r1-process.json",
+      "sha256": "ef9025add5e974445b4b111b6d6f1df28a42c8f92f8e36150eda926f9106c3ca"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-author-r1-process.json",
+      "sha256": "0ba5f7eeabc24f69f2296c17862f761ac4024852719cfaa3f73f3f7bac661782"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-integrity-r1.json",
+      "sha256": "25c2d416dd15eb330b0d823f6cf6e04a914750b5d0d85f31a99941bdd8c2ce83"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1.json",
+      "sha256": "b93213abca75137d788cca7d50afe6016ecf70d183902aa26590e210cf37a802"
+    }
+  ],
+  "lesson_changes": 0,
+  "native_writes": 0,
+  "root_acceptance": "PENDING",
+  "assembly_release": false
+}
