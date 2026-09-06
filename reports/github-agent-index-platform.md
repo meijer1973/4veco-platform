@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T09:41:31.303Z
+Generated: 2026-09-06T09:56:58.043Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `60a5eeeb80b074d00e2e2e0067afef293605d1eb`
-Files indexed: 16211
-Scope: committed tree files from `git ls-tree -r --name-only 60a5eeeb80b074d00e2e2e0067afef293605d1eb`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source commit: `e45fdbe9d7b223399195164bc7982a7666756f90`
+Files indexed: 16312
+Scope: committed tree files from `git ls-tree -r --name-only e45fdbe9d7b223399195164bc7982a7666756f90`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -989,7 +989,7 @@ Count: 25
 
 ## validators
 
-Count: 764
+Count: 792
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1563,6 +1563,34 @@ Count: 764
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r46.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-rebuild-r46-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-check-r1.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-author-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-bundle-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-chapter-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-durable-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-governance-L-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-governance-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-index-diagnostic-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-index-runtime.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-integrity-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-prepublication.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-publication.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-structural-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-url-map-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-own-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-cr-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-r1-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-ALT-render-check-r8.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-render-check-r7.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check-r6.json
@@ -2793,7 +2821,7 @@ Count: 1030
 
 ## reports
 
-Count: 13403
+Count: 13504
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -10237,6 +10265,54 @@ Count: 13403
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-white-r1-own-P-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-white-r1-whole-L-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-white-r1-whole-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-decision.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-import-0991cc18-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-import-0ba05e02-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-import-5db9d118-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-import-9332bdc7-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-import-a88857b4-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-import-af335aae-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-import-c19450bb-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-import-ce6d15ca-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-import-d438fe13-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-import-d723de91-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-import-f36404f6-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-imports.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-post-r1-authoring-contract-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-post-r1-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-post-r1-chapter-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-post-r1-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-post-r1-goal-design-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-post-r1-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-post-r1-specialist-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-post-r1-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-post-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-r1-234-review-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-r1-authoring-contract-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-r1-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-r1-C22-author-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-r1-C22-review-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-r1-chapter-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-r1-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-r1-goal-design-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-r1-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-r1-specialist-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-r1-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-scope-r1-own-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-scope-r1-own-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-scope-r1-whole-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-scope-r1-whole-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-scope-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-verification-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-white-r1-own-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-white-r1-own-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-white-r1-whole-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-234-REVIEW-ROOT-white-r1-whole-P-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-baseline.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-bundle-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-chapter-planning-process.json
@@ -10289,6 +10365,34 @@ Count: 13403
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-own-r1-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-whole-cr-r1-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-CONSISTENCY-REVIEW-white-whole-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-author-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-bundle-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-chapter-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-durable-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-governance-L-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-governance-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-index-diagnostic-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-index-runtime.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-integrity-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-prepublication.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-publication.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-review.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-own-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1-whole-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-scope-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-structural-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-url-map-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-own-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-cr-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-r1-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-ROOT-baseline.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-ROOT-check.cjs
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-ROOT-checks-r1.json
@@ -13689,6 +13793,31 @@ Count: 13403
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-scope-own-platform-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-structural-currentness-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-tools.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-design-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-design-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-goal-design-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-independent-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-independent-r2.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-index-capture.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-index-runtime.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-checks.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-r2.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-own-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-own-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-whole-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope-whole-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-specialist-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-structural-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-baseline.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-bundle-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-ROOT-check.cjs
