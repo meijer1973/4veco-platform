@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T01:42:36.514Z
+Generated: 2026-09-06T01:53:32.581Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `dab90d8806b7e63892bde88efb10f65d896d5c68`
-Files indexed: 11885
+Source commit: `f0e5388c76c0e413f214f1b3eeed2384a45f6f74`
+Files indexed: 11928
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2741,7 +2741,7 @@ Count: 1030
 
 ## reports
 
-Count: 9098
+Count: 9141
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -8490,6 +8490,49 @@ Count: 9098
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-specialist-adoption-check.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-specialist-review-r5.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-stage-1.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-evidence.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-probes.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-R2-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-R2-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-R2-evidence.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-R2-operational-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-R2-probes.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-R2-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-R2-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-R2-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-R2-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-evidence.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-operational-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-probes.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-evidence.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-operational-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-probes.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-R2-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-REVIEW-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-adoption-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-check.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-root-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-work-order.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-decision-package.md
