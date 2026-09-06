@@ -1,0 +1,18 @@
+{
+  "label": "payload-platform-own-whitespace-native",
+  "argv": [
+    "git",
+    "diff",
+    "--check",
+    "bc49af3353bf0ba3a061b2ef3e5ddec3c3a72abb..ad5186e608637ccec881014f01c5b91e27bdbab4"
+  ],
+  "cwd": "C:\\wt\\book2-214-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T08:28:45.940Z",
+  "finish": "2026-09-06T08:28:46.811Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "",
+  "stderr": "",
+  "stdout_base64": "",
+  "stderr_base64": ""
+}
