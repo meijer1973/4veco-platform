@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T04:08:10.085Z
+Generated: 2026-09-06T05:25:13.935Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `ff7d6bcc419b6d2ea24a13f16a1b010a605a6590`
-Files indexed: 13429
-Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
+Source branch: `agent/book2-224-build-20260906`
+Source commit: `1e35171b30711822037af7217d60f71fa18be819`
+Files indexed: 13682
+Scope: committed tree files from `git ls-tree -r --name-only 1e35171b30711822037af7217d60f71fa18be819`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 797
+Count: 803
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -241,6 +241,11 @@ Count: 797
 - build-scripts/content/book-2/223/test_source.py
 - build-scripts/content/book-2/223/test_successor.py
 - build-scripts/content/book-2/223/theory.md
+- build-scripts/content/book-2/224/answers.md
+- build-scripts/content/book-2/224/check_render.py
+- build-scripts/content/book-2/224/exercises.md
+- build-scripts/content/book-2/224/target-answers.md
+- build-scripts/content/book-2/224/test_source.py
 - build-scripts/content/book-2/231/answers.md
 - build-scripts/content/book-2/231/assets.js
 - build-scripts/content/book-2/231/check_render.py
@@ -255,6 +260,7 @@ Count: 797
 - build-scripts/content/book-2/b2_221.py
 - build-scripts/content/book-2/b2_222.py
 - build-scripts/content/book-2/b2_223.py
+- build-scripts/content/book-2/b2_224.py
 - build-scripts/content/book-2/b2_231.py
 - build-scripts/content/book-2/book_pipeline.py
 - build-scripts/content/book-2/chapter_pipeline.py
@@ -2746,7 +2752,7 @@ Count: 1030
 
 ## reports
 
-Count: 10639
+Count: 10887
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -10610,6 +10616,254 @@ Count: 10639
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-1.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-2-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-successor-work-order.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-checks.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-controller.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-correction-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-67f0c04671f9-r1/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r2/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-7444910d1361-r3/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r4/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-antwoorden-f6ba34f89ae0-r5/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-checks-final.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-checks-r2.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-antwoorden-f6ba34f89ae0/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-direct-r6/2.2.4-gemengde-opgaven-elasticiteit-opgaven-8eb84c6f10bb/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-finished.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-started.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-stderr.txt
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-directfinal-r6-stdout.txt
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-final-custody.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-finished.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-started.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-stderr.txt
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full-r1-stdout.txt
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-finished.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-started.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-stderr.txt
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-full2-r2-stdout.txt
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-finished.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-started.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-stderr.txt
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-fullfinal-r4-stdout.txt
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r4/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-8eb84c6f10bb-r5/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r2/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c43e028b16ea-r3/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-opgaven-c44060bedc33-r1/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-parity.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-001-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-002-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-003-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-004-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-005-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-006-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-007-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-008-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-009-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/antwoorden-page-010-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/figure-1-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/figure-2-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/figure-3-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/figure-4-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-001-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-002-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-003-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-004-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-005-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-006-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-007-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-008-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-009-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views-final/opgaven-page-010-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-001-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-002-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-003-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-004-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-005-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-006-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-007-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-008-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-009-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/antwoorden-page-010-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/figure-1-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/figure-2-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/figure-3-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/figure-4-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-001-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-002-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-003-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-004-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-005-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-006-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-007-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-008-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-009-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-personal-views/opgaven-page-010-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-directfinal-r6.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-full-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-full2-r2.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-fullfinal-r4.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-thin-r3.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-reservation-thinfinal-r5.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-finished.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-started.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-stderr.txt
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thin-r3-stdout.txt
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-finished.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-started.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-stderr.txt
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-thinfinal-r5-stdout.txt
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-view-inventory-final.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-evidence/224-view-inventory.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-diagnostic.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-diagnostic.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-fallback.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-index-runner.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-observations.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-operational-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-command-log.jsonl
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-design-check.js
@@ -13408,9 +13662,8 @@ _No files indexed in this group._
 
 ## other
 
-Count: 773
+Count: 772
 
-- .git
 - .gitattributes
 - .github/ci-python-requirements.txt
 - .github/workflows/authorized-bundle-integration.yml
