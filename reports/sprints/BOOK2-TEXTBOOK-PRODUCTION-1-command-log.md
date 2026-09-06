@@ -16008,3 +16008,63 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 5858: inval
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T01:16:33.516Z`
+- finished_at: `2026-09-06T01:16:38.355Z`
+- duration_ms: `4839`
+- exit_code: `0`
+- stdout_sha256: `de808bac2187bf8bcf9daa643eb49749d5b779a34940620f22195d8414b1adf8`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "native_files_unchanged": 42,
+  "old_lesson_files_unchanged": 45,
+  "root_only_changed_fields": [
+    "root_validation",
+    "root_acceptance",
+    "handoff_renewal",
+    "production_ready_with_flags"
+  ],
+  "specialist_fields_unchanged": true,
+  "original_imports_unchanged": 209,
+  "committed_root_evidence_unchanged": 59,
+  "quality_ref_raw_sha256": "312ca25c21bf6428ded5162f2d299b8e73da25219fbb914cad88dcb8ca47820a",
+  "handoff_raw_sha256": "69bdae1f9dd0efaace0a90db57e6ac0f17db627f93fdb333b48dafeb36eebe79",
+  "handoff_sections": 9,
+  "commands": [
+    {
+      "name": "student-web",
+      "exit_code": 0
+    },
+    {
+      "name": "publisher-print",
+      "exit_code": 0
+    },
+    {
+      "name": "currentness",
+      "exit_code": 0
+    },
+    {
+      "name": "durable",
+      "exit_code": 0
+    },
+    {
+      "name": "bundle",
+      "exit_code": 0
+    }
+  ]
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```

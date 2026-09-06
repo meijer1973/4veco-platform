@@ -5,8 +5,8 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform §212 S1 native verification `0c3f8d633e94436c247a24ab66db10b83b1b6633`,
-lessons `219a977e495abe43c17949e7d8996aab4176faa0`, including the exact
+Snapshot: platform §231 native verification `ea154615122f13710eb821b479d06259ab52e8d3`,
+lessons `3199ff2ae89b39a472b48ee0818de5b1c191063a`, including the exact
 root-only current211 acceptance/handoff at5e14325 in211-root-acceptance-r5.md.
 Current221 R8 and222 R13 acceptances remain unchanged.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
@@ -16,8 +16,8 @@ All paths below are relative to the lesson book root
 ## Counts and evidence rules
 
 Expected: 27 theory + 6 consolidation + 6 chapter + 2 book = **41 PDFs**.
-At this checkpoint: **3 internally gate-closed current paragraph packages**:
-9 accepted-with-flags PDFs,12 adopted candidate PDFs,8 legacy unaccepted and12
+At this checkpoint: **4 internally gate-closed current paragraph packages**:
+12 accepted-with-flags PDFs,9 adopted candidate PDFs,8 legacy unaccepted and12
 absent. §211 now has current R5 independent paragraph review, distinct specialist
 QC and root acceptance/handoff. §212 retains historical print/content acceptance
 but its current specialist/root gates remain; its three PDFs stay C. Physical
@@ -59,10 +59,15 @@ and original failed/superseded records remain unchanged. Both actual new native
 platform/lesson scope checks pass. Canonical independent paragraph PASS WITH
 FLAGS is adopted, with66 personal colour/grayscale pages and15 native figures.
 Root fresh r14 full, r15 full, r16 thin and direct-print parity preserve all42
-native files and all33 colour pages; the actual native checker passes. Distinct
-specialist QC and root acceptance/handoff remain pending. Both actual profiles
-recognize the review and fail only for the missing quality-ref. See
-231-root-candidate-result.md and the separately preserved import result.
+native files and all33 colour pages; the actual native checker passes. The
+distinct specialist QC now passes with flags after personal inspection of all
+66 colour/grayscale pages and30 colour/grayscale native figure views. Root fresh
+fullr20/thinr22/direct-print/fullr21 proofs preserve all42 native bytes and99
+rendered colour-page hashes/pixels. Root acceptance and nine-section handoff are
+complete; both actual profiles and currentness/durable/active-bundle checks pass
+again after the metadata transition. Its three editions are A. Classroom timing
+remains UNOBSERVED; final chapter/book review and owner/CI gates remain. See
+231-root-acceptance.md and the preserved candidate/import/QC reports.
 
 Each PDF also requires matching generated `.md` and self-contained `.html`;
 paragraphs require their planned SVG/PNG pairs, thin builder, accepted plan,
@@ -105,9 +110,9 @@ No output is silently accepted through an older PASS or reviewed_final label.
 | 24 | 2.2.4 | antwoorden | L | `2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf` |
 | 25 | 2.2 | hoofdstuk | L | `2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – hoofdstuk.pdf` |
 | 26 | 2.2 | antwoorden | L | `2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – antwoorden.pdf` |
-| 27 | 2.3.1 | paragraaf | C | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf` |
-| 28 | 2.3.1 | opgaven | C | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.pdf` |
-| 29 | 2.3.1 | antwoorden | C | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.pdf` |
+| 27 | 2.3.1 | paragraaf | A | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf` |
+| 28 | 2.3.1 | opgaven | A | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – opgaven.pdf` |
+| 29 | 2.3.1 | antwoorden | A | `2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.pdf` |
 | 30 | 2.3.2 | paragraaf | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf` |
 | 31 | 2.3.2 | opgaven | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – opgaven.pdf` |
 | 32 | 2.3.2 | antwoorden | P | `2.3 Hoofdstuk Surplus en welvaart/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf` |
@@ -147,9 +152,9 @@ hashes alone are not student-quality acceptance.
 | 2.2.3 / paragraaf | `ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb` | R3 candidate; paragraph and S1 delta pass, QC/handoff pending |
 | 2.2.3 / opgaven | `50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80` | R3 candidate; paragraph and S1 delta pass, QC/handoff pending |
 | 2.2.3 / antwoorden | `30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10` | R3 candidate; paragraph and S1 delta pass, QC/handoff pending |
-| 2.3.1 / paragraaf | `088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e` | Root-rebuilt candidate; current paragraph PASS; QC/handoff pending |
-| 2.3.1 / opgaven | `4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341` | Root-rebuilt candidate; current paragraph PASS; QC/handoff pending |
-| 2.3.1 / antwoorden | `d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b` | Root-rebuilt candidate; current paragraph PASS; QC/handoff pending |
+| 2.3.1 / paragraaf | `088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e` | Internal acceptance with flags; current review/QC/handoff complete |
+| 2.3.1 / opgaven | `4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341` | Internal acceptance with flags; current review/QC/handoff complete |
+| 2.3.1 / antwoorden | `d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b` | Internal acceptance with flags; current review/QC/handoff complete |
 
 Each accepted paragraph has `<id>-textbook-handoff.md` in its canonical folder,
 including exact source/review/quality bindings, concepts, exercises, visuals and
@@ -184,7 +189,8 @@ link its eventual newly accepted package before final combined book closure.
 §223 exact accepted-current-§221 successor input binding now has independent
 delta PASS and unchanged root full/thin/print proof; see223-S1-root-result.md.
 Its current specialist QC and root acceptance/handoff remain separate gates.
-§214/§224 follow accepted prerequisite teaching. §231 is an imported candidate;
+§214/§224 follow accepted prerequisite teaching. §231 is internally accepted
+with flags and current independent paragraph review, specialist QC and handoff;
 §232–§234 and all aggregate outputs remain pending their dependency/plan/review
 gates. Book front sources
 alone passed independent R2; no back matter, actual book manifest or assembled
