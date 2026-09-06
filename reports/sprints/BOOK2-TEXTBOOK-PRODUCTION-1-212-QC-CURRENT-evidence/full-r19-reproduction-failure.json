@@ -1,0 +1,647 @@
+{
+  "verdict": "FAIL",
+  "native_process_exit": 0,
+  "outer_failure": "AssertionError from preserve(): first differing tracked lesson file was antwoorden.html; not a native subprocess failure.",
+  "runtime_request": "process-only MSYS-FIRST Python314; original sources unchanged",
+  "changed_count": 20,
+  "folder40": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.html",
+      "old_sha256": "be02782985485caca268df98af897104d78feec9737032cd14803c978a318a82",
+      "new_sha256": "5a54f05d0c1063acff0aeab09839c35155f70441220182234b4f0d64d823c1e0",
+      "old_bytes": 509860,
+      "new_bytes": 519996,
+      "equal": false,
+      "equal_after_png_data_uri_redaction": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md",
+      "old_sha256": "4ffcb70c96f2c0c178a06a6092ec6701c4323cc1ac697de4156bc7cf0d43b8b3",
+      "new_sha256": "4ffcb70c96f2c0c178a06a6092ec6701c4323cc1ac697de4156bc7cf0d43b8b3",
+      "old_bytes": 9526,
+      "new_bytes": 9526,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+      "old_sha256": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90",
+      "new_sha256": "f64221b90730b97e81e565298d280c77d5526b61220c45f6a242250f91d6e029",
+      "old_bytes": 391699,
+      "new_bytes": 400355,
+      "equal": false
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.zip",
+      "old_sha256": "575fe9051596241c1bd0a29b5ca40bdd3ad4a357f6fd387508277362abe7a28e",
+      "new_sha256": "7aeacb7a3aabd3b98b6576483751fa80521984f13ce02aa07f4d536578988470",
+      "old_bytes": 1077050,
+      "new_bytes": 1100841,
+      "equal": false
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.html",
+      "old_sha256": "87c55209dd450e989476f2f9779feb88de9fac9bbc77a0805112a444ffb65a06",
+      "new_sha256": "b488ea6b0286aa2c6e4167f002c906501577d908560984ee822be0c670e8867a",
+      "old_bytes": 759777,
+      "new_bytes": 774813,
+      "equal": false,
+      "equal_after_png_data_uri_redaction": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md",
+      "old_sha256": "df2cd3fe66af760b55b1f28a2f51ca9c7449b4f1704d5da278db064850eef002",
+      "new_sha256": "df2cd3fe66af760b55b1f28a2f51ca9c7449b4f1704d5da278db064850eef002",
+      "old_bytes": 10988,
+      "new_bytes": 10988,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
+      "old_sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+      "new_sha256": "e4c672bc888018d050acc1e04bfd74628fdbefc4847f9ef8efcd2020c9ac1acd",
+      "old_bytes": 576834,
+      "new_bytes": 589972,
+      "equal": false
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.zip",
+      "old_sha256": "c72b108912247d2f190466f8bac4fdab54e001652097199d3939920739ae12e8",
+      "new_sha256": "30205639a3a74f7c94f1ffbdaf934012d7f1e742259a8b812b57561033bd122b",
+      "old_bytes": 1576059,
+      "new_bytes": 1609424,
+      "equal": false
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.html",
+      "old_sha256": "85eff0548ce75161a2935e2bb3d0bb470f30ec10e95996c670605574d89454b5",
+      "new_sha256": "858db2c6b3ccfe8ee73bc81d03fb7308a0714847c11cd21f479cb88572a1ccd7",
+      "old_bytes": 1368020,
+      "new_bytes": 1394752,
+      "equal": false,
+      "equal_after_png_data_uri_redaction": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "old_sha256": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+      "new_sha256": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+      "old_bytes": 19621,
+      "new_bytes": 19621,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+      "old_sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+      "new_sha256": "63c12c356ff509d4ec536cc51f7de90216606e148fe3a92407548fd3f8cf03db",
+      "old_bytes": 1033206,
+      "new_bytes": 1056743,
+      "equal": false
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.zip",
+      "old_sha256": "e9d639f9119da0b118b58e9541f7d86ad9244960368cdaacc2f439b9c543d86f",
+      "new_sha256": "0569ebb65b89a9809426ab41c92ccf972bf7a865f3e0426a83e6403dcc6244ed",
+      "old_bytes": 2820471,
+      "new_bytes": 2882677,
+      "equal": false
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-quality-ref.yaml",
+      "old_sha256": "e168e3c2b8698d12b699fbf60e7691fbbc8a15d61bd46a7988704d3c896c805c",
+      "new_sha256": "e168e3c2b8698d12b699fbf60e7691fbbc8a15d61bd46a7988704d3c896c805c",
+      "old_bytes": 7774,
+      "new_bytes": 7774,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-review.md",
+      "old_sha256": "79429b9f1750710baae46751a5792e4a02e7c177888a01f5ca3a15c4039a78f7",
+      "new_sha256": "79429b9f1750710baae46751a5792e4a02e7c177888a01f5ca3a15c4039a78f7",
+      "old_bytes": 9107,
+      "new_bytes": 9107,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-handoff.md",
+      "old_sha256": "de2b8ed7dcc7a3c5c6eaac400892d2d37ac5212ccb3b9972fb004115a88c1fe2",
+      "new_sha256": "de2b8ed7dcc7a3c5c6eaac400892d2d37ac5212ccb3b9972fb004115a88c1fe2",
+      "old_bytes": 10047,
+      "new_bytes": 10047,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2-textbook-plan.md",
+      "old_sha256": "5e1d318dd1b841467ca297d67956304d1861e3eb68d1df56cc4d32f6434d34a4",
+      "new_sha256": "5e1d318dd1b841467ca297d67956304d1861e3eb68d1df56cc4d32f6434d34a4",
+      "old_bytes": 38017,
+      "new_bytes": 38017,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_1.png",
+      "old_sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+      "new_sha256": "91608ac69c3cef6fdee34ac61fc1146f4a4dc73ecab5773e25b3649b471516da",
+      "old_bytes": 115864,
+      "new_bytes": 118302,
+      "equal": false,
+      "pixels": {
+        "old_mode": "RGB",
+        "new_mode": "RGB",
+        "old_size": [
+          2000,
+          1260
+        ],
+        "new_size": [
+          2000,
+          1260
+        ],
+        "decoded_equal": false,
+        "old_pixels_sha256": "4deda1c90150e9af70bc8bd7efb9c7273dac5c303e745ad06a597bb9e0ec158c",
+        "new_pixels_sha256": "d1e5851ea504ac559382733894e4c8c2e94ca223071000ce5ce6aed82f2e176f",
+        "difference_rgb_bounds": [
+          178,
+          123,
+          1768,
+          1215
+        ]
+      }
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_1.svg",
+      "old_sha256": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+      "new_sha256": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+      "old_bytes": 3782,
+      "new_bytes": 3782,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_2.png",
+      "old_sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+      "new_sha256": "eb53a3108d5712ba86134bd2d1c65bf1e50a5010344dae02eae6b97373048d95",
+      "old_bytes": 78057,
+      "new_bytes": 79511,
+      "equal": false,
+      "pixels": {
+        "old_mode": "RGB",
+        "new_mode": "RGB",
+        "old_size": [
+          2000,
+          1260
+        ],
+        "new_size": [
+          2000,
+          1260
+        ],
+        "decoded_equal": false,
+        "old_pixels_sha256": "bb1209558c2b808b38b36997bb3ea0bc5c02929b24637fd45eed13b065a7a274",
+        "new_pixels_sha256": "b5b252ef3ba60d1542e1dc9c49a594f364aef5613e7fc36173a111ce627b454a",
+        "difference_rgb_bounds": [
+          176,
+          123,
+          1560,
+          1113
+        ]
+      }
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_2.svg",
+      "old_sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+      "new_sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+      "old_bytes": 3026,
+      "new_bytes": 3026,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_3.png",
+      "old_sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+      "new_sha256": "3b22e803960203f03bbb8555374dc2d36e5adde3dec83c103ec0439b02bf8525",
+      "old_bytes": 118033,
+      "new_bytes": 120274,
+      "equal": false,
+      "pixels": {
+        "old_mode": "RGB",
+        "new_mode": "RGB",
+        "old_size": [
+          2000,
+          1260
+        ],
+        "new_size": [
+          2000,
+          1260
+        ],
+        "decoded_equal": false,
+        "old_pixels_sha256": "c9d1bd41c92fa3e05e2ab11a7e567daeeee789d5fd2657c10d64872bef3ab81e",
+        "new_pixels_sha256": "e96bdb396faad2576437a4c8e602ea94cf96718397fb17a0bc51d20546b39e4f",
+        "difference_rgb_bounds": [
+          176,
+          123,
+          1768,
+          1215
+        ]
+      }
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_3.svg",
+      "old_sha256": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee",
+      "new_sha256": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee",
+      "old_bytes": 4168,
+      "new_bytes": 4168,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_4.png",
+      "old_sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+      "new_sha256": "0217da59c1772bbf575879debb4f2e5215bd19891fe947c736d5b5e5558c0f76",
+      "old_bytes": 125556,
+      "new_bytes": 128158,
+      "equal": false,
+      "pixels": {
+        "old_mode": "RGB",
+        "new_mode": "RGB",
+        "old_size": [
+          2000,
+          1260
+        ],
+        "new_size": [
+          2000,
+          1260
+        ],
+        "decoded_equal": false,
+        "old_pixels_sha256": "8b4b99ee12c2b8a8ab79cd1c10664b0fe27e43574d06f2c7db10f1d12c34675c",
+        "new_pixels_sha256": "12631d747ec03d42655e2f3b9a3f8c879ac44c676cc15c44b79732c5c2de5d21",
+        "difference_rgb_bounds": [
+          176,
+          123,
+          1813,
+          1215
+        ]
+      }
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_4.svg",
+      "old_sha256": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3",
+      "new_sha256": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3",
+      "old_bytes": 4168,
+      "new_bytes": 4168,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_5.png",
+      "old_sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+      "new_sha256": "9e6f86ffb052f890da08cca5860741d4409785d861392ffada557bf928480cab",
+      "old_bytes": 128341,
+      "new_bytes": 131099,
+      "equal": false,
+      "pixels": {
+        "old_mode": "RGB",
+        "new_mode": "RGB",
+        "old_size": [
+          2000,
+          1260
+        ],
+        "new_size": [
+          2000,
+          1260
+        ],
+        "decoded_equal": false,
+        "old_pixels_sha256": "c87503b40d827c2d87d35154425d9beea537480eb1c586b5acb840e008d7c5f2",
+        "new_pixels_sha256": "c9f5a791335b3456ddba42ffaa75963d16c659544961c8fa8ca6d50c1fcb9dcb",
+        "difference_rgb_bounds": [
+          73,
+          123,
+          1857,
+          1215
+        ]
+      }
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_5.svg",
+      "old_sha256": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127",
+      "new_sha256": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127",
+      "old_bytes": 4237,
+      "new_bytes": 4237,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_6.png",
+      "old_sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+      "new_sha256": "de8f46e7e6a926506de6b528c6febd11c953d7b22c159785cba6a6e26c48ddf1",
+      "old_bytes": 245017,
+      "new_bytes": 249998,
+      "equal": false,
+      "pixels": {
+        "old_mode": "RGB",
+        "new_mode": "RGB",
+        "old_size": [
+          3000,
+          1660
+        ],
+        "new_size": [
+          3000,
+          1660
+        ],
+        "decoded_equal": false,
+        "old_pixels_sha256": "5985c603cc65fd62721a5b952f69643091423048eecea865c2a6e37db5d68b59",
+        "new_pixels_sha256": "2a56b8d47b0a909eebfaf758182a8b6757b1165207f0f064c7e45f3779111610",
+        "difference_rgb_bounds": [
+          51,
+          28,
+          2673,
+          1623
+        ]
+      }
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_6.svg",
+      "old_sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+      "new_sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+      "old_bytes": 6634,
+      "new_bytes": 6634,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_1.png",
+      "old_sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+      "new_sha256": "75f840ae0b038bcc7697205442bb4573593ec149bc42119803ad86a6ab63a6fb",
+      "old_bytes": 85693,
+      "new_bytes": 87375,
+      "equal": false,
+      "pixels": {
+        "old_mode": "RGB",
+        "new_mode": "RGB",
+        "old_size": [
+          2000,
+          1260
+        ],
+        "new_size": [
+          2000,
+          1260
+        ],
+        "decoded_equal": false,
+        "old_pixels_sha256": "b9b5363656e058b84485a572fe7a75a8bcc56dee8d2e792aaea2bf32db0809e3",
+        "new_pixels_sha256": "fd38eedbcb844015e5abf58130fde7acd3cfbe916d47549e7345f868100d7769",
+        "difference_rgb_bounds": [
+          139,
+          123,
+          1582,
+          1113
+        ]
+      }
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_1.svg",
+      "old_sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+      "new_sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+      "old_bytes": 2540,
+      "new_bytes": 2540,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_2.png",
+      "old_sha256": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+      "new_sha256": "23ddb08550f9dda99fe264d61322afb5834c56a396e81deeb907846df9b8c8ad",
+      "old_bytes": 107780,
+      "new_bytes": 109388,
+      "equal": false,
+      "pixels": {
+        "old_mode": "RGB",
+        "new_mode": "RGB",
+        "old_size": [
+          2000,
+          1260
+        ],
+        "new_size": [
+          2000,
+          1260
+        ],
+        "decoded_equal": false,
+        "old_pixels_sha256": "a881f9d5593f63851918823638766357bbbf0952b6008b5163f936c8c6912a71",
+        "new_pixels_sha256": "3b39d200d6c546c71b9f997774b9b50bbd1040d57dd9dd30269893c51ef6ca35",
+        "difference_rgb_bounds": [
+          139,
+          123,
+          1582,
+          1113
+        ]
+      }
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_2.svg",
+      "old_sha256": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f",
+      "new_sha256": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f",
+      "old_bytes": 2856,
+      "new_bytes": 2856,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_3.png",
+      "old_sha256": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+      "new_sha256": "f0b9a396b8ef6bb9edb796a02ac6dab3acd011b4b07f55e4287246b692c08720",
+      "old_bytes": 125596,
+      "new_bytes": 128264,
+      "equal": false,
+      "pixels": {
+        "old_mode": "RGB",
+        "new_mode": "RGB",
+        "old_size": [
+          2000,
+          1260
+        ],
+        "new_size": [
+          2000,
+          1260
+        ],
+        "decoded_equal": false,
+        "old_pixels_sha256": "658c465adf5b3eb2b37c5a08f2a7e6af166217188d88e114f30c70d1128436bd",
+        "new_pixels_sha256": "15eddfceb4054a4022861bf229a2b7e4f3a960d3f3119b2ae66b8c5f4ff50a6f",
+        "difference_rgb_bounds": [
+          139,
+          123,
+          1721,
+          1215
+        ]
+      }
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_3.svg",
+      "old_sha256": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270",
+      "new_sha256": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270",
+      "old_bytes": 3346,
+      "new_bytes": 3346,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_4.png",
+      "old_sha256": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+      "new_sha256": "0edec8c8f0cf3e845ba39268de0a35e51ce19e12b02154ccd8b18bf1da4749d5",
+      "old_bytes": 129598,
+      "new_bytes": 132417,
+      "equal": false,
+      "pixels": {
+        "old_mode": "RGB",
+        "new_mode": "RGB",
+        "old_size": [
+          2000,
+          1260
+        ],
+        "new_size": [
+          2000,
+          1260
+        ],
+        "decoded_equal": false,
+        "old_pixels_sha256": "9655a29d0581be57e7e877eae9f3fb44b7a88edfb9e0bf2d684d9da9e1acb78a",
+        "new_pixels_sha256": "f86c0be57b7ef0bf62fc10c9a279f8d4b57281e81c4b8b73c56d086b6abc19a4",
+        "difference_rgb_bounds": [
+          139,
+          123,
+          1813,
+          1215
+        ]
+      }
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_4.svg",
+      "old_sha256": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910",
+      "new_sha256": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910",
+      "old_bytes": 3753,
+      "new_bytes": 3753,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_we_1.png",
+      "old_sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+      "new_sha256": "393d4539a088f3d01c4951351e9eff3dd4eca9b6457384011d0b1c6496883669",
+      "old_bytes": 119293,
+      "new_bytes": 121700,
+      "equal": false,
+      "pixels": {
+        "old_mode": "RGB",
+        "new_mode": "RGB",
+        "old_size": [
+          2000,
+          1260
+        ],
+        "new_size": [
+          2000,
+          1260
+        ],
+        "decoded_equal": false,
+        "old_pixels_sha256": "58a1640d4c7ca6a5608353671cb227f2042740561fa6532fdf3742eb7a35ae1b",
+        "new_pixels_sha256": "ce1f947df39e683a777b32fdb7156cbf5b08192ef90effae79a3c91213dca65d",
+        "difference_rgb_bounds": [
+          176,
+          123,
+          1814,
+          1215
+        ]
+      }
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_we_1.svg",
+      "old_sha256": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df",
+      "new_sha256": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df",
+      "old_bytes": 4192,
+      "new_bytes": 4192,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_paragraph-plan.md",
+      "old_sha256": "310846d98142bcef66951b4855779a3ddf1c5c03957d6c2c8caa62c4fe24c892",
+      "new_sha256": "310846d98142bcef66951b4855779a3ddf1c5c03957d6c2c8caa62c4fe24c892",
+      "old_bytes": 4065,
+      "new_bytes": 4065,
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/build_pdf.py",
+      "old_sha256": "8bf1fab19138c303f8f68209dc2a35d401726f9ec6f3acbe5f8e052b6524e216",
+      "new_sha256": "8bf1fab19138c303f8f68209dc2a35d401726f9ec6f3acbe5f8e052b6524e216",
+      "old_bytes": 496,
+      "new_bytes": 496,
+      "equal": true
+    }
+  ],
+  "platform_inputs": {
+    "build-scripts/content/book-2/b2_212.py": {
+      "expected": "59fd442ed1d9e6edb2277df3746fecc3bfc08451f3bbb037f5c3cd4ef3b14270",
+      "actual": "59fd442ed1d9e6edb2277df3746fecc3bfc08451f3bbb037f5c3cd4ef3b14270"
+    },
+    "build-scripts/content/book-2/print_pipeline.py": {
+      "expected": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "actual": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    "build-scripts/content/book-2/212/theory.md": {
+      "expected": "c5c1ec88217f0e8910b05b5c968bab8e8cee8866db63e323681b6bb65e89e0b4",
+      "actual": "c5c1ec88217f0e8910b05b5c968bab8e8cee8866db63e323681b6bb65e89e0b4"
+    },
+    "build-scripts/content/book-2/212/exercises.md": {
+      "expected": "c03fc1f6939deeaae99753eab087dea82547626839849f0e52d494a8ec4ce533",
+      "actual": "c03fc1f6939deeaae99753eab087dea82547626839849f0e52d494a8ec4ce533"
+    },
+    "build-scripts/content/book-2/212/answers.md": {
+      "expected": "b67a0959f2fcba00d1399f26d51d866a2a40589b74f780384300eebd9ded8324",
+      "actual": "b67a0959f2fcba00d1399f26d51d866a2a40589b74f780384300eebd9ded8324"
+    },
+    "build-scripts/content/book-2/212/target-answers.md": {
+      "expected": "da0092dad52dfce100257565e6efa8768fd92f7fbd8c45c5c15fc0dfb222161d",
+      "actual": "da0092dad52dfce100257565e6efa8768fd92f7fbd8c45c5c15fc0dfb222161d"
+    },
+    "build-scripts/content/book-2/212/test_source.py": {
+      "expected": "de4da12ec81968ab056a23f421b09d33a3289e3eed57ac340330c6595963bef3",
+      "actual": "de4da12ec81968ab056a23f421b09d33a3289e3eed57ac340330c6595963bef3"
+    },
+    "build-scripts/content/book-2/212/test_metadata.py": {
+      "expected": "f1a1f0a3354feb60dde1be35e96d2c4cadfc22362e8895dcd66d42533c9d45d2",
+      "actual": "f1a1f0a3354feb60dde1be35e96d2c4cadfc22362e8895dcd66d42533c9d45d2"
+    },
+    "build-scripts/content/book-2/212/test_succession.py": {
+      "expected": "e5e7f8bbd688fc4a4631365e2e85c8eb9ce5f5427c64641250212a61c91f23b2",
+      "actual": "e5e7f8bbd688fc4a4631365e2e85c8eb9ce5f5427c64641250212a61c91f23b2"
+    },
+    "build-scripts/content/book-2/212/test_bonus.py": {
+      "expected": "b332e46158bbe1c2f82ca6bc147407dbb9cefb5f9f71fb3e8b5f97d130e1bcbe",
+      "actual": "b332e46158bbe1c2f82ca6bc147407dbb9cefb5f9f71fb3e8b5f97d130e1bcbe"
+    },
+    "build-scripts/content/book-2/212/check_render.py": {
+      "expected": "64e2fbfefeb580f43dbdb6979741dd332d1da009c3e744af818716039541b683",
+      "actual": "64e2fbfefeb580f43dbdb6979741dd332d1da009c3e744af818716039541b683"
+    },
+    "references/authored/course-target-exercises.json": {
+      "expected": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "actual": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e"
+    },
+    "references/authored/book-outlines/book-2-outline.md": {
+      "expected": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf",
+      "actual": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf"
+    },
+    "references/authored/book-outlines/book-2-outline.meta.json": {
+      "expected": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "actual": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789"
+    }
+  },
+  "lesson_git_status": " M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even \\342\\200\\223 antwoorden.html\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even \\342\\200\\223 antwoorden.pdf\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even \\342\\200\\223 antwoorden.zip\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even \\342\\200\\223 opgaven.html\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even \\342\\200\\223 opgaven.pdf\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even \\342\\200\\223 opgaven.zip\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even \\342\\200\\223 paragraaf.html\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even \\342\\200\\223 paragraaf.pdf\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even \\342\\200\\223 paragraaf.zip\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_1.png\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_2.png\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_3.png\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_4.png\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_5.png\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_6.png\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_1.png\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_2.png\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_3.png\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_4.png\"\n M \"Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_we_1.png\"\n",
+  "proofs": [
+    {
+      "kind": "2.1.2 Opbrengsten, winst en break-even – paragraaf",
+      "pdf_sha256": "63c12c356ff509d4ec536cc51f7de90216606e148fe3a92407548fd3f8cf03db",
+      "proof_directory": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-paragraaf-63c12c356ff5-r19",
+      "manifest_sha256": "889f0a55d9c027186243018bad6b42e006bf72789a980520c06bf0df89544f28",
+      "page_count": 14
+    },
+    {
+      "kind": "2.1.2 Opbrengsten, winst en break-even – opgaven",
+      "pdf_sha256": "e4c672bc888018d050acc1e04bfd74628fdbefc4847f9ef8efcd2020c9ac1acd",
+      "proof_directory": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-opgaven-e4c672bc8880-r19",
+      "manifest_sha256": "fa694a4078a54301f4c338dbd24c619964ac2ee0641e97e7e5b1ed9479d52195",
+      "page_count": 7
+    },
+    {
+      "kind": "2.1.2 Opbrengsten, winst en break-even – antwoorden",
+      "pdf_sha256": "f64221b90730b97e81e565298d280c77d5526b61220c45f6a242250f91d6e029",
+      "proof_directory": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-antwoorden-f64221b90730-r19",
+      "manifest_sha256": "c35fe3a68e405169620c636d77c61063d8e46e7042ef7422edbc11504ac6264a",
+      "page_count": 6
+    }
+  ],
+  "root_action": "Reported; no hand restoration, source repair or acceptance.",
+  "personal_inspection": "NOT_YET_PERFORMED"
+}

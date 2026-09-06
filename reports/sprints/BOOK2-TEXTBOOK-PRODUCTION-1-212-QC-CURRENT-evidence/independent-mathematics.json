@@ -1,0 +1,446 @@
+{
+  "pass": true,
+  "actor": "paragraph_214_builder",
+  "role": "independent212specialistQC",
+  "rows": [
+    {
+      "case": "theatre continuous Q",
+      "exact": "20",
+      "decimal": 20.0,
+      "meaning": "Exact continuous equality, not an integer sale or optimal output."
+    },
+    {
+      "case": "theatre crossing euro",
+      "exact": "100",
+      "decimal": 100.0,
+      "meaning": "Money total for the same period, not unit price."
+    },
+    {
+      "case": "theatre integer decision",
+      "first_no_loss": 20,
+      "before_profit": "-3",
+      "first_profit": "0",
+      "condition": "Within this constant P/v model, profit rises with Q; ceiling of exact crossing, including equality."
+    },
+    {
+      "case": "theatre profit at Q0",
+      "exact": "-60",
+      "decimal": -60.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "theatre profit at Q10",
+      "exact": "-30",
+      "decimal": -30.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "theatre profit at Q20",
+      "exact": "0",
+      "decimal": 0.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "theatre profit at Q30",
+      "exact": "30",
+      "decimal": 30.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "theatre GO for positive Q",
+      "exact": "5",
+      "decimal": 5.0,
+      "meaning": "Same fixed unit price, Q>0; Q=0 undefined by division."
+    },
+    {
+      "case": "kayak continuous Q",
+      "exact": "10/3",
+      "decimal": 3.3333333333333335,
+      "meaning": "Exact continuous equality, not an integer sale or optimal output."
+    },
+    {
+      "case": "kayak crossing euro",
+      "exact": "70/3",
+      "decimal": 23.333333333333332,
+      "meaning": "Money total for the same period, not unit price."
+    },
+    {
+      "case": "kayak integer decision",
+      "first_no_loss": 4,
+      "before_profit": "-2",
+      "first_profit": "4",
+      "condition": "Within this constant P/v model, profit rises with Q; ceiling of exact crossing, including equality."
+    },
+    {
+      "case": "kayak profit at Q2",
+      "exact": "-8",
+      "decimal": -8.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "kayak profit at Q3",
+      "exact": "-2",
+      "decimal": -2.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "kayak profit at Q4",
+      "exact": "4",
+      "decimal": 4.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "kayak profit at Q6",
+      "exact": "16",
+      "decimal": 16.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "kayak GO for positive Q",
+      "exact": "7",
+      "decimal": 7.0,
+      "meaning": "Same fixed unit price, Q>0; Q=0 undefined by division."
+    },
+    {
+      "case": "soap continuous Q",
+      "exact": "10/3",
+      "decimal": 3.3333333333333335,
+      "meaning": "Exact continuous equality, not an integer sale or optimal output."
+    },
+    {
+      "case": "soap crossing euro",
+      "exact": "40/3",
+      "decimal": 13.333333333333334,
+      "meaning": "Money total for the same period, not unit price."
+    },
+    {
+      "case": "soap integer decision",
+      "first_no_loss": 4,
+      "before_profit": "-1",
+      "first_profit": "2",
+      "condition": "Within this constant P/v model, profit rises with Q; ceiling of exact crossing, including equality."
+    },
+    {
+      "case": "soap profit at Q2",
+      "exact": "-4",
+      "decimal": -4.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "soap profit at Q3",
+      "exact": "-1",
+      "decimal": -1.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "soap profit at Q4",
+      "exact": "2",
+      "decimal": 2.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "soap profit at Q6",
+      "exact": "8",
+      "decimal": 8.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "soap GO for positive Q",
+      "exact": "4",
+      "decimal": 4.0,
+      "meaning": "Same fixed unit price, Q>0; Q=0 undefined by division."
+    },
+    {
+      "case": "pots continuous Q",
+      "exact": "5",
+      "decimal": 5.0,
+      "meaning": "Exact continuous equality, not an integer sale or optimal output."
+    },
+    {
+      "case": "pots crossing euro",
+      "exact": "20",
+      "decimal": 20.0,
+      "meaning": "Money total for the same period, not unit price."
+    },
+    {
+      "case": "pots integer decision",
+      "first_no_loss": 5,
+      "before_profit": "-3",
+      "first_profit": "0",
+      "condition": "Within this constant P/v model, profit rises with Q; ceiling of exact crossing, including equality."
+    },
+    {
+      "case": "pots profit at Q3",
+      "exact": "-6",
+      "decimal": -6.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "pots profit at Q4",
+      "exact": "-3",
+      "decimal": -3.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "pots profit at Q5",
+      "exact": "0",
+      "decimal": 0.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "pots profit at Q8",
+      "exact": "9",
+      "decimal": 9.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "pots GO for positive Q",
+      "exact": "4",
+      "decimal": 4.0,
+      "meaning": "Same fixed unit price, Q>0; Q=0 undefined by division."
+    },
+    {
+      "case": "minigolf continuous Q",
+      "exact": "40/3",
+      "decimal": 13.333333333333334,
+      "meaning": "Exact continuous equality, not an integer sale or optimal output."
+    },
+    {
+      "case": "minigolf crossing euro",
+      "exact": "160/3",
+      "decimal": 53.333333333333336,
+      "meaning": "Money total for the same period, not unit price."
+    },
+    {
+      "case": "minigolf integer decision",
+      "first_no_loss": 14,
+      "before_profit": "-1",
+      "first_profit": "2",
+      "condition": "Within this constant P/v model, profit rises with Q; ceiling of exact crossing, including equality."
+    },
+    {
+      "case": "minigolf profit at Q10",
+      "exact": "-10",
+      "decimal": -10.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "minigolf profit at Q13",
+      "exact": "-1",
+      "decimal": -1.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "minigolf profit at Q14",
+      "exact": "2",
+      "decimal": 2.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "minigolf profit at Q20",
+      "exact": "20",
+      "decimal": 20.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "minigolf GO for positive Q",
+      "exact": "4",
+      "decimal": 4.0,
+      "meaning": "Same fixed unit price, Q>0; Q=0 undefined by division."
+    },
+    {
+      "case": "bakery continuous Q",
+      "exact": "5000/7",
+      "decimal": 714.2857142857143,
+      "meaning": "Exact continuous equality, not an integer sale or optimal output."
+    },
+    {
+      "case": "bakery crossing euro",
+      "exact": "7500/7",
+      "decimal": 1071.4285714285713,
+      "meaning": "Money total for the same period, not unit price."
+    },
+    {
+      "case": "bakery integer decision",
+      "first_no_loss": 715,
+      "before_profit": "-1/5",
+      "first_profit": "1/2",
+      "condition": "Within this constant P/v model, profit rises with Q; ceiling of exact crossing, including equality."
+    },
+    {
+      "case": "bakery profit at Q500",
+      "exact": "-150",
+      "decimal": -150.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "bakery profit at Q714",
+      "exact": "-1/5",
+      "decimal": -0.2,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "bakery profit at Q715",
+      "exact": "1/2",
+      "decimal": 0.5,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "bakery profit at Q1000",
+      "exact": "200",
+      "decimal": 200.0,
+      "meaning": "TO minus TK at identical Q and period; signed total."
+    },
+    {
+      "case": "bakery GO for positive Q",
+      "exact": "3/2",
+      "decimal": 1.5,
+      "meaning": "Same fixed unit price, Q>0; Q=0 undefined by division."
+    },
+    {
+      "case": "Start1 TK",
+      "exact": "18",
+      "decimal": 18.0,
+      "meaning": "euro per afternoon"
+    },
+    {
+      "case": "Start1 GTK",
+      "exact": "9",
+      "decimal": 9.0,
+      "meaning": "euro per candle, not total afternoon expense"
+    },
+    {
+      "case": "Start1 equality",
+      "exact": "6",
+      "decimal": 6.0,
+      "meaning": "Both sides18 after identical operations; prior algebra, not newly assessed break-even meaning."
+    },
+    {
+      "case": "Start2 TO",
+      "exact": "16",
+      "decimal": 16.0,
+      "meaning": "euro per afternoon; same produced and sold quantity"
+    },
+    {
+      "case": "Start2 GO",
+      "exact": "8",
+      "decimal": 8.0,
+      "meaning": "euro per candle"
+    },
+    {
+      "case": "Start2 profit",
+      "exact": "-2",
+      "decimal": -2.0,
+      "meaning": "euro per afternoon loss, not revenue"
+    },
+    {
+      "case": "Dance base",
+      "exact": "20",
+      "decimal": 20.0,
+      "meaning": "Fixed Q10; no inferred demand response or price optimum."
+    },
+    {
+      "case": "Dance price only",
+      "exact": "30",
+      "decimal": 30.0,
+      "meaning": "Fixed Q10; no inferred demand response or price optimum."
+    },
+    {
+      "case": "Dance fixed only",
+      "exact": "10",
+      "decimal": 10.0,
+      "meaning": "Fixed Q10; no inferred demand response or price optimum."
+    },
+    {
+      "case": "Dance both",
+      "exact": "20",
+      "decimal": 20.0,
+      "meaning": "Fixed Q10; no inferred demand response or price optimum."
+    },
+    {
+      "case": "Closing TCK",
+      "exact": "24",
+      "decimal": 24.0,
+      "meaning": "Same day/same six tools; averages per tool, other totals per day."
+    },
+    {
+      "case": "Closing TVK",
+      "exact": "18",
+      "decimal": 18.0,
+      "meaning": "Same day/same six tools; averages per tool, other totals per day."
+    },
+    {
+      "case": "Closing TK",
+      "exact": "42",
+      "decimal": 42.0,
+      "meaning": "Same day/same six tools; averages per tool, other totals per day."
+    },
+    {
+      "case": "Closing GTK",
+      "exact": "7",
+      "decimal": 7.0,
+      "meaning": "Same day/same six tools; averages per tool, other totals per day."
+    },
+    {
+      "case": "Bonus money gap A",
+      "exact": "30",
+      "decimal": 30.0,
+      "meaning": "euro per evening at Q30"
+    },
+    {
+      "case": "Bonus money gap B",
+      "exact": "30",
+      "decimal": 30.0,
+      "meaning": "same amount, unchanged economic model"
+    },
+    {
+      "case": "Bonus drawn A",
+      "exact": "36",
+      "decimal": 36.0,
+      "meaning": "native drawing units across fixed180-unit plotting height"
+    },
+    {
+      "case": "Bonus drawn B",
+      "exact": "18",
+      "decimal": 18.0,
+      "meaning": "half physical height does not halve money profit"
+    },
+    {
+      "case": "Target score",
+      "exact": "11",
+      "decimal": 11.0,
+      "meaning": "No extra mandatory table or additional target operation."
+    },
+    {
+      "case": "Core timing",
+      "exact": "54",
+      "decimal": 54.0,
+      "meaning": "Unobserved entire lesson design including two complete construction tasks."
+    },
+    {
+      "case": "Supported timing",
+      "exact": "67",
+      "decimal": 67.0,
+      "meaning": "Optional printed support requires continuation time."
+    },
+    {
+      "case": "All printed timing",
+      "exact": "77",
+      "decimal": 77.0,
+      "meaning": "Bonus and closing outside core; unobserved."
+    }
+  ],
+  "sources": {
+    "theory.md": "c5c1ec88217f0e8910b05b5c968bab8e8cee8866db63e323681b6bb65e89e0b4",
+    "exercises.md": "c03fc1f6939deeaae99753eab087dea82547626839849f0e52d494a8ec4ce533",
+    "answers.md": "b67a0959f2fcba00d1399f26d51d866a2a40589b74f780384300eebd9ded8324",
+    "target-answers.md": "da0092dad52dfce100257565e6efa8768fd92f7fbd8c45c5c15fc0dfb222161d"
+  },
+  "bonus_model_criteria": [
+    "Equal30 euro profit per evening at Q30",
+    "150-to300 vertical scale explains half paper gap",
+    "Compare quantities, units, period, Q, scales and TO/TK amounts, not millimetres"
+  ],
+  "bounded_recap_flag": "Recap omits repeated model/range/increasing-profit qualification; body teaches it explicitly, no universal claim.",
+  "observed_timing_or_attainment": false
+}

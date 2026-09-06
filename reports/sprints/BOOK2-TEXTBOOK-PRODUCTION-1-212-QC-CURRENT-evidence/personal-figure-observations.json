@@ -1,0 +1,51 @@
+{
+  "actor": "paragraph_214_builder",
+  "role": "independent212specialistQC",
+  "basis": "Personally viewed all 11 full native current color PNGs and all 11 grayscale conversions through view_image original detail. UI displayed uncropped whole figures, resizing 2000x1260 to1980x1248 and3000x1660 to2048x1133. Final placement also inspected in all full-page views; no pixel-1:1 display claim. Byte and decoded pixel parity checked separately.",
+  "observations": [
+    {
+      "asset": "2.1.2_ex_1.png",
+      "observation": "Soap full scaffold: TK10→16, TO0→24, BE3⅓ and €8 bracket at6; all labels inside canvas, no unintended collision; dashed TK and inequalities readable in gray."
+    },
+    {
+      "asset": "2.1.2_ex_2.png",
+      "observation": "Pots partial scaffold: only TK15→23 on Q0–8/y0–40, no TO/BE/gap leakage. Axes/units and dark dashed line clear in both variants."
+    },
+    {
+      "asset": "2.1.2_ex_3.png",
+      "observation": "Completed pots: TO0→32, TK15→23, BE5/20, €9 gap at8, readable direct labels and zones. Same frame as partial scaffold; gray preserves meaning."
+    },
+    {
+      "asset": "2.1.2_ex_4.png",
+      "observation": "Minigolf answer: endpoints0/40→20/60 and TO0→80, BE13⅓/53⅓, €20 gap at20. Label positions and tick scales readable; no area encoding, gray dash/solid identity intact."
+    },
+    {
+      "asset": "2.1.2_ex_5.png",
+      "observation": "Bakery answer: TK500→1300, TO0→1500, BE near714/1071 and €200 at1000; thousands separators, month units and all ink remain inside native canvas, same in gray."
+    },
+    {
+      "asset": "2.1.2_ex_6.png",
+      "observation": "Two equal-height panels change only y scale150/300; Q0/10/20/30 unchanged. Both show €30 but lower bracket half-height. Complete panels and labels visible, no overlap or color-only interpretation; inspected also at final page placement."
+    },
+    {
+      "asset": "2.1.2_fig_1.png",
+      "observation": "Theater first stage onlyTO through0/0 and30/150, euro/evening distinct fromvisitor quantity. DirectTOlabel readable; no unnecessary decoration, clipping or gray contrast loss."
+    },
+    {
+      "asset": "2.1.2_fig_2.png",
+      "observation": "Second stage adds dashedTK60→120 to unchanged frame/TO. At10 TO50 belowTK80, crossing20/100 unmarked as intended. Bothnativevariants readable without color identification."
+    },
+    {
+      "asset": "2.1.2_fig_3.png",
+      "observation": "Third stage same geometry plus clear BE20/100 dot/leader and explicit loss/profit inequalities; axis labels and endpoint tick avoid collision. Gray still encodes same meaning."
+    },
+    {
+      "asset": "2.1.2_fig_4.png",
+      "observation": "Final theater stage adds €30 bracket at30 to unchangedBE/axes/lines; no shaded profit area. Bracket/dot/zone text clear inside full frame, both color and grayscale."
+    },
+    {
+      "asset": "2.1.2_we_1.png",
+      "observation": "Kayak example:TK20→26,TO0→42,BE3⅓/23⅓, €16 gap at6. All axis tick/units, leader and direct labels legible; no clipping or unintended overlap; gray dash distinction preserved."
+    }
+  ]
+}

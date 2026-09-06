@@ -1,0 +1,1991 @@
+{
+  "pass": true,
+  "rows": [
+    {
+      "asset": "2.1.2_ex_1.svg",
+      "svg_sha256": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751",
+      "png_sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+      "native_title": "Zeep: TK, TO, break-even en verticale winstafstand per dag",
+      "canvas": [
+        1000.0,
+        630.0
+      ],
+      "text_ink_bounds": [
+        {
+          "text": "TK en TO (€ per dag)",
+          "bbox_source_units": [
+            150.5,
+            61.5,
+            529.0,
+            99.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            111.5,
+            429.0,
+            130.5,
+            458.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "10",
+          "bbox_source_units": [
+            92.0,
+            319.0,
+            130.5,
+            348.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "20",
+          "bbox_source_units": [
+            89.0,
+            209.0,
+            130.5,
+            238.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "30",
+          "bbox_source_units": [
+            89.5,
+            99.0,
+            130.5,
+            128.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            140.5,
+            468.0,
+            159.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "2",
+          "bbox_source_units": [
+            347.0,
+            468.0,
+            366.5,
+            497.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "4",
+          "bbox_source_units": [
+            553.0,
+            468.0,
+            573.5,
+            497.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "6",
+          "bbox_source_units": [
+            760.5,
+            468.0,
+            779.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "Q (stukken zeep per dag)",
+          "bbox_source_units": [
+            236.0,
+            518.5,
+            684.5,
+            556.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TK",
+          "bbox_source_units": [
+            185.5,
+            280.0,
+            237.5,
+            309.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO",
+          "bbox_source_units": [
+            635.0,
+            189.5,
+            687.5,
+            220.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "BE",
+          "bbox_source_units": [
+            357.0,
+            212.0,
+            408.0,
+            241.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO < TK: verlies",
+          "bbox_source_units": [
+            170.5,
+            577.5,
+            458.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO > TK: winst",
+          "bbox_source_units": [
+            595.5,
+            577.5,
+            860.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "€ 8",
+          "bbox_source_units": [
+            829.0,
+            209.5,
+            884.0,
+            239.5
+          ],
+          "font_source_pt": 30
+        }
+      ],
+      "geometry_pass": true,
+      "personal_inspection": "SEPARATE_REQUIRED"
+    },
+    {
+      "asset": "2.1.2_ex_2.svg",
+      "svg_sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a",
+      "png_sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+      "native_title": "Bloempotten: alleen TK",
+      "canvas": [
+        1000.0,
+        630.0
+      ],
+      "text_ink_bounds": [
+        {
+          "text": "TK en TO (€ per dag)",
+          "bbox_source_units": [
+            150.5,
+            61.5,
+            529.0,
+            99.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            111.5,
+            429.0,
+            130.5,
+            458.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "10",
+          "bbox_source_units": [
+            92.0,
+            346.5,
+            130.5,
+            376.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "20",
+          "bbox_source_units": [
+            89.0,
+            264.0,
+            130.5,
+            293.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "30",
+          "bbox_source_units": [
+            89.5,
+            181.5,
+            130.5,
+            211.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "40",
+          "bbox_source_units": [
+            88.0,
+            99.0,
+            130.5,
+            128.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            140.5,
+            468.0,
+            159.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "2",
+          "bbox_source_units": [
+            295.5,
+            468.0,
+            315.0,
+            497.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "4",
+          "bbox_source_units": [
+            450.0,
+            468.0,
+            470.0,
+            497.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "6",
+          "bbox_source_units": [
+            605.5,
+            468.0,
+            624.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "8",
+          "bbox_source_units": [
+            760.5,
+            468.0,
+            779.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "Q (potten per dag)",
+          "bbox_source_units": [
+            298.0,
+            518.5,
+            622.0,
+            556.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TK",
+          "bbox_source_units": [
+            185.5,
+            266.5,
+            237.5,
+            296.0
+          ],
+          "font_source_pt": 30
+        }
+      ],
+      "geometry_pass": true,
+      "personal_inspection": "SEPARATE_REQUIRED"
+    },
+    {
+      "asset": "2.1.2_ex_3.svg",
+      "svg_sha256": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee",
+      "png_sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+      "native_title": "Bloempotten: TK, TO, break-even en verticale winstafstand per dag",
+      "canvas": [
+        1000.0,
+        630.0
+      ],
+      "text_ink_bounds": [
+        {
+          "text": "TK en TO (€ per dag)",
+          "bbox_source_units": [
+            150.5,
+            61.5,
+            529.0,
+            99.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            111.5,
+            429.0,
+            130.5,
+            458.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "10",
+          "bbox_source_units": [
+            92.0,
+            346.5,
+            130.5,
+            376.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "20",
+          "bbox_source_units": [
+            89.0,
+            264.0,
+            130.5,
+            293.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "30",
+          "bbox_source_units": [
+            89.5,
+            181.5,
+            130.5,
+            211.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "40",
+          "bbox_source_units": [
+            88.0,
+            99.0,
+            130.5,
+            128.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            140.5,
+            468.0,
+            159.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "2",
+          "bbox_source_units": [
+            295.5,
+            468.0,
+            315.0,
+            497.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "4",
+          "bbox_source_units": [
+            450.0,
+            468.0,
+            470.0,
+            497.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "6",
+          "bbox_source_units": [
+            605.5,
+            468.0,
+            624.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "8",
+          "bbox_source_units": [
+            760.5,
+            468.0,
+            779.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "Q (potten per dag)",
+          "bbox_source_units": [
+            298.0,
+            518.5,
+            622.0,
+            556.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TK",
+          "bbox_source_units": [
+            185.5,
+            266.5,
+            237.5,
+            296.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO",
+          "bbox_source_units": [
+            635.0,
+            189.5,
+            687.5,
+            220.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "BE",
+          "bbox_source_units": [
+            400.0,
+            194.0,
+            451.5,
+            223.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO < TK: verlies",
+          "bbox_source_units": [
+            170.5,
+            577.5,
+            458.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO > TK: winst",
+          "bbox_source_units": [
+            595.5,
+            577.5,
+            860.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "€ 9",
+          "bbox_source_units": [
+            829.0,
+            202.5,
+            884.0,
+            233.0
+          ],
+          "font_source_pt": 30
+        }
+      ],
+      "geometry_pass": true,
+      "personal_inspection": "SEPARATE_REQUIRED"
+    },
+    {
+      "asset": "2.1.2_ex_4.svg",
+      "svg_sha256": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3",
+      "png_sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+      "native_title": "Minigolf: TK, TO, break-even en verticale winstafstand per dag",
+      "canvas": [
+        1000.0,
+        630.0
+      ],
+      "text_ink_bounds": [
+        {
+          "text": "TK en TO (€ per dag)",
+          "bbox_source_units": [
+            150.5,
+            61.5,
+            529.0,
+            99.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            111.5,
+            429.0,
+            130.5,
+            458.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "20",
+          "bbox_source_units": [
+            89.0,
+            346.5,
+            130.5,
+            376.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "40",
+          "bbox_source_units": [
+            88.0,
+            264.0,
+            130.5,
+            293.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "60",
+          "bbox_source_units": [
+            89.0,
+            181.5,
+            130.5,
+            211.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "80",
+          "bbox_source_units": [
+            89.5,
+            99.0,
+            130.5,
+            128.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            140.5,
+            468.0,
+            159.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "5",
+          "bbox_source_units": [
+            295.5,
+            468.5,
+            315.0,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "10",
+          "bbox_source_units": [
+            440.5,
+            468.0,
+            479.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "15",
+          "bbox_source_units": [
+            595.5,
+            468.0,
+            634.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "20",
+          "bbox_source_units": [
+            749.0,
+            468.0,
+            791.0,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "Q (bezoekers per dag)",
+          "bbox_source_units": [
+            261.5,
+            518.5,
+            658.5,
+            556.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TK",
+          "bbox_source_units": [
+            185.5,
+            224.5,
+            237.5,
+            253.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO",
+          "bbox_source_units": [
+            635.0,
+            138.0,
+            687.5,
+            168.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "BE",
+          "bbox_source_units": [
+            426.0,
+            139.0,
+            477.0,
+            168.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO < TK: verlies",
+          "bbox_source_units": [
+            170.5,
+            577.5,
+            458.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO > TK: winst",
+          "bbox_source_units": [
+            595.5,
+            577.5,
+            860.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "€ 20",
+          "bbox_source_units": [
+            829.0,
+            140.5,
+            906.0,
+            171.0
+          ],
+          "font_source_pt": 30
+        }
+      ],
+      "geometry_pass": true,
+      "personal_inspection": "SEPARATE_REQUIRED"
+    },
+    {
+      "asset": "2.1.2_ex_5.svg",
+      "svg_sha256": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127",
+      "png_sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+      "native_title": "Bakkerij: TK, TO, break-even en verticale winstafstand per maand",
+      "canvas": [
+        1000.0,
+        630.0
+      ],
+      "text_ink_bounds": [
+        {
+          "text": "TK en TO (€ per maand)",
+          "bbox_source_units": [
+            150.5,
+            61.5,
+            584.5,
+            99.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            111.5,
+            429.0,
+            130.5,
+            458.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "400",
+          "bbox_source_units": [
+            66.0,
+            346.5,
+            130.5,
+            376.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "800",
+          "bbox_source_units": [
+            67.0,
+            264.0,
+            130.5,
+            293.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "1.200",
+          "bbox_source_units": [
+            36.5,
+            181.5,
+            130.5,
+            211.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "1.600",
+          "bbox_source_units": [
+            36.5,
+            99.0,
+            130.5,
+            128.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            140.5,
+            468.0,
+            159.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "250",
+          "bbox_source_units": [
+            273.0,
+            468.0,
+            337.0,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "500",
+          "bbox_source_units": [
+            428.0,
+            468.0,
+            492.0,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "750",
+          "bbox_source_units": [
+            583.5,
+            468.0,
+            646.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "1.000",
+          "bbox_source_units": [
+            723.0,
+            468.0,
+            817.0,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "Q (broden per maand)",
+          "bbox_source_units": [
+            263.5,
+            518.5,
+            656.5,
+            556.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TK",
+          "bbox_source_units": [
+            185.5,
+            281.5,
+            237.5,
+            311.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO",
+          "bbox_source_units": [
+            635.0,
+            154.0,
+            687.5,
+            184.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "BE",
+          "bbox_source_units": [
+            455.5,
+            138.0,
+            506.5,
+            167.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO < TK: verlies",
+          "bbox_source_units": [
+            170.5,
+            577.5,
+            458.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO > TK: winst",
+          "bbox_source_units": [
+            595.5,
+            577.5,
+            860.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "€ 200",
+          "bbox_source_units": [
+            829.0,
+            140.5,
+            928.5,
+            171.0
+          ],
+          "font_source_pt": 30
+        }
+      ],
+      "geometry_pass": true,
+      "personal_inspection": "SEPARATE_REQUIRED"
+    },
+    {
+      "asset": "2.1.2_ex_6.svg",
+      "svg_sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884",
+      "png_sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+      "native_title": "Hetzelfde theatermodel en winstbedrag op twee verschillende verticale schalen",
+      "canvas": [
+        1500.0,
+        830.0
+      ],
+      "text_ink_bounds": [
+        {
+          "text": "A. Verticale schaal tot 150",
+          "bbox_source_units": [
+            26.0,
+            14.0,
+            518.0,
+            43.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TK en TO (€ per avond)",
+          "bbox_source_units": [
+            200.5,
+            61.5,
+            621.0,
+            99.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            161.5,
+            264.0,
+            180.5,
+            293.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "50",
+          "bbox_source_units": [
+            139.5,
+            204.0,
+            180.5,
+            233.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "100",
+          "bbox_source_units": [
+            120.0,
+            144.0,
+            180.5,
+            173.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "150",
+          "bbox_source_units": [
+            120.0,
+            84.0,
+            180.5,
+            113.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            190.5,
+            303.0,
+            209.5,
+            332.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "10",
+          "bbox_source_units": [
+            514.0,
+            303.0,
+            552.5,
+            332.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "20",
+          "bbox_source_units": [
+            846.0,
+            303.0,
+            887.5,
+            332.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "30",
+          "bbox_source_units": [
+            1179.5,
+            303.0,
+            1220.5,
+            332.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "Q (bezoekers per avond)",
+          "bbox_source_units": [
+            480.0,
+            353.5,
+            920.0,
+            391.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TK",
+          "bbox_source_units": [
+            256.0,
+            153.0,
+            308.5,
+            182.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO",
+          "bbox_source_units": [
+            981.0,
+            90.0,
+            1034.0,
+            120.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "€ 30",
+          "bbox_source_units": [
+            1259.0,
+            102.5,
+            1336.0,
+            132.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "B. Verticale schaal tot 300",
+          "bbox_source_units": [
+            29.0,
+            434.0,
+            518.0,
+            463.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TK en TO (€ per avond)",
+          "bbox_source_units": [
+            200.5,
+            481.5,
+            621.0,
+            519.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            161.5,
+            684.0,
+            180.5,
+            713.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "100",
+          "bbox_source_units": [
+            120.0,
+            624.0,
+            180.5,
+            653.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "200",
+          "bbox_source_units": [
+            116.5,
+            564.0,
+            180.5,
+            593.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "300",
+          "bbox_source_units": [
+            117.0,
+            504.0,
+            180.5,
+            533.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            190.5,
+            723.0,
+            209.5,
+            752.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "10",
+          "bbox_source_units": [
+            514.0,
+            723.0,
+            552.5,
+            752.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "20",
+          "bbox_source_units": [
+            846.0,
+            723.0,
+            887.5,
+            752.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "30",
+          "bbox_source_units": [
+            1179.5,
+            723.0,
+            1220.5,
+            752.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "Q (bezoekers per avond)",
+          "bbox_source_units": [
+            480.0,
+            773.5,
+            920.0,
+            811.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TK",
+          "bbox_source_units": [
+            256.0,
+            611.0,
+            308.5,
+            640.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO",
+          "bbox_source_units": [
+            981.0,
+            580.0,
+            1034.0,
+            610.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "€ 30",
+          "bbox_source_units": [
+            1259.0,
+            603.5,
+            1336.0,
+            633.5
+          ],
+          "font_source_pt": 30
+        }
+      ],
+      "geometry_pass": true,
+      "personal_inspection": "SEPARATE_REQUIRED"
+    },
+    {
+      "asset": "2.1.2_fig_1.svg",
+      "svg_sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+      "png_sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+      "native_title": "Theater: eerst de totale opbrengst",
+      "canvas": [
+        1000.0,
+        630.0
+      ],
+      "text_ink_bounds": [
+        {
+          "text": "TO (€ per avond)",
+          "bbox_source_units": [
+            150.5,
+            61.5,
+            453.5,
+            99.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            111.5,
+            429.0,
+            130.5,
+            458.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "50",
+          "bbox_source_units": [
+            89.5,
+            319.0,
+            130.5,
+            348.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "100",
+          "bbox_source_units": [
+            70.0,
+            209.0,
+            130.5,
+            238.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "150",
+          "bbox_source_units": [
+            70.0,
+            99.0,
+            130.5,
+            128.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            140.5,
+            468.0,
+            159.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "10",
+          "bbox_source_units": [
+            337.5,
+            468.0,
+            376.0,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "20",
+          "bbox_source_units": [
+            542.5,
+            468.0,
+            584.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "30",
+          "bbox_source_units": [
+            749.5,
+            468.0,
+            790.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "Q (bezoekers per avond)",
+          "bbox_source_units": [
+            240.0,
+            518.5,
+            680.0,
+            556.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO",
+          "bbox_source_units": [
+            635.0,
+            138.0,
+            687.5,
+            168.5
+          ],
+          "font_source_pt": 30
+        }
+      ],
+      "geometry_pass": true,
+      "personal_inspection": "SEPARATE_REQUIRED"
+    },
+    {
+      "asset": "2.1.2_fig_2.svg",
+      "svg_sha256": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f",
+      "png_sha256": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+      "native_title": "Theater: voeg de totale kosten toe",
+      "canvas": [
+        1000.0,
+        630.0
+      ],
+      "text_ink_bounds": [
+        {
+          "text": "TK en TO (€ per avond)",
+          "bbox_source_units": [
+            150.5,
+            61.5,
+            571.0,
+            99.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            111.5,
+            429.0,
+            130.5,
+            458.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "50",
+          "bbox_source_units": [
+            89.5,
+            319.0,
+            130.5,
+            348.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "100",
+          "bbox_source_units": [
+            70.0,
+            209.0,
+            130.5,
+            238.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "150",
+          "bbox_source_units": [
+            70.0,
+            99.0,
+            130.5,
+            128.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            140.5,
+            468.0,
+            159.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "10",
+          "bbox_source_units": [
+            337.5,
+            468.0,
+            376.0,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "20",
+          "bbox_source_units": [
+            542.5,
+            468.0,
+            584.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "30",
+          "bbox_source_units": [
+            749.5,
+            468.0,
+            790.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "Q (bezoekers per avond)",
+          "bbox_source_units": [
+            240.0,
+            518.5,
+            680.0,
+            556.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TK",
+          "bbox_source_units": [
+            185.5,
+            254.5,
+            237.5,
+            284.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO",
+          "bbox_source_units": [
+            635.0,
+            138.0,
+            687.5,
+            168.5
+          ],
+          "font_source_pt": 30
+        }
+      ],
+      "geometry_pass": true,
+      "personal_inspection": "SEPARATE_REQUIRED"
+    },
+    {
+      "asset": "2.1.2_fig_3.svg",
+      "svg_sha256": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270",
+      "png_sha256": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+      "native_title": "Theater: break-even en zones",
+      "canvas": [
+        1000.0,
+        630.0
+      ],
+      "text_ink_bounds": [
+        {
+          "text": "TK en TO (€ per avond)",
+          "bbox_source_units": [
+            150.5,
+            61.5,
+            571.0,
+            99.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            111.5,
+            429.0,
+            130.5,
+            458.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "50",
+          "bbox_source_units": [
+            89.5,
+            319.0,
+            130.5,
+            348.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "100",
+          "bbox_source_units": [
+            70.0,
+            209.0,
+            130.5,
+            238.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "150",
+          "bbox_source_units": [
+            70.0,
+            99.0,
+            130.5,
+            128.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            140.5,
+            468.0,
+            159.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "10",
+          "bbox_source_units": [
+            337.5,
+            468.0,
+            376.0,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "20",
+          "bbox_source_units": [
+            542.5,
+            468.0,
+            584.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "30",
+          "bbox_source_units": [
+            749.5,
+            468.0,
+            790.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "Q (bezoekers per avond)",
+          "bbox_source_units": [
+            240.0,
+            518.5,
+            680.0,
+            556.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TK",
+          "bbox_source_units": [
+            185.5,
+            254.5,
+            237.5,
+            284.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO",
+          "bbox_source_units": [
+            635.0,
+            138.0,
+            687.5,
+            168.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "BE",
+          "bbox_source_units": [
+            426.0,
+            139.0,
+            477.0,
+            168.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO < TK: verlies",
+          "bbox_source_units": [
+            170.5,
+            577.5,
+            458.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO > TK: winst",
+          "bbox_source_units": [
+            595.5,
+            577.5,
+            860.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        }
+      ],
+      "geometry_pass": true,
+      "personal_inspection": "SEPARATE_REQUIRED"
+    },
+    {
+      "asset": "2.1.2_fig_4.svg",
+      "svg_sha256": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910",
+      "png_sha256": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+      "native_title": "Theater: verticale winstafstand bij Q30",
+      "canvas": [
+        1000.0,
+        630.0
+      ],
+      "text_ink_bounds": [
+        {
+          "text": "TK en TO (€ per avond)",
+          "bbox_source_units": [
+            150.5,
+            61.5,
+            571.0,
+            99.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            111.5,
+            429.0,
+            130.5,
+            458.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "50",
+          "bbox_source_units": [
+            89.5,
+            319.0,
+            130.5,
+            348.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "100",
+          "bbox_source_units": [
+            70.0,
+            209.0,
+            130.5,
+            238.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "150",
+          "bbox_source_units": [
+            70.0,
+            99.0,
+            130.5,
+            128.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            140.5,
+            468.0,
+            159.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "10",
+          "bbox_source_units": [
+            337.5,
+            468.0,
+            376.0,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "20",
+          "bbox_source_units": [
+            542.5,
+            468.0,
+            584.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "30",
+          "bbox_source_units": [
+            749.5,
+            468.0,
+            790.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "Q (bezoekers per avond)",
+          "bbox_source_units": [
+            240.0,
+            518.5,
+            680.0,
+            556.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TK",
+          "bbox_source_units": [
+            185.5,
+            254.5,
+            237.5,
+            284.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO",
+          "bbox_source_units": [
+            635.0,
+            138.0,
+            687.5,
+            168.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "BE",
+          "bbox_source_units": [
+            426.0,
+            139.0,
+            477.0,
+            168.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO < TK: verlies",
+          "bbox_source_units": [
+            170.5,
+            577.5,
+            458.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO > TK: winst",
+          "bbox_source_units": [
+            595.5,
+            577.5,
+            860.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "€ 30",
+          "bbox_source_units": [
+            829.0,
+            132.5,
+            906.0,
+            162.5
+          ],
+          "font_source_pt": 30
+        }
+      ],
+      "geometry_pass": true,
+      "personal_inspection": "SEPARATE_REQUIRED"
+    },
+    {
+      "asset": "2.1.2_we_1.svg",
+      "svg_sha256": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df",
+      "png_sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+      "native_title": "Kajakverhuur: TK, TO, break-even en verticale winstafstand per dag",
+      "canvas": [
+        1000.0,
+        630.0
+      ],
+      "text_ink_bounds": [
+        {
+          "text": "TK en TO (€ per dag)",
+          "bbox_source_units": [
+            150.5,
+            61.5,
+            529.0,
+            99.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            111.5,
+            429.0,
+            130.5,
+            458.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "10",
+          "bbox_source_units": [
+            92.0,
+            363.0,
+            130.5,
+            392.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "20",
+          "bbox_source_units": [
+            89.0,
+            297.0,
+            130.5,
+            326.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "30",
+          "bbox_source_units": [
+            89.5,
+            231.0,
+            130.5,
+            260.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "40",
+          "bbox_source_units": [
+            88.0,
+            165.0,
+            130.5,
+            194.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "50",
+          "bbox_source_units": [
+            89.5,
+            99.0,
+            130.5,
+            128.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "0",
+          "bbox_source_units": [
+            140.5,
+            468.0,
+            159.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "2",
+          "bbox_source_units": [
+            347.0,
+            468.0,
+            366.5,
+            497.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "4",
+          "bbox_source_units": [
+            553.0,
+            468.0,
+            573.5,
+            497.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "6",
+          "bbox_source_units": [
+            760.5,
+            468.0,
+            779.5,
+            497.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "Q (verhuringen per dag)",
+          "bbox_source_units": [
+            248.0,
+            518.5,
+            672.0,
+            556.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TK",
+          "bbox_source_units": [
+            185.5,
+            259.5,
+            237.5,
+            289.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO",
+          "bbox_source_units": [
+            635.0,
+            179.0,
+            687.5,
+            209.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "BE",
+          "bbox_source_units": [
+            357.0,
+            205.0,
+            408.0,
+            234.0
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO < TK: verlies",
+          "bbox_source_units": [
+            170.5,
+            577.5,
+            458.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "TO > TK: winst",
+          "bbox_source_units": [
+            595.5,
+            577.5,
+            860.5,
+            607.5
+          ],
+          "font_source_pt": 30
+        },
+        {
+          "text": "€ 16",
+          "bbox_source_units": [
+            829.0,
+            205.0,
+            906.5,
+            235.5
+          ],
+          "font_source_pt": 30
+        }
+      ],
+      "geometry_pass": true,
+      "personal_inspection": "SEPARATE_REQUIRED"
+    }
+  ],
+  "render_environment": "Python314 inherited-PATH CairoSVG glyph masks; exact backend separately recorded in runtime diagnostic",
+  "actual_font_floor": "30pt source; final PDF placement independently checked; source bounds not visual acceptance."
+}

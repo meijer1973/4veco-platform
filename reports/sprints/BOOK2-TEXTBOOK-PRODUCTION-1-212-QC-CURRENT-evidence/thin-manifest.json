@@ -1,0 +1,200 @@
+{
+  "paragraph": "2.1.2",
+  "target_record_sha256": "19b466dd6f7b541a3bb701d4de80ce13fe9ea58356313e24b23b21698093e1f9",
+  "plan_sha256": "5e1d318dd1b841467ca297d67956304d1861e3eb68d1df56cc4d32f6434d34a4",
+  "chapter_sha256": "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116",
+  "input_sources": [
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\build-scripts\\content\\book-2\\b2_212.py",
+      "sha256": "59fd442ed1d9e6edb2277df3746fecc3bfc08451f3bbb037f5c3cd4ef3b14270"
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\build-scripts\\content\\book-2\\212\\theory.md",
+      "sha256": "c5c1ec88217f0e8910b05b5c968bab8e8cee8866db63e323681b6bb65e89e0b4"
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\build-scripts\\content\\book-2\\212\\exercises.md",
+      "sha256": "c03fc1f6939deeaae99753eab087dea82547626839849f0e52d494a8ec4ce533"
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\build-scripts\\content\\book-2\\212\\answers.md",
+      "sha256": "b67a0959f2fcba00d1399f26d51d866a2a40589b74f780384300eebd9ded8324"
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\build-scripts\\content\\book-2\\212\\target-answers.md",
+      "sha256": "da0092dad52dfce100257565e6efa8768fd92f7fbd8c45c5c15fc0dfb222161d"
+    }
+  ],
+  "inspection_status": "PENDING",
+  "documents": [
+    {
+      "source_md": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "source_sha256": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+      "source_html": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – paragraaf.html",
+      "html_sha256": "85eff0548ce75161a2935e2bb3d0bb470f30ec10e95996c670605574d89454b5",
+      "source_pdf": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+      "pdf_sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+      "assets": [
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_fig_1.svg",
+          "sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_fig_1.png",
+          "sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_fig_2.svg",
+          "sha256": "6db92ce413d2fa1598d1370ffd68468f7098df2d436cd92771588d655ca2855f"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_fig_2.png",
+          "sha256": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_fig_3.svg",
+          "sha256": "bcac77204f29ea2cd403b9b681179e07d1d8a2be9a278b1e17b5389b204a3270"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_fig_3.png",
+          "sha256": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_fig_4.svg",
+          "sha256": "425941c8e4f8fb413c6631fa9a37146d35c65714241059b4cc15f03582e92910"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_fig_4.png",
+          "sha256": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_we_1.svg",
+          "sha256": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_we_1.png",
+          "sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_1.svg",
+          "sha256": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_1.png",
+          "sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_2.svg",
+          "sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_2.png",
+          "sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_6.svg",
+          "sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_6.png",
+          "sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be"
+        }
+      ],
+      "zip": {
+        "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – paragraaf.zip",
+        "sha256": "e9d639f9119da0b118b58e9541f7d86ad9244960368cdaacc2f439b9c543d86f"
+      },
+      "proof_directory": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r21"
+    },
+    {
+      "source_md": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – opgaven.md",
+      "source_sha256": "df2cd3fe66af760b55b1f28a2f51ca9c7449b4f1704d5da278db064850eef002",
+      "source_html": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – opgaven.html",
+      "html_sha256": "87c55209dd450e989476f2f9779feb88de9fac9bbc77a0805112a444ffb65a06",
+      "source_pdf": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
+      "pdf_sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+      "assets": [
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_we_1.svg",
+          "sha256": "e6d3106ed30b5147637b706dafb017a3a1e86dcbb5aac3b306a52611d52d53df"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_we_1.png",
+          "sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_1.svg",
+          "sha256": "6eb6e1f12fffcf451343fae53cc3b64fabece18217596dead19c605d4aa9c751"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_1.png",
+          "sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_2.svg",
+          "sha256": "5530683348739f04ff3144f22236d0a8ea19c896b6db85be14e6a2be54d4575a"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_2.png",
+          "sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_6.svg",
+          "sha256": "8f8f96d930598be46c9fbe05f7364d1854c8ea286a226ffe45ba9f70303d2884"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_6.png",
+          "sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be"
+        }
+      ],
+      "zip": {
+        "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – opgaven.zip",
+        "sha256": "c72b108912247d2f190466f8bac4fdab54e001652097199d3939920739ae12e8"
+      },
+      "proof_directory": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-opgaven-94ebe5d35207-r21"
+    },
+    {
+      "source_md": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – antwoorden.md",
+      "source_sha256": "4ffcb70c96f2c0c178a06a6092ec6701c4323cc1ac697de4156bc7cf0d43b8b3",
+      "source_html": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – antwoorden.html",
+      "html_sha256": "be02782985485caca268df98af897104d78feec9737032cd14803c978a318a82",
+      "source_pdf": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+      "pdf_sha256": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90",
+      "assets": [
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_3.svg",
+          "sha256": "a00dcdb34738a3a92ebd332167d272789140543ab6c5b198fb8e45676d06a1ee"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_3.png",
+          "sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_4.svg",
+          "sha256": "e1c0784215cb837bbbe897f7058e4314674eb55dc1cc498e28565c5f9bd24ef3"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_4.png",
+          "sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_5.svg",
+          "sha256": "24aee3e1c36623209bcc8866b8f9436acc606b4ea3a149bc49e88c4b28703127"
+        },
+        {
+          "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\_assets\\2.1.2_ex_5.png",
+          "sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5"
+        }
+      ],
+      "zip": {
+        "path": "\\\\?\\C:\\wt\\book2-212-qc-20260906\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2 Opbrengsten, winst en break-even – antwoorden.zip",
+        "sha256": "575fe9051596241c1bd0a29b5ca40bdd3ad4a357f6fd387508277362abe7a28e"
+      },
+      "proof_directory": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-antwoorden-d55f1da66723-r21"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "pass": true,
+  "editions": [
+    {
+      "kind": "paragraaf",
+      "html_sha256": "85eff0548ce75161a2935e2bb3d0bb470f30ec10e95996c670605574d89454b5",
+      "pdf_sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+      "all_body_text_nodes_present_in_pdf": 252,
+      "whitespace_only_pdf_wrap_normalization": true,
+      "images": [
+        {
+          "asset": "2.1.2_fig_1.png",
+          "png_sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+          "actual_alt": "Theater: totale opbrengst per avond bij 0 tot 30 bezoekers.",
+          "alt_characters": 59,
+          "full_caption": "Eerst alleen TO: de lijn gaat door (0; 0) en (30; 150). De\nverticale as toont een totaalbedrag per avond, geen prijs per\nbezoeker.",
+          "caption_aria_hidden": null,
+          "line": 157
+        },
+        {
+          "asset": "2.1.2_fig_2.png",
+          "png_sha256": "ee95f92b882abb0a3fa80594480bcbdda8308e6c036672de3d9c46b23f4b0c93",
+          "actual_alt": "Theater: TO en TK op dezelfde assen; bij 10 bezoekers is de opbrengst lager dan de kosten.",
+          "alt_characters": 90,
+          "full_caption": "Voeg TK toe op precies dezelfde assen. De gestreepte\nkostenlijn begint bij 60. Bij Q = 10 ligt TO onder TK: de opbrengst is\nkleiner dan de kosten.",
+          "caption_aria_hidden": null,
+          "line": 310
+        },
+        {
+          "asset": "2.1.2_fig_3.png",
+          "png_sha256": "4b1a5809b5490ee288666d4507e007c2d1e52a35e9893e6cab100d94cbc67a7c",
+          "actual_alt": "Theater: break-even bij 20 bezoekers; links verlies en rechts winst binnen het model.",
+          "alt_characters": 85,
+          "full_caption": "Markeer nu het break-evenpunt (20; 100). Links ervan\nverlies, op het punt nul winst en rechts ervan winst; de schalen zijn\nniet veranderd.",
+          "caption_aria_hidden": null,
+          "line": 343
+        },
+        {
+          "asset": "2.1.2_fig_4.png",
+          "png_sha256": "5a20ffe7f598d1da05168f462ef7fe7859bf71f94fd0798bfa872f024eda3efd",
+          "actual_alt": "Theater: verticale winstafstand van 30 euro per avond bij 30 bezoekers, geen oppervlakte.",
+          "alt_characters": 89,
+          "full_caption": "Voeg bij Q = 30 het verticale verschil van € 30 toe. Winst\nis hier een afstand in euro per avond, niet een ingekleurde\noppervlakte.",
+          "caption_aria_hidden": null,
+          "line": 357
+        },
+        {
+          "asset": "2.1.2_we_1.png",
+          "png_sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+          "actual_alt": "Het volledige voorbeeld: TK en TO kruisen bij (3⅓; 23⅓). Het verticale verschil bij zes verhuringen is € 16 per dag.",
+          "alt_characters": 116,
+          "full_caption": "Het volledige voorbeeld: TK en TO kruisen\nbij (3⅓; 23⅓). Het verticale verschil bij zes verhuringen is € 16 per\ndag.",
+          "caption_aria_hidden": "true",
+          "line": 520
+        },
+        {
+          "asset": "2.1.2_ex_1.png",
+          "png_sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+          "actual_alt": "Zeep: TK en TO, break-even bij 3⅓ stukken en 8 euro verticale winstafstand bij 6 stukken per dag.",
+          "alt_characters": 97,
+          "full_caption": "Volledige steun bij zeep: het snijpunt ligt bij (3⅓; 13⅓).\nBij Q = 6 staan de hoogten 24 en 16; het verticale verschil is 8 euro\nper dag.",
+          "caption_aria_hidden": null,
+          "line": 586
+        },
+        {
+          "asset": "2.1.2_ex_2.png",
+          "png_sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+          "actual_alt": "Bloempotten: assen en TK-lijn als steun voor het toevoegen van TO, break-even en winstafstand.",
+          "alt_characters": 94,
+          "full_caption": "Minder steun: bij de bloempotten staan alleen de assen en TK\n= 15 + Q klaar. De opbrengstlijn en de interpretatie voeg je zelf\ntoe.",
+          "caption_aria_hidden": null,
+          "line": 608
+        },
+        {
+          "asset": "2.1.2_ex_6.png",
+          "png_sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+          "actual_alt": "Theatermodel: dezelfde winst van 30 euro per avond op verticale schalen tot 150 en 300 euro.",
+          "alt_characters": 92,
+          "full_caption": "Twee even hoge tekenvakken met hetzelfde theatermodel. Boven\nloopt de verticale schaal tot 150, onder tot 300. Vergelijk de bedragen,\nniet de lengte op papier.",
+          "caption_aria_hidden": null,
+          "line": 751
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "html_sha256": "87c55209dd450e989476f2f9779feb88de9fac9bbc77a0805112a444ffb65a06",
+      "pdf_sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+      "all_body_text_nodes_present_in_pdf": 141,
+      "whitespace_only_pdf_wrap_normalization": true,
+      "images": [
+        {
+          "asset": "2.1.2_we_1.png",
+          "png_sha256": "9b22799c8c672a4af5e6adee056d9933ef261124cd30a2724580ded2f944912b",
+          "actual_alt": "Het volledige voorbeeld: TK en TO kruisen bij (3⅓; 23⅓). Het verticale verschil bij zes verhuringen is € 16 per dag.",
+          "alt_characters": 116,
+          "full_caption": "Het volledige voorbeeld: TK en TO kruisen\nbij (3⅓; 23⅓). Het verticale verschil bij zes verhuringen is € 16 per\ndag.",
+          "caption_aria_hidden": "true",
+          "line": 154
+        },
+        {
+          "asset": "2.1.2_ex_1.png",
+          "png_sha256": "19c2f9a430891beba9a3b7a558a2d03e59ea6ab052ca0971dccd884f6c4c80b6",
+          "actual_alt": "Zeep: TK en TO, break-even bij 3⅓ stukken en 8 euro verticale winstafstand bij 6 stukken per dag.",
+          "alt_characters": 97,
+          "full_caption": "Volledige steun bij zeep: het snijpunt ligt bij (3⅓; 13⅓).\nBij Q = 6 staan de hoogten 24 en 16; het verticale verschil is 8 euro\nper dag.",
+          "caption_aria_hidden": null,
+          "line": 220
+        },
+        {
+          "asset": "2.1.2_ex_2.png",
+          "png_sha256": "352c6cfcab196affb047a1c0c6f991a03aa9721ca83f094b2eea725dcccca1aa",
+          "actual_alt": "Bloempotten: assen en TK-lijn als steun voor het toevoegen van TO, break-even en winstafstand.",
+          "alt_characters": 94,
+          "full_caption": "Minder steun: bij de bloempotten staan alleen de assen en TK\n= 15 + Q klaar. De opbrengstlijn en de interpretatie voeg je zelf\ntoe.",
+          "caption_aria_hidden": null,
+          "line": 242
+        },
+        {
+          "asset": "2.1.2_ex_6.png",
+          "png_sha256": "abc172853abbd9fcd81cae5c2bc18cdf934d0eb10e59b93dcfcfb93febb194be",
+          "actual_alt": "Theatermodel: dezelfde winst van 30 euro per avond op verticale schalen tot 150 en 300 euro.",
+          "alt_characters": 92,
+          "full_caption": "Twee even hoge tekenvakken met hetzelfde theatermodel. Boven\nloopt de verticale schaal tot 150, onder tot 300. Vergelijk de bedragen,\nniet de lengte op papier.",
+          "caption_aria_hidden": null,
+          "line": 385
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "html_sha256": "be02782985485caca268df98af897104d78feec9737032cd14803c978a318a82",
+      "pdf_sha256": "d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90",
+      "all_body_text_nodes_present_in_pdf": 164,
+      "whitespace_only_pdf_wrap_normalization": true,
+      "images": [
+        {
+          "asset": "2.1.2_ex_3.png",
+          "png_sha256": "8237cb2e4af75b3cb08c81473afd29fabc6ef5ca55eaaf3d7b979e2c28f0d643",
+          "actual_alt": "Opgave 4: de zelf toegevoegde TO-lijn kruist TK bij (5; 20). Bij acht potten is de verticale winstafstand € 9 per dag.",
+          "alt_characters": 118,
+          "full_caption": "Opgave 4: de zelf toegevoegde TO-lijn\nkruist TK bij (5; 20). Bij acht potten is de verticale winstafstand € 9\nper dag.",
+          "caption_aria_hidden": "true",
+          "line": 112
+        },
+        {
+          "asset": "2.1.2_ex_4.png",
+          "png_sha256": "a93a2f8999a12f5f6f683070d5d6b1817b9f12d4ead7a560739f620029188f33",
+          "actual_alt": "Minigolf: TK, TO, break-even en zones; verticale winstafstand bij 20 bezoekers per dag.",
+          "alt_characters": 87,
+          "full_caption": "Opgave 6: een zelfstandig gemaakte grafiek bevat twee\nbenoemde assen, twee gelabelde lijnen, break-even, zones en de verticale\nwinstafstand bij Q = 20.",
+          "caption_aria_hidden": null,
+          "line": 231
+        },
+        {
+          "asset": "2.1.2_ex_5.png",
+          "png_sha256": "9076e7f28d59a8dff89059771f82e26b982861d0088628c33deac635126edff5",
+          "actual_alt": "Bakkerij: TK en TO, break-even rond 714,29 broden en 200 euro verticale winstafstand bij 1.000 broden per maand.",
+          "alt_characters": 112,
+          "full_caption": "De doeloefening: het snijpunt ligt ongeveer bij (714,29;\n1.071,43). Bij Q = 1.000 verbindt een verticale afstand de hoogten 1.300\nen 1.500; dat verschil is € 200 per maand.",
+          "caption_aria_hidden": null,
+          "line": 258
+        }
+      ]
+    }
+  ],
+  "scope": "Actual native alternatives, captions and embedded bytes; semantic adequacy personally judged separately, not length alone."
+}
