@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "git",
+    "-c",
+    "core.whitespace=cr-at-eol",
+    "diff",
+    "--check",
+    "c96f126738b5e45d0d1c74e68efc35b7bd33c5dc",
+    "d54e0ff0afc517a3910fdbd9a276ae03bdbf9bcd"
+  ],
+  "cwd": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T04:19:45.879887+00:00",
+  "finished_at": "2026-09-06T04:19:46.014428+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "inherited_path_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "environment_overrides": null
+}

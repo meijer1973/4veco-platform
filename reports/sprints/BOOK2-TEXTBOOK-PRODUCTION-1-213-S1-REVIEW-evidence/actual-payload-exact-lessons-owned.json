@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "--cwd",
+    "C:\\wt\\book2-213-s1-review-20260906\\4veco-lessen",
+    "--lane",
+    "textbook",
+    "--base",
+    "42996c60b4a93843dfe8488b8e5a3ea704871667",
+    "--head",
+    "42996c60b4a93843dfe8488b8e5a3ea704871667",
+    "--json"
+  ],
+  "cwd": "C:\\wt\\book2-213-s1-review-20260906\\4veco-platform",
+  "started_at": "2026-09-06T04:19:45.344382+00:00",
+  "finished_at": "2026-09-06T04:19:45.410224+00:00",
+  "exit_code": 1,
+  "stdout": "{\n  \"ok\": false,\n  \"lane\": \"textbook\",\n  \"categories\": {\n    \"partA_textbook\": [],\n    \"partB_companion\": [],\n    \"shared_platform\": [],\n    \"generated_indexes\": [],\n    \"review_evidence\": [],\n    \"unknown\": []\n  },\n  \"qualityRefChanges\": [],\n  \"failures\": [\n    \"no changed paths to classify\",\n    \"textbook lane needs at least one Part A textbook change\"\n  ],\n  \"warnings\": [],\n  \"exception\": {\n    \"present\": false,\n    \"ok\": false,\n    \"failures\": []\n  }\n}\n",
+  "stderr": "",
+  "stdout_sha256": "4c02bfdd668840bc5851a4ce04a6ff67c2f278c4d81790d9d144845707117971",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "inherited_path_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "environment_overrides": null
+}
