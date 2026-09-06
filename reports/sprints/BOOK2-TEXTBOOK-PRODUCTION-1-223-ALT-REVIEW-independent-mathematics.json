@@ -1,0 +1,191 @@
+{
+  "pass": true,
+  "frozen_target": {
+    "id": "2.2.3",
+    "module": 2,
+    "chapter": 2,
+    "paragraph": 3,
+    "paragraph_title": "Inkomenselasticiteit en kruislingse elasticiteit",
+    "difficulty": "MEDIUM",
+    "target_exercise": {
+      "context": "Gebruik steeds de oude waarde als noemer. Voor inkomenselasticiteit geldt Ei=%ΔQv/%ΔY. De drie gebruikte categorieën zijn: Ei<0 inferieur goed, 0<Ei<1 normaal goed en Ei>1 luxegoed; Ei=0 en Ei=1 zijn grenswaarden. Voor kruislingse elasticiteit geldt Ek=%ΔQv van goed X/%ΔP van een ander goed Z. Noem bij Ek altijd beide goederen.",
+      "sources": [
+        {
+          "id": "inkomen",
+          "content": "Het gemiddelde inkomen stijgt 5%. De vraag naar maaltijdpakketten stijgt 8%; de vraag naar budgetnoedels daalt 3%."
+        },
+        {
+          "id": "koffie",
+          "content": "De koffieprijs stijgt 10%. De vraag naar thee stijgt 4%; de vraag naar koffiefilters daalt 6%."
+        },
+        {
+          "id": "functie",
+          "content": "Voor fitnessdienst X geldt Qx=100−2Px+0,5Pz+0,01Y. Qx is het aantal gevraagde abonnementen per maand, Px en Pz zijn maandprijzen in euro van fitnessdienst X en concurrerende sportdienst Z, en Y is het gemiddelde jaarinkomen in euro. Beginsituatie: Px=10, Pz=20 en Y=30.000."
+        }
+      ],
+      "subquestions": [
+        {
+          "label": "a",
+          "points": 3,
+          "prompt": "Bereken met bron inkomen Ei voor maaltijdpakketten en budgetnoedels."
+        },
+        {
+          "label": "b",
+          "points": 2,
+          "prompt": "Classificeer beide goederen met de drie categorieën uit de context."
+        },
+        {
+          "label": "c",
+          "points": 4,
+          "prompt": "Bereken met bron koffie Ek voor de vraag naar thee ten opzichte van de koffieprijs en voor de vraag naar koffiefilters ten opzichte van de koffieprijs. Noem teller- en noemergoed en classificeer de relaties."
+        },
+        {
+          "label": "d",
+          "points": 4,
+          "prompt": "Bereken Qx in de beginsituatie en nadat alleen Y stijgt naar 33.000. Bereken daarna %ΔQx, Ei en classificeer fitnessdienst X. Leg uit wat met Qx gebeurt en welke variabelen gelijk blijven."
+        },
+        {
+          "label": "e",
+          "points": 3,
+          "prompt": "Zet Y terug op 30.000. Bereken Qx nadat alleen Pz stijgt van 20 naar 24. Leg uit welke richting het verband tussen Pz en Qx heeft en welke variabelen gelijk blijven."
+        }
+      ]
+    },
+    "lesson_goals": [
+      "Je kunt Ei berekenen en een goed classificeren als inferieur goed, normaal goed of luxegoed.",
+      "Je kunt Ek berekenen, beide goederen noemen en substituten of complementen herkennen.",
+      "Je kunt een vraagfunctie met meerdere variabelen gebruiken terwijl de overige variabelen gelijk blijven.",
+      "Je kunt uit twee functie-uitkomsten afleiden hoe één veranderde variabele samenhangt met Q terwijl de andere variabelen gelijk blijven."
+    ],
+    "required_skills": [
+      "A04",
+      "A15",
+      "A16",
+      "A17",
+      "D11",
+      "D12",
+      "D27"
+    ],
+    "prior_knowledge_assumed": [
+      "A04 and D27 are retrieval-required; A15 from §2.2.1 supplies the percentage-change procedure; Ei and Ek are new formal learning."
+    ],
+    "new_skills_introduced": [
+      "A16",
+      "A17",
+      "D11",
+      "D12"
+    ],
+    "missing_units_flagged": [
+      "A16 and D12 use stale Ekr/kruiselasticiteit wording. This candidate follows the authored authority: kruislingse elasticiteit with notation Ek; CvTE specifies the term but no abbreviation.",
+      "A17 depends on A15, which is explicitly retrieved from §2.2.1.",
+      "A15, A16 and A17 carry broad A2.5 metadata, but this target contains no percentage-point operation and does not claim A2.5 coverage."
+    ],
+    "exam_codes": [
+      "A2.4",
+      "D1.7",
+      "D1.8",
+      "D1.9"
+    ],
+    "difficulty_notes": "Kandidaat voor circa 11 minuten. De bronpercentages leveren luxe en inferieur; de inkomensmutatie in de functie levert aanvullend de categorie normaal. De laatste functie-invulling vraagt richting en gelijkblijvende variabelen.",
+    "answer_form_expectations": [
+      "Ei inclusief teken",
+      "driewegclassificatie",
+      "Ek met benoemde goederen",
+      "functie-invulling met Ei-normaalclassificatie en een functie-invulling met richting"
+    ],
+    "short_answer_model": {
+      "a": "Maaltijdpakketten: Ei=+8%/+5%=+1,6. Budgetnoedels: Ei=−3%/+5%=−0,6.",
+      "b": "Maaltijdpakketten: luxegoed (Ei>1). Budgetnoedels: inferieur goed (Ei<0).",
+      "c": "Theevraag ten opzichte van koffieprijs: Ek=+4%/+10%=+0,4, dus thee en koffie zijn substituten. Vraag naar koffiefilters ten opzichte van koffieprijs: Ek=−6%/+10%=−0,6, dus koffiefilters en koffie zijn complementen.",
+      "d": "Qx oud=100−20+10+300=390 abonnementen per maand. Bij Y=33.000: Qx=420. %ΔQx=(420−390)/390×100%=7,69% en %ΔY=(33.000−30.000)/30.000×100%=10%. Ei=7,69%/10%=0,769, dus fitnessdienst X is hier een normaal goed. Qx stijgt met 30; Px en Pz blijven gelijk.",
+      "e": "Na reset geldt Qx=390. Bij Pz=24: Qx=100−20+12+300=392 abonnementen per maand. Een hogere prijs van sportdienst Z hangt in deze functie samen met een hogere vraag naar fitnessdienst X; Px en Y blijven gelijk."
+    },
+    "source_ref": "references/owned/course-blueprint-v5.md §2.2.3",
+    "paragraph_kind": "theory",
+    "introduces_new_theory": true,
+    "record_status": "candidate_review_ready",
+    "v5_migration": {
+      "source_status": "candidate_review_ready",
+      "from_v4_id": "2.1.3",
+      "related_v4_ids": [],
+      "review_required_before_final": true
+    }
+  },
+  "ratio_cases": 18,
+  "function_chains": [
+    {
+      "context": "W3",
+      "baseline_Yonly_reset_Pzonly": [
+        "200",
+        "230",
+        "204"
+      ],
+      "Ei_exact": "3/4",
+      "rejected_wrong_units_new_base_no_reset_coefficient_as_Ei": true
+    },
+    {
+      "context": "G2/O4",
+      "baseline_Yonly_reset_Pzonly": [
+        "160",
+        "180",
+        "162"
+      ],
+      "Ei_exact": "5/8",
+      "rejected_wrong_units_new_base_no_reset_coefficient_as_Ei": true
+    },
+    {
+      "context": "G3/O5",
+      "baseline_Yonly_reset_Pzonly": [
+        "200",
+        "220",
+        "205"
+      ],
+      "Ei_exact": "1/2",
+      "rejected_wrong_units_new_base_no_reset_coefficient_as_Ei": true
+    },
+    {
+      "context": "I2/O8",
+      "baseline_Yonly_reset_Pzonly": [
+        "180",
+        "200",
+        "184"
+      ],
+      "Ei_exact": "5/9",
+      "rejected_wrong_units_new_base_no_reset_coefficient_as_Ei": true
+    },
+    {
+      "context": "target9d/e",
+      "baseline_Yonly_reset_Pzonly": [
+        "390",
+        "420",
+        "392"
+      ],
+      "Ei_exact": "10/13",
+      "rejected_wrong_units_new_base_no_reset_coefficient_as_Ei": true
+    }
+  ],
+  "five_subtotals": [
+    3,
+    2,
+    4,
+    4,
+    3
+  ],
+  "total_points": 16,
+  "Ei_boundaries_unlabelled": true,
+  "annual_Y_reset_old_base_and_dimensionless_ratios": true,
+  "combined_change_counterexample_rejected": true,
+  "complete_native_MD_matches_full_sources_and_target_serialization": true,
+  "bonus_full_answer_and_four_explicit_criteria_personally_checked": true,
+  "closing": [
+    "Ev=-0.5; Ei undefined with no income change",
+    "40 -> 42 bookings/week, Px=5 fixed"
+  ],
+  "route_minutes": {
+    "core": 54,
+    "core_and_support": 69,
+    "all": 81,
+    "status": "UNOBSERVED"
+  },
+  "coverage_basis": "Reviewer personally read entire theory/exercises/answers/target answers/current target and complete plan; arithmetic is independently recomputed, not a transferred original test result."
+}

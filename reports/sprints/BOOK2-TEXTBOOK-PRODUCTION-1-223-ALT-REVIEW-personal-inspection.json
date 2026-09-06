@@ -1,0 +1,630 @@
+{
+  "actor": "paragraph_224_builder",
+  "role": "223independentDeltaParagraphReviewer",
+  "method": "Personally opened every listed full-page image at original detail, not contact sheets; independently opened all four native figures in color and grayscale. Tool displayed figure 1/3/4 slightly resized, while final placed figures were separately inspected on full pages. No physical classroom or screen-reader/PDF-UA certification.",
+  "manual_observations_raw_sha256": "ed1abf91739a9affd0ae9423b470237d769959fa2940a6b9668899d25be00788",
+  "pages": [
+    {
+      "kind": "paragraaf",
+      "page": 1,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-001.png",
+        "raw_sha256": "b7366b3949b77bea438487125fa7ad150cf4907acff456f35f8293c292dca2e4",
+        "personal_observation": "Opening, four goals and printed retrieval are readable; ceteris-paribus and positive-base conditions remain visible."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-001.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-001.png",
+        "raw_sha256": "78e34a78d631da3278bfff572bb011cf449f289d8a60c4f0c18a9d87aa7077da",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Title hierarchy and pale recall box retain contrast; all opening text and footer remain legible."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 2,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-002.png",
+        "raw_sha256": "7b60b29e71112380498d52a744a2a97bedbbdf10c84469717eb5a5188c58de94",
+        "personal_observation": "Income table and six proportional bars share signed percentages and goods; no crowded labels."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-002.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-002.png",
+        "raw_sha256": "0bca93219a38dadbe36c0a089bae0924d2e542059fb9fe1f329e8f6ee2edbbfc",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Solid versus hatched bars, zero line and signed direct values remain distinguishable without color."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 3,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-003.png",
+        "raw_sha256": "d58591dcacda670565ca5c1ec466225f5276596dfc8a9c88e98b553d2daa6ad9",
+        "personal_observation": "Three strict Ei categories and open 0/1 markers agree; full figure-2 caption remains visible."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-003.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-003.png",
+        "raw_sha256": "8c7dd2e7fd761a215417cdc55caf7a097e5bcdd0bebd3a800cb1eae3df3e5e4a",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Open circles, dashed boundaries and strict inequality labels survive grayscale; warning box is clear."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 4,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-004.png",
+        "raw_sha256": "1a44e6d7bd5e37dc4c9543035184e52071477027ec8db3ae5513666d2a76beef",
+        "personal_observation": "Two named-goods Ek table rows fit; definition and economic explanations are complete."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-004.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-004.png",
+        "raw_sha256": "3e73e355050dbd459e8d241997c51fd431d74c33b8f3b6757d1eb6074b7f8479",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Both table rows and denominator-good emphasis remain distinct in grayscale; no lost signs."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 5,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-005.png",
+        "raw_sha256": "4d2efeef982a923a3e1a8d1ea4436f7e6d806587f00b6b7ecf9b24c894ae36ff",
+        "personal_observation": "Full figure-3 fractions name responding quantities and other price; own-price conditions fit."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-005.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-005.png",
+        "raw_sha256": "ebed77528107e700c25967d73eb454c0b537255c22479e82ca6a31ed88d0c434",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Fraction rules and two panel outlines remain visible; all long goods labels have clear separation."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 6,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-006.png",
+        "raw_sha256": "42ff63b670575c8a5b88df1ccd8054e977ee7c159a23f0d93ae2fd4055e24299",
+        "personal_observation": "Annual Y/no division by 12, coefficient warning and substitution recall precede worked example."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-006.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-006.png",
+        "raw_sha256": "31815d54a5d15a02407dacd7a508e539b1f5714ce2c4fc96fb9f9476604d2360",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Recall and combined-input warning are readable without colored borders; W1 classification is intact."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 7,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-007.png",
+        "raw_sha256": "517aee1b7eb4049dbc03d24d9ea9144e7d9c23eea54b63f4f3518410bfd2d399",
+        "personal_observation": "Worked two-good example and function steps 1/2 lead into complete three-row table."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-007.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-007.png",
+        "raw_sha256": "83c8544aa4fc7cad33276c87056ccaa8c415e8e267a9220e170614332a947373",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Monthly versus annual units and all 200/230/204 table values remain readable; no row collision."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 8,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-008.png",
+        "raw_sha256": "b584d2ee68328f4097ccb3b473794348eacbf6c78c21ee176e4487ad886010fc",
+        "personal_observation": "Complete figure-4 reset panels, caption and steps 3-5 fit; unchanged inputs are explicit."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-008.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-008.png",
+        "raw_sha256": "1d6a24c10457838d3a4c9ccede5984ed5364d71c459ad9ce0c0bf1d782d22818",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Scenario boundaries and words gelijk/verandert/weer begin remain legible without color cues."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 9,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-009.png",
+        "raw_sha256": "002ac1d25f4c85eab427202cb6dcb36acc92008b0a4d664a933acae4143ae20e",
+        "personal_observation": "Five-bullet recap precedes neutral Start route; complete O1/O2 questions fit."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-009.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-009.png",
+        "raw_sha256": "7c0db7f4c0c5bc294a035b0db53c36d5b16f6528c52ce85635cb99b22ef7aeeb",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Recap hierarchy, arrows, signed formula and Start question labels retain contrast."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 10,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-010.png",
+        "raw_sha256": "02c5034be29baa1fce9538fdf4d55b0577540d52f01014791bcc2878fcd38ecc",
+        "personal_observation": "Optional support is clearly additional; O3 preserves first demonstrated ratio then fades."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-010.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-010.png",
+        "raw_sha256": "86276e276188280fd4ed3336ad814d46019d2f5514a14441136c0beed986d3c6",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Reminder box is distinguishable; negative percentage and remaining goods instructions are legible."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 11,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-011.png",
+        "raw_sha256": "3a1703d5849281ee25d6ea6e806255c031666378b975b15a1b120cb985718a1d",
+        "personal_observation": "O4 partial function/percentage frames and O5 unfilled route keep full givens and units."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-011.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-011.png",
+        "raw_sha256": "29baf12f9343cb6ec530aa6f53cb8d7ee719e9fa4b09ca6e4617c2199a464944",
+        "old_QC_raw_equal": true,
+        "personal_observation": "All percentage frames and O5 reset instructions are readable; no reliance on colored hints."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 12,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-012.png",
+        "raw_sha256": "97c3814148325ae31102f057722d2940cb637846558de828c428664215771a94",
+        "personal_observation": "O6 controlled four-row table stays with all four interpretation questions."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-012.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-012.png",
+        "raw_sha256": "ebf6f8a3eb17c1be7f8d1e02c761c249c8f64666d33763ba7355301124ac8a17",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Table grid and 200/210/205/215 values remain distinct; source not confused with answer arrows."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 13,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-013.png",
+        "raw_sha256": "ae3983d5735bd0cb1221d549b7efa286dde7ce349854881b1478f4efa3dec315",
+        "personal_observation": "Independent O7 and O8 have full data and conditions, no answer values or supplied procedure."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-013.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-013.png",
+        "raw_sha256": "96a5604da4e9830b7c48ee6c34942fa01baba9427cbcebbea84ab742071f3e6d",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Both independent blocks and all signed givens stay legible with ample working-space margin."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 14,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-014.png",
+        "raw_sha256": "b65a0ed32fe7adf10cbecc2c10ebc44c30d3e99245e0fa9d82c8a9c690e650b1",
+        "personal_observation": "Whole fixed 16-point target, three sources and five prompts fit on one page without answer cue."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-014.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-014.png",
+        "raw_sha256": "60515e69f2f9d9079146688a53919d7bd3970d9ef39e39316bf8343759c0be14",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Target labels, points, annual Y and reset prompt remain clear; no clipped final line."
+      }
+    },
+    {
+      "kind": "paragraaf",
+      "page": 15,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-paragraaf-ca27f8bd6cbb-r22/pages/page-015.png",
+        "raw_sha256": "98c5a06687663c0090aba1aae22774fe87c65c7a06cc7d9074f7873c53a9aee7",
+        "personal_observation": "Genuine bonus and two closing retrieval questions are complete, with optional/hw route clear."
+      },
+      "grayscale": {
+        "kind": "paragraaf",
+        "page": "page-015.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/paragraaf-page-015.png",
+        "raw_sha256": "9ebd0baf8ec7574df106dca3128a170c0259891095177de1eaae5203e14d260b",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Bonus versus closing headings, quotes and two retrieval blocks remain legible in grayscale."
+      }
+    },
+    {
+      "kind": "opgaven",
+      "page": 1,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-opgaven-50cf2bbeaa19-r22/pages/page-001.png",
+        "raw_sha256": "ad28636a613509e762f0a03db9e6e743b3855e8e5a1d44a51f4e15ea05dbce06",
+        "personal_observation": "Separate edition opens with complete W1/W2 and W3 givens; title/footer correct."
+      },
+      "grayscale": {
+        "kind": "opgaven",
+        "page": "page-001.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/opgaven-page-001.png",
+        "raw_sha256": "f9bef1a873ff7b8c6082a695a6af31c83525e479ea952aba541e0a01f965a5ba",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Worked signed ratios and goods labels retain contrast; no orphaned W3 heading."
+      }
+    },
+    {
+      "kind": "opgaven",
+      "page": 2,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-opgaven-50cf2bbeaa19-r22/pages/page-002.png",
+        "raw_sha256": "1b4243e42f49ccdf3328600fb103af97f8e25657fa80607422b4213de10d965e",
+        "personal_observation": "Function steps 1/2, table and entire figure-4 with full caption fit on the same page."
+      },
+      "grayscale": {
+        "kind": "opgaven",
+        "page": "page-002.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/opgaven-page-002.png",
+        "raw_sha256": "22e03d6ff4031155f93693a4ec49e7a3cea37c11405c9beab15678cf85f22bee",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Scenario panels, units and reset wording remain distinct; figure caption is readable."
+      }
+    },
+    {
+      "kind": "opgaven",
+      "page": 3,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-opgaven-50cf2bbeaa19-r22/pages/page-003.png",
+        "raw_sha256": "980173eec3c6c7284e2e7c4269d2bf03950f19c1d36e6ae012f0df46c4e4a387",
+        "personal_observation": "Steps 3-5, reset warning and full five-bullet recap are intact."
+      },
+      "grayscale": {
+        "kind": "opgaven",
+        "page": "page-003.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/opgaven-page-003.png",
+        "raw_sha256": "1401bf7e006bff80573d3e31aebf6c5c1b84b28b494996c43f80f2fb248f8631",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Warning and recap boxes remain separately identifiable and readable without color."
+      }
+    },
+    {
+      "kind": "opgaven",
+      "page": 4,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-opgaven-50cf2bbeaa19-r22/pages/page-004.png",
+        "raw_sha256": "d3963e513ac19b595f58308b85887c00ed9885cb86a6af1d133a5f40e396ab69",
+        "personal_observation": "All O1/O2 Start checks and neutral teacher-support route fit."
+      },
+      "grayscale": {
+        "kind": "opgaven",
+        "page": "page-004.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/opgaven-page-004.png",
+        "raw_sha256": "5ac30ab2ee4ea5a82ea052e4b1f9cd99c21981e20fdecdb77992e7dbb9aeefd1",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Question letters, percentages and own-price condition remain clear."
+      }
+    },
+    {
+      "kind": "opgaven",
+      "page": 5,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-opgaven-50cf2bbeaa19-r22/pages/page-005.png",
+        "raw_sha256": "b650610f50b04af50b3316be91f371e21701dd484426d195c91b9a9e731f9d03",
+        "personal_observation": "O3 optional fading route remains explicit; extra time is not hidden in core."
+      },
+      "grayscale": {
+        "kind": "opgaven",
+        "page": "page-005.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/opgaven-page-005.png",
+        "raw_sha256": "e587142bf00f355e2de6b29a6ad8303d94e08b574cf3f82eab5706541968f64b",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Recall panel and first model ratio are legible; remaining independent goods labels are visible."
+      }
+    },
+    {
+      "kind": "opgaven",
+      "page": 6,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-opgaven-50cf2bbeaa19-r22/pages/page-006.png",
+        "raw_sha256": "dd2f40669daa814b4d8e220c00051d54974d5c1b171970235d18db88f9b23a4e",
+        "personal_observation": "O4 supported chain and O5 genuinely unfilled chain both complete."
+      },
+      "grayscale": {
+        "kind": "opgaven",
+        "page": "page-006.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/opgaven-page-006.png",
+        "raw_sha256": "7a30581739f4529fd2acb08ba1fd100ee7091d4e16b39f1446f848a49b4e2fd9",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Long equations and percentage frames fit; faded O5 contains no colored answer cue."
+      }
+    },
+    {
+      "kind": "opgaven",
+      "page": 7,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-opgaven-50cf2bbeaa19-r22/pages/page-007.png",
+        "raw_sha256": "60c3b91eac06977b7bcb011897caecbcddaa77c23c606425330f4a03cc146f77",
+        "personal_observation": "O6 table and four combined-change questions stay together."
+      },
+      "grayscale": {
+        "kind": "opgaven",
+        "page": "page-007.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/opgaven-page-007.png",
+        "raw_sha256": "ec09c2b6c3bc7730e98f447325e3841ba3503857f3b7b3fc441b292420a9467e",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Four table rows and controlled comparison text remain unambiguous in grayscale."
+      }
+    },
+    {
+      "kind": "opgaven",
+      "page": 8,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-opgaven-50cf2bbeaa19-r22/pages/page-008.png",
+        "raw_sha256": "381c23bf3c62ec2dcb352ea11a98409b10ea760b6e386cf438ffbde6a1069ad0",
+        "personal_observation": "Independent O7/O8 questions retain all givens, unit periods and reset."
+      },
+      "grayscale": {
+        "kind": "opgaven",
+        "page": "page-008.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/opgaven-page-008.png",
+        "raw_sha256": "1c28f77fc1358de04fca963bf520d80effc5b70e92c4d942e99b993d3db35ad0",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Signs and annual-income entries remain clear; no missing lines or collisions."
+      }
+    },
+    {
+      "kind": "opgaven",
+      "page": 9,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-opgaven-50cf2bbeaa19-r22/pages/page-009.png",
+        "raw_sha256": "c92fd39508d031bb617fd19009602092e1ed1e51577f88171d7d42283b68f9a8",
+        "personal_observation": "Complete target 9 is identical in meaning and points to paragraph p14."
+      },
+      "grayscale": {
+        "kind": "opgaven",
+        "page": "page-009.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/opgaven-page-009.png",
+        "raw_sha256": "99ceb725c9b035954bc0be9da0762490cb344825195d861defc2ddcbac8e0957",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Five prompts, source labels and point labels are readable in grayscale."
+      }
+    },
+    {
+      "kind": "opgaven",
+      "page": 10,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-opgaven-50cf2bbeaa19-r22/pages/page-010.png",
+        "raw_sha256": "476ce38e390159d37f8132379ba9065d89f9e898df12b76a8e13c7457c62f583",
+        "personal_observation": "Bonus and closing are complete and separated from the short route."
+      },
+      "grayscale": {
+        "kind": "opgaven",
+        "page": "page-010.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/opgaven-page-010.png",
+        "raw_sha256": "bddc7c030954b77b03b801a38f67483ec4713ef8f0c406eca1a957b95b2eda16",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Bonus claims and O11/O12 retrieval remain readable with correct footer."
+      }
+    },
+    {
+      "kind": "antwoorden",
+      "page": 1,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-antwoorden-30cd682358c5-r22/pages/page-001.png",
+        "raw_sha256": "f1431ef12d232686db986daa76050fe865ab24e0f98a13c2d3b04fd3fc812332",
+        "personal_observation": "Rounding/unit guidance and complete O1/O2 reasoning fit; old bases and own-price held fixed."
+      },
+      "grayscale": {
+        "kind": "antwoorden",
+        "page": "page-001.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/antwoorden-page-001.png",
+        "raw_sha256": "6627297e5b2adeeb0b46a9efe53fc849770f47ce85f31633f8c3b8a3e6e4317f",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Signed fractions and retrieval feedback remain legible; no truncated answer sentence."
+      }
+    },
+    {
+      "kind": "antwoorden",
+      "page": 2,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-antwoorden-30cd682358c5-r22/pages/page-002.png",
+        "raw_sha256": "75844b51d401c9edef9f76c6c442249503a9f654f06fdc17fe469fd7cdbe4d62",
+        "personal_observation": "O3 named-goods answers and O4 160/180/162 chain show reasons and units."
+      },
+      "grayscale": {
+        "kind": "antwoorden",
+        "page": "page-002.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/antwoorden-page-002.png",
+        "raw_sha256": "438f60b4ed767bc8618ce0af65a55fa59bb8d1ffa7c05e240086a60e194c010e",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Long calculations remain readable; no fraction/sign or point-label collisions."
+      }
+    },
+    {
+      "kind": "antwoorden",
+      "page": 3,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-antwoorden-30cd682358c5-r22/pages/page-003.png",
+        "raw_sha256": "83af2d3018f01977f7e9eac95357af24654cd2a7606ff6e38ad9a20ac84d2a62",
+        "personal_observation": "O5 200/220/205 reset and O6 10/5/15 interpretation are fully explained."
+      },
+      "grayscale": {
+        "kind": "antwoorden",
+        "page": "page-003.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/antwoorden-page-003.png",
+        "raw_sha256": "4bd43aba7668a713a9489c3674e8423f8f6fbeeeb5f593ddf3fbd0fb0ef2d3e7",
+        "old_QC_raw_equal": true,
+        "personal_observation": "All fixed-input and combined-attribution explanations remain clear without color."
+      }
+    },
+    {
+      "kind": "antwoorden",
+      "page": 4,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-antwoorden-30cd682358c5-r22/pages/page-004.png",
+        "raw_sha256": "cd79f2d4310f20655aa26ac7bb9b552301d821bf944502c2cc1400bdf38c3aaf",
+        "personal_observation": "O7 ratios/classes and O8 exact 5/9 before 0.56 plus 184 reset are complete."
+      },
+      "grayscale": {
+        "kind": "antwoorden",
+        "page": "page-004.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/antwoorden-page-004.png",
+        "raw_sha256": "5cbd48c0c40e91a0823726938afb13305263e57e14a04b1c21847b951bc65bb8",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Exact fraction, final rounding and direction/units remain readable."
+      }
+    },
+    {
+      "kind": "antwoorden",
+      "page": 5,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-antwoorden-30cd682358c5-r22/pages/page-005.png",
+        "raw_sha256": "be425cf9f17dd9e4b739783056a63b9420dd55b0d0a58ec7187f6b90a8c06d65",
+        "personal_observation": "Target a-c model and explicit 3/2/4 point allocations fit with named numerator/denominator goods."
+      },
+      "grayscale": {
+        "kind": "antwoorden",
+        "page": "page-005.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/antwoorden-page-005.png",
+        "raw_sha256": "71a76def2e82b964877033a53f963ccf1912f7bf5ccad332c47bb1e0ca5a209d",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Bold goods names and point labels remain clear; no merging of value and points."
+      }
+    },
+    {
+      "kind": "antwoorden",
+      "page": 6,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-antwoorden-30cd682358c5-r22/pages/page-006.png",
+        "raw_sha256": "ff465ba581b3eb38f9cd1e713efe6a72f2fe1425738201a847162780ac5c0969",
+        "personal_observation": "Target d-e exact 10/13 chain, annual Y, 390/420/392 and 4/3 point allocations are complete."
+      },
+      "grayscale": {
+        "kind": "antwoorden",
+        "page": "page-006.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/antwoorden-page-006.png",
+        "raw_sha256": "c2f7f6b46a87ae59925c35929c5ffe6c65f5f09db482f74da6fe217b8828e040",
+        "old_QC_raw_equal": true,
+        "personal_observation": "All long target workings and fixed-variable criteria remain legible; final reset compares 392 with 390."
+      }
+    },
+    {
+      "kind": "antwoorden",
+      "page": 7,
+      "color": {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/223-antwoorden-30cd682358c5-r22/pages/page-007.png",
+        "raw_sha256": "3bfa11bf2b5a0dcc3238b77fbc31021fbf53edbeecbc7fd9641da55cac6bde19",
+        "personal_observation": "Bonus full model with four explicit criteria and both closing answers are complete."
+      },
+      "grayscale": {
+        "kind": "antwoorden",
+        "page": "page-007.png",
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/antwoorden-page-007.png",
+        "raw_sha256": "34f654a59506a324c80e99ebce1f9d4bdaf72b13e26b9a380636391696cec84c",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Four criteria bullets and O11/O12 answers remain separated and readable; no glyph loss."
+      }
+    }
+  ],
+  "figures": [
+    {
+      "number": 1,
+      "svg_sha256": "51b83ba543581f28030ec75ed4bca51f964837f85772076a8e4e9261620ea974",
+      "png_sha256": "0b401e098bb2f56bb86663de908402a048a12a4b599b368e3489dc11bea95b65",
+      "pixels_sha256": "c8a8b5d6ab86451d97e7049862b2884f7be84cd50e239afe5590858ec36cb594",
+      "gray_pixels_sha256": "c09f0cf9f0f1033f01be71a7ce725c28e00dea07a5d7da6ed4ed626e7edc28f4",
+      "color_personal_observation": "Common percent axis has exact -5/0/5/10/15 ticks; Y=+10 and Q=+15/-5/+5 bars align.",
+      "grayscale": {
+        "kind": "figure",
+        "number": 1,
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/figure-1.png",
+        "raw_sha256": "0752b9d045622a0a6088f4089d3403c4ac5538f5fa556fa9945f74a8b3c8f02a",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Hatching distinguishes Q from solid Y; signs and zero origins retain complete meaning."
+      }
+    },
+    {
+      "number": 2,
+      "svg_sha256": "dbe07d11e771367a2bc55906448cbe3f484e312731602806915a3b5edac09319",
+      "png_sha256": "59929543ec072f8d3e300d6f8b52e2510f0594d7dca5e5fd9e82dc0900a5c6a7",
+      "pixels_sha256": "2dff6e63cc098c150ff86e1403738aa1fc1608bf1a16af99fa15adb7ce610bb7",
+      "gray_pixels_sha256": "b4542e13d5f5a35450ea4b1a12cf73f94190273873db387eba8fc05b869757d3",
+      "color_personal_observation": "Strict sign-first Ei bands and open 0/1 endpoints agree with text; no label collision.",
+      "grayscale": {
+        "kind": "figure",
+        "number": 2,
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/figure-2.png",
+        "raw_sha256": "a1a2cf91b99d4e33af308c5f48aab84a1b9c868409bd2e823d66bd5affbef0e6",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Open versus filled dots and dashed boundaries remain distinct; no color-only category."
+      }
+    },
+    {
+      "number": 3,
+      "svg_sha256": "5ac52a0e58b0ea22f58b0ea4e165a565b3e0621eb2198fd0952346b6b5e4c61f",
+      "png_sha256": "0290351674b94ff93b47586bd2fb4ba15b6bd18cf30d9dd7e44bd1f7ea2f6e4f",
+      "pixels_sha256": "10a4bc2ea32e9ebaf13884bec7b9aa0d4312e3914fe20256b3e8ee4320f94240",
+      "gray_pixels_sha256": "3e66a669dfced0d1b32af8c62d19d6f30fbc62fe7732c27e11d82aec948f9031",
+      "color_personal_observation": "Two fractions explicitly name Q digital/hoes and P filmschijfhuur; values +0.5/-0.2 fit.",
+      "grayscale": {
+        "kind": "figure",
+        "number": 3,
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/figure-3.png",
+        "raw_sha256": "a50c8e3e26a272aa788a5ba75080c1efb0b92584381ec936ee7797f903d2fc7c",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Both ruled panels and long text are legible; relationship and fixed-price conditions remain explicit."
+      }
+    },
+    {
+      "number": 4,
+      "svg_sha256": "bf31583a5413e17043df437e38aa7fd066eac549cfccc3e8d060fabf7166b065",
+      "png_sha256": "e221b15c2409d16cac3ad2b7423700758b4c477f88a974059b106ca03ed5d8fd",
+      "pixels_sha256": "967da0ede902e17817fd828b0c339132f7a966093634b2acd78632ed05e80434",
+      "gray_pixels_sha256": "ccf4cec88d5f261dbc023c68f7893a6f87d5cbbbd679a665eb498adf8106f13d",
+      "color_personal_observation": "Three complete baseline/Y-only/reset-Pz-only panels display 200/230/204 and correct units.",
+      "grayscale": {
+        "kind": "figure",
+        "number": 4,
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-evidence/grayscale/figure-4.png",
+        "raw_sha256": "0328594452dd4186d129f1ec1c6a9fbee70fa29c3b6f62993ed60e3bf941ae91",
+        "old_QC_raw_equal": true,
+        "personal_observation": "Words gelijk/verandert/weer begin and panel boundaries retain the scenario logic without color."
+      }
+    }
+  ],
+  "personally_opened_full_color_pages": 32,
+  "personally_opened_full_grayscale_pages": 32,
+  "personally_opened_native_color_figures": 4,
+  "personally_opened_native_grayscale_figures": 4,
+  "visible_defects": [],
+  "limits": [
+    "No visible printed defect found in the 72 personally opened views.",
+    "Timing 54/69/81 remains UNOBSERVED; no pupil attainment or physical classroom claim.",
+    "Actual HTML accessibility checked by full native-byte and semantic-DOM evidence, not by an asserted assistive-technology session.",
+    "Distinct specialist QC remains the existing byte-exact REVISE until renewed by its independent owner."
+  ],
+  "generation_manifests_unchanged_PENDING": true
+}

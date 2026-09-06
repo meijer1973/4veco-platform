@@ -1,0 +1,91 @@
+{
+  "pass": true,
+  "source_binding": [
+    {
+      "path": "build-scripts/content/book-2/b2_223.py",
+      "raw_sha256": "5b18047a04ecd093a6d469fe5d69c049351f9c5ed21c3ad1b2aa336107d9f57c",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "raw_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/check_render.py",
+      "raw_sha256": "d8a5c5f706e8d4fa647374b7dd2f1d5d393fe0419c8ee8b0a3ca2fd2f7f0a92b",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_source.py",
+      "raw_sha256": "a1f4a1a8d45e01a295ff61034e59d5d1d4bc1f992b6dc39f6a64b7963c7fc6af",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/theory.md",
+      "raw_sha256": "c1a1b83d46295ee4d80d32485b0e3912c57bba04a7b9f63dd82a99cbfe102999",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/exercises.md",
+      "raw_sha256": "d127349412f8020ce971714f313d452af1f28204f2a195fb63efd6edaaee817b",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/answers.md",
+      "raw_sha256": "d68a20c6e494430327c583ba097e28902b32b29599fec9d775e8b1e5a6bf72cc",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/target-answers.md",
+      "raw_sha256": "f122a7109e59dbb2ee80201e30002f846356a97fa7286d11abfaf8b496e14996",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_successor.py",
+      "raw_sha256": "f2c3cb4773b6730a58d3720699202f80d8b5f8b22a779b2b8cddf664b491d927",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_alt_metadata.py",
+      "raw_sha256": "314673ab7bf6652d1ba6c1c42ef6f10598ffead34d12785009c5ab77b0187f3d",
+      "complete_expected_bytes_equal": true
+    }
+  ],
+  "all25_current_files": {
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.html": "3af048f800cfff79706e04bad324cbb7f7d84998952cb15b6e0cbfaab09d25a7",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.zip": "fbaccaa40565fac929b8a4c6b747b5ce69ef19b807bd9a1a6131e7b066e8b34c",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.html": "0d8350bdd37bf146ffc316bebc792fcbee4f4526fd65fbfd1bbbd98576626b60",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md": "ffdbc7d62c86d4945c52fabf94629790c0b54783a9c67060b03522ee1c497fbf",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.zip": "d77b0b29194786adae5d87ad1ae83eb8ea081029c87c15787f9a5b205d8a2ac6",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html": "9ce0cfaede013511c2f292f432e34b3acaf525b891efb406030f1d532ed993f9",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md": "5e19fc4528f5644f8c0f94da601c88d923c017078559a4ad0e97163837bfa287",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.zip": "74e84bde67aba572f125e30c18c84849ecf19374d0e04c95bcdd555dcc73773a",
+    "2.2.3-quality-ref.yaml": "6d93128f5cdcd363fc4a7e5a6e5d462162f130a18f4f01fd4656be22ef9e2586",
+    "2.2.3-review.md": "e603b62ba2d77e1c33db6aeeaeb24d9b41ec7a136f26020bc3b5081e0a2e56a4",
+    "2.2.3-textbook-plan.md": "dd2f91d0035829986076b7d5e96b43fa9c45f3d3698da1d159a955634fa01497",
+    "_assets/2.2.3_fig_1.png": "0b401e098bb2f56bb86663de908402a048a12a4b599b368e3489dc11bea95b65",
+    "_assets/2.2.3_fig_1.svg": "51b83ba543581f28030ec75ed4bca51f964837f85772076a8e4e9261620ea974",
+    "_assets/2.2.3_fig_2.png": "59929543ec072f8d3e300d6f8b52e2510f0594d7dca5e5fd9e82dc0900a5c6a7",
+    "_assets/2.2.3_fig_2.svg": "dbe07d11e771367a2bc55906448cbe3f484e312731602806915a3b5edac09319",
+    "_assets/2.2.3_fig_3.png": "0290351674b94ff93b47586bd2fb4ba15b6bd18cf30d9dd7e44bd1f7ea2f6e4f",
+    "_assets/2.2.3_fig_3.svg": "5ac52a0e58b0ea22f58b0ea4e165a565b3e0621eb2198fd0952346b6b5e4c61f",
+    "_assets/2.2.3_fig_4.png": "e221b15c2409d16cac3ad2b7423700758b4c477f88a974059b106ca03ed5d8fd",
+    "_assets/2.2.3_fig_4.svg": "bf31583a5413e17043df437e38aa7fd066eac549cfccc3e8d060fabf7166b065",
+    "_paragraph-plan.md": "bab60ca5c3019298d6722a94698cf2654cddb4e0c87b4742ceb3d925a5fd5f0c",
+    "build_pdf.py": "8c955509b8a8f42f0b8f27e6df58151a0947598268aa656197ae263a4f6f6000"
+  },
+  "preserved_prior_evidence_files": 913,
+  "preserved_original_QC_files": 721,
+  "canonical_review_sha256": "e603b62ba2d77e1c33db6aeeaeb24d9b41ec7a136f26020bc3b5081e0a2e56a4",
+  "canonical_QC_exact_REVISE": true,
+  "all_old_pending_and_failed_evidence_preserved": true,
+  "new_96_color_proof_pages_bound": true,
+  "handoff": "ABSENT",
+  "distinct_specialist_renewal": "PENDING",
+  "root_acceptance": "PENDING"
+}

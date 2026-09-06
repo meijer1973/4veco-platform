@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:/Python314/python.exe",
+    "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-check.py",
+    "print-inner"
+  ],
+  "cwd": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform",
+  "started": "2026-09-06T02:02:31.954833+00:00",
+  "ended": "2026-09-06T02:02:42.094090+00:00",
+  "path_first": "C:/msys64/mingw64/bin",
+  "exit_code": 0,
+  "stdout": "print-manifest: BOOK2-TEXTBOOK-PRODUCTION-1-223-ALT-REVIEW-print-manifest.json SHA256 0e90c765c98ffd39c52e2f5c5123a5f190ace0d39443fbf96e49ade5c512c00c\n",
+  "stderr": "",
+  "expected_exit": 0
+}

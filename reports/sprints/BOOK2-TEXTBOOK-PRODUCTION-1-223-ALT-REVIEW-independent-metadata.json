@@ -1,0 +1,123 @@
+{
+  "pass": true,
+  "sources": [
+    {
+      "path": "build-scripts/content/book-2/b2_223.py",
+      "raw_sha256": "5b18047a04ecd093a6d469fe5d69c049351f9c5ed21c3ad1b2aa336107d9f57c",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "raw_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/check_render.py",
+      "raw_sha256": "d8a5c5f706e8d4fa647374b7dd2f1d5d393fe0419c8ee8b0a3ca2fd2f7f0a92b",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_source.py",
+      "raw_sha256": "a1f4a1a8d45e01a295ff61034e59d5d1d4bc1f992b6dc39f6a64b7963c7fc6af",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/theory.md",
+      "raw_sha256": "c1a1b83d46295ee4d80d32485b0e3912c57bba04a7b9f63dd82a99cbfe102999",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/exercises.md",
+      "raw_sha256": "d127349412f8020ce971714f313d452af1f28204f2a195fb63efd6edaaee817b",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/answers.md",
+      "raw_sha256": "d68a20c6e494430327c583ba097e28902b32b29599fec9d775e8b1e5a6bf72cc",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/target-answers.md",
+      "raw_sha256": "f122a7109e59dbb2ee80201e30002f846356a97fa7286d11abfaf8b496e14996",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_successor.py",
+      "raw_sha256": "f2c3cb4773b6730a58d3720699202f80d8b5f8b22a779b2b8cddf664b491d927",
+      "complete_expected_bytes_equal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_alt_metadata.py",
+      "raw_sha256": "314673ab7bf6652d1ba6c1c42ef6f10598ffead34d12785009c5ab77b0187f3d",
+      "complete_expected_bytes_equal": true
+    }
+  ],
+  "exact_six_native_changes": [
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.html",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.zip",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.zip"
+  ],
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "complete_old_and_new_native_HTML_bytes_equal": true,
+      "semantic_DOM_equal_after_only_explicit_accessibility_delta": true,
+      "old_md_sha256": "062b78d54c064e6dbb3765b8da77575da50fedcde6777551e10fb5842a14ebac",
+      "new_md_sha256": "5e19fc4528f5644f8c0f94da601c88d923c017078559a4ad0e97163837bfa287",
+      "old_html_sha256": "3b1725338d2cdb16edf616da76516b699d97055cf74cdfaca076eeaf94f2cc08",
+      "new_html_sha256": "9ce0cfaede013511c2f292f432e34b3acaf525b891efb406030f1d532ed993f9",
+      "affected_images": [
+        {
+          "image_index": 2,
+          "before": "Figuur 2: Zoek eerst het teken van Ei en daarna het juiste gebied.",
+          "after": "Ei-schaal: inferieur bij Ei<0, normaal bij 0<Ei<1 en luxe bij Ei>1; open grenspunten 0 en 1 zonder categorie.",
+          "characters": 109,
+          "visible_caption": "Figuur 2: Zoek eerst het teken van Ei en daarna het juiste\ngebied.",
+          "aria_hidden": "true -> absent"
+        },
+        {
+          "image_index": 4,
+          "before": "Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.",
+          "after": "Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.",
+          "characters": 118,
+          "visible_caption": "Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\ndezelfde beginsituatie.",
+          "aria_hidden": "true -> absent"
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "complete_old_and_new_native_HTML_bytes_equal": true,
+      "semantic_DOM_equal_after_only_explicit_accessibility_delta": true,
+      "old_md_sha256": "f680b6f72166ff66c06f3da42ed61e536614dfc12d50b0ab403264d284697d19",
+      "new_md_sha256": "ffdbc7d62c86d4945c52fabf94629790c0b54783a9c67060b03522ee1c497fbf",
+      "old_html_sha256": "cf691595eb0ea599ba90825f631d98eaa9cdf75526de4435d5ea569fea610893",
+      "new_html_sha256": "0d8350bdd37bf146ffc316bebc792fcbee4f4526fd65fbfd1bbbd98576626b60",
+      "affected_images": [
+        {
+          "image_index": 1,
+          "before": "Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.",
+          "after": "Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.",
+          "characters": 118,
+          "visible_caption": "Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\ndezelfde beginsituatie.",
+          "aria_hidden": "true -> absent"
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "complete_old_and_new_native_HTML_bytes_equal": true,
+      "semantic_DOM_equal_after_only_explicit_accessibility_delta": true,
+      "old_md_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+      "new_md_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+      "old_html_sha256": "3af048f800cfff79706e04bad324cbb7f7d84998952cb15b6e0cbfaab09d25a7",
+      "new_html_sha256": "3af048f800cfff79706e04bad324cbb7f7d84998952cb15b6e0cbfaab09d25a7",
+      "affected_images": []
+    }
+  ],
+  "complete_visible_captions_unchanged": true,
+  "other_nodes_text_images_exact": true
+}
