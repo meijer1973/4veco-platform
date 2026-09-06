@@ -43,7 +43,7 @@ def verify_bound_bytes(root,expected):
         if not data(root/path).is_file() or raw(root/path)!=value:raise ValueError('Whole bound bytes differ: '+path)
 def originals(commit):
     refs={s:SOURCE for s in SOURCES}
-    refs.update({SHARED:PBASE,OLD_CONTROLLER:'0e2349ecf50e817482bf2f5c1d6d5aedc32c9323',SELF:commit})
+    refs.update({SHARED:PBASE,OLD_CONTROLLER:'0e2349ecf50e817482bf2f5c1d6d5aedc32c9323',SELF:commit,'reports/sprints/'+PREFIX+'-checks.py':commit})
     return {p:git(P,'show',ref+':'+p) for p,ref in refs.items()},refs
 def guard(commit):
     values,refs=originals(commit);verify_bound_bytes(P,values)
@@ -101,7 +101,7 @@ def reserve(label,commit):
         folder=Path(worktree)/'reports'
         if not folder.is_dir():continue
         for directory,dirs,files in os.walk(data(folder)):
-            rel=str(directory).replace('\\','/')
+            rel=Path(directory).relative_to(data(folder)).as_posix()
             for name in [*dirs,*files]:
                 full=rel+'/'+name
                 if '224' not in full:continue
