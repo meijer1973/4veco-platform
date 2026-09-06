@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "node",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT-closure.cjs",
+    "scope",
+    "02be6566ef43bf6c468c0a75a9f43c7ff3731e1d",
+    "ea0dd35d4f919ac5b3aae533cd9f9022ffa62282"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T09:25:31.070Z",
+  "finish": "2026-09-06T09:25:40.931Z",
+  "exit_code": 0,
+  "stdout": "{\"owned\":667,\"strict\":\"PASS\",\"scopes\":[{\"label\":\"platform_increment\",\"exit\":0,\"result\":true},{\"label\":\"lessons_increment\",\"exit\":0,\"result\":true},{\"label\":\"platform_complete\",\"exit\":0,\"result\":true},{\"label\":\"lessons_complete\",\"exit\":0,\"result\":true},{\"label\":\"platform_evidence_only\",\"exit\":1,\"result\":false}],\"whitespace\":[{\"label\":\"platform_increment\",\"exit\":2},{\"label\":\"lessons_increment\",\"exit\":0},{\"label\":\"platform_complete\",\"exit\":2},{\"label\":\"lessons_complete\",\"exit\":0},{\"label\":\"platform_evidence_only\",\"exit\":2}]}\n",
+  "stderr": "",
+  "stdout_base64": "eyJvd25lZCI6NjY3LCJzdHJpY3QiOiJQQVNTIiwic2NvcGVzIjpbeyJsYWJlbCI6InBsYXRmb3JtX2luY3JlbWVudCIsImV4aXQiOjAsInJlc3VsdCI6dHJ1ZX0seyJsYWJlbCI6Imxlc3NvbnNfaW5jcmVtZW50IiwiZXhpdCI6MCwicmVzdWx0Ijp0cnVlfSx7ImxhYmVsIjoicGxhdGZvcm1fY29tcGxldGUiLCJleGl0IjowLCJyZXN1bHQiOnRydWV9LHsibGFiZWwiOiJsZXNzb25zX2NvbXBsZXRlIiwiZXhpdCI6MCwicmVzdWx0Ijp0cnVlfSx7ImxhYmVsIjoicGxhdGZvcm1fZXZpZGVuY2Vfb25seSIsImV4aXQiOjEsInJlc3VsdCI6ZmFsc2V9XSwid2hpdGVzcGFjZSI6W3sibGFiZWwiOiJwbGF0Zm9ybV9pbmNyZW1lbnQiLCJleGl0IjoyfSx7ImxhYmVsIjoibGVzc29uc19pbmNyZW1lbnQiLCJleGl0IjowfSx7ImxhYmVsIjoicGxhdGZvcm1fY29tcGxldGUiLCJleGl0IjoyfSx7ImxhYmVsIjoibGVzc29uc19jb21wbGV0ZSIsImV4aXQiOjB9LHsibGFiZWwiOiJwbGF0Zm9ybV9ldmlkZW5jZV9vbmx5IiwiZXhpdCI6Mn1dfQo=",
+  "stderr_base64": ""
+}
