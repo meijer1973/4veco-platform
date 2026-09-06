@@ -23,7 +23,7 @@ PREFIX="BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD"
 EVIDENCE=ROOT/"reports/sprints"/(PREFIX+"-evidence")
 PBASE="e42c2b276354aeb1eb903bfb480a5dad27d898b2"
 LBASE="8a3d4018ad6a5082449a17c59f991cbdc93fbb62"
-SOURCE_COMMIT="ee25376f00248b7c9dc8eb4c9b18e38e71f803aa"
+SOURCE_COMMIT="aca14c61d258c05d668005d20bf0e4196de89ced"
 SOURCE_PATHS=["build-scripts/content/book-2/b2_224.py", *["build-scripts/content/book-2/224/"+n for n in
               ("answers.md","check_render.py","exercises.md","target-answers.md","test_source.py")]]
 sys.path.insert(0,str(ROOT/"build-scripts/content/book-2"))
@@ -51,6 +51,14 @@ def source_guard():
         if actual!=expected:raise ValueError("Whole committed source drift: "+relative)
         rows.append({"path":relative,"commit":SOURCE_COMMIT,"raw_sha256":b.sha(actual)})
     return rows
+
+
+def verify_bound_bytes(root,expected):
+    """Pure whole-file verification used by actual frozen-source probes."""
+    for relative,raw in expected.items():
+        path=b.data_path(root/relative)
+        if not path.is_file() or path.read_bytes()!=raw:
+            raise ValueError("Whole immutable candidate bytes differ: "+relative)
 
 
 def init():
