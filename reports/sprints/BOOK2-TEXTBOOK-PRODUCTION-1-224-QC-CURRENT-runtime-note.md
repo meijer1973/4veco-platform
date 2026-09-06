@@ -34,3 +34,13 @@ corrected before native work and a new r2 probe record is written, leaving the
 original successful numerical/failure-entry evidence unchanged. This is an
 evidence-label correction, not pupil or target repair. Reservation r10 was
 already exclusively captured after scanning 373 worktrees (prior maximum9).
+
+The first own precision-helper execution failed at line86 with
+`AssertionError: Semantic fixture escaped` (tool execution c31d8b, exit1).
+It had changed one occurrence of a repeated short clause while its predicate
+only asked whether another occurrence remained. This was an inadequate new
+test predicate, not an altered pupil source or a native failure. The helper
+now also binds actual occurrence counts for these in-memory mutations. The
+original failed implementation is immutable at d6e01c49; this note preserves
+the actual tool diagnostic rather than pretending it was a file-backed log.
+The already successful separate personal record is not overwritten or relabelled.
