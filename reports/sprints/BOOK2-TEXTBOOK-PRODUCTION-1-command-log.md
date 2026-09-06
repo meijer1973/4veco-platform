@@ -16068,3 +16068,100 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 5858: inval
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-acceptance-scope.js b9430b6345b802a6a65be6f6f69660ce0f5e43a5
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T01:41:17.044Z`
+- finished_at: `2026-09-06T01:41:44.040Z`
+- duration_ms: `26996`
+- exit_code: `0`
+- stdout_sha256: `36cda92a5b756e366e38bc5d2cc10075842f993eca3387257ea2712e6422df21`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "head": "b9430b6345b802a6a65be6f6f69660ce0f5e43a5",
+  "owned_paths": 395,
+  "scopes": [
+    {
+      "label": "incremental-platform",
+      "ok": false,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 395,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "incremental-lessons",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 1,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-platform",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 80,
+        "generated_indexes": 6,
+        "review_evidence": 4153,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "complete-lessons",
+      "ok": true,
+      "counts": {
+        "partA_textbook": 203,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 5,
+        "unknown": 0
+      }
+    }
+  ],
+  "whitespace": {
+    "incremental_default_exit": 2,
+    "incremental_cr_at_eol_exit": 0,
+    "exact_historical_archive": {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-command-log-native-before-format.txt",
+      "commit": "32cee7977e90da3aa77ce107e0e6e003eb9be370",
+      "git_blob": "76d2c4c71380b6cd81db9ad0d47e91a825f9c5db",
+      "sha256": "3900acbdf1c9d29035661d6a5e3b6c7cff8b0f1369cee89e10e962a16ebfd815"
+    },
+    "all_other_incremental_paths_exit": 0,
+    "complete_default_exit": 2,
+    "complete_cr_at_eol_exit": 2,
+    "diagnostics_preserved": true,
+    "no_global_config_change": true
+  },
+  "inventory": {
+    "A": 12,
+    "C": 9,
+    "L": 8,
+    "P": 12
+  }
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
