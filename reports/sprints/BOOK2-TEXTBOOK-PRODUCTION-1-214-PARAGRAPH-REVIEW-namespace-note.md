@@ -32,3 +32,9 @@ js-yaml/sharp package paths/versions/hashes, not a new install or source edit.
 PATH stays inherited, Python314 and ordinary native CLI/cwd unchanged. Attempt48
 is consumed by its process evidence. Subsequent scan/argv names use numeric
 attempt text without an r-prefix and remain exclusive, preserving both old scans.
+
+The new complete global scan selects49 (maximum48). Before execution, list
+exactly `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r49.json`
+and `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PARAGRAPH-REVIEW-r49-full`.
+Its committed scan digest is 78a01e8ab774dadd5463addeb049448016354280c6d410299f0c9a59dfb161ba.
+The unchanged original source must still recheck global freshness before effects.
