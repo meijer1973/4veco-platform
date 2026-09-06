@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T10:29:53.414Z
+Generated: 2026-09-06T10:48:43.201Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `8fdfadd9813472a12d9ea5a45f3929d8d276b554`
-Files indexed: 16351
-Scope: committed tree files from `git ls-tree -r --name-only 8fdfadd9813472a12d9ea5a45f3929d8d276b554`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source commit: `52faa0f319baad7887c6d0ffa85d9f13dfd937e5`
+Files indexed: 16397
+Scope: committed tree files from `git ls-tree -r --name-only 52faa0f319baad7887c6d0ffa85d9f13dfd937e5`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -989,7 +989,7 @@ Count: 25
 
 ## validators
 
-Count: 794
+Count: 795
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1593,6 +1593,7 @@ Count: 794
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-RECHECK-white-whole-r1-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-check-r1-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-precheck-notes.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-check-r1-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-ALT-render-check-r8.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-render-check-r7.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check-r6.json
@@ -2823,7 +2824,7 @@ Count: 1030
 
 ## reports
 
-Count: 13543
+Count: 13589
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -10421,6 +10422,15 @@ Count: 13543
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-ROOT-white-r1-own-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-ROOT-white-r1-whole-cr-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-FRONT-ROOT-white-r1-whole-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-corrected-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-corrected-r3-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-original-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-probe.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-run.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-tests-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-tests-r2-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-baseline.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-check-r1-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-check.cjs
@@ -10460,6 +10470,43 @@ Count: 13543
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-white-r1-own-P-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-white-r1-whole-L-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-CANDIDATE-white-r1-whole-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-check-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-create-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-finish.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-inputs.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-post-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-probes-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.1-publisher-print-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.1-student-web-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.2-publisher-print-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.2-student-web-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.3-publisher-print-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.3-student-web-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.4-publisher-print-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.4-student-web-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-authoring-contract-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-chapter_planning-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-chapter_production-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-run.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-scope-r1-own-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-scope-r1-own-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-scope-r1-whole-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-scope-r1-whole-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-scope-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-verification-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-white-r1-own-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-white-r1-own-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-white-r1-whole-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-white-r1-whole-P-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-decision-package.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-plan-review.md
