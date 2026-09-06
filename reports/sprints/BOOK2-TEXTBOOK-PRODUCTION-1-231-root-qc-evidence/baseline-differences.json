@@ -1,0 +1,54 @@
+{
+  "diagnostic_only": true,
+  "differences": [
+    {
+      "path": "reports/github-agent-index-lessen.json",
+      "specialist_baseline_sha256": "82bfbb2e019dba092cccd9d3f91aa899cb91afdd9e9805e812145234ec0253cb",
+      "current_raw_sha256": "47bbcaa84e8c297eca9163fd6a86d7794ecacc987c3caf8265690d7d3a704b4c",
+      "root_published_f257_sha256": "47bbcaa84e8c297eca9163fd6a86d7794ecacc987c3caf8265690d7d3a704b4c",
+      "source_baseline_35e0_sha256": "82bfbb2e019dba092cccd9d3f91aa899cb91afdd9e9805e812145234ec0253cb"
+    },
+    {
+      "path": "reports/github-agent-index-lessen.md",
+      "specialist_baseline_sha256": "61722a6a93c6ea6500fadb9dfcbbc4427c35cd56c968e65b05bcfc780031f205",
+      "current_raw_sha256": "a414ceedaa50c4e8275f175b66774d301b169f1c635026af5cb1309bf64ae2b3",
+      "root_published_f257_sha256": "a414ceedaa50c4e8275f175b66774d301b169f1c635026af5cb1309bf64ae2b3",
+      "source_baseline_35e0_sha256": "61722a6a93c6ea6500fadb9dfcbbc4427c35cd56c968e65b05bcfc780031f205"
+    },
+    {
+      "path": "reports/github-agent-index-platform.json",
+      "specialist_baseline_sha256": "5c959f4dfdb5beb071d39892cd36e71e06995377c7c5353dc68b4b5b2d55171e",
+      "current_raw_sha256": "9f537cc132c01ff2b38fb92ab9a465f445903940c2ca3acca82e89840765f1ee",
+      "root_published_f257_sha256": "9f537cc132c01ff2b38fb92ab9a465f445903940c2ca3acca82e89840765f1ee",
+      "source_baseline_35e0_sha256": "5c959f4dfdb5beb071d39892cd36e71e06995377c7c5353dc68b4b5b2d55171e"
+    },
+    {
+      "path": "reports/github-agent-index-platform.md",
+      "specialist_baseline_sha256": "41f5539b905be12510deab8e7e8f184c373f921f57a994e5d0e804edc42d835e",
+      "current_raw_sha256": "8e9416133ce5073cd1b07659a802aca45487da4709f7261ae85554a9d1ca9ed7",
+      "root_published_f257_sha256": "8e9416133ce5073cd1b07659a802aca45487da4709f7261ae85554a9d1ca9ed7",
+      "source_baseline_35e0_sha256": "41f5539b905be12510deab8e7e8f184c373f921f57a994e5d0e804edc42d835e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.jsonl",
+      "specialist_baseline_sha256": "ff73e24c59d4a8a4dfa3dc25cf2fc674ca945f1e7a7a7ba32eaedc52e21c443e",
+      "current_raw_sha256": "b9098f1301bf672b6c9705a5758c5dbb12808a5c88f31dafbe9fdee4e9776a01",
+      "root_published_f257_sha256": "cc853295d882b0752337dbb777d5930f425dd03ec502dfcaf9617d2e9b60f62c",
+      "source_baseline_35e0_sha256": "ff73e24c59d4a8a4dfa3dc25cf2fc674ca945f1e7a7a7ba32eaedc52e21c443e"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.md",
+      "specialist_baseline_sha256": "844e6423f7c85b6f4e26ede6dd78b71bbcfc4db151e8af844d62c6e54af271cf",
+      "current_raw_sha256": "e376ed592d879798cad024331e09f67c16778364b04114382ce376a93681f56f",
+      "root_published_f257_sha256": "1af65bc266e3083f23d787c59ca68e9b598f21381f334e8ef6d808e826d3e383",
+      "source_baseline_35e0_sha256": "844e6423f7c85b6f4e26ede6dd78b71bbcfc4db151e8af844d62c6e54af271cf"
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-output-manifest.md",
+      "specialist_baseline_sha256": "6a6191f0ed24e3e9363b30a44590acb9365e0b0c8d1d3bb97e20f49f3026c4e2",
+      "current_raw_sha256": "c61bfeec8d898e382c729f3791b9cd71f76e81a45f902ae0b6be9b3c4c707b5e",
+      "root_published_f257_sha256": "c61bfeec8d898e382c729f3791b9cd71f76e81a45f902ae0b6be9b3c4c707b5e",
+      "source_baseline_35e0_sha256": "6a6191f0ed24e3e9363b30a44590acb9365e0b0c8d1d3bb97e20f49f3026c4e2"
+    }
+  ]
+}

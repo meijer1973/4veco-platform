@@ -88,3 +88,20 @@ PDF skill requires rendered validation; the existing41-output operation marker
 is not repeated. Native source pipeline and immutable evidence retention govern
 this repository. No PDF-UA/AT execution, current full-suite/hosted CI, dependency
 security, chapter/book acceptance or future merge is inferred from this phase.
+
+## Pre-execution baseline refinement after actual diagnostic
+
+The first root baseline assertion failed on a generated index before any build
+or acceptance. The specialist's7,852-file snapshot includes all old reports,
+not just immutable231 proofs. A separately retained baseline-differences.json
+enumerates exactly seven legitimate root successors: four generated indexes,
+umbrella command Markdown/JSONL and the output manifest. Their specialist
+hashes match exact35e0 baseline blobs. All seven committed current blobs match
+the publishedf257 root checkpoint; the two owned command logs have only later
+native-recorder append bytes. All other7,845 records must stay raw-identical.
+This replaces step2's overbroad unchanged-history assumption with explicit
+commit-bound root coordination provenance; no foreign/source/proof exception.
+The baseline helper now also filters revision candidates by repository-relative
+231 paths, so a worktree's name cannot admit unrelated paragraph revisions.
+Both corrections precede baseline retry or any native build. The failed
+assertion is preserved, not a product defect or an accepted partial proof.

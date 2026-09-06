@@ -55,7 +55,21 @@ def manifest(n): return E/'native'/f'{PRE}-build-manifest-r{n}.json'
 def bindings():
     source=read(str(Q)+'-reservation-and-baseline.json')
     for r,h in source['native45'].items(): assert raw(L/r)==h,r
-    for r,h in source['old_sources_and_history'].items(): assert raw(P/r)==h,r
+    # Seven root coordination files legitimately advanced in published f257.
+    # Bind exact prior/current commits; no arbitrary mutation is ignored.
+    root_coordination={*[f'reports/github-agent-index-{repo}.{ext}' for repo in ['platform','lessen'] for ext in ['md','json']],
+        *['reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-'+name for name in ['command-log.md','command-log.jsonl','output-manifest.md']]}
+    observed=set()
+    for r,h in source['old_sources_and_history'].items():
+        if r not in root_coordination: assert raw(P/r)==h,r
+        else:
+            observed.add(r)
+            assert sha(git(P,'show','35e0bebb75cc3987c43dd8f480e1b444bd877f4a:'+r))==h
+            published=git(P,'show','f257056d0a455c660ccb598cb4da734b36eefd80:'+r)
+            assert git(P,'show','a72ae0eaa72d58365200350cf8206f38893d0b21:'+r)==published
+            if '-command-log.' in r: assert (P/r).read_bytes().startswith(published),r
+            else: assert (P/r).read_bytes()==published,r
+    assert observed==root_coordination
     assert len(source['native45'])==45 and len(source['old_sources_and_history'])==7852
     assert raw(D/QC)==QCHASH
     qc=yaml.safe_load((D/QC).read_text(encoding='utf-8'))
@@ -107,7 +121,7 @@ def bindings():
     for row in moved:
         assert raw(P/row['new_path'])==row['sha256']==sha(git(P,'show',row['source_commit']+':'+row['old_path']))
         assert not (P/row['old_path']).exists()
-    return {'old_lesson_files':45,'old_sources_history':7852,'personal_images':96,'native_packet':42,'original_mapping':66,'old_pending':len(source['old_pending_manifests'])}
+    return {'old_lesson_files':45,'old_sources_history_unchanged':7845,'root_coordination_exact_published_successors':7,'personal_images':96,'native_packet':42,'original_mapping':66,'old_pending':len(source['old_pending_manifests'])}
 
 def baseline(head):
     assert re.fullmatch('[a-f0-9]{40}',head)
@@ -128,8 +142,9 @@ def baseline(head):
         for sub in ['rendered-proof','sprints']:
             if not (report/sub).exists(): continue
             for f in (report/sub).rglob('*'):
-                if not f.is_file() or '231' not in f.as_posix(): continue
+                if not f.is_file(): continue
                 relative=f.relative_to(Path(root)).as_posix()
+                if '231' not in relative: continue
                 for n in re.findall(r'(?:^|[-/])r([1-9][0-9]*)(?=[./-]|$)',relative): revisions.append({'root':root,'path':relative,'revision':int(n)})
                 if 'reserv' in relative.lower() and f.suffix=='.json':
                     for n in re.findall(r'"r([1-9][0-9]*)"',f.read_text(encoding='utf-8-sig')): revisions.append({'root':root,'path':relative,'revision':int(n),'content':True})
@@ -169,7 +184,15 @@ def parity(name,revisions):
     print(json.dumps({'status':'PASS','revisions':revisions,'pages':len(pages),'folder':46,'native':42}),flush=True)
 
 mode=sys.argv[1]
-if mode=='baseline': baseline(sys.argv[2])
+if mode=='differences':
+    source=read(str(Q)+'-reservation-and-baseline.json')
+    differences=[]
+    for rel,h in source['old_sources_and_history'].items():
+        if raw(P/rel)!=h:
+            differences.append({'path':rel,'specialist_baseline_sha256':h,'current_raw_sha256':raw(P/rel),'root_published_f257_sha256':sha(git(P,'show','f257056d0a455c660ccb598cb4da734b36eefd80:'+rel)),'source_baseline_35e0_sha256':sha(git(P,'show','35e0bebb75cc3987c43dd8f480e1b444bd877f4a:'+rel))})
+    save('baseline-differences.json',{'diagnostic_only':True,'differences':differences})
+    print(json.dumps(differences,indent=2))
+elif mode=='baseline': baseline(sys.argv[2])
 elif mode=='tests': run('tests-process',[PY,str(P/'build-scripts/content/book-2/231/test_source.py'),'--lesson-root',str(L)])
 elif mode=='full':
     assert read(E/'baseline.json')['reserved']==['r20','r21','r22']
