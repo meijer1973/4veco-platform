@@ -131,12 +131,22 @@ def pages(manifest):
             with Image.open(data(path)) as im:
                 im=im.convert('RGB');rows.append({'kind':kind,'page':i,'path':str(path),'raw_sha256':digest(path),'rgb_sha256':sha(im.tobytes()),'size':list(im.size)})
     return rows
+def unused_direct_destination(revision):
+    if not re.fullmatch(r'r[1-9][0-9]*',revision):raise ValueError('Invalid direct revision')
+    destination=E/f'224-direct-{revision}'
+    if destination.resolve().parent!=E.resolve():raise ValueError('Direct destination outside owned evidence')
+    if data(destination).exists():raise ValueError('Direct destination already occupied: '+str(destination))
+    return destination
+
 def run(label,revision,mode,commit,comparator=None):
     bound=guard(commit);release=release_guard();native_guard();b=builder()
     reservation=E/f'224-reservation-{label}-{revision}.json'
     if read(reservation)['revision']!=revision:raise ValueError('Reservation mismatch')
     stem=E/f'224-{label}-{revision}';manifest=Path(str(stem)+'-manifest.json')
     if manifest.exists():raise ValueError('Manifest attempt exists')
+    # The shared worker is an ungated primitive and writes PDFs before its own
+    # proof check. This orchestration must reject namespace reuse BEFORE effects.
+    direct_destination=unused_direct_destination(revision) if mode=='print' else None
     save(str(stem)+'-preflight.json',{'created':now(),'bound_files':bound,'release_inputs':release['inputs'],'release_commit':b.RELEASE_COMMIT,'release_sha256':b.RELEASE_HASH,'native':native_expected(),'reservation_sha256':digest(reservation),'mode':mode})
     for gate,argv in [('specialist',['node','build-scripts/workflows/check-book-outline-currentness.js','--require-approved','--action','specialist_review','--paragraph','2.2.4']),('durable',['node','build-scripts/workflows/check-book2-target-authority-remediation.js','--durable'])]:
         command(gate,argv,str(stem)+'-'+gate)
@@ -150,7 +160,7 @@ def run(label,revision,mode,commit,comparator=None):
     if mode in ('full','thin'):
         argv=[sys.executable,str(P/'build-scripts/content/book-2/b2_224.py' if mode=='full' else folder/'build_pdf.py'),'--lesson-root',str(L),'--proof-root',str(E),'--proof-suffix',revision,'--manifest',str(manifest)]
     elif mode=='print':
-        argv=[sys.executable,str(P/SHARED),*[str(folder/f'{b.STEM} – {k}.md') for k in ('opgaven','antwoorden')],'--proof-root',str(E/f'224-direct-{revision}')]
+        argv=[sys.executable,str(P/SHARED),*[str(folder/f'{b.STEM} – {k}.md') for k in ('opgaven','antwoorden')],'--proof-root',str(direct_destination)]
     else:
         if comparator is None:raise ValueError('Genuine checker requires original manifest')
         argv=[sys.executable,str(P/'build-scripts/content/book-2/224/check_render.py'),'--lesson-root',str(L),'--manifest',str(comparator),'--rebuild']
