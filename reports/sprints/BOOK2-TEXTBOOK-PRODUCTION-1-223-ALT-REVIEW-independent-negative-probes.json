@@ -1,0 +1,320 @@
+{
+  "pass": true,
+  "valid_exact_inputs_reach_authority": true,
+  "source_controller_guard_mutations": [
+    {
+      "path": "build-scripts/content/book-2/b2_223.py",
+      "mode": "unrelated-append",
+      "expected_sha256": "5b18047a04ecd093a6d469fe5d69c049351f9c5ed21c3ad1b2aa336107d9f57c",
+      "fixture_sha256": "af6b144bf006b9343cdfd3d6cef612bdcd2ce6a2483649265dbcc6e13b0501d5",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/b2_223.py",
+      "mode": "guard/controller-weakening",
+      "expected_sha256": "5b18047a04ecd093a6d469fe5d69c049351f9c5ed21c3ad1b2aa336107d9f57c",
+      "fixture_sha256": "62620a74d4f5de7d28fca7ca7aebebc0db675101321dd4aa5aee014194586e63",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "mode": "unrelated-append",
+      "expected_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "fixture_sha256": "4884805d93d903d11217177e8f9d8737ae0a099fc4f80b3284f87447317bcbdc",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "mode": "guard/controller-weakening",
+      "expected_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "fixture_sha256": "fb14fd5a97bf6eb1aac7c61ce5b74bacf84d0a36747bbc24daf283d3c40c943b",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/check_render.py",
+      "mode": "unrelated-append",
+      "expected_sha256": "d8a5c5f706e8d4fa647374b7dd2f1d5d393fe0419c8ee8b0a3ca2fd2f7f0a92b",
+      "fixture_sha256": "8089e9b14eae95a7f9e4775a51d4fb1da39123d445ca96d8bac3004999c6e081",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/check_render.py",
+      "mode": "guard/controller-weakening",
+      "expected_sha256": "d8a5c5f706e8d4fa647374b7dd2f1d5d393fe0419c8ee8b0a3ca2fd2f7f0a92b",
+      "fixture_sha256": "e2601f056139241cac9d49787fb1f88e110e0cae0093a52b344e21dd49c81a44",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_source.py",
+      "mode": "unrelated-append",
+      "expected_sha256": "a1f4a1a8d45e01a295ff61034e59d5d1d4bc1f992b6dc39f6a64b7963c7fc6af",
+      "fixture_sha256": "0b56a6cac31adb1e2f9c0d2ecb2c70ef91fab794c216376e646553d77a725da3",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_source.py",
+      "mode": "guard/controller-weakening",
+      "expected_sha256": "a1f4a1a8d45e01a295ff61034e59d5d1d4bc1f992b6dc39f6a64b7963c7fc6af",
+      "fixture_sha256": "d660968f7ee072fe289c6f91685ae1f51d568c5dc1967b2f481f951f6992ac9b",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/theory.md",
+      "mode": "unrelated-append",
+      "expected_sha256": "c1a1b83d46295ee4d80d32485b0e3912c57bba04a7b9f63dd82a99cbfe102999",
+      "fixture_sha256": "907c39288e496c248e3bdb84b42a18b8db5d439b5a0edd60f0de586267921acc",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/theory.md",
+      "mode": "original-bad-caption-fallback",
+      "expected_sha256": "c1a1b83d46295ee4d80d32485b0e3912c57bba04a7b9f63dd82a99cbfe102999",
+      "fixture_sha256": "8835a4d94097bff54aaf2f58308f4adbd7ac49005aee443f352fcecdb9a38048",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/theory.md",
+      "mode": "full-caption-changed",
+      "expected_sha256": "c1a1b83d46295ee4d80d32485b0e3912c57bba04a7b9f63dd82a99cbfe102999",
+      "fixture_sha256": "a6f4aa7785ca0b782bc103be0c3d6db6f2bc935f83f761c4b10a256d75f54aa8",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/theory.md",
+      "mode": "imperative",
+      "expected_sha256": "c1a1b83d46295ee4d80d32485b0e3912c57bba04a7b9f63dd82a99cbfe102999",
+      "fixture_sha256": "0c8f828b4ea8052c124b9f0c49d400f11fbedb6c4bd5b231b26a58b0260a6bbb",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/theory.md",
+      "mode": "long-alt",
+      "expected_sha256": "c1a1b83d46295ee4d80d32485b0e3912c57bba04a7b9f63dd82a99cbfe102999",
+      "fixture_sha256": "6882108f992fa4f94a215cae0d378225c20118b6f813c52078b958b6f889bbd1",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/theory.md",
+      "mode": "empty-alt",
+      "expected_sha256": "c1a1b83d46295ee4d80d32485b0e3912c57bba04a7b9f63dd82a99cbfe102999",
+      "fixture_sha256": "e43e2b692440b1e82641a1eefdd6c9665baf777527f2403cc09bf97fb1500b0c",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/exercises.md",
+      "mode": "unrelated-append",
+      "expected_sha256": "d127349412f8020ce971714f313d452af1f28204f2a195fb63efd6edaaee817b",
+      "fixture_sha256": "bd2fdf905a0fffd7e8f50060ec044b66a57e9a989e3a434e314aa3cb19f4544e",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/exercises.md",
+      "mode": "original-bad-caption-fallback",
+      "expected_sha256": "d127349412f8020ce971714f313d452af1f28204f2a195fb63efd6edaaee817b",
+      "fixture_sha256": "0a7a48bdb65bd0182c757e3af4edc734327d953319df422fe852648ae9823d1c",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/exercises.md",
+      "mode": "full-caption-changed",
+      "expected_sha256": "d127349412f8020ce971714f313d452af1f28204f2a195fb63efd6edaaee817b",
+      "fixture_sha256": "a6801e146859534f2df38a50f2d1c0be3d92ea49dea8a2b724ad8a0294af5ed5",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/exercises.md",
+      "mode": "imperative",
+      "expected_sha256": "d127349412f8020ce971714f313d452af1f28204f2a195fb63efd6edaaee817b",
+      "fixture_sha256": "84972e0845cd92cb75ec784c6ed63ef6ab7624b0b3e8770dbe37b5962de6e0df",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/exercises.md",
+      "mode": "long-alt",
+      "expected_sha256": "d127349412f8020ce971714f313d452af1f28204f2a195fb63efd6edaaee817b",
+      "fixture_sha256": "febe5ae311daeb10d809552ff06592825771941fd1d29c20091b7b85c6153548",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/exercises.md",
+      "mode": "empty-alt",
+      "expected_sha256": "d127349412f8020ce971714f313d452af1f28204f2a195fb63efd6edaaee817b",
+      "fixture_sha256": "3784ffc5b7f216f3b413a924c51fc08933393a210d23881153300974eddd1266",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/answers.md",
+      "mode": "unrelated-append",
+      "expected_sha256": "d68a20c6e494430327c583ba097e28902b32b29599fec9d775e8b1e5a6bf72cc",
+      "fixture_sha256": "8bcd110f19d22aa516c25ae8c673e2c0abc6c49c142b7fc2c2b6c1745ae9343b",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/target-answers.md",
+      "mode": "unrelated-append",
+      "expected_sha256": "f122a7109e59dbb2ee80201e30002f846356a97fa7286d11abfaf8b496e14996",
+      "fixture_sha256": "d0b09a723e3698fa61c0bb945bf495ab7928afb01245ba26e63db875bff912b8",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_successor.py",
+      "mode": "unrelated-append",
+      "expected_sha256": "f2c3cb4773b6730a58d3720699202f80d8b5f8b22a779b2b8cddf664b491d927",
+      "fixture_sha256": "62b26df6751c49d9f493e2c2a368d8188204af51ce716def06fab4de3f4994be",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_successor.py",
+      "mode": "guard/controller-weakening",
+      "expected_sha256": "f2c3cb4773b6730a58d3720699202f80d8b5f8b22a779b2b8cddf664b491d927",
+      "fixture_sha256": "e37170989cc7f07e15da75eddacc8de0bc446acf13d5639b1e86b1d4bd13f0fa",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_alt_metadata.py",
+      "mode": "unrelated-append",
+      "expected_sha256": "314673ab7bf6652d1ba6c1c42ef6f10598ffead34d12785009c5ab77b0187f3d",
+      "fixture_sha256": "58826dda8e921034fc5c2de44a682d98dbad5258f02b19934c1f21206d6e4969",
+      "rejected_before_build": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_alt_metadata.py",
+      "mode": "guard/controller-weakening",
+      "expected_sha256": "314673ab7bf6652d1ba6c1c42ef6f10598ffead34d12785009c5ab77b0187f3d",
+      "fixture_sha256": "42bf7522b4febaddd54e1a4abd951f1c0a44c9b6a60af2cf01384bc69ccb2858",
+      "rejected_before_build": true
+    }
+  ],
+  "actual_missing_forged_six_inputs": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "mode": "missing",
+      "expected_lf_sha256": "dd2f91d0035829986076b7d5e96b43fa9c45f3d3698da1d159a955634fa01497",
+      "real_fixture_lf_sha256": null,
+      "lf_hash_unpatched": true,
+      "side_effect_calls": 0
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "mode": "forged",
+      "expected_lf_sha256": "dd2f91d0035829986076b7d5e96b43fa9c45f3d3698da1d159a955634fa01497",
+      "real_fixture_lf_sha256": "2d0c5aa31decf9021fbbfaf4dff50642cba86c59eb269554cd07b925746c98d7",
+      "lf_hash_unpatched": true,
+      "side_effect_calls": 0
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "mode": "missing",
+      "expected_lf_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+      "real_fixture_lf_sha256": null,
+      "lf_hash_unpatched": true,
+      "side_effect_calls": 0
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "mode": "forged",
+      "expected_lf_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+      "real_fixture_lf_sha256": "086affcc19a72b7a921e295dd6e99f099001e51f156aaff6d8ca756fe502b8ec",
+      "lf_hash_unpatched": true,
+      "side_effect_calls": 0
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "mode": "missing",
+      "expected_lf_sha256": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811",
+      "real_fixture_lf_sha256": null,
+      "lf_hash_unpatched": true,
+      "side_effect_calls": 0
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "mode": "forged",
+      "expected_lf_sha256": "3a3357f0f1487fcc8376e5c9717f80d181f2d71c6069f647c6fa7ab71377f811",
+      "real_fixture_lf_sha256": "67dbec4b5afb73f7cbf424b1d028a20c5dbe8781b9043ebe2ecb3aa6ff0544bd",
+      "lf_hash_unpatched": true,
+      "side_effect_calls": 0
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "mode": "missing",
+      "expected_lf_sha256": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+      "real_fixture_lf_sha256": null,
+      "lf_hash_unpatched": true,
+      "side_effect_calls": 0
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "mode": "forged",
+      "expected_lf_sha256": "19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63",
+      "real_fixture_lf_sha256": "1599a172c6283a1822a2ee2e7211b6eb92b516e35b25894c7d1b0cd15a53db4d",
+      "lf_hash_unpatched": true,
+      "side_effect_calls": 0
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "mode": "missing",
+      "expected_lf_sha256": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa",
+      "real_fixture_lf_sha256": null,
+      "lf_hash_unpatched": true,
+      "side_effect_calls": 0
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "mode": "forged",
+      "expected_lf_sha256": "4f0c77e9ae5769bb85c9c32dfa019049f6bccd323dfd0152b7eabf95897879fa",
+      "real_fixture_lf_sha256": "ad585f398605b859b2298bde44a0cf8beef83158189ff0b751ac47b7b79a7561",
+      "lf_hash_unpatched": true,
+      "side_effect_calls": 0
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "mode": "missing",
+      "expected_lf_sha256": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db",
+      "real_fixture_lf_sha256": null,
+      "lf_hash_unpatched": true,
+      "side_effect_calls": 0
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "mode": "forged",
+      "expected_lf_sha256": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db",
+      "real_fixture_lf_sha256": "1153bd27b6af5f50a96620d9d420ed880edfe88a109f4dfd4273700fb830e698",
+      "lf_hash_unpatched": true,
+      "side_effect_calls": 0
+    }
+  ],
+  "unique_anchor_counterexamples": [
+    {
+      "path": "build-scripts/content/book-2/223/theory.md",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/theory.md",
+      "mode": "duplicate",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/theory.md",
+      "mode": "already-transformed",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/exercises.md",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/exercises.md",
+      "mode": "duplicate",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/exercises.md",
+      "mode": "already-transformed",
+      "rejected": true
+    }
+  ],
+  "no_live_source_mutation": true,
+  "side_effects": 0
+}
