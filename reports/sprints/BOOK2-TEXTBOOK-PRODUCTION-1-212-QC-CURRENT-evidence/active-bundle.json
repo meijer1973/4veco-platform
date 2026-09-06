@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/sprints/check-sprint-bundle.js",
+    "BOOK2-TEXTBOOK-PRODUCTION-1"
+  ],
+  "cwd": "C:\\wt\\book2-212-qc-20260906\\4veco-platform",
+  "actor": "paragraph_214_builder",
+  "role": "independent212specialistQC",
+  "started": "2026-09-06T02:10:14.442392+00:00",
+  "finished": "2026-09-06T02:10:14.638304+00:00",
+  "exit_code": 0,
+  "process_path": "C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\.codex\\tmp\\arg0\\codex-arg0uDve1V;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\libheif\\libheif\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\jxrlib\\jxrlib\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\override;C:\\Python314\\Scripts\\;C:\\Python314\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\GitHub CLI\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\meije\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\meije\\AppData\\Roaming\\npm;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WinGet\\Packages\\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\\poppler-25.07.0\\Library\\bin;C:\\Users\\meije\\AppData\\Local\\Pandoc\\;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\fallback;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\b592626b34cbe333;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\1e3e57cdf0634c02",
+  "stdout": "OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active\n",
+  "stderr": "",
+  "stdout_raw_sha256": "699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d",
+  "stderr_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

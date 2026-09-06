@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/workflows/check-book-outline-currentness.js",
+    "--require-approved",
+    "--action",
+    "specialist_review",
+    "--paragraph",
+    "2.1.2"
+  ],
+  "cwd": "C:\\wt\\book2-212-qc-20260906\\4veco-platform",
+  "actor": "paragraph_214_builder",
+  "role": "independent212specialistQC",
+  "started": "2026-09-06T02:25:48.860370+00:00",
+  "finished": "2026-09-06T02:25:50.430339+00:00",
+  "exit_code": 0,
+  "process_path": "C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\.codex\\tmp\\arg0\\codex-arg0uDve1V;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\libheif\\libheif\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\jxrlib\\jxrlib\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\override;C:\\Python314\\Scripts\\;C:\\Python314\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\GitHub CLI\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\meije\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\meije\\AppData\\Roaming\\npm;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WinGet\\Packages\\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\\poppler-25.07.0\\Library\\bin;C:\\Users\\meije\\AppData\\Local\\Pandoc\\;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\fallback;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\b592626b34cbe333;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\1e3e57cdf0634c02",
+  "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.1.2\n",
+  "stderr": "",
+  "stdout_raw_sha256": "436ef043a9db2fbcc091f49bcb00a0f4247450f7a7d48882bd5a2495677c1691",
+  "stderr_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

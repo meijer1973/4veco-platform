@@ -1,0 +1,57 @@
+{
+  "label": "inherited",
+  "argv": [
+    "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-runtime.py",
+    "worker",
+    "--label",
+    "inherited"
+  ],
+  "process_path": "C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\.codex\\tmp\\arg0\\codex-arg0uDve1V;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\libheif\\libheif\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\jxrlib\\jxrlib\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\override;C:\\Python314\\Scripts\\;C:\\Python314\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\GitHub CLI\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\meije\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\meije\\AppData\\Roaming\\npm;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WinGet\\Packages\\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\\poppler-25.07.0\\Library\\bin;C:\\Users\\meije\\AppData\\Local\\Pandoc\\;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\fallback;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\b592626b34cbe333;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\1e3e57cdf0634c02",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "cairosvg": "2.9.0",
+  "cairocffi": "1.7.1",
+  "cairo_version": "1.18.4",
+  "loaded_render_modules": [
+    {
+      "path": "C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\cairo.dll",
+      "raw_sha256": "e28936605ede6f839101fe0b030dfef474f97aba4ecaaa3b9378b2bd7fdf951e"
+    },
+    {
+      "path": "C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\fontconfig-1.dll",
+      "raw_sha256": "45061d1da6504e53e3f2f6dbacf0791b428b4355f888bc0f50321c052baf6c8f"
+    },
+    {
+      "path": "C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\libpng16.dll",
+      "raw_sha256": "8ece86fff22e0df667c22d091e5a7b71db72e91fb1bb9d5fed02bd74252308e7"
+    },
+    {
+      "path": "C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\freetype.dll",
+      "raw_sha256": "8f84a14b64c2d321a8619c0ada300814dd9a927edd79bd08148706ed40810bc6"
+    },
+    {
+      "path": "C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\pixman-1-0.dll",
+      "raw_sha256": "0b81189bbe44a56e56b74cc0767a7317d09c37163bcdce663f9afc7f2ba1f2f0"
+    }
+  ],
+  "svg_sha256": "6c82fc3ad6ee7a3232d18fff7aab9c42a57a52d01c61dc353452c9b50bd7f81b",
+  "png_sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+  "expected_png_sha256": "e0619fb4b4428f6fef46358908eeca81a846539a4ea40c8718edd7571e6aca02",
+  "matches_current_r19_png": false,
+  "matches_published_png": true,
+  "pixels": {
+    "old_mode": "RGB",
+    "new_mode": "RGB",
+    "old_size": [
+      2000,
+      1260
+    ],
+    "new_size": [
+      2000,
+      1260
+    ],
+    "decoded_equal": true,
+    "old_pixels_sha256": "b9b5363656e058b84485a572fe7a75a8bcc56dee8d2e792aaea2bf32db0809e3",
+    "new_pixels_sha256": "b9b5363656e058b84485a572fe7a75a8bcc56dee8d2e792aaea2bf32db0809e3",
+    "difference_rgb_bounds": null
+  }
+}

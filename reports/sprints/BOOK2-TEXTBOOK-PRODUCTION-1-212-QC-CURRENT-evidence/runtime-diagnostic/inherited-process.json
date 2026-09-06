@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "C:/Python314/python.exe",
+    "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-runtime.py",
+    "worker",
+    "--label",
+    "inherited"
+  ],
+  "cwd": "C:\\wt\\book2-212-qc-20260906\\4veco-platform",
+  "process_path": "C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\.codex\\tmp\\arg0\\codex-arg0uDve1V;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\libheif\\libheif\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\jxrlib\\jxrlib\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\override;C:\\Python314\\Scripts\\;C:\\Python314\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\GitHub CLI\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\meije\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\meije\\AppData\\Roaming\\npm;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\.local\\bin;C:\\Users\\meije\\AppData\\Local\\Microsoft\\WinGet\\Packages\\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\\poppler-25.07.0\\Library\\bin;C:\\Users\\meije\\AppData\\Local\\Pandoc\\;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\bin\\fallback;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin;C:\\Users\\meije\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\b592626b34cbe333;C:\\Users\\meije\\AppData\\Local\\OpenAI\\Codex\\bin\\1e3e57cdf0634c02",
+  "started": "2026-09-06T02:04:10.122543+00:00",
+  "finished": "2026-09-06T02:04:10.796181+00:00",
+  "exit_code": 0,
+  "stdout": "runtime-diagnostic/inherited-result.json 9df6cb0e326648b7921b1744e9b4ab380ce2ed3863975aabc4814c5135afca57\r\n",
+  "stderr": "",
+  "stdout_sha256": "c6c61aeb8f9e2432c75f11cf2f3f0dfc1d95fe3e56e4f96a517fc833115433d0",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

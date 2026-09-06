@@ -1,0 +1,142 @@
+{
+  "actor": "paragraph_214_builder",
+  "role": "independent212specialistQC",
+  "basis": "Personally viewed all 27 full r20 color pages and all 27 grayscale pages using view_image original detail; observations written after those actual views. Native PENDING manifests unchanged.",
+  "observations": [
+    {
+      "kind": "paragraaf",
+      "page": 1,
+      "observation": "Motivation, four goals, prerequisite retrieval and bounded 0–30 visitor model legible; definition and footer stay on page; gray callout contrast readable."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 2,
+      "observation": "TO table and full figure match (0,0)–(30,150), total-euro and quantity units distinct; attached caption, GO heading and Q>0 definition fit; gray line/labels remain clear."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 3,
+      "observation": "GO table excludes zero; explanation distinguishes €/visitor from €/evening. Profit definition and full 0/10/20/30 table preserve negative signs and units; no split/overflow in color or gray."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 4,
+      "observation": "Cost dashed line remains distinct from solid TO in grayscale. Figure and caption attached, revenue/profit misconception explicit, complete break-even derivation and substitution fit above footer."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 5,
+      "observation": "BE marker exactly (20,100), readable non-color loss/profit inequalities, unchanged axes and attached caption. Text bounds model and connects algebra to graph; next step introduced without clipped content."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 6,
+      "observation": "€30 vertical bracket at Q30 and no-area warning clear in both variants; fixed-model qualification and first-integer/no-loss rule explicitly bounded. Full paragraph and footer fit."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 7,
+      "observation": "Continuous/integer table and nearest-rounding misconception remain together. Kayak worked steps 1–4 show Q>0, same-day profit table, 3⅓ versus first4 and adjacent checks, readable fraction glyphs in gray."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 8,
+      "observation": "Worked plotting steps specify scale, endpoints, bounded zones and vertical €16; complete matching graph/caption with distinct dashed TK, solid TO and BE marker. No orphan or clipping."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 9,
+      "observation": "Recap and Start1/2 wholly readable; optional-route distinction explicit. Retain existing recap flag: model/range and increasing-profit qualification are in body, not repeated here. No visual blocker in either variant."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 10,
+      "observation": "Guided practice explicitly optional; soap scaffold, fully supplied graph and complete caption attached, subquestion c below remains visible. Fractions and dashed/solid meaning readable in gray."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 11,
+      "observation": "Pots exercise deliberately supplies only TK/axes: fading is visible without answer leakage. Full caption and next dance-context paragraph fit; four-case table continues coherently on following page. Gray preserves dashed TK."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 12,
+      "observation": "Four-case contrast table complete with wrapped headings, all dance questions and independent minigolf prompt readable. Independent graph task has no supplied answer, includes axes/units/BE/zones/vertical gap."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 13,
+      "observation": "Entire frozen target appears together with exact 2/2/3/4 points, original four prompts and no graph answer supplied. Generous remaining white space follows kept-together target, not missing content."
+    },
+    {
+      "kind": "paragraaf",
+      "page": 14,
+      "observation": "Both equal-height bonus panels show same €30 with different 150/300 scale, readable at native page placement and in gray. Bonus a/b and later/home closing retrieval remain complete with no clipping."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 4,
+      "observation": "Minigolf complete graph/caption matches €20 at Q20; target a–d math and signs visible, continuous714.29 versus integer715 with714 loss0.20 and715 gain0.50 explicit. Formula wraps after / without omitted glyph; grayscale equally legible."
+    },
+    {
+      "kind": "opgaven",
+      "page": 1,
+      "observation": "Standalone exercise edition includes complete worked example steps1–5 with bounded context, table, integer decision and plotting; two-line title and footer legible in both variants."
+    },
+    {
+      "kind": "opgaven",
+      "page": 2,
+      "observation": "Step6, kayak graph, attached caption and full recap all fit; gray distinguishes TK/TO and €16. Existing recap qualification flag retained, not visually defective."
+    },
+    {
+      "kind": "opgaven",
+      "page": 3,
+      "observation": "Start1/2 and optional guided3 context/algebra scaffold retain complete questions and route; dense but no clipping or lost footer. Soap figure continues on next page with its caption."
+    },
+    {
+      "kind": "opgaven",
+      "page": 4,
+      "observation": "Soap figure and its full caption stay together, followed by c and complete pots questions. Gray labels/zones maintain meaning; pots prompt refers forward to supplied axes on next page."
+    },
+    {
+      "kind": "opgaven",
+      "page": 5,
+      "observation": "Pots partial figure/caption and dance context/table plus a/b readable; four table rows intact and units explicit. Continuation c/d belongs to next page, no clipped question."
+    },
+    {
+      "kind": "opgaven",
+      "page": 6,
+      "observation": "Dance c/d continuation, independent6 and complete frozen7 fit without clipping; target source point values stay2/2/3/4, no supplied answer graph. Gray text hierarchy legible."
+    },
+    {
+      "kind": "opgaven",
+      "page": 7,
+      "observation": "Bonus equal-height panels and full explanatory caption readable at placed scale; claims interrogate scales/units, not more calculation only. Optional label and later/home retrieval9 complete; no clipped footer."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 1,
+      "observation": "Complete Start1/2 and soap3 answers explain totals/averages, sign, unit, fixed-scale plotting and adjacent3/4 check; non-area argument included. Dense page remains legible and complete in both variants."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 2,
+      "observation": "Pots model explicitly handles integerBE5 with zero profit qualifying; adjacent4 loses3. Completed graph/caption shows same axes and €9 at8, direct/dashed distinction clear in gray."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 3,
+      "observation": "Four dance cases solve20/30/10/20 with fixedQ and no demand-response claim; minigolf all answers include13⅓/14 and checks13/14, endpoint/axis/zone explanation. Tables and text fit."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 5,
+      "observation": "Bakery graph (714.29,1071.43), €200 gap at1000 and full caption visible. Complete2/2/3/4=11 rubric table fits, allows other readable scales and no mandatory extra table. Model-intercept limitation explicit below."
+    },
+    {
+      "kind": "antwoorden",
+      "page": 6,
+      "observation": "Both bonus answers and all three substantive criteria visible before closing9; halves-paper-distance explanation relates150/300 scales to same €30. Retrieval24/18/42/7 and same-day denominator rationale complete."
+    }
+  ]
+}
