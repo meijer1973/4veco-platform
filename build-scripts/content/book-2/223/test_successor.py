@@ -49,6 +49,29 @@ def require_exact(actual, expected):
         raise AssertionError("Whole bytes differ from exact immutable expectation")
 
 
+ALT_REPLACEMENTS = {
+    "build-scripts/content/book-2/223/theory.md": (
+        '![Figuur 2: Zoek eerst het teken van Ei en daarna het juiste gebied.](_assets/2.2.3_fig_2.svg)',
+        'Ei-schaal: inferieur bij Ei<0, normaal bij 0<Ei<1 en luxe bij Ei>1; open grenspunten 0 en 1 zonder categorie.'),
+    "build-scripts/content/book-2/223/exercises.md": (
+        '![Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.](_assets/2.2.3_fig_4.svg)',
+        "Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs."),
+}
+
+
+def expected_source(name):
+    """Complete immutable original bytes plus only one fixed native alt attribute."""
+    value = blob(ROOT, BASE, name)
+    if name in ALT_REPLACEMENTS:
+        image, alt = ALT_REPLACEMENTS[name]
+        before = (image + '\n').encode()
+        after = (image + '{alt="' + alt + '"}\n').encode()
+        if value.count(before) != 1 or after in value:
+            raise AssertionError(f"Nonunique or already evolved original image: {name}")
+        value = value.replace(before, after, 1)
+    return value
+
+
 def required_inputs():
     destination = LESSONS / builder.LESSON_REL
     return [(destination / "2.2.3-textbook-plan.md", builder.PLAN_HASH),
@@ -64,7 +87,7 @@ class Successor223Tests(unittest.TestCase):
     def test_complete_original_seven_tests_and_four_sources_and_helper_immutable(self):
         for name in UNCHANGED:
             with self.subTest(path=name):
-                require_exact((ROOT / name).read_bytes(), blob(ROOT, BASE, name))
+                require_exact((ROOT / name).read_bytes(), expected_source(name))
 
     def test_unrelated_generator_changes_are_rejected(self):
         expected = expected_generator()
@@ -76,7 +99,7 @@ class Successor223Tests(unittest.TestCase):
 
     def test_unrelated_source_and_original_test_mutations_are_rejected(self):
         for name in UNCHANGED:
-            original = blob(ROOT, BASE, name)
+            original = expected_source(name)
             with self.subTest(path=name), self.assertRaises(AssertionError):
                 require_exact(original + b"\n# unrelated change\n", original)
 
