@@ -91,8 +91,14 @@ for expected in parity['runs']:
     assert record['namespace']['requested']>record['namespace']['highest']
     assert record['source_commit']==expected['source_commit']
     if revision!='r42':assert record['source_commit']==b.SOURCE_COMMIT
-    node=[r for r in record['processes'] if Path(r['argv'][0]).stem=='node']
+    node=[r for r in record['processes'] if Path(r['argv'][0]).stem=='node' and not r['native_worker']]
     assert len(node)==3 and all(r['exit_code']==0 for r in node)
+    rasters=[r for r in record['processes'] if Path(r['argv'][0]).stem=='node' and r['native_worker']]
+    assert len(rasters)==(0 if route=='direct' else 4)
+    for i,raster in enumerate(rasters,1):
+        assert raster['exit_code']==0 and len(raster['argv'])==3
+        assert Path(raster['argv'][1])==OLD_P/'build-scripts/content/book-2/214/raster.cjs'
+        assert Path(raster['argv'][2])==OLD_L/b.LESSON_REL/'_assets'/f'2.1.4_ex_{i}.png'
     assert any('214-232-INPUT-ROOT-gate.cjs' in ' '.join(r['argv']) for r in node)
     assert any('paragraph_production' in r['argv'] for r in node)
     assert any('--durable' in r['argv'] for r in node)
