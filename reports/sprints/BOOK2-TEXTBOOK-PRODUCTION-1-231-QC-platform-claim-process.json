@@ -1,0 +1,19 @@
+{
+  "name": "platform-claim",
+  "cwd": "C:\\wt\\book2-231-qc-20260906\\4veco-platform",
+  "command": "node",
+  "args": [
+    "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\build-scripts\\ci\\check-agent-worktree-safety.js",
+    "--task",
+    "BOOK2-TEXTBOOK-PRODUCTION-1-231-QC",
+    "--agent",
+    "paragraph_231_specialist_qc",
+    "--require-prefix",
+    "codex/,agent/"
+  ],
+  "started_at": "2026-09-06T00:54:01.698Z",
+  "finished_at": "2026-09-06T00:54:01.744Z",
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "Agent worktree-safety check failed: missing mode: pass --claim, --check, or --release\n"
+}

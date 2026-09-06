@@ -1,0 +1,16 @@
+{
+  "name": "source-tests",
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "build-scripts/content/book-2/231/test_source.py",
+    "--lesson-root",
+    "C:\\wt\\book2-231-qc-20260906\\4veco-lessen"
+  ],
+  "cwd": "C:\\wt\\book2-231-qc-20260906\\4veco-platform",
+  "started_at": "2026-09-06T00:27:24.063Z",
+  "finished_at": "2026-09-06T00:27:25.674Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "",
+  "stderr": "test_actual_native_name_regex_all30 (__main__.SourceTests.test_actual_native_name_regex_all30) ... ok\r\ntest_actual_svg_economic_geometry_and_roles (__main__.SourceTests.test_actual_svg_economic_geometry_and_roles) ... ok\r\ntest_actual_svg_labels_canvas_all_ink_boxes (__main__.SourceTests.test_actual_svg_labels_canvas_all_ink_boxes) ... ok\r\ntest_all_model_calculations_independent_fractions (__main__.SourceTests.test_all_model_calculations_independent_fractions) ... ok\r\ntest_all_task_numbers_and_no_device_or_time_metadata (__main__.SourceTests.test_all_task_numbers_and_no_device_or_time_metadata) ... ok\r\ntest_authority_guard_rejects_each_changed_pin_before_processes (__main__.SourceTests.test_authority_guard_rejects_each_changed_pin_before_processes) ... ok\r\ntest_bonus_model_then_exact_three_criteria_and_negative_fixtures (__main__.SourceTests.test_bonus_model_then_exact_three_criteria_and_negative_fixtures) ... ok\r\ntest_discrete_and_model_boundary (__main__.SourceTests.test_discrete_and_model_boundary) ... ok\r\ntest_every_actual_alt_caption_and_union (__main__.SourceTests.test_every_actual_alt_caption_and_union) ... ok\r\ntest_exact_headings_route_and_recap (__main__.SourceTests.test_exact_headings_route_and_recap) ... ok\r\ntest_fading_and_independent_surfaces (__main__.SourceTests.test_fading_and_independent_surfaces) ... ok\r\ntest_fresh_revision_and_immutable_attempt_guards (__main__.SourceTests.test_fresh_revision_and_immutable_attempt_guards) ... ok\r\ntest_frozen_goals_target_and_scoring (__main__.SourceTests.test_frozen_goals_target_and_scoring) ... ok\r\ntest_no_false_predecessor_acceptance_or_changed_plan (__main__.SourceTests.test_no_false_predecessor_acceptance_or_changed_plan) ... ok\r\ntest_print_margin_guard_rejects_body_in_footer_and_false_footer (__main__.SourceTests.test_print_margin_guard_rejects_body_in_footer_and_false_footer) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 15 tests in 1.070s\r\n\r\nOK\r\n"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "native-reproduction",
+  "command": "C:/Python314/python.exe",
+  "args": [
+    "build-scripts/content/book-2/231/verify_rebuild.py",
+    "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r17.json",
+    "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-native-reproduction.json",
+    "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-QC-grayscale-r17"
+  ],
+  "cwd": "C:\\wt\\book2-231-qc-20260906\\4veco-platform",
+  "started_at": "2026-09-06T00:28:04.485Z",
+  "finished_at": "2026-09-06T00:28:57.428Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "{\r\n  \"paragraph\": \"2.3.1\",\r\n  \"visual_inspection\": \"NOT_SUPPLIED_BY_THIS_SCRIPT\",\r\n  \"status\": \"PASS\",\r\n  \"all42_raw_rebuilds\": \"IDENTICAL\"\r\n}\r\n",
+  "stderr": ""
+}

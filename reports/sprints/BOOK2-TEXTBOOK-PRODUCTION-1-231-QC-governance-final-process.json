@@ -1,0 +1,13 @@
+{
+  "name": "governance-final",
+  "cwd": "C:\\wt\\book2-231-qc-20260906\\4veco-platform",
+  "command": "node",
+  "args": [
+    "build-scripts/review-gates/check-governance-freshness.js"
+  ],
+  "started_at": "2026-09-06T00:54:27.837Z",
+  "finished_at": "2026-09-06T00:54:28.898Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"remote\": \"origin\",\n  \"remote_ref\": \"origin/main\",\n  \"origin_main_sha\": \"96416b6b5bd57094576e9aba0a42d682584ec479\",\n  \"head_sha\": \"651df6307a4ffab02e104897b3a699842524290f\",\n  \"allow_policy_edit\": false,\n  \"files\": [\n    \"AGENTS.md\",\n    \"AGENT_GITHUB_ENTRY.md\",\n    \"docs/review/pr-readiness-routing-policy.md\",\n    \"docs/review/pr-integration-lane-policy.md\",\n    \"docs/review/pr-throughput-policy.md\",\n    \"package.json\",\n    \".github/workflows/platform-ci.yml\",\n    \"build-scripts/ci/check-branch-protection.js\"\n  ],\n  \"differing_files\": [],\n  \"failures\": []\n}\n",
+  "stderr": ""
+}
