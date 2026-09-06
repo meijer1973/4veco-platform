@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "node",
+    "build-scripts/ci/check-agent-worktree-safety.js",
+    "--check",
+    "--task",
+    "BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT",
+    "--agent",
+    "paragraph_231_specialist_qc",
+    "--require-prefix",
+    "codex/,agent/"
+  ],
+  "cwd": "C:\\wt\\book2-232-build-current-20260906\\4veco-platform",
+  "start": "2026-09-06T09:25:19.696Z",
+  "finish": "2026-09-06T09:25:19.904Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"mode\": \"check\",\n  \"repository\": \"4veco-platform\",\n  \"worktree_path\": \"C:/wt/book2-232-build-current-20260906/4veco-platform\",\n  \"git_dir\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform192\",\n  \"anchor_clone\": false,\n  \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT\",\n  \"agent_id\": \"paragraph_231_specialist_qc\",\n  \"lock\": {\n    \"present\": true,\n    \"same_owner\": true,\n    \"same_task\": true,\n    \"stale\": false,\n    \"path\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform192\\\\4veco-agent-worktree-lock.json\",\n    \"owner\": \"paragraph_231_specialist_qc\",\n    \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-232-BUILD-CURRENT\"\n  },\n  \"branch\": \"agent/book2-232-build-current-20260906\",\n  \"head_sha\": \"97cc22e144edf88204dabd1ab4bea88b57fbd5cc\",\n  \"on_main\": false,\n  \"detached_head\": false,\n  \"dirty\": true,\n  \"dirty_count\": 2,\n  \"ahead\": 0,\n  \"behind\": 0,\n  \"diverged\": false,\n  \"prefix_ok\": true,\n  \"required_prefixes\": [\n    \"codex/\",\n    \"agent/\"\n  ],\n  \"warnings\": [\n    \"working tree is dirty (2 items)\"\n  ],\n  \"failures\": []\n}\n",
+  "stderr": "",
+  "stdout_base64": "ewogICJvayI6IHRydWUsCiAgIm1vZGUiOiAiY2hlY2siLAogICJyZXBvc2l0b3J5IjogIjR2ZWNvLXBsYXRmb3JtIiwKICAid29ya3RyZWVfcGF0aCI6ICJDOi93dC9ib29rMi0yMzItYnVpbGQtY3VycmVudC0yMDI2MDkwNi80dmVjby1wbGF0Zm9ybSIsCiAgImdpdF9kaXIiOiAiQzpcXFByb2plY3RzXFw0dmVjb1xcNHZlY28tcGxhdGZvcm1cXC5naXRcXHdvcmt0cmVlc1xcNHZlY28tcGxhdGZvcm0xOTIiLAogICJhbmNob3JfY2xvbmUiOiBmYWxzZSwKICAidGFza19pZCI6ICJCT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjMyLUJVSUxELUNVUlJFTlQiLAogICJhZ2VudF9pZCI6ICJwYXJhZ3JhcGhfMjMxX3NwZWNpYWxpc3RfcWMiLAogICJsb2NrIjogewogICAgInByZXNlbnQiOiB0cnVlLAogICAgInNhbWVfb3duZXIiOiB0cnVlLAogICAgInNhbWVfdGFzayI6IHRydWUsCiAgICAic3RhbGUiOiBmYWxzZSwKICAgICJwYXRoIjogIkM6XFxQcm9qZWN0c1xcNHZlY29cXDR2ZWNvLXBsYXRmb3JtXFwuZ2l0XFx3b3JrdHJlZXNcXDR2ZWNvLXBsYXRmb3JtMTkyXFw0dmVjby1hZ2VudC13b3JrdHJlZS1sb2NrLmpzb24iLAogICAgIm93bmVyIjogInBhcmFncmFwaF8yMzFfc3BlY2lhbGlzdF9xYyIsCiAgICAidGFza19pZCI6ICJCT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjMyLUJVSUxELUNVUlJFTlQiCiAgfSwKICAiYnJhbmNoIjogImFnZW50L2Jvb2syLTIzMi1idWlsZC1jdXJyZW50LTIwMjYwOTA2IiwKICAiaGVhZF9zaGEiOiAiOTdjYzIyZTE0NGVkZjg4MjA0ZGFiZDFhYjRiZWE4OGI1N2ZiZDVjYyIsCiAgIm9uX21haW4iOiBmYWxzZSwKICAiZGV0YWNoZWRfaGVhZCI6IGZhbHNlLAogICJkaXJ0eSI6IHRydWUsCiAgImRpcnR5X2NvdW50IjogMiwKICAiYWhlYWQiOiAwLAogICJiZWhpbmQiOiAwLAogICJkaXZlcmdlZCI6IGZhbHNlLAogICJwcmVmaXhfb2siOiB0cnVlLAogICJyZXF1aXJlZF9wcmVmaXhlcyI6IFsKICAgICJjb2RleC8iLAogICAgImFnZW50LyIKICBdLAogICJ3YXJuaW5ncyI6IFsKICAgICJ3b3JraW5nIHRyZWUgaXMgZGlydHkgKDIgaXRlbXMpIgogIF0sCiAgImZhaWx1cmVzIjogW10KfQo=",
+  "stderr_base64": ""
+}
