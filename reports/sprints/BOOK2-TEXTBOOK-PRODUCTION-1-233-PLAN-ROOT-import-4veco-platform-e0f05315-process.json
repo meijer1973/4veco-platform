@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "e0f0531597845d632d8ebe4c29be2ca5b551914d"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:57:01.362Z",
+  "ended": "2026-09-06T04:57:01.506Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "[codex/book2-part-a-production-20260905 4b925480] plan(book2): bound complete 233 paragraph plan authoring\n Date: Sun Sep 6 05:19:12 2026 +0200\n 1 file changed, 104 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDRiOTI1NDgwXSBwbGFuKGJvb2syKTogYm91bmQgY29tcGxldGUgMjMzIHBhcmFncmFwaCBwbGFuIGF1dGhvcmluZwogRGF0ZTogU3VuIFNlcCA2IDA1OjE5OjEyIDIwMjYgKzAyMDAKIDEgZmlsZSBjaGFuZ2VkLCAxMDQgaW5zZXJ0aW9ucygrKQogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjMzLVBMQU4tcGxhbi5tZAo=",
+  "stderr_base64": ""
+}

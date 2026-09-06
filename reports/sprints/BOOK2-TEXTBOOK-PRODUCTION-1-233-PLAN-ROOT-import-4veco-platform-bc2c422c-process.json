@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "git",
+    "cherry-pick",
+    "bc2c422ce6fcaf9550700a9df8bfc09f7e91d9a7"
+  ],
+  "cwd": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform",
+  "started": "2026-09-06T04:57:01.936Z",
+  "ended": "2026-09-06T04:57:02.073Z",
+  "exit_code": 0,
+  "error": null,
+  "stdout": "[codex/book2-part-a-production-20260905 615a156f] plan: independent full 233 textbook plan review\n Date: Sun Sep 6 06:26:49 2026 +0200\n 1 file changed, 100 insertions(+)\n create mode 100644 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-plan.md\n",
+  "stderr": "",
+  "stdout_base64": "W2NvZGV4L2Jvb2syLXBhcnQtYS1wcm9kdWN0aW9uLTIwMjYwOTA1IDYxNWExNTZmXSBwbGFuOiBpbmRlcGVuZGVudCBmdWxsIDIzMyB0ZXh0Ym9vayBwbGFuIHJldmlldwogRGF0ZTogU3VuIFNlcCA2IDA2OjI2OjQ5IDIwMjYgKzAyMDAKIDEgZmlsZSBjaGFuZ2VkLCAxMDAgaW5zZXJ0aW9ucygrKQogY3JlYXRlIG1vZGUgMTAwNjQ0IHJlcG9ydHMvc3ByaW50cy9CT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjMzLVBMQU4tUkVWSUVXLXBsYW4ubWQK",
+  "stderr_base64": ""
+}
