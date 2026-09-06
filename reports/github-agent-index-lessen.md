@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-09-06T01:01:09.371Z
+Generated: 2026-09-06T01:35:14.836Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-lessen`
-Source branch: `agent/book2-223-qc-20260906`
-Source commit: `6663532621e1347c12f691862ee85200665ad14f`
+Source branch: `agent/book2-223-alt-correction-20260906`
+Source commit: `f52b039c00d16cf9ee59573b31cae39de96ce779`
 Files indexed: 1896
-Scope: committed tree files from `git ls-tree -r --name-only 6663532621e1347c12f691862ee85200665ad14f`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Scope: committed tree files from `git ls-tree -r --name-only f52b039c00d16cf9ee59573b31cae39de96ce779`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
