@@ -1,0 +1,529 @@
+{
+  "pass": true,
+  "actor": "paragraph_214_builder",
+  "role": "independent223specialistQCRenewal",
+  "method": "Fresh exact-rational term-by-term derivation from personally read current four sources, verified against pupil and complete answer text; no inherited test PASS substituted for reasoning",
+  "sources": [
+    {
+      "path": "build-scripts\\content\\book-2\\223\\theory.md",
+      "sha256": "c1a1b83d46295ee4d80d32485b0e3912c57bba04a7b9f63dd82a99cbfe102999"
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\223\\exercises.md",
+      "sha256": "d127349412f8020ce971714f313d452af1f28204f2a195fb63efd6edaaee817b"
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\223\\answers.md",
+      "sha256": "d68a20c6e494430327c583ba097e28902b32b29599fec9d775e8b1e5a6bf72cc"
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\223\\target-answers.md",
+      "sha256": "f122a7109e59dbb2ee80201e30002f846356a97fa7286d11abfaf8b496e14996"
+    }
+  ],
+  "direct_ratio_rows": [
+    {
+      "source_case": "theory income bars/table",
+      "symbol": "Ei",
+      "quantity_percent": 15,
+      "changed_input_percent": 10,
+      "exact_ratio": "3/2",
+      "meaning": "luxury"
+    },
+    {
+      "source_case": "theory income bars/table",
+      "symbol": "Ei",
+      "quantity_percent": -5,
+      "changed_input_percent": 10,
+      "exact_ratio": "-1/2",
+      "meaning": "inferior"
+    },
+    {
+      "source_case": "theory income bars/table",
+      "symbol": "Ei",
+      "quantity_percent": 5,
+      "changed_input_percent": 10,
+      "exact_ratio": "1/2",
+      "meaning": "normal"
+    },
+    {
+      "source_case": "theory named filmschijfhuur ratios",
+      "symbol": "Ek",
+      "quantity_percent": 10,
+      "changed_input_percent": 20,
+      "exact_ratio": "1/2",
+      "meaning": "substitutes"
+    },
+    {
+      "source_case": "theory named filmschijfhuur ratios",
+      "symbol": "Ek",
+      "quantity_percent": -4,
+      "changed_input_percent": 20,
+      "exact_ratio": "-1/5",
+      "meaning": "complements"
+    },
+    {
+      "source_case": "worked1 chocolate/instant soup",
+      "symbol": "Ei",
+      "quantity_percent": 15,
+      "changed_input_percent": 10,
+      "exact_ratio": "3/2",
+      "meaning": "luxury"
+    },
+    {
+      "source_case": "worked1 chocolate/instant soup",
+      "symbol": "Ei",
+      "quantity_percent": -5,
+      "changed_input_percent": 10,
+      "exact_ratio": "-1/2",
+      "meaning": "inferior"
+    },
+    {
+      "source_case": "worked2 e-books/covers relative to paper-book price",
+      "symbol": "Ek",
+      "quantity_percent": 10,
+      "changed_input_percent": 20,
+      "exact_ratio": "1/2",
+      "meaning": "substitutes"
+    },
+    {
+      "source_case": "worked2 e-books/covers relative to paper-book price",
+      "symbol": "Ek",
+      "quantity_percent": -5,
+      "changed_input_percent": 20,
+      "exact_ratio": "-1/4",
+      "meaning": "complements"
+    },
+    {
+      "source_case": "Start1 own fountain-pen price",
+      "symbol": "Ev",
+      "quantity_percent": -10,
+      "changed_input_percent": 20,
+      "exact_ratio": "-1/2",
+      "meaning": "signed own-price response, not Ei"
+    },
+    {
+      "source_case": "Start2 school cover/puzzle subscription",
+      "symbol": "Ei",
+      "quantity_percent": -2,
+      "changed_input_percent": 10,
+      "exact_ratio": "-1/5",
+      "meaning": "inferior"
+    },
+    {
+      "source_case": "Start2 school cover/puzzle subscription",
+      "symbol": "Ek",
+      "quantity_percent": 5,
+      "changed_input_percent": 10,
+      "exact_ratio": "1/2",
+      "meaning": "substitutes"
+    },
+    {
+      "source_case": "guided3 premium/budget cocoa, handheld/controller",
+      "symbol": "Ei",
+      "quantity_percent": 12,
+      "changed_input_percent": 8,
+      "exact_ratio": "3/2",
+      "meaning": "luxury"
+    },
+    {
+      "source_case": "guided3 premium/budget cocoa, handheld/controller",
+      "symbol": "Ei",
+      "quantity_percent": -4,
+      "changed_input_percent": 8,
+      "exact_ratio": "-1/2",
+      "meaning": "inferior"
+    },
+    {
+      "source_case": "guided3 premium/budget cocoa, handheld/controller",
+      "symbol": "Ek",
+      "quantity_percent": 10,
+      "changed_input_percent": 20,
+      "exact_ratio": "1/2",
+      "meaning": "substitutes"
+    },
+    {
+      "source_case": "guided3 premium/budget cocoa, handheld/controller",
+      "symbol": "Ek",
+      "quantity_percent": -8,
+      "changed_input_percent": 20,
+      "exact_ratio": "-2/5",
+      "meaning": "complements"
+    },
+    {
+      "source_case": "independent7 walks/routes, rechargeable lamps/batteries",
+      "symbol": "Ei",
+      "quantity_percent": 8,
+      "changed_input_percent": 5,
+      "exact_ratio": "8/5",
+      "meaning": "luxury"
+    },
+    {
+      "source_case": "independent7 walks/routes, rechargeable lamps/batteries",
+      "symbol": "Ei",
+      "quantity_percent": -2,
+      "changed_input_percent": 5,
+      "exact_ratio": "-2/5",
+      "meaning": "inferior"
+    },
+    {
+      "source_case": "independent7 walks/routes, rechargeable lamps/batteries",
+      "symbol": "Ek",
+      "quantity_percent": 3,
+      "changed_input_percent": 10,
+      "exact_ratio": "3/10",
+      "meaning": "substitutes"
+    },
+    {
+      "source_case": "independent7 walks/routes, rechargeable lamps/batteries",
+      "symbol": "Ek",
+      "quantity_percent": -4,
+      "changed_input_percent": 10,
+      "exact_ratio": "-2/5",
+      "meaning": "complements"
+    },
+    {
+      "source_case": "target9a income meal packs/budget noodles",
+      "symbol": "Ei",
+      "quantity_percent": 8,
+      "changed_input_percent": 5,
+      "exact_ratio": "8/5",
+      "meaning": "luxury"
+    },
+    {
+      "source_case": "target9a income meal packs/budget noodles",
+      "symbol": "Ei",
+      "quantity_percent": -3,
+      "changed_input_percent": 5,
+      "exact_ratio": "-3/5",
+      "meaning": "inferior"
+    },
+    {
+      "source_case": "target9c tea/filters relative to coffee price",
+      "symbol": "Ek",
+      "quantity_percent": 4,
+      "changed_input_percent": 10,
+      "exact_ratio": "2/5",
+      "meaning": "substitutes"
+    },
+    {
+      "source_case": "target9c tea/filters relative to coffee price",
+      "symbol": "Ek",
+      "quantity_percent": -6,
+      "changed_input_percent": 10,
+      "exact_ratio": "-3/5",
+      "meaning": "complements"
+    },
+    {
+      "source_case": "closing11 own umbrella price",
+      "symbol": "Ev",
+      "quantity_percent": -5,
+      "changed_input_percent": 10,
+      "exact_ratio": "-1/2",
+      "meaning": "signed own-price response, not Ei"
+    }
+  ],
+  "five_full_function_chains": [
+    {
+      "case": "worked3 tekenles",
+      "coefficients": [
+        "80",
+        "-2",
+        "1",
+        "1/200"
+      ],
+      "inputs_Px_Pz_Y_newY_newPz": [
+        20,
+        10,
+        30000,
+        36000,
+        14
+      ],
+      "base_terms": [
+        "80",
+        "-40",
+        "10",
+        "150"
+      ],
+      "income_terms": [
+        "80",
+        "-40",
+        "10",
+        "180"
+      ],
+      "reset_terms": [
+        "80",
+        "-40",
+        "14",
+        "150"
+      ],
+      "base_Q": "200",
+      "income_Q": "230",
+      "reset_Pz_Q": "204",
+      "Q_percent": "15",
+      "Y_percent": "20",
+      "Ei_exact": "3/4",
+      "Ei_final_two_decimals": "0.75",
+      "income_direction_monthly_subscriptions": "30",
+      "other_price_direction_monthly_subscriptions": "4",
+      "meaning": "normal only in this controlled model comparison; Y annual euros; Q monthly subscriptions; do not divide Y by twelve; reset to original Y and original Q base",
+      "fixed_income_scenario": {
+        "Px": 20,
+        "Pz": 10
+      },
+      "fixed_other_price_scenario": {
+        "Px": 20,
+        "Y": 30000
+      }
+    },
+    {
+      "case": "guided4 naaicursus",
+      "coefficients": [
+        "90",
+        "-2",
+        "1/2",
+        "1/200"
+      ],
+      "inputs_Px_Pz_Y_newY_newPz": [
+        20,
+        20,
+        20000,
+        24000,
+        24
+      ],
+      "base_terms": [
+        "90",
+        "-40",
+        "10",
+        "100"
+      ],
+      "income_terms": [
+        "90",
+        "-40",
+        "10",
+        "120"
+      ],
+      "reset_terms": [
+        "90",
+        "-40",
+        "12",
+        "100"
+      ],
+      "base_Q": "160",
+      "income_Q": "180",
+      "reset_Pz_Q": "162",
+      "Q_percent": "25/2",
+      "Y_percent": "20",
+      "Ei_exact": "5/8",
+      "Ei_final_two_decimals": "0.62",
+      "income_direction_monthly_subscriptions": "20",
+      "other_price_direction_monthly_subscriptions": "2",
+      "meaning": "normal only in this controlled model comparison; Y annual euros; Q monthly subscriptions; do not divide Y by twelve; reset to original Y and original Q base",
+      "fixed_income_scenario": {
+        "Px": 20,
+        "Pz": 20
+      },
+      "fixed_other_price_scenario": {
+        "Px": 20,
+        "Y": 20000
+      }
+    },
+    {
+      "case": "guided5 keramiek",
+      "coefficients": [
+        "120",
+        "-2",
+        "1",
+        "1/250"
+      ],
+      "inputs_Px_Pz_Y_newY_newPz": [
+        15,
+        10,
+        25000,
+        30000,
+        15
+      ],
+      "base_terms": [
+        "120",
+        "-30",
+        "10",
+        "100"
+      ],
+      "income_terms": [
+        "120",
+        "-30",
+        "10",
+        "120"
+      ],
+      "reset_terms": [
+        "120",
+        "-30",
+        "15",
+        "100"
+      ],
+      "base_Q": "200",
+      "income_Q": "220",
+      "reset_Pz_Q": "205",
+      "Q_percent": "10",
+      "Y_percent": "20",
+      "Ei_exact": "1/2",
+      "Ei_final_two_decimals": "0.50",
+      "income_direction_monthly_subscriptions": "20",
+      "other_price_direction_monthly_subscriptions": "5",
+      "meaning": "normal only in this controlled model comparison; Y annual euros; Q monthly subscriptions; do not divide Y by twelve; reset to original Y and original Q base",
+      "fixed_income_scenario": {
+        "Px": 15,
+        "Pz": 10
+      },
+      "fixed_other_price_scenario": {
+        "Px": 15,
+        "Y": 25000
+      }
+    },
+    {
+      "case": "independent8 taalcursus",
+      "coefficients": [
+        "90",
+        "-2",
+        "1",
+        "1/200"
+      ],
+      "inputs_Px_Pz_Y_newY_newPz": [
+        10,
+        10,
+        20000,
+        24000,
+        14
+      ],
+      "base_terms": [
+        "90",
+        "-20",
+        "10",
+        "100"
+      ],
+      "income_terms": [
+        "90",
+        "-20",
+        "10",
+        "120"
+      ],
+      "reset_terms": [
+        "90",
+        "-20",
+        "14",
+        "100"
+      ],
+      "base_Q": "180",
+      "income_Q": "200",
+      "reset_Pz_Q": "184",
+      "Q_percent": "100/9",
+      "Y_percent": "20",
+      "Ei_exact": "5/9",
+      "Ei_final_two_decimals": "0.56",
+      "income_direction_monthly_subscriptions": "20",
+      "other_price_direction_monthly_subscriptions": "4",
+      "meaning": "normal only in this controlled model comparison; Y annual euros; Q monthly subscriptions; do not divide Y by twelve; reset to original Y and original Q base",
+      "fixed_income_scenario": {
+        "Px": 10,
+        "Pz": 10
+      },
+      "fixed_other_price_scenario": {
+        "Px": 10,
+        "Y": 20000
+      }
+    },
+    {
+      "case": "target9 fitness",
+      "coefficients": [
+        "100",
+        "-2",
+        "1/2",
+        "1/100"
+      ],
+      "inputs_Px_Pz_Y_newY_newPz": [
+        10,
+        20,
+        30000,
+        33000,
+        24
+      ],
+      "base_terms": [
+        "100",
+        "-20",
+        "10",
+        "300"
+      ],
+      "income_terms": [
+        "100",
+        "-20",
+        "10",
+        "330"
+      ],
+      "reset_terms": [
+        "100",
+        "-20",
+        "12",
+        "300"
+      ],
+      "base_Q": "390",
+      "income_Q": "420",
+      "reset_Pz_Q": "392",
+      "Q_percent": "100/13",
+      "Y_percent": "10",
+      "Ei_exact": "10/13",
+      "Ei_final_two_decimals": "0.77",
+      "income_direction_monthly_subscriptions": "30",
+      "other_price_direction_monthly_subscriptions": "2",
+      "meaning": "normal only in this controlled model comparison; Y annual euros; Q monthly subscriptions; do not divide Y by twelve; reset to original Y and original Q base",
+      "fixed_income_scenario": {
+        "Px": 10,
+        "Pz": 20
+      },
+      "fixed_other_price_scenario": {
+        "Px": 10,
+        "Y": 30000
+      }
+    }
+  ],
+  "frozen_target_sha256": "9a3a29bcedc16739b74b66b2bb8e136b37e86c7f5cfee3ee35ea37c4bdeed1c5",
+  "points": [
+    3,
+    2,
+    4,
+    4,
+    3
+  ],
+  "total_points": 16,
+  "target_rubric": {
+    "a": "method1 + both income ratios1+1",
+    "b": "two classifications with Ei boundary1+1",
+    "c": "each named goods calculation1 + signed relation1, twice",
+    "d": "two Q values1 + old-base percentages1 + Ei/normal1 + direction/fixed Px,Pz1",
+    "e": "reset/substitution3921 + positive vs3901 + fixed Px,Y1; no added Ek"
+  },
+  "controlled_combined_row": "Supplied200/210/205/215, not an inferred general function; +15 alone cannot isolate +10 income when Pz also changes",
+  "boundary_checks": "Ei0/1 unclassified; signed Ei not abs(Ev); nonzero percentage denominator and positive old quantities/prices/income; coefficients not elasticities; only supplied function scenarios",
+  "bonus_four_criteria": [
+    "bound validity to investigated situation/model",
+    "no necessity/value judgment from Ei",
+    "hold Px and Pz fixed",
+    "explain why combined change is not an isolated income comparison"
+  ],
+  "retrieval": "Start1 old-base -10/+20 gives Ev-.5 and Q44; closing11 Ev-.5, Ei undefined at unchanged Y; closing12 Q40→42 weekly reservations with Px5 fixed",
+  "review_prose_only_finding": {
+    "review_sha256": "e603b62ba2d77e1c33db6aeeaeb24d9b41ec7a136f26020bc3b5081e0a2e56a4",
+    "line": 135,
+    "wrong": "+30 meals/month",
+    "actual_pupil": "+30 abonnementen per maand",
+    "owner": "distinct canonical paragraph reviewer via root; no self-edit"
+  },
+  "timing": {
+    "core": 54,
+    "plus_guided": 69,
+    "all_work": 81,
+    "observed": false
+  },
+  "root_validation": "PENDING",
+  "root_acceptance": "PENDING",
+  "handoff_renewal": "PENDING"
+}

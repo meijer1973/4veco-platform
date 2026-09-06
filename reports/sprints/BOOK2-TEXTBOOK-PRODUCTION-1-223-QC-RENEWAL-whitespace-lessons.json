@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "git",
+    "diff",
+    "--cached",
+    "--check"
+  ],
+  "cwd": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-lessen",
+  "started_utc": "2026-09-06T03:06:34.965Z",
+  "finished_utc": "2026-09-06T03:06:34.991Z",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

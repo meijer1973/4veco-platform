@@ -1,0 +1,125 @@
+{
+  "pass": true,
+  "native_files": 20,
+  "lesson_input_files": 1898,
+  "only_lesson_delta": [],
+  "canonical_review_unchanged": true,
+  "preserved_prior_223_evidence_files": 1115,
+  "new_proofs": [
+    {
+      "mode": "full",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-evidence/223-paragraaf-ca27f8bd6cbb-r25",
+      "manifest_sha256": "3d37aee45366eac790580ed5cba5d71f90e910ce7d54ab5e84b2924128d93eca"
+    },
+    {
+      "mode": "full",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-evidence/223-opgaven-50cf2bbeaa19-r25",
+      "manifest_sha256": "e8606243f16861240d7230bda4748d6e92ef02ca0ea4da304f303f07799c12ba"
+    },
+    {
+      "mode": "full",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-evidence/223-antwoorden-30cd682358c5-r25",
+      "manifest_sha256": "2f7c2d1ad331e47b4f871da497f0e08f78bb0d0e3ddb4410b623f69a2f9d6a65"
+    },
+    {
+      "mode": "thin",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-evidence/223-paragraaf-ca27f8bd6cbb-r26",
+      "manifest_sha256": "52b072e288bbe1d7b9bf9ddee8060070e4370e534f6c4d31d567a65f023c36a2"
+    },
+    {
+      "mode": "thin",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-evidence/223-opgaven-50cf2bbeaa19-r26",
+      "manifest_sha256": "83b3cd33350b02b3b746d04ffb4f6b9c6225c17d42958b9043a2314cf9da2a5a"
+    },
+    {
+      "mode": "thin",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-evidence/223-antwoorden-30cd682358c5-r26",
+      "manifest_sha256": "1bd84ec043647227fb41388e1470f2f26e1c6fd6518e1f1fa6d1544e047621de"
+    },
+    {
+      "mode": "print",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-evidence/223-paragraaf-ca27f8bd6cbb-r27",
+      "manifest_sha256": "40ecdee9d01bdec0eb7516400d8a839626b5f71edbf3240a7bfb468d256a2447"
+    },
+    {
+      "mode": "print",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-evidence/223-opgaven-50cf2bbeaa19-r27",
+      "manifest_sha256": "d401bf2229091958596a08c2ff51d56d0111847965ef5d2c5443032b17f7b0f3"
+    },
+    {
+      "mode": "print",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-RENEWAL-evidence/223-antwoorden-30cd682358c5-r27",
+      "manifest_sha256": "a1cdf93b0f82e2e343c6fc86377ddbfc3e8d43db4e0fac280661b512d67573d6"
+    }
+  ],
+  "source_binding": [
+    {
+      "path": "build-scripts/content/book-2/b2_223.py",
+      "input_sha256": "5b18047a04ecd093a6d469fe5d69c049351f9c5ed21c3ad1b2aa336107d9f57c",
+      "candidate_sha256": "5b18047a04ecd093a6d469fe5d69c049351f9c5ed21c3ad1b2aa336107d9f57c",
+      "complete_expected_bytes_equal": true,
+      "changed": false
+    },
+    {
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "input_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "candidate_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "complete_expected_bytes_equal": true,
+      "changed": false
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_source.py",
+      "input_sha256": "a1f4a1a8d45e01a295ff61034e59d5d1d4bc1f992b6dc39f6a64b7963c7fc6af",
+      "candidate_sha256": "a1f4a1a8d45e01a295ff61034e59d5d1d4bc1f992b6dc39f6a64b7963c7fc6af",
+      "complete_expected_bytes_equal": true,
+      "changed": false
+    },
+    {
+      "path": "build-scripts/content/book-2/223/theory.md",
+      "input_sha256": "8835a4d94097bff54aaf2f58308f4adbd7ac49005aee443f352fcecdb9a38048",
+      "candidate_sha256": "c1a1b83d46295ee4d80d32485b0e3912c57bba04a7b9f63dd82a99cbfe102999",
+      "complete_expected_bytes_equal": true,
+      "changed": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/exercises.md",
+      "input_sha256": "0a7a48bdb65bd0182c757e3af4edc734327d953319df422fe852648ae9823d1c",
+      "candidate_sha256": "d127349412f8020ce971714f313d452af1f28204f2a195fb63efd6edaaee817b",
+      "complete_expected_bytes_equal": true,
+      "changed": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/answers.md",
+      "input_sha256": "d68a20c6e494430327c583ba097e28902b32b29599fec9d775e8b1e5a6bf72cc",
+      "candidate_sha256": "d68a20c6e494430327c583ba097e28902b32b29599fec9d775e8b1e5a6bf72cc",
+      "complete_expected_bytes_equal": true,
+      "changed": false
+    },
+    {
+      "path": "build-scripts/content/book-2/223/target-answers.md",
+      "input_sha256": "f122a7109e59dbb2ee80201e30002f846356a97fa7286d11abfaf8b496e14996",
+      "candidate_sha256": "f122a7109e59dbb2ee80201e30002f846356a97fa7286d11abfaf8b496e14996",
+      "complete_expected_bytes_equal": true,
+      "changed": false
+    },
+    {
+      "path": "build-scripts/content/book-2/223/test_successor.py",
+      "input_sha256": "a6105cbdea4325f78783fa3a5c78ef077914bedb18c2b385e0bb2df787581c11",
+      "candidate_sha256": "f2c3cb4773b6730a58d3720699202f80d8b5f8b22a779b2b8cddf664b491d927",
+      "complete_expected_bytes_equal": true,
+      "changed": true
+    },
+    {
+      "path": "build-scripts/content/book-2/223/check_render.py",
+      "input_sha256": "d8a5c5f706e8d4fa647374b7dd2f1d5d393fe0419c8ee8b0a3ca2fd2f7f0a92b",
+      "candidate_sha256": "d8a5c5f706e8d4fa647374b7dd2f1d5d393fe0419c8ee8b0a3ca2fd2f7f0a92b",
+      "complete_expected_bytes_equal": true,
+      "changed": false
+    }
+  ],
+  "handoff": "ABSENT",
+  "production_ready": false,
+  "root_validation": "PENDING",
+  "root_acceptance": "PENDING",
+  "handoff_renewal": "PENDING"
+}

@@ -1,0 +1,72 @@
+{
+  "pass": true,
+  "native_six_file_delta_from_original_QC": [
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.html",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.zip",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.html",
+    "2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.zip"
+  ],
+  "actual_HTML_changes": [
+    {
+      "kind": "paragraaf",
+      "md_before_sha256": "062b78d54c064e6dbb3765b8da77575da50fedcde6777551e10fb5842a14ebac",
+      "md_after_sha256": "5e19fc4528f5644f8c0f94da601c88d923c017078559a4ad0e97163837bfa287",
+      "html_before_sha256": "3b1725338d2cdb16edf616da76516b699d97055cf74cdfaca076eeaf94f2cc08",
+      "html_after_sha256": "9ce0cfaede013511c2f292f432e34b3acaf525b891efb406030f1d532ed993f9",
+      "complete_native_derivation_equal": true,
+      "changes": [
+        {
+          "image": 2,
+          "before_alt": "Figuur 2: Zoek eerst het teken van Ei en daarna het juiste gebied.",
+          "after_alt": "Ei-schaal: inferieur bij Ei<0, normaal bij 0<Ei<1 en luxe bij Ei>1; open grenspunten 0 en 1 zonder categorie.",
+          "characters": 109,
+          "before_caption_html": "<figcaption aria-hidden=\"true\">Figuur 2: Zoek eerst het teken van Ei en\ndaarna het juiste gebied.</figcaption>",
+          "after_caption_html": "<figcaption>Figuur 2: Zoek eerst het teken van Ei en daarna het juiste\ngebied.</figcaption>"
+        },
+        {
+          "image": 4,
+          "before_alt": "Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.",
+          "after_alt": "Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.",
+          "characters": 118,
+          "before_caption_html": "<figcaption aria-hidden=\"true\">Figuur 4: Vergelijk afzonderlijke\nveranderingen steeds met dezelfde beginsituatie.</figcaption>",
+          "after_caption_html": "<figcaption>Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\ndezelfde beginsituatie.</figcaption>"
+        }
+      ],
+      "html_line_diff_binary_omitted": "--- input.html\n+++ candidate.html\n@@ -211,9 +211,9 @@\n een normaal goed die je in Boek 1 tegenkwam, is nog niet deze formele\n driecategorieënindeling.</p>\n <figure>\n-<img alt=\"Figuur 2: Zoek eerst het teken van Ei en daarna het juiste gebied.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n-<figcaption aria-hidden=\"true\">Figuur 2: Zoek eerst het teken van Ei en\n-daarna het juiste gebied.</figcaption>\n+<img alt=\"Ei-schaal: inferieur bij Ei&lt;0, normaal bij 0&lt;Ei&lt;1 en luxe bij Ei&gt;1; open grenspunten 0 en 1 zonder categorie.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n+<figcaption>Figuur 2: Zoek eerst het teken van Ei en daarna het juiste\n+gebied.</figcaption>\n </figure>\n <blockquote class=\"callout-short\">\n <p><strong>Let op - teken niet wegpoetsen</strong></p>\n@@ -490,9 +490,9 @@\n </tbody>\n </table>\n <figure>\n-<img alt=\"Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n-<figcaption aria-hidden=\"true\">Figuur 4: Vergelijk afzonderlijke\n-veranderingen steeds met dezelfde beginsituatie.</figcaption>\n+<img alt=\"Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n+<figcaption>Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\n+dezelfde beginsituatie.</figcaption>\n </figure>\n <p><strong>Stap 3 - Bereken de percentages en Ei.</strong> Gebruik de\n eigen oude waarde van iedere variabele:</p>\n"
+    },
+    {
+      "kind": "opgaven",
+      "md_before_sha256": "f680b6f72166ff66c06f3da42ed61e536614dfc12d50b0ab403264d284697d19",
+      "md_after_sha256": "ffdbc7d62c86d4945c52fabf94629790c0b54783a9c67060b03522ee1c497fbf",
+      "html_before_sha256": "cf691595eb0ea599ba90825f631d98eaa9cdf75526de4435d5ea569fea610893",
+      "html_after_sha256": "0d8350bdd37bf146ffc316bebc792fcbee4f4526fd65fbfd1bbbd98576626b60",
+      "complete_native_derivation_equal": true,
+      "changes": [
+        {
+          "image": 1,
+          "before_alt": "Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.",
+          "after_alt": "Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.",
+          "characters": 118,
+          "before_caption_html": "<figcaption aria-hidden=\"true\">Figuur 4: Vergelijk afzonderlijke\nveranderingen steeds met dezelfde beginsituatie.</figcaption>",
+          "after_caption_html": "<figcaption>Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\ndezelfde beginsituatie.</figcaption>"
+        }
+      ],
+      "html_line_diff_binary_omitted": "--- input.html\n+++ candidate.html\n@@ -189,9 +189,9 @@\n </tbody>\n </table>\n <figure>\n-<img alt=\"Figuur 4: Vergelijk afzonderlijke veranderingen steeds met dezelfde beginsituatie.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n-<figcaption aria-hidden=\"true\">Figuur 4: Vergelijk afzonderlijke\n-veranderingen steeds met dezelfde beginsituatie.</figcaption>\n+<img alt=\"Drie scenario's: beginsituatie, alleen hoger inkomen en terug naar dezelfde basis voor alleen een hogere andere prijs.\" src=\"data:image/png;base64,[UNCHANGED BINARY]\"/>\n+<figcaption>Figuur 4: Vergelijk afzonderlijke veranderingen steeds met\n+dezelfde beginsituatie.</figcaption>\n </figure>\n <p><strong>Stap 3 - Bereken de percentages en Ei.</strong> Gebruik de\n eigen oude waarde van iedere variabele:</p>\n"
+    },
+    {
+      "kind": "antwoorden",
+      "md_before_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+      "md_after_sha256": "12301db657de839c01dde6d4e6da72d353b5b2235874ecabff3438ce1949e437",
+      "html_before_sha256": "3af048f800cfff79706e04bad324cbb7f7d84998952cb15b6e0cbfaab09d25a7",
+      "html_after_sha256": "3af048f800cfff79706e04bad324cbb7f7d84998952cb15b6e0cbfaab09d25a7",
+      "complete_native_derivation_equal": true,
+      "changes": [],
+      "html_line_diff_binary_omitted": ""
+    }
+  ],
+  "current_review_sha256": "e603b62ba2d77e1c33db6aeeaeb24d9b41ec7a136f26020bc3b5081e0a2e56a4",
+  "independence": "ALT source and separate review authored by other actors; DOM derivation primitives attributed",
+  "functional_semantics": "Ei scale is noun-first, describes signed intervals and open 0/1; scenario description names isolated income, original reset and isolated other price. Printed complete captions remain visible and unhidden."
+}
