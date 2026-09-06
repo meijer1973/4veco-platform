@@ -16881,3 +16881,207 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-check.py baseline
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:36:33.450Z`
+- finished_at: `2026-09-06T02:36:59.658Z`
+- duration_ms: `26208`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `1b4b6ee9c053e654c2ba0fac7ef2dc33db9ebb8bba00aa8c5678938e062d32cd`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Traceback (most recent call last):
+  File "C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-check.py", line 191, in <module>
+    if args.mode=='baseline':baseline()
+                             ~~~~~~~~^^
+  File "C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-check.py", line 89, in baseline
+    'all_lesson_files':{n:raw(L/n) for n in tracked(L)},'specialist_personal_views':76,'root_personal_views':0,
+                          ~~~^^^^^
+  File "C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-check.py", line 31, in raw
+    def raw(p):return h(Path(p).read_bytes())
+                        ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\pathlib\__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\pathlib\__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit � antwoorden.html'
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-check.py baseline
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:38:36.659Z`
+- finished_at: `2026-09-06T02:38:55.955Z`
+- duration_ms: `19296`
+- exit_code: `0`
+- stdout_sha256: `4b95136c91f8791e6e3dd03face0689d606ebbc7a1bb7bc60ae4a4842b9d8f57`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+baseline.json bc1fbd5d67397093be820e89c9cc416d543e98c5d453073f75dc052e3b615d24
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-check.py tests
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:39:14.067Z`
+- finished_at: `2026-09-06T02:39:16.822Z`
+- duration_ms: `2755`
+- exit_code: `0`
+- stdout_sha256: `8eaaa221a39e1c0a9cb5f151e45b16f4fe42ba2669be450c5c17f51f751ee0f6`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+tests.json f43a28b6a9e4d6e473c69da697f5a63f74ba8ece1f6fde1e9500bfcc3d55c9bc
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-check.py full
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:39:16.870Z`
+- finished_at: `2026-09-06T02:40:14.172Z`
+- duration_ms: `57302`
+- exit_code: `0`
+- stdout_sha256: `8a1f1abecff146da4922183ea198b8530e95748808202ed34f846cc69deddb22`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+full-reservation.json 32f2991ea943a72b30d4abf37f8986888ba2b081f229b41969472446582eae6e
+full-process.json 0ce94c4924d41ccb650d935d3715d9cd294e551eb34edf5c11e92678efbcf740
+full-parity.json cdc0da695367298370c27c86f2b0c85f9fd3eaae6833e62dbc5a60f01857a3e3
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-check.py thin
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:40:14.217Z`
+- finished_at: `2026-09-06T02:40:55.821Z`
+- duration_ms: `41604`
+- exit_code: `0`
+- stdout_sha256: `ee924be98c9fc0067bd9d1ca6cd6ea1d4e83bc4a08c2a881ab8ba94bbc47ef73`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+thin-reservation.json e8d2dd717943e10294e4cd9bc7979a7d4f34ab4b01ec5cf8fe17f83dd8be11d8
+thin-process.json 1a9acd8da9fe8f941a32e8de7b20fc4465fad42b87cd649b9b5985d1826cfb3b
+thin-parity.json 6bacbe4034087b9829892011bf334ce2c6cb7a8591bb23fcf80285fcfd96c136
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-check.py print
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:40:55.869Z`
+- finished_at: `2026-09-06T02:41:30.481Z`
+- duration_ms: `34612`
+- exit_code: `0`
+- stdout_sha256: `ba311a9782a600a76b6bea8274ac4955602f8adc5d051e80242ac454e79abc3a`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+print-reservation.json 0b6a5e164360ccbe829f3cdb071c7d1d6f1c65ca96798d164f184b623192c65d
+print-process.json 2bd89f8e33d52d16c43f7abd05e3ae5c1fed9c2c1b8438d64d3da0a384bb0140
+print-parity.json 6ec32816b72e9260cafdf0e32603cb9bdff04e21f5f778b87f1d4409598c1531
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-check.py gates
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:41:30.530Z`
+- finished_at: `2026-09-06T02:41:39.582Z`
+- duration_ms: `9052`
+- exit_code: `0`
+- stdout_sha256: `3da5ecd6d47ba469b71d7364782ada22db7af1c302c3ab6cad493293d50829d6`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+native-check-process.json 30ecee6eb649401495d2343bb739f7459ce1e4d94bb44d372858d5b2b092cbbd
+student-web.json d1cc2a4166684e26b90801f7d179f0c1b7397141e76b34ef308488a5bf923949
+publisher-print.json eb245c118ce7a4de14b11ae300e06bd877f0952703fac091f2c811f1f2229cd1
+currentness-paragraph_production.json 6fc38b6b0215bb90430dd1c0a0b444ea9e0be2ad43cdb8538b4d4377058db38d
+currentness-specialist_review.json b6cdbcd8cce5fa83fa273350fd1ecde5ed5c8f75b323132ead91f4d56efd1c0c
+durable.json fbd486a5c42cab9920720228d35264366456038edf0b36f0d8901e822a691f86
+bundle.json 1e71eb650d357406c2a512189ea14ebe3420f007ca065efe95ff642c067ea515
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-root-qc-check.py integrity
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-06T02:41:39.631Z`
+- finished_at: `2026-09-06T02:41:41.034Z`
+- duration_ms: `1403`
+- exit_code: `0`
+- stdout_sha256: `d92839971ebf8dc34b7d77eea7b1d50dacae1487f8659d0b29c7e8f99df5b2c0`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+final-integrity.json 5d38a8227b5b5c0ef2cc61ae4ce91f6335eef2b1cda67d2d1f15cbc332e21ade
+
+```
+
+### stderr excerpt
+
+```text
+
+```

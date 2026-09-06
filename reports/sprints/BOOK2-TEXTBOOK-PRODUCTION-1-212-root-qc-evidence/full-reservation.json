@@ -1,0 +1,2870 @@
+{
+  "suffix": "r24",
+  "maximum_consumed": 23,
+  "scan": [
+    {
+      "path": "C:\\wt\\book2-211-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-211-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-211-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-211-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-211-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-211-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-211-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-211-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-211-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-211-r5-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-211-r5-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-211-r5-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-211-r5-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-211-r5-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-211-r5-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-211-r5-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-bonus-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r3",
+      "revision": 3
+    },
+    {
+      "path": "C:\\wt\\book2-212-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r4",
+      "revision": 4
+    },
+    {
+      "path": "C:\\wt\\book2-212-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-5aad912bd2cd-r2",
+      "revision": 2
+    },
+    {
+      "path": "C:\\wt\\book2-212-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-4d69a7004bbd-r4",
+      "revision": 4
+    },
+    {
+      "path": "C:\\wt\\book2-212-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-61a6a4405d5a-r3",
+      "revision": 3
+    },
+    {
+      "path": "C:\\wt\\book2-212-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-e9ddba97a5a5-r2",
+      "revision": 2
+    },
+    {
+      "path": "C:\\wt\\book2-212-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-147c6c209f0d-r2",
+      "revision": 2
+    },
+    {
+      "path": "C:\\wt\\book2-212-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-58deb867afef-r3",
+      "revision": 3
+    },
+    {
+      "path": "C:\\wt\\book2-212-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r4",
+      "revision": 4
+    },
+    {
+      "path": "C:\\wt\\book2-212-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\full-r2-reservation.json",
+      "revision": 2
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\full-r2-reservation.json",
+      "revision": 20
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\full-reservation.json",
+      "revision": 19
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\print-reservation.json",
+      "revision": 22
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\rebuild-reservation.json",
+      "revision": 23
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\thin-reservation.json",
+      "revision": 21
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-antwoorden-d55f1da66723-r20",
+      "revision": 20
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-antwoorden-d55f1da66723-r21",
+      "revision": 21
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-antwoorden-d55f1da66723-r22",
+      "revision": 22
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-antwoorden-d55f1da66723-r23",
+      "revision": 23
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-antwoorden-f64221b90730-r19",
+      "revision": 19
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-opgaven-94ebe5d35207-r20",
+      "revision": 20
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-opgaven-94ebe5d35207-r21",
+      "revision": 21
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-opgaven-94ebe5d35207-r22",
+      "revision": 22
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-opgaven-94ebe5d35207-r23",
+      "revision": 23
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-opgaven-e4c672bc8880-r19",
+      "revision": 19
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-paragraaf-63c12c356ff5-r19",
+      "revision": 19
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r20",
+      "revision": 20
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r21",
+      "revision": 21
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r22",
+      "revision": 22
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r23",
+      "revision": 23
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r13.json",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r13.json",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r14.json",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r14.json",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r15.json",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r15.json",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\full-reservation.json",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\print-reservation.json",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\thin-reservation.json",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-212-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-212-r7-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r13.json",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r13.json",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r14.json",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r14.json",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r15.json",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r15.json",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-212-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-212-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-213-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-bonus-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-independent-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-independent-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-independent-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-output-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-output-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-output-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-r5-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-r5-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-r5-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-r6-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-r7-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-r7-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-213-r7-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-214-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-214-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-221-presentation-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-presentation-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-presentation-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-r7-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-r7-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-r7-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-r7-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-r8-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-r8-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-r8-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-221-r8-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-222-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-correction-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-223-alt-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-223-independent-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-independent-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-independent-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-223-qc-renewal-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-223-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-s1-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-s1-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-223-succession-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-224-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-231-plan-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-231-plan-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-231-plan-review-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-231-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-231-qc-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-231-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-231-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-231-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r13.json",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r13.json",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r14.json",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r14.json",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r15.json",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r15.json",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\full-reservation.json",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\print-reservation.json",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\thin-reservation.json",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-232-plan-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r13.json",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r13.json",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r14.json",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r14.json",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r15.json",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r15.json",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\full-reservation.json",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\print-reservation.json",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\thin-reservation.json",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-232-production-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r13.json",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r13.json",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r14.json",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r14.json",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r15.json",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r15.json",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\full-reservation.json",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\print-reservation.json",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\thin-reservation.json",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-book-proof-review-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r6",
+      "revision": 6
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-antwoorden-d55f1da66723-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-opgaven-94ebe5d35207-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-BONUS-evidence\\212-paragraaf-e94d42f66ab9-r7",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\full-r2-reservation.json",
+      "revision": 2
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\full-r2-reservation.json",
+      "revision": 20
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\full-reservation.json",
+      "revision": 19
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\print-reservation.json",
+      "revision": 22
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\rebuild-reservation.json",
+      "revision": 23
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\thin-reservation.json",
+      "revision": 21
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-antwoorden-d55f1da66723-r20",
+      "revision": 20
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-antwoorden-d55f1da66723-r21",
+      "revision": 21
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-antwoorden-d55f1da66723-r22",
+      "revision": 22
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-antwoorden-d55f1da66723-r23",
+      "revision": 23
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-antwoorden-f64221b90730-r19",
+      "revision": 19
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-opgaven-94ebe5d35207-r20",
+      "revision": 20
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-opgaven-94ebe5d35207-r21",
+      "revision": 21
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-opgaven-94ebe5d35207-r22",
+      "revision": 22
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-opgaven-94ebe5d35207-r23",
+      "revision": 23
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-opgaven-e4c672bc8880-r19",
+      "revision": 19
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-paragraaf-63c12c356ff5-r19",
+      "revision": 19
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r20",
+      "revision": 20
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r21",
+      "revision": 21
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r22",
+      "revision": 22
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-QC-CURRENT-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r23",
+      "revision": 23
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-antwoorden-d55f1da66723-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-opgaven-94ebe5d35207-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r8",
+      "revision": 8
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-R7-REVIEW-evidence\\212-paragraaf-e94d42f66ab9-r9",
+      "revision": 9
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-antwoorden-d55f1da66723-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-opgaven-94ebe5d35207-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r10",
+      "revision": 10
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r11",
+      "revision": 11
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r12",
+      "revision": 12
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r13.json",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r13.json",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r14.json",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r14.json",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r15.json",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\reservation-r15.json",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-antwoorden-d55f1da66723-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-opgaven-94ebe5d35207-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r13",
+      "revision": 13
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r14",
+      "revision": 14
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-REVIEW-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r15",
+      "revision": 15
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\full-reservation.json",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\print-reservation.json",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\thin-reservation.json",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-antwoorden-d55f1da66723-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-opgaven-94ebe5d35207-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r16",
+      "revision": 16
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r17",
+      "revision": 17
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-S1-root-evidence\\proofs\\212-paragraaf-e94d42f66ab9-r18",
+      "revision": 18
+    },
+    {
+      "path": "C:\\wt\\book2-short-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-antwoorden-07a75d7b5b69-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-short-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-opgaven-94ebe5d35207-r5",
+      "revision": 5
+    },
+    {
+      "path": "C:\\wt\\book2-short-alt-correction-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\212-paragraaf-e94d42f66ab9-r5",
+      "revision": 5
+    }
+  ]
+}
