@@ -1,0 +1,104 @@
+{
+  "status": "CANDIDATE_CHECKS_PASS_PENDING_DISTINCT_REVIEW",
+  "P": "a7215d0eacddb8d10f5982ccc4a26c35ddc494d8",
+  "L": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+  "manifest_sha256": "d7cf3d9902edb65d22c4c21f31771db6b1e08db51ac8feac8dff57f400014469",
+  "probes_sha256": "24f161846ff4375fa8337c226b657e6c0a4918efcfbbda934bbe24d3b3f13422",
+  "probes": {
+    "positives": 2,
+    "negatives": 427,
+    "semantic_negatives": 12,
+    "inputs": 138
+  },
+  "gates": [
+    {
+      "name": "structural",
+      "exit_code": 0
+    },
+    {
+      "name": "chapter_planning",
+      "exit_code": 0
+    },
+    {
+      "name": "chapter_production",
+      "exit_code": 0
+    },
+    {
+      "name": "durable",
+      "exit_code": 0
+    },
+    {
+      "name": "bundle",
+      "exit_code": 0
+    },
+    {
+      "name": "governance",
+      "exit_code": 0
+    },
+    {
+      "name": "authoring-contract",
+      "exit_code": 0
+    },
+    {
+      "name": "2.2.1-student-web",
+      "exit_code": 0
+    },
+    {
+      "name": "2.2.1-publisher-print",
+      "exit_code": 0
+    },
+    {
+      "name": "2.2.2-student-web",
+      "exit_code": 0
+    },
+    {
+      "name": "2.2.2-publisher-print",
+      "exit_code": 0
+    },
+    {
+      "name": "2.2.3-student-web",
+      "exit_code": 0
+    },
+    {
+      "name": "2.2.3-publisher-print",
+      "exit_code": 0
+    },
+    {
+      "name": "2.2.4-student-web",
+      "exit_code": 0
+    },
+    {
+      "name": "2.2.4-publisher-print",
+      "exit_code": 0
+    }
+  ],
+  "preservation": {
+    "raw": {
+      "platform": {
+        "ref": "b50d24d9fa4601499a1c1f45ee42d5c38763c62e",
+        "files": 16308,
+        "excluded": [
+          "reports/github-agent-index-platform.json",
+          "reports/github-agent-index-platform.md",
+          "reports/github-agent-index-lessen.json",
+          "reports/github-agent-index-lessen.md"
+        ],
+        "NUL_path_sha256": "e7af2e6997a8364ff4962393e18feb7613faefc567e17fd3c7d66916fc838da6",
+        "path_blob_sha256": "a91398fe5db2ac736f4b9546aec52551edd8bf29421917bcf92f41103159b3e2",
+        "all_current_raw_equal_Git": true
+      },
+      "lessons": {
+        "ref": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+        "files": 1924,
+        "excluded": [],
+        "NUL_path_sha256": "185888bcc67dd5f3be0fea6e85f2c84274ff7e111f9bbbc4d5b9e60aae7a59d9",
+        "path_blob_sha256": "1bc802938e59a1b91ea0d795adcb7c91687159db920772084ed1e0e06691b221",
+        "all_current_raw_equal_Git": true
+      }
+    },
+    "manifest_sha256": "1296c608e55cc2a573b072eddca0f98b7005ed779ff3d762b82af06777f3c067",
+    "PDFs": 29,
+    "native_writes": 0
+  },
+  "production_release": false
+}
