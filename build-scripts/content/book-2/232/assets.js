@@ -65,8 +65,8 @@ function graph(s){
  if(eq){b+=line('price',180,Y(P),X(Q),Y(P),C.ink,'12 8')+line('quantity',X(Q),Y(P),X(Q),720,C.ink,'12 8');
   b+=`<circle id="equilibrium" cx="${n(X(Q))}" cy="${n(Y(P))}" r="6" fill="${C.ink}"/>`+text('e-label',X(Q)+90,Y(P)-(m.d*m.qmax/m.pmax>.500001?90:70),'E');
  }
- if(cs){const q=.15*Q,cy=Y((P+m.a-m.b*q)/2);b+=`<rect x="${n(X(q)-33)}" y="${n(cy-22)}" width="66" height="42" fill="${C.bg}"/>`+text('cs-label',X(q),cy+14,'CS','middle');}
- if(ps){const q=.15*Q,cy=Y((P+m.c+m.d*q)/2);b+=`<rect x="${n(X(q)-33)}" y="${n(cy-22)}" width="66" height="42" fill="${C.bg}"/>`+text('ps-label',X(q),cy+14,'PS','middle');}
+ if(cs){const q=.15*Q,cy=Y((P+m.a-m.b*q)/2);b+=`<rect id="cs-label-background" x="${n(X(q)-48)}" y="${n(cy-30)}" width="96" height="60" fill="${C.bg}"/>`+text('cs-label',X(q),cy+14,'CS','middle');}
+ if(ps){const q=.15*Q,cy=Y((P+m.c+m.d*q)/2);b+=`<rect id="ps-label-background" x="${n(X(q)-48)}" y="${n(cy-30)}" width="96" height="60" fill="${C.bg}"/>`+text('ps-label',X(q),cy+14,'PS','middle');}
  return frame(s,b);
 }
 function discrete(s){let b=text('scene',600,68,'Eén paraplureparatie','middle');
@@ -74,6 +74,7 @@ function discrete(s){let b=text('scene',600,68,'Eén paraplureparatie','middle')
  b+='<rect id="seller-band" x="220" y="480" width="390" height="90" fill="#82E0AA" fill-opacity="0.45"/><rect x="220" y="480" width="390" height="90" fill="url(#ps-dots)"/>';
  b+=line('wtp',220,240,610,240)+line('price',220,480,610,480)+line('mc',220,570,610,570);
  b+=text('wtp-label',650,255,'WTP: € 18')+text('price-label',650,495,'Prijs: € 10')+text('mc-label',650,585,'MK: € 7');
+ b+=`<rect id="cs-label-background" x="310" y="321" width="180" height="60" fill="${C.bg}"/><rect id="ps-label-background" x="310" y="496" width="180" height="60" fill="${C.bg}"/>`;
  b+=text('cs-label',400,365,'CS: € 8','middle')+text('ps-label',400,540,'PS: € 3','middle')+text('ts-label',650,380,'TS: € 11');
  b+=text('meaning',600,710,'Eén werkelijke transactie','middle');return frame(s,b);}
 function summary(s){let b=text('scene',600,68,'Voordeel per transactie','middle');

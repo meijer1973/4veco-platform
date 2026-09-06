@@ -140,6 +140,16 @@ class SourceTests(unittest.TestCase):
                 svg_check(Source(raw),spec,self.spec['models'].get(spec['model']))
             for wrong in [raw.replace('font-size="40"','font-size="30"',1),raw.replace('<title id="title">','<title id="title">FORGED ',1)]:
                 with self.assertRaises(ValueError):svg_check(Source(wrong),spec,self.spec['models'].get(spec['model']))
+            for old,new in [('id="cs-label-background"','id="missing-background"'),('id="ps-label-background"','id="missing-background"'),('id="supply"','stroke-opacity="0.99" id="supply"')]:
+                if old in raw:
+                    with self.assertRaises(ValueError):svg_check(Source(raw.replace(old,new)),spec,self.spec['models'].get(spec['model']))
+
+    def test_heading_whitespace_without_semantic_weakening(self):
+        from check_render import heading_text,BeautifulSoup
+        raw=''.join('<h2>'+h+'</h2>' for h in b.HEADINGS)
+        self.assertEqual(heading_text(BeautifulSoup(raw.replace('en interleaving','en\ninterleaving'),'html.parser')),b.HEADINGS)
+        for wrong in [raw.replace('interleaving','uitwerking'),raw.replace('<h2>','<h3>',1),raw+'<h2>Extra</h2>']:
+            self.assertNotEqual(heading_text(BeautifulSoup(wrong,'html.parser')),b.HEADINGS)
 
     def test_namespace_announcement_is_not_occupied_proof(self):
         def scan(root,name):return {'hits':[{'worktree':str(root),'path':name,'revisions':[40]}]}

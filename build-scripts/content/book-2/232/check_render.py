@@ -25,6 +25,9 @@ def contrast(a,c):
         return sum(x*y for x,y in zip(v,[.2126,.7152,.0722]))
     x,y=sorted([lum(a),lum(c)]);return (y+.05)/(x+.05)
 
+def heading_text(soup):
+    return [' '.join(h.get_text(' ',strip=True).split()) for h in soup.find_all('h2')]
+
 def svg_check(path,spec,model):
     root=ET.fromstring(path.read_text(encoding='utf-8'));ns={'s':'http://www.w3.org/2000/svg'}
     if root.attrib.get('viewBox')!='0 0 1200 900' or root.attrib.get('role')!='img' or root.attrib.get('aria-labelledby')!='title desc':raise ValueError('Accessible SVG canvas')
@@ -44,6 +47,12 @@ def svg_check(path,spec,model):
             box=[min(x for x,y in points),min(y for x,y in points),max(x for x,y in points),max(y for x,y in points)]
         if box[0]<12 or box[1]<12 or box[2]>1188 or box[3]>888:raise ValueError('Clipped native text '+e.attrib['id'])
         boxes.append({'id':e.attrib['id'],'text':value,'bbox':box})
+    for row in boxes:
+        if row['id'] not in ['cs-label','ps-label']:continue
+        backdrop=elems.get(row['id']+'-background')
+        if backdrop is None or backdrop.attrib.get('fill')!='#F7FAFC' or any('opacity' in k for k in backdrop.attrib):raise ValueError('Opaque area-label background')
+        r=backdrop.attrib;x=float(r['x']);y=float(r['y']);w=float(r['width']);h=float(r['height']);box=row['bbox']
+        if min(box[0]-x,box[1]-y,x+w-box[2],y+h-box[3])<12:raise ValueError('Pattern/label ink clearance below12px')
     for i,one in enumerate(boxes):
         for two in boxes[i+1:]:
             x,y=one['bbox'],two['bbox']
@@ -57,7 +66,7 @@ def svg_check(path,spec,model):
             e=elems[key]
             if any(abs(float(e.attrib[k])-v)>1e-5 for k,v in zip(['x1','y1','x2','y2'],values)):raise ValueError('Curve endpoint mismatch')
             if e.attrib['stroke-width']!='4':raise ValueError('Curve stroke')
-        if 'supply' in elems and (elems['supply'].attrib['stroke']!='#1E8449' or elems['supply'].attrib.get('stroke-dasharray')!='20 12' or 'opacity' in elems['supply'].attrib):raise ValueError('Opaque accessible noncolor supply')
+        if 'supply' in elems and (elems['supply'].attrib['stroke']!='#1E8449' or elems['supply'].attrib.get('stroke-dasharray')!='20 12' or any('opacity' in k for k in elems['supply'].attrib)):raise ValueError('Opaque accessible noncolor supply')
         bare=spec['stage'] in ('bare','demand')
         if bare and any(n in elems for n in ['equilibrium','price','quantity','cs-fill','ps-fill']):raise ValueError('Student answer marking leak')
         if not bare:
@@ -96,7 +105,7 @@ def check(manifest_path):
         md=Path(d['source_md']).read_text(encoding='utf-8')
         if md!=docs[kind]:raise ValueError('Source serialization freshness')
         refs=images(md);soup=BeautifulSoup(Path(d['source_html']).read_text(encoding='utf-8'),'html.parser')
-        if [h.get_text(' ',strip=True) for h in soup.find_all('h2')]!=b.HEADINGS:raise ValueError('Rendered seven headings')
+        if heading_text(soup)!=b.HEADINGS:raise ValueError('Rendered seven headings')
         figs=soup.find_all('figure')
         if len(figs)!=len(refs):raise ValueError('Figure count')
         for f,r in zip(figs,refs):
