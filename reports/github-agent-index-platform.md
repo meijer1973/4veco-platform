@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T09:04:15.915Z
+Generated: 2026-09-06T09:41:31.303Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `7c069abdf5628b7dc8469cad4d57a3bc816cd7e3`
-Files indexed: 15815
-Scope: committed tree files from `git ls-tree -r --name-only 7c069abdf5628b7dc8469cad4d57a3bc816cd7e3`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Source commit: `60a5eeeb80b074d00e2e2e0067afef293605d1eb`
+Files indexed: 16211
+Scope: committed tree files from `git ls-tree -r --name-only 60a5eeeb80b074d00e2e2e0067afef293605d1eb`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 806
+Count: 816
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -222,6 +222,15 @@ Count: 806
 - build-scripts/content/book-2/213/theory.md
 - build-scripts/content/book-2/213/verify_alt_delta.py
 - build-scripts/content/book-2/213/verify_rebuild.py
+- build-scripts/content/book-2/214/answers.md
+- build-scripts/content/book-2/214/check_render.py
+- build-scripts/content/book-2/214/dependency-pins.json
+- build-scripts/content/book-2/214/direct_print.py
+- build-scripts/content/book-2/214/exercises.md
+- build-scripts/content/book-2/214/figures.py
+- build-scripts/content/book-2/214/raster.cjs
+- build-scripts/content/book-2/214/target-answers.md
+- build-scripts/content/book-2/214/test_source.py
 - build-scripts/content/book-2/22/front.css
 - build-scripts/content/book-2/22/front.html
 - build-scripts/content/book-2/221/answers.md
@@ -260,6 +269,7 @@ Count: 806
 - build-scripts/content/book-2/b2_211.py
 - build-scripts/content/book-2/b2_212.py
 - build-scripts/content/book-2/b2_213.py
+- build-scripts/content/book-2/b2_214.py
 - build-scripts/content/book-2/b2_221.py
 - build-scripts/content/book-2/b2_222.py
 - build-scripts/content/book-2/b2_223.py
@@ -979,7 +989,7 @@ Count: 25
 
 ## validators
 
-Count: 758
+Count: 764
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1546,6 +1556,12 @@ Count: 758
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/publication-lessons-claim-check-corrected.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-S1-REVIEW-evidence/publication-platform-claim-check-corrected.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-check-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r41-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r41.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r42-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r42.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r46.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-rebuild-r46-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-check-r1.cjs
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-ALT-render-check-r8.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-paragraph-render-check-r7.json
@@ -2777,7 +2793,7 @@ Count: 1030
 
 ## reports
 
-Count: 13017
+Count: 13403
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -9791,6 +9807,303 @@ Count: 13017
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-scope.cjs
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-232-PRODUCTION-RELEASE-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-actual-runtime-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-gates.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-part-a-publisher-print-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-part-a-student-web-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-production-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-release-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r1-url-map-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-gates.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-part-a-publisher-print-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-part-a-student-web-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-production-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-release-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-author-r2-url-map-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-fraction-probe-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-geometry-probes-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-geometry-probes-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-index-freshness-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-index-generate-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-index-literal-inventory-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-index-runtime.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-index-transport-diagnostic-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-ink-probes-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-ink-probes-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-inspection.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-log-cleanup.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-namespace-scan-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r41-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r41.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r42-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r42.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-r46.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-check-rebuild-r46-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-direct-r45-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-full-r40-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-full-r41-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-full-r42-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-full-r43-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-parity-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-parity.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-native-thin-r44-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-parity.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-lessen-complete-scope-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-lessen-complete-whitespace-crlf-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-lessen-complete-whitespace-native-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-lessen-own-scope-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-lessen-own-whitespace-crlf-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-lessen-own-whitespace-native-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-platform-complete-scope-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-platform-complete-whitespace-crlf-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-platform-complete-whitespace-native-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-platform-own-scope-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-platform-own-whitespace-crlf-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-platform-own-whitespace-native-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-payload-scope-summary.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-post-native-final-custody.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-pre-native-commit-custody.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-production-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r40-failed-raw/2.1.4_ex_1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r40-failed-raw/2.1.4_ex_1.svg
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r40-failure-capture.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-antwoorden-r41-46e101368234/pages/page-011.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/2.1.4-opgaven-r41-47aaa2e8e5b3/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-full/author-run.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.html
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.pdf
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.html
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.pdf
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_1.svg
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_2.svg
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_3.svg
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_4.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4_ex_4.svg
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/build_pdf.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-antwoorden-r42-f2951e2f9690/pages/page-011.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/2.1.4-opgaven-r42-c89e1c4f4949/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-full/author-run.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – antwoorden.html
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – antwoorden.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – antwoorden.pdf
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – opgaven.html
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – opgaven.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – opgaven.pdf
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_1.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_1.svg
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_2.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_2.svg
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_3.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_3.svg
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_4.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4_ex_4.svg
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/build_pdf.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/2.1.4_ex_1-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/2.1.4_ex_2-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/2.1.4_ex_3-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/2.1.4_ex_4-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-001-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-002-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-003-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-004-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-005-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-006-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-007-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-008-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-009-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-010-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/antwoorden/page-011-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-001-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-002-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-003-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-004-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-005-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-006-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-007-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-008-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-views/opgaven/page-009-gray.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-antwoorden-r43-f2951e2f9690/pages/page-011.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/2.1.4-opgaven-r43-c89e1c4f4949/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r43-full/author-run.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-antwoorden-r44-f2951e2f9690/pages/page-011.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/2.1.4-opgaven-r44-c89e1c4f4949/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r44-thin/author-run.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-antwoorden-f2951e2f9690/pages/page-011.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/2.1.4-gemengde-opgaven-opgaven-c89e1c4f4949/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r45-direct/author-run.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-antwoorden-r46-f2951e2f9690/pages/page-011.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/2.1.4-opgaven-r46-c89e1c4f4949/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r46-checker/author-run.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-release-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-report.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r40.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r41.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r42.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r43.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r44.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r45.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-reservation-r46.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-runtime-correction.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-source-probes-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-source-probes-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-source-probes-r3-log-custody.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-source-probes-r3-process.json.gz
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-tools.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-view-capture-r42-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-visual-r42.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-command-log.jsonl
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-evidence.json
@@ -9835,6 +10148,95 @@ Count: 13017
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-scope.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-PLAN-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-plan-work-order.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-authority-r1.json.gz
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-authority-r2.json.gz
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-authority-r3.json.gz
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-lessons-84f821a3-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-platform-09e99f77-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-platform-0a96956d-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-platform-39ca053f-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-platform-55df9c8c-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-platform-71287955-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-platform-8594d5dd-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-platform-86472fbd-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-platform-8e58aaed-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-platform-99e111d5-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-platform-a62bc517-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-platform-a6e3963b-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-platform-ad5186e6-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-import-platform-dd8c6310-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-imports.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-native-custody-r3.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-post-r1-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-post-r1-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-post-r1-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-post-r1-production-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-post-r1-publisher-print-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-post-r1-release-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-post-r1-specialist-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-post-r1-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-post-r1-student-web-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-post-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-pre-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-pre-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-pre-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-pre-production-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-pre-release-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-pre-specialist-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-pre-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r1-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r1-diagnostic.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r1-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r1-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r1-native-custody-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r1-production-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r1-publisher-print-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r1-release-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r1-source-tests-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r1-specialist-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r1-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r1-student-web-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r2-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r2-diagnostic.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r2-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r2-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r2-native-custody-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r2-production-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r2-publisher-print-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r2-release-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r2-specialist-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r2-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r2-student-web-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r3-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r3-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r3-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r3-native-custody-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r3-production-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r3-publisher-print-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r3-release-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r3-specialist-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r3-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-r3-student-web-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-scope-r1-own-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-scope-r1-own-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-scope-r1-whole-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-scope-r1-whole-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-scope-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-source-tests-r1-stderr.txt.gz
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-source-tests-r1-stdout.txt.gz
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-source-tests-r1.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-test-capture.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-verification-r3.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-verify.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-white-r1-own-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-white-r1-own-P-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-white-r1-whole-L-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-ROOT-ADOPTION-white-r1-whole-P-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-baseline.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-bundle-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-chapter-planning-process.json
@@ -15805,15 +16207,37 @@ _No files indexed in this group._
 
 ## paragraph folders
 
-Count: 0
+Count: 12
 
-_No files indexed in this group._
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.html
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.pdf
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.html
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.pdf
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – antwoorden.html
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – antwoorden.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – antwoorden.pdf
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – opgaven.html
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – opgaven.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – opgaven.pdf
 
 ## generated artifacts
 
-Count: 0
+Count: 12
 
-_No files indexed in this group._
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.html
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – antwoorden.pdf
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.html
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r41-retained-native/2.1.4 Gemengde opgaven – opgaven.pdf
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – antwoorden.html
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – antwoorden.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – antwoorden.pdf
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – opgaven.html
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – opgaven.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-214-BUILD-CURRENT-r42-retained-native/2.1.4 Gemengde opgaven – opgaven.pdf
 
 ## other
 
