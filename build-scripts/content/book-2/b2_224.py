@@ -121,8 +121,14 @@ def serialize_target(record: dict) -> str:
     sources, questions = target["sources"], target["subquestions"]
     if [s["id"] for s in sources] != ["bron-a", "bron-b", "bron-c", "bron-d"]:
         raise ValueError("Target source order differs")
-    parts = [target["context"], *(serialize_source(s) for s in sources[:3])]
-    parts += [f"**Vraag {q['label']} ({q['points']} punten).** {q['prompt']}" for q in questions[:4]]
+    # Keep source and questions together: A/1–3, B–C/4, then D/5–6.
+    # Every source cell/prompt stays exact and both source/question orders stay
+    # original. A purposeful page break avoids an orphaned target question.
+    parts = [target["context"], serialize_source(sources[0])]
+    parts += [f"**Vraag {q['label']} ({q['points']} punten).** {q['prompt']}" for q in questions[:3]]
+    parts += ['<div class="page-break"></div>', *(serialize_source(s) for s in sources[1:3])]
+    q = questions[3]
+    parts += [f"**Vraag {q['label']} ({q['points']} punten).** {q['prompt']}"]
     parts += ['<div class="page-break"></div>', serialize_source(sources[3])]
     parts += [f"**Vraag {q['label']} ({q['points']} punten).** {q['prompt']}" for q in questions[4:]]
     return "\n\n".join(parts)
