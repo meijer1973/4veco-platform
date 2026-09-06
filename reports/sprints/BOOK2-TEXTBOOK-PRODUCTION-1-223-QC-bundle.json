@@ -1,0 +1,15 @@
+{
+  "command": [
+    "node",
+    "build-scripts/sprints/check-sprint-bundle.js",
+    "BOOK2-TEXTBOOK-PRODUCTION-1"
+  ],
+  "cwd": "C:\\wt\\book2-223-qc-20260906\\4veco-platform",
+  "started": "2026-09-06T00:40:10.798896+00:00",
+  "ended": "2026-09-06T00:40:11.103079+00:00",
+  "path_first": "C:/msys64/mingw64/bin",
+  "exit_code": 0,
+  "stdout": "OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active\n",
+  "stderr": "",
+  "expected_exit": 0
+}

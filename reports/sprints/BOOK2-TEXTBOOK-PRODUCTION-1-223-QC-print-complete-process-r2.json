@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Python314\\python.exe",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-specialist.py",
+    "print-logged-inner"
+  ],
+  "cwd": "C:\\wt\\book2-223-qc-20260906\\4veco-platform",
+  "started": "2026-09-06T00:51:25.620730+00:00",
+  "ended": "2026-09-06T00:51:39.735089+00:00",
+  "path_first": "C:/msys64/mingw64/bin",
+  "exit_code": 0,
+  "stdout": "print-reservation: BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-log2-print-reservation.json SHA256 2fc68eec12cae72b8b291573da269427490d0b6aad681060c95d45f04e938912\nprint-manifest: BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-log2-print-manifest.json SHA256 eaa8d11e98304614b199ec6eecfa1d704582254ef9365f52fd2c51f3ff58b70c\nprint-parity: BOOK2-TEXTBOOK-PRODUCTION-1-223-QC-print-log2-print-parity.json SHA256 97fb9ffed7252d8fbc1cf4e14b1787005e01e12c1ca8d3857105b5a69a519233\n",
+  "stderr": "",
+  "expected_exit": 0
+}

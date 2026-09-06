@@ -1,0 +1,382 @@
+{
+  "pass": true,
+  "actor": "paragraph_214_builder",
+  "role": "independent223specialistQC",
+  "method": "Independent rational recomputation from complete four-source reading; result matching against rendered/source models is personal semantic review.",
+  "source_sha256": {
+    "build-scripts\\content\\book-2\\223\\answers.md": "d68a20c6e494430327c583ba097e28902b32b29599fec9d775e8b1e5a6bf72cc",
+    "build-scripts\\content\\book-2\\223\\exercises.md": "0a7a48bdb65bd0182c757e3af4edc734327d953319df422fe852648ae9823d1c",
+    "build-scripts\\content\\book-2\\223\\target-answers.md": "f122a7109e59dbb2ee80201e30002f846356a97fa7286d11abfaf8b496e14996",
+    "build-scripts\\content\\book-2\\223\\theory.md": "8835a4d94097bff54aaf2f58308f4adbd7ac49005aee443f352fcecdb9a38048"
+  },
+  "rows": [
+    {
+      "case": "theory Ei picknick; W1",
+      "exact": "3/2",
+      "decimal": 1.5,
+      "meaning": "luxury; positive >1"
+    },
+    {
+      "case": "theory Ei lunch; W1",
+      "exact": "-1/2",
+      "decimal": -0.5,
+      "meaning": "inferior; signed negative"
+    },
+    {
+      "case": "theory Ei notebooks",
+      "exact": "1/2",
+      "decimal": 0.5,
+      "meaning": "normal; 0<Ei<1"
+    },
+    {
+      "case": "theory Ek digital film",
+      "exact": "1/2",
+      "decimal": 0.5,
+      "meaning": "Q digital film / P disc rental; substitutes"
+    },
+    {
+      "case": "theory Ek fitted covers",
+      "exact": "-1/5",
+      "decimal": -0.2,
+      "meaning": "Q covers / P disc rental; complements"
+    },
+    {
+      "case": "W2 Ek digital books",
+      "exact": "1/2",
+      "decimal": 0.5,
+      "meaning": "Q digital / P paper books; substitutes"
+    },
+    {
+      "case": "W2 Ek fitted covers",
+      "exact": "-1/4",
+      "decimal": -0.25,
+      "meaning": "Q covers / P paper books; complements"
+    },
+    {
+      "case": "Start1 Ev",
+      "exact": "-1/2",
+      "decimal": -0.5,
+      "meaning": "own price denominator; opposite direction"
+    },
+    {
+      "case": "Start2 Ei",
+      "exact": "-1/5",
+      "decimal": -0.2,
+      "meaning": "inferior"
+    },
+    {
+      "case": "Start2 Ek",
+      "exact": "1/2",
+      "decimal": 0.5,
+      "meaning": "Q subscription / P loose puzzle; substitutes"
+    },
+    {
+      "case": "G3 premium Ei",
+      "exact": "3/2",
+      "decimal": 1.5,
+      "meaning": "luxury"
+    },
+    {
+      "case": "G3 budget Ei",
+      "exact": "-1/2",
+      "decimal": -0.5,
+      "meaning": "inferior"
+    },
+    {
+      "case": "G3 portable Ek",
+      "exact": "1/2",
+      "decimal": 0.5,
+      "meaning": "Q portable / P console; substitutes"
+    },
+    {
+      "case": "G3 controller Ek",
+      "exact": "-2/5",
+      "decimal": -0.4,
+      "meaning": "Q fitted controller / P console; complements"
+    },
+    {
+      "case": "I7 walk Ei",
+      "exact": "8/5",
+      "decimal": 1.6,
+      "meaning": "luxury"
+    },
+    {
+      "case": "I7 paper route Ei",
+      "exact": "-2/5",
+      "decimal": -0.4,
+      "meaning": "inferior"
+    },
+    {
+      "case": "I7 rechargeable Ek",
+      "exact": "3/10",
+      "decimal": 0.3,
+      "meaning": "Q rechargeable / P battery lantern; substitutes"
+    },
+    {
+      "case": "I7 battery Ek",
+      "exact": "-2/5",
+      "decimal": -0.4,
+      "meaning": "Q fitted batteries / P lantern; complements"
+    },
+    {
+      "case": "T9a meal Ei",
+      "exact": "8/5",
+      "decimal": 1.6,
+      "meaning": "luxury"
+    },
+    {
+      "case": "T9a noodle Ei",
+      "exact": "-3/5",
+      "decimal": -0.6,
+      "meaning": "inferior"
+    },
+    {
+      "case": "T9c tea Ek",
+      "exact": "2/5",
+      "decimal": 0.4,
+      "meaning": "Q tea / P coffee; substitutes"
+    },
+    {
+      "case": "T9c filter Ek",
+      "exact": "-3/5",
+      "decimal": -0.6,
+      "meaning": "Q filter / P coffee; complements"
+    },
+    {
+      "case": "Closing11 Ev",
+      "exact": "-1/2",
+      "decimal": -0.5,
+      "meaning": "Ei unavailable because income denominator is zero"
+    },
+    {
+      "case": "W3 base",
+      "exact": "200",
+      "decimal": 200.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "W3 income",
+      "exact": "230",
+      "decimal": 230.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "W3 reset_other_price",
+      "exact": "204",
+      "decimal": 204.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "W3 Ei",
+      "exact": "3/4",
+      "decimal": 0.75,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "W3 percentage bases",
+      "quantity_percent_exact": "15",
+      "income_percent_exact": "20",
+      "income_delta": "30",
+      "other_price_delta": "4",
+      "coefficient_is_not_Ei": true
+    },
+    {
+      "case": "G4 base",
+      "exact": "160",
+      "decimal": 160.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "G4 income",
+      "exact": "180",
+      "decimal": 180.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "G4 reset_other_price",
+      "exact": "162",
+      "decimal": 162.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "G4 Ei",
+      "exact": "5/8",
+      "decimal": 0.625,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "G4 percentage bases",
+      "quantity_percent_exact": "25/2",
+      "income_percent_exact": "20",
+      "income_delta": "20",
+      "other_price_delta": "2",
+      "coefficient_is_not_Ei": true
+    },
+    {
+      "case": "G5 base",
+      "exact": "200",
+      "decimal": 200.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "G5 income",
+      "exact": "220",
+      "decimal": 220.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "G5 reset_other_price",
+      "exact": "205",
+      "decimal": 205.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "G5 Ei",
+      "exact": "1/2",
+      "decimal": 0.5,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "G5 percentage bases",
+      "quantity_percent_exact": "10",
+      "income_percent_exact": "20",
+      "income_delta": "20",
+      "other_price_delta": "5",
+      "coefficient_is_not_Ei": true
+    },
+    {
+      "case": "I8 base",
+      "exact": "180",
+      "decimal": 180.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "I8 income",
+      "exact": "200",
+      "decimal": 200.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "I8 reset_other_price",
+      "exact": "184",
+      "decimal": 184.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "I8 Ei",
+      "exact": "5/9",
+      "decimal": 0.5555555555555556,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "I8 percentage bases",
+      "quantity_percent_exact": "100/9",
+      "income_percent_exact": "20",
+      "income_delta": "20",
+      "other_price_delta": "4",
+      "coefficient_is_not_Ei": true
+    },
+    {
+      "case": "T9de base",
+      "exact": "390",
+      "decimal": 390.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "T9de income",
+      "exact": "420",
+      "decimal": 420.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "T9de reset_other_price",
+      "exact": "392",
+      "decimal": 392.0,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "T9de Ei",
+      "exact": "10/13",
+      "decimal": 0.7692307692307693,
+      "meaning": "Separate comparisons against original baseline; annual Y remains annual, Px fixed."
+    },
+    {
+      "case": "T9de percentage bases",
+      "quantity_percent_exact": "100/13",
+      "income_percent_exact": "10",
+      "income_delta": "30",
+      "other_price_delta": "2",
+      "coefficient_is_not_Ei": true
+    },
+    {
+      "case": "Start1 substitution",
+      "exact": "44",
+      "decimal": 44.0,
+      "meaning": "Multiply before subtraction; units per week."
+    },
+    {
+      "case": "Closing12 baseline",
+      "exact": "40",
+      "decimal": 40.0,
+      "meaning": "Reservations per week; Px=5 fixed."
+    },
+    {
+      "case": "Closing12 new",
+      "exact": "42",
+      "decimal": 42.0,
+      "meaning": "Only other price changes."
+    },
+    {
+      "case": "I6 income isolated delta",
+      "exact": "10",
+      "decimal": 10.0,
+      "meaning": "Pz=20 and Px fixed; supplied controlled table."
+    },
+    {
+      "case": "I6 other price isolated delta",
+      "exact": "5",
+      "decimal": 5.0,
+      "meaning": "Y=30000 and Px fixed."
+    },
+    {
+      "case": "I6 combined supplied delta",
+      "exact": "15",
+      "decimal": 15.0,
+      "meaning": "Both Y/Pz changed; cannot attribute whole result to Y or assert general causality."
+    },
+    {
+      "case": "Target points",
+      "exact": "16",
+      "decimal": 16.0,
+      "meaning": "All five frozen prompts, with method, classification, named goods, resets and reasons."
+    },
+    {
+      "case": "Core minutes",
+      "exact": "54",
+      "decimal": 54.0,
+      "meaning": "Design estimate only, unobserved; one minute below 55."
+    },
+    {
+      "case": "Core plus support",
+      "exact": "69",
+      "decimal": 69.0,
+      "meaning": "Continuation/homework needed; not a 55-minute claim."
+    },
+    {
+      "case": "All optional work",
+      "exact": "81",
+      "decimal": 81.0,
+      "meaning": "Includes bonus and retrieval; unobserved."
+    }
+  ],
+  "Ei_boundaries": "Ei<0 inferior; 0<Ei<1 normal; Ei>1 luxury; exactly 0 and 1 left unclassified; no necessity judgment.",
+  "bonus_four_criteria": [
+    "Bound model/observation validity, not universal future elasticity",
+    "No necessity/value category from Ei",
+    "Hold own and other price fixed for income comparison",
+    "Explain why simultaneous changes do not isolate income"
+  ],
+  "zero_denominator": "Percent input change must be nonzero; closing11 Ei undefined, not zero.",
+  "no_new_extension": "No MO=MK optimum, no compulsory function-derived Ek in target e, no dividing annual Y by twelve.",
+  "classroom_observed": false
+}

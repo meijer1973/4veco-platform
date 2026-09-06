@@ -1,0 +1,13 @@
+{
+  "pass": true,
+  "unchanged_non_qc_lesson_files": 24,
+  "only_changed": [
+    "2.2.3-quality-ref.yaml"
+  ],
+  "qc_sha256": "6d93128f5cdcd363fc4a7e5a6e5d462162f130a18f4f01fd4656be22ef9e2586",
+  "all288_imports_exact": true,
+  "old_and_new_native_manifests": "PENDING unchanged",
+  "canonical_review_sha256": "793c8460e7d20e8a2e40d7e8912c969c94a091e67fa25566c812264c8769539e",
+  "handoff": "ABSENT",
+  "root_acceptance": "PENDING"
+}
