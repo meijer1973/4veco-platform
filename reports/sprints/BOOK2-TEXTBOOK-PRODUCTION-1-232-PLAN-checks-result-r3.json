@@ -1,0 +1,267 @@
+{
+  "status": "PASS_AUTHOR_CHECKS_ONLY",
+  "plan_raw_sha256": "df3d5c11364797f0d5b7190f2c0a2ce3c7cdd86d6d5e7fefde5c6e27d6d89967",
+  "plan_lf_sha256": "df3d5c11364797f0d5b7190f2c0a2ce3c7cdd86d6d5e7fefde5c6e27d6d89967",
+  "checks": [
+    "Complete plan structure, actual geometry/ink/timing/roles/metadata",
+    "Full frozen target exact bytes, all goals/sources/table/questions/points/forms",
+    "Six market systems and eleven marginal rows; all discrete/start/combined/bonus/closing calculations independently solved",
+    "Q50 point gain7.50 distinguished from continuous [50,51] area7.125; no off-by-one rewrite",
+    "Actual planned color ratios and effective font calculation; no render acceptance",
+    "Exact current root/C23/accepted231 handoff inputs",
+    "Every prior tracked file retained under Git clean-filter byte contract"
+  ],
+  "negative_counterexamples_rejected": [
+    "frozen goal",
+    "frozen context",
+    "frozen graph source",
+    "frozen table cell",
+    "frozen points",
+    "frozen prompt",
+    "frozen answer form",
+    "frozen short model",
+    "frozen status",
+    "wrong E geometry",
+    "wrong supplied domain",
+    "wrong candle E",
+    "invented time",
+    "timing observed",
+    "missing target coverage",
+    "missing fading",
+    "missing final stage",
+    "speculative production release",
+    "legacy213 acceptance",
+    "untraded supply excluded",
+    "imperative short alt",
+    "long alt",
+    "missing bonus criteria",
+    "PS profit",
+    "wrong discrete scale",
+    "insufficient essential contrast",
+    "color-only region meaning",
+    "caption substituted for alt",
+    "zero-width interval",
+    "raw delta mistaken for MK",
+    "price mistaken for area height",
+    "negative nonbuyer CS counted",
+    "maximum total equals zero marginal",
+    "unrelated prior edit build-scripts/content/book-2/b2_231.py",
+    "unrelated prior edit references/authored/course-target-exercises.json",
+    "unrelated prior edit Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-review.md"
+  ],
+  "market_math": [
+    {
+      "case": "Tulips fig2–5",
+      "Q_P_CS_PS_TS": [
+        "32",
+        "14",
+        "256",
+        "128",
+        "384"
+      ]
+    },
+    {
+      "case": "Towels we1",
+      "Q_P_CS_PS_TS": [
+        "12",
+        "18",
+        "72",
+        "72",
+        "144"
+      ]
+    },
+    {
+      "case": "Seedlings ex1",
+      "Q_P_CS_PS_TS": [
+        "6",
+        "12",
+        "18",
+        "18",
+        "36"
+      ]
+    },
+    {
+      "case": "Candles ex2/ex5",
+      "Q_P_CS_PS_TS": [
+        "24",
+        "14",
+        "144",
+        "72",
+        "216"
+      ]
+    },
+    {
+      "case": "Fruit bars ex3/ex6",
+      "Q_P_CS_PS_TS": [
+        "40",
+        "16",
+        "400",
+        "200",
+        "600"
+      ]
+    },
+    {
+      "case": "Concert ex4/ex7",
+      "Q_P_CS_PS_TS": [
+        "60",
+        "20",
+        "900",
+        "450",
+        "1350"
+      ]
+    },
+    {
+      "case": "tulips marginal",
+      "Q": [
+        16,
+        48
+      ],
+      "gains": [
+        "12",
+        "-12"
+      ]
+    },
+    {
+      "case": "towels marginal",
+      "Q": [
+        10,
+        14
+      ],
+      "gains": [
+        "4",
+        "-4"
+      ]
+    },
+    {
+      "case": "seedlings marginal",
+      "Q": [
+        4
+      ],
+      "gains": [
+        "4"
+      ]
+    },
+    {
+      "case": "candles marginal",
+      "Q": [
+        20,
+        28
+      ],
+      "gains": [
+        "3",
+        "-3"
+      ]
+    },
+    {
+      "case": "fruit marginal",
+      "Q": [
+        32,
+        48
+      ],
+      "gains": [
+        "6",
+        "-6"
+      ]
+    },
+    {
+      "case": "target marginal",
+      "Q": [
+        50,
+        70
+      ],
+      "gains": [
+        "15/2",
+        "-15/2"
+      ]
+    }
+  ],
+  "individual_math": [
+    {
+      "case": "opening",
+      "CS_PS_TS": [
+        8,
+        3,
+        11
+      ]
+    },
+    {
+      "case": "Start2",
+      "CS_PS_TS": [
+        5,
+        3,
+        8
+      ]
+    },
+    {
+      "case": "combined baseline",
+      "CS_PS_TS": [
+        4,
+        4,
+        8
+      ]
+    },
+    {
+      "case": "WTP only",
+      "CS_PS_TS": [
+        6,
+        4,
+        10
+      ]
+    },
+    {
+      "case": "MC only",
+      "CS_PS_TS": [
+        4,
+        1,
+        5
+      ]
+    },
+    {
+      "case": "both",
+      "CS_PS_TS": [
+        6,
+        1,
+        7
+      ]
+    },
+    {
+      "case": "bonus original",
+      "CS_PS_TS": [
+        8,
+        5,
+        13
+      ]
+    },
+    {
+      "case": "bonus model",
+      "CS_PS_TS": [
+        6,
+        7,
+        13
+      ]
+    },
+    {
+      "case": "bonus alternative",
+      "CS_PS_TS": [
+        5,
+        8,
+        13
+      ]
+    }
+  ],
+  "placed_font_pt": "1992/127",
+  "planned_contrast": {
+    "#2D3748": 11.437770260954183,
+    "#1A5276": 7.9742091306560505,
+    "#1E8449": 4.500247327247552
+  },
+  "preserved_prior_files": {
+    "platform": 11885,
+    "lessons": 1900
+  },
+  "root_validation": "PENDING",
+  "independent_plan_review": "PENDING",
+  "production_release": "PENDING",
+  "rendered_proof": "NOT_APPLICABLE_PLAN_ONLY",
+  "timing": "54 core / 66 support / 75 bonus / 80 all, UNOBSERVED"
+}
