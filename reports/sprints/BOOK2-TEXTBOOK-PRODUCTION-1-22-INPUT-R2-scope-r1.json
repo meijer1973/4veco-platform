@@ -1,0 +1,378 @@
+{
+  "rows": [
+    {
+      "name": "own-P",
+      "base": "9efd181d56fbebca33137c3644eadf184ebe9f3d",
+      "head": "293434c0e76a94ddd6de6d328b566396eab4c1ff",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 2,
+        "generated_indexes": 0,
+        "review_evidence": 36,
+        "unknown": 0
+      },
+      "failures": []
+    },
+    {
+      "name": "own-L",
+      "base": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+      "head": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+      "exit_code": 1,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      },
+      "failures": [
+        "no changed paths to classify",
+        "textbook lane needs at least one Part A textbook change"
+      ]
+    },
+    {
+      "name": "whole-P",
+      "base": "96416b6b5bd57094576e9aba0a42d682584ec479",
+      "head": "293434c0e76a94ddd6de6d328b566396eab4c1ff",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 102,
+        "generated_indexes": 6,
+        "review_evidence": 8636,
+        "unknown": 0
+      },
+      "failures": []
+    },
+    {
+      "name": "whole-L",
+      "base": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "3bc9e81828dcc57932dc871825aaa4cf4a975fe1",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 242,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 8,
+        "unknown": 0
+      },
+      "failures": []
+    }
+  ],
+  "white": [
+    {
+      "name": "own-P",
+      "exit_code": 0
+    },
+    {
+      "name": "own-L",
+      "exit_code": 0
+    },
+    {
+      "name": "whole-P",
+      "exit_code": 2
+    },
+    {
+      "name": "whole-L",
+      "exit_code": 0
+    }
+  ],
+  "strict": {
+    "platform": [
+      "build-scripts/content/book-2/chapter_pipeline.py",
+      "build-scripts/content/book-2/test_chapter_pipeline.py",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-corrected-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-corrected-r3-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-original-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-probe.py",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-result.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-run.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-tests-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-tests-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-check-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-check.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-create-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-finish.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-inputs.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-post-r1.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-probes-r1.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.1-publisher-print-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.1-student-web-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.2-publisher-print-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.2-student-web-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.3-publisher-print-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.3-student-web-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.4-publisher-print-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.4-student-web-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-authoring-contract-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-bundle-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-chapter_planning-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-chapter_production-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-durable-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-governance-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-structural-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-result.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-run.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-verification-r1.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-scope-r1-own-L-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-scope-r1-own-P-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-scope-r1-whole-L-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-scope-r1-whole-P-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-white-r1-own-L-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-white-r1-own-P-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-white-r1-whole-L-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-white-r1-whole-P-process.json"
+    ],
+    "lessons": [],
+    "unknown": 0
+  },
+  "custody": {
+    "status": "CANDIDATE_VERIFIED_NOT_PRODUCTION_RELEASE",
+    "tested_source_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+    "checker_sha256": "4f99dcf592095fc37af68569ae3513fb42376b5a9b3fe3fd3d954c41632c48ec",
+    "manifest_sha256": "6eb01f253b59d0e459eacfbc2ff124189e6600bd7d437c875b81aa4d701cf5ba",
+    "verification_sha256": "81ef18b33dc5c410f0d0abbb8ff0b4aa7558a89380611dcc27ab1ba281f053d8",
+    "inputs": 147,
+    "platform_inputs": 63,
+    "lesson_inputs": 84,
+    "compatibility": {
+      "source_bindings": [
+        [
+          "build-scripts/content/book-2/chapter_pipeline.py",
+          "ad0a9cfe9e92d579cc066c122e7a9d2765f94cf7d819138d3c5a9270fd40a4f8"
+        ],
+        [
+          "build-scripts/content/book-2/test_chapter_pipeline.py",
+          "5007e3ed1793f82743ce667b555a168d581de52fc72fe6c562c909606235aadc"
+        ]
+      ],
+      "records": [
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-original-r1-process.json",
+          "exit_code": 0,
+          "sha256": "94dcf43c81c2c8b52c2e7c8cd78d0068569eeeffc156bd4dc8b601893582ca9f",
+          "controller_commit": "907b48f7488e4030a34baa1c1ef4613acc8235db"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-tests-r1-process.json",
+          "exit_code": 1,
+          "sha256": "980546b6791e141037c163c1673af2308f15718d6175341489c0855e05354fc4",
+          "controller_commit": "7fc2aedfc32be939820cfddce875141ae97ce659"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-tests-r2-process.json",
+          "exit_code": 0,
+          "sha256": "87aed04e5f67cc741dcdae073f4047815ce8e42acb73ae78cf4df981ce799fb9",
+          "controller_commit": "26f0ef384164cf48979abbfab3b2dbe6864d3435"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-corrected-r2-process.json",
+          "exit_code": 1,
+          "sha256": "ff20c72e584b3fc2af5794aa33c1b223b617573eced89469749e3b0faa92d6e9",
+          "controller_commit": "26f0ef384164cf48979abbfab3b2dbe6864d3435"
+        },
+        {
+          "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-HEADING-COMPAT-corrected-r3-process.json",
+          "exit_code": 0,
+          "sha256": "010dc3ba7b998621cd40f20808636d1f0c78919efa994f37da1f3730ff909d29",
+          "controller_commit": "e2612bd1010c7f931f1e8eac3454b37c71bc33da"
+        }
+      ],
+      "original_inputs": 138,
+      "unchanged_original_inputs": 136,
+      "rebound_source_rows": 2,
+      "additional_evidence_inputs": 9
+    },
+    "processes": [
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-create-r1-process.json",
+        "sha256": "c2ca8314d1f602c96550fae565f120d0375058907cd83c60cc31a5036db445b4",
+        "controller_commit": "464e8e85027593b2773cc77808721954da40ce1b",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-check-r1-process.json",
+        "sha256": "4763d1e6f3484f442557385634cb583f9377a6d75fe02b774f2d544037e1fbbf",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-structural-process.json",
+        "sha256": "182a795a15e289c19e93698aa6817019f0c6f04ef6551613bc27efd7f730f946",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-chapter_planning-process.json",
+        "sha256": "e80c89c2e509d58fb7d386c76be70194ddf4cb4f24024e886ccc8c38037da6e8",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-chapter_production-process.json",
+        "sha256": "cbeb56ba660169fd7d3a96e1d44fe377e85230b9b5098eb5a07555c042de9950",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-durable-process.json",
+        "sha256": "57f6241f1f187e696574d147e954f17d8466ec4fc13aeaaf88dfeeeeefdd0f55",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-bundle-process.json",
+        "sha256": "24ccdb11f0b6392c8aee5161d2d5ed970f30f318e94445b5141a4ef8d8cba63b",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-governance-process.json",
+        "sha256": "6bf4399f306e2c6517cb91a0b265bf11a47b3220e33abd05358b20660a1c241d",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-authoring-contract-process.json",
+        "sha256": "188b448284768fb53f28b53d118cd972d40e7159f926b8fbc6edf4edeb12eacb",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.1-student-web-process.json",
+        "sha256": "a96ccc9330163b75c043cc8e903441455345d4178ab36e116ebacae147ebfe3d",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.1-publisher-print-process.json",
+        "sha256": "8dae0196f9ec751c8684f44bf8527d91a8ed68d840c305c40e4cb39fff495b16",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.2-student-web-process.json",
+        "sha256": "fa92a78667d13391a47ce02d1136a08e32e04161aa17960c0b943205abe69c53",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.2-publisher-print-process.json",
+        "sha256": "4c6c204d29cd01f8d1c4a06a36b2194cfb81997f55d6e372d29ea4b4808e3ebe",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.3-student-web-process.json",
+        "sha256": "be36673cb040b23b6f55a5178299e4e1f841d727d8cbe624afebdcc9328c022e",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.3-publisher-print-process.json",
+        "sha256": "870ad29a0a06484c30fefa36b273024bc382bf7e15e778ef4c36713928692e71",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.4-student-web-process.json",
+        "sha256": "bb6f7402ead62e21f6d653c4b130990c8bbfd4d43c1a6a201fa8d9e1e607e7dc",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      },
+      {
+        "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-INPUT-R2-r1-2.2.4-publisher-print-process.json",
+        "sha256": "ea2f8b2b7fe39161af22c8a7a8d915f7a44bab37c970eb2aa19d255612f0fe10",
+        "controller_commit": "153f0d1a3380a599ff5903c50690085d9815ea1f",
+        "raw_streams_and_source_binding": true
+      }
+    ],
+    "probes": {
+      "positives": 2,
+      "negatives": 457,
+      "semantic_negatives": 12,
+      "inputs": 147
+    },
+    "gates": [
+      {
+        "name": "structural",
+        "exit_code": 0
+      },
+      {
+        "name": "chapter_planning",
+        "exit_code": 0
+      },
+      {
+        "name": "chapter_production",
+        "exit_code": 0
+      },
+      {
+        "name": "durable",
+        "exit_code": 0
+      },
+      {
+        "name": "bundle",
+        "exit_code": 0
+      },
+      {
+        "name": "governance",
+        "exit_code": 0
+      },
+      {
+        "name": "authoring-contract",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.1-student-web",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.1-publisher-print",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.2-student-web",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.2-publisher-print",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.3-student-web",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.3-publisher-print",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.4-student-web",
+        "exit_code": 0
+      },
+      {
+        "name": "2.2.4-publisher-print",
+        "exit_code": 0
+      }
+    ],
+    "inventory": {
+      "rows": 41,
+      "physical_PDFs": 29,
+      "accepted_PDFs": 23,
+      "candidate_PDFs": 2,
+      "legacy_PDFs": 4,
+      "pending_PDFs": 12,
+      "manifest_sha256": "1296c608e55cc2a573b072eddca0f98b7005ed779ff3d762b82af06777f3c067"
+    },
+    "native_writes": 0,
+    "production_release": false
+  }
+}
