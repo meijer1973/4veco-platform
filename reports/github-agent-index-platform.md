@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-06T04:49:52.846Z
+Generated: 2026-09-06T05:39:38.864Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `6639cfa38edc8619f082a8d0e2be89ee59e347ac`
-Files indexed: 13947
-Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
+Source branch: `agent/book2-234-plan-20260906`
+Source commit: `056ce4e7b512cd94cebc7b0e7b38446378e3acb5`
+Files indexed: 13977
+Scope: committed tree files from `git ls-tree -r --name-only 056ce4e7b512cd94cebc7b0e7b38446378e3acb5`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -2757,7 +2757,7 @@ Count: 1030
 
 ## reports
 
-Count: 11156
+Count: 11187
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -11560,6 +11560,29 @@ Count: 11156
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-scope-own-lessons-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-scope-own-platform-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-232-PLAN-strict-own-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-actual-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r3-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-author-r4-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-baseline.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-bundle-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-check.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-durable-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-final-integrity.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-goal-design-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-governance-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-buffered-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-diagnostic-r1-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-inventory-r2-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-runtime-diagnostic.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-runtime-note.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-runtime-proof-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-index-runtime.cjs
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-lessons-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-platform-claim-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-publication.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-baseline.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-bundle-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-check.js
@@ -11576,6 +11599,14 @@ Count: 11156
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-structural-process.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-RELEASE-whitespace-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-scope-complete-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-scope-complete-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-scope-own-lessons-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-scope-own-platform-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-structural-process.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-supplemental233.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PLAN-tools.cjs
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-baseline.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-bonus-adoption-inventory-check.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-back-matter-plan.md
@@ -13936,9 +13967,8 @@ _No files indexed in this group._
 
 ## other
 
-Count: 773
+Count: 772
 
-- .git
 - .gitattributes
 - .github/ci-python-requirements.txt
 - .github/workflows/authorized-bundle-integration.yml
