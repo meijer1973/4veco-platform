@@ -1,0 +1,69 @@
+{
+  "pair": {
+    "P": "5db9d118bc772ecc30e00b984bb6790d0f1e0793",
+    "L": "56bb0f1e4f45b844304895cbbc3aee8770ec0829"
+  },
+  "env": {
+    "FOURVECO_PLATFORM_ROOT": "C:/wt/book2-234-paper-review-20260906/4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "5db9d118bc772ecc30e00b984bb6790d0f1e0793",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-234-paper-review-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:/wt/book2-234-paper-review-20260906/4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-234-paper-review-20260906"
+  },
+  "rows": [
+    {
+      "exe": "node",
+      "args": [
+        "-r",
+        "./reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-index-runtime.cjs",
+        "build-scripts/reports/github-agent-index.js"
+      ],
+      "cwd": "C:\\wt\\book2-234-paper-review-20260906\\4veco-platform",
+      "start": "2026-09-06T09:06:47.734Z",
+      "end": "2026-09-06T09:06:48.046Z",
+      "exit": 0,
+      "stdout": "Wrote reports\\github-agent-index-platform.md\nWrote reports\\github-agent-index-platform.json\nWrote reports\\github-agent-index-lessen.md\nWrote reports\\github-agent-index-lessen.json\n",
+      "stderr": "",
+      "stdout_base64": "V3JvdGUgcmVwb3J0c1xnaXRodWItYWdlbnQtaW5kZXgtcGxhdGZvcm0ubWQKV3JvdGUgcmVwb3J0c1xnaXRodWItYWdlbnQtaW5kZXgtcGxhdGZvcm0uanNvbgpXcm90ZSByZXBvcnRzXGdpdGh1Yi1hZ2VudC1pbmRleC1sZXNzZW4ubWQKV3JvdGUgcmVwb3J0c1xnaXRodWItYWdlbnQtaW5kZXgtbGVzc2VuLmpzb24K",
+      "stderr_base64": "",
+      "allowed_exit": true
+    },
+    {
+      "exe": "node",
+      "args": [
+        "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-index-runtime.cjs",
+        "verify"
+      ],
+      "cwd": "C:\\wt\\book2-234-paper-review-20260906\\4veco-platform",
+      "start": "2026-09-06T09:06:48.046Z",
+      "end": "2026-09-06T09:06:55.784Z",
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"ACTUAL_NUL_FILENAMES_EXACT\",\n  \"rows\": [\n    {\n      \"label\": \"platform\",\n      \"source_commit\": \"5db9d118bc772ecc30e00b984bb6790d0f1e0793\",\n      \"files\": 15195,\n      \"nul_inventory_sha256\": \"a919c26f68e0ef3f9482a38bde2f1d89d1efa66ae7b493c98a62204a4930a244\",\n      \"index_json_sha256\": \"bd0a9e934c452f08c597cd323f2b0a4b3e5a0f2917ade1f64945074146e86b11\",\n      \"index_markdown_sha256\": \"cf178b420e735d0717cd6f19a68c5f64232556b60eb4f8b547f114045d729a3c\",\n      \"actual_NUL_filename_set_exact\": true,\n      \"quoted_line_comparison\": false\n    },\n    {\n      \"label\": \"lessen\",\n      \"source_commit\": \"56bb0f1e4f45b844304895cbbc3aee8770ec0829\",\n      \"files\": 1913,\n      \"nul_inventory_sha256\": \"adc814e1c32e02d524fea47e3f2c99bed979eae19130f2180daf4f44480a5154\",\n      \"index_json_sha256\": \"ec72d77a294c518e07c8fb199d9ebee78fcc0860c4f1ef93233944942bbe0d2e\",\n      \"index_markdown_sha256\": \"d4bdfcae37812fb1fc7081335ee30a8b82d3c471eeefd71cee7396e0fbccb586\",\n      \"actual_NUL_filename_set_exact\": true,\n      \"quoted_line_comparison\": false\n    }\n  ],\n  \"shared_source_sha256\": \"44b235b2a65b36f28c316a7d9cee947e3ce049713ddcd53ced2321a7a9ec9b53\"\n}\n",
+      "stderr": "",
+      "stdout_base64": "ewogICJzdGF0dXMiOiAiQUNUVUFMX05VTF9GSUxFTkFNRVNfRVhBQ1QiLAogICJyb3dzIjogWwogICAgewogICAgICAibGFiZWwiOiAicGxhdGZvcm0iLAogICAgICAic291cmNlX2NvbW1pdCI6ICI1ZGI5ZDExOGJjNzcyZWNjMzBlMDBiOTg0YmI2NzkwZDBmMWUwNzkzIiwKICAgICAgImZpbGVzIjogMTUxOTUsCiAgICAgICJudWxfaW52ZW50b3J5X3NoYTI1NiI6ICJhOTE5YzI2ZjY4ZTBlZjNmOTQ4MmEzOGJkZTJmMWQ4OWQxZWZhNjZhZTdiNDkzYzk4YTYyMjA0YTQ5MzBhMjQ0IiwKICAgICAgImluZGV4X2pzb25fc2hhMjU2IjogImJkMGE5ZTkzNGM0NTJmMDhjNTk3Y2QzMjNmMmIwYTRiM2U1YTBmMjkxN2FkZTFmNjQ5NDUwNzQxNDZlODZiMTEiLAogICAgICAiaW5kZXhfbWFya2Rvd25fc2hhMjU2IjogImNmMTc4YjQyMGU3MzVkMDcxN2NkNmYxOWE2OGM1ZjY0MjMyNTU2YjYwZWI0ZjhiNTQ3ZjExNDA0NWQ3MjlhM2MiLAogICAgICAiYWN0dWFsX05VTF9maWxlbmFtZV9zZXRfZXhhY3QiOiB0cnVlLAogICAgICAicXVvdGVkX2xpbmVfY29tcGFyaXNvbiI6IGZhbHNlCiAgICB9LAogICAgewogICAgICAibGFiZWwiOiAibGVzc2VuIiwKICAgICAgInNvdXJjZV9jb21taXQiOiAiNTZiYjBmMWU0ZjQ1Yjg0NDMwNDg5NWNiYmMzYWVlODc3MGVjMDgyOSIsCiAgICAgICJmaWxlcyI6IDE5MTMsCiAgICAgICJudWxfaW52ZW50b3J5X3NoYTI1NiI6ICJhZGM4MTRlMWMzMmUwMmQ1MjRmZWE0N2UzZjJjOTliZWQ5NzllYWUxOTEzMGYyMTgwZGFmNGY0NDQ4MGE1MTU0IiwKICAgICAgImluZGV4X2pzb25fc2hhMjU2IjogImVjNzJkNzdhMjk0YzUxOGUwN2M4ZmIxOTlkOWViZWU3OGZjYzA4NjBjNGYxZWY5MzIzMzk0NDk0MmJiZTBkMmUiLAogICAgICAiaW5kZXhfbWFya2Rvd25fc2hhMjU2IjogImQ0YmRmY2FlMzc4MTJmYjFmYzcwODEzMzVlZTMwYThiODJkM2M0NzFlZWVmZDcxY2VlNzM5NmUwZmJjY2I1ODYiLAogICAgICAiYWN0dWFsX05VTF9maWxlbmFtZV9zZXRfZXhhY3QiOiB0cnVlLAogICAgICAicXVvdGVkX2xpbmVfY29tcGFyaXNvbiI6IGZhbHNlCiAgICB9CiAgXSwKICAic2hhcmVkX3NvdXJjZV9zaGEyNTYiOiAiNDRiMjM1YjJhNjViMzZmMjhjMzE2YTdkOWNlZTk0N2UzY2UwNDk3MTNkZGNkNTNjZWQyMzIxYTdhOWVjOWI1MyIKfQo=",
+      "stderr_base64": "",
+      "allowed_exit": true
+    },
+    {
+      "exe": "node",
+      "args": [
+        "build-scripts/reports/check-agent-index-freshness.js"
+      ],
+      "cwd": "C:\\wt\\book2-234-paper-review-20260906\\4veco-platform",
+      "start": "2026-09-06T09:06:55.784Z",
+      "end": "2026-09-06T09:06:55.952Z",
+      "exit": 0,
+      "stdout": "{\n  \"ok\": true,\n  \"checks\": [\n    {\n      \"label\": \"4veco-platform\",\n      \"ok\": true,\n      \"skipped\": false,\n      \"failures\": [],\n      \"warnings\": [],\n      \"source_commit\": \"5db9d118bc772ecc30e00b984bb6790d0f1e0793\",\n      \"head\": \"5db9d118bc772ecc30e00b984bb6790d0f1e0793\",\n      \"source_ref\": \"HEAD\",\n      \"target_commit\": \"5db9d118bc772ecc30e00b984bb6790d0f1e0793\",\n      \"accepted_parent_generated_tail\": false,\n      \"accepted_generated_index_tail_ref\": null\n    },\n    {\n      \"label\": \"4veco-lessen\",\n      \"ok\": true,\n      \"skipped\": false,\n      \"failures\": [],\n      \"warnings\": [],\n      \"source_commit\": \"56bb0f1e4f45b844304895cbbc3aee8770ec0829\",\n      \"head\": \"56bb0f1e4f45b844304895cbbc3aee8770ec0829\",\n      \"source_ref\": \"56bb0f1e4f45b844304895cbbc3aee8770ec0829\",\n      \"target_commit\": \"56bb0f1e4f45b844304895cbbc3aee8770ec0829\",\n      \"accepted_parent_generated_tail\": false,\n      \"accepted_generated_index_tail_ref\": null\n    }\n  ],\n  \"failures\": [],\n  \"warnings\": []\n}\n",
+      "stderr": "",
+      "stdout_base64": "ewogICJvayI6IHRydWUsCiAgImNoZWNrcyI6IFsKICAgIHsKICAgICAgImxhYmVsIjogIjR2ZWNvLXBsYXRmb3JtIiwKICAgICAgIm9rIjogdHJ1ZSwKICAgICAgInNraXBwZWQiOiBmYWxzZSwKICAgICAgImZhaWx1cmVzIjogW10sCiAgICAgICJ3YXJuaW5ncyI6IFtdLAogICAgICAic291cmNlX2NvbW1pdCI6ICI1ZGI5ZDExOGJjNzcyZWNjMzBlMDBiOTg0YmI2NzkwZDBmMWUwNzkzIiwKICAgICAgImhlYWQiOiAiNWRiOWQxMThiYzc3MmVjYzMwZTAwYjk4NGJiNjc5MGQwZjFlMDc5MyIsCiAgICAgICJzb3VyY2VfcmVmIjogIkhFQUQiLAogICAgICAidGFyZ2V0X2NvbW1pdCI6ICI1ZGI5ZDExOGJjNzcyZWNjMzBlMDBiOTg0YmI2NzkwZDBmMWUwNzkzIiwKICAgICAgImFjY2VwdGVkX3BhcmVudF9nZW5lcmF0ZWRfdGFpbCI6IGZhbHNlLAogICAgICAiYWNjZXB0ZWRfZ2VuZXJhdGVkX2luZGV4X3RhaWxfcmVmIjogbnVsbAogICAgfSwKICAgIHsKICAgICAgImxhYmVsIjogIjR2ZWNvLWxlc3NlbiIsCiAgICAgICJvayI6IHRydWUsCiAgICAgICJza2lwcGVkIjogZmFsc2UsCiAgICAgICJmYWlsdXJlcyI6IFtdLAogICAgICAid2FybmluZ3MiOiBbXSwKICAgICAgInNvdXJjZV9jb21taXQiOiAiNTZiYjBmMWU0ZjQ1Yjg0NDMwNDg5NWNiYmMzYWVlODc3MGVjMDgyOSIsCiAgICAgICJoZWFkIjogIjU2YmIwZjFlNGY0NWI4NDQzMDQ4OTVjYmJjM2FlZTg3NzBlYzA4MjkiLAogICAgICAic291cmNlX3JlZiI6ICI1NmJiMGYxZTRmNDViODQ0MzA0ODk1Y2JiYzNhZWU4NzcwZWMwODI5IiwKICAgICAgInRhcmdldF9jb21taXQiOiAiNTZiYjBmMWU0ZjQ1Yjg0NDMwNDg5NWNiYmMzYWVlODc3MGVjMDgyOSIsCiAgICAgICJhY2NlcHRlZF9wYXJlbnRfZ2VuZXJhdGVkX3RhaWwiOiBmYWxzZSwKICAgICAgImFjY2VwdGVkX2dlbmVyYXRlZF9pbmRleF90YWlsX3JlZiI6IG51bGwKICAgIH0KICBdLAogICJmYWlsdXJlcyI6IFtdLAogICJ3YXJuaW5ncyI6IFtdCn0K",
+      "stderr_base64": "",
+      "allowed_exit": true
+    }
+  ],
+  "executed_controller": {
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-publication-check.cjs",
+    "raw_sha256": "d9c50003d61112bbeb5c40abd081cdc79482cb9ba02734f13351f7e5c9d398ec",
+    "source_utf8": "'use strict';\n// Bounded evidence capture / publication verification; no source or native-output mutation.\nconst fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),c=require('node:crypto'),A=require('node:assert/strict');\nconst P=path.resolve(__dirname,'../..'),L=path.resolve(P,'../4veco-lessen'),pre='reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW-',branch='agent/book2-234-paper-review-20260906',BP='30e42c450774d3600d9fe1f14002eefae670a8b0',BL='56bb0f1e4f45b844304895cbbc3aee8770ec0829';\nconst hash=b=>c.createHash('sha256').update(b).digest('hex'),git=(r,...a)=>cp.execFileSync('git',a,{cwd:r,maxBuffer:128*1024*1024}),text=(r,...a)=>git(r,...a).toString('utf8').trim(),save=(n,v)=>fs.writeFileSync(path.join(P,pre+n+'.json'),JSON.stringify(v,null,2)+'\\n',{flag:'wx'});\nfunction run(exe,args,cwd=P,allowed=[0]){const start=new Date().toISOString(),r=cp.spawnSync(exe,args,{cwd,env:process.env,maxBuffer:128*1024*1024}),v={exe,args,cwd,start,end:new Date().toISOString(),exit:r.status,error:r.error?.message,stdout:r.stdout?.toString('utf8'),stderr:r.stderr?.toString('utf8'),stdout_base64:r.stdout?.toString('base64'),stderr_base64:r.stderr?.toString('base64')};v.allowed_exit=allowed.includes(v.exit);return v;}\nfunction env(){for(const[k,r]of [['PLATFORM',P],['LESSEN',L]]){A.equal(path.resolve(process.env['FOURVECO_'+k+'_ROOT']),r);A.equal(process.env['FOURVECO_'+k+'_SOURCE_REF'],text(r,'rev-parse','HEAD'));A.equal(process.env['FOURVECO_'+k+'_SOURCE_BRANCH'],branch);}}\nfunction binding(){return{path:pre+'publication-check.cjs',raw_sha256:hash(fs.readFileSync(__filename)),source_utf8:fs.readFileSync(__filename,'utf8')};}\nif(process.argv[2]==='checks'){\n const rows=[];for(const[n,r,b,allowed]of [['own-P',P,BP,[0]],['own-L',L,BL,[0]],['whole-P',P,'96416b6b5bd57094576e9aba0a42d682584ec479',[0,2]],['whole-L',L,'f09fd6e88edc5049b026b16b0158e7e188091d2d',[0,2]]])rows.push({name:n,...run('git',['diff','--check',b,'HEAD'],r,allowed)});\n rows.push({name:'part-a-authoring-contract',...run('node',['build-scripts/workflows/check-part-a-exercise-authoring-contract.js'])});\n const sources=['build-scripts/workflows/check-part-a-exercise-authoring-contract.js'].map(f=>({path:f,raw_sha256:hash(fs.readFileSync(path.join(P,f))),source_utf8:fs.readFileSync(path.join(P,f),'utf8')}));\n save('publication-checks',{payload:{P:text(P,'rev-parse','HEAD'),L:text(L,'rev-parse','HEAD')},rows,sources,executed_controller:binding()});A(rows.every(x=>x.allowed_exit));console.log(JSON.stringify(rows.map(x=>({name:x.name,exit:x.exit,stdout_bytes:Buffer.byteLength(x.stdout||'')}))));\n}else if(process.argv[2]==='index-capture'){\n env();const rows=[run('node',['-r','./'+pre+'index-runtime.cjs','build-scripts/reports/github-agent-index.js']),run('node',[pre+'index-runtime.cjs','verify']),run('node',['build-scripts/reports/check-agent-index-freshness.js'])];\n save('index-capture',{pair:{P:text(P,'rev-parse','HEAD'),L:text(L,'rev-parse','HEAD')},env:Object.fromEntries(['PLATFORM','LESSEN'].flatMap(k=>['ROOT','SOURCE_REF','SOURCE_BRANCH'].map(v=>['FOURVECO_'+k+'_'+v,process.env['FOURVECO_'+k+'_'+v]]))),rows,executed_controller:binding()});A(rows.every(x=>x.allowed_exit));console.log(JSON.stringify(rows.map(x=>({args:x.args,exit:x.exit}))));\n}else if(process.argv[2]==='final'){\n env();const rows=[];for(const r of [P,L]){const head=text(r,'rev-parse','HEAD'),tracking=text(r,'rev-parse','@{upstream}'),remote=text(r,'ls-remote','origin','refs/heads/'+branch).split(/\\s+/)[0],status=text(r,'status','--porcelain=v1','--untracked-files=all');A.equal(head,tracking);A.equal(head,remote);A.equal(status,'');A.equal(text(r,'branch','--show-current'),branch);rows.push({repo:r,head,tracking,remote,status});}\n const changed=git(P,'diff','--name-only','-z',BP,'HEAD').toString('utf8').split('\\0').filter(Boolean),indexes=['platform','lessen'].flatMap(n=>['json','md'].map(e=>'reports/github-agent-index-'+n+'.'+e));A(changed.every(x=>x.startsWith(pre)||indexes.includes(x)));A.equal(git(L,'diff','--name-only','-z',BL,'HEAD').length,0);A.deepEqual(git(P,'diff','--name-only','-z','HEAD^','HEAD').toString('utf8').split('\\0').filter(Boolean).sort(),indexes.sort());\n const checks=[run('node',[pre+'index-runtime.cjs','verify']),run('node',['build-scripts/reports/check-agent-index-freshness.js']),run('node',['build-scripts/ci/check-agent-worktree-safety.js','--task','BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW','--agent','paragraph_224_builder','--require-prefix','codex/,agent/','--require-clean']),run('node',[path.join(P,'build-scripts/ci/check-agent-worktree-safety.js'),'--task','BOOK2-TEXTBOOK-PRODUCTION-1-234-PAPER-REVIEW','--agent','paragraph_224_builder','--require-prefix','codex/,agent/','--require-clean'],L)];A(checks.every(x=>x.allowed_exit));\n const payload=text(P,'rev-parse','HEAD^'),artifacts=git(P,'ls-tree','-r','--name-only','-z',payload,'--',pre+'*').toString('utf8').split('\\0').filter(Boolean).map(f=>({path:f,raw_sha256:hash(fs.readFileSync(path.join(P,f)))}));\n console.log(JSON.stringify({status:'CLEAN_REMOTE_PAIR_WITH_FOUR_INDEX_ONLY_TAIL',rows,strict_owned_paths:changed.length,lesson_delta:0,payload,checks,artifacts,executed_controller_sha256:binding().raw_sha256},null,2));\n}else throw Error('checks/index-capture/final');\n"
+  }
+}
