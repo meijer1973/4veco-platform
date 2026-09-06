@@ -65,3 +65,12 @@ known absolute owned roots and actual NUL Git filenames, rejecting absolute or
 parent-traversal relative names. This removes redundant resolve/stat calls but
 still hashes every full file and verifies every Git blob. No inventory subset,
 source change or shared tool/environment modification is introduced.
+
+Before QC commit, direct reading of the real lane checker established that a
+new top-level companion block, even labelled NOT_COMMISSIONED, would constitute
+Part B block ownership drift from the old flat record's absent block. The
+superseded draft0395dcecb1b4e280825fc8a488c9b3f3dc719fd5e93c56a9b5dd7613e25e8b21
+is preserved exactly in224-superseded-draft-QC.yaml with its successful earlier
+profile evidence. Current QC leaves the companion block absent and records
+uncommissioned Part B scope inside owned Part A metadata. No companion verdict,
+block, acceptance or new lane exception is invented. Fresh r2 QC gates follow.
