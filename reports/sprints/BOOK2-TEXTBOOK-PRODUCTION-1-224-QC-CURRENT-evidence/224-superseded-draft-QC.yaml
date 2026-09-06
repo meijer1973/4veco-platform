@@ -1,0 +1,106 @@
+schema_version: 2
+partA:
+  paragraph: "2.2.4"
+  title: "Gemengde opgaven elasticiteit"
+  generated: "2026-09-06"
+  paragraph_kind: "gemengde_opgaven"
+  introduces_new_theory: false
+  review_file: "2.2.4-review.md"
+  review_verdict: "PASS WITH FLAGS"
+  review_raw_sha256: "49a04e6c6e34169fb4b0687e45c1f5fe3c3b49ceacfce06705a2b85c6458b40f"
+  specialist_actor: "paragraph_214_builder"
+  specialist_role: "independent224specialistQC"
+  specialist_task: "BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT"
+  specialist_verdict: "PASS WITH FLAGS"
+  specialist_report: "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-result.md"
+  source_commit: "9acf684b78c42a5afbcb1253a7e9cd7711bdf7ab"
+  approved_plan_sha256: "fcc55870ba93b18324c1f04fe61c0cd3642e0ad3dbbffe87d42de35382072257"
+  released_inputs_sha256: "33c1473db0cbeec66e93557a72ab0586ccfcef29ba52b2a36148946c65598c7e"
+  current_and_committed_inputs_verified: 34
+  target_record_sha256: "4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519"
+  literal_target_status: "candidate_review_ready"
+  target_authority: "Governed integrated frozen record; approved currentness and durable authority verified. No target/status mutation."
+  source_author_independent: true
+  paragraph_reviewer_independent: true
+  inherited_QC_history:
+    commit: "f666bbb7dd258f1f01b38a20dd6ca3802848f8b7"
+    raw_sha256: "1d0ee8d2cff69e664d3fedee47e6c9dc0854bab8be51af58aedbbca1a38d02ab"
+    snapshot: "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-old-flat-quality-ref.yaml"
+    note: "Exact old flat record preserved; no prior companion block existed. Old status/dates/assets are not current evidence."
+  assets:
+    total_referenced: 4
+    missing: []
+    svgpng_paired: true
+    naming_compliant: true
+    source_svg: 4
+    native_png: 4
+    all_actual_alts_functional: true
+    actual_alt_lengths: [78, 80, 70, 78]
+    full_visible_captions_preserved: true
+    actual_native_width_mm: 166
+    minimum_placed_figure_label_pt: 15.685039
+  content:
+    editions: ["opgaven", "antwoorden"]
+    native_files_including_wrapper: 15
+    pages_per_edition: [10, 10]
+    zip: "NOT_COMMISSIONED"
+    paragraaf_edition: "NOT_COMMISSIONED_CONSOLIDATION_EXCEPTION"
+    exact_target_points: [2, 2, 2, 4, 2, 2]
+    rehearsal_points: [4, 4, 2, 2, 6, 2]
+    bonus_separate_criteria: 4
+    closing_retrieval_tasks: 2
+    target_and_source_selection_unchanged: true
+    signed_old_base_local_finite_Ei_boundaries_named_Ek_reset_units: "PASS"
+    complete_worked_answers_and_criteria: true
+  didactic_evidence:
+    goal_alignment: "Four goals to six rehearsal and six frozen target questions; no extra theory or unasked terminal operation."
+    prior_knowledge: "Actual accepted221/222/223 teaching; retrieval required, not presumed mastered; all34 release inputs exact."
+    sequence: "Retrieval, linked sources, optional same-goal fading, unsupported target, evaluative bonus, two closing tasks."
+    support: "Worked percentage/blanks to concept, denominator, named-goods and reset cues; no hints for question6/target."
+    dual_coding: "Common-scale rectangles, source tables, formulas and full bounded economic explanations."
+    feedback: "Complete20/14/4-point criteria and two closing answers; correct reasons and units as well as outcomes."
+    positive_framing: "Neutral optional support; no ability labels, diagnosis, automatic routing or attainment claim."
+    transfer: "Astronomy to subscriptions, controlled/combined inputs, old-base and elasticity-type retrieval."
+    teacher_score: "14/14 PASS"
+    student_score: "12/12 PASS"
+    visual_score: "10/10 PASS"
+    paper_criteria: "11 PASS; summary placement N/A under approved consolidation exception."
+  rendered_page_proof:
+    required: true
+    pdf_rendered_to_png: true
+    personal_inspection: "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-evidence/224-personal-inspection.json"
+    personal_inspection_sha256: "cb932ac10a5035e75e1e9aac10d975de4b205adc886da690559d8b658e9328de"
+    actual_personal_views: 48
+    pages_inspected: "all20color_and_all20gray"
+    figures_inspected: "all4color_and_all4gray"
+    visible_student_defects: 0
+    minimum_PDF_text_pt: 12
+    figure_legibility_passed: true
+    table_overflow_passed: true
+    native_pending_manifests_untouched: true
+    precision_sha256: "e9fdf98203b7fe84f04cbabfab5904e94e3d47fd27cf6a85608fea320667d4c7"
+    reproduction: "Fullr10/thinr11/directr12/additional genuine checker-rebuildr13:15native,20rawRGBpages,4rawRGBfigures exact."
+    parity_sha256: "778b3666ea2a9286c239072adaec5df647dd56cf3fb47fb8d1632f5a09d1a26e"
+    direct_safety: "Additive corrected-controller namespace proof in224-direct-safety.json; generic print primitive is ungated. Historicalr12 not relabelled; no extra regeneration."
+    physical_print_observed: false
+    PDF_UA_claim: false
+  timing:
+    core_minutes: 53.5
+    including_optional_support_minutes: 63.5
+    including_support_and_bonus_minutes: 71.5
+    observed: false
+    status: "UNOBSERVED"
+  inspectie:
+    mapping: "NOT_CLAIMED; internal source/teaching/visual QC only."
+    freshness_checked: "2026-09-06"
+    protected_reference_update: "Separate follow-up; 2026 framework update found, reference unchanged."
+  unresolved_blockers: 0
+  flags: ["F224-TIME53.5/63.5/71.5-UNOBSERVED", "F224-ROOT-PENDING", "F224-AGGREGATE", "F224-INSPECTIE-REF"]
+  root_validation: "PENDING"
+  root_acceptance: "PENDING"
+  handoff: "PENDING_NOT_CREATED"
+  production_ready: false
+  hosted_full_CI_claim: false
+companion:
+  status: "NOT_COMMISSIONED"
+  note: "No prior companion block or companion acceptance existed; this specialist reviews Part A only."

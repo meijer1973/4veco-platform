@@ -1,0 +1,33 @@
+{
+  "label": "qc-boundary",
+  "argv": [
+    "node",
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-qc-boundary.cjs"
+  ],
+  "cwd": "C:\\wt\\book2-224-qc-current-20260906\\4veco-platform",
+  "started": "2026-09-06T07:59:45.565116+00:00",
+  "finished": "2026-09-06T07:59:45.622982+00:00",
+  "sources": [
+    {
+      "path": "C:\\wt\\book2-224-qc-current-20260906\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-qc-boundary.cjs",
+      "raw_sha256": "b8282257052c8f4a99b07ecd42c2f726056e7c60e83a7c3306c369fa289b41a6",
+      "source_base64": "J3VzZSBzdHJpY3QnOwpjb25zdCBmcz1yZXF1aXJlKCdub2RlOmZzJykscGF0aD1yZXF1aXJlKCdub2RlOnBhdGgnKSxjcnlwdG89cmVxdWlyZSgnbm9kZTpjcnlwdG8nKSxBPXJlcXVpcmUoJ25vZGU6YXNzZXJ0L3N0cmljdCcpOwpjb25zdCBQPXBhdGgucmVzb2x2ZShfX2Rpcm5hbWUsJy4uLy4uJyksTD1wYXRoLnJlc29sdmUoUCwnLi4vNHZlY28tbGVzc2VuJyksRT1wYXRoLmpvaW4oX19kaXJuYW1lLCdCT09LMi1URVhUQk9PSy1QUk9EVUNUSU9OLTEtMjI0LVFDLUNVUlJFTlQtZXZpZGVuY2UnKSxzaGE9Yj0+Y3J5cHRvLmNyZWF0ZUhhc2goJ3NoYTI1NicpLnVwZGF0ZShiKS5kaWdlc3QoJ2hleCcpOwpjb25zdCBxYz1wYXRoLmpvaW4oTCwnQm9layAyIC0gS29zdGVuLCBvcGJyZW5nc3RlbiwgZWxhc3RpY2l0ZWl0IGVuIHN1cnBsdXMvMi4yIEhvb2Zkc3R1ayBFbGFzdGljaXRlaXQvMi4yLjQgR2VtZW5nZGUgb3BnYXZlbiBlbGFzdGljaXRlaXQvMi4yLjQtcXVhbGl0eS1yZWYueWFtbCcpOwpjb25zdCBvbGQ9ZnMucmVhZEZpbGVTeW5jKHBhdGguam9pbihFLCcyMjQtb2xkLWZsYXQtcXVhbGl0eS1yZWYueWFtbCcpKSxkcmFmdD1mcy5yZWFkRmlsZVN5bmMocGF0aC5qb2luKEUsJzIyNC1zdXBlcnNlZGVkLWRyYWZ0LVFDLnlhbWwnKSksY3VycmVudD1mcy5yZWFkRmlsZVN5bmMocWMpOwpBLmVxdWFsKHNoYShvbGQpLCcxZDBlZThkMmNmZjY5ZTY2NGQzZmVkZWU0N2U2YzlkYzA4NTRiYWI4YmU1MWFmNThhZWRiYmNhMWEzOGQwMmFiJyk7QS5lcXVhbChzaGEoZHJhZnQpLCcwMzk1ZGNlY2IxYjRlMjgwODI1ZmM4YTQ4OGM5YjNmM2RjNzE5ZmQ1ZTkzYzU2YTliNWRkNzYxM2UyNWU4YjIxJyk7CmNvbnN0IGNoZWNrPXJlcXVpcmUocGF0aC5qb2luKFAsJ2J1aWxkLXNjcmlwdHMvd29ya2Zsb3dzL2NoZWNrLXBhcmFncmFwaC1sYW5lLXNjb3BlLmpzJykpOwpjb25zdCBvcmlnaW5hbENoYW5nZXM9Y2hlY2suY2hhbmdlZFF1YWxpdHlSZWZCbG9ja3Mob2xkLnRvU3RyaW5nKCksZHJhZnQudG9TdHJpbmcoKSksY3VycmVudENoYW5nZXM9Y2hlY2suY2hhbmdlZFF1YWxpdHlSZWZCbG9ja3Mob2xkLnRvU3RyaW5nKCksY3VycmVudC50b1N0cmluZygpKTsKQS5kZWVwRXF1YWwob3JpZ2luYWxDaGFuZ2VzLFsncGFydEEnLCdjb21wYW5pb24nXSk7QS5kZWVwRXF1YWwoY3VycmVudENoYW5nZXMsWydwYXJ0QSddKTtBKCEvXmNvbXBhbmlvbjovbS50ZXN0KGN1cnJlbnQudG9TdHJpbmcoKSkpO0EoY3VycmVudC5pbmNsdWRlcygnTk9UX0NPTU1JU1NJT05FRCcpKTsKY29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkoe3N0YXR1czonUEFTUycsYWN0dWFsX29yaWdpbmFsX2RyYWZ0X2Jsb2NrczpvcmlnaW5hbENoYW5nZXMsYWN0dWFsX2N1cnJlbnRfYmxvY2tzOmN1cnJlbnRDaGFuZ2VzLG9sZF9yYXdfc2hhMjU2OnNoYShvbGQpLHN1cGVyc2VkZWRfZHJhZnRfc2hhMjU2OnNoYShkcmFmdCksY3VycmVudF9RQ19zaGEyNTY6c2hhKGN1cnJlbnQpLGNvbXBhbmlvbl9ibG9ja19wcmVzZXJ2ZWRfYWJzZW50OnRydWUsbmV3X2xhbmVfZXhjZXB0aW9uOmZhbHNlfSxudWxsLDIpKTsK"
+    }
+  ],
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8",
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-224-qc-current-20260906\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "a415977d12340a47fae8b9859b9755767bd5020c",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-224-qc-current-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-224-qc-current-20260906\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "f666bbb7dd258f1f01b38a20dd6ca3802848f8b7",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-224-qc-current-20260906"
+  },
+  "inherited_PATH_sha256": "e781cb649559fe03d0dad9db44aa77adc79dfa7eb72aa56cff40b070cf78858c",
+  "exit_code": 0,
+  "stdout_base64": "ewogICJzdGF0dXMiOiAiUEFTUyIsCiAgImFjdHVhbF9vcmlnaW5hbF9kcmFmdF9ibG9ja3MiOiBbCiAgICAicGFydEEiLAogICAgImNvbXBhbmlvbiIKICBdLAogICJhY3R1YWxfY3VycmVudF9ibG9ja3MiOiBbCiAgICAicGFydEEiCiAgXSwKICAib2xkX3Jhd19zaGEyNTYiOiAiMWQwZWU4ZDJjZmY2OWU2NjRkM2ZlZGVlNDdlNmM5ZGMwODU0YmFiOGJlNTFhZjU4YWVkYmJjYTFhMzhkMDJhYiIsCiAgInN1cGVyc2VkZWRfZHJhZnRfc2hhMjU2IjogIjAzOTVkY2VjYjFiNGUyODA4MjVmYzhhNDg4YzliM2YzZGM3MTlmZDVlOTNjNTZhOWI1ZGQ3NjEzZTI1ZThiMjEiLAogICJjdXJyZW50X1FDX3NoYTI1NiI6ICJiNTQzODZkY2JkNGVkZTM4YWZkMjRmMzdhNmE3NTFkNjUwNTRhY2UxODA3NDc0MjQwZmY3MjNiMzEyM2UwOGNhIiwKICAiY29tcGFuaW9uX2Jsb2NrX3ByZXNlcnZlZF9hYnNlbnQiOiB0cnVlLAogICJuZXdfbGFuZV9leGNlcHRpb24iOiBmYWxzZQp9Cg==",
+  "stderr_base64": "",
+  "stdout": "{\n  \"status\": \"PASS\",\n  \"actual_original_draft_blocks\": [\n    \"partA\",\n    \"companion\"\n  ],\n  \"actual_current_blocks\": [\n    \"partA\"\n  ],\n  \"old_raw_sha256\": \"1d0ee8d2cff69e664d3fedee47e6c9dc0854bab8be51af58aedbbca1a38d02ab\",\n  \"superseded_draft_sha256\": \"0395dcecb1b4e280825fc8a488c9b3f3dc719fd5e93c56a9b5dd7613e25e8b21\",\n  \"current_QC_sha256\": \"b54386dcbd4ede38afd24f37a6a751d65054ace1807474240ff723b3123e08ca\",\n  \"companion_block_preserved_absent\": true,\n  \"new_lane_exception\": false\n}\n",
+  "stderr": ""
+}

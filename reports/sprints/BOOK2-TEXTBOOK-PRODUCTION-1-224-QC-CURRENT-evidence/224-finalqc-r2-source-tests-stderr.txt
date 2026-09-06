@@ -1,0 +1,15 @@
+test_real_missing_forged_and_synchronized_34_inputs (__main__.ReleaseNegativeTests.test_real_missing_forged_and_synchronized_34_inputs) ... ok
+test_all_rehearsal_points_support_and_bonus (__main__.SourceTests.test_all_rehearsal_points_support_and_bonus) ... ok
+test_annual_reset_coefficient_combined_counterexamples (__main__.SourceTests.test_annual_reset_coefficient_combined_counterexamples) ... ok
+test_assets_actual_geometry_fonts_and_role_separation (__main__.SourceTests.test_assets_actual_geometry_fonts_and_role_separation) ... ok
+test_complete_target_serialization (__main__.SourceTests.test_complete_target_serialization) ... ok
+test_exact_revenue_arithmetic_and_finite_counterexample (__main__.SourceTests.test_exact_revenue_arithmetic_and_finite_counterexample) ... ok
+test_income_cross_sign_base_and_boundary_counterexamples (__main__.SourceTests.test_income_cross_sign_base_and_boundary_counterexamples) ... ok
+test_printed_target_boundary_language (__main__.SourceTests.test_printed_target_boundary_language) ... ok
+test_short_answers_goals_and_two_editions (__main__.SourceTests.test_short_answers_goals_and_two_editions) ... ok
+test_whole_target_hash_original_order (__main__.SourceTests.test_whole_target_hash_original_order) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 3.353s
+
+OK

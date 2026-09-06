@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "commands": [
+    {
+      "finished": "2026-09-06T07:48:29.525439+00:00",
+      "label": "source-tests",
+      "exit_code": 0,
+      "seconds": 3.345377699995879,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c13dfae6d709ce810ce7005edebb1b5f41169526f2514e683d9f2bdacc53065b",
+      "PATH_unchanged": true
+    },
+    {
+      "finished": "2026-09-06T07:48:31.193301+00:00",
+      "label": "native-readonly",
+      "exit_code": 0,
+      "seconds": 1.6669963000022108,
+      "stdout_sha256": "31f0a8c95a95f391219d1c1e287079ff718382f0513a3e9475658c5eeb889e20",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "PATH_unchanged": true
+    },
+    {
+      "finished": "2026-09-06T07:48:31.245986+00:00",
+      "label": "student-web",
+      "exit_code": 0,
+      "seconds": 0.051688899999135174,
+      "stdout_sha256": "825bd4d301b33c9d311e046f8cee1b22d1db3820be080399eae08a14b8acc855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "PATH_unchanged": true
+    },
+    {
+      "finished": "2026-09-06T07:48:31.295938+00:00",
+      "label": "publisher-print",
+      "exit_code": 0,
+      "seconds": 0.049053700000513345,
+      "stdout_sha256": "a83b671e5b2f9a4ac7541e0701d9579504fed601267e3c1a0a9e03e2443e5b0c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "PATH_unchanged": true
+    },
+    {
+      "finished": "2026-09-06T07:48:33.209825+00:00",
+      "label": "structural",
+      "exit_code": 0,
+      "seconds": 1.9130216000048677,
+      "stdout_sha256": "853f95b103f377ced893df892e46c0922cbd89d74099a1c5979b31c0f4b9b24e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "PATH_unchanged": true
+    },
+    {
+      "finished": "2026-09-06T07:48:35.136087+00:00",
+      "label": "approved-production",
+      "exit_code": 0,
+      "seconds": 1.9248102999990806,
+      "stdout_sha256": "6546538caea644dd664bdd599315b7a06fb4e07ad9c140f4743bcc80f3778f33",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "PATH_unchanged": true
+    },
+    {
+      "finished": "2026-09-06T07:48:36.869519+00:00",
+      "label": "approved-specialist",
+      "exit_code": 0,
+      "seconds": 1.731710899999598,
+      "stdout_sha256": "6546538caea644dd664bdd599315b7a06fb4e07ad9c140f4743bcc80f3778f33",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "PATH_unchanged": true
+    },
+    {
+      "finished": "2026-09-06T07:48:37.423925+00:00",
+      "label": "durable",
+      "exit_code": 0,
+      "seconds": 0.5479399999894667,
+      "stdout_sha256": "ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "PATH_unchanged": true
+    },
+    {
+      "finished": "2026-09-06T07:48:37.573605+00:00",
+      "label": "bundle",
+      "exit_code": 0,
+      "seconds": 0.1487353999982588,
+      "stdout_sha256": "699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "PATH_unchanged": true
+    }
+  ],
+  "hosted_CI": false
+}

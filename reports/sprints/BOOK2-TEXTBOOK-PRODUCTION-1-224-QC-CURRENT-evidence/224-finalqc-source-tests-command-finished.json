@@ -1,0 +1,9 @@
+{
+  "finished": "2026-09-06T07:48:29.525439+00:00",
+  "label": "source-tests",
+  "exit_code": 0,
+  "seconds": 3.345377699995879,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "c13dfae6d709ce810ce7005edebb1b5f41169526f2514e683d9f2bdacc53065b",
+  "PATH_unchanged": true
+}

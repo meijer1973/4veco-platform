@@ -1,0 +1,1079 @@
+{
+  "actor": "paragraph_214_builder",
+  "status": "PASS",
+  "math_and_wrong_alternatives": [
+    {
+      "case": "A reading P old/new Q old/new",
+      "calculated": "(20, 22, 100, 80)",
+      "expected": "(20, 22, 100, 80)",
+      "rejected_alternatives": [
+        "(20, 24, 100, 80)"
+      ]
+    },
+    {
+      "case": "A numerator retains sign and original100",
+      "calculated": "-20",
+      "expected": "-20",
+      "rejected_alternatives": [
+        "-25",
+        "20"
+      ]
+    },
+    {
+      "case": "A price original20",
+      "calculated": "10",
+      "expected": "10",
+      "rejected_alternatives": [
+        "100/11"
+      ]
+    },
+    {
+      "case": "A Ev is Q percentage / P percentage",
+      "calculated": "-2",
+      "expected": "-2",
+      "rejected_alternatives": [
+        "-1/2",
+        "2"
+      ]
+    },
+    {
+      "case": "A old/new exact revenue and difference",
+      "calculated": "[2000, 1760, -240]",
+      "expected": "[2000, 1760, -240]",
+      "rejected_alternatives": []
+    },
+    {
+      "case": "A exact revenue change",
+      "calculated": "-12",
+      "expected": "-12",
+      "rejected_alternatives": [
+        "-10",
+        "-20"
+      ]
+    },
+    {
+      "case": "A multiplier not percentage sum",
+      "calculated": "22/25",
+      "expected": "22/25",
+      "rejected_alternatives": [
+        "9/10"
+      ]
+    },
+    {
+      "case": "B finite old/new and elasticity",
+      "calculated": "[1000, 900, Fraction(-4, 5)]",
+      "expected": "[1000, 900, Fraction(-4, 5)]",
+      "rejected_alternatives": []
+    },
+    {
+      "case": "B price and demand multipliers",
+      "calculated": "[Fraction(3, 2), Fraction(3, 5), Fraction(9, 10)]",
+      "expected": "[Fraction(3, 2), Fraction(3, 5), Fraction(9, 10)]",
+      "rejected_alternatives": []
+    },
+    {
+      "case": "B direct revenue decline despite interval |Ev|<1",
+      "calculated": "-10",
+      "expected": "-10",
+      "rejected_alternatives": [
+        "10",
+        "50",
+        "-40"
+      ]
+    },
+    {
+      "case": "B smooth counterexample agrees at both observed endpoints",
+      "calculated": "[Fraction(100, 1), Fraction(60, 1)]",
+      "expected": "[100, 60]",
+      "rejected_alternatives": []
+    },
+    {
+      "case": "B local magnitudes not constant",
+      "calculated": "[Fraction(-4, 5), Fraction(-2, 1)]",
+      "expected": "[Fraction(-4, 5), -2]",
+      "rejected_alternatives": []
+    },
+    {
+      "case": "B local unit point",
+      "calculated": "-1",
+      "expected": "-1",
+      "rejected_alternatives": []
+    },
+    {
+      "case": "C Ei positive not automatically luxury",
+      "calculated": "1/2",
+      "expected": "1/2",
+      "rejected_alternatives": [
+        "2",
+        "1/20"
+      ]
+    },
+    {
+      "case": "Ei exact boundaries have no category",
+      "calculated": "['inferieur', None, 'normaal', None, 'luxe']",
+      "expected": "['inferieur', None, 'normaal', None, 'luxe']",
+      "rejected_alternatives": []
+    },
+    {
+      "case": "D telescope price separate from A",
+      "calculated": "20",
+      "expected": "20",
+      "rejected_alternatives": [
+        "10"
+      ]
+    },
+    {
+      "case": "D named cross percentages",
+      "calculated": "-1/2",
+      "expected": "-1/2",
+      "rejected_alternatives": [
+        "-1",
+        "-5",
+        "-1/10"
+      ]
+    },
+    {
+      "case": "E full baseline termwise",
+      "calculated": "[100, -20, 20, Fraction(100, 1), Fraction(200, 1)]",
+      "expected": "[100, -20, 20, 100, 200]",
+      "rejected_alternatives": []
+    },
+    {
+      "case": "E separate income and other-price reset",
+      "calculated": "[Fraction(220, 1), Fraction(204, 1)]",
+      "expected": "[220, 204]",
+      "rejected_alternatives": [
+        "[220, 224]"
+      ]
+    },
+    {
+      "case": "E income difference/month",
+      "calculated": "20",
+      "expected": "20",
+      "rejected_alternatives": [
+        "24",
+        "4"
+      ]
+    },
+    {
+      "case": "E Ei denominator annual income percentage",
+      "calculated": "1/2",
+      "expected": "1/2",
+      "rejected_alternatives": [
+        "1/200",
+        "1/20"
+      ]
+    },
+    {
+      "case": "E reset difference compared with200",
+      "calculated": "4",
+      "expected": "4",
+      "rejected_alternatives": [
+        "-16",
+        "24"
+      ]
+    },
+    {
+      "case": "E annual Y cannot become monthly Y",
+      "calculated": "200",
+      "expected": "200",
+      "rejected_alternatives": [
+        "325/3"
+      ]
+    },
+    {
+      "case": "Four bounded local directions",
+      "calculated": "[1, -1, -1, 1]",
+      "expected": "[1, -1, -1, 1]",
+      "rejected_alternatives": [
+        "[1, 1, -1, -1]"
+      ]
+    },
+    {
+      "case": "T1 source-A prices quantities; score excluded",
+      "calculated": "[10, 12, 50000, 43000]",
+      "expected": "[10, 12, 50000, 43000]",
+      "rejected_alternatives": [
+        "[10, 12, 50000, Fraction(23, 5)]"
+      ]
+    },
+    {
+      "case": "T2 supplied ratio consistent (calculation reviewer-only)",
+      "calculated": "-7/10",
+      "expected": "-7/10",
+      "rejected_alternatives": [
+        "7/10",
+        "-10/7"
+      ]
+    },
+    {
+      "case": "T3 whole monetary revenues no invented period",
+      "calculated": "[500000, 516000, 16000]",
+      "expected": "[500000, 516000, 16000]",
+      "rejected_alternatives": []
+    },
+    {
+      "case": "T4 premium and budget signed Ei",
+      "calculated": "[Fraction(15, 8), Fraction(-1, 2)]",
+      "expected": "[Fraction(15, 8), Fraction(-1, 2)]",
+      "rejected_alternatives": [
+        "[Fraction(8, 15), Fraction(-2, 1)]"
+      ]
+    },
+    {
+      "case": "T4 categories",
+      "calculated": "['luxe', 'inferieur']",
+      "expected": "['luxe', 'inferieur']",
+      "rejected_alternatives": []
+    },
+    {
+      "case": "T4 other competitor price percentage",
+      "calculated": "25/2",
+      "expected": "25/2",
+      "rejected_alternatives": [
+        "100/9",
+        "1"
+      ]
+    },
+    {
+      "case": "T4 correct named cross ratio",
+      "calculated": "2/5",
+      "expected": "2/5",
+      "rejected_alternatives": [
+        "5/8",
+        "25/2",
+        "5"
+      ]
+    },
+    {
+      "case": "T5 source-D monthly Q, annual Y, fixed both prices",
+      "calculated": "[Fraction(14200, 1), Fraction(14400, 1)]",
+      "expected": "[14200, 14400]",
+      "rejected_alternatives": [
+        "[Fraction(31600, 3), Fraction(10550, 1)]"
+      ]
+    },
+    {
+      "case": "T5 source-D independent income change",
+      "calculated": "200",
+      "expected": "200",
+      "rejected_alternatives": [
+        "20",
+        "2000"
+      ]
+    },
+    {
+      "case": "Bonus supplied combined scenario",
+      "calculated": "224",
+      "expected": "224",
+      "rejected_alternatives": [
+        "220",
+        "204"
+      ]
+    },
+    {
+      "case": "Bonus decompose rather than attribute all to income",
+      "calculated": "[Fraction(24, 1), Fraction(20, 1), Fraction(4, 1)]",
+      "expected": "[24, 20, 4]",
+      "rejected_alternatives": []
+    },
+    {
+      "case": "Closing return uses25 as old base",
+      "calculated": "-20",
+      "expected": "-20",
+      "rejected_alternatives": [
+        "-25"
+      ]
+    },
+    {
+      "case": "Closing Ev not Ei",
+      "calculated": "-1/2",
+      "expected": "-1/2",
+      "rejected_alternatives": []
+    },
+    {
+      "case": "Closing no income change: Ei denominator zero",
+      "rejected": true
+    },
+    {
+      "case": "Exact point allocations",
+      "calculated": "[20, 14, 4]",
+      "expected": "[20, 14, 4]",
+      "rejected_alternatives": []
+    },
+    {
+      "case": "Whole question-level estimates incl transitions",
+      "calculated": "[Fraction(107, 2), Fraction(127, 2), Fraction(143, 2)]",
+      "expected": "[Fraction(107, 2), Fraction(127, 2), Fraction(143, 2)]",
+      "rejected_alternatives": []
+    }
+  ],
+  "actual_guard_entry_negatives": [
+    {
+      "case": "missing actual input 0 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 0",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 0",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 1 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 1",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 1",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 2 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 2",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4-textbook-plan.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 2",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 3 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 3",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 3",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 4 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 4",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 4",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 5 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 5",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 5",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 6 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 6",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 6",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 7 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 7",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 7",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 8 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 8",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 8",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 9 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 9",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 9",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 10 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-plan.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-plan.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 10",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-plan.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 10",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 11 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-review.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-review.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 11",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-review.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 11",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 12 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 12",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 12",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 13 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-handoff.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-handoff.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 13",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-textbook-handoff.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 13",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 14 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 14",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 14",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 15 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 15",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 15",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 16 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 16",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 16",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 17 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 17",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-plan.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 17",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 18 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 18",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-review.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 18",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 19 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 19",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-quality-ref.yaml",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 19",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 20 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-handoff.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-handoff.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 20",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3-textbook-handoff.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 20",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 21 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 21",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 21",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 22 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 22",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 22",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 23 Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 23",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 23",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 24 references/authored/course-target-exercises.json",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: references/authored/course-target-exercises.json",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 24",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: references/authored/course-target-exercises.json",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 24",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 25 references/authored/book-outlines/book-2-outline.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: references/authored/book-outlines/book-2-outline.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 25",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: references/authored/book-outlines/book-2-outline.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 25",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 26 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 26",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 26",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 27 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-result.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-result.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 27",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-result.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 27",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 28 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-check.json",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-check.json",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 28",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-PLAN-REVIEW-ROOT-check.json",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 28",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 29 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-result.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-result.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 29",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-result.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 29",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 30 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-final-integrity.json",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-final-integrity.json",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 30",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-qc-final-integrity.json",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 30",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 31 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 31",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 31",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 32 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-check.json",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-check.json",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 32",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-check.json",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 32",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing actual input 33 reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-publication.md",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-publication.md",
+      "native_effects": 0
+    },
+    {
+      "case": "forged actual input 33",
+      "rejected": true,
+      "error": "Actual accepted input absent/changed: reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-acceptance-publication.md",
+      "native_effects": 0
+    },
+    {
+      "case": "synchronized manifest hash and actual input 33",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "forged whole manifest inputs",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "forged whole manifest inputs",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "forged whole manifest accountable_actor",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "forged whole manifest decision",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "forged whole manifest immutable_input_pair",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    },
+    {
+      "case": "missing release",
+      "rejected": true,
+      "error": "[Errno 2] No such file or directory: 'C:\\\\wt\\\\b224-qc-input-i0mensf0\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-224-PRODUCTION-RELEASE-inputs.json'",
+      "native_effects": 0
+    },
+    {
+      "case": "three input files plus synchronized authority manifest",
+      "rejected": true,
+      "error": "Immutable production-release manifest differs",
+      "native_effects": 0
+    }
+  ],
+  "positive_exact_input_controls": [
+    true
+  ],
+  "whole_source_shared_controller_negatives": [
+    {
+      "path": "build-scripts/content/book-2/b2_224.py",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/b2_224.py",
+      "mode": "unrelated-drift",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/224/answers.md",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/224/answers.md",
+      "mode": "unrelated-drift",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/224/check_render.py",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/224/check_render.py",
+      "mode": "unrelated-drift",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/224/exercises.md",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/224/exercises.md",
+      "mode": "unrelated-drift",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/224/target-answers.md",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/224/target-answers.md",
+      "mode": "unrelated-drift",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/224/test_source.py",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/224/test_source.py",
+      "mode": "unrelated-drift",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "mode": "unrelated-drift",
+      "rejected": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-controller.py",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-BUILD-controller.py",
+      "mode": "unrelated-drift",
+      "rejected": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-controller.py",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-controller.py",
+      "mode": "unrelated-drift",
+      "rejected": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-checks.py",
+      "mode": "missing",
+      "rejected": true
+    },
+    {
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-224-QC-CURRENT-checks.py",
+      "mode": "unrelated-drift",
+      "rejected": true
+    },
+    {
+      "case": "all ten source/shared/foreign-controller/own-helper files drift",
+      "rejected": true
+    }
+  ],
+  "fixture_scope": "new short technical temporary copies only; normal scoped cleanup; denied historical author fixture never touched",
+  "timing_observed": false,
+  "learner_evidence": false
+}
