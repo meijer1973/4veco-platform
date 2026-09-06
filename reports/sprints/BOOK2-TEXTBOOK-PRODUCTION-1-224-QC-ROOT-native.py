@@ -29,7 +29,7 @@ def guard(commit):
     originals={rel:git(commit,rel) for rel in OWN}
     c.verify_bound_bytes(P,originals)
     bound=c.guard(COMMIT);c.release_guard();c.native_guard()
-    return {'root_source_commit':commit,'root_files':[{'path:f,'raw_sha256':c.sha(v)} for f,v in originals.items()],'original_bound_files':bound}
+    return {'root_source_commit':commit,'root_files':[{'path':f,'raw_sha256':c.sha(v)} for f,v in originals.items()],'original_bound_files':bound}
 
 def namespace(mode,revision):
     if mode not in ('full','thin','print') or not re.fullmatch(r'r[1-9][0-9]*',revision):raise ValueError('Invalid root route/revision')
