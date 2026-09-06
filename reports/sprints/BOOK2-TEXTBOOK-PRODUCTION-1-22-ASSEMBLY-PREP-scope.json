@@ -1,0 +1,89 @@
+{
+  "strict": {
+    "platform": [
+      "build-scripts/content/book-2/22/front.css",
+      "build-scripts/content/book-2/22/front.html",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-baseline.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-bundle-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-chapter-planning-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-check-r1.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-check.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-checks.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-durable-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-finalize.cjs",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-layout-r1-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-layout-r2-process.json",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-layout.py",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-plan.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-result.md",
+      "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-ASSEMBLY-PREP-structural-process.json"
+    ],
+    "lessons": [],
+    "unknown": 0
+  },
+  "scopes": [
+    {
+      "label": "own-P",
+      "base": "bef0b19f35ba600e2770359870119553fda73f0f",
+      "head": "04111ef311d9f61fa9a4d77a0a3d923eeefe079e",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 2,
+        "generated_indexes": 0,
+        "review_evidence": 14,
+        "unknown": 0
+      },
+      "failures": []
+    },
+    {
+      "label": "own-L",
+      "base": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "head": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "exit_code": 1,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      },
+      "failures": [
+        "no changed paths to classify",
+        "textbook lane needs at least one Part A textbook change"
+      ]
+    },
+    {
+      "label": "whole-P",
+      "base": "96416b6b5bd57094576e9aba0a42d682584ec479",
+      "head": "04111ef311d9f61fa9a4d77a0a3d923eeefe079e",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 92,
+        "generated_indexes": 6,
+        "review_evidence": 7424,
+        "unknown": 0
+      },
+      "failures": []
+    },
+    {
+      "label": "whole-L",
+      "base": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "56bb0f1e4f45b844304895cbbc3aee8770ec0829",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 226,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 7,
+        "unknown": 0
+      },
+      "failures": []
+    }
+  ]
+}
