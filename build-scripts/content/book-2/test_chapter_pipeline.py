@@ -1,11 +1,13 @@
 """Exact-source assembly tests; fixtures grant no student-output acceptance."""
 import tempfile
 import unittest
+from copy import deepcopy
 from pathlib import Path
+from unittest.mock import patch
 
 from PIL import Image
 
-from chapter_pipeline import prepare_chapter, verify_chapter_inputs
+from chapter_pipeline import build_chapter, prepare_chapter, verify_chapter_inputs
 from print_pipeline import digest
 
 
@@ -97,6 +99,79 @@ class ChapterPipelineTests(unittest.TestCase):
         del self.spec["paragraphs"][0]["asset_sha256"]
         with self.assertRaisesRegex(ValueError, "explicit reviewed asset hash map"):
             prepare_chapter(self.chapter, self.spec)
+
+    def test_exact_display_headings_preserve_legacy_paths_and_both_complete_sources(self):
+        paragraph = self.spec["paragraphs"][0]
+        folder = self.chapter / paragraph["folder"]
+        sources = {}
+        headings = {"student": "# 2.1.1 Correcte kruislingse titel",
+                    "answers": "# 2.1.1 Correcte kruislingse titel - antwoorden"}
+        for kind, key, role in (("paragraaf", "student_sha256", "student"),
+                                ("antwoorden", "answers_sha256", "answers")):
+            source = folder / f"{folder.name} – {kind}.md"
+            old = source.read_text(encoding="utf-8")
+            current = headings[role] + "\n" + old.split("\n", 1)[1]
+            source.write_text(current, encoding="utf-8")
+            paragraph[key] = digest(source)
+            sources[role] = current.strip()
+        with self.assertRaisesRegex(ValueError, "Source heading does not identify"):
+            prepare_chapter(self.chapter, self.spec)
+        paragraph["source_headings"] = headings
+        result = prepare_chapter(self.chapter, self.spec)
+        self.assertEqual(len(result["inputs"]), 8)
+        self.assertEqual(result["student_md"].count(sources["student"]), 1)
+        self.assertEqual(result["answers_md"].count(sources["answers"]), 1)
+        self.assertNotIn(sources["answers"], result["student_md"])
+        self.assertEqual(folder.name, "2.1.1 Test 1")
+
+    def test_malformed_explicit_heading_maps_reject_before_native_effects(self):
+        valid = {"student": "# 2.1.1 Test 1", "answers": "# 2.1.1 Test 1"}
+        cases = [None, [], {}, {"student": valid["student"]},
+                 {**valid, "extra": "# 2.1.1 Test 1"}]
+        for role in valid:
+            for value in (None, 42, "", "# 2.1.1 ", "# 2.1.1 Test 1\nForged",
+                          "# 2.1.1 Test 1\rForged", "# 2.1.2 Test 1", "## 2.1.1 Test 1"):
+                cases.append({**valid, role: value})
+        for headings in cases:
+            with self.subTest(headings=headings):
+                spec = deepcopy(self.spec)
+                spec["paragraphs"][0]["source_headings"] = headings
+                with patch("chapter_pipeline.build_document") as worker, \
+                        patch.object(Path, "mkdir") as mkdir, \
+                        patch.object(Path, "write_bytes") as write:
+                    with self.assertRaisesRegex(ValueError, "Exact student/answers source headings"):
+                        build_chapter(self.chapter, spec)
+                    worker.assert_not_called()
+                    mkdir.assert_not_called()
+                    write.assert_not_called()
+
+    def test_exact_heading_not_prefix_and_each_edition_is_checked(self):
+        paragraph = self.spec["paragraphs"][0]
+        valid = {"student": "# 2.1.1 Test 1", "answers": "# 2.1.1 Test 1"}
+        for role in valid:
+            for suffix in (" omitted suffix", " - antwoorden"):
+                paragraph["source_headings"] = {**valid, role: valid[role] + suffix}
+                with self.subTest(role=role, suffix=suffix):
+                    with self.assertRaisesRegex(ValueError, "differs from reviewed heading"):
+                        prepare_chapter(self.chapter, self.spec)
+        paragraph["source_headings"] = valid
+        self.assertEqual(len(prepare_chapter(self.chapter, self.spec)["inputs"]), 8)
+
+    def test_supplied_heading_does_not_replace_whole_source_hash(self):
+        paragraph = self.spec["paragraphs"][0]
+        folder = self.chapter / paragraph["folder"]
+        source = folder / f"{folder.name} – paragraaf.md"
+        source.write_text("# 2.1.1 Forged title\n\nAltered teaching.\n", encoding="utf-8")
+        paragraph["source_headings"] = {"student": "# 2.1.1 Forged title",
+                                        "answers": "# 2.1.1 Test 1"}
+        with patch("chapter_pipeline.build_document") as worker, \
+                patch.object(Path, "mkdir") as mkdir, \
+                patch.object(Path, "write_bytes") as write:
+            with self.assertRaisesRegex(ValueError, "Unpinned or changed"):
+                build_chapter(self.chapter, self.spec)
+            worker.assert_not_called()
+            mkdir.assert_not_called()
+            write.assert_not_called()
 
 
 if __name__ == "__main__":

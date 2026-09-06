@@ -29,7 +29,9 @@ def prepare_chapter(chapter_dir: Path, spec: dict, *, pandoc: str = "pandoc") ->
 
     spec: nr, title, front_html, paragraphs (nr, folder, student_sha256,
     answers_sha256, asset_sha256 mapping each referenced paired filename to
-    its reviewed byte hash). Book 2 has three theory paragraphs followed by one mixed
+    its reviewed byte hash, optional source_headings with exact student/answers
+    H1 lines). Explicit reviewed headings may differ from preserved filesystem
+    names; they never replace complete source hashes. Book 2 has three theory paragraphs followed by one mixed
     paragraph. No discovery by broad filename substring or companion fallback.
     Hashes are raw source-byte hashes recorded by the reviewed handoffs.
     """
@@ -64,6 +66,15 @@ def prepare_chapter(chapter_dir: Path, spec: dict, *, pandoc: str = "pandoc") ->
         folder = (chapter_dir / folder_name).resolve(strict=True)
         if folder.parent != chapter_dir:
             raise ValueError("Paragraph folder escapes the selected chapter")
+        source_headings = paragraph.get("source_headings")
+        if "source_headings" in paragraph:
+            if (not isinstance(source_headings, dict)
+                    or set(source_headings) != {"student", "answers"}
+                    or any(not isinstance(value, str)
+                           or value != value.strip()
+                           or not re.fullmatch(r"# " + re.escape(paragraph["nr"]) + r" [^\r\n]+", value)
+                           for value in source_headings.values())):
+                raise ValueError("Exact student/answers source headings must name their paragraph")
         student_kind = "opgaven" if index == 4 else "paragraaf"
         for kind, destination, hash_key in (
             (student_kind, student_parts, "student_sha256"),
@@ -73,7 +84,11 @@ def prepare_chapter(chapter_dir: Path, spec: dict, *, pandoc: str = "pandoc") ->
             if source.parent != folder:
                 raise ValueError("Paragraph source escapes its selected folder")
             markdown, record = _read_pinned(source, paragraph[hash_key])
-            if not markdown.lstrip().startswith(f"# {folder_name}"):
+            if source_headings is not None:
+                role = "answers" if kind == "antwoorden" else "student"
+                if markdown.lstrip().splitlines()[:1] != [source_headings[role]]:
+                    raise ValueError(f"Source heading differs from reviewed heading: {source}")
+            elif not markdown.lstrip().startswith(f"# {folder_name}"):
                 raise ValueError(f"Source heading does not identify its paragraph: {source}")
             _, used_assets = prepare_html(markdown, source, pandoc=pandoc)
             for asset in used_assets:
