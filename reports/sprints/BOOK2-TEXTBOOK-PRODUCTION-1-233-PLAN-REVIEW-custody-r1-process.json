@@ -1,0 +1,23 @@
+{
+  "command": "node",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW-tools.cjs",
+    "custody"
+  ],
+  "cwd": "C:\\wt\\book2-233-plan-review-20260906\\4veco-platform",
+  "environment": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-233-plan-review-20260906\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "bc2c422ce6fcaf9550700a9df8bfc09f7e91d9a7",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-233-plan-review-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-233-plan-review-20260906\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "192d6624524e7605ab9d8d26067927b95041386e",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-233-plan-review-20260906"
+  },
+  "started_at": "2026-09-06T04:42:58.968Z",
+  "ended_at": "2026-09-06T04:43:02.317Z",
+  "exit_code": 0,
+  "stdout": "{\"status\":\"PASS\",\"raw_prior_files_unchanged\":13894,\"lesson_exceptions\":[],\"platform_exceptions\":[\"reports/github-agent-index-platform.json\",\"reports/github-agent-index-platform.md\",\"reports/github-agent-index-lessen.json\",\"reports/github-agent-index-lessen.md\"]}\n",
+  "stderr": ""
+}

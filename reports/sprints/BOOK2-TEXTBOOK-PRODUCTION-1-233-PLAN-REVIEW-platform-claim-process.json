@@ -1,0 +1,29 @@
+{
+  "command": "node",
+  "args": [
+    "C:\\wt\\book2-233-plan-review-20260906\\4veco-platform\\build-scripts\\ci\\check-agent-worktree-safety.js",
+    "--check",
+    "--task",
+    "BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW",
+    "--agent",
+    "paragraph_214_builder",
+    "--require-prefix",
+    "codex/,agent/"
+  ],
+  "cwd": "C:\\wt\\book2-233-plan-review-20260906\\4veco-platform",
+  "environment": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "FOURVECO_PLATFORM_ROOT": "C:\\wt\\book2-233-plan-review-20260906\\4veco-platform",
+    "FOURVECO_PLATFORM_SOURCE_REF": "bc2c422ce6fcaf9550700a9df8bfc09f7e91d9a7",
+    "FOURVECO_PLATFORM_SOURCE_BRANCH": "agent/book2-233-plan-review-20260906",
+    "FOURVECO_LESSEN_ROOT": "C:\\wt\\book2-233-plan-review-20260906\\4veco-lessen",
+    "FOURVECO_LESSEN_SOURCE_REF": "192d6624524e7605ab9d8d26067927b95041386e",
+    "FOURVECO_LESSEN_SOURCE_BRANCH": "agent/book2-233-plan-review-20260906"
+  },
+  "started_at": "2026-09-06T04:37:55.277Z",
+  "ended_at": "2026-09-06T04:37:55.516Z",
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"mode\": \"check\",\n  \"repository\": \"4veco-platform\",\n  \"worktree_path\": \"C:/wt/book2-233-plan-review-20260906/4veco-platform\",\n  \"git_dir\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform183\",\n  \"anchor_clone\": false,\n  \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW\",\n  \"agent_id\": \"paragraph_214_builder\",\n  \"lock\": {\n    \"present\": true,\n    \"same_owner\": true,\n    \"same_task\": true,\n    \"stale\": false,\n    \"path\": \"C:\\\\Projects\\\\4veco\\\\4veco-platform\\\\.git\\\\worktrees\\\\4veco-platform183\\\\4veco-agent-worktree-lock.json\",\n    \"owner\": \"paragraph_214_builder\",\n    \"task_id\": \"BOOK2-TEXTBOOK-PRODUCTION-1-233-PLAN-REVIEW\"\n  },\n  \"branch\": \"agent/book2-233-plan-review-20260906\",\n  \"head_sha\": \"bc2c422ce6fcaf9550700a9df8bfc09f7e91d9a7\",\n  \"on_main\": false,\n  \"detached_head\": false,\n  \"dirty\": true,\n  \"dirty_count\": 1,\n  \"ahead\": 0,\n  \"behind\": 0,\n  \"diverged\": false,\n  \"prefix_ok\": true,\n  \"required_prefixes\": [\n    \"codex/\",\n    \"agent/\"\n  ],\n  \"warnings\": [\n    \"working tree is dirty (1 item)\"\n  ],\n  \"failures\": []\n}\n",
+  "stderr": ""
+}
