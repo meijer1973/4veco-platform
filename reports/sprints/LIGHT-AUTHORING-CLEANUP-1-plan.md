@@ -1,6 +1,7 @@
 # LIGHT-AUTHORING-CLEANUP-1 plan
 
-Date: 2026-09-08. Status: planning review pending; owner review required before merge.
+Date: 2026-09-08. Status: planning review passed before implementation;
+owner review required before merge. See the separate plan-review record.
 
 ## Specification and quality floor
 

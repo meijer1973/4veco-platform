@@ -1,0 +1,791 @@
+{
+  "sample": "Sample X",
+  "source_directory": "C:\\wt\\reorganize\\comparison\\sample-x\\output\\2.1.2 Opbrengsten, winst en break-even",
+  "archive": "sample-x-artifacts.zip",
+  "archive_sha256": "a2ace2dc7d939e6ebff279b9a86f31576bd024340b3e14e00411b5c2fb2e1732",
+  "excluded_dependency_or_cache_directories": [
+    "evidence/python-runtime"
+  ],
+  "files": [
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 antwoorden.html",
+      "bytes": 167369,
+      "sha256": "416439ff0d2aa884bb339c3f5d4d42b822b05e8c157fa5062b7602762854c66f"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 antwoorden.md",
+      "bytes": 9767,
+      "sha256": "a6491e8d8321c4321317c322f3651e5235725e3866912787f70b5e6372a7d181"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 antwoorden.pdf",
+      "bytes": 166713,
+      "sha256": "c53d37e809566dac7a7fbf9dbcf2688fb847c655022a744797f65d9747a55aa4"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 opgaven.html",
+      "bytes": 151227,
+      "sha256": "83416b3f9c1fe1f5766ed3132cae63f9172bcfd8d8b90d828ff9dfb35fc98ed7"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 opgaven.md",
+      "bytes": 8950,
+      "sha256": "0101729a50b1f6edf005acbf797de3134947d73b6479c20189ea18f68079fd4b"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 opgaven.pdf",
+      "bytes": 151982,
+      "sha256": "402dc1fbc162db7af2e46e6b4b587e90eea84cf998b20412c7c4d6d2baaa0a19"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.html",
+      "bytes": 290513,
+      "sha256": "ef678c52b47fd21a88cb131a89a9b33941ef7d9116868301d5b7b7f9c319e905"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.md",
+      "bytes": 14336,
+      "sha256": "d72a6881e3815b8036cb1efc23234e5b61e752d819d6b2c8479eeb4ca766d9bd"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.pdf",
+      "bytes": 274119,
+      "sha256": "fbc785027b0e55b0f160622e99539cc80724a099b65fb570bf6206d60dee3ab9"
+    },
+    {
+      "path": "2.1.2-comparison-report.md",
+      "bytes": 7035,
+      "sha256": "2d8d9e6822b51b8b9c5b7bfe3c045c1c49c3692ef42f9ccce4308dc7bc013bca"
+    },
+    {
+      "path": "2.1.2-quality-record.md",
+      "bytes": 13668,
+      "sha256": "9cf40bf1910924cf9191b78c1502566cf4ee87aa824f28d18a2f8e8c4c1cc197"
+    },
+    {
+      "path": "2.1.2-review.md",
+      "bytes": 21757,
+      "sha256": "7c0dd4ad4a874cb8d4600e67568f5cf22097dccd2e87a7a2104df470db4e9c9c"
+    },
+    {
+      "path": "2.1.2-textbook-handoff.md",
+      "bytes": 8705,
+      "sha256": "f0ab3c637307a5e2a55aad088d07729098350a9c64d75d5b3c76036a888776aa"
+    },
+    {
+      "path": "2.1.2-textbook-plan.md",
+      "bytes": 26778,
+      "sha256": "0f12898102ca95c962fa4b6c82fc6d935f1b7dcf781c7d03c4c68824623a23b2"
+    },
+    {
+      "path": "_assets/2.1.2_ex_1.png",
+      "bytes": 38412,
+      "sha256": "60657d25cc9a388f8fa264d7196020c99fb27d3bc959f053eedc5a3f91e25116"
+    },
+    {
+      "path": "_assets/2.1.2_ex_1.svg",
+      "bytes": 3758,
+      "sha256": "e2829cf86a2ce02f5cea6e3628ed449b9861d0aeb93bbcee2164f4e72049a51d"
+    },
+    {
+      "path": "_assets/2.1.2_ex_2.png",
+      "bytes": 25025,
+      "sha256": "3705f2440267d109aa0f5453fb10aef38cb27b66220105866684c42c583bc995"
+    },
+    {
+      "path": "_assets/2.1.2_ex_2.svg",
+      "bytes": 2379,
+      "sha256": "b435f8eda39b5479dd869655fa829a31cb07f69ef14cb6e599a821a129f6b7fb"
+    },
+    {
+      "path": "_assets/2.1.2_ex_3.png",
+      "bytes": 35568,
+      "sha256": "0ac2554d96439e2919cdb87059cafc72e88cfb89e7633d2d8b4a11375c8aabb6"
+    },
+    {
+      "path": "_assets/2.1.2_ex_3.svg",
+      "bytes": 3535,
+      "sha256": "090df2d9bb4cb09604fd5ee0f149d4d13680c2c5e8a5278958eb8bde4db249c3"
+    },
+    {
+      "path": "_assets/2.1.2_ex_4.png",
+      "bytes": 39991,
+      "sha256": "6f7a7f65fad6d178d338015ca54d7149c6f3faeeb4d67fa2b9f68db6beb4732f"
+    },
+    {
+      "path": "_assets/2.1.2_ex_4.svg",
+      "bytes": 3414,
+      "sha256": "2dba31821d12e8ac41daa48aa945a865c0b4257c9f2644154d775811b3aac861"
+    },
+    {
+      "path": "_assets/2.1.2_ex_5.png",
+      "bytes": 38832,
+      "sha256": "af5c591aa2ce9f5203d847d67da4fff39c7759837bff2dbd5cc7b0624869c899"
+    },
+    {
+      "path": "_assets/2.1.2_ex_5.svg",
+      "bytes": 3992,
+      "sha256": "846e235b76fac12813f93a82a9e303042648c4de1d9e1f80e35254fb2df3227f"
+    },
+    {
+      "path": "_assets/2.1.2_fig_1.png",
+      "bytes": 27049,
+      "sha256": "647e4284e9a55a60f9c3dc58cfc28f56fed0017460285947f1d210d62629cabc"
+    },
+    {
+      "path": "_assets/2.1.2_fig_1.svg",
+      "bytes": 2226,
+      "sha256": "4b8853ce6191ac749467aec33805490c0b34aaeb6e8b0fed092a6982cb5cdc60"
+    },
+    {
+      "path": "_assets/2.1.2_fig_2.png",
+      "bytes": 32334,
+      "sha256": "5d923692c5d0604dc3fb05b38af5b49cf92d2bb9b5f1acd4acdccbecfb9a49e6"
+    },
+    {
+      "path": "_assets/2.1.2_fig_2.svg",
+      "bytes": 2471,
+      "sha256": "4370fecdf4f094c4b92cec2e4b02fb5002191bfbf48d001702c5b4df95e779e4"
+    },
+    {
+      "path": "_assets/2.1.2_fig_3.png",
+      "bytes": 38824,
+      "sha256": "31465b88937d4aef0476aabb91bdd153c266f8970320fccf9882fbd9184afc49"
+    },
+    {
+      "path": "_assets/2.1.2_fig_3.svg",
+      "bytes": 3603,
+      "sha256": "75c69de3a531988d8a0f4a9adc0b5ff680c2bed6d2c85556b02120c45d204012"
+    },
+    {
+      "path": "_assets/2.1.2_we_1.png",
+      "bytes": 39181,
+      "sha256": "129c297a3bbb78a12fffb7872140c6a1dc927990e23d41a34406b0fdcc8f2d7a"
+    },
+    {
+      "path": "_assets/2.1.2_we_1.svg",
+      "bytes": 3628,
+      "sha256": "bd8a47140169660bf2b17982bccb8ecb0683bb5dca507fe62bc1439b73aa749e"
+    },
+    {
+      "path": "build_pdf.py",
+      "bytes": 5067,
+      "sha256": "716f1847433f8b61cc99c52c5ea3350471a7bd61c30a4b47fc4209c69cce3bd7"
+    },
+    {
+      "path": "evidence/a7-quality-20260908T090436Z-artifact-hashes.json",
+      "bytes": 2418,
+      "sha256": "40ea2a8ccc5552a5a8e18878605366637d8f9b42e327664493d6b8ef755a6f26"
+    },
+    {
+      "path": "evidence/a7-quality-20260908T090436Z-audit.json",
+      "bytes": 15194,
+      "sha256": "13cc6fe21fec7a3c450e16a447054de016018d53189abdbf9b5237bf2637bcbb"
+    },
+    {
+      "path": "evidence/a7-quality-20260908T090436Z-audit.py",
+      "bytes": 13662,
+      "sha256": "6c27be1f84a026d7fc04a5825392ec6ac9aa7d49d688368cc88c99e8d1abe054"
+    },
+    {
+      "path": "evidence/a7-quality-20260908T090436Z-final-check.json",
+      "bytes": 915,
+      "sha256": "16b0d802eea9e5d2a0b8ffbf61aa238ae5529dbab3d50a8391b66747926bd157"
+    },
+    {
+      "path": "evidence/a7-quality-20260908T090436Z-freshness.md",
+      "bytes": 5633,
+      "sha256": "f8cda438d1aa00bf1ec68fd6d9defe5bf3a64774293b477ca39e5c7189f52d5b"
+    },
+    {
+      "path": "evidence/a7-quality-20260908T090436Z-pdfinfo.json",
+      "bytes": 2403,
+      "sha256": "b2970fccc08bfae885f34f8dd9aeae9bbf4a4a974d03efa15d27b9a0d6d61237"
+    },
+    {
+      "path": "evidence/a7-quality-20260908T090436Z-session.json",
+      "bytes": 1957,
+      "sha256": "8ab0eb9e2831adaaf03f4ecd4c17c8b2c374415497892c3f1c7eb1ff164e5b1c"
+    },
+    {
+      "path": "evidence/a7-quality-20260908T090436Z-snapshot.json",
+      "bytes": 36341,
+      "sha256": "a0e5d791e9e372dfd8c3d6a0e4a16964d8cbbd56aee381e2d1a4cf8ad2bfe636"
+    },
+    {
+      "path": "evidence/asset-inventory.md",
+      "bytes": 2774,
+      "sha256": "0203f7354bb87772327a9f645280af8995e93e834e333c3e22ea269267bf3ac3"
+    },
+    {
+      "path": "evidence/author-read-ledger.json",
+      "bytes": 15767,
+      "sha256": "49d2b0d50a79eff84f806173cfee0c0cd496421c49617e93e25086c5e5f3cf83"
+    },
+    {
+      "path": "evidence/author-visual-qa.md",
+      "bytes": 4653,
+      "sha256": "7ff70b20c71c1e6b7a549400e5f5adcfdbad945d596ac328844f4c9c2eb52964"
+    },
+    {
+      "path": "evidence/author_content.py",
+      "bytes": 25199,
+      "sha256": "0d1f6a850f8071d1703713b4e44c7e47d8d12a3641680be553feb1b3ad7a2ac6"
+    },
+    {
+      "path": "evidence/build-result.json",
+      "bytes": 556,
+      "sha256": "5ef77f54f1505194b521d3dd886467198ed028f6d16190735101820b66b68b97"
+    },
+    {
+      "path": "evidence/build_graphs.py",
+      "bytes": 8208,
+      "sha256": "2d7d8da00afcebfc03e5b26f66b9e1e43a0c9df1bc8d7df01c6e09b4a0c727b9"
+    },
+    {
+      "path": "evidence/closure-integrity.json",
+      "bytes": 216,
+      "sha256": "1bc60e6af6c23fb010c5f01e8de2ed5ae38a288cb0db4b4fa2d9616bbc1efd6b"
+    },
+    {
+      "path": "evidence/create_plan.py",
+      "bytes": 14373,
+      "sha256": "6ecb03a101689f6b080fdc182cc66267af10d05990eca03e9760ecb1d6dfd48f"
+    },
+    {
+      "path": "evidence/final-inventory.json",
+      "bytes": 302760,
+      "sha256": "8907e54b5542594b45bc9a1452b604ddb0dc076f058f39d9ba8c724ee1082160"
+    },
+    {
+      "path": "evidence/final-metrics.json",
+      "bytes": 2426,
+      "sha256": "bd2ea2c71409012e52108396f531f75bff8fcd134390f6a9c7ec092d072cd4e5"
+    },
+    {
+      "path": "evidence/final-validation.json",
+      "bytes": 1693,
+      "sha256": "4642ebccf3f8a02ae4b0dffb5c1c1d64f45fa40aac2319245b0ec3b509c77cad"
+    },
+    {
+      "path": "evidence/final-validation.txt",
+      "bytes": 1287,
+      "sha256": "195c7674e206e31945241dbe2217f8a6b77cc4075aea143af651d5a093d0b12f"
+    },
+    {
+      "path": "evidence/finalize_closure.py",
+      "bytes": 13233,
+      "sha256": "df360cc18377b92ee0ae1fedc048c4c5f6fef6fa5ae0c308f5933800f02d74ee"
+    },
+    {
+      "path": "evidence/finalize_inventory.py",
+      "bytes": 2423,
+      "sha256": "870b3243bd0ad7576c8119bc4a87fb4949ad65de5866775c5b53125c58f041a0"
+    },
+    {
+      "path": "evidence/foundation-approved.txt",
+      "bytes": 275,
+      "sha256": "21dd1994ef7a81604dd9cfa96c440071de816f864405daa1b7645ca8b3feabb2"
+    },
+    {
+      "path": "evidence/foundation-authoring.txt",
+      "bytes": 336,
+      "sha256": "bc7ad58059054159e7dbf59916a5b250ae1289cbca76b6cc95a18d8722d4c9b0"
+    },
+    {
+      "path": "evidence/foundation-pins.json",
+      "bytes": 53539,
+      "sha256": "e9cc97d69f9025f8633c8717ccab541066a63a0c39d97c6917de7eb659fc4401"
+    },
+    {
+      "path": "evidence/foundation-production.txt",
+      "bytes": 344,
+      "sha256": "16173892cfd86b26878fd8ded59cc94b191cc3a9870adb04aae5324a8206e542"
+    },
+    {
+      "path": "evidence/foundation-structural.txt",
+      "bytes": 266,
+      "sha256": "03da118be3a7785751deb07bfec94cb3535926deb758badcd6df8df9de79d25d"
+    },
+    {
+      "path": "evidence/geometry.txt",
+      "bytes": 535,
+      "sha256": "956edfe96d17a2669dca92f1d8cfa668d5c925c3e1c644e488a10adf6d263cb1"
+    },
+    {
+      "path": "evidence/graph-specs.json",
+      "bytes": 4557,
+      "sha256": "6caba4e67dce7f783ca206e44785c2b1939c4cbe9c0cf105bb7d67aa1e0564f5"
+    },
+    {
+      "path": "evidence/isolation-and-exclusions.md",
+      "bytes": 2058,
+      "sha256": "fe1e0d228944992d7e1c9fa65b785216653158924c9e01e46dab112b61d01fa6"
+    },
+    {
+      "path": "evidence/mechanical.json",
+      "bytes": 2348,
+      "sha256": "2f55f5d989a6d051b79d5666a6501089afefd849f1ca476eaa12f442f2564eda"
+    },
+    {
+      "path": "evidence/mechanical.txt",
+      "bytes": 2350,
+      "sha256": "8a02015d2806fb7734030bf37716a27a5ecb01f325dd94102da786413f60aec6"
+    },
+    {
+      "path": "evidence/prompts-and-assignments.md",
+      "bytes": 16957,
+      "sha256": "3455059ea5cd1bf736db462d6d774ec4ea1fff64dfdb857de928d0191bba8324"
+    },
+    {
+      "path": "evidence/rasterize.cjs",
+      "bytes": 476,
+      "sha256": "632b2d058ec247ded42f05b8de65ccb6a3870e180d68180798266c311dcc9b3b"
+    },
+    {
+      "path": "evidence/rasterize.txt",
+      "bytes": 214,
+      "sha256": "b5c2bc95515f828a62646ffefe2b729e330caa738f93cc3d85271952c5220f6b"
+    },
+    {
+      "path": "evidence/record_evidence.py",
+      "bytes": 7750,
+      "sha256": "fce879749dd150415bce61bdd58c1880cfae92d6c2a5f0375f710f7fe9d50569"
+    },
+    {
+      "path": "evidence/render_pages.py",
+      "bytes": 1401,
+      "sha256": "615453077744323924397966c566e034710b73bc94ffd0a856c6d49bb2a9189e"
+    },
+    {
+      "path": "evidence/rendered-manifest.json",
+      "bytes": 4591,
+      "sha256": "30b286ec1841638868476ea13b99d09449f7c1c47be432111399acb85d56ef32"
+    },
+    {
+      "path": "evidence/rendered/antwoorden/contact-sheet.png",
+      "bytes": 319353,
+      "sha256": "37bdcd8546116a83602ae538fb4f742580432f0130e15246614ba35973044132"
+    },
+    {
+      "path": "evidence/rendered/antwoorden/page-1.png",
+      "bytes": 278893,
+      "sha256": "ac325b0376d672c620fa22f0a7f804026b50c9ef75545973120c22edd6de4322"
+    },
+    {
+      "path": "evidence/rendered/antwoorden/page-2.png",
+      "bytes": 306286,
+      "sha256": "99393b323ca464ff0c9b728c4b01b66f57b69a46bc02747c4c3b90902e923b1a"
+    },
+    {
+      "path": "evidence/rendered/antwoorden/page-3.png",
+      "bytes": 218748,
+      "sha256": "850144e43fcf6937582e08b5ae8917202bc07c88992c49171a9160603cef1b9f"
+    },
+    {
+      "path": "evidence/rendered/antwoorden/page-4.png",
+      "bytes": 170457,
+      "sha256": "aa22a9dced09f1831d2454ae8ed7f63e459d60a7f90d0b67def45a50c231e4cd"
+    },
+    {
+      "path": "evidence/rendered/antwoorden/page-5.png",
+      "bytes": 254299,
+      "sha256": "456f29a904c2830799e47c7ae9eda42dd4d0f0fb1d341afd4740ceb16a8f87b5"
+    },
+    {
+      "path": "evidence/rendered/antwoorden/page-6.png",
+      "bytes": 99235,
+      "sha256": "1ae8b400f274d35c1cc4f4ace6ad7fd2c72246afe5605f34dd68c65d0b8ac771"
+    },
+    {
+      "path": "evidence/rendered/opgaven/contact-sheet.png",
+      "bytes": 297672,
+      "sha256": "b38b185260c1fa8e2d918db64e1ea7ef9df5176cc7ec25b1d9de52afe67ce310"
+    },
+    {
+      "path": "evidence/rendered/opgaven/page-1.png",
+      "bytes": 197184,
+      "sha256": "8297e9210e27fe3e32ebefbbd5b92c4bdc6d94f274b3b63250f1ed8b869901a2"
+    },
+    {
+      "path": "evidence/rendered/opgaven/page-2.png",
+      "bytes": 238560,
+      "sha256": "becc3e1d93e02258569cdec0058fe7bb1dfd5063941894cb32f978ed99b7f32a"
+    },
+    {
+      "path": "evidence/rendered/opgaven/page-3.png",
+      "bytes": 241865,
+      "sha256": "72906689f79f7e638279315c5fd455ae91570fc56c0843135d3ec8f09b513199"
+    },
+    {
+      "path": "evidence/rendered/opgaven/page-4.png",
+      "bytes": 190191,
+      "sha256": "2c715356481f35c6462f661a993d13d458f640bf2cee4e722cc117e33e2dd32d"
+    },
+    {
+      "path": "evidence/rendered/opgaven/page-5.png",
+      "bytes": 277938,
+      "sha256": "ddd9b15dcc487471e7851b1f6b5f623e710879254d35077f61f49597d5648882"
+    },
+    {
+      "path": "evidence/rendered/opgaven/page-6.png",
+      "bytes": 55173,
+      "sha256": "7f444eb256ed05e2082fcc03844635cbfa1b251e47410e525146840813e986fc"
+    },
+    {
+      "path": "evidence/rendered/paragraaf/contact-sheet.png",
+      "bytes": 496987,
+      "sha256": "77aa3c02552a9b2924229060e498a7e0bf9543126a9d99def28a6b4ed2467184"
+    },
+    {
+      "path": "evidence/rendered/paragraaf/page-01.png",
+      "bytes": 182372,
+      "sha256": "c974a54b6a0998b0b1d6eee6d4924c9ea9a1098f6cddd62fdfc3c888afac5a56"
+    },
+    {
+      "path": "evidence/rendered/paragraaf/page-02.png",
+      "bytes": 165202,
+      "sha256": "564330d93c1b88c5e5a9677612fe44a1c2819bdc27f4ba84065ae8be884e61a5"
+    },
+    {
+      "path": "evidence/rendered/paragraaf/page-03.png",
+      "bytes": 190311,
+      "sha256": "feec804ff2776486dbd87aee2fc8f893c0d4358683ac3b37bf7a9b328147e7f5"
+    },
+    {
+      "path": "evidence/rendered/paragraaf/page-04.png",
+      "bytes": 241437,
+      "sha256": "751661954b281bee83acf4ac3f94b14f7f7947cc68f7324efd8a78b1242fe4bb"
+    },
+    {
+      "path": "evidence/rendered/paragraaf/page-05.png",
+      "bytes": 184538,
+      "sha256": "830b110e086fdff6c6034d46efa84ffe1c08a3a00d4b51c82d6d8b471a49e364"
+    },
+    {
+      "path": "evidence/rendered/paragraaf/page-06.png",
+      "bytes": 238767,
+      "sha256": "ee15c1f08f80cb4365dffce1dca603c4082f69f6f09d433978d55250b8d12aa9"
+    },
+    {
+      "path": "evidence/rendered/paragraaf/page-07.png",
+      "bytes": 241834,
+      "sha256": "b0e4c02f0b8f838fb4cba7d78a386f8068000b6a43c820d74fea8152ee920c4a"
+    },
+    {
+      "path": "evidence/rendered/paragraaf/page-08.png",
+      "bytes": 190319,
+      "sha256": "e36bbd1534ed4372a4fec9e7af27948654497b26b2e4b4fc5dee41a9010fcd7e"
+    },
+    {
+      "path": "evidence/rendered/paragraaf/page-09.png",
+      "bytes": 277999,
+      "sha256": "dbc01b536908b76bd45ec4297ac1c7e3351c7028bb25f53bce37fbbcd8eae9b4"
+    },
+    {
+      "path": "evidence/rendered/paragraaf/page-10.png",
+      "bytes": 55179,
+      "sha256": "fa5ab504d5698974a5e3f206c2fe824d75da30e25e3075b604af28ec1067b2db"
+    },
+    {
+      "path": "evidence/repair-rounds.json",
+      "bytes": 3752,
+      "sha256": "d750c341d85f6783a0d278dc465cd42653888c394d4febe3166c6bf6f213d647"
+    },
+    {
+      "path": "evidence/reproduce.md",
+      "bytes": 3035,
+      "sha256": "41736978f0c86d4e1ba24e3d670872c71561c81e3b2b27e7da1b6c6492db8cbb"
+    },
+    {
+      "path": "evidence/review-routing.json",
+      "bytes": 5561,
+      "sha256": "71e0c5eef36b3dda9e5ffc4120713e3ea90404632048251db9f8e81ebe2b2a08"
+    },
+    {
+      "path": "evidence/reviewer-antwoorden-pdf-text.txt",
+      "bytes": 9622,
+      "sha256": "c1a09c5adea06586e98ea60e50cfb9a8e81c8153e8890e450a3572b78da37497"
+    },
+    {
+      "path": "evidence/reviewer-audit.py",
+      "bytes": 8065,
+      "sha256": "ca89a91e6a3233500ec9e9b2db749fab6036130ffbe89922065af25018aadd0f"
+    },
+    {
+      "path": "evidence/reviewer-history-20260908T080621Z-audit.json",
+      "bytes": 57026,
+      "sha256": "ca9919f6648e27d562917156493e42e384613027a93be3755c0b9e0b00e6788c"
+    },
+    {
+      "path": "evidence/reviewer-history-20260908T080621Z-report.md",
+      "bytes": 18329,
+      "sha256": "d320f3467b275db91e04d61f789d8c81a91f85841685051b3c4b334960a056a5"
+    },
+    {
+      "path": "evidence/reviewer-history-20260908T080621Z-session.json",
+      "bytes": 565,
+      "sha256": "c4959a8e655ad6d02940bb18d5a030cef1f7e82c4bb11353b0ea076808f3dead"
+    },
+    {
+      "path": "evidence/reviewer-history-20260908T080621Z-snapshot.json",
+      "bytes": 16193,
+      "sha256": "073f5d8d95c18c07b294f3f8653846559966ee7c557a45345c48e233504e883b"
+    },
+    {
+      "path": "evidence/reviewer-independent-audit.json",
+      "bytes": 57026,
+      "sha256": "ca9919f6648e27d562917156493e42e384613027a93be3755c0b9e0b00e6788c"
+    },
+    {
+      "path": "evidence/reviewer-opgaven-pdf-text.txt",
+      "bytes": 8356,
+      "sha256": "72fc992daba4f5512b93c2fae859711410e7f97b0922d7ac184fb63adedffd28"
+    },
+    {
+      "path": "evidence/reviewer-paragraaf-pdf-text.txt",
+      "bytes": 13529,
+      "sha256": "2a5ef88a1373e8de9ee1922d14e83a5516bddd149d480865e04845d3b1eac7bd"
+    },
+    {
+      "path": "evidence/reviewer-pass0.json",
+      "bytes": 5918,
+      "sha256": "231699a6b7887d77e2384cea8667cb0ac8180e6c23b3183b28b65aaa1e50096e"
+    },
+    {
+      "path": "evidence/reviewer-recheck-20260908T090021Z-antwoorden-pdf-text.txt",
+      "bytes": 9622,
+      "sha256": "c1a09c5adea06586e98ea60e50cfb9a8e81c8153e8890e450a3572b78da37497"
+    },
+    {
+      "path": "evidence/reviewer-recheck-20260908T090021Z-audit.json",
+      "bytes": 57798,
+      "sha256": "6baa92dec1fde5e26cc1d3ee0bc9ccccde6156faef22c66ed1527fda9f576b36"
+    },
+    {
+      "path": "evidence/reviewer-recheck-20260908T090021Z-audit.py",
+      "bytes": 8105,
+      "sha256": "2161b3753e7d1ba63b8508228acf817637341f52f9ae1aaa3d07a1c474de389e"
+    },
+    {
+      "path": "evidence/reviewer-recheck-20260908T090021Z-opgaven-pdf-text.txt",
+      "bytes": 8764,
+      "sha256": "5f63270115b3aca7804383310644890389e11a1be5924c635db19524c76f9208"
+    },
+    {
+      "path": "evidence/reviewer-recheck-20260908T090021Z-paragraaf-pdf-text.txt",
+      "bytes": 13937,
+      "sha256": "2edee070a1fe40d9e8d59665140d6fb0e3674b089416a61b1eb7904f49145295"
+    },
+    {
+      "path": "evidence/reviewer-recheck-20260908T090021Z-refresh-report.py",
+      "bytes": 10236,
+      "sha256": "baa4afc03197e7561d2a25c1d4b07e019211845274d0b0164d1c346301815ebb"
+    },
+    {
+      "path": "evidence/reviewer-recheck-20260908T090021Z-session.json",
+      "bytes": 1045,
+      "sha256": "bf7f114caccf1528e0d229cf46f2f4db8c21e3777e7bbdc00ff1787122b03242"
+    },
+    {
+      "path": "evidence/reviewer-recheck-20260908T090021Z-snapshot-start.json",
+      "bytes": 16967,
+      "sha256": "913c9b36db0cbdb8fbc6adc14a9374629357bc388ca6a6c3f447cd33af33fd6d"
+    },
+    {
+      "path": "evidence/reviewer-session.json",
+      "bytes": 565,
+      "sha256": "c4959a8e655ad6d02940bb18d5a030cef1f7e82c4bb11353b0ea076808f3dead"
+    },
+    {
+      "path": "evidence/reviewer-snapshot-final.json",
+      "bytes": 16193,
+      "sha256": "073f5d8d95c18c07b294f3f8653846559966ee7c557a45345c48e233504e883b"
+    },
+    {
+      "path": "evidence/reviewer-snapshot-start.json",
+      "bytes": 14843,
+      "sha256": "f9e0d6166d73e9cf6c33576d614625efb11c64e8d355cb9f8865abaec17205d9"
+    },
+    {
+      "path": "evidence/runtime-and-source-state.json",
+      "bytes": 1417,
+      "sha256": "2b233a617daeb52899b8d6c1a05c4892f7233a7ea3cfffd486225665b4ac5199"
+    },
+    {
+      "path": "evidence/shared-prompt.md",
+      "bytes": 3398,
+      "sha256": "dffcc0b5316fd5a34747d7c85c623752a19f1a38650a04b37a4ad62966930a71"
+    },
+    {
+      "path": "evidence/stages.json",
+      "bytes": 4187,
+      "sha256": "3892be535eb45e7fb389f79e35eaf0c58f44632ee480a430e28b2238ad2e9cc1"
+    },
+    {
+      "path": "evidence/student-review-audit-20260908.ps1",
+      "bytes": 7941,
+      "sha256": "474e7f4dfffcc72f557ad1e10f377f74067876f0b0e600c1db29f5586f5c16c1"
+    },
+    {
+      "path": "evidence/student-review-evidence-20260908.json",
+      "bytes": 29246,
+      "sha256": "62e96906141c5ba92b0e0af974d118dce36fdbe302f7ef724495c3d804bc8857"
+    },
+    {
+      "path": "evidence/target-record.json",
+      "bytes": 3754,
+      "sha256": "397b9738403695444ce507a73a84a1ff220787ae62c30172ea1da0ad9d7969c7"
+    },
+    {
+      "path": "evidence/teacher-review-findings-083326.md",
+      "bytes": 1797,
+      "sha256": "b25da56df1d3f7f75a1f37aec7655f2d7408f53863dcee95f20898bad7a2f08c"
+    },
+    {
+      "path": "evidence/teacher-review-foundation-check-083326.json",
+      "bytes": 555,
+      "sha256": "d6a3bdca59a0b0fe9092133ecf644a7e0f0f9c587742472cc6ac5a0d7bc64917"
+    },
+    {
+      "path": "evidence/teacher-review-reference-evidence-083326.json",
+      "bytes": 6137,
+      "sha256": "ebbcf6e02a2bc0f31ec61c7ba1d962a554fa67ab9783454fd1d021a73084463b"
+    },
+    {
+      "path": "evidence/teacher-review-session-083326.json",
+      "bytes": 757,
+      "sha256": "44617f5a5225f3525a5ebf8b01e4e22be393a744dc7650846ca9eb25943b2586"
+    },
+    {
+      "path": "evidence/teacher-review-snapshot-083326.json",
+      "bytes": 8104,
+      "sha256": "168dcf84fc2b9f7f807e11da2813dabe40c1946433fbe699fcce9ceee178b332"
+    },
+    {
+      "path": "evidence/teacher-review-snapshot-final-083326.json",
+      "bytes": 14654,
+      "sha256": "36d0935f74aec071a6be5d760794ab8b41232b469c4719622ebae79bd60303af"
+    },
+    {
+      "path": "evidence/validate-part-a-status.json",
+      "bytes": 195,
+      "sha256": "9772f4759dd75482e278539f88adc14d14d63eeddbd70d379f7e0f3b61fe44d5"
+    },
+    {
+      "path": "evidence/validate-part-a.txt",
+      "bytes": 1292,
+      "sha256": "bafaca5541afaa8c205d1b5d424275e6e614e08f0dd45fd326893f928d9c7a3e"
+    },
+    {
+      "path": "evidence/validator-review-parser-observation.json",
+      "bytes": 557,
+      "sha256": "15de35b38417ffd14e5aa7398ed8e6f9e1eccadbb9be23f7529d62dfbaa28434"
+    },
+    {
+      "path": "evidence/verify_packet.py",
+      "bytes": 2799,
+      "sha256": "3c769519c85fc180cc39bdb0149bd9b25ae2ba42a6cd901c7722f1bdd346926d"
+    },
+    {
+      "path": "evidence/worktree-pre-release-checks.json",
+      "bytes": 2882,
+      "sha256": "268b44becbb75b82d6a7b264ba68bbf4ff2c34c3caccc8460a693f3569151485"
+    },
+    {
+      "path": "evidence/worktree-release.json",
+      "bytes": 2999,
+      "sha256": "866b4c0b2a9deca466fe1f5dd56b1ac823af43537610addb4db46131a530c7fc"
+    },
+    {
+      "path": "student-experience-review.md",
+      "bytes": 19308,
+      "sha256": "7174d800b68c7355bc229bfbb21b584572bf1b8035d96cd35ff50279f86d1e6b"
+    },
+    {
+      "path": "teacher-learning-quality-review.md",
+      "bytes": 20237,
+      "sha256": "b8495276a56289b335726baf1d15b5dcd0b67c5bc201342a0119610b2a93ead9"
+    }
+  ],
+  "direct_copies": [
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 antwoorden.md",
+      "archive_original_sha256": "a6491e8d8321c4321317c322f3651e5235725e3866912787f70b5e6372a7d181",
+      "direct_copy_sha256": "7d753f32f54a5772c765783fd20ebb535cc406a4687180621e9aa25a80089aae",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 antwoorden.pdf",
+      "archive_original_sha256": "c53d37e809566dac7a7fbf9dbcf2688fb847c655022a744797f65d9747a55aa4",
+      "direct_copy_sha256": "c53d37e809566dac7a7fbf9dbcf2688fb847c655022a744797f65d9747a55aa4",
+      "normalization": "none; exact PDF bytes"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 opgaven.md",
+      "archive_original_sha256": "0101729a50b1f6edf005acbf797de3134947d73b6479c20189ea18f68079fd4b",
+      "direct_copy_sha256": "e5c295f193453e473726c7df5cb68f42e57bb8831f4ace1d2a5588df04f45361",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 opgaven.pdf",
+      "archive_original_sha256": "402dc1fbc162db7af2e46e6b4b587e90eea84cf998b20412c7c4d6d2baaa0a19",
+      "direct_copy_sha256": "402dc1fbc162db7af2e46e6b4b587e90eea84cf998b20412c7c4d6d2baaa0a19",
+      "normalization": "none; exact PDF bytes"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.md",
+      "archive_original_sha256": "d72a6881e3815b8036cb1efc23234e5b61e752d819d6b2c8479eeb4ca766d9bd",
+      "direct_copy_sha256": "4a669eceb1036287bd514ec7ae9f8d810343d858ee0693934313f64c5aea7a09",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.pdf",
+      "archive_original_sha256": "fbc785027b0e55b0f160622e99539cc80724a099b65fb570bf6206d60dee3ab9",
+      "direct_copy_sha256": "fbc785027b0e55b0f160622e99539cc80724a099b65fb570bf6206d60dee3ab9",
+      "normalization": "none; exact PDF bytes"
+    },
+    {
+      "path": "2.1.2-comparison-report.md",
+      "archive_original_sha256": "2d8d9e6822b51b8b9c5b7bfe3c045c1c49c3692ef42f9ccce4308dc7bc013bca",
+      "direct_copy_sha256": "323289f594a3204eb009c5991e5ef8bba4cb2929c5913ab2fa08fa262e1059bd",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "2.1.2-quality-record.md",
+      "archive_original_sha256": "9cf40bf1910924cf9191b78c1502566cf4ee87aa824f28d18a2f8e8c4c1cc197",
+      "direct_copy_sha256": "9cf40bf1910924cf9191b78c1502566cf4ee87aa824f28d18a2f8e8c4c1cc197",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "2.1.2-review.md",
+      "archive_original_sha256": "7c0dd4ad4a874cb8d4600e67568f5cf22097dccd2e87a7a2104df470db4e9c9c",
+      "direct_copy_sha256": "f334591909382c7251cf03bd795ff39fb5bb8c7af5377bd69b23ad1980f885e0",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "2.1.2-textbook-handoff.md",
+      "archive_original_sha256": "f0ab3c637307a5e2a55aad088d07729098350a9c64d75d5b3c76036a888776aa",
+      "direct_copy_sha256": "4270c3e1d19a6921c0855c6cf0c40d81bb0629782efaa27c860edc7baacfec41",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "2.1.2-textbook-plan.md",
+      "archive_original_sha256": "0f12898102ca95c962fa4b6c82fc6d935f1b7dcf781c7d03c4c68824623a23b2",
+      "direct_copy_sha256": "cf48ceb743205715470f4d8c6903e118bc47f836137f3392c3c1567e4ff76db7",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "student-experience-review.md",
+      "archive_original_sha256": "7174d800b68c7355bc229bfbb21b584572bf1b8035d96cd35ff50279f86d1e6b",
+      "direct_copy_sha256": "084a1179f4c645f8a5b524dc6c4dbdfdeec202b843796989bc565b5582f333dd",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "teacher-learning-quality-review.md",
+      "archive_original_sha256": "b8495276a56289b335726baf1d15b5dcd0b67c5bc201342a0119610b2a93ead9",
+      "direct_copy_sha256": "b8495276a56289b335726baf1d15b5dcd0b67c5bc201342a0119610b2a93ead9",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    }
+  ]
+}
