@@ -37,8 +37,40 @@ Both verdicts feed `scripts/validate-paragraph.js` via the `partA:` and `compani
 - Load `AGENTS.md`, the applicable textbook or companion lane runbook, and the requested reviewer file. Use relevant `BUILD-PARAGRAPH.md` sections as the full reference; chapter work additionally uses `BUILD-CHAPTER.md`.
 - Use `lead-reviewer-agent.md` for substantive quality, specification fulfilment, specialist-review routing, and evidence completeness. Use `pr-readiness-reviewer-agent.md` only after the draft PR is remotely inspectable and lead review exists; it routes PR lifecycle state and must not replace missing lead or specialist review.
 - Inspect rendered output, not only source files. A clean source does not make generated HTML, opt-in DOCX, PPTX, or Part A PDF output clean.
-- Use `teacher-learning-quality-review-agent.md` when a task claims classroom readiness or learning quality. Visual polish, accessibility, and passing tests do not prove that students learn the intended concept or skill.
-- Use `student-experience-review-agent.md` when a task claims student readiness or student-facing usability. Teacher learning quality does not prove that a typical student can find the next action, understand the visual, or stay motivated.
+- For eligible routine Part A work, use the consolidated content-review route below for classroom readiness, learning quality, and student usability. Outside that exception, use `teacher-learning-quality-review-agent.md` for classroom readiness or learning-quality claims and `student-experience-review-agent.md` for student-readiness or usability claims. Visual polish, accessibility, and passing tests do not prove learning; teacher coverage alone does not prove student usability.
 - Distinguish canonical authority, content source, generated artifact, rendered experience, platform implementation, and quality record in the report.
 - Do not recommend hand edits in generated lesson output unless the team explicitly asks for a temporary patch. Prefer source, generator, CSS/JS, registry, or asset-builder fixes plus regeneration.
 - Record closure proof: regenerated artifact, rendered check, source diff or validator pass, and quality log entry as applicable.
+
+## Routine Part A content-review route
+
+Eligibility is limited to routine Part A paragraph/chapter content authoring or
+revision using existing approved teaching authority, production tools, and output
+contracts. Platform/generator changes, companion interaction work, protected-source
+or curriculum changes, and governance or review-policy changes are outside this
+exception. Mixed tasks retain the review required by their consequential changes.
+An explicit owner request or applicable specialist/human gate still applies.
+
+After author self-checks and applicable mechanical validation, assign
+`skills/econ-paragraph-review.md` to **one independent substantive content reviewer**,
+separate from every author whose content they review. Its didactic, precision,
+teacher, student, and final rendered-page coverage is mandatory. The same reviewer
+may handle a manageable chapter batch and its continuity/final assembly checks,
+but every paragraph retains identifiable findings and `X.Y.Z-review.md` plus its
+required quality record, plan, and handoff.
+
+Teacher, student-experience, visual, accessibility, and testing perspectives do not
+automatically require separate model instances for eligible work. The reviewer may
+consult those specialist protocols; executing a validator is not a model-based
+testing review. Add a reviewer for a concrete unresolved issue, a failed check
+needing specialist judgement, an explicit owner request, or an applicable
+specialist gate, recording the reason in the existing review report. A generic
+PASS without actual coverage is insufficient. Do not fabricate separate
+specialist approvals or relabel author self-checks as independent review.
+
+This is a content-review default, not a cap on PR reviewers. Required structural
+lead review, independent PR-readiness routing, current-head CI, human
+authorization, and authorized integration remain mandatory and independently
+staffed wherever current governance requires it. Release reviewers may consume
+the content report without unnecessarily repeating its checks. This exception
+cannot approve the governance change that introduces it.

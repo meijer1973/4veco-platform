@@ -401,17 +401,28 @@ Before any review, verify:
 
 ## A6: QC review (INDEPENDENT SUB-AGENT — MANDATORY)
 
-Run `econ-paragraph-review` via a separate sub-agent (not the builder):
+After author self-checks and applicable mechanical validation, run
+`econ-paragraph-review` via a separate sub-agent (not the builder). For eligible
+routine Part A under `agents/README.md`, this is one substantive content-review
+assignment covering teacher, student, didactic, precision, accessibility, and
+final rendered-page quality. Explicit specialist gates and ineligible/mixed tasks
+retain their required routes; release lead review and independent PR-readiness
+remain separate.
 
-> "You are a QC reviewer. You did NOT build this paragraph. Read `econ-paragraph-review`, then review the paragraph at [path]. Run Pass 0 (asset integrity), Pass 1 (didactic), Pass 2 (mathematical). Report all issues."
+> "You are a QC reviewer. You did NOT build this paragraph. Read `econ-paragraph-review`, then review the paragraph at [path]. Run Pass 0 (asset integrity), Pass 1 (didactic, teacher and student coverage), Pass 2 (mathematical), and Pass 3 (final rendered pages). Report all issues."
 
-Save output as `X.Y.Z-review.md`. Fix all FAIL items before proceeding.
+Save output as `X.Y.Z-review.md` with the required `## 2. Verdict` block. Fix all
+FAIL items and have the reviewer recheck affected material and dependencies
+before proceeding, widening for changed calculations/graphs/answers or pagination.
 
 The builder is **prohibited from** running this review itself.
 
 ## A7: Quality ref (INDEPENDENT SUB-AGENT — MANDATORY)
 
-Generate `X.Y.Z-quality-ref.yaml` via a separate sub-agent:
+Generate `X.Y.Z-quality-ref.yaml` via an agent independent of the author. For
+eligible routine Part A, the A6 content reviewer performs this in the same
+assignment using `econ-quality-control`; preserve all required schema fields and
+honest findings. Outside that exception, retain the separate quality-ref agent:
 
 > "Read `econ-quality-control`. Inventory all components that actually exist (check file existence). Run asset integrity checks. Generate quality_ref YAML. Be honest about gaps."
 
