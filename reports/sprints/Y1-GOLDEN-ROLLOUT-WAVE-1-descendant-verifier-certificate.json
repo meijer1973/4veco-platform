@@ -3,7 +3,7 @@
   "repair_id": "Y1-GOLDEN-ROLLOUT-WAVE-1-DESCENDANT-VERIFIER",
   "binding_model": "historical_capture_and_current_descendant_verification",
   "baseline_platform_sha": "96416b6b5bd57094576e9aba0a42d682584ec479",
-  "source_payload_sha": "aeae3cf08e2a423f88d35eee674119c8905089a8",
+  "source_payload_sha": "db9a2f8376c1ed2f97b2ca9213b9fb3e95ac4301",
   "historical_lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
   "initial_observation": {
     "lesson_sha": "57b31a1f4a3d2aa0da3945abbc5a7a0ee5d05e6a",
@@ -12,13 +12,13 @@
   "successor_sources": [
     {
       "path": "build-scripts/sprints/check-y1-golden-rollout-wave-1-current.js",
-      "blob_oid": "06decbb49399fe84bf3fd0e4e028e6cae23072d7",
-      "sha256": "5e4b4bf1ed44cdd4b50e767faef477dea74d667c47e3b7feba695e755bf4dabb"
+      "blob_oid": "9709193398d419dba707860316b193b2c06f19fe",
+      "sha256": "2bbde11a726c6bc5f5076deb190ce9c74e038403586de45533a68b19ba2b714b"
     },
     {
       "path": "build-scripts/sprints/check-y1-golden-rollout-wave-1-current.test.js",
-      "blob_oid": "c29e2ffbc4750b05c6b92e2ca00be2ad63d65cf3",
-      "sha256": "d095725643031d1d3448281a0c1063dfb9582a8c61e625e57bbd933bdd39e4e6"
+      "blob_oid": "d7f8af47b72b50ef0547f2f0d1527dc8b975c4d2",
+      "sha256": "d8cdedfdf1d261f40603e38cceeb1c60ff57ebe9e331441f528d377c748c2c97"
     },
     {
       "path": "build-scripts/sprints/write-y1-golden-rollout-wave-1-current-evidence.js",
@@ -34,8 +34,8 @@
     },
     {
       "path": ".github/workflows/platform-ci.yml",
-      "blob_oid": "0cb11da06c5e33c0af3ad773be13081d8425b868",
-      "sha256": "9521aed4d0d5ca10d3166fc28ab611942893f0484024c0a39916c0836824a8c4"
+      "blob_oid": "272ee7112e664162c2d38a8dce2f97c5d9794b9b",
+      "sha256": "292286b3bdd149a1b4a11e80814e8d222ee865d856b04b6ceb01f253f54275e8"
     },
     {
       "path": "package-lock.json",
