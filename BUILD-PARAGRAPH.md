@@ -58,8 +58,8 @@ It does not create a third lane and does not prove the complete product route.
 > **Before you start:** Read the strategic product vision at
 > `../4veco-lessen/specifications/product-vision.md`, the operational
 > product end-state specification at
-> `../4veco-lessen/specifications/product-end-state.md`, and the **Design
-> Principles** section in [AGENTS.md](AGENTS.md#design-principles). Paragraph
+> `../4veco-lessen/specifications/product-end-state.md`, and the
+> [Source integrity and learning quality](AGENTS.md#source-integrity-and-learning-quality) section. Paragraph
 > work should identify which product-vision pillar it supports. The product
 > north star is a visible route from current readiness to target-exercise
 > readiness. Two design principles govern every surface: **Dual Coding** (every

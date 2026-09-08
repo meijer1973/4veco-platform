@@ -147,3 +147,61 @@ A preliminary lane-scope invocation before the first commit failed because
 mistake, not an exemption; rerun the check on the actual committed payload.
 The record is stored in the existing `reports/review-gates/` evidence category
 so the lane checker can classify it without adding a new repository category.
+
+## Human review — navigation corrections (2026-09-08)
+
+The owner reviewed platform `52fcb080142e35c5d5c2f85fc588461aa1e926d1`
+and lessons `1979ad851b8ded035c2a3330e9983755b36fa29f`. Substantive
+scope and safeguards were accepted, with two navigation repairs required:
+
+1. Sibling checkout paths used as clickable links do not address sibling
+   repositories on GitHub. Preserve local checkout instructions, but replace
+   cross-repository link targets in both entry guides with explicit GitHub
+   `blob/main` URLs. Verify those URLs on GitHub and their corresponding local
+   paths. Same-repository links remain relative.
+2. The paragraph manual and chapter-builder skill still name the removed
+   Design Principles section. Update both to the current Source integrity and
+   learning quality heading and verify the actual target fragment.
+
+Correction plan: update these four documents; extend the existing paragraph
+navigation check with scoped cross-repository destination and heading-fragment
+validation; prove the old defects fail and the corrected routes pass; rerun
+affected checks; refresh indexes; publish fresh exact-head independent review,
+platform CI, bundle compatibility, and readiness evidence. The original quality
+floor and review gate remain unchanged. No student output is produced, and no
+broader skill or research-navigation cleanup is included. A false local/GitHub
+destination or a missing section blocks closure of this correction increment.
+
+The earlier file-existence check missed the fragment regression. The updated
+check must validate section targets rather than repeating that evidence gap.
+The GitHub link behavior is documented in
+[GitHub's relative-link and section-link guidance](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+
+Correction results before publication:
+
+- All 15 cross-repository hyperlinks (12 unique destinations) now use explicit
+  GitHub URLs. Direct HTTPS GET checks returned HTTP 200 with no redirects for
+  every destination; the corresponding adjacent-checkout paths exist.
+- Both incoming learning-quality references now link to the actual
+  `source-integrity-and-learning-quality` heading. The chapter-builder change
+  is limited to this reference.
+- The existing paragraph checker now audits platform entry links and both
+  incoming section links by default (13 surfaces). Its explicit
+  `--include-lesson-entry` mode audits the adjacent candidate guide too
+  (14 surfaces), and passed. Required platform CI deliberately uses lesson
+  `main`; the optional mode avoids making historical lesson links a new
+  dependency of platform-first integration. Fixture tests prove this boundary.
+- Regression tests reject both original sibling hyperlink directions, wrong
+  GitHub ownership, missing destinations, stale section fragments, and removal
+  of the skill's section link. They preserve inline-code local instructions
+  and resolve the nested skill link from its own directory. Anchor validation
+  covers the ATX headings and explicit anchors used by these scoped documents;
+  it is not a repository-wide Markdown parser or network crawler.
+- Both focused Jest suites passed: 58 tests. Active governance wording, active
+  scope language, evidence line endings, and whitespace checks also passed.
+- Independent document review passed with no changed gate, source boundary,
+  or teaching requirement. Final published-head review and remote evidence
+  will be recorded on the paired PRs after all commits and index refreshes.
+
+The owner's two navigation comments are addressed by these changes; they do
+not themselves authorize integration of a subsequently changed payload.

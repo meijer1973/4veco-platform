@@ -25,16 +25,20 @@ documents in the matching row before that activity; unrelated manuals are
 lookup references, not a universal startup sequence. If the task expands,
 load its additional route before doing the newly included work.
 
+For local work, linked lesson specifications live at
+`../4veco-lessen/specifications/` with the same filenames as their GitHub URLs.
+Cross-repository hyperlinks open GitHub `main`; use the adjacent checkout for local work.
+
 | Task | Starting documents and scope |
 |---|---|
 | Read-only investigation | Affected files and relevant tests; use repository search locally. Use [RESEARCH_AGENT_MAP.md](RESEARCH_AGENT_MAP.md) as a lookup when useful, and [AGENT_GITHUB_ENTRY.md](AGENT_GITHUB_ENTRY.md) for remote access/navigation. |
 | Routine code or documentation maintenance | Affected source and tests. For tooling ownership, consult [build-scripts/README.md](build-scripts/README.md). A small diff does not exempt protected, production, or governance work from its gates. |
-| Roadmap, sprint, architecture, reference system, or Scale Gate | Relevant roadmap, original requirements, prior reports, source and validators; [product vision](../4veco-lessen/specifications/product-vision.md) and [product end state](../4veco-lessen/specifications/product-end-state.md). Apply the planning/review requirements below. |
+| Roadmap, sprint, architecture, reference system, or Scale Gate | Relevant roadmap, original requirements, prior reports, source and validators; [product vision](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-vision.md) and [product end state](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-end-state.md). Apply the planning/review requirements below. |
 | Textbook paragraph / Part A | [Lane vocabulary](docs/workflows/paragraph-lane-vocabulary.md), then [textbook runbook](docs/workflows/textbook-paragraph-lane.md) and its task-specific contracts. |
-| Companion paragraph / Part B | [Lane vocabulary](docs/workflows/paragraph-lane-vocabulary.md), then [companion runbook](docs/workflows/web-companion-paragraph-lane.md), [companion specifications](../4veco-lessen/specifications/companion-core-specifications.md), and [companion artifact skill](skills/econ-companion-artifacts.md). |
+| Companion paragraph / Part B | [Lane vocabulary](docs/workflows/paragraph-lane-vocabulary.md), then [companion runbook](docs/workflows/web-companion-paragraph-lane.md), [companion specifications](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/companion-core-specifications.md), and [companion artifact skill](skills/econ-companion-artifacts.md). |
 | Chapter or book assembly | [BUILD-CHAPTER.md](BUILD-CHAPTER.md), the chapter plan, and its applicable assembler/validation instructions. |
 | Complete paragraph / cross-lane verification | [BUILD-PARAGRAPH.md](BUILD-PARAGRAPH.md) is the full reference; ordinary paragraph production starts with its lane runbook. |
-| Paragraph-build, companion, exit-ticket, exam-ingestion, or product-route work | [Product vision](../4veco-lessen/specifications/product-vision.md), [product end state](../4veco-lessen/specifications/product-end-state.md), and the applicable workflow/specification. |
+| Paragraph-build, companion, exit-ticket, exam-ingestion, or product-route work | [Product vision](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-vision.md), [product end state](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-end-state.md), and the applicable workflow/specification. |
 | Generated material or deployment | Applicable lane/skill plus [build-scripts/README.md](build-scripts/README.md). `scripts/deploy.js` writes its target; its automated layer alone is not full paragraph production. |
 | Review or human gate | Original requirements and evidence; [lead reviewer](agents/lead-reviewer-agent.md) and the relevant specialist protocol. Product gates also use the product specifications above. |
 | PR publication/readiness | [Throughput policy](docs/review/pr-throughput-policy.md), [readiness policy](docs/review/pr-readiness-routing-policy.md), and [independent readiness reviewer](agents/pr-readiness-reviewer-agent.md). |
