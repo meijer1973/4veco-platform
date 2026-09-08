@@ -25,3 +25,17 @@ full focused run was stopped when these source corrections became necessary;
 it is not counted as a passing test run. Full focused and exact-head validation
 must now run on the corrected payload. Round-2 review must independently close
 both findings; this disposition is not a self-issued review PASS.
+
+Round-2 structural review passed at `78527ac1`, and the complete local suite
+passed 111 suites / 1,927 tests (6 suites / 8 tests retained baseline skips).
+CI 34246429382 also passed Jest but failed the strict runtime checkout comparison
+for the successor verifier. CRLF retention is a hypothesis, not an observed byte
+diagnosis; isolated reset fixtures normalized LF successfully.
+
+Independent amendment review accepted extending the existing platform forced
+checkout to all tracked files. The full normalization step and its order after
+checkouts/before Y1 are now protected. A real isolated Git regression verifies LF
+text restoration and binary preservation. Runtime content changes, CRLF-only
+differences and missing files still fail; hash/CRLF diagnostics do not grant an
+exception. Historical blobs and lesson checkout policy remain unchanged. A new
+source payload/certificate and complete exact-head CI/review are required.

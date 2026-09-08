@@ -58,7 +58,7 @@ jobs:
         run: |
           git config --global core.autocrlf false
           git reset --hard
-          git -c core.autocrlf=false checkout-index -f -- reports/url-index.md
+          git -c core.autocrlf=false checkout-index -f --all
           git -C ../4veco-lessen reset --hard
 
       - name: Set up Node.js

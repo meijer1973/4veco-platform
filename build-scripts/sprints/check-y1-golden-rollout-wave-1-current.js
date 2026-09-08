@@ -107,18 +107,27 @@ function workflowContract(workflow) {
   const commands = Object.values(jobs).flatMap((item) => (item?.steps || []).flatMap((block) =>
     String(block?.run || '').match(/\bnpm(?:\.cmd)? run check:y1-golden-rollout-wave-1(?:-current)?(?=\s|$)/g) || []));
   check(commands.length === 1 && commands[0] === `npm run ${COMMAND}`, 'workflow must invoke exactly one current Y1 verifier');
+  const platformCheckout = step('Checkout platform repository');
+  const lessonCheckout = step('Checkout lessen repository');
+  const normalization = step('Normalize repository line endings');
+  const y1 = step('Validate Y1 Golden rollout wave');
+  check(steps.indexOf(normalization) > Math.max(steps.indexOf(platformCheckout), steps.indexOf(lessonCheckout))
+    && steps.indexOf(normalization) < steps.indexOf(y1), 'runtime normalization must follow checkouts and precede Y1 validation');
   return {
     top_level: topLevel,
     job_settings: jobSettings,
-    platform_checkout: step('Checkout platform repository'),
-    lesson_checkout: step('Checkout lessen repository'),
-    y1: step('Validate Y1 Golden rollout wave'),
+    platform_checkout: platformCheckout,
+    lesson_checkout: lessonCheckout,
+    runtime_normalization: normalization,
+    y1,
   };
 }
 
 function expectedWiring() {
   const original = bytes(BASELINE, WIRING_PATHS[1]).content.toString('utf8');
-  return workflowContract(original.replace('npm run check:y1-golden-rollout-wave-1 --', `npm run ${COMMAND} --`));
+  return workflowContract(original
+    .replace('npm run check:y1-golden-rollout-wave-1 --', `npm run ${COMMAND} --`)
+    .replace('checkout-index -f -- reports/url-index.md', 'checkout-index -f --all'));
 }
 
 function validateWiring(packageText, workflowText, lockText = fs.readFileSync(path.join(ROOT, 'package-lock.json'), 'utf8')) {
@@ -201,8 +210,12 @@ function validateCertificate(record, currentRef) {
 function verifyRuntimeCheckout(record, head) {
   for (const relativePath of [...SOURCE_PATHS, ...WIRING_PATHS, ...historicalPaths(), CERTIFICATE]) {
     const local = path.join(ROOT, relativePath);
-    check(fs.existsSync(local) && digest(fs.readFileSync(local)) === bytes(head, relativePath).sha256,
-      `runtime checkout differs from committed head: ${relativePath}`);
+    check(fs.existsSync(local), `runtime checkout file missing: ${relativePath}`);
+    const actual = fs.readFileSync(local);
+    const expected = bytes(head, relativePath);
+    const actualHash = digest(actual);
+    check(actualHash === expected.sha256,
+      `runtime checkout differs from committed head: ${relativePath}; expected_sha256=${expected.sha256}; actual_sha256=${actualHash}; matches_lf_to_crlf_conversion=${actual.equals(Buffer.from(expected.content.toString('utf8').replace(/\n/g, '\r\n')))}`);
   }
   check(JSON.stringify(JSON.parse(fs.readFileSync(path.join(ROOT, CERTIFICATE), 'utf8'))) === JSON.stringify(record), 'runtime certificate differs');
 }
@@ -254,4 +267,4 @@ if (require.main === module) {
 
 module.exports = { BASELINE, SNAPSHOT, CERTIFICATE, SOURCE_PATHS, WIRING_PATHS, ROOT, LESSON_ROOT,
   buildCertificate, validateCertificate, validateLesson, validateWiring, workflowContract,
-  historicalPaths, parseArgs, run };
+  historicalPaths, verifyRuntimeCheckout, parseArgs, run };

@@ -27,3 +27,11 @@ are rejected.
 The reviewer authorized proceeding within the amended implementation scope.
 This is a planning verdict only. Implementation review, complete current-pair CI,
 independent readiness and explicit owner payload authorization remain required.
+
+Normalization amendment: **PASS** by `entry_rule_review`. Extend the existing
+platform `checkout-index` operation to all tracked files before validation,
+protect its full semantic content and ordering, and retain strict runtime byte
+acceptance. Test forced LF restoration and binary preservation; treat the cause
+of CI's byte mismatch as unconfirmed until evidence establishes it. Diagnostics
+must not accept CRLF-only equivalence. New source sealing and exact-head review
+and CI remain mandatory.

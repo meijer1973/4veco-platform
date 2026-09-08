@@ -125,6 +125,16 @@ describe('active Y1 workflow wiring', () => {
     ['late ignored job errors', (text) => `${text}\n    continue-on-error: true\n`],
     ['workflow permission escalation', (text) => text.replace('  contents: read', '  contents: write')],
     ['lesson checkout substitution', (text) => text.replace('          path: 4veco-lessen', '          ref: stale\n          path: 4veco-lessen')],
+    ['partial runtime normalization', (text) => text.replace('checkout-index -f --all', 'checkout-index -f -- reports/url-index.md')],
+    ['skipped runtime normalization', (text) => text.replace('      - name: Normalize repository line endings', '      - name: Normalize repository line endings\n        if: false')],
+    ['late runtime normalization', (text) => {
+      const block = text.match(/      - name: Normalize repository line endings[\s\S]*?(?=      - name:)/)[0];
+      return text.replace(block, '').replace('      - name: Validate report JSON', `${block}      - name: Validate report JSON`);
+    }],
+    ['runtime normalization before checkout', (text) => {
+      const block = text.match(/      - name: Normalize repository line endings[\s\S]*?(?=      - name:)/)[0];
+      return text.replace(block, '').replace('      - name: Checkout platform repository', `${block}      - name: Checkout platform repository`);
+    }],
     ['duplicate job', (text) => `${text}\n  validate-platform:\n    steps: []\n`],
     ['quoted duplicate job', (text) => `${text}\n  "validate-platform":\n    steps: []\n`],
     ['unresolved YAML alias', (text) => text.replace('jobs:', 'jobs:\n  <<: *other')],
@@ -156,6 +166,55 @@ describe('active Y1 workflow wiring', () => {
     const duplicate = workflow().replace('      - name: Validate report JSON',
       '      - name: Checkout lessen repository\n        run: echo duplicate\n\n      - name: Validate report JSON');
     expect(() => verifier.validateWiring(packageText(), duplicate)).toThrow(/step missing or duplicated/);
+  });
+});
+
+describe('runtime checkout byte integrity', () => {
+  test('forced LF checkout restores text and preserves committed binary bytes', () => {
+    const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'y1-runtime-checkout-'));
+    const text = Buffer.from('first\nsecond\n');
+    const binary = Buffer.from([0, 10, 13, 10, 255, 1]);
+    try {
+      git(['init', '--quiet'], temp);
+      git(['config', 'core.autocrlf', 'true'], temp);
+      fs.writeFileSync(path.join(temp, 'source.js'), text);
+      fs.writeFileSync(path.join(temp, 'capture.png'), binary);
+      git(['-c', 'core.autocrlf=false', 'add', '.'], temp);
+      git(['-c', 'user.name=Y1 test', '-c', 'user.email=test@example.com', 'commit', '--quiet', '-m', 'fixture'], temp);
+      fs.unlinkSync(path.join(temp, 'source.js'));
+      fs.unlinkSync(path.join(temp, 'capture.png'));
+      git(['checkout-index', '-f', '--all'], temp);
+      expect(fs.readFileSync(path.join(temp, 'source.js'), 'utf8')).toBe('first\r\nsecond\r\n');
+      // Execute the committed workflow's explicit normalization command. No
+      // global configuration or owned worktree files are changed by this test.
+      const command = verifier.workflowContract(read('.github/workflows/platform-ci.yml'))
+        .runtime_normalization.run.split('\n').find((line) => line.includes('checkout-index'));
+      git(command.trim().split(/\s+/).slice(1), temp);
+      expect(fs.readFileSync(path.join(temp, 'source.js'))).toEqual(text);
+      expect(fs.readFileSync(path.join(temp, 'capture.png'))).toEqual(binary);
+    } finally { fs.rmSync(temp, { recursive: true, force: true }); }
+  });
+
+  test.each(['content', 'CRLF'])('rejects %s runtime drift with diagnostic hashes', (kind) => {
+    const head = git(['rev-parse', 'HEAD']);
+    const file = verifier.SOURCE_PATHS[0];
+    const original = fs.readFileSync;
+    const committed = historical.gitShow(head, file, root);
+    const replacement = Buffer.from(kind === 'CRLF' ? committed.replace(/\n/g, '\r\n') : 'changed\n');
+    const spy = jest.spyOn(fs, 'readFileSync').mockImplementation((target, ...args) =>
+      target === path.join(root, file) ? replacement : original(target, ...args));
+    try {
+      expect(() => verifier.verifyRuntimeCheckout({}, head)).toThrow(new RegExp(
+        `runtime checkout differs.*expected_sha256=[a-f0-9]{64}; actual_sha256=[a-f0-9]{64}; matches_lf_to_crlf_conversion=${kind === 'CRLF'}`));
+    } finally { spy.mockRestore(); }
+  });
+
+  test('rejects a missing runtime source', () => {
+    const original = fs.existsSync;
+    const file = path.join(root, verifier.SOURCE_PATHS[0]);
+    const spy = jest.spyOn(fs, 'existsSync').mockImplementation((target) => target === file ? false : original(target));
+    try { expect(() => verifier.verifyRuntimeCheckout({}, git(['rev-parse', 'HEAD']))).toThrow(/runtime checkout file missing/); }
+    finally { spy.mockRestore(); }
   });
 });
 

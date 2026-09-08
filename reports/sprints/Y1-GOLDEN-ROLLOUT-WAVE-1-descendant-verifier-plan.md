@@ -71,7 +71,9 @@ capture and review. Broader renewal generalization is named follow-up work.
 - `package.json`, limited to the additive current-verifier command and an
   explicit exact js-yaml 3.14.2 development dependency already present in the lock.
 - `package-lock.json`, limited to recording that direct parser dependency.
-- `.github/workflows/platform-ci.yml`, limited to selecting that command.
+- `.github/workflows/platform-ci.yml`, limited to selecting that command and
+  extending the existing post-checkout LF normalization from the URL index to
+  all tracked platform files before any runtime validation.
 - `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-descendant-verifier-certificate.json`
 - `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-descendant-verifier-*.md`, limited to
   plan, planning review, execution log/result, and structural review records.
@@ -222,3 +224,14 @@ PR stays open until a separately authorized prerequisite restores full CI.
   review accepted the bounded parser/lock amendment and certificate relocation
   into the recognized review-evidence folder. Add semantic YAML regressions and
   regenerate the source certificate after committing the corrections.
+- Exact-head CI run 34246429382 passed the complete Jest suite but rejected the
+  runtime checkout of the new verifier. CRLF retention is an unconfirmed cause;
+  isolated reset fixtures did rewrite LF. The bounded repair
+  changes the existing platform `checkout-index` normalization to `--all`,
+  retains exact runtime SHA-256 comparisons, and protects the normalization step
+  and its order after checkouts/before Y1 in the semantic workflow contract.
+  An isolated Git regression must prove LF restoration and binary preservation, and
+  retain failure coverage for runtime content drift. No historical blob or
+  lesson checkout policy changes. Independent amendment review by
+  `entry_rule_review` returned PASS with these qualifications before source
+  implementation. Corrected source, certificate, exact-head CI and review follow.
