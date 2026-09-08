@@ -70,6 +70,9 @@ function buildBody(branch) {
   lines.push('## Repo Operating Rules');
   lines.push('');
   lines.push(`- ${platform('AGENTS.md')}`);
+  lines.push(`- ${platform('docs/workflows/task-planning-and-review.md')}`);
+  lines.push(`- ${platform('docs/workflows/platform-and-companion-reference.md')}`);
+  lines.push(`- ${platform('docs/review/agent-publication-workflow.md')}`);
   lines.push(`- ${platform('BUILD-PARAGRAPH.md')}`);
   lines.push(`- ${platform('BUILD-CHAPTER.md')}`);
   lines.push(`- ${platform('docs/workflows/paragraph-lane-vocabulary.md')}`);
