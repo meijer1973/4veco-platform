@@ -5,6 +5,7 @@
  * certificate, full current-pair validation and independent L4 review.
  */
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 const crypto = require('crypto');
 const { spawnSync } = require('child_process');
@@ -22,8 +23,9 @@ const SOURCE_PATHS = [
   'build-scripts/sprints/check-y1-golden-rollout-wave-1-current.js',
   'build-scripts/sprints/check-y1-golden-rollout-wave-1-current.test.js',
   'build-scripts/sprints/write-y1-golden-rollout-wave-1-current-evidence.js',
+  'build-scripts/sprints/inspect-y1-runtime-checkout.js',
 ];
-const WIRING_PATHS = ['package.json', '.github/workflows/platform-ci.yml', 'package-lock.json'];
+const WIRING_PATHS = ['package.json', '.github/workflows/platform-ci.yml', 'package-lock.json', '.gitattributes'];
 const YAML_VERSION = '3.14.2';
 const check = (ok, message) => { if (!ok) throw new Error(message); };
 const digest = (bytes) => crypto.createHash('sha256').update(bytes).digest('hex');
@@ -88,6 +90,48 @@ function canonical(value) {
 }
 const same = (left, right) => JSON.stringify(canonical(left)) === JSON.stringify(canonical(right));
 
+function runtimePaths() {
+  return [...SOURCE_PATHS, ...WIRING_PATHS, ...historicalPaths(), CERTIFICATE];
+}
+
+function runtimeTextPaths() {
+  return runtimePaths().filter((relativePath) => !relativePath.endsWith('.png'));
+}
+
+// --source alone still reads external info/global attributes. Use only the
+// committed tree and its object database in a disposable, empty Git context.
+function validateRuntimeAttributes(ref, repoRoot = ROOT) {
+  const source = resolve(ref, repoRoot);
+  const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'y1-committed-attrs-'));
+  check(path.dirname(path.resolve(temp)) === path.resolve(os.tmpdir())
+    && path.basename(temp).startsWith('y1-committed-attrs-'), 'unexpected temporary attribute directory');
+  try {
+    const empty = path.join(temp, 'empty');
+    fs.writeFileSync(empty, '');
+    const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => !/^GIT_/i.test(key)));
+    Object.assign(env, { GIT_CONFIG_NOSYSTEM: '1', GIT_CONFIG_GLOBAL: empty, GIT_ATTR_NOSYSTEM: '1' });
+    const bare = path.join(temp, 'objects.git');
+    function isolated(args) {
+      const result = spawnSync('git', args, { cwd: temp, env, encoding: 'utf8', maxBuffer: 4 * 1024 * 1024 });
+      check(result.status === 0, `committed attribute verification failed: ${result.stderr || ''}`);
+      return result.stdout;
+    }
+    isolated(['init', '--quiet', '--bare', '--template=', bare]);
+    const objects = git(['rev-parse', '--path-format=absolute', '--git-path', 'objects'], repoRoot);
+    fs.writeFileSync(path.join(bare, 'objects/info/alternates'), `${objects.replace(/\\/g, '/')}\n`);
+    const paths = runtimeTextPaths();
+    const output = isolated(['--git-dir', bare, '-c', `core.attributesFile=${empty}`,
+      'check-attr', `--source=${source}`, '-z', 'text', 'eol', '--', ...paths]).split('\0');
+    check(output.length === paths.length * 6 + 1, 'incomplete committed attribute inventory');
+    for (let index = 0; index < output.length - 1; index += 3) {
+      const [relativePath, attribute, value] = output.slice(index, index + 3);
+      check(value === (attribute === 'text' ? 'set' : 'lf'),
+        `committed runtime LF attribute missing or overridden: ${relativePath} ${attribute}=${value}`);
+    }
+    return { source_commit: source, text_path_count: paths.length };
+  } finally { fs.rmSync(temp, { recursive: true, force: true }); }
+}
+
 // Parse the complete document so key ordering cannot hide job conditions and
 // duplicate YAML keys cannot silently replace the protected job or invocation.
 function workflowContract(workflow) {
@@ -107,18 +151,29 @@ function workflowContract(workflow) {
   const commands = Object.values(jobs).flatMap((item) => (item?.steps || []).flatMap((block) =>
     String(block?.run || '').match(/\bnpm(?:\.cmd)? run check:y1-golden-rollout-wave-1(?:-current)?(?=\s|$)/g) || []));
   check(commands.length === 1 && commands[0] === `npm run ${COMMAND}`, 'workflow must invoke exactly one current Y1 verifier');
+  const earlyCommands = Object.values(jobs).flatMap((item) => (item?.steps || []).flatMap((block) =>
+    String(block?.run || '').match(/\bnode build-scripts\/sprints\/inspect-y1-runtime-checkout\.js(?=\s|$)/g) || []));
+  check(earlyCommands.length === 1, 'workflow must invoke exactly one early runtime check');
   const platformCheckout = step('Checkout platform repository');
   const lessonCheckout = step('Checkout lessen repository');
   const normalization = step('Normalize repository line endings');
+  const nodeSetup = step('Set up Node.js');
+  const earlyCheck = step('Verify Y1 runtime checkout bytes');
   const y1 = step('Validate Y1 Golden rollout wave');
   check(steps.indexOf(normalization) > Math.max(steps.indexOf(platformCheckout), steps.indexOf(lessonCheckout))
     && steps.indexOf(normalization) < steps.indexOf(y1), 'runtime normalization must follow checkouts and precede Y1 validation');
+  check(steps.indexOf(nodeSetup) > steps.indexOf(normalization)
+    && steps.indexOf(earlyCheck) === steps.indexOf(nodeSetup) + 1
+    && steps.indexOf(earlyCheck) < steps.indexOf(y1), 'early runtime check must immediately follow Node setup and precede Y1');
   return {
     top_level: topLevel,
     job_settings: jobSettings,
     platform_checkout: platformCheckout,
     lesson_checkout: lessonCheckout,
     runtime_normalization: normalization,
+    node_setup: nodeSetup,
+    early_runtime_check: earlyCheck,
+    initial_steps: steps.slice(0, steps.indexOf(earlyCheck) + 1),
     y1,
   };
 }
@@ -127,7 +182,8 @@ function expectedWiring() {
   const original = bytes(BASELINE, WIRING_PATHS[1]).content.toString('utf8');
   return workflowContract(original
     .replace('npm run check:y1-golden-rollout-wave-1 --', `npm run ${COMMAND} --`)
-    .replace('checkout-index -f -- reports/url-index.md', 'checkout-index -f --all'));
+    .replace('checkout-index -f -- reports/url-index.md', 'checkout-index -f --all')
+    .replace('      - name: Set up Python', `      - name: Verify Y1 runtime checkout bytes\n        run: node ${SOURCE_PATHS[3]}\n\n      - name: Set up Python`));
 }
 
 function validateWiring(packageText, workflowText, lockText = fs.readFileSync(path.join(ROOT, 'package-lock.json'), 'utf8')) {
@@ -179,6 +235,7 @@ function buildCertificate(sourceRef, initialLessonRef) {
       `historical artifact changed: ${relativePath}`);
   }
   validateWiring(...WIRING_PATHS.map((relativePath) => bytes(source, relativePath).content.toString('utf8')));
+  validateRuntimeAttributes(source);
   return {
     schema_version: 1, repair_id: REPAIR_ID,
     binding_model: 'historical_capture_and_current_descendant_verification',
@@ -204,11 +261,12 @@ function validateCertificate(record, currentRef) {
     check(JSON.stringify(binding(current, item.path)) === JSON.stringify(item), `bound current artifact changed: ${item.path}`);
   }
   validateWiring(...WIRING_PATHS.map((relativePath) => bytes(current, relativePath).content.toString('utf8')));
+  validateRuntimeAttributes(current);
   return { source_payload_sha: source, current_platform_sha: current };
 }
 
 function verifyRuntimeCheckout(record, head) {
-  for (const relativePath of [...SOURCE_PATHS, ...WIRING_PATHS, ...historicalPaths(), CERTIFICATE]) {
+  for (const relativePath of runtimePaths()) {
     const local = path.join(ROOT, relativePath);
     check(fs.existsSync(local), `runtime checkout file missing: ${relativePath}`);
     const actual = fs.readFileSync(local);
@@ -267,4 +325,4 @@ if (require.main === module) {
 
 module.exports = { BASELINE, SNAPSHOT, CERTIFICATE, SOURCE_PATHS, WIRING_PATHS, ROOT, LESSON_ROOT,
   buildCertificate, validateCertificate, validateLesson, validateWiring, workflowContract,
-  historicalPaths, verifyRuntimeCheckout, parseArgs, run };
+  historicalPaths, runtimePaths, runtimeTextPaths, validateRuntimeAttributes, verifyRuntimeCheckout, parseArgs, run };

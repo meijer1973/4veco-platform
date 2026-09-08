@@ -68,12 +68,16 @@ capture and review. Broader renewal generalization is named follow-up work.
 - `build-scripts/sprints/check-y1-golden-rollout-wave-1-current.js`
 - `build-scripts/sprints/check-y1-golden-rollout-wave-1-current.test.js`
 - `build-scripts/sprints/write-y1-golden-rollout-wave-1-current-evidence.js`
+- `build-scripts/sprints/inspect-y1-runtime-checkout.js`, limited to an early
+  read-only checkout-byte diagnostic using Node builtins.
+- `.gitattributes`, limited to exact LF rules for the finite bound text inventory.
 - `package.json`, limited to the additive current-verifier command and an
   explicit exact js-yaml 3.14.2 development dependency already present in the lock.
 - `package-lock.json`, limited to recording that direct parser dependency.
 - `.github/workflows/platform-ci.yml`, limited to selecting that command and
   extending the existing post-checkout LF normalization from the URL index to
-  all tracked platform files before any runtime validation.
+  all tracked platform files before any runtime validation, plus a protected
+  read-only byte checkpoint after Node setup and before Python/dependencies/tests.
 - `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-descendant-verifier-certificate.json`
 - `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-descendant-verifier-*.md`, limited to
   plan, planning review, execution log/result, and structural review records.
@@ -110,12 +114,13 @@ The successor certificate records schema/version and purpose, baseline Platform
 `96416b6b...`, source payload P, historical lesson snapshot f09fd6e, initial
 observed lesson57b31a1f, and an exact source inventory. Each source entry contains
 path, binding mode, Git blob OID and SHA-256 read from P. The inventory consists
-of the new verifier, its tests/writer, package.json, package-lock.json and platform-ci.yml. A
+of the new verifier, its tests/writer/early inspector, package.json, package-lock.json,
+platform-ci.yml and .gitattributes. A
 separate exact historical inventory binds the old verifier/tests/policy,
 source manifest, renewal/capture/visual records, delta/wave/packet/result, and
 the original Scale Proof inputs at the baseline, with Git OIDs and SHA-256.
 
-Historical files must stay byte-identical. The three successor-owned code files
+Historical files must stay byte-identical. The four successor-owned code files
 must stay byte-identical from P to actual current Platform H. Package/workflow
 full hashes at P prove reviewed provenance; current checks enforce the precise
 owned Y1 mapping, single mandatory invocation, event/lesson refs and protected
@@ -235,3 +240,26 @@ PR stays open until a separately authorized prerequisite restores full CI.
   lesson checkout policy changes. Independent amendment review by
   `entry_rule_review` returned PASS with these qualifications before source
   implementation. Corrected source, certificate, exact-head CI and review follow.
+- CI 34249630523 again passed Jest but confirmed CRLF-only runtime drift. The
+  reviewer reproduced an aged, stat-clean index retaining CRLF through both reset
+  and forced checkout; Git skips unchanged entries before applying force. Add
+  exact checkout-time LF attributes for the finite bound text inventory while
+  preserving all historical Git blobs. The diagnostic becomes a fourth bound
+  source file; `.gitattributes` becomes a fourth wiring-provenance file and is
+  included in strict runtime byte checks. Current semantics require text=set and
+  eol=lf for the bound text paths while permitting unrelated attribute additions.
+  Validate committed attributes in a disposable bare Git context with no
+  templates, empty global/system configuration, disabled system attributes,
+  an empty attributes file and object alternates to the resolved repository
+  object directory. This prevents uncommitted info/global rules from supplying
+  missing committed authority. Test that masking rejection, aged-index retention,
+  fresh checkout under autocrlf=true, attribute drift and unrelated additions.
+  The early checkpoint records actual effective configuration/EOL state and raw
+  committed/runtime hashes without rewriting files; the final strict guard
+  remains mandatory. Renew source sealing and exact-head tests/CI/review.
+- Independent amendment review passed after requiring hermetic committed-attribute
+  evaluation and the external-rule masking regression. Child Git removes all
+  inherited GIT_* variables before setting its isolated context; the generated
+  absolute temporary path is checked before recursive cleanup. The early
+  inspector runs immediately after Node setup, with exact command and unique
+  execution protected by the workflow contract.

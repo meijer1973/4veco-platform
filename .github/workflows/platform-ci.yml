@@ -68,6 +68,9 @@ jobs:
           cache: npm
           cache-dependency-path: 4veco-platform/package-lock.json
 
+      - name: Verify Y1 runtime checkout bytes
+        run: node build-scripts/sprints/inspect-y1-runtime-checkout.js
+
       - name: Set up Python
         uses: actions/setup-python@v6
         with:

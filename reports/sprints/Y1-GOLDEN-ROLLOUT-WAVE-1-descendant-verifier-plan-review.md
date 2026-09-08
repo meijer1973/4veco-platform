@@ -35,3 +35,15 @@ acceptance. Test forced LF restoration and binary preservation; treat the cause
 of CI's byte mismatch as unconfirmed until evidence establishes it. Diagnostics
 must not accept CRLF-only equivalence. New source sealing and exact-head review
 and CI remain mandatory.
+
+Checkout-attribute amendment: **PASS** by `entry_rule_review` after one correction.
+The reviewer reproduced CRLF retention in an aged, stat-clean index through both
+reset and forced checkout. Add finite exact LF attributes, bind their reviewed
+provenance, and check their committed semantics in an isolated object-backed Git
+context. `check-attr --source` alone is insufficient because uncommitted info or
+global attributes can mask missing committed rules; independent reproduction
+confirmed this gap. Empty external configuration, no templates, a clean child
+environment, verified temporary cleanup and masking regressions close it.
+The source-bound builtin-only early inspector and protected execution immediately
+after Node setup are approved. Strict final byte checks and historical blobs
+remain unchanged. New source sealing, full CI and implementation review follow.

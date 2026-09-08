@@ -126,6 +126,12 @@ describe('active Y1 workflow wiring', () => {
     ['workflow permission escalation', (text) => text.replace('  contents: read', '  contents: write')],
     ['lesson checkout substitution', (text) => text.replace('          path: 4veco-lessen', '          ref: stale\n          path: 4veco-lessen')],
     ['partial runtime normalization', (text) => text.replace('checkout-index -f --all', 'checkout-index -f -- reports/url-index.md')],
+    ['skipped early byte check', (text) => text.replace('      - name: Verify Y1 runtime checkout bytes', '      - name: Verify Y1 runtime checkout bytes\n        if: false')],
+    ['duplicate early byte check', (text) => text.replace('      - name: Validate report JSON', '      - name: Duplicate early check\n        run: node build-scripts/sprints/inspect-y1-runtime-checkout.js\n\n      - name: Validate report JSON')],
+    ['late early byte check', (text) => {
+      const block = text.match(/      - name: Verify Y1 runtime checkout bytes[\s\S]*?(?=      - name:)/)[0];
+      return text.replace(block, '').replace('      - name: Validate report JSON', `${block}      - name: Validate report JSON`);
+    }],
     ['skipped runtime normalization', (text) => text.replace('      - name: Normalize repository line endings', '      - name: Normalize repository line endings\n        if: false')],
     ['late runtime normalization', (text) => {
       const block = text.match(/      - name: Normalize repository line endings[\s\S]*?(?=      - name:)/)[0];
@@ -170,7 +176,7 @@ describe('active Y1 workflow wiring', () => {
 });
 
 describe('runtime checkout byte integrity', () => {
-  test('forced LF checkout restores text and preserves committed binary bytes', () => {
+  test('aged stat-clean CRLF survives forced checkout, while binaries stay intact', () => {
     const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'y1-runtime-checkout-'));
     const text = Buffer.from('first\nsecond\n');
     const binary = Buffer.from([0, 10, 13, 10, 255, 1]);
@@ -183,15 +189,45 @@ describe('runtime checkout byte integrity', () => {
       git(['-c', 'user.name=Y1 test', '-c', 'user.email=test@example.com', 'commit', '--quiet', '-m', 'fixture'], temp);
       fs.unlinkSync(path.join(temp, 'source.js'));
       fs.unlinkSync(path.join(temp, 'capture.png'));
-      git(['checkout-index', '-f', '--all'], temp);
+      git(['checkout-index', '-f', '-u', '--all'], temp);
       expect(fs.readFileSync(path.join(temp, 'source.js'), 'utf8')).toBe('first\r\nsecond\r\n');
+      const aged = new Date(Date.now() - 10000);
+      fs.utimesSync(path.join(temp, 'source.js'), aged, aged);
+      git(['update-index', '--refresh'], temp);
+      git(['-c', 'core.autocrlf=false', 'reset', '--hard'], temp);
       // Execute the committed workflow's explicit normalization command. No
       // global configuration or owned worktree files are changed by this test.
       const command = verifier.workflowContract(read('.github/workflows/platform-ci.yml'))
         .runtime_normalization.run.split('\n').find((line) => line.includes('checkout-index'));
       git(command.trim().split(/\s+/).slice(1), temp);
-      expect(fs.readFileSync(path.join(temp, 'source.js'))).toEqual(text);
+      expect(fs.readFileSync(path.join(temp, 'source.js'), 'utf8')).toBe('first\r\nsecond\r\n');
       expect(fs.readFileSync(path.join(temp, 'capture.png'))).toEqual(binary);
+    } finally { fs.rmSync(temp, { recursive: true, force: true }); }
+  });
+
+  test('fresh autocrlf checkout keeps the entire bound text inventory LF and binary bytes unchanged', () => {
+    const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'y1-runtime-fresh-'));
+    const source = path.join(temp, 'source');
+    const checkout = path.join(temp, 'checkout');
+    fs.mkdirSync(source);
+    const attributes = read('.gitattributes');
+    const text = Buffer.from('committed\ntext\n');
+    const binary = Buffer.from([0, 13, 10, 255]);
+    const binaryPath = verifier.runtimePaths().find((file) => file.endsWith('.png'));
+    try {
+      git(['init', '--quiet'], source);
+      for (const file of [...verifier.runtimeTextPaths(), binaryPath]) {
+        const target = path.join(source, file);
+        fs.mkdirSync(path.dirname(target), { recursive: true });
+        fs.writeFileSync(target, file === '.gitattributes' ? attributes : file === binaryPath ? binary : text);
+      }
+      git(['-c', 'core.autocrlf=false', 'add', '.'], source);
+      git(['-c', 'user.name=Y1 test', '-c', 'user.email=test@example.com', 'commit', '--quiet', '-m', 'fixture'], source);
+      git(['-c', 'core.autocrlf=true', 'clone', '--quiet', '--no-hardlinks', source, checkout], temp);
+      for (const file of verifier.runtimeTextPaths()) {
+        expect(fs.readFileSync(path.join(checkout, file))).toEqual(file === '.gitattributes' ? Buffer.from(attributes) : text);
+      }
+      expect(fs.readFileSync(path.join(checkout, binaryPath))).toEqual(binary);
     } finally { fs.rmSync(temp, { recursive: true, force: true }); }
   });
 
@@ -215,6 +251,48 @@ describe('runtime checkout byte integrity', () => {
     const spy = jest.spyOn(fs, 'existsSync').mockImplementation((target) => target === file ? false : original(target));
     try { expect(() => verifier.verifyRuntimeCheckout({}, git(['rev-parse', 'HEAD']))).toThrow(/runtime checkout file missing/); }
     finally { spy.mockRestore(); }
+  });
+});
+
+describe('committed LF attribute authority', () => {
+  const target = verifier.SOURCE_PATHS[0];
+  const line = `${target} text eol=lf\n`;
+  test('requires committed LF attributes and permits unrelated additions', () => {
+    const base = git(['rev-parse', 'HEAD']);
+    const current = synthetic(base, { '.gitattributes': read('.gitattributes') });
+    expect(verifier.validateRuntimeAttributes(current).text_path_count).toBe(verifier.runtimeTextPaths().length);
+    const unrelated = synthetic(current, { '.gitattributes': `${read('.gitattributes')}docs/unrelated.md text eol=crlf\n` });
+    expect(() => verifier.validateRuntimeAttributes(unrelated)).not.toThrow();
+  });
+
+  test.each(['missing', 'overridden'])('rejects %s committed LF rule', (kind) => {
+    const attributes = kind === 'missing' ? read('.gitattributes').replace(line, '') : `${read('.gitattributes')}${target} text eol=crlf\n`;
+    const source = synthetic(git(['rev-parse', 'HEAD']), { '.gitattributes': attributes });
+    expect(() => verifier.validateRuntimeAttributes(source)).toThrow(/committed runtime LF attribute missing or overridden/);
+  });
+
+  test.each(['info', 'global'])('external %s LF rules cannot rescue missing committed authority', (kind) => {
+    const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'y1-external-attrs-'));
+    const oldGlobal = process.env.GIT_CONFIG_GLOBAL;
+    try {
+      git(['init', '--quiet'], temp);
+      fs.writeFileSync(path.join(temp, '.gitattributes'), read('.gitattributes').replace(line, ''));
+      git(['-c', 'core.autocrlf=false', 'add', '.gitattributes'], temp);
+      git(['-c', 'user.name=Y1 test', '-c', 'user.email=test@example.com', 'commit', '--quiet', '-m', 'fixture'], temp);
+      const attributesFile = path.join(temp, kind === 'info' ? '.git/info/attributes' : 'external-attributes');
+      fs.writeFileSync(attributesFile, '* text eol=lf\n');
+      if (kind === 'global') {
+        const config = path.join(temp, 'external-config');
+        git(['config', '--file', config, 'core.attributesFile', attributesFile], temp);
+        process.env.GIT_CONFIG_GLOBAL = config;
+      }
+      expect(git(['check-attr', '--source=HEAD', 'text', 'eol', '--', target], temp)).toContain('eol: lf');
+      expect(() => verifier.validateRuntimeAttributes('HEAD', temp)).toThrow(/committed runtime LF attribute missing or overridden/);
+    } finally {
+      if (oldGlobal === undefined) delete process.env.GIT_CONFIG_GLOBAL;
+      else process.env.GIT_CONFIG_GLOBAL = oldGlobal;
+      fs.rmSync(temp, { recursive: true, force: true });
+    }
   });
 });
 
@@ -261,7 +339,7 @@ describe('stable successor source certificate', () => {
   });
 
   test.each([
-    verifier.SOURCE_PATHS[0], verifier.SOURCE_PATHS[1], verifier.SOURCE_PATHS[2],
+    ...verifier.SOURCE_PATHS,
     historical.PATHS.sourceManifest, historical.PATHS.renderedRenewal, historical.PATHS.deltaProof,
   ])('rejects drift in bound file %s', (file) => {
     const head = synthetic(source, { [file]: 'changed\n' });
