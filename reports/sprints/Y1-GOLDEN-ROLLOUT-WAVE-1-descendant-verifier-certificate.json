@@ -1,0 +1,453 @@
+{
+  "schema_version": 1,
+  "repair_id": "Y1-GOLDEN-ROLLOUT-WAVE-1-DESCENDANT-VERIFIER",
+  "binding_model": "historical_capture_and_current_descendant_verification",
+  "baseline_platform_sha": "96416b6b5bd57094576e9aba0a42d682584ec479",
+  "source_payload_sha": "aeae3cf08e2a423f88d35eee674119c8905089a8",
+  "historical_lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+  "initial_observation": {
+    "lesson_sha": "57b31a1f4a3d2aa0da3945abbc5a7a0ee5d05e6a",
+    "informational_only": true
+  },
+  "successor_sources": [
+    {
+      "path": "build-scripts/sprints/check-y1-golden-rollout-wave-1-current.js",
+      "blob_oid": "06decbb49399fe84bf3fd0e4e028e6cae23072d7",
+      "sha256": "5e4b4bf1ed44cdd4b50e767faef477dea74d667c47e3b7feba695e755bf4dabb"
+    },
+    {
+      "path": "build-scripts/sprints/check-y1-golden-rollout-wave-1-current.test.js",
+      "blob_oid": "c29e2ffbc4750b05c6b92e2ca00be2ad63d65cf3",
+      "sha256": "d095725643031d1d3448281a0c1063dfb9582a8c61e625e57bbd933bdd39e4e6"
+    },
+    {
+      "path": "build-scripts/sprints/write-y1-golden-rollout-wave-1-current-evidence.js",
+      "blob_oid": "f911b03fb5e472149df5597b59022e46215d2d94",
+      "sha256": "c0d30468ce66a56b6e8efa0a103ba7cf5d95d69f96bd81a58ec7b1ed821a820e"
+    }
+  ],
+  "wiring_provenance": [
+    {
+      "path": "package.json",
+      "blob_oid": "6ebc9226bcbd7e1b5f76b1612674fd61c72c795e",
+      "sha256": "8fb98d3b2c8c1b6867802e95b3b76e2ab6f9750a0e1e66c22772ce3769f4db4b"
+    },
+    {
+      "path": ".github/workflows/platform-ci.yml",
+      "blob_oid": "0cb11da06c5e33c0af3ad773be13081d8425b868",
+      "sha256": "9521aed4d0d5ca10d3166fc28ab611942893f0484024c0a39916c0836824a8c4"
+    },
+    {
+      "path": "package-lock.json",
+      "blob_oid": "811e615435752f160e2973b2dfc4c30ded901712",
+      "sha256": "b6b795d78e81c17a0edd41d8b657520d20055230f4c0f4cd3063a73921e2259e"
+    }
+  ],
+  "retained_historical_artifacts": [
+    {
+      "path": "build-scripts/platform/build-exit-ticket-shells.js",
+      "blob_oid": "67d5f1a80bece178435aabf1156884b7c78cb7b8",
+      "sha256": "edb7d285227cdcb6e988b4146865ec7cbecc7578b26c11e175f375c08aa93f5d"
+    },
+    {
+      "path": "build-scripts/platform/build-landing-page.js",
+      "blob_oid": "a96c55dafa9717be0690e2f5f692d863830402f1",
+      "sha256": "42ca3d531cd30c0215bd03839f3d94964f38a1477689d1759a517bcb1b5eb31a"
+    },
+    {
+      "path": "build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js",
+      "blob_oid": "ee749d3edefa4b73b274ce38a62b16286f2816e8",
+      "sha256": "d7a09c0489b5cf172aa4f4223de77e0ce5df61507383fc37e2ff3a43494f135a"
+    },
+    {
+      "path": "build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js",
+      "blob_oid": "e411eff9f7b2ac4d4b3ceec5a64775a508a57775",
+      "sha256": "b083b2a0fa31a728c5d70120db8c541b35ca9174601f2da205b080b6471fb2bd"
+    },
+    {
+      "path": "build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js",
+      "blob_oid": "e7b1f41a7520b016517f0ced7b187d1b77803675",
+      "sha256": "1b7d194fefe7ab38078cf81903c7ec80cc5153a96414fad7944ef588fd1cc8cf"
+    },
+    {
+      "path": "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
+      "blob_oid": "f66a62e008942f266dccb0bc7a12b7ba38e4bdcb",
+      "sha256": "293dc48333d9fa3ec13cd746000c3e4c899b4a32a05ed5092622aaf8116934cd"
+    },
+    {
+      "path": "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
+      "blob_oid": "615c803d5c59a4413c0936640cc9be6acb236bbc",
+      "sha256": "2fdda9da224f761e706fe45f8505e18ac4c5cc862af495ca2e504edeb341bbd2"
+    },
+    {
+      "path": "engines/golden-ticket-graph.js",
+      "blob_oid": "c2dae7f13197206b5db7c17addb9efa2491c7814",
+      "sha256": "7e2a7fc58011e891690a16bb726458ddf3d5f38de630f7958014cd6683a92790"
+    },
+    {
+      "path": "engines/golden-ticket-layout.css",
+      "blob_oid": "294f3ec6819c45b7571ea0bbd22121f650387559",
+      "sha256": "2c0eaa4353af9b2ad0741f8e86cea6979c1d79c5935e935d4819810899459b9b"
+    },
+    {
+      "path": "engines/golden-ticket-layout.js",
+      "blob_oid": "2a777247c6a55ab1ec22fdb2ff8a2d4b85860bca",
+      "sha256": "6c9c407b2020ef9d944c606698439f2d79f23a26e87a5354f2274d330afaec72"
+    },
+    {
+      "path": "references/data/exercises/y1-golden-rollout-wave-1.json",
+      "blob_oid": "4364e5bd5602557920f3e59ed3e0024b47cd01cd",
+      "sha256": "d0cb0aba6dc16c578a8be0044888fc49c4163aa58c98603e137d2a3ec51bfff5"
+    },
+    {
+      "path": "references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json",
+      "blob_oid": "71c10c3c39904afd808c1fea8f842f0995d0ede0",
+      "sha256": "b04ac18d91a8df86538bd3f0b4cf5c50f7b4acd211fef0e724c3006b24a2b6b6"
+    },
+    {
+      "path": "references/ui/golden-exercise-checker-fixtures.json",
+      "blob_oid": "626a32eb5af07982c601adf188adfab84f2452d8",
+      "sha256": "9fbdc055d413facbe2bf52c731823cf1e2ad440c44b5a966145895dec3a1c8e9"
+    },
+    {
+      "path": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+      "blob_oid": "1be086f61bf16f2bbfb45192b698d7cebbbe8198",
+      "sha256": "36073d9d756974af2fc5ac4eb51409a84f2e75a32db8b03de4bcb51041ec4ec2"
+    },
+    {
+      "path": "reports/json/y1-golden-rollout-wave-1-proof.json",
+      "blob_oid": "b33b5218f6114ac4a15849309add965420e44243",
+      "sha256": "6cc1408bc440ff447bd98a527a8dad2c7bb7788004a384ce55e30dbb18faedaf"
+    },
+    {
+      "path": "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
+      "blob_oid": "917227ff75bb531c1da97e6619845f766e288e80",
+      "sha256": "d10354df6b75337cb196f410eb9771be1c6e3813102cf3f6efdbf5fdd9621a5b"
+    },
+    {
+      "path": "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md",
+      "blob_oid": "0a6cdba6d81e6dc4be678ef71118593acd81a131",
+      "sha256": "d3b6d7384c39f0d4952919054cb926350a994a85ec659a7682ddb3abb5386517"
+    },
+    {
+      "path": "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json",
+      "blob_oid": "d34de4a440902657f2a3919503f92435d01c420a",
+      "sha256": "8dec2fd2b04f2e35ea48ec1a77e2da8bd29a9342b235dc2abebbf85903f0dacc"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md",
+      "blob_oid": "0c37b82343a6aa123762d27fd638da9363403adc",
+      "sha256": "028842b5763d1028c8f71d9cc209da1fbd6bc26968a275b4e43051c37f86fa99"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshot-manifest.md",
+      "blob_oid": "ac9df3bbd728f8e6d0985a3d0e4b04ba455fb328",
+      "sha256": "22bd2e49a00f6f4d9273500d153bb401953bde74d05d05752c497dd3a59512d7"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-exit-ticket-desktop-light-completed-feedback.png",
+      "blob_oid": "8f77cee5065e459d37803d0fc49783de3d111b91",
+      "sha256": "a0e11f03fe446590b99016e20edc04929b0fdd67b6acde5762d4f48d22afc603"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-exit-ticket-desktop-light-initial.png",
+      "blob_oid": "098e90fcefb482846210d945ca25c04a2cfd09ab",
+      "sha256": "fee5f7f3935e469ec47689c700ac3c01d5a3d5cd6ee7b1a9c86e9dd256c25ee8"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-exit-ticket-mobile-dark-completed-feedback.png",
+      "blob_oid": "a396e52206ba4ecb8a09f5c63dddc4e7d3e202d2",
+      "sha256": "ddbbc82dfc05d772b059ad239bada54248c657bd06d6eb83c92ddea52ef88ad9"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-landing-desktop-light-overview.png",
+      "blob_oid": "c59a7ffe7ffce4f58246881c0fd6df4dfc6dcb2d",
+      "sha256": "fca794467db02089f76c5a35f62b55a88eb7ef16d721ee59e1e4b74dee822ac5"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-landing-mobile-dark-exit-row.png",
+      "blob_oid": "e3fe168f5585e0659cb03e4d8ef14981e2a9fc7e",
+      "sha256": "3cdf3c38abc07be9512e0cf0b07b95ff7bb3b682f7b503e58e900cd4bc8d7476"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-learn-desktop-light-uitleg-vaardigheden.png",
+      "blob_oid": "75d50b01b9ba3d837353b4f4840f4d08f5589698",
+      "sha256": "729b4bd5e0f16fac08c343be38977f787766a97da1f05f04834b2fe00aa65d75"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-normal-practice-desktop-light-opgaven.png",
+      "blob_oid": "e02a1119e44734c28adea9f78018b6d3ed1f143c",
+      "sha256": "2687e70b272e4133d818975e604e1eb4131f7ef97f55566599c9703d4617bad9"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-practice-desktop-light-redeneer-spel.png",
+      "blob_oid": "f26a90551e30d9970667841ea3f0012b15888d98",
+      "sha256": "e4035ea5781065571adf5cac69528ba3881b7921fc2e5432f52d3318ffa07a67"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-short-check-desktop-light-completed-feedback.png",
+      "blob_oid": "fa0b978379b7370b2ba889ca403a51642c0e64f4",
+      "sha256": "1d9e0faba56c0dabe186d5f58f70f3fdc32eb5d277c38f69d3792797e8ca5927"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-short-check-desktop-light.png",
+      "blob_oid": "d0d8af98de81a5cb1f39abcbfeb7b364d9be26f2",
+      "sha256": "7a0958bfbe5b27a830fae0af2a5cc5564311ee2cc566514acd57d189f5856e7e"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-skill-map-desktop-light-wiskundevaardigheden.png",
+      "blob_oid": "2d2ac66805cf8f82945b85c0f42b3926db182e8e",
+      "sha256": "c66b7782ccbade8ec3fbb7dc044871fae8371b9094072e5d92dddc69b65dbb6c"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-start-desktop-light-instapquiz.png",
+      "blob_oid": "0d2b78151c047a091ab7d9a93cf8ab0fddf51785",
+      "sha256": "e5a6a3480f20e9663cfe4b503b82d0a458aca702c804902e84ac7e0540f10546"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-correct-response-feedback.png",
+      "blob_oid": "1501dc07a4bd8cb3eb89b9e391011f44582ce4f2",
+      "sha256": "3014d61e0ffde215934a510f16c9ebf381aa777ad641dee0577c5a4dc6c1ed64"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-missing-notation-feedback.png",
+      "blob_oid": "5f1050009da95bb4d3fb4d3f766b3bb6e0a279c2",
+      "sha256": "55c146a478a3d4da181307d036642c1b725b74d11697b7c832039dd91c687034"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-missing-parts-feedback-list.png",
+      "blob_oid": "9c1799c2606cfd642995e3bba990a329f0981b62",
+      "sha256": "799d2ff18f250a3e2bf1408ea47734cda030b5364ce9ad261706197afb87d33f"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-missing-substitution-feedback.png",
+      "blob_oid": "822a39a153e2ed47428f392bcf4f2decb3e4ff37",
+      "sha256": "efbfe9764649ee0c8f33a2e81cde5d13cd4d5dc249ff544e9e347d5c3adb358c"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-partial-wrong-formula-feedback.png",
+      "blob_oid": "cd6a745279e261a887b6804131eb20b9c2ba8e99",
+      "sha256": "763695aa80bae86a3b42123b658be19606615fd0a7427d81f6a8c5b667161a70"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-v3-exemplar-comparison.png",
+      "blob_oid": "b60e576e7e2907c70703ea3e1d00f17878c7cd4b",
+      "sha256": "1f04b7f03dbd7815a4ab0f054a89629d860dfd72352134ee3a2eefd8bf34f609"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-wrong-denominator-feedback.png",
+      "blob_oid": "822a39a153e2ed47428f392bcf4f2decb3e4ff37",
+      "sha256": "efbfe9764649ee0c8f33a2e81cde5d13cd4d5dc249ff544e9e347d5c3adb358c"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-dark-initial.png",
+      "blob_oid": "9fd69ab3611a484203e920baf9ef81ccf27cf2f6",
+      "sha256": "e729922a5c7a8850a6fe4afd33fe181a4f2b7e0acfb043fac6df43f09024164b"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-completed-feedback.png",
+      "blob_oid": "93432c1d05d9e508e1342c50b051fda8cf49997f",
+      "sha256": "d0c289013fba3bacff416ae929b14d4848b05de764e56933226f21dfa356c58f"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-initial.png",
+      "blob_oid": "1c44395e2e9f845d41af0d47882e37c18f3d97b7",
+      "sha256": "228b42d8be95e1d1f7e45ebfbc61cb610470dce895ffea21e885245ddd5e8241"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-mobile-dark-completed-feedback.png",
+      "blob_oid": "2eb12a4d02e01ba02c83b1ede2357d5cb929d74f",
+      "sha256": "7c8496d5a94f0cc7b3bf0959da57f7fd0a008076fd94739f1c924b2e0ebb8e94"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-mobile-light-initial.png",
+      "blob_oid": "3a6c7476270f7767fe79514c82ee4aebe4ab8976",
+      "sha256": "f58a85dfa2402dbb2f6851a339f96481ed9c967ef18967e8e908496908d6e024"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-landing-desktop-light-overview.png",
+      "blob_oid": "5faa19660e06663116d2a866d7bf2a8dc0be4c69",
+      "sha256": "ffbae5c1edd5e5d02e722ccfe001e1f904048f92bc8a5694d762d5a7faf26b1a"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-landing-mobile-dark-exit-row.png",
+      "blob_oid": "34d5a84626be25e93695a4fe6de0f76b45e78da2",
+      "sha256": "d7e3025cfdcd6432f21a7b1c05ab73ddb6747c80a649b30b08f1f9e72a2980ec"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-learn-desktop-light-uitleg-vaardigheden.png",
+      "blob_oid": "be80563454a9bc79f43f750a758703c288d04f30",
+      "sha256": "8b56740a5fdd03432d20df41d59fe976f169c779a91f1b6f183d7e8a40134fdd"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-normal-practice-desktop-light-opgaven.png",
+      "blob_oid": "0219c0f353cf4b179ab0e0dae15c413804e549c0",
+      "sha256": "5a2692481110d68e2d23992373c3b06f0a198518265dba754a4f022125ea515f"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-practice-desktop-light-wiskundevaardigheden.png",
+      "blob_oid": "1cbf9b5296e40353738549a5ff5a0bd26dadad48",
+      "sha256": "3d5b0d69c22794bc25a079fc03a6a55028a7e3d64f635542df3bcb7159937d1f"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-short-check-desktop-light-completed-feedback.png",
+      "blob_oid": "6d0f17ad02b2bf487807c67990d614206fa39123",
+      "sha256": "f272854afea45621712c1ccba7c8512748f5cde30000b6a0d872347460a324c4"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-short-check-desktop-light.png",
+      "blob_oid": "d96fc9b0ae356f28b324bf7a5ef554917acd2c53",
+      "sha256": "8f20ab21d6ddf20b288229e99b5059fac419d8b74449c840ce535ce6e98b4dbf"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-skill-map-desktop-light-wiskundevaardigheden.png",
+      "blob_oid": "1cbf9b5296e40353738549a5ff5a0bd26dadad48",
+      "sha256": "3d5b0d69c22794bc25a079fc03a6a55028a7e3d64f635542df3bcb7159937d1f"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-start-desktop-light-instapquiz.png",
+      "blob_oid": "dbed43ea10489b7b63107116f588e7bd04513726",
+      "sha256": "7b933ba3ef90e6701d1934aa1ca00482c54c66a188384730a69beba0ff3f70be"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-exit-ticket-desktop-light-completed-feedback.png",
+      "blob_oid": "cb78134bc05fbfa0cb2c7fceb15463f11de0292e",
+      "sha256": "55d0e1bd63ac27fbb2e020002ef7589d2643955d24dc4e844f3c17d81d2a8314"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-exit-ticket-desktop-light-initial.png",
+      "blob_oid": "5a70d7567d251fb6e7a6feae3c5c7765d2092d49",
+      "sha256": "658f13aa3b9953b29684b56483189483db9cdcc2abee70a98a69d2011f3f149e"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-exit-ticket-mobile-dark-completed-feedback.png",
+      "blob_oid": "14e1b8e666eb7b04b5a56906b4e3ef69cd824818",
+      "sha256": "c691ee8ecf5bf0e7588161e20dd5576b9d1abd4a29443c745015a87eeeadd918"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-landing-desktop-light-overview.png",
+      "blob_oid": "ca27d667f3d4cf065d3f2062813d179471117d1c",
+      "sha256": "324d293ff278d5d2dac0341a450f5392abe339fe441728a4da1ab6a3151e468e"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-landing-mobile-dark-exit-row.png",
+      "blob_oid": "d142395300e0e74a300fc771c7918ac628be591d",
+      "sha256": "6b1e6772cbf70389095dd48a803e40aa44519cae06e3084ef7f0b0546e84a081"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-learn-desktop-light-uitleg-vaardigheden.png",
+      "blob_oid": "63ba8676cc1c05d1fd5fb8bbca9df9668039112b",
+      "sha256": "b4373f8c054f7616029579c20d78d6ea9c33e31cde62016f567d835626c654b2"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-normal-practice-desktop-light-opgaven.png",
+      "blob_oid": "d80e2d4ed993506e9a819396974ce1f4e9500802",
+      "sha256": "46b4738e593c651b4294ff1aa70d4bd36849da7bda08fe05127c416468aee2bb"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-practice-desktop-light-grafiekenspel.png",
+      "blob_oid": "cf9a0947496f71f0e1b89db097c1346b161ea24d",
+      "sha256": "4d4e9dbc6a32efbfa92b490a2038dba2ca389e4a9cbb5f48a709ebfb2302a618"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-short-check-desktop-light-completed-feedback.png",
+      "blob_oid": "7375387147156f4551b06de1a03fe1b385dc93d4",
+      "sha256": "fa1b3eb556bbc925bf638f63debeeb8206f0bbffb91751046062f7181d7cd0c0"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-short-check-desktop-light.png",
+      "blob_oid": "581c1c23e1418781c72c83e4e91c1d31dd21fe3e",
+      "sha256": "f71470d85b77753d1c4c3f46e4d9d845385d5646ac718f7b5bb928057e7cce4c"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-skill-map-desktop-light-wiskundevaardigheden.png",
+      "blob_oid": "532b83548459e9d9a9faa7570f9e6c24f618970a",
+      "sha256": "adf7d305996ddf38039bb3faaf9adbb4d449f824b19f8ed8f80573f9010a1e74"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-start-desktop-light-instapquiz.png",
+      "blob_oid": "99a0dc634ff1baf475db7cf9e0ef1ccc7f4185f0",
+      "sha256": "f169818f1bc48112a446224a2c12e91fd9763f8298e3185b18be80a28fc29333"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/114-landing-mobile-dark-exit-row-same-copy-hygiene.png",
+      "blob_oid": "e16f96957de68b3a4141f109638b9e458a79aa22",
+      "sha256": "36fc00fdd1fc4a4622b3797c3dcd3bfeaa81b6033b787f82b383f3084361d241"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/manifest.json",
+      "blob_oid": "10bf5299d8cdbccf4380c83a7274222824faee41",
+      "sha256": "74591f992d3af07511577398a3ec8a158f9e12d8045b00907e3a42d5eaf66465"
+    },
+    {
+      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
+      "blob_oid": "2dcf8d1885c43651c3e81c69cbd192daac8d2225",
+      "sha256": "22cae50869a9c1df850f602020e80d1ca56ba6be9676383ea74c34843214f2ab"
+    },
+    {
+      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md",
+      "blob_oid": "9d7baa0a81f85200e5c0cd1194265ca1c8907f6c",
+      "sha256": "6db71a502e83079aa07123c92dafe8964aa02cd927bc5823c94f56e113bc71b8"
+    },
+    {
+      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png",
+      "blob_oid": "c3ae4e82d4a8422d88f29ce9226faff0eddf187e",
+      "sha256": "b0e8d470d52693cfce5a2a9eb42d1fcde18eba3a468781750c1d9b60efde2be0"
+    },
+    {
+      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png",
+      "blob_oid": "0219c0f353cf4b179ab0e0dae15c413804e549c0",
+      "sha256": "5a2692481110d68e2d23992373c3b06f0a198518265dba754a4f022125ea515f"
+    },
+    {
+      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json",
+      "blob_oid": "ffa76be4d90bade4e1e0bd88cbba720c2c7ff91f",
+      "sha256": "b3594a34e9cc433803e2b512f9e8d1a242746fcf382e5bb10335c25406499d55"
+    },
+    {
+      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/manifest.json",
+      "blob_oid": "6e52638cfe6a64f4083ff46addd3f98a7d825ccb",
+      "sha256": "b1059a580a6d9895a78364d5addbaf1cbcef19a7bee2d66f2556f1a3e446a0e0"
+    },
+    {
+      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-visual-review.md",
+      "blob_oid": "ce4cc48f20fc612f3284ff5c09f2f8b0fda30b6e",
+      "sha256": "11d225a0e10567cf3eb1c021ef8650b556921604bc98b19a137b0d41a5ed9a74"
+    },
+    {
+      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
+      "blob_oid": "685fd9338ded50bdd34978f455ab64154d99cc02",
+      "sha256": "152f5d507bc8049e42b40a0337eb2aeeb4f3dfff6324f86809030fe640cd452f"
+    },
+    {
+      "path": "source-data/book-1/exit-ticket/1.1.1-exit-ticket.json",
+      "blob_oid": "af6209f98395eb6220c415ea5a9a32eb4bc63f9e",
+      "sha256": "6774013da15b93192be7e8d8b18ade02c990ca4ac9b25fc3337203b26d134f5e"
+    },
+    {
+      "path": "source-data/book-1/exit-ticket/1.1.1-korte-check.json",
+      "blob_oid": "dd9ba73e21a137ace9e4170d417f0190474998e7",
+      "sha256": "03a6f8caa6eb3a0b10783e2bb87a43c54577df0c77b42bda52b7ac8a6321fb58"
+    },
+    {
+      "path": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
+      "blob_oid": "4030c551d959ef7d7a705279e97b619559adf7c7",
+      "sha256": "1676b976e7a541c8a8f409d6d4dea9e6a8ed6fb810b7cacc52b43860693c5081"
+    },
+    {
+      "path": "source-data/book-1/exit-ticket/1.1.2-korte-check.json",
+      "blob_oid": "a244ce68c97ba09003813aac15662e76f8639794",
+      "sha256": "3ba2d6764d1b152c06d84c0038f50f02c1daf1c15f722f8b8d58936c7ce5a772"
+    },
+    {
+      "path": "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json",
+      "blob_oid": "24ef5a6336ec37935b47ce3ff26275751c560cca",
+      "sha256": "75bfa8abf31464c4f4cdc9f92e47d1dceac1b983ae677d8547da7887b64e4697"
+    },
+    {
+      "path": "source-data/book-1/exit-ticket/1.1.3-korte-check.json",
+      "blob_oid": "91d44dcd61130daaab9ffd90ccf77365605f0154",
+      "sha256": "fcea14ed5f2c28edc33518defe77fa4036e208a01a6447fe1a2747d14d882508"
+    }
+  ]
+}
