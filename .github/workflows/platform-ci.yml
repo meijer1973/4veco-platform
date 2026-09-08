@@ -58,7 +58,7 @@ jobs:
         run: |
           git config --global core.autocrlf false
           git reset --hard
-          git -c core.autocrlf=false checkout-index -f -- reports/url-index.md
+          git -c core.autocrlf=false checkout-index -f --all
           git -C ../4veco-lessen reset --hard
 
       - name: Set up Node.js
@@ -67,6 +67,9 @@ jobs:
           node-version: '20.x'
           cache: npm
           cache-dependency-path: 4veco-platform/package-lock.json
+
+      - name: Verify Y1 runtime checkout bytes
+        run: node build-scripts/sprints/inspect-y1-runtime-checkout.js
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -231,7 +234,7 @@ jobs:
           }
           $env:Y1_GOLDEN_EVENT_BASE_SHA = $base
           $env:Y1_GOLDEN_EVENT_HEAD_SHA = $head
-          npm run check:y1-golden-rollout-wave-1 -- --event-mode $mode --scope-mode auto --base $base --head $head --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head HEAD
+          npm run check:y1-golden-rollout-wave-1-current -- --event-mode $mode --scope-mode auto --base $base --head $head --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head HEAD
 
       - name: Validate report JSON
         run: node build-scripts/reports/validate-report-json.js
