@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T10:26:13.001Z
+Generated: 2026-09-08T07:33:56.908Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book2-textbook-production-20260905`
-Source commit: `aebd1cd0001324915832c63f4a75e46dee382e14`
-Files indexed: 7659
+Source branch: `codex/reorganize-20260908`
+Source commit: `0a95d7e93313841dffd5f335716de1fb6b7d3808`
+Files indexed: 7665
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2633,7 +2633,7 @@ Count: 1029
 
 ## reports
 
-Count: 4943
+Count: 4946
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6275,6 +6275,9 @@ Count: 4943
 - reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-lead-review.md
 - reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-plan.md
 - reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-result.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison-prompt.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-plan-review.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-plan.md
 - reports/sprints/MATH-REFINE-1-baseline.md
 - reports/sprints/MATH-REFINE-1-diff-summary.md
 - reports/sprints/MATH-REFINE-1-gate-handoff.md
@@ -7599,7 +7602,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 771
+Count: 774
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -8062,6 +8065,7 @@ Count: 771
 - docs/inspection-standards/teacher-facing-evidence-pack-template.md
 - docs/L1.5V/A4-alt-text-infrastructure.md
 - docs/L1.5V/F-plan-part-a-b-separation.md
+- docs/review/agent-publication-workflow.md
 - docs/review/human-payload-authorization.schema.json
 - docs/review/pr-integration-lane-policy.md
 - docs/review/pr-readiness-decision.schema.json
@@ -8280,6 +8284,8 @@ Count: 771
 - docs/workflows/legacy-full-companion-profile.md
 - docs/workflows/paragraph-lane-vocabulary.md
 - docs/workflows/paragraph-quality-ref-schema-v2.md
+- docs/workflows/platform-and-companion-reference.md
+- docs/workflows/task-planning-and-review.md
 - docs/workflows/textbook-paragraph-lane.md
 - docs/workflows/web-companion-paragraph-lane.md
 - knowledge/113-excellent-exit-ticket-v3-package.zip

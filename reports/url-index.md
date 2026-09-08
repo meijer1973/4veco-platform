@@ -17,6 +17,9 @@ Single-fetch entry point for external research agents whose fetch tools can only
 ## Repo Operating Rules
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENTS.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/task-planning-and-review.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/platform-and-companion-reference.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/agent-publication-workflow.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/paragraph-lane-vocabulary.md
