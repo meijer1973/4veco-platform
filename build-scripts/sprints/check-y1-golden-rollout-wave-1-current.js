@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { spawnSync } = require('child_process');
+const yaml = require('js-yaml');
 const historical = require('./check-y1-golden-rollout-wave-1');
 
 const ROOT = path.resolve(__dirname, '../..');
@@ -15,18 +16,20 @@ const LESSON_ROOT = path.resolve(ROOT, '../4veco-lessen');
 const BASELINE = '96416b6b5bd57094576e9aba0a42d682584ec479';
 const SNAPSHOT = 'f09fd6e88edc5049b026b16b0158e7e188091d2d';
 const REPAIR_ID = 'Y1-GOLDEN-ROLLOUT-WAVE-1-DESCENDANT-VERIFIER';
-const CERTIFICATE = 'reports/json/y1-golden-rollout-wave-1-current-verifier.json';
+const CERTIFICATE = 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-descendant-verifier-certificate.json';
 const COMMAND = 'check:y1-golden-rollout-wave-1-current';
 const SOURCE_PATHS = [
   'build-scripts/sprints/check-y1-golden-rollout-wave-1-current.js',
   'build-scripts/sprints/check-y1-golden-rollout-wave-1-current.test.js',
   'build-scripts/sprints/write-y1-golden-rollout-wave-1-current-evidence.js',
 ];
-const WIRING_PATHS = ['package.json', '.github/workflows/platform-ci.yml'];
+const WIRING_PATHS = ['package.json', '.github/workflows/platform-ci.yml', 'package-lock.json'];
+const YAML_VERSION = '3.14.2';
 const check = (ok, message) => { if (!ok) throw new Error(message); };
 const digest = (bytes) => crypto.createHash('sha256').update(bytes).digest('hex');
 // Only immutable commit/blob bytes are cached; current refs are resolved anew.
 const blobCache = new Map();
+const initialObservations = new Set();
 
 function git(args, root = ROOT) {
   const result = spawnSync('git', args, { cwd: root, encoding: 'utf8', maxBuffer: 40 * 1024 * 1024 });
@@ -78,29 +81,35 @@ function historicalPaths() {
   ])].sort();
 }
 
-function normalized(text) { return text.replace(/\r\n/g, '\n').trimEnd(); }
+function canonical(value) {
+  if (Array.isArray(value)) return value.map(canonical);
+  if (value && typeof value === 'object') return Object.fromEntries(Object.keys(value).sort().map((key) => [key, canonical(value[key])]));
+  return value;
+}
+const same = (left, right) => JSON.stringify(canonical(left)) === JSON.stringify(canonical(right));
 
-// This deliberately accepts only the repository's canonical block structure.
-// Ambiguous structures require review; text elsewhere cannot stand in for a step.
+// Parse the complete document so key ordering cannot hide job conditions and
+// duplicate YAML keys cannot silently replace the protected job or invocation.
 function workflowContract(workflow) {
-  const text = normalized(workflow);
-  check((text.match(/^jobs:$/gm) || []).length === 1, 'ambiguous workflow jobs');
-  check(!/^\s*<<:|[&*][A-Za-z_]/m.test(text), 'workflow aliases/merge keys require explicit review');
-  check((text.match(/^  (?:validate-platform|'validate-platform'|"validate-platform"):/gm) || []).length === 1 &&
-    (text.match(/^  validate-platform:$/gm) || []).length === 1, 'required validate-platform job missing or duplicated');
-  const job = text.split(/^  validate-platform:\n/m)[1].split(/^  [\w-]+:\s*$/m)[0];
-  const parts = job.split(/^    steps:\n/m);
-  check(parts.length === 2, 'ambiguous validate-platform steps');
-  const blocks = parts[1].split(/(?=^      - )/m).filter((block) => block.trim());
+  check(require('js-yaml/package.json').version === YAML_VERSION, 'runtime YAML parser version changed');
+  const document = yaml.safeLoad(workflow, { json: false });
+  check(document && typeof document === 'object' && !Array.isArray(document), 'invalid workflow document');
+  const { jobs, ...topLevel } = document;
+  const job = jobs?.['validate-platform'];
+  check(job && typeof job === 'object' && !Array.isArray(job), 'required validate-platform job missing');
+  const { steps, ...jobSettings } = job;
+  check(Array.isArray(steps), 'required validate-platform steps missing');
   function step(name) {
-    const matches = blocks.filter((block) => block.startsWith(`      - name: ${name}\n`));
+    const matches = steps.filter((block) => block?.name === name);
     check(matches.length === 1, `required workflow step missing or duplicated: ${name}`);
-    return normalized(matches[0]);
+    return matches[0];
   }
-  const commands = text.match(/\bnpm(?:\.cmd)? run check:y1-golden-rollout-wave-1(?:-current)?(?=\s|$)/g) || [];
+  const commands = Object.values(jobs).flatMap((item) => (item?.steps || []).flatMap((block) =>
+    String(block?.run || '').match(/\bnpm(?:\.cmd)? run check:y1-golden-rollout-wave-1(?:-current)?(?=\s|$)/g) || []));
   check(commands.length === 1 && commands[0] === `npm run ${COMMAND}`, 'workflow must invoke exactly one current Y1 verifier');
   return {
-    job_header: normalized(parts[0]),
+    top_level: topLevel,
+    job_settings: jobSettings,
     platform_checkout: step('Checkout platform repository'),
     lesson_checkout: step('Checkout lessen repository'),
     y1: step('Validate Y1 Golden rollout wave'),
@@ -112,12 +121,18 @@ function expectedWiring() {
   return workflowContract(original.replace('npm run check:y1-golden-rollout-wave-1 --', `npm run ${COMMAND} --`));
 }
 
-function validateWiring(packageText, workflowText) {
-  const scripts = JSON.parse(packageText).scripts;
+function validateWiring(packageText, workflowText, lockText = fs.readFileSync(path.join(ROOT, 'package-lock.json'), 'utf8')) {
+  const pkg = JSON.parse(packageText);
+  const lock = JSON.parse(lockText);
+  const scripts = pkg.scripts;
   check(scripts?.[COMMAND] === `node ${SOURCE_PATHS[0]}`, 'current Y1 npm mapping changed');
   check(scripts?.['check:y1-golden-rollout-wave-1'] === 'node build-scripts/sprints/check-y1-golden-rollout-wave-1.js',
     'historical Y1 npm mapping changed');
-  check(JSON.stringify(workflowContract(workflowText)) === JSON.stringify(expectedWiring()), 'current Y1 workflow contract changed');
+  check(pkg.devDependencies?.['js-yaml'] === YAML_VERSION && lock.packages?.['']?.devDependencies?.['js-yaml'] === YAML_VERSION,
+    'current YAML parser dependency pin changed');
+  const baselineLock = jsonAt(BASELINE, 'package-lock.json');
+  check(same(lock.packages?.['node_modules/js-yaml'], baselineLock.packages['node_modules/js-yaml']), 'current YAML parser lock binding changed');
+  check(same(workflowContract(workflowText), expectedWiring()), 'current Y1 workflow contract changed');
 }
 
 function validateLesson(currentRef) {
@@ -144,7 +159,12 @@ function validateLesson(currentRef) {
 function buildCertificate(sourceRef, initialLessonRef) {
   const source = resolve(sourceRef);
   ancestor(BASELINE, source);
-  const lesson = validateLesson(initialLessonRef);
+  const observedLesson = resolve(initialLessonRef, LESSON_ROOT);
+  // The initial observation is immutable provenance, not the live lesson check.
+  if (!initialObservations.has(observedLesson)) {
+    validateLesson(observedLesson);
+    initialObservations.add(observedLesson);
+  }
   for (const relativePath of historicalPaths()) {
     check(bytes(BASELINE, relativePath).sha256 === bytes(source, relativePath).sha256,
       `historical artifact changed: ${relativePath}`);
@@ -155,7 +175,7 @@ function buildCertificate(sourceRef, initialLessonRef) {
     binding_model: 'historical_capture_and_current_descendant_verification',
     baseline_platform_sha: BASELINE, source_payload_sha: source,
     historical_lesson_snapshot_sha: SNAPSHOT,
-    initial_observation: { lesson_sha: lesson.current_lesson_sha, informational_only: true },
+    initial_observation: { lesson_sha: observedLesson, informational_only: true },
     successor_sources: SOURCE_PATHS.map((relativePath) => binding(source, relativePath)),
     wiring_provenance: WIRING_PATHS.map((relativePath) => binding(source, relativePath)),
     retained_historical_artifacts: historicalPaths().map((relativePath) => binding(BASELINE, relativePath)),

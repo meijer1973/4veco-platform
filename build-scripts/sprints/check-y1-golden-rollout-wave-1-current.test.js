@@ -114,19 +114,48 @@ describe('active Y1 workflow wiring', () => {
     ['historical-only command', (text) => text.replace('npm run check:y1-golden-rollout-wave-1-current --', 'npm run check:y1-golden-rollout-wave-1 --')],
     ['comment-only command', (text) => text.replace('          npm run check:y1', '          # npm run check:y1')],
     ['missing step', (text) => text.replace('      - name: Validate Y1 Golden rollout wave', '      - name: Other')],
-    ['duplicate command', (text) => `${text}\n# npm run check:y1-golden-rollout-wave-1-current --\n`],
+    ['duplicate command', (text) => text.replace('      - name: Validate report JSON', '      - name: Extra Y1\n        run: npm run check:y1-golden-rollout-wave-1-current --\n\n      - name: Validate report JSON')],
     ['skip condition', (text) => text.replace('      - name: Validate Y1 Golden rollout wave', '      - name: Validate Y1 Golden rollout wave\n        if: false')],
     ['ignored error', (text) => text.replace('      - name: Validate Y1 Golden rollout wave', '      - name: Validate Y1 Golden rollout wave\n        continue-on-error: true')],
     ['scope-only flag', (text) => text.replace('--scope-mode auto', '--scope-only --scope-mode auto')],
     ['historical lesson substitution', (text) => text.replace('--lesson-head HEAD', `--lesson-head ${verifier.SNAPSHOT}`)],
     ['platform event substitution', (text) => text.replace('--head $head', '--head HEAD')],
     ['job condition', (text) => text.replace('    name: validate-platform', '    if: false\n    name: validate-platform')],
+    ['late job condition', (text) => `${text}\n    if: false\n`],
+    ['late ignored job errors', (text) => `${text}\n    continue-on-error: true\n`],
+    ['workflow permission escalation', (text) => text.replace('  contents: read', '  contents: write')],
     ['lesson checkout substitution', (text) => text.replace('          path: 4veco-lessen', '          ref: stale\n          path: 4veco-lessen')],
     ['duplicate job', (text) => `${text}\n  validate-platform:\n    steps: []\n`],
     ['quoted duplicate job', (text) => `${text}\n  "validate-platform":\n    steps: []\n`],
-    ['merged job defaults', (text) => text.replace('jobs:', 'jobs:\n  <<: *other')],
+    ['unresolved YAML alias', (text) => text.replace('jobs:', 'jobs:\n  <<: *other')],
   ])('rejects %s', (_label, mutate) => {
     expect(() => verifier.validateWiring(packageText(), mutate(workflow()))).toThrow();
+  });
+
+  test('allows unrelated step ampersands, aliases, and unrelated dependency changes', () => {
+    const expanded = workflow().replace('      - name: Validate report JSON',
+      '      - &unrelated\n        name: Unrelated URL\n        run: echo https://example.test/?a=1&b=2\n      - *unrelated\n\n      - name: Validate report JSON');
+    const pkg = JSON.parse(packageText());
+    pkg.devDependencies.unrelated = '1.0.0';
+    const lock = JSON.parse(read('package-lock.json'));
+    lock.packages[''].devDependencies.unrelated = '1.0.0';
+    lock.packages['node_modules/unrelated'] = { version: '1.0.0' };
+    expect(() => verifier.validateWiring(JSON.stringify(pkg), expanded, JSON.stringify(lock))).not.toThrow();
+  });
+
+  test.each(['version', 'resolved', 'integrity'])('rejects parser lock %s drift', (field) => {
+    const lock = JSON.parse(read('package-lock.json'));
+    lock.packages['node_modules/js-yaml'][field] = 'changed';
+    expect(() => verifier.validateWiring(packageText(), workflow(), JSON.stringify(lock))).toThrow(/parser lock binding changed/);
+  });
+
+  test('rejects parser declaration drift and duplicate protected steps', () => {
+    const pkg = JSON.parse(packageText());
+    pkg.devDependencies['js-yaml'] = '^3.14.2';
+    expect(() => verifier.validateWiring(JSON.stringify(pkg), workflow())).toThrow(/parser dependency pin/);
+    const duplicate = workflow().replace('      - name: Validate report JSON',
+      '      - name: Checkout lessen repository\n        run: echo duplicate\n\n      - name: Validate report JSON');
+    expect(() => verifier.validateWiring(packageText(), duplicate)).toThrow(/step missing or duplicated/);
   });
 });
 

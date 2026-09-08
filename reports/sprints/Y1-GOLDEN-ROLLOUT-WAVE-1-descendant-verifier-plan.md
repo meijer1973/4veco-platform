@@ -68,9 +68,11 @@ capture and review. Broader renewal generalization is named follow-up work.
 - `build-scripts/sprints/check-y1-golden-rollout-wave-1-current.js`
 - `build-scripts/sprints/check-y1-golden-rollout-wave-1-current.test.js`
 - `build-scripts/sprints/write-y1-golden-rollout-wave-1-current-evidence.js`
-- `package.json`, limited to the additive current-verifier command.
+- `package.json`, limited to the additive current-verifier command and an
+  explicit exact js-yaml 3.14.2 development dependency already present in the lock.
+- `package-lock.json`, limited to recording that direct parser dependency.
 - `.github/workflows/platform-ci.yml`, limited to selecting that command.
-- `reports/json/y1-golden-rollout-wave-1-current-verifier.json`
+- `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-descendant-verifier-certificate.json`
 - `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-descendant-verifier-*.md`, limited to
   plan, planning review, execution log/result, and structural review records.
 - `reports/url-index.md` and the four generated GitHub agent index files.
@@ -106,7 +108,7 @@ The successor certificate records schema/version and purpose, baseline Platform
 `96416b6b...`, source payload P, historical lesson snapshot f09fd6e, initial
 observed lesson57b31a1f, and an exact source inventory. Each source entry contains
 path, binding mode, Git blob OID and SHA-256 read from P. The inventory consists
-of the new verifier, its tests/writer, package.json and platform-ci.yml. A
+of the new verifier, its tests/writer, package.json, package-lock.json and platform-ci.yml. A
 separate exact historical inventory binds the old verifier/tests/policy,
 source manifest, renewal/capture/visual records, delta/wave/packet/result, and
 the original Scale Proof inputs at the baseline, with Git OIDs and SHA-256.
@@ -115,7 +117,10 @@ Historical files must stay byte-identical. The three successor-owned code files
 must stay byte-identical from P to actual current Platform H. Package/workflow
 full hashes at P prove reviewed provenance; current checks enforce the precise
 owned Y1 mapping, single mandatory invocation, event/lesson refs and protected
-job/checkout contract. Unrelated npm scripts, workflow steps and Platform tail
+job/checkout contract. Whole-document safe YAML parsing rejects duplicate keys
+and observes properties after the steps. Top-level workflow settings are retained.
+The direct parser pin and its exact reviewed lock entry remain bound; unrelated
+lock entries may change. Unrelated npm scripts, workflow steps and Platform tail
 files are allowed. P must be an ancestor of H, but H need not equal P. Existing
 historical checks still reject changed Platform rendering inputs.
 
@@ -212,3 +217,8 @@ PR stays open until a separately authorized prerequisite restores full CI.
   verifier would invalidate its immutable historical source-manifest hashes.
 - Planning review round 1 requested explicit binding modes and sealing order;
   both are specified above, including future unrelated-head regression coverage.
+- Implementation review round 1 found that textual workflow extraction missed
+  late job properties and falsely rejected unrelated ampersands. Independent
+  review accepted the bounded parser/lock amendment and certificate relocation
+  into the recognized review-evidence folder. Add semantic YAML regressions and
+  regenerate the source certificate after committing the corrections.
