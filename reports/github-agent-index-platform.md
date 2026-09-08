@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-08T16:12:08.290Z
+Generated: 2026-09-08T16:46:53.689Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/y1-renewal-descendants-20260908`
-Source commit: `1670e4f46efc94d579b923416b07959742a57dc2`
-Files indexed: 7667
+Source commit: `410c02e38b3a70bc610822d47b738d38ffd29311`
+Files indexed: 7668
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 729
+Count: 730
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -803,6 +803,7 @@ Count: 729
 - build-scripts/sprints/fixtures/hybrid-frankenstein-exit-ticket.html
 - build-scripts/sprints/fixtures/legacy-exit-ticket.html
 - build-scripts/sprints/generate-reason-std1-proof.js
+- build-scripts/sprints/inspect-y1-runtime-checkout.js
 - build-scripts/sprints/l-cp6a-remediate-book1-chapter13.js
 - build-scripts/sprints/mtu-ans-proof-impl1-a96-data.js
 - build-scripts/sprints/run-sprint-command.js
