@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T10:26:13.001Z
+Generated: 2026-09-08T11:01:32.264Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book2-textbook-production-20260905`
-Source commit: `aebd1cd0001324915832c63f4a75e46dee382e14`
-Files indexed: 7659
+Source branch: `codex/reorganize-2-20260908`
+Source commit: `7c6025c4e82627a3377da324867122696954886a`
+Files indexed: 7661
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2633,7 +2633,7 @@ Count: 1029
 
 ## reports
 
-Count: 4943
+Count: 4945
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4043,6 +4043,8 @@ Count: 4943
 - reports/representation-transfer-gaps.md
 - reports/review-gates/A96-CALCULATION-ANSWER-FORM-HARDENING-AND-SCALE-GATE-1-REREVIEW-1/review-packet.json
 - reports/review-gates/A96-CALCULATION-ANSWER-FORM-REFINEMENT-1/review-packet.json
+- reports/review-gates/AGENT-ENTRY-CLEANUP-20260908/implementation-record.md
+- reports/review-gates/AGENT-ENTRY-CLEANUP-20260908/lead-review-round2.md
 - reports/review-gates/B1-CHAPTER-MIXED-TARGET-AUDIT-1/review-packet.json
 - reports/review-gates/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1/review-packet.json
 - reports/review-gates/B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1/review-packet.json
