@@ -23,7 +23,7 @@ full operational source is `skills/econ-exercise-builder.md`.
 - Reviewing any draft paragraph before delivery
 - Comparing a paragraph against the course blueprint
 - Giving structured feedback to a content author (human or AI)
-- Quality assurance before PDF/docx export
+- Quality assurance of the final rendered paragraph before delivery
 
 **Companion skills:**
 - `econ-didactiek` → the underlying pedagogical principles
@@ -34,11 +34,42 @@ full operational source is `skills/econ-exercise-builder.md`.
 
 ## REVIEW PROTOCOL
 
-Run all passes sequentially: Pass 0 first, then Pass 1, then Pass 2. For each check, note PASS, FLAG (minor issue), or FAIL (must fix). Deliver results organized by pass, not interleaved.
+Run all passes sequentially: Pass 0 first, then Pass 1, then Pass 2, then Pass 3
+(final rendered pages). For each check, note PASS, FLAG (minor issue), or FAIL
+(must fix). Deliver results organized by pass, not interleaved. Run after author
+self-checks and applicable mechanical validation; missing final outputs prevent
+final acceptance even if source checks have passed.
 
-**Independent review requirement:** This review MUST be run by a separate sub-agent, NOT by the agent that built the paragraph. The builder has seen the content too many times and will rubber-stamp. See `BUILD-PARAGRAPH.md` Phase 5b.
+**Independent review requirement:** This review MUST be run by a separate sub-agent,
+NOT by the agent that built the paragraph. Author self-review is insufficient.
+See `BUILD-PARAGRAPH.md` A6.
+
+For eligible routine Part A work as defined in `agents/README.md`, this is one
+independent substantive content-review assignment covering didactic, precision,
+teacher, student, visual, accessibility, and rendered-output perspectives. The
+reviewer may consult specialist guidance without spawning extra agents. Additional
+review needs a concrete unresolved issue, a failed check needing specialist
+judgement, an explicit owner request, or an applicable specialist gate; state the
+reason in the existing report. Ineligible and consequential mixed tasks keep their
+existing routes, as do required structural lead review and independent
+PR-readiness. No source-authority hold or publication safeguard is waived.
 
 **Output:** Save the review report as `X.Y.Z-review.md` in the paragraph folder (e.g., `1.3.2-review.md`). This file is a QC artifact required by the chapter builder's completeness gate.
+
+The same reviewer may cover a manageable chapter batch, provided they authored
+none of its reviewed content. Keep a report and identifiable coverage/findings for
+every paragraph, plus chapter continuity and final assembly inspection against
+`BUILD-CHAPTER.md`; a generic chapter PASS is insufficient. Preserve required
+quality records, plans, and handoffs. The reviewer may produce the Part A quality
+record via `econ-quality-control` in the same assignment; this is not a separate
+specialist approval.
+
+After repairs, recheck the changed material and its dependencies, recording the
+scope and unresolved findings. Changed values require rechecking affected
+calculations, graphs, and answers; pagination changes require inspection of
+affected neighbouring pages. Widen further when dependencies warrant it, without
+automatically restarting every unaffected review. An unresolved FAIL blocks
+completion.
 
 ---
 
@@ -184,6 +215,22 @@ These checks apply ONLY to test preparation paragraphs. Skip this section for th
 
 ---
 
+### 1.9 Teacher and typical-student coverage
+
+Record both perspectives explicitly; one does not prove the other. Apply these
+checks to theory and, where relevant, consolidation/test-preparation output.
+
+| Check | What to look for |
+|-------|-----------------|
+| 1.9.1 Teacher coverage | Verify goals, target operations, prerequisite classifications, worked examples, exercise progression, formative feedback, differentiation, transfer, retention, and answer completeness against approved authority. Explain whether the paper lesson can be taught as planned. |
+| 1.9.2 Student orientation | Walk the actual printed task order as a typical 15-year-old 4 vwo student: can they understand the goal, instructions, next action, optional support/skip route, and answer checking without hidden teacher explanation or online material? |
+| 1.9.3 Cognitive load and motivation | Check familiar language, manageable steps, unexplained notation, overcompression, distracting context, and likely confusion or discouragement. The student must be able to connect each graph, table, or flow diagram to its explanatory text. |
+| 1.9.4 Readability and accessibility | Verify readable labels and body text, contrast, non-colour cues, meaningful visual descriptions, and semantic/reading order for the in-scope textbook output. Inspect these in the final page; name any concrete issue needing a specialist. |
+
+Missing required coverage or a defect that prevents the intended paper route is
+a FAIL. A claim of teacher or student readiness without inspected evidence is
+not a PASS.
+
 ## PASS 2: MATHEMATICAL AND CONCEPTUAL PRECISION
 
 **Authoritative reference:** `references/authored/economic_mathematical_precision_reference.md` — all checks below must be verified against this document. When in doubt, the precision reference takes precedence.
@@ -257,12 +304,44 @@ These checks are derived from `references/authored/economic_mathematical_precisi
 
 ---
 
+## PASS 3: FINAL RENDERED PAGES
+
+Apply `references/authored/textbook-rendered-page-acceptance-standard.md` and,
+when figures are involved, `references/authored/textbook-figure-standard.md`.
+Inspect the final PDF and HTML outputs at normal reading scale, including
+exercises and answers. Record full-page PNGs of every changed page, or a contact
+sheet plus named pages inspected, the final output paths, and defect disposition.
+For new paragraphs this includes all pages; chapter work also includes final
+assembly, continuity, front matter, and answer booklet inspection.
+
+Check clipping, overlap, missing images/glyphs, table overflow, readable figure
+labels/captions, page breaks, stale renders, and answer-model readability. Source
+Markdown, SVG checks, or isolated figure crops do not replace full-page proof.
+A student-facing rendered defect or missing proof is a FAIL; only non-core
+future work may remain as flags under the acceptance standard.
+
 ## OUTPUT FORMAT
 
 Present the review as follows:
 
 ```
 # Paragraph Review: [paragraph number and title]
+
+## 1. Scope and evidence
+[Author and independent reviewer identities; eligible routine Part A or other
+route; approved source/action evidence; commands and exit codes; output paths;
+any specialist escalation and its reason; prior findings and repair scope]
+
+## 2. Verdict
+
+**PASS**
+
+[Use exactly one of PASS, PASS WITH FLAGS, or FAIL on the first non-empty line
+above. Preserve this heading for the existing verdict parser. An unresolved
+FAIL or missing required coverage/proof forbids either passing verdict.]
+
+## Pass 0: Asset and File Integrity
+[Required checks and evidence; if incomplete, stop and return FAIL]
 
 ## Pass 1: Didactic Architecture
 
@@ -273,6 +352,14 @@ Present the review as follows:
 [List each issue with: check number, severity (FLAG/FAIL), page reference, 
 specific description, and concrete fix]
 
+### Teacher coverage
+[Goals, prerequisites, worked example/target chain, practice, feedback,
+differentiation, transfer/retention, timing, and answer completeness]
+
+### Student coverage
+[Typical 4 vwo task walk-through, next actions, cognitive load/motivation,
+visual-text links, readability/accessibility, and paper-only completeness]
+
 ## Pass 2: Mathematical and Conceptual Precision
 
 ### Verified correct
@@ -281,6 +368,14 @@ specific description, and concrete fix]
 ### Issues  
 [List each issue with: check number, severity (FLAG/FAIL), page reference,
 specific description, the error, and the correction]
+
+## Pass 3: Final Rendered Pages
+[Final PDFs/HTML, full-page proof paths, pages inspected at normal scale,
+defects and disposition; chapter continuity/final assembly evidence if applicable]
+
+## Repair recheck and unresolved findings
+[Finding IDs, changed material and dependencies rechecked, evidence, remaining
+flags/failures and what each blocks; preserve history rather than erase failures]
 
 ## Summary
 [One paragraph: overall assessment, the 2–3 most important changes, 

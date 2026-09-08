@@ -59,13 +59,13 @@ It does not create a third lane and does not prove the complete product route.
 > `../4veco-lessen/specifications/product-vision.md`, the operational
 > product end-state specification at
 > `../4veco-lessen/specifications/product-end-state.md`, and the **Design
-> Principles** section in [AGENTS.md](AGENTS.md#design-principles). Paragraph
+> Principles** section in [product design principles](docs/workflows/platform-and-companion-reference.md#design-principles). Paragraph
 > work should identify which product-vision pillar it supports. The product
 > north star is a visible route from current readiness to target-exercise
 > readiness. Two design principles govern every surface: **Dual Coding** (every
 > concept pairs text with a visual) and **Unified Student Experience** (same
 > procedures and approaches across all formats). These are non-negotiable.
-> Paragraph landing V2 additionally uses
+> For companion landing work, Paragraph landing V2 additionally uses
 > `../4veco-lessen/specifications/paragraph-landing-layout-v2.md` and the
 > approved visual fixtures in `references/ui/paragraph-landing-v2/` as the
 > visual baseline. Do not build paragraph landing pages from the old lesson
@@ -152,17 +152,21 @@ For a later book, use its approved canonical book outline when one exists. If
 the required book-level layer is absent, stop at foundation planning rather
 than starting from the paragraph in isolation.
 
-# COMMON pre-conditions (read first, applies to BOTH pipelines)
+# Task-specific preconditions
 
-These four references frame every paragraph build, regardless of mode. Read them before touching either Part A or Part B.
+Ordinary Part A assignments start with `docs/workflows/textbook-paragraph-lane.md`
+and the relevant Part A sections below. Read the common authority first; load
+companion-specific instructions only for Part B or complete integration work.
 
-- **`AGENTS.md`** — architecture, deploy rules, design principles. Hoist of hard rules.
+- **`AGENTS.md`** — task routing, teaching authority, essential safety and publication boundaries.
 - **`../4veco-lessen/specifications/product-vision.md`** — canonical
   strategic direction and trade-off logic. Paragraph plans should identify
   which vision pillar they strengthen.
 - **`../4veco-lessen/specifications/product-end-state.md`** — canonical
   end-state definition: every paragraph route moves from current readiness to
   target-exercise readiness.
+For Part B or complete integration work, additionally read:
+
 - **`../4veco-lessen/specifications/companion-core-specifications.md`** —
   stable companion-surface specifications for routes, game row, exit tickets,
   review verdicts, and product-use boundaries.
@@ -397,17 +401,28 @@ Before any review, verify:
 
 ## A6: QC review (INDEPENDENT SUB-AGENT — MANDATORY)
 
-Run `econ-paragraph-review` via a separate sub-agent (not the builder):
+After author self-checks and applicable mechanical validation, run
+`econ-paragraph-review` via a separate sub-agent (not the builder). For eligible
+routine Part A under `agents/README.md`, this is one substantive content-review
+assignment covering teacher, student, didactic, precision, accessibility, and
+final rendered-page quality. Explicit specialist gates and ineligible/mixed tasks
+retain their required routes; release lead review and independent PR-readiness
+remain separate.
 
-> "You are a QC reviewer. You did NOT build this paragraph. Read `econ-paragraph-review`, then review the paragraph at [path]. Run Pass 0 (asset integrity), Pass 1 (didactic), Pass 2 (mathematical). Report all issues."
+> "You are a QC reviewer. You did NOT build this paragraph. Read `econ-paragraph-review`, then review the paragraph at [path]. Run Pass 0 (asset integrity), Pass 1 (didactic, teacher and student coverage), Pass 2 (mathematical), and Pass 3 (final rendered pages). Report all issues."
 
-Save output as `X.Y.Z-review.md`. Fix all FAIL items before proceeding.
+Save output as `X.Y.Z-review.md` with the required `## 2. Verdict` block. Fix all
+FAIL items and have the reviewer recheck affected material and dependencies
+before proceeding, widening for changed calculations/graphs/answers or pagination.
 
 The builder is **prohibited from** running this review itself.
 
 ## A7: Quality ref (INDEPENDENT SUB-AGENT — MANDATORY)
 
-Generate `X.Y.Z-quality-ref.yaml` via a separate sub-agent:
+Generate `X.Y.Z-quality-ref.yaml` via an agent independent of the author. For
+eligible routine Part A, the A6 content reviewer performs this in the same
+assignment using `econ-quality-control`; preserve all required schema fields and
+honest findings. Outside that exception, retain the separate quality-ref agent:
 
 > "Read `econ-quality-control`. Inventory all components that actually exist (check file existence). Run asset integrity checks. Generate quality_ref YAML. Be honest about gaps."
 

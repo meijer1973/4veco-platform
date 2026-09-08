@@ -41,6 +41,11 @@ const RULES = Object.freeze([
     required: [
       /exactly two operational lanes/i,
       /Paragraph PDFs and `build_pdf\.py` are normal Part A textbook outputs for human review/i,
+    ],
+  },
+  {
+    file: 'docs/workflows/platform-and-companion-reference.md',
+    required: [
       /14 files as a validator baseline, not as proof that the full product route is complete/i,
     ],
   },
@@ -95,6 +100,65 @@ const RULES = Object.freeze([
       /Start -> Leer -> Check -> Oefen -> Exit ticket/i,
       /Paragraph[\s\S]{0,20}PDF output and `build_pdf\.py` are normal Part A textbook outputs for human[\s\S]{0,20}review/i,
     ],
+  },
+  {
+    file: 'agents/README.md',
+    required: [
+      /Eligibility is limited to routine Part A[\s\S]{0,180}existing approved teaching authority, production tools, and output\s+contracts/i,
+      /Platform\/generator changes, companion interaction work, protected-source\s+or curriculum changes, and governance or review-policy changes are outside this\s+exception/i,
+      /Mixed tasks retain the review required by their consequential changes/i,
+      /one independent substantive content reviewer/i,
+      /separate from every author whose content they review/i,
+      /An explicit owner request or applicable specialist\/human gate still applies/i,
+      /Do not fabricate separate\s+specialist approvals or relabel author self-checks as independent review/i,
+      /Required structural\s+lead review, independent PR-readiness routing, current-head CI, human\s+authorization, and authorized integration remain mandatory/i,
+    ],
+  },
+  {
+    file: 'agents/lead-reviewer-agent.md',
+    required: [
+      /Outside that exception, or for the concrete specialist issue, use these routes/i,
+      /absent separate specialist reports alone are not a blocker within this exception/i,
+      /unless eligible routine Part A has genuine recorded teacher coverage in its independent `econ-paragraph-review`/i,
+      /unless eligible routine Part A has genuine recorded student coverage in its independent `econ-paragraph-review`/i,
+      /Consolidated content review lacks required coverage, comes from its author, or contains an unresolved FAIL/i,
+      /Required structural lead review and independent PR-readiness routing remain\s+separate release responsibilities/i,
+    ],
+  },
+  {
+    file: 'skills/econ-paragraph-review.md',
+    required: [
+      /Author self-review is insufficient/i,
+      /## 2\. Verdict\s+\*\*PASS\*\*/,
+      /### Teacher coverage/,
+      /### Student coverage/,
+      /## PASS 3: FINAL RENDERED PAGES/,
+      /isolated figure crops do not replace full-page proof/i,
+      /Changed values require rechecking affected\s+calculations, graphs, and answers; pagination changes require inspection of\s+affected neighbouring pages/i,
+      /An unresolved FAIL blocks\s+completion/i,
+      /No source-authority hold or publication safeguard is waived/i,
+      /quality records, plans, and handoffs/i,
+    ],
+  },
+  {
+    file: 'skills/econ-chapter-builder.md',
+    required: [
+      /one independent\s+`econ-paragraph-review` reviewer to a manageable chapter batch/i,
+      /Every paragraph still needs\s+identifiable coverage\/findings and its required report/i,
+      /Required structural lead review and\s+independent PR-readiness remain separate release responsibilities/i,
+      /this reviewer also inspects the final chapter and answer booklet/i,
+    ],
+    forbidden: [/For \*\*each paragraph\*\* \(theory AND consolidation\), spawn a separate review sub-agent/i],
+  },
+  {
+    file: 'skills/econ-consolidation-builder.md',
+    required: [
+      /applicable Pass 1 didactic\/teacher\/student coverage/i,
+      /Pass 3 final rendered pages/i,
+      /outside the exception retain separate review routing and all explicit specialist gates/i,
+      /The author cannot perform their own\s+substantive review/i,
+    ],
+    forbidden: [/Part A steps A5–A7 yourself/i],
   },
 ]);
 

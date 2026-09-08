@@ -53,7 +53,7 @@ Follow the `econ-chapter-builder` skill for the full orchestration process:
 1. **Plan** — pass the action-specific Book foundation check for `chapter_planning`, read the blueprint, analyse dependencies, determine build order (parallel vs sequential), set cross-paragraph conventions (shared contexts, notation, colours, interleaving targets). Save the authority pins and decisions in `_chapter-plan.md`.
 2. **Build** — delegate each paragraph to a sub-agent that follows `econ-textbook-paragraph` exactly. Each sub-agent must produce ALL deliverables: 3 .md files, 3 .pdf files, build_pdf.py, _assets/ with SVG+PNG pairs.
 3. **Verify** — after each sub-agent returns, run completeness check. If anything missing, send back.
-4. **QC** — independent sub-agent review per paragraph (Pass 0 + Pass 1 + Pass 2 from `econ-paragraph-review`).
+4. **QC** — independent content review with `econ-paragraph-review` (Pass 0 + Pass 1 + Pass 2 + final rendered-page Pass 3). For eligible routine Part A under `agents/README.md`, one reviewer may cover a manageable batch, including consolidation, chapter continuity, and final assembly. Keep identifiable coverage/findings and required records for every paragraph. The reviewer must be independent of every author in the batch; explicit specialist gates and ineligible/mixed task routes remain.
 
 See `econ-chapter-builder` skill for detailed instructions on dependency analysis, delegation prompts, and completeness gates.
 
@@ -114,9 +114,12 @@ After assembly, re-verify assets in the chapter context:
 
 ## Phase 4: Cross-paragraph consistency (INDEPENDENT SUB-AGENT — 10 min)
 
-These checks only make sense at the chapter level. Must be run by a sub-agent that did not build the paragraphs.
+These checks only make sense at the chapter level. They must be run by a
+sub-agent that did not build the paragraphs. For eligible routine Part A, use the
+same independent content reviewer from Stage 1; chapter continuity is part of
+that assignment, not an automatic additional reviewer.
 
-> Spawn a sub-agent: "You are a chapter-level reviewer. Read the following for chapter [X.Y]:
+> Assign the independent reviewer: "You are a chapter-level reviewer. Read the following for chapter [X.Y]:
 > 1. `_chapter-plan.md` (shared conventions, dual coding plan, procedure plan)
 > 2. The blueprint chapter spec
 > 3. All paragraph paragraaf.md and opgaven.md files
@@ -175,7 +178,16 @@ This checks:
 
 **The chapter is not done until the validator passes with 0 errors.**
 
-For a command-by-command validation report, use `agents/testing-agent.md`. For coordinating chapter-level review outputs, validator evidence, accessibility review, visual QA, and any human-review packet into one go/no-go decision, use `agents/lead-reviewer-agent.md`.
+For eligible routine Part A, record validator commands and exit codes within the
+existing review; executing a validator does not itself require a testing agent.
+The content reviewer also inspects final full-page chapter and answer-booklet
+output after assembly under `econ-paragraph-review` Pass 3. Recheck repairs and
+affected dependencies, including neighbouring pages after pagination changes.
+Use additional specialist review only for the concrete issues/gates in
+`agents/README.md`. Outside the routine exception, use `agents/testing-agent.md`
+for a command-by-command validation report. Required structural lead review and
+independent PR-readiness remain separate release responsibilities under
+`agents/lead-reviewer-agent.md` and current publication governance.
 
 ## Phase 7: Final checklist
 
@@ -183,7 +195,7 @@ For a command-by-command validation report, use `agents/testing-agent.md`. For c
 |---|-------|--------|
 | 1 | `validate-chapter.js` passes with 0 errors | □ |
 | 2 | Book foundation check pins the current owner-approved outline and no open hold blocks the current completion action | □ |
-| 3 | Cross-paragraph consistency review completed (sub-agent) | □ |
+| 3 | Independent cross-paragraph consistency and final rendered assembly review completed; the routine batch reviewer may cover both | □ |
 | 4 | Front page: title, TOC, leerdoelen, catchy intro — all on one page | □ |
 | 5 | Front page leerdoelen match blueprint goals (every blueprint goal appears on front page, no invented goals) | □ |
 | 6 | Chapter PDF: images render, pages break correctly (visual check) | □ |

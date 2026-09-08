@@ -129,6 +129,9 @@ it does not replace the target registry or authorize lesson production.
 - `RESEARCH_AGENT_MAP_REFERENCES.md`
 - `AGENT_GITHUB_ENTRY.md`
 - `AGENTS.md`
+- `docs/workflows/task-planning-and-review.md`
+- `docs/workflows/platform-and-companion-reference.md`
+- `docs/review/agent-publication-workflow.md`
 - `BUILD-PARAGRAPH.md`
 - `BUILD-CHAPTER.md`
 - `docs/workflows/paragraph-lane-vocabulary.md`
@@ -205,6 +208,9 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_PROMPT_REFERENCES.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP_REFERENCES.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENTS.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/task-planning-and-review.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/platform-and-companion-reference.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/agent-publication-workflow.md
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/specifications/product-vision.md
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/specifications/product-vision.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md

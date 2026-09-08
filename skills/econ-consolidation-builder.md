@@ -356,11 +356,14 @@ Saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.4.1 Toets hoofdstuk 2/`):
 
 The consolidation builder itself does **not** run QC — that is handled by the chapter orchestrator (`econ-chapter-builder` Part 4). When building consolidation as part of a chapter:
 
-1. The orchestrator spawns an independent review sub-agent that runs `econ-paragraph-review` (Pass 0 asset integrity + Pass 2 mathematical precision) on the consolidation output
-2. The orchestrator spawns a sub-agent to generate `X.Y.Z-quality-ref.yaml` via `econ-quality-control`
+1. The orchestrator assigns independent `econ-paragraph-review`: Pass 0 integrity, applicable Pass 1 didactic/teacher/student coverage, Pass 2 precision, and Pass 3 final rendered pages. For eligible routine Part A under `agents/README.md`, the chapter batch reviewer covers this; outside the exception retain separate review routing and all explicit specialist gates
+2. The same independent reviewer generates `X.Y.Z-quality-ref.yaml` via `econ-quality-control` within the eligible routine assignment; otherwise retain the separate quality-ref agent
 3. Both artifacts are required by the chapter completeness gate
 
-When building consolidation standalone (not as part of a chapter), run the QC steps from `BUILD-PARAGRAPH.md` Part A steps A5–A7 yourself.
+When building consolidation standalone, arrange `BUILD-PARAGRAPH.md` A5–A7 with
+the same independence and eligibility rules. The author cannot perform their own
+substantive review. Preserve verdicts and findings, and recheck repairs and
+affected dependencies before closure.
 
 ---
 

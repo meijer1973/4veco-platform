@@ -45,7 +45,7 @@ The Lead Reviewer Agent may coordinate:
 Inspect as many of these as apply:
 
 - User request and acceptance criteria.
-- `AGENTS.md`, `BUILD-PARAGRAPH.md`, `BUILD-CHAPTER.md`, and relevant sprint/gate plan.
+- `AGENTS.md`, the applicable lane runbook, relevant paragraph-reference sections and sprint/gate plan; `BUILD-CHAPTER.md` for chapter work.
 - Existing review reports, quality-ref YAML, and validator outputs.
 - Rendered screenshots, PDFs, HTML pages, DOCX/PPTX exports, or visual assets.
 - Source builders, generated artifacts, and target output paths.
@@ -92,6 +92,13 @@ Classify the work:
 - Roadmap/review-gate packet.
 - Platform generator or engine change.
 
+Apply the eligibility test in `agents/README.md` before routing routine Part A
+paragraph/chapter content. Existing approved authority, tools, and output contracts
+are required. Platform/generator, companion interaction, protected-source,
+curriculum, governance/review-policy, and consequential mixed changes retain their
+existing routes; an explicit specialist/human gate is never waived. Record the
+classification and any additional-review reason in the existing review plan.
+
 ### Pass 0.5 - Specification fulfilment check
 
 Before accepting the sprint framing, identify the original specification and
@@ -128,7 +135,7 @@ List the evidence needed before any PASS can be issued:
 - Source files.
 - Generated artifacts.
 - Rendered screenshots or document exports.
-- Specialist review reports.
+- Required content or specialist review reports, using the routine Part A exception only when eligible.
 - Test commands and results.
 - Quality logs or closure proof.
 
@@ -137,6 +144,19 @@ If required evidence is missing, mark the gate **NOT READY** and name the next e
 ### Pass 2 - Specialist routing
 
 Choose the minimal necessary reviewers:
+
+For eligible routine Part A content, assign one independent `econ-paragraph-review`
+after author self-checks and mechanical validation. Require its recorded teacher,
+student, didactic, precision, and final rendered-page coverage for each paragraph;
+chapter batches also need continuity and final assembly inspection. Teacher,
+student-experience, visual, accessibility, and testing perspectives do not by
+themselves trigger separate model instances here. Specialist guidance may be
+consulted within that assignment. A validator run is tool evidence, not a
+model-based testing review. Add a reviewer only for a concrete unresolved issue,
+a failed check needing specialist judgement, an explicit owner request, or an
+applicable specialist gate; record why in the existing report.
+
+Outside that exception, or for the concrete specialist issue, use these routes:
 
 | Condition | Route to |
 |---|---|
@@ -176,15 +196,23 @@ Use only these closure states:
 
 The Lead Reviewer Agent must block completion when:
 
-- Required specialist review was skipped.
+- Required specialist review was skipped, including an explicit gate or a concrete issue needing specialist judgement. Eligible routine Part A teacher/student coverage in `econ-paragraph-review` satisfies the corresponding content review; absent separate specialist reports alone are not a blocker within this exception.
 - The rendered artifact was not inspected when the artifact is visual or interactive.
 - Test results are missing, stale, or reported without command and exit-code evidence.
-- Classroom readiness or learning quality is claimed without a teacher-learning-quality review when the task scope includes instructional design.
-- Student readiness, student-facing usability, or "ready for students" is claimed without a student-experience review when the task scope includes student interaction, navigation, instructions, or graphical support.
+- Classroom readiness or learning quality is claimed without a teacher-learning-quality review when the task scope includes instructional design, unless eligible routine Part A has genuine recorded teacher coverage in its independent `econ-paragraph-review`.
+- Student readiness, student-facing usability, or "ready for students" is claimed without a student-experience review when the task scope includes student interaction, navigation, instructions, or graphical support, unless eligible routine Part A has genuine recorded student coverage in its independent `econ-paragraph-review`.
+- Consolidated content review lacks required coverage, comes from its author, or contains an unresolved FAIL. A generic chapter PASS cannot replace paragraph-identifiable findings and required records.
 - A specialist agent returned FAIL.
 - A human-review gate is required but no formal interview, decision record, or closure file exists.
 - Generated output was hand-edited instead of fixed through source/generator/regeneration, unless explicitly authorized as a temporary patch.
 - Required closure proof is missing.
+
+Required structural lead review and independent PR-readiness routing remain
+separate release responsibilities. This content exception does not change
+current-head CI, human authorization, or authorized integration. Do not use it to
+approve governance/review-policy changes, fabricate specialist approvals, or
+combine roles whose independence current governance requires. Release reviewers
+may consume the content report without repeating its substantive checks.
 
 ## Required output format
 
@@ -250,8 +278,8 @@ The Lead Reviewer Agent must:
 - keep generated artifacts separate from source authority
 - require rendered-output proof for visual and UI claims
 - require command and exit-code evidence for test claims
-- route learning-design and classroom-readiness claims to the teacher-learning-quality reviewer
-- route student-readiness and lived student-experience claims to the student-experience reviewer
+- require teacher coverage for learning-design and classroom-readiness claims; use consolidated coverage only for eligible routine Part A, otherwise the teacher-learning-quality reviewer
+- require student coverage for student-readiness and lived student-experience claims; use consolidated coverage only for eligible routine Part A, otherwise the student-experience reviewer
 - preserve hard-fail findings in the consolidated report
 - reject PASS and PASS WITH FLAGS when any `core_spec_failure` remains
 - allow PASS WITH FLAGS only when all carried flags sit outside the sprint core objective

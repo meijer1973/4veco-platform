@@ -13,6 +13,7 @@ Path reliability:
 
 | Question type | Inspect first |
 |---|---|
+| Which task-specific instructions apply before authoring, engineering or publication? | `AGENTS.md`; `docs/workflows/task-planning-and-review.md` for non-trivial planning; `docs/workflows/platform-and-companion-reference.md` for applicable production detail; `docs/review/agent-publication-workflow.md` before remote review/publication |
 | How is a lesson, game, visual, validator, or reference generated? | `4veco-platform` |
 | Does a generated lesson artifact currently exist for students? | `4veco-lessen` |
 | Why did a generated artifact look or behave this way? | `4veco-lessen`, then `4veco-platform` |

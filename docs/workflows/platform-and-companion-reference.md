@@ -1,0 +1,434 @@
+# Platform and Companion Reference
+
+Read the applicable sections for platform generators/engines, companion
+production, product architecture, exam ingestion or legacy work. Ordinary
+printed paragraphs start with [the textbook runbook](textbook-paragraph-lane.md),
+its teaching sources and mandatory skills; this entire reference is not an
+additional universal read. Paths in code spans are repository-relative.
+The original product, design, deployment and tool details are retained below.
+
+## Green Gate status: unfrozen
+
+The temporary Green Gate deployment/output freeze was lifted on 2026-04-24 after explicit user sign-off.
+
+Evidence at unfreeze:
+- `npm.cmd run check:platform` passes
+- `npm.cmd run check:book -- "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"` passes
+- validators are aligned with the flat layout
+- `validate-paragraph.js` is active and required
+- stale blocking reports are resolved or explicitly excluded
+- `1.1.1 Schaarste en economisch denken` proves the first Book 1 companion path end-to-end
+
+Allowed after unfreeze:
+- controlled chapter/book/paragraph production in `../4veco-lessen`
+- companion-material generation in `../4veco-lessen`
+- deploy/generator runs against `../4veco-lessen` when the task intentionally calls for production output
+- normal platform code, validator, report, and planning work
+
+Required after unfreeze:
+- follow `BUILD-PARAGRAPH.md` and `BUILD-CHAPTER.md` for production work
+- run the relevant validators after generating or deploying output
+- keep roadmap sprint status current when production or platform state changes
+- do not treat `scripts/deploy.js` as read-only; it writes to the target
+
+Still frozen separately:
+- the legacy Module 3 target remains frozen until September 2026 for student-localStorage integrity; do not reason new work back into that retiring stack
+
+## Design Principles
+
+These two principles are the DNA of every product this platform produces — lesson materials, textbooks, assessments, and any future format. Every builder, skill, and template must follow them.
+
+The strategic product direction and trade-off logic are defined in
+`../4veco-lessen/specifications/product-vision.md`: future non-trivial
+sprints should identify which vision pillar they strengthen, whether they are
+an advantage or parity-area investment, and what proof is required. The
+operational product end state is defined in
+`../4veco-lessen/specifications/product-end-state.md`: every paragraph gives
+the student a visible route from current readiness to target-exercise
+readiness. Platform generators, engines, validators, and source-data contracts
+must support that route. A sprint may deliberately ship a smaller controlled
+step, but it must name the follow-up work needed to reach the full product
+state.
+
+### 1. Dual Coding (Paivio/Mayer)
+
+Every document that explains a concept must pair text with a visual aid. Information is retained better when it arrives through both verbal (text/speech) and visual (graph/diagram/color) channels.
+
+**Rules:**
+- Explainer documents (voorkennis, vaardigheden) embed relevant visual variants from `_assets/` — not just the presentatie
+- Samenvatting includes key concept graphs alongside text cells
+- Exercises reference or include graphs where the concept involves graphical reasoning
+- The same visual concept that appears in the presentatie should reappear in the vaardigheden doc that teaches the same skill, but not as a literal copy-paste of the textbook image. Use surface-adapted variants: slide, docx, summary thumbnail, web-light, and web-dark where relevant.
+- Part A textbook visuals are source material, not finished companion artwork. Companion visuals may reuse the same data, labels, and SVG geometry, or may be redrawn, but they must be adapted to the layout and medium where they appear.
+- Web pages with light/dark modes must provide theme-appropriate visual variants when a graphic contains backgrounds, axes, text, fills, or low-contrast colors. Do not rely on a light-mode textbook PNG inside dark mode.
+- Domain color coding (blauw/amber/groen) provides visual recognition without reading
+- Formula boxes in monospace provide visual distinction from running text
+
+### 2. Unified Student Experience
+
+A student working through all materials for one paragraph should feel like they're following one coherent lesson, not 8 independent documents. The core anchor is **consistent procedures and approaches** — the same method, the same steps, the same reasoning structure everywhere. Products and numbers may vary by context, but the approach must be identical.
+
+**Rules:**
+- **Same procedure steps**: If a skill has 3 steps in the vaardigheden doc, the stappenplan game must use those exact 3 steps (same labels, same order, same reasoning). The procedure is the constant; the context can change.
+- **Same approach to solving**: If the vaardigheden teaches "step 1: vul q₂=0 in, step 2: vul q₁=0 in, step 3: verbind", then every document that references snijpunten calculation follows that same approach.
+- **Same visual concept reinforcing the approach**: The graph/concept from the presentatie should reappear in the vaardigheden explanation of the same skill — so students see the visual anchor for the procedure they're learning. This means conceptual continuity, not literal file reuse. Adapt the visual to the surface: slide composition, Word layout, web light mode, web dark mode, and thumbnail use can each need their own SVG/PNG variant.
+- **Same terminology**: Enforced via the `_paragraph-plan.md` terminologie table.
+
+**How to enforce:** The `_paragraph-plan.md` contains a **procedure-stappen-plan** that defines the canonical step sequence for each skill. All builders — vaardigheden, stappenplan game, presentatie, inoefening — must follow these exact steps. A **visual-variants plan** maps each concept visual to its surface-specific files, and a **visuelen-toewijzing** table maps those variants to every builder that must embed them.
+
+For companion artifact **authoring and regeneration**, use `skills/econ-companion-artifacts.md`. It is the platform-wide standard for the 14-file Part B `student-web` validation baseline (the paragraph route/index, companion HTML and games, and presentation HTML/PPTX), the wider product route, and explicitly scoped exports. Treat the 14 files as a validator baseline, not as proof that the full product route is complete: the current end state is `Start -> Leer -> Check -> Oefen -> Exit ticket`, with an advisory short check and a separate target-equivalent exit ticket. The `office`/`legacy-full` profiles add 13 DOCX files, including differentiated handouts; those exports are not part of the default baseline. Paragraph PDFs and `build_pdf.py` are normal Part A textbook outputs for human review; `publisher-print` remains the later Part A chapter/book handoff profile, not a separate lane or the only PDF gate. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules; if a builder skill conflicts, the companion-artifacts skill wins on student-facing rules.
+
+For companion artifact **review**, use `agents/econ-companion-visual-review.md`. It checks the rendered student experience, not just source files: visual-text synchronization, procedure fidelity, affordance, cognitive load, accessibility, and source-output parity. A companion surface with missing visual variants, conflicting visual/text examples, broken procedure steps, debug labels, or no next-step routing is not done. The skill above and this agent are aligned: the skill is the authoring spec, the agent is the closure gate.
+
+### Quality control: Part A and Part B have separate review records (L1.5V Bucket F)
+
+Every paragraph completed in both lanes carries TWO review records and ONE
+quality-ref. A Part A-only assignment requires its Part A record and block;
+it does not claim companion completion:
+
+- `${parNr}-review.md` — Part A textbook review (output of `econ-paragraph-review` skill).
+- `${parNr}-companion-visual-review.md` — Part B companion review (output of `econ-companion-visual-review` agent).
+- `${parNr}-quality-ref.yaml` (`schema_version: 2`) — single file with `partA:` block (asset state, content presence, Part A review verdict) and `companion:` block (Part B review verdict, hard-fail count, procedure step count, alt-text + checklist-route + artifact-tool-render flags, surface-by-surface state).
+
+`scripts/validate-paragraph.js` reads each review file by EXACT name (no `endsWith` filename match) and parses verdicts structurally from the `## 2. Verdict` block. Modes: `--mode part-a` gates Part A review only; `--mode part-b` gates companion review only; `--mode complete` aggregates both. A FAIL verdict in either review fails the corresponding mode. Part B and complete modes also require `${parNr}-quality-ref.yaml` to contain a `companion:` block whose `review_file`, `review_verdict`, and `hard_fails_open` values match `${parNr}-companion-visual-review.md`. Current schema details: `docs/workflows/paragraph-quality-ref-schema-v2.md`.
+
+Use `npm run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD` before closing platform workflow/tooling PRs. For lesson-output PRs, run the checker against the lesson repo: from `4veco-lessen`, invoke `../4veco-platform/build-scripts/workflows/check-paragraph-lane-scope.js --lane textbook|companion --base origin/main --head HEAD`; from `4veco-platform`, pass `--cwd ../4veco-lessen`. Textbook lane changes may not contain companion outputs; companion lane changes may not contain Part A textbook outputs; shared lane changes may not contain lesson-output files unless a machine-readable lane-scope exception is included and reviewed.
+
+Every skill in `skills/` carries a `pipeline:` frontmatter field (Part A producer / Part B producer / shared infrastructure / Part A reviewer / Part A assembler / Part A orchestrator / Part B producer (umbrella)) so a glance at frontmatter tells you which pipeline owns the skill's output and which gate runs against it.
+
+Review assignments and their eligibility conditions are defined in
+`agents/README.md` and `agents/lead-reviewer-agent.md`; follow that routing rather
+than derive additional assignments from this design reference. The specialist
+protocols remain available for the selected scope: `visual-qa-agent.md` for
+visual clarity, geometry and production readiness; `teacher-learning-quality-review-agent.md`
+for learning design; `student-experience-review-agent.md` for a typical 4 vwo
+student's orientation, cognitive load, motivation and visual understanding;
+`testing-agent.md` for command/exit-code proof; and `accessibility-agent.md` for
+readability, contrast, alt text, OCR, semantics and inclusive access (all under
+`agents/`). Visual polish, accessibility and passing tests do not prove learning;
+teacher approval alone does not prove student usability. Required coverage and
+explicit specialist gates remain mandatory under the selected route.
+
+## Exam Ingestion End-State
+
+This repository is being hardened toward official-exam-question ingestion.
+
+A successful platform reference layer must be able to ingest a new official
+CvTE economics exam question, including source annexes and the official
+correction model, and decompose it into:
+
+- content concepts;
+- calculation operations;
+- graph/table/source-reading operations;
+- reasoning operations;
+- answer-writing and correction-model operations;
+- required micro-teaching units;
+- missing or weak MTU candidates;
+- lesson-build implications.
+
+Real exam questions and official correction models are stronger evidence than
+syllabus prose. Do not mint units from syllabus text alone. Use official exam
+evidence, reviewed target exercises, and human-reviewed gate decisions before
+protected reference mutation.
+
+## Architectural principles
+
+Three decisions that govern what lives in this platform and how it evolves. These are not style preferences — they determine which proposals fit the project and which are reasoning backwards into a dying direction.
+
+### 1. Exercises are the source of truth
+
+Lesson goals and the micro-teaching-units catalog derive from target exercises — especially real CvTE exam questions — not from exam-program text or syllabus abstractions. Units exist because an exercise requires a skill, not because a syllabus sentence implies one might. Bulk-extracting from the exam program produces ghost skills that appear in reports but never in real work.
+
+**Ground-truth hierarchy (strongest to weakest):**
+1. Real CvTE exam questions from past havo/vwo papers
+2. Blueprint target exercises in `references/authored/course-target-exercises.json`, currently backed by the active owned blueprint declared in that registry
+3. Target exercises already built in the platform (paragraph-level)
+4. Proeftoets-eindbazen and consolidation exercises
+5. Syllabus eindtermen — for grouping and coverage reporting only, never for minting
+6. Blueprint prose in the active `references/owned/course-blueprint-v*.md` source — descriptive context for the target exercises above
+
+**How to apply:**
+- When creating an exercise or analyzing an exam question, check every required skill. Missing units are minted via CLI (`build-scripts/references/unit-add.js`) with exam_codes and needs populated.
+- Never pre-mint units from the syllabus. Domain A (Vaardigheden) especially grows exercise-first — CvTE lists many abstract skills there that rarely concretize into exam questions.
+- Gap reports (exam-vs-program-gaps, blueprint-vs-exam-gaps, exam-question-type-distribution) surface drift between syllabus claims, real exam reality, blueprint intent, and built materials. **Gaps are diagnostic signal, not a to-do list to auto-fill.**
+
+### 2. Machine-only editing — the goal end-state
+
+Hand-edits to machine-authored references and generated artifacts are forbidden. Humans propose changes via CLI scripts (eventually wrapped by natural-language skills); the CLI validates and writes. If a human hand-edits a machine reference, the change does not survive: next script run or next report reverts or flags it.
+
+**Why:** Integrity at scale. A catalog with DAG dependencies, exam-code cross-references, and procedure consistency cannot be maintained by hand without silent drift as soon as the dataset exceeds one person's working memory.
+
+**Current state (direction, not yet uniform):**
+- `references/machine/` — already enforced. Edits only via `build-scripts/references/*-edit.js`. Never via Edit/Write tools.
+- `references/external/` — machine-refreshed (re-extracted from PDFs, re-fetched from URLs). Same principle, different source.
+- `references/authored/` — still hand-edited by design. Long-term direction: shrink this folder as more references gain machine-editing pipelines. Folder location signals current status.
+
+**How to apply:**
+- When the user asks to change a unit, formula, procedure, or term in a machine reference: invoke or design the appropriate CLI command. Do not open the file and edit.
+- Skills that modify machine references shell out to the CLI; they have no file-write capability on machine references.
+- When a new hand-maintained reference becomes painful (drift, inconsistency, scale): the answer is to build a CLI pipeline and migrate it from `authored/` to `machine/`, not to add more manual process.
+
+### 3. The legacy game target is being retired — don't reason backwards into it
+
+The current legacy game target (historically Module 3) is frozen until September 2026 for student-localStorage integrity. It will be retired in favor of markdown-native material in `4veco-lessen/`. `3-Module-3-rewire-test/` is a testing surround layered on top of that legacy target — partially broken in several places because the target itself is (vaardigheden pages come from `.docx` via `convert_vaardigheden.py`, a lossy binary source).
+
+**How to apply:**
+- Don't propose refactors that improve the legacy target's `.docx → HTML` path (e.g. teaching `convert_vaardigheden.py` to emit editorial HTML, or building a proper `build-vaardigheden-shells.js` that reads the `.docx`). That's reasoning backwards into a dying stack.
+- The `reskin-vaardigheden.js` + deploy pipeline is a bridge that works until the next-year testing surround exists — leave it.
+- If a legacy-target-specific issue looks expensive to fix, flag the decision back to the user ("this is in the retiring stack — is it worth the time?") rather than diving in.
+- New content flows into `4veco-lessen/Boek N - titel/` as markdown-native; that is the direction.
+
+## Structuur
+
+```
+4veco-platform/
+├── engines/                    ← Game engines (broncode) — 5 games
+│   ├── quiz-engine.js, quiz-ui.js, quiz.css
+│   ├── reasoning-engine.js, reasoning-ui.js, reasoning.css
+│   ├── skilltree-engine.js, skilltree-ui.js, skilltree.css
+│   ├── newsdetective-engine.js, newsdetective-ui.js, newsdetective.css
+│   ├── procedure-engine.js, procedure-ui.js, procedure.css  ← stappenplan-game
+│   ├── skilltree/base-elements.js, explanations.js
+│   ├── voorkennis.js, voorkennis.css  ← geen game, maar een doc-renderlaag
+│   ├── theme.js
+│   └── tests/                  ← Unit tests + data validation tests
+├── build-scripts/              ← Build pipeline (platform/, lib/, templates/, content/, archive/)
+├── source-data/
+│   ├── book-1/
+│   │   └── reasoning/          ← Boekgerichte reasoning-CSV's (actieve richting)
+│   └── legacy-target/          ← Legacy input voor het oude game-target
+│       ├── reasoning/*.csv     ← Bron-CSV's voor redeneer-spel
+│       └── skilltree/*.js      ← Per-paragraaf skill config
+├── scripts/
+│   ├── deploy.js               ← Kopieert engines + genereert content naar lesson/book target
+│   ├── check-links.js          ← Verifieert alle interne links
+│   ├── verify-deployment.sh    ← Post-push verificatie
+│   └── pre-push-hook.js        ← Git hook
+├── skills/                     ← Shared skills (didactiek, templates, grafieken, quality control) — for every agent
+├── agents/                     ← Reusable review-agent specifications for bounded QA roles
+├── references/                 ← Authoritative standards, organised by maintenance status:
+│   ├── external/                ←   Mirrored from outside bodies (CvTE, inspectie, school); machine-refreshed
+│   ├── authored/                ←   Hand-edited (legacy bucket; target to shrink)
+│   └── machine/                 ←   Edited only via CLI scripts; integrity-enforced
+└── package.json                ← Jest voor tests
+```
+
+## Deploy workflow
+
+```bash
+# Automated layer bouwen en kopiëren naar een target:
+node scripts/deploy.js "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"
+
+# Legacy alias:
+npm run deploy:legacy
+```
+
+De deploy doet:
+1. Kopieert engine files → `<module>/shared/`
+2. Runt alle generators (skilltree, reasoning, quiz, newsdetective, landing pages)
+3. Verificatie: link checker + data tests
+
+### Belangrijk: scope van deploy
+
+`deploy.js` bouwt alleen de **automated layer**:
+- engine-copy
+- quiz/newsdetective/reasoning/skilltree shells
+- landing pages
+- link checks
+- data tests
+
+`deploy.js` bouwt **niet** automatisch:
+- presentaties
+- uitleg voorkennis
+- uitleg vaardigheden
+- nieuws met visual
+- samenvattingen
+- begeleide inoefeningen
+- opgavensets
+- YouTube-video pagina's
+- docx → html conversies
+
+Voor de volledige paragraaf-productie: volg [BUILD-PARAGRAPH.md](../../BUILD-PARAGRAPH.md).
+
+### Deployen naar een ander target
+```bash
+node scripts/deploy.js "../4veco-lessen/Boek N - [Titel]"
+```
+Zelfde engines, zelfde base-elements, andere content data.
+
+## Build scripts met MODULE_ROOT
+
+Alle build scripts accepteren `MODULE_ROOT` als env var. Zonder die var schrijven ze naar hun parent directory (backward-compatible).
+
+```bash
+# Eén script draaien tegen een specifieke target-root:
+MODULE_ROOT="../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod" node build-scripts/platform/build-skilltree-shells.js
+```
+
+| Script | Genereert |
+|--------|-----------|
+| `build-skilltree-shells.js` | HTML shells + data files in `shared/skilltree/` |
+| `build-reasoning-engine.js` | HTML shells voor redeneer-spel |
+| `build-reasoning-questions.js` | CSV → JS data file in `shared/reasoning/` |
+| `generate-quiz-shells.js` | HTML shells voor instapquiz |
+| `build-newsdetective-shells.js` | HTML shells voor nieuws-detective |
+| `build-landing-page.js` | index.html voor paragrafen, hoofdstukken, module; paragraph pages must use the approved landing V2 fixtures in `references/ui/paragraph-landing-v2/` |
+| `template-B_voorkennis.js` | `uitleg voorkennis.docx` |
+| `pptx-331-rol-overheid.js` | Presentatie `.pptx` (reference builder; uses `lib-pptx.js`) |
+
+Let op: deze tabel is niet de volledige paragraph workflow. Veel rijke assets gebruiken reference scripts of converters buiten `deploy.js`. Zie [BUILD-PARAGRAPH.md](../../BUILD-PARAGRAPH.md) voor de complete productieketen.
+
+---
+
+## Review and Tool Routing
+
+Use the current Codex toolchain and the repository review gates rather than a
+hardcoded vendor/model table. For creative or high-stakes production work,
+prefer stronger reasoning, rendered-output inspection, and the relevant
+specialist reviewer. For routine calculations or narrow checks, use the fastest
+tool that still preserves evidence quality. The durable rule is not model name;
+it is whether the work has the required source, rendered, validator, and review
+proof.
+
+---
+
+## Skills — Automatische trigger-regels
+
+Skills staan in `skills/`. Ze worden automatisch geladen op basis van de taak.
+
+| Taak | Laad deze skills |
+|------|-----------------|
+| Presentatie maken | `econ-pptx-templates` + `economic-graph` + `econ-didactiek` |
+| Uitleg voorkennis maken | `econ-explainer-docs` + `econ-word-templates` + `economic-graph` |
+| Uitleg vaardigheden maken | `econ-explainer-docs` + `econ-word-templates` + `economic-graph` |
+| Nieuws met visual maken | `econ-nieuws-exercise` + `econ-word-templates` + `economic-graph` |
+| Begeleide inoefening maken | `econ-word-templates` + `econ-didactiek` |
+| Opgaven/antwoorden maken | `econ-word-templates` + `econ-didactiek` |
+| Hoofdstuksamenvatting maken | `aanpak-samenvattingen` + `econ-word-templates` + `economic-graph` |
+| Textbook paragraph bouwen | `econ-textbook-paragraph` + `econ-exercise-builder` + `econ-didactiek` + `economic-graph` + `econ-pdf-builder` |
+| Exercises genereren (standalone) | `econ-exercise-builder` + `econ-didactiek` + `economic-graph` |
+| Markdown → PDF exporteren | `econ-pdf-builder` + `economic-graph` |
+| Consolidatie/toets bouwen | `econ-consolidation-builder` + `econ-didactiek` + `economic-graph` + `econ-pdf-builder` |
+| Hoofdstuk bouwen (end-to-end) | `econ-chapter-builder` (orchestrator) → `econ-textbook-paragraph` + `econ-consolidation-builder` + `econ-chapter-assembler` |
+| Hoofdstuk samenstellen (assembly only) | `econ-chapter-assembler` + `econ-pdf-builder` |
+
+---
+
+## Presentatie-eisen (kernregels)
+
+### Didactisch
+- Start met leerdoelen
+- Groepeer per vaardigheid of deeldomein
+- Leg de denkroute uit
+- Besteed kort aandacht aan veelgemaakte fouten
+- Sluit af met samenvatting
+
+### Visueel
+- **Minimaal 18pt** lettergrootte, liever 20-24pt
+- **Eén hoofdidee per dia**
+- Veel witruimte, rustige compositie
+- Grafieken op witte achtergrond
+- Varieer lay-outs per dia
+
+### Grafieken
+Volg de `economic-graph` skill. Kernprincipe: economisch correct, geometrisch exact, visueel rustig.
+
+**Architectuurbeslissing (2026-03):** Gebruik raw SVG → Sharp → PNG pipeline. Geen declaratieve libraries.
+
+---
+
+## Testing
+
+```bash
+# Engine unit tests (geen MODULE_ROOT nodig):
+npx jest --testPathPatterns "engines/tests/.*-engine\.test\.js"
+
+# Data tests (tegen een target-root met manifest):
+MODULE_ROOT="../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod" npx jest --testPathPatterns "engines/tests/.*-data\.test\.js"
+
+# Alle tests:
+npm test
+```
+
+### Engines wijzigen
+1. Edit in `engines/`
+2. Run engine tests
+3. Deploy naar lesson/book target
+4. Test in browser
+5. Commit en push lesson/book target wanneer die repo bewust is aangepast
+
+### Nieuw reasoning game toevoegen
+
+For new or substantially repaired `redeneer-spel` work, read `skills/econ-reasoning-game.md` and `references/exemplars/product-excellence/reasoning-games/` first. The durable rule is:
+
+```text
+copy product grammar
+re-derive reasoning grammar
+```
+
+Use shared task-shell actions and the reasoning composer where possible. Do not add another mode-overloaded reasoning engine or use the legacy mode picker as the default authoring route.
+
+Legacy CSV route, when explicitly needed:
+
+1. CSV maken → `source-data/book-1/reasoning/X.Y.Z.csv`
+2. `node build-scripts/platform/build-reasoning-questions.js X.Y.Z <domain> source-data/book-1/reasoning/X.Y.Z.csv --generate-review`
+3. Economics review subagent op het review document
+4. Correcties doorvoeren in CSV, opnieuw builden
+5. `node scripts/deploy.js <module-path>`
+
+---
+
+## Game Architectuur (overzicht)
+
+### Instapquiz
+- Engine: `engines/quiz-engine.js` + `quiz-ui.js`
+- Data: `shared/questions/X.Y.Z.js` per paragraaf
+- HTML: thin shell at the paragraph root in the flat `4veco-lessen/Boek N/.../X.Y.Z [Naam]/` layout
+
+### Redeneer-spel (legacy 5 modi)
+- Engine: `engines/reasoning-engine.js` + `reasoning-ui.js`
+- Data: `shared/reasoning/X.Y.Z.js` (gegenereerd uit CSV)
+- HTML: thin shell at the paragraph root in the flat lesson layout
+- Domeinen: economics, math-economics, arithmetic
+- New reasoning-game capability uses `skills/econ-reasoning-game.md`, the four-exemplar golden family, shared task-shell primitives, and `engines/reasoning-composer.js` rather than adding more legacy modes.
+
+### Wiskundevaardigheden (Skill Tree)
+- Engine: `engines/skilltree-engine.js` + `skilltree-ui.js`
+- Generators: `engines/skilltree/base-elements.js` (35 skills, 4 lagen)
+- Data: `shared/skilltree/X.Y.Z.js` per paragraaf
+- Global progress via `localStorage` key `skilltree_global_stars`
+
+### Nieuws-detective
+- Engine: `engines/newsdetective-engine.js` + `newsdetective-ui.js`
+- Data: `shared/newsdetective/X.Y.Z.js` per paragraaf
+- HTML: thin shell at the paragraph root in the flat lesson layout
+- 4 rondes per paragraaf, score 0-4
+
+---
+
+## Technische omgeving
+
+### Node.js
+Beschikbare modules: `pptxgenjs`, `sharp`, `docx`, `pdf-lib`, `marked`, `graphviz`
+
+> Stel `NODE_PATH` in als modules globaal geïnstalleerd zijn.
+
+### Python
+Module `python-docx` voor het lezen van bestaande Word-bestanden.
+
+The Python converters in `build-scripts/` are profile-gated. Normal Part B
+companion/student-web work should use native HTML generators and skips
+DOCX-to-HTML conversion. Run converters only for Office/legacy work that
+intentionally uses Word sources:
+- `uitleg voorkennis.docx` → `uitleg voorkennis.html`
+- `uitleg vaardigheden.docx` → `uitleg vaardigheden.html`
+- `begeleide inoefening` docx-bestanden → interactieve HTML
+
+---
+
+## Kwaliteitsstandaard
+
+Een presentatie is pas af als een docent deze **direct in de les kan gebruiken**, zonder aanpassingen.
+
+**Bij twijfel over kwaliteit: use the stronger available review/tool route and
+doe een extra QA-ronde.**

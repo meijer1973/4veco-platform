@@ -5,7 +5,7 @@ describe('cross-repo bundle workflow safety', () => {
   const bundleWorkflow = fs.readFileSync('.github/workflows/cross-repo-bundle-compatibility.yml', 'utf8');
   const authorizedBundleWorkflow = fs.readFileSync('.github/workflows/authorized-bundle-integration.yml', 'utf8');
   const authorizedBundleLane = fs.readFileSync('build-scripts/review-gates/integrate-authorized-bundle.js', 'utf8');
-  const agents = fs.readFileSync('AGENTS.md', 'utf8');
+  const publication = fs.readFileSync('docs/review/agent-publication-workflow.md', 'utf8');
   const integrationPolicy = fs.readFileSync('docs/review/pr-integration-lane-policy.md', 'utf8');
 
   test('required validate-platform no longer substitutes matching lesson branches', () => {
@@ -78,11 +78,11 @@ describe('cross-repo bundle workflow safety', () => {
   test('delta-required partial resume is explicit local evidence and hosted dispatch cannot imply it', () => {
     expect(authorizedBundleLane).toContain("optionValue(argv, '--delta-review')");
     expect(authorizedBundleWorkflow).not.toContain('--delta-review');
-    expect(agents).toContain('delta-required partial resume must use the owner-authenticated');
+    expect(publication).toContain('delta-required partial resume must use the owner-authenticated');
     expect(integrationPolicy).toContain('Delta-required resumes therefore use the owner-authenticated local');
     expect(integrationPolicy).toContain('workflow dispatch is not an evidence waiver');
     expect(integrationPolicy).toContain('must return an explicit');
-    expect(agents).toContain('A delta-required dry-run also fails');
+    expect(publication).toContain('A delta-required dry-run also fails');
   });
 
   test('residual payload lead evidence is explicit and cannot be inferred from authorization', () => {

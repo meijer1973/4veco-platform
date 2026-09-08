@@ -1,5 +1,7 @@
 const GOVERNANCE_SURFACE_PATTERNS = Object.freeze([
   /^AGENTS\.md$/i,
+  /^docs\/review\/agent-publication-workflow\.md$/i,
+  /^docs\/workflows\/(?:task-planning-and-review|platform-and-companion-reference)\.md$/i,
   /^agents\/README\.md$/i,
   /^agents\/lead-reviewer-agent\.md$/i,
   /^agents\/pr-readiness-reviewer-agent\.md$/i,
@@ -25,6 +27,9 @@ const GOVERNANCE_SURFACE_PATTERNS = Object.freeze([
 
 const GOVERNANCE_SURFACE_TEST_PATHS = Object.freeze([
   'AGENTS.md',
+  'docs/review/agent-publication-workflow.md',
+  'docs/workflows/task-planning-and-review.md',
+  'docs/workflows/platform-and-companion-reference.md',
   'agents/lead-reviewer-agent.md',
   'agents/pr-readiness-reviewer-agent.md',
   'package.json',

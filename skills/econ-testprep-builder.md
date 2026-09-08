@@ -641,11 +641,13 @@ X.5.4 Proeftoets/
 
 The testprep builder itself does **not** run QC — that is handled by the chapter orchestrator (`econ-chapter-builder` Part 4). When building test prep as part of a chapter:
 
-1. The orchestrator spawns an independent review sub-agent that runs `econ-paragraph-review` on each test prep paragraph
-2. The orchestrator spawns a sub-agent to generate `X.5.Z-quality-ref.yaml` via `econ-quality-control`
+1. The orchestrator assigns independent `econ-paragraph-review` on each test prep paragraph, including applicable didactic/teacher/student checks, precision, and final rendered pages. For eligible routine Part A under `agents/README.md`, the chapter batch reviewer covers this; otherwise retain separate review routing and all explicit specialist gates
+2. The same independent reviewer generates `X.5.Z-quality-ref.yaml` via `econ-quality-control` within the eligible routine assignment; otherwise retain the separate quality-ref agent
 3. Both artifacts are required by the chapter completeness gate
 
-When building test prep standalone (not as part of a chapter), run the QC steps from `BUILD-PARAGRAPH.md` Part A steps A5–A7 yourself.
+When building test prep standalone, arrange `BUILD-PARAGRAPH.md` A5–A7 with the
+same independence and eligibility rules. The author cannot review their own work.
+Preserve findings and recheck repairs and affected dependencies before closure.
 
 ---
 

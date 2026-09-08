@@ -1,0 +1,1460 @@
+{
+  "sample": "Sample Y",
+  "source_directory": "C:\\wt\\reorganize\\comparison\\sample-y\\output\\2.1.2 Opbrengsten, winst en break-even",
+  "archive": "sample-y-artifacts.zip",
+  "archive_sha256": "8dd92f81de486a81764a745e38143ede07ae1be406c73890f23312ba8791e217",
+  "excluded_dependency_or_cache_directories": [],
+  "files": [
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 antwoorden.html",
+      "bytes": 183171,
+      "sha256": "2d29be59bac192a974948f1141a15f27ae22ec969d68153dcca98a9d9a92f352"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 antwoorden.md",
+      "bytes": 9859,
+      "sha256": "173464e9b5eaf063fcf60d9d5dcaec2c64a632b9ffd9b467fbc932fbe47c8457"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 antwoorden.pdf",
+      "bytes": 170694,
+      "sha256": "3723028eb0084a1aa6de9ca86ff2c6e1be76458d2b974309b7808d011349aabe"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 opgaven.html",
+      "bytes": 131694,
+      "sha256": "2adb286a59ea8227aee78dcb1e728cc4c51fbbc37620b0875643d73aaad8d6b9"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 opgaven.md",
+      "bytes": 9848,
+      "sha256": "e6269849ada5d85e8431589ab5c1242235734a6a657b92e035f1ed3bce5dce7e"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 opgaven.pdf",
+      "bytes": 130872,
+      "sha256": "0d511e1f6e98f0d21977c66d07a0c3020b600f42ae8a6285a73177ccbf9a305f"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.html",
+      "bytes": 211109,
+      "sha256": "0b0951b4d5bd9afde4655e2fbe5ce082660281c5466019317bf201aaa0c740f2"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.md",
+      "bytes": 14892,
+      "sha256": "18a56a00c651c96f478d974175d314c83f229af3e1e201799f2aa69ee1ac0aa4"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.pdf",
+      "bytes": 195586,
+      "sha256": "4305a45b047ccd700ee010e3831e19aec4d4172a6c204681b27a8d0426a993a3"
+    },
+    {
+      "path": "2.1.2-quality-ref.yaml",
+      "bytes": 1707,
+      "sha256": "dd727353170a3f20c8e15fc28f8e5abcb788a8549e6182daca579d1bcb3269aa"
+    },
+    {
+      "path": "2.1.2-review.md",
+      "bytes": 18543,
+      "sha256": "29e766ed0d4d7f903f0669b77ebc82a61b41a65231f6854697fa1c41c51cf44e"
+    },
+    {
+      "path": "2.1.2-textbook-handoff.md",
+      "bytes": 8476,
+      "sha256": "37f2ef533c03e20ca82daeacd9aeadc35f2e57d4c97642b29ff60706aacfd937"
+    },
+    {
+      "path": "2.1.2-textbook-plan.md",
+      "bytes": 24462,
+      "sha256": "e9e5787d26918a12ab13466cbc1a9317ea35319f5cd6561dad2289dc5fcdae81"
+    },
+    {
+      "path": "_assets/2.1.2_ex_1.png",
+      "bytes": 30408,
+      "sha256": "75f7a8ee56f3f1f8ab175e93b21045c52504d7f4e5f8101dd31f43d25270da50"
+    },
+    {
+      "path": "_assets/2.1.2_ex_1.svg",
+      "bytes": 3810,
+      "sha256": "d2abe24bc58711a6cb357abd7ecf26123ab6c99005ef8bb9c75458ef7c979696"
+    },
+    {
+      "path": "_assets/2.1.2_ex_2.png",
+      "bytes": 22989,
+      "sha256": "4fa6a1dbe911d3914c01dd2464f7d60b0f292b9949b76db8ba4c6b70097dd8e4"
+    },
+    {
+      "path": "_assets/2.1.2_ex_2.svg",
+      "bytes": 2456,
+      "sha256": "610899c3c3bfc48e790c5aba2ce645d6105c0ad1b61fc869ed98a28457aa33fe"
+    },
+    {
+      "path": "_assets/2.1.2_ex_3.png",
+      "bytes": 31330,
+      "sha256": "efe4bb982f03f0f1f36c03e2f587483bed81212c3b3f4f637b25af05f7847994"
+    },
+    {
+      "path": "_assets/2.1.2_ex_3.svg",
+      "bytes": 3862,
+      "sha256": "814d77d6989670d042a7d005010fed2e987f3c2f50ea9f734ea44d553eff4ae1"
+    },
+    {
+      "path": "_assets/2.1.2_ex_4.png",
+      "bytes": 30691,
+      "sha256": "e94b0b5c57d4aa190cbc4fabd1e2c5ec7e1434dfd4e00a1d3d76169457f5ad67"
+    },
+    {
+      "path": "_assets/2.1.2_ex_4.svg",
+      "bytes": 3803,
+      "sha256": "05e5e36bf2ce4ca8a51099ca9c978c6cd2b9f02298759b506977cf59f49af7bc"
+    },
+    {
+      "path": "_assets/2.1.2_ex_5.png",
+      "bytes": 33445,
+      "sha256": "4b93e664cc9726ab7c116f83ecc682586a4e6305c37b2018586e07007cc890a0"
+    },
+    {
+      "path": "_assets/2.1.2_ex_5.svg",
+      "bytes": 3883,
+      "sha256": "06e448f734082bba9e66fe2d02764538b77e62926f955c380d02793040eb2cb4"
+    },
+    {
+      "path": "_assets/2.1.2_fig_1.png",
+      "bytes": 24596,
+      "sha256": "aadd36dcaccabe56339e81203fd89a2fb0525c11c3c994e3bd62c55feecfbe63"
+    },
+    {
+      "path": "_assets/2.1.2_fig_1.svg",
+      "bytes": 2410,
+      "sha256": "ad7170cc111329d27a1ff0858ab44400f4a444ce1cc7c993b151d98e20f6f716"
+    },
+    {
+      "path": "_assets/2.1.2_fig_2.png",
+      "bytes": 29197,
+      "sha256": "53a33c07396ad12e3743342b4fc385a5514c31cf80e73821451849c8071b3bb9"
+    },
+    {
+      "path": "_assets/2.1.2_fig_2.svg",
+      "bytes": 2647,
+      "sha256": "d37346565438f388628f6a60fa117d5261dc33d78371b2b532d812d28a93aea6"
+    },
+    {
+      "path": "_assets/2.1.2_we_1.png",
+      "bytes": 34086,
+      "sha256": "548df41aeb21d8c6a5471f962df77f9d25b19802e7b54ec69c719dfa21fc058f"
+    },
+    {
+      "path": "_assets/2.1.2_we_1.svg",
+      "bytes": 3798,
+      "sha256": "594f877738842bc336e9e0798539f6d0d1d1019288a0a64a095406302062fbdb"
+    },
+    {
+      "path": "_evidence/artifact-manifest.json",
+      "bytes": 5275,
+      "sha256": "b3ace28c6785e9e8c39979048f7c292ebb3874688d20825c0af54d635152c050"
+    },
+    {
+      "path": "_evidence/author-selfcheck.md",
+      "bytes": 4492,
+      "sha256": "195493059aad88e00aba55a172a42770b45fd0a7f00fb59c450d77d67b82b438"
+    },
+    {
+      "path": "_evidence/author_content.py",
+      "bytes": 24021,
+      "sha256": "24bf52f4d34d196cefdecdcfbcb2eddf17e22abd03e35f27ebc6738e25a4de79"
+    },
+    {
+      "path": "_evidence/build_graphs.py",
+      "bytes": 7342,
+      "sha256": "7272421c3e203e257116a9175201954c164b6832074365cfeed2bad70ee2d4bf"
+    },
+    {
+      "path": "_evidence/complete-evidence.py",
+      "bytes": 3717,
+      "sha256": "3d388e766b9977add8a072afb35cceedc548f10a4985fde89ae3689407eefb44"
+    },
+    {
+      "path": "_evidence/completion.md",
+      "bytes": 3716,
+      "sha256": "83987a68b711d657daff31fe44a6dc182da65c7d711da2336f5342877d0fbd47"
+    },
+    {
+      "path": "_evidence/create_plan.py",
+      "bytes": 13129,
+      "sha256": "2d51c0c03bf178a9375de02ad8b7ba63025d89f44e4986e5d745e94c84d8e8f5"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-01.txt",
+      "bytes": 1573,
+      "sha256": "fbe11cc887030fb37f8b8069c11b2efdf5407910030caade3ef5ceaa93de9433"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-02.txt",
+      "bytes": 816,
+      "sha256": "ccc5cb8f6b2f272ef96dddce101228e8771d4ce3878a5bdc717e41119a172e19"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-03.txt",
+      "bytes": 1419,
+      "sha256": "5bf20d414397b03f1de6dbcbe817eda0c4717b358fa73435d236dd970a7164f2"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-04.txt",
+      "bytes": 730,
+      "sha256": "4a7e5d04bac8b1070fd0391334651b4d93ad3fc5f96854f8ba83675bb08c197b"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-05.txt",
+      "bytes": 1391,
+      "sha256": "7e3c3126ca3610deb29c62f55be89eeca02a8c3a9e5db890a6adea8430e483c8"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-06.txt",
+      "bytes": 1910,
+      "sha256": "a6ce5119548a60acf6e34b6c691b489d73fda4e7486dbe03322dc839484cb175"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-07.txt",
+      "bytes": 1798,
+      "sha256": "9643ee4d60b9a529475179ef8b779f59bcd49f480661b11f0ea6c10944bce49c"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-1.png",
+      "bytes": 201618,
+      "sha256": "f842dedcb376c0c447bc86491e193a151227a66f6f1da50af64294b1999d2dcd"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-2.png",
+      "bytes": 153558,
+      "sha256": "e1e7c59434496fe76e334fd6006d98eb6fdc43f3707191b96ce263181bf56e3a"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-3.png",
+      "bytes": 228386,
+      "sha256": "69291a7f36b5cc2b3ab98f660ad786eaa57bcd5061b9d54f5e5f38dbe4965db5"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-4.png",
+      "bytes": 98465,
+      "sha256": "2d2d8758802d4ebe75aec5a2113a6a25c506bc019d5f4a0165e6865a0230682b"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-5.png",
+      "bytes": 225647,
+      "sha256": "416c3c394f71a14dde97a09d985f1e319526dd92a0eb7d1043b09199a83753f7"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-6.png",
+      "bytes": 284109,
+      "sha256": "39633bf5d21ed373b8243fa47c4bd91c70f488003e10a8cf6e6a075c2e17c9bc"
+    },
+    {
+      "path": "_evidence/final-pages/antwoorden-7.png",
+      "bytes": 206181,
+      "sha256": "63075e41de15e35ca1b20759afbe95d7b15037349ca76fd8eee8eca53dba4781"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-01.txt",
+      "bytes": 2088,
+      "sha256": "d8e32ac3f6395f4d152ff127e9eddf00c8b171b1c04ed8c55399cd0d3e04f76c"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-02.txt",
+      "bytes": 1409,
+      "sha256": "18dcf353ff4c3374806fc496c63c7e8b2c00732e340c4a5c5d8af90376f5ab27"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-03.txt",
+      "bytes": 1142,
+      "sha256": "5d71610f910c379387e06dec6d927fecb3f75543c1ea671acd46339489809f89"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-04.txt",
+      "bytes": 810,
+      "sha256": "75365a668a8cfce27a02333d8bb1a75a0320750d9741a34a48460777ddfd56af"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-05.txt",
+      "bytes": 1592,
+      "sha256": "bd923f9c36849e63c00816a415f3653af645eb225ccc5d5dc4914ee909b47559"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-06.txt",
+      "bytes": 2324,
+      "sha256": "2cb3da5fd60a45bc7abf16e334d12150e48bae919b81397c2be2502beb2ba6d1"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-07.txt",
+      "bytes": 397,
+      "sha256": "89ea82ca888a7c42c32e66be97ac86c5b949936ea05cdbbad2d0440bfa8e1f53"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-1.png",
+      "bytes": 254179,
+      "sha256": "ddf299f0c134169755e3f4524f3a6af7371b129352c4d5fe909c163af901712c"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-2.png",
+      "bytes": 216372,
+      "sha256": "7fca827c6f3ab9996d9e454c26b7dfac73ca58701c5a20498744b73836adf4b7"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-3.png",
+      "bytes": 139613,
+      "sha256": "27b80f2434709d4b64e7aa402408180179a6565063fa2cb1b67e0e165fe11f0b"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-4.png",
+      "bytes": 149049,
+      "sha256": "2c472fbf00ec7c03742c745e86346987a06459d07b1ef9de109c3fc56931431d"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-5.png",
+      "bytes": 212120,
+      "sha256": "e6e6f69bbee942e72a89012a88096b79ef00d64dcfd4dbd880190caa41a66f87"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-6.png",
+      "bytes": 274503,
+      "sha256": "e65d6e3e08b7c2929bada5b7c006897f2d1a5442c383f579589520e9f5cb412a"
+    },
+    {
+      "path": "_evidence/final-pages/opgaven-7.png",
+      "bytes": 57072,
+      "sha256": "18d7754675d64d234fb96c914c4a395a016a00bca69f324eff474c565995c185"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-01.png",
+      "bytes": 203196,
+      "sha256": "f871ecfc04e65c5f8afb508425ecf41e8b5e9bbaa21b541278071e496646d919"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-01.txt",
+      "bytes": 1702,
+      "sha256": "d790fb7ee8f6158339ce686fadaf95a9c530fa2d7686d980a4064d46e31988cf"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-02.png",
+      "bytes": 210615,
+      "sha256": "ef0facab00fb4f9c9dc02944e79eec36b9badf56b62c5e4f551ff0b760098ef5"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-02.txt",
+      "bytes": 1471,
+      "sha256": "596e89dee3f0ed4e8174fdd13888d215d703216fc13604758cdf8268c2469cf7"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-03.png",
+      "bytes": 207191,
+      "sha256": "636a18229cd902002b591d99e4825f6c6c2154bfb518ea6b10b5e926cb0f4511"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-03.txt",
+      "bytes": 1407,
+      "sha256": "05d115582e4f6e7be85d33a0b49593d8d0b77566584bc9c3bcc82240131dfa72"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-04.png",
+      "bytes": 275410,
+      "sha256": "d69bddd78db6af457558929e77ae617cedc57f96be2a27c08a21fce0dd32605c"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-04.txt",
+      "bytes": 2374,
+      "sha256": "465d9620623d0d18cf57119988d49a63f80ea3f49cb7ccc39ef25578207aa861"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-05.png",
+      "bytes": 216631,
+      "sha256": "cdc0b61146251c4ba20462300bd014b5fdd4c55ee443695fa690f762c5d984e3"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-05.txt",
+      "bytes": 1410,
+      "sha256": "a0cb10737de5154e0fb07a1f8978ade829d74b47787f5791d820db3800aead1e"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-06.png",
+      "bytes": 139714,
+      "sha256": "06b7a18b216007e348c472b2a20fe11e1a2f59aee63da85bbd221cd3dc3b1901"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-06.txt",
+      "bytes": 1143,
+      "sha256": "17cfc29cda2cc88fc9261c0cd382e0c87af80ad441ef1f71670c646bae64e37d"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-07.png",
+      "bytes": 149113,
+      "sha256": "3761c59d9c7b0c6604516e142af1671b12a980a8e6bccdec536f269387352dd5"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-07.txt",
+      "bytes": 811,
+      "sha256": "be00cb65cd27bca707e83806d44561cc115b51be39b4caedf36abacecea15feb"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-08.png",
+      "bytes": 212206,
+      "sha256": "3b0246682f8c17d4379422d8351048b7427b0473aa3dc1262ea356d18ef007bc"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-08.txt",
+      "bytes": 1593,
+      "sha256": "c196a3fc5389c90c39256beb666c9006c6d1b4b02d6cb6698c935bdc0d94c836"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-09.png",
+      "bytes": 274583,
+      "sha256": "074108f30e522368da1447e94af184020423f21ea82a5d3572cef6c51ab9cee3"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-09.txt",
+      "bytes": 2325,
+      "sha256": "983a958b72b118ce600cb11283d5a638b8e25edd520e7797393a6ed8033d7013"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-10.png",
+      "bytes": 57178,
+      "sha256": "3caff648802adeda923b450d573892548cd65e4b0324d3eb34006e5a216b4da8"
+    },
+    {
+      "path": "_evidence/final-pages/paragraaf-10.txt",
+      "bytes": 399,
+      "sha256": "88ffd6f519e3201cf310de6f0cb65814909fed13bfdda19c977dfb144e35d5e8"
+    },
+    {
+      "path": "_evidence/final-source-safety.md",
+      "bytes": 1402,
+      "sha256": "53a7f8ff5b04efe2362c7892ccc38ded401773bcac9e5d6838ab671e407110d1"
+    },
+    {
+      "path": "_evidence/final-validation.log",
+      "bytes": 1495,
+      "sha256": "f05783b6ec6bf99673de3a170c602dc4a1cc45ce583a9c1f1366e74cd456d660"
+    },
+    {
+      "path": "_evidence/graph-specifications.json",
+      "bytes": 2084,
+      "sha256": "a813fc2bb0fc2ed645435951460c85a09fe2453875f948764e929951f28eb3d5"
+    },
+    {
+      "path": "_evidence/graph-verification.log",
+      "bytes": 1006,
+      "sha256": "36617eae8552250f71ea82a5d70c128b3dd0f3be1bbbbfbd177ec8e5361f6fa7"
+    },
+    {
+      "path": "_evidence/html-pages/antwoorden-01.png",
+      "bytes": 132086,
+      "sha256": "1229c174cfccd09ac979465d2603ff011f82f985878abb5e8bc81bebc15ac796"
+    },
+    {
+      "path": "_evidence/html-pages/antwoorden-02.png",
+      "bytes": 142732,
+      "sha256": "c3883d0f6e3b1aa78748dacd78e2ec8eb2dae1fcb5941e3e8bf0782ac006396b"
+    },
+    {
+      "path": "_evidence/html-pages/antwoorden-03.png",
+      "bytes": 130893,
+      "sha256": "349d65104fdfc9bacb7fff8f3d561a9c965cc9fdb2b09bda19a11b4222925e59"
+    },
+    {
+      "path": "_evidence/html-pages/antwoorden-04.png",
+      "bytes": 135251,
+      "sha256": "96251b04c406076e6713c0c8aba0eb62ad69cb8b94d93b8c169997625797709c"
+    },
+    {
+      "path": "_evidence/html-pages/antwoorden-05.png",
+      "bytes": 145035,
+      "sha256": "b8758db81abdc39db6d44190d96cb0a67b511c45eb8f2e7bcdaf5b5bdbcaf5d8"
+    },
+    {
+      "path": "_evidence/html-pages/antwoorden-06.png",
+      "bytes": 133836,
+      "sha256": "252afe48517d2f0d2029a007e83b4c64646216aefb919876b776cd2fcb6529e2"
+    },
+    {
+      "path": "_evidence/html-pages/manifest.json",
+      "bytes": 4864,
+      "sha256": "3a1c71c8fbdc414482c49436b03d87115db2894adefdb23ca6ced754c403c09e"
+    },
+    {
+      "path": "_evidence/html-pages/opgaven-01.png",
+      "bytes": 99593,
+      "sha256": "a80730f37678beb25b198611a5613feceefdc93f1936ba8709d6d6170f172462"
+    },
+    {
+      "path": "_evidence/html-pages/opgaven-02.png",
+      "bytes": 125755,
+      "sha256": "0312a6d4e975acc34bc1ef48f10cdc692d65650d578a9a68bf11838535cbdb68"
+    },
+    {
+      "path": "_evidence/html-pages/opgaven-03.png",
+      "bytes": 109911,
+      "sha256": "6674f80c54b6f1989d7fe51b0e50165aa698e9d8915f8baa2c7735a6f2efcf5f"
+    },
+    {
+      "path": "_evidence/html-pages/opgaven-04.png",
+      "bytes": 92243,
+      "sha256": "7d810397eab471cdcc613e2b0699bb44ef8f6b6a1e4e63c1babffb15ee54aeb7"
+    },
+    {
+      "path": "_evidence/html-pages/opgaven-05.png",
+      "bytes": 110658,
+      "sha256": "ade0c0ea8a95b127aba309d016a46b7bcd0d748c2880987572e35ab6a272e78b"
+    },
+    {
+      "path": "_evidence/html-pages/opgaven-06.png",
+      "bytes": 101694,
+      "sha256": "3b2f472af7b89941a7269b47079e0b1ee87258911ea282a9ec2810a09774d946"
+    },
+    {
+      "path": "_evidence/html-pages/paragraaf-01.png",
+      "bytes": 96652,
+      "sha256": "16004d99827e1922d101a6c83690b05b708c29bcfc234fac51262c82c97e2632"
+    },
+    {
+      "path": "_evidence/html-pages/paragraaf-02.png",
+      "bytes": 92768,
+      "sha256": "bbe6ba8a2b1b2d8db35676fc954fcef12155fe0e46092a696cd5c4dcee4d910f"
+    },
+    {
+      "path": "_evidence/html-pages/paragraaf-03.png",
+      "bytes": 108198,
+      "sha256": "abf69e498055880943233503b2ccaa793e383f8d345cfe977822d346dedb1ebc"
+    },
+    {
+      "path": "_evidence/html-pages/paragraaf-04.png",
+      "bytes": 111057,
+      "sha256": "989bdb92adb271b373aa8c15a3a3206ab1605582eaad416681b90bea0e284818"
+    },
+    {
+      "path": "_evidence/html-pages/paragraaf-05.png",
+      "bytes": 124854,
+      "sha256": "bb5dcc5fa7745476f7a54a4ae7ae636287ea674121718dc6b2aa4a503d6a3f3a"
+    },
+    {
+      "path": "_evidence/html-pages/paragraaf-06.png",
+      "bytes": 110096,
+      "sha256": "4861d7b4fd37ed8028874480f18659592bfabcdf59a9d92ea098443ac0c112f1"
+    },
+    {
+      "path": "_evidence/html-pages/paragraaf-07.png",
+      "bytes": 108152,
+      "sha256": "90760774337a95d155bbb2d2795562d40c582c944b93fc2288e61efd0c079a57"
+    },
+    {
+      "path": "_evidence/html-pages/paragraaf-08.png",
+      "bytes": 110694,
+      "sha256": "35013ccdeb525cd5259d0ab3c18feacf9c53f1d23c3e4b3b06b5204022b303e7"
+    },
+    {
+      "path": "_evidence/html-pages/paragraaf-09.png",
+      "bytes": 101686,
+      "sha256": "27892a9b86c6d5930b9ea2c3b64f4ea689fc49da661bc3fc53d207c3a6b73a7a"
+    },
+    {
+      "path": "_evidence/lane-inventory.json",
+      "bytes": 321,
+      "sha256": "4bd8d048bff4c504340f8afa30cab369abb00ca8a6fdecdaf44002b76136e859"
+    },
+    {
+      "path": "_evidence/make-manifest.py",
+      "bytes": 981,
+      "sha256": "117094c5d4d9b521ef477c16efdb07ea117f76a953da9c71174e752969a52451"
+    },
+    {
+      "path": "_evidence/mechanical-before-review.log",
+      "bytes": 1262,
+      "sha256": "bac8778e1eb7d00a272841274d024c1f0cdd5c260c0c14771f81bff3d92f5722"
+    },
+    {
+      "path": "_evidence/metrics.json",
+      "bytes": 5433,
+      "sha256": "1553a962b3de5195b95ae70bf98cd35a9257d1d6bffcf904af57db3761b60f6e"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-01.txt",
+      "bytes": 1573,
+      "sha256": "fbe11cc887030fb37f8b8069c11b2efdf5407910030caade3ef5ceaa93de9433"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-02.txt",
+      "bytes": 816,
+      "sha256": "ccc5cb8f6b2f272ef96dddce101228e8771d4ce3878a5bdc717e41119a172e19"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-03.txt",
+      "bytes": 1419,
+      "sha256": "5bf20d414397b03f1de6dbcbe817eda0c4717b358fa73435d236dd970a7164f2"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-04.txt",
+      "bytes": 730,
+      "sha256": "4a7e5d04bac8b1070fd0391334651b4d93ad3fc5f96854f8ba83675bb08c197b"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-05.txt",
+      "bytes": 1391,
+      "sha256": "7e3c3126ca3610deb29c62f55be89eeca02a8c3a9e5db890a6adea8430e483c8"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-06.txt",
+      "bytes": 1910,
+      "sha256": "a6ce5119548a60acf6e34b6c691b489d73fda4e7486dbe03322dc839484cb175"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-07.txt",
+      "bytes": 1798,
+      "sha256": "9643ee4d60b9a529475179ef8b779f59bcd49f480661b11f0ea6c10944bce49c"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-1.png",
+      "bytes": 201618,
+      "sha256": "f842dedcb376c0c447bc86491e193a151227a66f6f1da50af64294b1999d2dcd"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-2.png",
+      "bytes": 153558,
+      "sha256": "e1e7c59434496fe76e334fd6006d98eb6fdc43f3707191b96ce263181bf56e3a"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-3.png",
+      "bytes": 228386,
+      "sha256": "69291a7f36b5cc2b3ab98f660ad786eaa57bcd5061b9d54f5e5f38dbe4965db5"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-4.png",
+      "bytes": 98465,
+      "sha256": "2d2d8758802d4ebe75aec5a2113a6a25c506bc019d5f4a0165e6865a0230682b"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-5.png",
+      "bytes": 225647,
+      "sha256": "416c3c394f71a14dde97a09d985f1e319526dd92a0eb7d1043b09199a83753f7"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-6.png",
+      "bytes": 284109,
+      "sha256": "39633bf5d21ed373b8243fa47c4bd91c70f488003e10a8cf6e6a075c2e17c9bc"
+    },
+    {
+      "path": "_evidence/pages/antwoorden-7.png",
+      "bytes": 206181,
+      "sha256": "63075e41de15e35ca1b20759afbe95d7b15037349ca76fd8eee8eca53dba4781"
+    },
+    {
+      "path": "_evidence/pages/opgaven-01.txt",
+      "bytes": 2088,
+      "sha256": "d8e32ac3f6395f4d152ff127e9eddf00c8b171b1c04ed8c55399cd0d3e04f76c"
+    },
+    {
+      "path": "_evidence/pages/opgaven-02.txt",
+      "bytes": 1546,
+      "sha256": "8a32667bab03f5ad333782126677daf5c3bf5304c47b8d1e10c64ea2266d81c5"
+    },
+    {
+      "path": "_evidence/pages/opgaven-03.txt",
+      "bytes": 1098,
+      "sha256": "413b80b5129cae1e86aff36f7bd83b173e3612cf236d3f9058df8ce1bb3ff4f2"
+    },
+    {
+      "path": "_evidence/pages/opgaven-04.txt",
+      "bytes": 717,
+      "sha256": "fdf89b60f30e2fbfd0d38207fc4dc998da3ae427d6fdb4c1371a40a9fdb466ab"
+    },
+    {
+      "path": "_evidence/pages/opgaven-05.txt",
+      "bytes": 1450,
+      "sha256": "418d1fa32c58d69eee5a92e97991856f384747eefef6df85f1d56310f2bcbc8e"
+    },
+    {
+      "path": "_evidence/pages/opgaven-06.txt",
+      "bytes": 2324,
+      "sha256": "2cb3da5fd60a45bc7abf16e334d12150e48bae919b81397c2be2502beb2ba6d1"
+    },
+    {
+      "path": "_evidence/pages/opgaven-07.txt",
+      "bytes": 397,
+      "sha256": "89ea82ca888a7c42c32e66be97ac86c5b949936ea05cdbbad2d0440bfa8e1f53"
+    },
+    {
+      "path": "_evidence/pages/opgaven-1.png",
+      "bytes": 254179,
+      "sha256": "ddf299f0c134169755e3f4524f3a6af7371b129352c4d5fe909c163af901712c"
+    },
+    {
+      "path": "_evidence/pages/opgaven-2.png",
+      "bytes": 236866,
+      "sha256": "60464286386d767c620e1e3626ba3c22662d0eea48ef601a015afb698069b7bb"
+    },
+    {
+      "path": "_evidence/pages/opgaven-3.png",
+      "bytes": 133245,
+      "sha256": "593b8a1c80b3be157dc85ec50d46576bf3ddce5727cba1ba41a5bad877aa50cc"
+    },
+    {
+      "path": "_evidence/pages/opgaven-4.png",
+      "bytes": 134781,
+      "sha256": "c0aeffaa89f24c259ed2efc02148242307e34375d678f4d3075f5f6cbd4fa494"
+    },
+    {
+      "path": "_evidence/pages/opgaven-5.png",
+      "bytes": 193188,
+      "sha256": "630418320ab2c59bf2adeb2b6ce8dba7e62b0ea2c1f7ac58c9fca012f081f06b"
+    },
+    {
+      "path": "_evidence/pages/opgaven-6.png",
+      "bytes": 274503,
+      "sha256": "e65d6e3e08b7c2929bada5b7c006897f2d1a5442c383f579589520e9f5cb412a"
+    },
+    {
+      "path": "_evidence/pages/opgaven-7.png",
+      "bytes": 57072,
+      "sha256": "18d7754675d64d234fb96c914c4a395a016a00bca69f324eff474c565995c185"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-01.png",
+      "bytes": 203196,
+      "sha256": "f871ecfc04e65c5f8afb508425ecf41e8b5e9bbaa21b541278071e496646d919"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-01.txt",
+      "bytes": 1702,
+      "sha256": "d790fb7ee8f6158339ce686fadaf95a9c530fa2d7686d980a4064d46e31988cf"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-02.png",
+      "bytes": 210615,
+      "sha256": "ef0facab00fb4f9c9dc02944e79eec36b9badf56b62c5e4f551ff0b760098ef5"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-02.txt",
+      "bytes": 1471,
+      "sha256": "596e89dee3f0ed4e8174fdd13888d215d703216fc13604758cdf8268c2469cf7"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-03.png",
+      "bytes": 207191,
+      "sha256": "636a18229cd902002b591d99e4825f6c6c2154bfb518ea6b10b5e926cb0f4511"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-03.txt",
+      "bytes": 1407,
+      "sha256": "05d115582e4f6e7be85d33a0b49593d8d0b77566584bc9c3bcc82240131dfa72"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-04.png",
+      "bytes": 275410,
+      "sha256": "d69bddd78db6af457558929e77ae617cedc57f96be2a27c08a21fce0dd32605c"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-04.txt",
+      "bytes": 2374,
+      "sha256": "465d9620623d0d18cf57119988d49a63f80ea3f49cb7ccc39ef25578207aa861"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-05.png",
+      "bytes": 237116,
+      "sha256": "046696a2fde381d65d3cd52faec2d9e3a92755e2ead621c96cf13e5069a82214"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-05.txt",
+      "bytes": 1547,
+      "sha256": "0df93ad1bb26d6d65f1a034463ab0bae202371c73aee81c84f1c1ba8e0ff95ce"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-06.png",
+      "bytes": 133347,
+      "sha256": "30a52e9a9971d1701031f2f001856f6baa8db3744e922c07ff732cba5a022d7c"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-06.txt",
+      "bytes": 1099,
+      "sha256": "2ee6ac95bbfc7f5a6ee7d290e95325197038eba6ad0b12324e198d9049f53e3c"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-07.png",
+      "bytes": 134848,
+      "sha256": "c5ff9f60d35a01a9ef606f48084177f4dad3fee4346f75e1cb10e7d1b67375f4"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-07.txt",
+      "bytes": 718,
+      "sha256": "4f357a81cd21de0488057f447b814e59994b98459804cf99f703bda83599c97e"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-08.png",
+      "bytes": 193280,
+      "sha256": "c60a44d9ae83c772f2448ca8f4f5daba4f2d8aa39187d082e04a136ac302e162"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-08.txt",
+      "bytes": 1451,
+      "sha256": "59bd9f524bae0a4186699263d485c5cd82788261f8031a22f95e2907817dddf8"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-09.png",
+      "bytes": 274583,
+      "sha256": "074108f30e522368da1447e94af184020423f21ea82a5d3572cef6c51ab9cee3"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-09.txt",
+      "bytes": 2325,
+      "sha256": "983a958b72b118ce600cb11283d5a638b8e25edd520e7797393a6ed8033d7013"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-1.png",
+      "bytes": 232218,
+      "sha256": "1a2894cb82767cc6d894f970947c258e09bd953a20054cead89ad9a1b28e4747"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-10.png",
+      "bytes": 57178,
+      "sha256": "3caff648802adeda923b450d573892548cd65e4b0324d3eb34006e5a216b4da8"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-10.txt",
+      "bytes": 399,
+      "sha256": "88ffd6f519e3201cf310de6f0cb65814909fed13bfdda19c977dfb144e35d5e8"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-2.png",
+      "bytes": 194157,
+      "sha256": "eb99f4f568e143f69adc7ac67b8464a983385f2e39558c3b15e42108aeca37c9"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-3.png",
+      "bytes": 237998,
+      "sha256": "5be3d4aa13b14d804744213bdcfb58a6ed39d58207c0579358a4db1b938fffc9"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-4.png",
+      "bytes": 280122,
+      "sha256": "582e694d699e3baa7ba3fab068f53ab64c4e506b66629c0f3c775d1321a91070"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-5.png",
+      "bytes": 232384,
+      "sha256": "0bc31593dc792a0819437b60aaa716dda3cabfadbd96557a5fedd57b2553f0f4"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-6.png",
+      "bytes": 205634,
+      "sha256": "9659bec23e804b138563a7a2a2e5e476aa8f85a29d8fcebd6b160eb9ea65a663"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-7.png",
+      "bytes": 192482,
+      "sha256": "e7a07f720045b024d9135fbc89486ef4f6745b3e42ffe570bed8b82683e16cb9"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-8.png",
+      "bytes": 273145,
+      "sha256": "07a9c01c3d965dc57283411a5a0e78617e6b64728f766c710dafbf61349313e1"
+    },
+    {
+      "path": "_evidence/pages/paragraaf-9.png",
+      "bytes": 56664,
+      "sha256": "852290712fcf2aec6b9f3e2afec9166127f699a1c274d752e6543949e7cff954"
+    },
+    {
+      "path": "_evidence/pdf-build.log",
+      "bytes": 173,
+      "sha256": "96abcc6582b4bdd725394a4c2e03b8b4ab6e74be94fd1e1952ca5c45206fae9c"
+    },
+    {
+      "path": "_evidence/pre-r1/2.1.2 Opbrengsten, winst en break-even \u2013 antwoorden.html",
+      "bytes": 183171,
+      "sha256": "2d29be59bac192a974948f1141a15f27ae22ec969d68153dcca98a9d9a92f352"
+    },
+    {
+      "path": "_evidence/pre-r1/2.1.2 Opbrengsten, winst en break-even \u2013 antwoorden.md",
+      "bytes": 9859,
+      "sha256": "173464e9b5eaf063fcf60d9d5dcaec2c64a632b9ffd9b467fbc932fbe47c8457"
+    },
+    {
+      "path": "_evidence/pre-r1/2.1.2 Opbrengsten, winst en break-even \u2013 antwoorden.pdf",
+      "bytes": 170694,
+      "sha256": "3723028eb0084a1aa6de9ca86ff2c6e1be76458d2b974309b7808d011349aabe"
+    },
+    {
+      "path": "_evidence/pre-r1/2.1.2 Opbrengsten, winst en break-even \u2013 opgaven.html",
+      "bytes": 131532,
+      "sha256": "68a15f9c56ff6ad0e2472c28fab08a21378a487847c7d3e1060e9c8121dbde4d"
+    },
+    {
+      "path": "_evidence/pre-r1/2.1.2 Opbrengsten, winst en break-even \u2013 opgaven.md",
+      "bytes": 9703,
+      "sha256": "276c26e55c4062b3ff112b5d3dd58f33533cb931fb143efd40f5b96c877bef8b"
+    },
+    {
+      "path": "_evidence/pre-r1/2.1.2 Opbrengsten, winst en break-even \u2013 opgaven.pdf",
+      "bytes": 129732,
+      "sha256": "5407bd1c142f759252a4b140024dfae57db034f56f04f82a6f0adacc58894c4c"
+    },
+    {
+      "path": "_evidence/pre-r1/2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.html",
+      "bytes": 210947,
+      "sha256": "cf53e0db99df673e382c33295ab7febd9b35836132a7073b07624fc5e20230e2"
+    },
+    {
+      "path": "_evidence/pre-r1/2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.md",
+      "bytes": 14747,
+      "sha256": "ae87ea19b7f45fc678b925ae8eebc44f6d98ab1080c41d3d2a79dfa92e4e3fd9"
+    },
+    {
+      "path": "_evidence/pre-r1/2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.pdf",
+      "bytes": 194455,
+      "sha256": "c74d01012ac2aaaf5408b7e87e63a78033ad05e4bb3bc15dc02d85cdfa5ed22c"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-01.txt",
+      "bytes": 1573,
+      "sha256": "fbe11cc887030fb37f8b8069c11b2efdf5407910030caade3ef5ceaa93de9433"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-02.txt",
+      "bytes": 816,
+      "sha256": "ccc5cb8f6b2f272ef96dddce101228e8771d4ce3878a5bdc717e41119a172e19"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-03.txt",
+      "bytes": 1419,
+      "sha256": "5bf20d414397b03f1de6dbcbe817eda0c4717b358fa73435d236dd970a7164f2"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-04.txt",
+      "bytes": 730,
+      "sha256": "4a7e5d04bac8b1070fd0391334651b4d93ad3fc5f96854f8ba83675bb08c197b"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-05.txt",
+      "bytes": 1391,
+      "sha256": "7e3c3126ca3610deb29c62f55be89eeca02a8c3a9e5db890a6adea8430e483c8"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-06.txt",
+      "bytes": 1910,
+      "sha256": "a6ce5119548a60acf6e34b6c691b489d73fda4e7486dbe03322dc839484cb175"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-07.txt",
+      "bytes": 1798,
+      "sha256": "9643ee4d60b9a529475179ef8b779f59bcd49f480661b11f0ea6c10944bce49c"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-1.png",
+      "bytes": 201618,
+      "sha256": "f842dedcb376c0c447bc86491e193a151227a66f6f1da50af64294b1999d2dcd"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-2.png",
+      "bytes": 153558,
+      "sha256": "e1e7c59434496fe76e334fd6006d98eb6fdc43f3707191b96ce263181bf56e3a"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-3.png",
+      "bytes": 228386,
+      "sha256": "69291a7f36b5cc2b3ab98f660ad786eaa57bcd5061b9d54f5e5f38dbe4965db5"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-4.png",
+      "bytes": 98465,
+      "sha256": "2d2d8758802d4ebe75aec5a2113a6a25c506bc019d5f4a0165e6865a0230682b"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-5.png",
+      "bytes": 225647,
+      "sha256": "416c3c394f71a14dde97a09d985f1e319526dd92a0eb7d1043b09199a83753f7"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-6.png",
+      "bytes": 284109,
+      "sha256": "39633bf5d21ed373b8243fa47c4bd91c70f488003e10a8cf6e6a075c2e17c9bc"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/antwoorden-7.png",
+      "bytes": 206181,
+      "sha256": "63075e41de15e35ca1b20759afbe95d7b15037349ca76fd8eee8eca53dba4781"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-01.txt",
+      "bytes": 2088,
+      "sha256": "d8e32ac3f6395f4d152ff127e9eddf00c8b171b1c04ed8c55399cd0d3e04f76c"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-02.txt",
+      "bytes": 1409,
+      "sha256": "18dcf353ff4c3374806fc496c63c7e8b2c00732e340c4a5c5d8af90376f5ab27"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-03.txt",
+      "bytes": 1142,
+      "sha256": "5d71610f910c379387e06dec6d927fecb3f75543c1ea671acd46339489809f89"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-04.txt",
+      "bytes": 810,
+      "sha256": "75365a668a8cfce27a02333d8bb1a75a0320750d9741a34a48460777ddfd56af"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-05.txt",
+      "bytes": 1450,
+      "sha256": "418d1fa32c58d69eee5a92e97991856f384747eefef6df85f1d56310f2bcbc8e"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-06.txt",
+      "bytes": 2324,
+      "sha256": "2cb3da5fd60a45bc7abf16e334d12150e48bae919b81397c2be2502beb2ba6d1"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-07.txt",
+      "bytes": 397,
+      "sha256": "89ea82ca888a7c42c32e66be97ac86c5b949936ea05cdbbad2d0440bfa8e1f53"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-1.png",
+      "bytes": 254179,
+      "sha256": "ddf299f0c134169755e3f4524f3a6af7371b129352c4d5fe909c163af901712c"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-2.png",
+      "bytes": 216372,
+      "sha256": "7fca827c6f3ab9996d9e454c26b7dfac73ca58701c5a20498744b73836adf4b7"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-3.png",
+      "bytes": 139613,
+      "sha256": "27b80f2434709d4b64e7aa402408180179a6565063fa2cb1b67e0e165fe11f0b"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-4.png",
+      "bytes": 149049,
+      "sha256": "2c472fbf00ec7c03742c745e86346987a06459d07b1ef9de109c3fc56931431d"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-5.png",
+      "bytes": 193188,
+      "sha256": "630418320ab2c59bf2adeb2b6ce8dba7e62b0ea2c1f7ac58c9fca012f081f06b"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-6.png",
+      "bytes": 274503,
+      "sha256": "e65d6e3e08b7c2929bada5b7c006897f2d1a5442c383f579589520e9f5cb412a"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/opgaven-7.png",
+      "bytes": 57072,
+      "sha256": "18d7754675d64d234fb96c914c4a395a016a00bca69f324eff474c565995c185"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-01.png",
+      "bytes": 203196,
+      "sha256": "f871ecfc04e65c5f8afb508425ecf41e8b5e9bbaa21b541278071e496646d919"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-01.txt",
+      "bytes": 1702,
+      "sha256": "d790fb7ee8f6158339ce686fadaf95a9c530fa2d7686d980a4064d46e31988cf"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-02.png",
+      "bytes": 210615,
+      "sha256": "ef0facab00fb4f9c9dc02944e79eec36b9badf56b62c5e4f551ff0b760098ef5"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-02.txt",
+      "bytes": 1471,
+      "sha256": "596e89dee3f0ed4e8174fdd13888d215d703216fc13604758cdf8268c2469cf7"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-03.png",
+      "bytes": 207191,
+      "sha256": "636a18229cd902002b591d99e4825f6c6c2154bfb518ea6b10b5e926cb0f4511"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-03.txt",
+      "bytes": 1407,
+      "sha256": "05d115582e4f6e7be85d33a0b49593d8d0b77566584bc9c3bcc82240131dfa72"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-04.png",
+      "bytes": 275410,
+      "sha256": "d69bddd78db6af457558929e77ae617cedc57f96be2a27c08a21fce0dd32605c"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-04.txt",
+      "bytes": 2374,
+      "sha256": "465d9620623d0d18cf57119988d49a63f80ea3f49cb7ccc39ef25578207aa861"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-05.png",
+      "bytes": 216631,
+      "sha256": "cdc0b61146251c4ba20462300bd014b5fdd4c55ee443695fa690f762c5d984e3"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-05.txt",
+      "bytes": 1410,
+      "sha256": "a0cb10737de5154e0fb07a1f8978ade829d74b47787f5791d820db3800aead1e"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-06.png",
+      "bytes": 139714,
+      "sha256": "06b7a18b216007e348c472b2a20fe11e1a2f59aee63da85bbd221cd3dc3b1901"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-06.txt",
+      "bytes": 1143,
+      "sha256": "17cfc29cda2cc88fc9261c0cd382e0c87af80ad441ef1f71670c646bae64e37d"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-07.png",
+      "bytes": 149113,
+      "sha256": "3761c59d9c7b0c6604516e142af1671b12a980a8e6bccdec536f269387352dd5"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-07.txt",
+      "bytes": 811,
+      "sha256": "be00cb65cd27bca707e83806d44561cc115b51be39b4caedf36abacecea15feb"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-08.png",
+      "bytes": 193280,
+      "sha256": "c60a44d9ae83c772f2448ca8f4f5daba4f2d8aa39187d082e04a136ac302e162"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-08.txt",
+      "bytes": 1451,
+      "sha256": "59bd9f524bae0a4186699263d485c5cd82788261f8031a22f95e2907817dddf8"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-09.png",
+      "bytes": 274583,
+      "sha256": "074108f30e522368da1447e94af184020423f21ea82a5d3572cef6c51ab9cee3"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-09.txt",
+      "bytes": 2325,
+      "sha256": "983a958b72b118ce600cb11283d5a638b8e25edd520e7797393a6ed8033d7013"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-10.png",
+      "bytes": 57178,
+      "sha256": "3caff648802adeda923b450d573892548cd65e4b0324d3eb34006e5a216b4da8"
+    },
+    {
+      "path": "_evidence/pre-r1/final-pages/paragraaf-10.txt",
+      "bytes": 399,
+      "sha256": "88ffd6f519e3201cf310de6f0cb65814909fed13bfdda19c977dfb144e35d5e8"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/antwoorden-01.png",
+      "bytes": 132086,
+      "sha256": "1229c174cfccd09ac979465d2603ff011f82f985878abb5e8bc81bebc15ac796"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/antwoorden-02.png",
+      "bytes": 142732,
+      "sha256": "c3883d0f6e3b1aa78748dacd78e2ec8eb2dae1fcb5941e3e8bf0782ac006396b"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/antwoorden-03.png",
+      "bytes": 130893,
+      "sha256": "349d65104fdfc9bacb7fff8f3d561a9c965cc9fdb2b09bda19a11b4222925e59"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/antwoorden-04.png",
+      "bytes": 135251,
+      "sha256": "96251b04c406076e6713c0c8aba0eb62ad69cb8b94d93b8c169997625797709c"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/antwoorden-05.png",
+      "bytes": 145035,
+      "sha256": "b8758db81abdc39db6d44190d96cb0a67b511c45eb8f2e7bcdaf5b5bdbcaf5d8"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/antwoorden-06.png",
+      "bytes": 133836,
+      "sha256": "252afe48517d2f0d2029a007e83b4c64646216aefb919876b776cd2fcb6529e2"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/manifest.json",
+      "bytes": 4864,
+      "sha256": "16db5f8a5f5f25ed2d50840e774cf6e373585dcdafb890100865450f13c66812"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/opgaven-01.png",
+      "bytes": 99593,
+      "sha256": "a80730f37678beb25b198611a5613feceefdc93f1936ba8709d6d6170f172462"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/opgaven-02.png",
+      "bytes": 125755,
+      "sha256": "0312a6d4e975acc34bc1ef48f10cdc692d65650d578a9a68bf11838535cbdb68"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/opgaven-03.png",
+      "bytes": 109911,
+      "sha256": "6674f80c54b6f1989d7fe51b0e50165aa698e9d8915f8baa2c7735a6f2efcf5f"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/opgaven-04.png",
+      "bytes": 108584,
+      "sha256": "85783ccc6edbfc99341e11909dfadc1894eaa74e9bb03eb5718fefb7efe7be4c"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/opgaven-05.png",
+      "bytes": 106333,
+      "sha256": "717e409e2310391a5a0833db187c5dee6c84cce90acf6a4874dfae60f7a90493"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/opgaven-06.png",
+      "bytes": 101689,
+      "sha256": "fad214f1f3cd9dc3411d85c94d47b2ad365df9400bad376023e0ca736ead1e79"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/paragraaf-01.png",
+      "bytes": 96652,
+      "sha256": "16004d99827e1922d101a6c83690b05b708c29bcfc234fac51262c82c97e2632"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/paragraaf-02.png",
+      "bytes": 92768,
+      "sha256": "bbe6ba8a2b1b2d8db35676fc954fcef12155fe0e46092a696cd5c4dcee4d910f"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/paragraaf-03.png",
+      "bytes": 108198,
+      "sha256": "abf69e498055880943233503b2ccaa793e383f8d345cfe977822d346dedb1ebc"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/paragraaf-04.png",
+      "bytes": 111057,
+      "sha256": "989bdb92adb271b373aa8c15a3a3206ab1605582eaad416681b90bea0e284818"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/paragraaf-05.png",
+      "bytes": 124854,
+      "sha256": "bb5dcc5fa7745476f7a54a4ae7ae636287ea674121718dc6b2aa4a503d6a3f3a"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/paragraaf-06.png",
+      "bytes": 110096,
+      "sha256": "4861d7b4fd37ed8028874480f18659592bfabcdf59a9d92ea098443ac0c112f1"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/paragraaf-07.png",
+      "bytes": 108152,
+      "sha256": "90760774337a95d155bbb2d2795562d40c582c944b93fc2288e61efd0c079a57"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/paragraaf-08.png",
+      "bytes": 106337,
+      "sha256": "697848304c806f6f70911c3c9f82551c48e0577378fcc44a4bb6389c812f2a38"
+    },
+    {
+      "path": "_evidence/pre-r1/html-pages/paragraaf-09.png",
+      "bytes": 101691,
+      "sha256": "0f4e8bab27fd12554bfcf8325ca1ea452bf84297b95eb15258c852b1f3d0b759"
+    },
+    {
+      "path": "_evidence/pre-r1/review-input-manifest.json",
+      "bytes": 4799,
+      "sha256": "3df6c47eec782ca39ba7cc77d57a75b9861e5738ce12d229e9cfec5e85c8d57e"
+    },
+    {
+      "path": "_evidence/r1-author-repair.md",
+      "bytes": 2137,
+      "sha256": "b00ed2b913a1ff7dc035d9e6fbb9e9fa68c72835f27f124d8e18492dd8b278f6"
+    },
+    {
+      "path": "_evidence/r1-changed-pages.json",
+      "bytes": 316,
+      "sha256": "8bf3825da265e0603bc590e04a2db34b5980ba8733bd886eb9515e3ecc0e4387"
+    },
+    {
+      "path": "_evidence/rasterize.cjs",
+      "bytes": 499,
+      "sha256": "f2357be18295b410ebd1b95e2e6e4b8eb6c91c8209e7ec9ab289d0c2355246d9"
+    },
+    {
+      "path": "_evidence/reading-manifest.md",
+      "bytes": 7452,
+      "sha256": "aebdecd9d84d68806612dc948aff97467c7c205a4a809f696f0508bbfeb83101"
+    },
+    {
+      "path": "_evidence/render-html.cjs",
+      "bytes": 2180,
+      "sha256": "2425b44a0f99eb330d0ec8267da9b5415e35e6c3c8a2599260da394f92b75415"
+    },
+    {
+      "path": "_evidence/render-mechanical.json",
+      "bytes": 3854,
+      "sha256": "04d9867121f07ddd144e5b31e687f3a32a1986fc7572c6c4c5247d4657688724"
+    },
+    {
+      "path": "_evidence/render_and_check.py",
+      "bytes": 2549,
+      "sha256": "b3e0403dd7c326a031bf2afe16890ef4d6175132edbe8e1bb02fc0599c961026"
+    },
+    {
+      "path": "_evidence/review-input-manifest.json",
+      "bytes": 4799,
+      "sha256": "3df6c47eec782ca39ba7cc77d57a75b9861e5738ce12d229e9cfec5e85c8d57e"
+    },
+    {
+      "path": "_evidence/reviewer-assignment.txt",
+      "bytes": 3578,
+      "sha256": "41b1a3467b702b1154c823b162319aa5ef5a6b777b7b2161dabde8969a9f44a0"
+    },
+    {
+      "path": "_evidence/reviewer-checks-final.json",
+      "bytes": 5896,
+      "sha256": "1c42916500be4e7ce891ddf1929f515056a7414171c5b0433c18661b6404cdf6"
+    },
+    {
+      "path": "_evidence/reviewer-checks.py",
+      "bytes": 6303,
+      "sha256": "8ccfaa70b61b2e75a7112295572dd1019455f1de4297c51bb952a8f46d3392b9"
+    },
+    {
+      "path": "_evidence/reviewer-closeout.json",
+      "bytes": 14962,
+      "sha256": "fdec3db46cf7780897e2ffc46737995a117b214d1f2831adde3ba3eee4c04458"
+    },
+    {
+      "path": "_evidence/reviewer-closeout.py",
+      "bytes": 3471,
+      "sha256": "633ac311407afa1f193a8b9dc3ec1edce042ca0ce521a05630d26643ee782cee"
+    },
+    {
+      "path": "_evidence/reviewer-evidence.md",
+      "bytes": 13260,
+      "sha256": "45fe6c80a50b9c97a109ed43710344c051cfcd5686b6d37e6d1bf834aa9541d2"
+    },
+    {
+      "path": "_evidence/reviewer-html-region.cjs",
+      "bytes": 1443,
+      "sha256": "c686d58deea4a33505797ece19ef984bd45c617e5c3d75d52159ef068236060c"
+    },
+    {
+      "path": "_evidence/reviewer-html-region.json",
+      "bytes": 381,
+      "sha256": "f9d4011b9fab42a087f053f5b34c7f018765c6d1888adc062c6701a26e2594c3"
+    },
+    {
+      "path": "_evidence/reviewer-opgaven-y2700.png",
+      "bytes": 108584,
+      "sha256": "85783ccc6edbfc99341e11909dfadc1894eaa74e9bb03eb5718fefb7efe7be4c"
+    },
+    {
+      "path": "_evidence/reviewer-opgaven-y3300.png",
+      "bytes": 103656,
+      "sha256": "093bfd04f3f822a6bc0b428f27110cf1dcbcb75d964458290d1dd3a6850eb705"
+    },
+    {
+      "path": "_evidence/reviewer-validation-exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "_evidence/reviewer-validation.log",
+      "bytes": 1275,
+      "sha256": "ba2444b80c068dd9260e85f2d58b0255c1d8ad4b059a424956690480d1a9b880"
+    },
+    {
+      "path": "_evidence/runtime.txt",
+      "bytes": 502,
+      "sha256": "21173a5cce3a891a16e99db0b6d1fcf7e0f25550aa78d4f680d793d10b28a155"
+    },
+    {
+      "path": "_evidence/shared-prompt.md",
+      "bytes": 3398,
+      "sha256": "dffcc0b5316fd5a34747d7c85c623752a19f1a38650a04b37a4ad62966930a71"
+    },
+    {
+      "path": "_evidence/source-safety-results.json",
+      "bytes": 4433,
+      "sha256": "80512265ecac008718da7ef609e05ca75b13996921715df7bc9d986eb79298e1"
+    },
+    {
+      "path": "_evidence/stages.json",
+      "bytes": 2025,
+      "sha256": "584d6f2c7e11fa27d9ee49c01470182d9896097297a06a8e2e34198bd69b5e4b"
+    },
+    {
+      "path": "_evidence/target-snapshot.json",
+      "bytes": 3754,
+      "sha256": "397b9738403695444ce507a73a84a1ff220787ae62c30172ea1da0ad9d7969c7"
+    },
+    {
+      "path": "_evidence/worktree-release.json",
+      "bytes": 3282,
+      "sha256": "82c810d0f66d07df8f401f458f94ea50169a9f78bfda6ebdd452de0460cbd888"
+    },
+    {
+      "path": "build_pdf.py",
+      "bytes": 5912,
+      "sha256": "40cefa4814347371366fd9f9d5f7d52f8d41d36423bdabc5739be1951898f848"
+    }
+  ],
+  "direct_copies": [
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 antwoorden.md",
+      "archive_original_sha256": "173464e9b5eaf063fcf60d9d5dcaec2c64a632b9ffd9b467fbc932fbe47c8457",
+      "direct_copy_sha256": "7ea8b703e169634423231d1fe7a845ae67b426a0efb9943af41ef70425127c16",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 antwoorden.pdf",
+      "archive_original_sha256": "3723028eb0084a1aa6de9ca86ff2c6e1be76458d2b974309b7808d011349aabe",
+      "direct_copy_sha256": "3723028eb0084a1aa6de9ca86ff2c6e1be76458d2b974309b7808d011349aabe",
+      "normalization": "none; exact PDF bytes"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 opgaven.md",
+      "archive_original_sha256": "e6269849ada5d85e8431589ab5c1242235734a6a657b92e035f1ed3bce5dce7e",
+      "direct_copy_sha256": "2efb999cf4f8dd26c64563dfa9bf0e720690c03d93a71f431030203b78a5aec0",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 opgaven.pdf",
+      "archive_original_sha256": "0d511e1f6e98f0d21977c66d07a0c3020b600f42ae8a6285a73177ccbf9a305f",
+      "direct_copy_sha256": "0d511e1f6e98f0d21977c66d07a0c3020b600f42ae8a6285a73177ccbf9a305f",
+      "normalization": "none; exact PDF bytes"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.md",
+      "archive_original_sha256": "18a56a00c651c96f478d974175d314c83f229af3e1e201799f2aa69ee1ac0aa4",
+      "direct_copy_sha256": "0d183f702cdb3eb154ad1f651bf94c12b0187bd7119a182a074de049f316669e",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "2.1.2 Opbrengsten, winst en break-even \u2013 paragraaf.pdf",
+      "archive_original_sha256": "4305a45b047ccd700ee010e3831e19aec4d4172a6c204681b27a8d0426a993a3",
+      "direct_copy_sha256": "4305a45b047ccd700ee010e3831e19aec4d4172a6c204681b27a8d0426a993a3",
+      "normalization": "none; exact PDF bytes"
+    },
+    {
+      "path": "2.1.2-review.md",
+      "archive_original_sha256": "29e766ed0d4d7f903f0669b77ebc82a61b41a65231f6854697fa1c41c51cf44e",
+      "direct_copy_sha256": "29e766ed0d4d7f903f0669b77ebc82a61b41a65231f6854697fa1c41c51cf44e",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "2.1.2-textbook-handoff.md",
+      "archive_original_sha256": "37f2ef533c03e20ca82daeacd9aeadc35f2e57d4c97642b29ff60706aacfd937",
+      "direct_copy_sha256": "37f2ef533c03e20ca82daeacd9aeadc35f2e57d4c97642b29ff60706aacfd937",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    },
+    {
+      "path": "2.1.2-textbook-plan.md",
+      "archive_original_sha256": "e9e5787d26918a12ab13466cbc1a9317ea35319f5cd6561dad2289dc5fcdae81",
+      "direct_copy_sha256": "f1d93df8510369db5441fe7cf901cd47eee2f5c10144be7e8044f506f2e11a55",
+      "normalization": "UTF-8 Markdown: LF, no trailing spaces/tabs, one final newline"
+    }
+  ]
+}

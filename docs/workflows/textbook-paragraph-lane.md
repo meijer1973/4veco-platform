@@ -138,9 +138,23 @@ node build-scripts/workflows/check-paragraph-lane-scope.js --cwd ../4veco-lessen
 
 ## Closure Gate
 
+For eligible routine Part A as defined in `agents/README.md`, use one independent
+substantive `econ-paragraph-review` assignment after author self-checks and
+mechanical validation. The reviewer covers didactic and precision checks,
+teacher/student perspectives, accessibility, and final rendered PDF/HTML pages;
+they may also generate the required Part A quality record via `econ-quality-control`.
+Additional reviewers require a concrete unresolved issue, failed check needing
+specialist judgement, explicit owner request, or applicable specialist gate,
+with the reason recorded in the existing review. Ineligible and consequential
+mixed tasks keep their existing routes. Required structural lead review,
+independent PR-readiness, current-head CI and publication authorization are
+unchanged. Recheck repairs and affected dependencies before closure.
+
 The lane is closed only when:
 
-- `X.Y.Z-review.md` is produced by an independent `econ-paragraph-review`.
+- `X.Y.Z-review.md` is produced by an independent `econ-paragraph-review`, has
+  identifiable teacher/student and final full-page coverage, the existing
+  `## 2. Verdict` block, and no unresolved FAIL. Author self-review is insufficient.
 - `X.Y.Z-quality-ref.yaml` has an updated `partA:` block.
 - `X.Y.Z-textbook-handoff.md` is filled.
 - No companion completion claim is made.

@@ -517,12 +517,12 @@ does not ignore a matching open blocking hold or a released hold without evidenc
 28. □ Whole-lesson equation totals actual planned minutes at ≤55; recommended range addition alone is not accepted as proof, and optional guided/bonus/review time is accounted for separately (cross-check with exercise builder)
 
 **Didactic and precision review (before quality_ref):**
-29. □ Run `econ-paragraph-review` Pass 1 (didactic architecture): opening, scaffolding, dual coding, fading, misconceptions, exercises, summary
+29. □ After author self-checks and mechanical validation, assign an independent reviewer to `econ-paragraph-review` Pass 0 (integrity) and Pass 1 (didactic architecture, teacher and typical-student coverage). For eligible routine Part A under `agents/README.md`, use one content assignment; the author cannot review their own work
 30. □ Run `econ-paragraph-review` Pass 2 (mathematical precision): graph accuracy, algebra, terminology, answer verification, cross-paragraph consistency — verify against `references/authored/economic_mathematical_precision_reference.md`
-31. □ All FAIL items resolved; FLAG items addressed or documented
+31. □ Pass 3 inspects final full-page PDF/HTML proof; all FAIL items resolved with dependency-aware recheck and FLAG items addressed or documented in `X.Y.Z-review.md`
 
 **Quality control (after review passes):**
-32. □ Generate `quality_ref` using `econ-quality-control` skill (Part 2)
+32. □ Generate `quality_ref` using `econ-quality-control` skill (Part 2); for eligible routine Part A the same independent content reviewer does this within the assignment, preserving the existing record/schema and any explicit specialist gate
 33. □ Store as `[paragraph-code]-quality-ref.yaml` in the paragraph folder
 34. □ All leerdoelen mapped to eindtermen with Bloom levels
 35. □ All present components documented with inspectie standards and didactiek principles

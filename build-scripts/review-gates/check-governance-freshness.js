@@ -5,6 +5,9 @@ const { spawnSync } = require('child_process');
 
 const DEFAULT_FILES = Object.freeze([
   'AGENTS.md',
+  'docs/review/agent-publication-workflow.md',
+  'docs/workflows/task-planning-and-review.md',
+  'docs/workflows/platform-and-companion-reference.md',
   'AGENT_GITHUB_ENTRY.md',
   'docs/review/pr-readiness-routing-policy.md',
   'docs/review/pr-integration-lane-policy.md',

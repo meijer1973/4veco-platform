@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const {
+  RULES,
   CANONICAL_NAVIGATION_PATHS,
   LEGACY_PROFILE_LINKS,
   MAP_ANCHOR_KEYS,
@@ -131,7 +132,7 @@ describe('check-paragraph-workflow-wording', () => {
   test('active workflow surfaces preserve the two-lane and full-route contract', () => {
     expect(checkParagraphWorkflowWording()).toEqual({
       ok: true,
-      files_checked: 12,
+      files_checked: new Set([...RULES.map((rule) => rule.file), ...NAVIGATION_FILES]).size,
       failures: [],
     });
   });
@@ -165,5 +166,28 @@ describe('check-paragraph-workflow-wording', () => {
 
     expect(failures).toHaveLength(1);
     expect(failures[0]).toMatch(/missing required wording/);
+  });
+
+  test.each([
+    ['agents/README.md', 'Platform/generator changes, companion interaction work, protected-source\nor curriculum changes, and governance or review-policy changes are outside this\nexception.'],
+    ['agents/README.md', 'Mixed tasks retain the review required by their consequential changes.'],
+    ['agents/README.md', 'An explicit owner request or applicable specialist/human gate still applies.'],
+    ['agents/README.md', 'separate from every author whose content they review'],
+    ['agents/lead-reviewer-agent.md', 'absent separate specialist reports alone are not a blocker within this exception'],
+    ['agents/lead-reviewer-agent.md', 'unless eligible routine Part A has genuine recorded teacher coverage in its independent `econ-paragraph-review`'],
+    ['agents/lead-reviewer-agent.md', 'unless eligible routine Part A has genuine recorded student coverage in its independent `econ-paragraph-review`'],
+    ['agents/lead-reviewer-agent.md', 'Consolidated content review lacks required coverage, comes from its author, or contains an unresolved FAIL'],
+    ['skills/econ-paragraph-review.md', 'No source-authority hold or publication safeguard is waived.'],
+    ['skills/econ-paragraph-review.md', '## 2. Verdict\n\n**PASS**'],
+    ['skills/econ-paragraph-review.md', 'isolated figure crops do not replace full-page proof'],
+    ['skills/econ-paragraph-review.md', 'Changed values require rechecking affected\ncalculations, graphs, and answers; pagination changes require inspection of\naffected neighbouring pages'],
+    ['skills/econ-chapter-builder.md', 'Every paragraph still needs\nidentifiable coverage/findings and its required report'],
+    ['skills/econ-chapter-builder.md', 'Required structural lead review and\nindependent PR-readiness remain separate release responsibilities.'],
+    ['skills/econ-consolidation-builder.md', 'outside the exception retain separate review routing and all explicit specialist gates'],
+  ])('fails a removed routine-review boundary or required coverage: %s / %s', (file, clause) => {
+    const rule = RULES.find((entry) => entry.file === file);
+    const text = fs.readFileSync(path.join(root, file), 'utf8').replace(/\r\n/g, '\n');
+    expect(text).toContain(clause);
+    expect(findRuleFailures(file, text.replace(clause, ''), rule.required, rule.forbidden)).not.toEqual([]);
   });
 });
