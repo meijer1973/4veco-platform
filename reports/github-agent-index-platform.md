@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-08T15:34:20.892Z
+Generated: 2026-09-08T15:41:52.917Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/y1-renewal-descendants-20260908`
-Source commit: `64f9cfffcfb5bcc995e74d705873ae40f676f673`
-Files indexed: 7665
+Source commit: `6b3b65f3fcc94172664811f0db4b3fa8f8c098c3`
+Files indexed: 7667
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2638,7 +2638,7 @@ Count: 1029
 
 ## reports
 
-Count: 4946
+Count: 4948
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2997,7 +2997,6 @@ Count: 4946
 - reports/json/unit-term-slug-migration.json
 - reports/json/unresolved-refs.json
 - reports/json/visual-qa-harden2-proof.json
-- reports/json/y1-golden-rollout-wave-1-current-verifier.json
 - reports/json/y1-golden-rollout-wave-1-proof.json
 - reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json
 - reports/markdown/aspects-coverage.md
@@ -7520,6 +7519,9 @@ Count: 4946
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-baseline.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.jsonl
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-descendant-verifier-certificate.json
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-descendant-verifier-corrections.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-descendant-verifier-lead-review-round1.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-descendant-verifier-plan-review.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-descendant-verifier-plan.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md
