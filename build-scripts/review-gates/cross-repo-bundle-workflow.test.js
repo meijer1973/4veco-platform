@@ -78,11 +78,12 @@ describe('cross-repo bundle workflow safety', () => {
   test('delta-required partial resume is explicit local evidence and hosted dispatch cannot imply it', () => {
     expect(authorizedBundleLane).toContain("optionValue(argv, '--delta-review')");
     expect(authorizedBundleWorkflow).not.toContain('--delta-review');
-    expect(agents).toContain('delta-required partial resume must use the owner-authenticated');
+    expect(agents).toContain('(docs/review/pr-integration-lane-policy.md)');
     expect(integrationPolicy).toContain('Delta-required resumes therefore use the owner-authenticated local');
     expect(integrationPolicy).toContain('workflow dispatch is not an evidence waiver');
     expect(integrationPolicy).toContain('must return an explicit');
-    expect(agents).toContain('A delta-required dry-run also fails');
+    expect(integrationPolicy).toContain('whose current platform lineage requires a delta review must return an explicit');
+    expect(integrationPolicy).toContain('failure rather than report a simulated `merged_bundle`');
   });
 
   test('residual payload lead evidence is explicit and cannot be inferred from authorization', () => {
