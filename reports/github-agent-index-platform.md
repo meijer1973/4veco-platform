@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-08T07:33:56.908Z
+Generated: 2026-09-08T09:27:07.107Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/reorganize-20260908`
-Source commit: `0a95d7e93313841dffd5f335716de1fb6b7d3808`
-Files indexed: 7665
+Source commit: `5dacf7be26330b2f74221b4d37c289b713dba74d`
+Files indexed: 7703
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -899,7 +899,7 @@ Count: 25
 
 ## validators
 
-Count: 695
+Count: 696
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1562,6 +1562,7 @@ Count: 695
 - reports/sprints/GRAPH-CHECK-UX-1-visual-qa-report.md
 - reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-validation-log.md
 - reports/sprints/LANDING-V2-REGRESSION-GUARD-1-validation-log.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-validation-log.md
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-validation-log.md
 - reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-short-check-desktop-light-completed-feedback.png
 - reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-short-check-desktop-light.png
@@ -2633,7 +2634,7 @@ Count: 1029
 
 ## reports
 
-Count: 4946
+Count: 4972
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4751,6 +4752,8 @@ Count: 4946
 - reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
 - reports/review-gates/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1/review-packet.json
 - reports/review-gates/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1/review-packet.json
+- reports/review-gates/LIGHT-AUTHORING-CLEANUP-1/README.md
+- reports/review-gates/LIGHT-AUTHORING-CLEANUP-1/throughput.json
 - reports/review-gates/PR200-RENEWAL-20260823/conflict-resolution-log.md
 - reports/review-gates/PR200-RENEWAL-20260823/lesson-main-pdf-inventory.json
 - reports/review-gates/PR200-RENEWAL-20260823/lesson-main-pdf-inventory.md
@@ -6276,8 +6279,32 @@ Count: 4946
 - reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-plan.md
 - reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-result.md
 - reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison-prompt.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/README.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/2.1.2-comparison-report.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/2.1.2-quality-record.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/2.1.2-review.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/2.1.2-textbook-handoff.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/2.1.2-textbook-plan.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/artifact-manifest.json
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/README.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/sample-x-artifacts.zip
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/student-experience-review.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/teacher-learning-quality-review.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-y/2.1.2-review.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-y/2.1.2-textbook-handoff.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-y/2.1.2-textbook-plan.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-y/artifact-manifest.json
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-y/README.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-y/sample-y-artifacts.zip
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-lead-review-assignment.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-owner-handoff-original.zip
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-owner-handoff.md
 - reports/sprints/LIGHT-AUTHORING-CLEANUP-1-plan-review.md
 - reports/sprints/LIGHT-AUTHORING-CLEANUP-1-plan.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-platform-command-log.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-result.md
+- reports/sprints/LIGHT-AUTHORING-CLEANUP-1-validation-log.md
 - reports/sprints/MATH-REFINE-1-baseline.md
 - reports/sprints/MATH-REFINE-1-diff-summary.md
 - reports/sprints/MATH-REFINE-1-gate-handoff.md
@@ -7590,9 +7617,20 @@ _No files indexed in this group._
 
 ## paragraph folders
 
-Count: 0
+Count: 12
 
-_No files indexed in this group._
+- "reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/2.1.2 Opbrengsten, winst en break-even \342\200\223 antwoorden.md"
+- "reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/2.1.2 Opbrengsten, winst en break-even \342\200\223 antwoorden.pdf"
+- "reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/2.1.2 Opbrengsten, winst en break-even \342\200\223 opgaven.md"
+- "reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/2.1.2 Opbrengsten, winst en break-even \342\200\223 opgaven.pdf"
+- "reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/2.1.2 Opbrengsten, winst en break-even \342\200\223 paragraaf.md"
+- "reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-x/2.1.2 Opbrengsten, winst en break-even \342\200\223 paragraaf.pdf"
+- "reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-y/2.1.2 Opbrengsten, winst en break-even \342\200\223 antwoorden.md"
+- "reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-y/2.1.2 Opbrengsten, winst en break-even \342\200\223 antwoorden.pdf"
+- "reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-y/2.1.2 Opbrengsten, winst en break-even \342\200\223 opgaven.md"
+- "reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-y/2.1.2 Opbrengsten, winst en break-even \342\200\223 opgaven.pdf"
+- "reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-y/2.1.2 Opbrengsten, winst en break-even \342\200\223 paragraaf.md"
+- "reports/sprints/LIGHT-AUTHORING-CLEANUP-1-comparison/sample-y/2.1.2 Opbrengsten, winst en break-even \342\200\223 paragraaf.pdf"
 
 ## generated artifacts
 
