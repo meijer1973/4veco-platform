@@ -3,7 +3,7 @@
   "repair_id": "Y1-GOLDEN-ROLLOUT-WAVE-1-DESCENDANT-VERIFIER",
   "binding_model": "historical_capture_and_current_descendant_verification",
   "baseline_platform_sha": "96416b6b5bd57094576e9aba0a42d682584ec479",
-  "source_payload_sha": "db9a2f8376c1ed2f97b2ca9213b9fb3e95ac4301",
+  "source_payload_sha": "98e6c79a22cca2d36a9375647378ce37a7771980",
   "historical_lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
   "initial_observation": {
     "lesson_sha": "57b31a1f4a3d2aa0da3945abbc5a7a0ee5d05e6a",
@@ -12,18 +12,23 @@
   "successor_sources": [
     {
       "path": "build-scripts/sprints/check-y1-golden-rollout-wave-1-current.js",
-      "blob_oid": "9709193398d419dba707860316b193b2c06f19fe",
-      "sha256": "2bbde11a726c6bc5f5076deb190ce9c74e038403586de45533a68b19ba2b714b"
+      "blob_oid": "137c635940b404f003ce9e4f79624868ad97d851",
+      "sha256": "05509170e831ee114617bea8d253922da04e48859769a3d5b4be36f5afc3eb39"
     },
     {
       "path": "build-scripts/sprints/check-y1-golden-rollout-wave-1-current.test.js",
-      "blob_oid": "d7f8af47b72b50ef0547f2f0d1527dc8b975c4d2",
-      "sha256": "d8cdedfdf1d261f40603e38cceeb1c60ff57ebe9e331441f528d377c748c2c97"
+      "blob_oid": "a3736bf114376332c4081ceb3782ee593aa11ab5",
+      "sha256": "b59d56004c96cb0239194b87f54e1aa9184d1c5b69a15442f7f7546a627d6ad3"
     },
     {
       "path": "build-scripts/sprints/write-y1-golden-rollout-wave-1-current-evidence.js",
       "blob_oid": "f911b03fb5e472149df5597b59022e46215d2d94",
       "sha256": "c0d30468ce66a56b6e8efa0a103ba7cf5d95d69f96bd81a58ec7b1ed821a820e"
+    },
+    {
+      "path": "build-scripts/sprints/inspect-y1-runtime-checkout.js",
+      "blob_oid": "4a97efa0e25eeb6c8742175df7b914371ac1b72b",
+      "sha256": "6e9645fbee2afe63b202a1232fa50a4e5ea08176c9993c34f9c55047d308ca37"
     }
   ],
   "wiring_provenance": [
@@ -34,13 +39,18 @@
     },
     {
       "path": ".github/workflows/platform-ci.yml",
-      "blob_oid": "272ee7112e664162c2d38a8dce2f97c5d9794b9b",
-      "sha256": "292286b3bdd149a1b4a11e80814e8d222ee865d856b04b6ceb01f253f54275e8"
+      "blob_oid": "32289b9046cb7d0d756b08febde15dd41cac3de1",
+      "sha256": "2d60c09cbef51a5328bbb912f3ef1c5af7961e4fc87017ef29872b7198026b50"
     },
     {
       "path": "package-lock.json",
       "blob_oid": "811e615435752f160e2973b2dfc4c30ded901712",
       "sha256": "b6b795d78e81c17a0edd41d8b657520d20055230f4c0f4cd3063a73921e2259e"
+    },
+    {
+      "path": ".gitattributes",
+      "blob_oid": "9e6e42cc9b189ec1d0c43e801215ee5bbbd6cf04",
+      "sha256": "a6c764d024eaa57c13582a505a21688a261bceb53479bb464c9ee90d4797e7af"
     }
   ],
   "retained_historical_artifacts": [
