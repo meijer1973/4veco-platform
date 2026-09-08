@@ -29,15 +29,19 @@ is not ready.
 For any non-trivial sprint, roadmap, gate, reference-system, production, or architecture task:
 
 - read the relevant roadmap, sprint plan, source files, validators, and prior reports before acting
-- write or update a sprint plan before implementation
-- make the plan operational, not merely formal: it must expand the roadmap description into concrete procedure, decision points, outputs, acceptance tests, and stop conditions
-- log the plan in the expected sprint files before executing
+- write or update the applicable plan before implementation: the required
+  textbook/paragraph plan for routine production, or the sprint/gate plan for
+  an actual roadmap sprint or review gate
+- make the plan operational: expand the applicable specification into concrete
+  procedure, decision points, outputs, acceptance tests and stop conditions
+- record the plan in its existing required files before execution; actual
+  roadmap sprints retain all expected sprint plans and logs
 - follow the plan as written
 - if the plan is too thin or misses a requirement from the roadmap, stop and fix the plan before continuing
 - before moving past a review gate, verify the required artifacts exist and validators pass
-- close every non-trivial response with a clear direction for what should happen next: proceed to the next sprint, send a human-review packet, run a specific validation/build step, commit/push, insert a new sprint, or deliberately stop/pause
-- when blockers, evidence gaps, planning contradictions, or architectural uncertainty appear, say so plainly at the end and recommend the strategic pause or roadmap adjustment needed before continuing
-- do not leave the user to infer the next step from a status summary; the final paragraph must make the operational next action explicit
+- use the root final-report requirement, making blockers, evidence gaps or
+  architectural uncertainty explicit and recommending any needed pause or
+  roadmap adjustment as the next action
 
 ### Sprint agent structure
 

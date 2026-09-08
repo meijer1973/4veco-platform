@@ -82,7 +82,9 @@ For companion artifact **review**, use `agents/econ-companion-visual-review.md`.
 
 ### Quality control: Part A and Part B have separate review records (L1.5V Bucket F)
 
-Every paragraph carries TWO review records and ONE quality-ref:
+Every paragraph completed in both lanes carries TWO review records and ONE
+quality-ref. A Part A-only assignment requires its Part A record and block;
+it does not claim companion completion:
 
 - `${parNr}-review.md` — Part A textbook review (output of `econ-paragraph-review` skill).
 - `${parNr}-companion-visual-review.md` — Part B companion review (output of `econ-companion-visual-review` agent).
@@ -94,13 +96,18 @@ Use `npm run check:paragraph-lane-scope -- --lane shared --base origin/main --he
 
 Every skill in `skills/` carries a `pipeline:` frontmatter field (Part A producer / Part B producer / shared infrastructure / Part A reviewer / Part A assembler / Part A orchestrator / Part B producer (umbrella)) so a glance at frontmatter tells you which pipeline owns the skill's output and which gate runs against it.
 
-For a narrower review of a specific visual item, screenshot, rendered UI, graph, chart, diagram, or generated asset, use `agents/visual-qa-agent.md`. It is the conservative visual QA gate for clarity, legibility, hierarchy, affordance, accessibility, geometry, overflow, clipping, and production readiness.
-
-For learning-design and classroom-readiness review, use `agents/teacher-learning-quality-review-agent.md`. It checks whether learning goals, prior knowledge, didactic sequence, formative feedback, differentiation, dual coding, transfer, and retention make student learning likely. Visual polish, accessibility, and passing tests do not prove this.
-
-For lived student-experience review, use `agents/student-experience-review-agent.md`. It checks whether a typical 15-year-old 4 vwo economics student can orient, understand the next action, handle the cognitive load, stay motivated, and connect graphs or flow charts to the explanatory text. Teacher approval does not prove student usability.
-
-For multi-surface QA orchestration, use `agents/lead-reviewer-agent.md`; it routes work to the right specialist agents, verifies evidence completeness, and produces the consolidated go/no-go decision. Use `agents/testing-agent.md` for test command selection, exit-code evidence, validator results, and residual-risk reporting. Use `agents/accessibility-agent.md` for focused readability, contrast, alt-text, OCR, semantic, keyboard, and inclusive-usability review.
+Review assignments and their eligibility conditions are defined in
+`agents/README.md` and `agents/lead-reviewer-agent.md`; follow that routing rather
+than derive additional assignments from this design reference. The specialist
+protocols remain available for the selected scope: `visual-qa-agent.md` for
+visual clarity, geometry and production readiness; `teacher-learning-quality-review-agent.md`
+for learning design; `student-experience-review-agent.md` for a typical 4 vwo
+student's orientation, cognitive load, motivation and visual understanding;
+`testing-agent.md` for command/exit-code proof; and `accessibility-agent.md` for
+readability, contrast, alt text, OCR, semantics and inclusive access (all under
+`agents/`). Visual polish, accessibility and passing tests do not prove learning;
+teacher approval alone does not prove student usability. Required coverage and
+explicit specialist gates remain mandatory under the selected route.
 
 ## Exam Ingestion End-State
 
