@@ -197,7 +197,10 @@ Correction results before publication:
   and resolve the nested skill link from its own directory. Anchor validation
   covers the ATX headings and explicit anchors used by these scoped documents;
   it is not a repository-wide Markdown parser or network crawler.
-- Both focused Jest suites passed: 58 tests. Active governance wording, active
+- Independent checker review caught an empty `AGENTS.md#` fragment being
+  counted as section guidance. The checker now rejects it; negative fixtures
+  cover both incoming documents.
+- Both focused Jest suites passed: 60 tests. Active governance wording, active
   scope language, evidence line endings, and whitespace checks also passed.
 - Independent document review passed with no changed gate, source boundary,
   or teaching requirement. Final published-head review and remote evidence

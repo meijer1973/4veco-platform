@@ -96,6 +96,10 @@ function findEntryLinkFailures(root, options = {}) {
         destination = `${path.resolve(root, '..', githubPath[1], decodeURIComponent(githubPath[2]))}${url.hash}`;
       }
       const [targetPath, fragment] = destination.split('#');
+      if (!guide && !fragment) {
+        failures.push(`${file}: linked section fragment is empty: ${href}`);
+        continue;
+      }
       const target = targetPath ? path.resolve(path.dirname(absolute), targetPath) : absolute;
       const targetText = read(target);
       if (targetText === null) failures.push(`${file}: linked file missing: ${href}`);

@@ -162,6 +162,8 @@ describe('check-paragraph-workflow-wording', () => {
     ['AGENTS.md', '[spec](https://github.com/wrong-owner/4veco-lessen/blob/main/specifications/product-vision.md)', /unexpected entry-guide GitHub destination/],
     ['AGENTS.md', '[spec](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/missing.md)', /linked file missing/],
     ['BUILD-PARAGRAPH.md', '[Design Principles](AGENTS.md#design-principles)', /linked section missing/],
+    ['BUILD-PARAGRAPH.md', '[quality](AGENTS.md#)', /linked section fragment is empty/],
+    ['skills/econ-chapter-builder.md', '[quality](../AGENTS.md#)', /linked section fragment is empty/],
     ['skills/econ-chapter-builder.md', '[Design Principles](../AGENTS.md#design-principles)', /linked section missing/],
     ['skills/econ-chapter-builder.md', 'see AGENTS.md, Design Principles section', /missing linked AGENTS.md section guidance/],
   ])('rejects broken entry navigation in %s: %s', (file, text, expected) => {
