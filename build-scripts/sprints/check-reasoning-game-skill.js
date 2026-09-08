@@ -107,10 +107,10 @@ function main() {
 
   const umbrella = read('skills/econ-companion-artifacts.md');
   assert(umbrella.includes('skills/econ-reasoning-game.md'), 'umbrella companion skill must route redeneer-spel work to econ-reasoning-game');
-  const agents = read('AGENTS.md');
-  assert(agents.includes('skills/econ-reasoning-game.md'), 'AGENTS.md must mention the dedicated reasoning-game skill');
-  assert(agents.includes('references/exemplars/product-excellence/reasoning-games/'), 'AGENTS.md must mention the reasoning-game exemplar library');
-  assert(/legacy 5 modi/.test(agents), 'AGENTS.md must mark the old 5-mode reasoning route as legacy');
+  const agents = read('docs/workflows/platform-and-companion-reference.md');
+  assert(agents.includes('skills/econ-reasoning-game.md'), 'Platform/companion reference must mention the dedicated reasoning-game skill');
+  assert(agents.includes('references/exemplars/product-excellence/reasoning-games/'), 'Platform/companion reference must mention the reasoning-game exemplar library');
+  assert(/legacy 5 modi/.test(agents), 'Platform/companion reference must mark the old 5-mode reasoning route as legacy');
 
   console.log('Reasoning game skill check OK');
 }

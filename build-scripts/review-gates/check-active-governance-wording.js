@@ -10,6 +10,8 @@ const ACTIVE_ROOTS = Object.freeze([
   'agents',
   'skills',
   'docs/review',
+  'docs/workflows/task-planning-and-review.md',
+  'docs/workflows/platform-and-companion-reference.md',
   'build-scripts',
   '.github/workflows',
   '.gitattributes',

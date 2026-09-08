@@ -61,9 +61,14 @@ describe('check-governance-freshness', () => {
     expect(gitRunner.calls[0]).toEqual(['fetch', '--prune', 'origin']);
   });
 
-  test('fails when AGENTS.md is stale', () => {
+  test.each([
+    'AGENTS.md',
+    'docs/review/agent-publication-workflow.md',
+    'docs/workflows/task-planning-and-review.md',
+    'docs/workflows/platform-and-companion-reference.md',
+  ])('fails when root or relocated governance is stale: %s', (file) => {
     const remoteFiles = makeRemoteFiles();
-    const localFiles = { ...remoteFiles, 'AGENTS.md': 'stale agents guidance\n' };
+    const localFiles = { ...remoteFiles, [file]: 'stale agents guidance\n' };
     const root = makeTempRoot(localFiles);
 
     const summary = checkGovernanceFreshness({
@@ -73,7 +78,7 @@ describe('check-governance-freshness', () => {
 
     expect(summary.ok).toBe(false);
     expect(summary.differing_files).toContainEqual({
-      path: 'AGENTS.md',
+      path: file,
       reason: 'differs_from_origin_main',
     });
     expect(summary.failures.join('\n')).toMatch(/governance files differ/);

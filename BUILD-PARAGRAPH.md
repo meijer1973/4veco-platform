@@ -59,13 +59,13 @@ It does not create a third lane and does not prove the complete product route.
 > `../4veco-lessen/specifications/product-vision.md`, the operational
 > product end-state specification at
 > `../4veco-lessen/specifications/product-end-state.md`, and the **Design
-> Principles** section in [AGENTS.md](AGENTS.md#design-principles). Paragraph
+> Principles** section in [product design principles](docs/workflows/platform-and-companion-reference.md#design-principles). Paragraph
 > work should identify which product-vision pillar it supports. The product
 > north star is a visible route from current readiness to target-exercise
 > readiness. Two design principles govern every surface: **Dual Coding** (every
 > concept pairs text with a visual) and **Unified Student Experience** (same
 > procedures and approaches across all formats). These are non-negotiable.
-> Paragraph landing V2 additionally uses
+> For companion landing work, Paragraph landing V2 additionally uses
 > `../4veco-lessen/specifications/paragraph-landing-layout-v2.md` and the
 > approved visual fixtures in `references/ui/paragraph-landing-v2/` as the
 > visual baseline. Do not build paragraph landing pages from the old lesson
@@ -152,17 +152,21 @@ For a later book, use its approved canonical book outline when one exists. If
 the required book-level layer is absent, stop at foundation planning rather
 than starting from the paragraph in isolation.
 
-# COMMON pre-conditions (read first, applies to BOTH pipelines)
+# Task-specific preconditions
 
-These four references frame every paragraph build, regardless of mode. Read them before touching either Part A or Part B.
+Ordinary Part A assignments start with `docs/workflows/textbook-paragraph-lane.md`
+and the relevant Part A sections below. Read the common authority first; load
+companion-specific instructions only for Part B or complete integration work.
 
-- **`AGENTS.md`** — architecture, deploy rules, design principles. Hoist of hard rules.
+- **`AGENTS.md`** — task routing, teaching authority, essential safety and publication boundaries.
 - **`../4veco-lessen/specifications/product-vision.md`** — canonical
   strategic direction and trade-off logic. Paragraph plans should identify
   which vision pillar they strengthen.
 - **`../4veco-lessen/specifications/product-end-state.md`** — canonical
   end-state definition: every paragraph route moves from current readiness to
   target-exercise readiness.
+For Part B or complete integration work, additionally read:
+
 - **`../4veco-lessen/specifications/companion-core-specifications.md`** —
   stable companion-surface specifications for routes, game row, exit tickets,
   review verdicts, and product-use boundaries.

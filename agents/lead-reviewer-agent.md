@@ -45,7 +45,7 @@ The Lead Reviewer Agent may coordinate:
 Inspect as many of these as apply:
 
 - User request and acceptance criteria.
-- `AGENTS.md`, `BUILD-PARAGRAPH.md`, `BUILD-CHAPTER.md`, and relevant sprint/gate plan.
+- `AGENTS.md`, the applicable lane runbook, relevant paragraph-reference sections and sprint/gate plan; `BUILD-CHAPTER.md` for chapter work.
 - Existing review reports, quality-ref YAML, and validator outputs.
 - Rendered screenshots, PDFs, HTML pages, DOCX/PPTX exports, or visual assets.
 - Source builders, generated artifacts, and target output paths.

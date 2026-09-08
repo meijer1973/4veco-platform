@@ -41,6 +41,11 @@ const RULES = Object.freeze([
     required: [
       /exactly two operational lanes/i,
       /Paragraph PDFs and `build_pdf\.py` are normal Part A textbook outputs for human review/i,
+    ],
+  },
+  {
+    file: 'docs/workflows/platform-and-companion-reference.md',
+    required: [
       /14 files as a validator baseline, not as proof that the full product route is complete/i,
     ],
   },

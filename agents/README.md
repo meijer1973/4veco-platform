@@ -34,7 +34,7 @@ Both verdicts feed `scripts/validate-paragraph.js` via the `partA:` and `compani
 
 ## Operating rules
 
-- Load `AGENTS.md`, `BUILD-PARAGRAPH.md`, and the requested agent file before reviewing production lesson artifacts.
+- Load `AGENTS.md`, the applicable textbook or companion lane runbook, and the requested reviewer file. Use relevant `BUILD-PARAGRAPH.md` sections as the full reference; chapter work additionally uses `BUILD-CHAPTER.md`.
 - Use `lead-reviewer-agent.md` for substantive quality, specification fulfilment, specialist-review routing, and evidence completeness. Use `pr-readiness-reviewer-agent.md` only after the draft PR is remotely inspectable and lead review exists; it routes PR lifecycle state and must not replace missing lead or specialist review.
 - Inspect rendered output, not only source files. A clean source does not make generated HTML, opt-in DOCX, PPTX, or Part A PDF output clean.
 - Use `teacher-learning-quality-review-agent.md` when a task claims classroom readiness or learning quality. Visual polish, accessibility, and passing tests do not prove that students learn the intended concept or skill.

@@ -238,6 +238,9 @@ function activeFiles(root) {
   const lessonRoot = path.resolve(root, '..', '4veco-lessen');
   const platformFiles = [
     'AGENTS.md',
+    'docs/review/agent-publication-workflow.md',
+    'docs/workflows/task-planning-and-review.md',
+    'docs/workflows/platform-and-companion-reference.md',
     'AGENT_GITHUB_ENTRY.md',
     'RESEARCH_AGENT_MAP.md',
     'BUILD-PARAGRAPH.md',

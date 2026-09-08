@@ -131,7 +131,7 @@ describe('check-paragraph-workflow-wording', () => {
   test('active workflow surfaces preserve the two-lane and full-route contract', () => {
     expect(checkParagraphWorkflowWording()).toEqual({
       ok: true,
-      files_checked: 12,
+      files_checked: 13,
       failures: [],
     });
   });
