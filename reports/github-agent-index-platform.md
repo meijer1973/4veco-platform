@@ -6,7 +6,7 @@ Purpose: lightweight orientation for agents browsing through GitHub. This invent
 
 Root: `4veco-platform`
 Source branch: `codex/reorganize-2-20260908`
-Source commit: `f981991342031ef958f41dc18cc94ba325027fce`
+Source commit: `e0d7b6c7ac3280f1f097ec83bb3ea65a5e302eb2`
 Files indexed: 7670
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
