@@ -231,7 +231,7 @@ jobs:
           }
           $env:Y1_GOLDEN_EVENT_BASE_SHA = $base
           $env:Y1_GOLDEN_EVENT_HEAD_SHA = $head
-          npm run check:y1-golden-rollout-wave-1 -- --event-mode $mode --scope-mode auto --base $base --head $head --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head HEAD
+          npm run check:y1-golden-rollout-wave-1-current -- --event-mode $mode --scope-mode auto --base $base --head $head --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head HEAD
 
       - name: Validate report JSON
         run: node build-scripts/reports/validate-report-json.js
