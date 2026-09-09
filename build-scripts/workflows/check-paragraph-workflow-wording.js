@@ -35,6 +35,83 @@ const NAVIGATION_FILES = Object.freeze([
   ...Object.keys(LEGACY_PROFILE_LINKS),
 ]);
 
+// Bounded entry-guide audit, not a general Markdown crawler. Lesson entry is
+// opt-in: required platform CI intentionally checks out lesson main.
+const ENTRY_LINK_FILES = Object.freeze(['AGENTS.md', 'BUILD-PARAGRAPH.md', 'skills/econ-chapter-builder.md']);
+
+function markdownAnchors(text) {
+  const anchors = new Set();
+  const counts = new Map();
+  let fence = null;
+  for (const line of text.split(/\r?\n/)) {
+    const marker = line.match(/^\s{0,3}(`{3,}|~{3,})/);
+    if (marker) {
+      if (!fence) fence = marker[1];
+      else if (marker[1][0] === fence[0] && marker[1].length >= fence.length) fence = null;
+      continue;
+    }
+    if (fence) continue;
+    for (const match of line.matchAll(/<a\s+(?:name|id)=["']([^"']+)["']/gi)) anchors.add(match[1]);
+    const heading = line.match(/^ {0,3}#{1,6}\s+(.+?)(?:\s+#+)?\s*$/);
+    if (!heading) continue;
+    const slug = heading[1].replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+      .replace(/<[^>]+>/g, '').toLowerCase().replace(/[^\p{L}\p{N}\p{M}_\-\s]/gu, '').replace(/\s/g, '-');
+    const count = counts.get(slug) || 0;
+    counts.set(slug, count + 1);
+    anchors.add(count ? `${slug}-${count}` : slug);
+  }
+  return anchors;
+}
+
+function findEntryLinkFailures(root, options = {}) {
+  const read = options.read || ((file) => !fs.existsSync(file) ? null
+    : fs.statSync(file).isDirectory() ? '' : fs.readFileSync(file, 'utf8'));
+  const files = [...ENTRY_LINK_FILES, ...(options.includeLessonEntry ? ['../4veco-lessen/AGENTS.md'] : [])];
+  const failures = [];
+  for (const file of files) {
+    const absolute = path.resolve(root, file);
+    const text = read(absolute);
+    if (text === null) {
+      failures.push(`${file}: entry navigation surface missing`);
+      continue;
+    }
+    const guide = path.basename(file) === 'AGENTS.md';
+    let incomingSection = false;
+    for (const match of text.matchAll(/\[[^\]\r\n]+\]\(([^\s)]+)\)/g)) {
+      const href = match[1];
+      if (!guide && !/AGENTS\.md#/.test(href)) continue;
+      if (!guide) incomingSection = true;
+      if (/(?:^|\/)\.\.\/4veco-(?:platform|lessen)\//.test(href)) {
+        failures.push(`${file}: cross-repository hyperlink must use an explicit GitHub URL: ${href}`);
+        continue;
+      }
+      let destination = href;
+      if (/^https?:/.test(href)) {
+        const url = new URL(href);
+        const githubPath = url.pathname.match(/^\/meijer1973\/(4veco-platform|4veco-lessen)\/blob\/main\/(.+)$/);
+        if (url.hostname !== 'github.com' || !githubPath) {
+          failures.push(`${file}: unexpected entry-guide GitHub destination: ${href}`);
+          continue;
+        }
+        destination = `${path.resolve(root, '..', githubPath[1], decodeURIComponent(githubPath[2]))}${url.hash}`;
+      }
+      const [targetPath, fragment] = destination.split('#');
+      if (!guide && !fragment) {
+        failures.push(`${file}: linked section fragment is empty: ${href}`);
+        continue;
+      }
+      const target = targetPath ? path.resolve(path.dirname(absolute), targetPath) : absolute;
+      const targetText = read(target);
+      if (targetText === null) failures.push(`${file}: linked file missing: ${href}`);
+      else if (fragment && !markdownAnchors(targetText).has(decodeURIComponent(fragment))) {
+        failures.push(`${file}: linked section missing: ${href}`);
+      }
+    }
+    if (!guide && !incomingSection) failures.push(`${file}: missing linked AGENTS.md section guidance`);
+  }
+  return failures;
+}
+
 const RULES = Object.freeze([
   {
     file: 'AGENTS.md',
@@ -279,15 +356,17 @@ function checkParagraphWorkflowWording(options = {}) {
     if (fs.existsSync(filePath)) navigationFiles[file] = fs.readFileSync(filePath, 'utf8');
   }
   failures.push(...findNavigationFailures(navigationFiles));
+  failures.push(...findEntryLinkFailures(root, options));
   return {
     ok: failures.length === 0,
-    files_checked: new Set([...rules.map((rule) => rule.file), ...NAVIGATION_FILES]).size,
+    files_checked: new Set([...rules.map((rule) => rule.file), ...NAVIGATION_FILES, ...ENTRY_LINK_FILES,
+      ...(options.includeLessonEntry ? ['../4veco-lessen/AGENTS.md'] : [])]).size,
     failures,
   };
 }
 
 function runCli() {
-  const result = checkParagraphWorkflowWording();
+  const result = checkParagraphWorkflowWording({ includeLessonEntry: process.argv.includes('--include-lesson-entry') });
   console.log(JSON.stringify(result, null, 2));
   return result.ok ? 0 : 1;
 }
@@ -301,6 +380,9 @@ module.exports = {
   MAP_ANCHOR_KEYS,
   LEGACY_PROFILE_LINKS,
   NAVIGATION_FILES,
+  ENTRY_LINK_FILES,
+  markdownAnchors,
+  findEntryLinkFailures,
   findRuleFailures,
   findNavigationFailures,
   checkParagraphWorkflowWording,

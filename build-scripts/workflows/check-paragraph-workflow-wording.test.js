@@ -10,6 +10,8 @@ const {
   NAVIGATION_FILES,
   findRuleFailures,
   findNavigationFailures,
+  findEntryLinkFailures,
+  markdownAnchors,
   checkParagraphWorkflowWording,
 } = require('./check-paragraph-workflow-wording');
 const { buildBody } = require('../sprints/emit-url-index');
@@ -131,9 +133,51 @@ describe('check-paragraph-workflow-wording', () => {
   test('active workflow surfaces preserve the two-lane and full-route contract', () => {
     expect(checkParagraphWorkflowWording()).toEqual({
       ok: true,
-      files_checked: 12,
+      files_checked: 13,
       failures: [],
     });
+  });
+
+  function entryFixture(overrides = {}, includeLessonEntry = true) {
+    const files = {
+      'AGENTS.md': '# Guide\n## Source integrity and learning quality\n[spec](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-vision.md)\nLocal: `../4veco-lessen/specifications/product-vision.md`',
+      'BUILD-PARAGRAPH.md': '[quality](AGENTS.md#source-integrity-and-learning-quality)',
+      'skills/econ-chapter-builder.md': '[quality](../AGENTS.md#source-integrity-and-learning-quality)',
+      '../4veco-lessen/AGENTS.md': '[guide](https://github.com/meijer1973/4veco-platform/blob/main/AGENTS.md)\nLocal: `../4veco-platform/AGENTS.md`',
+      '../4veco-lessen/specifications/product-vision.md': '# Product vision',
+      ...overrides,
+    };
+    const absoluteFiles = new Map(Object.entries(files).map(([file, text]) => [path.resolve(root, file), text]));
+    return findEntryLinkFailures(root, { includeLessonEntry, read: (file) => absoluteFiles.get(file) ?? null });
+  }
+
+  test('entry links resolve in both repositories, including the nested skill and local path instructions', () => {
+    expect(entryFixture()).toEqual([]);
+  });
+
+  test.each([
+    ['AGENTS.md', '[spec](../4veco-lessen/specifications/product-vision.md)', /cross-repository hyperlink/],
+    ['../4veco-lessen/AGENTS.md', '[guide](../4veco-platform/AGENTS.md)', /cross-repository hyperlink/],
+    ['../4veco-lessen/AGENTS.md', null, /entry navigation surface missing/],
+    ['AGENTS.md', '[spec](https://github.com/wrong-owner/4veco-lessen/blob/main/specifications/product-vision.md)', /unexpected entry-guide GitHub destination/],
+    ['AGENTS.md', '[spec](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/missing.md)', /linked file missing/],
+    ['BUILD-PARAGRAPH.md', '[Design Principles](AGENTS.md#design-principles)', /linked section missing/],
+    ['BUILD-PARAGRAPH.md', '[quality](AGENTS.md#)', /linked section fragment is empty/],
+    ['skills/econ-chapter-builder.md', '[quality](../AGENTS.md#)', /linked section fragment is empty/],
+    ['skills/econ-chapter-builder.md', '[Design Principles](../AGENTS.md#design-principles)', /linked section missing/],
+    ['skills/econ-chapter-builder.md', 'see AGENTS.md, Design Principles section', /missing linked AGENTS.md section guidance/],
+  ])('rejects broken entry navigation in %s: %s', (file, text, expected) => {
+    expect(entryFixture({ [file]: text })).toEqual(expect.arrayContaining([expect.stringMatching(expected)]));
+  });
+
+  test('default platform validation permits the older lesson entry used by platform-first CI', () => {
+    expect(entryFixture({ '../4veco-lessen/AGENTS.md': '[guide](../4veco-platform/AGENTS.md)' }, false)).toEqual([]);
+  });
+
+  test('entry fragments follow heading slugs, duplicate suffixes and explicit compatibility anchors', () => {
+    expect(markdownAnchors('# A **heading**!\n## A **heading**!\n```md\n# Not a section\n```\n<a name="old-section"></a>')).toEqual(
+      new Set(['a-heading', 'a-heading-1', 'old-section'])
+    );
   });
 
   test.each(navigationMutationCases())(

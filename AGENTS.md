@@ -1,883 +1,257 @@
-# 4veco Platform — Build Tools & Game Engines
+# 4veco Platform — Agent Operating Guide
 
-You are a senior developer
+Work as a senior developer: fulfil the specification, inspect the evidence,
+and fix causes rather than layering patches over an unresolved design problem.
+This is the canonical shared operating guide for `4veco-platform` and
+`../4veco-lessen`. Read it first, then select the task-specific route below.
 
-Platform repo for generating lesson materials for VWO 4 economie. Contains game engines, build scripts, source data, and skills. Generated output is deployed to separate lesson targets.
+## Repository purpose and boundaries
 
-## Read first
+- `4veco-platform` owns engines, generators, build scripts, validators, source
+  data, shared skills, and review/integration tooling for VWO 4 economics.
+- `../4veco-lessen` is the lesson-content and student-facing output repository.
+  Build and repair generated material through platform source and tooling.
+- New content follows the markdown-native `4veco-lessen/Boek N - titel/` route.
+  Do not design new work around the retiring legacy converter/game stack.
+- The external legacy Module 3 target remains operationally protected under
+  [the reference roadmap's R9.0/R9.01 restrictions](references/reference-team-roadmap.md).
+  A past "until September 2026" date is not evidence of an authorized release;
+  establish explicit release authority before changing that target or its storage behavior.
 
-- Use this `AGENTS.md` file as the canonical starting point for every agent. The senior-developer operating discipline, read-first expectations, planning sanity checks, honesty about mistakes, and quality-over-patchwork rule all live here.
-- Use `../4veco-lessen/specifications/product-vision.md` as the canonical strategic product read before roadmap, architecture, paragraph-build, companion, exit-ticket, exam-ingestion, or Scale Gate work.
-- Use `../4veco-lessen/specifications/product-end-state.md` as the canonical operational product north star before roadmap, paragraph-build, companion, exit-ticket, exam-ingestion, or Scale Gate work.
-- Use `../4veco-lessen/specifications/companion-core-specifications.md` as the stable companion-surface specification.
-- Choose the paragraph lane before production work. There are exactly two operational lanes; read [docs/workflows/paragraph-lane-vocabulary.md](docs/workflows/paragraph-lane-vocabulary.md) before using lane terms. Use [docs/workflows/textbook-paragraph-lane.md](docs/workflows/textbook-paragraph-lane.md) for Part A / textbook lane work, [docs/workflows/web-companion-paragraph-lane.md](docs/workflows/web-companion-paragraph-lane.md) for Part B / companion / student-web companion lane work, and [BUILD-PARAGRAPH.md](BUILD-PARAGRAPH.md) as the full reference for complete/integration checks.
-- Use [BUILD-CHAPTER.md](BUILD-CHAPTER.md) as the end-to-end guide for assembling paragraphs into a chapter.
-- Use `AGENTS.md` for repo overview, architecture, deploy rules, and quality standards.
-- Use `build-scripts/README.md` for the distinction between platform generators, converters, reference implementations, and utilities.
+## Read first — select by task
 
-## Senior developer operating discipline
+Use the affected source, relevant tests, and applicable instructions. Read the
+documents in the matching row before that activity; unrelated manuals are
+lookup references, not a universal startup sequence. If the task expands,
+load its additional route before doing the newly included work.
 
-Agents in this repository must behave like senior developers, not ticket closers.
+For local work, linked lesson specifications live at
+`../4veco-lessen/specifications/` with the same filenames as their GitHub URLs.
+Cross-repository hyperlinks open GitHub `main`; use the adjacent checkout for local work.
 
-## Quality-Driven Execution
+| Task | Starting documents and scope |
+|---|---|
+| Read-only investigation | Affected files and relevant tests; use repository search locally. Use [RESEARCH_AGENT_MAP.md](RESEARCH_AGENT_MAP.md) as a lookup when useful, and [AGENT_GITHUB_ENTRY.md](AGENT_GITHUB_ENTRY.md) for remote access/navigation. |
+| Routine code or documentation maintenance | Affected source and tests. For tooling ownership, consult [build-scripts/README.md](build-scripts/README.md). A small diff does not exempt protected, production, or governance work from its gates. |
+| Roadmap, sprint, architecture, reference system, or Scale Gate | Relevant roadmap, original requirements, prior reports, source and validators; [product vision](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-vision.md) and [product end state](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-end-state.md). Apply the planning/review requirements below. |
+| Textbook paragraph / Part A | [Lane vocabulary](docs/workflows/paragraph-lane-vocabulary.md), then [textbook runbook](docs/workflows/textbook-paragraph-lane.md) and its task-specific contracts. |
+| Companion paragraph / Part B | [Lane vocabulary](docs/workflows/paragraph-lane-vocabulary.md), then [companion runbook](docs/workflows/web-companion-paragraph-lane.md), [companion specifications](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/companion-core-specifications.md), and [companion artifact skill](skills/econ-companion-artifacts.md). |
+| Chapter or book assembly | [BUILD-CHAPTER.md](BUILD-CHAPTER.md), the chapter plan, and its applicable assembler/validation instructions. |
+| Complete paragraph / cross-lane verification | [BUILD-PARAGRAPH.md](BUILD-PARAGRAPH.md) is the full reference; ordinary paragraph production starts with its lane runbook. |
+| Paragraph-build, companion, exit-ticket, exam-ingestion, or product-route work | [Product vision](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-vision.md), [product end state](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-end-state.md), and the applicable workflow/specification. |
+| Generated material or deployment | Applicable lane/skill plus [build-scripts/README.md](build-scripts/README.md). `scripts/deploy.js` writes its target; its automated layer alone is not full paragraph production. |
+| Review or human gate | Original requirements and evidence; [lead reviewer](agents/lead-reviewer-agent.md) and the relevant specialist protocol. Product gates also use the product specifications above. |
+| PR publication/readiness | [Throughput policy](docs/review/pr-throughput-policy.md), [readiness policy](docs/review/pr-readiness-routing-policy.md), and [independent readiness reviewer](agents/pr-readiness-reviewer-agent.md). |
+| Merge, base sync for integration, or paired bundle integration | [Integration lane policy](docs/review/pr-integration-lane-policy.md) and [readiness policy](docs/review/pr-readiness-routing-policy.md), including their bundle sections when both repositories participate. |
 
-Agents must optimize for specification fulfilment, not ticket closure.
+There are exactly two operational lanes: textbook / Part A and companion /
+Part B / student-web companion. `complete` is an integration verification
+state, not a third production lane. Keep source/output ownership explicit.
+Paragraph PDFs and `build_pdf.py` are normal Part A textbook outputs for human review;
+`publisher-print` is the later Part A chapter/book print-handoff profile.
+Treat the 14 files as a validator baseline, not as proof that the full product route is complete.
+The companion product route is `Start -> Leer -> Check -> Oefen -> Exit ticket`,
+with an advisory short check and a separate target-equivalent exit ticket.
+Missing product requirements need named follow-up work or an explicit waiver
+with consequences; never silently redefine the full product as a smaller deliverable.
+For engine changes, run engine tests, deploy, and test in the browser. Run the
+relevant validators after generation/deployment, and keep roadmap sprint status
+current when production or platform state changes.
 
-A completed task must satisfy the stated specification within the authorized
-scope. Passing tests, producing files, or avoiding forbidden claims is not
-sufficient when the student-facing route, learning design, rendered output, or
-review evidence remains weak.
+## Branch and worktree safety — before mutation
 
-For every non-trivial task, the plan must state:
-
-1. the quality floor;
-2. the specification requirements being fulfilled;
-3. the evidence needed to prove fulfilment;
-4. the review gate that will judge student-facing quality;
-5. any higher-quality improvements that can be included without scope drift;
-6. any omitted requirements as named follow-up work or explicit blockers.
-
-If the plan cannot explain how the work will meet the specification, the plan
-is not ready.
-
-For any non-trivial sprint, roadmap, gate, reference-system, production, or architecture task:
-
-- read the relevant roadmap, sprint plan, source files, validators, and prior reports before acting
-- write or update a sprint plan before implementation
-- make the plan operational, not merely formal: it must expand the roadmap description into concrete procedure, decision points, outputs, acceptance tests, and stop conditions
-- log the plan in the expected sprint files before executing
-- follow the plan as written
-- if the plan is too thin or misses a requirement from the roadmap, stop and fix the plan before continuing
-- before moving past a review gate, verify the required artifacts exist and validators pass
-- close every non-trivial response with a clear direction for what should happen next: proceed to the next sprint, send a human-review packet, run a specific validation/build step, commit/push, insert a new sprint, or deliberately stop/pause
-- when blockers, evidence gaps, planning contradictions, or architectural uncertainty appear, say so plainly at the end and recommend the strategic pause or roadmap adjustment needed before continuing
-- do not leave the user to infer the next step from a status summary; the final paragraph must make the operational next action explicit
-
-### Remote publication and repository maps
-
-Off-site reviewers use GitHub as their working surface. A local commit is not complete until the remote branch and repository maps are current enough for those reviewers to inspect the work.
-
-Normal closure for non-trivial work now includes:
-
-- run `git fetch --prune origin` before final commit/push and resolve any behind/diverged state explicitly
-- refresh repository maps and GitHub-facing indexes whenever paths, roadmaps, generated reports, agents, skills, or review surfaces change: `npm.cmd run agent:index`, `node build-scripts/sprints/emit-url-index.js`, and `npm.cmd run dashboard:internal` when dashboard or roadmap state changes
-- keep `RESEARCH_AGENT_MAP.md`, `RESEARCH_AGENT_MAP_REFERENCES.md`, `AGENT_GITHUB_ENTRY.md`, `reports/url-index.md`, and `reports/github-agent-index-*.md` aligned with the real repository layout
-- after validation, commit and push to the normal remote branch unless the user explicitly asks to keep work local
-- do not leave a completed sprint or non-trivial generated-output task in a dirty local worktree; if a blocker prevents commit/push, report the exact dirty status and blocker before ending
-- report both the local commit hash and whether it has been pushed
-
-## Branch safety for agents
-
-For every mutating task, agents must work on a dedicated task branch.
-Before editing files, run:
-- `git fetch --prune origin`
-- `npm.cmd run check:governance-freshness`
-- `git status --short --branch`
-- `git branch --show-current`
-
-`check:governance-freshness` compares active governance entrypoints against
-`origin/main` before source edits. Use `-- --allow-policy-edit` only when the
-declared task is intentionally editing those same governance files; the checker
-still reports the differing files and observed `origin/main` SHA.
-
-Rules:
-1. Do not work directly on `main`.
-2. Do not commit directly to `main`.
-3. Do not push directly to `main`.
-4. Create or switch to a unique task branch before edits:
-   - `codex/<short-task-name>-<YYYYMMDD>`
-   - or `agent/<short-task-name>-<YYYYMMDD>`
-5. If already on `main`, create a branch before making changes.
-6. If the branch already exists, inspect it before reusing it.
-7. If the local branch is behind, ahead, or diverged from the remote unexpectedly, stop and report.
-8. If another agent is working on the same branch or same sprint surface, stop and report the collision risk.
-9. Merge to `main` only through PR or through the repository owner's explicit instruction.
-10. Human-review packets and gate evidence must cite a passing `platform-ci / validate-platform` run for the reviewed commit, or include an explicit CI waiver.
-
-A completed mutating task must report:
-- branch name
-- local commit SHA
-- whether it was pushed
-- PR URL or reason no PR was opened
-- latest `platform-ci / validate-platform` status if available
-
-## Worktree safety for agents
-
-Branch safety is not enough when multiple agents share one filesystem folder.
-Switching branches changes the working tree for that folder and can silently move
-other agents onto the wrong branch.
-
-For every mutating task, agents must use a dedicated worktree directory.
-
-Required invariant:
-
-- one agent
-- one task branch
-- one dedicated worktree directory
-
-Do not perform mutating work in the shared anchor clone unless the repository
-owner explicitly says this is a single-agent local task.
-
-Default agent worktree root:
+Use one agent, one dedicated task branch, and one dedicated worktree directory.
+Treat the shared anchor clones as admin clones; mutating work there requires
+the owner's explicit single-agent local-task instruction. Default paired paths:
 
 - `C:\Projects\4veco-worktrees\<task-id>\4veco-platform`
 - `C:\Projects\4veco-worktrees\<task-id>\4veco-lessen`
 
-Before editing files, run the worktree preflight:
+Use a user-specified task folder when provided. Before editing files, fetch
+each affected repository and run from the platform worktree:
 
-- `npm.cmd run check:agent-worktree-safety -- --claim --task <task-id> --agent <agent-id> --require-prefix codex/,agent/ --require-clean`
-
-Claim mode requires a clean working tree by default. During ongoing work, use
-`--check` without `--require-clean` when dirty files are expected.
-
-Rules:
-
-1. Do not share a worktree directory with another active agent.
-2. Do not switch branches inside a worktree owned by another agent.
-3. Do not reuse an existing worktree unless its ownership lock is absent or explicitly released.
-4. Do not override a worktree lock without explicit repository-owner instruction.
-5. Do not use `git checkout -f`, `git switch -f`, `git worktree add --force`, or `git checkout --ignore-other-worktrees` unless explicitly authorized.
-6. If the current branch changes unexpectedly during work, stop immediately and report possible worktree contamination.
-7. If both `4veco-platform` and `4veco-lessen` are changed, use coordinated worktrees under the same task directory and report both paths, branches, and SHAs.
-8. The main clone should be treated as an anchor/admin clone, not as a normal multi-agent work surface.
-
-A completed mutating task must report:
-
-- worktree path
-- branch name
-- lock owner / agent id
-- local commit SHA
-- whether it was pushed
-- PR URL or reason no PR was opened
-- latest `platform-ci / validate-platform` status if available
-
-Human-review packets have an extra remote-publication rule:
-
-- before sending, running, or recording a human-review packet, push the packet
-  and every cited evidence artifact to the normal remote branch, refresh the
-  GitHub-facing maps/indexes, and verify the remote is current enough for an
-  off-site reviewer to fetch the files. Do not ask for or close a review gate
-  against local-only evidence unless the user explicitly orders a local-only
-  dry run.
-
-Human-review gates require actual review artifacts. Do not treat a casual
-"OK", "continue", or inferred approval as a completed human review when the
-plan requires reviewer comments, a decision record, or a gate-closure file.
-All other requirements for sprints are also required for human review. A
-checkable plan is made beforehand and tested afterwards so the review has an
-actual audit log.
-
-Human-review gates use direct review-packet comments by default, not an
-interactive one-question-at-a-time interview. The packet must contain the full
-calibration checks, planned review questions, evidence links, stop conditions,
-and comment prompts so the human reviewer can comment directly on the packet.
-After comments are returned, the agent must record a comment-resolution log,
-summarize decisions and unresolved issues, ask targeted follow-up questions
-only for ambiguous or conflicting authority, and draft closure only after the
-comment evidence is complete. Interactive interviews are now an exception for
-explicit reviewer request or unresolved ambiguity, not the default gate mode.
-
-Human-review proof must be inspectable in the same shape a reviewer needs to
-judge the product. For UI, game, task-shell, route, or exit-ticket gates, a
-packet is not ready with text claims or static fixture fragments alone. It must
-provide a playable or reproducible artifact when the surface is interactive,
-state evidence such as JSON/proof logs, screenshots for initial/retry/feedback/
-next-action/completed states where relevant, mobile and dark-mode proof when
-the surface is student-facing, and a checker that verifies the proof artifacts
-exist. For game/task-shell gates, use the `GATE-TASK-FAMILY-1` pattern unless
-there is an explicit waiver: a review-only playable lab or live route, visible
-controls a human can use, deterministic proof that the path reaches completion,
-and packet/checker requirements for the lab, data, proof JSON, and screenshots.
-Present the proof so a human can see where problems are, then decide.
-
-Future PR review packets that request lighter review closure must follow
-`docs/review/pr-throughput-policy.md` and include the machine-readable
-throughput fields checked by
-`build-scripts/sprints/check-review-throughput-packet.js`. Autonomous
-classification is never allowed when protected references, machine/external
-references, generated-output product authority, diagnostics, mastery, PV,
-student-use authority, missing changed-path evidence, missing commit-specific
-CI/checker proof, or missing `proof.lead_review` path/result/reviewed-commit
-proof is present.
-
-### Post-draft PR lifecycle
-
-After a normal implementation draft PR is published:
-
-1. Publish and validate the remote draft PR.
-2. Complete structural lead review and repairs.
-3. Run the independent PR Readiness Reviewer with `npm.cmd run review:pr-readiness`.
-4. Apply only its allowed transition with `npm.cmd run apply:pr-readiness`, or use
-   `npm.cmd run route-and-apply:pr-readiness -- --pr <number> --evidence <evidence.json> --expect-transition MARK_READY`
-   when current live evidence and supplemental proof should mark the draft
-   ready. Use `npm.cmd run apply:bundle-readiness` when one controller decision
-   must mark a paired platform/lesson bundle ready together.
-5. Return to the owner only when the route is `READY_FOR_HUMAN_REVIEW`, a
-   genuine `PAUSE_ESCALATE` blocker exists, or autonomous closure has completed
-   and a final status report is appropriate.
-
-Do not end a normal run by asking: "The draft PR is ready; please approve
-before I mark it ready for human review." Owner permission is not required
-merely to run `gh pr ready`.
-
-For `KEEP_DRAFT_BATCH`, continue to the next coherent authorized milestone
-rather than stopping merely because a PR exists. Do not add unrelated work just
-to enlarge a PR, and do not batch across a real decision boundary.
-
-### Single-account merge governance
-
-This repository uses a single-account operating model: GitHub cannot
-distinguish the owner, coding agent, lead-review subagent, PR author, and
-merger as independent approval identities. Required GitHub approval count is
-therefore not the substantive review gate for this repository.
-
-Branch protection for `main` must keep strict status checks, admin enforcement,
-force-push protection, deletion protection, required conversation resolution,
-and pull-request workflow while setting `required_approving_review_count` to
-`0`. The live required context is `validate-platform` only.
-`integration-authorized` remains optional audit evidence, not a required
-branch-protection context, after the activation smoke test failed closed.
-Repository `allow_auto_merge` remains `false`. Validate the live shape with
-`npm.cmd run check:branch-protection`. The checker must fail if the approval
-count returns to `1` or if observable pull-request bypass allowances are
-non-empty. Do not attempt to require `integration-authorized` again without an
-explicit owner decision and concrete new GitHub behavior evidence or a different
-implementation mechanism.
-PR readiness must derive mechanical approval constraints from the observed
-approval count, not from self-declared identity-satisfaction flags, and it must
-keep the PR draft when that count is not observable.
-
-Merge authority follows the PR-readiness route:
-
-- L0-L2 may merge only through `authorized-pr-integration` or, for paired
-  platform/lesson work, `authorized-bundle-integration` after exact-head CI,
-  checker proof, lead review, readiness proof, and complete review-thread
-  evidence pass.
-- L3-L4 and governance/self-modification work must stop after
-  `READY_FOR_HUMAN_REVIEW` until the owner gives payload authorization for the
-  reviewed payload head and decision scope.
-- Owner decisions authorize the reviewed payload head and decision scope. A
-  payload authorization must identify the PR number,
-  `reviewed_payload_head_sha`, decision, decision scope, merge method, and
-  admin-bypass prohibition. Record it as a PR comment when the decision happens
-  outside GitHub's review identity model.
-- Payload authorization gates merge, not draft-to-ready transition. Owner
-  authorization is never required merely to run `gh pr ready` after a valid
-  readiness decision returns `allowed_transition: MARK_READY`.
-- Immediately before merging, the authorized lane re-fetches the PR and verifies
-  the current integration head, open and not-draft state, mergeability, required
-  CI, requested-changes state, and unresolved review-thread state. Do not use
-  admin bypass as a routine substitute for this policy.
-
-### Serialized integration lane
-
-Agents must not call `gh pr merge` directly for normal PRs. The default
-single-PR merge path is the owner-authenticated local serialized lane:
-`npm.cmd run integrate:authorized-pr -- --repo meijer1973/4veco-platform --pr <PR> --authorization-comment-id <COMMENT_ID>`.
-Run it from current `main`/current policy code so it can validate branch
-protection, payload lineage, readiness, CI, review state, merge eligibility, and
-post-merge `main` CI before any merge command is invoked.
-
-`.github/workflows/authorized-pr-integration.yml` remains an optional trusted
-cloud path only when its `github.token` can read branch protection. If that
-workflow returns `phase: branch_protection_read_forbidden`, the token hit the
-expected GitHub Administration-read permission boundary; this is not a
-governance failure and is not permission to merge directly. Use the
-owner-authenticated local lane with the same authorization comment ID.
-Paired platform/lesson bundles must use
-`.github/workflows/authorized-bundle-integration.yml` or
-`npm.cmd run integrate:authorized-bundle`. All authorized paths serialize
-through the same policy lane and must validate payload lineage, branch
-protection, CI, readiness, requested changes, review threads, and merge
-eligibility before merging. The lane may internally invoke a direct merge command
-while live branch protection requires only `validate-platform`; that is an
-implementation detail of trusted lane code, not agent merge authority.
-
-Payload authorization binds to the reviewed payload head, not to every later
-base-sync head. Record payload authorization with the
-`4veco-human-payload-authorization` marker and the schema in
-`docs/review/human-payload-authorization.schema.json`. The integration lane may
-inherit that authorization only when the reviewed payload SHA remains an
-ancestor of the current PR head and all intervening commits are conflict-free
-base-sync merges or allowlisted deterministic evidence refreshes.
-
-Use this human-facing wrapper while keeping the machine decision enum stable:
-
-```text
-HUMAN_DECISION: APPROVE_FOR_INTEGRATION
-AUTHORIZATION_TYPE: PAYLOAD_AUTHORIZATION
-PR: #...
-REVIEWED_PAYLOAD_HEAD: ...
-DECISION_SCOPE: ...
-MERGE_METHOD: merge commit
-ADMIN_BYPASS: prohibited
+```powershell
+git fetch --prune origin
+git status --short --branch
+git branch --show-current
+npm.cmd run check:governance-freshness
+npm.cmd run check:agent-worktree-safety -- --claim --task <task-id> --agent <agent-id> --require-prefix codex/,agent/ --require-clean
 ```
 
-The integration lane validates the current `integration_head_sha`. A later
-integration head may be produced by base sync or generated/evidence-only tail
-handling. Renewed owner authorization is not required when payload lineage,
-effective payload, bundle membership, and authority scope remain valid.
-Renewed owner authorization is required when the reviewed payload is not an
-ancestor of the integration head, manual conflict resolution changes behavior,
-substantive source payload changes, bundle membership changes, decision scope
-or authority class changes, or the lane cannot prove lineage/effective-payload
-equivalence.
-
-Before the lane may set `integration-authorized`, the PR Readiness Reviewer must
-be recomputed inside the trusted workflow for the current `integration_head_sha`.
-The lane constructs live integration evidence, validates the resulting machine
-decision, and posts or updates the exact-head readiness comment with a canonical
-decision digest and full machine decision. A stale readiness marker, marker-only
-comment, or non-ready route stops the merge.
-
-The current integration head is machine-validated, not separately
-human-authorized. A permitted base-sync or deterministic evidence descendant
-does not need renewed owner authorization when payload lineage, base drift,
-bundle membership, authority scope, and effective-payload checks remain valid.
-
-The lane must determine base drift from an actual `main...head` comparison, not
-from `mergeStateStatus: BLOCKED`; `BLOCKED` is merge-eligibility noise, and in
-the retired activation experiment it could simply mean the required
-`integration-authorized` status was pending. The lane sets
-`integration-authorized` to pending at entry, sets success only on the final
-validated head, retries when `main` moves or merge eligibility changes, and
-verifies post-merge `main` CI. In the current live mode, the trusted lane uses
-the direct merge path with an exact `--match-head-commit` guard after all checks
-pass. The retired activated mode scheduled `gh pr merge --auto --merge
---match-head-commit <sha>` while `integration-authorized` was pending and then
-observed GitHub auto-merge, but smoke PR #177 proved that required-context mode
-was not reliable in this repository setup. Keep that implementation only as
-dormant/fail-closed reference unless the owner explicitly reopens it.
-The `integration-authorized` context must be
-minted only by trusted `main` workflow code or the equivalent owner-authenticated
-local lane running trusted `main` code; a dry-run must not create a reusable
-successful status.
-
-The activation rollback is complete: `integration-authorized` is not required,
-strict `validate-platform` remains required, and repository `allow_auto_merge`
-is `false`.
-
-### Mandatory readiness application
-
-When the PR Readiness Reviewer routes a PR or bundle to
-`READY_FOR_LEAD_ONLY` or `READY_FOR_HUMAN_REVIEW` with
-`allowed_transition: MARK_READY`, the implementation agent must immediately run
-`npm.cmd run route-and-apply:pr-readiness -- --pr <number> --evidence <evidence.json> --expect-transition MARK_READY` or
-`npm.cmd run apply:pr-readiness -- --decision <decision.json>` after re-fetching
-the PR. Reporting "Action taken: none" for such a decision is a process failure.
-
-Before reporting final completion for governance or workflow work, include a
-freshness proof that queries remote `main`, compares it with local
-`origin/main`, records ancestry, and hashes both remote-main and branch policy
-files for this file, `docs/review/pr-readiness-routing-policy.md`, and
-`docs/review/pr-integration-lane-policy.md`. Use
-`npm.cmd run finalization:freshness`.
-
-#### Paired platform/lesson bundles
-
-Required `platform-ci / validate-platform` always checks the platform
-candidate against lesson `main`. It must not use a same-named lesson branch as
-a hidden dependency. If a platform PR needs a lesson PR candidate in order to
-pass, classify the work as a `cross_repo_bundle` and do not merge either member
-independently.
-
-For paired platform/lesson work:
-
-- keep source, validators, governance, and integration proof in
-  `4veco-platform`;
-- keep generated student-facing output in `4veco-lessen`;
-- put the same `bundle_id`, complete `paired_prs`, exact PR numbers, and exact
-  payload SHAs in the PR evidence;
-- run `.github/workflows/cross-repo-bundle-compatibility.yml` for
-  `platform-first`, `lesson-first`, and `bundle-final`;
-- keep compatibility `exact_members` bound to the immutable reviewed payload
-  heads, and require its lesson-first contract to declare the trusted
-  post-lesson-merge index refresh;
-- require `bundle-final` green plus at least one green intermediate state;
-- when both members are draft but substantively ready, use
-  `npm.cmd run apply:bundle-readiness` to post exact-head member readiness
-  decisions and coordinate the `MARK_READY` transitions before requesting merge
-  authorization;
-- record one canonical `4veco-human-bundle-authorization` comment for the
-  whole pair when human approval is required;
-- merge through `.github/workflows/authorized-bundle-integration.yml` or
-  `npm.cmd run integrate:authorized-bundle`, which uses the serialized
-  `4veco-main-integration` lane and exact expected heads.
-
-For a lesson-first bundle, the verified lesson merge commit becomes the exact
-lesson source for a deterministic generated-index descendant of the reviewed
-platform payload. Before platform PR CI, the lane must use trusted platform
-`main` generator and freshness-checker code in isolated exact-SHA checkouts,
-allow only the four `reports/github-agent-index-{platform,lessen}.{json,md}`
-paths, push/refetch the descendant without force, rebuild lineage, and publish
-readiness for that exact integration head. Platform PR CI must bind that head
-to the lesson merge commit. Keep the immutable compatibility proof separate
-from this runtime `integration_refresh` proof. A retry with
-`--allow-partial-resume` must reuse a valid existing refresh commit; missing,
-stale, mixed-SHA, or tampered refresh evidence stops before platform merge.
-If refreshed lineage requires an integration-delta lead review, the immutable
-payload lead review remains bound to the reviewed payload SHA and the exact-head
-review is carried separately as `proof.integration.delta_review`. Supply that
-review as JSON with `--delta-review <file>` only after the final terminal index
-head exists; it must pass and bind both the reviewed payload and exact current
-integration head. A missing, malformed, stale, wrong-payload, wrong-head,
-non-passing, or unexpected delta review stops before readiness attestation,
-publication, or merge. The hosted bundle workflow does not transport local
-review files, so delta-required partial resume must use the owner-authenticated
-local trusted-main lane; invoking the hosted path without that evidence fails
-closed and does not waive the review. A delta-required dry-run also fails
-explicitly because it cannot publish and re-fetch the exact integration-head
-readiness needed to establish this gate.
-Do not execute candidate-branch generators or hooks in this privileged phase.
-Final platform `main` CI after both merges remains mandatory.
-
-Lesson bundle members consume delegated controller proof. Do not require a
-lesson-repository commit to carry a standalone platform branch-protection
-context.
-
-### Sprint agent structure
-
-For roadmap sprints, use a separated-agent workflow:
-
-- a planning/review subagent checks the sprint outline, baseline needs, required logs, stop conditions, and missing roadmap instructions before execution. The Planning agent checks whether the plan has a clear statement about the generated output including which files should be generated .
-- the main agent executes the sprint and owns final integration
-- specialist subagents may be used for bounded pedagogy, evidence, data-integrity, or code-review questions
-- a verification subagent should review the finished artifacts or test plan. Do a thorough check on all required files are present including the basic plan  and other required logs, but also the other required files that were mentioned as output in the plan.
-- a structural lead-review cycle is required before closing non-trivial roadmap
-  sprints: lead-review assignment, round-1 review, correction log, and round-2
-  recheck. Do not set `lead_review_required: false` unless the sprint records
-  an explicit exemption with reason, reviewer/approver, and date.
-- human-review gates must receive lead review before the human review starts.
-  Human gate artifacts do not replace the pre-gate lead-review check for future
-  gates.
-
-The main agent remains accountable. Subagents advise, test, or produce bounded artifacts; they do not replace the roadmap, validators, human gates, or final integration judgement.
-
-## Green Gate status: unfrozen
-
-The temporary Green Gate deployment/output freeze was lifted on 2026-04-24 after explicit user sign-off.
-
-Evidence at unfreeze:
-- `npm.cmd run check:platform` passes
-- `npm.cmd run check:book -- "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"` passes
-- validators are aligned with the flat layout
-- `validate-paragraph.js` is active and required
-- stale blocking reports are resolved or explicitly excluded
-- `1.1.1 Schaarste en economisch denken` proves the first Book 1 companion path end-to-end
-
-Allowed after unfreeze:
-- controlled chapter/book/paragraph production in `../4veco-lessen`
-- companion-material generation in `../4veco-lessen`
-- deploy/generator runs against `../4veco-lessen` when the task intentionally calls for production output
-- normal platform code, validator, report, and planning work
-
-Required after unfreeze:
-- follow `BUILD-PARAGRAPH.md` and `BUILD-CHAPTER.md` for production work
-- run the relevant validators after generating or deploying output
-- keep roadmap sprint status current when production or platform state changes
-- do not treat `scripts/deploy.js` as read-only; it writes to the target
-
-Still frozen separately:
-- the legacy Module 3 target remains frozen until September 2026 for student-localStorage integrity; do not reason new work back into that retiring stack
-
-## Design Principles
-
-These two principles are the DNA of every product this platform produces — lesson materials, textbooks, assessments, and any future format. Every builder, skill, and template must follow them.
-
-The strategic product direction and trade-off logic are defined in
-`../4veco-lessen/specifications/product-vision.md`: future non-trivial
-sprints should identify which vision pillar they strengthen, whether they are
-an advantage or parity-area investment, and what proof is required. The
-operational product end state is defined in
-`../4veco-lessen/specifications/product-end-state.md`: every paragraph gives
-the student a visible route from current readiness to target-exercise
-readiness. Platform generators, engines, validators, and source-data contracts
-must support that route. A sprint may deliberately ship a smaller controlled
-step, but it must name the follow-up work needed to reach the full product
-state.
-
-### 1. Dual Coding (Paivio/Mayer)
-
-Every document that explains a concept must pair text with a visual aid. Information is retained better when it arrives through both verbal (text/speech) and visual (graph/diagram/color) channels.
-
-**Rules:**
-- Explainer documents (voorkennis, vaardigheden) embed relevant visual variants from `_assets/` — not just the presentatie
-- Samenvatting includes key concept graphs alongside text cells
-- Exercises reference or include graphs where the concept involves graphical reasoning
-- The same visual concept that appears in the presentatie should reappear in the vaardigheden doc that teaches the same skill, but not as a literal copy-paste of the textbook image. Use surface-adapted variants: slide, docx, summary thumbnail, web-light, and web-dark where relevant.
-- Part A textbook visuals are source material, not finished companion artwork. Companion visuals may reuse the same data, labels, and SVG geometry, or may be redrawn, but they must be adapted to the layout and medium where they appear.
-- Web pages with light/dark modes must provide theme-appropriate visual variants when a graphic contains backgrounds, axes, text, fills, or low-contrast colors. Do not rely on a light-mode textbook PNG inside dark mode.
-- Domain color coding (blauw/amber/groen) provides visual recognition without reading
-- Formula boxes in monospace provide visual distinction from running text
-
-### 2. Unified Student Experience
-
-A student working through all materials for one paragraph should feel like they're following one coherent lesson, not 8 independent documents. The core anchor is **consistent procedures and approaches** — the same method, the same steps, the same reasoning structure everywhere. Products and numbers may vary by context, but the approach must be identical.
-
-**Rules:**
-- **Same procedure steps**: If a skill has 3 steps in the vaardigheden doc, the stappenplan game must use those exact 3 steps (same labels, same order, same reasoning). The procedure is the constant; the context can change.
-- **Same approach to solving**: If the vaardigheden teaches "step 1: vul q₂=0 in, step 2: vul q₁=0 in, step 3: verbind", then every document that references snijpunten calculation follows that same approach.
-- **Same visual concept reinforcing the approach**: The graph/concept from the presentatie should reappear in the vaardigheden explanation of the same skill — so students see the visual anchor for the procedure they're learning. This means conceptual continuity, not literal file reuse. Adapt the visual to the surface: slide composition, Word layout, web light mode, web dark mode, and thumbnail use can each need their own SVG/PNG variant.
-- **Same terminology**: Enforced via the `_paragraph-plan.md` terminologie table.
-
-**How to enforce:** The `_paragraph-plan.md` contains a **procedure-stappen-plan** that defines the canonical step sequence for each skill. All builders — vaardigheden, stappenplan game, presentatie, inoefening — must follow these exact steps. A **visual-variants plan** maps each concept visual to its surface-specific files, and a **visuelen-toewijzing** table maps those variants to every builder that must embed them.
-
-For companion artifact **authoring and regeneration**, use `skills/econ-companion-artifacts.md`. It is the platform-wide standard for the 14-file Part B `student-web` validation baseline (the paragraph route/index, companion HTML and games, and presentation HTML/PPTX), the wider product route, and explicitly scoped exports. Treat the 14 files as a validator baseline, not as proof that the full product route is complete: the current end state is `Start -> Leer -> Check -> Oefen -> Exit ticket`, with an advisory short check and a separate target-equivalent exit ticket. The `office`/`legacy-full` profiles add 13 DOCX files, including differentiated handouts; those exports are not part of the default baseline. Paragraph PDFs and `build_pdf.py` are normal Part A textbook outputs for human review; `publisher-print` remains the later Part A chapter/book handoff profile, not a separate lane or the only PDF gate. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules; if a builder skill conflicts, the companion-artifacts skill wins on student-facing rules.
-
-For companion artifact **review**, use `agents/econ-companion-visual-review.md`. It checks the rendered student experience, not just source files: visual-text synchronization, procedure fidelity, affordance, cognitive load, accessibility, and source-output parity. A companion surface with missing visual variants, conflicting visual/text examples, broken procedure steps, debug labels, or no next-step routing is not done. The skill above and this agent are aligned: the skill is the authoring spec, the agent is the closure gate.
-
-### Quality control: Part A and Part B have separate review records (L1.5V Bucket F)
-
-Every paragraph carries TWO review records and ONE quality-ref:
-
-- `${parNr}-review.md` — Part A textbook review (output of `econ-paragraph-review` skill).
-- `${parNr}-companion-visual-review.md` — Part B companion review (output of `econ-companion-visual-review` agent).
-- `${parNr}-quality-ref.yaml` (`schema_version: 2`) — single file with `partA:` block (asset state, content presence, Part A review verdict) and `companion:` block (Part B review verdict, hard-fail count, procedure step count, alt-text + checklist-route + artifact-tool-render flags, surface-by-surface state).
-
-`scripts/validate-paragraph.js` reads each review file by EXACT name (no `endsWith` filename match) and parses verdicts structurally from the `## 2. Verdict` block. Modes: `--mode part-a` gates Part A review only; `--mode part-b` gates companion review only; `--mode complete` aggregates both. A FAIL verdict in either review fails the corresponding mode. Part B and complete modes also require `${parNr}-quality-ref.yaml` to contain a `companion:` block whose `review_file`, `review_verdict`, and `hard_fails_open` values match `${parNr}-companion-visual-review.md`. Current schema details: `docs/workflows/paragraph-quality-ref-schema-v2.md`.
-
-Use `npm run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD` before closing platform workflow/tooling PRs. For lesson-output PRs, run the checker against the lesson repo: from `4veco-lessen`, invoke `../4veco-platform/build-scripts/workflows/check-paragraph-lane-scope.js --lane textbook|companion --base origin/main --head HEAD`; from `4veco-platform`, pass `--cwd ../4veco-lessen`. Textbook lane changes may not contain companion outputs; companion lane changes may not contain Part A textbook outputs; shared lane changes may not contain lesson-output files unless a machine-readable lane-scope exception is included and reviewed.
-
-Every skill in `skills/` carries a `pipeline:` frontmatter field (Part A producer / Part B producer / shared infrastructure / Part A reviewer / Part A assembler / Part A orchestrator / Part B producer (umbrella)) so a glance at frontmatter tells you which pipeline owns the skill's output and which gate runs against it.
-
-For a narrower review of a specific visual item, screenshot, rendered UI, graph, chart, diagram, or generated asset, use `agents/visual-qa-agent.md`. It is the conservative visual QA gate for clarity, legibility, hierarchy, affordance, accessibility, geometry, overflow, clipping, and production readiness.
-
-For learning-design and classroom-readiness review, use `agents/teacher-learning-quality-review-agent.md`. It checks whether learning goals, prior knowledge, didactic sequence, formative feedback, differentiation, dual coding, transfer, and retention make student learning likely. Visual polish, accessibility, and passing tests do not prove this.
-
-For lived student-experience review, use `agents/student-experience-review-agent.md`. It checks whether a typical 15-year-old 4 vwo economics student can orient, understand the next action, handle the cognitive load, stay motivated, and connect graphs or flow charts to the explanatory text. Teacher approval does not prove student usability.
-
-For multi-surface QA orchestration, use `agents/lead-reviewer-agent.md`; it routes work to the right specialist agents, verifies evidence completeness, and produces the consolidated go/no-go decision. Use `agents/testing-agent.md` for test command selection, exit-code evidence, validator results, and residual-risk reporting. Use `agents/accessibility-agent.md` for focused readability, contrast, alt-text, OCR, semantic, keyboard, and inclusive-usability review.
-
-## Exam Ingestion End-State
-
-This repository is being hardened toward official-exam-question ingestion.
-
-A successful platform reference layer must be able to ingest a new official
-CvTE economics exam question, including source annexes and the official
-correction model, and decompose it into:
-
-- content concepts;
-- calculation operations;
-- graph/table/source-reading operations;
-- reasoning operations;
-- answer-writing and correction-model operations;
-- required micro-teaching units;
-- missing or weak MTU candidates;
-- lesson-build implications.
-
-Real exam questions and official correction models are stronger evidence than
-syllabus prose. Do not mint units from syllabus text alone. Use official exam
-evidence, reviewed target exercises, and human-reviewed gate decisions before
-protected reference mutation.
-
-## Architectural principles
-
-Three decisions that govern what lives in this platform and how it evolves. These are not style preferences — they determine which proposals fit the project and which are reasoning backwards into a dying direction.
-
-### 1. Exercises are the source of truth
-
-Lesson goals and the micro-teaching-units catalog derive from target exercises — especially real CvTE exam questions — not from exam-program text or syllabus abstractions. Units exist because an exercise requires a skill, not because a syllabus sentence implies one might. Bulk-extracting from the exam program produces ghost skills that appear in reports but never in real work.
-
-**Ground-truth hierarchy (strongest to weakest):**
-1. Real CvTE exam questions from past havo/vwo papers
-2. Blueprint target exercises in `references/authored/course-target-exercises.json`, currently backed by the active owned blueprint declared in that registry
-3. Target exercises already built in the platform (paragraph-level)
-4. Proeftoets-eindbazen and consolidation exercises
-5. Syllabus eindtermen — for grouping and coverage reporting only, never for minting
-6. Blueprint prose in the active `references/owned/course-blueprint-v*.md` source — descriptive context for the target exercises above
-
-**How to apply:**
-- When creating an exercise or analyzing an exam question, check every required skill. Missing units are minted via CLI (`build-scripts/references/unit-add.js`) with exam_codes and needs populated.
-- Never pre-mint units from the syllabus. Domain A (Vaardigheden) especially grows exercise-first — CvTE lists many abstract skills there that rarely concretize into exam questions.
-- Gap reports (exam-vs-program-gaps, blueprint-vs-exam-gaps, exam-question-type-distribution) surface drift between syllabus claims, real exam reality, blueprint intent, and built materials. **Gaps are diagnostic signal, not a to-do list to auto-fill.**
-
-### 2. Machine-only editing — the goal end-state
-
-Hand-edits to machine-authored references and generated artifacts are forbidden. Humans propose changes via CLI scripts (eventually wrapped by natural-language skills); the CLI validates and writes. If a human hand-edits a machine reference, the change does not survive: next script run or next report reverts or flags it.
-
-**Why:** Integrity at scale. A catalog with DAG dependencies, exam-code cross-references, and procedure consistency cannot be maintained by hand without silent drift as soon as the dataset exceeds one person's working memory.
-
-**Current state (direction, not yet uniform):**
-- `references/machine/` — already enforced. Edits only via `build-scripts/references/*-edit.js`. Never via Edit/Write tools.
-- `references/external/` — machine-refreshed (re-extracted from PDFs, re-fetched from URLs). Same principle, different source.
-- `references/authored/` — still hand-edited by design. Long-term direction: shrink this folder as more references gain machine-editing pipelines. Folder location signals current status.
-
-**How to apply:**
-- When the user asks to change a unit, formula, procedure, or term in a machine reference: invoke or design the appropriate CLI command. Do not open the file and edit.
-- Skills that modify machine references shell out to the CLI; they have no file-write capability on machine references.
-- When a new hand-maintained reference becomes painful (drift, inconsistency, scale): the answer is to build a CLI pipeline and migrate it from `authored/` to `machine/`, not to add more manual process.
-
-### 3. The legacy game target is being retired — don't reason backwards into it
-
-The current legacy game target (historically Module 3) is frozen until September 2026 for student-localStorage integrity. It will be retired in favor of markdown-native material in `4veco-lessen/`. `3-Module-3-rewire-test/` is a testing surround layered on top of that legacy target — partially broken in several places because the target itself is (vaardigheden pages come from `.docx` via `convert_vaardigheden.py`, a lossy binary source).
-
-**How to apply:**
-- Don't propose refactors that improve the legacy target's `.docx → HTML` path (e.g. teaching `convert_vaardigheden.py` to emit editorial HTML, or building a proper `build-vaardigheden-shells.js` that reads the `.docx`). That's reasoning backwards into a dying stack.
-- The `reskin-vaardigheden.js` + deploy pipeline is a bridge that works until the next-year testing surround exists — leave it.
-- If a legacy-target-specific issue looks expensive to fix, flag the decision back to the user ("this is in the retiring stack — is it worth the time?") rather than diving in.
-- New content flows into `4veco-lessen/Boek N - titel/` as markdown-native; that is the direction.
-
-## Structuur
-
-```
-4veco-platform/
-├── engines/                    ← Game engines (broncode) — 5 games
-│   ├── quiz-engine.js, quiz-ui.js, quiz.css
-│   ├── reasoning-engine.js, reasoning-ui.js, reasoning.css
-│   ├── skilltree-engine.js, skilltree-ui.js, skilltree.css
-│   ├── newsdetective-engine.js, newsdetective-ui.js, newsdetective.css
-│   ├── procedure-engine.js, procedure-ui.js, procedure.css  ← stappenplan-game
-│   ├── skilltree/base-elements.js, explanations.js
-│   ├── voorkennis.js, voorkennis.css  ← geen game, maar een doc-renderlaag
-│   ├── theme.js
-│   └── tests/                  ← Unit tests + data validation tests
-├── build-scripts/              ← Build pipeline (platform/, lib/, templates/, content/, archive/)
-├── source-data/
-│   ├── book-1/
-│   │   └── reasoning/          ← Boekgerichte reasoning-CSV's (actieve richting)
-│   └── legacy-target/          ← Legacy input voor het oude game-target
-│       ├── reasoning/*.csv     ← Bron-CSV's voor redeneer-spel
-│       └── skilltree/*.js      ← Per-paragraaf skill config
-├── scripts/
-│   ├── deploy.js               ← Kopieert engines + genereert content naar lesson/book target
-│   ├── check-links.js          ← Verifieert alle interne links
-│   ├── verify-deployment.sh    ← Post-push verificatie
-│   └── pre-push-hook.js        ← Git hook
-├── skills/                     ← Shared skills (didactiek, templates, grafieken, quality control) — for every agent
-├── agents/                     ← Reusable review-agent specifications for bounded QA roles
-├── references/                 ← Authoritative standards, organised by maintenance status:
-│   ├── external/                ←   Mirrored from outside bodies (CvTE, inspectie, school); machine-refreshed
-│   ├── authored/                ←   Hand-edited (legacy bucket; target to shrink)
-│   └── machine/                 ←   Edited only via CLI scripts; integrity-enforced
-└── package.json                ← Jest voor tests
-```
-
-## Deploy workflow
-
-```bash
-# Automated layer bouwen en kopiëren naar een target:
-node scripts/deploy.js "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"
-
-# Legacy alias:
-npm run deploy:legacy
-```
-
-De deploy doet:
-1. Kopieert engine files → `<module>/shared/`
-2. Runt alle generators (skilltree, reasoning, quiz, newsdetective, landing pages)
-3. Verificatie: link checker + data tests
-
-### Belangrijk: scope van deploy
-
-`deploy.js` bouwt alleen de **automated layer**:
-- engine-copy
-- quiz/newsdetective/reasoning/skilltree shells
-- landing pages
-- link checks
-- data tests
-
-`deploy.js` bouwt **niet** automatisch:
-- presentaties
-- uitleg voorkennis
-- uitleg vaardigheden
-- nieuws met visual
-- samenvattingen
-- begeleide inoefeningen
-- opgavensets
-- YouTube-video pagina's
-- docx → html conversies
-
-Voor de volledige paragraaf-productie: volg [BUILD-PARAGRAPH.md](BUILD-PARAGRAPH.md).
-
-### Deployen naar een ander target
-```bash
-node scripts/deploy.js "../4veco-lessen/Boek N - [Titel]"
-```
-Zelfde engines, zelfde base-elements, andere content data.
-
-## Build scripts met MODULE_ROOT
-
-Alle build scripts accepteren `MODULE_ROOT` als env var. Zonder die var schrijven ze naar hun parent directory (backward-compatible).
-
-```bash
-# Eén script draaien tegen een specifieke target-root:
-MODULE_ROOT="../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod" node build-scripts/platform/build-skilltree-shells.js
-```
-
-| Script | Genereert |
-|--------|-----------|
-| `build-skilltree-shells.js` | HTML shells + data files in `shared/skilltree/` |
-| `build-reasoning-engine.js` | HTML shells voor redeneer-spel |
-| `build-reasoning-questions.js` | CSV → JS data file in `shared/reasoning/` |
-| `generate-quiz-shells.js` | HTML shells voor instapquiz |
-| `build-newsdetective-shells.js` | HTML shells voor nieuws-detective |
-| `build-landing-page.js` | index.html voor paragrafen, hoofdstukken, module; paragraph pages must use the approved landing V2 fixtures in `references/ui/paragraph-landing-v2/` |
-| `template-B_voorkennis.js` | `uitleg voorkennis.docx` |
-| `pptx-331-rol-overheid.js` | Presentatie `.pptx` (reference builder; uses `lib-pptx.js`) |
-
-Let op: deze tabel is niet de volledige paragraph workflow. Veel rijke assets gebruiken reference scripts of converters buiten `deploy.js`. Zie [BUILD-PARAGRAPH.md](BUILD-PARAGRAPH.md) voor de complete productieketen.
-
----
-
-## Review and Tool Routing
-
-Use the current Codex toolchain and the repository review gates rather than a
-hardcoded vendor/model table. For creative or high-stakes production work,
-prefer stronger reasoning, rendered-output inspection, and the relevant
-specialist reviewer. For routine calculations or narrow checks, use the fastest
-tool that still preserves evidence quality. The durable rule is not model name;
-it is whether the work has the required source, rendered, validator, and review
-proof.
-
----
-
-## Skills — Automatische trigger-regels
-
-Skills staan in `skills/`. Ze worden automatisch geladen op basis van de taak.
-
-| Taak | Laad deze skills |
-|------|-----------------|
-| Presentatie maken | `econ-pptx-templates` + `economic-graph` + `econ-didactiek` |
-| Uitleg voorkennis maken | `econ-explainer-docs` + `econ-word-templates` + `economic-graph` |
-| Uitleg vaardigheden maken | `econ-explainer-docs` + `econ-word-templates` + `economic-graph` |
-| Nieuws met visual maken | `econ-nieuws-exercise` + `econ-word-templates` + `economic-graph` |
-| Begeleide inoefening maken | `econ-word-templates` + `econ-didactiek` |
-| Opgaven/antwoorden maken | `econ-word-templates` + `econ-didactiek` |
-| Hoofdstuksamenvatting maken | `aanpak-samenvattingen` + `econ-word-templates` + `economic-graph` |
-| Textbook paragraph bouwen | `econ-textbook-paragraph` + `econ-exercise-builder` + `econ-didactiek` + `economic-graph` + `econ-pdf-builder` |
-| Exercises genereren (standalone) | `econ-exercise-builder` + `econ-didactiek` + `economic-graph` |
-| Markdown → PDF exporteren | `econ-pdf-builder` + `economic-graph` |
-| Consolidatie/toets bouwen | `econ-consolidation-builder` + `econ-didactiek` + `economic-graph` + `econ-pdf-builder` |
-| Hoofdstuk bouwen (end-to-end) | `econ-chapter-builder` (orchestrator) → `econ-textbook-paragraph` + `econ-consolidation-builder` + `econ-chapter-assembler` |
-| Hoofdstuk samenstellen (assembly only) | `econ-chapter-assembler` + `econ-pdf-builder` |
-
----
-
-## Presentatie-eisen (kernregels)
-
-### Didactisch
-- Start met leerdoelen
-- Groepeer per vaardigheid of deeldomein
-- Leg de denkroute uit
-- Besteed kort aandacht aan veelgemaakte fouten
-- Sluit af met samenvatting
-
-### Visueel
-- **Minimaal 18pt** lettergrootte, liever 20-24pt
-- **Eén hoofdidee per dia**
-- Veel witruimte, rustige compositie
-- Grafieken op witte achtergrond
-- Varieer lay-outs per dia
-
-### Grafieken
-Volg de `economic-graph` skill. Kernprincipe: economisch correct, geometrisch exact, visueel rustig.
-
-**Architectuurbeslissing (2026-03):** Gebruik raw SVG → Sharp → PNG pipeline. Geen declaratieve libraries.
-
----
-
-## Testing
-
-```bash
-# Engine unit tests (geen MODULE_ROOT nodig):
-npx jest --testPathPatterns "engines/tests/.*-engine\.test\.js"
-
-# Data tests (tegen een target-root met manifest):
-MODULE_ROOT="../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod" npx jest --testPathPatterns "engines/tests/.*-data\.test\.js"
-
-# Alle tests:
-npm test
-```
-
-### Engines wijzigen
-1. Edit in `engines/`
-2. Run engine tests
-3. Deploy naar lesson/book target
-4. Test in browser
-5. Commit en push lesson/book target wanneer die repo bewust is aangepast
-
-### Nieuw reasoning game toevoegen
-
-For new or substantially repaired `redeneer-spel` work, read `skills/econ-reasoning-game.md` and `references/exemplars/product-excellence/reasoning-games/` first. The durable rule is:
-
-```text
-copy product grammar
-re-derive reasoning grammar
-```
-
-Use shared task-shell actions and the reasoning composer where possible. Do not add another mode-overloaded reasoning engine or use the legacy mode picker as the default authoring route.
-
-Legacy CSV route, when explicitly needed:
-
-1. CSV maken → `source-data/book-1/reasoning/X.Y.Z.csv`
-2. `node build-scripts/platform/build-reasoning-questions.js X.Y.Z <domain> source-data/book-1/reasoning/X.Y.Z.csv --generate-review`
-3. Economics review subagent op het review document
-4. Correcties doorvoeren in CSV, opnieuw builden
-5. `node scripts/deploy.js <module-path>`
-
----
-
-## Game Architectuur (overzicht)
-
-### Instapquiz
-- Engine: `engines/quiz-engine.js` + `quiz-ui.js`
-- Data: `shared/questions/X.Y.Z.js` per paragraaf
-- HTML: thin shell at the paragraph root in the flat `4veco-lessen/Boek N/.../X.Y.Z [Naam]/` layout
-
-### Redeneer-spel (legacy 5 modi)
-- Engine: `engines/reasoning-engine.js` + `reasoning-ui.js`
-- Data: `shared/reasoning/X.Y.Z.js` (gegenereerd uit CSV)
-- HTML: thin shell at the paragraph root in the flat lesson layout
-- Domeinen: economics, math-economics, arithmetic
-- New reasoning-game capability uses `skills/econ-reasoning-game.md`, the four-exemplar golden family, shared task-shell primitives, and `engines/reasoning-composer.js` rather than adding more legacy modes.
-
-### Wiskundevaardigheden (Skill Tree)
-- Engine: `engines/skilltree-engine.js` + `skilltree-ui.js`
-- Generators: `engines/skilltree/base-elements.js` (35 skills, 4 lagen)
-- Data: `shared/skilltree/X.Y.Z.js` per paragraaf
-- Global progress via `localStorage` key `skilltree_global_stars`
-
-### Nieuws-detective
-- Engine: `engines/newsdetective-engine.js` + `newsdetective-ui.js`
-- Data: `shared/newsdetective/X.Y.Z.js` per paragraaf
-- HTML: thin shell at the paragraph root in the flat lesson layout
-- 4 rondes per paragraaf, score 0-4
-
----
-
-## Technische omgeving
-
-### Node.js
-Beschikbare modules: `pptxgenjs`, `sharp`, `docx`, `pdf-lib`, `marked`, `graphviz`
-
-> Stel `NODE_PATH` in als modules globaal geïnstalleerd zijn.
-
-### Python
-Module `python-docx` voor het lezen van bestaande Word-bestanden.
-
-The Python converters in `build-scripts/` are profile-gated. Normal Part B
-companion/student-web work should use native HTML generators and skips
-DOCX-to-HTML conversion. Run converters only for Office/legacy work that
-intentionally uses Word sources:
-- `uitleg voorkennis.docx` → `uitleg voorkennis.html`
-- `uitleg vaardigheden.docx` → `uitleg vaardigheden.html`
-- `begeleide inoefening` docx-bestanden → interactieve HTML
-
----
-
-## Kwaliteitsstandaard
-
-Een presentatie is pas af als een docent deze **direct in de les kan gebruiken**, zonder aanpassingen.
-
-**Bij twijfel over kwaliteit: use the stronger available review/tool route and
-doe een extra QA-ronde.**
-
-## Temporary Files & Workspace Cleanup
-
-### MANDATORY: Clean up after every task
-
-You MUST treat temporary/intermediate files as your responsibility. Delete all temp files when done. Use the OS temp directory or a clearly named task folder outside the repository root for intermediate files. Never litter the project root.
-
-### Beleid: scripts bewaren
-
-Wanneer een taak een script produceert dat herbruikbaar is, sla dit op in `build-scripts/` met een duidelijke naam en een `HOW TO ADAPT`-header.
+For the lesson repository, also run its fetch/status/branch checks and repeat
+the platform worktree checker with `--worktree <lesson-worktree-path>`.
+Use `--check` for an existing ownership claim; omit `--require-clean` during
+ongoing work only when the dirty files are expected. Governance freshness
+compares active entrypoints against `origin/main`; use `-- --allow-policy-edit`
+only when the declared task intentionally edits those same governance files.
+
+1. Never work, commit, or push directly on `main`. Create a unique
+   `codex/<short-task-name>-<YYYYMMDD>` or `agent/<short-task-name>-<YYYYMMDD>`
+   branch before edits; inspect an existing branch before reusing it.
+2. Do not share another active agent's worktree, switch its branch, or reuse
+   a worktree with an unreleased ownership lock. Do not override a lock without
+   explicit repository-owner instruction.
+3. Do not use `git checkout -f`, `git switch -f`, `git worktree add --force`, or
+   `git checkout --ignore-other-worktrees` without explicit authorization.
+4. Stop and report unexpected ahead/behind/diverged state, branch movement,
+   or another agent working on the same branch or sprint surface.
+5. When both repositories change, use coordinated worktrees under the same
+   task directory and record both paths, branches, owners, and commit SHAs.
+6. Merge to `main` only through the authorized PR/integration procedure below;
+   do not turn a routine implementation instruction into merge authority.
+
+## Planning, execution, and quality
+
+Optimize for specification fulfilment, not ticket closure. Passing tests or
+producing files is insufficient when the required product or evidence is weak.
+
+For every non-trivial task, state in the plan: the quality floor, requirements,
+proof of fulfilment, applicable review gate, worthwhile improvements within
+scope, and omitted requirements as named follow-ups or explicit blockers.
+
+For non-trivial sprint, roadmap, gate, reference-system, production, or
+architecture work, read the relevant roadmap, source, validators, and prior
+reports; write/update and log an operational plan in the expected sprint files
+before implementation. Include procedure, decisions, outputs, acceptance
+checks, and stop conditions. Follow the plan, repair missing requirements before
+continuing, and verify artifacts/checks before passing each review gate.
+Identify the product-vision pillar, advantage/parity rationale, and proof for
+future non-trivial sprints. Do not close a required review gate by inference.
+
+Read-only investigation reports evidence and limits. Routine maintenance starts
+with the affected source and relevant checks. Named roadmap sprints use the
+separated-agent workflow below; production and review work use their lane and
+artifact gates. Integration uses its own policy. These task routes describe
+when existing procedures apply; they do not waive a gate because work is small.
+
+For roadmap sprints, retain the separated-agent workflow:
+
+- A planning/review subagent checks the outline, baselines, logs, stop
+  conditions, requirements, and exact generated-output list before execution.
+- The main agent executes and owns integration; specialists handle bounded
+  pedagogy, evidence, data-integrity, and code-review questions as needed.
+- A verification subagent checks finished artifacts, validation, plans, logs,
+  and every required output.
+- Before closing non-trivial roadmap sprints, record structural lead-review
+  assignment, round 1, corrections, and round 2. An exemption needs an explicit
+  reason, reviewer/approver, and date; do not silently disable lead review.
+- Human-review gates receive lead review before the human review begins.
+
+## Source integrity and learning quality
+
+- Exercises are the source of truth: real CvTE questions and official answer
+  models, then owned target-exercise data, built target tasks and consolidation
+  exercises. Syllabus prose groups/reports coverage; it does not mint units.
+- Derive MTUs and paragraph learning goals from target operations. Use official
+  questions, annexes, figures, correction steps, points, and answer forms for
+  exam-target planning; run the platform's authorized exam-ingestion workflow.
+  Map required steps to teaching, practice, scaffolding, companion use,
+  evidenced prior knowledge, or explicitly justified exclusions.
+- Never hand-edit `references/machine/` or machine-refreshed
+  `references/external/`. Use the owning CLI/pipeline. `references/authored/`
+  permits authored edits within its authority; directory placement is not
+  permission to bypass a protected-reference or review gate. Missing units use
+  the reference CLI with exam codes and needs, not bulk syllabus extraction.
+- Gap reports are diagnostic signals, not automatic unit-minting backlogs.
+- Fix generated outputs through their source/generator and regenerate. Do not
+  hand-build lesson outputs to work around platform ownership.
+- Pair explanations with instructional visuals (dual coding). Preserve the
+  same procedure steps, terminology, and conceptual approach across surfaces.
+  Adapt visuals to slide, print, summary, and web light/dark use; textbook
+  figures are source material rather than finished companion artwork.
+- Establish classroom readiness and student usability with the applicable
+  reviewer; attractive output and passing tests do not prove learning quality.
+
+## Skills and specialist procedures — read when applicable
+
+Explicitly read the matching skill and its required task-specific references
+before using it. Do not assume an agent environment loads skills automatically.
+The lane runbook supplies production sequencing; detailed construction recipes
+belong in the skill needed for the current artifact.
+
+| Artifact/activity | Procedure |
+|---|---|
+| Textbook paragraph, exercises, consolidation | [Textbook runbook](docs/workflows/textbook-paragraph-lane.md); applicable `skills/econ-textbook-paragraph.md`, `skills/econ-exercise-builder.md`, or `skills/econ-consolidation-builder.md`. |
+| Companion family or regeneration | [skills/econ-companion-artifacts.md](skills/econ-companion-artifacts.md); it governs student-facing rules over conflicting builder skills. Office/legacy DOCX exports are opt-in. |
+| Presentation | [skills/econ-pptx-templates.md](skills/econ-pptx-templates.md), with applicable economic-graph and didactic instructions. |
+| Explanation, guided practice, news, summary | Relevant `skills/econ-explainer-docs.md`, `skills/econ-exercise-builder.md`, `skills/econ-nieuws-exercise.md`, or `skills/aanpak-samenvattingen.md`; Word exports use the Word-template skill. |
+| Graph construction or PDF export | [skills/economic-graph.md](skills/economic-graph.md) or [skills/econ-pdf-builder.md](skills/econ-pdf-builder.md), respectively; preserve economic precision and rendered quality. |
+| Reasoning game | [skills/econ-reasoning-game.md](skills/econ-reasoning-game.md) and [references/exemplars/product-excellence/reasoning-games/](references/exemplars/product-excellence/reasoning-games/). The old route is **legacy 5 modi**; new work uses the golden family, shared task-shell primitives, and `engines/reasoning-composer.js`, not another mode-overloaded engine. |
+
+## Review evidence and human gates
+
+Use [agents/lead-reviewer-agent.md](agents/lead-reviewer-agent.md) to route
+review and consolidate specification fulfilment. Use the relevant specialist:
+`econ-companion-visual-review`, `visual-qa-agent`, `testing-agent`,
+`accessibility-agent`, `teacher-learning-quality-review-agent`,
+`student-experience-review-agent`, or the textbook paragraph review skill.
+Part A and Part B keep separate review records and matching `quality-ref.yaml`
+blocks under [the quality-ref contract](docs/workflows/paragraph-quality-ref-schema-v2.md).
+
+Human review defaults to direct comments on a complete review packet. Include
+calibration checks, questions, inspectable evidence, stop conditions, and comment
+prompts. Record comment resolutions, decisions, and unresolved issues before
+closure; use an interactive interview only on explicit reviewer request or to
+resolve ambiguous/conflicting authority. A casual "OK" or "continue" is not a
+review decision record or gate-closure artifact.
+
+Interactive UI/game/route/exit-ticket gates require playable or reproducible
+artifacts, state proof, screenshots of relevant initial/retry/feedback/next-action/
+completed states, mobile/dark-mode proof when student-facing, and a checker for
+the evidence. Use the `GATE-TASK-FAMILY-1` lab/proof pattern for game/task-shell
+gates unless explicitly waived. Do not substitute source fragments for product proof.
+
+Publish packets and every cited artifact to the normal remote branch, refresh
+GitHub-facing indexes, and verify remote availability before running or sending
+a human-review packet; local-only dry runs require explicit user instruction.
+Cite passing `platform-ci / validate-platform` for the reviewed commit or an
+explicit CI waiver where policy permits. Lighter-review packets must satisfy
+[the throughput policy](docs/review/pr-throughput-policy.md) and its checker;
+missing authority, changed-path, checker, CI, or lead-review proof cannot be
+treated as autonomous-review eligibility.
+
+## Publication, integration, and completion
+
+After a normal implementation draft PR is published, complete structural lead
+review/repairs and run the independent `npm.cmd run review:pr-readiness` route.
+Apply only the allowed transition using `apply:pr-readiness`,
+`route-and-apply:pr-readiness`, or `apply:bundle-readiness` as specified in
+[readiness policy](docs/review/pr-readiness-routing-policy.md). A valid
+`allowed_transition: MARK_READY` must be applied; owner permission is not a
+separate draft-to-ready checkpoint. For `KEEP_DRAFT_BATCH`, continue the next
+coherent authorized milestone. Return at human-review readiness, a genuine
+pause/escalation blocker, or completed authorized closure.
+
+Before integration, read [the integration lane policy](docs/review/pr-integration-lane-policy.md).
+Never call `gh pr merge` directly for normal PRs or use admin bypass. Use trusted
+current-main serialized `integrate:authorized-pr` / `integrate:authorized-bundle`
+tooling. L0–L2 integration requires the policy's authority and exact-head proof;
+L3–L4 and governance/self-modification require owner payload authorization for
+the reviewed payload and scope. The lane validates the current integration head.
+Do not infer authorization from CI, review evidence, or later base-sync commits.
+Paired PRs require the policy's explicit bundle identity, compatibility proof,
+delegated member readiness, and coordinated integration. Required platform CI
+uses lesson `main`, never an implicit same-named lesson branch.
+
+Completion obligations (apply each stated trigger):
+
+- Fetch/prune before final commit/push; resolve unexpected behind/diverged state.
+- Before closing platform workflow/tooling PRs, run `npm run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD`.
+  Lesson PRs use their lane runbook's scope check against the lesson repository;
+  cross-lane exceptions must be machine-readable and reviewed.
+- Run relevant validation and refresh navigation when paths, roadmaps, reports,
+  agents, skills, or review surfaces change: `npm.cmd run agent:index`,
+  `node build-scripts/sprints/emit-url-index.js`, and `npm.cmd run dashboard:internal`
+  when dashboard/roadmap state changes. Keep research maps, GitHub entry, URL
+  index, and `reports/github-agent-index-*.md` aligned with the real layout.
+- For non-trivial work, commit and push validated changes to the task's normal remote branch unless
+  the user asks to keep them local. Publish both repositories when both change.
+  Do not leave a completed sprint/generated-output task dirty without reporting
+  the exact status and blocker. Governance/workflow closure also runs
+  `npm.cmd run finalization:freshness` for remote-main, ancestry, and policy hashes.
+- For every mutating task, report worktree paths, branches, lock owner/agent ID, local SHAs, push state,
+  PR URLs (or why none), and current `platform-ci / validate-platform` status
+  when available. End every non-trivial response with the next action or precise remaining blocker.
+- After every task, clean up task-owned temporary files. Use OS temp or a named task folder
+  outside the repository for intermediates. Preserve reusable scripts in
+  `build-scripts/` with a clear name and `HOW TO ADAPT` header.
