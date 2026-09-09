@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       profile:
-        description: Force the product validation route for a cleanup milestone
+        description: Use full product validation for a release milestone or diagnosis
         required: false
         default: auto
         type: choice
@@ -83,8 +83,8 @@ jobs:
         run: node build-scripts/ci/maintenance-ci.js plan
 
       - name: Verify Y1 runtime checkout bytes
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: node build-scripts/sprints/inspect-y1-runtime-checkout.js
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Set up Python
         if: steps.ci-scope.outputs.maintenance != 'true'
@@ -108,32 +108,32 @@ jobs:
         run: node build-scripts/ci/maintenance-ci.js check
 
       - name: Validate exercise workflow currentness
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:exercise-workflow-currentness
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate Book 2+ Part A exercise authoring contract
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:part-a-exercise-authoring-contract
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate blueprint pedagogical boundaries
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:blueprint-pedagogical-boundaries
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate Book 2 outline currentness
         run: npm run check:book-outline-currentness
         if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate Book 2 target authority remediation candidate
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:book2-target-authority-remediation
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate Issue 229 sprint scope
         if: github.event_name == 'pull_request' && github.event.pull_request.number == 230
         run: node build-scripts/workflows/check-book2-target-authority-remediation.js --scope-base "${{ github.event.pull_request.base.sha }}"
 
       - name: Validate exercise authority hygiene
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:exercise-authority-hygiene
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Install Python support dependencies
         if: steps.ci-scope.outputs.maintenance != 'true'
@@ -202,52 +202,52 @@ jobs:
           (Split-Path -Parent $pdftoppm) | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
 
       - name: Validate platform Jest suite
+        run: npm run check:platform -- --json --outputFile ../ci-artifacts/jest-results.json
         if: steps.ci-scope.outputs.maintenance != 'true'
-        run: node node_modules/jest/bin/jest.js --runInBand --testPathIgnorePatterns "check-y1-golden-rollout-wave-1(-current)?\.test\.js$"
 
       - name: Build presentation-v2 registered decks
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run build:presentation-v2
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate presentation-v2 HTML QA
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:presentation-v2-html-qa -- --output-dir ..\ci-artifacts\presentation-v2-html-qa
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate presentation-v2 legacy guard
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:presentation-v2-legacy-guard -- --output ..\ci-artifacts\presentation-v2-legacy-guard.json
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate presentation-v2 PPTX proof
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:presentation-v2-pptx-proof -- --output-dir ..\ci-artifacts\presentation-v2-pptx-proof
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate reasoning golden family guardrails
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:reasoning-golden
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate paragraph landing V2 guardrails
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:landing-v2
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate News Detective V2 guardrails
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:news-detective-v2
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate active scope language
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:scope-language
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate active governance wording
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:active-governance-wording
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate Golden Graph Advisory 113 proof
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:golden-graph-advisory-113
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate Scale Proof 3P product path proof
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:scale-proof-3p-product-path
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate Y1 Golden rollout wave
         if: steps.ci-scope.outputs.maintenance != 'true'
@@ -278,20 +278,20 @@ jobs:
           npm run check:y1-golden-rollout-wave-1-product -- --event-mode $mode --scope-mode auto --base $base --head $head --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head HEAD
 
       - name: Validate report JSON
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: node build-scripts/reports/validate-report-json.js
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate MTU evidence layer freshness
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: node build-scripts/references/check-mtu-evidence-layer.js
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate MTU-H7 Bundle 4 protected adjudication packet
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:mtu-h7-bundle4
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate roadmap version index
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: node build-scripts/references/check-roadmap-version-index.js
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Check URL index is current
         continue-on-error: true
@@ -304,8 +304,8 @@ jobs:
         run: npm run check:agent-index-freshness
 
       - name: Check CI evidence line endings
-        if: steps.ci-scope.outputs.maintenance != 'true'
         run: node build-scripts/ci/check-evidence-line-endings.js
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Check platform diff hygiene
         run: git diff --check
@@ -319,14 +319,6 @@ jobs:
         with:
           name: platform-ci-diagnostics
           path: |
-            4veco-platform/reports/sprints/*-command-log.jsonl
-            4veco-platform/reports/sprints/*-command-log.md
-            4veco-platform/reports/json/*.json
-            4veco-platform/reports/url-index.md
-            ci-artifacts/maintenance-plan.json
-            ci-artifacts/platform-ci-evidence.json
-            ci-artifacts/presentation-v2-html-qa/**
-            ci-artifacts/presentation-v2-legacy-guard.json
-            ci-artifacts/presentation-v2-pptx-proof/**
+            ci-artifacts/
           if-no-files-found: ignore
           retention-days: 14

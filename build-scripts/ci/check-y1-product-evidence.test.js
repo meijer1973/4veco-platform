@@ -3,7 +3,7 @@ const { verifyBindings } = require('./check-y1-product-evidence');
 const content = Buffer.from('sealed historical evidence\n');
 const binding = { path: 'capture.json', sha256: crypto.createHash('sha256').update(content).digest('hex') };
 const record = { successor_sources: [{ ...binding, path: 'verifier.js' }], retained_historical_artifacts: [binding] };
-test('temporary workflow exception still verifies every bound source and historical artifact', () => {
+test('current product validation verifies every bound source and historical artifact', () => {
   const seen = [];
   verifyBindings(record, file => { seen.push(file); return content; });
   expect(seen).toEqual(['verifier.js', 'capture.json']);

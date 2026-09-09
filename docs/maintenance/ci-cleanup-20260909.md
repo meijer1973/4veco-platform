@@ -1,5 +1,9 @@
 # CI cleanup mode — 9 September 2026
 
+**Historical activation record.** The temporary mode is replaced by the
+[permanent maintenance workflow](../review/maintenance-workflow.md).
+The dated exception below no longer controls current work.
+
 The owner authorized this maintenance effort and the temporary replacements
 below in the task requesting lighter CI and policies, including activation of
 the exception itself. This is the single authorization for the bounded cleanup

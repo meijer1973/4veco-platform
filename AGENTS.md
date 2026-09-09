@@ -5,12 +5,11 @@ and fix causes rather than layering patches over an unresolved design problem.
 This is the canonical shared operating guide for `4veco-platform` and
 `../4veco-lessen`. Read it first, then select the task-specific route below.
 
-**Active CI cleanup exception:** for the owner-authorized CI maintenance effort,
-follow [CI cleanup mode](docs/maintenance/ci-cleanup-20260909.md), including its
-activation. It replaces conflicting review, index, CI and custom integration
-requirements below with focused checks, one relevant review and an ordinary
-exact-head PR merge. Review point: 16 September 2026. Product/source boundaries
-and branch/worktree protection still apply.
+For routine maintenance, use [the maintenance workflow](docs/review/maintenance-workflow.md):
+relevant checks, one independent review for meaningful changes, and an authorized
+ordinary PR merge with an exact-head guard. The protected/product procedures
+below apply when the task touches those scopes. Branch/worktree safety applies
+to every mutating task.
 
 ## Repository purpose and boundaries
 
@@ -48,8 +47,8 @@ Cross-repository hyperlinks open GitHub `main`; use the adjacent checkout for lo
 | Paragraph-build, companion, exit-ticket, exam-ingestion, or product-route work | [Product vision](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-vision.md), [product end state](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-end-state.md), and the applicable workflow/specification. |
 | Generated material or deployment | Applicable lane/skill plus [build-scripts/README.md](build-scripts/README.md). `scripts/deploy.js` writes its target; its automated layer alone is not full paragraph production. |
 | Review or human gate | Original requirements and evidence; [lead reviewer](agents/lead-reviewer-agent.md) and the relevant specialist protocol. Product gates also use the product specifications above. |
-| PR publication/readiness | [Throughput policy](docs/review/pr-throughput-policy.md), [readiness policy](docs/review/pr-readiness-routing-policy.md), and [independent readiness reviewer](agents/pr-readiness-reviewer-agent.md). |
-| Merge, base sync for integration, or paired bundle integration | [Integration lane policy](docs/review/pr-integration-lane-policy.md) and [readiness policy](docs/review/pr-readiness-routing-policy.md), including their bundle sections when both repositories participate. |
+| Maintenance PR publication or merge | [Maintenance workflow](docs/review/maintenance-workflow.md). |
+| Protected/product publication or integration | [Throughput policy](docs/review/pr-throughput-policy.md), [integration lane policy](docs/review/pr-integration-lane-policy.md) and [readiness policy](docs/review/pr-readiness-routing-policy.md); use their bundle sections when runtime-coupled repositories participate. |
 
 There are exactly two operational lanes: textbook / Part A and companion /
 Part B / student-web companion. `complete` is an integration verification
@@ -219,7 +218,15 @@ treated as autonomous-review eligibility.
 
 ## Publication, integration, and completion
 
-After a normal implementation draft PR is published, complete structural lead
+Routine maintenance follows [the maintenance workflow](docs/review/maintenance-workflow.md).
+It needs no separate readiness decision, generated authorization packet or
+custom integration lane. Use relevant passing checks, one substantive review
+when needed, and the task's integration authority. Verify the merge parents/tree
+and useful smoke checks; do not repeat full CI solely because a reviewed tree
+was merged.
+
+For protected/product work using the existing gated process, after the draft
+PR is published, complete structural lead
 review/repairs and run the independent `npm.cmd run review:pr-readiness` route.
 Apply only the allowed transition using `apply:pr-readiness`,
 `route-and-apply:pr-readiness`, or `apply:bundle-readiness` as specified in
@@ -229,8 +236,8 @@ separate draft-to-ready checkpoint. For `KEEP_DRAFT_BATCH`, continue the next
 coherent authorized milestone. Return at human-review readiness, a genuine
 pause/escalation blocker, or completed authorized closure.
 
-Before integration, read [the integration lane policy](docs/review/pr-integration-lane-policy.md).
-Never call `gh pr merge` directly for normal PRs or use admin bypass. Use trusted
+For that gated process, read [the integration lane policy](docs/review/pr-integration-lane-policy.md).
+Do not use direct `gh pr merge` for gated PRs or use admin bypass. Use trusted
 current-main serialized `integrate:authorized-pr` / `integrate:authorized-bundle`
 tooling. L0–L2 integration requires the policy's authority and exact-head proof;
 L3–L4 and governance/self-modification require owner payload authorization for
@@ -246,15 +253,17 @@ Completion obligations (apply each stated trigger):
 - Before closing platform workflow/tooling PRs, run `npm run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD`.
   Lesson PRs use their lane runbook's scope check against the lesson repository;
   cross-lane exceptions must be machine-readable and reviewed.
-- Run relevant validation and refresh navigation when paths, roadmaps, reports,
+- Run relevant validation and fix navigation when paths, roadmaps, reports,
   agents, skills, or review surfaces change: `npm.cmd run agent:index`,
   `node build-scripts/sprints/emit-url-index.js`, and `npm.cmd run dashboard:internal`
   when dashboard/roadmap state changes. Keep research maps, GitHub entry, URL
-  index, and `reports/github-agent-index-*.md` aligned with the real layout.
+  index, and `reports/github-agent-index-*.md` useful for the real layout.
+  For routine maintenance these generated indexes are advisory, and commit-ID
+  freshness alone must not create an integration commit.
 - For non-trivial work, commit and push validated changes to the task's normal remote branch unless
   the user asks to keep them local. Publish both repositories when both change.
   Do not leave a completed sprint/generated-output task dirty without reporting
-  the exact status and blocker. Governance/workflow closure also runs
+  the exact status and blocker. Protected/product governance closure also runs
   `npm.cmd run finalization:freshness` for remote-main, ancestry, and policy hashes.
 - For every mutating task, report worktree paths, branches, lock owner/agent ID, local SHAs, push state,
   PR URLs (or why none), and current `platform-ci / validate-platform` status

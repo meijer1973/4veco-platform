@@ -1,5 +1,11 @@
 # PR Readiness Routing Policy
 
+**Scope from 9 September 2026:** routine maintenance uses the
+[maintenance workflow](maintenance-workflow.md), which takes precedence over
+this document for that scope. One relevant review is enough; do not produce
+a second readiness decision or run the router as a maintenance prerequisite.
+The gated routing procedure below remains for protected/product work.
+
 Status: active governance policy for draft-to-review routing.
 Created: 2026-06-22.
 

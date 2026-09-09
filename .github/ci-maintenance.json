@@ -1,7 +1,0 @@
-{
-  "active": true,
-  "effort": "CI-CLEANUP-20260909",
-  "review_date": "2026-09-16",
-  "rollback_baseline": "c8e88cf4a510378e1941011be9e321cf2c4741bf",
-  "policy": "docs/maintenance/ci-cleanup-20260909.md"
-}

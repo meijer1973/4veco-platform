@@ -11,6 +11,10 @@ primary_output: pr-readiness-decision.json and pr-readiness-decision.md
 
 # PR Readiness Reviewer Agent
 
+Routine maintenance follows [the maintenance workflow](../docs/review/maintenance-workflow.md)
+and does not invoke this separate readiness role. Use the procedure below for
+protected/product work that requires the gated review route.
+
 ## Purpose
 
 The PR Readiness Reviewer decides whether a remotely inspectable draft PR

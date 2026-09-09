@@ -39,6 +39,7 @@ const SHARED_PLATFORM_ROOT_FILES = new Set([
   'build-chapter.md',
   'build-paragraph.md',
   'license',
+  'jest.config.cjs',
   'package-lock.json',
   'package.json',
   'research_agent_map.md',

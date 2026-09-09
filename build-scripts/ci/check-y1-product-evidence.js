@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-// HOW TO ADAPT: temporary CI adapter; preserve the sealed verifiers and evidence.
-// The owner suspended workflow-shape preservation, not historical product truth.
-const fs = require('fs');
+// HOW TO ADAPT: validate archived provenance at its source, then current reuse.
+// Live workflow behavior is covered by the current CI tests, not the old capture.
 const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 const assert = require('assert/strict');
@@ -14,12 +13,11 @@ function verifyBindings(record, readBlob) {
   }
 }
 function run(argv) {
-  const maintenance = JSON.parse(fs.readFileSync(`${current.ROOT}/.github/ci-maintenance.json`, 'utf8'));
-  assert(maintenance.active && maintenance.effort === 'CI-CLEANUP-20260909', 'Temporary workflow exception is not active');
   const options = current.parseArgs(argv);
   const git = args => execFileSync('git', args, { cwd: current.ROOT, maxBuffer: 40 * 1024 * 1024 });
   const head = git(['rev-parse', '--verify', `${options.head}^{commit}`]).toString().trim();
   const record = JSON.parse(git(['show', `${head}:${current.CERTIFICATE}`]).toString());
+  // buildCertificate validates the exact recorded source workflow and lockfile.
   assert.deepEqual(record, current.buildCertificate(record.source_payload_sha, record.initial_observation.lesson_sha));
   git(['merge-base', '--is-ancestor', record.source_payload_sha, head]);
   verifyBindings(record, file => git(['show', `${head}:${file}`]));
@@ -29,7 +27,8 @@ function run(argv) {
   return { ok: true, current_platform_sha: head, current_lesson_validation: current.validateLesson('HEAD'),
     historical_validation: { passed: true, platform_payload_sha: proof.exact_head_delta.platform_payload_sha,
       first_viewport_only: true, below_fold_exercises_attested: false },
-    workflow_preservation: { status: 'suspended', authority: 'docs/maintenance/ci-cleanup-20260909.md' },
+    workflow_provenance: { status: 'validated_at_recorded_source', source_sha: record.source_payload_sha,
+      current_workflow_attested_by_historical_capture: false },
     new_capture_performed: false };
 }
 if (require.main === module) {
