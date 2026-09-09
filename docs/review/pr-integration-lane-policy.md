@@ -1,5 +1,12 @@
 # PR Integration Lane Policy
 
+**Scope from 9 September 2026:** routine maintenance uses the
+[maintenance workflow](maintenance-workflow.md), which takes precedence over
+this document for that scope. It uses an ordinary authorized exact-head PR
+merge, with no index-refresh commits, preparation/dry-run packets or separate
+readiness decision. The serialized lane below remains for protected/product
+work and explicitly requested coordinated bundles.
+
 The integration lane serializes merges after human review so a PR does not need
 another human decision merely because `main` advanced.
 

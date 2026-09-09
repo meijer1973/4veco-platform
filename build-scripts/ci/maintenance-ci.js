@@ -5,10 +5,12 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 const ROOT = path.resolve(__dirname, '../..');
 const PLAN = path.resolve(ROOT, '../ci-artifacts/maintenance-plan.json');
-const SUSPENDED_TESTS = 'check-y1-golden-rollout-wave-1(-current)?\\.test\\.js$';
+// These sealed suites audit the archived workflow, not the live CI contract.
+const HISTORICAL_WORKFLOW_TESTS = 'check-y1-golden-rollout-wave-1(-current)?\\.test\\.js$';
+const POLICY = 'docs/review/maintenance-workflow.md';
 const CORE_TESTS = ['build-scripts/ci/maintenance-ci.test.js', 'build-scripts/ci/check-y1-product-evidence.test.js'];
 const ALLOWED = [
-  /^AGENTS\.md$/, /^\.github\/ci-maintenance\.json$/,
+  /^AGENTS\.md$/,
   /^\.github\/workflows\/(platform-ci|authorized-pr-integration|authorized-bundle-integration|cross-repo-bundle-compatibility)\.yml$/,
   /^build-scripts\/(ci|review-gates)\//,
   /^build-scripts\/reports\/(github-agent-index|check-agent-index-freshness)(\.test)?\.js$/,
@@ -33,7 +35,9 @@ function packageOnlyCiChanges(before, after) {
   return JSON.stringify(left) === JSON.stringify(right);
 }
 function classify(paths, options = {}) {
-  if (!options.active || options.forceFull || paths.length === 0) return 'product';
+  if (options.forceFull) return 'product';
+  if (options.eventName === 'push') return 'smoke';
+  if (paths.length === 0) return 'product';
   return paths.every(file => file === 'package.json'
     ? options.packageOnlyCi === true
     : ALLOWED.some(pattern => pattern.test(file))) ? 'maintenance' : 'product';
@@ -43,15 +47,12 @@ function plan(base, head, options = {}) {
   if (git('rev-parse', 'HEAD').trim() !== head) throw new Error('CI checkout does not match the declared head');
   git('cat-file', '-e', `${base}^{commit}`);
   const paths = git('diff', '--no-renames', '--name-only', '-z', base, head).split('\0').filter(Boolean);
-  const config = JSON.parse(fs.readFileSync(path.join(ROOT, '.github/ci-maintenance.json'), 'utf8'));
-  if (typeof config.active !== 'boolean' || config.effort !== 'CI-CLEANUP-20260909' || !/^\d{4}-\d{2}-\d{2}$/.test(config.review_date)) throw new Error('Invalid maintenance configuration');
   const packageOnlyCi = !paths.includes('package.json') || packageOnlyCiChanges(git('show', `${base}:package.json`), git('show', `${head}:package.json`));
-  return { profile: classify(paths, { active: config.active, packageOnlyCi, ...options }), base, head, paths,
-    effort: config.effort, review_date: config.review_date, review_due: new Date().toISOString().slice(0, 10) >= config.review_date,
-    suspended_historical_tests: SUSPENDED_TESTS, policy: config.policy };
+  return { profile: classify(paths, { packageOnlyCi, ...options }), base, head, paths,
+    archived_workflow_test_suites: HISTORICAL_WORKFLOW_TESTS, policy: POLICY };
 }
 function jestArgs(paths, root = ROOT) {
-  const args = ['--runInBand', `--testPathIgnorePatterns=${SUSPENDED_TESTS}`];
+  const args = ['--runInBand', `--testPathIgnorePatterns=${HISTORICAL_WORKFLOW_TESTS}`];
   // Jest discards missing paths and unresolved dependency edges. A deletion
   // needs the complete Jest suite so surviving importers cannot disappear.
   if (paths.some(file => /\.[cm]?js$/.test(file) && !fs.existsSync(path.join(root, file)))) return args;
@@ -84,7 +85,7 @@ function jestArgs(paths, root = ROOT) {
   return [...args, '--findRelatedTests', ...tests];
 }
 function check(result) {
-  if (result.profile !== 'maintenance') throw new Error('Focused checks require a maintenance plan');
+  if (!['maintenance', 'smoke'].includes(result.profile)) throw new Error('Focused checks require a maintenance or smoke plan');
   if (git('rev-parse', 'HEAD').trim() !== result.head) throw new Error('Head moved after CI selection');
   for (const file of result.paths) {
     const full = path.join(ROOT, file);
@@ -95,9 +96,10 @@ function check(result) {
     else if (/\.ya?ml$/.test(file)) require('js-yaml').safeLoad(fs.readFileSync(full, 'utf8'), { json: false });
   }
   git('diff', '--check', result.base, result.head);
-  const args = jestArgs(result.paths);
-  const message = args.includes('--findRelatedTests') ? 'Running affected Jest tests.'
-    : 'Deleted JavaScript: running the complete Jest suite, except the explicitly suspended historical suites.';
+  const args = jestArgs(result.profile === 'smoke' ? [] : result.paths);
+  const message = result.profile === 'smoke' ? 'Post-merge smoke: checking syntax/configuration and core CI tests; PR product validation is not repeated.'
+    : args.includes('--findRelatedTests') ? 'Running affected Jest tests.'
+    : 'Deleted JavaScript: running the complete current Jest suite; archived workflow suites remain separate.';
   console.log(message);
   if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `\n${message}\n`);
   run(process.execPath, [path.join(ROOT, 'node_modules/jest/bin/jest.js'), ...args], { stdio: 'inherit' });
@@ -105,14 +107,16 @@ function check(result) {
 function main(argv) {
   if (argv[0] === 'plan') {
     const result = plan(argv[1] || process.env.CI_BASE_SHA, argv[2] || process.env.CI_HEAD_SHA,
-      { forceFull: process.env.CI_FORCE_FULL === 'true' });
+      { forceFull: process.env.CI_FORCE_FULL === 'true', eventName: process.env.GITHUB_EVENT_NAME });
     fs.mkdirSync(path.dirname(PLAN), { recursive: true });
     fs.writeFileSync(PLAN, JSON.stringify(result, null, 2) + '\n');
-    if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `maintenance=${result.profile === 'maintenance'}\n`);
+    if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `maintenance=${result.profile !== 'product'}\n`);
     if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,
       `## CI profile: ${result.profile}\n\nHead: \`${result.head}\`; ${result.paths.length} changed paths.\n\n` +
-      (result.profile === 'maintenance' ? 'Runs syntax/configuration checks and affected tests, with a full Jest fallback for JavaScript deletions. Presentation, historical-product and index-freshness execution are suspended for this maintenance change.\n\n' : 'Runs product/source tests and rendering checks. The temporary Y1 workflow-structure exception is reported separately.\n\n') +
-      `Policy: ${result.policy}. Review point: ${result.review_date}${result.review_due ? ' — review due' : ''}.\n`);
+      (result.profile === 'maintenance' ? 'Runs syntax/configuration checks and affected tests, with a full Jest fallback for JavaScript deletions. Presentation and historical product proofs are outside this maintenance scope.\n\n'
+        : result.profile === 'smoke' ? 'Post-merge syntax/configuration and core CI smoke tests. Product validation belongs to the reviewed PR; it is not repeated here.\n\n'
+          : 'Runs the current product/source suite and rendering checks. Historical capture integrity and current reuse are validated separately from the archived workflow contract.\n\n') +
+      `Policy: ${result.policy}. Index freshness is advisory.\n`);
     console.log(JSON.stringify(result, null, 2));
   } else if (argv[0] === 'check') check(JSON.parse(fs.readFileSync(PLAN, 'utf8')));
   else throw new Error('Usage: maintenance-ci.js plan [base-sha head-sha] | check');
@@ -120,4 +124,4 @@ function main(argv) {
 if (require.main === module) {
   try { main(process.argv.slice(2)); } catch (error) { console.error(error.message); process.exitCode = 1; }
 }
-module.exports = { classify, packageOnlyCiChanges, plan, check, jestArgs, SUSPENDED_TESTS };
+module.exports = { classify, packageOnlyCiChanges, plan, check, jestArgs, HISTORICAL_WORKFLOW_TESTS };

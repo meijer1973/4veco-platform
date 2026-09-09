@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       profile:
-        description: Force the product validation route for a cleanup milestone
+        description: Use full product validation for a release milestone or diagnosis
         required: false
         default: auto
         type: choice
@@ -203,7 +203,7 @@ jobs:
 
       - name: Validate platform Jest suite
         if: steps.ci-scope.outputs.maintenance != 'true'
-        run: node node_modules/jest/bin/jest.js --runInBand --testPathIgnorePatterns "check-y1-golden-rollout-wave-1(-current)?\.test\.js$"
+        run: node node_modules/jest/bin/jest.js --maxWorkers=2 --testPathIgnorePatterns "check-y1-golden-rollout-wave-1(-current)?\.test\.js$" --json --outputFile ../ci-artifacts/jest-results.json
 
       - name: Build presentation-v2 registered decks
         if: steps.ci-scope.outputs.maintenance != 'true'
@@ -319,14 +319,6 @@ jobs:
         with:
           name: platform-ci-diagnostics
           path: |
-            4veco-platform/reports/sprints/*-command-log.jsonl
-            4veco-platform/reports/sprints/*-command-log.md
-            4veco-platform/reports/json/*.json
-            4veco-platform/reports/url-index.md
-            ci-artifacts/maintenance-plan.json
-            ci-artifacts/platform-ci-evidence.json
-            ci-artifacts/presentation-v2-html-qa/**
-            ci-artifacts/presentation-v2-legacy-guard.json
-            ci-artifacts/presentation-v2-pptx-proof/**
+            ci-artifacts/
           if-no-files-found: ignore
           retention-days: 14

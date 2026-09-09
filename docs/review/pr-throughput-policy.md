@@ -1,5 +1,11 @@
 # PR Throughput Policy
 
+**Scope from 9 September 2026:** routine maintenance uses the
+[maintenance workflow](maintenance-workflow.md), which takes precedence over
+this document for that scope. It does not require throughput JSON packets,
+prescribed review rounds or index freshness. Protected references, product
+authority, student-facing output and deployment retain their applicable gates.
+
 Status: active governance policy for future PR review packets.
 Created: 2026-06-14.
 

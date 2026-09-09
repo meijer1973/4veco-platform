@@ -4,7 +4,7 @@ const yaml = require('js-yaml');
 const os = require('os');
 const { spawnSync } = require('child_process');
 const { classify, packageOnlyCiChanges, plan, jestArgs } = require('./maintenance-ci');
-const options = { active: true, packageOnlyCi: true };
+const options = { packageOnlyCi: true };
 describe('bounded maintenance CI selection', () => {
   test.each([
     ['AGENTS.md'], ['.github/workflows/platform-ci.yml'], ['build-scripts/ci/maintenance-ci.js'],
@@ -16,11 +16,15 @@ describe('bounded maintenance CI selection', () => {
     ['build-scripts/content/book-1/b1-111-presentation-v2.js'], ['.github/workflows/deploy.yml'],
     ['package-lock.json'], ['.gitattributes'], ['unrecognized.js'], ['BUILD-PARAGRAPH.md'],
   ])('product or unknown scope: %s', file => expect(classify(['AGENTS.md', file], options)).toBe('product'));
-  test('disabled, forced-full, empty and non-CI package changes use product checks', () => {
-    expect(classify(['AGENTS.md'], { active: false })).toBe('product');
+  test('forced-full, empty and non-CI package changes use product checks', () => {
     expect(classify(['AGENTS.md'], { ...options, forceFull: true })).toBe('product');
     expect(classify([], options)).toBe('product');
-    expect(classify(['package.json'], { active: true, packageOnlyCi: false })).toBe('product');
+    expect(classify(['package.json'], { packageOnlyCi: false })).toBe('product');
+  });
+  test('main pushes get a smoke check while explicit full validation overrides it', () => {
+    expect(classify(['engines/reasoning-composer.js'], { eventName: 'push' })).toBe('smoke');
+    expect(classify(['engines/reasoning-composer.js'], { eventName: 'pull_request' })).toBe('product');
+    expect(classify(['AGENTS.md'], { eventName: 'push', forceFull: true })).toBe('product');
   });
   test('deleted or renamed product paths cannot disappear from mixed scope', () => {
     expect(classify(['engines/removed.js', 'build-scripts/ci/moved.js'], options)).toBe('product');
@@ -92,9 +96,11 @@ describe('required workflow reports and runs the selected checks', () => {
     'Validate presentation-v2 HTML QA', 'Validate presentation-v2 PPTX proof', 'Validate Y1 Golden rollout wave'])('%s is product-only', name => {
     expect(steps.find(s => s.name === name).if).toBe("steps.ci-scope.outputs.maintenance != 'true'");
   });
-  test('index freshness is advisory and the full suite names suspended historical tests', () => {
+  test('index freshness is advisory; full validation uses two workers and names archived workflow tests', () => {
     expect(steps.find(s => s.name === 'Check GitHub agent indexes against repository heads')['continue-on-error']).toBe(true);
     expect(steps.find(s => s.name === 'Validate platform Jest suite').run).toContain('testPathIgnorePatterns');
+    expect(steps.find(s => s.name === 'Validate platform Jest suite').run).toContain('--maxWorkers=2');
+    expect(steps.find(s => s.name === 'Validate platform Jest suite').run).toContain('--outputFile ../ci-artifacts/jest-results.json');
     expect(steps.find(s => s.name === 'Validate Y1 Golden rollout wave').run).toContain('check:y1-golden-rollout-wave-1-product');
   });
 });

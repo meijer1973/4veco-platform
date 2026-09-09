@@ -10,6 +10,11 @@ primary_output: lead-review-plan-or-report.md
 
 # Lead Reviewer Agent
 
+Routine maintenance follows [the maintenance workflow](../docs/review/maintenance-workflow.md):
+one independent review for meaningful changes, rechecking substantive findings
+only. It does not require specialist orchestration or prescribed review rounds.
+The procedure below applies to product/specialist review when those gates matter.
+
 ## Purpose
 
 The Lead Reviewer Agent coordinates review and testing work across the platform's specialized QA agents. It decides which review gates are needed, sequences or parallelizes them, checks whether required evidence exists, and produces a consolidated decision record.
