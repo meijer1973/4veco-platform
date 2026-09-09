@@ -204,7 +204,7 @@ for targeted rechecks, specialist questions and PR closure.
 | Rule | Why |
 |------|-----|
 | Never declare "complete" without verifying all referenced files exist | Chapter 3 was declared complete with 23 missing SVGs — unacceptable |
-| QC reviews must be run by independent sub-agents | Builder agents skip or rubber-stamp their own reviews |
+| Content review must be independent of its authors | Author self-checks do not replace independent review; use the canonical Part A route |
 | Asset verification is a hard gate, not a suggestion | Missing images in a PDF are worse than a delayed delivery |
 | Front page is raw HTML, not markdown | Pandoc + exercise wrapping breaks markdown front pages |
 | Strip Pandoc default stylesheet | Its padding/margins conflict with custom CSS |

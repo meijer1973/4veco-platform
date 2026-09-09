@@ -314,7 +314,7 @@ Tests must be rendered so students see each opgave's context and questions toget
 1. **Render with WeasyPrint**, never Chrome headless. Chrome doesn't honor `break-inside: avoid` on block elements, causing questions to split across pages.
 2. **Atomic exercises**: `.exercise { break-inside: avoid; page-break-inside: avoid; }`. A question that doesn't fit in the remaining space must jump to the next page whole.
 3. **Opgave intro wrapping**: wrap h2 + context + table/figure + first `<hr />` in `<div class="opgave-intro">`. CSS then forces each opgave onto a fresh page and glues the first question to the intro.
-4. **Length estimation**: run `build-scripts/estimate_test_length.py` via a subagent to confirm the scheduled time matches actual student work time. Don't eyeball.
+4. **Length estimation**: the author runs `build-scripts/estimate_test_length.py` and records its result to check the scheduled time against estimated student work time. Investigate discrepancies; involve a specialist only for a concrete unresolved issue. Don't eyeball.
 5. **No bonus questions**: if a question is worth asking, give it regular points. Bonus labeling creates a mismatch between scheduled length and actual work, and causes students to strategize out of questions.
 
 ### 5.1 Opgave structure
