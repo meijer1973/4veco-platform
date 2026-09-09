@@ -1,0 +1,15 @@
+Paragraph lane scope: PASS (shared)
+- shared platform: 1
+  - build-scripts/content/book-2/b2-211-textbook-assets.js
+- generated index/report: 4
+  - reports/github-agent-index-lessen.json
+  - reports/github-agent-index-lessen.md
+  - reports/github-agent-index-platform.json
+  - reports/github-agent-index-platform.md
+- review evidence: 6
+  - reports/sprints/cold-paragraph-trial-20260909/assessment.md
+  - reports/sprints/cold-paragraph-trial-20260909/asset-build.log
+  - reports/sprints/cold-paragraph-trial-20260909/authority-checks.log
+  - reports/sprints/cold-paragraph-trial-20260909/events.jsonl
+  - reports/sprints/cold-paragraph-trial-20260909/pdf-build.log
+  - reports/sprints/cold-paragraph-trial-20260909/validation-initial.log

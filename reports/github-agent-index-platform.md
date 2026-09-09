@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-09T11:02:30.689Z
+Generated: 2026-09-09T11:13:41.619Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/cold-paragraph-trial-20260909`
-Source commit: `19d739c2ecb59a5d5710a89ab6b1fbdf44853e15`
-Files indexed: 7678
+Source commit: `64e40bce00f09d7a9fd566e48aee46376ac4dfd7`
+Files indexed: 7685
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 734
+Count: 735
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -197,6 +197,7 @@ Count: 734
 - build-scripts/content/book-1/build-presentation-v2.js
 - build-scripts/content/book-1/presentation-v2-registry.js
 - build-scripts/content/book-1/README.md
+- build-scripts/content/book-2/b2-211-textbook-assets.js
 - build-scripts/content/legacy-target/build-311-basisopgaven.js
 - build-scripts/content/legacy-target/build-infographic-311.js
 - build-scripts/content/legacy-target/inoefening-351-afsluiting.js
@@ -907,7 +908,7 @@ Count: 25
 
 ## validators
 
-Count: 699
+Count: 700
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1525,6 +1526,7 @@ Count: 699
 - reports/sprints/CHECK-SURFACE-PREGATE-1-result.md
 - reports/sprints/CHECK-SURFACE-PREGATE-1-student-experience-review.md
 - reports/sprints/CHECK-SURFACE-PREGATE-1-verification-review.md
+- reports/sprints/cold-paragraph-trial-20260909/validation-initial.log
 - reports/sprints/CP.6e-validation-log.md
 - reports/sprints/CP.6f-validation-log.md
 - reports/sprints/ENGINE-OP-1-screenshots/check-1-1-1-desktop.png
@@ -2645,7 +2647,7 @@ Count: 1029
 
 ## reports
 
-Count: 4950
+Count: 4956
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5609,6 +5611,12 @@ Count: 4950
 - reports/sprints/CI-REMOTE-1A-lead-review-round2.md
 - reports/sprints/CI-REMOTE-1A-plan.md
 - reports/sprints/CI-REMOTE-1A-result.md
+- reports/sprints/cold-paragraph-trial-20260909/assessment.md
+- reports/sprints/cold-paragraph-trial-20260909/asset-build.log
+- reports/sprints/cold-paragraph-trial-20260909/authority-checks.log
+- reports/sprints/cold-paragraph-trial-20260909/events.jsonl
+- reports/sprints/cold-paragraph-trial-20260909/pdf-build.log
+- reports/sprints/cold-paragraph-trial-20260909/validation-initial.log
 - reports/sprints/COMPANION-ROUTE-CONSISTENCY-POST206-RECOVERY-1-lead-review-round1.md
 - reports/sprints/COMPANION-ROUTE-CONSISTENCY-POST213-RECOVERY-1-lead-review-round1.md
 - reports/sprints/CONTEXT-VISUAL-STD-1-baseline.md
