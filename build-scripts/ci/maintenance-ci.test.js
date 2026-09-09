@@ -98,8 +98,10 @@ describe('required workflow reports and runs the selected checks', () => {
   });
   test('index freshness is advisory; full validation uses two workers and names archived workflow tests', () => {
     expect(steps.find(s => s.name === 'Check GitHub agent indexes against repository heads')['continue-on-error']).toBe(true);
-    expect(steps.find(s => s.name === 'Validate platform Jest suite').run).toContain('testPathIgnorePatterns');
-    expect(steps.find(s => s.name === 'Validate platform Jest suite').run).toContain('--maxWorkers=2');
+    expect(steps.find(s => s.name === 'Validate platform Jest suite').run).toContain('npm run check:platform');
+    const config = require('../../jest.config.cjs');
+    expect(config.maxWorkers).toBe(2);
+    expect(config.testPathIgnorePatterns).toContain('check-y1-golden-rollout-wave-1(-current)?\\.test\\.js$');
     expect(steps.find(s => s.name === 'Validate platform Jest suite').run).toContain('--outputFile ../ci-artifacts/jest-results.json');
     expect(steps.find(s => s.name === 'Validate Y1 Golden rollout wave').run).toContain('check:y1-golden-rollout-wave-1-product');
   });

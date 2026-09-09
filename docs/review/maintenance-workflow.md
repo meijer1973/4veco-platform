@@ -54,6 +54,8 @@ specific unresolved concern, not after every merge of an already validated tree.
 
 Only artifacts produced by the current CI run are uploaded. Jest timing results
 are included in full runs so future optimization can use measured cost.
+`npm test` and `npm run check:platform` use the same current-suite configuration
+as CI in `jest.config.cjs`; pass a test path for a focused local run.
 Maintenance target: 2–5 minutes; the activation candidate passed in 1m45s.
 
 ## Historical evidence and product boundaries

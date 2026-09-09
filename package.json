@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "jest",
-    "check:platform": "jest --runInBand",
+    "check:platform": "jest",
     "check:landing-v2": "node build-scripts/platform/check-paragraph-landing-v2.js",
     "check:chapter-landing-v2": "node build-scripts/platform/check-chapter-landing-v2.js",
     "check:book-landing-v2": "node build-scripts/platform/check-book-landing-v2.js",

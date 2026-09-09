@@ -6,7 +6,7 @@ const { spawnSync } = require('child_process');
 const ROOT = path.resolve(__dirname, '../..');
 const PLAN = path.resolve(ROOT, '../ci-artifacts/maintenance-plan.json');
 // These sealed suites audit the archived workflow, not the live CI contract.
-const HISTORICAL_WORKFLOW_TESTS = 'check-y1-golden-rollout-wave-1(-current)?\\.test\\.js$';
+const HISTORICAL_WORKFLOW_TESTS = require('../../jest.config.cjs').testPathIgnorePatterns[1];
 const POLICY = 'docs/review/maintenance-workflow.md';
 const CORE_TESTS = ['build-scripts/ci/maintenance-ci.test.js', 'build-scripts/ci/check-y1-product-evidence.test.js'];
 const ALLOWED = [
@@ -52,7 +52,7 @@ function plan(base, head, options = {}) {
     archived_workflow_test_suites: HISTORICAL_WORKFLOW_TESTS, policy: POLICY };
 }
 function jestArgs(paths, root = ROOT) {
-  const args = ['--runInBand', `--testPathIgnorePatterns=${HISTORICAL_WORKFLOW_TESTS}`];
+  const args = ['--runInBand'];
   // Jest discards missing paths and unresolved dependency edges. A deletion
   // needs the complete Jest suite so surviving importers cannot disappear.
   if (paths.some(file => /\.[cm]?js$/.test(file) && !fs.existsSync(path.join(root, file)))) return args;
@@ -60,7 +60,7 @@ function jestArgs(paths, root = ROOT) {
   const workflowTests = {
     'platform-ci.yml': ['ci/platform-ci-evidence', 'review-gates/cross-repo-bundle-workflow',
       'workflows/check-book-outline-currentness', 'workflows/check-book2-target-authority-remediation',
-      'workflows/check-part-a-exercise-authoring-contract'],
+      'workflows/check-part-a-exercise-authoring-contract', 'workflows/check-blueprint-pedagogical-boundaries'],
     'authorized-pr-integration.yml': ['review-gates/authorized-pr-integration-workflow'],
     'authorized-bundle-integration.yml': ['review-gates/cross-repo-bundle-workflow'],
     'cross-repo-bundle-compatibility.yml': ['review-gates/cross-repo-bundle-workflow'],
