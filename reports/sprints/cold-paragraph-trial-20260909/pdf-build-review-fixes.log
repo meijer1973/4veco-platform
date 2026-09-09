@@ -1,0 +1,7 @@
+  File "C:\wt\reorganize 2\cold-paragraph-trial-20260909\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren\build_pdf.py", line 69
+    html = re.sub(r"<style\b[^>]*>.*?ol[type="a"] {{ list-style-type: lower-alpha; }}
+                                               ^
+SyntaxError: unterminated string literal (detected at line 69)
+PDF created: C:\wt\reorganize 2\cold-paragraph-trial-20260909\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren\2.1.1 Kostenstructuren � paragraaf.pdf
+PDF created: C:\wt\reorganize 2\cold-paragraph-trial-20260909\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren\2.1.1 Kostenstructuren � opgaven.pdf
+PDF created: C:\wt\reorganize 2\cold-paragraph-trial-20260909\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren\2.1.1 Kostenstructuren � antwoorden.pdf
