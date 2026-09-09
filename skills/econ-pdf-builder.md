@@ -10,6 +10,26 @@ Converts markdown lesson materials to professionally styled, print-ready PDF doc
 
 ---
 
+## Default paragraph implementation
+
+Use [the shared paragraph renderer](../build-scripts/textbook/paragraph_pdf.py)
+and [thin wrapper](../build-scripts/templates/template-build-paragraph-pdf.py)
+for new ordinary paragraph builds. It uses Pandoc structural parsing, explicit
+UTF-8 and native list start/style hints for WeasyPrint. Its fixture tests cover
+subquestion letters across tables, bullets and figure grouping. Run
+`python -m unittest discover -s build-scripts/textbook -p "test_*.py"` after changes.
+
+The detailed pipeline and snippets below are historical adaptation guidance,
+not a startup reading requirement or code to copy into each paragraph. For a
+layout exception, change/test the shared implementation or document why a
+specialized builder is needed. Inspect final rendered pages in either case.
+
+The shared renderer stops on Pandoc conversion warnings, including unsupported
+TeX formulas, rather than publishing literal broken math. Use supported Unicode
+or plain-text mathematical notation (for example `GTK = TK / q`), or an explicitly
+tested specialized math renderer when fraction typesetting is required. Keep
+the intended mathematical meaning and inspect the resulting formula.
+
 ## PART 1: PIPELINE OVERVIEW
 
 ```

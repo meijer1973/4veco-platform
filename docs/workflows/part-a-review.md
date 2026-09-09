@@ -68,3 +68,35 @@ with required CI and branch protection, without admin bypass. Protected or
 runtime-coupled changes that require the gated/bundle lane still use it.
 Ordinary content retains its applicable content and rendering CI; the lighter
 CI allowance for instruction maintenance does not apply to student material.
+
+## Current-file evidence
+
+Before review, generate `X.Y.Z-textbook-review-manifest.json` with
+`paragraph-records.js snapshot <paragraph-folder>`. The reviewer checks its
+inventory and records exactly one line in `X.Y.Z-review.md`:
+
+```text
+Review manifest SHA256: `<digest printed by the snapshot command>`
+```
+
+The manifest binds available Part A Markdown/HTML/PDF, build wrapper, target
+contract, plan/foundation and owned or locally referenced rendering inputs.
+Text uses UTF-8 with LF normalization; PDFs and other binaries use exact bytes.
+Review/quality/handoff records are excluded to avoid circular hashes. Changes,
+additions and deletions invalidate evidence. Regenerating the manifest alone
+cannot renew the review. The reviewer binds a new digest only after checking
+repairs and affected dependencies. Preserve explicit coverage and evidence; a
+hash verifies freshness, not reviewer independence or content quality.
+
+The current manifest supports static textbook HTML/SVG and local render inputs,
+including nested CSS imports, image candidates and Markdown image references.
+Scripted/embedded documents and external render resources are rejected instead
+of being silently omitted. Use local assets or the applicable interactive lane.
+Percent-encode parentheses in Markdown image URLs. This bounded inventory is
+not a browser execution trace.
+
+Paragraph and chapter validators require one explicit final verdict and a
+matching manifest. Old records with no verdict/binding no longer prove current
+closure. Do not retrofit frozen Book 1 content or manufacture retrospective
+PASS evidence; archived reports remain historical evidence. A new closure claim
+requires a real review of the applicable current material.

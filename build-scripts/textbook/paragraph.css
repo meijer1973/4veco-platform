@@ -1,0 +1,31 @@
+@page {
+  size: A4;
+  margin: 22mm 23mm 22mm;
+  @bottom-center { content: counter(page); font: 9pt "DejaVu Sans", sans-serif; color: #52616c; }
+}
+html { color: #192c38; font: 10.5pt/1.5 "DejaVu Sans", sans-serif; }
+body { margin: 0; }
+h1 { font-size: 22pt; line-height: 1.2; color: #174c66; }
+h2 { font-size: 15pt; color: #174c66; margin-top: 1.5em; }
+h3 { font-size: 12pt; margin-top: 1.1em; }
+h1, h2, h3, h4 { break-after: avoid; }
+p, li { orphans: 3; widows: 3; }
+p { margin: .65em 0; }
+ul, ol { padding-left: 1.8em; }
+li { padding-left: .3em; margin: .35em 0; }
+/* Use Pandoc's native ol type/start attributes. Do not reset CSS counters. */
+li > p { margin: .3em 0; }
+table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 9.5pt; }
+th, td { border-bottom: 1px solid #cbd7dd; padding: .45em .6em; text-align: left; overflow-wrap: anywhere; }
+th { background: #edf3f6; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+img, svg { max-width: 100%; height: auto; }
+figure { margin: .8em 0; }
+figcaption { font-size: 9pt; color: #52616c; }
+.figure-context { break-inside: avoid; }
+.figure-context img { max-height: 170mm; object-fit: contain; }
+blockquote { border-left: 3px solid #73a8bc; margin: 1em 0; padding: .2em 1em; background: #f3f7f9; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: .9em; }
+a { color: #175774; }
+@media screen { body { max-width: 760px; padding: 2rem; margin: auto; } }

@@ -1,6 +1,6 @@
 ---
 name: econ-textbook-paragraph
-description: "Builds a complete textbook paragraph for economics education (bovenbouw vwo): theory explanation, worked example, exercises, and graphs — assembled into a markdown file with assets, then exported to PDF. Takes a blueprint paragraph spec and the exercise set from econ-exercise-builder as input. Use this skill when the user wants to create a textbook paragraph, lesinhoud, theorie-uitleg for the werkboek, or any textbook section. Trigger when the user mentions paragraaf schrijven, werkboek, tekstboek, theorie-uitleg schrijven, lesinhoud, or textbook paragraph. Always use in combination with econ-didactiek (pedagogy), econ-exercise-builder (exercises), and economic-graph (graphs)."
+description: "Builds a complete textbook paragraph for economics education (bovenbouw vwo): theory explanation, worked example, exercises, and graphs — assembled into a markdown file with assets, then exported to PDF. Takes a blueprint paragraph spec and the exercise set from econ-exercise-builder as input. Use this skill when the user wants to create a textbook paragraph, lesinhoud, theorie-uitleg for the werkboek, or any textbook section. Trigger when the user mentions paragraaf schrijven, werkboek, tekstboek, theorie-uitleg schrijven, lesinhoud, or textbook paragraph. Use econ-didactiek and econ-exercise-builder for authoring; economic-graph when constructing graphs."
 pipeline: "Part A producer"
 ---
 
@@ -36,7 +36,8 @@ producing `X.Y.Z-textbook-handoff.md` for the companion team. Publisher-print
 chapter/book handoff also remains in Part A, but paragraph PDFs are normal Part
 A human-review outputs.
 
-**Companion skills (always read first):**
+**Task-specific skills:** use the [Part A checklist](../docs/workflows/part-a-start.md). Read didactic/exercise rules for authoring; graph instructions when creating graphs; PDF adaptation guidance when the shared renderer needs adjustment; quality guidance when the generated record needs additional authored evidence.
+
 - `econ-didactiek` → pedagogical decision rules (scaffolding, dual coding, Bloom's, misconceptions) — backed by `references/authored/didactiek-principes.md`
 - `econ-exercise-builder` → generates `exercises.md` and `answers.md` (run first)
 - `economic-graph` → generates SVG/PNG graphs (called during build)

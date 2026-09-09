@@ -1,3 +1,4 @@
+const bindFixtureReview = require('./helpers/part-a-review-fixture');
 /**
  * Tests for validate-chapter.js
  *
@@ -76,6 +77,8 @@ function setupChapter(name, paragraphs) {
       fs.writeFileSync(path.join(pDir, p.qualityRef.name), p.qualityRef.content);
     }
 
+    bindFixtureReview(pDir);
+
     chapterSections.push([
       `# ${p.folder}`,
       '',
@@ -111,7 +114,7 @@ afterAll(() => {
 });
 
 function validReview() {
-  return { name: '9.9.1-review.md', content: '# Review\nAll checks PASS.\n' };
+  return { name: '9.9.1-review.md', content: '# Review\n\n## 2. Verdict\nPASS\n' };
 }
 
 function validQualityRef() {
@@ -150,7 +153,7 @@ describe('validate-chapter.js', () => {
     ]);
     const { exitCode, output } = run(dir);
     expect(exitCode).not.toBe(0);
-    expect(output).toContain('MISSING review report');
+    expect(output).toContain('Part A review evidence missing or invalid');
   });
 
   test('fails when quality_ref reports missing assets', () => {
@@ -279,7 +282,7 @@ describe('validate-chapter.js', () => {
         mdFiles: ['9.5.1 Actieve samenvatting – samenvatting.md', '9.5.1 Actieve samenvatting – antwoorden.md'],
         pdfFiles: ['9.5.1 Actieve samenvatting – samenvatting.pdf', '9.5.1 Actieve samenvatting – antwoorden.pdf'],
         assets: ['9.5.1_fig_1.svg', '9.5.1_fig_1.png', '9.5.1_mc_1.svg', '9.5.1_mc_1.png'],
-        review: { name: '9.5.1-review.md', content: '# Review\nAll PASS.\n' },
+        review: { name: '9.5.1-review.md', content: '# Review\n\n## 2. Verdict\nPASS\n' },
         qualityRef: {
           name: '9.5.1-quality-ref.yaml',
           content: 'assets:\n  missing: []\n  svgpng_paired: true\n  naming_compliant: true\n',
@@ -299,7 +302,7 @@ describe('validate-chapter.js', () => {
         mdFiles: ['9.5.4 Proeftoets – toets.md', '9.5.4 Proeftoets – antwoorden.md', '9.5.4 Proeftoets – toetsmatrijs.md'],
         pdfFiles: ['9.5.4 Proeftoets – toets.pdf', '9.5.4 Proeftoets – antwoorden.pdf', '9.5.4 Proeftoets – toetsmatrijs.pdf'],
         assets: ['9.5.4_fig_1.svg', '9.5.4_fig_1.png'],
-        review: { name: '9.5.4-review.md', content: '# Review\nAll PASS.\n' },
+        review: { name: '9.5.4-review.md', content: '# Review\n\n## 2. Verdict\nPASS\n' },
         qualityRef: {
           name: '9.5.4-quality-ref.yaml',
           content: 'assets:\n  missing: []\n  svgpng_paired: true\n  naming_compliant: true\n',
@@ -319,7 +322,7 @@ describe('validate-chapter.js', () => {
         mdFiles: ['9.5.4 Proeftoets – toets.md', '9.5.4 Proeftoets – antwoorden.md'],
         pdfFiles: ['9.5.4 Proeftoets – toets.pdf', '9.5.4 Proeftoets – antwoorden.pdf'],
         assets: ['9.5.4_fig_1.svg', '9.5.4_fig_1.png'],
-        review: { name: '9.5.4-review.md', content: '# Review\nAll PASS.\n' },
+        review: { name: '9.5.4-review.md', content: '# Review\n\n## 2. Verdict\nPASS\n' },
         qualityRef: {
           name: '9.5.4-quality-ref.yaml',
           content: 'assets:\n  missing: []\n  svgpng_paired: true\n  naming_compliant: true\n',
@@ -338,7 +341,7 @@ describe('validate-chapter.js', () => {
         mdFiles: ['9.5.1 Actieve samenvatting – antwoorden.md'],
         pdfFiles: ['9.5.1 Actieve samenvatting – antwoorden.pdf'],
         assets: ['9.5.1_fig_1.svg', '9.5.1_fig_1.png'],
-        review: { name: '9.5.1-review.md', content: '# Review\nAll PASS.\n' },
+        review: { name: '9.5.1-review.md', content: '# Review\n\n## 2. Verdict\nPASS\n' },
         qualityRef: {
           name: '9.5.1-quality-ref.yaml',
           content: 'assets:\n  missing: []\n  svgpng_paired: true\n  naming_compliant: true\n',
@@ -357,7 +360,7 @@ describe('validate-chapter.js', () => {
         mdFiles: ['9.5.1 Actieve samenvatting – samenvatting.md', '9.5.1 Actieve samenvatting – antwoorden.md'],
         pdfFiles: ['9.5.1 Actieve samenvatting – samenvatting.pdf', '9.5.1 Actieve samenvatting – antwoorden.pdf'],
         assets: ['9.5.1_mc_1.svg', '9.5.1_mc_1.png'],
-        review: { name: '9.5.1-review.md', content: '# Review\nAll PASS.\n' },
+        review: { name: '9.5.1-review.md', content: '# Review\n\n## 2. Verdict\nPASS\n' },
         qualityRef: {
           name: '9.5.1-quality-ref.yaml',
           content: 'assets:\n  missing: []\n  svgpng_paired: true\n  naming_compliant: true\n',
@@ -375,7 +378,7 @@ describe('validate-chapter.js', () => {
         mdFiles: ['9.9.4 Gemengde opgaven – opgaven.md', '9.9.4 Gemengde opgaven – antwoorden.md'],
         pdfFiles: ['9.9.4 Gemengde opgaven – opgaven.pdf', '9.9.4 Gemengde opgaven – antwoorden.pdf'],
         assets: ['9.9.4_ex_1.svg', '9.9.4_ex_1.png'],
-        review: { name: '9.9.4-review.md', content: '# Review\nAll PASS.\n' },
+        review: { name: '9.9.4-review.md', content: '# Review\n\n## 2. Verdict\nPASS\n' },
         qualityRef: {
           name: '9.9.4-quality-ref.yaml',
           content: 'assets:\n  missing: []\n  svgpng_paired: true\n  naming_compliant: true\n',

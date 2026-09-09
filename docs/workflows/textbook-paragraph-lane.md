@@ -1,5 +1,9 @@
 # Textbook Paragraph Lane
 
+Start with the [compact Part A checklist](part-a-start.md). This runbook is the
+ownership and contract reference. Its separate foundation commands below are
+useful diagnostics; the checklist combines them for ordinary approved production.
+
 Also called: Part A. This is the same lane; do not treat "textbook" and
 "Part A" as separate lanes. See `docs/workflows/paragraph-lane-vocabulary.md`.
 
@@ -32,7 +36,9 @@ operational sequence/coverage authority.
 
 **Book foundation check:** before any Book 2 goals, target route, or Part A
 content work, read `references/authored/book-outlines/book-2-outline.md` and its
-machine companion. Run:
+machine companion. The [entry checklist](part-a-start.md) generates one combined
+check for ordinary approved paragraph production. The separate commands below
+are useful for diagnosis or action-specific resolution work:
 
 ```bash
 npm run check:book-outline-currentness

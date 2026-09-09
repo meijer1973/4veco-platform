@@ -1,3 +1,4 @@
+const bindFixtureReview = require('./helpers/part-a-review-fixture');
 /**
  * Regression tests for L1.5V Bucket F2 / F-tests:
  * - --mode part-a gates ONLY the X.Y.Z-review.md file
@@ -76,6 +77,7 @@ function makeMinimalPartAFolder(tmpDir, parNr, parName, opts = {}) {
         }
     }
 
+    bindFixtureReview(folder);
     return folder;
 }
 
