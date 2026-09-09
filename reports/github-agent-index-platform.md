@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-09T09:16:51.424Z
+Generated: 2026-09-09T11:02:30.689Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/paragraph-review-cleanup-20260909`
-Source commit: `c5fd9eeefd6c54cb8ca4fb7f728fb04dc92d025d`
-Files indexed: 7677
+Source branch: `codex/cold-paragraph-trial-20260909`
+Source commit: `19d739c2ecb59a5d5710a89ab6b1fbdf44853e15`
+Files indexed: 7678
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -7618,7 +7618,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 774
+Count: 775
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -8301,6 +8301,7 @@ Count: 774
 - docs/workflows/legacy-full-companion-profile.md
 - docs/workflows/paragraph-lane-vocabulary.md
 - docs/workflows/paragraph-quality-ref-schema-v2.md
+- docs/workflows/part-a-review.md
 - docs/workflows/textbook-paragraph-lane.md
 - docs/workflows/web-companion-paragraph-lane.md
 - jest.config.cjs

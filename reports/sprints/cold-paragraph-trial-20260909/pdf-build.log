@@ -1,0 +1,7 @@
+  File "C:\wt\reorganize 2\cold-paragraph-trial-20260909\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren\build_pdf.py", line 70
+    html = re.sub(r"(<div class="exercise">.*?)(?=<div class="exercise">|<h[12]\b|</body>)", r"\1</div>", html, flags=re.S)
+                                 ^^^^^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+PDF created: C:\wt\reorganize 2\cold-paragraph-trial-20260909\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren\2.1.1 Kostenstructuren � paragraaf.pdf
+PDF created: C:\wt\reorganize 2\cold-paragraph-trial-20260909\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren\2.1.1 Kostenstructuren � opgaven.pdf
+PDF created: C:\wt\reorganize 2\cold-paragraph-trial-20260909\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.1 Kostenstructuren\2.1.1 Kostenstructuren � antwoorden.pdf
