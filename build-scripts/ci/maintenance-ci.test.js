@@ -10,11 +10,21 @@ describe('bounded maintenance CI selection', () => {
     ['AGENTS.md'], ['.github/workflows/platform-ci.yml'], ['build-scripts/ci/maintenance-ci.js'],
     ['build-scripts/review-gates/integrate-authorized-pr.js'], ['docs/review/pr-integration-lane-policy.md'],
     ['reports/github-agent-index-platform.json'], ['package.json'],
+    ['build-scripts/ci/check-agent-worktree-safety.test.js'],
+    ['build-scripts/ci/fixtures/branch-protection-activated.json'],
+    ['build-scripts/review-gates/check-human-payload-authorization.test.js'],
   ])('maintenance scope: %s', file => expect(classify([file], options)).toBe('maintenance'));
   test.each([
     ['engines/reasoning-composer.js'], ['references/machine/target.json'], ['scripts/deploy.js'],
     ['build-scripts/content/book-1/b1-111-presentation-v2.js'], ['.github/workflows/deploy.yml'],
     ['package-lock.json'], ['.gitattributes'], ['unrecognized.js'], ['BUILD-PARAGRAPH.md'],
+    ['build-scripts/review-gates/capture-gate-engine1-live-output.js'],
+    ['build-scripts/review-gates/emit-gate-task-family1-playable-lab.js'],
+    ['build-scripts/review-gates/check-gate-task-family1-review-packet.js'],
+    ['build-scripts/review-gates/new-review-tool.js'],
+    ['build-scripts/ci/check-y1-product-evidence.js'],
+    ['build-scripts/ci/check-y1-product-evidence.test.js'],
+    ['build-scripts/ci/new-ci-tool.js'],
   ])('product or unknown scope: %s', file => expect(classify(['AGENTS.md', file], options)).toBe('product'));
   test('forced-full, empty and non-CI package changes use product checks', () => {
     expect(classify(['AGENTS.md'], { ...options, forceFull: true })).toBe('product');

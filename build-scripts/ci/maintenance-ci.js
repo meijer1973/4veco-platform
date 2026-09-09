@@ -9,10 +9,21 @@ const PLAN = path.resolve(ROOT, '../ci-artifacts/maintenance-plan.json');
 const HISTORICAL_WORKFLOW_TESTS = require('../../jest.config.cjs').testPathIgnorePatterns[1];
 const POLICY = 'docs/review/maintenance-workflow.md';
 const CORE_TESTS = ['build-scripts/ci/maintenance-ci.test.js', 'build-scripts/ci/check-y1-product-evidence.test.js'];
+const CI_TOOLS = new Set(['maintenance-ci', 'platform-ci-evidence', 'check-agent-branch-safety',
+  'check-agent-worktree-safety', 'check-branch-protection', 'check-evidence-line-endings']);
+const REVIEW_TOOLS = new Set([
+  'apply-pr-readiness-decision', 'apply-bundle-readiness-decision', 'authorized-pr-integration-workflow',
+  'check-active-governance-wording', 'check-governance-freshness', 'check-human-payload-authorization',
+  'check-human-bundle-authorization', 'check-integration-lineage', 'check-integration-lane-capability',
+  'cross-repo-bundle-workflow', 'cross-repo-bundle-compatibility', 'finalization-freshness-proof',
+  'gh-json-input', 'integrate-authorized-pr', 'integrate-authorized-bundle', 'pr-readiness-router',
+  'pr-readiness-governance-surfaces', 'refresh-bundle-agent-indexes', 'review-pr-readiness',
+  'review-throughput-fields', 'route-and-apply-pr-readiness',
+]);
 const ALLOWED = [
   /^AGENTS\.md$/,
   /^\.github\/workflows\/(platform-ci|authorized-pr-integration|authorized-bundle-integration|cross-repo-bundle-compatibility)\.yml$/,
-  /^build-scripts\/(ci|review-gates)\//,
+  /^build-scripts\/(ci|review-gates)\/fixtures\//,
   /^build-scripts\/reports\/(github-agent-index|check-agent-index-freshness)(\.test)?\.js$/,
   /^docs\/(maintenance|review)\//,
   /^agents\/(lead-reviewer-agent|pr-readiness-reviewer-agent)\.md$/,
@@ -40,7 +51,11 @@ function classify(paths, options = {}) {
   if (paths.length === 0) return 'product';
   return paths.every(file => file === 'package.json'
     ? options.packageOnlyCi === true
-    : ALLOWED.some(pattern => pattern.test(file))) ? 'maintenance' : 'product';
+    : ALLOWED.some(pattern => pattern.test(file)) || knownTool(file)) ? 'maintenance' : 'product';
+}
+function knownTool(file) {
+  const match = /^build-scripts\/(ci|review-gates)\/([^/]+?)(?:\.test)?\.js$/.exec(file);
+  return Boolean(match && (match[1] === 'ci' ? CI_TOOLS : REVIEW_TOOLS).has(match[2]));
 }
 function plan(base, head, options = {}) {
   if (![base, head].every(ref => /^[0-9a-f]{40}$/i.test(ref)) || /^0+$/.test(base)) throw new Error('CI requires exact nonzero base/head commit SHAs');
