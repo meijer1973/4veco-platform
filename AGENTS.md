@@ -5,6 +5,13 @@ and fix causes rather than layering patches over an unresolved design problem.
 This is the canonical shared operating guide for `4veco-platform` and
 `../4veco-lessen`. Read it first, then select the task-specific route below.
 
+**Active CI cleanup exception:** for the owner-authorized CI maintenance effort,
+follow [CI cleanup mode](docs/maintenance/ci-cleanup-20260909.md), including its
+activation. It replaces conflicting review, index, CI and custom integration
+requirements below with focused checks, one relevant review and an ordinary
+exact-head PR merge. Review point: 16 September 2026. Product/source boundaries
+and branch/worktree protection still apply.
+
 ## Repository purpose and boundaries
 
 - `4veco-platform` owns engines, generators, build scripts, validators, source

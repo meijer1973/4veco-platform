@@ -91,7 +91,9 @@
     "build:presentation-112": "node build-scripts/content/book-1/b1-112-presentation-v2.js",
     "build:presentation-113": "node build-scripts/content/book-1/b1-113-presentation-v2.js",
     "deploy:legacy": "node scripts/deploy.js ../\"3. Module 3 - Markt en overheid\"",
-    "deploy:m3": "npm run deploy:legacy"
+    "deploy:m3": "npm run deploy:legacy",
+    "ci:maintenance": "node build-scripts/ci/maintenance-ci.js check",
+    "check:y1-golden-rollout-wave-1-product": "node build-scripts/ci/check-y1-product-evidence.js"
   },
   "type": "commonjs",
   "keywords": [],

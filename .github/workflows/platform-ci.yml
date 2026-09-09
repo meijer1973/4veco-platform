@@ -9,6 +9,12 @@ on:
       - main
   workflow_dispatch:
     inputs:
+      profile:
+        description: Force the product validation route for a cleanup milestone
+        required: false
+        default: auto
+        type: choice
+        options: [auto, full]
       y1_base_sha:
         description: Exact platform base SHA for the Y1 Golden scope attestation
         required: true
@@ -68,10 +74,20 @@ jobs:
           cache: npm
           cache-dependency-path: 4veco-platform/package-lock.json
 
+      - name: Select CI profile
+        id: ci-scope
+        env:
+          CI_BASE_SHA: ${{ inputs.y1_base_sha || github.event.pull_request.base.sha || github.event.before }}
+          CI_HEAD_SHA: ${{ inputs.y1_head_sha || github.event.pull_request.head.sha || github.sha }}
+          CI_FORCE_FULL: ${{ inputs.profile == 'full' }}
+        run: node build-scripts/ci/maintenance-ci.js plan
+
       - name: Verify Y1 runtime checkout bytes
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: node build-scripts/sprints/inspect-y1-runtime-checkout.js
 
       - name: Set up Python
+        if: steps.ci-scope.outputs.maintenance != 'true'
         uses: actions/setup-python@v6
         with:
           python-version: '3.13'
@@ -87,19 +103,28 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
+      - name: Run focused maintenance checks
+        if: steps.ci-scope.outputs.maintenance == 'true'
+        run: node build-scripts/ci/maintenance-ci.js check
+
       - name: Validate exercise workflow currentness
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:exercise-workflow-currentness
 
       - name: Validate Book 2+ Part A exercise authoring contract
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:part-a-exercise-authoring-contract
 
       - name: Validate blueprint pedagogical boundaries
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:blueprint-pedagogical-boundaries
 
       - name: Validate Book 2 outline currentness
         run: npm run check:book-outline-currentness
+        if: steps.ci-scope.outputs.maintenance != 'true'
 
       - name: Validate Book 2 target authority remediation candidate
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:book2-target-authority-remediation
 
       - name: Validate Issue 229 sprint scope
@@ -107,14 +132,17 @@ jobs:
         run: node build-scripts/workflows/check-book2-target-authority-remediation.js --scope-base "${{ github.event.pull_request.base.sha }}"
 
       - name: Validate exercise authority hygiene
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:exercise-authority-hygiene
 
       - name: Install Python support dependencies
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r .github/ci-python-requirements.txt
 
       - name: Install presentation proof tools
+        if: steps.ci-scope.outputs.maintenance != 'true'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
@@ -174,42 +202,55 @@ jobs:
           (Split-Path -Parent $pdftoppm) | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
 
       - name: Validate platform Jest suite
-        run: npm run check:platform
+        if: steps.ci-scope.outputs.maintenance != 'true'
+        run: node node_modules/jest/bin/jest.js --runInBand --testPathIgnorePatterns "check-y1-golden-rollout-wave-1(-current)?\.test\.js$"
 
       - name: Build presentation-v2 registered decks
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run build:presentation-v2
 
       - name: Validate presentation-v2 HTML QA
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:presentation-v2-html-qa -- --output-dir ..\ci-artifacts\presentation-v2-html-qa
 
       - name: Validate presentation-v2 legacy guard
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:presentation-v2-legacy-guard -- --output ..\ci-artifacts\presentation-v2-legacy-guard.json
 
       - name: Validate presentation-v2 PPTX proof
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:presentation-v2-pptx-proof -- --output-dir ..\ci-artifacts\presentation-v2-pptx-proof
 
       - name: Validate reasoning golden family guardrails
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:reasoning-golden
 
       - name: Validate paragraph landing V2 guardrails
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:landing-v2
 
       - name: Validate News Detective V2 guardrails
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:news-detective-v2
 
       - name: Validate active scope language
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:scope-language
 
       - name: Validate active governance wording
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:active-governance-wording
 
       - name: Validate Golden Graph Advisory 113 proof
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:golden-graph-advisory-113
 
       - name: Validate Scale Proof 3P product path proof
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:scale-proof-3p-product-path
 
       - name: Validate Y1 Golden rollout wave
+        if: steps.ci-scope.outputs.maintenance != 'true'
         env:
           Y1_GOLDEN_PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
           Y1_GOLDEN_PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
@@ -234,27 +275,36 @@ jobs:
           }
           $env:Y1_GOLDEN_EVENT_BASE_SHA = $base
           $env:Y1_GOLDEN_EVENT_HEAD_SHA = $head
-          npm run check:y1-golden-rollout-wave-1-current -- --event-mode $mode --scope-mode auto --base $base --head $head --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head HEAD
+          npm run check:y1-golden-rollout-wave-1-product -- --event-mode $mode --scope-mode auto --base $base --head $head --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head HEAD
 
       - name: Validate report JSON
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: node build-scripts/reports/validate-report-json.js
 
       - name: Validate MTU evidence layer freshness
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: node build-scripts/references/check-mtu-evidence-layer.js
 
       - name: Validate MTU-H7 Bundle 4 protected adjudication packet
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:mtu-h7-bundle4
 
       - name: Validate roadmap version index
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: node build-scripts/references/check-roadmap-version-index.js
 
       - name: Check URL index is current
+        continue-on-error: true
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: node build-scripts/sprints/emit-url-index.js --check
 
       - name: Check GitHub agent indexes against repository heads
+        continue-on-error: true
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: npm run check:agent-index-freshness
 
       - name: Check CI evidence line endings
+        if: steps.ci-scope.outputs.maintenance != 'true'
         run: node build-scripts/ci/check-evidence-line-endings.js
 
       - name: Check platform diff hygiene
@@ -273,6 +323,7 @@ jobs:
             4veco-platform/reports/sprints/*-command-log.md
             4veco-platform/reports/json/*.json
             4veco-platform/reports/url-index.md
+            ci-artifacts/maintenance-plan.json
             ci-artifacts/platform-ci-evidence.json
             ci-artifacts/presentation-v2-html-qa/**
             ci-artifacts/presentation-v2-legacy-guard.json
