@@ -81,3 +81,7 @@ test('external rendering resources are not silently omitted', () => {
   fs.appendFileSync(path.join(folder, content), '\n![Diagram](https://example.invalid/diagram.svg)');
   expect(() => snapshot(folder)).toThrow(/must be local/);
 });
+test.each(['<base href="alternate/">', '<base href="https://example.invalid/">', '<svg xml:base="alternate/"></svg>'])('render URL base overrides are rejected: %s', markup => {
+  fs.writeFileSync(path.join(folder, '9.9.1 Test – paragraaf.html'), `${markup}<img src="diagram.svg">`);
+  expect(() => snapshot(folder)).toThrow(/base URL overrides/);
+});

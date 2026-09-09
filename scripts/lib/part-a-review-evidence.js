@@ -19,6 +19,7 @@ function decodeHtml(value) {
 function renderDependencies(file, text) {
   const refs = [];
   if (/\.(html|svg)$/i.test(file)) {
+    if (/<\s*base\b/i.test(text) || /<[^>]*\bxml:base\s*=/i.test(text)) throw new Error('Rendering base URL overrides are unsupported; use paragraph-relative inputs');
     if (/<\s*(script|iframe|object|embed|video|audio)\b/i.test(text) || /<[^>]*\son[a-z]+\s*=/i.test(text)) throw new Error('Part A review requires static HTML/SVG; script and embedded document dependencies are unsupported');
     for (const match of text.matchAll(/\b(src|href)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/gi)) {
       const ref = decodeHtml(match[2] ?? match[3] ?? match[4]);
