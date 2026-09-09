@@ -50,13 +50,44 @@ function plan(base, head, options = {}) {
     effort: config.effort, review_date: config.review_date, review_due: new Date().toISOString().slice(0, 10) >= config.review_date,
     suspended_historical_tests: SUSPENDED_TESTS, policy: config.policy };
 }
+function jestArgs(paths, root = ROOT) {
+  const args = ['--runInBand', `--testPathIgnorePatterns=${SUSPENDED_TESTS}`];
+  // Jest discards missing paths and unresolved dependency edges. A deletion
+  // needs the complete Jest suite so surviving importers cannot disappear.
+  if (paths.some(file => /\.[cm]?js$/.test(file) && !fs.existsSync(path.join(root, file)))) return args;
+  const tests = new Set(CORE_TESTS);
+  const workflowTests = {
+    'platform-ci.yml': ['ci/platform-ci-evidence', 'review-gates/cross-repo-bundle-workflow',
+      'workflows/check-book-outline-currentness', 'workflows/check-book2-target-authority-remediation',
+      'workflows/check-part-a-exercise-authoring-contract'],
+    'authorized-pr-integration.yml': ['review-gates/authorized-pr-integration-workflow'],
+    'authorized-bundle-integration.yml': ['review-gates/cross-repo-bundle-workflow'],
+    'cross-repo-bundle-compatibility.yml': ['review-gates/cross-repo-bundle-workflow'],
+  };
+  for (const file of paths) {
+    if (/\.[cm]?js$/.test(file)) tests.add(file);
+    if (file.startsWith('.github/workflows/')) {
+      for (const name of workflowTests[path.basename(file)] || []) tests.add(`build-scripts/${name}.test.js`);
+    }
+    // These inputs are commonly read with fs and are invisible to Jest's graph.
+    if (/\.(json|ya?ml)$/.test(file)) {
+      const owner = file.startsWith('build-scripts/ci/') ? 'ci'
+        : /^(build-scripts\/review-gates|docs\/review)\//.test(file) ? 'review-gates' : null;
+      if (owner) {
+        const directory = `build-scripts/${owner}`;
+        for (const name of fs.readdirSync(path.join(root, directory), { recursive: true })) {
+          if (/\.test\.[cm]?js$/.test(name)) tests.add(`${directory}/${name}`);
+        }
+      }
+    }
+  }
+  return [...args, '--findRelatedTests', ...tests];
+}
 function check(result) {
   if (result.profile !== 'maintenance') throw new Error('Focused checks require a maintenance plan');
   if (git('rev-parse', 'HEAD').trim() !== result.head) throw new Error('Head moved after CI selection');
-  const changedJs = [];
   for (const file of result.paths) {
     const full = path.join(ROOT, file);
-    if (/\.[cm]?js$/.test(file)) changedJs.push(file);
     if (!fs.existsSync(full)) continue; // Deletions remain in the scope decision.
     if (/\.[cm]?js$/.test(file)) {
       run(process.execPath, ['--check', full]);
@@ -64,9 +95,12 @@ function check(result) {
     else if (/\.ya?ml$/.test(file)) require('js-yaml').safeLoad(fs.readFileSync(full, 'utf8'), { json: false });
   }
   git('diff', '--check', result.base, result.head);
-  run(process.execPath, [path.join(ROOT, 'node_modules/jest/bin/jest.js'), '--runInBand',
-    '--findRelatedTests', ...new Set([...changedJs, ...CORE_TESTS]),
-    `--testPathIgnorePatterns=${SUSPENDED_TESTS}`], { stdio: 'inherit' });
+  const args = jestArgs(result.paths);
+  const message = args.includes('--findRelatedTests') ? 'Running affected Jest tests.'
+    : 'Deleted JavaScript: running the complete Jest suite, except the explicitly suspended historical suites.';
+  console.log(message);
+  if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `\n${message}\n`);
+  run(process.execPath, [path.join(ROOT, 'node_modules/jest/bin/jest.js'), ...args], { stdio: 'inherit' });
 }
 function main(argv) {
   if (argv[0] === 'plan') {
@@ -77,7 +111,7 @@ function main(argv) {
     if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `maintenance=${result.profile === 'maintenance'}\n`);
     if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,
       `## CI profile: ${result.profile}\n\nHead: \`${result.head}\`; ${result.paths.length} changed paths.\n\n` +
-      (result.profile === 'maintenance' ? 'Runs syntax/configuration checks and affected tests. Full-suite, presentation, historical-product and index-freshness execution are suspended for this maintenance change.\n\n' : 'Runs product/source tests and rendering checks. The temporary Y1 workflow-structure exception is reported separately.\n\n') +
+      (result.profile === 'maintenance' ? 'Runs syntax/configuration checks and affected tests, with a full Jest fallback for JavaScript deletions. Presentation, historical-product and index-freshness execution are suspended for this maintenance change.\n\n' : 'Runs product/source tests and rendering checks. The temporary Y1 workflow-structure exception is reported separately.\n\n') +
       `Policy: ${result.policy}. Review point: ${result.review_date}${result.review_due ? ' — review due' : ''}.\n`);
     console.log(JSON.stringify(result, null, 2));
   } else if (argv[0] === 'check') check(JSON.parse(fs.readFileSync(PLAN, 'utf8')));
@@ -86,4 +120,4 @@ function main(argv) {
 if (require.main === module) {
   try { main(process.argv.slice(2)); } catch (error) { console.error(error.message); process.exitCode = 1; }
 }
-module.exports = { classify, packageOnlyCiChanges, plan, check, SUSPENDED_TESTS };
+module.exports = { classify, packageOnlyCiChanges, plan, check, jestArgs, SUSPENDED_TESTS };

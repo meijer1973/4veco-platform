@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
-const { classify, packageOnlyCiChanges, plan } = require('./maintenance-ci');
+const os = require('os');
+const { spawnSync } = require('child_process');
+const { classify, packageOnlyCiChanges, plan, jestArgs } = require('./maintenance-ci');
 const options = { active: true, packageOnlyCi: true };
 describe('bounded maintenance CI selection', () => {
   test.each([
@@ -36,6 +38,41 @@ describe('bounded maintenance CI selection', () => {
       expect(() => plan(...refs)).toThrow();
     }
   });
+});
+describe('affected tests survive missing import edges and file-based inputs', () => {
+  const root = path.resolve(__dirname, '../..');
+  const jest = require.resolve('jest/bin/jest');
+  function list(paths) {
+    const result = spawnSync(process.execPath, [jest, ...jestArgs(paths), '--listTests', '--json'], { cwd: root, encoding: 'utf8' });
+    if (result.status !== 0) throw new Error(result.stderr);
+    return JSON.parse(result.stdout).map(file => path.relative(root, file).replace(/\\/g, '/'));
+  }
+  test('deleting a helper still executes and fails its surviving importer', () => {
+    const fixture = fs.mkdtempSync(path.join(os.tmpdir(), '4veco-deleted-ci-helper-'));
+    try {
+      fs.writeFileSync(path.join(fixture, 'helper.js'), 'module.exports = 42;');
+      fs.writeFileSync(path.join(fixture, 'surviving.test.js'), "const value = require('./helper'); test('surviving importer', () => expect(value).toBe(42));");
+      const invoke = paths => spawnSync(process.execPath, [jest, ...jestArgs(paths, fixture),
+        '--config', JSON.stringify({ rootDir: fixture, testEnvironment: 'node' })], { cwd: fixture, encoding: 'utf8' });
+      expect(invoke(['helper.js']).status).toBe(0);
+      fs.unlinkSync(path.join(fixture, 'helper.js'));
+      const result = invoke(['helper.js']);
+      expect(result.status).toBe(1);
+      expect(result.stderr).toContain('surviving.test.js');
+      expect(result.stderr).toContain("Cannot find module './helper'");
+    } finally { fs.rmSync(fixture, { recursive: true, force: true }); }
+  }, 30000);
+  test.each([
+    ['.github/workflows/authorized-pr-integration.yml', 'build-scripts/review-gates/authorized-pr-integration-workflow.test.js'],
+    ['.github/workflows/authorized-bundle-integration.yml', 'build-scripts/review-gates/cross-repo-bundle-workflow.test.js'],
+    ['.github/workflows/platform-ci.yml', 'build-scripts/ci/platform-ci-evidence.test.js'],
+    ['docs/review/pr-readiness-decision.schema.json', 'build-scripts/review-gates/pr-readiness-router.test.js'],
+    ['build-scripts/ci/fixtures/branch-protection-activated.json', 'build-scripts/ci/check-branch-protection.test.js'],
+  ])('%s executes its file-based consumer suite', (file, expected) => {
+    const tests = list([file]);
+    expect(tests).toContain(expected);
+    expect(tests.some(test => /check-y1-golden-rollout-wave-1(-current)?\.test\.js$/.test(test))).toBe(false);
+  }, 30000);
 });
 describe('required workflow reports and runs the selected checks', () => {
   const workflow = yaml.safeLoad(fs.readFileSync(path.resolve(__dirname, '../../.github/workflows/platform-ci.yml'), 'utf8'));

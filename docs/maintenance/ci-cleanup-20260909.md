@@ -34,6 +34,11 @@ are advisory; do not create index-only integration commits. A three-state bundle
 matrix is unnecessary for independent maintenance/documentation changes; test
 the actual affected combination when runtime dependencies cross repositories.
 
+Workflow and data inputs select their existing consumer tests explicitly.
+Deleted JavaScript falls back to the complete Jest suite, excluding the two
+historical suites named below, because Jest cannot recover missing import edges.
+This correctness fallback does not install or run presentation proof tools.
+
 The Y1 workflow-preservation contract and its associated historical governance
 tests are explicitly suspended for this intentional workflow change. Do not
 claim they passed. Historical files/certificates remain unchanged. The product
