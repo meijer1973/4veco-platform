@@ -354,13 +354,15 @@ Saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.4.1 Toets hoofdstuk 2/`):
 
 ## POST-BUILD: QC AND QUALITY_REF
 
-The consolidation builder itself does **not** run QC — that is handled by the chapter orchestrator (`econ-chapter-builder` Part 4). When building consolidation as part of a chapter:
+Follow [Part A review and closure](../docs/workflows/part-a-review.md), both
+standalone and within a chapter. The independent reviewer applies the relevant
+`econ-paragraph-review` dimensions to this paragraph type, including final pages;
+reuse completed checks and recheck repairs and affected dependencies.
 
-1. The orchestrator spawns an independent review sub-agent that runs `econ-paragraph-review` (Pass 0 asset integrity + Pass 2 mathematical precision) on the consolidation output
-2. The orchestrator spawns a sub-agent to generate `X.Y.Z-quality-ref.yaml` via `econ-quality-control`
-3. Both artifacts are required by the chapter completeness gate
+Save `X.Y.Z-review.md`. The author or a tool generates
+`X.Y.Z-quality-ref.yaml` via `econ-quality-control` from that review and actual
+inventory. Both records are required; no separate quality-ref agent is needed.
 
-When building consolidation standalone (not as part of a chapter), run the QC steps from `BUILD-PARAGRAPH.md` Part A steps A5–A7 yourself.
 
 ---
 

@@ -51,9 +51,9 @@ hold effects without recreating a second outline. This is the chapter-level
 Follow the `econ-chapter-builder` skill for the full orchestration process:
 
 1. **Plan** — pass the action-specific Book foundation check for `chapter_planning`, read the blueprint, analyse dependencies, determine build order (parallel vs sequential), set cross-paragraph conventions (shared contexts, notation, colours, interleaving targets). Save the authority pins and decisions in `_chapter-plan.md`.
-2. **Build** — delegate each paragraph to a sub-agent that follows `econ-textbook-paragraph` exactly. Each sub-agent must produce ALL deliverables: 3 .md files, 3 .pdf files, build_pdf.py, _assets/ with SVG+PNG pairs.
-3. **Verify** — after each sub-agent returns, run completeness check. If anything missing, send back.
-4. **QC** — independent sub-agent review per paragraph (Pass 0 + Pass 1 + Pass 2 from `econ-paragraph-review`).
+2. **Build** — follow the type-specific paragraph skill; parallel authoring is optional. Each paragraph must include ALL applicable deliverables: 3 .md files, 3 .pdf files, build_pdf.py, _assets/ with SVG+PNG pairs.
+3. **Verify** — after each paragraph is built, the author runs its completeness check and repairs missing deliverables.
+4. **QC** — follow [Part A review and closure](docs/workflows/part-a-review.md). The independent reviewer covers each paragraph, chapter continuity and final rendered assembly; reuse completed checks of unchanged material.
 
 See `econ-chapter-builder` skill for detailed instructions on dependency analysis, delegation prompts, and completeness gates.
 
@@ -112,11 +112,12 @@ After assembly, re-verify assets in the chapter context:
 
 ---
 
-## Phase 4: Cross-paragraph consistency (INDEPENDENT SUB-AGENT — 10 min)
+## Phase 4: Cross-paragraph consistency
 
-These checks only make sense at the chapter level. Must be run by a sub-agent that did not build the paragraphs.
+The chapter's existing independent reviewer performs these chapter-level checks
+under [Part A review and closure](docs/workflows/part-a-review.md).
 
-> Spawn a sub-agent: "You are a chapter-level reviewer. Read the following for chapter [X.Y]:
+> Assign the independent reviewer: "You are a chapter-level reviewer. Read the following for chapter [X.Y]:
 > 1. `_chapter-plan.md` (shared conventions, dual coding plan, procedure plan)
 > 2. The blueprint chapter spec
 > 3. All paragraph paragraaf.md and opgaven.md files
@@ -175,7 +176,11 @@ This checks:
 
 **The chapter is not done until the validator passes with 0 errors.**
 
-For a command-by-command validation report, use `agents/testing-agent.md`. For coordinating chapter-level review outputs, validator evidence, accessibility review, visual QA, and any human-review packet into one go/no-go decision, use `agents/lead-reviewer-agent.md`.
+The author records validator commands and exit codes. The existing reviewer
+inspects final full-page chapter and answer-booklet output under
+`econ-paragraph-review` Pass 3, including affected neighbouring pages after
+pagination repairs. Apply [Part A review and closure](docs/workflows/part-a-review.md)
+for targeted rechecks, specialist questions and PR closure.
 
 ## Phase 7: Final checklist
 
@@ -183,7 +188,7 @@ For a command-by-command validation report, use `agents/testing-agent.md`. For c
 |---|-------|--------|
 | 1 | `validate-chapter.js` passes with 0 errors | □ |
 | 2 | Book foundation check pins the current owner-approved outline and no open hold blocks the current completion action | □ |
-| 3 | Cross-paragraph consistency review completed (sub-agent) | □ |
+| 3 | Independent cross-paragraph consistency and final rendered assembly review completed; the routine batch reviewer may cover both | □ |
 | 4 | Front page: title, TOC, leerdoelen, catchy intro — all on one page | □ |
 | 5 | Front page leerdoelen match blueprint goals (every blueprint goal appears on front page, no invented goals) | □ |
 | 6 | Chapter PDF: images render, pages break correctly (visual check) | □ |
@@ -199,7 +204,7 @@ For a command-by-command validation report, use `agents/testing-agent.md`. For c
 | Rule | Why |
 |------|-----|
 | Never declare "complete" without verifying all referenced files exist | Chapter 3 was declared complete with 23 missing SVGs — unacceptable |
-| QC reviews must be run by independent sub-agents | Builder agents skip or rubber-stamp their own reviews |
+| Content review must be independent of its authors | Author self-checks do not replace independent review; use the canonical Part A route |
 | Asset verification is a hard gate, not a suggestion | Missing images in a PDF are worse than a delayed delivery |
 | Front page is raw HTML, not markdown | Pandoc + exercise wrapping breaks markdown front pages |
 | Strip Pandoc default stylesheet | Its padding/margins conflict with custom CSS |

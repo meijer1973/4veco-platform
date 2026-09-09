@@ -35,10 +35,17 @@ Both verdicts feed `scripts/validate-paragraph.js` via the `partA:` and `compani
 ## Operating rules
 
 - Load `AGENTS.md`, `BUILD-PARAGRAPH.md`, and the requested agent file before reviewing production lesson artifacts.
-- Use `lead-reviewer-agent.md` for substantive quality, specification fulfilment, specialist-review routing, and evidence completeness. Use `pr-readiness-reviewer-agent.md` only after the draft PR is remotely inspectable and lead review exists; it routes PR lifecycle state and must not replace missing lead or specialist review.
+- Select the applicable route first: ordinary Part A uses the rule below; maintenance uses [its workflow](../docs/review/maintenance-workflow.md). Other gated work uses `lead-reviewer-agent.md` for substantive review and `pr-readiness-reviewer-agent.md` for lifecycle routing after the PR and required reviews are remotely inspectable.
 - Inspect rendered output, not only source files. A clean source does not make generated HTML, opt-in DOCX, PPTX, or Part A PDF output clean.
-- Use `teacher-learning-quality-review-agent.md` when a task claims classroom readiness or learning quality. Visual polish, accessibility, and passing tests do not prove that students learn the intended concept or skill.
-- Use `student-experience-review-agent.md` when a task claims student readiness or student-facing usability. Teacher learning quality does not prove that a typical student can find the next action, understand the visual, or stay motivated.
+- For eligible routine Part A work, use the canonical content-review route below for classroom readiness, learning quality, and student usability. Outside that exception, use `teacher-learning-quality-review-agent.md` for classroom readiness or learning-quality claims and `student-experience-review-agent.md` for student-readiness or usability claims. Visual polish, accessibility, and passing tests do not prove learning; teacher coverage alone does not prove student usability.
 - Distinguish canonical authority, content source, generated artifact, rendered experience, platform implementation, and quality record in the report.
 - Do not recommend hand edits in generated lesson output unless the team explicitly asks for a temporary patch. Prefer source, generator, CSS/JS, registry, or asset-builder fixes plus regeneration.
 - Record closure proof: regenerated artifact, rendered check, source diff or validator pass, and quality log entry as applicable.
+
+## Routine Part A content-review route
+
+Use [the canonical Part A review and closure rule](../docs/workflows/part-a-review.md)
+for ordinary textbook paragraphs and chapters. It covers reviewer independence,
+teacher/student/visual/accessibility perspectives, batching, targeted rechecks,
+quality records, specialist escalation and reuse of the content review for PR
+closure. The catalogue above supplies protocols, not mandatory staffing.

@@ -21,70 +21,38 @@ Quality assurance system for economics lesson materials, structured in two layer
 
 ---
 
-## PART 0: FRESHNESS CHECK — MANDATORY BEFORE USE
+## PART 0: REFERENCE VERSION AND STANDARDS MAINTENANCE
 
-### 0.1 Why freshness matters
+### Routine authoring and quality records
 
-This skill references legal frameworks (onderzoekskader, deugdelijkheidseisen) and government policy that change on a regular cycle. The onderzoekskader is updated annually (typically August 1) and overhauled every 4 years (next overhaul: 2027). Using outdated standards in quality reports — especially external-facing ones — undermines their credibility and may misrepresent compliance.
+Use the approved `references/external/inspectie-standaarden.md` version available
+to the task. Record its path, committed blob ID or content hash, framework/version
+label and recorded `last_verified` date in the lane-owned quality-ref block.
+The record's `generated` date describes this build; it does not claim that the
+external standards were checked again. If the reference or its authority is
+missing, record the gap rather than inventing approval or freshness.
 
-### 0.2 Reference file dating
+Routine quality-ref creation and internal reports do not trigger timed external
+checks or an automatic reference refresh. The author or a tool can derive the
+record from completed independent review and actual inventory results; do not
+invent review coverage, silently change a verdict or assign another reviewer just
+to transcribe it. Ordinary Part A uses [its canonical review rule](../docs/workflows/part-a-review.md).
 
-Every reference file in this skill carries a `last_verified` date at the top. This date records when the content was last confirmed accurate against the official inspectie sources.
+### Separate standards maintenance and external reports
 
-```
-# inspectie-standaarden.md
-# last_verified: 2026-04-12
-# source: onderzoekskader 2021, bijgesteld 2025 (per 1 aug 2025)
-# next_scheduled_update: onderzoekskader bijstelling aug 2026; overhaul aug 2027
-```
+Maintain the approved reference separately through its authorized owning
+CLI/pipeline and source-approval procedure. Never silently edit protected
+`references/external/` files or advance `last_verified` during record generation.
 
-The SKILL.md itself also carries a `skill_last_verified` date (see below).
-
-**skill_last_verified: 2026-04-12**
-**source_framework: onderzoekskader 2021, bijgesteld 2025**
-**known_upcoming_changes: onderzoekskader 2027 (overhaul, expected aug 2027); bestuursbezoeken from March 2026; OR1 role in eindoordeel under review**
-
-### 0.3 Cascading freshness rules
-
-Before using this skill, check the `last_verified` date and apply these rules:
-
-| Age of last_verified | Action | Rationale |
-|---------------------|--------|-----------|
-| **< 3 months** | No update needed. Proceed. | Unlikely anything changed in this window. |
-| **3–9 months** | Quick check. Search for "onderzoekskader [year] wijzigingen" and "inspectie onderwijs nieuws". If no relevant changes found, update `last_verified` date and proceed. If changes found, update the reference file. | Annual bijstellingen happen in July/August. A 3–9 month window likely spans one cycle. |
-| **> 9 months** | Thorough review required. Fetch the current onderzoekskader from onderwijsinspectie.nl. Compare all standards descriptions against the reference file. Update any changes. Update `last_verified` date. | Two or more update cycles may have passed. Risk of outdated information is high. |
-
-### 0.4 Report-level freshness override
-
-**When generating quality reports (Part 3), freshness requirements are stricter** because reports face external audiences (school board, inspectie, colleagues). Apply this override:
-
-| Report audience | Freshness requirement |
-|----------------|----------------------|
-| Internal (developer, own use) | Standard cascading rules (0.3) apply |
-| Internal (vaksectie, school team) | Maximum 6 months since last_verified. If older, do a quick check even if < 9 months. |
-| External (bestuur, inspectie) | **Always do a quick check**, regardless of age. For reports explicitly prepared for inspectie visits, do a thorough review if > 3 months. |
-
-### 0.5 How to perform a freshness check
-
-**Quick check (5 minutes):**
-1. Web search: `onderzoekskader [current year] wijzigingen inspectie onderwijs`
-2. Web search: `inspectie onderwijs standaarden [current year]`
-3. Check https://www.onderwijsinspectie.nl/onderwerpen/onderzoekskaders for any bijstelling announcements
-4. If no changes: update `last_verified` date, note "no changes found"
-5. If changes found: update the specific standard(s) in the reference file, update `last_verified` date
-
-**Thorough review (30 minutes):**
-1. Fetch the current onderzoekskader document from onderwijsinspectie.nl
-2. Compare each standard (OP0, OP1, OP2, OP3, SK1, OR1, SKA, BKA) against the reference file
-3. Check for new standards or removed standards
-4. Check for normering changes (what leads to onvoldoende/zeer zwak)
-5. Check for policy announcements about future changes (e.g., onderzoekskader 2027 previews)
-6. Update the reference file
-7. Update `last_verified` date and `known_upcoming_changes`
-
-### 0.6 Freshness in quality_refs
-
-Individual quality_refs also carry a `generated` date. When assembling reports from quality_refs, note if any quality_refs predate the current `last_verified` of the inspectie standards. If the standards changed between the quality_ref generation and the report date, flag those quality_refs for review — their inspectie mappings may need updating.
+Before producing an external compliance report, verify the applicable current
+framework and relevant standards against official Onderwijsinspectie sources.
+Record the official document/version, source URLs, actual verification date and
+differences from the approved reference. Assess which existing quality mappings
+those differences affect; do not infer compliance from an old quality-ref or
+from a changed date alone. If current sources cannot be verified, state that
+limitation and do not claim verified current compliance. Proposed reference
+updates go through separate authorized maintenance; report preparation does not
+grant permission to update protected sources.
 
 ---
 
@@ -429,9 +397,9 @@ begeleide inoefening → basis → midden → verrijking]
 
 ```
 Per paragraph:
- 0. ──► FRESHNESS CHECK             (→ Part 0 of this skill)
-      Check last_verified date on references/external/inspectie-standaarden.md
-      Apply cascading rules (< 3 mo: proceed; 3-9 mo: quick check; > 9 mo: thorough review)
+ 0. ──► RECORD APPROVED REFERENCE VERSION (→ Part 0)
+      Record path, blob ID/hash, framework label and recorded last_verified.
+      No automatic external check or reference write during ordinary authoring.
  1. Extract leerdoelen from opgaven
  2. Build/update Part A textbook source, review, assets, paragraph PDF
     evidence, and publisher-print handoff evidence when that profile is in scope
@@ -445,15 +413,13 @@ Per paragraph:
  6. Store quality_ref as X.Y.Z-quality-ref.yaml at the paragraph root
 
 On demand (reports):
- 0. ──► FRESHNESS CHECK             (→ Part 0 of this skill)
-      Apply report-level override (Part 0.4):
-        internal → standard cascading rules
-        vaksectie → max 6 months
-        external → always quick check; inspectie prep → thorough if > 3 mo
+ 0. ──► ESTABLISH REPORT BASIS (→ Part 0)
+      Internal: identify the approved reference version and evidence used.
+      External compliance: verify applicable current official standards,
+      record sources/date and assess differences without editing protected refs.
  → User requests report with scope + dimension
  → Collect relevant quality_refs
- → Flag any quality_refs where standards_verified < current last_verified
-      (standards may have changed since the quality_ref was generated)
+ → Identify quality_refs whose mappings are affected by verified standards changes
  → Generate report using appropriate template (Part 3.4)
 ```
 

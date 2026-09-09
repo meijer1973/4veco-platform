@@ -395,21 +395,24 @@ Before any review, verify:
 
 **If anything fails → go back and fix it. Cannot proceed with missing assets.**
 
-## A6: QC review (INDEPENDENT SUB-AGENT — MANDATORY)
+## A6: Independent content review
 
-Run `econ-paragraph-review` via a separate sub-agent (not the builder):
+Follow [Part A review and closure](docs/workflows/part-a-review.md) after author
+self-checks, rendering and relevant validation. Assign `econ-paragraph-review`
+to the independent reviewer; its integrity, didactic, precision and rendered-page
+passes include teacher/student and accessibility coverage.
 
-> "You are a QC reviewer. You did NOT build this paragraph. Read `econ-paragraph-review`, then review the paragraph at [path]. Run Pass 0 (asset integrity), Pass 1 (didactic), Pass 2 (mathematical). Report all issues."
+Save `X.Y.Z-review.md` with `## 2. Verdict`. Resolve failures and have the reviewer
+check repairs and affected dependencies before a passing final verdict.
 
-Save output as `X.Y.Z-review.md`. Fix all FAIL items before proceeding.
+## A7: Quality record
 
-The builder is **prohibited from** running this review itself.
+The author or a tool generates `X.Y.Z-quality-ref.yaml` using
+`econ-quality-control`, the existing independent review and actual inventory.
+No separate quality-ref agent is required. Preserve the review's verdict and
+gaps, schema version 2 and the other lane's block; record the approved reference
+version used. See [Part A review and closure](docs/workflows/part-a-review.md).
 
-## A7: Quality ref (INDEPENDENT SUB-AGENT — MANDATORY)
-
-Generate `X.Y.Z-quality-ref.yaml` via a separate sub-agent:
-
-> "Read `econ-quality-control`. Inventory all components that actually exist (check file existence). Run asset integrity checks. Generate quality_ref YAML. Be honest about gaps."
 
 ## A8: Textbook-to-companion handoff
 
@@ -428,8 +431,8 @@ between the textbook lane and the companion lane.
 - [ ] build_pdf.py exists
 - [ ] `_assets/` has SVG+PNG pairs with `X.Y.Z_{type}_{number}` naming
 - [ ] 0 broken image references
-- [ ] `X.Y.Z-review.md` exists (from independent sub-agent)
-- [ ] `X.Y.Z-quality-ref.yaml` exists (from independent sub-agent)
+- [ ] `X.Y.Z-review.md` exists (from the independent content reviewer)
+- [ ] `X.Y.Z-quality-ref.yaml` exists (from the completed review and inventory)
 - [ ] `X.Y.Z-textbook-handoff.md` exists and names what Part B may reuse/adapt
 - [ ] Book 2+ backward-design alignment table covers every goal and target operation
 - [ ] Book foundation check evaluates the exact current action; every matching open hold blocks or permits it explicitly, and every released hold has evidence
@@ -878,7 +881,7 @@ If Part A was run first, these are already done (A5–A7). Skip to Phase 6.
 If running Part B only (textbook content already exists), run these QC steps now:
 - **5a**: Asset completeness gate — see Part A §A5
 - **5b**: Didactic and precision review (independent sub-agent) — see Part A §A6
-- **5c**: Generate quality_ref (independent sub-agent) — see Part A §A7
+- **5c**: Generate quality_ref from the completed review and inventory — see Part A §A7
 
 These are backfill checks for older paragraphs that predate the handoff. For
 new lane-separated work, Part B should consume the Part A handoff instead of
@@ -905,7 +908,9 @@ Then run `agents/econ-companion-visual-review.md` as the closure gate when the g
 
 Hard fails from this agent block completion. Fix the source, generator, CSS/JS, asset builder, or registry issue; regenerate; then rerun the companion review. Do not close a generated-output defect by hand-editing the generated lesson artifact unless the team explicitly requests a temporary patch.
 
-For broad QA coordination across companion visual review, specific visual QA, accessibility review, teacher learning-quality review, student-experience review, and test evidence, use `agents/lead-reviewer-agent.md`. Use `agents/teacher-learning-quality-review-agent.md` when a paragraph, companion set, activity, or gate claims classroom readiness or learning quality: it checks learning goals, prior knowledge, didactic sequence, formative feedback, differentiation, dual coding, transfer, and retention. Use `agents/student-experience-review-agent.md` when a student-facing surface claims student readiness: it checks orientation, next action, affordance, cognitive load, motivation, confusion risks, and whether visuals are understandable and linked to the text. Use `agents/accessibility-agent.md` when readability, contrast, alt text, OCR, semantic structure, keyboard access, or inclusive usability needs focused review. Use `agents/testing-agent.md` when the paragraph needs a command-by-command test/validator evidence report.
+The following specialist routing applies to companion and other gated scopes;
+ordinary textbook work uses [Part A review and closure](docs/workflows/part-a-review.md).
+For broad QA coordination across companion visual review, specific visual QA, accessibility review, teacher learning-quality review, student-experience review, and test evidence, use `agents/lead-reviewer-agent.md`. Use `agents/teacher-learning-quality-review-agent.md` when an in-scope companion set, activity, or gate claims classroom readiness or learning quality: it checks learning goals, prior knowledge, didactic sequence, formative feedback, differentiation, dual coding, transfer, and retention. Use `agents/student-experience-review-agent.md` when an in-scope student-facing surface claims student readiness: it checks orientation, next action, affordance, cognitive load, motivation, confusion risks, and whether visuals are understandable and linked to the text. Use `agents/accessibility-agent.md` when readability, contrast, alt text, OCR, semantic structure, keyboard access, or inclusive usability needs focused review. Use `agents/testing-agent.md` when a companion paragraph needs a command-by-command test/validator evidence report.
 
 ### B-verify: Part B checklist
 

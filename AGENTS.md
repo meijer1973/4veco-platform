@@ -46,7 +46,7 @@ Cross-repository hyperlinks open GitHub `main`; use the adjacent checkout for lo
 | Complete paragraph / cross-lane verification | [BUILD-PARAGRAPH.md](BUILD-PARAGRAPH.md) is the full reference; ordinary paragraph production starts with its lane runbook. |
 | Paragraph-build, companion, exit-ticket, exam-ingestion, or product-route work | [Product vision](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-vision.md), [product end state](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-end-state.md), and the applicable workflow/specification. |
 | Generated material or deployment | Applicable lane/skill plus [build-scripts/README.md](build-scripts/README.md). `scripts/deploy.js` writes its target; its automated layer alone is not full paragraph production. |
-| Review or human gate | Original requirements and evidence; [lead reviewer](agents/lead-reviewer-agent.md) and the relevant specialist protocol. Product gates also use the product specifications above. |
+| Review or human gate | Original requirements and evidence; ordinary textbook work uses [Part A review and closure](docs/workflows/part-a-review.md). Other product gates use the [lead reviewer](agents/lead-reviewer-agent.md), relevant specialist protocol and product specifications above. |
 | Maintenance PR publication or merge | [Maintenance workflow](docs/review/maintenance-workflow.md). |
 | Protected/product publication or integration | [Throughput policy](docs/review/pr-throughput-policy.md), [integration lane policy](docs/review/pr-integration-lane-policy.md) and [readiness policy](docs/review/pr-readiness-routing-policy.md); use their bundle sections when runtime-coupled repositories participate. |
 
@@ -130,7 +130,12 @@ separated-agent workflow below; production and review work use their lane and
 artifact gates. Integration uses its own policy. These task routes describe
 when existing procedures apply; they do not waive a gate because work is small.
 
-For roadmap sprints, retain the separated-agent workflow:
+Ordinary Part A paragraph/chapter work follows [Part A review and closure](docs/workflows/part-a-review.md),
+including within a named roadmap sprint. Reuse its independent content review;
+the additional planning/verification staffing and two lead-review rounds below
+do not apply to that scope. Source approvals and publication decisions remain.
+
+For other roadmap sprints, retain the separated-agent workflow:
 
 - A planning/review subagent checks the outline, baselines, logs, stop
   conditions, requirements, and exact generated-output list before execution.
@@ -186,7 +191,8 @@ belong in the skill needed for the current artifact.
 
 ## Review evidence and human gates
 
-Use [agents/lead-reviewer-agent.md](agents/lead-reviewer-agent.md) to route
+Ordinary textbook work uses [Part A review and closure](docs/workflows/part-a-review.md).
+For other scopes, use [agents/lead-reviewer-agent.md](agents/lead-reviewer-agent.md) to route
 review and consolidate specification fulfilment. Use the relevant specialist:
 `econ-companion-visual-review`, `visual-qa-agent`, `testing-agent`,
 `accessibility-agent`, `teacher-learning-quality-review-agent`,
@@ -225,7 +231,11 @@ when needed, and the task's integration authority. Verify the merge parents/tree
 and useful smoke checks; do not repeat full CI solely because a reviewed tree
 was merged.
 
-For protected/product work using the existing gated process, after the draft
+Ordinary Part A reuses its completed content review for PR closure under
+[its canonical route](docs/workflows/part-a-review.md), retaining applicable CI
+and actual source/publication authority.
+
+For other protected/product work using the existing gated process, after the draft
 PR is published, complete structural lead
 review/repairs and run the independent `npm.cmd run review:pr-readiness` route.
 Apply only the allowed transition using `apply:pr-readiness`,
