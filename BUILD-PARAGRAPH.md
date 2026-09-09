@@ -395,21 +395,24 @@ Before any review, verify:
 
 **If anything fails → go back and fix it. Cannot proceed with missing assets.**
 
-## A6: QC review (INDEPENDENT SUB-AGENT — MANDATORY)
+## A6: Independent content review
 
-Run `econ-paragraph-review` via a separate sub-agent (not the builder):
+Follow [Part A review and closure](docs/workflows/part-a-review.md) after author
+self-checks, rendering and relevant validation. Assign `econ-paragraph-review`
+to the independent reviewer; its integrity, didactic, precision and rendered-page
+passes include teacher/student and accessibility coverage.
 
-> "You are a QC reviewer. You did NOT build this paragraph. Read `econ-paragraph-review`, then review the paragraph at [path]. Run Pass 0 (asset integrity), Pass 1 (didactic), Pass 2 (mathematical). Report all issues."
+Save `X.Y.Z-review.md` with `## 2. Verdict`. Resolve failures and have the reviewer
+check repairs and affected dependencies before a passing final verdict.
 
-Save output as `X.Y.Z-review.md`. Fix all FAIL items before proceeding.
+## A7: Quality record
 
-The builder is **prohibited from** running this review itself.
+The author or a tool generates `X.Y.Z-quality-ref.yaml` using
+`econ-quality-control`, the existing independent review and actual inventory.
+No separate quality-ref agent is required. Preserve the review's verdict and
+gaps, schema version 2 and the other lane's block; record the approved reference
+version used. See [Part A review and closure](docs/workflows/part-a-review.md).
 
-## A7: Quality ref (INDEPENDENT SUB-AGENT — MANDATORY)
-
-Generate `X.Y.Z-quality-ref.yaml` via a separate sub-agent:
-
-> "Read `econ-quality-control`. Inventory all components that actually exist (check file existence). Run asset integrity checks. Generate quality_ref YAML. Be honest about gaps."
 
 ## A8: Textbook-to-companion handoff
 
@@ -428,8 +431,8 @@ between the textbook lane and the companion lane.
 - [ ] build_pdf.py exists
 - [ ] `_assets/` has SVG+PNG pairs with `X.Y.Z_{type}_{number}` naming
 - [ ] 0 broken image references
-- [ ] `X.Y.Z-review.md` exists (from independent sub-agent)
-- [ ] `X.Y.Z-quality-ref.yaml` exists (from independent sub-agent)
+- [ ] `X.Y.Z-review.md` exists (from the independent content reviewer)
+- [ ] `X.Y.Z-quality-ref.yaml` exists (from the completed review and inventory)
 - [ ] `X.Y.Z-textbook-handoff.md` exists and names what Part B may reuse/adapt
 - [ ] Book 2+ backward-design alignment table covers every goal and target operation
 - [ ] Book foundation check evaluates the exact current action; every matching open hold blocks or permits it explicitly, and every released hold has evidence

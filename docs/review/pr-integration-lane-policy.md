@@ -1,5 +1,11 @@
 # PR Integration Lane Policy
 
+Ordinary Part A paragraph/chapter content uses [Part A review and closure](../workflows/part-a-review.md),
+which takes precedence over the extra review staffing and packet machinery below
+for that scope. Reuse its content review, retain applicable content/rendering CI
+and actual source/publication decisions, and merge only with integration authority.
+
+
 **Scope from 9 September 2026:** routine maintenance uses the
 [maintenance workflow](maintenance-workflow.md), which takes precedence over
 this document for that scope. It uses an ordinary authorized exact-head PR

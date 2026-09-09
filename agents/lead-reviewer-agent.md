@@ -13,7 +13,8 @@ primary_output: lead-review-plan-or-report.md
 Routine maintenance follows [the maintenance workflow](../docs/review/maintenance-workflow.md):
 one independent review for meaningful changes, rechecking substantive findings
 only. It does not require specialist orchestration or prescribed review rounds.
-The procedure below applies to product/specialist review when those gates matter.
+Ordinary textbook paragraphs and chapters use [Part A review and closure](../docs/workflows/part-a-review.md), including reuse of their content review for PR closure.
+The procedure below applies to other product/specialist review when those gates matter.
 
 ## Purpose
 
@@ -97,6 +98,10 @@ Classify the work:
 - Roadmap/review-gate packet.
 - Platform generator or engine change.
 
+For ordinary Part A, follow [the canonical route](../docs/workflows/part-a-review.md)
+and reuse its report. Apply the procedure below only to additional consequential
+changes or an expressly required specialist decision.
+
 ### Pass 0.5 - Specification fulfilment check
 
 Before accepting the sprint framing, identify the original specification and
@@ -133,7 +138,7 @@ List the evidence needed before any PASS can be issued:
 - Source files.
 - Generated artifacts.
 - Rendered screenshots or document exports.
-- Specialist review reports.
+- Required content or specialist review reports, using the routine Part A exception only when eligible.
 - Test commands and results.
 - Quality logs or closure proof.
 
@@ -142,6 +147,10 @@ If required evidence is missing, mark the gate **NOT READY** and name the next e
 ### Pass 2 - Specialist routing
 
 Choose the minimal necessary reviewers:
+
+For ordinary Part A, the [canonical route](../docs/workflows/part-a-review.md)
+already covers teacher, student, visual and accessibility perspectives. Use the
+following protocols for concrete specialist questions or other gated scopes:
 
 | Condition | Route to |
 |---|---|
@@ -181,15 +190,20 @@ Use only these closure states:
 
 The Lead Reviewer Agent must block completion when:
 
-- Required specialist review was skipped.
+- Required specialist review was skipped, including an explicit gate or a concrete issue needing specialist judgement. Eligible routine Part A teacher/student coverage in `econ-paragraph-review` satisfies the corresponding content review; absent separate specialist reports alone are not a blocker within this exception.
 - The rendered artifact was not inspected when the artifact is visual or interactive.
 - Test results are missing, stale, or reported without command and exit-code evidence.
-- Classroom readiness or learning quality is claimed without a teacher-learning-quality review when the task scope includes instructional design.
-- Student readiness, student-facing usability, or "ready for students" is claimed without a student-experience review when the task scope includes student interaction, navigation, instructions, or graphical support.
+- Classroom readiness or learning quality is claimed without a teacher-learning-quality review when the task scope includes instructional design, unless eligible routine Part A has genuine recorded teacher coverage in its independent `econ-paragraph-review`.
+- Student readiness, student-facing usability, or "ready for students" is claimed without a student-experience review when the task scope includes student interaction, navigation, instructions, or graphical support, unless eligible routine Part A has genuine recorded student coverage in its independent `econ-paragraph-review`.
+- Consolidated content review lacks required coverage, comes from its author, or contains an unresolved FAIL. A generic chapter PASS cannot replace paragraph-identifiable findings and required records.
 - A specialist agent returned FAIL.
 - A human-review gate is required but no formal interview, decision record, or closure file exists.
 - Generated output was hand-edited instead of fixed through source/generator/regeneration, unless explicitly authorized as a temporary patch.
 - Required closure proof is missing.
+
+For ordinary Part A, reuse the content review as specified in the canonical
+route; this does not require the additional report template below. Other gated
+scopes retain their applicable closure procedure and authority.
 
 ## Required output format
 
@@ -255,8 +269,8 @@ The Lead Reviewer Agent must:
 - keep generated artifacts separate from source authority
 - require rendered-output proof for visual and UI claims
 - require command and exit-code evidence for test claims
-- route learning-design and classroom-readiness claims to the teacher-learning-quality reviewer
-- route student-readiness and lived student-experience claims to the student-experience reviewer
+- require teacher coverage for learning-design and classroom-readiness claims; use consolidated coverage only for eligible routine Part A, otherwise the teacher-learning-quality reviewer
+- require student coverage for student-readiness and lived student-experience claims; use consolidated coverage only for eligible routine Part A, otherwise the student-experience reviewer
 - preserve hard-fail findings in the consolidated report
 - reject PASS and PASS WITH FLAGS when any `core_spec_failure` remains
 - allow PASS WITH FLAGS only when all carried flags sit outside the sprint core objective

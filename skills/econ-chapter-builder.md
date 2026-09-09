@@ -240,7 +240,8 @@ Save a brief plan document in the output folder as `_chapter-plan.md`:
 
 ### 3.1 Delegation rules
 
-Each paragraph is built by a **separate sub-agent**. The orchestrator provides:
+Build paragraphs directly or delegate parallel authoring when useful. For each
+paragraph, provide:
 
 1. The blueprint paragraph spec (target exercise, lesson goals, difficulty notes)
 2. The shared conventions from Part 2
@@ -255,9 +256,11 @@ Each paragraph is built by a **separate sub-agent**. The orchestrator provides:
      - §4 (Proeftoets): toets.md + antwoorden.md + toetsmatrijs.md + PDFs + _assets/ + build_pdf.py
      Run the A5 asset completeness gate before returning."
 
-**Important:** Do NOT ask paragraph sub-agents to produce review.md or quality-ref.yaml. A sub-agent cannot independently review its own work. The orchestrator handles QC in Part 4 after all paragraphs are built.
+**Important:** Authors cannot independently review their own work. Arrange the
+content review in Part 4; authors may generate quality records from its completed
+findings and actual inventory without another reviewer assignment.
 
-The sub-agent prompt must include:
+The authoring brief must include:
 - The full blueprint spec for that paragraph
 - The shared conventions document
 - For sequential builds: a summary of what the prior paragraph established
@@ -266,7 +269,7 @@ The sub-agent prompt must include:
 
 ### 3.2 Completeness verification after each paragraph
 
-After each sub-agent returns, the orchestrator runs these checks before proceeding.
+After each paragraph is built, the author runs these checks before proceeding.
 
 **For theory paragraphs (§1–§3, or §1–§4 for Ch4):**
 
@@ -344,7 +347,8 @@ Required files:
   □ No orphaned assets
 ```
 
-**If anything fails → send the sub-agent back** with specific instructions about what's missing. Do not proceed to the next wave.
+**If anything fails → repair the missing deliverables**, directly or through the
+delegated author. Do not proceed to the next wave with incomplete prerequisites.
 
 ### 3.3 Sequential context handoff (with inter-wave QC)
 
@@ -352,7 +356,7 @@ When building sequentially, after completing paragraph N and before starting par
 
 1. Read the completed paragraaf.md
 2. Extract: key definitions, formulas, context details (company name, numbers), notation
-3. **Run a lightweight QC check on the completed paragraph** — spawn a review sub-agent for Pass 0 (asset integrity) and Pass 2 (mathematical precision) only. This catches notation errors, formula mistakes, and broken assets BEFORE they propagate into the next paragraph. Save as `X.Y.Z-review.md`.
+3. **Check dependencies before reuse** — ask the chapter's independent reviewer to check the integrity and precision of material needed by the next paragraph. Record completed checks and remaining coverage in `X.Y.Z-review.md`; do not issue a final PASS before all required coverage exists. Carry these checks forward unchanged into Part 4.
 4. If the review finds FAIL items in Pass 2 (e.g., wrong formula, notation mismatch with chapter conventions), fix them before proceeding. This is critical — a slope error in §2 will be carried into §3's exercises.
 5. Include the verified summary in the prompt for paragraph N+1
 6. The next paragraph's herhaling box and forward references should connect naturally
@@ -367,30 +371,40 @@ For parallel waves (e.g., §1 and §3 built simultaneously), inter-wave QC is no
 
 After ALL paragraphs are built and verified (Part 3), the **orchestrator** runs QC. This is not delegated to the paragraph builders — they cannot review their own work.
 
-### 4.1 Per-paragraph review (independent sub-agents)
+### 4.1 Per-paragraph coverage (independent content review)
 
-For **each paragraph** (theory AND consolidation), spawn a separate review sub-agent:
+Follow [Part A review and closure](../docs/workflows/part-a-review.md). Use the
+chapter's independent reviewer for paragraph coverage (including consolidation
+and test preparation), continuity and final assembly. Carry forward the checks
+already completed between writing stages; review remaining coverage and changes.
+Keep identifiable evidence and a report for every paragraph.
 
 > "You are a QC reviewer. You did NOT build this paragraph. Read the `econ-paragraph-review` skill at `skills/econ-paragraph-review.md`. Then review the paragraph at [path].
-> Run Pass 0 (asset integrity), Pass 1 (didactic architecture), Pass 2 (mathematical precision).
+> Run Pass 0 (asset integrity), Pass 1 (didactic architecture including teacher/student coverage), Pass 2 (mathematical precision), and Pass 3 (final rendered pages).
 > Report ALL issues with PASS/FLAG/FAIL ratings. Do not fix anything — only report.
 > Save your report as `X.Y.Z-review.md` in the paragraph folder."
 
-**This applies to consolidation paragraphs too.** The consolidation builder skill does not include QC steps — that is intentional. QC for consolidation is handled here by the chapter orchestrator, using the same `econ-paragraph-review` process (Pass 0 asset check + Pass 2 mathematical precision; Pass 1 didactic checks apply where relevant).
+**This applies to consolidation paragraphs too.** QC is assigned by the chapter
+orchestrator using the same `econ-paragraph-review` process: Pass 0 asset check,
+Pass 2 precision, applicable Pass 1 didactic/teacher/student checks, and Pass 3
+final rendered-page inspection. Record why any type-specific check is inapplicable.
 
-Fix any FAIL items before proceeding. The orchestrator sends fixes back to the original builder sub-agent or fixes them directly.
+Fix any FAIL items before proceeding. The orchestrator sends fixes to the original
+builder or fixes them directly; the independent reviewer rechecks affected
+material and dependencies. Widen checks for changed calculations, graphs,
+answers, or pagination. Do not restart unaffected reviews automatically or erase
+earlier findings; update their disposition in the existing report.
 
-### 4.1b Quality_ref generation (independent sub-agents)
+### 4.1b Quality record generation
 
-For **each paragraph** (theory AND consolidation), spawn a sub-agent:
+For each paragraph, the author or a tool generates `X.Y.Z-quality-ref.yaml` via
+`econ-quality-control` from the completed independent review and actual inventory.
+Preserve its verdict, gaps and evidence, schema version 2, the other lane's block
+and the approved reference version. This requires no additional reviewer.
 
-> "Read the `econ-quality-control` skill. Inventory all components that actually exist for this paragraph (check file existence, not just intent). Run asset integrity checks. Generate `X.Y.Z-quality-ref.yaml` in the paragraph folder. Be honest about gaps."
+### 4.2 Chapter-level consistency (same independent reviewer)
 
-This produces the quality_ref YAML required by the completeness gate.
-
-### 4.2 Chapter-level consistency (independent sub-agent)
-
-Spawn a chapter-level reviewer with these inputs:
+Give the chapter's existing independent reviewer these inputs:
 > "You are a chapter-level reviewer. Read the following files for chapter X.Y:
 > 1. `_chapter-plan.md` — shared conventions, interleaving plan, build order
 > 2. The blueprint chapter spec (from the course blueprint)
@@ -411,6 +425,11 @@ Spawn a chapter-level reviewer with these inputs:
 
 See `BUILD-CHAPTER.md` Phase 4 for the full checklist.
 
+After assembly, this reviewer also inspects the final chapter and answer booklet
+at full-page reading scale using `econ-paragraph-review` Pass 3 and the final
+`BUILD-CHAPTER.md` checklist. Source continuity checks alone do not establish
+final assembly quality.
+
 ### 4.3 QC artifact verification
 
 After Parts 4.1, 4.1b, and 4.2, verify QC artifacts for each paragraph. **Check content, not just existence.**
@@ -418,12 +437,14 @@ After Parts 4.1, 4.1b, and 4.2, verify QC artifacts for each paragraph. **Check 
 ```
 Per paragraph:
   □ X.Y.Z-review.md exists
-  □ X.Y.Z-review.md contains no unresolved FAIL items (grep for "FAIL" — all should be fixed)
+  □ X.Y.Z-review.md has an explicit ## 2. Verdict: PASS or PASS WITH FLAGS
+  □ All blocking findings have recorded resolutions and reviewer rechecks
+  □ Use the structured verdict parsed by validate-paragraph.js / validate-chapter.js; keep resolved FAIL history
   □ X.Y.Z-quality-ref.yaml exists
-  □ quality_ref.assets.missing is empty ([])
-  □ quality_ref.assets.svgpng_paired is true
-  □ quality_ref.assets.naming_compliant is true
-  □ quality_ref.assets.total_referenced == quality_ref.assets.total_present
+  □ partA.assets.missing is empty ([])
+  □ partA.assets.svgpng_paired is true
+  □ partA.assets.naming_compliant is true
+  □ partA.assets.total_referenced == partA.assets.total_present
   □ quality_ref has a Generated date (not stale — should match current build)
 ```
 
@@ -486,12 +507,12 @@ This checks all of the following automatically:
 
 1. □ Blueprint chapter spec read and understood
 2. □ Chapter plan written (`_chapter-plan.md`) with build order, dependencies, conventions
-3. □ All theory paragraphs built via `econ-textbook-paragraph` (sub-agents)
-4. □ Consolidation paragraph built via `econ-consolidation-builder` (sub-agent)
-4b. □ Test prep paragraphs built via `econ-testprep-builder` (sub-agents, Chapter 5 only)
+3. □ All theory paragraphs built via `econ-textbook-paragraph`
+4. □ Consolidation paragraph built via `econ-consolidation-builder`
+4b. □ Test prep paragraphs built via `econ-testprep-builder` (Chapter 5 only)
 5. □ Each paragraph passed completeness verification (Part 3.2)
-6. □ Independent QC review per paragraph (Part 4.1, sub-agents)
-7. □ Chapter-level consistency review (Part 4.2, sub-agent)
+6. □ Independent content review with identifiable coverage per paragraph (Part 4.1)
+7. □ Same reviewer completed chapter continuity and final rendered assembly checks (Part 4.2)
 8. □ All FAIL items fixed
 9. □ Chapter assembled via `econ-chapter-assembler`
 10. □ Final completeness gate passed (Part 6)

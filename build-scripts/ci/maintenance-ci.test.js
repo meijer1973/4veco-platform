@@ -11,13 +11,21 @@ describe('bounded maintenance CI selection', () => {
     ['build-scripts/review-gates/integrate-authorized-pr.js'], ['docs/review/pr-integration-lane-policy.md'],
     ['reports/github-agent-index-platform.json'], ['package.json'],
     ['build-scripts/ci/check-agent-worktree-safety.test.js'],
+    ['BUILD-PARAGRAPH.md'], ['BUILD-CHAPTER.md'], ['agents/README.md'],
+    ['docs/workflows/textbook-paragraph-lane.md'], ['docs/workflows/part-a-review.md'],
+    ['skills/econ-paragraph-review.md'], ['skills/econ-chapter-builder.md'],
+    ['skills/econ-textbook-paragraph.md'], ['skills/econ-consolidation-builder.md'],
+    ['skills/econ-testprep-builder.md'], ['skills/econ-quality-control.md'],
     ['build-scripts/ci/fixtures/branch-protection-activated.json'],
     ['build-scripts/review-gates/check-human-payload-authorization.test.js'],
   ])('maintenance scope: %s', file => expect(classify([file], options)).toBe('maintenance'));
   test.each([
     ['engines/reasoning-composer.js'], ['references/machine/target.json'], ['scripts/deploy.js'],
     ['build-scripts/content/book-1/b1-111-presentation-v2.js'], ['.github/workflows/deploy.yml'],
-    ['package-lock.json'], ['.gitattributes'], ['unrecognized.js'], ['BUILD-PARAGRAPH.md'],
+    ['package-lock.json'], ['.gitattributes'], ['unrecognized.js'],
+    ['skills/economic-graph.md'], ['skills/new-skill.md'], ['docs/workflows/new-workflow.md'],
+    ['Boek 2 - Markt/2.1/2.1.1-paragraaf.md'], ['scripts/render-textbook.js'],
+    ['references/authored/textbook-rendered-page-acceptance-standard.md'],
     ['build-scripts/review-gates/capture-gate-engine1-live-output.js'],
     ['build-scripts/review-gates/emit-gate-task-family1-playable-lab.js'],
     ['build-scripts/review-gates/check-gate-task-family1-review-packet.js'],
@@ -82,6 +90,11 @@ describe('affected tests survive missing import edges and file-based inputs', ()
     ['.github/workflows/platform-ci.yml', 'build-scripts/ci/platform-ci-evidence.test.js'],
     ['docs/review/pr-readiness-decision.schema.json', 'build-scripts/review-gates/pr-readiness-router.test.js'],
     ['build-scripts/ci/fixtures/branch-protection-activated.json', 'build-scripts/ci/check-branch-protection.test.js'],
+    ['AGENTS.md', 'build-scripts/workflows/check-paragraph-workflow-wording.test.js'],
+    ['agents/lead-reviewer-agent.md', 'build-scripts/workflows/check-paragraph-workflow-wording.test.js'],
+    ['BUILD-PARAGRAPH.md', 'scripts/tests/validate-paragraph-modes.test.js'],
+    ['skills/econ-chapter-builder.md', 'scripts/tests/validate-chapter.test.js'],
+    ['docs/workflows/textbook-paragraph-lane.md', 'build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js'],
   ])('%s executes its file-based consumer suite', (file, expected) => {
     const tests = list([file]);
     expect(tests).toContain(expected);

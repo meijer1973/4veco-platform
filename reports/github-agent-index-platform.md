@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-08T13:51:03.000Z
+Generated: 2026-09-09T09:16:51.424Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/reorganize-2-20260908`
-Source commit: `e0d7b6c7ac3280f1f097ec83bb3ea65a5e302eb2`
-Files indexed: 7670
+Source branch: `codex/paragraph-review-cleanup-20260909`
+Source commit: `c5fd9eeefd6c54cb8ca4fb7f728fb04dc92d025d`
+Files indexed: 7677
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 730
+Count: 734
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -164,7 +164,11 @@ Count: 730
 - build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
 - build-scripts/ci/check-evidence-line-endings.test.js
+- build-scripts/ci/check-y1-product-evidence.js
+- build-scripts/ci/check-y1-product-evidence.test.js
 - build-scripts/ci/fixtures/branch-protection-activated.json
+- build-scripts/ci/maintenance-ci.js
+- build-scripts/ci/maintenance-ci.test.js
 - build-scripts/ci/platform-ci-evidence.js
 - build-scripts/ci/platform-ci-evidence.test.js
 - build-scripts/content/book-1/b1-111-alt-text.js
@@ -903,7 +907,7 @@ Count: 25
 
 ## validators
 
-Count: 697
+Count: 699
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -967,6 +971,8 @@ Count: 697
 - build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
 - build-scripts/ci/check-evidence-line-endings.test.js
+- build-scripts/ci/check-y1-product-evidence.js
+- build-scripts/ci/check-y1-product-evidence.test.js
 - build-scripts/exemplars/check-reasoning-golden-exemplars.js
 - build-scripts/inspection/check-bounded-source-refresh-packet.js
 - build-scripts/inspection/check-bounded-source-refresh-packet.test.js
@@ -7612,7 +7618,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 771
+Count: 774
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -8075,7 +8081,9 @@ Count: 771
 - docs/inspection-standards/teacher-facing-evidence-pack-template.md
 - docs/L1.5V/A4-alt-text-infrastructure.md
 - docs/L1.5V/F-plan-part-a-b-separation.md
+- docs/maintenance/ci-cleanup-20260909.md
 - docs/review/human-payload-authorization.schema.json
+- docs/review/maintenance-workflow.md
 - docs/review/pr-integration-lane-policy.md
 - docs/review/pr-readiness-decision.schema.json
 - docs/review/pr-readiness-routing-policy.md
@@ -8295,6 +8303,7 @@ Count: 771
 - docs/workflows/paragraph-quality-ref-schema-v2.md
 - docs/workflows/textbook-paragraph-lane.md
 - docs/workflows/web-companion-paragraph-lane.md
+- jest.config.cjs
 - knowledge/113-excellent-exit-ticket-v3-package.zip
 - knowledge/course_blueprint_v4.md
 - knowledge/Exercise schema and quality/ChatGPT Image Apr 28, 2026, 10_35_18 PM.png

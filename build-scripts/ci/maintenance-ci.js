@@ -9,6 +9,14 @@ const PLAN = path.resolve(ROOT, '../ci-artifacts/maintenance-plan.json');
 const HISTORICAL_WORKFLOW_TESTS = require('../../jest.config.cjs').testPathIgnorePatterns[1];
 const POLICY = 'docs/review/maintenance-workflow.md';
 const CORE_TESTS = ['build-scripts/ci/maintenance-ci.test.js', 'build-scripts/ci/check-y1-product-evidence.test.js'];
+// Exact instruction surfaces, not student content, renderers or all skills.
+const PART_A_INSTRUCTIONS = new Set([
+  'BUILD-PARAGRAPH.md', 'BUILD-CHAPTER.md', 'agents/README.md',
+  'docs/workflows/textbook-paragraph-lane.md', 'docs/workflows/part-a-review.md',
+  'skills/econ-paragraph-review.md', 'skills/econ-chapter-builder.md',
+  'skills/econ-textbook-paragraph.md', 'skills/econ-consolidation-builder.md',
+  'skills/econ-testprep-builder.md', 'skills/econ-quality-control.md',
+]);
 const CI_TOOLS = new Set(['maintenance-ci', 'platform-ci-evidence', 'check-agent-branch-safety',
   'check-agent-worktree-safety', 'check-branch-protection', 'check-evidence-line-endings']);
 const REVIEW_TOOLS = new Set([
@@ -51,7 +59,7 @@ function classify(paths, options = {}) {
   if (paths.length === 0) return 'product';
   return paths.every(file => file === 'package.json'
     ? options.packageOnlyCi === true
-    : ALLOWED.some(pattern => pattern.test(file)) || knownTool(file)) ? 'maintenance' : 'product';
+    : PART_A_INSTRUCTIONS.has(file) || ALLOWED.some(pattern => pattern.test(file)) || knownTool(file)) ? 'maintenance' : 'product';
 }
 function knownTool(file) {
   const match = /^build-scripts\/(ci|review-gates)\/([^/]+?)(?:\.test)?\.js$/.exec(file);
@@ -82,6 +90,14 @@ function jestArgs(paths, root = ROOT) {
   };
   for (const file of paths) {
     if (/\.[cm]?js$/.test(file)) tests.add(file);
+    // Markdown is read through fs, so Jest's import graph cannot select these.
+    if (file.endsWith('.md')) tests.add('build-scripts/workflows/check-paragraph-workflow-wording.test.js');
+    if (PART_A_INSTRUCTIONS.has(file)) {
+      tests.add('build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js');
+      tests.add('build-scripts/workflows/check-part-a-pdf-readiness.test.js');
+      tests.add('scripts/tests/validate-paragraph-modes.test.js');
+      tests.add('scripts/tests/validate-chapter.test.js');
+    }
     if (file.startsWith('.github/workflows/')) {
       for (const name of workflowTests[path.basename(file)] || []) tests.add(`build-scripts/${name}.test.js`);
     }

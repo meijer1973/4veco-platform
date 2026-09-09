@@ -41,7 +41,7 @@ The unconditional `validate-platform` job reports the exact commits and profile:
 
 | Trigger/scope | Checks |
 |---|---|
-| Allowlisted CI/review tooling and maintenance docs in a PR | Syntax, JSON/YAML parsing, diff hygiene, affected Jest tests and core CI tests. Workflow/data inputs select their consumer tests explicitly. Deleted JavaScript falls back to the current complete Jest suite because missing import edges cannot be recovered reliably. |
+| Allowlisted CI/review tooling and maintenance/instruction docs in a PR | Syntax, JSON/YAML parsing, diff hygiene, affected Jest tests and core CI tests. Workflow/data inputs select their consumer tests explicitly. Markdown selects existing entry/navigation checks; the exact Part A instruction allowance also selects content-contract, PDF-readiness and paragraph/chapter review-validator tests. Deleted JavaScript falls back to the current complete Jest suite because missing import edges cannot be recovered reliably. |
 | Product, mixed or unknown PR paths; manual `profile=full` | Current complete Jest suite with two workers, content/source validators, presentation builds and rendering proofs, and current reuse of historical Y1 evidence. |
 | Merge push to main | Syntax/configuration and core CI smoke tests. Product validation from the reviewed PR is not repeated. |
 

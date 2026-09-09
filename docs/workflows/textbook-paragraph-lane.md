@@ -138,9 +138,15 @@ node build-scripts/workflows/check-paragraph-lane-scope.js --cwd ../4veco-lessen
 
 ## Closure Gate
 
+Follow [the canonical Part A review and closure rule](part-a-review.md). Reuse
+the independent content review for PR closure and generate the quality record
+from that review and actual inventory.
+
 The lane is closed only when:
 
-- `X.Y.Z-review.md` is produced by an independent `econ-paragraph-review`.
+- `X.Y.Z-review.md` is produced by an independent `econ-paragraph-review`, has
+  identifiable teacher/student and final full-page coverage, the existing
+  `## 2. Verdict` block, and no unresolved FAIL. Author self-review is insufficient.
 - `X.Y.Z-quality-ref.yaml` has an updated `partA:` block.
 - `X.Y.Z-textbook-handoff.md` is filled.
 - No companion completion claim is made.

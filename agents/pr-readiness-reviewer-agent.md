@@ -13,7 +13,9 @@ primary_output: pr-readiness-decision.json and pr-readiness-decision.md
 
 Routine maintenance follows [the maintenance workflow](../docs/review/maintenance-workflow.md)
 and does not invoke this separate readiness role. Use the procedure below for
-protected/product work that requires the gated review route.
+other protected/product work that requires the gated review route. Ordinary
+Part A uses [its content review for closure](../docs/workflows/part-a-review.md)
+and does not invoke this additional readiness assignment.
 
 ## Purpose
 
