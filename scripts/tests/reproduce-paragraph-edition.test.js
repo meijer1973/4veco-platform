@@ -66,6 +66,15 @@ test('output cannot overwrite existing files or modify source repositories', () 
   expect(() => exportEdition()).toThrow(/EEXIST/);
 });
 
+(process.platform === 'win32' ? test : test.skip)('Windows short-name aliases cannot bypass source output protection', () => {
+  // Read the filesystem's actual alias; no files are modified by cmd.exe.
+  const shortRoot = execFileSync('cmd.exe', ['/d', '/v:off', '/c', `for %I in ("${root}") do @echo %~sI`], {
+    encoding: 'utf8', windowsVerbatimArguments: true,
+  }).trim();
+  expect(() => exportEdition({ output: path.join(shortRoot, 'export') })).toThrow(/outside/);
+  expect(fs.existsSync(path.join(root, 'export'))).toBe(false);
+});
+
 test('committed non-PDF placeholders fail before creating output', () => {
   fs.writeFileSync(path.join(folder, name('opgaven')), 'version https://git-lfs.github.com/spec/v1\n');
   git('add', '.'); git('commit', '-qm', 'unresolved pointer');

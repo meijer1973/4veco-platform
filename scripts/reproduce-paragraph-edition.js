@@ -10,7 +10,7 @@ const { committedFiles, blob } = require('./lib/committed-paragraph-files');
 const { PARA_TYPES, classifyParagraph } = require('./lib/paragraph-types');
 
 function reproduce({ lessons, sha, paragraph, output }) {
-  const root = fs.realpathSync(execFileSync('git', ['-C', lessons, 'rev-parse', '--show-toplevel'], { encoding: 'utf8' }).trim());
+  const root = fs.realpathSync.native(execFileSync('git', ['-C', lessons, 'rev-parse', '--show-toplevel'], { encoding: 'utf8' }).trim());
   const files = committedFiles(root, sha, paragraph);
   const kinds = PARA_TYPES[classifyParagraph(path.posix.basename(paragraph))].requiredPdf;
   const pdfs = kinds.map(kind => {
@@ -18,8 +18,10 @@ function reproduce({ lessons, sha, paragraph, output }) {
     if (matches.length !== 1) throw new Error(`Edition must contain exactly one committed ${kind}.pdf; found ${matches.length}`);
     return matches[0];
   });
-  const destination = path.resolve(fs.realpathSync(path.dirname(path.resolve(output))), path.basename(output));
-  for (const protectedRoot of [root, fs.realpathSync(path.resolve(__dirname, '..'))]) {
+  // Native canonicalization also expands Windows 8.3 aliases (e.g. RUNNER~1).
+  // The JS realpath implementation can preserve those and miss containment.
+  const destination = path.resolve(fs.realpathSync.native(path.dirname(path.resolve(output))), path.basename(output));
+  for (const protectedRoot of [root, fs.realpathSync.native(path.resolve(__dirname, '..'))]) {
     const relative = path.relative(protectedRoot, destination);
     if (!relative || (!relative.startsWith(`..${path.sep}`) && relative !== '..' && !path.isAbsolute(relative))) throw new Error('Edition output must be outside the lesson and platform repositories');
   }

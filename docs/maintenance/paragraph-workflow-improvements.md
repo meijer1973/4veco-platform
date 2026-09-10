@@ -93,3 +93,10 @@ artifacts or reassemble chapters/books. Current paragraph/chapter closure now
 requires current review evidence. Historical rebuilds require their applicable
 historical toolchain. The paired hosted workflow remains unproven with a real
 production pair; fixture success is not a production-quality attestation.
+
+The first amended-head CI run exposed a Windows short-path alias bypass in
+the new export destination guard (1,914 tests passed, one failed, 10 skipped).
+The same failure was reproduced locally using a real 8.3 filesystem alias.
+Native realpath canonicalization now expands both source and destination paths
+before comparison. The new regression failed before the repair and passed
+after it; all 35 repair-focused tests passed. Final-head CI is linked in the PR.
