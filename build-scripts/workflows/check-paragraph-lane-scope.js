@@ -33,6 +33,7 @@ const SHARED_PLATFORM_PREFIXES = [
 const SHARED_PLATFORM_ROOT_FILES = new Set([
   '.gitattributes',
   '.gitignore',
+  '.ignore',
   'agents.md',
   'agent_github_entry.md',
   'batch-closure-waiver.md',
@@ -54,6 +55,14 @@ const SHARED_PLATFORM_EXACT_FILES = new Set([
 ]);
 
 const GENERATED_INDEX_FILES = new Set([
+  'reports/github-agent-current-platform.md',
+  'reports/github-agent-current-platform.json',
+  'reports/github-agent-current-lessen.md',
+  'reports/github-agent-current-lessen.json',
+  // Retired generated mirrors remain classified when reviewing their deletion.
+  'reports/markdown/graph-skill-tree.md',
+  'reports/markdown/representation-operation-coverage.md',
+  'reports/markdown/representation-transfer-gaps.md',
   'agent_github_entry.md',
   'research_agent_map.md',
   'research_agent_map_references.md',

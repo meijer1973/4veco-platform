@@ -109,3 +109,13 @@ The platform branch incorporates remote main `3bfb5a97` (PR #239) through a
 normal merge. Only the generated platform file indexes conflicted; the owning
 generator resolved those from the combined tracked tree. Paired PRs #240/#48
 remain the publication records and are not merged as part of this correction.
+
+
+The mandatory shared paragraph-lane scope check initially identified eight
+original cleanup paths as unknown: `.ignore`, the four current-agent index
+outputs and the three retired Markdown mirrors. They now have exact ownership
+classifications in the existing checker sets. Nearby unknown names still fail,
+generated-only changes still fail and companion tasks still cannot change
+shared search configuration. No CI profile, general unknown-path rule or lane
+boundary changed. The scope-checker suite passes 24 tests and the actual shared
+scope check against current main passes without exceptions.
