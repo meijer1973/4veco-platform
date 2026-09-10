@@ -7,7 +7,7 @@ The student-facing output lives in the companion repo `4veco-lessen`. For cross-
 Path reliability:
 
 - Use exact paths from `RESEARCH_AGENT_MAP.md` or this file when possible.
-- Use `reports/github-agent-index-platform.md` and `reports/github-agent-index-lessen.md` for existence checks.
+- Use `reports/github-agent-current-platform.md` and `reports/github-agent-current-lessen.md` for existence checks.
 - Use GitHub search mainly for discovery, not proof; confirm search hits through exact paths or the generated inventory.
 - These GitHub-facing maps must be refreshed and pushed whenever repository paths, roadmaps, generated reports, review packets, agents, skills, or source surfaces change.
 
@@ -104,7 +104,7 @@ Useful entry points:
 - `docs/roadmaps/quality-standards/sprint-ledger.md`
 - `docs/roadmaps/quality-standards/quality-standards-end-state.md`
 - `references/owned/course-blueprint-v6-three-year.md` (draft three-year blueprint; v5 remains active until review)
-- `reports/github-agent-index-platform.md` after running `npm.cmd run agent:index`
+- `reports/github-agent-current-platform.md` after running `npm.cmd run agent:index`
 
 Task-routing guidance:
 
@@ -137,3 +137,9 @@ Task-routing guidance:
   merge and before refreshed-head platform validation. If both members are
   still draft but substantively ready, run `npm.cmd run apply:bundle-readiness`
   from the controller decision before requesting bundle merge authorization.
+
+Current navigation uses the current file indexes. For historical or provenance
+questions, use [archive navigation](archive/README.md); complete machine
+inventories remain in the platform reports as `github-agent-index-platform`
+and `github-agent-index-lessen` (`.json` / `.md`).
+Carried requirements: [current open items](docs/maintenance/open-items.md).

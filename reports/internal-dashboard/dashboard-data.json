@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T10:25:28.163Z",
+  "generatedAt": "2026-09-10T11:38:49.994Z",
   "internalOnly": true,
   "teams": [
     {
@@ -9,10 +9,22 @@
       "description": "Owns platform guardrails, validator and deploy health, architecture quality, year and multi-year planning, reporting, and cross-team visibility.",
       "roadmaps": [
         {
-          "label": "Legacy platform roadmap",
-          "path": "knowledge/old/platform-team-roadmap.md",
+          "label": "Current carried requirements",
+          "path": "docs/maintenance/open-items.md",
           "exists": true,
-          "repositoryPath": "4veco-platform/knowledge/old/platform-team-roadmap.md",
+          "repositoryPath": "4veco-platform/docs/maintenance/open-items.md",
+          "generated": "",
+          "updated": "",
+          "scope": "",
+          "summary": "Carried requirements from archived planning Archiving changes location only. Current roadmap decisions and source approvals remain authoritative. Unknown below means implementation/closure has not been proved by this cleanup; it is neither a new approval nor a reopened decision. Companion quality Source: April quality review. Current owner: platform companion workflow and the lesson roadmap. Pipeline coordination Source: coordination handoff. Owner: platform maintenance; current worktree safety remains mandatory....",
+          "sprints": []
+        },
+        {
+          "label": "Historical platform roadmap",
+          "path": "archive/knowledge/old/platform-team-roadmap.md",
+          "historical": true,
+          "exists": true,
+          "repositoryPath": "4veco-platform/archive/knowledge/old/platform-team-roadmap.md",
           "generated": "2026-04-23",
           "updated": "2026-04-27 after splitting research-agent maps/prompts into full-repository and references-only versions",
           "scope": "",
@@ -77,14 +89,14 @@
           ]
         }
       ],
-      "sprints": [
+      "historicalSprints": [
         {
           "sprint": "P1.4",
           "name": "Platform Issue Catalog And Improvement Plan",
           "completed": "no",
           "currentState": "Current platform priority; create the non-reference platform issue log by quality category and turn it into the next-period improvement plan.",
           "exitGate": "",
-          "roadmap": "Legacy platform roadmap"
+          "roadmap": "Historical platform roadmap"
         },
         {
           "sprint": "P1.5",
@@ -92,7 +104,7 @@
           "completed": "no",
           "currentState": "Planned; make routine health checks harder to skip.",
           "exitGate": "",
-          "roadmap": "Legacy platform roadmap"
+          "roadmap": "Historical platform roadmap"
         },
         {
           "sprint": "0.5",
@@ -100,7 +112,7 @@
           "completed": "yes",
           "currentState": "Signed off for Part A textbook/book production.",
           "exitGate": "",
-          "roadmap": "Legacy platform roadmap"
+          "roadmap": "Historical platform roadmap"
         },
         {
           "sprint": "P1.1",
@@ -108,7 +120,7 @@
           "completed": "yes",
           "currentState": "`1.1.1` companion path proven end-to-end.",
           "exitGate": "",
-          "roadmap": "Legacy platform roadmap"
+          "roadmap": "Historical platform roadmap"
         },
         {
           "sprint": "P1.2",
@@ -116,7 +128,7 @@
           "completed": "yes",
           "currentState": "`1.1.2` passed as a technical probe; its test materials were removed for didactic rebuild.",
           "exitGate": "",
-          "roadmap": "Legacy platform roadmap"
+          "roadmap": "Historical platform roadmap"
         },
         {
           "sprint": "P1.3",
@@ -124,7 +136,7 @@
           "completed": "yes",
           "currentState": "Internal three-team dashboard MVP generates from team roadmap sources and quality-gate issues.",
           "exitGate": "",
-          "roadmap": "Legacy platform roadmap"
+          "roadmap": "Historical platform roadmap"
         },
         {
           "sprint": "P1.3a",
@@ -132,7 +144,7 @@
           "completed": "yes",
           "currentState": "Reference planning moved to `references/reference-team-roadmap.md`; dashboard now has a dedicated References tab.",
           "exitGate": "",
-          "roadmap": "Legacy platform roadmap"
+          "roadmap": "Historical platform roadmap"
         },
         {
           "sprint": "P1.3b",
@@ -140,11 +152,12 @@
           "completed": "yes",
           "currentState": "Completed as a references map, then split on 2026-04-27 into full-repository and references-only map/prompt pairs.",
           "exitGate": "",
-          "roadmap": "Legacy platform roadmap"
+          "roadmap": "Historical platform roadmap"
         }
       ],
-      "completedCount": 6,
-      "openCount": 2
+      "sprints": [],
+      "completedCount": 0,
+      "openCount": 0
     },
     {
       "id": "references",
@@ -160,7 +173,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-08-23 Roadmap ID: references-team-roadmap Roadmap version: v3.57-y1-golden-controlled-wave-renewal Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE ec...",
+          "summary": "References Team Roadmap Full baseline and completed execution history: archive/roadmaps/snapshots/references-team-20260910.md. Current direction, ledger decisions and carried conditions remain in this live file. Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-08-23 Roadmap ID: references-team-roadmap Roadmap version: v3.57-y1-golden-controlled-wave-renewal Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/,...",
           "sprints": [
             {
               "sprint": "BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
@@ -1479,6 +1492,7 @@
           "sprints": []
         }
       ],
+      "historicalSprints": [],
       "sprints": [
         {
           "sprint": "LESSON-SCALE-1",
@@ -2961,7 +2975,7 @@
           "repositoryPath": "4veco-lessen/lessen-team-roadmap.md",
           "generated": "2026-04-23",
           "updated": "2026-04-25 after Sprint L1.3A-C close — basic HTML layout, companion SVG variant system with light/dark symmetry validator, and PPTX teacher-supporting slide rules all landed in platform; L1.4 (pipeline regression on `1.1.2 Percentages en indexcijfers`) is now active.",
-          "scope": "- `uitleg voorkennis.html`",
+          "scope": "",
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
             {
@@ -3562,6 +3576,7 @@
           ]
         }
       ],
+      "historicalSprints": [],
       "sprints": [
         {
           "sprint": "GAME-ROUTE-AFFORDANCE-1",
@@ -4256,332 +4271,30 @@
         {
           "label": "Innovation platform roadmap",
           "path": "../4veco-platform-collab/knowledge/innovation-team-roadmap.md",
-          "exists": true,
+          "exists": false,
           "repositoryPath": "4veco-platform-collab/knowledge/innovation-team-roadmap.md",
-          "generated": "2026-04-24",
+          "generated": "",
           "updated": "",
-          "scope": "collab work 3 innovation track for presentations, web-native lesson media, and later experiments",
-          "summary": "The Innovation Team owns controlled experiments that may break the mold before they become production workflow. This track is allowed to take more risk than normal material production, but the risk stays inside the collab setup and becomes useful only when the learning can be turned into platform workflows, reusable builders, or clear product decisions.",
-          "sprints": [
-            {
-              "sprint": "Sprint I0",
-              "name": "Charter and baseline",
-              "completed": "no",
-              "currentState": "What does \"better PowerPoint\" mean for one real lesson?",
-              "exitGate": "One baseline presentation is selected, inspected, and scored against a short rubric."
-            },
-            {
-              "sprint": "Sprint I1",
-              "name": "First excellent presentation",
-              "completed": "no",
-              "currentState": "Can we make one teacher-ready PowerPoint that is clearly better than the current pattern?",
-              "exitGate": "One non-graph presentation is approved as the reference standard."
-            },
-            {
-              "sprint": "Sprint I2",
-              "name": "Presentation production loop",
-              "completed": "no",
-              "currentState": "Can the improved standard be reproduced without heroic one-off work?",
-              "exitGate": "Builder, checklist, render review, and QA notes are repeatable for a second presentation."
-            },
-            {
-              "sprint": "Sprint I3",
-              "name": "Graph presentations MVP",
-              "completed": "no",
-              "currentState": "Can we build graph-heavy PowerPoints that are mathematically correct and visually calm?",
-              "exitGate": "One graph-heavy presentation passes visual, economic, and geometry checks."
-            },
-            {
-              "sprint": "Sprint I4",
-              "name": "Graph scale-up",
-              "completed": "no",
-              "currentState": "Can graph-heavy presentation production become a reliable pattern?",
-              "exitGate": "Two more graph-heavy presentations are produced using the same graph pipeline."
-            },
-            {
-              "sprint": "Sprint I5",
-              "name": "Web-native presentation prototype",
-              "completed": "no",
-              "currentState": "Can a presentation live naturally inside the lesson website instead of feeling like embedded Office?",
-              "exitGate": "One approved presentation is rendered as a web-native lesson experience."
-            },
-            {
-              "sprint": "Sprint I6",
-              "name": "Web integration polish",
-              "completed": "no",
-              "currentState": "Can web-native presentations work for students and teachers across devices?",
-              "exitGate": "Navigation, responsive layout, assets, and teacher use case are validated in browser."
-            },
-            {
-              "sprint": "Sprint I7",
-              "name": "Speaker notes to speech prototype",
-              "completed": "no",
-              "currentState": "Can speaker notes become a useful narrated experience?",
-              "exitGate": "One short presentation has generated narration aligned to slides."
-            },
-            {
-              "sprint": "Sprint I8",
-              "name": "Video-like lesson experience",
-              "completed": "no",
-              "currentState": "Can slides, notes, narration, and pacing create a coherent video-like flow?",
-              "exitGate": "One complete prototype exports or plays as a narrated lesson sequence."
-            },
-            {
-              "sprint": "Sprint I9",
-              "name": "Innovation backlog reset",
-              "completed": "no",
-              "currentState": "What should the innovation team attack next?",
-              "exitGate": "Backlog is ranked by educational value, technical risk, and reusability."
-            }
-          ]
+          "scope": "",
+          "summary": "Roadmap file is missing.",
+          "sprints": []
         },
         {
           "label": "Innovation output roadmap",
           "path": "../4veco-lessen-collab/innovation-team-roadmap.md",
-          "exists": true,
+          "exists": false,
           "repositoryPath": "4veco-lessen-collab/innovation-team-roadmap.md",
-          "generated": "2026-04-24",
+          "generated": "",
           "updated": "",
-          "scope": "collab work 3 innovation track for presentations, web-native lesson media, and later experiments",
-          "summary": "The Innovation Team owns controlled experiments that may break the mold before they become production workflow. This track is not a production team and does not need to deliver production-ready presentations. Its job is to improve quality standards, create strong concept samples, expose weak spots in the current pipeline, and prepare a clear handoff to the team that makes lesson material.",
-          "sprints": [
-            {
-              "sprint": "Sprint I0",
-              "name": "Rubric seed from last strong presentation",
-              "completed": "yes",
-              "currentState": "Which qualities made the last presentation pretty good, and where is it still not ready?",
-              "exitGate": "A first rubric draft is created from the last strong presentation, with known gaps recorded."
-            },
-            {
-              "sprint": "Sprint I1",
-              "name": "First graph-heavy presentation",
-              "completed": "no",
-              "currentState": "Can the next chapter's graph paragraph become a strong PowerPoint without losing economic precision?",
-              "exitGate": "One graph-heavy presentation draft exists and has been reviewed for graph correctness, readability, and flow."
-            },
-            {
-              "sprint": "Sprint I2",
-              "name": "Flowchart presentation prototype",
-              "completed": "no",
-              "currentState": "Can a presentation lean on very well-formed flowcharts as the main explanation structure?",
-              "exitGate": "One flowchart-led presentation draft exists and has been reviewed for clarity, sequencing, and visual discipline."
-            },
-            {
-              "sprint": "Sprint I3",
-              "name": "Rubric and test revision",
-              "completed": "no",
-              "currentState": "What must the rubric and tests learn from the graph and flowchart prototypes?",
-              "exitGate": "The rubric, checks, and acceptance gates are revised using evidence from three presentation types."
-            },
-            {
-              "sprint": "Sprint I4",
-              "name": "Presentation production loop",
-              "completed": "no",
-              "currentState": "Can the improved standard be reproduced without heroic one-off work?",
-              "exitGate": "Builder, checklist, render review, and QA notes are repeatable for another presentation."
-            },
-            {
-              "sprint": "Sprint I5",
-              "name": "Web-native presentation prototype",
-              "completed": "no",
-              "currentState": "Can a presentation live naturally inside the lesson website instead of feeling like embedded Office?",
-              "exitGate": "One approved presentation is rendered as a web-native lesson experience."
-            },
-            {
-              "sprint": "Sprint I6",
-              "name": "Web integration polish",
-              "completed": "no",
-              "currentState": "Can web-native presentations work for students and teachers across devices?",
-              "exitGate": "Navigation, responsive layout, assets, and teacher use case are validated in browser."
-            },
-            {
-              "sprint": "Sprint I7",
-              "name": "Speaker notes to speech prototype",
-              "completed": "no",
-              "currentState": "Can speaker notes become a useful narrated experience?",
-              "exitGate": "One short presentation has generated narration aligned to slides."
-            },
-            {
-              "sprint": "Sprint I8",
-              "name": "Video-like lesson experience",
-              "completed": "no",
-              "currentState": "Can slides, notes, narration, and pacing create a coherent video-like flow?",
-              "exitGate": "One complete prototype exports or plays as a narrated lesson sequence."
-            },
-            {
-              "sprint": "Sprint I9",
-              "name": "Innovation backlog reset",
-              "completed": "no",
-              "currentState": "What should the innovation team attack next?",
-              "exitGate": "Backlog is ranked by educational value, technical risk, and reusability."
-            }
-          ]
+          "scope": "",
+          "summary": "Roadmap file is missing.",
+          "sprints": []
         }
       ],
-      "sprints": [
-        {
-          "sprint": "Sprint I0",
-          "name": "Charter and baseline",
-          "completed": "no",
-          "currentState": "What does \"better PowerPoint\" mean for one real lesson?",
-          "exitGate": "One baseline presentation is selected, inspected, and scored against a short rubric.",
-          "roadmap": "Innovation platform roadmap"
-        },
-        {
-          "sprint": "Sprint I1",
-          "name": "First excellent presentation",
-          "completed": "no",
-          "currentState": "Can we make one teacher-ready PowerPoint that is clearly better than the current pattern?",
-          "exitGate": "One non-graph presentation is approved as the reference standard.",
-          "roadmap": "Innovation platform roadmap"
-        },
-        {
-          "sprint": "Sprint I2",
-          "name": "Presentation production loop",
-          "completed": "no",
-          "currentState": "Can the improved standard be reproduced without heroic one-off work?",
-          "exitGate": "Builder, checklist, render review, and QA notes are repeatable for a second presentation.",
-          "roadmap": "Innovation platform roadmap"
-        },
-        {
-          "sprint": "Sprint I3",
-          "name": "Graph presentations MVP",
-          "completed": "no",
-          "currentState": "Can we build graph-heavy PowerPoints that are mathematically correct and visually calm?",
-          "exitGate": "One graph-heavy presentation passes visual, economic, and geometry checks.",
-          "roadmap": "Innovation platform roadmap"
-        },
-        {
-          "sprint": "Sprint I4",
-          "name": "Graph scale-up",
-          "completed": "no",
-          "currentState": "Can graph-heavy presentation production become a reliable pattern?",
-          "exitGate": "Two more graph-heavy presentations are produced using the same graph pipeline.",
-          "roadmap": "Innovation platform roadmap"
-        },
-        {
-          "sprint": "Sprint I5",
-          "name": "Web-native presentation prototype",
-          "completed": "no",
-          "currentState": "Can a presentation live naturally inside the lesson website instead of feeling like embedded Office?",
-          "exitGate": "One approved presentation is rendered as a web-native lesson experience.",
-          "roadmap": "Innovation platform roadmap"
-        },
-        {
-          "sprint": "Sprint I6",
-          "name": "Web integration polish",
-          "completed": "no",
-          "currentState": "Can web-native presentations work for students and teachers across devices?",
-          "exitGate": "Navigation, responsive layout, assets, and teacher use case are validated in browser.",
-          "roadmap": "Innovation platform roadmap"
-        },
-        {
-          "sprint": "Sprint I7",
-          "name": "Speaker notes to speech prototype",
-          "completed": "no",
-          "currentState": "Can speaker notes become a useful narrated experience?",
-          "exitGate": "One short presentation has generated narration aligned to slides.",
-          "roadmap": "Innovation platform roadmap"
-        },
-        {
-          "sprint": "Sprint I8",
-          "name": "Video-like lesson experience",
-          "completed": "no",
-          "currentState": "Can slides, notes, narration, and pacing create a coherent video-like flow?",
-          "exitGate": "One complete prototype exports or plays as a narrated lesson sequence.",
-          "roadmap": "Innovation platform roadmap"
-        },
-        {
-          "sprint": "Sprint I9",
-          "name": "Innovation backlog reset",
-          "completed": "no",
-          "currentState": "What should the innovation team attack next?",
-          "exitGate": "Backlog is ranked by educational value, technical risk, and reusability.",
-          "roadmap": "Innovation platform roadmap"
-        },
-        {
-          "sprint": "Sprint I1",
-          "name": "First graph-heavy presentation",
-          "completed": "no",
-          "currentState": "Can the next chapter's graph paragraph become a strong PowerPoint without losing economic precision?",
-          "exitGate": "One graph-heavy presentation draft exists and has been reviewed for graph correctness, readability, and flow.",
-          "roadmap": "Innovation output roadmap"
-        },
-        {
-          "sprint": "Sprint I2",
-          "name": "Flowchart presentation prototype",
-          "completed": "no",
-          "currentState": "Can a presentation lean on very well-formed flowcharts as the main explanation structure?",
-          "exitGate": "One flowchart-led presentation draft exists and has been reviewed for clarity, sequencing, and visual discipline.",
-          "roadmap": "Innovation output roadmap"
-        },
-        {
-          "sprint": "Sprint I3",
-          "name": "Rubric and test revision",
-          "completed": "no",
-          "currentState": "What must the rubric and tests learn from the graph and flowchart prototypes?",
-          "exitGate": "The rubric, checks, and acceptance gates are revised using evidence from three presentation types.",
-          "roadmap": "Innovation output roadmap"
-        },
-        {
-          "sprint": "Sprint I4",
-          "name": "Presentation production loop",
-          "completed": "no",
-          "currentState": "Can the improved standard be reproduced without heroic one-off work?",
-          "exitGate": "Builder, checklist, render review, and QA notes are repeatable for another presentation.",
-          "roadmap": "Innovation output roadmap"
-        },
-        {
-          "sprint": "Sprint I5",
-          "name": "Web-native presentation prototype",
-          "completed": "no",
-          "currentState": "Can a presentation live naturally inside the lesson website instead of feeling like embedded Office?",
-          "exitGate": "One approved presentation is rendered as a web-native lesson experience.",
-          "roadmap": "Innovation output roadmap"
-        },
-        {
-          "sprint": "Sprint I6",
-          "name": "Web integration polish",
-          "completed": "no",
-          "currentState": "Can web-native presentations work for students and teachers across devices?",
-          "exitGate": "Navigation, responsive layout, assets, and teacher use case are validated in browser.",
-          "roadmap": "Innovation output roadmap"
-        },
-        {
-          "sprint": "Sprint I7",
-          "name": "Speaker notes to speech prototype",
-          "completed": "no",
-          "currentState": "Can speaker notes become a useful narrated experience?",
-          "exitGate": "One short presentation has generated narration aligned to slides.",
-          "roadmap": "Innovation output roadmap"
-        },
-        {
-          "sprint": "Sprint I8",
-          "name": "Video-like lesson experience",
-          "completed": "no",
-          "currentState": "Can slides, notes, narration, and pacing create a coherent video-like flow?",
-          "exitGate": "One complete prototype exports or plays as a narrated lesson sequence.",
-          "roadmap": "Innovation output roadmap"
-        },
-        {
-          "sprint": "Sprint I9",
-          "name": "Innovation backlog reset",
-          "completed": "no",
-          "currentState": "What should the innovation team attack next?",
-          "exitGate": "Backlog is ranked by educational value, technical risk, and reusability.",
-          "roadmap": "Innovation output roadmap"
-        },
-        {
-          "sprint": "Sprint I0",
-          "name": "Rubric seed from last strong presentation",
-          "completed": "yes",
-          "currentState": "Which qualities made the last presentation pretty good, and where is it still not ready?",
-          "exitGate": "A first rubric draft is created from the last strong presentation, with known gaps recorded.",
-          "roadmap": "Innovation output roadmap"
-        }
-      ],
-      "completedCount": 1,
-      "openCount": 19
+      "historicalSprints": [],
+      "sprints": [],
+      "completedCount": 0,
+      "openCount": 0
     }
   ],
   "issueCategories": [
@@ -4589,25 +4302,25 @@
       "id": "inspection_accountability",
       "label": "Inspection And Accountability",
       "description": "Evidence, traceability, coverage, and proof that materials meet school, inspection, and exam-program expectations.",
-      "count": 0
+      "count": 1
     },
     {
       "id": "reference_quality",
       "label": "Reference Quality",
       "description": "Correctness, freshness, deduplication, source validity, unit quality, term quality, and exam-code links.",
-      "count": 0
+      "count": 1
     },
     {
       "id": "didactic_quality",
       "label": "Didactic Quality",
       "description": "Whether the right skills, complexes, goals, sequence, cognitive load, and misconceptions are handled efficiently.",
-      "count": 0
+      "count": 1
     },
     {
       "id": "assessment_exam_fit",
       "label": "Assessment And Exam Fit",
       "description": "Alignment with CvTE-style demands, question types, answer models, target skills, and exam realism.",
-      "count": 0
+      "count": 1
     },
     {
       "id": "student_teacher_experience",
@@ -4619,13 +4332,13 @@
       "id": "platform_reliability",
       "label": "Platform Reliability",
       "description": "Repeatability and trustworthiness of generators, validators, deploys, links, tests, and reporting routines.",
-      "count": 0
+      "count": 1
     },
     {
       "id": "production_readiness",
       "label": "Production Readiness",
       "description": "Release and scaling blockers: incomplete artifacts, unresolved flags, manual steps, rebuild gaps, and known risks.",
-      "count": 0
+      "count": 1
     },
     {
       "id": "innovation_transfer",
@@ -4634,22 +4347,53 @@
       "count": 0
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "title": "News source URLs are not truly validated",
+      "category": "reference_quality",
+      "source": "archive/knowledge/old/platform-team-companion-quality-gate-review.md"
+    },
+    {
+      "title": "Complete-mode quality refs can be stale",
+      "category": "inspection_accountability",
+      "source": "archive/knowledge/old/platform-team-companion-quality-gate-review.md"
+    },
+    {
+      "title": "Review flags are not surfaced as scale blockers",
+      "category": "production_readiness",
+      "source": "archive/knowledge/old/platform-team-companion-quality-gate-review.md"
+    },
+    {
+      "title": "Plan-to-output alignment is not enforced",
+      "category": "didactic_quality",
+      "source": "archive/knowledge/old/platform-team-companion-quality-gate-review.md"
+    },
+    {
+      "title": "Browser smoke checks are not part of the repeatable gate",
+      "category": "platform_reliability",
+      "source": "archive/knowledge/old/platform-team-companion-quality-gate-review.md"
+    },
+    {
+      "title": "Game-data tests are structural, not content-quality checks",
+      "category": "assessment_exam_fit",
+      "source": "archive/knowledge/old/platform-team-companion-quality-gate-review.md"
+    }
+  ],
   "greenGate": [
     {
       "command": "npm.cmd run check:platform",
       "lastKnown": "passes",
-      "evidence": "knowledge/old/platform-team-roadmap.md"
+      "evidence": "archive/knowledge/old/platform-team-roadmap.md"
     },
     {
       "command": "npm.cmd run check:book -- \"..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\"",
       "lastKnown": "passes",
-      "evidence": "knowledge/old/platform-team-roadmap.md"
+      "evidence": "archive/knowledge/old/platform-team-roadmap.md"
     },
     {
       "command": "node scripts\\validate-paragraph.js --mode complete --profile student-web \"<1.1.1-folder>\"",
       "lastKnown": "passes",
-      "evidence": "knowledge/old/platform-team-roadmap.md"
+      "evidence": "archive/knowledge/old/platform-team-roadmap.md"
     }
   ],
   "companionPipeline": [

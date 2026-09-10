@@ -47,7 +47,8 @@ function main() {
   if (inventory.schema_version !== '0.1') fail('unexpected schema_version');
   if (!Array.isArray(inventory.files)) fail('files must be an array');
 
-  const current = Array.from(new Set(ROOTS.flatMap(walkFiles))).sort();
+  const current = Array.from(new Set([...ROOTS.flatMap(walkFiles),
+    ...require('../lib/historical-paths').archiveInventoryPaths(REPO_ROOT)])).sort();
   const listed = inventory.files.map((entry) => entry.path).sort();
   const missing = current.filter((pathRel) => !listed.includes(pathRel));
   const stale = listed.filter((pathRel) => !current.includes(pathRel));

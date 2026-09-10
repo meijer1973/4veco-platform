@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const fs = require('fs');
+let fs = require('fs');
 const path = require('path');
 
 const FORBIDDEN_TERMS = [
@@ -278,6 +278,7 @@ function parseArgs(argv) {
 
 function main() {
   const options = parseArgs(process.argv.slice(2));
+  fs = require('../lib/historical-paths').historicalReader(options.root);
   const targets = options.active ? activeFiles(options.root) : options.files;
   if (targets.length === 0) fail('missing file path or --active');
 

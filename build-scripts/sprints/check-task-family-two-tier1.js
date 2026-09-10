@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-const fs = require('fs');
 const path = require('path');
 const childProcess = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..', '..');
+const fs = require('../lib/historical-paths').historicalReader(ROOT);
 const TaskShellEngine = require(path.join(ROOT, 'engines', 'task-shell-engine'));
 const TaskShellUI = require(path.join(ROOT, 'engines', 'task-shell-ui'));
 
@@ -271,8 +271,11 @@ assert(/keyboard/i.test(manifest) && /screen-reader/i.test(manifest), 'screensho
 assert(/no generated lesson output/i.test(manifest), 'screenshot manifest must preserve generated-output boundary');
 
 assert(fs.existsSync(path.join(ROOT, 'knowledge', 'exit-ticket-game-1.1.1.zip')), 'old exit-ticket archive must remain tracked in the workspace');
-gitOutput(['ls-files', '--error-unmatch', 'knowledge/exit-ticket-game-1.1.1.zip']);
-assert(gitOutput(['diff', '--name-only', '--', 'knowledge/exit-ticket-game-1.1.1.zip']) === '', 'old exit-ticket archive must have no unstaged diff');
-assert(gitOutput(['diff', '--cached', '--name-only', '--', 'knowledge/exit-ticket-game-1.1.1.zip']) === '', 'old exit-ticket archive must have no staged diff');
+const historicalZip = path.relative(ROOT, require('../lib/historical-paths').resolveHistoricalPath(ROOT,
+  path.join(ROOT, 'knowledge/exit-ticket-game-1.1.1.zip'))).replace(/\\/g, '/');
+gitOutput(['ls-files', '--error-unmatch', historicalZip]);
+assert(gitOutput(['rev-parse', ':' + historicalZip]) ===
+  require('../lib/historical-paths').gitBlob(fs.readFileSync(path.join(ROOT, historicalZip))),
+  'tracked exit-ticket archive must match the verified workspace bytes');
 
 console.log('TASK-FAMILY-TWO-TIER-1 check OK');

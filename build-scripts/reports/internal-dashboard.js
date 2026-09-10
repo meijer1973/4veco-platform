@@ -24,7 +24,8 @@ const TEAM_TABS = [
     description:
       'Owns platform guardrails, validator and deploy health, architecture quality, year and multi-year planning, reporting, and cross-team visibility.',
     roadmaps: [
-      { label: 'Legacy platform roadmap', path: 'knowledge/old/platform-team-roadmap.md' },
+      { label: 'Current carried requirements', path: 'docs/maintenance/open-items.md' },
+      { label: 'Historical platform roadmap', path: 'archive/knowledge/old/platform-team-roadmap.md', historical: true },
     ],
   },
   {
@@ -112,7 +113,7 @@ const ISSUE_CATEGORIES = [
   },
 ];
 
-const QUALITY_REVIEW = 'knowledge/platform-team-companion-quality-gate-review.md';
+const QUALITY_REVIEW = 'archive/knowledge/old/platform-team-companion-quality-gate-review.md';
 
 function relToAbs(relPath) {
   const direct = path.resolve(REPO_ROOT, relPath);
@@ -296,7 +297,7 @@ function parseQualityIssues() {
 function buildData() {
   const teams = TEAM_TABS.map((team) => {
     const roadmaps = team.roadmaps.map(parseRoadmap);
-    const sprints = sortSprintsOpenFirst(roadmaps.flatMap((roadmap) =>
+    const sprints = sortSprintsOpenFirst(roadmaps.filter(roadmap => !roadmap.historical).flatMap((roadmap) =>
       roadmap.sprints.map((sprint) => ({
         ...sprint,
         roadmap: roadmap.label,
@@ -305,6 +306,8 @@ function buildData() {
     return {
       ...team,
       roadmaps,
+      historicalSprints: roadmaps.filter(roadmap => roadmap.historical).flatMap(roadmap =>
+        roadmap.sprints.map(sprint => ({ ...sprint, roadmap: roadmap.label }))),
       sprints,
       completedCount: sprints.filter((s) => s.completed === 'yes').length,
       openCount: sprints.filter((s) => s.completed !== 'yes').length,
@@ -329,17 +332,17 @@ function buildData() {
       {
         command: 'npm.cmd run check:platform',
         lastKnown: 'passes',
-        evidence: 'knowledge/old/platform-team-roadmap.md',
+        evidence: 'archive/knowledge/old/platform-team-roadmap.md',
       },
       {
         command: 'npm.cmd run check:book -- "..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod"',
         lastKnown: 'passes',
-        evidence: 'knowledge/old/platform-team-roadmap.md',
+        evidence: 'archive/knowledge/old/platform-team-roadmap.md',
       },
       {
         command: 'node scripts\\validate-paragraph.js --mode complete --profile student-web "<1.1.1-folder>"',
         lastKnown: 'passes',
-        evidence: 'knowledge/old/platform-team-roadmap.md',
+        evidence: 'archive/knowledge/old/platform-team-roadmap.md',
       },
     ],
     companionPipeline: [
@@ -436,6 +439,10 @@ function renderTeamPanel(team, active) {
           <tbody>${renderSprintRows(team.sprints)}</tbody>
         </table>
       </div>
+      <details><summary>Historical sprint records</summary>
+        <p>Original states are historical; current requirements are tracked in the live roadmap and open-items document.</p>
+        <table><tbody>${renderSprintRows(team.historicalSprints || [])}</tbody></table>
+      </details>
     </section>`;
 }
 
@@ -689,19 +696,21 @@ function renderDashboard(data) {
     ${panels}
 
     <section class="list-panel" aria-labelledby="quality-heading">
-      <h2 id="quality-heading">Open Quality Issues By Category</h2>
+      <h2 id="quality-heading">Carried Quality Requirements By Category</h2>
       <div class="dashboard-grid">${categories}</div>
-      <h3>Known Platform Quality-Gate Issues</h3>
+      <h3>Historical Quality-Gate Findings</h3>
+      <p>These are findings from the April review, not fresh failures. See
+      <a href="../../docs/maintenance/open-items.md">current dispositions and next actions</a>.</p>
       <ul>${issues || '<li>No open issues parsed from the quality-gate review.</li>'}</ul>
     </section>
 
     <section class="list-panel" aria-labelledby="gate-heading">
-      <h2 id="gate-heading">Green-Gate Evidence</h2>
+      <h2 id="gate-heading">Historical Green-Gate Evidence</h2>
       <ul>${greenGate}</ul>
     </section>
 
     <section class="list-panel" aria-labelledby="companion-heading">
-      <h2 id="companion-heading">Companion Pipeline Status</h2>
+      <h2 id="companion-heading">Historical Companion Pipeline Snapshot</h2>
       <ul>${companion}</ul>
     </section>
   </main>

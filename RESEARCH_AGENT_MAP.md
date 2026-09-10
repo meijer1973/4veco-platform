@@ -78,7 +78,7 @@ Access rules:
 - Directories are path namespaces, not fetch targets.
 - Fetch files only by declared path, declared namespace search, or declared path template.
 - Use exact paths from this file or `AGENT_GITHUB_ENTRY.md` when possible; these curated files are more reliable than GitHub search results.
-- Use `reports/github-agent-index-platform.md` and `reports/github-agent-index-lessen.md` for file-existence checks.
+- Use `reports/github-agent-current-platform.md` and `reports/github-agent-current-lessen.md` for file-existence checks.
 - Use GitHub search mainly for discovery, not proof. Confirm discoveries by fetching exact paths or checking the generated inventory.
 - If raw URL access fails, retry through authenticated GitHub connector access before concluding the file is unavailable.
 
@@ -173,8 +173,8 @@ it does not replace the target registry or authorize lesson production.
 - `docs/inspection-standards/nl-vo-evidence-model.md`
 - `docs/roadmaps/roadmap-version-index.json`
 - `references/SOURCE_OF_TRUTH.md`
-- `knowledge/old/platform-team-roadmap.md`
-- `knowledge/old/three-month-roadmap.md`
+- `docs/maintenance/open-items.md`
+- `docs/review/maintenance-workflow.md`
 
 Machine-readable:
 
@@ -250,8 +250,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/inspection-standards/nl-vo-evidence-model.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/SOURCE_OF_TRUTH.md
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/platform-team-roadmap.md
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/three-month-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/maintenance/open-items.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/maintenance-workflow.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/package.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/micro-teaching-units.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/begrippen.json
@@ -340,7 +340,7 @@ Use these anchors before free-form browsing.
   "nl_vo_evidence_profile": "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
   "nl_vo_evidence_model": "docs/inspection-standards/nl-vo-evidence-model.md",
   "roadmap_version_index": "docs/roadmaps/roadmap-version-index.json",
-  "platform_roadmap": "knowledge/old/platform-team-roadmap.md",
+  "platform_roadmap": "docs/maintenance/open-items.md",
   "dashboard_index": "reports/internal-dashboard/dashboard-data.json"
 }
 ```
@@ -386,7 +386,7 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/sprint-ledger.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/quality-standards-end-state.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/platform-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/maintenance/open-items.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
 
 ## Path Registry
@@ -423,8 +423,8 @@ index_anchors (full URLs):
     "docs/roadmaps/quality-standards/sprint-ledger.md",
     "docs/roadmaps/quality-standards/quality-standards-end-state.md",
     "docs/roadmaps/roadmap-version-index.json",
-    "knowledge/old/platform-team-roadmap.md",
-    "knowledge/old/three-month-roadmap.md"
+    "docs/maintenance/open-items.md",
+    "docs/review/maintenance-workflow.md"
   ],
   "inspection_standards_paths": [
     "docs/roadmaps/quality-standards/README.md",
@@ -538,8 +538,8 @@ roadmap_paths (full URLs):
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/platform-team-roadmap.md
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/three-month-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/maintenance/open-items.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/maintenance-workflow.md
 
 engine_paths (full URLs):
 
@@ -711,7 +711,7 @@ Agents MUST follow this sequence:
    - chapter production -> `BUILD-CHAPTER.md` plus relevant `skills/`
    - build/deploy -> `build-scripts/README.md`, `scripts/deploy.js`, relevant `build-scripts/platform/*`
    - engine behavior -> relevant `engines/*` files and `engines/tests/*`
-   - roadmap -> `docs/roadmaps/roadmap-version-index.json`, `references/reference-team-roadmap.md`, `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`, `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`, legacy `knowledge/old/platform-team-roadmap.md`, and dashboard data
+   - roadmap -> `docs/roadmaps/roadmap-version-index.json`, `references/reference-team-roadmap.md`, `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`, `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`, current carried requirements in `docs/maintenance/open-items.md`, and dashboard data
 5. Search declared namespaces only after loading relevant guides and indexes.
 6. Distinguish source files, generated files, and deploy/build targets before making conclusions.
 7. Label every conclusion as one of:
@@ -889,8 +889,8 @@ Rules:
     "reports/internal-dashboard/dashboard-data.json"
   ],
   "roadmap_implications": [
-    "knowledge/old/platform-team-roadmap.md",
-    "knowledge/old/three-month-roadmap.md",
+    "docs/maintenance/open-items.md",
+    "docs/review/maintenance-workflow.md",
     "references/reference-team-roadmap.md",
     "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
     "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
@@ -947,3 +947,14 @@ If a file cannot be retrieved:
 - Use raw URLs or relative paths consistently.
 - Keep internal technical categories inside developer-facing reports and dashboards.
 - Do not write public-facing lesson text from this map.
+
+Current navigation uses the current file indexes. For historical or provenance
+questions, use [archive navigation](archive/README.md); complete machine
+inventories remain in the platform reports as `github-agent-index-platform`
+and `github-agent-index-lessen` (`.json` / `.md`).
+Carried requirements: [current open items](docs/maintenance/open-items.md).
+
+Historical roadmaps are optional context, not the ordinary roadmap-work route:
+
+- [April platform roadmap](archive/knowledge/old/platform-team-roadmap.md)
+- [Original three-month plan](archive/knowledge/old/three-month-roadmap.md)

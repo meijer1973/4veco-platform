@@ -89,6 +89,9 @@ function trustedRefreshEnv(input) {
     FOURVECO_LESSEN_SOURCE_REF: 'HEAD',
     FOURVECO_LESSEN_SOURCE_BRANCH: 'origin/main',
     FOURVECO_INDEX_GENERATED_AT: input.generatedAt,
+    // Preserve the established four-file verified refresh contract. Current and
+    // archive navigation is refreshed by the ordinary maintenance generator.
+    FOURVECO_INDEX_VIEW_MODE: 'complete-only',
   };
 }
 

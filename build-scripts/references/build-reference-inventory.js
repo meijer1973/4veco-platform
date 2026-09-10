@@ -65,6 +65,12 @@ function isGenerated(pathRel) {
 }
 
 function classify(pathRel) {
+  if (pathRel.startsWith('archive/')) {
+    const entry = require('../lib/historical-paths').loadRelocations(REPO_ROOT).find(e => e.archived_path === pathRel);
+    return { ...(entry ? classify(entry.original_path) : { authority_level: 'location_metadata', source_type: 'archive_index', generated_status: 'generated_projection', edit_policy: 'generator_only', owner: 'platform_team', refresh_policy: 'agent_index', downstream_dependencies: ['historical_readers'] }),
+      layer: 'historical_archive', original_path: entry?.original_path || pathRel,
+      archive_index: 'archive/index.json' };
+  }
   if (pathRel.startsWith('references/external/')) {
     return {
       layer: 'external_authority',
@@ -282,6 +288,10 @@ function writeJson(pathRel, data) {
 function main() {
   const referencesEntries = buildEntries(['references']);
   const documentEntries = buildEntries(INVENTORY_ROOTS);
+  for (const file of require('../lib/historical-paths').archiveInventoryPaths(REPO_ROOT)) {
+    documentEntries.push(entryFor(path.join(REPO_ROOT, file)));
+  }
+  documentEntries.sort((a, b) => a.path.localeCompare(b.path));
   const generatedAt = new Date().toISOString();
 
   writeJson(SOURCE_MANIFEST, {

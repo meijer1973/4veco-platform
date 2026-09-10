@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const fs = require('fs');
+const fs = require('../lib/historical-paths').historicalReader();
 const path = require('path');
 
 const REQUIRED_HEADINGS = [

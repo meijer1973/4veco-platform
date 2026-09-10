@@ -7,6 +7,13 @@ Single-fetch entry point for external research agents whose fetch tools can only
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP_REFERENCES.md
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/RESEARCH_AGENT_MAP.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/maintenance/open-items.md
+
+Historical/provenance fallback (use current indexes first):
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/archive/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/github-agent-index-platform.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/github-agent-index-lessen.json
 
 ## Research Agent Prompts
 
@@ -54,8 +61,8 @@ Single-fetch entry point for external research agents whose fetch tools can only
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/inspection-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/platform-team-roadmap.md
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/three-month-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/knowledge/old/platform-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/knowledge/old/three-month-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/lessen-team-roadmap.md
 
 ## Inspection Standards
@@ -126,7 +133,6 @@ Single-fetch entry point for external research agents whose fetch tools can only
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v4.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v4.meta.json
-- https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/course_blueprint_v4.md
 
 ## Index Anchors (registries, evidence, target exercises)
 

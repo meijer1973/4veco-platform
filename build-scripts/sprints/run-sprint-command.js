@@ -42,6 +42,8 @@ if (separatorIndex === -1) fail('missing -- separator before command');
 const commandArgs = process.argv.slice(separatorIndex + 1);
 if (commandArgs.length === 0) fail('missing command after --');
 
+require('../lib/historical-paths').assertActiveSprint(process.cwd(), sprintId);
+
 const command = commandString(commandArgs);
 const cwd = process.cwd();
 const startedAt = new Date();
