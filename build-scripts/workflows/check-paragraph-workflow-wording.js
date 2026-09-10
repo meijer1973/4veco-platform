@@ -38,6 +38,7 @@ const NAVIGATION_FILES = Object.freeze([
 // Bounded entry-guide audit, not a general Markdown crawler. Lesson entry is
 // opt-in: required platform CI intentionally checks out lesson main.
 const ENTRY_LINK_FILES = Object.freeze(['AGENTS.md', 'BUILD-PARAGRAPH.md', 'skills/econ-chapter-builder.md']);
+const PARAGRAPH_ENTRY_LINK_FILES = Object.freeze(['docs/workflows/part-a-start.md', 'docs/workflows/paired-paragraph-ci.md']);
 
 function markdownAnchors(text) {
   const anchors = new Set();
@@ -66,7 +67,7 @@ function markdownAnchors(text) {
 function findEntryLinkFailures(root, options = {}) {
   const read = options.read || ((file) => !fs.existsSync(file) ? null
     : fs.statSync(file).isDirectory() ? '' : fs.readFileSync(file, 'utf8'));
-  const files = [...ENTRY_LINK_FILES, ...(options.includeLessonEntry ? ['../4veco-lessen/AGENTS.md'] : [])];
+  const files = [...ENTRY_LINK_FILES, ...PARAGRAPH_ENTRY_LINK_FILES, ...(options.includeLessonEntry ? ['../4veco-lessen/AGENTS.md'] : [])];
   const failures = [];
   for (const file of files) {
     const absolute = path.resolve(root, file);
@@ -75,7 +76,7 @@ function findEntryLinkFailures(root, options = {}) {
       failures.push(`${file}: entry navigation surface missing`);
       continue;
     }
-    const guide = path.basename(file) === 'AGENTS.md';
+    const guide = path.basename(file) === 'AGENTS.md' || PARAGRAPH_ENTRY_LINK_FILES.includes(file);
     let incomingSection = false;
     for (const match of text.matchAll(/\[[^\]\r\n]+\]\(([^\s)]+)\)/g)) {
       const href = match[1];

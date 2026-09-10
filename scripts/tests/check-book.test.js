@@ -7,6 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
+const bindFixtureReview = require('./helpers/part-a-review-fixture');
 
 const CHECK_BOOK = path.resolve(__dirname, '..', 'check-book.js');
 const TMP = path.resolve(__dirname, '..', '..', 'tmp', 'test-check-book');
@@ -52,7 +53,7 @@ function setupBook() {
   writeText(path.join(paragraph, 'build_pdf.py'), 'BASE = Path(__file__).parent\n');
   writeText(path.join(paragraph, '_assets', '9.9.1_fig_1.svg'), '<svg></svg>');
   writeText(path.join(paragraph, '_assets', '9.9.1_fig_1.png'), 'png');
-  writeText(path.join(paragraph, '9.9.1-review.md'), '# Review\nNo unresolved problems.\n');
+  writeText(path.join(paragraph, '9.9.1-review.md'), '# Review\n\n## 2. Verdict\nPASS\n');
   writeText(
     path.join(paragraph, '9.9.1-quality-ref.yaml'),
     [
@@ -85,6 +86,7 @@ function setupBook() {
   writeText(path.join(chapter, 'build_chapter.py'), 'BASE = Path(__file__).parent\n');
   writeText(path.join(chapter, '_chapter-plan.md'), '# Chapter plan\n');
 
+  bindFixtureReview(paragraph);
   return book;
 }
 

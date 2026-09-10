@@ -21,6 +21,7 @@
  */
 
 const fs = require('fs');
+const { checkReview } = require('./lib/part-a-review-evidence');
 const path = require('path');
 
 /**
@@ -309,26 +310,9 @@ function validateParagraph(folderName, paraType) {
   const partAReview = reviewFiles.find(f => /^\d+\.\d+\.\d+-review\.md$/.test(f));
   const partBReview = reviewFiles.find(f => f.endsWith('-companion-visual-review.md'));
 
-  if (!partAReview) {
-    fail('MISSING review report (X.Y.Z-review.md)');
-  } else {
-    const content = fs.readFileSync(path.join(folder, partAReview), 'utf-8');
-    const verdict = parseReviewVerdict(content);
-    if (verdict === 'FAIL') {
-      fail(`Part A review verdict is FAIL: ${partAReview}`);
-    } else if (verdict === null) {
-      // Legacy review without a Verdict section — fall back to checking
-      // for explicit **FAIL** markers (line-level, not any-substring).
-      const failTokens = (content.match(/^\*+FAIL\*+\s*$/gm) || []).length;
-      if (failTokens > 0) {
-        fail(`Part A review has ${failTokens} explicit FAIL marker(s) (no Verdict section): ${partAReview}`);
-      } else {
-        pass(`Part A review: ${partAReview} (no Verdict section, no FAIL markers)`);
-      }
-    } else {
-      pass(`Part A review: ${partAReview} (verdict ${verdict})`);
-    }
-  }
+  const reviewResult = checkReview(folder);
+  if (!reviewResult.ok) reviewResult.errors.forEach(fail);
+  else pass(`Part A review: ${partAReview} (verdict ${reviewResult.verdict}, current manifest)`);
 
   if (partBReview) {
     const content = fs.readFileSync(path.join(folder, partBReview), 'utf-8');

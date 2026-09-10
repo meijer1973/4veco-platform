@@ -140,6 +140,8 @@ describe('check-paragraph-workflow-wording', () => {
 
   function entryFixture(overrides = {}, includeLessonEntry = true) {
     const files = {
+      'docs/workflows/part-a-start.md': '[review](../../AGENTS.md#source-integrity-and-learning-quality)',
+      'docs/workflows/paired-paragraph-ci.md': '# Paired paragraph CI',
       'AGENTS.md': '# Guide\n## Source integrity and learning quality\n[spec](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-vision.md)\nLocal: `../4veco-lessen/specifications/product-vision.md`',
       'BUILD-PARAGRAPH.md': '[quality](AGENTS.md#source-integrity-and-learning-quality)',
       'skills/econ-chapter-builder.md': '[quality](../AGENTS.md#source-integrity-and-learning-quality)',
@@ -156,6 +158,8 @@ describe('check-paragraph-workflow-wording', () => {
   });
 
   test.each([
+    ['docs/workflows/part-a-start.md', '[review](missing.md)', /linked file missing/],
+    ['docs/workflows/part-a-start.md', '[review](../../AGENTS.md#obsolete)', /linked section missing/],
     ['AGENTS.md', '[spec](../4veco-lessen/specifications/product-vision.md)', /cross-repository hyperlink/],
     ['../4veco-lessen/AGENTS.md', '[guide](../4veco-platform/AGENTS.md)', /cross-repository hyperlink/],
     ['../4veco-lessen/AGENTS.md', null, /entry navigation surface missing/],

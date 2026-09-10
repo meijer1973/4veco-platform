@@ -1,5 +1,15 @@
 # Part A Textbook Plan: X.Y.Z [Naam]
 
+For ordinary approved Book 2 production, generate `X.Y.Z-textbook-foundation.json`
+with `paragraph-records.js foundation <paragraph-folder> --action paragraph_production`.
+Link that projection here. Its hashes, source/target pins and scoped hold effects
+satisfy the mechanical tables below without copying their rows. Complete the
+semantic decisions and pedagogical plan yourself, including local chapter-plan
+authority, and record the distinct foundation verdict. Use the tables manually
+for other books/actions or diagnosis. Never overwrite authored pedagogy when
+refreshing generated evidence.
+
+
 > Part A copies this template to
 > `<paragraph-folder>/X.Y.Z-textbook-plan.md` before goals, target design,
 > exercise design, or content production. Part A owns and approves this plan.
@@ -124,6 +134,6 @@ answer-form expectations, and review proof.]
 
 ### Part A review and Part B handoff
 
-[Record Part A teacher/economics/visual/lead verdicts and link the approved
+[Record Part A independent review coverage and verdict and link the approved
 `X.Y.Z-textbook-handoff.md`. Part B consumes this plan but owns its separate
 `_paragraph-plan.md`.]

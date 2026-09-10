@@ -24,6 +24,8 @@ const fs = require('fs');
 const path = require('path');
 const { PARA_TYPES, classifyParagraph } = require('./lib/paragraph-types');
 
+const { checkReview } = require('./lib/part-a-review-evidence');
+
 const DASH = '\u2013';
 const VALID_MODES = new Set(['auto', 'part-a', 'part-b', 'complete']);
 const VALID_PROFILES = new Set(['student-web', 'legacy-full', 'office', 'publisher-print']);
@@ -409,24 +411,9 @@ function normalizeReviewVerdict(value) {
  */
 function validatePartARecord() {
   console.log('\n-- Part A QC artifacts --');
-  const reviewFile = `${parNr}-review.md`;
-  if (!hasFile(reviewFile)) {
-    fail(`MISSING Part A review report (${reviewFile})`);
-  } else {
-    const content = fs.readFileSync(path.join(PAR, reviewFile), 'utf8');
-    const verdict = parseReviewVerdict(content);
-    if (verdict === 'FAIL') {
-      fail(`Part A review verdict is FAIL: ${reviewFile}`);
-    } else if (verdict === null) {
-      // No verdict block found — fall back to legacy FAIL-token count to
-      // avoid masking malformed reviews. Strict: any FAIL token fails.
-      const failTokens = (content.match(/^\*+FAIL\*+/gm) || []).length;
-      if (failTokens > 0) fail(`Part A review has ${failTokens} FAIL marker(s) (no explicit Verdict section): ${reviewFile}`);
-      else pass(`Part A review: ${reviewFile} (no explicit verdict, no FAIL markers)`);
-    } else {
-      pass(`Part A review: ${reviewFile} (verdict ${verdict})`);
-    }
-  }
+  const result = checkReview(PAR);
+  if (!result.ok) result.errors.forEach(fail);
+  else pass(`Part A review: ${parNr}-review.md (verdict ${result.verdict}, current manifest)`);
   validateQualityRef();
 }
 
