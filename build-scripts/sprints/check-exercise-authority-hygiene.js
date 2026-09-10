@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { spawnSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..', '..');
+const fs = require('../lib/historical-paths').historicalReader(ROOT);
 const LESSON_ROOT = path.resolve(ROOT, '..', '4veco-lessen');
 const MANIFEST_PATH = 'references/data/exercise-authority-hygiene-manifest.json';
 
@@ -174,8 +174,9 @@ function checkKnowledgeArtifacts(data) {
     const artifactPath = normalizePath(artifact.path);
     if (!exists(artifactPath)) fail(`knowledge artifact missing: ${artifactPath}`);
     if (artifact.git_tracked !== true) fail(`${artifactPath} must be recorded as git_tracked:true`);
-    const tracked = git(['ls-files', '--', artifactPath]).split(/\r?\n/).map(normalizePath).filter(Boolean);
-    if (!tracked.includes(artifactPath)) fail(`${artifactPath} must be tracked by git`);
+    const trackedPath = normalizePath(path.relative(ROOT, require('../lib/historical-paths').resolveHistoricalPath(ROOT, path.join(ROOT, artifactPath))));
+    const tracked = git(['ls-files', '--', trackedPath]).split(/\r?\n/).map(normalizePath).filter(Boolean);
+    if (!tracked.includes(trackedPath)) fail(`${artifactPath} must be tracked by git`);
     if (fileSize(artifactPath) !== artifact.bytes) fail(`${artifactPath} byte size mismatch`);
     if (sha256(artifactPath) !== artifact.sha256) fail(`${artifactPath} sha256 mismatch`);
     if (artifact.disposition !== 'tracked_historical_reference_archive') {
@@ -225,7 +226,6 @@ assertClean(
     'references/machine',
     'references/external',
     'references/authored/course-target-exercises.json',
-    'knowledge/exit-ticket-game-1.1.1.zip',
   ],
   'forbidden platform source/engine/protected/archive surfaces'
 );

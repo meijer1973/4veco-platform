@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const fs = require('fs');
+const fs = require('../lib/historical-paths').historicalReader();
 const path = require('path');
 
 const OUT_DIR = path.join('reports', 'review-gates', 'GATE-CP1-schema-audit');
@@ -127,7 +127,7 @@ function main() {
       targetDataPath,
       ragChunkPath,
       'references/reference-team-roadmap.md',
-      'knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md',
+      'archive/knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md',
     ],
     baseline_counts: {
       exam_questions: examRecords.length,

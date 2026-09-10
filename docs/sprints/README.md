@@ -17,10 +17,13 @@ New sprint bundles should have:
 - `reports/sprints/<sprint-id>-lead-review-round2.md`
 - `references/data/sprints/<sprint-id>.result.json`
 
-Archived plans already stored in `docs/sprints/` remain valid for historical
-bundles. The deterministic bundle checker prefers the co-located
+Selected completed plans now live in `archive/sprints/<id>/`. Their original
+logical paths remain valid through `archive/relocations.json` for historical
+readers; missing or corrupt archived evidence still fails. `S7`, `PV-G4` and
+`example-plan.md` remain in this folder. The deterministic bundle checker prefers the co-located
 `reports/sprints/<sprint-id>-plan.md` path and falls back to this folder for
-legacy records.
+legacy records and then resolves explicitly mapped archive locations. Do not
+replay commands for an archived sprint or recreate its old logs.
 
 ## Planning Standard
 

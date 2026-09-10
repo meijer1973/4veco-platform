@@ -8,7 +8,7 @@ as the canonical source.
 Status: implementation candidate only.
 Next state: `hold_for_exemplar_review`.
 
-This folder preserves the `1.1.3 Grafieken en tabellen` exit-ticket candidate from `knowledge/113-excellent-exit-ticket-v3-package.zip`.
+This folder preserves the `1.1.3 Grafieken en tabellen` exit-ticket candidate from `archive/prototypes/exit-ticket-1.1.3/113-excellent-exit-ticket-v3-package.zip`.
 
 ## What It Is
 

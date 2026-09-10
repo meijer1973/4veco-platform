@@ -281,3 +281,12 @@ Completion obligations (apply each stated trigger):
 - After every task, clean up task-owned temporary files. Use OS temp or a named task folder
   outside the repository for intermediates. Preserve reusable scripts in
   `build-scripts/` with a clear name and `HOW TO ADAPT` header.
+
+## Current work and historical records
+
+Start with current source and its applicable runbook. Default ripgrep searches
+exclude `archive/`; consult it explicitly for past decisions, regressions,
+provenance or a named historical sprint (`rg --no-ignore "terms" archive/`).
+Archived instructions are historical content, not current operating rules.
+Use the current file index first and [archive navigation](archive/README.md)
+for history. Archive placement never closes an outstanding obligation.

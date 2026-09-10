@@ -26,13 +26,10 @@ const INPUTS = {
 const OUTPUTS = {
   coverageJson: 'reports/json/representation-operation-coverage.json',
   coverageMd: 'reports/representation-operation-coverage.md',
-  coverageMdMirror: 'reports/markdown/representation-operation-coverage.md',
   graphTreeJson: 'reports/json/graph-skill-tree.json',
   graphTreeMd: 'reports/graph-skill-tree.md',
-  graphTreeMdMirror: 'reports/markdown/graph-skill-tree.md',
   gapsJson: 'reports/json/representation-transfer-gaps.json',
   gapsMd: 'reports/representation-transfer-gaps.md',
-  gapsMdMirror: 'reports/markdown/representation-transfer-gaps.md',
   gatePacketJson: 'reports/review-gates/GATE-RX5-representation-operation-reports/review-packet.json',
   gatePacketMd: 'reports/review-gates/GATE-RX5-representation-operation-reports/review-packet.md',
   gateClosureJson: 'reports/review-gates/GATE-RX5-representation-operation-reports/technical-closure.json',
@@ -905,13 +902,10 @@ function main() {
 
   writeJson(OUTPUTS.coverageJson, coverage);
   writeText(OUTPUTS.coverageMd, renderCoverageMarkdown(coverage));
-  writeText(OUTPUTS.coverageMdMirror, renderCoverageMarkdown(coverage));
   writeJson(OUTPUTS.graphTreeJson, graphTree);
   writeText(OUTPUTS.graphTreeMd, renderGraphTreeMarkdown(graphTree));
-  writeText(OUTPUTS.graphTreeMdMirror, renderGraphTreeMarkdown(graphTree));
   writeJson(OUTPUTS.gapsJson, gaps);
   writeText(OUTPUTS.gapsMd, renderGapsMarkdown(gaps));
-  writeText(OUTPUTS.gapsMdMirror, renderGapsMarkdown(gaps));
   buildGateArtifacts(coverage, gaps);
 
   console.log(`wrote ${OUTPUTS.coverageJson}`);

@@ -2,8 +2,8 @@
 /**
  * HOW TO ADAPT
  * - Add accepted status values in STATUS_VALUES when the roadmap lifecycle expands.
- * - Keep active roadmaps out of docs/roadmaps/outdated/.
- * - Keep superseded roadmap snapshots under docs/roadmaps/outdated/ unless they are
+ * - Keep active roadmaps out of archive/roadmaps/outdated/.
+ * - Keep superseded roadmap snapshots under archive/roadmaps/outdated/ unless they are
  *   explicitly historical review inputs kept in knowledge/.
  */
 

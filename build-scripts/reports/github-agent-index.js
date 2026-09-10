@@ -28,6 +28,7 @@ const skipDirs = new Set([
 ]);
 
 const GROUPS = [
+  "archive",
   "maps/prompts",
   "agents",
   "engines",
@@ -120,6 +121,8 @@ function isEnginePath(relativePath) {
 }
 
 function classifyGroups(relativePath) {
+  // Archive classification precedes embedded book names and validator filenames.
+  if (relativePath.startsWith("archive/")) return ["archive"];
   const basename = path.posix.basename(relativePath);
   const lower = relativePath.toLowerCase();
   const groups = [];
@@ -169,8 +172,8 @@ function walk(root, current = root, files = []) {
 function listFiles(root, sourceRef = "HEAD") {
   try {
     const args = sourceRef === "HEAD"
-      ? ["ls-files", "--cached"]
-      : ["ls-tree", "-r", "--name-only", sourceRef, "--"];
+      ? ["ls-files", "--cached", "-z"]
+      : ["ls-tree", "-r", "--name-only", "-z", sourceRef, "--"];
     const output = execFileSync("git", args, {
       cwd: root,
       encoding: "utf8",
@@ -178,10 +181,9 @@ function listFiles(root, sourceRef = "HEAD") {
     });
 
     return output
-      .split(/\r?\n/)
-      .map((line) => line.trim())
+      .split("\0")
       .filter(Boolean)
-      .filter((file) => !file.split("/").some((part) => skipDirs.has(part)))
+      .filter((file) => file.startsWith("archive/") || !file.split("/").some((part) => skipDirs.has(part)))
       .sort((a, b) => a.localeCompare(b));
   } catch (error) {
     if (sourceRef !== "HEAD") {
@@ -213,7 +215,9 @@ function buildIndex(repoName, root, options = {}) {
   }
 
   const sourceRef = options.sourceRef || resolveSourceRef(repoName, env);
-  const files = listFiles(root, sourceRef);
+  const view = options.view || "complete";
+  const files = listFiles(root, sourceRef).filter(file => view !== "current" ||
+    (!file.startsWith("archive/") && !/^reports\/github-agent-index-(platform|lessen)\.(md|json)$/.test(file)));
   const groups = emptyGroups();
 
   for (const file of files) {
@@ -229,6 +233,7 @@ function buildIndex(repoName, root, options = {}) {
     generated_at: options.generatedAt || env.FOURVECO_INDEX_GENERATED_AT || new Date().toISOString(),
     ...gitSourceInfo(repoName, root, sourceRef, env),
     file_count: files.length,
+    view,
     inventory_scope: sourceRef === "HEAD"
       ? "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path"
       : `committed tree files from \`git ls-tree -r --name-only ${sourceRef}\`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path`,
@@ -305,6 +310,15 @@ function main() {
   writeMarkdown("github-agent-index-platform.md", platform);
   writeJson("github-agent-index-lessen.json", lessen);
   writeMarkdown("github-agent-index-lessen.md", lessen);
+
+  for (const [name, root, complete] of (process.env.FOURVECO_INDEX_VIEW_MODE === "complete-only" ? [] : [["platform", platformRoot, platform], ["lessen", lessenRoot, lessen]])) {
+    const current = buildIndex(`4veco-${name}`, root, { view: "current" });
+    writeJson(`github-agent-current-${name}.json`, current);
+    writeMarkdown(`github-agent-current-${name}.md`, current);
+    if (complete.available && resolveSourceRef(`4veco-${name}`) === "HEAD") {
+      require('./archive-index').writeArchiveIndex(`4veco-${name}`, root, complete);
+    }
+  }
 
   console.log(`Wrote ${path.join("reports", "github-agent-index-platform.md")}`);
   console.log(`Wrote ${path.join("reports", "github-agent-index-platform.json")}`);
