@@ -1,0 +1,14 @@
+{
+  "geometry": "PASS: actual SVG endpoints, 5 samples per curve, equilibrium, guides, triangle vertices and areas",
+  "tolerance_economic_units": 1e-07,
+  "quantity_kg_per_week": 60,
+  "price_eur_per_kg": 30,
+  "consumer_surplus_eur_per_week": 900.0,
+  "producer_surplus_eur_per_week": 600.0,
+  "numerical_check": "120 − 2 × 30 = 60 = 3 × 30 − 30; CS = 0.5 × 60 × (60 − 30) = 900; PS = 0.5 × 60 × (30 − 10) = 600",
+  "visible_range": "Q: 0–130 kg/week; P: 0–70 EUR/kg",
+  "final_size_pixels": [
+    1000,
+    800
+  ]
+}

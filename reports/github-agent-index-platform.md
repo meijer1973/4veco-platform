@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-10T11:24:06.119Z
+Generated: 2026-09-10T12:17:19.503Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/paragraph-workflow-improvements-20260909`
-Source commit: `34fbecd427b0fe403e3b4b21e4ed7116fd9e242a`
-Files indexed: 7698
+Source branch: `codex/graph-skill-cleanup-20260910`
+Source commit: `3bfb5a97dd5ba77f7ddd080d64bc65f69faa9131`
+Files indexed: 7705
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -892,7 +892,7 @@ Count: 749
 
 ## skills
 
-Count: 25
+Count: 26
 
 - skills/aanpak-samenvattingen.md
 - skills/econ-book-builder.md
@@ -918,6 +918,7 @@ Count: 25
 - skills/reasoning-game-archetypes.json
 - skills/reasoning-game-checklist.json
 - skills/reasoning-game-prompt-template.md
+- skills/references/economic-graph-recipes.md
 - skills/senior-dev-planning.md
 
 ## validators
@@ -7633,7 +7634,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 780
+Count: 786
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -8099,6 +8100,12 @@ Count: 780
 - docs/L1.5V/A4-alt-text-infrastructure.md
 - docs/L1.5V/F-plan-part-a-b-separation.md
 - docs/maintenance/ci-cleanup-20260909.md
+- docs/maintenance/graph-skill-cleanup.md
+- docs/maintenance/graph-skill-experiment/activity-log.md
+- docs/maintenance/graph-skill-experiment/appelmarkt.png
+- docs/maintenance/graph-skill-experiment/appelmarkt.svg
+- docs/maintenance/graph-skill-experiment/create_graph.py
+- docs/maintenance/graph-skill-experiment/numerical-check.json
 - docs/maintenance/paragraph-workflow-improvements.md
 - docs/review/human-payload-authorization.schema.json
 - docs/review/maintenance-workflow.md

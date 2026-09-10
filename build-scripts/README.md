@@ -128,7 +128,7 @@ Use when the source already exists as structured data and the output should be f
 | `lib/convert_voorkennis.py` | Office/legacy converter: `uitleg voorkennis.docx` → HTML |
 | `lib/convert_vaardigheden.py` | Office/legacy converter: `uitleg vaardigheden.docx` → HTML |
 | `lib/convert_begeleide_inoefening.py` | Office/legacy converter: vragen + antwoorden `.docx` → HTML |
-| `lib/verify_svg_geometry.py` | SVG geometry verifier (run after every SVG edit) |
+| `lib/verify_svg_geometry.py` | Checks supported linear-curve coordinates; use it or an equivalent actual-figure check and recheck affected geometry after edits ([graph requirements](../skills/economic-graph.md#verify-and-deliver)) |
 
 `lib-*.js` files are imported by content scripts. Converters and the verifier are invoked standalone.
 

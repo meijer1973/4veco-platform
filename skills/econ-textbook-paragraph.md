@@ -322,8 +322,8 @@ Rules:
 
 1. Identify all graphs needed (theory figures, worked example graphs, exercise graphs)
 2. Write a graph specification for each (see `econ-exercise-builder` §6.2 for format)
-3. Call `economic-graph` skill to generate SVG
-4. Rasterise SVG → PNG using `sharp` (as per `economic-graph` pipeline)
+3. Apply the [economic-graph output requirements](economic-graph.md); consult its construction recipes only when useful
+4. Render SVG → PNG with a suitable renderer and verify the actual geometry and final image; `sharp` is one option
 5. Save both SVG and PNG to `_assets/`
 6. Reference PNGs in markdown: `![caption](_assets/filename.png)`
 
