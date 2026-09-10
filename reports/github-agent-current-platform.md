@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-10T12:12:23.276Z
+Generated: 2026-09-10T14:32:44.8872138Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/reorganize-4-20260909`
-Source commit: `7173ea628bc81e2b03f6bda8ae5f1a8230939577`
-Files indexed: 6723
+Source branch: `codex/graph-skill-cleanup-20260910`
+Source commit: `30f594b42bc6d44e34cad75e2b6fa2d750011ed1`
+Files indexed: 6730
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -900,7 +900,7 @@ Count: 751
 
 ## skills
 
-Count: 25
+Count: 26
 
 - skills/aanpak-samenvattingen.md
 - skills/econ-book-builder.md
@@ -926,6 +926,7 @@ Count: 25
 - skills/reasoning-game-archetypes.json
 - skills/reasoning-game-checklist.json
 - skills/reasoning-game-prompt-template.md
+- skills/references/economic-graph-recipes.md
 - skills/senior-dev-planning.md
 
 ## validators
@@ -7296,7 +7297,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 149
+Count: 155
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7347,6 +7348,12 @@ Count: 149
 - docs/L1.5V/F-plan-part-a-b-separation.md
 - docs/maintenance/archive-cleanup.md
 - docs/maintenance/ci-cleanup-20260909.md
+- docs/maintenance/graph-skill-cleanup.md
+- docs/maintenance/graph-skill-experiment/activity-log.md
+- docs/maintenance/graph-skill-experiment/appelmarkt.png
+- docs/maintenance/graph-skill-experiment/appelmarkt.svg
+- docs/maintenance/graph-skill-experiment/create_graph.py
+- docs/maintenance/graph-skill-experiment/numerical-check.json
 - docs/maintenance/open-items.md
 - docs/maintenance/paragraph-workflow-improvements.md
 - docs/review/human-payload-authorization.schema.json

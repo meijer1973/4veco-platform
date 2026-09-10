@@ -880,7 +880,7 @@ async function svgToPngBuffer(svgString, w = 1400, h = 700) {
 }
 ```
 
-For bar charts, spin diagrams, and other simple visuals, see the **economic-graph skill Part 3**.
+For charts and explanatory diagrams, apply the [economic-graph output requirements](economic-graph.md). Consult the [optional construction recipes](references/economic-graph-recipes.md#part-3-graph-types--specifications) only when an implementation example is useful.
 
 ---
 

@@ -69,7 +69,7 @@ These are not style choices; they come from `references/authored/didactiek-princ
 - **Body text ≥ 18pt.** Titles typically 28–44pt. Slide stats/hero numbers can go larger; respect the width rule below.
 - **Canonical Dutch terminology.** Use terms from `references/authored/economie-terminologie.md` (e.g. "alternatieve kosten", NOT "opportuniteitskosten"). No anglicisms.
 - **Economic correctness.** Supply/demand labels, curve directions, units, movement-vs-shift, ceteris paribus — all must match `references/authored/economic_mathematical_precision_reference.md`.
-- **Economic graph geometry when graphs are used.** Read the `economic-graph` skill. Run `build-scripts/lib/verify_svg_geometry.py` after every SVG edit.
+- **Economic graph geometry when graphs are used.** Apply the [economic-graph output requirements](economic-graph.md). Check the actual figure programmatically with `build-scripts/lib/verify_svg_geometry.py` where supported, or an equivalent executable check. Recheck affected geometry after edits and inspect the final slide; its construction recipes are optional.
 
 ---
 

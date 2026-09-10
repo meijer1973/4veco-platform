@@ -27,7 +27,7 @@ full operational source is `skills/econ-exercise-builder.md`.
 
 **Companion skills:**
 - `econ-didactiek` → the underlying pedagogical principles
-- `economic-graph` → graph construction standards and QA checklist
+- [economic-graph](economic-graph.md) → mathematical/presentation requirements and final-output checks; construction recipes are optional
 - `econ-word-templates` → document format QA checklist
 
 ---

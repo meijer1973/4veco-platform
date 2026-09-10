@@ -45,7 +45,7 @@ For companion-only visuals, always write the full file name with extension somew
 | `va-equilibrium` | A. Supply & Demand | presentatie (slide N), nieuws | ... | V: p = ..., A: p = ... |
 | | | | | |
 
-**Graph types** (from `economic-graph.md` Part 3): A. Supply & Demand, B. Cost curves (MK/GTK/GVK), C. Market equilibrium + surplus, D. Tax/subsidy shift, E. Comparative advantage (PPF), F. Flowchart, G. Bar/line chart, H. Custom.
+**Graph types**: supply/demand, cost/revenue curves, equilibrium/surplus, tax/subsidy, reaction curves, PPF/comparison, flowchart, bar chart or custom. Use the applicable [economic-graph output requirements](../../skills/economic-graph.md#mathematical-and-economic-requirements); construction recipes are optional.
 
 ---
 
