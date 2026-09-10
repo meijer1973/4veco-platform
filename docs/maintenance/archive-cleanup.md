@@ -79,3 +79,33 @@ roadmap obligations and consumer changes. Its findings on current navigation,
 root-aware readers, consumer metadata and duplicate snapshot links were fixed.
 No product status or historical verdict was changed. PRs and their CI runs are
 the remote evidence record; this document does not grant merge authority.
+
+
+## Roadmap prose correction after review
+
+The review correctly identified that compaction removed subsection labels while
+retaining their bodies. This placed requirements/outcomes under `Out of scope`
+in L1.7B-R, L1.7C-0, L1.7C and L2.0. An independent audit of all compacted
+sections found the same exclusion inversion in L1.7C-MATH and other dropped
+labels over retained work/evidence/closure lists.
+
+Restore 35 original lesson subsection labels and the original exclusion lists
+for L1.7C/L2.0. Restore 17 original platform work/acceptance/completion labels,
+including the S4.1 completion preface. These are exact snapshot restorations;
+no ledger row, status, historical snapshot or active lesson artifact changes.
+The audit found no removed nested Markdown heading or additional non-colon
+boundary. Existing inline labels in historical update paragraphs remain intact.
+
+Regression coverage now checks retained prose against its original subsection,
+checks exclusions separately from the following requirements/outcomes in all
+five affected lesson sections, and deliberately removes each boundary to show
+that the defect is detected even with identical ledger rows. In platform CI,
+the exact lesson baseline commit supplies the snapshot until the paired lesson
+archive PR is merged; the tests also run against the adjacent corrected lesson
+worktree. All 36 focused tests pass, including all 15 roadmap tests. Independent
+review of the corrections found no remaining issue.
+
+The platform branch incorporates remote main `3bfb5a97` (PR #239) through a
+normal merge. Only the generated platform file indexes conflicted; the owning
+generator resolved those from the combined tracked tree. Paired PRs #240/#48
+remain the publication records and are not merged as part of this correction.

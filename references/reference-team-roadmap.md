@@ -896,6 +896,8 @@ and the following recorded conditions are retained; this is not new closure.
 
 Purpose: respond to `GATE-R2-empty-needs` closing as `hold`. The empty-needs audit is useful, but it is not enough to authorize dependency mutation.
 
+Required work:
+
 - Attach exact exam or target-exercise evidence to any candidate prerequisite edge before it can later be applied.
 - Resolve `D04 Elasticiteit en goederenclassificatie` as a unit-design issue. Goods classification belongs inside the relevant elasticity units unless evidence proves a separate unit is needed.
 - Classify foundational A-domain empty-needs units, especially `underbouw_assumed` cases.
@@ -922,6 +924,8 @@ and the following recorded conditions are retained; this is not new closure.
 
 Purpose: apply only reviewed and evidence-backed corrections from R2.4 through CLI.
 
+Required work:
+
 - Apply accepted prerequisite edges only when exact evidence is attached.
 - Apply accepted `underbouw_assumed` classifications only through the approved workflow.
 - Skip blocked items: `D04` until unit design is resolved, labor-market sequencing until the second pass closes, and rejected graph edges unless new evidence overturns the rejection.
@@ -934,6 +938,8 @@ Completion: completed on 2026-04-26. Human mutation review exists at `reports/re
 
 Completed execution: [full baseline](../archive/roadmaps/snapshots/references-team-20260910.md#r41-unit-term-slug-migration). Original ledger status
 and the following recorded conditions are retained; this is not new closure.
+
+Required work:
 
 - Produce a mapping from current unit term strings to term slugs.
 - Flag ambiguous or missing mappings for human review.
@@ -957,6 +963,8 @@ and the following recorded conditions are retained; this is not new closure.
 
 Purpose: convert raw blueprint missing-unit flags into curated decisions.
 
+Required work:
+
 - Separate true missing units, existing-unit matches, duplicates, low-priority ideas, and reject/hold cases.
 - Prioritize flags backed by target exercises.
 - Produce a backlog that can feed later CLI unit creation or evidence work.
@@ -973,6 +981,8 @@ Completed execution: [full baseline](../archive/roadmaps/snapshots/references-te
 and the following recorded conditions are retained; this is not new closure.
 
 Purpose: gather the remaining micro-teaching-unit quality issues into a single review packet before any further machine-reference mutation.
+
+Required work:
 
 - classify the remaining empty-needs units after R3.2
 - classify live units without term links
@@ -992,6 +1002,8 @@ and the following recorded conditions are retained; this is not new closure.
 
 Purpose: apply only reviewed R4.4 packet items through the reference CLI.
 
+Required work:
+
 - use R4.4 packet decisions as the only mutation source
 - apply approved dependency edges, term links, unit additions, unit deprecations, or unit-design changes through CLI only
 - generate a mutation log and diff summary
@@ -1009,6 +1021,8 @@ and the following recorded conditions are retained; this is not new closure.
 
 Purpose: create exact proof anchors for important claims, prerequisite edges, term definitions, and unit decisions.
 
+Required work:
+
 - Define evidence-anchor schema and source ranking.
 - Attach anchors to high-risk decisions first: prerequisite edges, elasticity decisions, labor-market sequencing, and exam links.
 - Distinguish external authority, owned source material, machine registry, and generated reports.
@@ -1021,6 +1035,8 @@ Completion: completed on 2026-04-26. R5.1 added `references/data/evidence-anchor
 
 Completed execution: [full baseline](../archive/roadmaps/snapshots/references-team-20260910.md#r52-alignment-graph). Original ledger status
 and the following recorded conditions are retained; this is not new closure.
+
+Required work:
 
 - Build graph edges only from evidence-backed relationships.
 - Separate prerequisite, supports, assesses, explains, contradicts, and derived-from edge types.
@@ -1036,6 +1052,8 @@ Completed execution: [full baseline](../archive/roadmaps/snapshots/references-te
 and the following recorded conditions are retained; this is not new closure.
 
 Purpose: human-review the alignment graph before it powers retrieval, diagnostics, dashboards, or adaptive decisions.
+
+Required work:
 
 - Prepare a review packet with samples from high-risk domains.
 - Run subagent reviews for pedagogy, evidence, and data integrity.
@@ -1058,6 +1076,8 @@ Completion: completed on 2026-04-27. R6.1 added `build-scripts/reports/generate-
 
 Completed execution: [full baseline](../archive/roadmaps/snapshots/references-team-20260910.md#r62-reference-health-dashboard-data). Original ledger status
 and the following recorded conditions are retained; this is not new closure.
+
+Required work:
 
 - Combine report JSON into a dashboard-ready state file.
 - Include sprint status, gate status, quality categories, blockers, and trend-friendly counts.
@@ -1110,12 +1130,16 @@ and the following recorded conditions are retained; this is not new closure.
 
 Purpose: reduce non-functional references to the frozen legacy target before owned-source integration begins. The frozen legacy target remains operationally protected, but it should not remain the default example or course-design backbone for new reference/RAG work.
 
+Required work:
+
 - scan the repository for frozen-legacy-target labels and legacy path references
 - classify each occurrence as functional legacy path, frozen-target guardrail, historical planning note, generated artifact, or safe cleanup target
 - update safe cleanup targets in current guidance, authored course-design notes, and generic examples
 - preserve legacy source-data paths, legacy content-builder paths, `deploy:legacy`, and explicit frozen-target warnings
 - regenerate derived inventories/RAG chunks if authored-reference changes affect generated data
 - report remaining frozen-legacy-target references by category
+
+Acceptance:
 
 - R9.0 sprint bundle passes
 - no hand edits to `references/machine/` or `references/external/`
@@ -1129,6 +1153,8 @@ Completion: completed on 2026-04-27. Active authored references and generic guid
 
 Completed execution: [full baseline](../archive/roadmaps/snapshots/references-team-20260910.md#r901-legacy-folder-rename). Original ledger status
 and the following recorded conditions are retained; this is not new closure.
+
+Acceptance:
 
 - no repo-local directory remains named after the frozen legacy target
 - legacy helper scripts resolve the renamed paths
@@ -1158,6 +1184,8 @@ Completion: completed on 2026-04-29. R9.2 created `references/data/owned-content
 
 Completed execution: [full baseline](../archive/roadmaps/snapshots/references-team-20260910.md#s4-exercise-metadata-overlay-mvp). Original ledger status
 and the following recorded conditions are retained; this is not new closure.
+
+Required work:
 
 - Store first-pass exercise metadata under `references/data/exercises/` unless a source-specific CLI/refresh workflow already exists.
 - Treat CP-1 closure files as authoritative over the earlier review packet if wording differs.
@@ -1194,6 +1222,8 @@ and the following recorded conditions are retained; this is not new closure.
 
 Purpose: make the CP-3 conditions explicit in artifacts, validators, and reports before any bulk metadata extension.
 
+Completion: completed on 2026-04-29. S4.1 added:
+
 - `references/data/exercises/source-annex-gap-log.json`
 - `references/data/exercises/scaffolding-calibration.json`
 - `references/data/exercises/graph-spec-representation-plan.json`
@@ -1210,6 +1240,8 @@ Remaining blocker: broad exercise metadata backfill remains blocked until a late
 
 Completed execution: [full baseline](../archive/roadmaps/snapshots/references-team-20260910.md#r81-qc-issue-model). Original ledger status
 and the following recorded conditions are retained; this is not new closure.
+
+Required work:
 
 - Model only categories needed now: reference quality, evidence sufficiency, unit design, extraction integrity, report drift, source-version drift, term-link gaps, needs gaps, and production-readiness warnings.
 - Include severity, owner/team, affected surface, evidence, next action, and proof required to close.
@@ -1733,6 +1765,8 @@ and the following recorded conditions are retained; this is not new closure.
 Purpose: apply the CP-5 D04 decision through governed CLI mutation without hand-editing protected references.
 
 Completion: completed on 2026-05-16. S9a selected `unit-deprecate.js`, recorded a concrete mutation plan, deprecated `D04` in favor of `A15`, `D06`, `A17`, `D11`, `A16`, `D12`, and `D27`, removed the single active D04 target-exercise citation from `2.1.3`, recorded a CLI mutation log and stale-reference audit, regenerated reports/RAG/inventories, and updated unit-design-status reporting to `retired_after_cli_mutation`. D04 remains a deprecated historical/provenance record only; it is not an active promotion dependency. No `D04 -> A15` edge, external-source mutation, student-facing exposure, diagnostics, adaptive routing, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion was authorized.
+
+Required work:
 
 - Convert the CP-5 decision into concrete mutation targets: D04 retirement or redistribution, citation/reference replacement, term movement, and stale-reference cleanup.
 - Select the correct CLI path (`unit-deprecate.js`, `unit-merge.js`, `unit-split.js`, or a documented combination) before mutation.

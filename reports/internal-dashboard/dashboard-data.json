@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T11:38:49.994Z",
+  "generatedAt": "2026-09-10T12:16:45.560Z",
   "internalOnly": true,
   "teams": [
     {
@@ -2975,7 +2975,7 @@
           "repositoryPath": "4veco-lessen/lessen-team-roadmap.md",
           "generated": "2026-04-23",
           "updated": "2026-04-25 after Sprint L1.3A-C close — basic HTML layout, companion SVG variant system with light/dark symmetry validator, and PPTX teacher-supporting slide rules all landed in platform; L1.4 (pipeline regression on `1.1.2 Percentages en indexcijfers`) is now active.",
-          "scope": "",
+          "scope": "- `uitleg voorkennis.html`",
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
             {
