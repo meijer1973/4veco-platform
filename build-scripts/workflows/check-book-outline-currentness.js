@@ -1015,6 +1015,7 @@ function main() {
 }
 
 module.exports = {
+  parseCli,
   APPROVAL_PR_NUMBER,
   AUTHORITY_PATHS,
   EXPECTED_ORDER,

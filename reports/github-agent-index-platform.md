@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-10T12:00:00Z
+Generated: 2026-09-10T12:12:22.811Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/reorganize-4-20260909`
-Source commit: `19d739c2ecb59a5d5710a89ab6b1fbdf44853e15`
-Files indexed: 7691
+Source commit: `7173ea628bc81e2b03f6bda8ae5f1a8230939577`
+Files indexed: 7711
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1127,7 +1127,7 @@ Count: 89
 
 ## build scripts
 
-Count: 736
+Count: 751
 
 - build-scripts/archive/README.md
 - build-scripts/archive/roundtrip-pptx.py
@@ -1154,6 +1154,8 @@ Count: 736
 - build-scripts/ci/fixtures/branch-protection-activated.json
 - build-scripts/ci/maintenance-ci.js
 - build-scripts/ci/maintenance-ci.test.js
+- build-scripts/ci/paired-paragraph-ci.js
+- build-scripts/ci/paired-paragraph-ci.test.js
 - build-scripts/ci/platform-ci-evidence.js
 - build-scripts/ci/platform-ci-evidence.test.js
 - build-scripts/content/book-1/b1-111-alt-text.js
@@ -1807,9 +1809,14 @@ Count: 736
 - build-scripts/sprints/write-y1-golden-rollout-wave-1-current-evidence.js
 - build-scripts/templates/template-A_vaardigheden.js
 - build-scripts/templates/template-B_voorkennis.js
+- build-scripts/templates/template-build-paragraph-pdf.py
 - build-scripts/templates/template-paragraph-plan.md
 - build-scripts/templates/template-textbook-paragraph-plan.md
 - build-scripts/templates/textbook-to-companion-handoff.md
+- build-scripts/textbook/paragraph_pdf.py
+- build-scripts/textbook/paragraph.css
+- build-scripts/textbook/requirements.txt
+- build-scripts/textbook/test_paragraph_pdf.py
 - build-scripts/tools/build-skill-tree-viewer.js
 - build-scripts/workflows/book2-integration-decision.js
 - build-scripts/workflows/book2-integration-decision.test.js
@@ -1840,24 +1847,32 @@ Count: 736
 - build-scripts/workflows/fixtures/paragraph-lane-scope/textbook-with-companion-leak.json
 - build-scripts/workflows/fixtures/paragraph-lane-scope/textbook-with-quality-ref-companion-block-leak.json
 - build-scripts/workflows/fixtures/paragraph-lane-scope/textbook-with-quality-ref-partA-block-only.json
+- build-scripts/workflows/paragraph-records.js
+- build-scripts/workflows/paragraph-records.test.js
 - scripts/audit-pptx-accessibility.py
 - scripts/check-book-print-scope.js
 - scripts/check-book.js
 - scripts/check-course-target-exercises-v5.js
 - scripts/check-links.js
 - scripts/deploy.js
+- scripts/lib/committed-paragraph-files.js
 - scripts/lib/paragraph-types.js
+- scripts/lib/part-a-review-evidence.js
 - scripts/post-push-hook.js
 - scripts/pre-push-hook.js
 - scripts/qa-presentation-v2-html.js
 - scripts/qa-presentation-web.js
 - scripts/qa-student-web-pages.js
+- scripts/reproduce-paragraph-edition.js
 - scripts/tests/build-landing-page.test.js
 - scripts/tests/check-book-print-scope.test.js
 - scripts/tests/check-book.test.js
 - scripts/tests/check-course-target-exercises-v5.test.js
+- scripts/tests/helpers/part-a-review-fixture.js
+- scripts/tests/part-a-review-evidence.test.js
 - scripts/tests/procedure-contracts.test.js
 - scripts/tests/qa-presentation-v2-html-startup.test.js
+- scripts/tests/reproduce-paragraph-edition.test.js
 - scripts/tests/validate-chapter.test.js
 - scripts/tests/validate-paragraph-modes.test.js
 - scripts/tests/validate-paragraph.test.js
@@ -8268,13 +8283,15 @@ _No files indexed in this group._
 
 ## other
 
-Count: 144
+Count: 149
 
 - .gitattributes
 - .github/ci-python-requirements.txt
 - .github/workflows/authorized-bundle-integration.yml
 - .github/workflows/authorized-pr-integration.yml
 - .github/workflows/cross-repo-bundle-compatibility.yml
+- .github/workflows/paired-paragraph-ci.yml
+- .github/workflows/paragraph-renderer-tests.yml
 - .github/workflows/platform-ci.yml
 - .gitignore
 - .ignore
@@ -8318,6 +8335,7 @@ Count: 144
 - docs/maintenance/archive-cleanup.md
 - docs/maintenance/ci-cleanup-20260909.md
 - docs/maintenance/open-items.md
+- docs/maintenance/paragraph-workflow-improvements.md
 - docs/review/human-payload-authorization.schema.json
 - docs/review/maintenance-workflow.md
 - docs/review/pr-integration-lane-policy.md
@@ -8344,9 +8362,11 @@ Count: 144
 - docs/sprints/README.md
 - docs/sprints/S7-plan.md
 - docs/workflows/legacy-full-companion-profile.md
+- docs/workflows/paired-paragraph-ci.md
 - docs/workflows/paragraph-lane-vocabulary.md
 - docs/workflows/paragraph-quality-ref-schema-v2.md
 - docs/workflows/part-a-review.md
+- docs/workflows/part-a-start.md
 - docs/workflows/textbook-paragraph-lane.md
 - docs/workflows/web-companion-paragraph-lane.md
 - jest.config.cjs

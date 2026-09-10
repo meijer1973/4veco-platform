@@ -4,6 +4,10 @@ This folder contains all production scripts used to turn source material into th
 
 If you want to build a complete paragraph from scratch, start with [BUILD-PARAGRAPH.md](../BUILD-PARAGRAPH.md).
 
+To retrieve an unchanged paragraph PDF edition without renewing its review,
+use the [committed-edition compatibility route](../docs/workflows/part-a-review.md#reproducing-an-existing-edition).
+New or changed material still needs current review evidence.
+
 The strategic product direction lives in
 `../4veco-lessen/specifications/product-vision.md`; the operational product
 north star lives in `../4veco-lessen/specifications/product-end-state.md`.

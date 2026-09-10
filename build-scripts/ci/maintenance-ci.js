@@ -13,6 +13,8 @@ const CORE_TESTS = ['build-scripts/ci/maintenance-ci.test.js', 'build-scripts/ci
 const PART_A_INSTRUCTIONS = new Set([
   'BUILD-PARAGRAPH.md', 'BUILD-CHAPTER.md', 'agents/README.md',
   'docs/workflows/textbook-paragraph-lane.md', 'docs/workflows/part-a-review.md',
+  'docs/workflows/part-a-start.md', 'docs/workflows/paired-paragraph-ci.md',
+  'docs/workflows/paragraph-quality-ref-schema-v2.md',
   'skills/econ-paragraph-review.md', 'skills/econ-chapter-builder.md',
   'skills/econ-textbook-paragraph.md', 'skills/econ-consolidation-builder.md',
   'skills/econ-testprep-builder.md', 'skills/econ-quality-control.md',
@@ -97,6 +99,9 @@ function jestArgs(paths, root = ROOT) {
       tests.add('build-scripts/workflows/check-part-a-pdf-readiness.test.js');
       tests.add('scripts/tests/validate-paragraph-modes.test.js');
       tests.add('scripts/tests/validate-chapter.test.js');
+      tests.add('scripts/tests/part-a-review-evidence.test.js');
+      tests.add('build-scripts/workflows/paragraph-records.test.js');
+      tests.add('build-scripts/ci/paired-paragraph-ci.test.js');
     }
     if (file.startsWith('.github/workflows/')) {
       for (const name of workflowTests[path.basename(file)] || []) tests.add(`build-scripts/${name}.test.js`);

@@ -32,6 +32,12 @@ full operational source is `skills/econ-exercise-builder.md`.
 
 ---
 
+Before signing a current paragraph verdict, verify the snapshot inventory and
+include its `Review manifest SHA256` binding under the
+[current-file evidence rule](../docs/workflows/part-a-review.md#current-file-evidence).
+After repairs, recheck affected material and bind the new digest; an author
+regenerating a snapshot does not renew your review.
+
 ## REVIEW PROTOCOL
 
 Complete all applicable dimensions: Pass 0 integrity before content review,

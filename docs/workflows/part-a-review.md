@@ -68,3 +68,61 @@ with required CI and branch protection, without admin bypass. Protected or
 runtime-coupled changes that require the gated/bundle lane still use it.
 Ordinary content retains its applicable content and rendering CI; the lighter
 CI allowance for instruction maintenance does not apply to student material.
+
+## Current-file evidence
+
+Before review, generate `X.Y.Z-textbook-review-manifest.json` with
+`paragraph-records.js snapshot <paragraph-folder>`. The reviewer checks its
+inventory and records exactly one line in `X.Y.Z-review.md`:
+
+```text
+Review manifest SHA256: `<digest printed by the snapshot command>`
+```
+
+The manifest binds available Part A Markdown/HTML/PDF, build wrapper, target
+contract, plan/foundation and owned or locally referenced rendering inputs.
+Text uses UTF-8 with LF normalization; PDFs and other binaries use exact bytes.
+Review/quality/handoff records are excluded to avoid circular hashes. Changes,
+additions and deletions invalidate evidence. Regenerating the manifest alone
+cannot renew the review. The reviewer binds a new digest only after checking
+repairs and affected dependencies. Preserve explicit coverage and evidence; a
+hash verifies freshness, not reviewer independence or content quality.
+
+The current manifest supports static textbook HTML/SVG and local render inputs,
+including nested CSS imports, image candidates and Markdown image references.
+Scripted/embedded documents and external render resources are rejected instead
+of being silently omitted. Use local assets or the applicable interactive lane.
+Percent-encode parentheses in Markdown image URLs. This bounded inventory is
+not a browser execution trace.
+
+Paragraph and chapter validators require one explicit final verdict and a
+matching manifest. Old records with no verdict/binding no longer prove current
+closure. Do not retrofit frozen Book 1 content or manufacture retrospective
+PASS evidence; archived reports remain historical evidence. A new closure claim
+requires a real review of the applicable current material.
+
+## Reproducing an existing edition
+
+The current-review contract is a breaking change for paragraph/chapter closure:
+an old PASS without a manifest no longer passes those validators. It does not
+require migrating the back catalogue. To retrieve an existing paragraph PDF
+edition, use this compatibility command from the platform checkout:
+
+```text
+node scripts/reproduce-paragraph-edition.js <lesson-repo> <40-character-edition-sha> "<paragraph-path>" "<new-output-directory>"
+```
+
+The paragraph path is repository-relative, using forward slashes. The output
+directory must be new, outside both repositories, with an existing parent.
+The command exports the paragraph type's required PDFs directly from that
+commit and reports their Git blob IDs and SHA256 hashes. It preserves their
+exact bytes, ignores local modifications and leaves historical reviews and
+frozen Book 1 untouched. Its result explicitly says `current_review:
+NOT_PERFORMED`; it gives no current-content PASS or publication permission.
+
+This route copies an existing edition; it does not rebuild missing PDFs from
+source or reassemble a chapter/book. Rebuilding a historical edition needs its
+applicable historical toolchain. A PDF absent from the commit cannot be supplied
+by an ignored local file. New or changed material, and any new current-review
+claim, must use the normal snapshot, substantive review and validation route
+above. Never generate bindings for historical reports to make them pass.

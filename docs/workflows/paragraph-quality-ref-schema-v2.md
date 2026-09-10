@@ -81,3 +81,13 @@ The lane-scope checker treats block edits as lane-owned:
 If one lane discovers a defect in the other lane's block, open an explicit
 repair follow-up or include a reviewed lane-scope exception. Do not silently
 repair the other lane's quality block.
+
+## Generated Part A projection
+
+`paragraph-records.js quality <paragraph-folder>` derives `partA.review_file`,
+`review_verdict`, `review_manifest_sha256`, inventory and asset checks from a
+current explicit independent review and actual files. It preserves additional
+authored Part A evidence and the companion block. It refuses stale reviews and
+ambiguous legacy ownership; explicitly migrate a legacy record to schema 2
+before using this generator. Review freshness is checked directly by both
+paragraph and chapter validators, independently of quality-record assertions.

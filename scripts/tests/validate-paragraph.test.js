@@ -1,3 +1,4 @@
+const bindFixtureReview = require('./helpers/part-a-review-fixture');
 /**
  * Tests for validate-paragraph.js flat-layout validation.
  */
@@ -99,7 +100,7 @@ function setupPartA(folderName = '9.9.1 Theory', kind = 'theory', options = {}) 
   }
   writeText(path.join(dir, '_assets', `${parNr}_fig_1.svg`), '<svg></svg>');
   writeText(path.join(dir, '_assets', `${parNr}_fig_1.png`), 'png');
-  writeText(path.join(dir, `${parNr}-review.md`), '# Review\nAll checks PASS.\n');
+  writeText(path.join(dir, `${parNr}-review.md`), '# Review\n\n## 2. Verdict\nPASS\n');
   writeText(
     path.join(dir, `${parNr}-quality-ref.yaml`),
     [
@@ -109,6 +110,7 @@ function setupPartA(folderName = '9.9.1 Theory', kind = 'theory', options = {}) 
       '  naming_compliant: true',
     ].join('\n')
   );
+  bindFixtureReview(dir);
   return dir;
 }
 
@@ -444,6 +446,7 @@ describe('validate-paragraph.js', () => {
     const dir = setupPartA('1.1.1 Schaarste en economisch denken');
     setupPartB('1.1.1 Schaarste en economisch denken');
     seedB02ParitySurfaces(dir);
+    bindFixtureReview(dir);
 
     const { exitCode, output } = run(dir, 'complete');
     expect(exitCode).toBe(0);

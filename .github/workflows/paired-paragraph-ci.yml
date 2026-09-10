@@ -1,0 +1,58 @@
+name: paired-paragraph-ci
+
+on:
+  workflow_dispatch:
+    inputs:
+      lesson_sha:
+        description: Exact reviewed lesson commit (40 lowercase hex characters)
+        required: true
+        type: string
+      lesson_base_sha:
+        description: Exact lesson base commit for the textbook lane diff
+        required: true
+        type: string
+      paragraph_path:
+        description: Lesson-relative paragraph folder, using forward slashes
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  validate-paired-paragraph:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+          path: 4veco-platform
+          persist-credentials: false
+      - uses: actions/checkout@v6
+        with:
+          repository: meijer1973/4veco-lessen
+          ref: ${{ inputs.lesson_sha }}
+          path: 4veco-lessen
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 20
+      - name: Check the declared paragraph and repository pair
+        working-directory: 4veco-platform
+        env:
+          PLATFORM_SHA: ${{ github.sha }}
+          LESSON_SHA: ${{ inputs.lesson_sha }}
+          LESSON_BASE_SHA: ${{ inputs.lesson_base_sha }}
+          PARAGRAPH_PATH: ${{ inputs.paragraph_path }}
+          LESSON_ROOT: ../4veco-lessen
+          PARAGRAPH_CI_OUTPUT: ../paired-paragraph-ci.json
+        run: node build-scripts/ci/paired-paragraph-ci.js
+      - name: Publish exact pair evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paired-paragraph-evidence
+          path: paired-paragraph-ci.json
+          if-no-files-found: warn

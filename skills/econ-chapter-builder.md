@@ -1,12 +1,12 @@
 ---
 name: econ-chapter-builder
-description: "End-to-end chapter production: reads the blueprint, plans paragraph progression, builds each paragraph via econ-textbook-paragraph, runs QC, and assembles into a chapter PDF via econ-chapter-assembler. Use when building a complete chapter from scratch. Trigger when the user mentions hoofdstuk bouwen, chapter build, build chapter, alle paragrafen maken, or complete chapter from blueprint. This is the top-level orchestrator — it calls econ-textbook-paragraph for each paragraph, econ-consolidation-builder for §4, and econ-chapter-assembler for final assembly."
+description: "End-to-end chapter production: reads the blueprint, plans paragraph progression, builds each paragraph via econ-textbook-paragraph, arranges independent review, and assembles into a chapter PDF via econ-chapter-assembler. Use when building a complete chapter from scratch. Trigger when the user mentions hoofdstuk bouwen, chapter build, build chapter, alle paragrafen maken, or complete chapter from blueprint. This is the top-level orchestrator — it calls econ-textbook-paragraph for each paragraph, econ-consolidation-builder for §4, and econ-chapter-assembler for final assembly."
 pipeline: "Part A orchestrator"
 ---
 
 # Economics Chapter Builder
 
-End-to-end orchestrator for building a complete textbook chapter from blueprint to finished PDF. This skill does NOT build content itself — it plans, delegates, verifies, and assembles.
+End-to-end orchestrator for building a complete textbook chapter from blueprint to finished PDF. The orchestrator may author directly or delegate, and arranges independent review before assembly.
 
 **Skills called by this orchestrator:**
 - `econ-textbook-paragraph` → builds each theory paragraph (§1–§3)
@@ -369,7 +369,7 @@ For parallel waves (e.g., §1 and §3 built simultaneously), inter-wave QC is no
 
 ## PART 4: QC REVIEW
 
-After ALL paragraphs are built and verified (Part 3), the **orchestrator** runs QC. This is not delegated to the paragraph builders — they cannot review their own work.
+After ALL paragraphs are built and verified (Part 3), the **orchestrator** arranges independent review. Authors cannot review their own work.
 
 ### 4.1 Per-paragraph coverage (independent content review)
 
