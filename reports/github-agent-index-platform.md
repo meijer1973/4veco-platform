@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-09T12:12:44.723Z
+Generated: 2026-09-10T11:24:06.119Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/paragraph-workflow-improvements-20260909`
-Source commit: `19d739c2ecb59a5d5710a89ab6b1fbdf44853e15`
-Files indexed: 7695
+Source commit: `34fbecd427b0fe403e3b4b21e4ed7116fd9e242a`
+Files indexed: 7698
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 746
+Count: 749
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -864,6 +864,7 @@ Count: 746
 - scripts/check-course-target-exercises-v5.js
 - scripts/check-links.js
 - scripts/deploy.js
+- scripts/lib/committed-paragraph-files.js
 - scripts/lib/paragraph-types.js
 - scripts/lib/part-a-review-evidence.js
 - scripts/post-push-hook.js
@@ -871,6 +872,7 @@ Count: 746
 - scripts/qa-presentation-v2-html.js
 - scripts/qa-presentation-web.js
 - scripts/qa-student-web-pages.js
+- scripts/reproduce-paragraph-edition.js
 - scripts/tests/build-landing-page.test.js
 - scripts/tests/check-book-print-scope.test.js
 - scripts/tests/check-book.test.js
@@ -879,6 +881,7 @@ Count: 746
 - scripts/tests/part-a-review-evidence.test.js
 - scripts/tests/procedure-contracts.test.js
 - scripts/tests/qa-presentation-v2-html-startup.test.js
+- scripts/tests/reproduce-paragraph-edition.test.js
 - scripts/tests/validate-chapter.test.js
 - scripts/tests/validate-paragraph-modes.test.js
 - scripts/tests/validate-paragraph.test.js

@@ -4,6 +4,11 @@ Use this checklist for ordinary textbook work after the shared AGENTS guide
 and worktree claim. Read the linked section when that step applies; do not
 read every chapter, companion and legacy integration manual at entry.
 
+For an unchanged existing PDF edition, use the narrow
+[historical reproduction route](part-a-review.md#reproducing-an-existing-edition).
+It exports committed PDFs without creating current review evidence. The
+authoring and current-closure steps below apply to new or changed material.
+
 1. **Establish the assignment and teaching authority.** Read the paragraph's
    canonical outline entry, target record and chapter plan. For Book 2 run
    `node build-scripts/workflows/paragraph-records.js foundation "<paragraph-folder>" --action paragraph_production`.

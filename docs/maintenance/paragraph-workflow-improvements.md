@@ -55,3 +55,41 @@ Part A keys or cross-block YAML anchors that cannot be safely preserved are
 rejected before writing. No historical review is automatically renewed. The
 new manual paired workflow needs default-branch availability before hosted
 dispatch; its CLI is tested from an isolated committed repository pair.
+
+## PR #239 amendment
+
+Resolve only the two requested compatibility/input findings. Preserve the
+current-review quality floor, source authority and frozen Book 1 bytes. Provide
+an explicit export of an existing committed PDF edition, without a rebuild or
+retrospective PASS. Validate paired paragraph inputs from private snapshots of
+the pinned Git blobs, excluding ignored local overlays while allowing caches.
+
+Proof: a representative legacy paragraph export with exact-byte comparison,
+regressions for unchanged/changed historical review and ignored local evidence,
+focused validator tests, current-head CI and one independent amendment review.
+Do not retrofit the back catalogue or run another paragraph pilot. Keep trial
+PRs #238/#47 unmerged; defer graph-skill/caller cleanup and its tiny experiment
+until acceptance. Return the amended head for an integration decision.
+
+Amendment checks: 219 focused tests passed, one skipped (13 suites), including
+101 entry/navigation, exercise-contract and PDF-readiness tests. The
+committed paired-CLI fixture passes with an ignored cache, but fails when its
+manifest exists only as an ignored local file; the live-folder check reproduces
+the old false PASS. Changed reviewed content still fails the committed check.
+
+At lesson commit `57b31a1f4a3d2aa0da3945abbc5a7a0ee5d05e6a`, the compatibility
+command exported all three PDFs for Book 1 paragraph 1.1.1, Schaarste en
+economisch denken. Independent `git hash-object --no-filters` comparisons
+matched the source blobs: paragraph `a12d05c270e88f43173bb32d0152e2abe0022cf3`,
+exercises `6c5111b0adc309d59e0c44fb79ec5806e9e71fa7`, answers
+`ddc6be1caae889fb1f772823e129aa039d5cfdec`. The lesson worktree stayed clean.
+Its historical PASS WITH FLAGS still fails current-review validation because
+it lacks a manifest. A committed fixture also rejects changed content retaining
+an old PASS and proves that selecting the historical SHA still exports the
+original PDFs. No historical review or source was rewritten.
+
+Compatibility limit: export requires committed PDFs; it does not rebuild missing
+artifacts or reassemble chapters/books. Current paragraph/chapter closure now
+requires current review evidence. Historical rebuilds require their applicable
+historical toolchain. The paired hosted workflow remains unproven with a real
+production pair; fixture success is not a production-quality attestation.

@@ -3,7 +3,9 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const { execFileSync, spawnSync } = require('child_process');
-const { exactCheckout, paragraphDirectory } = require('./paired-paragraph-ci');
+const { exactCheckout } = require('./paired-paragraph-ci');
+const { committedFiles } = require('../../scripts/lib/committed-paragraph-files');
+const { checkReview } = require('../../scripts/lib/part-a-review-evidence');
 const bind = require('../../scripts/tests/helpers/part-a-review-fixture');
 const yaml = require('js-yaml');
 let root;
@@ -45,16 +47,16 @@ test('dirty tracked, staged and untracked evidence rejected', () => {
   expect(() => exactCheckout(root, git('rev-parse', 'HEAD'))).toThrow(/uncommitted/);
 });
 test('only repository-relative paragraph directories accepted', () => {
-  expect(paragraphDirectory(root, '2.1.1 Test')).toBe(path.join(root, '2.1.1 Test'));
+  expect(committedFiles(root, git('rev-parse', 'HEAD'), '2.1.1 Test')).toHaveLength(1);
   for (const unsafe of ['../2.1.1 Test', '/2.1.1 Test', 'a/../2.1.1 Test', '.git', 'a\\2.1.1 Test']) {
-    expect(() => paragraphDirectory(root, unsafe)).toThrow();
+    expect(() => committedFiles(root, git('rev-parse', 'HEAD'), unsafe)).toThrow();
   }
 });
 test('complete paired command checks committed paragraph evidence and rejects a stale reviewed payload', () => {
   const platform = fs.mkdtempSync(path.join(os.tmpdir(), 'paired-platform-'));
   const platformGit = (...args) => execFileSync('git', ['-C', platform, ...args], { encoding: 'utf8' }).trim();
   try {
-    for (const file of ['scripts/validate-paragraph.js', 'scripts/lib/paragraph-types.js', 'scripts/lib/part-a-review-evidence.js', 'build-scripts/ci/paired-paragraph-ci.js', 'build-scripts/workflows/check-paragraph-lane-scope.js']) {
+    for (const file of ['scripts/validate-paragraph.js', 'scripts/lib/paragraph-types.js', 'scripts/lib/part-a-review-evidence.js', 'scripts/lib/committed-paragraph-files.js', 'build-scripts/ci/paired-paragraph-ci.js', 'build-scripts/workflows/check-paragraph-lane-scope.js']) {
       fs.mkdirSync(path.dirname(path.join(platform, file)), { recursive: true });
       fs.copyFileSync(path.resolve(__dirname, '../..', file), path.join(platform, file));
     }
@@ -67,6 +69,8 @@ test('complete paired command checks committed paragraph evidence and rejects a 
       fs.writeFileSync(path.join(folder, `2.1.1 Test – ${suffix}.pdf`), Buffer.alloc(15000));
     }
     fs.mkdirSync(path.join(folder, '_assets'));
+    fs.writeFileSync(path.join(folder, '_assets/2.1.1_fig_1.svg'), '<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"><rect width="1" height="1"/></svg>');
+    fs.writeFileSync(path.join(folder, '_assets/2.1.1_fig_1.png'), Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aNGkAAAAASUVORK5CYII=', 'base64'));
     fs.writeFileSync(path.join(folder, 'build_pdf.py'), '# fixture\n');
     fs.writeFileSync(path.join(folder, '2.1.1-review.md'), '## 2. Verdict\nPASS\n');
     fs.writeFileSync(path.join(folder, '2.1.1-quality-ref.yaml'), 'schema_version: 2\npartA:\n  assets:\n    missing: []\n');
@@ -78,10 +82,29 @@ test('complete paired command checks committed paragraph evidence and rejects a 
       return { ...JSON.parse(result.stdout), process_exit: result.status };
     };
     const report = execute(options);
+    if (report.decision !== 'PASS') throw new Error(JSON.stringify(report, null, 2));
     expect(report.process_exit).toBe(0);
     expect(report.validation_exit_code).toBe(0);
     expect(report.decision).toBe('PASS');
     expect(report.lesson_sha).toBe(options.LESSON_SHA);
+    fs.appendFileSync(path.join(root, '.git/info/exclude'), '\nlocal-cache/\n*textbook-review-manifest.json\n');
+    fs.mkdirSync(path.join(folder, 'local-cache'));
+    fs.writeFileSync(path.join(folder, 'local-cache/cache.txt'), 'ignored, irrelevant');
+    expect(execute(options).decision).toBe('PASS');
+    const manifestPath = path.join(folder, '2.1.1-textbook-review-manifest.json');
+    const manifest = fs.readFileSync(manifestPath);
+    git('rm', '2.1.1 Test/2.1.1-textbook-review-manifest.json');
+    git('commit', '-qm', 'remove committed evidence');
+    fs.writeFileSync(manifestPath, manifest); // Ignored local-only evidence.
+    const missingOptions = { ...options, LESSON_SHA: git('rev-parse', 'HEAD') };
+    expect(() => exactCheckout(root, missingOptions.LESSON_SHA)).not.toThrow();
+    expect(checkReview(folder).ok).toBe(true); // Reproduces the original gap.
+    const missing = execute(missingOptions);
+    expect(missing.process_exit).toBe(1);
+    expect(missing.review.errors.join(' ')).toMatch(/evidence missing or invalid/);
+    expect(missing.validation_exit_code).not.toBe(0);
+    git('add', '-f', '2.1.1 Test/2.1.1-textbook-review-manifest.json');
+    git('commit', '-qm', 'restore committed evidence');
     fs.appendFileSync(path.join(folder, '2.1.1 Test – paragraaf.md'), 'changed');
     git('add', '.'); git('commit', '-qm', 'unreviewed content');
     const stale = execute({ ...options, LESSON_SHA: git('rev-parse', 'HEAD') });

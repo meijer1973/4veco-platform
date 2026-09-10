@@ -18,6 +18,14 @@ the selected paragraph inventory, and its current review manifest and verdict.
 Unknown paths and companion changes fail this focused textbook check; use the
 applicable mixed/bundle procedure when those are intentional.
 
+Paragraph validation reads a private snapshot populated directly from the
+declared lesson commit's Git blobs, using the explicit `student-web` Part A
+profile. Ignored local PDFs, manifests and other overlays cannot supply missing
+inputs; ordinary ignored caches are harmless. All required product/evidence
+files must already be committed: this command performs no generation. Symlink
+and submodule inputs are rejected. Git checkout filters and lesson scripts are
+not run while creating the snapshot, which is removed after validation.
+
 Download `paired-paragraph-evidence` from the run. Its JSON reports exact SHAs,
 scope, validation output and decision. Input/checkout failures fail the run
 before a report can be written. A passing result supplements required CI; it
