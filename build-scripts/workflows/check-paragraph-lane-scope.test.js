@@ -46,6 +46,27 @@ function writeFile(filePath, content) {
 }
 
 describe('check-paragraph-lane-scope', () => {
+  test('archive retrieval configuration and exact generated cleanup paths have explicit ownership', () => {
+    const generated = [
+      'reports/github-agent-current-platform.md',
+      'reports/github-agent-current-platform.json',
+      'reports/github-agent-current-lessen.md',
+      'reports/github-agent-current-lessen.json',
+      'reports/markdown/graph-skill-tree.md',
+      'reports/markdown/representation-operation-coverage.md',
+      'reports/markdown/representation-transfer-gaps.md',
+    ];
+    expect(classifyPath('.ignore').category).toBe('shared_platform');
+    for (const file of generated) expect(classifyPath(file).category).toBe('generated_indexes');
+    expect(checkLaneScope({ lane: 'shared', changedPaths: ['.ignore', ...generated] }).ok).toBe(true);
+    for (const file of ['reports/github-agent-current-other.json', 'reports/markdown/unreviewed.md', '.ignore-other']) {
+      expect(classifyPath(file).category).toBe('unknown');
+      expect(checkLaneScope({ lane: 'shared', changedPaths: ['.ignore', file] }).ok).toBe(false);
+    }
+    expect(checkLaneScope({ lane: 'shared', changedPaths: generated }).ok).toBe(false);
+    expect(checkLaneScope({ lane: 'companion', changedPaths: ['.ignore', '1.1.1 - korte-check.html'] }).ok).toBe(false);
+  });
+
   test('classifies representative paragraph outputs', () => {
     expect(classifyPath('Boek 1/1.1/1.1.1 Test/1.1.1 Test – paragraaf.md').category).toBe('partA_textbook');
     expect(classifyPath('Boek 1/1.1/1.1.1 Test/1.1.1 Test – instapquiz.html').category).toBe('partB_companion');

@@ -153,7 +153,13 @@ When starting a new paragraph, copy the closest existing builder from the corres
 
 ### 5. Archive — `archive/`
 
-Legacy / one-off scripts kept for historical reference only. Not part of the active pipeline. See `archive/README.md` for the retention policy.
+The completed one-off utilities `extract-all-antwoorden.py`, `extract-quiz-data.js`,
+`fix-emoji.py`, and `restyle-instapquiz.js` were retired on 2026-09-09 and remain
+recoverable from Git history. The archive retains its README and `roundtrip-pptx.py`.
+The exported `roundtripWithPythonPptx()` wrapper in `lib/lib-pptx.js` still targets
+the absent `lib/roundtrip-pptx.py`; retain the archived helper until that existing
+inconsistency is deliberately resolved. The active LibreOffice roundtrip is
+separate. See `archive/README.md` for the retention policy.
 
 ## How To Use This Folder
 

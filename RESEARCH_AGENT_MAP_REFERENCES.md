@@ -237,8 +237,8 @@ Use these index anchors before free-form browsing. They reduce inference and con
     "docs/roadmaps/quality-standards/sprint-ledger.md",
     "docs/roadmaps/quality-standards/quality-standards-end-state.md",
     "docs/roadmaps/roadmap-version-index.json",
-    "knowledge/old/platform-team-roadmap.md",
-    "knowledge/old/three-month-roadmap.md"
+    "docs/maintenance/open-items.md",
+    "docs/review/maintenance-workflow.md"
   ],
   "inspection_standards_paths": [
     "docs/roadmaps/quality-standards/README.md",
@@ -319,8 +319,8 @@ roadmap_paths (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/inspection-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/platform-team-roadmap.md
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/three-month-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/maintenance/open-items.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/maintenance-workflow.md
 
 readme_paths (full URLs):
 
@@ -605,7 +605,7 @@ Rules:
     "references/reference-team-roadmap.md",
     "docs/roadmaps/roadmap-version-index.json",
     "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
-    "knowledge/old/platform-team-roadmap.md",
+    "docs/maintenance/open-items.md",
     "reports/internal-dashboard/dashboard-data.json"
   ]
 }
@@ -692,3 +692,8 @@ Suggested categories:
 - Use raw URLs or relative paths consistently.
 - Keep internal technical categories inside developer-facing reports and dashboards.
 - Do not write public-facing lesson text from this map. This file is for research navigation, not student material production.
+
+Historical roadmaps are optional context, not the ordinary roadmap-work route:
+
+- [April platform roadmap](archive/knowledge/old/platform-team-roadmap.md)
+- [Original three-month plan](archive/knowledge/old/three-month-roadmap.md)

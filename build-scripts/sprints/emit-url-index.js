@@ -58,6 +58,13 @@ function buildBody(branch) {
   lines.push(`- ${platform('RESEARCH_AGENT_MAP.md')}`);
   lines.push(`- ${platform('RESEARCH_AGENT_MAP_REFERENCES.md')}`);
   lines.push(`- ${lessen('RESEARCH_AGENT_MAP.md')}`);
+  lines.push(`- ${platform('docs/maintenance/open-items.md')}`);
+  lines.push('');
+  lines.push('Historical/provenance fallback (use current indexes first):');
+  lines.push(`- ${platform('archive/README.md')}`);
+  lines.push(`- ${lessen('archive/README.md')}`);
+  lines.push(`- ${platform('reports/github-agent-index-platform.json')}`);
+  lines.push(`- ${platform('reports/github-agent-index-lessen.json')}`);
   lines.push('');
 
   lines.push('## Research Agent Prompts');
@@ -109,8 +116,8 @@ function buildBody(branch) {
   lines.push(`- ${platform('docs/roadmaps/quality-standards/inspection-standards-roadmap.md')}`);
   lines.push(`- ${platform('docs/roadmaps/quality-standards/international-quality-standards-roadmap.md')}`);
   lines.push(`- ${platform('docs/roadmaps/roadmap-version-index.json')}`);
-  lines.push(`- ${platform('knowledge/old/platform-team-roadmap.md')}`);
-  lines.push(`- ${platform('knowledge/old/three-month-roadmap.md')}`);
+  lines.push(`- ${platform('archive/knowledge/old/platform-team-roadmap.md')}`);
+  lines.push(`- ${platform('archive/knowledge/old/three-month-roadmap.md')}`);
   lines.push(`- ${lessen('lessen-team-roadmap.md')}`);
   lines.push('');
 
@@ -184,7 +191,6 @@ function buildBody(branch) {
   lines.push('');
   lines.push(`- ${platform('references/owned/course-blueprint-v4.md')}`);
   lines.push(`- ${platform('references/owned/course-blueprint-v4.meta.json')}`);
-  lines.push(`- ${lessen('course_blueprint_v4.md')}`);
   lines.push('');
 
   lines.push('## Index Anchors (registries, evidence, target exercises)');

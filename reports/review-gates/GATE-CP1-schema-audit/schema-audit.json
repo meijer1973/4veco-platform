@@ -13,7 +13,7 @@
     "references/authored/course-target-exercises.json",
     "references/data/rag/chunk_index.jsonl",
     "references/reference-team-roadmap.md",
-    "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
+    "archive/knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
   ],
   "baseline_counts": {
     "exam_questions": 349,

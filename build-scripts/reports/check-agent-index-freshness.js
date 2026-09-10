@@ -37,6 +37,8 @@ function normalizeGitPath(filePath) {
 function isGeneratedIndexPath(filePath) {
   const normalized = normalizeGitPath(filePath);
   return normalized === 'reports/url-index.md'
+    || /^reports\/github-agent-current-(platform|lessen)\.(json|md)$/.test(normalized)
+    || /^archive\/index\.(json|md)$/.test(normalized)
     || /^reports\/github-agent-index(?:-[^/]+)?\.(?:json|md)$/.test(normalized);
 }
 

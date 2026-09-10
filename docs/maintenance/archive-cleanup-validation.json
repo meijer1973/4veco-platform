@@ -1,0 +1,739 @@
+{
+  "baseline_platform": "19d739c2ecb59a5d5710a89ab6b1fbdf44853e15",
+  "baseline_lessons": "57b31a1f4a3d2aa0da3945abbc5a7a0ee5d05e6a",
+  "compared_checks": [
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "PV.1",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "PV.2",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "PV.3",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "PV.4",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "PV.5",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "PV.6",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "PV.7",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "PV.8",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R0.2",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R1.1",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R1.2",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R1.3",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R2.1",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R2.2",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R2.3",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R2.4",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R3.1",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R3.2",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R4.1",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R4.2",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R4.3",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R4.4",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R4.5",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R5.1",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R5.2",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R5.3",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R6.1",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R6.2",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R7.1",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R7.2",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R7.3",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R7.4",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R7.5",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R8.1",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R9.0",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R9.01",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R9.1",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "R9.2",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "RX.1",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "RX.2",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "RX.2b",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "RX.3",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "RX.3a",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "RX.3b",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "RX.4",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "RX.5",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "RX.6",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "S1",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "S4",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "S4.1",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "S6",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "S8",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "S9",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "S9a",
+        "--complete"
+      ],
+      "baseline_exit_code": 1,
+      "migrated_exit_code": 1,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "AGENT-BRANCH-SAFETY-1",
+        "--complete"
+      ],
+      "baseline_exit_code": 0,
+      "migrated_exit_code": 0,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "BUNDLE-LANE-CI-RELIABILITY-1",
+        "--complete"
+      ],
+      "baseline_exit_code": 0,
+      "migrated_exit_code": 0,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "CI-EVIDENCE-1",
+        "--complete"
+      ],
+      "baseline_exit_code": 0,
+      "migrated_exit_code": 0,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "CI-GATE-PROOF-1",
+        "--complete"
+      ],
+      "baseline_exit_code": 0,
+      "migrated_exit_code": 0,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "CI-GOVERNANCE-1",
+        "--complete"
+      ],
+      "baseline_exit_code": 0,
+      "migrated_exit_code": 0,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "CI-LF-HARDEN-1",
+        "--complete"
+      ],
+      "baseline_exit_code": 0,
+      "migrated_exit_code": 0,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "CI-REMOTE-1",
+        "--complete"
+      ],
+      "baseline_exit_code": 0,
+      "migrated_exit_code": 0,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "CI-REMOTE-1A",
+        "--complete"
+      ],
+      "baseline_exit_code": 0,
+      "migrated_exit_code": 0,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "REVIEW-THROUGHPUT-1",
+        "--complete"
+      ],
+      "baseline_exit_code": 0,
+      "migrated_exit_code": 0,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "SINGLE-PR-DRY-RUN-REPAIR-1",
+        "--complete"
+      ],
+      "baseline_exit_code": 0,
+      "migrated_exit_code": 0,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/sprints/check-sprint-bundle.js",
+        "SPRINT-PROTOCOL-HARDEN-2",
+        "--complete"
+      ],
+      "baseline_exit_code": 0,
+      "migrated_exit_code": 0,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/references/check-roadmap-version-index.js"
+      ],
+      "baseline_exit_code": 0,
+      "migrated_exit_code": 0,
+      "output_identical": true
+    },
+    {
+      "command": [
+        "node",
+        "build-scripts/ci/check-evidence-line-endings.js"
+      ],
+      "baseline_exit_code": 0,
+      "migrated_exit_code": 0,
+      "output_identical": true
+    }
+  ]
+}

@@ -1001,10 +1001,6 @@ Scripts built for specific paragraphs in earlier work. Useful as examples but no
 
 | Script | Purpose |
 |--------|---------|
-| `extract-quiz-data.js` | Extract quiz data from old HTML files |
-| `restyle-instapquiz.js` | Restyle legacy quiz files |
-| `extract-all-antwoorden.py` | Extract answers from textbook |
-| `fix-emoji.py` | Fix emoji encoding |
 | `prompt-youtube-videos.md` | Prompt template for finding YouTube videos |
 
 ---
