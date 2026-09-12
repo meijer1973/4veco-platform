@@ -64,7 +64,9 @@ afterAll(() => {
 function cloneFiles() {
   const files = Object.fromEntries(Object.entries(readFiles(root)).map(([file, value]) => [file, value === null ? null : Buffer.from(value)]));
   // Retain historical pending regression coverage independently of live activation.
-  for (const file of [META_PATH, OUTLINE_PATH]) files[file] = Buffer.from(ownerDecision.gitText(require('./book2-integration-decision').BASELINE_COMMIT, file));
+  for (const file of [META_PATH, OUTLINE_PATH, 'skills/econ-exercise-builder.md']) {
+    files[file] = Buffer.from(ownerDecision.gitText(require('./book2-integration-decision').BASELINE_COMMIT, file));
+  }
   return files;
 }
 
@@ -324,8 +326,18 @@ function mutateProjectionCell(files, holdId, cellIndex, replacement) {
 }
 
 describe('Book 2 outline currentness contract', () => {
-  test('current prose authority, compact metadata, holds, targets, and workflows pass structural mode', () => {
+  test('historical pending authority and its pinned exercise contract pass structural mode', () => {
     expect(findBookOutlineFailures(cloneFiles())).toEqual([]);
+  });
+
+  test('current authority and the current exercise contract pass structural mode', () => {
+    expect(findBookOutlineFailures(readFiles(root))).toEqual([]);
+  });
+
+  test('current exercise source drift still fails its authority hash', () => {
+    const files = readFiles(root);
+    files['skills/econ-exercise-builder.md'] = `${asText(files['skills/econ-exercise-builder.md'])}\nUnreviewed change.\n`;
+    expect(findBookOutlineFailures(files)).toContain(`${META_PATH}: authority hash is stale for skills/econ-exercise-builder.md`);
   });
 
   test('owner-approved Ei supersession has the exact new semantic outline hash', () => {

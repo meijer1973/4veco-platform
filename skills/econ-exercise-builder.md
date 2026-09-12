@@ -379,7 +379,12 @@ The `economic-graph` skill uses this spec to generate SVG + PNG.
 
 ### 6.3 Supply curve rule
 
-Supply lines always extend to the P-axis (y-axis), even when the y-intercept is negative. Supply lines never cross the Q-axis.
+Plot supply from the supplied function over its valid economic domain, clipping
+at domain or plot boundaries. Do not force a P-axis intercept or suppress a
+valid Q-axis intersection. Use the project's positive price-intercept convention
+only when free to choose an illustrative equation; never alter a supplied
+equation. Verify the actual coordinates under the
+[graph requirements](economic-graph.md#mathematical-and-economic-requirements).
 
 ---
 

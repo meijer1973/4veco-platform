@@ -23,7 +23,15 @@ Canonical human semantic authority:
 target pins, and hold lifecycle:
 `references/authored/book-outlines/book-2-outline.meta.json`.
 
-Run structural currentness first, then evaluate the exact current action:
+For ordinary approved Book 2 production, link the generated foundation here:
+`[Book foundation check](X.Y.Z-textbook-foundation.json)`.
+Its combined check supplies the mechanical pins and hold tables below; omit
+those tables from the copied plan when covered by that record. Keep the
+semantic decisions and distinct foundation verdict. Refresh the record when
+sources or the action change.
+
+For other actions or diagnosis, run structural currentness first, then evaluate
+the exact current action and use the applicable manual tables:
 
 ```bash
 npm run check:book-outline-currentness

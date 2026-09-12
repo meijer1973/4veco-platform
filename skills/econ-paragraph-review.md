@@ -91,10 +91,10 @@ This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — 
 | Check | What to look for |
 |-------|-----------------|
 | 1.2.1 One concept per step | Does the theory section introduce concepts one at a time, with each building on the previous? Flag if two new concepts are introduced simultaneously without separation. |
-| 1.2.2 Progressive graph construction | For graphical topics: are graphs built step-by-step (simple → add element → add element) rather than presented complete? Each graph should add exactly one new element to the previous one. |
+| 1.2.2 Progressive graph explanation | Are relevant curves, points and areas explained step by step? Progressive figures should support unfamiliar elements with consistent axes/scales; adjacent annotations and sequenced text can explain a complete source graph. Check the teaching sequence, not a fixed element count or drawing order. |
 | 1.2.3 Integrated annotations | Are explanatory labels, calculation steps, or verbal descriptions embedded directly inside or immediately adjacent to graphs? Text that explains a graph but appears on a different page or far from the graph is a FAIL (split-attention effect). |
 | 1.2.4 Multiple representations | Is the same concept shown in at least two of: verbal, graphical, tabular, algebraic? Topics that are inherently multi-representational (like horizontal addition) should use at least three. |
-| 1.2.5 Method comparison | When two methods exist (e.g., table vs. algebra), are they compared side-by-side so students see equivalence rather than learning two disconnected procedures? |
+| 1.2.5 Method comparison | When two methods exist (e.g., table vs. algebra), are their corresponding steps compared close together so students see equivalence? Side-by-side or stacked placement may suit the page; avoid two disconnected procedures. |
 
 ### 1.3 Dual coding and fading
 
@@ -224,11 +224,11 @@ not a PASS.
 
 | Check | What to look for |
 |-------|-----------------|
-| 2.1.1 Axis conventions | Is P (price) always on the vertical axis and Q (quantity) on the horizontal axis? Are axes labeled with both the variable name and units (e.g., "Prijs (€)" and "Hoeveelheid (Q)")? |
+| 2.1.1 Axis conventions | Do market graphs place price vertically and quantity horizontally, and cost/revenue graphs output horizontally and the relevant euro amount vertically? Other graph types use their stated variables. Are axes labeled with variable names and units? |
 | 2.1.2 Slope directions | For every claim about a curve being "steiler" or "vlakker": verify against the axis orientation. With P on y-axis and Q on x-axis, a curve that is more responsive (larger ΔQ for a given ΔP) is FLATTER, not steeper. This is the most common technical error in economics textbooks. |
 | 2.1.3 Curve-point consistency | Do ALL labeled points on a graph lie exactly on the curves they claim to be on? Pick any labeled point, substitute into the equation, and verify. |
 | 2.1.4 Number consistency | Are the numbers in the text, in the graph, and in the equations the same? Flag if the text says "P = €2, Q = 1000" but the graph shows different values. (This was an issue in §1.2.2 where the text described €2→€3 but the graph showed P₁=30, P₂=20.) |
-| 2.1.5 Supply curve rule | Do all supply lines extend to the P-axis (y-axis), even when the y-intercept is negative? Supply lines must never cross the Q-axis. |
+| 2.1.5 Supply function and domain | Do supply coordinates and endpoints match the supplied function and valid economic domain? Reject forced P-axis intercepts or suppression of valid Q-axis intersections. The positive price-intercept convention applies only to freely chosen illustrative equations; never require changing a supplied equation. Apply the [graph requirements](economic-graph.md#mathematical-and-economic-requirements). |
 | 2.1.6 Intercept labeling | Are y-intercepts and x-intercepts of curves labeled when they are economically meaningful (e.g., the maximum betalingsbereidheid, the price at which a consumer exits the market)? |
 | 2.1.7 Visual clutter | Does every visual element in every graph serve an instructional purpose? Flag any unexplained shapes, decorative fills, or graphical elements whose meaning is not stated in the text or caption. |
 | 2.1.8 Shift representation | Are original curves shown as solid lines and shifted curves as dashed lines (or clearly differentiated)? Is the direction of shift marked with an arrow? |
@@ -415,7 +415,7 @@ These are the errors most frequently found in economics textbook paragraphs, ord
 10. **Worked example after summary** — breaks reading flow
 
 ### Lower frequency but high impact
-11. **Supply line crossing Q-axis** — supply curves must always extend to the P-axis
+11. **Supply endpoints forced to an axis** — check the supplied function and valid domain; a valid Q-axis intersection is not an error
 12. **Causal direction error** — e.g., confusing "price of substitute rises → demand increases" with the reverse
 13. **Horizontal/vertical addition confusion** — especially in the transition from graphical to algebraic
 14. **Figure reference pointing to wrong figure** — "zie figuur 5" but the relevant graph is figuur 6
