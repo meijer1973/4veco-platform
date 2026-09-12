@@ -2,13 +2,21 @@
 // HOW TO ADAPT: keep the maintenance scope explicit; unknown paths use product CI.
 const fs = require('fs');
 const path = require('path');
+const { isDeepStrictEqual } = require('util');
 const { spawnSync } = require('child_process');
+const { sha256CanonicalText } = require('../workflows/check-book-outline-currentness');
 const ROOT = path.resolve(__dirname, '../..');
 const PLAN = path.resolve(ROOT, '../ci-artifacts/maintenance-plan.json');
 // These sealed suites audit the archived workflow, not the live CI contract.
 const HISTORICAL_WORKFLOW_TESTS = require('../../jest.config.cjs').testPathIgnorePatterns[1];
 const POLICY = 'docs/review/maintenance-workflow.md';
 const CORE_TESTS = ['build-scripts/ci/maintenance-ci.test.js', 'build-scripts/ci/check-y1-product-evidence.test.js'];
+const EXERCISE_SKILL = 'skills/econ-exercise-builder.md';
+const BOOK_METADATA = 'references/authored/book-outlines/book-2-outline.meta.json';
+const FOUNDATION_TESTS = [
+  'build-scripts/workflows/check-book-outline-currentness.test.js',
+  'build-scripts/workflows/book2-integration-decision.test.js',
+];
 // Exact instruction surfaces, not student content, renderers or all skills.
 const PART_A_INSTRUCTIONS = new Set([
   'BUILD-PARAGRAPH.md', 'BUILD-CHAPTER.md', 'agents/README.md',
@@ -18,6 +26,7 @@ const PART_A_INSTRUCTIONS = new Set([
   'skills/econ-paragraph-review.md', 'skills/econ-chapter-builder.md',
   'skills/econ-textbook-paragraph.md', 'skills/econ-consolidation-builder.md',
   'skills/econ-testprep-builder.md', 'skills/econ-quality-control.md',
+  EXERCISE_SKILL, 'build-scripts/templates/template-textbook-paragraph-plan.md',
 ]);
 const CI_TOOLS = new Set(['maintenance-ci', 'platform-ci-evidence', 'check-agent-branch-safety',
   'check-agent-worktree-safety', 'check-branch-protection', 'check-evidence-line-endings']);
@@ -55,25 +64,100 @@ function packageOnlyCiChanges(before, after) {
   delete left.scripts; delete right.scripts;
   return JSON.stringify(left) === JSON.stringify(right);
 }
+function maintenancePath(file, options) {
+  if (file === 'package.json') return options.packageOnlyCi === true;
+  if (file === BOOK_METADATA) return options.exerciseChecksumOnly === true;
+  return PART_A_INSTRUCTIONS.has(file) || FOUNDATION_TESTS.includes(file)
+    || ALLOWED.some(pattern => pattern.test(file)) || knownTool(file);
+}
 function classify(paths, options = {}) {
   if (options.forceFull) return 'product';
   if (options.eventName === 'push') return 'smoke';
   if (paths.length === 0) return 'product';
-  return paths.every(file => file === 'package.json'
-    ? options.packageOnlyCi === true
-    : PART_A_INSTRUCTIONS.has(file) || ALLOWED.some(pattern => pattern.test(file)) || knownTool(file)) ? 'maintenance' : 'product';
+  return paths.every(file => maintenancePath(file, options)) ? 'maintenance' : 'product';
+}
+function parseUnambiguousJson(text) {
+  const value = JSON.parse(text); // Syntax validation precedes the key scan.
+  const stack = [];
+  // Profile selection runs before npm ci: use only Node built-ins. The input
+  // is already valid JSON; track object keys to reject JSON.parse's last-key wins.
+  for (const token of text.match(/"(?:\\.|[^"\\])*"|[{}\[\],:]|[^{}\[\],:\s]+/g) || []) {
+    if (token === '{') stack.push({ keys: new Set(), expectKey: true });
+    else if (token === '[') stack.push(null);
+    else if (token === '}' || token === ']') stack.pop();
+    else if (token === ',') { if (stack.at(-1)) stack.at(-1).expectKey = true; }
+    else if (stack.at(-1)?.expectKey && token.startsWith('"')) {
+      const frame = stack.at(-1), key = JSON.parse(token);
+      if (frame.keys.has(key)) throw new Error('Duplicate metadata key');
+      frame.keys.add(key); frame.expectKey = false;
+    }
+  }
+  return value;
+}
+// Selection only: no source approval, pin refresh or authority-check bypass.
+function exerciseChecksumOnly(beforeMetadata, afterMetadata, beforeSkill, afterSkill) {
+  try {
+    if (![beforeMetadata, afterMetadata, beforeSkill, afterSkill].every(value => typeof value === 'string' && value.length)) return false;
+    const before = parseUnambiguousJson(beforeMetadata), after = parseUnambiguousJson(afterMetadata);
+    const entry = meta => {
+      if (!Array.isArray(meta?.authority_sources)) return null;
+      const entries = meta.authority_sources.filter(source => source?.path === EXERCISE_SKILL);
+      return entries.length === 1 ? entries[0] : null;
+    };
+    const oldEntry = entry(before), newEntry = entry(after);
+    if (!oldEntry || !newEntry || oldEntry.source_kind !== 'part_a_exercise_contract'
+      || !/^[a-f0-9]{64}$/.test(oldEntry.sha256) || !/^[a-f0-9]{64}$/.test(newEntry.sha256)
+      || oldEntry.sha256 === newEntry.sha256
+      || oldEntry.sha256 !== sha256CanonicalText(beforeSkill)
+      || newEntry.sha256 !== sha256CanonicalText(afterSkill)) return false;
+    newEntry.sha256 = oldEntry.sha256;
+    if (!isDeepStrictEqual(before, after)) return false;
+    // Also reject lexically ambiguous number changes hidden by JSON's numeric
+    // precision. Only JSON whitespace and the one checksum token may differ.
+    const compact = text => text.replace(/("(?:\\.|[^"\\])*")|\s+/g, (match, quoted) => quoted || '');
+    const newHash = sha256CanonicalText(afterSkill);
+    if (afterMetadata.split(`"${newHash}"`).length !== 2) return false;
+    return compact(beforeMetadata) === compact(afterMetadata.replace(`"${newHash}"`, `"${oldEntry.sha256}"`));
+  } catch { return false; }
 }
 function knownTool(file) {
   const match = /^build-scripts\/(ci|review-gates)\/([^/]+?)(?:\.test)?\.js$/.exec(file);
   return Boolean(match && (match[1] === 'ci' ? CI_TOOLS : REVIEW_TOOLS).has(match[2]));
 }
-function plan(base, head, options = {}) {
+function plan(base, head, options = {}, root = ROOT) {
+  const git = (...args) => run('git', args, { cwd: root });
   if (![base, head].every(ref => /^[0-9a-f]{40}$/i.test(ref)) || /^0+$/.test(base)) throw new Error('CI requires exact nonzero base/head commit SHAs');
   if (git('rev-parse', 'HEAD').trim() !== head) throw new Error('CI checkout does not match the declared head');
   git('cat-file', '-e', `${base}^{commit}`);
   const paths = git('diff', '--no-renames', '--name-only', '-z', base, head).split('\0').filter(Boolean);
   const packageOnlyCi = !paths.includes('package.json') || packageOnlyCiChanges(git('show', `${base}:package.json`), git('show', `${head}:package.json`));
-  return { profile: classify(paths, { packageOnlyCi, ...options }), base, head, paths,
+  let checksumOnly = false;
+  if (paths.includes(BOOK_METADATA) && paths.includes(EXERCISE_SKILL)) {
+    try {
+      const committedText = (ref, file) => {
+        // Do not grant an instruction exception to symlinks or gitlinks.
+        if (!/^100644 blob /.test(git('ls-tree', ref, '--', file))) throw new Error('Expected a regular committed file');
+        return git('show', `${ref}:${file}`);
+      };
+      checksumOnly = exerciseChecksumOnly(committedText(base, BOOK_METADATA), committedText(head, BOOK_METADATA),
+        committedText(base, EXERCISE_SKILL), committedText(head, EXERCISE_SKILL));
+    } catch { /* Missing/ambiguous committed input retains product validation. */ }
+  }
+  const selection = { ...options, packageOnlyCi, exerciseChecksumOnly: checksumOnly };
+  const profile = classify(paths, selection);
+  const reasons = [];
+  if (options.forceFull) reasons.push('Explicit full validation requested.');
+  else if (options.eventName === 'push') reasons.push('Main push: post-merge smoke; reviewed PR product checks are not repeated.');
+  else {
+    if (!paths.length) reasons.push('Empty change set: full validation.');
+    if (paths.includes(BOOK_METADATA)) reasons.push(checksumOnly
+      ? 'Committed exercise-source checksum-only refresh verified; this is test selection, not approval.'
+      : 'Book metadata did not satisfy the committed exercise-source checksum-only contract.');
+    for (const file of paths.filter(file => !maintenancePath(file, selection))) reasons.push(`Full validation required by: ${file}`);
+    if (profile === 'maintenance') reasons.push('All changed paths match explicit maintenance allowances.');
+  }
+  return { profile, base, head, paths, reasons,
+    focused_jest_args: profile === 'product' ? null : jestArgs(profile === 'smoke' ? [] : paths, root),
     archived_workflow_test_suites: HISTORICAL_WORKFLOW_TESTS, policy: POLICY };
 }
 function jestArgs(paths, root = ROOT) {
@@ -94,7 +178,7 @@ function jestArgs(paths, root = ROOT) {
     if (/\.[cm]?js$/.test(file)) tests.add(file);
     // Markdown is read through fs, so Jest's import graph cannot select these.
     if (file.endsWith('.md')) tests.add('build-scripts/workflows/check-paragraph-workflow-wording.test.js');
-    if (PART_A_INSTRUCTIONS.has(file)) {
+    if (PART_A_INSTRUCTIONS.has(file) || file === BOOK_METADATA || FOUNDATION_TESTS.includes(file)) {
       tests.add('build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js');
       tests.add('build-scripts/workflows/check-part-a-pdf-readiness.test.js');
       tests.add('scripts/tests/validate-paragraph-modes.test.js');
@@ -102,6 +186,10 @@ function jestArgs(paths, root = ROOT) {
       tests.add('scripts/tests/part-a-review-evidence.test.js');
       tests.add('build-scripts/workflows/paragraph-records.test.js');
       tests.add('build-scripts/ci/paired-paragraph-ci.test.js');
+    }
+    if ([EXERCISE_SKILL, BOOK_METADATA, 'build-scripts/templates/template-textbook-paragraph-plan.md',
+      ...FOUNDATION_TESTS].includes(file)) {
+      for (const test of FOUNDATION_TESTS) tests.add(test);
     }
     if (file.startsWith('.github/workflows/')) {
       for (const name of workflowTests[path.basename(file)] || []) tests.add(`build-scripts/${name}.test.js`);
@@ -149,6 +237,8 @@ function main(argv) {
     if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `maintenance=${result.profile !== 'product'}\n`);
     if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,
       `## CI profile: ${result.profile}\n\nHead: \`${result.head}\`; ${result.paths.length} changed paths.\n\n` +
+      result.reasons.map(reason => `- ${reason}\n`).join('') + '\n' +
+      (result.focused_jest_args ? `Jest selection: \`${result.focused_jest_args.join(' ')}\`\n\n` : '') +
       (result.profile === 'maintenance' ? 'Runs syntax/configuration checks and affected tests, with a full Jest fallback for JavaScript deletions. Presentation and historical product proofs are outside this maintenance scope.\n\n'
         : result.profile === 'smoke' ? 'Post-merge syntax/configuration and core CI smoke tests. Product validation belongs to the reviewed PR; it is not repeated here.\n\n'
           : 'Runs the current product/source suite and rendering checks. Historical capture integrity and current reuse are validated separately from the archived workflow contract.\n\n') +
@@ -160,4 +250,4 @@ function main(argv) {
 if (require.main === module) {
   try { main(process.argv.slice(2)); } catch (error) { console.error(error.message); process.exitCode = 1; }
 }
-module.exports = { classify, packageOnlyCiChanges, plan, check, jestArgs, HISTORICAL_WORKFLOW_TESTS };
+module.exports = { classify, packageOnlyCiChanges, exerciseChecksumOnly, plan, check, jestArgs, HISTORICAL_WORKFLOW_TESTS };
