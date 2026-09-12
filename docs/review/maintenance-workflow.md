@@ -46,6 +46,19 @@ The unconditional `validate-platform` job reports the exact commits and profile:
 | Merge push to main | Syntax/configuration and core CI smoke tests. Product validation from the reviewed PR is not repeated. |
 
 The maintenance allowlist lives in `build-scripts/ci/maintenance-ci.js`.
+Its exact Part A allowance includes the exercise skill, textbook-plan template
+and the two named currentness/integration-decision fixture test files. The
+Book 2 outline metadata joins that route only when the exercise skill changes
+in the same committed base/head diff and its sole metadata change is the
+existing exercise-source checksum. Both hashes must match their respective
+committed skill texts under canonical LF hashing. All other fields remain
+unchanged; missing, duplicate or ambiguous inputs use product validation.
+The comparison permits JSON whitespace changes, not other token changes.
+This selects tests; it grants no source approval. Relevant exercise, foundation,
+currentness, paragraph/review and historical integration-fixture tests still
+run, including stale-source rejection. Plan diagnostics record the selected
+Jest arguments and the reasons for maintenance or full fallback.
+
 It is deliberately conservative: unrelated code outside it still gets product
 validation. Changing dependencies, deployment scripts or unknown paths cannot
 silently select the maintenance route. Manual full validation uses exact base
