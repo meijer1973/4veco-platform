@@ -14,6 +14,7 @@ the assignment.
 | Need literal remote URLs | [URL index](reports/url-index.md). Complete machine inventories remain in `reports/github-agent-index-platform.json` and `reports/github-agent-index-lessen.json`. |
 | Author or review Part A | [Entry checklist](docs/workflows/part-a-start.md) → relevant textbook/exercise skill → [independent review and closure](docs/workflows/part-a-review.md). |
 | Build Part B | [Companion runbook](docs/workflows/web-companion-paragraph-lane.md) → [artifact skill](skills/econ-companion-artifacts.md). |
+| Build or repair a reasoning game | [Reasoning-game skill](skills/econ-reasoning-game.md) → [golden exemplar library](references/exemplars/product-excellence/reasoning-games/); the skill owns game design and review requirements. |
 | Assemble a chapter/book | [Chapter workflow](BUILD-CHAPTER.md) → lesson chapter plan → assembler and final output. |
 | Verify both lanes | [Complete paragraph workflow](BUILD-PARAGRAPH.md), [lane vocabulary](docs/workflows/paragraph-lane-vocabulary.md). |
 | Fix a generator or deployment | [Build tooling](build-scripts/README.md), `scripts/deploy.js`, `engines/`, `source-data/`. Trace the lesson output back to its generator. |
