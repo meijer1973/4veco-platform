@@ -13,13 +13,6 @@ const CANONICAL_NAVIGATION_PATHS = Object.freeze([
   'scripts/lib/paragraph-types.js',
 ]);
 
-const MAP_ANCHOR_KEYS = Object.freeze({
-  'build-scripts/workflows/check-part-a-pdf-readiness.js': 'part_a_pdf_readiness_checker',
-  'build-scripts/workflows/check-paragraph-workflow-wording.js': 'paragraph_workflow_wording_checker',
-  'docs/workflows/legacy-full-companion-profile.md': 'legacy_full_companion_profile',
-  'scripts/lib/paragraph-types.js': 'paragraph_type_contract',
-});
-
 const LEGACY_PROFILE_LINKS = Object.freeze({
   'BUILD-PARAGRAPH.md': 'docs/workflows/legacy-full-companion-profile.md',
   'build-scripts/README.md': '../docs/workflows/legacy-full-companion-profile.md',
@@ -38,6 +31,7 @@ const NAVIGATION_FILES = Object.freeze([
 // Bounded entry-guide audit, not a general Markdown crawler. Lesson entry is
 // opt-in: required platform CI intentionally checks out lesson main.
 const ENTRY_LINK_FILES = Object.freeze(['AGENTS.md', 'BUILD-PARAGRAPH.md', 'skills/econ-chapter-builder.md']);
+const ACCESS_LINK_FILES = Object.freeze(['RESEARCH_AGENT_MAP.md', 'AGENT_GITHUB_ENTRY.md', 'RESEARCH_AGENT_PROMPT.md']);
 const PARAGRAPH_ENTRY_LINK_FILES = Object.freeze(['docs/workflows/part-a-start.md', 'docs/workflows/paired-paragraph-ci.md']);
 
 function markdownAnchors(text) {
@@ -67,7 +61,7 @@ function markdownAnchors(text) {
 function findEntryLinkFailures(root, options = {}) {
   const read = options.read || ((file) => !fs.existsSync(file) ? null
     : fs.statSync(file).isDirectory() ? '' : fs.readFileSync(file, 'utf8'));
-  const files = [...ENTRY_LINK_FILES, ...PARAGRAPH_ENTRY_LINK_FILES, ...(options.includeLessonEntry ? ['../4veco-lessen/AGENTS.md'] : [])];
+  const files = [...ENTRY_LINK_FILES, ...PARAGRAPH_ENTRY_LINK_FILES, ...ACCESS_LINK_FILES, ...(options.includeLessonEntry ? ['AGENTS.md', ...ACCESS_LINK_FILES].map(file => `../4veco-lessen/${file}`) : [])];
   const failures = [];
   for (const file of files) {
     const absolute = path.resolve(root, file);
@@ -76,7 +70,8 @@ function findEntryLinkFailures(root, options = {}) {
       failures.push(`${file}: entry navigation surface missing`);
       continue;
     }
-    const guide = path.basename(file) === 'AGENTS.md' || PARAGRAPH_ENTRY_LINK_FILES.includes(file);
+    const strictGuide = path.basename(file) === 'AGENTS.md' || PARAGRAPH_ENTRY_LINK_FILES.includes(file);
+    const guide = strictGuide || ACCESS_LINK_FILES.includes(path.basename(file));
     let incomingSection = false;
     for (const match of text.matchAll(/\[[^\]\r\n]+\]\(([^\s)]+)\)/g)) {
       const href = match[1];
@@ -90,11 +85,14 @@ function findEntryLinkFailures(root, options = {}) {
       if (/^https?:/.test(href)) {
         const url = new URL(href);
         const githubPath = url.pathname.match(/^\/meijer1973\/(4veco-platform|4veco-lessen)\/blob\/main\/(.+)$/);
+        const rawPath = url.hostname === 'raw.githubusercontent.com' && url.pathname.match(/^\/meijer1973\/(4veco-platform|4veco-lessen)\/main\/(.+)$/);
         if (url.hostname !== 'github.com' || !githubPath) {
-          failures.push(`${file}: unexpected entry-guide GitHub destination: ${href}`);
-          continue;
-        }
-        destination = `${path.resolve(root, '..', githubPath[1], decodeURIComponent(githubPath[2]))}${url.hash}`;
+          if (!strictGuide && rawPath) {
+            destination = `${path.resolve(root, '..', rawPath[1], decodeURIComponent(rawPath[2]))}${url.hash}`;
+          } else if (!strictGuide) continue;
+          else failures.push(`${file}: unexpected entry-guide GitHub destination: ${href}`);
+          if (strictGuide) continue;
+        } else destination = `${path.resolve(root, '..', githubPath[1], decodeURIComponent(githubPath[2]))}${url.hash}`;
       }
       const [targetPath, fragment] = destination.split('#');
       if (!guide && !fragment) {
@@ -118,8 +116,7 @@ const RULES = Object.freeze([
     file: 'AGENTS.md',
     required: [
       /exactly two operational lanes/i,
-      /Paragraph PDFs and `build_pdf\.py` are normal Part A textbook outputs for human review/i,
-      /14 files as a validator baseline, not as proof that the full product route is complete/i,
+      /\]\(docs\/workflows\/paragraph-lane-vocabulary\.md\)/,
     ],
   },
   {
@@ -218,82 +215,16 @@ function findNavigationFailures(files) {
   }
   if (failures.length > 0) return failures;
 
+  // Maps expose one useful link per contract. Generated inventories own the
+  // complete machine listing; repeated JSON, raw URLs and traversal prose add
+  // no navigation protection.
   const researchMap = files['RESEARCH_AGENT_MAP.md'];
-  const entryPoints = sectionBetween(researchMap, '## Entry Points', '## Index Anchors');
-  const humanEntryPoints = sectionBetween(entryPoints, 'Human-readable:', 'Machine-readable:');
-  const entryPointUrls = sectionBetween(entryPoints, 'entry_points (full URLs):', null);
-  const anchors = sectionBetween(researchMap, '## Index Anchors', '## Path Registry');
-  const anchorMatch = anchors.match(/```json\s*([\s\S]*?)```/);
-  let anchorJson = {};
-  try {
-    anchorJson = anchorMatch ? JSON.parse(anchorMatch[1]) : {};
-  } catch (error) {
-    failures.push(`RESEARCH_AGENT_MAP.md: index-anchor JSON is invalid: ${error.message}`);
-  }
-  const anchorUrls = sectionBetween(anchors, 'index_anchors (full URLs):', null);
-
-  requireValue(
-    /check-part-a-pdf-readiness\.js[\s\S]{0,120}Part A surfaces/i.test(humanEntryPoints) &&
-      /scripts\/lib\/paragraph-types\.js[\s\S]{0,80}Part A surfaces/i.test(humanEntryPoints),
-    'RESEARCH_AGENT_MAP.md: missing Part A navigation ownership wording'
-  );
-  requireValue(
-    /legacy-full-companion-profile\.md[\s\S]{0,80}opt-in Part B profile/i.test(humanEntryPoints),
-    'RESEARCH_AGENT_MAP.md: missing opt-in Part B navigation wording'
-  );
-  requireValue(
-    /check-paragraph-workflow-wording\.js[\s\S]{0,80}shared two-lane guardrail/i.test(humanEntryPoints),
-    'RESEARCH_AGENT_MAP.md: missing shared two-lane navigation wording'
-  );
-
   for (const canonicalPath of CANONICAL_NAVIGATION_PATHS) {
-    const rawUrl = `${RAW_PLATFORM_MAIN}${canonicalPath}`;
-    const anchorKey = MAP_ANCHOR_KEYS[canonicalPath];
-    requireValue(
-      humanEntryPoints.includes(`- \`${canonicalPath}\``),
-      `RESEARCH_AGENT_MAP.md: human-readable entry missing ${canonicalPath}`
-    );
-    requireValue(
-      entryPointUrls.includes(`- ${rawUrl}`),
-      `RESEARCH_AGENT_MAP.md: entry-point URL missing ${canonicalPath}`
-    );
-    requireValue(
-      anchorJson[anchorKey] === canonicalPath,
-      `RESEARCH_AGENT_MAP.md: index-anchor JSON missing ${canonicalPath}`
-    );
-    requireValue(
-      anchorUrls.includes(`- ${rawUrl}`),
-      `RESEARCH_AGENT_MAP.md: index-anchor URL missing ${canonicalPath}`
-    );
+    requireValue(researchMap.includes(`](${canonicalPath})`),
+      `RESEARCH_AGENT_MAP.md: linked contract missing ${canonicalPath}`);
   }
-
-  const githubEntry = files['AGENT_GITHUB_ENTRY.md'];
-  const paragraphRouting = githubEntry
-    .split(/\r?\n/)
-    .find((line) => line.startsWith('| How should paragraph work be split')) || '';
-  const usefulEntryPoints = sectionBetween(githubEntry, 'Useful entry points:', 'Task-routing guidance:');
-  requireValue(
-    /Part A PDF readiness and paragraph-type rules/i.test(paragraphRouting),
-    'AGENT_GITHUB_ENTRY.md: routing row missing Part A ownership wording'
-  );
-  requireValue(
-    /Opt-in Part B legacy profile/i.test(paragraphRouting),
-    'AGENT_GITHUB_ENTRY.md: routing row missing opt-in Part B wording'
-  );
-  requireValue(
-    /Shared two-lane wording guardrail/i.test(paragraphRouting),
-    'AGENT_GITHUB_ENTRY.md: routing row missing shared two-lane wording'
-  );
-  for (const canonicalPath of CANONICAL_NAVIGATION_PATHS) {
-    requireValue(
-      paragraphRouting.includes(`\`${canonicalPath}\``),
-      `AGENT_GITHUB_ENTRY.md: routing row missing ${canonicalPath}`
-    );
-    requireValue(
-      usefulEntryPoints.includes(`- \`${canonicalPath}\``),
-      `AGENT_GITHUB_ENTRY.md: useful entry missing ${canonicalPath}`
-    );
-  }
+  requireValue(files['AGENT_GITHUB_ENTRY.md'].includes('](RESEARCH_AGENT_MAP.md)'),
+    'AGENT_GITHUB_ENTRY.md: map link missing');
 
   const urlIndexSource = sectionBetween(
     files['build-scripts/sprints/emit-url-index.js'],
@@ -360,8 +291,8 @@ function checkParagraphWorkflowWording(options = {}) {
   failures.push(...findEntryLinkFailures(root, options));
   return {
     ok: failures.length === 0,
-    files_checked: new Set([...rules.map((rule) => rule.file), ...NAVIGATION_FILES, ...ENTRY_LINK_FILES,
-      ...(options.includeLessonEntry ? ['../4veco-lessen/AGENTS.md'] : [])]).size,
+    files_checked: new Set([...rules.map((rule) => rule.file), ...NAVIGATION_FILES, ...ENTRY_LINK_FILES, ...PARAGRAPH_ENTRY_LINK_FILES, ...ACCESS_LINK_FILES,
+      ...(options.includeLessonEntry ? ['AGENTS.md', ...ACCESS_LINK_FILES].map(file => `../4veco-lessen/${file}`) : [])]).size,
     failures,
   };
 }
@@ -378,7 +309,7 @@ module.exports = {
   RULES,
   FORBIDDEN,
   CANONICAL_NAVIGATION_PATHS,
-  MAP_ANCHOR_KEYS,
+  ACCESS_LINK_FILES,
   LEGACY_PROFILE_LINKS,
   NAVIGATION_FILES,
   ENTRY_LINK_FILES,

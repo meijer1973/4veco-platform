@@ -92,3 +92,47 @@ the applicable lane and the protected/bundle procedures in the legacy review
 policies. Their custom readiness/integration tooling remains available there;
 it is not a prerequisite for routine maintenance. Model capability alone is
 not a reason to remove a check; use relevance, duplication and measured cost.
+
+## Worktree preflight
+
+This preflight applies before mutation in either repository, including product work.
+
+Use one agent, one dedicated task branch, and one dedicated worktree directory.
+Treat the shared anchor clones as admin clones; mutating work there requires
+the owner's explicit single-agent local-task instruction. Default paired paths:
+
+- `C:\Projects\4veco-worktrees\<task-id>\4veco-platform`
+- `C:\Projects\4veco-worktrees\<task-id>\4veco-lessen`
+
+Use a user-specified task folder when provided. Before editing files, fetch
+each affected repository and run from the platform worktree:
+
+```powershell
+git fetch --prune origin
+git status --short --branch
+git branch --show-current
+npm.cmd run check:governance-freshness
+npm.cmd run check:agent-worktree-safety -- --claim --task <task-id> --agent <agent-id> --require-prefix codex/,agent/ --require-clean
+```
+
+For the lesson repository, also run its fetch/status/branch checks and repeat
+the platform worktree checker with `--worktree <lesson-worktree-path>`.
+Use `--check` for an existing ownership claim; omit `--require-clean` during
+ongoing work only when the dirty files are expected. Governance freshness
+compares active entrypoints against `origin/main`; use `-- --allow-policy-edit`
+only when the declared task intentionally edits those same governance files.
+
+1. Never work, commit, or push directly on `main`. Create a unique
+   `codex/<short-task-name>-<YYYYMMDD>` or `agent/<short-task-name>-<YYYYMMDD>`
+   branch before edits; inspect an existing branch before reusing it.
+2. Do not share another active agent's worktree, switch its branch, or reuse
+   a worktree with an unreleased ownership lock. Do not override a lock without
+   explicit repository-owner instruction.
+3. Do not use `git checkout -f`, `git switch -f`, `git worktree add --force`, or
+   `git checkout --ignore-other-worktrees` without explicit authorization.
+4. Stop and report unexpected ahead/behind/diverged state, branch movement,
+   or another agent working on the same branch or sprint surface.
+5. When both repositories change, use coordinated worktrees under the same
+   task directory and record both paths, branches, owners, and commit SHAs.
+6. Merge to `main` only through the applicable authorized PR/integration procedure;
+   do not turn a routine implementation instruction into merge authority.

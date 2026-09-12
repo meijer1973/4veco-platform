@@ -1,6 +1,6 @@
 ---
 name: econ-testprep-builder
-description: "Builds test preparation paragraphs for economics education (bovenbouw vwo): active summaries with MC questions, exam skills training, integration exercises, and timed practice tests. Each book's Chapter 5 contains these four paragraph types in a scaffolded progression from retrieval practice to exam simulation. No new theory is introduced. Use this skill when the user mentions toetsvoorbereiding, test preparation, actieve samenvatting, examenvaardigheden, integratieoefening, proeftoets, or when building Chapter 5 of any book. Always use in combination with econ-didactiek (pedagogy), economic-graph (graphs), and econ-pdf-builder (PDF export)."
+description: "Builds test preparation paragraphs for economics education (bovenbouw vwo): active summaries with MC questions, exam skills training, integration exercises, and timed practice tests. Each book's Chapter 5 contains these four paragraph types in a scaffolded progression from retrieval practice to exam simulation. No new theory is introduced. Use this skill when the user mentions toetsvoorbereiding, test preparation, actieve samenvatting, examenvaardigheden, integratieoefening, proeftoets, or when building Chapter 5 of any book. Use econ-didactiek for pedagogy and economic-graph when creating graphs. Ordinary PDF export and quality records follow the Part A checklist; load econ-pdf-builder for layout adaptation and econ-quality-control for additional authored evidence or requested reports."
 pipeline: "Part A producer"
 ---
 
@@ -11,8 +11,8 @@ Builds all four paragraph types for Chapter 5 (test preparation) of each book. T
 **Companion skills:**
 - `econ-didactiek` → pedagogical decision rules (backed by `references/authored/didactiek-principes.md`)
 - `economic-graph` → SVG/PNG graphs (called during build)
-- `econ-pdf-builder` → PDF export pipeline
-- `econ-quality-control` → quality_ref generation after build
+- `econ-pdf-builder` → layout adaptation when the shared renderer needs adjustment
+- `econ-quality-control` → additional authored evidence or requested reports
 
 **Reference standards:**
 - `references/authored/economic_mathematical_precision_reference.md` → precision rules (takes precedence)
@@ -645,10 +645,10 @@ standalone and within a chapter. The independent reviewer applies the relevant
 reuse completed checks and recheck repairs and affected dependencies.
 
 Save `X.5.Z-review.md`. The author or a tool generates
-`X.5.Z-quality-ref.yaml` via `econ-quality-control` from that review and actual
+`X.5.Z-quality-ref.yaml` via `paragraph-records.js quality` through the [Part A checklist](../docs/workflows/part-a-start.md), from that review and actual
 inventory. Both records are required; no separate quality-ref agent is needed.
 
 
 ---
 
-*This skill builds test preparation paragraphs. For theory paragraphs, see `econ-textbook-paragraph`. For consolidation exercises, see `econ-consolidation-builder`. For pedagogical principles, see `econ-didactiek`. For PDF export, see `econ-pdf-builder`.*
+*This skill builds test preparation paragraphs. For theory paragraphs, see `econ-textbook-paragraph`. For consolidation exercises, see `econ-consolidation-builder`. For pedagogical principles, see `econ-didactiek`. For PDF export, use the [Part A checklist](../docs/workflows/part-a-start.md); consult `econ-pdf-builder` for layout adaptation.*

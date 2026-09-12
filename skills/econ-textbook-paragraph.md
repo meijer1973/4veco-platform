@@ -49,13 +49,13 @@ A human-review outputs.
 - `econ-exercise-builder` → generates `exercises.md` and `answers.md` (run first)
 - `economic-graph` → generates SVG/PNG graphs (called during build)
 - `econ-pdf-builder` → layout-adaptation lookup for the shared renderer (§5)
-- `econ-quality-control` → quality assurance: generate quality_ref after build, on-demand quality reports
+- `econ-quality-control` → additional authored quality evidence or requested reports; ordinary records use `paragraph-records.js` via the checklist
 
 **Reference standards:**
 - `references/authored/economic_mathematical_precision_reference.md` → precision rules (takes precedence)
 - `references/authored/economie-terminologie.md` → canonical Dutch terms
 - `references/external/amstelveencollege_quality_standards.md` → school-fit overlay: explicit leerdoelen, formative checkpoints, layered differentiation, meaningful context, learner self-monitoring
-- `econ-paragraph-review` → two-pass review protocol: didactic architecture + mathematical precision
+- `econ-paragraph-review` → assigned content review, including final rendered pages, under [Part A review](../docs/workflows/part-a-review.md)
 
 ---
 
@@ -560,7 +560,7 @@ does not ignore a matching open blocking hold or a released hold without evidenc
 31. □ Pass 3 inspects final full-page PDF/HTML proof; all FAIL items resolved with dependency-aware recheck and FLAG items addressed or documented in `X.Y.Z-review.md`
 
 **Quality control (after review passes):**
-32. □ The author or a tool generates `quality_ref` using `econ-quality-control` (Part 2), the completed review and actual inventory; preserve the verdict, schema and approved reference version
+32. □ The author or a tool generates `quality_ref` using `paragraph-records.js quality` via the Part A checklist, the completed review and actual inventory; preserve the verdict, schema and approved reference version
 33. □ Store as `[paragraph-code]-quality-ref.yaml` in the paragraph folder
 34. □ All leerdoelen mapped to eindtermen with Bloom levels
 35. □ All present components documented with inspectie standards and didactiek principles

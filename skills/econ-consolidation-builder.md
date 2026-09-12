@@ -1,6 +1,6 @@
 ---
 name: econ-consolidation-builder
-description: "Builds consolidation exercises and test exercises with source material (constructed contexts, data tables, graphs, flow diagrams, pay-off matrices) for economics education. Exercises combine multiple skills in exam-style opgaven: a single context with 4-6 escalating questions. Also reusable for building tests and test preparation chapters. Use this skill when the user mentions consolidatie, consolidation, bronmateriaal, exam-style, toetsoefeningen, toetsvoorbereiding, opgave ontwerpen, or when building exercises that integrate multiple skills around source material. Always use in combination with econ-didactiek (pedagogy), economic-graph (graphs), and econ-pdf-builder (PDF export)."
+description: "Builds consolidation exercises and test exercises with source material (constructed contexts, data tables, graphs, flow diagrams, pay-off matrices) for economics education. Exercises combine multiple skills in exam-style opgaven: a single context with 4-6 escalating questions. Also reusable for building tests and test preparation chapters. Use this skill when the user mentions consolidatie, consolidation, bronmateriaal, exam-style, toetsoefeningen, toetsvoorbereiding, opgave ontwerpen, or when building exercises that integrate multiple skills around source material. Use econ-didactiek for pedagogy and economic-graph when creating graphs. Ordinary PDF export and quality records follow the Part A checklist; load econ-pdf-builder for layout adaptation and econ-quality-control for additional authored evidence or requested reports."
 pipeline: "Part A producer"
 ---
 
@@ -11,7 +11,7 @@ Builds consolidation and test exercises: multi-skill, source-based, exam-style �
 **Companion skills:**
 - `econ-didactiek` — pedagogical decision rules (backed by `references/authored/didactiek-principes.md`)
 - `economic-graph` — graphs, flow diagrams, supply curve rules
-- `econ-pdf-builder` — PDF export
+- `econ-pdf-builder` — layout adaptation when the shared renderer needs adjustment
 - `econ-exercise-builder` — single-skill exercises (this skill builds multi-skill integrated opgaven)
 
 ---
@@ -303,7 +303,7 @@ Saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.2.4 Consolidatie vraag en aan
 |------|----------|
 | `X.Y.Z [Name] – opgaven.md` | Source material + opgaven in markdown |
 | `X.Y.Z [Name] – antwoorden.md` | Answer models with steps, waarom, chain structure |
-| `X.Y.Z [Name] – opgaven.pdf` | PDF export via `econ-pdf-builder` |
+| `X.Y.Z [Name] – opgaven.pdf` | PDF export via the shared renderer/thin wrapper |
 | `X.Y.Z [Name] – antwoorden.pdf` | PDF export |
 | `_assets/*.svg, *.png` | Source graphs/diagrams + answer graphs |
 | `build_pdf.py` | PDF build script |
@@ -360,10 +360,10 @@ standalone and within a chapter. The independent reviewer applies the relevant
 reuse completed checks and recheck repairs and affected dependencies.
 
 Save `X.Y.Z-review.md`. The author or a tool generates
-`X.Y.Z-quality-ref.yaml` via `econ-quality-control` from that review and actual
+`X.Y.Z-quality-ref.yaml` via `paragraph-records.js quality` through the [Part A checklist](../docs/workflows/part-a-start.md), from that review and actual
 inventory. Both records are required; no separate quality-ref agent is needed.
 
 
 ---
 
-*This skill builds consolidation and test opgaven. For single-skill exercises, see `econ-exercise-builder`. For pedagogical principles, see `econ-didactiek`. For PDF export, see `econ-pdf-builder`.*
+*This skill builds consolidation and test opgaven. For single-skill exercises, see `econ-exercise-builder`. For pedagogical principles, see `econ-didactiek`. For PDF export, use the [Part A checklist](../docs/workflows/part-a-start.md); consult `econ-pdf-builder` for layout adaptation.*

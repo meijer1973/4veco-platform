@@ -1,6 +1,6 @@
 ---
 name: econ-pdf-builder
-description: "Converts markdown lesson materials to professionally styled PDF documents for economics education. Handles image embedding (base64), page break management, exercise wrapping, consistent CSS styling with domain colours, and the full pandoc + weasyprint pipeline. Use this skill whenever exporting any economics material (textbook paragraphs, tests, consolidation exercises, answer models) to PDF. Trigger when the user mentions PDF, exporteren, afdrukken, printen, or any request to produce a downloadable/printable version of lesson material. Always use in combination with the relevant content skill (econ-textbook-paragraph, econ-exercise-builder, etc.)."
+description: "Adapt economics PDF layout or diagnose a rendering problem when the shared paragraph renderer needs adjustment. For ordinary Part A export use the checklist and thin shared-renderer wrapper; for an unchanged existing edition use the reproduction route. Load content-authoring skills only when the assignment changes content."
 pipeline: "Part A producer"
 ---
 

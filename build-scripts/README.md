@@ -2,7 +2,7 @@
 
 This folder contains all production scripts used to turn source material into the rich paragraph outputs that appear in lesson targets.
 
-If you want to build a complete paragraph from scratch, start with [BUILD-PARAGRAPH.md](../BUILD-PARAGRAPH.md).
+For textbook work start with the [Part A checklist](../docs/workflows/part-a-start.md); for companion work use the [Part B runbook](../docs/workflows/web-companion-paragraph-lane.md). [BUILD-PARAGRAPH.md](../BUILD-PARAGRAPH.md) covers complete cross-lane verification.
 
 To retrieve an unchanged paragraph PDF edition without renewing its review,
 use the [committed-edition compatibility route](../docs/workflows/part-a-review.md#reproducing-an-existing-edition).
@@ -205,3 +205,32 @@ Follow [BUILD-PARAGRAPH.md](../BUILD-PARAGRAPH.md). Scripts are used in this ord
 - YouTube pages
 
 Those still require paragraph-specific content work first, using the `content/` builders as reference.
+
+## Task completion
+
+For engine changes, run the engine tests, deploy to the authorized target and
+test in the browser. Run relevant validators after generation/deployment and
+update the relevant roadmap sprint when production or platform state changes.
+
+- Fetch/prune before final commit/push; resolve unexpected behind/diverged state.
+- Before closing platform workflow/tooling PRs, run `npm run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD`.
+  Lesson PRs use their lane runbook's scope check against the lesson repository;
+  cross-lane exceptions must be machine-readable and reviewed.
+- Run relevant validation and fix navigation when paths, roadmaps, reports,
+  agents, skills, or review surfaces change: `npm.cmd run agent:index`,
+  `node build-scripts/sprints/emit-url-index.js`, and `npm.cmd run dashboard:internal`
+  when dashboard/roadmap state changes. Keep research maps, GitHub entry, URL
+  index, and `reports/github-agent-index-*.md` useful for the real layout.
+  For routine maintenance these generated indexes are advisory, and commit-ID
+  freshness alone must not create an integration commit.
+- For non-trivial work, commit and push validated changes to the task's normal remote branch unless
+  the user asks to keep them local. Publish both repositories when both change.
+  Do not leave a completed sprint/generated-output task dirty without reporting
+  the exact status and blocker. Protected/product governance closure also runs
+  `npm.cmd run finalization:freshness` for remote-main, ancestry, and policy hashes.
+- For every mutating task, report worktree paths, branches, lock owner/agent ID, local SHAs, push state,
+  PR URLs (or why none), and current `platform-ci / validate-platform` status
+  when available. End every non-trivial response with the next action or precise remaining blocker.
+- After every task, clean up task-owned temporary files. Use OS temp or a named task folder
+  outside the repository for intermediates. Preserve reusable scripts in
+  `build-scripts/` with a clear name and `HOW TO ADAPT` header.

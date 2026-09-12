@@ -289,3 +289,78 @@ The Lead Reviewer Agent must not:
 - treat teacher learning-quality approval as proof that the student can orient, understand the next action, or interpret the visual support
 - hide disagreements between reviewers
 - mark a gate closed without closure proof
+
+## Roadmap planning and gates
+
+Optimize for specification fulfilment, not ticket closure. Passing tests or
+producing files is insufficient when the required product or evidence is weak.
+
+For every non-trivial task, state in the plan: the quality floor, requirements,
+proof of fulfilment, applicable review gate, worthwhile improvements within
+scope, and omitted requirements as named follow-ups or explicit blockers.
+
+For non-trivial sprint, roadmap, gate, reference-system, production, or
+architecture work, read the relevant roadmap, source, validators, and prior
+reports; write/update and log an operational plan in the expected sprint files
+before implementation. Include procedure, decisions, outputs, acceptance
+checks, and stop conditions. Follow the plan, repair missing requirements before
+continuing, and verify artifacts/checks before passing each review gate.
+Identify the product-vision pillar, advantage/parity rationale, and proof for
+future non-trivial sprints. Do not close a required review gate by inference.
+
+Read-only investigation reports evidence and limits. Routine maintenance starts
+with the affected source and relevant checks. Named roadmap sprints use the
+separated-agent workflow below; production and review work use their lane and
+artifact gates. Integration uses its own policy. These task routes describe
+when existing procedures apply; they do not waive a gate because work is small.
+
+Ordinary Part A paragraph/chapter work follows [Part A review and closure](../docs/workflows/part-a-review.md),
+including within a named roadmap sprint. Reuse its independent content review;
+the additional planning/verification staffing and two lead-review rounds below
+do not apply to that scope. Source approvals and publication decisions remain.
+
+For other roadmap sprints, retain the separated-agent workflow:
+
+- A planning/review subagent checks the outline, baselines, logs, stop
+  conditions, requirements, and exact generated-output list before execution.
+- The main agent executes and owns integration; specialists handle bounded
+  pedagogy, evidence, data-integrity, and code-review questions as needed.
+- A verification subagent checks finished artifacts, validation, plans, logs,
+  and every required output.
+- Before closing non-trivial roadmap sprints, record structural lead-review
+  assignment, round 1, corrections, and round 2. An exemption needs an explicit
+  reason, reviewer/approver, and date; do not silently disable lead review.
+- Human-review gates receive lead review before the human review begins.
+
+## Human-review evidence
+
+Ordinary textbook work uses [Part A review and closure](../docs/workflows/part-a-review.md).
+For other scopes, use the orchestration procedure in this document to route
+review and consolidate specification fulfilment. Use the relevant specialist:
+`econ-companion-visual-review`, `visual-qa-agent`, `testing-agent`,
+`accessibility-agent`, `teacher-learning-quality-review-agent`,
+`student-experience-review-agent`, or the textbook paragraph review skill.
+Part A and Part B keep separate review records and matching `quality-ref.yaml`
+blocks under [the quality-ref contract](../docs/workflows/paragraph-quality-ref-schema-v2.md).
+
+Human review defaults to direct comments on a complete review packet. Include
+calibration checks, questions, inspectable evidence, stop conditions, and comment
+prompts. Record comment resolutions, decisions, and unresolved issues before
+closure; use an interactive interview only on explicit reviewer request or to
+resolve ambiguous/conflicting authority. A casual "OK" or "continue" is not a
+review decision record or gate-closure artifact.
+
+Interactive UI/game/route/exit-ticket gates require playable or reproducible
+artifacts, state proof, screenshots of relevant initial/retry/feedback/next-action/
+completed states, mobile/dark-mode proof when student-facing, and a checker for
+the evidence. Use the `GATE-TASK-FAMILY-1` lab/proof pattern for game/task-shell
+gates unless explicitly waived. Do not substitute source fragments for product proof.
+
+Publish packets and every cited artifact to the normal remote branch, refresh
+GitHub-facing indexes, and verify remote availability before running or sending
+a human-review packet; local-only dry runs require explicit user instruction.
+Cite passing `platform-ci / validate-platform` for the reviewed commit or an
+explicit CI waiver where policy permits. Lighter-review packets must satisfy
+[the throughput policy](../docs/review/pr-throughput-policy.md) and its checker;
+missing authority, changed-path, checker, CI, or lead-review proof cannot be
+treated as autonomous-review eligibility.
