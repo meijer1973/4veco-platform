@@ -870,7 +870,7 @@ describe('Book 2 outline currentness contract', () => {
   });
 
   test('rejects stale GitHub entrypoint Part A template routing or approved-use wording', () => {
-    expectFailure(mutate('AGENT_GITHUB_ENTRY.md', 'Part A uses `build-scripts/templates/template-textbook-paragraph-plan.md`', 'Part A uses `build-scripts/templates/template-paragraph-plan.md`'), 'GitHub entry map must route Part A to the textbook-plan template');
+    expectFailure(mutate('AGENT_GITHUB_ENTRY.md', 'build-scripts/templates/template-textbook-paragraph-plan.md', 'build-scripts/templates/template-paragraph-plan.md'), 'GitHub entry map must route Part A to the textbook-plan template');
     expectFailure(mutate('AGENT_GITHUB_ENTRY.md', 'only for approved authority, production, or integration actions', 'before any paragraph use'), 'GitHub entry map must scope approved-use mode');
   });
 

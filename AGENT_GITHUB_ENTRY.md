@@ -30,8 +30,8 @@ checks structural currentness, then the action-specific check uses `--action`
 and exact `--paragraph` or `--chapter` scope. Use `--require-approved` only for approved authority, production, or integration actions. The
 [Part A checklist](docs/workflows/part-a-start.md) supplies the combined command.
 
-Part A uses [template-textbook-paragraph-plan.md](build-scripts/templates/template-textbook-paragraph-plan.md);
-use [template-paragraph-plan.md](build-scripts/templates/template-paragraph-plan.md) only for Part B.
+Part A uses [the textbook plan template](build-scripts/templates/template-textbook-paragraph-plan.md);
+use [the companion plan template](build-scripts/templates/template-paragraph-plan.md) only for Part B.
 Preview/prerequisite interpretation uses
 `build-scripts/workflows/check-blueprint-pedagogical-boundaries.js`.
 Other checks and their owners are in the map; this access guide adds no gates.
