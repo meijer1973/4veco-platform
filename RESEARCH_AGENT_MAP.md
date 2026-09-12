@@ -56,7 +56,9 @@ the assignment.
 - [Roadmap version index](docs/roadmaps/roadmap-version-index.json) locates active
   roadmap versions. A roadmap describes intent; source and current output show implementation.
 - [Golden workbench roadmap](docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md)
-  links rollout work. For historical Y1 evidence, use the
+  links rollout work. The historical `Y1-GOLDEN-ROLLOUT-WAVE-1`
+  [sealed checker](build-scripts/sprints/check-y1-golden-rollout-wave-1.js) verifies
+  that capture; use the
   [maintenance policy's provenance boundary](docs/review/maintenance-workflow.md#historical-evidence-and-product-boundaries)
   before interpreting a historical capture as current proof.
 - [Archive navigation](archive/README.md) locates past decisions and evidence.

@@ -36,3 +36,8 @@ Preview/prerequisite interpretation uses
 `build-scripts/workflows/check-blueprint-pedagogical-boundaries.js`.
 Other checks and their owners are in the map; this access guide adds no gates.
 Exercise-structure validation: `build-scripts/workflows/check-part-a-exercise-authoring-contract.js`.
+
+Historical audit lookup: `Y1-GOLDEN-ROLLOUT-WAVE-1` has a
+[sealed checker](build-scripts/sprints/check-y1-golden-rollout-wave-1.js).
+See the map for its provenance boundary; the historical capture does not attest
+new captures or the current workflow.
