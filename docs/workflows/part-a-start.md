@@ -7,7 +7,12 @@ read every chapter, companion and legacy integration manual at entry.
 For an unchanged existing PDF edition, use the narrow
 [historical reproduction route](part-a-review.md#reproducing-an-existing-edition).
 It exports committed PDFs without creating current review evidence. The
-authoring and current-closure steps below apply to new or changed material.
+steps below describe a new paragraph. For a bounded revision, reuse valid plans,
+foundation and prior checks; perform the affected steps under
+[review scope](part-a-review.md#scope-of-review). Revalidate changed sources or
+actions and repair all affected outputs. A draft component stops at the requested
+deliverable; a new current-closure claim still needs the applicable records and
+coverage. Layout repair does not automatically load exercise-authoring skills.
 
 1. **Establish the assignment and teaching authority.** Read the paragraph's
    canonical outline entry, target record and chapter plan. For Book 2 run
@@ -37,8 +42,9 @@ authoring and current-closure steps below apply to new or changed material.
    It uses the [tested shared renderer](../../build-scripts/textbook/paragraph_pdf.py).
    Install Pandoc and the dependencies in
    [the renderer requirements](../../build-scripts/textbook/requirements.txt) when absent.
-   Inspect final HTML and all PDF pages for content, figures, lists, tables and
-   pagination. The [PDF skill](../../skills/econ-pdf-builder.md) is a lookup for
+   Inspect final HTML and PDF pages for content, figures, lists, tables and
+   pagination: all pages for new material; changed pages and dependencies for
+   revisions, with reusable evidence for unchanged coverage. The [PDF skill](../../skills/econ-pdf-builder.md) is a lookup for
    layout adaptation; do not paste its historical regex snippets into a new builder.
 4. **Snapshot and independently review.** Run
    `node build-scripts/workflows/paragraph-records.js snapshot "<paragraph-folder>"`.
