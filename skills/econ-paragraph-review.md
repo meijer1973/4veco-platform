@@ -4,203 +4,77 @@ description: "Review economics textbook content or rendered output (bovenbouw vw
 pipeline: "Part A reviewer"
 ---
 
-# Economics Paragraph Review Skill v1
+# Economics paragraph review
 
-A systematic review protocol for economics textbook paragraphs at bovenbouw vwo/havo level. This skill runs two complementary passes over every paragraph:
+Review the assigned content and rendered output. Use
+[Part A review and closure](../docs/workflows/part-a-review.md) for scope,
+independence, evidence, verdicts and publication boundaries. A focused draft
+review may stop at its requested findings; it does not establish full paragraph
+acceptance. For revisions, inspect changed material and affected dependencies,
+reuse named prior evidence and fill any remaining required coverage before a
+current paragraph PASS. Book 1 output is frozen; do not retrofit it through the
+new Book 2+ theory-paragraph contract.
 
-**Pass 1 — Didactic architecture**: Is the paragraph well-designed for learning? Does it scaffold properly, use dual coding, fade visual support, handle misconceptions, and connect to prior knowledge?
+## Review dimensions
 
-**Pass 2 — Mathematical and conceptual precision**: Is every claim, graph, formula, slope direction, domain restriction, and terminology choice technically correct?
+Cover integrity, didactics, precision and final pages to the extent required by
+the assigned scope and existing evidence. One review can cover these dimensions;
+a prescribed sequence of separate agents is unnecessary. Missing assets block
+acceptance of the affected output; report the gaps and review unaffected material
+when that remains useful. Author self-checks are not independent evidence.
 
-Both passes matter equally. A beautifully scaffolded paragraph with a slope error teaches the wrong thing effectively. A mathematically flawless paragraph with poor scaffolding teaches the right thing ineffectively.
+### Integrity
 
-**Contract scope:** apply the canonical Part A exercise-structure checks below
-to newly authored Book 2 and later theory paragraphs. Book 1 output is frozen;
-do not create retrofit findings by running this contract retroactively. The
-full operational source is `skills/econ-exercise-builder.md`.
+Resolve image references in the affected Markdown/HTML and verify required
+SVG/PNG pairs. Missing referenced files or required outputs are FAIL. Use the
+[textbook inventory](econ-textbook-paragraph.md#12-output-files) for theory
+paragraphs and the applicable consolidation/test-preparation builder for other
+types. Check both source and rendered files. Flag naming deviations and unused
+assets; do not confuse the alternate SVG/PNG format with a missing resource.
 
-**When to use this skill:**
-- Reviewing any draft paragraph before delivery
-- Comparing a paragraph against the course blueprint
-- Giving structured feedback to a content author (human or AI)
-- Quality assurance of the final rendered paragraph before delivery
+### Teaching and exercise design
 
-**Companion skills:**
-- `econ-didactiek` → the underlying pedagogical principles
-- [economic-graph](economic-graph.md) → mathematical/presentation requirements and final-output checks; construction recipes are optional
-- `econ-word-templates` → document format QA only when Word export is in scope
+Apply [textbook writing requirements](econ-textbook-paragraph.md#part-3-writing-rules)
+and relevant [didactic principles](../references/authored/didactiek-principes.md).
+Check the learner's route from the motivating problem through explanation and
+practice, concept sequencing, prior-teaching evidence, misconception handling,
+integrated representations and method consistency. Detached graph explanations
+that cause split attention are FAIL; decorative or unclear content needs repair.
 
----
+For new Book 2+ theory paragraphs, check the complete
+[exercise contract](econ-exercise-builder.md), including alignment, printed
+sequence/template, support and fading, target answer form, paper-only usability
+and actual lesson timing. For an exercise revision, recheck affected operations
+and their dependencies; do not demand a new full set solely for this review.
 
-Before signing a current paragraph verdict, verify the snapshot inventory and
-include its `Review manifest SHA256` binding under the
-[current-file evidence rule](../docs/workflows/part-a-review.md#current-file-evidence).
-After repairs, recheck affected material and bind the new digest; an author
-regenerating a snapshot does not renew your review.
+A missing, reordered, wrong-level or additional exercise stage, misplaced
+summary, silent target gap, untaught prerequisite presented as retrieval,
+untargeted operation, changed goal, ineffective fading, non-neutral routing,
+same-kind arithmetic bonus, new theory in closing review or printed digital
+help dependency is a FAIL. A route/time estimate without actual questions is
+not evidence of feasibility. Do not accept a reduced target or remove required
+support to make the route fit. These checks test the owner's requirements;
+the reviewer does not define another exercise sequence.
 
-## REVIEW PROTOCOL
+Apply the [school-fit overlay](../references/external/amstelveencollege_quality_standards.md)
+where relevant: visible goals, formative feedback, non-stigmatising support,
+meaningful context, self-monitoring and clearly optional enrichment. Flag minor
+deviations; failures preventing the intended paper route block acceptance.
 
-Complete all applicable dimensions: Pass 0 integrity before content review,
-Pass 1 didactic, Pass 2 precision and Pass 3 final rendered pages. Checks can be
-recorded across writing stages and reused as described below. For each check,
-note PASS, FLAG (minor issue), or FAIL (must fix). Organize results by pass.
-Run after author self-checks and relevant validation; missing final outputs
-prevent final acceptance even if source checks have passed.
+### Consolidation and test preparation
 
-Follow [the canonical Part A review and closure rule](../docs/workflows/part-a-review.md)
-for independence, chapter batching, specialist escalation, targeted rechecks and
-PR closure. This skill supplies the review dimensions and report format.
+Use [consolidation](econ-consolidation-builder.md) for mixed-practice paragraphs
+and [test preparation](econ-testprep-builder.md) for the assessment chapter.
+Their formats are not new theory paragraphs. Apply only the assigned type:
 
-**Output:** Save `X.Y.Z-review.md` in each paragraph folder. Carry forward completed
-checks of unchanged material with their evidence; complete remaining coverage
-and inspect affected dependencies after repairs. Missing required coverage or
-an unresolved FAIL prevents a passing final verdict.
+| Type | Specific acceptance checks |
+|---|---|
+| Active summary | Five distinct topic blocks, 2–3 MC questions per block, realistic misconception distractors and explanations naming the correct answer and trap. No new theory. Missing blocks/questions/explanations or new theory are FAIL; weak distractors or uneven coverage of the four theory chapters are flags. |
+| Exam skills | Normally 4–5 exercises; each targets and names one exam skill (missing/mixed skill is FAIL). Check the book emphasis: graphs/notation, standpuntbepaling, multistep, or real-data/cumulative work respectively. Flag emphasis/range deviations or a missing strong-versus-weak answer comparison. |
+| Integration | One coherent scenario with normally 5–7 subquestions, named chapter skills, all four theory chapters and final standpuntbepaling. Book 4 includes a Books 1–3 skill. Missing coherence, labels, chapter/cross-book coverage or evaluative ending is FAIL; question-count deviation is a flag. |
+| Practice test | Require the skills × Bloom × points matrix, four-chapter coverage and per-subquestion answer points; Book 4 also needs a cumulative context. Missing requirements are FAIL. Flag deviations from 6–8 open questions in 3–4 contexts, roughly 70% two-point questions, 25/40/35 Bloom balance, or missing graph/data-table/text-source types. |
 
----
-
-## PASS 0: ASSET AND FILE INTEGRITY
-
-This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — do not proceed to Pass 1 or Pass 2. The paragraph is incomplete, not ready for review.
-
-| Check | What to look for |
-|-------|-----------------|
-| 0.1 All image refs resolve | Extract every `![...](...)` reference from all `.md` files in the paragraph folder. For each reference, verify the file exists in `_assets/`. **FAIL** if any referenced file is missing. List all missing files. |
-| 0.2 SVG/PNG pairs complete | Every `.svg` file in `_assets/` has a matching `.png` with the same base name, and vice versa. **FAIL** if any are unpaired. |
-| 0.3 Asset naming convention | All files in `_assets/` follow the pattern `X.Y.Z_{type}_{number}.{ext}` where type is `fig`, `ex`, `we`, or `mc`. **FLAG** any deviations. |
-| 0.4 No orphaned assets | Every file in `_assets/` is referenced in at least one `.md` file. **FLAG** any orphaned assets (files that exist but are never referenced). |
-| 0.5 Required output files | Check which type of paragraph this is based on folder name: **Theory** (default): paragraaf.md + opgaven.md + antwoorden.md. **Consolidation** (folder contains "Gemengde opgaven"): opgaven.md + antwoorden.md. **Test prep §1** (folder contains "Actieve samenvatting"): samenvatting.md + antwoorden.md. **Test prep §2** (folder contains "Examenvaardigheden"): opgaven.md + antwoorden.md. **Test prep §3** (folder contains "Integratieoefening"): opgaven.md + antwoorden.md. **Test prep §4** (folder contains "Proeftoets"): toets.md + antwoorden.md + toetsmatrijs.md. **FAIL** if any required file for that type is missing. |
-
-**Pass 0 result:** If any FAIL → return the report immediately. The builder must fix asset issues before content review is meaningful.
-
----
-
-## PASS 1: DIDACTIC ARCHITECTURE
-
-**Authoritative reference:** `references/authored/didactiek-principes.md` — the single source of truth for all didactical principles. All checks below are derived from this document.
-
-### 1.1 Opening and motivation
-
-| Check | What to look for |
-|-------|-----------------|
-| 1.1.1 Problem-first hook | Does the paragraph open with a concrete, recognizable situation before any theory? The hook should create a question in the student's mind that the theory section answers. A definition or abstract statement as the first element is a FAIL. |
-| 1.1.2 Connection to prior paragraphs | Is there an explicit reference to what the student already knows (e.g., "In §1.2.1 leerde je...")? A herhaling box or brief recall of the prerequisite concept should appear before new content. |
-| 1.1.3 Scope clarity | Can a student tell within the first half-page what they will learn and why it matters? The motivation should make the learning goal feel necessary, not arbitrary. |
-
-### 1.2 Theory section — scaffolding and sequencing
-
-| Check | What to look for |
-|-------|-----------------|
-| 1.2.1 One concept per step | Does the theory section introduce concepts one at a time, with each building on the previous? Flag if two new concepts are introduced simultaneously without separation. |
-| 1.2.2 Progressive graph explanation | Are relevant curves, points and areas explained step by step? Progressive figures should support unfamiliar elements with consistent axes/scales; adjacent annotations and sequenced text can explain a complete source graph. Check the teaching sequence, not a fixed element count or drawing order. |
-| 1.2.3 Integrated annotations | Are explanatory labels, calculation steps, or verbal descriptions embedded directly inside or immediately adjacent to graphs? Text that explains a graph but appears on a different page or far from the graph is a FAIL (split-attention effect). |
-| 1.2.4 Multiple representations | Is the same concept shown in at least two of: verbal, graphical, tabular, algebraic? Topics that are inherently multi-representational (like horizontal addition) should use at least three. |
-| 1.2.5 Method comparison | When two methods exist (e.g., table vs. algebra), are their corresponding steps compared close together so students see equivalence? Side-by-side or stacked placement may suit the page; avoid two disconnected procedures. |
-
-### 1.3 Dual coding and fading
-
-| Check | What to look for |
-|-------|-----------------|
-| 1.3.1 Full dual coding in theory | During the theory/explanation phase, is every key concept supported by both text AND a visual (graph, diagram, table, schematic)? Pure text explanations of graphical concepts are a FLAG. |
-| 1.3.2 Color consistency | Are the same colors used for the same concepts throughout the paragraph? (e.g., demand always blue, supply always green, collective always purple). Color inconsistency across figures is a FLAG. |
-| 1.3.3 Exercise fading sequence | For each operation and representation actually present in the target chain, does guided support move from explicit to reduced and then to the unsupported target answer form? Require students to produce their own graph/table only when graph/table production is a target operation. Demanding a representation absent from the target is a FAIL. |
-| 1.3.4 Fading labels | Does optional Begeleide inoefening use neutral support/skip wording rather than difficulty (makkelijk / moeilijk) or ability (basis / verdieping) labels? Labels that could stigmatize are a FLAG. |
-
-### 1.4 Misconception handling
-
-| Check | What to look for |
-|-------|-----------------|
-| 1.4.1 Explicit misconception box | Does the paragraph contain at least one "Let op" or warning box that names a specific common error students make? The box should state both the wrong approach AND the correct approach side by side. |
-| 1.4.2 Misconception in exercises | Is at least one exercise designed to surface or confront the misconception? (e.g., a question where the naive approach gives the wrong answer, forcing the student to apply the correct method). |
-| 1.4.3 Correct framing | Does the misconception box explain WHY the error is tempting (not just that it's wrong)? Students need to understand the source of the confusion, not just be told "don't do this." |
-
-### 1.5 Exercise design
-
-| Check | What to look for |
-|-------|-----------------|
-| 1.5.1 Backward-design alignment | Does the required `Lesson goal \| Target subquestion/operation \| Worked example \| Start check \| Guided practice \| Independent practice \| Covered/gap` table cover every goal and target operation without a silent gap? |
-| 1.5.2 Exact structure and adjacency | Are the seven exercise headings exactly ordered and exactly levelled as `## Uitgewerkt voorbeeld`, `## Startopgaven`, `## Begeleide inoefening`, `## Zelfstandige oefening`, `## Doeloefening`, `## Denkertje / Bonusopgave`, `## Herhaling / Herhaling en interleaving`? Does theory flow to the example, compact non-heading summary, then Startopgaven? Any missing, reordered, wrong-level, or additional top-level stage is a FAIL. |
-| 1.5.3 Worked-example alignment | Does the worked example use the same operation chain as the doeloefening, with simpler context/values and no operation absent from the target or lesson goals? |
-| 1.5.4 Startopgaven roles | Under one visible heading, is there both retrieval of prerequisites already taught and a compact current-content comprehension check? The check must remain brief and low-stakes, not mastery, diagnosis, or automatic routing. |
-| 1.5.5 Optional guided route | Is Begeleide inoefening retained as a printed heading but optional for students, aimed at the same goal/target, more explicitly scaffolded, deliberately faded, and accompanied by neutral skip wording? Missing/ineffective fading, a changed/lowered goal, or non-neutral routing is a FAIL. |
-| 1.5.6 Independent and target alignment | Does Zelfstandige oefening rehearse the decomposed target operations without guided support, and does the doeloefening match the blueprint target at the intended level? |
-| 1.5.7 Route realism | Is the route note `Startopgaven -> Zelfstandige oefening -> Doeloefening` visible, and does an explicit equation total motivation + instruction + worked example + transitions/recap + the actual estimated core-route questions at ≤55 minutes? Range addition or `23–38 < 55` alone is not proof. |
-| 1.5.8 Denkertje/bonus | Does the optional task build cognitive flexibility via transfer, representation, assumption, strategy, comparison, or critique rather than more arithmetic of the same kind? |
-| 1.5.9 Closing review | Does the final exercise section contain only 1–2 short accessible cumulative/homework tasks using taught content, with no new theory? |
-| 1.5.10 Paper-only completeness | Are all explanation, retrieval, scaffolding, independent practice, and target preparation needed in class present in print? Any printed website/device/online dependency or student-facing Part A, Part B, lane, or companion-route term is a FAIL. |
-
-### 1.6 Summary and navigation
-
-| Check | What to look for |
-|-------|-----------------|
-| 1.6.1 Summary present and placed | Does a compact non-heading summary box follow the worked example and precede Startopgaven, listing no more than five concise key points? |
-| 1.6.2 Summary completeness | Does the summary capture ALL key conceptual insights from the paragraph, including nuances like piecewise functions, domain restrictions, or special cases? If a concept is taught in the body but absent from the summary, FLAG it. |
-| 1.6.3 Forward reference | Does the summary or final sentence indicate what comes next (e.g., "In §1.2.4 oefenen we...")? This helps students orient within the book structure. |
-| 1.6.4 No additional heading | Is the summary a non-heading box, with no `## Samenvatting`, `## Website-help`, generic `## Opgaven`, `## Voorkennis ophalen`, or other additional top-level heading among the seven exercise headings? |
-| 1.6.5 Internal architecture boundary | Do internal documents keep Part A and Part B distinct while all student-facing printed template copy omits internal architecture terms and online/device directions? |
-
-### 1.7 School-fit quality (from school standards overlay)
-
-These checks verify compliance with `references/external/amstelveencollege_quality_standards.md`. FLAG deviations.
-
-| Check | What to look for |
-|-------|-----------------|
-| 1.7.1 Explicit learning goals | Are the intended leerdoelen visible at the start of the paragraph? Can a student tell what they should be able to do after completing this section? |
-| 1.7.2 Formative checkpoints | Does the paragraph include self-check moments (e.g., "Controleer: kun je nu...?", retrieval prompts, or checkpoint questions) that help the student and teacher monitor progress? |
-| 1.7.3 Layered differentiation | Is support (hints, scaffold images, extra worked examples) available without stigmatising labels? Is the ceiling high enough for stronger students without lowering the core? |
-| 1.7.4 Context serves concept | Does the context make the concept more legible and support transfer, rather than being decorative or distracting? Would removing the context make the concept harder to understand? |
-| 1.7.5 Learner self-monitoring | Does the summary or exercise section help students track what they understand vs where they need more practice? (e.g., checklist, self-assessment prompt) |
-| 1.7.6 Optional enrichment | If a verdiepingsopdracht exists, does it stretch beyond the core without competing with it? Is it clearly marked as optional? |
-
-### 1.8 Test preparation paragraphs (Chapter 5 only)
-
-These checks apply ONLY to test preparation paragraphs. Skip this section for theory and consolidation paragraphs.
-
-**§1 Active Summary (folder contains "Actieve samenvatting"):**
-
-| Check | What to look for |
-|-------|-----------------|
-| 1.8.1 Block count | Exactly 5 summary blocks, each covering a distinct topic cluster. **FAIL** if fewer than 5 or if blocks overlap significantly. |
-| 1.8.2 MC count per block | Each block has 2–3 MC questions interleaved after the summary text. **FAIL** if any block has 0 or 1 MC questions. |
-| 1.8.3 Distractor quality | MC distractors represent real student misconceptions (not obviously wrong alternatives). Check against reasoning CSV `distractor_*` columns or blueprint difficulty notes. **FLAG** if distractors are implausible or trivially wrong. |
-| 1.8.4 Answer explanations | Every MC question has an explanation that names the correct answer AND identifies which misconception the "trap" option represents. **FAIL** if explanations are missing. |
-| 1.8.5 Chapter coverage | All 4 theory chapters are represented across the 5 blocks. **FLAG** if coverage is lopsided (e.g., 3 blocks for Chapter 1, none for Chapter 4). |
-| 1.8.6 No new theory | Summary text reviews existing concepts only — no new definitions, formulas, or procedures. **FAIL** if new theory is introduced. |
-
-**§2 Exam Skills (folder contains "Examenvaardigheden"):**
-
-| Check | What to look for |
-|-------|-----------------|
-| 1.8.7 Exercise count | 4–5 exercises. **FLAG** if outside this range. |
-| 1.8.8 Single skill per exercise | Each exercise targets exactly ONE exam skill and is labelled with that skill. **FAIL** if an exercise mixes multiple skills or has no skill label. |
-| 1.8.9 Book emphasis match | The exercises match the book-specific emphasis (B1: graphs/notation, B2: standpuntbepaling, B3: multi-step, B4: real data/cumulative). **FLAG** if emphasis doesn't match the book. |
-| 1.8.10 Model vs weak answer | At least one exercise includes a model answer vs weak answer comparison. **FLAG** if missing. |
-
-**§3 Integration (folder contains "Integratieoefening"):**
-
-| Check | What to look for |
-|-------|-----------------|
-| 1.8.11 Single context | All sub-questions share one coherent scenario. Check: do the sub-questions reuse the same scenario nouns (company name, market, policy) throughout? **FAIL** if multiple unrelated contexts are used. |
-| 1.8.12 Sub-question count | 5–7 sub-questions. **FLAG** if outside this range. |
-| 1.8.13 Chapter skill labels | Each sub-question is labelled with the chapter skill it requires. **FAIL** if labels are missing. |
-| 1.8.14 Chapter coverage | All 4 theory chapters are represented across sub-questions. **FAIL** if any chapter is unrepresented. |
-| 1.8.15 Standpuntbepaling | The final sub-question is a standpuntbepaling (evaluate/assess). **FAIL** if the final question is purely calculation or recall. |
-| 1.8.16 Book 4 cross-book | For Book 4 only: at least one sub-question requires a skill from Books 1–3. **FAIL** if Book 4 §3 has no cross-book element. |
-
-**§4 Practice Test (folder contains "Proeftoets"):**
-
-| Check | What to look for |
-|-------|-----------------|
-| 1.8.17 Toetsmatrijs present | toetsmatrijs.md exists and contains a skills × Bloom × points matrix. **FAIL** if missing or empty. |
-| 1.8.18 Format compliance | 6–8 open questions across 3–4 contexts. **FLAG** if outside these ranges. |
-| 1.8.19 Point distribution | ~70% of questions are 2p, Bloom distribution approximately 25% begrijpen / 40% toepassen / 35% analyseren-evalueren. **FLAG** significant deviations. |
-| 1.8.20 Content coverage | All 4 theory chapters represented. **FAIL** if any chapter is absent. |
-| 1.8.21 Source types | At least 1 graph context, 1 data table, 1 text source. **FLAG** if any source type is missing. |
-| 1.8.22 Book 4 cumulative | For Book 4 only: at least one context requires tools from Books 1–3. **FAIL** if missing. |
-| 1.8.23 Point allocation | Every sub-question has explicit point allocation in the answer model. **FAIL** if points are missing. |
-
----
-
-### 1.9 Teacher and typical-student coverage
+### Teacher and typical-student coverage
 
 Record both perspectives explicitly; one does not prove the other. Apply these
 checks to theory and, where relevant, consolidation/test-preparation output.
@@ -216,225 +90,52 @@ Missing required coverage or a defect that prevents the intended paper route is
 a FAIL. A claim of teacher or student readiness without inspected evidence is
 not a PASS.
 
-## PASS 2: MATHEMATICAL AND CONCEPTUAL PRECISION
+### Economic and mathematical precision
 
-**Authoritative reference:** `references/authored/economic_mathematical_precision_reference.md` — all checks below must be verified against this document. When in doubt, the precision reference takes precedence.
+The [precision reference](../references/authored/economic_mathematical_precision_reference.md)
+remains authoritative. Independently solve each affected worked example and
+exercise; for new content this means all of them. Check solvability, supplied
+data, units, substitution, rounding, economic explanation, hints and answer/figure
+references. Match the taught method; do not invent alternative answer demands.
 
-### 2.1 Graph accuracy
+Verify causal directions and the specific economic cause, individual versus
+market objects, total versus average costs, ceteris paribus, variable notation,
+formula assumptions and domains at first presentation. Piecewise functions need
+their thresholds; horizontal addition sums quantities at a common price.
+Break-even assumptions and whole-unit rounding must be explicit. Check actual
+prior teaching before accepting prerequisite claims and check related material
+when a change affects terminology, methods or later reasoning. A material
+mathematical/economic error is FAIL.
 
-| Check | What to look for |
-|-------|-----------------|
-| 2.1.1 Axis conventions | Do market graphs place price vertically and quantity horizontally, and cost/revenue graphs output horizontally and the relevant euro amount vertically? Other graph types use their stated variables. Are axes labeled with variable names and units? |
-| 2.1.2 Slope directions | For every claim about a curve being "steiler" or "vlakker": verify against the axis orientation. With P on y-axis and Q on x-axis, a curve that is more responsive (larger ΔQ for a given ΔP) is FLATTER, not steeper. This is the most common technical error in economics textbooks. |
-| 2.1.3 Curve-point consistency | Do ALL labeled points on a graph lie exactly on the curves they claim to be on? Pick any labeled point, substitute into the equation, and verify. |
-| 2.1.4 Number consistency | Are the numbers in the text, in the graph, and in the equations the same? Flag if the text says "P = €2, Q = 1000" but the graph shows different values. (This was an issue in §1.2.2 where the text described €2→€3 but the graph showed P₁=30, P₂=20.) |
-| 2.1.5 Supply function and domain | Do supply coordinates and endpoints match the supplied function and valid economic domain? Reject forced P-axis intercepts or suppression of valid Q-axis intersections. The positive price-intercept convention applies only to freely chosen illustrative equations; never require changing a supplied equation. Apply the [graph requirements](economic-graph.md#mathematical-and-economic-requirements). |
-| 2.1.6 Intercept labeling | Are y-intercepts and x-intercepts of curves labeled when they are economically meaningful (e.g., the maximum betalingsbereidheid, the price at which a consumer exits the market)? |
-| 2.1.7 Visual clutter | Does every visual element in every graph serve an instructional purpose? Flag any unexplained shapes, decorative fills, or graphical elements whose meaning is not stated in the text or caption. |
-| 2.1.8 Shift representation | Are original curves shown as solid lines and shifted curves as dashed lines (or clearly differentiated)? Is the direction of shift marked with an arrow? |
+For affected figures, use [economic-graph](economic-graph.md), including actual
+coordinate verification and final rendering. Check plotted geometry against
+equations and agreement with text, tables and answers; a helper self-test alone
+is insufficient. Judge slope language with the displayed axis orientation and
+supplied domain. Do not impose an illustrative supply convention on a supplied
+function or add graph production absent from the target.
 
-### 2.2 Algebraic precision
+### Final rendered pages
 
-| Check | What to look for |
-|-------|-----------------|
-| 2.2.1 Domain restrictions stated | When a formula is presented, is its valid domain (price range) stated explicitly? For collective demand functions, the formula changes when a consumer exits the market. The restriction must appear on FIRST presentation, not only later. |
-| 2.2.2 Piecewise functions | If the topic involves consumers entering/leaving the market: is it made explicit that the collective demand function is piecewise? Is each piece stated with its valid price range? |
-| 2.2.3 Verification step | After deriving a formula, is there at least one numerical check (e.g., "Test: bij P = 2 geldt Q = -5·2 + 18 = 8. Dat klopt met de tabel")? |
-| 2.2.4 Variable clarity | Is it always clear which variable is being summed and which is held constant? For horizontal addition: "tel de Q's op bij dezelfde P" should be stated explicitly, not just implied. |
-| 2.2.5 Function notation | Are demand functions written consistently as Q = f(P) throughout? Flag if the paragraph switches between Q = f(P) and P = g(Q) without explanation. |
+Apply the [rendered-page acceptance standard](../references/authored/textbook-rendered-page-acceptance-standard.md)
+and, for figures, the [figure standard](../references/authored/textbook-figure-standard.md).
+Inspect final PDFs and in-scope HTML at normal reading scale, including exercises
+and answers. Record full-page PNGs of every changed page, or a contact sheet plus
+named pages inspected and output paths. New paragraphs require all pages;
+chapter work adds continuity, front matter, final assembly and answer booklet.
 
-### 2.3 Terminology and definitions
+Check clipping, overlaps, missing images/glyphs, table overflow, labels/captions,
+page breaks, stale renders, contrast, non-colour cues, reading order and answer
+readability. Isolated figure crops or source checks cannot replace page proof.
+Student-facing rendered defects or missing required proof are FAIL; only
+non-core future work may remain as flags under the acceptance standard.
 
-| Check | What to look for |
-|-------|-----------------|
-| 2.3.1 Definition boxes | Is every new term introduced with a formal definition box (Definitie: ...)? The definition should be precise enough that a student could use it to answer an exam question. Verify Dutch terms and abbreviations against `references/authored/economie-terminologie.md`. |
-| 2.3.2 Term consistency | Is the same term used consistently throughout? Flag if the paragraph alternates between "collectieve vraag" and "marktvraag" without stating they are synonyms. (Stating the synonym once and then choosing one is fine.) Flag any English terms where the syllabus prescribes Dutch (see `references/authored/economie-terminologie.md` "Common pitfalls" section). |
-| 2.3.3 Correct economic relationships | For every causal claim (e.g., "if income rises, demand for a normal good increases"): verify the direction is correct. Check substitutes, complements, normal goods, inferior goods. |
-| 2.3.4 Horizontal vs. vertical | Any reference to "horizontaal optellen" or "verticaal optellen": verify the description matches the actual graphical operation. Horizontal addition = summing Q values at each P level. This is adding along the horizontal axis. |
+## Record the review
 
-### 2.4 Exercise answer verification
-
-| Check | What to look for |
-|-------|-----------------|
-| 2.4.1 Worked example correctness | Rework every calculation in the worked example independently. Verify each numerical answer. |
-| 2.4.2 Exercise solvability | For every exercise: verify that the question is answerable with the information provided. Check that no required data is missing and no question is ambiguous. |
-| 2.4.3 Hint accuracy | Do hints point to the correct method? A hint that says "kijk naar stap 2 van het uitgewerkt voorbeeld" should actually correspond to the right step. |
-| 2.4.4 Answer key consistency | If answers are provided (in a separate answer document), verify they match the questions. Check especially that graph references (e.g., "zie figuur 5") point to the correct figure. |
-
-### 2.5 Cross-paragraph consistency
-
-| Check | What to look for |
-|-------|-----------------|
-| 2.5.1 Prerequisite accuracy | When the paragraph says "In §X leerde je Y" — verify that §X actually teaches Y and uses the same terminology. Verify all Dutch economic terms against `references/authored/economie-terminologie.md`. |
-| 2.5.2 Concept forward-compatibility | Does anything in this paragraph contradict or create confusion for later paragraphs? (e.g., stating a simplified rule now that will need to be "un-learned" later). |
-| 2.5.3 Notation consistency | Are variable names, subscript conventions (Q_v, Q_a, V₁, V₂), and graph labeling conventions consistent with previous and subsequent paragraphs? |
-| 2.5.4 Difficulty calibration | Does this paragraph's difficulty match its rating in the course blueprint (LICHT / MIDDEL / ZWAAR)? Flag if the actual content is significantly harder or easier than rated. |
-
-### 2.6 Economic and mathematical precision (from precision reference)
-
-These checks are derived from `references/authored/economic_mathematical_precision_reference.md`. FAIL any violation.
-
-| Check | What to look for |
-|-------|-----------------|
-| 2.6.1 Economic object identification | Is the distinction between individual and market-level clear in every definition and example? (e.g., "een consument" vs "alle consumenten") |
-| 2.6.2 Ceteris paribus | When a curve is introduced, does the text explicitly state that other factors are held constant? |
-| 2.6.3 Units | Do all numerical answers include units? Are axis labels in format "Prijs (€)" not just "P"? |
-| 2.6.4 Movement vs shift | Is "beweging langs de curve" (own price) vs "verschuiving van de curve" (non-price factor) consistently and correctly applied? |
-| 2.6.5 Text-graph-table-formula match | Do numbers in the text, graph, table, and formula all agree exactly? If the graph is schematic, is that stated? |
-| 2.6.6 Cost terminology precision | Are TK, GTK, MK, TVK, GVK, GCK used correctly and never conflated? Is "producing more raises costs" always qualified (total vs average)? |
-| 2.6.7 Piecewise / domain restrictions | If collective demand or cost functions change at a threshold, is the function presented as piecewise with valid price/quantity ranges? |
-| 2.6.8 Break-even assumptions | Is the break-even formula only used when constant P and constant GVK are stated as assumptions? Is whole-unit rounding addressed? |
-| 2.6.9 Slope language | With P on y-axis, does "steiler" mean less responsive and "vlakker" mean more responsive? Verify every slope claim. |
-| 2.6.10 Common failure patterns | Check against precision reference §12: economic classification errors, curve logic errors, graph-text mismatch, formula-assumption mismatch, pedagogical overcompression. |
-
----
-
-## PASS 3: FINAL RENDERED PAGES
-
-Apply `references/authored/textbook-rendered-page-acceptance-standard.md` and,
-when figures are involved, `references/authored/textbook-figure-standard.md`.
-Inspect the final PDF and any HTML outputs in scope at normal reading scale, including
-exercises and answers. Record full-page PNGs of every changed page, or a contact
-sheet plus named pages inspected, the final output paths, and defect disposition.
-For new paragraphs this includes all pages; chapter work also includes final
-assembly, continuity, front matter, and answer booklet inspection.
-
-Check clipping, overlap, missing images/glyphs, table overflow, readable figure
-labels/captions, page breaks, stale renders, and answer-model readability. Source
-Markdown, SVG checks, or isolated figure crops do not replace full-page proof.
-A student-facing rendered defect or missing proof is a FAIL; only non-core
-future work may remain as flags under the acceptance standard.
-
-## OUTPUT FORMAT
-
-Present the review as follows:
-
-```
-# Paragraph Review: [paragraph number and title]
-
-## 1. Scope and evidence
-[Author and independent reviewer identities; eligible routine Part A or other
-route; approved source/action evidence; commands and exit codes; output paths;
-any specialist escalation and its reason; prior findings and repair scope]
-
-## 2. Verdict
-
-**PASS**
-
-[Use exactly one of PASS, PASS WITH FLAGS, or FAIL on the first non-empty line
-above. Preserve this heading for the existing verdict parser. An unresolved
-FAIL or missing required coverage/proof forbids either passing verdict.]
-
-## Pass 0: Asset and File Integrity
-[Required checks and evidence; if incomplete, stop and return FAIL]
-
-## Pass 1: Didactic Architecture
-
-### Strengths
-[Record useful strengths with page references; omit this subsection if none need highlighting]
-
-### Issues
-[List each issue with: check number, severity (FLAG/FAIL), page reference, 
-specific description, and concrete fix]
-
-### Teacher coverage
-[Goals, prerequisites, worked example/target chain, practice, feedback,
-differentiation, transfer/retention, timing, and answer completeness]
-
-### Student coverage
-[Typical 4 vwo task walk-through, next actions, cognitive load/motivation,
-visual-text links, readability/accessibility, and paper-only completeness]
-
-## Pass 2: Mathematical and Conceptual Precision
-
-### Verified correct
-[Record the checks actually performed and their evidence; no example quota]
-
-### Issues  
-[List each issue with: check number, severity (FLAG/FAIL), page reference,
-specific description, the error, and the correction]
-
-## Pass 3: Final Rendered Pages
-[Final PDFs/HTML, full-page proof paths, pages inspected at normal scale,
-defects and disposition; chapter continuity/final assembly evidence if applicable]
-
-## Repair recheck and unresolved findings
-[Finding IDs, changed material and dependencies rechecked, evidence, remaining
-flags/failures and what each blocks; preserve history rather than erase failures]
-
-## Summary
-[Overall assessment, remaining actions and the scope supported by the review.
-Distinguish content acceptance from any outstanding publication/student-use decision.]
-```
-
----
-
-## CALIBRATION EXAMPLES
-
-These examples show what each severity level means:
-
-**FAIL — must fix before use:**
-- A slope direction claim that is mathematically backwards (2.1.2)
-- Numbers in the text that don't match the graph (2.1.4)
-- A formula presented without domain restriction when the domain matters (2.2.1)
-- An exercise that is unsolvable with the given information (2.4.2)
-- A misconception box that itself contains an error
-- A missing/reordered/interrupted seven-heading block, including a summary or help stage between theory, the worked example, and Startopgaven (1.5.2)
-- Missing/ineffective fading, a changed goal, or non-neutral skip wording in Begeleide inoefening (1.5.5)
-- A demanded graph/table or other operation that is absent from the target chain (1.3.3)
-
-**FLAG — should fix, not blocking:**
-- Summary missing a key concept taught in the body (1.6.2)
-- Unexplained visual element in a graph (2.1.7)
-- Color inconsistency between figures (1.3.2)
-
-**PASS — no action needed:**
-- Correctly implemented progressive graph construction
-- Accurate algebra with verification step
-- Clean exercise fading from full support to independence
-- Consistent notation throughout
-
----
-
-## COMMON ERRORS IN ECONOMICS PARAGRAPHS (REFERENCE LIST)
-
-These are the errors most frequently found in economics textbook paragraphs, ordered by frequency. Check for these especially:
-
-### High frequency
-1. **Slope language reversed** — saying "steiler" when the curve is flatter (or vice versa) because the author thinks in terms of the coefficient rather than the visual angle on the P-Q diagram
-2. **Graph numbers don't match text numbers** — the verbal example uses €2 and €3 but the graph uses 20 and 30
-3. **Domain restriction missing on formulas** — presenting Q = -5P + 18 without stating "geldig voor 0 ≤ P ≤ 3.5"
-4. **Split attention** — graph on one page, explanation on another
-5. **All exercises at the same Bloom level** — typically all "calculate" with no "explain" or "evaluate"
-
-### Medium frequency
-6. **Misconception stated but not confronted in exercises** — warning box present but no exercise tests the distinction
-7. **Inconsistent variable naming** — Q_v in one place, Q_d in another, Qv in a third
-8. **Summary omits key insight** — especially piecewise functions, special cases, or domain restrictions
-9. **Closing cumulative review missing** — no short retrieval of earlier taught content
-10. **Worked example after summary** — breaks reading flow
-
-### Lower frequency but high impact
-11. **Supply endpoints forced to an axis** — check the supplied function and valid domain; a valid Q-axis intersection is not an error
-12. **Causal direction error** — e.g., confusing "price of substitute rises → demand increases" with the reverse
-13. **Horizontal/vertical addition confusion** — especially in the transition from graphical to algebraic
-14. **Figure reference pointing to wrong figure** — "zie figuur 5" but the relevant graph is figuur 6
-15. **Dual coding absent from theory section** — text-only explanation of an inherently visual concept
-
----
-
-## NEVER DO
-
-- Skip Pass 2 because Pass 1 looks good — precision errors in well-scaffolded paragraphs are MORE damaging because students learn the error effectively
-- Assume graphs are correct without checking point coordinates against equations
-- Accept "steiler/vlakker" claims without verifying against axis orientation
-- Let a formula pass without checking its domain restriction
-- Review exercises without attempting to solve them yourself
-- Approve a paragraph where the worked example contains a calculation error
-- Approve a Book 2+ paragraph with reordered, missing, or wrong-level `##` exercise headings, or with the compact summary outside its worked-example-to-Start position
-- Accept a printed route that depends on or advertises a website, device, online explanation, Part B, lane, or companion route
-- Treat the brief Startopgaven check as mastery, diagnosis, or automatic routing
-- Accept guided practice that changes the goal, never fades, or uses ability labels
-- Accept a bonus that is merely more arithmetic or a closing review that adds theory
-- Ignore unexplained visual elements in graphs — if you can't explain what it teaches, it's clutter
-- Treat FLAG items as unimportant — they accumulate and degrade quality over time
+Use the [canonical record and current-file rules](../docs/workflows/part-a-review.md).
+Record the scope/inputs, actual checks and evidence, teacher/student coverage,
+findings with severity and location, repair dispositions and remaining limits.
+Use an identifiable report per paragraph when claiming paragraph closure; retain
+`## 2. Verdict` and the manifest binding required there. Organize dimensions in
+whatever concise form makes coverage and reused evidence clear. There is no quota
+of strengths, examples or report length. Never erase a failure's history or let a
+new manifest stand in for substantive rechecking.

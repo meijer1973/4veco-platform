@@ -833,11 +833,13 @@ Place immediately after the introduction section, before the worked example. A b
 
 ### 10.7 Direct rule labels inside overview figures (MANDATORY)
 
-Overview/summary figures must include **direct rule annotations inside the figure**, not only in surrounding prose. Students re-scan figures during revision without re-reading paragraphs — rule labels embedded in the figure mean the rule is recoverable from the figure alone.
+Overview/summary figures must include **direct rule annotations inside or directly beneath the figure**, not only in distant prose. Students re-scan figures during revision without re-reading paragraphs — rule labels embedded in the figure mean the rule is recoverable from the figure alone.
 
 ### 10.8 Supply curve rule
 
-Supply lines always extend to the P-axis (y-axis), even when the y-intercept is negative. Supply lines never cross the Q-axis.
+Apply the [graph requirements](../../skills/economic-graph.md#mathematical-and-economic-requirements):
+supply coordinates and endpoints follow the supplied function and valid domain.
+The positive price-intercept convention applies only to freely chosen illustrations.
 
 ### 10.9 Numerical alignment between graph and text (MANDATORY)
 
@@ -939,15 +941,12 @@ For 2p: 2 schakels between given start and given conclusion.
 
 ### 12.1 Review protocol overview
 
-Three sequential passes over every paragraph:
-
-| Pass | Focus | Gate |
-|------|-------|------|
-| Pass 0 | Asset and file integrity | Any FAIL → STOP, paragraph incomplete |
-| Pass 1 | Didactic architecture | FAILs must be fixed before delivery |
-| Pass 2 | Mathematical/conceptual precision | FAILs must be fixed before delivery |
-
-**Critical rule:** Reviews must be run by an independent sub-agent, NOT by the agent that built the paragraph. The builder has seen the content too many times and will rubber-stamp.
+Use [Part A review and closure](../../docs/workflows/part-a-review.md) for
+review scope, independence, evidence and staffing. Its
+[review dimensions](../../skills/econ-paragraph-review.md) cover integrity,
+didactics, mathematical precision and final rendered pages. Missing required
+coverage or unresolved failures prevent acceptance; scoped repairs can reuse
+valid unchanged evidence. These dimensions do not require separate agents.
 
 ### 12.2 Didactic architecture checks (Pass 1)
 
@@ -1004,7 +1003,7 @@ Three sequential passes over every paragraph:
 - Slope directions (MOST COMMON ERROR: "steiler" when actually flatter — verify against axis orientation)
 - Curve-point consistency (labeled points lie exactly on curves)
 - Number consistency (text, graph, equations match exactly)
-- Supply curve rule (extends to P-axis, never crosses Q-axis)
+- Supply coordinates and endpoints agree with the supplied function and valid domain (see §10.8)
 - Intercept labeling, visual clutter check, shift representation
 
 **2.2 Algebraic precision:**
@@ -1034,7 +1033,9 @@ Three sequential passes over every paragraph:
 
 ### 12.4 Cross-paragraph consistency checks (chapter level)
 
-Must be run by an INDEPENDENT sub-agent (not the builder):
+The same independent reviewer may cover these chapter checks under
+[Part A review](../../docs/workflows/part-a-review.md); author self-checks do not
+replace independent review:
 
 | Check | What to look for |
 |-------|-----------------|
@@ -1063,7 +1064,7 @@ Must be run by an INDEPENDENT sub-agent (not the builder):
 10. Worked example after summary
 
 **Lower frequency but high impact:**
-11. Supply line crossing Q-axis
+11. Supply endpoints forced to an axis contrary to the supplied function/domain
 12. Causal direction error
 13. Horizontal/vertical addition confusion
 14. Figure reference pointing to wrong figure
@@ -1180,7 +1181,7 @@ When designing any material, apply these rules:
 - Grafieken introduceren zonder eerst de onderdelen apart te oefenen
 - Een redeneerketen laten oefenen zonder eerst het model voor te doen
 - Verdiepingsopdrachten achter slot en grendel — ze moeten voor iedereen beschikbaar zijn
-- Een afgewerkte grafiek tonen zonder stap-voor-stap opbouw
+- Een grafiek tonen zonder stapsgewijze uitleg van de relevante elementen
 - Modellen presenteren als werkelijkheid in plaats van als analytisch gereedschap
 - Alleen correcte informatie presenteren en verwachten dat misconcepties verdwijnen
 
@@ -1191,7 +1192,7 @@ When designing any material, apply these rules:
 - Formula presented without domain restriction when domain matters
 - Exercise unsolvable with given information
 - Misconception box that itself contains an error
-- Supply line crossing Q-axis
+- Supply endpoints contradicting the supplied function/domain
 - Causal direction error (confusing which way causation runs)
 - Horizontal/vertical addition confusion without clarification
 - Figure reference pointing to wrong figure
@@ -1200,7 +1201,8 @@ When designing any material, apply these rules:
 ### Quality and review prohibitions
 
 - Declaring paragraph "complete" without verifying all referenced files exist
-- Builder running their own QC review (must be independent sub-agent)
+- Treating author self-checks as independent content review; the author/tool may
+  generate quality records from completed independent evidence under Part A review
 - Asset verification as suggestion rather than hard gate
 - Skipping Pass 2 because Pass 1 looks good — precision errors in well-scaffolded paragraphs are MORE damaging
 - Assuming graphs are correct without checking coordinates against equations

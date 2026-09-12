@@ -15,14 +15,11 @@ Publisher-print chapter/book handoff also belongs to this lane.
 Use `BUILD-PARAGRAPH.md` as the full reference, but use this runbook as the
 assignment surface for ordinary textbook paragraph production.
 
-For newly authored Book 2 and later theory paragraphs, use
-`skills/econ-exercise-builder.md` as the operational Part A exercise contract:
-backward-design alignment, the exact canonical seven `##` headings, the compact
-non-heading summary after the worked example and before Startopgaven, and the
-paper short/support route. All explanation and support required in the lesson
-must be present in print; printed student copy must not advertise or depend on
-a website, device, online explanation, or companion surface and must not expose
-internal lane terminology. Book 1 output is frozen and must not be retrofitted.
+For newly authored Book 2 and later theory paragraphs, the
+[exercise builder](../../skills/econ-exercise-builder.md) owns the operational
+Part A exercise contract. Follow its requirements for the affected scope;
+reuse valid plans and coverage when revising. Book 1 output is frozen and must
+not be retrofitted.
 
 **Pedagogical-boundary inheritance:** use
 `references/owned/course-blueprint-pedagogical-boundaries.md` to inform the
