@@ -16,17 +16,24 @@ retrofit it and do not use this contract as a retroactive Book 1 content check.
 the canonical semantic authority
 `references/authored/book-outlines/book-2-outline.md` and its compact machine
 companion. Part A creates `X.Y.Z-textbook-plan.md` from
-`build-scripts/templates/template-textbook-paragraph-plan.md`. Run structural
-currentness and `--action <action> --paragraph X.Y.Z`; run
+`build-scripts/templates/template-textbook-paragraph-plan.md`. For ordinary
+approved Book 2 production, follow the [Part A checklist](../docs/workflows/part-a-start.md)
+to generate `X.Y.Z-textbook-foundation.json` and link it once in the plan.
+It supplies the checked hashes, authority/chapter/target pins and scoped hold
+effects; do not transcribe those mechanical tables. Regenerate it when its
+sources or action change. For other actions, use the runbook's structural
+currentness and `--action <action> --paragraph X.Y.Z` checks; add
 `--require-approved` only for approved authority, production, or integration.
 Treat a hold's explicit resolution action as distinct from the later use or
 integration action it guards. Stop only when
 the outline is stale or a matching open hold blocks the current action.
 Released holds require evidence and no longer block; unrelated, out-of-scope,
-or explicitly permitted holds do not block. Record every required authority,
-chapter, target, semantic, five-way prerequisite, non-goal, prepares-for,
-model-condition, hold-effect, and distinct foundation-verdict field in the
-Part A plan. Preview/familiarity is never an assumable prerequisite.
+or explicitly permitted holds do not block. Author the semantic decisions in
+the Part A plan: current local chapter-plan authority, five-way prerequisite
+classification and evidence, non-goals, prepares-for, model conditions and the
+distinct current-action foundation verdict. The generated record is evidence,
+not a new approval or a substitute for those decisions. Preview/familiarity is
+never an assumable prerequisite.
 
 **Lane boundary:** this is the Part A textbook lane. It may not create or edit
 companion route files (`index.html`, companion HTML/PPTX, shared game data,
@@ -41,7 +48,7 @@ A human-review outputs.
 - `econ-didactiek` → pedagogical decision rules (scaffolding, dual coding, Bloom's, misconceptions) — backed by `references/authored/didactiek-principes.md`
 - `econ-exercise-builder` → generates `exercises.md` and `answers.md` (run first)
 - `economic-graph` → generates SVG/PNG graphs (called during build)
-- `econ-pdf-builder` → PDF export pipeline (styling, page breaks, image embedding)
+- `econ-pdf-builder` → layout-adaptation lookup for the shared renderer (§5)
 - `econ-quality-control` → quality assurance: generate quality_ref after build, on-demand quality reports
 
 **Reference standards:**
@@ -86,7 +93,7 @@ Per paragraph, saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.2.2 Vraagfacto
 | `X.Y.Z [Name] – antwoorden.pdf` | PDF export of antwoorden.md |
 | `_assets/*.svg` | All graphs and diagrams as SVG |
 | `_assets/*.png` | All graphs and diagrams as PNG (rasterised from SVG) |
-| `build_pdf.py` | PDF build script (paragraph-specific CSS + paths) |
+| `build_pdf.py` | Thin wrapper invoking the shared paragraph renderer |
 | `X.Y.Z-review.md` | Independent Part A review |
 | `X.Y.Z-quality-ref.yaml` | Part A `partA:` quality-ref block |
 | `X.Y.Z-textbook-handoff.md` | Boundary handoff for the Part B companion lane |
@@ -134,7 +141,7 @@ Every newly authored Book 2+ theory paragraph follows this structure, in
 ├─────────────────────────────────────────────┤
 │ 3. THEORY                                   │
 │    Concept explanation with dual coding      │
-│    (text + graphs built step by step)        │
+│    (text + graphs explained step by step)    │
 │    Definition boxes, formula boxes,          │
 │    misconception warnings, recall boxes      │
 ├─────────────────────────────────────────────┤
@@ -240,7 +247,11 @@ Rules:
 
 ### 3.4 Graphs in theory sections
 
-Graphs are built **step by step** in the theory text — never dropped in as finished images.
+Explain theory graphs **step by step**, connecting each relevant curve, point
+or area to its economic meaning. Use progressive figures when introducing
+several unfamiliar elements; an already complete source graph can be explained
+through adjacent annotations and sequenced text. Do not add graph construction
+as a student task unless it is a target operation.
 
 **Pattern:**
 
@@ -327,18 +338,21 @@ Rules:
 5. Save both SVG and PNG to `_assets/`
 6. Reference PNGs in markdown: `![caption](_assets/filename.png)`
 
-### 4.1.bis Crowded-curve fix: split into side-by-side panels
+### 4.1.bis Crowded comparisons
 
-When an overview figure needs to show 3+ curves (e.g., V₁, V₂, V₃ for original / shift-right / shift-left), do NOT cram them all onto one coordinate system. **Split into two side-by-side panels** sharing the same axes/scale, each showing ONE phenomenon clearly.
+Keep the intended comparison readable: curves, arrows and labels must remain
+distinct at the final print size. Three or more curves do not by themselves
+require a split. When one plot is crowded, use panels or progressive figures;
+choose side-by-side or stacked placement to fit the page. Preserve comparable
+axes/scales when students must compare values or changes.
 
-❌ **Wrong:** Three overlapping curves on one plot → label collisions, legend boxes occluding curves, arrows lost in noise.
-✅ **Right:** Left panel shows phenomenon A (e.g., movement along curve), right panel shows phenomenon B (e.g., shift of curve). Both panels share identical axes.
-
-Use the rule labels (§4.5) to make the contrast between the two panels explicit.
+Use the rule labels (§4.5) to make the comparison explicit, including when
+panels are used.
 
 ### 4.2 Step-by-step theory graphs
 
-For theory sections where a graph is built incrementally (§3.4), generate **separate SVG files** for each stage:
+When progressive figures support the explanation (§3.4), generate a separate
+SVG/PNG pair for each teaching stage. For example:
 
 ```
 _assets/2.2.1_fig_1.svg  — demand curve only
@@ -347,7 +361,10 @@ _assets/2.2.1_fig_3.svg  — demand + supply + equilibrium + labels
 _assets/2.2.1_fig_4.svg  — full graph with surplus shading
 ```
 
-Each subsequent figure adds elements to the previous one. Axes, scale, and positioning must be identical across all stages so the student sees accumulation, not a different graph.
+Each stage adds the elements needed for its next teaching step. Keep axes,
+scale and positioning identical across this progression so students see
+accumulation rather than a different graph. This teaching sequence does not
+prescribe the tool's drawing order or a fixed number of elements per file.
 
 ### 4.3 Numerical alignment between graph and text (MANDATORY)
 
@@ -439,7 +456,7 @@ Zo zie je dezelfde informatie nu in drie vormen tegelijk: in de woorden hierbove
 
 Overview / summary figures (the "everything together" diagram for a key distinction) must include **direct rule annotations inside or directly under the figure**, not only in the surrounding prose.
 
-For a two-panel comparison figure, place a small boxed label below each panel:
+For a two-panel comparison, one possible layout uses a rule label below each panel:
 
 ```
 ┌─────────────────────────┐    ┌─────────────────────────┐
@@ -452,19 +469,39 @@ For a two-panel comparison figure, place a small boxed label below each panel:
 └─────────────────────────┘    └─────────────────────────┘
 ```
 
-Use a colored stroke that matches the corresponding curve color (blue for movement, green for shift, etc.). Each box ~50px tall, ~260px wide.
+Size and place annotations for readability in the final document; boxes and
+fixed pixel dimensions are not required. Use the economic-graph palette for
+curve identity (demand blue, supply green), and words/arrows to distinguish
+movement from shift. Colour alone must not carry the rule.
 
 **Why:** Students re-scan figures during revision without re-reading the surrounding paragraphs. Rule labels embedded in the figure mean the rule is recoverable from the figure alone — the figure becomes a self-contained study aid.
 
 ### 4.6 Supply curve rule
 
-Supply lines always extend to the P-axis (y-axis), even when the y-intercept is negative. Supply lines never cross the Q-axis.
+Plot the supplied supply function over its valid economic domain. Clip at
+domain or plot boundaries; do not extend or move endpoints to force a P-axis
+intercept or avoid a valid Q-axis intersection. When free to choose an
+illustrative supply equation, use the project's positive price-intercept
+convention. Never change a supplied equation to meet that convention. Apply
+the [graph requirements](economic-graph.md#mathematical-and-economic-requirements)
+and verify the displayed coordinates against the function.
 
 ---
 
 ## PART 5: PDF EXPORT
 
-For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline), see `econ-pdf-builder`. That skill handles the full conversion from markdown to print-ready PDF.
+For ordinary paragraph export, copy the
+[thin wrapper](../build-scripts/templates/template-build-paragraph-pdf.py) to
+`build_pdf.py` and run it with the adjacent platform checkout. The
+[shared renderer](../build-scripts/textbook/paragraph_pdf.py) is the default for
+Markdown → HTML → PDF, including image embedding, lists, styling and pagination.
+Install its declared dependencies as described in the Part A checklist.
+Inspect the final HTML and every PDF page.
+
+Consult [econ-pdf-builder](econ-pdf-builder.md#default-paragraph-implementation)
+when a layout adaptation is needed. Change and test the shared implementation,
+or document why a specialized builder is necessary and verify its output.
+Do not copy the historical regex pipeline into a new paragraph builder.
 
 **Key rule:** difficulty ratings (⬜/🟨/🟥) and time estimates per exercise are teacher-facing blueprint metadata and must not appear in student-facing output. Strip them before export.
 
@@ -497,9 +534,9 @@ does not ignore a matching open blocking hold or a released hold without evidenc
 16. □ Answer model follows unified procedures — same steps as worked example
 
 **Graph checks:**
-17. □ Theory graphs built step by step (not dropped in complete)
+17. □ Theory graphs explained step by step, with progressive figures or adjacent annotations/text appropriate to the teaching task
 18. □ All graphs generated via `economic-graph` skill with coordinate verification
-19. □ Supply lines extend to P-axis, never cross Q-axis
+19. □ Supply coordinates and endpoints follow the supplied function and valid domain; illustrative equations use the positive price-intercept convention only when freely chosen
 20. □ **Asset completeness (BLOCKING):**
   - 20a. □ Extract all `![...](...)` references from paragraaf.md, opgaven.md, antwoorden.md — list every referenced file
   - 20b. □ Verify each referenced file exists in `_assets/` (both `.svg` and `.png`). List any missing. **If ANY are missing → the paragraph is NOT complete. Generate missing assets before delivering.**
@@ -512,7 +549,7 @@ does not ignore a matching open blocking hold or a released hold without evidenc
 24. □ Definition boxes, formula boxes, warning boxes visually distinct
 25. □ Summary box present before Startopgaven with ≤5 points and forward pointer
 26. □ File naming follows convention: `X.Y.Z_type_number`
-27. □ PDF exported via `econ-pdf-builder` without errors
+27. □ PDF exported with the shared renderer/thin wrapper, or a justified and tested specialized builder; final HTML and all PDF pages inspected
 
 **Time check:**
 28. □ Whole-lesson equation totals actual planned minutes at ≤55; recommended range addition alone is not accepted as proof, and optional guided/bonus/review time is accounted for separately (cross-check with exercise builder)
@@ -531,4 +568,4 @@ does not ignore a matching open blocking hold or a released hold without evidenc
 
 ---
 
-*This skill builds textbook paragraphs. For exercise generation, see `econ-exercise-builder`. For pedagogical principles, see `econ-didactiek`. For graph generation, see `economic-graph`. For PDF export, see `econ-pdf-builder`. For paragraph review, see `econ-paragraph-review`. For quality assurance, see `econ-quality-control`.*
+*This skill builds textbook paragraphs. For exercise generation, see `econ-exercise-builder`. For pedagogical principles, see `econ-didactiek`. For graph generation, see `economic-graph`. For PDF export, use the shared renderer (§5); consult `econ-pdf-builder` for layout adaptation. For paragraph review, see `econ-paragraph-review`. For quality assurance, see `econ-quality-control`.*

@@ -47,10 +47,13 @@ npm run check:book-outline-currentness -- --require-approved  # before approved 
 ```
 
 Part A owns `<paragraph-folder>/X.Y.Z-textbook-plan.md`, created from
-`build-scripts/templates/template-textbook-paragraph-plan.md`. Its complete
-foundation check pins v6/v5/outline/chapter-plan/target identity and freshness,
-copies canonical Markdown semantics, uses the five prerequisite
-classifications, and evaluates each hold against the exact current action. A
+`build-scripts/templates/template-textbook-paragraph-plan.md`. For ordinary
+approved Book 2 production, link the generated foundation record once; it
+supplies v6/v5/outline/chapter-plan/target pins and current-action hold checks
+without manual transcription. Author the canonical Markdown semantic decisions,
+five prerequisite classifications and evidence, current local chapter-plan
+authority and distinct foundation verdict in the plan. Refresh the projection
+when sources or action change; it does not grant approval. A
 stale source or matching open hold that blocks the current action stops that
 action. Explicit resolution actions may satisfy release conditions without
 granting later approved use or integration. Released, unrelated, out-of-scope,

@@ -18,6 +18,9 @@ function pending(authorized = false) {
 }
 function filesFor(input) {
   const files = currentness.readFiles();
+  // Historical metadata keeps its original exercise-source pin. Pair it with
+  // that source, rather than current instructional maintenance or a new hash.
+  files['skills/econ-exercise-builder.md'] = owner.gitText(grant.BASELINE_COMMIT, 'skills/econ-exercise-builder.md');
   const outline = owner.gitText(grant.BASELINE_COMMIT, currentness.OUTLINE_PATH);
   files[currentness.OUTLINE_PATH] = outline.split('\n').map((line) => {
     const hold = input.meta.holds.find((h) => line.startsWith(`| \`${h.id}\` |`));
