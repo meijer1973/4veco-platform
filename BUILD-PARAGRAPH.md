@@ -408,7 +408,9 @@ check repairs and affected dependencies before a passing final verdict.
 ## A7: Quality record
 
 The author or a tool generates `X.Y.Z-quality-ref.yaml` using
-`econ-quality-control`, the existing independent review and actual inventory.
+`paragraph-records.js quality` through the [Part A checklist](docs/workflows/part-a-start.md),
+the existing independent review and actual inventory. `econ-quality-control` is
+for additional authored evidence or a requested quality report.
 No separate quality-ref agent is required. Preserve the review's verdict and
 gaps, schema version 2 and the other lane's block; record the approved reference
 version used. See [Part A review and closure](docs/workflows/part-a-review.md).

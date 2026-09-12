@@ -14,11 +14,11 @@ End-to-end orchestrator for building a complete textbook chapter from blueprint 
 - `econ-testprep-builder` → builds test preparation paragraphs (Chapter 5: §1–§4)
 - `econ-chapter-assembler` → wraps all paragraphs into a chapter PDF
 - `econ-paragraph-review` → independent QC review per paragraph
-- `econ-quality-control` → generates quality_ref per paragraph
+- `econ-quality-control` → additional authored evidence or requested quality reports; routine records use the Part A checklist
 
 **Workflow documents:**
 - `BUILD-CHAPTER.md` → the step-by-step process this skill follows
-- `BUILD-PARAGRAPH.md` Part A → the textbook build process each paragraph sub-agent follows (Part B is the platform pipeline — separate, not used by this skill)
+- [Part A checklist](../docs/workflows/part-a-start.md) → the paragraph authoring and review route; `BUILD-PARAGRAPH.md` is for complete cross-lane verification
 
 **Reference standards (sub-agents must comply):**
 - `references/authored/didactiek-principes.md` → didactical principles (source of truth)
@@ -398,7 +398,9 @@ earlier findings; update their disposition in the existing report.
 ### 4.1b Quality record generation
 
 For each paragraph, the author or a tool generates `X.Y.Z-quality-ref.yaml` via
-`econ-quality-control` from the completed independent review and actual inventory.
+`paragraph-records.js quality` through the [Part A checklist](../docs/workflows/part-a-start.md),
+from the completed independent review and actual inventory. Load `econ-quality-control`
+only for additional authored evidence or a requested report.
 Preserve its verdict, gaps and evidence, schema version 2, the other lane's block
 and the approved reference version. This requires no additional reviewer.
 

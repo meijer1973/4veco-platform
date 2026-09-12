@@ -6,7 +6,7 @@ const path = require('path');
 const {
   CANONICAL_NAVIGATION_PATHS,
   LEGACY_PROFILE_LINKS,
-  MAP_ANCHOR_KEYS,
+  ACCESS_LINK_FILES,
   NAVIGATION_FILES,
   findRuleFailures,
   findNavigationFailures,
@@ -48,55 +48,11 @@ function navigationMutationCases() {
   const cases = [];
   for (const canonicalPath of CANONICAL_NAVIGATION_PATHS) {
     const rawUrl = `${rawMain}${canonicalPath}`;
-    const anchorKey = MAP_ANCHOR_KEYS[canonicalPath];
     cases.push(
       [
-        `research human list: ${canonicalPath}`,
-        'RESEARCH_AGENT_MAP.md',
-        'Human-readable:',
-        'Machine-readable:',
-        `- \`${canonicalPath}\``,
-        `RESEARCH_AGENT_MAP.md: human-readable entry missing ${canonicalPath}`,
-      ],
-      [
-        `research entry URL list: ${canonicalPath}`,
-        'RESEARCH_AGENT_MAP.md',
-        'entry_points (full URLs):',
-        '## Index Anchors',
-        `- ${rawUrl}`,
-        `RESEARCH_AGENT_MAP.md: entry-point URL missing ${canonicalPath}`,
-      ],
-      [
-        `research anchor JSON: ${canonicalPath}`,
-        'RESEARCH_AGENT_MAP.md',
-        '## Index Anchors',
-        'index_anchors (full URLs):',
-        `  "${anchorKey}": "${canonicalPath}",`,
-        `RESEARCH_AGENT_MAP.md: index-anchor JSON missing ${canonicalPath}`,
-      ],
-      [
-        `research anchor URL list: ${canonicalPath}`,
-        'RESEARCH_AGENT_MAP.md',
-        'index_anchors (full URLs):',
-        '## Path Registry',
-        `- ${rawUrl}`,
-        `RESEARCH_AGENT_MAP.md: index-anchor URL missing ${canonicalPath}`,
-      ],
-      [
-        `GitHub routing row: ${canonicalPath}`,
-        'AGENT_GITHUB_ENTRY.md',
-        '| How should paragraph work be split',
-        '\n| How should accessibility',
-        `\`${canonicalPath}\``,
-        `AGENT_GITHUB_ENTRY.md: routing row missing ${canonicalPath}`,
-      ],
-      [
-        `GitHub useful list: ${canonicalPath}`,
-        'AGENT_GITHUB_ENTRY.md',
-        'Useful entry points:',
-        'Task-routing guidance:',
-        `- \`${canonicalPath}\``,
-        `AGENT_GITHUB_ENTRY.md: useful entry missing ${canonicalPath}`,
+        `research contract link: ${canonicalPath}`,
+        'RESEARCH_AGENT_MAP.md', '', null, `](${canonicalPath})`,
+        `RESEARCH_AGENT_MAP.md: linked contract missing ${canonicalPath}`,
       ],
       [
         `URL-index source: ${canonicalPath}`,
@@ -133,7 +89,7 @@ describe('check-paragraph-workflow-wording', () => {
   test('active workflow surfaces preserve the two-lane and full-route contract', () => {
     expect(checkParagraphWorkflowWording()).toEqual({
       ok: true,
-      files_checked: 13,
+      files_checked: 16,
       failures: [],
     });
   });
@@ -142,6 +98,7 @@ describe('check-paragraph-workflow-wording', () => {
     const files = {
       'docs/workflows/part-a-start.md': '[review](../../AGENTS.md#source-integrity-and-learning-quality)',
       'docs/workflows/paired-paragraph-ci.md': '# Paired paragraph CI',
+      ...Object.fromEntries([...ACCESS_LINK_FILES, ...ACCESS_LINK_FILES.map(file => `../4veco-lessen/${file}`)].map(file => [file, ''])),
       'AGENTS.md': '# Guide\n## Source integrity and learning quality\n[spec](https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-vision.md)\nLocal: `../4veco-lessen/specifications/product-vision.md`',
       'BUILD-PARAGRAPH.md': '[quality](AGENTS.md#source-integrity-and-learning-quality)',
       'skills/econ-chapter-builder.md': '[quality](../AGENTS.md#source-integrity-and-learning-quality)',
@@ -158,6 +115,10 @@ describe('check-paragraph-workflow-wording', () => {
   });
 
   test.each([
+    ['RESEARCH_AGENT_MAP.md', '[contract](missing.md)', /linked file missing/],
+    ['RESEARCH_AGENT_MAP.md', '[guide](AGENTS.md#removed)', /linked section missing/],
+    ['AGENT_GITHUB_ENTRY.md', '[raw](https://raw.githubusercontent.com/meijer1973/4veco-platform/main/missing.md)', /linked file missing/],
+    ['../4veco-lessen/RESEARCH_AGENT_PROMPT.md', '[guide](../4veco-platform/AGENTS.md)', /cross-repository hyperlink/],
     ['docs/workflows/part-a-start.md', '[review](missing.md)', /linked file missing/],
     ['docs/workflows/part-a-start.md', '[review](../../AGENTS.md#obsolete)', /linked section missing/],
     ['AGENTS.md', '[spec](../4veco-lessen/specifications/product-vision.md)', /cross-repository hyperlink/],
@@ -174,6 +135,10 @@ describe('check-paragraph-workflow-wording', () => {
     expect(entryFixture({ [file]: text })).toEqual(expect.arrayContaining([expect.stringMatching(expected)]));
   });
 
+  test('lookup access can link raw files and external repository/site entry URLs', () => {
+    expect(entryFixture({ 'AGENT_GITHUB_ENTRY.md': '[raw](https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENTS.md#source-integrity-and-learning-quality) [repo](https://github.com/meijer1973/4veco-platform) [site](https://meijer1973.github.io/4veco-lessen/index.html)' })).toEqual([]);
+  });
+
   test('default platform validation permits the older lesson entry used by platform-first CI', () => {
     expect(entryFixture({ '../4veco-lessen/AGENTS.md': '[guide](../4veco-platform/AGENTS.md)' }, false)).toEqual([]);
   });
@@ -185,12 +150,20 @@ describe('check-paragraph-workflow-wording', () => {
   });
 
   test.each(navigationMutationCases())(
-    'fails the exact navigation placement when omitted: %s',
+    'fails when the navigation destination is omitted: %s',
     (_label, file, start, end, needle, expected) => {
       const input = mutateNavigationFile(readNavigationFiles(), file, start, end, needle);
       expect(findNavigationFailures(input)).toContain(expected);
     }
   );
+
+  test('remote entry keeps the map discoverable without repeating its contracts', () => {
+    const input = readNavigationFiles();
+    input['AGENT_GITHUB_ENTRY.md'] = '[lookup](RESEARCH_AGENT_MAP.md)';
+    expect(findNavigationFailures(input)).toEqual([]);
+    input['AGENT_GITHUB_ENTRY.md'] = '';
+    expect(findNavigationFailures(input)).toContain('AGENT_GITHUB_ENTRY.md: map link missing');
+  });
 
   test('flags stale publisher-only PDF wording', () => {
     const failures = findRuleFailures(

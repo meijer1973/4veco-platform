@@ -1,6 +1,6 @@
 ---
 name: econ-paragraph-review
-description: "Comprehensive review skill for economics textbook paragraphs (bovenbouw vwo/havo). Combines two review dimensions: (1) didactic architecture — dual coding, fading, scaffolding, exercise progression, cognitive load, misconception handling, and (2) mathematical/conceptual precision — slope directions, domain restrictions, graph accuracy, formula validity, terminology consistency. Use this skill whenever reviewing, auditing, or giving feedback on a draft textbook paragraph, exercise set, or lesson material. Trigger when the user uploads a paragraph PDF, asks for a review, mentions 'check this paragraph', 'review', 'audit', 'feedback', 'what can be improved', or any quality assurance discussion about lesson content. Also trigger when comparing output against the course blueprint."
+description: "Review economics textbook content or rendered output (bovenbouw vwo/havo), including didactic architecture, mathematical precision and final-page quality. Use when assigned an independent Part A content review or substantive feedback on a paragraph or exercise set. Apply the Part A review workflow for independence, scope, evidence and closure. Generic repository/code review does not trigger this skill."
 pipeline: "Part A reviewer"
 ---
 
@@ -28,7 +28,7 @@ full operational source is `skills/econ-exercise-builder.md`.
 **Companion skills:**
 - `econ-didactiek` → the underlying pedagogical principles
 - [economic-graph](economic-graph.md) → mathematical/presentation requirements and final-output checks; construction recipes are optional
-- `econ-word-templates` → document format QA checklist
+- `econ-word-templates` → document format QA only when Word export is in scope
 
 ---
 

@@ -44,7 +44,10 @@ Never invent separate approvals or label author self-checks independent review.
 ## Records and PR closure
 
 The author or a tool can generate the Part A quality record from the completed
-review and actual inventory using [econ-quality-control](../../skills/econ-quality-control.md).
+review and actual inventory using `paragraph-records.js quality` through the
+[Part A checklist](part-a-start.md). Consult
+[econ-quality-control](../../skills/econ-quality-control.md) for additional authored
+evidence or a requested quality report.
 This is transcription of evidence, not another reviewer assignment. Preserve the
 reviewer's verdict, gaps and evidence, the [lane-separated schema](paragraph-quality-ref-schema-v2.md),
 the other lane's block, and required plans and handoffs. Record the approved

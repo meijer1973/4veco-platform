@@ -107,10 +107,11 @@ function main() {
 
   const umbrella = read('skills/econ-companion-artifacts.md');
   assert(umbrella.includes('skills/econ-reasoning-game.md'), 'umbrella companion skill must route redeneer-spel work to econ-reasoning-game');
-  const agents = read('AGENTS.md');
-  assert(agents.includes('skills/econ-reasoning-game.md'), 'AGENTS.md must mention the dedicated reasoning-game skill');
-  assert(agents.includes('references/exemplars/product-excellence/reasoning-games/'), 'AGENTS.md must mention the reasoning-game exemplar library');
-  assert(/legacy 5 modi/.test(agents), 'AGENTS.md must mark the old 5-mode reasoning route as legacy');
+  // Discovery belongs in the lookup map; design requirements are checked in
+  // the owning skill above, including rejection of the legacy mode-list route.
+  const map = read('RESEARCH_AGENT_MAP.md');
+  assert(map.includes('](skills/econ-reasoning-game.md)'), 'repository map must link the dedicated reasoning-game skill');
+  assert(map.includes('](references/exemplars/product-excellence/reasoning-games/)'), 'repository map must link the reasoning-game exemplar library');
 
   console.log('Reasoning game skill check OK');
 }

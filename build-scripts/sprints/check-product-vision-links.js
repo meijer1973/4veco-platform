@@ -54,7 +54,6 @@ if (!Array.isArray(data.future_sprint_checklist) || data.future_sprint_checklist
 const requiredMentions = [
   path.join(root, 'AGENTS.md'),
   path.join(root, 'BUILD-PARAGRAPH.md'),
-  path.join(root, 'AGENT_GITHUB_ENTRY.md'),
   path.join(root, 'RESEARCH_AGENT_MAP.md'),
   path.join(root, 'references', 'reference-team-roadmap.md'),
   path.join(lessenRoot, 'AGENTS.md'),
@@ -69,6 +68,11 @@ for (const file of requiredMentions) {
   if (!text.includes('product-vision.md')) {
     fail(`${rel(file)} must mention product-vision.md`);
   }
+}
+
+// The remote access guide delegates topic locations to the checked map.
+if (!read(path.join(root, 'AGENT_GITHUB_ENTRY.md')).includes('](RESEARCH_AGENT_MAP.md)')) {
+  fail('AGENT_GITHUB_ENTRY.md must link the repository map');
 }
 
 console.log('OK product vision links and JSON keys');
