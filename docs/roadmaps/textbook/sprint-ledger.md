@@ -1,17 +1,25 @@
 # Textbook Sprint Ledger
 
-Updated: 2026-09-05
+Updated: 2026-09-13
 Roadmap: `docs/roadmaps/textbook/textbook-production-roadmap.md`
+
+## Current Book 2 decision
+
+**Book 2 writing and assembly are complete.** The owner selected the externally authored chat edition covering Chapters 2.1–2.3 and all twelve paragraphs. The supplied student book, separate answers, teacher guides and editable chapter sources are the import baseline. The current task is to place that edition in the repository unchanged except for substantial defects actually found, make it discoverable, and check technical integrity. Do not commission fresh Book 2 chapter writing or a new full content-review cycle for this import. Repository integration status is recorded separately from content completion. Existing target-approval and companion/product obligations are not automatically closed by the import.
+
+[Delivered edition and editable sources](https://github.com/meijer1973/4veco-lessen/blob/main/Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md). `BOOK2-CHAT-IMPORT-1`: **writing/assembly complete; repository import prepared/in PR**. No merge or formal target-content review is claimed. Issues #223/#229 remain separate.
 
 ## Current Rule
 
 When an active sprint exists, it sits at the top. When no sprint is active, the top row names the next planned sprint but does not authorize work. Planned sprints stay in sequence until a sprint result, lead review, or human decision explicitly changes the order. A sprint is marked completed only after its result packet, validators, and required review evidence support closure.
 
-## Sprint Protocol Reminder
+The import follows the current maintenance workflow for technical checks and a brief PR record, together with the owner-supplied import scope. The old authoring protocol and production rows below are retained as history; they do not launch fresh writing or a multi-stage content-review cycle for the selected edition.
+
+## Historical authoring protocol reminder
 
 Every agent working from this ledger must use the repository sprint protocol before doing textbook work. Create the sprint plan first in `reports/sprints/<sprint-id>-plan.md`, create `references/data/sprints/<sprint-id>.plan.json`, record the baseline, and run the planned/active bundle check before treating the sprint as active work.
 
-## Protocol Summary
+## Historical authoring protocol summary
 
 1. Plan: include the required sprint-plan headings, quality standard, specification fulfilment matrix, allowed/forbidden paths, operationalized procedure, acceptance tests, proof to close, and rollback plan.
 2. Baseline: record the starting source/output state and protected-data status before implementation.
@@ -22,11 +30,14 @@ Every agent working from this ledger must use the repository sprint protocol bef
 7. Close: run `node build-scripts/sprints/check-sprint-bundle.js <sprint-id> --complete` before marking the sprint completed or moving the next sprint to active.
 8. Handoff: end status reports and final answers with concrete advice on the next step, so the next agent knows exactly where to continue.
 
-## Active And Planned Sprints
+## Current import and historical sprint decisions
+
+Only BOOK2-CHAT-IMPORT-1 is the current Book 2 import action. Earlier rows retain historical facts; their next-action directions do not override the completed-edition decision.
 
 | Sprint | Name | Completed | Current State | Required Next Action |
 |---|---|---|---|---|
-| BOOK2-TARGET-INTEGRATION-1 | Governed Book 2 Target Activation | yes | Implementation and structural evidence complete; independent verifier and round2 PASS WITH FLAGS, local 1,868 tests and reviewed-head CI green. Completion does not mean main integration or lesson production. | Require PR231 final published-delta review, exact-head CI and applied readiness; request new exact-payload merge authorization. Then governed merge plus green main CI before the combined Part A continuation. |
+| BOOK2-CHAT-IMPORT-1 | Import completed Book 2 chat edition | no — import in PR | **Writing/assembly complete; repository import prepared/in PR.** Student book, answers, teacher guides and all twelve editable paragraph sources retained. | Verify original bytes, PDF page counts/sample rendering, source/assets/navigation and required CI; publish linked PRs. Record main integration only after actual merge. |
+| BOOK2-TARGET-INTEGRATION-1 | Governed Book 2 Target Activation | yes | [PR #231](https://github.com/meijer1973/4veco-platform/pull/231) merged on 2026-09-05 at `96416b6b5bd57094576e9aba0a42d682584ec479`. Historical implementation/review evidence belongs to that activation. | Do not repeat activation or its merge. Keep remaining holds and independent target/product obligations separate from BOOK2-CHAT-IMPORT-1. |
 | BOOK2-TARGET-AUTHORITY-REMEDIATION-1 | Book 2 Target Authority Remediation | yes | Issue #229 Phase A complete with structural lead `PASS WITH FLAGS` on exact package `914d1a39…71310`; only empirical classroom timing is carried to Phase B. The owner approved frozen content and Ei semantics on 2026-09-05; PR #230 lifecycle/evidence corrections are in progress. Twelve target integration holds stay open; lessons, Phase B and merge remain unauthorized. | Complete owner-requested corrections, fresh independent review, exact-head CI and PR readiness. Do not integrate, write lessons, begin Phase B, or merge. |
 | B2-2.1.1-GOAL-TARGET-DESIGN-1 | Book 2 Paragraph 2.1.1 Goal And Target Design | yes | Owner decisions in PR #227 comment `5524345692` approve exact goal hash `afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560` and target hash `709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34`. `H-211-GATE0B1` is released; `H-211-TARGET-INTEGRATION` remains open with the approved replacement binding. Registry and lesson state are unchanged. | Publish and validate the lifecycle transition, then stop for separate L4 payload authorization before governed PR #227 integration. Do not start Gate 0C, mutate the registry or lesson, begin paragraph production, or merge. |
 | BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | yes | Integrated through PR #226 merge `b6e75a558e7ddb34a3e36094a2ab8367249fa357`; post-merge CI run `33724859532` passed. The outline remains `approved_with_holds` at semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`. `H-OUTLINE-OWNER` and `H-MERGE-GOVERNANCE` are released; 13 content and lesson holds remain open. | Use the approved outline as the Gate 0B-1 design foundation. Do not repeat PR #226 integration work or treat the outline as lesson-production authority. |
@@ -49,8 +60,8 @@ Every agent working from this ledger must use the repository sprint protocol bef
 | B2-2.1-RETRO | Book 2 Section 2.1 Retrospective | yes | Closed PASS WITH FLAGS after lead review. Repaired the assembled-exercise validation gap, rebuilt Chapter 2.1 so theory exercises appear in the chapter/book, aligned chapter margins and line distance with Book 1 rhythm, and dispositioned carry flags. | Superseded by human direction to open `B2-2.1.1-HARDEN` before any further chapter-wide production. |
 | B2-2.1-A | Book 2 Chapter 2.1 Part A Vertical Slice | yes | Closed PASS WITH FLAGS after lead review. Built printed output for 2.1.1 through 2.1.4, generated paragraph and chapter PDFs, recorded QC artifacts, and passed paragraph/chapter/book validators. | Carry flags into `B2-2.1-RETRO`: migrated target v5 review, local 2.1.4 source-registry decision, pagination polish, `MO = MK` equality-case decision, and chapter PDF size warning. |
 | B2-READY-1 | Book 2 Section 2.1 Readiness Gate | yes | Closed PASS WITH FLAGS after lead review. The readiness packet exists and validator checks are green. It records that 2.1.4 is placeholder-backed and 2.1.1 through 2.1.3 are migrated targets needing v5 review. | Carry flags into `B2-2.1-A`. |
-| B2-2.3-A | Book 2 Chapter 2.3 Part A | no | Candidate. Covers surplus and welfare foundations. | Plan only after 2.2 has review evidence or a human-approved reorder. |
-| B2-BOOK-REVIEW | Book 2 Print Assembly Review | no | Candidate. Assemble and review Book 2 as a printed whole. | Start only after all Book 2 chapters have current paragraph and chapter proof. |
+| B2-2.3-A | Book 2 Chapter 2.3 Part A | superseded | Fresh Chapter 2.3 writing superseded by the owner-selected completed H3 edition, including §§2.3.1–2.3.4. | Import through BOOK2-CHAT-IMPORT-1. No new formal chapter review is claimed. |
+| B2-BOOK-REVIEW | Book 2 Print Assembly Review | superseded | Fresh assembly superseded by the supplied complete book; the proposed full review was not performed by this import. | Check technical integrity through BOOK2-CHAT-IMPORT-1. Any future formal target alignment remains separate. |
 | MIXED-OPGAVEN-BACKLOG-AUDIT-1 | Mixed-Opgaven Backlog Audit | no | Optional later audit. Would classify remaining placeholder-backed mixed sections without promoting them. | Do not start ahead of Chapter 2.2 readiness unless content production is blocked or a human explicitly reorders. |
 | B2-2.1-PRINT-ASSEMBLY-QA-1 | Book 2 Chapter 2.1 Print Assembly QA | no | Optional later print check for the Chapter 2.1 PDF-size warning and rendered-output polish. | Start only if a concrete rendered-output defect appears or a human asks to lock Chapter 2.1 as a publication unit. |
 | B3-READY-1 | Book 3 Readiness Gate | no | Candidate. Prepare government intervention and market-structure production. | Start only after Book 2 is stable enough to supply the prerequisite foundation. |
