@@ -8,6 +8,23 @@ sprint. Platform/generator changes, companion interactions, protected sources,
 curriculum authority and review-policy changes use their applicable routes;
 mixed tasks retain the checks and decisions required by those changes.
 
+## Scope of review
+
+A new paragraph needs complete applicable content and rendered-page coverage.
+For a revision, state the requested change and prior reviewed inputs; recheck
+affected material and dependencies, reusing unchanged coverage with its evidence.
+An exercise correction includes its goals/operations, question, answer, hints
+and figures. A layout repair includes changed pages and pagination neighbours;
+widen to content if the repair changes meaning or removes information.
+
+Do not restart authoring or require a new full exercise set for a bounded edit.
+A missing current baseline is not reusable evidence: complete any missing
+required coverage before claiming a current paragraph PASS. Standalone draft
+feedback can end with scoped findings without paragraph records; it must not
+claim full paragraph acceptance. Unchanged edition retrieval uses the reproduction
+route below. New current-file closure, even after a small edit, still binds the
+final files and retains source/action and publication decisions.
+
 ## Build, review and repair
 
 1. The author builds and renders the material, checks the inventory and runs

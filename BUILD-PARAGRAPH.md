@@ -208,23 +208,11 @@ paragraph PDF gate.
 
 ## Book 2+ Part A exercise-authoring input contract
 
-For every newly authored Book 2 and later theory paragraph—not only official
-exam targets—design backward in this order:
-
-`lesson goals -> doeloefening -> target subquestions/operations -> worked
-example and practice`
-
-Record this table in `X.Y.Z-textbook-plan.md` before authoring:
-
-| Lesson goal | Target subquestion/operation | Worked example | Start check | Guided practice | Independent practice | Covered/gap |
-|---|---|---|---|---|---|---|
-| [goal] | [observable operation] | [where modelled] | [where checked] | [where scaffolded or n/a] | [where practised] | [covered or named gap] |
-
-The worked example uses the same operation chain as the doeloefening at lower
-complexity and introduces no operation absent from the target or lesson goals.
-Retrieval in Startopgaven may use only prerequisites already taught. Book 1
-output is frozen: do not retrofit it and do not use this contract as a
-retroactive Book 1 content check.
+For every new Book 2+ theory paragraph, use the
+[exercise contract](skills/econ-exercise-builder.md) for backward-design alignment,
+target coverage and timing. Record its alignment in `X.Y.Z-textbook-plan.md`;
+reuse valid rows for a scoped revision. Book 1 output is frozen and this is not
+a retroactive content check.
 
 **Pedagogical-boundary inheritance:** also apply
 `references/owned/course-blueprint-pedagogical-boundaries.md`. Earlier exposure
@@ -311,56 +299,13 @@ Dutch.
 
 ## A2: Build content
 
-Follow `econ-textbook-paragraph` skill exactly:
-
-1. Write `X.Y.Z [Name] – paragraaf.md` — motivating problem, theory, `## Uitgewerkt voorbeeld`, compact non-heading summary, then the remaining exercise route
-2. Extract exercises into `X.Y.Z [Name] – opgaven.md` — the seven canonical `##` headings; keep the compact non-heading summary between `## Uitgewerkt voorbeeld` and `## Startopgaven`
-3. Write `X.Y.Z [Name] – antwoorden.md` — complete answer model with step-by-step solutions
-
-For newly authored Book 2+ theory paragraphs the seven printed headings are,
-in exact order:
-
-```markdown
-## Uitgewerkt voorbeeld
-## Startopgaven
-## Begeleide inoefening
-## Zelfstandige oefening
-## Doeloefening
-## Denkertje / Bonusopgave
-## Herhaling / Herhaling en interleaving
-```
-
-Keep the summary as a compact non-heading box after the worked example and
-before Startopgaven. No `## Samenvatting`, `## Website-help`, generic `##
-Opgaven`, `## Voorkennis ophalen`, or other top-level heading may appear among
-the seven canonical headings. Printed student copy uses only this paper route:
-
-> **Korte route:** Startopgaven → Zelfstandige oefening → Doeloefening.
-> **Extra hulp nodig?** Maak eerst Begeleide inoefening.
-
-All normal-route explanation and scaffolding must be present in print. Do not
-direct students to a website, online explanation, companion page, laptop,
-phone, tablet, QR code, or other device. Keep Part A, Part B, lane, companion
-route, and repository terminology in internal guidance and handoffs only.
-
-Author to these ranges: Startopgaven 5–8 minutes; optional Begeleide inoefening
-8–15; Zelfstandige oefening 10–18; Doeloefening 8–12; optional
-Denkertje/Bonusopgave 8–15 outside core; closing review 4–8, often homework.
-Startopgaven combines already-taught prerequisite retrieval and a compact,
-low-stakes current-content comprehension check—not an attainment claim, diagnosis, or
-automatic routing. The guided heading stays printed while its student route is
-optional; it keeps the same goal/target, uses stronger explicit support with
-deliberate fading, and has neutral skip wording. Bonus
-builds cognitive flexibility rather than more arithmetic. Closing review has
-1–2 accessible cumulative tasks and no new theory.
-
-For each paragraph, record and verify:
-`motivation + instruction + worked example + compact summary and transitions +
-actual Startopgaven + actual Zelfstandige oefening + actual Doeloefening =
-planned lesson minutes <= 55`. The recommended
-23–38-minute core-range sum is not sufficient proof because the other lesson
-phases also consume time. Justify any range deviation and never remove a target
-operation to force the arithmetic to fit.
+Use the [textbook skill](skills/econ-textbook-paragraph.md) for the requested
+scope and paragraph outputs. For theory paragraphs, integrate the
+[exercise template](skills/econ-exercise-builder.md#71-exercisesmd-structure)
+without redefining its sequence, support or timing contract here. Keep the
+integrated text, separate exercise file and answer model consistent. A bounded
+revision repairs affected components/dependencies; it does not recreate the
+whole set. Current closure still follows [Part A review](docs/workflows/part-a-review.md).
 
 For consolidation paragraphs (last § in chapter), follow `econ-consolidation-builder` instead:
 1. Write `X.Y.Z Gemengde opgaven – opgaven.md` — source material + exercises
@@ -438,11 +383,7 @@ between the textbook lane and the companion lane.
 - [ ] `X.Y.Z-textbook-handoff.md` exists and names what Part B may reuse/adapt
 - [ ] Book 2+ backward-design alignment table covers every goal and target operation
 - [ ] Book foundation check evaluates the exact current action; every matching open hold blocks or permits it explicitly, and every released hold has evidence
-- [ ] Seven Part A headings use exact `##` level and order; theory → Uitgewerkt voorbeeld → compact non-heading summary → Startopgaven is preserved
-- [ ] Both Startopgaven roles and route note are present; a whole-lesson equation using actual question estimates totals ≤55 minutes
-- [ ] Optional guided route keeps the same goal, adds/fades support, and uses neutral skip wording
-- [ ] Bonus builds cognitive flexibility; closing review has 1–2 accessible taught-content tasks and no new theory
-- [ ] Summary is before Startopgaven with ≤5 points; printed copy has the paper support note and no website/device/internal-lane direction
+- [ ] The applicable [exercise contract](skills/econ-exercise-builder.md) is covered by the current review, with no unresolved requirement or target-operation gap
 
 **Consolidation paragraphs:**
 - [ ] `X.Y.Z-textbook-plan.md` exists, is Part A-owned, and uses the dedicated template

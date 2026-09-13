@@ -1,14 +1,34 @@
 ---
 name: econ-textbook-paragraph
-description: "Builds a complete textbook paragraph for economics education (bovenbouw vwo): theory explanation, worked example, exercises, and graphs — assembled into a markdown file with assets, then exported to PDF. Takes a blueprint paragraph spec and the exercise set from econ-exercise-builder as input. Use this skill when the user wants to create a textbook paragraph, lesinhoud, theorie-uitleg for the werkboek, or any textbook section. Trigger when the user mentions paragraaf schrijven, werkboek, tekstboek, theorie-uitleg schrijven, lesinhoud, or textbook paragraph. Use econ-didactiek and econ-exercise-builder for authoring; economic-graph when constructing graphs."
+description: "Write or revise economics textbook explanation and assemble Part A paragraphs. Owns textbook writing, file formats and rendering. Use for a new paragraph, bounded text/exercise revision or layout repair; retrieve an unchanged edition through the reproduction route."
 pipeline: "Part A producer"
 ---
 
 # Economics Textbook Paragraph Builder
 
-Builds one complete textbook paragraph: theory + worked example + exercises + graphs → markdown + assets + PDF. This skill handles the textbook-specific format and writing rules.
+Write the requested textbook material and preserve its dependent outputs.
+This skill owns writing, presentation and paragraph formats. The
+[exercise builder](econ-exercise-builder.md) owns exercise sequence, target
+coverage and timing; [economic-graph](economic-graph.md) owns graph requirements;
+[Part A review](../docs/workflows/part-a-review.md) owns independent review,
+evidence and closure. Construction recipes are optional.
 
-**Book scope:** the Part A exercise-authoring structure below applies to newly
+## Match the assignment
+
+| Assignment | Work and stopping point |
+|---|---|
+| New paragraph | Establish approved foundation and plan; author the complete output set; render, inspect, independently review and close through the [Part A checklist](../docs/workflows/part-a-start.md). |
+| Revise an exercise or explanation | Inspect affected goals, question, taught method, answer, figures and dependent material. Reuse valid plan/coverage; repair affected sources and renders. Expand only when calculations, target coverage, teaching sequence or neighbouring pages change. |
+| Repair layout | Inspect the existing source, wrapper and affected pages. Repair the rendering cause and inspect changed pages plus pagination dependencies. Load content skills only if a substantive content decision is needed. |
+| Retrieve unchanged edition | Use [existing-edition reproduction](../docs/workflows/part-a-review.md#reproducing-an-existing-edition). Export the committed PDFs without authoring or manufacturing current-review evidence. |
+
+A requested draft/component can stop at that deliverable. Do not silently expand
+it into a whole-paragraph build, and do not call it current paragraph closure.
+New closure/publication claims require current-file evidence and applicable
+review even for a small change. Revalidate foundation when its sources or the
+requested action change; reuse unaffected evidence with its named scope.
+
+**Book scope:** the linked Part A exercise-authoring contract applies to newly
 authored Book 2 and later theory paragraphs. Book 1 output is frozen: do not
 retrofit it and do not use this contract as a retroactive Book 1 content check.
 
@@ -43,25 +63,24 @@ producing `X.Y.Z-textbook-handoff.md` for the companion team. Publisher-print
 chapter/book handoff also remains in Part A, but paragraph PDFs are normal Part
 A human-review outputs.
 
-**Task-specific skills:** use the [Part A checklist](../docs/workflows/part-a-start.md). Read didactic/exercise rules for authoring; graph instructions when creating graphs; PDF adaptation guidance when the shared renderer needs adjustment; quality guidance when the generated record needs additional authored evidence.
-
-- `econ-didactiek` → pedagogical decision rules (scaffolding, dual coding, Bloom's, misconceptions) — backed by `references/authored/didactiek-principes.md`
-- `econ-exercise-builder` → generates `exercises.md` and `answers.md` (run first)
-- `economic-graph` → generates SVG/PNG graphs (called during build)
-- `econ-pdf-builder` → layout-adaptation lookup for the shared renderer (§5)
-- `econ-quality-control` → additional authored quality evidence or requested reports; ordinary records use `paragraph-records.js` via the checklist
-
-**Reference standards:**
-- `references/authored/economic_mathematical_precision_reference.md` → precision rules (takes precedence)
-- `references/authored/economie-terminologie.md` → canonical Dutch terms
-- `references/external/amstelveencollege_quality_standards.md` → school-fit overlay: explicit leerdoelen, formative checkpoints, layered differentiation, meaningful context, learner self-monitoring
-- `econ-paragraph-review` → assigned content review, including final rendered pages, under [Part A review](../docs/workflows/part-a-review.md)
+**References:** consult the relevant section of the
+[precision authority](../references/authored/economic_mathematical_precision_reference.md),
+[Dutch terminology](../references/authored/economie-terminologie.md),
+[didactic guidance](econ-didactiek.md) and
+[school-fit overlay](../references/external/amstelveencollege_quality_standards.md)
+when the affected decision needs them. Layout work does not require reading all
+authoring references. The normal record commands and shared renderer are in the
+checklist; load PDF adaptation or additional quality-evidence skills only when
+that work is needed.
 
 ---
 
 ## PART 1: INPUT AND OUTPUT
 
 ### 1.1 Required input
+
+For new paragraphs use all inputs below; bounded revisions inspect affected
+inputs and reuse valid existing records.
 
 1. **Part A textbook plan and Book foundation check** — exact current-action
    verdict in `X.Y.Z-textbook-plan.md`; use the canonical Markdown outline for
@@ -124,71 +143,18 @@ _assets/1.2.2_ex_1.svg                — exercise 1 graph
 
 ## PART 2: PARAGRAPH STRUCTURE
 
-### 2.1 Section sequence (CANONICAL — never reorder)
+### 2.1 Section sequence
 
-Every newly authored Book 2+ theory paragraph follows this structure, in
-**exactly this order**:
+Begin with the paragraph number/title, a motivating problem and theory. Then
+integrate the [exercise sequence](econ-exercise-builder.md#31-the-sequence) and
+its [printed template](econ-exercise-builder.md#71-exercisesmd-structure), including
+the compact summary. Keep the separate exercise file consistent with this
+integrated text. The exercise owner defines headings, adjacency, paper support,
+alignment and the whole-lesson time budget; do not copy those contracts here.
 
-```
-┌─────────────────────────────────────────────┐
-│ 1. HEADER                                   │
-│    Paragraph number + title (no difficulty   │
-│    rating — that is teacher-facing only)     │
-├─────────────────────────────────────────────┤
-│ 2. MOTIVATING PROBLEM                       │
-│    A recognisable situation that creates     │
-│    cognitive conflict / need for the concept │
-├─────────────────────────────────────────────┤
-│ 3. THEORY                                   │
-│    Concept explanation with dual coding      │
-│    (text + graphs explained step by step)    │
-│    Definition boxes, formula boxes,          │
-│    misconception warnings, recall boxes      │
-├─────────────────────────────────────────────┤
-│ 4. ## UITGEWERKT VOORBEELD                  │
-│    First of seven canonical headings; same   │
-│    target-operation chain, simpler context   │
-├─────────────────────────────────────────────┤
-│ 5. SUMMARY BOX                              │
-│    Compact non-heading paper reference       │
-├─────────────────────────────────────────────┤
-│ 6. ## STARTOPGAVEN                          │
-│    Taught-prerequisite retrieval + compact   │
-│    current-content comprehension check       │
-├─────────────────────────────────────────────┤
-│ 7. ## BEGELEIDE INOEFENING                  │
-│    Printed, optionally followed; same goal   │
-├─────────────────────────────────────────────┤
-│ 8. ## ZELFSTANDIGE OEFENING                 │
-│ 9. ## DOELOEFENING                          │
-│10. ## DENKERTJE / BONUSOPGAVE               │
-│11. ## HERHALING / HERHALING EN INTERLEAVING │
-│    End of the canonical seven-heading route  │
-└─────────────────────────────────────────────┘
-```
-
-**Critical:** the student reads `theory -> Uitgewerkt voorbeeld -> compact
-non-heading summary -> Startopgaven`. The seven exercise headings use exact
-Markdown level `##`; the summary is not an eighth heading. No additional
-top-level summary, website-help, generic `Opgaven`, or prerequisite heading may
-appear among them. The printed paragraph is complete on paper and does not
-advertise or depend on a website, device, online explanation, or Part B.
-
-### 2.2 What goes where
-
-| Section | Content | Time share of lesson |
-|---------|---------|---------------------|
-| Motivating problem | Context, question, maybe a provocative claim | ~5 min (class discussion) |
-| Theory | Concept, definitions, formulas, graphs | ~15 min (instruction) |
-| Worked example | Step-by-step solution, studied by students | ~5 min (reading) |
-| Core exercise route | Startopgaven → Zelfstandige oefening → Doeloefening | Recommended ranges total 23–38 min; actual questions must fit remaining lesson time |
-| Optional guided route | Same goal, stronger support with deliberate fading | 8–15 min |
-| Bonus / closing review | Cognitive flexibility / 1–2 accessible cumulative tasks | 8–15 min outside core / 4–8 min often homework |
-| Summary | Compact paper recap after worked example, before exercises | ~2 min (reference) |
-
-Use the full backward-design and per-section authoring contract in
-`econ-exercise-builder`, including the required alignment table. The worked
-example may not introduce an operation absent from the goals or doeloefening.
+Teacher-facing difficulty ratings and per-exercise time estimates stay out of
+student Markdown, HTML and PDFs. Use the [type-specific builders](../docs/workflows/part-a-start.md)
+for consolidation/test preparation; their deliverables are not theory paragraphs.
 
 ---
 
@@ -196,295 +162,67 @@ example may not introduce an operation absent from the goals or doeloefening.
 
 ### 3.1 Theory text
 
-**Lean.** One concept per paragraph. Do not explain adjacent concepts — those belong in their own paragraphs. If you catch yourself writing "we will see later that…" more than once, you are including too much.
+Stay within the assigned concept and approved target. Open with a recognisable
+problem and visible learning goals, then explain concrete examples before their
+general principle/formula. Introduce one new concept per step. Use active Dutch,
+short sentences (average under 20 words), and consistent syllabus terms. Remove
+filler and adjacent-topic teaching that does not serve the approved scope.
 
-**Problem-first.** Start with the motivating problem, not with the definition. The student should feel "I need a tool to solve this" before they receive the tool.
+### 3.2 Definitions and formulas
 
-**Concrete before abstract.** First a specific example ("A bakery sells bread at €2.50, but the ingredients cost €0.80…"), then the general principle ("Variable costs are costs that change with production volume"), then the formula (TVK = GVK × Q).
+Use visually distinct definition and formula boxes. Define one term per box,
+then examples; give its abbreviation on first use. Group related formulas
+(normally at most 3–4), retain canonical variable names and state units. Make
+individual/market and total/average distinctions explicit.
 
-**Active voice, present tense.** "De bakker berekent zijn winst" not "De winst kan als volgt berekend worden."
+State domain restrictions and model assumptions when first presenting a formula,
+not later in a footnote. For piecewise functions, explain the threshold and what
+changes beyond it. Include a numerical check. Introduce and recall curves with
+an explicit ceteris-paribus qualifier. These requirements come from the precision
+authority; a formatting recipe cannot alter the model.
 
-**Short sentences.** Average sentence length under 20 words. One idea per sentence.
+### 3.3 Explanations and figures
 
-**No filler.** Every sentence must teach something or set up the next sentence. Cut "Het is belangrijk om te weten dat…" — just state the thing.
+Explain each relevant curve, point and area step by step. Use progressive
+figures for unfamiliar elements or adjacent annotations/sequenced text for a
+complete source graph. Keep explanatory text and labels next to the relevant
+figure; compare equivalent methods close together. This does not prescribe a
+fixed drawing order, panel arrangement or number of elements.
 
-### 3.2 Definitions
+Keep graphical, verbal and numerical representations consistent. Numerical
+procedures require nearby explanatory text, a graph and a small value table.
+A grouped list of concepts requires one overview visual after its explanation,
+before the worked example. Key-distinction overview figures carry rule labels
+inside or directly beneath them; use words/arrows as well as colour. Choose the
+layout and construction method that communicate these teaching requirements.
 
-Definitions get a **definition box** — visually distinct from running text.
+### 3.4 Misconceptions and recall
 
-```markdown
-> **Definitie: Variabele kosten (VK)**
-> Kosten die veranderen als de productie toe- of afneemt.
-> Voorbeelden: grondstoffen, energie, stukloon.
-```
+For an applicable misconception, place a short warning box beside the triggering
+concept. Explain the tempting error and correct reasoning, normally in 3–4
+lines; ensure practice confronts it. Keep forward references brief. Recall boxes
+activate already-taught prerequisites in 1–3 lines rather than reteaching them;
+use them for material more than one chapter back. Never treat prior exposure as
+secure knowledge without the foundation evidence.
 
-Rules:
-- One definition per box
-- Definition first, then examples
-- Use the exact terminology from the syllabus (Dutch) — see `references/authored/economie-terminologie.md` for the canonical term list
-- Provide the abbreviation in parentheses on first use
-- Clearly distinguish individual vs market-level concepts (see `references/authored/economic_mathematical_precision_reference.md` §2.1)
+### 3.5 Summary
 
-### 3.3 Formulas
-
-Formulas get a **formula box** — visually distinct, monospace.
-
-```markdown
-> **Formule**
-> ```
-> TVK = GVK × Q
-> TK = TCK + TVK
-> GTK = TK / Q
-> ```
-```
-
-Rules:
-- Group related formulas together (max 3–4 per box)
-- Use the same variable names as the syllabus (TK, TCK, TVK, GTK, MK, TO, GO, MO — see `references/authored/economie-terminologie.md`)
-- Show units in parentheses after the box if not obvious
-- State domain restrictions / validity range at first presentation (see `references/authored/economic_mathematical_precision_reference.md` §10.1)
-- Never conflate total and average concepts (TK ≠ GTK, TVK ≠ GVK — see precision reference §7)
-
-### 3.4 Graphs in theory sections
-
-Explain theory graphs **step by step**, connecting each relevant curve, point
-or area to its economic meaning. Use progressive figures when introducing
-several unfamiliar elements; an already complete source graph can be explained
-through adjacent annotations and sequenced text. Do not add graph construction
-as a student task unless it is a target operation.
-
-**Pattern:**
-
-```markdown
-We tekenen eerst de vraaglijn. Bij Q = 0 is de prijs €50 (het y-snijpunt). 
-Bij P = 0 is de gevraagde hoeveelheid 100 stuks (het x-snijpunt).
-
-![Figuur 1: De vraaglijn](_assets/2.2.1_fig_1.svg)
-
-Nu voegen we de aanbodlijn toe. Het aanbod begint bij P = €5 
-(producenten bieden pas aan als de prijs boven €5 komt). 
-Bij Q = 60 is de prijs €20.
-
-![Figuur 2: Vraag en aanbod samen](_assets/2.2.1_fig_2.svg)
-
-Het snijpunt van vraag en aanbod is het evenwicht: P* = €20, Q* = 60.
-```
-
-This means **multiple graph versions** may be needed for a single concept: one with just the demand curve, one adding supply, one showing the equilibrium, one shading surplus areas. Generate each as a separate SVG/PNG using the `economic-graph` skill.
-
-### 3.5 Misconception warnings
-
-When a known misconception applies (see `econ-didactiek` §7.4), include a warning box:
-
-```markdown
-> **⚠️ Let op — veelgemaakte fout**
-> Veel leerlingen verwarren een *verschuiving van* de vraaglijn 
-> met een *beweging langs* de vraaglijn. 
-> Een prijsverandering van het goed zelf → beweging LANGS de lijn.
-> Een verandering van inkomen, voorkeuren of andere factoren → verschuiving VAN de lijn.
-```
-
-Rules:
-- Place immediately after the concept that triggers the misconception
-- State both the wrong and correct understanding side by side
-- Keep to 3–4 lines maximum
-
-### 3.6 Cross-references and recall boxes
-
-**Cross-reference (forward):** brief, at the end of a section.
-```markdown
-*In §3 passen we deze formule toe op de monopolist.*
-```
-
-**Recall box (backward):** when a prerequisite skill is needed.
-```markdown
-> **📋 Herhaling uit §X.Y.Z**
-> De evenwichtsprijs vind je door Qv = Qa te stellen en op te lossen naar P.
-```
-
-Rules:
-- Recall boxes are brief (1–3 lines) — just enough to activate the memory, not re-teach
-- Only add a recall box if the skill was taught more than one chapter ago
-
-### 3.7 Summary box
-
-Immediately after `Uitgewerkt voorbeeld` and before `Startopgaven`:
-
-```markdown
-> **Samenvatting §X.Y.Z**
-> - [Key insight 1]
-> - [Key insight 2]
-> - [Key formula]
-> - [Connection to next paragraph]
-```
-
-Rules:
-- Maximum 5 bullet points
-- Include the key formula(s) from this paragraph
-- End with a forward pointer: "In de volgende paragraaf…"
-- Keep the box non-heading and place it between the first and second canonical
-  exercise headings; it is not an eighth exercise section
+Use the summary placement and non-heading format in the exercise template. Keep
+at most five concise points covering the key insights/formulas, relevant domains
+or special cases, and a forward pointer. Reuse this same summary in the exercise
+and integrated paragraph outputs.
 
 ---
 
 ## PART 4: GRAPH GENERATION WORKFLOW
 
-### 4.1 Process
-
-1. Identify all graphs needed (theory figures, worked example graphs, exercise graphs)
-2. Write a graph specification for each (see `econ-exercise-builder` §6.2 for format)
-3. Apply the [economic-graph output requirements](economic-graph.md); consult its construction recipes only when useful
-4. Render SVG → PNG with a suitable renderer and verify the actual geometry and final image; `sharp` is one option
-5. Save both SVG and PNG to `_assets/`
-6. Reference PNGs in markdown: `![caption](_assets/filename.png)`
-
-### 4.1.bis Crowded comparisons
-
-Keep the intended comparison readable: curves, arrows and labels must remain
-distinct at the final print size. Three or more curves do not by themselves
-require a split. When one plot is crowded, use panels or progressive figures;
-choose side-by-side or stacked placement to fit the page. Preserve comparable
-axes/scales when students must compare values or changes.
-
-Use the rule labels (§4.5) to make the comparison explicit, including when
-panels are used.
-
-### 4.2 Step-by-step theory graphs
-
-When progressive figures support the explanation (§3.4), generate a separate
-SVG/PNG pair for each teaching stage. For example:
-
-```
-_assets/2.2.1_fig_1.svg  — demand curve only
-_assets/2.2.1_fig_2.svg  — demand + supply
-_assets/2.2.1_fig_3.svg  — demand + supply + equilibrium + labels
-_assets/2.2.1_fig_4.svg  — full graph with surplus shading
-```
-
-Each stage adds the elements needed for its next teaching step. Keep axes,
-scale and positioning identical across this progression so students see
-accumulation rather than a different graph. This teaching sequence does not
-prescribe the tool's drawing order or a fixed number of elements per file.
-
-### 4.3 Numerical alignment between graph and text (MANDATORY)
-
-When a graph illustrates a specific scenario from the surrounding text, the **numbers in the graph must match the numbers in the text exactly**.
-
-If the text says "de prijs van boter stijgt van €2 naar €3 en de gevraagde hoeveelheid daalt van 1000 naar 700 pakjes", then the figure that illustrates this MUST show:
-- price labels: €2 and €3 (NOT 20 and 30)
-- quantity labels: 700 and 1000 (NOT 500 and 750)
-- axes scaled to fit those values
-
-**Why:** Mismatched numbers force the student to hold two parallel numerical contexts simultaneously. This is extraneous cognitive load (Sweller) and is purely friction — it teaches nothing.
-
-**Apply to:** all step-by-step theory figures, the worked example graph, and any exercise graph that references the same scenario as the prose.
-
-### 4.3.ter Domain restrictions belong with the formula (MANDATORY)
-
-When introducing an algebraic sum, product, or derived function that's only valid in a restricted domain (e.g., where all summands are positive, or where Q ≥ 0), the **domain restriction must appear at the moment the formula is introduced**, not in a later worked example or footnote.
-
-Use a labeled formula box with the restriction visible:
-
-```markdown
-> **Formule: Collectieve vraagfunctie (zolang beide kopen)**
-> Q_coll = Q_A + Q_B = -5P + 18
->
-> Geldig voor 0 ≤ P ≤ €3,50 (de prijs waarbij A afhaakt).
-```
-
-Then add a one-sentence reminder: "Zodra één van de twee consumenten afhaakt, klopt deze formule niet meer en moet je opnieuw optellen, alleen met de overgebleven kopers."
-
-**Why:** Students who stop reading after the formula will assume it always applies. Stating the restriction immediately prevents the wrong mental model from forming. This applies to ALL piecewise constructions: collective demand, market supply, multi-segment cost curves, etc.
-
-### 4.3.bis Ceteris paribus must be explicit when introducing curves (MANDATORY)
-
-Whenever a curve is introduced for the first time (vraaglijn, aanbodlijn, kostencurve, ...), the surrounding text MUST explicitly state that the curve holds *with all other conditions equal* (ceteris paribus).
-
-❌ **Wrong:** "De vraaglijn laat zien hoeveel consumenten willen kopen bij verschillende prijzen."
-✅ **Right:** "De vraaglijn laat het verband zien tussen de prijs en de gevraagde hoeveelheid, **terwijl alle andere omstandigheden gelijk blijven**."
-
-This applies equally to recall boxes that reference a curve from a prior paragraph. Always include the ceteris paribus qualifier.
-
-**Why:** Without ceteris paribus, the implied claim is "demand depends only on price". This sets up exactly the misconception the shift-vs-movement section then has to undo. Stating ceteris paribus up front prevents the wrong mental model from forming in the first place.
-
-### 4.4 Visual summary for grouped concepts (MANDATORY)
-
-When the theory introduces a list of N items (5 demand factors, 4 cost categories, 3 market structures, etc.), generate **one summary visual** that shows all items in a single picture as a memory anchor.
-
-Typical formats:
-- **Radial / hub-and-spoke diagram**: central concept + boxes around it for each item
-- **Concept map**: items connected with arrows showing relationships
-- **2-column comparison schematic**: left vs right (e.g., "shift left" vs "shift right")
-
-Place the summary visual immediately after the section that introduces the list, before the worked example. Reference it from the text:
-
-```markdown
-Figuur 5 vat de vijf vraagfactoren in één beeld samen.
-
-![Figuur 5: De vijf vraagfactoren — overzicht](_assets/1.2.2_fig_5.svg)
-```
-
-**Why:** A bulleted list is text-only and misses the dual coding opportunity. A single overview graphic gives students a visual hook they can recall later. Do NOT skip this step even when the items are described well in prose.
-
-### 4.4.bis Triple coding: graph + text + numerical table (MANDATORY)
-
-For any concept with a procedure that produces numerical outputs (collective demand summation, surplus calculation, equilibrium, elasticity, ...), present the same idea in **three encoding channels** within the same theory section:
-
-1. **Visual** — a graph (or graphs built step by step)
-2. **Verbal** — body text describing what's happening
-3. **Numerical** — a small table organizing several rows of values
-
-Place all three close together so the student can switch between channels as they read.
-
-**Example pattern:**
-
-```markdown
-We tellen de hoeveelheden bij elke prijs op:
-
-| Prijs | Q_A | Q_B | Q_collectief |
-|---|---|---|---|
-| €1 | 5 | 8 | 13 |
-| €2 | 3 | 5 | 8 |
-| €3 | 1 | 2 | 3 |
-
-Zo zie je dezelfde informatie nu in drie vormen tegelijk: in de woorden hierboven, in de twee grafieken, én in deze tabel.
-```
-
-**Why:** Different students prefer different encodings. The graph is good for visual learners, the table for those who think numerically, the text for those who reason verbally. Triple coding ensures no student is left out and reinforces the concept through redundancy across channels.
-
-### 4.5 Direct rule labels inside overview figures (MANDATORY)
-
-Overview / summary figures (the "everything together" diagram for a key distinction) must include **direct rule annotations inside or directly under the figure**, not only in the surrounding prose.
-
-For a two-panel comparison, one possible layout uses a rule label below each panel:
-
-```
-┌─────────────────────────┐    ┌─────────────────────────┐
-│   Panel A (movement)    │    │   Panel B (shift)       │
-│                         │    │                         │
-└─────────────────────────┘    └─────────────────────────┘
-┌─────────────────────────┐    ┌─────────────────────────┐
-│ Eigen prijs verandert   │    │ Andere factor verandert │
-│ → beweging LANGS de lijn│    │ → verschuiving VAN lijn │
-└─────────────────────────┘    └─────────────────────────┘
-```
-
-Size and place annotations for readability in the final document; boxes and
-fixed pixel dimensions are not required. Use the economic-graph palette for
-curve identity (demand blue, supply green), and words/arrows to distinguish
-movement from shift. Colour alone must not carry the rule.
-
-**Why:** Students re-scan figures during revision without re-reading the surrounding paragraphs. Rule labels embedded in the figure mean the rule is recoverable from the figure alone — the figure becomes a self-contained study aid.
-
-### 4.6 Supply curve rule
-
-Plot the supplied supply function over its valid economic domain. Clip at
-domain or plot boundaries; do not extend or move endpoints to force a P-axis
-intercept or avoid a valid Q-axis intersection. When free to choose an
-illustrative supply equation, use the project's positive price-intercept
-convention. Never change a supplied equation to meet that convention. Apply
-the [graph requirements](economic-graph.md#mathematical-and-economic-requirements)
-and verify the displayed coordinates against the function.
+Apply [economic-graph](economic-graph.md) to figures that change. It owns equation
+and domain accuracy, numerical/text agreement, palette, comparable/progressive
+scales, readable labels and programmatic geometry plus final-image verification.
+Its construction recipes are optional. Save required SVG/PNG pairs under the
+naming convention above; reference PNGs in Markdown for ordinary paragraph export.
+Check all referenced assets and flag unused assets. A missing required asset is
+blocking. Teaching requirements for the surrounding explanation remain in §3.
 
 ---
 
@@ -496,7 +234,9 @@ For ordinary paragraph export, copy the
 [shared renderer](../build-scripts/textbook/paragraph_pdf.py) is the default for
 Markdown → HTML → PDF, including image embedding, lists, styling and pagination.
 Install its declared dependencies as described in the Part A checklist.
-Inspect the final HTML and every PDF page.
+Inspect final HTML and every PDF page for new output. For a revision, inspect
+changed pages and affected pagination/content dependencies, reusing valid
+unchanged page evidence under the review workflow.
 
 Consult [econ-pdf-builder](econ-pdf-builder.md#default-paragraph-implementation)
 when a layout adaptation is needed. Change and test the shared implementation,
@@ -507,65 +247,17 @@ Do not copy the historical regex pipeline into a new paragraph builder.
 
 ---
 
-## PART 6: QUALITY CHECKLIST
+## PART 6: CHECK AND CLOSE
 
-### Before delivering a paragraph:
+Check affected authority, content, answer and asset dependencies. For a new
+paragraph verify the complete output inventory and all applicable writing,
+exercise and graph requirements. For a revision reuse valid evidence and inspect
+changed material, widening the check when its dependencies require it.
 
-**Foundation gate:** □ The Part A-owned Book foundation check evaluates the
-exact current action, pins every required authority/chapter/target input, and
-does not ignore a matching open blocking hold or a released hold without evidence.
-
-**Content checks:**
-1. □ Motivating problem comes before theory (problem-first)
-2. □ One concept only — no scope creep
-3. □ Every lesson goal from the blueprint is addressed in theory AND practised in exercises
-4. □ Worked example uses the same procedure as the target exercise
-5. □ Worked example follows theory directly, adds no untargeted operation, the compact summary follows it, and Startopgaven follows the summary
-6. □ Exact Book 2+ `##` heading order: Uitgewerkt voorbeeld → Startopgaven → Begeleide inoefening → Zelfstandige oefening → Doeloefening → Denkertje / Bonusopgave → Herhaling / Herhaling en interleaving
-7. □ Required alignment table covers every lesson goal and target operation
-8. □ Startopgaven has taught-prerequisite retrieval and a compact current-content check under one heading; it is not attainment/diagnosis/automatic routing
-9. □ Core route note is present and a whole-lesson equation totals motivation + instruction + worked example + transitions/recap + actual core-route questions at ≤55 minutes
-10. □ Always-authored and printed Begeleide inoefening keeps the same goal, gives stronger support, fades it deliberately, and uses neutral skip wording; only student use is optional
-11. □ Denkertje/bonus builds cognitive flexibility; closing review has 1–2 accessible cumulative/homework tasks and no new theory
-12. □ Summary is a non-heading paper box after the worked example and before Startopgaven; printed copy contains no website/device or internal lane pointer
-13. □ Fade scaffolding toward the representation and answer form of the doeloefening. Remove a visual only when students must eventually work without it. Retain any graph, table, or source supplied by the target. Do not introduce graph or table production unless production is a target operation
-14. □ At least one misconception warning if applicable (check `econ-didactiek` §7.4)
-15. □ Definitions use exact syllabus terminology (verify against `references/authored/economie-terminologie.md`)
-16. □ Answer model follows unified procedures — same steps as worked example
-
-**Graph checks:**
-17. □ Theory graphs explained step by step, with progressive figures or adjacent annotations/text appropriate to the teaching task
-18. □ All graphs generated via `economic-graph` skill with coordinate verification
-19. □ Supply coordinates and endpoints follow the supplied function and valid domain; illustrative equations use the positive price-intercept convention only when freely chosen
-20. □ **Asset completeness (BLOCKING):**
-  - 20a. □ Extract all `![...](...)` references from paragraaf.md, opgaven.md, antwoorden.md — list every referenced file
-  - 20b. □ Verify each referenced file exists in `_assets/` (both `.svg` and `.png`). List any missing. **If ANY are missing → the paragraph is NOT complete. Generate missing assets before delivering.**
-  - 20c. □ Verify no orphaned assets in `_assets/` (files not referenced in any .md)
-21. □ Axes, scale, positioning identical across incremental theory figures
-
-**Format checks:**
-22. □ All image references verified to resolve (covered by 20a/20b — do not skip)
-23. □ No difficulty ratings or time estimates in student-facing markdown
-24. □ Definition boxes, formula boxes, warning boxes visually distinct
-25. □ Summary box present before Startopgaven with ≤5 points and forward pointer
-26. □ File naming follows convention: `X.Y.Z_type_number`
-27. □ PDF exported with the shared renderer/thin wrapper, or a justified and tested specialized builder; final HTML and all PDF pages inspected
-
-**Time check:**
-28. □ Whole-lesson equation totals actual planned minutes at ≤55; recommended range addition alone is not accepted as proof, and optional guided/bonus/review time is accounted for separately (cross-check with exercise builder)
-
-**Didactic and precision review (before quality_ref):**
-29. □ Follow [Part A review and closure](../docs/workflows/part-a-review.md): after author self-checks and validation, the independent reviewer applies `econ-paragraph-review` Pass 0 (integrity) and Pass 1 (didactic, teacher and typical-student coverage)
-30. □ Run `econ-paragraph-review` Pass 2 (mathematical precision): graph accuracy, algebra, terminology, answer verification, cross-paragraph consistency — verify against `references/authored/economic_mathematical_precision_reference.md`
-31. □ Pass 3 inspects final full-page PDF/HTML proof; all FAIL items resolved with dependency-aware recheck and FLAG items addressed or documented in `X.Y.Z-review.md`
-
-**Quality control (after review passes):**
-32. □ The author or a tool generates `quality_ref` using `paragraph-records.js quality` via the Part A checklist, the completed review and actual inventory; preserve the verdict, schema and approved reference version
-33. □ Store as `[paragraph-code]-quality-ref.yaml` in the paragraph folder
-34. □ All leerdoelen mapped to eindtermen with Bloom levels
-35. □ All present components documented with inspectie standards and didactiek principles
-36. □ Verantwoording section filled in honestly (flag weak points)
-
----
-
-*This skill builds textbook paragraphs. For exercise generation, see `econ-exercise-builder`. For pedagogical principles, see `econ-didactiek`. For graph generation, see `economic-graph`. For PDF export, use the shared renderer (§5); consult `econ-pdf-builder` for layout adaptation. For paragraph review, see `econ-paragraph-review`. For quality assurance, see `econ-quality-control`.*
+Use the [Part A checklist](../docs/workflows/part-a-start.md) for snapshot,
+independent review, generated quality record, paragraph validation and handoff.
+The [review workflow](../docs/workflows/part-a-review.md) determines coverage,
+current-file binding, repair rechecks and publication boundaries. Record actual
+results and remaining defects; generated records do not supply missing approval
+or review. Authored quality evidence retains goal/eindterm/Bloom mappings,
+applicable standards and honest limitations.

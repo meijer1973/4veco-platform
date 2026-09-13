@@ -4,6 +4,7 @@ const path = require('path');
 
 const {
   ACTIVE_SURFACES,
+  CONTRACT_LINKS,
   normalizeSourceText,
   readFiles,
   findContractFailures,
@@ -48,29 +49,14 @@ describe('Part A exercise authoring source contract', () => {
     expect(ACTIVE_SURFACES.every((file) => !file.includes('4veco-lessen'))).toBe(true);
   });
 
-  test('rejects reordered or interrupted canonical headings', () => {
-    const files = mutate(
-      'skills/econ-exercise-builder.md',
-      '## Startopgaven\n## Begeleide inoefening',
-      '## Begeleide inoefening\n## Startopgaven'
-    );
-    expectFailure(files, 'canonical block after');
-
-    const interrupted = mutate(
-      'skills/econ-exercise-builder.md',
-      '## Startopgaven\n## Begeleide inoefening',
-      '## Startopgaven\n## Samenvatting\n## Begeleide inoefening'
-    );
-    expectFailure(interrupted, 'canonical block after');
-  });
-
-  test('rejects a wrong heading level in a canonical source block', () => {
-    const files = mutate(
-      'skills/econ-pdf-builder.md',
-      '## Uitgewerkt voorbeeld\n## Startopgaven',
-      '### Uitgewerkt voorbeeld\n## Startopgaven'
-    );
-    expectFailure(files, 'must contain exactly seven ## headings');
+  test('rejects reordered, interrupted or wrong-level canonical template headings', () => {
+    for (const [from, to] of [
+      ['## Startopgaven', '## Begeleide inoefening'],
+      ['## Startopgaven', '## Startopgaven\n\n## Extra stage'],
+      ['## Uitgewerkt voorbeeld', '### Uitgewerkt voorbeeld'],
+    ]) {
+      expectFailure(mutate('skills/econ-exercise-builder.md', from, to), 'operational template must contain exactly');
+    }
   });
 
   test('rejects extra or intervening headings in the operational template', () => {
@@ -89,23 +75,29 @@ describe('Part A exercise authoring source contract', () => {
     expectFailure(websiteStage, 'operational template must contain exactly');
   });
 
-  test('rejects reordered paragraph diagram and build-guide sequence', () => {
-    expectFailure(
-      mutate(
-        'skills/econ-textbook-paragraph.md',
-        '│ 8. ## ZELFSTANDIGE OEFENING                 │\n│ 9. ## DOELOEFENING',
-        '│ 8. ## DOELOEFENING                          │\n│ 9. ## ZELFSTANDIGE OEFENING'
-      ),
-      'canonical paragraph structure diagram'
-    );
-    expectFailure(
-      mutate(
-        'BUILD-PARAGRAPH.md',
-        '## Begeleide inoefening\n## Zelfstandige oefening',
-        '## Zelfstandige oefening\n## Begeleide inoefening'
-      ),
-      'canonical block after'
-    );
+  test('accepts a caller with a linked contract instead of repeated heading/policy copies', () => {
+    const files = cloneFiles();
+    files['skills/econ-pdf-builder.md'] = '[Printed contract](econ-exercise-builder.md#71-exercisesmd-structure)';
+    expect(findContractFailures(files)).toEqual([]);
+  });
+
+  test.each(CONTRACT_LINKS)('rejects missing owner link from %s to %s', (file, owner) => {
+    const files = cloneFiles();
+    files[file] = files[file].replace(/\[[^\]\n]+\]\(([^)\s]+)\)/g, (link, href) => {
+      const destination = href.split('#')[0];
+      return path.posix.normalize(path.posix.join(path.posix.dirname(file), destination)) === owner ? 'unlinked reference' : link;
+    });
+    expectFailure(files, `link to canonical contract missing: ${owner}`);
+  });
+
+  test('rejects wrong destinations, absent owners and stale/empty anchors', () => {
+    expectFailure(mutate('skills/econ-pdf-builder.md', 'econ-exercise-builder.md#71-exercisesmd-structure', 'econ-textbook-paragraph.md'), 'link to canonical contract missing');
+    for (const fragment of ['missing-section', '']) {
+      expectFailure(mutate('skills/econ-pdf-builder.md', 'econ-exercise-builder.md#71-exercisesmd-structure', `econ-exercise-builder.md#${fragment}`), 'contract link has missing or empty anchor');
+    }
+    const files = cloneFiles();
+    delete files['skills/econ-exercise-builder.md'];
+    expectFailure(files, 'contract source or owner missing');
   });
 
   test('rejects every forbidden printed help dependency and missing paper support', () => {
@@ -216,15 +208,9 @@ describe('Part A exercise authoring source contract', () => {
   });
 
   test('rejects contradictory omission and target-absent production permissions', () => {
-    const checklistRule = '6. □ Always author and print Begeleide inoefening with same-goal, stronger explicit scaffolding and deliberate fading; make only the student\'s use optional and add neutral skip wording';
-    expectFailure(
-      mutate(
-        'skills/econ-exercise-builder.md',
-        checklistRule,
-        `${checklistRule}\n\nIf guided practice is useful, author it; otherwise omit Begeleide inoefening.`
-      ),
-      'author-side guided-practice omission permission'
-    );
+    const omission = cloneFiles();
+    omission['skills/econ-exercise-builder.md'] += '\nIf guided practice is useful, author it; otherwise omit Begeleide inoefening.\n';
+    expectFailure(omission, 'author-side guided-practice omission permission');
 
     const nextSection = '### 3.2.bis Combined-change misconception exercise';
     expectFailure(
@@ -248,8 +234,8 @@ describe('Part A exercise authoring source contract', () => {
     expectFailure(
       mutate(
         'skills/econ-textbook-paragraph.md',
-        '**Graph checks:**',
-        'Dual coding fading applied inside optional guided practice (visual → visual → no visual).\n\n**Graph checks:**'
+        '## PART 4: GRAPH GENERATION WORKFLOW',
+        'Dual coding fading applied inside optional guided practice (visual → visual → no visual).\n\n## PART 4: GRAPH GENERATION WORKFLOW'
       ),
       'skills/econ-textbook-paragraph.md: target-misaligned unconditional visual-removal instruction'
     );
@@ -260,7 +246,7 @@ describe('Part A exercise authoring source contract', () => {
     ['references/authored/didactiek-principes.md', '### 4.5 Scaffold decision tree'],
     ['references/authored/vraagtypen-en-opgaveontwerp.md', '### 3.5 Classification table headers'],
     ['skills/econ-didactiek.md', '### 5.4 Unified experience'],
-    ['skills/econ-textbook-paragraph.md', '**Graph checks:**'],
+    ['skills/econ-textbook-paragraph.md', '## PART 4: GRAPH GENERATION WORKFLOW'],
   ])('rejects unconditional visual removal in %s', (file, endMarker) => {
     expectFailure(
       mutate(
@@ -302,22 +288,14 @@ describe('Part A exercise authoring source contract', () => {
     expectFailure(files, 'stale 40–60-minute exercise-set timing rule');
   });
 
-  test('rejects review severity downgrade and target-absent graph demand', () => {
+  test('rejects review severity downgrade and a weakened owner rule', () => {
     expectFailure(
-      mutate(
-        'skills/econ-paragraph-review.md',
-        'Any missing, reordered, wrong-level, or additional top-level stage is a FAIL.',
-        'Any missing, reordered, wrong-level, or additional top-level stage is a FLAG.'
-      ),
-      'review heading/adjacency hard-fail severity missing'
+      mutate('skills/econ-paragraph-review.md', 'help dependency is a FAIL.', 'help dependency is a FLAG.'),
+      'review contract hard-fail severity missing'
     );
     expectFailure(
-      mutate(
-        'skills/econ-paragraph-review.md',
-        'produce their own graph/table only when graph/table production is a target operation',
-        'produce their own graphs/tables in every doeloefening'
-      ),
-      'target-conditional representation rule missing'
+      mutate('skills/econ-exercise-builder.md', 'do not add graph/table\nproduction', 'add graph/table production'),
+      'target-aligned visual-fading boundary missing'
     );
   });
 

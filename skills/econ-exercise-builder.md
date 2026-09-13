@@ -1,12 +1,35 @@
 ---
 name: econ-exercise-builder
-description: "Generates a complete Book 2+ Part A exercise set with answer models for a single textbook paragraph, based on the course blueprint. Uses backward design and the canonical seven-section sequence: Uitgewerkt voorbeeld, Startopgaven, Begeleide inoefening, Zelfstandige oefening, Doeloefening, Denkertje/Bonusopgave, and Herhaling/Herhaling en interleaving. Use this skill when the user provides a paragraph spec from the blueprint and wants exercises generated. Trigger when the user mentions oefeningen maken, opgavenset, antwoordmodel, doeloefening uitwerken, or exercise generation for a specific paragraph. Always use in combination with econ-didactiek (pedagogical principles) and economic-graph (for graph specifications within exercises)."
+description: "Create or revise economics exercises and answer models for Book 2+ Part A. Owns target alignment, exercise sequence, scaffolding and lesson timing. Use for an individual exercise, answer repair or full set; load graph guidance only when a figure is involved."
 pipeline: "Part A producer"
 ---
 
 # Economics Exercise Builder
 
-Generates a complete exercise set + answer models for one textbook paragraph, given a blueprint paragraph spec. This skill handles exercise design and sequencing. For pedagogical principles, see `econ-didactiek` (backed by `references/authored/didactiek-principes.md`). For graph generation, see `economic-graph`. For school-fit quality (differentiation, context quality, self-monitoring), see `references/external/amstelveencollege_quality_standards.md`.
+Create the requested exercise component or set from approved teaching inputs.
+This skill owns exercise sequence and target coverage. The
+[textbook skill](econ-textbook-paragraph.md) owns paragraph writing and formats;
+[Part A review](../docs/workflows/part-a-review.md) owns independence and closure.
+Consult [didactic guidance](econ-didactiek.md) for a pedagogical decision and
+[graph requirements](economic-graph.md) when creating or changing a figure.
+
+## Match the assignment
+
+- **One exercise or answer:** read the affected goal, target operation, supplied
+  sources and taught method. Produce that component and its answer/needed assets.
+  Do not generate the other exercise stages, a paragraph plan, PDF packet or
+  review records solely because this skill describes a complete set.
+- **Revise an existing exercise:** reuse its valid alignment and foundation;
+  inspect the question, answer, values, hints, figures and references together.
+  Update the affected alignment row and time estimate when they change. Expand
+  to surrounding practice only if coverage, progression or dependencies change.
+- **New complete set:** use the full input, timing, sequence and output contract
+  below; establish the lesson's target-operation coverage before drafting.
+
+A component draft is not a completed paragraph. New/current paragraph closure
+uses the [checklist](../docs/workflows/part-a-start.md) and current-file review
+rule. Changed source/action evidence must be revalidated; scope reduction grants
+no authority to alter a target, bypass a hold or retrofit frozen material.
 
 **Scope boundary:** this is the operational source of truth for newly authored
 Book 2 and later Part A theory paragraphs. Book 1 output is frozen: do not
@@ -29,7 +52,7 @@ for the operational Book 2+ sequence and target coverage.
 
 ### 1.1 Required input
 
-The blueprint paragraph spec, containing:
+For a complete set, use the blueprint paragraph spec, containing:
 - Paragraph reference (e.g., B2C1§2)
 - Target exercise (the doeloefening)
 - Lesson goals
@@ -41,8 +64,11 @@ Additionally, the builder needs:
 - The list of all preceding paragraphs and their core skills (for interleaving selection)
 - The chapter context (which other paragraphs are in this chapter, to avoid context reuse)
 
-Before drafting, complete this alignment table. Do not hide uncovered
-operations by writing exercises first:
+For a complete set, record this alignment in the Part A plan before drafting.
+For a revision, inspect and update affected rows; reuse valid entries instead
+of retranscribing them. A standalone component draft states its affected goal
+and target operation alongside the deliverable and does not require creating a
+paragraph plan. Do not hide uncovered operations by writing exercises first:
 
 | Lesson goal | Target subquestion/operation | Worked example | Start check | Guided practice | Independent practice | Covered/gap |
 |---|---|---|---|---|---|---|
@@ -50,7 +76,7 @@ operations by writing exercises first:
 
 ### 1.2 Output files
 
-Per paragraph, saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.2.2 Vraagfactoren/`):
+For a complete set, saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.2.2 Vraagfactoren/`):
 
 | File | Contents |
 |------|----------|
@@ -71,7 +97,9 @@ It must be feasible within the student work time of a 55-minute lesson after
 instruction and the worked example. `Begeleide inoefening` is an optional
 support detour. Bonus is outside the core; closing review may be homework.
 
-For each paragraph, record an actual whole-lesson equation before authoring:
+For a new complete set, record an actual whole-lesson equation before authoring.
+For a revision, update affected question estimates and the total if they change;
+a standalone component draft does not create a whole-paragraph timing record:
 
 `motivation + instruction + worked example + compact summary and transitions +
 actual Startopgaven + actual Zelfstandige oefening + actual Doeloefening =
@@ -83,20 +111,12 @@ paragraph-specific estimate falls outside a range, record why. If the equation
 exceeds 55, reduce or redesign practice without hiding a target operation; do
 not merely assert that the 23–38-minute range is less than 55.
 
-### 2.2 Time estimation per exercise type
+### 2.2 Estimate the actual work
 
-There is no fixed time per exercise. Estimate case by case:
-
-| Exercise type | Typical range | Factors that increase time |
-|---------------|---------------|---------------------------|
-| Simple calculation (one formula) | 2–4 min | Unfamiliar formula, unit conversion |
-| Multi-step calculation | 5–10 min | More steps, intermediate results needed |
-| Graph reading | 2–3 min | Multiple values to read, interpolation |
-| Graph drawing | 5–8 min | Multiple curves, labelling, shading areas |
-| Short explanation (1–2 sentences) | 2–4 min | Abstract concept, requires precise terminology |
-| Reasoning chain (3+ links) | 5–8 min | More links, ambiguous causality |
-| Definition / classification | 1–2 min | Straightforward recall |
-| Optional stretch task (open, evaluative) | 8–15 min | Requires argumentation, model critique; student-facing label is "Denkertje" or "Bonusopgave" |
+Estimate each selected question from its calculation/reasoning steps, required
+source reading, drawing and explanation. Account for the intended students and
+supplied support; exercise counts and generic ranges do not prove feasibility.
+Keep estimates and difficulty labels in teacher-facing planning metadata.
 
 ### 2.3 Budget allocation
 
@@ -127,18 +147,8 @@ oefening`.
 ### 3.1 The sequence
 
 Design in this order: `lesson goals -> doeloefening -> target-operation
-decomposition -> worked example and practice`. Use this exact Markdown
-hierarchy and never reorder the seven exercise headings:
-
-```markdown
-## Uitgewerkt voorbeeld
-## Startopgaven
-## Begeleide inoefening
-## Zelfstandige oefening
-## Doeloefening
-## Denkertje / Bonusopgave
-## Herhaling / Herhaling en interleaving
-```
+decomposition -> worked example and practice`. The [printed template](#71-exercisesmd-structure) defines the exact seven `##`
+headings and their order; never omit, reorder or insert a top-level stage.
 
 1. **Uitgewerkt voorbeeld** follows theory directly. It is fully solved,
    follows the exact target operation chain with simpler values/context, and
@@ -182,99 +192,44 @@ Those terms remain valid only in internal repository guidance and handoffs.
 
 ### 3.2 Dual coding fading — target-aligned rule
 
-Choose the fading sequence from the approved target operation and answer form.
-When graph or table production is itself a target operation, fade visual
-production support within `Begeleide inoefening` and into independent
-practice—not across `Startopgaven`, whose two short roles must stay compact:
+Choose support from the approved target operation and answer form. Begin guided
+practice with an explicit, labelled representation students can read and explain;
+then deliberately fade the relevant support toward independent target work.
 
-| Stage | Exercise | What the student is given | What the student does |
-|-------|----------|--------------------------|----------------------|
-| 1 | Begeleide oefening 1 | Graph **with** the change drawn AND labeled | Reads, identifies, classifies, explains |
-| 2 | Begeleide oefening 2 | Graph base (axes + initial line) only | Draws the change themselves |
-| 3 | Begeleide oefening 3 | No graph | Reasons in text/words only |
-| 4 | Independent practice | No graph | Performs the target graph-production operation independently |
+When graph or table production is itself a target operation, a possible recipe
+is a complete worked figure, then a supplied base to complete, then independent
+production. Choose stages that teach the operation; no fixed stage count or
+intermediate text-only task is required. Keep this progression within guided
+practice, not across the two brief Startopgaven roles.
 
-**Why stage 1 is non-negotiable:** Without it, the very first exercise asks students to *produce* before they have *recognized*. Stage 1 lets them verify their reading of the visual conventions before they apply them. It's the lowest-friction entry point into the visual representation of the concept.
-
-If the target requires graph/table reading, interpreting, modifying a supplied
-representation, or source use rather than production, do not add graph/table
-production. Fade only target-relevant support: labels, hints, worked markings,
-or intermediate prompts, while retaining any representation the target gives
-the student.
-
-**Stage 1 question patterns** (read a labeled graph):
-- "What does this graph represent? What might have caused it?"
-- "Two situations are shown. Which is X and which is Y? Why?"
-- "Identify the type of change in this graph and explain in your own words."
-
-**Stage 2 question patterns** (draw on a provided graph only when that
-production action belongs to the target):
-- "Show in the graph what happens when..."
-- "Draw the new equilibrium on the graph below."
-- "Add the [shift / movement / surplus area] to the figure."
-
-**"Visual support" means:** a graph, flow diagram, table, or schematic is
-provided as part of the exercise (not just in the answer). In the production
-sequence above, stage 1 carries the answer, stage 2 supplies a base, and stages
-3–4 remove that production support. Other target operations use their own
-target-aligned fading sequence.
+If the target supplies a graph, table or source for reading, interpreting,
+modifying or source use, retain that representation and do not add graph/table
+production. Fade labels, hints, worked markings or intermediate prompts instead.
+Remove a visual only when the target answer form requires working without it.
+Support must be present in the exercise, not only in its answer model.
 
 ### 3.2.bis Combined-change misconception exercise (MANDATORY for distinction paragraphs)
 
 For paragraphs that teach a key distinction (shift vs movement, complement vs substitute, real vs nominal, normal vs inferior good, ...), include **at least one exercise where two things change at the same time**, each on a different side of the distinction.
 
-**Pattern:** the student must analyse each change separately, then combine.
+Have the student analyse each change separately, combine their effects, and
+confront a tempting wrong reading. Place the exercise at the end of guided
+practice or the start of independent practice. Adapt the context and wording to
+the approved distinction; the supplied function/target determines the answer.
 
-```markdown
-**Opgave N** *(twee veranderingen tegelijk — let goed op!)*
+### 3.3 Classification tables
 
-Op de [market] gebeuren twee dingen op dezelfde dag:
-1. [Change A — affects own price of the good]
-2. [Change B — affects a non-price factor like a substitute, complement, income, ...]
-
-a) Bekijk eerst alleen verandering 1. Wat gebeurt er? Beweging langs of verschuiving van? Welke richting?
-b) Bekijk nu alleen verandering 2. Wat gebeurt er? Beweging langs of verschuiving van? Welke richting?
-c) Beide veranderingen gebeuren tegelijkertijd. Beschrijf het netto-effect. Versterken de twee effecten elkaar of werken ze tegen elkaar in?
-d) Een leerling zegt: "[plausible wrong reading]". Leg uit waarom dit niet klopt.
-```
-
-**Why:** Students who can correctly classify single-change cases often collapse under simultaneous changes — they pick one category and apply it to both. The combined-change exercise forces them to keep both lenses active. It is the strongest test of whether the distinction has actually landed.
-
-**Placement:** as the last exercise in optional `Begeleide inoefening` (highest
-scaffolded difficulty) or the first `Zelfstandige oefening`. Always include
-sub-question (d) confronting a tempting wrong reading—this is the
-misconception-confrontation lever.
-
-### 3.3 Distinction-drilling tables need column headers (MANDATORY)
-
-When an exercise is a multi-row classification table (e.g., "for each situation, decide if it's a shift or a movement"), the table **must include 2–4 explicit column headers** that name the response format.
-
-❌ **Wrong** — empty answer column forces students to invent the format:
-
-```markdown
-| | Situatie |
-|---|---|
-| a | De prijs stijgt van €45 naar €60. |
-| b | Het inkomen daalt. |
-```
-
-✅ **Right** — column headers scaffold the response format:
-
-```markdown
-| | Situatie | Beweging of verschuiving? | Richting | Vraagfactor |
-|---|---|---|---|---|
-| a | De prijs stijgt van €45 naar €60. |  |  |  |
-| b | Het inkomen daalt. |  |  |  |
-```
-
-The headers tell weaker students what each cell should contain, without giving away the answers. They make the cognitive task purely about the analysis instead of about inventing a response structure.
+Give multi-row classification tables explicit response-column headers, normally
+2–4 (for example type of change, direction and factor). The headers clarify the
+answer format without supplying the answers.
 
 ### 3.4 Context selection rules
 
 - Each exercise uses a different context from the others in the same paragraph
 - Do not reuse a context that appears in another paragraph of the same chapter
 - Use recognisable, age-appropriate settings (bakeries, cinemas, streaming services, public transport, sports events, food markets)
-- The target exercise context comes from the blueprint — do not change it
+- Preserve the blueprint target context unless its responsible owner or blueprint
+  explicitly authorizes adaptation under §3.1
 - Interleaving exercises may reuse contexts from earlier chapters (this reinforces transfer)
 
 ---
@@ -285,22 +240,11 @@ The headers tell weaker students what each cell should contain, without giving a
 
 The answer model follows the **exact same steps** taught in the worked example, in the same order, with the same notation. No shortcuts, no alternative methods, no reordering.
 
-### 4.2 Structure per exercise
+### 4.2 Answer presentation
 
-```markdown
-**Opgave X**
-
-**a)**
-Stap 1: [description of what to do]
-[calculation or reasoning]
-
-Stap 2: [description]
-[calculation or reasoning]
-
-Antwoord: [final answer with units]
-
-*Waarom:* [1–2 sentences explaining why this step/answer makes economic sense]
-```
+For each numbered subquestion, show the taught steps, calculation/reasoning,
+final answer and economic explanation. Choose concise Markdown formatting that
+preserves this information; a copied layout recipe is unnecessary.
 
 ### 4.3 Rules
 
@@ -310,10 +254,8 @@ Antwoord: [final answer with units]
 - **Rounding:** state the rounding rule once at the top of the answer model (e.g., "Rond af op 2 decimalen tenzij anders aangegeven"). Apply consistently.
 - **Graph answers:** include a reference to the graph file in `_assets/`. The graph must show the complete solution (all curves, equilibrium points, shaded areas, labels).
 - **Concept precision (MANDATORY).** When attributing a change to a vraagfactor / aanbodfactor / cost driver, always pick the **most economically specific category** (see `references/authored/economic_mathematical_precision_reference.md` §4.3 and §12.1). Do NOT blur "preferences" with "price of a substitute", or "demand factor" with "supply factor".
-  - ❌ Wrong: "Petrol prices rise → biking becomes more attractive → preferences for biking changed → shift right"
-  - ✅ Right: "Petrol prices rise → cars (substitute for the bike) become more expensive → price of substitute changes → shift right"
-  - When there's a tempting wrong attribution, add a one-line `⚠️ Let op de juiste vraagfactor` reminder in the answer model.
-  - Why: beginners are still building the categorisation reflex. Loose attribution teaches them to fall back on "preferences" whenever they're unsure, collapsing the very distinction the lesson is trying to teach.
+  Add a brief correction when a tempting attribution would teach the wrong
+  distinction; use the most specific applicable economic cause.
 
 ### 4.4 Denkertje / Bonusopgave answer model
 
@@ -328,18 +270,9 @@ The Denkertje/Bonusopgave answer model is different:
 
 ### 5.1 Which taught skills to revisit
 
-**Priority 1 — Direct prerequisites:**
-Skills that the current paragraph builds on. Example: if the current paragraph is B2C2§1 (consumer surplus), interleave with B1C4§1 (equilibrium solving) because surplus calculation requires finding equilibrium first.
-
-**Priority 2 — Fundamental skills under regular repetition:**
-- Percentage calculations and percentage changes
-- Graph reading (aflezen, interpoleren)
-- Index number calculations
-- Shift vs. movement distinction
-- Basic cost calculations (TK, GTK)
-
-**Priority 3 — Recent skills at risk of decay:**
-Skills from the previous chapter that haven't been practised since.
+Prioritize direct prerequisites, then frequently needed fundamentals (percentages,
+graph reading, index numbers, shift/movement and costs), then recently taught
+skills at risk of decay. Inspect their actual prior teaching before selecting.
 
 ### 5.2 Closing-review exercise design
 
@@ -358,33 +291,19 @@ Skills from the previous chapter that haven't been practised since.
 ### 6.1 When exercises need graphs
 
 - **Provided graphs** (for dual coding in guided practice): specify fully so `economic-graph` skill can generate them. Include: axis labels, curve equations, equilibrium points, any shaded areas.
-- **Student-drawn graphs** (in independent practice / target exercise): do not provide a graph in the exercise. Provide the correct graph in the answer model only.
+- **Student production:** where the target requires an independently drawn graph,
+  put the solution graph in the answer model. Retain any base, graph or source
+  supplied by the target; reading or modification is not independent production.
 
-### 6.2 Graph specification format
+### 6.2 Graph specifications
 
-For each graph needed, include a specification block:
-
-```
-GRAPH SPEC: [descriptive name]
-Type: supply-demand / monopoly / surplus / flow-diagram / bar-chart
-Curves: V: p = -2Q + 100, A: p = 3Q - 25
-Equilibrium: Q* = 25, P* = 25
-Shading: CS triangle (blue, low opacity)
-Labels: "V (vraag)", "A (aanbod)", "E (evenwicht)"
-Axis: x = "Hoeveelheid (Q)", y = "Prijs (€)"
-File: _assets/2.2.1_ex_1.svg
-```
-
-The `economic-graph` skill uses this spec to generate SVG + PNG.
-
-### 6.3 Supply curve rule
-
-Plot supply from the supplied function over its valid economic domain, clipping
-at domain or plot boundaries. Do not force a P-axis intercept or suppress a
-valid Q-axis intersection. Use the project's positive price-intercept convention
-only when free to choose an illustrative equation; never alter a supplied
-equation. Verify the actual coordinates under the
-[graph requirements](economic-graph.md#mathematical-and-economic-requirements).
+State the economic question, equations/data, variables and units, domains,
+required points/areas, target size and asset destination. Use the
+[graph scope and accuracy requirements](economic-graph.md#establish-the-graphs-scope)
+and verify the actual figure. A prose specification or existing source file is
+sufficient; a fixed specification-block format is optional. Supply endpoints
+follow the supplied function and valid domain under the
+[mathematical requirements](economic-graph.md#mathematical-and-economic-requirements).
 
 ---
 
@@ -449,69 +368,23 @@ section. Do not insert `## Samenvatting`, `## Website-help`, `## Voorkennis
 ophalen`, a generic `## Opgaven`, or any other top-level heading among the
 seven canonical `##` headings.
 
-### 7.2 answers.md structure
+### 7.2 Answer file
 
-```markdown
-# Antwoorden §X.Y.Z — [Title]
-
-**Afrondingsregel:** [state once]
-
----
-
-**Opgave 1**
-
-**a)**
-Stap 1: ...
-...
-Antwoord: ...
-*Waarom: ...*
-
-[etc. for all exercises]
+Use `# Antwoorden §X.Y.Z — [Title]`, state the rounding rule once, then keep the
+exercise/subquestion identifiers aligned with the question file. Apply
+[answer-model design](#part-4-answer-model-design); include the bonus model answer
+and criteria. Formatting examples are optional; complete solutions are required.
 
 ---
 
-**Denkertje — modelantwoord en beoordelingscriteria**
+## Verify the requested deliverable
 
-*Modelantwoord:*
-[One strong example response]
+Check target alignment, solvability, calculations, hints and answer completeness
+for changed material. For a complete set, also verify the printed sequence,
+support/fading, paper route and actual whole-lesson budget above. A smaller task
+must not leave a known dependency or target-operation gap unreported.
 
-*Beoordelingscriteria:*
-- ...
-- ...
-```
-
----
-
-## DECISION CHECKLIST — BEFORE GENERATING EXERCISES
-
-1. □ List the lesson goals and decompose every doeloefening subquestion into observable operations
-2. □ Complete the required alignment table; name every uncovered gap
-3. □ Design the worked example from the target chain — same operations, simpler values/context, no extra operation
-4. □ Design both Startopgaven roles under one heading: taught-prerequisite retrieval + compact current-content check
-5. □ Record the whole-lesson equation (motivation + instruction + worked example + compact summary/transitions + actual Startopgaven + actual Zelfstandige oefening + actual Doeloefening ≤55); range addition alone is not proof
-6. □ Always author and print Begeleide inoefening with same-goal, stronger explicit scaffolding and deliberate fading; make only the student's use optional and add neutral skip wording
-7. □ Select 1–2 accessible closing-review skills from already taught content; introduce no theory there
-8. □ Design bonus for cognitive flexibility, not more arithmetic of the same kind
-9. □ Keep the exact seven exercise headings in order at `##`; place the non-heading summary after the example and before Startopgaven; keep every required support route on paper and internal architecture terms out of student copy
-10. □ Specify all graphs and write the unified-procedure answer model with substitution, units, and "waarom"
-
----
-
-## POST-BUILD VERIFICATION — AFTER GENERATING EXERCISES
-
-After generating opgaven.md and antwoorden.md, run these checks before delivering:
-
-1. □ Extract all `![...](...)` image references from both files
-2. □ Verify each referenced asset exists in `_assets/` (both `.svg` and `.png`)
-3. □ If ANY are missing → the exercise set is **NOT complete**. Generate the missing graphs before delivering.
-4. □ Verify asset naming follows convention: `X.Y.Z_{type}_{number}.{ext}`
-5. □ Verify the seven Book 2+ headings and exact order, with no intervening top-level stage
-6. □ Verify both Startopgaven roles, the route note, section time estimates, optional guided fading/skip wording, flexibility bonus, and no-new-theory closing review
-7. □ Verify the alignment table has no silent target-operation gap
-8. □ Verify the whole-lesson equation totals actual planned minutes ≤55 and preserves all target operations
-
-**A delivered exercise set with missing graph files is a broken deliverable, not a complete one.**
-
----
-
-*This skill generates exercises. For the textbook paragraph (theory + exercises integrated), see `econ-textbook-paragraph`. For pedagogical principles, see `econ-didactiek`. For graph generation, see `economic-graph`.*
+Resolve every referenced image and retain the required SVG/PNG pairs and naming.
+A missing referenced asset makes that deliverable incomplete. Re-render affected
+outputs and use [Part A review](../docs/workflows/part-a-review.md) when claiming
+current paragraph acceptance; preserve existing valid review of unchanged work.
