@@ -418,7 +418,7 @@ Give the chapter's existing independent reviewer these inputs:
 > - Figure numbering (no gaps within each paragraph)
 > - Forward/backward references match (summary → next paragraph, herhaling → prior paragraph)
 > - Consolidation covers skills from ALL theory paragraphs
-> - No unintentional context reuse across paragraphs
+> - Context choices support learning goals, continuity and useful comparison or variation
 > - Colour consistency in SVGs (same concept = same colour)
 > - **Dual coding**: every theory concept in every paragraph has a paired visual (graph, diagram, or table). FLAG any text-only concept explanations.
 > - **Procedure consistency**: when the same skill appears in multiple paragraphs (e.g., equilibrium calculation), verify the step sequence is identical. Check worked examples and exercises use the same procedure as the theory section. FLAG any procedure mismatches across paragraphs.

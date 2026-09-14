@@ -117,6 +117,10 @@ Per paragraph, saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.2.2 Vraagfacto
 | `X.Y.Z-quality-ref.yaml` | Part A `partA:` quality-ref block |
 | `X.Y.Z-textbook-handoff.md` | Boundary handoff for the Part B companion lane |
 
+ZIP packaging is optional delivery convenience, not a paragraph requirement.
+If requested, place it outside the tracked source tree; retain existing historical
+archives unchanged unless the assignment explicitly concerns their maintenance.
+
 ### 1.3 File naming convention
 
 **Main files:** `X.Y.Z [Name] – <type>.<ext>` where X=book, Y=chapter, Z=paragraph. Types: `paragraaf`, `opgaven`, `antwoorden`. Use en-dash (–), not hyphen (-).
@@ -232,16 +236,18 @@ For ordinary paragraph export, copy the
 [thin wrapper](../build-scripts/templates/template-build-paragraph-pdf.py) to
 `build_pdf.py` and run it with the adjacent platform checkout. The
 [shared renderer](../build-scripts/textbook/paragraph_pdf.py) is the default for
-Markdown → HTML → PDF, including image embedding, lists, styling and pagination.
+Markdown → HTML → PDF, including local images, lists, styling and pagination.
 Install its declared dependencies as described in the Part A checklist.
-Inspect final HTML and every PDF page for new output. For a revision, inspect
+Inspect every final PDF page for new output. When browser-delivered HTML is part
+of the assignment, inspect its affected pages in the intended browser. An HTML
+intermediate for PDF export does not add a browser compatibility matrix.
+For a revision, inspect
 changed pages and affected pagination/content dependencies, reusing valid
 unchanged page evidence under the review workflow.
 
 Consult [econ-pdf-builder](econ-pdf-builder.md#default-paragraph-implementation)
 when a layout adaptation is needed. Change and test the shared implementation,
 or document why a specialized builder is necessary and verify its output.
-Do not copy the historical regex pipeline into a new paragraph builder.
 
 **Key rule:** difficulty ratings (⬜/🟨/🟥) and time estimates per exercise are teacher-facing blueprint metadata and must not appear in student-facing output. Strip them before export.
 

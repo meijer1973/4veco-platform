@@ -6,543 +6,65 @@ pipeline: "Part A producer"
 
 # Economics PDF Builder
 
-Converts markdown lesson materials to professionally styled, print-ready PDF documents. This skill handles the technical pipeline and styling — not the content. For content, see the relevant product skill.
-
----
+Use this skill for layout adaptation and rendering faults. The
+[textbook skill](econ-textbook-paragraph.md) owns writing and output formats;
+the [exercise contract](econ-exercise-builder.md#71-exercisesmd-structure) owns
+the printed sequence and paper support. Keep teaching decisions in those sources.
 
 ## Default paragraph implementation
 
-Use [the shared paragraph renderer](../build-scripts/textbook/paragraph_pdf.py)
-and [thin wrapper](../build-scripts/templates/template-build-paragraph-pdf.py)
-for new ordinary paragraph builds. It uses Pandoc structural parsing, explicit
-UTF-8 and native list start/style hints for WeasyPrint. Its fixture tests cover
-subquestion letters across tables, bullets and figure grouping. Run
-`python -m unittest discover -s build-scripts/textbook -p "test_*.py"` after changes.
-
-The detailed pipeline and snippets below are historical adaptation guidance,
-not a startup reading requirement or code to copy into each paragraph. For a
-layout exception, change/test the shared implementation or document why a
-specialized builder is needed. Inspect final rendered pages in either case.
-
-The shared renderer stops on Pandoc conversion warnings, including unsupported
-TeX formulas, rather than publishing literal broken math. Use supported Unicode
-or plain-text mathematical notation (for example `GTK = TK / q`), or an explicitly
-tested specialized math renderer when fraction typesetting is required. Keep
-the intended mathematical meaning and inspect the resulting formula.
-
-## PART 1: PIPELINE OVERVIEW
-
-```
-paragraph.md (with ![](assets/file.svg) references)
-      │
-      ▼
-  1. Embed images as base64 PNG into markdown
-      │
-      ▼
-  2. Pandoc: markdown → standalone HTML5
-     ⚠️ Do NOT use --metadata title (causes duplicate header)
-      │
-      ▼
-  3. Post-process HTML:
-     a. Wrap exercises in <div class="exercise">
-     b. Inject CSS (styling + page breaks)
-      │
-      ▼
-  4. Weasyprint: HTML → PDF
-      │
-      ▼
-  paragraph.pdf
-```
-
----
-
-## PART 2: IMAGE EMBEDDING
-
-### 2.1 Why base64?
-
-Weasyprint resolves image paths relative to the HTML file or base_url. When generating HTML from pandoc in memory, relative paths break. Embedding images as base64 data URIs makes the HTML self-contained and avoids path issues.
-
-### 2.2 SVG → PNG swap
-
-Weasyprint handles PNG more reliably than SVG. Always swap `.svg` references to `.png` before embedding. The `economic-graph` skill already generates both formats.
-
-### 2.3 Implementation
-
-```python
-import base64, re, os
-
-def embed_images(md, asset_dir):
-    """Replace image references with base64-embedded PNGs."""
-    def replacer(match):
-        alt = match.group(1)
-        path = match.group(2).replace(".svg", ".png")
-        full = os.path.join(asset_dir, os.path.basename(path))
-        if os.path.exists(full):
-            b64 = base64.b64encode(open(full, "rb").read()).decode()
-            return f'![{alt}](data:image/png;base64,{b64})'
-        return match.group(0)  # keep original if file missing
-    return re.sub(r'!\[([^\]]*)\]\(([^)]+)\)', replacer, md)
-```
-
-### 2.4 Exercise markdown formatting rules
-
-**Horizontal rules between exercises:** In exercise sections, `---` separators
-between individual `**Opgave N**` blocks must be removed. For newly authored
-Book 2+ Part A paragraphs preserve the
-[exercise template](econ-exercise-builder.md#71-exercisesmd-structure), including
-its hierarchy, summary placement and paper-support route. Rendering preserves
-the authored contract; it does not add content stages or student-facing internal
-terminology. Book 1 output remains frozen.
-
-**Sub-question blank lines:** Keep blank lines between `a)`, `b)`, `c)` sub-questions in markdown source (pandoc needs them for paragraph separation). The compact visual look is achieved via CSS (`.exercise p { margin: 0 0 1pt 0; }`), not by removing blank lines.
-
----
-
-## PART 3: PANDOC CONVERSION
-
-### 3.1 Command
-
-```python
-import subprocess
-
-result = subprocess.run(
-    ["pandoc", "--from=markdown", "--to=html5", "--standalone"],
-    input=md_with_embedded_images,
-    capture_output=True, text=True
-)
-html = result.stdout
-```
-
-### 3.2 Critical: no --metadata title
-
-**Never use `--metadata title="..."`** when the markdown already has an `# H1` header. Pandoc generates a `<header id="title-block-header"><h1>` from the metadata AND renders the markdown `#` as a second `<h1>`. This produces a duplicate title in the PDF.
-
-If pandoc warns about a missing title, ignore the warning — it only affects the HTML `<title>` tag which is invisible in PDF.
-
-### 3.3 Strip Pandoc default stylesheets
-
-Pandoc `--standalone` injects default styles such as `body { max-width: 36em; padding: 50px; }` and `p { margin: 1em 0; }`. These conflict with our custom CSS (especially page margins and spacing). Pandoc versions do not use one stable leading comment, so **strip every `<style>` block inside `<head>`** before injecting our own:
-
-```python
-import re
-
-style_re = re.compile(r'<style\b[^>]*>.*?</style>', re.IGNORECASE | re.DOTALL)
-head_re = re.compile(r'(<head\b[^>]*>)(.*?)(</head>)', re.IGNORECASE | re.DOTALL)
-
-def strip_pandoc_stylesheets(html):
-    def strip_head(match):
-        return match.group(1) + style_re.sub('', match.group(2)) + match.group(3)
-    cleaned, count = head_re.subn(strip_head, html, count=1)
-    if count != 1:
-        raise ValueError('Pandoc HTML is missing a <head> element')
-    return cleaned
-
-html = strip_pandoc_stylesheets(html)
-```
-
----
-
-## PART 4: HTML POST-PROCESSING
-
-### 4.1 Wrap exercises for page break control
-
-Exercises in the markdown are just `**Opgave X**` paragraphs. Weasyprint cannot keep them together without a wrapping element. Wrap each exercise in a `<div class="exercise">`:
-
-```python
-import re
-
-def wrap_exercises(html):
-    """Wrap Opgave blocks and close them at structural boundaries."""
-    token_re = re.compile(
-        r'(<p><strong>Opgave\s+\d+\b|<div class="page-break"></div>|'
-        r'<h[123]\b|</body>)',
-        re.IGNORECASE,
-    )
-    pieces, last, open_exercise = [], 0, False
-    for match in token_re.finditer(html):
-        token = match.group(0)
-        pieces.append(html[last:match.start()])
-        if token.lower().startswith('<p><strong>opgave'):
-            if open_exercise:
-                pieces.append('</div>')
-            pieces.extend(('<div class="exercise">', token))
-            open_exercise = True
-        else:
-            if open_exercise:
-                pieces.append('</div>')
-                open_exercise = False
-            pieces.append(token)
-        last = match.end()
-    pieces.append(html[last:])
-    if open_exercise:
-        pieces.append('</div>')
-    wrapped = ''.join(pieces)
-    # Keep an immediately preceding exercise label (for example Denketøy)
-    # inside the same non-breaking block.
-    return re.sub(
-        r'(<h3\b[^>]*>[^<]*</h3>\s*)<div class="exercise">',
-        r'<div class="exercise">\1',
-        wrapped,
-        flags=re.IGNORECASE,
-    )
-```
-
-### 4.2 Rebalance table column widths
-
-After wrapping exercises, auto-adjust column widths so content fits without unnecessary wrapping. The function analyzes max text length per column and distributes widths proportionally (minimum 8% per column).
-
-```python
-from html.parser import HTMLParser
-
-def rebalance_table_columns(html):
-    """Analyze tables and set column widths proportional to content length."""
-    class CellExtractor(HTMLParser):
-        def __init__(self):
-            super().__init__()
-            self.tables = []
-            self.current_table = None
-            self.current_row = None
-            self.current_cell = None
-            self.in_cell = False
-        def handle_starttag(self, tag, attrs):
-            if tag == 'table': self.current_table = []
-            elif tag == 'tr' and self.current_table is not None: self.current_row = []
-            elif tag in ('td', 'th') and self.current_row is not None:
-                self.current_cell = ''; self.in_cell = True
-        def handle_endtag(self, tag):
-            if tag in ('td', 'th') and self.in_cell:
-                self.current_row.append(self.current_cell.strip())
-                self.current_cell = None; self.in_cell = False
-            elif tag == 'tr' and self.current_row is not None:
-                if self.current_row: self.current_table.append(self.current_row)
-                self.current_row = None
-            elif tag == 'table' and self.current_table is not None:
-                self.tables.append(self.current_table); self.current_table = None
-        def handle_data(self, data):
-            if self.in_cell: self.current_cell += data
-
-    parser = CellExtractor()
-    parser.feed(html)
-    tables = list(re.finditer(r'<table[^>]*>.*?</table>', html, re.DOTALL))
-    if len(tables) != len(parser.tables): return html
-
-    offset = 0
-    for match, cells in zip(tables, parser.tables):
-        if not cells or len(cells) < 2: continue
-        ncols = max(len(row) for row in cells)
-        if ncols < 2: continue
-        max_lens = [0] * ncols
-        for row in cells:
-            for j, cell in enumerate(row):
-                if j < ncols: max_lens[j] = max(max_lens[j], len(cell))
-        total_chars = sum(max_lens)
-        if total_chars == 0: continue
-        raw = [max(l, 2) for l in max_lens]
-        total_raw = sum(raw)
-        widths = [max(8, round(r / total_raw * 100)) for r in raw]
-        widths[widths.index(max(widths))] += 100 - sum(widths)
-        cols = ''.join(f'\n<col style="width: {w}%" />' for w in widths)
-        colgroup = f'<colgroup>{cols}\n</colgroup>\n'
-        table_html = match.group()
-        existing_cg = re.search(r'<colgroup>.*?</colgroup>\s*', table_html, re.DOTALL)
-        if existing_cg:
-            new_table = table_html[:existing_cg.start()] + colgroup + table_html[existing_cg.end():]
-        else:
-            tag_end = table_html.index('>') + 1
-            new_table = table_html[:tag_end] + '\n' + colgroup + table_html[tag_end:]
-        start = match.start() + offset
-        end = match.end() + offset
-        html = html[:start] + new_table + html[end:]
-        offset += len(new_table) - len(table_html)
-    return html
-```
-
-### 4.3 Inject CSS
-
-Insert the stylesheet before `</head>`. See Part 5 for the full CSS.
-
-```python
-html = html.replace("</head>", CSS_BLOCK + "</head>")
-```
-
----
-
-## PART 5: CSS STYLESHEET
-
-```css
-@page {
-  size: A4;
-  margin: 2.5cm;
-}
-
-body {
-  font-family: 'DejaVu Sans', Arial, sans-serif;
-  font-size: 11pt;
-  line-height: 1.5;
-  color: #2D3748;
-  max-width: 100%;
-}
-
-/* === HEADINGS === */
-h1 {
-  font-size: 18pt;
-  color: #1A5276;
-  border-bottom: 2px solid #1A5276;
-  padding-bottom: 6px;
-  break-after: avoid;
-}
-
-h2 {
-  font-size: 14pt;
-  color: #1A5276;
-  margin-top: 24px;
-  break-after: avoid;
-}
-
-h3 {
-  font-size: 12pt;
-  color: #2D3748;
-  margin-top: 18px;
-  break-after: avoid;
-}
-
-/* Keep first paragraph with its heading */
-h1 + p, h2 + p, h3 + p {
-  break-before: avoid;
-}
-
-/* Orphan/widow control */
-h1, h2, h3 {
-  orphans: 3;
-  widows: 3;
-}
-
-/* === DEFINITION / FORMULA / WARNING BOXES === */
-blockquote {
-  background: #F0F4F8;
-  border-left: 4px solid #1A5276;
-  padding: 12px 16px;
-  margin: 16px 0;
-  font-size: 10.5pt;
-  break-inside: avoid;
-}
-
-blockquote strong:first-child {
-  color: #1A5276;
-}
-
-/* === TABLES === */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 12pt 0;
-  font-size: 10.5pt;
-  break-inside: avoid;
-}
-
-th {
-  background: #EDF0F3;
-  color: #1a1a1a;
-  font-weight: bold;
-  padding: 3pt 6pt;
-  text-align: left;
-  border: 1px solid #999;
-}
-
-td {
-  border: 1px solid #999;
-  padding: 2pt 6pt;
-}
-
-tr:nth-child(even) td {
-  background: #FAFBFC;
-}
-
-/* === IMAGES === */
-img {
-  max-width: 85%;
-  display: block;
-  margin: 16px auto;
-  break-inside: avoid;
-}
-
-/* Keep images with their preceding paragraph */
-p + figure, p + p > img {
-  break-before: avoid;
-}
-
-/* === EXERCISES === */
-.exercise {
-  margin-bottom: 14pt;
-  orphans: 2;
-  widows: 2;
-  break-inside: avoid;
-  page-break-inside: avoid;
-}
-
-.exercise > p:first-child {
-  break-after: avoid;
-  page-break-after: avoid;
-}
-
-.exercise p {
-  margin: 0 0 1pt 0;
-}
-
-/* === LISTS === */
-ul, ol { margin: 0 0 10pt 0; padding-left: 20pt; }
-ol[type="a"] { list-style-type: lower-alpha; }
-
-/* === MISC === */
-code {
-  background: #EDF2F7;
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-size: 10pt;
-  white-space: normal;
-  overflow-wrap: anywhere;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid #CBD5E0;
-  margin: 24px 0;
-}
-
-em {
-  color: #4A5568;
-}
-```
-
-### 5.1 Domain colour reference
-
-The CSS uses the economics domain colour scheme:
-
-| Element | Colour | Hex |
-|---------|--------|-----|
-| Headings, blockquote borders, table headers | Blue (domain D) | `#1A5276` |
-| Body text, axes, labels | Dark charcoal | `#2D3748` |
-| Italic / secondary text | Gray | `#4A5568` |
-| Table even rows | Light gray | `#F7FAFC` |
-| Blockquote background | Light blue-gray | `#F0F4F8` |
-| Code background | Lighter gray | `#EDF2F7` |
-| Table cell borders | Medium gray | `#CBD5E0` |
-| HR lines | Medium gray | `#CBD5E0` |
-
-### 5.2 Page break rules explained
-
-| Rule | What it prevents |
-|------|------------------|
-| `h1, h2, h3 { break-after: avoid }` | Heading orphaned at bottom of page |
-| `h2 + p { break-before: avoid }` | Empty section: heading on page 1, content on page 2 |
-| `.exercise { break-inside: avoid }` | Exercise title on one page, content on the next |
-| `blockquote { break-inside: avoid }` | Definition/formula box split across pages |
-| `table { break-inside: avoid }` | Table split across pages |
-| `orphans: 3; widows: 3` | Fewer than 3 lines left behind or carried forward |
-
-**Limitation:** if a single exercise or table is longer than a full page, `break-inside: avoid` is ignored by the renderer. This is correct behaviour — it must break somewhere.
-
----
-
-## PART 6: WEASYPRINT CONVERSION
-
-```python
-import weasyprint
-
-weasyprint.HTML(string=html).write_pdf(output_path)
-```
-
-### 6.1 Installation
-
-```bash
-pip install weasyprint --break-system-packages
-```
-
-### 6.2 Fallback
-
-If weasyprint is not available:
-```bash
-# Generate HTML first, then convert
-pandoc input.md -o output.html --standalone
-# Manual: open HTML in browser, print to PDF
-```
-
----
-
-## PART 7: COMPLETE BUILD SCRIPT
-
-```python
-import base64, re, os, subprocess
-from pathlib import Path
-import weasyprint
-
-def build_pdf(md_path, output_path, asset_dir=None):
-    """Build a styled PDF from a markdown file with image assets."""
-    
-    if asset_dir is None:
-        asset_dir = os.path.join(os.path.dirname(md_path), "assets")
-    
-    # 1. Read markdown
-    md = Path(md_path).read_text()
-    
-    # 2. Embed images as base64 PNG
-    def embed(match):
-        alt, path = match.group(1), match.group(2).replace(".svg", ".png")
-        full = os.path.join(asset_dir, os.path.basename(path))
-        if os.path.exists(full):
-            b64 = base64.b64encode(open(full, "rb").read()).decode()
-            return f'![{alt}](data:image/png;base64,{b64})'
-        return match.group(0)
-    md = re.sub(r'!\[([^\]]*)\]\(([^)]+)\)', embed, md)
-    
-    # 3. Pandoc markdown → HTML (no --metadata title!)
-    result = subprocess.run(
-        ["pandoc", "--from=markdown", "--to=html5", "--standalone"],
-        input=md, capture_output=True, text=True
-    )
-    html = result.stdout
-    
-    # 4. Wrap exercises in divs
-    html = wrap_exercises(html)
-    
-    # 5. Inject CSS
-    css = "<style>" + Path(__file__).parent.joinpath(
-        "economics_pdf.css"  # or inline the CSS from Part 5
-    ).read_text() + "</style>"
-    # If using inline CSS, replace the above with the CSS string from Part 5
-    html = html.replace("</head>", css + "</head>")
-    
-    # 6. Export PDF
-    weasyprint.HTML(string=html).write_pdf(output_path)
-    print(f"PDF created: {output_path}")
-
-# Usage:
-# build_pdf("paragraph.md", "paragraph.pdf", "assets/")
-```
-
----
-
-## PART 8: STUDENT-FACING RULES
-
-Content that must NOT appear in student-facing PDF output:
-
-- Difficulty ratings (⬜ LIGHT / 🟨 MEDIUM / 🟥 HEAVY) — these are teacher-facing blueprint metadata
-- Time estimates per exercise (e.g., *Geschatte tijd: 4 minuten*) — teacher planning information
-- Internal cross-references to blueprint codes (e.g., "B1C2§3") unless used as paragraph numbering
-- Scaffold level annotations — students see "Begeleide inoefening", not "Scaffold level 3"
-
----
-
-## DECISION CHECKLIST — BEFORE EXPORTING
-
-1. □ All SVGs rasterised to PNG in assets/ (check with `ls assets/*.png`)
-2. □ No `--metadata title` in pandoc command
-3. □ No difficulty ratings or time estimates in the markdown
-4. □ All image references resolve (every `![...](assets/...)` has a matching file)
-5. □ CSS injected with page break rules
-6. □ Exercises wrapped in `<div class="exercise">`
-7. □ Visual check: no orphaned headers, no split exercises, no broken tables
-
----
-
-*This skill handles PDF export. For content creation, see the relevant product skill (econ-textbook-paragraph, econ-exercise-builder). For graph generation, see economic-graph.*
+For new ordinary paragraph builds, copy the
+[thin wrapper](../build-scripts/templates/template-build-paragraph-pdf.py) to
+`build_pdf.py` and run it with the adjacent platform checkout, or set
+`PLATFORM_ROOT` to that checkout. The
+[shared renderer](../build-scripts/textbook/paragraph_pdf.py) owns Pandoc
+structural conversion, local image resolution, UTF-8, native list numbering,
+styling and pagination. Install Pandoc and the
+[declared Python dependencies](../build-scripts/textbook/requirements.txt) when
+absent. Follow the [Part A checklist](../docs/workflows/part-a-start.md) for
+ordinary export; no copied image, regex, CSS or full-script recipe is needed.
+
+For a layout exception, repair and test the owning implementation, or document
+why a specialized builder is necessary. After shared-renderer changes, run
+`python -m unittest discover -s build-scripts/textbook -p "test_*.py"` and inspect
+affected output. A bounded repair to an existing edition can use its existing
+builder without expanding into a renderer migration. For unchanged output, use
+[existing-edition reproduction](../docs/workflows/part-a-review.md#reproducing-an-existing-edition)
+and its recorded toolchain when a historical rebuild is needed.
+
+## Troubleshoot the affected output
+
+- **Missing images:** verify the final HTML image paths, local assets and the
+  renderer's base directory. Repair the path or asset; do not conceal a missing
+  file or require base64 embedding and SVG replacement for every build.
+- **Broken formulas:** the shared renderer stops on Pandoc conversion warnings,
+  including unsupported TeX. Use supported Unicode/plain-text notation such as
+  `GTK = TK / q`, or an explicitly tested math renderer for fraction typesetting.
+  Preserve mathematical meaning and inspect the final formula.
+- **Wrong letters or numbering:** inspect the Markdown list structure and
+  generated HTML start/style attributes. Use the shared structural conversion
+  and its fixtures instead of adding regex transformations.
+- **Clipped tables, orphaned headings or insufficient writing space:** inspect
+  source grouping and the owning print styles. Check changed pages and their
+  pagination neighbours after repair. Preserve all exercise text, table rows,
+  labels and answer space; do not shorten teaching content to hide a layout fault.
+
+## Output checks
+
+Inspect final PDFs at normal reading scale: every page for new material, changed
+pages and affected dependencies for a revision. Reuse valid unchanged evidence
+under [Part A review](../docs/workflows/part-a-review.md). Check images, formulas,
+list letters, table boundaries, headings, exercise grouping, graph labels,
+contrast and non-colour cues against the
+[rendered-page standard](../references/authored/textbook-rendered-page-acceptance-standard.md).
+
+When browser-delivered HTML is part of the assignment, inspect its affected pages
+in the intended browser. Static rendering and source checks are not browser
+compatibility evidence. An HTML intermediate for PDF-only delivery does not
+require a browser compatibility matrix.
+
+Keep teacher metadata out of student output: difficulty ratings, per-exercise
+time estimates, internal blueprint codes (unless used as paragraph numbering)
+and scaffold-level annotations. Students see the prescribed teaching headings,
+not internal planning labels. Record actual inspection scope and remaining
+defects; rendering alone does not grant independent review or publication.
