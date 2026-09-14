@@ -7,6 +7,17 @@ describe('cross-repo bundle workflow safety', () => {
   const authorizedBundleLane = fs.readFileSync('build-scripts/review-gates/integrate-authorized-bundle.js', 'utf8');
   const agents = fs.readFileSync('AGENTS.md', 'utf8');
   const integrationPolicy = fs.readFileSync('docs/review/pr-integration-lane-policy.md', 'utf8');
+  test('Windows bundle states enable long paths before any checkout', () => {
+    const yaml = require('js-yaml');
+    const workflow = yaml.safeLoad(bundleWorkflow);
+    const steps = workflow.jobs['bundle-state'].steps;
+    const firstCheckout = steps.findIndex(step => String(step.uses || '').startsWith('actions/checkout@'));
+    const setting = steps.findIndex(step => step.run === 'git config --global core.longpaths true');
+    expect(setting).toBeGreaterThanOrEqual(0);
+    expect(setting).toBeLessThan(firstCheckout);
+    expect(steps[setting]['working-directory']).toBe('${{ github.workspace }}');
+    expect(workflow.jobs['bundle-state']['runs-on']).toBe('windows-latest');
+  });
 
   test('required validate-platform no longer substitutes matching lesson branches', () => {
     expect(platformCi).not.toContain('Use matching lessen branch when available');
