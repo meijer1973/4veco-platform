@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-14T11:10:10.838Z
+Generated: 2026-09-14T11:17:56.867Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/import-books34-outlines-20260914`
-Source commit: `d37091a8f53f8987b5e8419838be3c822d2f7be2`
-Files indexed: 6751
+Source commit: `699658a7c48e89dcc808d9d3a906e60186e66fe9`
+Files indexed: 6763
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -144,7 +144,7 @@ Count: 89
 
 ## build scripts
 
-Count: 761
+Count: 762
 
 - build-scripts/archive/README.md
 - build-scripts/archive/roundtrip-pptx.py
@@ -320,6 +320,7 @@ Count: 761
 - build-scripts/maintenance/check-books34-chat-import.js
 - build-scripts/maintenance/import-books34-delivery.py
 - build-scripts/maintenance/test_import_books34.py
+- build-scripts/maintenance/verify-books34-delivery.py
 - build-scripts/platform/build-exit-ticket-shells.js
 - build-scripts/platform/build-exit-ticket-shells.test.js
 - build-scripts/platform/build-graphical-shells.js
@@ -2633,7 +2634,7 @@ Count: 1037
 
 ## reports
 
-Count: 4665
+Count: 4676
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5329,6 +5330,17 @@ Count: 4665
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-result.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md
 - reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-plan.md
+- reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-qa/book-3-contents.png
+- reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-qa/book-4-contents.png
+- reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-qa/contact-1.jpg
+- reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-qa/contact-2.jpg
+- reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-qa/contact-3.jpg
+- reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-qa/contact-4.jpg
+- reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-qa/contact-5.jpg
+- reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-qa/contact-6.jpg
+- reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-qa/contact-7.jpg
+- reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-qa/delivery-qa.json
+- reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-qa/README.md
 - reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-result.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round12.md
