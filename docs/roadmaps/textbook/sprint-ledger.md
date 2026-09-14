@@ -1,13 +1,13 @@
 # Textbook Sprint Ledger
 
-Updated: 2026-09-13
+Updated: 2026-09-14
 Roadmap: `docs/roadmaps/textbook/textbook-production-roadmap.md`
 
 ## Current Book 2 decision
 
 **Book 2 writing and assembly are complete.** The owner selected the externally authored chat edition covering Chapters 2.1–2.3 and all twelve paragraphs. The supplied student book, separate answers, teacher guides and editable chapter sources are the import baseline. The current task is to place that edition in the repository unchanged except for substantial defects actually found, make it discoverable, and check technical integrity. Do not commission fresh Book 2 chapter writing or a new full content-review cycle for this import. Repository integration status is recorded separately from content completion. Existing target-approval and companion/product obligations are not automatically closed by the import.
 
-[Delivered edition and editable sources](https://github.com/meijer1973/4veco-lessen/blob/main/Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md). `BOOK2-CHAT-IMPORT-1`: **writing/assembly complete; repository import prepared/in PR**. No merge or formal target-content review is claimed. Issues #223/#229 remain separate.
+[Delivered edition and editable sources](https://github.com/meijer1973/4veco-lessen/blob/main/Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md). `BOOK2-CHAT-IMPORT-1`: **writing/assembly complete; import and archive cleanup in PR**. No merge or formal target-content review is claimed. Issues #223/#229 remain separate.
 
 ## Current Rule
 
@@ -32,11 +32,11 @@ Every agent working from this ledger must use the repository sprint protocol bef
 
 ## Current import and historical sprint decisions
 
-Only BOOK2-CHAT-IMPORT-1 is the current Book 2 import action. Earlier rows retain historical facts; their next-action directions do not override the completed-edition decision.
+Only BOOK2-CHAT-IMPORT-1 is the current Book 2 import action. The two superseded repository chapters move byte-for-byte to `archive/book-2-pre-chat-2026/` with relocation metadata and tree-preservation checks. Earlier rows retain historical facts; their next-action directions do not override the completed-edition decision.
 
 | Sprint | Name | Completed | Current State | Required Next Action |
 |---|---|---|---|---|
-| BOOK2-CHAT-IMPORT-1 | Import completed Book 2 chat edition | no — import in PR | **Writing/assembly complete; repository import prepared/in PR.** Student book, answers, teacher guides and all twelve editable paragraph sources retained. | Verify original bytes, PDF page counts/sample rendering, source/assets/navigation and required CI; publish linked PRs. Record main integration only after actual merge. |
+| BOOK2-CHAT-IMPORT-1 | Import completed Book 2 chat edition | no — import in PR | **Writing/assembly complete; import and archive cleanup in PR.** Student book, answers, teacher guides and all twelve editable paragraph sources retained. Old chapters 2.1/2.2 archived byte-for-byte with relocation metadata. | Verify preserved edition/archive trees, finite scope and links at both final heads, local pair tests, required CI and one independent technical review; mark linked PRs ready. Record main integration only after actual merge. |
 | BOOK2-TARGET-INTEGRATION-1 | Governed Book 2 Target Activation | yes | [PR #231](https://github.com/meijer1973/4veco-platform/pull/231) merged on 2026-09-05 at `96416b6b5bd57094576e9aba0a42d682584ec479`. Historical implementation/review evidence belongs to that activation. | Do not repeat activation or its merge. Keep remaining holds and independent target/product obligations separate from BOOK2-CHAT-IMPORT-1. |
 | BOOK2-TARGET-AUTHORITY-REMEDIATION-1 | Book 2 Target Authority Remediation | yes | Issue #229 Phase A complete with structural lead `PASS WITH FLAGS` on exact package `914d1a39…71310`; only empirical classroom timing is carried to Phase B. The owner approved frozen content and Ei semantics on 2026-09-05; PR #230 lifecycle/evidence corrections are in progress. Twelve target integration holds stay open; lessons, Phase B and merge remain unauthorized. | Complete owner-requested corrections, fresh independent review, exact-head CI and PR readiness. Do not integrate, write lessons, begin Phase B, or merge. |
 | B2-2.1.1-GOAL-TARGET-DESIGN-1 | Book 2 Paragraph 2.1.1 Goal And Target Design | yes | Owner decisions in PR #227 comment `5524345692` approve exact goal hash `afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560` and target hash `709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34`. `H-211-GATE0B1` is released; `H-211-TARGET-INTEGRATION` remains open with the approved replacement binding. Registry and lesson state are unchanged. | Publish and validate the lifecycle transition, then stop for separate L4 payload authorization before governed PR #227 integration. Do not start Gate 0C, mutate the registry or lesson, begin paragraph production, or merge. |

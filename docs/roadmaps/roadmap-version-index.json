@@ -76,14 +76,14 @@
     },
     {
       "roadmap_id": "textbook-production-roadmap",
-      "version": "v1.21-book2-chat-import",
+      "version": "v1.22-book2-import-archive",
       "title": "Textbook Production Roadmap",
       "status": "active",
       "path": "docs/roadmaps/textbook/textbook-production-roadmap.md",
       "owner": "textbook_team",
-      "updated_on": "2026-09-13",
+      "updated_on": "2026-09-14",
       "supersedes": [],
-      "notes": "Book 2 writing/assembly complete; repository import prepared/in PR under BOOK2-CHAT-IMPORT-1. Owner-selected chat edition covers Chapters 2.1–2.3 and all twelve paragraphs with original PDFs and editable sources. Fresh writing/assembly is superseded; technical integrity checks do not claim a new formal target-content review. PR #231 merged on 2026-09-05 at 96416b6b5bd57094576e9aba0a42d682584ec479. Existing holds, target approvals, companion/product obligations and Issues #223/#229 are not closed by this import."
+      "notes": "Book 2 writing/assembly complete; import and archive cleanup in PR under BOOK2-CHAT-IMPORT-1. Owner-selected chat edition covers Chapters 2.1–2.3 and all twelve paragraphs with original PDFs and editable sources. Fresh writing/assembly is superseded; technical integrity checks do not claim a new formal target-content review. PR #231 merged on 2026-09-05 at 96416b6b5bd57094576e9aba0a42d682584ec479. Existing holds, target approvals, companion/product obligations and Issues #223/#229 are not closed by this import. Superseded repository chapters 2.1/2.2 are archived byte-for-byte with relocation metadata; task-specific import/archive scope verification preserves the fixed edition and chapter tree IDs."
     },
     {
       "roadmap_id": "inspection-standards-compatibility",
