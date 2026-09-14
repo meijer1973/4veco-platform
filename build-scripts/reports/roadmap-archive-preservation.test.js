@@ -56,6 +56,21 @@ function sprintSection(markdown, id) {
   return markdown.slice(start, next < 0 ? undefined : next);
 }
 
+// BOOK2-CHAT-IMPORT-1 is a later owner-requested operational row, not part
+// of the frozen compaction. Keep every original row and carried condition.
+function historicalLessonRows(rows) {
+  const additions = rows.filter(row => row.sprint === 'BOOK2-CHAT-IMPORT-1');
+  expect(additions.length).toBeLessThanOrEqual(1);
+  if (additions.length) {
+    expect(additions[0]).toMatchObject({
+      name: 'Import completed Book 2 chat edition', completed: 'no', exitGate: '',
+      currentState: expect.stringContaining('Writing/assembly complete; import and archive cleanup in PR.'),
+    });
+    expect(additions[0].currentState).toContain('archive/book-2-pre-chat-2026/README.md');
+  }
+  return rows.filter(row => row.sprint !== 'BOOK2-CHAT-IMPORT-1');
+}
+
 test('platform retained prose keeps its original work, acceptance and completion boundaries', () => {
   const baseline = fs.readFileSync(path.join(root, 'archive/roadmaps/snapshots/references-team-20260910.md'), 'utf8');
   const current = fs.readFileSync(path.join(root, 'references/reference-team-roadmap.md'), 'utf8');
@@ -103,7 +118,23 @@ test.each([
   if (!fs.existsSync(path.join(repo,snapshot)) && repo !== root) return;
   const original = fs.readFileSync(path.join(repo,snapshot),'utf8');
   const current = fs.readFileSync(path.join(repo,live),'utf8');
-  expect(parseSprintLedger(current)).toEqual(parseSprintLedger(original));
+  const rows = parseSprintLedger(current);
+  expect(live === 'lessen-team-roadmap.md' ? historicalLessonRows(rows) : rows).toEqual(parseSprintLedger(original));
+});
+
+test('later import-row allowance still rejects a modified historical condition', () => {
+  const baseline = [{ sprint: 'CLOSED-1', currentState: 'PASS WITH FLAGS: timing remains open' }];
+  const altered = [{ ...baseline[0], currentState: 'PASS: timing closed' }];
+  expect(historicalLessonRows(altered)).not.toEqual(baseline);
+});
+test('lesson main without an import row is supported, but duplicate import rows are rejected', () => {
+  const baseline = [{ sprint: 'CLOSED-1', currentState: 'Original condition' }];
+  expect(historicalLessonRows(baseline)).toEqual(baseline);
+  expect(() => historicalLessonRows([{ sprint: 'BOOK2-CHAT-IMPORT-1' }, { sprint: 'BOOK2-CHAT-IMPORT-1' }])).toThrow();
+});
+test('later import-row allowance rejects invented completion and unknown added rows', () => {
+  expect(() => historicalLessonRows([{ sprint: 'BOOK2-CHAT-IMPORT-1', name: 'Import completed Book 2 chat edition', completed: 'yes' }])).toThrow();
+  expect(historicalLessonRows([{ sprint: 'UNREVIEWED-IMPORT' }])).not.toEqual([]);
 });
 test('protected legacy and unresolved compatibility plans remain explicit', () => {
   const current = fs.readFileSync(path.join(root,'references/reference-team-roadmap.md'),'utf8');

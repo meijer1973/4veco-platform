@@ -11,7 +11,7 @@ const EDITION = `${BOOK}/edities/chat-2026`;
 const ARCHIVE = 'archive/book-2-pre-chat-2026';
 const SOURCE = '3e63e82cd335405f383cd76f13b51b774b8b0571';
 const LESSON_BASE = '0acaaa97443e5c4fee34f7da8a12ccd5db62d762';
-const PLATFORM_BASE = '85b0f347f3070e005eae3f35f0b11ce6eac71b4d';
+const PLATFORM_BASE = 'e3e0bf8ce9e3f1fee1582932b52ac6e03b28e7b6';
 const EDITION_TREE = '909aa0d98e808512da7c7355a328eadf99b8e65b';
 const CHAPTERS = [
   ['2.1 Hoofdstuk Kosten en opbrengsten', '93ad9730baa7743513929040d91a07d93c5baafa'],
@@ -25,6 +25,7 @@ const LESSON_FILES = [
 const PLATFORM_FILES = [
   'build-scripts/maintenance/check-book2-chat-import.js',
   'build-scripts/maintenance/check-book2-chat-import.test.js',
+  'build-scripts/reports/roadmap-archive-preservation.test.js',
   'docs/roadmaps/roadmap-version-index.json',
   'docs/roadmaps/textbook/sprint-ledger.md',
   'docs/roadmaps/textbook/textbook-production-roadmap.md',
@@ -136,6 +137,7 @@ function main(argv) {
   options.lessonRoot = path.resolve(options.lessonRoot || path.join(options.platformRoot, '../4veco-lessen'));
   const evidence = collectEvidence(options);
   const result = { task: 'BOOK2-CHAT-IMPORT-1', ...options, ...verifyEvidence(evidence),
+    platform_base: PLATFORM_BASE, lesson_base: LESSON_BASE, reviewed_lesson_source: SOURCE,
     scope: 'Technical import/archive boundary, committed tree identities and local navigation only; no formal paragraph/content approval or merge authority.',
     edition_tree: evidence.editionTree, archive_trees: evidence.archivedTrees,
     moved_files: evidence.originalFiles.length,
