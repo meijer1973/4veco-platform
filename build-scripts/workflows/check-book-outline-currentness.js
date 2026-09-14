@@ -341,7 +341,7 @@ function checkMetadata(failures, files, meta) {
     if (!AUTHORITY_PATHS.includes(item.path)) continue;
     const value = files[item.path];
     if (value === null) failures.push(`${item.path}: required authority source is missing`);
-    else if (sha256CanonicalText(value) !== item.sha256) failures.push(`${META_PATH}: authority hash is stale for ${item.path}`);
+    else if (sha256CanonicalText(value) !== item.sha256 && !require('../references/books34-authority-transition').acceptsTransition(item.path, item.sha256, files)) failures.push(`${META_PATH}: authority hash is stale for ${item.path}`);
   }
 }
 

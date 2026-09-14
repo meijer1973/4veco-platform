@@ -41,3 +41,10 @@ Historical audit lookup: `Y1-GOLDEN-ROLLOUT-WAVE-1` has a
 [sealed checker](build-scripts/sprints/check-y1-golden-rollout-wave-1.js).
 See the map for its provenance boundary; the historical capture does not attest
 new captures or the current workflow.
+
+## Selected Books 3 and 4
+
+- Book 3: [complete PDFs, chapters and all editable sources](https://github.com/meijer1973/4veco-lessen/blob/codex/import-books34-outlines-20260914/Boek%203%20-%20Overheidsingrijpen%2C%20concurrentie%20en%20internationale%20handel/README.md); [current outline adoption](references/authored/book-outlines/book-3-outline.meta.json).
+- Book 4: [complete PDFs, chapters and all editable sources](https://github.com/meijer1973/4veco-lessen/blob/codex/import-books34-outlines-20260914/Boek%204%20-%20Monopolie%2C%20marktfalen%20en%20arbeidsmarkt/README.md); [current outline adoption](references/authored/book-outlines/book-4-outline.meta.json).
+
+Current lookup: platform `node build-scripts/references/books34-selected-structure.js 3.3.1`. Validation: `node build-scripts/maintenance/check-books34-chat-import.js --require-paired --require-tracked`. Numeric IDs require revision `book34-chat-v2-20260914`; archive IDs do not transfer target approval. Integration is prepared/in PR.

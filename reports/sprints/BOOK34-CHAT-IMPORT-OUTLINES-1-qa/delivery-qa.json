@@ -1,0 +1,732 @@
+{
+  "books": [
+    {
+      "book": 3,
+      "preserved_files": 534,
+      "sources": [
+        {
+          "id": "3.1.1",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 5
+        },
+        {
+          "id": "3.1.2",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 6
+        },
+        {
+          "id": "3.1.3",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 6
+        },
+        {
+          "id": "3.1.4",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 4
+        },
+        {
+          "id": "3.1.5",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 7
+        },
+        {
+          "id": "3.1.6",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 1
+        },
+        {
+          "id": "3.2.1",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 5
+        },
+        {
+          "id": "3.2.2",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 8
+        },
+        {
+          "id": "3.2.3",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 7
+        },
+        {
+          "id": "3.2.4",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 1
+        },
+        {
+          "id": "3.3.1",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 4
+        },
+        {
+          "id": "3.3.2",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 7
+        },
+        {
+          "id": "3.3.3",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 6
+        },
+        {
+          "id": "3.3.4",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 3
+        }
+      ],
+      "pdfs": [
+        {
+          "scope": "complete",
+          "role": "student",
+          "pages": 136,
+          "repository_path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/Boek_3_Compleet.pdf",
+          "sha256": "feaef2da61e8127b882f4b25726f4fe6b761cf90efa18607922886f0b7a1b75e",
+          "readable": true,
+          "text_empty_pages": [
+            1,
+            136
+          ]
+        },
+        {
+          "scope": "complete",
+          "role": "answers",
+          "pages": 76,
+          "repository_path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/Boek_3_Compleet_Antwoorden.pdf",
+          "sha256": "6a4491c8019e848965bad708c7a0e8d709761aea95bec148442e109c05e36609",
+          "readable": true,
+          "text_empty_pages": [
+            34,
+            58,
+            76
+          ]
+        },
+        {
+          "scope": "complete",
+          "role": "teacher",
+          "pages": 28,
+          "repository_path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/Boek_3_Compleet_Docenteninformatie.pdf",
+          "sha256": "c3fb64bfa8905d2f28ca161db550bee2f942e334e401923ea297cc68851b7b98",
+          "readable": true,
+          "text_empty_pages": [
+            20,
+            28
+          ]
+        },
+        {
+          "scope": "3.1",
+          "role": "student",
+          "pages": 48,
+          "repository_path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Overheidsingrijpen.pdf",
+          "sha256": "8feca8dc95957726420d663dce3716317b32ea00bbddbe681ce22341508e2a8e",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "3.1",
+          "role": "answers",
+          "pages": 31,
+          "repository_path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Antwoorden.pdf",
+          "sha256": "33b429d85bde59ce2d807f5b0825127ed42378e8ec64b1f1d39d2db22fb06fa9",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "3.1",
+          "role": "teacher",
+          "pages": 10,
+          "repository_path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Docenteninformatie.pdf",
+          "sha256": "1d6aba284b4dca7616fc409c2086304309e33ee7ad8a682440d6313b14b3942e",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "3.2",
+          "role": "student",
+          "pages": 38,
+          "repository_path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H2_Volkomen_concurrentie.pdf",
+          "sha256": "2464be9d4f0723a6761ba0c74b48e3c7c6f3a311605f887c4ce4f4df2938e365",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "3.2",
+          "role": "answers",
+          "pages": 23,
+          "repository_path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H2_Antwoorden.pdf",
+          "sha256": "22121d95d9b39677dbfbef1599c66daef1ce056e9b81fcfd9eb4768701bef342",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "3.2",
+          "role": "teacher",
+          "pages": 7,
+          "repository_path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H2_Docenteninformatie.pdf",
+          "sha256": "56a963c9174c2d700205c4a7e3a18c56a97d025ebb11a82e3d7f8545461ce25e",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "3.3",
+          "role": "student",
+          "pages": 38,
+          "repository_path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H3_Internationale_handel.pdf",
+          "sha256": "0642ce52b75474263d901462b1bcebf5ccbe2a591f56ff555be223b116fd5a03",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "3.3",
+          "role": "answers",
+          "pages": 17,
+          "repository_path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H3_Antwoorden.pdf",
+          "sha256": "961a75fabf693bee885aaef42d60bd0f6096a89feea180c6e2c1ecb845e0d421",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "3.3",
+          "role": "teacher",
+          "pages": 7,
+          "repository_path": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H3_Docenteninformatie.pdf",
+          "sha256": "c0da0526a54e9a5977bcd395e7ff7af91edef7eede5721fb40ea82bd26a884e6",
+          "readable": true,
+          "text_empty_pages": []
+        }
+      ]
+    },
+    {
+      "book": 4,
+      "preserved_files": 471,
+      "sources": [
+        {
+          "id": "4.1.1",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 4
+        },
+        {
+          "id": "4.1.2",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 7
+        },
+        {
+          "id": "4.1.3",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 9
+        },
+        {
+          "id": "4.1.4",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 1
+        },
+        {
+          "id": "4.2.1",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 5
+        },
+        {
+          "id": "4.2.2",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 4
+        },
+        {
+          "id": "4.2.3",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 2
+        },
+        {
+          "id": "4.2.4",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 8
+        },
+        {
+          "id": "4.2.5",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 8
+        },
+        {
+          "id": "4.2.6",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 1
+        },
+        {
+          "id": "4.2.7",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 3
+        },
+        {
+          "id": "4.3.1",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 6
+        },
+        {
+          "id": "4.3.2",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 5
+        },
+        {
+          "id": "4.3.3",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 5
+        },
+        {
+          "id": "4.3.4",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 5
+        },
+        {
+          "id": "4.3.5",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 2
+        },
+        {
+          "id": "4.3.6",
+          "chapter_order": true,
+          "editable_answers_teacher": true,
+          "asset_links": 1
+        }
+      ],
+      "pdfs": [
+        {
+          "scope": "complete",
+          "role": "student",
+          "pages": 162,
+          "repository_path": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/output/Boek_4_Compleet.pdf",
+          "sha256": "0fa20065d955f104156713ae23bb5db00267c0e42a379b63bb4b4cfdb8ab5ba8",
+          "readable": true,
+          "text_empty_pages": [
+            1
+          ]
+        },
+        {
+          "scope": "complete",
+          "role": "answers",
+          "pages": 64,
+          "repository_path": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/output/Boek_4_Compleet_Antwoorden.pdf",
+          "sha256": "c30eab7da094e9ddccfc9353dc8777c98db832394f2464f3d1d9acdb57d1c522",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "complete",
+          "role": "teacher",
+          "pages": 28,
+          "repository_path": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/output/Boek_4_Compleet_Docenteninformatie.pdf",
+          "sha256": "d81ee57f4289b148c812fbfd43dad94c577aedf414ed3504395412f876c1c28d",
+          "readable": true,
+          "text_empty_pages": [
+            10,
+            20
+          ]
+        },
+        {
+          "scope": "4.1",
+          "role": "student",
+          "pages": 38,
+          "repository_path": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H1_Monopolie.pdf",
+          "sha256": "a20c9cc345e6b105780c6550bf2e74644818fc0f2decf4a79b27fc0c042c76c3",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "4.1",
+          "role": "answers",
+          "pages": 20,
+          "repository_path": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H1_Antwoorden.pdf",
+          "sha256": "1055ad70fa2c10f41318391ef7dd52bba6d301df9ca3285568541584d7d7df19",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "4.1",
+          "role": "teacher",
+          "pages": 7,
+          "repository_path": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H1_Docenteninformatie.pdf",
+          "sha256": "f0602a59002e6697e90e9f630a0b035ffc8aa7411d3ccc455eeb0355a44216e3",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "4.2",
+          "role": "student",
+          "pages": 60,
+          "repository_path": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H2_Marktvormen_en_marktfalen.pdf",
+          "sha256": "f05e2514d12758239f5d524ce54544a79356f93a47f622bdae97d0a19d5d319e",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "4.2",
+          "role": "answers",
+          "pages": 24,
+          "repository_path": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H2_Antwoorden.pdf",
+          "sha256": "ee401412cea2cee7de014e35af068fdee9515f1c495eaea9ca54b1f5aac17e5e",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "4.2",
+          "role": "teacher",
+          "pages": 9,
+          "repository_path": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H2_Docenteninformatie.pdf",
+          "sha256": "070def98a98e7f0669dd5c727376feaacf6ae076f73f0689320e5a2d100c5f6a",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "4.3",
+          "role": "student",
+          "pages": 50,
+          "repository_path": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H3_Arbeidsmarkt.pdf",
+          "sha256": "fec80f48dd7796a0de0b3a4e0fd27f054ae8edeeb81ea72bd8a921a43c287669",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "4.3",
+          "role": "answers",
+          "pages": 18,
+          "repository_path": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H3_Antwoorden.pdf",
+          "sha256": "886fc449f9ce3041ac671c9e808c363d55355b8b35f0246794745467dbfaa860",
+          "readable": true,
+          "text_empty_pages": []
+        },
+        {
+          "scope": "4.3",
+          "role": "teacher",
+          "pages": 8,
+          "repository_path": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H3_Docenteninformatie.pdf",
+          "sha256": "5edbe2046c4f1a45c42e2ab6dd41782d1573ca326296fe0f428d6d97b5bd7884",
+          "readable": true,
+          "text_empty_pages": []
+        }
+      ]
+    }
+  ],
+  "renders": [
+    {
+      "label": "b3-complete-student-p1",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/Boek_3_Compleet.pdf",
+      "page": 1,
+      "contact_sheet": "contact-1.jpg",
+      "contact_cell": 1
+    },
+    {
+      "label": "b3-complete-student-p2",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/Boek_3_Compleet.pdf",
+      "page": 2,
+      "contact_sheet": "contact-1.jpg",
+      "contact_cell": 2
+    },
+    {
+      "label": "b3-complete-student-p3",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/Boek_3_Compleet.pdf",
+      "page": 3,
+      "contact_sheet": "contact-1.jpg",
+      "contact_cell": 3
+    },
+    {
+      "label": "b3-complete-student-p4",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/Boek_3_Compleet.pdf",
+      "page": 4,
+      "contact_sheet": "contact-1.jpg",
+      "contact_cell": 4
+    },
+    {
+      "label": "b3-complete-student-p136",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/Boek_3_Compleet.pdf",
+      "page": 136,
+      "contact_sheet": "contact-1.jpg",
+      "contact_cell": 5
+    },
+    {
+      "label": "b3-complete-answers-p34",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/Boek_3_Compleet_Antwoorden.pdf",
+      "page": 34,
+      "contact_sheet": "contact-1.jpg",
+      "contact_cell": 6
+    },
+    {
+      "label": "b3-complete-teacher-p20",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/Boek_3_Compleet_Docenteninformatie.pdf",
+      "page": 20,
+      "contact_sheet": "contact-2.jpg",
+      "contact_cell": 1
+    },
+    {
+      "label": "b3-3.1-student-p1",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Overheidsingrijpen.pdf",
+      "page": 1,
+      "contact_sheet": "contact-2.jpg",
+      "contact_cell": 2
+    },
+    {
+      "label": "b3-3.1-student-p6",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Overheidsingrijpen.pdf",
+      "page": 6,
+      "contact_sheet": "contact-2.jpg",
+      "contact_cell": 3
+    },
+    {
+      "label": "b3-3.1-student-p23",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Overheidsingrijpen.pdf",
+      "page": 23,
+      "contact_sheet": "contact-2.jpg",
+      "contact_cell": 4
+    },
+    {
+      "label": "b3-3.1-student-p39",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Overheidsingrijpen.pdf",
+      "page": 39,
+      "contact_sheet": "contact-2.jpg",
+      "contact_cell": 5
+    },
+    {
+      "label": "b3-3.1-student-p44",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Overheidsingrijpen.pdf",
+      "page": 44,
+      "contact_sheet": "contact-2.jpg",
+      "contact_cell": 6
+    },
+    {
+      "label": "b3-3.1-answers-p1",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Antwoorden.pdf",
+      "page": 1,
+      "contact_sheet": "contact-3.jpg",
+      "contact_cell": 1
+    },
+    {
+      "label": "b3-3.1-answers-p6",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Antwoorden.pdf",
+      "page": 6,
+      "contact_sheet": "contact-3.jpg",
+      "contact_cell": 2
+    },
+    {
+      "label": "b3-3.1-answers-p13",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Antwoorden.pdf",
+      "page": 13,
+      "contact_sheet": "contact-3.jpg",
+      "contact_cell": 3
+    },
+    {
+      "label": "b3-3.1-answers-p24",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Antwoorden.pdf",
+      "page": 24,
+      "contact_sheet": "contact-3.jpg",
+      "contact_cell": 4
+    },
+    {
+      "label": "b3-3.1-answers-p29",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Antwoorden.pdf",
+      "page": 29,
+      "contact_sheet": "contact-3.jpg",
+      "contact_cell": 5
+    },
+    {
+      "label": "b3-3.1-teacher-p1",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Docenteninformatie.pdf",
+      "page": 1,
+      "contact_sheet": "contact-3.jpg",
+      "contact_cell": 6
+    },
+    {
+      "label": "b3-3.1-teacher-p3",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Docenteninformatie.pdf",
+      "page": 3,
+      "contact_sheet": "contact-4.jpg",
+      "contact_cell": 1
+    },
+    {
+      "label": "b3-3.1-teacher-p4",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Docenteninformatie.pdf",
+      "page": 4,
+      "contact_sheet": "contact-4.jpg",
+      "contact_cell": 2
+    },
+    {
+      "label": "b3-3.1-teacher-p6",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H1_Docenteninformatie.pdf",
+      "page": 6,
+      "contact_sheet": "contact-4.jpg",
+      "contact_cell": 3
+    },
+    {
+      "label": "b3-3.2-student-p8",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H2_Volkomen_concurrentie.pdf",
+      "page": 8,
+      "contact_sheet": "contact-4.jpg",
+      "contact_cell": 4
+    },
+    {
+      "label": "b3-3.3-student-p8",
+      "pdf": "Boek 3 - Overheidsingrijpen, concurrentie en internationale handel/edities/chat-2026/pakket/inputs/Boek_3_H3_Internationale_handel.pdf",
+      "page": 8,
+      "contact_sheet": "contact-4.jpg",
+      "contact_cell": 5
+    },
+    {
+      "label": "b4-complete-student-p1",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/output/Boek_4_Compleet.pdf",
+      "page": 1,
+      "contact_sheet": "contact-4.jpg",
+      "contact_cell": 6
+    },
+    {
+      "label": "b4-complete-student-p2",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/output/Boek_4_Compleet.pdf",
+      "page": 2,
+      "contact_sheet": "contact-5.jpg",
+      "contact_cell": 1
+    },
+    {
+      "label": "b4-complete-student-p3",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/output/Boek_4_Compleet.pdf",
+      "page": 3,
+      "contact_sheet": "contact-5.jpg",
+      "contact_cell": 2
+    },
+    {
+      "label": "b4-complete-student-p4",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/output/Boek_4_Compleet.pdf",
+      "page": 4,
+      "contact_sheet": "contact-5.jpg",
+      "contact_cell": 3
+    },
+    {
+      "label": "b4-complete-student-p162",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/output/Boek_4_Compleet.pdf",
+      "page": 162,
+      "contact_sheet": "contact-5.jpg",
+      "contact_cell": 4
+    },
+    {
+      "label": "b4-complete-teacher-p10",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/output/Boek_4_Compleet_Docenteninformatie.pdf",
+      "page": 10,
+      "contact_sheet": "contact-5.jpg",
+      "contact_cell": 5
+    },
+    {
+      "label": "b4-4.1-student-p1",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H1_Monopolie.pdf",
+      "page": 1,
+      "contact_sheet": "contact-5.jpg",
+      "contact_cell": 6
+    },
+    {
+      "label": "b4-4.1-student-p6",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H1_Monopolie.pdf",
+      "page": 6,
+      "contact_sheet": "contact-6.jpg",
+      "contact_cell": 1
+    },
+    {
+      "label": "b4-4.1-answers-p1",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H1_Antwoorden.pdf",
+      "page": 1,
+      "contact_sheet": "contact-6.jpg",
+      "contact_cell": 2
+    },
+    {
+      "label": "b4-4.1-answers-p6",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H1_Antwoorden.pdf",
+      "page": 6,
+      "contact_sheet": "contact-6.jpg",
+      "contact_cell": 3
+    },
+    {
+      "label": "b4-4.1-teacher-p1",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H1_Docenteninformatie.pdf",
+      "page": 1,
+      "contact_sheet": "contact-6.jpg",
+      "contact_cell": 4
+    },
+    {
+      "label": "b4-4.1-teacher-p6",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H1_Docenteninformatie.pdf",
+      "page": 6,
+      "contact_sheet": "contact-6.jpg",
+      "contact_cell": 5
+    },
+    {
+      "label": "b4-4.2-student-p8",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H2_Marktvormen_en_marktfalen.pdf",
+      "page": 8,
+      "contact_sheet": "contact-6.jpg",
+      "contact_cell": 6
+    },
+    {
+      "label": "b4-4.3-student-p8",
+      "pdf": "Boek 4 - Monopolie, marktfalen en arbeidsmarkt/edities/chat-2026/pakket/inputs/Boek_4_H3_Arbeidsmarkt.pdf",
+      "page": 8,
+      "contact_sheet": "contact-7.jpg",
+      "contact_cell": 1
+    }
+  ],
+  "scope": "Technical delivery preservation and sampled rendering; no new pedagogical/target approval.",
+  "lesson_payload": "4d13dcb1f896375346d1805b9b9c70a7f7756950",
+  "lesson_navigation_head": "991b9cb9a530678ea4abade360a5c9b9d247b422",
+  "blank_page_interpretation": "Text-empty cover pages are images, not blank. Rendered samples confirm intentional blank separator/trailing pages; original bytes and page counts retained.",
+  "contact_sheets": [
+    {
+      "path": "contact-1.jpg",
+      "sha256": "a4b9c191605598837ecb978fd3161cd977dc336c15b7361e20b0c698fbd7a646"
+    },
+    {
+      "path": "contact-2.jpg",
+      "sha256": "575ec7775165cff0e74d19ea7cb0aeba06f2616d687d80ba41b30f5729c2153d"
+    },
+    {
+      "path": "contact-3.jpg",
+      "sha256": "b1290f50805c29140ca332abdf6505cf6449994b511269edfcae746dcbab94c2"
+    },
+    {
+      "path": "contact-4.jpg",
+      "sha256": "192f6eb003f46edbb118fc0244a3d518af8d95ad7094848c8ebadf1cc56c09db"
+    },
+    {
+      "path": "contact-5.jpg",
+      "sha256": "645599905d78a84eed40f2f236cbdca82f4caae6cc11c0e2713b9431dd3cf50f"
+    },
+    {
+      "path": "contact-6.jpg",
+      "sha256": "84a91ab0a395d38ae3a9ad451a4027f93d86c0a1b484dd51f3638a3211f4350c"
+    },
+    {
+      "path": "contact-7.jpg",
+      "sha256": "7f1cc201582f8b1e113edddf67b67c2da76f05601839ff1f98bd88003068cde6"
+    }
+  ]
+}

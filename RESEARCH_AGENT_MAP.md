@@ -73,3 +73,9 @@ or reviewed. Inspect the actual files and the evidence bound to them.
 
 The [lesson map](https://github.com/meijer1973/4veco-lessen/blob/main/RESEARCH_AGENT_MAP.md)
 locates lesson artifacts. Local paired checkout: `../4veco-lessen/`.
+## Selected Books 3 and 4
+
+- Book 3: [complete PDFs, chapters and all editable sources](https://github.com/meijer1973/4veco-lessen/blob/codex/import-books34-outlines-20260914/Boek%203%20-%20Overheidsingrijpen%2C%20concurrentie%20en%20internationale%20handel/README.md); [current outline adoption](references/authored/book-outlines/book-3-outline.meta.json).
+- Book 4: [complete PDFs, chapters and all editable sources](https://github.com/meijer1973/4veco-lessen/blob/codex/import-books34-outlines-20260914/Boek%204%20-%20Monopolie%2C%20marktfalen%20en%20arbeidsmarkt/README.md); [current outline adoption](references/authored/book-outlines/book-4-outline.meta.json).
+
+Current lookup: platform `node build-scripts/references/books34-selected-structure.js 3.3.1`. Validation: `node build-scripts/maintenance/check-books34-chat-import.js --require-paired --require-tracked`. Numeric IDs require revision `book34-chat-v2-20260914`; archive IDs do not transfer target approval. Integration is prepared/in PR.

@@ -18,6 +18,9 @@ function pending(authorized = false) {
 }
 function filesFor(input) {
   const files = currentness.readFiles();
+  // Exercise historical decisions against their original shared blueprints;
+  // a later structural migration is covered by current-state tests separately.
+  for (const source of ['references/owned/course-blueprint-v5.md','references/owned/course-blueprint-v6-three-year.md']) files[source] = owner.gitText(grant.BASELINE_COMMIT, source);
   // Historical metadata keeps its original exercise-source pin. Pair it with
   // that source, rather than current instructional maintenance or a new hash.
   files['skills/econ-exercise-builder.md'] = owner.gitText(grant.BASELINE_COMMIT, 'skills/econ-exercise-builder.md');

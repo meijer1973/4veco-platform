@@ -379,6 +379,7 @@ function main() {
   const targetFull = repoPath(TARGET_PATH);
   const archiveFull = repoPath(ARCHIVE_PATH);
   const current = readJson(targetFull);
+  if (current.structure_revision) throw new Error('Refusing legacy v4-to-v5 migration over a selected structural revision; use migrate-books34-selected-outlines.js.');
   const v4 = current.blueprint_version === 'v4'
     ? current
     : readJson(archiveFull);

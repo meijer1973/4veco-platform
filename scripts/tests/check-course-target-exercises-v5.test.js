@@ -51,26 +51,17 @@ function record(id, overrides = {}) {
 }
 
 function validData() {
-  const ids = [
-    '1.1.1', '1.1.2', '1.1.3', '1.1.4', '1.2.1', '1.2.2', '1.2.3', '1.2.4', '1.3.1', '1.3.2', '1.3.3', '1.3.4',
-    '2.1.1', '2.1.2', '2.1.3', '2.1.4', '2.2.1', '2.2.2', '2.2.3', '2.2.4', '2.3.1', '2.3.2', '2.3.3', '2.3.4',
-    '3.1.1', '3.1.2', '3.1.3', '3.1.4', '3.1.5', '3.1.6', '3.2.1', '3.2.2', '3.2.3', '3.2.4', '3.3.1', '3.3.2', '3.3.3', '3.3.4',
-    '4.1.1', '4.1.2', '4.1.3', '4.1.4', '4.1.5', '4.1.6', '4.1.7', '4.2.1', '4.2.2', '4.2.3', '4.2.4', '4.2.5', '4.2.6', '4.2.7', '4.3.1', '4.3.2',
-  ];
-  const mixed = new Set(['1.1.4', '1.2.4', '1.3.4', '2.1.4', '2.2.4', '2.3.4', '3.1.6', '3.2.4', '3.3.4', '4.1.7', '4.2.7']);
-  return {
-    schema_version: 1,
-    blueprint_version: 'v5',
-    blueprint_source: 'references/owned/course-blueprint-v5.md',
-    test_preparation_policy: { status: 'web_only', count_bearing: false },
-    exercises: ids.map((id) => mixed.has(id)
-      ? record(id, { paragraph_kind: 'gemengde_opgaven', introduces_new_theory: false, record_status: 'placeholder_needs_review', placeholder_reason: 'Mixed needs review.' })
-      : record(id)),
-  };
+  const data = structuredClone(require('../../references/authored/course-target-exercises.json'));
+  // Independent legacy record fixtures keep approval and mixed-target negatives.
+  data.exercises = data.exercises.map(r => r.module > 2 ? r : record(r.id, {
+    paragraph_kind:r.paragraph_kind, introduces_new_theory:r.introduces_new_theory,
+    record_status:'placeholder_needs_review', placeholder_reason:'Needs review.'
+  }));
+  return data;
 }
 
 describe('check-course-target-exercises-v5', () => {
-  test('accepts exact 12/12/14/16 v5 target records', () => {
+  test('accepts exact 12/12/14/17 v5 target records', () => {
     expect(validate(validData())).toEqual([]);
   });
 
@@ -122,8 +113,8 @@ describe('check-course-target-exercises-v5', () => {
     const data = validData();
     data.exercises = data.exercises.filter((exercise) => exercise.id !== '4.3.2');
     const errors = validate(data).join('\n');
-    expect(errors).toContain('expected 54 count-bearing records, got 53');
-    expect(errors).toContain('Book 4 expected 16 records, got 15');
+    expect(errors).toContain('expected 55 count-bearing records, got 54');
+    expect(errors).toContain('Book 4 expected 17 records, got 16');
   });
 
   test('rejects missing blueprint anchors', () => {

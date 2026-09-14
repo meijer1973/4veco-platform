@@ -13,11 +13,12 @@
 
 const fs = require('fs');
 const path = require('path');
+const { validateStructuralRecords } = require('../build-scripts/references/books34-selected-structure');
 
 const REPO_ROOT = path.resolve(__dirname, '..');
 const DEFAULT_PATH = 'references/authored/course-target-exercises.json';
-const EXPECTED_COUNTS = { 1: 12, 2: 12, 3: 14, 4: 16 };
-const EXPECTED_TOTAL = 54;
+const EXPECTED_COUNTS = { 1: 12, 2: 12, 3: 14, 4: 17 };
+const EXPECTED_TOTAL = 55;
 const EXPECTED_SOURCE = 'references/owned/course-blueprint-v5.md';
 const ALLOWED_STATUSES = new Set([
   'reviewed_final',
@@ -93,8 +94,8 @@ function validateReviewedMixedTarget(exercise, label, errors) {
 }
 
 function validate(data) {
-  const errors = [];
-  const exercises = data.exercises || [];
+  const errors = validateStructuralRecords(data);
+  const exercises = Array.isArray(data.exercises) ? data.exercises : [];
 
   if (data.schema_version !== 1) errors.push('schema_version must be 1');
   if (data.blueprint_version !== 'v5') errors.push('blueprint_version must be v5');
@@ -115,7 +116,7 @@ function validate(data) {
   if (blueprintText.includes('Phase A source-of-truth scaffold')) {
     errors.push('active v5 blueprint still says Phase A source-of-truth scaffold');
   }
-  if (!Array.isArray(exercises)) errors.push('exercises must be an array');
+  if (!Array.isArray(data.exercises)) errors.push('exercises must be an array');
   if (exercises.length !== EXPECTED_TOTAL) {
     errors.push(`expected ${EXPECTED_TOTAL} count-bearing records, got ${exercises.length}`);
   }
@@ -133,6 +134,9 @@ function validate(data) {
     const label = exercise.id || '<missing id>';
     if (!exercise.id || seen.has(exercise.id)) errors.push(`duplicate or missing id: ${label}`);
     seen.add(exercise.id);
+    if (exercise.id !== `${exercise.module}.${exercise.chapter}.${exercise.paragraph}`) {
+      errors.push(`${label}: id must match module/chapter/paragraph`);
+    }
     if (!Number.isInteger(exercise.module) || !Number.isInteger(exercise.chapter) || !Number.isInteger(exercise.paragraph)) {
       errors.push(`${label}: module/chapter/paragraph must be integers`);
     }

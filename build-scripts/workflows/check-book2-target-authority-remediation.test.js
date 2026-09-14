@@ -11,6 +11,7 @@ beforeAll(() => {
   const owner = require('./book2-owner-decision');
   const grant = require('./book2-integration-decision');
   baseline.meta = JSON.parse(owner.gitText(grant.BASELINE_COMMIT, grant.META_PATH));
+  baseline.registry = JSON.parse(owner.gitText(grant.BASELINE_COMMIT, 'references/authored/course-target-exercises.json'));
 });
 
 function clone() {

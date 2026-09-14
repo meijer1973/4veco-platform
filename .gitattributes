@@ -151,3 +151,9 @@ reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-descendant-verifier-certificate.json te
 
 # Archived records preserve the original Git blob bytes.
 archive/** -text
+
+# Original owner-selected Book 3/4 outline proposals retain their exact bytes.
+references/authored/book-outlines/book-3-outline.md -text
+references/authored/book-outlines/book-4-outline.md -text
+references/authored/book-outlines/migration-live-v5-to-v2.csv whitespace=cr-at-eol
+references/authored/book-outlines/selected-paragraphs.csv whitespace=cr-at-eol

@@ -131,6 +131,7 @@ function isGeneratedIndexPath(filePath) {
 
 function isReviewEvidencePath(filePath) {
   const p = normalizedLower(filePath);
+  if (p === 'reports/reference-planning/blueprint-change-review-book34-chat-20260914.md') return true;
   if (
     (p.startsWith('reports/review-gates/') && /\.(md|json|txt)$/.test(p))
     || p.startsWith('reports/sprints/')

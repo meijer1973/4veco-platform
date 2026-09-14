@@ -29,7 +29,8 @@ const SOURCE_PATHS = Object.freeze([
   '.github/workflows/platform-ci.yml',
 ]);
 
-const V5_COUNTS = Object.freeze({ 1: 12, 2: 12, 3: 14, 4: 16 });
+const V5_COUNTS = Object.freeze({ 1: 12, 2: 12, 3: 14, 4: 17 });
+const STRUCTURE_REVISION = 'book34-chat-v2-20260914';
 const V6_BOOKS_BY_YEAR = Object.freeze({
   1: [1, 2, 3, 4],
   2: [5, 6, 7, 8],
@@ -154,8 +155,8 @@ function checkMetadata(failures, files) {
       failures.push(`${V5_META_PATH}: active_target_exercise_registry must remain ${TARGET_REGISTRY_PATH}`);
     }
     requireEqual(failures, v5.paragraph_counts, V5_COUNTS, `${V5_META_PATH}: Year 1 paragraph counts changed`);
-    if (v5.total_count_bearing_paragraphs !== 54) {
-      failures.push(`${V5_META_PATH}: total_count_bearing_paragraphs must remain 54`);
+    if (v5.total_count_bearing_paragraphs !== 55 || v5.structure_revision !== STRUCTURE_REVISION) {
+      failures.push(`${V5_META_PATH}: total_count_bearing_paragraphs must be 55 under the selected structural revision`);
     }
     const edition = v5.edition_policy || {};
     if (edition.book_1_first_edition !== 'printed_frozen') {
@@ -175,6 +176,12 @@ function checkMetadata(failures, files) {
     requireEqual(failures, assessment.books_by_year, V6_BOOKS_BY_YEAR, `${V6_META_PATH}: 4+4+3 books_by_year route changed`);
     requireEqual(failures, v6.year_1_counts_from_v5, V5_COUNTS, `${V6_META_PATH}: inherited Year 1 counts changed`);
     const model = v6.final_planning_count_model || {};
+    const projection = v6.current_planning_projection || {};
+    const expectedProjection = {...structuredClone(model), status: 'arithmetic_projection_of_owner_selected_year_1_revision_not_new_maturity_approval', count_bearing_total:149, scheduled_total:153};
+    for (const key of ['count_bearing_by_book','scheduled_by_book']) if (expectedProjection[key]) expectedProjection[key]['4']=17;
+    for (const key of ['count_bearing_by_year','scheduled_by_year']) if (expectedProjection[key]) expectedProjection[key]['1']=55;
+    requireEqual(failures, projection, expectedProjection, `${V6_META_PATH}: current arithmetic projection must be 149/153 with later years unchanged`);
+    if (v6.current_year_1_structure_revision !== STRUCTURE_REVISION) failures.push(`${V6_META_PATH}: selected structural revision is missing`);
     if (model.route !== '4+4+3') failures.push(`${V6_META_PATH}: final planning route must remain 4+4+3`);
     if (model.count_bearing_total !== 148) failures.push(`${V6_META_PATH}: count_bearing_total must remain 148`);
     if (model.scheduled_total !== 152) failures.push(`${V6_META_PATH}: scheduled_total must remain 152`);
