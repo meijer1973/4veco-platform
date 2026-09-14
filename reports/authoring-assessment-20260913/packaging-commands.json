@@ -1,0 +1,884 @@
+[
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04012149997288361,
+    "stdout_bytes": 41,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04788969998480752,
+    "stdout_bytes": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-platform",
+    "exit": 0,
+    "seconds": 0.03782870003487915,
+    "stdout_bytes": 41,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--name-status",
+      "-z",
+      "--no-renames",
+      "0acaaa97443e5c4fee34f7da8a12ccd5db62d762",
+      "d00d6209e6413a0b2889719145be9e97a673632c"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.042995600029826164,
+    "stdout_bytes": 2220,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.html"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04332549998071045,
+    "stdout_bytes": 49212,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.md"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.0382005000137724,
+    "stdout_bytes": 26782,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.pdf"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03809190000174567,
+    "stdout_bytes": 112925,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.html"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.07187369995517656,
+    "stdout_bytes": 4582811,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.md"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.041566999978385866,
+    "stdout_bytes": 44910,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.06968229997437447,
+    "stdout_bytes": 2767191,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04741679999278858,
+    "stdout_bytes": 15664,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.05730300000868738,
+    "stdout_bytes": 4742,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04330269998172298,
+    "stdout_bytes": 37137,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.07898539997404441,
+    "stdout_bytes": 460578,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.06378009996842593,
+    "stdout_bytes": 4852,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.05441979999886826,
+    "stdout_bytes": 333746,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04685030004475266,
+    "stdout_bytes": 466142,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04009939997922629,
+    "stdout_bytes": 8093,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.038399600016418844,
+    "stdout_bytes": 345510,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03759889997309074,
+    "stdout_bytes": 2479,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.png"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.037704399961512536,
+    "stdout_bytes": 333852,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.1_fig_1.svg"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03572929999791086,
+    "stdout_bytes": 2479,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.1_fig_1.png"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03746799996588379,
+    "stdout_bytes": 333852,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_1.svg"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03681510000023991,
+    "stdout_bytes": 2684,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_1.png"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.0409868000424467,
+    "stdout_bytes": 583590,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_2.svg"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.040752200002316386,
+    "stdout_bytes": 2839,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_2.png"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.0398744999547489,
+    "stdout_bytes": 495833,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_1.svg"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03751720004947856,
+    "stdout_bytes": 3522,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_1.png"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04356379999080673,
+    "stdout_bytes": 678181,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_2.svg"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03624280000803992,
+    "stdout_bytes": 3202,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_2.png"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.040655999968294054,
+    "stdout_bytes": 790422,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--binary",
+      "--full-index",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--no-renames",
+      "0acaaa97443e5c4fee34f7da8a12ccd5db62d762",
+      "d00d6209e6413a0b2889719145be9e97a673632c"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.26506359997438267,
+    "stdout_bytes": 71822,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04456920002121478,
+    "stdout_bytes": 41,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04504409997025505,
+    "stdout_bytes": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-platform",
+    "exit": 0,
+    "seconds": 0.03527240001130849,
+    "stdout_bytes": 41,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--name-status",
+      "-z",
+      "--no-renames",
+      "0acaaa97443e5c4fee34f7da8a12ccd5db62d762",
+      "0eaaa18a64a3bd3bcd3203d703c6664a7428440d"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03993190004257485,
+    "stdout_bytes": 741,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.039132700010668486,
+    "stdout_bytes": 460435,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.036544499977026135,
+    "stdout_bytes": 4912,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.038946500048041344,
+    "stdout_bytes": 333760,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-review-manifest.json"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03704319999087602,
+    "stdout_bytes": 1924,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/build_pdf.py"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03684000001521781,
+    "stdout_bytes": 3644,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.037005499994847924,
+    "stdout_bytes": 2479,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.png"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04029249999439344,
+    "stdout_bytes": 333852,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--binary",
+      "--full-index",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--no-renames",
+      "0acaaa97443e5c4fee34f7da8a12ccd5db62d762",
+      "0eaaa18a64a3bd3bcd3203d703c6664a7428440d"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.059562499984167516,
+    "stdout_bytes": 481844,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03762560000177473,
+    "stdout_bytes": 41,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04413070000009611,
+    "stdout_bytes": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-platform",
+    "exit": 0,
+    "seconds": 0.03877550002653152,
+    "stdout_bytes": 41,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--name-status",
+      "-z",
+      "--no-renames",
+      "0acaaa97443e5c4fee34f7da8a12ccd5db62d762",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.0428904999862425,
+    "stdout_bytes": 3208,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04014969995478168,
+    "stdout_bytes": 16159,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.044297799991909415,
+    "stdout_bytes": 11431,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.039320899988524616,
+    "stdout_bytes": 27014,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03866229997947812,
+    "stdout_bytes": 20325,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03977949998807162,
+    "stdout_bytes": 14846,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04372050001984462,
+    "stdout_bytes": 247008,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04036380001343787,
+    "stdout_bytes": 25709,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.040042600012384355,
+    "stdout_bytes": 19197,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.0403896999778226,
+    "stdout_bytes": 311278,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-quality-ref.yaml"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04024629999184981,
+    "stdout_bytes": 1589,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-review.md"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.0398377999663353,
+    "stdout_bytes": 9448,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-foundation.json"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03901459998451173,
+    "stdout_bytes": 41601,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.036252600024454296,
+    "stdout_bytes": 8065,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-plan.md"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03689799999119714,
+    "stdout_bytes": 8894,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-review-manifest.json"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.041561199992429465,
+    "stdout_bytes": 2752,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.png"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.0398568999953568,
+    "stdout_bytes": 59670,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03747369995107874,
+    "stdout_bytes": 2756,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_2.png"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03777190000982955,
+    "stdout_bytes": 103074,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_2.svg"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03900900000007823,
+    "stdout_bytes": 8082,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_3.png"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.04084590001730248,
+    "stdout_bytes": 115441,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_3.svg"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03685889998450875,
+    "stdout_bytes": 8097,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/build_pdf.py"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.03850969998165965,
+    "stdout_bytes": 631,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--binary",
+      "--full-index",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--no-renames",
+      "0acaaa97443e5c4fee34f7da8a12ccd5db62d762",
+      "5c5ebf387550c636f665f7ced4f08b10315b831c"
+    ],
+    "cwd": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+    "exit": 0,
+    "seconds": 0.1277638000319712,
+    "stdout_bytes": 3462916,
+    "stderr": ""
+  }
+]

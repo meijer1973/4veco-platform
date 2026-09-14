@@ -1,0 +1,49 @@
+diff --git "a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 opgaven.md" "b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 opgaven.md"
+index a1e4f4c..1154625 100644
+--- "a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 opgaven.md"	
++++ "b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 opgaven.md"	
+@@ -34,6 +34,8 @@ Bij meer broodjes daalt `GCK` van EUR 3,00 naar EUR 1,00. De vaste kosten
+ worden uitgesmeerd over meer producten. `GVK` blijft EUR 1,20, omdat elk
+ broodje dezelfde variabele kosten heeft.
+ 
++::: {.procedure-summary style="break-inside: avoid;"}
++
+ **De procedure samengevat:**
+ 
+ | Stap | Vraag |
+@@ -44,6 +46,8 @@ broodje dezelfde variabele kosten heeft.
+ | 4 | Deel door `Q` voor `GCK`, `GVK` en `GTK`. |
+ | 5 | Leg in woorden uit wat er verandert als `Q` stijgt. |
+ 
++:::
++
+ ---
+ 
+ ## Opgaven
+diff --git a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/build_pdf.py b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/build_pdf.py
+index ebc721d..a91df1b 100644
+--- a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/build_pdf.py	
++++ b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/build_pdf.py	
+@@ -30,6 +30,12 @@ code {{ background: #EDF2F7; padding: 1pt 5pt; border-radius: 3px; font-family:
+ hr {{ border: none; border-top: 1px solid #BBB; margin: 18pt 0; }}
+ ul, ol {{ margin: 0 0 10pt 0; padding-left: 20pt; }}
+ li {{ margin-bottom: 4pt; }}
++@media print {{
++  /* Keep the summary compact so its label does not displace the next exercise. */
++  .procedure-summary p {{ margin-bottom: 0; }}
++  .procedure-summary table {{ margin: 0; }}
++  .procedure-summary + hr {{ margin-top: 6pt; }}
++}}
+ </style>"""
+ 
+ 
+@@ -60,7 +66,8 @@ def build_pdf(md_path, output_path):
+         sys.exit(result.returncode)
+     html = result.stdout.decode("utf-8").replace("</head>", CSS + "</head>")
+     html_path = output_path.replace(".pdf", ".html")
+-    Path(html_path).write_text(html, encoding="utf-8")
++    # Avoid doubling Pandoc's CRLF line endings when writing on Windows.
++    Path(html_path).write_text(html.replace("\r\n", "\n"), encoding="utf-8", newline="\n")
+     import weasyprint
+ 
+     weasyprint.HTML(string=html).write_pdf(output_path)

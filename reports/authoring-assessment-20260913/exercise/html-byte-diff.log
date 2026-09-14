@@ -1,0 +1,113 @@
+diff --git "a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten \342\200\223 antwoorden.html" "b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten \342\200\223 antwoorden.html"
+index 1ba897a..4b182e5 100644
+--- "a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten \342\200\223 antwoorden.html"	
++++ "b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten \342\200\223 antwoorden.html"	
+@@ -287,7 +287,7 @@ d.</p>
+ 
+ <li>huur: EUR 900</li>
+ 
+-<li>vast softwareabonnement: EUR 150</li>
++<li>vast softwareabonnement: EUR 175</li>
+ 
+ </ul>
+ 
+@@ -303,19 +303,19 @@ d.</p>
+ 
+ <ul>
+ 
+-<li><code>TCK = 900 + 150 = 1050</code></li>
++<li><code>TCK = 900 + 175 = 1075</code></li>
+ 
+ <li><code>TVK = 2Q</code></li>
+ 
+-<li><code>TK = 1050 + 2Q</code></li>
++<li><code>TK = 1075 + 2Q</code></li>
+ 
+ </ul>
+ 
+ <p><strong>D.</strong> Bij <code>Q = 200</code>:</p>
+ 
+-<p><code>TK = 1050 + 2 x 200 = 1050 + 400 = 1450</code></p>
++<p><code>TK = 1075 + 2 x 200 = 1075 + 400 = 1475</code></p>
+ 
+-<p>De totale kosten zijn EUR 1450.</p>
++<p>De totale kosten zijn EUR 1475.</p>
+ 
+ <hr />
+ 
+diff --git "a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten \342\200\223 hoofdstuk.html" "b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten \342\200\223 hoofdstuk.html"
+index 1b1829b..13f0fd3 100644
+--- "a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten \342\200\223 hoofdstuk.html"	
++++ "b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten \342\200\223 hoofdstuk.html"	
+@@ -765,7 +765,7 @@ kosten)</em></p>
+ 
+ <p>Een kleine drukkerij maakt posters. De drukkerij betaalt per maand
+ 
+-EUR 900 huur en EUR 150 voor een vast softwareabonnement. Papier en inkt
++EUR 900 huur en EUR 175 voor een vast softwareabonnement. Papier en inkt
+ 
+ kosten EUR 2 per poster.</p>
+ 
+diff --git "a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 antwoorden.html" "b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 antwoorden.html"
+index be09334..24637e8 100644
+--- "a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 antwoorden.html"	
++++ "b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 antwoorden.html"	
+@@ -506,7 +506,7 @@ d.</p>
+ 
+ <li>huur: EUR 900</li>
+ 
+-<li>vast softwareabonnement: EUR 150</li>
++<li>vast softwareabonnement: EUR 175</li>
+ 
+ </ul>
+ 
+@@ -522,19 +522,19 @@ d.</p>
+ 
+ <ul>
+ 
+-<li><code>TCK = 900 + 150 = 1050</code></li>
++<li><code>TCK = 900 + 175 = 1075</code></li>
+ 
+ <li><code>TVK = 2Q</code></li>
+ 
+-<li><code>TK = 1050 + 2Q</code></li>
++<li><code>TK = 1075 + 2Q</code></li>
+ 
+ </ul>
+ 
+ <p><strong>D.</strong> Bij <code>Q = 200</code>:</p>
+ 
+-<p><code>TK = 1050 + 2 x 200 = 1050 + 400 = 1450</code></p>
++<p><code>TK = 1075 + 2 x 200 = 1075 + 400 = 1475</code></p>
+ 
+-<p>De totale kosten zijn EUR 1450.</p>
++<p>De totale kosten zijn EUR 1475.</p>
+ 
+ <hr />
+ 
+diff --git "a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 opgaven.html" "b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 opgaven.html"
+index ee994bf..7e2a19e 100644
+--- "a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 opgaven.html"	
++++ "b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 opgaven.html"	
+@@ -622,7 +622,7 @@ kosten)</em></p>
+ 
+ <p>Een kleine drukkerij maakt posters. De drukkerij betaalt per maand
+ 
+-EUR 900 huur en EUR 150 voor een vast softwareabonnement. Papier en inkt
++EUR 900 huur en EUR 175 voor een vast softwareabonnement. Papier en inkt
+ 
+ kosten EUR 2 per poster.</p>
+ 
+diff --git "a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 paragraaf.html" "b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 paragraaf.html"
+index 4fdd142..9f19f72 100644
+--- "a/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 paragraaf.html"	
++++ "b/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren \342\200\223 paragraaf.html"	
+@@ -892,7 +892,7 @@ kosten)</em></p>
+ 
+ <p>Een kleine drukkerij maakt posters. De drukkerij betaalt per maand
+ 
+-EUR 900 huur en EUR 150 voor een vast softwareabonnement. Papier en inkt
++EUR 900 huur en EUR 175 voor een vast softwareabonnement. Papier en inkt
+ 
+ kosten EUR 2 per poster.</p>
+ 

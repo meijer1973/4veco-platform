@@ -1,0 +1,100 @@
+[
+  {
+    "name": "2.1.1 Kostenstructuren – antwoorden.html",
+    "changed_from_old_zip": true,
+    "bytes": 15664,
+    "sha256": "619ed6ef4d6b469c3af2ffd6dccf3a13dccfda61168e7c697ebcaae158c90270",
+    "equals_current_standalone": true
+  },
+  {
+    "name": "2.1.1 Kostenstructuren – antwoorden.md",
+    "changed_from_old_zip": true,
+    "bytes": 4742,
+    "sha256": "6ddb5bb0430f04dd6d252224a2b02dedc9cd5be409a335aaaf36b233ad436df4",
+    "equals_current_standalone": true
+  },
+  {
+    "name": "2.1.1 Kostenstructuren – antwoorden.pdf",
+    "changed_from_old_zip": true,
+    "bytes": 37137,
+    "sha256": "708d2addf98dc1d2a216d8accdb420f480fbdf30317be0b64c44dcbba6d853be",
+    "equals_current_standalone": true
+  },
+  {
+    "name": "2.1.1 Kostenstructuren – opgaven.html",
+    "changed_from_old_zip": true,
+    "bytes": 460578,
+    "sha256": "8ac56f59dfb380e637503fe586bf695923f11a96db98f39b464f72a7d949da0b",
+    "equals_current_standalone": true
+  },
+  {
+    "name": "2.1.1 Kostenstructuren – opgaven.md",
+    "changed_from_old_zip": true,
+    "bytes": 4852,
+    "sha256": "613050a86169804e7474748482f7e0a76b54e04feaaebe5f8b3b423d4cacb451",
+    "equals_current_standalone": true
+  },
+  {
+    "name": "2.1.1 Kostenstructuren – opgaven.pdf",
+    "changed_from_old_zip": true,
+    "bytes": 333746,
+    "sha256": "35f8702efad5b76763224bf6adda8713c6f83eea3777d31dfce0b4a36531d8ac",
+    "equals_current_standalone": true
+  },
+  {
+    "name": "2.1.1 Kostenstructuren – paragraaf.html",
+    "changed_from_old_zip": true,
+    "bytes": 466142,
+    "sha256": "b837be23aa4c85b3eeb0b87651a102efc9783eefd61bddd9e4ddee94edddbd40",
+    "equals_current_standalone": true
+  },
+  {
+    "name": "2.1.1 Kostenstructuren – paragraaf.md",
+    "changed_from_old_zip": true,
+    "bytes": 8093,
+    "sha256": "bab094fd470571c38e869516ecdd12b26346df93635b1618f03a54f232f97da4",
+    "equals_current_standalone": true
+  },
+  {
+    "name": "2.1.1 Kostenstructuren – paragraaf.pdf",
+    "changed_from_old_zip": true,
+    "bytes": 345510,
+    "sha256": "fd3f07c3f732504c4389289c8dcfcb29bb4615a6a6bee4aa5f750614aa05a21f",
+    "equals_current_standalone": true
+  },
+  {
+    "name": "2.1.1-quality-ref.yaml",
+    "changed_from_old_zip": true,
+    "bytes": 823,
+    "sha256": "c3943165fd24b9197f8bd47a691d3449874aea29048eb6bcfb3146a6ef327751",
+    "equals_current_standalone": true
+  },
+  {
+    "name": "2.1.1-review.md",
+    "changed_from_old_zip": false,
+    "bytes": 1321,
+    "sha256": "313da5cb0bb71697820ce791f8775af09f84469a64d6f553c96c5c4006699569",
+    "equals_current_standalone": true
+  },
+  {
+    "name": "build_pdf.py",
+    "changed_from_old_zip": false,
+    "bytes": 3293,
+    "sha256": "4763aff3adef9d05d787073dfc188ad7df0b241c0dce59f3214e22042e80f6f5",
+    "equals_current_standalone": true
+  },
+  {
+    "name": "_assets/2.1.1_fig_1.png",
+    "changed_from_old_zip": true,
+    "bytes": 333852,
+    "sha256": "08423a4a6f26c875a4c3ccd8c4bb3421dbc645b328c8fd5523aee075afb25808",
+    "equals_current_standalone": true
+  },
+  {
+    "name": "_assets/2.1.1_fig_1.svg",
+    "changed_from_old_zip": true,
+    "bytes": 2479,
+    "sha256": "7e1674e16c93069b27e6cd1876c6729c36b5837c9a04478df161fde5cd3f6b54",
+    "equals_current_standalone": true
+  }
+]

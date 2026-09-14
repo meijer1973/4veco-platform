@@ -1,0 +1,33 @@
+--- before
+
++++ after
+
+@@ -263,7 +263,7 @@
+
+ <p><strong>A.</strong> Constante kosten:</p>
+ <ul>
+ <li>huur: EUR 900</li>
+-<li>vast softwareabonnement: EUR 150</li>
++<li>vast softwareabonnement: EUR 175</li>
+ </ul>
+ <p><strong>B.</strong> Variabele kosten:</p>
+ <ul>
+@@ -271,13 +271,13 @@
+
+ </ul>
+ <p><strong>C.</strong> Formules:</p>
+ <ul>
+-<li><code>TCK = 900 + 150 = 1050</code></li>
++<li><code>TCK = 900 + 175 = 1075</code></li>
+ <li><code>TVK = 2Q</code></li>
+-<li><code>TK = 1050 + 2Q</code></li>
++<li><code>TK = 1075 + 2Q</code></li>
+ </ul>
+ <p><strong>D.</strong> Bij <code>Q = 200</code>:</p>
+-<p><code>TK = 1050 + 2 x 200 = 1050 + 400 = 1450</code></p>
+-<p>De totale kosten zijn EUR 1450.</p>
++<p><code>TK = 1075 + 2 x 200 = 1075 + 400 = 1475</code></p>
++<p>De totale kosten zijn EUR 1475.</p>
+ <hr />
+ <h2 id="opgave-3">Opgave 3</h2>
+ <p><strong>A.</strong> Totale kosten:</p>

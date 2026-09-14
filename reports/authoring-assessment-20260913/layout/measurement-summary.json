@@ -1,0 +1,11 @@
+{
+  "selected_document_reads": 16,
+  "selected_document_words": 8350,
+  "failed_first_AGENTS_selected_words": 751,
+  "logging_overhead_captured_commands": 44,
+  "measured_logging_seconds": 4.1744,
+  "substantive_stop_utc": "2026-09-13T11:51:10Z",
+  "approximate_elapsed_seconds": 733,
+  "independent_bounded_review": "PASS",
+  "publication_lane_check": "FAIL: pre-existing opgaven.zip unknown classification"
+}

@@ -1,0 +1,103 @@
+{
+  "platform_head": "2bc4ee84393b8c2bf85734f71bb50288f5cf5122",
+  "checks": [
+    {
+      "name": "contract",
+      "argv": [
+        "node",
+        "build-scripts/workflows/check-part-a-exercise-authoring-contract.js"
+      ],
+      "cwd": "C:\\wt\\reorganize 2\\cleanup-20260914\\4veco-platform",
+      "exit": 0,
+      "started": "2026-09-14T07:13:28.414208+00:00",
+      "seconds": 0.085443
+    },
+    {
+      "name": "foundation",
+      "argv": [
+        "node",
+        "build-scripts/workflows/check-book-outline-currentness.js",
+        "--action",
+        "paragraph_production",
+        "--paragraph",
+        "2.1.1",
+        "--require-approved"
+      ],
+      "cwd": "C:\\wt\\reorganize 2\\cleanup-20260914\\4veco-platform",
+      "exit": 0,
+      "started": "2026-09-14T07:13:28.500225+00:00",
+      "seconds": 2.45837
+    },
+    {
+      "name": "paragraph",
+      "argv": [
+        "node",
+        "scripts/validate-paragraph.js",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren",
+        "--mode",
+        "part-a"
+      ],
+      "cwd": "C:\\wt\\reorganize 2\\cleanup-20260914\\4veco-platform",
+      "exit": 0,
+      "started": "2026-09-14T07:13:30.958613+00:00",
+      "seconds": 0.093841
+    },
+    {
+      "name": "exercise-lane",
+      "argv": [
+        "node",
+        "build-scripts/workflows/check-paragraph-lane-scope.js",
+        "--cwd",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen",
+        "--lane",
+        "textbook",
+        "--base",
+        "origin/main",
+        "--head",
+        "HEAD"
+      ],
+      "cwd": "C:\\wt\\reorganize 2\\cleanup-20260914\\4veco-platform",
+      "exit": 0,
+      "started": "2026-09-14T07:13:31.052471+00:00",
+      "seconds": 0.091112
+    },
+    {
+      "name": "layout-lane",
+      "argv": [
+        "node",
+        "build-scripts/workflows/check-paragraph-lane-scope.js",
+        "--cwd",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-lessen",
+        "--lane",
+        "textbook",
+        "--base",
+        "origin/main",
+        "--head",
+        "HEAD"
+      ],
+      "cwd": "C:\\wt\\reorganize 2\\cleanup-20260914\\4veco-platform",
+      "exit": 0,
+      "started": "2026-09-14T07:13:31.143602+00:00",
+      "seconds": 0.094133
+    },
+    {
+      "name": "paragraph-lane",
+      "argv": [
+        "node",
+        "build-scripts/workflows/check-paragraph-lane-scope.js",
+        "--cwd",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen",
+        "--lane",
+        "textbook",
+        "--base",
+        "origin/main",
+        "--head",
+        "HEAD"
+      ],
+      "cwd": "C:\\wt\\reorganize 2\\cleanup-20260914\\4veco-platform",
+      "exit": 0,
+      "started": "2026-09-14T07:13:31.237754+00:00",
+      "seconds": 0.170135
+    }
+  ]
+}

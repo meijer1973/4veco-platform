@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "remote": "origin",
+  "remote_ref": "origin/main",
+  "origin_main_sha": "85b0f347f3070e005eae3f35f0b11ce6eac71b4d",
+  "head_sha": "85b0f347f3070e005eae3f35f0b11ce6eac71b4d",
+  "allow_policy_edit": false,
+  "files": [
+    "AGENTS.md",
+    "AGENT_GITHUB_ENTRY.md",
+    "docs/review/pr-readiness-routing-policy.md",
+    "docs/review/pr-integration-lane-policy.md",
+    "docs/review/pr-throughput-policy.md",
+    "package.json",
+    ".github/workflows/platform-ci.yml",
+    "build-scripts/ci/check-branch-protection.js"
+  ],
+  "differing_files": [],
+  "failures": []
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "file": "2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html",
+    "capture": "exercise-1-affected-0.png",
+    "metrics": {
+      "missingImages": [],
+      "pageWidth": 1265,
+      "viewport": {
+        "height": 720,
+        "width": 1280
+      },
+      "y": 4138.39990234375
+    },
+    "hits": [
+      {
+        "tag": "P",
+        "text": "Een kleine drukkerij maakt posters. De drukkerij betaalt per maand EUR 900 huur en EUR 175 voor een vast softwareabonnement. Papier en inkt kosten EUR 2 per poster.",
+        "top": 4466.1376953125
+      }
+    ]
+  },
+  {
+    "file": "2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html",
+    "capture": "exercise-2-affected-0.png",
+    "metrics": {
+      "missingImages": [],
+      "pageWidth": 1265,
+      "viewport": {
+        "height": 720,
+        "width": 1280
+      },
+      "y": 680
+    },
+    "hits": [
+      {
+        "tag": "LI",
+        "text": "vast softwareabonnement: EUR 175",
+        "top": 1029.550048828125
+      },
+      {
+        "tag": "LI",
+        "text": "TCK = 900 + 175 = 1075",
+        "top": 1167.8499755859375
+      },
+      {
+        "tag": "LI",
+        "text": "TK = 1075 + 2Q",
+        "top": 1221
+      },
+      {
+        "tag": "P",
+        "text": "TK = 1075 + 2 x 200 = 1075 + 400 = 1475",
+        "top": 1290.1500244140625
+      },
+      {
+        "tag": "P",
+        "text": "De totale kosten zijn EUR 1475.",
+        "top": 1324.7249755859375
+      }
+    ]
+  },
+  {
+    "file": "2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html",
+    "capture": "exercise-2-affected-1.png",
+    "metrics": {
+      "missingImages": [],
+      "pageWidth": 1265,
+      "viewport": {
+        "height": 720,
+        "width": 1280
+      },
+      "y": 975.2000122070312
+    },
+    "hits": [
+      {
+        "tag": "LI",
+        "text": "vast softwareabonnement: EUR 175",
+        "top": 1029.550048828125
+      },
+      {
+        "tag": "LI",
+        "text": "TCK = 900 + 175 = 1075",
+        "top": 1167.8499755859375
+      },
+      {
+        "tag": "LI",
+        "text": "TK = 1075 + 2Q",
+        "top": 1221
+      },
+      {
+        "tag": "P",
+        "text": "TK = 1075 + 2 x 200 = 1075 + 400 = 1475",
+        "top": 1290.1500244140625
+      },
+      {
+        "tag": "P",
+        "text": "De totale kosten zijn EUR 1475.",
+        "top": 1324.7249755859375
+      }
+    ]
+  },
+  {
+    "file": "2.1 Kosten en opbrengsten – hoofdstuk.html",
+    "capture": "exercise-3-affected-0.png",
+    "metrics": {
+      "missingImages": [],
+      "pageWidth": 1265,
+      "viewport": {
+        "height": 720,
+        "width": 1280
+      },
+      "y": 4594.39990234375
+    },
+    "hits": [
+      {
+        "tag": "P",
+        "text": "Een kleine drukkerij maakt posters. De drukkerij betaalt per maand EUR 900 huur en EUR 175 voor een vast softwareabonnement. Papier en inkt kosten EUR 2 per poster.",
+        "top": 4943.77490234375
+      }
+    ]
+  },
+  {
+    "file": "2.1 Kosten en opbrengsten – antwoorden.html",
+    "capture": "exercise-4-affected-0.png",
+    "metrics": {
+      "missingImages": [],
+      "pageWidth": 1265,
+      "viewport": {
+        "height": 720,
+        "width": 1280
+      },
+      "y": 572
+    },
+    "hits": [
+      {
+        "tag": "LI",
+        "text": "vast softwareabonnement: EUR 175",
+        "top": 921.6000366210938
+      },
+      {
+        "tag": "LI",
+        "text": "TCK = 900 + 175 = 1075",
+        "top": 1035.9000244140625
+      },
+      {
+        "tag": "LI",
+        "text": "TK = 1075 + 2Q",
+        "top": 1089.050048828125
+      },
+      {
+        "tag": "P",
+        "text": "TK = 1075 + 2 x 200 = 1075 + 400 = 1475",
+        "top": 1146.2000732421875
+      },
+      {
+        "tag": "P",
+        "text": "De totale kosten zijn EUR 1475.",
+        "top": 1168.7750244140625
+      }
+    ]
+  },
+  {
+    "file": "2.1 Kosten en opbrengsten – antwoorden.html",
+    "capture": "exercise-4-affected-1.png",
+    "metrics": {
+      "missingImages": [],
+      "pageWidth": 1265,
+      "viewport": {
+        "height": 720,
+        "width": 1280
+      },
+      "y": 819.2000122070312
+    },
+    "hits": [
+      {
+        "tag": "LI",
+        "text": "vast softwareabonnement: EUR 175",
+        "top": 921.6000366210938
+      },
+      {
+        "tag": "LI",
+        "text": "TCK = 900 + 175 = 1075",
+        "top": 1035.9000244140625
+      },
+      {
+        "tag": "LI",
+        "text": "TK = 1075 + 2Q",
+        "top": 1089.050048828125
+      },
+      {
+        "tag": "P",
+        "text": "TK = 1075 + 2 x 200 = 1075 + 400 = 1475",
+        "top": 1146.2000732421875
+      },
+      {
+        "tag": "P",
+        "text": "De totale kosten zijn EUR 1475.",
+        "top": 1168.7750244140625
+      }
+    ]
+  }
+]

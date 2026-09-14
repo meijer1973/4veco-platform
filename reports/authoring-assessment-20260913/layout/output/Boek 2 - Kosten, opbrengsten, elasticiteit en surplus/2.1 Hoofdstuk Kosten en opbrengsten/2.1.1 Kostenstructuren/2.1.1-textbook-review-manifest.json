@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "paragraph": "2.1.1",
+  "hash_contract": "sha256: UTF-8 text with LF; other files exact bytes",
+  "files": [
+    {
+      "path": "2.1.1 Kostenstructuren – antwoorden.html",
+      "sha256": "c594d983530dcc11d31ef4f39d1d01766f8d1d54a7dd255d1b60b956c3f7442d"
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – antwoorden.md",
+      "sha256": "e40b2948e4ec1fdf15ead71b7c46b7c5511e484587eb676120e6975943ea7fd6"
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – antwoorden.pdf",
+      "sha256": "eaa105f0f691d87b2185a5c90f256892ce308e6d2c223dd430d1cd95b3ad4aa6"
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – opgaven.html",
+      "sha256": "8330a14d25718c347216dc9e5253d6734345495c61fb0af661fdc4ad4954ac31"
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – opgaven.md",
+      "sha256": "aa8c19d597e8658c64783875d63f3228d2a238f4f1c34b108699d506b346bb7c"
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – opgaven.pdf",
+      "sha256": "70e21a04e78dd7bc4b1e950724565a5177e184312aaed5ee7659cd82f97a688d"
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – paragraaf.html",
+      "sha256": "15fbebfd2579fd762f8889b39f8c42ffa0e1a96722800fc74fdf1e8e0cdc819c"
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – paragraaf.md",
+      "sha256": "a8ec73b249ac0253952f507715a1f86fdf2184607c28834787ca7bf0dd1f4d31"
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – paragraaf.pdf",
+      "sha256": "b30b559d69e8a7b1cbe3ec9f6dec57104bd91c978d0affe3771aa41101c0db77"
+    },
+    {
+      "path": "_assets/2.1.1_fig_1.png",
+      "sha256": "08423a4a6f26c875a4c3ccd8c4bb3421dbc645b328c8fd5523aee075afb25808"
+    },
+    {
+      "path": "_assets/2.1.1_fig_1.svg",
+      "sha256": "7e1674e16c93069b27e6cd1876c6729c36b5837c9a04478df161fde5cd3f6b54"
+    },
+    {
+      "path": "build_pdf.py",
+      "sha256": "8851c6c19d3aaa5587791c22824cd5999ea97dd38b1ef5b2c898f71d67a2c1f2"
+    }
+  ]
+}

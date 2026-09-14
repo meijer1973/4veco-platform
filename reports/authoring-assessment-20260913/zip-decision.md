@@ -1,0 +1,7 @@
+# Optional ZIP decision — 14 September 2026
+
+The actual failing command was `node build-scripts/workflows/check-paragraph-lane-scope.js --cwd ../4veco-lessen --lane textbook --base origin/main --head HEAD`. Each original task log names the same `2.1.1 Kostenstructuren – opgaven.zip` path as unknown. `zip-decision.json` records that path, its baseline identity and all fifteen entries (fourteen files and one directory).
+
+The archive mixes the three MD/HTML/PDF outputs, a builder, assets and historical review/quality metadata. It is not a separately owned lesson product: the required-output table, paragraph-type contract and shared renderer do not require or generate it, and no `opgaven.zip` consumer exists in tracked lesson main. The only tracked exercise archive was introduced in commit `2a33e06b742a1dbb478549302a2932da11e3c8c9` and renamed during chapter-label normalization. Unrelated legacy prototype ZIPs and presentation JSZip use do not establish a consumer for this file.
+
+Each author exported their refreshed convenience ZIP outside the tracked source tree and restored the committed historical ZIP. The three lane checks now pass without modifying classification. The original failed checks, differing ZIP approaches and the exported member checks remain in the per-task logs. Optional packaging is now explicit in the textbook format owner; no new paragraph requirement or blanket ZIP allowance was introduced.

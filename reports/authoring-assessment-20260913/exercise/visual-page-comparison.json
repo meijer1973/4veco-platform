@@ -1,0 +1,112 @@
+[
+  {
+    "file": "2.1.1-antwoorden",
+    "page": 1,
+    "pixel_change_bbox": null
+  },
+  {
+    "file": "2.1.1-antwoorden",
+    "page": 2,
+    "pixel_change_bbox": [
+      245,
+      203,
+      495,
+      536
+    ]
+  },
+  {
+    "file": "2.1.1-antwoorden",
+    "page": 3,
+    "pixel_change_bbox": null
+  },
+  {
+    "file": "2.1.1-opgaven",
+    "page": 2,
+    "pixel_change_bbox": null
+  },
+  {
+    "file": "2.1.1-opgaven",
+    "page": 3,
+    "pixel_change_bbox": [
+      317,
+      145,
+      334,
+      158
+    ]
+  },
+  {
+    "file": "2.1.1-opgaven",
+    "page": 4,
+    "pixel_change_bbox": null
+  },
+  {
+    "file": "2.1.1-paragraaf",
+    "page": 5,
+    "pixel_change_bbox": null
+  },
+  {
+    "file": "2.1.1-paragraaf",
+    "page": 6,
+    "pixel_change_bbox": [
+      317,
+      245,
+      334,
+      258
+    ]
+  },
+  {
+    "file": "2.1.1-paragraaf",
+    "page": 7,
+    "pixel_change_bbox": null
+  },
+  {
+    "file": "2.1-antwoorden",
+    "page": 1,
+    "pixel_change_bbox": null
+  },
+  {
+    "file": "2.1-antwoorden",
+    "page": 2,
+    "pixel_change_bbox": [
+      392,
+      1060,
+      409,
+      1073
+    ]
+  },
+  {
+    "file": "2.1-antwoorden",
+    "page": 3,
+    "pixel_change_bbox": [
+      192,
+      172,
+      442,
+      330
+    ]
+  },
+  {
+    "file": "2.1-antwoorden",
+    "page": 4,
+    "pixel_change_bbox": null
+  },
+  {
+    "file": "2.1-hoofdstuk",
+    "page": 6,
+    "pixel_change_bbox": null
+  },
+  {
+    "file": "2.1-hoofdstuk",
+    "page": 7,
+    "pixel_change_bbox": [
+      138,
+      132,
+      155,
+      145
+    ]
+  },
+  {
+    "file": "2.1-hoofdstuk",
+    "page": 8,
+    "pixel_change_bbox": null
+  }
+]

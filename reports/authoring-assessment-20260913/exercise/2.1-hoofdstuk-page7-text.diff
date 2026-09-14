@@ -1,0 +1,10 @@
+--- before
++++ after
+@@ -1,6 +1,6 @@
+ Opgave 2(herken constante en variabele kosten)
+ Een kleine drukkerij maakt posters. De drukkerij betaalt per maand EUR 900 huur en EUR
+-150 voor een vast softwareabonnement. Papier en inkt kosten EUR 2 per poster.
++175 voor een vast softwareabonnement. Papier en inkt kosten EUR 2 per poster.
+ A. Welke kosten zijn constante kosten?
+ B. Welke kosten zijn variabele kosten?
+ C. Schrijf de formules voor TCK, TVK en TK.

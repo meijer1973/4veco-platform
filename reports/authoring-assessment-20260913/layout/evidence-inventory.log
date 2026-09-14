@@ -1,0 +1,9 @@
+archive-check.json
+baseline-text.json
+content-check.json
+events.jsonl
+logging-overhead.jsonl
+pixel-differences.json
+repaired-text.json
+Measured logging subprocess seconds: 3.5935
+Measured logged commands: 37

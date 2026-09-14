@@ -1,0 +1,19 @@
+--- before
++++ after
+@@ -1,12 +1,12 @@
+ B. Variabele kosten:
+ papier en inkt: EUR 2 per poster
+ C. Formules:
+-TCK = 900 + 150 = 1050
++TCK = 900 + 175 = 1075
+ TVK = 2Q
+-TK = 1050 + 2Q
++TK = 1075 + 2Q
+ D. Bij Q = 200:
+-TK = 1050 + 2 x 200 = 1050 + 400 = 1450
+-De totale kosten zijn EUR 1450.
++TK = 1075 + 2 x 200 = 1075 + 400 = 1475
++De totale kosten zijn EUR 1475.
+ Opgave 3
+ A. Totale kosten:
+ Q TCK TVK TK

@@ -1,0 +1,15 @@
+# Initial cold-agent assignment
+
+Verbatim retained parent assignment from 13 September 2026; not reconstructed. The payload is reproduced below without correcting its original spacing.
+
+```text
+Run a cold authoring assessment in C:/wt/reorganize 2/authoring-assessment-20260913/paragraph. The paired 4veco-platform and 4veco-lessen worktrees are yours, on codex/assessment-paragraph-20260913 at platform85b0f347 and lessons0acaaa97. Use owner assessment-paragraph for ownership claims. Start with repository entry instructions. Do not read other assessments or old experimental PRs.
+
+Assignment: Create a fresh complete PartA version of Book2 §2.1.1 Kostenstructuren for 4vwo, using its approved teaching targets and source/action authority. Author the explanation, exercise progression and answers, render the required outputs, and proceed through applicable independent review and local closure checks. Existing §2.1.1 files may supply context/assets, but do not merely copy its old text or assume historical reviews accept your new material. Work in its existing paragraph folder in your isolated lesson worktree: Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren. This is a new draft version of an approved paragraph, not permission to alter target/source authority.
+
+Hard limit: stop substantive work by 2026-09-13 12:09:00 UTC (no more than30minutes). Incomplete is acceptable; preserve outputs/logs and report exactly what remains. No push, new PR, merge, deployment, policy/tooling refactor or edits outside your paired worktrees and run folder. Local commits and a local PR-ready handoff are allowed. Parent /root is your independent reviewer: send a review-ready message with source scope/files/render evidence as soon as ready; don't spawn reviewers yourself. Continue useful self-checks while awaiting review, but don't invent a PASS or approvals. The assessment intentionally ends locally; do not satisfy hosted publication checks with made-up evidence.
+
+Measurement: log every document/skill read and repeated read, commands/results/durations, first useful edit, review requests/corrections, blockers, unnecessary work and time spent logging. Use external logger for text reads: python 'C:/wt/reorganize 2/authoring-assessment-20260913/observe.py' --run '<your run folder>' read '<absolute file>' --start 1 --end 100 --reason '<why>'. It records actual selected word counts. For events use ... event <kind> '<detail>' --seconds <duration> when measured. Log equivalent details for searches/tool-output reads not through that reader. Write a concise completion.md with outcome, actual skills used, friction with exact source clauses and suggestions, timings and limitations. Don't load unrelated documents just to log them.
+
+Environment: Node, Python3.14, Pandoc, Poppler, WeasyPrint68.1 and pypdf6.13.2 are installed. node_modules is a pre-provisioned junction; treat it as read-only, do not reinstall/mutate it. Same model/settings and initial repository pair are used for all3assessment tasks. Record your start immediately.
+```

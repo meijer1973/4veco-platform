@@ -1,0 +1,403 @@
+{
+  "conclusion": "success",
+  "headSha": "2bc4ee84393b8c2bf85734f71bb50288f5cf5122",
+  "jobs": [
+    {
+      "completedAt": "2026-09-14T07:21:17Z",
+      "conclusion": "success",
+      "databaseId": 103888383196,
+      "name": "validate-platform",
+      "startedAt": "2026-09-14T07:10:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-09-14T07:10:04Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-09-14T07:10:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:10:31Z",
+          "conclusion": "success",
+          "name": "Checkout platform repository",
+          "number": 2,
+          "startedAt": "2026-09-14T07:10:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:10:40Z",
+          "conclusion": "success",
+          "name": "Checkout lessen repository",
+          "number": 3,
+          "startedAt": "2026-09-14T07:10:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:10:41Z",
+          "conclusion": "success",
+          "name": "Normalize repository line endings",
+          "number": 4,
+          "startedAt": "2026-09-14T07:10:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:10:53Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 5,
+          "startedAt": "2026-09-14T07:10:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:10:55Z",
+          "conclusion": "success",
+          "name": "Select CI profile",
+          "number": 6,
+          "startedAt": "2026-09-14T07:10:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:10:58Z",
+          "conclusion": "success",
+          "name": "Verify Y1 runtime checkout bytes",
+          "number": 7,
+          "startedAt": "2026-09-14T07:10:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:11:01Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 8,
+          "startedAt": "2026-09-14T07:10:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:11:02Z",
+          "conclusion": "success",
+          "name": "Write checkout evidence",
+          "number": 9,
+          "startedAt": "2026-09-14T07:11:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:11:09Z",
+          "conclusion": "success",
+          "name": "Install Node dependencies",
+          "number": 10,
+          "startedAt": "2026-09-14T07:11:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:11:09Z",
+          "conclusion": "skipped",
+          "name": "Run focused maintenance checks",
+          "number": 11,
+          "startedAt": "2026-09-14T07:11:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:11:10Z",
+          "conclusion": "success",
+          "name": "Validate exercise workflow currentness",
+          "number": 12,
+          "startedAt": "2026-09-14T07:11:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:11:11Z",
+          "conclusion": "success",
+          "name": "Validate Book 2+ Part A exercise authoring contract",
+          "number": 13,
+          "startedAt": "2026-09-14T07:11:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:11:12Z",
+          "conclusion": "success",
+          "name": "Validate blueprint pedagogical boundaries",
+          "number": 14,
+          "startedAt": "2026-09-14T07:11:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:11:15Z",
+          "conclusion": "success",
+          "name": "Validate Book 2 outline currentness",
+          "number": 15,
+          "startedAt": "2026-09-14T07:11:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:11:17Z",
+          "conclusion": "success",
+          "name": "Validate Book 2 target authority remediation candidate",
+          "number": 16,
+          "startedAt": "2026-09-14T07:11:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:11:17Z",
+          "conclusion": "skipped",
+          "name": "Validate Issue 229 sprint scope",
+          "number": 17,
+          "startedAt": "2026-09-14T07:11:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:11:18Z",
+          "conclusion": "success",
+          "name": "Validate exercise authority hygiene",
+          "number": 18,
+          "startedAt": "2026-09-14T07:11:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:11:24Z",
+          "conclusion": "success",
+          "name": "Install Python support dependencies",
+          "number": 19,
+          "startedAt": "2026-09-14T07:11:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:13:10Z",
+          "conclusion": "success",
+          "name": "Install presentation proof tools",
+          "number": 20,
+          "startedAt": "2026-09-14T07:11:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:17:31Z",
+          "conclusion": "success",
+          "name": "Validate platform Jest suite",
+          "number": 21,
+          "startedAt": "2026-09-14T07:13:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:17:38Z",
+          "conclusion": "success",
+          "name": "Build presentation-v2 registered decks",
+          "number": 22,
+          "startedAt": "2026-09-14T07:17:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:19:13Z",
+          "conclusion": "success",
+          "name": "Validate presentation-v2 HTML QA",
+          "number": 23,
+          "startedAt": "2026-09-14T07:17:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:19:15Z",
+          "conclusion": "success",
+          "name": "Validate presentation-v2 legacy guard",
+          "number": 24,
+          "startedAt": "2026-09-14T07:19:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:19:30Z",
+          "conclusion": "success",
+          "name": "Validate presentation-v2 PPTX proof",
+          "number": 25,
+          "startedAt": "2026-09-14T07:19:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:19:33Z",
+          "conclusion": "success",
+          "name": "Validate reasoning golden family guardrails",
+          "number": 26,
+          "startedAt": "2026-09-14T07:19:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:19:34Z",
+          "conclusion": "success",
+          "name": "Validate paragraph landing V2 guardrails",
+          "number": 27,
+          "startedAt": "2026-09-14T07:19:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:19:35Z",
+          "conclusion": "success",
+          "name": "Validate News Detective V2 guardrails",
+          "number": 28,
+          "startedAt": "2026-09-14T07:19:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:19:36Z",
+          "conclusion": "success",
+          "name": "Validate active scope language",
+          "number": 29,
+          "startedAt": "2026-09-14T07:19:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:19:38Z",
+          "conclusion": "success",
+          "name": "Validate active governance wording",
+          "number": 30,
+          "startedAt": "2026-09-14T07:19:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:19:39Z",
+          "conclusion": "success",
+          "name": "Validate Golden Graph Advisory 113 proof",
+          "number": 31,
+          "startedAt": "2026-09-14T07:19:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:19:40Z",
+          "conclusion": "success",
+          "name": "Validate Scale Proof 3P product path proof",
+          "number": 32,
+          "startedAt": "2026-09-14T07:19:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:03Z",
+          "conclusion": "success",
+          "name": "Validate Y1 Golden rollout wave",
+          "number": 33,
+          "startedAt": "2026-09-14T07:19:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:04Z",
+          "conclusion": "success",
+          "name": "Validate report JSON",
+          "number": 34,
+          "startedAt": "2026-09-14T07:21:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:04Z",
+          "conclusion": "success",
+          "name": "Validate MTU evidence layer freshness",
+          "number": 35,
+          "startedAt": "2026-09-14T07:21:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:06Z",
+          "conclusion": "success",
+          "name": "Validate MTU-H7 Bundle 4 protected adjudication packet",
+          "number": 36,
+          "startedAt": "2026-09-14T07:21:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:06Z",
+          "conclusion": "success",
+          "name": "Validate roadmap version index",
+          "number": 37,
+          "startedAt": "2026-09-14T07:21:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:07Z",
+          "conclusion": "success",
+          "name": "Check URL index is current",
+          "number": 38,
+          "startedAt": "2026-09-14T07:21:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:08Z",
+          "conclusion": "success",
+          "name": "Check GitHub agent indexes against repository heads",
+          "number": 39,
+          "startedAt": "2026-09-14T07:21:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:08Z",
+          "conclusion": "success",
+          "name": "Check CI evidence line endings",
+          "number": 40,
+          "startedAt": "2026-09-14T07:21:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:09Z",
+          "conclusion": "success",
+          "name": "Check platform diff hygiene",
+          "number": 41,
+          "startedAt": "2026-09-14T07:21:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:09Z",
+          "conclusion": "success",
+          "name": "Check lessen diff hygiene",
+          "number": 42,
+          "startedAt": "2026-09-14T07:21:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:11Z",
+          "conclusion": "success",
+          "name": "Upload CI diagnostic artifacts",
+          "number": 43,
+          "startedAt": "2026-09-14T07:21:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:11Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 83,
+          "startedAt": "2026-09-14T07:21:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:12Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 84,
+          "startedAt": "2026-09-14T07:21:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:14Z",
+          "conclusion": "success",
+          "name": "Post Checkout lessen repository",
+          "number": 85,
+          "startedAt": "2026-09-14T07:21:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:16Z",
+          "conclusion": "success",
+          "name": "Post Checkout platform repository",
+          "number": 86,
+          "startedAt": "2026-09-14T07:21:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-14T07:21:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 87,
+          "startedAt": "2026-09-14T07:21:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/meijer1973/4veco-platform/actions/runs/34816576113/job/103888383196"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/meijer1973/4veco-platform/actions/runs/34816576113"
+}

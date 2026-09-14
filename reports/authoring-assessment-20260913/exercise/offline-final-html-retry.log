@@ -1,0 +1,33 @@
+{"utc": "2026-09-13T11:46:38.122569+00:00", "action": "event", "kind": "offline_html_check", "detail": "Final serialized static HTML rendered through WeasyPrint without browser or server; six changed-page images pixel-identical to author/reviewer inspected PDF pages. Browser visual proof remains unavailable due URL policy. No script or iframe present.", "seconds": 12.358966000028886}
+[
+  {
+    "file": "2.1.1 Kostenstructuren – antwoorden.html",
+    "page": 2,
+    "pixel_identical_to_reviewed_pdf": true
+  },
+  {
+    "file": "2.1.1 Kostenstructuren – opgaven.html",
+    "page": 3,
+    "pixel_identical_to_reviewed_pdf": true
+  },
+  {
+    "file": "2.1.1 Kostenstructuren – paragraaf.html",
+    "page": 6,
+    "pixel_identical_to_reviewed_pdf": true
+  },
+  {
+    "file": "2.1 Kosten en opbrengsten – antwoorden.html",
+    "page": 2,
+    "pixel_identical_to_reviewed_pdf": true
+  },
+  {
+    "file": "2.1 Kosten en opbrengsten – antwoorden.html",
+    "page": 3,
+    "pixel_identical_to_reviewed_pdf": true
+  },
+  {
+    "file": "2.1 Kosten en opbrengsten – hoofdstuk.html",
+    "page": 7,
+    "pixel_identical_to_reviewed_pdf": true
+  }
+]

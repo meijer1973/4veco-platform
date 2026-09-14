@@ -1,0 +1,38 @@
+Content maps of the repositories — revised access instructions
+
+Start with the shared operating guide:
+https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENTS.md
+
+For work in the lesson repository, also read its short local entry:
+https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/AGENTS.md
+
+Then inspect the source and evidence relevant to the user's assignment. Load a workflow or skill when its scope applies. Neither repository map, the roadmap, nor the full paragraph/chapter manuals are universal startup reading.
+
+Repositories and ownership:
+- https://github.com/meijer1973/4veco-platform — production tooling, engines, generators, validators, shared skills, references and source data.
+- https://github.com/meijer1973/4veco-lessen — authored lesson content and student-facing output. Trace generated outputs and copied runtime code back to the owning platform source.
+
+Optional lookup maps:
+https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP.md
+https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/RESEARCH_AGENT_MAP.md
+
+Remote access details:
+https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENT_GITHUB_ENTRY.md
+https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/AGENT_GITHUB_ENTRY.md
+
+For tools needing literal URLs:
+https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/url-index.md
+
+Use the task's requested branch or full commit SHA when reviewing a PR. Otherwise establish the current revision inspected. Generated inventories are lookup snapshots; verify actual file existence at the intended commit. A failed unauthenticated fetch is not proof of absence. Check the repository, ref, spelling and URL encoding, or use authenticated GitHub access. Lesson names commonly contain spaces and the en dash U+2013.
+
+Rendered student entry:
+https://meijer1973.github.io/4veco-lessen/index.html
+The deployed site may differ from a PR. Use source bytes for source claims and final rendered pages for product-quality claims.
+
+For a read-only research assignment, do not edit files or local tool settings. Return conclusions with inspected commits and exact paths/URLs, uncertainties, and actionable findings with affected scope, owner/next action and evidence needed to close. Plans do not prove implementation; a review covers only its named inputs and scope. Research does not grant source approval, close a gate or authorize integration.
+
+Task-specific research prompts, if useful:
+https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_PROMPT.md
+https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/RESEARCH_AGENT_PROMPT.md
+
+These links track main. The revised entrypoints were integrated through platform PR #244 (merge a3e0ebf2) and lessons PR #49 (merge 0acaaa9). For a later PR review, use that task’s reviewed full commits instead of assuming main is the review input.

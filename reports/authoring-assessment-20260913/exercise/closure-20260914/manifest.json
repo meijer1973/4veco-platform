@@ -1,0 +1,93 @@
+{
+  "date": "2026-09-14",
+  "scope": "Closure repair; original15 reviewed files unchanged; ZIP export is assessment evidence outside tracked tree",
+  "lesson_base": "0acaaa97443e5c4fee34f7da8a12ccd5db62d762",
+  "prior_reviewed_commit": "6b9b5134a6983fc1aae7e35e4061c1908c814196",
+  "platform_base": "85b0f347f3070e005eae3f35f0b11ce6eac71b4d",
+  "prior_review_manifest_sha256": "734b714ba97e980a3458290a429455e2aadc17fda390d857cb53da25c11deb43",
+  "files": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.html",
+      "bytes": 49212,
+      "sha256": "f494e884ca0512d5edaeab0167690bec0be7bcb0faea16c870fc23039f1db8fb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.md",
+      "bytes": 26782,
+      "sha256": "76fbc957f27b2fc189e275167251fa00229490c7fb4b96c74a9e5f210dfcddb3"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.pdf",
+      "bytes": 112925,
+      "sha256": "5dd4d2f87c047883f6a776bbddf1c2d8b8b7de1f9d774ab7c997a3347359061e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.html",
+      "bytes": 4582811,
+      "sha256": "4b5d6a202c3e20e0e64df601bf2a4c38f13ab56be6d84299ad72dd595f73c9bb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.md",
+      "bytes": 44910,
+      "sha256": "1cf7010885a9153523bb3440c84544b46a2202d06821c4a03f224a7d96983666"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf",
+      "bytes": 2767191,
+      "sha256": "71e48a0ef136d4f5f16eeb6dc28c8517283c190036905fbd2a3c93a044f19ebb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html",
+      "bytes": 15664,
+      "sha256": "619ed6ef4d6b469c3af2ffd6dccf3a13dccfda61168e7c697ebcaae158c90270"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md",
+      "bytes": 4742,
+      "sha256": "6ddb5bb0430f04dd6d252224a2b02dedc9cd5be409a335aaaf36b233ad436df4"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf",
+      "bytes": 37137,
+      "sha256": "708d2addf98dc1d2a216d8accdb420f480fbdf30317be0b64c44dcbba6d853be"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html",
+      "bytes": 460578,
+      "sha256": "8ac56f59dfb380e637503fe586bf695923f11a96db98f39b464f72a7d949da0b"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md",
+      "bytes": 4852,
+      "sha256": "613050a86169804e7474748482f7e0a76b54e04feaaebe5f8b3b423d4cacb451"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
+      "bytes": 333746,
+      "sha256": "35f8702efad5b76763224bf6adda8713c6f83eea3777d31dfce0b4a36531d8ac"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html",
+      "bytes": 466142,
+      "sha256": "b837be23aa4c85b3eeb0b87651a102efc9783eefd61bddd9e4ddee94edddbd40"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md",
+      "bytes": 8093,
+      "sha256": "bab094fd470571c38e869516ecdd12b26346df93635b1618f03a54f232f97da4"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
+      "bytes": 345510,
+      "sha256": "fd3f07c3f732504c4389289c8dcfcb29bb4615a6a6bee4aa5f750614aa05a21f"
+    }
+  ],
+  "zip": {
+    "tracked_path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.zip",
+    "tracked_restored_baseline_sha256": "bb951635865a5e7e321f562ef73c640c84948f99441385f217cf366d9e3e996d",
+    "tracked_bytes": 222900,
+    "export_path": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914\\2.1.1 Kostenstructuren – opgaven.zip",
+    "export_sha256": "a54e3934f6f0cce51ce14198e27112245c3db9a1623fe71963bd19f351a0655b",
+    "export_bytes": 1633803
+  }
+}

@@ -1,0 +1,11 @@
+--- before
++++ after
+@@ -23,7 +23,7 @@
+ Opgave 2
+ A. Constante kosten:
+ huur: EUR 900
+-vast softwareabonnement: EUR 150
++vast softwareabonnement: EUR 175
+ • 
+ • 
+ • 

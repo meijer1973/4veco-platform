@@ -1,0 +1,112 @@
+{
+  "paragraph": {
+    "lesson_head": "5c5ebf387550c636f665f7ced4f08b10315b831c",
+    "html": [
+      {
+        "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html",
+        "sha256_bytes": "151633518f11f3d6e838d0a2467815e99ab134e9fa2518963b8e8c2b3dc7be07",
+        "sha256_canonical_lf": "151633518f11f3d6e838d0a2467815e99ab134e9fa2518963b8e8c2b3dc7be07"
+      },
+      {
+        "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html",
+        "sha256_bytes": "6eb2f048080baded1c45473c0bc04d4097de7ab1df840e633db29e1787e21929",
+        "sha256_canonical_lf": "6eb2f048080baded1c45473c0bc04d4097de7ab1df840e633db29e1787e21929"
+      },
+      {
+        "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html",
+        "sha256_bytes": "0b6523277f89a8df03380b27c4757a5969d0684a86071ffc0f575df6a3f777b6",
+        "sha256_canonical_lf": "0b6523277f89a8df03380b27c4757a5969d0684a86071ffc0f575df6a3f777b6"
+      }
+    ]
+  },
+  "exercise": {
+    "lesson_head": "d00d6209e6413a0b2889719145be9e97a673632c",
+    "html": [
+      {
+        "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.html",
+        "sha256_bytes": "f494e884ca0512d5edaeab0167690bec0be7bcb0faea16c870fc23039f1db8fb",
+        "sha256_canonical_lf": "f494e884ca0512d5edaeab0167690bec0be7bcb0faea16c870fc23039f1db8fb"
+      },
+      {
+        "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.html",
+        "sha256_bytes": "4b5d6a202c3e20e0e64df601bf2a4c38f13ab56be6d84299ad72dd595f73c9bb",
+        "sha256_canonical_lf": "4b5d6a202c3e20e0e64df601bf2a4c38f13ab56be6d84299ad72dd595f73c9bb"
+      },
+      {
+        "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html",
+        "sha256_bytes": "619ed6ef4d6b469c3af2ffd6dccf3a13dccfda61168e7c697ebcaae158c90270",
+        "sha256_canonical_lf": "619ed6ef4d6b469c3af2ffd6dccf3a13dccfda61168e7c697ebcaae158c90270"
+      },
+      {
+        "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html",
+        "sha256_bytes": "8ac56f59dfb380e637503fe586bf695923f11a96db98f39b464f72a7d949da0b",
+        "sha256_canonical_lf": "8ac56f59dfb380e637503fe586bf695923f11a96db98f39b464f72a7d949da0b"
+      },
+      {
+        "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html",
+        "sha256_bytes": "b837be23aa4c85b3eeb0b87651a102efc9783eefd61bddd9e4ddee94edddbd40",
+        "sha256_canonical_lf": "b837be23aa4c85b3eeb0b87651a102efc9783eefd61bddd9e4ddee94edddbd40"
+      }
+    ]
+  },
+  "browser": "Codex In-app Browser",
+  "viewport_css_pixels": {
+    "width": 1280,
+    "height": 720
+  },
+  "checked_on": "2026-09-14",
+  "evidence": [
+    "checked-antwoorden-1.png",
+    "checked-antwoorden-2.png",
+    "checked-antwoorden-3.png",
+    "checked-opgaven-1.png",
+    "checked-opgaven-2.png",
+    "checked-opgaven-3.png",
+    "checked-paragraaf-1.png",
+    "checked-paragraaf-2.png",
+    "checked-paragraaf-3.png",
+    "checked-paragraaf-4.png",
+    "exercise-1-affected-0.png",
+    "exercise-2-affected-0.png",
+    "exercise-2-affected-1.png",
+    "exercise-3-affected-0.png",
+    "exercise-4-affected-0.png",
+    "exercise-4-affected-1.png",
+    "exercise-opgaven-affected.png",
+    "paragraph-antwoorden-viewport-00.png",
+    "paragraph-antwoorden-viewport-01.png",
+    "paragraph-antwoorden-viewport-02.png",
+    "paragraph-antwoorden-viewport-03.png",
+    "paragraph-antwoorden-viewport-04.png",
+    "paragraph-antwoorden-viewport-05.png",
+    "paragraph-antwoorden-viewport-06.png",
+    "paragraph-antwoorden-viewport-07.png",
+    "paragraph-antwoorden-viewport-08.png",
+    "paragraph-opgaven-viewport-00.png",
+    "paragraph-opgaven-viewport-01.png",
+    "paragraph-opgaven-viewport-02.png",
+    "paragraph-opgaven-viewport-03.png",
+    "paragraph-opgaven-viewport-04.png",
+    "paragraph-opgaven-viewport-05.png",
+    "paragraph-opgaven-viewport-06.png",
+    "paragraph-opgaven-viewport-07.png",
+    "paragraph-opgaven-viewport-08.png",
+    "paragraph-opgaven-viewport-09.png",
+    "paragraph-opgaven-viewport-10.png",
+    "paragraph-paragraaf-viewport-00.png",
+    "paragraph-paragraaf-viewport-01.png",
+    "paragraph-paragraaf-viewport-02.png",
+    "paragraph-paragraaf-viewport-03.png",
+    "paragraph-paragraaf-viewport-04.png",
+    "paragraph-paragraaf-viewport-05.png",
+    "paragraph-paragraaf-viewport-06.png",
+    "paragraph-paragraaf-viewport-07.png",
+    "paragraph-paragraaf-viewport-08.png",
+    "paragraph-paragraaf-viewport-09.png",
+    "paragraph-paragraaf-viewport-10.png",
+    "paragraph-paragraaf-viewport-11.png",
+    "paragraph-paragraaf-viewport-12.png",
+    "paragraph-paragraaf-viewport-13.png",
+    "paragraph-paragraaf-viewport-14.png"
+  ]
+}

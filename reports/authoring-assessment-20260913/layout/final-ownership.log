@@ -1,0 +1,39 @@
+
+> 4veco-platform@1.0.0 check:agent-worktree-safety
+> node build-scripts/ci/check-agent-worktree-safety.js --check --task assessment-layout-20260913 --agent assessment-layout --require-prefix codex/,agent/ --require-clean --worktree C:/wt/reorganize 2/authoring-assessment-20260913/layout/4veco-lessen
+
+{
+  "ok": true,
+  "mode": "check",
+  "repository": "4veco-lessen",
+  "worktree_path": "C:/wt/reorganize 2/authoring-assessment-20260913/layout/4veco-lessen",
+  "git_dir": "C:\\Projects\\4veco\\4veco-lessen\\.git\\worktrees\\4veco-lessen165",
+  "anchor_clone": false,
+  "task_id": "assessment-layout-20260913",
+  "agent_id": "assessment-layout",
+  "lock": {
+    "present": true,
+    "same_owner": true,
+    "same_task": true,
+    "stale": false,
+    "path": "C:\\Projects\\4veco\\4veco-lessen\\.git\\worktrees\\4veco-lessen165\\4veco-agent-worktree-lock.json",
+    "owner": "assessment-layout",
+    "task_id": "assessment-layout-20260913"
+  },
+  "branch": "codex/assessment-layout-20260913",
+  "head_sha": "7a908e92f5495bd4398a8c4f634a8a95be44d048",
+  "on_main": false,
+  "detached_head": false,
+  "dirty": false,
+  "dirty_count": 0,
+  "ahead": 0,
+  "behind": 0,
+  "diverged": false,
+  "prefix_ok": true,
+  "required_prefixes": [
+    "codex/",
+    "agent/"
+  ],
+  "warnings": [],
+  "failures": []
+}

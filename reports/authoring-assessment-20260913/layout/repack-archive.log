@@ -1,0 +1,12 @@
+{
+  "updated_archive": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren \u2013 opgaven.zip",
+  "entries": 15,
+  "changed_entries": [
+    "2.1.1 Kostenstructuren \u2013 opgaven.html",
+    "2.1.1 Kostenstructuren \u2013 opgaven.md",
+    "2.1.1 Kostenstructuren \u2013 opgaven.pdf",
+    "build_pdf.py"
+  ],
+  "other_payloads_identical": true,
+  "sha256": "4095c807cf9ba8137868c15a6649a365b08bd073b375cda9caf0f484162394e0"
+}

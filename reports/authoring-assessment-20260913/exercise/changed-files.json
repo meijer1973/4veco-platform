@@ -1,0 +1,173 @@
+{
+  "baseline": "0acaaa97443e5c4fee34f7da8a12ccd5db62d762",
+  "final_commit": "d00d6209e6413a0b2889719145be9e97a673632c",
+  "platform_commit": "85b0f347f3070e005eae3f35f0b11ce6eac71b4d",
+  "changed_paths": [
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.html",
+      "bytes": 49212,
+      "sha256": "f494e884ca0512d5edaeab0167690bec0be7bcb0faea16c870fc23039f1db8fb"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.md",
+      "bytes": 26782,
+      "sha256": "76fbc957f27b2fc189e275167251fa00229490c7fb4b96c74a9e5f210dfcddb3"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.pdf",
+      "bytes": 112925,
+      "sha256": "5dd4d2f87c047883f6a776bbddf1c2d8b8b7de1f9d774ab7c997a3347359061e"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.html",
+      "bytes": 4582811,
+      "sha256": "4b5d6a202c3e20e0e64df601bf2a4c38f13ab56be6d84299ad72dd595f73c9bb"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.md",
+      "bytes": 44910,
+      "sha256": "1cf7010885a9153523bb3440c84544b46a2202d06821c4a03f224a7d96983666"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf",
+      "bytes": 2767191,
+      "sha256": "71e48a0ef136d4f5f16eeb6dc28c8517283c190036905fbd2a3c93a044f19ebb"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html",
+      "bytes": 15664,
+      "sha256": "619ed6ef4d6b469c3af2ffd6dccf3a13dccfda61168e7c697ebcaae158c90270"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md",
+      "bytes": 4742,
+      "sha256": "6ddb5bb0430f04dd6d252224a2b02dedc9cd5be409a335aaaf36b233ad436df4"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf",
+      "bytes": 37137,
+      "sha256": "708d2addf98dc1d2a216d8accdb420f480fbdf30317be0b64c44dcbba6d853be"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html",
+      "bytes": 460578,
+      "sha256": "8ac56f59dfb380e637503fe586bf695923f11a96db98f39b464f72a7d949da0b"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md",
+      "bytes": 4852,
+      "sha256": "613050a86169804e7474748482f7e0a76b54e04feaaebe5f8b3b423d4cacb451"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
+      "bytes": 333746,
+      "sha256": "35f8702efad5b76763224bf6adda8713c6f83eea3777d31dfce0b4a36531d8ac"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html",
+      "bytes": 466142,
+      "sha256": "b837be23aa4c85b3eeb0b87651a102efc9783eefd61bddd9e4ddee94edddbd40"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md",
+      "bytes": 8093,
+      "sha256": "bab094fd470571c38e869516ecdd12b26346df93635b1618f03a54f232f97da4"
+    },
+    {
+      "status": "M",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
+      "bytes": 345510,
+      "sha256": "fd3f07c3f732504c4389289c8dcfcb29bb4615a6a6bee4aa5f750614aa05a21f"
+    }
+  ],
+  "supplemental_local_inputs": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg",
+      "bytes": 2479,
+      "sha256": "7e1674e16c93069b27e6cd1876c6729c36b5837c9a04478df161fde5cd3f6b54",
+      "required_by": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.png",
+      "bytes": 333852,
+      "sha256": "08423a4a6f26c875a4c3ccd8c4bb3421dbc645b328c8fd5523aee075afb25808",
+      "required_by": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg (existing renderer PNG counterpart)"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.1_fig_1.svg",
+      "bytes": 2479,
+      "sha256": "7e1674e16c93069b27e6cd1876c6729c36b5837c9a04478df161fde5cd3f6b54",
+      "required_by": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.md"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.1_fig_1.png",
+      "bytes": 333852,
+      "sha256": "08423a4a6f26c875a4c3ccd8c4bb3421dbc645b328c8fd5523aee075afb25808",
+      "required_by": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.1_fig_1.svg (existing renderer PNG counterpart)"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_1.svg",
+      "bytes": 2684,
+      "sha256": "e526a1f6fcdf894481e6c0c1463f3ce6f6edb79ff59e2c5c1311df143eab45de",
+      "required_by": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.md"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_1.png",
+      "bytes": 583590,
+      "sha256": "ddfbb233847f470ad03fed48af4848ca6e7da96d0e148d76e6a45360995dfe4d",
+      "required_by": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_1.svg (existing renderer PNG counterpart)"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_2.svg",
+      "bytes": 2839,
+      "sha256": "0c40529466e635428befbf57ee005f8f80c958fbb5232df073708ef87e1bc6ea",
+      "required_by": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.md"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_2.png",
+      "bytes": 495833,
+      "sha256": "0d4474d868cb4578c62027abc9492ad8061e3d56e55ac9e96b7c8dfe274494d4",
+      "required_by": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_2.svg (existing renderer PNG counterpart)"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_1.svg",
+      "bytes": 3522,
+      "sha256": "9373f13886cb14acedcd0d68e0633ce05caa0e3290b59e1cfc57bd602f795c2f",
+      "required_by": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.md"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_1.png",
+      "bytes": 678181,
+      "sha256": "862dc99ef45280d39c1ab0b30cbbbc8a8013d636d6a03032d43fed33e28daa48",
+      "required_by": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_1.svg (existing renderer PNG counterpart)"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_2.svg",
+      "bytes": 3202,
+      "sha256": "22b0627d26cf1ef1bacd64e2f35cb0d1c959ed4d94f68e593874df3ced72d9a9",
+      "required_by": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.md"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_2.png",
+      "bytes": 790422,
+      "sha256": "99c1be59db35abaca4ced1282c8b85bead549c844a3e520ac5935b3500f46b6a",
+      "required_by": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_2.svg (existing renderer PNG counterpart)"
+    }
+  ],
+  "patch_bytes": 71822,
+  "patch_sha256": "de8eb74ead1a094a95fd2f246f910da51f9f0daf67f9d0f156c8b6c358051b48"
+}

@@ -1,0 +1,8 @@
+{
+  "lane": "textbook",
+  "base": "origin/main",
+  "head": "5c72fdb04865dee214da677fcbc9d09c1073bc46",
+  "exit": 1,
+  "status": "FAIL",
+  "blocker": "Existing refreshed opgaven.zip classified unknown"
+}

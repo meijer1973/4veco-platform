@@ -1,0 +1,14 @@
+--- before
+
++++ after
+
+@@ -321,7 +321,7 @@
+
+ <p><strong>Opgave 2</strong> <em>(herken constante en variabele
+ kosten)</em></p>
+ <p>Een kleine drukkerij maakt posters. De drukkerij betaalt per maand
+-EUR 900 huur en EUR 150 voor een vast softwareabonnement. Papier en inkt
++EUR 900 huur en EUR 175 voor een vast softwareabonnement. Papier en inkt
+ kosten EUR 2 per poster.</p>
+ <p><strong>A.</strong> Welke kosten zijn constante kosten?</p>
+ <p><strong>B.</strong> Welke kosten zijn variabele kosten?</p>

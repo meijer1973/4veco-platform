@@ -1,0 +1,1130 @@
+[
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\assessment.md",
+    "portable": "assessment.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\protocol.md",
+    "portable": "protocol.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\measurement-summary.json",
+    "portable": "measurement-summary.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1-antwoorden-html-semantic.diff",
+    "portable": "exercise/2.1-antwoorden-html-semantic.diff"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1-antwoorden-page2-text.diff",
+    "portable": "exercise/2.1-antwoorden-page2-text.diff"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1-antwoorden-page3-text.diff",
+    "portable": "exercise/2.1-antwoorden-page3-text.diff"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1-hoofdstuk-html-semantic.diff",
+    "portable": "exercise/2.1-hoofdstuk-html-semantic.diff"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1-hoofdstuk-page7-text.diff",
+    "portable": "exercise/2.1-hoofdstuk-page7-text.diff"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1.1-antwoorden-html-semantic.diff",
+    "portable": "exercise/2.1.1-antwoorden-html-semantic.diff"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1.1-antwoorden-page2-text.diff",
+    "portable": "exercise/2.1.1-antwoorden-page2-text.diff"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1.1-opgaven-html-semantic.diff",
+    "portable": "exercise/2.1.1-opgaven-html-semantic.diff"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1.1-opgaven-page3-text.diff",
+    "portable": "exercise/2.1.1-opgaven-page3-text.diff"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1.1-paragraaf-html-semantic.diff",
+    "portable": "exercise/2.1.1-paragraaf-html-semantic.diff"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1.1-paragraaf-page6-text.diff",
+    "portable": "exercise/2.1.1-paragraaf-page6-text.diff"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\bounded-diff-final.log",
+    "portable": "exercise/bounded-diff-final.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\bounded-diff.log",
+    "portable": "exercise/bounded-diff.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\chapter-build-longpath.log",
+    "portable": "exercise/chapter-build-longpath.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\chapter-build.log",
+    "portable": "exercise/chapter-build.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-commit.log",
+    "portable": "exercise/closure-20260914-commit.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-committed-diff-hygiene.log",
+    "portable": "exercise/closure-20260914-committed-diff-hygiene.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-export-and-restore.log",
+    "portable": "exercise/closure-20260914-export-and-restore.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-final-state.log",
+    "portable": "exercise/closure-20260914-final-state.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-governance-freshness.log",
+    "portable": "exercise/closure-20260914-governance-freshness.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-initial-state.log",
+    "portable": "exercise/closure-20260914-initial-state.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-lessons-fetch.log",
+    "portable": "exercise/closure-20260914-lessons-fetch.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-owner-check.log",
+    "portable": "exercise/closure-20260914-owner-check.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-owner-refresh.log",
+    "portable": "exercise/closure-20260914-owner-refresh.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-platform-fetch.log",
+    "portable": "exercise/closure-20260914-platform-fetch.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-precommit-hygiene.log",
+    "portable": "exercise/closure-20260914-precommit-hygiene.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-restore-baseline-zip.log",
+    "portable": "exercise/closure-20260914-restore-baseline-zip.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-scoped-checks.log",
+    "portable": "exercise/closure-20260914-scoped-checks.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-stage-zip-restore.log",
+    "portable": "exercise/closure-20260914-stage-zip-restore.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-textbook-lane-scope.log",
+    "portable": "exercise/closure-20260914-textbook-lane-scope.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-addendum-20260914.md",
+    "portable": "exercise/closure-addendum-20260914.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\commit-reviewed-correction.log",
+    "portable": "exercise/commit-reviewed-correction.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\committed-diff-hygiene.log",
+    "portable": "exercise/committed-diff-hygiene.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\completion.md",
+    "portable": "exercise/completion.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\diff-hygiene-final.log",
+    "portable": "exercise/diff-hygiene-final.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\diff-hygiene.log",
+    "portable": "exercise/diff-hygiene.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\events.jsonl",
+    "portable": "exercise/events.jsonl"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\finalize-generated-outputs-hygiene.log",
+    "portable": "exercise/finalize-generated-outputs-hygiene.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\finalize-generated-outputs.log",
+    "portable": "exercise/finalize-generated-outputs.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-byte-diff.log",
+    "portable": "exercise/html-byte-diff.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\independent-review.md",
+    "portable": "exercise/independent-review.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\initial-diff.log",
+    "portable": "exercise/initial-diff.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\lessons-final-fetch.log",
+    "portable": "exercise/lessons-final-fetch.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\lessons-final-owner-check.log",
+    "portable": "exercise/lessons-final-owner-check.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\lessons-final-status.log",
+    "portable": "exercise/lessons-final-status.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\measurement-summary.json",
+    "portable": "exercise/measurement-summary.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\offline-final-html-retry.log",
+    "portable": "exercise/offline-final-html-retry.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\offline-final-html.log",
+    "portable": "exercise/offline-final-html.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\output-comparison.log",
+    "portable": "exercise/output-comparison.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\page-renders.log",
+    "portable": "exercise/page-renders.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\paragraph-build.log",
+    "portable": "exercise/paragraph-build.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\part-a-validator.log",
+    "portable": "exercise/part-a-validator.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\pdf-page-map.json",
+    "portable": "exercise/pdf-page-map.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\platform-final-status.log",
+    "portable": "exercise/platform-final-status.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\review-pages.json",
+    "portable": "exercise/review-pages.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\review-ready.md",
+    "portable": "exercise/review-ready.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\scoped-final-check.log",
+    "portable": "exercise/scoped-final-check.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\scoped-review-manifest.json",
+    "portable": "exercise/scoped-review-manifest.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\scoped-review-manifest.sha256",
+    "portable": "exercise/scoped-review-manifest.sha256"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\source-diff.log",
+    "portable": "exercise/source-diff.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\stage-reviewed-correction.log",
+    "portable": "exercise/stage-reviewed-correction.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\task-prompt.md",
+    "portable": "exercise/task-prompt.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\textbook-lane-scope.log",
+    "portable": "exercise/textbook-lane-scope.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\visual-page-comparison.json",
+    "portable": "exercise/visual-page-comparison.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\zip-member-comparison.json",
+    "portable": "exercise/zip-member-comparison.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914\\2.1.1 Kostenstructuren – opgaven.zip",
+    "portable": "exercise/closure-20260914/2.1.1 Kostenstructuren – opgaven.zip"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914\\manifest.json",
+    "portable": "exercise/closure-20260914/manifest.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914\\verification.json",
+    "portable": "exercise/closure-20260914/verification.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\archive-check.json",
+    "portable": "layout/archive-check.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-render.log",
+    "portable": "layout/baseline-render.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-rest.log",
+    "portable": "layout/baseline-rest.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-text.json",
+    "portable": "layout/baseline-text.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-text.log",
+    "portable": "layout/baseline-text.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\build-final.log",
+    "portable": "layout/build-final.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\build-lf.log",
+    "portable": "layout/build-lf.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\build-repair.log",
+    "portable": "layout/build-repair.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\candidate-pagination.log",
+    "portable": "layout/candidate-pagination.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\candidate-render.log",
+    "portable": "layout/candidate-render.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\commit-repair.log",
+    "portable": "layout/commit-repair.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\committed-sha.log",
+    "portable": "layout/committed-sha.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\compact-candidate.log",
+    "portable": "layout/compact-candidate.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\completion.md",
+    "portable": "layout/completion.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\content-check.json",
+    "portable": "layout/content-check.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\content-final.log",
+    "portable": "layout/content-final.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\content-first.log",
+    "portable": "layout/content-first.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\content-lf.log",
+    "portable": "layout/content-lf.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\diff-first.log",
+    "portable": "layout/diff-first.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\events.jsonl",
+    "portable": "layout/events.jsonl"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\evidence-inventory.log",
+    "portable": "layout/evidence-inventory.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\evidence-replay.log",
+    "portable": "layout/evidence-replay.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\fetch-final.log",
+    "portable": "layout/fetch-final.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-measurements.log",
+    "portable": "layout/final-measurements.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-ownership.log",
+    "portable": "layout/final-ownership.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-render.log",
+    "portable": "layout/final-render.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-source-diff.log",
+    "portable": "layout/final-source-diff.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-status-before-commit.log",
+    "portable": "layout/final-status-before-commit.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\hygiene-lf.log",
+    "portable": "layout/hygiene-lf.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\independent-review.md",
+    "portable": "layout/independent-review.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\inspect-archive.log",
+    "portable": "layout/inspect-archive.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\lane-scope.log",
+    "portable": "layout/lane-scope.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\logging-overhead.jsonl",
+    "portable": "layout/logging-overhead.jsonl"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\measurement-summary.json",
+    "portable": "layout/measurement-summary.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\measurement-summary.log",
+    "portable": "layout/measurement-summary.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\pdf-text-difference.log",
+    "portable": "layout/pdf-text-difference.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\pixel-check.log",
+    "portable": "layout/pixel-check.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\pixel-differences.json",
+    "portable": "layout/pixel-differences.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\platform-final-status.log",
+    "portable": "layout/platform-final-status.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\repack-archive.log",
+    "portable": "layout/repack-archive.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\repack-lf.log",
+    "portable": "layout/repack-lf.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\repaired-render.log",
+    "portable": "layout/repaired-render.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\repaired-text.json",
+    "portable": "layout/repaired-text.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\review-request.md",
+    "portable": "layout/review-request.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\snapshot-lf.log",
+    "portable": "layout/snapshot-lf.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\snapshot.log",
+    "portable": "layout/snapshot.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\stage-repair.log",
+    "portable": "layout/stage-repair.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\status-committed.log",
+    "portable": "layout/status-committed.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\task-prompt.md",
+    "portable": "layout/task-prompt.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\2.1.1 Kostenstructuren – opgaven.zip",
+    "portable": "layout/closure-20260914/2.1.1 Kostenstructuren – opgaven.zip"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\closure-addendum.md",
+    "portable": "layout/closure-20260914/closure-addendum.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\commands.jsonl",
+    "portable": "layout/closure-20260914/commands.jsonl"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\commit.log",
+    "portable": "layout/closure-20260914/commit.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\final-diff-check.log",
+    "portable": "layout/closure-20260914/final-diff-check.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\final-status.log",
+    "portable": "layout/closure-20260914/final-status.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\prepare-diff-check.log",
+    "portable": "layout/closure-20260914/prepare-diff-check.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\prepare-preservation.json",
+    "portable": "layout/closure-20260914/prepare-preservation.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\textbook-lane-scope.log",
+    "portable": "layout/closure-20260914/textbook-lane-scope.log"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\verify-preservation.json",
+    "portable": "layout/closure-20260914/verify-preservation.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\changed-pages.json",
+    "portable": "paragraph/changed-pages.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-addendum-20260914.md",
+    "portable": "paragraph/closure-addendum-20260914.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\command-log.md",
+    "portable": "paragraph/command-log.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\completion.md",
+    "portable": "paragraph/completion.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\events.jsonl",
+    "portable": "paragraph/events.jsonl"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\figure-geometry.json",
+    "portable": "paragraph/figure-geometry.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\html-check.json",
+    "portable": "paragraph/html-check.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\independent-review.md",
+    "portable": "paragraph/independent-review.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\lane-scope-output.txt",
+    "portable": "paragraph/lane-scope-output.txt"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\lane-scope-result.json",
+    "portable": "paragraph/lane-scope-result.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\local-validation.json",
+    "portable": "paragraph/local-validation.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\measurement-summary.json",
+    "portable": "paragraph/measurement-summary.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\source-output-checks.json",
+    "portable": "paragraph/source-output-checks.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\task-prompt.md",
+    "portable": "paragraph/task-prompt.md"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\delivery\\2.1.1 Kostenstructuren – opgaven.zip",
+    "portable": "paragraph/closure-20260914/delivery/2.1.1 Kostenstructuren – opgaven.zip"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\events.jsonl",
+    "portable": "paragraph/closure-20260914/events.jsonl"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\lane-scope-result.json",
+    "portable": "paragraph/closure-20260914/lane-scope-result.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\lane-scope.txt",
+    "portable": "paragraph/closure-20260914/lane-scope.txt"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\packaging-export.json",
+    "portable": "paragraph/closure-20260914/packaging-export.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\packaging-verify.json",
+    "portable": "paragraph/closure-20260914/packaging-verify.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\part-a-validation-result.json",
+    "portable": "paragraph/closure-20260914/part-a-validation-result.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\part-a-validation.txt",
+    "portable": "paragraph/closure-20260914/part-a-validation.txt"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p1-after.png",
+    "portable": "exercise/renders/2.1-antwoorden-p1-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p1-before.png",
+    "portable": "exercise/renders/2.1-antwoorden-p1-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p2-after.png",
+    "portable": "exercise/renders/2.1-antwoorden-p2-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p2-before.png",
+    "portable": "exercise/renders/2.1-antwoorden-p2-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p3-after.png",
+    "portable": "exercise/renders/2.1-antwoorden-p3-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p3-before.png",
+    "portable": "exercise/renders/2.1-antwoorden-p3-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p4-after.png",
+    "portable": "exercise/renders/2.1-antwoorden-p4-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p4-before.png",
+    "portable": "exercise/renders/2.1-antwoorden-p4-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-hoofdstuk-p6-after.png",
+    "portable": "exercise/renders/2.1-hoofdstuk-p6-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-hoofdstuk-p6-before.png",
+    "portable": "exercise/renders/2.1-hoofdstuk-p6-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-hoofdstuk-p7-after.png",
+    "portable": "exercise/renders/2.1-hoofdstuk-p7-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-hoofdstuk-p7-before.png",
+    "portable": "exercise/renders/2.1-hoofdstuk-p7-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-hoofdstuk-p8-after.png",
+    "portable": "exercise/renders/2.1-hoofdstuk-p8-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-hoofdstuk-p8-before.png",
+    "portable": "exercise/renders/2.1-hoofdstuk-p8-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-antwoorden-p1-after.png",
+    "portable": "exercise/renders/2.1.1-antwoorden-p1-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-antwoorden-p1-before.png",
+    "portable": "exercise/renders/2.1.1-antwoorden-p1-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-antwoorden-p2-after.png",
+    "portable": "exercise/renders/2.1.1-antwoorden-p2-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-antwoorden-p2-before.png",
+    "portable": "exercise/renders/2.1.1-antwoorden-p2-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-antwoorden-p3-after.png",
+    "portable": "exercise/renders/2.1.1-antwoorden-p3-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-antwoorden-p3-before.png",
+    "portable": "exercise/renders/2.1.1-antwoorden-p3-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-opgaven-p2-after.png",
+    "portable": "exercise/renders/2.1.1-opgaven-p2-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-opgaven-p2-before.png",
+    "portable": "exercise/renders/2.1.1-opgaven-p2-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-opgaven-p3-after.png",
+    "portable": "exercise/renders/2.1.1-opgaven-p3-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-opgaven-p3-before.png",
+    "portable": "exercise/renders/2.1.1-opgaven-p3-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-opgaven-p4-after.png",
+    "portable": "exercise/renders/2.1.1-opgaven-p4-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-opgaven-p4-before.png",
+    "portable": "exercise/renders/2.1.1-opgaven-p4-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-paragraaf-p5-after.png",
+    "portable": "exercise/renders/2.1.1-paragraaf-p5-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-paragraaf-p5-before.png",
+    "portable": "exercise/renders/2.1.1-paragraaf-p5-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-paragraaf-p6-after.png",
+    "portable": "exercise/renders/2.1.1-paragraaf-p6-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-paragraaf-p6-before.png",
+    "portable": "exercise/renders/2.1.1-paragraaf-p6-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-paragraaf-p7-after.png",
+    "portable": "exercise/renders/2.1.1-paragraaf-p7-after.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-paragraaf-p7-before.png",
+    "portable": "exercise/renders/2.1.1-paragraaf-p7-before.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\results.json",
+    "portable": "exercise/html-offline-review/results.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\2.1-antwoorden-p2.png",
+    "portable": "exercise/html-offline-review/2.1-antwoorden-p2.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\2.1-antwoorden-p3.png",
+    "portable": "exercise/html-offline-review/2.1-antwoorden-p3.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\2.1-hoofdstuk-p7.png",
+    "portable": "exercise/html-offline-review/2.1-hoofdstuk-p7.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\2.1.1-antwoorden-p2.png",
+    "portable": "exercise/html-offline-review/2.1.1-antwoorden-p2.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\2.1.1-opgaven-p3.png",
+    "portable": "exercise/html-offline-review/2.1.1-opgaven-p3.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\2.1.1-paragraaf-p6.png",
+    "portable": "exercise/html-offline-review/2.1.1-paragraaf-p6.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-page-1.png",
+    "portable": "layout/baseline-page-1.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-page-2.png",
+    "portable": "layout/baseline-page-2.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-page-3.png",
+    "portable": "layout/baseline-page-3.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-page-4.png",
+    "portable": "layout/baseline-page-4.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-page-5.png",
+    "portable": "layout/baseline-page-5.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-page-1.png",
+    "portable": "layout/final-page-1.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-page-2.png",
+    "portable": "layout/final-page-2.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-page-3.png",
+    "portable": "layout/final-page-3.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-page-4.png",
+    "portable": "layout/final-page-4.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-page-5.png",
+    "portable": "layout/final-page-5.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-html-summary.png",
+    "portable": "layout/final-html-summary.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-01.jpg",
+    "portable": "paragraph/qa-pages-final/spread-01.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-02.jpg",
+    "portable": "paragraph/qa-pages-final/spread-02.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-03.jpg",
+    "portable": "paragraph/qa-pages-final/spread-03.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-04.jpg",
+    "portable": "paragraph/qa-pages-final/spread-04.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-05.jpg",
+    "portable": "paragraph/qa-pages-final/spread-05.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-06.jpg",
+    "portable": "paragraph/qa-pages-final/spread-06.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-07.jpg",
+    "portable": "paragraph/qa-pages-final/spread-07.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-08.jpg",
+    "portable": "paragraph/qa-pages-final/spread-08.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-09.jpg",
+    "portable": "paragraph/qa-pages-final/spread-09.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-10.jpg",
+    "portable": "paragraph/qa-pages-final/spread-10.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-11.jpg",
+    "portable": "paragraph/qa-pages-final/spread-11.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-12.jpg",
+    "portable": "paragraph/qa-pages-final/spread-12.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-13.jpg",
+    "portable": "paragraph/qa-pages-final/spread-13.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\antwoorden-1.png",
+    "portable": "paragraph/qa-pages-repair-v2/antwoorden-1.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\antwoorden-2.png",
+    "portable": "paragraph/qa-pages-repair-v2/antwoorden-2.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\antwoorden-3.png",
+    "portable": "paragraph/qa-pages-repair-v2/antwoorden-3.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\antwoorden-4.png",
+    "portable": "paragraph/qa-pages-repair-v2/antwoorden-4.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\antwoorden-5.png",
+    "portable": "paragraph/qa-pages-repair-v2/antwoorden-5.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\antwoorden-6.png",
+    "portable": "paragraph/qa-pages-repair-v2/antwoorden-6.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-1.png",
+    "portable": "paragraph/qa-pages-repair-v2/opgaven-1.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-2.png",
+    "portable": "paragraph/qa-pages-repair-v2/opgaven-2.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-3.png",
+    "portable": "paragraph/qa-pages-repair-v2/opgaven-3.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-4.png",
+    "portable": "paragraph/qa-pages-repair-v2/opgaven-4.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-5.png",
+    "portable": "paragraph/qa-pages-repair-v2/opgaven-5.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-6.png",
+    "portable": "paragraph/qa-pages-repair-v2/opgaven-6.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-7.png",
+    "portable": "paragraph/qa-pages-repair-v2/opgaven-7.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-8.png",
+    "portable": "paragraph/qa-pages-repair-v2/opgaven-8.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-01.png",
+    "portable": "paragraph/qa-pages-repair-v2/paragraaf-01.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-02.png",
+    "portable": "paragraph/qa-pages-repair-v2/paragraaf-02.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-03.png",
+    "portable": "paragraph/qa-pages-repair-v2/paragraaf-03.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-04.png",
+    "portable": "paragraph/qa-pages-repair-v2/paragraaf-04.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-05.png",
+    "portable": "paragraph/qa-pages-repair-v2/paragraaf-05.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-06.png",
+    "portable": "paragraph/qa-pages-repair-v2/paragraaf-06.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-07.png",
+    "portable": "paragraph/qa-pages-repair-v2/paragraaf-07.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-08.png",
+    "portable": "paragraph/qa-pages-repair-v2/paragraaf-08.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-09.png",
+    "portable": "paragraph/qa-pages-repair-v2/paragraaf-09.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-10.png",
+    "portable": "paragraph/qa-pages-repair-v2/paragraaf-10.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-11.png",
+    "portable": "paragraph/qa-pages-repair-v2/paragraaf-11.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-geometry-check.json",
+    "portable": "reviewer/paragraph-geometry-check.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\events.jsonl",
+    "portable": "reviewer/events.jsonl"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-1.png",
+    "portable": "reviewer/paragraph-html-screen-final/antwoorden-1.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-2.png",
+    "portable": "reviewer/paragraph-html-screen-final/antwoorden-2.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-3.png",
+    "portable": "reviewer/paragraph-html-screen-final/antwoorden-3.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-4.png",
+    "portable": "reviewer/paragraph-html-screen-final/antwoorden-4.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-5.png",
+    "portable": "reviewer/paragraph-html-screen-final/antwoorden-5.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-6.png",
+    "portable": "reviewer/paragraph-html-screen-final/antwoorden-6.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-7.png",
+    "portable": "reviewer/paragraph-html-screen-final/antwoorden-7.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-1.png",
+    "portable": "reviewer/paragraph-html-screen-final/opgaven-1.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-2.png",
+    "portable": "reviewer/paragraph-html-screen-final/opgaven-2.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-3.png",
+    "portable": "reviewer/paragraph-html-screen-final/opgaven-3.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-4.png",
+    "portable": "reviewer/paragraph-html-screen-final/opgaven-4.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-5.png",
+    "portable": "reviewer/paragraph-html-screen-final/opgaven-5.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-6.png",
+    "portable": "reviewer/paragraph-html-screen-final/opgaven-6.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-7.png",
+    "portable": "reviewer/paragraph-html-screen-final/opgaven-7.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-8.png",
+    "portable": "reviewer/paragraph-html-screen-final/opgaven-8.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-01.png",
+    "portable": "reviewer/paragraph-html-screen-final/paragraaf-01.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-02.png",
+    "portable": "reviewer/paragraph-html-screen-final/paragraaf-02.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-03.png",
+    "portable": "reviewer/paragraph-html-screen-final/paragraaf-03.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-04.png",
+    "portable": "reviewer/paragraph-html-screen-final/paragraaf-04.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-05.png",
+    "portable": "reviewer/paragraph-html-screen-final/paragraaf-05.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-06.png",
+    "portable": "reviewer/paragraph-html-screen-final/paragraaf-06.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-07.png",
+    "portable": "reviewer/paragraph-html-screen-final/paragraaf-07.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-08.png",
+    "portable": "reviewer/paragraph-html-screen-final/paragraaf-08.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-09.png",
+    "portable": "reviewer/paragraph-html-screen-final/paragraaf-09.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-10.png",
+    "portable": "reviewer/paragraph-html-screen-final/paragraaf-10.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-11.png",
+    "portable": "reviewer/paragraph-html-screen-final/paragraaf-11.png"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\results.json",
+    "portable": "reviewer/paragraph-html-screen-final/results.json"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-01.jpg",
+    "portable": "reviewer/paragraph-html-screen-final/spread-01.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-02.jpg",
+    "portable": "reviewer/paragraph-html-screen-final/spread-02.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-03.jpg",
+    "portable": "reviewer/paragraph-html-screen-final/spread-03.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-04.jpg",
+    "portable": "reviewer/paragraph-html-screen-final/spread-04.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-05.jpg",
+    "portable": "reviewer/paragraph-html-screen-final/spread-05.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-06.jpg",
+    "portable": "reviewer/paragraph-html-screen-final/spread-06.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-07.jpg",
+    "portable": "reviewer/paragraph-html-screen-final/spread-07.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-08.jpg",
+    "portable": "reviewer/paragraph-html-screen-final/spread-08.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-09.jpg",
+    "portable": "reviewer/paragraph-html-screen-final/spread-09.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-10.jpg",
+    "portable": "reviewer/paragraph-html-screen-final/spread-10.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-11.jpg",
+    "portable": "reviewer/paragraph-html-screen-final/spread-11.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-12.jpg",
+    "portable": "reviewer/paragraph-html-screen-final/spread-12.jpg"
+  },
+  {
+    "original": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-13.jpg",
+    "portable": "reviewer/paragraph-html-screen-final/spread-13.jpg"
+  }
+]

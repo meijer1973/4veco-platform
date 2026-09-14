@@ -1,0 +1,35 @@
+schema_version: 2
+partA:
+  paragraph: 2.1.1
+  title: Kostenstructuren
+  reviewed_on: '2026-09-13'
+  assessment_scope: 'local draft only; no hosted CI, publication or integration approval'
+  record_migration: Legacy record contained Part A evidence only (review_mode part-a); replaced historical draft assertions with the current independent review. No companion block existed or was changed.
+  browser_coverage: Local browser navigation denied ERR_BLOCKED_BY_CLIENT; no bypass. Browser-engine compatibility unverified.
+  static_html_coverage: 'Independent offline WeasyPrint screen-media review of final saved HTML; see review for hashes, 26 surfaces and limitations.'
+  review_file: 2.1.1-review.md
+  review_verdict: PASS
+  review_manifest_sha256: 76f9267ba0dc5934631cb9f74e49380b54b26e099630055a4e175f0f11f403d6
+  inventory:
+    - 2.1.1 Kostenstructuren – antwoorden.html
+    - 2.1.1 Kostenstructuren – antwoorden.md
+    - 2.1.1 Kostenstructuren – antwoorden.pdf
+    - 2.1.1 Kostenstructuren – opgaven.html
+    - 2.1.1 Kostenstructuren – opgaven.md
+    - 2.1.1 Kostenstructuren – opgaven.pdf
+    - 2.1.1 Kostenstructuren – paragraaf.html
+    - 2.1.1 Kostenstructuren – paragraaf.md
+    - 2.1.1 Kostenstructuren – paragraaf.pdf
+    - 2.1.1-textbook-foundation.json
+    - 2.1.1-textbook-plan.md
+    - _assets/2.1.1_fig_1.png
+    - _assets/2.1.1_fig_1.svg
+    - _assets/2.1.1_fig_2.png
+    - _assets/2.1.1_fig_2.svg
+    - _assets/2.1.1_fig_3.png
+    - _assets/2.1.1_fig_3.svg
+    - build_pdf.py
+  assets:
+    missing: []
+    svgpng_paired: true
+    naming_compliant: true

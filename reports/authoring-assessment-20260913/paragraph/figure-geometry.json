@@ -1,0 +1,90 @@
+{
+  "result": "PASS",
+  "scope": "Actual saved SVG polyline coordinates vs equation-derived scale; rounding tolerance 0.001px",
+  "curves": [
+    {
+      "file": "2.1.1_fig_2.svg",
+      "curve": "TCK",
+      "sampled_saved_svg_points": 101,
+      "max_pixel_error": 5.684341886080802e-14,
+      "domain": [
+        100,
+        200
+      ],
+      "values": [
+        120,
+        120
+      ]
+    },
+    {
+      "file": "2.1.1_fig_2.svg",
+      "curve": "TVK",
+      "sampled_saved_svg_points": 101,
+      "max_pixel_error": 5.684341886080802e-14,
+      "domain": [
+        100,
+        200
+      ],
+      "values": [
+        50.0,
+        100.0
+      ]
+    },
+    {
+      "file": "2.1.1_fig_2.svg",
+      "curve": "TK",
+      "sampled_saved_svg_points": 101,
+      "max_pixel_error": 5.684341886080802e-14,
+      "domain": [
+        100,
+        200
+      ],
+      "values": [
+        170.0,
+        220.0
+      ]
+    },
+    {
+      "file": "2.1.1_fig_3.svg",
+      "curve": "GCK",
+      "sampled_saved_svg_points": 101,
+      "max_pixel_error": 0.0004931506849175094,
+      "domain": [
+        100,
+        200
+      ],
+      "values": [
+        1.2,
+        0.6
+      ]
+    },
+    {
+      "file": "2.1.1_fig_3.svg",
+      "curve": "GVK",
+      "sampled_saved_svg_points": 101,
+      "max_pixel_error": 5.684341886080802e-14,
+      "domain": [
+        100,
+        200
+      ],
+      "values": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "file": "2.1.1_fig_3.svg",
+      "curve": "GTK",
+      "sampled_saved_svg_points": 101,
+      "max_pixel_error": 0.0004931506849175094,
+      "domain": [
+        100,
+        200
+      ],
+      "values": [
+        1.7,
+        1.1
+      ]
+    }
+  ]
+}

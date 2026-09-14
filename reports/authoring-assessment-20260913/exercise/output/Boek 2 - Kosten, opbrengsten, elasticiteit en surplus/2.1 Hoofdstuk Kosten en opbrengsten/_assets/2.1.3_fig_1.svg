@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="960" viewBox="0 0 760 960" role="img" aria-labelledby="title desc">
+  <title id="title">Marginale waarden lees je tussen twee rijen</title>
+  <desc id="desc">Voorbeeldtabel en berekening van MK en MO tussen Q is 20 en Q is 30.</desc>
+  <rect width="760" height="960" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" markerWidth="18" markerHeight="14" refX="16" refY="7" orient="auto">
+      <polygon points="0 0, 18 7, 0 14" fill="#1A5276"/>
+    </marker>
+  </defs>
+  <g font-family="Arial, DejaVu Sans, sans-serif">
+    <text x="45" y="58" font-size="38" font-weight="700" fill="#1A5276">Marginale waarden: tussen twee rijen</text>
+    <text x="47" y="104" font-size="30" font-weight="700" fill="#333">De tabel springt van Q = 20 naar Q = 30.</text>
+
+    <g transform="translate(60,145)">
+      <rect x="0" y="0" width="640" height="75" fill="#EDF0F3" stroke="#8A8A8A" stroke-width="3"/>
+      <rect x="0" y="75" width="640" height="86" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="3"/>
+      <rect x="0" y="161" width="640" height="86" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="3"/>
+      <line x1="130" y1="0" x2="130" y2="247" stroke="#8A8A8A" stroke-width="3"/>
+      <line x1="300" y1="0" x2="300" y2="247" stroke="#8A8A8A" stroke-width="3"/>
+      <line x1="470" y1="0" x2="470" y2="247" stroke="#8A8A8A" stroke-width="3"/>
+      <g font-size="31" font-weight="700" fill="#1a1a1a">
+        <text x="65" y="48" text-anchor="middle">Q</text>
+        <text x="215" y="48" text-anchor="middle">TK</text>
+        <text x="385" y="48" text-anchor="middle">TO</text>
+        <text x="555" y="48" text-anchor="middle">winst</text>
+      </g>
+      <g font-size="31" fill="#1a1a1a">
+        <text x="65" y="130" text-anchor="middle">20</text>
+        <text x="215" y="130" text-anchor="middle">260</text>
+        <text x="385" y="130" text-anchor="middle">160</text>
+        <text x="555" y="130" text-anchor="middle">-100</text>
+        <text x="65" y="216" text-anchor="middle">30</text>
+        <text x="215" y="216" text-anchor="middle">290</text>
+        <text x="385" y="216" text-anchor="middle">240</text>
+        <text x="555" y="216" text-anchor="middle">-50</text>
+      </g>
+    </g>
+
+    <path d="M380 415 L380 455" stroke="#1A5276" stroke-width="8" marker-end="url(#arrow)"/>
+
+    <rect x="55" y="475" width="650" height="175" rx="22" fill="#EAF3FA" stroke="#1A5276" stroke-width="5"/>
+    <text x="85" y="525" font-size="34" font-weight="700" fill="#1a1a1a">Stapgrootte</text>
+    <text x="320" y="525" font-size="32" fill="#1a1a1a">Delta Q = 30 - 20 = 10</text>
+    <text x="85" y="585" font-size="34" font-weight="700" fill="#1a1a1a">Kosten erbij</text>
+    <text x="320" y="585" font-size="32" fill="#1a1a1a">Delta TK = 290 - 260 = 30</text>
+    <text x="320" y="630" font-size="32" fill="#1a1a1a">MK = 30 / 10 = 3</text>
+
+    <rect x="55" y="680" width="650" height="160" rx="22" fill="#EEF7EE" stroke="#3B7A3B" stroke-width="5"/>
+    <text x="85" y="730" font-size="34" font-weight="700" fill="#1a1a1a">Opbrengst erbij</text>
+    <text x="85" y="778" font-size="32" fill="#1a1a1a">Delta TO = 240 - 160 = 80</text>
+    <text x="85" y="820" font-size="32" fill="#1a1a1a">MO = 80 / 10 = 8</text>
+
+    <rect x="55" y="865" width="650" height="75" rx="22" fill="#FFF8E6" stroke="#B7791F" stroke-width="5"/>
+    <text x="85" y="912" font-size="30" font-weight="700" fill="#1a1a1a">Controle: deel altijd door de stapgrootte.</text>
+  </g>
+</svg>

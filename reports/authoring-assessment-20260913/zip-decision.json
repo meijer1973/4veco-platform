@@ -1,0 +1,105 @@
+{
+  "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.zip",
+  "baseline": "0acaaa97443e5c4fee34f7da8a12ccd5db62d762",
+  "baseline_sha256": "bb951635865a5e7e321f562ef73c640c84948f99441385f217cf366d9e3e996d",
+  "members": [
+    {
+      "name": "2.1.1 Kostenstructuren – antwoorden.html",
+      "bytes": 15664,
+      "crc": 760031773
+    },
+    {
+      "name": "2.1.1 Kostenstructuren – antwoorden.md",
+      "bytes": 4742,
+      "crc": 245653536
+    },
+    {
+      "name": "2.1.1 Kostenstructuren – antwoorden.pdf",
+      "bytes": 37085,
+      "crc": 2106878344
+    },
+    {
+      "name": "2.1.1 Kostenstructuren – opgaven.html",
+      "bytes": 38146,
+      "crc": 632497719
+    },
+    {
+      "name": "2.1.1 Kostenstructuren – opgaven.md",
+      "bytes": 4852,
+      "crc": 2935843832
+    },
+    {
+      "name": "2.1.1 Kostenstructuren – opgaven.pdf",
+      "bytes": 55091,
+      "crc": 4105581133
+    },
+    {
+      "name": "2.1.1 Kostenstructuren – paragraaf.html",
+      "bytes": 43710,
+      "crc": 1205046660
+    },
+    {
+      "name": "2.1.1 Kostenstructuren – paragraaf.md",
+      "bytes": 8093,
+      "crc": 2519384882
+    },
+    {
+      "name": "2.1.1 Kostenstructuren – paragraaf.pdf",
+      "bytes": 67050,
+      "crc": 1348916321
+    },
+    {
+      "name": "2.1.1-quality-ref.yaml",
+      "bytes": 832,
+      "crc": 926220375
+    },
+    {
+      "name": "2.1.1-review.md",
+      "bytes": 1321,
+      "crc": 2308770412
+    },
+    {
+      "name": "build_pdf.py",
+      "bytes": 3293,
+      "crc": 1542835946
+    },
+    {
+      "name": "_assets/",
+      "bytes": 0,
+      "crc": 0
+    },
+    {
+      "name": "_assets/2.1.1_fig_1.png",
+      "bytes": 17026,
+      "crc": 1086025639
+    },
+    {
+      "name": "_assets/2.1.1_fig_1.svg",
+      "bytes": 2177,
+      "crc": 354197257
+    }
+  ],
+  "decision": "Optional delivery convenience: export refreshed packages outside tracked source; retain historical ZIP unchanged. No classifier exception.",
+  "requirements_checked": [
+    "skills/econ-textbook-paragraph.md section1.2",
+    "scripts/lib/paragraph-types.js",
+    "build-scripts/textbook/paragraph_pdf.py"
+  ],
+  "current_consumers_search": {
+    "argv": [
+      "git",
+      "grep",
+      "-l",
+      "-F",
+      "opgaven.zip",
+      "0acaaa97443e5c4fee34f7da8a12ccd5db62d762",
+      "--",
+      "*.md",
+      "*.py",
+      "*.html",
+      "*.json"
+    ],
+    "exit": 1,
+    "result": "No tracked consumer at baseline; generated assessment handoff reference is separately updated."
+  }
+}

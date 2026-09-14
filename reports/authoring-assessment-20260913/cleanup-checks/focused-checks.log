@@ -1,0 +1,41 @@
+FAIL build-scripts/workflows/check-paragraph-workflow-wording.test.js
+  ● check-paragraph-workflow-wording › active workflow surfaces preserve the two-lane and full-route contract
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  2
+    + Received  + 11
+
+      Object {
+    -   "failures": Array [],
+    +   "failures": Array [
+    +     "AGENTS.md: linked file missing: https://github.com/meijer1973/4veco-lessen/blob/main/specifications/companion-core-specifications.md",
+    +     "AGENTS.md: linked file missing: https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-vision.md",
+    +     "AGENTS.md: linked file missing: https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-end-state.md",
+    +     "RESEARCH_AGENT_MAP.md: linked file missing: https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-vision.md",
+    +     "RESEARCH_AGENT_MAP.md: linked file missing: https://github.com/meijer1973/4veco-lessen/blob/main/specifications/product-end-state.md",
+    +     "RESEARCH_AGENT_MAP.md: linked file missing: https://github.com/meijer1973/4veco-lessen/blob/main/specifications/companion-core-specifications.md",
+    +     "RESEARCH_AGENT_MAP.md: linked file missing: https://github.com/meijer1973/4veco-lessen/blob/main/RESEARCH_AGENT_MAP.md",
+    +     "AGENT_GITHUB_ENTRY.md: linked file missing: https://github.com/meijer1973/4veco-lessen/blob/main/RESEARCH_AGENT_MAP.md",
+    +   ],
+        "files_checked": 16,
+    -   "ok": true,
+    +   "ok": false,
+      }
+
+      88 | describe('check-paragraph-workflow-wording', () => {
+      89 |   test('active workflow surfaces preserve the two-lane and full-route contract', () => {
+    > 90 |     expect(checkParagraphWorkflowWording()).toEqual({
+         |                                             ^
+      91 |       ok: true,
+      92 |       files_checked: 16,
+      93 |       failures: [],
+
+      at Object.toEqual (build-scripts/workflows/check-paragraph-workflow-wording.test.js:90:45)
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       1 failed, 96 passed, 97 total
+Snapshots:   0 total
+Time:        5.882 s
+Ran all test suites matching build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js|build-scripts/workflows/check-paragraph-workflow-wording.test.js.
+Test results written to: ..\focused-jest.json

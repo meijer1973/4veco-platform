@@ -1,0 +1,2410 @@
+[
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\assessment.md",
+    "role": "historical-overview",
+    "bytes": 12801,
+    "sha256": "91e96905dcd542ada202164b3f6f4f9a742709313a9eaaf217b773448ea8179e",
+    "path": "assessment.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\protocol.md",
+    "role": "historical-overview",
+    "bytes": 4073,
+    "sha256": "37774d6f40bc0c1fe891df85eae039cde71a1866ffcf630545b360654e07f6f6",
+    "path": "protocol.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\measurement-summary.json",
+    "role": "historical-overview",
+    "bytes": 6770,
+    "sha256": "41bfa3ebc222d04545ee07d37ab6a211b712b765c78ac9826d524b5f50671fee",
+    "path": "measurement-summary.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1-antwoorden-html-semantic.diff",
+    "role": "assessment-record",
+    "bytes": 945,
+    "sha256": "d836513c6f86b4969b3026580dbe5278c98d9172f6e58546b67ccc2ff62085db",
+    "path": "exercise/2.1-antwoorden-html-semantic.diff"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1-antwoorden-page2-text.diff",
+    "role": "assessment-record",
+    "bytes": 183,
+    "sha256": "18cb23fcd25d4090e92945e3e092e4c988781bffb36ec453a273b98ab423713e",
+    "path": "exercise/2.1-antwoorden-page2-text.diff"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1-antwoorden-page3-text.diff",
+    "role": "assessment-record",
+    "bytes": 426,
+    "sha256": "219172d29cfd71dcf05928aad8ebcd9509988ba350b4715ce2865dc557d45a23",
+    "path": "exercise/2.1-antwoorden-page3-text.diff"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1-hoofdstuk-html-semantic.diff",
+    "role": "assessment-record",
+    "bytes": 544,
+    "sha256": "0b62d2225cc41c267a62f2a891ae7bfd95edd03c7eddb263148d2c9690fd2de0",
+    "path": "exercise/2.1-hoofdstuk-html-semantic.diff"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1-hoofdstuk-page7-text.diff",
+    "role": "assessment-record",
+    "bytes": 466,
+    "sha256": "9f25fa1f8a081e19f40eb239f868dca8866e6fb1a80597b7247baba871924cd1",
+    "path": "exercise/2.1-hoofdstuk-page7-text.diff"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1.1-antwoorden-html-semantic.diff",
+    "role": "assessment-record",
+    "bytes": 917,
+    "sha256": "53ff32aed44d737f432a0225619ef2f40ea61f4f04e5e445b5eaa6e85d2b1b42",
+    "path": "exercise/2.1.1-antwoorden-html-semantic.diff"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1.1-antwoorden-page2-text.diff",
+    "role": "assessment-record",
+    "bytes": 546,
+    "sha256": "47ba63409af929de298eb9e8f72c5058defa22fa325d04ebafbae237ff05d5a0",
+    "path": "exercise/2.1.1-antwoorden-page2-text.diff"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1.1-opgaven-html-semantic.diff",
+    "role": "assessment-record",
+    "bytes": 516,
+    "sha256": "4df62ec66188c7e890ac3a9e3e3635c9bff0699e1046c2666b6449977bbb8cc1",
+    "path": "exercise/2.1.1-opgaven-html-semantic.diff"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1.1-opgaven-page3-text.diff",
+    "role": "assessment-record",
+    "bytes": 413,
+    "sha256": "9de27a8e040fd8a737539f7395741bd594453a5b5abf9f4ad5c8c73cb74758ee",
+    "path": "exercise/2.1.1-opgaven-page3-text.diff"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1.1-paragraaf-html-semantic.diff",
+    "role": "assessment-record",
+    "bytes": 516,
+    "sha256": "d34af65277524fb712f4fdb0fb69cd068f08f7fd5b6bfc9f6ec7f2971377e0d8",
+    "path": "exercise/2.1.1-paragraaf-html-semantic.diff"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\2.1.1-paragraaf-page6-text.diff",
+    "role": "assessment-record",
+    "bytes": 451,
+    "sha256": "75052838b8dc6733f48c96411b26a3775b79f6c4322148644f1c12a864e8841a",
+    "path": "exercise/2.1.1-paragraaf-page6-text.diff"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\bounded-diff-final.log",
+    "role": "assessment-record",
+    "bytes": 1199,
+    "sha256": "579fd4ef815e929ff67d12ae3dd7799eac0420c3c62102035eade957ff2f7971",
+    "path": "exercise/bounded-diff-final.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\bounded-diff.log",
+    "role": "assessment-record",
+    "bytes": 1214,
+    "sha256": "10d78c56e3837bd1df57a8310aa9cdbf3dd45d046ebd2a1881d8048135fcedf3",
+    "path": "exercise/bounded-diff.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\chapter-build-longpath.log",
+    "role": "assessment-record",
+    "bytes": 447,
+    "sha256": "b7c7c972f0522fb22dae3202e84ea66f5a84c602453b801d196650538c7094a6",
+    "path": "exercise/chapter-build-longpath.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\chapter-build.log",
+    "role": "assessment-record",
+    "bytes": 1392,
+    "sha256": "7d319b62640656543e69606e7a8bde73a4be01e87f035e08cf5901c0a73657ba",
+    "path": "exercise/chapter-build.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-commit.log",
+    "role": "assessment-record",
+    "bytes": 155,
+    "sha256": "524c02e06332ed9f5b76a493cc0b58803c759348030e4ac22cec985cc3b4e4e9",
+    "path": "exercise/closure-20260914-commit.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-committed-diff-hygiene.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "exercise/closure-20260914-committed-diff-hygiene.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-export-and-restore.log",
+    "role": "assessment-record",
+    "bytes": 1814,
+    "sha256": "1c8d0b1fc0203f67c580f1f668ae0b1532c837f705cd288c1e93ec45b37c2e77",
+    "path": "exercise/closure-20260914-export-and-restore.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-final-state.log",
+    "role": "assessment-record",
+    "bytes": 39,
+    "sha256": "a86adfc3b3075e2ffeba980539156e7addd13d3891d7fa7ea1341ff40bfbb0cc",
+    "path": "exercise/closure-20260914-final-state.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-governance-freshness.log",
+    "role": "assessment-record",
+    "bytes": 603,
+    "sha256": "c0f33a11f33e0c43512ce38a6b60aa3662231e33d1ffd48212b4f1aaeada5891",
+    "path": "exercise/closure-20260914-governance-freshness.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-initial-state.log",
+    "role": "assessment-record",
+    "bytes": 39,
+    "sha256": "a86adfc3b3075e2ffeba980539156e7addd13d3891d7fa7ea1341ff40bfbb0cc",
+    "path": "exercise/closure-20260914-initial-state.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-lessons-fetch.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "exercise/closure-20260914-lessons-fetch.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-owner-check.log",
+    "role": "assessment-record",
+    "bytes": 1091,
+    "sha256": "c6d47a7184db7f4ee898a0b9801d479f484f5cb1fa8ace3211d52a3763448201",
+    "path": "exercise/closure-20260914-owner-check.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-owner-refresh.log",
+    "role": "assessment-record",
+    "bytes": 1045,
+    "sha256": "63572f9dbbcc20b69d33f1637aa3d04311df7be87c5e283d52ec3d3cd4ee3f0b",
+    "path": "exercise/closure-20260914-owner-refresh.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-platform-fetch.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "exercise/closure-20260914-platform-fetch.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-precommit-hygiene.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "exercise/closure-20260914-precommit-hygiene.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-restore-baseline-zip.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "exercise/closure-20260914-restore-baseline-zip.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-scoped-checks.log",
+    "role": "assessment-record",
+    "bytes": 940,
+    "sha256": "aedc42562cdb95ffb1aa9f2e2ac6f2c26dc85e8176b338240b0cbcc954a29e0b",
+    "path": "exercise/closure-20260914-scoped-checks.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-stage-zip-restore.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "exercise/closure-20260914-stage-zip-restore.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914-textbook-lane-scope.log",
+    "role": "assessment-record",
+    "bytes": 2327,
+    "sha256": "bec33439e191d4de72e5c4963c2e66ef45113bc742c422575fbf6d4fe1e8a362",
+    "path": "exercise/closure-20260914-textbook-lane-scope.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-addendum-20260914.md",
+    "role": "assessment-record",
+    "bytes": 4522,
+    "sha256": "901020ec1cabe8805451d4b275fa0e253b397f76f5b8ea1ceedb33e158716a97",
+    "path": "exercise/closure-addendum-20260914.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\commit-reviewed-correction.log",
+    "role": "assessment-record",
+    "bytes": 160,
+    "sha256": "b4cf8fce77bdcc159c0f34766d5ebc15c564b809b8eb6dd213d6be5289644b12",
+    "path": "exercise/commit-reviewed-correction.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\committed-diff-hygiene.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "exercise/committed-diff-hygiene.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\completion.md",
+    "role": "assessment-record",
+    "bytes": 8118,
+    "sha256": "f1b6411b85fc7c440e90ea63e73dcb6b1d2486cac8c2c8be86720e86573b7c19",
+    "path": "exercise/completion.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\diff-hygiene-final.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "exercise/diff-hygiene-final.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\diff-hygiene.log",
+    "role": "assessment-record",
+    "bytes": 1825,
+    "sha256": "775198e576cd3555bc7399d43339f25dc3b6a10302169d8eb764e2cf5e4330f4",
+    "path": "exercise/diff-hygiene.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\events.jsonl",
+    "role": "assessment-record",
+    "bytes": 42811,
+    "sha256": "e405a2c531f0c6150c62f222844efddee50fd6973be39f75e02ec1b87d94dc18",
+    "path": "exercise/events.jsonl"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\finalize-generated-outputs-hygiene.log",
+    "role": "assessment-record",
+    "bytes": 815,
+    "sha256": "52eddf4e72016d154b97d06d33c85d592190bf61c49f2c074adc7075705680db",
+    "path": "exercise/finalize-generated-outputs-hygiene.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\finalize-generated-outputs.log",
+    "role": "assessment-record",
+    "bytes": 816,
+    "sha256": "b80f3bf4d5af711fdbea57493c7744fcafabe30b33701987630933282a0fc015",
+    "path": "exercise/finalize-generated-outputs.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-byte-diff.log",
+    "role": "assessment-record",
+    "bytes": 5806,
+    "sha256": "061c030e18d8e2be2b3dfa2db308441cb5748d9817d304b15bae9015b84a10e5",
+    "path": "exercise/html-byte-diff.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\independent-review.md",
+    "role": "assessment-record",
+    "bytes": 3210,
+    "sha256": "9355e604fdab834f1537d8c4fe9a1e369bd1fc49c7d223ec9e2ca3757b103141",
+    "path": "exercise/independent-review.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\initial-diff.log",
+    "role": "assessment-record",
+    "bytes": 1597,
+    "sha256": "3be28f9378d966614e79eb9ccefb466742dbdd4ea6f2bde63b21f3dbe0ac7fe5",
+    "path": "exercise/initial-diff.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\lessons-final-fetch.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "exercise/lessons-final-fetch.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\lessons-final-owner-check.log",
+    "role": "assessment-record",
+    "bytes": 1089,
+    "sha256": "9608da73b9b402f6b91f09eeeb82aba29294213743994ed693c5dfb7c17581ae",
+    "path": "exercise/lessons-final-owner-check.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\lessons-final-status.log",
+    "role": "assessment-record",
+    "bytes": 39,
+    "sha256": "a86adfc3b3075e2ffeba980539156e7addd13d3891d7fa7ea1341ff40bfbb0cc",
+    "path": "exercise/lessons-final-status.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\measurement-summary.json",
+    "role": "assessment-record",
+    "bytes": 1374,
+    "sha256": "66e2ca1ed69bd4bf97563766d7d1e7161ff3af60938940d205f1929f443b58be",
+    "path": "exercise/measurement-summary.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\offline-final-html-retry.log",
+    "role": "assessment-record",
+    "bytes": 1183,
+    "sha256": "7ffe3341be4d9fdf134934565dec0d3f0b79c504f556d4c2b89cdac078931cbc",
+    "path": "exercise/offline-final-html-retry.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\offline-final-html.log",
+    "role": "assessment-record",
+    "bytes": 549,
+    "sha256": "6aa43ad07346c42655dc5967352c77a09a5aa264fe4f60d5ffdbb21223c2d97a",
+    "path": "exercise/offline-final-html.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\output-comparison.log",
+    "role": "assessment-record",
+    "bytes": 5760,
+    "sha256": "6ce2bd314880424d9f9ba8d4dc68b136de256409625cdae218fb5821a6930036",
+    "path": "exercise/output-comparison.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\page-renders.log",
+    "role": "assessment-record",
+    "bytes": 2039,
+    "sha256": "47a37917928b9f8880e02538b9be3b0c271c0162f4563045cd90469537a2b0bc",
+    "path": "exercise/page-renders.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\paragraph-build.log",
+    "role": "assessment-record",
+    "bytes": 716,
+    "sha256": "06ae6da62df053a32fb7852c37f5ec0d2bf51fb19adfaad7b8c43b9c3f437e7a",
+    "path": "exercise/paragraph-build.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\part-a-validator.log",
+    "role": "assessment-record",
+    "bytes": 1474,
+    "sha256": "7574451c5c1d4e87667f5e5696e83e5c008cda065a8e2e8548f14c9e7311c178",
+    "path": "exercise/part-a-validator.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\pdf-page-map.json",
+    "role": "assessment-record",
+    "bytes": 1565,
+    "sha256": "ff179624b0c1a2c2798a14e2b1ad8eda4f63b02225a38533059fce5b91226e64",
+    "path": "exercise/pdf-page-map.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\platform-final-status.log",
+    "role": "assessment-record",
+    "bytes": 39,
+    "sha256": "a86adfc3b3075e2ffeba980539156e7addd13d3891d7fa7ea1341ff40bfbb0cc",
+    "path": "exercise/platform-final-status.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\review-pages.json",
+    "role": "assessment-record",
+    "bytes": 1910,
+    "sha256": "d35f7ba4bcc87ec0ba2d014c3aac25d88798d0d5ae822a8d3af0ae73e562b2a3",
+    "path": "exercise/review-pages.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\review-ready.md",
+    "role": "assessment-record",
+    "bytes": 4186,
+    "sha256": "18a4a4a4f1c197958778de4fd3c13906933c35f9bad498380551091a8deef1d9",
+    "path": "exercise/review-ready.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\scoped-final-check.log",
+    "role": "assessment-record",
+    "bytes": 540,
+    "sha256": "153d300499eef478028306812c3a106075ccd376a90f184599f3ffac4aeba754",
+    "path": "exercise/scoped-final-check.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\scoped-review-manifest.json",
+    "role": "assessment-record",
+    "bytes": 4767,
+    "sha256": "734b714ba97e980a3458290a429455e2aadc17fda390d857cb53da25c11deb43",
+    "path": "exercise/scoped-review-manifest.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\scoped-review-manifest.sha256",
+    "role": "assessment-record",
+    "bytes": 66,
+    "sha256": "db8846dce40f3c0e3739687cd97e251bfeff2aa1c8122b9a4a76dfd9d96c3b37",
+    "path": "exercise/scoped-review-manifest.sha256"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\source-diff.log",
+    "role": "assessment-record",
+    "bytes": 7642,
+    "sha256": "5f83eb3f9f472acd224d7b51517b17be9bbf293d4185b57303ab1c2e71f557b2",
+    "path": "exercise/source-diff.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\stage-reviewed-correction.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "exercise/stage-reviewed-correction.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\task-prompt.md",
+    "role": "assessment-record",
+    "bytes": 2979,
+    "sha256": "99294f76e0f80a5ac5daed45cbd24859e247831d3a70c8a08e93dc981461d400",
+    "path": "exercise/task-prompt.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\textbook-lane-scope.log",
+    "role": "assessment-record",
+    "bytes": 2704,
+    "sha256": "07a9cb56aa06bedcef3ad515c7640f012b897dcb7eeed5f3aa1be7c5fc59d5e0",
+    "path": "exercise/textbook-lane-scope.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\visual-page-comparison.json",
+    "role": "assessment-record",
+    "bytes": 1738,
+    "sha256": "c5af4cfd6f32eb840fd2952664c7f4d53b27c79e1cb7866e374019bdc57f2ffb",
+    "path": "exercise/visual-page-comparison.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\zip-member-comparison.json",
+    "role": "assessment-record",
+    "bytes": 3338,
+    "sha256": "524633063435b9fae9775da9f6e553d1e428fb28814adf8ee7c0a10ec4e5627b",
+    "path": "exercise/zip-member-comparison.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914\\2.1.1 Kostenstructuren – opgaven.zip",
+    "role": "external-convenience-archive",
+    "bytes": 1633803,
+    "sha256": "a54e3934f6f0cce51ce14198e27112245c3db9a1623fe71963bd19f351a0655b",
+    "path": "exercise/closure-20260914/2.1.1 Kostenstructuren – opgaven.zip"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914\\manifest.json",
+    "role": "closure-record",
+    "bytes": 5364,
+    "sha256": "0dce9bdaccb48bc73a3043e0f4700e366bfd64364f41dc4764a0537ddec680fb",
+    "path": "exercise/closure-20260914/manifest.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\closure-20260914\\verification.json",
+    "role": "closure-record",
+    "bytes": 586,
+    "sha256": "f103604d5dd95da8de0655c29b9b2e76d2c11afe983301acf4d1ee1e6b1a7804",
+    "path": "exercise/closure-20260914/verification.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\archive-check.json",
+    "role": "assessment-record",
+    "bytes": 597,
+    "sha256": "9fd4d642e3b7d1e66d3049cb81363be0f41dccb35df4351100f316338a441db2",
+    "path": "layout/archive-check.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-render.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "layout/baseline-render.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-rest.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "layout/baseline-rest.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-text.json",
+    "role": "assessment-record",
+    "bytes": 4350,
+    "sha256": "63b361480e1166058406a461c3d34fdbb3be4a11dd43038604feb621934363a8",
+    "path": "layout/baseline-text.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-text.log",
+    "role": "assessment-record",
+    "bytes": 1366,
+    "sha256": "3ec250303609599cffab55b2ef4d7ae25a61384ba2a8d5ac22914be99ec438e2",
+    "path": "layout/baseline-text.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\build-final.log",
+    "role": "assessment-record",
+    "bytes": 235,
+    "sha256": "34aae6102e3f758619d3b69b58b2b53a36fa0884aaf286981d0268980b934a09",
+    "path": "layout/build-final.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\build-lf.log",
+    "role": "assessment-record",
+    "bytes": 235,
+    "sha256": "34aae6102e3f758619d3b69b58b2b53a36fa0884aaf286981d0268980b934a09",
+    "path": "layout/build-lf.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\build-repair.log",
+    "role": "assessment-record",
+    "bytes": 53,
+    "sha256": "e6262e10387b1ec6357bbec1a0b77ee49c0730e88f55429fa1619cbb4dc72be8",
+    "path": "layout/build-repair.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\candidate-pagination.log",
+    "role": "assessment-record",
+    "bytes": 1137,
+    "sha256": "e13bd333edb8159a9e5a8d0890c57efb8b319a2d63faecd8132ac13c20b1f9ed",
+    "path": "layout/candidate-pagination.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\candidate-render.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "layout/candidate-render.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\commit-repair.log",
+    "role": "assessment-record",
+    "bytes": 323,
+    "sha256": "939ab1c8fe12ad34bab73ea5c2a64f2db06828a0c50d8131690bf516813406d2",
+    "path": "layout/commit-repair.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\committed-sha.log",
+    "role": "assessment-record",
+    "bytes": 42,
+    "sha256": "c5bf1d4ec31467f8e3292151e491a5036989deab46ac6e2b81321ac650331c2f",
+    "path": "layout/committed-sha.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\compact-candidate.log",
+    "role": "assessment-record",
+    "bytes": 84,
+    "sha256": "2a3540ab918e3b0bb5a51aafdfa67919b19d917b5b581f11e18bc18ccbbcc0ab",
+    "path": "layout/compact-candidate.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\completion.md",
+    "role": "assessment-record",
+    "bytes": 6494,
+    "sha256": "7befdc54d9556b5299d833ea8c04a8a7b14a4d473f18b4b4e1566d87c3e97cd7",
+    "path": "layout/completion.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\content-check.json",
+    "role": "assessment-record",
+    "bytes": 669,
+    "sha256": "fa6cab67491e6098a01ef7a2b2cc0ace94d06c1a5598b2ec286f4c80115edbe4",
+    "path": "layout/content-check.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\content-final.log",
+    "role": "assessment-record",
+    "bytes": 671,
+    "sha256": "af3a552f2306848cb5529e54caa34a1547710c74986aa9adcb6a3ce8d454c611",
+    "path": "layout/content-final.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\content-first.log",
+    "role": "assessment-record",
+    "bytes": 327,
+    "sha256": "28c7e5cba8591cb0f397a6497593cdcc7d3c9f19ef4cf0e3ceadc414f670cb14",
+    "path": "layout/content-first.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\content-lf.log",
+    "role": "assessment-record",
+    "bytes": 671,
+    "sha256": "e314ae50743f6ccc76b5ed206e3e67beadae14998ebde5efd16918a982f3d768",
+    "path": "layout/content-lf.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\diff-first.log",
+    "role": "assessment-record",
+    "bytes": 281,
+    "sha256": "e4e97e756091f028b27e8ba93e2184d2be32cd3cc9ab84a5f3ced67ce27439fb",
+    "path": "layout/diff-first.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\events.jsonl",
+    "role": "assessment-record",
+    "bytes": 42629,
+    "sha256": "d601ed14827d7c9a7022b645969212eae173eed5c3ce79b86964013893caa0b2",
+    "path": "layout/events.jsonl"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\evidence-inventory.log",
+    "role": "assessment-record",
+    "bytes": 217,
+    "sha256": "26b61050e43ddd796d574590e9aaef3c44322a6cf72ebee5c78944fc37989670",
+    "path": "layout/evidence-inventory.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\evidence-replay.log",
+    "role": "assessment-record",
+    "bytes": 671,
+    "sha256": "e314ae50743f6ccc76b5ed206e3e67beadae14998ebde5efd16918a982f3d768",
+    "path": "layout/evidence-replay.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\fetch-final.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "layout/fetch-final.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-measurements.log",
+    "role": "assessment-record",
+    "bytes": 227,
+    "sha256": "23afbd50cdaa8a00846bb6af66782565546c340895928244b887037a27072536",
+    "path": "layout/final-measurements.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-ownership.log",
+    "role": "assessment-record",
+    "bytes": 1340,
+    "sha256": "8d8ac1da1f1248142681a69603c6f93c64c578ef9a39a62a037198f4488f74ba",
+    "path": "layout/final-ownership.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-render.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "layout/final-render.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-source-diff.log",
+    "role": "assessment-record",
+    "bytes": 2879,
+    "sha256": "b49faf70aa9b425b4f5c53eb9f379333c2bb87372a11163de01da66a6ba75595",
+    "path": "layout/final-source-diff.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-status-before-commit.log",
+    "role": "assessment-record",
+    "bytes": 992,
+    "sha256": "b04cfb85244c55b20e660dbe60ac1eff691084d2ba138c86f543cb306533712e",
+    "path": "layout/final-status-before-commit.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\hygiene-lf.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "layout/hygiene-lf.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\independent-review.md",
+    "role": "assessment-record",
+    "bytes": 2680,
+    "sha256": "5bfa2bbaef5c73273c55b6c9c0a0717f021051e87b37325720bfa9f44912295d",
+    "path": "layout/independent-review.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\inspect-archive.log",
+    "role": "assessment-record",
+    "bytes": 501,
+    "sha256": "5c461d1c1db9bd1998ea0301088c087ef322714ef6453fb60673a3799142d04e",
+    "path": "layout/inspect-archive.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\lane-scope.log",
+    "role": "assessment-record",
+    "bytes": 1194,
+    "sha256": "b52a3c5d169800a0f53652ab6f60bbf4d5b532b944d8a63894788c5d2328e588",
+    "path": "layout/lane-scope.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\logging-overhead.jsonl",
+    "role": "assessment-record",
+    "bytes": 2676,
+    "sha256": "d7878d64558bdc41eb103ecc8cdd80d38dd7f42b85fd8f3202c7087e41b2e83f",
+    "path": "layout/logging-overhead.jsonl"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\measurement-summary.json",
+    "role": "assessment-record",
+    "bytes": 420,
+    "sha256": "a491a45e196115848286c2af603e5d2a69aaade194b87f8c4fedde5b46e44207",
+    "path": "layout/measurement-summary.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\measurement-summary.log",
+    "role": "assessment-record",
+    "bytes": 510,
+    "sha256": "d28b49b243e73157530f2d5abc0efbea54cf69c69b9f06f67e132ebd815d0288",
+    "path": "layout/measurement-summary.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\pdf-text-difference.log",
+    "role": "assessment-record",
+    "bytes": 115,
+    "sha256": "de30a735922ef44d37ed624735ae647584e9d04ed56a5d9362afa5fe1f7bc91c",
+    "path": "layout/pdf-text-difference.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\pixel-check.log",
+    "role": "assessment-record",
+    "bytes": 92,
+    "sha256": "f44faa8202a5a303923d4fed082c822cdb9031c28b7d44deb837a15b0e87d68c",
+    "path": "layout/pixel-check.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\pixel-differences.json",
+    "role": "assessment-record",
+    "bytes": 158,
+    "sha256": "619ddbc1c4a7f8bf3123ab84e3a2232f9484906e8282e2a8649b2640ddc888ba",
+    "path": "layout/pixel-differences.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\platform-final-status.log",
+    "role": "assessment-record",
+    "bytes": 37,
+    "sha256": "0589f079aa725f31996f9ed574a0095e73d5e3931f69fde1bf4f097aa904f7bc",
+    "path": "layout/platform-final-status.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\repack-archive.log",
+    "role": "assessment-record",
+    "bytes": 599,
+    "sha256": "8dd7fab12fd442533e3b95f1fd2c83dde6ad120d5d3644f39c669b61bb15c67b",
+    "path": "layout/repack-archive.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\repack-lf.log",
+    "role": "assessment-record",
+    "bytes": 599,
+    "sha256": "64eee098e01283e7aaec13f943e224cc02f7881dd4b370f1d9994209dcae1bee",
+    "path": "layout/repack-lf.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\repaired-render.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "layout/repaired-render.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\repaired-text.json",
+    "role": "assessment-record",
+    "bytes": 4350,
+    "sha256": "ec8a8d3a03d8847fcdc3f12def4684ac1d5e6b7127ae8d0d0d02de0690a7611e",
+    "path": "layout/repaired-text.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\review-request.md",
+    "role": "assessment-record",
+    "bytes": 3459,
+    "sha256": "e1fbdfe04d9030a5c765bfaabdef0db87534243e92d59eb4b8ba81087a48bdfe",
+    "path": "layout/review-request.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\snapshot-lf.log",
+    "role": "assessment-record",
+    "bytes": 182,
+    "sha256": "4451adeb5c15e225bc2581c10fccedc6697be47945ce5f6dd34caaff003d5877",
+    "path": "layout/snapshot-lf.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\snapshot.log",
+    "role": "assessment-record",
+    "bytes": 182,
+    "sha256": "e3fbccf1b4cb15c86409780045a91f3d210d121b2b66e0985970f4edfba9098f",
+    "path": "layout/snapshot.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\stage-repair.log",
+    "role": "assessment-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "layout/stage-repair.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\status-committed.log",
+    "role": "assessment-record",
+    "bytes": 37,
+    "sha256": "0589f079aa725f31996f9ed574a0095e73d5e3931f69fde1bf4f097aa904f7bc",
+    "path": "layout/status-committed.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\task-prompt.md",
+    "role": "assessment-record",
+    "bytes": 2789,
+    "sha256": "ca3b7b7e7af36c0983267a742dfa6eb781c50cfcc728a76fa4315b01ef13dcd5",
+    "path": "layout/task-prompt.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\2.1.1 Kostenstructuren – opgaven.zip",
+    "role": "external-convenience-archive",
+    "bytes": 781850,
+    "sha256": "6c35648f6be3b237b907c112b96f1b14b45defd70309255a9eea5480be23ae7d",
+    "path": "layout/closure-20260914/2.1.1 Kostenstructuren – opgaven.zip"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\closure-addendum.md",
+    "role": "closure-record",
+    "bytes": 6036,
+    "sha256": "f8b35c2b9b5c22dedb3b270e06346d95f62075c99cd5491300c4f99d7273fff2",
+    "path": "layout/closure-20260914/closure-addendum.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\commands.jsonl",
+    "role": "closure-record",
+    "bytes": 16476,
+    "sha256": "440bbc5f8a674c6c3fb5e4b9592c6ef33b94c00f6f6e733206b47d9c64829824",
+    "path": "layout/closure-20260914/commands.jsonl"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\commit.log",
+    "role": "closure-record",
+    "bytes": 148,
+    "sha256": "451506739acd7984186b604203e37568d905e0ef171e1c41b55f9c883b532301",
+    "path": "layout/closure-20260914/commit.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\final-diff-check.log",
+    "role": "closure-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "layout/closure-20260914/final-diff-check.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\final-status.log",
+    "role": "closure-record",
+    "bytes": 37,
+    "sha256": "0589f079aa725f31996f9ed574a0095e73d5e3931f69fde1bf4f097aa904f7bc",
+    "path": "layout/closure-20260914/final-status.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\prepare-diff-check.log",
+    "role": "closure-record",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "layout/closure-20260914/prepare-diff-check.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\prepare-preservation.json",
+    "role": "closure-record",
+    "bytes": 1455,
+    "sha256": "9be364eefdf3de74c8894237007baec13530d729d6822f71a716a114707a726c",
+    "path": "layout/closure-20260914/prepare-preservation.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\textbook-lane-scope.log",
+    "role": "closure-record",
+    "bytes": 817,
+    "sha256": "501d8769aa07133de0714ccbf6d71013c847cd7caa0446e472e770b712e96e8c",
+    "path": "layout/closure-20260914/textbook-lane-scope.log"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\verify-preservation.json",
+    "role": "closure-record",
+    "bytes": 2301,
+    "sha256": "b8015d158a4b25152b3e35e47421ced5462af101942fdb2af935de52dad7c59b",
+    "path": "layout/closure-20260914/verify-preservation.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\changed-pages.json",
+    "role": "assessment-record",
+    "bytes": 1623,
+    "sha256": "a1ed51b1be1ee415efff6d59286064873fee8662a3caf404eaeafe8ace3c649a",
+    "path": "paragraph/changed-pages.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-addendum-20260914.md",
+    "role": "assessment-record",
+    "bytes": 4479,
+    "sha256": "ede51e68c7a4018da15a88bb9f713ed5507f629fde0fc0f16c7df326bb9070f4",
+    "path": "paragraph/closure-addendum-20260914.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\command-log.md",
+    "role": "assessment-record",
+    "bytes": 8727,
+    "sha256": "6a5bcae08ca12350655cf02f717e60634d68595e7b060f04abee11feef89f714",
+    "path": "paragraph/command-log.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\completion.md",
+    "role": "assessment-record",
+    "bytes": 8442,
+    "sha256": "b86ea63ad4c9d124f7ed99efcbfccdb5f46730a43e1b572f5c66e18ec9d9c18e",
+    "path": "paragraph/completion.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\events.jsonl",
+    "role": "assessment-record",
+    "bytes": 30959,
+    "sha256": "5f6dfd3260d35e06c8c32fc4c328fee69698e392ff864861155b437c43badb10",
+    "path": "paragraph/events.jsonl"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\figure-geometry.json",
+    "role": "assessment-record",
+    "bytes": 1789,
+    "sha256": "7041468fa5f29bc3970b2132ab46033aa7209c10373d5c7461c4ac98dc38235a",
+    "path": "paragraph/figure-geometry.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\html-check.json",
+    "role": "assessment-record",
+    "bytes": 2864,
+    "sha256": "cf5ff5011e74b21a209a35adb21b649cc81f882f77e013d919dd9fc80413c200",
+    "path": "paragraph/html-check.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\independent-review.md",
+    "role": "assessment-record",
+    "bytes": 9448,
+    "sha256": "7a0037494b61b5824f80b3b76e04b7eed2f3868d9a8d9815ec3967fb0e6788f3",
+    "path": "paragraph/independent-review.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\lane-scope-output.txt",
+    "role": "assessment-record",
+    "bytes": 3735,
+    "sha256": "021219cb88b23dc4decbdb541836cae1c7dff3498e7e630b7ade03ecc1bbe5cd",
+    "path": "paragraph/lane-scope-output.txt"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\lane-scope-result.json",
+    "role": "assessment-record",
+    "bytes": 211,
+    "sha256": "972682a8f5fce709785fb89f942d15d5ae5c83c0ef266e3e11d68f3e76e97b07",
+    "path": "paragraph/lane-scope-result.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\local-validation.json",
+    "role": "assessment-record",
+    "bytes": 52,
+    "sha256": "dfcb9448806bb37a3046d0fb1ec82e6705f8269b350bf52534da4a77f35eacd0",
+    "path": "paragraph/local-validation.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\measurement-summary.json",
+    "role": "assessment-record",
+    "bytes": 2276,
+    "sha256": "f47aaf53de93d6a191e54ea579468e72a40358ad31dc2e99da145728613f42a8",
+    "path": "paragraph/measurement-summary.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\source-output-checks.json",
+    "role": "assessment-record",
+    "bytes": 1046,
+    "sha256": "c301ad7ceb87e41c3fdda2747daba93e3ef6cc447547315f1976f285e48a7115",
+    "path": "paragraph/source-output-checks.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\task-prompt.md",
+    "role": "assessment-record",
+    "bytes": 3110,
+    "sha256": "0175212251daaf942cc7e8347b8256c5468b9aff5911619e955e4b23bdbfc3ab",
+    "path": "paragraph/task-prompt.md"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\delivery\\2.1.1 Kostenstructuren – opgaven.zip",
+    "role": "external-convenience-archive",
+    "bytes": 508971,
+    "sha256": "3643bcf518473342aa23a9d06310c4deafc89faa0d545e026b24377e4b13d2fd",
+    "path": "paragraph/closure-20260914/delivery/2.1.1 Kostenstructuren – opgaven.zip"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\events.jsonl",
+    "role": "closure-record",
+    "bytes": 3458,
+    "sha256": "fd8ccb10103b7a64a3e4555d878600b57223838201d18231597cb28eb2df1643",
+    "path": "paragraph/closure-20260914/events.jsonl"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\lane-scope-result.json",
+    "role": "closure-record",
+    "bytes": 123,
+    "sha256": "dc4080eb31b875371d70da093e071124bb210a4f6a959e9626c0b08d9f283278",
+    "path": "paragraph/closure-20260914/lane-scope-result.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\lane-scope.txt",
+    "role": "closure-record",
+    "bytes": 3358,
+    "sha256": "c89ba949e8fc16305a68694809807c662e2f5082c84c8505ede765fe565566ae",
+    "path": "paragraph/closure-20260914/lane-scope.txt"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\packaging-export.json",
+    "role": "closure-record",
+    "bytes": 5443,
+    "sha256": "330f81fe32bc1da750d04393e926d085efa3c1e70e3bcfa8c3bfe0a8247b1fe7",
+    "path": "paragraph/closure-20260914/packaging-export.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\packaging-verify.json",
+    "role": "closure-record",
+    "bytes": 5586,
+    "sha256": "6aa389f7a5cc5124eaa8fedb458bbc9154319e1907393f8e7275f17c179189aa",
+    "path": "paragraph/closure-20260914/packaging-verify.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\part-a-validation-result.json",
+    "role": "closure-record",
+    "bytes": 79,
+    "sha256": "879d2d247a48241c71dc80d213a81e23842e14fe3ed77eb3fb28493292fb33d1",
+    "path": "paragraph/closure-20260914/part-a-validation-result.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\part-a-validation.txt",
+    "role": "closure-record",
+    "bytes": 1215,
+    "sha256": "ea6b12d4d879f1f6c99936fe24a03b8f3453cb0ba10794fbc809314ec233da8b",
+    "path": "paragraph/closure-20260914/part-a-validation.txt"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p1-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 21722,
+    "sha256": "c5766c6e76412cd47a153d9083f824ecf9c3f27b384b52c2641426f36472e632",
+    "path": "exercise/renders/2.1-antwoorden-p1-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p1-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 21722,
+    "sha256": "c5766c6e76412cd47a153d9083f824ecf9c3f27b384b52c2641426f36472e632",
+    "path": "exercise/renders/2.1-antwoorden-p1-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p2-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 98449,
+    "sha256": "8c71a6cc8d19caad8660c7cf7dec659481aabeac8fcb7d63a5f6c0fb2921b399",
+    "path": "exercise/renders/2.1-antwoorden-p2-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p2-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 98539,
+    "sha256": "e493354e430972f3b5866d149886fdbd03d045ecdd9fd3feab855c18e7d376f4",
+    "path": "exercise/renders/2.1-antwoorden-p2-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p3-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 74634,
+    "sha256": "3814d9fea4aad4e6a5bb68e1c4067a25b066e5ea9748e938dae4fc6ffbb48518",
+    "path": "exercise/renders/2.1-antwoorden-p3-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p3-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 74670,
+    "sha256": "c61e46085843c8596207277aabe954ba49309fb6964a1d1501c4b803fabb1d12",
+    "path": "exercise/renders/2.1-antwoorden-p3-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p4-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 90094,
+    "sha256": "6810930ec3b7c2ebf4320b021c0bb925519dd3063cfa51ebe158a704e170a010",
+    "path": "exercise/renders/2.1-antwoorden-p4-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-antwoorden-p4-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 90094,
+    "sha256": "6810930ec3b7c2ebf4320b021c0bb925519dd3063cfa51ebe158a704e170a010",
+    "path": "exercise/renders/2.1-antwoorden-p4-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-hoofdstuk-p6-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 121530,
+    "sha256": "f4cf76a321fa7e4dcc308c82bc298bfc5174d09bafe0c1be9ebee0d774a5573a",
+    "path": "exercise/renders/2.1-hoofdstuk-p6-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-hoofdstuk-p6-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 121530,
+    "sha256": "f4cf76a321fa7e4dcc308c82bc298bfc5174d09bafe0c1be9ebee0d774a5573a",
+    "path": "exercise/renders/2.1-hoofdstuk-p6-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-hoofdstuk-p7-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 135147,
+    "sha256": "29457428bd26cb588024883066ec433cb5b0958d0b818e20455805507193c63e",
+    "path": "exercise/renders/2.1-hoofdstuk-p7-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-hoofdstuk-p7-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 135253,
+    "sha256": "5e22b11a4893ee9adce3149052639df1c2f97f53ee836d1d4378ef49ba84545c",
+    "path": "exercise/renders/2.1-hoofdstuk-p7-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-hoofdstuk-p8-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 164604,
+    "sha256": "e96922fc8aa7870a64000fbcd017066fd76169768b18f0c1131c7890f242c3a9",
+    "path": "exercise/renders/2.1-hoofdstuk-p8-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1-hoofdstuk-p8-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 164604,
+    "sha256": "e96922fc8aa7870a64000fbcd017066fd76169768b18f0c1131c7890f242c3a9",
+    "path": "exercise/renders/2.1-hoofdstuk-p8-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-antwoorden-p1-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 87504,
+    "sha256": "7ce1c8fad71ae673f0261a5ce71f8e8778fa68de8d78a77425024256f64de000",
+    "path": "exercise/renders/2.1.1-antwoorden-p1-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-antwoorden-p1-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 87504,
+    "sha256": "7ce1c8fad71ae673f0261a5ce71f8e8778fa68de8d78a77425024256f64de000",
+    "path": "exercise/renders/2.1.1-antwoorden-p1-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-antwoorden-p2-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 70888,
+    "sha256": "6dfafd945edbe041ce693bff29801ad0004113b70b6791a2b831f6d8f3fe5d95",
+    "path": "exercise/renders/2.1.1-antwoorden-p2-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-antwoorden-p2-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 71060,
+    "sha256": "f16bcae94ee8e6607ce1d36b043f8abaf3991829d9b70e725e0d3eb689cc9261",
+    "path": "exercise/renders/2.1.1-antwoorden-p2-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-antwoorden-p3-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 78592,
+    "sha256": "7fb2c4c9b307ee10a3a849050dda68bd2d9cfe1cb2afd50ad3218e94c2037e66",
+    "path": "exercise/renders/2.1.1-antwoorden-p3-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-antwoorden-p3-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 78592,
+    "sha256": "7fb2c4c9b307ee10a3a849050dda68bd2d9cfe1cb2afd50ad3218e94c2037e66",
+    "path": "exercise/renders/2.1.1-antwoorden-p3-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-opgaven-p2-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 116324,
+    "sha256": "ce2ef9365997343b72c4b3917a857e9fdb8f55d3a9866b8a88c029127f7c04fe",
+    "path": "exercise/renders/2.1.1-opgaven-p2-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-opgaven-p2-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 116324,
+    "sha256": "ce2ef9365997343b72c4b3917a857e9fdb8f55d3a9866b8a88c029127f7c04fe",
+    "path": "exercise/renders/2.1.1-opgaven-p2-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-opgaven-p3-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 109793,
+    "sha256": "acc143ddc2b5e3806158ca24d23d1bcc177a51a6f427383c89c0f39927113a4e",
+    "path": "exercise/renders/2.1.1-opgaven-p3-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-opgaven-p3-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 109768,
+    "sha256": "2d7348eaca319d5c02e71b9c2a9b2fb60fea6ac4b0408bb97a3d0a6539931117",
+    "path": "exercise/renders/2.1.1-opgaven-p3-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-opgaven-p4-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 143869,
+    "sha256": "45c6443bc4ce9dd1343f181a44cbd040218d673373a1fb5fea473330b7a50f58",
+    "path": "exercise/renders/2.1.1-opgaven-p4-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-opgaven-p4-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 143869,
+    "sha256": "45c6443bc4ce9dd1343f181a44cbd040218d673373a1fb5fea473330b7a50f58",
+    "path": "exercise/renders/2.1.1-opgaven-p4-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-paragraaf-p5-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 114684,
+    "sha256": "db6e6b4858e864bb80deb4003cad0f1e79b945b693c69f080f56ae9ea0306c4b",
+    "path": "exercise/renders/2.1.1-paragraaf-p5-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-paragraaf-p5-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 114684,
+    "sha256": "db6e6b4858e864bb80deb4003cad0f1e79b945b693c69f080f56ae9ea0306c4b",
+    "path": "exercise/renders/2.1.1-paragraaf-p5-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-paragraaf-p6-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 97412,
+    "sha256": "1af227a867becd35a1ff610345e716cec42f8a4b46082428c113189b85933d37",
+    "path": "exercise/renders/2.1.1-paragraaf-p6-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-paragraaf-p6-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 97391,
+    "sha256": "17428c59a4b964270610e021266b5c0f1f9b1b2567bb3ff64193ef64481194a5",
+    "path": "exercise/renders/2.1.1-paragraaf-p6-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-paragraaf-p7-after.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 145887,
+    "sha256": "8707d522bf821c64505759f5105482ef58f88c2d59940d876303a1c3072f12eb",
+    "path": "exercise/renders/2.1.1-paragraaf-p7-after.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\renders\\2.1.1-paragraaf-p7-before.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 145887,
+    "sha256": "8707d522bf821c64505759f5105482ef58f88c2d59940d876303a1c3072f12eb",
+    "path": "exercise/renders/2.1.1-paragraaf-p7-before.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\results.json",
+    "role": "static-html-proof",
+    "bytes": 793,
+    "sha256": "866a4a29b6b5fec711c4e8bfa7456e6470832a77f4a4739bc3fde2d71bdf70da",
+    "path": "exercise/html-offline-review/results.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\2.1-antwoorden-p2.png",
+    "role": "static-html-proof",
+    "bytes": 98449,
+    "sha256": "8c71a6cc8d19caad8660c7cf7dec659481aabeac8fcb7d63a5f6c0fb2921b399",
+    "path": "exercise/html-offline-review/2.1-antwoorden-p2.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\2.1-antwoorden-p3.png",
+    "role": "static-html-proof",
+    "bytes": 74634,
+    "sha256": "3814d9fea4aad4e6a5bb68e1c4067a25b066e5ea9748e938dae4fc6ffbb48518",
+    "path": "exercise/html-offline-review/2.1-antwoorden-p3.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\2.1-hoofdstuk-p7.png",
+    "role": "static-html-proof",
+    "bytes": 135147,
+    "sha256": "29457428bd26cb588024883066ec433cb5b0958d0b818e20455805507193c63e",
+    "path": "exercise/html-offline-review/2.1-hoofdstuk-p7.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\2.1.1-antwoorden-p2.png",
+    "role": "static-html-proof",
+    "bytes": 70888,
+    "sha256": "6dfafd945edbe041ce693bff29801ad0004113b70b6791a2b831f6d8f3fe5d95",
+    "path": "exercise/html-offline-review/2.1.1-antwoorden-p2.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\2.1.1-opgaven-p3.png",
+    "role": "static-html-proof",
+    "bytes": 109793,
+    "sha256": "acc143ddc2b5e3806158ca24d23d1bcc177a51a6f427383c89c0f39927113a4e",
+    "path": "exercise/html-offline-review/2.1.1-opgaven-p3.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\html-offline-review\\2.1.1-paragraaf-p6.png",
+    "role": "static-html-proof",
+    "bytes": 97412,
+    "sha256": "1af227a867becd35a1ff610345e716cec42f8a4b46082428c113189b85933d37",
+    "path": "exercise/html-offline-review/2.1.1-paragraaf-p6.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-page-1.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 128308,
+    "sha256": "4a21d1d1d8b8da3cc4519e67a8d0d3f49a2ea426530734ced30a94efc329dd10",
+    "path": "layout/baseline-page-1.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-page-2.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 156771,
+    "sha256": "24b50b25e2ef16cc47772b45f89d1b1c62a96b5c7a35d20bffee82f87aa43bd0",
+    "path": "layout/baseline-page-2.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-page-3.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 138387,
+    "sha256": "3c90cd1936f19c27b4b9e4bf8719276878f950b55c10687666a1f9df4d326e1d",
+    "path": "layout/baseline-page-3.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-page-4.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 180222,
+    "sha256": "8e5c2512c8b1c6a9290a6daa09f9d64ee11bef5ddaddc888c037afac6192b434",
+    "path": "layout/baseline-page-4.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\baseline-page-5.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 77103,
+    "sha256": "8c06b32ba5d45ed11ddc965c94f1b1925228fd385467cee76eb9ea91964156a7",
+    "path": "layout/baseline-page-5.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-page-1.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 123714,
+    "sha256": "695b2b536c556c7a09107355de55e3d504e52c3284764f38fa85ede53e1bf180",
+    "path": "layout/final-page-1.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-page-2.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 160636,
+    "sha256": "6b4ab0e1091dff26fefdf5215fb4d7b6a9d8bcfcabc68e5b0f973b5aadc605a3",
+    "path": "layout/final-page-2.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-page-3.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 138387,
+    "sha256": "3c90cd1936f19c27b4b9e4bf8719276878f950b55c10687666a1f9df4d326e1d",
+    "path": "layout/final-page-3.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-page-4.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 180222,
+    "sha256": "8e5c2512c8b1c6a9290a6daa09f9d64ee11bef5ddaddc888c037afac6192b434",
+    "path": "layout/final-page-4.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-page-5.png",
+    "role": "pdf-before-after-proof",
+    "bytes": 77103,
+    "sha256": "8c06b32ba5d45ed11ddc965c94f1b1925228fd385467cee76eb9ea91964156a7",
+    "path": "layout/final-page-5.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-html-summary.png",
+    "role": "historical-layout-html-proof",
+    "bytes": 54103,
+    "sha256": "cc950d932a45ece4c9e9db5bcb05358bca4675b265258121ad067dc1d62315c2",
+    "path": "layout/final-html-summary.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-01.jpg",
+    "role": "original-independent-pdf-coverage",
+    "bytes": 412335,
+    "sha256": "1b380b761ff53d18c708592c35b5091750e7e285b463acacb9e1497f679fa721",
+    "path": "paragraph/qa-pages-final/spread-01.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-02.jpg",
+    "role": "original-independent-pdf-coverage",
+    "bytes": 408929,
+    "sha256": "8ccec4a2019b290fe27cd4ca639363e853e287b160c7aeaec1f8b5b5e51afc28",
+    "path": "paragraph/qa-pages-final/spread-02.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-03.jpg",
+    "role": "original-independent-pdf-coverage",
+    "bytes": 419812,
+    "sha256": "c3acccf5712fd6664109d3117b14a8734e6925ce778c34ad4728c894facf42f6",
+    "path": "paragraph/qa-pages-final/spread-03.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-04.jpg",
+    "role": "original-independent-pdf-coverage",
+    "bytes": 374457,
+    "sha256": "e33fedd2f2264b348e3a1e63f8b0fb9a2264a7c92ea941888dee84159e9f66aa",
+    "path": "paragraph/qa-pages-final/spread-04.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-05.jpg",
+    "role": "original-independent-pdf-coverage",
+    "bytes": 338334,
+    "sha256": "e89120581b99a6770769d839a193e1f8e3f9f83a613e115ef2db31ef7548a885",
+    "path": "paragraph/qa-pages-final/spread-05.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-06.jpg",
+    "role": "original-independent-pdf-coverage",
+    "bytes": 348195,
+    "sha256": "99bf56729a06d0ad1b5888146fa766793ebe1767281a72f10a9cc123c0f430e5",
+    "path": "paragraph/qa-pages-final/spread-06.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-07.jpg",
+    "role": "original-independent-pdf-coverage",
+    "bytes": 304539,
+    "sha256": "a07ebb5ae64d4647da1b8b8efb5935949a1a1d26000b32ec344370938a431c70",
+    "path": "paragraph/qa-pages-final/spread-07.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-08.jpg",
+    "role": "original-independent-pdf-coverage",
+    "bytes": 406586,
+    "sha256": "86ca7a366444500d2c3faad06504bc0e311abb1cb5423f7ccf0829410415a4b9",
+    "path": "paragraph/qa-pages-final/spread-08.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-09.jpg",
+    "role": "original-independent-pdf-coverage",
+    "bytes": 371647,
+    "sha256": "5140d89aaf6a0125602deac2509daf0ae7042cc481fe29c1a0e379c6e1833d1a",
+    "path": "paragraph/qa-pages-final/spread-09.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-10.jpg",
+    "role": "original-independent-pdf-coverage",
+    "bytes": 306845,
+    "sha256": "907d0398d4e3ed9c1e4f98fa84508a1cadcf8679fc09b31720d1e6893580a31a",
+    "path": "paragraph/qa-pages-final/spread-10.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-11.jpg",
+    "role": "original-independent-pdf-coverage",
+    "bytes": 382728,
+    "sha256": "b303661d3b34558764535fcaa619869b5ff8ad9005147cf67456c66d8e2f93b6",
+    "path": "paragraph/qa-pages-final/spread-11.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-12.jpg",
+    "role": "original-independent-pdf-coverage",
+    "bytes": 337330,
+    "sha256": "46736f6b47682d132114f69cbe5484aacac9f143f997c3f98896a8db78d92a3e",
+    "path": "paragraph/qa-pages-final/spread-12.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-final\\spread-13.jpg",
+    "role": "original-independent-pdf-coverage",
+    "bytes": 111604,
+    "sha256": "f3732f372387f3fc0399892964f43fde33d81a3ac74e76fca4c5d9fc42d453cd",
+    "path": "paragraph/qa-pages-final/spread-13.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\antwoorden-1.png",
+    "role": "final-pdf-proof",
+    "bytes": 162125,
+    "sha256": "e078d76691229a1a3ac05506aca579840c38029a75af9db506028118af67ae1a",
+    "path": "paragraph/qa-pages-repair-v2/antwoorden-1.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\antwoorden-2.png",
+    "role": "final-pdf-proof",
+    "bytes": 193744,
+    "sha256": "e03c6b28c292909c0d72ce13a57b127c498be3091029306e0273055d270d7424",
+    "path": "paragraph/qa-pages-repair-v2/antwoorden-2.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\antwoorden-3.png",
+    "role": "final-pdf-proof",
+    "bytes": 191521,
+    "sha256": "6f7dd6ac5a862e6335a892bc02cc3b2c77d310f58d7f1cd4e4498f894e8580fb",
+    "path": "paragraph/qa-pages-repair-v2/antwoorden-3.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\antwoorden-4.png",
+    "role": "final-pdf-proof",
+    "bytes": 184665,
+    "sha256": "a04967d790cd3facbf5dd76c4c71911f58ce287a33b7134bb03e50f0957424ec",
+    "path": "paragraph/qa-pages-repair-v2/antwoorden-4.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\antwoorden-5.png",
+    "role": "final-pdf-proof",
+    "bytes": 210936,
+    "sha256": "9d4d0cdc61c1ce73a9c831bd920998fd2925d9df0bdb362e4f2fe272489ea1fd",
+    "path": "paragraph/qa-pages-repair-v2/antwoorden-5.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\antwoorden-6.png",
+    "role": "final-pdf-proof",
+    "bytes": 157117,
+    "sha256": "f5cfe8637bc979f489abab61056908ad4b30729614d23b6761b72df064f6e95c",
+    "path": "paragraph/qa-pages-repair-v2/antwoorden-6.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-1.png",
+    "role": "final-pdf-proof",
+    "bytes": 160709,
+    "sha256": "955115f6348c13468b21c368851afb83b6bfbd6559133d8466245a812b7ee887",
+    "path": "paragraph/qa-pages-repair-v2/opgaven-1.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-2.png",
+    "role": "final-pdf-proof",
+    "bytes": 152068,
+    "sha256": "accfb92fb3953040685b864874afdff36531622eb928e61dec9018971ea539d9",
+    "path": "paragraph/qa-pages-repair-v2/opgaven-2.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-3.png",
+    "role": "final-pdf-proof",
+    "bytes": 148381,
+    "sha256": "1fb6fef1b67fb5bf5ab9b2bd89030ae8ebc0fbd0a767451a8d5816a36ec91ff5",
+    "path": "paragraph/qa-pages-repair-v2/opgaven-3.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-4.png",
+    "role": "final-pdf-proof",
+    "bytes": 153245,
+    "sha256": "215bab8f79f60ce7dbdaab1931075d43c8bd32752a24942308ff4112afcf3b6d",
+    "path": "paragraph/qa-pages-repair-v2/opgaven-4.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-5.png",
+    "role": "final-pdf-proof",
+    "bytes": 170069,
+    "sha256": "cc10f214b1f09fa8d3e340acdabb7614149b84294ad974f9d16bb07b075b146f",
+    "path": "paragraph/qa-pages-repair-v2/opgaven-5.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-6.png",
+    "role": "final-pdf-proof",
+    "bytes": 120969,
+    "sha256": "e0a0052e40bb1cafe11d02c8833a0597efbe9cc3e9a8fdcdc8b9c97c1a27485d",
+    "path": "paragraph/qa-pages-repair-v2/opgaven-6.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-7.png",
+    "role": "final-pdf-proof",
+    "bytes": 141889,
+    "sha256": "5ff7a71dbf17321e11bcd207ae165df2b87ce28bbd36eba29ff27339e927262c",
+    "path": "paragraph/qa-pages-repair-v2/opgaven-7.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\opgaven-8.png",
+    "role": "final-pdf-proof",
+    "bytes": 110962,
+    "sha256": "a6eeb87213c5781afebb49a68a645a243eaa691400891c4053f2739948b0587a",
+    "path": "paragraph/qa-pages-repair-v2/opgaven-8.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-01.png",
+    "role": "final-pdf-proof",
+    "bytes": 167174,
+    "sha256": "d6a4d75a103d7c02bd1450d0040764c785a893a87d5dd77362413375168c3ed7",
+    "path": "paragraph/qa-pages-repair-v2/paragraaf-01.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-02.png",
+    "role": "final-pdf-proof",
+    "bytes": 173865,
+    "sha256": "607da20a0c870d3ae09d59cb492536780109a23b73923e54c95e9529e249e3e3",
+    "path": "paragraph/qa-pages-repair-v2/paragraaf-02.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-03.png",
+    "role": "final-pdf-proof",
+    "bytes": 143417,
+    "sha256": "6771d8888e2f7432fc5074ad3f1d5cce1e4c54ed5f9c1c370047df11925a5457",
+    "path": "paragraph/qa-pages-repair-v2/paragraaf-03.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-04.png",
+    "role": "final-pdf-proof",
+    "bytes": 176988,
+    "sha256": "3209a658d313ea717d38163eee998aa5ef81a8df235c31effca446cfd79e2bb8",
+    "path": "paragraph/qa-pages-repair-v2/paragraaf-04.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-05.png",
+    "role": "final-pdf-proof",
+    "bytes": 112372,
+    "sha256": "da49a8614953b6f039b87e1c5d834eeeb9c3a547a3a5ac71f2f59f2b5dce4e20",
+    "path": "paragraph/qa-pages-repair-v2/paragraaf-05.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-06.png",
+    "role": "final-pdf-proof",
+    "bytes": 148413,
+    "sha256": "211e496607ee2fa941915cc51f7dcc8b243d40198b9ff6d3e994de16cc6eddeb",
+    "path": "paragraph/qa-pages-repair-v2/paragraaf-06.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-07.png",
+    "role": "final-pdf-proof",
+    "bytes": 153224,
+    "sha256": "fb89d43c92b6ac970c9339a142bfe7df1f2f99d22baa43aa28b86d9f5fc4f91f",
+    "path": "paragraph/qa-pages-repair-v2/paragraaf-07.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-08.png",
+    "role": "final-pdf-proof",
+    "bytes": 170126,
+    "sha256": "c0e54f86c9938a520b67a5f5c216b978bd24b721e5f1806ee6dd2c7ad2e2f336",
+    "path": "paragraph/qa-pages-repair-v2/paragraaf-08.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-09.png",
+    "role": "final-pdf-proof",
+    "bytes": 120985,
+    "sha256": "0fd85306cde4ff778e34ae178a48291ba084774aaff5925720bfd3af2ab90d3f",
+    "path": "paragraph/qa-pages-repair-v2/paragraaf-09.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-10.png",
+    "role": "final-pdf-proof",
+    "bytes": 142080,
+    "sha256": "5b9963f59520922c8c2e56b0d2d13fae231ffeb1c65e7a474d7b38e8f4c61aed",
+    "path": "paragraph/qa-pages-repair-v2/paragraaf-10.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\qa-pages-repair-v2\\paragraaf-11.png",
+    "role": "final-pdf-proof",
+    "bytes": 110808,
+    "sha256": "8527ee8346ecffd2a5c61e92daff293c504159958cf71aaef462db9d1e640a21",
+    "path": "paragraph/qa-pages-repair-v2/paragraaf-11.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-geometry-check.json",
+    "role": "independent-geometry-proof",
+    "bytes": 536,
+    "sha256": "6288b6dcc285fa5b639d70d7504a7674d20e77190088341f1de49de5cabaf033",
+    "path": "reviewer/paragraph-geometry-check.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\events.jsonl",
+    "role": "independent-review-event-record",
+    "bytes": 2470,
+    "sha256": "65b1947ef8ac1272ccebdd7d8045a483a830be02c69a36ab6bf79adb85b65417",
+    "path": "reviewer/events.jsonl"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-1.png",
+    "role": "independent-static-html-proof",
+    "bytes": 216789,
+    "sha256": "64ee82dfb74ef2c54b0cb230c821b1f0e0dba954c016514e333f2e17a7561f0a",
+    "path": "reviewer/paragraph-html-screen-final/antwoorden-1.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-2.png",
+    "role": "independent-static-html-proof",
+    "bytes": 215799,
+    "sha256": "bc7469b9c294b8a5613e5e17baab0e44db9f5d3a6fcdcbdabc63ac3e9b6ef8fa",
+    "path": "reviewer/paragraph-html-screen-final/antwoorden-2.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-3.png",
+    "role": "independent-static-html-proof",
+    "bytes": 251572,
+    "sha256": "0f4f579ce30f368d9cb59c0af16579e38ac6ef34d0017b8b24518803ba949fd5",
+    "path": "reviewer/paragraph-html-screen-final/antwoorden-3.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-4.png",
+    "role": "independent-static-html-proof",
+    "bytes": 195748,
+    "sha256": "186b81a5359530b659e82243329c2228fb1c20da81622aad564ef068f6fe9a9c",
+    "path": "reviewer/paragraph-html-screen-final/antwoorden-4.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-5.png",
+    "role": "independent-static-html-proof",
+    "bytes": 200023,
+    "sha256": "44dfb901156845872ab5dc6e9b87c5a5aec51c928bd26151b764f2711edf6a77",
+    "path": "reviewer/paragraph-html-screen-final/antwoorden-5.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-6.png",
+    "role": "independent-static-html-proof",
+    "bytes": 274596,
+    "sha256": "536e82669579378d0e82175183a6dbffb2a9785ed34400a92d3f4c240488f8b2",
+    "path": "reviewer/paragraph-html-screen-final/antwoorden-6.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-7.png",
+    "role": "independent-static-html-proof",
+    "bytes": 93393,
+    "sha256": "96c3c6660ebc320715dcd41e3eeda7449af2064aebbc3cf438fc40e022c9bdf2",
+    "path": "reviewer/paragraph-html-screen-final/antwoorden-7.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-1.png",
+    "role": "independent-static-html-proof",
+    "bytes": 184603,
+    "sha256": "16ce9a2edd35fe49ce1d8872354ce3e5e42ab916442d12b3b4f6046b5c6c0e4a",
+    "path": "reviewer/paragraph-html-screen-final/opgaven-1.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-2.png",
+    "role": "independent-static-html-proof",
+    "bytes": 218246,
+    "sha256": "6748d6f742a266ba4bdadfb4748784fe4b5b6870b0995ccb15effc66d01d71d5",
+    "path": "reviewer/paragraph-html-screen-final/opgaven-2.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-3.png",
+    "role": "independent-static-html-proof",
+    "bytes": 177624,
+    "sha256": "7a8caf201ca0d735e6ced12293c595648a6a578aa39db13eaaef21ff7eb68c15",
+    "path": "reviewer/paragraph-html-screen-final/opgaven-3.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-4.png",
+    "role": "independent-static-html-proof",
+    "bytes": 185477,
+    "sha256": "2a035e07097893397c60270312d73fe1cb9f39d0484719d87d316070a35e1bec",
+    "path": "reviewer/paragraph-html-screen-final/opgaven-4.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-5.png",
+    "role": "independent-static-html-proof",
+    "bytes": 170401,
+    "sha256": "43f9365aec40d19208611bb936b41e6cc5cf7c7a396b1018969005aab18bcc2a",
+    "path": "reviewer/paragraph-html-screen-final/opgaven-5.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-6.png",
+    "role": "independent-static-html-proof",
+    "bytes": 205321,
+    "sha256": "d3f24c2653cdfe3474abbe008cf9c8036cdaa71c3d1b6c1f2810ac5ffff630c6",
+    "path": "reviewer/paragraph-html-screen-final/opgaven-6.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-7.png",
+    "role": "independent-static-html-proof",
+    "bytes": 205962,
+    "sha256": "217bbbd18b6930849697a1a05196a0e1f3bb3821732ce47104ad683fe3444867",
+    "path": "reviewer/paragraph-html-screen-final/opgaven-7.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-8.png",
+    "role": "independent-static-html-proof",
+    "bytes": 143031,
+    "sha256": "1192b906420003e6ced1a53931dea1aada418f94b9bbaa7088b6541afe460644",
+    "path": "reviewer/paragraph-html-screen-final/opgaven-8.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-01.png",
+    "role": "independent-static-html-proof",
+    "bytes": 219118,
+    "sha256": "b27e3703fa636420364e33809511bec736e2c3f1e605fb556f7882812140944d",
+    "path": "reviewer/paragraph-html-screen-final/paragraaf-01.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-02.png",
+    "role": "independent-static-html-proof",
+    "bytes": 189424,
+    "sha256": "ae8dcb490078ee9980c3db0f776a1d2da692a937b19dec6d61474c22de2f419b",
+    "path": "reviewer/paragraph-html-screen-final/paragraaf-02.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-03.png",
+    "role": "independent-static-html-proof",
+    "bytes": 166085,
+    "sha256": "8854a8896b45d21a0b96889a855abb0596aa29b8f248f45e4101cb828dd97c97",
+    "path": "reviewer/paragraph-html-screen-final/paragraaf-03.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-04.png",
+    "role": "independent-static-html-proof",
+    "bytes": 209169,
+    "sha256": "57dc31e7934c32847254ced9ae2235dc4275c431e65a18814947d32592e34474",
+    "path": "reviewer/paragraph-html-screen-final/paragraaf-04.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-05.png",
+    "role": "independent-static-html-proof",
+    "bytes": 218239,
+    "sha256": "260256e86523e351a355e38b5357079aea84212820ea1500098a5828a02168e4",
+    "path": "reviewer/paragraph-html-screen-final/paragraaf-05.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-06.png",
+    "role": "independent-static-html-proof",
+    "bytes": 177673,
+    "sha256": "5d716c27fdf0780454d0daa8465e91383f3682c39dbec3c6476adee681c252d7",
+    "path": "reviewer/paragraph-html-screen-final/paragraaf-06.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-07.png",
+    "role": "independent-static-html-proof",
+    "bytes": 185447,
+    "sha256": "0b8c8540d30942782ec45f4890866b194045a2381c847555360e3e19f84b97b6",
+    "path": "reviewer/paragraph-html-screen-final/paragraaf-07.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-08.png",
+    "role": "independent-static-html-proof",
+    "bytes": 170507,
+    "sha256": "1e501eaa6be22cf0ca5d3e29b12e6d160995f251140f2e141af51d110ba61b8f",
+    "path": "reviewer/paragraph-html-screen-final/paragraaf-08.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-09.png",
+    "role": "independent-static-html-proof",
+    "bytes": 205326,
+    "sha256": "1b21071fbba0347f8edc79d75ab657906f5b7a889816b1ef289343c03b40e437",
+    "path": "reviewer/paragraph-html-screen-final/paragraaf-09.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-10.png",
+    "role": "independent-static-html-proof",
+    "bytes": 206200,
+    "sha256": "456fae43c52ec698d13f99941215f345503143975292865646c325a4e07fe881",
+    "path": "reviewer/paragraph-html-screen-final/paragraaf-10.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-11.png",
+    "role": "independent-static-html-proof",
+    "bytes": 142898,
+    "sha256": "ea54ed98ec483b7dcd54a3b3670c760d8a6894c37a1ae5714b541a383a35edb7",
+    "path": "reviewer/paragraph-html-screen-final/paragraaf-11.png"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\results.json",
+    "role": "independent-static-html-proof",
+    "bytes": 4702,
+    "sha256": "10864a57d4b4f0af02a979d832bcd3991f795ecd83e571916d8715e1b437effc",
+    "path": "reviewer/paragraph-html-screen-final/results.json"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-01.jpg",
+    "role": "independent-static-html-proof",
+    "bytes": 394142,
+    "sha256": "ef0bab2731ccfdd845a32667c21e6c1a650797dc20705b61d3f9f4cb846fbc55",
+    "path": "reviewer/paragraph-html-screen-final/spread-01.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-02.jpg",
+    "role": "independent-static-html-proof",
+    "bytes": 388570,
+    "sha256": "41b67e1c54da928881e6f5496687c3f4ae8f662ddeadd8cce12b64eaf2b8d94c",
+    "path": "reviewer/paragraph-html-screen-final/spread-02.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-03.jpg",
+    "role": "independent-static-html-proof",
+    "bytes": 432818,
+    "sha256": "92b5aa0a4a41e63b6026c5ea5d49b03e2551d2ca58f3e58e22722f886a6e1df4",
+    "path": "reviewer/paragraph-html-screen-final/spread-03.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-04.jpg",
+    "role": "independent-static-html-proof",
+    "bytes": 266314,
+    "sha256": "5b617f25971401d16b22f1a5b734aaa74ba167a7a01f2b3d09442f27cdbf832b",
+    "path": "reviewer/paragraph-html-screen-final/spread-04.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-05.jpg",
+    "role": "independent-static-html-proof",
+    "bytes": 369300,
+    "sha256": "ff33c7d2630c56e330984429a7e7e216cd3befa310ebbec848ce8a90c6108a5a",
+    "path": "reviewer/paragraph-html-screen-final/spread-05.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-06.jpg",
+    "role": "independent-static-html-proof",
+    "bytes": 329880,
+    "sha256": "90d5fd386a921c0da1d1e439a5f8a025a09576e68ad646293a7943e4a529d023",
+    "path": "reviewer/paragraph-html-screen-final/spread-06.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-07.jpg",
+    "role": "independent-static-html-proof",
+    "bytes": 386712,
+    "sha256": "39b32a5e5964d61540c833d2ac79ce68b41b97444e1ab8b6452986c4535d35dc",
+    "path": "reviewer/paragraph-html-screen-final/spread-07.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-08.jpg",
+    "role": "independent-static-html-proof",
+    "bytes": 360349,
+    "sha256": "7c80431ecb53de2e1eb25b93ffef3a9fdfc1c81ea5eb3e6ac5d5c045247149ae",
+    "path": "reviewer/paragraph-html-screen-final/spread-08.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-09.jpg",
+    "role": "independent-static-html-proof",
+    "bytes": 334255,
+    "sha256": "04820946f9274e172310fb313ba528ff8359dc4955ff5530b1aaa109f504b899",
+    "path": "reviewer/paragraph-html-screen-final/spread-09.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-10.jpg",
+    "role": "independent-static-html-proof",
+    "bytes": 406765,
+    "sha256": "04de348205011660c9c7248710b98758d33833435a478531d82c4575a81ff5ed",
+    "path": "reviewer/paragraph-html-screen-final/spread-10.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-11.jpg",
+    "role": "independent-static-html-proof",
+    "bytes": 329035,
+    "sha256": "7a64b3e5ed9d011a9aa4c08d4d14dc6cbac058bc8cef1a47ff13e5b89e84ddc4",
+    "path": "reviewer/paragraph-html-screen-final/spread-11.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-12.jpg",
+    "role": "independent-static-html-proof",
+    "bytes": 352289,
+    "sha256": "fe36b8d8ebf619b5cd2c1d1c51a263e72d5abaad5a711174e0610cda166194bd",
+    "path": "reviewer/paragraph-html-screen-final/spread-12.jpg"
+  },
+  {
+    "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\spread-13.jpg",
+    "role": "independent-static-html-proof",
+    "bytes": 335193,
+    "sha256": "11daed177686d2de994428367aa7308b507ab71c8cb5ca96e9ba5b0eaa5ac292",
+    "path": "reviewer/paragraph-html-screen-final/spread-13.jpg"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.html",
+    "role": "final-committed-output",
+    "bytes": 49212,
+    "sha256": "f494e884ca0512d5edaeab0167690bec0be7bcb0faea16c870fc23039f1db8fb",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.html"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.md",
+    "role": "final-committed-output",
+    "bytes": 26782,
+    "sha256": "76fbc957f27b2fc189e275167251fa00229490c7fb4b96c74a9e5f210dfcddb3",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.md"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.pdf",
+    "role": "final-committed-output",
+    "bytes": 112925,
+    "sha256": "5dd4d2f87c047883f6a776bbddf1c2d8b8b7de1f9d774ab7c997a3347359061e",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.pdf"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.html",
+    "role": "final-committed-output",
+    "bytes": 4582811,
+    "sha256": "4b5d6a202c3e20e0e64df601bf2a4c38f13ab56be6d84299ad72dd595f73c9bb",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.html"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.md",
+    "role": "final-committed-output",
+    "bytes": 44910,
+    "sha256": "1cf7010885a9153523bb3440c84544b46a2202d06821c4a03f224a7d96983666",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.md"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf",
+    "role": "final-committed-output",
+    "bytes": 2767191,
+    "sha256": "71e48a0ef136d4f5f16eeb6dc28c8517283c190036905fbd2a3c93a044f19ebb",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html",
+    "role": "final-committed-output",
+    "bytes": 15664,
+    "sha256": "619ed6ef4d6b469c3af2ffd6dccf3a13dccfda61168e7c697ebcaae158c90270",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md",
+    "role": "final-committed-output",
+    "bytes": 4742,
+    "sha256": "6ddb5bb0430f04dd6d252224a2b02dedc9cd5be409a335aaaf36b233ad436df4",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf",
+    "role": "final-committed-output",
+    "bytes": 37137,
+    "sha256": "708d2addf98dc1d2a216d8accdb420f480fbdf30317be0b64c44dcbba6d853be",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html",
+    "role": "final-committed-output",
+    "bytes": 460578,
+    "sha256": "8ac56f59dfb380e637503fe586bf695923f11a96db98f39b464f72a7d949da0b",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md",
+    "role": "final-committed-output",
+    "bytes": 4852,
+    "sha256": "613050a86169804e7474748482f7e0a76b54e04feaaebe5f8b3b423d4cacb451",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
+    "role": "final-committed-output",
+    "bytes": 333746,
+    "sha256": "35f8702efad5b76763224bf6adda8713c6f83eea3777d31dfce0b4a36531d8ac",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html",
+    "role": "final-committed-output",
+    "bytes": 466142,
+    "sha256": "b837be23aa4c85b3eeb0b87651a102efc9783eefd61bddd9e4ddee94edddbd40",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md",
+    "role": "final-committed-output",
+    "bytes": 8093,
+    "sha256": "bab094fd470571c38e869516ecdd12b26346df93635b1618f03a54f232f97da4",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
+    "role": "final-committed-output",
+    "bytes": 345510,
+    "sha256": "fd3f07c3f732504c4389289c8dcfcb29bb4615a6a6bee4aa5f750614aa05a21f",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg",
+    "role": "unchanged-local-render-input",
+    "bytes": 2479,
+    "sha256": "7e1674e16c93069b27e6cd1876c6729c36b5837c9a04478df161fde5cd3f6b54",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.png",
+    "role": "unchanged-local-render-input",
+    "bytes": 333852,
+    "sha256": "08423a4a6f26c875a4c3ccd8c4bb3421dbc645b328c8fd5523aee075afb25808",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.png"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.1_fig_1.svg",
+    "role": "unchanged-local-render-input",
+    "bytes": 2479,
+    "sha256": "7e1674e16c93069b27e6cd1876c6729c36b5837c9a04478df161fde5cd3f6b54",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.1_fig_1.svg"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.1_fig_1.png",
+    "role": "unchanged-local-render-input",
+    "bytes": 333852,
+    "sha256": "08423a4a6f26c875a4c3ccd8c4bb3421dbc645b328c8fd5523aee075afb25808",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.1_fig_1.png"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_1.svg",
+    "role": "unchanged-local-render-input",
+    "bytes": 2684,
+    "sha256": "e526a1f6fcdf894481e6c0c1463f3ce6f6edb79ff59e2c5c1311df143eab45de",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_1.svg"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_1.png",
+    "role": "unchanged-local-render-input",
+    "bytes": 583590,
+    "sha256": "ddfbb233847f470ad03fed48af4848ca6e7da96d0e148d76e6a45360995dfe4d",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_1.png"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_2.svg",
+    "role": "unchanged-local-render-input",
+    "bytes": 2839,
+    "sha256": "0c40529466e635428befbf57ee005f8f80c958fbb5232df073708ef87e1bc6ea",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_2.svg"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_2.png",
+    "role": "unchanged-local-render-input",
+    "bytes": 495833,
+    "sha256": "0d4474d868cb4578c62027abc9492ad8061e3d56e55ac9e96b7c8dfe274494d4",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_2.png"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_1.svg",
+    "role": "unchanged-local-render-input",
+    "bytes": 3522,
+    "sha256": "9373f13886cb14acedcd0d68e0633ce05caa0e3290b59e1cfc57bd602f795c2f",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_1.svg"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_1.png",
+    "role": "unchanged-local-render-input",
+    "bytes": 678181,
+    "sha256": "862dc99ef45280d39c1ab0b30cbbbc8a8013d636d6a03032d43fed33e28daa48",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_1.png"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_2.svg",
+    "role": "unchanged-local-render-input",
+    "bytes": 3202,
+    "sha256": "22b0627d26cf1ef1bacd64e2f35cb0d1c959ed4d94f68e593874df3ced72d9a9",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_2.svg"
+  },
+  {
+    "source": "git:d00d6209e6413a0b2889719145be9e97a673632c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_2.png",
+    "role": "unchanged-local-render-input",
+    "bytes": 790422,
+    "sha256": "99c1be59db35abaca4ced1282c8b85bead549c844a3e520ac5935b3500f46b6a",
+    "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_2.png"
+  },
+  {
+    "source": "git diff --binary 0acaaa97443e5c4fee34f7da8a12ccd5db62d762 d00d6209e6413a0b2889719145be9e97a673632c",
+    "role": "actual-git-binary-diff",
+    "bytes": 71822,
+    "sha256": "de8eb74ead1a094a95fd2f246f910da51f9f0daf67f9d0f156c8b6c358051b48",
+    "path": "exercise/changes.patch"
+  },
+  {
+    "source": "computed from committed objects at d00d6209e6413a0b2889719145be9e97a673632c",
+    "role": "committed-file-inventory",
+    "bytes": 9959,
+    "sha256": "aae7713ddb39126c260c518b4a9fcad6e2737b3037dffcc7466a78b913130f4a",
+    "path": "exercise/changed-files.json"
+  },
+  {
+    "source": "git:0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html",
+    "role": "final-committed-output",
+    "bytes": 460435,
+    "sha256": "8330a14d25718c347216dc9e5253d6734345495c61fb0af661fdc4ad4954ac31",
+    "path": "layout/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html"
+  },
+  {
+    "source": "git:0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md",
+    "role": "final-committed-output",
+    "bytes": 4912,
+    "sha256": "aa8c19d597e8658c64783875d63f3228d2a238f4f1c34b108699d506b346bb7c",
+    "path": "layout/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md"
+  },
+  {
+    "source": "git:0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
+    "role": "final-committed-output",
+    "bytes": 333760,
+    "sha256": "70e21a04e78dd7bc4b1e950724565a5177e184312aaed5ee7659cd82f97a688d",
+    "path": "layout/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf"
+  },
+  {
+    "source": "git:0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-review-manifest.json",
+    "role": "final-committed-output",
+    "bytes": 1924,
+    "sha256": "9873d917d5989fab5f7b89f5a1ddb64c142b1d23f2285691fa23987d642a1310",
+    "path": "layout/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-review-manifest.json"
+  },
+  {
+    "source": "git:0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/build_pdf.py",
+    "role": "final-committed-output",
+    "bytes": 3644,
+    "sha256": "8851c6c19d3aaa5587791c22824cd5999ea97dd38b1ef5b2c898f71d67a2c1f2",
+    "path": "layout/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/build_pdf.py"
+  },
+  {
+    "source": "git:0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg",
+    "role": "unchanged-local-render-input",
+    "bytes": 2479,
+    "sha256": "7e1674e16c93069b27e6cd1876c6729c36b5837c9a04478df161fde5cd3f6b54",
+    "path": "layout/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg"
+  },
+  {
+    "source": "git:0eaaa18a64a3bd3bcd3203d703c6664a7428440d:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.png",
+    "role": "unchanged-local-render-input",
+    "bytes": 333852,
+    "sha256": "08423a4a6f26c875a4c3ccd8c4bb3421dbc645b328c8fd5523aee075afb25808",
+    "path": "layout/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.png"
+  },
+  {
+    "source": "git diff --binary 0acaaa97443e5c4fee34f7da8a12ccd5db62d762 0eaaa18a64a3bd3bcd3203d703c6664a7428440d",
+    "role": "actual-git-binary-diff",
+    "bytes": 481844,
+    "sha256": "e162843d57a2c3b5e93d247b3be3bebead41ac63753ad9e035c2aa8416148509",
+    "path": "layout/changes.patch"
+  },
+  {
+    "source": "computed from committed objects at 0eaaa18a64a3bd3bcd3203d703c6664a7428440d",
+    "role": "committed-file-inventory",
+    "bytes": 2787,
+    "sha256": "522dbb0702572f449af7d529cfe5b6d4105ec04466b9fac07e35675e4dda16a8",
+    "path": "layout/changed-files.json"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html",
+    "role": "final-committed-output",
+    "bytes": 16159,
+    "sha256": "151633518f11f3d6e838d0a2467815e99ab134e9fa2518963b8e8c2b3dc7be07",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.html"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md",
+    "role": "final-committed-output",
+    "bytes": 11431,
+    "sha256": "b0c310c05c8752c8d7decc4246bcb740f69882b325f9643c2db1ea3668616826",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf",
+    "role": "final-committed-output",
+    "bytes": 27014,
+    "sha256": "5e82f0fb9b592b3af6afc5d129019700dbd4ff16a9e422c75985b61d1f732740",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html",
+    "role": "final-committed-output",
+    "bytes": 20325,
+    "sha256": "6eb2f048080baded1c45473c0bc04d4097de7ab1df840e633db29e1787e21929",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.html"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md",
+    "role": "final-committed-output",
+    "bytes": 14846,
+    "sha256": "aec18022e7c443ade9f55f3b5b76ec0662b20172d0b4bfe481ab7d1bb15900b4",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
+    "role": "final-committed-output",
+    "bytes": 247008,
+    "sha256": "f9de1717590c37f815ed6be3075e6bfaec8719ef1078917cbe980887777e0ef3",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html",
+    "role": "final-committed-output",
+    "bytes": 25709,
+    "sha256": "0b6523277f89a8df03380b27c4757a5969d0684a86071ffc0f575df6a3f777b6",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md",
+    "role": "final-committed-output",
+    "bytes": 19197,
+    "sha256": "06abc290a388442691e9ca7f689580da5ba9136c59963ddcccedf118dce8c970",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
+    "role": "final-committed-output",
+    "bytes": 311278,
+    "sha256": "3ae795e9751c0c35019f7a8c1fbbe990b2af95adcf18af37cd2eeed2af406c13",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-quality-ref.yaml",
+    "role": "final-committed-output",
+    "bytes": 1589,
+    "sha256": "fbe396233d7de33a3fa41b0144e63deb009949bede39d72cb565643c5c28cefa",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-quality-ref.yaml"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-review.md",
+    "role": "final-committed-output",
+    "bytes": 9448,
+    "sha256": "7a0037494b61b5824f80b3b76e04b7eed2f3868d9a8d9815ec3967fb0e6788f3",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-review.md"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-foundation.json",
+    "role": "final-committed-output",
+    "bytes": 41601,
+    "sha256": "1b9d604c5516979591da4c64a1812a20eb29703037d8995e39d8ebb1219a805b",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-foundation.json"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md",
+    "role": "final-committed-output",
+    "bytes": 8065,
+    "sha256": "c6892bf7a2fe13b19c8d5810b6b65cb63d016610c5314c905fe8e34ba0016f3b",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-handoff.md"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-plan.md",
+    "role": "final-committed-output",
+    "bytes": 8894,
+    "sha256": "34da9f88c00be02b76b4808e5ea59f970c02482a48ccb326660c50f62dae4939",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-plan.md"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-review-manifest.json",
+    "role": "final-committed-output",
+    "bytes": 2752,
+    "sha256": "a718f79de91c82e2becc5048529d0a4e4af11be93be16e6d190db24d961bae5e",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1-textbook-review-manifest.json"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.png",
+    "role": "final-committed-output",
+    "bytes": 59670,
+    "sha256": "ce7583656b0cdf001a230406cd3de46d834b165fd3085834421dfb483b3c75d8",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.png"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg",
+    "role": "final-committed-output",
+    "bytes": 2756,
+    "sha256": "242e4b85bb58dcc184d08bbedeeb5e8d54b795ca44c709082ad41278c2af90d4",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_2.png",
+    "role": "final-committed-output",
+    "bytes": 103074,
+    "sha256": "84f3f379ca34111395329be0fd3e297bc92dbc3aa63ebdd9802a6050ed25d841",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_2.png"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_2.svg",
+    "role": "final-committed-output",
+    "bytes": 8082,
+    "sha256": "891d03387e3d65e049ac468860130923691c55908e4124276f880f53598a24eb",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_2.svg"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_3.png",
+    "role": "final-committed-output",
+    "bytes": 115441,
+    "sha256": "d3d31b9a39fbd6c34613fd3c157d81baf42ace411cbd89d2d544c51a3f775dd3",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_3.png"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_3.svg",
+    "role": "final-committed-output",
+    "bytes": 8097,
+    "sha256": "27ee773c013e638918101f548fd2d8657fbbd1131d1661d98b37aca638eadd33",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/_assets/2.1.1_fig_3.svg"
+  },
+  {
+    "source": "git:5c5ebf387550c636f665f7ced4f08b10315b831c:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/build_pdf.py",
+    "role": "final-committed-output",
+    "bytes": 631,
+    "sha256": "7281387e1cb3b930b2cf65df2302a28f15f20d8bbcd80811c7b53d342bf4a5b8",
+    "path": "paragraph/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/build_pdf.py"
+  },
+  {
+    "source": "git diff --binary 0acaaa97443e5c4fee34f7da8a12ccd5db62d762 5c5ebf387550c636f665f7ced4f08b10315b831c",
+    "role": "actual-git-binary-diff",
+    "bytes": 3462916,
+    "sha256": "1d8225924f0c4a0df16ec91f2ec5249f26041a59ebd2a00aeaf42f0dd9d6e1b5",
+    "path": "paragraph/changes.patch"
+  },
+  {
+    "source": "computed from committed objects at 5c5ebf387550c636f665f7ced4f08b10315b831c",
+    "role": "committed-file-inventory",
+    "bytes": 6950,
+    "sha256": "c4ee6e6e9df4be0a8d73635267ec7c1e93df5fe740ec30b77628910be9fc6fc7",
+    "path": "paragraph/changed-files.json"
+  }
+]

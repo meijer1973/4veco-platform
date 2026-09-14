@@ -1,0 +1,49 @@
+{
+  "source_alignment": "PASS: all exact target prompts/context and seven headings; exercise body byte-identical in paragraph/opgaven",
+  "pdfs": [
+    {
+      "file": "2.1.1 Kostenstructuren – antwoorden.pdf",
+      "pages": 6,
+      "extracted_words_per_page": [
+        291,
+        379,
+        351,
+        335,
+        391,
+        284
+      ]
+    },
+    {
+      "file": "2.1.1 Kostenstructuren – opgaven.pdf",
+      "pages": 8,
+      "extracted_words_per_page": [
+        265,
+        294,
+        131,
+        256,
+        306,
+        204,
+        224,
+        163
+      ]
+    },
+    {
+      "file": "2.1.1 Kostenstructuren – paragraaf.pdf",
+      "pages": 11,
+      "extracted_words_per_page": [
+        235,
+        272,
+        181,
+        337,
+        192,
+        131,
+        256,
+        306,
+        204,
+        224,
+        163
+      ]
+    }
+  ],
+  "zip": "Regenerated existing opgaven.zip from current exercise MD/HTML/PDF plus local assets; no stale archive retained."
+}

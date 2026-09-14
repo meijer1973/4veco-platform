@@ -1,0 +1,126 @@
+{
+  "exercise": {
+    "logged_selected_read_events": 23,
+    "logged_selected_words": 11805,
+    "logged_selected_characters": 92080,
+    "distinct_read_paths": 21,
+    "skill_read_paths": [
+      "C:\\Users\\meije\\.codex\\plugins\\cache\\openai-bundled\\computer-use\\26.903.71938\\skills\\computer-use\\SKILL.md",
+      "C:\\Users\\meije\\.codex\\plugins\\cache\\openai-primary-runtime\\pdf\\26.909.11809\\skills\\pdf\\SKILL.md",
+      "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-platform\\skills\\econ-exercise-builder.md"
+    ],
+    "skill_selected_words": 3149,
+    "first_event_utc": "2026-09-13T11:38:32.744026+00:00",
+    "last_event_utc": "2026-09-13T11:49:56.108127+00:00",
+    "elapsed_through_final_log_seconds": 683.364101,
+    "milestones": [
+      {
+        "utc": "2026-09-13T11:38:32.744026+00:00",
+        "action": "event",
+        "kind": "start",
+        "detail": "Exercise assessment started; owner assessment-exercise",
+        "seconds": null
+      },
+      {
+        "utc": "2026-09-13T11:44:48.710317+00:00",
+        "action": "event",
+        "kind": "review_request",
+        "detail": "Review-ready bounded16-file correction; manifest SHA256 734b714ba97e980a3458290a429455e2aadc17fda390d857cb53da25c11deb43. Independent reviewer /root requested; no author PASS. First review-ready at current UTC.",
+        "seconds": null
+      }
+    ],
+    "measurement_limit": "Selected file-read volume, including failed, truncated and repeated selections; excludes uninstrumented output and images; not model tokens or mandatory instruction volume."
+  },
+  "layout": {
+    "logged_selected_read_events": 16,
+    "logged_selected_words": 8350,
+    "logged_selected_characters": 66729,
+    "distinct_read_paths": 15,
+    "skill_read_paths": [
+      "C:\\Users\\meije\\.codex\\plugins\\cache\\openai-bundled\\computer-use\\26.903.71938\\skills\\computer-use\\SKILL.md",
+      "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\4veco-platform\\skills\\econ-pdf-builder.md"
+    ],
+    "skill_selected_words": 1236,
+    "first_event_utc": "2026-09-13T11:38:57.446152+00:00",
+    "last_event_utc": "2026-09-13T11:52:00.833726+00:00",
+    "elapsed_through_final_log_seconds": 783.387574,
+    "milestones": [
+      {
+        "utc": "2026-09-13T11:38:57.446152+00:00",
+        "action": "event",
+        "kind": "start",
+        "detail": "Cold layout authoring assessment started; inspect entry instructions first",
+        "seconds": null
+      },
+      {
+        "utc": "2026-09-13T11:51:41.463727+00:00",
+        "action": "event",
+        "kind": "complete",
+        "detail": "Independent scopedPASS from parent recorded in independent-review.md; no unresolved repair finding. Substantiveworkandhelpercleanup stopped11:51:10UTC afterabout733s. Updated measurement-summary.json and completion.md only; sourcecommit7a908e92f5495bd4398a8c4f634a8a95be44d048 unchanged. ZIPclassificationfailure stillblocks publication. No pushPRmergeordeploy. Finalrecordwritingandmetricsabout20s additional estimatedloggingattention.",
+        "seconds": null
+      }
+    ],
+    "measurement_limit": "Selected file-read volume, including failed, truncated and repeated selections; excludes uninstrumented output and images; not model tokens or mandatory instruction volume."
+  },
+  "paragraph": {
+    "logged_selected_read_events": 47,
+    "logged_selected_words": 34124,
+    "logged_selected_characters": 262454,
+    "distinct_read_paths": 37,
+    "skill_read_paths": [
+      "C:\\Users\\meije\\.codex\\plugins\\cache\\openai-bundled\\computer-use\\26.903.71938\\skills\\computer-use\\SKILL.md",
+      "C:\\Users\\meije\\.codex\\plugins\\cache\\openai-primary-runtime\\pdf\\26.909.11809\\skills\\pdf\\SKILL.md",
+      "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-platform\\skills\\econ-didactiek.md",
+      "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-platform\\skills\\econ-exercise-builder.md",
+      "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-platform\\skills\\econ-textbook-paragraph.md",
+      "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-platform\\skills\\economic-graph.md"
+    ],
+    "skill_selected_words": 10093,
+    "first_event_utc": "2026-09-13T11:39:10.650659+00:00",
+    "last_event_utc": "2026-09-13T12:06:20.047605+00:00",
+    "elapsed_through_final_log_seconds": 1629.396946,
+    "milestones": [
+      {
+        "utc": "2026-09-13T11:39:10.650659+00:00",
+        "action": "event",
+        "kind": "start",
+        "detail": "Cold authoring assessment started; target Book2 §2.1.1 Kostenstructuren; deadline 12:09 UTC",
+        "seconds": 0.0
+      },
+      {
+        "utc": "2026-09-13T11:42:31.024512+00:00",
+        "action": "event",
+        "kind": "first_plan",
+        "detail": "First authored pedagogical edit: 2.1.1-textbook-plan.md with exact target alignment, prerequisites, non-goals and 52-minute core. Student-content authoring has not started.",
+        "seconds": 0.0
+      },
+      {
+        "utc": "2026-09-13T11:45:08.216893+00:00",
+        "action": "event",
+        "kind": "first_student_content",
+        "detail": "Fresh paragraph/exercises/answers written; original target context/table/questions injected verbatim from current registry; thin wrapper copied",
+        "seconds": 0.0
+      },
+      {
+        "utc": "2026-09-13T11:45:27.961898+00:00",
+        "action": "event",
+        "kind": "review_request",
+        "detail": "Parent /root notified source-ready 11:45 UTC, complete new sources, plan, authority pins; figures and rendering pending. Self-check will continue.",
+        "seconds": 0.0
+      },
+      {
+        "utc": "2026-09-13T12:06:20.047605+00:00",
+        "action": "event",
+        "kind": "stop",
+        "detail": "Assessment stopped before12:09 cutoff. Substantive closure work stopped12:05:14 UTC; final activity is this timestamped measurement/report update. Content, independent review and PartA validation complete; ZIP lane classification gap preserved. Local commit saved; both worktrees clean; no push or publication. Server and task browser helper stopped.",
+        "seconds": 0.0
+      }
+    ],
+    "measurement_limit": "Selected file-read volume, including failed, truncated and repeated selections; excludes uninstrumented output and images; not model tokens or mandatory instruction volume."
+  },
+  "setup": {
+    "six_worktree_command_seconds": 32.022774300014134,
+    "all_exit_zero": true,
+    "limit": "Worktree command runtime only; excludes parent discovery, setup scripting and baseline visual inspection."
+  }
+}

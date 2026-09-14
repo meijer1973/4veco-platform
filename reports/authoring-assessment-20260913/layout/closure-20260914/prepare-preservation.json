@@ -1,0 +1,21 @@
+{
+  "phase": "prepare",
+  "baseline": "0acaaa97443e5c4fee34f7da8a12ccd5db62d762",
+  "reviewed_commit": "7a908e92f5495bd4398a8c4f634a8a95be44d048",
+  "head": "7a908e92f5495bd4398a8c4f634a8a95be44d048",
+  "reviewed_five_files_byte_identical": {
+    "2.1.1 Kostenstructuren – opgaven.md": "aa8c19d597e8658c64783875d63f3228d2a238f4f1c34b108699d506b346bb7c",
+    "2.1.1 Kostenstructuren – opgaven.html": "8330a14d25718c347216dc9e5253d6734345495c61fb0af661fdc4ad4954ac31",
+    "2.1.1 Kostenstructuren – opgaven.pdf": "70e21a04e78dd7bc4b1e950724565a5177e184312aaed5ee7659cd82f97a688d",
+    "build_pdf.py": "8851c6c19d3aaa5587791c22824cd5999ea97dd38b1ef5b2c898f71d67a2c1f2",
+    "2.1.1-textbook-review-manifest.json": "9873d917d5989fab5f7b89f5a1ddb64c142b1d23f2285691fa23987d642a1310"
+  },
+  "tracked_zip_matches_baseline": true,
+  "exported_zip": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\closure-20260914\\2.1.1 Kostenstructuren – opgaven.zip",
+  "exported_zip_sha256": "6c35648f6be3b237b907c112b96f1b14b45defd70309255a9eea5480be23ae7d",
+  "exported_zip_members": 15,
+  "html_matches_reviewed_bytes": true,
+  "screenshot_reused": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\final-html-summary.png",
+  "screenshot_sha256": "cc950d932a45ece4c9e9db5bcb05358bca4675b265258121ad067dc1d62315c2",
+  "existing_review_manifest_digest": "cbd8fe89d61d127c7eea31f075ba8d941945c0cc0a125874843548486389c7c0"
+}

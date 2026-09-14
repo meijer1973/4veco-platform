@@ -1,0 +1,15 @@
+{"utc": "2026-09-14T07:01:35.802276+00:00", "action": "event", "kind": "closure_scoped_checks_20260914", "detail": "Committed15-file payload equals previously reviewed bytes; baseline trackedZIP restored; external refreshedZIP integrity/current payloads pass; worktree clean; exact final head d00d6209e6413a0b2889719145be9e97a673632c", "seconds": null}
+{
+  "date": "2026-09-14",
+  "head": "d00d6209e6413a0b2889719145be9e97a673632c",
+  "base": "0acaaa97443e5c4fee34f7da8a12ccd5db62d762",
+  "committed_payload_files": 15,
+  "all15_byte_identical_to_prior_reviewed_commit": true,
+  "all15_original_manifest_hashes_match": true,
+  "tracked_zip_byte_identical_to_baseline": true,
+  "export_hash_matches_refreshed_zip": true,
+  "export_zip_integrity": "PASS",
+  "export_zip_file_payloads_match_current_standalone": true,
+  "worktree_clean": true,
+  "scope": "Bounded closure; no full-paragraph acceptance or new rendering claim"
+}

@@ -1,0 +1,59 @@
+{
+  "scope": "Final serialized static HTML rendered offline with screen CSS in paginated review surfaces; no browser or viewport-interaction claim.",
+  "outputs": [
+    {
+      "file": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – antwoorden.html",
+      "sha256": "151633518f11f3d6e838d0a2467815e99ab134e9fa2518963b8e8c2b3dc7be07",
+      "media": "screen",
+      "engine": "WeasyPrint",
+      "pages": 7,
+      "page_images": [
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-1.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-2.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-3.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-4.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-5.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-6.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\antwoorden-7.png"
+      ]
+    },
+    {
+      "file": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – opgaven.html",
+      "sha256": "6eb2f048080baded1c45473c0bc04d4097de7ab1df840e633db29e1787e21929",
+      "media": "screen",
+      "engine": "WeasyPrint",
+      "pages": 8,
+      "page_images": [
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-1.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-2.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-3.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-4.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-5.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-6.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-7.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\opgaven-8.png"
+      ]
+    },
+    {
+      "file": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1 Kostenstructuren – paragraaf.html",
+      "sha256": "0b6523277f89a8df03380b27c4757a5969d0684a86071ffc0f575df6a3f777b6",
+      "media": "screen",
+      "engine": "WeasyPrint",
+      "pages": 11,
+      "page_images": [
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-01.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-02.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-03.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-04.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-05.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-06.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-07.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-08.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-09.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-10.png",
+        "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\reviewer\\paragraph-html-screen-final\\paragraaf-11.png"
+      ]
+    }
+  ],
+  "warnings": []
+}

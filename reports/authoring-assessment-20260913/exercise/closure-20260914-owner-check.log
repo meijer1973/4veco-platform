@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "mode": "check",
+  "repository": "4veco-lessen",
+  "worktree_path": "C:/wt/reorganize 2/authoring-assessment-20260913/exercise/4veco-lessen",
+  "git_dir": "C:\\Projects\\4veco\\4veco-lessen\\.git\\worktrees\\4veco-lessen164",
+  "anchor_clone": false,
+  "task_id": "assessment-exercise-20260913",
+  "agent_id": "assessment-exercise",
+  "lock": {
+    "present": true,
+    "same_owner": true,
+    "same_task": true,
+    "stale": true,
+    "path": "C:\\Projects\\4veco\\4veco-lessen\\.git\\worktrees\\4veco-lessen164\\4veco-agent-worktree-lock.json",
+    "owner": "assessment-exercise",
+    "task_id": "assessment-exercise-20260913"
+  },
+  "branch": "codex/assessment-exercise-20260913",
+  "head_sha": "6b9b5134a6983fc1aae7e35e4061c1908c814196",
+  "on_main": false,
+  "detached_head": false,
+  "dirty": false,
+  "dirty_count": 0,
+  "ahead": 0,
+  "behind": 0,
+  "diverged": false,
+  "prefix_ok": true,
+  "required_prefixes": [
+    "codex/",
+    "agent/"
+  ],
+  "warnings": [
+    "worktree lock is older than 8 hours"
+  ],
+  "failures": []
+}

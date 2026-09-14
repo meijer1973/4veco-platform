@@ -1,0 +1,121 @@
+{
+  "planned_files": 344,
+  "planned_bytes": 45501657,
+  "largest_files": [
+    {
+      "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.html",
+      "bytes": 4582811
+    },
+    {
+      "path": "paragraph/changes.patch",
+      "bytes": 3462916
+    },
+    {
+      "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf",
+      "bytes": 2767191
+    },
+    {
+      "path": "exercise/closure-20260914/2.1.1 Kostenstructuren – opgaven.zip",
+      "bytes": 1633803
+    },
+    {
+      "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_2.png",
+      "bytes": 790422
+    },
+    {
+      "path": "layout/closure-20260914/2.1.1 Kostenstructuren – opgaven.zip",
+      "bytes": 781850
+    },
+    {
+      "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.3_fig_1.png",
+      "bytes": 678181
+    },
+    {
+      "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_1.png",
+      "bytes": 583590
+    },
+    {
+      "path": "paragraph/closure-20260914/delivery/2.1.1 Kostenstructuren – opgaven.zip",
+      "bytes": 508971
+    },
+    {
+      "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_assets/2.1.2_fig_2.png",
+      "bytes": 495833
+    },
+    {
+      "path": "layout/changes.patch",
+      "bytes": 481844
+    },
+    {
+      "path": "exercise/output/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.html",
+      "bytes": 466142
+    }
+  ],
+  "cases": {
+    "exercise": {
+      "commit": "d00d6209e6413a0b2889719145be9e97a673632c",
+      "changed_paths": 15,
+      "supplemental_inputs": 12,
+      "patch_bytes": 71822
+    },
+    "layout": {
+      "commit": "0eaaa18a64a3bd3bcd3203d703c6664a7428440d",
+      "changed_paths": 5,
+      "supplemental_inputs": 2,
+      "patch_bytes": 481844
+    },
+    "paragraph": {
+      "commit": "5c5ebf387550c636f665f7ced4f08b10315b831c",
+      "changed_paths": 22,
+      "supplemental_inputs": 0,
+      "patch_bytes": 3462916
+    }
+  },
+  "omitted": [
+    {
+      "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\diff-hygiene.log",
+      "reason": "large transient/raw diff or discovery/server log; final binary diff and substantive records retained",
+      "bytes": 547855
+    },
+    {
+      "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\diff-source.log",
+      "reason": "large transient/raw diff or discovery/server log; final binary diff and substantive records retained",
+      "bytes": 926404
+    },
+    {
+      "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\html-server.stderr.log",
+      "reason": "large transient/raw diff or discovery/server log; final binary diff and substantive records retained",
+      "bytes": 675
+    },
+    {
+      "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\html-server.stdout.log",
+      "reason": "large transient/raw diff or discovery/server log; final binary diff and substantive records retained",
+      "bytes": 0
+    },
+    {
+      "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\lane-help.log",
+      "reason": "large transient/raw diff or discovery/server log; final binary diff and substantive records retained",
+      "bytes": 531
+    },
+    {
+      "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\normalized-html-diff.log",
+      "reason": "large transient/raw diff or discovery/server log; final binary diff and substantive records retained",
+      "bytes": 457467
+    },
+    {
+      "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\zip-doc-search.log",
+      "reason": "large transient/raw diff or discovery/server log; final binary diff and substantive records retained",
+      "bytes": 136
+    },
+    {
+      "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\zip-search-broader.log",
+      "reason": "large transient/raw diff or discovery/server log; final binary diff and substantive records retained",
+      "bytes": 0
+    },
+    {
+      "source": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\layout\\zip-tool-search.log",
+      "reason": "large transient/raw diff or discovery/server log; final binary diff and substantive records retained",
+      "bytes": 0
+    }
+  ]
+}

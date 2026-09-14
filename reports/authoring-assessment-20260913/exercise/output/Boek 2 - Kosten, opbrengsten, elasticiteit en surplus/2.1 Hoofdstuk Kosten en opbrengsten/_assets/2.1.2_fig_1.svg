@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="860" viewBox="0 0 760 860" role="img" aria-labelledby="title desc">
+  <title id="title">Van bron naar winst en break-even</title>
+  <desc id="desc">Schema: brongegevens leiden naar formules en naar de winst- of verliescheck.</desc>
+  <rect width="760" height="860" fill="white"/>
+  <defs>
+    <marker id="arrow" markerWidth="18" markerHeight="14" refX="16" refY="7" orient="auto">
+      <polygon points="0 0, 18 7, 0 14" fill="#1A5276"/>
+    </marker>
+  </defs>
+  <g font-family="Arial, DejaVu Sans, sans-serif">
+    <text x="45" y="65" font-size="40" font-weight="700" fill="#1A5276">Van bron naar winst en break-even</text>
+    <text x="47" y="112" font-size="32" font-weight="700" fill="#333">Werk steeds met dezelfde hoeveelheid Q.</text>
+
+    <rect x="55" y="155" width="650" height="170" rx="22" fill="#F8FAFC" stroke="#1A5276" stroke-width="5"/>
+    <text x="85" y="205" font-size="35" font-weight="700" fill="#1A5276">1. Bron</text>
+    <text x="85" y="255" font-size="32" fill="#111">Prijs: P = euro 1,50</text>
+    <text x="85" y="300" font-size="32" fill="#111">Kosten: TK = 500 + 0,80Q</text>
+
+    <path d="M380 345 L380 385" stroke="#1A5276" stroke-width="8" marker-end="url(#arrow)"/>
+
+    <rect x="55" y="405" width="650" height="235" rx="22" fill="#F8FAFC" stroke="#1A5276" stroke-width="5"/>
+    <text x="85" y="455" font-size="35" font-weight="700" fill="#1A5276">2. Formules</text>
+    <rect x="85" y="485" width="280" height="55" rx="14" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="3"/>
+    <text x="112" y="523" font-size="32" font-weight="700" fill="#111">TO = 1,50Q</text>
+    <rect x="395" y="485" width="250" height="55" rx="14" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="3"/>
+    <text x="422" y="523" font-size="32" font-weight="700" fill="#111">W = TO - TK</text>
+    <rect x="85" y="560" width="280" height="55" rx="14" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="3"/>
+    <text x="112" y="598" font-size="32" font-weight="700" fill="#111">GO = TO / Q</text>
+    <text x="395" y="598" font-size="30" fill="#333">Bij vaste prijs: GO = P</text>
+
+    <path d="M380 665 L380 705" stroke="#1A5276" stroke-width="8" marker-end="url(#arrow)"/>
+
+    <rect x="55" y="705" width="650" height="145" rx="22" fill="#FFF7D8" stroke="#C8A100" stroke-width="5"/>
+    <text x="85" y="755" font-size="35" font-weight="700" fill="#1A5276">3. Check</text>
+    <text x="285" y="755" font-size="32" fill="#111">TO &gt; TK: winst</text>
+    <text x="285" y="797" font-size="32" fill="#111">TO &lt; TK: verlies</text>
+    <text x="285" y="839" font-size="32" fill="#111">TO = TK: break-even</text>
+  </g>
+</svg>

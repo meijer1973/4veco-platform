@@ -1,0 +1,20 @@
+{
+  "authored_markdown_preserved": true,
+  "html_body_semantics_preserved": true,
+  "pdf_text_preserved": true,
+  "before_pages": 5,
+  "after_pages": 5,
+  "summary_label_and_five_rows_page": 2,
+  "per_page_text_unchanged": [
+    false,
+    false,
+    true,
+    true,
+    true
+  ],
+  "hashes": {
+    "2.1.1 Kostenstructuren \u2013 opgaven.md": "aa8c19d597e8658c64783875d63f3228d2a238f4f1c34b108699d506b346bb7c",
+    "2.1.1 Kostenstructuren \u2013 opgaven.html": "8330a14d25718c347216dc9e5253d6734345495c61fb0af661fdc4ad4954ac31",
+    "2.1.1 Kostenstructuren \u2013 opgaven.pdf": "70e21a04e78dd7bc4b1e950724565a5177e184312aaed5ee7659cd82f97a688d"
+  }
+}

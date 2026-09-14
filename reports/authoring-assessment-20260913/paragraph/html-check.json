@@ -1,0 +1,128 @@
+[
+  {
+    "file": "2.1.1 Kostenstructuren – antwoorden.html",
+    "bytes": 16159,
+    "tags": {
+      "html": 1,
+      "head": 1,
+      "meta": 1,
+      "title": 1,
+      "style": 1,
+      "body": 1,
+      "h1": 1,
+      "p": 45,
+      "h2": 8,
+      "strong": 75,
+      "div": 3,
+      "table": 4,
+      "thead": 4,
+      "tr": 18,
+      "th": 13,
+      "tbody": 4,
+      "td": 44,
+      "ul": 8,
+      "li": 24,
+      "colgroup": 3,
+      "col": 10
+    },
+    "images": [],
+    "errors": []
+  },
+  {
+    "file": "2.1.1 Kostenstructuren – opgaven.html",
+    "bytes": 20325,
+    "tags": {
+      "html": 1,
+      "head": 1,
+      "meta": 1,
+      "title": 1,
+      "style": 1,
+      "body": 1,
+      "h1": 1,
+      "blockquote": 3,
+      "p": 41,
+      "strong": 28,
+      "ul": 4,
+      "li": 37,
+      "h2": 7,
+      "div": 15,
+      "table": 9,
+      "colgroup": 4,
+      "col": 12,
+      "thead": 9,
+      "tr": 36,
+      "th": 26,
+      "tbody": 9,
+      "td": 78,
+      "figure": 2,
+      "img": 2,
+      "figcaption": 2,
+      "ol": 8,
+      "em": 2,
+      "span": 22,
+      "section": 2
+    },
+    "images": [
+      {
+        "src": "_assets/2.1.1_fig_2.png",
+        "alt": "Figuur 2. Totale kosten van het atelier: TCK blijft gelijk, TVK en TK stijgen binnen het getekende modelbereik."
+      },
+      {
+        "src": "_assets/2.1.1_fig_3.png",
+        "alt": "Figuur 3. Gemiddelde kosten van het atelier: GCK en GTK dalen, terwijl GVK in dit model gelijk blijft."
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file": "2.1.1 Kostenstructuren – paragraaf.html",
+    "bytes": 25709,
+    "tags": {
+      "html": 1,
+      "head": 1,
+      "meta": 1,
+      "title": 1,
+      "style": 1,
+      "body": 1,
+      "h1": 1,
+      "h2": 11,
+      "p": 67,
+      "blockquote": 15,
+      "strong": 44,
+      "ul": 4,
+      "li": 37,
+      "br": 4,
+      "div": 16,
+      "figure": 3,
+      "img": 3,
+      "figcaption": 3,
+      "table": 9,
+      "colgroup": 4,
+      "col": 12,
+      "thead": 9,
+      "tr": 36,
+      "th": 26,
+      "tbody": 9,
+      "td": 78,
+      "ol": 8,
+      "em": 2,
+      "span": 22,
+      "section": 2
+    },
+    "images": [
+      {
+        "src": "_assets/2.1.1_fig_1.png",
+        "alt": "Figuur 1. Van totale kosten per periode naar gemiddelde kosten per product: constant plus variabel is totaal."
+      },
+      {
+        "src": "_assets/2.1.1_fig_2.png",
+        "alt": "Figuur 2. Totale kosten van het atelier: TCK blijft gelijk, TVK en TK stijgen binnen het getekende modelbereik."
+      },
+      {
+        "src": "_assets/2.1.1_fig_3.png",
+        "alt": "Figuur 3. Gemiddelde kosten van het atelier: GCK en GTK dalen, terwijl GVK in dit model gelijk blijft."
+      }
+    ],
+    "errors": []
+  }
+]

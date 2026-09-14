@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>2.1.1 Kostenstructuren – opgaven</title><style>@page {
+  size: A4;
+  margin: 22mm 23mm 22mm;
+  @bottom-center { content: counter(page); font: 9pt "DejaVu Sans", sans-serif; color: #52616c; }
+}
+html { color: #192c38; font: 10.5pt/1.5 "DejaVu Sans", sans-serif; }
+body { margin: 0; }
+h1 { font-size: 22pt; line-height: 1.2; color: #174c66; }
+h2 { font-size: 15pt; color: #174c66; margin-top: 1.5em; }
+h3 { font-size: 12pt; margin-top: 1.1em; }
+h1, h2, h3, h4 { break-after: avoid; }
+p, li { orphans: 3; widows: 3; }
+p { margin: .65em 0; }
+ul, ol { padding-left: 1.8em; }
+li { padding-left: .3em; margin: .35em 0; }
+/* Use Pandoc's native ol type/start attributes. Do not reset CSS counters. */
+li > p { margin: .3em 0; }
+table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 9.5pt; }
+th, td { border-bottom: 1px solid #cbd7dd; padding: .45em .6em; text-align: left; overflow-wrap: anywhere; }
+th { background: #edf3f6; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+img, svg { max-width: 100%; height: auto; }
+figure { margin: .8em 0; }
+figcaption { font-size: 9pt; color: #52616c; }
+.figure-context { break-inside: avoid; }
+.figure-context img { max-height: 170mm; object-fit: contain; }
+blockquote { border-left: 3px solid #73a8bc; margin: 1em 0; padding: .2em 1em; background: #f3f7f9; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: .9em; }
+a { color: #175774; }
+@media screen { body { max-width: 760px; padding: 2rem; margin: auto; } }
+</style></head><body><h1 id="opgaven-2.1.1-kostenstructuren">Opgaven §2.1.1 —
+Kostenstructuren</h1>
+<blockquote>
+<p><strong>Na deze paragraaf kun je:</strong></p>
+<ul>
+<li>kostencomponenten als constant of variabel classificeren op basis
+van hun gedrag binnen een genoemde periode en bij gelijkblijvende
+productiecapaciteit.</li>
+<li>uit een context de functies voor TCK, TVK en TK opstellen.</li>
+<li>gemiddelde kosten berekenen en met de juiste eenheid
+interpreteren.</li>
+<li>verklaren hoe totale en gemiddelde kosten veranderen als Q
+verandert, binnen de aannames van het model.</li>
+</ul>
+</blockquote>
+<h2 id="uitgewerkt-voorbeeld">Uitgewerkt voorbeeld</h2>
+<p><strong>Het sleutelhangeratelier.</strong> Het atelier maakt 100–200
+sleutelhangers per week met dezelfde machines. De ruimte kost € 100 en
+het softwareabonnement € 20 per week. Kunststof kost € 0,40 en
+verpakking € 0,10 per sleutelhanger. Deze tarieven blijven gelijk. We
+vergelijken Q = 100 met Q = 200.</p>
+<div class="figure-context">
+<p><strong>Stap 1 — Classificeer en verklaar het totale
+bedrag.</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Kostencomponent</th>
+<th>Soort kosten</th>
+<th>Reactie van het totale weekbedrag op meer sleutelhangers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ruimte</td>
+<td>Constant</td>
+<td>Blijft € 100 per week.</td>
+</tr>
+<tr>
+<td>Softwareabonnement</td>
+<td>Constant</td>
+<td>Blijft € 20 per week.</td>
+</tr>
+<tr>
+<td>Kunststof</td>
+<td>Variabel</td>
+<td>Stijgt met € 0,40 per extra sleutelhanger.</td>
+</tr>
+<tr>
+<td>Verpakking</td>
+<td>Variabel</td>
+<td>Stijgt met € 0,10 per extra sleutelhanger.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure-context">
+<p><strong>Stap 2 — Stel de functies op.</strong></p>
+<p>TCK = 100 + 20 = 120. TVK = (0,40 + 0,10)Q = 0,50Q. Dus TK = 120 +
+0,50Q. De totale bedragen zijn in euro per week; Q is in sleutelhangers
+per week.</p>
+</div>
+<div class="figure-context">
+<p><strong>Stap 3 — Vul Q in en deel elk totaal door Q.</strong></p>
+<p>Bij Q = 100: TCK = € 120, TVK = 0,50 × 100 = € 50 en TK = 120 + 50 =
+€ 170 per week.</p>
+</div>
+<ul>
+<li>GCK = TCK / Q = 120 / 100 = <strong>€ 1,20 per
+sleutelhanger</strong>.</li>
+<li>GVK = TVK / Q = 50 / 100 = <strong>€ 0,50 per
+sleutelhanger</strong>.</li>
+<li>GTK = TK / Q = 170 / 100 = <strong>€ 1,70 per
+sleutelhanger</strong>.</li>
+</ul>
+<p>Bij Q = 200: TCK = € 120, TVK = 0,50 × 200 = € 100 en TK = 120 + 100
+= € 220 per week.</p>
+<ul>
+<li>GCK = TCK / Q = 120 / 200 = <strong>€ 0,60 per
+sleutelhanger</strong>.</li>
+<li>GVK = TVK / Q = 100 / 200 = <strong>€ 0,50 per
+sleutelhanger</strong>.</li>
+<li>GTK = TK / Q = 220 / 200 = <strong>€ 1,10 per
+sleutelhanger</strong>.</li>
+</ul>
+<p>In deze tabellen is één stuk één sleutelhanger. De eerste tabel toont
+de weektotalen; de tweede toont kosten per sleutelhanger.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Q (stuks/week)</th>
+<th style="text-align: right;">TCK (€/week)</th>
+<th style="text-align: right;">TVK (€/week)</th>
+<th style="text-align: right;">TK (€/week)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">170</td>
+</tr>
+<tr>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">220</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Q (stuks/week)</th>
+<th style="text-align: right;">GCK (€/stuk)</th>
+<th style="text-align: right;">GVK (€/stuk)</th>
+<th style="text-align: right;">GTK (€/stuk)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1,20</td>
+<td style="text-align: right;">0,50</td>
+<td style="text-align: right;">1,70</td>
+</tr>
+<tr>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">0,60</td>
+<td style="text-align: right;">0,50</td>
+<td style="text-align: right;">1,10</td>
+</tr>
+</tbody>
+</table>
+<div class="figure-context">
+<p><strong>Stap 4 — Vergelijk eerst totalen, dan
+gemiddelden.</strong></p>
+<p>TCK blijft € 120 per week. TVK verdubbelt van € 50 naar € 100 per
+week. TK stijgt van € 170 naar € 220 per week en verdubbelt dus niet. De
+constante kosten hoef je niet tweemaal te betalen.</p>
+</div>
+<p>GCK halveert doordat dezelfde € 120 over tweemaal zoveel
+sleutelhangers wordt verdeeld. GVK blijft € 0,50 per sleutelhanger
+doordat de variabele kosten per sleutelhanger gelijk blijven. GTK daalt
+van € 1,70 naar € 1,10 per sleutelhanger. Dat is geen halvering: alleen
+het GCK-deel halveert. Dit geldt binnen deze week, 100–200
+sleutelhangers en dezelfde capaciteit en tarieven.</p>
+<blockquote>
+<p><strong>Terugblik op §1.1.3</strong> Lees eerst de assen en hun
+eenheden. Zoek vervolgens Q op de horizontale as en lees de kosten op de
+verticale as. Een kostengrafiek heeft een kostenbedrag, geen
+verkoopprijs, op de verticale as.</p>
+</blockquote>
+<div class="figure-context">
+<p>Figuur 2 laat dezelfde totalen zien, terwijl capaciteit en tarieven
+gelijk blijven (ceteris paribus). Lees bij Q = 100 en Q = 200 de drie
+lijnen. De horizontale TCK-lijn blijft op 120. TVK en TK stijgen
+evenveel: het verticale verschil tussen deze twee lijnen is steeds TCK =
+120 euro per week.</p>
+<figure>
+<img src="_assets/2.1.1_fig_2.png"
+alt="Figuur 2. Totale kosten van het atelier: TCK blijft gelijk, TVK en TK stijgen binnen het getekende modelbereik." />
+<figcaption aria-hidden="true">Figuur 2. Totale kosten van het atelier:
+TCK blijft gelijk, TVK en TK stijgen binnen het getekende
+modelbereik.</figcaption>
+</figure>
+</div>
+<div class="figure-context">
+<p>Figuur 3 toont bij dezelfde omstandigheden de gemiddelden. De
+GCK-curve daalt; dezelfde vaste kosten worden verdeeld over meer
+sleutelhangers. De GVK-lijn blijft op 0,50. GTK ligt telkens GCK boven
+GVK. De twee GTK-punten horen bij de laatste kolom van de tabel.</p>
+<figure>
+<img src="_assets/2.1.1_fig_3.png"
+alt="Figuur 3. Gemiddelde kosten van het atelier: GCK en GTK dalen, terwijl GVK in dit model gelijk blijft." />
+<figcaption aria-hidden="true">Figuur 3. Gemiddelde kosten van het
+atelier: GCK en GTK dalen, terwijl GVK in dit model gelijk
+blijft.</figcaption>
+</figure>
+</div>
+<div class="figure-context">
+<blockquote>
+<p><strong>Samenvatting §2.1.1</strong></p>
+<ul>
+<li>Classificeer kosten op hun reactie op Q, binnen één periode en
+dezelfde capaciteit.</li>
+<li>TK = TCK + TVK; totale kosten zijn bedragen per periode.</li>
+<li>Bij Q &gt; 0: GCK = TCK/Q, GVK = TVK/Q en GTK = TK/Q = GCK +
+GVK.</li>
+<li>Dezelfde TCK over meer producten verlaagt GCK; GVK blijft alleen
+gelijk bij constante variabele kosten per product.</li>
+<li>Benoem altijd totaal of gemiddeld en de eenheid. Deze kostenrelaties
+gebruik je verder in §2.1.2.</li>
+</ul>
+</blockquote>
+</div>
+<h2 id="startopgaven">Startopgaven</h2>
+<div class="figure-context">
+<p><strong>Opgave 1 — Ophalen</strong></p>
+<p>Een klimhal noteert haar bezoekers. Gebruik de tabel; er is geen
+berekening van kosten nodig.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th style="text-align: right;">Bezoeken (aantal per week)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align: right;">120</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align: right;">240</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li>Wat meet de tweede kolom? Noem de eenheid.</li>
+<li>Hoeveel bezoeken zijn er in week B? Hoeveel maal het aantal van week
+A is dat?</li>
+<li>Een bericht zegt: “Het aantal bezoeken is gehalveerd.” Beoordeel dit
+met beide tabelwaarden.</li>
+</ol>
+<div class="figure-context">
+<p><strong>Opgave 2 — Begripscheck</strong></p>
+<p>Een mobiele podcaststudio betaalt € 60 huur per dag en € 2
+verbruiksmateriaal per opname. Ze maakt 10–20 opnamen per dag met
+dezelfde apparatuur en tarieven. Q is in opnamen per dag.</p>
+</div>
+<ol type="a">
+<li>Zijn de huurkosten constant of variabel? Leg uit met het totale
+dagbedrag.</li>
+<li>Zijn de verbruikskosten constant of variabel? Leg uit met het totale
+dagbedrag.</li>
+<li>Stel TK op.</li>
+<li>Bereken GTK bij Q = 10. Noteer de eenheid.</li>
+<li>Iemand noemt € 60 “de constante kosten per opname”. Leg de fout
+uit.</li>
+</ol>
+<p>Korte route: Startopgaven → Zelfstandige oefening → Doeloefening.
+Extra hulp nodig? Maak eerst Begeleide inoefening.</p>
+<h2 id="begeleide-inoefening">Begeleide inoefening</h2>
+<p><em>Heb je deze hulp niet nodig? Ga dan verder met Zelfstandige
+oefening.</em></p>
+<div class="figure-context">
+<p><strong>Opgave 3 — Honden wassen</strong></p>
+<p>Een hondensalon voert 50–100 gelijke wasbeurten per maand uit. De
+werkplaats kost € 180 per maand en de reserveringssoftware € 20 per
+maand. Shampoo kost € 3 en water € 1 per beurt. Capaciteit en tarieven
+blijven gelijk; Q is het aantal beurten per maand.</p>
+</div>
+<ol type="a">
+<li>Vul de tabel aan. Vraag bij elke rij: verandert het <strong>totale
+maandbedrag</strong> als Q stijgt?</li>
+</ol>
+<table style="table-layout:fixed;width:100%"><colgroup><col style="width:38%"><col style="width:20%"><col style="width:42%"></colgroup><thead><tr><th scope="col">Kostencomponent</th><th scope="col">Soort kosten</th><th scope="col">Reactie van het totale maandbedrag op hoger Q</th></tr></thead><tbody><tr><td style="vertical-align:top">Werkplaats</td><td style="vertical-align:top">Constant</td><td style="vertical-align:top">Blijft € 180 per maand.</td></tr><tr><td style="vertical-align:top">Reserveringssoftware</td><td style="vertical-align:top"><span style="display:block;min-height:12mm">…</span></td><td style="vertical-align:top"><span style="display:block;min-height:12mm">…</span></td></tr><tr><td style="vertical-align:top">Shampoo</td><td style="vertical-align:top"><span style="display:block;min-height:12mm">…</span></td><td style="vertical-align:top"><span style="display:block;min-height:12mm">…</span></td></tr><tr><td style="vertical-align:top">Water</td><td style="vertical-align:top"><span style="display:block;min-height:12mm">…</span></td><td style="vertical-align:top"><span style="display:block;min-height:12mm">…</span></td></tr></tbody></table>
+<ol start="2" type="a">
+<li>Vul in: TCK = 180 + … = …; TVK = (3 + …)Q = …; TK = TCK + TVK = ….
+Alle totalen zijn in euro per maand.</li>
+<li>Bereken bij Q = 50 en Q = 100 de GCK, GVK en GTK. Gebruik eerst de
+totale bedragen uit b. Maak twee rijen en zet boven elke kolom de
+volledige eenheid. Alleen voor de eerste cel krijg je het begin: GCK =
+TCK/Q = 200/50 = ….</li>
+<li>Vergelijk de drie totalen. Leg vervolgens uit waarom GCK halveert,
+GVK gelijk blijft en GTK niet halveert. Noem de grenzen van je
+conclusie.</li>
+</ol>
+<h2 id="zelfstandige-oefening">Zelfstandige oefening</h2>
+<div class="figure-context">
+<p><strong>Opgave 4 — Twee veranderingen in het
+keramiekatelier</strong></p>
+<p>Een atelier maakt 80–160 bekers per week met dezelfde oven. Eerst
+bedraagt de ruimtehuur € 240 per week. Klei kost € 2,50 en verpakking €
+0,50 per beker. In een nieuwe week wordt de huur € 210 per week én
+stijgt de kleiprijs naar € 3 per beker. Verpakking blijft even duur. In
+beide situaties zijn de bedragen per beker constant binnen het
+productiegebied. Q is in bekers per week.</p>
+</div>
+<ol type="a">
+<li>Classificeer de huur, klei en verpakking als constant of variabel.
+Licht elk antwoord toe.</li>
+<li>Stel TK op voor de oude en voor de nieuwe situatie.</li>
+<li>Bij Q = 80: bereken eerst het effect van alleen de lagere huur op
+TK. Bereken daarna het effect van alleen de hogere kleiprijs. Combineer
+de effecten en bereken de nieuwe TK.</li>
+<li>Een leerling zegt: “De vaste rekening wordt lager, dus alle kosten
+dalen.” Beoordeel deze uitspraak voor de totale kosten én de gemiddelde
+totale kosten bij Q = 80. Noem beide uitkomsten en hun eenheden.</li>
+</ol>
+<div class="figure-context">
+<p><strong>Opgave 5 — Vogelhuisjes</strong></p>
+<p>Een atelier produceert in een maand 100–200 vogelhuisjes met dezelfde
+machines. De ruimte kost € 240 en de machinehuur € 60 per maand. Hout
+kost € 1,50 en schroeven € 0,50 per vogelhuisje, bij ieder aantal binnen
+dit bereik. Q is in vogelhuisjes per maand.</p>
+</div>
+<ol type="a">
+<li>Classificeer alle kostenonderdelen. Noteer per onderdeel hoe het
+totale bedrag reageert op meer vogelhuisjes.</li>
+</ol>
+<table style="table-layout:fixed;width:100%"><colgroup><col style="width:38%"><col style="width:20%"><col style="width:42%"></colgroup><thead><tr><th scope="col">Kostencomponent</th><th scope="col">Soort kosten</th><th scope="col">Reden</th></tr></thead><tbody><tr><td style="vertical-align:top">Ruimte</td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td></tr><tr><td style="vertical-align:top">Machinehuur</td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td></tr><tr><td style="vertical-align:top">Hout</td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td></tr><tr><td style="vertical-align:top">Schroeven</td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td></tr></tbody></table>
+<ol start="2" type="a">
+<li>Stel TCK, TVK en TK op.</li>
+<li>Bereken GCK, GVK en GTK bij Q = 100 en Q = 200. Noteer volledige
+eenheden.</li>
+<li>Vergelijk eerst alle totale kosten. Verklaar daarna de verandering
+van elk gemiddelde. Beoordeel de uitspraak: “Bij tweemaal zoveel
+vogelhuisjes halveert GTK.” Begrens je conclusie tot het model.</li>
+</ol>
+<section id="doeloefening" class="figure-context">
+<h2>Doeloefening</h2>
+<div class="figure-context">
+<p><strong>Opgave 6 — Bakkerij De Korenaar</strong></p>
+<p>Bakkerij De Korenaar produceert in één maand tussen 500 en 1.000
+broden. Zolang de productiecapaciteit gelijk blijft, gebruikt de
+bakkerij dezelfde ruimte en ovens. Huur en verzekering kosten samen €
+440 per maand. De netaansluiting en het energieabonnement kosten € 60
+per maand. Meel en verpakking kosten samen € 0,70 per brood. Het
+elektriciteitsverbruik van de ovens kost binnen deze grenzen € 0,10 per
+brood. Q is het aantal broden per maand.</p>
+</div>
+<table style="table-layout:fixed;width:100%"><colgroup><col style="width:38%"><col style="width:20%"><col style="width:42%"></colgroup><thead><tr><th scope="col">kostencomponent</th><th scope="col">soort kosten</th><th scope="col">reden</th></tr></thead><tbody><tr><td style="vertical-align:top">huur en verzekering</td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td></tr><tr><td style="vertical-align:top">netaansluiting en energieabonnement</td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td></tr><tr><td style="vertical-align:top">meel en verpakking</td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td></tr><tr><td style="vertical-align:top">elektriciteitsverbruik ovens</td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td><td style="vertical-align:top"><span style="display:block;min-height:12mm"></span></td></tr></tbody></table>
+<p>Vul de lege cellen in.</p>
+<p><strong>a. (4 punten)</strong> Vul de classificatietabel in:
+classificeer elk onderdeel als constante of variabele kosten en noteer
+per onderdeel kort hoe het totale bedrag reageert op een verandering van
+Q.</p>
+<p><strong>b. (3 punten)</strong> Stel de functies voor TCK, TVK en TK
+op.</p>
+<p><strong>c. (3 punten)</strong> Bereken bij Q = 500 de GCK, GVK en
+GTK. Noteer de volledige eenheden.</p>
+<p><strong>d. (3 punten)</strong> Bereken bij Q = 1.000 de GCK, GVK en
+GTK. Noteer de volledige eenheden.</p>
+<p><strong>e. (4 punten)</strong> Vergelijk eerst TCK, TVK en TK bij Q =
+500 en Q = 1.000. Leg daarna met de uitkomsten uit waarom GCK halveert,
+GVK gelijk blijft en GTK niet halveert als Q verdubbelt. Begrens je
+uitleg tot één maand, Q = 500–1.000 en gelijkblijvende
+productiecapaciteit.</p>
+</section>
+<section id="denkertje-bonusopgave" class="figure-context">
+<h2>Denkertje / Bonusopgave</h2>
+<div class="figure-context">
+<p><strong>Opgave 7 — Een tabel vertelt niet alles</strong></p>
+<p>Een theateratelier maakt maskers. Een leerling krijgt alleen deze
+gegevens:</p>
+</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Q (maskers per week)</th>
+<th style="text-align: right;">TK (euro per week)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">180</td>
+</tr>
+<tr>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">260</td>
+</tr>
+</tbody>
+</table>
+</section>
+<p>De leerling concludeert: “GVK is zeker € 4 per masker en TCK is zeker
+€ 100 per week.”</p>
+<p>Beoordeel hoe zeker die uitspraak is. Geef een kostenmodel waarbij de
+uitspraak klopt. Geef daarna één andere mogelijke verdeling van TCK en
+TVK die ook bij de twee tabelrijen past. Geef aan welke extra informatie
+nodig is. Je hoeft geen nieuw soort kostenfunctie te leren.</p>
+<h2 id="herhaling-herhaling-en-interleaving">Herhaling / Herhaling en
+interleaving</h2>
+<div class="figure-context">
+<p><strong>Opgave 8 — Zwembadbezoek</strong> <em>(herhaling §1.1.3:
+tabellen lezen en beweringen toetsen)</em></p>
+<table>
+<thead>
+<tr>
+<th>Dag</th>
+<th style="text-align: right;">Bezoekers (aantal per dag)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vrijdag</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td>Zaterdag</td>
+<td style="text-align: right;">180</td>
+</tr>
+<tr>
+<td>Zondag</td>
+<td style="text-align: right;">120</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol type="a">
+<li>Vergelijk zaterdag met vrijdag en zondag met zaterdag. Gebruik per
+vergelijking beide waarden en de juiste eenheid.</li>
+<li>Het zwembad meldt: “In het weekend komen iedere dag tweemaal zoveel
+bezoekers als op vrijdag.” Beoordeel de uitspraak met de tabel.</li>
+</ol>
+</body></html>

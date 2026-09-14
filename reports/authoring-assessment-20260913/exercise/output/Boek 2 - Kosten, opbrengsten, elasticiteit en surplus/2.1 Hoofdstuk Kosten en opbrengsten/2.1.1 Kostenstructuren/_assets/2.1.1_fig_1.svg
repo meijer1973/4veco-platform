@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="620" viewBox="0 0 760 620" role="img" aria-labelledby="title desc">
+  <title id="title">Kostenstructuur bakkerij</title>
+  <desc id="desc">Grafiek met TCK, TVK en TK voor een bakkerij.</desc>
+  <rect width="760" height="620" fill="#ffffff"/>
+  <g font-family="Arial, sans-serif">
+    <text x="380" y="50" text-anchor="middle" font-size="40" font-weight="700" fill="#1A5276">Kostenstructuur bakkerij</text>
+    <text x="74" y="105" font-size="30" font-weight="700" fill="#1a1a1a">euro</text>
+    <text x="725" y="542" font-size="30" font-weight="700" fill="#1a1a1a">Q</text>
+
+    <line x1="90" y1="500" x2="680" y2="500" stroke="#222" stroke-width="3"/>
+    <line x1="90" y1="500" x2="90" y2="110" stroke="#222" stroke-width="3"/>
+    <g font-size="30" fill="#555">
+      <line x1="90" y1="420" x2="680" y2="420" stroke="#E2E8F0" stroke-width="2"/>
+      <line x1="90" y1="340" x2="680" y2="340" stroke="#E2E8F0" stroke-width="2"/>
+      <line x1="90" y1="260" x2="680" y2="260" stroke="#E2E8F0" stroke-width="2"/>
+      <line x1="90" y1="180" x2="680" y2="180" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="58" y="508">0</text>
+      <text x="24" y="428">400</text>
+      <text x="24" y="348">800</text>
+      <text x="12" y="268">1200</text>
+      <text x="12" y="188">1600</text>
+      <line x1="385" y1="500" x2="385" y2="110" stroke="#EDF2F7" stroke-width="2"/>
+      <text x="385" y="542" text-anchor="middle">500</text>
+      <text x="680" y="542" text-anchor="middle">1000</text>
+    </g>
+
+    <line x1="90" y1="400" x2="680" y2="240" stroke="#1A5276" stroke-width="7"/>
+    <line x1="90" y1="500" x2="680" y2="340" stroke="#2E7D32" stroke-width="7"/>
+    <line x1="90" y1="400" x2="680" y2="400" stroke="#B03A2E" stroke-width="7"/>
+    <circle cx="385" cy="320" r="8" fill="#1A5276"/>
+    <circle cx="680" cy="240" r="8" fill="#1A5276"/>
+
+    <rect x="385" y="115" width="315" height="145" rx="16" fill="#ffffff" stroke="#CBD5E1" stroke-width="3"/>
+    <g font-size="30" fill="#1a1a1a">
+      <line x1="410" y1="152" x2="480" y2="152" stroke="#1A5276" stroke-width="7"/>
+      <text x="498" y="161">TK = 500 + 0,80Q</text>
+      <line x1="410" y1="197" x2="480" y2="197" stroke="#2E7D32" stroke-width="7"/>
+      <text x="498" y="206">TVK = 0,80Q</text>
+      <line x1="410" y1="242" x2="480" y2="242" stroke="#B03A2E" stroke-width="7"/>
+      <text x="498" y="251">TCK = 500</text>
+    </g>
+  </g>
+</svg>

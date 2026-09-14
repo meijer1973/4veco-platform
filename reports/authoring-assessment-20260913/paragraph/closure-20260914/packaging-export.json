@@ -1,0 +1,139 @@
+{
+  "operation": "export",
+  "reviewed_head": "5c72fdb04865dee214da677fcbc9d09c1073bc46",
+  "baseline": "0acaaa97443e5c4fee34f7da8a12ccd5db62d762",
+  "review_manifest_digest": "76f9267ba0dc5934631cb9f74e49380b54b26e099630055a4e175f0f11f403d6",
+  "manifest_file_bytes_unchanged": true,
+  "reviewed_files": [
+    {
+      "path": "2.1.1 Kostenstructuren – antwoorden.html",
+      "sha256": "151633518f11f3d6e838d0a2467815e99ab134e9fa2518963b8e8c2b3dc7be07",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – antwoorden.md",
+      "sha256": "b0c310c05c8752c8d7decc4246bcb740f69882b325f9643c2db1ea3668616826",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – antwoorden.pdf",
+      "sha256": "5e82f0fb9b592b3af6afc5d129019700dbd4ff16a9e422c75985b61d1f732740",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – opgaven.html",
+      "sha256": "6eb2f048080baded1c45473c0bc04d4097de7ab1df840e633db29e1787e21929",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – opgaven.md",
+      "sha256": "aec18022e7c443ade9f55f3b5b76ec0662b20172d0b4bfe481ab7d1bb15900b4",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – opgaven.pdf",
+      "sha256": "f9de1717590c37f815ed6be3075e6bfaec8719ef1078917cbe980887777e0ef3",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – paragraaf.html",
+      "sha256": "0b6523277f89a8df03380b27c4757a5969d0684a86071ffc0f575df6a3f777b6",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – paragraaf.md",
+      "sha256": "06abc290a388442691e9ca7f689580da5ba9136c59963ddcccedf118dce8c970",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – paragraaf.pdf",
+      "sha256": "3ae795e9751c0c35019f7a8c1fbbe990b2af95adcf18af37cd2eeed2af406c13",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "2.1.1-textbook-foundation.json",
+      "sha256": "1b9d604c5516979591da4c64a1812a20eb29703037d8995e39d8ebb1219a805b",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "2.1.1-textbook-plan.md",
+      "sha256": "34da9f88c00be02b76b4808e5ea59f970c02482a48ccb326660c50f62dae4939",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "_assets/2.1.1_fig_1.png",
+      "sha256": "ce7583656b0cdf001a230406cd3de46d834b165fd3085834421dfb483b3c75d8",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "_assets/2.1.1_fig_1.svg",
+      "sha256": "242e4b85bb58dcc184d08bbedeeb5e8d54b795ca44c709082ad41278c2af90d4",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "_assets/2.1.1_fig_2.png",
+      "sha256": "84f3f379ca34111395329be0fd3e297bc92dbc3aa63ebdd9802a6050ed25d841",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "_assets/2.1.1_fig_2.svg",
+      "sha256": "891d03387e3d65e049ac468860130923691c55908e4124276f880f53598a24eb",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "_assets/2.1.1_fig_3.png",
+      "sha256": "d3d31b9a39fbd6c34613fd3c157d81baf42ace411cbd89d2d544c51a3f775dd3",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "_assets/2.1.1_fig_3.svg",
+      "sha256": "27ee773c013e638918101f548fd2d8657fbbd1131d1661d98b37aca638eadd33",
+      "unchanged_from_reviewed_commit": true
+    },
+    {
+      "path": "build_pdf.py",
+      "sha256": "7281387e1cb3b930b2cf65df2302a28f15f20d8bbcd80811c7b53d342bf4a5b8",
+      "unchanged_from_reviewed_commit": true
+    }
+  ],
+  "external_zip": "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\paragraph\\closure-20260914\\delivery\\2.1.1 Kostenstructuren – opgaven.zip",
+  "external_zip_sha256": "3643bcf518473342aa23a9d06310c4deafc89faa0d545e026b24377e4b13d2fd",
+  "external_zip_members": [
+    {
+      "path": "2.1.1 Kostenstructuren – opgaven.md",
+      "sha256": "aec18022e7c443ade9f55f3b5b76ec0662b20172d0b4bfe481ab7d1bb15900b4"
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – opgaven.html",
+      "sha256": "6eb2f048080baded1c45473c0bc04d4097de7ab1df840e633db29e1787e21929"
+    },
+    {
+      "path": "2.1.1 Kostenstructuren – opgaven.pdf",
+      "sha256": "f9de1717590c37f815ed6be3075e6bfaec8719ef1078917cbe980887777e0ef3"
+    },
+    {
+      "path": "_assets/2.1.1_fig_1.png",
+      "sha256": "ce7583656b0cdf001a230406cd3de46d834b165fd3085834421dfb483b3c75d8"
+    },
+    {
+      "path": "_assets/2.1.1_fig_1.svg",
+      "sha256": "242e4b85bb58dcc184d08bbedeeb5e8d54b795ca44c709082ad41278c2af90d4"
+    },
+    {
+      "path": "_assets/2.1.1_fig_2.png",
+      "sha256": "84f3f379ca34111395329be0fd3e297bc92dbc3aa63ebdd9802a6050ed25d841"
+    },
+    {
+      "path": "_assets/2.1.1_fig_2.svg",
+      "sha256": "891d03387e3d65e049ac468860130923691c55908e4124276f880f53598a24eb"
+    },
+    {
+      "path": "_assets/2.1.1_fig_3.png",
+      "sha256": "d3d31b9a39fbd6c34613fd3c157d81baf42ace411cbd89d2d544c51a3f775dd3"
+    },
+    {
+      "path": "_assets/2.1.1_fig_3.svg",
+      "sha256": "27ee773c013e638918101f548fd2d8657fbbd1131d1661d98b37aca638eadd33"
+    }
+  ]
+}

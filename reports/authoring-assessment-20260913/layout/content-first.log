@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\wt\reorganize 2\authoring-assessment-20260913\layout\check-content.py", line 56, in <module>
+    assert content(before_pages) == content(after_pages), 'PDF text content changed'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: PDF text content changed

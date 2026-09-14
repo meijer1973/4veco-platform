@@ -1,0 +1,24 @@
+{
+  "read_events": 22,
+  "distinct_paths": 20,
+  "selected_words": 11394,
+  "selected_characters": 88881,
+  "repeated_paths": {
+    "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-platform\\AGENTS.md": 2,
+    "C:\\wt\\reorganize 2\\authoring-assessment-20260913\\exercise\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\build_chapter.py": 2
+  },
+  "word_count_limit": "selected text volume, not token use or proof of reading; failed/truncated read events explicitly logged",
+  "start_utc": "2026-09-13T11:38:32.744026+00:00",
+  "first_student_content_edit_utc": "2026-09-13T11:41:05.972617+00:00",
+  "first_review_request_utc": "2026-09-13T11:44:48.710317+00:00",
+  "final_read_events": 23,
+  "final_selected_words": 11805,
+  "final_utc": "2026-09-13T11:49:56.012632+00:00",
+  "elapsed_seconds_to_final_log": 683.268606,
+  "first_edit_seconds": 153.228591,
+  "first_review_request_seconds": 375.966291,
+  "completion_logging_segment_seconds": 107.058239,
+  "logging_segment_limit": "elapsed segment includes independent review read, staging, commit and final checks; not pure active logging time",
+  "local_lesson_commit": "6b9b5134a6983fc1aae7e35e4061c1908c814196",
+  "outcome": "SCOPED_PASS_LOCAL; full Part A baseline and ZIP lane classification failures disclosed"
+}
