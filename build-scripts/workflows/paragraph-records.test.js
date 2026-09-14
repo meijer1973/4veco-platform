@@ -58,7 +58,10 @@ test('foundation reports existing checker failures and missing local chapter evi
   expect(record.decision).toBe('BLOCKED');
   expect(record.failures).toContain('Local _chapter-plan.md is missing');
   expect(record.target.id).toBe('2.1.1');
-  expect(record.sources.every(source => source.actual_sha256 === source.sha256)).toBe(true);
+  expect(record.sources.every(source => source.actual_sha256 === source.sha256 || source.currentness === 'reviewed_structural_transition')).toBe(true);
+  const transitioned = record.sources.filter(source => source.currentness === 'reviewed_structural_transition');
+  expect(transitioned).toHaveLength(3);
+  expect(transitioned.every(source => source.structure_revision === 'book34-chat-v2-20260914' && source.sha256 !== source.actual_sha256)).toBe(true);
   expect(record.holds.every(hold => typeof hold.blocks_requested_action === 'boolean')).toBe(true);
   expect(record.lifecycle.interpretation).toMatch(/Historical/);
 });

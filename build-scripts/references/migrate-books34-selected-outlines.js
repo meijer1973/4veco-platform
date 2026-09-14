@@ -103,7 +103,8 @@ function buildV5(original, paragraphs) {
   out=out.slice(0,out.indexOf('### Book 3\n'))+table(3)+table(4)+out.slice(out.indexOf('## Paragraph Anchors'));
   const anchors=paragraphs.map(p=>`### §${p.id} - ${p.title}\n\nSelected structure: ${REVISION}; [original outline](${p.source_path.replace('references/','../')}). Target status: placeholder_needs_review; no inherited approval.\n\nIntended learning: ${p.intended_learning}\n\nRetrieval and transfer (design, not mastery evidence): ${p.retrieval_and_transfer}\n\nBoundary: ${p.boundary}\n`).join('\n');
   out=out.slice(0,out.indexOf('### §3.1.1 -'))+anchors+'\n'+out.slice(out.indexOf('## Web-Only Test Preparation'));
-  return out.replace('count toward 12/12/14/16','count toward 12/12/14/17');
+  return out.replace('count toward 12/12/14/16','count toward 12/12/14/17')
+    .replaceAll('(../authored/book-outlines/', '(https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/');
 }
 
 function buildV6(original) {

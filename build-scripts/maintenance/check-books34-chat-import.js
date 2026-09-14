@@ -24,6 +24,8 @@ function verify({root=ROOT,lessons=LESSONS,requirePaired=false,requireTracked=fa
  failures.push(...validateStructuralRecords(registry,root));
  const previous=JSON.parse(read(migration.SNAPSHOT+'/course-target-exercises.json'));
  const rows=readSelectedStructure(root);
+ check(canonical(read('references/owned/course-blueprint-v5.md'))===migration.buildV5(read(migration.SNAPSHOT+'/course-blueprint-v5.md'),rows),'Current v5 differs from owning structural migration');
+ check(canonical(read('references/owned/course-blueprint-v6-three-year.md'))===migration.buildV6(read(migration.SNAPSHOT+'/course-blueprint-v6-three-year.md')),'Current v6 differs from owning bounded migration');
  check(jsonHash(registry.exercises.filter(r=>r.module<3))===jsonHash(previous.exercises.filter(r=>r.module<3)),'Book 1/2 target payload changed');
  check(jsonHash(registry.exercises.filter(r=>r.module>=3))===jsonHash(rows.map(row=>migration.buildRecord(row,previous))),'Current records differ from the bounded migration: history, scope, target or approval changed');
  for(const [file,[before,after]] of Object.entries(TRANSITIONS)) {

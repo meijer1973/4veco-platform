@@ -14,8 +14,8 @@ const {
 
 const FIXTURE_DIR = path.join(__dirname, 'fixtures', 'paragraph-lane-scope');
 test('the bounded Books 3/4 blueprint packet is review evidence, not an unknown source exemption', () => {
-  expect(classifyPath('reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md')).toBe('review_evidence');
-  expect(classifyPath('reports/reference-planning/unknown-source.md')).toBe('unknown');
+  expect(classifyPath('reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md').category).toBe('review_evidence');
+  expect(classifyPath('reports/reference-planning/unknown-source.md').category).toBe('unknown');
 });
 
 function fixture(name) {
