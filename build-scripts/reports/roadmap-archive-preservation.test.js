@@ -62,8 +62,14 @@ function historicalLessonRows(rows) {
   const books34 = rows.filter(row => row.sprint === 'BOOK34-CHAT-IMPORT-OUTLINES-1');
   expect(books34.length).toBeLessThanOrEqual(1);
   if (books34.length) {
-    expect(books34[0]).toMatchObject({name:'Import completed Books 3/4 and adopt selected outlines', completed:'no', exitGate:''});
-    for (const clause of ['Writing/assembly complete; import and structural migration prepared/in PR.', 'Book 3: 6+4+4=14', 'Book 4: 4+7+6=17', 'Year 1: 55', 'Target approval, companion acceptance and merge remain separate.']) expect(books34[0].currentState).toContain(clause);
+    expect(books34[0]).toMatchObject({name:'Import completed Books 3/4 and adopt selected outlines', exitGate:''});
+    if (books34[0].completed === 'yes') {
+      for (const clause of ['Writing/assembly complete; import and structural migration integrated on main.', '7105ca9f1c88d5547ecf040276529c4e9bfcc6e1', '8acce31ca31b5ed28441b64fdc742da804dcaac0', 'Target approval and companion acceptance remain separate.']) expect(books34[0].currentState).toContain(clause);
+    } else {
+      expect(books34[0].completed).toBe('no');
+      for (const clause of ['Writing/assembly complete; import and structural migration prepared/in PR.', 'Target approval, companion acceptance and merge remain separate.']) expect(books34[0].currentState).toContain(clause);
+    }
+    for (const clause of ['Book 3: 6+4+4=14', 'Book 4: 4+7+6=17', 'Year 1: 55']) expect(books34[0].currentState).toContain(clause);
   }
   const additions = rows.filter(row => row.sprint === 'BOOK2-CHAT-IMPORT-1');
   expect(additions.length).toBeLessThanOrEqual(1);
@@ -166,6 +172,25 @@ test('the integrated import row requires both actual merge commits and retains t
   ]) {
     expect(() => historicalLessonRows([{ ...row, currentState: row.currentState.replace(required, 'unverified') }])).toThrow();
   }
+});
+test('Books 3/4 integration requires actual merge identities and preserves approval boundaries', () => {
+  const row = {
+    sprint: 'BOOK34-CHAT-IMPORT-OUTLINES-1', name: 'Import completed Books 3/4 and adopt selected outlines',
+    completed: 'yes', exitGate: '',
+    currentState: 'Writing/assembly complete; import and structural migration integrated on main. '
+      + 'Book 3: 6+4+4=14; Book 4: 4+7+6=17; Year 1: 55. '
+      + 'Target approval and companion acceptance remain separate. '
+      + '7105ca9f1c88d5547ecf040276529c4e9bfcc6e1 8acce31ca31b5ed28441b64fdc742da804dcaac0',
+  };
+  expect(historicalLessonRows([row])).toEqual([]);
+  for (const required of [
+    '7105ca9f1c88d5547ecf040276529c4e9bfcc6e1', '8acce31ca31b5ed28441b64fdc742da804dcaac0',
+    'integrated on main', 'Target approval and companion acceptance remain separate.',
+    'Book 3: 6+4+4=14', 'Book 4: 4+7+6=17', 'Year 1: 55',
+  ]) {
+    expect(() => historicalLessonRows([{ ...row, currentState: row.currentState.replace(required, 'unverified') }])).toThrow();
+  }
+  expect(() => historicalLessonRows([{ ...row, completed: 'unknown' }])).toThrow();
 });
 test('protected legacy and unresolved compatibility plans remain explicit', () => {
   const current = fs.readFileSync(path.join(root,'references/reference-team-roadmap.md'),'utf8');
