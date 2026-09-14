@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-14T07:40:55.800Z
+Generated: 2026-09-14T11:10:10.838Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/import-book2-chat-20260913`
-Source commit: `ee0f0e7a78db44f1c2d4c68c8ac4e5325c938f1a`
-Files indexed: 6732
+Source branch: `codex/import-books34-outlines-20260914`
+Source commit: `d37091a8f53f8987b5e8419838be3c822d2f7be2`
+Files indexed: 6751
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -144,7 +144,7 @@ Count: 89
 
 ## build scripts
 
-Count: 753
+Count: 761
 
 - build-scripts/archive/README.md
 - build-scripts/archive/roundtrip-pptx.py
@@ -313,9 +313,13 @@ Count: 753
 - build-scripts/lib/render-presentation-v2-html.js
 - build-scripts/lib/render-presentation-v2-pptx.js
 - build-scripts/lib/verify_svg_geometry.py
+- build-scripts/maintenance/books34-manifest-identities.json
 - build-scripts/maintenance/check-archive-cleanup.js
 - build-scripts/maintenance/check-book2-chat-import.js
 - build-scripts/maintenance/check-book2-chat-import.test.js
+- build-scripts/maintenance/check-books34-chat-import.js
+- build-scripts/maintenance/import-books34-delivery.py
+- build-scripts/maintenance/test_import_books34.py
 - build-scripts/platform/build-exit-ticket-shells.js
 - build-scripts/platform/build-exit-ticket-shells.test.js
 - build-scripts/platform/build-graphical-shells.js
@@ -345,6 +349,9 @@ Count: 753
 - build-scripts/references/audit-2025.json
 - build-scripts/references/audit-empty-needs.js
 - build-scripts/references/audit-exercise-schema-contract.js
+- build-scripts/references/books34-authority-transition.js
+- build-scripts/references/books34-selected-structure.js
+- build-scripts/references/books34-selected-structure.test.js
 - build-scripts/references/build-alignment-graph.js
 - build-scripts/references/build-begrippen-index.js
 - build-scripts/references/build-cp6b-target-exercise-review.js
@@ -558,6 +565,7 @@ Count: 753
 - build-scripts/references/lib/mtu-h7-bundle4-contract.js
 - build-scripts/references/lib/mtu-h7-bundle4-provenance.js
 - build-scripts/references/math-migration-map.json
+- build-scripts/references/migrate-books34-selected-outlines.js
 - build-scripts/references/migrate-course-target-exercises-v5.js
 - build-scripts/references/migrate-l0-to-l1-economic.js
 - build-scripts/references/migrate-paths.js
@@ -933,7 +941,7 @@ Count: 26
 
 ## validators
 
-Count: 644
+Count: 645
 
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
@@ -983,6 +991,7 @@ Count: 644
 - build-scripts/maintenance/check-archive-cleanup.js
 - build-scripts/maintenance/check-book2-chat-import.js
 - build-scripts/maintenance/check-book2-chat-import.test.js
+- build-scripts/maintenance/check-books34-chat-import.js
 - build-scripts/platform/check-book-landing-v2.js
 - build-scripts/platform/check-chapter-landing-v2.js
 - build-scripts/platform/check-news-detective-v2.js
@@ -1582,11 +1591,19 @@ Count: 644
 
 ## references
 
-Count: 1029
+Count: 1037
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/book-outlines/book-2-outline.md
 - references/authored/book-outlines/book-2-outline.meta.json
+- references/authored/book-outlines/book-3-outline.md
+- references/authored/book-outlines/book-3-outline.meta.json
+- references/authored/book-outlines/book-4-outline.md
+- references/authored/book-outlines/book-4-outline.meta.json
+- references/authored/book-outlines/books34-input-manifest.json
+- references/authored/book-outlines/books34-structure-change.json
+- references/authored/book-outlines/migration-live-v5-to-v2.csv
+- references/authored/book-outlines/selected-paragraphs.csv
 - references/authored/course-target-exercises.json
 - references/authored/didactiek-principes.md
 - references/authored/economic_mathematical_precision_reference.md
@@ -2616,7 +2633,7 @@ Count: 1029
 
 ## reports
 
-Count: 4662
+Count: 4665
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -3350,6 +3367,7 @@ Count: 4662
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-book-level-matrix.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-quality-log.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-reconciliation-report.md
+- reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md
 - reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-authority-decision.md
 - reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-authority-matrix.md
 - reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-quality-log.md
@@ -5310,6 +5328,8 @@ Count: 4662
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-prerequisite-inventory.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-result.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md
+- reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-plan.md
+- reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-result.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round12.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
