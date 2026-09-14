@@ -25,6 +25,8 @@ Input verifier, 1,005-file byte/blob inventory and paired tracked-file checker p
 
 The broad initial test run exposed stale historical fixtures and a foundation-source projection expectation; those were corrected and all affected suites pass. A fresh complete suite and final exact-head CI remain in progress. Final review and those outcomes are recorded separately rather than inferred from the preliminary PASS.
 
+The [consolidated independent final review](BOOK34-CHAT-IMPORT-OUTLINES-1-review.md) now records technical/structural and BLUEPRINT-CHANGE-REVIEW **PASS** on exact platform payload `b21fd08160ccea30771f5aff6346776d72325d5f` and lesson head `991b9cb9a530678ea4abade360a5c9b9d247b422`. This report/review record and generated navigation may follow as an evidence-only tail. Latest full-suite/CI outcomes and exact current heads are also recorded in the paired PR handoff; the reviewed implementation is not changed by that publication.
+
 ## Compatibility prerequisite
 
 Trusted-main [compatibility run 34836886290](https://github.com/meijer1973/4veco-platform/actions/runs/34836886290) failed all three states during lesson checkout, before tests or state evidence. Git reported `Filename too long` for the Book 2 edition already on lesson main. No compatibility PASS or safe merge order is claimed.
