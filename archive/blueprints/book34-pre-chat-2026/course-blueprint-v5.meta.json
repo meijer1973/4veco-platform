@@ -17,9 +17,9 @@
     "1": 12,
     "2": 12,
     "3": 14,
-    "4": 17
+    "4": 16
   },
-  "total_count_bearing_paragraphs": 55,
+  "total_count_bearing_paragraphs": 54,
   "test_preparation_policy": {
     "status": "web_only",
     "count_bearing": false,
@@ -64,12 +64,5 @@
     "Blueprint prose is contextual and design-oriented; it is not sufficient by itself to mint or mutate machine units.",
     "Placeholder records are explicit and must not be treated as reviewed final target exercises.",
     "Book 1 first edition is printed and frozen; genuine repair items are deferred to issue #221 for the second-edition cycle while Book 2 first-edition textbook production remains the active priority."
-  ],
-  "structure_revision": "book34-chat-v2-20260914",
-  "structural_change_record": "reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md",
-  "previous_snapshot": "archive/blueprints/book34-pre-chat-2026/course-blueprint-v5.md",
-  "selected_book_outlines": [
-    "references/authored/book-outlines/book-3-outline.meta.json",
-    "references/authored/book-outlines/book-4-outline.meta.json"
   ]
 }

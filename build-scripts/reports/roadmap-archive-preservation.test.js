@@ -59,6 +59,12 @@ function sprintSection(markdown, id) {
 // BOOK2-CHAT-IMPORT-1 is a later owner-requested operational row, not part
 // of the frozen compaction. Keep every original row and carried condition.
 function historicalLessonRows(rows) {
+  const books34 = rows.filter(row => row.sprint === 'BOOK34-CHAT-IMPORT-OUTLINES-1');
+  expect(books34.length).toBeLessThanOrEqual(1);
+  if (books34.length) {
+    expect(books34[0]).toMatchObject({name:'Import completed Books 3/4 and adopt selected outlines', completed:'no', exitGate:''});
+    for (const clause of ['Writing/assembly complete; import and structural migration prepared/in PR.', 'Book 3: 6+4+4=14', 'Book 4: 4+7+6=17', 'Year 1: 55', 'Target approval, companion acceptance and merge remain separate.']) expect(books34[0].currentState).toContain(clause);
+  }
   const additions = rows.filter(row => row.sprint === 'BOOK2-CHAT-IMPORT-1');
   expect(additions.length).toBeLessThanOrEqual(1);
   if (additions.length) {
@@ -75,7 +81,7 @@ function historicalLessonRows(rows) {
     }
     expect(additions[0].currentState).toContain('archive/book-2-pre-chat-2026/README.md');
   }
-  return rows.filter(row => row.sprint !== 'BOOK2-CHAT-IMPORT-1');
+  return rows.filter(row => !['BOOK2-CHAT-IMPORT-1','BOOK34-CHAT-IMPORT-OUTLINES-1'].includes(row.sprint));
 }
 
 test('platform retained prose keeps its original work, acceptance and completion boundaries', () => {
@@ -140,6 +146,7 @@ test('lesson main without an import row is supported, but duplicate import rows 
   expect(() => historicalLessonRows([{ sprint: 'BOOK2-CHAT-IMPORT-1' }, { sprint: 'BOOK2-CHAT-IMPORT-1' }])).toThrow();
 });
 test('later import-row allowance rejects invented completion and unknown added rows', () => {
+  expect(() => historicalLessonRows([{sprint:'BOOK34-CHAT-IMPORT-OUTLINES-1',name:'Import completed Books 3/4 and adopt selected outlines',completed:'yes',exitGate:''}])).toThrow();
   expect(() => historicalLessonRows([{ sprint: 'BOOK2-CHAT-IMPORT-1', name: 'Import completed Book 2 chat edition', completed: 'yes' }])).toThrow();
   expect(historicalLessonRows([{ sprint: 'UNREVIEWED-IMPORT' }])).not.toEqual([]);
 });

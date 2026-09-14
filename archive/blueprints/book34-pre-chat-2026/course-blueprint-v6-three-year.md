@@ -2,8 +2,6 @@
 
 Status: owned three-year umbrella planning end-state authority
 Version: v6-three-year umbrella
-Current Year 1 structural revision: `book34-chat-v2-20260914`
-Change review: `reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md`
 Detailed Year 1 baseline: `references/owned/course-blueprint-v5.md`
 Promoted by: `BLUEPRINT-V6-AUTHORITY-PROMOTION-1`
 Maturity packet: `THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1`
@@ -56,7 +54,8 @@ Authority depends on the claim type:
 - The final course uses 11 books, not the older 13-book concept.
 - The formal assessment calendar is 4 + 4 + 3 books across three years.
 - Each formal test week corresponds to one book.
-- The original frozen planning model remains historical evidence at 148 count-bearing lessons and 152 scheduled modules/cycles. The selected Year 1 revision projects 149/153 arithmetically, with Books 5-11 unchanged; it is not a new maturity approval.
+- The final planning count model is 148 count-bearing lessons and 152 scheduled
+  modules/cycles overall.
 - Books 5-11 have exact planning counts: Book 5 = 13, Book 6 = 13,
   Book 7 = 14, Book 8 = 16, Book 9 = 14, Book 10 = 15, and Book 11 =
   9 count-bearing modules plus 4 scheduled timed-paper/repair cycles.
@@ -75,7 +74,7 @@ Authority depends on the claim type:
 | Source | Current role | Constraint |
 |---|---|---|
 | v4 blueprint | Historical design evidence | It is partial Year 1 and uses the old printed test-preparation chapter model. |
-| v5 blueprint | Detailed Year 1 source | Its selected Book 3/4 structural revision covers Books 1-4, 55 count-bearing records, and web-only test prep. |
+| v5 blueprint | Detailed Year 1 source | It covers Books 1-4, 54 count-bearing records, and web-only test prep. |
 | Three-year concept | Rough planning input | Its finance/risk/macro sequencing is useful, but its 13-book load is not adopted. |
 | Product vision | Strategic trade-off baseline | The blueprint must strengthen exam-capable performance through an efficient route. |
 | Product end-state | Operational route baseline | Exam-target paragraphs must trace prompt, source, correction model, operations, answer forms, and MTU implications. |
@@ -95,8 +94,8 @@ Authority depends on the claim type:
 |---|---|---|---|
 | 1 | Year 1, test week 1 | Foundations, demand, supply, equilibrium | Basic calculations, P-Q graph/table reading, short explanations. |
 | 2 | Year 1, test week 2 | Costs, revenue, elasticity, surplus | Calculation chains, welfare areas, source-supported reasoning. |
-| 3 | Year 1, test week 3 | Government intervention, perfect competition, international trade | Familiar market calculations followed by qualitative/source-led trade; no monopoly or formal labour prerequisite. |
-| 4 | Year 1, test week 4 | Monopoly, market forms/failure, labour market | Monopoly to welfare, tax/subsidy transfer to externalities, actor/variable bridge and retained labour-equilibrium practice. |
+| 3 | Year 1, test week 3 | Government intervention and market structures | Multi-step diagrams, policy instruments, correction-model discipline. |
+| 4 | Year 1, test week 4 | Market failure, labour market, trade basics | Cumulative micro cases, labour/trade/welfare integration. |
 | 5 | Year 2, test week 1 | Time, stock-flow, pensions, intertemporal exchange | Long-horizon reasoning, indexation, sustainability arguments. |
 | 6 | Year 2, test week 2 | Interest, bonds, housing, financial markets | Interest-rate mechanics, asset-price logic, household and market applications. |
 | 7 | Year 2, test week 3 | Risk, insurance, asymmetric information | Expected value, moral hazard, adverse selection, source-based cases. |
@@ -107,15 +106,16 @@ Authority depends on the claim type:
 
 ## Final Planning Count Model
 
-These are the historical accepted counts of the original frozen maturity baseline, retained unchanged as evidence. Current Year 1 uses 12/12/14/17 (55); with all later years unchanged the arithmetic projection is 149/153. These historical counts retain the original production model; they do not create target-registry records,
+These are the accepted planning counts for the frozen three-year baseline. They
+set the book-level production model; they do not create target-registry records,
 mint MTUs, authorize lessons, or close product/Scale gates.
 
 | Book | Count-bearing lessons/modules | Scheduled modules/cycles | Count-bearing model note |
 |---|---:|---:|---|
-| 1 | 12 | 12 | Original frozen v5 snapshot; current Year 1 revision is listed below. |
-| 2 | 12 | 12 | Original frozen v5 snapshot; current Year 1 revision is listed below. |
-| 3 | 14 | 14 | Original frozen v5 snapshot; current Year 1 revision is listed below. |
-| 4 | 16 | 16 | Original frozen v5 snapshot; current Year 1 revision is listed below. |
+| 1 | 12 | 12 | Fixed by active v5. |
+| 2 | 12 | 12 | Fixed by active v5. |
+| 3 | 14 | 14 | Fixed by active v5. |
+| 4 | 16 | 16 | Fixed by active v5. |
 | 5 | 13 | 13 | Pension/time/stock-flow book; `Y2-B5-P06` is absorbed/non-standalone through the Book 5/6 bridge. |
 | 6 | 13 | 13 | Housing finance, rent-market, interest, bonds, and financial-market book; `Y2-B6-P13` is deferred/non-count-bearing. |
 | 7 | 14 | 14 | Risk, insurance, asymmetric information, and expected-premium book. |
@@ -139,14 +139,12 @@ modules.
 
 ## Year 1 Embedded Baseline
 
-Current Books 1-4 are inherited from the selected v5 structural revision:
+Books 1-4 are inherited from v5:
 
 - Book 1: 12 count-bearing paragraphs.
 - Book 2: 12 count-bearing paragraphs.
 - Book 3: 14 count-bearing paragraphs.
-- Book 4: 17 count-bearing paragraphs.
-
-Year 1 total: 55. Book 3 ends with trade; Book 4 starts with monopoly. The frozen metadata model remains historical; `current_planning_projection` carries the arithmetic 149/153 update. Structural adoption does not approve target exercises or alter the frozen Years 2/3, Book 11, Q19 or production-critical-path decisions.
+- Book 4: 16 count-bearing paragraphs.
 
 The v5 decisions stay active:
 

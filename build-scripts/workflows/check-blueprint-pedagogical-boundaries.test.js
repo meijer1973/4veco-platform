@@ -138,7 +138,7 @@ describe('blueprint pedagogical-boundary source contract', () => {
     );
     expectFailure(
       mutateJson(V5_META_PATH, (meta) => {
-        meta.total_count_bearing_paragraphs = 55;
+        meta.total_count_bearing_paragraphs = 54;
       }),
       'total_count_bearing_paragraphs'
     );

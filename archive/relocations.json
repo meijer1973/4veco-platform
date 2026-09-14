@@ -7922,6 +7922,76 @@
         "references/reference-team-roadmap.md"
       ],
       "live_follow_up": "references/reference-team-roadmap.md"
+    },
+    {
+      "kind": "snapshot",
+      "original_path": "references/owned/course-blueprint-v5.md",
+      "archived_path": "archive/blueprints/book34-pre-chat-2026/course-blueprint-v5.md",
+      "original_blob": "c5adbaf31feabba38998a0c878a02c9a609a02f2",
+      "final_blob": "c5adbaf31feabba38998a0c878a02c9a609a02f2",
+      "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
+      "topic": "book34-structural-baseline",
+      "batch": "BOOK34-CHAT-IMPORT-OUTLINES-1",
+      "current_consumers": [
+        "references/owned/course-blueprint-v5.md"
+      ],
+      "live_follow_up": "references/owned/course-blueprint-v5.md"
+    },
+    {
+      "kind": "snapshot",
+      "original_path": "references/owned/course-blueprint-v5.meta.json",
+      "archived_path": "archive/blueprints/book34-pre-chat-2026/course-blueprint-v5.meta.json",
+      "original_blob": "0f6494e701d983ff89b8545eaa9bebf8063d7baa",
+      "final_blob": "0f6494e701d983ff89b8545eaa9bebf8063d7baa",
+      "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
+      "topic": "book34-structural-baseline",
+      "batch": "BOOK34-CHAT-IMPORT-OUTLINES-1",
+      "current_consumers": [
+        "references/owned/course-blueprint-v5.meta.json"
+      ],
+      "live_follow_up": "references/owned/course-blueprint-v5.meta.json"
+    },
+    {
+      "kind": "snapshot",
+      "original_path": "references/owned/course-blueprint-v6-three-year.md",
+      "archived_path": "archive/blueprints/book34-pre-chat-2026/course-blueprint-v6-three-year.md",
+      "original_blob": "a9bc725a3d42bc7bb98adf4b1dbcf1fb8717cfa3",
+      "final_blob": "a9bc725a3d42bc7bb98adf4b1dbcf1fb8717cfa3",
+      "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
+      "topic": "book34-structural-baseline",
+      "batch": "BOOK34-CHAT-IMPORT-OUTLINES-1",
+      "current_consumers": [
+        "references/owned/course-blueprint-v6-three-year.md"
+      ],
+      "live_follow_up": "references/owned/course-blueprint-v6-three-year.md"
+    },
+    {
+      "kind": "snapshot",
+      "original_path": "references/owned/course-blueprint-v6-three-year.meta.json",
+      "archived_path": "archive/blueprints/book34-pre-chat-2026/course-blueprint-v6-three-year.meta.json",
+      "original_blob": "56544c78ebc6899f9396cd3610f3393b0e3d7bb9",
+      "final_blob": "56544c78ebc6899f9396cd3610f3393b0e3d7bb9",
+      "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
+      "topic": "book34-structural-baseline",
+      "batch": "BOOK34-CHAT-IMPORT-OUTLINES-1",
+      "current_consumers": [
+        "references/owned/course-blueprint-v6-three-year.meta.json"
+      ],
+      "live_follow_up": "references/owned/course-blueprint-v6-three-year.meta.json"
+    },
+    {
+      "kind": "snapshot",
+      "original_path": "references/authored/course-target-exercises.json",
+      "archived_path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
+      "original_blob": "5680842328576b63e2858ce8e354030a3a458410",
+      "final_blob": "5680842328576b63e2858ce8e354030a3a458410",
+      "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
+      "topic": "book34-structural-baseline",
+      "batch": "BOOK34-CHAT-IMPORT-OUTLINES-1",
+      "current_consumers": [
+        "references/authored/course-target-exercises.json"
+      ],
+      "live_follow_up": "references/authored/course-target-exercises.json"
     }
   ]
 }

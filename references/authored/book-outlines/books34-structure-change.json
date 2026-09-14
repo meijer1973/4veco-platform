@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "task": "BOOK34-CHAT-IMPORT-OUTLINES-1",
+  "rule": "BLUEPRINT-CHANGE-REVIEW",
+  "revision": "book34-chat-v2-20260914",
+  "owner_decision": "execute_supplied_selected_structure_and_import; no merge or target approval",
+  "decision_date": "2026-09-14",
+  "platform_base": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
+  "lesson_base": "e1712a214a6e2e11dd36758f033ea35f0264f584",
+  "book12_target_records_sha256": "5937ade4157a91a5e503f334bc103810a5cbbc188fac1c8b920fb417c7a12053",
+  "preserved_book12_blueprint_slices": [
+    {
+      "scope": "book_intents",
+      "sha256": "ae248f544b8ab6d1a33b718ace732227a43c0829b935d7e315fe2f8df5a650d0"
+    },
+    {
+      "scope": "contents",
+      "sha256": "ccff645b4f40872467718fc3a9393b3a665dd5709ebc620423f44d8580be6db4"
+    },
+    {
+      "scope": "anchors",
+      "sha256": "c2de52fe383006ded9435ee7ce9d07d87b69cd745e97ba36aa910a725329c008"
+    },
+    {
+      "scope": "core_decisions",
+      "sha256": "2ab386202c81732ec0241a2f12383b803d1def5cde3f53d601b03eb8f31d6abc"
+    }
+  ],
+  "preserved_v6_years_2_3_suffix_sha256": "f86003130b1adcbf1c58b6ba228893b75715a5f4fdd5cd820794c0389bec784d",
+  "preserved_frozen_planning_model_sha256": "f4b3f81e6cae59ea5b5d18aa235b432c07d92fff403e4f0899d1d177964c3c7a",
+  "authority_source_transitions": [
+    {
+      "path": "references/owned/course-blueprint-v5.md",
+      "before_sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7",
+      "after_sha256": "482c506c93d1d8cd4ba9bd4bc6cf268c73494112c32726f7da176d804d4bda96",
+      "snapshot": "archive/blueprints/book34-pre-chat-2026/course-blueprint-v5.md"
+    },
+    {
+      "path": "references/owned/course-blueprint-v6-three-year.md",
+      "before_sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e",
+      "after_sha256": "dc89ed024db2d352148a963e08d7cc668888c6190e9738a28c5e0fb3d66085f7",
+      "snapshot": "archive/blueprints/book34-pre-chat-2026/course-blueprint-v6-three-year.md"
+    },
+    {
+      "path": "references/authored/course-target-exercises.json",
+      "before_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "after_sha256": "8e30ecc51151bb479dfca0ca8dbe41122e4d548b4e6ace76663b25922e3c552f",
+      "snapshot": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json"
+    }
+  ],
+  "current_counts": {
+    "1": 12,
+    "2": 12,
+    "3": 14,
+    "4": 17
+  },
+  "current_year1_total": 55,
+  "frozen_historical_totals": [
+    148,
+    152
+  ],
+  "current_arithmetic_projection": [
+    149,
+    153
+  ],
+  "target_promotions": 0
+}

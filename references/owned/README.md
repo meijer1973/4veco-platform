@@ -22,3 +22,5 @@ Current owned sources:
 - `course-blueprint-pedagogical-boundaries.md` - normative interpretation shared by v5 and the Year 1 detail embedded in v6. It distinguishes terminal targets, anticipatory scaffolding/previews, and prerequisite mastery; explicitly inherits the Book 2+ Part A target-operation, sequence, paper-route, and 55-minute contract; records the Book 1 first-edition freeze and Book 2 first-edition handoff; and makes no change to counts, book roles, target records, or assessment structure.
 - `course-blueprint-v4.md` - superseded v4 blueprint retained for historical comparison and migration traceability.
 - `course-blueprint-v4.meta.json` - superseded v4 metadata retained for historical comparison and migration traceability.
+
+Books 3/4 current structural revision: `book34-chat-v2-20260914`, 14/17 paragraphs and Year 1 total 55. The canonical selected outlines and adoption metadata live in `references/authored/book-outlines/`. The original frozen 148/152 model remains historical; current arithmetic projects 149/153. See `reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md`.

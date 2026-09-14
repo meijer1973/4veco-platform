@@ -6,9 +6,9 @@
     "1": 12,
     "2": 12,
     "3": 14,
-    "4": 17
+    "4": 16
   },
-  "total_count_bearing_paragraphs": 55,
+  "total_count_bearing_paragraphs": 54,
   "test_preparation_policy": {
     "status": "web_only",
     "count_bearing": false,
@@ -2818,52 +2818,68 @@
       "chapter": 1,
       "paragraph": 1,
       "paragraph_title": "Belastingen: wig en nieuw evenwicht",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.1.1",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.1.1",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.1.1; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "Market: Qv = −2P + 20 and Qa = P − 1. The government introduces a tax of €3 per unit, paid by the producer.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the original equilibrium price and quantity."
+          },
+          {
+            "label": "b",
+            "prompt": "The tax shifts the supply curve upward by €3. Write the new supply function."
+          },
+          {
+            "label": "c",
+            "prompt": "Calculate the new equilibrium. What is the consumer price (what the buyer pays)? What is the producer price (what the seller keeps after paying tax)?"
+          },
+          {
+            "label": "d",
+            "prompt": "Draw the situation before and after the tax. Mark the tax wedge."
+          }
+        ]
       },
       "lesson_goals": [
-        "Distinguish the price paid by buyers from the amount received by sellers; represent a per-unit tax and calculate the new traded quantity."
+        "Understand that a per-unit tax creates a wedge between consumer and producer price",
+        "Calculate the new supply function after tax (shift supply up by tax amount)",
+        "Calculate the new equilibrium with tax",
+        "Distinguish between consumer price and producer price",
+        "Show the tax wedge graphically"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+      "required_skills": [
+        "A06",
+        "A23",
+        "A41",
+        "D05",
+        "D41"
       ],
-      "structural_retrieval_plan": "Retrieve linear equilibrium and substitution from §§1.3.2-1.3.3. The two-price interpretation and tax wedge are new formal learning.",
-      "structural_scope_boundary": "State who remits the tax, its unit, and the competitive model assumptions. Remittance is not the same as economic tax burden. Do not add welfare accounting before §3.1.2.",
-      "historical_source_refs": [
-        {
-          "id": "3.1.1",
-          "disposition": "retain_structure_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/24",
-          "record_sha256": "3d4e72daf5a241cff553f1822974a83c9922001f96e0c3d9f44c7c6b6f555025",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
+      "prior_knowledge_assumed": [
+        "A06"
       ],
+      "new_skills_introduced": [
+        "A23",
+        "A41",
+        "D05",
+        "D41"
+      ],
+      "missing_units_flagged": [],
+      "exam_codes": [
+        "A2.10",
+        "A2.14",
+        "D1.13",
+        "D1.24"
+      ],
+      "difficulty_notes": "The concept of 'the supply curve shifts up by the tax amount' is often taught but rarely understood. Students confuse 'upward shift = less supply.' Exercise (d) is essential — the graph makes the wedge visible. One lesson works if you focus on the mechanics (how to calculate) and save the welfare analysis for §2.3.2.",
+      "source_ref": "references/owned/course-blueprint-v5.md §3.1.1",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "2.3.1",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -2872,52 +2888,86 @@
       "chapter": 1,
       "paragraph": 2,
       "paragraph_title": "Belastingdruk en welvaartsverlies",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.1.2",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.1.2",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.1.2; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "Using the market from §2.3.1 (original: P* = 7, Q* = 6; after tax €3: Pc = 8, Pp = 5, Qt = 3).",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "How much of the €3 tax is paid by the consumer? How much by the producer?"
+          },
+          {
+            "label": "b",
+            "prompt": "Calculate the afwentelingspercentage (% of tax passed on to consumer)."
+          },
+          {
+            "label": "c",
+            "prompt": "Calculate CS before and after the tax."
+          },
+          {
+            "label": "d",
+            "prompt": "Calculate PS before and after the tax."
+          },
+          {
+            "label": "e",
+            "prompt": "Calculate total tax revenue for the government."
+          },
+          {
+            "label": "f",
+            "prompt": "Calculate the deadweight loss. Verify: old TS = new CS + new PS + tax revenue + DWL."
+          }
+        ]
       },
       "lesson_goals": [
-        "Calculate the division of the tax burden, tax revenue and welfare consequences; explain the effect of relative responsiveness."
+        "Calculate how the tax burden is shared between buyer and seller",
+        "Calculate the afwentelingspercentage",
+        "Calculate CS, PS and tax revenue in the post-tax situation",
+        "Calculate deadweight loss from taxation",
+        "Understand that taxes always create some deadweight loss (except in extreme elasticity cases)"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
+      "required_skills": [
+        "A10",
+        "A19",
+        "A23",
+        "A32",
+        "A40",
+        "D03",
+        "D41",
+        "D42",
+        "D07"
+      ],
+      "prior_knowledge_assumed": [
+        "A10",
+        "A19",
+        "A23",
+        "A40",
+        "D41"
+      ],
+      "new_skills_introduced": [
+        "A32",
+        "D03",
+        "D42",
+        "D07"
+      ],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "Apply the surplus-accounting identity: old TS = new CS + new PS + tax revenue + DWL (concept-level, completeness check)"
       ],
-      "structural_retrieval_plan": "Retrieve §3.1.1, Book 2 elasticity interpretation and surplus-area calculations. Qualitative supply responsiveness does not require introducing a new supply-elasticity formula.",
-      "structural_scope_boundary": "Government revenue is a transfer, not the deadweight loss. The initial welfare benchmark excludes external effects; corrective taxation returns in §4.2.4. Do not infer elasticity merely from slopes plotted with different scales.",
-      "historical_source_refs": [
-        {
-          "id": "3.1.2",
-          "disposition": "retain_structure_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/25",
-          "record_sha256": "9ac1bea714dd2fc7af2b9638839542c8fca05b4481f801ebdfc9bad2dad1ec7d",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
+      "exam_codes": [
+        "A2.16",
+        "A2.17",
+        "D3.1",
+        "D3.9"
       ],
+      "difficulty_notes": "This is a calculation-heavy lesson with 5–6 separate computations. The key insight — 'not all lost CS and PS goes to the government; some is simply lost' — is the deadweight loss. Students need the graph from §2.3.1 in front of them. One lesson is tight. Recommend: do exercises (a–d) in class, assign (e–f) as homework.",
+      "source_ref": "references/owned/course-blueprint-v5.md §3.1.2",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "2.3.2",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -2926,52 +2976,88 @@
       "chapter": 1,
       "paragraph": 3,
       "paragraph_title": "Subsidies",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.1.3",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.1.3",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.1.3; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "Market: Qv = −4P + 40 and Qa = 2P − 2. The government gives a subsidy of €3 per unit to producers.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the original equilibrium."
+          },
+          {
+            "label": "b",
+            "prompt": "Write the new supply function (supply shifts down by subsidy amount)."
+          },
+          {
+            "label": "c",
+            "prompt": "Calculate the new equilibrium. What price does the consumer pay? What does the producer effectively receive?"
+          },
+          {
+            "label": "d",
+            "prompt": "Calculate CS and PS before and after the subsidy."
+          },
+          {
+            "label": "e",
+            "prompt": "Calculate the total cost of the subsidy to the government (= subsidy × new Q)."
+          },
+          {
+            "label": "f",
+            "prompt": "Calculate the deadweight loss. (Yes, subsidies also create DWL.)"
+          },
+          {
+            "label": "g",
+            "prompt": "Draw the complete graph showing CS, PS, government cost, and DWL."
+          }
+        ]
       },
       "lesson_goals": [
-        "Represent a per-unit subsidy, calculate both prices and transactions, and identify government expenditure and distributional effects."
+        "Apply the tax framework in reverse: supply shifts down instead of up",
+        "Calculate new equilibrium, consumer and producer prices after subsidy",
+        "Calculate CS, PS, government expenditure, and DWL",
+        "Understand that subsidies also create deadweight loss (overproduction beyond efficient level)"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
+      "required_skills": [
+        "A06",
+        "A10",
+        "A19",
+        "A27",
+        "A41",
+        "D19",
+        "D29",
+        "D43"
+      ],
+      "prior_knowledge_assumed": [
+        "A06",
+        "A10",
+        "A19",
+        "A41"
+      ],
+      "new_skills_introduced": [
+        "A27",
+        "D19",
+        "D29",
+        "D43"
+      ],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "Explain that subsidies cause DWL via overproduction beyond the Pareto-efficient quantity (concept-level, counterintuitive to students)",
+        "Compute government subsidy expenditure = subsidy × Q_new (reken skill, A-domain candidate)"
       ],
-      "structural_retrieval_plan": "Reuse the tax-wedge method with the direction reversed, and retrieve surplus calculations. Explicitly compare what changes and what stays the same.",
-      "structural_scope_boundary": "Specify the eligible transaction and payment recipient. In this first treatment assume no external benefit; §4.2.5 deliberately changes that assumption. A subsidy is not automatically an efficiency improvement.",
-      "historical_source_refs": [
-        {
-          "id": "3.1.3",
-          "disposition": "retain_structure_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/26",
-          "record_sha256": "bd6234d95e0fe40e562f429ffb240cbbf333f5b10e66da679208c3494e8b5543",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
+      "exam_codes": [
+        "A2.15",
+        "A2.16",
+        "D3.5",
+        "D3.9"
       ],
+      "difficulty_notes": "If students understood §2.3.1 and §2.3.2, this is mechanical transfer — same skills, different direction. The surprise is that subsidies also cause DWL (students assume subsidies are 'purely good'). One lesson works because the method is identical to taxes.",
+      "source_ref": "references/owned/course-blueprint-v5.md §3.1.3",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "2.3.3",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -2980,52 +3066,80 @@
       "chapter": 1,
       "paragraph": 4,
       "paragraph_title": "Maximumprijs",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.1.4",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.1.4",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.1.4; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "The market for rental housing: Qv = −5P + 6000 and Qa = 3P − 1600 (P in €/month, Q in apartments). The government sets a maximum rent of €800/month.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the equilibrium rent and number of apartments rented."
+          },
+          {
+            "label": "b",
+            "prompt": "The government sets a maximum rent of €800/month. Is this below or above the equilibrium price? Why does this matter?"
+          },
+          {
+            "label": "c",
+            "prompt": "Calculate the quantity demanded and quantity supplied at P = 800. Calculate the shortage."
+          },
+          {
+            "label": "d",
+            "prompt": "Draw the graph. Shade the shortage."
+          },
+          {
+            "label": "e",
+            "prompt": "Calculate CS and PS at the maximum price. Calculate the deadweight loss."
+          },
+          {
+            "label": "f",
+            "prompt": "A student says: 'The maximum price is good because it helps renters.' Evaluate this claim: which renters benefit, and who is harmed?"
+          }
+        ]
       },
       "lesson_goals": [
-        "Distinguish binding and non-binding price ceilings; calculate demand, supply, actual transactions and shortage."
+        "Understand that a maximum price must be below equilibrium to have effect",
+        "Calculate shortage = Qd − Qs at the controlled price",
+        "Calculate welfare effects: some CS is gained from lower price, some is lost from fewer transactions",
+        "Identify deadweight loss graphically and computationally",
+        "Evaluate the trade-off: lower price for some vs fewer available units"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
+      "required_skills": [
+        "A06",
+        "A10",
+        "A19",
+        "A26",
+        "A32",
+        "D34"
+      ],
+      "prior_knowledge_assumed": [
+        "A06",
+        "A10",
+        "A19"
+      ],
+      "new_skills_introduced": [
+        "A26",
+        "A32",
+        "D34"
+      ],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "Structure a beoordeel-answer: who wins, who loses under a max price — renters-with-a-unit vs renters-without (concept-level + verbal skill)"
       ],
-      "structural_retrieval_plan": "Retrieve equilibrium and quantity-at-price calculations. Reuse surplus areas only after the transaction and allocation rules have been specified.",
-      "structural_scope_boundary": "A low quoted price does not mean everyone buys at that price. Welfare-area calculations require an explicit allocation assumption. Avoid turning this into a full housing-policy chapter.",
-      "historical_source_refs": [
-        {
-          "id": "3.1.4",
-          "disposition": "retain_structure_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/27",
-          "record_sha256": "769b07e79d4d747a24b80d2f9393c0c18b5c37cb81a86524749e21b95b1ab1ff",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
+      "exam_codes": [
+        "A2.15",
+        "A2.16",
+        "D3.10",
+        "D3.9"
       ],
+      "difficulty_notes": "The welfare analysis here is more nuanced than taxes: some consumers gain, others lose access entirely. Exercise (f) forces critical thinking. One lesson works — the graph is similar to §2.2.3 (forced price deviation), so students recognise the pattern.",
+      "source_ref": "references/owned/course-blueprint-v5.md §3.1.4",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "2.4.1",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3034,55 +3148,105 @@
       "chapter": 1,
       "paragraph": 5,
       "paragraph_title": "Minimumprijs en quota",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.1.5",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.1.5",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.1.5; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "The EU sets a minimum price for butter at €6/kg. The market: Qv = −10P + 100 and Qa = 5P − 5 (Q in millions of kg).",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the equilibrium price and quantity."
+          },
+          {
+            "label": "b",
+            "prompt": "Calculate Qd and Qa at the minimum price of €6. Calculate the surplus (aanbodoverschot)."
+          },
+          {
+            "label": "c",
+            "prompt": "The EU buys the surplus. Calculate the cost to the EU."
+          },
+          {
+            "label": "d",
+            "prompt": "Draw the graph. Shade the surplus, CS, PS, and the deadweight loss."
+          },
+          {
+            "label": "e",
+            "prompt": "Who benefits from the minimum price? Who pays? Is it Pareto-efficient?"
+          }
+        ]
       },
       "lesson_goals": [
-        "Analyse a binding price floor and distinguish it from a production quota. Calculate surplus supply and, when specified, public purchases."
+        "Understand that a minimum price must be above equilibrium to have effect",
+        "Calculate surplus = Qs − Qd at the controlled price",
+        "Understand government options: buy surplus, destroy it, or export it",
+        "Calculate the cost of intervention",
+        "Calculate welfare effects: PS increases but CS decreases, plus DWL"
+      ],
+      "required_skills": [
+        "A06",
+        "A10",
+        "A19",
+        "A25",
+        "A32",
+        "D34"
+      ],
+      "prior_knowledge_assumed": [
+        "A06",
+        "A10",
+        "A19",
+        "D34"
+      ],
+      "new_skills_introduced": [
+        "A25",
+        "A32"
+      ],
+      "missing_units_flagged": [
+        "Compute the cost to the government of buying up the aanbodoverschot = (Qs − Qd) × Pmin (reken skill, A-domain candidate)",
+        "Evaluate distributional effect: who gains (producers), who pays (consumers + taxpayers) (concept-level + verbal)"
+      ],
+      "exam_codes": [
+        "A2.15",
+        "A2.16",
+        "D3.10",
+        "D3.9"
+      ],
+      "difficulty_notes": "Mirror of §2.4.1. Students who understood maximum price handle this quickly. The surplus (aanbodoverschot) vs shortage distinction is important to drill. The EU butter/milk example makes it concrete. One lesson comfortable.",
+      "source_ref": "references/owned/course-blueprint-v5.md §3.1.5",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "placeholder_reason": "Merged or related v4 records require review: 2.4.3.",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "2.4.2",
+        "related_v4_ids": [
+          "2.4.3"
+        ],
+        "review_required_before_final": true
+      }
+    },
+    {
+      "difficulty": "MIXED",
+      "target_exercise": {
+        "placeholder": true,
+        "context": "Placeholder for 3.1.6: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Consolidate and transfer the chapter skills for Gemengde opgaven: overheidsingrijpen."
       ],
       "required_skills": [],
       "prior_knowledge_assumed": [],
       "new_skills_introduced": [],
-      "exam_codes": [],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "v5_placeholder_needs_review"
       ],
-      "structural_retrieval_plan": "Transfer the ceiling procedure; reuse government-expenditure rectangles and the distinction between offered and actually traded quantities.",
-      "structural_scope_boundary": "A production quota is not automatically a price floor; a floor does not imply public purchases unless the source says so. This is a high-load paragraph: the quota comparison stays bounded. Prepares the import-quota comparison in §3.3.3 and the later minimum-wage application in §4.3.4.",
-      "historical_source_refs": [
-        {
-          "id": "3.1.5",
-          "disposition": "retain_structure_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/28",
-          "record_sha256": "46c0c45c1677f8981f2ebe2fad0017e46c0c96bb66fe7ef498f2f7ecece8a314",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
-      }
-    },
-    {
+      "exam_codes": [],
+      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
       "id": "3.1.6",
       "module": 3,
       "chapter": 1,
@@ -3091,49 +3255,13 @@
       "paragraph_kind": "gemengde_opgaven",
       "introduces_new_theory": false,
       "record_status": "placeholder_needs_review",
+      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
       "source_ref": "references/owned/course-blueprint-v5.md §3.1.6",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.1.6",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.1.6; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
-      },
-      "lesson_goals": [
-        "Select the appropriate intervention model and integrate price, quantity, budget and welfare reasoning without new theory."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
-      ],
-      "structural_retrieval_plan": "Interleave §§3.1.1-3.1.5 with Book 2 elasticity and surplus. Require method selection rather than identifying the method in every question heading.",
-      "structural_scope_boundary": "No new intervention or externality model. Do not force every intervention into one unwieldy target or one 55-minute compulsory route.",
-      "historical_source_refs": [
-        {
-          "id": "3.1.6",
-          "disposition": "retain_structure_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/29",
-          "record_sha256": "a9003d8c66eee169a134f5c0671d876ce326cd665705eb47c15e4d1d773358c2",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
       "v5_migration": {
         "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "from_v4_id": null,
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3142,52 +3270,61 @@
       "chapter": 2,
       "paragraph": 1,
       "paragraph_title": "Volkomen concurrentie: kenmerken",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.2.1",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.2.1",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "difficulty": "LIGHT",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.2.1; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "A wheat farmer sells wheat at the market price of €200 per ton. He cannot influence this price.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Name four characteristics of a perfectly competitive market. For each, explain why the wheat market fits."
+          },
+          {
+            "label": "b",
+            "prompt": "The farmer considers charging €210 per ton. Explain why this won't work."
+          },
+          {
+            "label": "c",
+            "prompt": "Draw the farmer's individual price line. Label it P = GO = MO."
+          },
+          {
+            "label": "d",
+            "prompt": "Explain why for this farmer MO = price."
+          }
+        ]
       },
       "lesson_goals": [
-        "Explain price taking and connect the market price to the individual firm’s GO and MO."
+        "Name the four characteristics: many buyers and sellers, homogeneous product, free entry/exit, perfect information",
+        "Explain why individual firms are price takers (hoeveelheidsaanpasser)",
+        "Understand that P = GO = MO in perfect competition (horizontal price line)",
+        "Draw the individual firm's price/revenue lines"
       ],
-      "required_skills": [],
+      "required_skills": [
+        "D09",
+        "D15"
+      ],
       "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
+      "new_skills_introduced": [
+        "D09",
+        "D15"
+      ],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "Name the four characteristics of volkomen concurrentie and recognise them in a concrete market (concept-level, mastery_target understand)",
+        "Explain why an individual firm in volkomen concurrentie is a hoeveelheidsaanpasser / price taker (concept-level)",
+        "Show P = GO = MO for the individual firm (grafisch + concept; the horizontal price line representation)"
       ],
-      "structural_retrieval_plan": "Retrieve market equilibrium and TO = P x Q; re-use the distinction between total, average and marginal revenue.",
-      "structural_scope_boundary": "Explain the stated competitive assumptions. A horizontal firm demand curve is not the same as a horizontal market demand curve.",
-      "historical_source_refs": [
-        {
-          "id": "3.2.1",
-          "disposition": "retain_structure_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/30",
-          "record_sha256": "350d2cf7ebc93479192572ff564ef49b74530b5df6943d1357a4b51b21340a51",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
+      "exam_codes": [
+        "D2.1"
       ],
+      "difficulty_notes": "Conceptual lesson. The P = GO = MO equality is stated and understood visually, not derived mathematically. Students find this intuitive ('if you always get the same price, each extra unit brings in that price'). One lesson comfortable — use the extra time for real-world examples (commodity markets, agriculture).",
+      "source_ref": "references/owned/course-blueprint-v5.md §3.2.1",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "3.1.1",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3196,52 +3333,86 @@
       "chapter": 2,
       "paragraph": 2,
       "paragraph_title": "Winstmaximalisatie bij volkomen concurrentie",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.2.2",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.2.2",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.2.2; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "The wheat farmer's costs are TK = 0.5Q² + 10Q + 500 (Q in tons). Market price is €200/ton. First use of the differentiation power rule on a quadratic TK.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Write down the MK function. (Hint: differentiate TK. Remember: if TK = aQ² + bQ + c, then MK = 2aQ + b.)"
+          },
+          {
+            "label": "b",
+            "prompt": "Write down the MO. (What is MO for a price taker?)"
+          },
+          {
+            "label": "c",
+            "prompt": "Set MO = MK and solve for Q. This is the profit-maximising quantity."
+          },
+          {
+            "label": "d",
+            "prompt": "Calculate total revenue, total costs, and total profit at this Q."
+          },
+          {
+            "label": "e",
+            "prompt": "Draw a graph with MK and the horizontal price/MO line. Mark the profit-maximising point."
+          },
+          {
+            "label": "f",
+            "prompt": "Would this farmer produce at Q = 100? Explain using MO and MK."
+          }
+        ]
       },
       "lesson_goals": [
-        "Use marginal comparison to select output and calculate total profit, linking MO, MK, price and average total cost."
+        "Differentiate a simple quadratic TK function to find MK (power rule: bring down exponent, reduce by one)",
+        "State MO = P for a price-taking firm",
+        "Find profit-maximising output by setting MO = MK",
+        "Calculate winst at optimal Q",
+        "Show the MO = MK solution graphically",
+        "Explain why producing beyond MO = MK reduces profit"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
+      "required_skills": [
+        "A11",
+        "A13",
+        "A94",
+        "A21",
+        "A33",
+        "D30"
+      ],
+      "prior_knowledge_assumed": [
+        "A21",
+        "D30"
+      ],
+      "new_skills_introduced": [
+        "A11",
+        "A13",
+        "A94",
+        "A33"
+      ],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "Apply the power rule to differentiate aQ² + bQ + c, producing 2aQ + b (A-domain candidate; A11 covers 'Afgeleide bepalen' generally but not this specific TK→MK recipe)",
+        "State MO = P as a special case for a price-taker firm (concept-level, tight pair with §3.1.1)"
       ],
-      "structural_retrieval_plan": "Retrieve Book 2 cost/revenue calculations and marginal meaning. Explicitly teach the optimisation rule; do not label it revision.",
-      "structural_scope_boundary": "If a quadratic total-cost function is used, teach the limited quadratic-to-linear derivative operation within this paragraph rather than assuming prior calculus. Check the direction of marginal comparisons and production capacity; MO = MK alone is not a universal maximum proof. Flag the combined mathematical and economic load for target/timing review.",
-      "historical_source_refs": [
-        {
-          "id": "3.2.2",
-          "disposition": "retain_structure_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/31",
-          "record_sha256": "c135fcc95124d7b563a030ef78f0dbce71dc4c2fd4b5977300e880313c24a9e8",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
+      "exam_codes": [
+        "A2.10",
+        "A2.11",
+        "A2.12",
+        "D1.19",
+        "D1.21"
       ],
+      "difficulty_notes": "This is where differentiation enters the course. The power rule on a quadratic is simple ('multiply by 2, drop the Q's power by 1'). Students need to see it as a recipe. The conceptual link ('marginal cost tells you what one more ton costs') was established in §1.4.3–§4. Exercise (f) tests whether they understand the rule, not just apply it. One lesson is tight — spend the first 15 minutes on the differentiation technique, then apply it. An algebra bridge at the end of the lesson previews GTK = TK/Q term-by-term for §3.1.3.",
+      "source_ref": "references/owned/course-blueprint-v5.md §3.2.2",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "placeholder_reason": "Merged or related v4 records require review: 1.4.4.",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "3.1.2",
+        "related_v4_ids": [
+          "1.4.4"
+        ],
+        "review_required_before_final": true
       }
     },
     {
@@ -3250,55 +3421,113 @@
       "chapter": 2,
       "paragraph": 3,
       "paragraph_title": "Langetermijnevenwicht",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.2.3",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.2.3",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.2.3; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "The wheat farmer from §3.1.2 makes a profit. Students walk the long-run dynamics: entry → supply shifts → price falls → profit erodes → zero-profit equilibrium at P = min GTK = MK.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Explain what will happen in the long run: will new farmers enter or exit the market? What happens to total market supply?"
+          },
+          {
+            "label": "b",
+            "prompt": "Show in a market diagram (supply and demand) what happens to the market price when supply increases."
+          },
+          {
+            "label": "c",
+            "prompt": "At what profit level will entry stop? Explain."
+          },
+          {
+            "label": "d1",
+            "prompt": "Schrijf GTK = TK/Q op. Deel elke term van TK = 0,5Q² + 10Q + 500 door Q. (Verwacht resultaat: GTK = 0,5Q + 10 + 500/Q.)"
+          },
+          {
+            "label": "d2",
+            "prompt": "In long-run equilibrium, price equals the minimum of GTK. Set GTK = MK (= Q + 10) and solve for Q. (Tip: trek 10 van beide kanten af, vermenigvuldig met Q om de breuk weg te werken, verzamel Q²-termen.) Dit is de efficiënte schaal van het bedrijf."
+          },
+          {
+            "label": "e",
+            "prompt": "Calculate GTK at the Q you found in (d2). This is the long-run equilibrium price. Verify that profit = 0 at this price."
+          },
+          {
+            "label": "f",
+            "prompt": "Draw the long-run equilibrium for the individual firm: P = GTK at the minimum of GTK, with the MK curve passing through that point. Explain why this is the long-run result."
+          }
+        ]
       },
       "lesson_goals": [
-        "Explain how entry or exit changes market supply, price and firm profit, and interpret the competitive long-run outcome."
+        "Explain that positive profit attracts entry; negative profit causes exit",
+        "Understand that entry shifts market supply right → price falls",
+        "Understand that in long-run equilibrium: economic profit = 0",
+        "Herleid GTK uit TK door term-voor-term delen door Q",
+        "Calculate the efficient scale by setting GTK = MK and solving for Q",
+        "Calculate the long-run equilibrium price from the minimum GTK",
+        "Show that long-run equilibrium occurs where P = minimum GTK = MK",
+        "Draw the individual firm's long-run equilibrium graph"
+      ],
+      "required_skills": [
+        "A11",
+        "A13",
+        "A14",
+        "A28",
+        "A37",
+        "D13"
+      ],
+      "prior_knowledge_assumed": [
+        "A11",
+        "A13",
+        "A14"
+      ],
+      "new_skills_introduced": [
+        "A28",
+        "A37"
+      ],
+      "missing_units_flagged": [
+        "Herleid GTK uit TK door term-voor-term delen door Q (A-domain candidate; the 500/Q-term is the didactic bottleneck explicitly scaffolded into §3.1.2)",
+        "Argue that entry erodes positive profit and exit eliminates losses, so long-run profit = 0 in volkomen concurrentie (concept-level, mastery_target understand)",
+        "Recognise the long-run equilibrium geometric condition P = min GTK = MK and explain why (concept-level + grafisch)"
+      ],
+      "exam_codes": [
+        "A2.10",
+        "A2.11",
+        "A4.5",
+        "D1.21"
+      ],
+      "difficulty_notes": "Conceptual reasoning about dynamics plus a meaningful calculation. Exercises (d1)/(d2) are the key new skill: herleiden van GTK en vervolgens GTK = MK oplossen. The 500/Q term is demanding; the scaffold (d1→d2) and the algebra bridge at the end of §3.1.2 are cruciaal — zonder die stappen wordt deze paragraaf overweldigend voor de onderkant van de klas.",
+      "source_ref": "references/owned/course-blueprint-v5.md §3.2.3",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "3.1.3",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      }
+    },
+    {
+      "difficulty": "MIXED",
+      "target_exercise": {
+        "placeholder": true,
+        "context": "Placeholder for 3.2.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Consolidate and transfer the chapter skills for Gemengde opgaven: volkomen concurrentie."
       ],
       "required_skills": [],
       "prior_knowledge_assumed": [],
       "new_skills_introduced": [],
-      "exam_codes": [],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "v5_placeholder_needs_review"
       ],
-      "structural_retrieval_plan": "Retrieve §3.2.2, market supply shifts, GTK and break-even. Re-use calculations to support the adjustment narrative.",
-      "structural_scope_boundary": "The familiar zero-economic-profit result requires the specified competitive entry/exit and cost assumptions. It does not mean entrepreneurs receive no remuneration or that total revenue is zero.",
-      "historical_source_refs": [
-        {
-          "id": "3.2.3",
-          "disposition": "retain_structure_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/32",
-          "record_sha256": "6692ecca71a4fede0990b50595ceaff2774c7cd82bfa48e27b71cd21560c8416",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
-      }
-    },
-    {
+      "exam_codes": [],
+      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
       "id": "3.2.4",
       "module": 3,
       "chapter": 2,
@@ -3307,49 +3536,13 @@
       "paragraph_kind": "gemengde_opgaven",
       "introduces_new_theory": false,
       "record_status": "placeholder_needs_review",
+      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
       "source_ref": "references/owned/course-blueprint-v5.md §3.2.4",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.2.4",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.2.4; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
-      },
-      "lesson_goals": [
-        "Integrate market price formation, firm output, profit and long-run adjustment."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
-      ],
-      "structural_retrieval_plan": "Interleave Book 2 total/average/marginal distinctions, equilibrium, and §§3.2.1-3.2.3.",
-      "structural_scope_boundary": "No monopoly or new long-run cost theory. Monopoly is taught next book, in Chapter 4.1; it is not a prerequisite for the trade chapter that follows here. A multi-stage exercise still requires an explicit initial situation and adjustment horizon.",
-      "historical_source_refs": [
-        {
-          "id": "3.2.4",
-          "disposition": "retain_structure_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/33",
-          "record_sha256": "3bf6195f13bc3d33926139c40ad4c76d8630e28aff65df02e50753da898197c5",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
       "v5_migration": {
         "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "from_v4_id": null,
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3357,64 +3550,62 @@
       "module": 3,
       "chapter": 3,
       "paragraph": 1,
-      "paragraph_title": "Waarom landen handelen: specialisatie en concurrentiepositie",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.3.1",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.3.1",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Monopolie: kenmerken",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.3.1; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "The NS (Dutch Railways) is the only provider of train services on most routes. Students map causes of monopoly, the prijszetter role, and compare with volkomen concurrentie.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Name three reasons why monopolies can exist (with an example for each)."
+          },
+          {
+            "label": "b",
+            "prompt": "A monopolist faces the entire market demand curve. Explain why a monopolist is a prijszetter, not a hoeveelheidsaanpasser."
+          },
+          {
+            "label": "c",
+            "prompt": "Compare perfect competition and monopoly in a table: number of sellers, product type, entry barriers, price influence."
+          },
+          {
+            "label": "d",
+            "prompt": "Apple charges €1200 for an iPhone while production costs are estimated at €400. Does Apple have a monopoly? Explain using market structure characteristics."
+          }
+        ]
       },
       "lesson_goals": [
-        "Explain specialisation, absolute versus comparative advantage and possible mutual gains qualitatively. Distinguish an explanation of relative opportunity cost from a general claim about a country's production strengths or competitiveness."
+        "Name causes of monopoly: legal (government-granted), natural (economies of scale), patents",
+        "Explain that a monopolist faces the downward-sloping market demand curve",
+        "Understand prijszetter: the monopolist chooses the price (or equivalently, the quantity)",
+        "Distinguish monopoly from perfect competition using structural characteristics",
+        "Apply the concept to real-world cases (critical thinking: is Apple really a monopolist?)"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
+      "required_skills": [
+        "D15"
+      ],
+      "prior_knowledge_assumed": [
+        "D15"
+      ],
       "new_skills_introduced": [],
-      "exam_codes": [],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "Name the typical causes of monopoly — legal, natural, patent — with an example each (concept-level, mastery_target understand)",
+        "Contrast prijszetter vs hoeveelheidsaanpasser and link to the slope of the firm-level demand curve (concept-level)",
+        "Judge real-world market power claims against the four structural characteristics (concept-level + verbal analysis; the 'is Apple really a monopolist?' style question)"
       ],
-      "structural_retrieval_plan": "Retrieve scarcity, choice and the meaning of opportunity cost from Book 1. Introduce import/export and the new comparative-advantage meaning explicitly. Keep discussion of productivity, quality or costs qualitative and supported by information in the source; no formal labour-cost formula is assumed.",
-      "structural_scope_boundary": "No calculated opportunity-cost ratios, production-possibility-frontier optimisation, exchange-ratio bounds or separate ruilvoet calculation objective. Do not equate absolute with comparative advantage or claim that all groups necessarily gain. The conceptual/no-calculation boundary follows the owner's retained design instruction; this revision makes no new CE/SE validation claim. Formal productivity and unit-labour-cost analysis is deferred to §4.3.1.",
-      "historical_source_refs": [
-        {
-          "id": "4.3.1",
-          "disposition": "qualitative_overlap_only_no_numerical_advantage_or_exchange_ratio",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/52",
-          "record_sha256": "ab53c67797a73ae7ad49902aa06a92744bf2d734d65f0065283e8d73a52c99ed",
-          "target_equivalence": false,
-          "inherits_approval": false
-        },
-        {
-          "id": "4.3.2",
-          "disposition": "qualitative_overlap_only_no_numerical_advantage_or_exchange_ratio",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/53",
-          "record_sha256": "9c70aa8907fa09f58983e82e0bbf2cf5fb8d39e40ba24ab26abf320a1ca0f086",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
+      "exam_codes": [
+        "D2.1",
+        "D2.2"
       ],
+      "difficulty_notes": "Conceptual lesson with no calculations. Exercise (d) is a discussion-starter — Apple has market power but isn't a pure monopolist (substitutes exist). This nuance engages students. One lesson comfortable.",
+      "source_ref": "references/owned/course-blueprint-v5.md §3.3.1",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "3.2.1",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3422,41 +3613,73 @@
       "module": 3,
       "chapter": 3,
       "paragraph": 2,
-      "paragraph_title": "Wereldmarktprijs, import, export en welvaart",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.3.2",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.3.2",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Marginale opbrengst bij monopolie",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.3.2; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "A monopolist faces demand Qv = 100 − 2P, or equivalently P = 50 − 0.5Q. Students build the Q/P/TO/MO table, then verify with differentiation.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Complete the Q/P/TO/MO table for Q = 0, 10, 20, 30, 40, 50, 60 using TO = P×Q and MO = ΔTO/ΔQ."
+          },
+          {
+            "label": "b",
+            "prompt": "At which Q is TO maximised? What is MO at that point?"
+          },
+          {
+            "label": "c",
+            "prompt": "Draw the demand curve (P line) and the MO curve in the same graph. What do you notice about the slope of MO compared to the demand curve?"
+          },
+          {
+            "label": "d",
+            "prompt": "Explain in words why MO is lower than the price for a monopolist. (Hint: to sell one more unit, the monopolist must lower the price on ALL units.)"
+          },
+          {
+            "label": "e",
+            "prompt": "Verify using the formula: TO = P × Q = (50 − 0.5Q) × Q = 50Q − 0.5Q². Differentiate to find MO. Compare with your table."
+          }
+        ]
       },
       "lesson_goals": [
-        "Explain how a stated world price changes domestic production and consumption; identify whether the country imports or exports; calculate the trade gap and interpret the effects on domestic buyers and sellers."
+        "Calculate TO from a demand function: TO = P × Q",
+        "Calculate MO from a table (ΔTO/ΔQ)",
+        "Discover that MO < P for a monopolist (because lowering price on all units)",
+        "Observe that the MO curve has twice the slope of the demand curve",
+        "Derive MO by differentiating TO (first application of power rule on a quadratic revenue function)"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
+      "required_skills": [
+        "A03",
+        "A07",
+        "A11",
+        "A12"
+      ],
+      "prior_knowledge_assumed": [
+        "A03",
+        "A07"
+      ],
+      "new_skills_introduced": [
+        "A11",
+        "A12"
+      ],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "Explain why MO < P for a monopolist — the 'price-cut-on-all-units' argument (concept-level, the non-obvious insight of this paragraph)",
+        "Observe that the MO curve has twice the slope of a linear demand curve (concept-level + grafisch; pattern recognition before calculus)",
+        "Build TO = P×Q from a linear P(Q) and expand into aQ + bQ² form (A-domain candidate; step-0 of the §3.2.3 procedure)"
       ],
-      "structural_retrieval_plan": "Reuse reading a demand/supply graph, determining quantity at a stated price, and the meaning of consumer/producer surplus. The new distinction is between domestic production, domestic consumption and the foreign trade flow, not a new equation-solving system.",
-      "structural_scope_boundary": "State a small, price-taking country, competitive markets, sufficient foreign supply/demand and the relevant transport/tariff assumptions. Keep currencies fixed. Domestic demand is not domestic production. A rise in the stated total-surplus measure is not evidence that every group gains. The target need not produce a full welfare-area ledger or balance-of-payments account.",
-      "historical_source_refs": [],
+      "exam_codes": [
+        "A2.10",
+        "A2.11"
+      ],
+      "difficulty_notes": "This is the key preparation lesson for §3.2.3. The table method (exercises a–c) builds intuition BEFORE the algebra (exercise e). Students see the pattern in the numbers first, then verify with calculus. The differentiation in (e) uses the same power rule from §3.1.2. One lesson works IF you do the table first — don't start with algebra.",
+      "source_ref": "references/owned/course-blueprint-v5.md §3.3.2",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "3.2.2",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3464,83 +3687,137 @@
       "module": 3,
       "chapter": 3,
       "paragraph": 3,
-      "paragraph_title": "Protectionisme: invoerheffingen en importquota",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.3.3",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.3.3",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Winstmaximalisatie bij monopolie",
+      "difficulty": "HEAVY",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.3.3; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "The monopolist from §3.2.2 has demand P = 50 − 0.5Q and costs TK = 0.25Q² + 5Q + 100. The hardest single lesson in the course: the full 6-step monopoly procedure from demand to P*, Q*, winst and graph.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Write TO as a function of Q: TO = (50 − 0.5Q) × Q. Expand."
+          },
+          {
+            "label": "b",
+            "prompt": "Differentiate TO to find MO."
+          },
+          {
+            "label": "c",
+            "prompt": "Differentiate TK to find MK."
+          },
+          {
+            "label": "d",
+            "prompt": "Set MO = MK. Solve for Q."
+          },
+          {
+            "label": "e",
+            "prompt": "Find the price by substituting Q back into the demand function P = 50 − 0.5Q."
+          },
+          {
+            "label": "f",
+            "prompt": "Calculate total profit: Winst = TO − TK."
+          },
+          {
+            "label": "g",
+            "prompt": "Draw the graph: demand curve, MO, MK. Mark the profit-maximising Q and P. Shade the area of profit."
+          },
+          {
+            "label": "h",
+            "prompt": "Could the monopolist charge a higher price than your answer in (e)? What would happen to quantity and profit?"
+          }
+        ]
       },
       "lesson_goals": [
-        "Explain why a government might restrict imports and distinguish its stated aim from effects on different groups. Use the familiar market model to interpret a per-unit import tariff; calculate remaining imports and tariff revenue in a simple case. Contrast an import quota qualitatively."
+        "Execute the full monopoly profit maximisation procedure: TO→MO, TK→MK, MO=MK, substitute back, winst",
+        "Draw the complete monopoly graph with MO, MK, demand curve",
+        "Identify the profit area graphically"
+      ],
+      "required_skills": [
+        "A03",
+        "A07",
+        "A11",
+        "A12",
+        "A13",
+        "A20",
+        "A21",
+        "A35",
+        "A40",
+        "D30"
+      ],
+      "prior_knowledge_assumed": [
+        "A03",
+        "A07",
+        "A11",
+        "A12",
+        "A13",
+        "A20",
+        "A21",
+        "A40",
+        "D30"
+      ],
+      "new_skills_introduced": [
+        "A35"
+      ],
+      "missing_units_flagged": [
+        "Execute the full 6-step monopoly procedure end-to-end (A35 is registered as 'Max. winst monopolist'; this procedure-execution skill is what it should canonically encode — verify A35's procedure field covers it)",
+        "Explain why charging above P* reduces profit — the demand constraint (concept-level, verbal)"
+      ],
+      "exam_codes": [
+        "A2.10",
+        "A2.11",
+        "A2.12",
+        "D1.21",
+        "D2.2"
+      ],
+      "difficulty_notes": "The most demanding lesson in the course. 6 algebraic steps plus a graph. However, students have been prepared: MK differentiation (§3.1.2), MO table and differentiation (§3.2.2), MO = MK rule (§1.4.3–§4). The exercise is scaffolded step-by-step. In class: work through steps (a–f) together as guided practice, assign (g–h) as homework. One lesson is tight but feasible with this scaffolding.",
+      "source_ref": "references/owned/course-blueprint-v5.md §3.3.3",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "3.2.3",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      }
+    },
+    {
+      "difficulty": "MIXED",
+      "target_exercise": {
+        "placeholder": true,
+        "context": "Placeholder for 3.3.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Consolidate and transfer the chapter skills for Gemengde opgaven: monopolie."
       ],
       "required_skills": [],
       "prior_knowledge_assumed": [],
       "new_skills_introduced": [],
-      "exam_codes": [],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "v5_placeholder_needs_review"
       ],
-      "structural_retrieval_plan": "Reuse §3.3.2's world-price model and Chapter 3.1's tax, government-budget and quota concepts. Explicitly distinguish a tariff on imported units from a tax on all domestic sales.",
-      "structural_scope_boundary": "Use imported quantity, not all domestic sales, for tariff revenue. Teach the no-import boundary using graph reading or a supplied contrast; do not mechanically impose world price plus tariff after imports disappear. State the model assumptions behind the case. Quantitative quota rents/allocation, export-subsidy models, exchange-rate adjustment and formal strategic retaliation remain deferred. An industry-gain claim is not automatically an economy-wide welfare claim.",
-      "historical_source_refs": [],
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
-      }
-    },
-    {
+      "exam_codes": [],
+      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
       "id": "3.3.4",
       "module": 3,
       "chapter": 3,
       "paragraph": 4,
-      "paragraph_title": "Gemengde opgaven: internationale handel",
+      "paragraph_title": "Gemengde opgaven: monopolie",
       "paragraph_kind": "gemengde_opgaven",
       "introduces_new_theory": false,
       "record_status": "placeholder_needs_review",
+      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
       "source_ref": "references/owned/course-blueprint-v5.md §3.3.4",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "3.3.4",
-        "outline": "references/authored/book-outlines/book-3-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 3.3.4; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
-      },
-      "lesson_goals": [
-        "Select and combine qualitative trade explanation, familiar world-price interpretation, a short import/tariff calculation and a source-supported conclusion. Distinguish aggregate and distributional claims."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
-      ],
-      "structural_retrieval_plan": "Retrieve §§3.3.1-3.3.3 and already-taught market, budget and surplus meanings. No monopoly or labour-market procedure is needed. A source may mention jobs in ordinary language, but must not require labour-demand equations, participation statistics or unit-labour-cost calculations.",
-      "structural_scope_boundary": "The earlier proposal cites a 2022 VWO-I Importheffing task as a possible target-design input. Carry that reference forward for later source verification, not as a completed adaptation or evidence that every operation is approved. Later current-account and game-theory demands stay outside this chapter. Claims about protected jobs do not require or establish a formal economy-wide employment result.",
-      "historical_source_refs": [],
       "v5_migration": {
         "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "from_v4_id": null,
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3548,53 +3825,78 @@
       "module": 4,
       "chapter": 1,
       "paragraph": 1,
-      "paragraph_title": "Monopolie: kenmerken",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.1.1",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.1.1",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Welvaartseffecten van monopolie",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.1.1; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "Using the monopolist from §3.2.3 (optimal P = €30, Q = 40, demand P = 50 − 0.5Q, MK = 0.5Q + 5). Compare monopoly welfare to the competitive benchmark (P = MK) and compute the Harberger triangle.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate CS at the monopoly price. (Triangle between demand curve and price, from Q = 0 to Q = 40.)"
+          },
+          {
+            "label": "b",
+            "prompt": "Calculate PS at the monopoly price."
+          },
+          {
+            "label": "c",
+            "prompt": "Now calculate what TS would be under perfect competition (where P = MK, i.e. demand = MK). Find the competitive P and Q. Calculate competitive TS."
+          },
+          {
+            "label": "d",
+            "prompt": "Calculate the deadweight loss (Harberger triangle) = competitive TS − monopoly TS."
+          },
+          {
+            "label": "e",
+            "prompt": "Shade the Harberger triangle in your graph. Explain in words: 'where did this surplus go?'"
+          }
+        ]
       },
       "lesson_goals": [
-        "Explain market power, barriers to entry and the relationship between the firm’s sales and market demand."
+        "Calculate CS and PS under monopoly pricing",
+        "Calculate the competitive outcome (P = MK) as benchmark",
+        "Calculate the Harberger triangle (deadweight loss from monopoly)",
+        "Understand that monopoly transfers surplus from consumers to producer AND destroys some surplus entirely",
+        "Explain why monopoly is not Pareto-efficient"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
+      "required_skills": [
+        "A06",
+        "A10",
+        "A19",
+        "A30",
+        "A32",
+        "A35",
+        "A40"
+      ],
+      "prior_knowledge_assumed": [
+        "A06",
+        "A10",
+        "A19",
+        "A30",
+        "A32",
+        "A35",
+        "A40"
+      ],
       "new_skills_introduced": [],
-      "exam_codes": [],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "Construct a competitive benchmark by imposing P = MK and computing P*, Q*, TS (concept-level + application; the §3.3.1 novelty is the comparison, not the components)",
+        "Distinguish surplus transfer (CS→PS) from surplus destruction (DWL) verbally (concept-level, the 'where did the surplus go?' narrative)"
       ],
-      "structural_retrieval_plan": "Contrast with §3.2.1; retrieve the demand function and price/quantity relationship. Use the book-opening retrieval task to restore the difference between a market graph and the competitive firm's graph before introducing the monopolist's graph.",
-      "structural_scope_boundary": "Monopoly does not mean unlimited pricing power. Patents can be one entry-barrier context; full policy evaluation belongs later.",
-      "historical_source_refs": [
-        {
-          "id": "3.3.1",
-          "disposition": "monopoly_chapter_move",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/34",
-          "record_sha256": "9b42844561baf39df523b3ffc08f775f3776ab81853167fa2ec32f136cd1b093",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
+      "exam_codes": [
+        "A2.16",
+        "A2.17",
+        "D3.1"
       ],
+      "difficulty_notes": "Builds directly on §2.2 (surplus analysis) and §3.2.3 (monopoly mechanics). The calculation involves finding the competitive equilibrium (demand = supply/MK) — which is revision of earlier competitive-equilibrium work. The new element is the comparison. One lesson works because students already have all the component skills.",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.1.1",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "3.3.1",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3602,53 +3904,82 @@
       "module": 4,
       "chapter": 1,
       "paragraph": 2,
-      "paragraph_title": "Marginale opbrengst bij monopolie",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.1.2",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.1.2",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Prijsdiscriminatie",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.1.2; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "A theme park faces two groups: adults (Qv = −5P + 300) and children (Qv = −10P + 300). MK = €10 (constant). Combined demand is given as Qv = −15P + 600.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Without price discrimination: the combined demand curve is given as Qv = −15P + 600. Set MO = MK, find optimal P and Q. Calculate total profit."
+          },
+          {
+            "label": "b",
+            "prompt": "With price discrimination: the park charges adults and children different prices. For each group separately, derive MO, set MO = MK and find optimal P and Q. Calculate total profit."
+          },
+          {
+            "label": "c",
+            "prompt": "How much extra profit does price discrimination yield?"
+          },
+          {
+            "label": "d",
+            "prompt": "What conditions must be met for price discrimination to work? (Hint: can adults buy children's tickets?)"
+          },
+          {
+            "label": "e",
+            "prompt": "Name a real-world example of price discrimination and explain how the conditions are met."
+          }
+        ]
       },
       "lesson_goals": [
-        "Explain why extra sales and a lower price have different effects on total revenue; obtain MO from a simple TO relation."
+        "Define price discrimination: charging different prices to different groups for the same product",
+        "Calculate profit with and without price discrimination",
+        "Understand that price discrimination increases producer surplus",
+        "Name conditions: market segments must be separable, no resale possible",
+        "Recognise real-world examples (student discounts, airline pricing, happy hour)"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
+      "required_skills": [
+        "A11",
+        "A91",
+        "A35",
+        "A36",
+        "D18",
+        "D21",
+        "D22",
+        "D24"
+      ],
+      "prior_knowledge_assumed": [
+        "A11",
+        "A91",
+        "A35"
+      ],
+      "new_skills_introduced": [
+        "A36",
+        "D18",
+        "D21",
+        "D22",
+        "D24"
+      ],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "Apply the MO=MK procedure twice (once per market segment) and sum the resulting profits (A-domain candidate; a 'two-market monopoly' variant)",
+        "Compare winst with vs without price discrimination and quantify the extra PS captured (reken skill)",
+        "Name and verify the three operational conditions for price discrimination: separable segments, no resale, different elasticities (concept-level; partly covered by D24 but worth a procedure check)"
       ],
-      "structural_retrieval_plan": "Retrieve TO = P x Q, Book 2 marginal differences and revenue interpretation, and the limited derivative technique taught in §3.2.2.",
-      "structural_scope_boundary": "Assume a uniform selling price. Do not introduce point-elasticity formulas or a general calculus chapter. Revisit elasticity qualitatively only where it supports the taught revenue interpretation.",
-      "historical_source_refs": [
-        {
-          "id": "3.3.2",
-          "disposition": "monopoly_chapter_move",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/35",
-          "record_sha256": "0031b3253cfb257a04b265c76d4d5fa5c7876058c330aff4e192415bcbd0ae96",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
+      "exam_codes": [
+        "A2.10",
+        "A2.11",
+        "D2.3"
       ],
+      "difficulty_notes": "The combined demand curve is provided in exercise (a) to avoid the aggregation complexity. Exercise (b) applies the MO = MK procedure twice (once per group), which is repetitive but reinforcing. One lesson works with this simplification.",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.1.2",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "3.3.2",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3656,53 +3987,66 @@
       "module": 4,
       "chapter": 1,
       "paragraph": 3,
-      "paragraph_title": "Winstmaximalisatie bij monopolie",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.1.3",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.1.3",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Marktvormen vergelijken",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.1.3; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "Descriptive/comparative lesson: build the 4-structure comparison table and classify real-world markets.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Complete the comparison table (rows: number of sellers, product type, entry barriers, price influence, example) across columns: volkomen concurrentie, monopolistische concurrentie, oligopolie, monopolie."
+          },
+          {
+            "label": "b",
+            "prompt": "A coffee shop in Amsterdam operates in a market with many competitors, but each shop has its own style and menu. Which market structure is this? Explain."
+          },
+          {
+            "label": "c",
+            "prompt": "The petrol market has 4 major companies. Products are nearly identical. Which market structure? Explain."
+          },
+          {
+            "label": "d",
+            "prompt": "Rank the four market structures from most to least competitive. For each, state whether TS is higher or lower than at volkomen concurrentie."
+          },
+          {
+            "label": "e",
+            "prompt": "Why might an oligopolist have an incentive to collude (prijsafspraken maken)? Why is this illegal?"
+          }
+        ]
       },
       "lesson_goals": [
-        "Determine output using MO and MK, then read price from demand and calculate profit."
+        "Name and characterise all four market structures",
+        "Classify real-world markets into the correct structure",
+        "Understand the spectrum from perfect competition to monopoly",
+        "Understand that market power generally reduces total surplus",
+        "Recognise collusion as an attempt to act as a collective monopolist"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
+      "required_skills": [
+        "D15"
+      ],
+      "prior_knowledge_assumed": [
+        "D15"
+      ],
       "new_skills_introduced": [],
-      "exam_codes": [],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "Characterise monopolistische concurrentie (many sellers, productdifferentiatie, free entry, limited short-run price-setting power) (concept-level, mastery_target understand)",
+        "Characterise oligopolie (few sellers, strategic interaction, high entry barriers, price leadership / collusion risk) (concept-level, mastery_target understand)",
+        "Classify a given real-world market into one of the four structures using the characteristic table (concept-level application)",
+        "Explain the incentive to collude in oligopolie and why cartels are illegal + unstable (concept-level; hooks into the §3.3.3 Gap 1 revision plan)"
       ],
-      "structural_retrieval_plan": "Repeat §3.2.2’s optimisation procedure, §4.1.2’s revenue relation and Book 2 cost calculations.",
-      "structural_scope_boundary": "Do not read price from the MO curve, equate P with MK at the monopoly optimum, or confuse maximum revenue with maximum profit. Reserve the formal welfare comparison for §4.2.1, immediately after this chapter; it is not postponed to a later book.",
-      "historical_source_refs": [
-        {
-          "id": "3.3.3",
-          "disposition": "monopoly_chapter_move",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/36",
-          "record_sha256": "b4e52efb31eb2ee91a54018e7cd48106734174b3baabfbec5a72b5bc53181dff",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
+      "exam_codes": [
+        "D2.1"
       ],
+      "difficulty_notes": "Descriptive/comparative lesson. The table is a study tool students can use for revision. Exercise (e) bridges to game theory (which is covered elsewhere in the full VWO program). One lesson comfortable — good opportunity for class discussion about real-world examples.",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.1.3",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "3.3.3",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3710,53 +4054,268 @@
       "module": 4,
       "chapter": 1,
       "paragraph": 4,
-      "paragraph_title": "Gemengde opgaven: monopolie",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.1.4",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.1.4",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Negatieve externe effecten",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.1.4; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "A factory produces chemicals. Private marginal costs are MPC = 2Q. Production causes water pollution costing fishermen €4 per unit, so MSC = 2Q + 4. Demand P = 20 − Q.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the market equilibrium (where demand = MPC). This is what the market produces without government intervention."
+          },
+          {
+            "label": "b",
+            "prompt": "Calculate the socially optimal equilibrium (where demand = MSC)."
+          },
+          {
+            "label": "c",
+            "prompt": "Draw both equilibria in one graph. Shade the welfare loss from overproduction."
+          },
+          {
+            "label": "d",
+            "prompt": "How many units too many does the free market produce?"
+          },
+          {
+            "label": "e",
+            "prompt": "Explain why this is called market failure. Who bears the cost that the market ignores?"
+          }
+        ]
       },
       "lesson_goals": [
-        "Choose and execute the monopoly calculation sequence and compare it with the already-taught competitive firm sequence."
+        "Define external effects (externalities): costs/benefits affecting third parties not involved in the transaction",
+        "Distinguish private costs from social costs: MSC = MPC + external cost",
+        "Calculate market equilibrium (using MPC) and socially optimal equilibrium (using MSC)",
+        "Calculate the welfare loss from overproduction (the market produces too much)",
+        "Explain why externalities cause market failure: the market price doesn't reflect the full cost"
+      ],
+      "required_skills": [
+        "A06",
+        "A10",
+        "F07",
+        "F08",
+        "F16",
+        "F17"
+      ],
+      "prior_knowledge_assumed": [
+        "A06",
+        "A10"
+      ],
+      "new_skills_introduced": [
+        "F07",
+        "F08",
+        "F16",
+        "F17"
+      ],
+      "missing_units_flagged": [
+        "Verbal market-failure framing: who bears the ignored cost, and why does the market price undercount it (concept-level)"
+      ],
+      "exam_codes": [
+        "A2.10",
+        "A2.16",
+        "A2.17"
+      ],
+      "difficulty_notes": "New graph type: two supply curves (MPC and MSC). Students must understand why the market uses MPC (because firms don't pay for pollution) while society should use MSC. The math is straightforward — it's the same equilibrium calculation introduced earlier, just done twice. One lesson works.",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.1.4",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "3.4.1",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      }
+    },
+    {
+      "id": "4.1.5",
+      "module": 4,
+      "chapter": 1,
+      "paragraph": 5,
+      "paragraph_title": "Positieve externe effecten",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Vaccinations have positive external effects. MPB curve (private benefit) P = 30 − Q; MSB = MPB + €5 = 35 − Q. Supply (= MC) P = Q.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the market equilibrium (where supply = MPB)."
+          },
+          {
+            "label": "b",
+            "prompt": "Calculate the socially optimal equilibrium (where supply = MSB). To do this: MSB = 35 − Q. Set equal to supply."
+          },
+          {
+            "label": "c",
+            "prompt": "The market produces too little. By how many units?"
+          },
+          {
+            "label": "d",
+            "prompt": "Draw both equilibria. Shade the welfare loss from underproduction."
+          },
+          {
+            "label": "e",
+            "prompt": "Suggest a policy to correct this market failure. How large should the correction be?"
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Distinguish private benefits from social benefits: MSB = MPB + external benefit",
+        "Calculate market equilibrium (using MPB) and socially optimal equilibrium (using MSB)",
+        "Understand that the market produces too little of goods with positive externalities",
+        "Suggest correction: subsidy equal to the external benefit per unit",
+        "Draw the graph with MPB and MSB"
+      ],
+      "required_skills": [
+        "A06",
+        "A10",
+        "F11",
+        "F16",
+        "F17",
+        "F18"
+      ],
+      "prior_knowledge_assumed": [
+        "A06",
+        "A10",
+        "F16",
+        "F17"
+      ],
+      "new_skills_introduced": [
+        "F11",
+        "F18"
+      ],
+      "missing_units_flagged": [],
+      "exam_codes": [
+        "A2.10",
+        "A2.16"
+      ],
+      "difficulty_notes": "Mirror of §3.4.1 — if students understood negative externalities, this is the same logic reversed. The policy suggestion (exercise e) connects back to §2.3 (subsidies). One lesson comfortable.",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.1.5",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "3.4.2",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      }
+    },
+    {
+      "id": "4.1.6",
+      "module": 4,
+      "chapter": 1,
+      "paragraph": 6,
+      "paragraph_title": "Overheidsingrijpen bij marktfalen",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Using the factory from §3.4.1 (MPC = 2Q, MSC = 2Q + 4, demand P = 20 − Q). Students derive the Pigouvian tax, meet Coase, and revisit patents as a dual-edged tool.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "The government introduces a Pigouvian tax of €4 per unit. Write the new private cost function (MPC + tax). Calculate the new market equilibrium."
+          },
+          {
+            "label": "b",
+            "prompt": "Compare this with the socially optimal outcome from §3.4.1(b). Are they the same?"
+          },
+          {
+            "label": "c",
+            "prompt": "An economist suggests: 'Instead of a tax, let the fishermen negotiate with the factory. If they pay the factory to reduce output, both sides can be better off.' This is called the Coase theorem. Under what condition does this work? (Hint: think about transaction costs and property rights.)"
+          },
+          {
+            "label": "d",
+            "prompt": "The factory has a patent on its chemical process. Explain how a patent can simultaneously be a solution to one market failure (innovation) and a cause of another (monopoly). Connect to §3.2."
+          },
+          {
+            "label": "e",
+            "prompt": "Name three policy instruments the government can use to correct negative externalities and give a real example for each."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Understand Pigouvian tax: a tax equal to the external cost per unit",
+        "Show that a Pigouvian tax makes the market outcome equal to the socially optimal outcome",
+        "Understand the Coase theorem: private negotiation can solve externalities if transaction costs are low",
+        "Recognise the trade-off in patents: innovation incentive vs monopoly power",
+        "Name policy instruments: taxes, subsidies, regulation, tradeable permits, property rights"
+      ],
+      "required_skills": [
+        "A06",
+        "A23",
+        "F05",
+        "F06",
+        "F10",
+        "F18"
+      ],
+      "prior_knowledge_assumed": [
+        "A06",
+        "A23",
+        "F18"
+      ],
+      "new_skills_introduced": [
+        "F05",
+        "F06",
+        "F10"
+      ],
+      "missing_units_flagged": [
+        "State the Coase theorem condition (low transaction costs, clear property rights) and argue when private negotiation suffices (concept-level, mastery_target understand)",
+        "Evaluate the patent trade-off: innovation incentive vs monopoly welfare loss (concept-level + verbal; the §3.4.3↔§3.2 integration)",
+        "Enumerate policy instruments for negative externalities with a real example each (concept-level, breadth)"
+      ],
+      "exam_codes": [
+        "D3.4",
+        "D3.9"
+      ],
+      "difficulty_notes": "Mix of calculation (a–b) and conceptual reasoning (c–e). The Coase theorem can be kept light — just the basic idea, not formal proof. Exercise (d) is an excellent integrative question connecting market failure to monopoly. One lesson works — the calculation is revision, the new elements are Coase and policy instruments.",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.1.6",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "3.4.3",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      }
+    },
+    {
+      "difficulty": "MIXED",
+      "target_exercise": {
+        "placeholder": true,
+        "context": "Placeholder for 4.1.7: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Consolidate and transfer the chapter skills for Gemengde opgaven: marktvormen en marktfalen."
       ],
       "required_skills": [],
       "prior_knowledge_assumed": [],
       "new_skills_introduced": [],
-      "exam_codes": [],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "v5_placeholder_needs_review"
       ],
-      "structural_retrieval_plan": "Interleave cost, revenue, elasticity interpretation, break-even and marginal choice without adding new operations.",
-      "structural_scope_boundary": "No price discrimination, strategic game or monopoly-welfare target before those are taught. Consolidation is not an extra theory paragraph.",
-      "historical_source_refs": [
-        {
-          "id": "3.3.4",
-          "disposition": "monopoly_chapter_move",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/37",
-          "record_sha256": "6fa7819212bef604f2ce67d5d7ea73287d97a34eb00192783186407390cab601",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
+      "exam_codes": [],
+      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
+      "id": "4.1.7",
+      "module": 4,
+      "chapter": 1,
+      "paragraph": 7,
+      "paragraph_title": "Gemengde opgaven: marktvormen en marktfalen",
+      "paragraph_kind": "gemengde_opgaven",
+      "introduces_new_theory": false,
+      "record_status": "placeholder_needs_review",
+      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.1.7",
       "v5_migration": {
         "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "from_v4_id": null,
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3764,53 +4323,65 @@
       "module": 4,
       "chapter": 2,
       "paragraph": 1,
-      "paragraph_title": "Welvaartseffecten van monopolie",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.2.1",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.2.1",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Arbeidsvraag",
+      "difficulty": "LIGHT",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.2.1; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "A restaurant hires waiters. Marginal product falls: 1st=50 extra meals, 2nd=45, 3rd=35, 4th=25, 5th=15. Revenue is €15 per meal. Students compute VMP and apply the hiring rule VMP ≥ W.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the value of marginal product (VMP = marginal product × revenue per meal) for each waiter."
+          },
+          {
+            "label": "b",
+            "prompt": "The wage is €450 per evening. How many waiters should the restaurant hire? Explain using the VMP."
+          },
+          {
+            "label": "c",
+            "prompt": "The wage rises to €600. How many waiters now? What happened to labor demand?"
+          },
+          {
+            "label": "d",
+            "prompt": "Explain why the demand for labor is called 'derived demand.'"
+          },
+          {
+            "label": "e",
+            "prompt": "Draw the restaurant's labor demand curve using the VMP values."
+          }
+        ]
       },
       "lesson_goals": [
-        "Compare monopoly with an appropriate competitive/efficient benchmark and distinguish a redistribution of surplus from a welfare loss."
+        "Define marginal product of labor (extra output from one additional worker)",
+        "Calculate value of marginal product: VMP = MP × price of output",
+        "Apply the hiring rule: hire as long as VMP ≥ wage",
+        "Understand derived demand: labor is demanded because of demand for the product",
+        "Draw a labor demand curve (which is the VMP curve)"
       ],
-      "required_skills": [],
+      "required_skills": [
+        "L01",
+        "L02",
+        "L03",
+        "L04"
+      ],
       "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
+      "new_skills_introduced": [
+        "L01",
+        "L02",
+        "L03",
+        "L04"
+      ],
+      "missing_units_flagged": [],
       "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
-      ],
-      "structural_retrieval_plan": "Repeat §4.1.3’s quantity-and-price calculation and Book 2 CS/PS/total-surplus areas as essential parts of the current task.",
-      "structural_scope_boundary": "Keep demand, cost conditions and welfare boundary comparable across scenarios. Producer surplus is not automatically profit; do not treat every transfer between buyer and seller as a loss.",
-      "historical_source_refs": [
-        {
-          "id": "4.1.1",
-          "disposition": "market_failure_chapter_move",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/38",
-          "record_sha256": "1206dae75bb714e51e8d40108ccce540075ec2cd693834d943879a7da674b455",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
+      "difficulty_notes": "Connects directly to earlier marginal-analysis units (MO = MK is analogous to VMP = W). Students find the restaurant context engaging. The diminishing marginal product is intuitive ('the kitchen gets crowded'). One lesson comfortable.",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.2.1",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "4.1.1",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3818,53 +4389,65 @@
       "module": 4,
       "chapter": 2,
       "paragraph": 2,
-      "paragraph_title": "Prijsdiscriminatie",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.2.2",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.2.2",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Arbeidsaanbod en participatie",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.2.2; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "Country X: population 15–75 = 12 million; beroepsbevolking = 9 million; werkloze beroepsbevolking = 540,000.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the bruto participatiegraad (participation rate)."
+          },
+          {
+            "label": "b",
+            "prompt": "Calculate the werkloosheidspercentage (unemployment rate)."
+          },
+          {
+            "label": "c",
+            "prompt": "A student says: '3 million people are unemployed because 12 − 9 = 3 million.' Explain why this is wrong."
+          },
+          {
+            "label": "d",
+            "prompt": "Average wages rise significantly. Explain how this might affect the participation rate (think about people currently in the niet-beroepsbevolking)."
+          },
+          {
+            "label": "e",
+            "prompt": "Draw a labor supply curve. Explain why it is upward sloping."
+          }
+        ]
       },
       "lesson_goals": [
-        "Explain the conditions for selling at different prices and analyse the effect on revenue, profit and the division of surplus."
+        "Define beroepsbevolking, niet-beroepsbevolking, werkloze beroepsbevolking",
+        "Calculate participation rate = beroepsbevolking / population 15–75 × 100",
+        "Calculate unemployment rate = werklozen / beroepsbevolking × 100",
+        "Explain what drives labor supply: wages, preferences, demographics",
+        "Draw an upward-sloping labor supply curve"
       ],
-      "required_skills": [],
+      "required_skills": [
+        "L05",
+        "L06",
+        "L07",
+        "L08"
+      ],
       "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
+      "new_skills_introduced": [
+        "L05",
+        "L06",
+        "L07",
+        "L08"
+      ],
+      "missing_units_flagged": [],
       "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
-      ],
-      "structural_retrieval_plan": "Reuse TO, profit and demand responsiveness; where the chosen target requires it, repeat the established MO/MK procedure in each explicitly separated market.",
-      "structural_scope_boundary": "State market separation and resale restrictions. For separate segment optimisation, use a stated common constant marginal cost, or explicitly account for costs that depend on combined output. Do not claim that discrimination necessarily raises or necessarily lowers total welfare. Avoid adding simultaneous unfamiliar cost structures and multiple optimisation cases.",
-      "historical_source_refs": [
-        {
-          "id": "4.1.2",
-          "disposition": "market_failure_chapter_move",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/39",
-          "record_sha256": "1ddbdb72a50b27ecfd3d5cd6eb5a487ef3611b196e20b2b5acbb226808e9dcc9",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
+      "difficulty_notes": "The terminology (beroepsbevolking vs niet-beroepsbevolking) is the main challenge — students mix up 'not working' with 'unemployed.' Exercise (c) directly addresses this confusion. The formulas are simple. One lesson works with clear emphasis on definitions.",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.2.2",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "4.1.2",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3872,53 +4455,73 @@
       "module": 4,
       "chapter": 2,
       "paragraph": 3,
-      "paragraph_title": "Marktvormen vergelijken",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.2.3",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.2.3",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Evenwicht op de arbeidsmarkt",
+      "difficulty": "LIGHT",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.2.3; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "The labor market for IT workers: Qd = −200W + 5000 and Qs = 300W − 1000 (W = wage €/hour, Q = number of workers).",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the equilibrium wage and employment level."
+          },
+          {
+            "label": "b",
+            "prompt": "At a wage of €14/hour, is there a krappe arbeidsmarkt or a ruime arbeidsmarkt? Calculate the gap."
+          },
+          {
+            "label": "c",
+            "prompt": "In a krappe arbeidsmarkt, what happens to wages? In a ruime arbeidsmarkt? Explain."
+          },
+          {
+            "label": "d",
+            "prompt": "Draw the labor market diagram with the equilibrium and the situation at W = €14."
+          },
+          {
+            "label": "e",
+            "prompt": "New tech companies enter the market, increasing demand for IT workers. The new demand is Qd = −200W + 7000. Calculate the new equilibrium. What happened to wages and employment?"
+          }
+        ]
       },
       "lesson_goals": [
-        "Distinguish perfect competition, monopolistic competition, oligopoly and monopoly; transfer a familiar profit procedure to a supplied unfamiliar-market representation."
+        "Apply supply-demand equilibrium framework to the labor market",
+        "Calculate equilibrium wage and employment",
+        "Define krappe arbeidsmarkt (demand > supply) and ruime arbeidsmarkt (supply > demand)",
+        "Predict wage adjustments from market imbalances",
+        "Analyse shifts in labor demand or supply"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+      "required_skills": [
+        "A02",
+        "A04",
+        "A06",
+        "L09",
+        "L10"
       ],
-      "structural_retrieval_plan": "Reuse competitive/monopoly reasoning, substitute relationships, demand responsiveness and marginal profit choice.",
-      "structural_scope_boundary": "Do not assume an oligopolist has one universal demand curve. No reaction functions or payoff-matrix techniques here. Formal strategic interaction stays in the later course. This paragraph is not just a vocabulary checklist, but it also must not become four full new models.",
-      "historical_source_refs": [
-        {
-          "id": "4.1.3",
-          "disposition": "market_failure_chapter_move",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/40",
-          "record_sha256": "51d7b5060e7e9d870776e9aa3064f80fd2203eb9a8e6434c2260015739ee359c",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
+      "prior_knowledge_assumed": [
+        "A02",
+        "A04",
+        "A06",
+        "L10"
       ],
+      "new_skills_introduced": [
+        "L09",
+        "L10"
+      ],
+      "missing_units_flagged": [],
+      "exam_codes": [
+        "A2.10",
+        "A2.12",
+        "A2.15"
+      ],
+      "difficulty_notes": "Direct transfer from §1.4 — same math, different context. Students recognise the framework. Exercise (e) mirrors §1.4.2. One lesson comfortable. This is a confidence-building lesson.",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.2.3",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "4.1.3",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3926,53 +4529,71 @@
       "module": 4,
       "chapter": 2,
       "paragraph": 4,
-      "paragraph_title": "Negatieve externe effecten",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.2.4",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.2.4",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Werkloosheid",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.2.4; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "Classify five real-world cases as conjuncturele werkloosheid, structurele werkloosheid, or frictiewerkloosheid and propose policy responses.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "A coal miner in Limburg loses his job because the mine closes permanently due to the shift to renewable energy. Which type of unemployment?"
+          },
+          {
+            "label": "b",
+            "prompt": "A marketing manager quits her job to search for a better position. She is unemployed for 3 months. Which type?"
+          },
+          {
+            "label": "c",
+            "prompt": "A construction worker is laid off because the housing market crashed during a recession. Which type?"
+          },
+          {
+            "label": "d",
+            "prompt": "Factory workers are replaced by robots. Their skills don't match available jobs. Which type?"
+          },
+          {
+            "label": "e",
+            "prompt": "For each type, explain whether it is temporary or can persist for a long time."
+          },
+          {
+            "label": "f",
+            "prompt": "A government wants to reduce structurele werkloosheid. Name two policy measures and explain how they work."
+          }
+        ]
       },
       "lesson_goals": [
-        "Identify unpriced harm to third parties, distinguish private from social consequences and analyse a corrective tax."
+        "Define three types of unemployment: conjunctureel (cyclical), structureel (structural), frictie (frictional)",
+        "Classify real-world cases into the correct type",
+        "Understand causes: demand shortfall (cyclical), skills mismatch or automation (structural), search time (frictional)",
+        "Suggest policy responses for each type",
+        "Understand that frictional unemployment is normal and even healthy"
       ],
-      "required_skills": [],
+      "required_skills": [
+        "L11",
+        "L12",
+        "L13",
+        "L14",
+        "L15"
+      ],
       "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
+      "new_skills_introduced": [
+        "L11",
+        "L12",
+        "L13",
+        "L14",
+        "L15"
+      ],
+      "missing_units_flagged": [],
       "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
-      ],
-      "structural_retrieval_plan": "Repeat the tax calculation from §§3.1.1-3.1.2, the market equilibrium method and surplus accounting. The external-cost interpretation is new.",
-      "structural_scope_boundary": "Do not count tax revenue as a real social loss or treat CS + PS alone as the full welfare measure when external harm is present. Keep external-cost assumptions explicit and simple; no unsupported claims of a uniquely optimal tax.",
-      "historical_source_refs": [
-        {
-          "id": "4.1.4",
-          "disposition": "market_failure_chapter_move",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/41",
-          "record_sha256": "19f5f635fd11ef87e9c78f5525a9fdd18e70fd93bdec05bc455c4c4e2947ee3b",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
+      "difficulty_notes": "Definitional lesson. The classification can be ambiguous (is the coal miner structural or frictional?) — this makes for good discussion. Exercise (f) requires policy thinking. One lesson works.",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.2.4",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "4.2.1",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -3980,53 +4601,93 @@
       "module": 4,
       "chapter": 2,
       "paragraph": 5,
-      "paragraph_title": "Positieve externe effecten",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.2.5",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.2.5",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Minimumloon",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.2.5; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "IT labor market from §4.1.3 (Qd = −200W + 5000, Qs = 300W − 1000, W* = €12, Q* = 2600). Government sets a minimum wage of €15/hour.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate Qd and Qs at the minimum wage of €15/hour."
+          },
+          {
+            "label": "b",
+            "prompt": "How many workers become unemployed? (= Qs − Qd)"
+          },
+          {
+            "label": "c",
+            "prompt": "Draw the labor market with the minimum wage. Shade the werknemerssurplus and werkgeverssurplus."
+          },
+          {
+            "label": "d",
+            "prompt": "Calculate the total surplus before and after the minimum wage."
+          },
+          {
+            "label": "e",
+            "prompt": "Calculate the deadweight loss."
+          },
+          {
+            "label": "f",
+            "prompt": "Some workers earn more (€15 instead of €12), but others lose their jobs. Evaluate: 'A minimum wage helps workers.' Use your calculations to argue both sides."
+          }
+        ]
       },
       "lesson_goals": [
-        "Identify benefits to third parties and explain how a subsidy can improve an outcome with too little of the beneficial activity."
+        "Apply the minimum price framework from §2.4.2 to the labor market",
+        "Calculate unemployment caused by a minimum wage (surplus of labor)",
+        "Calculate welfare effects: werknemerssurplus, werkgeverssurplus, deadweight loss",
+        "Recognise the trade-off: higher wages for employed vs job losses for others",
+        "Formulate a balanced evaluation of minimum wage policy"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+      "required_skills": [
+        "A02",
+        "A04",
+        "A06",
+        "A10",
+        "A19",
+        "A25",
+        "A32",
+        "D16",
+        "H13",
+        "H14",
+        "L10",
+        "L16",
+        "L21"
       ],
-      "structural_retrieval_plan": "Repeat §3.1.3’s subsidy wedge, quantity and government-expenditure calculation and Book 2 surplus reasoning.",
-      "structural_scope_boundary": "Keep the benefit to the buyer separate from the benefit to others. State who receives the subsidy. Do not count a transfer twice or assume every subsidy is appropriately sized. The external-benefit interpretation is new teaching, not prerequisite recall.",
-      "historical_source_refs": [
-        {
-          "id": "4.1.5",
-          "disposition": "market_failure_chapter_move",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/42",
-          "record_sha256": "9e223522b60a894d9c03c906ac8759500b8a76a1b4348ad65e40bb79fa015553",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
+      "prior_knowledge_assumed": [
+        "A02",
+        "A04",
+        "A06",
+        "A10",
+        "A19",
+        "A25",
+        "A32",
+        "L10"
       ],
+      "new_skills_introduced": [
+        "D16",
+        "H13",
+        "H14",
+        "L16",
+        "L21"
+      ],
+      "missing_units_flagged": [],
+      "exam_codes": [
+        "A2.16",
+        "A4.5",
+        "D3.10",
+        "H5.2"
+      ],
+      "difficulty_notes": "This is a direct transfer from Module 2 (minimumprijs). Students should recognise the framework: a minimum wage IS a minimum price on labor. The welfare calculation is identical. The new element is exercise (f) — a balanced evaluation — which is an exam skill (standpuntbepaling). One lesson works. If there is a long time gap between Module 2 and this lesson, start with a 10-minute revision of minimum price mechanics.",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.2.5",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "4.2.2",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -4034,107 +4695,109 @@
       "module": 4,
       "chapter": 2,
       "paragraph": 6,
-      "paragraph_title": "Overheidsingrijpen bij marktfalen",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.2.6",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.2.6",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Vakbonden, cao en arbeidsmarktbeleid",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.2.6; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "CAO wage-setting, unions, loonstarheid, and labor market policy in the Dutch institutional context.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "A CAO (collectieve arbeidsovereenkomst) sets wages for all workers in the metal industry at 10% above the equilibrium wage. Explain how this is similar to a minimum wage. What effect does it have on employment?"
+          },
+          {
+            "label": "b",
+            "prompt": "Name two advantages of unions for workers. Name one disadvantage."
+          },
+          {
+            "label": "c",
+            "prompt": "Define loonstarheid. Explain why it can cause unemployment to persist even when the economy recovers."
+          },
+          {
+            "label": "d",
+            "prompt": "The government wants to increase employment. Compare two policies: (i) lowering the minimum wage, (ii) retraining subsidies for workers. For each, explain the mechanism and evaluate the likely effectiveness."
+          },
+          {
+            "label": "e",
+            "prompt": "In the Netherlands, wages rarely fall even in a recession. Explain this using the concepts CAO and loonstarheid."
+          }
+        ]
       },
       "lesson_goals": [
-        "Match a policy to the diagnosed failure, compare feasible alternatives and evaluate effects and limitations with evidence."
+        "Understand that unions and CAOs can set wages above equilibrium (similar to minimum price)",
+        "Define loonstarheid (wage rigidity): wages adjust slowly downward",
+        "Explain why wage rigidity can cause persistent unemployment",
+        "Compare labor market policies: wage flexibility vs active labor market policy (training)",
+        "Apply concepts to the Dutch institutional context (poldermodel, CAO system)"
+      ],
+      "required_skills": [
+        "I04",
+        "I10",
+        "L17",
+        "L18",
+        "L19",
+        "L20"
+      ],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [
+        "I04",
+        "I10",
+        "L17",
+        "L18",
+        "L19",
+        "L20"
+      ],
+      "missing_units_flagged": [],
+      "exam_codes": [],
+      "difficulty_notes": "Mostly conceptual/institutional. The link to minimum wage analysis (§2.4.2) makes the economic reasoning familiar. The new element is loonstarheid as a market imperfection. Exercise (e) connects theory to Dutch reality. One lesson comfortable.",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.2.6",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "4.2.3",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      }
+    },
+    {
+      "difficulty": "MIXED",
+      "target_exercise": {
+        "placeholder": true,
+        "context": "Placeholder for 4.2.7: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Consolidate and transfer the chapter skills for Gemengde opgaven: arbeidsmarkt."
       ],
       "required_skills": [],
       "prior_knowledge_assumed": [],
       "new_skills_introduced": [],
-      "exam_codes": [],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "v5_placeholder_needs_review"
       ],
-      "structural_retrieval_plan": "Reuse taxes, subsidies, price restrictions and quantity restrictions, alongside monopoly and externality analysis.",
-      "structural_scope_boundary": "Not a second full course on every instrument. A patent/competition-policy example can retrieve market power; avoid importing the later games, insurance or macro-policy curriculum. Separate efficiency from distribution and recognise implementation limits stated in the source.",
-      "historical_source_refs": [
-        {
-          "id": "4.1.6",
-          "disposition": "market_failure_chapter_move",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/43",
-          "record_sha256": "e74de54e1af143934dfa0cb39855ab06802c8ac20c6fd329d3fc35f7860b90bc",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
-      }
-    },
-    {
+      "exam_codes": [],
+      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
       "id": "4.2.7",
       "module": 4,
       "chapter": 2,
       "paragraph": 7,
-      "paragraph_title": "Gemengde opgaven: marktvormen en marktfalen",
+      "paragraph_title": "Gemengde opgaven: arbeidsmarkt",
       "paragraph_kind": "gemengde_opgaven",
       "introduces_new_theory": false,
       "record_status": "placeholder_needs_review",
+      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
       "source_ref": "references/owned/course-blueprint-v5.md §4.2.7",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.2.7",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.2.7; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
-      },
-      "lesson_goals": [
-        "Integrate firm behaviour, surplus, external effects and policy selection without new theory."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
-      ],
-      "structural_retrieval_plan": "Select useful methods from Books 1-3, Chapter 4.1 and §§4.2.1-4.2.6, rather than repeating a labelled routine mechanically.",
-      "structural_scope_boundary": "Do not put an unfamiliar policy or welfare concept into the mixed target. Keep core work feasible; distribute additional retrieval to the closing review.",
-      "historical_source_refs": [
-        {
-          "id": "4.1.7",
-          "disposition": "market_failure_chapter_move",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/44",
-          "record_sha256": "e328668a43149d77510df1d2bbd7aadec8d2f00e8348f4e1f69383663bdace2b",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
       "v5_migration": {
         "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "from_v4_id": null,
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -4142,53 +4805,65 @@
       "module": 4,
       "chapter": 3,
       "paragraph": 1,
-      "paragraph_title": "Arbeidsvraag en arbeidsproductiviteit",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.3.1",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.3.1",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
+      "paragraph_title": "Absolute en comparatieve voordelen",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.3.1; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
+        "context": "Two countries A and B produce cars and grain. A: 100 hours/car, 10 hours/ton grain. B: 150 hours/car, 30 hours/ton grain.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Which country has an absolute advantage in cars? In grain?"
+          },
+          {
+            "label": "b",
+            "prompt": "Calculate the opportunity cost of 1 car in each country (in tons of grain given up)."
+          },
+          {
+            "label": "c",
+            "prompt": "Calculate the opportunity cost of 1 ton of grain in each country (in cars given up)."
+          },
+          {
+            "label": "d",
+            "prompt": "Which country has a comparative advantage in cars? In grain? Explain."
+          },
+          {
+            "label": "e",
+            "prompt": "A student says: 'Country A is better at everything, so trade doesn't make sense.' Explain why this is wrong using your answers."
+          }
+        ]
       },
       "lesson_goals": [
-        "Explain why employers demand labour, interpret changes in that demand, and relate output, labour input, productivity and labour cost per unit."
+        "Define absolute advantage (produce more with same resources)",
+        "Define comparative advantage (lowest opportunity cost)",
+        "Calculate opportunity costs from a production table",
+        "Explain that comparative advantage, not absolute advantage, determines trade patterns",
+        "Understand that trade benefits both countries even if one is better at everything"
       ],
-      "required_skills": [],
+      "required_skills": [
+        "A18"
+      ],
       "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
+      "new_skills_introduced": [
+        "A18"
+      ],
       "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
+        "Define absolute advantage (lower input requirement for the same output) vs comparative advantage (lower opportunity cost) and argue why CA — not AA — drives trade (concept-level, mastery_target understand; A18 covers the calculation but not the conceptual distinction cleanly)",
+        "Refute the 'better at everything so no trade' misconception using an opportunity-cost comparison (concept-level + verbal; the 'aha moment' exam skill)"
       ],
-      "structural_retrieval_plan": "Retrieve demand shifts, average-cost reasoning, ratios and percentages. Re-label price as wage and show that employers are the buyers of labour.",
-      "structural_scope_boundary": "Keep hours, persons and full-time equivalents distinct. Do not imply productivity growth always reduces total employment; state output and other conditions. No formal marginal-revenue-product optimisation unless separately justified and taught. This is the first formal home of the productivity and unit-labour-cost calculations; revisit a qualitative competitiveness claim from §3.3.1 only after teaching the needed calculation here.",
-      "historical_source_refs": [
-        {
-          "id": "4.2.1",
-          "disposition": "labour_move_or_expansion_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/45",
-          "record_sha256": "ac1b183551878ac45b0ab7d5fab8430de176cbc4fc96404910001e08c5023039",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
+      "exam_codes": [
+        "A2.6",
+        "A4.3"
       ],
+      "difficulty_notes": "The opportunity cost calculation is the tricky part — students must think in terms of 'what you give up.' The counterintuitive result (B can have a comparative advantage despite being worse at everything) is why the concept is hard. One lesson is tight — allocate time for the 'aha moment.'",
+      "source_ref": "references/owned/course-blueprint-v5.md §4.3.1",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "4.3.1",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     },
     {
@@ -4196,320 +4871,67 @@
       "module": 4,
       "chapter": 3,
       "paragraph": 2,
-      "paragraph_title": "Arbeidsaanbod, participatie en evenwicht",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
+      "paragraph_title": "Ruilwinst en ruilvoet",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Countries A and B from §4.3.1 each have 3000 labor hours, split evenly before trade. Terms of trade proposed: 1 car = 8 tons of grain.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate production of each good in each country before trade."
+          },
+          {
+            "label": "b",
+            "prompt": "Now each country fully specialises. Calculate total world production of each good."
+          },
+          {
+            "label": "c",
+            "prompt": "Show that world production has increased for at least one good (without decreasing the other)."
+          },
+          {
+            "label": "d",
+            "prompt": "Country A exports grain to B and imports cars. The terms of trade are: 1 car = 8 tons of grain. With trade, A consumes 15 cars and 185 tons of grain. Is A better off than before trade? Show with numbers."
+          },
+          {
+            "label": "e",
+            "prompt": "At which terms of trade would A refuse to trade? At which would B refuse? (Hint: use opportunity costs from §4.3.1.)"
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Calculate production before and after specialisation",
+        "Show that specialisation increases total world output",
+        "Define terms of trade: the exchange ratio between goods",
+        "Determine the range of mutually beneficial terms of trade (between the two opportunity costs)",
+        "Understand that both countries can gain from trade"
+      ],
+      "required_skills": [
+        "A18"
+      ],
+      "prior_knowledge_assumed": [
+        "A18"
+      ],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Compute pre-trade and post-specialisation production for each country and quantify the world-output gain (A-domain candidate)",
+        "Define terms-of-trade as the exchange ratio between two goods and compare consumption bundles before vs after trade (concept-level + reken)",
+        "Determine the mutually-beneficial range of terms-of-trade from the two countries' opportunity costs (concept-level; the bounded-interval reasoning)"
+      ],
+      "exam_codes": [
+        "A2.6",
+        "A4.3"
+      ],
+      "difficulty_notes": "Lots of arithmetic but conceptually straightforward once comparative advantage is understood. Exercise (e) requires connecting back to opportunity costs — elegant but potentially confusing. One lesson works if §4.3.1 was solid. If not, this spills.",
       "source_ref": "references/owned/course-blueprint-v5.md §4.3.2",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.3.2",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.3.2; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
-      },
-      "lesson_goals": [
-        "Identify households as labour suppliers, calculate participation with the stated denominator, and find and interpret the competitive baseline equilibrium wage and employment."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
-      ],
-      "structural_retrieval_plan": "Reuse Book 1 equilibrium equations and graph reading. A short explicit translation bridge precedes one compact equilibrium calculation; the algebra is not retaught as new.",
-      "structural_scope_boundary": "This paragraph absorbs the baseline part of the registry-baseline §4.2.3, not an entire extra lesson hidden inside it. Keep participation data simple, units fixed and the equilibrium model familiar. Distinguish a supply curve at different wages from measured labour-force totals. Review timing before finalising the target.",
-      "historical_source_refs": [
-        {
-          "id": "4.2.2",
-          "disposition": "labour_move_or_expansion_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/46",
-          "record_sha256": "87f21423c5857421e974d028f263f6725cb0d2f3e64e5c14cd126536729b93bb",
-          "target_equivalence": false,
-          "inherits_approval": false
-        },
-        {
-          "id": "4.2.3",
-          "disposition": "absorbed_equilibrium_operation",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/47",
-          "record_sha256": "1f49c746f4e63ed523e5bb37f349cbdf4fc5209311165516c2d06547af06e46e",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
-      }
-    },
-    {
-      "id": "4.3.3",
-      "module": 4,
-      "chapter": 3,
-      "paragraph": 3,
-      "paragraph_title": "Werkloosheid en veranderingen op de arbeidsmarkt",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.3.3",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.3.3",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.3.3; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
-      },
-      "lesson_goals": [
-        "Calculate unemployment using the labour force as denominator, distinguish the relevant causes and interpret labour-market changes."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
-      ],
-      "structural_retrieval_plan": "Reuse §4.3.2’s equilibrium and Book 1 shift/new-equilibrium method. This is the second home of the absorbed equilibrium work.",
-      "structural_scope_boundary": "Distinguish the simplified clearing model from observed vacancies and mismatch. With data defined as labour demand = employment + vacancies, supply minus demand is not measured unemployment. Explain structural/frictional and demand-related unemployment at an introductory level; no output-gap or Phillips-curve model.",
-      "historical_source_refs": [
-        {
-          "id": "4.2.4",
-          "disposition": "labour_move_or_expansion_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/48",
-          "record_sha256": "18a4e6db235b809ffad358138baf65f2e7ba9ffffe9d5ed3450b0ffffae4bb60",
-          "target_equivalence": false,
-          "inherits_approval": false
-        },
-        {
-          "id": "4.2.3",
-          "disposition": "absorbed_equilibrium_operation",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/47",
-          "record_sha256": "1f49c746f4e63ed523e5bb37f349cbdf4fc5209311165516c2d06547af06e46e",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
+      "record_status": "migrated_from_v4_needs_v5_review",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
-      }
-    },
-    {
-      "id": "4.3.4",
-      "module": 4,
-      "chapter": 3,
-      "paragraph": 4,
-      "paragraph_title": "Minimumloon",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.3.4",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.3.4",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.3.4; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
-      },
-      "lesson_goals": [
-        "Apply a minimum-price model to wages and distinguish effects on wage rates, employment, people seeking work and the wage bill."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
-      ],
-      "structural_retrieval_plan": "Repeat §3.1.5’s price-floor technique and §4.3.2’s labour-market translation; reuse price-times-quantity and percentage calculations.",
-      "structural_scope_boundary": "State a competitive model, the wage unit and adjustment assumptions. Model outcomes are not universal empirical claims about every minimum-wage change. Use illustrative rates, not unverified current statutory figures.",
-      "historical_source_refs": [
-        {
-          "id": "4.2.5",
-          "disposition": "labour_move_or_expansion_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/49",
-          "record_sha256": "e02be355b471c48334d0aee7a8c105122ae80dca42aa7d40b6f87903a969d507",
-          "target_equivalence": false,
-          "inherits_approval": false
-        },
-        {
-          "id": "4.2.3",
-          "disposition": "absorbed_equilibrium_operation",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/47",
-          "record_sha256": "1f49c746f4e63ed523e5bb37f349cbdf4fc5209311165516c2d06547af06e46e",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
-      }
-    },
-    {
-      "id": "4.3.5",
-      "module": 4,
-      "chapter": 3,
-      "paragraph": 5,
-      "paragraph_title": "Vakbonden, cao en arbeidsmarktbeleid",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.3.5",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.3.5",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.3.5; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
-      },
-      "lesson_goals": [
-        "Explain collective bargaining and assess a bounded policy or agreement using wages, productivity, labour supply/demand and employment."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
-      ],
-      "structural_retrieval_plan": "Repeat percentage/index comparisons, labour cost per unit, shifts and the difference between a binding wage floor and a change in the underlying market.",
-      "structural_scope_boundary": "Do not turn this into formal bargaining-game theory. Introduce flexwork/zzp terminology as needed for the source without assuming that labels determine effects. Use institutional descriptions rather than unsupported current legal details. A competitiveness application may now combine already-taught trade reasoning with wage/productivity comparisons; it does not retrospectively make those calculations a Book 3 prerequisite.",
-      "historical_source_refs": [
-        {
-          "id": "4.2.6",
-          "disposition": "labour_move_or_expansion_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/50",
-          "record_sha256": "a1bc743f4df9a78e0514418bee68868bf9d0b8acd4edbf914f85b2d01fe5bcc9",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
-      }
-    },
-    {
-      "id": "4.3.6",
-      "module": 4,
-      "chapter": 3,
-      "paragraph": 6,
-      "paragraph_title": "Gemengde opgaven: arbeidsmarkt",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.3.6",
-      "structure_revision": "book34-chat-v2-20260914",
-      "source_identity": {
-        "revision": "book34-chat-v2-20260914",
-        "paragraph_id": "4.3.6",
-        "outline": "references/authored/book-outlines/book-4-outline.md"
-      },
-      "difficulty": "PLACEHOLDER",
-      "placeholder_reason": "Owner-selected structural record; target exercise is not approved by structural adoption.",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Structural placeholder for 4.3.6; the selected outline supplies a proposed brief, not a reviewed target.",
-        "subquestions": []
-      },
-      "lesson_goals": [
-        "Integrate labour-market vocabulary, equilibrium and shifts, participation/unemployment, productivity and policy without new theory."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "exam_codes": [],
-      "missing_units_flagged": [
-        "book34_selected_structure_target_review_pending"
-      ],
-      "structural_retrieval_plan": "Retrieve all chapter operations plus the earlier minimum-price method. Include independent equilibrium evidence explicitly so it has not disappeared with the removed paragraph.",
-      "structural_scope_boundary": "No seventh compulsory catch-up lesson. If the absorbed equilibrium targets cannot fit the existing lessons and supports, revise the exercise design and timing before production rather than claiming the capacity saving without evidence.",
-      "historical_source_refs": [
-        {
-          "id": "4.2.7",
-          "disposition": "labour_move_or_expansion_no_target_equivalence_claim",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/51",
-          "record_sha256": "5f74b1237247cf193a7e376e453f353b7dc3f4c47c51c716cd727bf0095f2459",
-          "target_equivalence": false,
-          "inherits_approval": false
-        },
-        {
-          "id": "4.2.3",
-          "disposition": "absorbed_equilibrium_operation",
-          "source_revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1",
-          "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-          "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-          "json_pointer": "/exercises/47",
-          "record_sha256": "1f49c746f4e63ed523e5bb37f349cbdf4fc5209311165516c2d06547af06e46e",
-          "target_equivalence": false,
-          "inherits_approval": false
-        }
-      ],
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "review_required_before_final": true,
-        "structural_revision": "book34-chat-v2-20260914"
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "4.3.2",
+        "related_v4_ids": [],
+        "review_required_before_final": true
       }
     }
-  ],
-  "structure_revision": "book34-chat-v2-20260914",
-  "previous_structural_registry": {
-    "path": "archive/blueprints/book34-pre-chat-2026/course-target-exercises.json",
-    "source_commit": "7f1393d1f9db365ca5e129c0f2728844be47e08a",
-    "revision": "live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1"
-  }
+  ]
 }

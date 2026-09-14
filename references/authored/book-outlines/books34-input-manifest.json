@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "task": "BOOK34-CHAT-IMPORT-OUTLINES-1",
+  "files": [
+    {
+      "path": "inputs/Boek_3_Compleet_Herzien_Bronpakket.zip",
+      "bytes": 26753590,
+      "sha256": "aa012c9f9012a5211815bdcaeaec0cf4201642ebd8a054372909f2bbad275a36"
+    },
+    {
+      "path": "outlines/book-3-outline-v2.md",
+      "bytes": 26806,
+      "sha256": "4e558b63d8eb954de935ad366170f6373f533eae14f90633a89be0036c973217"
+    },
+    {
+      "path": "inputs/Boek_4_Compleet_Bronpakket.zip",
+      "bytes": 26685870,
+      "sha256": "91b8875bf847a582521caaeae4bfdcc82964a8606bfefc4cd54c0df3ec884713"
+    },
+    {
+      "path": "outlines/book-4-outline-v2.md",
+      "bytes": 28629,
+      "sha256": "3bfb4350bb1f990a8ea559272263e8ef35e1b72bd0cbc86b59c9aa6ad4fc0899"
+    }
+  ]
+}
