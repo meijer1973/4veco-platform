@@ -62,7 +62,6 @@ For a complete set, use the blueprint paragraph spec, containing:
 
 Additionally, the builder needs:
 - The list of all preceding paragraphs and their core skills (for interleaving selection)
-- The chapter context (which other paragraphs are in this chapter, to avoid context reuse)
 
 For a complete set, record this alignment in the Part A plan before drafting.
 For a revision, inspect and update affected rows; reuse valid entries instead
@@ -225,12 +224,10 @@ answer format without supplying the answers.
 
 ### 3.4 Context selection rules
 
-- Each exercise uses a different context from the others in the same paragraph
-- Do not reuse a context that appears in another paragraph of the same chapter
-- Use recognisable, age-appropriate settings (bakeries, cinemas, streaming services, public transport, sports events, food markets)
-- Preserve the blueprint target context unless its responsible owner or blueprint
-  explicitly authorizes adaptation under §3.1
-- Interleaving exercises may reuse contexts from earlier chapters (this reinforces transfer)
+Choose recognisable, age-appropriate contexts that serve the learning goal.
+Reuse contexts for continuity or comparison; vary them where useful. Preserve
+the blueprint target context unless its responsible owner or blueprint explicitly
+authorizes adaptation under §3.1.
 
 ---
 
@@ -279,7 +276,6 @@ skills at risk of decay. Inspect their actual prior teaching before selecting.
 - Use only **1–2 accessible tasks** in the final `Herhaling / Herhaling en
   interleaving` section
 - Keep interleaving exercises **short** (2–4 minutes each)
-- Use a **different context** from the original paragraph where the skill was taught
 - Do **not** add scaffolding — these are revision, not new learning
 - Do **not** add theory, definitions, or untaught operations
 - If a student cannot do an interleaving exercise, this signals a gap — note in the answer model: "Kun je deze opgave niet maken? Herhaal dan §X.Y.Z."

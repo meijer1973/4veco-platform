@@ -118,8 +118,11 @@ function or add graph production absent from the target.
 
 Apply the [rendered-page acceptance standard](../references/authored/textbook-rendered-page-acceptance-standard.md)
 and, for figures, the [figure standard](../references/authored/textbook-figure-standard.md).
-Inspect final PDFs and in-scope HTML at normal reading scale, including exercises
-and answers. Record full-page PNGs of every changed page, or a contact sheet plus
+Inspect final PDFs at normal reading scale, including exercises and answers.
+When browser-delivered HTML is in scope, inspect the affected pages in the
+intended browser; static renders and source checks do not establish browser
+compatibility. PDF-only delivery requires final PDF inspection, without an
+automatic browser matrix. Record full-page PNGs of every changed page, or a contact sheet plus
 named pages inspected and output paths. New paragraphs require all pages;
 chapter work adds continuity, front matter, final assembly and answer booklet.
 

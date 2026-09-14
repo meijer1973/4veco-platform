@@ -132,7 +132,7 @@ under [Part A review and closure](docs/workflows/part-a-review.md).
 | 4.3 Figure numbering | Each paragraph restarts figure numbering at 1. Verify no paragraph skips a number (e.g., Fig 1, 2, 4 — missing 3). FAIL if gaps. |
 | 4.4 Forward/backward references | Each paragraph's forward pointer (in summary box) matches the next paragraph's topic. Each herhaling box accurately references the prior paragraph. FLAG mismatches. |
 | 4.5 Consolidation coverage | The consolidation paragraph (§X.Y.4) references skills from ALL theory paragraphs, not just one. FLAG if any theory paragraph is under-represented. |
-| 4.6 Context reuse | No exercise context (company name, product) is reused across paragraphs (except deliberate continuation like the bakery in §1.3.2/§1.3.3). FLAG unintentional reuse. |
+| 4.6 Context choice | Check that contexts serve the learning goals, using continuity, comparison or variation where useful under the [exercise context rule](skills/econ-exercise-builder.md#34-context-selection-rules). |
 | 4.7 Colour consistency in graphs | SVG files use the same colours for the same concepts across paragraphs (e.g., supply always green, TK always orange). FLAG inconsistencies. |
 
 ---
