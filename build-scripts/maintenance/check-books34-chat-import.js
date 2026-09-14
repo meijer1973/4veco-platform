@@ -72,6 +72,8 @@ function verify({root=ROOT,lessons=LESSONS,requirePaired=false,requireTracked=fa
  if(present)check(present===2 && canonical(fs.readFileSync(path.join(lessons,'course_blueprint_v5.md')))===canonical(read('references/owned/course-blueprint-v5.md')),'Paired current blueprint projection differs');
  const protectedRoots=git(lessons,['ls-tree','-z',migration.LESSON_BASE]).toString().split('\0').filter(Boolean).map(line=>line.split('\t')[1]).filter(p=>/^Boek [12] -/.test(p));
  for(const folder of [...protectedRoots,'archive/book-2-pre-chat-2026']) check(git(lessons,['diff',migration.LESSON_BASE,'--',folder]).length===0,`Protected lesson tree changed: ${folder}`);
+ const lessonOperational=new Set(['.gitattributes','AGENT_GITHUB_ENTRY.md','RESEARCH_AGENT_MAP.md','lessen-team-roadmap.md','course_blueprint_v5.md','archive/relocations.json','archive/index.json','archive/index.md',migration.SNAPSHOT+'/course_blueprint_v5.md']);
+ for(const file of git(lessons,['diff','--name-only','-z',migration.LESSON_BASE]).toString().split('\0').filter(Boolean)) check(lessonOperational.has(file) || Object.values(BOOKS).some(folder=>file.startsWith(folder+'/')),`Lesson change outside finite import scope: ${file}`);
  return {task:migration.TASK,passed:failures.length===0,paired_books:present,tracked_verified:requireTracked,failures};
 }
 if(require.main===module){try {const r=verify({requirePaired:process.argv.includes('--require-paired'),requireTracked:process.argv.includes('--require-tracked')});console.log(JSON.stringify(r,null,2));if(!r.passed)process.exitCode=1;}catch(e){console.error(e);process.exitCode=1;}}
