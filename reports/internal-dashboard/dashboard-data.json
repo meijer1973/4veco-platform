@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T12:16:45.560Z",
+  "generatedAt": "2026-09-14T07:34:35.581Z",
   "internalOnly": true,
   "teams": [
     {
@@ -2979,6 +2979,13 @@
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
             {
+              "sprint": "BOOK2-CHAT-IMPORT-1",
+              "name": "Import completed Book 2 chat edition",
+              "completed": "no",
+              "currentState": "**Writing/assembly complete; import and archive cleanup in PR.** Supplied PDFs and editable sources preserved; superseded chapters 2.1/2.2 moved byte-for-byte to [archive](archive/book-2-pre-chat-2026/README.md). Technical integrity and discoverability only. [Edition](Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md).",
+              "exitGate": ""
+            },
+            {
               "sprint": "VISION-1",
               "name": "Strategic Product Vision Canonicalization",
               "completed": "yes",
@@ -3578,6 +3585,14 @@
       ],
       "historicalSprints": [],
       "sprints": [
+        {
+          "sprint": "BOOK2-CHAT-IMPORT-1",
+          "name": "Import completed Book 2 chat edition",
+          "completed": "no",
+          "currentState": "**Writing/assembly complete; import and archive cleanup in PR.** Supplied PDFs and editable sources preserved; superseded chapters 2.1/2.2 moved byte-for-byte to [archive](archive/book-2-pre-chat-2026/README.md). Technical integrity and discoverability only. [Edition](Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md).",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
         {
           "sprint": "GAME-ROUTE-AFFORDANCE-1",
           "name": "Clickable Route Items For Non-Exit Practice Games",
@@ -4260,7 +4275,7 @@
         }
       ],
       "completedCount": 49,
-      "openCount": 36
+      "openCount": 37
     },
     {
       "id": "innovation",

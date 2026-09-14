@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-10T14:32:44.8872138Z
+Generated: 2026-09-14T07:40:55.800Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/graph-skill-cleanup-20260910`
-Source commit: `30f594b42bc6d44e34cad75e2b6fa2d750011ed1`
-Files indexed: 6730
+Source branch: `codex/import-book2-chat-20260913`
+Source commit: `ee0f0e7a78db44f1c2d4c68c8ac4e5325c938f1a`
+Files indexed: 6732
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -144,7 +144,7 @@ Count: 89
 
 ## build scripts
 
-Count: 751
+Count: 753
 
 - build-scripts/archive/README.md
 - build-scripts/archive/roundtrip-pptx.py
@@ -314,6 +314,8 @@ Count: 751
 - build-scripts/lib/render-presentation-v2-pptx.js
 - build-scripts/lib/verify_svg_geometry.py
 - build-scripts/maintenance/check-archive-cleanup.js
+- build-scripts/maintenance/check-book2-chat-import.js
+- build-scripts/maintenance/check-book2-chat-import.test.js
 - build-scripts/platform/build-exit-ticket-shells.js
 - build-scripts/platform/build-exit-ticket-shells.test.js
 - build-scripts/platform/build-graphical-shells.js
@@ -931,7 +933,7 @@ Count: 26
 
 ## validators
 
-Count: 642
+Count: 644
 
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
@@ -979,6 +981,8 @@ Count: 642
 - build-scripts/inspection/check-source-refresh-execution-pilot.test.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/maintenance/check-archive-cleanup.js
+- build-scripts/maintenance/check-book2-chat-import.js
+- build-scripts/maintenance/check-book2-chat-import.test.js
 - build-scripts/platform/check-book-landing-v2.js
 - build-scripts/platform/check-chapter-landing-v2.js
 - build-scripts/platform/check-news-detective-v2.js
