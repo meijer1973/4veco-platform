@@ -63,9 +63,16 @@ function historicalLessonRows(rows) {
   expect(additions.length).toBeLessThanOrEqual(1);
   if (additions.length) {
     expect(additions[0]).toMatchObject({
-      name: 'Import completed Book 2 chat edition', completed: 'no', exitGate: '',
-      currentState: expect.stringContaining('Writing/assembly complete; import and archive cleanup in PR.'),
+      name: 'Import completed Book 2 chat edition', exitGate: '',
     });
+    if (additions[0].completed === 'yes') {
+      expect(additions[0].currentState).toContain('Writing/assembly complete; import and archive cleanup integrated on main.');
+      expect(additions[0].currentState).toContain('9da770b410a76b9257cf946861676da4d104a09c');
+      expect(additions[0].currentState).toContain('a8b25eb8f475b7aabe053f58b494997ac8bf8f97');
+    } else {
+      expect(additions[0].completed).toBe('no');
+      expect(additions[0].currentState).toContain('Writing/assembly complete; import and archive cleanup in PR.');
+    }
     expect(additions[0].currentState).toContain('archive/book-2-pre-chat-2026/README.md');
   }
   return rows.filter(row => row.sprint !== 'BOOK2-CHAT-IMPORT-1');
@@ -135,6 +142,23 @@ test('lesson main without an import row is supported, but duplicate import rows 
 test('later import-row allowance rejects invented completion and unknown added rows', () => {
   expect(() => historicalLessonRows([{ sprint: 'BOOK2-CHAT-IMPORT-1', name: 'Import completed Book 2 chat edition', completed: 'yes' }])).toThrow();
   expect(historicalLessonRows([{ sprint: 'UNREVIEWED-IMPORT' }])).not.toEqual([]);
+});
+
+test('the integrated import row requires both actual merge commits and retains the archive pointer', () => {
+  const row = {
+    sprint: 'BOOK2-CHAT-IMPORT-1', name: 'Import completed Book 2 chat edition',
+    completed: 'yes', exitGate: '',
+    currentState: 'Writing/assembly complete; import and archive cleanup integrated on main. '
+      + 'archive/book-2-pre-chat-2026/README.md '
+      + '9da770b410a76b9257cf946861676da4d104a09c a8b25eb8f475b7aabe053f58b494997ac8bf8f97',
+  };
+  expect(historicalLessonRows([row])).toEqual([]);
+  for (const required of [
+    '9da770b410a76b9257cf946861676da4d104a09c', 'a8b25eb8f475b7aabe053f58b494997ac8bf8f97',
+    'archive/book-2-pre-chat-2026/README.md', 'integrated on main',
+  ]) {
+    expect(() => historicalLessonRows([{ ...row, currentState: row.currentState.replace(required, 'unverified') }])).toThrow();
+  }
 });
 test('protected legacy and unresolved compatibility plans remain explicit', () => {
   const current = fs.readFileSync(path.join(root,'references/reference-team-roadmap.md'),'utf8');

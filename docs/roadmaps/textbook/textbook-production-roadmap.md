@@ -2,7 +2,7 @@
 
 Generated: 2026-09-14
 Roadmap ID: `textbook-production-roadmap`
-Roadmap version: `v1.22-book2-import-archive`
+Roadmap version: `v1.23-book2-integrated`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Folder: `docs/roadmaps/textbook/`
@@ -12,15 +12,15 @@ Scope: import the owner-selected completed Book 2 edition, preserve its editable
 
 ## Operating Goal
 
-Current 2026-09-14 decision: **Book 2 writing and assembly are complete.** The owner selected the externally authored chat edition covering Chapters 2.1–2.3 and all twelve paragraphs. The supplied student book, separate answers, teacher guides and editable chapter sources are the import baseline. The current task is to place that edition in the repository unchanged except for substantial defects actually found, make it discoverable, and check technical integrity. Do not commission fresh Book 2 chapter writing or a new full content-review cycle for this import. Repository integration status is recorded separately from content completion. Existing target-approval and companion/product obligations are not automatically closed by the import.
+Current 2026-09-14 decision: **Book 2 writing and assembly are complete.** The owner selected the externally authored chat edition covering Chapters 2.1–2.3 and all twelve paragraphs. The supplied student book, separate answers, teacher guides and editable chapter sources are the import baseline. The unchanged edition and superseded-chapter archive are integrated on main with technical preservation and navigation checks complete. Do not commission fresh Book 2 chapter writing or a new full content-review cycle for this import. Repository integration status is recorded separately from content completion. Existing target-approval and companion/product obligations are not automatically closed by the import.
 
-`BOOK2-CHAT-IMPORT-1`: **writing/assembly complete; import and archive cleanup in PR**. [Delivered edition and editable sources](https://github.com/meijer1973/4veco-lessen/blob/main/Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md). The edition link targets main for navigation after merge; the paired import PR records its current branch availability. Issues #223/#229 are not automatically closed.
+`BOOK2-CHAT-IMPORT-1`: **writing/assembly complete; import and archive cleanup integrated on main**. [Delivered edition and editable sources](https://github.com/meijer1973/4veco-lessen/blob/main/Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md). Owner-authorized integration on 2026-09-14: [platform PR #246](https://github.com/meijer1973/4veco-platform/pull/246), merge `9da770b410a76b9257cf946861676da4d104a09c`; [lessons PR #50](https://github.com/meijer1973/4veco-lessen/pull/50), merge `a8b25eb8f475b7aabe053f58b494997ac8bf8f97`. Issues #223/#229 are not automatically closed.
 
 [PR #231](https://github.com/meijer1973/4veco-platform/pull/231) merged on 2026-09-05 at `96416b6b5bd57094576e9aba0a42d682584ec479`. Do not replay that activation; the import does not release any remaining hold or change the target registry.
 
 ## Book 2 Print Series
 
-The selected complete edition is the default delivered print baseline. Superseded repository chapters 2.1/2.2 move byte-for-byte to `archive/book-2-pre-chat-2026/`, with per-file relocation metadata; their historical reviews retain their original scope. Import the supplied student book, answers, teacher guides, chapter PDFs and editable sources; preserve layout, numbering, assets and source relationships. Rebuild or repair only for a concrete substantial defect. Technical checks and required repository CI do not constitute a new target-content review.
+The selected complete edition is the default delivered print baseline. Superseded repository chapters 2.1/2.2 are archived byte-for-byte to `archive/book-2-pre-chat-2026/`, with per-file relocation metadata; their historical reviews retain their original scope. The supplied student book, answers, teacher guides, chapter PDFs and editable sources are available on main; preserve layout, numbering, assets and source relationships. Rebuild or repair only for a concrete substantial defect. Technical checks and required repository CI do not constitute a new target-content review.
 
 ### Historical production sequence
 
@@ -52,7 +52,7 @@ The sequence and dated decisions below describe the older repository production.
 
 | Lane | Priority | Scope | Blocking rule |
 |---|---|---|---|
-| Book 2 import | High | BOOK2-CHAT-IMPORT-1: preserve and link the completed edition and sources; check technical integrity. | Substantial import defects or required repository CI block import readiness. Formal target alignment is separate. |
+| Book 2 import | High | BOOK2-CHAT-IMPORT-1 is integrated: preserve the completed edition, sources and archive. | Any later substantial defect needs a separately scoped repair. Formal target alignment is separate. |
 | Blueprint hardening | Medium | Fix only blockers discovered during readiness or Chapter 2.1 production, such as non-final target records, notation contradictions, or graph-contract ambiguity. | Blocks production only when the issue directly affects Book 2 printed output or target-exercise faithfulness. |
 | Product proof and companion layer | Medium | Continue separately as controlled-scope evidence. It may inform style or route planning, but it is not the driver for Book 2 Part A. | Does not block `B2-2.1-A` unless a later explicit gate says the printed textbook depends on it. |
 
@@ -60,11 +60,11 @@ The sequence and dated decisions below describe the older repository production.
 
 Canonical ledger: `docs/roadmaps/textbook/sprint-ledger.md`
 
-BOOK2-CHAT-IMPORT-1 is the current import action. Older rows retain their historical facts and decisions; their production instructions are superseded for this edition. They do not certify a new formal review of the import.
+BOOK2-CHAT-IMPORT-1 is integrated on main. Older rows retain their historical facts and decisions; their production instructions are superseded for this edition. They do not certify a new formal review of the import.
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
-| BOOK2-CHAT-IMPORT-1 | Import completed Book 2 chat edition | no — import in PR | **Writing/assembly complete; import and archive cleanup in PR.** Unchanged edition and editable sources; old chapters 2.1/2.2 archived byte-for-byte with relocation metadata. Technical import/archive checks only; target/companion/product obligations remain separate. |
+| BOOK2-CHAT-IMPORT-1 | Import completed Book 2 chat edition | yes | **Writing/assembly complete; import and archive cleanup integrated on main.** Unchanged edition and editable sources; old chapters 2.1/2.2 archived byte-for-byte with relocation metadata. Technical import/archive checks only; target/companion/product obligations remain separate. Owner-authorized integration on 2026-09-14: [platform PR #246](https://github.com/meijer1973/4veco-platform/pull/246), merge `9da770b410a76b9257cf946861676da4d104a09c`; [lessons PR #50](https://github.com/meijer1973/4veco-lessen/pull/50), merge `a8b25eb8f475b7aabe053f58b494997ac8bf8f97`. |
 | BOOK2-TARGET-INTEGRATION-1 | Governed Book 2 Target Activation | yes | [PR #231](https://github.com/meijer1973/4veco-platform/pull/231) merged on 2026-09-05 at `96416b6b5bd57094576e9aba0a42d682584ec479`. Activation is already integrated; historical review evidence remains scoped to that activation. Remaining holds and target/product obligations are unchanged by this import. |
 | BOOK2-TARGET-AUTHORITY-REMEDIATION-1 | Book 2 Target Authority Remediation | yes | Issue #229 Phase A complete with structural lead `PASS WITH FLAGS` on exact package `914d1a39…71310`; only empirical classroom timing is carried to Phase B. The owner approved frozen target content and Ei semantics; lifecycle/evidence corrections and fresh CI/readiness are in progress. Target integration, lesson work, Phase B, and merge remain unauthorized. |
 | B2-2.1.1-GOAL-TARGET-DESIGN-1 | Book 2 Paragraph 2.1.1 Goal And Target Design | yes | Both exact package hashes are owner-approved in PR #227 comment `5524345692`. `H-211-GATE0B1` is released; `H-211-TARGET-INTEGRATION` remains open with the approved replacement binding. The target registry and lesson are unchanged. Exact-head transition CI and separate payload authorization remain before governed PR #227 integration. |
@@ -109,4 +109,4 @@ Do not mutate `references/machine/`, `references/external/`, protected reference
 
 ## Next Action
 
-Finish technical verification and the linked lesson/platform import PRs for `BOOK2-CHAT-IMPORT-1`. Keep **writing/assembly complete; import and archive cleanup in PR** until an actual authorized merge; only then record **integrated on main** with the commit/link. Do not begin fresh Book 2 chapter writing, repeat PR #231 activation, or claim an unperformed formal content review.
+The technical import/archive work in `BOOK2-CHAT-IMPORT-1` is complete and integrated on main. Owner-authorized integration on 2026-09-14: [platform PR #246](https://github.com/meijer1973/4veco-platform/pull/246), merge `9da770b410a76b9257cf946861676da4d104a09c`; [lessons PR #50](https://github.com/meijer1973/4veco-lessen/pull/50), merge `a8b25eb8f475b7aabe053f58b494997ac8bf8f97`. Do not begin fresh Book 2 chapter writing, repeat PR #231 activation, or claim an unperformed formal content review.

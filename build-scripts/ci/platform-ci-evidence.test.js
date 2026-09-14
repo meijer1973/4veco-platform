@@ -1,6 +1,7 @@
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
+const yaml = require('js-yaml');
 
 const {
   isPathInside,
@@ -88,5 +89,19 @@ describe('platform-ci-evidence', () => {
     expect(workflow).not.toContain('github.head_ref');
     expect(workflow).not.toContain('ls-remote --exit-code --heads origin');
     expect(workflow).not.toContain('checkout --detach FETCH_HEAD');
+  });
+
+  test('Windows long-path support is enabled before lesson checkout', () => {
+    const workflow = yaml.safeLoad(fs.readFileSync(
+      path.join(__dirname, '..', '..', '.github', 'workflows', 'platform-ci.yml'), 'utf8'
+    ));
+    const steps = workflow.jobs['validate-platform'].steps;
+    const checkout = steps.findIndex(step => step.with?.repository === 'meijer1973/4veco-lessen');
+    const setup = steps.findIndex(step => /git config --global core\.longpaths true/.test(step.run || ''));
+    expect(checkout).toBeGreaterThan(0);
+    expect(setup).toBeGreaterThanOrEqual(0);
+    expect(setup).toBeLessThan(checkout);
+    expect(steps[setup].if).toBeUndefined();
+    expect(steps[setup]['continue-on-error']).toBeUndefined();
   });
 });

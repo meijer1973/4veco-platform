@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T07:34:35.581Z",
+  "generatedAt": "2026-09-14T10:12:08.212Z",
   "internalOnly": true,
   "teams": [
     {
@@ -2981,8 +2981,8 @@
             {
               "sprint": "BOOK2-CHAT-IMPORT-1",
               "name": "Import completed Book 2 chat edition",
-              "completed": "no",
-              "currentState": "**Writing/assembly complete; import and archive cleanup in PR.** Supplied PDFs and editable sources preserved; superseded chapters 2.1/2.2 moved byte-for-byte to [archive](archive/book-2-pre-chat-2026/README.md). Technical integrity and discoverability only. [Edition](Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md).",
+              "completed": "yes",
+              "currentState": "**Writing/assembly complete; import and archive cleanup integrated on main.** Supplied PDFs and editable sources preserved; superseded chapters 2.1/2.2 moved byte-for-byte to [archive](archive/book-2-pre-chat-2026/README.md). Technical integrity and discoverability only. [Edition](Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md). Owner-authorized integration on 2026-09-14: [platform PR #246](https://github.com/meijer1973/4veco-platform/pull/246), merge `9da770b410a76b9257cf946861676da4d104a09c`; [lessons PR #50](https://github.com/meijer1973/4veco-lessen/pull/50), merge `a8b25eb8f475b7aabe053f58b494997ac8bf8f97`.",
               "exitGate": ""
             },
             {
@@ -3586,14 +3586,6 @@
       "historicalSprints": [],
       "sprints": [
         {
-          "sprint": "BOOK2-CHAT-IMPORT-1",
-          "name": "Import completed Book 2 chat edition",
-          "completed": "no",
-          "currentState": "**Writing/assembly complete; import and archive cleanup in PR.** Supplied PDFs and editable sources preserved; superseded chapters 2.1/2.2 moved byte-for-byte to [archive](archive/book-2-pre-chat-2026/README.md). Technical integrity and discoverability only. [Edition](Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md).",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
           "sprint": "GAME-ROUTE-AFFORDANCE-1",
           "name": "Clickable Route Items For Non-Exit Practice Games",
           "completed": "no",
@@ -3878,6 +3870,14 @@
           "name": "Green Gate Handoff",
           "completed": "no",
           "currentState": "",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "BOOK2-CHAT-IMPORT-1",
+          "name": "Import completed Book 2 chat edition",
+          "completed": "yes",
+          "currentState": "**Writing/assembly complete; import and archive cleanup integrated on main.** Supplied PDFs and editable sources preserved; superseded chapters 2.1/2.2 moved byte-for-byte to [archive](archive/book-2-pre-chat-2026/README.md). Technical integrity and discoverability only. [Edition](Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md). Owner-authorized integration on 2026-09-14: [platform PR #246](https://github.com/meijer1973/4veco-platform/pull/246), merge `9da770b410a76b9257cf946861676da4d104a09c`; [lessons PR #50](https://github.com/meijer1973/4veco-lessen/pull/50), merge `a8b25eb8f475b7aabe053f58b494997ac8bf8f97`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -4274,8 +4274,8 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 49,
-      "openCount": 37
+      "completedCount": 50,
+      "openCount": 36
     },
     {
       "id": "innovation",
