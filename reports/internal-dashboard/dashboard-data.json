@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T10:12:08.212Z",
+  "generatedAt": "2026-09-14T11:09:31.025Z",
   "internalOnly": true,
   "teams": [
     {
@@ -2979,6 +2979,13 @@
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
             {
+              "sprint": "BOOK34-CHAT-IMPORT-OUTLINES-1",
+              "name": "Import completed Books 3/4 and adopt selected outlines",
+              "completed": "no",
+              "currentState": "Writing/assembly complete; import and structural migration prepared/in PR. Book 3: 6+4+4=14; Book 4: 4+7+6=17; Year 1: 55. Selected v2 outlines are current structural baselines. Target approval, companion acceptance and merge remain separate.",
+              "exitGate": ""
+            },
+            {
               "sprint": "BOOK2-CHAT-IMPORT-1",
               "name": "Import completed Book 2 chat edition",
               "completed": "yes",
@@ -3585,6 +3592,14 @@
       ],
       "historicalSprints": [],
       "sprints": [
+        {
+          "sprint": "BOOK34-CHAT-IMPORT-OUTLINES-1",
+          "name": "Import completed Books 3/4 and adopt selected outlines",
+          "completed": "no",
+          "currentState": "Writing/assembly complete; import and structural migration prepared/in PR. Book 3: 6+4+4=14; Book 4: 4+7+6=17; Year 1: 55. Selected v2 outlines are current structural baselines. Target approval, companion acceptance and merge remain separate.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
         {
           "sprint": "GAME-ROUTE-AFFORDANCE-1",
           "name": "Clickable Route Items For Non-Exit Practice Games",
@@ -4275,7 +4290,7 @@
         }
       ],
       "completedCount": 50,
-      "openCount": 36
+      "openCount": 37
     },
     {
       "id": "innovation",
