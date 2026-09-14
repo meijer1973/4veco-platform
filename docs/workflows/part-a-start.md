@@ -42,10 +42,12 @@ coverage. Layout repair does not automatically load exercise-authoring skills.
    It uses the [tested shared renderer](../../build-scripts/textbook/paragraph_pdf.py).
    Install Pandoc and the dependencies in
    [the renderer requirements](../../build-scripts/textbook/requirements.txt) when absent.
-   Inspect final HTML and PDF pages for content, figures, lists, tables and
+   Inspect final PDF pages for content, figures, lists, tables and
    pagination: all pages for new material; changed pages and dependencies for
-   revisions, with reusable evidence for unchanged coverage. The [PDF skill](../../skills/econ-pdf-builder.md) is a lookup for
-   layout adaptation; do not paste its historical regex snippets into a new builder.
+   revisions, with reusable evidence for unchanged coverage. When browser-delivered
+   HTML is in scope, inspect affected pages in the intended browser; PDF-only
+   delivery does not add a browser compatibility matrix. The
+   [PDF skill](../../skills/econ-pdf-builder.md) is a lookup for layout adaptation.
 4. **Snapshot and independently review.** Run
    `node build-scripts/workflows/paragraph-records.js snapshot "<paragraph-folder>"`.
    One independent reviewer follows [Part A review](part-a-review.md), records

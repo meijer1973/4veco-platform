@@ -421,7 +421,6 @@ it may be assigned as homework and never introduces new theory.
 ### 6.4 Interleaving exercise design rules
 
 - Keep interleaving exercises **short** (2–4 minutes each)
-- Use a **different context** from the original paragraph where the skill was taught
 - Do **not** add scaffolding — these are revision, not new learning
 - If a student cannot do an interleaving exercise, signal a gap: "Kun je deze opgave niet maken? Herhaal dan §X.Y.Z."
 
@@ -677,11 +676,9 @@ When a tempting wrong attribution exists, add: `⚠️ Let op de juiste vraagfac
 
 ### 9.5 Context selection rules
 
-- Each exercise uses a different context from others in the same paragraph
-- Do not reuse a context from another paragraph of the same chapter
-- Use recognisable, age-appropriate settings (bakeries, cinemas, streaming, transport, sports, food markets)
-- Target exercise context comes from the blueprint — do not change it
-- Interleaving exercises may reuse contexts from earlier chapters (reinforces transfer)
+Choose contexts for the learning goal: reuse for continuity or comparison and
+vary where useful. The [exercise builder](../../skills/econ-exercise-builder.md#34-context-selection-rules)
+owns context selection and preservation of approved target contexts.
 
 ### 9.6 Distinction-drilling tables need column headers (MANDATORY)
 
@@ -1044,7 +1041,7 @@ replace independent review:
 | Figure numbering | Each paragraph restarts at 1; no skips |
 | Forward/backward references | Forward pointer matches next paragraph; herhaling box accurate |
 | Consolidation coverage | Consolidation references skills from ALL theory paragraphs |
-| Context reuse | No exercise context reused across paragraphs (except deliberate continuation) |
+| Context choice | Contexts support the learning goals; continuity, comparison and variation serve the intended teaching |
 | Colour consistency in graphs | Same colours for same concepts across paragraphs |
 
 ### 12.5 Common errors ranked by frequency

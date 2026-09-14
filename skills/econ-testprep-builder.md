@@ -309,7 +309,7 @@ This paragraph produces a complete practice test in the exact format of the 120-
 
 ### 5.0 Non-negotiable layout rules for tests
 
-Tests must be rendered so students see each opgave's context and questions together without flipping pages, and no question is ever split across pages. See `econ-pdf-builder` §4.1, §4.1b, §5 and §5.3:
+Tests must be rendered so students see each opgave's context and questions together without flipping pages, and no question is ever split across pages. Use the PDF skill's [troubleshooting](econ-pdf-builder.md#troubleshoot-the-affected-output) and [output checks](econ-pdf-builder.md#output-checks):
 
 1. **Render with WeasyPrint**, never Chrome headless. Chrome doesn't honor `break-inside: avoid` on block elements, causing questions to split across pages.
 2. **Atomic exercises**: `.exercise { break-inside: avoid; page-break-inside: avoid; }`. A question that doesn't fit in the remaining space must jump to the next page whole.

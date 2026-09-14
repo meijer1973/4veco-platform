@@ -425,7 +425,6 @@ by `skills/econ-exercise-builder.md`.
 ### 8.3 Design rules
 
 - Keep exercises **short** (2–4 min each)
-- Use **different context** from original paragraph
 - Do **not** add scaffolding — these are revision, not new learning
 - Signal gaps: "Kun je deze opgave niet maken? Herhaal dan §X.Y.Z."
 
