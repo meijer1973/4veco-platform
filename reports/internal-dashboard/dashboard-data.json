@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T11:43:26.013Z",
+  "generatedAt": "2026-09-14T07:34:35.581Z",
   "internalOnly": true,
   "teams": [
     {
@@ -2982,7 +2982,7 @@
               "sprint": "BOOK2-CHAT-IMPORT-1",
               "name": "Import completed Book 2 chat edition",
               "completed": "no",
-              "currentState": "**Writing/assembly complete; repository import prepared/in PR.** Supplied PDFs and editable sources preserved; technical integrity and discoverability only. [Edition](Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md).",
+              "currentState": "**Writing/assembly complete; import and archive cleanup in PR.** Supplied PDFs and editable sources preserved; superseded chapters 2.1/2.2 moved byte-for-byte to [archive](archive/book-2-pre-chat-2026/README.md). Technical integrity and discoverability only. [Edition](Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md).",
               "exitGate": ""
             },
             {
@@ -3589,7 +3589,7 @@
           "sprint": "BOOK2-CHAT-IMPORT-1",
           "name": "Import completed Book 2 chat edition",
           "completed": "no",
-          "currentState": "**Writing/assembly complete; repository import prepared/in PR.** Supplied PDFs and editable sources preserved; technical integrity and discoverability only. [Edition](Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md).",
+          "currentState": "**Writing/assembly complete; import and archive cleanup in PR.** Supplied PDFs and editable sources preserved; superseded chapters 2.1/2.2 moved byte-for-byte to [archive](archive/book-2-pre-chat-2026/README.md). Technical integrity and discoverability only. [Edition](Boek%202%20-%20Kosten%2C%20opbrengsten%2C%20elasticiteit%20en%20surplus/README.md).",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
