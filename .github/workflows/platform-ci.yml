@@ -52,6 +52,9 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Enable long lesson paths on Windows
+        run: git config --global core.longpaths true
+
       - name: Checkout lessen repository
         uses: actions/checkout@v6
         with:
