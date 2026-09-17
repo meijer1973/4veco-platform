@@ -4,6 +4,7 @@ const fs=require('fs'),path=require('path'),{execFileSync}=require('child_proces
 const m=require('../references/migrate-books34-v3');
 const {validateStructuralRecords}=require('../references/books34-selected-structure');
 const {consumeTarget,safeFile}=require('../references/target-source-consumer');
+const {gitBlob}=require('../lib/historical-paths');
 const BOOKS={3:'Boek 3 - Overheidsingrijpen, concurrentie en internationale handel',4:'Boek 4 - Monopolie, marktfalen en arbeidsmarkt'};
 function verify({root=m.ROOT,lessons=path.resolve(root,'../4veco-lessen'),requireTracked=false}={}){
  const failures=[],check=(v,msg)=>{if(!v)failures.push(msg);},read=f=>fs.readFileSync(path.join(root,f));
@@ -26,7 +27,11 @@ function verify({root=m.ROOT,lessons=path.resolve(root,'../4veco-lessen'),requir
   for(const [repo,base,paths] of [[root,m.PLATFORM_BASE,['references/authored/book-outlines/book-2-outline.md','references/authored/book-outlines/book-2-outline.meta.json','build-scripts/maintenance/check-book2-chat-import.js','build-scripts/references/migrate-books34-selected-outlines.js']],[lessons,m.LESSON_BASE,[...git(lessons,['ls-tree','--name-only',m.LESSON_BASE]).trim().split('\n').filter(p=>/^Boek [12] -/.test(p)),...Object.values(BOOKS).flatMap(b=>[b+'/edities/chat-2026',b+'/IMPORT_MANIFEST.json'])]]])check(!git(repo,['diff',base,'--',...paths]).trim(),'Protected Book 1/2 or v2 history changed');
   const operational=new Set(['.gitattributes','AGENT_GITHUB_ENTRY.md','RESEARCH_AGENT_MAP.md','lessen-team-roadmap.md','course_blueprint_v5.md','archive/relocations.json','archive/index.json','archive/index.md',`${m.SNAPSHOT}/course_blueprint_v5.md`,...Object.values(BOOKS).map(b=>b+'/README.md')]);
   for(const f of git(lessons,['diff','--name-only','-z',m.LESSON_BASE]).split('\0').filter(Boolean))check(operational.has(f)||(f.startsWith(m.PACKAGE+'/')&&allowed.has(f.slice(m.PACKAGE.length+1))),'Outside finite lesson import scope '+f);
-  if(requireTracked){const files=git(lessons,['ls-files','-z','--',m.PACKAGE]).split('\0').filter(Boolean);check(files.length===814&&files.every(f=>allowed.has(f.slice(m.PACKAGE.length+1))),'Package not fully tracked');for(const f of files)check(Buffer.compare(execFileSync('git',['show',':'+f],{cwd:lessons,maxBuffer:32*1024*1024}),fs.readFileSync(path.join(lessons,f)))===0,'Staged bytes differ '+f);}
+  if(requireTracked){
+   const entries=git(lessons,['ls-files','--stage','-z','--',m.PACKAGE]).split('\0').filter(Boolean).map(row=>{const [info,file]=row.split('\t');const [mode,blob,stage]=info.split(' ');return {mode,blob,stage,file};});
+   check(entries.length===814&&entries.every(e=>allowed.has(e.file.slice(m.PACKAGE.length+1))),'Package not fully tracked');
+   for(const e of entries)check(e.mode==='100644'&&e.stage==='0'&&e.blob===gitBlob(fs.readFileSync(path.join(lessons,e.file))),'Staged bytes or mode differ '+e.file);
+  }
  }catch(e){failures.push(e.message);}
  return {task:m.TASK,revision:m.REVISION,passed:!failures.length,tracked_verified:requireTracked,failures};
 }
