@@ -34,6 +34,8 @@ silently fall back to transport. Original v2 data and checks remain protected.
 Source metadata names the actual provider, and outline record links work before
 the lesson PR is applied.
 
+[Independent implementation review](BOOK34-V3-REVIEW-FOLLOWUP-20260917-review.md) is PASS at platform `25645ffef951d5bde8470c103657256cebf25d32` and lessons `834002c0af233d727b0002fa27423b82dde1a629`: 56 targeted tests and both tracked import states pass. Subsequent commits may contain only disclosed evidence and generated navigation.
+
 Local focused verification passes for the existing lesson baseline and the
 complete lesson candidate. Negative tests cover partial imports, changed or
 missing manifests, altered sources/figures, additional files, unknown blueprint
