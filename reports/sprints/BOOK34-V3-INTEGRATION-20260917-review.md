@@ -1,36 +1,46 @@
-# Books 3/4 v3 integration — independent technical review
+# Books 3/4 v3 — final independent technical review
 
-Review date: 17 September 2026. Reviewer: `v3_integration_review`.
+Date: 17 September 2026. Reviewer: `v3_integration_review`.
 
-Scope: the current uncommitted platform implementation and paired lesson import in `books34-v3-20260917`, against platform base `67374a9808d226f1be7e8fa73eb104312c075267` and lesson base `a0548ff9937dfb3b788b8b0ed53bbf9bd4fe1c07`. This is a technical implementation review required by AGENTS.md, not independent exercise-quality approval, classroom-readiness approval, publication approval, or merge authority.
+**Result: PASS. No unresolved substantive correctness finding remains within the reviewed implementation scope.**
 
-## Review status
+This review applies to these exact committed heads, verified before and after the review:
 
-**PASS for the reviewed technical implementation after correction of the findings below. No unresolved correctness finding remains in this review scope.** The review covers migration outputs, explicit revision dispatch, v2 isolation, bounded import validation, Book 1/2 preservation, source/asset consumption, the existing RAG export/query path, finite authority transitions, and focused regression tests. It does not independently reproduce the package build or the remote compatibility workflow. The source remains uncommitted at review time; the final report must identify the eventual commit heads and any later substantive edits separately.
+| Repository | Reviewed commit |
+|---|---|
+| `meijer1973/4veco-platform` | `1b9af608b61445e63633ce9ef3eaba79babd15cf` |
+| `meijer1973/4veco-lessen` | `ed43f3aeafe0fc8bb497902cfc9b23fac8f88a4b` |
 
-## Findings and disposition
+The lesson worktree was clean. The platform worktree had only the disclosed generated navigation changes to `archive/index.json` and `archive/index.md`; no implementation edits were pending. Those navigation tails are outside the committed-head identity above. The comparison bases are platform `67374a9808d226f1be7e8fa73eb104312c075267` and lessons `a0548ff9937dfb3b788b8b0ed53bbf9bd4fe1c07`.
 
-1. **Mixed v6 metadata revision — fixed and inspected.** `build-scripts/references/migrate-books34-v3.js:87` originally updated the newly added `structure_revision` but left the existing `current_year_1_structure_revision` at v2. The implementation now updates both existing current-revision metadata and the planning projection to v3. The generated v6 metadata was checked after the fix.
+## Scope and findings
 
-2. **Unversioned Book 3/4 records bypassed the normal source consumer — fixed and inspected.** `build-scripts/rag/build-chunks.js:72` originally invoked `consumeTarget` only when a record happened to declare v3, silently accepting absent or unknown revisions through its fallback. Reproduction: deleting all 31 record revisions exported all 55 targets, including `target-exercise:v5:3.1.1`, with no consumed source contract. The implementation now rejects missing, unknown, and mixed Book 3/4 top-level/record/source revisions while retaining the preserved Book 1/2 schema.
+The earlier implementation review is recorded in `independent-review.md`. Its findings concerning mixed v6 revision metadata, unversioned RAG export, lost retrieval source context and pending-review status, frozen snapshot byte comparisons, and incorrect test data were corrected. An earlier committed-head review covered platform `daa8e891cbc30fc914542eb84c5a18fed415bff3` with lesson `78d4000303755e27f87243a17b0a4b40d4e14f07`. This report now supersedes that head identity after re-reviewing the bounded correction prompted by the trusted-main archive generator.
 
-3. **Normal retrieval discarded source context and pending-review status — fixed and verified.** `build-scripts/rag/query.js:140` previously returned only a 500-character excerpt and omitted the new full target payload, revision, and record status. Its pending-review flag was false for candidate records. The implementation now exposes the complete contract in JSON, marks candidate review pending, and makes the text output retain context, questions, and figure locators. The first query test exposed that default top-12 `--unit` ranking was not guaranteed paragraph-target lookup. The fix adds explicit `--paragraph <id> --revision <revision>` lookup with a required revision and a unique-result check. Passing tests now execute the existing query CLI for the derivative, labour/population, table, and separate source-page cases after generating the index.
+- **Outline links and identities:** the technical projection replaces only package-relative target-record hyperlinks with the canonical lesson-repository package paths. The parser reverses that exact transformation and requires the immutable original hash, then checks the exact forward projection. The original package bytes and input hashes remain preserved; generated metadata records the current outline hash separately. All 31 target links identify the intended v3 package records.
+- **Archive history and trusted-main compatibility:** `historical-paths.js`, its tests, and both legacy relocation registries are restored exactly to their base versions; independent Git comparisons confirmed no diff. The attempted expansion of the legacy relocation schema is absent from these reviewed heads. New v2 snapshot copies remain present with exact byte comparisons, and the dedicated `archive/blueprints/book34-pre-v3-20260917/snapshot-manifest.json` records each source repository, original path, exact source commit and raw SHA256. The migration reproduces the unchanged legacy relocation registries and independently owns the new version-qualified snapshot provenance. This preserves the trusted reader's original uniqueness guard and introduces no redirect or general archive exception.
+- **Tracked package verification:** the former per-file `git show` comparison is replaced by one NUL-delimited `git ls-files --stage` inventory and local Git blob hashing. The check requires the exact 814 allowed entries, mode `100644`, stage `0`, and a Git blob SHA1 matching each file's current bytes. The independently passing manifest check separately verifies every payload's supplied SHA256. This removes repeated process launches while preserving byte validation and adding explicit mode/stage checks.
+- **Pedagogical boundaries:** the current checker uses the v3 revision while retaining the frozen 148/152 maturity model and the 149/153 current arithmetic projection. The existing `current_year_1_structure_revision` metadata is v3. This change does not confer a new maturity approval or final target approval.
+- **Target-validator tests:** the reusable reviewed-mixed-target format check is now tested independently from migration preservation. A synthetic positive-format Book 1/2 record still fails the full migration validator with `Book 1/2 records changed`. This resolves the old fixture conflict without relaxing the preservation requirement.
+- **Lane classification:** only the exact v3 blueprint review packet is added as review evidence. The adjacent unknown-source negative remains, so this creates no blanket report-directory allowance.
+- **Delivered books and v2 preservation:** the bounded import verifier passed with tracked-byte verification for the complete package. Git comparisons showed no changes to protected Book 1/2 lesson trees, prior Book 3/4 `edities/chat-2026` trees, the earlier v2 blueprint snapshot directory, Book 2 outline sources, or the original v2 migration script. The new source consumer and normal query path preserve candidate status and the full context, tables, figures and source provenance.
 
-4. **Frozen snapshot comparisons normalized bytes despite raw-hash provenance — fixed and inspected.** `build-scripts/maintenance/check-books34-v3-import.js:21` previously compared all planned files using CRLF-normalized text, including the frozen v2 snapshots. A CRLF-only change to a snapshot could therefore pass despite contradicting the raw SHA256 stored in `snapshot-manifest.json`. The verifier now uses exact Buffer equality for snapshots in both repositories and for adopted outline bytes; normalized comparison remains limited to other active projections. The focused acceptance tests passed with this correction.
+No repository file was edited by the reviewer.
 
-5. **Regression fixture used population data absent from the delivered target — fixed.** The first focused test run expected `650.000`, `400.000`, etc. for §4.3.2. The delivered record instead contains Waterstad's `5.000`, `3.000`, `500`, `1.500` and the `Lᵥ`/`Lₐ` model. The corrected assertions now use the actual immutable package content and explicitly select §3.3.4 for the separate source-page case.
+## Independent verification at the reviewed heads
 
-## Verification performed
+| Check | Result |
+|---|---|
+| Three affected Jest suites after the final archive/index-check correction | **44 tests passed; 3 suites passed**, 4.295 seconds |
+| `node build-scripts/maintenance/check-books34-v3-import.js --require-tracked` | **PASS**, `tracked_verified: true`, zero failures |
+| Legacy historical reader/tests and both relocation registries compared with their bases | **No diff** |
+| Pending navigation diff hygiene | **PASS** |
+| Exact platform/lesson head and worktree checks | **Match**; only the two disclosed platform archive indexes are pending |
 
-- Read current AGENTS.md, maintenance workflow, package HANDOFF.md and integration/V3_MIGRATION.md.
-- Reviewed the v3 migration, selected-structure dispatch, isolated v2 module/checker, import checker, source consumer, RAG exporter/query, finite authority transitions, affected validator changes and focused tests.
-- `node build-scripts/maintenance/check-books34-v3-import.js`: PASS, with working-tree byte checks; staged verification not requested in this reviewer run.
-- `node scripts/check-course-target-exercises-v5.js`: PASS, 55 records with 12/12/14/17 counts.
-- `npm run check:book-outline-currentness`: PASS for preserved Book 2 authority and 12 target pins.
-- Initial focused Jest run: 34 passed, 1 failed (incorrect population fixture).
-- Focused recheck after early fixes: 37 passed, 1 failed (new query test's top-12 ranking assumption).
-- Final focused recheck: **2 suites passed, 38 tests passed** in 12.167 seconds (`books34-v3.test.js` and `books34-selected-structure.test.js`).
+The three suites rerun at the final reviewed heads were `build-scripts/lib/historical-paths.test.js`, `build-scripts/references/books34-v3.test.js`, and `build-scripts/references/books34-selected-structure.test.js`. At the preceding reviewed heads, six suites had independently passed 112 tests, including pedagogical boundaries, target-format/preservation and lane classification; the v5 validator, pedagogical-boundary CLI and committed diff hygiene also passed there. Those unchanged implementation areas were not redundantly rerun for this bounded correction. The new tracked import check passed again at the exact final pair with zero failures and `tracked_verified: true`.
 
-The implementation agent reports that the original v2 verifier passes with `--require-paired --require-tracked` in frozen historical paired worktrees. That result was not independently rerun here. Remote CI, exact final heads, supported merge order, and PDF rebuild/comparison findings must remain separately reported by the implementation agent.
+## Limits and remaining evidence
 
-The new import acceptance intentionally requires the actual paired v3 lesson tree. The trusted-main compatibility matrix must determine the supported integration order; this technical PASS does not imply either first-merge state is compatible, and no existing check should be weakened to manufacture an order.
+This is technical integration review, not independent target-quality review, classroom-time certification, companion acceptance, publication approval, or merge authorization. The five lesson-time questions, deferred cao/vakbonden placement with time allocation, and independent review of the 31 candidates remain open as recorded in the supplied package and repository review packet.
+
+The implementation agent owns the final full-suite result, native PDF rebuild and comparison evidence, remote required CI, and the trusted-main compatibility run against the exact candidate pair. Those results are not inferred from this review. In particular, a paired-tree PASS does not establish that either repository may be merged first; the supported order must come from the new compatibility evidence. No merge is authorized by this report.
