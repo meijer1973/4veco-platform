@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-14T11:19:39.450Z
+Generated: 2026-09-17T11:46:38.170Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/import-books34-outlines-20260914`
-Source commit: `f2f8416cf6f0cb1c8368c0fb59c18714d9fc0b2e`
-Files indexed: 6764
+Source branch: `codex/books34-v3-integration-20260917`
+Source commit: `f4888930ac47a831fc633df19a909a62b074ddad`
+Files indexed: 7500
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -144,7 +144,7 @@ Count: 89
 
 ## build scripts
 
-Count: 762
+Count: 770
 
 - build-scripts/archive/README.md
 - build-scripts/archive/roundtrip-pptx.py
@@ -318,6 +318,7 @@ Count: 762
 - build-scripts/maintenance/check-book2-chat-import.js
 - build-scripts/maintenance/check-book2-chat-import.test.js
 - build-scripts/maintenance/check-books34-chat-import.js
+- build-scripts/maintenance/check-books34-v3-import.js
 - build-scripts/maintenance/import-books34-delivery.py
 - build-scripts/maintenance/test_import_books34.py
 - build-scripts/maintenance/verify-books34-delivery.py
@@ -353,6 +354,11 @@ Count: 762
 - build-scripts/references/books34-authority-transition.js
 - build-scripts/references/books34-selected-structure.js
 - build-scripts/references/books34-selected-structure.test.js
+- build-scripts/references/books34-v2-structure.js
+- build-scripts/references/books34-v3-delivery.js
+- build-scripts/references/books34-v3-transition.js
+- build-scripts/references/books34-v3-transition.test.js
+- build-scripts/references/books34-v3.test.js
 - build-scripts/references/build-alignment-graph.js
 - build-scripts/references/build-begrippen-index.js
 - build-scripts/references/build-cp6b-target-exercise-review.js
@@ -567,6 +573,7 @@ Count: 762
 - build-scripts/references/lib/mtu-h7-bundle4-provenance.js
 - build-scripts/references/math-migration-map.json
 - build-scripts/references/migrate-books34-selected-outlines.js
+- build-scripts/references/migrate-books34-v3.js
 - build-scripts/references/migrate-course-target-exercises-v5.js
 - build-scripts/references/migrate-l0-to-l1-economic.js
 - build-scripts/references/migrate-paths.js
@@ -581,6 +588,7 @@ Count: 762
 - build-scripts/references/seed-begrippen.js
 - build-scripts/references/seed-math-units.js
 - build-scripts/references/source-annex-extraction-add.js
+- build-scripts/references/target-source-consumer.js
 - build-scripts/references/term-add.js
 - build-scripts/references/term-deprecate.js
 - build-scripts/references/term-lib.js
@@ -942,7 +950,7 @@ Count: 26
 
 ## validators
 
-Count: 645
+Count: 646
 
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
@@ -993,6 +1001,7 @@ Count: 645
 - build-scripts/maintenance/check-book2-chat-import.js
 - build-scripts/maintenance/check-book2-chat-import.test.js
 - build-scripts/maintenance/check-books34-chat-import.js
+- build-scripts/maintenance/check-books34-v3-import.js
 - build-scripts/platform/check-book-landing-v2.js
 - build-scripts/platform/check-chapter-landing-v2.js
 - build-scripts/platform/check-news-detective-v2.js
@@ -1592,7 +1601,7 @@ Count: 645
 
 ## references
 
-Count: 1037
+Count: 1752
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/book-outlines/book-2-outline.md
@@ -1601,9 +1610,12 @@ Count: 1037
 - references/authored/book-outlines/book-3-outline.meta.json
 - references/authored/book-outlines/book-4-outline.md
 - references/authored/book-outlines/book-4-outline.meta.json
+- references/authored/book-outlines/book34-v3-decision-and-migration.md
 - references/authored/book-outlines/books34-input-manifest.json
 - references/authored/book-outlines/books34-structure-change.json
+- references/authored/book-outlines/books34-v3-integration.json
 - references/authored/book-outlines/migration-live-v5-to-v2.csv
+- references/authored/book-outlines/paragraph-migration-v2-to-v3.csv
 - references/authored/book-outlines/selected-paragraphs.csv
 - references/authored/course-target-exercises.json
 - references/authored/didactiek-principes.md
@@ -2611,6 +2623,718 @@ Count: 1037
 - references/schemas/worked-example.schema.json
 - references/schemas/year2-v6-target-foundation-candidates.schema.json
 - references/SOURCE_OF_TRUTH.md
+- references/staged/books34-v3/books/book-3/book-matter/back.md
+- references/staged/books34-v3/books/book-3/book-matter/front.md
+- references/staged/books34-v3/books/book-3/book-matter/glossary.json
+- references/staged/books34-v3/books/book-3/book-matter/print.css
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ans_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ans_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ans_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ans_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ans_3.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ans_3.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ex_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ex_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ex_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ex_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_fig_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_fig_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_fig_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_fig_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_target.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_target.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_ans_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_ans_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_ans_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_ans_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_ex_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_ex_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_fig_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_fig_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_fig_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_fig_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_rev_ledger.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_rev_ledger.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_rev_scales.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_rev_scales.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_target.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_target.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ans_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ans_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ans_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ans_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ans_3.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ans_3.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ex_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ex_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ex_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ex_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_fig_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_fig_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_fig_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_fig_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_fig_3.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_fig_3.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_target.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_target.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ans_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ans_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ans_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ans_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ans_3.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ans_3.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ex_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ex_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ex_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ex_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_fig_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_fig_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_target.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_target.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_3.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_3.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_4.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_4.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ex_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ex_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ex_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ex_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_fig_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_fig_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_fig_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_fig_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_rev_nopurchase.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_rev_nopurchase.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_rev_quota_answer.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_rev_quota_answer.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_rev_quota_base.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_rev_quota_base.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_target.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_target.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_ans_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_ans_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_ans_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_ans_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_target.png
+- references/staged/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_target.svg
+- references/staged/books34-v3/books/book-3/chapters/3.1/00 Inleiding.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/07 Overzicht.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.2 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.5 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.6 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/Antwoorden.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/chapter-order.json
+- references/staged/books34-v3/books/book-3/chapters/3.1/Docenteninformatie.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.2-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.3-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.4-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.5-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.6-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.1/print.css
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_ans_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_ans_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_ans_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_ans_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_ans_3.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_ans_3.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_ex_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_ex_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_ex_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_ex_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_fig_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_fig_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_fig_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_fig_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_target.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.1_target.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_ans_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_ans_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_ans_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_ans_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_ans_3.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_ans_3.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_ex_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_ex_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_ex_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_ex_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_fig_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_fig_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_fig_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_fig_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_fig_3.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_fig_3.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_fig_4.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_fig_4.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_target.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_target.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_we_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.2_we_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_ans_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_ans_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_ans_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_ans_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_ex_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_ex_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_ex_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_ex_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_fig_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_fig_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_fig_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_fig_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_fig_3.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_fig_3.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_target.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_target.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_we_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.3_we_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.4_ans_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.4_ans_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.4_ans_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.4_ans_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.4_fig_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.4_fig_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.4_target.png
+- references/staged/books34-v3/books/book-3/chapters/3.2/_assets/3.2.4_target.svg
+- references/staged/books34-v3/books/book-3/chapters/3.2/00 Inleiding.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/05 Overzicht.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/3.2.4 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/Antwoorden.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/chapter-order.json
+- references/staged/books34-v3/books/book-3/chapters/3.2/Docenteninformatie.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.1-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.2-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.3-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.4-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.2/print.css
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3_overzicht.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3_overzicht.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3_slot.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3_slot.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_3.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_3.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_4.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.1_fig_4.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_ans_14.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_ans_14.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_ans_17.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_ans_17.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_ex_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_ex_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_3.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_3.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_4.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_fig_4.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_target.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_target.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_we_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.2_we_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_ans_25.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_ans_25.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_ans_27.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_ans_27.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_ex_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_ex_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_3.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_3.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_4.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_fig_4.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_target.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.3_target.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_ans_35.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_ans_35.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_fig_1.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_fig_1.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_fig_2.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_fig_2.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_target.png
+- references/staged/books34-v3/books/book-3/chapters/3.3/_assets/3.3.4_target.svg
+- references/staged/books34-v3/books/book-3/chapters/3.3/00 Inleiding.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/05 Overzicht.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/3.3.2 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/3.3.3 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/3.3.4 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/Antwoorden.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/chapter-order.json
+- references/staged/books34-v3/books/book-3/chapters/3.3/Docenteninformatie.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.1-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.2-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.3-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.4-leerling-v3.pdf
+- references/staged/books34-v3/books/book-3/chapters/3.3/print.css
+- references/staged/books34-v3/books/book-3/cover.png
+- references/staged/books34-v3/books/book-4/book-matter/back.md
+- references/staged/books34-v3/books/book-4/book-matter/front.md
+- references/staged/books34-v3/books/book-4/book-matter/glossary.json
+- references/staged/books34-v3/books/book-4/book-matter/print.css
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_ans_1.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_ans_2.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_ex_1.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_ex_2.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_fig_1.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_fig_2.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_fig_3.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_target.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/3.2.3_we_1.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1_opener.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1_opener.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1_overview.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1_overview.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.1_ans_8.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.1_ans_8.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.1_ex_3.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.1_ex_3.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.1_fig_1.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.1_fig_1.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.1_fig_2.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.1_fig_2.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.1_target.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.1_target.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_ans_18.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_ans_18.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_ex_13.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_ex_13.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_ex_17.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_ex_17.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_fig_1.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_fig_1.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_fig_2.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_fig_2.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_fig_3.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_fig_3.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_fig_4.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_fig_4.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_we.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.2_we.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ans_24.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ans_24.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ans_26.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ans_26.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ans_27.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ans_27.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ans_28_profit.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ans_28_profit.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ans_28.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ans_28.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ex_23.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ex_23.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ex_24.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ex_24.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ex_26.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_ex_26.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_fig_1.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_fig_1.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_fig_2.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_fig_2.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_fig_3.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_fig_3.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_fig_4.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_fig_4.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_target.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_target.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_we.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.3_we.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.4_ans_35.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.4_ans_35.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.4_target.png
+- references/staged/books34-v3/books/book-4/chapters/4.1/_assets/4.1.4_target.svg
+- references/staged/books34-v3/books/book-4/chapters/4.1/00 Inleiding.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/06 Overzicht.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.5 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/Antwoorden.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/chapter-order.json
+- references/staged/books34-v3/books/book-4/chapters/4.1/Docenteninformatie.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.2-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.3-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.4-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.5-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.1/print.css
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/421_answer7.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/421_answer7.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/421_choice.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/421_choice.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/421_guided.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/421_guided.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/421_target.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/421_target.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/421_transfer.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/421_transfer.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/421_we.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/421_we.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/422_answer16.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/422_answer16.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/422_conditions.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/422_conditions.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/422_groups.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/422_groups.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/422_guided.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/422_guided.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/422_target.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/422_target.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/423_answer25.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/423_answer25.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/423_guided.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/423_guided.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/423_we.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/423_we.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_actors.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_actors.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_answer33.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_answer33.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_answer34.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_answer34.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_guided.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_guided.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_independent.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_independent.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_loss.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_loss.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_social.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_social.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_target.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_target.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_tax.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_tax.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_we.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/424_we.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_actors.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_actors.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_answer42.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_answer42.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_answer43.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_answer43.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_guided.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_guided.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_independent.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_independent.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_loss.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_loss.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_mixed.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_mixed.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_mixed57.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_mixed57.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_social.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_social.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_subsidy.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_subsidy.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_target.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_target.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_we_loss.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_we_loss.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_we.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/425_we.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/426_route.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/426_route.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/427_A.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/427_A.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/427_answerA.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/427_answerA.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/427_answerB.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/427_answerB.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/427_B.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/427_B.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/chapter_route.png
+- references/staged/books34-v3/books/book-4/chapters/4.2/_assets/chapter_route.svg
+- references/staged/books34-v3/books/book-4/chapters/4.2/00 Inleiding.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/08 Overzicht.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.2 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.3 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.5 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.6 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.7 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/Antwoorden.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/chapter-order.json
+- references/staged/books34-v3/books/book-4/chapters/4.2/Docenteninformatie.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.1-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.2-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.3-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.4-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.5-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.6-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.7-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.2/print.css
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/actor_bridge.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/actor_bridge.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/bargaining.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/bargaining.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/cao_costs.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/cao_costs.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/demand_base.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/demand_base.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/demand_move.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/demand_move.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/demand_shift.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/demand_shift.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/eq_base.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/eq_base.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/eq_ind_answer.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/eq_ind_answer.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/eq_intro.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/eq_intro.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/eq_target_answer.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/eq_target_answer.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/eq_target.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/eq_target.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/eq_we.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/eq_we.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_bill.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_bill.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_binding.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_binding.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_guide_answer.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_guide_answer.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_guide.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_guide.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_nonbinding.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_nonbinding.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_target_answer.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_target_answer.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_target.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_target.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_we.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/floor_we.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/mixed_answer.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/mixed_answer.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/mixed_base.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/mixed_base.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/population_we.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/population_we.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/population.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/population.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/productivity_paths.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/productivity_paths.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_fixed.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_fixed.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_flex.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_flex.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_ind_answer.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_ind_answer.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_ind.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_ind.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_target_answer.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_target_answer.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_target.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_target.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_we.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/shift_we.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/unemployment_causes.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/unemployment_causes.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/units.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/units.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/vacancy_overlap.png
+- references/staged/books34-v3/books/book-4/chapters/4.3/_assets/vacancy_overlap.svg
+- references/staged/books34-v3/books/book-4/chapters/4.3/00 Inleiding.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/07 Overzicht.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.2 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.3 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.4 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.5 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/Antwoorden.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/chapter-order.json
+- references/staged/books34-v3/books/book-4/chapters/4.3/Docenteninformatie.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.1-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.3-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.4-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.5-leerling-v3.pdf
+- references/staged/books34-v3/books/book-4/chapters/4.3/print.css
+- references/staged/books34-v3/books/book-4/cover.png
+- references/staged/books34-v3/BUILD_ENVIRONMENT.md
+- references/staged/books34-v3/build/assemble.py
+- references/staged/books34-v3/build/build_all.py
+- references/staged/books34-v3/build/check_math.py
+- references/staged/books34-v3/build/check_repairs.py
+- references/staged/books34-v3/build/compare_rebuild.py
+- references/staged/books34-v3/build/content.py
+- references/staged/books34-v3/build/environment_report.py
+- references/staged/books34-v3/build/export_paragraphs.py
+- references/staged/books34-v3/build/prepare_registry_update.py
+- references/staged/books34-v3/build/preview_targets.py
+- references/staged/books34-v3/build/rasterize_answer_labels.py
+- references/staged/books34-v3/build/records.py
+- references/staged/books34-v3/build/render_outlines.py
+- references/staged/books34-v3/build/render.py
+- references/staged/books34-v3/build/verify.py
+- references/staged/books34-v3/checks/build-3.1_3.2_3.3_4.1_4.2_4.3.json
+- references/staged/books34-v3/checks/clean-build.log
+- references/staged/books34-v3/checks/content-inventory.json
+- references/staged/books34-v3/checks/delivery-changes.json
+- references/staged/books34-v3/checks/encoding-smoke.json
+- references/staged/books34-v3/checks/figure-label-contract.json
+- references/staged/books34-v3/checks/math-checks.json
+- references/staged/books34-v3/checks/package-links.json
+- references/staged/books34-v3/checks/rebuild-comparison.json
+- references/staged/books34-v3/checks/received-to-repaired-pdf-text.json
+- references/staged/books34-v3/checks/record-rebuild-comparison.json
+- references/staged/books34-v3/checks/render-environment.json
+- references/staged/books34-v3/checks/REPAIR_REPORT.md
+- references/staged/books34-v3/checks/repair-preview/boek4-antwoorden-p10.png
+- references/staged/books34-v3/checks/repair-preview/boek4-antwoorden-p15.png
+- references/staged/books34-v3/checks/repair-preview/boek4-antwoorden-p22-poppler.png
+- references/staged/books34-v3/checks/repair-preview/boek4-antwoorden-p22.png
+- references/staged/books34-v3/checks/repair-preview/boek4-antwoorden-p26.png
+- references/staged/books34-v3/checks/repair-unit-tests.log
+- references/staged/books34-v3/checks/repair-verification.json
+- references/staged/books34-v3/checks/REVISION_REVIEW.md
+- references/staged/books34-v3/checks/source-preservation.json
+- references/staged/books34-v3/checks/target-consumer-check.json
+- references/staged/books34-v3/checks/target-consumer-preview.html
+- references/staged/books34-v3/checks/utf8-repairs.json
+- references/staged/books34-v3/checks/verification.json
+- references/staged/books34-v3/checks/VISUAL_REVIEW.md
+- references/staged/books34-v3/COMPLETION.md
+- references/staged/books34-v3/curriculum/blueprint-books34-v3.md
+- references/staged/books34-v3/curriculum/book-page-map-v3.json
+- references/staged/books34-v3/curriculum/chapter-config.json
+- references/staged/books34-v3/curriculum/course-target-exercises-books34-v3.json
+- references/staged/books34-v3/curriculum/lesson-routes-v3.json
+- references/staged/books34-v3/curriculum/structure-v3.json
+- references/staged/books34-v3/curriculum/target-catalog-v3.csv
+- references/staged/books34-v3/curriculum/target-excerpts/3.1.1.md
+- references/staged/books34-v3/curriculum/target-excerpts/3.1.2.md
+- references/staged/books34-v3/curriculum/target-excerpts/3.1.3.md
+- references/staged/books34-v3/curriculum/target-excerpts/3.1.4.md
+- references/staged/books34-v3/curriculum/target-excerpts/3.1.5.md
+- references/staged/books34-v3/curriculum/target-excerpts/3.1.6.md
+- references/staged/books34-v3/curriculum/target-excerpts/3.2.1.md
+- references/staged/books34-v3/curriculum/target-excerpts/3.2.2.md
+- references/staged/books34-v3/curriculum/target-excerpts/3.2.3.md
+- references/staged/books34-v3/curriculum/target-excerpts/3.2.4.md
+- references/staged/books34-v3/curriculum/target-excerpts/3.3.1.md
+- references/staged/books34-v3/curriculum/target-excerpts/3.3.2.md
+- references/staged/books34-v3/curriculum/target-excerpts/3.3.3.md
+- references/staged/books34-v3/curriculum/target-excerpts/3.3.4.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.1.1.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.1.2.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.1.3.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.1.4.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.1.5.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.2.1.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.2.2.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.2.3.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.2.4.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.2.5.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.2.6.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.2.7.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.3.1.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.3.2.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.3.3.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.3.4.md
+- references/staged/books34-v3/curriculum/target-excerpts/4.3.5.md
+- references/staged/books34-v3/curriculum/targets/3.1.1.json
+- references/staged/books34-v3/curriculum/targets/3.1.2.json
+- references/staged/books34-v3/curriculum/targets/3.1.3.json
+- references/staged/books34-v3/curriculum/targets/3.1.4.json
+- references/staged/books34-v3/curriculum/targets/3.1.5.json
+- references/staged/books34-v3/curriculum/targets/3.1.6.json
+- references/staged/books34-v3/curriculum/targets/3.2.1.json
+- references/staged/books34-v3/curriculum/targets/3.2.2.json
+- references/staged/books34-v3/curriculum/targets/3.2.3.json
+- references/staged/books34-v3/curriculum/targets/3.2.4.json
+- references/staged/books34-v3/curriculum/targets/3.3.1.json
+- references/staged/books34-v3/curriculum/targets/3.3.2.json
+- references/staged/books34-v3/curriculum/targets/3.3.3.json
+- references/staged/books34-v3/curriculum/targets/3.3.4.json
+- references/staged/books34-v3/curriculum/targets/4.1.1.json
+- references/staged/books34-v3/curriculum/targets/4.1.2.json
+- references/staged/books34-v3/curriculum/targets/4.1.3.json
+- references/staged/books34-v3/curriculum/targets/4.1.4.json
+- references/staged/books34-v3/curriculum/targets/4.1.5.json
+- references/staged/books34-v3/curriculum/targets/4.2.1.json
+- references/staged/books34-v3/curriculum/targets/4.2.2.json
+- references/staged/books34-v3/curriculum/targets/4.2.3.json
+- references/staged/books34-v3/curriculum/targets/4.2.4.json
+- references/staged/books34-v3/curriculum/targets/4.2.5.json
+- references/staged/books34-v3/curriculum/targets/4.2.6.json
+- references/staged/books34-v3/curriculum/targets/4.2.7.json
+- references/staged/books34-v3/curriculum/targets/4.3.1.json
+- references/staged/books34-v3/curriculum/targets/4.3.2.json
+- references/staged/books34-v3/curriculum/targets/4.3.3.json
+- references/staged/books34-v3/curriculum/targets/4.3.4.json
+- references/staged/books34-v3/curriculum/targets/4.3.5.json
+- references/staged/books34-v3/delivery.json
+- references/staged/books34-v3/HANDOFF.md
+- references/staged/books34-v3/historical-inputs/Boek_3_Compleet_Herzien.pdf
+- references/staged/books34-v3/historical-inputs/Boek_4_Compleet.pdf
+- references/staged/books34-v3/historical-inputs/Books_1-4_Alignment_Report.md
+- references/staged/books34-v3/historical-inputs/deferred-4.3.5/_assets/bargaining.svg
+- references/staged/books34-v3/historical-inputs/deferred-4.3.5/_assets/cao_costs.svg
+- references/staged/books34-v3/historical-inputs/deferred-4.3.5/4.3.5 answers-v2.md
+- references/staged/books34-v3/historical-inputs/deferred-4.3.5/4.3.5 manuscript-v2.md
+- references/staged/books34-v3/historical-inputs/deferred-4.3.5/README.md
+- references/staged/books34-v3/historical-inputs/outline-proposal-v3/book-3-outline-v3.md
+- references/staged/books34-v3/historical-inputs/outline-proposal-v3/book-4-outline-v3.md
+- references/staged/books34-v3/historical-inputs/outline-proposal-v3/book34-v3-decision-and-migration.md
+- references/staged/books34-v3/historical-inputs/source-attribution/book-4-labour-source-register-v2.json
+- references/staged/books34-v3/historical-inputs/teacher-guides-v2/3.1-Docenteninformatie-v2.md
+- references/staged/books34-v3/historical-inputs/teacher-guides-v2/3.2-Docenteninformatie-v2.md
+- references/staged/books34-v3/historical-inputs/teacher-guides-v2/3.3-Docenteninformatie-v2.md
+- references/staged/books34-v3/historical-inputs/teacher-guides-v2/4.1-Docenteninformatie-v2.md
+- references/staged/books34-v3/historical-inputs/teacher-guides-v2/4.2-Docenteninformatie-v2.md
+- references/staged/books34-v3/historical-inputs/teacher-guides-v2/4.3-Docenteninformatie-v2.md
+- references/staged/books34-v3/integration/V3_MIGRATION.md
+- references/staged/books34-v3/MANIFEST.sha256.json
+- references/staged/books34-v3/outlines/Boek_3_4_Besluit_en_migratie_v3.pdf
+- references/staged/books34-v3/outlines/Boek_3_Boekopzet_v3.pdf
+- references/staged/books34-v3/outlines/Boek_4_Boekopzet_v3.pdf
+- references/staged/books34-v3/outlines/book-3-outline-v3.md
+- references/staged/books34-v3/outlines/book-4-outline-v3.md
+- references/staged/books34-v3/outlines/book34-v3-decision-and-migration.md
+- references/staged/books34-v3/outlines/paragraph-migration-v2-to-v3.csv
+- references/staged/books34-v3/provenance/README.md
+- references/staged/books34-v3/provenance/received-COMPLETION.md
+- references/staged/books34-v3/provenance/received-HANDOFF.md
+- references/staged/books34-v3/provenance/received-README.md
+- references/staged/books34-v3/provenance/received-v3-checks/build-3.1_3.2_3.3_4.1_4.2_4.3.json
+- references/staged/books34-v3/provenance/received-v3-checks/content-inventory.json
+- references/staged/books34-v3/provenance/received-v3-checks/figure-label-repairs.json
+- references/staged/books34-v3/provenance/received-v3-checks/final-formatting-repairs.json
+- references/staged/books34-v3/provenance/received-v3-checks/math-checks.json
+- references/staged/books34-v3/provenance/received-v3-checks/package-links.json
+- references/staged/books34-v3/provenance/received-v3-checks/rebuild-comparison.json
+- references/staged/books34-v3/provenance/received-v3-checks/REVISION_REVIEW.md
+- references/staged/books34-v3/provenance/received-v3-checks/source-preservation.json
+- references/staged/books34-v3/provenance/received-v3-checks/verification.json
+- references/staged/books34-v3/provenance/received-v3-checks/VISUAL_REVIEW.md
+- references/staged/books34-v3/provenance/received-v3-manifest.json
+- references/staged/books34-v3/provenance/review-R1-R5.txt
+- references/staged/books34-v3/README.md
+- references/staged/books34-v3/requirements-render-lock.txt
+- references/staged/books34-v3/requirements.txt
+- references/staged/books34-v3/SOURCE_OWNERSHIP.md
+- references/staged/books34-v3/tests/test_package_repairs.py
+- references/staged/books34-v3/verify_manifest.py
 - references/ui/book-landing-v2/approved-minimal.html
 - references/ui/book-landing-v2/README.md
 - references/ui/chapter-landing-v2/approved-minimal.html
@@ -2634,7 +3358,7 @@ Count: 1037
 
 ## reports
 
-Count: 4677
+Count: 4689
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -3369,6 +4093,7 @@ Count: 4677
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-quality-log.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-reconciliation-report.md
 - reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md
+- reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-V3-20260917.md
 - reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-authority-decision.md
 - reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-authority-matrix.md
 - reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-quality-log.md
@@ -5343,6 +6068,17 @@ Count: 4677
 - reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-qa/README.md
 - reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-result.md
 - reports/sprints/BOOK34-CHAT-IMPORT-OUTLINES-1-review.md
+- reports/sprints/BOOK34-V3-INTEGRATION-20260917-qa/build-environment.txt
+- reports/sprints/BOOK34-V3-INTEGRATION-20260917-qa/comparison-1.png
+- reports/sprints/BOOK34-V3-INTEGRATION-20260917-qa/comparison-2.png
+- reports/sprints/BOOK34-V3-INTEGRATION-20260917-qa/comparison-3.png
+- reports/sprints/BOOK34-V3-INTEGRATION-20260917-qa/comparison-4.png
+- reports/sprints/BOOK34-V3-INTEGRATION-20260917-qa/local-checks.json
+- reports/sprints/BOOK34-V3-INTEGRATION-20260917-qa/rebuild-comparison.json
+- reports/sprints/BOOK34-V3-INTEGRATION-20260917-result.md
+- reports/sprints/BOOK34-V3-INTEGRATION-20260917-review.md
+- reports/sprints/BOOK34-V3-REVIEW-FOLLOWUP-20260917-review.md
+- reports/sprints/BOOK34-V3-REVIEW-FOLLOWUP-20260917.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round12.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
@@ -7322,19 +8058,83 @@ _No files indexed in this group._
 
 ## paragraph folders
 
-Count: 0
+Count: 33
 
-_No files indexed in this group._
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.2 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.5 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.6 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/3.2.4 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/3.3.2 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/3.3.3 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/3.3.4 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.5 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.2 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.3 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.5 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.6 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.7 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.2 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.3 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.4 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.5 manuscript.md
+- references/staged/books34-v3/historical-inputs/deferred-4.3.5/4.3.5 answers-v2.md
+- references/staged/books34-v3/historical-inputs/deferred-4.3.5/4.3.5 manuscript-v2.md
 
 ## generated artifacts
 
-Count: 0
+Count: 33
 
-_No files indexed in this group._
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.2 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.5 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.1/3.1.6 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.2/3.2.4 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/3.3.2 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/3.3.3 manuscript.md
+- references/staged/books34-v3/books/book-3/chapters/3.3/3.3.4 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.1/4.1.5 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.2 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.3 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.5 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.6 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.2/4.2.7 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.2 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.3 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.4 manuscript.md
+- references/staged/books34-v3/books/book-4/chapters/4.3/4.3.5 manuscript.md
+- references/staged/books34-v3/historical-inputs/deferred-4.3.5/4.3.5 answers-v2.md
+- references/staged/books34-v3/historical-inputs/deferred-4.3.5/4.3.5 manuscript-v2.md
 
 ## other
 
-Count: 155
+Count: 156
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7393,6 +8193,7 @@ Count: 155
 - docs/maintenance/graph-skill-experiment/numerical-check.json
 - docs/maintenance/open-items.md
 - docs/maintenance/paragraph-workflow-improvements.md
+- docs/review/books34-v3-platform-first-transition.md
 - docs/review/human-payload-authorization.schema.json
 - docs/review/maintenance-workflow.md
 - docs/review/pr-integration-lane-policy.md

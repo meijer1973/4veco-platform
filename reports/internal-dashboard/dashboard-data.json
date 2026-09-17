@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T13:39:40.412Z",
+  "generatedAt": "2026-09-17T09:27:40.156Z",
   "internalOnly": true,
   "teams": [
     {
@@ -2982,7 +2982,7 @@
               "sprint": "BOOK34-CHAT-IMPORT-OUTLINES-1",
               "name": "Import completed Books 3/4 and adopt selected outlines",
               "completed": "yes",
-              "currentState": "Writing/assembly complete; import and structural migration integrated on main. Book 3: 6+4+4=14; Book 4: 4+7+6=17; Year 1: 55. Selected v2 outlines are current structural baselines. Target approval and companion acceptance remain separate. Owner-authorized integration on 2026-09-14, platform first: [platform PR #249](https://github.com/meijer1973/4veco-platform/pull/249), merge `7105ca9f1c88d5547ecf040276529c4e9bfcc6e1`; [lessons PR #52](https://github.com/meijer1973/4veco-lessen/pull/52), merge `8acce31ca31b5ed28441b64fdc742da804dcaac0`. [Trusted compatibility run 34848774506](https://github.com/meijer1973/4veco-platform/actions/runs/34848774506) supports this order. Supplied books and outlines are unchanged.",
+              "currentState": "Writing/assembly complete; import and structural migration integrated on main. Book 3: 6+4+4=14; Book 4: 4+7+6=17; Year 1: 55. Selected v2 outlines were the adopted structural baselines for that edition. Target approval and companion acceptance remain separate. Owner-authorized integration on 2026-09-14, platform first: [platform PR #249](https://github.com/meijer1973/4veco-platform/pull/249), merge `7105ca9f1c88d5547ecf040276529c4e9bfcc6e1`; [lessons PR #52](https://github.com/meijer1973/4veco-lessen/pull/52), merge `8acce31ca31b5ed28441b64fdc742da804dcaac0`. [Trusted compatibility run 34848774506](https://github.com/meijer1973/4veco-platform/actions/runs/34848774506) supports this order. Supplied books and outlines are unchanged.",
               "exitGate": ""
             },
             {
@@ -3884,7 +3884,7 @@
           "sprint": "BOOK34-CHAT-IMPORT-OUTLINES-1",
           "name": "Import completed Books 3/4 and adopt selected outlines",
           "completed": "yes",
-          "currentState": "Writing/assembly complete; import and structural migration integrated on main. Book 3: 6+4+4=14; Book 4: 4+7+6=17; Year 1: 55. Selected v2 outlines are current structural baselines. Target approval and companion acceptance remain separate. Owner-authorized integration on 2026-09-14, platform first: [platform PR #249](https://github.com/meijer1973/4veco-platform/pull/249), merge `7105ca9f1c88d5547ecf040276529c4e9bfcc6e1`; [lessons PR #52](https://github.com/meijer1973/4veco-lessen/pull/52), merge `8acce31ca31b5ed28441b64fdc742da804dcaac0`. [Trusted compatibility run 34848774506](https://github.com/meijer1973/4veco-platform/actions/runs/34848774506) supports this order. Supplied books and outlines are unchanged.",
+          "currentState": "Writing/assembly complete; import and structural migration integrated on main. Book 3: 6+4+4=14; Book 4: 4+7+6=17; Year 1: 55. Selected v2 outlines were the adopted structural baselines for that edition. Target approval and companion acceptance remain separate. Owner-authorized integration on 2026-09-14, platform first: [platform PR #249](https://github.com/meijer1973/4veco-platform/pull/249), merge `7105ca9f1c88d5547ecf040276529c4e9bfcc6e1`; [lessons PR #52](https://github.com/meijer1973/4veco-lessen/pull/52), merge `8acce31ca31b5ed28441b64fdc742da804dcaac0`. [Trusted compatibility run 34848774506](https://github.com/meijer1973/4veco-platform/actions/runs/34848774506) supports this order. Supplied books and outlines are unchanged.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },

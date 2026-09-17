@@ -93,8 +93,8 @@ function validateReviewedMixedTarget(exercise, label, errors) {
   }
 }
 
-function validate(data) {
-  const errors = validateStructuralRecords(data);
+function validate(data, root = REPO_ROOT) {
+  const errors = validateStructuralRecords(data, root);
   const exercises = Array.isArray(data.exercises) ? data.exercises : [];
 
   if (data.schema_version !== 1) errors.push('schema_version must be 1');
@@ -109,10 +109,10 @@ function validate(data) {
     errors.push('test_preparation_policy.status must be web_only');
   }
   const blueprintPath = data.blueprint_source || EXPECTED_SOURCE;
-  if (!fs.existsSync(repoPath(blueprintPath))) {
+  if (!fs.existsSync(path.join(root, blueprintPath))) {
     errors.push(`missing active blueprint source ${blueprintPath}`);
   }
-  const blueprintText = fs.existsSync(repoPath(blueprintPath)) ? readText(blueprintPath) : '';
+  const blueprintText = fs.existsSync(path.join(root, blueprintPath)) ? fs.readFileSync(path.join(root, blueprintPath), 'utf8') : '';
   if (blueprintText.includes('Phase A source-of-truth scaffold')) {
     errors.push('active v5 blueprint still says Phase A source-of-truth scaffold');
   }
@@ -199,4 +199,4 @@ function main() {
 
 if (require.main === module) main();
 
-module.exports = { validate, EXPECTED_COUNTS, EXPECTED_TOTAL, EXPECTED_SOURCE };
+module.exports = { validate, validateReviewedMixedTarget, EXPECTED_COUNTS, EXPECTED_TOTAL, EXPECTED_SOURCE };

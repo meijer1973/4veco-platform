@@ -1,0 +1,10 @@
+{
+  "scope": "Formatting only: explicit HTML emphasis/headings where inherited mixed Markdown/HTML emitted raw markup. No question values or economic meaning changed.",
+  "files": [
+    "books/book-3/book-matter/back.md",
+    "books/book-4/book-matter/back.md",
+    "books/book-3/chapters/3.3/3.3.1 manuscript.md",
+    "books/book-3/chapters/3.3/3.3.2 manuscript.md",
+    "books/book-3/chapters/3.3/3.3.3 manuscript.md"
+  ]
+}

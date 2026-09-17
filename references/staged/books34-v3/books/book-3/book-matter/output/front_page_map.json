@@ -1,0 +1,29 @@
+[
+  {
+    "pdf_page": 1,
+    "designed_pages": [
+      1
+    ],
+    "sections": [
+      "colofon"
+    ]
+  },
+  {
+    "pdf_page": 2,
+    "designed_pages": [
+      2
+    ],
+    "sections": [
+      "inleiding"
+    ]
+  },
+  {
+    "pdf_page": 3,
+    "designed_pages": [
+      3
+    ],
+    "sections": [
+      "inhoud"
+    ]
+  }
+]

@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "source_id": "authored:book-4-outline",
+  "book": 4,
+  "version": "v2",
+  "structure_revision": "book34-chat-v2-20260914",
+  "original_date": "2026-09-06",
+  "original_sha256": "3bfb4350bb1f990a8ea559272263e8ef35e1b72bd0cbc86b59c9aa6ad4fc0899",
+  "original_status": "revised outline proposal",
+  "current_status": "owner_selected_structural_baseline",
+  "selected_on": "2026-09-14",
+  "selection_task": "BOOK34-CHAT-IMPORT-OUTLINES-1",
+  "integration_status": "prepared_in_pr",
+  "target_approval": "not_conferred",
+  "companion_acceptance": "not_conferred",
+  "current_source": "references/authored/book-outlines/book-4-outline.md",
+  "change_review": "reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md",
+  "selected_input_manifest": "references/authored/book-outlines/books34-input-manifest.json",
+  "title_aliases": [
+    "Monopolie, marktfalen en arbeidsmarkt"
+  ],
+  "original_page_assumption": 40,
+  "actual_student_chapter_pages": [
+    38,
+    60,
+    50
+  ],
+  "original_proposal_companions_not_supplied": [
+    "sources-and-scope.md",
+    "integration-handoff-v2.md",
+    "paragraph-migration-v1-to-v2.csv"
+  ],
+  "migration_aid": "migration-live-v5-to-v2.csv is newly prepared against live v5, not the historical v1-to-v2 attachment or target equivalence proof.",
+  "paragraph_count": 17,
+  "chapters": [
+    {
+      "id": "4.1",
+      "title": "Monopolie",
+      "paragraph_count": 4
+    },
+    {
+      "id": "4.2",
+      "title": "Marktvormen en marktfalen",
+      "paragraph_count": 7
+    },
+    {
+      "id": "4.3",
+      "title": "Arbeidsmarkt",
+      "paragraph_count": 6
+    }
+  ],
+  "paragraphs": [
+    {
+      "id": "4.1.1",
+      "title": "Monopolie: kenmerken",
+      "kind": "theory",
+      "intended_learning": "Explain market power, barriers to entry and the relationship between the firm’s sales and market demand.",
+      "retrieval_and_transfer": "Contrast with §3.2.1; retrieve the demand function and price/quantity relationship. Use the book-opening retrieval task to restore the difference between a market graph and the competitive firm's graph before introducing the monopolist's graph.",
+      "proposed_target_brief": "Use a source to identify the barrier to entry, distinguish monopoly from perfect competition and explain the price/quantity trade-off.",
+      "boundary": "Monopoly does not mean unlimited pricing power. Patents can be one entry-barrier context; full policy evaluation belongs later.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.1.2",
+      "title": "Marginale opbrengst bij monopolie",
+      "kind": "theory",
+      "intended_learning": "Explain why extra sales and a lower price have different effects on total revenue; obtain MO from a simple TO relation.",
+      "retrieval_and_transfer": "Retrieve TO = P x Q, Book 2 marginal differences and revenue interpretation, and the limited derivative technique taught in §3.2.2.",
+      "proposed_target_brief": "Move from a linear demand function to TO and MO, check the result against a short table, and explain why MO differs from the selling price.",
+      "boundary": "Assume a uniform selling price. Do not introduce point-elasticity formulas or a general calculus chapter. Revisit elasticity qualitatively only where it supports the taught revenue interpretation.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.1.3",
+      "title": "Winstmaximalisatie bij monopolie",
+      "kind": "theory",
+      "intended_learning": "Determine output using MO and MK, then read price from demand and calculate profit.",
+      "retrieval_and_transfer": "Repeat §3.2.2’s optimisation procedure, §4.1.2’s revenue relation and Book 2 cost calculations.",
+      "proposed_target_brief": "Calculate the feasible monopoly output, corresponding selling price and total profit, then reject a common wrong-method claim using the calculation.",
+      "boundary": "Do not read price from the MO curve, equate P with MK at the monopoly optimum, or confuse maximum revenue with maximum profit. Reserve the formal welfare comparison for §4.2.1, immediately after this chapter; it is not postponed to a later book.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.1.4",
+      "title": "Gemengde opgaven: monopolie",
+      "kind": "gemengde_opgaven",
+      "intended_learning": "Choose and execute the monopoly calculation sequence and compare it with the already-taught competitive firm sequence.",
+      "retrieval_and_transfer": "Interleave cost, revenue, elasticity interpretation, break-even and marginal choice without adding new operations.",
+      "proposed_target_brief": "Use a monopoly case with sources and a compact competitive contrast; explain why the correct price-reading step differs.",
+      "boundary": "No price discrimination, strategic game or monopoly-welfare target before those are taught. Consolidation is not an extra theory paragraph.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.2.1",
+      "title": "Welvaartseffecten van monopolie",
+      "kind": "theory",
+      "intended_learning": "Compare monopoly with an appropriate competitive/efficient benchmark and distinguish a redistribution of surplus from a welfare loss.",
+      "retrieval_and_transfer": "Repeat §4.1.3’s quantity-and-price calculation and Book 2 CS/PS/total-surplus areas as essential parts of the current task.",
+      "proposed_target_brief": "Determine both benchmark quantities, calculate or identify the surplus distribution and lost gains from trade, and explain why higher producer returns are not identical to higher total welfare.",
+      "boundary": "Keep demand, cost conditions and welfare boundary comparable across scenarios. Producer surplus is not automatically profit; do not treat every transfer between buyer and seller as a loss.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.2.2",
+      "title": "Prijsdiscriminatie",
+      "kind": "theory",
+      "intended_learning": "Explain the conditions for selling at different prices and analyse the effect on revenue, profit and the division of surplus.",
+      "retrieval_and_transfer": "Reuse TO, profit and demand responsiveness; where the chosen target requires it, repeat the established MO/MK procedure in each explicitly separated market.",
+      "proposed_target_brief": "Compare uniform pricing with a bounded two-group pricing case using supplied demand/cost evidence; explain one feasibility condition and one distributional effect.",
+      "boundary": "State market separation and resale restrictions. For separate segment optimisation, use a stated common constant marginal cost, or explicitly account for costs that depend on combined output. Do not claim that discrimination necessarily raises or necessarily lowers total welfare. Avoid adding simultaneous unfamiliar cost structures and multiple optimisation cases.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.2.3",
+      "title": "Marktvormen vergelijken",
+      "kind": "theory",
+      "intended_learning": "Distinguish perfect competition, monopolistic competition, oligopoly and monopoly; transfer a familiar profit procedure to a supplied unfamiliar-market representation.",
+      "retrieval_and_transfer": "Reuse competitive/monopoly reasoning, substitute relationships, demand responsiveness and marginal profit choice.",
+      "proposed_target_brief": "Classify firms from concise sources and apply the already-taught calculation to one appropriate supplied firm diagram or function; justify the classification and outcome.",
+      "boundary": "Do not assume an oligopolist has one universal demand curve. No reaction functions or payoff-matrix techniques here. Formal strategic interaction stays in the later course. This paragraph is not just a vocabulary checklist, but it also must not become four full new models.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.2.4",
+      "title": "Negatieve externe effecten",
+      "kind": "theory",
+      "intended_learning": "Identify unpriced harm to third parties, distinguish private from social consequences and analyse a corrective tax.",
+      "retrieval_and_transfer": "Repeat the tax calculation from §§3.1.1-3.1.2, the market equilibrium method and surplus accounting. The external-cost interpretation is new.",
+      "proposed_target_brief": "Identify the affected third party, compare the unregulated and taxed outcome, calculate the taught market/budget consequences and use supplied external-cost evidence to evaluate welfare.",
+      "boundary": "Do not count tax revenue as a real social loss or treat CS + PS alone as the full welfare measure when external harm is present. Keep external-cost assumptions explicit and simple; no unsupported claims of a uniquely optimal tax.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.2.5",
+      "title": "Positieve externe effecten",
+      "kind": "theory",
+      "intended_learning": "Identify benefits to third parties and explain how a subsidy can improve an outcome with too little of the beneficial activity.",
+      "retrieval_and_transfer": "Repeat §3.1.3’s subsidy wedge, quantity and government-expenditure calculation and Book 2 surplus reasoning.",
+      "proposed_target_brief": "Use an illustrative activity with a stated external benefit and subsidy rule. Calculate the new market outcome and public spending, then explain why the welfare conclusion differs from a subsidy without an external benefit.",
+      "boundary": "Keep the benefit to the buyer separate from the benefit to others. State who receives the subsidy. Do not count a transfer twice or assume every subsidy is appropriately sized. The external-benefit interpretation is new teaching, not prerequisite recall.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.2.6",
+      "title": "Overheidsingrijpen bij marktfalen",
+      "kind": "theory",
+      "intended_learning": "Match a policy to the diagnosed failure, compare feasible alternatives and evaluate effects and limitations with evidence.",
+      "retrieval_and_transfer": "Reuse taxes, subsidies, price restrictions and quantity restrictions, alongside monopoly and externality analysis.",
+      "proposed_target_brief": "Compare two policy proposals for one clearly described problem. Carry out one familiar calculation and use an explicit criterion to justify a qualified recommendation.",
+      "boundary": "Not a second full course on every instrument. A patent/competition-policy example can retrieve market power; avoid importing the later games, insurance or macro-policy curriculum. Separate efficiency from distribution and recognise implementation limits stated in the source.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.2.7",
+      "title": "Gemengde opgaven: marktvormen en marktfalen",
+      "kind": "gemengde_opgaven",
+      "intended_learning": "Integrate firm behaviour, surplus, external effects and policy selection without new theory.",
+      "retrieval_and_transfer": "Select useful methods from Books 1-3, Chapter 4.1 and §§4.2.1-4.2.6, rather than repeating a labelled routine mechanically.",
+      "proposed_target_brief": "Use contrasting short cases: at least one market-power case and one externality/policy case. The target requires numerical or graphical evidence and a bounded economic conclusion.",
+      "boundary": "Do not put an unfamiliar policy or welfare concept into the mixed target. Keep core work feasible; distribute additional retrieval to the closing review.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.3.1",
+      "title": "Arbeidsvraag en arbeidsproductiviteit",
+      "kind": "theory",
+      "intended_learning": "Explain why employers demand labour, interpret changes in that demand, and relate output, labour input, productivity and labour cost per unit.",
+      "retrieval_and_transfer": "Retrieve demand shifts, average-cost reasoning, ratios and percentages. Re-label price as wage and show that employers are the buyers of labour.",
+      "proposed_target_brief": "Use a firm or sector source to calculate productivity or required labour and labour cost per product, then explain a movement along or shift of labour demand.",
+      "boundary": "Keep hours, persons and full-time equivalents distinct. Do not imply productivity growth always reduces total employment; state output and other conditions. No formal marginal-revenue-product optimisation unless separately justified and taught. This is the first formal home of the productivity and unit-labour-cost calculations; revisit a qualitative competitiveness claim from §3.3.1 only after teaching the needed calculation here.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.3.2",
+      "title": "Arbeidsaanbod, participatie en evenwicht",
+      "kind": "theory",
+      "intended_learning": "Identify households as labour suppliers, calculate participation with the stated denominator, and find and interpret the competitive baseline equilibrium wage and employment.",
+      "retrieval_and_transfer": "Reuse Book 1 equilibrium equations and graph reading. A short explicit translation bridge precedes one compact equilibrium calculation; the algebra is not retaught as new.",
+      "proposed_target_brief": "Read a population/participation source and a separate simple market model. Calculate the specified participation measure, then equilibrium wage and quantity, and explain who supplies and who demands labour.",
+      "boundary": "This paragraph absorbs the baseline part of the registry-baseline §4.2.3, not an entire extra lesson hidden inside it. Keep participation data simple, units fixed and the equilibrium model familiar. Distinguish a supply curve at different wages from measured labour-force totals. Review timing before finalising the target.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.3.3",
+      "title": "Werkloosheid en veranderingen op de arbeidsmarkt",
+      "kind": "theory",
+      "intended_learning": "Calculate unemployment using the labour force as denominator, distinguish the relevant causes and interpret labour-market changes.",
+      "retrieval_and_transfer": "Reuse §4.3.2’s equilibrium and Book 1 shift/new-equilibrium method. This is the second home of the absorbed equilibrium work.",
+      "proposed_target_brief": "Combine a compact labour-market source with one shift scenario: calculate unemployment, identify the cause and explain the direction of wage/employment pressure under stated adjustment assumptions.",
+      "boundary": "Distinguish the simplified clearing model from observed vacancies and mismatch. With data defined as labour demand = employment + vacancies, supply minus demand is not measured unemployment. Explain structural/frictional and demand-related unemployment at an introductory level; no output-gap or Phillips-curve model.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.3.4",
+      "title": "Minimumloon",
+      "kind": "theory",
+      "intended_learning": "Apply a minimum-price model to wages and distinguish effects on wage rates, employment, people seeking work and the wage bill.",
+      "retrieval_and_transfer": "Repeat §3.1.5’s price-floor technique and §4.3.2’s labour-market translation; reuse price-times-quantity and percentage calculations.",
+      "proposed_target_brief": "Determine whether a minimum wage binds, calculate the taught model outcomes and wage bill, and explain the difference between workers who retain employment and those who do not obtain work.",
+      "boundary": "State a competitive model, the wage unit and adjustment assumptions. Model outcomes are not universal empirical claims about every minimum-wage change. Use illustrative rates, not unverified current statutory figures.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.3.5",
+      "title": "Vakbonden, cao en arbeidsmarktbeleid",
+      "kind": "theory",
+      "intended_learning": "Explain collective bargaining and assess a bounded policy or agreement using wages, productivity, labour supply/demand and employment.",
+      "retrieval_and_transfer": "Repeat percentage/index comparisons, labour cost per unit, shifts and the difference between a binding wage floor and a change in the underlying market.",
+      "proposed_target_brief": "Evaluate a concise collective-agreement or training-policy proposal. Support the conclusion with a familiar calculation and a clearly stated mechanism.",
+      "boundary": "Do not turn this into formal bargaining-game theory. Introduce flexwork/zzp terminology as needed for the source without assuming that labels determine effects. Use institutional descriptions rather than unsupported current legal details. A competitiveness application may now combine already-taught trade reasoning with wage/productivity comparisons; it does not retrospectively make those calculations a Book 3 prerequisite.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.3.6",
+      "title": "Gemengde opgaven: arbeidsmarkt",
+      "kind": "gemengde_opgaven",
+      "intended_learning": "Integrate labour-market vocabulary, equilibrium and shifts, participation/unemployment, productivity and policy without new theory.",
+      "retrieval_and_transfer": "Retrieve all chapter operations plus the earlier minimum-price method. Include independent equilibrium evidence explicitly so it has not disappeared with the removed paragraph.",
+      "proposed_target_brief": "Use manageable source-based cases with at least one independent wage/quantity calculation and one qualified employment or policy conclusion.",
+      "boundary": "No seventh compulsory catch-up lesson. If the absorbed equilibrium targets cannot fit the existing lessons and supports, revise the exercise design and timing before production rather than claiming the capacity saving without evidence.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    }
+  ]
+}

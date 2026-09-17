@@ -1,0 +1,29 @@
+test_actual_derivative_dataset (test_package_repairs.ContextTests.test_actual_derivative_dataset) ... ok
+test_actual_population_dataset (test_package_repairs.ContextTests.test_actual_population_dataset) ... ok
+test_consumer_all31_without_manuscript_fallback (test_package_repairs.ContextTests.test_consumer_all31_without_manuscript_fallback) ... ok
+test_consumer_rejects_bad_asset_hash (test_package_repairs.ContextTests.test_consumer_rejects_bad_asset_hash) ... ok
+test_consumer_rejects_lost_figure (test_package_repairs.ContextTests.test_consumer_rejects_lost_figure) ... ok
+test_context_inside_exercise_survives (test_package_repairs.ContextTests.test_context_inside_exercise_survives) ... ok
+test_external_source_survives (test_package_repairs.ContextTests.test_external_source_survives) ... ok
+test_nested_original_paragraph_keeps_table_not_questions (test_package_repairs.ContextTests.test_nested_original_paragraph_keeps_table_not_questions) ... ok
+test_table_cells_and_formula_preserved (test_package_repairs.ContextTests.test_table_cells_and_formula_preserved) ... ok
+test_unattributed_subquestion_removed (test_package_repairs.ContextTests.test_unattributed_subquestion_removed) ... ok
+test_five_titles_match_current_target (test_package_repairs.FigureTests.test_five_titles_match_current_target) ... ok
+test_old_numbers_fail_same_rule (test_package_repairs.FigureTests.test_old_numbers_fail_same_rule) ... ok
+test_canonical_refs_and_concrete_asset_root (test_package_repairs.RegistryTests.test_canonical_refs_and_concrete_asset_root) ... ok
+test_counts_and_collision_titles (test_package_repairs.RegistryTests.test_counts_and_collision_titles) ... ok
+test_preserves_all24_and_does_not_mutate_input (test_package_repairs.RegistryTests.test_preserves_all24_and_does_not_mutate_input) ... ok
+test_rejects_blank_placeholder (test_package_repairs.RegistryTests.test_rejects_blank_placeholder) ... ok
+test_rejects_duplicate_candidate (test_package_repairs.RegistryTests.test_rejects_duplicate_candidate) ... ok
+test_rejects_lost_preserved_record (test_package_repairs.RegistryTests.test_rejects_lost_preserved_record) ... ok
+test_rejects_noncanonical_source_ref (test_package_repairs.RegistryTests.test_rejects_noncanonical_source_ref) ... ok
+test_rejects_unjustified_final_status (test_package_repairs.RegistryTests.test_rejects_unjustified_final_status) ... ok
+test_rejects_unknown_revision (test_package_repairs.RegistryTests.test_rejects_unknown_revision) ... ok
+test_rejects_unsafe_path_roots (test_package_repairs.RegistryTests.test_rejects_unsafe_path_roots) ... ok
+test_same_revision_not_approval_promotion (test_package_repairs.RegistryTests.test_same_revision_not_approval_promotion) ... ok
+test_top_and_record_revisions_agree (test_package_repairs.RegistryTests.test_top_and_record_revisions_agree) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.143s
+
+OK

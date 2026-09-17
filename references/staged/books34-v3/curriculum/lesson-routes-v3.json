@@ -1,0 +1,795 @@
+{
+  "3.1.1": {
+    "start": "1–2",
+    "independent": "5–6",
+    "guided_or_alternative": "3–4",
+    "target": "7",
+    "target_subquestions": [
+      "7a",
+      "7b",
+      "7c",
+      "7d",
+      "7e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 12,
+      "Doeloefening": 12,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Zonder maatregel één prijs; na de heffing twee prijzen bij dezelfde hoeveelheid. Leid het aanbod in kopersprijzen expliciet af.",
+    "assessment_boundaries": "Afdragen is niet hetzelfde als dragen. Pp is een ontvangst vóór productiekosten, geen winst."
+  },
+  "3.1.2": {
+    "start": "10–11",
+    "independent": "14–15",
+    "guided_or_alternative": "12–13",
+    "target": "16",
+    "target_subquestions": [
+      "16a",
+      "16b",
+      "16c",
+      "16d",
+      "16e"
+    ],
+    "minutes": null,
+    "total_minutes": null,
+    "one_lesson_status": "open_existing_timing_conflict",
+    "instruction_focus": "Behandel last per stuk, belastingopbrengst en verloren surplus afzonderlijk. De gecontroleerde prijsgevoeligheidsvergelijking hoort vóór zelfstandig werk.",
+    "assessment_boundaries": "De daling van CS + PS is niet geheel welvaartsverlies. O hoort bij verkochte eenheden; de verliesdriehoek bij weggevallen transacties."
+  },
+  "3.1.3": {
+    "start": "19–20",
+    "independent": "23–24",
+    "guided_or_alternative": "21–22; zo nodig 22A",
+    "target": "25",
+    "target_subquestions": [
+      "25a",
+      "25b",
+      "25c",
+      "25d",
+      "25e"
+    ],
+    "minutes": null,
+    "total_minutes": null,
+    "one_lesson_status": "open_existing_timing_conflict",
+    "instruction_focus": "Hergebruik de wig met omgekeerde richting. Maak de begrotingsrekening en de volledige welvaartsmaat zichtbaar vóór de target.",
+    "assessment_boundaries": "Betaal de subsidie over alle subsidiabele verkopen. Deze eerste analyse kent geen externe baten; die aanname verandert pas in §4.2.5."
+  },
+  "3.1.4": {
+    "start": "28–29",
+    "independent": "32–33",
+    "guided_or_alternative": "30–31",
+    "target": "34",
+    "target_subquestions": [
+      "34a",
+      "34b",
+      "34c",
+      "34d",
+      "34e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 9,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 13,
+      "Doeloefening": 13,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Controleer eerst of de maximumprijs bindt. Onderscheid gewenste vraag, aanbod en feitelijke verkoop.",
+    "assessment_boundaries": "Een lage toegestane prijs garandeert geen toegang. De bron bepaalt welke kopers het product krijgen; geef geen extra welvaartsrekening als eis."
+  },
+  "3.1.5": {
+    "start": "37–38",
+    "independent": "41–42",
+    "guided_or_alternative": "39–40; 40A vóór de quotumvergelijking",
+    "target": "43",
+    "target_subquestions": [
+      "43a",
+      "43b",
+      "43c",
+      "43d",
+      "43e"
+    ],
+    "minutes": null,
+    "total_minutes": null,
+    "one_lesson_status": "open_existing_timing_conflict",
+    "instruction_focus": "Behandel minimumprijs, opkoopregel en productiequotum als onderscheiden regelingen. Het quotum vervangt in de vergelijking de gehele prijs- en opkoopregeling.",
+    "assessment_boundaries": "Een minimumprijs bevat niet vanzelf een aankoopbelofte. Lees bij een bindend productiequotum de prijs van de vraaglijn af."
+  },
+  "3.1.6": {
+    "start": "46",
+    "independent": "47",
+    "guided_or_alternative": "47A als gerichte vervanging of later herstel",
+    "target": "48",
+    "target_subquestions": [
+      "48a",
+      "48b",
+      "48c",
+      "48d",
+      "48e",
+      "48f"
+    ],
+    "minutes": {
+      "Start / ophalen": 8,
+      "Motivatie": 0,
+      "Instructie": 4,
+      "Uitgewerkt voorbeeld": 0,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 25,
+      "Feedback / afronding": 6
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Laat leerlingen het instrument kiezen uit de bron; geef de methode niet vooraf per deelvraag weg. Opgave 47A komt niet boven op de kern.",
+    "assessment_boundaries": "Vraag bij fouten welke hoeveelheid wordt belast, gesubsidieerd, gekocht of verhandeld. De bron rechtvaardigt geen volledige welvaartsrangschikking van beide plannen."
+  },
+  "3.2.1": {
+    "start": "1–2",
+    "independent": "5–6",
+    "guided_or_alternative": "3–4",
+    "target": "7",
+    "target_subquestions": [
+      "7a",
+      "7b",
+      "7c",
+      "7d",
+      "7e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 12,
+      "Doeloefening": 12,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Verbind de prijs in de marktgrafiek met de horizontale opbrengstlijn van één onderneming. Laat Q en q steeds benoemen.",
+    "assessment_boundaries": "Vrije toetreding mag als kenmerk worden genoemd, maar het formele langetermijnmechanisme is geen Boek 3-toetsdoel meer. Een horizontale firmalijn is geen horizontale marktvraag."
+  },
+  "3.2.2": {
+    "start": "11–12",
+    "independent": "15–16",
+    "guided_or_alternative": "13–14",
+    "target": "17",
+    "target_subquestions": [
+      "17a",
+      "17b",
+      "17c",
+      "17d",
+      "17e"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 11,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 12,
+      "Doeloefening": 12,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Nieuwe afzonderlijke les: totale kosten → afgeleide → marginale kosten op een punt. Vergelijk pas daarna met gemiddelde extra kosten over een eindige tabelstap.",
+    "assessment_boundaries": "Differentieer alleen aq² + bq + c. De afgeleide van de constante is nul, maar die kosten verdwijnen niet uit TK. Hier nog geen productieoptimum of winstrechthoek als einddoel."
+  },
+  "3.2.3": {
+    "start": "20–21",
+    "independent": "25a–d en 26a–b",
+    "guided_or_alternative": "22–24; vervang vergelijkbare tussenstappen",
+    "target": "27",
+    "target_subquestions": [
+      "27a",
+      "27b",
+      "27c",
+      "27d",
+      "27e",
+      "27f"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 9,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 13,
+      "Doeloefening": 14,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "De afgeleide is opgehaalde voorkennis uit §3.2.2. Nieuw is de economische keuze: marginale vergelijking, haalbaarheid en winst bij dezelfde q.",
+    "assessment_boundaries": "Beoordeel beide kanten van MO = MK en de capaciteit. Een positief winstbedrag bewijst niet dat extra productie gunstig is. Gebruik GTK pas ná de keuze van q."
+  },
+  "3.2.4": {
+    "start": "31a–c",
+    "independent": "33a–b en 34a",
+    "guided_or_alternative": "32 als vervangende oefening bij fouten met GTK",
+    "target": "35",
+    "target_subquestions": [
+      "35a",
+      "35b",
+      "35c",
+      "35d",
+      "35e"
+    ],
+    "minutes": {
+      "Start / ophalen": 8,
+      "Motivatie": 0,
+      "Instructie": 4,
+      "Uitgewerkt voorbeeld": 0,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 25,
+      "Feedback / afronding": 6
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "De target vergelijkt twee korte-termijnmomenten. Het aantal bedrijven en de kostentechniek blijven in het onderzochte tijdvak gelijk.",
+    "assessment_boundaries": "Geen vragen over toetreding, langetermijnprijs of normale ondernemersbeloning toevoegen. De nulwinst in de beginsituatie is hier een rekenuitkomst, geen nieuw langetermijnresultaat."
+  },
+  "3.3.1": {
+    "start": "1–2",
+    "independent": "5–6",
+    "guided_or_alternative": "3–4",
+    "target": "7",
+    "target_subquestions": [
+      "7a",
+      "7b",
+      "7c",
+      "7d",
+      "7e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 12,
+      "Doeloefening": 12,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Vraag een verklaring van relatief minder opofferen, ook wanneer hetzelfde land in beide activiteiten productiever is.",
+    "assessment_boundaries": "Geen productie- of specialisatietabellen met berekende comparatieve kosten. Productiviteit en concurrentiepositie blijven kwalitatief en brongebonden."
+  },
+  "3.3.2": {
+    "start": "11–12",
+    "independent": "15–16",
+    "guided_or_alternative": "13–14",
+    "target": "17",
+    "target_subquestions": [
+      "17a",
+      "17b",
+      "17c",
+      "17d",
+      "17e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 12,
+      "Doeloefening": 12,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Gebruik de opgegeven wereldprijs; onderscheid binnenlandse productie, consumptie en handelsstroom. Behandel ook de omgekeerde exportrichting.",
+    "assessment_boundaries": "Binnenlandse vraag is niet binnenlandse productie. De kleine-landaanname en de voorwaarden voor buitenlandse handel staan in de bron; geen nieuwe wisselkoersrekening."
+  },
+  "3.3.3": {
+    "start": "21–22",
+    "independent": "25–26",
+    "guided_or_alternative": "23–24",
+    "target": "27",
+    "target_subquestions": [
+      "27a",
+      "27b",
+      "27c",
+      "27d",
+      "27e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 12,
+      "Doeloefening": 12,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Bereken heffingsopbrengst over de resterende import. Leer de grens met geen import met het meegeleverde contrast.",
+    "assessment_boundaries": "Wereldprijs plus heffing mag niet mechanisch worden gebruikt nadat de import verdwijnt. Een gratis importvergunning brengt niet automatisch geld in de overheidskas."
+  },
+  "3.3.4": {
+    "start": "31",
+    "independent": "32 of 33 (kies één)",
+    "guided_or_alternative": "34 als aanvullende consolidatie",
+    "target": "35",
+    "target_subquestions": [
+      "35a",
+      "35b",
+      "35c",
+      "35d",
+      "35e",
+      "35f"
+    ],
+    "minutes": {
+      "Start / ophalen": 8,
+      "Motivatie": 0,
+      "Instructie": 4,
+      "Uitgewerkt voorbeeld": 0,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 25,
+      "Feedback / afronding": 6
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Behoud de brongeleide handelsconclusie. Afsluitende herhaling 38b vraagt nu een korte-termijnproductieadvies, niet het verplaatste toetredingsmechanisme.",
+    "assessment_boundaries": "Opmerkingen over banen blijven gewone bronredenering; geen arbeidsmarktformules als voorkennis. Boek 4 begint nu met langetermijnaanpassing en daarna monopolie."
+  },
+  "4.1.1": {
+    "start": "1–2",
+    "independent": "5a–c en 6b",
+    "guided_or_alternative": "3–4",
+    "target": "7",
+    "target_subquestions": [
+      "7a",
+      "7b",
+      "7c",
+      "7d",
+      "7e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 11,
+      "Doeloefening": 13,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Verplaatst uit voormalig §3.2.3. Herstel binnen het startwerk de firmaberekening; voeg geen aparte recaples toe. Introduceer normale beloning en economische winst hier.",
+    "assessment_boundaries": "Het nulwinstresultaat geldt bij de genoemde vrije toe-/uittreding en onveranderde kosten. Nul economische winst is niet nul omzet of geen ondernemersbeloning. Verlies betekent niet automatisch onmiddellijk stilleggen."
+  },
+  "4.1.2": {
+    "start": "11–12",
+    "independent": "16–17",
+    "guided_or_alternative": "13–15",
+    "target": "18",
+    "target_subquestions": [
+      "18a",
+      "18b",
+      "18c",
+      "18d",
+      "18e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 12,
+      "Doeloefening": 12,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Gebruik §4.1.1 als contrast: vrije toetreding tegenover een expliciete barrière. Laat zien dat de monopolist prijs en afzet niet onafhankelijk kiest.",
+    "assessment_boundaries": "Een merk of een foto van één winkel bewijst geen monopolie. Begrens de markt en noem de barrière uit de bron; alleenrecht betekent geen onbeperkte prijszetting."
+  },
+  "4.1.3": {
+    "start": "21–22",
+    "independent": "26a–c en 27a–b",
+    "guided_or_alternative": "23–25",
+    "target": "28",
+    "target_subquestions": [
+      "28a",
+      "28b",
+      "28c",
+      "28d",
+      "28e"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 11,
+      "Doeloefening": 14,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Hergebruik differentiatie uit §3.2.2. Leg het verlies op eerder verkochte eenheden uit vóór de algemene conclusie MO < P.",
+    "assessment_boundaries": "Bij uniforme prijs verandert ook de opbrengst van bestaande verkopen. Vergelijk een tabelgemiddelde niet alsof het dezelfde grootheid is als MO op een punt."
+  },
+  "4.1.4": {
+    "start": "31–32",
+    "independent": "36a–c en 37a",
+    "guided_or_alternative": "33–35",
+    "target": "38",
+    "target_subquestions": [
+      "38a",
+      "38b",
+      "38c",
+      "38d",
+      "38e",
+      "38f"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 11,
+      "Doeloefening": 15,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Hergebruik de marginale keuze uit §3.2.3 en verander expliciet de prijsroute. Markeer q bij MO = MK en lees daarna P op GO.",
+    "assessment_boundaries": "P = MK is hier geen winstregel. Capaciteit, marginale richtingen en de vergelijking met q = 0 blijven nodig waar gevraagd. Monopoliewelvaart volgt in §4.2.1."
+  },
+  "4.1.5": {
+    "start": "41 en 41A",
+    "independent": "42",
+    "guided_or_alternative": "43–44 en 46–48 als aanvullende selectie",
+    "target": "45",
+    "target_subquestions": [
+      "45a",
+      "45b",
+      "45c",
+      "45d",
+      "45e",
+      "45f"
+    ],
+    "minutes": {
+      "Start / ophalen": 8,
+      "Motivatie": 0,
+      "Instructie": 4,
+      "Uitgewerkt voorbeeld": 0,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 25,
+      "Feedback / afronding": 6
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "41A haalt langetermijnbetekenis op zonder de bestaande target uit te breiden. KleurFix en de prijsnemer blijven twee afzonderlijke markten.",
+    "assessment_boundaries": "Dezelfde vergelijking voor q betekent geen identieke prijsroute. Laat een leerling de gebruikte lijn benoemen; voeg geen prijsdiscriminatie of nieuwe welvaartsrekening toe."
+  },
+  "4.2.1": {
+    "start": "1–2",
+    "independent": "5–6",
+    "guided_or_alternative": "3–4",
+    "target": "7",
+    "target_subquestions": [
+      "7a",
+      "7b",
+      "7c",
+      "7d",
+      "7e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 9,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 15,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Haal de monopolieprocedure uit nieuwe §4.1.4 terug. Scheid overdracht op blijvende verkopen van de verloren transacties.",
+    "assessment_boundaries": "Houd de kosten en vraag vergelijkbaar. Producentensurplus is niet winst wanneer constante kosten bestaan. Een hogere producentenopbrengst bewijst geen hoger totaal surplus."
+  },
+  "4.2.2": {
+    "start": "10–11",
+    "independent": "14–15",
+    "guided_or_alternative": "12–13",
+    "target": "16",
+    "target_subquestions": [
+      "16a",
+      "16b",
+      "16c",
+      "16d",
+      "16e"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 9,
+      "Uitgewerkt voorbeeld": 9,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 15,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Optimaliseer per herkenbare groep bij gemeenschappelijke constante MK en niet-bindende gezamenlijke capaciteit. De uniforme vergelijkingsprijs is gegeven.",
+    "assessment_boundaries": "Trek gezamenlijke vaste kosten maar één keer af. Meer winst of een onveranderde totale afzet garandeert geen hoger totaal surplus; de verdeling van verkopen verandert."
+  },
+  "4.2.3": {
+    "start": "19–20",
+    "independent": "23–24",
+    "guided_or_alternative": "21–22",
+    "target": "25",
+    "target_subquestions": [
+      "25a",
+      "25b",
+      "25c",
+      "25d",
+      "25e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 8,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 13,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 52,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Classificeer met bronbewijs en pas één bekende rekenroute toe in de gegeven korte-termijncasus.",
+    "assessment_boundaries": "Een dalende eigen vraag bewijst geen monopolie. Geen universele oligopolievraagfunctie, reactiecurve of spelmatrix; het gedrag van andere aanbieders is volgens het model gelijk gehouden."
+  },
+  "4.2.4": {
+    "start": "28–29",
+    "independent": "32–33",
+    "guided_or_alternative": "30–31",
+    "target": "34",
+    "target_subquestions": [
+      "34a",
+      "34b",
+      "34c",
+      "34d",
+      "34e"
+    ],
+    "minutes": null,
+    "total_minutes": null,
+    "one_lesson_status": "open_existing_timing_conflict",
+    "instruction_focus": "Introduceer de derde partij en de maatschappelijke kostengrens vóór de heffing. Hergebruik de belastingroute en tel de externe schade afzonderlijk mee.",
+    "assessment_boundaries": "CS + PS + overheidsontvangsten − schade is hier de relevante maat. Belasting is een overdracht, schade niet. De verliesdriehoek en onafhankelijke voorbereiding mogen niet verdwijnen om tijd te winnen."
+  },
+  "4.2.5": {
+    "start": "37–38",
+    "independent": "41–42",
+    "guided_or_alternative": "39–40",
+    "target": "43",
+    "target_subquestions": [
+      "43a",
+      "43b",
+      "43c",
+      "43d",
+      "43e"
+    ],
+    "minutes": null,
+    "total_minutes": null,
+    "one_lesson_status": "open_existing_timing_conflict",
+    "instruction_focus": "Introduceer baten voor anderen en verbind ze met de bekende subsidie. Houd eigen voordeel en extern voordeel uit elkaar.",
+    "assessment_boundaries": "Tel uitgaven af en externe baten op; ze vallen alleen numeriek weg bij bijzondere gegeven bedragen. Behoud het oefencontrast met ongelijke subsidie en externe bate."
+  },
+  "4.2.6": {
+    "start": "46–47",
+    "independent": "50–51",
+    "guided_or_alternative": "48–49",
+    "target": "52",
+    "target_subquestions": [
+      "52a",
+      "52b",
+      "52c",
+      "52d",
+      "52e"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 8,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 3,
+      "Zelfstandig": 11,
+      "Doeloefening": 15,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Beoordeel twee bekende instrumenten aan de hand van één expliciet criterium en de bron. Dit is niet een nieuwe behandeling van ieder instrument.",
+    "assessment_boundaries": "Uitvoeringskosten gebruiken middelen en zijn geen gewone overdracht. Een verdelingsvoorkeur van producenten is niet automatisch de maatschappelijke efficiëntie-uitkomst."
+  },
+  "4.2.7": {
+    "start": "55",
+    "independent": "56 of 57 (kies één)",
+    "guided_or_alternative": "59 als extra consolidatie; 60 als herhaling",
+    "target": "58",
+    "target_subquestions": [
+      "58a",
+      "58b",
+      "58c",
+      "58d",
+      "58e",
+      "58f"
+    ],
+    "minutes": {
+      "Start / ophalen": 8,
+      "Motivatie": 0,
+      "Instructie": 4,
+      "Uitgewerkt voorbeeld": 0,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 25,
+      "Feedback / afronding": 6
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Laat leerlingen verklaren waarom minder transacties in de ene situatie welvaartsverlies en in de andere juist winst geeft.",
+    "assessment_boundaries": "De kosten en baten van derden veranderen de maatstaf, niet de rekenregels. Houd de twee oefenmarkten uit elkaar en stel geen nieuwe beleidsvoorwaarden."
+  },
+  "4.3.1": {
+    "start": "1–2",
+    "independent": "5–6",
+    "guided_or_alternative": "3–4",
+    "target": "7",
+    "target_subquestions": [
+      "7a",
+      "7b",
+      "7c",
+      "7d"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 11,
+      "Doeloefening": 14,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Maak de rolwisseling zichtbaar: werkgevers vragen arbeid, huishoudens leveren die. Gebruik eerst uren en dezelfde tijdseenheid bij output en productiviteit.",
+    "assessment_boundaries": "Fte is niet hetzelfde als personen. Hogere productiviteit bij gelijkblijvende productie verlaagt benodigde uren; bij meer orders kan de arbeidsinzet toch groeien."
+  },
+  "4.3.2": {
+    "start": "10–11",
+    "independent": "14–15",
+    "guided_or_alternative": "12–13",
+    "target": "16",
+    "target_subquestions": [
+      "16a",
+      "16b",
+      "16c"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 9,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 11,
+      "Doeloefening": 13,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Scheid de bevolkingstelling van de aparte marktfunctie. De evenwichtsvergelijking is bekende algebra met nieuwe actoren en eenheden.",
+    "assessment_boundaries": "Bruto- en netto-participatie gebruiken de bevolkingsnoemer. Een gemeten beroepsbevolking is geen aanbodlijn bij alle lonen. Voeg niet de volledige verplaatste beleidsles toe."
+  },
+  "4.3.3": {
+    "start": "19–20",
+    "independent": "23–24",
+    "guided_or_alternative": "21–22",
+    "target": "25",
+    "target_subquestions": [
+      "25a",
+      "25b",
+      "25c"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 9,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 14,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Onderscheid de waargenomen werkloosheid van de uitkomst van een vereenvoudigd model. Vergelijk de gegeven vraagverschuiving bij meebewegend en vast loon.",
+    "assessment_boundaries": "Vacatures worden niet van werklozen afgetrokken. Een loonverandering is een beweging langs de ongewijzigde andere lijn. Geen output-gap- of Phillipsmodel als voorkennis."
+  },
+  "4.3.4": {
+    "start": "28–29",
+    "independent": "32–33",
+    "guided_or_alternative": "30–31",
+    "target": "34",
+    "target_subquestions": [
+      "34a",
+      "34b",
+      "34c",
+      "34d"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 9,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 11,
+      "Doeloefening": 14,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Haal de minimumprijsprocedure op en verander expliciet de loon- en arbeidseenheid. Bereken de loonsom uit daadwerkelijk betaalde werknemers en uren.",
+    "assessment_boundaries": "Het aanbodoverschot bestaat niet alleen uit mensen die hun baan verliezen. Geen overheidsaankoop van ongebruikte arbeid, geen algemene empirische voorspelling buiten de modelaannames."
+  },
+  "4.3.5": {
+    "start": "37",
+    "independent": "39",
+    "guided_or_alternative": "38 als gerichte productiviteitsherhaling",
+    "target": "40",
+    "target_subquestions": [
+      "40a",
+      "40b",
+      "40c",
+      "40d",
+      "40e",
+      "40f"
+    ],
+    "minutes": {
+      "Start / ophalen": 7,
+      "Motivatie": 0,
+      "Instructie": 4,
+      "Uitgewerkt voorbeeld": 0,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 26,
+      "Feedback / afronding": 6
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Dit is de hernummerde gemengde les, niet de oude cao-les. Bron C beschrijft een werkproces; de rekentechniek komt uit §4.3.1.",
+    "assessment_boundaries": "Het minimumloon in opgave 39 vraagt geen kennis van cao’s. Het hoofdstuk behoudt participatie, werkloosheid, evenwicht, verschuivingen en productiviteit; collectieve onderhandelingen en scholingsbeleid zijn uitgesteld."
+  }
+}

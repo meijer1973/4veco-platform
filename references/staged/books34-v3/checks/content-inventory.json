@@ -1,0 +1,123 @@
+{
+  "3.1": {
+    "paragraph_count": 6,
+    "exercise_count": 51,
+    "question_count": 141,
+    "answer_count": 141,
+    "target_exercises": {
+      "3.1.1": "7",
+      "3.1.2": "16",
+      "3.1.3": "25",
+      "3.1.4": "34",
+      "3.1.5": "43",
+      "3.1.6": "48"
+    },
+    "checks": {
+      "missing_answers": [],
+      "extra_answers": [],
+      "duplicate_questions": [],
+      "duplicate_answers": [],
+      "missing_assets": []
+    }
+  },
+  "3.2": {
+    "paragraph_count": 4,
+    "exercise_count": 37,
+    "question_count": 104,
+    "answer_count": 104,
+    "target_exercises": {
+      "3.2.1": "7",
+      "3.2.2": "17",
+      "3.2.3": "27",
+      "3.2.4": "35"
+    },
+    "checks": {
+      "missing_answers": [],
+      "extra_answers": [],
+      "duplicate_questions": [],
+      "duplicate_answers": [],
+      "missing_assets": []
+    }
+  },
+  "3.3": {
+    "paragraph_count": 4,
+    "exercise_count": 38,
+    "question_count": 108,
+    "answer_count": 108,
+    "target_exercises": {
+      "3.3.1": "7",
+      "3.3.2": "17",
+      "3.3.3": "27",
+      "3.3.4": "35"
+    },
+    "checks": {
+      "missing_answers": [],
+      "extra_answers": [],
+      "duplicate_questions": [],
+      "duplicate_answers": [],
+      "missing_assets": []
+    }
+  },
+  "4.1": {
+    "paragraph_count": 5,
+    "exercise_count": 49,
+    "question_count": 135,
+    "answer_count": 135,
+    "target_exercises": {
+      "4.1.1": "7",
+      "4.1.2": "18",
+      "4.1.3": "28",
+      "4.1.4": "38",
+      "4.1.5": "45"
+    },
+    "checks": {
+      "missing_answers": [],
+      "extra_answers": [],
+      "duplicate_questions": [],
+      "duplicate_answers": [],
+      "missing_assets": []
+    }
+  },
+  "4.2": {
+    "paragraph_count": 7,
+    "exercise_count": 60,
+    "question_count": 169,
+    "answer_count": 169,
+    "target_exercises": {
+      "4.2.1": "7",
+      "4.2.2": "16",
+      "4.2.3": "25",
+      "4.2.4": "34",
+      "4.2.5": "43",
+      "4.2.6": "52",
+      "4.2.7": "58"
+    },
+    "checks": {
+      "missing_answers": [],
+      "extra_answers": [],
+      "duplicate_questions": [],
+      "duplicate_answers": [],
+      "missing_assets": []
+    }
+  },
+  "4.3": {
+    "paragraph_count": 5,
+    "exercise_count": 41,
+    "question_count": 77,
+    "answer_count": 77,
+    "target_exercises": {
+      "4.3.1": "7",
+      "4.3.2": "16",
+      "4.3.3": "25",
+      "4.3.4": "34",
+      "4.3.5": "40"
+    },
+    "checks": {
+      "missing_answers": [],
+      "extra_answers": [],
+      "duplicate_questions": [],
+      "duplicate_answers": [],
+      "missing_assets": []
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id": "4.2.1",
+  "module": 4,
+  "chapter": 2,
+  "paragraph": 1,
+  "paragraph_title": "Welvaartseffecten van monopolie",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.2.1",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "7",
+    "context": "Doeloefening Bron · De enige VR-studio Eén studio bedient de hele beschreven markt. Vraag: P = 80 − 0,5Q. Kosten: TK = 200 + 20Q + 0,25Q²; dus MK = 20 + 0,5Q. Q is sessies per week, P is euro per sessie. De capaciteit is 100 sessies. De € 200 constante kosten blijven deze week in beide situaties gelijk. Vergelijk met dezelfde vraag en kosten bij de efficiënte hoeveelheid. Geen externe effecten of andere veranderingen. Opgave 7 · De VR-studio Gebruik de bron en de basisgrafiek. De lijnen zijn al gegeven. Figuur 6. Gegeven lijnen voor de VR-studio. Voeg alleen de gevraagde markeringen en arceringen toe.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"source\"><b>Bron · De enige VR-studio</b><br/>Eén studio bedient de hele beschreven markt. Vraag: P = 80 − 0,5Q. Kosten: TK = 200 + 20Q + 0,25Q²; dus MK = 20 + 0,5Q. Q is sessies per week, P is euro per sessie. De capaciteit is 100 sessies. De € 200 constante kosten blijven deze week in beide situaties gelijk. Vergelijk met dezelfde vraag en kosten bij de efficiënte hoeveelheid. Geen externe effecten of andere veranderingen.</div>\n<div class=\"exercise target\" data-exercise=\"7\" id=\"opg7\"><p><b>Opgave 7 · De VR-studio</b></p><p>Gebruik de bron en de basisgrafiek. De lijnen zijn al gegeven.</p></div>\n<figure><img alt=\"Figuur 6. Gegeven lijnen voor de VR-studio. Voeg alleen de gevraagde markeringen en arceringen toe.\" src=\"books/book-4/chapters/4.2/_assets/421_target.svg\"/><figcaption>Figuur 6. Gegeven lijnen voor de VR-studio. Voeg alleen de gevraagde markeringen en arceringen toe.</figcaption></figure>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n<div class=\"source\"><b>Bron · De enige VR-studio</b><br>Eén studio bedient de hele beschreven markt. Vraag: P = 80 − 0,5Q. Kosten: TK = 200 + 20Q + 0,25Q²; dus MK = 20 + 0,5Q. Q is sessies per week, P is euro per sessie. De capaciteit is 100 sessies. De € 200 constante kosten blijven deze week in beide situaties gelijk. Vergelijk met dezelfde vraag en kosten bij de efficiënte hoeveelheid. Geen externe effecten of andere veranderingen.</div>\n\n<div class=\"exercise target\" id=\"opg7\" data-exercise=\"7\"><p><b>Opgave 7 · De VR-studio</b></p><p>Gebruik de bron en de basisgrafiek. De lijnen zijn al gegeven.</p><p data-question=\"7a\"><b>a.</b> <span class=\"muted\">(3p)</span> Bereken Qm en Pm, en daarna Qe en Pe.</p><p data-question=\"7b\"><b>b.</b> <span class=\"muted\">(3p)</span> Markeer beide uitkomsten en arceer CS en PS bij monopolie. Bereken die bedragen en de winst.</p><p data-question=\"7c\"><b>c.</b> <span class=\"muted\">(3p)</span> Bereken TS in beide situaties en het welvaartsverlies. Benoem basis en hoogte van de verliesdriehoek.</p><p data-question=\"7d\"><b>d.</b> <span class=\"muted\">(2p)</span> Bereken de overdracht op de blijvende sessies. Leg uit waarom die niet zelf het welvaartsverlies is.</p><p data-question=\"7e\"><b>e.</b> <span class=\"muted\">(2p)</span> Beoordeel: “Meer producentensurplus betekent dat deze uitkomst voor de samenleving beter én eerlijker is.”</p></div>\n\n<figure><img src=\"_assets/421_target.svg\" alt=\"Figuur 6. Gegeven lijnen voor de VR-studio. Voeg alleen de gevraagde markeringen en arceringen toe.\"><figcaption>Figuur 6. Gegeven lijnen voor de VR-studio. Voeg alleen de gevraagde markeringen en arceringen toe.</figcaption></figure>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-4/chapters/4.2/_assets/421_target.svg",
+        "sha256": "6c1b8a1588fc62d8af21d389d7fb90d05b275ed355baa838a49e2258b3e8879f"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 3,
+        "prompt": "Bereken Qm en Pm, en daarna Qe en Pe.",
+        "observable_operation": "Bereken Qm en Pm, en daarna Qe en Pe.",
+        "source_question_id": "7a"
+      },
+      {
+        "label": "b",
+        "points": 3,
+        "prompt": "Markeer beide uitkomsten en arceer CS en PS bij monopolie. Bereken die bedragen en de winst.",
+        "observable_operation": "Markeer beide uitkomsten en arceer CS en PS bij monopolie. Bereken die bedragen en de winst.",
+        "source_question_id": "7b"
+      },
+      {
+        "label": "c",
+        "points": 3,
+        "prompt": "Bereken TS in beide situaties en het welvaartsverlies. Benoem basis en hoogte van de verliesdriehoek.",
+        "observable_operation": "Bereken TS in beide situaties en het welvaartsverlies. Benoem basis en hoogte van de verliesdriehoek.",
+        "source_question_id": "7c"
+      },
+      {
+        "label": "d",
+        "points": 2,
+        "prompt": "Bereken de overdracht op de blijvende sessies. Leg uit waarom die niet zelf het welvaartsverlies is.",
+        "observable_operation": "Bereken de overdracht op de blijvende sessies. Leg uit waarom die niet zelf het welvaartsverlies is.",
+        "source_question_id": "7d"
+      },
+      {
+        "label": "e",
+        "points": 2,
+        "prompt": "Beoordeel: “Meer producentensurplus betekent dat deze uitkomst voor de samenleving beter én eerlijker is.”",
+        "observable_operation": "Beoordeel: “Meer producentensurplus betekent dat deze uitkomst voor de samenleving beter én eerlijker is.”",
+        "source_question_id": "7e"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. MO = 80 − Q. Monopolie: 80 − Q = 20 + 0,5Q → 60 = 1,5Q → Qm = 40 sessies, Pm = € 60. Efficiënt: 80 − 0,5Q = 20 + 0,5Q → Qe = 60, Pe = € 50. Beide passen binnen 100.",
+    "b": "b. CSm = ½ × 40 × (80 − 60) = € 400. MK(40) = € 40. PSm = 40 × (60 − 40) + ½ × 40 × (40 − 20) = 800 + 400 = € 1.200. Winst = PS − TCK = 1.200 − 200 = € 1.000 per week. Gebieden: CS tussen vraag en P = 60; PS tussen P = 60 en MK, tot Q = 40.",
+    "c": "c. TSm = 400 + 1.200 = € 1.600. Efficiënt: CSe = ½ × 60 × 30 = € 900 en PSe = ½ × 60 × 30 = € 900; TSe = € 1.800. Verlies = € 200 per week. Basis = 60 − 40 = 20 sessies; hoogte = 60 − 40 = € 20 per sessie; ½ × 20 × 20 = € 200.",
+    "d": "d. Overdracht = 40 × (60 − 50) = € 400 per week. Die € 400 verplaatst zich van kopers naar de aanbieder en blijft binnen CS + PS. Het verlies van € 200 betreft niet meer uitgevoerde, gezamenlijk voordelige sessies.",
+    "e": "e. Onjuist. PS stijgt van € 900 naar € 1.200, maar TS daalt van € 1.800 naar € 1.600. Wie het voordeel krijgt en wat eerlijk is, vragen bovendien een afzonderlijk verdelingsoordeel. De berekening bevat geen norm voor eerlijkheid."
+  },
+  "answer_model_support_html": [],
+  "answer_figures": [],
+  "lesson_goals": [
+    "Je kunt de monopolie-uitkomst vergelijken met een efficiënte uitkomst.",
+    "Je kunt CS, PS en totaal surplus berekenen en arceren.",
+    "Je kunt een overdracht onderscheiden van welvaartsverlies en PS onderscheiden van winst."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.2.1-a",
+      "description": "Bereken Qm en Pm, en daarna Qe en Pe."
+    },
+    {
+      "local_operation_id": "4.2.1-b",
+      "description": "Markeer beide uitkomsten en arceer CS en PS bij monopolie. Bereken die bedragen en de winst."
+    },
+    {
+      "local_operation_id": "4.2.1-c",
+      "description": "Bereken TS in beide situaties en het welvaartsverlies. Benoem basis en hoogte van de verliesdriehoek."
+    },
+    {
+      "local_operation_id": "4.2.1-d",
+      "description": "Bereken de overdracht op de blijvende sessies. Leg uit waarom die niet zelf het welvaartsverlies is."
+    },
+    {
+      "local_operation_id": "4.2.1-e",
+      "description": "Beoordeel: “Meer producentensurplus betekent dat deze uitkomst voor de samenleving beter én eerlijker is.”"
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Repeat §4.1.4’s quantity-and-price calculation and Book 2 CS/PS/total-surplus areas as essential parts of the current task."
+  ],
+  "new_skills_introduced": [
+    "Compare monopoly with an appropriate competitive/efficient benchmark and distinguish a redistribution of surplus from a welfare loss."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "Keep demand, cost conditions and welfare boundary comparable across scenarios. Producer surplus is not automatically profit; do not treat every transfer between buyer and seller as a loss.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.2.1",
+  "structural_retrieval_plan": "Repeat §4.1.4’s quantity-and-price calculation and Book 2 CS/PS/total-surplus areas as essential parts of the current task.",
+  "structural_scope_boundary": "Keep demand, cost conditions and welfare boundary comparable across scenarios. Producer surplus is not automatically profit; do not treat every transfer between buyer and seller as a loss.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.2/4.2.1 manuscript.md",
+    "student_manuscript_sha256": "e62606f483a3cab40f9951f363d62f07d2ababc4eeb6829331df2566cc96df39",
+    "answer_file": "books/book-4/chapters/4.2/Antwoorden.md",
+    "answer_file_sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9",
+    "chapter_student_pages": [
+      9
+    ],
+    "complete_book_pages": [
+      61
+    ]
+  },
+  "lesson_route": {
+    "start": "1–2",
+    "independent": "5–6",
+    "guided_or_alternative": "3–4",
+    "target": "7",
+    "target_subquestions": [
+      "7a",
+      "7b",
+      "7c",
+      "7d",
+      "7e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 9,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 15,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Haal de monopolieprocedure uit nieuwe §4.1.4 terug. Scheid overdracht op blijvende verkopen van de verloren transacties.",
+    "assessment_boundaries": "Houd de kosten en vraag vergelijkbaar. Producentensurplus is niet winst wanneer constante kosten bestaan. Een hogere producentenopbrengst bewijst geen hoger totaal surplus."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.2.1",
+      "disposition": "retain",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "47cb5740def371fcac2b667533a523902e33ab5e9010d3daa3f019dc00e6f0fe"
+}

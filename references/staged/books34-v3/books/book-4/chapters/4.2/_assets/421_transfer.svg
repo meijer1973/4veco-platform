@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430" role="img"><title>Een overdracht is geen verloren surplus</title>
+<rect width="900" height="430" rx="8" fill="#f5f8fa"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10" fill="none" stroke="#637986" stroke-width="1.5"/></marker><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0" stroke="#183247" stroke-width="1" opacity=".25"/></pattern><pattern id="horizontal" width="10" height="8" patternUnits="userSpaceOnUse"><path d="M0 4H10" stroke="#183247" stroke-width="1" opacity=".22"/></pattern><pattern id="cross" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0M0 0L10 10" stroke="#183247" stroke-width="1" opacity=".25"/></pattern></defs>
+<text x="452.0000" y="28.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">Een overdracht is geen verloren surplus</text>
+<text x="78.0000" y="55.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#183247">P, MO en MK (€ per eenheid)</text>
+<line x1="78.0000" y1="76.0000" x2="78.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="78.0000" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">0</text>
+<line x1="202.6667" y1="76.0000" x2="202.6667" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="202.6667" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">10</text>
+<line x1="327.3333" y1="76.0000" x2="327.3333" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="327.3333" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">20</text>
+<line x1="452.0000" y1="76.0000" x2="452.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="452.0000" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">30</text>
+<line x1="576.6667" y1="76.0000" x2="576.6667" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="576.6667" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">40</text>
+<line x1="701.3333" y1="76.0000" x2="701.3333" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="701.3333" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">50</text>
+<line x1="826.0000" y1="76.0000" x2="826.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="826.0000" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">60</text>
+<line x1="78.0000" y1="344.0000" x2="826.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="349.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">0</text>
+<line x1="78.0000" y1="310.5000" x2="826.0000" y2="310.5000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="315.5000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">10</text>
+<line x1="78.0000" y1="277.0000" x2="826.0000" y2="277.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="282.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">20</text>
+<line x1="78.0000" y1="243.5000" x2="826.0000" y2="243.5000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="248.5000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">30</text>
+<line x1="78.0000" y1="210.0000" x2="826.0000" y2="210.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="215.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">40</text>
+<line x1="78.0000" y1="176.5000" x2="826.0000" y2="176.5000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="181.5000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">50</text>
+<line x1="78.0000" y1="143.0000" x2="826.0000" y2="143.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="148.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">60</text>
+<line x1="78.0000" y1="109.5000" x2="826.0000" y2="109.5000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="114.5000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">70</text>
+<line x1="78.0000" y1="76.0000" x2="826.0000" y2="76.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="81.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">80</text>
+<line x1="78.0000" y1="344.0000" x2="834.0000" y2="344.0000" stroke="#183247" stroke-width="1.8" marker-end="url(#arrow)"/>
+<line x1="78.0000" y1="344.0000" x2="78.0000" y2="71.0000" stroke="#183247" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="452.0000" y="397.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#183247">Q (verhuurbeurten per dag)</text>
+<polygon data-panel="p0" data-area="Overdracht" points="78.00000000,176.50000000 327.33333333,176.50000000 327.33333333,143.00000000 78.00000000,143.00000000" fill="#146d9b" fill-opacity=".15" stroke="none"/>
+<polygon points="78.00000000,176.50000000 327.33333333,176.50000000 327.33333333,143.00000000 78.00000000,143.00000000" fill="url(#hatch)"/>
+<text x="187.7067" y="165.7500" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#146d9b">Overdracht</text>
+<polygon data-panel="p0" data-area="Verlies" points="327.33333333,143.00000000 452.00000000,176.50000000 327.33333333,210.00000000" fill="#ab4943" fill-opacity=".15" stroke="none"/>
+<polygon points="327.33333333,143.00000000 452.00000000,176.50000000 327.33333333,210.00000000" fill="url(#cross)"/>
+<text x="551.7333" y="126.2500" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#ab4943">Verlies</text>
+<line x1="544.7333" y1="121.2500" x2="368.8889" y2="176.5000" stroke="#ab4943" stroke-width="1.2" marker-end="url(#arrow)"/>
+<polyline data-panel="p0" data-curve="Vraag = GO" points="78.00000000,76.00000000 826.00000000,277.00000000" fill="none" stroke="#146d9b" stroke-width="3"/>
+<text x="624.0400" y="209.7300" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#146d9b">Vraag = GO</text>
+<polyline data-panel="p0" data-curve="MO" points="78.00000000,76.00000000 576.66666667,344.00000000" fill="none" stroke="#247d70" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="242.5600" y="151.4400" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#247d70">MO</text>
+<polyline data-panel="p0" data-curve="MK" points="78.00000000,277.00000000 826.00000000,76.00000000" fill="none" stroke="#ab4943" stroke-width="3"/>
+<text x="751.2000" y="84.1000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="end" fill="#ab4943">MK</text>
+<line x1="78.0000" y1="210.0000" x2="327.3333" y2="210.0000" stroke="#637986" stroke-width="1" stroke-dasharray="5 4"/>
+<line x1="327.3333" y1="344.0000" x2="327.3333" y2="210.0000" stroke="#637986" stroke-width="1" stroke-dasharray="5 4"/>
+<circle data-panel="p0" data-point="" cx="327.3333" cy="210.0000" r="4.2" fill="#183247"/>
+<line x1="78.0000" y1="143.0000" x2="327.3333" y2="143.0000" stroke="#637986" stroke-width="1" stroke-dasharray="5 4"/>
+<line x1="327.3333" y1="344.0000" x2="327.3333" y2="143.0000" stroke="#637986" stroke-width="1" stroke-dasharray="5 4"/>
+<circle data-panel="p0" data-point="M" cx="327.3333" cy="143.0000" r="4.2" fill="#183247"/>
+<text x="336.3333" y="131.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#183247">M</text>
+<line x1="78.0000" y1="176.5000" x2="452.0000" y2="176.5000" stroke="#637986" stroke-width="1" stroke-dasharray="5 4"/>
+<line x1="452.0000" y1="344.0000" x2="452.0000" y2="176.5000" stroke="#637986" stroke-width="1" stroke-dasharray="5 4"/>
+<circle data-panel="p0" data-point="E" cx="452.0000" cy="176.5000" r="4.2" fill="#183247"/>
+<text x="461.0000" y="161.5000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#183247">E</text>
+<text x="450.0000" y="422.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">M: 20 eenheden tegen € 60   |   E: 30 tegen € 50</text>
+</svg>

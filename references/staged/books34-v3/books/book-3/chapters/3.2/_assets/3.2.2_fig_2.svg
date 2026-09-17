@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="210" viewBox="0 0 900 210" role="img"><title>Differentiëren: bekijk elke term apart</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#536777" stroke-width="1.6"/></marker><pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M-2,2 L2,-2 M0,9 L9,0 M7,11 L11,7" stroke="#183247" stroke-opacity=".22" stroke-width="1"/></pattern></defs>
+<rect width="900" height="210" rx="10" fill="#f5f8fa"/>
+<text x="450.000" y="28.000" font-family="Lato,DejaVu Sans,sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#183247">Differentiëren: bekijk elke term apart</text>
+<rect x="30.0" y="55" width="264.0" height="80" rx="5" fill="white" stroke="#146d9b" stroke-width="1.6"/>
+<text x="162.000" y="83.000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">a × q²</text>
+<text x="162.000" y="107.000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">wordt 2a × q</text>
+<line x1="296.0000" y1="95.0000" x2="314.0000" y2="95.0000" stroke="#667c8b" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="318.0" y="55" width="264.0" height="80" rx="5" fill="white" stroke="#247d70" stroke-width="1.6"/>
+<text x="450.000" y="83.000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">b × q</text>
+<text x="450.000" y="107.000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">wordt b</text>
+<line x1="584.0000" y1="95.0000" x2="602.0000" y2="95.0000" stroke="#667c8b" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="606.0" y="55" width="264.0" height="80" rx="5" fill="white" stroke="#ad681f" stroke-width="1.6"/>
+<text x="738.000" y="83.000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">c</text>
+<text x="738.000" y="107.000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">wordt 0</text>
+<text x="450.000" y="188.000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#183247">TK = a × q² + b × q + c    →    MK = 2a × q + b</text>
+</svg>

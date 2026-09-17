@@ -1,0 +1,195 @@
+{
+  "id": "4.1.2",
+  "module": 4,
+  "chapter": 1,
+  "paragraph": 2,
+  "paragraph_title": "Monopolie: kenmerken",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.1.2",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "18",
+    "context": "Doeloefening Bron A · Eilandveer Voor de directe verbinding tussen Haven en Eiland heeft Eilandveer als enige een vergunning. In de onderzochte periode krijgt geen ander bedrijf toegang. Reizigers kunnen hun reis wel uitstellen of afzien van de overtocht. Alle kaartjes in een gekozen situatie hebben dezelfde prijs. De capaciteit is 240 kaartjes per dag. Bron B · Vraag P = 24 − 0,10q. P is euro per kaartje; q is kaartjes per dag, van 0 tot 240. Overige vraagfactoren blijven gelijk. Opgave 18 · Eilandveer Gebruik beide bronnen en figuur 4. Figuur 4. Gebruik de lijn om de berekende combinaties te controleren.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"source\"><b>Bron A · Eilandveer</b><br/>Voor de directe verbinding tussen Haven en Eiland heeft Eilandveer als enige een vergunning. In de onderzochte periode krijgt geen ander bedrijf toegang. Reizigers kunnen hun reis wel uitstellen of afzien van de overtocht. Alle kaartjes in een gekozen situatie hebben dezelfde prijs. De capaciteit is 240 kaartjes per dag.</div>\n<div class=\"source\"><b>Bron B · Vraag</b><br/>P = 24 − 0,10q. P is euro per kaartje; q is kaartjes per dag, van 0 tot 240. Overige vraagfactoren blijven gelijk.</div>\n<div class=\"exercise target\" data-exercise=\"18\" id=\"opg18\"><p><b>Opgave 18 · Eilandveer</b></p><p>Gebruik beide bronnen en figuur 4.</p></div>\n<figure><img alt=\"Figuur 4. Gebruik de lijn om de berekende combinaties te controleren.\" src=\"books/book-4/chapters/4.1/_assets/4.1.1_target.svg\"/><figcaption>Figuur 4. Gebruik de lijn om de berekende combinaties te controleren.</figcaption></figure>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n<div class=\"source\"><b>Bron A · Eilandveer</b><br>Voor de directe verbinding tussen Haven en Eiland heeft Eilandveer als enige een vergunning. In de onderzochte periode krijgt geen ander bedrijf toegang. Reizigers kunnen hun reis wel uitstellen of afzien van de overtocht. Alle kaartjes in een gekozen situatie hebben dezelfde prijs. De capaciteit is 240 kaartjes per dag.</div>\n<div class=\"source\"><b>Bron B · Vraag</b><br>P = 24 − 0,10q. P is euro per kaartje; q is kaartjes per dag, van 0 tot 240. Overige vraagfactoren blijven gelijk.</div>\n<div class=\"exercise target\" id=\"opg18\" data-exercise=\"18\"><p><b>Opgave 18 · Eilandveer</b></p><p>Gebruik beide bronnen en figuur 4.</p><p data-question=\"18a\"><b>a.</b> <span class=\"muted\">(2p)</span> Welk gegeven vormt hier een toetredingsbarrière? Leg uit waarom dit een monopolie op de beschreven verbinding ondersteunt.</p><p data-question=\"18b\"><b>b.</b> <span class=\"muted\">(2p)</span> Noem twee verschillen met volkomen concurrentie: één over toetreding en één over de vraaglijn van de onderneming.</p><p data-question=\"18c\"><b>c.</b> <span class=\"muted\">(2p)</span> Bereken de prijs bij punt A met q = 60 en bij punt B met q = 120.</p><p data-question=\"18d\"><b>d.</b> <span class=\"muted\">(2p)</span> De eigenaar wil 120 kaartjes verkopen voor € 18. Is dat volgens de bron haalbaar? Onderbouw met de vraagfunctie.</p><p data-question=\"18e\"><b>e.</b> <span class=\"muted\">(2p)</span> Beoordeel: “Zonder concurrenten kan ik elke prijs vragen én dezelfde afzet houden.” Gebruik de bron om je antwoord te begrenzen.</p></div>\n<figure><img src=\"_assets/4.1.1_target.svg\" alt=\"Figuur 4. Gebruik de lijn om de berekende combinaties te controleren.\"><figcaption>Figuur 4. Gebruik de lijn om de berekende combinaties te controleren.</figcaption></figure>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-4/chapters/4.1/_assets/4.1.1_target.svg",
+        "sha256": "9f4ac93ff25324d26f504f0b62232c1dfdb24f4310df0a4715faf81655250101"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 2,
+        "prompt": "Welk gegeven vormt hier een toetredingsbarrière? Leg uit waarom dit een monopolie op de beschreven verbinding ondersteunt.",
+        "observable_operation": "Welk gegeven vormt hier een toetredingsbarrière? Leg uit waarom dit een monopolie op de beschreven verbinding ondersteunt.",
+        "source_question_id": "18a"
+      },
+      {
+        "label": "b",
+        "points": 2,
+        "prompt": "Noem twee verschillen met volkomen concurrentie: één over toetreding en één over de vraaglijn van de onderneming.",
+        "observable_operation": "Noem twee verschillen met volkomen concurrentie: één over toetreding en één over de vraaglijn van de onderneming.",
+        "source_question_id": "18b"
+      },
+      {
+        "label": "c",
+        "points": 2,
+        "prompt": "Bereken de prijs bij punt A met q = 60 en bij punt B met q = 120.",
+        "observable_operation": "Bereken de prijs bij punt A met q = 60 en bij punt B met q = 120.",
+        "source_question_id": "18c"
+      },
+      {
+        "label": "d",
+        "points": 2,
+        "prompt": "De eigenaar wil 120 kaartjes verkopen voor € 18. Is dat volgens de bron haalbaar? Onderbouw met de vraagfunctie.",
+        "observable_operation": "De eigenaar wil 120 kaartjes verkopen voor € 18. Is dat volgens de bron haalbaar? Onderbouw met de vraagfunctie.",
+        "source_question_id": "18d"
+      },
+      {
+        "label": "e",
+        "points": 2,
+        "prompt": "Beoordeel: “Zonder concurrenten kan ik elke prijs vragen én dezelfde afzet houden.” Gebruik de bron om je antwoord te begrenzen.",
+        "observable_operation": "Beoordeel: “Zonder concurrenten kan ik elke prijs vragen én dezelfde afzet houden.” Gebruik de bron om je antwoord te begrenzen.",
+        "source_question_id": "18e"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. Alleen Eilandveer krijgt in de onderzochte periode de vergunning. Andere bedrijven krijgen geen toegang. Dit is een toetredingsbarrière en ondersteunt één aanbieder op de afgebakende directe verbinding.",
+    "b": "b. Bij volkomen concurrentie is toetreding vrij; hier verhindert een exclusieve vergunning toetreding. Eén kleine prijsnemer heeft een horizontale vraaglijn bij de marktprijs; de monopolist bedient de hele markt en heeft hier een dalende vraaglijn.",
+    "c": "c. P(60) = 24 − 0,10 × 60 = € 18 per kaartje . P(120) = 24 − 12 = € 12 per kaartje .",
+    "d": "d. Nee. Bij € 18 geldt 18 = 24 − 0,10q → q = 60 kaartjes . De gewenste 120 kaartjes vragen volgens de functie om € 12 per kaartje. De capaciteit is niet het probleem: 120 ligt onder 240.",
+    "e": "e. De uitspraak is onjuist. Het bedrijf heeft invloed op P, maar reizigers kunnen uitstellen of niet reizen. De bron laat zien dat een hogere prijs samengaat met minder afzet. Het alleenrecht neemt de dalende vraag niet weg."
+  },
+  "answer_model_support_html": [
+    "<figure><img alt=\"De combinatie (120, 18) ligt boven de vraaglijn. Wel mogelijk zijn A = (60, 18) en B = (120, 12).\" src=\"_assets/4.1.1_ans_8.svg\"/><figcaption>De combinatie (120, 18) ligt boven de vraaglijn. Wel mogelijk zijn A = (60, 18) en B = (120, 12).</figcaption></figure>"
+  ],
+  "answer_figures": [
+    {
+      "path": "books/book-4/chapters/4.1/_assets/4.1.1_ans_8.svg",
+      "sha256": "0998fcab761a5f0b784595331c74804c8122f3bd193566315e979aea9c1bb8a3"
+    }
+  ],
+  "lesson_goals": [
+    "Je kunt een monopolie herkennen met gegevens uit een bron.",
+    "Je kunt een toetredingsbarrière uitleggen.",
+    "Je kunt de vraag voor een monopolist vergelijken met die voor een prijsnemer.",
+    "Je kunt een prijs-afzetcombinatie berekenen en beoordelen."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.1.2-a",
+      "description": "Welk gegeven vormt hier een toetredingsbarrière? Leg uit waarom dit een monopolie op de beschreven verbinding ondersteunt."
+    },
+    {
+      "local_operation_id": "4.1.2-b",
+      "description": "Noem twee verschillen met volkomen concurrentie: één over toetreding en één over de vraaglijn van de onderneming."
+    },
+    {
+      "local_operation_id": "4.1.2-c",
+      "description": "Bereken de prijs bij punt A met q = 60 en bij punt B met q = 120."
+    },
+    {
+      "local_operation_id": "4.1.2-d",
+      "description": "De eigenaar wil 120 kaartjes verkopen voor € 18. Is dat volgens de bron haalbaar? Onderbouw met de vraagfunctie."
+    },
+    {
+      "local_operation_id": "4.1.2-e",
+      "description": "Beoordeel: “Zonder concurrenten kan ik elke prijs vragen én dezelfde afzet houden.” Gebruik de bron om je antwoord te begrenzen."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Contrast with §3.2.1; retrieve the demand function and price/quantity relationship. Use a short retrieval task to restore the difference between a market graph and the competitive firm's graph before introducing the monopolist's graph. Connect the entry barrier explicitly to the adjustment mechanism taught in §4.1.1."
+  ],
+  "new_skills_introduced": [
+    "Explain market power, barriers to entry and the relationship between the firm’s sales and market demand."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "Monopoly does not mean unlimited pricing power. Patents can be one entry-barrier context; full policy evaluation belongs later.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.1.2",
+  "structural_retrieval_plan": "Contrast with §3.2.1; retrieve the demand function and price/quantity relationship. Use a short retrieval task to restore the difference between a market graph and the competitive firm's graph before introducing the monopolist's graph. Connect the entry barrier explicitly to the adjustment mechanism taught in §4.1.1.",
+  "structural_scope_boundary": "Monopoly does not mean unlimited pricing power. Patents can be one entry-barrier context; full policy evaluation belongs later.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.1/4.1.2 manuscript.md",
+    "student_manuscript_sha256": "3c0dc460e987378cc4a470e7317ecb3467fa742b4befafa2b03674b475b6d38a",
+    "answer_file": "books/book-4/chapters/4.1/Antwoorden.md",
+    "answer_file_sha256": "01a9294bd3ce947ceb5460d588cd3f7ffee5b9f0be3e4334558fde44096f8da1",
+    "chapter_student_pages": [
+      18
+    ],
+    "complete_book_pages": [
+      22
+    ]
+  },
+  "lesson_route": {
+    "start": "11–12",
+    "independent": "16–17",
+    "guided_or_alternative": "13–15",
+    "target": "18",
+    "target_subquestions": [
+      "18a",
+      "18b",
+      "18c",
+      "18d",
+      "18e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 12,
+      "Doeloefening": 12,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Gebruik §4.1.1 als contrast: vrije toetreding tegenover een expliciete barrière. Laat zien dat de monopolist prijs en afzet niet onafhankelijk kiest.",
+    "assessment_boundaries": "Een merk of een foto van één winkel bewijst geen monopolie. Begrens de markt en noem de barrière uit de bron; alleenrecht betekent geen onbeperkte prijszetting."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.1.1",
+      "disposition": "renumber",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "e3bac415c8974accb62ad54a033bbcd4e679de83eefe7ae4ae4f3b7ce88bff5e"
+}

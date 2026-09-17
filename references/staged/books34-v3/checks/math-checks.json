@@ -1,0 +1,601 @@
+{
+  "scope": "New and reconnected numerical cases; not a complete independent re-audit of all retained exercises.",
+  "checks": 99,
+  "failures": 0,
+  "results": [
+    {
+      "check": "3.2.2/17 MK(100)",
+      "actual": 12.0,
+      "expected": 12.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.2/17 TK(100)",
+      "actual": 1200.0,
+      "expected": 1200.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.2/17 TK(150)",
+      "actual": 1900.0,
+      "expected": 1900.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.2/17 interval",
+      "actual": 14.0,
+      "expected": 14.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.2/17 fixed-cost change TK(100)",
+      "actual": 1300.0,
+      "expected": 1300.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.2/17 unchanged MK",
+      "actual": 12.0,
+      "expected": 12.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.2 worked example interval",
+      "actual": 7.0,
+      "expected": 7.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.2/14 change in TK at20",
+      "actual": 50.0,
+      "expected": 50.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.2/15 MK at10",
+      "actual": 8.0,
+      "expected": 8.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.2/15 interval10to20",
+      "actual": 10.0,
+      "expected": 10.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.3/27 feasible output",
+      "actual": 150.0,
+      "expected": 150.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.3/27 profit",
+      "actual": 500.0,
+      "expected": 500.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.3/27 profit not less than shutdown",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.3/27 output within capacity",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.3/27 profit rectangle",
+      "actual": 500.0,
+      "expected": 500.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.3/27 grid dominance",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.3/27 lower capacity feasible output",
+      "actual": 120.0,
+      "expected": 120.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.3/27 lower capacity profit",
+      "actual": 464.0,
+      "expected": 464.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.3/27 lower capacity profit not less than shutdown",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.3/27 lower capacity output within capacity",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.3/27 lower capacity profit rectangle",
+      "actual": 464.0,
+      "expected": 464.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.3/27 lower capacity grid dominance",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/34 before feasible output",
+      "actual": 30.0,
+      "expected": 30.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/34 before profit",
+      "actual": 50.0,
+      "expected": 50.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/34 before profit not less than shutdown",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/34 before output within capacity",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/34 before profit rectangle",
+      "actual": 50.0,
+      "expected": 50.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/34 before grid dominance",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/34 after feasible output",
+      "actual": 40.0,
+      "expected": 40.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/34 after profit",
+      "actual": 120.0,
+      "expected": 120.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/34 after profit not less than shutdown",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/34 after output within capacity",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/34 after profit rectangle",
+      "actual": 120.0,
+      "expected": 120.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/34 after grid dominance",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 original P",
+      "actual": 8.0,
+      "expected": 8.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 original Q",
+      "actual": 10000.0,
+      "expected": 10000.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 new P",
+      "actual": 12.0,
+      "expected": 12.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 new Q",
+      "actual": 20000.0,
+      "expected": 20000.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 original firm feasible output",
+      "actual": 100.0,
+      "expected": 100.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 original firm profit",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 original firm profit not less than shutdown",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 original firm output within capacity",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 original firm profit rectangle",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 original firm grid dominance",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 new firm feasible output",
+      "actual": 200.0,
+      "expected": 200.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 new firm profit",
+      "actual": 600.0,
+      "expected": 600.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 new firm profit not less than shutdown",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 new firm output within capacity",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 new firm profit rectangle",
+      "actual": 600.0,
+      "expected": 600.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 new firm grid dominance",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "3.2.4/35 GTK",
+      "actual": 9.0,
+      "expected": 9.0,
+      "pass": true
+    },
+    {
+      "check": "3.3.4/38b q",
+      "actual": 60.0,
+      "expected": 60.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.1/7 initial feasible output",
+      "actual": 150.0,
+      "expected": 150.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.1/7 initial profit",
+      "actual": 250.0,
+      "expected": 250.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.1/7 initial profit not less than shutdown",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.1/7 initial output within capacity",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.1/7 initial profit rectangle",
+      "actual": 250.0,
+      "expected": 250.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.1/7 initial grid dominance",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.1/7 long-run feasible output",
+      "actual": 100.0,
+      "expected": 100.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.1/7 long-run profit",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.1/7 long-run profit not less than shutdown",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.1/7 long-run output within capacity",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.1/7 long-run profit rectangle",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.1/7 long-run grid dominance",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.3/28 MO20",
+      "actual": 10.0,
+      "expected": 10.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.3/28 average extra revenue",
+      "actual": 5.0,
+      "expected": 5.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.3/28 extra minus lost",
+      "actual": 50.0,
+      "expected": 50.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.4/38 q",
+      "actual": 40.0,
+      "expected": 40.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.4/38 P",
+      "actual": 30.0,
+      "expected": 30.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.4/38 W",
+      "actual": 400.0,
+      "expected": 400.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.4/38 feasibility",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.4/38 shutdown dominance",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.4/38 MO=MK",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.5/45 q",
+      "actual": 40.0,
+      "expected": 40.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.5/45 P",
+      "actual": 24.0,
+      "expected": 24.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.5/45 W",
+      "actual": 360.0,
+      "expected": 360.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.5/45 feasibility",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.5/45 shutdown dominance",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.5/45 MO=MK",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.5/45 competitive contrast feasible output",
+      "actual": 50.0,
+      "expected": 50.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.5/45 competitive contrast profit",
+      "actual": 130.0,
+      "expected": 130.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.5/45 competitive contrast profit not less than shutdown",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.5/45 competitive contrast output within capacity",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.5/45 competitive contrast profit rectangle",
+      "actual": 130.0,
+      "expected": 130.0,
+      "pass": true
+    },
+    {
+      "check": "4.1.5/45 competitive contrast grid dominance",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/40 labour force",
+      "actual": 14000.0,
+      "expected": 14000.0,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/40 participation",
+      "actual": 70.0,
+      "expected": 70.0,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/40 unemployment",
+      "actual": 10.0,
+      "expected": 10.0,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/40 original wage",
+      "actual": 14.0,
+      "expected": 14.0,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/40 new wage",
+      "actual": 16.0,
+      "expected": 16.0,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/40 original employment",
+      "actual": 100.0,
+      "expected": 100.0,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/40 new employment",
+      "actual": 120.0,
+      "expected": 120.0,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/40 old unit labour costs",
+      "actual": 3.0,
+      "expected": 3.0,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/40 new unit labour costs",
+      "actual": 2.8636363636363638,
+      "expected": 2.8636363636363638,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/40 percentage change",
+      "actual": -4.545454545454546,
+      "expected": -4.545454545454546,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/39 equilibrium wage",
+      "actual": 16.0,
+      "expected": 16.0,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/39 jobs at18",
+      "actual": 72.0,
+      "expected": 72.0,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/39 wage bill",
+      "actual": 25920.0,
+      "expected": 25920.0,
+      "pass": true
+    },
+    {
+      "check": "4.3.5/39 excess supply",
+      "actual": 24.0,
+      "expected": 24.0,
+      "pass": true
+    }
+  ]
+}

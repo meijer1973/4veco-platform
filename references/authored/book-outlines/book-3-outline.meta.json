@@ -2,36 +2,20 @@
   "schema_version": 1,
   "source_id": "authored:book-3-outline",
   "book": 3,
-  "version": "v2",
-  "structure_revision": "book34-chat-v2-20260914",
-  "original_date": "2026-09-06",
-  "original_sha256": "4e558b63d8eb954de935ad366170f6373f533eae14f90633a89be0036c973217",
-  "original_status": "revised outline proposal",
+  "version": "v3",
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "original_date": "2026-09-15",
+  "original_sha256": "1539d9d50b11a89f87afd57e6ee3e6810e4f6dc680691f1230b6d8ef829ea5f2",
   "current_status": "owner_selected_structural_baseline",
-  "selected_on": "2026-09-14",
-  "selection_task": "BOOK34-CHAT-IMPORT-OUTLINES-1",
+  "selected_on": "2026-09-17",
+  "selection_task": "BOOK34-V3-INTEGRATION-20260917",
   "integration_status": "prepared_in_pr",
   "target_approval": "not_conferred",
   "companion_acceptance": "not_conferred",
   "current_source": "references/authored/book-outlines/book-3-outline.md",
-  "change_review": "reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md",
-  "selected_input_manifest": "references/authored/book-outlines/books34-input-manifest.json",
-  "title_aliases": [
-    "Overheidsingrijpen, concurrentie en internationale handel",
-    "Overheidsingrijpen, volkomen concurrentie en internationale handel"
-  ],
-  "original_page_assumption": 40,
-  "actual_student_chapter_pages": [
-    48,
-    38,
-    38
-  ],
-  "original_proposal_companions_not_supplied": [
-    "sources-and-scope.md",
-    "integration-handoff-v2.md",
-    "paragraph-migration-v1-to-v2.csv"
-  ],
-  "migration_aid": "migration-live-v5-to-v2.csv is newly prepared against live v5, not the historical v1-to-v2 attachment or target equivalence proof.",
+  "change_review": "reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-V3-20260917.md",
+  "selected_input_manifest": "edities/books34-v3/MANIFEST.sha256.json",
+  "previous_snapshot": "archive/blueprints/book34-pre-v3-20260917/references/authored/book-outlines/book-3-outline.md",
   "paragraph_count": 14,
   "chapters": [
     {
@@ -41,7 +25,7 @@
     },
     {
       "id": "3.2",
-      "title": "Volkomen concurrentie",
+      "title": "Volkomen concurrentie: productie en winst",
       "paragraph_count": 4
     },
     {
@@ -49,6 +33,16 @@
       "title": "Internationale handel",
       "paragraph_count": 4
     }
+  ],
+  "student_chapter_page_caps": [
+    50,
+    40,
+    40
+  ],
+  "actual_student_chapter_pages": [
+    48,
+    34,
+    38
   ],
   "paragraphs": [
     {
@@ -123,32 +117,32 @@
     },
     {
       "id": "3.2.2",
-      "title": "Winstmaximalisatie bij volkomen concurrentie",
+      "title": "Marginale kosten en de afgeleide",
       "kind": "theory",
-      "intended_learning": "Use marginal comparison to select output and calculate total profit, linking MO, MK, price and average total cost.",
-      "retrieval_and_transfer": "Retrieve Book 2 cost/revenue calculations and marginal meaning. Explicitly teach the optimisation rule; do not label it revision.",
-      "proposed_target_brief": "Obtain the relevant marginal relation, determine the profit-maximising feasible output, calculate profit and interpret the result in a firm diagram.",
-      "boundary": "If a quadratic total-cost function is used, teach the limited quadratic-to-linear derivative operation within this paragraph rather than assuming prior calculus. Check the direction of marginal comparisons and production capacity; MO = MK alone is not a universal maximum proof. Flag the combined mathematical and economic load for target/timing review.",
+      "intended_learning": "Derive MK from TK = aq² + bq + c using only the quadratic, linear and constant terms required in the course. Evaluate and interpret the resulting marginal cost at a stated q with the correct units. Distinguish a point marginal value from the average additional cost over a finite table interval. Explain why fixed costs disappear from MK but remain in TK and profit.",
+      "retrieval_and_transfer": "Retrieve §2.1.3's ΔTK/Δq, substitution and total/per-unit distinctions. The derivative operation is new instruction here. Retrieve the revenue meaning of P = GO = MO from §3.2.1, but do not teach the optimisation rule as a second destination in this lesson.",
+      "proposed_target_brief": "Reuse an existing simple cost model from the delivered §3.2.2. Require the student to derive MK without a term-by-term scaffold, calculate its value at one stated output, compare it with a supplied or compactly calculated interval average, and explain the effect of a change in the fixed-cost term. Both the interval and point being compared must be explicit. Prepare a complete matching answer, not only a new title for old target 18.",
+      "boundary": "No full calculus course, differentiation of GTK, general product/quotient rules, or price/output optimisation. Do not call ΔTK/Δq over a large interval the exact derivative at its endpoint. Preserve the existing fixed-cost/capacity convention. A full optimum, capacity comparison and profit rectangle belong to §3.2.3, not this target. This new paragraph must have its own worked preparation, independent practice and compact target.",
       "source_path": "references/authored/book-outlines/book-3-outline.md"
     },
     {
       "id": "3.2.3",
-      "title": "Langetermijnevenwicht",
+      "title": "Winstmaximalisatie bij volkomen concurrentie",
       "kind": "theory",
-      "intended_learning": "Explain how entry or exit changes market supply, price and firm profit, and interpret the competitive long-run outcome.",
-      "retrieval_and_transfer": "Retrieve §3.2.2, market supply shifts, GTK and break-even. Re-use calculations to support the adjustment narrative.",
-      "proposed_target_brief": "Start from profit or loss, explain entry or exit, draw the direction of adjustment and identify the resulting firm outcome under the stated assumptions.",
-      "boundary": "The familiar zero-economic-profit result requires the specified competitive entry/exit and cost assumptions. It does not mean entrepreneurs receive no remuneration or that total revenue is zero.",
+      "intended_learning": "Use marginal comparisons to select a feasible output at a given market price. Obtain and check the MO = MK candidate, explain the directions on either side, check production capacity and relevant boundaries, calculate TO − TK, and represent profit through P and GTK at the same chosen q.",
+      "retrieval_and_transfer": "Retrieve the limited derivative from §3.2.2, price taking from §3.2.1, and the Book 2 total/average/marginal distinction. The economic output-choice rule is explicitly new. A short derivative retrieval item is appropriate; another full introductory derivative lesson is not.",
+      "proposed_target_brief": "Reuse the delivered 'Korrels voor kwekerijen' target model and its valid answers as the starting point. Ask for the marginal relation, feasible output, a justified maximum, total profit and the corresponding profit rectangle. Retain one bounded capacity contrast and the relevant q = 0 interpretation under explicit unavoidable-cost assumptions. Select the actual question chain for a complete one-lesson route; reuse rather than automatically append additional full optimisation cases.",
+      "boundary": "MO = MK is not by itself a universal maximum proof. Do not choose output by mechanically minimising GTK. Fixed costs remain fixed within the stated period and capacity; avoid new production-range complications. Entry/exit, normal remuneration and the long-run zero-economic-profit result are formally taught in new §4.1.1, not here. Distinguish a short-period loss from an automatic decision to leave the market.",
       "source_path": "references/authored/book-outlines/book-3-outline.md"
     },
     {
       "id": "3.2.4",
-      "title": "Gemengde opgaven: volkomen concurrentie",
+      "title": "Gemengde opgaven: de prijsnemende onderneming",
       "kind": "gemengde_opgaven",
-      "intended_learning": "Integrate market price formation, firm output, profit and long-run adjustment.",
-      "retrieval_and_transfer": "Interleave Book 2 total/average/marginal distinctions, equilibrium, and §§3.2.1-3.2.3.",
-      "proposed_target_brief": "A market change leads to a new firm calculation and an explanation of subsequent entry or exit; students connect market and firm evidence.",
-      "boundary": "No monopoly or new long-run cost theory. Monopoly is taught next book, in Chapter 4.1; it is not a prerequisite for the trade chapter that follows here. A multi-stage exercise still requires an explicit initial situation and adjustment horizon.",
+      "intended_learning": "Independently connect market price formation and a short-run change in that price to the output, costs and profit of one price-taking firm. Keep market Q, firm q, per-unit values and total amounts distinct. Select and check a feasible marginal output decision.",
+      "retrieval_and_transfer": "Retrieve §§3.2.1–3.2.3, Book 1 market equations and demand shifts, and Book 2 costs, revenue, averages and profit. The number of active firms and their production capacities are held fixed over the analysed adjustment window. The long-run mechanism is not an assessed prerequisite.",
+      "proposed_target_brief": "Adapt the existing Kweekkorrels case from three moments to two: the initial market and the immediate outcome after a demand change, before the number of firms adjusts. Keep the existing market equations, firm cost model, Q/q distinction, derivative, capacity check and profit representation where they remain consistent. Remove source C and the formal long-run operations in 36e–f from this Book 3 target. Replace only what is needed for a concise short-run interpretation or model check; do not expand the remaining arithmetic to fill the former target's length.",
+      "boundary": "In the complete printed set, not just the target, relocate old exercise 35 and the long-run content of bonus 37 or replace them with already-taught retrieval. Reword old 36a's economic-profit/normal-remuneration premise as a supplied cost convention; do not require interpretation of normal remuneration before §4.1.1. Numeric equality TO = TK may remain familiar break-even arithmetic, not a long-run conclusion. Preserve independent consolidation before the Book 3 assessment.",
       "source_path": "references/authored/book-outlines/book-3-outline.md"
     },
     {
@@ -158,7 +152,7 @@
       "intended_learning": "Explain specialisation, absolute versus comparative advantage and possible mutual gains qualitatively. Distinguish an explanation of relative opportunity cost from a general claim about a country's production strengths or competitiveness.",
       "retrieval_and_transfer": "Retrieve scarcity, choice and the meaning of opportunity cost from Book 1. Introduce import/export and the new comparative-advantage meaning explicitly. Keep discussion of productivity, quality or costs qualitative and supported by information in the source; no formal labour-cost formula is assumed.",
       "proposed_target_brief": "Use a short qualitative two-country case, including one in which the same country is more productive in both activities. Explain why relative advantage matters and how exchange may benefit both. Assess a short claim that cheaper production or greater productivity necessarily makes every participant better off. Require a reasoned answer, not a numerical specialisation table.",
-      "boundary": "No calculated opportunity-cost ratios, production-possibility-frontier optimisation, exchange-ratio bounds or separate ruilvoet calculation objective. Do not equate absolute with comparative advantage or claim that all groups necessarily gain. The conceptual/no-calculation boundary follows the owner's retained design instruction; this revision makes no new CE/SE validation claim. Formal productivity and unit-labour-cost analysis is deferred to §4.3.1.",
+      "boundary": "No calculated opportunity-cost ratios, production-possibility-frontier optimisation, exchange-ratio bounds or separate ruilvoet calculation objective. Do not equate absolute with comparative advantage or claim that all groups necessarily gain. The conceptual/no-calculation boundary follows the owner's retained design instruction; this revision makes no new CE/SE validation claim. Formal productivity and unit-labour-cost analysis is taught in §4.3.1. Long-run entry/exit is not needed for this trade target.",
       "source_path": "references/authored/book-outlines/book-3-outline.md"
     },
     {
@@ -191,5 +185,7 @@
       "boundary": "The earlier proposal cites a 2022 VWO-I Importheffing task as a possible target-design input. Carry that reference forward for later source verification, not as a completed adaptation or evidence that every operation is approved. Later current-account and game-theory demands stay outside this chapter. Claims about protected jobs do not require or establish a formal economy-wide employment result.",
       "source_path": "references/authored/book-outlines/book-3-outline.md"
     }
-  ]
+  ],
+  "current_sha256": "82132d156a8b890f80a18cfe14fe4fed66cadb1625297058efa047e671cdc979",
+  "technical_projection": "Only target-record hyperlinks resolve to the immutable platform transport, available before the lesson projection is activated. Original outline bytes and lesson content ownership remain unchanged."
 }

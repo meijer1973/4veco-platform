@@ -1,0 +1,1770 @@
+{
+  "scope": "Focused package-repair checks; no independent curriculum approval or Windows/repository-CI claim",
+  "checks": 320,
+  "failures": [],
+  "context_inventory": [
+    {
+      "paragraph": "3.1.1",
+      "inline_context_paragraphs": 2,
+      "context_characters": 578
+    },
+    {
+      "paragraph": "3.1.2",
+      "inline_context_paragraphs": 2,
+      "context_characters": 461
+    },
+    {
+      "paragraph": "3.1.3",
+      "inline_context_paragraphs": 2,
+      "context_characters": 434
+    },
+    {
+      "paragraph": "3.1.4",
+      "inline_context_paragraphs": 2,
+      "context_characters": 458
+    },
+    {
+      "paragraph": "3.1.5",
+      "inline_context_paragraphs": 2,
+      "context_characters": 411
+    },
+    {
+      "paragraph": "3.1.6",
+      "inline_context_paragraphs": 2,
+      "context_characters": 2049
+    },
+    {
+      "paragraph": "3.2.1",
+      "inline_context_paragraphs": 2,
+      "context_characters": 312
+    },
+    {
+      "paragraph": "3.2.2",
+      "inline_context_paragraphs": 2,
+      "context_characters": 348
+    },
+    {
+      "paragraph": "3.2.3",
+      "inline_context_paragraphs": 2,
+      "context_characters": 347
+    },
+    {
+      "paragraph": "3.2.4",
+      "inline_context_paragraphs": 2,
+      "context_characters": 1109
+    },
+    {
+      "paragraph": "3.3.1",
+      "inline_context_paragraphs": 2,
+      "context_characters": 887
+    },
+    {
+      "paragraph": "3.3.2",
+      "inline_context_paragraphs": 2,
+      "context_characters": 578
+    },
+    {
+      "paragraph": "3.3.3",
+      "inline_context_paragraphs": 2,
+      "context_characters": 781
+    },
+    {
+      "paragraph": "3.3.4",
+      "inline_context_paragraphs": 2,
+      "context_characters": 2011
+    },
+    {
+      "paragraph": "4.1.1",
+      "inline_context_paragraphs": 2,
+      "context_characters": 418
+    },
+    {
+      "paragraph": "4.1.2",
+      "inline_context_paragraphs": 2,
+      "context_characters": 613
+    },
+    {
+      "paragraph": "4.1.3",
+      "inline_context_paragraphs": 2,
+      "context_characters": 698
+    },
+    {
+      "paragraph": "4.1.4",
+      "inline_context_paragraphs": 2,
+      "context_characters": 496
+    },
+    {
+      "paragraph": "4.1.5",
+      "inline_context_paragraphs": 2,
+      "context_characters": 1563
+    },
+    {
+      "paragraph": "4.2.1",
+      "inline_context_paragraphs": 2,
+      "context_characters": 608
+    },
+    {
+      "paragraph": "4.2.2",
+      "inline_context_paragraphs": 2,
+      "context_characters": 900
+    },
+    {
+      "paragraph": "4.2.3",
+      "inline_context_paragraphs": 2,
+      "context_characters": 1086
+    },
+    {
+      "paragraph": "4.2.4",
+      "inline_context_paragraphs": 2,
+      "context_characters": 646
+    },
+    {
+      "paragraph": "4.2.5",
+      "inline_context_paragraphs": 2,
+      "context_characters": 759
+    },
+    {
+      "paragraph": "4.2.6",
+      "inline_context_paragraphs": 2,
+      "context_characters": 1014
+    },
+    {
+      "paragraph": "4.2.7",
+      "inline_context_paragraphs": 2,
+      "context_characters": 1752
+    },
+    {
+      "paragraph": "4.3.1",
+      "inline_context_paragraphs": 3,
+      "context_characters": 557
+    },
+    {
+      "paragraph": "4.3.2",
+      "inline_context_paragraphs": 2,
+      "context_characters": 533
+    },
+    {
+      "paragraph": "4.3.3",
+      "inline_context_paragraphs": 2,
+      "context_characters": 585
+    },
+    {
+      "paragraph": "4.3.4",
+      "inline_context_paragraphs": 2,
+      "context_characters": 527
+    },
+    {
+      "paragraph": "4.3.5",
+      "inline_context_paragraphs": 2,
+      "context_characters": 1603
+    }
+  ],
+  "results": [
+    {
+      "name": "books/book-4/chapters/4.1/_assets/4.1.1_ans_8.svg title number concordance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "books/book-4/chapters/4.1/_assets/4.1.1_ans_8.png current SVG raster match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Book4 answer p10 Doeloefening 18 · Prijs en hoeveelheid",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "books/book-4/chapters/4.1/_assets/4.1.2_ans_18.svg title number concordance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "books/book-4/chapters/4.1/_assets/4.1.2_ans_18.png current SVG raster match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Book4 answer p15 Doeloefening 28 · GO en MO",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "books/book-4/chapters/4.1/_assets/4.1.3_ans_28.svg title number concordance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "books/book-4/chapters/4.1/_assets/4.1.3_ans_28.png current SVG raster match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Book4 answer p22 Doeloefening 38 · Hoeveelheid en prijs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "books/book-4/chapters/4.1/_assets/4.1.3_ans_28_profit.svg title number concordance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "books/book-4/chapters/4.1/_assets/4.1.3_ans_28_profit.png current SVG raster match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Book4 answer p22 Doeloefening 38 · Winstcontrole",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "books/book-4/chapters/4.1/_assets/4.1.4_ans_35.svg title number concordance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "books/book-4/chapters/4.1/_assets/4.1.4_ans_35.png current SVG raster match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Book4 answer p26 Doeloefening 45 · KleurFix",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.1 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.1.1 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.1 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.1 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.1 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.1 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.1 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.1 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.1 asset binding books/book-3/chapters/3.1/_assets/3.1.1_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.1 asset binding books/book-3/chapters/3.1/_assets/3.1.1_ans_3.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.2 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.1.2 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.2 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.2 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.2 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.2 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.2 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.2 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.2 asset binding books/book-3/chapters/3.1/_assets/3.1.2_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.2 asset binding books/book-3/chapters/3.1/_assets/3.1.2_ans_2.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.3 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.1.3 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.3 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.3 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.3 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.3 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.3 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.3 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.3 asset binding books/book-3/chapters/3.1/_assets/3.1.3_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.3 asset binding books/book-3/chapters/3.1/_assets/3.1.3_ans_3.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.4 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.1.4 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.4 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.4 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.4 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.4 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.4 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.4 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.4 asset binding books/book-3/chapters/3.1/_assets/3.1.4_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.4 asset binding books/book-3/chapters/3.1/_assets/3.1.4_ans_3.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.5 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.1.5 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.5 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.5 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.5 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.5 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.5 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.5 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.5 asset binding books/book-3/chapters/3.1/_assets/3.1.5_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.5 asset binding books/book-3/chapters/3.1/_assets/3.1.5_ans_3.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.6 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.1.6 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.6 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.6 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.6 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.6 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.6 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.6 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.6 asset binding books/book-3/chapters/3.1/_assets/3.1.6_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.6 asset binding books/book-3/chapters/3.1/_assets/3.1.6_ans_1.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.1.6 asset binding books/book-3/chapters/3.1/_assets/3.1.6_ans_2.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.1 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.2.1 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.1 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.1 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.1 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.1 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.1 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.1 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.1 asset binding books/book-3/chapters/3.2/_assets/3.2.1_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.1 asset binding books/book-3/chapters/3.2/_assets/3.2.1_ans_3.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.2 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.2.2 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.2 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.2 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.2 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.2 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.2 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.2 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.3 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.2.3 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.3 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.3 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.3 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.3 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.3 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.3 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.3 asset binding books/book-3/chapters/3.2/_assets/3.2.2_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.3 asset binding books/book-3/chapters/3.2/_assets/3.2.2_ans_3.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.4 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.2.4 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.4 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.4 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.4 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.4 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.4 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.4 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.4 asset binding books/book-3/chapters/3.2/_assets/3.2.4_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.4 asset binding books/book-3/chapters/3.2/_assets/3.2.4_ans_1.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.1 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.3.1 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.1 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.1 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.1 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.1 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.1 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.1 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.2 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.3.2 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.2 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.2 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.2 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.2 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.2 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.2 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.2 asset binding books/book-3/chapters/3.3/_assets/3.3.2_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.2 asset binding books/book-3/chapters/3.3/_assets/3.3.2_ans_17.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.3 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.3.3 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.3 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.3 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.3 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.3 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.3 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.3 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.3 asset binding books/book-3/chapters/3.3/_assets/3.3.3_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.3 asset binding books/book-3/chapters/3.3/_assets/3.3.3_ans_27.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.4 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "3.3.4 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.4 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.4 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.4 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.4 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.4 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.4 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.4 asset binding books/book-3/chapters/3.3/_assets/3.3.4_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.3.4 asset binding books/book-3/chapters/3.3/_assets/3.3.4_ans_35.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.1 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.1.1 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.1 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.1 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.1 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.1 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.1 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.1 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.1 asset binding books/book-4/chapters/4.1/_assets/3.2.3_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.1 asset binding books/book-4/chapters/4.1/_assets/3.2.3_ans_2.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.2 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.1.2 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.2 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.2 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.2 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.2 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.2 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.2 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.2 asset binding books/book-4/chapters/4.1/_assets/4.1.1_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.2 asset binding books/book-4/chapters/4.1/_assets/4.1.1_ans_8.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.3 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.1.3 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.3 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.3 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.3 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.3 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.3 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.3 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.3 asset binding books/book-4/chapters/4.1/_assets/4.1.2_ans_18.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.4 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.1.4 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.4 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.4 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.4 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.4 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.4 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.4 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.4 asset binding books/book-4/chapters/4.1/_assets/4.1.3_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.4 asset binding books/book-4/chapters/4.1/_assets/4.1.3_ans_28.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.4 asset binding books/book-4/chapters/4.1/_assets/4.1.3_ans_28_profit.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.5 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.1.5 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.5 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.5 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.5 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.5 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.5 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.5 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.5 asset binding books/book-4/chapters/4.1/_assets/4.1.4_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.1.5 asset binding books/book-4/chapters/4.1/_assets/4.1.4_ans_35.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.1 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.2.1 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.1 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.1 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.1 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.1 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.1 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.1 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.1 asset binding books/book-4/chapters/4.2/_assets/421_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.2 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.2.2 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.2 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.2 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.2 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.2 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.2 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.2 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.2 asset binding books/book-4/chapters/4.2/_assets/422_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.3 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.2.3 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.3 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.3 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.3 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.3 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.3 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.3 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.4 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.2.4 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.4 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.4 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.4 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.4 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.4 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.4 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.4 asset binding books/book-4/chapters/4.2/_assets/424_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.5 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.2.5 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.5 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.5 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.5 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.5 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.5 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.5 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.5 asset binding books/book-4/chapters/4.2/_assets/425_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.6 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.2.6 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.6 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.6 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.6 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.6 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.6 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.6 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.7 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.2.7 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.7 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.7 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.7 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.7 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.7 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.7 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.7 asset binding books/book-4/chapters/4.2/_assets/427_A.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.2.7 asset binding books/book-4/chapters/4.2/_assets/427_B.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.1 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.3.1 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.1 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.1 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.1 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.1 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.1 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.1 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.3.2 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 asset binding books/book-4/chapters/4.3/_assets/eq_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.3 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.3.3 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.3 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.3 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.3 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.3 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.3 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.3 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.3 asset binding books/book-4/chapters/4.3/_assets/shift_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.4 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.3.4 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.4 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.4 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.4 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.4 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.4 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.4 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.4 asset binding books/book-4/chapters/4.3/_assets/floor_target.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.5 inline context retained",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "4.3.5 all source tables retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.5 required source images retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.5 no subquestions duplicated in context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.5 canonical source_ref",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.5 current manuscript locator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.5 full exported payload hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.5 combined and individual records agree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.5 asset binding books/book-4/chapters/4.3/_assets/mixed_base.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.2 decisive context: TK = 0,04q² + 4q + 400",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.2 decisive context: 200 kg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "3.2.2 decisive context: euro per week",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 decisive context: 5.000",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 decisive context: 3.000",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 decisive context: 500",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 decisive context: 1.500",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 decisive context: Lᵥ = 240 − 10w",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "4.3.2 decisive context: Lₐ = −40 + 10w",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "All current explicit text-I/O calls name their encoding",
+      "pass": true,
+      "detail": {
+        "calls": 59,
+        "violations": []
+      }
+    },
+    {
+      "name": "No distributed font binaries",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "All 31 manuscripts, six answer sources, six teacher sources and two backmatter sources unchanged",
+      "pass": true,
+      "detail": {
+        "files": 45,
+        "changed": []
+      }
+    }
+  ]
+}

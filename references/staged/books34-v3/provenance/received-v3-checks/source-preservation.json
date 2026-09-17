@@ -1,0 +1,95 @@
+{
+  "baseline_platform_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+  "baseline_lesson_commit": "a0548ff9937dfb3b788b8b0ed53bbf9bd4fe1c07",
+  "note": "These are source baselines, not a claim about the current live main heads. Original editions remain available as historical input; no live repository writes were performed.",
+  "deferred_assets": [
+    {
+      "path": "historical-inputs/deferred-4.3.5/_assets/bargaining.svg",
+      "sha256": "555b4828e4dc6fb0c646928b7585fbf62b0699a88dadb96c588ca198e25b2076",
+      "unchanged": true
+    },
+    {
+      "path": "historical-inputs/deferred-4.3.5/_assets/cao_costs.svg",
+      "sha256": "538e49c957d245f10b7b28e5528af41157b37021ea9ab178bc8eac00e9b8b84c",
+      "unchanged": true
+    }
+  ],
+  "covers": [
+    {
+      "book": "3",
+      "cover_page_preserved": true,
+      "render_sha256": "93575415798b07cb91f4e749ea22394cace1b7a97a666424bcd6cc9cfabff299"
+    },
+    {
+      "book": "4",
+      "cover_page_preserved": true,
+      "render_sha256": "90d1b82308de21a1d63ea2a7e11f3210b50f1cb03b4762ff3d38a1fc37102692"
+    }
+  ],
+  "asset_reuse": {
+    "total": 439,
+    "unchanged": 429,
+    "changed_or_new": [
+      {
+        "path": "books/book-4/chapters/4.1/_assets/4.1.3_ans_27.png",
+        "sha256": "ad6ab4180e746eb3ea21de545ce8ac174345c7ff0abe7703b9d3e093ab9faa1b",
+        "same_bytes_as_original": false,
+        "original_found": true
+      },
+      {
+        "path": "books/book-4/chapters/4.1/_assets/4.1.3_ans_24.svg",
+        "sha256": "173429e2a5cfa6804ba787520b998116dd7a4976f086545d3bab58305f4e13d9",
+        "same_bytes_as_original": false,
+        "original_found": true
+      },
+      {
+        "path": "books/book-4/chapters/4.1/_assets/4.1.3_ans_26.svg",
+        "sha256": "d802e9035edbeff78fdf0fe836c723093172c5b528e55b6d8dc3e22065e4d530",
+        "same_bytes_as_original": false,
+        "original_found": true
+      },
+      {
+        "path": "books/book-4/chapters/4.1/_assets/4.1.3_ans_27.svg",
+        "sha256": "5202d1a829d570ad29068c961aff48967651baa782144319ca26cfbf4d975661",
+        "same_bytes_as_original": false,
+        "original_found": true
+      },
+      {
+        "path": "books/book-4/chapters/4.1/_assets/4.1.3_ans_24.png",
+        "sha256": "e1120906b462fccc1e03b55179cd233b9a003dc169242f7394524f5bdfb1c150",
+        "same_bytes_as_original": false,
+        "original_found": true
+      },
+      {
+        "path": "books/book-4/chapters/4.1/_assets/4.1.3_ans_26.png",
+        "sha256": "70650563353dec1a0774bb868a119ab898e59dde7130bb18fbab4805d820afff",
+        "same_bytes_as_original": false,
+        "original_found": true
+      },
+      {
+        "path": "books/book-4/chapters/4.3/_assets/mixed_base.svg",
+        "sha256": "ab75cd59d5c8a2707969a9f81601ca664893d9d3efe87dd646de65fbad6660da",
+        "same_bytes_as_original": false,
+        "original_found": true
+      },
+      {
+        "path": "books/book-4/chapters/4.3/_assets/mixed_answer.png",
+        "sha256": "333c537716c710ef306a9d881aba9f4586f2a6963066daea2fbee03e4355133a",
+        "same_bytes_as_original": false,
+        "original_found": true
+      },
+      {
+        "path": "books/book-4/chapters/4.3/_assets/mixed_base.png",
+        "sha256": "38ee368d7c01d352cf8ca7250871a6a25bb3b34f0d21ba57911f160763c5cbdb",
+        "same_bytes_as_original": false,
+        "original_found": true
+      },
+      {
+        "path": "books/book-4/chapters/4.3/_assets/mixed_answer.svg",
+        "sha256": "1b90f1f8d32ad60bf22982a15b483325d7a50c99ef005570d42c20447eb4ccf9",
+        "same_bytes_as_original": false,
+        "original_found": true
+      }
+    ]
+  }
+}

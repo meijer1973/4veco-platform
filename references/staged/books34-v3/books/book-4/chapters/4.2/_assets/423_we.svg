@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430" role="img"><title>423_we</title>
+<rect width="900" height="430" rx="8" fill="#f5f8fa"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10" fill="none" stroke="#637986" stroke-width="1.5"/></marker><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0" stroke="#183247" stroke-width="1" opacity=".25"/></pattern><pattern id="horizontal" width="10" height="8" patternUnits="userSpaceOnUse"><path d="M0 4H10" stroke="#183247" stroke-width="1" opacity=".22"/></pattern><pattern id="cross" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0M0 0L10 10" stroke="#183247" stroke-width="1" opacity=".25"/></pattern></defs>
+<text x="452.0000" y="28.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">IJsatelier · Een korte-termijnkeuze</text>
+<text x="78.0000" y="55.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#183247">P, MO en MK (€ per eenheid)</text>
+<line x1="78.0000" y1="76.0000" x2="78.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="78.0000" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">0</text>
+<line x1="265.0000" y1="76.0000" x2="265.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="265.0000" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">25</text>
+<line x1="452.0000" y1="76.0000" x2="452.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="452.0000" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">50</text>
+<line x1="639.0000" y1="76.0000" x2="639.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="639.0000" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">75</text>
+<line x1="826.0000" y1="76.0000" x2="826.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="826.0000" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">100</text>
+<line x1="78.0000" y1="344.0000" x2="826.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="349.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">0</text>
+<line x1="78.0000" y1="254.6667" x2="826.0000" y2="254.6667" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="259.6667" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">6</text>
+<line x1="78.0000" y1="210.0000" x2="826.0000" y2="210.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="215.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">9</text>
+<line x1="78.0000" y1="76.0000" x2="826.0000" y2="76.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="81.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">18</text>
+<line x1="78.0000" y1="344.0000" x2="834.0000" y2="344.0000" stroke="#183247" stroke-width="1.8" marker-end="url(#arrow)"/>
+<line x1="78.0000" y1="344.0000" x2="78.0000" y2="71.0000" stroke="#183247" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="452.0000" y="397.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#183247">q (porties per dag)</text>
+<polyline data-panel="p0" data-curve="GO = P" points="78.00000000,76.00000000 826.00000000,224.88888889" fill="none" stroke="#146d9b" stroke-width="3"/>
+<text x="601.6000" y="165.2222" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#146d9b">GO = P</text>
+<polyline data-panel="p0" data-curve="MO" points="78.00000000,76.00000000 751.20000000,344.00000000" fill="none" stroke="#247d70" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="265.0000" y="138.4444" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#247d70">MO</text>
+<polyline data-panel="p0" data-curve="MK" points="78.00000000,254.66666667 826.00000000,254.66666667" fill="none" stroke="#ab4943" stroke-width="3"/>
+<text x="698.8400" y="276.6667" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#ab4943">MK</text>
+<line x1="78.0000" y1="254.6667" x2="526.8000" y2="254.6667" stroke="#637986" stroke-width="1" stroke-dasharray="5 4"/>
+<line x1="526.8000" y1="344.0000" x2="526.8000" y2="254.6667" stroke="#637986" stroke-width="1" stroke-dasharray="5 4"/>
+<circle data-panel="p0" data-point="1" cx="526.8000" cy="254.6667" r="4.2" fill="#183247"/>
+<text x="505.8000" y="275.6667" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#183247">1</text>
+<line x1="78.0000" y1="165.3333" x2="526.8000" y2="165.3333" stroke="#637986" stroke-width="1" stroke-dasharray="5 4"/>
+<line x1="526.8000" y1="344.0000" x2="526.8000" y2="165.3333" stroke="#637986" stroke-width="1" stroke-dasharray="5 4"/>
+<circle data-panel="p0" data-point="2" cx="526.8000" cy="165.3333" r="4.2" fill="#183247"/>
+<text x="535.8000" y="153.3333" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#183247">2</text>
+<text x="450.0000" y="421.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#183247">q = 60   →   P = € 12</text>
+</svg>

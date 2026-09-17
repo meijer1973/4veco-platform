@@ -2,8 +2,8 @@
 
 Status: L1.5Q Phase B curriculum-source version
 Version: v5
-Structural revision: `book34-chat-v2-20260914`
-Change review: `reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md`
+Structural revision: `book34-lesson-balance-v3-20260915`
+Change review: `reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-V3-20260917.md`
 Active target-exercise registry: `references/authored/course-target-exercises.json`
 
 ## Purpose
@@ -53,19 +53,22 @@ Book 2 absorbs the Book 1 production material that was cut from print: costs, re
 
 ### Book 3 - Overheidsingrijpen, concurrentie en internationale handel
 
-Book 3 has 14 paragraphs (6+4+4): intervention, perfect competition, then explanation/source-led trade. Trade does not require monopoly or formal labour productivity/unit-labour-cost calculations. Comparative advantage is qualitative; no calculated opportunity-cost ratios, specialisation-table algorithm or exchange-ratio bounds. World-price quantities, trade gaps and a short tariff-revenue chain transfer familiar methods. Full selected specification: [Book 3 outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md), with current [adoption metadata](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.meta.json).
+Book 3 retains 14 paragraphs (6+4+4): intervention, short-run price-taking firm decisions, then qualitative/source-led trade. The limited derivative is taught in 3.2.2; feasible output/profit choice in 3.2.3. Long-run entry/exit and zero economic profit are first assessed in Book 4. Trade does not require monopoly or formal labour productivity/unit-labour-cost calculations. Comparative advantage remains qualitative; no opportunity-cost-ratio algorithm or exchange-ratio bounds. [Adopted Book 3 outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md).
 
 ### Book 4 - Monopolie, marktfalen en arbeidsmarkt
 
-Book 4 has 17 paragraphs (4+7+6): monopoly, market forms/failure, then labour. Tax/subsidy methods transfer to externalities; price floors transfer to minimum wages. Teach the employer/household, wage and labour-unit bridge. Formal productivity/unit-labour-cost calculations first occur in 4.3.1. Old standalone labour equilibrium is absorbed into 4.3.2 (baseline), 4.3.3 (shifts), 4.3.4 (minimum wage) and 4.3.6 (independent mixed practice). No seventh labour paragraph is added. Full selected specification: [Book 4 outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md), with current [adoption metadata](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.meta.json).
+Book 4 retains 17 paragraphs in 5+7+5. Chapter 4.1, Van concurrentie naar monopolie, starts with moved long-run competition (4.1.1), followed by monopoly and independent consolidation. Chapter 4.2 retains seven lessons; Chapter 4.3 retains five, ending with mixed labour practice in 4.3.5. The former v2 4.3.5 cao/vakbonden/agreement-policy lesson is deferred, with no later-year ID or time allocation yet. It is not a hidden prerequisite of the new mixed lesson. Tax/subsidy and price-floor methods transfer to externalities and minimum wages; formal productivity/unit-labour-cost calculations first occur in 4.3.1. [Adopted Book 4 outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md).
 
 ## Migration Notes
+
+- The version-qualified [v2-to-v3 migration](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/paragraph-migration-v2-to-v3.csv) controls reused IDs. The 31 supplied targets are filled candidates, never automatic final approvals.
+- Student chapter caps are Book 3: 50/40/40; Book 4: 50/60/50 pages. The five lesson-time questions 3.1.2, 3.1.3, 3.1.5, 4.2.4 and 4.2.5 remain open. No timing certification is implied.
 
 - Book 1 follows the L1.5P print scope: 12 paragraphs, no printed test-preparation chapter.
 - Book 1 cost, revenue, and marginal-analysis material is moved to later books rather than deleted.
 - Government intervention, monopoly, and market failure are shifted forward.
 - Inflation and late macro material are parked for a later year and are not count-bearing in v5.
-- The selected v2 trade boundary replaces the old two-paragraph trade block. The [version-qualified migration](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/migration-live-v5-to-v2.csv) records partial overlap and absorbed operations; numerical IDs alone never establish target equivalence.
+- The retained v2 trade boundary replaces the old two-paragraph trade block. The [version-qualified migration](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/migration-live-v5-to-v2.csv) records partial overlap and absorbed operations; numerical IDs alone never establish target equivalence.
 
 ## Target-Exercise Record Status
 
@@ -117,42 +120,42 @@ The full target-exercise distribution audit is deferred to L2.4-TEA. L1.5Q may c
 
 | Paragraph | Kind | Title | Target status |
 |---|---|---|---|
-| 3.1.1 | theory | Belastingen: wig en nieuw evenwicht | placeholder_needs_review |
-| 3.1.2 | theory | Belastingdruk en welvaartsverlies | placeholder_needs_review |
-| 3.1.3 | theory | Subsidies | placeholder_needs_review |
-| 3.1.4 | theory | Maximumprijs | placeholder_needs_review |
-| 3.1.5 | theory | Minimumprijs en quota | placeholder_needs_review |
-| 3.1.6 | gemengde_opgaven | Gemengde opgaven: overheidsingrijpen | placeholder_needs_review |
-| 3.2.1 | theory | Volkomen concurrentie: kenmerken | placeholder_needs_review |
-| 3.2.2 | theory | Winstmaximalisatie bij volkomen concurrentie | placeholder_needs_review |
-| 3.2.3 | theory | Langetermijnevenwicht | placeholder_needs_review |
-| 3.2.4 | gemengde_opgaven | Gemengde opgaven: volkomen concurrentie | placeholder_needs_review |
-| 3.3.1 | theory | Waarom landen handelen: specialisatie en concurrentiepositie | placeholder_needs_review |
-| 3.3.2 | theory | Wereldmarktprijs, import, export en welvaart | placeholder_needs_review |
-| 3.3.3 | theory | Protectionisme: invoerheffingen en importquota | placeholder_needs_review |
-| 3.3.4 | gemengde_opgaven | Gemengde opgaven: internationale handel | placeholder_needs_review |
+| 3.1.1 | theory | Belastingen: wig en nieuw evenwicht | candidate_review_ready |
+| 3.1.2 | theory | Belastingdruk en welvaartsverlies | candidate_review_ready |
+| 3.1.3 | theory | Subsidies | candidate_review_ready |
+| 3.1.4 | theory | Maximumprijs | candidate_review_ready |
+| 3.1.5 | theory | Minimumprijs en quota | candidate_review_ready |
+| 3.1.6 | gemengde_opgaven | Gemengde opgaven: overheidsingrijpen | candidate_review_ready |
+| 3.2.1 | theory | Volkomen concurrentie: kenmerken | candidate_review_ready |
+| 3.2.2 | theory | Marginale kosten en de afgeleide | candidate_review_ready |
+| 3.2.3 | theory | Winstmaximalisatie bij volkomen concurrentie | candidate_review_ready |
+| 3.2.4 | gemengde_opgaven | Gemengde opgaven: de prijsnemende onderneming | candidate_review_ready |
+| 3.3.1 | theory | Waarom landen handelen: specialisatie en concurrentiepositie | candidate_review_ready |
+| 3.3.2 | theory | Wereldmarktprijs, import, export en welvaart | candidate_review_ready |
+| 3.3.3 | theory | Protectionisme: invoerheffingen en importquota | candidate_review_ready |
+| 3.3.4 | gemengde_opgaven | Gemengde opgaven: internationale handel | candidate_review_ready |
 
 ### Book 4
 
 | Paragraph | Kind | Title | Target status |
 |---|---|---|---|
-| 4.1.1 | theory | Monopolie: kenmerken | placeholder_needs_review |
-| 4.1.2 | theory | Marginale opbrengst bij monopolie | placeholder_needs_review |
-| 4.1.3 | theory | Winstmaximalisatie bij monopolie | placeholder_needs_review |
-| 4.1.4 | gemengde_opgaven | Gemengde opgaven: monopolie | placeholder_needs_review |
-| 4.2.1 | theory | Welvaartseffecten van monopolie | placeholder_needs_review |
-| 4.2.2 | theory | Prijsdiscriminatie | placeholder_needs_review |
-| 4.2.3 | theory | Marktvormen vergelijken | placeholder_needs_review |
-| 4.2.4 | theory | Negatieve externe effecten | placeholder_needs_review |
-| 4.2.5 | theory | Positieve externe effecten | placeholder_needs_review |
-| 4.2.6 | theory | Overheidsingrijpen bij marktfalen | placeholder_needs_review |
-| 4.2.7 | gemengde_opgaven | Gemengde opgaven: marktvormen en marktfalen | placeholder_needs_review |
-| 4.3.1 | theory | Arbeidsvraag en arbeidsproductiviteit | placeholder_needs_review |
-| 4.3.2 | theory | Arbeidsaanbod, participatie en evenwicht | placeholder_needs_review |
-| 4.3.3 | theory | Werkloosheid en veranderingen op de arbeidsmarkt | placeholder_needs_review |
-| 4.3.4 | theory | Minimumloon | placeholder_needs_review |
-| 4.3.5 | theory | Vakbonden, cao en arbeidsmarktbeleid | placeholder_needs_review |
-| 4.3.6 | gemengde_opgaven | Gemengde opgaven: arbeidsmarkt | placeholder_needs_review |
+| 4.1.1 | theory | Toetreding, uittreding en langetermijnevenwicht | candidate_review_ready |
+| 4.1.2 | theory | Monopolie: kenmerken | candidate_review_ready |
+| 4.1.3 | theory | Marginale opbrengst bij monopolie | candidate_review_ready |
+| 4.1.4 | theory | Winstmaximalisatie bij monopolie | candidate_review_ready |
+| 4.1.5 | gemengde_opgaven | Gemengde opgaven: concurrentie en monopolie | candidate_review_ready |
+| 4.2.1 | theory | Welvaartseffecten van monopolie | candidate_review_ready |
+| 4.2.2 | theory | Prijsdiscriminatie | candidate_review_ready |
+| 4.2.3 | theory | Marktvormen vergelijken | candidate_review_ready |
+| 4.2.4 | theory | Negatieve externe effecten | candidate_review_ready |
+| 4.2.5 | theory | Positieve externe effecten | candidate_review_ready |
+| 4.2.6 | theory | Overheidsingrijpen bij marktfalen | candidate_review_ready |
+| 4.2.7 | gemengde_opgaven | Gemengde opgaven: marktvormen en marktfalen | candidate_review_ready |
+| 4.3.1 | theory | Arbeidsvraag en arbeidsproductiviteit | candidate_review_ready |
+| 4.3.2 | theory | Arbeidsaanbod, participatie en evenwicht | candidate_review_ready |
+| 4.3.3 | theory | Werkloosheid en veranderingen op de arbeidsmarkt | candidate_review_ready |
+| 4.3.4 | theory | Minimumloon | candidate_review_ready |
+| 4.3.5 | gemengde_opgaven | Gemengde opgaven: arbeidsmarkt | candidate_review_ready |
 
 ## Paragraph Anchors
 
@@ -254,7 +257,7 @@ Count-bearing gemengde-opgaven paragraph. Introduces no new theory; requires a r
 
 ### §3.1.1 - Belastingen: wig en nieuw evenwicht
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Distinguish the price paid by buyers from the amount received by sellers; represent a per-unit tax and calculate the new traded quantity.
 
@@ -264,7 +267,7 @@ Boundary: State who remits the tax, its unit, and the competitive model assumpti
 
 ### §3.1.2 - Belastingdruk en welvaartsverlies
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Calculate the division of the tax burden, tax revenue and welfare consequences; explain the effect of relative responsiveness.
 
@@ -274,7 +277,7 @@ Boundary: Government revenue is a transfer, not the deadweight loss. The initial
 
 ### §3.1.3 - Subsidies
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Represent a per-unit subsidy, calculate both prices and transactions, and identify government expenditure and distributional effects.
 
@@ -284,7 +287,7 @@ Boundary: Specify the eligible transaction and payment recipient. In this first 
 
 ### §3.1.4 - Maximumprijs
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Distinguish binding and non-binding price ceilings; calculate demand, supply, actual transactions and shortage.
 
@@ -294,7 +297,7 @@ Boundary: A low quoted price does not mean everyone buys at that price. Welfare-
 
 ### §3.1.5 - Minimumprijs en quota
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Analyse a binding price floor and distinguish it from a production quota. Calculate surplus supply and, when specified, public purchases.
 
@@ -304,7 +307,7 @@ Boundary: A production quota is not automatically a price floor; a floor does no
 
 ### §3.1.6 - Gemengde opgaven: overheidsingrijpen
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Select the appropriate intervention model and integrate price, quantity, budget and welfare reasoning without new theory.
 
@@ -314,7 +317,7 @@ Boundary: No new intervention or externality model. Do not force every intervent
 
 ### §3.2.1 - Volkomen concurrentie: kenmerken
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Explain price taking and connect the market price to the individual firm’s GO and MO.
 
@@ -322,49 +325,49 @@ Retrieval and transfer (design, not mastery evidence): Retrieve market equilibri
 
 Boundary: Explain the stated competitive assumptions. A horizontal firm demand curve is not the same as a horizontal market demand curve.
 
-### §3.2.2 - Winstmaximalisatie bij volkomen concurrentie
+### §3.2.2 - Marginale kosten en de afgeleide
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
-Intended learning: Use marginal comparison to select output and calculate total profit, linking MO, MK, price and average total cost.
+Intended learning: Derive MK from TK = aq² + bq + c using only the quadratic, linear and constant terms required in the course. Evaluate and interpret the resulting marginal cost at a stated q with the correct units. Distinguish a point marginal value from the average additional cost over a finite table interval. Explain why fixed costs disappear from MK but remain in TK and profit.
 
-Retrieval and transfer (design, not mastery evidence): Retrieve Book 2 cost/revenue calculations and marginal meaning. Explicitly teach the optimisation rule; do not label it revision.
+Retrieval and transfer (design, not mastery evidence): Retrieve §2.1.3's ΔTK/Δq, substitution and total/per-unit distinctions. The derivative operation is new instruction here. Retrieve the revenue meaning of P = GO = MO from §3.2.1, but do not teach the optimisation rule as a second destination in this lesson.
 
-Boundary: If a quadratic total-cost function is used, teach the limited quadratic-to-linear derivative operation within this paragraph rather than assuming prior calculus. Check the direction of marginal comparisons and production capacity; MO = MK alone is not a universal maximum proof. Flag the combined mathematical and economic load for target/timing review.
+Boundary: No full calculus course, differentiation of GTK, general product/quotient rules, or price/output optimisation. Do not call ΔTK/Δq over a large interval the exact derivative at its endpoint. Preserve the existing fixed-cost/capacity convention. A full optimum, capacity comparison and profit rectangle belong to §3.2.3, not this target. This new paragraph must have its own worked preparation, independent practice and compact target.
 
-### §3.2.3 - Langetermijnevenwicht
+### §3.2.3 - Winstmaximalisatie bij volkomen concurrentie
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
-Intended learning: Explain how entry or exit changes market supply, price and firm profit, and interpret the competitive long-run outcome.
+Intended learning: Use marginal comparisons to select a feasible output at a given market price. Obtain and check the MO = MK candidate, explain the directions on either side, check production capacity and relevant boundaries, calculate TO − TK, and represent profit through P and GTK at the same chosen q.
 
-Retrieval and transfer (design, not mastery evidence): Retrieve §3.2.2, market supply shifts, GTK and break-even. Re-use calculations to support the adjustment narrative.
+Retrieval and transfer (design, not mastery evidence): Retrieve the limited derivative from §3.2.2, price taking from §3.2.1, and the Book 2 total/average/marginal distinction. The economic output-choice rule is explicitly new. A short derivative retrieval item is appropriate; another full introductory derivative lesson is not.
 
-Boundary: The familiar zero-economic-profit result requires the specified competitive entry/exit and cost assumptions. It does not mean entrepreneurs receive no remuneration or that total revenue is zero.
+Boundary: MO = MK is not by itself a universal maximum proof. Do not choose output by mechanically minimising GTK. Fixed costs remain fixed within the stated period and capacity; avoid new production-range complications. Entry/exit, normal remuneration and the long-run zero-economic-profit result are formally taught in new §4.1.1, not here. Distinguish a short-period loss from an automatic decision to leave the market.
 
-### §3.2.4 - Gemengde opgaven: volkomen concurrentie
+### §3.2.4 - Gemengde opgaven: de prijsnemende onderneming
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
-Intended learning: Integrate market price formation, firm output, profit and long-run adjustment.
+Intended learning: Independently connect market price formation and a short-run change in that price to the output, costs and profit of one price-taking firm. Keep market Q, firm q, per-unit values and total amounts distinct. Select and check a feasible marginal output decision.
 
-Retrieval and transfer (design, not mastery evidence): Interleave Book 2 total/average/marginal distinctions, equilibrium, and §§3.2.1-3.2.3.
+Retrieval and transfer (design, not mastery evidence): Retrieve §§3.2.1–3.2.3, Book 1 market equations and demand shifts, and Book 2 costs, revenue, averages and profit. The number of active firms and their production capacities are held fixed over the analysed adjustment window. The long-run mechanism is not an assessed prerequisite.
 
-Boundary: No monopoly or new long-run cost theory. Monopoly is taught next book, in Chapter 4.1; it is not a prerequisite for the trade chapter that follows here. A multi-stage exercise still requires an explicit initial situation and adjustment horizon.
+Boundary: In the complete printed set, not just the target, relocate old exercise 35 and the long-run content of bonus 37 or replace them with already-taught retrieval. Reword old 36a's economic-profit/normal-remuneration premise as a supplied cost convention; do not require interpretation of normal remuneration before §4.1.1. Numeric equality TO = TK may remain familiar break-even arithmetic, not a long-run conclusion. Preserve independent consolidation before the Book 3 assessment.
 
 ### §3.3.1 - Waarom landen handelen: specialisatie en concurrentiepositie
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Explain specialisation, absolute versus comparative advantage and possible mutual gains qualitatively. Distinguish an explanation of relative opportunity cost from a general claim about a country's production strengths or competitiveness.
 
 Retrieval and transfer (design, not mastery evidence): Retrieve scarcity, choice and the meaning of opportunity cost from Book 1. Introduce import/export and the new comparative-advantage meaning explicitly. Keep discussion of productivity, quality or costs qualitative and supported by information in the source; no formal labour-cost formula is assumed.
 
-Boundary: No calculated opportunity-cost ratios, production-possibility-frontier optimisation, exchange-ratio bounds or separate ruilvoet calculation objective. Do not equate absolute with comparative advantage or claim that all groups necessarily gain. The conceptual/no-calculation boundary follows the owner's retained design instruction; this revision makes no new CE/SE validation claim. Formal productivity and unit-labour-cost analysis is deferred to §4.3.1.
+Boundary: No calculated opportunity-cost ratios, production-possibility-frontier optimisation, exchange-ratio bounds or separate ruilvoet calculation objective. Do not equate absolute with comparative advantage or claim that all groups necessarily gain. The conceptual/no-calculation boundary follows the owner's retained design instruction; this revision makes no new CE/SE validation claim. Formal productivity and unit-labour-cost analysis is taught in §4.3.1. Long-run entry/exit is not needed for this trade target.
 
 ### §3.3.2 - Wereldmarktprijs, import, export en welvaart
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Explain how a stated world price changes domestic production and consumption; identify whether the country imports or exports; calculate the trade gap and interpret the effects on domestic buyers and sellers.
 
@@ -374,7 +377,7 @@ Boundary: State a small, price-taking country, competitive markets, sufficient f
 
 ### §3.3.3 - Protectionisme: invoerheffingen en importquota
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Explain why a government might restrict imports and distinguish its stated aim from effects on different groups. Use the familiar market model to interpret a per-unit import tariff; calculate remaining imports and tariff revenue in a simple case. Contrast an import quota qualitatively.
 
@@ -384,7 +387,7 @@ Boundary: Use imported quantity, not all domestic sales, for tariff revenue. Tea
 
 ### §3.3.4 - Gemengde opgaven: internationale handel
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-3-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-3-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Select and combine qualitative trade explanation, familiar world-price interpretation, a short import/tariff calculation and a source-supported conclusion. Distinguish aggregate and distributional claims.
 
@@ -392,19 +395,29 @@ Retrieval and transfer (design, not mastery evidence): Retrieve §§3.3.1-3.3.3 
 
 Boundary: The earlier proposal cites a 2022 VWO-I Importheffing task as a possible target-design input. Carry that reference forward for later source verification, not as a completed adaptation or evidence that every operation is approved. Later current-account and game-theory demands stay outside this chapter. Claims about protected jobs do not require or establish a formal economy-wide employment result.
 
-### §4.1.1 - Monopolie: kenmerken
+### §4.1.1 - Toetreding, uittreding en langetermijnevenwicht
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
+
+Intended learning: Explain profit → entry → market supply → price → firm profit, and the exit direction under sustained losses. Connect market Q and firm q, represent the direction of adjustment, and calculate or verify the stated long-run firm outcome. Interpret zero economic profit when normal entrepreneurial remuneration is included in costs.
+
+Retrieval and transfer (design, not mastery evidence): Reactivate Book 3's price-taking output choice, derivative and profit rectangle through the existing start/example route. Retrieve market supply shifts from Book 1. This first lesson of Book 4 teaches the new time-horizon and economic-profit interpretation; it is not an extra unnumbered recap lesson.
+
+Boundary: Retain the stated free-entry/exit, identical active-firm costs and input-price assumptions. Under this model the endpoint is P = MO = MK = minimum GTK; it is not a universal claim about every real industry. Do not infer immediate shutdown from a short-period loss. End with the question 'What changes when other suppliers cannot enter?' as the transition to §4.1.2, not a complete additional monopoly lesson. The existing classroom-time estimate remains provisional and needs checking after the book-opening retrieval is selected.
+
+### §4.1.2 - Monopolie: kenmerken
+
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Explain market power, barriers to entry and the relationship between the firm’s sales and market demand.
 
-Retrieval and transfer (design, not mastery evidence): Contrast with §3.2.1; retrieve the demand function and price/quantity relationship. Use the book-opening retrieval task to restore the difference between a market graph and the competitive firm's graph before introducing the monopolist's graph.
+Retrieval and transfer (design, not mastery evidence): Contrast with §3.2.1; retrieve the demand function and price/quantity relationship. Use a short retrieval task to restore the difference between a market graph and the competitive firm's graph before introducing the monopolist's graph. Connect the entry barrier explicitly to the adjustment mechanism taught in §4.1.1.
 
 Boundary: Monopoly does not mean unlimited pricing power. Patents can be one entry-barrier context; full policy evaluation belongs later.
 
-### §4.1.2 - Marginale opbrengst bij monopolie
+### §4.1.3 - Marginale opbrengst bij monopolie
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Explain why extra sales and a lower price have different effects on total revenue; obtain MO from a simple TO relation.
 
@@ -412,19 +425,19 @@ Retrieval and transfer (design, not mastery evidence): Retrieve TO = P x Q, Book
 
 Boundary: Assume a uniform selling price. Do not introduce point-elasticity formulas or a general calculus chapter. Revisit elasticity qualitatively only where it supports the taught revenue interpretation.
 
-### §4.1.3 - Winstmaximalisatie bij monopolie
+### §4.1.4 - Winstmaximalisatie bij monopolie
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Determine output using MO and MK, then read price from demand and calculate profit.
 
-Retrieval and transfer (design, not mastery evidence): Repeat §3.2.2’s optimisation procedure, §4.1.2’s revenue relation and Book 2 cost calculations.
+Retrieval and transfer (design, not mastery evidence): Repeat §3.2.3’s optimisation procedure, §4.1.3’s revenue relation and Book 2 cost calculations.
 
 Boundary: Do not read price from the MO curve, equate P with MK at the monopoly optimum, or confuse maximum revenue with maximum profit. Reserve the formal welfare comparison for §4.2.1, immediately after this chapter; it is not postponed to a later book.
 
-### §4.1.4 - Gemengde opgaven: monopolie
+### §4.1.5 - Gemengde opgaven: concurrentie en monopolie
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Choose and execute the monopoly calculation sequence and compare it with the already-taught competitive firm sequence.
 
@@ -434,17 +447,17 @@ Boundary: No price discrimination, strategic game or monopoly-welfare target bef
 
 ### §4.2.1 - Welvaartseffecten van monopolie
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Compare monopoly with an appropriate competitive/efficient benchmark and distinguish a redistribution of surplus from a welfare loss.
 
-Retrieval and transfer (design, not mastery evidence): Repeat §4.1.3’s quantity-and-price calculation and Book 2 CS/PS/total-surplus areas as essential parts of the current task.
+Retrieval and transfer (design, not mastery evidence): Repeat §4.1.4’s quantity-and-price calculation and Book 2 CS/PS/total-surplus areas as essential parts of the current task.
 
 Boundary: Keep demand, cost conditions and welfare boundary comparable across scenarios. Producer surplus is not automatically profit; do not treat every transfer between buyer and seller as a loss.
 
 ### §4.2.2 - Prijsdiscriminatie
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Explain the conditions for selling at different prices and analyse the effect on revenue, profit and the division of surplus.
 
@@ -454,7 +467,7 @@ Boundary: State market separation and resale restrictions. For separate segment 
 
 ### §4.2.3 - Marktvormen vergelijken
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Distinguish perfect competition, monopolistic competition, oligopoly and monopoly; transfer a familiar profit procedure to a supplied unfamiliar-market representation.
 
@@ -464,7 +477,7 @@ Boundary: Do not assume an oligopolist has one universal demand curve. No reacti
 
 ### §4.2.4 - Negatieve externe effecten
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Identify unpriced harm to third parties, distinguish private from social consequences and analyse a corrective tax.
 
@@ -474,7 +487,7 @@ Boundary: Do not count tax revenue as a real social loss or treat CS + PS alone 
 
 ### §4.2.5 - Positieve externe effecten
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Identify benefits to third parties and explain how a subsidy can improve an outcome with too little of the beneficial activity.
 
@@ -484,7 +497,7 @@ Boundary: Keep the benefit to the buyer separate from the benefit to others. Sta
 
 ### §4.2.6 - Overheidsingrijpen bij marktfalen
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Match a policy to the diagnosed failure, compare feasible alternatives and evaluate effects and limitations with evidence.
 
@@ -494,7 +507,7 @@ Boundary: Not a second full course on every instrument. A patent/competition-pol
 
 ### §4.2.7 - Gemengde opgaven: marktvormen en marktfalen
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Integrate firm behaviour, surplus, external effects and policy selection without new theory.
 
@@ -504,7 +517,7 @@ Boundary: Do not put an unfamiliar policy or welfare concept into the mixed targ
 
 ### §4.3.1 - Arbeidsvraag en arbeidsproductiviteit
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Explain why employers demand labour, interpret changes in that demand, and relate output, labour input, productivity and labour cost per unit.
 
@@ -514,7 +527,7 @@ Boundary: Keep hours, persons and full-time equivalents distinct. Do not imply p
 
 ### §4.3.2 - Arbeidsaanbod, participatie en evenwicht
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Identify households as labour suppliers, calculate participation with the stated denominator, and find and interpret the competitive baseline equilibrium wage and employment.
 
@@ -524,7 +537,7 @@ Boundary: This paragraph absorbs the baseline part of the registry-baseline §4.
 
 ### §4.3.3 - Werkloosheid en veranderingen op de arbeidsmarkt
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Calculate unemployment using the labour force as denominator, distinguish the relevant causes and interpret labour-market changes.
 
@@ -534,7 +547,7 @@ Boundary: Distinguish the simplified clearing model from observed vacancies and 
 
 ### §4.3.4 - Minimumloon
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
 Intended learning: Apply a minimum-price model to wages and distinguish effects on wage rates, employment, people seeking work and the wage bill.
 
@@ -542,25 +555,15 @@ Retrieval and transfer (design, not mastery evidence): Repeat §3.1.5’s price-
 
 Boundary: State a competitive model, the wage unit and adjustment assumptions. Model outcomes are not universal empirical claims about every minimum-wage change. Use illustrative rates, not unverified current statutory figures.
 
-### §4.3.5 - Vakbonden, cao en arbeidsmarktbeleid
+### §4.3.5 - Gemengde opgaven: arbeidsmarkt
 
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
+Selected structure: book34-lesson-balance-v3-20260915; [adopted outline](https://github.com/meijer1973/4veco-platform/blob/main/references/authored/book-outlines/book-4-outline.md). Target status: candidate_review_ready; independent review remains pending; no inherited approval.
 
-Intended learning: Explain collective bargaining and assess a bounded policy or agreement using wages, productivity, labour supply/demand and employment.
+Intended learning: Combine labour-market actors and units, productivity and basic unit labour costs, participation/unemployment denominators, baseline equilibrium, shifts and a minimum-wage model. Give conclusions bounded by the supplied data and assumptions, without requiring collective bargaining or the deferred agreement/training-policy framework.
 
-Retrieval and transfer (design, not mastery evidence): Repeat percentage/index comparisons, labour cost per unit, shifts and the difference between a binding wage floor and a change in the underlying market.
+Retrieval and transfer (design, not mastery evidence): Retrieve only retained §§4.3.1–4.3.4 and earlier familiar market methods. Keep independent equilibrium/shift evidence so that shortening the chapter does not silently remove it. General claims about employment still require both labour-productivity and output information, as taught in §4.3.1.
 
-Boundary: Do not turn this into formal bargaining-game theory. Introduce flexwork/zzp terminology as needed for the source without assuming that labels determine effects. Use institutional descriptions rather than unsupported current legal details. A competitiveness application may now combine already-taught trade reasoning with wage/productivity comparisons; it does not retrospectively make those calculations a Book 3 prerequisite.
-
-### §4.3.6 - Gemengde opgaven: arbeidsmarkt
-
-Selected structure: book34-chat-v2-20260914; [original outline](https://github.com/meijer1973/4veco-platform/blob/codex/import-books34-outlines-20260914/references/authored/book-outlines/book-4-outline.md). Target status: placeholder_needs_review; no inherited approval.
-
-Intended learning: Integrate labour-market vocabulary, equilibrium and shifts, participation/unemployment, productivity and policy without new theory.
-
-Retrieval and transfer (design, not mastery evidence): Retrieve all chapter operations plus the earlier minimum-price method. Include independent equilibrium evidence explicitly so it has not disappeared with the removed paragraph.
-
-Boundary: No seventh compulsory catch-up lesson. If the absorbed equilibrium targets cannot fit the existing lessons and supports, revise the exercise design and timing before production rather than claiming the capacity saving without evidence.
+Boundary: In old mixed exercise 48, replace the cao wage floor by a clearly stated illustrative minimum wage, or select another already-taught wage-floor case. Remove or revise old 49's source C and 49f only to the extent needed by the retained goals; do not delete the useful data-limited employment reasoning already in §4.3.1. Update the final return-reference to old §4.3.5. The new numeric ID 4.3.5 is a mixed paragraph, not the old bargaining paragraph. Deferred goals must not return in compulsory homework, tests or an unexplained bonus.
 
 ## Web-Only Test Preparation
 

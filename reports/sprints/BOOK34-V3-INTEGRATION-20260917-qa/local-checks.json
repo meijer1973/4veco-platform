@@ -1,0 +1,128 @@
+{
+  "scope": "Technical local integration evidence; no target finality, classroom timing or merge authority",
+  "platform_base": "67374a9808d226f1be7e8fa73eb104312c075267",
+  "lesson_base": "a0548ff9937dfb3b788b8b0ed53bbf9bd4fe1c07",
+  "package_sha256": "5ef27d7537f36a4c6ddac9126dff1ed034593bb52ae375acaaab49f09c0bcb55",
+  "package_files": 814,
+  "immutable_manifest_sha256": "516d07d2d33326fd4d12cecc0a3b4a60693ff4b43a6a671dab508a72390db315",
+  "native_os": "Windows-11-10.0.26200-SP0",
+  "rebuild_python": "3.12.14 bundled runtime venv",
+  "render_packages": "Exact received requirements-render-lock.txt installed in isolated venv; see build-environment.txt",
+  "fonts": "Lato 2.015 task-local from google/fonts/ofl/lato; DejaVu Sans/Sans Mono via MSYS2 fontconfig",
+  "initial_missing_font_attempt": {
+    "fallback": "Noto Sans",
+    "edition_failures": 171,
+    "disposition": "Resolved by correct Lato2.015, no source/check changes"
+  },
+  "checks": {
+    "edition": {
+      "passed": 598,
+      "failed": 0
+    },
+    "selected_math": {
+      "passed": 99,
+      "failed": 0
+    },
+    "repairs": {
+      "passed": 320,
+      "failed": 0
+    },
+    "package_unit_tests": {
+      "passed": 24,
+      "failed": 0
+    },
+    "focused_repository_tests": {
+      "passed": 144,
+      "failed": 0
+    },
+    "historical_v2_import": {
+      "passed": true,
+      "paired": true,
+      "tracked": true
+    },
+    "full_local_suite_before_final_snapshot_registration": {
+      "passed": 2038,
+      "failed": 0,
+      "skipped": 8,
+      "passed_suites": 121,
+      "skipped_suites": 6
+    },
+    "final_snapshot_and_import_focused": {
+      "passed": 47,
+      "failed": 0
+    }
+  },
+  "pdf_comparison": {
+    "volumes": 6,
+    "pages": 490,
+    "page_counts_match": true,
+    "text_equal_pages": 490,
+    "pixel_equal_pages": 164,
+    "pixel_different_pages": 326,
+    "exact_raster_reproduction": false,
+    "sampled_visual_review": "Four side-by-side pages: B3 student67, B3 teacher5, B4 answers22, B4 student133; differences in sampled headings, no sampled clipping or content loss. Not all326 changed pages were visually reviewed. Delivered PDFs retained unchanged."
+  },
+  "volumes": [
+    {
+      "file": "books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+      "pages": 74,
+      "text_different_pages": 0,
+      "pixel_different_pages": 69
+    },
+    {
+      "file": "books/book-3/output/Boek_3_Compleet_Docenteninformatie_v3.pdf",
+      "pages": 22,
+      "text_different_pages": 0,
+      "pixel_different_pages": 22
+    },
+    {
+      "file": "books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "pages": 132,
+      "text_different_pages": 0,
+      "pixel_different_pages": 73
+    },
+    {
+      "file": "books/book-4/output/Boek_4_Compleet_Antwoorden_v3.pdf",
+      "pages": 68,
+      "text_different_pages": 0,
+      "pixel_different_pages": 37
+    },
+    {
+      "file": "books/book-4/output/Boek_4_Compleet_Docenteninformatie_v3.pdf",
+      "pages": 28,
+      "text_different_pages": 0,
+      "pixel_different_pages": 26
+    },
+    {
+      "file": "books/book-4/output/Boek_4_Compleet_v3.pdf",
+      "pages": 166,
+      "text_different_pages": 0,
+      "pixel_different_pages": 99
+    }
+  ],
+  "font_hashes": {
+    "Lato-Black.ttf": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337",
+    "Lato-BlackItalic.ttf": "3214f75bf96783a571bd25338c867c669e7c5e7c08a227f18a7b63766d6e6cbe",
+    "Lato-Bold.ttf": "8a0aace75d33794eece4b28187bfc1df0bbd2888b5d8a56e01788c8d65d16be1",
+    "Lato-BoldItalic.ttf": "62c1b7f0d2e74b45960154c3520efc337b553db0961bfdc950d5618334596cc8",
+    "Lato-ExtraBold.ttf": "61018de62bdaf90d4ac80b1d53c5c130756c8e9219aea3d2773fc9bd5869af97",
+    "Lato-ExtraBoldItalic.ttf": "a42b384b9c37913a61023e3a47c07fead26e776127bbc9e6a0c96fe413089374",
+    "Lato-ExtraLight.ttf": "989989b481db5df0827d90c51fd08d024fe7bc4e367046e2584a0d3b0487936d",
+    "Lato-ExtraLightItalic.ttf": "fc56526250b9b64ce0908c52350b03e91b84afecb08fd2834a12e57b91abdb31",
+    "Lato-Italic.ttf": "e399c44efe1387100531d26c7e4800c5d12251b890d6654a3098c7c679cb1786",
+    "Lato-Light.ttf": "cf2a774503baf418d584f49967bd160e1e03f087c13b25602f28024ec7788f08",
+    "Lato-LightItalic.ttf": "700e6722fd14a10e7646347a6b14c486d4c364a373ba61c70e0b5ccee7811635",
+    "Lato-Medium.ttf": "d3ac182a6833e005745dd75679fbad081c0b12535df4e93ad8ed57817a31a338",
+    "Lato-MediumItalic.ttf": "ecbce6cffa42d8a67afeb27a9d6e85d515e81481d4b2cece989e833a48048405",
+    "Lato-Regular.ttf": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251",
+    "Lato-SemiBold.ttf": "71b8b7decbe75a881ed267be539d402bd1e9420b799658aada4e0d1bd5af803c",
+    "Lato-SemiBoldItalic.ttf": "5adeb6b334d8fb99ef053bc052b952773d544315e0e1d668a12c0ce8bd51375c",
+    "Lato-Thin.ttf": "663c55bfe9a38270fff44da273bf4d792eafc3e7e1201f62c3064cad80c5d5e7",
+    "Lato-ThinItalic.ttf": "e5e86e219ce6987b175470d94d57753a387d1860b635da6327a60e8d19a33beb"
+  },
+  "compatibility_first_attempt": {
+    "run_id": 35205659170,
+    "result": "blocked by legacy trusted-main archive registration reader before tests",
+    "disposition": "Version-qualified snapshots retained in exact-byte snapshot manifest; legacy relocation registries restored unchanged. New exact-head run required."
+  }
+}

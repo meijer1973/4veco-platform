@@ -1,0 +1,56 @@
+[
+  {
+    "pdf_page": 1,
+    "designed_pages": [
+      1
+    ],
+    "sections": [
+      "3.3"
+    ]
+  },
+  {
+    "pdf_page": 2,
+    "designed_pages": [
+      2
+    ],
+    "sections": [
+      "3.3.1"
+    ]
+  },
+  {
+    "pdf_page": 3,
+    "designed_pages": [
+      3
+    ],
+    "sections": [
+      "3.3.2"
+    ]
+  },
+  {
+    "pdf_page": 4,
+    "designed_pages": [
+      4
+    ],
+    "sections": [
+      "3.3.3"
+    ]
+  },
+  {
+    "pdf_page": 5,
+    "designed_pages": [
+      5
+    ],
+    "sections": [
+      "3.3.4"
+    ]
+  },
+  {
+    "pdf_page": 6,
+    "designed_pages": [
+      6
+    ],
+    "sections": [
+      "3.3"
+    ]
+  }
+]

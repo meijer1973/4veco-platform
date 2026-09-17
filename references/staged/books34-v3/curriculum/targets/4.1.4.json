@@ -1,0 +1,213 @@
+{
+  "id": "4.1.4",
+  "module": 4,
+  "chapter": 1,
+  "paragraph": 4,
+  "paragraph_title": "Winstmaximalisatie bij monopolie",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.1.4",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "38",
+    "context": "Doeloefening Bron · Korrels Nova Nova is de enige aanbieder van een specifiek materiaal. Voor deze week geldt P = 40 − 0,25q en TK = 0,125q² + 10q + 200. q is kg per week; P is euro per kg; TK is euro per week. De capaciteit is 80 kg. De € 200 is ook bij q = 0 onvermijdbaar. De hoeveelheden zijn deelbaar; iedere kg heeft binnen een verkoopplan dezelfde prijs. Opgave 38 · Korrels Nova Gebruik de bron en figuur 20. Figuur 20. Teken de lijnen niet opnieuw. Voeg de gevraagde route en labels toe.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"source\"><b>Bron · Korrels Nova</b><br/>Nova is de enige aanbieder van een specifiek materiaal. Voor deze week geldt P = 40 − 0,25q en TK = 0,125q² + 10q + 200. q is kg per week; P is euro per kg; TK is euro per week. De capaciteit is 80 kg. De € 200 is ook bij q = 0 onvermijdbaar. De hoeveelheden zijn deelbaar; iedere kg heeft binnen een verkoopplan dezelfde prijs.</div>\n<div class=\"exercise target\" data-exercise=\"38\" id=\"opg38\"><p><b>Opgave 38 · Korrels Nova</b></p><p>Gebruik de bron en figuur 20.</p></div>\n<figure><img alt=\"Figuur 20. Teken de lijnen niet opnieuw. Voeg de gevraagde route en labels toe.\" src=\"books/book-4/chapters/4.1/_assets/4.1.3_target.svg\"/><figcaption>Figuur 20. Teken de lijnen niet opnieuw. Voeg de gevraagde route en labels toe.</figcaption></figure>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n<div class=\"source\"><b>Bron · Korrels Nova</b><br>Nova is de enige aanbieder van een specifiek materiaal. Voor deze week geldt P = 40 − 0,25q en TK = 0,125q² + 10q + 200. q is kg per week; P is euro per kg; TK is euro per week. De capaciteit is 80 kg. De € 200 is ook bij q = 0 onvermijdbaar. De hoeveelheden zijn deelbaar; iedere kg heeft binnen een verkoopplan dezelfde prijs.</div>\n<div class=\"exercise target\" id=\"opg38\" data-exercise=\"38\"><p><b>Opgave 38 · Korrels Nova</b></p><p>Gebruik de bron en figuur 20.</p><p data-question=\"38a\"><b>a.</b> <span class=\"muted\">(2p)</span> Stel TO, MO en MK op.</p><p data-question=\"38b\"><b>b.</b> <span class=\"muted\">(3p)</span> Bereken de winstmaximale haalbare q. Controleer het verloop van MO tegenover MK en de capaciteit.</p><p data-question=\"38c\"><b>c.</b> <span class=\"muted\">(1p)</span> Bereken de bijbehorende verkoopprijs.</p><p data-question=\"38d\"><b>d.</b> <span class=\"muted\">(3p)</span> Bereken TO, TK, winst en GTK. Controleer ook de uitkomst bij q = 0.</p><p data-question=\"38e\"><b>e.</b> <span class=\"muted\">(2p)</span> Markeer in de grafiek de gekozen q en P. Maak met hulplijnen zichtbaar hoe je van MO = MK naar de verkoopprijs gaat.</p><p data-question=\"38f\"><b>f.</b> <span class=\"muted\">(2p)</span> Een leerling gebruikt P = MK en vindt q = 60. Leg uit waarom dit niet de juiste winstkeuze is. Gebruik de marginale bedragen bij q = 60.</p></div>\n<figure><img src=\"_assets/4.1.3_target.svg\" alt=\"Figuur 20. Teken de lijnen niet opnieuw. Voeg de gevraagde route en labels toe.\"><figcaption>Figuur 20. Teken de lijnen niet opnieuw. Voeg de gevraagde route en labels toe.</figcaption></figure>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-4/chapters/4.1/_assets/4.1.3_target.svg",
+        "sha256": "b0d8828145077ad624af6d76c98f18604b173f268a3ee84bcca51cefa9641d53"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 2,
+        "prompt": "Stel TO, MO en MK op.",
+        "observable_operation": "Stel TO, MO en MK op.",
+        "source_question_id": "38a"
+      },
+      {
+        "label": "b",
+        "points": 3,
+        "prompt": "Bereken de winstmaximale haalbare q. Controleer het verloop van MO tegenover MK en de capaciteit.",
+        "observable_operation": "Bereken de winstmaximale haalbare q. Controleer het verloop van MO tegenover MK en de capaciteit.",
+        "source_question_id": "38b"
+      },
+      {
+        "label": "c",
+        "points": 1,
+        "prompt": "Bereken de bijbehorende verkoopprijs.",
+        "observable_operation": "Bereken de bijbehorende verkoopprijs.",
+        "source_question_id": "38c"
+      },
+      {
+        "label": "d",
+        "points": 3,
+        "prompt": "Bereken TO, TK, winst en GTK. Controleer ook de uitkomst bij q = 0.",
+        "observable_operation": "Bereken TO, TK, winst en GTK. Controleer ook de uitkomst bij q = 0.",
+        "source_question_id": "38d"
+      },
+      {
+        "label": "e",
+        "points": 2,
+        "prompt": "Markeer in de grafiek de gekozen q en P. Maak met hulplijnen zichtbaar hoe je van MO = MK naar de verkoopprijs gaat.",
+        "observable_operation": "Markeer in de grafiek de gekozen q en P. Maak met hulplijnen zichtbaar hoe je van MO = MK naar de verkoopprijs gaat.",
+        "source_question_id": "38e"
+      },
+      {
+        "label": "f",
+        "points": 2,
+        "prompt": "Een leerling gebruikt P = MK en vindt q = 60. Leg uit waarom dit niet de juiste winstkeuze is. Gebruik de marginale bedragen bij q = 60.",
+        "observable_operation": "Een leerling gebruikt P = MK en vindt q = 60. Leg uit waarom dit niet de juiste winstkeuze is. Gebruik de marginale bedragen bij q = 60.",
+        "source_question_id": "38f"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. TO = (40 − 0,25q) × q = 40q − 0,25q² . MO = 40 − 0,50q . Differentieer TK = 0,125q² + 10q + 200: MK = 0,25q + 10 .",
+    "b": "b. MO = MK geeft 40 − 0,50q = 0,25q + 10 → 30 = 0,75q → q = 40 kg per week . Dit past binnen 80 kg capaciteit. MO daalt en MK stijgt. Controle: bij q = 20 is MO = 30 > MK = 15; bij q = 60 is MO = 10 < MK = 25. De winst stijgt dus vóór 40 en daalt erna.",
+    "c": "c. Lees P uit de vraagfunctie: P = 40 − 0,25 × 40 = € 30 per kg . Niet uit MO, want MO(40) = € 20.",
+    "d": "d. TO = 30 × 40 = € 1.200 per week . TK = 0,125 × 40² + 10 × 40 + 200 = 200 + 400 + 200 = € 800 per week . Winst = 1.200 − 800 = € 400 per week . GTK = 800 / 40 = € 20 per kg . Bij q = 0 is de winst −€ 200, dus niet produceren is niet beter.",
+    "e": "e. De eerste hulplijn gaat vanaf het MO/MK-snijpunt naar q = 40 . De verticale route bij q = 40 gaat vervolgens naar de GO-lijn, waarna je horizontaal P = € 30 afleest. Zie de bovenste figuur.",
+    "f": "f. Bij q = 60 geldt wel P = MK = € 25, maar MO = € 10 . MO < MK, dus een kleine vermindering van q verhoogt de winst. P = MK is niet de monopolistische winstregel. De winst bij 60 kg is bovendien 25 × 60 − (0,125 × 60² + 10 × 60 + 200) = 1.500 − 1.250 = € 250, lager dan € 400."
+  },
+  "answer_model_support_html": [
+    "<figure><img alt=\"De juiste route: hoeveelheid uit MO/MK, prijs uit GO.\" src=\"_assets/4.1.3_ans_28.svg\"/><figcaption>De juiste route: hoeveelheid uit MO/MK, prijs uit GO.</figcaption></figure>",
+    "<figure><img alt=\"Een aanvullende winstcontrole met GTK bij q = 40. Dit is dezelfde winstberekening, niet een nieuwe optimalisatieregel.\" src=\"_assets/4.1.3_ans_28_profit.svg\"/><figcaption>Een aanvullende winstcontrole met GTK bij q = 40. Dit is dezelfde winstberekening, niet een nieuwe optimalisatieregel.</figcaption></figure>"
+  ],
+  "answer_figures": [
+    {
+      "path": "books/book-4/chapters/4.1/_assets/4.1.3_ans_28.svg",
+      "sha256": "029decb61f64197da9c9914bca39a10dd7ffe5581cde2f23d4bafdad9d430ca5"
+    },
+    {
+      "path": "books/book-4/chapters/4.1/_assets/4.1.3_ans_28_profit.svg",
+      "sha256": "1e4f000358526a238b68efd203247197edf4f410fcfb8286fcf2723fe195d93a"
+    }
+  ],
+  "lesson_goals": [
+    "Je kunt MO en MK gebruiken om een winstmaximale haalbare afzet te kiezen.",
+    "Je kunt daarna de verkoopprijs uit de vraagfunctie halen.",
+    "Je kunt de totale winst berekenen en de grafische route markeren.",
+    "Je kunt een verkeerde prijs- of productiekeuze met de berekening weerleggen."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.1.4-a",
+      "description": "Stel TO, MO en MK op."
+    },
+    {
+      "local_operation_id": "4.1.4-b",
+      "description": "Bereken de winstmaximale haalbare q. Controleer het verloop van MO tegenover MK en de capaciteit."
+    },
+    {
+      "local_operation_id": "4.1.4-c",
+      "description": "Bereken de bijbehorende verkoopprijs."
+    },
+    {
+      "local_operation_id": "4.1.4-d",
+      "description": "Bereken TO, TK, winst en GTK. Controleer ook de uitkomst bij q = 0."
+    },
+    {
+      "local_operation_id": "4.1.4-e",
+      "description": "Markeer in de grafiek de gekozen q en P. Maak met hulplijnen zichtbaar hoe je van MO = MK naar de verkoopprijs gaat."
+    },
+    {
+      "local_operation_id": "4.1.4-f",
+      "description": "Een leerling gebruikt P = MK en vindt q = 60. Leg uit waarom dit niet de juiste winstkeuze is. Gebruik de marginale bedragen bij q = 60."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Repeat §3.2.3’s optimisation procedure, §4.1.3’s revenue relation and Book 2 cost calculations."
+  ],
+  "new_skills_introduced": [
+    "Determine output using MO and MK, then read price from demand and calculate profit."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "Do not read price from the MO curve, equate P with MK at the monopoly optimum, or confuse maximum revenue with maximum profit. Reserve the formal welfare comparison for §4.2.1, immediately after this chapter; it is not postponed to a later book.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.1.4",
+  "structural_retrieval_plan": "Repeat §3.2.3’s optimisation procedure, §4.1.3’s revenue relation and Book 2 cost calculations.",
+  "structural_scope_boundary": "Do not read price from the MO curve, equate P with MK at the monopoly optimum, or confuse maximum revenue with maximum profit. Reserve the formal welfare comparison for §4.2.1, immediately after this chapter; it is not postponed to a later book.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.1/4.1.4 manuscript.md",
+    "student_manuscript_sha256": "53c24578d68752c2a275f3e8032a0ce787cecaacf2a58baab18f2f6d851a98dd",
+    "answer_file": "books/book-4/chapters/4.1/Antwoorden.md",
+    "answer_file_sha256": "01a9294bd3ce947ceb5460d588cd3f7ffee5b9f0be3e4334558fde44096f8da1",
+    "chapter_student_pages": [
+      40
+    ],
+    "complete_book_pages": [
+      44
+    ]
+  },
+  "lesson_route": {
+    "start": "31–32",
+    "independent": "36a–c en 37a",
+    "guided_or_alternative": "33–35",
+    "target": "38",
+    "target_subquestions": [
+      "38a",
+      "38b",
+      "38c",
+      "38d",
+      "38e",
+      "38f"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 11,
+      "Doeloefening": 15,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Hergebruik de marginale keuze uit §3.2.3 en verander expliciet de prijsroute. Markeer q bij MO = MK en lees daarna P op GO.",
+    "assessment_boundaries": "P = MK is hier geen winstregel. Capaciteit, marginale richtingen en de vergelijking met q = 0 blijven nodig waar gevraagd. Monopoliewelvaart volgt in §4.2.1."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.1.3",
+      "disposition": "renumber",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "af21b45a410f727ac29e384d8e86ee99f0ff4ab47be5ddfed77442efcd9ae211"
+}

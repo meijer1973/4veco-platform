@@ -1,0 +1,193 @@
+{
+  "id": "3.2.4",
+  "module": 3,
+  "chapter": 2,
+  "paragraph": 4,
+  "paragraph_title": "Gemengde opgaven: de prijsnemende onderneming",
+  "paragraph_kind": "gemengde_opgaven",
+  "introduces_new_theory": false,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "3.2.4",
+    "edition": "books-3-v3",
+    "outline": "references/authored/book-outlines/book-3-outline.md",
+    "package_outline": "outlines/book-3-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "35",
+    "context": "Doeloefening Opgave 35 · Kweekkorrels op twee momenten Bron A · De markt Veel kleine bedrijven verkopen dezelfde kwaliteit kweekkorrels. Kopers kennen de prijzen. In de beginsituatie geldt: Qv₀ = 30.000 − 2.500P en Qa₀ = 2.500P − 10.000 . Door een nieuwe toepassing neemt de vraag toe tot Qv₁ = 50.000 − 2.500P . In de onderzochte korte periode verandert het aantal bedrijven niet: Qa₀ blijft gelden. Q is kg per week; P is euro per kg. Bron B · Eén onderneming Voor iedere onderneming geldt TK = 0,02q² + 4q + 200 . q is kg per week; capaciteit is 250 kg. Alle productie wordt verkocht. Figuur 1. Gebruik deze basisgrafieken. Markt: V₀, V₁ en A₀. Onderneming: MK en GTK. De vragen staan op de rechterpagina. Gebruik eerst de beginsituatie en daarna de situatie direct na de vraagverandering. Laat tussenresultaten staan. Opgave 35 · Kweekkorrels: van markt naar bedrijf Gebruik bronnen A en B en figuur 1 op de linkerpagina. Afronden Bereken met ongeronde tussenuitkomsten. Schrijf bij iedere hoeveelheid of deze bij de markt of één onderneming hoort. De ruimte hieronder kun je gebruiken voor je redenering.",
+    "context_html": "<h2>Doeloefening</h2>\n<h3>Opgave 35 · Kweekkorrels op twee momenten</h3>\n<div class=\"source\"><b>Bron A · De markt</b><br/>Veel kleine bedrijven verkopen dezelfde kwaliteit kweekkorrels. Kopers kennen de prijzen. In de beginsituatie geldt:<br/><b>Qv₀ = 30.000 − 2.500P</b> en <b>Qa₀ = 2.500P − 10.000</b>.<br/>Door een nieuwe toepassing neemt de vraag toe tot <b>Qv₁ = 50.000 − 2.500P</b>. In de onderzochte korte periode verandert het aantal bedrijven niet: Qa₀ blijft gelden. Q is kg per week; P is euro per kg.</div>\n<div class=\"source\"><b>Bron B · Eén onderneming</b><br/>Voor iedere onderneming geldt <b>TK = 0,02q² + 4q + 200</b>. q is kg per week; capaciteit is 250 kg. Alle productie wordt verkocht. </div>\n<figure><img alt=\"Figuur 1. Gebruik deze basisgrafieken. Markt: V₀, V₁ en A₀. Onderneming: MK en GTK.\" src=\"books/book-3/chapters/3.2/_assets/3.2.4_target.svg\"/><figcaption>Figuur 1. Gebruik deze basisgrafieken. Markt: V₀, V₁ en A₀. Onderneming: MK en GTK.</figcaption></figure>\n<p class=\"small\">De vragen staan op de rechterpagina. Gebruik eerst de beginsituatie en daarna de situatie direct na de vraagverandering. Laat tussenresultaten staan.</p>\n<div class=\"exercise target\" data-exercise=\"35\" id=\"opg35\"><p><b>Opgave 35 · Kweekkorrels: van markt naar bedrijf</b></p><p>Gebruik bronnen A en B en figuur 1 op de linkerpagina.</p></div>\n<div class=\"box small\"><b>Afronden</b><br/>Bereken met ongeronde tussenuitkomsten. Schrijf bij iedere hoeveelheid of deze bij de markt of één onderneming hoort. De ruimte hieronder kun je gebruiken voor je redenering.</div>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n### Opgave 35 · Kweekkorrels op twee momenten\n<div class=\"source\"><b>Bron A · De markt</b><br/>Veel kleine bedrijven verkopen dezelfde kwaliteit kweekkorrels. Kopers kennen de prijzen. In de beginsituatie geldt:<br/><b>Qv₀ = 30.000 − 2.500P</b> en <b>Qa₀ = 2.500P − 10.000</b>.<br/>Door een nieuwe toepassing neemt de vraag toe tot <b>Qv₁ = 50.000 − 2.500P</b>. In de onderzochte korte periode verandert het aantal bedrijven niet: Qa₀ blijft gelden. Q is kg per week; P is euro per kg.</div>\n<div class=\"source\"><b>Bron B · Eén onderneming</b><br/>Voor iedere onderneming geldt <b>TK = 0,02q² + 4q + 200</b>. q is kg per week; capaciteit is 250 kg. Alle productie wordt verkocht. </div>\n\n<figure><img alt=\"Figuur 1. Gebruik deze basisgrafieken. Markt: V₀, V₁ en A₀. Onderneming: MK en GTK.\" src=\"_assets/3.2.4_target.svg\"/><figcaption>Figuur 1. Gebruik deze basisgrafieken. Markt: V₀, V₁ en A₀. Onderneming: MK en GTK.</figcaption></figure>\n<p class=\"small\">De vragen staan op de rechterpagina. Gebruik eerst de beginsituatie en daarna de situatie direct na de vraagverandering. Laat tussenresultaten staan.</p>\n\n<div class=\"exercise target\" data-exercise=\"35\" id=\"opg35\"><p><b>Opgave 35 · Kweekkorrels: van markt naar bedrijf</b></p><p>Gebruik bronnen A en B en figuur 1 op de linkerpagina.</p><p data-question=\"35a\"><b>a.</b> <span class=\"muted\">(3p)</span> Bereken in de beginsituatie P₀ en Q₀. Eén onderneming kiest dan q = 100. Controleer met TO en TK dat haar winst nul is.</p><p data-question=\"35b\"><b>b.</b> <span class=\"muted\">(2p)</span> Bereken direct na de vraagstijging, bij het gegeven ongewijzigde aanbod, P₁ en Q₁. Markeer het nieuwe evenwicht E₁ in de marktgrafiek.</p><p data-question=\"35c\"><b>c.</b> <span class=\"muted\">(3p)</span> Stel MK op. Bepaal bij P₁ de winstmaximale q van één onderneming. Controleer de capaciteit en het verloop van MO en MK.</p><p data-question=\"35d\"><b>d.</b> <span class=\"muted\">(3p)</span> Bereken de winst en GTK bij die q. Teken rechts de nieuwe P = GO = MO-lijn en arceer de winstrechthoek.</p><p data-question=\"35e\"><b>e.</b> <span class=\"muted\">(2p)</span> Vergelijk de procentuele stijging van Q met die van q. Waarom zijn Q en q ondanks die vergelijking niet dezelfde grootheid?</p></div>\n<div class=\"box small\"><b>Afronden</b><br/>Bereken met ongeronde tussenuitkomsten. Schrijf bij iedere hoeveelheid of deze bij de markt of één onderneming hoort. De ruimte hieronder kun je gebruiken voor je redenering.</div>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-3/chapters/3.2/_assets/3.2.4_target.svg",
+        "sha256": "7dc71d0349969a107f8dbb9d9bcb9dc1ae223e0ea3b57da150c32474fab286a8"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 3,
+        "prompt": "Bereken in de beginsituatie P₀ en Q₀. Eén onderneming kiest dan q = 100. Controleer met TO en TK dat haar winst nul is.",
+        "observable_operation": "Bereken in de beginsituatie P₀ en Q₀. Eén onderneming kiest dan q = 100. Controleer met TO en TK dat haar winst nul is.",
+        "source_question_id": "35a"
+      },
+      {
+        "label": "b",
+        "points": 2,
+        "prompt": "Bereken direct na de vraagstijging, bij het gegeven ongewijzigde aanbod, P₁ en Q₁. Markeer het nieuwe evenwicht E₁ in de marktgrafiek.",
+        "observable_operation": "Bereken direct na de vraagstijging, bij het gegeven ongewijzigde aanbod, P₁ en Q₁. Markeer het nieuwe evenwicht E₁ in de marktgrafiek.",
+        "source_question_id": "35b"
+      },
+      {
+        "label": "c",
+        "points": 3,
+        "prompt": "Stel MK op. Bepaal bij P₁ de winstmaximale q van één onderneming. Controleer de capaciteit en het verloop van MO en MK.",
+        "observable_operation": "Stel MK op. Bepaal bij P₁ de winstmaximale q van één onderneming. Controleer de capaciteit en het verloop van MO en MK.",
+        "source_question_id": "35c"
+      },
+      {
+        "label": "d",
+        "points": 3,
+        "prompt": "Bereken de winst en GTK bij die q. Teken rechts de nieuwe P = GO = MO-lijn en arceer de winstrechthoek.",
+        "observable_operation": "Bereken de winst en GTK bij die q. Teken rechts de nieuwe P = GO = MO-lijn en arceer de winstrechthoek.",
+        "source_question_id": "35d"
+      },
+      {
+        "label": "e",
+        "points": 2,
+        "prompt": "Vergelijk de procentuele stijging van Q met die van q. Waarom zijn Q en q ondanks die vergelijking niet dezelfde grootheid?",
+        "observable_operation": "Vergelijk de procentuele stijging van Q met die van q. Waarom zijn Q en q ondanks die vergelijking niet dezelfde grootheid?",
+        "source_question_id": "35e"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. 30.000 − 2.500P = 2.500P − 10.000 → 40.000 = 5.000P → P₀ = € 8/kg . Q₀ = 2.500 × 8 − 10.000 = 10.000 kg/week . Bij q = 100: TO = 8 × 100 = € 800; TK = 0,02 × 100² + 4 × 100 + 200 = € 800. Winst = € 0/week . Waarom: De beginsituatie is voor de onderneming kostendekkend.",
+    "b": "b. 50.000 − 2.500P = 2.500P − 10.000 → 60.000 = 5.000P → P₁ = € 12/kg . Q₁ = 2.500 × 12 − 10.000 = 20.000 kg/week . E₁ ligt op (20.000; 12). Waarom: Direct na de vraagstijging geldt nog hetzelfde aanbod: het aantal bedrijven is gelijk gebleven.",
+    "c": "c. MK = 0,04q + 4 . 12 = 0,04q + 4 → q = 200 kg/week . 200 ≤ 250. Bij q = 150 is MK = 10; bij q = 250 is MK = 14. Waarom: De winst stijgt vóór 200 en daalt erna; de gekozen q is haalbaar.",
+    "d": "d. TO = 12 × 200 = € 2.400. TK = 0,02 × 200² + 4 × 200 + 200 = 800 + 800 + 200 = € 1.800. Winst = € 600/week . GTK = 1.800 / 200 = € 9/kg . Rechthoek: breedte 200, hoogte 12 − 9 = 3. Waarom: De opbrengstlijn in de ondernemingsgrafiek ligt op P = 12; de winst is een oppervlak, geen snijpunt.",
+    "e": "e. Q stijgt van 10.000 naar 20.000: 100% . q stijgt van 100 naar 200: eveneens 100% . Q beschrijft alle ondernemingen samen en q één bedrijf. Gelijke procentuele verandering maakt de niveaus of economische objecten niet gelijk."
+  },
+  "answer_model_support_html": [
+    "<figure><img alt=\"Doeloefening 35b–d. De nieuwe vraag verhoogt eerst P en de productie van de bestaande ondernemingen.\" src=\"_assets/3.2.4_ans_1.svg\"/><figcaption>Doeloefening 35b–d. De nieuwe vraag verhoogt eerst P en de productie van de bestaande ondernemingen.</figcaption></figure>"
+  ],
+  "answer_figures": [
+    {
+      "path": "books/book-3/chapters/3.2/_assets/3.2.4_ans_1.svg",
+      "sha256": "0f2eb836a4b399f8be325cdef1064a4199f27608168c1f3b81167a40f10ca6d4"
+    }
+  ],
+  "lesson_goals": [
+    "Je kunt vanuit een marktverandering de nieuwe ondernemingsbeslissing berekenen.",
+    "Je kunt je uitkomst onderbouwen met de marginale vergelijking, capaciteit en een winstberekening."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "3.2.4-a",
+      "description": "Bereken in de beginsituatie P₀ en Q₀. Eén onderneming kiest dan q = 100. Controleer met TO en TK dat haar winst nul is."
+    },
+    {
+      "local_operation_id": "3.2.4-b",
+      "description": "Bereken direct na de vraagstijging, bij het gegeven ongewijzigde aanbod, P₁ en Q₁. Markeer het nieuwe evenwicht E₁ in de marktgrafiek."
+    },
+    {
+      "local_operation_id": "3.2.4-c",
+      "description": "Stel MK op. Bepaal bij P₁ de winstmaximale q van één onderneming. Controleer de capaciteit en het verloop van MO en MK."
+    },
+    {
+      "local_operation_id": "3.2.4-d",
+      "description": "Bereken de winst en GTK bij die q. Teken rechts de nieuwe P = GO = MO-lijn en arceer de winstrechthoek."
+    },
+    {
+      "local_operation_id": "3.2.4-e",
+      "description": "Vergelijk de procentuele stijging van Q met die van q. Waarom zijn Q en q ondanks die vergelijking niet dezelfde grootheid?"
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Retrieve §§3.2.1–3.2.3, Book 1 market equations and demand shifts, and Book 2 costs, revenue, averages and profit. The number of active firms and their production capacities are held fixed over the analysed adjustment window. The long-run mechanism is not an assessed prerequisite."
+  ],
+  "new_skills_introduced": [],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "In the complete printed set, not just the target, relocate old exercise 35 and the long-run content of bonus 37 or replace them with already-taught retrieval. Reword old 36a's economic-profit/normal-remuneration premise as a supplied cost convention; do not require interpretation of normal remuneration before §4.1.1. Numeric equality TO = TK may remain familiar break-even arithmetic, not a long-run conclusion. Preserve independent consolidation before the Book 3 assessment.",
+  "source_ref": "references/owned/course-blueprint-v5.md §3.2.4",
+  "structural_retrieval_plan": "Retrieve §§3.2.1–3.2.3, Book 1 market equations and demand shifts, and Book 2 costs, revenue, averages and profit. The number of active firms and their production capacities are held fixed over the analysed adjustment window. The long-run mechanism is not an assessed prerequisite.",
+  "structural_scope_boundary": "In the complete printed set, not just the target, relocate old exercise 35 and the long-run content of bonus 37 or replace them with already-taught retrieval. Reword old 36a's economic-profit/normal-remuneration premise as a supplied cost convention; do not require interpretation of normal remuneration before §4.1.1. Numeric equality TO = TK may remain familiar break-even arithmetic, not a long-run conclusion. Preserve independent consolidation before the Book 3 assessment.",
+  "source_pin": {
+    "student_file": "books/book-3/chapters/3.2/3.2.4 manuscript.md",
+    "student_manuscript_sha256": "f645f6e34e4e227bac144996ec7d1c3a3d1c38aaea8cfd4ba479f7ada5dc8a1c",
+    "answer_file": "books/book-3/chapters/3.2/Antwoorden.md",
+    "answer_file_sha256": "04f876a77f6bc7d27dfe714052e0c2cfea36441c15d5485b64d3b18f76cf3106",
+    "chapter_student_pages": [
+      30,
+      31
+    ],
+    "complete_book_pages": [
+      82,
+      83
+    ]
+  },
+  "lesson_route": {
+    "start": "31a–c",
+    "independent": "33a–b en 34a",
+    "guided_or_alternative": "32 als vervangende oefening bij fouten met GTK",
+    "target": "35",
+    "target_subquestions": [
+      "35a",
+      "35b",
+      "35c",
+      "35d",
+      "35e"
+    ],
+    "minutes": {
+      "Start / ophalen": 8,
+      "Motivatie": 0,
+      "Instructie": 4,
+      "Uitgewerkt voorbeeld": 0,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 25,
+      "Feedback / afronding": 6
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "De target vergelijkt twee korte-termijnmomenten. Het aantal bedrijven en de kostentechniek blijven in het onderzochte tijdvak gelijk.",
+    "assessment_boundaries": "Geen vragen over toetreding, langetermijnprijs of normale ondernemersbeloning toevoegen. De nulwinst in de beginsituatie is hier een rekenuitkomst, geen nieuw langetermijnresultaat."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "3.2.4",
+      "disposition": "retain;revise_scope",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "75b1981cc06c32fdd9e97550d26e617dca853d7c52436a619dd89f4a182f6add"
+}

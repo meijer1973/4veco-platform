@@ -1,0 +1,191 @@
+{
+  "id": "4.1.3",
+  "module": 4,
+  "chapter": 1,
+  "paragraph": 3,
+  "paragraph_title": "Marginale opbrengst bij monopolie",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.1.3",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "28",
+    "context": "Doeloefening Bron · Pigment Prisma Prisma is in dit oefenmodel de enige verkoper van een specifiek pigment. De vraag is P = 30 − 0,50q, voor 0 ≤ q ≤ 60. P is euro per kg; q is kg per week. Alle kg binnen een weekplan hebben dezelfde prijs. De hoeveelheden kunnen in dit rekenmodel ook delen van een kg zijn. Opgave 28 · Pigment Prisma Gebruik de bron. Noteer bij ieder bedrag wat het meet. q (kg per week) | P (€ per kg) | TO (€ per week)\n10 | … | …\n20 | … | …\n30 | … | … Laat je controle zien Je hebt twee manieren gebruikt om dezelfde verandering van TO te berekenen. Die moeten hetzelfde totaalbedrag opleveren. Een MO-puntwaarde en een gemiddelde over een grote stap hoeven niet gelijk te zijn.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"source\"><b>Bron · Pigment Prisma</b><br/>Prisma is in dit oefenmodel de enige verkoper van een specifiek pigment. De vraag is P = 30 − 0,50q, voor 0 ≤ q ≤ 60. P is euro per kg; q is kg per week. Alle kg binnen een weekplan hebben dezelfde prijs. De hoeveelheden kunnen in dit rekenmodel ook delen van een kg zijn.</div>\n<div class=\"exercise target\" data-exercise=\"28\" id=\"opg28\"><p><b>Opgave 28 · Pigment Prisma</b></p><p>Gebruik de bron. Noteer bij ieder bedrag wat het meet.</p></div>\n<table>\n<thead>\n<tr>\n<th style=\"text-align:right\">q (kg per week)</th>\n<th style=\"text-align:right\">P (€ per kg)</th>\n<th style=\"text-align:right\">TO (€ per week)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align:right\">10</td>\n<td style=\"text-align:right\">…</td>\n<td style=\"text-align:right\">…</td>\n</tr>\n<tr>\n<td style=\"text-align:right\">20</td>\n<td style=\"text-align:right\">…</td>\n<td style=\"text-align:right\">…</td>\n</tr>\n<tr>\n<td style=\"text-align:right\">30</td>\n<td style=\"text-align:right\">…</td>\n<td style=\"text-align:right\">…</td>\n</tr>\n</tbody>\n</table>\n<div class=\"box small\"><b>Laat je controle zien</b><br/>Je hebt twee manieren gebruikt om dezelfde verandering van TO te berekenen. Die moeten hetzelfde totaalbedrag opleveren. Een MO-puntwaarde en een gemiddelde over een grote stap hoeven niet gelijk te zijn.</div>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n<div class=\"source\"><b>Bron · Pigment Prisma</b><br>Prisma is in dit oefenmodel de enige verkoper van een specifiek pigment. De vraag is P = 30 − 0,50q, voor 0 ≤ q ≤ 60. P is euro per kg; q is kg per week. Alle kg binnen een weekplan hebben dezelfde prijs. De hoeveelheden kunnen in dit rekenmodel ook delen van een kg zijn.</div>\n<div class=\"exercise target\" id=\"opg28\" data-exercise=\"28\"><p><b>Opgave 28 · Pigment Prisma</b></p><p>Gebruik de bron. Noteer bij ieder bedrag wat het meet.</p><p data-question=\"28a\"><b>a.</b> <span class=\"muted\">(2p)</span> Stel uit de vraagfunctie de TO-functie en de MO-functie op. Laat de tussenstap met haakjes zien.</p><p data-question=\"28b\"><b>b.</b> <span class=\"muted\">(2p)</span> Neem de tabel over en vul de prijzen en totale opbrengsten in.</p><p data-question=\"28c\"><b>c.</b> <span class=\"muted\">(3p)</span> Bereken met de tabel de gemiddelde extra opbrengst per kg van 20 naar 30 kg. Bereken daarnaast MO bij q = 20 en leg uit waarom de uitkomsten verschillen.</p><p data-question=\"28d\"><b>d.</b> <span class=\"muted\">(3p)</span> Bereken voor de stap van 20 naar 30 kg afzonderlijk de opbrengst van de extra kg en de lagere opbrengst op de eerste 20 kg. Controleer de netto omzettoename.</p><p data-question=\"28e\"><b>e.</b> <span class=\"muted\">(2p)</span> Een leerling zegt: “Bij q = 20 is de prijs € 20. Daarom moet MO ook € 20 zijn.” Beoordeel met je berekening en de uniforme prijs uit de bron.</p></div>\n\n| q (kg per week) | P (€ per kg) | TO (€ per week) |\n|---:|---:|---:|\n| 10 | … | … |\n| 20 | … | … |\n| 30 | … | … |\n<div class=\"box small\"><b>Laat je controle zien</b><br>Je hebt twee manieren gebruikt om dezelfde verandering van TO te berekenen. Die moeten hetzelfde totaalbedrag opleveren. Een MO-puntwaarde en een gemiddelde over een grote stap hoeven niet gelijk te zijn.</div>"
+      }
+    ],
+    "figures": [],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 2,
+        "prompt": "Stel uit de vraagfunctie de TO-functie en de MO-functie op. Laat de tussenstap met haakjes zien.",
+        "observable_operation": "Stel uit de vraagfunctie de TO-functie en de MO-functie op. Laat de tussenstap met haakjes zien.",
+        "source_question_id": "28a"
+      },
+      {
+        "label": "b",
+        "points": 2,
+        "prompt": "Neem de tabel over en vul de prijzen en totale opbrengsten in.",
+        "observable_operation": "Neem de tabel over en vul de prijzen en totale opbrengsten in.",
+        "source_question_id": "28b"
+      },
+      {
+        "label": "c",
+        "points": 3,
+        "prompt": "Bereken met de tabel de gemiddelde extra opbrengst per kg van 20 naar 30 kg. Bereken daarnaast MO bij q = 20 en leg uit waarom de uitkomsten verschillen.",
+        "observable_operation": "Bereken met de tabel de gemiddelde extra opbrengst per kg van 20 naar 30 kg. Bereken daarnaast MO bij q = 20 en leg uit waarom de uitkomsten verschillen.",
+        "source_question_id": "28c"
+      },
+      {
+        "label": "d",
+        "points": 3,
+        "prompt": "Bereken voor de stap van 20 naar 30 kg afzonderlijk de opbrengst van de extra kg en de lagere opbrengst op de eerste 20 kg. Controleer de netto omzettoename.",
+        "observable_operation": "Bereken voor de stap van 20 naar 30 kg afzonderlijk de opbrengst van de extra kg en de lagere opbrengst op de eerste 20 kg. Controleer de netto omzettoename.",
+        "source_question_id": "28d"
+      },
+      {
+        "label": "e",
+        "points": 2,
+        "prompt": "Een leerling zegt: “Bij q = 20 is de prijs € 20. Daarom moet MO ook € 20 zijn.” Beoordeel met je berekening en de uniforme prijs uit de bron.",
+        "observable_operation": "Een leerling zegt: “Bij q = 20 is de prijs € 20. Daarom moet MO ook € 20 zijn.” Beoordeel met je berekening en de uniforme prijs uit de bron.",
+        "source_question_id": "28e"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. TO = P × q = (30 − 0,50q) × q = 30q − 0,50q² . De afgeleide is MO = 30 − q . TO is euro per week; MO is euro per kg.",
+    "b": "b. Gebruik per rij P = 30 − 0,50q en vervolgens TO = P × q. Bij 20 kg is dat bijvoorbeeld P = 30 − 10 = € 20 en TO = 20 × 20 = € 400.",
+    "c": "c. Van 20 naar 30 kg: ΔTO / Δq = (450 − 400) / (30 − 20) = € 5 per kg . MO(20) = 30 − 20 = € 10 per kg . De tabel geeft een gemiddelde over 10 kg. De afgeleide geldt bij het beginpunt; MO daalt tijdens de toename en bereikt nul bij 30 kg.",
+    "d": "d. De 10 extra kg leveren 10 × € 15 = € 150 op. De eerste 20 kg leveren 20 × (€ 20 − € 15) = € 100 minder op. Netto stijgt TO met 150 − 100 = € 50 per week . Dat klopt met 450 − 400.",
+    "e": "e. Onjuist. De verkoopprijs bij q = 20 is € 20 per kg, maar MO(20) = € 10 per kg . Om iets meer te verkopen moet Prisma de uniforme prijs verlagen. Dat vermindert ook de opbrengst op de eerste hoeveelheid, waardoor MO lager is dan P."
+  },
+  "answer_model_support_html": [
+    "<table>\n<thead>\n<tr>\n<th style=\"text-align:right\">q (kg per week)</th>\n<th style=\"text-align:right\">P (€ per kg)</th>\n<th style=\"text-align:right\">TO (€ per week)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align:right\">10</td>\n<td style=\"text-align:right\">25</td>\n<td style=\"text-align:right\">250</td>\n</tr>\n<tr>\n<td style=\"text-align:right\">20</td>\n<td style=\"text-align:right\">20</td>\n<td style=\"text-align:right\">400</td>\n</tr>\n<tr>\n<td style=\"text-align:right\">30</td>\n<td style=\"text-align:right\">15</td>\n<td style=\"text-align:right\">450</td>\n</tr>\n</tbody>\n</table>",
+    "<figure><img alt=\"Bij dezelfde q meet GO de prijs per verkochte kg en MO de verandering van TO bij een heel kleine uitbreiding.\" src=\"_assets/4.1.2_ans_18.svg\"/><figcaption>Bij dezelfde q meet GO de prijs per verkochte kg en MO de verandering van TO bij een heel kleine uitbreiding.</figcaption></figure>"
+  ],
+  "answer_figures": [
+    {
+      "path": "books/book-4/chapters/4.1/_assets/4.1.2_ans_18.svg",
+      "sha256": "b51d827eed93aad9bb15fd4136d215283ac93d6e6ba1223f3a86fb4a47b8ea00"
+    }
+  ],
+  "lesson_goals": [
+    "Je kunt uit een lineaire vraagfunctie TO en MO afleiden.",
+    "Je kunt een korte opbrengsttabel invullen en controleren.",
+    "Je kunt het verschil tussen een tabelstap en MO op één punt uitleggen.",
+    "Je kunt verklaren waarom MO onder de verkoopprijs ligt bij uniforme prijzen."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.1.3-a",
+      "description": "Stel uit de vraagfunctie de TO-functie en de MO-functie op. Laat de tussenstap met haakjes zien."
+    },
+    {
+      "local_operation_id": "4.1.3-b",
+      "description": "Neem de tabel over en vul de prijzen en totale opbrengsten in."
+    },
+    {
+      "local_operation_id": "4.1.3-c",
+      "description": "Bereken met de tabel de gemiddelde extra opbrengst per kg van 20 naar 30 kg. Bereken daarnaast MO bij q = 20 en leg uit waarom de uitkomsten verschillen."
+    },
+    {
+      "local_operation_id": "4.1.3-d",
+      "description": "Bereken voor de stap van 20 naar 30 kg afzonderlijk de opbrengst van de extra kg en de lagere opbrengst op de eerste 20 kg. Controleer de netto omzettoename."
+    },
+    {
+      "local_operation_id": "4.1.3-e",
+      "description": "Een leerling zegt: “Bij q = 20 is de prijs € 20. Daarom moet MO ook € 20 zijn.” Beoordeel met je berekening en de uniforme prijs uit de bron."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Retrieve TO = P x Q, Book 2 marginal differences and revenue interpretation, and the limited derivative technique taught in §3.2.2."
+  ],
+  "new_skills_introduced": [
+    "Explain why extra sales and a lower price have different effects on total revenue; obtain MO from a simple TO relation."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "Assume a uniform selling price. Do not introduce point-elasticity formulas or a general calculus chapter. Revisit elasticity qualitatively only where it supports the taught revenue interpretation.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.1.3",
+  "structural_retrieval_plan": "Retrieve TO = P x Q, Book 2 marginal differences and revenue interpretation, and the limited derivative technique taught in §3.2.2.",
+  "structural_scope_boundary": "Assume a uniform selling price. Do not introduce point-elasticity formulas or a general calculus chapter. Revisit elasticity qualitatively only where it supports the taught revenue interpretation.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.1/4.1.3 manuscript.md",
+    "student_manuscript_sha256": "45674b920fb1414d0e8ac70d87ea9d945c356fbe537829d8675b2218ccae11ed",
+    "answer_file": "books/book-4/chapters/4.1/Antwoorden.md",
+    "answer_file_sha256": "01a9294bd3ce947ceb5460d588cd3f7ffee5b9f0be3e4334558fde44096f8da1",
+    "chapter_student_pages": [
+      29
+    ],
+    "complete_book_pages": [
+      33
+    ]
+  },
+  "lesson_route": {
+    "start": "21–22",
+    "independent": "26a–c en 27a–b",
+    "guided_or_alternative": "23–25",
+    "target": "28",
+    "target_subquestions": [
+      "28a",
+      "28b",
+      "28c",
+      "28d",
+      "28e"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 11,
+      "Doeloefening": 14,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Hergebruik differentiatie uit §3.2.2. Leg het verlies op eerder verkochte eenheden uit vóór de algemene conclusie MO < P.",
+    "assessment_boundaries": "Bij uniforme prijs verandert ook de opbrengst van bestaande verkopen. Vergelijk een tabelgemiddelde niet alsof het dezelfde grootheid is als MO op een punt."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.1.2",
+      "disposition": "renumber",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "4941b8086c313d78250ed9eb2b2b5544759d5dfd8c00e4faf12f207d6751a3f4"
+}

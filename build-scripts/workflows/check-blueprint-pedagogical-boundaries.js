@@ -30,7 +30,7 @@ const SOURCE_PATHS = Object.freeze([
 ]);
 
 const V5_COUNTS = Object.freeze({ 1: 12, 2: 12, 3: 14, 4: 17 });
-const STRUCTURE_REVISION = 'book34-chat-v2-20260914';
+const { REVISION: STRUCTURE_REVISION } = require('../references/migrate-books34-v3');
 const V6_BOOKS_BY_YEAR = Object.freeze({
   1: [1, 2, 3, 4],
   2: [5, 6, 7, 8],

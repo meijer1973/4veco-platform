@@ -2,41 +2,26 @@
   "schema_version": 1,
   "source_id": "authored:book-4-outline",
   "book": 4,
-  "version": "v2",
-  "structure_revision": "book34-chat-v2-20260914",
-  "original_date": "2026-09-06",
-  "original_sha256": "3bfb4350bb1f990a8ea559272263e8ef35e1b72bd0cbc86b59c9aa6ad4fc0899",
-  "original_status": "revised outline proposal",
+  "version": "v3",
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "original_date": "2026-09-15",
+  "original_sha256": "1a35d90b6171c82c879515f548cdbe30444438017827d2784b5bd8b119bd2dcd",
   "current_status": "owner_selected_structural_baseline",
-  "selected_on": "2026-09-14",
-  "selection_task": "BOOK34-CHAT-IMPORT-OUTLINES-1",
+  "selected_on": "2026-09-17",
+  "selection_task": "BOOK34-V3-INTEGRATION-20260917",
   "integration_status": "prepared_in_pr",
   "target_approval": "not_conferred",
   "companion_acceptance": "not_conferred",
   "current_source": "references/authored/book-outlines/book-4-outline.md",
-  "change_review": "reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md",
-  "selected_input_manifest": "references/authored/book-outlines/books34-input-manifest.json",
-  "title_aliases": [
-    "Monopolie, marktfalen en arbeidsmarkt"
-  ],
-  "original_page_assumption": 40,
-  "actual_student_chapter_pages": [
-    38,
-    60,
-    50
-  ],
-  "original_proposal_companions_not_supplied": [
-    "sources-and-scope.md",
-    "integration-handoff-v2.md",
-    "paragraph-migration-v1-to-v2.csv"
-  ],
-  "migration_aid": "migration-live-v5-to-v2.csv is newly prepared against live v5, not the historical v1-to-v2 attachment or target equivalence proof.",
+  "change_review": "reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-V3-20260917.md",
+  "selected_input_manifest": "edities/books34-v3/MANIFEST.sha256.json",
+  "previous_snapshot": "archive/blueprints/book34-pre-v3-20260917/references/authored/book-outlines/book-4-outline.md",
   "paragraph_count": 17,
   "chapters": [
     {
       "id": "4.1",
-      "title": "Monopolie",
-      "paragraph_count": 4
+      "title": "Van concurrentie naar monopolie",
+      "paragraph_count": 5
     },
     {
       "id": "4.2",
@@ -46,22 +31,42 @@
     {
       "id": "4.3",
       "title": "Arbeidsmarkt",
-      "paragraph_count": 6
+      "paragraph_count": 5
     }
+  ],
+  "student_chapter_page_caps": [
+    50,
+    60,
+    50
+  ],
+  "actual_student_chapter_pages": [
+    48,
+    60,
+    44
   ],
   "paragraphs": [
     {
       "id": "4.1.1",
+      "title": "Toetreding, uittreding en langetermijnevenwicht",
+      "kind": "theory",
+      "intended_learning": "Explain profit → entry → market supply → price → firm profit, and the exit direction under sustained losses. Connect market Q and firm q, represent the direction of adjustment, and calculate or verify the stated long-run firm outcome. Interpret zero economic profit when normal entrepreneurial remuneration is included in costs.",
+      "retrieval_and_transfer": "Reactivate Book 3's price-taking output choice, derivative and profit rectangle through the existing start/example route. Retrieve market supply shifts from Book 1. This first lesson of Book 4 teaches the new time-horizon and economic-profit interpretation; it is not an extra unnumbered recap lesson.",
+      "proposed_target_brief": "Preserve the delivered 'Standaard koffiebonen' target and valid answer model from former §3.2.3 as the main candidate. Use initial firm data, state entry/exit and cost assumptions, explain and represent the adjustment, identify the long-run price/output from the supplied minimum-GTK evidence, and verify TO = TK. Include the explanation that normal remuneration is still paid. Keep the opposite exit direction in appropriate independent practice. Material from old §3.2.4's three-moment case is available for selection or replacement, not an additional compulsory target stacked onto the lesson.",
+      "boundary": "Retain the stated free-entry/exit, identical active-firm costs and input-price assumptions. Under this model the endpoint is P = MO = MK = minimum GTK; it is not a universal claim about every real industry. Do not infer immediate shutdown from a short-period loss. End with the question 'What changes when other suppliers cannot enter?' as the transition to §4.1.2, not a complete additional monopoly lesson. The existing classroom-time estimate remains provisional and needs checking after the book-opening retrieval is selected.",
+      "source_path": "references/authored/book-outlines/book-4-outline.md"
+    },
+    {
+      "id": "4.1.2",
       "title": "Monopolie: kenmerken",
       "kind": "theory",
       "intended_learning": "Explain market power, barriers to entry and the relationship between the firm’s sales and market demand.",
-      "retrieval_and_transfer": "Contrast with §3.2.1; retrieve the demand function and price/quantity relationship. Use the book-opening retrieval task to restore the difference between a market graph and the competitive firm's graph before introducing the monopolist's graph.",
+      "retrieval_and_transfer": "Contrast with §3.2.1; retrieve the demand function and price/quantity relationship. Use a short retrieval task to restore the difference between a market graph and the competitive firm's graph before introducing the monopolist's graph. Connect the entry barrier explicitly to the adjustment mechanism taught in §4.1.1.",
       "proposed_target_brief": "Use a source to identify the barrier to entry, distinguish monopoly from perfect competition and explain the price/quantity trade-off.",
       "boundary": "Monopoly does not mean unlimited pricing power. Patents can be one entry-barrier context; full policy evaluation belongs later.",
       "source_path": "references/authored/book-outlines/book-4-outline.md"
     },
     {
-      "id": "4.1.2",
+      "id": "4.1.3",
       "title": "Marginale opbrengst bij monopolie",
       "kind": "theory",
       "intended_learning": "Explain why extra sales and a lower price have different effects on total revenue; obtain MO from a simple TO relation.",
@@ -71,18 +76,18 @@
       "source_path": "references/authored/book-outlines/book-4-outline.md"
     },
     {
-      "id": "4.1.3",
+      "id": "4.1.4",
       "title": "Winstmaximalisatie bij monopolie",
       "kind": "theory",
       "intended_learning": "Determine output using MO and MK, then read price from demand and calculate profit.",
-      "retrieval_and_transfer": "Repeat §3.2.2’s optimisation procedure, §4.1.2’s revenue relation and Book 2 cost calculations.",
+      "retrieval_and_transfer": "Repeat §3.2.3’s optimisation procedure, §4.1.3’s revenue relation and Book 2 cost calculations.",
       "proposed_target_brief": "Calculate the feasible monopoly output, corresponding selling price and total profit, then reject a common wrong-method claim using the calculation.",
       "boundary": "Do not read price from the MO curve, equate P with MK at the monopoly optimum, or confuse maximum revenue with maximum profit. Reserve the formal welfare comparison for §4.2.1, immediately after this chapter; it is not postponed to a later book.",
       "source_path": "references/authored/book-outlines/book-4-outline.md"
     },
     {
-      "id": "4.1.4",
-      "title": "Gemengde opgaven: monopolie",
+      "id": "4.1.5",
+      "title": "Gemengde opgaven: concurrentie en monopolie",
       "kind": "gemengde_opgaven",
       "intended_learning": "Choose and execute the monopoly calculation sequence and compare it with the already-taught competitive firm sequence.",
       "retrieval_and_transfer": "Interleave cost, revenue, elasticity interpretation, break-even and marginal choice without adding new operations.",
@@ -95,7 +100,7 @@
       "title": "Welvaartseffecten van monopolie",
       "kind": "theory",
       "intended_learning": "Compare monopoly with an appropriate competitive/efficient benchmark and distinguish a redistribution of surplus from a welfare loss.",
-      "retrieval_and_transfer": "Repeat §4.1.3’s quantity-and-price calculation and Book 2 CS/PS/total-surplus areas as essential parts of the current task.",
+      "retrieval_and_transfer": "Repeat §4.1.4’s quantity-and-price calculation and Book 2 CS/PS/total-surplus areas as essential parts of the current task.",
       "proposed_target_brief": "Determine both benchmark quantities, calculate or identify the surplus distribution and lost gains from trade, and explain why higher producer returns are not identical to higher total welfare.",
       "boundary": "Keep demand, cost conditions and welfare boundary comparable across scenarios. Producer surplus is not automatically profit; do not treat every transfer between buyer and seller as a loss.",
       "source_path": "references/authored/book-outlines/book-4-outline.md"
@@ -202,23 +207,15 @@
     },
     {
       "id": "4.3.5",
-      "title": "Vakbonden, cao en arbeidsmarktbeleid",
-      "kind": "theory",
-      "intended_learning": "Explain collective bargaining and assess a bounded policy or agreement using wages, productivity, labour supply/demand and employment.",
-      "retrieval_and_transfer": "Repeat percentage/index comparisons, labour cost per unit, shifts and the difference between a binding wage floor and a change in the underlying market.",
-      "proposed_target_brief": "Evaluate a concise collective-agreement or training-policy proposal. Support the conclusion with a familiar calculation and a clearly stated mechanism.",
-      "boundary": "Do not turn this into formal bargaining-game theory. Introduce flexwork/zzp terminology as needed for the source without assuming that labels determine effects. Use institutional descriptions rather than unsupported current legal details. A competitiveness application may now combine already-taught trade reasoning with wage/productivity comparisons; it does not retrospectively make those calculations a Book 3 prerequisite.",
-      "source_path": "references/authored/book-outlines/book-4-outline.md"
-    },
-    {
-      "id": "4.3.6",
       "title": "Gemengde opgaven: arbeidsmarkt",
       "kind": "gemengde_opgaven",
-      "intended_learning": "Integrate labour-market vocabulary, equilibrium and shifts, participation/unemployment, productivity and policy without new theory.",
-      "retrieval_and_transfer": "Retrieve all chapter operations plus the earlier minimum-price method. Include independent equilibrium evidence explicitly so it has not disappeared with the removed paragraph.",
-      "proposed_target_brief": "Use manageable source-based cases with at least one independent wage/quantity calculation and one qualified employment or policy conclusion.",
-      "boundary": "No seventh compulsory catch-up lesson. If the absorbed equilibrium targets cannot fit the existing lessons and supports, revise the exercise design and timing before production rather than claiming the capacity saving without evidence.",
+      "intended_learning": "Combine labour-market actors and units, productivity and basic unit labour costs, participation/unemployment denominators, baseline equilibrium, shifts and a minimum-wage model. Give conclusions bounded by the supplied data and assumptions, without requiring collective bargaining or the deferred agreement/training-policy framework.",
+      "retrieval_and_transfer": "Retrieve only retained §§4.3.1–4.3.4 and earlier familiar market methods. Keep independent equilibrium/shift evidence so that shortening the chapter does not silently remove it. General claims about employment still require both labour-productivity and output information, as taught in §4.3.1.",
+      "proposed_target_brief": "Reuse the Havenregio regional count and separate sector-model sources. Preserve independent old/new wage and employment calculations and the supply-movement/demand-shift distinction. Retain basic unit-labour-cost calculations where taught in §4.3.1. Rewrite the training/collective-agreement framing as a bounded firm-output/productivity case; do not require negotiating parties, cao coverage, training-cost policy comparison or the former §4.3.5's additional institutional knowledge. One qualified jobs conclusion can remain when its full reasoning was taught in the retained paragraphs.",
+      "boundary": "In old mixed exercise 48, replace the cao wage floor by a clearly stated illustrative minimum wage, or select another already-taught wage-floor case. Remove or revise old 49's source C and 49f only to the extent needed by the retained goals; do not delete the useful data-limited employment reasoning already in §4.3.1. Update the final return-reference to old §4.3.5. The new numeric ID 4.3.5 is a mixed paragraph, not the old bargaining paragraph. Deferred goals must not return in compulsory homework, tests or an unexplained bonus.",
       "source_path": "references/authored/book-outlines/book-4-outline.md"
     }
-  ]
+  ],
+  "current_sha256": "89d06a8f7e94a88e2202135e566dc354befd556cbbb4c0973f4e4a825fa9d15e",
+  "technical_projection": "Only target-record hyperlinks resolve to the immutable platform transport, available before the lesson projection is activated. Original outline bytes and lesson content ownership remain unchanged."
 }

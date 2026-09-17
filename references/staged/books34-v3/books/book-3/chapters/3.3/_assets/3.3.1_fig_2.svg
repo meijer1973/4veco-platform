@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="244" viewBox="0 0 900 244" role="img"><title>Absoluut versus comparatief voordeel</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#536777" stroke-width="1.5"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0,8 L8,0" stroke="#183247" stroke-opacity=".25" stroke-width="1"/></pattern></defs>
+<rect width="900" height="244" rx="10" fill="#f5f8fa"/>
+<text x="450.00000000" y="29.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#183247">Linde maakt beide producten met minder middelen</text>
+<rect x="35.00000000" y="50.00000000" width="390.00000000" height="135.00000000" rx="5" fill="white" stroke="#146d9b" stroke-width="1.6"/>
+<text x="230.00000000" y="85.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">MACHINES</text>
+<text x="230.00000000" y="121.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#183247">Grote absolute voorsprong</text>
+<text x="230.00000000" y="152.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#183247">Comparatief voordeel: Linde</text>
+<rect x="475.00000000" y="50.00000000" width="390.00000000" height="135.00000000" rx="5" fill="white" stroke="#247d70" stroke-width="1.6"/>
+<text x="670.00000000" y="85.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">TASSEN</text>
+<text x="670.00000000" y="121.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#183247">Kleine absolute voorsprong</text>
+<text x="670.00000000" y="152.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#183247">Comparatief voordeel: Maris</text>
+<text x="450.00000000" y="216.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#183247">Maris geeft voor een extra tas minder machineproductie op.</text>
+</svg>

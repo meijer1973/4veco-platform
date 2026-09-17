@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380" role="img"><title>Schoolrugzakken in Daro</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#536777" stroke-width="1.5"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0,8 L8,0" stroke="#183247" stroke-opacity=".25" stroke-width="1"/></pattern></defs>
+<rect width="900" height="380" rx="10" fill="#f5f8fa"/>
+<text x="419.50000000" y="26.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">Schoolrugzakken in Daro</text>
+<text x="72.00000000" y="54.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#183247">P (€ per rugzak)</text>
+<defs><clipPath id="p0"><rect x="72" y="75" width="695" height="190"/></clipPath></defs>
+<line x1="72.00000000" y1="75.00000000" x2="72.00000000" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="72.00000000" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">0</text>
+<line x1="158.87500000" y1="75.00000000" x2="158.87500000" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="158.87500000" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">20</text>
+<line x1="245.75000000" y1="75.00000000" x2="245.75000000" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="245.75000000" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">40</text>
+<line x1="332.62500000" y1="75.00000000" x2="332.62500000" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="332.62500000" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">60</text>
+<line x1="419.50000000" y1="75.00000000" x2="419.50000000" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="419.50000000" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">80</text>
+<line x1="506.37500000" y1="75.00000000" x2="506.37500000" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="506.37500000" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">100</text>
+<line x1="593.25000000" y1="75.00000000" x2="593.25000000" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="593.25000000" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">120</text>
+<line x1="680.12500000" y1="75.00000000" x2="680.12500000" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="680.12500000" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">140</text>
+<line x1="767.00000000" y1="75.00000000" x2="767.00000000" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="767.00000000" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">160</text>
+<line x1="72.00000000" y1="265.00000000" x2="767.00000000" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="270.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">0</text>
+<line x1="72.00000000" y1="241.25000000" x2="767.00000000" y2="241.25000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="246.25000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">10</text>
+<line x1="72.00000000" y1="217.50000000" x2="767.00000000" y2="217.50000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="222.50000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">20</text>
+<line x1="72.00000000" y1="193.75000000" x2="767.00000000" y2="193.75000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="198.75000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">30</text>
+<line x1="72.00000000" y1="170.00000000" x2="767.00000000" y2="170.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="175.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">40</text>
+<line x1="72.00000000" y1="146.25000000" x2="767.00000000" y2="146.25000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="151.25000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">50</text>
+<line x1="72.00000000" y1="122.50000000" x2="767.00000000" y2="122.50000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="127.50000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">60</text>
+<line x1="72.00000000" y1="98.75000000" x2="767.00000000" y2="98.75000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="103.75000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">70</text>
+<line x1="72.00000000" y1="75.00000000" x2="767.00000000" y2="75.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="80.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">80</text>
+<line x1="72.00000000" y1="265.00000000" x2="775.00000000" y2="265.00000000" stroke="#183247" stroke-width="1.7" marker-end="url(#arr)"/>
+<line x1="72.00000000" y1="265.00000000" x2="72.00000000" y2="67.00000000" stroke="#183247" stroke-width="1.7" marker-end="url(#arr)"/>
+<text x="419.50000000" y="365.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">Q (rugzakken per week)</text>
+<polyline data-curve="V" data-panel="p0" points="72.00000000,75.00000000 767.00000000,265.00000000" fill="none" stroke="#146d9b" stroke-width="3"/>
+<text x="620.10000000" y="245.20000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#f5f8fa" stroke="#f5f8fa" stroke-width="4" stroke-linejoin="round">V</text>
+<text x="620.10000000" y="245.20000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#146d9b">V</text>
+<polyline data-curve="A" data-panel="p0" points="72.00000000,265.00000000 767.00000000,75.00000000" fill="none" stroke="#247d70" stroke-width="3"/>
+<text x="620.10000000" y="106.80000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#f5f8fa" stroke="#f5f8fa" stroke-width="4" stroke-linejoin="round">A</text>
+<text x="620.10000000" y="106.80000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#247d70">A</text>
+<line x1="72.00000000" y1="217.50000000" x2="767.00000000" y2="217.50000000" stroke="#667c8b" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="778.00000000" y="230.50000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#667c8b">Pw = 20</text>
+<line x1="72.00000000" y1="193.75000000" x2="767.00000000" y2="193.75000000" stroke="#ad681f" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="778.00000000" y="185.75000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#ad681f">Pw + t = 30</text>
+</svg>

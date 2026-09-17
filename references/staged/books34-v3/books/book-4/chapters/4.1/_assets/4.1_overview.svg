@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="195" viewBox="0 0 900 195" role="img"><title>Eén vaste rekenroute</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#536777" stroke-width="1.5"/></marker><pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M-2,2 L2,-2 M0,9 L9,0 M7,11 L11,7" stroke="#183247" stroke-opacity=".22" stroke-width="1"/></pattern></defs>
+<rect width="900" height="195" rx="8" fill="#f5f8fa"/>
+<text x="450.0000" y="28.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">Eén vaste rekenroute</text>
+<rect x="30.0" y="50" width="193.5" height="82" rx="5" fill="white" stroke="#146d9b" stroke-width="1.5"/>
+<text x="126.7500" y="80.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">MO = MK</text>
+<text x="126.7500" y="104.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">kandidaat-q</text>
+<line x1="225.5000" y1="91.0000" x2="242.5000" y2="91.0000" stroke="#657986" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="245.5" y="50" width="193.5" height="82" rx="5" fill="white" stroke="#247d70" stroke-width="1.5"/>
+<text x="342.2500" y="80.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">Controle</text>
+<text x="342.2500" y="104.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">verloop en capaciteit</text>
+<line x1="441.0000" y1="91.0000" x2="458.0000" y2="91.0000" stroke="#657986" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="461.0" y="50" width="193.5" height="82" rx="5" fill="white" stroke="#ad681f" stroke-width="1.5"/>
+<text x="557.7500" y="80.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">Vraag / GO</text>
+<text x="557.7500" y="104.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">verkoopprijs P</text>
+<line x1="656.5000" y1="91.0000" x2="673.5000" y2="91.0000" stroke="#657986" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="676.5" y="50" width="193.5" height="82" rx="5" fill="white" stroke="#146d9b" stroke-width="1.5"/>
+<text x="773.2500" y="80.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">TO − TK</text>
+<text x="773.2500" y="104.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">totale winst</text>
+<text x="450.0000" y="168.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#183247">De hoogte van het snijpunt van MO en MK is niet de verkoopprijs.</text>
+</svg>

@@ -1,0 +1,194 @@
+{
+  "id": "4.1.1",
+  "module": 4,
+  "chapter": 1,
+  "paragraph": 1,
+  "paragraph_title": "Toetreding, uittreding en langetermijnevenwicht",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.1.1",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "7",
+    "context": "Doeloefening Opgave 7 · Standaard koffiebonen In deze oefenmarkt gebruiken alle bedrijven TK = 0,02q² + 4q + 200. q is kg per week; capaciteit is 250 kg. TK bevat alle kosten, inclusief € 120 normale ondernemersbeloning per week. Toetreding is vrij. Marktvraag, technologie en inputprijzen blijven gelijk. Het minimum GTK is € 8 bij q = 100. Figuur 7. Geef de langetermijnaanpassing aan, onder de aannames van de bron.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"exercise target\" data-exercise=\"7\" id=\"opg7\"><p><b>Opgave 7 · Standaard koffiebonen</b></p><p>In deze oefenmarkt gebruiken alle bedrijven TK = 0,02q² + 4q + 200. q is kg per week; capaciteit is 250 kg. TK bevat alle kosten, inclusief € 120 normale ondernemersbeloning per week. Toetreding is vrij. Marktvraag, technologie en inputprijzen blijven gelijk. Het minimum GTK is € 8 bij q = 100.</p></div>\n<figure><img alt=\"Figuur 7. Geef de langetermijnaanpassing aan, onder de aannames van de bron.\" src=\"books/book-4/chapters/4.1/_assets/3.2.3_target.svg\"/><figcaption>Figuur 7. Geef de langetermijnaanpassing aan, onder de aannames van de bron.</figcaption></figure>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n<div class=\"exercise target\" id=\"opg7\" data-exercise=\"7\"><p><b>Opgave 7 · Standaard koffiebonen</b></p><p>In deze oefenmarkt gebruiken alle bedrijven TK = 0,02q² + 4q + 200. q is kg per week; capaciteit is 250 kg. TK bevat alle kosten, inclusief € 120 normale ondernemersbeloning per week. Toetreding is vrij. Marktvraag, technologie en inputprijzen blijven gelijk. Het minimum GTK is € 8 bij q = 100.</p><p data-question=\"7a\"><b>a.</b> <span class=\"muted\">(3p)</span> Lees de beginprijs af. Stel MK op, bepaal q en bereken de economische winst van één bedrijf.</p><p data-question=\"7b\"><b>b.</b> <span class=\"muted\">(2p)</span> Leg uit waarom er bedrijven toetreden en hoe dit de prijs beïnvloedt.</p><p data-question=\"7c\"><b>c.</b> <span class=\"muted\">(2p)</span> Teken in de marktgrafiek een passende A₁ voor de langetermijnprijs. Teken rechts de bijbehorende P = GO = MO-lijn. Laat de kostencurven staan.</p><p data-question=\"7d\"><b>d.</b> <span class=\"muted\">(3p)</span> Bepaal de langetermijnprijs en q. Bereken TO en TK en controleer de economische winst.</p><p data-question=\"7e\"><b>e.</b> <span class=\"muted\">(2p)</span> Een leerling zegt: “Met nul winst verdient de ondernemer niets en is de omzet verdwenen.” Weerleg beide delen met de gegevens.</p></div>\n<figure><img src=\"_assets/3.2.3_target.svg\" alt=\"Figuur 7. Geef de langetermijnaanpassing aan, onder de aannames van de bron.\"><figcaption>Figuur 7. Geef de langetermijnaanpassing aan, onder de aannames van de bron.</figcaption></figure>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-4/chapters/4.1/_assets/3.2.3_target.svg",
+        "sha256": "fb7c50589eac2ff53e993d5a044c72539d2a4b42f89e02f122e85406f71a84a7"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 3,
+        "prompt": "Lees de beginprijs af. Stel MK op, bepaal q en bereken de economische winst van één bedrijf.",
+        "observable_operation": "Lees de beginprijs af. Stel MK op, bepaal q en bereken de economische winst van één bedrijf.",
+        "source_question_id": "7a"
+      },
+      {
+        "label": "b",
+        "points": 2,
+        "prompt": "Leg uit waarom er bedrijven toetreden en hoe dit de prijs beïnvloedt.",
+        "observable_operation": "Leg uit waarom er bedrijven toetreden en hoe dit de prijs beïnvloedt.",
+        "source_question_id": "7b"
+      },
+      {
+        "label": "c",
+        "points": 2,
+        "prompt": "Teken in de marktgrafiek een passende A₁ voor de langetermijnprijs. Teken rechts de bijbehorende P = GO = MO-lijn. Laat de kostencurven staan.",
+        "observable_operation": "Teken in de marktgrafiek een passende A₁ voor de langetermijnprijs. Teken rechts de bijbehorende P = GO = MO-lijn. Laat de kostencurven staan.",
+        "source_question_id": "7c"
+      },
+      {
+        "label": "d",
+        "points": 3,
+        "prompt": "Bepaal de langetermijnprijs en q. Bereken TO en TK en controleer de economische winst.",
+        "observable_operation": "Bepaal de langetermijnprijs en q. Bereken TO en TK en controleer de economische winst.",
+        "source_question_id": "7d"
+      },
+      {
+        "label": "e",
+        "points": 2,
+        "prompt": "Een leerling zegt: “Met nul winst verdient de ondernemer niets en is de omzet verdwenen.” Weerleg beide delen met de gegevens.",
+        "observable_operation": "Een leerling zegt: “Met nul winst verdient de ondernemer niets en is de omzet verdwenen.” Weerleg beide delen met de gegevens.",
+        "source_question_id": "7e"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. Afgelezen beginprijs: € 10 per kg . MK = 0,04q + 4. 10 = 0,04q + 4 → q = 150 kg/week , haalbaar binnen 250. TO = 10 × 150 = € 1.500. TK = 0,02 × 150² + 4 × 150 + 200 = 450 + 600 + 200 = € 1.250. Economische winst = € 250/week . Waarom: De prijs ligt boven GTK bij de gekozen q.",
+    "b": "b. Die overwinst trekt aanbieders aan. Bij elke prijs neemt het marktaanbod toe. Bij gelijkblijvende vraag daalt daardoor de marktprijs. Waarom: Nieuwe bedrijven kunnen dezelfde kostentechniek gebruiken.",
+    "c": "c. Teken A₁ rechts van A en laat die V snijden bij P = 8. Rechts komt P = GO = MO = 8. MK en GTK blijven staan. Waarom: Het aantal aanbieders en de prijs veranderen; de kostenfuncties zijn volgens de bron ongewijzigd.",
+    "d": "d. P = € 8 per kg en q = 100 kg/week . TO = 8 × 100 = € 800/week . TK = 0,02 × 100² + 4 × 100 + 200 = 200 + 400 + 200 = € 800/week . Winst = € 0/week . Waarom: Bij minimum GTK is de prijs precies voldoende voor alle economische kosten.",
+    "e": "e. De omzet is nog € 800/week , niet nul. In TK zit nog € 120 normale ondernemersbeloning/week . Alleen de extra economische winst is verdwenen. Waarom: Nul economische winst is een verschil tussen twee gelijke positieve totaalbedragen."
+  },
+  "answer_model_support_html": [
+    "<figure><img alt=\"Oplossing doeloefening 7. Meer totale afzet, maar minder afzet van één bedrijf.\" src=\"_assets/3.2.3_ans_2.svg\"/><figcaption>Oplossing doeloefening 7. Meer totale afzet, maar minder afzet van één bedrijf.</figcaption></figure>"
+  ],
+  "answer_figures": [
+    {
+      "path": "books/book-4/chapters/4.1/_assets/3.2.3_ans_2.svg",
+      "sha256": "9e5aec5347e7ab8f7f708abe6ce526ef27430fd24788c27b9a2563215870f25d"
+    }
+  ],
+  "lesson_goals": [
+    "Je kunt de keten winst → toetreding → aanbod → prijs → winst uitleggen, en de omgekeerde keten bij verlies.",
+    "Je kunt de verschuiving tekenen en de langetermijnuitkomst voor één onderneming berekenen.",
+    "Je kunt uitleggen wat nul economische winst wél en niet betekent."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.1.1-a",
+      "description": "Lees de beginprijs af. Stel MK op, bepaal q en bereken de economische winst van één bedrijf."
+    },
+    {
+      "local_operation_id": "4.1.1-b",
+      "description": "Leg uit waarom er bedrijven toetreden en hoe dit de prijs beïnvloedt."
+    },
+    {
+      "local_operation_id": "4.1.1-c",
+      "description": "Teken in de marktgrafiek een passende A₁ voor de langetermijnprijs. Teken rechts de bijbehorende P = GO = MO-lijn. Laat de kostencurven staan."
+    },
+    {
+      "local_operation_id": "4.1.1-d",
+      "description": "Bepaal de langetermijnprijs en q. Bereken TO en TK en controleer de economische winst."
+    },
+    {
+      "local_operation_id": "4.1.1-e",
+      "description": "Een leerling zegt: “Met nul winst verdient de ondernemer niets en is de omzet verdwenen.” Weerleg beide delen met de gegevens."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Reactivate Book 3's price-taking output choice, derivative and profit rectangle through the existing start/example route. Retrieve market supply shifts from Book 1. This first lesson of Book 4 teaches the new time-horizon and economic-profit interpretation; it is not an extra unnumbered recap lesson."
+  ],
+  "new_skills_introduced": [
+    "Explain profit → entry → market supply → price → firm profit, and the exit direction under sustained losses. Connect market Q and firm q, represent the direction of adjustment, and calculate or verify the stated long-run firm outcome. Interpret zero economic profit when normal entrepreneurial remuneration is included in costs."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "Retain the stated free-entry/exit, identical active-firm costs and input-price assumptions. Under this model the endpoint is P = MO = MK = minimum GTK; it is not a universal claim about every real industry. Do not infer immediate shutdown from a short-period loss. End with the question 'What changes when other suppliers cannot enter?' as the transition to §4.1.2, not a complete additional monopoly lesson. The existing classroom-time estimate remains provisional and needs checking after the book-opening retrieval is selected.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.1.1",
+  "structural_retrieval_plan": "Reactivate Book 3's price-taking output choice, derivative and profit rectangle through the existing start/example route. Retrieve market supply shifts from Book 1. This first lesson of Book 4 teaches the new time-horizon and economic-profit interpretation; it is not an extra unnumbered recap lesson.",
+  "structural_scope_boundary": "Retain the stated free-entry/exit, identical active-firm costs and input-price assumptions. Under this model the endpoint is P = MO = MK = minimum GTK; it is not a universal claim about every real industry. Do not infer immediate shutdown from a short-period loss. End with the question 'What changes when other suppliers cannot enter?' as the transition to §4.1.2, not a complete additional monopoly lesson. The existing classroom-time estimate remains provisional and needs checking after the book-opening retrieval is selected.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.1/4.1.1 manuscript.md",
+    "student_manuscript_sha256": "9777cfa0305cf03ac4241940e039a9f1f8a0bb517568c1ec56600dbc5569c4d3",
+    "answer_file": "books/book-4/chapters/4.1/Antwoorden.md",
+    "answer_file_sha256": "01a9294bd3ce947ceb5460d588cd3f7ffee5b9f0be3e4334558fde44096f8da1",
+    "chapter_student_pages": [
+      10
+    ],
+    "complete_book_pages": [
+      14
+    ]
+  },
+  "lesson_route": {
+    "start": "1–2",
+    "independent": "5a–c en 6b",
+    "guided_or_alternative": "3–4",
+    "target": "7",
+    "target_subquestions": [
+      "7a",
+      "7b",
+      "7c",
+      "7d",
+      "7e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 11,
+      "Doeloefening": 13,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Verplaatst uit voormalig §3.2.3. Herstel binnen het startwerk de firmaberekening; voeg geen aparte recaples toe. Introduceer normale beloning en economische winst hier.",
+    "assessment_boundaries": "Het nulwinstresultaat geldt bij de genoemde vrije toe-/uittreding en onveranderde kosten. Nul economische winst is niet nul omzet of geen ondernemersbeloning. Verlies betekent niet automatisch onmiddellijk stilleggen."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "3.2.3",
+      "disposition": "move_across_book",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "a38ec5f8dc9ecf621561f8b0ca86c7c0f58bba4727e394124a6b8c9438f0c09c"
+}

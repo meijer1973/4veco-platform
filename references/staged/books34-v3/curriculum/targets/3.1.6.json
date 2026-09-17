@@ -1,0 +1,210 @@
+{
+  "id": "3.1.6",
+  "module": 3,
+  "chapter": 1,
+  "paragraph": 6,
+  "paragraph_title": "Gemengde opgaven: overheidsingrijpen",
+  "paragraph_kind": "gemengde_opgaven",
+  "introduces_new_theory": false,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "3.1.6",
+    "edition": "books-3-v3",
+    "outline": "references/authored/book-outlines/book-3-outline.md",
+    "package_outline": "outlines/book-3-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "48",
+    "context": "Doeloefening Opgave 48 · Twee plannen voor festivalbandjes Een gemeente onderzoekt de markt voor eenvoudige festivalbandjes. Verschillende aanbieders verkopen hetzelfde product. Alle bedragen en voorstellen zijn fictief. Bron 1 · De markt zonder maatregel Vraag: Pc = 24 − 0,20Q . Aanbod: Pp = 6 + 0,10Q . Q is bandjes per dag; Pc en Pp zijn euro per bandje. Zonder maatregel is Pc = Pp. Het CS in het vrije evenwicht is € 360 per dag; het PS is € 180 per dag. Bron 2 · Twee alternatieven, niet tegelijk Plan A. De aanbieder draagt € 3 af per verkocht bandje. Er zijn geen andere geldstromen of effecten voor buitenstaanders. Ook uitvoeringskosten blijven buiten beschouwing. Plan B. Een verkoopprijs boven € 10 is verboden. Er is geen extra aanvoer. Alle aangeboden bandjes worden verkocht aan de vragers met de hoogste betalingsbereidheid. Er is geen belasting, subsidie of overheidsopkoop. Bron 3 · De beleidsclaim “Plan B maakt een bandje bereikbaar voor iedereen die er bij € 10 een wil. Plan A levert de overheid geld op; dat geld is volledig verdwenen welvaart.” Figuur 1. Basisgrafiek bij opgave 48. Gebruik deze voor plan A. De plannen zijn alternatieven: pas ze niet tegelijk toe. De vragen staan op de tegenoverliggende pagina. Voor plan B volstaan berekeningen en een conclusie; je hoeft geen tweede grafiek te tekenen. Opgave 48 · Vragen Gebruik de bronnen en de grafiek op pagina 46. Noteer berekening, eenheid en conclusie. Kijk na je berekeningen terug Controle | Wat je in je antwoord moet kunnen aanwijzen\nModelkeuze | Plan A heeft twee prijzen; plan B één begrensde prijs.\nTransacties | Geen berekening van budget of surplus over onverkochte bandjes.\nGeldstroom | Overheidsontvangsten zijn niet volledig welvaartsverlies.\nBronconclusie | Een tekort beperkt toegang; een lage prijs garandeert geen aankoop. Een onderbouwde conclusie Een bruikbaar antwoord combineert een brongegeven, een berekening en een gevolg. Bijvoorbeeld: “Omdat er maar … bandjes worden aangeboden, kunnen niet alle … vragers kopen.” Vul de getallen zelf in.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"target-source\"><b>Opgave 48 · Twee plannen voor festivalbandjes</b><br/>\nEen gemeente onderzoekt de markt voor eenvoudige festivalbandjes. Verschillende aanbieders verkopen hetzelfde product. Alle bedragen en voorstellen zijn fictief.</div>\n<h3>Bron 1 · De markt zonder maatregel</h3>\n<p>Vraag: <strong>Pc = 24 − 0,20Q</strong>. Aanbod: <strong>Pp = 6 + 0,10Q</strong>. Q is bandjes per dag; Pc en Pp zijn euro per bandje. Zonder maatregel is Pc = Pp. Het CS in het vrije evenwicht is € 360 per dag; het PS is € 180 per dag.</p>\n<h3>Bron 2 · Twee alternatieven, niet tegelijk</h3>\n<p><strong>Plan A.</strong> De aanbieder draagt € 3 af per verkocht bandje. Er zijn geen andere geldstromen of effecten voor buitenstaanders. Ook uitvoeringskosten blijven buiten beschouwing.</p>\n<p><strong>Plan B.</strong> Een verkoopprijs boven € 10 is verboden. Er is geen extra aanvoer. Alle aangeboden bandjes worden verkocht aan de vragers met de hoogste betalingsbereidheid. Er is geen belasting, subsidie of overheidsopkoop.</p>\n<h3>Bron 3 · De beleidsclaim</h3>\n<p>“Plan B maakt een bandje bereikbaar voor iedereen die er bij € 10 een wil. Plan A levert de overheid geld op; dat geld is volledig verdwenen welvaart.”</p>\n<figure><img alt=\"Basisgrafiek bij opgave 48. Gebruik deze voor plan A. De plannen zijn alternatieven: pas ze niet tegelijk toe.\" src=\"books/book-3/chapters/3.1/_assets/3.1.6_target.svg\"/><figcaption>Figuur 1. Basisgrafiek bij opgave 48. Gebruik deze voor plan A. De plannen zijn alternatieven: pas ze niet tegelijk toe.</figcaption></figure>\n<div class=\"small muted\">De vragen staan op de tegenoverliggende pagina. Voor plan B volstaan berekeningen en een conclusie; je hoeft geen tweede grafiek te tekenen.</div>\n<div class=\"exercise target\" id=\"opg48\">\n<p><b>Opgave 48 · Vragen</b></p><p>Gebruik de bronnen en de grafiek op pagina 46. Noteer berekening, eenheid en conclusie.</p>\n</div>\n<h3>Kijk na je berekeningen terug</h3>\n<table>\n<thead>\n<tr>\n<th>Controle</th>\n<th>Wat je in je antwoord moet kunnen aanwijzen</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Modelkeuze</td>\n<td>Plan A heeft twee prijzen; plan B één begrensde prijs.</td>\n</tr>\n<tr>\n<td>Transacties</td>\n<td>Geen berekening van budget of surplus over onverkochte bandjes.</td>\n</tr>\n<tr>\n<td>Geldstroom</td>\n<td>Overheidsontvangsten zijn niet volledig welvaartsverlies.</td>\n</tr>\n<tr>\n<td>Bronconclusie</td>\n<td>Een tekort beperkt toegang; een lage prijs garandeert geen aankoop.</td>\n</tr>\n</tbody>\n</table>\n<div class=\"box small\"><b>Een onderbouwde conclusie</b><br/>Een bruikbaar antwoord combineert een brongegeven, een berekening en een gevolg. Bijvoorbeeld: “Omdat er maar … bandjes worden aangeboden, kunnen niet alle … vragers kopen.” Vul de getallen zelf in.</div>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n<div class=\"target-source\"><b>Opgave 48 · Twee plannen voor festivalbandjes</b><br>\nEen gemeente onderzoekt de markt voor eenvoudige festivalbandjes. Verschillende aanbieders verkopen hetzelfde product. Alle bedragen en voorstellen zijn fictief.</div>\n\n### Bron 1 · De markt zonder maatregel\n\nVraag: **Pc = 24 − 0,20Q**. Aanbod: **Pp = 6 + 0,10Q**. Q is bandjes per dag; Pc en Pp zijn euro per bandje. Zonder maatregel is Pc = Pp. Het CS in het vrije evenwicht is € 360 per dag; het PS is € 180 per dag.\n\n### Bron 2 · Twee alternatieven, niet tegelijk\n\n**Plan A.** De aanbieder draagt € 3 af per verkocht bandje. Er zijn geen andere geldstromen of effecten voor buitenstaanders. Ook uitvoeringskosten blijven buiten beschouwing.\n\n**Plan B.** Een verkoopprijs boven € 10 is verboden. Er is geen extra aanvoer. Alle aangeboden bandjes worden verkocht aan de vragers met de hoogste betalingsbereidheid. Er is geen belasting, subsidie of overheidsopkoop.\n\n### Bron 3 · De beleidsclaim\n\n“Plan B maakt een bandje bereikbaar voor iedereen die er bij € 10 een wil. Plan A levert de overheid geld op; dat geld is volledig verdwenen welvaart.”\n\n<figure><img src=\"_assets/3.1.6_target.svg\" alt=\"Basisgrafiek bij opgave 48. Gebruik deze voor plan A. De plannen zijn alternatieven: pas ze niet tegelijk toe.\"><figcaption>Figuur 1. Basisgrafiek bij opgave 48. Gebruik deze voor plan A. De plannen zijn alternatieven: pas ze niet tegelijk toe.</figcaption></figure>\n\n\n<div class=\"small muted\">De vragen staan op de tegenoverliggende pagina. Voor plan B volstaan berekeningen en een conclusie; je hoeft geen tweede grafiek te tekenen.</div>\n\n<div class=\"exercise target\" id=\"opg48\">\n<p><b>Opgave 48 · Vragen</b></p><p>Gebruik de bronnen en de grafiek op pagina 46. Noteer berekening, eenheid en conclusie.</p>\n<p><b>a.</b> Benoem de maatregelen van plan A en B. Bereken met bron 1 het vrije evenwicht.</p><p><b>b.</b> Bereken voor plan A het nieuwe aanbod in kopersprijzen, de verkochte hoeveelheid, Pc en Pp. Noteer de economische last per bandje voor kopers en verkopers.</p><p><b>c.</b> Bereken bij plan A de overheidsontvangsten, CS, PS en het welvaartsverlies. Gebruik de oorspronkelijke vraag- en aanbodlijn voor de surplusgebieden.</p><p><b>d.</b> Markeer in de basisgrafiek de twee prijzen en de nieuwe hoeveelheid van plan A. Arceer de overheidsontvangsten en het welvaartsverlies verschillend. Benoem beide gebieden.</p><p><b>e.</b> Bereken voor plan B Qv, Qa, werkelijke verkopen en tekort. Controleer eerst of de prijsregel bindt.</p><p><b>f.</b> Beoordeel beide delen van de beleidsclaim uit bron 3. Gebruik minstens één berekening per deel. Geef daarna één verschil tussen de plannen dat voor kopers van belang is; trek geen niet-berekende algemene welvaartsconclusie over plan B.</p></div>\n\n### Kijk na je berekeningen terug\n\n| Controle | Wat je in je antwoord moet kunnen aanwijzen |\n|---|---|\n| Modelkeuze | Plan A heeft twee prijzen; plan B één begrensde prijs. |\n| Transacties | Geen berekening van budget of surplus over onverkochte bandjes. |\n| Geldstroom | Overheidsontvangsten zijn niet volledig welvaartsverlies. |\n| Bronconclusie | Een tekort beperkt toegang; een lage prijs garandeert geen aankoop. |\n\n<div class=\"box small\"><b>Een onderbouwde conclusie</b><br>Een bruikbaar antwoord combineert een brongegeven, een berekening en een gevolg. Bijvoorbeeld: “Omdat er maar … bandjes worden aangeboden, kunnen niet alle … vragers kopen.” Vul de getallen zelf in.</div>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-3/chapters/3.1/_assets/3.1.6_target.svg",
+        "sha256": "76000525e28927d99527fe5540ae58608d39948c83f3f79d8d8b05d1a216ff30"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": null,
+        "prompt": "Benoem de maatregelen van plan A en B. Bereken met bron 1 het vrije evenwicht.",
+        "observable_operation": "Benoem de maatregelen van plan A en B. Bereken met bron 1 het vrije evenwicht.",
+        "source_question_id": "48a"
+      },
+      {
+        "label": "b",
+        "points": null,
+        "prompt": "Bereken voor plan A het nieuwe aanbod in kopersprijzen, de verkochte hoeveelheid, Pc en Pp. Noteer de economische last per bandje voor kopers en verkopers.",
+        "observable_operation": "Bereken voor plan A het nieuwe aanbod in kopersprijzen, de verkochte hoeveelheid, Pc en Pp. Noteer de economische last per bandje voor kopers en verkopers.",
+        "source_question_id": "48b"
+      },
+      {
+        "label": "c",
+        "points": null,
+        "prompt": "Bereken bij plan A de overheidsontvangsten, CS, PS en het welvaartsverlies. Gebruik de oorspronkelijke vraag- en aanbodlijn voor de surplusgebieden.",
+        "observable_operation": "Bereken bij plan A de overheidsontvangsten, CS, PS en het welvaartsverlies. Gebruik de oorspronkelijke vraag- en aanbodlijn voor de surplusgebieden.",
+        "source_question_id": "48c"
+      },
+      {
+        "label": "d",
+        "points": null,
+        "prompt": "Markeer in de basisgrafiek de twee prijzen en de nieuwe hoeveelheid van plan A. Arceer de overheidsontvangsten en het welvaartsverlies verschillend. Benoem beide gebieden.",
+        "observable_operation": "Markeer in de basisgrafiek de twee prijzen en de nieuwe hoeveelheid van plan A. Arceer de overheidsontvangsten en het welvaartsverlies verschillend. Benoem beide gebieden.",
+        "source_question_id": "48d"
+      },
+      {
+        "label": "e",
+        "points": null,
+        "prompt": "Bereken voor plan B Qv, Qa, werkelijke verkopen en tekort. Controleer eerst of de prijsregel bindt.",
+        "observable_operation": "Bereken voor plan B Qv, Qa, werkelijke verkopen en tekort. Controleer eerst of de prijsregel bindt.",
+        "source_question_id": "48e"
+      },
+      {
+        "label": "f",
+        "points": null,
+        "prompt": "Beoordeel beide delen van de beleidsclaim uit bron 3. Gebruik minstens één berekening per deel. Geef daarna één verschil tussen de plannen dat voor kopers van belang is; trek geen niet-berekende algemene welvaartsconclusie over plan B.",
+        "observable_operation": "Beoordeel beide delen van de beleidsclaim uit bron 3. Gebruik minstens één berekening per deel. Geef daarna één verschil tussen de plannen dat voor kopers van belang is; trek geen niet-berekende algemene welvaartsconclusie over plan B.",
+        "source_question_id": "48f"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. A is een belasting per product; B een maximumprijs. Vrij evenwicht: 24 − 0,20Q = 6 + 0,10Q → 18 = 0,30Q → Q₀ = 60 bandjes per dag . P₀ = 24 − 0,20 × 60 = € 12 per bandje . Waarom: Eerst identificeer je het mechanisme; daarna kies je de rekenroute.",
+    "b": "b. Bij A: Pc = 9 + 0,10Q. 24 − 0,20Q = 9 + 0,10Q → Qt = 50 . Pc = 24 − 0,20 × 50 = € 14 ; Pp = 6 + 0,10 × 50 = € 11 . Koperslast = 14 − 12 = € 2 ; verkoperslast = 12 − 11 = € 1 per bandje . Waarom: Pc − Pp is precies de belasting van € 3.",
+    "c": "c. O = 3 × 50 = € 150 per dag . CS = ½ × 50 × (24 − 14) = € 250 . PS = ½ × 50 × (11 − 6) = € 125 . Nieuwe welvaartsmaat = 250 + 125 + 150 = € 525 . Oud = 360 + 180 = € 540. W = 540 − 525 = € 15 per dag . Waarom: Overheidsontvangsten tellen mee in de maat; ze zijn geen verdwenen geld.",
+    "d": "d. Qt = 50; Pc = € 14; Pp = € 11. O is de rechthoek van Q = 0 tot 50 tussen P = 11 en 14. W ligt tussen Q = 50 en Q = 60: ½ × 10 × 3 = € 15. Waarom: O gebruikt de overblijvende verkopen; W de gemiste voordelige transacties.",
+    "e": "e. Bij B bindt € 10, want het ligt onder € 12. 10 = 24 − 0,20Qv → Qv = 70 . 10 = 6 + 0,10Qa → Qa = 40 . Verkopen = 40 ; tekort = 70 − 40 = 30 bandjes per dag . Waarom: Geen extra aanvoer betekent dat niet alle vragers kunnen kopen.",
+    "f": "f. Beide delen zijn onjuist. Bij B willen 70 mensen een bandje, maar er worden 40 verkocht: 30 vragers krijgen er geen. Bij A ontvangt de overheid € 150, terwijl W € 15 is. Een onderbouwd verschil: kopers die onder B kunnen kopen betalen € 10 in plaats van € 14 onder A, maar er worden ook 40 in plaats van 50 bandjes verkocht. Er volgt hier geen volledige welvaartsrangschikking van beide plannen. Waarom: Een conclusie benoemt zowel prijs als toegang en onderscheidt een overdracht van een verlies."
+  },
+  "answer_model_support_html": [
+    "<figure><img alt=\"Opgave 48, plan A: O = € 150 en W = € 15 per dag.\" src=\"_assets/3.1.6_ans_1.svg\"/><figcaption>Opgave 48, plan A: O = € 150 en W = € 15 per dag.</figcaption></figure>",
+    "<figure><img alt=\"Opgave 48, plan B: Qv = 70, Qa = 40, verkoop 40 en tekort 30. Deze tweede grafiek was niet verplicht.\" src=\"_assets/3.1.6_ans_2.svg\"/><figcaption>Opgave 48, plan B: Qv = 70, Qa = 40, verkoop 40 en tekort 30. Deze tweede grafiek was niet verplicht.</figcaption></figure>"
+  ],
+  "answer_figures": [
+    {
+      "path": "books/book-3/chapters/3.1/_assets/3.1.6_ans_1.svg",
+      "sha256": "a1397750b8fa442fce2c5b6913266239c481897e71777090dfbeedc3468353cc"
+    },
+    {
+      "path": "books/book-3/chapters/3.1/_assets/3.1.6_ans_2.svg",
+      "sha256": "50fb963441a30eaa26dd9176e3ed260c1a9e5af626c0c316fef207be541d1f17"
+    }
+  ],
+  "lesson_goals": [
+    "van deze paragraaf Je kiest op basis van de bron de juiste maatregel en rekentechniek. Je verbindt een berekening met een gelabelde grafiek en trekt een conclusie die niet verder gaat dan de gegevens."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "3.1.6-a",
+      "description": "Benoem de maatregelen van plan A en B. Bereken met bron 1 het vrije evenwicht."
+    },
+    {
+      "local_operation_id": "3.1.6-b",
+      "description": "Bereken voor plan A het nieuwe aanbod in kopersprijzen, de verkochte hoeveelheid, Pc en Pp. Noteer de economische last per bandje voor kopers en verkopers."
+    },
+    {
+      "local_operation_id": "3.1.6-c",
+      "description": "Bereken bij plan A de overheidsontvangsten, CS, PS en het welvaartsverlies. Gebruik de oorspronkelijke vraag- en aanbodlijn voor de surplusgebieden."
+    },
+    {
+      "local_operation_id": "3.1.6-d",
+      "description": "Markeer in de basisgrafiek de twee prijzen en de nieuwe hoeveelheid van plan A. Arceer de overheidsontvangsten en het welvaartsverlies verschillend. Benoem beide gebieden."
+    },
+    {
+      "local_operation_id": "3.1.6-e",
+      "description": "Bereken voor plan B Qv, Qa, werkelijke verkopen en tekort. Controleer eerst of de prijsregel bindt."
+    },
+    {
+      "local_operation_id": "3.1.6-f",
+      "description": "Beoordeel beide delen van de beleidsclaim uit bron 3. Gebruik minstens één berekening per deel. Geef daarna één verschil tussen de plannen dat voor kopers van belang is; trek geen niet-berekende algemene welvaartsconclusie over plan B."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Interleave §§3.1.1-3.1.5 with Book 2 elasticity and surplus. Require method selection rather than identifying the method in every question heading."
+  ],
+  "new_skills_introduced": [],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "No new intervention or externality model. Do not force every intervention into one unwieldy target or one 55-minute compulsory route.",
+  "source_ref": "references/owned/course-blueprint-v5.md §3.1.6",
+  "structural_retrieval_plan": "Interleave §§3.1.1-3.1.5 with Book 2 elasticity and surplus. Require method selection rather than identifying the method in every question heading.",
+  "structural_scope_boundary": "No new intervention or externality model. Do not force every intervention into one unwieldy target or one 55-minute compulsory route.",
+  "source_pin": {
+    "student_file": "books/book-3/chapters/3.1/3.1.6 manuscript.md",
+    "student_manuscript_sha256": "2bcaeb3319dfb280988947648a7a50453e32c8fffd4f16bf177257174dde7de3",
+    "answer_file": "books/book-3/chapters/3.1/Antwoorden.md",
+    "answer_file_sha256": "6d639e4d56806829462acd76da214f1d3075ec064b024d46a4fe0601cff292dc",
+    "chapter_student_pages": [
+      46,
+      47
+    ],
+    "complete_book_pages": [
+      50,
+      51
+    ]
+  },
+  "lesson_route": {
+    "start": "46",
+    "independent": "47",
+    "guided_or_alternative": "47A als gerichte vervanging of later herstel",
+    "target": "48",
+    "target_subquestions": [
+      "48a",
+      "48b",
+      "48c",
+      "48d",
+      "48e",
+      "48f"
+    ],
+    "minutes": {
+      "Start / ophalen": 8,
+      "Motivatie": 0,
+      "Instructie": 4,
+      "Uitgewerkt voorbeeld": 0,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 25,
+      "Feedback / afronding": 6
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Laat leerlingen het instrument kiezen uit de bron; geef de methode niet vooraf per deelvraag weg. Opgave 47A komt niet boven op de kern.",
+    "assessment_boundaries": "Vraag bij fouten welke hoeveelheid wordt belast, gesubsidieerd, gekocht of verhandeld. De bron rechtvaardigt geen volledige welvaartsrangschikking van beide plannen."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "3.1.6",
+      "disposition": "retain",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "52606f64c769b799413136344e50f64289949745483016c0a6a41ec9e24baab0"
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="198" viewBox="0 0 900 198" role="img"><title>Beleid: vier stappen</title>
+<rect width="900" height="198" rx="8" fill="#f5f8fa"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10" fill="none" stroke="#637986" stroke-width="1.5"/></marker><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0" stroke="#183247" stroke-width="1" opacity=".25"/></pattern><pattern id="horizontal" width="10" height="8" patternUnits="userSpaceOnUse"><path d="M0 4H10" stroke="#183247" stroke-width="1" opacity=".22"/></pattern><pattern id="cross" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0M0 0L10 10" stroke="#183247" stroke-width="1" opacity=".25"/></pattern></defs>
+<text x="450.0000" y="28.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#183247">Beleid: vier stappen</text>
+<rect x="30.0" y="51" width="192.0" height="83" rx="6" fill="white" stroke="#146d9b" stroke-width="1.3"/>
+<text x="126.0000" y="82.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">Probleem</text>
+<text x="126.0000" y="107.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">wie ondervindt nadeel?</text>
+<line x1="224.0000" y1="92.0000" x2="242.0000" y2="92.0000" stroke="#637986" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="246.0" y="51" width="192.0" height="83" rx="6" fill="white" stroke="#247d70" stroke-width="1.3"/>
+<text x="342.0000" y="82.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">Mechanisme</text>
+<text x="342.0000" y="107.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">waarom ontstaat het?</text>
+<line x1="440.0000" y1="92.0000" x2="458.0000" y2="92.0000" stroke="#637986" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="462.0" y="51" width="192.0" height="83" rx="6" fill="white" stroke="#ae681c" stroke-width="1.3"/>
+<text x="558.0000" y="82.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">Instrument</text>
+<text x="558.0000" y="107.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">wat verandert de keuze?</text>
+<line x1="656.0000" y1="92.0000" x2="674.0000" y2="92.0000" stroke="#637986" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="678.0" y="51" width="192.0" height="83" rx="6" fill="white" stroke="#146d9b" stroke-width="1.3"/>
+<text x="774.0000" y="82.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">Oordeel</text>
+<text x="774.0000" y="107.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">criterium + beperking</text>
+</svg>

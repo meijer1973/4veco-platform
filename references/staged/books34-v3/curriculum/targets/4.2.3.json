@@ -1,0 +1,182 @@
+{
+  "id": "4.2.3",
+  "module": 4,
+  "chapter": 2,
+  "paragraph": 3,
+  "paragraph_title": "Marktvormen vergelijken",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.2.3",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "25",
+    "context": "Doeloefening Bron A · Vier afgebakende markten I: veel kleine telers bieden een identieke grondstof aan; kopers kennen de prijzen en toetreding is vrij. II: veel onafhankelijke lunchzaken verschillen in smaak en locatie; toetreding is relatief eenvoudig. III: drie grote aanbieders bedienen vrijwel de hele markt; een nieuw netwerk bouwen kost veel. IV: één aanbieder heeft als enige toegang tot een noodzakelijke voorziening; binnen deze markt zijn geen goede alternatieven. Bron B · Lunchzaak Puur Puur hoort bij markt II. Voor één dag geldt P = 30 − 0,25q en TK = 144 + 6q. q is maaltijden per dag; P is euro per maaltijd. De productiecapaciteit is 80 maaltijden. De vaste kosten blijven ook bij q = 0 bestaan. Gedrag van concurrenten, kwaliteit en overige vraagfactoren blijven in deze berekening gelijk. Opgave 25 · Marktvorm is het begin Gebruik alleen de beschreven markten en de gegeven korte-termijnberekening. Controle van je antwoord Verbind de classificatie aan de bron. Houd de hoeveelheid van één zaak (q) apart van de hele markt (Q). Lees de verkoopprijs op de vraaglijn.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"source\"><b>Bron A · Vier afgebakende markten</b><br/>I: veel kleine telers bieden een identieke grondstof aan; kopers kennen de prijzen en toetreding is vrij. II: veel onafhankelijke lunchzaken verschillen in smaak en locatie; toetreding is relatief eenvoudig. III: drie grote aanbieders bedienen vrijwel de hele markt; een nieuw netwerk bouwen kost veel. IV: één aanbieder heeft als enige toegang tot een noodzakelijke voorziening; binnen deze markt zijn geen goede alternatieven.</div>\n<div class=\"source\"><b>Bron B · Lunchzaak Puur</b><br/>Puur hoort bij markt II. Voor één dag geldt P = 30 − 0,25q en TK = 144 + 6q. q is maaltijden per dag; P is euro per maaltijd. De productiecapaciteit is 80 maaltijden. De vaste kosten blijven ook bij q = 0 bestaan. Gedrag van concurrenten, kwaliteit en overige vraagfactoren blijven in deze berekening gelijk.</div>\n<div class=\"exercise target\" data-exercise=\"25\" id=\"opg25\"><p><b>Opgave 25 · Marktvorm is het begin</b></p><p>Gebruik alleen de beschreven markten en de gegeven korte-termijnberekening.</p></div>\n<div class=\"box small\"><b>Controle van je antwoord</b><br/>Verbind de classificatie aan de bron. Houd de hoeveelheid van één zaak (q) apart van de hele markt (Q). Lees de verkoopprijs op de vraaglijn.</div>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n<div class=\"source\"><b>Bron A · Vier afgebakende markten</b><br>I: veel kleine telers bieden een identieke grondstof aan; kopers kennen de prijzen en toetreding is vrij. II: veel onafhankelijke lunchzaken verschillen in smaak en locatie; toetreding is relatief eenvoudig. III: drie grote aanbieders bedienen vrijwel de hele markt; een nieuw netwerk bouwen kost veel. IV: één aanbieder heeft als enige toegang tot een noodzakelijke voorziening; binnen deze markt zijn geen goede alternatieven.</div>\n\n<div class=\"source\"><b>Bron B · Lunchzaak Puur</b><br>Puur hoort bij markt II. Voor één dag geldt P = 30 − 0,25q en TK = 144 + 6q. q is maaltijden per dag; P is euro per maaltijd. De productiecapaciteit is 80 maaltijden. De vaste kosten blijven ook bij q = 0 bestaan. Gedrag van concurrenten, kwaliteit en overige vraagfactoren blijven in deze berekening gelijk.</div>\n\n<div class=\"exercise target\" id=\"opg25\" data-exercise=\"25\"><p><b>Opgave 25 · Marktvorm is het begin</b></p><p>Gebruik alleen de beschreven markten en de gegeven korte-termijnberekening.</p><p data-question=\"25a\"><b>a.</b> <span class=\"muted\">(4p)</span> Classificeer I tot en met IV. Geef voor elke markt het beslissende bronbewijs.</p><p data-question=\"25b\"><b>b.</b> <span class=\"muted\">(2p)</span> Bepaal voor Puur TO, MO en MK.</p><p data-question=\"25c\"><b>c.</b> <span class=\"muted\">(3p)</span> Bereken de winstmaximale haalbare q, de verkoopprijs en de winst.</p><p data-question=\"25d\"><b>d.</b> <span class=\"muted\">(2p)</span> Verklaar waarom Puur geen horizontale GO-lijn hoeft te hebben, ook al zijn er veel aanbieders.</p><p data-question=\"25e\"><b>e.</b> <span class=\"muted\">(2p)</span> Mag je de functie van Puur zonder extra broninformatie gebruiken voor markt III? Leg uit.</p></div>\n\n<div class=\"box small\"><b>Controle van je antwoord</b><br>Verbind de classificatie aan de bron. Houd de hoeveelheid van één zaak (q) apart van de hele markt (Q). Lees de verkoopprijs op de vraaglijn.</div>"
+      }
+    ],
+    "figures": [],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 4,
+        "prompt": "Classificeer I tot en met IV. Geef voor elke markt het beslissende bronbewijs.",
+        "observable_operation": "Classificeer I tot en met IV. Geef voor elke markt het beslissende bronbewijs.",
+        "source_question_id": "25a"
+      },
+      {
+        "label": "b",
+        "points": 2,
+        "prompt": "Bepaal voor Puur TO, MO en MK.",
+        "observable_operation": "Bepaal voor Puur TO, MO en MK.",
+        "source_question_id": "25b"
+      },
+      {
+        "label": "c",
+        "points": 3,
+        "prompt": "Bereken de winstmaximale haalbare q, de verkoopprijs en de winst.",
+        "observable_operation": "Bereken de winstmaximale haalbare q, de verkoopprijs en de winst.",
+        "source_question_id": "25c"
+      },
+      {
+        "label": "d",
+        "points": 2,
+        "prompt": "Verklaar waarom Puur geen horizontale GO-lijn hoeft te hebben, ook al zijn er veel aanbieders.",
+        "observable_operation": "Verklaar waarom Puur geen horizontale GO-lijn hoeft te hebben, ook al zijn er veel aanbieders.",
+        "source_question_id": "25d"
+      },
+      {
+        "label": "e",
+        "points": 2,
+        "prompt": "Mag je de functie van Puur zonder extra broninformatie gebruiken voor markt III? Leg uit.",
+        "observable_operation": "Mag je de functie van Puur zonder extra broninformatie gebruiken voor markt III? Leg uit.",
+        "source_question_id": "25e"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. I: volkomen concurrentie: veel kleine aanbieders, homogeen product en vrije toetreding. II: monopolistische concurrentie: veel aanbieders, heterogene diensten en relatief eenvoudige toetreding. III: oligopolie: drie grote aanbieders en hoge toetredingskosten. IV: monopolie: één aanbieder en een onoverkomelijke toegangsdrempel binnen de afgebakende markt.",
+    "b": "b. TO = (30 − 0,25q)q = 30q − 0,25q². MO = 30 − 0,50q. MK = 6; de constante € 144 verdwijnt bij de marginale afleiding.",
+    "c": "c. 30 − 0,50q = 6 geeft q = 48. Dat is lager dan de capaciteit van 80. MO ligt ervoor boven 6 en erna eronder. P = 30 − 0,25 × 48 = € 18. TO = 18 × 48 = € 864; TK = 144 + 6 × 48 = € 432; winst = € 432 per dag.",
+    "d": "d. De producten zijn heterogeen: klanten onderscheiden smaak en locatie. Puur heeft daardoor enige invloed op de prijs. Een kleine prijsnemer bij volkomen concurrentie biedt juist een homogeen goed aan en neemt P als gegeven.",
+    "e": "e. Nee. De functie geldt voor Puur onder de gegeven voorwaarden. Bij oligopolie moet onder meer duidelijk zijn hoe concurrenten reageren. De marktvorm III levert geen universele functie P = 30 − 0,25q op."
+  },
+  "answer_model_support_html": [],
+  "answer_figures": [],
+  "lesson_goals": [
+    "Je kunt vier marktvormen onderscheiden met brongegevens.",
+    "Je kunt de rol van productverschillen en toetreding uitleggen.",
+    "Je kunt de bekende winstprocedure toepassen op een gegeven ondernemingsmodel."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.2.3-a",
+      "description": "Classificeer I tot en met IV. Geef voor elke markt het beslissende bronbewijs."
+    },
+    {
+      "local_operation_id": "4.2.3-b",
+      "description": "Bepaal voor Puur TO, MO en MK."
+    },
+    {
+      "local_operation_id": "4.2.3-c",
+      "description": "Bereken de winstmaximale haalbare q, de verkoopprijs en de winst."
+    },
+    {
+      "local_operation_id": "4.2.3-d",
+      "description": "Verklaar waarom Puur geen horizontale GO-lijn hoeft te hebben, ook al zijn er veel aanbieders."
+    },
+    {
+      "local_operation_id": "4.2.3-e",
+      "description": "Mag je de functie van Puur zonder extra broninformatie gebruiken voor markt III? Leg uit."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Reuse competitive/monopoly reasoning, substitute relationships, demand responsiveness and marginal profit choice."
+  ],
+  "new_skills_introduced": [
+    "Distinguish perfect competition, monopolistic competition, oligopoly and monopoly; transfer a familiar profit procedure to a supplied unfamiliar-market representation."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "Do not assume an oligopolist has one universal demand curve. No reaction functions or payoff-matrix techniques here. Formal strategic interaction stays in the later course. This paragraph is not just a vocabulary checklist, but it also must not become four full new models.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.2.3",
+  "structural_retrieval_plan": "Reuse competitive/monopoly reasoning, substitute relationships, demand responsiveness and marginal profit choice.",
+  "structural_scope_boundary": "Do not assume an oligopolist has one universal demand curve. No reaction functions or payoff-matrix techniques here. Formal strategic interaction stays in the later course. This paragraph is not just a vocabulary checklist, but it also must not become four full new models.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.2/4.2.3 manuscript.md",
+    "student_manuscript_sha256": "308dad49d09b5ea46f2de1f59fa787901c10877ee3866d08fff53a930432e3c8",
+    "answer_file": "books/book-4/chapters/4.2/Antwoorden.md",
+    "answer_file_sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9",
+    "chapter_student_pages": [
+      23
+    ],
+    "complete_book_pages": [
+      75
+    ]
+  },
+  "lesson_route": {
+    "start": "19–20",
+    "independent": "23–24",
+    "guided_or_alternative": "21–22",
+    "target": "25",
+    "target_subquestions": [
+      "25a",
+      "25b",
+      "25c",
+      "25d",
+      "25e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 8,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 13,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 52,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Classificeer met bronbewijs en pas één bekende rekenroute toe in de gegeven korte-termijncasus.",
+    "assessment_boundaries": "Een dalende eigen vraag bewijst geen monopolie. Geen universele oligopolievraagfunctie, reactiecurve of spelmatrix; het gedrag van andere aanbieders is volgens het model gelijk gehouden."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.2.3",
+      "disposition": "retain",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "262057370bda04c200f798063091379b614f692358d471c7da5e444dc3b0b784"
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "pdf_page": 1,
+    "designed_pages": [
+      1
+    ],
+    "sections": [
+      "front"
+    ]
+  },
+  {
+    "pdf_page": 2,
+    "designed_pages": [
+      2
+    ],
+    "sections": [
+      "front"
+    ]
+  }
+]

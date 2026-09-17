@@ -1,0 +1,43 @@
+[
+  {
+    "file": "books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+    "received_pages": 74,
+    "repaired_pages": 74,
+    "text_changed_pages": []
+  },
+  {
+    "file": "books/book-3/output/Boek_3_Compleet_Docenteninformatie_v3.pdf",
+    "received_pages": 22,
+    "repaired_pages": 22,
+    "text_changed_pages": []
+  },
+  {
+    "file": "books/book-3/output/Boek_3_Compleet_v3.pdf",
+    "received_pages": 132,
+    "repaired_pages": 132,
+    "text_changed_pages": []
+  },
+  {
+    "file": "books/book-4/output/Boek_4_Compleet_Antwoorden_v3.pdf",
+    "received_pages": 68,
+    "repaired_pages": 68,
+    "text_changed_pages": [
+      10,
+      15,
+      22,
+      26
+    ]
+  },
+  {
+    "file": "books/book-4/output/Boek_4_Compleet_Docenteninformatie_v3.pdf",
+    "received_pages": 28,
+    "repaired_pages": 28,
+    "text_changed_pages": []
+  },
+  {
+    "file": "books/book-4/output/Boek_4_Compleet_v3.pdf",
+    "received_pages": 166,
+    "repaired_pages": 166,
+    "text_changed_pages": []
+  }
+]

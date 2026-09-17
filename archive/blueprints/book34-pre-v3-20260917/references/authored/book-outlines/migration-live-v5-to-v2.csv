@@ -1,0 +1,34 @@
+source_baseline,old_id,old_title,selected_v2_ids,operation,notes
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.1.1,Belastingen: wig en nieuw evenwicht,3.1.1,retain_structure,No automatic transfer of target approval.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.1.2,Belastingdruk en welvaartsverlies,3.1.2,retain_structure,No automatic transfer of target approval.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.1.3,Subsidies,3.1.3,retain_structure,No automatic transfer of target approval.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.1.4,Maximumprijs,3.1.4,retain_structure,No automatic transfer of target approval.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.1.5,Minimumprijs en quota,3.1.5,retain_structure,No automatic transfer of target approval.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.1.6,Gemengde opgaven: overheidsingrijpen,3.1.6,retain_structure,No automatic transfer of target approval.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.2.1,Volkomen concurrentie: kenmerken,3.2.1,retain_structure,No automatic transfer of target approval.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.2.2,Winstmaximalisatie bij volkomen concurrentie,3.2.2,retain_structure,No automatic transfer of target approval.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.2.3,Langetermijnevenwicht,3.2.3,retain_structure,No automatic transfer of target approval.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.2.4,Gemengde opgaven: volkomen concurrentie,3.2.4,retain_structure,No automatic transfer of target approval.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.3.1,Monopolie: kenmerken,4.1.1,move_monopoly,Version-qualify historical source IDs and target payloads.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.3.2,Marginale opbrengst bij monopolie,4.1.2,move_monopoly,Version-qualify historical source IDs and target payloads.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.3.3,Winstmaximalisatie bij monopolie,4.1.3,move_monopoly,Version-qualify historical source IDs and target payloads.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,3.3.4,Gemengde opgaven: monopolie,4.1.4,move_monopoly,Version-qualify historical source IDs and target payloads.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.1.1,Welvaartseffecten van monopolie,4.2.1,move_market_failure,Do not attach evidence by numeric ID alone.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.1.2,Prijsdiscriminatie,4.2.2,move_market_failure,Do not attach evidence by numeric ID alone.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.1.3,Marktvormen vergelijken,4.2.3,move_market_failure,Do not attach evidence by numeric ID alone.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.1.4,Negatieve externe effecten,4.2.4,move_market_failure,Do not attach evidence by numeric ID alone.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.1.5,Positieve externe effecten,4.2.5,move_market_failure,Do not attach evidence by numeric ID alone.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.1.6,Overheidsingrijpen bij marktfalen,4.2.6,move_market_failure,Do not attach evidence by numeric ID alone.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.1.7,Gemengde opgaven: marktvormen en marktfalen,4.2.7,move_market_failure,Do not attach evidence by numeric ID alone.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.2.1,Arbeidsvraag,4.3.1,move_and_expand,Selected scope includes productivity and unit labour costs; do not infer old target equivalence.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.2.2,Arbeidsaanbod en participatie,4.3.2,move_and_absorb,Selected paragraph includes baseline equilibrium.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.2.3,Evenwicht op de arbeidsmarkt,4.3.2;4.3.3;4.3.4;4.3.6,absorb_no_standalone_unit,"Retain equilibrium/shift operations across these destinations. New 4.2.3 is market forms, not this old unit."
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.2.4,Werkloosheid,4.3.3,move_or_expand,"Trace actual operations, not just ID replacement."
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.2.5,Minimumloon,4.3.4,move_or_expand,"Trace actual operations, not just ID replacement."
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.2.6,"Vakbonden, cao en arbeidsmarktbeleid",4.3.5,move_or_expand,"Trace actual operations, not just ID replacement."
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.2.7,Gemengde opgaven: arbeidsmarkt,4.3.6,move_or_expand,"Trace actual operations, not just ID replacement."
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.3.1,Absolute en comparatieve voordelen,3.3.1,qualitative_scope_only,Numerical comparative-advantage specialisation routines are not retained in the selected scope.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,4.3.2,Ruilwinst en ruilvoet,3.3.1,partial_conceptual_overlap,Qualitative gains only; old numerical ruilvoet/exchange-ratio objective is not moved to 3.3.2.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,,No separate count-bearing live-v5 unit,3.3.2,new_selected_structural_record,Selected v2 content exists in delivered book. This is not permission to invent a reviewed-final target.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,,No separate count-bearing live-v5 unit,3.3.3,new_selected_structural_record,Selected v2 content exists in delivered book. This is not permission to invent a reviewed-final target.
+live-v5-before-BOOK34-CHAT-IMPORT-OUTLINES-1,,No separate count-bearing live-v5 unit,3.3.4,new_selected_structural_record,Selected v2 content exists in delivered book. This is not permission to invent a reviewed-final target.

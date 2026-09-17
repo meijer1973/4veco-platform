@@ -1,0 +1,79 @@
+Review integratiepakket Boek 3–4 v3
+Datum: 16 september 2026.
+Oordeel: geschikt om naar de lokale coding agent te sturen met een gerichte herstel- en integratieopdracht. Een volledige herschrijving of herbouw van de boeken vanaf nul is niet nodig. Het pakket is nog niet foutloos genoeg om ongewijzigd als afgeronde v3-editie te accepteren.
+Het oorspronkelijke ZIP-bestand is tijdens deze review niet gewijzigd. De instructie onderaan dit document kan samen met dat ZIP-bestand worden doorgegeven.
+Wat goed is
+`HANDOFF.md` bevat een duidelijke opdracht, een bruikbare leesvolgorde en concrete grenzen. Het beschrijft de splitsing van §3.2.2, de verplaatsing van langetermijnevenwicht naar §4.1.1, de reparatie van de gemengde opgaven en de uitgestelde cao-/vakbondsles. De telling blijft 14 paragrafen in Boek 3 en 17 in Boek 4, verdeeld als 6+4+4 en 5+7+5.
+De migratie-CSV heeft 32 regels voor 31 oude en 31 nieuwe paragraafidentiteiten: één splitsing en één uitgestelde oude paragraaf verklaren dit. Alle oude IDs en titels sluiten aan op de actuele v2-outlinegegevens in de repository. Er ontbreekt geen oude paragraaf in de migratie.
+De handoff beschermt de bestaande v2-editie, Boeken 1–2 en de historische bewijsvoering. Hij maakt terecht onderscheid tussen een lokale oplevering, een kandidaat-doelopgave, onafhankelijke goedkeuring en daadwerkelijke repository-integratie. Er wordt geen mergebevoegdheid verleend.
+De inhoudelijke hoofdwijzigingen zijn zichtbaar uitgevoerd. §3.2.2 heeft een eigen afgeleide-doeloefening, §3.2.3 een productie- en winstdoeloefening; de oude langetermijnles staat in §4.1.1. De gemengde concurrentieopgave in Boek 3 vraagt geen toetredingsanalyse meer. Handelsopgave 38b en de vooruitwijzing zijn aangepast. De arbeidsmarktconsolidatie gebruikt een expliciet minimumloon en een productiviteitscasus zonder verborgen cao-beleidsvraag.
+Vastgestelde fouten en benodigde aanvullingen
+R1. Vijf antwoordgrafieken tonen oude opgavenummers
+Herstellen vóór de editie als afgerond wordt geaccepteerd. De fout staat niet alleen in bestandsnamen: de oude nummers zijn zichtbaar in de geleverde PDF. De bijbehorende tekst gebruikt wel de nieuwe nummers.
+Alle genoemde assets staan onder `books/book-4/chapters/4.1/_assets/`.
+SVG-bestand	Zichtbare titel nu	Vereist nummer	Pagina in compleet antwoordenboek Boek 4
+`4.1.1_ans_8.svg`	Doeloefening 8 · Prijs en hoeveelheid	18	10
+`4.1.2_ans_18.svg`	Doeloefening 18 · GO en MO	28	15
+`4.1.3_ans_28.svg`	Doeloefening 28 · Hoeveelheid en prijs	38	22
+`4.1.3_ans_28_profit.svg`	Doeloefening 28 · Winstcontrole	38	22
+`4.1.4_ans_35.svg`	Doeloefening 35 · KleurFix	45	26
+Wijzig de zichtbare titels in de SVG-bronnen en werk de bijbehorende PNG-versies bij. Historische bestandsnamen mogen blijven bestaan als verwijzingen correct blijven. Bouw de afhankelijke HTML/PDF-bestanden opnieuw en vernieuw de betrokken asset- en doelopgavehashes. Controleer de vier genoemde PDF-pagina’s visueel. De bestaande 598 controles vinden deze fout niet; voeg een gerichte controle op de overeenkomst tussen opgavenummer en figuurtitel toe.
+R2. De export verwijdert context uit het veld `target_exercise.context`
+Herstellen vóór de records als herbruikbare doelopgavedata worden ingevoerd. In `build/records.py` worden alle `.exercise`-elementen verwijderd voordat `context` wordt samengesteld. Bij veel opgaven zitten de inleiding en de numerieke brongegevens juist binnen dat element.
+Voorbeeld: in `curriculum/targets/3.2.2.json` bevat `context` alleen het kopje Doeloefening en de controle-instructie. De formule `TK = 0,04q² + 4q + 400`, de capaciteit en de eenheden ontbreken in dat veld. Bij §4.3.2 verdwijnen op deze manier de bevolkingscijfers en arbeidsmarktfuncties uit `context`.
+Bij 14 records verdwijnt ten minste één contextalinea: §§3.1.1–3.1.6, 3.2.1–3.2.3, 4.1.1 en 4.3.1–4.3.4. De ernst verschilt: bij §3.1.6 blijven bijvoorbeeld de apart geplaatste bronnen wel staan.
+De gegevens zijn niet uit het hele pakket verdwenen. Ze staan nog in `target_exercise.sources[0].content`, de manuscripten en de PDFs. Het probleem betreft de gestructureerde export en kan tot onvolledige opgaven leiden bij afnemers die `context` en `subquestions` gebruiken.
+Repareer de extractie zodat uitsluitend de deelvragen worden uitgesloten en de relevante context, tabellen, formules en eenheden behouden blijven. Genereer de individuele en gecombineerde records opnieuw. Controleer daarnaast dat de uiteindelijke repository-afnemer ook de benodigde bron- en figuurinformatie werkelijk gebruikt.
+R3. Maak de technische v2→v3-overgang explicieter in de integratieopdracht
+Noodzakelijk integratiewerk, geen reden om de boeken opnieuw te schrijven. De handoff waarschuwt al dat het registerhulpmiddel geen schema- of autoriteitscontrole vervangt. De concrete gevolgen verdienen een aanvulling.
+De huidige repositorycode is sterk aan de eerdere v2-import gebonden:
+`build-scripts/references/migrate-books34-selected-outlines.js` bevat vaste v2-hashes, de v2-revisie en de hoofdstukverdeling 4+7+6 voor Boek 4.
+`build-scripts/references/books34-selected-structure.js` verlangt voor Books 3/4 expliciet `placeholder_needs_review` met een lege placeholder-doelopgave. Het accepteert de geleverde gevulde kandidaten dus niet automatisch.
+`scripts/check-course-target-exercises-v5.js` verlangt een canonieke blueprintverwijzing in `source_ref`. De 31 pakketrecords gebruiken daar een manuscriptpad.
+`build-scripts/maintenance/check-books34-chat-import.js` controleert de oorspronkelijke import, inclusief vaste identiteiten, de exacte gegenereerde v2-inhoud en een gesloten lijst van verwachte bestanden. Alleen een nieuwe editiemap toevoegen is daarom niet voldoende.
+Een proef met `prepare_registry_update.py` op het actuele register bevestigt dat alle 24 records van Boeken 1–2 intact blijven en de nieuwe telling 12/12/14/17 klopt. De uitvoer houdt echter op hoofdniveau `book34-chat-v2-20260914`, terwijl de 31 ingevoegde records `book34-lesson-balance-v3-20260915` bevatten. Alle 31 nieuwe `source_ref`-velden wijken af van het huidige checkercontract. Dit gedrag is gedocumenteerd door het hulpmiddel, maar de uitvoer is daardoor nog geen direct inzetbaar register.
+Laat de coding agent een afgebakende v3-migratie en bijbehorende actuele controles maken, met behoud van de historische v2-migratie en bewijsvoering. Werk structuur, metadata, blueprintprojecties, bronlocaties en de toegestane kandidaatstatus samen bij. Houd een correcte kandidaatstatus gescheiden van onafhankelijke goedkeuring. Verzwak de controles niet om de import passend te maken.
+R4. Leg de Windows-buildomgeving vast
+Praktische aanvulling vóór een lokale Windows-herbouw. Het pakket vermeldt de Python-pakketten en de lettertypen, maar verschillende scripts gebruiken `read_text()` en `write_text()` zonder expliciete UTF-8-codering. Op een Python-installatie die de Windows-codepage gebruikt kan dat fout gaan. In een gerichte controle zijn 64 actuele Markdown-/CSS-bestanden niet als cp1252 te decoderen.
+Voorkeur: maak alle tekst-I/O expliciet UTF-8. Als tijdelijke uitvoeringsinstructie kan in PowerShell vóór het starten van Python `$env:PYTHONUTF8 = "1"` worden gezet. Die omgevingsvariabele wordt ook doorgegeven aan de subprocessen van `build_all.py`. Leg bovendien de werkende Python-/renderomgeving en daadwerkelijk gebruikte Lato-/DejaVu-lettertypen vast. Deze review bevat geen uitgevoerde Windows-build.
+R5. Verduidelijk welke boekbestanden bron zijn en welke worden gegenereerd
+Kleine onderhoudsaanvulling. De handoff noemt de Markdown van het boekvoorwerk bewerkbare bron. `build/assemble.py` schrijft echter `book-matter/front.md` en `book-matter/print.css` bij elke build opnieuw vanuit code. Handmatige aanpassingen aan die bestanden kunnen daardoor verdwijnen.
+Documenteer het huidige eigenaarschap van deze tekst en stijl, of laat de assembler bewust uit bewerkbare bronbestanden lezen. Voor deze integratie is geen algemeen nieuw bouwsysteem nodig. De inhoudsopgave mag uiteraard automatisch worden bijgewerkt.
+Reikwijdte en uitgevoerde controle
+Controle	Resultaat
+Manifest van de ontvangen levering	728 gecontroleerde bestanden; geen afwijkingen. De ZIP bevat daarnaast het manifest zelf.
+Aanwezige editie	31 manuscripten, 31 paragraaf-PDFs, 6 hoofdstukken met leerling-/antwoord-/docentuitvoer en 6 complete delen.
+Migratie	31 oude IDs verantwoord; 31 nieuwe IDs; oude titels gecontroleerd tegen de huidige v2-metadata.
+Meegeleverde inhouds-/structuurcontrole opnieuw uitgevoerd	598 controles geslaagd; 276 opgaven, 734 deelvragen en bijpassende antwoordlabels.
+Meegeleverde numerieke controle opnieuw uitgevoerd	99 controles geslaagd. Dit zijn geselecteerde berekeningen uit het pakket.
+Handmatige inhoudelijke beoordeling	De bronnen en antwoordmodellen van alle 31 doelopgaven gelezen; extra aandacht voor de gewijzigde lesgrenzen en afhankelijkheden.
+Visuele controle	Selectie van leerling-, antwoord- en docentpagina’s, waaronder de nieuwe en verplaatste lessen, gemengde doelopgaven en oude figuurnummers. Enkele pagina’s ook met Poppler op grotere schaal gecontroleerd.
+Herbouw uit bronnen	Alle zes complete delen opnieuw samengesteld; ook records, 31 paragraaf-PDFs en drie outline-PDFs opnieuw gegenereerd; controles daarna geslaagd.
+Vergelijking complete herbouw	Alle 490 pagina’s hebben dezelfde uitgelezen tekst en dezelfde paginatallen. 437 pagina’s zijn ook pixelgelijk; 53 leerlingpagina’s hebben rasterverschillen. Bij geïnspecteerde voorbeelden zijn deze beperkt tot kleine delen van koptekst/letters. De vier antwoord-/docentvolumes zijn volledig pixelgelijk.
+Er is geen grond gevonden voor een volledige inhoudelijke herziening. Deze review is geen onafhankelijke herberekening van alle 734 deelvragen, geen beoordeling op ware grootte van alle 490 pagina’s en geen uitvoering van de volledige gekoppelde repository-CI.
+De auteur beperkt zijn eigen claim van pixelgelijke herbouw tot dezelfde software- en fontomgeving. De afwijkingen in deze review bewijzen daarom niet dat zijn vastgelegde eigen vergelijking onjuist is. Ze betekenen wel dat ik die pixelclaim niet volledig kan bevestigen voor deze omgeving.
+Bestaande open punten correct blijven benoemen
+De vijf bekende lestijdproblemen in §§3.1.2, 3.1.3, 3.1.5, 4.2.4 en 4.2.5 zijn zichtbaar als open probleem gehandhaafd. Ook ontbreekt nog een concrete latere plaatsing met tijd voor de uitgestelde cao-/vakbondsdoelen. Dat zijn bewust beschreven vervolgbeslissingen; ze zijn geen ontbrekende bestanden in deze levering.
+Ze mogen echter niet verdwijnen achter de mededeling “integratie afgerond”. Een succesvolle import bewijst niet dat ieder hoofdstuk zonder verdere keuzes binnen de lesplanning past. Voor gebruik als volledig uitgewerkte jaarplanning blijven die beslissingen nodig.
+Aanvullende opdracht voor de lokale coding agent
+Voeg onderstaande tekst toe aan het ZIP-bestand en de bestaande `HANDOFF.md`:
+> Gebruik dit pakket als de aangeleverde v3-editie en voer een beperkte herstelronde plus integratie uit. Volg `HANDOFF.md` en behandel R1–R5 uit deze review als aanvullende aandachtspunten. Behoud de gekozen 14/17-structuur, de huidige leerstof en de bestaande v2-historie. Een brede herschrijving is niet gevraagd.
+>
+> 1. Fetch de actuele beide repositories, lees de geldende AGENTS-instructies en leg de gebruikte basiscommits vast. Gebruik eigen gekoppelde werkbomen. Controleer eerst het oorspronkelijke pakketmanifest. Behoud die ontvangstidentiteit los van de later gerepareerde levering.
+> 2. Herstel de vijf zichtbare oude figuurnummers uit R1 in de SVG-bronnen en bijbehorende PNGs. Werk afhankelijke uitvoer en hashes bij. Controleer in het complete antwoordenboek de huidige pagina’s 10, 15, 22 en 26 en voeg een gerichte controle op nummerconcordantie toe.
+> 3. Herstel de context-extractie uit R2 en regenereer de 31 doelopgaverecords en het gecombineerde bestand. Behoud bronnen, tabellen, formules, eenheden, deelvragen en antwoorden. Controleer minimaal §3.2.2 en §4.3.2 op volledig bruikbare context en controleer de overige getroffen records.
+> 4. Maak een expliciete v3-migratie in de bestaande repositorystructuur. Behoud de v2-bronnen, registers en migratie als historische editie. Werk de actuele outline-metadata, registermetadata, v5/v6-/lesprojecties, actuele structurele lookup en relevante import-/validatiecontroles samen bij. Het resultaat van `prepare_registry_update.py` is slechts een kandidaat; los de gemengde revisies, canonieke `source_ref`-velden en concrete bron-/assetlocaties op volgens het geldende schema. Houd oude en nieuwe IDs versiegebonden. Laat alle Boeken 1–2-records en -bestanden ongewijzigd.
+> 5. Houd de 31 doelopgaven op `candidate_review_ready` zolang de vereiste onafhankelijke beoordeling ontbreekt. Een gevulde kandidaat is geen lege placeholder en ook geen goedgekeurde eindversie. Laat de v3-controles dit onderscheid expliciet bewaken; verwijder geen controles alleen om groen te krijgen. Bestaande geldige beoordelingsdekking mag worden hergebruikt binnen haar werkelijke scope.
+> 6. Maak tekst-I/O veilig voor UTF-8 en documenteer de werkende lokale bouwomgeving. Verduidelijk dat `front.md` en `print.css` van het boekvoorwerk nu uit `assemble.py` worden gegenereerd, zodat bronwijzigingen niet ongemerkt verloren gaan.
+> 7. Bouw de afhankelijke uitvoer, vernieuw de gerepareerde bron-/asset-/doelidentiteiten, controleer de werkelijke PDF-pagina’s en voer de vereiste repository-CI op de voorgestelde commitcombinatie uit. Laat de navigatie consequent naar de nieuwe editie wijzen. Presenteer een korte eindrapportage met wijzigingen, bewijs, resterende punten en exacte PR-heads. Behoud de vijf lestijdproblemen en de latere plaatsing van cao-/vakbondsdoelen als afzonderlijke open punten. Lever de PR(s) ter review op; deze opdracht verleent geen merge- of publicatiebevoegdheid.
+Onderzochte identiteit en repositorybronnen
+Ontvangen ZIP: `Boek_3_4_v3_Integratiepakket(1).zip`.
+SHA-256 ZIP: `fbb6c9702d7fbd57867d751a545f2e3205c045f65258e259537bf5ff7cd63516`.
+Pakketrevisie: `book34-lesson-balance-v3-20260915`.
+Platform main onderzocht op 67374a9808d226f1be7e8fa73eb104312c075267.
+Lessons main onderzocht op a0548ff9937dfb3b788b8b0ed53bbf9bd4fe1c07.
+Actuele structurele controle bij dat platformcommit.
+Vaste v2-migratie.
+Registerchecker.
+Importchecker.
+Beide onderzochte main-commits zijn van 14 september 2026 en beschrijven de eerder afgeronde v2-integratie. Het v3-pakket van 15 september is een volgende revisie. Sommige kaart-/metadataregels melden nog “prepared/in PR”, terwijl de mergecommits de eerdere integratie al vastleggen; gebruik daarom de commit- en feitelijke bestandsgegevens. Er is geen aanwijzing uit deze vergelijking dat een onbekende v3-versie al op main staat. Niet-gepushte lokale wijzigingen zijn niet beoordeeld. De opgegeven raw-links waren via webtoegang niet bereikbaar; beide repositorykaarten en de relevante bestanden zijn wel via de GitHub-koppeling gelezen.

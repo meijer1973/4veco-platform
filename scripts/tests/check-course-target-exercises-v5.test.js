@@ -1,6 +1,6 @@
 'use strict';
 
-const { validate } = require('../check-course-target-exercises-v5');
+const { validate, validateReviewedMixedTarget } = require('../check-course-target-exercises-v5');
 
 function record(id, overrides = {}) {
   const [module, chapter, paragraph] = id.split('.').map(Number);
@@ -52,11 +52,7 @@ function record(id, overrides = {}) {
 
 function validData() {
   const data = structuredClone(require('../../references/authored/course-target-exercises.json'));
-  // Independent legacy record fixtures keep approval and mixed-target negatives.
-  data.exercises = data.exercises.map(r => r.module > 2 ? r : record(r.id, {
-    paragraph_kind:r.paragraph_kind, introduces_new_theory:r.introduces_new_theory,
-    record_status:'placeholder_needs_review', placeholder_reason:'Needs review.'
-  }));
+  // The bounded v3 migration must preserve actual Book 1/2 records.
   return data;
 }
 
@@ -84,13 +80,17 @@ describe('check-course-target-exercises-v5', () => {
       introduces_new_theory: false,
       record_status: 'reviewed_final',
     }));
-    expect(validate(data)).toEqual([]);
+    const errors = [];
+    validateReviewedMixedTarget(mixed, mixed.id, errors);
+    expect(errors).toEqual([]);
+    expect(validate(data)).toContain('Book 1/2 records changed');
   });
 
   test('rejects hidden final placeholders', () => {
     const data = validData();
     const mixed = data.exercises.find((exercise) => exercise.id === '1.1.4');
     mixed.record_status = 'reviewed_final';
+    mixed.target_exercise = {placeholder:true,context:'Hidden placeholder',subquestions:[]};
     delete mixed.placeholder_reason;
     const errors = validate(data).join('\n');
     expect(errors).toContain('reviewed_final gemengde_opgaven requires a non-placeholder target_exercise');

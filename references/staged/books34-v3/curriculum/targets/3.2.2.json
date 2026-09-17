@@ -1,0 +1,181 @@
+{
+  "id": "3.2.2",
+  "module": 3,
+  "chapter": 2,
+  "paragraph": 2,
+  "paragraph_title": "Marginale kosten en de afgeleide",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "3.2.2",
+    "edition": "books-3-v3",
+    "outline": "references/authored/book-outlines/book-3-outline.md",
+    "package_outline": "outlines/book-3-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "17",
+    "context": "Doeloefening Opgave 17 · Zadenverpakker Voor één week geldt TK = 0,04q² + 4q + 400 . q is kg per week; TK is euro per week. De productiecapaciteit is 200 kg. De constante kosten blijven deze week gelijk, ook bij q = 0. Controle Heb je elk bedrag een eenheid gegeven? Gaat jouw uitleg over dezelfde productie of dezelfde tabelstap als je berekening?",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"exercise target\" data-exercise=\"17\" id=\"opg17\"><p><b>Opgave 17 · Zadenverpakker</b></p><p>Voor één week geldt <b>TK = 0,04q² + 4q + 400</b>. q is kg per week; TK is euro per week. De productiecapaciteit is 200 kg. De constante kosten blijven deze week gelijk, ook bij q = 0.</p></div><div class=\"box small\"><b>Controle</b><br/>Heb je elk bedrag een eenheid gegeven? Gaat jouw uitleg over dezelfde productie of dezelfde tabelstap als je berekening?</div>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n<div class=\"exercise target\" id=\"opg17\" data-exercise=\"17\"><p><b>Opgave 17 · Zadenverpakker</b></p><p>Voor één week geldt <b>TK = 0,04q² + 4q + 400</b>. q is kg per week; TK is euro per week. De productiecapaciteit is 200 kg. De constante kosten blijven deze week gelijk, ook bij q = 0.</p><p data-question=\"17a\"><b>a.</b> Leid de functie MK af. Laat per term zien wat je doet.</p><p data-question=\"17b\"><b>b.</b> Bereken MK bij q = 100. Geef de eenheid en leg de betekenis van dit bedrag uit.</p><p data-question=\"17c\"><b>c.</b> Bereken TK bij q = 100 en bij q = 150. Bereken vervolgens de gemiddelde extra kosten per kg over deze stap.</p><p data-question=\"17d\"><b>d.</b> Waarom is de uitkomst van c niet gelijk aan MK bij q = 100? Gebruik wat beide bedragen meten.</p><p data-question=\"17e\"><b>e.</b> Alleen de constante kosten stijgen met € 100. Wat gebeurt er met de MK-functie en met TK bij q = 100? Verklaar.</p></div><div class=\"box small\"><b>Controle</b><br>Heb je elk bedrag een eenheid gegeven? Gaat jouw uitleg over dezelfde productie of dezelfde tabelstap als je berekening?</div>"
+      }
+    ],
+    "figures": [],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": null,
+        "prompt": "Leid de functie MK af. Laat per term zien wat je doet.",
+        "observable_operation": "Leid de functie MK af. Laat per term zien wat je doet.",
+        "source_question_id": "17a"
+      },
+      {
+        "label": "b",
+        "points": null,
+        "prompt": "Bereken MK bij q = 100. Geef de eenheid en leg de betekenis van dit bedrag uit.",
+        "observable_operation": "Bereken MK bij q = 100. Geef de eenheid en leg de betekenis van dit bedrag uit.",
+        "source_question_id": "17b"
+      },
+      {
+        "label": "c",
+        "points": null,
+        "prompt": "Bereken TK bij q = 100 en bij q = 150. Bereken vervolgens de gemiddelde extra kosten per kg over deze stap.",
+        "observable_operation": "Bereken TK bij q = 100 en bij q = 150. Bereken vervolgens de gemiddelde extra kosten per kg over deze stap.",
+        "source_question_id": "17c"
+      },
+      {
+        "label": "d",
+        "points": null,
+        "prompt": "Waarom is de uitkomst van c niet gelijk aan MK bij q = 100? Gebruik wat beide bedragen meten.",
+        "observable_operation": "Waarom is de uitkomst van c niet gelijk aan MK bij q = 100? Gebruik wat beide bedragen meten.",
+        "source_question_id": "17d"
+      },
+      {
+        "label": "e",
+        "points": null,
+        "prompt": "Alleen de constante kosten stijgen met € 100. Wat gebeurt er met de MK-functie en met TK bij q = 100? Verklaar.",
+        "observable_operation": "Alleen de constante kosten stijgen met € 100. Wat gebeurt er met de MK-functie en met TK bij q = 100? Verklaar.",
+        "source_question_id": "17e"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. 0,04q² → 0,08q; 4q → 4; 400 → 0. MK = 0,08q + 4 .",
+    "b": "b. MK(100) = 8 + 4 = € 12 per kg . Dit is de extra kostenwaarde per kg bij een zeer kleine uitbreiding rond 100 kg in het doorlopende model; niet het totale kostenbedrag.",
+    "c": "c. TK(100) = 400 + 400 + 400 = € 1.200 per week . TK(150) = 900 + 600 + 400 = € 1.900 per week . Gemiddelde extra kosten = (1.900 − 1.200) / (150 − 100) = € 14 per extra kg .",
+    "d": "d. De € 14 is gemiddeld over 50 extra kg. De € 12 hoort bij het punt q = 100. De marginale kosten nemen binnen die stap toe; daarom zijn de twee bedragen niet gelijk.",
+    "e": "e. TK wordt 0,04q² + 4q + 500. Bij q = 100 is TK = € 1.300 per week . MK blijft 0,08q + 4 , want de afgeleide van een constant getal is nul."
+  },
+  "answer_model_support_html": [],
+  "answer_figures": [],
+  "lesson_goals": [
+    "Je kunt uit een eenvoudige kwadratische TK-functie de MK-functie afleiden.",
+    "Je kunt MK op één punt onderscheiden van gemiddelde extra kosten over een tabelstap. Je gebruikt de juiste eenheden en verklaart de rol van constante kosten."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "3.2.2-a",
+      "description": "Leid de functie MK af. Laat per term zien wat je doet."
+    },
+    {
+      "local_operation_id": "3.2.2-b",
+      "description": "Bereken MK bij q = 100. Geef de eenheid en leg de betekenis van dit bedrag uit."
+    },
+    {
+      "local_operation_id": "3.2.2-c",
+      "description": "Bereken TK bij q = 100 en bij q = 150. Bereken vervolgens de gemiddelde extra kosten per kg over deze stap."
+    },
+    {
+      "local_operation_id": "3.2.2-d",
+      "description": "Waarom is de uitkomst van c niet gelijk aan MK bij q = 100? Gebruik wat beide bedragen meten."
+    },
+    {
+      "local_operation_id": "3.2.2-e",
+      "description": "Alleen de constante kosten stijgen met € 100. Wat gebeurt er met de MK-functie en met TK bij q = 100? Verklaar."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Retrieve §2.1.3's ΔTK/Δq, substitution and total/per-unit distinctions. The derivative operation is new instruction here. Retrieve the revenue meaning of P = GO = MO from §3.2.1, but do not teach the optimisation rule as a second destination in this lesson."
+  ],
+  "new_skills_introduced": [
+    "Derive MK from TK = aq² + bq + c using only the quadratic, linear and constant terms required in the course. Evaluate and interpret the resulting marginal cost at a stated q with the correct units. Distinguish a point marginal value from the average additional cost over a finite table interval. Explain why fixed costs disappear from MK but remain in TK and profit."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "No full calculus course, differentiation of GTK, general product/quotient rules, or price/output optimisation. Do not call ΔTK/Δq over a large interval the exact derivative at its endpoint. Preserve the existing fixed-cost/capacity convention. A full optimum, capacity comparison and profit rectangle belong to §3.2.3, not this target. This new paragraph must have its own worked preparation, independent practice and compact target.",
+  "source_ref": "references/owned/course-blueprint-v5.md §3.2.2",
+  "structural_retrieval_plan": "Retrieve §2.1.3's ΔTK/Δq, substitution and total/per-unit distinctions. The derivative operation is new instruction here. Retrieve the revenue meaning of P = GO = MO from §3.2.1, but do not teach the optimisation rule as a second destination in this lesson.",
+  "structural_scope_boundary": "No full calculus course, differentiation of GTK, general product/quotient rules, or price/output optimisation. Do not call ΔTK/Δq over a large interval the exact derivative at its endpoint. Preserve the existing fixed-cost/capacity convention. A full optimum, capacity comparison and profit rectangle belong to §3.2.3, not this target. This new paragraph must have its own worked preparation, independent practice and compact target.",
+  "source_pin": {
+    "student_file": "books/book-3/chapters/3.2/3.2.2 manuscript.md",
+    "student_manuscript_sha256": "8939476f0ea474b0d35db29cf085650ddd7efb548f71df6a531ffce38d34f55c",
+    "answer_file": "books/book-3/chapters/3.2/Antwoorden.md",
+    "answer_file_sha256": "04f876a77f6bc7d27dfe714052e0c2cfea36441c15d5485b64d3b18f76cf3106",
+    "chapter_student_pages": [
+      15
+    ],
+    "complete_book_pages": [
+      67
+    ]
+  },
+  "lesson_route": {
+    "start": "11–12",
+    "independent": "15–16",
+    "guided_or_alternative": "13–14",
+    "target": "17",
+    "target_subquestions": [
+      "17a",
+      "17b",
+      "17c",
+      "17d",
+      "17e"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 11,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 12,
+      "Doeloefening": 12,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Nieuwe afzonderlijke les: totale kosten → afgeleide → marginale kosten op een punt. Vergelijk pas daarna met gemiddelde extra kosten over een eindige tabelstap.",
+    "assessment_boundaries": "Differentieer alleen aq² + bq + c. De afgeleide van de constante is nul, maar die kosten verdwijnen niet uit TK. Hier nog geen productieoptimum of winstrechthoek als einddoel."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "3.2.2",
+      "disposition": "split",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "1748b6c695cad66d83825d719f3a9a062902653370ab37af53916e855802341d"
+}

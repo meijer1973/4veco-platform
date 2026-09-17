@@ -1,0 +1,161 @@
+{
+  "id": "4.3.2",
+  "module": 4,
+  "chapter": 3,
+  "paragraph": 2,
+  "paragraph_title": "Arbeidsaanbod, participatie en evenwicht",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.3.2",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "16",
+    "context": "Doeloefening Opgave 16 · Waterstad en de bezorgsector Bron A: Waterstad telt 5.000 inwoners van 15 tot 75 jaar. Er zijn 3.000 werkenden, 500 werklozen en 1.500 niet-deelnemers. Bron B: een afzonderlijk model voor bezorgers geeft Lᵥ = 240 − 10w en Lₐ = −40 + 10w. L is het aantal personen met 20 uur per week; w is het uurloon in euro. Het model geldt voor € 4 ≤ w ≤ € 24. Het loon is flexibel; er zijn geen zoekproblemen of loonafspraken. Figuur 11. Basisgrafiek bij opgave 16. Benoem het berekende evenwicht met loon en hoeveelheid.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"exercise target\" data-exercise=\"16\" id=\"opg16\"><p><b>Opgave 16 · Waterstad en de bezorgsector</b></p><p>Bron A: Waterstad telt 5.000 inwoners van 15 tot 75 jaar. Er zijn 3.000 werkenden, 500 werklozen en 1.500 niet-deelnemers.<br/>Bron B: een afzonderlijk model voor bezorgers geeft Lᵥ = 240 − 10w en Lₐ = −40 + 10w. L is het aantal personen met 20 uur per week; w is het uurloon in euro. Het model geldt voor € 4 ≤ w ≤ € 24. Het loon is flexibel; er zijn geen zoekproblemen of loonafspraken.</p></div>\n<figure><img alt=\"Figuur 11. Basisgrafiek bij opgave 16. Benoem het berekende evenwicht met loon en hoeveelheid.\" src=\"books/book-4/chapters/4.3/_assets/eq_target.svg\"/><figcaption>Figuur 11. Basisgrafiek bij opgave 16. Benoem het berekende evenwicht met loon en hoeveelheid.</figcaption></figure>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n<div class=\"exercise target\" id=\"opg16\" data-exercise=\"16\"><p><b>Opgave 16 · Waterstad en de bezorgsector</b></p><p>Bron A: Waterstad telt 5.000 inwoners van 15 tot 75 jaar. Er zijn 3.000 werkenden, 500 werklozen en 1.500 niet-deelnemers.<br>Bron B: een afzonderlijk model voor bezorgers geeft Lᵥ = 240 − 10w en Lₐ = −40 + 10w. L is het aantal personen met 20 uur per week; w is het uurloon in euro. Het model geldt voor € 4 ≤ w ≤ € 24. Het loon is flexibel; er zijn geen zoekproblemen of loonafspraken.</p><p data-question=\"16a\"><b>a.</b> <span class=\"muted\">(3p)</span> Bereken met bron A de beroepsbevolking en de bruto- en netto-participatie.</p><p data-question=\"16b\"><b>b.</b> <span class=\"muted\">(3p)</span> Bereken met bron B het evenwichtsloon en de werkgelegenheid. Markeer E in de basisgrafiek hieronder.</p><p data-question=\"16c\"><b>c.</b> <span class=\"muted\">(2p)</span> Leg uit wie bij dit loon arbeid vragen en aanbieden. Waarom vervangt de modeluitkomst de regiotelling niet?</p></div>\n\n<figure><img src=\"_assets/eq_target.svg\" alt=\"Figuur 11. Basisgrafiek bij opgave 16. Benoem het berekende evenwicht met loon en hoeveelheid.\"><figcaption>Figuur 11. Basisgrafiek bij opgave 16. Benoem het berekende evenwicht met loon en hoeveelheid.</figcaption></figure>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-4/chapters/4.3/_assets/eq_target.svg",
+        "sha256": "b050da4637ecc5b395f8f04ed6acbd6d4fc06d43e4919b1781a4f65b7d939656"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 3,
+        "prompt": "Bereken met bron A de beroepsbevolking en de bruto- en netto-participatie.",
+        "observable_operation": "Bereken met bron A de beroepsbevolking en de bruto- en netto-participatie.",
+        "source_question_id": "16a"
+      },
+      {
+        "label": "b",
+        "points": 3,
+        "prompt": "Bereken met bron B het evenwichtsloon en de werkgelegenheid. Markeer E in de basisgrafiek hieronder.",
+        "observable_operation": "Bereken met bron B het evenwichtsloon en de werkgelegenheid. Markeer E in de basisgrafiek hieronder.",
+        "source_question_id": "16b"
+      },
+      {
+        "label": "c",
+        "points": 2,
+        "prompt": "Leg uit wie bij dit loon arbeid vragen en aanbieden. Waarom vervangt de modeluitkomst de regiotelling niet?",
+        "observable_operation": "Leg uit wie bij dit loon arbeid vragen en aanbieden. Waarom vervangt de modeluitkomst de regiotelling niet?",
+        "source_question_id": "16c"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. Beroepsbevolking = 3.000 + 500 = 3.500 personen . Bruto = 3.500 / 5.000 × 100% = 70% . Netto = 3.000 / 5.000 × 100% = 60% . Waarom: De 5.000 inwoners zijn voor beide percentages de noemer.",
+    "b": "b. 240 − 10w = −40 + 10w → 280 = 20w → w = € 14 per uur . L = 240 − 140 = 100 personen . Controle: −40 + 140 = 100. Waarom: Werkgevers en aanbieders stemmen in het model bij dit loon overeen over dezelfde hoeveelheid.",
+    "c": "c. Werkgevers vragen arbeid; huishoudens bieden die aan. De 100 personen horen bij een aparte sector en een vereenvoudigd model, niet bij alle inwoners van Waterstad. Waarom: Een sectorfunctie en een waargenomen bevolkingsbron beschrijven verschillende objecten."
+  },
+  "answer_model_support_html": [],
+  "answer_figures": [],
+  "lesson_goals": [
+    "Je kunt werkenden, werklozen en niet-deelnemers onderscheiden.",
+    "Je kunt bruto- en netto-arbeidsparticipatie berekenen.",
+    "Je kunt met een bekend marktmodel het evenwichtsloon en de werkgelegenheid vinden."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.3.2-a",
+      "description": "Bereken met bron A de beroepsbevolking en de bruto- en netto-participatie."
+    },
+    {
+      "local_operation_id": "4.3.2-b",
+      "description": "Bereken met bron B het evenwichtsloon en de werkgelegenheid. Markeer E in de basisgrafiek hieronder."
+    },
+    {
+      "local_operation_id": "4.3.2-c",
+      "description": "Leg uit wie bij dit loon arbeid vragen en aanbieden. Waarom vervangt de modeluitkomst de regiotelling niet?"
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Reuse Book 1 equilibrium equations and graph reading. A short explicit translation bridge precedes one compact equilibrium calculation; the algebra is not retaught as new."
+  ],
+  "new_skills_introduced": [
+    "Identify households as labour suppliers, calculate participation with the stated denominator, and find and interpret the competitive baseline equilibrium wage and employment."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "This paragraph absorbs the baseline part of the registry-baseline §4.2.3, not an entire extra lesson hidden inside it. Keep participation data simple, units fixed and the equilibrium model familiar. Distinguish a supply curve at different wages from measured labour-force totals. Review timing before finalising the target.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.3.2",
+  "structural_retrieval_plan": "Reuse Book 1 equilibrium equations and graph reading. A short explicit translation bridge precedes one compact equilibrium calculation; the algebra is not retaught as new.",
+  "structural_scope_boundary": "This paragraph absorbs the baseline part of the registry-baseline §4.2.3, not an entire extra lesson hidden inside it. Keep participation data simple, units fixed and the equilibrium model familiar. Distinguish a supply curve at different wages from measured labour-force totals. Review timing before finalising the target.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.3/4.3.2 manuscript.md",
+    "student_manuscript_sha256": "0b94d916c5364f7ef99bd024cf94f27f9b10673b817d9adbb1afb255abec4bcb",
+    "answer_file": "books/book-4/chapters/4.3/Antwoorden.md",
+    "answer_file_sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f",
+    "chapter_student_pages": [
+      18
+    ],
+    "complete_book_pages": [
+      130
+    ]
+  },
+  "lesson_route": {
+    "start": "10–11",
+    "independent": "14–15",
+    "guided_or_alternative": "12–13",
+    "target": "16",
+    "target_subquestions": [
+      "16a",
+      "16b",
+      "16c"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 9,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 11,
+      "Doeloefening": 13,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Scheid de bevolkingstelling van de aparte marktfunctie. De evenwichtsvergelijking is bekende algebra met nieuwe actoren en eenheden.",
+    "assessment_boundaries": "Bruto- en netto-participatie gebruiken de bevolkingsnoemer. Een gemeten beroepsbevolking is geen aanbodlijn bij alle lonen. Voeg niet de volledige verplaatste beleidsles toe."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.3.2",
+      "disposition": "retain",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "67fafb4a743798a9f8bd0f41125a240f47a45475ac0ff04820b182cf1d30182d"
+}

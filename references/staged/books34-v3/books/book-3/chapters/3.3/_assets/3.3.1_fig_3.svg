@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200" role="img"><title>Waarom handel iets kan opleveren</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#536777" stroke-width="1.5"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0,8 L8,0" stroke="#183247" stroke-opacity=".25" stroke-width="1"/></pattern></defs>
+<rect width="900" height="200" rx="10" fill="#f5f8fa"/>
+<text x="450.00000000" y="28.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">Waarom handel iets kan opleveren</text>
+<rect x="31.00000000" y="48.00000000" width="262.00000000" height="88.00000000" rx="5" fill="white" stroke="#146d9b" stroke-width="1.6"/>
+<text x="162.00000000" y="77.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">Minder opofferen</text>
+<text x="162.00000000" y="101.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">relatief voordeel</text>
+<line x1="296.00000000" y1="92.00000000" x2="315.00000000" y2="92.00000000" stroke="#667c8b" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="319.00000000" y="48.00000000" width="262.00000000" height="88.00000000" rx="5" fill="white" stroke="#247d70" stroke-width="1.6"/>
+<text x="450.00000000" y="77.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">Meer specialiseren</text>
+<text x="450.00000000" y="101.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">passende activiteiten</text>
+<line x1="584.00000000" y1="92.00000000" x2="603.00000000" y2="92.00000000" stroke="#667c8b" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="607.00000000" y="48.00000000" width="262.00000000" height="88.00000000" rx="5" fill="white" stroke="#ad681f" stroke-width="1.6"/>
+<text x="738.00000000" y="77.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">Ruilen</text>
+<text x="738.00000000" y="101.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">mogelijk voordeel</text>
+<text x="450.00000000" y="181.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">Beide partijen moeten de ruil aantrekkelijk vinden.</text>
+</svg>

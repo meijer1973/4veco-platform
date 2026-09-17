@@ -1,0 +1,185 @@
+{
+  "id": "3.1.2",
+  "module": 3,
+  "chapter": 1,
+  "paragraph": 2,
+  "paragraph_title": "Belastingdruk en welvaartsverlies",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "3.1.2",
+    "edition": "books-3-v3",
+    "outline": "references/authored/book-outlines/book-3-outline.md",
+    "package_outline": "outlines/book-3-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "16",
+    "context": "Doeloefening Opgave 16 · Bedrukte tassen: wie betaalt? Dit is de markt uit §3.1.1, met alle gegevens opnieuw gegeven. Vraag Pc = 20 − 0,20Q; aanbod Pp = 2 + 0,10Q. Q is tassen per dag. Eerst: Q₀ = 60 en P₀ = € 8. Met t = € 3: Qt = 50, Pc = € 10 en Pp = € 7. De belasting heeft geen effecten voor buitenstaanders en geen uitvoeringskosten. Figuur 5. Basisgrafiek bij de doeloefening. Gebruik de twee werkelijk ontvangen en betaalde prijzen, niet één middenprijs.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"exercise target\" id=\"opg16\"><p><b>Opgave 16 · Bedrukte tassen: wie betaalt?</b></p><p>Dit is de markt uit §3.1.1, met alle gegevens opnieuw gegeven. Vraag Pc = 20 − 0,20Q; aanbod Pp = 2 + 0,10Q. Q is tassen per dag. Eerst: Q₀ = 60 en P₀ = € 8. Met t = € 3: Qt = 50, Pc = € 10 en Pp = € 7. De belasting heeft geen effecten voor buitenstaanders en geen uitvoeringskosten.</p></div>\n<figure><img alt=\"Basisgrafiek bij de doeloefening. Gebruik de twee werkelijk ontvangen en betaalde prijzen, niet één middenprijs.\" src=\"books/book-3/chapters/3.1/_assets/3.1.2_target.svg\"/><figcaption>Figuur 5. Basisgrafiek bij de doeloefening. Gebruik de twee werkelijk ontvangen en betaalde prijzen, niet één middenprijs.</figcaption></figure>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n<div class=\"exercise target\" id=\"opg16\"><p><b>Opgave 16 · Bedrukte tassen: wie betaalt?</b></p><p>Dit is de markt uit §3.1.1, met alle gegevens opnieuw gegeven. Vraag Pc = 20 − 0,20Q; aanbod Pp = 2 + 0,10Q. Q is tassen per dag. Eerst: Q₀ = 60 en P₀ = € 8. Met t = € 3: Qt = 50, Pc = € 10 en Pp = € 7. De belasting heeft geen effecten voor buitenstaanders en geen uitvoeringskosten.</p><p><b>a.</b> Bereken de last per tas voor beide kanten en het afwentelingspercentage.</p><p><b>b.</b> Bereken de belastingopbrengst per dag.</p><p><b>c.</b> Bereken CS en PS zonder en met belasting. Bereken daarna de welvaartsmaat met overheid en het welvaartsverlies.</p><p><b>d.</b> Markeer Qt, Pc en Pp in de basisgrafiek. Arceer de belastingopbrengst en het welvaartsverlies verschillend. Noteer basis en hoogte van W.</p><p><b>e.</b> Een koper zegt: “Als de vraag nog minder prijsgevoelig was, zouden wij minder belasting dragen.” Beoordeel, bij gelijk aanbod en dezelfde belasting.</p></div>\n\n<figure><img src=\"_assets/3.1.2_target.svg\" alt=\"Basisgrafiek bij de doeloefening. Gebruik de twee werkelijk ontvangen en betaalde prijzen, niet één middenprijs.\"><figcaption>Figuur 5. Basisgrafiek bij de doeloefening. Gebruik de twee werkelijk ontvangen en betaalde prijzen, niet één middenprijs.</figcaption></figure>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-3/chapters/3.1/_assets/3.1.2_target.svg",
+        "sha256": "913b34e601af2ea9463fb1b207b54fb1f0b27ca3dde6db0fec02b23f0db5253c"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": null,
+        "prompt": "Bereken de last per tas voor beide kanten en het afwentelingspercentage.",
+        "observable_operation": "Bereken de last per tas voor beide kanten en het afwentelingspercentage.",
+        "source_question_id": "16a"
+      },
+      {
+        "label": "b",
+        "points": null,
+        "prompt": "Bereken de belastingopbrengst per dag.",
+        "observable_operation": "Bereken de belastingopbrengst per dag.",
+        "source_question_id": "16b"
+      },
+      {
+        "label": "c",
+        "points": null,
+        "prompt": "Bereken CS en PS zonder en met belasting. Bereken daarna de welvaartsmaat met overheid en het welvaartsverlies.",
+        "observable_operation": "Bereken CS en PS zonder en met belasting. Bereken daarna de welvaartsmaat met overheid en het welvaartsverlies.",
+        "source_question_id": "16c"
+      },
+      {
+        "label": "d",
+        "points": null,
+        "prompt": "Markeer Qt, Pc en Pp in de basisgrafiek. Arceer de belastingopbrengst en het welvaartsverlies verschillend. Noteer basis en hoogte van W.",
+        "observable_operation": "Markeer Qt, Pc en Pp in de basisgrafiek. Arceer de belastingopbrengst en het welvaartsverlies verschillend. Noteer basis en hoogte van W.",
+        "source_question_id": "16d"
+      },
+      {
+        "label": "e",
+        "points": null,
+        "prompt": "Een koper zegt: “Als de vraag nog minder prijsgevoelig was, zouden wij minder belasting dragen.” Beoordeel, bij gelijk aanbod en dezelfde belasting.",
+        "observable_operation": "Een koper zegt: “Als de vraag nog minder prijsgevoelig was, zouden wij minder belasting dragen.” Beoordeel, bij gelijk aanbod en dezelfde belasting.",
+        "source_question_id": "16e"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. Koper: 10 − 8 = € 2 per tas . Verkoper: 8 − 7 = € 1 per tas . Afwenteling = 2/3 × 100% = 66,67% . Waarom: Samen dragen beide kanten € 3 per verkochte tas.",
+    "b": "b. O = t × Qt = 3 × 50 = € 150 per dag . Waarom: De belasting wordt over de 50 daadwerkelijke verkopen geheven.",
+    "c": "c. Oud: CS = ½ × 60 × (20 − 8) = € 360; PS = ½ × 60 × (8 − 2) = € 180. Nieuw: CS = ½ × 50 × (20 − 10) = € 250; PS = ½ × 50 × (7 − 2) = € 125. Nieuwe maat = 250 + 125 + 150 = € 525 . W = (360 + 180) − 525 = € 15 per dag . Waarom: Verlies aan privaat surplus is deels een overdracht naar de overheid.",
+    "d": "d. Zie de grafiek. O ligt tussen € 7 en € 10 tot Q = 50. W ligt tussen Q = 50 en Q = 60: basis 10 tassen, hoogte € 3 per tas. ½ × 10 × 3 = € 15. Waarom: De basis van W is niet Qt maar de afname van de hoeveelheid.",
+    "e": "e. Onjuist. Bij gelijk aanbod en dezelfde belasting leidt minder prijsgevoelige vraag juist tot een groter aandeel voor kopers. Waarom: Wie minder makkelijk kan afzien van aankoop, kan de last minder makkelijk ontwijken."
+  },
+  "answer_model_support_html": [
+    "<figure><img alt=\"Opgave 16: O is de rechthoek van € 150; de kleine driehoek W is € 15.\" src=\"_assets/3.1.2_ans_2.svg\"/><figcaption>Opgave 16: O is de rechthoek van € 150; de kleine driehoek W is € 15.</figcaption></figure>"
+  ],
+  "answer_figures": [
+    {
+      "path": "books/book-3/chapters/3.1/_assets/3.1.2_ans_2.svg",
+      "sha256": "8fe27f9c6cbba02c18a429a4b5559e59c945c67f6d82ebbb0b12768fb81b3b64"
+    }
+  ],
+  "lesson_goals": [
+    "Je kunt de belastingdruk per product over kopers en verkopers verdelen, ook in procenten.",
+    "Je kunt belastingopbrengst, CS, PS en welvaartsverlies berekenen en markeren.",
+    "Je kunt uitleggen waarom de minder prijsgevoelige kant relatief meer last draagt."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "3.1.2-a",
+      "description": "Bereken de last per tas voor beide kanten en het afwentelingspercentage."
+    },
+    {
+      "local_operation_id": "3.1.2-b",
+      "description": "Bereken de belastingopbrengst per dag."
+    },
+    {
+      "local_operation_id": "3.1.2-c",
+      "description": "Bereken CS en PS zonder en met belasting. Bereken daarna de welvaartsmaat met overheid en het welvaartsverlies."
+    },
+    {
+      "local_operation_id": "3.1.2-d",
+      "description": "Markeer Qt, Pc en Pp in de basisgrafiek. Arceer de belastingopbrengst en het welvaartsverlies verschillend. Noteer basis en hoogte van W."
+    },
+    {
+      "local_operation_id": "3.1.2-e",
+      "description": "Een koper zegt: “Als de vraag nog minder prijsgevoelig was, zouden wij minder belasting dragen.” Beoordeel, bij gelijk aanbod en dezelfde belasting."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Retrieve §3.1.1, Book 2 elasticity interpretation and surplus-area calculations. Qualitative supply responsiveness does not require introducing a new supply-elasticity formula."
+  ],
+  "new_skills_introduced": [
+    "Calculate the division of the tax burden, tax revenue and welfare consequences; explain the effect of relative responsiveness."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "Government revenue is a transfer, not the deadweight loss. The initial welfare benchmark excludes external effects; corrective taxation returns in §4.2.4. Do not infer elasticity merely from slopes plotted with different scales.",
+  "source_ref": "references/owned/course-blueprint-v5.md §3.1.2",
+  "structural_retrieval_plan": "Retrieve §3.1.1, Book 2 elasticity interpretation and surplus-area calculations. Qualitative supply responsiveness does not require introducing a new supply-elasticity formula.",
+  "structural_scope_boundary": "Government revenue is a transfer, not the deadweight loss. The initial welfare benchmark excludes external effects; corrective taxation returns in §4.2.4. Do not infer elasticity merely from slopes plotted with different scales.",
+  "source_pin": {
+    "student_file": "books/book-3/chapters/3.1/3.1.2 manuscript.md",
+    "student_manuscript_sha256": "2020abe9072c3a479dd59d4fdefe997d4a7def90e6698354fd30a326548a4955",
+    "answer_file": "books/book-3/chapters/3.1/Antwoorden.md",
+    "answer_file_sha256": "6d639e4d56806829462acd76da214f1d3075ec064b024d46a4fe0601cff292dc",
+    "chapter_student_pages": [
+      17
+    ],
+    "complete_book_pages": [
+      21
+    ]
+  },
+  "lesson_route": {
+    "start": "10–11",
+    "independent": "14–15",
+    "guided_or_alternative": "12–13",
+    "target": "16",
+    "target_subquestions": [
+      "16a",
+      "16b",
+      "16c",
+      "16d",
+      "16e"
+    ],
+    "minutes": null,
+    "total_minutes": null,
+    "one_lesson_status": "open_existing_timing_conflict",
+    "instruction_focus": "Behandel last per stuk, belastingopbrengst en verloren surplus afzonderlijk. De gecontroleerde prijsgevoeligheidsvergelijking hoort vóór zelfstandig werk.",
+    "assessment_boundaries": "De daling van CS + PS is niet geheel welvaartsverlies. O hoort bij verkochte eenheden; de verliesdriehoek bij weggevallen transacties."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "3.1.2",
+      "disposition": "retain",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "6a472fe2f04729f8144eb155f518135bd231c85e9e2497eda3bc9d12b37ba2c8"
+}
