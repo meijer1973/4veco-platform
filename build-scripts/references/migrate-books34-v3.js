@@ -100,14 +100,11 @@ function plan(inputs,root=ROOT,lessons=path.resolve(root,'../4veco-lessen')) {
  const lb=before('course_blueprint_v5.md',lessons,LESSON_BASE);
  lessonOutputs.set(`${SNAPSHOT}/course_blueprint_v5.md`,lb);lessonOutputs.set('course_blueprint_v5.md',outputs.get(V5));
  inventory.push({repository:'meijer1973/4veco-lessen',path:'course_blueprint_v5.md',snapshot:`${SNAPSHOT}/course_blueprint_v5.md`,source_commit:LESSON_BASE,sha256:sha(lb)});
- for(const [repo,base,name,target] of [[root,PLATFORM_BASE,'meijer1973/4veco-platform',outputs],[lessons,LESSON_BASE,'meijer1973/4veco-lessen',lessonOutputs]]){
-  const reloc=JSON.parse(before('archive/relocations.json',repo,base));
-  for(const e of inventory.filter(e=>e.repository===name)){
-   const b=before(e.path,repo,base),blob=crypto.createHash('sha1').update(Buffer.from(`blob ${b.length}\0`)).update(b).digest('hex');
-   reloc.entries.push({kind:'snapshot',original_path:e.path,archived_path:e.snapshot,original_blob:blob,final_blob:blob,source_commit:base,topic:'book34-v2-before-v3',batch:TASK,current_consumers:[e.path],live_follow_up:e.path});
-  }
-  target.set('archive/relocations.json',json(reloc));
- }
+ // These are additional versioned copies, not relocations of active paths.
+ // Preserve the legacy one-source relocation registry for trusted-main readers;
+ // the exact version-qualified snapshot manifest below owns their provenance.
+ outputs.set('archive/relocations.json',before('archive/relocations.json',root,PLATFORM_BASE));
+ lessonOutputs.set('archive/relocations.json',before('archive/relocations.json',lessons,LESSON_BASE));
  outputs.set(`${SNAPSHOT}/snapshot-manifest.json`,json({schema_version:1,task:TASK,files:inventory}));
  outputs.set(`${OUTLINES}/books34-v3-integration.json`,json({schema_version:1,task:TASK,revision:REVISION,delivery_id:manifest.delivery_id,platform_base:PLATFORM_BASE,lesson_base:LESSON_BASE,package_root:PACKAGE,received_zip_sha256:ZIP_SHA,manifest_sha256:MANIFEST_SHA,file_count:814,registry_input_sha256:sha(old),book12_records_sha256:sha(canonical(registry.exercises.filter(r=>r.module<3))),integration_status:'prepared_in_pr',target_approval:'not_conferred',authority_source_transitions:[V5,V6,REGISTRY].map(f=>({path:f,before_sha256:sha(text(before(f,root))),after_sha256:sha(text(outputs.get(f)))}))}));
  return {outputs,lessonOutputs,rows};

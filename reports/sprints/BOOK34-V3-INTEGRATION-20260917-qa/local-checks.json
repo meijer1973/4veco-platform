@@ -39,6 +39,17 @@
       "passed": true,
       "paired": true,
       "tracked": true
+    },
+    "full_local_suite_before_final_snapshot_registration": {
+      "passed": 2038,
+      "failed": 0,
+      "skipped": 8,
+      "passed_suites": 121,
+      "skipped_suites": 6
+    },
+    "final_snapshot_and_import_focused": {
+      "passed": 47,
+      "failed": 0
     }
   },
   "pdf_comparison": {
@@ -108,5 +119,10 @@
     "Lato-SemiBoldItalic.ttf": "5adeb6b334d8fb99ef053bc052b952773d544315e0e1d668a12c0ce8bd51375c",
     "Lato-Thin.ttf": "663c55bfe9a38270fff44da273bf4d792eafc3e7e1201f62c3064cad80c5d5e7",
     "Lato-ThinItalic.ttf": "e5e86e219ce6987b175470d94d57753a387d1860b635da6327a60e8d19a33beb"
+  },
+  "compatibility_first_attempt": {
+    "run_id": 35205659170,
+    "result": "blocked by legacy trusted-main archive registration reader before tests",
+    "disposition": "Version-qualified snapshots retained in exact-byte snapshot manifest; legacy relocation registries restored unchanged. New exact-head run required."
   }
 }
