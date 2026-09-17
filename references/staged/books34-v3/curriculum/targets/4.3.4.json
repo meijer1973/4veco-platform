@@ -1,0 +1,174 @@
+{
+  "id": "4.3.4",
+  "module": 4,
+  "chapter": 3,
+  "paragraph": 4,
+  "paragraph_title": "Minimumloon",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.3.4",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "34",
+    "context": "Doeloefening Opgave 34 · Een loonvloer in de sorteercentra Lᵥ = 220 − 10w en Lₐ = −20 + 10w, voor € 2 ≤ w ≤ € 22. L is het aantal personen met ieder 25 betaalde uren per week; w is het brutouurloon in euro. Een fictief minimumloon wordt € 14. Werkgevers concurreren; er zijn geen vacatures of zoekproblemen. Alle gevraagde plaatsen worden gevuld. Alle aanbieders zonder baan zoeken en zijn direct beschikbaar. Figuur 21. De vraag- en aanbodlijn zijn gegeven. Vul de loonvloer, vraag en aanbod aan; teken de lijnen niet opnieuw.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"exercise target\" data-exercise=\"34\" id=\"opg34\"><p><b>Opgave 34 · Een loonvloer in de sorteercentra</b></p><p>Lᵥ = 220 − 10w en Lₐ = −20 + 10w, voor € 2 ≤ w ≤ € 22. L is het aantal personen met ieder 25 betaalde uren per week; w is het brutouurloon in euro. Een fictief minimumloon wordt € 14. Werkgevers concurreren; er zijn geen vacatures of zoekproblemen. Alle gevraagde plaatsen worden gevuld. Alle aanbieders zonder baan zoeken en zijn direct beschikbaar.</p></div>\n<figure><img alt=\"Figuur 21. De vraag- en aanbodlijn zijn gegeven. Vul de loonvloer, vraag en aanbod aan; teken de lijnen niet opnieuw.\" src=\"books/book-4/chapters/4.3/_assets/floor_target.svg\"/><figcaption>Figuur 21. De vraag- en aanbodlijn zijn gegeven. Vul de loonvloer, vraag en aanbod aan; teken de lijnen niet opnieuw.</figcaption></figure>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n<div class=\"exercise target\" id=\"opg34\" data-exercise=\"34\"><p><b>Opgave 34 · Een loonvloer in de sorteercentra</b></p><p>Lᵥ = 220 − 10w en Lₐ = −20 + 10w, voor € 2 ≤ w ≤ € 22. L is het aantal personen met ieder 25 betaalde uren per week; w is het brutouurloon in euro. Een fictief minimumloon wordt € 14. Werkgevers concurreren; er zijn geen vacatures of zoekproblemen. Alle gevraagde plaatsen worden gevuld. Alle aanbieders zonder baan zoeken en zijn direct beschikbaar.</p><p data-question=\"34a\"><b>a.</b> <span class=\"muted\">(2p)</span> Bereken het vrije evenwicht en bepaal of de loonvloer bindend is.</p><p data-question=\"34b\"><b>b.</b> <span class=\"muted\">(3p)</span> Bereken bij de loonvloer arbeidsvraag, arbeidsaanbod, werkgelegenheid en aanbodoverschot. Geef de loonvloer en beide hoeveelheden aan in de basisgrafiek.</p><p data-question=\"34c\"><b>c.</b> <span class=\"muted\">(3p)</span> Bereken de loonsom vóór en na de verandering en de procentuele verandering.</p><p data-question=\"34d\"><b>d.</b> <span class=\"muted\">(2p)</span> Leg uit waarom “alle 40 hebben hun baan verloren” en “iedereen verdient meer” geen juiste conclusies zijn.</p></div>\n\n<figure><img src=\"_assets/floor_target.svg\" alt=\"Figuur 21. De vraag- en aanbodlijn zijn gegeven. Vul de loonvloer, vraag en aanbod aan; teken de lijnen niet opnieuw.\"><figcaption>Figuur 21. De vraag- en aanbodlijn zijn gegeven. Vul de loonvloer, vraag en aanbod aan; teken de lijnen niet opnieuw.</figcaption></figure>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-4/chapters/4.3/_assets/floor_target.svg",
+        "sha256": "1c56b3d1fcde16f89d346a3e22451c831322592a2328ef8077d3a497e2398373"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 2,
+        "prompt": "Bereken het vrije evenwicht en bepaal of de loonvloer bindend is.",
+        "observable_operation": "Bereken het vrije evenwicht en bepaal of de loonvloer bindend is.",
+        "source_question_id": "34a"
+      },
+      {
+        "label": "b",
+        "points": 3,
+        "prompt": "Bereken bij de loonvloer arbeidsvraag, arbeidsaanbod, werkgelegenheid en aanbodoverschot. Geef de loonvloer en beide hoeveelheden aan in de basisgrafiek.",
+        "observable_operation": "Bereken bij de loonvloer arbeidsvraag, arbeidsaanbod, werkgelegenheid en aanbodoverschot. Geef de loonvloer en beide hoeveelheden aan in de basisgrafiek.",
+        "source_question_id": "34b"
+      },
+      {
+        "label": "c",
+        "points": 3,
+        "prompt": "Bereken de loonsom vóór en na de verandering en de procentuele verandering.",
+        "observable_operation": "Bereken de loonsom vóór en na de verandering en de procentuele verandering.",
+        "source_question_id": "34c"
+      },
+      {
+        "label": "d",
+        "points": 2,
+        "prompt": "Leg uit waarom “alle 40 hebben hun baan verloren” en “iedereen verdient meer” geen juiste conclusies zijn.",
+        "observable_operation": "Leg uit waarom “alle 40 hebben hun baan verloren” en “iedereen verdient meer” geen juiste conclusies zijn.",
+        "source_question_id": "34d"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. 220 − 10w = −20 + 10w → 240 = 20w → w = € 12 . L = 220 − 10 × 12 = 100 personen . € 14 > € 12: bindend . Waarom: De loonvloer sluit het vrije evenwicht uit.",
+    "b": "b. Lᵥ = 220 − 140 = 80 ; Lₐ = −20 + 140 = 120 personen . Werkgelegenheid = 80 ; overschot = 120 − 80 = 40 personen . Waarom: De aangeboden 120 banen aan arbeid worden niet alle door werkgevers gevraagd.",
+    "c": "c. Oud = 12 × 25 × 100 = € 30.000 per week . Nieuw = 14 × 25 × 80 = € 28.000 per week . (28.000 − 30.000) / 30.000 × 100% ≈ −6,67% . Waarom: De stijging van het uurloon compenseert hier de afname van betaalde uren niet.",
+    "d": "d. Er zijn 20 minder werkenden en 20 extra aanbieders . Samen vormen zij het verschil van 40. Alleen wie werk houdt en dezelfde uren werkt, krijgt het hogere weekloon. Waarom: Aanbodoverschot, banenverlies en inkomenswinst zijn verschillende grootheden."
+  },
+  "answer_model_support_html": [],
+  "answer_figures": [],
+  "lesson_goals": [
+    "Je kunt bepalen of een minimumloon bindend is.",
+    "Je kunt in een gegeven model arbeidsvraag, arbeidsaanbod, werkgelegenheid en loonsom berekenen.",
+    "Je kunt verschillen tussen groepen werknemers uitleggen."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.3.4-a",
+      "description": "Bereken het vrije evenwicht en bepaal of de loonvloer bindend is."
+    },
+    {
+      "local_operation_id": "4.3.4-b",
+      "description": "Bereken bij de loonvloer arbeidsvraag, arbeidsaanbod, werkgelegenheid en aanbodoverschot. Geef de loonvloer en beide hoeveelheden aan in de basisgrafiek."
+    },
+    {
+      "local_operation_id": "4.3.4-c",
+      "description": "Bereken de loonsom vóór en na de verandering en de procentuele verandering."
+    },
+    {
+      "local_operation_id": "4.3.4-d",
+      "description": "Leg uit waarom “alle 40 hebben hun baan verloren” en “iedereen verdient meer” geen juiste conclusies zijn."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Repeat §3.1.5’s price-floor technique and §4.3.2’s labour-market translation; reuse price-times-quantity and percentage calculations."
+  ],
+  "new_skills_introduced": [
+    "Apply a minimum-price model to wages and distinguish effects on wage rates, employment, people seeking work and the wage bill."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "State a competitive model, the wage unit and adjustment assumptions. Model outcomes are not universal empirical claims about every minimum-wage change. Use illustrative rates, not unverified current statutory figures.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.3.4",
+  "structural_retrieval_plan": "Repeat §3.1.5’s price-floor technique and §4.3.2’s labour-market translation; reuse price-times-quantity and percentage calculations.",
+  "structural_scope_boundary": "State a competitive model, the wage unit and adjustment assumptions. Model outcomes are not universal empirical claims about every minimum-wage change. Use illustrative rates, not unverified current statutory figures.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.3/4.3.4 manuscript.md",
+    "student_manuscript_sha256": "1a82d579cb1336ef199ea1244c52c4fcf4f59697213c02e26af7cccd1ad71a27",
+    "answer_file": "books/book-4/chapters/4.3/Antwoorden.md",
+    "answer_file_sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f",
+    "chapter_student_pages": [
+      35
+    ],
+    "complete_book_pages": [
+      147
+    ]
+  },
+  "lesson_route": {
+    "start": "28–29",
+    "independent": "32–33",
+    "guided_or_alternative": "30–31",
+    "target": "34",
+    "target_subquestions": [
+      "34a",
+      "34b",
+      "34c",
+      "34d"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 9,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 11,
+      "Doeloefening": 14,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Haal de minimumprijsprocedure op en verander expliciet de loon- en arbeidseenheid. Bereken de loonsom uit daadwerkelijk betaalde werknemers en uren.",
+    "assessment_boundaries": "Het aanbodoverschot bestaat niet alleen uit mensen die hun baan verliezen. Geen overheidsaankoop van ongebruikte arbeid, geen algemene empirische voorspelling buiten de modelaannames."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.3.4",
+      "disposition": "retain",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "1ba18ca6308b0c4fdc4895b3dbe3ce1a90ccecad4ceb8c5f4c673515be8efed2"
+}

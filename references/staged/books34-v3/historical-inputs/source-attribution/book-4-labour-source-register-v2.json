@@ -1,0 +1,97 @@
+{
+  "consulted": "2026-09-08",
+  "uploaded_outlines": [
+    {
+      "name": "book-3-outline-v2.md",
+      "local_path": "sources/book-3-outline-v2.md",
+      "sha256": "4e558b63d8eb954de935ad366170f6373f533eae14f90633a89be0036c973217",
+      "source": "user attachment book-3-outline-v2(6).md",
+      "role": "Content sequence, proposed goals, target briefs, boundaries and retrieval requirements; newer than repository outlines."
+    },
+    {
+      "name": "book-4-outline-v2.md",
+      "local_path": "sources/book-4-outline-v2.md",
+      "sha256": "3bfb4350bb1f990a8ea559272263e8ef35e1b72bd0cbc86b59c9aa6ad4fc0899",
+      "source": "user attachment book-4-outline-v2(6).md",
+      "role": "Content sequence, proposed goals, target briefs, boundaries and retrieval requirements; newer than repository outlines."
+    }
+  ],
+  "repository_guidance": [
+    {
+      "repo": "4veco-platform",
+      "path": "RESEARCH_AGENT_MAP.md",
+      "blob_sha": "91778371a11cbe9839a4822c3989e90e7317850a",
+      "url": "https://github.com/meijer1973/4veco-platform/blob/main/RESEARCH_AGENT_MAP.md",
+      "access": "authenticated GitHub connector read, successful"
+    },
+    {
+      "repo": "4veco-lessen",
+      "path": "RESEARCH_AGENT_MAP.md",
+      "blob_sha": "d1e6b7fb1dadf5d2e1142e84aca34ccaab47c7f5",
+      "url": "https://github.com/meijer1973/4veco-lessen/blob/main/RESEARCH_AGENT_MAP.md",
+      "access": "authenticated GitHub connector read, successful"
+    },
+    {
+      "repo": "4veco-platform",
+      "path": "skills/econ-exercise-builder.md",
+      "blob_sha": "5504c8e8a325864978c76867b15b857c118df19d",
+      "url": "https://github.com/meijer1973/4veco-platform/blob/main/skills/econ-exercise-builder.md",
+      "access": "authenticated GitHub connector read, successful"
+    },
+    {
+      "repo": "4veco-platform",
+      "path": "skills/econ-didactiek.md",
+      "blob_sha": "5a38065e42754e0490e541002ba4465bf3dbeda8",
+      "url": "https://github.com/meijer1973/4veco-platform/blob/main/skills/econ-didactiek.md",
+      "access": "authenticated GitHub connector read, successful"
+    },
+    {
+      "repo": "4veco-platform",
+      "path": "skills/economic-graph.md",
+      "blob_sha": "938d5e61c46de0d60b8bdeaf0aced2572715c2d0",
+      "url": "https://github.com/meijer1973/4veco-platform/blob/main/skills/economic-graph.md",
+      "access": "authenticated GitHub connector read, successful"
+    },
+    {
+      "repo": "4veco-platform",
+      "path": "skills/econ-textbook-paragraph.md",
+      "blob_sha": "b48ff1f0d02748e6e4d1f98d6d892ac786562c3b",
+      "url": "https://github.com/meijer1973/4veco-platform/blob/main/skills/econ-textbook-paragraph.md",
+      "access": "authenticated GitHub connector read, successful"
+    }
+  ],
+  "primary_definition_checks": [
+    {
+      "organisation": "CBS",
+      "title": "Arbeidsdeelname; kerncijfers",
+      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85264NED",
+      "scope": "Definitions of employed, unemployed, labour force, population age range, gross/net participation and unemployment denominators; no data values reused."
+    },
+    {
+      "organisation": "CBS",
+      "title": "Arbeidsdeelname; kerncijfers",
+      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85224NED",
+      "scope": "Additional definition check."
+    },
+    {
+      "organisation": "CBS",
+      "title": "Arbeidsvolume",
+      "url": "https://www.cbs.nl/nl-nl/achtergrond/2005/47/arbeidsvolume",
+      "scope": "Labour volume versus persons and full-time equivalents."
+    },
+    {
+      "organisation": "CBS",
+      "title": "Arbeidsproductiviteit",
+      "url": "https://www.cbs.nl/nl-nl/onze-diensten/methoden/begrippen/arbeidsproductiviteit",
+      "scope": "Economy-wide value-added measure distinguished from the physical-output examples in this chapter."
+    },
+    {
+      "organisation": "Rijksoverheid",
+      "title": "Wat is een cao?",
+      "url": "https://www.rijksoverheid.nl/vraag-en-antwoord/arbeidsovereenkomst-en-cao/wat-is-een-cao",
+      "scope": "Institutional definition and parties to collective agreement; not legal advice or verification of current rates."
+    }
+  ],
+  "authorship_boundary": "All case names, quantities, wage rates, target exercises and numerical diagrams are newly authored teaching models. No official exam adaptation or independent target-authority approval is claimed. No repository was changed. The PDF page budget follows the user request (50), superseding the inherited 40-page assumption in the outline.",
+  "provenance_of_renderer": "CSS and general HTML/PDF helper structure adapted from Book 4 Chapter 2 created earlier in this chat; no earlier chapter lesson content used as a draft."
+}

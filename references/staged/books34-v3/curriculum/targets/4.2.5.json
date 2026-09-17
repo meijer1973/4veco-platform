@@ -1,0 +1,178 @@
+{
+  "id": "4.2.5",
+  "module": 4,
+  "chapter": 2,
+  "paragraph": 5,
+  "paragraph_title": "Positieve externe effecten",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.2.5",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "43",
+    "context": "Doeloefening Bron · Buurtcursus Een cursus geeft deelnemers eigen voordeel én helpt andere buurtbewoners. De bron waardeert uitsluitend dat bijkomende voordeel op € 10 per deelnemer. Vraag: Pc = 60 − 0,5Q; aanbod: Pp = 20 + 0,5Q. Q is deelnemers per maand van 0 tot 100; prijzen zijn euro per deelnemer. Er zijn veel aanbieders. De overheid betaalt aanbieders € 10 subsidie voor elke gebruikte cursusplaats. Andere omstandigheden blijven gelijk. Er zijn geen andere externe effecten, vaste kosten, financierings- of uitvoeringskosten. Opgave 43 · Eigen voordeel en voordeel voor anderen Gebruik de bron en de basisgrafiek. Figuur 28. De private vraag, maatschappelijke baten en oorspronkelijke aanbodlijn zijn gegeven. De subsidie is geen nieuwe externe baat.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"source\"><b>Bron · Buurtcursus</b><br/>Een cursus geeft deelnemers eigen voordeel én helpt andere buurtbewoners. De bron waardeert uitsluitend dat bijkomende voordeel op € 10 per deelnemer. Vraag: Pc = 60 − 0,5Q; aanbod: Pp = 20 + 0,5Q. Q is deelnemers per maand van 0 tot 100; prijzen zijn euro per deelnemer. Er zijn veel aanbieders. De overheid betaalt aanbieders € 10 subsidie voor elke gebruikte cursusplaats. Andere omstandigheden blijven gelijk. Er zijn geen andere externe effecten, vaste kosten, financierings- of uitvoeringskosten.</div>\n<div class=\"exercise target\" data-exercise=\"43\" id=\"opg43\"><p><b>Opgave 43 · Eigen voordeel en voordeel voor anderen</b></p><p>Gebruik de bron en de basisgrafiek.</p></div>\n<figure><img alt=\"Figuur 28. De private vraag, maatschappelijke baten en oorspronkelijke aanbodlijn zijn gegeven. De subsidie is geen nieuwe externe baat.\" src=\"books/book-4/chapters/4.2/_assets/425_target.svg\"/><figcaption>Figuur 28. De private vraag, maatschappelijke baten en oorspronkelijke aanbodlijn zijn gegeven. De subsidie is geen nieuwe externe baat.</figcaption></figure>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n<div class=\"source\"><b>Bron · Buurtcursus</b><br>Een cursus geeft deelnemers eigen voordeel én helpt andere buurtbewoners. De bron waardeert uitsluitend dat bijkomende voordeel op € 10 per deelnemer. Vraag: Pc = 60 − 0,5Q; aanbod: Pp = 20 + 0,5Q. Q is deelnemers per maand van 0 tot 100; prijzen zijn euro per deelnemer. Er zijn veel aanbieders. De overheid betaalt aanbieders € 10 subsidie voor elke gebruikte cursusplaats. Andere omstandigheden blijven gelijk. Er zijn geen andere externe effecten, vaste kosten, financierings- of uitvoeringskosten.</div>\n\n<div class=\"exercise target\" id=\"opg43\" data-exercise=\"43\"><p><b>Opgave 43 · Eigen voordeel en voordeel voor anderen</b></p><p>Gebruik de bron en de basisgrafiek.</p><p data-question=\"43a\"><b>a.</b> <span class=\"muted\">(2p)</span> Benoem het private en externe voordeel. Bereken de oorspronkelijke hoeveelheid en prijs.</p><p data-question=\"43b\"><b>b.</b> <span class=\"muted\">(3p)</span> Bereken na de subsidie Q, Pc, Pp en de overheidsuitgaven.</p><p data-question=\"43c\"><b>c.</b> <span class=\"muted\">(4p)</span> Bereken CS, PS en het maatschappelijk surplus vóór en na.</p><p data-question=\"43d\"><b>d.</b> <span class=\"muted\">(2p)</span> Bepaal de efficiënte hoeveelheid en arceer het oorspronkelijke welvaartsverlies.</p><p data-question=\"43e\"><b>e.</b> <span class=\"muted\">(2p)</span> Leg uit waarom dit anders uitpakt dan dezelfde subsidie zonder externe baten.</p></div>\n\n<figure><img src=\"_assets/425_target.svg\" alt=\"Figuur 28. De private vraag, maatschappelijke baten en oorspronkelijke aanbodlijn zijn gegeven. De subsidie is geen nieuwe externe baat.\"><figcaption>Figuur 28. De private vraag, maatschappelijke baten en oorspronkelijke aanbodlijn zijn gegeven. De subsidie is geen nieuwe externe baat.</figcaption></figure>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-4/chapters/4.2/_assets/425_target.svg",
+        "sha256": "36d4350c10c67eadeacf5234778b6d52cb6b734742f87628cb2249343b39b4d8"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 2,
+        "prompt": "Benoem het private en externe voordeel. Bereken de oorspronkelijke hoeveelheid en prijs.",
+        "observable_operation": "Benoem het private en externe voordeel. Bereken de oorspronkelijke hoeveelheid en prijs.",
+        "source_question_id": "43a"
+      },
+      {
+        "label": "b",
+        "points": 3,
+        "prompt": "Bereken na de subsidie Q, Pc, Pp en de overheidsuitgaven.",
+        "observable_operation": "Bereken na de subsidie Q, Pc, Pp en de overheidsuitgaven.",
+        "source_question_id": "43b"
+      },
+      {
+        "label": "c",
+        "points": 4,
+        "prompt": "Bereken CS, PS en het maatschappelijk surplus vóór en na.",
+        "observable_operation": "Bereken CS, PS en het maatschappelijk surplus vóór en na.",
+        "source_question_id": "43c"
+      },
+      {
+        "label": "d",
+        "points": 2,
+        "prompt": "Bepaal de efficiënte hoeveelheid en arceer het oorspronkelijke welvaartsverlies.",
+        "observable_operation": "Bepaal de efficiënte hoeveelheid en arceer het oorspronkelijke welvaartsverlies.",
+        "source_question_id": "43d"
+      },
+      {
+        "label": "e",
+        "points": 2,
+        "prompt": "Leg uit waarom dit anders uitpakt dan dezelfde subsidie zonder externe baten.",
+        "observable_operation": "Leg uit waarom dit anders uitpakt dan dezelfde subsidie zonder externe baten.",
+        "source_question_id": "43e"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. Het eigen voordeel van deelnemers staat in de vraag; het bijkomende onbetaalde voordeel voor andere buurtbewoners is extern. 60 − 0,5Q = 20 + 0,5Q → Q₀ = 40 en P₀ = € 40 per deelnemer.",
+    "b": "b. 20 + 0,5Q = 60 − 0,5Q + 10 → Q₁ = 50. Pc = 60 − 25 = € 35; Pp = 20 + 25 = € 45. Uitgaven = 10 × 50 = € 500 per maand.",
+    "c": "c. Voor: CS = PS = ½ × 40 × 20 = € 400; externe baten = 10 × 40 = € 400; maatschappelijk surplus = € 1.200. Na: CS = PS = ½ × 50 × 25 = € 625; uitgaven = € 500; externe baten = € 500; maatschappelijk surplus = 625 + 625 − 500 + 500 = € 1.250 per maand.",
+    "d": "d. Maatschappelijke baten per extra deelnemer = 70 − 0,5Q. Vergelijk met MK = 20 + 0,5Q: Qe = 50. De driehoek tussen maatschappelijke baten en MK van Q = 40 tot Q = 50 heeft basis 10 deelnemers en hoogte € 10; verlies = ½ × 10 × 10 = € 50 per maand.",
+    "e": "e. Zonder externe baten zou het maatschappelijk surplus van 800 naar 625 + 625 − 500 = € 750 dalen. Met het gegeven voordeel voor derden stijgt het juist van 1.200 naar 1.250. Niet de subsidie alleen, maar de volledige maatschappelijke rekening bepaalt de conclusie."
+  },
+  "answer_model_support_html": [],
+  "answer_figures": [],
+  "lesson_goals": [
+    "Je kunt private voordelen onderscheiden van voordelen voor derden.",
+    "Je kunt een subsidie-uitkomst en overheidsuitgaven berekenen.",
+    "Je kunt beoordelen hoe externe baten de welvaartsconclusie veranderen."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.2.5-a",
+      "description": "Benoem het private en externe voordeel. Bereken de oorspronkelijke hoeveelheid en prijs."
+    },
+    {
+      "local_operation_id": "4.2.5-b",
+      "description": "Bereken na de subsidie Q, Pc, Pp en de overheidsuitgaven."
+    },
+    {
+      "local_operation_id": "4.2.5-c",
+      "description": "Bereken CS, PS en het maatschappelijk surplus vóór en na."
+    },
+    {
+      "local_operation_id": "4.2.5-d",
+      "description": "Bepaal de efficiënte hoeveelheid en arceer het oorspronkelijke welvaartsverlies."
+    },
+    {
+      "local_operation_id": "4.2.5-e",
+      "description": "Leg uit waarom dit anders uitpakt dan dezelfde subsidie zonder externe baten."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Repeat §3.1.3’s subsidy wedge, quantity and government-expenditure calculation and Book 2 surplus reasoning."
+  ],
+  "new_skills_introduced": [
+    "Identify benefits to third parties and explain how a subsidy can improve an outcome with too little of the beneficial activity."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "Keep the benefit to the buyer separate from the benefit to others. State who receives the subsidy. Do not count a transfer twice or assume every subsidy is appropriately sized. The external-benefit interpretation is new teaching, not prerequisite recall.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.2.5",
+  "structural_retrieval_plan": "Repeat §3.1.3’s subsidy wedge, quantity and government-expenditure calculation and Book 2 surplus reasoning.",
+  "structural_scope_boundary": "Keep the benefit to the buyer separate from the benefit to others. State who receives the subsidy. Do not count a transfer twice or assume every subsidy is appropriately sized. The external-benefit interpretation is new teaching, not prerequisite recall.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.2/4.2.5 manuscript.md",
+    "student_manuscript_sha256": "cad4ff28fa6e0b6857f79db3c0a02c49aec4d5e37258986bed54c4fdcba91756",
+    "answer_file": "books/book-4/chapters/4.2/Antwoorden.md",
+    "answer_file_sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9",
+    "chapter_student_pages": [
+      45
+    ],
+    "complete_book_pages": [
+      97
+    ]
+  },
+  "lesson_route": {
+    "start": "37–38",
+    "independent": "41–42",
+    "guided_or_alternative": "39–40",
+    "target": "43",
+    "target_subquestions": [
+      "43a",
+      "43b",
+      "43c",
+      "43d",
+      "43e"
+    ],
+    "minutes": null,
+    "total_minutes": null,
+    "one_lesson_status": "open_existing_timing_conflict",
+    "instruction_focus": "Introduceer baten voor anderen en verbind ze met de bekende subsidie. Houd eigen voordeel en extern voordeel uit elkaar.",
+    "assessment_boundaries": "Tel uitgaven af en externe baten op; ze vallen alleen numeriek weg bij bijzondere gegeven bedragen. Behoud het oefencontrast met ongelijke subsidie en externe bate."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.2.5",
+      "disposition": "retain",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "603525d0338ec34eda1d82398485123c51a02e88c1d84b784cf85e21a6b349f4"
+}

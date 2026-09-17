@@ -1,0 +1,6 @@
+{
+  "record_files": 32,
+  "same_bytes": true,
+  "differences": [],
+  "method": "All 31 individual records plus combined module compared after independent clean-directory regeneration in the recorded environment."
+}

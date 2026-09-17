@@ -1,0 +1,182 @@
+{
+  "id": "4.2.6",
+  "module": 4,
+  "chapter": 2,
+  "paragraph": 6,
+  "paragraph_title": "Overheidsingrijpen bij marktfalen",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.2.6",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "52",
+    "context": "Doeloefening Bron A · Geluid in een wijk Een concurrerende dienstenmarkt heeft Pc = 50 − 0,5Q en Pp = 10 + 0,5Q. Q is diensten per dag; prijzen zijn euro per dienst. Elke dienst veroorzaakt € 10 externe schade. Plan H: producenten dragen € 10 per dienst af. Plan G: hoogstens 30 diensten per dag. Bij G krijgen de kopers met de hoogste betalingsbereidheid de diensten, geleverd door de aanbieders met de laagste kosten; toestemming wordt gratis toegewezen. Beide regels worden nageleefd. Bron B · Vergelijking per dag De tabel geeft de berekende surplusposten vóór uitvoering. Controle en uitvoering gebruiken bij H € 20 per dag aan middelen en bij G € 40. Er zijn geen andere kosten of baten. De raad kiest voorlopig het plan met het grootste maatschappelijk surplus na uitvoering. Post (€ per dag) | Plan H | Plan G\nCS | 225 | 225\nPS | 225 | 525\nOverheidsontvangsten | Bereken zelf | 0\nExterne schade | 300 | 300 Opgave 52 · Twee plannen voor hetzelfde probleem Gebruik de bronnen. Het criterium staat in bron B.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"source\"><b>Bron A · Geluid in een wijk</b><br/>Een concurrerende dienstenmarkt heeft Pc = 50 − 0,5Q en Pp = 10 + 0,5Q. Q is diensten per dag; prijzen zijn euro per dienst. Elke dienst veroorzaakt € 10 externe schade. Plan H: producenten dragen € 10 per dienst af. Plan G: hoogstens 30 diensten per dag. Bij G krijgen de kopers met de hoogste betalingsbereidheid de diensten, geleverd door de aanbieders met de laagste kosten; toestemming wordt gratis toegewezen. Beide regels worden nageleefd.</div>\n<div class=\"source\"><b>Bron B · Vergelijking per dag</b><br/>De tabel geeft de berekende surplusposten vóór uitvoering. Controle en uitvoering gebruiken bij H € 20 per dag aan middelen en bij G € 40. Er zijn geen andere kosten of baten. De raad kiest voorlopig het plan met het grootste maatschappelijk surplus na uitvoering.</div>\n<table>\n<thead>\n<tr>\n<th>Post (€ per dag)</th>\n<th style=\"text-align:right\">Plan H</th>\n<th style=\"text-align:right\">Plan G</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>CS</td>\n<td style=\"text-align:right\">225</td>\n<td style=\"text-align:right\">225</td>\n</tr>\n<tr>\n<td>PS</td>\n<td style=\"text-align:right\">225</td>\n<td style=\"text-align:right\">525</td>\n</tr>\n<tr>\n<td>Overheidsontvangsten</td>\n<td style=\"text-align:right\">Bereken zelf</td>\n<td style=\"text-align:right\">0</td>\n</tr>\n<tr>\n<td>Externe schade</td>\n<td style=\"text-align:right\">300</td>\n<td style=\"text-align:right\">300</td>\n</tr>\n</tbody>\n</table>\n<div class=\"exercise target\" data-exercise=\"52\" id=\"opg52\"><p><b>Opgave 52 · Twee plannen voor hetzelfde probleem</b></p><p>Gebruik de bronnen. Het criterium staat in bron B.</p></div>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n<div class=\"source\"><b>Bron A · Geluid in een wijk</b><br>Een concurrerende dienstenmarkt heeft Pc = 50 − 0,5Q en Pp = 10 + 0,5Q. Q is diensten per dag; prijzen zijn euro per dienst. Elke dienst veroorzaakt € 10 externe schade. Plan H: producenten dragen € 10 per dienst af. Plan G: hoogstens 30 diensten per dag. Bij G krijgen de kopers met de hoogste betalingsbereidheid de diensten, geleverd door de aanbieders met de laagste kosten; toestemming wordt gratis toegewezen. Beide regels worden nageleefd.</div>\n\n<div class=\"source\"><b>Bron B · Vergelijking per dag</b><br>De tabel geeft de berekende surplusposten vóór uitvoering. Controle en uitvoering gebruiken bij H € 20 per dag aan middelen en bij G € 40. Er zijn geen andere kosten of baten. De raad kiest voorlopig het plan met het grootste maatschappelijk surplus na uitvoering.</div>\n\n\n| Post (€ per dag) | Plan H | Plan G |\n|---|---:|---:|\n| CS | 225 | 225 |\n| PS | 225 | 525 |\n| Overheidsontvangsten | Bereken zelf | 0 |\n| Externe schade | 300 | 300 |\n<div class=\"exercise target\" id=\"opg52\" data-exercise=\"52\"><p><b>Opgave 52 · Twee plannen voor hetzelfde probleem</b></p><p>Gebruik de bronnen. Het criterium staat in bron B.</p><p data-question=\"52a\"><b>a.</b> <span class=\"muted\">(2p)</span> Benoem het marktfalen en leg kort uit hoe elk plan erop aangrijpt.</p><p data-question=\"52b\"><b>b.</b> <span class=\"muted\">(3p)</span> Bereken voor H Q, Pc, Pp en de overheidsontvangsten.</p><p data-question=\"52c\"><b>c.</b> <span class=\"muted\">(3p)</span> Bereken voor beide plannen het maatschappelijk surplus na uitvoering.</p><p data-question=\"52d\"><b>d.</b> <span class=\"muted\">(2p)</span> Adviseer een plan volgens het genoemde criterium. Noem één aanname die voor dit advies belangrijk is.</p><p data-question=\"52e\"><b>e.</b> <span class=\"muted\">(2p)</span> Waarom kan een producent toch voorkeur hebben voor G? Betekent dat dat de raad verkeerd rekent?</p></div>"
+      }
+    ],
+    "figures": [],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 2,
+        "prompt": "Benoem het marktfalen en leg kort uit hoe elk plan erop aangrijpt.",
+        "observable_operation": "Benoem het marktfalen en leg kort uit hoe elk plan erop aangrijpt.",
+        "source_question_id": "52a"
+      },
+      {
+        "label": "b",
+        "points": 3,
+        "prompt": "Bereken voor H Q, Pc, Pp en de overheidsontvangsten.",
+        "observable_operation": "Bereken voor H Q, Pc, Pp en de overheidsontvangsten.",
+        "source_question_id": "52b"
+      },
+      {
+        "label": "c",
+        "points": 3,
+        "prompt": "Bereken voor beide plannen het maatschappelijk surplus na uitvoering.",
+        "observable_operation": "Bereken voor beide plannen het maatschappelijk surplus na uitvoering.",
+        "source_question_id": "52c"
+      },
+      {
+        "label": "d",
+        "points": 2,
+        "prompt": "Adviseer een plan volgens het genoemde criterium. Noem één aanname die voor dit advies belangrijk is.",
+        "observable_operation": "Adviseer een plan volgens het genoemde criterium. Noem één aanname die voor dit advies belangrijk is.",
+        "source_question_id": "52d"
+      },
+      {
+        "label": "e",
+        "points": 2,
+        "prompt": "Waarom kan een producent toch voorkeur hebben voor G? Betekent dat dat de raad verkeerd rekent?",
+        "observable_operation": "Waarom kan een producent toch voorkeur hebben voor G? Betekent dat dat de raad verkeerd rekent?",
+        "source_question_id": "52e"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. Marktfalen: niet-vergoede geluidsschade aan derden. H maakt activiteit via de heffingswig minder aantrekkelijk; G begrenst de activiteit rechtstreeks. Beide beperken onder de bronvoorwaarden het aantal schadelijke diensten.",
+    "b": "b. 50 − 0,5Q = 10 + 0,5Q + 10 → Q = 30. Pc = € 35 en Pp = € 25. Ontvangsten = 10 × 30 = € 300 per dag.",
+    "c": "c. H: 225 + 225 + 300 − 300 − 20 = € 430 per dag. G: 225 + 525 + 0 − 300 − 40 = € 410 per dag.",
+    "d": "d. H levert volgens de gegevens € 20 per dag meer maatschappelijk surplus op. Dat advies veronderstelt bijvoorbeeld de gegeven naleving, efficiënte toewijzing of juiste schatting van uitvoeringskosten. Zonder die aanname kan de rangorde veranderen.",
+    "e": "e. PS is bij G € 525 en bij H € 225. De producenten krijgen bij de hoeveelheidgrens meer surplus, terwijl bij H € 300 naar de overheid gaat. Hun belang verschilt van het genoemde maatschappelijke criterium. Dat maakt de berekening niet onjuist."
+  },
+  "answer_model_support_html": [],
+  "answer_figures": [],
+  "lesson_goals": [
+    "Je kunt beleid koppelen aan een vastgesteld marktprobleem.",
+    "Je kunt twee voorstellen vergelijken met één criterium en een bekende berekening.",
+    "Je kunt efficiëntie, verdeling en uitvoeringsproblemen apart beoordelen."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.2.6-a",
+      "description": "Benoem het marktfalen en leg kort uit hoe elk plan erop aangrijpt."
+    },
+    {
+      "local_operation_id": "4.2.6-b",
+      "description": "Bereken voor H Q, Pc, Pp en de overheidsontvangsten."
+    },
+    {
+      "local_operation_id": "4.2.6-c",
+      "description": "Bereken voor beide plannen het maatschappelijk surplus na uitvoering."
+    },
+    {
+      "local_operation_id": "4.2.6-d",
+      "description": "Adviseer een plan volgens het genoemde criterium. Noem één aanname die voor dit advies belangrijk is."
+    },
+    {
+      "local_operation_id": "4.2.6-e",
+      "description": "Waarom kan een producent toch voorkeur hebben voor G? Betekent dat dat de raad verkeerd rekent?"
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Reuse taxes, subsidies, price restrictions and quantity restrictions, alongside monopoly and externality analysis."
+  ],
+  "new_skills_introduced": [
+    "Match a policy to the diagnosed failure, compare feasible alternatives and evaluate effects and limitations with evidence."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "Not a second full course on every instrument. A patent/competition-policy example can retrieve market power; avoid importing the later games, insurance or macro-policy curriculum. Separate efficiency from distribution and recognise implementation limits stated in the source.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.2.6",
+  "structural_retrieval_plan": "Reuse taxes, subsidies, price restrictions and quantity restrictions, alongside monopoly and externality analysis.",
+  "structural_scope_boundary": "Not a second full course on every instrument. A patent/competition-policy example can retrieve market power; avoid importing the later games, insurance or macro-policy curriculum. Separate efficiency from distribution and recognise implementation limits stated in the source.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.2/4.2.6 manuscript.md",
+    "student_manuscript_sha256": "a4bb4d6df9b917c1b6fad0543c1ead47c9bec2e6c8ef6ed8077afe11681aa534",
+    "answer_file": "books/book-4/chapters/4.2/Antwoorden.md",
+    "answer_file_sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9",
+    "chapter_student_pages": [
+      51
+    ],
+    "complete_book_pages": [
+      103
+    ]
+  },
+  "lesson_route": {
+    "start": "46–47",
+    "independent": "50–51",
+    "guided_or_alternative": "48–49",
+    "target": "52",
+    "target_subquestions": [
+      "52a",
+      "52b",
+      "52c",
+      "52d",
+      "52e"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 8,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 3,
+      "Zelfstandig": 11,
+      "Doeloefening": 15,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Beoordeel twee bekende instrumenten aan de hand van één expliciet criterium en de bron. Dit is niet een nieuwe behandeling van ieder instrument.",
+    "assessment_boundaries": "Uitvoeringskosten gebruiken middelen en zijn geen gewone overdracht. Een verdelingsvoorkeur van producenten is niet automatisch de maatschappelijke efficiëntie-uitkomst."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.2.6",
+      "disposition": "retain",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "31e1deee6f0e2e3981a4c988c014c20174b1427efe3a74297fd7249ea72defce"
+}

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380" role="img"><title>Sporthelmen in Elva</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#536777" stroke-width="1.5"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0,8 L8,0" stroke="#183247" stroke-opacity=".25" stroke-width="1"/></pattern></defs>
+<rect width="900" height="380" rx="10" fill="#f5f8fa"/>
+<text x="419.50000000" y="26.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">Sporthelmen in Elva</text>
+<text x="72.00000000" y="54.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#183247">P (€ per helm)</text>
+<defs><clipPath id="p0"><rect x="72" y="75" width="695" height="190"/></clipPath></defs>
+<line x1="72.00000000" y1="75.00000000" x2="72.00000000" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="72.00000000" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">0</text>
+<line x1="171.28571429" y1="75.00000000" x2="171.28571429" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="171.28571429" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">20</text>
+<line x1="270.57142857" y1="75.00000000" x2="270.57142857" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="270.57142857" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">40</text>
+<line x1="369.85714286" y1="75.00000000" x2="369.85714286" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="369.85714286" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">60</text>
+<line x1="469.14285714" y1="75.00000000" x2="469.14285714" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="469.14285714" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">80</text>
+<line x1="568.42857143" y1="75.00000000" x2="568.42857143" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="568.42857143" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">100</text>
+<line x1="667.71428571" y1="75.00000000" x2="667.71428571" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="667.71428571" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">120</text>
+<line x1="767.00000000" y1="75.00000000" x2="767.00000000" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="767.00000000" y="288.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">140</text>
+<line x1="72.00000000" y1="265.00000000" x2="767.00000000" y2="265.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="270.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">0</text>
+<line x1="72.00000000" y1="237.85714286" x2="767.00000000" y2="237.85714286" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="242.85714286" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">10</text>
+<line x1="72.00000000" y1="210.71428571" x2="767.00000000" y2="210.71428571" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="215.71428571" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">20</text>
+<line x1="72.00000000" y1="183.57142857" x2="767.00000000" y2="183.57142857" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="188.57142857" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">30</text>
+<line x1="72.00000000" y1="156.42857143" x2="767.00000000" y2="156.42857143" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="161.42857143" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">40</text>
+<line x1="72.00000000" y1="129.28571429" x2="767.00000000" y2="129.28571429" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="134.28571429" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">50</text>
+<line x1="72.00000000" y1="102.14285714" x2="767.00000000" y2="102.14285714" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="107.14285714" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">60</text>
+<line x1="72.00000000" y1="75.00000000" x2="767.00000000" y2="75.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="80.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">70</text>
+<line x1="72.00000000" y1="265.00000000" x2="775.00000000" y2="265.00000000" stroke="#183247" stroke-width="1.7" marker-end="url(#arr)"/>
+<line x1="72.00000000" y1="265.00000000" x2="72.00000000" y2="67.00000000" stroke="#183247" stroke-width="1.7" marker-end="url(#arr)"/>
+<text x="419.50000000" y="365.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">Q (helmen per week)</text>
+<polyline data-curve="V" data-panel="p0" points="72.00000000,75.00000000 767.00000000,265.00000000" fill="none" stroke="#146d9b" stroke-width="3"/>
+<text x="620.10000000" y="245.20000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#f5f8fa" stroke="#f5f8fa" stroke-width="4" stroke-linejoin="round">V</text>
+<text x="620.10000000" y="245.20000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#146d9b">V</text>
+<polyline data-curve="A" data-panel="p0" points="72.00000000,237.85714286 667.71428571,75.00000000" fill="none" stroke="#247d70" stroke-width="3"/>
+<text x="542.65714286" y="100.82857143" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#f5f8fa" stroke="#f5f8fa" stroke-width="4" stroke-linejoin="round">A</text>
+<text x="542.65714286" y="100.82857143" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#247d70">A</text>
+<line x1="72.00000000" y1="183.57142857" x2="767.00000000" y2="183.57142857" stroke="#667c8b" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="778.00000000" y="176.57142857" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#667c8b">Pw = 30</text>
+<line x1="270.57142857" y1="183.57142857" x2="270.57142857" y2="265.00000000" stroke="#667c8b" stroke-width="1.2" stroke-dasharray="4 4"/>
+<circle data-point="Qa = 40" data-panel="p0" cx="270.57142857" cy="183.57142857" r="4" fill="#183247"/>
+<text x="261.57142857" y="171.57142857" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="700" text-anchor="end" fill="#f5f8fa" stroke="#f5f8fa" stroke-width="4" stroke-linejoin="round">Qa = 40</text>
+<text x="261.57142857" y="171.57142857" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="700" text-anchor="end" fill="#183247">Qa = 40</text>
+<line x1="469.14285714" y1="183.57142857" x2="469.14285714" y2="265.00000000" stroke="#667c8b" stroke-width="1.2" stroke-dasharray="4 4"/>
+<circle data-point="Qv = 80" data-panel="p0" cx="469.14285714" cy="183.57142857" r="4" fill="#183247"/>
+<text x="478.14285714" y="171.57142857" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#f5f8fa" stroke="#f5f8fa" stroke-width="4" stroke-linejoin="round">Qv = 80</text>
+<text x="478.14285714" y="171.57142857" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#183247">Qv = 80</text>
+<line x1="270.57142857" y1="306.00000000" x2="270.57142857" y2="319.00000000" stroke="#667c8b" stroke-width="1.5"/>
+<line x1="469.14285714" y1="306.00000000" x2="469.14285714" y2="319.00000000" stroke="#667c8b" stroke-width="1.5"/>
+<line x1="270.57142857" y1="313.00000000" x2="469.14285714" y2="313.00000000" stroke="#667c8b" stroke-width="1.5" marker-end="url(#arr)" marker-start="url(#arr)"/>
+<text x="369.85714286" y="339.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#183247">import = 40</text>
+</svg>

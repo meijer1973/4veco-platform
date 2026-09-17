@@ -1,0 +1,208 @@
+{
+  "id": "4.1.5",
+  "module": 4,
+  "chapter": 1,
+  "paragraph": 5,
+  "paragraph_title": "Gemengde opgaven: concurrentie en monopolie",
+  "paragraph_kind": "gemengde_opgaven",
+  "introduces_new_theory": false,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.1.5",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "45",
+    "context": "Doeloefening · bronnen bij opgave 45 Bron A · KleurFix KleurFix verkoopt als enige een specifiek pigmentmengsel. Voor de beschreven periode heeft het bedrijf exclusief toegang tot een noodzakelijke grondstof. Er zijn binnen de afgebakende markt geen goede vervangers. Het bedrijf gebruikt een geel logo. Bron B · De monopolist Vraag: P = 32 − 0,20q. Kosten: TK = 0,10q² + 8q + 120. q is kg per week; P is euro per kg; TK is euro per week. De productiecapaciteit is 60 kg. De € 120 is deze week onvermijdbaar. Alle kg binnen een plan worden tegen dezelfde prijs verkocht. Figuur 21. De drie lijnen zijn gegeven. Markeer op de volgende pagina je gekozen hoeveelheids- en prijsroute in deze figuur. Bron C · Een afzonderlijke prijsnemer Een kleine leverancier verkoopt op een andere markt een standaardmengsel. Hij neemt P = € 18 per kg als gegeven. Ook hier geldt TK = 0,10q² + 8q + 120 en een capaciteit van 60 kg per week. Zijn producten zijn gelijkwaardig aan die van vele andere leveranciers. De € 120 blijft deze week ook zonder productie bestaan. B en C zijn afzonderlijke oefencases, niet twee beleidsvarianten van dezelfde markt. De kostenformule is bewust gelijk gehouden om de opbrengstroutes te vergelijken. De vragen staan op de tegenoverliggende pagina. Doeloefening Opgave 45 · KleurFix en een prijsnemer Gebruik bronnen A, B en C en figuur 21 op pagina 44. Controleer vóór je afrondt Past de afzet binnen de capaciteit? Staat de verkoopprijs op de juiste lijn? Heb je TO én TK gebruikt voor winst? Onderbouw je bronconclusie met een concreet gegeven?",
+    "context_html": "<div class=\"continuation\">Doeloefening · bronnen bij opgave 45</div>\n<div class=\"source\"><b>Bron A · KleurFix</b><br/>KleurFix verkoopt als enige een specifiek pigmentmengsel. Voor de beschreven periode heeft het bedrijf exclusief toegang tot een noodzakelijke grondstof. Er zijn binnen de afgebakende markt geen goede vervangers. Het bedrijf gebruikt een geel logo.</div>\n<div class=\"source\"><b>Bron B · De monopolist</b><br/>Vraag: P = 32 − 0,20q. Kosten: TK = 0,10q² + 8q + 120. q is kg per week; P is euro per kg; TK is euro per week. De productiecapaciteit is 60 kg. De € 120 is deze week onvermijdbaar. Alle kg binnen een plan worden tegen dezelfde prijs verkocht.</div>\n<figure><img alt=\"Figuur 21. De drie lijnen zijn gegeven. Markeer op de volgende pagina je gekozen hoeveelheids- en prijsroute in deze figuur.\" src=\"books/book-4/chapters/4.1/_assets/4.1.4_target.svg\"/><figcaption>Figuur 21. De drie lijnen zijn gegeven. Markeer op de volgende pagina je gekozen hoeveelheids- en prijsroute in deze figuur.</figcaption></figure>\n<div class=\"source\"><b>Bron C · Een afzonderlijke prijsnemer</b><br/>Een kleine leverancier verkoopt op een andere markt een standaardmengsel. Hij neemt P = € 18 per kg als gegeven. Ook hier geldt TK = 0,10q² + 8q + 120 en een capaciteit van 60 kg per week. Zijn producten zijn gelijkwaardig aan die van vele andere leveranciers. De € 120 blijft deze week ook zonder productie bestaan.</div>\n<p class=\"small\">B en C zijn afzonderlijke oefencases, niet twee beleidsvarianten van dezelfde markt. De kostenformule is bewust gelijk gehouden om de opbrengstroutes te vergelijken. De vragen staan op de tegenoverliggende pagina.</p>\n<h2>Doeloefening</h2>\n<div class=\"exercise target\" data-exercise=\"45\" id=\"opg45\"><p><b>Opgave 45 · KleurFix en een prijsnemer</b></p><p>Gebruik bronnen A, B en C en figuur 21 op pagina 44.</p></div>\n<div class=\"box\"><b>Controleer vóór je afrondt</b><br/>Past de afzet binnen de capaciteit? Staat de verkoopprijs op de juiste lijn? Heb je TO én TK gebruikt voor winst? Onderbouw je bronconclusie met een concreet gegeven?</div>\n<div class=\"writing-lines\"></div>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "<div class=\"continuation\">Doeloefening · bronnen bij opgave 45</div>\n<div class=\"source\"><b>Bron A · KleurFix</b><br>KleurFix verkoopt als enige een specifiek pigmentmengsel. Voor de beschreven periode heeft het bedrijf exclusief toegang tot een noodzakelijke grondstof. Er zijn binnen de afgebakende markt geen goede vervangers. Het bedrijf gebruikt een geel logo.</div>\n<div class=\"source\"><b>Bron B · De monopolist</b><br>Vraag: P = 32 − 0,20q. Kosten: TK = 0,10q² + 8q + 120. q is kg per week; P is euro per kg; TK is euro per week. De productiecapaciteit is 60 kg. De € 120 is deze week onvermijdbaar. Alle kg binnen een plan worden tegen dezelfde prijs verkocht.</div>\n<figure><img src=\"_assets/4.1.4_target.svg\" alt=\"Figuur 21. De drie lijnen zijn gegeven. Markeer op de volgende pagina je gekozen hoeveelheids- en prijsroute in deze figuur.\"><figcaption>Figuur 21. De drie lijnen zijn gegeven. Markeer op de volgende pagina je gekozen hoeveelheids- en prijsroute in deze figuur.</figcaption></figure>\n\n<div class=\"source\"><b>Bron C · Een afzonderlijke prijsnemer</b><br>Een kleine leverancier verkoopt op een andere markt een standaardmengsel. Hij neemt P = € 18 per kg als gegeven. Ook hier geldt TK = 0,10q² + 8q + 120 en een capaciteit van 60 kg per week. Zijn producten zijn gelijkwaardig aan die van vele andere leveranciers. De € 120 blijft deze week ook zonder productie bestaan.</div>\n<p class=\"small\">B en C zijn afzonderlijke oefencases, niet twee beleidsvarianten van dezelfde markt. De kostenformule is bewust gelijk gehouden om de opbrengstroutes te vergelijken. De vragen staan op de tegenoverliggende pagina.</p>\n\n## Doeloefening\n<div class=\"exercise target\" id=\"opg45\" data-exercise=\"45\"><p><b>Opgave 45 · KleurFix en een prijsnemer</b></p><p>Gebruik bronnen A, B en C en figuur 21 op pagina 44.</p><p data-question=\"45a\"><b>a.</b> <span class=\"muted\">(2p)</span> Noem het brongegeven dat de toetredingsbarrière verklaart. Welk genoemd detail heb je niet nodig voor de berekeningen?</p><p data-question=\"45b\"><b>b.</b> <span class=\"muted\">(3p)</span> Stel voor KleurFix TO, MO en MK op. Bereken de winstmaximale q en controleer het marginale verloop en de productiecapaciteit.</p><p data-question=\"45c\"><b>c.</b> <span class=\"muted\">(3p)</span> Bereken voor KleurFix de verkoopprijs en de totale winst. Laat zien dat niet produceren geen betere keuze voor deze week is.</p><p data-question=\"45d\"><b>d.</b> <span class=\"muted\">(2p)</span> Markeer in figuur 21 de gekozen q en P. Gebruik hulplijnen die duidelijk maken welke lijn je voor elk getal gebruikt.</p><p data-question=\"45e\"><b>e.</b> <span class=\"muted\">(3p)</span> Bereken voor de prijsnemer uit bron C de winstmaximale haalbare q en de totale winst. Leg uit waar zijn verkoopprijs vandaan komt.</p><p data-question=\"45f\"><b>f.</b> <span class=\"muted\">(2p)</span> Een leerling zegt: “Bij beide ondernemingen gebruik ik MO = MK, dus bij beide lees ik de prijs uit het snijpunt af.” Beoordeel. Gebruik beide berekende prijzen en het marginale bedrag van KleurFix.</p></div>\n<div class=\"box\"><b>Controleer vóór je afrondt</b><br>Past de afzet binnen de capaciteit? Staat de verkoopprijs op de juiste lijn? Heb je TO én TK gebruikt voor winst? Onderbouw je bronconclusie met een concreet gegeven?</div>\n\n<div class=\"writing-lines\"></div>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-4/chapters/4.1/_assets/4.1.4_target.svg",
+        "sha256": "a35a985f73da21de7d88e698422674565b09f3e0b1d4c87dce6761d4e5264ed9"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 2,
+        "prompt": "Noem het brongegeven dat de toetredingsbarrière verklaart. Welk genoemd detail heb je niet nodig voor de berekeningen?",
+        "observable_operation": "Noem het brongegeven dat de toetredingsbarrière verklaart. Welk genoemd detail heb je niet nodig voor de berekeningen?",
+        "source_question_id": "45a"
+      },
+      {
+        "label": "b",
+        "points": 3,
+        "prompt": "Stel voor KleurFix TO, MO en MK op. Bereken de winstmaximale q en controleer het marginale verloop en de productiecapaciteit.",
+        "observable_operation": "Stel voor KleurFix TO, MO en MK op. Bereken de winstmaximale q en controleer het marginale verloop en de productiecapaciteit.",
+        "source_question_id": "45b"
+      },
+      {
+        "label": "c",
+        "points": 3,
+        "prompt": "Bereken voor KleurFix de verkoopprijs en de totale winst. Laat zien dat niet produceren geen betere keuze voor deze week is.",
+        "observable_operation": "Bereken voor KleurFix de verkoopprijs en de totale winst. Laat zien dat niet produceren geen betere keuze voor deze week is.",
+        "source_question_id": "45c"
+      },
+      {
+        "label": "d",
+        "points": 2,
+        "prompt": "Markeer in figuur 21 de gekozen q en P. Gebruik hulplijnen die duidelijk maken welke lijn je voor elk getal gebruikt.",
+        "observable_operation": "Markeer in figuur 21 de gekozen q en P. Gebruik hulplijnen die duidelijk maken welke lijn je voor elk getal gebruikt.",
+        "source_question_id": "45d"
+      },
+      {
+        "label": "e",
+        "points": 3,
+        "prompt": "Bereken voor de prijsnemer uit bron C de winstmaximale haalbare q en de totale winst. Leg uit waar zijn verkoopprijs vandaan komt.",
+        "observable_operation": "Bereken voor de prijsnemer uit bron C de winstmaximale haalbare q en de totale winst. Leg uit waar zijn verkoopprijs vandaan komt.",
+        "source_question_id": "45e"
+      },
+      {
+        "label": "f",
+        "points": 2,
+        "prompt": "Een leerling zegt: “Bij beide ondernemingen gebruik ik MO = MK, dus bij beide lees ik de prijs uit het snijpunt af.” Beoordeel. Gebruik beide berekende prijzen en het marginale bedrag van KleurFix.",
+        "observable_operation": "Een leerling zegt: “Bij beide ondernemingen gebruik ik MO = MK, dus bij beide lees ik de prijs uit het snijpunt af.” Beoordeel. Gebruik beide berekende prijzen en het marginale bedrag van KleurFix.",
+        "source_question_id": "45f"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. De exclusieve toegang tot de noodzakelijke grondstof vormt de toetredingsbarrière. Het gele logo is niet nodig voor de berekeningen.",
+    "b": "b. TO = (32 − 0,20q) × q = 32q − 0,20q² ; MO = 32 − 0,40q ; MK = 0,20q + 8 . Los 32 − 0,40q = 0,20q + 8 op: 24 = 0,60q → q = 40 kg per week . De dalende MO kruist de stijgende MK van boven naar beneden; de winst stijgt vóór 40 en daalt erna. 40 past binnen de capaciteit van 60.",
+    "c": "c. P = 32 − 0,20 × 40 = € 24 per kg . TO = 24 × 40 = € 960 . TK = 0,10 × 40² + 8 × 40 + 120 = 160 + 320 + 120 = € 600 . Winst = € 360 per week . Bij q = 0 is de winst −€ 120, dus niet produceren is geen betere weekkeuze.",
+    "d": "d. Markeer q = 40 kg onder het MO/MK-snijpunt. Ga bij q = 40 naar de GO-lijn en lees daar P = € 24 af. Het snijpuntbedrag zelf is € 16.",
+    "e": "e. De prijsnemer ontvangt de gegeven marktprijs € 18. Daarom is MO = 18. MK = 0,20q + 8. Los 18 = 0,20q + 8 op: q = 50 kg per week , onder de capaciteit van 60. MK stijgt door MO, dus dit is een maximum. TO = 18 × 50 = € 900. TK = 0,10 × 50² + 8 × 50 + 120 = 250 + 400 + 120 = € 770. Winst = € 130 per week .",
+    "f": "f. De vergelijking MO = MK wordt bij beide gebruikt voor de hoeveelheid, maar de prijsroute verschilt. Bij de prijsnemer is P = GO = MO = € 18 . Bij KleurFix is MO = MK = € 16 , maar de verkoopprijs staat op GO en is € 24 . De leerling verwart de marginale opbrengst met de verkoopprijs."
+  },
+  "answer_model_support_html": [
+    "<figure><img alt=\"KleurFix: de marginale vergelijking kiest 40 kg; kopers betalen de prijs op GO.\" src=\"_assets/4.1.4_ans_35.svg\"/><figcaption>KleurFix: de marginale vergelijking kiest 40 kg; kopers betalen de prijs op GO.</figcaption></figure>"
+  ],
+  "answer_figures": [
+    {
+      "path": "books/book-4/chapters/4.1/_assets/4.1.4_ans_35.svg",
+      "sha256": "640c1dbceeab9cf34886c081c82c088f16cc9ff784f126c569c988f8893a5ffb"
+    }
+  ],
+  "lesson_goals": [
+    "Je kunt met brongegevens kiezen tussen een prijsnemer en een monopolist.",
+    "Je kunt de bijbehorende hoeveelheid, prijs en winst berekenen.",
+    "Je kunt een foutmethode herkennen en verbeteren.",
+    "Je kunt je conclusie beperken tot wat de gegevens ondersteunen."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.1.5-a",
+      "description": "Noem het brongegeven dat de toetredingsbarrière verklaart. Welk genoemd detail heb je niet nodig voor de berekeningen?"
+    },
+    {
+      "local_operation_id": "4.1.5-b",
+      "description": "Stel voor KleurFix TO, MO en MK op. Bereken de winstmaximale q en controleer het marginale verloop en de productiecapaciteit."
+    },
+    {
+      "local_operation_id": "4.1.5-c",
+      "description": "Bereken voor KleurFix de verkoopprijs en de totale winst. Laat zien dat niet produceren geen betere keuze voor deze week is."
+    },
+    {
+      "local_operation_id": "4.1.5-d",
+      "description": "Markeer in figuur 21 de gekozen q en P. Gebruik hulplijnen die duidelijk maken welke lijn je voor elk getal gebruikt."
+    },
+    {
+      "local_operation_id": "4.1.5-e",
+      "description": "Bereken voor de prijsnemer uit bron C de winstmaximale haalbare q en de totale winst. Leg uit waar zijn verkoopprijs vandaan komt."
+    },
+    {
+      "local_operation_id": "4.1.5-f",
+      "description": "Een leerling zegt: “Bij beide ondernemingen gebruik ik MO = MK, dus bij beide lees ik de prijs uit het snijpunt af.” Beoordeel. Gebruik beide berekende prijzen en het marginale bedrag van KleurFix."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Interleave cost, revenue, elasticity interpretation, break-even and marginal choice without adding new operations."
+  ],
+  "new_skills_introduced": [],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "No price discrimination, strategic game or monopoly-welfare target before those are taught. Consolidation is not an extra theory paragraph.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.1.5",
+  "structural_retrieval_plan": "Interleave cost, revenue, elasticity interpretation, break-even and marginal choice without adding new operations.",
+  "structural_scope_boundary": "No price discrimination, strategic game or monopoly-welfare target before those are taught. Consolidation is not an extra theory paragraph.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.1/4.1.5 manuscript.md",
+    "student_manuscript_sha256": "6acff35292cfbd0542a592e118e6bb850910b4fd12701b19e1b434774bb15302",
+    "answer_file": "books/book-4/chapters/4.1/Antwoorden.md",
+    "answer_file_sha256": "01a9294bd3ce947ceb5460d588cd3f7ffee5b9f0be3e4334558fde44096f8da1",
+    "chapter_student_pages": [
+      44,
+      45
+    ],
+    "complete_book_pages": [
+      48,
+      49
+    ]
+  },
+  "lesson_route": {
+    "start": "41 en 41A",
+    "independent": "42",
+    "guided_or_alternative": "43–44 en 46–48 als aanvullende selectie",
+    "target": "45",
+    "target_subquestions": [
+      "45a",
+      "45b",
+      "45c",
+      "45d",
+      "45e",
+      "45f"
+    ],
+    "minutes": {
+      "Start / ophalen": 8,
+      "Motivatie": 0,
+      "Instructie": 4,
+      "Uitgewerkt voorbeeld": 0,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 25,
+      "Feedback / afronding": 6
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "41A haalt langetermijnbetekenis op zonder de bestaande target uit te breiden. KleurFix en de prijsnemer blijven twee afzonderlijke markten.",
+    "assessment_boundaries": "Dezelfde vergelijking voor q betekent geen identieke prijsroute. Laat een leerling de gebruikte lijn benoemen; voeg geen prijsdiscriminatie of nieuwe welvaartsrekening toe."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.1.4",
+      "disposition": "renumber",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "941b2f782eed64bcbe2d15c355a48b64b74e9bfb7c71ad8c2f68827d42136b08"
+}

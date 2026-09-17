@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="195" viewBox="0 0 900 195" role="img"><title>De route door dit hoofdstuk</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#536777" stroke-width="1.5"/></marker><pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M-2,2 L2,-2 M0,9 L9,0 M7,11 L11,7" stroke="#183247" stroke-opacity=".22" stroke-width="1"/></pattern></defs>
+<rect width="900" height="195" rx="8" fill="#f5f8fa"/>
+<text x="450.0000" y="28.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">De route door dit hoofdstuk</text>
+<rect x="30.0" y="50" width="265.3333333333333" height="82" rx="5" fill="white" stroke="#146d9b" stroke-width="1.5"/>
+<text x="162.6667" y="80.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">Kenmerken</text>
+<text x="162.6667" y="104.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">Wie bepaalt de prijs?</text>
+<line x1="297.3333" y1="91.0000" x2="314.3333" y2="91.0000" stroke="#657986" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="317.3333333333333" y="50" width="265.3333333333333" height="82" rx="5" fill="white" stroke="#247d70" stroke-width="1.5"/>
+<text x="450.0000" y="80.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">Opbrengst</text>
+<text x="450.0000" y="104.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">Wat levert extra afzet op?</text>
+<line x1="584.6667" y1="91.0000" x2="601.6667" y2="91.0000" stroke="#657986" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="604.6666666666666" y="50" width="265.3333333333333" height="82" rx="5" fill="white" stroke="#ad681f" stroke-width="1.5"/>
+<text x="737.3333" y="80.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#183247">Winst</text>
+<text x="737.3333" y="104.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">Welke q en welke P?</text>
+</svg>

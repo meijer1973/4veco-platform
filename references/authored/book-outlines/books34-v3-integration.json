@@ -29,5 +29,18 @@
       "before_sha256": "8e30ecc51151bb479dfca0ca8dbe41122e4d548b4e6ace76663b25922e3c552f",
       "after_sha256": "0396784a621b8e098afc3de7dfac1d8f0b1881f1a449124cf7cb26740475f0a5"
     }
-  ]
+  ],
+  "immutable_transport": {
+    "repository": "meijer1973/4veco-platform",
+    "package_root": "references/staged/books34-v3",
+    "manifest_sha256": "516d07d2d33326fd4d12cecc0a3b4a60693ff4b43a6a671dab508a72390db315",
+    "file_count": 814,
+    "content_owner_repository": "meijer1973/4veco-lessen",
+    "primary_for_target_retrieval": true,
+    "accepted_lesson_states": [
+      "legacy-v2-projection",
+      "v3-projection"
+    ],
+    "active_curriculum_in_both_states": "book34-lesson-balance-v3-20260915"
+  }
 }

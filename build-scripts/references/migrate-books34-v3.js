@@ -6,6 +6,7 @@ const {execFileSync}=require('child_process');
 const ROOT=path.resolve(__dirname,'../..');
 const REVISION='book34-lesson-balance-v3-20260915', PREVIOUS='book34-chat-v2-20260914';
 const TASK='BOOK34-V3-INTEGRATION-20260917', PACKAGE='edities/books34-v3';
+const TRANSPORT='references/staged/books34-v3';
 const PLATFORM_BASE='67374a9808d226f1be7e8fa73eb104312c075267', LESSON_BASE='a0548ff9937dfb3b788b8b0ed53bbf9bd4fe1c07';
 const SNAPSHOT='archive/blueprints/book34-pre-v3-20260917', OUTLINES='references/authored/book-outlines';
 const REGISTRY='references/authored/course-target-exercises.json', V5='references/owned/course-blueprint-v5.md', V6='references/owned/course-blueprint-v6-three-year.md';
@@ -20,7 +21,7 @@ const text=b=>String(b).replace(/\r\n?/g,'\n');
 const json=v=>Buffer.from(JSON.stringify(v,null,2)+'\n');
 const before=(file,root=ROOT,base=PLATFORM_BASE)=>execFileSync('git',['show',base+':'+file],{cwd:root,maxBuffer:64*1024*1024});
 const canonical=v=>Array.isArray(v)?'['+v.map(canonical).join(',')+']':v&&typeof v==='object'?'{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+canonical(v[k])).join(',')+'}':JSON.stringify(v);
-const TARGET_LINK='https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/';
+const TARGET_LINK=`https://github.com/meijer1973/4veco-platform/blob/main/${TRANSPORT}/curriculum/targets/`;
 const projectOutline=bytes=>Buffer.from(String(bytes).replaceAll('](../curriculum/targets/',`](${TARGET_LINK}`));
 function parseOutline(bytes,book) {
  const original=Buffer.from(String(bytes).replaceAll(`](${TARGET_LINK}`,'](../curriculum/targets/'));
@@ -87,7 +88,7 @@ function plan(inputs,root=ROOT,lessons=path.resolve(root,'../4veco-lessen')) {
  for(const b of [3,4]){
   const file=`${OUTLINES}/book-${b}-outline.meta.json`,meta=JSON.parse(outputs.get(file));
   meta.current_sha256=sha(outputs.get(`${OUTLINES}/book-${b}-outline.md`));
-  meta.technical_projection='Only target-record hyperlinks resolve to the lesson repository; original outline bytes remain in the immutable received package.';
+  meta.technical_projection='Only target-record hyperlinks resolve to the immutable platform transport, available before the lesson projection is activated. Original outline bytes and lesson content ownership remain unchanged.';
   outputs.set(file,json(meta));
  }
  for(const f of ['paragraph-migration-v2-to-v3.csv','book34-v3-decision-and-migration.md'])outputs.set(`${OUTLINES}/${f}`,read('outlines/'+f));
@@ -107,6 +108,11 @@ function plan(inputs,root=ROOT,lessons=path.resolve(root,'../4veco-lessen')) {
  lessonOutputs.set('archive/relocations.json',before('archive/relocations.json',lessons,LESSON_BASE));
  outputs.set(`${SNAPSHOT}/snapshot-manifest.json`,json({schema_version:1,task:TASK,files:inventory}));
  outputs.set(`${OUTLINES}/books34-v3-integration.json`,json({schema_version:1,task:TASK,revision:REVISION,delivery_id:manifest.delivery_id,platform_base:PLATFORM_BASE,lesson_base:LESSON_BASE,package_root:PACKAGE,received_zip_sha256:ZIP_SHA,manifest_sha256:MANIFEST_SHA,file_count:814,registry_input_sha256:sha(old),book12_records_sha256:sha(canonical(registry.exercises.filter(r=>r.module<3))),integration_status:'prepared_in_pr',target_approval:'not_conferred',authority_source_transitions:[V5,V6,REGISTRY].map(f=>({path:f,before_sha256:sha(text(before(f,root))),after_sha256:sha(text(outputs.get(f)))}))}));
+ const evidencePath=`${OUTLINES}/books34-v3-integration.json`,evidence=JSON.parse(outputs.get(evidencePath));
+ evidence.immutable_transport={repository:'meijer1973/4veco-platform',package_root:TRANSPORT,manifest_sha256:MANIFEST_SHA,file_count:814,
+  content_owner_repository:'meijer1973/4veco-lessen',primary_for_target_retrieval:true,
+  accepted_lesson_states:['legacy-v2-projection','v3-projection'],active_curriculum_in_both_states:REVISION};
+ outputs.set(evidencePath,json(evidence));
  return {outputs,lessonOutputs,rows};
 }
 function apply(outputs,root,base) {
@@ -116,4 +122,4 @@ function apply(outputs,root,base) {
  }fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,b);}
 }
 if(require.main===module){const args=process.argv.slice(2),i=args.indexOf('--inputs');if(i<0)throw new Error('Required --inputs <package> [--apply]');const p=plan(path.resolve(args[i+1]));if(args.includes('--apply')){apply(p.outputs,ROOT,PLATFORM_BASE);apply(p.lessonOutputs,path.resolve(ROOT,'../4veco-lessen'),LESSON_BASE);}console.log(JSON.stringify({task:TASK,platform_files:p.outputs.size,lesson_files:p.lessonOutputs.size,paragraphs:p.rows.length,applied:args.includes('--apply')}));}
-module.exports={ROOT,REVISION,PREVIOUS,TASK,PACKAGE,PLATFORM_BASE,LESSON_BASE,SNAPSHOT,OUTLINES,REGISTRY,V5,V6,REVIEW,MANIFEST_SHA,ZIP_SHA,HASHES,COUNTS,CHAPTERS,sha,text,json,canonical,before,parseOutline,prepareRegistry,buildV5,buildV6,plan};
+module.exports={ROOT,REVISION,PREVIOUS,TASK,PACKAGE,TRANSPORT,PLATFORM_BASE,LESSON_BASE,SNAPSHOT,OUTLINES,REGISTRY,V5,V6,REVIEW,MANIFEST_SHA,ZIP_SHA,HASHES,COUNTS,CHAPTERS,sha,text,json,canonical,before,parseOutline,prepareRegistry,buildV5,buildV6,plan};

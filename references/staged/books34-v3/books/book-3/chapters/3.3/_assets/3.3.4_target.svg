@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="390" viewBox="0 0 900 390" role="img"><title>Regenjassen in Nerin</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#536777" stroke-width="1.5"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0,8 L8,0" stroke="#183247" stroke-opacity=".25" stroke-width="1"/></pattern></defs>
+<rect width="900" height="390" rx="10" fill="#f5f8fa"/>
+<text x="419.50000000" y="26.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">Regenjassen in Nerin</text>
+<text x="72.00000000" y="54.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#183247">P (€ per jas)</text>
+<defs><clipPath id="p0"><rect x="72" y="75" width="695" height="200"/></clipPath></defs>
+<line x1="72.00000000" y1="75.00000000" x2="72.00000000" y2="275.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="72.00000000" y="298.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">0</text>
+<line x1="158.87500000" y1="75.00000000" x2="158.87500000" y2="275.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="158.87500000" y="298.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">20</text>
+<line x1="245.75000000" y1="75.00000000" x2="245.75000000" y2="275.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="245.75000000" y="298.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">40</text>
+<line x1="332.62500000" y1="75.00000000" x2="332.62500000" y2="275.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="332.62500000" y="298.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">60</text>
+<line x1="419.50000000" y1="75.00000000" x2="419.50000000" y2="275.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="419.50000000" y="298.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">80</text>
+<line x1="506.37500000" y1="75.00000000" x2="506.37500000" y2="275.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="506.37500000" y="298.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">100</text>
+<line x1="593.25000000" y1="75.00000000" x2="593.25000000" y2="275.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="593.25000000" y="298.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">120</text>
+<line x1="680.12500000" y1="75.00000000" x2="680.12500000" y2="275.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="680.12500000" y="298.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">140</text>
+<line x1="767.00000000" y1="75.00000000" x2="767.00000000" y2="275.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="767.00000000" y="298.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">160</text>
+<line x1="72.00000000" y1="275.00000000" x2="767.00000000" y2="275.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="280.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">0</text>
+<line x1="72.00000000" y1="250.00000000" x2="767.00000000" y2="250.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="255.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">5</text>
+<line x1="72.00000000" y1="225.00000000" x2="767.00000000" y2="225.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="230.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">10</text>
+<line x1="72.00000000" y1="200.00000000" x2="767.00000000" y2="200.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="205.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">15</text>
+<line x1="72.00000000" y1="175.00000000" x2="767.00000000" y2="175.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="180.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">20</text>
+<line x1="72.00000000" y1="150.00000000" x2="767.00000000" y2="150.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="155.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">25</text>
+<line x1="72.00000000" y1="125.00000000" x2="767.00000000" y2="125.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="130.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">30</text>
+<line x1="72.00000000" y1="100.00000000" x2="767.00000000" y2="100.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="105.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">35</text>
+<line x1="72.00000000" y1="75.00000000" x2="767.00000000" y2="75.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="80.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">40</text>
+<line x1="72.00000000" y1="275.00000000" x2="775.00000000" y2="275.00000000" stroke="#183247" stroke-width="1.7" marker-end="url(#arr)"/>
+<line x1="72.00000000" y1="275.00000000" x2="72.00000000" y2="67.00000000" stroke="#183247" stroke-width="1.7" marker-end="url(#arr)"/>
+<text x="419.50000000" y="375.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">Q (jassen per week)</text>
+<polyline data-curve="V" data-panel="p0" points="72.00000000,75.00000000 767.00000000,275.00000000" fill="none" stroke="#146d9b" stroke-width="3"/>
+<text x="620.10000000" y="253.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#f5f8fa" stroke="#f5f8fa" stroke-width="4" stroke-linejoin="round">V</text>
+<text x="620.10000000" y="253.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#146d9b">V</text>
+<polyline data-curve="A" data-panel="p0" points="72.00000000,275.00000000 767.00000000,75.00000000" fill="none" stroke="#247d70" stroke-width="3"/>
+<text x="620.10000000" y="109.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#f5f8fa" stroke="#f5f8fa" stroke-width="4" stroke-linejoin="round">A</text>
+<text x="620.10000000" y="109.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#247d70">A</text>
+<line x1="72.00000000" y1="225.00000000" x2="767.00000000" y2="225.00000000" stroke="#667c8b" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="778.00000000" y="238.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#667c8b">Pw = 10</text>
+<line x1="72.00000000" y1="200.00000000" x2="767.00000000" y2="200.00000000" stroke="#ad681f" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="778.00000000" y="192.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#ad681f">Pw + t = 15</text>
+</svg>

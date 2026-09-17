@@ -1,0 +1,42 @@
+{
+  "platform": "Linux encoding simulation, not a Windows build",
+  "locale": "C",
+  "python_utf8": "0",
+  "record_files_compared": 32,
+  "record_bytes_unchanged": true,
+  "results": [
+    {
+      "command": [
+        "python",
+        "-c",
+        "import locale,sys;print(locale.getencoding());print(sys.flags.utf8_mode)"
+      ],
+      "returncode": 0,
+      "stdout": "ANSI_X3.4-1968\n0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "build/records.py"
+      ],
+      "returncode": 0,
+      "stdout": "Generated 31 populated candidates; 156 target subquestions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_actual_derivative_dataset (test_package_repairs.ContextTests.test_actual_derivative_dataset) ... ok\ntest_actual_population_dataset (test_package_repairs.ContextTests.test_actual_population_dataset) ... ok\ntest_consumer_all31_without_manuscript_fallback (test_package_repairs.ContextTests.test_consumer_all31_without_manuscript_fallback) ... ok\ntest_consumer_rejects_bad_asset_hash (test_package_repairs.ContextTests.test_consumer_rejects_bad_asset_hash) ... ok\ntest_consumer_rejects_lost_figure (test_package_repairs.ContextTests.test_consumer_rejects_lost_figure) ... ok\ntest_context_inside_exercise_survives (test_package_repairs.ContextTests.test_context_inside_exercise_survives) ... ok\ntest_external_source_survives (test_package_repairs.ContextTests.test_external_source_survives) ... ok\ntest_nested_original_paragraph_keeps_table_not_questions (test_package_repairs.ContextTests.test_nested_original_paragraph_keeps_table_not_questions) ... ok\ntest_table_cells_and_formula_preserved (test_package_repairs.ContextTests.test_table_cells_and_formula_preserved) ... ok\ntest_unattributed_subquestion_removed (test_package_repairs.ContextTests.test_unattributed_subquestion_removed) ... ok\ntest_five_titles_match_current_target (test_package_repairs.FigureTests.test_five_titles_match_current_target) ... ok\ntest_old_numbers_fail_same_rule (test_package_repairs.FigureTests.test_old_numbers_fail_same_rule) ... ok\ntest_canonical_refs_and_concrete_asset_root (test_package_repairs.RegistryTests.test_canonical_refs_and_concrete_asset_root) ... ok\ntest_counts_and_collision_titles (test_package_repairs.RegistryTests.test_counts_and_collision_titles) ... ok\ntest_preserves_all24_and_does_not_mutate_input (test_package_repairs.RegistryTests.test_preserves_all24_and_does_not_mutate_input) ... ok\ntest_rejects_blank_placeholder (test_package_repairs.RegistryTests.test_rejects_blank_placeholder) ... ok\ntest_rejects_duplicate_candidate (test_package_repairs.RegistryTests.test_rejects_duplicate_candidate) ... ok\ntest_rejects_lost_preserved_record (test_package_repairs.RegistryTests.test_rejects_lost_preserved_record) ... ok\ntest_rejects_noncanonical_source_ref (test_package_repairs.RegistryTests.test_rejects_noncanonical_source_ref) ... ok\ntest_rejects_unjustified_final_status (test_package_repairs.RegistryTests.test_rejects_unjustified_final_status) ... ok\ntest_rejects_unknown_revision (test_package_repairs.RegistryTests.test_rejects_unknown_revision) ... ok\ntest_rejects_unsafe_path_roots (test_package_repairs.RegistryTests.test_rejects_unsafe_path_roots) ... ok\ntest_same_revision_not_approval_promotion (test_package_repairs.RegistryTests.test_same_revision_not_approval_promotion) ... ok\ntest_top_and_record_revisions_agree (test_package_repairs.RegistryTests.test_top_and_record_revisions_agree) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 0.169s\n\nOK\n"
+    }
+  ]
+}

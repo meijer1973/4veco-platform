@@ -1,0 +1,169 @@
+{
+  "id": "4.3.1",
+  "module": 4,
+  "chapter": 3,
+  "paragraph": 1,
+  "paragraph_title": "Arbeidsvraag en arbeidsproductiviteit",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.3.1",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "7",
+    "context": "Doeloefening Opgave 7 · FrameWerk groeit FrameWerk produceert fietsframes voor export. De tabel beschrijft het volledige productieplan. Grootheid | Oude week | Nieuwe week\nProductie (frames) | 2.400 | 3.300\nArbeidsuren | 600 | te berekenen\nProductiviteit (frames/uur) | te berekenen | 5,5\nVolledige uurkosten | € 24 | € 26,40 Los van dit rekenplan beoordeel je bij d twee afzonderlijke veranderingen. Er worden geen huidige wettelijke loonbedragen gebruikt. Wat lever je in? Berekeningen met eenheden en twee afzonderlijke verklaringen voor de arbeidsvraag.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"exercise target\" data-exercise=\"7\" id=\"opg7\">\n<p><b>Opgave 7 · FrameWerk groeit</b></p><p>FrameWerk produceert fietsframes voor export. De tabel beschrijft het volledige productieplan.<table><thead><tr><th>Grootheid</th><th>Oude week</th><th>Nieuwe week</th></tr></thead><tbody><tr><td>Productie (frames)</td><td>2.400</td><td>3.300</td></tr><tr><td>Arbeidsuren</td><td>600</td><td>te berekenen</td></tr><tr><td>Productiviteit (frames/uur)</td><td>te berekenen</td><td>5,5</td></tr><tr><td>Volledige uurkosten</td><td>€ 24</td><td>€ 26,40</td></tr></tbody></table>\n<p>Los van dit rekenplan beoordeel je bij d twee afzonderlijke veranderingen. Er worden geen huidige wettelijke loonbedragen gebruikt.</p></p>\n</div>\n<div class=\"box summary\"><b>Wat lever je in?</b><br/>Berekeningen met eenheden en twee afzonderlijke verklaringen voor de arbeidsvraag.</div>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n<div class=\"exercise target\" id=\"opg7\" data-exercise=\"7\"><p><b>Opgave 7 · FrameWerk groeit</b></p><p>FrameWerk produceert fietsframes voor export. De tabel beschrijft het volledige productieplan.<table><thead><tr><th>Grootheid</th><th>Oude week</th><th>Nieuwe week</th></tr></thead><tbody><tr><td>Productie (frames)</td><td>2.400</td><td>3.300</td></tr><tr><td>Arbeidsuren</td><td>600</td><td>te berekenen</td></tr><tr><td>Productiviteit (frames/uur)</td><td>te berekenen</td><td>5,5</td></tr><tr><td>Volledige uurkosten</td><td>€ 24</td><td>€ 26,40</td></tr></tbody></table>\n\nLos van dit rekenplan beoordeel je bij d twee afzonderlijke veranderingen. Er worden geen huidige wettelijke loonbedragen gebruikt.</p><p data-question=\"7a\"><b>a.</b> <span class=\"muted\">(3p)</span> Bereken de oorspronkelijke arbeidsproductiviteit en de benodigde arbeidsuren in de nieuwe week.</p><p data-question=\"7b\"><b>b.</b> <span class=\"muted\">(2p)</span> Bereken de loonkosten per frame in beide weken.</p><p data-question=\"7c\"><b>c.</b> <span class=\"muted\">(2p)</span> De directeur zegt: “Een hogere productiviteit betekent altijd minder arbeidsuren.” Beoordeel dit met de tabel.</p><p data-question=\"7d\"><b>d.</b> <span class=\"muted\">(3p)</span> Benoem en verklaar de verandering van de arbeidsvraag bij: (1) alleen een hoger uurloon en (2) alleen extra exportorders bij gelijk loon en gelijke techniek.</p></div>\n\n<div class=\"box summary\"><b>Wat lever je in?</b><br>Berekeningen met eenheden en twee afzonderlijke verklaringen voor de arbeidsvraag.</div>"
+      }
+    ],
+    "figures": [],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 3,
+        "prompt": "Bereken de oorspronkelijke arbeidsproductiviteit en de benodigde arbeidsuren in de nieuwe week.",
+        "observable_operation": "Bereken de oorspronkelijke arbeidsproductiviteit en de benodigde arbeidsuren in de nieuwe week.",
+        "source_question_id": "7a"
+      },
+      {
+        "label": "b",
+        "points": 2,
+        "prompt": "Bereken de loonkosten per frame in beide weken.",
+        "observable_operation": "Bereken de loonkosten per frame in beide weken.",
+        "source_question_id": "7b"
+      },
+      {
+        "label": "c",
+        "points": 2,
+        "prompt": "De directeur zegt: “Een hogere productiviteit betekent altijd minder arbeidsuren.” Beoordeel dit met de tabel.",
+        "observable_operation": "De directeur zegt: “Een hogere productiviteit betekent altijd minder arbeidsuren.” Beoordeel dit met de tabel.",
+        "source_question_id": "7c"
+      },
+      {
+        "label": "d",
+        "points": 3,
+        "prompt": "Benoem en verklaar de verandering van de arbeidsvraag bij: (1) alleen een hoger uurloon en (2) alleen extra exportorders bij gelijk loon en gelijke techniek.",
+        "observable_operation": "Benoem en verklaar de verandering van de arbeidsvraag bij: (1) alleen een hoger uurloon en (2) alleen extra exportorders bij gelijk loon en gelijke techniek.",
+        "source_question_id": "7d"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. Oude productiviteit = 2.400 / 600 = 4 frames per uur . Nieuwe uren = 3.300 / 5,5 = 600 uur per week . Waarom: Productie en productiviteit stijgen beide met 37,5%; de benodigde uren blijven gelijk.",
+    "b": "b. Oud: € 24 / 4 = € 6 per frame . Nieuw: € 26,40 / 5,5 = € 4,80 per frame . Waarom: Het hogere uurbedrag wordt over meer frames verdeeld.",
+    "c": "c. Onjuist. In dit plan stijgt de productiviteit, maar blijven 600 arbeidsuren nodig doordat de productie eveneens stijgt. Waarom: Arbeidsinzet hangt af van productie én productiviteit.",
+    "d": "d. (1) Een beweging langs de vraaglijn naar minder arbeid. (2) Een verschuiving naar rechts: bij hetzelfde loon is meer arbeid nodig voor de extra orders. Waarom: De twee verklaringen houden verschillende factoren constant."
+  },
+  "answer_model_support_html": [],
+  "answer_figures": [],
+  "lesson_goals": [
+    "Je kunt werkgevers en werknemers op de arbeidsmarkt onderscheiden.",
+    "Je kunt arbeidsproductiviteit, benodigde arbeidsuren en loonkosten per product berekenen.",
+    "Je kunt een loonverandering onderscheiden van een verandering in de arbeidsvraag."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.3.1-a",
+      "description": "Bereken de oorspronkelijke arbeidsproductiviteit en de benodigde arbeidsuren in de nieuwe week."
+    },
+    {
+      "local_operation_id": "4.3.1-b",
+      "description": "Bereken de loonkosten per frame in beide weken."
+    },
+    {
+      "local_operation_id": "4.3.1-c",
+      "description": "De directeur zegt: “Een hogere productiviteit betekent altijd minder arbeidsuren.” Beoordeel dit met de tabel."
+    },
+    {
+      "local_operation_id": "4.3.1-d",
+      "description": "Benoem en verklaar de verandering van de arbeidsvraag bij: (1) alleen een hoger uurloon en (2) alleen extra exportorders bij gelijk loon en gelijke techniek."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Retrieve demand shifts, average-cost reasoning, ratios and percentages. Re-label price as wage and show that employers are the buyers of labour."
+  ],
+  "new_skills_introduced": [
+    "Explain why employers demand labour, interpret changes in that demand, and relate output, labour input, productivity and labour cost per unit."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "Keep hours, persons and full-time equivalents distinct. Do not imply productivity growth always reduces total employment; state output and other conditions. No formal marginal-revenue-product optimisation unless separately justified and taught. This is the first formal home of the productivity and unit-labour-cost calculations; revisit a qualitative competitiveness claim from §3.3.1 only after teaching the needed calculation here.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.3.1",
+  "structural_retrieval_plan": "Retrieve demand shifts, average-cost reasoning, ratios and percentages. Re-label price as wage and show that employers are the buyers of labour.",
+  "structural_scope_boundary": "Keep hours, persons and full-time equivalents distinct. Do not imply productivity growth always reduces total employment; state output and other conditions. No formal marginal-revenue-product optimisation unless separately justified and taught. This is the first formal home of the productivity and unit-labour-cost calculations; revisit a qualitative competitiveness claim from §3.3.1 only after teaching the needed calculation here.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.3/4.3.1 manuscript.md",
+    "student_manuscript_sha256": "5f6801e16cc1c2bc34d1cc687c503a68004f889c338d0708ad8383342acc94f5",
+    "answer_file": "books/book-4/chapters/4.3/Antwoorden.md",
+    "answer_file_sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f",
+    "chapter_student_pages": [
+      10
+    ],
+    "complete_book_pages": [
+      122
+    ]
+  },
+  "lesson_route": {
+    "start": "1–2",
+    "independent": "5–6",
+    "guided_or_alternative": "3–4",
+    "target": "7",
+    "target_subquestions": [
+      "7a",
+      "7b",
+      "7c",
+      "7d"
+    ],
+    "minutes": {
+      "Start / ophalen": 5,
+      "Motivatie": 2,
+      "Instructie": 10,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 11,
+      "Doeloefening": 14,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Maak de rolwisseling zichtbaar: werkgevers vragen arbeid, huishoudens leveren die. Gebruik eerst uren en dezelfde tijdseenheid bij output en productiviteit.",
+    "assessment_boundaries": "Fte is niet hetzelfde als personen. Hogere productiviteit bij gelijkblijvende productie verlaagt benodigde uren; bij meer orders kan de arbeidsinzet toch groeien."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.3.1",
+      "disposition": "retain",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "e952d70b517726e8582061fabd05088e949ae87ece7525451f9bb6f75971accc"
+}

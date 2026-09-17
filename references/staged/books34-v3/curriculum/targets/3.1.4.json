@@ -1,0 +1,194 @@
+{
+  "id": "3.1.4",
+  "module": 3,
+  "chapter": 1,
+  "paragraph": 4,
+  "paragraph_title": "Maximumprijs",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "3.1.4",
+    "edition": "books-3-v3",
+    "outline": "references/authored/book-outlines/book-3-outline.md",
+    "package_outline": "outlines/book-3-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "34",
+    "context": "Doeloefening Opgave 34 · Tenten voor een weekend Verschillende bedrijven verhuren dezelfde soort tent. Vraag P = 18 − 0,10Q; aanbod P = 6 + 0,10Q. P is de huur in euro per tent voor één weekend; Q is tenten per weekend. Er komt een maximumprijs van € 10. Er is geen extra aanvoer. Alle aangeboden tenten worden verhuurd, aan de vragers met de hoogste betalingsbereidheid. Figuur 4. Basisgrafiek bij de doeloefening. Er is hier geen belasting- of subsidiewig.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"exercise target\" id=\"opg34\"><p><b>Opgave 34 · Tenten voor een weekend</b></p><p>Verschillende bedrijven verhuren dezelfde soort tent. Vraag P = 18 − 0,10Q; aanbod P = 6 + 0,10Q. P is de huur in euro per tent voor één weekend; Q is tenten per weekend. Er komt een maximumprijs van € 10. Er is geen extra aanvoer. Alle aangeboden tenten worden verhuurd, aan de vragers met de hoogste betalingsbereidheid.</p></div>\n<figure><img alt=\"Basisgrafiek bij de doeloefening. Er is hier geen belasting- of subsidiewig.\" src=\"books/book-3/chapters/3.1/_assets/3.1.4_target.svg\"/><figcaption>Figuur 4. Basisgrafiek bij de doeloefening. Er is hier geen belasting- of subsidiewig.</figcaption></figure>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n<div class=\"exercise target\" id=\"opg34\"><p><b>Opgave 34 · Tenten voor een weekend</b></p><p>Verschillende bedrijven verhuren dezelfde soort tent. Vraag P = 18 − 0,10Q; aanbod P = 6 + 0,10Q. P is de huur in euro per tent voor één weekend; Q is tenten per weekend. Er komt een maximumprijs van € 10. Er is geen extra aanvoer. Alle aangeboden tenten worden verhuurd, aan de vragers met de hoogste betalingsbereidheid.</p><p><b>a.</b> Bereken de vrije evenwichtsprijs en -hoeveelheid. Leg uit of de maximumprijs bindt.</p><p><b>b.</b> Bereken de gevraagde en aangeboden hoeveelheid, het werkelijke aantal verhuurde tenten en het tekort.</p><p><b>c.</b> Teken de maximumprijs in de basisgrafiek. Markeer Qv, Qa en het werkelijke aantal verhuringen. Geef het tekort aan.</p><p><b>d.</b> Een huurder zegt: “De lagere huur is goed voor iedereen die voor € 10 een tent wil huren.” Beoordeel met de uitkomsten en de toewijzingsregel.</p><p><b>e.</b> Stel dat de maximumprijs € 14 is in plaats van € 10. Geef dan de werkelijke huur en het aantal verhuringen. Licht toe.</p></div>\n\n<figure><img src=\"_assets/3.1.4_target.svg\" alt=\"Basisgrafiek bij de doeloefening. Er is hier geen belasting- of subsidiewig.\"><figcaption>Figuur 4. Basisgrafiek bij de doeloefening. Er is hier geen belasting- of subsidiewig.</figcaption></figure>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-3/chapters/3.1/_assets/3.1.4_target.svg",
+        "sha256": "2b8d1d90381408b9767ee9f3c9a5084c8afac8d62279e02e7380577961841f4a"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": null,
+        "prompt": "Bereken de vrije evenwichtsprijs en -hoeveelheid. Leg uit of de maximumprijs bindt.",
+        "observable_operation": "Bereken de vrije evenwichtsprijs en -hoeveelheid. Leg uit of de maximumprijs bindt.",
+        "source_question_id": "34a"
+      },
+      {
+        "label": "b",
+        "points": null,
+        "prompt": "Bereken de gevraagde en aangeboden hoeveelheid, het werkelijke aantal verhuurde tenten en het tekort.",
+        "observable_operation": "Bereken de gevraagde en aangeboden hoeveelheid, het werkelijke aantal verhuurde tenten en het tekort.",
+        "source_question_id": "34b"
+      },
+      {
+        "label": "c",
+        "points": null,
+        "prompt": "Teken de maximumprijs in de basisgrafiek. Markeer Qv, Qa en het werkelijke aantal verhuringen. Geef het tekort aan.",
+        "observable_operation": "Teken de maximumprijs in de basisgrafiek. Markeer Qv, Qa en het werkelijke aantal verhuringen. Geef het tekort aan.",
+        "source_question_id": "34c"
+      },
+      {
+        "label": "d",
+        "points": null,
+        "prompt": "Een huurder zegt: “De lagere huur is goed voor iedereen die voor € 10 een tent wil huren.” Beoordeel met de uitkomsten en de toewijzingsregel.",
+        "observable_operation": "Een huurder zegt: “De lagere huur is goed voor iedereen die voor € 10 een tent wil huren.” Beoordeel met de uitkomsten en de toewijzingsregel.",
+        "source_question_id": "34d"
+      },
+      {
+        "label": "e",
+        "points": null,
+        "prompt": "Stel dat de maximumprijs € 14 is in plaats van € 10. Geef dan de werkelijke huur en het aantal verhuringen. Licht toe.",
+        "observable_operation": "Stel dat de maximumprijs € 14 is in plaats van € 10. Geef dan de werkelijke huur en het aantal verhuringen. Licht toe.",
+        "source_question_id": "34e"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. 18 − 0,10Q = 6 + 0,10Q → 12 = 0,20Q → Q₀ = 60 tenten per weekend . P₀ = 18 − 0,10 × 60 = € 12 per tent . Pmax = € 10 bindt. Waarom: De vrije huur van € 12 wordt verboden.",
+    "b": "b. 10 = 18 − 0,10Qv → Qv = 80 . 10 = 6 + 0,10Qa → Qa = 40 . Werkelijk verhuurd: 40 tenten . Tekort: 80 − 40 = 40 tenten per weekend . Waarom: Er is geen extra aanvoer; alle 40 aangeboden tenten worden verhuurd.",
+    "c": "c. Markeer de horizontale lijn Pmax = € 10, Qa = 40 en Qv = 80. Label 40 als werkelijke verhuringen en 40–80 als tekort. Waarom: Vraag, aanbod en werkelijk verhuurde aantallen hebben verschillende betekenissen.",
+    "d": "d. Onjuist. Van de 80 vragers krijgen alleen de 40 hoogste betalingsbereidheden een tent. De overige 40 vragers die € 10 willen betalen, krijgen er geen. Waarom: Een lagere huur maakt toegang niet voor iedereen mogelijk.",
+    "e": "e. Bij Pmax = € 14 blijft de werkelijke huur € 12 en worden 60 tenten per weekend verhuurd. Waarom: Het maximum is hoger dan de vrije huur en bindt niet."
+  },
+  "answer_model_support_html": [
+    "<figure><img alt=\"Opgave 34: 40 tenten worden verhuurd en 40 vragers blijven zonder tent.\" src=\"_assets/3.1.4_ans_3.svg\"/><figcaption>Opgave 34: 40 tenten worden verhuurd en 40 vragers blijven zonder tent.</figcaption></figure>"
+  ],
+  "answer_figures": [
+    {
+      "path": "books/book-3/chapters/3.1/_assets/3.1.4_ans_3.svg",
+      "sha256": "508b4a459773d75d1f41dfe3d98b0569f3e4c0e9fb7f97f357c18db5387d619e"
+    }
+  ],
+  "lesson_goals": [
+    "Je kunt bepalen of een maximumprijs bindt.",
+    "Je kunt bij die prijs vraag, aanbod, werkelijke verkopen en het tekort berekenen.",
+    "Je kunt de drie hoeveelheden in een grafiek onderscheiden en uitleggen welke kopers geen product krijgen."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "3.1.4-a",
+      "description": "Bereken de vrije evenwichtsprijs en -hoeveelheid. Leg uit of de maximumprijs bindt."
+    },
+    {
+      "local_operation_id": "3.1.4-b",
+      "description": "Bereken de gevraagde en aangeboden hoeveelheid, het werkelijke aantal verhuurde tenten en het tekort."
+    },
+    {
+      "local_operation_id": "3.1.4-c",
+      "description": "Teken de maximumprijs in de basisgrafiek. Markeer Qv, Qa en het werkelijke aantal verhuringen. Geef het tekort aan."
+    },
+    {
+      "local_operation_id": "3.1.4-d",
+      "description": "Een huurder zegt: “De lagere huur is goed voor iedereen die voor € 10 een tent wil huren.” Beoordeel met de uitkomsten en de toewijzingsregel."
+    },
+    {
+      "local_operation_id": "3.1.4-e",
+      "description": "Stel dat de maximumprijs € 14 is in plaats van € 10. Geef dan de werkelijke huur en het aantal verhuringen. Licht toe."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Retrieve equilibrium and quantity-at-price calculations. Reuse surplus areas only after the transaction and allocation rules have been specified."
+  ],
+  "new_skills_introduced": [
+    "Distinguish binding and non-binding price ceilings; calculate demand, supply, actual transactions and shortage."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "A low quoted price does not mean everyone buys at that price. Welfare-area calculations require an explicit allocation assumption. Avoid turning this into a full housing-policy chapter.",
+  "source_ref": "references/owned/course-blueprint-v5.md §3.1.4",
+  "structural_retrieval_plan": "Retrieve equilibrium and quantity-at-price calculations. Reuse surplus areas only after the transaction and allocation rules have been specified.",
+  "structural_scope_boundary": "A low quoted price does not mean everyone buys at that price. Welfare-area calculations require an explicit allocation assumption. Avoid turning this into a full housing-policy chapter.",
+  "source_pin": {
+    "student_file": "books/book-3/chapters/3.1/3.1.4 manuscript.md",
+    "student_manuscript_sha256": "d8d37a131f60a17fca322fa289521f7ced878c9e5eec77c2fbe204f3fda2720a",
+    "answer_file": "books/book-3/chapters/3.1/Antwoorden.md",
+    "answer_file_sha256": "6d639e4d56806829462acd76da214f1d3075ec064b024d46a4fe0601cff292dc",
+    "chapter_student_pages": [
+      33
+    ],
+    "complete_book_pages": [
+      37
+    ]
+  },
+  "lesson_route": {
+    "start": "28–29",
+    "independent": "32–33",
+    "guided_or_alternative": "30–31",
+    "target": "34",
+    "target_subquestions": [
+      "34a",
+      "34b",
+      "34c",
+      "34d",
+      "34e"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 9,
+      "Uitgewerkt voorbeeld": 7,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 13,
+      "Doeloefening": 13,
+      "Feedback / afronding": 3
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Controleer eerst of de maximumprijs bindt. Onderscheid gewenste vraag, aanbod en feitelijke verkoop.",
+    "assessment_boundaries": "Een lage toegestane prijs garandeert geen toegang. De bron bepaalt welke kopers het product krijgen; geef geen extra welvaartsrekening als eis."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "3.1.4",
+      "disposition": "retain",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "3a9b652257ea6b62277ce0865ca6b54db6706154b45ebafa9755251c0b741171"
+}

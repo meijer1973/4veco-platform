@@ -67,26 +67,30 @@ function sourceRankToAuthority(edge) {
   return 'diagnostic';
 }
 
-function targetChunks(targets, lessons) {
+function targetChunks(targets, sourceOptions) {
   return (targets.exercises || []).map(record => {
     if ([3,4].includes(record.module) && (![REVISION,PREVIOUS].includes(targets.structure_revision)
       || record.structure_revision !== targets.structure_revision || record.source_identity?.revision !== targets.structure_revision)) {
       throw new Error(`${record.id}: missing, unknown or mixed target revision`);
     }
-    const consumed = record.structure_revision === REVISION ? consumeTarget(record, lessons) : null;
+    const consumed = record.structure_revision === REVISION ? consumeTarget(record, sourceOptions) : null;
     const target = record.target_exercise || {};
+    const requiredSkills = [...(record.required_skills || [])];
+    const examCodes = [...(record.exam_codes || [])];
     const text = [record.id, record.paragraph_title, record.record_status, target.context || '',
+      `Required skills: ${requiredSkills.join(', ') || 'unmapped'}. Exam codes: ${examCodes.join(', ') || 'unmapped'}.`,
       ...(target.subquestions || []).map(q => `${q.label}. ${q.prompt}`)].join('\n');
     return {...chunk({chunkId:`target-exercise:${record.structure_revision || targets.blueprint_version}:${record.id}`,
       sourcePath:'references/authored/course-target-exercises.json',sourceType:'target_exercise',
-      authorityLevel:'authored_judgement',entityIds:[record.id],
+      authorityLevel:'authored_judgement',entityIds:[record.id, ...requiredSkills, ...examCodes],
       curriculumAuthority:record.record_status==='reviewed_final',text}),
       record_status:record.record_status,structure_revision:record.structure_revision || null,
+      required_skills:requiredSkills,exam_codes:examCodes,
       ...(consumed ? {target:consumed} : {})};
   });
 }
 
-function main(output = OUT, lessons = path.resolve(REPO_ROOT, '../4veco-lessen')) {
+function main(output = OUT) {
   const units = readJson('references/machine/micro-teaching-units.json', []);
   const terms = readJson('references/machine/begrippen.json', { terms: {} }).terms || {};
   const exams = readJson('references/external/exam-questions.json', []);
@@ -142,7 +146,7 @@ function main(output = OUT, lessons = path.resolve(REPO_ROOT, '../4veco-lessen')
     }));
   }
 
-  chunks.push(...targetChunks(targets, lessons));
+  chunks.push(...targetChunks(targets));
 
   const authoredPaths = [
     'references/authored/didactiek-principes.md',

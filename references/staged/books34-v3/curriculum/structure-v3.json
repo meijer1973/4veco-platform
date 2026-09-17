@@ -1,0 +1,61 @@
+{
+  "revision": "book34-lesson-balance-v3-20260915",
+  "year_1_counts": {
+    "1": 12,
+    "2": 12,
+    "3": 14,
+    "4": 17
+  },
+  "chapter_counts": {
+    "3.1": 6,
+    "3.2": 4,
+    "3.3": 4,
+    "4.1": 5,
+    "4.2": 7,
+    "4.3": 5
+  },
+  "current_paragraph_ids": [
+    "3.1.1",
+    "3.1.2",
+    "3.1.3",
+    "3.1.4",
+    "3.1.5",
+    "3.1.6",
+    "3.2.1",
+    "3.2.2",
+    "3.2.3",
+    "3.2.4",
+    "3.3.1",
+    "3.3.2",
+    "3.3.3",
+    "3.3.4",
+    "4.1.1",
+    "4.1.2",
+    "4.1.3",
+    "4.1.4",
+    "4.1.5",
+    "4.2.1",
+    "4.2.2",
+    "4.2.3",
+    "4.2.4",
+    "4.2.5",
+    "4.2.6",
+    "4.2.7",
+    "4.3.1",
+    "4.3.2",
+    "4.3.3",
+    "4.3.4",
+    "4.3.5"
+  ],
+  "deferred_old_ids": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "id": "4.3.5",
+      "later_year_destination": null,
+      "later_year_time_allocation": null
+    }
+  ],
+  "source_authority": "owner-adopted v3 outlines and actual local edition, within this explicit revision",
+  "target_approval": "not_automatic",
+  "live_repository_updated": false
+}

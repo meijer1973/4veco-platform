@@ -1,0 +1,540 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>Boek 4 · Hoofdstuk 4.2 · Docenteninformatie · v3</title><style>
+@page {size:A4; margin:17mm 18mm 17mm 19mm;
+ @top-left {content:"4veco  /  Boek 4";font-family:Lato,sans-serif;font-size:8.5pt;color:#536777;}
+ @top-right {content:"4.2  Marktvormen en marktfalen";font-family:Lato,sans-serif;font-size:8.5pt;color:#536777;}
+ @bottom-left {content:"Economie · 4 vwo";font-family:Lato,sans-serif;font-size:8pt;color:#536777;}
+ @bottom-right {content:counter(page);font-family:Lato,sans-serif;font-size:9pt;color:#183247;}
+}
+@page:first {@top-left{content:none;}@top-right{content:none;}}
+* {box-sizing:border-box;}
+html{font-family:Lato,"DejaVu Sans",sans-serif;font-size:11.3pt;line-height:1.37;color:#183247;}
+body{margin:0;}
+p{margin:0 0 6pt;orphans:3;widows:3;}
+.page{break-before:page;}
+.page:first-child{break-before:auto;}
+.page-title{font-size:18pt;line-height:1.13;font-weight:800;border-bottom:1.5pt solid #17688f;padding:0 0 8pt;margin:0 0 12pt;}
+h1{font-size:25pt;line-height:1.13;margin:5pt 0 12pt;font-weight:800;break-after:avoid;}
+h2{font-size:17pt;line-height:1.15;color:#17688f;margin:10pt 0 8pt;break-after:avoid;}
+h3{font-size:12.5pt;line-height:1.22;margin:11pt 0 7pt;break-after:avoid;}
+h2:first-child,h3:first-child{margin-top:0;}
+a{color:inherit;text-decoration:none;}
+.kicker{letter-spacing:1pt;color:#17688f;font-size:9pt;font-weight:800;margin:0 0 12pt;}
+.box,.definition,.formula,.source,.route{padding:7pt 10pt;margin:8pt 0 9pt;break-inside:avoid;background:#f2f6f8;border-left:3pt solid #17688f;}
+.box p:last-child,.definition p:last-child,.formula p:last-child,.source p:last-child{margin-bottom:0;}
+.definition{background:#f4f7f8;padding:7pt 10pt;margin:7pt 0 9pt;}
+.formula{font-family:"DejaVu Sans Mono",monospace;font-size:11.3pt;line-height:1.6;background:#eef5f6;border-left-color:#227064;}
+.goals{font-size:10.7pt;line-height:1.38;}
+.summary{font-size:10.5pt;line-height:1.5;}
+.warning{border-left-color:#ad601b;background:#fbf5ed;}
+.source{border-left-color:#536777;font-size:10.6pt;}
+.route{font-size:10.2pt;line-height:1.3;}
+.calculation{font-family:"DejaVu Sans Mono",monospace;line-height:1.55;margin:8pt 0 10pt;padding:8pt 13pt;background:#f3f6f7;break-inside:avoid;}
+.exercise{break-inside:avoid;border:0.6pt solid #d5dfe5;border-radius:3pt;padding:8pt 10pt;margin:0 0 10pt;background:white;}
+.exercise>p:first-child{margin-top:0;}
+.exercise>p:last-child{margin-bottom:0;}
+.exercise>p{margin-bottom:6pt;}
+.exercise>b:first-child{display:block;margin-bottom:7pt;font-size:12pt;}
+.target{border-top:3pt solid #17688f;}
+table{border-collapse:collapse;width:100%;margin:7pt 0 9pt;font-size:10.1pt;line-height:1.27;table-layout:auto;break-inside:avoid;}
+th{background:#edf2f5;font-weight:700;vertical-align:bottom;text-align:left;border-bottom:1pt solid #9dabb7;}
+td,th{padding:4.4pt 5pt;border-bottom:0.55pt solid #dce4e9;}
+td{vertical-align:top;} tr:nth-child(even) td{background:#f8fafb;}
+figure{margin:10pt 0 11pt;break-inside:avoid;}
+figure img{display:block;width:100%;height:auto;}
+figcaption{font-size:9.3pt;line-height:1.3;color:#536777;margin:5pt 0 0;}
+.small{font-size:9.4pt;line-height:1.33;}
+.muted{color:#536777;}
+.cover-title{font-size:38pt;line-height:1.05;letter-spacing:-0.6pt;font-weight:900;margin:14pt 0 14pt;}
+.lead{font-size:14.5pt;line-height:1.3;margin:0 0 13pt;color:#17688f;}
+.contents{margin:12pt 0 12pt;}
+.contents a{display:block;border-top:0.6pt solid #cbd7df;padding:6pt 0;}
+.contents b{display:block;font-size:12pt;}
+.contents span{display:block;color:#536777;font-size:10.5pt;margin-top:2pt;}
+.answer h2{margin-top:16pt;}
+.answer p{margin-bottom:7pt;}
+.answer .why{font-size:10.6pt;color:#455c6d;}
+.answer .exercise{break-inside:auto;}
+.answer .answer-block{break-inside:avoid;margin-bottom:10pt;}
+.teacher{font-size:10.7pt;}
+.pair{display:flex;gap:12pt}.pair>div{flex:1}
+.target-source{padding:9pt 11pt;background:#f5f8f9;border-left:3pt solid #536777;margin:9pt 0}
+.step{font-weight:700;color:#17688f}
+.fraction{white-space:nowrap}
+.tight p{margin-bottom:4pt}
+.target-unit{font-size:9.7pt;color:#536777}
+@media print{a{color:inherit}}
+.teacher table{font-size:9.1pt;}
+
+.contents a{font-size:10.1pt;line-height:1.25;padding:5.5pt 0;}
+.contents a b{font-size:11.2pt;}
+.contents b span{float:right;font-size:11pt;display:inline;}
+.exercise{padding:7pt 9pt;margin-bottom:9pt;}
+.exercise>p{margin-bottom:5pt;}
+.exercise p:first-child b{font-size:11.6pt;}
+.formula{font-size:10.8pt;line-height:1.5;}
+.cover-title{font-size:34pt;}
+.side-note{font-size:9.5pt;color:#536777;}
+.answer .answer-block{break-inside:avoid;}
+.answer .calc{font-family:DejaVu Sans Mono,monospace;font-size:10pt;line-height:1.5;}
+
+.continuation{font-size:16pt;color:#17688f;font-weight:700;margin:0 0 10pt;}
+.writing-lines{height:78mm;background:repeating-linear-gradient(to bottom, transparent 0,transparent 25px,#dfe6eb 26px,transparent 27px);margin-top:9mm;}
+
+.target .muted {font-size:9.5pt;} .page-title {font-size:17.5pt;} .compact figure {margin:8pt 0;} .small-figure {width:100%;} .panel-caption {font-size:10pt;}
+
+.glossary-columns{columns:2;column-gap:22pt;font-size:10.5pt;line-height:1.3;} .glossary-columns p{break-inside:avoid;margin:0 0 8pt;} .glossary-columns b{color:#17688f;}
+.answer h1{font-size:21pt;line-height:1.2;}
+.answer h3{font-size:12pt;margin:12pt 0 5pt;break-after:avoid;}
+.answer-stage{font-size:12.5pt;font-weight:700;color:#17688f;border-bottom:0.5pt solid #ccd9e0;margin:14pt 0 6pt;padding-bottom:4pt;break-after:avoid;}
+.answer-item{break-inside:avoid;}
+.assessment-note{font-size:9.5pt;color:#536777;break-inside:avoid;}
+
+.page-title{font-size:17pt;}
+html{font-size:10.7pt;line-height:1.38;} .teacher table{font-size:9.4pt;}</style></head><body><section class="page teacher" data-designed-page="1" data-section="4.2"><div class="kicker">4 VWO · BOEK 4 · HOOFDSTUK 4.2 · EDITIE V3</div>
+<h1>Docenteninformatie<br/>Marktvormen en marktfalen</h1>
+<p>Deze handleiding hoort uitsluitend bij de meegeleverde v3-leerlingtekst en antwoorden. Gebruik de paragraafnummers uit deze editie; dezelfde nummers kunnen in v2 een ander onderwerp aanduiden.</p>
+<table>
+<thead>
+<tr>
+<th>Onderdeel</th>
+<th>Deze editie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Genummerde paragrafen</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Leerlingpagina’s</td>
+<td>60; bovengrens 60</td>
+</tr>
+<tr>
+<td>Opgaven / deelvragen</td>
+<td>60 / 169</td>
+</tr>
+<tr>
+<td>Doeloefeningen</td>
+<td>7, 16, 25, 34, 43, 52, 58</td>
+</tr>
+</tbody>
+</table>
+<h3>Eén paragraaf, één kernles</h3>
+<p>De ontwerpgrens is 55 minuten inclusief uitleg, voorbeeld, zelfstandig werk, doel en feedback. De geselecteerde route staat per paragraaf aangegeven. Tijden zijn redactionele inschattingen, niet gemeten leerlingtijden of een garantie voor ieder individu.</p>
+<p>Begeleide inoefening is een steunroute: vervang zo nodig vergelijkbare tussenstappen, maar houd zelfstandige doelbewijzen over. Bonus en extra herhaling komen niet stilzwijgend boven op de kern. Nieuw leren mag niet worden verstopt in een tweede les of verplicht huiswerk.</p>
+<h3>Gebruik en beoordeling</h3>
+<p>Alle noodzakelijke bronnen en steun staan op papier. Reken met ongeronde tussenuitkomsten en beoordeel eenheden, redenering en gebruikte aannamen. Gelijkwaardige correcte formuleringen en grafieken zijn toegestaan. Gebruik een fout om het verkeerde onderscheid te herstellen, niet om alleen een eindgetal te laten overschrijven.</p>
+<div class="box"><b>Lees de status per les</b><br/>Een open tijdsconflict wordt hieronder niet als opgelost gepresenteerd. Een ontwerpinschatting is iets anders dan een onafhankelijke inhoudsbeoordeling of een praktijkproef.</div></section>
+<section class="page teacher" data-designed-page="2" data-section="4.2.1"><div class="kicker">DOCENT · 4.2.1 · ONTWERPROUTE; PRAKTIJKMETING ONTBREEKT</div>
+<h1>4.2.1 · Welvaartseffecten van monopolie</h1>
+<p><strong>Leerlinghoofdstuk:</strong> p. 3–10. <strong>Doeloefening:</strong> 7 (p. 9).</p>
+<h3>Bestemming</h3>
+<p>Je kunt de monopolie-uitkomst vergelijken met een efficiënte uitkomst. Je kunt CS, PS en totaal surplus berekenen en arceren. Je kunt een overdracht onderscheiden van welvaartsverlies en PS onderscheiden van winst.</p>
+<h3>Lesroute en keuze van opgaven</h3>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Geselecteerd werk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / ophalen</td>
+<td>1–2</td>
+</tr>
+<tr>
+<td>Zelfstandige voorbereiding</td>
+<td>5–6</td>
+</tr>
+<tr>
+<td>Onafhankelijk doelbewijs</td>
+<td>Alle deelvragen van opgave 7</td>
+</tr>
+<tr>
+<td>Extra steun / alternatieve selectie</td>
+<td>3–4</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Start</th>
+<th style="text-align:right">Motivatie</th>
+<th style="text-align:right">Uitleg</th>
+<th style="text-align:right">Voorbeeld</th>
+<th style="text-align:right">Overgang</th>
+<th style="text-align:right">Zelfst.</th>
+<th style="text-align:right">Doel</th>
+<th style="text-align:right">Feedback</th>
+<th style="text-align:right">Totaal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">6</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right"><strong>55</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>De uitleg die niet mag verdwijnen</h3>
+<p>Haal de monopolieprocedure uit nieuwe §4.1.4 terug. Scheid overdracht op blijvende verkopen van de verloren transacties.</p>
+<h3>Bij het nakijken en bespreken</h3>
+<p>Houd de kosten en vraag vergelijkbaar. Producentensurplus is niet winst wanneer constante kosten bestaan. Een hogere producentenopbrengst bewijst geen hoger totaal surplus.</p>
+<div class="box small"><b>Bewijs en herstel</b><br/>Controleer de afzonderlijke deelvragen met het bijbehorende antwoordmodel. Laat de leerling eerst de grootheid, bron en modelaanname aanwijzen. De targetregistratie in het pakket bevat de exacte vragen, antwoorden en bronverwijzingen; formele onafhankelijke goedkeuring is niet door deze handleiding vervangen.</div></section>
+<section class="page teacher" data-designed-page="3" data-section="4.2.2"><div class="kicker">DOCENT · 4.2.2 · ONTWERPROUTE; PRAKTIJKMETING ONTBREEKT</div>
+<h1>4.2.2 · Prijsdiscriminatie</h1>
+<p><strong>Leerlinghoofdstuk:</strong> p. 11–18. <strong>Doeloefening:</strong> 16 (p. 17).</p>
+<h3>Bestemming</h3>
+<p>Je kunt prijsdiscriminatie herkennen en de voorwaarden uitleggen. Je kunt twee gescheiden groepen vergelijken met één gezamenlijke prijs. Je kunt omzet, kosten, winst en de verdeling van surplus beoordelen.</p>
+<h3>Lesroute en keuze van opgaven</h3>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Geselecteerd werk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / ophalen</td>
+<td>10–11</td>
+</tr>
+<tr>
+<td>Zelfstandige voorbereiding</td>
+<td>14–15</td>
+</tr>
+<tr>
+<td>Onafhankelijk doelbewijs</td>
+<td>Alle deelvragen van opgave 16</td>
+</tr>
+<tr>
+<td>Extra steun / alternatieve selectie</td>
+<td>12–13</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Start</th>
+<th style="text-align:right">Motivatie</th>
+<th style="text-align:right">Uitleg</th>
+<th style="text-align:right">Voorbeeld</th>
+<th style="text-align:right">Overgang</th>
+<th style="text-align:right">Zelfst.</th>
+<th style="text-align:right">Doel</th>
+<th style="text-align:right">Feedback</th>
+<th style="text-align:right">Totaal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">5</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right"><strong>55</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>De uitleg die niet mag verdwijnen</h3>
+<p>Optimaliseer per herkenbare groep bij gemeenschappelijke constante MK en niet-bindende gezamenlijke capaciteit. De uniforme vergelijkingsprijs is gegeven.</p>
+<h3>Bij het nakijken en bespreken</h3>
+<p>Trek gezamenlijke vaste kosten maar één keer af. Meer winst of een onveranderde totale afzet garandeert geen hoger totaal surplus; de verdeling van verkopen verandert.</p>
+<div class="box small"><b>Bewijs en herstel</b><br/>Controleer de afzonderlijke deelvragen met het bijbehorende antwoordmodel. Laat de leerling eerst de grootheid, bron en modelaanname aanwijzen. De targetregistratie in het pakket bevat de exacte vragen, antwoorden en bronverwijzingen; formele onafhankelijke goedkeuring is niet door deze handleiding vervangen.</div></section>
+<section class="page teacher" data-designed-page="4" data-section="4.2.3"><div class="kicker">DOCENT · 4.2.3 · ONTWERPROUTE; PRAKTIJKMETING ONTBREEKT</div>
+<h1>4.2.3 · Marktvormen vergelijken</h1>
+<p><strong>Leerlinghoofdstuk:</strong> p. 19–24. <strong>Doeloefening:</strong> 25 (p. 23).</p>
+<h3>Bestemming</h3>
+<p>Je kunt vier marktvormen onderscheiden met brongegevens. Je kunt de rol van productverschillen en toetreding uitleggen. Je kunt de bekende winstprocedure toepassen op een gegeven ondernemingsmodel.</p>
+<h3>Lesroute en keuze van opgaven</h3>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Geselecteerd werk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / ophalen</td>
+<td>19–20</td>
+</tr>
+<tr>
+<td>Zelfstandige voorbereiding</td>
+<td>23–24</td>
+</tr>
+<tr>
+<td>Onafhankelijk doelbewijs</td>
+<td>Alle deelvragen van opgave 25</td>
+</tr>
+<tr>
+<td>Extra steun / alternatieve selectie</td>
+<td>21–22</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Start</th>
+<th style="text-align:right">Motivatie</th>
+<th style="text-align:right">Uitleg</th>
+<th style="text-align:right">Voorbeeld</th>
+<th style="text-align:right">Overgang</th>
+<th style="text-align:right">Zelfst.</th>
+<th style="text-align:right">Doel</th>
+<th style="text-align:right">Feedback</th>
+<th style="text-align:right">Totaal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">6</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right"><strong>52</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>De uitleg die niet mag verdwijnen</h3>
+<p>Classificeer met bronbewijs en pas één bekende rekenroute toe in de gegeven korte-termijncasus.</p>
+<h3>Bij het nakijken en bespreken</h3>
+<p>Een dalende eigen vraag bewijst geen monopolie. Geen universele oligopolievraagfunctie, reactiecurve of spelmatrix; het gedrag van andere aanbieders is volgens het model gelijk gehouden.</p>
+<div class="box small"><b>Bewijs en herstel</b><br/>Controleer de afzonderlijke deelvragen met het bijbehorende antwoordmodel. Laat de leerling eerst de grootheid, bron en modelaanname aanwijzen. De targetregistratie in het pakket bevat de exacte vragen, antwoorden en bronverwijzingen; formele onafhankelijke goedkeuring is niet door deze handleiding vervangen.</div></section>
+<section class="page teacher" data-designed-page="5" data-section="4.2.4"><div class="kicker">DOCENT · 4.2.4 · OPEN: ÉÉN-LES-FIT NOG NIET AANGETOOND</div>
+<h1>4.2.4 · Negatieve externe effecten</h1>
+<p><strong>Leerlinghoofdstuk:</strong> p. 25–35. <strong>Doeloefening:</strong> 34 (p. 34).</p>
+<h3>Bestemming</h3>
+<p>Je kunt een negatief extern effect en de getroffen derde partij benoemen. Je kunt private en maatschappelijke kosten onderscheiden. Je kunt een belastinguitkomst berekenen en de welvaartsvergelijking uitbreiden met externe kosten.</p>
+<h3>Lesroute en keuze van opgaven</h3>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Geselecteerd werk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / ophalen</td>
+<td>28–29</td>
+</tr>
+<tr>
+<td>Zelfstandige voorbereiding</td>
+<td>32–33</td>
+</tr>
+<tr>
+<td>Onafhankelijk doelbewijs</td>
+<td>Alle deelvragen van opgave 34</td>
+</tr>
+<tr>
+<td>Extra steun / alternatieve selectie</td>
+<td>30–31</td>
+</tr>
+</tbody>
+</table>
+<div class="box warning"><b>Open tijdsconflict uit de alignmentsaudit</b><br/>De vorige handleiding plande extra lestijd. De gekozen v3-herindeling voegt voor deze paragraaf géén les toe en schrapt geen leerdoelen. Er is nog geen geloofwaardig doorgerekende 55-minutenroute voor alle onderstaande kernbewijzen. Een docent moet dit conflict vóór inzet oplossen met een gerichte route-/scopebeslissing. De ongewijzigde doelen worden niet als één-les-klaar gecertificeerd.</div>
+<h3>De uitleg die niet mag verdwijnen</h3>
+<p>Introduceer de derde partij en de maatschappelijke kostengrens vóór de heffing. Hergebruik de belastingroute en tel de externe schade afzonderlijk mee.</p>
+<h3>Bij het nakijken en bespreken</h3>
+<p>CS + PS + overheidsontvangsten − schade is hier de relevante maat. Belasting is een overdracht, schade niet. De verliesdriehoek en onafhankelijke voorbereiding mogen niet verdwijnen om tijd te winnen.</p>
+<div class="box small"><b>Bewijs en herstel</b><br/>Controleer de afzonderlijke deelvragen met het bijbehorende antwoordmodel. Laat de leerling eerst de grootheid, bron en modelaanname aanwijzen. De targetregistratie in het pakket bevat de exacte vragen, antwoorden en bronverwijzingen; formele onafhankelijke goedkeuring is niet door deze handleiding vervangen.</div></section>
+<section class="page teacher" data-designed-page="6" data-section="4.2.5"><div class="kicker">DOCENT · 4.2.5 · OPEN: ÉÉN-LES-FIT NOG NIET AANGETOOND</div>
+<h1>4.2.5 · Positieve externe effecten</h1>
+<p><strong>Leerlinghoofdstuk:</strong> p. 36–46. <strong>Doeloefening:</strong> 43 (p. 45).</p>
+<h3>Bestemming</h3>
+<p>Je kunt private voordelen onderscheiden van voordelen voor derden. Je kunt een subsidie-uitkomst en overheidsuitgaven berekenen. Je kunt beoordelen hoe externe baten de welvaartsconclusie veranderen.</p>
+<h3>Lesroute en keuze van opgaven</h3>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Geselecteerd werk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / ophalen</td>
+<td>37–38</td>
+</tr>
+<tr>
+<td>Zelfstandige voorbereiding</td>
+<td>41–42</td>
+</tr>
+<tr>
+<td>Onafhankelijk doelbewijs</td>
+<td>Alle deelvragen van opgave 43</td>
+</tr>
+<tr>
+<td>Extra steun / alternatieve selectie</td>
+<td>39–40</td>
+</tr>
+</tbody>
+</table>
+<div class="box warning"><b>Open tijdsconflict uit de alignmentsaudit</b><br/>De vorige handleiding plande extra lestijd. De gekozen v3-herindeling voegt voor deze paragraaf géén les toe en schrapt geen leerdoelen. Er is nog geen geloofwaardig doorgerekende 55-minutenroute voor alle onderstaande kernbewijzen. Een docent moet dit conflict vóór inzet oplossen met een gerichte route-/scopebeslissing. De ongewijzigde doelen worden niet als één-les-klaar gecertificeerd.</div>
+<h3>De uitleg die niet mag verdwijnen</h3>
+<p>Introduceer baten voor anderen en verbind ze met de bekende subsidie. Houd eigen voordeel en extern voordeel uit elkaar.</p>
+<h3>Bij het nakijken en bespreken</h3>
+<p>Tel uitgaven af en externe baten op; ze vallen alleen numeriek weg bij bijzondere gegeven bedragen. Behoud het oefencontrast met ongelijke subsidie en externe bate.</p>
+<div class="box small"><b>Bewijs en herstel</b><br/>Controleer de afzonderlijke deelvragen met het bijbehorende antwoordmodel. Laat de leerling eerst de grootheid, bron en modelaanname aanwijzen. De targetregistratie in het pakket bevat de exacte vragen, antwoorden en bronverwijzingen; formele onafhankelijke goedkeuring is niet door deze handleiding vervangen.</div></section>
+<section class="page teacher" data-designed-page="7" data-section="4.2.6"><div class="kicker">DOCENT · 4.2.6 · ONTWERPROUTE; PRAKTIJKMETING ONTBREEKT</div>
+<h1>4.2.6 · Overheidsingrijpen bij marktfalen</h1>
+<p><strong>Leerlinghoofdstuk:</strong> p. 47–52. <strong>Doeloefening:</strong> 52 (p. 51).</p>
+<h3>Bestemming</h3>
+<p>Je kunt beleid koppelen aan een vastgesteld marktprobleem. Je kunt twee voorstellen vergelijken met één criterium en een bekende berekening. Je kunt efficiëntie, verdeling en uitvoeringsproblemen apart beoordelen.</p>
+<h3>Lesroute en keuze van opgaven</h3>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Geselecteerd werk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / ophalen</td>
+<td>46–47</td>
+</tr>
+<tr>
+<td>Zelfstandige voorbereiding</td>
+<td>50–51</td>
+</tr>
+<tr>
+<td>Onafhankelijk doelbewijs</td>
+<td>Alle deelvragen van opgave 52</td>
+</tr>
+<tr>
+<td>Extra steun / alternatieve selectie</td>
+<td>48–49</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Start</th>
+<th style="text-align:right">Motivatie</th>
+<th style="text-align:right">Uitleg</th>
+<th style="text-align:right">Voorbeeld</th>
+<th style="text-align:right">Overgang</th>
+<th style="text-align:right">Zelfst.</th>
+<th style="text-align:right">Doel</th>
+<th style="text-align:right">Feedback</th>
+<th style="text-align:right">Totaal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">5</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right"><strong>55</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>De uitleg die niet mag verdwijnen</h3>
+<p>Beoordeel twee bekende instrumenten aan de hand van één expliciet criterium en de bron. Dit is niet een nieuwe behandeling van ieder instrument.</p>
+<h3>Bij het nakijken en bespreken</h3>
+<p>Uitvoeringskosten gebruiken middelen en zijn geen gewone overdracht. Een verdelingsvoorkeur van producenten is niet automatisch de maatschappelijke efficiëntie-uitkomst.</p>
+<div class="box small"><b>Bewijs en herstel</b><br/>Controleer de afzonderlijke deelvragen met het bijbehorende antwoordmodel. Laat de leerling eerst de grootheid, bron en modelaanname aanwijzen. De targetregistratie in het pakket bevat de exacte vragen, antwoorden en bronverwijzingen; formele onafhankelijke goedkeuring is niet door deze handleiding vervangen.</div></section>
+<section class="page teacher" data-designed-page="8" data-section="4.2.7"><div class="kicker">DOCENT · 4.2.7 · ONTWERPROUTE; PRAKTIJKMETING ONTBREEKT</div>
+<h1>4.2.7 · Gemengde opgaven: marktvormen en marktfalen</h1>
+<p><strong>Leerlinghoofdstuk:</strong> p. 53–58. <strong>Doeloefening:</strong> 58 (p. 56–57).</p>
+<h3>Bestemming</h3>
+<p>Je kunt uit bronnen het passende model kiezen. Je kunt marktgedrag verbinden met surplus en gevolgen voor derden. Je kunt een beleidsconclusie onderbouwen én begrenzen.</p>
+<h3>Lesroute en keuze van opgaven</h3>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Geselecteerd werk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start / ophalen</td>
+<td>55</td>
+</tr>
+<tr>
+<td>Zelfstandige voorbereiding</td>
+<td>56 of 57 (kies één)</td>
+</tr>
+<tr>
+<td>Onafhankelijk doelbewijs</td>
+<td>Alle deelvragen van opgave 58</td>
+</tr>
+<tr>
+<td>Extra steun / alternatieve selectie</td>
+<td>59 als extra consolidatie; 60 als herhaling</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Start</th>
+<th style="text-align:right">Motivatie</th>
+<th style="text-align:right">Uitleg</th>
+<th style="text-align:right">Voorbeeld</th>
+<th style="text-align:right">Overgang</th>
+<th style="text-align:right">Zelfst.</th>
+<th style="text-align:right">Doel</th>
+<th style="text-align:right">Feedback</th>
+<th style="text-align:right">Totaal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">8</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">25</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right"><strong>55</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>De uitleg die niet mag verdwijnen</h3>
+<p>Laat leerlingen verklaren waarom minder transacties in de ene situatie welvaartsverlies en in de andere juist winst geeft.</p>
+<h3>Bij het nakijken en bespreken</h3>
+<p>De kosten en baten van derden veranderen de maatstaf, niet de rekenregels. Houd de twee oefenmarkten uit elkaar en stel geen nieuwe beleidsvoorwaarden.</p>
+<div class="box small"><b>Bewijs en herstel</b><br/>Controleer de afzonderlijke deelvragen met het bijbehorende antwoordmodel. Laat de leerling eerst de grootheid, bron en modelaanname aanwijzen. De targetregistratie in het pakket bevat de exacte vragen, antwoorden en bronverwijzingen; formele onafhankelijke goedkeuring is niet door deze handleiding vervangen.</div></section>
+<section class="page teacher" data-designed-page="9" data-section="4.2"><h1>Toetsgrens en editiegebruik</h1>
+<h3>Wat deze herindeling verandert</h3>
+<p>Boek 3 eindigt met de korte-termijnkeuze van de prijsnemende onderneming en de bestaande handelsmethoden. Formele toe-/uittreding, normale ondernemersbeloning en het langetermijnevenwicht horen vanaf v3 bij <strong>§4.1.1</strong> en dus bij Boek 4. Vrije toetreding mag in Boek 3 wel als marktkenmerk worden genoemd.</p>
+<p>De afzonderlijke cao-/vakbonds-/scholingsbeleidsles is uit het jaar-1-programma gehaald. <strong>Nieuwe §4.3.5 is gemengde oefening.</strong> De oude beleidstekst blijft afzonderlijk bewaard voor latere plaatsing. Een later jaardeel mag die uitgestelde doelen niet zonder expliciete introductie als voorkennis aannemen.</p>
+<h3>Wat niet door deze revisie wordt bewezen</h3>
+<p>De indeling blijft <strong>14 lessen in Boek 3 en 17 in Boek 4</strong>, naast de ongewijzigde 12 + 12 uit Boeken 1 en 2. Dat is een curriculumallocatie, geen bewijs dat iedere bestaande route al uitvoerbaar is. De tijdsconflicten bij §§3.1.2, 3.1.3, 3.1.5, 4.2.4 en 4.2.5 blijven afzonderlijk zichtbaar. De rest van de tijden zijn schattingen, geen gemeten leeropbrengsten.</p>
+<h3>Bronnen en antwoorden</h3>
+<p>Alle rekenvoorbeelden zijn geconstrueerde onderwijsmodellen, met hun voorwaarden in de bron. Actualiseer geen wettelijke loonbedragen of andere externe feiten zonder bron. De antwoorden worden met het leerlingdeel meegeleverd; een opgave die niet tot de gekozen kern behoort, is niet daardoor onjuist of overbodig.</p>
+<h3>Voor gebruik van het complete boek</h3>
+<p>De hoofdstuknummers blijven gelijk. Paginaverwijzingen in deze hoofdstukhandleiding zijn lokaal; de complete handleiding bevat de conversietabel naar boekpagina’s. Boekinhoud en inhoudsopgave gebruiken dezelfde nieuwe nummering.</p>
+<p>De bestaande omslag is behouden als seriebeeld. De kleine omslaggrafieken vormen geen norm voor de economische uitleg of beoordeling; gebruik de correcte hoofdstukfiguren.</p>
+<div class="box"><b>Beoordelingsstatus</b><br/>De v3-plaatsing is door de opdrachtgever gekozen. De technische en redactionele controles in het pakket zijn geen gefingeerde onafhankelijke review. De coding agent registreert alleen werkelijk verleende doelgoedkeuringen en voert de toepasselijke integratiecontroles uit.</div></section></body></html>

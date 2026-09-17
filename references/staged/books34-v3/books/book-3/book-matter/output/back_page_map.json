@@ -1,0 +1,65 @@
+[
+  {
+    "pdf_page": 1,
+    "designed_pages": [
+      1
+    ],
+    "sections": [
+      "begrippen"
+    ]
+  },
+  {
+    "pdf_page": 2,
+    "designed_pages": [
+      2
+    ],
+    "sections": [
+      "begrippen"
+    ]
+  },
+  {
+    "pdf_page": 3,
+    "designed_pages": [
+      3
+    ],
+    "sections": [
+      "begrippen"
+    ]
+  },
+  {
+    "pdf_page": 4,
+    "designed_pages": [
+      4
+    ],
+    "sections": [
+      "formules"
+    ]
+  },
+  {
+    "pdf_page": 5,
+    "designed_pages": [
+      5
+    ],
+    "sections": [
+      "formules"
+    ]
+  },
+  {
+    "pdf_page": 6,
+    "designed_pages": [
+      6
+    ],
+    "sections": [
+      "formules"
+    ]
+  },
+  {
+    "pdf_page": 7,
+    "designed_pages": [
+      7
+    ],
+    "sections": [
+      "formules"
+    ]
+  }
+]

@@ -1,0 +1,379 @@
+{
+  "3": {
+    "student_pages": 132,
+    "answer": 74,
+    "teacher": 22,
+    "chapters": {
+      "3.1": {
+        "student_start": 5,
+        "student_end": 52,
+        "student_offset": 4,
+        "student_pages": 48,
+        "paragraphs": {
+          "3.1.1": {
+            "title": "Belastingen: wig en nieuw evenwicht",
+            "local_page": 2,
+            "book_page": 6,
+            "target": "7",
+            "target_book_pages": [
+              12
+            ]
+          },
+          "3.1.2": {
+            "title": "Belastingdruk en welvaartsverlies",
+            "local_page": 10,
+            "book_page": 14,
+            "target": "16",
+            "target_book_pages": [
+              21
+            ]
+          },
+          "3.1.3": {
+            "title": "Subsidies",
+            "local_page": 19,
+            "book_page": 23,
+            "target": "25",
+            "target_book_pages": [
+              30
+            ]
+          },
+          "3.1.4": {
+            "title": "Maximumprijs",
+            "local_page": 28,
+            "book_page": 32,
+            "target": "34",
+            "target_book_pages": [
+              37
+            ]
+          },
+          "3.1.5": {
+            "title": "Minimumprijs en quota",
+            "local_page": 35,
+            "book_page": 39,
+            "target": "43",
+            "target_book_pages": [
+              46
+            ]
+          },
+          "3.1.6": {
+            "title": "Gemengde opgaven: overheidsingrijpen",
+            "local_page": 44,
+            "book_page": 48,
+            "target": "48",
+            "target_book_pages": [
+              50,
+              51
+            ]
+          }
+        },
+        "answer_start": 3,
+        "answer_pages": 31,
+        "teacher_start": 3,
+        "teacher_pages": 8
+      },
+      "3.2": {
+        "student_start": 53,
+        "student_end": 86,
+        "student_offset": 52,
+        "student_pages": 34,
+        "paragraphs": {
+          "3.2.1": {
+            "title": "Volkomen concurrentie: kenmerken",
+            "local_page": 2,
+            "book_page": 54,
+            "target": "7",
+            "target_book_pages": [
+              60
+            ]
+          },
+          "3.2.2": {
+            "title": "Marginale kosten en de afgeleide",
+            "local_page": 10,
+            "book_page": 62,
+            "target": "17",
+            "target_book_pages": [
+              67
+            ]
+          },
+          "3.2.3": {
+            "title": "Winstmaximalisatie bij volkomen concurrentie",
+            "local_page": 17,
+            "book_page": 69,
+            "target": "27",
+            "target_book_pages": [
+              77
+            ]
+          },
+          "3.2.4": {
+            "title": "Gemengde opgaven: de prijsnemende onderneming",
+            "local_page": 27,
+            "book_page": 79,
+            "target": "35",
+            "target_book_pages": [
+              82,
+              83
+            ]
+          }
+        },
+        "answer_start": 35,
+        "answer_pages": 22,
+        "teacher_start": 11,
+        "teacher_pages": 6
+      },
+      "3.3": {
+        "student_start": 87,
+        "student_end": 124,
+        "student_offset": 86,
+        "student_pages": 38,
+        "paragraphs": {
+          "3.3.1": {
+            "title": "Waarom landen handelen: specialisatie en concurrentiepositie",
+            "local_page": 2,
+            "book_page": 88,
+            "target": "7",
+            "target_book_pages": [
+              95
+            ]
+          },
+          "3.3.2": {
+            "title": "Wereldmarktprijs, import, export en welvaart",
+            "local_page": 11,
+            "book_page": 97,
+            "target": "17",
+            "target_book_pages": [
+              105
+            ]
+          },
+          "3.3.3": {
+            "title": "Protectionisme: invoerheffingen en importquota",
+            "local_page": 21,
+            "book_page": 107,
+            "target": "27",
+            "target_book_pages": [
+              115
+            ]
+          },
+          "3.3.4": {
+            "title": "Gemengde opgaven: internationale handel",
+            "local_page": 31,
+            "book_page": 117,
+            "target": "35",
+            "target_book_pages": [
+              120,
+              121
+            ]
+          }
+        },
+        "answer_start": 57,
+        "answer_pages": 17,
+        "teacher_start": 17,
+        "teacher_pages": 6
+      }
+    },
+    "glossary_terms": 32,
+    "back_start": 125,
+    "formulas_start": 128
+  },
+  "4": {
+    "student_pages": 166,
+    "answer": 68,
+    "teacher": 28,
+    "chapters": {
+      "4.1": {
+        "student_start": 5,
+        "student_end": 52,
+        "student_offset": 4,
+        "student_pages": 48,
+        "paragraphs": {
+          "4.1.1": {
+            "title": "Toetreding, uittreding en langetermijnevenwicht",
+            "local_page": 3,
+            "book_page": 7,
+            "target": "7",
+            "target_book_pages": [
+              14
+            ]
+          },
+          "4.1.2": {
+            "title": "Monopolie: kenmerken",
+            "local_page": 12,
+            "book_page": 16,
+            "target": "18",
+            "target_book_pages": [
+              22
+            ]
+          },
+          "4.1.3": {
+            "title": "Marginale opbrengst bij monopolie",
+            "local_page": 20,
+            "book_page": 24,
+            "target": "28",
+            "target_book_pages": [
+              33
+            ]
+          },
+          "4.1.4": {
+            "title": "Winstmaximalisatie bij monopolie",
+            "local_page": 31,
+            "book_page": 35,
+            "target": "38",
+            "target_book_pages": [
+              44
+            ]
+          },
+          "4.1.5": {
+            "title": "Gemengde opgaven: concurrentie en monopolie",
+            "local_page": 42,
+            "book_page": 46,
+            "target": "45",
+            "target_book_pages": [
+              48,
+              49
+            ]
+          }
+        },
+        "answer_start": 3,
+        "answer_pages": 26,
+        "teacher_start": 3,
+        "teacher_pages": 7
+      },
+      "4.2": {
+        "student_start": 53,
+        "student_end": 112,
+        "student_offset": 52,
+        "student_pages": 60,
+        "paragraphs": {
+          "4.2.1": {
+            "title": "Welvaartseffecten van monopolie",
+            "local_page": 3,
+            "book_page": 55,
+            "target": "7",
+            "target_book_pages": [
+              61
+            ]
+          },
+          "4.2.2": {
+            "title": "Prijsdiscriminatie",
+            "local_page": 11,
+            "book_page": 63,
+            "target": "16",
+            "target_book_pages": [
+              69
+            ]
+          },
+          "4.2.3": {
+            "title": "Marktvormen vergelijken",
+            "local_page": 19,
+            "book_page": 71,
+            "target": "25",
+            "target_book_pages": [
+              75
+            ]
+          },
+          "4.2.4": {
+            "title": "Negatieve externe effecten",
+            "local_page": 25,
+            "book_page": 77,
+            "target": "34",
+            "target_book_pages": [
+              86
+            ]
+          },
+          "4.2.5": {
+            "title": "Positieve externe effecten",
+            "local_page": 36,
+            "book_page": 88,
+            "target": "43",
+            "target_book_pages": [
+              97
+            ]
+          },
+          "4.2.6": {
+            "title": "Overheidsingrijpen bij marktfalen",
+            "local_page": 47,
+            "book_page": 99,
+            "target": "52",
+            "target_book_pages": [
+              103
+            ]
+          },
+          "4.2.7": {
+            "title": "Gemengde opgaven: marktvormen en marktfalen",
+            "local_page": 53,
+            "book_page": 105,
+            "target": "58",
+            "target_book_pages": [
+              108,
+              109
+            ]
+          }
+        },
+        "answer_start": 29,
+        "answer_pages": 24,
+        "teacher_start": 11,
+        "teacher_pages": 9
+      },
+      "4.3": {
+        "student_start": 113,
+        "student_end": 156,
+        "student_offset": 112,
+        "student_pages": 44,
+        "paragraphs": {
+          "4.3.1": {
+            "title": "Arbeidsvraag en arbeidsproductiviteit",
+            "local_page": 2,
+            "book_page": 114,
+            "target": "7",
+            "target_book_pages": [
+              122
+            ]
+          },
+          "4.3.2": {
+            "title": "Arbeidsaanbod, participatie en evenwicht",
+            "local_page": 12,
+            "book_page": 124,
+            "target": "16",
+            "target_book_pages": [
+              130
+            ]
+          },
+          "4.3.3": {
+            "title": "Werkloosheid en veranderingen op de arbeidsmarkt",
+            "local_page": 20,
+            "book_page": 132,
+            "target": "25",
+            "target_book_pages": [
+              139
+            ]
+          },
+          "4.3.4": {
+            "title": "Minimumloon",
+            "local_page": 29,
+            "book_page": 141,
+            "target": "34",
+            "target_book_pages": [
+              147
+            ]
+          },
+          "4.3.5": {
+            "title": "Gemengde opgaven: arbeidsmarkt",
+            "local_page": 37,
+            "book_page": 149,
+            "target": "40",
+            "target_book_pages": [
+              152,
+              153
+            ]
+          }
+        },
+        "answer_start": 53,
+        "answer_pages": 16,
+        "teacher_start": 21,
+        "teacher_pages": 8
+      }
+    },
+    "glossary_terms": 57,
+    "back_start": 157,
+    "formulas_start": 163
+  }
+}

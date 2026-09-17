@@ -1,0 +1,437 @@
+{
+  "scope": "Active build/test scripts and verify_manifest.py; text I/O only. fitz.open and Image.open are binary/document APIs and excluded.",
+  "received_implicit_text_calls": 39,
+  "current_explicit_text_calls": 59,
+  "current_implicit_text_calls": 0,
+  "files": [
+    {
+      "file": "build/assemble.py",
+      "received_implicit_text_calls": 8,
+      "current_text_calls": 7,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 12,
+          "call": "(ROOT / 'curriculum/chapter-config.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 16,
+          "call": "path.write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 121,
+          "call": "(ROOT / 'curriculum/book-page-map-v3.json').write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 54,
+          "call": "(ROOT / CFG[chaps[0]]['path'] / 'print.css').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 56,
+          "call": "(matter / 'print.css').write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 120,
+          "call": "(matter / 'glossary.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 47,
+          "call": "(ROOT / 'outlines' / f'book-{b}-outline-v3.md').read_text",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "build/build_all.py",
+      "received_implicit_text_calls": 0,
+      "current_text_calls": 0,
+      "current_implicit_text_calls": 0,
+      "current_calls": []
+    },
+    {
+      "file": "build/check_math.py",
+      "received_implicit_text_calls": 1,
+      "current_text_calls": 1,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 74,
+          "call": "(ROOT / 'checks/math-checks.json').write_text",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "build/check_repairs.py",
+      "received_implicit_text_calls": 0,
+      "current_text_calls": 7,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 92,
+          "call": "(ROOT / 'checks/repair-verification.json').write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 18,
+          "call": "(ROOT / 'curriculum/course-target-exercises-books34-v3.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 21,
+          "call": "(ROOT / 'checks/figure-label-contract.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 22,
+          "call": "svg.read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 85,
+          "call": "(ROOT / 'provenance/received-v3-manifest.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 70,
+          "call": "f.read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 61,
+          "call": "(ROOT / 'curriculum/targets' / f'{pid}.json').read_text",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "build/compare_rebuild.py",
+      "received_implicit_text_calls": 1,
+      "current_text_calls": 1,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 24,
+          "call": "(P / 'checks/rebuild-comparison.json').write_text",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "build/content.py",
+      "received_implicit_text_calls": 4,
+      "current_text_calls": 4,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 34,
+          "call": "(folder / 'Antwoorden.md').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 95,
+          "call": "(ROOT / 'checks/content-inventory.json').write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 13,
+          "call": "(folder / 'chapter-order.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 14,
+          "call": "(folder / fn).read_text",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "build/environment_report.py",
+      "received_implicit_text_calls": 0,
+      "current_text_calls": 1,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 56,
+          "call": "a.output.write_text",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "build/export_paragraphs.py",
+      "received_implicit_text_calls": 0,
+      "current_text_calls": 0,
+      "current_implicit_text_calls": 0,
+      "current_calls": []
+    },
+    {
+      "file": "build/prepare_registry_update.py",
+      "received_implicit_text_calls": 1,
+      "current_text_calls": 2,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 136,
+          "call": "(ROOT / 'curriculum/course-target-exercises-books34-v3.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 139,
+          "call": "args.new_output.open",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "build/preview_targets.py",
+      "received_implicit_text_calls": 0,
+      "current_text_calls": 3,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 44,
+          "call": "(ROOT / 'checks/target-consumer-preview.html').write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 45,
+          "call": "(ROOT / 'checks/target-consumer-check.json').write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 37,
+          "call": "(ROOT / 'curriculum/course-target-exercises-books34-v3.json').read_text",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "build/rasterize_answer_labels.py",
+      "received_implicit_text_calls": 0,
+      "current_text_calls": 1,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 6,
+          "call": "(ROOT / 'checks/figure-label-contract.json').read_text",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "build/records.py",
+      "received_implicit_text_calls": 10,
+      "current_text_calls": 10,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 121,
+          "call": "(C / 'course-target-exercises-books34-v3.json').write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 139,
+          "call": "(C / 'blueprint-books34-v3.md').write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 140,
+          "call": "(C / 'structure-v3.json').write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 49,
+          "call": "(C / 'lesson-routes-v3.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 49,
+          "call": "(C / 'book-page-map-v3.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 54,
+          "call": "(ROOT / 'outlines' / f'book-{b}-outline-v3.md').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 122,
+          "call": "(C / 'target-catalog-v3.csv').open",
+          "explicit_encoding": true
+        },
+        {
+          "line": 50,
+          "call": "(ROOT / 'outlines/paragraph-migration-v2-to-v3.csv').open",
+          "explicit_encoding": true
+        },
+        {
+          "line": 113,
+          "call": "(T / f'{pid}.json').write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 119,
+          "call": "(E / f'{pid}.md').write_text",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "build/render.py",
+      "received_implicit_text_calls": 4,
+      "current_text_calls": 6,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 22,
+          "call": "(folder / 'print.css').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 45,
+          "call": "(out / (stem + '.html')).write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 57,
+          "call": "(out / (stem + '_page_map.json')).write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 74,
+          "call": "(ROOT / 'checks' / ('build-' + a.chapters.replace(',', '_') + '.json')).write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 10,
+          "call": "path.read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 65,
+          "call": "(folder / 'chapter-order.json').read_text",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "build/render_outlines.py",
+      "received_implicit_text_calls": 1,
+      "current_text_calls": 1,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 12,
+          "call": "f.read_text",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "build/verify.py",
+      "received_implicit_text_calls": 9,
+      "current_text_calls": 9,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 75,
+          "call": "(ROOT / 'books/book-4/chapters/4.3/Antwoorden.md').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 93,
+          "call": "(ROOT / 'checks/verification.json').write_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 16,
+          "call": "(ROOT / 'curriculum/chapter-config.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 16,
+          "call": "(ROOT / 'curriculum/book-page-map-v3.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 17,
+          "call": "(ROOT / 'curriculum/course-target-exercises-books34-v3.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 88,
+          "call": "(ROOT / 'curriculum/lesson-routes-v3.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 71,
+          "call": "(ROOT / 'books/book-3/chapters' / c / f'{pid} manuscript.md').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 73,
+          "call": "(ROOT / 'books/book-4/chapters/4.3' / f'{pid} manuscript.md').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 26,
+          "call": "fp.with_suffix('.html').read_text",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "tests/test_package_repairs.py",
+      "received_implicit_text_calls": 0,
+      "current_text_calls": 5,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 12,
+          "call": "(ROOT / 'curriculum/course-target-exercises-books34-v3.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 155,
+          "call": "(ROOT / 'checks/figure-label-contract.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 158,
+          "call": "(ROOT / row['svg']).read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 163,
+          "call": "(ROOT / 'checks/figure-label-contract.json').read_text",
+          "explicit_encoding": true
+        },
+        {
+          "line": 165,
+          "call": "(ROOT / row['svg']).read_text",
+          "explicit_encoding": true
+        }
+      ]
+    },
+    {
+      "file": "verify_manifest.py",
+      "received_implicit_text_calls": 0,
+      "current_text_calls": 1,
+      "current_implicit_text_calls": 0,
+      "current_calls": [
+        {
+          "line": 8,
+          "call": "(root / 'MANIFEST.sha256.json').read_text",
+          "explicit_encoding": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="377" viewBox="0 0 900 377" role="img"><title>Surplus zonder handel en met import</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#536777" stroke-width="1.5"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0,8 L8,0" stroke="#183247" stroke-opacity=".25" stroke-width="1"/></pattern></defs>
+<rect width="900" height="377" rx="10" fill="#f5f8fa"/>
+<text x="212.00000000" y="26.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">Zonder handel</text>
+<text x="61.00000000" y="54.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#183247">P (€ per tas)</text>
+<defs><clipPath id="p0"><rect x="61" y="76" width="302" height="206"/></clipPath></defs>
+<line x1="61.00000000" y1="76.00000000" x2="61.00000000" y2="282.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="61.00000000" y="305.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">0</text>
+<line x1="161.66666667" y1="76.00000000" x2="161.66666667" y2="282.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="161.66666667" y="305.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">40</text>
+<line x1="212.00000000" y1="76.00000000" x2="212.00000000" y2="282.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="212.00000000" y="305.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">60</text>
+<line x1="262.33333333" y1="76.00000000" x2="262.33333333" y2="282.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="262.33333333" y="305.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">80</text>
+<line x1="363.00000000" y1="76.00000000" x2="363.00000000" y2="282.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="363.00000000" y="305.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">120</text>
+<line x1="61.00000000" y1="282.00000000" x2="363.00000000" y2="282.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="50.00000000" y="287.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">0</text>
+<line x1="61.00000000" y1="213.33333333" x2="363.00000000" y2="213.33333333" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="50.00000000" y="218.33333333" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">20</text>
+<line x1="61.00000000" y1="179.00000000" x2="363.00000000" y2="179.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="50.00000000" y="184.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">30</text>
+<line x1="61.00000000" y1="144.66666667" x2="363.00000000" y2="144.66666667" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="50.00000000" y="149.66666667" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">40</text>
+<line x1="61.00000000" y1="76.00000000" x2="363.00000000" y2="76.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="50.00000000" y="81.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">60</text>
+<line x1="61.00000000" y1="282.00000000" x2="371.00000000" y2="282.00000000" stroke="#183247" stroke-width="1.7" marker-end="url(#arr)"/>
+<line x1="61.00000000" y1="282.00000000" x2="61.00000000" y2="68.00000000" stroke="#183247" stroke-width="1.7" marker-end="url(#arr)"/>
+<text x="212.00000000" y="362.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">Q (tassen per week)</text>
+<polygon data-area="CS" data-panel="p0" points="61.00000000,179.00000000 212.00000000,179.00000000 61.00000000,76.00000000" fill="#146d9b" fill-opacity=".19" stroke="#146d9b" stroke-width="1"/>
+<polygon points="61.00000000,179.00000000 212.00000000,179.00000000 61.00000000,76.00000000" fill="url(#hatch)"/>
+<text x="111.33333333" y="150.66666667" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#146d9b">CS</text>
+<polygon data-area="PS" data-panel="p0" points="61.00000000,282.00000000 212.00000000,179.00000000 61.00000000,179.00000000" fill="#247d70" fill-opacity=".19" stroke="#247d70" stroke-width="1"/>
+<polygon points="61.00000000,282.00000000 212.00000000,179.00000000 61.00000000,179.00000000" fill="url(#hatch)"/>
+<text x="111.33333333" y="219.33333333" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#247d70">PS</text>
+<polyline data-curve="V" data-panel="p0" points="61.00000000,76.00000000 363.00000000,282.00000000" fill="none" stroke="#146d9b" stroke-width="3"/>
+<text x="302.56000000" y="258.68000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#f5f8fa" stroke="#f5f8fa" stroke-width="4" stroke-linejoin="round">V</text>
+<text x="302.56000000" y="258.68000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#146d9b">V</text>
+<polyline data-curve="A" data-panel="p0" points="61.00000000,282.00000000 363.00000000,76.00000000" fill="none" stroke="#247d70" stroke-width="3"/>
+<text x="302.56000000" y="111.32000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#f5f8fa" stroke="#f5f8fa" stroke-width="4" stroke-linejoin="round">A</text>
+<text x="302.56000000" y="111.32000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#247d70">A</text>
+<line x1="61.00000000" y1="179.00000000" x2="363.00000000" y2="179.00000000" stroke="#667c8b" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="374.00000000" y="182.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#667c8b">P = 30</text>
+<line x1="212.00000000" y1="179.00000000" x2="212.00000000" y2="282.00000000" stroke="#667c8b" stroke-width="1.2" stroke-dasharray="4 4"/>
+<circle data-point="" data-panel="p0" cx="212.00000000" cy="179.00000000" r="4" fill="#183247"/>
+<line x1="212.00000000" y1="179.00000000" x2="212.00000000" y2="282.00000000" stroke="#667c8b" stroke-width="1.2" stroke-dasharray="4 4"/>
+<circle data-point="" data-panel="p0" cx="212.00000000" cy="179.00000000" r="4" fill="#183247"/>
+<text x="212.00000000" y="336.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">CS bij Qv; PS bij Qa</text>
+<text x="668.00000000" y="26.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">Met import</text>
+<text x="517.00000000" y="54.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#183247">P (€ per tas)</text>
+<defs><clipPath id="p1"><rect x="517" y="76" width="302" height="206"/></clipPath></defs>
+<line x1="517.00000000" y1="76.00000000" x2="517.00000000" y2="282.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="517.00000000" y="305.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">0</text>
+<line x1="617.66666667" y1="76.00000000" x2="617.66666667" y2="282.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="617.66666667" y="305.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">40</text>
+<line x1="668.00000000" y1="76.00000000" x2="668.00000000" y2="282.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="668.00000000" y="305.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">60</text>
+<line x1="718.33333333" y1="76.00000000" x2="718.33333333" y2="282.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="718.33333333" y="305.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">80</text>
+<line x1="819.00000000" y1="76.00000000" x2="819.00000000" y2="282.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="819.00000000" y="305.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#183247">120</text>
+<line x1="517.00000000" y1="282.00000000" x2="819.00000000" y2="282.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="506.00000000" y="287.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">0</text>
+<line x1="517.00000000" y1="213.33333333" x2="819.00000000" y2="213.33333333" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="506.00000000" y="218.33333333" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">20</text>
+<line x1="517.00000000" y1="179.00000000" x2="819.00000000" y2="179.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="506.00000000" y="184.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">30</text>
+<line x1="517.00000000" y1="144.66666667" x2="819.00000000" y2="144.66666667" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="506.00000000" y="149.66666667" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">40</text>
+<line x1="517.00000000" y1="76.00000000" x2="819.00000000" y2="76.00000000" stroke="#dce5eb" stroke-width="0.8"/>
+<text x="506.00000000" y="81.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="end" fill="#183247">60</text>
+<line x1="517.00000000" y1="282.00000000" x2="827.00000000" y2="282.00000000" stroke="#183247" stroke-width="1.7" marker-end="url(#arr)"/>
+<line x1="517.00000000" y1="282.00000000" x2="517.00000000" y2="68.00000000" stroke="#183247" stroke-width="1.7" marker-end="url(#arr)"/>
+<text x="668.00000000" y="362.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">Q (tassen per week)</text>
+<polygon data-area="CS" data-panel="p1" points="517.00000000,213.33333333 718.33333333,213.33333333 517.00000000,76.00000000" fill="#146d9b" fill-opacity=".19" stroke="#146d9b" stroke-width="1"/>
+<polygon points="517.00000000,213.33333333 718.33333333,213.33333333 517.00000000,76.00000000" fill="url(#hatch)"/>
+<text x="584.11111111" y="173.55555556" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#146d9b">CS</text>
+<polygon data-area="PS" data-panel="p1" points="517.00000000,282.00000000 617.66666667,213.33333333 517.00000000,213.33333333" fill="#247d70" fill-opacity=".19" stroke="#247d70" stroke-width="1"/>
+<polygon points="517.00000000,282.00000000 617.66666667,213.33333333 517.00000000,213.33333333" fill="url(#hatch)"/>
+<text x="550.55555556" y="242.22222222" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#247d70">PS</text>
+<polyline data-curve="V" data-panel="p1" points="517.00000000,76.00000000 819.00000000,282.00000000" fill="none" stroke="#146d9b" stroke-width="3"/>
+<text x="758.56000000" y="258.68000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#f5f8fa" stroke="#f5f8fa" stroke-width="4" stroke-linejoin="round">V</text>
+<text x="758.56000000" y="258.68000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#146d9b">V</text>
+<polyline data-curve="A" data-panel="p1" points="517.00000000,282.00000000 819.00000000,76.00000000" fill="none" stroke="#247d70" stroke-width="3"/>
+<text x="758.56000000" y="111.32000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#f5f8fa" stroke="#f5f8fa" stroke-width="4" stroke-linejoin="round">A</text>
+<text x="758.56000000" y="111.32000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#247d70">A</text>
+<line x1="517.00000000" y1="213.33333333" x2="819.00000000" y2="213.33333333" stroke="#667c8b" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="830.00000000" y="216.33333333" font-family="Lato,DejaVu Sans,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#667c8b">P = 20</text>
+<line x1="718.33333333" y1="213.33333333" x2="718.33333333" y2="282.00000000" stroke="#667c8b" stroke-width="1.2" stroke-dasharray="4 4"/>
+<circle data-point="" data-panel="p1" cx="718.33333333" cy="213.33333333" r="4" fill="#183247"/>
+<line x1="617.66666667" y1="213.33333333" x2="617.66666667" y2="282.00000000" stroke="#667c8b" stroke-width="1.2" stroke-dasharray="4 4"/>
+<circle data-point="" data-panel="p1" cx="617.66666667" cy="213.33333333" r="4" fill="#183247"/>
+<text x="668.00000000" y="336.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">CS bij Qv; PS bij Qa</text>
+</svg>

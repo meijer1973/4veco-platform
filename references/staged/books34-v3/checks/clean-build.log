@@ -1,0 +1,101 @@
+RUN build/rasterize_answer_labels.py
+Regenerated five answer PNGs from their current SVGs.
+RUN build/render.py --kinds student,answer,teacher
+Boek_3_H1_Leerling_v3 pages 48 designed 48 overflow 0
+Boek_3_H1_Antwoorden_v3 pages 31 designed 31 overflow 0
+Boek_3_H1_Docenteninformatie_v3 pages 8 designed 8 overflow 0
+Boek_3_H2_Leerling_v3 pages 34 designed 34 overflow 0
+Boek_3_H2_Antwoorden_v3 pages 22 designed 22 overflow 0
+Boek_3_H2_Docenteninformatie_v3 pages 6 designed 6 overflow 0
+Boek_3_H3_Leerling_v3 pages 38 designed 38 overflow 0
+Boek_3_H3_Antwoorden_v3 pages 17 designed 17 overflow 0
+Boek_3_H3_Docenteninformatie_v3 pages 6 designed 6 overflow 0
+Boek_4_H1_Leerling_v3 pages 48 designed 48 overflow 0
+Boek_4_H1_Antwoorden_v3 pages 26 designed 26 overflow 0
+Boek_4_H1_Docenteninformatie_v3 pages 7 designed 7 overflow 0
+Boek_4_H2_Leerling_v3 pages 60 designed 60 overflow 0
+Boek_4_H2_Antwoorden_v3 pages 24 designed 8 overflow 0
+Boek_4_H2_Docenteninformatie_v3 pages 9 designed 9 overflow 0
+Boek_4_H3_Leerling_v3 pages 44 designed 44 overflow 0
+Boek_4_H3_Antwoorden_v3 pages 16 designed 6 overflow 0
+Boek_4_H3_Docenteninformatie_v3 pages 8 designed 8 overflow 0
+RUN build/assemble.py
+Boek_3_H1_Leerling_v3_bookpages pages 48 designed 48 overflow 0
+Boek_3_H2_Leerling_v3_bookpages pages 34 designed 34 overflow 0
+Boek_3_H3_Leerling_v3_bookpages pages 38 designed 38 overflow 0
+front pages 3 designed 3 overflow 0
+back pages 7 designed 7 overflow 0
+front-answer pages 2 designed 2 overflow 0
+front-teacher pages 2 designed 2 overflow 0
+Boek_4_H1_Leerling_v3_bookpages pages 48 designed 48 overflow 0
+Boek_4_H2_Leerling_v3_bookpages pages 60 designed 60 overflow 0
+Boek_4_H3_Leerling_v3_bookpages pages 44 designed 44 overflow 0
+front pages 3 designed 3 overflow 0
+back pages 10 designed 10 overflow 0
+front-answer pages 2 designed 2 overflow 0
+front-teacher pages 2 designed 2 overflow 0
+{
+  "3": {
+    "student_pages": 132,
+    "answer": 74,
+    "teacher": 22,
+    "glossary_terms": 32,
+    "back_start": 125,
+    "formulas_start": 128
+  },
+  "4": {
+    "student_pages": 166,
+    "answer": 68,
+    "teacher": 28,
+    "glossary_terms": 57,
+    "back_start": 157,
+    "formulas_start": 163
+  }
+}
+RUN build/records.py
+Generated 31 populated candidates; 156 target subquestions
+RUN build/export_paragraphs.py
+Exported 31 paragraph PDFs
+RUN build/render_outlines.py
+Boek_3_Boekopzet_v3.pdf 11 pages
+Boek_4_Boekopzet_v3.pdf 12 pages
+Boek_3_4_Besluit_en_migratie_v3.pdf 2 pages
+RUN build/preview_targets.py
+Record-only preview: 31 targets; 26 source-figure uses
+RUN build/check_math.py
+Math: 99 passed
+RUN build/verify.py
+Verification: 598 checks; 0 failures; 734 questions; 734 answers
+RUN build/check_repairs.py
+Repair checks: 320 checks; 0 failures
+RUN -m unittest discover -s tests -v
+test_actual_derivative_dataset (test_package_repairs.ContextTests.test_actual_derivative_dataset) ... ok
+test_actual_population_dataset (test_package_repairs.ContextTests.test_actual_population_dataset) ... ok
+test_consumer_all31_without_manuscript_fallback (test_package_repairs.ContextTests.test_consumer_all31_without_manuscript_fallback) ... ok
+test_consumer_rejects_bad_asset_hash (test_package_repairs.ContextTests.test_consumer_rejects_bad_asset_hash) ... ok
+test_consumer_rejects_lost_figure (test_package_repairs.ContextTests.test_consumer_rejects_lost_figure) ... ok
+test_context_inside_exercise_survives (test_package_repairs.ContextTests.test_context_inside_exercise_survives) ... ok
+test_external_source_survives (test_package_repairs.ContextTests.test_external_source_survives) ... ok
+test_nested_original_paragraph_keeps_table_not_questions (test_package_repairs.ContextTests.test_nested_original_paragraph_keeps_table_not_questions) ... ok
+test_table_cells_and_formula_preserved (test_package_repairs.ContextTests.test_table_cells_and_formula_preserved) ... ok
+test_unattributed_subquestion_removed (test_package_repairs.ContextTests.test_unattributed_subquestion_removed) ... ok
+test_five_titles_match_current_target (test_package_repairs.FigureTests.test_five_titles_match_current_target) ... ok
+test_old_numbers_fail_same_rule (test_package_repairs.FigureTests.test_old_numbers_fail_same_rule) ... ok
+test_canonical_refs_and_concrete_asset_root (test_package_repairs.RegistryTests.test_canonical_refs_and_concrete_asset_root) ... ok
+test_counts_and_collision_titles (test_package_repairs.RegistryTests.test_counts_and_collision_titles) ... ok
+test_preserves_all24_and_does_not_mutate_input (test_package_repairs.RegistryTests.test_preserves_all24_and_does_not_mutate_input) ... ok
+test_rejects_blank_placeholder (test_package_repairs.RegistryTests.test_rejects_blank_placeholder) ... ok
+test_rejects_duplicate_candidate (test_package_repairs.RegistryTests.test_rejects_duplicate_candidate) ... ok
+test_rejects_lost_preserved_record (test_package_repairs.RegistryTests.test_rejects_lost_preserved_record) ... ok
+test_rejects_noncanonical_source_ref (test_package_repairs.RegistryTests.test_rejects_noncanonical_source_ref) ... ok
+test_rejects_unjustified_final_status (test_package_repairs.RegistryTests.test_rejects_unjustified_final_status) ... ok
+test_rejects_unknown_revision (test_package_repairs.RegistryTests.test_rejects_unknown_revision) ... ok
+test_rejects_unsafe_path_roots (test_package_repairs.RegistryTests.test_rejects_unsafe_path_roots) ... ok
+test_same_revision_not_approval_promotion (test_package_repairs.RegistryTests.test_same_revision_not_approval_promotion) ... ok
+test_top_and_record_revisions_agree (test_package_repairs.RegistryTests.test_top_and_record_revisions_agree) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.141s
+
+OK
+All repaired v3 outputs rebuilt and checked. No repository or approval was changed.

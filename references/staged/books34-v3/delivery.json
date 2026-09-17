@@ -1,0 +1,16 @@
+{
+  "delivery_id": "book34-v3-r1-r5-20260916",
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "repair_scope": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "received_zip": "Boek_3_4_v3_Integratiepakket.zip",
+  "received_sha256": "fbb6c9702d7fbd57867d751a545f2e3205c045f65258e259537bf5ff7cd63516",
+  "curriculum_change": false,
+  "independent_approval_conferred": false,
+  "repository_mutation": false
+}

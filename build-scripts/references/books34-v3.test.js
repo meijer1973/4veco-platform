@@ -70,6 +70,29 @@ test('normal retrieval export retains all 55 targets, formulas, table structure 
  expect(selected).toHaveLength(31);
  expect(selected.reduce((n,c)=>n+c.target.figures_consumed.length,0)).toBe(26);
  expect(selected.every(c=>c.curriculum_authority===false)).toBe(true);
+ for(const code of ['A43','B01','B02']){
+  const query=JSON.parse(execFileSync(process.execPath,['build-scripts/rag/query.js','--index',output,'--unit',code,'--limit','10000','--json'],{cwd:m.ROOT,encoding:'utf8',maxBuffer:8*1024*1024}));
+  const results=query.results.filter(c=>c.source_type==='target_exercise');
+  for(const id of ['1.1.1','1.1.4']){
+   const result=results.find(c=>c.entity_ids.includes(id));
+   expect(result).toBeDefined();expect(result.entity_ids).toContain(code);
+   expect(result.required_skills).toEqual(current().exercises.find(r=>r.id===id).required_skills);
+   expect(result.exam_codes).toEqual(current().exercises.find(r=>r.id===id).exam_codes);
+  }
+ }
+ const examQuery=JSON.parse(execFileSync(process.execPath,['build-scripts/rag/query.js','--index',output,'--exam-code','D1.1','--limit','10000','--json'],{cwd:m.ROOT,encoding:'utf8',maxBuffer:8*1024*1024}));
+ for(const id of ['1.2.1','1.2.4']){
+  const result=examQuery.results.find(c=>c.source_type==='target_exercise'&&c.entity_ids.includes(id));
+  expect(result.exam_codes).toContain('D1.1');
+ }
+ for(const original of current().exercises){
+  expect(get(original.id).required_skills).toEqual(original.required_skills || []);
+  expect(get(original.id).exam_codes).toEqual(original.exam_codes || []);
+  for(const code of [...(original.required_skills || []),...(original.exam_codes || [])])expect(get(original.id).entity_ids).toContain(code);
+ }
+ expect(selected.every(c=>c.required_skills.length===0&&c.exam_codes.length===0)).toBe(true);
+ expect(selected.every(c=>c.target.source_locator.repository==='meijer1973/4veco-platform'&&c.target.source_locator.package_root===m.TRANSPORT)).toBe(true);
+ expect(selected.every(c=>c.target.canonical_source_locator.repository==='meijer1973/4veco-lessen'&&c.target.canonical_source_locator.package_root===m.PACKAGE)).toBe(true);
  const table=selected.find(c=>c.target.tables_consumed>0);expect(table.target.context_html).toMatch(/<table[ >]/);expect(table.target.context_html).toMatch(/<td[ >]/);
  const source=get('3.3.4');expect(source.target.context_html).toContain('Bron A');expect(source.text).toContain('REGENJASSEN IN NERIN');expect(source.text).toContain('Bron A');expect(source.text).toContain('Bron B');
  expect(selected.every(c=>c.target.sources.length>0&&c.target.subquestions.length>0)).toBe(true);

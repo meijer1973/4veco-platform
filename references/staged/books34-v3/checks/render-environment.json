@@ -1,0 +1,169 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "default_encoding": "UTF-8",
+  "utf8_mode": 1,
+  "python_packages": {
+    "weasyprint": "68.0",
+    "PyMuPDF": "1.26.7",
+    "markdown-it-py": "4.2.0",
+    "beautifulsoup4": "4.14.3",
+    "cairosvg": "2.8.2",
+    "Pillow": "12.3.0",
+    "pydyf": "0.12.1",
+    "cffi": "2.0.0",
+    "cairocffi": "1.7.1",
+    "tinycss2": "1.5.1",
+    "tinyhtml5": "2.1.0",
+    "cssselect2": "0.9.0",
+    "pyphen": "0.17.2",
+    "fonttools": "4.63.0",
+    "soupsieve": "2.8.4",
+    "webencodings": "0.5.1",
+    "mdurl": "0.1.2",
+    "defusedxml": "0.7.1",
+    "pycparser": "3.0",
+    "Brotli": "1.2.0",
+    "zopfli": "0.4.2",
+    "typing_extensions": "4.16.0"
+  },
+  "runtime_versions": {
+    "pango-1.0": "1.56.3",
+    "cairo": "1.18.4",
+    "harfbuzz": "10.2.0",
+    "fontconfig_version_number": 21500
+  },
+  "native_libraries": {
+    "pango": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Package pango was not found in the pkg-config search path.\nPerhaps you should add the directory containing `pango.pc'\nto the PKG_CONFIG_PATH environment variable\nPackage 'pango', required by 'virtual:world', not found"
+    },
+    "cairo": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Package cairo was not found in the pkg-config search path.\nPerhaps you should add the directory containing `cairo.pc'\nto the PKG_CONFIG_PATH environment variable\nPackage 'cairo', required by 'virtual:world', not found"
+    },
+    "fontconfig": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Package fontconfig was not found in the pkg-config search path.\nPerhaps you should add the directory containing `fontconfig.pc'\nto the PKG_CONFIG_PATH environment variable\nPackage 'fontconfig', required by 'virtual:world', not found"
+    },
+    "harfbuzz": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Package harfbuzz was not found in the pkg-config search path.\nPerhaps you should add the directory containing `harfbuzz.pc'\nto the PKG_CONFIG_PATH environment variable\nPackage 'harfbuzz', required by 'virtual:world', not found"
+    }
+  },
+  "embedded_pdf_font_names": [
+    "DejaVu-Sans-Mono",
+    "DejaVu-Sans-Mono-Bold",
+    "Helvetica",
+    "Lato",
+    "Lato-Bold",
+    "Lato-Heavy",
+    "Lato-Italic",
+    "Lato-Regular",
+    "Lato-Ultra-Bold"
+  ],
+  "font_matches": [
+    {
+      "requested": "Lato",
+      "exit_code": 0,
+      "stdout": "Lato\nRegular\n/usr/share/fonts/truetype/lato/Lato-Regular.ttf",
+      "stderr": "",
+      "family": "Lato",
+      "style": "Regular",
+      "file_name": "Lato-Regular.ttf",
+      "sha256": "6f6940be0835c3ddec9199e5fc42be4cbc61ebcfd58c623fdf719366253f1780",
+      "version": [
+        "Version 2.015; 2015-08-06; http://www.latofonts.com/"
+      ]
+    },
+    {
+      "requested": "Lato:style=Bold",
+      "exit_code": 0,
+      "stdout": "Lato\nBold\n/usr/share/fonts/truetype/lato/Lato-Bold.ttf",
+      "stderr": "",
+      "family": "Lato",
+      "style": "Bold",
+      "file_name": "Lato-Bold.ttf",
+      "sha256": "bf1b8130069b44b9148eeece35e5423bedac49777ba746615b826b8276574a7b",
+      "version": [
+        "Version 2.015; 2015-08-06; http://www.latofonts.com/"
+      ]
+    },
+    {
+      "requested": "Lato:style=Italic",
+      "exit_code": 0,
+      "stdout": "Lato\nItalic\n/usr/share/fonts/truetype/lato/Lato-Italic.ttf",
+      "stderr": "",
+      "family": "Lato",
+      "style": "Italic",
+      "file_name": "Lato-Italic.ttf",
+      "sha256": "8c863f833b12bc8486671d26e3a58b13b0f9eaff1d6b10398e7c107a9b7ee05a",
+      "version": [
+        "Version 2.015; 2015-08-06; http://www.latofonts.com/"
+      ]
+    },
+    {
+      "requested": "Lato:style=Black",
+      "exit_code": 0,
+      "stdout": "Lato,Lato Black\nBlack,Regular\n/usr/share/fonts/truetype/lato/Lato-Black.ttf",
+      "stderr": "",
+      "family": "Lato,Lato Black",
+      "style": "Black,Regular",
+      "file_name": "Lato-Black.ttf",
+      "sha256": "4ed66fa3928ae769205635c916b4f9e6a63f6a77f5d9693ac31a83d0d96ae1ef",
+      "version": [
+        "Version 2.015; 2015-08-06; http://www.latofonts.com/"
+      ]
+    },
+    {
+      "requested": "DejaVu Sans",
+      "exit_code": 0,
+      "stdout": "DejaVu Sans\nBook\n/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+      "stderr": "",
+      "family": "DejaVu Sans",
+      "style": "Book",
+      "file_name": "DejaVuSans.ttf",
+      "sha256": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e",
+      "version": [
+        "Version 2.37"
+      ]
+    },
+    {
+      "requested": "DejaVu Sans:style=Bold",
+      "exit_code": 0,
+      "stdout": "DejaVu Sans\nBold\n/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+      "stderr": "",
+      "family": "DejaVu Sans",
+      "style": "Bold",
+      "file_name": "DejaVuSans-Bold.ttf",
+      "sha256": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890",
+      "version": [
+        "Version 2.37"
+      ]
+    },
+    {
+      "requested": "DejaVu Sans Mono",
+      "exit_code": 0,
+      "stdout": "DejaVu Sans Mono\nBook\n/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
+      "stderr": "",
+      "family": "DejaVu Sans Mono",
+      "style": "Book",
+      "file_name": "DejaVuSansMono.ttf",
+      "sha256": "54bf827eb99404e8f430c330ad30f063334f637eba0109b6a18d4f566a8e9dd8",
+      "version": [
+        "Version 2.37"
+      ]
+    }
+  ],
+  "weasyprint_info": {
+    "exit_code": 0,
+    "stdout": "System: Linux\nMachine: x86_64\nVersion: #1 SMP Sat Sep 12 15:35:21 UTC 2026\nRelease: 6.18.44\n\nWeasyPrint version: 68.0\nPython version: 3.13.5\nPydyf version: 0.12.1\nPango version: 15603",
+    "stderr": ""
+  },
+  "no_font_binaries_in_package": true,
+  "windows_build_performed": false
+}

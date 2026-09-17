@@ -158,6 +158,12 @@ function resultFor(chunk, score) {
     curriculum_authority: chunk.curriculum_authority === true,
     allowed_for_public_citation: chunk.allowed_for_public_citation === true,
     text_excerpt: chunk.text.slice(0, 500),
+    ...(chunk.source_type === 'target_exercise' ? {
+      record_status: chunk.record_status,
+      structure_revision: chunk.structure_revision,
+      required_skills: chunk.required_skills || [],
+      exam_codes: chunk.exam_codes || [],
+    } : {}),
     ...(chunk.target ? {record_status:chunk.record_status,structure_revision:chunk.structure_revision,target:chunk.target} : {}),
   };
 }

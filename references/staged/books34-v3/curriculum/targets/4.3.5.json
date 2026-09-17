@@ -1,0 +1,200 @@
+{
+  "id": "4.3.5",
+  "module": 4,
+  "chapter": 3,
+  "paragraph": 5,
+  "paragraph_title": "Gemengde opgaven: arbeidsmarkt",
+  "paragraph_kind": "gemengde_opgaven",
+  "introduces_new_theory": false,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.3.5",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "40",
+    "context": "Doeloefening Bronnen bij opgave 40 · Werk in Havenregio Gebruik deze bronnen voor de vragen op de rechterpagina. Bron A is een regiotelling. Bron B is een apart vereenvoudigd sectormodel. Bron C beschrijft een afzonderlijk bedrijf. Bron A · Inwoners van 15 tot 75 jaar Groep | Personen\nBetaald werk | 12.600\nGeen betaald werk, recent gezocht en direct beschikbaar | 1.400\nNiet-beroepsbevolking | 6.000 Bron B · Verpakkingssector Oorspronkelijk: Lᵥ = 240 − 10w; Lₐ = −40 + 10w. Door extra buitenlandse orders wordt de vraag Lᵥ = 280 − 10w. Het aanbod verandert niet. L is het aantal personen met ieder 20 uur per week; w is het uurloon in euro. Gebruik € 4 ≤ w ≤ € 24. Werkgevers concurreren, het loon kan vrij aanpassen en alle gevraagde plaatsen worden gevuld zonder vacatures of zoekproblemen. Figuur 24. Markeer in deze basisgrafiek het oude en nieuwe evenwicht. De verschuiving van de vraaglijn is al gegeven. Bron C · Een nieuw werkproces In een afzonderlijk bedrijf zouden de volledige uurkosten stijgen van € 24 naar € 25,20. De productiviteit zou stijgen van 8 naar 8,8 producten per uur. De omvang van de toekomstige orders en de overige productiekosten zijn nog onbekend. Een woordvoerder zegt: “Deze hogere productiviteit levert gegarandeerd meer banen op.” Opgave 40 · Werk in Havenregio Gebruik uitsluitend de relevante bronnen op de linkerpagina. Geef bij elke berekening de eenheid. Schrijf verklaringen in volledige zinnen. Controle vóór inleveren Heb je de twee noemers onderscheiden? Hebben je lonen en hoeveelheden eenheden? Is je conclusie niet sterker dan de informatie uit de bron?",
+    "context_html": "<h2>Doeloefening</h2>\n<h3>Bronnen bij opgave 40 · Werk in Havenregio</h3>\n<p>Gebruik deze bronnen voor de vragen op de rechterpagina. <strong>Bron A is een regiotelling. Bron B is een apart vereenvoudigd sectormodel.</strong> Bron C beschrijft een afzonderlijk bedrijf.</p>\n<div class=\"source\">\n<p><b>Bron A · Inwoners van 15 tot 75 jaar</b><br/><table><thead><tr><th>Groep</th><th>Personen</th></tr></thead><tbody><tr><td>Betaald werk</td><td>12.600</td></tr><tr><td>Geen betaald werk, recent gezocht en direct beschikbaar</td><td>1.400</td></tr><tr><td>Niet-beroepsbevolking</td><td>6.000</td></tr></tbody></table></p>\n</div>\n<div class=\"source\"><b>Bron B · Verpakkingssector</b><br/>Oorspronkelijk: Lᵥ = 240 − 10w; Lₐ = −40 + 10w. Door extra buitenlandse orders wordt de vraag Lᵥ = 280 − 10w. Het aanbod verandert niet.<br/>L is het aantal personen met ieder 20 uur per week; w is het uurloon in euro. Gebruik € 4 ≤ w ≤ € 24. Werkgevers concurreren, het loon kan vrij aanpassen en alle gevraagde plaatsen worden gevuld zonder vacatures of zoekproblemen.</div>\n<figure><img alt=\"Figuur 24. Markeer in deze basisgrafiek het oude en nieuwe evenwicht. De verschuiving van de vraaglijn is al gegeven.\" src=\"books/book-4/chapters/4.3/_assets/mixed_base.svg\"/><figcaption>Figuur 24. Markeer in deze basisgrafiek het oude en nieuwe evenwicht. De verschuiving van de vraaglijn is al gegeven.</figcaption></figure>\n<div class=\"source\"><b>Bron C · Een nieuw werkproces</b><br/>In een afzonderlijk bedrijf zouden de volledige uurkosten stijgen van € 24 naar € 25,20. De productiviteit zou stijgen van 8 naar 8,8 producten per uur. De omvang van de toekomstige orders en de overige productiekosten zijn nog onbekend. Een woordvoerder zegt: “Deze hogere productiviteit levert gegarandeerd meer banen op.”</div>\n<div class=\"exercise target\" data-exercise=\"40\" id=\"opg40\"><p><b>Opgave 40 · Werk in Havenregio</b></p><p>Gebruik uitsluitend de relevante bronnen op de linkerpagina. Geef bij elke berekening de eenheid. Schrijf verklaringen in volledige zinnen.</p></div>\n<div class=\"box summary\"><b>Controle vóór inleveren</b><br/>Heb je de twee noemers onderscheiden? Hebben je lonen en hoeveelheden eenheden? Is je conclusie niet sterker dan de informatie uit de bron?</div>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n### Bronnen bij opgave 40 · Werk in Havenregio\nGebruik deze bronnen voor de vragen op de rechterpagina. **Bron A is een regiotelling. Bron B is een apart vereenvoudigd sectormodel.** Bron C beschrijft een afzonderlijk bedrijf.\n\n<div class=\"source\"><b>Bron A · Inwoners van 15 tot 75 jaar</b><br><table><thead><tr><th>Groep</th><th>Personen</th></tr></thead><tbody><tr><td>Betaald werk</td><td>12.600</td></tr><tr><td>Geen betaald werk, recent gezocht en direct beschikbaar</td><td>1.400</td></tr><tr><td>Niet-beroepsbevolking</td><td>6.000</td></tr></tbody></table>\n\n</div>\n\n<div class=\"source\"><b>Bron B · Verpakkingssector</b><br>Oorspronkelijk: Lᵥ = 240 − 10w; Lₐ = −40 + 10w. Door extra buitenlandse orders wordt de vraag Lᵥ = 280 − 10w. Het aanbod verandert niet.<br>L is het aantal personen met ieder 20 uur per week; w is het uurloon in euro. Gebruik € 4 ≤ w ≤ € 24. Werkgevers concurreren, het loon kan vrij aanpassen en alle gevraagde plaatsen worden gevuld zonder vacatures of zoekproblemen.</div>\n\n<figure><img src=\"_assets/mixed_base.svg\" alt=\"Figuur 24. Markeer in deze basisgrafiek het oude en nieuwe evenwicht. De verschuiving van de vraaglijn is al gegeven.\"><figcaption>Figuur 24. Markeer in deze basisgrafiek het oude en nieuwe evenwicht. De verschuiving van de vraaglijn is al gegeven.</figcaption></figure>\n\n<div class=\"source\"><b>Bron C · Een nieuw werkproces</b><br>In een afzonderlijk bedrijf zouden de volledige uurkosten stijgen van € 24 naar € 25,20. De productiviteit zou stijgen van 8 naar 8,8 producten per uur. De omvang van de toekomstige orders en de overige productiekosten zijn nog onbekend. Een woordvoerder zegt: “Deze hogere productiviteit levert gegarandeerd meer banen op.”</div>\n\n<div class=\"exercise target\" id=\"opg40\" data-exercise=\"40\"><p><b>Opgave 40 · Werk in Havenregio</b></p><p>Gebruik uitsluitend de relevante bronnen op de linkerpagina. Geef bij elke berekening de eenheid. Schrijf verklaringen in volledige zinnen.</p><p data-question=\"40a\"><b>a.</b> <span class=\"muted\">(3p)</span> Bereken met bron A de beroepsbevolking, bruto-participatie en het werkloosheidspercentage.</p><p data-question=\"40b\"><b>b.</b> <span class=\"muted\">(2p)</span> Bereken met bron B zelfstandig het oorspronkelijke evenwichtsloon en de werkgelegenheid.</p><p data-question=\"40c\"><b>c.</b> <span class=\"muted\">(2p)</span> Bereken het nieuwe evenwicht na de extra orders. Markeer beide evenwichten in de basisgrafiek.</p><p data-question=\"40d\"><b>d.</b> <span class=\"muted\">(2p)</span> Een leerling zegt: “De loonstijging verschuift de arbeidsvraag naar rechts.” Verbeter dit met bron B en benoem wat langs de aanbodlijn gebeurt.</p><p data-question=\"40e\"><b>e.</b> <span class=\"muted\">(3p)</span> Bereken met bron C de loonkosten per product vóór en na het nieuwe werkproces en de procentuele verandering.</p><p data-question=\"40f\"><b>f.</b> <span class=\"muted\">(2p)</span> Beoordeel de garantie van meer banen in bron C. Noem één ondersteunde uitkomst en één ontbrekend gegeven dat de werkgelegenheid kan beïnvloeden.</p></div>\n\n<div class=\"box summary\"><b>Controle vóór inleveren</b><br>Heb je de twee noemers onderscheiden? Hebben je lonen en hoeveelheden eenheden? Is je conclusie niet sterker dan de informatie uit de bron?</div>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-4/chapters/4.3/_assets/mixed_base.svg",
+        "sha256": "ab75cd59d5c8a2707969a9f81601ca664893d9d3efe87dd646de65fbad6660da"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 3,
+        "prompt": "Bereken met bron A de beroepsbevolking, bruto-participatie en het werkloosheidspercentage.",
+        "observable_operation": "Bereken met bron A de beroepsbevolking, bruto-participatie en het werkloosheidspercentage.",
+        "source_question_id": "40a"
+      },
+      {
+        "label": "b",
+        "points": 2,
+        "prompt": "Bereken met bron B zelfstandig het oorspronkelijke evenwichtsloon en de werkgelegenheid.",
+        "observable_operation": "Bereken met bron B zelfstandig het oorspronkelijke evenwichtsloon en de werkgelegenheid.",
+        "source_question_id": "40b"
+      },
+      {
+        "label": "c",
+        "points": 2,
+        "prompt": "Bereken het nieuwe evenwicht na de extra orders. Markeer beide evenwichten in de basisgrafiek.",
+        "observable_operation": "Bereken het nieuwe evenwicht na de extra orders. Markeer beide evenwichten in de basisgrafiek.",
+        "source_question_id": "40c"
+      },
+      {
+        "label": "d",
+        "points": 2,
+        "prompt": "Een leerling zegt: “De loonstijging verschuift de arbeidsvraag naar rechts.” Verbeter dit met bron B en benoem wat langs de aanbodlijn gebeurt.",
+        "observable_operation": "Een leerling zegt: “De loonstijging verschuift de arbeidsvraag naar rechts.” Verbeter dit met bron B en benoem wat langs de aanbodlijn gebeurt.",
+        "source_question_id": "40d"
+      },
+      {
+        "label": "e",
+        "points": 3,
+        "prompt": "Bereken met bron C de loonkosten per product vóór en na het nieuwe werkproces en de procentuele verandering.",
+        "observable_operation": "Bereken met bron C de loonkosten per product vóór en na het nieuwe werkproces en de procentuele verandering.",
+        "source_question_id": "40e"
+      },
+      {
+        "label": "f",
+        "points": 2,
+        "prompt": "Beoordeel de garantie van meer banen in bron C. Noem één ondersteunde uitkomst en één ontbrekend gegeven dat de werkgelegenheid kan beïnvloeden.",
+        "observable_operation": "Beoordeel de garantie van meer banen in bron C. Noem één ondersteunde uitkomst en één ontbrekend gegeven dat de werkgelegenheid kan beïnvloeden.",
+        "source_question_id": "40f"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. Bevolking = 12.600 + 1.400 + 6.000 = 20.000 personen . Beroepsbevolking = 14.000 personen . Bruto = 14.000 / 20.000 × 100% = 70% . Werkloosheid = 1.400 / 14.000 × 100% = 10% . Waarom: Participatie en werkloosheid hebben verschillende noemers.",
+    "b": "b. 240 − 10w = −40 + 10w → 280 = 20w → w = € 14 . L = 240 − 10 × 14 = 100 personen . Waarom: Bij het evenwicht zijn arbeidsvraag en arbeidsaanbod gelijk.",
+    "c": "c. 280 − 10w = −40 + 10w → 320 = 20w → w = € 16 . L = 280 − 10 × 16 = 120 personen . E₀ = (100;14); E₁ = (120;16). Waarom: Extra orders verschuiven arbeidsvraag naar rechts; de nieuwe werkgelegenheid is hoger.",
+    "d": "d. De extra exportorders verschuiven de arbeidsvraag. Het hogere loon is een uitkomst van de nieuwe verhouding. Langs de gelijk gebleven aanbodlijn stijgt de aangeboden hoeveelheid van 100 naar 120 personen. Waarom: Oorzaak van een lijnverschuiving en beweging langs een andere lijn zijn verschillende onderdelen van de aanpassing.",
+    "e": "e. Oud = 24 / 8 = € 3 per product . Nieuw = 25,20 / 8,8 = € 2,863636… ≈ € 2,86 per product . Verandering = (2,863636… − 3) / 3 × 100% ≈ −4,55% . Waarom: Reken met onafgeronde bedragen tot het eindantwoord.",
+    "f": "f. Onder de veronderstelde veranderingen dalen de loonkosten per product. Meer banen zijn niet gegarandeerd: de toekomstige productie/orders ontbreken. Bij dezelfde productie zou de hogere productiviteit juist minder arbeidsuren vragen. Waarom: Een dalend bedrag per product bepaalt niet vanzelf hoeveel producten worden gemaakt of hoeveel mensen werken."
+  },
+  "answer_model_support_html": [],
+  "answer_figures": [],
+  "lesson_goals": [
+    "Je kunt informatie uit verschillende arbeidsmarktbronnen gebruiken.",
+    "Je kunt zelfstandig een loon en hoeveelheid berekenen.",
+    "Je kunt participatie, werkloosheid, productiviteit en marktuitkomsten verbinden zonder verschillende grootheden te verwarren."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.3.5-a",
+      "description": "Bereken met bron A de beroepsbevolking, bruto-participatie en het werkloosheidspercentage."
+    },
+    {
+      "local_operation_id": "4.3.5-b",
+      "description": "Bereken met bron B zelfstandig het oorspronkelijke evenwichtsloon en de werkgelegenheid."
+    },
+    {
+      "local_operation_id": "4.3.5-c",
+      "description": "Bereken het nieuwe evenwicht na de extra orders. Markeer beide evenwichten in de basisgrafiek."
+    },
+    {
+      "local_operation_id": "4.3.5-d",
+      "description": "Een leerling zegt: “De loonstijging verschuift de arbeidsvraag naar rechts.” Verbeter dit met bron B en benoem wat langs de aanbodlijn gebeurt."
+    },
+    {
+      "local_operation_id": "4.3.5-e",
+      "description": "Bereken met bron C de loonkosten per product vóór en na het nieuwe werkproces en de procentuele verandering."
+    },
+    {
+      "local_operation_id": "4.3.5-f",
+      "description": "Beoordeel de garantie van meer banen in bron C. Noem één ondersteunde uitkomst en één ontbrekend gegeven dat de werkgelegenheid kan beïnvloeden."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Retrieve only retained §§4.3.1–4.3.4 and earlier familiar market methods. Keep independent equilibrium/shift evidence so that shortening the chapter does not silently remove it. General claims about employment still require both labour-productivity and output information, as taught in §4.3.1."
+  ],
+  "new_skills_introduced": [],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "In old mixed exercise 48, replace the cao wage floor by a clearly stated illustrative minimum wage, or select another already-taught wage-floor case. Remove or revise old 49's source C and 49f only to the extent needed by the retained goals; do not delete the useful data-limited employment reasoning already in §4.3.1. Update the final return-reference to old §4.3.5. The new numeric ID 4.3.5 is a mixed paragraph, not the old bargaining paragraph. Deferred goals must not return in compulsory homework, tests or an unexplained bonus.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.3.5",
+  "structural_retrieval_plan": "Retrieve only retained §§4.3.1–4.3.4 and earlier familiar market methods. Keep independent equilibrium/shift evidence so that shortening the chapter does not silently remove it. General claims about employment still require both labour-productivity and output information, as taught in §4.3.1.",
+  "structural_scope_boundary": "In old mixed exercise 48, replace the cao wage floor by a clearly stated illustrative minimum wage, or select another already-taught wage-floor case. Remove or revise old 49's source C and 49f only to the extent needed by the retained goals; do not delete the useful data-limited employment reasoning already in §4.3.1. Update the final return-reference to old §4.3.5. The new numeric ID 4.3.5 is a mixed paragraph, not the old bargaining paragraph. Deferred goals must not return in compulsory homework, tests or an unexplained bonus.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.3/4.3.5 manuscript.md",
+    "student_manuscript_sha256": "701235d7ec86b72d7bb32db08b1845c97f43c9accf46e0fe14bb629d12de96a1",
+    "answer_file": "books/book-4/chapters/4.3/Antwoorden.md",
+    "answer_file_sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f",
+    "chapter_student_pages": [
+      40,
+      41
+    ],
+    "complete_book_pages": [
+      152,
+      153
+    ]
+  },
+  "lesson_route": {
+    "start": "37",
+    "independent": "39",
+    "guided_or_alternative": "38 als gerichte productiviteitsherhaling",
+    "target": "40",
+    "target_subquestions": [
+      "40a",
+      "40b",
+      "40c",
+      "40d",
+      "40e",
+      "40f"
+    ],
+    "minutes": {
+      "Start / ophalen": 7,
+      "Motivatie": 0,
+      "Instructie": 4,
+      "Uitgewerkt voorbeeld": 0,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 26,
+      "Feedback / afronding": 6
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Dit is de hernummerde gemengde les, niet de oude cao-les. Bron C beschrijft een werkproces; de rekentechniek komt uit §4.3.1.",
+    "assessment_boundaries": "Het minimumloon in opgave 39 vraagt geen kennis van cao’s. Het hoofdstuk behoudt participatie, werkloosheid, evenwicht, verschuivingen en productiviteit; collectieve onderhandelingen en scholingsbeleid zijn uitgesteld."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.3.6",
+      "disposition": "renumber;revise_scope",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "0d9d7d956efd45a545a9dc05e6a68e102ba920d064399b984ead734b3475a075"
+}

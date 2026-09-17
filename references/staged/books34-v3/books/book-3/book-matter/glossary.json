@@ -1,0 +1,290 @@
+[
+  {
+    "term": "Absoluut voordeel",
+    "definitions": [
+      {
+        "definition": "Minder productiemiddelen nodig hebben voor hetzelfde product en dezelfde kwaliteit.",
+        "chapter": "3.3"
+      }
+    ]
+  },
+  {
+    "term": "Afwentelingspercentage",
+    "definitions": [
+      {
+        "definition": "Het aandeel van de koper: welk deel van de belasting komt via een hogere prijs bij kopers terecht?",
+        "chapter": "3.1"
+      }
+    ]
+  },
+  {
+    "term": "Belastingopbrengst (O)",
+    "definitions": [
+      {
+        "definition": "De overheid ontvangt alleen belasting over werkelijk verkochte producten. O = t × Qt.",
+        "chapter": "3.1"
+      }
+    ]
+  },
+  {
+    "term": "Belastingwig",
+    "definitions": [
+      {
+        "definition": "Het verschil tussen de kopersprijs en de verkopersontvangst na belasting: Pc − Pp = t.",
+        "chapter": "3.1"
+      }
+    ]
+  },
+  {
+    "term": "Binnenlands verbruik Qv",
+    "definitions": [
+      {
+        "definition": "Wat de binnenlandse kopers bij de gegeven prijs gebruiken.",
+        "chapter": "3.3"
+      }
+    ]
+  },
+  {
+    "term": "Binnenlandse productie Qa",
+    "definitions": [
+      {
+        "definition": "Wat de binnenlandse aanbieders bij de gegeven prijs leveren.",
+        "chapter": "3.3"
+      }
+    ]
+  },
+  {
+    "term": "Comparatief voordeel",
+    "definitions": [
+      {
+        "definition": "Relatief minder andere productie opofferen: lagere alternatieve kosten.",
+        "chapter": "3.3"
+      }
+    ]
+  },
+  {
+    "term": "Concurrentiepositie",
+    "definitions": [
+      {
+        "definition": "Kunnen concurreren door bijvoorbeeld prijs, kwaliteit en betrouwbare levering.",
+        "chapter": "3.3"
+      }
+    ]
+  },
+  {
+    "term": "Differentiëren",
+    "definitions": [
+      {
+        "definition": "Hier: uit aq² + bq + c de afgeleide 2aq + b maken.",
+        "chapter": "3.2"
+      }
+    ]
+  },
+  {
+    "term": "GO",
+    "definitions": [
+      {
+        "definition": "Gemiddelde opbrengst: TO / q, in euro per product.",
+        "chapter": "3.2"
+      }
+    ]
+  },
+  {
+    "term": "GTK",
+    "definitions": [
+      {
+        "definition": "Gemiddelde totale kosten: TK / q, bij de gekozen q.",
+        "chapter": "3.2"
+      }
+    ]
+  },
+  {
+    "term": "Import / export",
+    "definitions": [
+      {
+        "definition": "Kopen uit / verkopen aan het buitenland.",
+        "chapter": "3.3"
+      }
+    ]
+  },
+  {
+    "term": "Importquotum",
+    "definitions": [
+      {
+        "definition": "Een maximum aan de import in een periode.",
+        "chapter": "3.3"
+      }
+    ]
+  },
+  {
+    "term": "Invoerheffing",
+    "definitions": [
+      {
+        "definition": "Een bedrag per ingevoerd product.",
+        "chapter": "3.3"
+      }
+    ]
+  },
+  {
+    "term": "Kopersprijs (Pc)",
+    "definitions": [
+      {
+        "definition": "De prijs die de consument betaalt.",
+        "chapter": "3.1"
+      }
+    ]
+  },
+  {
+    "term": "Maximumprijs",
+    "definitions": [
+      {
+        "definition": "De hoogste toegestane verkoopprijs. Een maximumprijs onder de vrije evenwichtsprijs is in dit model bindend.",
+        "chapter": "3.1"
+      }
+    ]
+  },
+  {
+    "term": "Minimumprijs",
+    "definitions": [
+      {
+        "definition": "De laagste toegestane verkoopprijs. Een minimumprijs boven de vrije evenwichtsprijs is in dit model bindend.",
+        "chapter": "3.1"
+      }
+    ]
+  },
+  {
+    "term": "MK",
+    "definitions": [
+      {
+        "definition": "Extra kosten per extra product; in het doorlopende model de afgeleide van TK.",
+        "chapter": "3.2"
+      }
+    ]
+  },
+  {
+    "term": "MO",
+    "definitions": [
+      {
+        "definition": "Extra opbrengst per extra product; bij een vaste prijs gelijk aan P.",
+        "chapter": "3.2"
+      }
+    ]
+  },
+  {
+    "term": "Prijsnemer",
+    "definitions": [
+      {
+        "definition": "Onderneming die de marktprijs als gegeven neemt.",
+        "chapter": "3.2"
+      }
+    ]
+  },
+  {
+    "term": "Productiecapaciteit",
+    "definitions": [
+      {
+        "definition": "Grootste hoeveelheid die een bedrijf in de periode kan produceren.",
+        "chapter": "3.2"
+      }
+    ]
+  },
+  {
+    "term": "Productiequotum",
+    "definitions": [
+      {
+        "definition": "Een maximaal toegestane productie.",
+        "chapter": "3.1"
+      }
+    ]
+  },
+  {
+    "term": "Protectionisme",
+    "definitions": [
+      {
+        "definition": "Binnenlandse producenten beschermen door handel te beperken.",
+        "chapter": "3.3"
+      }
+    ]
+  },
+  {
+    "term": "Q en q",
+    "definitions": [
+      {
+        "definition": "Q: totale markthoeveelheid. q: afzet of productie van één onderneming.",
+        "chapter": "3.2"
+      }
+    ]
+  },
+  {
+    "term": "Specialisatie",
+    "definitions": [
+      {
+        "definition": "Je sterker toeleggen op bepaalde activiteiten.",
+        "chapter": "3.3"
+      }
+    ]
+  },
+  {
+    "term": "Subsidiewig",
+    "definitions": [
+      {
+        "definition": "De producent ontvangt de betaling van de koper plus de subsidie. Pp − Pc = s.",
+        "chapter": "3.1"
+      }
+    ]
+  },
+  {
+    "term": "TO",
+    "definitions": [
+      {
+        "definition": "Totale opbrengst: P × q, in euro per periode.",
+        "chapter": "3.2"
+      }
+    ]
+  },
+  {
+    "term": "Verkopersontvangst (Pp)",
+    "definitions": [
+      {
+        "definition": "Het bedrag per verkocht product na belasting of inclusief subsidie, maar vóór productiekosten.",
+        "chapter": "3.1"
+      }
+    ]
+  },
+  {
+    "term": "Volkomen concurrentie",
+    "definitions": [
+      {
+        "definition": "Marktmodel met veel kleine deelnemers, een homogeen product, informatie en vrije toe- en uittreding.",
+        "chapter": "3.2"
+      }
+    ]
+  },
+  {
+    "term": "Welvaartsverlies (W)",
+    "definitions": [
+      {
+        "definition": "Het gezamenlijke gemiste voordeel van transacties die door de belastingwig niet tot stand komen.",
+        "chapter": "3.1"
+      }
+    ]
+  },
+  {
+    "term": "Wereldmarktprijs Pw",
+    "definitions": [
+      {
+        "definition": "De gegeven prijs waartegen een klein land kan handelen.",
+        "chapter": "3.3"
+      }
+    ]
+  },
+  {
+    "term": "Winstmaximalisatie",
+    "definitions": [
+      {
+        "definition": "De beste haalbare productie kiezen met een marginale vergelijking en grenscontrole.",
+        "chapter": "3.2"
+      }
+    ]
+  }
+]

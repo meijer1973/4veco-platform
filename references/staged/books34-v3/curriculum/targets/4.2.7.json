@@ -1,0 +1,204 @@
+{
+  "id": "4.2.7",
+  "module": 4,
+  "chapter": 2,
+  "paragraph": 7,
+  "paragraph_title": "Gemengde opgaven: marktvormen en marktfalen",
+  "paragraph_kind": "gemengde_opgaven",
+  "introduces_new_theory": false,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.2.7",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "58",
+    "context": "Doeloefening Bron A · Studio Solo Eén aanbieder verhuurt de hele afgebakende markt voor studiosessies. Vraag: P = 70 − Q. TK = 100 + 10Q + 0,5Q² en MK = 10 + Q. Q is sessies per week en P euro per sessie. Capaciteit: 50 sessies. Constante kosten blijven in deze week gelijk. Er zijn geen externe effecten. De efficiënte vergelijkingsuitkomst bij dezelfde vraag en kosten is Qe = 30, Pe = € 40 en TSe = € 900 per week. Figuur 31. Bron A: vraag, MO en MK voor dezelfde markt. De monopolie-uitkomst is nog niet gemarkeerd. Bron B · Reiniging bij woningen Veel aanbieders leveren dezelfde dienst. Vraag: Pc = 60 − Q; aanbod: Pp = Q. Q is diensten per dag; prijzen zijn euro per dienst. Iedere dienst veroorzaakt € 20 niet-vergoede schade aan omwonenden. Producenten gaan € 20 per dienst afdragen. Na de heffing zijn CS en PS elk € 200 per dag. Zonder ingrijpen is het maatschappelijk surplus € 300 per dag. Geen uitvoeringskosten of andere externe effecten. Figuur 32. Bron B: private en maatschappelijke kosten. Het gaat hier om een andere markt en een andere periode dan in bron A. Opgave 58 · Twee markten, twee oorzaken Gebruik de bronnen op de linkerpagina. Onderbouw berekeningen met eenheden en conclusies met brongegevens. Controleer vóór je afsluit Is PS onderscheiden van winst? Is de prijs op de juiste lijn afgelezen? Zijn schade en overheidsontvangst allebei meegenomen? Gaat je conclusie alleen over de markt waarvoor je hebt gerekend? Schrijf geen grotere conclusie dan je bewijs Een berekende verbetering in bron B is geen bewijs dat elke omwonende schadeloos is gesteld. Het welvaartsverlies in A is geen bewijs dat de hoogste mogelijke afzet altijd gewenst is. Je antwoord moet bij vraag, kosten, derden en de periode uit de bron blijven.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"source\"><b>Bron A · Studio Solo</b><br/>Eén aanbieder verhuurt de hele afgebakende markt voor studiosessies. Vraag: P = 70 − Q. TK = 100 + 10Q + 0,5Q² en MK = 10 + Q. Q is sessies per week en P euro per sessie. Capaciteit: 50 sessies. Constante kosten blijven in deze week gelijk. Er zijn geen externe effecten. De efficiënte vergelijkingsuitkomst bij dezelfde vraag en kosten is Qe = 30, Pe = € 40 en TSe = € 900 per week.</div>\n<figure><img alt=\"Figuur 31. Bron A: vraag, MO en MK voor dezelfde markt. De monopolie-uitkomst is nog niet gemarkeerd.\" src=\"books/book-4/chapters/4.2/_assets/427_A.svg\"/><figcaption>Figuur 31. Bron A: vraag, MO en MK voor dezelfde markt. De monopolie-uitkomst is nog niet gemarkeerd.</figcaption></figure>\n<div class=\"source\"><b>Bron B · Reiniging bij woningen</b><br/>Veel aanbieders leveren dezelfde dienst. Vraag: Pc = 60 − Q; aanbod: Pp = Q. Q is diensten per dag; prijzen zijn euro per dienst. Iedere dienst veroorzaakt € 20 niet-vergoede schade aan omwonenden. Producenten gaan € 20 per dienst afdragen. Na de heffing zijn CS en PS elk € 200 per dag. Zonder ingrijpen is het maatschappelijk surplus € 300 per dag. Geen uitvoeringskosten of andere externe effecten.</div>\n<figure><img alt=\"Figuur 32. Bron B: private en maatschappelijke kosten. Het gaat hier om een andere markt en een andere periode dan in bron A.\" src=\"books/book-4/chapters/4.2/_assets/427_B.svg\"/><figcaption>Figuur 32. Bron B: private en maatschappelijke kosten. Het gaat hier om een andere markt en een andere periode dan in bron A.</figcaption></figure>\n<div class=\"exercise target\" data-exercise=\"58\" id=\"opg58\"><p><b>Opgave 58 · Twee markten, twee oorzaken</b></p><p>Gebruik de bronnen op de linkerpagina. Onderbouw berekeningen met eenheden en conclusies met brongegevens.</p></div>\n<div class=\"box small\"><b>Controleer vóór je afsluit</b><br/>Is PS onderscheiden van winst? Is de prijs op de juiste lijn afgelezen? Zijn schade en overheidsontvangst allebei meegenomen? Gaat je conclusie alleen over de markt waarvoor je hebt gerekend?</div>\n<h3>Schrijf geen grotere conclusie dan je bewijs</h3>\n<p>Een berekende verbetering in bron B is geen bewijs dat elke omwonende schadeloos is gesteld. Het welvaartsverlies in A is geen bewijs dat de hoogste mogelijke afzet altijd gewenst is. Je antwoord moet bij vraag, kosten, derden en de periode uit de bron blijven.</p>\n",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n<div class=\"source\"><b>Bron A · Studio Solo</b><br>Eén aanbieder verhuurt de hele afgebakende markt voor studiosessies. Vraag: P = 70 − Q. TK = 100 + 10Q + 0,5Q² en MK = 10 + Q. Q is sessies per week en P euro per sessie. Capaciteit: 50 sessies. Constante kosten blijven in deze week gelijk. Er zijn geen externe effecten. De efficiënte vergelijkingsuitkomst bij dezelfde vraag en kosten is Qe = 30, Pe = € 40 en TSe = € 900 per week.</div>\n\n<figure><img src=\"_assets/427_A.svg\" alt=\"Figuur 31. Bron A: vraag, MO en MK voor dezelfde markt. De monopolie-uitkomst is nog niet gemarkeerd.\"><figcaption>Figuur 31. Bron A: vraag, MO en MK voor dezelfde markt. De monopolie-uitkomst is nog niet gemarkeerd.</figcaption></figure>\n\n<div class=\"source\"><b>Bron B · Reiniging bij woningen</b><br>Veel aanbieders leveren dezelfde dienst. Vraag: Pc = 60 − Q; aanbod: Pp = Q. Q is diensten per dag; prijzen zijn euro per dienst. Iedere dienst veroorzaakt € 20 niet-vergoede schade aan omwonenden. Producenten gaan € 20 per dienst afdragen. Na de heffing zijn CS en PS elk € 200 per dag. Zonder ingrijpen is het maatschappelijk surplus € 300 per dag. Geen uitvoeringskosten of andere externe effecten.</div>\n\n<figure><img src=\"_assets/427_B.svg\" alt=\"Figuur 32. Bron B: private en maatschappelijke kosten. Het gaat hier om een andere markt en een andere periode dan in bron A.\"><figcaption>Figuur 32. Bron B: private en maatschappelijke kosten. Het gaat hier om een andere markt en een andere periode dan in bron A.</figcaption></figure>\n\n<div class=\"exercise target\" id=\"opg58\" data-exercise=\"58\"><p><b>Opgave 58 · Twee markten, twee oorzaken</b></p><p>Gebruik de bronnen op de linkerpagina. Onderbouw berekeningen met eenheden en conclusies met brongegevens.</p><p data-question=\"58a\"><b>a.</b> <span class=\"muted\">(3p)</span> Bepaal voor Studio Solo de winstmaximale hoeveelheid en verkoopprijs. Bereken ook de winst.</p><p data-question=\"58b\"><b>b.</b> <span class=\"muted\">(4p)</span> Bereken CS, PS en TS bij Solo en vergelijk met het gegeven TSe. Arceer het welvaartsverlies in figuur A.</p><p data-question=\"58c\"><b>c.</b> <span class=\"muted\">(3p)</span> Bereken in bron B de belaste hoeveelheid, Pc, Pp en de heffingsopbrengst.</p><p data-question=\"58d\"><b>d.</b> <span class=\"muted\">(2p)</span> Bereken met bron B het maatschappelijk surplus na de heffing en de verandering ten opzichte van de beginsituatie.</p><p data-question=\"58e\"><b>e.</b> <span class=\"muted\">(2p)</span> Leg uit waarom minder verkopen bij Solo welvaartsverlies geeft, maar minder diensten in bron B juist verbetering kan geven.</p><p data-question=\"58f\"><b>f.</b> <span class=\"muted\">(2p)</span> Beoordeel: “Een heffing van € 20 is dus ook vanzelf de beste oplossing voor Studio Solo.”</p></div>\n\n<div class=\"box small\"><b>Controleer vóór je afsluit</b><br>Is PS onderscheiden van winst? Is de prijs op de juiste lijn afgelezen? Zijn schade en overheidsontvangst allebei meegenomen? Gaat je conclusie alleen over de markt waarvoor je hebt gerekend?</div>\n\n\n### Schrijf geen grotere conclusie dan je bewijs\nEen berekende verbetering in bron B is geen bewijs dat elke omwonende schadeloos is gesteld. Het welvaartsverlies in A is geen bewijs dat de hoogste mogelijke afzet altijd gewenst is. Je antwoord moet bij vraag, kosten, derden en de periode uit de bron blijven."
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-4/chapters/4.2/_assets/427_A.svg",
+        "sha256": "d134e29688966ff6a6d41884789b007659616f4650db6fce4bd425c559bb1558"
+      },
+      {
+        "path": "books/book-4/chapters/4.2/_assets/427_B.svg",
+        "sha256": "37c3ad2c96f8977a2534d9d3ea000bce56ae9502ad267e48e9c0103441aeb9c8"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 3,
+        "prompt": "Bepaal voor Studio Solo de winstmaximale hoeveelheid en verkoopprijs. Bereken ook de winst.",
+        "observable_operation": "Bepaal voor Studio Solo de winstmaximale hoeveelheid en verkoopprijs. Bereken ook de winst.",
+        "source_question_id": "58a"
+      },
+      {
+        "label": "b",
+        "points": 4,
+        "prompt": "Bereken CS, PS en TS bij Solo en vergelijk met het gegeven TSe. Arceer het welvaartsverlies in figuur A.",
+        "observable_operation": "Bereken CS, PS en TS bij Solo en vergelijk met het gegeven TSe. Arceer het welvaartsverlies in figuur A.",
+        "source_question_id": "58b"
+      },
+      {
+        "label": "c",
+        "points": 3,
+        "prompt": "Bereken in bron B de belaste hoeveelheid, Pc, Pp en de heffingsopbrengst.",
+        "observable_operation": "Bereken in bron B de belaste hoeveelheid, Pc, Pp en de heffingsopbrengst.",
+        "source_question_id": "58c"
+      },
+      {
+        "label": "d",
+        "points": 2,
+        "prompt": "Bereken met bron B het maatschappelijk surplus na de heffing en de verandering ten opzichte van de beginsituatie.",
+        "observable_operation": "Bereken met bron B het maatschappelijk surplus na de heffing en de verandering ten opzichte van de beginsituatie.",
+        "source_question_id": "58d"
+      },
+      {
+        "label": "e",
+        "points": 2,
+        "prompt": "Leg uit waarom minder verkopen bij Solo welvaartsverlies geeft, maar minder diensten in bron B juist verbetering kan geven.",
+        "observable_operation": "Leg uit waarom minder verkopen bij Solo welvaartsverlies geeft, maar minder diensten in bron B juist verbetering kan geven.",
+        "source_question_id": "58e"
+      },
+      {
+        "label": "f",
+        "points": 2,
+        "prompt": "Beoordeel: “Een heffing van € 20 is dus ook vanzelf de beste oplossing voor Studio Solo.”",
+        "observable_operation": "Beoordeel: “Een heffing van € 20 is dus ook vanzelf de beste oplossing voor Studio Solo.”",
+        "source_question_id": "58f"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. MO = 70 − 2Q. 70 − 2Q = 10 + Q geeft Qm = 20 sessies per week. MO daalt door MK en 20 past binnen 50. Pm = € 50. TO = 50 × 20 = € 1.000; TK = 100 + 10 × 20 + 0,5 × 20² = € 500; winst = € 500 per week.",
+    "b": "b. CS = ½ × 20 × (70 − 50) = € 200. MK(20) = € 30; PS = 20 × (50 − 30) + ½ × 20 × (30 − 10) = € 600. TS = € 800. Welvaartsverlies = 900 − 800 = € 100 per week. Het is de driehoek tussen vraag en MK van Q = 20 tot Q = 30, basis 10 en hoogte 20.",
+    "c": "c. Pc = Pp + 20: 60 − Q = Q + 20 → Q = 20 diensten per dag. Pc = € 40; Pp = € 20. Heffingsopbrengst = 20 × 20 = € 400 per dag.",
+    "d": "d. Totale externe schade na heffing = 20 × 20 = € 400 per dag. Maatschappelijk surplus = 200 + 200 + 400 − 400 = € 400. Verbetering = 400 − 300 = € 100 per dag.",
+    "e": "e. Bij Solo zijn er geen externe effecten; tussen Qm en Qe is betalingsbereidheid groter dan MK en verdwijnen voordelige transacties. Bij B veroorzaken sommige oorspronkelijke diensten meer maatschappelijke kosten dan baten door schade aan derden. Het verminderen van die diensten vergroot het maatschappelijke saldo.",
+    "f": "f. Dat volgt niet. De heffing van € 20 in B past bij de daar gegeven externe schade en concurrentie. Solo heeft juist marktmacht en geen genoemde externe schade. Zonder analyse van dat probleem en de beleidsreactie is dezelfde maatregel niet gerechtvaardigd."
+  },
+  "answer_model_support_html": [],
+  "answer_figures": [],
+  "lesson_goals": [
+    "Je kunt uit bronnen het passende model kiezen.",
+    "Je kunt marktgedrag verbinden met surplus en gevolgen voor derden.",
+    "Je kunt een beleidsconclusie onderbouwen én begrenzen."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.2.7-a",
+      "description": "Bepaal voor Studio Solo de winstmaximale hoeveelheid en verkoopprijs. Bereken ook de winst."
+    },
+    {
+      "local_operation_id": "4.2.7-b",
+      "description": "Bereken CS, PS en TS bij Solo en vergelijk met het gegeven TSe. Arceer het welvaartsverlies in figuur A."
+    },
+    {
+      "local_operation_id": "4.2.7-c",
+      "description": "Bereken in bron B de belaste hoeveelheid, Pc, Pp en de heffingsopbrengst."
+    },
+    {
+      "local_operation_id": "4.2.7-d",
+      "description": "Bereken met bron B het maatschappelijk surplus na de heffing en de verandering ten opzichte van de beginsituatie."
+    },
+    {
+      "local_operation_id": "4.2.7-e",
+      "description": "Leg uit waarom minder verkopen bij Solo welvaartsverlies geeft, maar minder diensten in bron B juist verbetering kan geven."
+    },
+    {
+      "local_operation_id": "4.2.7-f",
+      "description": "Beoordeel: “Een heffing van € 20 is dus ook vanzelf de beste oplossing voor Studio Solo.”"
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Select useful methods from Books 1-3, Chapter 4.1 and §§4.2.1-4.2.6, rather than repeating a labelled routine mechanically."
+  ],
+  "new_skills_introduced": [],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "Do not put an unfamiliar policy or welfare concept into the mixed target. Keep core work feasible; distribute additional retrieval to the closing review.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.2.7",
+  "structural_retrieval_plan": "Select useful methods from Books 1-3, Chapter 4.1 and §§4.2.1-4.2.6, rather than repeating a labelled routine mechanically.",
+  "structural_scope_boundary": "Do not put an unfamiliar policy or welfare concept into the mixed target. Keep core work feasible; distribute additional retrieval to the closing review.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.2/4.2.7 manuscript.md",
+    "student_manuscript_sha256": "7af1d4d8afe06a5f679072639cb7f0507387d32c00a63b950de0a308aa15fc10",
+    "answer_file": "books/book-4/chapters/4.2/Antwoorden.md",
+    "answer_file_sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9",
+    "chapter_student_pages": [
+      56,
+      57
+    ],
+    "complete_book_pages": [
+      108,
+      109
+    ]
+  },
+  "lesson_route": {
+    "start": "55",
+    "independent": "56 of 57 (kies één)",
+    "guided_or_alternative": "59 als extra consolidatie; 60 als herhaling",
+    "target": "58",
+    "target_subquestions": [
+      "58a",
+      "58b",
+      "58c",
+      "58d",
+      "58e",
+      "58f"
+    ],
+    "minutes": {
+      "Start / ophalen": 8,
+      "Motivatie": 0,
+      "Instructie": 4,
+      "Uitgewerkt voorbeeld": 0,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 25,
+      "Feedback / afronding": 6
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Laat leerlingen verklaren waarom minder transacties in de ene situatie welvaartsverlies en in de andere juist winst geeft.",
+    "assessment_boundaries": "De kosten en baten van derden veranderen de maatstaf, niet de rekenregels. Houd de twee oefenmarkten uit elkaar en stel geen nieuwe beleidsvoorwaarden."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.2.7",
+      "disposition": "retain",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "e6e04d102e211293072615b3a2bb470878e0bb69ba45ebf852de331f645f7c21"
+}

@@ -1,0 +1,531 @@
+[
+  {
+    "term": "Afzet",
+    "definitions": [
+      {
+        "definition": "De verkochte hoeveelheid in een aangegeven periode. Bij één onderneming schrijven we q.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Arbeidsaanbod",
+    "definitions": [
+      {
+        "definition": "Arbeid die huishoudens bij een bepaald loon willen aanbieden. In bevolkingsbronnen wordt het actuele aanbod in personen vaak met de beroepsbevolking aangeduid.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Arbeidsproductiviteit",
+    "definitions": [
+      {
+        "definition": "Productie per eenheid arbeidsinzet, bijvoorbeeld per gewerkt uur.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Arbeidsvraag",
+    "definitions": [
+      {
+        "definition": "Arbeid die werkgevers bij een bepaald loon willen inzetten. In de gebruikte tellingen: werkgelegenheid plus vacatures.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Beroepsbevolking",
+    "definitions": [
+      {
+        "definition": "Werkenden plus werklozen, binnen het gekozen leeftijdsbereik.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Bindend minimumloon",
+    "definitions": [
+      {
+        "definition": "Loonvloer boven het vrije evenwichtsloon, die dat evenwicht uitsluit.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Break-even",
+    "definitions": [
+      {
+        "definition": "TO en TK zijn gelijk; de winst is nul.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Bruto-arbeidsparticipatie",
+    "definitions": [
+      {
+        "definition": "Beroepsbevolking als percentage van de bevolking in de opgegeven groep.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Conjuncturele werkloosheid",
+    "definitions": [
+      {
+        "definition": "Werkloosheid door te weinig vraag naar goederen en diensten.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Constante kosten",
+    "definitions": [
+      {
+        "definition": "Totale kosten die in de aangegeven periode gelijk blijven bij verandering van de productie, tot de productiecapaciteit.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Consumentensurplus (CS)",
+    "definitions": [
+      {
+        "definition": "Het gezamenlijke verschil tussen betalingsbereidheid en betaalde prijs op verkochte eenheden.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Economische winst",
+    "definitions": [
+      {
+        "definition": "TO − TK wanneer TK ook de normale ondernemersbeloning bevat.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Efficiënte hoeveelheid",
+    "definitions": [
+      {
+        "definition": "Hoeveelheid waarbij het relevante maatschappelijke surplus maximaal is onder de gegeven aannames.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Evenwichtsloon",
+    "definitions": [
+      {
+        "definition": "Loon waarbij arbeidsvraag en arbeidsaanbod in het model gelijk zijn.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Externe baten",
+    "definitions": [
+      {
+        "definition": "Niet-vergoede voordelen voor derden door productie of consumptie.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Externe kosten",
+    "definitions": [
+      {
+        "definition": "Niet-vergoede nadelen voor derden door productie of consumptie.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Frictiewerkloosheid",
+    "definitions": [
+      {
+        "definition": "Werkloosheid doordat zoeken en overstappen tijd kost. Hier onderdeel van structurele werkloosheid.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Fte",
+    "definitions": [
+      {
+        "definition": "Fulltime-equivalent: arbeidsduur omgerekend naar voltijdbanen.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Gemiddelde opbrengst (GO)",
+    "definitions": [
+      {
+        "definition": "TO per verkochte eenheid. Bij een uniforme prijs is GO = P voor q > 0.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Gemiddelde totale kosten (GTK)",
+    "definitions": [
+      {
+        "definition": "TK gedeeld door de productiehoeveelheid, voor q > 0.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Heffingswig",
+    "definitions": [
+      {
+        "definition": "Verschil Pc − Pp door een heffing per transactie.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Heterogeen product",
+    "definitions": [
+      {
+        "definition": "Kopers zien relevante verschillen tussen de producten van aanbieders.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Homogeen product",
+    "definitions": [
+      {
+        "definition": "Kopers zien de producten van aanbieders als gelijkwaardig.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Langetermijnevenwicht",
+    "definitions": [
+      {
+        "definition": "Onder vrije toe-/uittreding en de genoemde kostenvoorwaarden: P = minimum GTK, zonder overwinst.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Loonkosten per product",
+    "definitions": [
+      {
+        "definition": "Loonkosten gedeeld door de geproduceerde hoeveelheid.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Loonsom",
+    "definitions": [
+      {
+        "definition": "Totale loonbetaling voor daadwerkelijk betaalde arbeid in een periode.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Maatschappelijk surplus",
+    "definitions": [
+      {
+        "definition": "De hier gebruikte euro-maatstaf die ook de opgegeven gevolgen voor derden en overheid meeneemt.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Marginale kosten (MK)",
+    "definitions": [
+      {
+        "definition": "De extra kosten per extra eenheid; in het doorlopende model de afgeleide van TK.",
+        "chapter": "4.1"
+      },
+      {
+        "definition": "Kosten van een extra eenheid; private en maatschappelijke kosten kunnen verschillen.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Marginale opbrengst (MO)",
+    "definitions": [
+      {
+        "definition": "De extra opbrengst per extra eenheid; in het doorlopende model de afgeleide van TO.",
+        "chapter": "4.1"
+      },
+      {
+        "definition": "Extra opbrengst van meer afzet voor de onderneming. Dit is niet de maatschappelijke batenlijn.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Marktfalen",
+    "definitions": [
+      {
+        "definition": "De marktuitkomst benut onder de gegeven omstandigheden niet het maximaal haalbare maatschappelijke surplus.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Marktmacht",
+    "definitions": [
+      {
+        "definition": "Invloed kunnen uitoefenen op de verkoopprijs.",
+        "chapter": "4.1"
+      },
+      {
+        "definition": "Mogelijkheid van een aanbieder om de verkoopprijs te beïnvloeden.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Minimumloon",
+    "definitions": [
+      {
+        "definition": "Ondergrens aan het loon; niet automatisch het feitelijk betaalde loon.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Monopolie",
+    "definitions": [
+      {
+        "definition": "Eén aanbieder op de afgebakende markt.",
+        "chapter": "4.1"
+      },
+      {
+        "definition": "Eén aanbieder op de afgebakende markt, met belemmerde toetreding.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Monopolistische concurrentie",
+    "definitions": [
+      {
+        "definition": "Veel aanbieders met verschillende producten en relatief eenvoudige toetreding.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Netto-arbeidsparticipatie",
+    "definitions": [
+      {
+        "definition": "Werkenden als percentage van de bevolking in de opgegeven groep.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Niet-beroepsbevolking",
+    "definitions": [
+      {
+        "definition": "Mensen zonder betaald werk die niet recent zoeken of niet direct beschikbaar zijn.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Normale beloning",
+    "definitions": [
+      {
+        "definition": "De vergoeding voor de inzet van de ondernemer die in dit langetermijnmodel al in TK zit.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Oligopolie",
+    "definitions": [
+      {
+        "definition": "Enkele grote aanbieders; keuzes kunnen afhangen van reacties van concurrenten.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Overdracht",
+    "definitions": [
+      {
+        "definition": "Een betaling of voordeel verschuift tussen partijen binnen de onderzochte groep.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Prijsdiscriminatie",
+    "definitions": [
+      {
+        "definition": "Verschillende prijzen voor hetzelfde product die niet door kostenverschillen worden verklaard.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Prijsnemer",
+    "definitions": [
+      {
+        "definition": "Een onderneming die de marktprijs als gegeven neemt.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Producentensurplus (PS)",
+    "definitions": [
+      {
+        "definition": "Opbrengst boven variabele kosten. Voor winst moeten constante kosten er nog af.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Productiecapaciteit",
+    "definitions": [
+      {
+        "definition": "De maximaal uitvoerbare productie in de aangegeven periode.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Structurele werkloosheid",
+    "definitions": [
+      {
+        "definition": "Werkloosheid door onder meer een blijvend veranderde vraag naar arbeid of een slechte aansluiting tussen werk en werknemers.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Subsidiewig",
+    "definitions": [
+      {
+        "definition": "Verschil Pp − Pc door een subsidie per gesubsidieerde transactie.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Toetredingsbarrière",
+    "definitions": [
+      {
+        "definition": "Een belemmering waardoor nieuwe aanbieders moeilijk of niet kunnen beginnen.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Totale opbrengst (TO)",
+    "definitions": [
+      {
+        "definition": "De opbrengst van alle verkochte eenheden: P × q. Ook omzet genoemd.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Totale surplus (TS)",
+    "definitions": [
+      {
+        "definition": "CS + PS; bij externe effecten of overheid is dit alleen niet altijd de volledige maatschappelijke rekening.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Uitvoeringskosten",
+    "definitions": [
+      {
+        "definition": "Echte middelen die nodig zijn voor het uitvoeren en controleren van beleid.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Uniforme verkoopprijs",
+    "definitions": [
+      {
+        "definition": "Binnen één verkoopplan betalen kopers dezelfde prijs per eenheid.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Vacature",
+    "definitions": [
+      {
+        "definition": "Arbeidsplaats waarvoor nog iemand wordt gezocht.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Volkomen concurrentie",
+    "definitions": [
+      {
+        "definition": "Veel kleine aanbieders, een homogeen product en vrije toetreding; ondernemingen nemen de prijs als gegeven.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Vraaglijn van de monopolist",
+    "definitions": [
+      {
+        "definition": "Geeft de prijs-afzetcombinaties voor de hele afgebakende markt. Bij één prijs is dit ook de GO-lijn.",
+        "chapter": "4.1"
+      }
+    ]
+  },
+  {
+    "term": "Welvaartsverlies",
+    "definitions": [
+      {
+        "definition": "Verschil tussen het haalbare en feitelijke maatschappelijke surplus onder dezelfde vergelijkingsvoorwaarden.",
+        "chapter": "4.2"
+      }
+    ]
+  },
+  {
+    "term": "Werkgelegenheid",
+    "definitions": [
+      {
+        "definition": "De bezette arbeidsplaatsen of hoeveelheid verrichte arbeid; let op personen, banen, uren of fte.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Werkloze beroepsbevolking",
+    "definitions": [
+      {
+        "definition": "Mensen zonder betaald werk die recent hebben gezocht en direct beschikbaar zijn.",
+        "chapter": "4.3"
+      }
+    ]
+  },
+  {
+    "term": "Winst",
+    "definitions": [
+      {
+        "definition": "TO min TK. Een maximum van de winst hoeft niet positief te zijn.",
+        "chapter": "4.1"
+      }
+    ]
+  }
+]

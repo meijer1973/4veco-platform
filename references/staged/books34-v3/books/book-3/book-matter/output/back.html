@@ -1,0 +1,207 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>Boek 3 begrippen en werkwijzen</title><style>
+@page {size:A4; margin:17mm 18mm 17mm 19mm;
+ @top-left {content:"4veco  /  Boek 3";font-family:Lato,sans-serif;font-size:8.5pt;color:#536777;}
+ @top-right {content:"3.1  Overheidsingrijpen";font-family:Lato,sans-serif;font-size:8.5pt;color:#536777;}
+ @bottom-left {content:"Economie · 4 vwo";font-family:Lato,sans-serif;font-size:8pt;color:#536777;}
+ @bottom-right {content:counter(page);font-family:Lato,sans-serif;font-size:9pt;color:#183247;}
+}
+@page:first {@top-left{content:none;}@top-right{content:none;}}
+* {box-sizing:border-box;}
+html{font-family:Lato,"DejaVu Sans",sans-serif;font-size:11.3pt;line-height:1.37;color:#183247;}
+body{margin:0;}
+p{margin:0 0 6pt;orphans:3;widows:3;}
+.page{break-before:page;}
+.page:first-child{break-before:auto;}
+.page-title{font-size:18pt;line-height:1.13;font-weight:800;border-bottom:1.5pt solid #17688f;padding:0 0 8pt;margin:0 0 12pt;}
+h1{font-size:25pt;line-height:1.13;margin:5pt 0 12pt;font-weight:800;break-after:avoid;}
+h2{font-size:17pt;line-height:1.15;color:#17688f;margin:10pt 0 8pt;break-after:avoid;}
+h3{font-size:12.5pt;line-height:1.22;margin:11pt 0 7pt;break-after:avoid;}
+h2:first-child,h3:first-child{margin-top:0;}
+a{color:inherit;text-decoration:none;}
+.kicker{letter-spacing:1pt;color:#17688f;font-size:9pt;font-weight:800;margin:0 0 12pt;}
+.box,.definition,.formula,.source,.route{padding:7pt 10pt;margin:8pt 0 9pt;break-inside:avoid;background:#f2f6f8;border-left:3pt solid #17688f;}
+.box p:last-child,.definition p:last-child,.formula p:last-child,.source p:last-child{margin-bottom:0;}
+.definition{background:#f4f7f8;padding:7pt 10pt;margin:7pt 0 9pt;}
+.formula{font-family:"DejaVu Sans Mono",monospace;font-size:11.3pt;line-height:1.6;background:#eef5f6;border-left-color:#227064;}
+.goals{font-size:10.7pt;line-height:1.38;}
+.summary{font-size:10.5pt;line-height:1.5;}
+.warning{border-left-color:#ad601b;background:#fbf5ed;}
+.source{border-left-color:#536777;font-size:10.6pt;}
+.route{font-size:10.2pt;line-height:1.3;}
+.calculation{font-family:"DejaVu Sans Mono",monospace;line-height:1.55;margin:8pt 0 10pt;padding:8pt 13pt;background:#f3f6f7;break-inside:avoid;}
+.exercise{break-inside:avoid;border:0.6pt solid #d5dfe5;border-radius:3pt;padding:8pt 10pt;margin:0 0 10pt;background:white;}
+.exercise>p:first-child{margin-top:0;}
+.exercise>p:last-child{margin-bottom:0;}
+.exercise>p{margin-bottom:6pt;}
+.exercise>b:first-child{display:block;margin-bottom:7pt;font-size:12pt;}
+.target{border-top:3pt solid #17688f;}
+table{border-collapse:collapse;width:100%;margin:7pt 0 9pt;font-size:10.1pt;line-height:1.27;table-layout:auto;break-inside:avoid;}
+th{background:#edf2f5;font-weight:700;vertical-align:bottom;text-align:left;border-bottom:1pt solid #9dabb7;}
+td,th{padding:4.4pt 5pt;border-bottom:0.55pt solid #dce4e9;}
+td{vertical-align:top;} tr:nth-child(even) td{background:#f8fafb;}
+figure{margin:10pt 0 11pt;break-inside:avoid;}
+figure img{display:block;width:100%;height:auto;}
+figcaption{font-size:9.3pt;line-height:1.3;color:#536777;margin:5pt 0 0;}
+.small{font-size:9.4pt;line-height:1.33;}
+.muted{color:#536777;}
+.cover-title{font-size:38pt;line-height:1.05;letter-spacing:-0.6pt;font-weight:900;margin:14pt 0 14pt;}
+.lead{font-size:14.5pt;line-height:1.3;margin:0 0 13pt;color:#17688f;}
+.contents{margin:12pt 0 12pt;}
+.contents a{display:block;border-top:0.6pt solid #cbd7df;padding:6pt 0;}
+.contents b{display:block;font-size:12pt;}
+.contents span{display:block;color:#536777;font-size:10.5pt;margin-top:2pt;}
+.answer h2{margin-top:16pt;}
+.answer p{margin-bottom:7pt;}
+.answer .why{font-size:10.6pt;color:#455c6d;}
+.answer .exercise{break-inside:auto;}
+.answer .answer-block{break-inside:avoid;margin-bottom:10pt;}
+.teacher{font-size:10.7pt;}
+.pair{display:flex;gap:12pt}.pair>div{flex:1}
+.target-source{padding:9pt 11pt;background:#f5f8f9;border-left:3pt solid #536777;margin:9pt 0}
+.step{font-weight:700;color:#17688f}
+.fraction{white-space:nowrap}
+.tight p{margin-bottom:4pt}
+.target-unit{font-size:9.7pt;color:#536777}
+@media print{a{color:inherit}}
+.teacher table{font-size:9.1pt;}
+
+.contents a{font-size:10.1pt;line-height:1.25;padding:5.5pt 0;}
+.contents a b{font-size:11.2pt;}
+.contents b span{float:right;font-size:11pt;display:inline;}
+.exercise{padding:7pt 9pt;margin-bottom:9pt;}
+.exercise>p{margin-bottom:5pt;}
+.exercise p:first-child b{font-size:11.6pt;}
+.formula{font-size:10.8pt;line-height:1.5;}
+.cover-title{font-size:34pt;}
+.side-note{font-size:9.5pt;color:#536777;}
+.answer .answer-block{break-inside:avoid;}
+.answer .calc{font-family:DejaVu Sans Mono,monospace;font-size:10pt;line-height:1.5;}
+
+@page{@top-right{content:"Boek 3 · editie v3";}}
+.glossary h3{font-size:11.5pt;margin:8pt 0 3pt;}
+.glossary p{font-size:10.5pt;line-height:1.28;margin:0 0 5pt;}
+.toc a{display:flex;justify-content:space-between;gap:12pt; border-bottom:0.5pt solid #dce4e9;padding:5pt 0;font-size:10pt;line-height:1.18;}
+.toc .chapter{font-weight:800;color:#17688f;margin-top:8pt;font-size:11pt;}
+
+.page-title{font-size:17pt;}
+@page:first{counter-reset:page 125;}</style></head><body><section class="page student" data-designed-page="1" data-section="begrippen"><div class="glossary">
+<h1>Begrippenlijst</h1>
+<p>De hoofdstukverwijzing geeft de context van de definitie. Een term kan in meer dan één model worden gebruikt.</p>
+<h3>Absoluut voordeel</h3>
+Minder productiemiddelen nodig hebben voor hetzelfde product en dezelfde kwaliteit. <span class="small muted">(hoofdstuk 3.3)</span>
+<h3>Afwentelingspercentage</h3>
+Het aandeel van de koper: welk deel van de belasting komt via een hogere prijs bij kopers terecht? <span class="small muted">(hoofdstuk 3.1)</span>
+<h3>Belastingopbrengst (O)</h3>
+De overheid ontvangt alleen belasting over werkelijk verkochte producten. O = t × Qt. <span class="small muted">(hoofdstuk 3.1)</span>
+<h3>Belastingwig</h3>
+Het verschil tussen de kopersprijs en de verkopersontvangst na belasting: Pc − Pp = t. <span class="small muted">(hoofdstuk 3.1)</span>
+<h3>Binnenlands verbruik Qv</h3>
+Wat de binnenlandse kopers bij de gegeven prijs gebruiken. <span class="small muted">(hoofdstuk 3.3)</span>
+<h3>Binnenlandse productie Qa</h3>
+Wat de binnenlandse aanbieders bij de gegeven prijs leveren. <span class="small muted">(hoofdstuk 3.3)</span>
+<h3>Comparatief voordeel</h3>
+Relatief minder andere productie opofferen: lagere alternatieve kosten. <span class="small muted">(hoofdstuk 3.3)</span>
+<h3>Concurrentiepositie</h3>
+Kunnen concurreren door bijvoorbeeld prijs, kwaliteit en betrouwbare levering. <span class="small muted">(hoofdstuk 3.3)</span>
+<h3>Differentiëren</h3>
+Hier: uit aq² + bq + c de afgeleide 2aq + b maken. <span class="small muted">(hoofdstuk 3.2)</span>
+<h3>GO</h3>
+Gemiddelde opbrengst: TO / q, in euro per product. <span class="small muted">(hoofdstuk 3.2)</span>
+<h3>GTK</h3>
+Gemiddelde totale kosten: TK / q, bij de gekozen q. <span class="small muted">(hoofdstuk 3.2)</span>
+</div></section>
+<section class="page student" data-designed-page="2" data-section="begrippen"><div class="glossary">
+<h1>Begrippenlijst</h1>
+<h3>Import / export</h3>
+Kopen uit / verkopen aan het buitenland. <span class="small muted">(hoofdstuk 3.3)</span>
+<h3>Importquotum</h3>
+Een maximum aan de import in een periode. <span class="small muted">(hoofdstuk 3.3)</span>
+<h3>Invoerheffing</h3>
+Een bedrag per ingevoerd product. <span class="small muted">(hoofdstuk 3.3)</span>
+<h3>Kopersprijs (Pc)</h3>
+De prijs die de consument betaalt. <span class="small muted">(hoofdstuk 3.1)</span>
+<h3>Maximumprijs</h3>
+De hoogste toegestane verkoopprijs. Een maximumprijs onder de vrije evenwichtsprijs is in dit model bindend. <span class="small muted">(hoofdstuk 3.1)</span>
+<h3>Minimumprijs</h3>
+De laagste toegestane verkoopprijs. Een minimumprijs boven de vrije evenwichtsprijs is in dit model bindend. <span class="small muted">(hoofdstuk 3.1)</span>
+<h3>MK</h3>
+Extra kosten per extra product; in het doorlopende model de afgeleide van TK. <span class="small muted">(hoofdstuk 3.2)</span>
+<h3>MO</h3>
+Extra opbrengst per extra product; bij een vaste prijs gelijk aan P. <span class="small muted">(hoofdstuk 3.2)</span>
+<h3>Prijsnemer</h3>
+Onderneming die de marktprijs als gegeven neemt. <span class="small muted">(hoofdstuk 3.2)</span>
+<h3>Productiecapaciteit</h3>
+Grootste hoeveelheid die een bedrijf in de periode kan produceren. <span class="small muted">(hoofdstuk 3.2)</span>
+<h3>Productiequotum</h3>
+Een maximaal toegestane productie. <span class="small muted">(hoofdstuk 3.1)</span>
+</div></section>
+<section class="page student" data-designed-page="3" data-section="begrippen"><div class="glossary">
+<h1>Begrippenlijst</h1>
+<h3>Protectionisme</h3>
+Binnenlandse producenten beschermen door handel te beperken. <span class="small muted">(hoofdstuk 3.3)</span>
+<h3>Q en q</h3>
+Q: totale markthoeveelheid. q: afzet of productie van één onderneming. <span class="small muted">(hoofdstuk 3.2)</span>
+<h3>Specialisatie</h3>
+Je sterker toeleggen op bepaalde activiteiten. <span class="small muted">(hoofdstuk 3.3)</span>
+<h3>Subsidiewig</h3>
+De producent ontvangt de betaling van de koper plus de subsidie. Pp − Pc = s. <span class="small muted">(hoofdstuk 3.1)</span>
+<h3>TO</h3>
+Totale opbrengst: P × q, in euro per periode. <span class="small muted">(hoofdstuk 3.2)</span>
+<h3>Verkopersontvangst (Pp)</h3>
+Het bedrag per verkocht product na belasting of inclusief subsidie, maar vóór productiekosten. <span class="small muted">(hoofdstuk 3.1)</span>
+<h3>Volkomen concurrentie</h3>
+Marktmodel met veel kleine deelnemers, een homogeen product, informatie en vrije toe- en uittreding. <span class="small muted">(hoofdstuk 3.2)</span>
+<h3>Welvaartsverlies (W)</h3>
+Het gezamenlijke gemiste voordeel van transacties die door de belastingwig niet tot stand komen. <span class="small muted">(hoofdstuk 3.1)</span>
+<h3>Wereldmarktprijs Pw</h3>
+De gegeven prijs waartegen een klein land kan handelen. <span class="small muted">(hoofdstuk 3.3)</span>
+<h3>Winstmaximalisatie</h3>
+De beste haalbare productie kiezen met een marginale vergelijking en grenscontrole. <span class="small muted">(hoofdstuk 3.2)</span>
+</div></section>
+<section class="page student" data-designed-page="4" data-section="formules"><h1>Markt, belasting en subsidie</h1>
+<h3>Begin steeds bij het model</h3>
+Stel de gevraagde en aangeboden hoeveelheid gelijk voor een vrij marktevenwicht. Vul de gevonden prijs terug in; gebruik dezelfde periode en eenheid.
+<div class="formula">Vrij evenwicht: Qv = Qa<br/>Belasting per product: Pc − Pp = t<br/>Subsidie per product: Pp − Pc = s</div>
+Pc is wat de koper betaalt. Pp is wat de verkoper na belasting of inclusief subsidie ontvangt, vóór productiekosten. Beide prijzen horen bij dezelfde verhandelde hoeveelheid.
+<h3>De begroting</h3>
+<div class="formula">Belastingopbrengst O = t × Qt<br/>Subsidie-uitgaven U = s × Qsub</div>
+Gebruik de daadwerkelijk verkochte, belastbare of subsidiabele producten, niet alleen de extra of verdwenen verkopen.
+<h3>Welvaartsvergelijking zonder effecten voor derden</h3>
+<div class="formula">Zonder maatregel: CS + PS<br/>Met heffing: CS + PS + O<br/>Met subsidie: CS + PS − U</div>
+Een overdracht is geen verdwenen voordeel. De bronnen bepalen de vergelijkingsvoorwaarden. Gebruik bij lineaire figuren ½ × basis × hoogte voor een driehoek en breedte × hoogte voor een rechthoek.
+<b>Terugzoeken:</b> hoofdstuk 3.1. Voor de eerste formele surplusuitleg: Boek 2.</section>
+<section class="page student" data-designed-page="5" data-section="formules"><h1>Prijs- en hoeveelheidsgrenzen</h1>
+<h3>Eerst bindend of niet?</h3>
+Een maximumprijs bindt wanneer hij onder de vrije evenwichtsprijs ligt. Een minimumprijs bindt wanneer hij erboven ligt. Een niet-bindende grens verandert het vrije evenwicht niet.
+<div class="formula">Maximumprijs: tekort = Qv − Qa<br/>Minimumprijs: aanbodoverschot = Qa − Qv</div>
+Bij een bindende maximumprijs zonder extra aanvoer is de verkoop in onze modellen Qa. Bij een minimumprijs zonder andere kopers is de particuliere verkoop Qv. Gewenst aanbod is niet automatisch afzet.
+<h3>Opkoop alleen als de bron dat zegt</h3>
+<div class="formula">Overheidsaankopen = Qa − Qv<br/>Uitgaven bij volledige opkoop = Pmin × (Qa − Qv)</div>
+Zonder expliciete aankoopregel hoef je geen overheidsaankopen te verzinnen. Tel de particuliere aankopen niet nogmaals mee.
+<h3>Productiequotum</h3>
+Controleer of de toegestane hoeveelheid onder de vrije evenwichtshoeveelheid ligt. Lees bij een bindend quotum en de genoemde verkoopvoorwaarden de prijs op de vraaglijn. Overheidsinkomsten of uitgaven volgen uit de verdeling/verkoop van rechten of de aankoopregel, niet uit het woord quotum alleen.
+<div class="box"><b>Houd de regel en de techniek apart</b><br/>Een quotum is een beleidsregel. Productiecapaciteit is wat technisch kan worden geproduceerd.</div>
+<b>Terugzoeken:</b> §§3.1.4–3.1.5.</section>
+<section class="page student" data-designed-page="6" data-section="formules"><h1>De prijsnemende onderneming</h1>
+<h3>Van markt naar onderneming</h3>
+Q hoort bij de gehele markt; q bij één onderneming. Een prijsnemer neemt P als gegeven.
+<div class="formula">TO = P × q<br/>GO = TO / q = P, voor q &gt; 0<br/>MO = P</div>
+<h3>Van totale naar marginale kosten</h3>
+<div class="formula">Over een tabelstap: ΔTK / Δq<br/>Bij TK = aq² + bq + c: MK = 2aq + b</div>
+Een gemiddelde over een eindige stap is niet dezelfde grootheid als MK op een punt. Een constante verdwijnt bij differentiëren, niet uit de totale kosten.
+<h3>Een haalbare winstkeuze</h3>
+Vergelijk MO en MK. Bij het model met stijgende MK ligt het binnenste maximum waar MK door MO stijgt. Controleer de capaciteit en, waar relevant, de grens q = 0. Een onhaalbaar snijpunt is geen productieadvies.
+<div class="formula">Winst = TO − TK<br/>GTK = TK / q, voor q &gt; 0<br/>Winst = (P − GTK) × q</div>
+Gebruik bij de rechthoek de GTK van dezelfde gekozen q. Reële grenzen en de opgegeven kosten blijven gelden. De maximale winst kan negatief zijn.
+<b>Terugzoeken:</b> §§3.2.1–3.2.4. De formele aanpassing door toetreding en uittreding volgt in Boek 4, §4.1.1.</section>
+<section class="page student" data-designed-page="7" data-section="formules"><h1>Handel en zorgvuldig rekenen</h1>
+<h3>Een gegeven wereldprijs</h3>
+Bij een klein prijsnemend land bepaalt Pw de handelsprijs onder de gegeven voorwaarden. Bereken of lees binnenlandse vraag en aanbod bij diezelfde prijs.
+<div class="formula">Import = Qv − Qa, als Qv &gt; Qa<br/>Export = Qa − Qv, als Qa &gt; Qv<br/>Tariefopbrengst = tarief × import ná de heffing</div>
+De opbrengst van een invoerheffing gebruikt niet alle binnenlandse verkopen. Verdwijnt de import, gebruik dan niet automatisch Pw + tarief als feitelijke prijs.
+<h3>Redeneer over specialisatie</h3>
+Absoluut voordeel gaat over minder benodigde middelen voor hetzelfde product. Comparatief voordeel gaat over relatief minder andere productie opofferen. De vergelijking in dit boek blijft kwalitatief; er is geen berekeningsalgoritme voor specialisatietabellen.
+<h3>Haal bekende rekenvaardigheden terug</h3>
+<div class="formula">Procentuele verandering = (nieuw − oud) / oud × 100%<br/>Driehoek = ½ × basis × hoogte<br/>Rechthoek = breedte × hoogte</div>
+Schrijf een conclusie over de juiste groep: een hogere opbrengst voor producenten betekent niet dat iedere inwoner wint. Gebruik eenheden en de voorwaarden van de bron.
+<b>Terugzoeken:</b> hoofdstuk 3.3. Dit overzicht herhaalt methoden; het vervangt de voorbeelden en zelfstandige oefening niet.</section></body></html>

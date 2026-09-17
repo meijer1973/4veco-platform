@@ -1,0 +1,178 @@
+{
+  "id": "4.2.4",
+  "module": 4,
+  "chapter": 2,
+  "paragraph": 4,
+  "paragraph_title": "Negatieve externe effecten",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.2.4",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "34",
+    "context": "Doeloefening Bron · Reinigingsdiensten Veel bedrijven bieden dezelfde reinigingsdienst aan. Vraag: Pc = 60 − Q; aanbod: Pp = Q. Q is diensten per dag van 0 tot 60; prijzen zijn euro per dienst. Elke dienst veroorzaakt € 20 niet-vergoede overlast voor omwonenden. De overheid voert een door producenten afgedragen heffing van € 20 per dienst in. Er zijn geen uitvoeringskosten, vaste kosten of andere externe effecten. Andere vraag- en aanbodfactoren veranderen niet. Opgave 34 · Wie telt mee? Gebruik de bron en de basisgrafiek. Figuur 20. De private en maatschappelijke kosten zijn gegeven. Voeg de uitkomsten en het gevraagde verliesgebied toe.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"source\"><b>Bron · Reinigingsdiensten</b><br/>Veel bedrijven bieden dezelfde reinigingsdienst aan. Vraag: Pc = 60 − Q; aanbod: Pp = Q. Q is diensten per dag van 0 tot 60; prijzen zijn euro per dienst. Elke dienst veroorzaakt € 20 niet-vergoede overlast voor omwonenden. De overheid voert een door producenten afgedragen heffing van € 20 per dienst in. Er zijn geen uitvoeringskosten, vaste kosten of andere externe effecten. Andere vraag- en aanbodfactoren veranderen niet.</div>\n<div class=\"exercise target\" data-exercise=\"34\" id=\"opg34\"><p><b>Opgave 34 · Wie telt mee?</b></p><p>Gebruik de bron en de basisgrafiek.</p></div>\n<figure><img alt=\"Figuur 20. De private en maatschappelijke kosten zijn gegeven. Voeg de uitkomsten en het gevraagde verliesgebied toe.\" src=\"books/book-4/chapters/4.2/_assets/424_target.svg\"/><figcaption>Figuur 20. De private en maatschappelijke kosten zijn gegeven. Voeg de uitkomsten en het gevraagde verliesgebied toe.</figcaption></figure>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n<div class=\"source\"><b>Bron · Reinigingsdiensten</b><br>Veel bedrijven bieden dezelfde reinigingsdienst aan. Vraag: Pc = 60 − Q; aanbod: Pp = Q. Q is diensten per dag van 0 tot 60; prijzen zijn euro per dienst. Elke dienst veroorzaakt € 20 niet-vergoede overlast voor omwonenden. De overheid voert een door producenten afgedragen heffing van € 20 per dienst in. Er zijn geen uitvoeringskosten, vaste kosten of andere externe effecten. Andere vraag- en aanbodfactoren veranderen niet.</div>\n\n<div class=\"exercise target\" id=\"opg34\" data-exercise=\"34\"><p><b>Opgave 34 · Wie telt mee?</b></p><p>Gebruik de bron en de basisgrafiek.</p><p data-question=\"34a\"><b>a.</b> <span class=\"muted\">(3p)</span> Noem de derde partij. Bereken de oorspronkelijke hoeveelheid en prijs, en de totale externe schade.</p><p data-question=\"34b\"><b>b.</b> <span class=\"muted\">(3p)</span> Bereken met de heffingswig Q, Pc, Pp en de overheidsontvangst.</p><p data-question=\"34c\"><b>c.</b> <span class=\"muted\">(4p)</span> Bereken het maatschappelijk surplus vóór en na ingrijpen. Laat alle vier posten zien.</p><p data-question=\"34d\"><b>d.</b> <span class=\"muted\">(2p)</span> Markeer de efficiënte hoeveelheid en arceer het oorspronkelijke welvaartsverlies. Benoem basis en hoogte.</p><p data-question=\"34e\"><b>e.</b> <span class=\"muted\">(2p)</span> Beoordeel: “CS en PS dalen door de belasting, dus de maatschappij verliest.”</p></div>\n\n<figure><img src=\"_assets/424_target.svg\" alt=\"Figuur 20. De private en maatschappelijke kosten zijn gegeven. Voeg de uitkomsten en het gevraagde verliesgebied toe.\"><figcaption>Figuur 20. De private en maatschappelijke kosten zijn gegeven. Voeg de uitkomsten en het gevraagde verliesgebied toe.</figcaption></figure>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-4/chapters/4.2/_assets/424_target.svg",
+        "sha256": "293f48422571adbd6171250079fd151c1bf8f6706871d3230689abe253a35010"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 3,
+        "prompt": "Noem de derde partij. Bereken de oorspronkelijke hoeveelheid en prijs, en de totale externe schade.",
+        "observable_operation": "Noem de derde partij. Bereken de oorspronkelijke hoeveelheid en prijs, en de totale externe schade.",
+        "source_question_id": "34a"
+      },
+      {
+        "label": "b",
+        "points": 3,
+        "prompt": "Bereken met de heffingswig Q, Pc, Pp en de overheidsontvangst.",
+        "observable_operation": "Bereken met de heffingswig Q, Pc, Pp en de overheidsontvangst.",
+        "source_question_id": "34b"
+      },
+      {
+        "label": "c",
+        "points": 4,
+        "prompt": "Bereken het maatschappelijk surplus vóór en na ingrijpen. Laat alle vier posten zien.",
+        "observable_operation": "Bereken het maatschappelijk surplus vóór en na ingrijpen. Laat alle vier posten zien.",
+        "source_question_id": "34c"
+      },
+      {
+        "label": "d",
+        "points": 2,
+        "prompt": "Markeer de efficiënte hoeveelheid en arceer het oorspronkelijke welvaartsverlies. Benoem basis en hoogte.",
+        "observable_operation": "Markeer de efficiënte hoeveelheid en arceer het oorspronkelijke welvaartsverlies. Benoem basis en hoogte.",
+        "source_question_id": "34d"
+      },
+      {
+        "label": "e",
+        "points": 2,
+        "prompt": "Beoordeel: “CS en PS dalen door de belasting, dus de maatschappij verliest.”",
+        "observable_operation": "Beoordeel: “CS en PS dalen door de belasting, dus de maatschappij verliest.”",
+        "source_question_id": "34e"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. De derde partij bestaat uit de omwonenden. Zonder heffing: 60 − Q = Q → Q₀ = 30 diensten; P₀ = € 30 per dienst. Schade = 20 × 30 = € 600 per dag.",
+    "b": "b. 60 − Q = Q + 20 → Q₁ = 20 diensten per dag. Pc = € 40; Pp = € 20. Controle: 40 − 20 = 20. Ontvangst = 20 × 20 = € 400 per dag.",
+    "c": "c. Voor: CS = ½ × 30 × 30 = € 450; PS = € 450; ontvangst = 0; schade = € 600; maatschappelijk surplus = € 300. Na: CS = ½ × 20 × 20 = € 200; PS = € 200; ontvangst = € 400; schade = € 400; maatschappelijk surplus = € 400 per dag.",
+    "d": "d. MK maatschappelijk = Q + 20. 60 − Q = Q + 20 geeft Qe = 20. Het verlies is de driehoek tussen vraag en maatschappelijke MK van Q = 20 tot Q = 30: basis 10 diensten, hoogte € 20 per dienst. Oppervlakte = ½ × 10 × 20 = € 100 per dag.",
+    "e": "e. Onjuist in deze case. De overheidsontvangst en de afgenomen externe schade moeten ook worden meegeteld. Het maatschappelijk surplus stijgt van € 300 naar € 400. Dit bewijst niet dat ieder afzonderlijk persoon wint of dat elke belasting goed is."
+  },
+  "answer_model_support_html": [],
+  "answer_figures": [],
+  "lesson_goals": [
+    "Je kunt een negatief extern effect en de getroffen derde partij benoemen.",
+    "Je kunt private en maatschappelijke kosten onderscheiden.",
+    "Je kunt een belastinguitkomst berekenen en de welvaartsvergelijking uitbreiden met externe kosten."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.2.4-a",
+      "description": "Noem de derde partij. Bereken de oorspronkelijke hoeveelheid en prijs, en de totale externe schade."
+    },
+    {
+      "local_operation_id": "4.2.4-b",
+      "description": "Bereken met de heffingswig Q, Pc, Pp en de overheidsontvangst."
+    },
+    {
+      "local_operation_id": "4.2.4-c",
+      "description": "Bereken het maatschappelijk surplus vóór en na ingrijpen. Laat alle vier posten zien."
+    },
+    {
+      "local_operation_id": "4.2.4-d",
+      "description": "Markeer de efficiënte hoeveelheid en arceer het oorspronkelijke welvaartsverlies. Benoem basis en hoogte."
+    },
+    {
+      "local_operation_id": "4.2.4-e",
+      "description": "Beoordeel: “CS en PS dalen door de belasting, dus de maatschappij verliest.”"
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Repeat the tax calculation from §§3.1.1-3.1.2, the market equilibrium method and surplus accounting. The external-cost interpretation is new."
+  ],
+  "new_skills_introduced": [
+    "Identify unpriced harm to third parties, distinguish private from social consequences and analyse a corrective tax."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "Do not count tax revenue as a real social loss or treat CS + PS alone as the full welfare measure when external harm is present. Keep external-cost assumptions explicit and simple; no unsupported claims of a uniquely optimal tax.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.2.4",
+  "structural_retrieval_plan": "Repeat the tax calculation from §§3.1.1-3.1.2, the market equilibrium method and surplus accounting. The external-cost interpretation is new.",
+  "structural_scope_boundary": "Do not count tax revenue as a real social loss or treat CS + PS alone as the full welfare measure when external harm is present. Keep external-cost assumptions explicit and simple; no unsupported claims of a uniquely optimal tax.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.2/4.2.4 manuscript.md",
+    "student_manuscript_sha256": "a5ed089cdfa1632fc5c778549d348b2fa29ed52f9513dbce986d98bd661165a3",
+    "answer_file": "books/book-4/chapters/4.2/Antwoorden.md",
+    "answer_file_sha256": "b77880f5e0c3e9252002c502b1cd101d4181773fa9968ea37d63e3d04cdf80f9",
+    "chapter_student_pages": [
+      34
+    ],
+    "complete_book_pages": [
+      86
+    ]
+  },
+  "lesson_route": {
+    "start": "28–29",
+    "independent": "32–33",
+    "guided_or_alternative": "30–31",
+    "target": "34",
+    "target_subquestions": [
+      "34a",
+      "34b",
+      "34c",
+      "34d",
+      "34e"
+    ],
+    "minutes": null,
+    "total_minutes": null,
+    "one_lesson_status": "open_existing_timing_conflict",
+    "instruction_focus": "Introduceer de derde partij en de maatschappelijke kostengrens vóór de heffing. Hergebruik de belastingroute en tel de externe schade afzonderlijk mee.",
+    "assessment_boundaries": "CS + PS + overheidsontvangsten − schade is hier de relevante maat. Belasting is een overdracht, schade niet. De verliesdriehoek en onafhankelijke voorbereiding mogen niet verdwijnen om tijd te winnen."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.2.4",
+      "disposition": "retain",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "ca62bace59e3aaab2105cba5456c344c00731e6ae428bfd3e7baf02341ec2796"
+}

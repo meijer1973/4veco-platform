@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="310" viewBox="0 0 900 310" role="img"><title>B · Reiniging bij woningen</title>
+<rect width="900" height="310" rx="8" fill="#f5f8fa"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10" fill="none" stroke="#637986" stroke-width="1.5"/></marker><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0" stroke="#183247" stroke-width="1" opacity=".25"/></pattern><pattern id="horizontal" width="10" height="8" patternUnits="userSpaceOnUse"><path d="M0 4H10" stroke="#183247" stroke-width="1" opacity=".22"/></pattern><pattern id="cross" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0M0 0L10 10" stroke="#183247" stroke-width="1" opacity=".25"/></pattern></defs>
+<text x="452.0000" y="28.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">B · Reiniging bij woningen</text>
+<text x="78.0000" y="55.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#183247">P en kosten (€ per eenheid)</text>
+<line x1="78.0000" y1="76.0000" x2="78.0000" y2="252.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="78.0000" y="277.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">0</text>
+<line x1="202.6667" y1="76.0000" x2="202.6667" y2="252.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="202.6667" y="277.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">10</text>
+<line x1="327.3333" y1="76.0000" x2="327.3333" y2="252.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="327.3333" y="277.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">20</text>
+<line x1="452.0000" y1="76.0000" x2="452.0000" y2="252.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="452.0000" y="277.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">30</text>
+<line x1="576.6667" y1="76.0000" x2="576.6667" y2="252.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="576.6667" y="277.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">40</text>
+<line x1="701.3333" y1="76.0000" x2="701.3333" y2="252.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="701.3333" y="277.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">50</text>
+<line x1="826.0000" y1="76.0000" x2="826.0000" y2="252.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="826.0000" y="277.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">60</text>
+<line x1="78.0000" y1="252.0000" x2="826.0000" y2="252.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="257.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">0</text>
+<line x1="78.0000" y1="230.0000" x2="826.0000" y2="230.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="235.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">10</text>
+<line x1="78.0000" y1="208.0000" x2="826.0000" y2="208.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="213.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">20</text>
+<line x1="78.0000" y1="186.0000" x2="826.0000" y2="186.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="191.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">30</text>
+<line x1="78.0000" y1="164.0000" x2="826.0000" y2="164.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="169.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">40</text>
+<line x1="78.0000" y1="142.0000" x2="826.0000" y2="142.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="147.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">50</text>
+<line x1="78.0000" y1="120.0000" x2="826.0000" y2="120.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="125.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">60</text>
+<line x1="78.0000" y1="98.0000" x2="826.0000" y2="98.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="103.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">70</text>
+<line x1="78.0000" y1="76.0000" x2="826.0000" y2="76.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="81.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">80</text>
+<line x1="78.0000" y1="252.0000" x2="834.0000" y2="252.0000" stroke="#183247" stroke-width="1.8" marker-end="url(#arrow)"/>
+<line x1="78.0000" y1="252.0000" x2="78.0000" y2="71.0000" stroke="#183247" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="452.0000" y="305.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#183247">Q (diensten per dag)</text>
+<polyline data-panel="p0" data-curve="Vraag" points="78.00000000,120.00000000 826.00000000,252.00000000" fill="none" stroke="#146d9b" stroke-width="3"/>
+<text x="601.6000" y="200.4000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#146d9b">Vraag</text>
+<polyline data-panel="p0" data-curve="A = MK privé" points="78.00000000,252.00000000 826.00000000,120.00000000" fill="none" stroke="#ab4943" stroke-width="3"/>
+<text x="661.4400" y="174.0400" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#ab4943">A = MK privé</text>
+<polyline data-panel="p0" data-curve="MK maatschappelijk" points="78.00000000,208.00000000 826.00000000,76.00000000" fill="none" stroke="#247d70" stroke-width="3" stroke-dasharray="8 5"/>
+<text x="781.1200" y="69.9200" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="end" fill="#247d70">MK maatschappelijk</text>
+</svg>

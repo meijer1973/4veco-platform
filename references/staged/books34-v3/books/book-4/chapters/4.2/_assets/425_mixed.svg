@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="432" viewBox="0 0 900 432" role="img"><title>Gemengde oefening · De gezamenlijke cursus</title>
+<rect width="900" height="432" rx="8" fill="#f5f8fa"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10" fill="none" stroke="#637986" stroke-width="1.5"/></marker><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0" stroke="#183247" stroke-width="1" opacity=".25"/></pattern><pattern id="horizontal" width="10" height="8" patternUnits="userSpaceOnUse"><path d="M0 4H10" stroke="#183247" stroke-width="1" opacity=".22"/></pattern><pattern id="cross" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0M0 0L10 10" stroke="#183247" stroke-width="1" opacity=".25"/></pattern></defs>
+<text x="452.0000" y="28.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">Gemengde oefening · De gezamenlijke cursus</text>
+<text x="78.0000" y="55.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#183247">P, kosten en baten (€ per eenheid)</text>
+<line x1="78.0000" y1="76.0000" x2="78.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="78.0000" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">0</text>
+<line x1="265.0000" y1="76.0000" x2="265.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="265.0000" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">10</text>
+<line x1="452.0000" y1="76.0000" x2="452.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="452.0000" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">20</text>
+<line x1="639.0000" y1="76.0000" x2="639.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="639.0000" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">30</text>
+<line x1="826.0000" y1="76.0000" x2="826.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="826.0000" y="369.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">40</text>
+<line x1="78.0000" y1="344.0000" x2="826.0000" y2="344.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="349.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">0</text>
+<line x1="78.0000" y1="290.4000" x2="826.0000" y2="290.4000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="295.4000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">10</text>
+<line x1="78.0000" y1="236.8000" x2="826.0000" y2="236.8000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="241.8000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">20</text>
+<line x1="78.0000" y1="183.2000" x2="826.0000" y2="183.2000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="188.2000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">30</text>
+<line x1="78.0000" y1="129.6000" x2="826.0000" y2="129.6000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="134.6000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">40</text>
+<line x1="78.0000" y1="76.0000" x2="826.0000" y2="76.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="68.0000" y="81.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">50</text>
+<line x1="78.0000" y1="344.0000" x2="834.0000" y2="344.0000" stroke="#183247" stroke-width="1.8" marker-end="url(#arrow)"/>
+<line x1="78.0000" y1="344.0000" x2="78.0000" y2="71.0000" stroke="#183247" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="452.0000" y="397.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#183247">Q (deelnemers per maand)</text>
+<polyline data-panel="p0" data-curve="Vraag" points="78.00000000,129.60000000 826.00000000,344.00000000" fill="none" stroke="#146d9b" stroke-width="3"/>
+<text x="601.6000" y="267.6800" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#146d9b">Vraag</text>
+<polyline data-panel="p0" data-curve="A = MK privé" points="78.00000000,344.00000000 826.00000000,129.60000000" fill="none" stroke="#ab4943" stroke-width="3"/>
+<text x="781.1200" y="129.4640" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="end" fill="#ab4943">A = MK privé</text>
+<polyline data-panel="p0" data-curve="Baten maatschappelijk" points="78.00000000,86.72000000 826.00000000,301.12000000" fill="none" stroke="#247d70" stroke-width="3" stroke-dasharray="8 5"/>
+<text x="190.2000" y="104.8800" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#247d70">Baten maatschappelijk</text>
+</svg>

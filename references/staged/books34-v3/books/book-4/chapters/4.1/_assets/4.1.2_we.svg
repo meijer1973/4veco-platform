@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="450" viewBox="0 0 900 450" role="img"><title>Twee effecten op de omzet</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#536777" stroke-width="1.5"/></marker><pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M-2,2 L2,-2 M0,9 L9,0 M7,11 L11,7" stroke="#183247" stroke-opacity=".22" stroke-width="1"/></pattern></defs>
+<rect width="900" height="450" rx="8" fill="#f5f8fa"/>
+<text x="350.0000" y="27.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">Twee effecten op de omzet</text>
+<text x="80.0000" y="54.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#183247">P (€ per kg)</text>
+<defs><clipPath id="p0"><rect x="80" y="74" width="540" height="275"/></clipPath></defs>
+<line x1="80.0000" y1="74.0000" x2="80.0000" y2="349.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="80.0000" y="374.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">0</text>
+<line x1="380.0000" y1="74.0000" x2="380.0000" y2="349.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="380.0000" y="374.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">30</text>
+<line x1="480.0000" y1="74.0000" x2="480.0000" y2="349.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="480.0000" y="374.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#183247">40</text>
+<line x1="80.0000" y1="349.0000" x2="620.0000" y2="349.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="69.0000" y="354.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">0</text>
+<line x1="80.0000" y1="165.6667" x2="620.0000" y2="165.6667" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="69.0000" y="170.6667" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">8</text>
+<line x1="80.0000" y1="142.7500" x2="620.0000" y2="142.7500" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="69.0000" y="147.7500" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">9</text>
+<line x1="80.0000" y1="74.0000" x2="620.0000" y2="74.0000" stroke="#dbe4e9" stroke-width="0.7"/>
+<text x="69.0000" y="79.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="17" font-weight="400" text-anchor="end" fill="#183247">12</text>
+<line x1="80.0000" y1="349.0000" x2="627.0000" y2="349.0000" stroke="#183247" stroke-width="1.7" marker-end="url(#arrow)"/>
+<line x1="80.0000" y1="349.0000" x2="80.0000" y2="69.0000" stroke="#183247" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="350.0000" y="401.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#183247">q (kg per week)</text>
+<polygon data-area="blijvende omzet" data-panel="p0" points="80.0000,349.0000 380.0000,349.0000 380.0000,165.6667 80.0000,165.6667" fill="#146d9b" fill-opacity=".12" stroke="none"/>
+<polygon points="80.0000,349.0000 380.0000,349.0000 380.0000,165.6667 80.0000,165.6667" fill="url(#hatch)"/>
+<polygon data-area="minder per eerdere kg" data-panel="p0" points="80.0000,165.6667 380.0000,165.6667 380.0000,142.7500 80.0000,142.7500" fill="#aa4e42" fill-opacity=".12" stroke="none"/>
+<polygon points="80.0000,165.6667 380.0000,165.6667 380.0000,142.7500 80.0000,142.7500" fill="url(#hatch)"/>
+<polygon data-area="extra kg" data-panel="p0" points="380.0000,349.0000 480.0000,349.0000 480.0000,165.6667 380.0000,165.6667" fill="#247d70" fill-opacity=".12" stroke="none"/>
+<polygon points="380.0000,349.0000 480.0000,349.0000 480.0000,165.6667 380.0000,165.6667" fill="url(#hatch)"/>
+<line x1="80.0000" y1="142.7500" x2="380.0000" y2="142.7500" stroke="#146d9b" stroke-width="2.5"/>
+<line x1="480.0000" y1="349.0000" x2="480.0000" y2="165.6667" stroke="#247d70" stroke-width="2.5"/>
+<text x="646.0000" y="118.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#247d70">Extra verkochte kg</text>
+<text x="646.0000" y="144.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#183247">10 × € 8</text>
+<text x="646.0000" y="171.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#247d70">+ € 80</text>
+<text x="646.0000" y="228.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#aa4e42">Lagere prijs op</text>
+<text x="646.0000" y="251.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#aa4e42">de eerdere kg</text>
+<text x="646.0000" y="277.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#183247">30 × € 1</text>
+<text x="646.0000" y="304.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#aa4e42">− € 30</text>
+<text x="450.0000" y="428.0000" font-family="Lato,DejaVu Sans,sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#183247">ΔTO = 80 − 30 = € 50 per week</text>
+</svg>

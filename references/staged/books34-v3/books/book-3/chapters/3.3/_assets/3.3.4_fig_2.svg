@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="235" viewBox="0 0 900 235" role="img"><title>Verschillende gevolgen van een invoerheffing</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#536777" stroke-width="1.5"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0,8 L8,0" stroke="#183247" stroke-opacity=".25" stroke-width="1"/></pattern></defs>
+<rect width="900" height="235" rx="10" fill="#f5f8fa"/>
+<rect x="25.00000000" y="37.00000000" width="265.00000000" height="137.00000000" rx="5" fill="white" stroke="#146d9b" stroke-width="1.6"/>
+<text x="157.50000000" y="72.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">Kopers</text>
+<text x="157.50000000" y="108.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#183247">hogere prijs</text>
+<text x="157.50000000" y="135.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#183247">minder verbruik</text>
+<rect x="320.00000000" y="37.00000000" width="265.00000000" height="137.00000000" rx="5" fill="white" stroke="#247d70" stroke-width="1.6"/>
+<text x="452.50000000" y="72.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">Producenten</text>
+<text x="452.50000000" y="108.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#183247">hogere prijs</text>
+<text x="452.50000000" y="135.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#183247">meer productie</text>
+<rect x="615.00000000" y="37.00000000" width="265.00000000" height="137.00000000" rx="5" fill="white" stroke="#ad681f" stroke-width="1.6"/>
+<text x="747.50000000" y="72.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="#183247">Overheid</text>
+<text x="747.50000000" y="108.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#183247">ontvangsten over</text>
+<text x="747.50000000" y="135.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#183247">resterende import</text>
+<text x="450.00000000" y="211.00000000" font-family="Lato,DejaVu Sans,sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#183247">Een voordeel voor één groep bewijst geen voordeel voor iedereen.</text>
+</svg>

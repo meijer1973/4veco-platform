@@ -1,5 +1,7 @@
 # Books 3/4 v3 integration result
 
+Follow-up: the [review corrections and finite transport bridge](BOOK34-V3-REVIEW-FOLLOWUP-20260917.md) supersede this initial merge-order discussion. Original package and rendering evidence below remains valid.
+
 Status: prepared in paired PRs; no merge, deployment or publication. Bundle: `BOOK34-V3-INTEGRATION-20260917`.
 
 The repaired supplied edition is imported at lesson `edities/books34-v3/`: all 814 files, searchable sources, 31 paragraph PDFs, chapter output and six complete volumes. No delivered byte is changed. Existing v2 editions/manifests and Books 1–2 are preserved. Book-root READMEs select v3 for this proposed integration and retain explicit historical v2 links.

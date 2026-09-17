@@ -186,6 +186,6 @@
       "source_path": "references/authored/book-outlines/book-3-outline.md"
     }
   ],
-  "current_sha256": "190e75718ea97dbe51f83ef78e6d698df11df19881ab8f8fd2585daa0fcf58eb",
-  "technical_projection": "Only target-record hyperlinks resolve to the lesson repository; original outline bytes remain in the immutable received package."
+  "current_sha256": "82132d156a8b890f80a18cfe14fe4fed66cadb1625297058efa047e671cdc979",
+  "technical_projection": "Only target-record hyperlinks resolve to the immutable platform transport, available before the lesson projection is activated. Original outline bytes and lesson content ownership remain unchanged."
 }

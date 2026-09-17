@@ -328,17 +328,17 @@ The following are actual exercises and answer models in the delivered v3 manuscr
 
 | Paragraph | Target exercise | Student chapter page(s) | Candidate record |
 |---|---:|---:|---|
-| 3.1.1 | 7 | 8 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.1.1.json) |
-| 3.1.2 | 16 | 17 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.1.2.json) |
-| 3.1.3 | 25 | 26 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.1.3.json) |
-| 3.1.4 | 34 | 33 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.1.4.json) |
-| 3.1.5 | 43 | 42 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.1.5.json) |
-| 3.1.6 | 48 | 46–47 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.1.6.json) |
-| 3.2.1 | 7 | 8 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.2.1.json) |
-| 3.2.2 | 17 | 15 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.2.2.json) |
-| 3.2.3 | 27 | 25 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.2.3.json) |
-| 3.2.4 | 35 | 30–31 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.2.4.json) |
-| 3.3.1 | 7 | 9 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.3.1.json) |
-| 3.3.2 | 17 | 19 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.3.2.json) |
-| 3.3.3 | 27 | 29 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.3.3.json) |
-| 3.3.4 | 35 | 34–35 | [record](https://github.com/meijer1973/4veco-lessen/blob/main/edities/books34-v3/curriculum/targets/3.3.4.json) |
+| 3.1.1 | 7 | 8 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.1.1.json) |
+| 3.1.2 | 16 | 17 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.1.2.json) |
+| 3.1.3 | 25 | 26 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.1.3.json) |
+| 3.1.4 | 34 | 33 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.1.4.json) |
+| 3.1.5 | 43 | 42 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.1.5.json) |
+| 3.1.6 | 48 | 46–47 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.1.6.json) |
+| 3.2.1 | 7 | 8 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.2.1.json) |
+| 3.2.2 | 17 | 15 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.2.2.json) |
+| 3.2.3 | 27 | 25 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.2.3.json) |
+| 3.2.4 | 35 | 30–31 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.2.4.json) |
+| 3.3.1 | 7 | 9 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.3.1.json) |
+| 3.3.2 | 17 | 19 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.3.2.json) |
+| 3.3.3 | 27 | 29 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.3.3.json) |
+| 3.3.4 | 35 | 34–35 | [record](https://github.com/meijer1973/4veco-platform/blob/main/references/staged/books34-v3/curriculum/targets/3.3.4.json) |

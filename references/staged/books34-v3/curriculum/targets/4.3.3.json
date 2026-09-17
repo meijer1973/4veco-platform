@@ -1,0 +1,161 @@
+{
+  "id": "4.3.3",
+  "module": 4,
+  "chapter": 3,
+  "paragraph": 3,
+  "paragraph_title": "Werkloosheid en veranderingen op de arbeidsmarkt",
+  "paragraph_kind": "theory",
+  "introduces_new_theory": true,
+  "structure_revision": "book34-lesson-balance-v3-20260915",
+  "source_identity": {
+    "revision": "book34-lesson-balance-v3-20260915",
+    "paragraph_id": "4.3.3",
+    "edition": "books-4-v3",
+    "outline": "references/authored/book-outlines/book-4-outline.md",
+    "package_outline": "outlines/book-4-outline-v3.md"
+  },
+  "record_status": "candidate_review_ready",
+  "independent_review_status": "not_conferred_by_authoring_package",
+  "target_exercise": {
+    "placeholder": false,
+    "exercise_number": "25",
+    "context": "Doeloefening Opgave 25 · Rivierenregio: cijfers en een sector Bron A: de regio telt 2.700 werkenden, 300 werklozen en 120 vacatures. Iedere werkende heeft één baan. Bron B: in een afzonderlijke sector nemen de opdrachten af doordat huishoudens minder besteden. Lᵥ daalt van 180 − 6w naar 144 − 6w; Lₐ blijft −12 + 6w. L is het aantal personen; w is het uurloon in euro; € 2 ≤ w ≤ € 24. Het oude evenwicht is € 16 en 84 personen. Er zijn in dit sector-model geen vacatures of zoekproblemen. Figuur 16. De oude en nieuwe vraaglijn en de aanbodlijn zijn gegeven. Voeg alleen E₀ en E₁ toe.",
+    "context_html": "<h2>Doeloefening</h2>\n<div class=\"exercise target\" data-exercise=\"25\" id=\"opg25\"><p><b>Opgave 25 · Rivierenregio: cijfers en een sector</b></p><p>Bron A: de regio telt 2.700 werkenden, 300 werklozen en 120 vacatures. Iedere werkende heeft één baan.<br/>Bron B: in een afzonderlijke sector nemen de opdrachten af doordat huishoudens minder besteden. Lᵥ daalt van 180 − 6w naar 144 − 6w; Lₐ blijft −12 + 6w. L is het aantal personen; w is het uurloon in euro; € 2 ≤ w ≤ € 24. Het oude evenwicht is € 16 en 84 personen. Er zijn in dit sector-model geen vacatures of zoekproblemen.</p></div>\n<figure><img alt=\"Figuur 16. De oude en nieuwe vraaglijn en de aanbodlijn zijn gegeven. Voeg alleen E₀ en E₁ toe.\" src=\"books/book-4/chapters/4.3/_assets/shift_target.svg\"/><figcaption>Figuur 16. De oude en nieuwe vraaglijn en de aanbodlijn zijn gegeven. Voeg alleen E₀ en E₁ toe.</figcaption></figure>",
+    "context_html_base": "package_root",
+    "sources": [
+      {
+        "id": "printed-target-source",
+        "type": "markdown",
+        "content": "## Doeloefening\n\n<div class=\"exercise target\" id=\"opg25\" data-exercise=\"25\"><p><b>Opgave 25 · Rivierenregio: cijfers en een sector</b></p><p>Bron A: de regio telt 2.700 werkenden, 300 werklozen en 120 vacatures. Iedere werkende heeft één baan.<br>Bron B: in een afzonderlijke sector nemen de opdrachten af doordat huishoudens minder besteden. Lᵥ daalt van 180 − 6w naar 144 − 6w; Lₐ blijft −12 + 6w. L is het aantal personen; w is het uurloon in euro; € 2 ≤ w ≤ € 24. Het oude evenwicht is € 16 en 84 personen. Er zijn in dit sector-model geen vacatures of zoekproblemen.</p><p data-question=\"25a\"><b>a.</b> <span class=\"muted\">(3p)</span> Bereken met bron A het werkloosheidspercentage. Leg uit waarom arbeidsaanbod min arbeidsvraag hier niet de werkloosheid geeft.</p><p data-question=\"25b\"><b>b.</b> <span class=\"muted\">(3p)</span> Benoem met bron B de oorzaak en bereken het nieuwe evenwicht als het loon vrij aanpast.</p><p data-question=\"25c\"><b>c.</b> <span class=\"muted\">(3p)</span> Markeer het oude en nieuwe evenwicht in de basisgrafiek. Bereken daarna het aanbodoverschot bij een loon dat € 16 blijft.</p></div>\n\n<figure><img src=\"_assets/shift_target.svg\" alt=\"Figuur 16. De oude en nieuwe vraaglijn en de aanbodlijn zijn gegeven. Voeg alleen E₀ en E₁ toe.\"><figcaption>Figuur 16. De oude en nieuwe vraaglijn en de aanbodlijn zijn gegeven. Voeg alleen E₀ en E₁ toe.</figcaption></figure>"
+      }
+    ],
+    "figures": [
+      {
+        "path": "books/book-4/chapters/4.3/_assets/shift_target.svg",
+        "sha256": "a164a3f20e193ef1a44d41d5880e7f95ddb31140435a4755b0ea718a23b37062"
+      }
+    ],
+    "subquestions": [
+      {
+        "label": "a",
+        "points": 3,
+        "prompt": "Bereken met bron A het werkloosheidspercentage. Leg uit waarom arbeidsaanbod min arbeidsvraag hier niet de werkloosheid geeft.",
+        "observable_operation": "Bereken met bron A het werkloosheidspercentage. Leg uit waarom arbeidsaanbod min arbeidsvraag hier niet de werkloosheid geeft.",
+        "source_question_id": "25a"
+      },
+      {
+        "label": "b",
+        "points": 3,
+        "prompt": "Benoem met bron B de oorzaak en bereken het nieuwe evenwicht als het loon vrij aanpast.",
+        "observable_operation": "Benoem met bron B de oorzaak en bereken het nieuwe evenwicht als het loon vrij aanpast.",
+        "source_question_id": "25b"
+      },
+      {
+        "label": "c",
+        "points": 3,
+        "prompt": "Markeer het oude en nieuwe evenwicht in de basisgrafiek. Bereken daarna het aanbodoverschot bij een loon dat € 16 blijft.",
+        "observable_operation": "Markeer het oude en nieuwe evenwicht in de basisgrafiek. Bereken daarna het aanbodoverschot bij een loon dat € 16 blijft.",
+        "source_question_id": "25c"
+      }
+    ]
+  },
+  "short_answer_model": {
+    "a": "a. Beroepsbevolking = 2.700 + 300 = 3.000 personen . Werkloosheid = 300 / 3.000 × 100% = 10% . Arbeidsvraag = 2.700 + 120 = 2.820; het verschil 180 is 300 − 120, niet de 300 werklozen. Waarom: Vacatures zijn nog niet ingevuld.",
+    "b": "b. Conjuncturele oorzaak: minder bestedingen verlagen opdrachten en arbeidsvraag. 144 − 6w = −12 + 6w → 156 = 12w → w = € 13 . L = 144 − 6 × 13 = 66 personen . Waarom: De oude evenwichtswerkgelegenheid van 84 daalt; dit is geen berekening van alle werklozen in de regio.",
+    "c": "c. E₀ = (84;16), E₁ = (66;13). Bij € 16: Lᵥ = 144 − 96 = 48 , Lₐ = −12 + 96 = 84 personen . Overschot = 36 personen . Waarom: Een gelijkblijvend loon en een flexibel loon leveren niet dezelfde sectoruitkomst op."
+  },
+  "answer_model_support_html": [],
+  "answer_figures": [],
+  "lesson_goals": [
+    "Je kunt het werkloosheidspercentage berekenen.",
+    "Je kunt oorzaken van werkloosheid onderscheiden.",
+    "Je kunt een verschuiving van arbeidsvraag verwerken en uitleggen waarom een model niet alle waargenomen werkloosheid beschrijft."
+  ],
+  "required_skills": [],
+  "operation_specs": [
+    {
+      "local_operation_id": "4.3.3-a",
+      "description": "Bereken met bron A het werkloosheidspercentage. Leg uit waarom arbeidsaanbod min arbeidsvraag hier niet de werkloosheid geeft."
+    },
+    {
+      "local_operation_id": "4.3.3-b",
+      "description": "Benoem met bron B de oorzaak en bereken het nieuwe evenwicht als het loon vrij aanpast."
+    },
+    {
+      "local_operation_id": "4.3.3-c",
+      "description": "Markeer het oude en nieuwe evenwicht in de basisgrafiek. Bereken daarna het aanbodoverschot bij een loon dat € 16 blijft."
+    }
+  ],
+  "prior_knowledge_assumed": [
+    "Reuse §4.3.2’s equilibrium and Book 1 shift/new-equilibrium method. This is the second home of the absorbed equilibrium work."
+  ],
+  "new_skills_introduced": [
+    "Calculate unemployment using the labour force as denominator, distinguish the relevant causes and interpret labour-market changes."
+  ],
+  "exam_codes": [],
+  "missing_units_flagged": [
+    "Canonical machine-skill/exam mapping is not inferred or minted by this authoring package."
+  ],
+  "scope_boundary": "Distinguish the simplified clearing model from observed vacancies and mismatch. With data defined as labour demand = employment + vacancies, supply minus demand is not measured unemployment. Explain structural/frictional and demand-related unemployment at an introductory level; no output-gap or Phillips-curve model.",
+  "source_ref": "references/owned/course-blueprint-v5.md §4.3.3",
+  "structural_retrieval_plan": "Reuse §4.3.2’s equilibrium and Book 1 shift/new-equilibrium method. This is the second home of the absorbed equilibrium work.",
+  "structural_scope_boundary": "Distinguish the simplified clearing model from observed vacancies and mismatch. With data defined as labour demand = employment + vacancies, supply minus demand is not measured unemployment. Explain structural/frictional and demand-related unemployment at an introductory level; no output-gap or Phillips-curve model.",
+  "source_pin": {
+    "student_file": "books/book-4/chapters/4.3/4.3.3 manuscript.md",
+    "student_manuscript_sha256": "bc7393315c2bec96e0d9dc3e5637e2a897a9c0bb1f61d10ce03f4f1d58c0c089",
+    "answer_file": "books/book-4/chapters/4.3/Antwoorden.md",
+    "answer_file_sha256": "e602feba92be7245eeb349393f6787a2eac044e8c12a956712f3ac507f658f9f",
+    "chapter_student_pages": [
+      27
+    ],
+    "complete_book_pages": [
+      139
+    ]
+  },
+  "lesson_route": {
+    "start": "19–20",
+    "independent": "23–24",
+    "guided_or_alternative": "21–22",
+    "target": "25",
+    "target_subquestions": [
+      "25a",
+      "25b",
+      "25c"
+    ],
+    "minutes": {
+      "Start / ophalen": 6,
+      "Motivatie": 2,
+      "Instructie": 9,
+      "Uitgewerkt voorbeeld": 8,
+      "Overgang / samenvatting": 2,
+      "Zelfstandig": 10,
+      "Doeloefening": 14,
+      "Feedback / afronding": 4
+    },
+    "total_minutes": 55,
+    "one_lesson_status": "designed_not_classroom_measured",
+    "instruction_focus": "Onderscheid de waargenomen werkloosheid van de uitkomst van een vereenvoudigd model. Vergelijk de gegeven vraagverschuiving bij meebewegend en vast loon.",
+    "assessment_boundaries": "Vacatures worden niet van werklozen afgetrokken. Een loonverandering is een beweging langs de ongewijzigde andere lijn. Geen output-gap- of Phillipsmodel als voorkennis."
+  },
+  "historical_source_refs": [
+    {
+      "revision": "book34-chat-v2-20260914",
+      "paragraph_id": "4.3.3",
+      "disposition": "retain",
+      "inherits_approval": false,
+      "target_equivalence": false
+    }
+  ],
+  "v5_migration": {
+    "source_status": "candidate_review_ready",
+    "review_required_before_final": true,
+    "structural_revision": "book34-lesson-balance-v3-20260915"
+  },
+  "review_boundaries": [
+    "Author calculation/source checks are documented separately.",
+    "No independent target approval is inherited from an old numeric ID.",
+    "Classroom timing is not measured."
+  ],
+  "target_payload_schema": "source-context-questions-answers-assets-v2",
+  "target_payload_sha256": "0792cca40a0f31014b8be24d61b4d842ea49b0164f9a4e54afe6b4a96782ca0b"
+}
