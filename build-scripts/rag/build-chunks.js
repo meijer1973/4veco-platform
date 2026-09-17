@@ -2,6 +2,8 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { consumeTarget } = require('../references/target-source-consumer');
+const { REVISION, PREVIOUS } = require('../references/migrate-books34-v3');
 
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const OUT = path.join(REPO_ROOT, 'references/data/rag/chunk_index.jsonl');
@@ -65,7 +67,26 @@ function sourceRankToAuthority(edge) {
   return 'diagnostic';
 }
 
-function main() {
+function targetChunks(targets, lessons) {
+  return (targets.exercises || []).map(record => {
+    if ([3,4].includes(record.module) && (![REVISION,PREVIOUS].includes(targets.structure_revision)
+      || record.structure_revision !== targets.structure_revision || record.source_identity?.revision !== targets.structure_revision)) {
+      throw new Error(`${record.id}: missing, unknown or mixed target revision`);
+    }
+    const consumed = record.structure_revision === REVISION ? consumeTarget(record, lessons) : null;
+    const target = record.target_exercise || {};
+    const text = [record.id, record.paragraph_title, record.record_status, target.context || '',
+      ...(target.subquestions || []).map(q => `${q.label}. ${q.prompt}`)].join('\n');
+    return {...chunk({chunkId:`target-exercise:${record.structure_revision || targets.blueprint_version}:${record.id}`,
+      sourcePath:'references/authored/course-target-exercises.json',sourceType:'target_exercise',
+      authorityLevel:'authored_judgement',entityIds:[record.id],
+      curriculumAuthority:record.record_status==='reviewed_final',text}),
+      record_status:record.record_status,structure_revision:record.structure_revision || null,
+      ...(consumed ? {target:consumed} : {})};
+  });
+}
+
+function main(output = OUT, lessons = path.resolve(REPO_ROOT, '../4veco-lessen')) {
   const units = readJson('references/machine/micro-teaching-units.json', []);
   const terms = readJson('references/machine/begrippen.json', { terms: {} }).terms || {};
   const exams = readJson('references/external/exam-questions.json', []);
@@ -121,17 +142,7 @@ function main() {
     }));
   }
 
-  chunks.push(chunk({
-    chunkId: 'target-exercise:course-target-exercises',
-    sourcePath: 'references/authored/course-target-exercises.json',
-    sourceType: 'target_exercise',
-    authorityLevel: 'authored_judgement',
-    entityIds: [],
-    evidenceIds: [],
-    edgeStatuses: [],
-    curriculumAuthority: true,
-    text: JSON.stringify(targets).slice(0, 20000),
-  }));
+  chunks.push(...targetChunks(targets, lessons));
 
   const authoredPaths = [
     'references/authored/didactiek-principes.md',
@@ -271,9 +282,13 @@ function main() {
   const deduped = new Map();
   for (const item of chunks) if (item.text) deduped.set(item.chunk_id, item);
   const sorted = [...deduped.values()].sort((a, b) => a.chunk_id.localeCompare(b.chunk_id));
-  fs.mkdirSync(path.dirname(OUT), { recursive: true });
-  fs.writeFileSync(OUT, sorted.map((item) => JSON.stringify(item)).join('\n') + '\n');
-  console.log(`OK chunks: ${sorted.length} -> references/data/rag/chunk_index.jsonl`);
+  fs.mkdirSync(path.dirname(output), { recursive: true });
+  fs.writeFileSync(output, sorted.map((item) => JSON.stringify(item)).join('\n') + '\n');
+  console.log(`OK chunks: ${sorted.length} -> ${output}`);
 }
 
-if (require.main === module) main();
+module.exports = {main, targetChunks};
+if (require.main === module) {
+ const args=process.argv.slice(2),i=args.indexOf('--output');
+ main(i<0?OUT:path.resolve(args[i+1]));
+}

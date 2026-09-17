@@ -1,0 +1,9 @@
+System: Windows
+Machine: AMD64
+Version: 10.0.26200
+Release: 11
+
+WeasyPrint version: 68.0
+Python version: 3.12.14
+Pydyf version: 0.12.1
+Pango version: 15604

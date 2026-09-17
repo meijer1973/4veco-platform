@@ -2,8 +2,8 @@
 
 Status: owned three-year umbrella planning end-state authority
 Version: v6-three-year umbrella
-Current Year 1 structural revision: `book34-chat-v2-20260914`
-Change review: `reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md`
+Current Year 1 structural revision: `book34-lesson-balance-v3-20260915`
+Change review: `reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-V3-20260917.md`
 Detailed Year 1 baseline: `references/owned/course-blueprint-v5.md`
 Promoted by: `BLUEPRINT-V6-AUTHORITY-PROMOTION-1`
 Maturity packet: `THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1`
@@ -95,8 +95,8 @@ Authority depends on the claim type:
 |---|---|---|---|
 | 1 | Year 1, test week 1 | Foundations, demand, supply, equilibrium | Basic calculations, P-Q graph/table reading, short explanations. |
 | 2 | Year 1, test week 2 | Costs, revenue, elasticity, surplus | Calculation chains, welfare areas, source-supported reasoning. |
-| 3 | Year 1, test week 3 | Government intervention, perfect competition, international trade | Familiar market calculations followed by qualitative/source-led trade; no monopoly or formal labour prerequisite. |
-| 4 | Year 1, test week 4 | Monopoly, market forms/failure, labour market | Monopoly to welfare, tax/subsidy transfer to externalities, actor/variable bridge and retained labour-equilibrium practice. |
+| 3 | Year 1, test week 3 | Government intervention, short-run perfect competition, international trade | Separate limited derivative and output/profit lessons, then qualitative/source-led trade; long-run competition is first assessed in Book 4. |
+| 4 | Year 1, test week 4 | Long-run competition, monopoly, market failure, labour market | 5+7+5 lessons; entry/exit before monopoly; tax/subsidy transfer to externalities and retained labour equilibrium. Old cao/vakbonden lesson deferred pending later-year placement and time allocation. |
 | 5 | Year 2, test week 1 | Time, stock-flow, pensions, intertemporal exchange | Long-horizon reasoning, indexation, sustainability arguments. |
 | 6 | Year 2, test week 2 | Interest, bonds, housing, financial markets | Interest-rate mechanics, asset-price logic, household and market applications. |
 | 7 | Year 2, test week 3 | Risk, insurance, asymmetric information | Expected value, moral hazard, adverse selection, source-based cases. |
@@ -146,7 +146,7 @@ Current Books 1-4 are inherited from the selected v5 structural revision:
 - Book 3: 14 count-bearing paragraphs.
 - Book 4: 17 count-bearing paragraphs.
 
-Year 1 total: 55. Book 3 ends with trade; Book 4 starts with monopoly. The frozen metadata model remains historical; `current_planning_projection` carries the arithmetic 149/153 update. Structural adoption does not approve target exercises or alter the frozen Years 2/3, Book 11, Q19 or production-critical-path decisions.
+Year 1 total: 55. Book 3 ends with trade; Book 4 starts with long-run competition before monopoly. The v3 redistribution retains 55 Year 1 lessons and the 149/153 arithmetic projection. The frozen metadata model remains historical; `current_planning_projection` carries the arithmetic 149/153 update. Structural adoption does not approve target exercises or alter the frozen Years 2/3, Book 11, Q19 or production-critical-path decisions.
 
 The v5 decisions stay active:
 

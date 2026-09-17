@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "task": "BOOK34-V3-INTEGRATION-20260917",
+  "revision": "book34-lesson-balance-v3-20260915",
+  "delivery_id": "book34-v3-r1-r5-20260916",
+  "platform_base": "67374a9808d226f1be7e8fa73eb104312c075267",
+  "lesson_base": "a0548ff9937dfb3b788b8b0ed53bbf9bd4fe1c07",
+  "package_root": "edities/books34-v3",
+  "received_zip_sha256": "5ef27d7537f36a4c6ddac9126dff1ed034593bb52ae375acaaab49f09c0bcb55",
+  "manifest_sha256": "516d07d2d33326fd4d12cecc0a3b4a60693ff4b43a6a671dab508a72390db315",
+  "file_count": 814,
+  "registry_input_sha256": "8e30ecc51151bb479dfca0ca8dbe41122e4d548b4e6ace76663b25922e3c552f",
+  "book12_records_sha256": "3a3a637c0a27f71681e7ae76e68378f0e85182139c93e8578d2597f767af8ec1",
+  "integration_status": "prepared_in_pr",
+  "target_approval": "not_conferred",
+  "authority_source_transitions": [
+    {
+      "path": "references/owned/course-blueprint-v5.md",
+      "before_sha256": "482c506c93d1d8cd4ba9bd4bc6cf268c73494112c32726f7da176d804d4bda96",
+      "after_sha256": "87df8feff9a99994b9098da4ee19b763da396753078743573401012c9d48f819"
+    },
+    {
+      "path": "references/owned/course-blueprint-v6-three-year.md",
+      "before_sha256": "dc89ed024db2d352148a963e08d7cc668888c6190e9738a28c5e0fb3d66085f7",
+      "after_sha256": "f9104a28d669c7f54ab22b72fe5916bcb67830fa9744bb1b4f5deadf46da8ad3"
+    },
+    {
+      "path": "references/authored/course-target-exercises.json",
+      "before_sha256": "8e30ecc51151bb479dfca0ca8dbe41122e4d548b4e6ace76663b25922e3c552f",
+      "after_sha256": "0396784a621b8e098afc3de7dfac1d8f0b1881f1a449124cf7cb26740475f0a5"
+    }
+  ]
+}

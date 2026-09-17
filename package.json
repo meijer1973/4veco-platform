@@ -94,7 +94,8 @@
     "deploy:m3": "npm run deploy:legacy",
     "ci:maintenance": "node build-scripts/ci/maintenance-ci.js check",
     "check:y1-golden-rollout-wave-1-product": "node build-scripts/ci/check-y1-product-evidence.js",
-    "check:books34-structure": "node build-scripts/maintenance/check-books34-chat-import.js",
+    "check:books34-structure": "node build-scripts/maintenance/check-books34-v3-import.js",
+    "check:books34-v2-history": "node build-scripts/maintenance/check-books34-chat-import.js",
     "lookup:books34-outline": "node build-scripts/references/books34-selected-structure.js"
   },
   "type": "commonjs",

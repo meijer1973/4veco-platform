@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "source_id": "authored:book-3-outline",
+  "book": 3,
+  "version": "v2",
+  "structure_revision": "book34-chat-v2-20260914",
+  "original_date": "2026-09-06",
+  "original_sha256": "4e558b63d8eb954de935ad366170f6373f533eae14f90633a89be0036c973217",
+  "original_status": "revised outline proposal",
+  "current_status": "owner_selected_structural_baseline",
+  "selected_on": "2026-09-14",
+  "selection_task": "BOOK34-CHAT-IMPORT-OUTLINES-1",
+  "integration_status": "prepared_in_pr",
+  "target_approval": "not_conferred",
+  "companion_acceptance": "not_conferred",
+  "current_source": "references/authored/book-outlines/book-3-outline.md",
+  "change_review": "reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md",
+  "selected_input_manifest": "references/authored/book-outlines/books34-input-manifest.json",
+  "title_aliases": [
+    "Overheidsingrijpen, concurrentie en internationale handel",
+    "Overheidsingrijpen, volkomen concurrentie en internationale handel"
+  ],
+  "original_page_assumption": 40,
+  "actual_student_chapter_pages": [
+    48,
+    38,
+    38
+  ],
+  "original_proposal_companions_not_supplied": [
+    "sources-and-scope.md",
+    "integration-handoff-v2.md",
+    "paragraph-migration-v1-to-v2.csv"
+  ],
+  "migration_aid": "migration-live-v5-to-v2.csv is newly prepared against live v5, not the historical v1-to-v2 attachment or target equivalence proof.",
+  "paragraph_count": 14,
+  "chapters": [
+    {
+      "id": "3.1",
+      "title": "Overheidsingrijpen",
+      "paragraph_count": 6
+    },
+    {
+      "id": "3.2",
+      "title": "Volkomen concurrentie",
+      "paragraph_count": 4
+    },
+    {
+      "id": "3.3",
+      "title": "Internationale handel",
+      "paragraph_count": 4
+    }
+  ],
+  "paragraphs": [
+    {
+      "id": "3.1.1",
+      "title": "Belastingen: wig en nieuw evenwicht",
+      "kind": "theory",
+      "intended_learning": "Distinguish the price paid by buyers from the amount received by sellers; represent a per-unit tax and calculate the new traded quantity.",
+      "retrieval_and_transfer": "Retrieve linear equilibrium and substitution from §§1.3.2-1.3.3. The two-price interpretation and tax wedge are new formal learning.",
+      "proposed_target_brief": "From a short market case, identify the original equilibrium, introduce the tax, calculate buyer price, seller receipt and transactions, and interpret the wedge.",
+      "boundary": "State who remits the tax, its unit, and the competitive model assumptions. Remittance is not the same as economic tax burden. Do not add welfare accounting before §3.1.2.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    },
+    {
+      "id": "3.1.2",
+      "title": "Belastingdruk en welvaartsverlies",
+      "kind": "theory",
+      "intended_learning": "Calculate the division of the tax burden, tax revenue and welfare consequences; explain the effect of relative responsiveness.",
+      "retrieval_and_transfer": "Retrieve §3.1.1, Book 2 elasticity interpretation and surplus-area calculations. Qualitative supply responsiveness does not require introducing a new supply-elasticity formula.",
+      "proposed_target_brief": "Use one tax case to allocate the burden, calculate government revenue and relevant surplus changes, and explain one distributional claim from the evidence.",
+      "boundary": "Government revenue is a transfer, not the deadweight loss. The initial welfare benchmark excludes external effects; corrective taxation returns in §4.2.4. Do not infer elasticity merely from slopes plotted with different scales.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    },
+    {
+      "id": "3.1.3",
+      "title": "Subsidies",
+      "kind": "theory",
+      "intended_learning": "Represent a per-unit subsidy, calculate both prices and transactions, and identify government expenditure and distributional effects.",
+      "retrieval_and_transfer": "Reuse the tax-wedge method with the direction reversed, and retrieve surplus calculations. Explicitly compare what changes and what stays the same.",
+      "proposed_target_brief": "Calculate a subsidy outcome and government expenditure, identify beneficiaries, and qualify a claim that a subsidy must increase welfare.",
+      "boundary": "Specify the eligible transaction and payment recipient. In this first treatment assume no external benefit; §4.2.5 deliberately changes that assumption. A subsidy is not automatically an efficiency improvement.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    },
+    {
+      "id": "3.1.4",
+      "title": "Maximumprijs",
+      "kind": "theory",
+      "intended_learning": "Distinguish binding and non-binding price ceilings; calculate demand, supply, actual transactions and shortage.",
+      "retrieval_and_transfer": "Retrieve equilibrium and quantity-at-price calculations. Reuse surplus areas only after the transaction and allocation rules have been specified.",
+      "proposed_target_brief": "Analyse a regulated-price case, determine whether the ceiling binds, calculate the shortage and actual sales, and explain who may fail to obtain the product.",
+      "boundary": "A low quoted price does not mean everyone buys at that price. Welfare-area calculations require an explicit allocation assumption. Avoid turning this into a full housing-policy chapter.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    },
+    {
+      "id": "3.1.5",
+      "title": "Minimumprijs en quota",
+      "kind": "theory",
+      "intended_learning": "Analyse a binding price floor and distinguish it from a production quota. Calculate surplus supply and, when specified, public purchases.",
+      "retrieval_and_transfer": "Transfer the ceiling procedure; reuse government-expenditure rectangles and the distinction between offered and actually traded quantities.",
+      "proposed_target_brief": "Use one supported-price case with an explicit purchase rule, then a bounded quota comparison. Calculate the quantities and budget consequences actually asked for.",
+      "boundary": "A production quota is not automatically a price floor; a floor does not imply public purchases unless the source says so. This is a high-load paragraph: the quota comparison stays bounded. Prepares the import-quota comparison in §3.3.3 and the later minimum-wage application in §4.3.4.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    },
+    {
+      "id": "3.1.6",
+      "title": "Gemengde opgaven: overheidsingrijpen",
+      "kind": "gemengde_opgaven",
+      "intended_learning": "Select the appropriate intervention model and integrate price, quantity, budget and welfare reasoning without new theory.",
+      "retrieval_and_transfer": "Interleave §§3.1.1-3.1.5 with Book 2 elasticity and surplus. Require method selection rather than identifying the method in every question heading.",
+      "proposed_target_brief": "Use a small set of contrasting policy cases. At least one target combines a numerical outcome, a labelled diagram and a source-based policy conclusion.",
+      "boundary": "No new intervention or externality model. Do not force every intervention into one unwieldy target or one 55-minute compulsory route.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    },
+    {
+      "id": "3.2.1",
+      "title": "Volkomen concurrentie: kenmerken",
+      "kind": "theory",
+      "intended_learning": "Explain price taking and connect the market price to the individual firm’s GO and MO.",
+      "retrieval_and_transfer": "Retrieve market equilibrium and TO = P x Q; re-use the distinction between total, average and marginal revenue.",
+      "proposed_target_brief": "Read a market graph, transfer the price to a firm graph and explain why the firm cannot profitably choose any price it likes.",
+      "boundary": "Explain the stated competitive assumptions. A horizontal firm demand curve is not the same as a horizontal market demand curve.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    },
+    {
+      "id": "3.2.2",
+      "title": "Winstmaximalisatie bij volkomen concurrentie",
+      "kind": "theory",
+      "intended_learning": "Use marginal comparison to select output and calculate total profit, linking MO, MK, price and average total cost.",
+      "retrieval_and_transfer": "Retrieve Book 2 cost/revenue calculations and marginal meaning. Explicitly teach the optimisation rule; do not label it revision.",
+      "proposed_target_brief": "Obtain the relevant marginal relation, determine the profit-maximising feasible output, calculate profit and interpret the result in a firm diagram.",
+      "boundary": "If a quadratic total-cost function is used, teach the limited quadratic-to-linear derivative operation within this paragraph rather than assuming prior calculus. Check the direction of marginal comparisons and production capacity; MO = MK alone is not a universal maximum proof. Flag the combined mathematical and economic load for target/timing review.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    },
+    {
+      "id": "3.2.3",
+      "title": "Langetermijnevenwicht",
+      "kind": "theory",
+      "intended_learning": "Explain how entry or exit changes market supply, price and firm profit, and interpret the competitive long-run outcome.",
+      "retrieval_and_transfer": "Retrieve §3.2.2, market supply shifts, GTK and break-even. Re-use calculations to support the adjustment narrative.",
+      "proposed_target_brief": "Start from profit or loss, explain entry or exit, draw the direction of adjustment and identify the resulting firm outcome under the stated assumptions.",
+      "boundary": "The familiar zero-economic-profit result requires the specified competitive entry/exit and cost assumptions. It does not mean entrepreneurs receive no remuneration or that total revenue is zero.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    },
+    {
+      "id": "3.2.4",
+      "title": "Gemengde opgaven: volkomen concurrentie",
+      "kind": "gemengde_opgaven",
+      "intended_learning": "Integrate market price formation, firm output, profit and long-run adjustment.",
+      "retrieval_and_transfer": "Interleave Book 2 total/average/marginal distinctions, equilibrium, and §§3.2.1-3.2.3.",
+      "proposed_target_brief": "A market change leads to a new firm calculation and an explanation of subsequent entry or exit; students connect market and firm evidence.",
+      "boundary": "No monopoly or new long-run cost theory. Monopoly is taught next book, in Chapter 4.1; it is not a prerequisite for the trade chapter that follows here. A multi-stage exercise still requires an explicit initial situation and adjustment horizon.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    },
+    {
+      "id": "3.3.1",
+      "title": "Waarom landen handelen: specialisatie en concurrentiepositie",
+      "kind": "theory",
+      "intended_learning": "Explain specialisation, absolute versus comparative advantage and possible mutual gains qualitatively. Distinguish an explanation of relative opportunity cost from a general claim about a country's production strengths or competitiveness.",
+      "retrieval_and_transfer": "Retrieve scarcity, choice and the meaning of opportunity cost from Book 1. Introduce import/export and the new comparative-advantage meaning explicitly. Keep discussion of productivity, quality or costs qualitative and supported by information in the source; no formal labour-cost formula is assumed.",
+      "proposed_target_brief": "Use a short qualitative two-country case, including one in which the same country is more productive in both activities. Explain why relative advantage matters and how exchange may benefit both. Assess a short claim that cheaper production or greater productivity necessarily makes every participant better off. Require a reasoned answer, not a numerical specialisation table.",
+      "boundary": "No calculated opportunity-cost ratios, production-possibility-frontier optimisation, exchange-ratio bounds or separate ruilvoet calculation objective. Do not equate absolute with comparative advantage or claim that all groups necessarily gain. The conceptual/no-calculation boundary follows the owner's retained design instruction; this revision makes no new CE/SE validation claim. Formal productivity and unit-labour-cost analysis is deferred to §4.3.1.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    },
+    {
+      "id": "3.3.2",
+      "title": "Wereldmarktprijs, import, export en welvaart",
+      "kind": "theory",
+      "intended_learning": "Explain how a stated world price changes domestic production and consumption; identify whether the country imports or exports; calculate the trade gap and interpret the effects on domestic buyers and sellers.",
+      "retrieval_and_transfer": "Reuse reading a demand/supply graph, determining quantity at a stated price, and the meaning of consumer/producer surplus. The new distinction is between domestic production, domestic consumption and the foreign trade flow, not a new equation-solving system.",
+      "proposed_target_brief": "Provide a labelled domestic market graph or a short table and a world price. Read or calculate domestic supply and demand, determine the import/export gap, and explain a buyer and seller outcome with evidence. Ask one qualitative surplus/distribution question. Include the reversed-price/export case in accessible practice without a second long calculation chain.",
+      "boundary": "State a small, price-taking country, competitive markets, sufficient foreign supply/demand and the relevant transport/tariff assumptions. Keep currencies fixed. Domestic demand is not domestic production. A rise in the stated total-surplus measure is not evidence that every group gains. The target need not produce a full welfare-area ledger or balance-of-payments account.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    },
+    {
+      "id": "3.3.3",
+      "title": "Protectionisme: invoerheffingen en importquota",
+      "kind": "theory",
+      "intended_learning": "Explain why a government might restrict imports and distinguish its stated aim from effects on different groups. Use the familiar market model to interpret a per-unit import tariff; calculate remaining imports and tariff revenue in a simple case. Contrast an import quota qualitatively.",
+      "retrieval_and_transfer": "Reuse §3.3.2's world-price model and Chapter 3.1's tax, government-budget and quota concepts. Explicitly distinguish a tariff on imported units from a tax on all domestic sales.",
+      "proposed_target_brief": "Present one short policy source and a supplied before/after graph or quantity table. Determine the remaining imported quantity and tariff receipts, then explain effects on domestic consumers and producers. Evaluate one bounded argument for the policy. Use a short non-calculation contrast to explain why a quota need not create the same government revenue.",
+      "boundary": "Use imported quantity, not all domestic sales, for tariff revenue. Teach the no-import boundary using graph reading or a supplied contrast; do not mechanically impose world price plus tariff after imports disappear. State the model assumptions behind the case. Quantitative quota rents/allocation, export-subsidy models, exchange-rate adjustment and formal strategic retaliation remain deferred. An industry-gain claim is not automatically an economy-wide welfare claim.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    },
+    {
+      "id": "3.3.4",
+      "title": "Gemengde opgaven: internationale handel",
+      "kind": "gemengde_opgaven",
+      "intended_learning": "Select and combine qualitative trade explanation, familiar world-price interpretation, a short import/tariff calculation and a source-supported conclusion. Distinguish aggregate and distributional claims.",
+      "retrieval_and_transfer": "Retrieve §§3.3.1-3.3.3 and already-taught market, budget and surplus meanings. No monopoly or labour-market procedure is needed. A source may mention jobs in ordinary language, but must not require labour-demand equations, participation statistics or unit-labour-cost calculations.",
+      "proposed_target_brief": "Use one compact trade-policy case plus a short contrasting claim. Students select the relevant evidence, complete one manageable numerical chain from familiar graph/table data, explain effects on different groups and give a qualified conclusion. Comparative-advantage reasoning stays verbal. Supply or directly teach any contextual information not already in the course.",
+      "boundary": "The earlier proposal cites a 2022 VWO-I Importheffing task as a possible target-design input. Carry that reference forward for later source verification, not as a completed adaptation or evidence that every operation is approved. Later current-account and game-theory demands stay outside this chapter. Claims about protected jobs do not require or establish a formal economy-wide employment result.",
+      "source_path": "references/authored/book-outlines/book-3-outline.md"
+    }
+  ]
+}

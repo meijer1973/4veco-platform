@@ -1,7 +1,7 @@
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { historicalReader, resolveHistoricalPath, assertActiveSprint, gitBlob } = require('./historical-paths');
+const { historicalReader, resolveHistoricalPath, assertActiveSprint, gitBlob, loadRelocations } = require('./historical-paths');
 let root, old, archived, manifest;
 beforeEach(() => {
   root = fs.mkdtempSync(path.join(os.tmpdir(), 'historical-path-'));
@@ -49,4 +49,20 @@ test('ambiguous sources, duplicate destinations and traversal fail', () => {
 test('archived command execution is rejected before a new log can be emitted', () => {
   save(); expect(() => assertActiveSprint(root, 'OLD')).toThrow(/do not replay/);
   expect(() => assertActiveSprint(root, 'NEW')).not.toThrow();
+});
+test('snapshots of one active path require distinct exact commits and never redirect', () => {
+  const item={...manifest.entries[0],kind:'snapshot',original_path:'references/current.md',source_commit:'a'.repeat(40)};
+  manifest.entries=[item,{...item,archived_path:'archive/snapshots/later.md',source_commit:'b'.repeat(40)}];save();
+  expect(loadRelocations(root)).toHaveLength(2);
+  const active=path.join(root,item.original_path);
+  expect(resolveHistoricalPath(root,active)).toBe(active);
+  expect(historicalReader(root).existsSync(active)).toBe(false);
+});
+test.each(['same commit','missing commit','same destination'])('snapshot rejects %s',fault=>{
+  const item={...manifest.entries[0],kind:'snapshot',source_commit:'a'.repeat(40)};
+  const second={...item,archived_path:'archive/snapshots/later.md',source_commit:'b'.repeat(40)};
+  if(fault==='same commit')second.source_commit=item.source_commit;
+  if(fault==='missing commit')delete second.source_commit;
+  if(fault==='same destination')second.archived_path=item.archived_path;
+  manifest.entries=[item,second];save();expect(()=>loadRelocations(root)).toThrow();
 });

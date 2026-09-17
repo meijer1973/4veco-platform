@@ -26,9 +26,14 @@ function loadRelocations(root) {
   for (const entry of data.entries) {
     const src = relativePath(entry.original_path), dst = relativePath(entry.archived_path);
     if (!dst.startsWith('archive/') || src === dst) throw new Error(`Invalid archive destination: ${dst}`);
-    if (sources.has(src.toLowerCase()) || destinations.has(dst.toLowerCase())) throw new Error('Ambiguous archive relocation');
+    // Snapshots never redirect current reads (see relocationFor). The same
+    // active path may have snapshots at distinct exact commits; moves remain
+    // unique by source path and every physical destination stays unique.
+    if (entry.kind === 'snapshot' && !/^[a-f0-9]{40}$/.test(entry.source_commit || '')) throw new Error('Snapshot requires exact source commit');
+    const sourceKey = entry.kind === 'snapshot' ? `snapshot:${entry.source_commit}:${src.toLowerCase()}` : src.toLowerCase();
+    if (sources.has(sourceKey) || destinations.has(dst.toLowerCase())) throw new Error('Ambiguous archive relocation');
     if (!/^[a-f0-9]{40}$/.test(entry.original_blob) || !/^[a-f0-9]{40}$/.test(entry.final_blob || entry.original_blob)) throw new Error('Invalid archive blob');
-    sources.add(src.toLowerCase()); destinations.add(dst.toLowerCase());
+    sources.add(sourceKey); destinations.add(dst.toLowerCase());
   }
   cache.set(root, { stamp, entries: data.entries });
   return data.entries;

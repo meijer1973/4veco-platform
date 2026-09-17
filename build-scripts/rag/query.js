@@ -20,12 +20,15 @@ function parseArgs(argv) {
     else if (arg === '--exam-code') args.examCode = argv[++i];
     else if (arg === '--quality-issue') args.qualityIssue = argv[++i];
     else if (arg === '--limit') args.limit = Number(argv[++i]);
+    else if (arg === '--index') args.index = argv[++i];
+    else if (arg === '--paragraph') args.paragraph = argv[++i];
+    else if (arg === '--revision') args.revision = argv[++i];
   }
   return args;
 }
 
-function loadChunks() {
-  return fs.readFileSync(CHUNK_FILE, 'utf8')
+function loadChunks(file = CHUNK_FILE) {
+  return fs.readFileSync(file, 'utf8')
     .trim()
     .split(/\r?\n/)
     .filter(Boolean)
@@ -71,6 +74,8 @@ function hasAny(hay, terms) {
 }
 
 function scoreChunk(chunk, args) {
+  if (args.paragraph) return chunk.source_type === 'target_exercise'
+    && chunk.entity_ids.includes(args.paragraph) && chunk.structure_revision === args.revision ? 100 : 0;
   let score = 0;
   const hay = normalize(`${chunk.chunk_id} ${chunk.text} ${(chunk.entity_ids || []).join(' ')} ${(chunk.evidence_ids || []).join(' ')}`);
   const entities = (chunk.entity_ids || []).map(normalize);
@@ -135,7 +140,7 @@ function resultFor(chunk, score) {
   const generatedReport = chunk.authority_level === 'generated_report' || chunk.source_type === 'quality_report';
   const generatedArtifact = (chunk.edge_statuses || []).includes('generated_artifact_warning');
   const diagnosticOnly = (chunk.edge_statuses || []).includes('diagnostic_only') || chunk.authority_level === 'diagnostic' || generatedReport || generatedArtifact;
-  const pendingReview = (chunk.edge_statuses || []).includes('pending_review');
+  const pendingReview = (chunk.edge_statuses || []).includes('pending_review') || chunk.record_status === 'candidate_review_ready';
   return {
     chunk_id: chunk.chunk_id,
     score,
@@ -153,17 +158,20 @@ function resultFor(chunk, score) {
     curriculum_authority: chunk.curriculum_authority === true,
     allowed_for_public_citation: chunk.allowed_for_public_citation === true,
     text_excerpt: chunk.text.slice(0, 500),
+    ...(chunk.target ? {record_status:chunk.record_status,structure_revision:chunk.structure_revision,target:chunk.target} : {}),
   };
 }
 
 function runQuery(args) {
-  const chunks = loadChunks();
+  if (args.paragraph && !args.revision) throw new Error('Paragraph target lookup requires --revision');
+  const chunks = loadChunks(args.index);
   const results = chunks
     .map((chunk) => ({ chunk, score: scoreChunk(chunk, args) }))
     .filter((item) => item.score > 0)
     .sort((a, b) => b.score - a.score || a.chunk.chunk_id.localeCompare(b.chunk.chunk_id))
     .slice(0, args.limit)
     .map((item) => resultFor(item.chunk, item.score));
+  if (args.paragraph && results.length !== 1) throw new Error('No unique target for the requested paragraph and revision');
   return {
     generated_by: 'build-scripts/rag/query.js',
     generated_on: new Date().toISOString(),
@@ -173,6 +181,8 @@ function runQuery(args) {
       term: args.term || null,
       exam_code: args.examCode || null,
       quality_issue: args.qualityIssue || null,
+      paragraph: args.paragraph || null,
+      revision: args.revision || null,
     },
     result_count: results.length,
     results,
@@ -192,12 +202,18 @@ function printText(output) {
       console.log(`  not_primary_evidence: ${item.not_primary_evidence}`);
     }
     console.log(`  ${item.text_excerpt}`);
+    if (item.target) {
+      console.log(`  Candidate target (${item.structure_revision}; independent review pending):\n${item.target.context}`);
+      for (const q of item.target.subquestions) console.log(`${q.label}. ${q.prompt}`);
+      for (const figure of item.target.figures_consumed) console.log(`  Source figure: ${item.target.source_locator.package_root}/${figure}`);
+      console.log('  Full source tables and embedded figures are retained in the --json target.context_html export.');
+    }
   }
 }
 
 function main() {
   const args = parseArgs(process.argv.slice(2));
-  if (!args.text && !args.unit && !args.term && !args.examCode && !args.qualityIssue) {
+  if (!args.text && !args.unit && !args.term && !args.examCode && !args.qualityIssue && !args.paragraph) {
     console.error('Usage: query.js --text "vraag" | --unit A15 | --term prijselasticiteit_van_de_vraag | --exam-code A2.5 | --quality-issue empty-needs [--json]');
     process.exit(1);
   }

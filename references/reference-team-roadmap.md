@@ -11,6 +11,14 @@ Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
 
+## Books 3/4 v3 integration — 17 September 2026
+
+`BOOK34-V3-INTEGRATION-20260917`: writing, local assembly and R1–R5 package repairs complete; repository integration prepared/in PR. Adopted placement is `book34-lesson-balance-v3-20260915`, 14/17 paragraphs (6+4+4 / 5+7+5), Year 1 total 55. Derivative and profit choice are separate; long-run entry/exit moves to first assessment in Book 4 §4.1.1; old v2 §4.3.5 cao/vakbonden is deferred, while new §4.3.5 is mixed labour practice. Existing v2 delivery and all Books 1/2 records remain unchanged.
+
+The 31 actual targets are populated `candidate_review_ready` records. Independent target review, skill/exam mapping, companion acceptance and publication remain separate. Five lesson-time questions stay open: 3.1.2, 3.1.3, 3.1.5, 4.2.4 and 4.2.5. A later-year destination and time allocation for cao/vakbonden is still required before using it as prior knowledge. The historical 148/152 model and current 149/153 arithmetic projection are retained.
+
+See [bounded change review](../reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-V3-20260917.md) and [integration evidence](../reports/sprints/BOOK34-V3-INTEGRATION-20260917-result.md). No merge, deploy or publication is authorized by this package.
+
 ## Exam Ingestion North Star
 
 The long-term reference-platform goal is that a new official CvTE economics

@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "task": "BOOK34-V3-INTEGRATION-20260917",
+  "files": [
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/authored/course-target-exercises.json",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/authored/course-target-exercises.json",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "8e30ecc51151bb479dfca0ca8dbe41122e4d548b4e6ace76663b25922e3c552f"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/owned/course-blueprint-v5.md",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/owned/course-blueprint-v5.md",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "482c506c93d1d8cd4ba9bd4bc6cf268c73494112c32726f7da176d804d4bda96"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/owned/course-blueprint-v5.meta.json",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/owned/course-blueprint-v5.meta.json",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "be08820fef43bfeae45c2bd50908a6c8349354898bd4cf09479b9ccdb4bea9d3"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/owned/course-blueprint-v6-three-year.md",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/owned/course-blueprint-v6-three-year.md",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "dc89ed024db2d352148a963e08d7cc668888c6190e9738a28c5e0fb3d66085f7"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/owned/course-blueprint-v6-three-year.meta.json",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/owned/course-blueprint-v6-three-year.meta.json",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "8bf7a16568d56af486a027cb461f6e9e2d5097ab9b75c1c8425193e1dd11d034"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/authored/book-outlines/book-2-outline.md",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/authored/book-outlines/book-2-outline.md",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "2a37c6f51abfb0f2582a7b368cae5d46fe885b9436ad84b520d9b8232388ddd5"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/authored/book-outlines/book-2-outline.meta.json",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/authored/book-outlines/book-2-outline.meta.json",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "a46cf28cd7ebd260845a5b2f9f4035c67cf6ec70b1bf31af041120ca56ba67f4"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/authored/book-outlines/book-3-outline.md",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/authored/book-outlines/book-3-outline.md",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "4e558b63d8eb954de935ad366170f6373f533eae14f90633a89be0036c973217"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/authored/book-outlines/book-3-outline.meta.json",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/authored/book-outlines/book-3-outline.meta.json",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "aaf65d023575858f9685754e1ef549fc3d4c0baf9a0e02dec9203359db2d51c0"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/authored/book-outlines/book-4-outline.md",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/authored/book-outlines/book-4-outline.md",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "3bfb4350bb1f990a8ea559272263e8ef35e1b72bd0cbc86b59c9aa6ad4fc0899"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/authored/book-outlines/book-4-outline.meta.json",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/authored/book-outlines/book-4-outline.meta.json",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "c2d1871225c32eb4dfb4365cb939a1d5232f5839fad0141dfe5d25735982c968"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/authored/book-outlines/books34-input-manifest.json",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/authored/book-outlines/books34-input-manifest.json",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "fff8048f16f8ed643b4536c3265c8328b68b98c9f1d279fa982fb3a211df7e47"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/authored/book-outlines/books34-structure-change.json",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/authored/book-outlines/books34-structure-change.json",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "f1276caff9b72bfa3713ac35ff58d991f562edb4773fdf67d85242aaacd0aefc"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/authored/book-outlines/migration-live-v5-to-v2.csv",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/authored/book-outlines/migration-live-v5-to-v2.csv",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "21bb99d43ccb641b8afeb85405f9a69f2a478c0769ced5bc66c3d5769919f0ce"
+    },
+    {
+      "repository": "meijer1973/4veco-platform",
+      "path": "references/authored/book-outlines/selected-paragraphs.csv",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/references/authored/book-outlines/selected-paragraphs.csv",
+      "source_commit": "67374a9808d226f1be7e8fa73eb104312c075267",
+      "sha256": "454651442a9d119423deee2580766736a7f13cac9d208c6bf8b734e4061f73ed"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "path": "course_blueprint_v5.md",
+      "snapshot": "archive/blueprints/book34-pre-v3-20260917/course_blueprint_v5.md",
+      "source_commit": "a0548ff9937dfb3b788b8b0ed53bbf9bd4fe1c07",
+      "sha256": "482c506c93d1d8cd4ba9bd4bc6cf268c73494112c32726f7da176d804d4bda96"
+    }
+  ]
+}

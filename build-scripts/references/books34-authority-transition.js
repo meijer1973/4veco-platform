@@ -18,8 +18,18 @@ const TRANSITIONS=Object.freeze({
   ]
 });
 function hash(value) {return crypto.createHash('sha256').update(String(value).replace(/\r\n?/g,'\n')).digest('hex');}
+const V3_TRANSITIONS=Object.freeze({
+ 'references/owned/course-blueprint-v5.md':'87df8feff9a99994b9098da4ee19b763da396753078743573401012c9d48f819',
+ 'references/owned/course-blueprint-v6-three-year.md':'f9104a28d669c7f54ab22b72fe5916bcb67830fa9744bb1b4f5deadf46da8ad3',
+ 'references/authored/course-target-exercises.json':'0396784a621b8e098afc3de7dfac1d8f0b1881f1a449124cf7cb26740475f0a5'
+});
+function transitionRevision(files) {
+ if(Object.entries(V3_TRANSITIONS).every(([p,h])=>files[p]!=null&&hash(files[p])===h))return 'book34-lesson-balance-v3-20260915';
+ if(Object.entries(TRANSITIONS).every(([p,h])=>files[p]!=null&&hash(files[p])===h[1]))return 'book34-chat-v2-20260914';
+ return null;
+}
 function acceptsTransition(file,previousHash,files) {
  const pair=TRANSITIONS[file];
- return Boolean(pair && pair[0]===previousHash && Object.entries(TRANSITIONS).every(([p,hashes])=> files[p]!=null && hash(files[p])===hashes[1]));
+ return Boolean(pair && pair[0]===previousHash && transitionRevision(files));
 }
-module.exports={TRANSITIONS,acceptsTransition};
+module.exports={TRANSITIONS,V3_TRANSITIONS,acceptsTransition,transitionRevision};

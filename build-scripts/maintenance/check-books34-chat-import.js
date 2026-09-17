@@ -5,7 +5,7 @@
 const fs=require('fs'), path=require('path'), crypto=require('crypto');
 const {execFileSync}=require('child_process');
 const migration=require('../references/migrate-books34-selected-outlines');
-const {readSelectedStructure,validateStructuralRecords}=require('../references/books34-selected-structure');
+const {readSelectedStructure,validateStructuralRecords}=require('../references/books34-v2-structure');
 const {TRANSITIONS}=require('../references/books34-authority-transition');
 const ROOT=path.resolve(__dirname,'../..'), LESSONS=path.resolve(ROOT,'../4veco-lessen');
 const BOOKS={3:'Boek 3 - Overheidsingrijpen, concurrentie en internationale handel',4:'Boek 4 - Monopolie, marktfalen en arbeidsmarkt'};

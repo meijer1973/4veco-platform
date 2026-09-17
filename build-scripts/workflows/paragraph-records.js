@@ -7,7 +7,7 @@ const path = require('path');
 const yaml = require('js-yaml');
 const authority = require('./check-book-outline-currentness');
 const evidence = require('../../scripts/lib/part-a-review-evidence');
-const { acceptsTransition } = require('../references/books34-authority-transition');
+const { acceptsTransition, transitionRevision } = require('../references/books34-authority-transition');
 const ROOT = path.resolve(__dirname, '../..');
 
 function foundation(folder, action, root = ROOT) {
@@ -35,7 +35,7 @@ function foundation(folder, action, root = ROOT) {
       const transitioned = acceptsTransition(source.path, source.sha256, files);
       return {...source, actual_sha256: actual,
         currentness: actual === source.sha256 ? 'exact_original' : transitioned ? 'reviewed_structural_transition' : 'stale',
-        ...(transitioned ? {structure_revision:'book34-chat-v2-20260914'} : {})};
+        ...(transitioned ? {structure_revision:transitionRevision(files)} : {})};
     }),
     target: meta.target_registry_pins.find(pin => pin.id === id),
     chapter_plan: { path: '../_chapter-plan.md', actual_sha256: chapterHash,
