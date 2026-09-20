@@ -13,6 +13,25 @@ const {
 } = require('./check-paragraph-lane-scope');
 
 const FIXTURE_DIR = path.join(__dirname, 'fixtures', 'paragraph-lane-scope');
+test('Book 2 delivered assembly has finite textbook ownership without a blanket edition exemption', () => {
+  const edition = 'Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/';
+  const files = ['README.md', 'assembly.json', 'repair-manifest.json',
+    'CORRECTIES-2026-09-20.md', 'CORRECTIES-REVIEW-2026-09-20.md',
+    'cover-background-prompt.txt', '_assets/book2-cover-background.png',
+    '_assets/economics_textbook_cover_costs_and_surplus.png',
+    'boek/Boek_2_Compleet.pdf', 'boek/Boek_2_Compleet_Antwoorden.pdf',
+    'boek/Boek_2_Compleet_Docenteninformatie.pdf'].map(file => edition + file);
+  expect(checkLaneScope({ lane: 'textbook', changedPaths: files }).ok).toBe(true);
+  expect(checkLaneScope({ lane: 'companion', changedPaths: files }).ok).toBe(false);
+  for (const file of ['delivery-manifest.json', 'runtime.js', 'boek/unknown.pdf', 'bronnen/unknown.md']) {
+    expect(classifyPath(edition + file).category).toBe('unknown');
+    expect(checkLaneScope({ lane: 'textbook', changedPaths: [...files, edition + file] }).ok).toBe(false);
+  }
+  const companion = edition + '2.2.1 - korte-check.html';
+  expect(classifyPath(companion).category).toBe('partB_companion');
+  expect(checkLaneScope({ lane: 'textbook', changedPaths: [...files, companion] }).ok).toBe(false);
+  expect(classifyPath(edition.replace('chat-2026', 'other') + 'assembly.json').category).toBe('unknown');
+});
 test('the bounded Books 3/4 blueprint packet is review evidence, not an unknown source exemption', () => {
   expect(classifyPath('reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-CHAT-20260914.md').category).toBe('review_evidence');
   expect(classifyPath('reports/reference-planning/BLUEPRINT-CHANGE-REVIEW-BOOK34-V3-20260917.md').category).toBe('review_evidence');
