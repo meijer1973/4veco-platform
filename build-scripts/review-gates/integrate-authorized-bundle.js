@@ -1767,6 +1767,9 @@ function resumePlatformFirst(input, options, deps, journal) {
   const observed = validateMergedPr(LESSON_REPO, lessonPr.number, deps.fetchMergedPr(LESSON_REPO, lessonPr.number));
   if (!observed.ok) return reject('lesson_merge_not_observable', { merge });
   recordCompletedMerge(journal, invocation, { repo: LESSON_REPO, pr_number: lessonPr.number, merge, ...observed });
+  if (observed.merged_pr.headRefOid !== lessonPr.headRefOid || observed.merged_pr.baseRefName !== 'main') {
+    return reject('lesson_merge_identity_changed');
+  }
   if (deps.fetchMainSha(PLATFORM_REPO) !== platformMainSha || deps.fetchMainSha(LESSON_REPO) !== observed.merge_commit ||
       !['ahead', 'identical'].includes(deps.fetchCompareStatus(LESSON_REPO, lessonPr.headRefOid, observed.merge_commit).status)) {
     return reject('postmerge_state_changed');

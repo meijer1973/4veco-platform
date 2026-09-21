@@ -120,6 +120,19 @@ describe('platform-first residual recovery', () => {
     expect(x.journal.merge_invocations[0]).toMatchObject({ repo: LESSON_REPO, outcome: 'unknown' });
     expect(x.journal.completed_merges[0].resumed).toBe(true);
   });
+  test.each([
+    ['head', { headRefOid: '8'.repeat(40) }],
+    ['base', { baseRefName: 'other' }],
+  ])('rejects a different observed lesson %s while retaining the actual merge', (_name, changes) => {
+    const x = recovery();
+    x.deps.fetchMergedPr.mockReturnValue(pr(LESSON_REPO, 34, lessonHead, {
+      state: 'MERGED', mergeCommit: { oid: lessonMerge }, ...changes,
+    }));
+    expect(x.run()).toMatchObject({ ok: false, failure: 'lesson_merge_identity_changed' });
+    expect(x.journal.completed_merges).toHaveLength(2);
+    expect(x.journal.completed_merges[1]).toMatchObject({ merge_commit: lessonMerge, merged_pr: changes });
+    expect(x.deps.waitForPlatformMainCi).not.toHaveBeenCalled();
+  });
 });
 
 function refreshResultFixture({
