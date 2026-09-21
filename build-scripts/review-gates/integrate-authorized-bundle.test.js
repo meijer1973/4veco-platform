@@ -3,6 +3,7 @@ const os = require('os');
 const path = require('path');
 const {
   acquirePlatformMainCi,
+  fetchMergedPr,
   generateBundleIntegrationReadiness,
   integrateBundle,
   resumePlatformFirst,
@@ -64,7 +65,13 @@ describe('platform-first residual recovery', () => {
       fetchMainSha: jest.fn(repo => repo === PLATFORM_REPO ? main : lessonMain),
       latestWorkflowRunDatabaseId: jest.fn(() => 100),
       mergePr: jest.fn(() => { lessonMain = lessonMerge; lesson = { ...lesson, state: 'MERGED', mergeCommit: { oid: lessonMerge } }; return { merged: true }; }),
-      fetchMergedPr: jest.fn(() => lesson),
+      // Match gh's actual projection: omitted query fields are not returned.
+      // Exercise the production adapter so a rich fixture cannot hide a
+      // missing field needed by postmerge identity validation.
+      fetchMergedPr: jest.fn(() => fetchMergedPr(LESSON_REPO, 34, args => {
+        const requested = args[args.indexOf('--json') + 1].split(',');
+        return JSON.stringify(Object.fromEntries(requested.map(field => [field, lesson[field]])));
+      })),
       validatePlatformCiRange: jest.fn(() => ({ ok: true })),
       waitForPlatformMainCi: jest.fn(() => ({ ok: true, run: { databaseId: 101 } })),
     };
