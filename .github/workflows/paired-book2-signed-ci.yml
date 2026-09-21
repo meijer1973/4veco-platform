@@ -78,7 +78,7 @@ jobs:
         working-directory: 4veco-platform
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq libpango-1.0-0 libpangoft2-1.0-0 libcairo2
+          sudo apt-get install -y -qq libpango-1.0-0 libpangoft2-1.0-0 libcairo2 poppler-utils
           python -m pip install -r build-scripts/books/requirements-exercise-routes.txt
       - name: Verify exercises, current assembly and navigation
         working-directory: 4veco-platform
