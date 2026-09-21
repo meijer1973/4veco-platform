@@ -46,13 +46,32 @@ facsimiles. Source and layout remain separate from derived exports.
 
 The complete books retain 110/57/19 pages. The verifier compares all 180 chapter
 pages to assembly, all 121 chapter links, 207 paragraph-export pages and 20
-paragraph links. Main contents page references are correct; chapter-local references, overview
-pages 72/109 and answer bookmarks remain clickable. External paragraph links use relative
+paragraph links. Printed numbers run continuously after the unnumbered cover and
+contents: students 1–108, answers 1–55, teacher material 1–17. The chapter and
+paragraph exports retain these book numbers. Main contents, chapter contents,
+compact navigation labels, reference tables and teacher references use the same
+printed numbering. PDF viewer labels agree. The overview destinations are printed
+pages 70/107 (physical PDF pages 72/109); answer bookmarks remain clickable.
+External paragraph links use relative
 chapter paths; distribute their folder structure together.
+
+`book2_print.py` owns current contents rendering and counter offsets, deriving
+chapter starts from `assembly.json`; `print-pagination.json` binds the convention.
+Four contents-number link areas widen to contain the additional digits. Their
+reviewed before/after record is `book2-print-review-20260921/navigation-delta.json`;
+the historical navigation evidence remains unchanged.
+
+The build also produces `boek/Boek_2_Theorie_43_Herziene_Paginas.pdf` and its JSON
+page map/hash record from the current complete student book. This is a reading
+extract with preserved book numbers; use the complete book for clickable links.
+It is included in the current assembly and closed revision inventories, so it is
+available from the lesson PR rather than solely from a local convenience folder.
 
 The policy is canonical in `economic_mathematical_precision_reference.md` §15.
 GEN.A15 uses signed, unrounded own-price elasticity and old-value denominators;
 zero, undefined price change and positive confounded ratios are separate cases.
+The unitary boundary uses exact decimal input cross-products before interpreting
+the numeric quotient; it does not classify by rounded display values or tolerance.
 Finite revenue is calculated as old/new P×Q. Voluntary absolute-value reasoning
 is not penalised, but is no longer a required step or marking point.
 
@@ -67,8 +86,9 @@ identities, numbering, learning goals and point statuses remain unchanged except
 for the explicitly approved signed-elasticity wording and finite target fields.
 No lifecycle holds or target approvals are released. Existing 34 theory-paragraph
 complete-route timing budgets remain unresolved; no new 55-minute claim is made.
-Books 3/4 retain their separate historical absolute-value references for an
-explicit follow-up; their NAV1 chapter-contents links remain a separate repair.
+Books 3/4 still contain active retrieval prompts/answers with the older required
+absolute-value wording. They are a named downstream alignment follow-up, distinct
+from immutable historical evidence; their NAV1 contents links are a separate repair.
 Part B is unchanged.
 
 PDF byte hashes depend on the checkout/font/native-library environment. Review

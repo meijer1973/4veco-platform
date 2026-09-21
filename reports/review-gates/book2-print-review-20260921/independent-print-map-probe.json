@@ -1,0 +1,9 @@
+{
+  "probe": "Prescribed 43-row extract page map changed in external fixture",
+  "source_map_before_sha256": "67c638123e594e0d09f68305bc77593254a197cb59d303f153aa91ccf87d2b32",
+  "source_map_after_sha256": "47367b783745e2d6a3fa3aa0c52b85f9f1745c21eabcfcae928a48b821e55e06",
+  "outcome": {
+    "rejected": true,
+    "message": "Stale/unsafe native input: signed-page-map.json"
+  }
+}

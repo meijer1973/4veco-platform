@@ -1,0 +1,38 @@
+{
+  "scope": "B2-R1 generator robustness only; paragraph numbering/output/final pair pending",
+  "verdict": "PASS",
+  "repaired_finding": "Fixed quotient epsilon was insufficient; exact decimal input comparison now replaces it",
+  "files": [
+    {
+      "path": "engines/skilltree/generators.js",
+      "sha256": "720309108520e0babc9e76ff20d7efa196f52aa6a32149b1dfc90c566996c2ea"
+    },
+    {
+      "path": "engines/tests/signed-elasticity.test.js",
+      "sha256": "229c6e32af847a2050ad50b0be39521d51645a317e66c6c041ba7ef1f2624287"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "independent-b2-r1-first-pass.json",
+      "sha256": "0bbdc834d92faef7c56b582fbefa97058c0ae6b526d48d8730c6e60e47096f4e"
+    },
+    {
+      "path": "independent-b2-r1-exact-proof.json",
+      "sha256": "0d98e7cf8fe9a7e09b8a0b84971cfa78274bd00ceb10979906eeca8d2a017a75"
+    },
+    {
+      "path": "independent-b2-r1-exact-tests.json",
+      "sha256": "9a0440e1c871dc25b0a1aa5b342ee4a3bc99f78495608870b6a3b849afa6d2ed"
+    },
+    {
+      "path": "independent-b2-r1-browser-proof.json",
+      "sha256": "38a91fcbcf5d39b03b5a92af84ab077d28f5d2175ddbb2a6e4f54b8394573d2e"
+    }
+  ],
+  "jest_tests_passed": 22,
+  "current_domain_cases_unchanged": 1334,
+  "independent_euro_cent_cases": 33000,
+  "browser_checks": 22105,
+  "browser": "HeadlessChrome/152.0.0.0 actual UMD script"
+}

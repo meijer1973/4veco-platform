@@ -1,0 +1,12 @@
+{
+  "browser": "Chrome headless, actual UMD browser branch",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+  "bigInt": "function",
+  "checks": 22105,
+  "failures": [],
+  "unitaryCases": 11000,
+  "generatedOutputIsJsonSafe": true,
+  "passed": true,
+  "source_sha256": "720309108520e0babc9e76ff20d7efa196f52aa6a32149b1dfc90c566996c2ea",
+  "probe_html_sha256": "1c8ccdf05384b2a28dedb025c394119bc713136d273dddda65480b600b89d36a"
+}

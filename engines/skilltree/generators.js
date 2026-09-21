@@ -362,14 +362,38 @@
         return 'inelastisch';
     }
 
+    // Treat authored numeric inputs as their decimal values, including scientific
+    // notation. Exact cross-products identify the unitary boundary without a
+    // tolerance that could swallow a genuinely different elasticity.
+    function decimalFraction(value) {
+        var parts = String(value).split('e');
+        var decimal = parts[0].split('.');
+        var places = (decimal[1] || '').length - Number(parts[1] || 0);
+        var numerator = BigInt(decimal.join(''));
+        return places >= 0
+            ? { n: numerator, d: 10n ** BigInt(places) }
+            : { n: numerator * 10n ** BigInt(-places), d: 1n };
+    }
+
+    function exactRelativeChange(oldValue, newValue) {
+        var oldDecimal = decimalFraction(oldValue);
+        var newDecimal = decimalFraction(newValue);
+        return { n: newDecimal.n * oldDecimal.d - oldDecimal.n * newDecimal.d,
+            d: newDecimal.d * oldDecimal.n };
+    }
+
     function measureDemand(pOld, qOld, pNew, qNew) {
         if (![pOld, qOld, pNew, qNew].every(Number.isFinite) || pOld <= 0 || qOld <= 0) {
             throw new RangeError('Oude prijs en hoeveelheid moeten positief zijn voor deze procentberekening.');
         }
         var priceChange = (pNew - pOld) / pOld * 100;
         var quantityChange = (qNew - qOld) / qOld * 100;
+        var priceExact = exactRelativeChange(pOld, pNew);
+        var quantityExact = exactRelativeChange(qOld, qNew);
+        var unitary = priceExact.n !== 0n &&
+            quantityExact.n * priceExact.d === -priceExact.n * quantityExact.d;
         return { priceChange: priceChange, quantityChange: quantityChange,
-            ev: priceChange === 0 ? NaN : quantityChange / priceChange };
+            ev: priceChange === 0 ? NaN : unitary ? -1 : quantityChange / priceChange };
     }
 
     GEN.A15 = function () {

@@ -14,6 +14,7 @@ import sys
 from book2_native_theory import CSS, page_body, render_figures
 from build_book2_chat import EDITION
 from book2_signed_exports import export
+from book2_print import page_css,start_page
 
 PLATFORM=Path(__file__).resolve().parents[2]
 
@@ -23,11 +24,12 @@ def chapter(lessons,number,derivatives=False):
     render_figures(folder)
     sys.path.insert(0,str(folder))
     renderer=importlib.import_module('build')
-    renderer.CSS+='\n.route{padding:4pt 9pt;margin:4pt 0 5pt;line-height:1.15;}\n'+CSS
+    base_css=renderer.CSS+'\n.route{padding:4pt 9pt;margin:4pt 0 5pt;line-height:1.15;}\n'+CSS
+    renderer.CSS=base_css+page_css(lessons/EDITION,'student',number)
     html=[]
     for i,p in enumerate(renderer.PAGES,1):
         native=p.get('native_layout')=='theory-20260921'
-        if native:body=page_body(p['body'],i,number,renderer.render_markdown)
+        if native:body=page_body(p['body'],i+start_page(lessons/EDITION,'student',number)-1,number,renderer.render_markdown)
         else:
             heading='' if i==1 or re.search(r'^# ',p['body'],re.M) else f'<div class="page-title">{p["section"]} · {p["title"]}</div>'
             body=heading+renderer.render_markdown(p['body'])
@@ -58,8 +60,10 @@ def chapter(lessons,number,derivatives=False):
     combined.write_text('\n\n<div class="page-break"></div>\n\n'.join(p['body'] for p in renderer.PAGES),encoding='utf8',newline='\n')
     print(f'H{number}: {len(document.pages)} native pages, allocation PASS')
     if derivatives:
+        renderer.CSS=base_css+page_css(lessons/EDITION,'answers',number)
         answer_pages=importlib.import_module('build_answers').build_answers()
         if answer_pages!={1:20,2:18,3:17}[number]:raise ValueError('Answer page allocation changed')
+        renderer.CSS=base_css+page_css(lessons/EDITION,'teacher',number)
         importlib.import_module('build_teacher').build_teacher()
         export(folder,number,renderer.PAGES,name)
         # Historical chapter writers use the host newline convention. Normalize

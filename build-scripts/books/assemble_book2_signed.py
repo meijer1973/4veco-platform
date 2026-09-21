@@ -7,7 +7,9 @@ import shutil
 import fitz
 from pypdf import PdfReader,PdfWriter
 from weasyprint import HTML
-from build_book2_chat import cover_pdf,contents_pdf,append_chapters,file_record
+from build_book2_chat import cover_pdf,append_chapters,file_record
+from book2_print import contents_pdf,refresh_source_map,build_extract
+from pypdf.constants import PageLabelStyle
 
 REVISION='book2-theory-signed-20260921'
 
@@ -15,7 +17,7 @@ def write_json(file,value):
     file.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf8',newline='\n')
 
 def source_paths(root):
-    sources={root/name for name in ('assembly.json','signed-cover-panel.html','signed-cover-source.json','_assets/signed-cover-background.png','signed-navigation.json')}
+    sources={root/name for name in ('assembly.json','signed-cover-panel.html','signed-cover-source.json','_assets/signed-cover-background.png','signed-navigation.json','signed-page-map.json','print-pagination.json')}
     for folder in (root/'bronnen').glob('H*'):
         sources.update((folder/'manuscript').glob('*.md'))
         sources.update(folder.glob('*.py'))
@@ -34,6 +36,7 @@ def record_chapters(root):
             source=root/f'bronnen/H{number}/output'/Path(name).name
             if len(PdfReader(source).pages)!=bundle['page_counts'][number-1]:raise ValueError('Chapter pagination changed')
             shutil.copyfile(source,root/name)
+    refresh_source_map(root)
     record={'revision':REVISION,'sources':[file_record(root,p)for p in source_paths(root)],
         'chapters':{name:file_record(root,root/name)for b in config['bundles']for name in b['chapters']}}
     write_json(root/'signed-chapter-inputs.json',record)
@@ -64,8 +67,11 @@ def build(root):
     outputs=[];pending={}
     for bundle in config['bundles']:
         writer=PdfWriter();writer.append(PdfReader(BytesIO(cover_bytes)))
-        writer.append(PdfReader(BytesIO(contents_pdf(config,bundle,bundle['page_counts']))))
+        writer.append(PdfReader(BytesIO(contents_pdf(root,bundle))))
         append_chapters(writer,[(f'h{i+1}',PdfReader(root/p))for i,p in enumerate(bundle['chapters'])])
+        writer.set_page_label(0,0,prefix='Omslag')
+        writer.set_page_label(1,1,prefix='Inhoud')
+        writer.set_page_label(2,len(writer.pages)-1,style=PageLabelStyle.DECIMAL,start=1)
         if bundle['kind']=='student':
             writer.root_object.pop('/Outlines',None)
             parents={}
@@ -78,6 +84,7 @@ def build(root):
     outputs.append(preview)
     for file,content in pending.items():
         temp=file.with_suffix(file.suffix+'.tmp');temp.write_bytes(content);temp.replace(file)
+    outputs.extend(build_extract(root,root/next(b['output']for b in config['bundles']if b['kind']=='student')))
     write_json(root/'signed-assembly-manifest.json',{'revision':REVISION,
         'chapter_inputs_sha256':file_record(root,root/'signed-chapter-inputs.json')['sha256'],
         'files':[file_record(root,p)for p in outputs]})

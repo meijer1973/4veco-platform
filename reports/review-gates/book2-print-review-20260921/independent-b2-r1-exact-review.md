@@ -1,0 +1,11 @@
+# B2-R1 exact-decimal repair — independent bounded review
+
+Verdict: **PASS for the repaired generator robustness finding.** This closes the earlier fixed-tolerance finding recorded in `independent-b2-r1-first-pass.md`; it does not approve the still-changing printed numbering, portable extract, final PDFs or final repository pair.
+
+The classifier again uses strict signed comparisons. `measureDemand` interprets each finite Number's standard decimal string, including exponent notation, as an exact fraction. The relative-change numerator/denominator correctly retain the old-value basis. Only a nonzero exact price change and exact opposite relative-change cross-products normalize the result to −1. Other measurements retain the original numerical quotient. Unchanged prices remain undefined, zero quantity response remains zero, and positive observed ratios remain outside the ordinary negative own-price classification. No display rounding or broad near-one tolerance is used.
+
+Independent checks passed: all 22 Jest tests; all 1,334 current admitted generator cases reproduce the old measurement results; 33,000 decimal observations covering unitary values and both neighbouring quantity directions classify consistently in euros and cents with no failures. Additional probes cover positive/negative exponent notation, very small finite inputs and unchanged-price/quantity cases. The earlier three concrete failures are repaired.
+
+I also loaded the actual source through its browser UMD branch in headless Chrome 152. It passed 22,105 tracked checks, including all 11,000 unitary euro/cent pairs, the reproduction examples and 100 generated A15 outputs. A15 and an unaffected A01 output remain JSON serializable; BigInt values stay inside the exact comparison. BigInt support is now a runtime prerequisite; no repository requirement for pre-BigInt browsers was found. This records actual Chrome execution, not an unperformed Safari/Firefox compatibility matrix.
+
+Source hashes and reusable evidence are in `independent-b2-r1-exact-bindings.json`. The generator SHA-256 is `720309108520e0babc9e76ff20d7efa196f52aa6a32149b1dfc90c566996c2ea`; the regression test SHA-256 is `229c6e32af847a2050ad50b0be39521d51645a317e66c6c041ba7ef1f2624287`. No implementation or repository evidence was edited by the reviewer.

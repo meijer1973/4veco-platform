@@ -1,0 +1,84 @@
+{
+  "scope": "Independent B2-R1 exact-decimal candidate verification only",
+  "passed": true,
+  "current_generator": {
+    "cases": 1334,
+    "measurements_differ_from_55bca26c": 0
+  },
+  "decimal_unitary_and_both_sides": {
+    "cases": 33000,
+    "euro_cent_failures": []
+  },
+  "exponent_zero_cases": [
+    {
+      "input": [
+        2e+21,
+        1000,
+        2.2e+21,
+        900
+      ],
+      "ev": -1,
+      "classification": "eenheidselastisch"
+    },
+    {
+      "input": [
+        2e-7,
+        1000,
+        2.2e-7,
+        900
+      ],
+      "ev": -1,
+      "classification": "eenheidselastisch"
+    },
+    {
+      "input": [
+        5e-324,
+        1000,
+        1e-323,
+        0
+      ],
+      "ev": -1,
+      "classification": "eenheidselastisch"
+    },
+    {
+      "input": [
+        2.2,
+        1000,
+        2.2,
+        1000
+      ],
+      "ev": "NaN",
+      "classification": "niet gedefinieerd"
+    },
+    {
+      "input": [
+        2.2,
+        1000,
+        2.2,
+        900
+      ],
+      "ev": "NaN",
+      "classification": "niet gedefinieerd"
+    },
+    {
+      "input": [
+        2.2,
+        1000,
+        2.42,
+        1000
+      ],
+      "ev": 0,
+      "classification": "volkomen inelastisch"
+    }
+  ],
+  "files": [
+    {
+      "path": "engines/skilltree/generators.js",
+      "sha256": "720309108520e0babc9e76ff20d7efa196f52aa6a32149b1dfc90c566996c2ea"
+    },
+    {
+      "path": "engines/tests/signed-elasticity.test.js",
+      "sha256": "229c6e32af847a2050ad50b0be39521d51645a317e66c6c041ba7ef1f2624287"
+    }
+  ]
+}

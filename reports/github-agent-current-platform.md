@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-21T13:37:33.877Z
+Generated: 2026-09-21T15:25:26.213Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-theory-signed-20260921`
-Source commit: `af0ecc14df4e4f029f5a34695b1367013b90155a`
-Files indexed: 7697
+Source commit: `55bca26c14ea6680e9b062f1a87cb01cc27dd52e`
+Files indexed: 7705
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -145,7 +145,7 @@ Count: 90
 
 ## build scripts
 
-Count: 809
+Count: 811
 
 - build-scripts/archive/README.md
 - build-scripts/archive/roundtrip-pptx.py
@@ -386,6 +386,7 @@ Count: 809
 - build-scripts/references/audit-2025.json
 - build-scripts/references/audit-empty-needs.js
 - build-scripts/references/audit-exercise-schema-contract.js
+- build-scripts/references/book2-signed-registry-successor.test.js
 - build-scripts/references/books34-authority-transition.js
 - build-scripts/references/books34-route-amendment.js
 - build-scripts/references/books34-route-amendment.test.js
@@ -604,6 +605,7 @@ Count: 809
 - build-scripts/references/extract-eindtermen.js
 - build-scripts/references/extract-exam-questions.js
 - build-scripts/references/inventory-file-hash.js
+- build-scripts/references/lib/book2-signed-registry-successor.js
 - build-scripts/references/lib/evidence-reference-resolver.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
 - build-scripts/references/lib/mtu-h7-bundle4-adjudication-evidence.js
@@ -3401,7 +3403,7 @@ Count: 1753
 
 ## reports
 
-Count: 4843
+Count: 4849
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4848,6 +4850,11 @@ Count: 4843
 - reports/review-gates/book2-theory-signed-20260921/independent-figure-geometry-current.json
 - reports/review-gates/book2-theory-signed-20260921/independent-figure-geometry-review.md
 - reports/review-gates/book2-theory-signed-20260921/independent-historical-test-addendum.json
+- reports/review-gates/book2-theory-signed-20260921/independent-mtu-compatibility-baseline.json
+- reports/review-gates/book2-theory-signed-20260921/independent-mtu-compatibility-bindings.json
+- reports/review-gates/book2-theory-signed-20260921/independent-mtu-compatibility-gate.json
+- reports/review-gates/book2-theory-signed-20260921/independent-mtu-compatibility-probes.json
+- reports/review-gates/book2-theory-signed-20260921/independent-mtu-compatibility-review.md
 - reports/review-gates/book2-theory-signed-20260921/independent-native-content-review.md
 - reports/review-gates/book2-theory-signed-20260921/independent-native-current-bindings.json
 - reports/review-gates/book2-theory-signed-20260921/independent-native-current/coverage-and-semantics.json
@@ -4859,6 +4866,7 @@ Count: 4843
 - reports/review-gates/book2-theory-signed-20260921/independent-viewer-projection.json
 - reports/review-gates/book2-theory-signed-20260921/pair-matrix.json
 - reports/review-gates/book2-theory-signed-20260921/PORTABLE-LINEAGE.json
+- reports/review-gates/book2-theory-signed-20260921/protected-packet-compatibility.md
 - reports/review-gates/book2-theory-signed-20260921/README.md
 - reports/review-gates/book2-theory-signed-20260921/reference-proposals.json
 - reports/review-gates/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1/review-packet.json

@@ -1,0 +1,102 @@
+{
+  "reason": "Continuous printed page numbers gain digits in four existing chapter-contents links. Only their left edges expand; destinations and every other click area remain unchanged.",
+  "baseline_sha256_lf": "0854ca5dcd9627e20bbc0c4b90b107332cd7adecc5fcd15078bf7231e198e186",
+  "changes": [
+    {
+      "artifact": "Boek_2_Compleet.pdf",
+      "index": 34,
+      "before": {
+        "source_page": 37,
+        "rect": [
+          538.162,
+          267.699,
+          544.252,
+          282.084
+        ],
+        "destination_page": 38
+      },
+      "after": {
+        "source_page": 37,
+        "rect": [
+          532.07177734375,
+          267.698974609375,
+          544.251953125,
+          282.083984375
+        ],
+        "destination_page": 38
+      }
+    },
+    {
+      "artifact": "Boek_2_Compleet.pdf",
+      "index": 54,
+      "before": {
+        "source_page": 73,
+        "rect": [
+          537.292,
+          315.155,
+          544.252,
+          331.235
+        ],
+        "destination_page": 74
+      },
+      "after": {
+        "source_page": 73,
+        "rect": [
+          530.33154296875,
+          315.15496826171875,
+          544.251953125,
+          331.2349853515625
+        ],
+        "destination_page": 74
+      }
+    },
+    {
+      "artifact": "Boek_2_Compleet.pdf",
+      "index": 69,
+      "before": {
+        "source_page": 73,
+        "rect": [
+          530.332,
+          449.405,
+          544.252,
+          465.485
+        ],
+        "destination_page": 103
+      },
+      "after": {
+        "source_page": 73,
+        "rect": [
+          523.371337890625,
+          449.40496826171875,
+          544.251953125,
+          465.4849853515625
+        ],
+        "destination_page": 103
+      }
+    },
+    {
+      "artifact": "Boek_2_Compleet.pdf",
+      "index": 74,
+      "before": {
+        "source_page": 73,
+        "rect": [
+          530.332,
+          494.155,
+          544.252,
+          510.235
+        ],
+        "destination_page": 109
+      },
+      "after": {
+        "source_page": 73,
+        "rect": [
+          523.371337890625,
+          494.15496826171875,
+          544.251953125,
+          510.2349853515625
+        ],
+        "destination_page": 109
+      }
+    }
+  ]
+}

@@ -1,0 +1,3861 @@
+{
+  "baseline": "c07ae61b2635b2a3a59aa81c901273a7a37d5832",
+  "books": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+      "before_sha256": "a2c8cf236645b343c03a52841e8ef26bbb9d1b0baa363e2355de9450405c0c32",
+      "after_sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+      "pages": 110,
+      "body_changes": [
+        {
+          "physical_page": 2,
+          "difference_bbox_72dpi": [
+            71,
+            131,
+            505,
+            807
+          ]
+        },
+        {
+          "physical_page": 37,
+          "difference_bbox_72dpi": [
+            532,
+            271,
+            545,
+            462
+          ]
+        },
+        {
+          "physical_page": 38,
+          "difference_bbox_72dpi": [
+            96,
+            86,
+            312,
+            97
+          ]
+        },
+        {
+          "physical_page": 39,
+          "difference_bbox_72dpi": [
+            95,
+            86,
+            312,
+            97
+          ]
+        },
+        {
+          "physical_page": 40,
+          "difference_bbox_72dpi": [
+            95,
+            86,
+            312,
+            97
+          ]
+        },
+        {
+          "physical_page": 41,
+          "difference_bbox_72dpi": [
+            95,
+            86,
+            312,
+            97
+          ]
+        },
+        {
+          "physical_page": 46,
+          "difference_bbox_72dpi": [
+            84,
+            90,
+            256,
+            97
+          ]
+        },
+        {
+          "physical_page": 47,
+          "difference_bbox_72dpi": [
+            84,
+            90,
+            256,
+            97
+          ]
+        },
+        {
+          "physical_page": 48,
+          "difference_bbox_72dpi": [
+            84,
+            90,
+            256,
+            97
+          ]
+        },
+        {
+          "physical_page": 49,
+          "difference_bbox_72dpi": [
+            84,
+            90,
+            256,
+            97
+          ]
+        },
+        {
+          "physical_page": 54,
+          "difference_bbox_72dpi": [
+            82,
+            90,
+            486,
+            620
+          ]
+        },
+        {
+          "physical_page": 55,
+          "difference_bbox_72dpi": [
+            82,
+            90,
+            337,
+            97
+          ]
+        },
+        {
+          "physical_page": 56,
+          "difference_bbox_72dpi": [
+            82,
+            90,
+            337,
+            97
+          ]
+        },
+        {
+          "physical_page": 57,
+          "difference_bbox_72dpi": [
+            82,
+            90,
+            338,
+            97
+          ]
+        },
+        {
+          "physical_page": 58,
+          "difference_bbox_72dpi": [
+            82,
+            90,
+            338,
+            97
+          ]
+        },
+        {
+          "physical_page": 59,
+          "difference_bbox_72dpi": [
+            82,
+            90,
+            338,
+            579
+          ]
+        },
+        {
+          "physical_page": 60,
+          "difference_bbox_72dpi": [
+            82,
+            90,
+            338,
+            97
+          ]
+        },
+        {
+          "physical_page": 72,
+          "difference_bbox_72dpi": [
+            112,
+            86,
+            501,
+            380
+          ]
+        },
+        {
+          "physical_page": 73,
+          "difference_bbox_72dpi": [
+            524,
+            319,
+            537,
+            508
+          ]
+        },
+        {
+          "physical_page": 74,
+          "difference_bbox_72dpi": [
+            96,
+            86,
+            325,
+            98
+          ]
+        },
+        {
+          "physical_page": 75,
+          "difference_bbox_72dpi": [
+            95,
+            86,
+            326,
+            98
+          ]
+        },
+        {
+          "physical_page": 76,
+          "difference_bbox_72dpi": [
+            95,
+            86,
+            325,
+            98
+          ]
+        },
+        {
+          "physical_page": 77,
+          "difference_bbox_72dpi": [
+            95,
+            86,
+            325,
+            98
+          ]
+        },
+        {
+          "physical_page": 82,
+          "difference_bbox_72dpi": [
+            70,
+            90,
+            258,
+            97
+          ]
+        },
+        {
+          "physical_page": 83,
+          "difference_bbox_72dpi": [
+            70,
+            90,
+            258,
+            97
+          ]
+        },
+        {
+          "physical_page": 84,
+          "difference_bbox_72dpi": [
+            69,
+            90,
+            259,
+            97
+          ]
+        },
+        {
+          "physical_page": 85,
+          "difference_bbox_72dpi": [
+            69,
+            90,
+            259,
+            751
+          ]
+        },
+        {
+          "physical_page": 92,
+          "difference_bbox_72dpi": [
+            86,
+            90,
+            350,
+            96
+          ]
+        },
+        {
+          "physical_page": 93,
+          "difference_bbox_72dpi": [
+            86,
+            90,
+            350,
+            96
+          ]
+        },
+        {
+          "physical_page": 94,
+          "difference_bbox_72dpi": [
+            86,
+            90,
+            350,
+            96
+          ]
+        },
+        {
+          "physical_page": 95,
+          "difference_bbox_72dpi": [
+            86,
+            90,
+            350,
+            96
+          ]
+        },
+        {
+          "physical_page": 96,
+          "difference_bbox_72dpi": [
+            86,
+            90,
+            350,
+            725
+          ]
+        },
+        {
+          "physical_page": 97,
+          "difference_bbox_72dpi": [
+            86,
+            90,
+            350,
+            96
+          ]
+        },
+        {
+          "physical_page": 109,
+          "difference_bbox_72dpi": [
+            104,
+            664,
+            523,
+            685
+          ]
+        },
+        {
+          "physical_page": 110,
+          "difference_bbox_72dpi": [
+            502,
+            115,
+            530,
+            424
+          ]
+        }
+      ],
+      "text_diffs": [
+        {
+          "physical_page": 2,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -3,22 +3,33 @@\n",
+            " Hoofdstuk 1 — Kosten en opbrengsten",
+            "-PDF-pagina 3",
+            "+1",
+            " Van kostenstructuur naar opbrengst, winst, break-even en marginale verandering",
+            "-• 2.1.1 Kostenstructuren",
+            "-• 2.1.2 Opbrengsten, winst en break-even",
+            "-• 2.1.3 Marginale kosten en marginale opbrengsten",
+            "-• 2.1.4 Gemengde opgaven",
+            "+2.1.1 Kostenstructuren",
+            "+2",
+            "+2.1.2 Opbrengsten, winst en break-even",
+            "+10",
+            "+2.1.3 Marginale kosten en marginale opbrengsten",
+            "+19",
+            "+2.1.4 Gemengde opgaven",
+            "+29",
+            " Hoofdstuk 2 — Elasticiteit",
+            "-PDF-pagina 37",
+            "+35",
+            " Prijsreactie, omzet, inkomenselasticiteit en kruislingse elasticiteit",
+            "-• 2.2.1 Prijselasticiteit",
+            "-• 2.2.2 Elasticiteit en omzet",
+            "-• 2.2.3 Inkomenselasticiteit en kruislingse elasticiteit",
+            "-• 2.2.4 Gemengde opgaven",
+            "+2.2.1 Prijselasticiteit",
+            "+36",
+            "+2.2.2 Elasticiteit en omzet",
+            "+44",
+            "+2.2.3 Inkomenselasticiteit en kruislingse elasticiteit",
+            "+52",
+            "+2.2.4 Gemengde opgaven",
+            "+64",
+            " Hoofdstuk 3 — Surplus en welvaart",
+            "-PDF-pagina 73",
+            "+71",
+            " Consumentensurplus, producentensurplus, totaal surplus, Pareto-efficiëntie en welvaartsverlies",
+            "-• 2.3.1 Consumentensurplus",
+            "-• 2.3.2 Producentensurplus en totaal surplus",
+            "-• 2.3.3 Pareto-efficiëntie en welvaartsverlies",
+            "-• 2.3.4 Gemengde opgaven",
+            "-PDF-pagina telt vanaf de omslag; de gedrukte paginanummers beginnen per hoofdstuk opnieuw.",
+            "+2.3.1 Consumentensurplus",
+            "+72",
+            "+2.3.2 Producentensurplus en totaal surplus",
+            "+80",
+            "+2.3.3 Pareto-efficiëntie en welvaartsverlies",
+            "+90",
+            "+2.3.4 Gemengde opgaven",
+            "+101"
+          ]
+        },
+        {
+          "physical_page": 37,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,6 +1,6 @@\n",
+            "-2",
+            "-10",
+            "-18",
+            "-30",
+            " 36",
+            "+44",
+            "+52",
+            "+64",
+            "+70",
+            " 4VECO · ECONOMIE · 4 VWO · BOEK 2"
+          ]
+        },
+        {
+          "physical_page": 38,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,6 +1,6 @@\n",
+            " 2.2.1 · Prijselasticiteit: hoe sterk is de reactie?",
+            "-Betekenis · 2",
+            "-Berekenen · 3",
+            "-Indelen · 4",
+            "-Voorbeeld · 5",
+            "+Betekenis · 36",
+            "+Berekenen · 37",
+            "+Indelen · 38",
+            "+Voorbeeld · 39",
+            " Dezelfde prijsstijging, een andere reactie. Skatehal RolVast en trampolinepark SpringVrij verhogen hun"
+          ]
+        },
+        {
+          "physical_page": 39,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,6 +1,6 @@\n",
+            " 2.2.1 · Ev berekenen: reactie delen door oorzaak",
+            "-Betekenis · 2",
+            "-Berekenen · 3",
+            "-Indelen · 4",
+            "-Voorbeeld · 5",
+            "+Betekenis · 36",
+            "+Berekenen · 37",
+            "+Indelen · 38",
+            "+Voorbeeld · 39",
+            " Gebruik bij beide procentuele veranderingen de oude waarde als basis. Δ betekent verandering: nieuw −"
+          ]
+        },
+        {
+          "physical_page": 40,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,6 +1,6 @@\n",
+            " 2.2.1 · Het teken is niet hetzelfde als de sterkte",
+            "-Betekenis · 2",
+            "-Berekenen · 3",
+            "-Indelen · 4",
+            "-Voorbeeld · 5",
+            "+Betekenis · 36",
+            "+Berekenen · 37",
+            "+Indelen · 38",
+            "+Voorbeeld · 39",
+            " Teken van Ev · welke richting?"
+          ]
+        },
+        {
+          "physical_page": 41,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,6 +1,6 @@\n",
+            " 2.2.1 · Voorbeeld: berekenen, vergelijken, verklaren",
+            "-Betekenis · 2",
+            "-Berekenen · 3",
+            "-Indelen · 4",
+            "-Voorbeeld · 5",
+            "+Betekenis · 36",
+            "+Berekenen · 37",
+            "+Indelen · 38",
+            "+Voorbeeld · 39",
+            " KlimStudio verhoogt de prijs van € 20 naar € 22 per bezoek. Qv daalt van 400 naar 380 bezoeken per"
+          ]
+        },
+        {
+          "physical_page": 46,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,5 +1,5 @@\n",
+            " 2.2.2 · Omzet: prijs én hoeveelheid veranderen",
+            "-Omzet · 10",
+            "-Omzetregel · 11",
+            "-Voorbeeld · 12–13",
+            "+Omzet · 44",
+            "+Omzetregel · 45",
+            "+Voorbeeld · 46–47",
+            " MuseumBos vraagt eerst € 10 per kaartje en verkoopt 100 kaartjes per dag. Na een prijsverhoging naar"
+          ]
+        },
+        {
+          "physical_page": 47,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,5 +1,5 @@\n",
+            " 2.2.2 · De omzetregel en de controleberekening",
+            "-Omzet · 10",
+            "-Omzetregel · 11",
+            "-Voorbeeld · 12–13",
+            "+Omzet · 44",
+            "+Omzetregel · 45",
+            "+Voorbeeld · 46–47",
+            " Een lokale vuistregel voor kleine prijsveranderingen"
+          ]
+        },
+        {
+          "physical_page": 48,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,5 +1,5 @@\n",
+            " 2.2.2 · Voorbeeld: omzet vóór en na vergelijken",
+            "-Omzet · 10",
+            "-Omzetregel · 11",
+            "-Voorbeeld · 12–13",
+            "+Omzet · 44",
+            "+Omzetregel · 45",
+            "+Voorbeeld · 46–47",
+            " PuzzelClub verhuurt puzzelpakketten; FotoWorkshop verkoopt workshopplaatsen. Beide veranderen"
+          ]
+        },
+        {
+          "physical_page": 49,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,5 +1,5 @@\n",
+            " 2.2.2 · Voorbeeld: omzet is nog geen winst",
+            "-Omzet · 10",
+            "-Omzetregel · 11",
+            "-Voorbeeld · 12–13",
+            "+Omzet · 44",
+            "+Omzetregel · 45",
+            "+Voorbeeld · 46–47",
+            " Herhaal de berekening voor FotoWorkshop"
+          ]
+        },
+        {
+          "physical_page": 54,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,7 +1,7 @@\n",
+            " 2.2.3 · Welke factor verandert de vraag?",
+            "-Keuze · 18",
+            "-Ei · 19",
+            "-Ek · 20",
+            "-Functie · 21–22",
+            "-Voorbeeld · 23–24",
+            "+Keuze · 52",
+            "+Ei · 53",
+            "+Ek · 54",
+            "+Functie · 55–56",
+            "+Voorbeeld · 57–58",
+            " De eigen prijs blijft gelijk. Toch verandert de vraag. Bij meer inkomen bestel je misschien vaker een",
+            "@@ -26,3 +26,3 @@\n",
+            " %ΔY",
+            "-Lees verder op p. 19.",
+            "+Lees verder op p. 53.",
+            " Andere prijs · Ek",
+            "@@ -32,3 +32,3 @@\n",
+            " %ΔP van Z",
+            "-Lees verder op p. 20.",
+            "+Lees verder op p. 54.",
+            " Figuur 1. Vraag vóór het rekenen: welke factor verandert? Die factor bepaalt de noemer en de naam van de elasticiteit.",
+            "@@ -51,3 +51,3 @@\n",
+            " Ceteris paribus blijft nodig. Onderzoek je inkomen? Houd de prijzen gelijk. Onderzoek je de prijs van een",
+            "-ander goed? Houd de eigen prijs en het inkomen gelijk. In de vraagfunctie op p. 21–22 verander je daarom",
+            "+ander goed? Houd de eigen prijs en het inkomen gelijk. In de vraagfunctie op p. 55–56 verander je daarom",
+            " steeds één factor tegelijk."
+          ]
+        },
+        {
+          "physical_page": 55,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,7 +1,7 @@\n",
+            " 2.2.3 · Inkomenselasticiteit: van inkomen naar vraag",
+            "-Keuze · 18",
+            "-Ei · 19",
+            "-Ek · 20",
+            "-Functie · 21–22",
+            "-Voorbeeld · 23–24",
+            "+Keuze · 52",
+            "+Ei · 53",
+            "+Ek · 54",
+            "+Functie · 55–56",
+            "+Voorbeeld · 57–58",
+            " Inkomenselasticiteit van de vraag (Ei)"
+          ]
+        },
+        {
+          "physical_page": 56,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,7 +1,7 @@\n",
+            " 2.2.3 · Kruislingse elasticiteit: twee goederen",
+            "-Keuze · 18",
+            "-Ei · 19",
+            "-Ek · 20",
+            "-Functie · 21–22",
+            "-Voorbeeld · 23–24",
+            "+Keuze · 52",
+            "+Ei · 53",
+            "+Ek · 54",
+            "+Functie · 55–56",
+            "+Voorbeeld · 57–58",
+            " Kruislingse elasticiteit van de vraag (Ek)"
+          ]
+        },
+        {
+          "physical_page": 57,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,7 +1,7 @@\n",
+            " 2.2.3 · Een vraagfunctie: elk gegeven op zijn plek",
+            "-Keuze · 18",
+            "-Ei · 19",
+            "-Ek · 20",
+            "-Functie · 21–22",
+            "-Voorbeeld · 23–24",
+            "+Keuze · 52",
+            "+Ei · 53",
+            "+Ek · 54",
+            "+Functie · 55–56",
+            "+Voorbeeld · 57–58",
+            " DeelFiets X beschrijft de maandelijkse vraag naar abonnementen met deze functie:"
+          ]
+        },
+        {
+          "physical_page": 58,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,7 +1,7 @@\n",
+            " 2.2.3 · Eén verandering per onderzoek",
+            "-Keuze · 18",
+            "-Ei · 19",
+            "-Ek · 20",
+            "-Functie · 21–22",
+            "-Voorbeeld · 23–24",
+            "+Keuze · 52",
+            "+Ei · 53",
+            "+Ek · 54",
+            "+Functie · 55–56",
+            "+Voorbeeld · 57–58",
+            " DeelFiets X: Qx = 200 − 5Px + 2Pz + 0,01Y. Begin steeds met Px = 10, Pz = 15, Y = 20.000. Daarbij is"
+          ]
+        },
+        {
+          "physical_page": 59,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,7 +1,7 @@\n",
+            " 2.2.3 · Voorbeeld: Ei en Ek uit bronnen",
+            "-Keuze · 18",
+            "-Ei · 19",
+            "-Ek · 20",
+            "-Functie · 21–22",
+            "-Voorbeeld · 23–24",
+            "+Keuze · 52",
+            "+Ei · 53",
+            "+Ek · 54",
+            "+Functie · 55–56",
+            "+Voorbeeld · 57–58",
+            " We gebruiken drie bronnen. In elke vergelijking veranderen alleen de genoemde factoren. Let steeds op",
+            "@@ -40,3 +40,3 @@\n",
+            " Negatief → complementen.",
+            "-Bron functie · hiermee ga je verder op p. 24",
+            "+Bron functie · hiermee ga je verder op p. 58",
+            " StudioPas X"
+          ]
+        },
+        {
+          "physical_page": 60,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,7 +1,7 @@\n",
+            " 2.2.3 · Voorbeeld: de vraagfunctie gebruiken",
+            "-Keuze · 18",
+            "-Ei · 19",
+            "-Ek · 20",
+            "-Functie · 21–22",
+            "-Voorbeeld · 23–24",
+            "+Keuze · 52",
+            "+Ei · 53",
+            "+Ek · 54",
+            "+Functie · 55–56",
+            "+Voorbeeld · 57–58",
+            " StudioPas X: Qx = 200 − 2Px + Pz + 0,01Y. Begin: Px = 10, Pz = 20, Y = 20.000. Qx is in abonnementen"
+          ]
+        },
+        {
+          "physical_page": 72,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,5 +1,5 @@\n",
+            " 2.2 · Elasticiteit: kies de juiste verhouding",
+            "-Prijselasticiteit · 2–5",
+            "-Omzet · 10–13",
+            "-Ei, Ek en functies · 18–24",
+            "+Prijselasticiteit · 36–39",
+            "+Omzet · 44–47",
+            "+Ei, Ek en functies · 52–58",
+            " De teller is steeds de procentuele verandering van de gevraagde hoeveelheid. De oorzaak in de noemer",
+            "@@ -29,3 +29,3 @@\n",
+            " §2.2.1",
+            "-p. 3–4",
+            "+p. 37–38",
+            " Ei",
+            "@@ -34,3 +34,3 @@\n",
+            " §2.2.3",
+            "-p. 19",
+            "+p. 53",
+            " Ek",
+            "@@ -40,3 +40,3 @@\n",
+            " §2.2.3",
+            "-p. 20",
+            "+p. 54",
+            " Percentages en omzet"
+          ]
+        },
+        {
+          "physical_page": 73,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,6 +1,6 @@\n",
+            "-2",
+            "-10",
+            "-20",
+            "-31",
+            "-37",
+            "+72",
+            "+80",
+            "+90",
+            "+101",
+            "+107",
+            " 4VECO · ECONOMIE · 4 VWO · BOEK 2"
+          ]
+        },
+        {
+          "physical_page": 74,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,6 +1,6 @@\n",
+            " 2.3.1 · Consumentensurplus: voordeel voor kopers",
+            "-Betekenis · 2",
+            "-Alle kopers · 3",
+            "-Berekenen · 4",
+            "-Voorbeeld · 5",
+            "+Betekenis · 72",
+            "+Alle kopers · 73",
+            "+Berekenen · 74",
+            "+Voorbeeld · 75",
+            " Je hebt maximaal € 30 over voor een kaartje voor een gamebeurs. Aan de kassa betaal je € 20. Je krijgt"
+          ]
+        },
+        {
+          "physical_page": 75,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,6 +1,6 @@\n",
+            " 2.3.1 · Van één koper naar alle kopers",
+            "-Betekenis · 2",
+            "-Alle kopers · 3",
+            "-Berekenen · 4",
+            "-Voorbeeld · 5",
+            "+Betekenis · 72",
+            "+Alle kopers · 73",
+            "+Berekenen · 74",
+            "+Voorbeeld · 75",
+            " Losse kopers: tel de werkelijke voordelen op"
+          ]
+        },
+        {
+          "physical_page": 76,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,6 +1,6 @@\n",
+            " 2.3.1 · Consumentensurplus tekenen en berekenen",
+            "-Betekenis · 2",
+            "-Alle kopers · 3",
+            "-Berekenen · 4",
+            "-Voorbeeld · 5",
+            "+Betekenis · 72",
+            "+Alle kopers · 73",
+            "+Berekenen · 74",
+            "+Voorbeeld · 75",
+            " Gebruik P = 30 − 0,5Q en de gegeven prijs P = € 10. Alle gevraagde kaartjes worden verkocht."
+          ]
+        },
+        {
+          "physical_page": 77,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,6 +1,6 @@\n",
+            " 2.3.1 · Voorbeeld: van vraagfunctie naar CS",
+            "-Betekenis · 2",
+            "-Alle kopers · 3",
+            "-Berekenen · 4",
+            "-Voorbeeld · 5",
+            "+Betekenis · 72",
+            "+Alle kopers · 73",
+            "+Berekenen · 74",
+            "+Voorbeeld · 75",
+            " Een escaperoom verkoopt tickets. P = 20 − 0,25Q; P is in euro per ticket en Q in tickets. De prijs is € 10."
+          ]
+        },
+        {
+          "physical_page": 82,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,5 +1,5 @@\n",
+            " 2.3.2 · Producentensurplus: voordeel voor verkopers",
+            "-PS · 10–11",
+            "-Totaal surplus · 12",
+            "-Voorbeeld · 13–14",
+            "+PS · 80–81",
+            "+Totaal surplus · 82",
+            "+Voorbeeld · 83–84",
+            " Een koper heeft € 50 over voor een drinkfles en betaalt € 35. De marginale kosten van de fles zijn € 20."
+          ]
+        },
+        {
+          "physical_page": 83,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,5 +1,5 @@\n",
+            " 2.3.2 · PS in de grafiek: tussen prijs en MK",
+            "-PS · 10–11",
+            "-Totaal surplus · 12",
+            "-Voorbeeld · 13–14",
+            "+PS · 80–81",
+            "+Totaal surplus · 82",
+            "+Voorbeeld · 83–84",
+            " Op de postermarkt geldt vraag P = 40 − Q en aanbod P = 10 + 0,5Q. P is in euro per poster; Q is in"
+          ]
+        },
+        {
+          "physical_page": 84,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,5 +1,5 @@\n",
+            " 2.3.2 · Totaal surplus: gezamenlijk voordeel",
+            "-PS · 10–11",
+            "-Totaal surplus · 12",
+            "-Voorbeeld · 13–14",
+            "+PS · 80–81",
+            "+Totaal surplus · 82",
+            "+Voorbeeld · 83–84",
+            " 1"
+          ]
+        },
+        {
+          "physical_page": 85,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,5 +1,5 @@\n",
+            " 2.3.2 · Voorbeeld: evenwicht, CS, PS en TS",
+            "-PS · 10–11",
+            "-Totaal surplus · 12",
+            "-Voorbeeld · 13–14",
+            "+PS · 80–81",
+            "+Totaal surplus · 82",
+            "+Voorbeeld · 83–84",
+            " Op een makersmarkt worden notitieboeken verkocht. Vraag: P = 24 − 0,5Q. Aanbod: P = 4 + 0,5Q. P is",
+            "@@ -58,3 +58,3 @@\n",
+            " Eenhedencontrole. De basis is in notitieboeken; de hoogte in euro per notitieboek. De oppervlakte geeft dus ",
+            "-euro. Op p. 14 verklaar je waarom het gezamenlijke voordeel hier maximaal is.",
+            "+euro. Op p. 84 verklaar je waarom het gezamenlijke voordeel hier maximaal is.",
+            " 2.3 Surplus en welvaart"
+          ]
+        },
+        {
+          "physical_page": 92,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,7 +1,7 @@\n",
+            " 2.3.3 · Werkelijke handel: vraag, aanbod en grens",
+            "-Handel · 20",
+            "-CS/PS · 21",
+            "-Verlies · 22",
+            "-Pareto · 23",
+            "-Voorbeeld · 24–25",
+            "+Handel · 90",
+            "+CS/PS · 91",
+            "+Verlies · 92",
+            "+Pareto · 93",
+            "+Voorbeeld · 94–95",
+            " Op de postermarkt zijn vrij 20 transacties tegen € 20 mogelijk. Een reserveringssysteem laat nu maar 12"
+          ]
+        },
+        {
+          "physical_page": 93,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,7 +1,7 @@\n",
+            " 2.3.3 · CS en PS: niet altijd een driehoek",
+            "-Handel · 20",
+            "-CS/PS · 21",
+            "-Verlies · 22",
+            "-Pareto · 23",
+            "-Voorbeeld · 24–25",
+            "+Handel · 90",
+            "+CS/PS · 91",
+            "+Verlies · 92",
+            "+Pareto · 93",
+            "+Voorbeeld · 94–95",
+            " Er worden 12 posters tegen € 22 verkocht. Bij Q = 12 is de betalingsbereidheid 40 − 12 = € 28 en zijn"
+          ]
+        },
+        {
+          "physical_page": 94,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,7 +1,7 @@\n",
+            " 2.3.3 · Welvaartsverlies: voordeel dat niemand krijgt",
+            "-Handel · 20",
+            "-CS/PS · 21",
+            "-Verlies · 22",
+            "-Pareto · 23",
+            "-Voorbeeld · 24–25",
+            "+Handel · 90",
+            "+CS/PS · 91",
+            "+Verlies · 92",
+            "+Pareto · 93",
+            "+Voorbeeld · 94–95",
+            " Welvaartsverlies"
+          ]
+        },
+        {
+          "physical_page": 95,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,7 +1,7 @@\n",
+            " 2.3.3 · Pareto: iemand vooruit, niemand achteruit",
+            "-Handel · 20",
+            "-CS/PS · 21",
+            "-Verlies · 22",
+            "-Pareto · 23",
+            "-Voorbeeld · 24–25",
+            "+Handel · 90",
+            "+CS/PS · 91",
+            "+Verlies · 92",
+            "+Pareto · 93",
+            "+Voorbeeld · 94–95",
+            " Paretoverbetering"
+          ]
+        },
+        {
+          "physical_page": 96,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,7 +1,7 @@\n",
+            " 2.3.3 · Voorbeeld: een boekingsgrens doorrekenen",
+            "-Handel · 20",
+            "-CS/PS · 21",
+            "-Verlies · 22",
+            "-Pareto · 23",
+            "-Voorbeeld · 24–25",
+            "+Handel · 90",
+            "+CS/PS · 91",
+            "+Verlies · 92",
+            "+Pareto · 93",
+            "+Voorbeeld · 94–95",
+            " Workshopplaatsen: vraag P = 30 − Q; aanbod/MK P = 6 + Q. P is in euro per plaats. Vrij evenwicht: Qe =",
+            "@@ -53,3 +53,3 @@\n",
+            " Stop bij Q = 8. Je rekent met de werkelijke transacties en de gegeven toewijzing, niet met alle 10 gevraagde of",
+            "-14 aangeboden plaatsen. Op p. 25 bereken je het verlies en toets je Pareto-efficiëntie.",
+            "+14 aangeboden plaatsen. Op p. 95 bereken je het verlies en toets je Pareto-efficiëntie.",
+            " 2.3 Surplus en welvaart"
+          ]
+        },
+        {
+          "physical_page": 97,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -1,7 +1,7 @@\n",
+            " 2.3.3 · Voorbeeld: verlies en Pareto controleren",
+            "-Handel · 20",
+            "-CS/PS · 21",
+            "-Verlies · 22",
+            "-Pareto · 23",
+            "-Voorbeeld · 24–25",
+            "+Handel · 90",
+            "+CS/PS · 91",
+            "+Verlies · 92",
+            "+Pareto · 93",
+            "+Voorbeeld · 94–95",
+            " 4"
+          ]
+        },
+        {
+          "physical_page": 109,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -46,4 +46,4 @@\n",
+            " verandering moet haalbaar zijn en niemand schaden. Een hoger TS bewijst geen eerlijkere verdeling.",
+            "-Terugzoeken: CS §2.3.1 p. 2–5; PS en TS §2.3.2 p. 10–14; boekingsgrens p. 20–21; welvaartsverlies p. 22;",
+            "-Pareto p. 23.",
+            "+Terugzoeken: CS §2.3.1 p. 72–75; PS en TS §2.3.2 p. 80–84; boekingsgrens p. 90–91; welvaartsverlies p. 92;",
+            "+Pareto p. 93.",
+            " 2.3 Surplus en welvaart"
+          ]
+        },
+        {
+          "physical_page": 110,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -6,3 +6,3 @@\n",
+            " Wat een koper maximaal voor een product wil betalen.",
+            "-2",
+            "+72",
+            " Consumentensurplus (CS)",
+            "@@ -10,3 +10,3 @@\n",
+            " gekochte producten.",
+            "-2–5",
+            "+72–75",
+            " Marginale kosten (MK)",
+            "@@ -14,9 +14,9 @@\n",
+            " te lezen op de aanbodlijn.",
+            "-10–11",
+            "+80–81",
+            " Producentensurplus (PS)",
+            " Ontvangen prijs min MK, opgeteld over de verkochte producten.",
+            "-10–11",
+            "+80–81",
+            " Totaal surplus (TS)",
+            " Het gezamenlijke voordeel van kopers en verkopers: CS + PS.",
+            "-12",
+            "+82",
+            " Vrij marktevenwicht",
+            "@@ -24,3 +24,3 @@\n",
+            " de besproken boekingsgrens.",
+            "-12–13",
+            "+82–83",
+            " Bindende boekingsgrens",
+            "@@ -28,3 +28,3 @@\n",
+            " mogelijk zijn.",
+            "-20",
+            "+90",
+            " Toewijzingsregel",
+            "@@ -33,6 +33,6 @@\n",
+            " transacties uitvoeren.",
+            "-20",
+            "+90",
+            " Welvaartsverlies",
+            " Maximaal TS min werkelijk TS, binnen het gegeven model.",
+            "-22",
+            "+92",
+            " Paretoverbetering",
+            "@@ -40,6 +40,6 @@\n",
+            " niemand schaadt.",
+            "-23",
+            "+93",
+            " Pareto-efficiëntie",
+            " Er is geen haalbare Paretoverbetering meer mogelijk.",
+            "-23",
+            "+93",
+            " Eerlijke verdeling",
+            "@@ -47,3 +47,3 @@\n",
+            " niet alleen uit TS.",
+            "-23",
+            "+93",
+            " Drie verschillen om te onthouden"
+          ]
+        }
+      ],
+      "links_changed": [
+        {
+          "physical_page": 37,
+          "before": [
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                259.0989990234375,
+                544.251953125,
+                304.52398681640625
+              ],
+              "page": 37,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                265.698974609375,
+                544.251953125,
+                282.13897705078125
+              ],
+              "page": 37,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                538.161865234375,
+                267.698974609375,
+                544.251953125,
+                282.083984375
+              ],
+              "page": 37,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                284.13897705078125,
+                544.251953125,
+                298.52398681640625
+              ],
+              "page": 37,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                304.52398681640625,
+                544.251953125,
+                349.948974609375
+              ],
+              "page": 45,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                311.12396240234375,
+                544.251953125,
+                327.56396484375
+              ],
+              "page": 45,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                532.07177734375,
+                313.12396240234375,
+                544.251953125,
+                327.50897216796875
+              ],
+              "page": 45,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                329.56396484375,
+                544.251953125,
+                343.948974609375
+              ],
+              "page": 45,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                349.948974609375,
+                544.251953125,
+                395.3739929199219
+              ],
+              "page": 53,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                356.5489807128906,
+                544.251953125,
+                372.9889831542969
+              ],
+              "page": 53,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                532.07177734375,
+                358.5489807128906,
+                544.251953125,
+                372.9339904785156
+              ],
+              "page": 53,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                374.9889831542969,
+                544.251953125,
+                389.3739929199219
+              ],
+              "page": 53,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                395.3739929199219,
+                544.251953125,
+                440.7989807128906
+              ],
+              "page": 65,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                401.9739685058594,
+                544.251953125,
+                418.4139709472656
+              ],
+              "page": 65,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                532.07177734375,
+                403.9739685058594,
+                544.251953125,
+                418.3589782714844
+              ],
+              "page": 65,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                420.4139709472656,
+                544.251953125,
+                434.7989807128906
+              ],
+              "page": 65,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                440.7989807128906,
+                544.251953125,
+                486.2239685058594
+              ],
+              "page": 71,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                447.39898681640625,
+                544.251953125,
+                463.8389892578125
+              ],
+              "page": 71,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                532.07177734375,
+                449.39898681640625,
+                544.251953125,
+                463.78399658203125
+              ],
+              "page": 71,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                465.8389892578125,
+                544.251953125,
+                480.2239685058594
+              ],
+              "page": 71,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            }
+          ],
+          "after": [
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                259.0989990234375,
+                544.251953125,
+                304.52398681640625
+              ],
+              "page": 37,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                265.698974609375,
+                544.251953125,
+                282.13897705078125
+              ],
+              "page": 37,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                532.07177734375,
+                267.698974609375,
+                544.251953125,
+                282.083984375
+              ],
+              "page": 37,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                284.13897705078125,
+                544.251953125,
+                298.52398681640625
+              ],
+              "page": 37,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                304.52398681640625,
+                544.251953125,
+                349.948974609375
+              ],
+              "page": 45,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                311.12396240234375,
+                544.251953125,
+                327.56396484375
+              ],
+              "page": 45,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                532.07177734375,
+                313.12396240234375,
+                544.251953125,
+                327.50897216796875
+              ],
+              "page": 45,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                329.56396484375,
+                544.251953125,
+                343.948974609375
+              ],
+              "page": 45,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                349.948974609375,
+                544.251953125,
+                395.3739929199219
+              ],
+              "page": 53,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                356.5489807128906,
+                544.251953125,
+                372.9889831542969
+              ],
+              "page": 53,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                532.07177734375,
+                358.5489807128906,
+                544.251953125,
+                372.9339904785156
+              ],
+              "page": 53,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                374.9889831542969,
+                544.251953125,
+                389.3739929199219
+              ],
+              "page": 53,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                395.3739929199219,
+                544.251953125,
+                440.7989807128906
+              ],
+              "page": 65,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                401.9739685058594,
+                544.251953125,
+                418.4139709472656
+              ],
+              "page": 65,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                532.07177734375,
+                403.9739685058594,
+                544.251953125,
+                418.3589782714844
+              ],
+              "page": 65,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                420.4139709472656,
+                544.251953125,
+                434.7989807128906
+              ],
+              "page": 65,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                440.7989807128906,
+                544.251953125,
+                486.2239685058594
+              ],
+              "page": 71,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                447.39898681640625,
+                544.251953125,
+                463.8389892578125
+              ],
+              "page": 71,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                532.07177734375,
+                449.39898681640625,
+                544.251953125,
+                463.78399658203125
+              ],
+              "page": 71,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                465.8389892578125,
+                544.251953125,
+                480.2239685058594
+              ],
+              "page": 71,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            }
+          ]
+        },
+        {
+          "physical_page": 73,
+          "before": [
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                308.55499267578125,
+                544.251953125,
+                353.30499267578125
+              ],
+              "page": 73,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                315.15496826171875,
+                544.251953125,
+                331.2349853515625
+              ],
+              "page": 73,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                537.291748046875,
+                315.15496826171875,
+                544.251953125,
+                331.2349853515625
+              ],
+              "page": 73,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                315.15496826171875,
+                544.251953125,
+                331.2349853515625
+              ],
+              "page": 73,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                333.2349853515625,
+                544.251953125,
+                347.30499267578125
+              ],
+              "page": 73,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                353.30499267578125,
+                544.251953125,
+                398.05499267578125
+              ],
+              "page": 81,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                359.90496826171875,
+                544.251953125,
+                375.9849853515625
+              ],
+              "page": 81,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                530.33154296875,
+                359.90496826171875,
+                544.251953125,
+                375.9849853515625
+              ],
+              "page": 81,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                359.90496826171875,
+                544.251953125,
+                375.9849853515625
+              ],
+              "page": 81,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                377.9849853515625,
+                544.251953125,
+                392.05499267578125
+              ],
+              "page": 81,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                398.05499267578125,
+                544.251953125,
+                442.80499267578125
+              ],
+              "page": 91,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                404.65496826171875,
+                544.251953125,
+                420.7349853515625
+              ],
+              "page": 91,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                530.33154296875,
+                404.65496826171875,
+                544.251953125,
+                420.7349853515625
+              ],
+              "page": 91,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                404.65496826171875,
+                544.251953125,
+                420.7349853515625
+              ],
+              "page": 91,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                422.7349853515625,
+                544.251953125,
+                436.80499267578125
+              ],
+              "page": 91,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                442.80499267578125,
+                544.251953125,
+                487.55499267578125
+              ],
+              "page": 102,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                449.40496826171875,
+                544.251953125,
+                465.4849853515625
+              ],
+              "page": 102,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                530.33154296875,
+                449.40496826171875,
+                544.251953125,
+                465.4849853515625
+              ],
+              "page": 102,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                449.40496826171875,
+                544.251953125,
+                465.4849853515625
+              ],
+              "page": 102,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                467.4849853515625,
+                544.251953125,
+                481.55499267578125
+              ],
+              "page": 102,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                487.55499267578125,
+                544.251953125,
+                532.3049926757812
+              ],
+              "page": 108,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                494.15496826171875,
+                544.251953125,
+                510.2349853515625
+              ],
+              "page": 108,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                530.33154296875,
+                494.15496826171875,
+                544.251953125,
+                510.2349853515625
+              ],
+              "page": 108,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                494.15496826171875,
+                544.251953125,
+                510.2349853515625
+              ],
+              "page": 108,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                512.2349853515625,
+                544.251953125,
+                526.3049926757812
+              ],
+              "page": 108,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            }
+          ],
+          "after": [
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                308.55499267578125,
+                544.251953125,
+                353.30499267578125
+              ],
+              "page": 73,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                315.15496826171875,
+                544.251953125,
+                331.2349853515625
+              ],
+              "page": 73,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                530.33154296875,
+                315.15496826171875,
+                544.251953125,
+                331.2349853515625
+              ],
+              "page": 73,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                315.15496826171875,
+                544.251953125,
+                331.2349853515625
+              ],
+              "page": 73,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                333.2349853515625,
+                544.251953125,
+                347.30499267578125
+              ],
+              "page": 73,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                353.30499267578125,
+                544.251953125,
+                398.05499267578125
+              ],
+              "page": 81,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                359.90496826171875,
+                544.251953125,
+                375.9849853515625
+              ],
+              "page": 81,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                530.33154296875,
+                359.90496826171875,
+                544.251953125,
+                375.9849853515625
+              ],
+              "page": 81,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                359.90496826171875,
+                544.251953125,
+                375.9849853515625
+              ],
+              "page": 81,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                377.9849853515625,
+                544.251953125,
+                392.05499267578125
+              ],
+              "page": 81,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                398.05499267578125,
+                544.251953125,
+                442.80499267578125
+              ],
+              "page": 91,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                404.65496826171875,
+                544.251953125,
+                420.7349853515625
+              ],
+              "page": 91,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                530.33154296875,
+                404.65496826171875,
+                544.251953125,
+                420.7349853515625
+              ],
+              "page": 91,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                404.65496826171875,
+                544.251953125,
+                420.7349853515625
+              ],
+              "page": 91,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                422.7349853515625,
+                544.251953125,
+                436.80499267578125
+              ],
+              "page": 91,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                442.80499267578125,
+                544.251953125,
+                487.55499267578125
+              ],
+              "page": 102,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                449.40496826171875,
+                544.251953125,
+                465.4849853515625
+              ],
+              "page": 102,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                523.371337890625,
+                449.40496826171875,
+                544.251953125,
+                465.4849853515625
+              ],
+              "page": 102,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                449.40496826171875,
+                544.251953125,
+                465.4849853515625
+              ],
+              "page": 102,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                467.4849853515625,
+                544.251953125,
+                481.55499267578125
+              ],
+              "page": 102,
+              "to": [
+                53.85827,
+                48.188966
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                487.55499267578125,
+                544.251953125,
+                532.3049926757812
+              ],
+              "page": 108,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                494.15496826171875,
+                544.251953125,
+                510.2349853515625
+              ],
+              "page": 108,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                523.371337890625,
+                494.15496826171875,
+                544.251953125,
+                510.2349853515625
+              ],
+              "page": 108,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                494.15496826171875,
+                544.251953125,
+                510.2349853515625
+              ],
+              "page": 108,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            },
+            {
+              "kind": 1,
+              "rect": [
+                53.85826873779297,
+                512.2349853515625,
+                544.251953125,
+                526.3049926757812
+              ],
+              "page": 108,
+              "to": [
+                0.0,
+                0.0
+              ],
+              "uri": null
+            }
+          ]
+        }
+      ],
+      "footer_errors": []
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf",
+      "before_sha256": "684de9a8a984a21a28ffb6ffb4bcb4b9325cc9f426b89d1c0a3903c1e2ffe9dc",
+      "after_sha256": "7bf9f43e801592b3632063b0720ae38b8a1776831bfaa90703a8ae95e5329bc2",
+      "pages": 57,
+      "body_changes": [
+        {
+          "physical_page": 2,
+          "difference_bbox_72dpi": [
+            71,
+            131,
+            505,
+            807
+          ]
+        }
+      ],
+      "text_diffs": [
+        {
+          "physical_page": 2,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -3,10 +3,9 @@\n",
+            " Hoofdstuk 1 — Kosten en opbrengsten",
+            "-PDF-pagina 3",
+            "+1",
+            " Uitgewerkte antwoorden en toelichting",
+            " Hoofdstuk 2 — Elasticiteit",
+            "-PDF-pagina 23",
+            "+21",
+            " Uitgewerkte antwoorden en toelichting",
+            " Hoofdstuk 3 — Surplus en welvaart",
+            "-PDF-pagina 41",
+            "+39",
+            " Uitgewerkte antwoorden en toelichting",
+            "-PDF-pagina telt vanaf de omslag; de gedrukte paginanummers beginnen per hoofdstuk opnieuw."
+          ]
+        }
+      ],
+      "links_changed": [],
+      "footer_errors": []
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Docenteninformatie.pdf",
+      "before_sha256": "b0d9fa94e7bd4ef01482f53532d6eea20a9e681211ff2fc18e24cfe639c36fdf",
+      "after_sha256": "88866a40704c7f13d55f16013765bf71cb928dd10a17aea2861baad440bc6ddc",
+      "pages": 19,
+      "body_changes": [
+        {
+          "physical_page": 2,
+          "difference_bbox_72dpi": [
+            71,
+            131,
+            505,
+            807
+          ]
+        },
+        {
+          "physical_page": 8,
+          "difference_bbox_72dpi": [
+            195,
+            209,
+            506,
+            637
+          ]
+        },
+        {
+          "physical_page": 10,
+          "difference_bbox_72dpi": [
+            357,
+            119,
+            528,
+            509
+          ]
+        },
+        {
+          "physical_page": 11,
+          "difference_bbox_72dpi": [
+            344,
+            119,
+            388,
+            320
+          ]
+        },
+        {
+          "physical_page": 12,
+          "difference_bbox_72dpi": [
+            520,
+            214,
+            533,
+            223
+          ]
+        },
+        {
+          "physical_page": 14,
+          "difference_bbox_72dpi": [
+            288,
+            242,
+            518,
+            547
+          ]
+        }
+      ],
+      "text_diffs": [
+        {
+          "physical_page": 2,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -3,10 +3,9 @@\n",
+            " Hoofdstuk 1 — Kosten en opbrengsten",
+            "-PDF-pagina 3",
+            "+1",
+            " Docenteninformatie, didactische keuzes en kwaliteitsnotities",
+            " Hoofdstuk 2 — Elasticiteit",
+            "-PDF-pagina 8",
+            "+6",
+            " Docenteninformatie, didactische keuzes en kwaliteitsnotities",
+            " Hoofdstuk 3 — Surplus en welvaart",
+            "-PDF-pagina 14",
+            "+12",
+            " Docenteninformatie, didactische keuzes en kwaliteitsnotities",
+            "-PDF-pagina telt vanaf de omslag; de gedrukte paginanummers beginnen per hoofdstuk opnieuw."
+          ]
+        },
+        {
+          "physical_page": 8,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -10,18 +10,18 @@\n",
+            " Opening",
+            "-1",
+            "+35",
+            " Plaats in boek 2; lees- en werkroute.",
+            " 2.2.1 Prijselasticiteit",
+            "-2–9",
+            "+36–43",
+            " Procenten → Ev → indeling → betekenis en verklaring.",
+            " 2.2.2 Elasticiteit en omzet",
+            "-10–17",
+            "+44–51",
+            " TO vóór/na; relatieve prijsreactie; grenzen aan advies.",
+            " 2.2.3 Inkomen en andere goederen",
+            "-18–29",
+            "+52–63",
+            " Ei, Ek en één-factor-scenario’s in een vraagfunctie.",
+            " 2.2.4 Gemengde opgaven",
+            "-30–35",
+            "+64–69",
+            " Bronselectie, rekenen, vergelijken en onderbouwd adviseren.",
+            " Hoofdstukoverzicht",
+            "-36",
+            "+70",
+            " Eén terugzoekblad met verhoudingen en controles.",
+            "@@ -41,3 +41,3 @@\n",
+            " Druk de leerlingeditie af op A4 op ware grootte, dubbelzijdig met omslaan aan de lange zijde. De bronnen",
+            "-van StreamPlus staan op pagina 32; de vragen staan ernaast op pagina 33. Plaats vóór het hoofdstuk geen",
+            "+van StreamPlus staan op pagina 66; de vragen staan ernaast op pagina 67. Plaats vóór het hoofdstuk geen",
+            " oneven aantal extra pagina’s als deze spreiding behouden moet blijven. De drie theorie-doeloefeningen zijn",
+            "@@ -45,2 +45,2 @@\n",
+            " De antwoorden beginnen per paragraaf opnieuw bij opgave 1, net als de leerlingeditie. De afzonderlijke",
+            "-paragraafexports behouden de oorspronkelijke paginanummers zodat verwijzingen blijven werken.",
+            "+paragraafexports behouden de doorlopende boekpaginanummers zodat verwijzingen blijven werken."
+          ]
+        },
+        {
+          "physical_page": 10,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -2,3 +2,3 @@\n",
+            " 2.2.1 Prijselasticiteit",
+            "-De doeloefening is opgave 7. Hieronder verwijzen de voorbeeldstappen naar pagina 5. De voorbereiding",
+            "+De doeloefening is opgave 7. Hieronder verwijzen de voorbeeldstappen naar pagina 39. De voorbereiding",
+            " vraagt dezelfde bewerkingen, met andere contexten en overzichtelijkere getallen.",
+            "@@ -36,3 +36,3 @@\n",
+            " 2.2.2 Elasticiteit en omzet",
+            "-De doeloefening is opgave 7. Het uitgewerkte voorbeeld op pagina 12–13 behandelt zowel een inelastische",
+            "+De doeloefening is opgave 7. Het uitgewerkte voorbeeld op pagina 46–47 behandelt zowel een inelastische",
+            " als een elastische reactie.",
+            "@@ -55,3 +55,3 @@\n",
+            " Stap 5; theorie p.",
+            "-11.",
+            "+45.",
+            " 2a; 4b; 5c en 6a."
+          ]
+        },
+        {
+          "physical_page": 11,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -2,3 +2,3 @@\n",
+            " 2.2.3 Inkomen, andere prijzen en functies",
+            "-De doeloefening is opgave 8. Het uitgewerkte voorbeeld op pagina 23–24 bevat alle vijf doelbewerkingen;",
+            "+De doeloefening is opgave 8. Het uitgewerkte voorbeeld op pagina 57–58 bevat alle vijf doelbewerkingen;",
+            " het is niet beperkt tot alleen de eenvoudigste Ei-berekening.",
+            "@@ -32,3 +32,3 @@\n",
+            " Stap 5; terugzetdiagram p.",
+            "-22.",
+            "+56.",
+            " 2b; 4c; 7c."
+          ]
+        },
+        {
+          "physical_page": 12,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -8,3 +8,3 @@\n",
+            " De kleine-veranderingregel wordt gekoppeld aan de vraag rond de onderzochte situatie. Voor twee gegeven",
+            "-oude en nieuwe waarden staat de rechtstreekse TO-berekening voorop. Het tegenvoorbeeld op pagina 11",
+            "+oude en nieuwe waarden staat de rechtstreekse TO-berekening voorop. Het tegenvoorbeeld op pagina 45",
+            " gebruikt P: 10 → 12 en Q: 100 → 82. Ev = −0,9, maar TO daalt van 1.000 naar 984. Dit is een oorspronkelijk"
+          ]
+        },
+        {
+          "physical_page": 14,
+          "diff": [
+            "--- \n",
+            "+++ \n",
+            "@@ -14,19 +14,19 @@\n",
+            " 2.3.1 Consumentensurplus",
+            "-2–9",
+            "+72–79",
+            " 1–11",
+            "-8, pagina 9",
+            "+8, pagina 79",
+            " 2.3.2 Producentensurplus en totaal surplus",
+            "-10–19",
+            "+80–89",
+            " 1–11",
+            "-8, pagina 18–19",
+            "+8, pagina 88–89",
+            " 2.3.3 Pareto-efficiëntie en welvaartsverlies",
+            "-20–30",
+            "+90–100",
+            " 1–9",
+            "-6, pagina 29–30",
+            "+6, pagina 99–100",
+            " 2.3.4 Gemengde opgaven",
+            "-31–36",
+            "+101–106",
+            " 1–7",
+            "-3, pagina 34–35",
+            "+3, pagina 104–105",
+            " Overzicht en begrippen",
+            "-37–38",
+            "+107–108",
+            " —",
+            "@@ -42,3 +42,3 @@\n",
+            " Printen: A4, werkelijke grootte, dubbelzijdig, omslaan over de lange zijde. De bronnen en vragen van de",
+            "-gemengde doeloefening staan op de tegenoverliggende pagina’s 34–35. De bronbestanden en",
+            "+gemengde doeloefening staan op de tegenoverliggende pagina’s 104–105. De bronbestanden en",
+            " bouwscripts zijn meegeleverd; de repositories zijn niet gewijzigd."
+          ]
+        }
+      ],
+      "links_changed": [],
+      "footer_errors": []
+    }
+  ],
+  "source_changes": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/2.2 Elasticiteit – hoofdstuk.md",
+      "sha256": "f6e5b649df1ae9720d17e2b4d6f0682a0458dfaf449d49ec21cca9bd59d36765",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -9,7 +9,7 @@\n",
+        " ",
+        "-2.2.1 · Prijselasticiteit 2Van procentuele veranderingen naar een maat voor prijsgevoeligheid.",
+        "-2.2.2 · Elasticiteit en omzet 10Begrijpen én narekenen wat een prijsverandering met de omzet doet.",
+        "-2.2.3 · Inkomen en de prijs van andere goederen 18Ei, Ek en vraagfuncties met meerdere variabelen.",
+        "-2.2.4 · Gemengde opgaven 30Gegevens kiezen, berekenen, vergelijken en een advies onderbouwen.",
+        "-Hoofdstukoverzicht 36De formules en beslisregels bij elkaar.",
+        "+2.2.1 · Prijselasticiteit 36Van procentuele veranderingen naar een maat voor prijsgevoeligheid.",
+        "+2.2.2 · Elasticiteit en omzet 44Begrijpen én narekenen wat een prijsverandering met de omzet doet.",
+        "+2.2.3 · Inkomen en de prijs van andere goederen 52Ei, Ek en vraagfuncties met meerdere variabelen.",
+        "+2.2.4 · Gemengde opgaven 64Gegevens kiezen, berekenen, vergelijken en een advies onderbouwen.",
+        "+Hoofdstukoverzicht 70De formules en beslisregels bij elkaar.",
+        " ",
+        "@@ -40,6 +40,6 @@\n",
+        " 2.2.1 · Prijselasticiteit: hoe sterk is de reactie?",
+        "-Betekenis · 2",
+        "-Berekenen · 3",
+        "-Indelen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 36",
+        "+Berekenen · 37",
+        "+Indelen · 38",
+        "+Voorbeeld · 39",
+        " Dezelfde prijsstijging, een andere reactie. Skatehal RolVast en trampolinepark SpringVrij verhogen hunentreeprijs van € 10 naar € 11. Beide verkochten eerst 200 kaartjes per week. Daarna zijn dat er 190 bijRolVast en 160 bij SpringVrij.",
+        "@@ -78,6 +78,6 @@\n",
+        " 2.2.1 · Ev berekenen: reactie delen door oorzaak",
+        "-Betekenis · 2",
+        "-Berekenen · 3",
+        "-Indelen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 36",
+        "+Berekenen · 37",
+        "+Indelen · 38",
+        "+Voorbeeld · 39",
+        " Gebruik bij beide procentuele veranderingen de oude waarde als basis. Δ betekent verandering: nieuw −oud. Een stijging is positief; een daling negatief.",
+        "@@ -138,6 +138,6 @@\n",
+        " 2.2.1 · Het teken is niet hetzelfde als de sterkte",
+        "-Betekenis · 2",
+        "-Berekenen · 3",
+        "-Indelen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 36",
+        "+Berekenen · 37",
+        "+Indelen · 38",
+        "+Voorbeeld · 39",
+        " Teken van Ev · welke richting?",
+        "@@ -271,6 +271,6 @@\n",
+        " 2.2.1 · Voorbeeld: berekenen, vergelijken, verklaren",
+        "-Betekenis · 2",
+        "-Berekenen · 3",
+        "-Indelen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 36",
+        "+Berekenen · 37",
+        "+Indelen · 38",
+        "+Voorbeeld · 39",
+        " KlimStudio verhoogt de prijs van € 20 naar € 22 per bezoek. Qv daalt van 400 naar 380 bezoeken perweek. Voor DansDrop is bij een andere prijsverhoging Ev = −1,5 gemeten. Vergelijk hunprijsgevoeligheid.",
+        "@@ -556,5 +556,5 @@\n",
+        " 2.2.2 · Omzet: prijs én hoeveelheid veranderen",
+        "-Omzet · 10",
+        "-Omzetregel · 11",
+        "-Voorbeeld · 12–13",
+        "+Omzet · 44",
+        "+Omzetregel · 45",
+        "+Voorbeeld · 46–47",
+        " MuseumBos vraagt eerst € 10 per kaartje en verkoopt 100 kaartjes per dag. Na een prijsverhoging naar€ 11 verkoopt het 95 kaartjes. Elk kaartje brengt meer op, maar er worden er minder verkocht.",
+        "@@ -630,5 +630,5 @@\n",
+        " 2.2.2 · De omzetregel en de controleberekening",
+        "-Omzet · 10",
+        "-Omzetregel · 11",
+        "-Voorbeeld · 12–13",
+        "+Omzet · 44",
+        "+Omzetregel · 45",
+        "+Voorbeeld · 46–47",
+        " Een lokale vuistregel voor kleine prijsveranderingen",
+        "@@ -776,5 +776,5 @@\n",
+        " 2.2.2 · Voorbeeld: omzet vóór en na vergelijken",
+        "-Omzet · 10",
+        "-Omzetregel · 11",
+        "-Voorbeeld · 12–13",
+        "+Omzet · 44",
+        "+Omzetregel · 45",
+        "+Voorbeeld · 46–47",
+        " PuzzelClub verhuurt puzzelpakketten; FotoWorkshop verkoopt workshopplaatsen. Beide veranderenhun prijs. Alle gevraagde producten of plaatsen worden verkocht. De gegevens gelden per maand.",
+        "@@ -898,5 +898,5 @@\n",
+        " 2.2.2 · Voorbeeld: omzet is nog geen winst",
+        "-Omzet · 10",
+        "-Omzetregel · 11",
+        "-Voorbeeld · 12–13",
+        "+Omzet · 44",
+        "+Omzetregel · 45",
+        "+Voorbeeld · 46–47",
+        " Herhaal de berekening voor FotoWorkshop",
+        "@@ -1165,7 +1165,7 @@\n",
+        " 2.2.3 · Welke factor verandert de vraag?",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " De eigen prijs blijft gelijk. Toch verandert de vraag. Bij meer inkomen bestel je misschien vaker eenmaaltijd. Wordt de bus duurder, dan kies je misschien vaker de trein. Je onderzoekt nu een andereoorzaak dan de eigen prijs.",
+        "@@ -1226,3 +1226,3 @@\n",
+        " ",
+        "-Ceteris paribus blijft nodig. Onderzoek je inkomen? Houd de prijzen gelijk. Onderzoek je de prijs van eenander goed? Houd de eigen prijs en het inkomen gelijk. In de vraagfunctie op p. 21–22 verander je daaromsteeds één factor tegelijk.",
+        "+Ceteris paribus blijft nodig. Onderzoek je inkomen? Houd de prijzen gelijk. Onderzoek je de prijs van eenander goed? Houd de eigen prijs en het inkomen gelijk. In de vraagfunctie op p. 55–56 verander je daaromsteeds één factor tegelijk.",
+        " ",
+        "@@ -1265,7 +1265,7 @@\n",
+        " 2.2.3 · Inkomenselasticiteit: van inkomen naar vraag",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " Inkomenselasticiteit van de vraag (Ei)",
+        "@@ -1351,7 +1351,7 @@\n",
+        " 2.2.3 · Kruislingse elasticiteit: twee goederen",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " Kruislingse elasticiteit van de vraag (Ek)",
+        "@@ -1423,7 +1423,7 @@\n",
+        " 2.2.3 · Een vraagfunctie: elk gegeven op zijn plek",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " DeelFiets X beschrijft de maandelijkse vraag naar abonnementen met deze functie:",
+        "@@ -1547,7 +1547,7 @@\n",
+        " 2.2.3 · Eén verandering per onderzoek",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " DeelFiets X: Qx = 200 − 5Px + 2Pz + 0,01Y. Begin steeds met Px = 10, Pz = 15, Y = 20.000. Daarbij isQx = 380 abonnementen per maand.",
+        "@@ -1691,7 +1691,7 @@\n",
+        " 2.2.3 · Voorbeeld: Ei en Ek uit bronnen",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " We gebruiken drie bronnen. In elke vergelijking veranderen alleen de genoemde factoren. Let steeds opde oorzaak in de noemer.",
+        "@@ -1778,3 +1778,3 @@\n",
+        " ",
+        "-Bron functie · hiermee ga je verder op p. 24",
+        "+Bron functie · hiermee ga je verder op p. 58",
+        " StudioPas X",
+        "@@ -1835,7 +1835,7 @@\n",
+        " 2.2.3 · Voorbeeld: de vraagfunctie gebruiken",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " StudioPas X: Qx = 200 − 2Px + Pz + 0,01Y. Begin: Px = 10, Pz = 20, Y = 20.000. Qx is in abonnementenper maand; Y is jaarinkomen in euro.",
+        "@@ -2359,5 +2359,5 @@\n",
+        " 2.2 · Elasticiteit: kies de juiste verhouding",
+        "-Prijselasticiteit · 2–5",
+        "-Omzet · 10–13",
+        "-Ei, Ek en functies · 18–24",
+        "+Prijselasticiteit · 36–39",
+        "+Omzet · 44–47",
+        "+Ei, Ek en functies · 52–58",
+        " De teller is steeds de procentuele verandering van de gevraagde hoeveelheid. De oorzaak in de noemerbepaalt welke elasticiteit je berekent.",
+        "@@ -2395,3 +2395,3 @@\n",
+        " §2.2.1",
+        "-p. 3–4",
+        "+p. 37–38",
+        " ",
+        "@@ -2408,3 +2408,3 @@\n",
+        " §2.2.3",
+        "-p. 19",
+        "+p. 53",
+        " ",
+        "@@ -2422,3 +2422,3 @@\n",
+        " §2.2.3",
+        "-p. 20",
+        "+p. 54",
+        " "
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/Docenten_en_bouwverantwoording.md",
+      "sha256": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -9,8 +9,8 @@\n",
+        " |---|---:|---|",
+        "-| Opening | 1 | Plaats in boek 2; lees- en werkroute. |",
+        "-| 2.2.1 Prijselasticiteit | 2–9 | Procenten → Ev → indeling → betekenis en verklaring. |",
+        "-| 2.2.2 Elasticiteit en omzet | 10–17 | TO vóór/na; relatieve prijsreactie; grenzen aan advies. |",
+        "-| 2.2.3 Inkomen en andere goederen | 18–29 | Ei, Ek en één-factor-scenario’s in een vraagfunctie. |",
+        "-| 2.2.4 Gemengde opgaven | 30–35 | Bronselectie, rekenen, vergelijken en onderbouwd adviseren. |",
+        "-| Hoofdstukoverzicht | 36 | Eén terugzoekblad met verhoudingen en controles. |",
+        "+| Opening | 35 | Plaats in boek 2; lees- en werkroute. |",
+        "+| 2.2.1 Prijselasticiteit | 36–43 | Procenten → Ev → indeling → betekenis en verklaring. |",
+        "+| 2.2.2 Elasticiteit en omzet | 44–51 | TO vóór/na; relatieve prijsreactie; grenzen aan advies. |",
+        "+| 2.2.3 Inkomen en andere goederen | 52–63 | Ei, Ek en één-factor-scenario’s in een vraagfunctie. |",
+        "+| 2.2.4 Gemengde opgaven | 64–69 | Bronselectie, rekenen, vergelijken en onderbouwd adviseren. |",
+        "+| Hoofdstukoverzicht | 70 | Eén terugzoekblad met verhoudingen en controles. |",
+        " ",
+        "@@ -26,5 +26,5 @@\n",
+        " ",
+        "-Druk de leerlingeditie af op A4 op ware grootte, dubbelzijdig met omslaan aan de lange zijde. De bronnen van StreamPlus staan op pagina 32; de vragen staan ernaast op pagina 33. Plaats vóór het hoofdstuk geen oneven aantal extra pagina’s als deze spreiding behouden moet blijven. De drie theorie-doeloefeningen zijn telkens op één pagina geplaatst.",
+        "+Druk de leerlingeditie af op A4 op ware grootte, dubbelzijdig met omslaan aan de lange zijde. De bronnen van StreamPlus staan op pagina 66; de vragen staan ernaast op pagina 67. Plaats vóór het hoofdstuk geen oneven aantal extra pagina’s als deze spreiding behouden moet blijven. De drie theorie-doeloefeningen zijn telkens op één pagina geplaatst.",
+        " ",
+        "-De antwoorden beginnen per paragraaf opnieuw bij opgave 1, net als de leerlingeditie. De afzonderlijke paragraafexports behouden de oorspronkelijke paginanummers zodat verwijzingen blijven werken.",
+        "+De antwoorden beginnen per paragraaf opnieuw bij opgave 1, net als de leerlingeditie. De afzonderlijke paragraafexports behouden de doorlopende boekpaginanummers zodat verwijzingen blijven werken.",
+        " ",
+        "@@ -62,3 +62,3 @@\n",
+        " ",
+        "-De doeloefening is opgave 7. Hieronder verwijzen de voorbeeldstappen naar pagina 5. De voorbereiding vraagt dezelfde bewerkingen, met andere contexten en overzichtelijkere getallen.",
+        "+De doeloefening is opgave 7. Hieronder verwijzen de voorbeeldstappen naar pagina 39. De voorbereiding vraagt dezelfde bewerkingen, met andere contexten en overzichtelijkere getallen.",
+        " ",
+        "@@ -75,3 +75,3 @@\n",
+        " ",
+        "-De doeloefening is opgave 7. Het uitgewerkte voorbeeld op pagina 12–13 behandelt zowel een inelastische als een elastische reactie.",
+        "+De doeloefening is opgave 7. Het uitgewerkte voorbeeld op pagina 46–47 behandelt zowel een inelastische als een elastische reactie.",
+        " ",
+        "@@ -81,3 +81,3 @@\n",
+        " | Procentuele omzetverandering berekenen en met Ev verbinden. | 7b, 7d | Stappen 2–4. | 1b; 3b–c, 4a–b; 5a–b. |",
+        "-| De kleine-veranderingregel onderscheiden van een eindige vergelijking. | 7e | Stap 5; theorie p. 11. | 2a; 4b; 5c en 6a. |",
+        "+| De kleine-veranderingregel onderscheiden van een eindige vergelijking. | 7e | Stap 5; theorie p. 45. | 2a; 4b; 5c en 6a. |",
+        " | Uitleggen waarom omzetgegevens geen winstconclusie dragen. | 7f | Stap 6. | 2b; 3d, 4c; 6b. |",
+        "@@ -93,3 +93,3 @@\n",
+        " ",
+        "-De doeloefening is opgave 8. Het uitgewerkte voorbeeld op pagina 23–24 bevat alle vijf doelbewerkingen; het is niet beperkt tot alleen de eenvoudigste Ei-berekening.",
+        "+De doeloefening is opgave 8. Het uitgewerkte voorbeeld op pagina 57–58 bevat alle vijf doelbewerkingen; het is niet beperkt tot alleen de eenvoudigste Ei-berekening.",
+        " ",
+        "@@ -101,3 +101,3 @@\n",
+        " | Alleen Y veranderen; Q, %ΔQ en Ei berekenen; prijzen gelijk houden. | 8d | Stap 4. | 1a, 2b; 4b; 7b. |",
+        "-| Y terugzetten; alleen Pz veranderen; richting en vaste variabelen noemen. | 8e | Stap 5; terugzetdiagram p. 22. | 2b; 4c; 7c. |",
+        "+| Y terugzetten; alleen Pz veranderen; richting en vaste variabelen noemen. | 8e | Stap 5; terugzetdiagram p. 56. | 2b; 4c; 7c. |",
+        " ",
+        "@@ -131,3 +131,3 @@\n",
+        " ",
+        "-De kleine-veranderingregel wordt gekoppeld aan de vraag rond de onderzochte situatie. Voor twee gegeven oude en nieuwe waarden staat de **rechtstreekse TO-berekening** voorop. Het tegenvoorbeeld op pagina 11 gebruikt P: 10 → 12 en Q: 100 → 82. Ev = −0,9, maar TO daalt van 1.000 naar 984. Dit is een oorspronkelijk rekenvoorbeeld dat de begrenzing uit de doelopgave zichtbaar maakt. Er worden geen afgeleiden of optimalisatieregels toegevoegd.",
+        "+De kleine-veranderingregel wordt gekoppeld aan de vraag rond de onderzochte situatie. Voor twee gegeven oude en nieuwe waarden staat de **rechtstreekse TO-berekening** voorop. Het tegenvoorbeeld op pagina 45 gebruikt P: 10 → 12 en Q: 100 → 82. Ev = −0,9, maar TO daalt van 1.000 naar 984. Dit is een oorspronkelijk rekenvoorbeeld dat de begrenzing uit de doelopgave zichtbaar maakt. Er worden geen afgeleiden of optimalisatieregels toegevoegd.",
+        " "
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/README.md",
+      "sha256": "320db554d4ce2d788d044c10e1d4208119a453479f73f20d00f8fb8db4b18f25",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -18,3 +18,3 @@\n",
+        " ",
+        "-**Print:** A4, ware grootte, dubbelzijdig, omslaan aan de lange zijde. Bij een ongewijzigde paginavolgorde staan de StreamPlus-bronnen en vragen op de naast elkaar liggende pagina’s 32–33. Leerlingen werken in een schrift.",
+        "+**Print:** A4, ware grootte, dubbelzijdig, omslaan aan de lange zijde. Bij een ongewijzigde paginavolgorde staan de StreamPlus-bronnen en vragen op de naast elkaar liggende pagina’s 66–67. Leerlingen werken in een schrift.",
+        " "
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/00 Hoofdstukopening.md",
+      "sha256": "e841e919f009b00fc43d1a446cd940af2aae6d5e0a5c8350e35541e9280ec92c",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -11,7 +11,7 @@\n",
+        " ",
+        "-2.2.1 · Prijselasticiteit 2Van procentuele veranderingen naar een maat voor prijsgevoeligheid.",
+        "-2.2.2 · Elasticiteit en omzet 10Begrijpen én narekenen wat een prijsverandering met de omzet doet.",
+        "-2.2.3 · Inkomen en de prijs van andere goederen 18Ei, Ek en vraagfuncties met meerdere variabelen.",
+        "-2.2.4 · Gemengde opgaven 30Gegevens kiezen, berekenen, vergelijken en een advies onderbouwen.",
+        "-Hoofdstukoverzicht 36De formules en beslisregels bij elkaar.",
+        "+2.2.1 · Prijselasticiteit 36Van procentuele veranderingen naar een maat voor prijsgevoeligheid.",
+        "+2.2.2 · Elasticiteit en omzet 44Begrijpen én narekenen wat een prijsverandering met de omzet doet.",
+        "+2.2.3 · Inkomen en de prijs van andere goederen 52Ei, Ek en vraagfuncties met meerdere variabelen.",
+        "+2.2.4 · Gemengde opgaven 64Gegevens kiezen, berekenen, vergelijken en een advies onderbouwen.",
+        "+Hoofdstukoverzicht 70De formules en beslisregels bij elkaar.",
+        " "
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2 Hoofdstukoverzicht.md",
+      "sha256": "a235ff3d8f23c695a853fd399ad8c69a2e3925f94eacdaf818e9685cba011655",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -54,5 +54,5 @@\n",
+        " 2.2 · Elasticiteit: kies de juiste verhouding",
+        "-Prijselasticiteit · 2–5",
+        "-Omzet · 10–13",
+        "-Ei, Ek en functies · 18–24",
+        "+Prijselasticiteit · 36–39",
+        "+Omzet · 44–47",
+        "+Ei, Ek en functies · 52–58",
+        " De teller is steeds de procentuele verandering van de gevraagde hoeveelheid. De oorzaak in de noemerbepaalt welke elasticiteit je berekent.",
+        "@@ -90,3 +90,3 @@\n",
+        " §2.2.1",
+        "-p. 3–4",
+        "+p. 37–38",
+        " ",
+        "@@ -103,3 +103,3 @@\n",
+        " §2.2.3",
+        "-p. 19",
+        "+p. 53",
+        " ",
+        "@@ -117,3 +117,3 @@\n",
+        " §2.2.3",
+        "-p. 20",
+        "+p. 54",
+        " "
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+      "sha256": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -16,6 +16,6 @@\n",
+        " 2.2.1 · Prijselasticiteit: hoe sterk is de reactie?",
+        "-Betekenis · 2",
+        "-Berekenen · 3",
+        "-Indelen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 36",
+        "+Berekenen · 37",
+        "+Indelen · 38",
+        "+Voorbeeld · 39",
+        " Dezelfde prijsstijging, een andere reactie. Skatehal RolVast en trampolinepark SpringVrij verhogen hunentreeprijs van € 10 naar € 11. Beide verkochten eerst 200 kaartjes per week. Daarna zijn dat er 190 bijRolVast en 160 bij SpringVrij.",
+        "@@ -54,6 +54,6 @@\n",
+        " 2.2.1 · Ev berekenen: reactie delen door oorzaak",
+        "-Betekenis · 2",
+        "-Berekenen · 3",
+        "-Indelen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 36",
+        "+Berekenen · 37",
+        "+Indelen · 38",
+        "+Voorbeeld · 39",
+        " Gebruik bij beide procentuele veranderingen de oude waarde als basis. Δ betekent verandering: nieuw −oud. Een stijging is positief; een daling negatief.",
+        "@@ -114,6 +114,6 @@\n",
+        " 2.2.1 · Het teken is niet hetzelfde als de sterkte",
+        "-Betekenis · 2",
+        "-Berekenen · 3",
+        "-Indelen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 36",
+        "+Berekenen · 37",
+        "+Indelen · 38",
+        "+Voorbeeld · 39",
+        " Teken van Ev · welke richting?",
+        "@@ -247,6 +247,6 @@\n",
+        " 2.2.1 · Voorbeeld: berekenen, vergelijken, verklaren",
+        "-Betekenis · 2",
+        "-Berekenen · 3",
+        "-Indelen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 36",
+        "+Berekenen · 37",
+        "+Indelen · 38",
+        "+Voorbeeld · 39",
+        " KlimStudio verhoogt de prijs van € 20 naar € 22 per bezoek. Qv daalt van 400 naar 380 bezoeken perweek. Voor DansDrop is bij een andere prijsverhoging Ev = −1,5 gemeten. Vergelijk hunprijsgevoeligheid."
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "sha256": "dd5aec29637a494da80ad7264f08c7d7ecc7081d9ca23f0e963385127f8166f3",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -19,5 +19,5 @@\n",
+        " 2.2.2 · Omzet: prijs én hoeveelheid veranderen",
+        "-Omzet · 10",
+        "-Omzetregel · 11",
+        "-Voorbeeld · 12–13",
+        "+Omzet · 44",
+        "+Omzetregel · 45",
+        "+Voorbeeld · 46–47",
+        " MuseumBos vraagt eerst € 10 per kaartje en verkoopt 100 kaartjes per dag. Na een prijsverhoging naar€ 11 verkoopt het 95 kaartjes. Elk kaartje brengt meer op, maar er worden er minder verkocht.",
+        "@@ -93,5 +93,5 @@\n",
+        " 2.2.2 · De omzetregel en de controleberekening",
+        "-Omzet · 10",
+        "-Omzetregel · 11",
+        "-Voorbeeld · 12–13",
+        "+Omzet · 44",
+        "+Omzetregel · 45",
+        "+Voorbeeld · 46–47",
+        " Een lokale vuistregel voor kleine prijsveranderingen",
+        "@@ -239,5 +239,5 @@\n",
+        " 2.2.2 · Voorbeeld: omzet vóór en na vergelijken",
+        "-Omzet · 10",
+        "-Omzetregel · 11",
+        "-Voorbeeld · 12–13",
+        "+Omzet · 44",
+        "+Omzetregel · 45",
+        "+Voorbeeld · 46–47",
+        " PuzzelClub verhuurt puzzelpakketten; FotoWorkshop verkoopt workshopplaatsen. Beide veranderenhun prijs. Alle gevraagde producten of plaatsen worden verkocht. De gegevens gelden per maand.",
+        "@@ -361,5 +361,5 @@\n",
+        " 2.2.2 · Voorbeeld: omzet is nog geen winst",
+        "-Omzet · 10",
+        "-Omzetregel · 11",
+        "-Voorbeeld · 12–13",
+        "+Omzet · 44",
+        "+Omzetregel · 45",
+        "+Voorbeeld · 46–47",
+        " Herhaal de berekening voor FotoWorkshop"
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "sha256": "40440809dc4e3d4261ff15d15e05bf8b5396ec346be1f59df3037c4d71984cea",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -33,7 +33,7 @@\n",
+        " 2.2.3 · Welke factor verandert de vraag?",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " De eigen prijs blijft gelijk. Toch verandert de vraag. Bij meer inkomen bestel je misschien vaker eenmaaltijd. Wordt de bus duurder, dan kies je misschien vaker de trein. Je onderzoekt nu een andereoorzaak dan de eigen prijs.",
+        "@@ -94,3 +94,3 @@\n",
+        " ",
+        "-Ceteris paribus blijft nodig. Onderzoek je inkomen? Houd de prijzen gelijk. Onderzoek je de prijs van eenander goed? Houd de eigen prijs en het inkomen gelijk. In de vraagfunctie op p. 21–22 verander je daaromsteeds één factor tegelijk.",
+        "+Ceteris paribus blijft nodig. Onderzoek je inkomen? Houd de prijzen gelijk. Onderzoek je de prijs van eenander goed? Houd de eigen prijs en het inkomen gelijk. In de vraagfunctie op p. 55–56 verander je daaromsteeds één factor tegelijk.",
+        " ",
+        "@@ -133,7 +133,7 @@\n",
+        " 2.2.3 · Inkomenselasticiteit: van inkomen naar vraag",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " Inkomenselasticiteit van de vraag (Ei)",
+        "@@ -219,7 +219,7 @@\n",
+        " 2.2.3 · Kruislingse elasticiteit: twee goederen",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " Kruislingse elasticiteit van de vraag (Ek)",
+        "@@ -291,7 +291,7 @@\n",
+        " 2.2.3 · Een vraagfunctie: elk gegeven op zijn plek",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " DeelFiets X beschrijft de maandelijkse vraag naar abonnementen met deze functie:",
+        "@@ -415,7 +415,7 @@\n",
+        " 2.2.3 · Eén verandering per onderzoek",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " DeelFiets X: Qx = 200 − 5Px + 2Pz + 0,01Y. Begin steeds met Px = 10, Pz = 15, Y = 20.000. Daarbij isQx = 380 abonnementen per maand.",
+        "@@ -559,7 +559,7 @@\n",
+        " 2.2.3 · Voorbeeld: Ei en Ek uit bronnen",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " We gebruiken drie bronnen. In elke vergelijking veranderen alleen de genoemde factoren. Let steeds opde oorzaak in de noemer.",
+        "@@ -646,3 +646,3 @@\n",
+        " ",
+        "-Bron functie · hiermee ga je verder op p. 24",
+        "+Bron functie · hiermee ga je verder op p. 58",
+        " StudioPas X",
+        "@@ -703,7 +703,7 @@\n",
+        " 2.2.3 · Voorbeeld: de vraagfunctie gebruiken",
+        "-Keuze · 18",
+        "-Ei · 19",
+        "-Ek · 20",
+        "-Functie · 21–22",
+        "-Voorbeeld · 23–24",
+        "+Keuze · 52",
+        "+Ei · 53",
+        "+Ek · 54",
+        "+Functie · 55–56",
+        "+Voorbeeld · 57–58",
+        " StudioPas X: Qx = 200 − 2Px + Pz + 0,01Y. Begin: Px = 10, Pz = 20, Y = 20.000. Qx is in abonnementenper maand; Y is jaarinkomen in euro."
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Docenteninformatie.md",
+      "sha256": "95fef222ef377353c0f3986319707fe85838276e2dd59947aa764c6102437d93",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -13,7 +13,7 @@\n",
+        " |---|---|---:|---|",
+        "-| 2.3.1 Consumentensurplus | 2–9 | 1–11 | 8, pagina 9 |",
+        "-| 2.3.2 Producentensurplus en totaal surplus | 10–19 | 1–11 | 8, pagina 18–19 |",
+        "-| 2.3.3 Pareto-efficiëntie en welvaartsverlies | 20–30 | 1–9 | 6, pagina 29–30 |",
+        "-| 2.3.4 Gemengde opgaven | 31–36 | 1–7 | 3, pagina 34–35 |",
+        "-| Overzicht en begrippen | 37–38 | — | — |",
+        "+| 2.3.1 Consumentensurplus | 72–79 | 1–11 | 8, pagina 79 |",
+        "+| 2.3.2 Producentensurplus en totaal surplus | 80–89 | 1–11 | 8, pagina 88–89 |",
+        "+| 2.3.3 Pareto-efficiëntie en welvaartsverlies | 90–100 | 1–9 | 6, pagina 99–100 |",
+        "+| 2.3.4 Gemengde opgaven | 101–106 | 1–7 | 3, pagina 104–105 |",
+        "+| Overzicht en begrippen | 107–108 | — | — |",
+        " ",
+        "@@ -23,3 +23,3 @@\n",
+        " ",
+        "-**Printen:** A4, werkelijke grootte, dubbelzijdig, omslaan over de lange zijde. De bronnen en vragen van de gemengde doeloefening staan op de tegenoverliggende pagina’s 34–35. De bronbestanden en bouwscripts zijn meegeleverd; de repositories zijn niet gewijzigd.",
+        "+**Printen:** A4, werkelijke grootte, dubbelzijdig, omslaan over de lange zijde. De bronnen en vragen van de gemengde doeloefening staan op de tegenoverliggende pagina’s 104–105. De bronbestanden en bouwscripts zijn meegeleverd; de repositories zijn niet gewijzigd.",
+        " "
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Surplus en welvaart – hoofdstuk.md",
+      "sha256": "29da8e5eb3bb3d35a2f6992f26464a9da84c3fed2e1e335da645c893b96b34af",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -9,7 +9,7 @@\n",
+        " ",
+        "-22.3.1 · ConsumentensurplusVan betalingsbereidheid naar het voordeel van alle kopers.",
+        "-102.3.2 · Producentensurplus en totaal surplusHet voordeel van verkopers en het gezamenlijke voordeel.",
+        "-202.3.3 · Pareto-efficiëntie en welvaartsverliesWerkelijke transacties, gemiste voordelen en eerlijke verdeling.",
+        "-312.3.4 · Gemengde opgavenBronnen selecteren, gebieden berekenen en uitspraken beoordelen.",
+        "-37Hoofdstukoverzicht en begrippenDe rekenroute, formules en belangrijkste verschillen bij elkaar.",
+        "+722.3.1 · ConsumentensurplusVan betalingsbereidheid naar het voordeel van alle kopers.",
+        "+802.3.2 · Producentensurplus en totaal surplusHet voordeel van verkopers en het gezamenlijke voordeel.",
+        "+902.3.3 · Pareto-efficiëntie en welvaartsverliesWerkelijke transacties, gemiste voordelen en eerlijke verdeling.",
+        "+1012.3.4 · Gemengde opgavenBronnen selecteren, gebieden berekenen en uitspraken beoordelen.",
+        "+107Hoofdstukoverzicht en begrippenDe rekenroute, formules en belangrijkste verschillen bij elkaar.",
+        " ",
+        "@@ -42,6 +42,6 @@\n",
+        " 2.3.1 · Consumentensurplus: voordeel voor kopers",
+        "-Betekenis · 2",
+        "-Alle kopers · 3",
+        "-Berekenen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 72",
+        "+Alle kopers · 73",
+        "+Berekenen · 74",
+        "+Voorbeeld · 75",
+        " Je hebt maximaal € 30 over voor een kaartje voor een gamebeurs. Aan de kassa betaal je € 20. Je krijgtgeen geld terug, maar het bezoek is voor jou € 10 meer waard dan je betaalt.",
+        "@@ -109,6 +109,6 @@\n",
+        " 2.3.1 · Van één koper naar alle kopers",
+        "-Betekenis · 2",
+        "-Alle kopers · 3",
+        "-Berekenen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 72",
+        "+Alle kopers · 73",
+        "+Berekenen · 74",
+        "+Voorbeeld · 75",
+        " Losse kopers: tel de werkelijke voordelen op",
+        "@@ -226,6 +226,6 @@\n",
+        " 2.3.1 · Consumentensurplus tekenen en berekenen",
+        "-Betekenis · 2",
+        "-Alle kopers · 3",
+        "-Berekenen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 72",
+        "+Alle kopers · 73",
+        "+Berekenen · 74",
+        "+Voorbeeld · 75",
+        " Gebruik P = 30 − 0,5Q en de gegeven prijs P = € 10. Alle gevraagde kaartjes worden verkocht.",
+        "@@ -302,6 +302,6 @@\n",
+        " 2.3.1 · Voorbeeld: van vraagfunctie naar CS",
+        "-Betekenis · 2",
+        "-Alle kopers · 3",
+        "-Berekenen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 72",
+        "+Alle kopers · 73",
+        "+Berekenen · 74",
+        "+Voorbeeld · 75",
+        " Een escaperoom verkoopt tickets. P = 20 − 0,25Q; P is in euro per ticket en Q in tickets. De prijs is € 10.Er zijn genoeg plaatsen: alle gevraagde tickets worden verkocht aan de vragers met de hoogstebetalingsbereidheid.",
+        "@@ -518,5 +518,5 @@\n",
+        " 2.3.2 · Producentensurplus: voordeel voor verkopers",
+        "-PS · 10–11",
+        "-Totaal surplus · 12",
+        "-Voorbeeld · 13–14",
+        "+PS · 80–81",
+        "+Totaal surplus · 82",
+        "+Voorbeeld · 83–84",
+        " Een koper heeft € 50 over voor een drinkfles en betaalt € 35. De marginale kosten van de fles zijn € 20.De koper heeft voordeel, maar de verkoper ook.",
+        "@@ -557,5 +557,5 @@\n",
+        " 2.3.2 · PS in de grafiek: tussen prijs en MK",
+        "-PS · 10–11",
+        "-Totaal surplus · 12",
+        "-Voorbeeld · 13–14",
+        "+PS · 80–81",
+        "+Totaal surplus · 82",
+        "+Voorbeeld · 83–84",
+        " Op de postermarkt geldt vraag P = 40 − Q en aanbod P = 10 + 0,5Q. P is in euro per poster; Q is inposters. In dit model geeft de aanbodlijn voor Q van 0 tot 40 ook de marginale kosten weer.",
+        "@@ -617,5 +617,5 @@\n",
+        " 2.3.2 · Totaal surplus: gezamenlijk voordeel",
+        "-PS · 10–11",
+        "-Totaal surplus · 12",
+        "-Voorbeeld · 13–14",
+        "+PS · 80–81",
+        "+Totaal surplus · 82",
+        "+Voorbeeld · 83–84",
+        " 1",
+        "@@ -741,5 +741,5 @@\n",
+        " 2.3.2 · Voorbeeld: evenwicht, CS, PS en TS",
+        "-PS · 10–11",
+        "-Totaal surplus · 12",
+        "-Voorbeeld · 13–14",
+        "+PS · 80–81",
+        "+Totaal surplus · 82",
+        "+Voorbeeld · 83–84",
+        " Op een makersmarkt worden notitieboeken verkocht. Vraag: P = 24 − 0,5Q. Aanbod: P = 4 + 0,5Q. P isin euro per notitieboek; Q in notitieboeken. De aanbodlijn geeft MK weer voor Q van 0 tot 40. Wegebruiken het vrije evenwicht.",
+        "@@ -815,3 +815,3 @@\n",
+        " ",
+        "-Eenhedencontrole. De basis is in notitieboeken; de hoogte in euro per notitieboek. De oppervlakte geeft dus euro. Op p. 14 verklaar je waarom het gezamenlijke voordeel hier maximaal is.",
+        "+Eenhedencontrole. De basis is in notitieboeken; de hoogte in euro per notitieboek. De oppervlakte geeft dus euro. Op p. 84 verklaar je waarom het gezamenlijke voordeel hier maximaal is.",
+        " ",
+        "@@ -1132,7 +1132,7 @@\n",
+        " 2.3.3 · Werkelijke handel: vraag, aanbod en grens",
+        "-Handel · 20",
+        "-CS/PS · 21",
+        "-Verlies · 22",
+        "-Pareto · 23",
+        "-Voorbeeld · 24–25",
+        "+Handel · 90",
+        "+CS/PS · 91",
+        "+Verlies · 92",
+        "+Pareto · 93",
+        "+Voorbeeld · 94–95",
+        " Op de postermarkt zijn vrij 20 transacties tegen € 20 mogelijk. Een reserveringssysteem laat nu maar 12boekingen tegen € 22 toe. Het kan technisch minstens 20 transacties verwerken; de grens kan zonderkosten worden verruimd.",
+        "@@ -1219,7 +1219,7 @@\n",
+        " 2.3.3 · CS en PS: niet altijd een driehoek",
+        "-Handel · 20",
+        "-CS/PS · 21",
+        "-Verlies · 22",
+        "-Pareto · 23",
+        "-Voorbeeld · 24–25",
+        "+Handel · 90",
+        "+CS/PS · 91",
+        "+Verlies · 92",
+        "+Pareto · 93",
+        "+Voorbeeld · 94–95",
+        " Er worden 12 posters tegen € 22 verkocht. Bij Q = 12 is de betalingsbereidheid 40 − 12 = € 28 en zijnde MK 10 + 0,5 × 12 = € 16. De laatste koper én verkoper hebben nog voordeel.",
+        "@@ -1281,7 +1281,7 @@\n",
+        " 2.3.3 · Welvaartsverlies: voordeel dat niemand krijgt",
+        "-Handel · 20",
+        "-CS/PS · 21",
+        "-Verlies · 22",
+        "-Pareto · 23",
+        "-Voorbeeld · 24–25",
+        "+Handel · 90",
+        "+CS/PS · 91",
+        "+Verlies · 92",
+        "+Pareto · 93",
+        "+Voorbeeld · 94–95",
+        " Welvaartsverlies",
+        "@@ -1390,7 +1390,7 @@\n",
+        " 2.3.3 · Pareto: iemand vooruit, niemand achteruit",
+        "-Handel · 20",
+        "-CS/PS · 21",
+        "-Verlies · 22",
+        "-Pareto · 23",
+        "-Voorbeeld · 24–25",
+        "+Handel · 90",
+        "+CS/PS · 91",
+        "+Verlies · 92",
+        "+Pareto · 93",
+        "+Voorbeeld · 94–95",
+        " Paretoverbetering",
+        "@@ -1466,7 +1466,7 @@\n",
+        " 2.3.3 · Voorbeeld: een boekingsgrens doorrekenen",
+        "-Handel · 20",
+        "-CS/PS · 21",
+        "-Verlies · 22",
+        "-Pareto · 23",
+        "-Voorbeeld · 24–25",
+        "+Handel · 90",
+        "+CS/PS · 91",
+        "+Verlies · 92",
+        "+Pareto · 93",
+        "+Voorbeeld · 94–95",
+        " Workshopplaatsen: vraag P = 30 − Q; aanbod/MK P = 6 + Q. P is in euro per plaats. Vrij evenwicht: Qe =12, Pe = € 18; CS = PS = € 72 en TS = € 144.",
+        "@@ -1491,3 +1491,3 @@\n",
+        " = 48 + 32 = € 80",
+        "-Stop bij Q = 8. Je rekent met de werkelijke transacties en de gegeven toewijzing, niet met alle 10 gevraagde of14 aangeboden plaatsen. Op p. 25 bereken je het verlies en toets je Pareto-efficiëntie.",
+        "+Stop bij Q = 8. Je rekent met de werkelijke transacties en de gegeven toewijzing, niet met alle 10 gevraagde of14 aangeboden plaatsen. Op p. 95 bereken je het verlies en toets je Pareto-efficiëntie.",
+        " ",
+        "@@ -1516,7 +1516,7 @@\n",
+        " 2.3.3 · Voorbeeld: verlies en Pareto controleren",
+        "-Handel · 20",
+        "-CS/PS · 21",
+        "-Verlies · 22",
+        "-Pareto · 23",
+        "-Voorbeeld · 24–25",
+        "+Handel · 90",
+        "+CS/PS · 91",
+        "+Verlies · 92",
+        "+Pareto · 93",
+        "+Voorbeeld · 94–95",
+        " 4",
+        "@@ -1971,3 +1971,3 @@\n",
+        " Betalingsbereidheid &gt; MK betekent gezamenlijk voordeel van extra handel. Een Paretoverbetering vraagt méér: deverandering moet haalbaar zijn en niemand schaden. Een hoger TS bewijst geen eerlijkere verdeling.",
+        "-Terugzoeken: CS §2.3.1 p. 2–5; PS en TS §2.3.2 p. 10–14; boekingsgrens p. 20–21; welvaartsverlies p. 22;Pareto p. 23.",
+        "+Terugzoeken: CS §2.3.1 p. 72–75; PS en TS §2.3.2 p. 80–84; boekingsgrens p. 90–91; welvaartsverlies p. 92;Pareto p. 93.",
+        " ",
+        "@@ -2066,3 +2066,3 @@\n",
+        " ",
+        "-2",
+        "+72",
+        " ",
+        "@@ -2078,3 +2078,3 @@\n",
+        " ",
+        "-2–5",
+        "+72–75",
+        " ",
+        "@@ -2090,3 +2090,3 @@\n",
+        " ",
+        "-10–11",
+        "+80–81",
+        " ",
+        "@@ -2101,3 +2101,3 @@\n",
+        " ",
+        "-10–11",
+        "+80–81",
+        " ",
+        "@@ -2112,3 +2112,3 @@\n",
+        " ",
+        "-12",
+        "+82",
+        " ",
+        "@@ -2124,3 +2124,3 @@\n",
+        " ",
+        "-12–13",
+        "+82–83",
+        " ",
+        "@@ -2136,3 +2136,3 @@\n",
+        " ",
+        "-20",
+        "+90",
+        " ",
+        "@@ -2149,3 +2149,3 @@\n",
+        " ",
+        "-20",
+        "+90",
+        " ",
+        "@@ -2160,3 +2160,3 @@\n",
+        " ",
+        "-22",
+        "+92",
+        " ",
+        "@@ -2172,3 +2172,3 @@\n",
+        " ",
+        "-23",
+        "+93",
+        " ",
+        "@@ -2183,3 +2183,3 @@\n",
+        " ",
+        "-23",
+        "+93",
+        " ",
+        "@@ -2195,3 +2195,3 @@\n",
+        " ",
+        "-23",
+        "+93",
+        " "
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/README.md",
+      "sha256": "bc71c7d37f218f6ecd795a01750b919a35548ef2d6ce3fa95a68eafd3334f34c",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -59,2 +59,2 @@\n",
+        " ",
+        "-A4, werkelijke grootte, dubbelzijdig, omslaan over de lange zijde. De 38 leerlingpagina’s blijven binnen de grens van 40. De bronnen en vragen van de gemengde doeloefening staan op de tegenoverliggende pagina’s 34–35. Antwoorden en docenteninformatie zijn niet in die 38 pagina’s opgenomen.",
+        "+A4, werkelijke grootte, dubbelzijdig, omslaan over de lange zijde. De 38 leerlingpagina’s blijven binnen de grens van 40. De bronnen en vragen van de gemengde doeloefening staan op de tegenoverliggende pagina’s 104–105. Antwoorden en docenteninformatie zijn niet in die 38 pagina’s opgenomen."
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/00 Hoofdstukopening.md",
+      "sha256": "918faa5278a8a2c0ef11d3917c81592e6890ae96c004a88bb2870d76873ea4e0",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -10,7 +10,7 @@\n",
+        " ",
+        "-22.3.1 · ConsumentensurplusVan betalingsbereidheid naar het voordeel van alle kopers.",
+        "-102.3.2 · Producentensurplus en totaal surplusHet voordeel van verkopers en het gezamenlijke voordeel.",
+        "-202.3.3 · Pareto-efficiëntie en welvaartsverliesWerkelijke transacties, gemiste voordelen en eerlijke verdeling.",
+        "-312.3.4 · Gemengde opgavenBronnen selecteren, gebieden berekenen en uitspraken beoordelen.",
+        "-37Hoofdstukoverzicht en begrippenDe rekenroute, formules en belangrijkste verschillen bij elkaar.",
+        "+722.3.1 · ConsumentensurplusVan betalingsbereidheid naar het voordeel van alle kopers.",
+        "+802.3.2 · Producentensurplus en totaal surplusHet voordeel van verkopers en het gezamenlijke voordeel.",
+        "+902.3.3 · Pareto-efficiëntie en welvaartsverliesWerkelijke transacties, gemiste voordelen en eerlijke verdeling.",
+        "+1012.3.4 · Gemengde opgavenBronnen selecteren, gebieden berekenen en uitspraken beoordelen.",
+        "+107Hoofdstukoverzicht en begrippenDe rekenroute, formules en belangrijkste verschillen bij elkaar.",
+        " "
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3 Hoofdstukoverzicht.md",
+      "sha256": "c1f35244be7e03f75bf1dbb69ffbbcfc7656f89676ed32f87cb3d8c474a97036",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -84,3 +84,3 @@\n",
+        " Betalingsbereidheid &gt; MK betekent gezamenlijk voordeel van extra handel. Een Paretoverbetering vraagt méér: deverandering moet haalbaar zijn en niemand schaden. Een hoger TS bewijst geen eerlijkere verdeling.",
+        "-Terugzoeken: CS §2.3.1 p. 2–5; PS en TS §2.3.2 p. 10–14; boekingsgrens p. 20–21; welvaartsverlies p. 22;Pareto p. 23.",
+        "+Terugzoeken: CS §2.3.1 p. 72–75; PS en TS §2.3.2 p. 80–84; boekingsgrens p. 90–91; welvaartsverlies p. 92;Pareto p. 93.",
+        " ",
+        "@@ -179,3 +179,3 @@\n",
+        " ",
+        "-2",
+        "+72",
+        " ",
+        "@@ -191,3 +191,3 @@\n",
+        " ",
+        "-2–5",
+        "+72–75",
+        " ",
+        "@@ -203,3 +203,3 @@\n",
+        " ",
+        "-10–11",
+        "+80–81",
+        " ",
+        "@@ -214,3 +214,3 @@\n",
+        " ",
+        "-10–11",
+        "+80–81",
+        " ",
+        "@@ -225,3 +225,3 @@\n",
+        " ",
+        "-12",
+        "+82",
+        " ",
+        "@@ -237,3 +237,3 @@\n",
+        " ",
+        "-12–13",
+        "+82–83",
+        " ",
+        "@@ -249,3 +249,3 @@\n",
+        " ",
+        "-20",
+        "+90",
+        " ",
+        "@@ -262,3 +262,3 @@\n",
+        " ",
+        "-20",
+        "+90",
+        " ",
+        "@@ -273,3 +273,3 @@\n",
+        " ",
+        "-22",
+        "+92",
+        " ",
+        "@@ -285,3 +285,3 @@\n",
+        " ",
+        "-23",
+        "+93",
+        " ",
+        "@@ -296,3 +296,3 @@\n",
+        " ",
+        "-23",
+        "+93",
+        " ",
+        "@@ -308,3 +308,3 @@\n",
+        " ",
+        "-23",
+        "+93",
+        " "
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "sha256": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -20,6 +20,6 @@\n",
+        " 2.3.1 · Consumentensurplus: voordeel voor kopers",
+        "-Betekenis · 2",
+        "-Alle kopers · 3",
+        "-Berekenen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 72",
+        "+Alle kopers · 73",
+        "+Berekenen · 74",
+        "+Voorbeeld · 75",
+        " Je hebt maximaal € 30 over voor een kaartje voor een gamebeurs. Aan de kassa betaal je € 20. Je krijgtgeen geld terug, maar het bezoek is voor jou € 10 meer waard dan je betaalt.",
+        "@@ -87,6 +87,6 @@\n",
+        " 2.3.1 · Van één koper naar alle kopers",
+        "-Betekenis · 2",
+        "-Alle kopers · 3",
+        "-Berekenen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 72",
+        "+Alle kopers · 73",
+        "+Berekenen · 74",
+        "+Voorbeeld · 75",
+        " Losse kopers: tel de werkelijke voordelen op",
+        "@@ -204,6 +204,6 @@\n",
+        " 2.3.1 · Consumentensurplus tekenen en berekenen",
+        "-Betekenis · 2",
+        "-Alle kopers · 3",
+        "-Berekenen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 72",
+        "+Alle kopers · 73",
+        "+Berekenen · 74",
+        "+Voorbeeld · 75",
+        " Gebruik P = 30 − 0,5Q en de gegeven prijs P = € 10. Alle gevraagde kaartjes worden verkocht.",
+        "@@ -280,6 +280,6 @@\n",
+        " 2.3.1 · Voorbeeld: van vraagfunctie naar CS",
+        "-Betekenis · 2",
+        "-Alle kopers · 3",
+        "-Berekenen · 4",
+        "-Voorbeeld · 5",
+        "+Betekenis · 72",
+        "+Alle kopers · 73",
+        "+Berekenen · 74",
+        "+Voorbeeld · 75",
+        " Een escaperoom verkoopt tickets. P = 20 − 0,25Q; P is in euro per ticket en Q in tickets. De prijs is € 10.Er zijn genoeg plaatsen: alle gevraagde tickets worden verkocht aan de vragers met de hoogstebetalingsbereidheid."
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "sha256": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -19,5 +19,5 @@\n",
+        " 2.3.2 · Producentensurplus: voordeel voor verkopers",
+        "-PS · 10–11",
+        "-Totaal surplus · 12",
+        "-Voorbeeld · 13–14",
+        "+PS · 80–81",
+        "+Totaal surplus · 82",
+        "+Voorbeeld · 83–84",
+        " Een koper heeft € 50 over voor een drinkfles en betaalt € 35. De marginale kosten van de fles zijn € 20.De koper heeft voordeel, maar de verkoper ook.",
+        "@@ -58,5 +58,5 @@\n",
+        " 2.3.2 · PS in de grafiek: tussen prijs en MK",
+        "-PS · 10–11",
+        "-Totaal surplus · 12",
+        "-Voorbeeld · 13–14",
+        "+PS · 80–81",
+        "+Totaal surplus · 82",
+        "+Voorbeeld · 83–84",
+        " Op de postermarkt geldt vraag P = 40 − Q en aanbod P = 10 + 0,5Q. P is in euro per poster; Q is inposters. In dit model geeft de aanbodlijn voor Q van 0 tot 40 ook de marginale kosten weer.",
+        "@@ -118,5 +118,5 @@\n",
+        " 2.3.2 · Totaal surplus: gezamenlijk voordeel",
+        "-PS · 10–11",
+        "-Totaal surplus · 12",
+        "-Voorbeeld · 13–14",
+        "+PS · 80–81",
+        "+Totaal surplus · 82",
+        "+Voorbeeld · 83–84",
+        " 1",
+        "@@ -242,5 +242,5 @@\n",
+        " 2.3.2 · Voorbeeld: evenwicht, CS, PS en TS",
+        "-PS · 10–11",
+        "-Totaal surplus · 12",
+        "-Voorbeeld · 13–14",
+        "+PS · 80–81",
+        "+Totaal surplus · 82",
+        "+Voorbeeld · 83–84",
+        " Op een makersmarkt worden notitieboeken verkocht. Vraag: P = 24 − 0,5Q. Aanbod: P = 4 + 0,5Q. P isin euro per notitieboek; Q in notitieboeken. De aanbodlijn geeft MK weer voor Q van 0 tot 40. Wegebruiken het vrije evenwicht.",
+        "@@ -316,3 +316,3 @@\n",
+        " ",
+        "-Eenhedencontrole. De basis is in notitieboeken; de hoogte in euro per notitieboek. De oppervlakte geeft dus euro. Op p. 14 verklaar je waarom het gezamenlijke voordeel hier maximaal is.",
+        "+Eenhedencontrole. De basis is in notitieboeken; de hoogte in euro per notitieboek. De oppervlakte geeft dus euro. Op p. 84 verklaar je waarom het gezamenlijke voordeel hier maximaal is.",
+        " "
+      ]
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "sha256": "73f8bdb4f9ef2b7e7e997a7eef54657d9a2944bb8b65505fefbb5bf33e1bf69d",
+      "text_diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -39,7 +39,7 @@\n",
+        " 2.3.3 · Werkelijke handel: vraag, aanbod en grens",
+        "-Handel · 20",
+        "-CS/PS · 21",
+        "-Verlies · 22",
+        "-Pareto · 23",
+        "-Voorbeeld · 24–25",
+        "+Handel · 90",
+        "+CS/PS · 91",
+        "+Verlies · 92",
+        "+Pareto · 93",
+        "+Voorbeeld · 94–95",
+        " Op de postermarkt zijn vrij 20 transacties tegen € 20 mogelijk. Een reserveringssysteem laat nu maar 12boekingen tegen € 22 toe. Het kan technisch minstens 20 transacties verwerken; de grens kan zonderkosten worden verruimd.",
+        "@@ -126,7 +126,7 @@\n",
+        " 2.3.3 · CS en PS: niet altijd een driehoek",
+        "-Handel · 20",
+        "-CS/PS · 21",
+        "-Verlies · 22",
+        "-Pareto · 23",
+        "-Voorbeeld · 24–25",
+        "+Handel · 90",
+        "+CS/PS · 91",
+        "+Verlies · 92",
+        "+Pareto · 93",
+        "+Voorbeeld · 94–95",
+        " Er worden 12 posters tegen € 22 verkocht. Bij Q = 12 is de betalingsbereidheid 40 − 12 = € 28 en zijnde MK 10 + 0,5 × 12 = € 16. De laatste koper én verkoper hebben nog voordeel.",
+        "@@ -188,7 +188,7 @@\n",
+        " 2.3.3 · Welvaartsverlies: voordeel dat niemand krijgt",
+        "-Handel · 20",
+        "-CS/PS · 21",
+        "-Verlies · 22",
+        "-Pareto · 23",
+        "-Voorbeeld · 24–25",
+        "+Handel · 90",
+        "+CS/PS · 91",
+        "+Verlies · 92",
+        "+Pareto · 93",
+        "+Voorbeeld · 94–95",
+        " Welvaartsverlies",
+        "@@ -297,7 +297,7 @@\n",
+        " 2.3.3 · Pareto: iemand vooruit, niemand achteruit",
+        "-Handel · 20",
+        "-CS/PS · 21",
+        "-Verlies · 22",
+        "-Pareto · 23",
+        "-Voorbeeld · 24–25",
+        "+Handel · 90",
+        "+CS/PS · 91",
+        "+Verlies · 92",
+        "+Pareto · 93",
+        "+Voorbeeld · 94–95",
+        " Paretoverbetering",
+        "@@ -373,7 +373,7 @@\n",
+        " 2.3.3 · Voorbeeld: een boekingsgrens doorrekenen",
+        "-Handel · 20",
+        "-CS/PS · 21",
+        "-Verlies · 22",
+        "-Pareto · 23",
+        "-Voorbeeld · 24–25",
+        "+Handel · 90",
+        "+CS/PS · 91",
+        "+Verlies · 92",
+        "+Pareto · 93",
+        "+Voorbeeld · 94–95",
+        " Workshopplaatsen: vraag P = 30 − Q; aanbod/MK P = 6 + Q. P is in euro per plaats. Vrij evenwicht: Qe =12, Pe = € 18; CS = PS = € 72 en TS = € 144.",
+        "@@ -398,3 +398,3 @@\n",
+        " = 48 + 32 = € 80",
+        "-Stop bij Q = 8. Je rekent met de werkelijke transacties en de gegeven toewijzing, niet met alle 10 gevraagde of14 aangeboden plaatsen. Op p. 25 bereken je het verlies en toets je Pareto-efficiëntie.",
+        "+Stop bij Q = 8. Je rekent met de werkelijke transacties en de gegeven toewijzing, niet met alle 10 gevraagde of14 aangeboden plaatsen. Op p. 95 bereken je het verlies en toets je Pareto-efficiëntie.",
+        " ",
+        "@@ -423,7 +423,7 @@\n",
+        " 2.3.3 · Voorbeeld: verlies en Pareto controleren",
+        "-Handel · 20",
+        "-CS/PS · 21",
+        "-Verlies · 22",
+        "-Pareto · 23",
+        "-Voorbeeld · 24–25",
+        "+Handel · 90",
+        "+CS/PS · 91",
+        "+Verlies · 92",
+        "+Pareto · 93",
+        "+Voorbeeld · 94–95",
+        " 4"
+      ]
+    }
+  ]
+}

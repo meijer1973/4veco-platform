@@ -87,7 +87,7 @@ lessons=Path(__file__).resolve().parents[7]
 builder=lessons.parent/'4veco-platform/build-scripts/books/rebuild_book2_signed.py'
 subprocess.run([sys.executable,'-X','utf8',str(builder),'--lesson-root',str(lessons),'--all'],check=True)
 ''',encoding='utf8',newline='\n')
-        (dest/'LEESMIJ.md').write_text('Afgeleide export van de bewerkbare hoofdstukbron. Bewerk ../../manuscript/ en het hoofdstukbestand met antwoorden. Bouw via het platformscript rebuild_book2_signed.py. De PDF behoudt de hoofdstukpaginanummers; de figuren blijven afzonderlijke SVG/PNG-bestanden. Verwijzingen buiten deze export openen de bijbehorende pagina in ../../output/; behoud daarom de mappenstructuur bij verspreiding.\n',encoding='utf8',newline='\n')
+        (dest/'LEESMIJ.md').write_text('Afgeleide export van de bewerkbare hoofdstukbron. Bewerk ../../manuscript/ en het hoofdstukbestand met antwoorden. Bouw via het platformscript rebuild_book2_signed.py. De PDF behoudt de doorlopende boekpaginanummers; de figuren blijven afzonderlijke SVG/PNG-bestanden. Verwijzingen buiten deze export openen de bijbehorende pagina in ../../output/; behoud daarom de mappenstructuur bij verspreiding.\n',encoding='utf8',newline='\n')
         summary[pid]={'chapter_pages':[start,end],'exercise_pages':[exercise_start,end],'answer_pages':[answer_start,answer_end],'exercise_count':len(set(re.findall(r'Opgave (\d+)',all_text))),'assets':sorted(refs)}
     (folder/'paragraph-exports.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf8',newline='\n')
     manifest=[{'id':pid,'title':TITLES[pid],'student_pages':row['chapter_pages'],
