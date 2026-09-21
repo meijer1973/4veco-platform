@@ -164,3 +164,8 @@ archive/blueprints/book34-pre-v3-20260917/references/authored/book-outlines/sele
 
 # Exact received transport for the finite Books 3/4 transition; never rebuild here.
 references/staged/books34-v3/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+
+# Preserve the exact reviewed Book 2 historical JSON bytes. CRLF is a line
+# ending here; actual trailing spaces and the other whitespace checks remain.
+reports/review-gates/book2-theory-signed-20260921/current-assembly-check.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/review-gates/book2-theory-signed-20260921/reference-proposals.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -1490,6 +1490,7 @@ function defaultDeps(options = {}) {
     fetchComparePaths,
     fetchCompareStatus,
     findMainWorkflowRun,
+    verifyPlatformCiRun,
     fetchInterveningCommits,
     fetchMainSha,
     fetchPr,
@@ -1685,6 +1686,100 @@ function bundleStateForResult(record, compatibility, order, platformPr, lessonPr
   };
 }
 
+// Recovery never remerges a controller or invents an OPEN PR. The independent
+// recovery review binds the actual merged controller and current main, while
+// fresh compatibility and CI bind the remaining real repository transition.
+function resumePlatformFirst(input, options, deps, journal) {
+  const { record, platformPr, platformMainSha, lessonMainSha, lessonMember } = input;
+  const reject = (failure, detail = {}) => ({ ok: false, phase: 'platform_first_resume', failure, ...detail });
+  if (!options.allowPartialResume || record.merge_order !== 'platform-first' || options.prepareOnly) {
+    return reject('explicit_platform_first_resume_required');
+  }
+  const mergeSha = platformPr.mergeCommit && platformPr.mergeCommit.oid;
+  if (platformPr.state !== 'MERGED' || !mergeSha || platformPr.baseRefName !== 'main') {
+    return reject('merged_controller_missing');
+  }
+  const platformMember = memberStateFromPr(PLATFORM_REPO, record.controller, platformPr, platformMainSha, deps);
+  if (!platformMember.authorization_inherited || platformMember.failures.length) return reject('controller_lineage_invalid');
+  for (const [base, head] of [[platformPr.headRefOid, mergeSha], [mergeSha, platformMainSha]]) {
+    if (!['ahead', 'identical'].includes(deps.fetchCompareStatus(PLATFORM_REPO, base, head).status)) {
+      return reject('controller_merge_not_contained');
+    }
+  }
+  const review = options.platformResumeReview || readReviewJson(options.platformResumeReviewPath);
+  const expected = {
+    repository: PLATFORM_REPO, pr_number: Number(record.controller.pr_number), bundle_id: record.bundle_id,
+    reviewed_payload_head_sha: record.controller.reviewed_payload_head_sha,
+    merged_controller_head_sha: platformPr.headRefOid, merge_commit_sha: mergeSha, current_main_sha: platformMainSha,
+  };
+  if (!review || review.schema_version !== 1 || !['PASS', 'PASS WITH FLAGS'].includes(review.result) ||
+      typeof review.path !== 'string' || !review.path.trim() || review.product_files_unchanged !== true ||
+      review.authority_scope_unchanged !== true || Object.entries(expected).some(([key, value]) => review[key] !== value)) {
+    return reject('current_main_recovery_review_missing_or_stale');
+  }
+  // Obtain the complete first-parent delta. A truncated GitHub file list must
+  // not silently narrow the independently reviewed maintenance scope.
+  const tail = deps.fetchInterveningCommits(PLATFORM_REPO, mergeSha, platformMainSha);
+  if (tail.some(commit => (commit.changed_paths || []).length >= 300)) return reject('maintenance_delta_may_be_truncated');
+  const changedPaths = [...new Set(tail.flatMap(commit => commit.changed_paths || []))].sort();
+  const reviewedPaths = [...new Set(review.changed_paths || [])].sort();
+  if (JSON.stringify(changedPaths) !== JSON.stringify(reviewedPaths) ||
+      changedPaths.some(file => !/^(?:\.gitattributes|build-scripts\/(?:ci|review-gates)\/[^/]+\.(?:js|json)|\.github\/workflows\/[^/]+\.yml|docs\/review\/[^/]+\.md)$/.test(file))) {
+    return reject('unreviewed_or_product_main_delta', { changed_paths: changedPaths });
+  }
+  const controllerReadiness = deps.fetchReadinessComment(PLATFORM_REPO, platformPr.number, platformPr.headRefOid);
+  if (validateReadiness(controllerReadiness).length || validateReviewThreadState(deps.fetchReviewThreadState(PLATFORM_REPO, platformPr.number)).length) {
+    return reject('controller_review_invalid');
+  }
+  const lessonPr = deps.fetchPr(LESSON_REPO, lessonMember.pr_number);
+  const lessonState = memberStateFromPr(LESSON_REPO, lessonMember, lessonPr, lessonMainSha, deps);
+  const preflight = validateMemberPreflight(LESSON_REPO, lessonPr, lessonState, deps, { requireValidatePlatform: false });
+  if (!preflight.ok || !isHeadCurrentWithMain(LESSON_REPO, lessonMainSha, lessonPr.headRefOid, deps).ok) {
+    return reject('lesson_preflight_failed', { preflight });
+  }
+  const compatibility = deps.recomputeCompatibility(record, {
+    platform_base_sha: platformMainSha, platform_candidate_sha: platformMainSha,
+    lesson_base_sha: lessonMainSha, lesson_candidate_sha: lessonPr.headRefOid,
+  });
+  if (!compatibility.ok || !compatibility.permitted_merge_orders.includes('platform-first')) {
+    return reject('fresh_recovery_compatibility_required', { compatibility });
+  }
+  const run = deps.findMainWorkflowRun(PLATFORM_REPO, platformMainSha);
+  const intermediate = run && deps.verifyPlatformCiRun(run, { platformSha: platformMainSha, lessonSha: lessonMainSha }, options);
+  if (!intermediate || !intermediate.ok) return reject('current_intermediate_ci_required', { intermediate_ci: intermediate });
+  const latestPlatform = deps.fetchPr(PLATFORM_REPO, platformPr.number);
+  const latestLesson = deps.fetchPr(LESSON_REPO, lessonPr.number);
+  const protection = deps.fetchPlatformBranchProtectionSummary();
+  if (!protection.ok || protection.integration_authorized_required === true ||
+      deps.fetchMainSha(PLATFORM_REPO) !== platformMainSha || deps.fetchMainSha(LESSON_REPO) !== lessonMainSha ||
+      latestPlatform.state !== 'MERGED' || latestPlatform.headRefOid !== platformPr.headRefOid || latestPlatform.mergeCommit?.oid !== mergeSha ||
+      latestLesson.headRefOid !== lessonPr.headRefOid ||
+      validateReviewThreadState(deps.fetchReviewThreadState(PLATFORM_REPO, platformPr.number)).length) return reject('recovery_state_changed');
+  const finalPreflight = validateMemberPreflight(LESSON_REPO, latestLesson, lessonState, deps, { requireValidatePlatform: false });
+  if (!finalPreflight.ok) return reject('lesson_final_preflight_failed', { preflight: finalPreflight });
+  const common = { order: 'platform-first', recovery: 'remaining_lesson_member', compatibility, recovery_review: review, intermediate_ci: intermediate };
+  if (options.dryRun || options.noMerge) return { ok: true, phase: 'validated_platform_first_resume', dry_run: Boolean(options.dryRun), ...common };
+  journal.completed_merges.push({ repo: PLATFORM_REPO, pr_number: platformPr.number, merge_commit: mergeSha, resumed: true, already_merged: true });
+  const floor = deps.latestWorkflowRunDatabaseId(PLATFORM_REPO, platformMainSha);
+  setJournalSubphase(journal, 'remaining_lesson_merge');
+  const invocation = recordMergeInvocation(journal, { repo: LESSON_REPO, pr_number: lessonPr.number, head_sha: lessonPr.headRefOid, method: 'merge_pr' });
+  const merge = deps.mergePr(LESSON_REPO, lessonPr.number, lessonPr.headRefOid, options);
+  const observed = validateMergedPr(LESSON_REPO, lessonPr.number, deps.fetchMergedPr(LESSON_REPO, lessonPr.number));
+  if (!observed.ok) return reject('lesson_merge_not_observable', { merge });
+  recordCompletedMerge(journal, invocation, { repo: LESSON_REPO, pr_number: lessonPr.number, merge, ...observed });
+  if (deps.fetchMainSha(PLATFORM_REPO) !== platformMainSha || deps.fetchMainSha(LESSON_REPO) !== observed.merge_commit ||
+      !['ahead', 'identical'].includes(deps.fetchCompareStatus(LESSON_REPO, lessonPr.headRefOid, observed.merge_commit).status)) {
+    return reject('postmerge_state_changed');
+  }
+  setJournalSubphase(journal, 'final_ci');
+  const finalCi = acquirePlatformMainCi(deps, {
+    y1BaseSha: platformMainSha, y1HeadSha: platformMainSha, expectedPlatformSha: platformMainSha,
+    expectedLessonSha: observed.merge_commit, automaticMinDatabaseId: floor,
+  }, options);
+  if (!finalCi.ok) return { ok: false, phase: 'final_ci', ...common, final_ci: finalCi, merges: journal.completed_merges };
+  return { ok: true, phase: 'merged_bundle', ...common, final_ci: finalCi, merges: journal.completed_merges };
+}
+
 function integrateBundleCore(options = {}) {
   const modeFailures = [];
   if (options.prepareOnly === true && options.dryRun === true) {
@@ -1767,6 +1862,9 @@ function integrateBundleCore(options = {}) {
         'Repository auto-merge is disabled for activated bundle platform merge'
       );
     }
+  }
+  if (platformPr.state === 'MERGED' && options.allowPartialResume === true && record.merge_order === 'platform-first') {
+    return resumePlatformFirst({ record, platformPr, platformMainSha, lessonMainSha, lessonMember }, options, deps, executionJournal);
   }
   const pendingStatus = setPlatformIntegrationStatus(
     deps,
@@ -2576,6 +2674,7 @@ function runCli(argv, cli = {}) {
       compatibilityRunId: optionValue(argv, '--compatibility-run-id'),
       deltaReviewPath: optionValue(argv, '--delta-review'),
       payloadLeadReviewPath: optionValue(argv, '--payload-lead-review'),
+      platformResumeReviewPath: optionValue(argv, '--platform-resume-review'),
       requireCrossRepoPermissions: flag(argv, '--require-cross-repo-permissions'),
       allowPartialResume: flag(argv, '--allow-partial-resume'),
       prepareOnly: flag(argv, '--prepare-only'),
@@ -2603,6 +2702,7 @@ module.exports = {
   acquirePlatformMainCi,
   generateBundleIntegrationReadiness,
   integrateBundle,
+  resumePlatformFirst,
   runCli,
   platformCiDispatchArgs,
   preflightCrossRepoPermissions,
