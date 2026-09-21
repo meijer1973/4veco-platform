@@ -1,0 +1,16 @@
+{
+  "platform_commit": "b4fa56335c223d55989ffcfa437629fc39b2cb88",
+  "reviewed_source_files": 41,
+  "source_hash_mismatches": [],
+  "evidence_file": "reports/review-gates/exercise-routes-20260921/h3-answer-pixel-delta.json",
+  "old_sha256": "9c3ba0136ace428f1a447259b5444541bb4970c46bac929bafb09a1683b2f353",
+  "normalized_lf_sha256": "0ecbce940eabb7bdf8c53906ccf02851b1c07903527ac188a326520e0f9b470f",
+  "crlf_count": 124,
+  "bare_cr_count": 0,
+  "json_unchanged": true,
+  "hash_references": [],
+  "filename_references": [
+    "overall-review.md"
+  ],
+  "decision": "LF-only normalization accepted; no review verdict or manifest/index digest changes required"
+}
