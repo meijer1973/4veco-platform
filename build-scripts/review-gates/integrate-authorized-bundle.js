@@ -341,9 +341,9 @@ function withTerminalFailureStatus(result, deps, target, options, description) {
     : { ...result, integration_status: status, status_failure: status };
 }
 
-function fetchMergedPr(repo, prNumber) {
-  const fields = ['number', 'state', 'mergedAt', 'mergeCommit', 'headRefOid', 'url'].join(',');
-  return JSON.parse(runGh(['pr', 'view', String(prNumber), '--repo', repo, '--json', fields]));
+function fetchMergedPr(repo, prNumber, runCommand = runGh) {
+  const fields = ['number', 'state', 'mergedAt', 'mergeCommit', 'headRefOid', 'baseRefName', 'url'].join(',');
+  return JSON.parse(runCommand(['pr', 'view', String(prNumber), '--repo', repo, '--json', fields]));
 }
 
 function selectLatestRunForHead(runs, headSha, options = {}) {
@@ -2703,6 +2703,7 @@ module.exports = {
   PLATFORM_REPO,
   INTEGRATION_CONTEXT,
   acquirePlatformMainCi,
+  fetchMergedPr,
   generateBundleIntegrationReadiness,
   integrateBundle,
   resumePlatformFirst,
