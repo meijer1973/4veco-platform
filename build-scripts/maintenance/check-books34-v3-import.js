@@ -7,7 +7,7 @@ const {consumeTarget} = require('../references/target-source-consumer');
 const {verifyDelivery} = require('../references/books34-v3-delivery');
 const {BOOKS, verifyLessonPackage, verifyLegacyDeliveries, verifyLegacyLessonState} = require('../references/books34-v3-transition');
 
-function verify({root = m.ROOT, lessons = path.resolve(root, '../4veco-lessen'), requireTracked = false} = {}) {
+function verifyHistoricalImport({root = m.ROOT, lessons = path.resolve(root, '../4veco-lessen'), requireTracked = false} = {}) {
   const failures = [], check = (value, message) => { if (!value) failures.push(message); };
   const read = file => fs.readFileSync(path.join(root, file));
   let state = null;
@@ -61,9 +61,47 @@ function verify({root = m.ROOT, lessons = path.resolve(root, '../4veco-lessen'),
     lesson_state: state, lesson_projection_current: state === 'v3-projection',
     passed: !failures.length, tracked_verified: requireTracked, failures};
 }
+function verify(options = {}) {
+  const root = options.root || m.ROOT;
+  const meta = JSON.parse(fs.readFileSync(path.join(root, m.OUTLINES, 'book-3-outline.meta.json')));
+  if (!meta.pedagogical_amendment) return verifyHistoricalImport(options);
+  const lessons = options.lessons || path.resolve(root, '../4veco-lessen');
+  const failures = [];
+  let revision = null;
+  try {
+    const registry = JSON.parse(fs.readFileSync(path.join(root, m.REGISTRY)));
+    failures.push(...validateStructuralRecords(registry, root));
+    failures.push(...verifyDelivery(root, m.TRANSPORT, options).failures);
+    failures.push(...verifyLegacyDeliveries(lessons, options));
+    const planned = m.plan(path.join(root, m.TRANSPORT), root, lessons);
+    const {amendOutline, currentOutline, REVISION, CONTRACT} = require('../references/books34-route-amendment');
+    for (const [file, bytes] of planned.outputs) {
+      const book = file.startsWith(m.OUTLINES + '/') && file.match(/book-([34])-outline\.(md|meta\.json)$/);
+      let expected = bytes;
+      if (book && book[2] === 'md') {
+        currentOutline(fs.readFileSync(path.join(root, file)), Number(book[1]), root);
+        expected = amendOutline(bytes);
+      } else if (book) {
+        const value = JSON.parse(bytes);
+        const outline = fs.readFileSync(path.join(root, m.OUTLINES, `book-${book[1]}-outline.md`));
+        value.current_sha256 = m.sha(m.text(outline));
+        value.pedagogical_amendment = {revision: REVISION, contract: CONTRACT, owner_request: '2026-09-21: guided practice normal; bonus challenging; preserve exercises and report timing conflicts'};
+        value.technical_projection = 'Original v3 receipt and structural rows preserved. Target links resolve to the immutable transport; the separately validated route amendment governs current pedagogical guidance.';
+        expected = m.json(value);
+      }
+      const actual = fs.readFileSync(path.join(root, file));
+      if (file.startsWith(m.SNAPSHOT + '/') ? !actual.equals(expected) : m.text(actual) !== m.text(expected)) failures.push('Unexpected migration/amendment output ' + file);
+    }
+    for (const record of registry.exercises.filter(r => r.module >= 3)) consumeTarget(record, {platformRoot: root});
+    revision = require('../books/exercise-route-revision').verify({...options, root, lessons});
+    failures.push(...revision.failures);
+  } catch (error) { failures.push(error.message); }
+  return {task: 'exercise-routes-20260921', active_curriculum: m.REVISION,
+    lesson_state: revision?.state, files: revision?.files, passed: !failures.length, failures};
+}
 if (require.main === module) {
-  const result = verify({requireTracked: process.argv.includes('--require-tracked')});
+  const result = (process.argv.includes('--historical-import') ? verifyHistoricalImport : verify)({requireTracked: process.argv.includes('--require-tracked')});
   console.log(JSON.stringify(result, null, 2));
   if (!result.passed) process.exitCode = 1;
 }
-module.exports = {verify};
+module.exports = {verify, verifyHistoricalImport};

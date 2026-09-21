@@ -13,6 +13,12 @@ const {
 } = require('./check-paragraph-lane-scope');
 
 const FIXTURE_DIR = path.join(__dirname, 'fixtures', 'paragraph-lane-scope');
+test('route revision is finite Part A ownership and leaves the companion boundary intact', () => {
+  const files = require('../books/exercise-route-revision-pin.json').revision_paths;
+  expect(checkLaneScope({lane: 'textbook', changedPaths: files}).ok).toBe(true);
+  expect(classifyPath('edities/books34-v3/unreviewed/new.js').category).toBe('unknown');
+  expect(classifyPath('edities/books34-v3/books/book-3/chapters/3.1/3.1.1 - begeleide inoefening.html').category).toBe('partB_companion');
+});
 test('Book 2 delivered assembly has finite textbook ownership without a blanket edition exemption', () => {
   const edition = 'Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/';
   const files = ['README.md', 'assembly.json', 'repair-manifest.json',

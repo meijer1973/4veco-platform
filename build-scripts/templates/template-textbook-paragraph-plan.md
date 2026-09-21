@@ -133,7 +133,12 @@ official-source route trace where applicable, and approval state.]
 ### Exercise, explanation, and worked-example sequence
 
 [Record the target-first sequence, retrieval/support decisions, model
-conditions, misconceptions, paper-only route, and time budget.]
+conditions, misconceptions and the paper-only route from the
+[canonical exercise contract](../../skills/econ-exercise-builder.md#21-the-routes-and-the-constraint).
+Budget actual questions for the whole normal route, including guided practice;
+separately estimate the challenging route including the bonus. Record genuine
+existing-book timing conflicts, estimate uncertainty and any mixed-practice
+structure exception. Detailed timings belong here and in teacher guidance.]
 
 ### Textbook visuals and answer model
 

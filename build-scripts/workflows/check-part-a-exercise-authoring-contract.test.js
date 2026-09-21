@@ -101,23 +101,23 @@ describe('Part A exercise authoring source contract', () => {
   });
 
   test('rejects every forbidden printed help dependency and missing paper support', () => {
-    const supportLine = '**Extra hulp nodig?** Maak eerst Begeleide inoefening.';
+    const supportLine = '**Normale route:** Startopgaven → Begeleide inoefening → Zelfstandige oefening → Doeloefening.';
 
     expectFailure(
-      mutate('skills/econ-exercise-builder.md', supportLine, '**Extra hulp nodig?** Gebruik de website.'),
+      mutate('skills/econ-exercise-builder.md', supportLine, '**Normale route:** Gebruik de website.'),
       'printed template depends on or advertises digital support'
     );
     expectFailure(
-      mutate('skills/econ-exercise-builder.md', supportLine, '**Extra hulp nodig?** Ga naar Part B.'),
+      mutate('skills/econ-exercise-builder.md', supportLine, '**Normale route:** Ga naar Part B.'),
       'printed template exposes internal architecture terminology'
     );
     expectFailure(
-      mutate('skills/econ-exercise-builder.md', supportLine, '**Extra hulp nodig?** Bekijk de online uitleg op je laptop.'),
+      mutate('skills/econ-exercise-builder.md', supportLine, '**Normale route:** Bekijk de online uitleg op je laptop.'),
       'printed template depends on or advertises digital support'
     );
     expectFailure(
       mutate('skills/econ-exercise-builder.md', supportLine),
-      'paper support note missing from printed template'
+      'normal route must include guided practice in printed template'
     );
   });
 
@@ -135,8 +135,8 @@ describe('Part A exercise authoring source contract', () => {
     expectFailure(
       mutate(
         'skills/econ-exercise-builder.md',
-        '**Extra hulp nodig?** Maak eerst Begeleide inoefening.',
-        `**Extra hulp nodig?** ${replacement}`
+        '**Normale route:** Startopgaven → Begeleide inoefening → Zelfstandige oefening → Doeloefening.',
+        `**Normale route:** ${replacement}`
       ),
       'printed template depends on or advertises digital support'
     );
@@ -181,28 +181,20 @@ describe('Part A exercise authoring source contract', () => {
   test.each([
     ['retrieval of prerequisites already taught', 'Startopgaven retrieval role missing'],
     ['compact check of\n   current-content comprehension', 'Startopgaven comprehension role missing'],
-    ['deliberately fades', 'optional guided/fading rule missing'],
+    ['deliberately fades', 'normal guided/fading rule missing'],
     ['introduces no\n   new theory', 'closing-review rule missing'],
     ['Book 1 output is frozen', 'Book 1 freeze missing'],
   ])('rejects removal of %s', (needle, failure) => {
     expectFailure(mutate('skills/econ-exercise-builder.md', needle), failure);
   });
 
-  test('rejects making guided practice mandatory and adding new closing theory', () => {
+  test('rejects optional normal guidance and new closing theory', () => {
     expectFailure(
-      mutate(
-        'skills/econ-exercise-builder.md',
-        'required printed heading but an optional\n   student route',
-        'required printed heading and a mandatory\n   student route'
-      ),
-      'optional guided/fading rule missing'
+      mutate('skills/econ-exercise-builder.md', 'part of the normal route and a required printed', 'an optional detour and a required printed'),
+      'normal guided/fading rule missing'
     );
     expectFailure(
-      mutate(
-        'skills/econ-exercise-builder.md',
-        'It may be homework and introduces no\n   new theory.',
-        'It may be homework and introduces\n   new theory.'
-      ),
+      mutate('skills/econ-exercise-builder.md', 'may be homework and introduces no\n   new theory.', 'may be homework and introduces\n   new theory.'),
       'closing-review rule missing'
     );
   });
@@ -258,24 +250,29 @@ describe('Part A exercise authoring source contract', () => {
     );
   });
 
-  test('rejects removal of route, neutral skip wording, and flexibility semantics', () => {
-    expectFailure(
-      mutate(
-        'skills/econ-exercise-builder.md',
-        '**Korte route:** Startopgaven → Zelfstandige oefening → Doeloefening.'
-      ),
-      'paper short-route note missing from printed template'
-    );
-    expectFailure(
-      mutateAll('skills/econ-exercise-builder.md', 'Heb je deze hulp niet nodig?'),
-      'neutral guided skip wording missing'
-    );
-    const files = mutate(
-      'skills/econ-exercise-builder.md',
-      '**Denkertje / Bonusopgave** builds cognitive flexibility with a new',
-      '**Denkertje / Bonusopgave** adds routine calculation with a new'
-    );
-    expectFailure(files, 'bonus cognitive-flexibility rule missing');
+  test('requires both routes, normal first, with shared target and distinct roles', () => {
+    const normal = '**Normale route:** Startopgaven → Begeleide inoefening → Zelfstandige oefening → Doeloefening.';
+    const challenging = '**Uitdagende route (minder tussenstappen, extra uitdaging):** Startopgaven → Zelfstandige oefening → Doeloefening → Denkertje / Bonusopgave.';
+    for (const [from, to, failure] of [
+      [normal, normal.replace('Begeleide inoefening → ', ''), 'normal route must include guided practice'],
+      [challenging, challenging.replace(' → Denkertje / Bonusopgave', ''), 'challenging route must include bonus'],
+      [challenging, challenging.replace('Doeloefening', 'Andere eindopgave'), 'challenging route must include bonus and the same target'],
+      [normal + '\n' + challenging, challenging + '\n' + normal, 'normal route must be presented first'],
+      ['Herhaling is extra bij beide routes.', '', 'repetition must be additional to both routes'],
+      ['Begeleide inoefening hoort bij leren: je oefent met denkstappen en doet steeds meer zelf.', '', 'learning-focused guided-practice introduction missing'],
+      ['actual Begeleide inoefening + ', '', 'whole-lesson timing equation must include guided practice'],
+      ['no score threshold or\n' + 'automatic selection', '', 'route-selection safeguard missing'],
+      ['report genuine timing conflicts', '', 'existing-book timing-conflict safeguard missing'],
+    ]) expectFailure(mutate('skills/econ-exercise-builder.md', from, to), failure);
+    expectFailure(mutate('skills/econ-exercise-builder.md', 'builds cognitive flexibility with a new', 'adds routine calculation with a new'), 'bonus cognitive-flexibility rule missing');
+  });
+
+  test.each(ACTIVE_SURFACES)('rejects obsolete route advice in active caller %s', (file) => {
+    for (const old of ['Korte route: Startopgaven → Zelfstandige oefening → Doeloefening.', 'Extra hulp nodig? Maak eerst Begeleide inoefening.', 'Heb je deze hulp niet nodig? Ga dan verder met Zelfstandige oefening.']) {
+      const files = cloneFiles();
+      files[file] += '\n' + old;
+      expectFailure(files, 'obsolete short-route or optional-support guidance remains active');
+    }
   });
 
   test('rejects fake or stale lesson-time proof', () => {
@@ -302,7 +299,7 @@ describe('Part A exercise authoring source contract', () => {
   test.each([
     ['prerequisite-retrieval task is\n   normally 3–5 minutes', 'Start retrieval 3–5-minute norm missing'],
     ['teacher may assign that printed retrieval task at\n   the beginning of the lesson', 'classroom-order/printed-order clarification missing'],
-    ['may not expand into adjacent\n   content or hide enrichment inside the core route', 'independent-practice scope boundary missing'],
+    ['may not expand into adjacent\n   content or hide enrichment inside the normal route', 'independent-practice scope boundary missing'],
     ['Light\n   adaptation is allowed only where the blueprint or responsible owner\n   authorizes it', 'authorized target-adaptation rule missing'],
   ])('rejects removal of bounded clarification %s', (needle, failure) => {
     expectFailure(mutate('skills/econ-exercise-builder.md', needle), failure);

@@ -69,7 +69,9 @@ Exception: Book 1 Chapter 4 has 4 theory paragraphs + consolidation (§1.4.1–�
 ### 1.2 What does NOT go in the chapter PDF
 
 - Answer models → assembled separately as an answer booklet
-- Begeleide inoefening → separate documents per paragraph
+- Part B companion support documents → separate workflow; printed Part A
+  guided practice stays inside its paragraph under the
+  [exercise contract](econ-exercise-builder.md#21-the-routes-and-the-constraint)
 - Toetsmatrijs (§4 practice test) → teacher-facing, not in chapter PDF
 - Difficulty ratings, time estimates → teacher-facing, never in student output
 

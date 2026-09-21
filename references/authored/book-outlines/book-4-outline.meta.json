@@ -216,6 +216,11 @@
       "source_path": "references/authored/book-outlines/book-4-outline.md"
     }
   ],
-  "current_sha256": "89d06a8f7e94a88e2202135e566dc354befd556cbbb4c0973f4e4a825fa9d15e",
-  "technical_projection": "Only target-record hyperlinks resolve to the immutable platform transport, available before the lesson projection is activated. Original outline bytes and lesson content ownership remain unchanged."
+  "current_sha256": "8d3cda916a17be3e85f0a5d4fc3d0559df7055d4595dfa3ac26f699e8cc442ba",
+  "technical_projection": "Original v3 receipt and structural rows preserved. Target links resolve to the immutable transport; the separately validated route amendment governs current pedagogical guidance.",
+  "pedagogical_amendment": {
+    "revision": "exercise-routes-20260921",
+    "contract": "https://github.com/meijer1973/4veco-platform/blob/main/skills/econ-exercise-builder.md#21-the-routes-and-the-constraint",
+    "owner_request": "2026-09-21: guided practice normal; bonus challenging; preserve exercises and report timing conflicts"
+  }
 }

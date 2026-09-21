@@ -18,6 +18,9 @@ const BOOK2_CHAT_ASSEMBLY_FILES = new Set([
   'boek/boek_2_compleet.pdf', 'boek/boek_2_compleet_antwoorden.pdf',
   'boek/boek_2_compleet_docenteninformatie.pdf',
 ]);
+// Finite reviewed edition revision paths; this classifies ownership only.
+// The separate revision gate checks actual bytes, closure and the platform pin.
+const EXERCISE_ROUTE_FILES = new Set(require('../books/exercise-route-revision-pin.json').revision_paths.map(p => p.toLowerCase()));
 const CATEGORY_LABELS = {
   partA_textbook: 'Part A textbook',
   partB_companion: 'Part B companion',
@@ -175,6 +178,7 @@ function isPartBCompanionPath(filePath) {
 
 function isPartATextbookPath(filePath) {
   const p = normalizedLower(filePath);
+  if (EXERCISE_ROUTE_FILES.has(p)) return true;
   if (p.startsWith(BOOK2_CHAT_ASSEMBLY)
     && BOOK2_CHAT_ASSEMBLY_FILES.has(p.slice(BOOK2_CHAT_ASSEMBLY.length))) return true;
   const base = basenameLower(filePath).replace(/\u2013/g, '-');

@@ -1,5 +1,13 @@
 # Book 2 chat edition: bounded assembly repairs
 
+**Current route revision (21 September 2026):** follow
+[EXERCISE-ROUTES.md](EXERCISE-ROUTES.md) to rebuild edited chapter manuscripts.
+The commands and 180 unchanged historical pages below describe the earlier
+cover/link repair. They are retained as historical reproduction evidence.
+For current revised chapters, the assembler and verifier require the explicit
+`--revised-chapters` option and source-bound revision manifests. Their page
+comparisons then relate the current chapter PDFs to the current complete books.
+
 The selected chat-2026 edition has complete chapter PDFs but did not include
 its original book assembler. `build_book2_chat.py` supplies that missing route
 for the defects reported on 18 September 2026. It does not rerender chapter

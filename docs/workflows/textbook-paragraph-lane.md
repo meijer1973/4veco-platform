@@ -158,8 +158,9 @@ The lane is closed only when:
 - No companion completion claim is made.
 - The lane-scope checker has no companion leak.
 - Every Book 2+ target operation is covered in the required alignment table,
-  the seven headings/order and core-route timing have been reviewed, and the
-  optional guided/bonus/review semantics pass `econ-paragraph-review`.
+  the applicable headings/order, [route contract](../../skills/econ-exercise-builder.md#21-the-routes-and-the-constraint)
+  and complete normal-route timing have been reviewed. Existing timing conflicts
+  and mixed-practice exceptions remain explicit in `econ-paragraph-review`.
 - The Part A-owned Book foundation check points to the current
   `references/authored/book-outlines/book-2-outline.md` version/hash, records a
   verdict for the production action, and ignores no matching open blocker.

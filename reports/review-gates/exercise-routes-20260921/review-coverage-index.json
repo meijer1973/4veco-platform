@@ -1,0 +1,1204 @@
+[
+  {
+    "paragraph": "2.1.1",
+    "manifest_digest": "b2f803132a96ea96e945f5c11527fccb630ad2e72f0390b794528c732421e969",
+    "student_pdf_pages": [
+      4,
+      7,
+      8,
+      9
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      7
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "report": "2.1.1-review.md",
+    "report_sha256": "b29397a3c8b82a7bd5386466e8b910ca4a2d4e05827edac74850876996a9013c"
+  },
+  {
+    "paragraph": "2.1.2",
+    "manifest_digest": "1880801d21ded24620f2dd693ea3f66b6dc81bfd63730ce579b4d546080fbed4",
+    "student_pdf_pages": [
+      15,
+      16,
+      17
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      7
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "report": "2.1.2-review.md",
+    "report_sha256": "d66b5bb493e0ce45e6b0cfd5c57c1a06609cf39d23b1f971adc55a8ce30b226e"
+  },
+  {
+    "paragraph": "2.1.3",
+    "manifest_digest": "7eeefa338247e6cf772d8d599fe16b95bff25b7d27282d803cbfefb88356d8f9",
+    "student_pdf_pages": [
+      24,
+      25,
+      26
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      7
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "report": "2.1.3-review.md",
+    "report_sha256": "01676c23a3111e02deeae74a03c9ada97dd4a2eb3e1ad08851613eefd7439c12"
+  },
+  {
+    "paragraph": "2.1.4",
+    "manifest_digest": "601b771b49806dd0fb722d4f2ddf7313cc7fc28ea59adb41d6db3d164d5c5524",
+    "student_pdf_pages": [
+      31,
+      32,
+      36
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      7
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "report": "2.1.4-review.md",
+    "report_sha256": "106025c92a8244694e57cd2bde547915ff9a08b08e62c7ccc378831f9b99772e"
+  },
+  {
+    "paragraph": "2.2.1",
+    "manifest_digest": "eb51262e0f2779749cf9478371f254d0214b3c7677f59fe81f92dd67fdf8854b",
+    "student_pdf_pages": [
+      38,
+      41,
+      42,
+      43
+    ],
+    "teacher_pdf_pages": [
+      8,
+      9,
+      10,
+      13
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      37,
+      38
+    ],
+    "report": "2.2.1-review.md",
+    "report_sha256": "928733e2020e8938d31f179f96c56bfb76000b2b2a2a64cc8ae64f9a160e5362"
+  },
+  {
+    "paragraph": "2.2.2",
+    "manifest_digest": "9b2824abb9da69b893c9266dd687a6aaf7e3067a2b0b8ffceaf01f190fa250f6",
+    "student_pdf_pages": [
+      49,
+      50,
+      51
+    ],
+    "teacher_pdf_pages": [
+      8,
+      9,
+      10,
+      13
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      37,
+      38
+    ],
+    "report": "2.2.2-review.md",
+    "report_sha256": "a211eea28ccf52702cfe99b4c5d53fcc14aae15bce6fc0ba35eebae54ba74c30"
+  },
+  {
+    "paragraph": "2.2.3",
+    "manifest_digest": "a0ac0127c8d5e942cbff7d2628a4632ef89616bc808d4dce2d71cda50b718a1c",
+    "student_pdf_pages": [
+      60,
+      61,
+      62,
+      65
+    ],
+    "teacher_pdf_pages": [
+      8,
+      9,
+      10,
+      13
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      37,
+      38
+    ],
+    "report": "2.2.3-review.md",
+    "report_sha256": "b96505862a9edaf146eeb8a1ada7f569490da1a5b7d149145278b452dae3aa47"
+  },
+  {
+    "paragraph": "2.2.4",
+    "manifest_digest": "a35680eb142d781ed8e23b0ee034d79aacbb4c900f9b8035903ea904412e55fa",
+    "student_pdf_pages": [
+      66,
+      67
+    ],
+    "teacher_pdf_pages": [
+      8,
+      9,
+      10,
+      13
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      37,
+      38
+    ],
+    "report": "2.2.4-review.md",
+    "report_sha256": "decb58aca3908d2abafa6546831984c76e5b088a31e67c5eb294c74a41f5c53c"
+  },
+  {
+    "paragraph": "2.3.1",
+    "manifest_digest": "c3620b607ac1845d705bc82593919fbbd6afb999653b90ce24e63cd594da666c",
+    "student_pdf_pages": [
+      74,
+      77,
+      78,
+      79
+    ],
+    "teacher_pdf_pages": [
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      73,
+      74
+    ],
+    "report": "2.3.1-review.md",
+    "report_sha256": "a2d073c72680ac8a1fec8427f4e6425d94f3a4a3d0629381ce5f55534025c0b8"
+  },
+  {
+    "paragraph": "2.3.2",
+    "manifest_digest": "9398bd514bc29841b05e13a998ba64025d63a96966fa1d5b059433bd551a8757",
+    "student_pdf_pages": [
+      85,
+      86,
+      87,
+      88
+    ],
+    "teacher_pdf_pages": [
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      73,
+      74
+    ],
+    "report": "2.3.2-review.md",
+    "report_sha256": "b90632d773ef9179e1c21bab6693aa1ba9040b7d7bd8d6caa0b349d799d8b2b3"
+  },
+  {
+    "paragraph": "2.3.3",
+    "manifest_digest": "23f99d43c411878d2b9c5801667f61974315890d68509634467946b02def0563",
+    "student_pdf_pages": [
+      97,
+      98,
+      99,
+      102
+    ],
+    "teacher_pdf_pages": [
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      73,
+      74
+    ],
+    "report": "2.3.3-review.md",
+    "report_sha256": "e436a8dbf795335b7f87918a2ffa8ba48550bade73b368de2289e2727c09e7b6"
+  },
+  {
+    "paragraph": "2.3.4",
+    "manifest_digest": "e81719616b20741a8cc543eda444f1176ccd5fdb7a7a2a21b0f4d2f3ec23990e",
+    "student_pdf_pages": [
+      103,
+      104
+    ],
+    "teacher_pdf_pages": [
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      73,
+      74
+    ],
+    "report": "2.3.4-review.md",
+    "report_sha256": "9f2cce6534c08a1cefb6ffa4e3c7215936b31c98c997e384a2fa65738ba4f356"
+  },
+  {
+    "paragraph": "3.1.1",
+    "manifest_digest": "164c67ffabf0c8b170fec50824c0ffa380565633a8775395d3f1ee166215039b",
+    "student_pdf_pages": [
+      6,
+      8,
+      9,
+      10,
+      11
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "report": "3.1.1-review.md",
+    "report_sha256": "7e584f96a5a3578673782022e449f1f4d9283ec05480d760c225d2096dc99b19"
+  },
+  {
+    "paragraph": "3.1.2",
+    "manifest_digest": "30e5012fcf4ba0e7b4af55a67cbd3747b0347f4646b2b53244414a385e029d31",
+    "student_pdf_pages": [
+      17,
+      18,
+      19,
+      20
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "report": "3.1.2-review.md",
+    "report_sha256": "cdd0f8b29628bf6106e4e859ab96df78016be85fd99ef5ce14734f861effe557"
+  },
+  {
+    "paragraph": "3.1.3",
+    "manifest_digest": "f33586b6984c1cc07b27308a604d225ebc52e7eed6810a72404d9705e92fcacc",
+    "student_pdf_pages": [
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "report": "3.1.3-review.md",
+    "report_sha256": "e3b4805bc3c465f1146225be28bda86ac1fc2fdc86d112d908c95638b2c55f54"
+  },
+  {
+    "paragraph": "3.1.4",
+    "manifest_digest": "1fa1fda7892929f1da53ca181ab79eb74a2fa3ec703025e4df5378b1e04febcf",
+    "student_pdf_pages": [
+      33,
+      34,
+      35,
+      36
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "report": "3.1.4-review.md",
+    "report_sha256": "c0ab24ba687b89e18881f55d76f3d5d86adda7e01ce3b4525abfff7e4f07ab23"
+  },
+  {
+    "paragraph": "3.1.5",
+    "manifest_digest": "14fd8822fbf603bc386b343cd85beafba8b7e99d6ac3ff9aa30f8e5603021a1f",
+    "student_pdf_pages": [
+      41,
+      42,
+      43,
+      44,
+      47
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "report": "3.1.5-review.md",
+    "report_sha256": "8ca95330fa27be226abf1f3da22299e4c65e5799337c145ee2751a405f608585"
+  },
+  {
+    "paragraph": "3.1.6",
+    "manifest_digest": "67b4c082a88ad338986ea69aa121d1d6ba61c625441d7a0534b56fe9800694c9",
+    "student_pdf_pages": [
+      48,
+      49
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "report": "3.1.6-review.md",
+    "report_sha256": "0470a6ad5789f0dbfcedabbb10d56350bce285120b84a168c03613d49509727b"
+  },
+  {
+    "paragraph": "3.2.1",
+    "manifest_digest": "30e1f2a0db18a940e9d46758ce31f951b2ef859857d893c4d3a67cb5b1fcbd31",
+    "student_pdf_pages": [
+      54,
+      56,
+      57,
+      58
+    ],
+    "teacher_pdf_pages": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      53,
+      54
+    ],
+    "report": "3.2.1-review.md",
+    "report_sha256": "003b4ae0f0e21751429509f9aad3ec550fe6213f8386414379916e66dc369843"
+  },
+  {
+    "paragraph": "3.2.2",
+    "manifest_digest": "99e8fb6bcccfea2709d9b78f9d6890b051079548fcc12b934798a41011ea7e2c",
+    "student_pdf_pages": [
+      64,
+      65,
+      66
+    ],
+    "teacher_pdf_pages": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      53,
+      54
+    ],
+    "report": "3.2.2-review.md",
+    "report_sha256": "96b6806bcff8797af582cb708fe14de7c79d88a0da2d6c817d653cd09f5f67f5"
+  },
+  {
+    "paragraph": "3.2.3",
+    "manifest_digest": "f75ed80d24976b16f06d262cdf5882a974d3d370b36eb902915ffe6803d03c0e",
+    "student_pdf_pages": [
+      72,
+      73,
+      74,
+      78
+    ],
+    "teacher_pdf_pages": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      53,
+      54
+    ],
+    "report": "3.2.3-review.md",
+    "report_sha256": "7811827c767c883d6fa13bef634de3a90ae581bfae96f86c08f0b87b486d2729"
+  },
+  {
+    "paragraph": "3.2.4",
+    "manifest_digest": "bef57d8cb8576ed7c4d6876c13d532b026bf85e028d71ef354e5c4ca81bc10ba",
+    "student_pdf_pages": [
+      79,
+      80
+    ],
+    "teacher_pdf_pages": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      53,
+      54
+    ],
+    "report": "3.2.4-review.md",
+    "report_sha256": "37715df7fe281c5a647b1fcf99d700b23955c12929bd2015b91e37562d92051d"
+  },
+  {
+    "paragraph": "3.3.1",
+    "manifest_digest": "20cda45d8c478f5b30f328f81ffb55c4d3e6752a438fde62951ecf22f2ce79d0",
+    "student_pdf_pages": [
+      88,
+      91,
+      92,
+      93
+    ],
+    "teacher_pdf_pages": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      87,
+      88
+    ],
+    "report": "3.3.1-review.md",
+    "report_sha256": "90bb1bcc12d838b30311996f3e40ee78a4f961e75460ba414833174cc12b15be"
+  },
+  {
+    "paragraph": "3.3.2",
+    "manifest_digest": "49836f94dd782136437413220185b328da5236fb0cf06bd13e3c64ca0d7e5bf3",
+    "student_pdf_pages": [
+      101,
+      102,
+      103
+    ],
+    "teacher_pdf_pages": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      87,
+      88
+    ],
+    "report": "3.3.2-review.md",
+    "report_sha256": "45469918169840af478fe394df6e078b91e7c1e0c660fccb99eace317b18231e"
+  },
+  {
+    "paragraph": "3.3.3",
+    "manifest_digest": "bff74d30dc5561843bcd2099cefb936e7d95488168a2ba815d69901634fc6497",
+    "student_pdf_pages": [
+      111,
+      112,
+      113,
+      116
+    ],
+    "teacher_pdf_pages": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      87,
+      88
+    ],
+    "report": "3.3.3-review.md",
+    "report_sha256": "ec2984a13a12af7e2dabba7c4b81a800d14412675df5c29fe29dcb0225ea8e6e"
+  },
+  {
+    "paragraph": "3.3.4",
+    "manifest_digest": "eaa533d27dc8bb4b301a3ff2ed4ce2cfbd469a15d19830db8f02f0d7e67b709f",
+    "student_pdf_pages": [
+      117,
+      118
+    ],
+    "teacher_pdf_pages": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      87,
+      88
+    ],
+    "report": "3.3.4-review.md",
+    "report_sha256": "2c00948fc2b2ddd530de12252d1be55842bfd4154e1a900948a7b48e36486d3b"
+  },
+  {
+    "paragraph": "4.1.1",
+    "manifest_digest": "633a4d4a1478af9df107e0f182bb5ebe4c0d1e90d55e6cd6e9f16f67c1c3fade",
+    "student_pdf_pages": [
+      7,
+      10,
+      11,
+      12
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "report": "4.1.1-review.md",
+    "report_sha256": "1ba4bf827f05f73539d8fc64f02a1335eb3ab54204c8a575cf80fe2f66a66e79"
+  },
+  {
+    "paragraph": "4.1.2",
+    "manifest_digest": "4824bc62e297e42bc80fa8871845aa6d8b0aca5a93d3ff44fffd641fdc0c1287",
+    "student_pdf_pages": [
+      18,
+      19,
+      20,
+      21
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "report": "4.1.2-review.md",
+    "report_sha256": "c6e9de73652fd23043648b23b9f900ef0aa377d18cc5231dc3da691c3a85a047"
+  },
+  {
+    "paragraph": "4.1.3",
+    "manifest_digest": "a921eb89ba39914b911f6551b36f4534cd1b31e547f2f7aa1ea43a1abde6f25b",
+    "student_pdf_pages": [
+      28,
+      29,
+      30,
+      31
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "report": "4.1.3-review.md",
+    "report_sha256": "aec39adaf8c2bee9aaa4f489867f9f75f1a8824e25e055bc56a7b65d8fd28da4"
+  },
+  {
+    "paragraph": "4.1.4",
+    "manifest_digest": "1d1043f967a7fd57b4e37c6cecc20647e397f5f335be5dd014873713fd99f5cb",
+    "student_pdf_pages": [
+      40,
+      41,
+      42,
+      45
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "report": "4.1.4-review.md",
+    "report_sha256": "ecd0566fa97f97d12886092e1eadfab7cb7f497199e411760e84c8891485ec1b"
+  },
+  {
+    "paragraph": "4.1.5",
+    "manifest_digest": "b83513b5da28c2df2711b7355fb97a5b2e4062a46db29b279c81ade1bbc5185a",
+    "student_pdf_pages": [
+      46,
+      47
+    ],
+    "teacher_pdf_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "report": "4.1.5-review.md",
+    "report_sha256": "9809f9864a5753eab812a41b83b5b27b15e54d12a2d5873f6805f1376ccb92b3"
+  },
+  {
+    "paragraph": "4.2.1",
+    "manifest_digest": "bb9fd9b6380a32e48d0ccc96249d233aae81d2efa8e35c7a22d18134bf71cdad",
+    "student_pdf_pages": [
+      55,
+      58,
+      59,
+      60
+    ],
+    "teacher_pdf_pages": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      53,
+      54
+    ],
+    "report": "4.2.1-review.md",
+    "report_sha256": "ba233031253bf9fabd8aa1ce9865f4b5bab5f0303d9129a44f09c79e7e1496d0"
+  },
+  {
+    "paragraph": "4.2.2",
+    "manifest_digest": "5f7f6d3e47fe13bfb7fe9e6a23b3341e9ddad0cad5f078d8882639099a2d3e74",
+    "student_pdf_pages": [
+      65,
+      66,
+      67
+    ],
+    "teacher_pdf_pages": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      53,
+      54
+    ],
+    "report": "4.2.2-review.md",
+    "report_sha256": "70655f53c1062cdf1293d4b8d4c88ee67c24148f60cac7a77588b3e56f5318ac"
+  },
+  {
+    "paragraph": "4.2.3",
+    "manifest_digest": "fff148c5b88e959817e801ba411b25defb6e4da89e83bae4390a9c144faba1bd",
+    "student_pdf_pages": [
+      72,
+      73,
+      74
+    ],
+    "teacher_pdf_pages": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      53,
+      54
+    ],
+    "report": "4.2.3-review.md",
+    "report_sha256": "5e84883259c56320ed8f7ba6ad89ef6df2b8746b377e7361baaf2ccc41d5870f"
+  },
+  {
+    "paragraph": "4.2.4",
+    "manifest_digest": "fe5fbec09ca92aef484ad0091af83131f13fd20fea8cb0ea02f80516fd76d170",
+    "student_pdf_pages": [
+      82,
+      83,
+      84
+    ],
+    "teacher_pdf_pages": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      53,
+      54
+    ],
+    "report": "4.2.4-review.md",
+    "report_sha256": "ba23ee3bf9a6146cf50e5ec29b14eff2490a9d680078f44a42543978195a6507"
+  },
+  {
+    "paragraph": "4.2.5",
+    "manifest_digest": "40fd510fd921b905a5e943de5988ca3677c66a85bf6a43f0fc82fe084400e5ee",
+    "student_pdf_pages": [
+      93,
+      94,
+      95
+    ],
+    "teacher_pdf_pages": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      53,
+      54
+    ],
+    "report": "4.2.5-review.md",
+    "report_sha256": "2c52853e1775dd2e6989933dcf23d15be26cf4133a55ef7e0658dbb7e1d86681"
+  },
+  {
+    "paragraph": "4.2.6",
+    "manifest_digest": "44cc6959a0af5c8b893d4e9ad04c9c5485f7ea11fd33e7a41718015dbe246e84",
+    "student_pdf_pages": [
+      100,
+      101,
+      102,
+      104
+    ],
+    "teacher_pdf_pages": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      53,
+      54
+    ],
+    "report": "4.2.6-review.md",
+    "report_sha256": "e6140a44597f1834c26dea6009969d4320aa20e477d5d9f0813df5ef0dc63b5d"
+  },
+  {
+    "paragraph": "4.2.7",
+    "manifest_digest": "dd80343aec511236f0073f7f72fb0e2567720533a4de4b537666351fdb614042",
+    "student_pdf_pages": [
+      105,
+      106
+    ],
+    "teacher_pdf_pages": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      53,
+      54
+    ],
+    "report": "4.2.7-review.md",
+    "report_sha256": "db3b30b52d8f1215e5067553c81479a07d48cb507d712b7d84a3b657fc0037cd"
+  },
+  {
+    "paragraph": "4.3.1",
+    "manifest_digest": "6ebc41ace7489f4cac0f946cbeeba17a3b9ac75d807ea1493d18578044ccc93b",
+    "student_pdf_pages": [
+      114,
+      118,
+      119,
+      120,
+      121
+    ],
+    "teacher_pdf_pages": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      113,
+      114
+    ],
+    "report": "4.3.1-review.md",
+    "report_sha256": "cc3b5baa966876bc0ec4047f45518095547b0ebd9678fcf7d787e97977472857"
+  },
+  {
+    "paragraph": "4.3.2",
+    "manifest_digest": "d4fc2deb6e38d0b866c8a97fdfa0f5833db26a00583215998542bfacb410c814",
+    "student_pdf_pages": [
+      127,
+      128,
+      129
+    ],
+    "teacher_pdf_pages": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      113,
+      114
+    ],
+    "report": "4.3.2-review.md",
+    "report_sha256": "8ec24875ca34351f68b1af6788f9a5e9063c8850eeefd976a10398f6c5c3b6a3"
+  },
+  {
+    "paragraph": "4.3.3",
+    "manifest_digest": "e952e4f762edc32068505754d8da121585b87b81e0b5a1dd5b6f450551e2329e",
+    "student_pdf_pages": [
+      136,
+      137,
+      138,
+      139
+    ],
+    "teacher_pdf_pages": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      113,
+      114
+    ],
+    "report": "4.3.3-review.md",
+    "report_sha256": "7b4ca00e942a099512fa0c1cf166f0df703c5e3d67e9503d4989503ab9f70112"
+  },
+  {
+    "paragraph": "4.3.4",
+    "manifest_digest": "ab171caa29f108cbf707502d5ff7e7d4ca4216daf77c4d9f19555861a514e79b",
+    "student_pdf_pages": [
+      144,
+      145,
+      146,
+      147
+    ],
+    "teacher_pdf_pages": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      113,
+      114
+    ],
+    "report": "4.3.4-review.md",
+    "report_sha256": "a5b87147b0e1ec223327cbfe23560c3b18360187c0847d287befba30e0587a71"
+  },
+  {
+    "paragraph": "4.3.5",
+    "manifest_digest": "eb6f5092d1ba5be1002e051444ee104b66bd3e1d91fd65d18963ff16f5a86b63",
+    "student_pdf_pages": [
+      149,
+      150,
+      151
+    ],
+    "teacher_pdf_pages": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "chapter_front_pages": [
+      1,
+      2,
+      3,
+      4,
+      113,
+      114
+    ],
+    "report": "4.3.5-review.md",
+    "report_sha256": "c03f7bc10981857d18b9176244058007704bd591bce6d28c7d41d48e6d70a275"
+  }
+]

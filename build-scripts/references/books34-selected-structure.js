@@ -7,8 +7,11 @@ function readSelectedStructure(root=m.ROOT,requested=revision(root)) {
  if(requested===v2.REVISION)return v2.readSelectedStructure(root);
  if(requested!==m.REVISION)throw new Error('Unknown structural revision '+requested);
  return [3,4].flatMap(b=>{
-  const base=`${m.OUTLINES}/book-${b}-outline`,rows=m.parseOutline(fs.readFileSync(path.join(root,base+'.md')),b);
+  const base=`${m.OUTLINES}/book-${b}-outline`,bytes=fs.readFileSync(path.join(root,base+'.md'));
   const meta=JSON.parse(fs.readFileSync(path.join(root,base+'.meta.json'),'utf8'));
+  const rows=meta.pedagogical_amendment
+    ? require('./books34-route-amendment').currentOutline(bytes,b,root)
+    : m.parseOutline(bytes,b);
   if(meta.structure_revision!==requested||meta.current_status!=='owner_selected_structural_baseline'||meta.original_sha256!==m.HASHES[b]||meta.paragraph_count!==m.COUNTS[b]||meta.target_approval!=='not_conferred'||meta.companion_acceptance!=='not_conferred'||JSON.stringify(meta.paragraphs)!==JSON.stringify(rows)||JSON.stringify(meta.chapters)!==JSON.stringify(m.CHAPTERS[b].map(([id,title,n])=>({id,title,paragraph_count:n}))))throw new Error('Stale/mixed outline metadata: Book '+b);
   return rows;
  });

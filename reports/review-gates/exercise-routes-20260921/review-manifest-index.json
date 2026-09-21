@@ -1,0 +1,174 @@
+[
+  {
+    "paragraph": "2.1.1",
+    "digest": "b2f803132a96ea96e945f5c11527fccb630ad2e72f0390b794528c732421e969"
+  },
+  {
+    "paragraph": "2.1.2",
+    "digest": "1880801d21ded24620f2dd693ea3f66b6dc81bfd63730ce579b4d546080fbed4"
+  },
+  {
+    "paragraph": "2.1.3",
+    "digest": "7eeefa338247e6cf772d8d599fe16b95bff25b7d27282d803cbfefb88356d8f9"
+  },
+  {
+    "paragraph": "2.1.4",
+    "digest": "601b771b49806dd0fb722d4f2ddf7313cc7fc28ea59adb41d6db3d164d5c5524"
+  },
+  {
+    "paragraph": "2.2.1",
+    "digest": "eb51262e0f2779749cf9478371f254d0214b3c7677f59fe81f92dd67fdf8854b"
+  },
+  {
+    "paragraph": "2.2.2",
+    "digest": "9b2824abb9da69b893c9266dd687a6aaf7e3067a2b0b8ffceaf01f190fa250f6"
+  },
+  {
+    "paragraph": "2.2.3",
+    "digest": "a0ac0127c8d5e942cbff7d2628a4632ef89616bc808d4dce2d71cda50b718a1c"
+  },
+  {
+    "paragraph": "2.2.4",
+    "digest": "a35680eb142d781ed8e23b0ee034d79aacbb4c900f9b8035903ea904412e55fa"
+  },
+  {
+    "paragraph": "2.3.1",
+    "digest": "c3620b607ac1845d705bc82593919fbbd6afb999653b90ce24e63cd594da666c"
+  },
+  {
+    "paragraph": "2.3.2",
+    "digest": "9398bd514bc29841b05e13a998ba64025d63a96966fa1d5b059433bd551a8757"
+  },
+  {
+    "paragraph": "2.3.3",
+    "digest": "23f99d43c411878d2b9c5801667f61974315890d68509634467946b02def0563"
+  },
+  {
+    "paragraph": "2.3.4",
+    "digest": "e81719616b20741a8cc543eda444f1176ccd5fdb7a7a2a21b0f4d2f3ec23990e"
+  },
+  {
+    "paragraph": "3.1.1",
+    "digest": "164c67ffabf0c8b170fec50824c0ffa380565633a8775395d3f1ee166215039b"
+  },
+  {
+    "paragraph": "3.1.2",
+    "digest": "30e5012fcf4ba0e7b4af55a67cbd3747b0347f4646b2b53244414a385e029d31"
+  },
+  {
+    "paragraph": "3.1.3",
+    "digest": "f33586b6984c1cc07b27308a604d225ebc52e7eed6810a72404d9705e92fcacc"
+  },
+  {
+    "paragraph": "3.1.4",
+    "digest": "1fa1fda7892929f1da53ca181ab79eb74a2fa3ec703025e4df5378b1e04febcf"
+  },
+  {
+    "paragraph": "3.1.5",
+    "digest": "14fd8822fbf603bc386b343cd85beafba8b7e99d6ac3ff9aa30f8e5603021a1f"
+  },
+  {
+    "paragraph": "3.1.6",
+    "digest": "67b4c082a88ad338986ea69aa121d1d6ba61c625441d7a0534b56fe9800694c9"
+  },
+  {
+    "paragraph": "3.2.1",
+    "digest": "30e1f2a0db18a940e9d46758ce31f951b2ef859857d893c4d3a67cb5b1fcbd31"
+  },
+  {
+    "paragraph": "3.2.2",
+    "digest": "99e8fb6bcccfea2709d9b78f9d6890b051079548fcc12b934798a41011ea7e2c"
+  },
+  {
+    "paragraph": "3.2.3",
+    "digest": "f75ed80d24976b16f06d262cdf5882a974d3d370b36eb902915ffe6803d03c0e"
+  },
+  {
+    "paragraph": "3.2.4",
+    "digest": "bef57d8cb8576ed7c4d6876c13d532b026bf85e028d71ef354e5c4ca81bc10ba"
+  },
+  {
+    "paragraph": "3.3.1",
+    "digest": "20cda45d8c478f5b30f328f81ffb55c4d3e6752a438fde62951ecf22f2ce79d0"
+  },
+  {
+    "paragraph": "3.3.2",
+    "digest": "49836f94dd782136437413220185b328da5236fb0cf06bd13e3c64ca0d7e5bf3"
+  },
+  {
+    "paragraph": "3.3.3",
+    "digest": "bff74d30dc5561843bcd2099cefb936e7d95488168a2ba815d69901634fc6497"
+  },
+  {
+    "paragraph": "3.3.4",
+    "digest": "eaa533d27dc8bb4b301a3ff2ed4ce2cfbd469a15d19830db8f02f0d7e67b709f"
+  },
+  {
+    "paragraph": "4.1.1",
+    "digest": "633a4d4a1478af9df107e0f182bb5ebe4c0d1e90d55e6cd6e9f16f67c1c3fade"
+  },
+  {
+    "paragraph": "4.1.2",
+    "digest": "4824bc62e297e42bc80fa8871845aa6d8b0aca5a93d3ff44fffd641fdc0c1287"
+  },
+  {
+    "paragraph": "4.1.3",
+    "digest": "a921eb89ba39914b911f6551b36f4534cd1b31e547f2f7aa1ea43a1abde6f25b"
+  },
+  {
+    "paragraph": "4.1.4",
+    "digest": "1d1043f967a7fd57b4e37c6cecc20647e397f5f335be5dd014873713fd99f5cb"
+  },
+  {
+    "paragraph": "4.1.5",
+    "digest": "b83513b5da28c2df2711b7355fb97a5b2e4062a46db29b279c81ade1bbc5185a"
+  },
+  {
+    "paragraph": "4.2.1",
+    "digest": "bb9fd9b6380a32e48d0ccc96249d233aae81d2efa8e35c7a22d18134bf71cdad"
+  },
+  {
+    "paragraph": "4.2.2",
+    "digest": "5f7f6d3e47fe13bfb7fe9e6a23b3341e9ddad0cad5f078d8882639099a2d3e74"
+  },
+  {
+    "paragraph": "4.2.3",
+    "digest": "fff148c5b88e959817e801ba411b25defb6e4da89e83bae4390a9c144faba1bd"
+  },
+  {
+    "paragraph": "4.2.4",
+    "digest": "fe5fbec09ca92aef484ad0091af83131f13fd20fea8cb0ea02f80516fd76d170"
+  },
+  {
+    "paragraph": "4.2.5",
+    "digest": "40fd510fd921b905a5e943de5988ca3677c66a85bf6a43f0fc82fe084400e5ee"
+  },
+  {
+    "paragraph": "4.2.6",
+    "digest": "44cc6959a0af5c8b893d4e9ad04c9c5485f7ea11fd33e7a41718015dbe246e84"
+  },
+  {
+    "paragraph": "4.2.7",
+    "digest": "dd80343aec511236f0073f7f72fb0e2567720533a4de4b537666351fdb614042"
+  },
+  {
+    "paragraph": "4.3.1",
+    "digest": "6ebc41ace7489f4cac0f946cbeeba17a3b9ac75d807ea1493d18578044ccc93b"
+  },
+  {
+    "paragraph": "4.3.2",
+    "digest": "d4fc2deb6e38d0b866c8a97fdfa0f5833db26a00583215998542bfacb410c814"
+  },
+  {
+    "paragraph": "4.3.3",
+    "digest": "e952e4f762edc32068505754d8da121585b87b81e0b5a1dd5b6f450551e2329e"
+  },
+  {
+    "paragraph": "4.3.4",
+    "digest": "ab171caa29f108cbf707502d5ff7e7d4ca4216daf77c4d9f19555861a514e79b"
+  },
+  {
+    "paragraph": "4.3.5",
+    "digest": "eb6f5092d1ba5be1002e051444ee104b66bd3e1d91fd65d18963ff16f5a86b63"
+  }
+]

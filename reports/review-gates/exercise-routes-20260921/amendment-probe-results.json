@@ -1,0 +1,67 @@
+{
+  "scope": "read-only source review; fixture mutations only",
+  "cases": [
+    {
+      "name": "Current selection equals exactly the 31 received structural rows",
+      "result": "passed"
+    },
+    {
+      "name": "Unrelated current prose edit is rejected",
+      "result": "passed"
+    },
+    {
+      "name": "Structural row edit plus refreshed current hash is rejected",
+      "result": "passed"
+    },
+    {
+      "name": "Edited received transport is rejected",
+      "result": "passed"
+    },
+    {
+      "name": "Unknown amendment revision is rejected",
+      "result": "passed"
+    },
+    {
+      "name": "Changed contract pointer is rejected",
+      "result": "passed"
+    },
+    {
+      "name": "Stale current hash is rejected",
+      "result": "passed"
+    },
+    {
+      "name": "Removing amendment metadata does not admit current prose",
+      "result": "passed"
+    },
+    {
+      "name": "Changed paragraph metadata is rejected",
+      "result": "passed"
+    },
+    {
+      "name": "Changed chapter counts are rejected",
+      "result": "passed"
+    },
+    {
+      "name": "New target approval is rejected",
+      "result": "passed"
+    },
+    {
+      "name": "New companion acceptance is rejected",
+      "result": "passed"
+    },
+    {
+      "name": "Unknown structural revision is rejected",
+      "result": "passed"
+    }
+  ],
+  "hashes": {
+    "build-scripts/references/books34-route-amendment.js": "25b642de1957cea71841f2b2b597ac765405d983aeb6311caeb7e8c37be45778",
+    "build-scripts/references/books34-selected-structure.js": "1434e5497b7a3cb236b31799e3d6ca13b2d2704afb7361b755ea1c8f5945292c",
+    "references/staged/books34-v3/outlines/book-3-outline-v3.md": "1539d9d50b11a89f87afd57e6ee3e6810e4f6dc680691f1230b6d8ef829ea5f2",
+    "references/authored/book-outlines/book-3-outline.md": "51467b11ace874f0221a16fa3bffe68d9bf25a9a7f76cbfd4208312f23e30163",
+    "references/authored/book-outlines/book-3-outline.meta.json": "6dd3f782034b4e558bc4b036e6521dae67771b59ec95fdc1b418725b044b50ec",
+    "references/staged/books34-v3/outlines/book-4-outline-v3.md": "1a35d90b6171c82c879515f548cdbe30444438017827d2784b5bd8b119bd2dcd",
+    "references/authored/book-outlines/book-4-outline.md": "8d3cda916a17be3e85f0a5d4fc3d0559df7055d4595dfa3ac26f699e8cc442ba",
+    "references/authored/book-outlines/book-4-outline.meta.json": "7336045dab604fcb7832a29ea612c3a34271549e51a225ff7b8a4c53fdb1adc0"
+  }
+}

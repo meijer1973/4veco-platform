@@ -89,26 +89,39 @@ File naming: use en-dash (–), not hyphen (-). See `econ-textbook-paragraph` §
 
 ## PART 2: TIME BUDGET
 
-### 2.1 The constraint
+### 2.1 The routes and the constraint
 
-The core route is `Startopgaven -> Zelfstandige oefening -> Doeloefening`.
-It must be feasible within the student work time of a 55-minute lesson after
-instruction and the worked example. `Begeleide inoefening` is an optional
-support detour. Bonus is outside the core; closing review may be homework.
+This is the canonical Part A route definition. Guided practice is a normal
+part of learning for most students. Present the normal route first:
+
+- Normal: `Startopgaven -> Begeleide inoefening -> Zelfstandige oefening -> Doeloefening`.
+- Challenging: `Startopgaven -> Zelfstandige oefening -> Doeloefening -> Denkertje / Bonusopgave`,
+  for students who need fewer intermediate steps and want additional challenge.
+
+Both routes prepare for the same doeloefening and learning goals. The bonus
+belongs to the challenging route; repetition is additional to both routes and
+may be homework. Startopgaven do not assign a route: no score threshold or
+automatic selection. Do not frame guided practice as remedial extra help or
+open its introduction by encouraging students to skip it. Use the compact
+student copy in the [printed template](#71-exercisesmd-structure); callers link
+here instead of defining a competing route.
 
 For a new complete set, record an actual whole-lesson equation before authoring.
 For a revision, update affected question estimates and the total if they change;
 a standalone component draft does not create a whole-paragraph timing record:
 
 `motivation + instruction + worked example + compact summary and transitions +
-actual Startopgaven + actual Zelfstandige oefening + actual Doeloefening =
+actual Startopgaven + actual Begeleide inoefening + actual Zelfstandige oefening + actual Doeloefening =
 planned lesson minutes <= 55`
 
 The section ranges below are recommendations, not proof by themselves. Select
 and total the actual questions within the remaining work time. If a justified
 paragraph-specific estimate falls outside a range, record why. If the equation
-exceeds 55, reduce or redesign practice without hiding a target operation; do
-not merely assert that the 23–38-minute range is less than 55.
+exceeds 55 for a future set, redesign the complete supported route without
+hiding a target operation or weakening the doeloefening. For existing books,
+report genuine timing conflicts and plan additional lesson time; do not silently
+delete exercises or claim an unsupported 55-minute fit. Keep detailed estimates
+teacher-facing. Estimate the challenging route separately, including its bonus.
 
 ### 2.2 Estimate the actual work
 
@@ -121,23 +134,24 @@ Keep estimates and difficulty labels in teacher-facing planning metadata.
 
 | Section | Time | Route role |
 |---|---:|---|
-| Startopgaven | 5–8 min | Core: prerequisite retrieval + compact current-content check |
-| Begeleide inoefening | 8–15 min | Printed section, optional student detour; same goal, stronger fading scaffold |
-| Zelfstandige oefening | 10–18 min | Core: target operations without guided support |
-| Doeloefening | 8–12 min | Core: capstone evidence |
-| Denkertje / Bonusopgave | 8–15 min | Outside core: cognitive flexibility |
-| Herhaling / Herhaling en interleaving | 4–8 min | 1–2 accessible cumulative tasks; often homework |
+| Startopgaven | 5–8 min | Both routes: prerequisite retrieval + compact current-content check |
+| Begeleide inoefening | 8–15 min | Normal route: same goal, stronger fading scaffold |
+| Zelfstandige oefening | 10–18 min | Both routes: target operations without guided support |
+| Doeloefening | 8–12 min | Both routes: same capstone evidence |
+| Denkertje / Bonusopgave | 8–15 min | Challenging route: cognitive flexibility |
+| Herhaling / Herhaling en interleaving | 4–8 min | Additional to both routes: 1–2 accessible cumulative tasks; often homework |
 
-The core ranges total 23–38 minutes, but that sum is not a whole-lesson
+The normal-route exercise ranges total 31–53 minutes, but that sum is not a whole-lesson
 feasibility proof. Use the equation in §2.1. Do not label the normal post-start
 exercise block as `Verdieping`; its student-facing label is `Zelfstandige
 oefening`.
 
 ### 2.4 Adjusting for difficulty
 
-- **⬜ LIGHT paragraph:** keep guided practice at the short end and explicitly skippable; retain its heading
-- **🟨 MEDIUM paragraph:** offer the guided route with deliberate fading
-- **🟥 HEAVY paragraph:** use the full guided range, but keep the same lesson goal and doeloefening; do not lower the destination
+- **⬜ LIGHT paragraph:** keep guided practice compact within the normal route.
+- **🟨 MEDIUM paragraph:** design guided practice with deliberate fading.
+- **🟥 HEAVY paragraph:** allow sufficient guided practice and report any timing
+  conflict; keep the same lesson goal and doeloefening.
 
 ---
 
@@ -155,30 +169,30 @@ headings and their order; never omit, reorder or insert a top-level stage.
 2. **Startopgaven** combines two roles under this single visible heading:
    (a) retrieval of prerequisites already taught and (b) a compact check of
    current-content comprehension. The check is low-stakes and brief; do not
-   call it mastery, diagnosis, or use it for automatic routing. Include only
-   this compact paper route note: `Korte route: Startopgaven → Zelfstandige
-   oefening → Doeloefening. Extra hulp nodig? Maak eerst Begeleide inoefening.`
+   call it mastery, diagnosis, or use it for automatic routing. Include the
+   compact paper route note from the printed template, normal route first.
 
    Within the 5–8-minute Startopgaven total, the prerequisite-retrieval task is
    normally 3–5 minutes. A teacher may assign that printed retrieval task at
    the beginning of the lesson; this classroom choice does not change the
    printed `theory -> Uitgewerkt voorbeeld -> Startopgaven` order.
-3. **Begeleide inoefening** is a required printed heading but an optional
-   student route. It targets the same goal and doeloefening with stronger
-   explicit support that deliberately fades. Use neutral skip wording: `Heb je
-   deze hulp niet nodig? Ga dan verder met Zelfstandige oefening.`
+3. **Begeleide inoefening** is part of the normal route and a required printed
+   heading. It targets the same goal and doeloefening with stronger explicit
+   support that deliberately fades. Its introduction explains how support helps
+   learning; the route choice belongs in the preceding route note.
 4. **Zelfstandige oefening** rehearses the decomposed target operations without
    the guided support and uses varied contexts. It may not expand into adjacent
-   content or hide enrichment inside the core route.
+   content or hide enrichment inside the normal route.
 5. **Doeloefening** is the blueprint target, verbatim by default. Light
    adaptation is allowed only where the blueprint or responsible owner
    authorizes it, and it must preserve every target operation, answer form, and
    intended difficulty. It is the capstone evidence for the lesson goal.
-6. **Denkertje / Bonusopgave** builds cognitive flexibility with a new
+6. **Denkertje / Bonusopgave** belongs to the challenging route and builds cognitive flexibility with a new
    representation, assumption, strategy, comparison, critique, or transfer.
    It is not more or longer arithmetic of the same type.
 7. **Herhaling / Herhaling en interleaving** contains 1–2 short, accessible
-   cumulative tasks using taught content. It may be homework and introduces no
+   cumulative tasks using taught content. It is additional to both routes,
+   may be homework and introduces no
    new theory.
 
 **Paper-first/no-device rule:** the printed paragraph must contain all
@@ -328,14 +342,15 @@ follow the supplied function and valid domain under the
 **Opgave 2 — Begripscheck**
 [Compact, low-stakes check of current-content comprehension]
 
-**Korte route:** Startopgaven → Zelfstandige oefening → Doeloefening.
-**Extra hulp nodig?** Maak eerst Begeleide inoefening.
+**Normale route:** Startopgaven → Begeleide inoefening → Zelfstandige oefening → Doeloefening.
+**Uitdagende route (minder tussenstappen, extra uitdaging):** Startopgaven → Zelfstandige oefening → Doeloefening → Denkertje / Bonusopgave.
+Herhaling is extra bij beide routes.
 
 ## Begeleide inoefening
 
-*Heb je deze hulp niet nodig? Ga dan verder met Zelfstandige oefening.*
+*Begeleide inoefening hoort bij leren: je oefent met denkstappen en doet steeds meer zelf.*
 
-[Optional same-goal exercises with stronger support and deliberate fading]
+[Normal-route, same-goal exercises with stronger support and deliberate fading]
 
 ## Zelfstandige oefening
 
@@ -349,7 +364,7 @@ follow the supplied function and valid domain under the
 ## Denkertje / Bonusopgave
 
 **Opgave [N+1]**
-[Optional cognitive-flexibility task, not more of the same arithmetic]
+[Challenging-route cognitive-flexibility task, not more of the same arithmetic]
 
 ## Herhaling / Herhaling en interleaving
 
@@ -363,6 +378,11 @@ most five concise points and is never a top-level heading or eighth exercise
 section. Do not insert `## Samenvatting`, `## Website-help`, `## Voorkennis
 ophalen`, a generic `## Opgaven`, or any other top-level heading among the
 seven canonical `##` headings.
+
+Existing mixed-practice/consolidation and test-preparation paragraphs may use another structure.
+Give guidance that names their actual sections and available support, and
+record the exception in teacher/review evidence. Do not invent missing exercise
+stages merely to reproduce this theory-paragraph template.
 
 ### 7.2 Answer file
 

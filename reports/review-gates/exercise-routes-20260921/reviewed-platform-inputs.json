@@ -1,0 +1,207 @@
+[
+  {
+    "path": ".github/workflows/paired-exercise-route-ci.yml",
+    "sha256": "abf6f8139a8286ba72024b33ed45b62fd1443cf46aceeffebe2a93a4de73bd32",
+    "sha256_lf": "abf6f8139a8286ba72024b33ed45b62fd1443cf46aceeffebe2a93a4de73bd32"
+  },
+  {
+    "path": "build-scripts/books/BOOK2-CHAT.md",
+    "sha256": "afc22a7e3cc9cb67491da030412a05a80931d4fb3ec3c7b6fc2baac00d532881",
+    "sha256_lf": "afc22a7e3cc9cb67491da030412a05a80931d4fb3ec3c7b6fc2baac00d532881"
+  },
+  {
+    "path": "build-scripts/books/EXERCISE-ROUTES.md",
+    "sha256": "491524119025f5775442a4c7b29f2e081a7b334d5706b7d7acb4a6f8379477a5",
+    "sha256_lf": "491524119025f5775442a4c7b29f2e081a7b334d5706b7d7acb4a6f8379477a5"
+  },
+  {
+    "path": "build-scripts/books/books34_assemble.py",
+    "sha256": "9eb194599519ad88496738e422a4933fe9be239082d58ac47f57242192856556",
+    "sha256_lf": "9eb194599519ad88496738e422a4933fe9be239082d58ac47f57242192856556"
+  },
+  {
+    "path": "build-scripts/books/books34_outlines.py",
+    "sha256": "23e89b50d380e869118f1237d5c9be0b1f5ebb7dcccaaa165a72174b3a6f38b8",
+    "sha256_lf": "23e89b50d380e869118f1237d5c9be0b1f5ebb7dcccaaa165a72174b3a6f38b8"
+  },
+  {
+    "path": "build-scripts/books/books34_records.py",
+    "sha256": "023bfaf1ee2c8df9af6aca1cec2df7393f49bfb5255de67e7eee095767aa8ff2",
+    "sha256_lf": "023bfaf1ee2c8df9af6aca1cec2df7393f49bfb5255de67e7eee095767aa8ff2"
+  },
+  {
+    "path": "build-scripts/books/books34_verify.py",
+    "sha256": "8aa00a621a76f0cef9f09a4d6d67d50b03135a752be59f21e89afd0ed7ac034e",
+    "sha256_lf": "8aa00a621a76f0cef9f09a4d6d67d50b03135a752be59f21e89afd0ed7ac034e"
+  },
+  {
+    "path": "build-scripts/books/build_book2_chat.py",
+    "sha256": "f7d5f6e3c3e6a713fd559fa0da6557b05db062d393c8a68bb37629133ce829f3",
+    "sha256_lf": "f7d5f6e3c3e6a713fd559fa0da6557b05db062d393c8a68bb37629133ce829f3"
+  },
+  {
+    "path": "build-scripts/books/exercise-route-lesson-head.txt",
+    "sha256": "b808694cc2e90590f37a078590c1c58fd54ce5c8cb4d05f272e8aa26b9acd356",
+    "sha256_lf": "b808694cc2e90590f37a078590c1c58fd54ce5c8cb4d05f272e8aa26b9acd356"
+  },
+  {
+    "path": "build-scripts/books/exercise-route-review.js",
+    "sha256": "e648f66663d2237d16ee39bc417b751e22296be0b690960419a273e62a2f71e6",
+    "sha256_lf": "e648f66663d2237d16ee39bc417b751e22296be0b690960419a273e62a2f71e6"
+  },
+  {
+    "path": "build-scripts/books/exercise-route-revision-pin.json",
+    "sha256": "ef3cb34815613566c4817547f7f3bca4e930546f35b8226f52195d88692ac4e7",
+    "sha256_lf": "ef3cb34815613566c4817547f7f3bca4e930546f35b8226f52195d88692ac4e7"
+  },
+  {
+    "path": "build-scripts/books/exercise-route-revision.js",
+    "sha256": "02e00501e505e9b9703867876d18acf26386e4c592ea468e49251db125de2b7b",
+    "sha256_lf": "02e00501e505e9b9703867876d18acf26386e4c592ea468e49251db125de2b7b"
+  },
+  {
+    "path": "build-scripts/books/exercise-route-revision.test.js",
+    "sha256": "c2f2fb99190a3744c7871ea8e579a6c9bc9f4f995c7798949923142d530317ca",
+    "sha256_lf": "c2f2fb99190a3744c7871ea8e579a6c9bc9f4f995c7798949923142d530317ca"
+  },
+  {
+    "path": "build-scripts/books/rebuild_exercise_routes.py",
+    "sha256": "86617faba5a971f8fd550d5140452302ebfc0151072263b948b5fa294c369105",
+    "sha256_lf": "86617faba5a971f8fd550d5140452302ebfc0151072263b948b5fa294c369105"
+  },
+  {
+    "path": "build-scripts/books/record_exercise_route_revision.js",
+    "sha256": "71b3348ddfb83ab60766f2da676bc6245d331c3b2b0452aaf04e82bc61b5ae53",
+    "sha256_lf": "71b3348ddfb83ab60766f2da676bc6245d331c3b2b0452aaf04e82bc61b5ae53"
+  },
+  {
+    "path": "build-scripts/books/requirements-exercise-routes.txt",
+    "sha256": "e3be02c414ddf3088fc0521c3a62300ae52c55eddf6699036ce58313cb146500",
+    "sha256_lf": "e3be02c414ddf3088fc0521c3a62300ae52c55eddf6699036ce58313cb146500"
+  },
+  {
+    "path": "build-scripts/books/test_book2_chat.py",
+    "sha256": "5f8b770662be19a259f8ff3df1092894a99b7f56bc3a7c203f2d40f8aad4de9a",
+    "sha256_lf": "5f8b770662be19a259f8ff3df1092894a99b7f56bc3a7c203f2d40f8aad4de9a"
+  },
+  {
+    "path": "build-scripts/books/verify_book2_chat.py",
+    "sha256": "72f137d834402de6b6ea070353cbebf7ceeadc4d9f96f6d59872e9d010a96c07",
+    "sha256_lf": "72f137d834402de6b6ea070353cbebf7ceeadc4d9f96f6d59872e9d010a96c07"
+  },
+  {
+    "path": "build-scripts/books/verify_exercise_routes.py",
+    "sha256": "b22f528e88229b8220eb318ca4d514389a4243071fca18e51d3c088aa4e942b3",
+    "sha256_lf": "b22f528e88229b8220eb318ca4d514389a4243071fca18e51d3c088aa4e942b3"
+  },
+  {
+    "path": "build-scripts/ci/paired-paragraph-ci.test.js",
+    "sha256": "903ea25b362eddac28a12dda42c843d868a99bc3bbc1f718437173609a39ed41",
+    "sha256_lf": "903ea25b362eddac28a12dda42c843d868a99bc3bbc1f718437173609a39ed41"
+  },
+  {
+    "path": "build-scripts/maintenance/check-books34-v3-import.js",
+    "sha256": "58af01f532b2ed8c89ab300543500362fa1c5757357eba37b316e4572411e956",
+    "sha256_lf": "58af01f532b2ed8c89ab300543500362fa1c5757357eba37b316e4572411e956"
+  },
+  {
+    "path": "build-scripts/references/books34-route-amendment.js",
+    "sha256": "25b642de1957cea71841f2b2b597ac765405d983aeb6311caeb7e8c37be45778",
+    "sha256_lf": "25b642de1957cea71841f2b2b597ac765405d983aeb6311caeb7e8c37be45778"
+  },
+  {
+    "path": "build-scripts/references/books34-route-amendment.test.js",
+    "sha256": "43b412149ca159e5cc047f023fbe62ccef0b0573f23e3e1f2dfe80c608a0695d",
+    "sha256_lf": "43b412149ca159e5cc047f023fbe62ccef0b0573f23e3e1f2dfe80c608a0695d"
+  },
+  {
+    "path": "build-scripts/references/books34-selected-structure.js",
+    "sha256": "1434e5497b7a3cb236b31799e3d6ca13b2d2704afb7361b755ea1c8f5945292c",
+    "sha256_lf": "1434e5497b7a3cb236b31799e3d6ca13b2d2704afb7361b755ea1c8f5945292c"
+  },
+  {
+    "path": "build-scripts/templates/template-textbook-paragraph-plan.md",
+    "sha256": "6022cd5488016c259c2ad971f3413be7a0ea4b9bc16d4535a91dfb84a1dbed83",
+    "sha256_lf": "6022cd5488016c259c2ad971f3413be7a0ea4b9bc16d4535a91dfb84a1dbed83"
+  },
+  {
+    "path": "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "sha256": "2a9489708ad5d5ad9617db269d0343e1c5473299e0abbb17d9f2d1c316bb6abc",
+    "sha256_lf": "2a9489708ad5d5ad9617db269d0343e1c5473299e0abbb17d9f2d1c316bb6abc"
+  },
+  {
+    "path": "build-scripts/workflows/check-paragraph-lane-scope.test.js",
+    "sha256": "46e1bea6bb10a0b0127e21bd06d14895293f8e3e2b6399663c40fd9810bd56b9",
+    "sha256_lf": "46e1bea6bb10a0b0127e21bd06d14895293f8e3e2b6399663c40fd9810bd56b9"
+  },
+  {
+    "path": "build-scripts/workflows/check-part-a-exercise-authoring-contract.js",
+    "sha256": "53bfd6e26e676f56287f33dcd6f82e592a027a51a08b4b89e7337560424dfcfd",
+    "sha256_lf": "53bfd6e26e676f56287f33dcd6f82e592a027a51a08b4b89e7337560424dfcfd"
+  },
+  {
+    "path": "build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js",
+    "sha256": "7095c3698562380c0ff7558551fad8ba6d180b0c5423dd80a52ac911b3b5f5a0",
+    "sha256_lf": "7095c3698562380c0ff7558551fad8ba6d180b0c5423dd80a52ac911b3b5f5a0"
+  },
+  {
+    "path": "docs/workflows/textbook-paragraph-lane.md",
+    "sha256": "d2343b87b14ebcd6f98fa3e4f72017a1886c15ba9deecba765fd046a7bb5d02f",
+    "sha256_lf": "d2343b87b14ebcd6f98fa3e4f72017a1886c15ba9deecba765fd046a7bb5d02f"
+  },
+  {
+    "path": "references/authored/book-outlines/book-2-outline.meta.json",
+    "sha256": "47df6a8102c6a9dc08da9f095a49212de8a64be67f221f17f492785fec2d7f53",
+    "sha256_lf": "47df6a8102c6a9dc08da9f095a49212de8a64be67f221f17f492785fec2d7f53"
+  },
+  {
+    "path": "references/authored/book-outlines/book-3-outline.md",
+    "sha256": "51467b11ace874f0221a16fa3bffe68d9bf25a9a7f76cbfd4208312f23e30163",
+    "sha256_lf": "51467b11ace874f0221a16fa3bffe68d9bf25a9a7f76cbfd4208312f23e30163"
+  },
+  {
+    "path": "references/authored/book-outlines/book-3-outline.meta.json",
+    "sha256": "6dd3f782034b4e558bc4b036e6521dae67771b59ec95fdc1b418725b044b50ec",
+    "sha256_lf": "6dd3f782034b4e558bc4b036e6521dae67771b59ec95fdc1b418725b044b50ec"
+  },
+  {
+    "path": "references/authored/book-outlines/book-4-outline.md",
+    "sha256": "8d3cda916a17be3e85f0a5d4fc3d0559df7055d4595dfa3ac26f699e8cc442ba",
+    "sha256_lf": "8d3cda916a17be3e85f0a5d4fc3d0559df7055d4595dfa3ac26f699e8cc442ba"
+  },
+  {
+    "path": "references/authored/book-outlines/book-4-outline.meta.json",
+    "sha256": "7336045dab604fcb7832a29ea612c3a34271549e51a225ff7b8a4c53fdb1adc0",
+    "sha256_lf": "7336045dab604fcb7832a29ea612c3a34271549e51a225ff7b8a4c53fdb1adc0"
+  },
+  {
+    "path": "references/authored/didactiek-principes.md",
+    "sha256": "a18044bfb72312b22d47ceef80186909228188f774dbe072bf77abfbf3b3aa3f",
+    "sha256_lf": "a18044bfb72312b22d47ceef80186909228188f774dbe072bf77abfbf3b3aa3f"
+  },
+  {
+    "path": "skills/econ-chapter-assembler.md",
+    "sha256": "31f69a72c07a38b0241c391b17c559e30f67ec129ce87fed3b76757f9884154d",
+    "sha256_lf": "31f69a72c07a38b0241c391b17c559e30f67ec129ce87fed3b76757f9884154d"
+  },
+  {
+    "path": "skills/econ-didactiek.md",
+    "sha256": "8fae66fc848f4d1fe4bdb3dcc9a087f5501baa9b5d4476a4a3c5f2606fcbb5ad",
+    "sha256_lf": "8fae66fc848f4d1fe4bdb3dcc9a087f5501baa9b5d4476a4a3c5f2606fcbb5ad"
+  },
+  {
+    "path": "skills/econ-exercise-builder.md",
+    "sha256": "8ca4436eb9895ea5840e09162a6aa38e5d3df68bcc021b5404b1759d1531e925",
+    "sha256_lf": "8ca4436eb9895ea5840e09162a6aa38e5d3df68bcc021b5404b1759d1531e925"
+  },
+  {
+    "path": "skills/econ-paragraph-review.md",
+    "sha256": "af50be1c57742d83ffe50fca3ea0ae640bde264e9928dc3e1badfe228e7ca451",
+    "sha256_lf": "af50be1c57742d83ffe50fca3ea0ae640bde264e9928dc3e1badfe228e7ca451"
+  },
+  {
+    "path": "skills/econ-textbook-paragraph.md",
+    "sha256": "8472300ad8cf89797fc216ad6d6136bdcd8302a7a406f798c8cdb64835279d7a",
+    "sha256_lf": "8472300ad8cf89797fc216ad6d6136bdcd8302a7a406f798c8cdb64835279d7a"
+  }
+]
