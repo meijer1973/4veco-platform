@@ -6,6 +6,18 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const VALID_LANES = new Set(['textbook', 'companion', 'shared']);
+// The imported Book 2 assembly uses delivered filenames, not paragraph suffixes.
+// Classify only its bounded repair surface; this is ownership, not acceptance.
+const BOOK2_CHAT_ASSEMBLY = 'boek 2 - kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/';
+const BOOK2_CHAT_ASSEMBLY_FILES = new Set([
+  'readme.md', 'assembly.json', 'repair-manifest.json',
+  'correcties-2026-09-20.md', 'correcties-review-2026-09-20.md',
+  'cover-background-prompt.txt',
+  '_assets/book2-cover-background.png',
+  '_assets/economics_textbook_cover_costs_and_surplus.png',
+  'boek/boek_2_compleet.pdf', 'boek/boek_2_compleet_antwoorden.pdf',
+  'boek/boek_2_compleet_docenteninformatie.pdf',
+]);
 const CATEGORY_LABELS = {
   partA_textbook: 'Part A textbook',
   partB_companion: 'Part B companion',
@@ -163,6 +175,8 @@ function isPartBCompanionPath(filePath) {
 
 function isPartATextbookPath(filePath) {
   const p = normalizedLower(filePath);
+  if (p.startsWith(BOOK2_CHAT_ASSEMBLY)
+    && BOOK2_CHAT_ASSEMBLY_FILES.has(p.slice(BOOK2_CHAT_ASSEMBLY.length))) return true;
   const base = basenameLower(filePath).replace(/\u2013/g, '-');
   if (/^\d+\.\d+\.\d+-textbook-plan\.md$/.test(base)) return true;
   if (/^\d+\.\d+\.\d+-textbook-(foundation|review-manifest)\.json$/.test(base)) return true;
