@@ -1,0 +1,65 @@
+{
+  "scope": "interim build review; no repository writes or full render",
+  "results": [
+    {
+      "check": "31 target payloads preserved; only route and student manuscript pins changed",
+      "passed": true
+    },
+    {
+      "check": "six B3/B4 central answer manuscripts byte-identical",
+      "passed": true
+    },
+    {
+      "check": "three B2 central answers and three reused answer chapter PDFs byte-identical",
+      "passed": true
+    },
+    {
+      "check": "final chapter render rejects overflow reported",
+      "passed": true
+    },
+    {
+      "check": "final chapter render rejects page count drift without overflow flag",
+      "passed": true
+    },
+    {
+      "check": "Book 2 revision binding rejects unknown revision",
+      "passed": true
+    },
+    {
+      "check": "Book 2 revision binding rejects missing chapter",
+      "passed": true
+    },
+    {
+      "check": "Book 2 revision binding rejects duplicate source",
+      "passed": true
+    },
+    {
+      "check": "Book 2 revision binding rejects missing manuscript",
+      "passed": true
+    },
+    {
+      "check": "Book 2 revision binding rejects unsafe path",
+      "passed": true
+    },
+    {
+      "check": "Book 2 revision binding rejects stale source hash",
+      "passed": true
+    },
+    {
+      "check": "Book 2 revision binding rejects stale chapter hash",
+      "passed": true
+    },
+    {
+      "check": "PyMuPDF default save regenerates PDF ID",
+      "different_bytes": true,
+      "version": "1.27.2.2"
+    }
+  ],
+  "input_sha256": {
+    "4veco-platform/build-scripts/books/rebuild_exercise_routes.py": "1933c29ae3e237e674340ac55b170e5d0a40f32cf2df53d76b7634c2f32343e9",
+    "4veco-platform/build-scripts/books/books34_assemble.py": "9eb194599519ad88496738e422a4933fe9be239082d58ac47f57242192856556",
+    "4veco-platform/build-scripts/books/books34_records.py": "023bfaf1ee2c8df9af6aca1cec2df7393f49bfb5255de67e7eee095767aa8ff2",
+    "4veco-platform/build-scripts/books/build_book2_chat.py": "f7d5f6e3c3e6a713fd559fa0da6557b05db062d393c8a68bb37629133ce829f3",
+    "4veco-lessen/edities/books34-v3/build/build_all.py": "b3e86fb5c5c1c3c6cda2a2a439280106aef2b187ea6a1c960bb89cd0cec7583a"
+  }
+}

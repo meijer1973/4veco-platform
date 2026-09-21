@@ -1,12 +1,16 @@
 """Regression coverage for the duplicate named destinations in Book 2."""
 from io import BytesIO
+from pathlib import Path
+from tempfile import TemporaryDirectory
+import copy
+import json
 import unittest
 
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import (ArrayObject, DictionaryObject, FloatObject,
                            NameObject, TextStringObject)
 
-from build_book2_chat import append_chapters, localize_links
+from build_book2_chat import append_chapters, localize_links, file_record, revision_inputs
 
 
 def chapter(action=False, destination="overzicht"):
@@ -63,6 +67,42 @@ class ChapterLinkTests(unittest.TestCase):
         annotation[NameObject("/A")] = external
         localize_links(reader)
         self.assertEqual(annotation["/A"], external)
+
+
+class RevisionBindingTests(unittest.TestCase):
+    def test_only_complete_current_source_and_chapter_bindings_are_accepted(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            names = [f"chapters/{kind}-{n}.pdf" for kind in ("student", "answer", "teacher") for n in (1, 2, 3)]
+            for name in names:
+                file = root/name
+                file.parent.mkdir(exist_ok=True)
+                file.write_bytes(b"fixture")
+            manuscript = root/"bronnen/H1/manuscript/test.md"
+            manuscript.parent.mkdir(parents=True)
+            manuscript.write_text("Source", encoding="utf-8")
+            config = root/"assembly.json"
+            config.write_text(json.dumps({"bundles": [{"chapters": names}]}), encoding="utf-8")
+            binding = {"revision": "exercise-routes-20260921", "sources": [file_record(root, manuscript), file_record(root, config)],
+                       "chapters": {name: file_record(root, root/name) for name in names}}
+            def check(value):
+                (root/"route-chapter-inputs.json").write_text(json.dumps(value), encoding="utf-8")
+                return revision_inputs(root)
+            self.assertEqual(check(binding), binding)
+            mutations = [
+                lambda v: v.update(revision="unknown"),
+                lambda v: v["chapters"].pop(names[0]),
+                lambda v: v["sources"].append(v["sources"][0]),
+                lambda v: v["sources"].pop(0),
+                lambda v: v["sources"][0].update(path="../outside.md"),
+                lambda v: v["sources"][0].update(sha256="0"*64),
+                lambda v: v["chapters"][names[0]].update(sha256="0"*64),
+            ]
+            for mutation in mutations:
+                value = copy.deepcopy(binding)
+                mutation(value)
+                with self.subTest(value=value), self.assertRaises(ValueError):
+                    check(value)
 
 
 if __name__ == "__main__":

@@ -18,6 +18,7 @@ const ACTIVE_SURFACES = Object.freeze([
   'agents/teacher-learning-quality-review-agent.md',
   'BUILD-PARAGRAPH.md',
   'docs/workflows/textbook-paragraph-lane.md',
+  'build-scripts/templates/template-textbook-paragraph-plan.md',
 ]);
 
 const SUPPORTING_SURFACES = Object.freeze([
@@ -116,11 +117,14 @@ function findPrintedTemplateFailures(files) {
   if (/^##\s+Samenvatting\b/im.test(template)) {
     failures.push(`${file}: summary must not become an eighth top-level heading`);
   }
-  if (!/\*\*Korte route:\*\* Startopgaven → Zelfstandige oefening → Doeloefening\./.test(template)) {
-    failures.push(`${file}: paper short-route note missing from printed template`);
-  }
-  if (!/\*\*Extra hulp nodig\?\*\* Maak eerst Begeleide inoefening\./.test(template)) {
-    failures.push(`${file}: paper support note missing from printed template`);
+  const normal = '**Normale route:** Startopgaven → Begeleide inoefening → Zelfstandige oefening → Doeloefening.';
+  const challenging = '**Uitdagende route (minder tussenstappen, extra uitdaging):** Startopgaven → Zelfstandige oefening → Doeloefening → Denkertje / Bonusopgave.';
+  if (!template.includes(normal)) failures.push(`${file}: normal route must include guided practice in printed template`);
+  if (!template.includes(challenging)) failures.push(`${file}: challenging route must include bonus and the same target in printed template`);
+  if (template.indexOf(normal) > template.indexOf(challenging)) failures.push(`${file}: normal route must be presented first`);
+  if (!template.includes('Herhaling is extra bij beide routes.')) failures.push(`${file}: repetition must be additional to both routes`);
+  if (!template.includes('Begeleide inoefening hoort bij leren: je oefent met denkstappen en doet steeds meer zelf.')) {
+    failures.push(`${file}: learning-focused guided-practice introduction missing`);
   }
   if (/\b(?:Part A|Part B|lane|companion route|repository)\b/i.test(template)) {
     failures.push(`${file}: printed template exposes internal architecture terminology`);
@@ -168,6 +172,9 @@ function findContradictoryAuthoringFailures(files) {
   // only in the exercise owner. Do not require artificial section markers.
   for (const file of ACTIVE_SURFACES) {
     const text = files[file] || '';
+    if (/Korte route:|Extra hulp nodig\?|Heb je deze hulp niet nodig\?|optional\s+(?:student\s+)?(?:support detour|guided route)|guided route is\s+optional|guided practice[^.\n]{0,60}explicitly skippable/i.test(text)) {
+      failures.push(`${file}: obsolete short-route or optional-support guidance remains active`);
+    }
     if (unconditionalProduction.some((pattern) => pattern.test(text))) {
       failures.push(`${file}: target-absent graph/table production permission remains active`);
     }
@@ -210,6 +217,7 @@ const CONTRACT_LINKS = Object.freeze([
     'agents/teacher-learning-quality-review-agent.md',
     'BUILD-PARAGRAPH.md',
     'docs/workflows/textbook-paragraph-lane.md',
+    'build-scripts/templates/template-textbook-paragraph-plan.md',
   ].map((file) => [file, 'skills/econ-exercise-builder.md']),
   ['references/authored/vraagtypen-en-opgaveontwerp.md', 'skills/econ-exercise-builder.md'],
   ['references/authored/didactiek-principes.md', 'skills/economic-graph.md'],
@@ -280,15 +288,15 @@ function findContractFailures(files, options = {}) {
     ['skills/econ-exercise-builder.md', /retrieval of prerequisites already taught/i, 'Startopgaven retrieval role missing'],
     ['skills/econ-exercise-builder.md', /compact check of\s+current-content comprehension/i, 'Startopgaven comprehension role missing'],
     ['skills/econ-exercise-builder.md', /do not[\s\S]{0,80}mastery, diagnosis,[\s\S]{0,80}automatic routing/i, 'Start check overclaim prohibition missing'],
-    ['skills/econ-exercise-builder.md', /Begeleide inoefening[\s\S]{0,80}optional[\s\S]{0,160}deliberately fades/i, 'optional guided/fading rule missing'],
-    ['skills/econ-exercise-builder.md', /Heb je deze hulp niet nodig\? Ga dan verder met\s+Zelfstandige oefening\./i, 'neutral guided skip wording missing'],
-    ['skills/econ-exercise-builder.md', /Korte route:\*\*?\s*Startopgaven\s*→\s*Zelfstandige oefening\s*→\s*Doeloefening/i, 'core route note missing'],
-    ['skills/econ-exercise-builder.md', /Extra hulp nodig\?\*\*?\s*Maak eerst Begeleide inoefening/i, 'paper support note missing'],
-    ['skills/econ-exercise-builder.md', /motivation \+ instruction \+ worked example \+ compact summary and transitions \+[\s\S]{0,180}planned lesson minutes <= 55/i, 'whole-lesson timing equation missing'],
+    ['skills/econ-exercise-builder.md', /Begeleide inoefening[\s\S]{0,80}part of the normal route[\s\S]{0,180}deliberately fades/i, 'normal guided/fading rule missing'],
+    ['skills/econ-exercise-builder.md', /for students who need fewer intermediate steps and want additional challenge/i, 'challenging-route choice missing'],
+    ['skills/econ-exercise-builder.md', /no score threshold or\s+automatic selection/i, 'route-selection safeguard missing'],
+    ['skills/econ-exercise-builder.md', /motivation \+ instruction \+ worked example \+ compact summary and transitions \+\s+actual Startopgaven \+ actual Begeleide inoefening \+ actual Zelfstandige oefening \+ actual Doeloefening =\s+planned lesson minutes <= 55/i, 'whole-lesson timing equation must include guided practice'],
+    ['skills/econ-exercise-builder.md', /For existing books,[\s\S]{0,140}report genuine timing conflicts[\s\S]{0,160}unsupported 55-minute fit/i, 'existing-book timing-conflict safeguard missing'],
     ['skills/econ-exercise-builder.md', /ranges below are recommendations, not proof by themselves/i, 'range-sum-is-not-proof safeguard missing'],
     ['skills/econ-exercise-builder.md', /prerequisite-retrieval task is\s+normally 3[–-]5 minutes/i, 'Start retrieval 3–5-minute norm missing'],
     ['skills/econ-exercise-builder.md', /teacher may assign that printed retrieval task at\s+the beginning of the lesson[\s\S]{0,160}does not change the\s+printed/i, 'classroom-order/printed-order clarification missing'],
-    ['skills/econ-exercise-builder.md', /may not expand into adjacent\s+content or hide enrichment inside the core route/i, 'independent-practice scope boundary missing'],
+    ['skills/econ-exercise-builder.md', /may not expand into adjacent\s+content or hide enrichment inside the normal route/i, 'independent-practice scope boundary missing'],
     ['skills/econ-exercise-builder.md', /Light\s+adaptation is allowed only where the blueprint or responsible owner\s+authorizes it[\s\S]{0,160}preserve every target operation/i, 'authorized target-adaptation rule missing'],
     ['skills/econ-exercise-builder.md', /cognitive flexibility[\s\S]{0,180}not more or longer arithmetic/i, 'bonus cognitive-flexibility rule missing'],
     ['skills/econ-exercise-builder.md', /1[–-]2 short, accessible[\s\S]{0,120}introduces no\s+new theory/i, 'closing-review rule missing'],

@@ -1,0 +1,4382 @@
+{
+  "scope": "read-only baseline inventory; no new content acceptance",
+  "lesson_commit": "e2843b47c828784ab594d004cef461cea929717f",
+  "platform_commit": "6298466b03fa5ddb38a72ceb157a4855494e45d8",
+  "paragraph_count": 43,
+  "theory_count": 34,
+  "mixed_count": 9,
+  "paragraphs": [
+    {
+      "paragraph": "2.1.1",
+      "kind": "theory",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+      "baseline_sha256": "01f07ddbc9b5a66b2408ac4c53a714fdac19e12a770b26984642b708181848f7",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4"
+        ],
+        "Zelfstandige oefening": [
+          "5",
+          "6"
+        ],
+        "Doeloefening": [
+          "7"
+        ],
+        "Denkertje / Bonusopgave": [
+          "8"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "9",
+          "10"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Twee keer zoveel produceren, twee keer zoveel kosten?"
+        },
+        {
+          "line": 12,
+          "text": "### Kijk naar wat er met het totale bedrag gebeurt"
+        },
+        {
+          "line": 28,
+          "text": "### Van het verhaal naar een formule"
+        },
+        {
+          "line": 45,
+          "text": "### Dezelfde informatie in een grafiek"
+        },
+        {
+          "line": 55,
+          "text": "### Waarom kan meer produceren per fles goedkoper zijn?"
+        },
+        {
+          "line": 78,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 82,
+          "text": "### Stap 1 · Deel de kosten in en leg uit waarom"
+        },
+        {
+          "line": 89,
+          "text": "### Stap 2 · Stel de functies op"
+        },
+        {
+          "line": 93,
+          "text": "### Stap 3 · Bereken totale en gemiddelde kosten"
+        },
+        {
+          "line": 109,
+          "text": "### Stap 4 · Verbind de cijfers aan het verhaal"
+        },
+        {
+          "line": 122,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 146,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 183,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 211,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 250,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 264,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "2.1.2",
+      "kind": "theory",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "baseline_sha256": "d14a9e28cb9164ffc609595501cd3a9357fd1dcc85f7c60828436a2379083ccc",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4",
+          "5"
+        ],
+        "Zelfstandige oefening": [
+          "6",
+          "7"
+        ],
+        "Doeloefening": [
+          "8"
+        ],
+        "Denkertje / Bonusopgave": [
+          "9"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "10",
+          "11"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Een volle kassa: is dat winst?"
+        },
+        {
+          "line": 12,
+          "text": "### Opbrengst: het geld dat de verkoop oplevert"
+        },
+        {
+          "line": 29,
+          "text": "### Trek alle kosten af, niet alleen de ingrediënten"
+        },
+        {
+          "line": 47,
+          "text": "### Waar stopt het verlies?"
+        },
+        {
+          "line": 65,
+          "text": "### Teken eerst de assen, daarna de lijnen"
+        },
+        {
+          "line": 73,
+          "text": "### Lees de grafiek bij één hoeveelheid"
+        },
+        {
+          "line": 86,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 90,
+          "text": "### Stap 1 · Stel TO op en verklaar GO"
+        },
+        {
+          "line": 94,
+          "text": "### Stap 2 · Vul Q in en trek TK van TO af"
+        },
+        {
+          "line": 103,
+          "text": "### Stap 3 · Los TO = TK op en duid de uitkomst"
+        },
+        {
+          "line": 111,
+          "text": "### Stap 4 · Teken en controleer"
+        },
+        {
+          "line": 126,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 150,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 199,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 223,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 247,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 261,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "2.1.3",
+      "kind": "theory",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "baseline_sha256": "1f2e91ea6f5d05ecbf53607a4d09a9e289dd914d253cbf5e1a8d16a0ef943e8b",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4"
+        ],
+        "Zelfstandige oefening": [
+          "5",
+          "6"
+        ],
+        "Doeloefening": [
+          "7"
+        ],
+        "Denkertje / Bonusopgave": [
+          "8"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "9",
+          "10"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Wat kosten die tien extra producten?"
+        },
+        {
+          "line": 12,
+          "text": "### Van alle producten naar de extra producten"
+        },
+        {
+          "line": 30,
+          "text": "### Eén werkwijze voor MK en MO"
+        },
+        {
+          "line": 54,
+          "text": "### Waar zet je de uitkomst?"
+        },
+        {
+          "line": 68,
+          "text": "### Constante kosten kunnen samengaan met stijgende MK"
+        },
+        {
+          "line": 92,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 96,
+          "text": "### Stap 1 · Bereken de winst met TO − TK"
+        },
+        {
+          "line": 107,
+          "text": "### Stap 2 · Bereken MK en MO over de eerste stap"
+        },
+        {
+          "line": 111,
+          "text": "### Stap 3 · Herhaal de berekening bij de andere onderneming"
+        },
+        {
+          "line": 122,
+          "text": "### Stap 4 · Vergelijk en verklaar"
+        },
+        {
+          "line": 135,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 156,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 200,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 255,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 295,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 315,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "2.1.4",
+      "kind": "mixed",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.4 Gemengde opgaven – opgaven.md",
+      "baseline_sha256": "bd5550cc11fa4c4def6efd42b31a2489aa898aa0374830440bd9b29721105ccf",
+      "stage_exercises": {
+        "Doeloefening": [
+          "5",
+          "6",
+          "7"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Welke informatie heb je nodig?"
+        },
+        {
+          "line": 14,
+          "text": "### Eerst zelfstandig combineren"
+        },
+        {
+          "line": 94,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 145,
+          "text": "### Denkertje"
+        },
+        {
+          "line": 161,
+          "text": "### Herhaling"
+        }
+      ],
+      "short_route_boxes": 0,
+      "guided_skip_notes": 0
+    },
+    {
+      "paragraph": "2.2.1",
+      "kind": "theory",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+      "baseline_sha256": "8b687d9947d330d8c4f7a8545d2474638ce14bc4c854e1d7056832eb82a72184",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4"
+        ],
+        "Zelfstandige oefening": [
+          "5",
+          "6"
+        ],
+        "Doeloefening": [
+          "7"
+        ],
+        "Denkertje / Bonusopgave": [
+          "8"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "9",
+          "10"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Dezelfde prijsstijging, een andere reactie"
+        },
+        {
+          "line": 14,
+          "text": "### Vergelijk geen losse aantallen, maar procenten"
+        },
+        {
+          "line": 26,
+          "text": "### Stap 1 · Bereken de procentuele prijsverandering"
+        },
+        {
+          "line": 36,
+          "text": "### Stap 2 · Bereken de procentuele hoeveelheidsverandering"
+        },
+        {
+          "line": 44,
+          "text": "### Stap 3 · Deel de reactie door de prijsverandering"
+        },
+        {
+          "line": 60,
+          "text": "### Het teken vertelt de richting"
+        },
+        {
+          "line": 64,
+          "text": "### De grootte vertelt hoe sterk de reactie is"
+        },
+        {
+          "line": 78,
+          "text": "### Waarom kan die reactie verschillen?"
+        },
+        {
+          "line": 88,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 92,
+          "text": "### Stap 1 · Bereken bij KlimStudio beide procentuele veranderingen"
+        },
+        {
+          "line": 101,
+          "text": "### Stap 2 · Bereken Ev en deel de vraag in"
+        },
+        {
+          "line": 107,
+          "text": "### Stap 3 · Vergelijk met DansDrop"
+        },
+        {
+          "line": 113,
+          "text": "### Stap 4 · Geef een mogelijke contextverklaring"
+        },
+        {
+          "line": 128,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 150,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 191,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 217,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 236,
+          "text": "### Van getal naar economisch antwoord"
+        },
+        {
+          "line": 242,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 256,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "2.2.2",
+      "kind": "theory",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "baseline_sha256": "8accd9170ab7e7f9cf1f41225cb3e4aea368f88c3c6470d7d1b1fbe64bbc2f84",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4"
+        ],
+        "Zelfstandige oefening": [
+          "5",
+          "6"
+        ],
+        "Doeloefening": [
+          "7"
+        ],
+        "Denkertje / Bonusopgave": [
+          "8"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "9",
+          "10"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Een hogere prijs, maar ook meer omzet?"
+        },
+        {
+          "line": 12,
+          "text": "### Twee veranderingen werken tegelijk"
+        },
+        {
+          "line": 29,
+          "text": "### Gebruik Ev voor de richting bij een kleine prijsverandering"
+        },
+        {
+          "line": 42,
+          "text": "### Bij grotere stappen: reken de omzet altijd uit"
+        },
+        {
+          "line": 54,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 65,
+          "text": "### Stap 1 · Bereken TO oud en TO nieuw voor PuzzelClub"
+        },
+        {
+          "line": 73,
+          "text": "### Stap 2 · Bereken de procentuele omzetverandering"
+        },
+        {
+          "line": 81,
+          "text": "### Stap 3 · Verbind de uitkomst met Ev"
+        },
+        {
+          "line": 89,
+          "text": "### Stap 4 · Herhaal de berekening voor FotoWorkshop"
+        },
+        {
+          "line": 106,
+          "text": "### Stap 5 · Formuleer de regel en de beperking"
+        },
+        {
+          "line": 112,
+          "text": "### Stap 6 · Maak geen winstconclusie zonder kosten"
+        },
+        {
+          "line": 127,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 149,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 186,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 217,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 242,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 256,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "2.2.3",
+      "kind": "theory",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "baseline_sha256": "ca8d6a33e0dc46a90d099ced335ab0eda51e73f3cbd2077b1d64714ae165ee58",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4",
+          "5"
+        ],
+        "Zelfstandige oefening": [
+          "6",
+          "7"
+        ],
+        "Doeloefening": [
+          "8"
+        ],
+        "Denkertje / Bonusopgave": [
+          "9"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "10",
+          "11"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# De prijs blijft gelijk. Waarom verandert de vraag toch?"
+        },
+        {
+          "line": 14,
+          "text": "### Dezelfde rekengedachte, een andere oorzaak"
+        },
+        {
+          "line": 33,
+          "text": "### Kijk eerst naar het teken, daarna naar de grootte"
+        },
+        {
+          "line": 59,
+          "text": "### Substituten: producten die elkaar kunnen vervangen"
+        },
+        {
+          "line": 67,
+          "text": "### Complementen: producten die samen worden gebruikt"
+        },
+        {
+          "line": 83,
+          "text": "### Een vraagfunctie maakt de verbanden rekenbaar"
+        },
+        {
+          "line": 93,
+          "text": "### Vul eerst de hele beginsituatie in"
+        },
+        {
+          "line": 111,
+          "text": "### Onderzoek 1 · Alleen het inkomen stijgt"
+        },
+        {
+          "line": 125,
+          "text": "### Onderzoek 2 · Terug naar het begin; alleen Pz stijgt"
+        },
+        {
+          "line": 139,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 152,
+          "text": "### Stap 1 · Bereken Ei en deel de goederen in"
+        },
+        {
+          "line": 158,
+          "text": "### Stap 2 · Bereken Ek en benoem beide goederen"
+        },
+        {
+          "line": 172,
+          "text": "### Stap 3 · Bereken de beginhoeveelheid van StudioPas X"
+        },
+        {
+          "line": 176,
+          "text": "### Stap 4 · Verhoog alleen Y en bereken Ei"
+        },
+        {
+          "line": 188,
+          "text": "### Stap 5 · Zet Y terug en verander alleen Pz"
+        },
+        {
+          "line": 211,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 231,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 288,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 322,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 348,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 362,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "2.2.4",
+      "kind": "mixed",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.4 Gemengde opgaven – opgaven.md",
+      "baseline_sha256": "b4ea80acb1e396535999eda635e75e3633a42214806e21a02feea5dc266d73de",
+      "stage_exercises": {
+        "Doeloefening": [
+          "5"
+        ],
+        "Denkertje / Bonusopgave": [
+          "6",
+          "7"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Kies de gegevens. Onderbouw je conclusie."
+        },
+        {
+          "line": 75,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 83,
+          "text": "### Bron A · Standaardabonnement"
+        },
+        {
+          "line": 93,
+          "text": "### Bron B · Inkomen en gevraagde hoeveelheid"
+        },
+        {
+          "line": 100,
+          "text": "### Bron C · Prijs van een concurrerend abonnement"
+        },
+        {
+          "line": 107,
+          "text": "### Bron D · Regionale vraagfunctie"
+        },
+        {
+          "line": 140,
+          "text": "## Denkertje / Bonusopgave"
+        }
+      ],
+      "short_route_boxes": 0,
+      "guided_skip_notes": 0
+    },
+    {
+      "paragraph": "2.3.1",
+      "kind": "theory",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "baseline_sha256": "66d3dea78343cbaacb0c1772ed050ca54b73dad957659cb3dacfe9bf2d4872df",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4",
+          "5"
+        ],
+        "Zelfstandige oefening": [
+          "6",
+          "7"
+        ],
+        "Doeloefening": [
+          "8"
+        ],
+        "Denkertje / Bonusopgave": [
+          "9"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "10",
+          "11"
+        ]
+      },
+      "headings": [
+        {
+          "line": 4,
+          "text": "# 2.3.1 Consumentensurplus"
+        },
+        {
+          "line": 10,
+          "text": "### Van betalingsbereidheid naar voordeel"
+        },
+        {
+          "line": 23,
+          "text": "### Eerst een klein aantal kopers"
+        },
+        {
+          "line": 35,
+          "text": "### Een grotere markt in een grafiek"
+        },
+        {
+          "line": 46,
+          "text": "### Stap 1 · Vind de twee snijpunten van de vraaglijn"
+        },
+        {
+          "line": 50,
+          "text": "### Stap 2 · Voeg de prijs en de hoeveelheid toe"
+        },
+        {
+          "line": 58,
+          "text": "### Stap 3 · Kies basis en hoogte"
+        },
+        {
+          "line": 67,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 88,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 116,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 168,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 205,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 225,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 235,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "2.3.2",
+      "kind": "theory",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "baseline_sha256": "6b0bfa7d64151ad17dea91fd919d322628df148611c09ffbc684f7b8a9fd5b53",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4",
+          "5"
+        ],
+        "Zelfstandige oefening": [
+          "6",
+          "7"
+        ],
+        "Doeloefening": [
+          "8"
+        ],
+        "Denkertje / Bonusopgave": [
+          "9"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "10",
+          "11"
+        ]
+      },
+      "headings": [
+        {
+          "line": 4,
+          "text": "# 2.3.2 Producentensurplus en totaal surplus"
+        },
+        {
+          "line": 10,
+          "text": "### De extra kosten van een product"
+        },
+        {
+          "line": 21,
+          "text": "### Een markt voor posters"
+        },
+        {
+          "line": 38,
+          "text": "### Eerst het evenwicht, dan de gebieden"
+        },
+        {
+          "line": 47,
+          "text": "### Waarom ligt het grootste TS bij het evenwicht?"
+        },
+        {
+          "line": 62,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 83,
+          "text": "### Vervolg uitgewerkt voorbeeld"
+        },
+        {
+          "line": 98,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 123,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 179,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 212,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 254,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 266,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "2.3.3",
+      "kind": "theory",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "baseline_sha256": "59c2f8d4b22561adc246fcebb6e2f6a7f9053663ee129c8d9b5701f2323f73b2",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4"
+        ],
+        "Zelfstandige oefening": [
+          "5"
+        ],
+        "Doeloefening": [
+          "6"
+        ],
+        "Denkertje / Bonusopgave": [
+          "7"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "8",
+          "9"
+        ]
+      },
+      "headings": [
+        {
+          "line": 4,
+          "text": "# 2.3.3 Pareto-efficiëntie en welvaartsverlies"
+        },
+        {
+          "line": 10,
+          "text": "### Eerst vaststellen wie echt handelt"
+        },
+        {
+          "line": 23,
+          "text": "### Stop bij het werkelijk verkochte aantal"
+        },
+        {
+          "line": 29,
+          "text": "### Consumentensurplus: rechthoek plus driehoek"
+        },
+        {
+          "line": 35,
+          "text": "### Producentensurplus: dezelfde aanpak, andere grenzen"
+        },
+        {
+          "line": 44,
+          "text": "### Vergelijk de twee totale surplussen"
+        },
+        {
+          "line": 58,
+          "text": "### Een verschuiving van voordeel is iets anders"
+        },
+        {
+          "line": 69,
+          "text": "### Toepassen op de postermarkt"
+        },
+        {
+          "line": 79,
+          "text": "### Een hoger TS is niet automatisch een Paretoverbetering"
+        },
+        {
+          "line": 88,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 105,
+          "text": "### Vervolg uitgewerkt voorbeeld"
+        },
+        {
+          "line": 120,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 140,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 180,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 207,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 240,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 250,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "2.3.4",
+      "kind": "mixed",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.4 Gemengde opgaven – opgaven.md",
+      "baseline_sha256": "dfb2a251a8787bc83c22376ab126f48b168fc385164eaf502181934a734ada6b",
+      "stage_exercises": {
+        "Doeloefening": [
+          "3"
+        ],
+        "Denkertje / Bonusopgave": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ]
+      },
+      "headings": [
+        {
+          "line": 4,
+          "text": "# 2.3.4 Gemengde opgaven"
+        },
+        {
+          "line": 79,
+          "text": "### Voor je naar de doeloefening gaat"
+        },
+        {
+          "line": 86,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 127,
+          "text": "### De kern in je eigen woorden"
+        },
+        {
+          "line": 134,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 146,
+          "text": "### Eerder geleerde stof combineren"
+        }
+      ],
+      "short_route_boxes": 0,
+      "guided_skip_notes": 0
+    },
+    {
+      "paragraph": "3.1.1",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+      "baseline_sha256": "c7f7c7d5a63efe90b5b115789b40eb190c31c4b1e339c72377444822bdce6cd9",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4"
+        ],
+        "Zelfstandige oefening": [
+          "5",
+          "6"
+        ],
+        "Doeloefening": [
+          "7"
+        ],
+        "Denkertje / Bonusopgave": [
+          "8"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "9"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Eén product, twee prijzen"
+        },
+        {
+          "line": 14,
+          "text": "### Geef de prijzen een eigen naam"
+        },
+        {
+          "line": 27,
+          "text": "### Wat blijft hetzelfde?"
+        },
+        {
+          "line": 41,
+          "text": "### Lees de grafiek in drie stappen"
+        },
+        {
+          "line": 51,
+          "text": "### Vergelijk twee prijzen bij dezelfde hoeveelheid"
+        },
+        {
+          "line": 63,
+          "text": "### Van gewenste ontvangst naar benodigde kopersprijs"
+        },
+        {
+          "line": 75,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 95,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 105,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 117,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 127,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 137,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 144,
+          "text": "## Herhaling / Herhaling en interleaving"
+        },
+        {
+          "line": 149,
+          "text": "### Maak je antwoord controleerbaar"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "3.1.2",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-3/chapters/3.1/3.1.2 manuscript.md",
+      "baseline_sha256": "2020abe9072c3a479dd59d4fdefe997d4a7def90e6698354fd30a326548a4955",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "10",
+          "11"
+        ],
+        "Begeleide inoefening": [
+          "12",
+          "13"
+        ],
+        "Zelfstandige oefening": [
+          "14",
+          "15"
+        ],
+        "Doeloefening": [
+          "16"
+        ],
+        "Denkertje / Bonusopgave": [
+          "17"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "18"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Waar blijft de belasting?"
+        },
+        {
+          "line": 21,
+          "text": "### Geen verdwenen geld"
+        },
+        {
+          "line": 29,
+          "text": "### De gebieden vertellen elk iets anders"
+        },
+        {
+          "line": 44,
+          "text": "### Houd drie bedragen uit elkaar"
+        },
+        {
+          "line": 54,
+          "text": "### Waarom ontstaat dat verloren voordeel?"
+        },
+        {
+          "line": 64,
+          "text": "### Verander maar één kenmerk"
+        },
+        {
+          "line": 85,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 107,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 117,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 137,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 147,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 155,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 162,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "3.1.3",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md",
+      "baseline_sha256": "045125c17f630d6e40bc6917ea8898e3c225ea4cbd5ecf926592a93906f14995",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "19",
+          "20"
+        ],
+        "Begeleide inoefening": [
+          "21",
+          "22",
+          "22A"
+        ],
+        "Zelfstandige oefening": [
+          "23",
+          "24"
+        ],
+        "Doeloefening": [
+          "25"
+        ],
+        "Denkertje / Bonusopgave": [
+          "26"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "27"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# De overheid legt geld bij"
+        },
+        {
+          "line": 24,
+          "text": "### De aanbodlijn in kopersprijzen"
+        },
+        {
+          "line": 33,
+          "text": "### Een rekening voor de overheid"
+        },
+        {
+          "line": 37,
+          "text": "### Kijk verder dan CS en PS"
+        },
+        {
+          "line": 47,
+          "text": "### Volg de drie rekeningen"
+        },
+        {
+          "line": 62,
+          "text": "### Kijk naar één extra plaats"
+        },
+        {
+          "line": 70,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 97,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 107,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 120,
+          "text": "### Begeleide inoefening · vervolg"
+        },
+        {
+          "line": 139,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 149,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 157,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 164,
+          "text": "### Twee vragen bij iedere subsidieregeling"
+        },
+        {
+          "line": 170,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "3.1.4",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md",
+      "baseline_sha256": "d8d37a131f60a17fca322fa289521f7ced878c9e5eec77c2fbe204f3fda2720a",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "28",
+          "29"
+        ],
+        "Begeleide inoefening": [
+          "30",
+          "31"
+        ],
+        "Zelfstandige oefening": [
+          "32",
+          "33"
+        ],
+        "Doeloefening": [
+          "34"
+        ],
+        "Denkertje / Bonusopgave": [
+          "35"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "36"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Goedkoper, maar ook verkrijgbaar?"
+        },
+        {
+          "line": 24,
+          "text": "### Een maximum is geen verplicht prijskaartje"
+        },
+        {
+          "line": 33,
+          "text": "### De korte kant bepaalt wat er kan worden verkocht"
+        },
+        {
+          "line": 42,
+          "text": "### Wie ontvangt het product?"
+        },
+        {
+          "line": 51,
+          "text": "### Zelfde rekenen, andere interpretatie"
+        },
+        {
+          "line": 57,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 80,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 90,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 102,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 112,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 120,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 135,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "3.1.5",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-3/chapters/3.1/3.1.5 manuscript.md",
+      "baseline_sha256": "76c5b62f3d94b18b306acf7d6e35f7f513311aab000b0886afd4a67ac393a9ef",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "37",
+          "38"
+        ],
+        "Begeleide inoefening": [
+          "39",
+          "40",
+          "40A"
+        ],
+        "Zelfstandige oefening": [
+          "41",
+          "42"
+        ],
+        "Doeloefening": [
+          "43"
+        ],
+        "Denkertje / Bonusopgave": [
+          "44"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "45"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Een prijs beschermen"
+        },
+        {
+          "line": 24,
+          "text": "### Begin zonder aankoopgarantie"
+        },
+        {
+          "line": 32,
+          "text": "### Voeg nu alleen de opkoopbelofte toe"
+        },
+        {
+          "line": 47,
+          "text": "### Een quotum begrenst de hoeveelheid"
+        },
+        {
+          "line": 58,
+          "text": "### Waarom lees je de prijs op de vraaglijn?"
+        },
+        {
+          "line": 68,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 93,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 103,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 116,
+          "text": "### Begeleide inoefening · vervolg"
+        },
+        {
+          "line": 128,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 138,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 146,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 153,
+          "text": "## Herhaling / Herhaling en interleaving"
+        },
+        {
+          "line": 158,
+          "text": "### Kies het juiste onderscheid"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "3.1.6",
+      "kind": "mixed",
+      "source": "edities/books34-v3/books/book-3/chapters/3.1/3.1.6 manuscript.md",
+      "baseline_sha256": "2bcaeb3319dfb280988947648a7a50453e32c8fffd4f16bf177257174dde7de3",
+      "stage_exercises": {
+        "Doeloefening": [
+          "48"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Kies eerst de methode"
+        },
+        {
+          "line": 19,
+          "text": "### Extra gemengde oefening"
+        },
+        {
+          "line": 25,
+          "text": "### Zo onderbouw je een correctie"
+        },
+        {
+          "line": 33,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 38,
+          "text": "### Bron 1 · De markt zonder maatregel"
+        },
+        {
+          "line": 42,
+          "text": "### Bron 2 · Twee alternatieven, niet tegelijk"
+        },
+        {
+          "line": 48,
+          "text": "### Bron 3 · De beleidsclaim"
+        },
+        {
+          "line": 63,
+          "text": "### Kijk na je berekeningen terug"
+        }
+      ],
+      "short_route_boxes": 0,
+      "guided_skip_notes": 0
+    },
+    {
+      "paragraph": "3.2.1",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md",
+      "baseline_sha256": "cc8e6578d4419c2affe0d793bf1c2b6accf920eb54bd5c1c1cf74b8a98cd3c80",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4"
+        ],
+        "Zelfstandige oefening": [
+          "5",
+          "6"
+        ],
+        "Doeloefening": [
+          "7"
+        ],
+        "Denkertje / Bonusopgave": [
+          "8"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "9",
+          "10"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Een prijs voor iedereen"
+        },
+        {
+          "line": 9,
+          "text": "### Vier kenmerken vormen samen het model"
+        },
+        {
+          "line": 21,
+          "text": "### Eerst de markt, dan de onderneming"
+        },
+        {
+          "line": 27,
+          "text": "### Lees de assen voordat je rekent"
+        },
+        {
+          "line": 35,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 53,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 57,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 69,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 76,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 82,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 85,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "3.2.2",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
+      "baseline_sha256": "8939476f0ea474b0d35db29cf085650ddd7efb548f71df6a531ffce38d34f55c",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "11",
+          "12"
+        ],
+        "Begeleide inoefening": [
+          "13",
+          "14"
+        ],
+        "Zelfstandige oefening": [
+          "15",
+          "16"
+        ],
+        "Doeloefening": [
+          "17"
+        ],
+        "Denkertje / Bonusopgave": [
+          "18"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "19"
+        ]
+      },
+      "headings": [
+        {
+          "line": 4,
+          "text": "# Wat kost een kleine uitbreiding?"
+        },
+        {
+          "line": 8,
+          "text": "### Van een grote stap naar een kleine verandering"
+        },
+        {
+          "line": 30,
+          "text": "### Een beperkte rekenregel"
+        },
+        {
+          "line": 35,
+          "text": "### Doe het één term tegelijk"
+        },
+        {
+          "line": 52,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 55,
+          "text": "### 1 · Differentieer term voor term"
+        },
+        {
+          "line": 58,
+          "text": "### 2 · Vul de gevraagde productie in"
+        },
+        {
+          "line": 61,
+          "text": "### 3 · Vergelijk met een tabelstap"
+        },
+        {
+          "line": 67,
+          "text": "### 4 · Controleer welke kosten veranderen"
+        },
+        {
+          "line": 73,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 75,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 81,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 86,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 91,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 93,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "3.2.3",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+      "baseline_sha256": "4ebf495f500689fb9414d9792429203e441e00c65efb0506ab56fa4e4a859181",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "20",
+          "21"
+        ],
+        "Begeleide inoefening": [
+          "22",
+          "23",
+          "24"
+        ],
+        "Zelfstandige oefening": [
+          "25",
+          "26"
+        ],
+        "Doeloefening": [
+          "27"
+        ],
+        "Denkertje / Bonusopgave": [
+          "28"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "29",
+          "30"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Nog wat meer produceren?"
+        },
+        {
+          "line": 27,
+          "text": "### Vergelijk links én rechts van het snijpunt"
+        },
+        {
+          "line": 41,
+          "text": "### Eerst winst per kg, dan totale winst"
+        },
+        {
+          "line": 57,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 73,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 77,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 89,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 102,
+          "text": "### Check je werkwijze"
+        },
+        {
+          "line": 109,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 115,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 118,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "3.2.4",
+      "kind": "mixed",
+      "source": "edities/books34-v3/books/book-3/chapters/3.2/3.2.4 manuscript.md",
+      "baseline_sha256": "f645f6e34e4e227bac144996ec7d1c3a3d1c38aaea8cfd4ba479f7ada5dc8a1c",
+      "stage_exercises": {
+        "Doeloefening": [
+          "35"
+        ],
+        "Denkertje / Bonusopgave": [
+          "36"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "37"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Welke stap heb je nodig?"
+        },
+        {
+          "line": 13,
+          "text": "### Oefenen met een ondernemingsbron"
+        },
+        {
+          "line": 16,
+          "text": "### Controleer je antwoord als één geheel"
+        },
+        {
+          "line": 24,
+          "text": "### Kies zelf de juiste onderbouwing"
+        },
+        {
+          "line": 31,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 32,
+          "text": "### Opgave 35 · Kweekkorrels op twee momenten"
+        },
+        {
+          "line": 47,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 50,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 0,
+      "guided_skip_notes": 0
+    },
+    {
+      "paragraph": "3.3.1",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md",
+      "baseline_sha256": "6f14512949c2cafa67b868ec747c3d382574842fbfac3ed1d8946538391812ab",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4"
+        ],
+        "Zelfstandige oefening": [
+          "5",
+          "6"
+        ],
+        "Doeloefening": [
+          "7"
+        ],
+        "Denkertje / Bonusopgave": [
+          "8"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "9",
+          "10"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Wat gaat de grens over?"
+        },
+        {
+          "line": 8,
+          "text": "### Eén grens, twee gezichtspunten"
+        },
+        {
+          "line": 11,
+          "text": "### Waarom niet alles zelf maken?"
+        },
+        {
+          "line": 16,
+          "text": "### Eerst het absolute voordeel"
+        },
+        {
+          "line": 20,
+          "text": "### Dan de vergelijking tussen activiteiten"
+        },
+        {
+          "line": 28,
+          "text": "### Meer van wat relatief gunstig is"
+        },
+        {
+          "line": 32,
+          "text": "### Concurrentiepositie: een andere vraag"
+        },
+        {
+          "line": 36,
+          "text": "### Voordeel voor een land is niet voordeel voor iedereen"
+        },
+        {
+          "line": 42,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 57,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 59,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 72,
+          "text": "### Van bronfeit naar conclusie"
+        },
+        {
+          "line": 78,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 83,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 88,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 90,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "3.3.2",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-3/chapters/3.3/3.3.2 manuscript.md",
+      "baseline_sha256": "cba49530c303ca57eb5162eb2545157ec129875c4fdf92bbdcfa3425df464aed",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "11",
+          "12"
+        ],
+        "Begeleide inoefening": [
+          "13",
+          "14"
+        ],
+        "Zelfstandige oefening": [
+          "15",
+          "16"
+        ],
+        "Doeloefening": [
+          "17"
+        ],
+        "Denkertje / Bonusopgave": [
+          "18"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "19",
+          "20"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Eén prijs, twee hoeveelheden"
+        },
+        {
+          "line": 8,
+          "text": "### Het model dat we gebruiken"
+        },
+        {
+          "line": 13,
+          "text": "### Niet opnieuw oplossen, maar anders lezen"
+        },
+        {
+          "line": 18,
+          "text": "### Volg de prijslijn van links naar rechts"
+        },
+        {
+          "line": 23,
+          "text": "### Wat verandert er ten opzichte van geen handel?"
+        },
+        {
+          "line": 29,
+          "text": "### De richting keert om"
+        },
+        {
+          "line": 45,
+          "text": "### Een bekend surplus, een nieuwe verdeling"
+        },
+        {
+          "line": 48,
+          "text": "### Het gezamenlijke resultaat en de afzonderlijke groepen"
+        },
+        {
+          "line": 57,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 71,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 73,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 83,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 94,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 99,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 101,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "3.3.3",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-3/chapters/3.3/3.3.3 manuscript.md",
+      "baseline_sha256": "5e41e97af832964ec1ac81baae6cbb77543de1550b20bafd3cab6ea55cbddd00",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "21",
+          "22"
+        ],
+        "Begeleide inoefening": [
+          "23",
+          "24"
+        ],
+        "Zelfstandige oefening": [
+          "25",
+          "26"
+        ],
+        "Doeloefening": [
+          "27"
+        ],
+        "Denkertje / Bonusopgave": [
+          "28"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "29",
+          "30"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Beschermen: voor wie?"
+        },
+        {
+          "line": 8,
+          "text": "### Een doel is nog geen uitkomst"
+        },
+        {
+          "line": 17,
+          "text": "### Twee instrumenten"
+        },
+        {
+          "line": 23,
+          "text": "### Eerst de prijs, dan de hoeveelheden"
+        },
+        {
+          "line": 33,
+          "text": "### De juiste breedte van de rechthoek"
+        },
+        {
+          "line": 36,
+          "text": "### Drie groepen, drie gevolgen"
+        },
+        {
+          "line": 45,
+          "text": "### Een importquotum is geen geldbedrag"
+        },
+        {
+          "line": 50,
+          "text": "### Wat als er helemaal geen import overblijft?"
+        },
+        {
+          "line": 56,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 77,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 79,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 93,
+          "text": "### Verklaar met de juiste vergelijking"
+        },
+        {
+          "line": 99,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 104,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 114,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 116,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "3.3.4",
+      "kind": "mixed",
+      "source": "edities/books34-v3/books/book-3/chapters/3.3/3.3.4 manuscript.md",
+      "baseline_sha256": "339d55ad529b134a0e5c29a565ee591aead938f8e32a91dcc1d599e9c284037c",
+      "stage_exercises": {
+        "Doeloefening": [
+          "35",
+          "36",
+          "37",
+          "38"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Het hele verhaal verbinden"
+        },
+        {
+          "line": 8,
+          "text": "### Gemengde opgaven"
+        },
+        {
+          "line": 14,
+          "text": "### Een bruikbaar antwoord blijft precies"
+        },
+        {
+          "line": 29,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 43,
+          "text": "### Controle vóór het inleveren"
+        },
+        {
+          "line": 51,
+          "text": "### Denkertje / Bonusopgave"
+        },
+        {
+          "line": 53,
+          "text": "### Drie grenzen aan een economische conclusie"
+        },
+        {
+          "line": 63,
+          "text": "### Herhaling / Herhaling en interleaving"
+        },
+        {
+          "line": 65,
+          "text": "### Hoofdstukcheck"
+        }
+      ],
+      "short_route_boxes": 0,
+      "guided_skip_notes": 0
+    },
+    {
+      "paragraph": "4.1.1",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md",
+      "baseline_sha256": "9777cfa0305cf03ac4241940e039a9f1f8a0bb517568c1ec56600dbc5569c4d3",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4"
+        ],
+        "Zelfstandige oefening": [
+          "5",
+          "6"
+        ],
+        "Doeloefening": [
+          "7"
+        ],
+        "Denkertje / Bonusopgave": [
+          "8"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "9",
+          "10"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Hoe lang blijft de winst?"
+        },
+        {
+          "line": 9,
+          "text": "### Eerst één afspraak over het woord winst"
+        },
+        {
+          "line": 20,
+          "text": "### Volg de verandering van links naar rechts"
+        },
+        {
+          "line": 26,
+          "text": "### De markt en één onderneming bewegen niet hetzelfde"
+        },
+        {
+          "line": 34,
+          "text": "### De omgekeerde aanpassing"
+        },
+        {
+          "line": 47,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 62,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 66,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 78,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 85,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 91,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 94,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "4.1.2",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md",
+      "baseline_sha256": "3c0dc460e987378cc4a470e7317ecb3467fa742b4befafa2b03674b475b6d38a",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "11",
+          "12"
+        ],
+        "Begeleide inoefening": [
+          "13",
+          "14",
+          "15"
+        ],
+        "Zelfstandige oefening": [
+          "16",
+          "17"
+        ],
+        "Doeloefening": [
+          "18"
+        ],
+        "Denkertje / Bonusopgave": [
+          "19"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "20"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Geen concurrent. Geen grenzen?"
+        },
+        {
+          "line": 10,
+          "text": "### Kijk eerst welke markt bedoeld wordt"
+        },
+        {
+          "line": 14,
+          "text": "### Waarom verschijnt niet meteen een tweede aanbieder?"
+        },
+        {
+          "line": 27,
+          "text": "### De vraaglijn hoort bij een bepaalde aanbieder"
+        },
+        {
+          "line": 33,
+          "text": "### Dezelfde afkorting, een andere lijn"
+        },
+        {
+          "line": 43,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 58,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 64,
+          "text": "### Zo onderbouw je een bronantwoord"
+        },
+        {
+          "line": 71,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 82,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 88,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 96,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 99,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "4.1.3",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md",
+      "baseline_sha256": "45674b920fb1414d0e8ac70d87ea9d945c356fbe537829d8675b2218ccae11ed",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "21",
+          "22"
+        ],
+        "Begeleide inoefening": [
+          "23",
+          "24",
+          "25"
+        ],
+        "Zelfstandige oefening": [
+          "26",
+          "27"
+        ],
+        "Doeloefening": [
+          "28"
+        ],
+        "Denkertje / Bonusopgave": [
+          "29"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "30"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Wat levert extra afzet op?"
+        },
+        {
+          "line": 15,
+          "text": "### Eerst de totale opbrengst"
+        },
+        {
+          "line": 22,
+          "text": "### Daarna de marginale opbrengst"
+        },
+        {
+          "line": 38,
+          "text": "### Eerst alleen de prijs per kg"
+        },
+        {
+          "line": 42,
+          "text": "### Voeg nu MO toe"
+        },
+        {
+          "line": 53,
+          "text": "### MO kan nul of negatief zijn"
+        },
+        {
+          "line": 60,
+          "text": "### Een tabelstap is groter dan één punt"
+        },
+        {
+          "line": 68,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 90,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 96,
+          "text": "### Kies de berekening die gevraagd wordt"
+        },
+        {
+          "line": 108,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 128,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 135,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 148,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 151,
+          "text": "## Herhaling / Herhaling en interleaving"
+        },
+        {
+          "line": 155,
+          "text": "### Controle vóór je verdergaat"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "4.1.4",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md",
+      "baseline_sha256": "53c24578d68752c2a275f3e8032a0ce787cecaacf2a58baab18f2f6d851a98dd",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "31",
+          "32"
+        ],
+        "Begeleide inoefening": [
+          "33",
+          "34",
+          "35"
+        ],
+        "Zelfstandige oefening": [
+          "36",
+          "37"
+        ],
+        "Doeloefening": [
+          "38"
+        ],
+        "Denkertje / Bonusopgave": [
+          "39"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "40"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Meer omzet, minder winst?"
+        },
+        {
+          "line": 24,
+          "text": "### Vergelijk MO met MK"
+        },
+        {
+          "line": 31,
+          "text": "### Controleer vóór én na de kandidaat"
+        },
+        {
+          "line": 37,
+          "text": "### Blijf bij dezelfde q"
+        },
+        {
+          "line": 44,
+          "text": "### Controleer met de vraagfunctie"
+        },
+        {
+          "line": 52,
+          "text": "### Eerst de totale bedragen"
+        },
+        {
+          "line": 59,
+          "text": "### Waarom is winst hier een rechthoek?"
+        },
+        {
+          "line": 68,
+          "text": "### Een kleinere productiecapaciteit"
+        },
+        {
+          "line": 80,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 96,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 101,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 115,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 122,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 129,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 132,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "4.1.5",
+      "kind": "mixed",
+      "source": "edities/books34-v3/books/book-4/chapters/4.1/4.1.5 manuscript.md",
+      "baseline_sha256": "6acff35292cfbd0542a592e118e6bb850910b4fd12701b19e1b434774bb15302",
+      "stage_exercises": {
+        "Doeloefening": [
+          "45",
+          "46",
+          "47",
+          "48"
+        ]
+      },
+      "headings": [
+        {
+          "line": 5,
+          "text": "# Welke lijn heb je nodig?"
+        },
+        {
+          "line": 44,
+          "text": "## Doeloefening"
+        }
+      ],
+      "short_route_boxes": 0,
+      "guided_skip_notes": 0
+    },
+    {
+      "paragraph": "4.2.1",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md",
+      "baseline_sha256": "e62606f483a3cab40f9951f363d62f07d2ababc4eeb6829331df2566cc96df39",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4"
+        ],
+        "Zelfstandige oefening": [
+          "5",
+          "6"
+        ],
+        "Doeloefening": [
+          "7"
+        ],
+        "Denkertje / Bonusopgave": [
+          "8"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "9"
+        ]
+      },
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Meer winst. Ook meer welvaart?"
+        },
+        {
+          "line": 13,
+          "text": "### Dezelfde markt, twee verschillende vragen"
+        },
+        {
+          "line": 24,
+          "text": "### Welvaart is niet hetzelfde als een eerlijke verdeling"
+        },
+        {
+          "line": 29,
+          "text": "### Eerst de keuze van de monopolist"
+        },
+        {
+          "line": 36,
+          "text": "### Dan de efficiënte hoeveelheid"
+        },
+        {
+          "line": 42,
+          "text": "### Wat gebeurt er met het voordeel van kopers?"
+        },
+        {
+          "line": 49,
+          "text": "### Wat krijgt de aanbieder?"
+        },
+        {
+          "line": 57,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 82,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 92,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 111,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 119,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 129,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 135,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "4.2.2",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.2 manuscript.md",
+      "baseline_sha256": "68bbb2cfe7346e6f0c9b222ec22524b17e7c9c08aceda77c56cd92395e137d5a",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "10",
+          "11"
+        ],
+        "Begeleide inoefening": [
+          "12",
+          "13"
+        ],
+        "Zelfstandige oefening": [
+          "14",
+          "15"
+        ],
+        "Doeloefening": [
+          "16"
+        ],
+        "Denkertje / Bonusopgave": [
+          "17"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "18"
+        ]
+      },
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Waarom krijgt de één korting?"
+        },
+        {
+          "line": 15,
+          "text": "### Drie voorwaarden moeten passen"
+        },
+        {
+          "line": 25,
+          "text": "### Elke groep heeft haar eigen vraag"
+        },
+        {
+          "line": 39,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 64,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 74,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 96,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 105,
+          "text": "### Gebruik prijsgevoeligheid als verklaring, niet als etiket"
+        },
+        {
+          "line": 113,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 125,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 131,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "4.2.3",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.3 manuscript.md",
+      "baseline_sha256": "308dad49d09b5ea46f2de1f59fa787901c10877ee3866d08fff53a930432e3c8",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "19",
+          "20"
+        ],
+        "Begeleide inoefening": [
+          "21",
+          "22"
+        ],
+        "Zelfstandige oefening": [
+          "23",
+          "24"
+        ],
+        "Doeloefening": [
+          "25"
+        ],
+        "Denkertje / Bonusopgave": [
+          "26"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "27"
+        ]
+      },
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Veel merken. Ook veel concurrentie?"
+        },
+        {
+          "line": 13,
+          "text": "### Gebruik kenmerken, niet alleen een bedrijfsnaam"
+        },
+        {
+          "line": 30,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 48,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 58,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 74,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 84,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 96,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 102,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "4.2.4",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md",
+      "baseline_sha256": "a5ed089cdfa1632fc5c778549d348b2fa29ed52f9513dbce986d98bd661165a3",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "28",
+          "29"
+        ],
+        "Begeleide inoefening": [
+          "30",
+          "31"
+        ],
+        "Zelfstandige oefening": [
+          "32",
+          "33"
+        ],
+        "Doeloefening": [
+          "34"
+        ],
+        "Denkertje / Bonusopgave": [
+          "35"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "36"
+        ]
+      },
+      "headings": [
+        {
+          "line": 6,
+          "text": "# De koper betaalt. Wie draagt de schade?"
+        },
+        {
+          "line": 17,
+          "text": "### Privé kan de levering aantrekkelijk zijn"
+        },
+        {
+          "line": 25,
+          "text": "### Voeg de schade per extra eenheid toe"
+        },
+        {
+          "line": 40,
+          "text": "### Beoordeel de volgende levering"
+        },
+        {
+          "line": 47,
+          "text": "### Kijk breder dan CS + PS"
+        },
+        {
+          "line": 57,
+          "text": "### Gebruik opnieuw de twee prijzen uit Boek 3"
+        },
+        {
+          "line": 64,
+          "text": "### Overheidsontvangsten blijven een overdracht"
+        },
+        {
+          "line": 74,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 108,
+          "text": "### Waarom verschilt dit van Boek 3?"
+        },
+        {
+          "line": 114,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 124,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 145,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 157,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 167,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 173,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "4.2.5",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.5 manuscript.md",
+      "baseline_sha256": "cad4ff28fa6e0b6857f79db3c0a02c49aec4d5e37258986bed54c4fdcba91756",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "37",
+          "38"
+        ],
+        "Begeleide inoefening": [
+          "39",
+          "40"
+        ],
+        "Zelfstandige oefening": [
+          "41",
+          "42"
+        ],
+        "Doeloefening": [
+          "43"
+        ],
+        "Denkertje / Bonusopgave": [
+          "44"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "45"
+        ]
+      },
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Wie profiteert zonder te betalen?"
+        },
+        {
+          "line": 17,
+          "text": "### Vrijwillige keuzes kunnen te weinig activiteit opleveren"
+        },
+        {
+          "line": 25,
+          "text": "### Voeg voordeel voor anderen toe"
+        },
+        {
+          "line": 40,
+          "text": "### Hetzelfde rekenmiddel als in Boek 3"
+        },
+        {
+          "line": 54,
+          "text": "### Eerst de marktdeelnemers, dan de ontbrekende posten"
+        },
+        {
+          "line": 78,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 115,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 125,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 146,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 158,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 168,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 180,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "4.2.6",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.6 manuscript.md",
+      "baseline_sha256": "a4bb4d6df9b917c1b6fad0543c1ead47c9bec2e6c8ef6ed8077afe11681aa534",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "46",
+          "47"
+        ],
+        "Begeleide inoefening": [
+          "48",
+          "49"
+        ],
+        "Zelfstandige oefening": [
+          "50",
+          "51"
+        ],
+        "Doeloefening": [
+          "52"
+        ],
+        "Denkertje / Bonusopgave": [
+          "53"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "54"
+        ]
+      },
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Eerst het probleem. Dan het instrument."
+        },
+        {
+          "line": 15,
+          "text": "### Match het mechanisme"
+        },
+        {
+          "line": 24,
+          "text": "### Kies een criterium vóór je concludeert"
+        },
+        {
+          "line": 29,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 49,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 59,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 73,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 81,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 98,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 104,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "4.2.7",
+      "kind": "mixed",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.7 manuscript.md",
+      "baseline_sha256": "7af1d4d8afe06a5f679072639cb7f0507387d32c00a63b950de0a308aa15fc10",
+      "stage_exercises": {
+        "Doeloefening": [
+          "58"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "60"
+        ]
+      },
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Welke rekening hoort bij deze markt?"
+        },
+        {
+          "line": 14,
+          "text": "## Gemengde oefening"
+        },
+        {
+          "line": 19,
+          "text": "### Een bruikbaar antwoord laat de keuze zien"
+        },
+        {
+          "line": 40,
+          "text": "### Onderbouw per groep"
+        },
+        {
+          "line": 53,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 70,
+          "text": "### Schrijf geen grotere conclusie dan je bewijs"
+        },
+        {
+          "line": 75,
+          "text": "## Extra gemengde oefening"
+        },
+        {
+          "line": 81,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 0,
+      "guided_skip_notes": 0
+    },
+    {
+      "paragraph": "4.3.1",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md",
+      "baseline_sha256": "5f6801e16cc1c2bc34d1cc687c503a68004f889c338d0708ad8383342acc94f5",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "1",
+          "2"
+        ],
+        "Begeleide inoefening": [
+          "3",
+          "4"
+        ],
+        "Zelfstandige oefening": [
+          "5",
+          "6"
+        ],
+        "Doeloefening": [
+          "7"
+        ],
+        "Denkertje / Bonusopgave": [
+          "8"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "9"
+        ]
+      },
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Wie koopt jouw werktijd?"
+        },
+        {
+          "line": 16,
+          "text": "### Dezelfde marktlogica, andere rollen"
+        },
+        {
+          "line": 25,
+          "text": "### Zes mensen zijn niet hetzelfde als zes voltijdbanen"
+        },
+        {
+          "line": 32,
+          "text": "### Productiviteit: hoeveel productie levert de arbeid op?"
+        },
+        {
+          "line": 44,
+          "text": "### Een duurder arbeidsuur kan toch een goedkoper product opleveren"
+        },
+        {
+          "line": 53,
+          "text": "### Meer productie per uur: hoeveel uren zijn nog nodig?"
+        },
+        {
+          "line": 61,
+          "text": "### Het loon zelf verandert"
+        },
+        {
+          "line": 66,
+          "text": "### Een andere omstandigheid verandert"
+        },
+        {
+          "line": 74,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 78,
+          "text": "### 1 · Bereken de oorspronkelijke productiviteit"
+        },
+        {
+          "line": 81,
+          "text": "### 2 · Bereken de nieuwe benodigde arbeidsinzet"
+        },
+        {
+          "line": 84,
+          "text": "### 3 · Bereken de loonkosten per doos"
+        },
+        {
+          "line": 89,
+          "text": "### 4 · Leg de arbeidsvraag uit"
+        },
+        {
+          "line": 97,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 107,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 127,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 143,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 153,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 159,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 2
+    },
+    {
+      "paragraph": "4.3.2",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.3/4.3.2 manuscript.md",
+      "baseline_sha256": "0b94d916c5364f7ef99bd024cf94f27f9b10673b817d9adbb1afb255abec4bcb",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "10",
+          "11"
+        ],
+        "Begeleide inoefening": [
+          "12",
+          "13"
+        ],
+        "Zelfstandige oefening": [
+          "14",
+          "15"
+        ],
+        "Doeloefening": [
+          "16"
+        ],
+        "Denkertje / Bonusopgave": [
+          "17"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "18"
+        ]
+      },
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Geen baan. Ook werkloos?"
+        },
+        {
+          "line": 24,
+          "text": "### Hoe groot is het aandeel dat meedoet?"
+        },
+        {
+          "line": 36,
+          "text": "### Een waarneming is geen aanbodlijn"
+        },
+        {
+          "line": 46,
+          "text": "### Van productprijs naar uurloon"
+        },
+        {
+          "line": 63,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 67,
+          "text": "### 1 · Stel de groepen vast"
+        },
+        {
+          "line": 70,
+          "text": "### 2 · Bereken de deelname"
+        },
+        {
+          "line": 74,
+          "text": "### 3 · Stel in de sector vraag en aanbod gelijk"
+        },
+        {
+          "line": 86,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 96,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 106,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 116,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 124,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 130,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 1
+    },
+    {
+      "paragraph": "4.3.3",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.3/4.3.3 manuscript.md",
+      "baseline_sha256": "bc7393315c2bec96e0d9dc3e5637e2a897a9c0bb1f61d10ce03f4f1d58c0c089",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "19",
+          "20"
+        ],
+        "Begeleide inoefening": [
+          "21",
+          "22"
+        ],
+        "Zelfstandige oefening": [
+          "23",
+          "24"
+        ],
+        "Doeloefening": [
+          "25"
+        ],
+        "Denkertje / Bonusopgave": [
+          "26"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "27"
+        ]
+      },
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Vacatures én werklozen. Hoe kan dat?"
+        },
+        {
+          "line": 25,
+          "text": "### Minder bestedingen, andere productie of zoektijd?"
+        },
+        {
+          "line": 34,
+          "text": "### Waarom vallen vacatures en werklozen niet direct samen?"
+        },
+        {
+          "line": 42,
+          "text": "### Minder opdrachten verschuiven de arbeidsvraag"
+        },
+        {
+          "line": 60,
+          "text": "### Het loon daalt niet meteen"
+        },
+        {
+          "line": 72,
+          "text": "### Wat mag je concluderen?"
+        },
+        {
+          "line": 78,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 82,
+          "text": "### 1 · Bereken de waargenomen werkloosheid"
+        },
+        {
+          "line": 88,
+          "text": "### 2 · Noem de oorzaak en de verschuiving"
+        },
+        {
+          "line": 91,
+          "text": "### 3 · Bereken het nieuwe evenwicht bij flexibel loon"
+        },
+        {
+          "line": 95,
+          "text": "### 4 · Vergelijk met voorlopig vast loon"
+        },
+        {
+          "line": 103,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 113,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 129,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 137,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 145,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 151,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 2
+    },
+    {
+      "paragraph": "4.3.4",
+      "kind": "theory",
+      "source": "edities/books34-v3/books/book-4/chapters/4.3/4.3.4 manuscript.md",
+      "baseline_sha256": "1a82d579cb1336ef199ea1244c52c4fcf4f59697213c02e26af7cccd1ad71a27",
+      "stage_exercises": {
+        "Uitgewerkt voorbeeld": [],
+        "Startopgaven": [
+          "28",
+          "29"
+        ],
+        "Begeleide inoefening": [
+          "30",
+          "31"
+        ],
+        "Zelfstandige oefening": [
+          "32",
+          "33"
+        ],
+        "Doeloefening": [
+          "34"
+        ],
+        "Denkertje / Bonusopgave": [
+          "35"
+        ],
+        "Herhaling / Herhaling en interleaving": [
+          "36"
+        ]
+      },
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Een hoger uurloon voor iedereen?"
+        },
+        {
+          "line": 24,
+          "text": "### Hoger dan het evenwicht"
+        },
+        {
+          "line": 36,
+          "text": "### Niet alle veertig hebben hun baan verloren"
+        },
+        {
+          "line": 44,
+          "text": "### Het loon per uur en de totale uitbetaling"
+        },
+        {
+          "line": 58,
+          "text": "### Geen algemene voorspelling over de werkelijkheid"
+        },
+        {
+          "line": 64,
+          "text": "## Uitgewerkt voorbeeld"
+        },
+        {
+          "line": 68,
+          "text": "### 1 · Bereken het vrije evenwicht en toets de ondergrens"
+        },
+        {
+          "line": 72,
+          "text": "### 2 · Bereken beide hoeveelheden en de werkgelegenheid"
+        },
+        {
+          "line": 77,
+          "text": "### 3 · Vergelijk de loonsommen"
+        },
+        {
+          "line": 82,
+          "text": "### 4 · Leg de verdeling uit"
+        },
+        {
+          "line": 90,
+          "text": "## Startopgaven"
+        },
+        {
+          "line": 100,
+          "text": "## Begeleide inoefening"
+        },
+        {
+          "line": 118,
+          "text": "## Zelfstandige oefening"
+        },
+        {
+          "line": 126,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 134,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 140,
+          "text": "## Herhaling / Herhaling en interleaving"
+        }
+      ],
+      "short_route_boxes": 1,
+      "guided_skip_notes": 2
+    },
+    {
+      "paragraph": "4.3.5",
+      "kind": "mixed",
+      "source": "edities/books34-v3/books/book-4/chapters/4.3/4.3.5 manuscript.md",
+      "baseline_sha256": "701235d7ec86b72d7bb32db08b1845c97f43c9accf46e0fe14bb629d12de96a1",
+      "stage_exercises": {
+        "Doeloefening": [
+          "40"
+        ],
+        "Denkertje / Bonusopgave": [
+          "41"
+        ]
+      },
+      "headings": [
+        {
+          "line": 7,
+          "text": "# Vier bouwstenen combineren"
+        },
+        {
+          "line": 17,
+          "text": "### Begin met de relevante gegevens"
+        },
+        {
+          "line": 20,
+          "text": "### Van berekening naar conclusie"
+        },
+        {
+          "line": 28,
+          "text": "# Kies zelf de juiste aanpak"
+        },
+        {
+          "line": 36,
+          "text": "## Gemengde oefening"
+        },
+        {
+          "line": 52,
+          "text": "## Doeloefening"
+        },
+        {
+          "line": 54,
+          "text": "### Bronnen bij opgave 40 · Werk in Havenregio"
+        },
+        {
+          "line": 75,
+          "text": "## Denkertje / Bonusopgave"
+        },
+        {
+          "line": 79,
+          "text": "### Dit kun je nu zelf controleren"
+        }
+      ],
+      "short_route_boxes": 0,
+      "guided_skip_notes": 0
+    }
+  ],
+  "books34_original_routes": {
+    "3.1.1": {
+      "start": "1–2",
+      "independent": "5–6",
+      "guided_or_alternative": "3–4",
+      "target": "7",
+      "target_subquestions": [
+        "7a",
+        "7b",
+        "7c",
+        "7d",
+        "7e"
+      ],
+      "minutes": {
+        "Start / ophalen": 6,
+        "Motivatie": 2,
+        "Instructie": 10,
+        "Uitgewerkt voorbeeld": 8,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 12,
+        "Doeloefening": 12,
+        "Feedback / afronding": 3
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Zonder maatregel één prijs; na de heffing twee prijzen bij dezelfde hoeveelheid. Leid het aanbod in kopersprijzen expliciet af.",
+      "assessment_boundaries": "Afdragen is niet hetzelfde als dragen. Pp is een ontvangst vóór productiekosten, geen winst."
+    },
+    "3.1.2": {
+      "start": "10–11",
+      "independent": "14–15",
+      "guided_or_alternative": "12–13",
+      "target": "16",
+      "target_subquestions": [
+        "16a",
+        "16b",
+        "16c",
+        "16d",
+        "16e"
+      ],
+      "minutes": null,
+      "total_minutes": null,
+      "one_lesson_status": "open_existing_timing_conflict",
+      "instruction_focus": "Behandel last per stuk, belastingopbrengst en verloren surplus afzonderlijk. De gecontroleerde prijsgevoeligheidsvergelijking hoort vóór zelfstandig werk.",
+      "assessment_boundaries": "De daling van CS + PS is niet geheel welvaartsverlies. O hoort bij verkochte eenheden; de verliesdriehoek bij weggevallen transacties."
+    },
+    "3.1.3": {
+      "start": "19–20",
+      "independent": "23–24",
+      "guided_or_alternative": "21–22; zo nodig 22A",
+      "target": "25",
+      "target_subquestions": [
+        "25a",
+        "25b",
+        "25c",
+        "25d",
+        "25e"
+      ],
+      "minutes": null,
+      "total_minutes": null,
+      "one_lesson_status": "open_existing_timing_conflict",
+      "instruction_focus": "Hergebruik de wig met omgekeerde richting. Maak de begrotingsrekening en de volledige welvaartsmaat zichtbaar vóór de target.",
+      "assessment_boundaries": "Betaal de subsidie over alle subsidiabele verkopen. Deze eerste analyse kent geen externe baten; die aanname verandert pas in §4.2.5."
+    },
+    "3.1.4": {
+      "start": "28–29",
+      "independent": "32–33",
+      "guided_or_alternative": "30–31",
+      "target": "34",
+      "target_subquestions": [
+        "34a",
+        "34b",
+        "34c",
+        "34d",
+        "34e"
+      ],
+      "minutes": {
+        "Start / ophalen": 6,
+        "Motivatie": 2,
+        "Instructie": 9,
+        "Uitgewerkt voorbeeld": 7,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 13,
+        "Doeloefening": 13,
+        "Feedback / afronding": 3
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Controleer eerst of de maximumprijs bindt. Onderscheid gewenste vraag, aanbod en feitelijke verkoop.",
+      "assessment_boundaries": "Een lage toegestane prijs garandeert geen toegang. De bron bepaalt welke kopers het product krijgen; geef geen extra welvaartsrekening als eis."
+    },
+    "3.1.5": {
+      "start": "37–38",
+      "independent": "41–42",
+      "guided_or_alternative": "39–40; 40A vóór de quotumvergelijking",
+      "target": "43",
+      "target_subquestions": [
+        "43a",
+        "43b",
+        "43c",
+        "43d",
+        "43e"
+      ],
+      "minutes": null,
+      "total_minutes": null,
+      "one_lesson_status": "open_existing_timing_conflict",
+      "instruction_focus": "Behandel minimumprijs, opkoopregel en productiequotum als onderscheiden regelingen. Het quotum vervangt in de vergelijking de gehele prijs- en opkoopregeling.",
+      "assessment_boundaries": "Een minimumprijs bevat niet vanzelf een aankoopbelofte. Lees bij een bindend productiequotum de prijs van de vraaglijn af."
+    },
+    "3.1.6": {
+      "start": "46",
+      "independent": "47",
+      "guided_or_alternative": "47A als gerichte vervanging of later herstel",
+      "target": "48",
+      "target_subquestions": [
+        "48a",
+        "48b",
+        "48c",
+        "48d",
+        "48e",
+        "48f"
+      ],
+      "minutes": {
+        "Start / ophalen": 8,
+        "Motivatie": 0,
+        "Instructie": 4,
+        "Uitgewerkt voorbeeld": 0,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 10,
+        "Doeloefening": 25,
+        "Feedback / afronding": 6
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Laat leerlingen het instrument kiezen uit de bron; geef de methode niet vooraf per deelvraag weg. Opgave 47A komt niet boven op de kern.",
+      "assessment_boundaries": "Vraag bij fouten welke hoeveelheid wordt belast, gesubsidieerd, gekocht of verhandeld. De bron rechtvaardigt geen volledige welvaartsrangschikking van beide plannen."
+    },
+    "3.2.1": {
+      "start": "1–2",
+      "independent": "5–6",
+      "guided_or_alternative": "3–4",
+      "target": "7",
+      "target_subquestions": [
+        "7a",
+        "7b",
+        "7c",
+        "7d",
+        "7e"
+      ],
+      "minutes": {
+        "Start / ophalen": 6,
+        "Motivatie": 2,
+        "Instructie": 10,
+        "Uitgewerkt voorbeeld": 7,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 12,
+        "Doeloefening": 12,
+        "Feedback / afronding": 4
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Verbind de prijs in de marktgrafiek met de horizontale opbrengstlijn van één onderneming. Laat Q en q steeds benoemen.",
+      "assessment_boundaries": "Vrije toetreding mag als kenmerk worden genoemd, maar het formele langetermijnmechanisme is geen Boek 3-toetsdoel meer. Een horizontale firmalijn is geen horizontale marktvraag."
+    },
+    "3.2.2": {
+      "start": "11–12",
+      "independent": "15–16",
+      "guided_or_alternative": "13–14",
+      "target": "17",
+      "target_subquestions": [
+        "17a",
+        "17b",
+        "17c",
+        "17d",
+        "17e"
+      ],
+      "minutes": {
+        "Start / ophalen": 5,
+        "Motivatie": 2,
+        "Instructie": 11,
+        "Uitgewerkt voorbeeld": 8,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 12,
+        "Doeloefening": 12,
+        "Feedback / afronding": 3
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Nieuwe afzonderlijke les: totale kosten → afgeleide → marginale kosten op een punt. Vergelijk pas daarna met gemiddelde extra kosten over een eindige tabelstap.",
+      "assessment_boundaries": "Differentieer alleen aq² + bq + c. De afgeleide van de constante is nul, maar die kosten verdwijnen niet uit TK. Hier nog geen productieoptimum of winstrechthoek als einddoel."
+    },
+    "3.2.3": {
+      "start": "20–21",
+      "independent": "25a–d en 26a–b",
+      "guided_or_alternative": "22–24; vervang vergelijkbare tussenstappen",
+      "target": "27",
+      "target_subquestions": [
+        "27a",
+        "27b",
+        "27c",
+        "27d",
+        "27e",
+        "27f"
+      ],
+      "minutes": {
+        "Start / ophalen": 5,
+        "Motivatie": 2,
+        "Instructie": 9,
+        "Uitgewerkt voorbeeld": 7,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 13,
+        "Doeloefening": 14,
+        "Feedback / afronding": 3
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "De afgeleide is opgehaalde voorkennis uit §3.2.2. Nieuw is de economische keuze: marginale vergelijking, haalbaarheid en winst bij dezelfde q.",
+      "assessment_boundaries": "Beoordeel beide kanten van MO = MK en de capaciteit. Een positief winstbedrag bewijst niet dat extra productie gunstig is. Gebruik GTK pas ná de keuze van q."
+    },
+    "3.2.4": {
+      "start": "31a–c",
+      "independent": "33a–b en 34a",
+      "guided_or_alternative": "32 als vervangende oefening bij fouten met GTK",
+      "target": "35",
+      "target_subquestions": [
+        "35a",
+        "35b",
+        "35c",
+        "35d",
+        "35e"
+      ],
+      "minutes": {
+        "Start / ophalen": 8,
+        "Motivatie": 0,
+        "Instructie": 4,
+        "Uitgewerkt voorbeeld": 0,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 10,
+        "Doeloefening": 25,
+        "Feedback / afronding": 6
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "De target vergelijkt twee korte-termijnmomenten. Het aantal bedrijven en de kostentechniek blijven in het onderzochte tijdvak gelijk.",
+      "assessment_boundaries": "Geen vragen over toetreding, langetermijnprijs of normale ondernemersbeloning toevoegen. De nulwinst in de beginsituatie is hier een rekenuitkomst, geen nieuw langetermijnresultaat."
+    },
+    "3.3.1": {
+      "start": "1–2",
+      "independent": "5–6",
+      "guided_or_alternative": "3–4",
+      "target": "7",
+      "target_subquestions": [
+        "7a",
+        "7b",
+        "7c",
+        "7d",
+        "7e"
+      ],
+      "minutes": {
+        "Start / ophalen": 6,
+        "Motivatie": 2,
+        "Instructie": 10,
+        "Uitgewerkt voorbeeld": 7,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 12,
+        "Doeloefening": 12,
+        "Feedback / afronding": 4
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Vraag een verklaring van relatief minder opofferen, ook wanneer hetzelfde land in beide activiteiten productiever is.",
+      "assessment_boundaries": "Geen productie- of specialisatietabellen met berekende comparatieve kosten. Productiviteit en concurrentiepositie blijven kwalitatief en brongebonden."
+    },
+    "3.3.2": {
+      "start": "11–12",
+      "independent": "15–16",
+      "guided_or_alternative": "13–14",
+      "target": "17",
+      "target_subquestions": [
+        "17a",
+        "17b",
+        "17c",
+        "17d",
+        "17e"
+      ],
+      "minutes": {
+        "Start / ophalen": 6,
+        "Motivatie": 2,
+        "Instructie": 10,
+        "Uitgewerkt voorbeeld": 7,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 12,
+        "Doeloefening": 12,
+        "Feedback / afronding": 4
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Gebruik de opgegeven wereldprijs; onderscheid binnenlandse productie, consumptie en handelsstroom. Behandel ook de omgekeerde exportrichting.",
+      "assessment_boundaries": "Binnenlandse vraag is niet binnenlandse productie. De kleine-landaanname en de voorwaarden voor buitenlandse handel staan in de bron; geen nieuwe wisselkoersrekening."
+    },
+    "3.3.3": {
+      "start": "21–22",
+      "independent": "25–26",
+      "guided_or_alternative": "23–24",
+      "target": "27",
+      "target_subquestions": [
+        "27a",
+        "27b",
+        "27c",
+        "27d",
+        "27e"
+      ],
+      "minutes": {
+        "Start / ophalen": 6,
+        "Motivatie": 2,
+        "Instructie": 10,
+        "Uitgewerkt voorbeeld": 7,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 12,
+        "Doeloefening": 12,
+        "Feedback / afronding": 4
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Bereken heffingsopbrengst over de resterende import. Leer de grens met geen import met het meegeleverde contrast.",
+      "assessment_boundaries": "Wereldprijs plus heffing mag niet mechanisch worden gebruikt nadat de import verdwijnt. Een gratis importvergunning brengt niet automatisch geld in de overheidskas."
+    },
+    "3.3.4": {
+      "start": "31",
+      "independent": "32 of 33 (kies één)",
+      "guided_or_alternative": "34 als aanvullende consolidatie",
+      "target": "35",
+      "target_subquestions": [
+        "35a",
+        "35b",
+        "35c",
+        "35d",
+        "35e",
+        "35f"
+      ],
+      "minutes": {
+        "Start / ophalen": 8,
+        "Motivatie": 0,
+        "Instructie": 4,
+        "Uitgewerkt voorbeeld": 0,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 10,
+        "Doeloefening": 25,
+        "Feedback / afronding": 6
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Behoud de brongeleide handelsconclusie. Afsluitende herhaling 38b vraagt nu een korte-termijnproductieadvies, niet het verplaatste toetredingsmechanisme.",
+      "assessment_boundaries": "Opmerkingen over banen blijven gewone bronredenering; geen arbeidsmarktformules als voorkennis. Boek 4 begint nu met langetermijnaanpassing en daarna monopolie."
+    },
+    "4.1.1": {
+      "start": "1–2",
+      "independent": "5a–c en 6b",
+      "guided_or_alternative": "3–4",
+      "target": "7",
+      "target_subquestions": [
+        "7a",
+        "7b",
+        "7c",
+        "7d",
+        "7e"
+      ],
+      "minutes": {
+        "Start / ophalen": 6,
+        "Motivatie": 2,
+        "Instructie": 10,
+        "Uitgewerkt voorbeeld": 7,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 11,
+        "Doeloefening": 13,
+        "Feedback / afronding": 4
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Verplaatst uit voormalig §3.2.3. Herstel binnen het startwerk de firmaberekening; voeg geen aparte recaples toe. Introduceer normale beloning en economische winst hier.",
+      "assessment_boundaries": "Het nulwinstresultaat geldt bij de genoemde vrije toe-/uittreding en onveranderde kosten. Nul economische winst is niet nul omzet of geen ondernemersbeloning. Verlies betekent niet automatisch onmiddellijk stilleggen."
+    },
+    "4.1.2": {
+      "start": "11–12",
+      "independent": "16–17",
+      "guided_or_alternative": "13–15",
+      "target": "18",
+      "target_subquestions": [
+        "18a",
+        "18b",
+        "18c",
+        "18d",
+        "18e"
+      ],
+      "minutes": {
+        "Start / ophalen": 6,
+        "Motivatie": 2,
+        "Instructie": 10,
+        "Uitgewerkt voorbeeld": 7,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 12,
+        "Doeloefening": 12,
+        "Feedback / afronding": 4
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Gebruik §4.1.1 als contrast: vrije toetreding tegenover een expliciete barrière. Laat zien dat de monopolist prijs en afzet niet onafhankelijk kiest.",
+      "assessment_boundaries": "Een merk of een foto van één winkel bewijst geen monopolie. Begrens de markt en noem de barrière uit de bron; alleenrecht betekent geen onbeperkte prijszetting."
+    },
+    "4.1.3": {
+      "start": "21–22",
+      "independent": "26a–c en 27a–b",
+      "guided_or_alternative": "23–25",
+      "target": "28",
+      "target_subquestions": [
+        "28a",
+        "28b",
+        "28c",
+        "28d",
+        "28e"
+      ],
+      "minutes": {
+        "Start / ophalen": 5,
+        "Motivatie": 2,
+        "Instructie": 10,
+        "Uitgewerkt voorbeeld": 8,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 11,
+        "Doeloefening": 14,
+        "Feedback / afronding": 3
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Hergebruik differentiatie uit §3.2.2. Leg het verlies op eerder verkochte eenheden uit vóór de algemene conclusie MO < P.",
+      "assessment_boundaries": "Bij uniforme prijs verandert ook de opbrengst van bestaande verkopen. Vergelijk een tabelgemiddelde niet alsof het dezelfde grootheid is als MO op een punt."
+    },
+    "4.1.4": {
+      "start": "31–32",
+      "independent": "36a–c en 37a",
+      "guided_or_alternative": "33–35",
+      "target": "38",
+      "target_subquestions": [
+        "38a",
+        "38b",
+        "38c",
+        "38d",
+        "38e",
+        "38f"
+      ],
+      "minutes": {
+        "Start / ophalen": 5,
+        "Motivatie": 2,
+        "Instructie": 10,
+        "Uitgewerkt voorbeeld": 7,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 11,
+        "Doeloefening": 15,
+        "Feedback / afronding": 3
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Hergebruik de marginale keuze uit §3.2.3 en verander expliciet de prijsroute. Markeer q bij MO = MK en lees daarna P op GO.",
+      "assessment_boundaries": "P = MK is hier geen winstregel. Capaciteit, marginale richtingen en de vergelijking met q = 0 blijven nodig waar gevraagd. Monopoliewelvaart volgt in §4.2.1."
+    },
+    "4.1.5": {
+      "start": "41 en 41A",
+      "independent": "42",
+      "guided_or_alternative": "43–44 en 46–48 als aanvullende selectie",
+      "target": "45",
+      "target_subquestions": [
+        "45a",
+        "45b",
+        "45c",
+        "45d",
+        "45e",
+        "45f"
+      ],
+      "minutes": {
+        "Start / ophalen": 8,
+        "Motivatie": 0,
+        "Instructie": 4,
+        "Uitgewerkt voorbeeld": 0,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 10,
+        "Doeloefening": 25,
+        "Feedback / afronding": 6
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "41A haalt langetermijnbetekenis op zonder de bestaande target uit te breiden. KleurFix en de prijsnemer blijven twee afzonderlijke markten.",
+      "assessment_boundaries": "Dezelfde vergelijking voor q betekent geen identieke prijsroute. Laat een leerling de gebruikte lijn benoemen; voeg geen prijsdiscriminatie of nieuwe welvaartsrekening toe."
+    },
+    "4.2.1": {
+      "start": "1–2",
+      "independent": "5–6",
+      "guided_or_alternative": "3–4",
+      "target": "7",
+      "target_subquestions": [
+        "7a",
+        "7b",
+        "7c",
+        "7d",
+        "7e"
+      ],
+      "minutes": {
+        "Start / ophalen": 6,
+        "Motivatie": 2,
+        "Instructie": 9,
+        "Uitgewerkt voorbeeld": 8,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 10,
+        "Doeloefening": 15,
+        "Feedback / afronding": 3
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Haal de monopolieprocedure uit nieuwe §4.1.4 terug. Scheid overdracht op blijvende verkopen van de verloren transacties.",
+      "assessment_boundaries": "Houd de kosten en vraag vergelijkbaar. Producentensurplus is niet winst wanneer constante kosten bestaan. Een hogere producentenopbrengst bewijst geen hoger totaal surplus."
+    },
+    "4.2.2": {
+      "start": "10–11",
+      "independent": "14–15",
+      "guided_or_alternative": "12–13",
+      "target": "16",
+      "target_subquestions": [
+        "16a",
+        "16b",
+        "16c",
+        "16d",
+        "16e"
+      ],
+      "minutes": {
+        "Start / ophalen": 5,
+        "Motivatie": 2,
+        "Instructie": 9,
+        "Uitgewerkt voorbeeld": 9,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 10,
+        "Doeloefening": 15,
+        "Feedback / afronding": 3
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Optimaliseer per herkenbare groep bij gemeenschappelijke constante MK en niet-bindende gezamenlijke capaciteit. De uniforme vergelijkingsprijs is gegeven.",
+      "assessment_boundaries": "Trek gezamenlijke vaste kosten maar één keer af. Meer winst of een onveranderde totale afzet garandeert geen hoger totaal surplus; de verdeling van verkopen verandert."
+    },
+    "4.2.3": {
+      "start": "19–20",
+      "independent": "23–24",
+      "guided_or_alternative": "21–22",
+      "target": "25",
+      "target_subquestions": [
+        "25a",
+        "25b",
+        "25c",
+        "25d",
+        "25e"
+      ],
+      "minutes": {
+        "Start / ophalen": 6,
+        "Motivatie": 2,
+        "Instructie": 8,
+        "Uitgewerkt voorbeeld": 7,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 10,
+        "Doeloefening": 13,
+        "Feedback / afronding": 4
+      },
+      "total_minutes": 52,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Classificeer met bronbewijs en pas één bekende rekenroute toe in de gegeven korte-termijncasus.",
+      "assessment_boundaries": "Een dalende eigen vraag bewijst geen monopolie. Geen universele oligopolievraagfunctie, reactiecurve of spelmatrix; het gedrag van andere aanbieders is volgens het model gelijk gehouden."
+    },
+    "4.2.4": {
+      "start": "28–29",
+      "independent": "32–33",
+      "guided_or_alternative": "30–31",
+      "target": "34",
+      "target_subquestions": [
+        "34a",
+        "34b",
+        "34c",
+        "34d",
+        "34e"
+      ],
+      "minutes": null,
+      "total_minutes": null,
+      "one_lesson_status": "open_existing_timing_conflict",
+      "instruction_focus": "Introduceer de derde partij en de maatschappelijke kostengrens vóór de heffing. Hergebruik de belastingroute en tel de externe schade afzonderlijk mee.",
+      "assessment_boundaries": "CS + PS + overheidsontvangsten − schade is hier de relevante maat. Belasting is een overdracht, schade niet. De verliesdriehoek en onafhankelijke voorbereiding mogen niet verdwijnen om tijd te winnen."
+    },
+    "4.2.5": {
+      "start": "37–38",
+      "independent": "41–42",
+      "guided_or_alternative": "39–40",
+      "target": "43",
+      "target_subquestions": [
+        "43a",
+        "43b",
+        "43c",
+        "43d",
+        "43e"
+      ],
+      "minutes": null,
+      "total_minutes": null,
+      "one_lesson_status": "open_existing_timing_conflict",
+      "instruction_focus": "Introduceer baten voor anderen en verbind ze met de bekende subsidie. Houd eigen voordeel en extern voordeel uit elkaar.",
+      "assessment_boundaries": "Tel uitgaven af en externe baten op; ze vallen alleen numeriek weg bij bijzondere gegeven bedragen. Behoud het oefencontrast met ongelijke subsidie en externe bate."
+    },
+    "4.2.6": {
+      "start": "46–47",
+      "independent": "50–51",
+      "guided_or_alternative": "48–49",
+      "target": "52",
+      "target_subquestions": [
+        "52a",
+        "52b",
+        "52c",
+        "52d",
+        "52e"
+      ],
+      "minutes": {
+        "Start / ophalen": 5,
+        "Motivatie": 2,
+        "Instructie": 8,
+        "Uitgewerkt voorbeeld": 8,
+        "Overgang / samenvatting": 3,
+        "Zelfstandig": 11,
+        "Doeloefening": 15,
+        "Feedback / afronding": 3
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Beoordeel twee bekende instrumenten aan de hand van één expliciet criterium en de bron. Dit is niet een nieuwe behandeling van ieder instrument.",
+      "assessment_boundaries": "Uitvoeringskosten gebruiken middelen en zijn geen gewone overdracht. Een verdelingsvoorkeur van producenten is niet automatisch de maatschappelijke efficiëntie-uitkomst."
+    },
+    "4.2.7": {
+      "start": "55",
+      "independent": "56 of 57 (kies één)",
+      "guided_or_alternative": "59 als extra consolidatie; 60 als herhaling",
+      "target": "58",
+      "target_subquestions": [
+        "58a",
+        "58b",
+        "58c",
+        "58d",
+        "58e",
+        "58f"
+      ],
+      "minutes": {
+        "Start / ophalen": 8,
+        "Motivatie": 0,
+        "Instructie": 4,
+        "Uitgewerkt voorbeeld": 0,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 10,
+        "Doeloefening": 25,
+        "Feedback / afronding": 6
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Laat leerlingen verklaren waarom minder transacties in de ene situatie welvaartsverlies en in de andere juist winst geeft.",
+      "assessment_boundaries": "De kosten en baten van derden veranderen de maatstaf, niet de rekenregels. Houd de twee oefenmarkten uit elkaar en stel geen nieuwe beleidsvoorwaarden."
+    },
+    "4.3.1": {
+      "start": "1–2",
+      "independent": "5–6",
+      "guided_or_alternative": "3–4",
+      "target": "7",
+      "target_subquestions": [
+        "7a",
+        "7b",
+        "7c",
+        "7d"
+      ],
+      "minutes": {
+        "Start / ophalen": 5,
+        "Motivatie": 2,
+        "Instructie": 10,
+        "Uitgewerkt voorbeeld": 8,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 11,
+        "Doeloefening": 14,
+        "Feedback / afronding": 3
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Maak de rolwisseling zichtbaar: werkgevers vragen arbeid, huishoudens leveren die. Gebruik eerst uren en dezelfde tijdseenheid bij output en productiviteit.",
+      "assessment_boundaries": "Fte is niet hetzelfde als personen. Hogere productiviteit bij gelijkblijvende productie verlaagt benodigde uren; bij meer orders kan de arbeidsinzet toch groeien."
+    },
+    "4.3.2": {
+      "start": "10–11",
+      "independent": "14–15",
+      "guided_or_alternative": "12–13",
+      "target": "16",
+      "target_subquestions": [
+        "16a",
+        "16b",
+        "16c"
+      ],
+      "minutes": {
+        "Start / ophalen": 6,
+        "Motivatie": 2,
+        "Instructie": 9,
+        "Uitgewerkt voorbeeld": 8,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 11,
+        "Doeloefening": 13,
+        "Feedback / afronding": 4
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Scheid de bevolkingstelling van de aparte marktfunctie. De evenwichtsvergelijking is bekende algebra met nieuwe actoren en eenheden.",
+      "assessment_boundaries": "Bruto- en netto-participatie gebruiken de bevolkingsnoemer. Een gemeten beroepsbevolking is geen aanbodlijn bij alle lonen. Voeg niet de volledige verplaatste beleidsles toe."
+    },
+    "4.3.3": {
+      "start": "19–20",
+      "independent": "23–24",
+      "guided_or_alternative": "21–22",
+      "target": "25",
+      "target_subquestions": [
+        "25a",
+        "25b",
+        "25c"
+      ],
+      "minutes": {
+        "Start / ophalen": 6,
+        "Motivatie": 2,
+        "Instructie": 9,
+        "Uitgewerkt voorbeeld": 8,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 10,
+        "Doeloefening": 14,
+        "Feedback / afronding": 4
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Onderscheid de waargenomen werkloosheid van de uitkomst van een vereenvoudigd model. Vergelijk de gegeven vraagverschuiving bij meebewegend en vast loon.",
+      "assessment_boundaries": "Vacatures worden niet van werklozen afgetrokken. Een loonverandering is een beweging langs de ongewijzigde andere lijn. Geen output-gap- of Phillipsmodel als voorkennis."
+    },
+    "4.3.4": {
+      "start": "28–29",
+      "independent": "32–33",
+      "guided_or_alternative": "30–31",
+      "target": "34",
+      "target_subquestions": [
+        "34a",
+        "34b",
+        "34c",
+        "34d"
+      ],
+      "minutes": {
+        "Start / ophalen": 5,
+        "Motivatie": 2,
+        "Instructie": 9,
+        "Uitgewerkt voorbeeld": 8,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 11,
+        "Doeloefening": 14,
+        "Feedback / afronding": 4
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Haal de minimumprijsprocedure op en verander expliciet de loon- en arbeidseenheid. Bereken de loonsom uit daadwerkelijk betaalde werknemers en uren.",
+      "assessment_boundaries": "Het aanbodoverschot bestaat niet alleen uit mensen die hun baan verliezen. Geen overheidsaankoop van ongebruikte arbeid, geen algemene empirische voorspelling buiten de modelaannames."
+    },
+    "4.3.5": {
+      "start": "37",
+      "independent": "39",
+      "guided_or_alternative": "38 als gerichte productiviteitsherhaling",
+      "target": "40",
+      "target_subquestions": [
+        "40a",
+        "40b",
+        "40c",
+        "40d",
+        "40e",
+        "40f"
+      ],
+      "minutes": {
+        "Start / ophalen": 7,
+        "Motivatie": 0,
+        "Instructie": 4,
+        "Uitgewerkt voorbeeld": 0,
+        "Overgang / samenvatting": 2,
+        "Zelfstandig": 10,
+        "Doeloefening": 26,
+        "Feedback / afronding": 6
+      },
+      "total_minutes": 55,
+      "one_lesson_status": "designed_not_classroom_measured",
+      "instruction_focus": "Dit is de hernummerde gemengde les, niet de oude cao-les. Bron C beschrijft een werkproces; de rekentechniek komt uit §4.3.1.",
+      "assessment_boundaries": "Het minimumloon in opgave 39 vraagt geen kennis van cao’s. Het hoofdstuk behoudt participatie, werkloosheid, evenwicht, verschuivingen en productiviteit; collectieve onderhandelingen en scholingsbeleid zijn uitgesteld."
+    }
+  }
+}

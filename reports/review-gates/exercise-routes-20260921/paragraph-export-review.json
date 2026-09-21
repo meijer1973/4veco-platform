@@ -1,0 +1,500 @@
+{
+  "scope": "Read-only independent exported paragraph byte/content/pixel check; full size 72dpi PyMuPDF, exact pixels",
+  "paragraphs": [
+    {
+      "id": "2.1.1",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+      "export": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
+      "sha256": "7ba546140438ce91805e25b9a9fbc566d624c8d1d9a0ef68824410633e6dbfb3",
+      "chapter_pages": [
+        2,
+        9
+      ],
+      "verified_pages": 8
+    },
+    {
+      "id": "2.1.2",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "export": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+      "sha256": "2334b050188dda9727692a658395a5559fd360f60175eedea4de57b66a7aec45",
+      "chapter_pages": [
+        10,
+        18
+      ],
+      "verified_pages": 9
+    },
+    {
+      "id": "2.1.3",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "export": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+      "sha256": "dbcf83af115f43fdd23e196f6ddd5e8897dfadca5a9abe9f9af65ab19b5ecd78",
+      "chapter_pages": [
+        19,
+        27
+      ],
+      "verified_pages": 9
+    },
+    {
+      "id": "2.1.4",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.4 Gemengde opgaven – opgaven.md",
+      "export": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+      "sha256": "6b63f0ef28ce5a7bf5d02362b0041c405db01ebd9e22ebf1d756a0f1c466a69d",
+      "chapter_pages": [
+        29,
+        34
+      ],
+      "verified_pages": 6
+    },
+    {
+      "id": "2.2.1",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+      "export": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "sha256": "39dbdafe7b04c7b28eb88161b68a0e34c0e4f4644478f24191050fd28bcca8a7",
+      "chapter_pages": [
+        2,
+        9
+      ],
+      "verified_pages": 8
+    },
+    {
+      "id": "2.2.2",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "export": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf",
+      "sha256": "7d8e2ba174a5a3504a1ed21765a626fe3fcc0639a24c01f57e10ed300340c125",
+      "chapter_pages": [
+        10,
+        17
+      ],
+      "verified_pages": 8
+    },
+    {
+      "id": "2.2.3",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "export": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.pdf",
+      "sha256": "f1b4ab749ba4b2b2b77c93a512a3788a329f09372a3087aa269dd53ac16f0a14",
+      "chapter_pages": [
+        18,
+        29
+      ],
+      "verified_pages": 12
+    },
+    {
+      "id": "2.2.4",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.4 Gemengde opgaven – opgaven.md",
+      "export": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/paragrafen/2.2.4 Gemengde opgaven/2.2.4 Gemengde opgaven – opgaven.pdf",
+      "sha256": "ad768b9726ea7c872c2cab73bac9f269ebb3bb2581528dc7bb2cbc40d584935d",
+      "chapter_pages": [
+        30,
+        35
+      ],
+      "verified_pages": 6
+    },
+    {
+      "id": "2.3.1",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "export": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – paragraaf.pdf",
+      "sha256": "e6c8131fecf06828e8771805e4437c8ca99625c6d28b7e49ea2f600e65f625ec",
+      "chapter_pages": [
+        2,
+        9
+      ],
+      "verified_pages": 8
+    },
+    {
+      "id": "2.3.2",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "export": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – paragraaf.pdf",
+      "sha256": "2f8954815f5291ac216297c740948382b0c76b4a8d74d2bd13c5c0c35501e9d4",
+      "chapter_pages": [
+        10,
+        19
+      ],
+      "verified_pages": 10
+    },
+    {
+      "id": "2.3.3",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "export": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.pdf",
+      "sha256": "717fc280608b09c538909bd6f7fdc31dd876b8a93518d02f8efd3e3cc30dd1d7",
+      "chapter_pages": [
+        20,
+        30
+      ],
+      "verified_pages": 11
+    },
+    {
+      "id": "2.3.4",
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.4 Gemengde opgaven – opgaven.md",
+      "export": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – opgaven.pdf",
+      "sha256": "e377762ae4a620a28c304b9e0f18412d6df0015fd0ca601633bf0284bc5fc9d6",
+      "chapter_pages": [
+        31,
+        36
+      ],
+      "verified_pages": 6
+    },
+    {
+      "id": "3.1.1",
+      "source": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1-leerling-v3.pdf",
+      "sha256": "7a792264c9c017e7af64ff4b63486b14ece746303eb1d62974fab38e3eacc3df",
+      "chapter_pages": [
+        2,
+        9
+      ],
+      "verified_pages": 8
+    },
+    {
+      "id": "3.1.2",
+      "source": "edities/books34-v3/books/book-3/chapters/3.1/3.1.2 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.2-leerling-v3.pdf",
+      "sha256": "f14838984aa55432f9423e3f54677050211e4e59fc75d246c31ebac0b3ecf1d9",
+      "chapter_pages": [
+        10,
+        18
+      ],
+      "verified_pages": 9
+    },
+    {
+      "id": "3.1.3",
+      "source": "edities/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.3-leerling-v3.pdf",
+      "sha256": "250d394729e5c96899546874350a04c2e2fb0a7ba38d60a68a601cf4f1efbd53",
+      "chapter_pages": [
+        19,
+        27
+      ],
+      "verified_pages": 9
+    },
+    {
+      "id": "3.1.4",
+      "source": "edities/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.4-leerling-v3.pdf",
+      "sha256": "4ede1028a73dba4a9a469b6c99f5693fe948efd92020949c14c04354b03c69b6",
+      "chapter_pages": [
+        28,
+        34
+      ],
+      "verified_pages": 7
+    },
+    {
+      "id": "3.1.5",
+      "source": "edities/books34-v3/books/book-3/chapters/3.1/3.1.5 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.5-leerling-v3.pdf",
+      "sha256": "bb62ab5558d5ed7a0f73ca2db8c21e6b1a0b6337349beff0ce8de1ea61c74868",
+      "chapter_pages": [
+        35,
+        43
+      ],
+      "verified_pages": 9
+    },
+    {
+      "id": "3.1.6",
+      "source": "edities/books34-v3/books/book-3/chapters/3.1/3.1.6 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.6-leerling-v3.pdf",
+      "sha256": "ae0b2d4d20ab254df5578b838daa6d440d7903b412dc50d525de783c1ce8f840",
+      "chapter_pages": [
+        44,
+        47
+      ],
+      "verified_pages": 4
+    },
+    {
+      "id": "3.2.1",
+      "source": "edities/books34-v3/books/book-3/chapters/3.2/3.2.1 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.1-leerling-v3.pdf",
+      "sha256": "22a5f842245b803b12160ef91725a7b9c7335e1c0c3a62f4908cc3ba41ca90c7",
+      "chapter_pages": [
+        2,
+        9
+      ],
+      "verified_pages": 8
+    },
+    {
+      "id": "3.2.2",
+      "source": "edities/books34-v3/books/book-3/chapters/3.2/3.2.2 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.2-leerling-v3.pdf",
+      "sha256": "6da4c9a9c4b3ca1c06994df59eeac3347780e8e5fd1762c7a725fab24db6d1dc",
+      "chapter_pages": [
+        10,
+        16
+      ],
+      "verified_pages": 7
+    },
+    {
+      "id": "3.2.3",
+      "source": "edities/books34-v3/books/book-3/chapters/3.2/3.2.3 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.3-leerling-v3.pdf",
+      "sha256": "4ad819e25ab91229c0053d20050e47c94f67c0255867b3a12bac0f74bf9b86b7",
+      "chapter_pages": [
+        17,
+        26
+      ],
+      "verified_pages": 10
+    },
+    {
+      "id": "3.2.4",
+      "source": "edities/books34-v3/books/book-3/chapters/3.2/3.2.4 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.2/paragraph-pdfs/3.2.4-leerling-v3.pdf",
+      "sha256": "ad67117672255fa3c00d990c605cc038d5746fde32cbae4c6366a629c8ad1476",
+      "chapter_pages": [
+        27,
+        32
+      ],
+      "verified_pages": 6
+    },
+    {
+      "id": "3.3.1",
+      "source": "edities/books34-v3/books/book-3/chapters/3.3/3.3.1 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.1-leerling-v3.pdf",
+      "sha256": "c91ab3d670f802ef01b89ffb6c7a4c262c312114fe22ad05a4839fa9c0135bd0",
+      "chapter_pages": [
+        2,
+        10
+      ],
+      "verified_pages": 9
+    },
+    {
+      "id": "3.3.2",
+      "source": "edities/books34-v3/books/book-3/chapters/3.3/3.3.2 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.2-leerling-v3.pdf",
+      "sha256": "0ed4140d7a7109256edc1e93cf75a849777640d5a02a2c78e03ecb94f0df90d0",
+      "chapter_pages": [
+        11,
+        20
+      ],
+      "verified_pages": 10
+    },
+    {
+      "id": "3.3.3",
+      "source": "edities/books34-v3/books/book-3/chapters/3.3/3.3.3 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.3-leerling-v3.pdf",
+      "sha256": "a1959ce605eeb7a9f906279ccb3530d4e838783cab82a2eb369edd48052c7bf7",
+      "chapter_pages": [
+        21,
+        30
+      ],
+      "verified_pages": 10
+    },
+    {
+      "id": "3.3.4",
+      "source": "edities/books34-v3/books/book-3/chapters/3.3/3.3.4 manuscript.md",
+      "export": "edities/books34-v3/books/book-3/chapters/3.3/paragraph-pdfs/3.3.4-leerling-v3.pdf",
+      "sha256": "260bec9bd486695d1cb433b96d2f547f920f1fe1f70fe2e7336377a76ad78f55",
+      "chapter_pages": [
+        31,
+        37
+      ],
+      "verified_pages": 7
+    },
+    {
+      "id": "4.1.1",
+      "source": "edities/books34-v3/books/book-4/chapters/4.1/4.1.1 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.1-leerling-v3.pdf",
+      "sha256": "e71fb0a6af8c9e2ec443363fbdbb20ff90bc3b98afdecd94485f15ea0eefdf6c",
+      "chapter_pages": [
+        3,
+        11
+      ],
+      "verified_pages": 9
+    },
+    {
+      "id": "4.1.2",
+      "source": "edities/books34-v3/books/book-4/chapters/4.1/4.1.2 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.2-leerling-v3.pdf",
+      "sha256": "4a18f6419d37fd6b611bc200b6bd8cf655ac488480d8becde626bb4db68463d0",
+      "chapter_pages": [
+        12,
+        19
+      ],
+      "verified_pages": 8
+    },
+    {
+      "id": "4.1.3",
+      "source": "edities/books34-v3/books/book-4/chapters/4.1/4.1.3 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.3-leerling-v3.pdf",
+      "sha256": "5d464b9480e6bbd0c885eea288eb0b3ad7fc642889e49f7c51d39048d87f94f1",
+      "chapter_pages": [
+        20,
+        30
+      ],
+      "verified_pages": 11
+    },
+    {
+      "id": "4.1.4",
+      "source": "edities/books34-v3/books/book-4/chapters/4.1/4.1.4 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.4-leerling-v3.pdf",
+      "sha256": "61c72e85d9e4d0ce8652958e454b87bf564136f6b66171cdeb9821c207c2a810",
+      "chapter_pages": [
+        31,
+        41
+      ],
+      "verified_pages": 11
+    },
+    {
+      "id": "4.1.5",
+      "source": "edities/books34-v3/books/book-4/chapters/4.1/4.1.5 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.1/paragraph-pdfs/4.1.5-leerling-v3.pdf",
+      "sha256": "330ce20a782829db940dac42a6f0cd1cf69b5c10258b4dec7b09ad6f79f384ef",
+      "chapter_pages": [
+        42,
+        46
+      ],
+      "verified_pages": 5
+    },
+    {
+      "id": "4.2.1",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.1 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.1-leerling-v3.pdf",
+      "sha256": "a3d4d9a7990bdad742ca72930d292e1e823cf4f2b18392418bca5a572560dbeb",
+      "chapter_pages": [
+        3,
+        10
+      ],
+      "verified_pages": 8
+    },
+    {
+      "id": "4.2.2",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.2 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.2-leerling-v3.pdf",
+      "sha256": "6da7dee1662c30377875f090c4ebec18e6c618b59175a7fbd3b100009612c494",
+      "chapter_pages": [
+        11,
+        18
+      ],
+      "verified_pages": 8
+    },
+    {
+      "id": "4.2.3",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.3 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.3-leerling-v3.pdf",
+      "sha256": "9dd8507f3e9a9878049d1890b971aaaa380f718eb3071591e237ca2ec9f66f13",
+      "chapter_pages": [
+        19,
+        24
+      ],
+      "verified_pages": 6
+    },
+    {
+      "id": "4.2.4",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.4 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.4-leerling-v3.pdf",
+      "sha256": "a2f2ab43b9fb015c36bffd5ac54ff22546fc7f4d2a44bcd13ce46f0e04f83cb3",
+      "chapter_pages": [
+        25,
+        35
+      ],
+      "verified_pages": 11
+    },
+    {
+      "id": "4.2.5",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.5 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.5-leerling-v3.pdf",
+      "sha256": "f638803f979a6e7323ec5fc98a62a706952a4b1a20f270ab85348f91774b6df3",
+      "chapter_pages": [
+        36,
+        46
+      ],
+      "verified_pages": 11
+    },
+    {
+      "id": "4.2.6",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.6 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.6-leerling-v3.pdf",
+      "sha256": "336cd54fd6cd6e74340655907ba31b39cf5e2cddfac3999dc5a3bee0dce795f4",
+      "chapter_pages": [
+        47,
+        52
+      ],
+      "verified_pages": 6
+    },
+    {
+      "id": "4.2.7",
+      "source": "edities/books34-v3/books/book-4/chapters/4.2/4.2.7 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.2/paragraph-pdfs/4.2.7-leerling-v3.pdf",
+      "sha256": "8ed7ca68f1c67082e885602e633ff1ebd10674f23b511e617e44a3ccc379b7fe",
+      "chapter_pages": [
+        53,
+        58
+      ],
+      "verified_pages": 6
+    },
+    {
+      "id": "4.3.1",
+      "source": "edities/books34-v3/books/book-4/chapters/4.3/4.3.1 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.1-leerling-v3.pdf",
+      "sha256": "876baaa93e59d9bae6b7cfd3b164a85863ed9bcd2ec83abc49cf459f5b5f210c",
+      "chapter_pages": [
+        2,
+        11
+      ],
+      "verified_pages": 10
+    },
+    {
+      "id": "4.3.2",
+      "source": "edities/books34-v3/books/book-4/chapters/4.3/4.3.2 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.2-leerling-v3.pdf",
+      "sha256": "372f0b5e3d7083e0e2ce0181980f0d5dbc271a3eb6db43ca6c04a0c258374e80",
+      "chapter_pages": [
+        12,
+        19
+      ],
+      "verified_pages": 8
+    },
+    {
+      "id": "4.3.3",
+      "source": "edities/books34-v3/books/book-4/chapters/4.3/4.3.3 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.3-leerling-v3.pdf",
+      "sha256": "c83b0a103c04c0113ba801038b7b8c11af298e95d1c9dfbf9d4a042e86185bef",
+      "chapter_pages": [
+        20,
+        28
+      ],
+      "verified_pages": 9
+    },
+    {
+      "id": "4.3.4",
+      "source": "edities/books34-v3/books/book-4/chapters/4.3/4.3.4 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.4-leerling-v3.pdf",
+      "sha256": "adb23656a43149938f5d00e012a3028d30873d1f53278e2840429e1a583276fb",
+      "chapter_pages": [
+        29,
+        36
+      ],
+      "verified_pages": 8
+    },
+    {
+      "id": "4.3.5",
+      "source": "edities/books34-v3/books/book-4/chapters/4.3/4.3.5 manuscript.md",
+      "export": "edities/books34-v3/books/book-4/chapters/4.3/paragraph-pdfs/4.3.5-leerling-v3.pdf",
+      "sha256": "46f4f11f6dbb39502f46fcfaa3ddbd7bf7a578f00d5d621368f398094618c01c",
+      "chapter_pages": [
+        37,
+        42
+      ],
+      "verified_pages": 6
+    }
+  ],
+  "h3_answer_exports_baseline_comparison": [
+    {
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.1 Consumentensurplus/2.3.1 Consumentensurplus – antwoorden.pdf",
+      "pages": 4,
+      "sha256": "0408ef12a4f38edf7e6c0392b6bdcbc92d8e77818db96a49337d489e109358e2"
+    },
+    {
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.2 Producentensurplus en totaal surplus/2.3.2 Producentensurplus en totaal surplus – antwoorden.pdf",
+      "pages": 5,
+      "sha256": "b002565cb6f9562226a944407069d14b3f3f1f863efbf9b01c5dcf43ca84f283"
+    },
+    {
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.3 Pareto-efficiëntie en welvaartsverlies/2.3.3 Pareto-efficiëntie en welvaartsverlies – antwoorden.pdf",
+      "pages": 4,
+      "sha256": "caf68336c5968ec253287b42b4ba362336f35dc2cd6b846cb2869debfb24005e"
+    },
+    {
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/paragrafen/2.3.4 Gemengde opgaven/2.3.4 Gemengde opgaven – antwoorden.pdf",
+      "pages": 4,
+      "sha256": "48a298ce036d42184f29dc2d39382749fba719c21b40288de820d4560a3f616d"
+    }
+  ]
+}

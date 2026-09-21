@@ -241,11 +241,38 @@ def contents_pdf(config: dict, bundle: dict, counts: list[int]) -> bytes:
     return output.getvalue()
 
 
-def build(root: Path) -> list[Path]:
+def revision_inputs(root: Path) -> dict:
+    """Accept an explicit, source-bound chapter revision; never repin the receipt."""
+    revision = json.loads((root / "route-chapter-inputs.json").read_text(encoding="utf-8"))
+    if revision.get("revision") != "exercise-routes-20260921":
+        raise ValueError("Unknown chapter revision")
+    config = json.loads((root / "assembly.json").read_text(encoding="utf-8"))
+    expected = {p for b in config["bundles"] for p in b["chapters"]}
+    if set(revision["chapters"]) != expected:
+        raise ValueError("Chapter revision must bind exactly the nine assembly chapters")
+    sources = revision.get("sources", [])
+    if not sources or len({r["path"] for r in sources}) != len(sources):
+        raise ValueError("Missing or duplicate chapter source bindings")
+    for record in [*sources, *revision["chapters"].values()]:
+        path = root / record["path"]
+        if not path.resolve().is_relative_to(root.resolve()) or ".." in Path(record["path"]).parts:
+            raise ValueError("Unsafe chapter revision path")
+        if file_record(root, path) != record:
+            raise ValueError(f"Stale chapter revision input: {record['path']}")
+    required = {p.relative_to(root).as_posix() for p in root.glob("bronnen/H*/manuscript/*.md")}
+    if not required.issubset({r["path"] for r in sources}):
+        raise ValueError("Chapter revision omits editable manuscripts")
+    return revision
+
+
+def build(root: Path, revised: bool = False) -> list[Path]:
     config = json.loads((root / "assembly.json").read_text(encoding="utf-8"))
     delivery = json.loads((root / "delivery-manifest.json").read_text(encoding="utf-8"))
     original = {r["path"]: r for r in delivery["files"]}
-    # These chapters are the approved assembly inputs, not newly rendered prose.
+    if revised:
+        original = revision_inputs(root)["chapters"]
+    # Default reproduction retains the historical byte check. A revision must
+    # explicitly bind new chapter inputs to the current editable sources.
     for bundle in config["bundles"]:
         for source in bundle["chapters"]:
             if file_record(root, root/source) != original[source]:
@@ -289,7 +316,10 @@ def build(root: Path) -> list[Path]:
             root/"assembly.json", root/config["cover"]["background"], *outputs,
         ]],
     }
-    (root / "repair-manifest.json").write_text(
+    if revised:
+        manifest["scope"] = "Exercise-route revision; historical delivery and repair evidence retained"
+        manifest["chapter_inputs_sha256"] = file_record(root, root/"route-chapter-inputs.json")["sha256"]
+    (root / ("route-assembly-manifest.json" if revised else "repair-manifest.json")).write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2)+"\n", encoding="utf-8", newline="\n")
     return outputs
 
@@ -298,8 +328,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--lesson-root", type=Path,
                         default=Path(__file__).resolve().parents[3]/"4veco-lessen")
+    parser.add_argument("--revised-chapters", action="store_true",
+                        help="Use source-bound route-chapter-inputs.json; preserve historical repair manifest")
     args = parser.parse_args()
-    for output in build(args.lesson_root.resolve()/EDITION):
+    for output in build(args.lesson_root.resolve()/EDITION, revised=args.revised_chapters):
         print(output)
 
 

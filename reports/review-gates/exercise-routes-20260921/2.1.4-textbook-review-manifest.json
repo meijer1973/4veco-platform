@@ -1,0 +1,806 @@
+{
+  "schema_version": "edition-paragraph-review-v1",
+  "paragraph": "2.1.4",
+  "revision": "exercise-routes-20260921",
+  "scope": "Bounded route revision only; not native paragraph-records.js closure or new target approval",
+  "baseline_lesson_commit": "e2843b47c828784ab594d004cef461cea929717f",
+  "edition_manifest_sha256": "a07127c5fe1e2595067c840608b722235188279441116c638f7e7dc7967f3b07",
+  "hash_contract": "Lesson edition files: exact bytes; platform inputs: UTF-8 with LF",
+  "platform_inputs": [
+    {
+      "path": "skills/econ-exercise-builder.md",
+      "sha256_lf": "8ca4436eb9895ea5840e09162a6aa38e5d3df68bcc021b5404b1759d1531e925"
+    },
+    {
+      "path": "build-scripts/books/build_book2_chat.py",
+      "sha256_lf": "f7d5f6e3c3e6a713fd559fa0da6557b05db062d393c8a68bb37629133ce829f3"
+    },
+    {
+      "path": "build-scripts/books/rebuild_exercise_routes.py",
+      "sha256_lf": "86617faba5a971f8fd550d5140452302ebfc0151072263b948b5fa294c369105"
+    },
+    {
+      "path": "build-scripts/books/books34_assemble.py",
+      "sha256_lf": "9eb194599519ad88496738e422a4933fe9be239082d58ac47f57242192856556"
+    },
+    {
+      "path": "build-scripts/books/books34_records.py",
+      "sha256_lf": "023bfaf1ee2c8df9af6aca1cec2df7393f49bfb5255de67e7eee095767aa8ff2"
+    },
+    {
+      "path": "build-scripts/books/books34_outlines.py",
+      "sha256_lf": "23e89b50d380e869118f1237d5c9be0b1f5ebb7dcccaaa165a72174b3a6f38b8"
+    },
+    {
+      "path": "build-scripts/books/verify_book2_chat.py",
+      "sha256_lf": "72f137d834402de6b6ea070353cbebf7ceeadc4d9f96f6d59872e9d010a96c07"
+    },
+    {
+      "path": "build-scripts/books/verify_exercise_routes.py",
+      "sha256_lf": "b22f528e88229b8220eb318ca4d514389a4243071fca18e51d3c088aa4e942b3"
+    },
+    {
+      "path": "build-scripts/books/books34_verify.py",
+      "sha256_lf": "8aa00a621a76f0cef9f09a4d6d67d50b03135a752be59f21e89afd0ed7ac034e"
+    },
+    {
+      "path": "build-scripts/books/exercise-route-revision.js",
+      "sha256_lf": "02e00501e505e9b9703867876d18acf26386e4c592ea468e49251db125de2b7b"
+    },
+    {
+      "path": "build-scripts/books/exercise-route-review.js",
+      "sha256_lf": "e648f66663d2237d16ee39bc417b751e22296be0b690960419a273e62a2f71e6"
+    },
+    {
+      "path": "build-scripts/books/requirements-exercise-routes.txt",
+      "sha256_lf": "e3be02c414ddf3088fc0521c3a62300ae52c55eddf6699036ce58313cb146500"
+    }
+  ],
+  "files": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/CORRECTIES-2026-09-20.md",
+      "bytes": 3740,
+      "sha256": "383fc1d531f7a96e9a96c16d1d025865ac0772242451cdaf4ee96bfda9c7dfa7"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/CORRECTIES-REVIEW-2026-09-20.md",
+      "bytes": 12125,
+      "sha256": "8f36c12fad498451a31e34bcfcd6068679e9b2f92c6bf1f7357766896bc22500"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/IMPORT_NOTES.md",
+      "bytes": 2503,
+      "sha256": "be4c07d9dc43f8a095fd73e2c61e7b073a4a3c81ce5c14cce4563b4f860c06ad"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/README.md",
+      "bytes": 4286,
+      "sha256": "da436fe837a3d0dfc2c088267e771c040c3a0aafbf682a2f366d1392c6c33528"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/ROUTE-REVISION-2026-09-21.md",
+      "bytes": 4172,
+      "sha256": "372747bb587786e490413d785d92ee76b4ccbdf106805f83d3709cf3c42a923d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/_assets/book2-cover-background.png",
+      "bytes": 1749422,
+      "sha256": "1ec086c2230ff1cdb070813bec38c2d0f3065af151f2fbb8acb533a0aaf5a4bf"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/_assets/economics_textbook_cover_costs_and_surplus.png",
+      "bytes": 2613451,
+      "sha256": "fe7afa54ea871d3a2c5430d934517c895dc42cfb070ca607e09e89b9c839bd3a"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/assembly.json",
+      "bytes": 3146,
+      "sha256": "20bf8b3e5fc8c566b52aef5f948caa8229ff503f3dfa57475f291d7bea030b83"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+      "bytes": 5631614,
+      "sha256": "8f0e86882fe48bcab9aa9d99c72fe9d9e5aff737e95b52efed7a66fbb8710065"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf",
+      "bytes": 4199148,
+      "sha256": "ab607d2cce956a4371097854b93246c916a91e39fdae7432730f0203e5e3bc97"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Docenteninformatie.pdf",
+      "bytes": 3359892,
+      "sha256": "7ba79cfc4c8ddb90b72a5e16e19481c5b9cf7945066a461f512f865c492b2d79"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/2.1 Kosten en opbrengsten – antwoorden.md",
+      "bytes": 40106,
+      "sha256": "380e73aa8c666604171a0fc4d52a39ce5ddde4d79175d339eae0f0051dde9eb2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/2.1 Kosten en opbrengsten – hoofdstuk.md",
+      "bytes": 59703,
+      "sha256": "5bda142eeacc30645171ace3050c4023d13af416ab26164d9533e77eb569480b"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/Docenten_en_bouwverantwoording.md",
+      "bytes": 14470,
+      "sha256": "ed69ff51ef4dc9b73d359f5560ced6a190af82f200d79fb87222d0327f082b9e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/LOCAL_REVIEW.md",
+      "bytes": 1173,
+      "sha256": "b6fb6482660b838a6ca9167542085db664a8ae7aaab40b2793aafb02d66b4b6d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/README.md",
+      "bytes": 4244,
+      "sha256": "5d7cf93cfa274edcc47e22753c5501d510f4a8b5decc4356f1a7386794c21ae4"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.1_fig_1.png",
+      "bytes": 90577,
+      "sha256": "525ab8788df4731e67c7b973b1ba667630a715f02718b981ec6b2bfcdc2c96bb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.1_fig_1.svg",
+      "bytes": 2105,
+      "sha256": "16ce702ad494f3a577e4934611ed6b09f11b535abb0581db16b56a6f9d6cb684"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.1_fig_2.png",
+      "bytes": 88089,
+      "sha256": "1b8b921629e039d4051a6466d4b39de12b0ceb79e886f053403c168d32a8af61"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.1_fig_2.svg",
+      "bytes": 11601,
+      "sha256": "d22609f290608eb92df8496df4dc6ab54b448c6d78e00257d5f04e61ac7d864c"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.1_fig_3.png",
+      "bytes": 92016,
+      "sha256": "89c105bc03e9d2559b9ea1e52561437571b74eed5aff4da5c0c15db82e4bc56d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.1_fig_3.svg",
+      "bytes": 12113,
+      "sha256": "7bac9a690d1421c4bc864f7cdaf1e1cf8d3b5e63901ccad07089fe20e3df94a3"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_ex_1.png",
+      "bytes": 91128,
+      "sha256": "21426a4cd12e91318487034279bb18b27b9ceb4448f2972551a103cbc4c15647"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_ex_1.svg",
+      "bytes": 10021,
+      "sha256": "e106ddc7b77b92c6d7425ed2b812639bcef2d019223cee7d5ebcd6ef737a39e3"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_ex_2.png",
+      "bytes": 61302,
+      "sha256": "b05880ebbf779f0a6d793f1717868486a3455d9a0751862f5a07fcce20a702a2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_ex_2.svg",
+      "bytes": 6030,
+      "sha256": "402700add3f6ef425867316889376c2618aa90727cbaecf75076a1d8d58b8601"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_ex_3.png",
+      "bytes": 94223,
+      "sha256": "ed6937cb38a070948a91286eadd7cec2a0a004a49eda594154fb6b0600c5c14c"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_ex_3.svg",
+      "bytes": 10119,
+      "sha256": "8252625ddf26f84ca0e3ac68e572bd6b6877b1baae54735dc465ab023a2d98bb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_ex_4.png",
+      "bytes": 101459,
+      "sha256": "6de4a937d498ad4b99d9261755c5e36eba5a7f87172fdfe36a6e0974e16f724b"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_ex_4.svg",
+      "bytes": 10850,
+      "sha256": "efae2fc1b09de3a3fc8e403b47faadff37f7ee2a3e1e1ea9a29fa727471088d3"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_ex_5.png",
+      "bytes": 97519,
+      "sha256": "5e6debfff5e0bd0a35b823c8778780ceb6a58e5e71b1ed7ed9cbacc3d5f4eed4"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_ex_5.svg",
+      "bytes": 10152,
+      "sha256": "70c937c42684f17eb1de6c7fc52cb6eb9a1fe1928139d640ad9ee983df03d0e7"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_fig_1.png",
+      "bytes": 52178,
+      "sha256": "2b3d1b37689ef09902fea0ba19192645188158ba0f9ce67e39bfb8baa745d534"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_fig_1.svg",
+      "bytes": 1868,
+      "sha256": "56b12190fe22f42c831415a887cc4a372726f3c59d8b0882e5320de620b49de6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_fig_2.png",
+      "bytes": 102815,
+      "sha256": "a8d2c64ca67335ec584f0cd81b1c954e6232230aab09eb7a8153a82ac6baf351"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.2_fig_2.svg",
+      "bytes": 10160,
+      "sha256": "522e6d494a75effc3559cc24d7219a660d9da11a93ef9c1fcd0d49eca1130e11"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.3_fig_1.png",
+      "bytes": 59014,
+      "sha256": "be377dce4492d5a7f7d209c7046297b28cbf49d34b8aca63c19867efa191a960"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.3_fig_1.svg",
+      "bytes": 1780,
+      "sha256": "9440b27f97c5020d4d74d6caa70055b0aa2d3e0182986e0474fe37de7ec01889"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.3_fig_2.png",
+      "bytes": 70739,
+      "sha256": "aa42dd8d673ebb2a5e9447a701001d2254e5cb8be07f4eaf90c1a6aff134e87e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.3_fig_2.svg",
+      "bytes": 6399,
+      "sha256": "58faea842073d4d7104b417ee15075a7506a8bf951b4dc15b17a7968c08bac55"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.4_ex_1.png",
+      "bytes": 88989,
+      "sha256": "bb5f18e228ebf1eb52470a346b66c048455d28a869dff1fb7409a6048736ed5f"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.4_ex_1.svg",
+      "bytes": 9034,
+      "sha256": "57f0e4916cd485873dbd39140d53a79128404e6f50b78014fb7550d282a00eff"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.4_ex_2.png",
+      "bytes": 139202,
+      "sha256": "cf74ffebe5d180ecd86a4562c9d5616dcbca8f79340cbb2c95af57731e19404f"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.4_ex_2.svg",
+      "bytes": 10493,
+      "sha256": "d69abaab8e4de3477de418ec447fa59de1ebfb71c02aafeb70e302a4ca7732ec"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.4_ex_3.png",
+      "bytes": 165833,
+      "sha256": "5fbee3b45a0f70f85fe3f60d4183417125aa59372cf81d5d3e5ce68bb75ef2c7"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.4_ex_3.svg",
+      "bytes": 11308,
+      "sha256": "9c9edcf06307a18062d0d67b2c1257adfd647a43902d115bb79897a2294cbe09"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.4_ex_4.png",
+      "bytes": 102535,
+      "sha256": "3ec8727e5ac6943510a2ed959eb5f0cbeb9840d3dad508f1755f651e865f3e19"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.4_ex_4.svg",
+      "bytes": 10301,
+      "sha256": "a228bd8bbfa16c78c88c7af74ab5113e08e90bf2c130e4c37f5974ad1e06aa58"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.4_fig_1.png",
+      "bytes": 45872,
+      "sha256": "6d1adcb689a5cbc96a75c1c3e1d9cde4c6e8eb369b9802da49b9460b7911609d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/2.1.4_fig_1.svg",
+      "bytes": 2098,
+      "sha256": "ad65ce969f6cef631e0dfb66dffeb8ace56f22d9610df230e3492d9934b70bd5"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/geometry-data.json",
+      "bytes": 205241,
+      "sha256": "0ed8487e882d0dc54eacd491f4cdd3bc9acf1ee90398742bc7e9f150db21f9f2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/build.py",
+      "bytes": 7183,
+      "sha256": "3bab0adb782e26d8d0f138f918fdb3b5659b3b2fd7190db2103738cf277d5073"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/build_answers.py",
+      "bytes": 4032,
+      "sha256": "9cc159c1e4feba6f4118faf37d3e27383c9b89f9054f585079968321da2398af"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/build_teacher.py",
+      "bytes": 994,
+      "sha256": "6d89954d3874f2002876fc0495532b85e67fbca16dfbc68ed12e2680d2471cdb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/chapter-order.json",
+      "bytes": 346,
+      "sha256": "e92dc8a6967e88f38e105517c86a64b3bfd375b51a42df76ef2ab3011ea932c2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/export_paragraphs.py",
+      "bytes": 3402,
+      "sha256": "0a19f17fac47fac837ff8a83b4ec3c6dba46b55046b2dc67fba67005d0629b62"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/make_assets.py",
+      "bytes": 12985,
+      "sha256": "6e6e8238d8e9640e764cc5f3e27274bd9e37bc013eb8141fb9c5a77bbbe7003b"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/00 Hoofdstukopening.md",
+      "bytes": 2747,
+      "sha256": "9e642cffb852fb1373f3e1900398b696d543adce7316944abe84a43ebe883673"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1 Hoofdstukoverzicht.md",
+      "bytes": 2237,
+      "sha256": "939a731a2a0473df16f2bc4aafd365af813793384315ed80d91a1048e3895aa9"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+      "bytes": 15104,
+      "sha256": "ddbe4f0ef6ed6d90c056437614e095159ec6f8573bb1d4135b546d7eb9cb577f"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "bytes": 15417,
+      "sha256": "90a07eebf169521a3b88227ae6564f6fd15dd3cdcd2ea931be1d0a6c4454e9cf"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "bytes": 16336,
+      "sha256": "43132d3abb27ddda37d22f091f8ee8ab3d287f75ed1b984a23e6cbf61e0d9325"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.4 Gemengde opgaven – opgaven.md",
+      "bytes": 10157,
+      "sha256": "124bee60e526b1ef69693637ab02198215ab83367d1ffecbca6d27640b62dbf3"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/output/Boek_2_H1_Antwoorden.html",
+      "bytes": 814851,
+      "sha256": "653aee649ebef3f06b3cc51f97568f26f4d2d051eda1a0d55bce659dc3192bba"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/output/Boek_2_H1_Antwoorden.pdf",
+      "bytes": 642726,
+      "sha256": "3db549b43e8653dfb62b584f1204ef3c5725924d2756263f940ca0382b0d2b26"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/output/Boek_2_H1_Docenteninformatie.html",
+      "bytes": 21465,
+      "sha256": "8a6c7a7a4fe73c7fb6167be87020e164d8f04c457953fddfa100da7477035cc8"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/output/Boek_2_H1_Docenteninformatie.pdf",
+      "bytes": 42763,
+      "sha256": "d1c076a4efdca20429dec35ca21fa6cf28aca262ccd9c9695a2bf9e58d033c32"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/output/Boek_2_H1_Kosten_en_opbrengsten.html",
+      "bytes": 1395797,
+      "sha256": "bea8f9fc855c8c29c276da99cff3ab6ab706221a4a45f44b28d373e378a77107"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/output/Boek_2_H1_Kosten_en_opbrengsten.pdf",
+      "bytes": 1104164,
+      "sha256": "1d1b12029ca840bfda39b9878567b8692136b915de54865fcdc5bdaa52d80756"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/output/page_map.json",
+      "bytes": 2364,
+      "sha256": "acddad3ab1cf9bd71ebaeaeb9c0821cb0824138c4368d43a5918b38311b8a83e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md",
+      "bytes": 9116,
+      "sha256": "4d7e048371bf5bddc45db398d68016a7c44f5a83fe741d843c52e68745da9ac6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf",
+      "bytes": 597909,
+      "sha256": "64395db98166af40a5d885f49478da50ee28165ddc988782be23b30b7c0ddcc2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md",
+      "bytes": 9213,
+      "sha256": "97ed9dc33b3d87bf313456b604a57f37e1c7b6b4b56646f681bd331826172f89"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
+      "bytes": 1023164,
+      "sha256": "3785d452e22d75449b91559d5ba1997c7e635fc81c1c3f3f3ceed65111fb880f"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md",
+      "bytes": 14379,
+      "sha256": "ec4db82c2a9ef097df2ec784032a7f46e3012dcf1cdb01ad871cae71acf2c018"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
+      "bytes": 1031873,
+      "sha256": "7ba546140438ce91805e25b9a9fbc566d624c8d1d9a0ef68824410633e6dbfb3"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/LEESMIJ.md",
+      "bytes": 279,
+      "sha256": "7863ce97963ecdf5ec82603f2289bfe1149f57a4d84a04d168fc802817e5fa14"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.png",
+      "bytes": 90577,
+      "sha256": "525ab8788df4731e67c7b973b1ba667630a715f02718b981ec6b2bfcdc2c96bb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/_assets/2.1.1_fig_1.svg",
+      "bytes": 2105,
+      "sha256": "16ce702ad494f3a577e4934611ed6b09f11b535abb0581db16b56a6f9d6cb684"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/_assets/2.1.1_fig_2.png",
+      "bytes": 88089,
+      "sha256": "1b8b921629e039d4051a6466d4b39de12b0ceb79e886f053403c168d32a8af61"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/_assets/2.1.1_fig_2.svg",
+      "bytes": 11601,
+      "sha256": "d22609f290608eb92df8496df4dc6ab54b448c6d78e00257d5f04e61ac7d864c"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/_assets/2.1.1_fig_3.png",
+      "bytes": 92016,
+      "sha256": "89c105bc03e9d2559b9ea1e52561437571b74eed5aff4da5c0c15db82e4bc56d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/_assets/2.1.1_fig_3.svg",
+      "bytes": 12113,
+      "sha256": "7bac9a690d1421c4bc864f7cdaf1e1cf8d3b5e63901ccad07089fe20e3df94a3"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md",
+      "bytes": 9660,
+      "sha256": "75da3391e7b68ec53a48c1c5d976acdfd657c08a7f2d9fa6e61b2e139b6d6a10"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+      "bytes": 597513,
+      "sha256": "c1c44428387bdf273948d2cc5cf9cb3b47dba091214f739108be8e0582267bfa"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md",
+      "bytes": 9251,
+      "sha256": "d5b0f930964fa4a5908221eb6b8eaa9457313041c7839ce9fd7d3ff24eda1f95"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
+      "bytes": 1022891,
+      "sha256": "cd90c82f52f5fca21327dcd4e2b948eacc0499dd5a8bc76ee6fc9bbd7aba5788"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+      "bytes": 14577,
+      "sha256": "f996ebcc1211c231283af8e8c252bd1ee4141521fab390981b9562566c9a1c64"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+      "bytes": 1031667,
+      "sha256": "2334b050188dda9727692a658395a5559fd360f60175eedea4de57b66a7aec45"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/LEESMIJ.md",
+      "bytes": 279,
+      "sha256": "7863ce97963ecdf5ec82603f2289bfe1149f57a4d84a04d168fc802817e5fa14"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_1.png",
+      "bytes": 91128,
+      "sha256": "21426a4cd12e91318487034279bb18b27b9ceb4448f2972551a103cbc4c15647"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_1.svg",
+      "bytes": 10021,
+      "sha256": "e106ddc7b77b92c6d7425ed2b812639bcef2d019223cee7d5ebcd6ef737a39e3"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_2.png",
+      "bytes": 61302,
+      "sha256": "b05880ebbf779f0a6d793f1717868486a3455d9a0751862f5a07fcce20a702a2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_2.svg",
+      "bytes": 6030,
+      "sha256": "402700add3f6ef425867316889376c2618aa90727cbaecf75076a1d8d58b8601"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_3.png",
+      "bytes": 94223,
+      "sha256": "ed6937cb38a070948a91286eadd7cec2a0a004a49eda594154fb6b0600c5c14c"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_3.svg",
+      "bytes": 10119,
+      "sha256": "8252625ddf26f84ca0e3ac68e572bd6b6877b1baae54735dc465ab023a2d98bb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_4.png",
+      "bytes": 101459,
+      "sha256": "6de4a937d498ad4b99d9261755c5e36eba5a7f87172fdfe36a6e0974e16f724b"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_4.svg",
+      "bytes": 10850,
+      "sha256": "efae2fc1b09de3a3fc8e403b47faadff37f7ee2a3e1e1ea9a29fa727471088d3"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_5.png",
+      "bytes": 97519,
+      "sha256": "5e6debfff5e0bd0a35b823c8778780ceb6a58e5e71b1ed7ed9cbacc3d5f4eed4"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_ex_5.svg",
+      "bytes": 10152,
+      "sha256": "70c937c42684f17eb1de6c7fc52cb6eb9a1fe1928139d640ad9ee983df03d0e7"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_1.png",
+      "bytes": 52178,
+      "sha256": "2b3d1b37689ef09902fea0ba19192645188158ba0f9ce67e39bfb8baa745d534"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_1.svg",
+      "bytes": 1868,
+      "sha256": "56b12190fe22f42c831415a887cc4a372726f3c59d8b0882e5320de620b49de6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_2.png",
+      "bytes": 102815,
+      "sha256": "a8d2c64ca67335ec584f0cd81b1c954e6232230aab09eb7a8153a82ac6baf351"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/_assets/2.1.2_fig_2.svg",
+      "bytes": 10160,
+      "sha256": "522e6d494a75effc3559cc24d7219a660d9da11a93ef9c1fcd0d49eca1130e11"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "bytes": 10577,
+      "sha256": "4707afc979e2bc4d3cc276d445d1a437bacc98eb5e1cb0805161d0f445366203"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+      "bytes": 602248,
+      "sha256": "4665239658ddab3c60a53de4196dc54b5e338df0e29018744bc5ea56aa76a5e4"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "bytes": 9871,
+      "sha256": "faf9b634af99e2aaaf6465ceeb4dca009eae19c01036cf3f714e506b23a1f69d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+      "bytes": 1029136,
+      "sha256": "2238cad5661bf6a2c85d2f46963dd699a6de1a34378a1cba33fd3a80f1c4f91d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "bytes": 15421,
+      "sha256": "2bcd6fffc88b314d7027fdfee5ef1fac99d0e0f1ba2d2ed1db9df977fb9a2e62"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+      "bytes": 1038329,
+      "sha256": "dbcf83af115f43fdd23e196f6ddd5e8897dfadca5a9abe9f9af65ab19b5ecd78"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/LEESMIJ.md",
+      "bytes": 279,
+      "sha256": "7863ce97963ecdf5ec82603f2289bfe1149f57a4d84a04d168fc802817e5fa14"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_1.png",
+      "bytes": 59014,
+      "sha256": "be377dce4492d5a7f7d209c7046297b28cbf49d34b8aca63c19867efa191a960"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_1.svg",
+      "bytes": 1780,
+      "sha256": "9440b27f97c5020d4d74d6caa70055b0aa2d3e0182986e0474fe37de7ec01889"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_2.png",
+      "bytes": 70739,
+      "sha256": "aa42dd8d673ebb2a5e9447a701001d2254e5cb8be07f4eaf90c1a6aff134e87e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_2.svg",
+      "bytes": 6399,
+      "sha256": "58faea842073d4d7104b417ee15075a7506a8bf951b4dc15b17a7968c08bac55"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.md",
+      "bytes": 10753,
+      "sha256": "612e08b98822318b1a1f5639948f79a7c3f5035900252da00c43a712e44aa272"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+      "bytes": 599239,
+      "sha256": "028c8f8df00c60503ec39f07cf50c88ad4571427e7ea68462bedd9b121b5e494"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md",
+      "bytes": 9610,
+      "sha256": "608f36ea195415cc5dbc1880a298934a905438c82cf0921b19741fa7049a8ffb"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+      "bytes": 1023030,
+      "sha256": "6b63f0ef28ce5a7bf5d02362b0041c405db01ebd9e22ebf1d756a0f1c466a69d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/LEESMIJ.md",
+      "bytes": 279,
+      "sha256": "7863ce97963ecdf5ec82603f2289bfe1149f57a4d84a04d168fc802817e5fa14"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.png",
+      "bytes": 88989,
+      "sha256": "bb5f18e228ebf1eb52470a346b66c048455d28a869dff1fb7409a6048736ed5f"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_1.svg",
+      "bytes": 9034,
+      "sha256": "57f0e4916cd485873dbd39140d53a79128404e6f50b78014fb7550d282a00eff"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.png",
+      "bytes": 139202,
+      "sha256": "cf74ffebe5d180ecd86a4562c9d5616dcbca8f79340cbb2c95af57731e19404f"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_2.svg",
+      "bytes": 10493,
+      "sha256": "d69abaab8e4de3477de418ec447fa59de1ebfb71c02aafeb70e302a4ca7732ec"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.png",
+      "bytes": 165833,
+      "sha256": "5fbee3b45a0f70f85fe3f60d4183417125aa59372cf81d5d3e5ce68bb75ef2c7"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_3.svg",
+      "bytes": 11308,
+      "sha256": "9c9edcf06307a18062d0d67b2c1257adfd647a43902d115bb79897a2294cbe09"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.png",
+      "bytes": 102535,
+      "sha256": "3ec8727e5ac6943510a2ed959eb5f0cbeb9840d3dad508f1755f651e865f3e19"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/_assets/2.1.4_ex_4.svg",
+      "bytes": 10301,
+      "sha256": "a228bd8bbfa16c78c88c7af74ab5113e08e90bf2c130e4c37f5974ad1e06aa58"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragraph-exports.json",
+      "bytes": 556,
+      "sha256": "cf6c0693fd8993828a7bd80c7e7cc0769b0e14fab21d6999b719387302c974dc"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/rebuild.py",
+      "bytes": 502,
+      "sha256": "018dd620a833928a5a508dd9c57de36a8a8d8c0f0c6bc6cafc5afe2693f7d748"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/requirements.txt",
+      "bytes": 58,
+      "sha256": "38b60e2e6932184f5ca9dab8014f8236cfaa9b383788f5a3ff07c19c5d084ec1"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/source-manifest.json",
+      "bytes": 3796,
+      "sha256": "d18638fd1850dc77da0abf880c79a6784c4c08d957dc3ee54e6d6b66bba6ab1a"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/validate.py",
+      "bytes": 10277,
+      "sha256": "47a7c57240975f70fecf4a49f0d5046aac28c6c5ed357aaab4e40f557cbbf5b0"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/validation-report.json",
+      "bytes": 23312,
+      "sha256": "27852da3f75308f106cf5e1b1feebe193ed1dcc9f29fd46425169dd22396db03"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/cover-background-prompt.txt",
+      "bytes": 1865,
+      "sha256": "a0247dac3fb60e4bfa129df497a0d285d0882cedee795fe90731220d6169512e"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/delivery-manifest.json",
+      "bytes": 154928,
+      "sha256": "9010b62fa8991852bb7343fa1eaab3bbf0bce3aa587e33c9360ba302505c9e7a"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/hoofdstukken/Boek_2_H1_Antwoorden.pdf",
+      "bytes": 642726,
+      "sha256": "3db549b43e8653dfb62b584f1204ef3c5725924d2756263f940ca0382b0d2b26"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/hoofdstukken/Boek_2_H1_Docenteninformatie.pdf",
+      "bytes": 42763,
+      "sha256": "d1c076a4efdca20429dec35ca21fa6cf28aca262ccd9c9695a2bf9e58d033c32"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/hoofdstukken/Boek_2_H1_Kosten_en_opbrengsten.pdf",
+      "bytes": 1104164,
+      "sha256": "1d1b12029ca840bfda39b9878567b8692136b915de54865fcdc5bdaa52d80756"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/hoofdstukken/Boek_2_H2_Antwoorden.pdf",
+      "bytes": 77071,
+      "sha256": "1042846b8687663ed87825a6f5e7fe6886f6e254eaf3f738ad2324f5e2fc6b06"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/hoofdstukken/Boek_2_H2_Docenteninformatie.pdf",
+      "bytes": 46123,
+      "sha256": "20a4c4835b452658ebcff0446b13947f52895834e8961637c569e7bfca4170d6"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/hoofdstukken/Boek_2_H2_Elasticiteit.pdf",
+      "bytes": 803785,
+      "sha256": "40ac47e9adf0c2e896825567637048992a071b69c91e8a34a94f34067d799d55"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/hoofdstukken/Boek_2_H3_Antwoorden.pdf",
+      "bytes": 174955,
+      "sha256": "e8fc1b3f52a559c876512d964a2d5c5dcf22118327bebbc3dba195b6db2c4181"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/hoofdstukken/Boek_2_H3_Docenteninformatie.pdf",
+      "bytes": 48092,
+      "sha256": "3934a1d65aa376ec1e43d7fefb07b87972c708edf25f665f4466346b7ac1d3a4"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/hoofdstukken/Boek_2_H3_Surplus_en_welvaart.pdf",
+      "bytes": 340564,
+      "sha256": "9b3dd33c4c789c51f84cc450597b14791cd34fa6f00f7f4639e031fe52ee5f74"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/repair-manifest.json",
+      "bytes": 1294,
+      "sha256": "406fca18fac77d334c6824c2291ff6a7c761a1be82cc58c5ba7ea478507883f2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/route-assembly-manifest.json",
+      "bytes": 1374,
+      "sha256": "84901ff91ee22dfc63bfa98cb7a22905c90a6cec795946be1115734a0f0dae3b"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/route-chapter-inputs.json",
+      "bytes": 34308,
+      "sha256": "da5a92005921f2743a2a0ccb4b78130a21af080b85f22b7e8dc4452f78e8057a"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/verify_files.py",
+      "bytes": 2170,
+      "sha256": "60f5489e7dfd25be5d8ff14d642615315d85aabbe24dc8e95fce8a3de6bdfd14"
+    }
+  ]
+}

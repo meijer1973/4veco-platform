@@ -13,7 +13,7 @@ from pathlib import Path
 import fitz
 from pypdf import PdfReader
 
-from build_book2_chat import EDITION, file_record
+from build_book2_chat import EDITION, file_record, revision_inputs
 
 
 def require(condition, message):
@@ -88,10 +88,10 @@ def geometry_check(page, cover):
             "CS_PS_triangles_and_labels": "PASS", "actual_PDF_vectors": "PASS"}
 
 
-def verify(root: Path) -> dict:
+def verify(root: Path, revised: bool = False) -> dict:
     config = json.loads((root/"assembly.json").read_text(encoding="utf-8"))
     delivery = json.loads((root/"delivery-manifest.json").read_text(encoding="utf-8"))
-    repair_path = root/"repair-manifest.json"
+    repair_path = root/("route-assembly-manifest.json" if revised else "repair-manifest.json")
     repair = json.loads(repair_path.read_text(encoding="utf-8"))
     repaired = {r["path"]: r for r in repair["files"]}
     changed = {config["cover"]["preview"], *(b["output"] for b in config["bundles"])}
@@ -99,9 +99,15 @@ def verify(root: Path) -> dict:
     require(set(repaired) == allowed, "Repair manifest must bind exactly all assembly inputs and repaired outputs")
     for record in repair["files"]:
         require(file_record(root, root/record["path"]) == record, f"Repair hash mismatch: {record['path']}")
+    if revised:
+        revision_inputs(root)
+        require(repair.get("chapter_inputs_sha256") == file_record(root, root/"route-chapter-inputs.json")["sha256"],
+                "Stale assembly chapter binding")
+        require(sha256((root/"repair-manifest.json").read_bytes()).hexdigest() ==
+                "406fca18fac77d334c6824c2291ff6a7c761a1be82cc58c5ba7ea478507883f2", "Historical repair evidence changed")
     unchanged = 0
     for record in delivery["files"]:
-        if record["path"] in changed:
+        if revised or record["path"] in changed:
             continue
         actual = file_record(root, root/record["path"])
         require(all(actual[k] == record[k] for k in actual), f"Unexpected delivery change: {record['path']}")
@@ -152,19 +158,20 @@ def verify(root: Path) -> dict:
     overview = {name: reader.get_destination_page_number(reader.named_destinations[name])+1
                 for name in ["h2-overzicht", "h3-overzicht"]}
     require(overview == {"h2-overzicht": 72, "h3-overzicht": 109}, "Overview destinations incorrect")
-    return {"ok": True, "scope": "B2-01..04 and assembly preservation; no full paragraph acceptance",
+    return {"ok": True, "scope": "Current chapter-to-book assembly, cover and links; source inventory requires the separate revision gate" if revised else "B2-01..04 and assembly preservation; no full paragraph acceptance",
             "unchanged_delivered_files": unchanged, "identical_rendered_chapter_pages": rendered,
             "preserved_link_annotations": links, "overview_destinations": overview,
             "bundles": stats, "cover_geometry": "PASS",
-            "repair_manifest_sha256": sha256(repair_path.read_bytes()).hexdigest()}
+            "assembly_manifest_sha256": sha256(repair_path.read_bytes()).hexdigest()}
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--lesson-root", type=Path,
                         default=Path(__file__).resolve().parents[3]/"4veco-lessen")
+    parser.add_argument("--revised-chapters", action="store_true")
     args = parser.parse_args()
-    print(json.dumps(verify(args.lesson_root.resolve()/EDITION), ensure_ascii=False, indent=2))
+    print(json.dumps(verify(args.lesson_root.resolve()/EDITION, revised=args.revised_chapters), ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

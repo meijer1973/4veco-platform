@@ -1,0 +1,61 @@
+# Independent final review — Books 2–4 exercise routes
+
+Reviewer: `review_book2`; author: `codex-root`; date: 2026-09-21. Both repositories were read-only during review. This review applies the shared Part A review workflow and econ-paragraph-review skill to the owner's bounded route revision. It does not reopen unchanged curriculum or grant new target approval, companion acceptance, classroom feasibility, publication or merge permission.
+
+## 1. Scope and current identities
+
+Final whole-edition manifest SHA256: `c96c8635607855a31a23920c9dd6aadfe764ba3c325545ea93d547b8cd43abe5`; 1,291 lesson files. Baseline lesson commit: `e2843b47c828784ab594d004cef461cea929717f`; baseline platform commit: `6298466b03fa5ddb38a72ceb157a4855494e45d8`. These baselines remain historical; the new manifest and this actual review establish the scoped current evidence.
+
+All 43 paragraphs have individual reports with explicit verdicts, coverage, remaining timing flags and their own inspected `edition-paragraph-review-v1` digest. `review-coverage-index.json` indexes them. Their underlying snapshots are in platform `reports/review-gates/exercise-routes-20260921`. Standard paragraph-records snapshots reject the received Books 3/4 shared chapter layout. The bounded adapter inventories the entire relevant chapter, actual paragraph exports, shared book/target inputs and complete outputs, and binds the full edition digest plus current platform inputs. It does not alter the native paragraph validator or represent native full-paragraph closure. I inspected the adapter and checked all 43 digests, source/export membership and complete shared-inventory selection. The digest is SHA256 of the parsed JSON serialized without whitespace; it is deliberately not the pretty-printed manifest-file byte hash.
+
+Reviewed platform source/code hashes: `reviewed-platform-inputs.json`, exact digest `cb953a5dc520ce5724ed164348a9dc21d562926a3a81876b0ada0e0f304f0e51`. This binds the current shared skills/references/templates, contract checker/tests, outline amendment and metadata, owning builders and verifiers, finite revision/snapshot gates, lane scope changes, source documentation and exact-pair workflow. Commit/CI identity confirmation is a subsequent integration step; changing substantive reviewed code or material requires scoped reinspection.
+
+## 2. Verdict
+
+PASS WITH FLAGS
+
+Bounded route revision only. The requested routes are consistently implemented, the affected final pages remain usable, and preserved learning content/targets have not been reduced. No unresolved failure remains in this review scope. All 34 theory lessons still lack a demonstrated complete supported-route time budget; the revision reports that limitation honestly and requires additional planned time. This is not fresh full-paragraph or whole-curriculum acceptance.
+
+## 3. Findings and final disposition
+
+- R1 resolved: replaced the ambiguous general “revision paragraphs” exception with mixed-practice/consolidation and test-preparation exceptions; existing theory revisions still obey the theory contract. Inspected repaired exercise and review skills.
+- R2 resolved: the second, final book-page chapter render now rejects reported overflow and page-count drift. Two independent controlled renderer probes confirm rejection before assembly; final output passed preservation checks.
+- R3 resolved: Book 2 H2/H3 teacher openings no longer retain the old short route or describe guided practice as merely an optional support route. Inspected current source and full-size final teacher pages 8/14, plus their neighbours. The duplicate chapter-check phrase was removed.
+- R4 resolved: §3.1.3 guided continuation no longer invites learners to skip it. Final student page 28 and its neighbours retain exercise 22A and normal-learning/fading wording.
+- R5 resolved: §3.3.4 teacher guidance/route metadata now include both repetition 37 and 38. Both existing exercises were retained. The reviewer's initial prose inventory also omitted 38; the source did not. Final teacher page 21 rechecked.
+- R6 resolved: §4.1.5 further mixed practice 46–48 and §4.2.7 extra mixed practice 59 are named explicitly in teacher guidance/metadata, without inventing bonus/repetition sections. Final teacher pages 8/18 rechecked.
+- Documentation follow-ups resolved: old selected estimates described as mostly 55 with 52 for §4.2.3; H3 chapter plan no longer presents incomplete minutes as a full route; current Windows environment evidence is distinguished from historical Linux receipt evidence. Ownership documents and generated wrappers point to the current platform controller.
+
+These findings are retained as history, not erased by refreshed manifests. The original Book 2 correction review remains historical and unchanged.
+
+## 4. Didactic, teacher and learner checks
+
+The canonical operational definition is in `skills/econ-exercise-builder.md`. The normal route appears first: start → guided → independent → same target. The challenging route uses fewer intermediate steps and continues through that target to the bonus. Repetition stays additional to both. No start score, automatic threshold or stigmatizing label selects a route. Chapter/front matter, route notices, guided introductions and teacher guidance agree. The teacher-facing details remain off the concise student route boxes.
+
+All 25 B3/4 theory route arrays were independently compared with actual source section membership, including bonus and repetition; zero mismatches. The nine Book 2 theory tables were checked against their actual sections. All nine mixed exceptions retain their real structure, existing explanations and intermediate steps; extra practice is described using its actual role. The printed material stays usable on paper; the revision introduces no digital support dependency. The existing worked examples and gradual reduction of support remain intact.
+
+Timing is not certified. Book 2 old selected estimates were 52/53/55 for H1,50/55/55 for H2, and 55 for H3. Existing guided estimates yield 65–70 for §2.1.3,58–65 for §2.2.1,63–70 for §2.2.2 and at least 63–70 for §2.2.3, before any other omitted independent work. Other guided durations remain unknown. §§2.2.3 and 2.3.3 may need two lessons. Books 3/4 full theory totals are unknown; the five pre-existing conflicts at 3.1.2/3.1.3/3.1.5/4.2.4/4.2.5 remain separately explicit. Mixed estimates cover only their old selected tasks, not every printed task or additional support. The bonus needs its own challenging-route estimate. No exercise, goal or target was removed to make a 55-minute claim.
+
+## 5. Preservation, rendering and calculations
+
+Independently ran the final read-only verifier into `independent-final-checks/`:598 B3/4 checks, zero failures,734 questions and 734 answers; all 43 paragraphs and 390 exercise blocks preserved. It compares protected exercise, goal, figure, definition and formula blocks with the baseline;726 reused answer/figure files and all 31 B3/4 target payloads/approval fields remain unchanged. Target contexts, questions, answers, goals, figures and boundaries are not rewritten. Existing mathematical content was checked for preservation and affected dependencies; no new full calculation approval is claimed.
+
+Complete volume counts remain Book 2:110/57/19, Book 3:132/74/22, Book 4:166/68/28 (student/answer/teacher). The verifier checks 632 inserted chapter-body pages:180 Book 2 pages and452 B3/4 pages. Book 2 preserves 105 link annotations, their rectangles and semantic destinations; H2/H3 overview destinations remain 72/109. B3/4 contents labels point to the corresponding chapter/paragraph pages and all internal links remain in range. Book 2's already corrected cover geometry is still checked.
+
+Student inserted pages compare directly with current source PDFs. B3/4 answer/teacher pages first require exact original body text;81 pages require applying the existing footer-redaction stream transformation to an in-memory source copy before exact body pixels match. This is a defined transformation with zero pixel tolerance, not a relaxed visual threshold. It does not change the manuscript content.
+
+I inspected all 251 selected complete-volume pages (changed text pages, relevant neighbours and fronts), with repaired/dense pages at full size. The per-paragraph reports identify actual page coverage. No clipping, overlap or newly unreadable route/table text remains. `visual-coverage.json` binds exact PDF and PNG hashes, digest `c786740b582953a6a1ec835728d312542f3fffcf553916ffcfe9f2df1a3a579b`. This is a visual/accessibility review of the changed print material, not an assistive-technology certification.
+
+I also independently checked all 43 standalone student paragraph PDFs,355 pages, against their corresponding local chapter pages with exact text and 72 dpi pixels. The four regenerated H3 standalone answer PDFs preserve all 17 pages of text;13 subsequent pages are pixel-identical and all first-page answer bodies are identical. The only first-page raster differences are title glyphs in y58–81 at 72 dpi. All four title pages were inspected full-size, remain clear and correctly titled, and do not clip. Accordingly this report does not claim all answer-export bytes or every title pixel stayed identical. `paragraph-export-review.json` digest: `7f51479971e3d8ecf13d8c258d0472c38003e38e3e9c6543eb6bc504a2c371ba`; details in `h3-answer-pixel-delta.json`.
+
+Final preservation report digest: `f31599bb6a95a5d6734c2215e00e6f09561b78d22fae29d04e9ada4f0c8401ee`. The current environment record identifies Windows 11, Python 3.14.3, WeasyPrint 68.0, PyMuPDF 1.26.7, Pango and actual font hashes. The historical receipt's Linux/Python 3.13.5 evidence remains distinct. No byte-identical full-rebuild claim is made: PDF IDs, embedded paths and environment can change hashes; the final current bytes are bound and semantic/render/navigation properties are checked separately.
+
+## 6. Build ownership, finite acceptance and verification
+
+Platform owns the current controller, front-matter/assembly templates, target-record template, outline reading-copy renderer and verifiers. The lesson entry is a thin delegating wrapper; received helpers are checked against immutable receipt bytes. Book 2 subprocess isolation avoids cross-chapter module contamination, checks designed-page overflow and unchanged student/answer counts, rejects changed reused answer inputs, and regenerates exports. Book 3/4 checks both local and final book-page renders. The current record extractor preserves target content/status and changes route/source binding only.
+
+The current manifest gate requires the exact platform-pinned complete finite inventory and exact bytes. It preserves historical receipt/provenance/tool/previous-review files and rejects out-of-scope lesson changes. Its unmanifested compatibility branch accepts exactly the known postrepair lesson baseline and identifies that state explicitly; it cannot certify revised output. The current/historical importer dispatch retains the immutable transport and structural checks. The bounded outline amendment replaces exactly identified non-structural route prose; structural rows/counts and approval boundaries remain unchanged. Part B remains a separate unchanged workflow; the finite lane path classification does not create a blanket edition exception.
+
+The exact-pair workflow validates a 40-character lesson SHA, uses the platform PR head or dispatch SHA, checks both actual checkouts, requires the revised-manifest state and tracked bytes, runs PDF preservation and review-binding checks, and publishes exact-pair evidence. It uses read-only contents permission and no admin bypass. Remote CI execution/branch protection is the author's remaining integration responsibility.
+
+Independently executed evidence includes 69 contract Jest tests;50 finite-revision/amendment/lane Jest tests;13 additional outline-amendment probes;9 build/source-binding failure probes; the final 598-check verifier; the separate 355-page export comparison; and the final finite importer (1,291 files accepted). All completed with zero unresolved failures. Original probe scripts/results and interim source/build reports are retained alongside the final report. Review metadata transcription must preserve these scoped verdicts and timing limitations.

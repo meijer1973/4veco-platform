@@ -1,0 +1,66 @@
+[
+  {
+    "path": "skills/econ-exercise-builder.md",
+    "sha256": "8ca4436eb9895ea5840e09162a6aa38e5d3df68bcc021b5404b1759d1531e925"
+  },
+  {
+    "path": "references/authored/didactiek-principes.md",
+    "sha256": "a18044bfb72312b22d47ceef80186909228188f774dbe072bf77abfbf3b3aa3f"
+  },
+  {
+    "path": "skills/econ-didactiek.md",
+    "sha256": "8fae66fc848f4d1fe4bdb3dcc9a087f5501baa9b5d4476a4a3c5f2606fcbb5ad"
+  },
+  {
+    "path": "skills/econ-paragraph-review.md",
+    "sha256": "af50be1c57742d83ffe50fca3ea0ae640bde264e9928dc3e1badfe228e7ca451"
+  },
+  {
+    "path": "skills/econ-textbook-paragraph.md",
+    "sha256": "8472300ad8cf89797fc216ad6d6136bdcd8302a7a406f798c8cdb64835279d7a"
+  },
+  {
+    "path": "skills/econ-chapter-assembler.md",
+    "sha256": "31f69a72c07a38b0241c391b17c559e30f67ec129ce87fed3b76757f9884154d"
+  },
+  {
+    "path": "build-scripts/templates/template-textbook-paragraph-plan.md",
+    "sha256": "6022cd5488016c259c2ad971f3413be7a0ea4b9bc16d4535a91dfb84a1dbed83"
+  },
+  {
+    "path": "docs/workflows/textbook-paragraph-lane.md",
+    "sha256": "d2343b87b14ebcd6f98fa3e4f72017a1886c15ba9deecba765fd046a7bb5d02f"
+  },
+  {
+    "path": "build-scripts/workflows/check-part-a-exercise-authoring-contract.js",
+    "sha256": "53bfd6e26e676f56287f33dcd6f82e592a027a51a08b4b89e7337560424dfcfd"
+  },
+  {
+    "path": "build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js",
+    "sha256": "7095c3698562380c0ff7558551fad8ba6d180b0c5423dd80a52ac911b3b5f5a0"
+  },
+  {
+    "path": "build-scripts/references/books34-route-amendment.js",
+    "sha256": "25b642de1957cea71841f2b2b597ac765405d983aeb6311caeb7e8c37be45778"
+  },
+  {
+    "path": "build-scripts/references/books34-selected-structure.js",
+    "sha256": "1434e5497b7a3cb236b31799e3d6ca13b2d2704afb7361b755ea1c8f5945292c"
+  },
+  {
+    "path": "references/authored/book-outlines/book-3-outline.md",
+    "sha256": "51467b11ace874f0221a16fa3bffe68d9bf25a9a7f76cbfd4208312f23e30163"
+  },
+  {
+    "path": "references/authored/book-outlines/book-3-outline.meta.json",
+    "sha256": "6dd3f782034b4e558bc4b036e6521dae67771b59ec95fdc1b418725b044b50ec"
+  },
+  {
+    "path": "references/authored/book-outlines/book-4-outline.md",
+    "sha256": "8d3cda916a17be3e85f0a5d4fc3d0559df7055d4595dfa3ac26f699e8cc442ba"
+  },
+  {
+    "path": "references/authored/book-outlines/book-4-outline.meta.json",
+    "sha256": "7336045dab604fcb7832a29ea612c3a34271549e51a225ff7b8a4c53fdb1adc0"
+  }
+]

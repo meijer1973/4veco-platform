@@ -1,0 +1,124 @@
+[
+  {
+    "id": "2.3.1",
+    "page": 1,
+    "changed_pixels": 2040,
+    "bbox": [
+      54,
+      58,
+      351,
+      81
+    ]
+  },
+  {
+    "id": "2.3.1",
+    "page": 2,
+    "changed_pixels": 0,
+    "bbox": null
+  },
+  {
+    "id": "2.3.1",
+    "page": 3,
+    "changed_pixels": 0,
+    "bbox": null
+  },
+  {
+    "id": "2.3.1",
+    "page": 4,
+    "changed_pixels": 0,
+    "bbox": null
+  },
+  {
+    "id": "2.3.2",
+    "page": 1,
+    "changed_pixels": 4423,
+    "bbox": [
+      54,
+      58,
+      532,
+      81
+    ]
+  },
+  {
+    "id": "2.3.2",
+    "page": 2,
+    "changed_pixels": 0,
+    "bbox": null
+  },
+  {
+    "id": "2.3.2",
+    "page": 3,
+    "changed_pixels": 0,
+    "bbox": null
+  },
+  {
+    "id": "2.3.2",
+    "page": 4,
+    "changed_pixels": 0,
+    "bbox": null
+  },
+  {
+    "id": "2.3.2",
+    "page": 5,
+    "changed_pixels": 0,
+    "bbox": null
+  },
+  {
+    "id": "2.3.3",
+    "page": 1,
+    "changed_pixels": 4717,
+    "bbox": [
+      54,
+      58,
+      534,
+      77
+    ]
+  },
+  {
+    "id": "2.3.3",
+    "page": 2,
+    "changed_pixels": 0,
+    "bbox": null
+  },
+  {
+    "id": "2.3.3",
+    "page": 3,
+    "changed_pixels": 0,
+    "bbox": null
+  },
+  {
+    "id": "2.3.3",
+    "page": 4,
+    "changed_pixels": 0,
+    "bbox": null
+  },
+  {
+    "id": "2.3.4",
+    "page": 1,
+    "changed_pixels": 1901,
+    "bbox": [
+      54,
+      58,
+      336,
+      81
+    ]
+  },
+  {
+    "id": "2.3.4",
+    "page": 2,
+    "changed_pixels": 0,
+    "bbox": null
+  },
+  {
+    "id": "2.3.4",
+    "page": 3,
+    "changed_pixels": 0,
+    "bbox": null
+  },
+  {
+    "id": "2.3.4",
+    "page": 4,
+    "changed_pixels": 0,
+    "bbox": null
+  }
+]

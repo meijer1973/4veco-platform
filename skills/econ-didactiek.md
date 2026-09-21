@@ -49,45 +49,27 @@ Core concepts (opportunity cost, supply/demand, equilibrium, surplus) reappear a
 
 Leerlingen in een vwo-klas verschillen sterk in voorkennis, werktempo en abstractievermogen. Effectief materiaal bedient het hele spectrum.
 
-```
-Extra ondersteuning ◄────────── Standaard ──────────► Extra uitdaging
+Guided practice is a normal part of learning, with support that fades as
+students become more independent. Additional structure can be supplied when
+needed. Students who need fewer intermediate steps can choose additional
+challenge. Do not equate receiving support with a lower learning goal.
 
-  Begeleide               Reguliere              Verdieping &
-  inoefening              opgavenset             verbreding
+For Part A routes, section roles, student wording and time estimates, follow
+the [canonical exercise contract](econ-exercise-builder.md#21-the-routes-and-the-constraint).
+It is the sole operational definition; keep the separate Part B workflow intact.
 
-  Denkstappen             Opgaven zonder         Open opdrachten
-  Hints                   extra hulp of          Modelextensies
-  Formulekaarten          extra uitdaging        Eigen context zoeken
-  Invulformaten                                  Kritische evaluatie
-  Uitgewerkte antw.                              Transfer naar ander domein
-```
+### 2.2 Support decisions
 
-### 2.2 Wanneer welk niveau?
+Use the student's work and the demands of the task to choose useful support;
+do not turn the brief Startopgaven into automatic route selection. Revisit a
+choice if intermediate steps are still needed.
 
-**Extra ondersteuning** → leerlingen die vastlopen bij structureren, de formules kennen maar niet weten welke ze moeten gebruiken, het concept begrijpen maar niet zelfstandig kunnen toepassen.
+### 2.3 Design decisions
 
-**Standaard** → leerlingen die de stof in de les hebben gevolgd en zelfstandig aan de slag kunnen. Geen extra hulp nodig, geen extra uitdaging gevraagd.
-
-**Extra uitdaging** → leerlingen die standaardopgaven snel en correct afmaken, behoefte hebben aan meer diepgang, en klaar zijn om kennis in onbekende contexten toe te passen.
-
-### 2.3 Ontwerpregels per niveau
-
-**Extra ondersteuning:**
-- Denkstappen, hints, formuleherinneringen, invulformaten
-- Antwoorden uitgebreid met uitleg (het "waarom")
-- Scaffolding afbouwen over oefeningen (fading)
-
-**Standaard:**
-- Opgaven zonder tussenstappen, hints of scaffolding
-- Standaard antwoordmodel volstaat
-- Dit is het basisproduct dat elke leerling krijgt
-
-**Extra uitdaging:**
-- Open vragen die evaluatie of creatie vereisen
-- Laat leerlingen een model uitbreiden of bekritiseren
-- Transfer: pas het concept toe in een onbekende context
-- GEEN tussenstappen, hints of formulekaarten — die vertragen het denkproces
-- Eventueel: leerlingen hun eigen opgaven laten ontwerpen
+Use think-steps, hints, formula reminders and partial response formats to teach
+the target operations, then deliberately fade them. Additional challenge uses
+transfer, comparison, critique or a new representation, rather than longer
+routine arithmetic. Preserve the same target and complete answer explanations.
 
 ### 2.4 Wat NIET in verdiepingsmateriaal hoort
 
@@ -119,7 +101,7 @@ Extra ondersteuning ◄────────── Standaard ─────�
 
 | Niveau | Naam | Wat de leerling krijgt | Wanneer |
 |--------|------|------------------------|---------|
-| 0 | Geen scaffolding | Alleen de vraag | Standaard opgavenset |
+| 0 | Geen scaffolding | Alleen de vraag | Zelfstandige oefening na passende inoefening |
 | 1 | Lichte hint | Één zin die richting geeft | Leerling weet het concept maar mist de ingang |
 | 2 | Denkstappen | Genummerde stappen als leidraad | Leerling kent de stof maar kan het niet structureren |
 | 3 | Formule-herinnering | Relevante formules bij de vraag | Leerling vergeet welke formule nodig is |
@@ -365,7 +347,7 @@ Verdieping:           "De ECB verlaagt de rente. Bouw een keten van minimaal 5 s
 2. **Eén concept per eenheid** → cognitieve belasting laag houden
 3. **Van concreet naar abstract** → eerst context, dan formule (behalve bij verdieping)
 4. **Problem-first** → begin met een motiverend probleem, niet met theorie
-5. **Scaffolding alleen waar nodig** → begeleide inoefening is voor wie het nodig heeft
+5. **Begeleide inoefening als normale leerroute** → bouw ondersteuning met fading in; volg voor Part A de [canonieke oefenroutes](econ-exercise-builder.md#21-the-routes-and-the-constraint)
 6. **Verdieping ≠ meer van hetzelfde** → hogere Bloom-niveaus, niet meer rekenwerk
 7. **Positieve framing** → "begeleide inoefening" en "verdieping", geen negatieve labels
 8. **Fading** → veel hulp bij oefening 1, geen hulp bij de laatste oefening

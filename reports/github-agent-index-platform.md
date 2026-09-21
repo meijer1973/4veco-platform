@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-17T11:46:37.843Z
+Generated: 2026-09-21T08:11:12.425Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/books34-v3-integration-20260917`
-Source commit: `f4888930ac47a831fc633df19a909a62b074ddad`
-Files indexed: 8510
+Source branch: `codex/exercise-routes-20260921`
+Source commit: `6298466b03fa5ddb38a72ceb157a4855494e45d8`
+Files indexed: 8515
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1149,7 +1149,7 @@ Count: 89
 
 ## build scripts
 
-Count: 770
+Count: 775
 
 - build-scripts/archive/README.md
 - build-scripts/archive/roundtrip-pptx.py
@@ -1158,11 +1158,16 @@ Count: 770
 - build-scripts/books/book-manifests/book-1-voorwoord.md
 - build-scripts/books/book-manifests/book-1.json
 - build-scripts/books/book-toolchain.json
+- build-scripts/books/BOOK2-CHAT.md
+- build-scripts/books/build_book2_chat.py
 - build-scripts/books/build-book.py
 - build-scripts/books/lib_book.py
 - build-scripts/books/lib_book.test.js
 - build-scripts/books/README.md
+- build-scripts/books/requirements-book2-chat.txt
+- build-scripts/books/test_book2_chat.py
 - build-scripts/books/test_lib_book.py
+- build-scripts/books/verify_book2_chat.py
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
 - build-scripts/ci/check-agent-worktree-safety.js

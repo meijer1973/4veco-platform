@@ -155,6 +155,10 @@ its [printed template](econ-exercise-builder.md#71-exercisesmd-structure), inclu
 the compact summary. Keep the separate exercise file consistent with this
 integrated text. The exercise owner defines headings, adjacency, paper support,
 alignment and the whole-lesson time budget; do not copy those contracts here.
+Align chapter introductions, student navigation and teacher guidance with the
+[canonical routes](econ-exercise-builder.md#21-the-routes-and-the-constraint).
+Review normal-route timing with all its support included; record existing-book
+conflicts and mixed-practice exceptions rather than inventing a 55-minute fit.
 
 Teacher-facing difficulty ratings and per-exercise time estimates stay out of
 student Markdown, HTML and PDFs. Use the [type-specific builders](../docs/workflows/part-a-start.md)

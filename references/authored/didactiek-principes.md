@@ -217,8 +217,8 @@ Oefening 7-8:  Geen scaffolding (zelfstandig)
 
 When graph or table production is part of the approved target operation and
 answer form, its scaffolding belongs in the printed `Begeleide inoefening` and
-fades toward `Zelfstandige oefening`; only student use of the guided route is
-optional. `Startopgaven` are a short activation/check block, not the home of an
+fades toward `Zelfstandige oefening` under the
+[canonical Part A route contract](../../skills/econ-exercise-builder.md#21-the-routes-and-the-constraint). `Startopgaven` are a short activation/check block, not the home of an
 extended fading sequence.
 
 For a graph-production target, visuals can fade in four stages:
@@ -270,42 +270,17 @@ Each concept should follow: **concrete familiar example → formal model with wo
 
 ### 5.1 The differentiation spectrum
 
-```
-Extra ondersteuning ◄────────── Standaard ──────────► Extra uitdaging
+Support is part of normal learning and fades toward independent work.
+Students may need different amounts of intermediate support while working
+toward the same target. Extra structure remains available; extra challenge
+uses transfer, comparison, critique and new representations.
 
-  Begeleide               Reguliere              Verdieping &
-  inoefening              opgavenset             verbreding
+### 5.2 Operational route decisions
 
-  Denkstappen             Opgaven zonder         Open opdrachten
-  Hints                   extra hulp of          Modelextensies
-  Formulekaarten          extra uitdaging        Eigen context zoeken
-  Invulformaten                                  Kritische evaluatie
-  Uitgewerkte antw.                              Transfer naar ander domein
-```
-
-**When each level is needed:**
-- **Extra ondersteuning** → leerlingen die vastlopen bij structureren, formules kennen maar niet weten welke ze moeten gebruiken, concept begrijpen maar niet zelfstandig kunnen toepassen
-- **Standaard** → leerlingen die de stof in de les hebben gevolgd en zelfstandig aan de slag kunnen. Dit is het basisproduct dat elke leerling krijgt
-- **Extra uitdaging** → leerlingen die standaardopgaven snel en correct afmaken, behoefte hebben aan meer diepgang, klaar zijn om kennis in onbekende contexten toe te passen
-
-### 5.2 Design rules per level
-
-**Extra ondersteuning:**
-- Denkstappen, hints, formuleherinneringen, invulformaten
-- Antwoorden uitgebreid met uitleg (het "waarom")
-- Scaffolding afbouwen over oefeningen (fading)
-- Begeleide inoefening MUST have `scaffoldImage` for every graph exercise (visual scaffolding coupled with text-based denkstappen)
-
-**Standaard:**
-- Opgaven zonder tussenstappen, hints of scaffolding
-- Standaard antwoordmodel volstaat
-
-**Extra uitdaging:**
-- Open vragen die evaluatie of creatie vereisen
-- Laat leerlingen een model uitbreiden of bekritiseren
-- Transfer: pas het concept toe in een onbekende context
-- GEEN tussenstappen, hints of formulekaarten — die vertragen het denkproces
-- Eventueel: leerlingen hun eigen opgaven laten ontwerpen
+For Part A use the [canonical exercise route definition](../../skills/econ-exercise-builder.md#21-the-routes-and-the-constraint)
+and its printed template. Do not define a competing normal route here.
+Task demands and observed learning inform support; a brief start check is not
+an automatic placement test. The separate Part B workflow is unchanged.
 
 ### 5.3 What real verdieping IS and IS NOT
 
@@ -429,7 +404,7 @@ it may be assigned as homework and never introduces new theory.
 - Every paragraph-level closing review remains 1–2 quick accessible tasks.
 - **LIGHT paragraph:** tasks may make a somewhat wider connection to earlier material.
 - **MEDIUM paragraph:** prefer a direct prerequisite plus one recent skill.
-- **HEAVY paragraph:** use one especially accessible retrieval task; the optional guided route may use the available support time.
+- **HEAVY paragraph:** use one especially accessible retrieval task; include the needed guided practice in the normal-route time estimate.
 
 ### 6.6 Retrieval practice (Roediger & Karpicke)
 
@@ -506,7 +481,7 @@ d) Een leerling zegt: "[plausible wrong reading]". Waarom niet?
 
 **Why:** Students who correctly classify single changes often collapse under simultaneous changes. The combined-change exercise forces them to keep both lenses active. Always include sub-question (d) confronting a tempting wrong reading.
 
-**Placement:** last exercise in optional `Begeleide inoefening` (highest
+**Placement:** last exercise in `Begeleide inoefening` (highest
 scaffolded difficulty) or first `Zelfstandige oefening`.
 
 ### 7.6 Misconception warning box format
@@ -577,70 +552,30 @@ practice`. Record the alignment before drafting:
 |---|---|---|---|---|---|---|
 | [goal] | [observable operation] | [where modelled] | [where checked] | [where scaffolded or n/a] | [where practised] | [covered or named gap] |
 
-The student-facing exercise headings use this exact Markdown hierarchy and
-order. A non-heading summary box may appear between the first and second
-heading; no additional `##` exercise heading may appear:
+The [exercise builder](../../skills/econ-exercise-builder.md) owns the exact
+printed headings, section roles, student route note, guided introduction and
+whole-lesson timing equation. Use its [canonical routes](../../skills/econ-exercise-builder.md#21-the-routes-and-the-constraint)
+and [printed template](../../skills/econ-exercise-builder.md#71-exercisesmd-structure).
+Do not duplicate their operational definition in this reference.
 
-```markdown
-## Uitgewerkt voorbeeld
-## Startopgaven
-## Begeleide inoefening
-## Zelfstandige oefening
-## Doeloefening
-## Denkertje / Bonusopgave
-## Herhaling / Herhaling en interleaving
-```
-
-- `Uitgewerkt voorbeeld` follows theory directly, models the same operation
-  chain as the target with lower complexity, and adds no untargeted operation.
-- `Startopgaven` takes 5–8 minutes and combines two roles under that one visible
-  heading: retrieval of prerequisites that have already been taught, plus a
-  compact current-content comprehension check. It is brief and low-stakes; it
-  is not a mastery test, diagnosis, or automatic routing mechanism.
-- `Begeleide inoefening` is a printed section and an optional student route. It
-  takes 8–15 minutes for students who use it, keeps the same lesson goal and
-  target, uses stronger explicit scaffolding, deliberately fades that help,
-  and uses neutral skip wording such as: "Heb je deze hulp niet nodig? Ga dan
-  verder met Zelfstandige oefening."
-- `Zelfstandige oefening` takes 10–18 minutes and rehearses the target operations
-  without the guided support.
-- `Doeloefening` takes 8–12 minutes and is the capstone proof of the lesson goal.
-- `Denkertje / Bonusopgave` takes 8–15 minutes outside the core route and builds
-  cognitive flexibility through a new representation, assumption, strategy,
-  comparison, critique, or transfer—not by adding more arithmetic of the same kind.
-- `Herhaling / Herhaling en interleaving` takes 4–8 minutes and contains 1–2
-  accessible cumulative/homework tasks. It revisits taught content and contains
-  no new theory.
-
-Print one compact paper route note:
-
-> **Korte route:** Startopgaven → Zelfstandige oefening → Doeloefening.
-> **Extra hulp nodig?** Maak eerst Begeleide inoefening.
-
-The core route is feasible within the work time of a 55-minute lesson. Guided
-practice is an optional printed support detour; bonus and closing review are
-outside that route. All explanation, retrieval, scaffolding, practice, and
-target preparation needed in the normal lesson must be present on paper.
+Startopgaven retrieve prerequisites that have already been taught and provide a
+brief current-content comprehension check. This is not a mastery test, diagnosis, or automatic routing mechanism.
+Closing review revisits taught content and contains no new theory.
+All explanation, retrieval, scaffolding, practice and target preparation needed
+in the normal lesson must be present on paper.
 
 Internally, the Part B companion route `Start -> Leer -> Check -> Oefen -> Exit
 ticket` remains a different product contract. It is never substituted for,
 required by, or advertised in printed Part A student copy. Terms such as Part
 A, Part B, lane, and companion route remain internal authoring vocabulary.
 
-Prove feasibility with a paragraph-specific whole-lesson equation:
-`motivation + instruction + worked example + compact summary and transitions +
-actual Startopgaven + actual Zelfstandige oefening + actual Doeloefening <= 55
-minutes`. Adding the recommended core ranges or stating
-`23–38 < 55` is not proof because instruction also consumes lesson time.
-
 ### 9.2 Time budget and allocation
 
-Budget each section with the ranges in §9.1 and show that the core route
-`Startopgaven -> Zelfstandige oefening -> Doeloefening` fits the remaining
-work time in a 55-minute lesson through the whole-lesson equation in §9.1.
-Estimate the actual questions and justify range deviations. The optional guided
-route may take 8–15 minutes more. Bonus is outside the core route; closing
-review may be homework.
+Use the exercise builder's complete normal-route equation and actual selected
+questions. General ranges and exercise counts are not proof of lesson fit.
+Future sets must be designed around the full supported route. Existing books
+retain their exercises and targets; report timing conflicts and estimate gaps
+honestly in teacher-facing material and plan additional time when needed.
 
 ### 9.3 Answer model rules
 
@@ -714,38 +649,11 @@ This authoring contract applies to newly authored Book 2 and later theory
 paragraphs. Book 1 output is frozen: do not retrofit it and do not run this
 contract as a retroactive Book 1 content check.
 
-```
-1. HEADER — paragraph number + title (no difficulty rating)
-2. MOTIVATING PROBLEM — recognisable situation creating cognitive conflict
-3. THEORY — concept explanation with dual coding, definition/formula/warning/recall boxes
-4. UITGEWERKT VOORBEELD — section 1, directly after theory
-5. COMPACT SUMMARY BOX — non-heading paper reference, maximum five points
-6. STARTOPGAVEN — section 2, directly after the summary box
-7. BEGELEIDE INOEFENING — section 3, optional printed support route
-8. ZELFSTANDIGE OEFENING — section 4
-9. DOELOEFENING — section 5
-10. DENKERTJE / BONUSOPGAVE — section 6, optional flexibility task
-11. HERHALING / HERHALING EN INTERLEAVING — section 7
-```
-
-**Critical:** reading order is `theory -> Uitgewerkt voorbeeld -> compact
-non-heading summary -> Startopgaven`. The summary is deliberately available as
-a paper reference before students begin the exercises. It is not an eighth
-exercise section. No `## Samenvatting`, `## Website-help`, generic `## Opgaven`,
-or other additional top-level exercise heading may appear among the seven
-canonical headings.
-
-**Time shares:**
-
-| Section | Time | Purpose |
-|---------|------|---------|
-| Motivating problem | ~5 min | Class discussion |
-| Theory | ~15 min | Instruction |
-| Worked example | ~5 min | Reading/studying |
-| Core exercise route | 23–38 min | Startopgaven + Zelfstandige oefening + Doeloefening |
-| Optional guided route | 8–15 min | Stronger support with deliberate fading |
-| Bonus / review | 8–15 min / 4–8 min | Outside core / often homework |
-| Summary | ~2 min | Compact paper reference after worked example, before exercises |
+Begin with the paragraph title, motivating problem and theory, then use the
+[exercise builder's printed template](../../skills/econ-exercise-builder.md#71-exercisesmd-structure).
+Its route definition, summary placement, support and timing apply to chapter
+introductions, paragraph navigation and teacher plans as well. Do not publish
+a second timing table or route definition here.
 
 ### 10.2 Writing rules
 
@@ -963,7 +871,7 @@ valid unchanged evidence. These dimensions do not require separate agents.
 - Full dual coding in theory (every key concept: text + visual)
 - Colour consistency (same colours for same concepts throughout)
 - Exercise fading sequence (full support → target + support → target + no support)
-- Neutral support wording in optional Begeleide inoefening; no ability labels
+- Learning-focused support wording under the canonical route contract; no ability labels
 
 **1.4 Misconception handling:**
 - Explicit misconception box (wrong AND correct side by side)
@@ -974,9 +882,9 @@ valid unchanged evidence. These dimensions do not require separate agents.
 - Backward-design alignment table covers every goal and target operation
 - Exact seven-heading order and exact `##` level for Book 2+; Book 1 remains frozen
 - Both Startopgaven roles: taught-prerequisite retrieval + brief current-content check
-- Target exercise alignment with blueprint and a whole-lesson timing equation ≤55 minutes
+- Target exercise alignment with blueprint and the complete normal-route timing equation; explicit existing-book conflicts
 - Bloom progression (remember → calculate → explain → analyze → evaluate)
-- Optional guided practice has stronger support, deliberate fading, neutral skip wording, and the same goal
+- Guided practice and route wording follow the canonical exercise contract, with deliberate fading toward the same goal
 - Denkertje/bonus builds cognitive flexibility, not more of the same arithmetic
 - Closing review has 1–2 accessible cumulative/homework tasks and no new theory
 - Worked example directly after theory; compact non-heading summary directly
@@ -990,8 +898,7 @@ valid unchanged evidence. These dimensions do not require separate agents.
 - Forward reference
 - Summary appears after the worked example and before Startopgaven, remains
   non-heading, and contains no more than five concise points
-- Printed route note points only to Startopgaven, Zelfstandige oefening,
-  Doeloefening, and optional Begeleide inoefening
+- Printed route note matches the canonical exercise template, normal route first
 
 ### 12.3 Mathematical/conceptual precision checks (Pass 2)
 
@@ -1145,7 +1052,7 @@ When designing any material, apply these rules:
 2. **Eén concept per eenheid** → cognitieve belasting laag houden
 3. **Van concreet naar abstract** → eerst context, dan formule (behalve bij verdieping)
 4. **Problem-first** → begin met een motiverend probleem, niet met theorie
-5. **Scaffolding alleen waar nodig** → begeleide inoefening is voor wie het nodig heeft
+5. **Scaffolding opbouwen en afbouwen** → passende begeleiding is onderdeel van normaal leren
 6. **Verdieping ≠ meer van hetzelfde** → hogere Bloom-niveaus, niet meer rekenwerk
 7. **Positieve framing** → "begeleide inoefening" en "verdieping", geen negatieve labels
 8. **Fading** → veel hulp bij oefening 1, geen hulp bij de laatste oefening

@@ -43,7 +43,7 @@ that cause split attention are FAIL; decorative or unclear content needs repair.
 
 For new Book 2+ theory paragraphs, check the complete
 [exercise contract](econ-exercise-builder.md), including alignment, printed
-sequence/template, support and fading, target answer form, paper-only usability
+sequence/template, support and fading, the [canonical routes](econ-exercise-builder.md#21-the-routes-and-the-constraint), target answer form, paper-only usability
 and actual lesson timing. For an exercise revision, recheck affected operations
 and their dependencies; do not demand a new full set solely for this review.
 
@@ -54,7 +54,12 @@ same-kind arithmetic bonus, new theory in closing review or printed digital
 help dependency is a FAIL. A route/time estimate without actual questions is
 not evidence of feasibility. Do not accept a reduced target or remove required
 support to make the route fit. These checks test the owner's requirements;
-the reviewer does not define another exercise sequence.
+the reviewer does not define another exercise sequence. Check chapter openings,
+route notes, guided introductions and teacher plans together. Existing timing
+conflicts must be reported, with no unsupported 55-minute claim. Record the
+actual guidance for mixed-practice/consolidation and test-preparation paragraphs
+without requiring absent stages. Revising a theory paragraph does not exempt it
+from the theory-paragraph contract.
 
 Apply the [school-fit overlay](../references/external/amstelveencollege_quality_standards.md)
 where relevant: visible goals, formative feedback, non-stigmatising support,
@@ -82,7 +87,7 @@ checks to theory and, where relevant, consolidation/test-preparation output.
 | Check | What to look for |
 |-------|-----------------|
 | 1.9.1 Teacher coverage | Verify goals, target operations, prerequisite classifications, worked examples, exercise progression, formative feedback, differentiation, transfer, retention, and answer completeness against approved authority. Explain whether the paper lesson can be taught as planned. |
-| 1.9.2 Student orientation | Walk the actual printed task order as a typical 15-year-old 4 vwo student: can they understand the goal, instructions, next action, optional support/skip route, and answer checking without hidden teacher explanation or online material? |
+| 1.9.2 Student orientation | Walk the actual printed task order as a typical 15-year-old 4 vwo student: can they understand the goal, instructions, next action, normal route with guided practice, challenging route with bonus, repetition additional to both, and answer checking without hidden teacher explanation or online material? |
 | 1.9.3 Cognitive load and motivation | Check familiar language, manageable steps, unexplained notation, overcompression, distracting context, and likely confusion or discouragement. The student must be able to connect each graph, table, or flow diagram to its explanatory text. |
 | 1.9.4 Readability and accessibility | Verify readable labels and body text, contrast, non-colour cues, meaningful visual descriptions, and semantic/reading order for the in-scope textbook output. Inspect these in the final page; name any concrete issue needing a specialist. |
 

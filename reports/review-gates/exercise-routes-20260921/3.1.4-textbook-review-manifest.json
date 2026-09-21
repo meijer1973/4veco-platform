@@ -1,0 +1,1171 @@
+{
+  "schema_version": "edition-paragraph-review-v1",
+  "paragraph": "3.1.4",
+  "revision": "exercise-routes-20260921",
+  "scope": "Bounded route revision only; not native paragraph-records.js closure or new target approval",
+  "baseline_lesson_commit": "e2843b47c828784ab594d004cef461cea929717f",
+  "edition_manifest_sha256": "a07127c5fe1e2595067c840608b722235188279441116c638f7e7dc7967f3b07",
+  "hash_contract": "Lesson edition files: exact bytes; platform inputs: UTF-8 with LF",
+  "platform_inputs": [
+    {
+      "path": "skills/econ-exercise-builder.md",
+      "sha256_lf": "8ca4436eb9895ea5840e09162a6aa38e5d3df68bcc021b5404b1759d1531e925"
+    },
+    {
+      "path": "build-scripts/books/build_book2_chat.py",
+      "sha256_lf": "f7d5f6e3c3e6a713fd559fa0da6557b05db062d393c8a68bb37629133ce829f3"
+    },
+    {
+      "path": "build-scripts/books/rebuild_exercise_routes.py",
+      "sha256_lf": "86617faba5a971f8fd550d5140452302ebfc0151072263b948b5fa294c369105"
+    },
+    {
+      "path": "build-scripts/books/books34_assemble.py",
+      "sha256_lf": "9eb194599519ad88496738e422a4933fe9be239082d58ac47f57242192856556"
+    },
+    {
+      "path": "build-scripts/books/books34_records.py",
+      "sha256_lf": "023bfaf1ee2c8df9af6aca1cec2df7393f49bfb5255de67e7eee095767aa8ff2"
+    },
+    {
+      "path": "build-scripts/books/books34_outlines.py",
+      "sha256_lf": "23e89b50d380e869118f1237d5c9be0b1f5ebb7dcccaaa165a72174b3a6f38b8"
+    },
+    {
+      "path": "build-scripts/books/verify_book2_chat.py",
+      "sha256_lf": "72f137d834402de6b6ea070353cbebf7ceeadc4d9f96f6d59872e9d010a96c07"
+    },
+    {
+      "path": "build-scripts/books/verify_exercise_routes.py",
+      "sha256_lf": "b22f528e88229b8220eb318ca4d514389a4243071fca18e51d3c088aa4e942b3"
+    },
+    {
+      "path": "build-scripts/books/books34_verify.py",
+      "sha256_lf": "8aa00a621a76f0cef9f09a4d6d67d50b03135a752be59f21e89afd0ed7ac034e"
+    },
+    {
+      "path": "build-scripts/books/exercise-route-revision.js",
+      "sha256_lf": "02e00501e505e9b9703867876d18acf26386e4c592ea468e49251db125de2b7b"
+    },
+    {
+      "path": "build-scripts/books/exercise-route-review.js",
+      "sha256_lf": "e648f66663d2237d16ee39bc417b751e22296be0b690960419a273e62a2f71e6"
+    },
+    {
+      "path": "build-scripts/books/requirements-exercise-routes.txt",
+      "sha256_lf": "e3be02c414ddf3088fc0521c3a62300ae52c55eddf6699036ce58313cb146500"
+    }
+  ],
+  "files": [
+    {
+      "path": "edities/books34-v3/README.md",
+      "bytes": 4174,
+      "sha256": "e82a099ead7c8a36e369d2e2ca95a7a58eed1b1d8af48a224da96318e6ffd517"
+    },
+    {
+      "path": "edities/books34-v3/ROUTE-REVISION-2026-09-21.md",
+      "bytes": 4536,
+      "sha256": "497005ca020fe253b14714d439a949db197420e7daaae2774c4e7b0e3c9b750f"
+    },
+    {
+      "path": "edities/books34-v3/SOURCE_OWNERSHIP.md",
+      "bytes": 4015,
+      "sha256": "e0a667e28f664a82f6503ba24589d888919220a15d6da866841c8ac6e0fcc1b6"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/back.md",
+      "bytes": 10393,
+      "sha256": "4d6612460a7078a52551aee641f129636beaca46fff54846c80ee0c5c9beaf7b"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/front.md",
+      "bytes": 5135,
+      "sha256": "dd1b1133f523fd4b8cfdfd9ca1fc13d4342e28a48a2efbd457abe2f0f4653114"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/glossary.json",
+      "bytes": 6429,
+      "sha256": "a94c46a97ffabb5783c10c25b945409730765127cc9bb04f639a587191f0894a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/back.html",
+      "bytes": 16051,
+      "sha256": "43551ec8b5451066e8ca926f110ef9a14ff63f9c2505d8ff12f177f4e7d9f529"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/back.pdf",
+      "bytes": 40572,
+      "sha256": "ee666059c6c31cc8be3d874ec0229c77a22e5713fe0a0163b5ae5a7f9377730a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/back_page_map.json",
+      "bytes": 761,
+      "sha256": "2554143d8512a2b475af6834c19163a97e75c0b3e69c1e50d16c769472948355"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front-answer.html",
+      "bytes": 7997,
+      "sha256": "0c5955a43c27caacfa44551ba29b2f64dc9ccef239dc374ecbade8a7fa81675c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front-answer.pdf",
+      "bytes": 20440,
+      "sha256": "97d5ab876c823dbc43b9977e4f2ef44ccaeb04b01f6bb0b497a9ec23371eed7f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front-answer_page_map.json",
+      "bytes": 212,
+      "sha256": "630097e1cfd887fd5885f154f3ac38531bd21589b8dce1fedf9629fb62e13f39"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front-teacher.html",
+      "bytes": 8349,
+      "sha256": "08c41dba46b989a538165159185cba35eeabcf5604c7971066dcfdf5bce8b6f3"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front-teacher.pdf",
+      "bytes": 21359,
+      "sha256": "efa1e178fca2c46fce23347db640192325abb6187a9a7ebe81ed589cc9d578d4"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front-teacher_page_map.json",
+      "bytes": 212,
+      "sha256": "630097e1cfd887fd5885f154f3ac38531bd21589b8dce1fedf9629fb62e13f39"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front.html",
+      "bytes": 10857,
+      "sha256": "c997a0cfceabad9a9114192731c99280f41e00500c61697c40fb5d4472d7c863"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front.pdf",
+      "bytes": 29715,
+      "sha256": "b2d73fbb8df58d9b8f581d1a7e01154072d48ea6a128b436afc65732074b37e3"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/output/front_page_map.json",
+      "bytes": 324,
+      "sha256": "1b2826e6d5245e9558636f8b4789211ee5b18b3959f84440a520f4c6b3ecfe32"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/book-matter/print.css",
+      "bytes": 5325,
+      "sha256": "e4ade1bb8d5c7dcfefcaf07304b823a3d2d33b0ad99bdb11f990b89b8fdac042"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/00 Inleiding.md",
+      "bytes": 2483,
+      "sha256": "6da13a58afc3fdd6105fba2cad3468f60a395cff332c6f59c40cda392f709c7a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/07 Overzicht.md",
+      "bytes": 2393,
+      "sha256": "984e61d4749c6fac36fd8ecc1e58162899c762339237109483bd675f810a36a7"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.1 manuscript.md",
+      "bytes": 14186,
+      "sha256": "938160312edc425888dd54b3207c932e0aa396c59411a30e6679865eb14fded8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.2 manuscript.md",
+      "bytes": 16230,
+      "sha256": "fcf420689fff743c59776345c5e1043e960f0e0d792d279476797071c3e87757"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.3 manuscript.md",
+      "bytes": 16608,
+      "sha256": "a9bfe97a56a9cf77feff4602dce945ea69af2c14bcd14cbcbcb1d2b35cbe94da"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.4 manuscript.md",
+      "bytes": 13083,
+      "sha256": "77c8e3e3cbba0fae732cb904aa05be660e002bd378e1e049fd9e9155adbdef6c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.5 manuscript.md",
+      "bytes": 17125,
+      "sha256": "9f1aaab2c33c572a3d0dd4b85a5eb29bd90412a4de5bdf037c9a889c2c7bc30c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/3.1.6 manuscript.md",
+      "bytes": 8602,
+      "sha256": "0ea1f1c3e7bc206b1829f39bcc9a0da161b65d14d2f8e385834c9e8660a12bca"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/Antwoorden.md",
+      "bytes": 52578,
+      "sha256": "6d639e4d56806829462acd76da214f1d3075ec064b024d46a4fe0601cff292dc"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/Docenteninformatie.md",
+      "bytes": 15071,
+      "sha256": "b2b44362a79218f4a1f8173416dc9808066d5c31ffc1a62672e958de77d62c79"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ans_1.png",
+      "bytes": 92087,
+      "sha256": "85d9818a6ef8eb4e85334f8bb5a21d56554e6d456c7dd1c70166d0341113e44e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ans_1.svg",
+      "bytes": 7201,
+      "sha256": "135a8075783e1436e7856cfc41e455e40679c274dcc60ee808100585dd17ffe9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ans_2.png",
+      "bytes": 80565,
+      "sha256": "007d5b28d34e2254817d5e4ec2602e0adf710dc685514db65a1e287c101d4dcf"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ans_2.svg",
+      "bytes": 7719,
+      "sha256": "1696f9e076cf1e4af3c118d62577ac6f43d2b5f435d36f60b8296916f0f23450"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ans_3.png",
+      "bytes": 78804,
+      "sha256": "8d40b6cc3d7bd240191b3d978e4fe99d8b5d775ec8e4689f87825553932c2453"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ans_3.svg",
+      "bytes": 5402,
+      "sha256": "186201b84bf92f3535e6eb1fa8147a26bac7001c012b7a973a004d942809bc6d"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ex_1.png",
+      "bytes": 74768,
+      "sha256": "4624979f82cab5a3abb6a9da488927f97e1235fe5e1958c5544ff565c0f1f376"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ex_1.svg",
+      "bytes": 5856,
+      "sha256": "71548ad5be8594a0dea60ace3c3749c11935f54f6e5046492fabaa2bcd56cc3f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ex_2.png",
+      "bytes": 60122,
+      "sha256": "d27d77c573c1671d4faf2bf68c23a87394d345f32e77714f3e96a8495c5cba27"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_ex_2.svg",
+      "bytes": 6343,
+      "sha256": "e6ada488b2abaa70b7946ecadc8a560f1437a48d907ab7ca88847ece0cd9c206"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_fig_1.png",
+      "bytes": 46632,
+      "sha256": "37a9b0a35f099d55cc62e61da1e818294c149ec66cd3ff26b1b1393ffcda0ba5"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_fig_1.svg",
+      "bytes": 1923,
+      "sha256": "ef97ac1c37d0feca096252867eb3ce175b30ce6ee1025dff61bc6ab5f6122686"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_fig_2.png",
+      "bytes": 98511,
+      "sha256": "5d15d478b5643fa326183210a35b30544c12cb06a4e2ee6ef2f77cefca8fe469"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_fig_2.svg",
+      "bytes": 6711,
+      "sha256": "22a0e83ff0d3eddf77db92c5bff8d47631a97e77fbde99d6f3ea83293ea0f001"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_target.png",
+      "bytes": 56979,
+      "sha256": "3eba343b12171cd5108064713fcdfe8b650744b8ea81ae3578b1d87f467bab69"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.1_target.svg",
+      "bytes": 3876,
+      "sha256": "913b34e601af2ea9463fb1b207b54fb1f0b27ca3dde6db0fec02b23f0db5253c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_ans_1.png",
+      "bytes": 88030,
+      "sha256": "78e89659fdfc33ad5bd12b1a2323360fa85a9297b723f594157ea95e2778f727"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_ans_1.svg",
+      "bytes": 8120,
+      "sha256": "250b80cd240907ce49dfb4d44cb3085d9766b546bd0515addb0d2128e42928c4"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_ans_2.png",
+      "bytes": 72196,
+      "sha256": "ecf4cca687145a365024c421fc3c815571b86ef77087871fb270c6ca8f40722e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_ans_2.svg",
+      "bytes": 6303,
+      "sha256": "8fe27f9c6cbba02c18a429a4b5559e59c945c67f6d82ebbb0b12768fb81b3b64"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_ex_1.png",
+      "bytes": 77006,
+      "sha256": "b23c38a9b17e7a155ca7065ccf00a891a3dbe8854529c8f8cb778937c74771fe"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_ex_1.svg",
+      "bytes": 5872,
+      "sha256": "610a1505467784559efab63e21703ac9d75894be9ef04c326146e8813d17d7a0"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_fig_1.png",
+      "bytes": 90946,
+      "sha256": "84c5f4c58f974cff58cef4630c9250dfddff4a25c7a1a21692c27853fd73222c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_fig_1.svg",
+      "bytes": 7614,
+      "sha256": "fcd2f6fded136eaa3541455c49062974d3a7021d41f89bfe847bfb9ad53abc3d"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_fig_2.png",
+      "bytes": 54961,
+      "sha256": "6131e1f81e24e3aa67ab5c6affc18a1d9ed3c3f0f418962ac3d7a64b22722434"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_fig_2.svg",
+      "bytes": 1420,
+      "sha256": "f27e26d7d3c6db68ed0b8dfb6ba4ffa3dd97a12dff91eb73fc5d00f5a3349653"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_rev_ledger.png",
+      "bytes": 56656,
+      "sha256": "abe0eb7dd083881422e892c1222074bb752fc9f4adeea42e1814daf0cf36cbb8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_rev_ledger.svg",
+      "bytes": 2674,
+      "sha256": "fdb39889e8740d10bea176c0542d1e59c8a020521cf372ea5a7396d3bb154fa0"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_rev_scales.png",
+      "bytes": 64099,
+      "sha256": "1785266a82c9bd6b91938e2654b6be3768c1cbcb3cb94e1d33c128dcf5f5db9b"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_rev_scales.svg",
+      "bytes": 8151,
+      "sha256": "63b7ff3959ae51fbc276ae7fe22d618f27370d99fe185e8f5c73743ad291f540"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_target.png",
+      "bytes": 56979,
+      "sha256": "3eba343b12171cd5108064713fcdfe8b650744b8ea81ae3578b1d87f467bab69"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.2_target.svg",
+      "bytes": 3876,
+      "sha256": "913b34e601af2ea9463fb1b207b54fb1f0b27ca3dde6db0fec02b23f0db5253c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ans_1.png",
+      "bytes": 83912,
+      "sha256": "af5f9270b50bc7b5a7d5969c3ed0f7aca8702e32bab024713f49a80bdf1f0004"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ans_1.svg",
+      "bytes": 6835,
+      "sha256": "ca46bfc9a4d435e05079d03ff53c05a690f583c63f38f404e33ee3f8a97eb04c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ans_2.png",
+      "bytes": 93913,
+      "sha256": "bcb794679484069cd562c5dd91353573f0e66a2c0b43a51576abc37efe92390a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ans_2.svg",
+      "bytes": 6225,
+      "sha256": "6c846b2ce52b2c4c8418ec89b7e168251b37dc44ad4eb09ddbd560c71c601f2c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ans_3.png",
+      "bytes": 83866,
+      "sha256": "54c12c44d43be7b3f25693025ca2a059ee98513271c4ebdd782af7540bdb66e8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ans_3.svg",
+      "bytes": 6243,
+      "sha256": "88eae8adc92c6c210589b5b58ff242ae3b826036c042f0dd6e6f1ba6021e1066"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ex_1.png",
+      "bytes": 60744,
+      "sha256": "e6a604039a9ebac2106bfccdc549ec8e4ebc14dc26d384689839c3b06170f8ea"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ex_1.svg",
+      "bytes": 4886,
+      "sha256": "6dcd017a75c6f14ca1ba6e06759df49817729196d32271020be107adccb6e3a3"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ex_2.png",
+      "bytes": 71210,
+      "sha256": "67eac534122769421553c19dffee61fb13151c2b0e3d5ee9225a3d4ecb8e25fb"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_ex_2.svg",
+      "bytes": 4389,
+      "sha256": "e0f3f3aac5f91d7a742a8dd06588e7bf61717eb9b4aabd68dafe4824a30a0e7d"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_fig_1.png",
+      "bytes": 46603,
+      "sha256": "dd720fd12f7e632ec713b81575b6d41d639921d8f1391bf4b5037e4a218b7263"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_fig_1.svg",
+      "bytes": 1874,
+      "sha256": "085caf97f60251b51e055cfbc979f37d960814578210efe5d9b2aa1b626199f0"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_fig_2.png",
+      "bytes": 93324,
+      "sha256": "50e180375351b783709156e1d6c1f838958e3bea7dd75f4cbbf2ac53dc4a4df1"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_fig_2.svg",
+      "bytes": 6452,
+      "sha256": "0331b70afd222cafe670dd27c8fd2b6870a92fe89afe544ff81bfcf6aace2239"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_fig_3.png",
+      "bytes": 79043,
+      "sha256": "8117505aed78f63b571d9a9b4f4c0d4602f2a622aef514ce5546ce964d5f8381"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_fig_3.svg",
+      "bytes": 6468,
+      "sha256": "0720e65aee7a1a8cf1611ef9e45697eb9f715f0dc3ad5b80cd7a92fc1d3d8a1a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_target.png",
+      "bytes": 72928,
+      "sha256": "aec7da54d6daca53db229ba8339113dfe8caabeec89033576dde6b00af05f799"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.3_target.svg",
+      "bytes": 4391,
+      "sha256": "0f6a2e90c4c005e6880e2f31fd0277e2dab4da8559996a8f1c3a02a100d68d95"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ans_1.png",
+      "bytes": 85045,
+      "sha256": "4acbd09a4bf0ef2501ed27d3c05fb1e2471f553490a575325f5d33990a7e062f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ans_1.svg",
+      "bytes": 7237,
+      "sha256": "0b477b068c85a226a566c3fe824690ba7173cc29ed40c0822a6d52d78ea406d2"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ans_2.png",
+      "bytes": 68098,
+      "sha256": "161192bd395834224afa24833c1a1a8f33c3a6ea96935c831f52659c61139a09"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ans_2.svg",
+      "bytes": 5547,
+      "sha256": "49c6f762067df0a1a762c626208c2562ecc1b502db7868ce98cdfa5c2d27aa4c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ans_3.png",
+      "bytes": 73803,
+      "sha256": "4f14944f38921e2fb66ec080680ba8113fd619dca272fe6fed1795402feb09da"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ans_3.svg",
+      "bytes": 6143,
+      "sha256": "508b4a459773d75d1f41dfe3d98b0569f3e4c0e9fb7f97f357c18db5387d619e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ex_1.png",
+      "bytes": 77851,
+      "sha256": "91973364c3a6320bd943b5944e54808b1929bd22dad1c66d8d17d50cb26fcc0b"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ex_1.svg",
+      "bytes": 5874,
+      "sha256": "af26342a1e22c90d6a8cb28ae5cbec72d8a5df435a82f420ee13fa15c1354cfd"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ex_2.png",
+      "bytes": 58212,
+      "sha256": "606c69e51ade8398de532fac87e4e8eb7d629828a44bf9a4b6091540ef2dafc0"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_ex_2.svg",
+      "bytes": 3887,
+      "sha256": "83961c1326a5732c3d11f9ba176e2697f65e958dea7b4f9c5780373f16dd1239"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_fig_1.png",
+      "bytes": 85241,
+      "sha256": "adbf7b2f37d70888ef63eea7f1ff98d0e83b9da6f396aa133f826f7756c198dc"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_fig_1.svg",
+      "bytes": 6722,
+      "sha256": "ffecd7751d4e6d58cd83bf9bfdccac933eb4e6d63a234142013e810c3b1f17a8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_target.png",
+      "bytes": 65881,
+      "sha256": "b980b06028685662fe345d5b3ccde3a940cc36d16269c392b55f7e138d103b33"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.4_target.svg",
+      "bytes": 4633,
+      "sha256": "2b8d1d90381408b9767ee9f3c9a5084c8afac8d62279e02e7380577961841f4a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_1.png",
+      "bytes": 75219,
+      "sha256": "7d8593fe3303cea8b7d3473748881cc878aebe73fb5b7a79a33025fc5fa91742"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_1.svg",
+      "bytes": 6461,
+      "sha256": "047e96d9eb6471db963ccb50e7f717ebd1064d45436d067cc637ac6f5bd79103"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_2.png",
+      "bytes": 70467,
+      "sha256": "26ef0b090448de23a244b99e3352c0cbe2fa69dd256e3c13d842f9489bc7662e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_2.svg",
+      "bytes": 6711,
+      "sha256": "c45876d3ce415d74e46743036d4b8d4befeb7e95f94a499d70b16598fd07513d"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_3.png",
+      "bytes": 55953,
+      "sha256": "ce10366472cde200545a55d6bc6e95384ae09d2d8d0a8409512260e0529d85a0"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_3.svg",
+      "bytes": 6723,
+      "sha256": "962403e60897b4770a68326034ea86b5e354928c6fc41714f8800ae2837d6e21"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_4.png",
+      "bytes": 54628,
+      "sha256": "abb3b357b90ee10388b1ce8a6922afc5c12713eb33a3c7391b00150e662b9959"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ans_4.svg",
+      "bytes": 5996,
+      "sha256": "2536e14d01f68ed96ef0c39a57d11c1a70a2fba59cf1d8e0b79f4f0ffeff58b2"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ex_1.png",
+      "bytes": 67088,
+      "sha256": "04d3416afb73a03be79e844a46b2b4eda534da0465eabb5e97d00deab4f91e3f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ex_1.svg",
+      "bytes": 4643,
+      "sha256": "a65e8f35494d0bc4c53be6b06b866ab3ea261ee80fbfcdeb27ff8365382ec6e6"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ex_2.png",
+      "bytes": 61577,
+      "sha256": "e813d88bdb7ea330535c83909f576d1a4bce5bbf7fba6a5f148609ffd2a72c3a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_ex_2.svg",
+      "bytes": 4893,
+      "sha256": "a91b01041d67af3a90c3baec159e812d3c31db223d5bdf0776d9d7608316aceb"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_fig_1.png",
+      "bytes": 86930,
+      "sha256": "7afcd0cf81807aafe928765e0d0bc36baf621d9df87b9dda3885b271749f300a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_fig_1.svg",
+      "bytes": 7042,
+      "sha256": "f7a865ab798129ee419412adbdb3740e4073df2bf1cf182d351b8db986db42aa"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_fig_2.png",
+      "bytes": 86218,
+      "sha256": "d3c7bf7d2b0a909d4fa61673aa99350cdedfb136dbff0ec9dd7d0db098476c71"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_fig_2.svg",
+      "bytes": 6315,
+      "sha256": "59193c34dbc3b14bc3c61b29a6fd551ce58ddb7ccc9b8243eaaf75bfe058665c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_rev_nopurchase.png",
+      "bytes": 87078,
+      "sha256": "812aaf9615ae15f14c69ca84922978ec39d232880dc098d24d796984c74b1b7c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_rev_nopurchase.svg",
+      "bytes": 6734,
+      "sha256": "e471649dafb636cc8b08bb4ecbceaddc715a9a940122bdeedaac11c66378e103"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_rev_quota_answer.png",
+      "bytes": 71123,
+      "sha256": "7ae74d7ee0e3a391e69c64b1bd56981831bc7533912baca86e8a3d6b0916853f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_rev_quota_answer.svg",
+      "bytes": 5232,
+      "sha256": "69732441789644c6c54bbf08daa8e8d7e0944c4b2e975f2fe34fa4601045deb5"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_rev_quota_base.png",
+      "bytes": 63563,
+      "sha256": "d2b2926695cb0f537227e0278605c52cb73b2b6a6dd4be4677120583d4e164d2"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_rev_quota_base.svg",
+      "bytes": 4141,
+      "sha256": "588884f9a320e5011189b4f7c66489e3d53027f809831b7afd3dfeb077bfe3cf"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_target.png",
+      "bytes": 46681,
+      "sha256": "fe24c4bf108949b1a94a4764a29cd8787d1f78d1e8c5140c3b3c000b55ff0f28"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.5_target.svg",
+      "bytes": 4905,
+      "sha256": "f9d35efbb704246457c8c179fe818899ccbcc9d4c166fca22ba8d4e67d2caf25"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_ans_1.png",
+      "bytes": 86590,
+      "sha256": "a73e0d133894262666ef299ef45d9484a317857f105f5973d453105d7a207ebf"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_ans_1.svg",
+      "bytes": 6675,
+      "sha256": "a1397750b8fa442fce2c5b6913266239c481897e71777090dfbeedc3468353cc"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_ans_2.png",
+      "bytes": 82671,
+      "sha256": "e504b1bd7e528ed04c912c3734f1c6f7f47b0668d40529ccb7a8574e09be612c"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_ans_2.svg",
+      "bytes": 6054,
+      "sha256": "50fb963441a30eaa26dd9176e3ed260c1a9e5af626c0c316fef207be541d1f17"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_target.png",
+      "bytes": 73361,
+      "sha256": "19a582039c2bafcbc7a71761d8c8b4539b47bf57d27e8f26365018bc4303363b"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/_assets/3.1.6_target.svg",
+      "bytes": 4393,
+      "sha256": "76000525e28927d99527fe5540ae58608d39948c83f3f79d8d8b05d1a216ff30"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/chapter-order.json",
+      "bytes": 194,
+      "sha256": "1e5f7c0251667bfdf202a95d26930a028faa22d3a68797587ac92c3a86bd2d8d"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Antwoorden_v3.html",
+      "bytes": 215905,
+      "sha256": "4cbd9a9b9bb99eeedd7bcd16b2ed604a58326c2ae45fc923ad6c94d7bfc856f1"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Antwoorden_v3.pdf",
+      "bytes": 238172,
+      "sha256": "26a4357e30d6f3e1beea51af68320cb345a94f7e92b5bf7e5cd74f510eadc63e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Antwoorden_v3_page_map.json",
+      "bytes": 3299,
+      "sha256": "132f12be6227e9b4f57034f5af285b42597e23b386c4a6937a295d1bcd1b8b1f"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Docenteninformatie_v3.html",
+      "bytes": 22088,
+      "sha256": "c657ab2d164b2cf4a20a4eeb3b575b4e6aec3238f7efe877403f3a5899f5c602"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Docenteninformatie_v3.pdf",
+      "bytes": 45213,
+      "sha256": "391a00f0e633e8b59981ab6b24763f8629f7e010985e9b7348580e7cebdcf00e"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Docenteninformatie_v3_page_map.json",
+      "bytes": 838,
+      "sha256": "c7869286b5ff9ca5b9bdbea1fde5b2c240fd30d64484b6f3566521507f822da8"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Leerling_v3.html",
+      "bytes": 296303,
+      "sha256": "1b76efa13b1f1aabbd935d8e74dd10396e1f2a0a54e6ba2f3e7fa4065c99c3a1"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Leerling_v3.pdf",
+      "bytes": 354758,
+      "sha256": "49ec653a23cf266e41eff0763d9d46ffeed2f0e93509ccb02a9bb45cc428e2f2"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Leerling_v3_bookpages.html",
+      "bytes": 296337,
+      "sha256": "59791755f4e0320759b4899337316d6e32b5b41ecd3083b3b428cf5430771533"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Leerling_v3_bookpages.pdf",
+      "bytes": 354772,
+      "sha256": "cd66b883579a7128df77a78fc5733d0628e7ecfbd3b85775eb5bba84056a0fef"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Leerling_v3_bookpages_page_map.json",
+      "bytes": 5116,
+      "sha256": "eac05cf9da54fa4e843a878f1f0bebc38bc18e6aeb9b0665ad8f187911bfb750"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Leerling_v3_page_map.json",
+      "bytes": 5116,
+      "sha256": "eac05cf9da54fa4e843a878f1f0bebc38bc18e6aeb9b0665ad8f187911bfb750"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.1-leerling-v3.pdf",
+      "bytes": 134754,
+      "sha256": "7a792264c9c017e7af64ff4b63486b14ece746303eb1d62974fab38e3eacc3df"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.2-leerling-v3.pdf",
+      "bytes": 140914,
+      "sha256": "f14838984aa55432f9423e3f54677050211e4e59fc75d246c31ebac0b3ecf1d9"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.3-leerling-v3.pdf",
+      "bytes": 139508,
+      "sha256": "250d394729e5c96899546874350a04c2e2fb0a7ba38d60a68a601cf4f1efbd53"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.4-leerling-v3.pdf",
+      "bytes": 132462,
+      "sha256": "4ede1028a73dba4a9a469b6c99f5693fe948efd92020949c14c04354b03c69b6"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.5-leerling-v3.pdf",
+      "bytes": 140393,
+      "sha256": "bb62ab5558d5ed7a0f73ca2db8c21e6b1a0b6337349beff0ce8de1ea61c74868"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/paragraph-pdfs/3.1.6-leerling-v3.pdf",
+      "bytes": 122288,
+      "sha256": "ae0b2d4d20ab254df5578b838daa6d440d7903b412dc50d525de783c1ce8f840"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/chapters/3.1/print.css",
+      "bytes": 4944,
+      "sha256": "2615683550ec00fac988f2c07fe83c09d749908decc92b98482fb66b0116a26a"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Antwoorden_v3.pdf",
+      "bytes": 548079,
+      "sha256": "f2b19a588a72e43cbfa00400d5648808b74f52c9e3b1b49c2dbed4f54b08d711"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_Docenteninformatie_v3.pdf",
+      "bytes": 159840,
+      "sha256": "228f493f9a0d34e599a9d360b2b0f6282fa819b9d178905e7a55aa5173e78114"
+    },
+    {
+      "path": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+      "bytes": 4381306,
+      "sha256": "d428de7cc7b601e379402bae0900639451fcc1abedd2a2defa079f22522b14b0"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/blueprint-books34-v3.md",
+      "bytes": 36407,
+      "sha256": "f4d653a936502af9c1a8e13ad54635a9db196ce5cac255db1ec63a4414683c0e"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/book-page-map-v3.json",
+      "bytes": 9777,
+      "sha256": "9271962caf0281f6e0d3207bfc97777252f8803fac11999e719f9a13043af27e"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/chapter-config.json",
+      "bytes": 2341,
+      "sha256": "88c709537b3bac660b7cc029440ee56b21d5650704113c9233ec0502799ce5f3"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/course-target-exercises-books34-v3.json",
+      "bytes": 485866,
+      "sha256": "eaed08b2b390385198f222cea4765889d19336f6be4447d7908d8e4219885c37"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/lesson-routes-v3.json",
+      "bytes": 69361,
+      "sha256": "485dfa761daf90c3646bf4df5daabe4bd840c7ad908c930f186608482d46a344"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/structure-v3.json",
+      "bytes": 1043,
+      "sha256": "a41d3b4e525b82b08be891c60c3c6965c6922cd6850a277531d86237e80561b3"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-catalog-v3.csv",
+      "bytes": 7250,
+      "sha256": "c0346e2ca91751df134e7890a487aa19900a28028869f180d180fe64a764c9dd"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.1.1.md",
+      "bytes": 3160,
+      "sha256": "bd398de8ca5225b47b9f4cf375cfd9bbd81965ff24b76f168f9bf1359b58551e"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.1.2.md",
+      "bytes": 3113,
+      "sha256": "0a292451f7edd9bb5b086fe2d5fa02cec79f485b8cd5ed4a0ed56d49d55e0f14"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.1.3.md",
+      "bytes": 3069,
+      "sha256": "13eef39b9336f9afec6b1b58cdb1550707b91ca78aa822499fe92e550f05532a"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.1.4.md",
+      "bytes": 3049,
+      "sha256": "c8c32bf47d112833f9b161034fa217c914cb3654482437b5700b18aa167594f7"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.1.5.md",
+      "bytes": 3260,
+      "sha256": "7172d948532b2289e94a8c2a47efa1c4f290bc37017214f0c6dec573e02c57c6"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.1.6.md",
+      "bytes": 6440,
+      "sha256": "247c77aa1bc8f4f323ab10aa50ba075d3a87a53a897d489dcc1b551090f93f09"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.2.1.md",
+      "bytes": 3418,
+      "sha256": "c1ccbff1c1af8fc4857e614df492c5abf352dfaedd3ab6df652d4548cedf33fd"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.2.2.md",
+      "bytes": 2384,
+      "sha256": "e7a78426b69c1e6863ba1b25e40d1fa54c60e303a6643e4a6385b385ddae1ee2"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.2.3.md",
+      "bytes": 3855,
+      "sha256": "60981e9fba38b67743383a6c4a219105ae0c844dd7781f69cb1ca39cee639195"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.2.4.md",
+      "bytes": 4853,
+      "sha256": "4daaf4f44aea1571ba826f1e77203bfee35536fc3069d3a1cfc78636a8be75d2"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.3.1.md",
+      "bytes": 3928,
+      "sha256": "173f7d8daad59171c827cfa0c895a0771371257d5cf0a39ef3e4bdf68dcf4c6a"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.3.2.md",
+      "bytes": 3583,
+      "sha256": "bba050cfcd9c18260ea29fc397c2b48cf6c7cca567d79ea91977deff4c9dd4ab"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.3.3.md",
+      "bytes": 3934,
+      "sha256": "b38e2f13c5ff7b78d35e4c07af0421626910536921b86a77cec28eba0b1a8863"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/3.3.4.md",
+      "bytes": 6109,
+      "sha256": "3b077730383a6c48cff0beca53aa86438e3b5a85ab1062f4583c527715f16dff"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.1.1.md",
+      "bytes": 3743,
+      "sha256": "53cc50486765dd97d205657b06a6163a91c34c467c0efad4505cef34073d3c89"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.1.2.md",
+      "bytes": 3537,
+      "sha256": "51af6d8c7e6407c9c3a8ed4b7f94db319143c1143d89a328718baa028bacdfae"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.1.3.md",
+      "bytes": 4194,
+      "sha256": "03e1a3a832b8b23aa4459d9d52541aa8a745fa35c5e46dfd15bbbf9c240fffb5"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.1.4.md",
+      "bytes": 4043,
+      "sha256": "ef6f222ff54915c05499a86cf03ffcdf48ec3782db29c22ab0c8d99111dc8a5d"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.1.5.md",
+      "bytes": 5603,
+      "sha256": "afab8a8375ee8fa5dcdc668a691b7a00709f5c857f7fe6ced16f1e432d08581c"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.1.md",
+      "bytes": 3332,
+      "sha256": "ce1461656f55bfaca1cf098086e7fee5bc6c37f2595c6e0ebad96fd1023dc723"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.2.md",
+      "bytes": 3576,
+      "sha256": "aa272fb057ff7044e001de9cec6243f1c84818b8111fe77215a28534ff63283e"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.3.md",
+      "bytes": 3575,
+      "sha256": "d5739ab9c596eb9834e36f3719af7a7cb329d76922f98b2e3d346cd929930613"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.4.md",
+      "bytes": 3276,
+      "sha256": "7508ec1031dea5ad2136c90b28ea9adf1d612bd891a4dc003f2509a7a2727060"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.5.md",
+      "bytes": 3421,
+      "sha256": "e901ed9ea3f8682a33a7aa8bc3ddfef4bb742f5a4d518be882ed74b4169e270e"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.6.md",
+      "bytes": 3347,
+      "sha256": "ebf96923b866440453e9a66ce2b885a05e24999f81d7e7a98c3973d10e5799e2"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.2.7.md",
+      "bytes": 5322,
+      "sha256": "65cefebb9ca84228b537fa78a57d53282147e3fb34a8e1d63890c9aac71048e5"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.3.1.md",
+      "bytes": 2825,
+      "sha256": "ae2a4dda3ed5fa093f3a71930143202793c2fb9c0cd8f1439135b9bcd3e90918"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.3.2.md",
+      "bytes": 2460,
+      "sha256": "cac237835e5e6d60123a0f2560f513ec9ac3ba81bc81ea0370d30f51342c5881"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.3.3.md",
+      "bytes": 2656,
+      "sha256": "002c6429494ad5eb1020814d9e082053f2712b2d9d332fd00345dedf6944e4ac"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.3.4.md",
+      "bytes": 2958,
+      "sha256": "7db308c5a71e2e0efefbed2a6c1e276b8ca0fd48ec7fa8acf006a7037234b6c0"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/target-excerpts/4.3.5.md",
+      "bytes": 5601,
+      "sha256": "9abb6682df4cfef41797270c4b51b6eaf25b60552c5c45f06fbf764e011c4399"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.1.json",
+      "bytes": 13272,
+      "sha256": "f09e9b44b40949ad50c8fa62bd43adc6e688d1cb5c83120735e48ded56346d1a"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.2.json",
+      "bytes": 12885,
+      "sha256": "109a3a480dbded5a73840566dad6d52572322e42f80534ef985c331a39edb073"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.3.json",
+      "bytes": 12731,
+      "sha256": "b92ceee3885cc333a0641ae9ae1f1ebc6e82212a0f39c7f791014712b882b378"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.4.json",
+      "bytes": 13168,
+      "sha256": "777cefcd13380ac4046d2cdf48323a1b2ec861d9ef411ab49b18f0bdef493ecb"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.5.json",
+      "bytes": 13316,
+      "sha256": "32e419fbea558eea0fa3b6cbe6848f9eac5314743bbc4f4f2bffa36864a4e840"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.1.6.json",
+      "bytes": 21064,
+      "sha256": "c86de13c8a700894b5b0dbbea365f7cd65d18d52823165c5a1c392ae809fc514"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.2.1.json",
+      "bytes": 12558,
+      "sha256": "0ca9ef403c127eb8e89af79b114406de1c5f3afcaceef49978d7062d4d5a88c8"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.2.2.json",
+      "bytes": 12467,
+      "sha256": "7a4d7c8fe6acefd92bb7ad3f5fb7c1b68d85ad1cbd1c3cbbfdf08bdbad6cd76b"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.2.3.json",
+      "bytes": 14333,
+      "sha256": "00e2aa8aa760bcf6c961d697819005f6b65109f3dfeda20f5273f69b7c0cac6d"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.2.4.json",
+      "bytes": 16884,
+      "sha256": "557062fcbfdf8aba1f4c6802e573d20cd5412ad55285fac81d883f0efd38c96e"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.3.1.json",
+      "bytes": 15847,
+      "sha256": "2c999b3721c50e31436fb17f09a081207cd0a19e36d06cf308642b14bb238455"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.3.2.json",
+      "bytes": 14488,
+      "sha256": "681d2ee2055a70272f9fb66676f847ace20d40d1ea05200142f5cf7c55149175"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.3.3.json",
+      "bytes": 15478,
+      "sha256": "29f082c199835b44f6e80221ef7ffd02a567b51186051e370bd35aee9de50420"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/3.3.4.json",
+      "bytes": 21095,
+      "sha256": "78559c6be19caf97e21999d69592df3d7040eb3510a6a2f4b749e246df978cb3"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.1.1.json",
+      "bytes": 14830,
+      "sha256": "9c5252ba524b34f7ec8a6ef4ade27be02a1dfec172e1760d18fe48be17cac09f"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.1.2.json",
+      "bytes": 14365,
+      "sha256": "44060290069b29b6f03ab5522fefd133a6f440f528e028b912e31c804986fd9f"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.1.3.json",
+      "bytes": 15448,
+      "sha256": "98a5254841917984df0d2793dd3e1c37255ed2012b003e9957fc44f0936fe0b7"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.1.4.json",
+      "bytes": 14472,
+      "sha256": "0fe7c68225df7b2e3c155d50b890208f0c22f3da9e994d4f7e15e2edd1732bd7"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.1.5.json",
+      "bytes": 18724,
+      "sha256": "d67a52fd198a1fd7fd301c8d6e20bb99f8f03861803313c268cd5b9f5faf4904"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.1.json",
+      "bytes": 13296,
+      "sha256": "8e3a5e41892c485a2d84b2e70b50df85aad5c972411f2a3254e1813cdfcfe01f"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.2.json",
+      "bytes": 14528,
+      "sha256": "046ca62dcbb5c23f5bf7269db344b890711015222bc317d099a5db4396104a66"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.3.json",
+      "bytes": 14152,
+      "sha256": "cee47a44c99e2aed45c872117558078d45d7a39376a498d87a76faf68d46846b"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.4.json",
+      "bytes": 13036,
+      "sha256": "2d66522c9100cf9e21bf42d449568c34f2274568ccc362aa629ffca8e058fd0c"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.5.json",
+      "bytes": 13108,
+      "sha256": "bcc95ca99daaba13d2eb7e67abe3bb354198095236123d34150b2877ca81a013"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.6.json",
+      "bytes": 14379,
+      "sha256": "c26a0bb4698711496e067d4a2cdc5ace8d96305fbe28c65e22ffb47f0ca81a7d"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.2.7.json",
+      "bytes": 18210,
+      "sha256": "050aaf1461fa45f305531bda2ba5dd9b17b12d997ea0b1ee9de88242ee4aabc0"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.1.json",
+      "bytes": 12713,
+      "sha256": "d14d76e143905a16cf09a1bd9b4f28f357902762103ccc7ff022b28749204ca1"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.2.json",
+      "bytes": 11686,
+      "sha256": "6aafe42a725648f8d58257bcc65659a7f825371639c88a2f4232dd5709c8d268"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.3.json",
+      "bytes": 12066,
+      "sha256": "17219229243d96e6b53b6367027e9ff1ab787e2003e2323bafacb0db291aab0f"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.4.json",
+      "bytes": 12421,
+      "sha256": "564262ce7058fe4b96143a9fc7d3517bfc42622df31b05574265357cc93c903e"
+    },
+    {
+      "path": "edities/books34-v3/curriculum/targets/4.3.5.json",
+      "bytes": 19339,
+      "sha256": "fcf643a3517a93e24d4af3d8f2e22b7ae8ad7f04bf87317132cb8949af14b7b6"
+    },
+    {
+      "path": "edities/books34-v3/outlines/Boek_3_4_Besluit_en_migratie_v3.pdf",
+      "bytes": 22050,
+      "sha256": "873a4b19cf906cfffd778bbd85c3bc0594ef50c989b345e537040ef5fdaaacdc"
+    },
+    {
+      "path": "edities/books34-v3/outlines/Boek_3_Boekopzet_v3.pdf",
+      "bytes": 60616,
+      "sha256": "24af2d7aa27bc4c5286d114aa5c7cdc6b84b35ab723cc896fc0a96eaa8ca6d2d"
+    },
+    {
+      "path": "edities/books34-v3/outlines/Boek_4_Boekopzet_v3.pdf",
+      "bytes": 63186,
+      "sha256": "5df24536c1a2c414ae844e350ab1d02c6d8fa4836b8ce8f6346b9906b2a2868f"
+    },
+    {
+      "path": "edities/books34-v3/outlines/book-3-outline-v3.md",
+      "bytes": 34354,
+      "sha256": "dbb6f2d2c2ad595509c711afffaef51c563e4054e8bd1cbb62d8dccb06cf1cac"
+    },
+    {
+      "path": "edities/books34-v3/outlines/book-4-outline-v3.md",
+      "bytes": 35561,
+      "sha256": "8613b9184b07d5fa1aa1f7b6422b9f2e7f4368b18f13fa1e4ceaedc39082e9af"
+    },
+    {
+      "path": "edities/books34-v3/outlines/book34-v3-decision-and-migration.md",
+      "bytes": 3673,
+      "sha256": "62193918047f1e67d65b036ba40c659fc97314af9f23f199410db888775bbb82"
+    },
+    {
+      "path": "edities/books34-v3/outlines/paragraph-migration-v2-to-v3.csv",
+      "bytes": 12549,
+      "sha256": "b95e60cc880b53d4ee543375aca3f8146c4b01dfa413ba841a6a4f80c06ad1a8"
+    }
+  ]
+}
