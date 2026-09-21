@@ -1,0 +1,1189 @@
+{
+  "scope": "Bounded independent native source/content/render review; no final authority, manifest, CI or exact-head approval",
+  "theory_pages": [
+    {
+      "page": 5,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 6,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 12,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 13,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 14,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 21,
+      "missing_tokens": {
+        "−": 1,
+        "oud": 1
+      },
+      "extra_tokens": {
+        "−oud": 1
+      }
+    },
+    {
+      "page": 22,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 23,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 24,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 30,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 38,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 39,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 40,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 41,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 46,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 47,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 48,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 49,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 54,
+      "missing_tokens": {
+        "van": 1,
+        "Y": 1
+      },
+      "extra_tokens": {
+        "Yvan": 1
+      }
+    },
+    {
+      "page": 55,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 56,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 57,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 58,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 59,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 60,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 72,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 74,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 75,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 76,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 77,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 82,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 83,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 84,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 85,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 86,
+      "missing_tokens": {
+        "Extra": 1,
+        "Korte": 1,
+        "hulp": 1,
+        "nodig": 1,
+        "Maak": 1,
+        "eerst": 1,
+        "inoefening.": 1
+      },
+      "extra_tokens": {
+        "is": 1,
+        "Startopgaven": 1,
+        "bij": 1,
+        "Normale": 1,
+        "route": 1,
+        "inoefening": 1,
+        "Zelfstandige": 1,
+        "oefening": 1,
+        "Uitdagende": 1,
+        "minder": 1,
+        "tussenstappen,": 1,
+        "extra": 2,
+        "uitdaging": 1,
+        "Doeloefening": 1,
+        "Denkertje": 1,
+        "Bonusopgave.": 1,
+        "Herhaling": 1,
+        "beide": 1,
+        "routes.": 1
+      }
+    },
+    {
+      "page": 92,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 93,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 94,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 95,
+      "missing_tokens": {
+        "22": 1,
+        "−": 2,
+        "16,50": 1
+      },
+      "extra_tokens": {
+        "−22": 1,
+        "−16,50": 1
+      }
+    },
+    {
+      "page": 96,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 97,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 109,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    },
+    {
+      "page": 110,
+      "missing_tokens": {},
+      "extra_tokens": {}
+    }
+  ],
+  "captions": [
+    {
+      "page": 5,
+      "text": "Figuur 2. Bij elke Q ligt TK precies € 300 boven TVK: de verticale afstand is TCK.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 6,
+      "text": "Figuur 3. De afstand tussen GTK en GVK is GCK: het aandeel huur per fles wordt kleiner. Bij Q = 0 bestaan geen gemiddelde kosten.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 12,
+      "text": "Figuur 1. Opbrengst is nog geen winst: trek eerst alle kosten af.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 14,
+      "text": "Figuur 2. Lees TO en TK af bij dezelfde Q. Het verschil is de winst of het verlies per dag.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 21,
+      "text": "Figuur 1. Eerst de toename bepalen, daarna delen door het aantal extra producten.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 23,
+      "text": "Figuur 2. TK is de kromme lijn. De gestreepte hulplijnen tonen de stijging van TK bij telkens vier extra schalen.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 38,
+      "text": "Figuur 1. P stijgt bij beide met 10%. Qv daalt bij SpringVrij procentueel sterker: 20% in plaats van 5%.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 39,
+      "text": "Figuur 2. Bereken eerst twee procentuele veranderingen. Deel daarna de hoeveelheidsverandering door de prijsverandering.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 40,
+      "text": "Figuur 3. Bij een negatieve Ev betekent verder naar links: een sterkere procentuele reactie van Qv op P.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 46,
+      "text": "Figuur 1. De omzetrechthoek wordt hoger én smaller. De oppervlakte P × Q stijgt hier van € 1.000 naar € 1.045 per dag.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 47,
+      "text": "Figuur 2. De lokale omzetrichting hangt af van de prijswijziging én de prijsgevoeligheid rond de huidige situatie.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 48,
+      "text": "Figuur 3. De procentuele verandering vergelijkt de € 45 extra omzet met de oorspronkelijke € 1.000 omzet.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 54,
+      "text": "Figuur 1. Vraag vóór het rekenen: welke factor verandert? Die factor bepaalt de noemer en de naam van de elasticiteit.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 55,
+      "text": "Figuur 2. Bij +10% inkomen geven Ei = −0,5, +0,5 en +2 respectievelijk −5%, +5% en +20% vraagverandering.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 56,
+      "text": "Figuur 3. Lees het verband van de prijs van Z naar de vraag naar X. De richting bepaalt het teken van Ek.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 57,
+      "text": "Figuur 4. Elk gegeven krijgt een eigen plaats. Neem ook het teken van ieder onderdeel mee.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 74,
+      "text": "Figuur 1. De betalingsbereidheid bestaat hier uit € 20 die de koper betaalt en € 10 consumentensurplus.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 75,
+      "text": "Figuur 2. V is de vraaglijn. CS ligt boven de prijs, onder V en alleen bij de 40 verkochte kaartjes.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 76,
+      "text": "Figuur 3. Lees bij de prijs eerst Q af. De basis van CS is 40 kaartjes; de hoogte is 30 − 10 = € 20 per kaartje.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 77,
+      "text": "Figuur 4. Arceer boven P = 10 en onder V, tot Q = 40. Voor deze CS-berekening is geen aanbodlijn nodig.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 82,
+      "text": "Figuur 1. De prijs verdeelt het voordeel tussen koper en verkoper. Samen is het voordeel € 50 − € 20 = € 30.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 83,
+      "text": "Figuur 2. Het groene gebied is PS. De hele rechthoek P × Q is omzet; die mag je niet volledig als PS meetellen.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 84,
+      "text": "Figuur 3. CS ligt boven de prijs, PS eronder. Samen vormen ze het gebied tussen de vraaglijn en de MK-lijn, tot Qe.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 85,
+      "text": "Figuur 4. De twee gebieden hebben hier toevallig dezelfde oppervlakte; dat hoeft niet op iedere markt zo te zijn.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 92,
+      "text": "Figuur 1. E is het vrije evenwicht. De boekingsgrens stopt de werkelijke handel bij Q = 12, vóór Qe = 20.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 93,
+      "text": "Figuur 2. Beide gebieden stoppen bij 12 werkelijke transacties. De hulplijnen op € 28 en € 16 splitsen elk gebied in een rechthoek en een driehoek.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 94,
+      "text": "Figuur 3. Tussen Q = 12 en Q = 20 ligt betalingsbereidheid boven MK. Het voordeel van deze niet-doorgegane transacties ontvangt niemand.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 95,
+      "text": "Figuur 4. Beide nieuwe partijen hebben voordeel. De bestaande transacties blijven gelijk en anderen ondervinden geen nadeel.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 96,
+      "text": "Figuur 5. Bij Q = 8 is de betalingsbereidheid € 22 en MK € 14. De hulplijnen laten zien waar je de gebieden splitst.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 97,
+      "text": "Figuur 6. Arceer het gemiste voordeel tussen V en A = MK, van Q = 8 tot Q = 12. De prijs van € 20 is niet de hoogte van de driehoek.",
+      "nested": true,
+      "alt_equals_caption": true
+    },
+    {
+      "page": 109,
+      "text": "Figuur 3. Begin met de werkelijke transacties, niet met een oppervlakteformule.",
+      "nested": true,
+      "alt_equals_caption": true
+    }
+  ],
+  "fraction_labels": [
+    {
+      "page": 6,
+      "label": "TCK gedeeld door Q"
+    },
+    {
+      "page": 6,
+      "label": "300 gedeeld door Q"
+    },
+    {
+      "page": 6,
+      "label": "TVK gedeeld door Q"
+    },
+    {
+      "page": 6,
+      "label": "2Q gedeeld door Q"
+    },
+    {
+      "page": 6,
+      "label": "TK gedeeld door Q"
+    },
+    {
+      "page": 6,
+      "label": "300 + 2Q gedeeld door Q"
+    },
+    {
+      "page": 12,
+      "label": "TO gedeeld door Q"
+    },
+    {
+      "page": 21,
+      "label": "ΔTK gedeeld door ΔQ"
+    },
+    {
+      "page": 21,
+      "label": "ΔTO gedeeld door ΔQ"
+    },
+    {
+      "page": 21,
+      "label": "300 gedeeld door 50"
+    },
+    {
+      "page": 21,
+      "label": "300 − 260 gedeeld door 50 − 40"
+    },
+    {
+      "page": 22,
+      "label": "TK nieuw − TK oud gedeeld door Q nieuw − Q oud"
+    },
+    {
+      "page": 22,
+      "label": "TO nieuw − TO oud gedeeld door Q nieuw − Q oud"
+    },
+    {
+      "page": 22,
+      "label": "60 gedeeld door 20"
+    },
+    {
+      "page": 22,
+      "label": "160 gedeeld door 20"
+    },
+    {
+      "page": 30,
+      "label": "ΔTK gedeeld door ΔQ"
+    },
+    {
+      "page": 30,
+      "label": "ΔTO gedeeld door ΔQ"
+    },
+    {
+      "page": 38,
+      "label": "%ΔQv gedeeld door %ΔP"
+    },
+    {
+      "page": 39,
+      "label": "nieuw − oud gedeeld door oud"
+    },
+    {
+      "page": 39,
+      "label": "11 − 10 gedeeld door 10"
+    },
+    {
+      "page": 39,
+      "label": "190 − 200 gedeeld door 200"
+    },
+    {
+      "page": 39,
+      "label": "%ΔQv gedeeld door %ΔP"
+    },
+    {
+      "page": 39,
+      "label": "−5% gedeeld door +10%"
+    },
+    {
+      "page": 40,
+      "label": "−5% gedeeld door +10% "
+    },
+    {
+      "page": 40,
+      "label": "−20% gedeeld door +10% "
+    },
+    {
+      "page": 41,
+      "label": "−5% gedeeld door +10%"
+    },
+    {
+      "page": 48,
+      "label": "TO nieuw − TO oud gedeeld door TO oud"
+    },
+    {
+      "page": 48,
+      "label": "1.045 − 1.000 gedeeld door 1.000"
+    },
+    {
+      "page": 49,
+      "label": "880 − 1.000 gedeeld door 1.000"
+    },
+    {
+      "page": 55,
+      "label": "%ΔQv gedeeld door %ΔY"
+    },
+    {
+      "page": 56,
+      "label": "%ΔQv van goed X gedeeld door %ΔP van goed Z"
+    },
+    {
+      "page": 56,
+      "label": "−4% gedeeld door +10%"
+    },
+    {
+      "page": 56,
+      "label": "+6% gedeeld door +10%"
+    },
+    {
+      "page": 58,
+      "label": "5,263157…% gedeeld door 10%"
+    },
+    {
+      "page": 60,
+      "label": "+5% gedeeld door +10%"
+    },
+    {
+      "page": 72,
+      "label": "%ΔQv gedeeld door %ΔP"
+    },
+    {
+      "page": 72,
+      "label": "%ΔQv gedeeld door %ΔY"
+    },
+    {
+      "page": 72,
+      "label": "%ΔQv X gedeeld door %ΔP Z"
+    },
+    {
+      "page": 72,
+      "label": "nieuw − oud gedeeld door oud"
+    },
+    {
+      "page": 72,
+      "label": "TO nieuw − TO oud gedeeld door TO oud"
+    }
+  ],
+  "bindings": {
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\manuscript\\2.1.1 Kostenstructuren – paragraaf.md": "7d1c31299783c3172cd89bd146c26e2af090b1e41de67d914835c616502a69d0",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\output\\Boek_2_H1_Kosten_en_opbrengsten.pdf": "10aeea0c0f77692be7ce4884a350d224e33f9bfddf0ded6d546e4d9e4fcb1c4d",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\manuscript\\2.1.2 Opbrengsten, winst en break-even – paragraaf.md": "33c07c4327027feca0d09f82227ab30851b70519f42d5bc5f8fcdf0c0318be43",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\manuscript\\2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md": "8cee4de8cc847b58d5c29c3f9bee3df6f4634cd16bed1dc8d45017529ef997d6",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\manuscript\\2.1 Hoofdstukoverzicht.md": "4baeae030064565a5f64981d516a43120a8cdd024cb950b036bed4ebf78b5593",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\manuscript\\2.2.1 Prijselasticiteit – paragraaf.md": "0c361ff88ed6821870ae9f6324918d1513282a33d11099840288016e865132ed",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\manuscript\\2.2.2 Elasticiteit en omzet – paragraaf.md": "8deb56d44bf325e98387834e5ca043496b63907b225cf864768332c360d279ae",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\manuscript\\2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md": "0af8a2a60054334ddb364b6ab7372e579564d545827ba8c0a11c71014d0886c3",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\manuscript\\2.2 Hoofdstukoverzicht.md": "08cee39ab799b16916c3e5419db3a0a2283dfdbfea77b687283331c447e9e6be",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\manuscript\\2.3.1 Consumentensurplus – paragraaf.md": "a1176bcbb5875656d7d554258267cdf39561c1e1fa5597ea4cb36c680b47c90b",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\manuscript\\2.3.2 Producentensurplus en totaal surplus – paragraaf.md": "624ea79522d04855da3521ce5b890a5083f218c02ef8e69df1b4002d420125e2",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\manuscript\\2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md": "3aa64389bed298f244a0e9d94eb8508dcfcca898a0869e17325407e36b6bab39",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\manuscript\\2.3 Hoofdstukoverzicht.md": "ea45c39bd1924bf3db5da9cfa4961fafd0ee521675da5aa5c103b8919fde66b6",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\output\\Boek_2_H1_Antwoorden.pdf": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\output\\Boek_2_H1_Docenteninformatie.pdf": "d1c076a4efdca20429dec35ca21fa6cf28aca262ccd9c9695a2bf9e58d033c32",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Antwoorden.pdf": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Docenteninformatie.pdf": "938abc9c9f3835b79f5f89575515fa504c3f6d1bcca114ddf1950c6a0d915664",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Antwoorden.pdf": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Docenteninformatie.pdf": "3934a1d65aa376ec1e43d7fefb07b87972c708edf25f665f4466346b7ac1d3a4",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\boek\\Boek_2_Compleet.pdf": "a2c8cf236645b343c03a52841e8ef26bbb9d1b0baa363e2355de9450405c0c32",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\boek\\Boek_2_Compleet_Antwoorden.pdf": "684de9a8a984a21a28ffb6ffb4bcb4b9325cc9f426b89d1c0a3903c1e2ffe9dc",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\boek\\Boek_2_Compleet_Docenteninformatie.pdf": "b0d9fa94e7bd4ef01482f53532d6eea20a9e681211ff2fc18e24cfe639c36fdf",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\assembly.json": "20bf8b3e5fc8c566b52aef5f948caa8229ff503f3dfa57475f291d7bea030b83",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\signed-cover-panel.html": "ffb65c286b44616145179025cc883e0a4f61643a18e267f7c23669d27d408752",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\signed-chapter-inputs.json": "6cd839ec0ddce59bc4e62212990d097cc5940573e8f37e2a99e6c640a4bca0ca",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\signed-cover-source.json": "d032a465180edc8db70a9df513dcdb532c432ca3924a98627a7f51514d3eb0d9",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\_assets\\signed-cover-background.png": "c16f95cace1e0212ffc160fb01343185a3a74ffda0711d0fef900a2ed059ac4e"
+  },
+  "answers": [
+    {
+      "complete_page": 3,
+      "chapter": 1,
+      "local": 1,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 4,
+      "chapter": 1,
+      "local": 2,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 5,
+      "chapter": 1,
+      "local": 3,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 6,
+      "chapter": 1,
+      "local": 4,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 7,
+      "chapter": 1,
+      "local": 5,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 8,
+      "chapter": 1,
+      "local": 6,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 9,
+      "chapter": 1,
+      "local": 7,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 10,
+      "chapter": 1,
+      "local": 8,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 11,
+      "chapter": 1,
+      "local": 9,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 12,
+      "chapter": 1,
+      "local": 10,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 13,
+      "chapter": 1,
+      "local": 11,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 14,
+      "chapter": 1,
+      "local": 12,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 15,
+      "chapter": 1,
+      "local": 13,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 16,
+      "chapter": 1,
+      "local": 14,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 17,
+      "chapter": 1,
+      "local": 15,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 18,
+      "chapter": 1,
+      "local": 16,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 19,
+      "chapter": 1,
+      "local": 17,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 20,
+      "chapter": 1,
+      "local": 18,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 21,
+      "chapter": 1,
+      "local": 19,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 22,
+      "chapter": 1,
+      "local": 20,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 23,
+      "chapter": 2,
+      "local": 1,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 24,
+      "chapter": 2,
+      "local": 2,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 25,
+      "chapter": 2,
+      "local": 3,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 26,
+      "chapter": 2,
+      "local": 4,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 27,
+      "chapter": 2,
+      "local": 5,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 28,
+      "chapter": 2,
+      "local": 6,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 29,
+      "chapter": 2,
+      "local": 7,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 30,
+      "chapter": 2,
+      "local": 8,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 31,
+      "chapter": 2,
+      "local": 9,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 32,
+      "chapter": 2,
+      "local": 10,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 33,
+      "chapter": 2,
+      "local": 11,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 34,
+      "chapter": 2,
+      "local": 12,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 35,
+      "chapter": 2,
+      "local": 13,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 36,
+      "chapter": 2,
+      "local": 14,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 37,
+      "chapter": 2,
+      "local": 15,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 38,
+      "chapter": 2,
+      "local": 16,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 39,
+      "chapter": 2,
+      "local": 17,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 40,
+      "chapter": 2,
+      "local": 18,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 41,
+      "chapter": 3,
+      "local": 1,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 42,
+      "chapter": 3,
+      "local": 2,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 43,
+      "chapter": 3,
+      "local": 3,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 44,
+      "chapter": 3,
+      "local": 4,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 45,
+      "chapter": 3,
+      "local": 5,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 46,
+      "chapter": 3,
+      "local": 6,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 47,
+      "chapter": 3,
+      "local": 7,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 48,
+      "chapter": 3,
+      "local": 8,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 49,
+      "chapter": 3,
+      "local": 9,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 50,
+      "chapter": 3,
+      "local": 10,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 51,
+      "chapter": 3,
+      "local": 11,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 52,
+      "chapter": 3,
+      "local": 12,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 53,
+      "chapter": 3,
+      "local": 13,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 54,
+      "chapter": 3,
+      "local": 14,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 55,
+      "chapter": 3,
+      "local": 15,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 56,
+      "chapter": 3,
+      "local": 16,
+      "tokens_equal_approved_target": true
+    },
+    {
+      "complete_page": 57,
+      "chapter": 3,
+      "local": 17,
+      "tokens_equal_approved_target": true
+    }
+  ],
+  "covers": {
+    "Boek_2_Compleet": {
+      "pages": 110,
+      "raster_sha256": "760bd053f2e5b9a51b4707a0b07ff8a14e85e8c4cd81b47771ba05379fca7d58",
+      "poppler_png_sha256": "35c8b60d3223b282f1388cf2148a96c446786cf9ff2c982ef7ae9ec9ebb37685",
+      "text": "Bedrag (€ totaal)\n0\n500\n1.000\n2.000\n3.000\n0\n50\n100\n150\nQ (stuks)\nTK\nTO\nTK = 500 + 10Q\nTO = 20Q\nQ\n(stuks)\nTK\n(€)\nGTK\n(€/stuk)\nTO\n(€)\nW\n(€)\n0\n500\n–\n0\n-500\n50\n1.000\n20\n1.000\n0\n100\n1.500\n15\n2.000\n500\n150\n2.000\n13,33\n3.000\n1.000\nP (€/stuk)\n0\nP*\nQ*\nQ (stuks)\nAanbod\nVraag\nConsumenten-\nsurplus\nProducenten-\nsurplus\nEv =\n%ΔQv\n%ΔP\nEv < −1\nelastisch\n−1 < Ev < 0\ninelastisch\n"
+    },
+    "Boek_2_Compleet_Antwoorden": {
+      "pages": 57,
+      "raster_sha256": "760bd053f2e5b9a51b4707a0b07ff8a14e85e8c4cd81b47771ba05379fca7d58",
+      "poppler_png_sha256": "35c8b60d3223b282f1388cf2148a96c446786cf9ff2c982ef7ae9ec9ebb37685",
+      "text": "Bedrag (€ totaal)\n0\n500\n1.000\n2.000\n3.000\n0\n50\n100\n150\nQ (stuks)\nTK\nTO\nTK = 500 + 10Q\nTO = 20Q\nQ\n(stuks)\nTK\n(€)\nGTK\n(€/stuk)\nTO\n(€)\nW\n(€)\n0\n500\n–\n0\n-500\n50\n1.000\n20\n1.000\n0\n100\n1.500\n15\n2.000\n500\n150\n2.000\n13,33\n3.000\n1.000\nP (€/stuk)\n0\nP*\nQ*\nQ (stuks)\nAanbod\nVraag\nConsumenten-\nsurplus\nProducenten-\nsurplus\nEv =\n%ΔQv\n%ΔP\nEv < −1\nelastisch\n−1 < Ev < 0\ninelastisch\n"
+    },
+    "Boek_2_Compleet_Docenteninformatie": {
+      "pages": 19,
+      "raster_sha256": "760bd053f2e5b9a51b4707a0b07ff8a14e85e8c4cd81b47771ba05379fca7d58",
+      "poppler_png_sha256": "35c8b60d3223b282f1388cf2148a96c446786cf9ff2c982ef7ae9ec9ebb37685",
+      "text": "Bedrag (€ totaal)\n0\n500\n1.000\n2.000\n3.000\n0\n50\n100\n150\nQ (stuks)\nTK\nTO\nTK = 500 + 10Q\nTO = 20Q\nQ\n(stuks)\nTK\n(€)\nGTK\n(€/stuk)\nTO\n(€)\nW\n(€)\n0\n500\n–\n0\n-500\n50\n1.000\n20\n1.000\n0\n100\n1.500\n15\n2.000\n500\n150\n2.000\n13,33\n3.000\n1.000\nP (€/stuk)\n0\nP*\nQ*\nQ (stuks)\nAanbod\nVraag\nConsumenten-\nsurplus\nProducenten-\nsurplus\nEv =\n%ΔQv\n%ΔP\nEv < −1\nelastisch\n−1 < Ev < 0\ninelastisch\n"
+    }
+  },
+  "geometry_rebinding": [
+    {
+      "page": 5,
+      "source_sha256": "9bfb1af7b9fad2456970e4c5377043b729bbe56c8ac30777af7ce3dc73c9ff6d",
+      "geometry_payload_sha256": "78fe798e7c2a7b56704a4b6a75697d07f36381c89d2ed61fba29f0723e2fe5bd",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 6,
+      "source_sha256": "f5342967ef20d6be3144f6523e67cf30eeb34798701a803281978347120bf917",
+      "geometry_payload_sha256": "fc0ee127434d22a1384c6733733f0201dd28e334384748d9d236644c2d6d0171",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 12,
+      "source_sha256": "ed97fe4093e6ff84a245d0edd8d8ea0617f6c8cc84e4266552ae2d50da8eac2a",
+      "geometry_payload_sha256": "3bea21df62e6edaa4748038eae7ea2d8bf72260563f6cf23f8c88621aebad0fa",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 14,
+      "source_sha256": "378f64858d65b81fb74201e00a35c45b50b041737e85a73177955eca6d16b69c",
+      "geometry_payload_sha256": "caebee770ae049db6617f4a6ef4f2d4fd336eb179739c3679e27014d7baabe78",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 21,
+      "source_sha256": "847a37dfabb775c75a63ed4efe990d9a524d19a54968bdcd64f94e414a14c046",
+      "geometry_payload_sha256": "06d3099639b7d21a612a70e0f835abb577e3235aeff43a47ddb65372f5866167",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 23,
+      "source_sha256": "34bcfcb28211a76fbc37037489583e771d2c9d9c5a0174e05005accee399195d",
+      "geometry_payload_sha256": "439c44d032de68d4886edf96d90754ed8a7a670d1e2f2f2b64e432593c324d62",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 38,
+      "source_sha256": "31a10c05866892c5cc83838cc645a1bdb63a771a00d83296a78a6d6cf6c5fd06",
+      "geometry_payload_sha256": "8364a216f9727a08d0d327867cbc4bd05e61c995bff1a8256589d0146ced8612",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 39,
+      "source_sha256": "decd785f87a4d6ecb6f3dff9ac32af87323b744cc1e7a8eb00426e649f10288a",
+      "geometry_payload_sha256": "0e80875146a7327ee75218770c36ffd67b9e47810aaa74a1dbaf250e85537ef6",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 40,
+      "source_sha256": "5dd022b4346954b77f12707a90d1bffdd6e33a7c3418ed18b3890e9248e7f05f",
+      "geometry_payload_sha256": "34262e57aa02569596df4d0e0c681da85f8544e60df2d15b30b0b87a11d80421",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 46,
+      "source_sha256": "7a5edd3d010ab537b4691e0e360f79e1ce1c289e96db4d46667eeac4a983b97d",
+      "geometry_payload_sha256": "d9767819a7d2454f2f981d066881ecb9f9490fa52d56fee9aeb18fedc9ac1428",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 47,
+      "source_sha256": "d08022b631c610041c5b617e0118bb2a7f405b1bf77ab478e935e745c616debd",
+      "geometry_payload_sha256": "a637b4675a39a9d2b1d8bb2d16974289093ccf12e08a6aa80c0932d40c08d3e1",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 48,
+      "source_sha256": "89834ab3127dbde9a607488c3f26a27ffc5071e9e25d7068b0b3d596b8e59e1b",
+      "geometry_payload_sha256": "133ee5272e180f409c92aef07aed7dcbce0f9e3cc4edb3db738f19a2847e32d6",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 54,
+      "source_sha256": "9dd5a2b8714221488bb0a312ba655a4023c422d112d78f4a21e90237563ed6c8",
+      "geometry_payload_sha256": "48a89f85f22cf15560d5926b8a1d34f1d623312039b1eb8a4deed8ce595df21f",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 55,
+      "source_sha256": "808caab8c25299a44f123b151b3aaf733936c7f54598b7b418268c4e512fbee3",
+      "geometry_payload_sha256": "2b9da2a08f644c9590943da7a2ffa3df0ea136f1503ea9dfe088c35355249941",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 56,
+      "source_sha256": "56ce70eb44712fe5ef35d480b0f718b78c596eb789f89d1960b018fc69194f59",
+      "geometry_payload_sha256": "facb464f553e775e75d6ebaf14409bc382f03b091fa911e45b77e46e1e7a95d8",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 57,
+      "source_sha256": "9c7f40d3c6284d7926cdc3a6915d130755ebcdb1081e6eada6fcafbf222a2692",
+      "geometry_payload_sha256": "7b5c5aae4233c65622a048f538fa92ef036d3ef836dd37bdd0fe91b0871d7b44",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 74,
+      "source_sha256": "8c559c524ad56291addd81ebcafba05256d00e5b9757f3f423a89174d7574731",
+      "geometry_payload_sha256": "b76a1c94c8bbe9784f22ff42e56bcda01661910a81c47edaa9341cda8b82e3d7",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 75,
+      "source_sha256": "03d3c273395e50cd049b5ae42db9be6065507dceae04353349fa3a2daaea0170",
+      "geometry_payload_sha256": "4cc64cc7ea024b8c617f655779584977dbda736c5aca439983c0f634ce643477",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 76,
+      "source_sha256": "b16d5c3f06ee48732bf985f8a09efc51a9e670086b4153dd69a76ca6b27d2359",
+      "geometry_payload_sha256": "b7090f14f28c5988e6503d3d7513d8c2be0daf789ab80be557aedf513ca0bede",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 77,
+      "source_sha256": "d24f4e5ecfc9df3192855dda710d5bc3a642ac0165d17c6b91ec3def4cea3f75",
+      "geometry_payload_sha256": "aaff2da5e64f1e27cb70339c66e94f2f2936fe77b2e30d61ff89c27f4cc4c272",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 82,
+      "source_sha256": "ec000250e660abcb2c50ab3fbbb5b26880a8f48f8bd0ea88af2d37623a99c49b",
+      "geometry_payload_sha256": "fefd7313ffb2d5cf63c1217c79f32611bbfabc9b13515bf452197147d9531bcb",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 83,
+      "source_sha256": "6a7edbef79b2f480ad18118d6ad4ada5b32509f2d0e524e54e506e811819b03c",
+      "geometry_payload_sha256": "05842da7a96187376cad3602d0df9ff86298115bb587a8ab80112c82d747d488",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 84,
+      "source_sha256": "481b0a325eccef3c5e0ccfed1023e82d622c1cc7679a4e46f5c53e4618964c77",
+      "geometry_payload_sha256": "b253d848fee475fc4479c7124197fdac97b8e04f41e3a0046d032d1523b4a71c",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 85,
+      "source_sha256": "c12409b52c9a02a46cb0e60ae087211145d89cc7b5e8613dda1963ce929134df",
+      "geometry_payload_sha256": "2c56433393e4e32b4a154b6de008e2b196b178fe6b2eb93350a2b6c8268f5d65",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 92,
+      "source_sha256": "5cecd1853c81eba2fd21eb63931f3a391acbc03457d9e936bab422541a064d1d",
+      "geometry_payload_sha256": "988e401cac9746833a2179e7241dbe4a23e3da87b9b1da794d033481362b33cb",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 93,
+      "source_sha256": "8b15136120fe2c7a3b3a4a20f25735d08a2b5ceb754041c74e189bada959cd86",
+      "geometry_payload_sha256": "d5cf42f760d406dec7772c0990e32de62ae77da470b69fc77b0291972d0445fd",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 94,
+      "source_sha256": "2555a9e10f7e66d7178b766d40c3f1f307169a826b1af4cba95269ab4904306f",
+      "geometry_payload_sha256": "b9ff3661b583767a9ce69fbb3fee62e0facc7fbdc87fb435b8410763024b5399",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 95,
+      "source_sha256": "3136a9644947161d96f4a10b191cf3bf1574c6715e7d98ad7a813bc244348b25",
+      "geometry_payload_sha256": "60a8247018a9308b1d537d8d1f1576cff3b5f68ebec6ea2c9803142fadea61f3",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 96,
+      "source_sha256": "a148fd7f61c2fd227bcd9bdca24e8f11819a237f80bdf85a58f01bcee2527261",
+      "geometry_payload_sha256": "935313f9d2bc2d9c81610546218a59079a4299c86e23fc80b36ac0c033278ed8",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 97,
+      "source_sha256": "333dd638f05b2229dc42cb31b10eb4546dbd0e637b2e1896e2372191dff22177",
+      "geometry_payload_sha256": "615a2e4864bdd5e04b534266b219493525457457ad30dfbe49cc921d973df24a",
+      "unchanged_reviewed_geometry": true
+    },
+    {
+      "page": 109,
+      "source_sha256": "ec0b1fe3445f2515e974bae5cbbf6f40028391db8a4ce850fdefcf2e7beeac57",
+      "geometry_payload_sha256": "4fc99951f26d21822554ddbc0aeff050721d99c22d8aed9d121fad1131effc84",
+      "unchanged_reviewed_geometry": true
+    }
+  ],
+  "covers_identical": true,
+  "cover_background_exact_target_xref16": true,
+  "evidence_sha256": "4d76b3ee2dbef94a21144c714f7212063fb8932cd3798b7326d86f1ff46210bf"
+}

@@ -60,7 +60,9 @@ test('foundation reports existing checker failures and missing local chapter evi
   expect(record.target.id).toBe('2.1.1');
   expect(record.sources.every(source => source.actual_sha256 === source.sha256 || source.currentness === 'reviewed_structural_transition')).toBe(true);
   const transitioned = record.sources.filter(source => source.currentness === 'reviewed_structural_transition');
-  expect(transitioned).toHaveLength(3);
+  // The signed successor refreshes exact authority source pins without promoting lifecycle.
+  expect(transitioned).toHaveLength(0);
+  expect(record.sources.every(source => source.actual_sha256 === source.sha256)).toBe(true);
   expect(transitioned.every(source => source.structure_revision === 'book34-lesson-balance-v3-20260915' && source.sha256 !== source.actual_sha256)).toBe(true);
   expect(record.holds.every(hold => typeof hold.blocks_requested_action === 'boolean')).toBe(true);
   expect(record.lifecycle.interpretation).toMatch(/Historical/);

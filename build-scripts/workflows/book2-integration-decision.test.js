@@ -10,6 +10,7 @@ const ACTIVATION_COMMIT = '206c018478654db781cc879e7ea36adcd9ef600c';
 function pending(authorized = false) {
   const input = remediation.readInputs();
   input.meta = JSON.parse(owner.gitText(grant.BASELINE_COMMIT, grant.META_PATH));
+  input.registry = JSON.parse(owner.gitText(grant.BASELINE_COMMIT, grant.REGISTRY_PATH));
   if (authorized) {
     input.meta.issue_229_integration_decision = { ...grant.EXPECTED };
     input.meta.issue_229_candidate.integration_status = 'authorized_pending_transition';

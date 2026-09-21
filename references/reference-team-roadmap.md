@@ -1641,7 +1641,7 @@ Acceptance tests:
 
 - no new unit duplicates A19/A32/A40/D39/D40;
 - graph-reading step is explicit before calculation;
-- elasticity sign and absolute-value interpretation are preserved.
+- historical RX.4 evidence retains its original convention; live elasticity sign/interpretation now follows [the bounded signed successor, precision §15](authored/economic_mathematical_precision_reference.md#15-signed-own-price-elasticity-and-reference-page-precision). Generator and product-use blocks remain unchanged.
 
 #### RX.5 Representation Operation Registry And Reports
 

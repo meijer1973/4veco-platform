@@ -1871,7 +1871,7 @@
           {
             "label": "b",
             "points": 2,
-            "prompt": "Classificeer de vraag naar bioscoopkaartjes met |Ev| en leg in gewone taal uit wat Ev=−0,8 betekent."
+            "prompt": "Classificeer de vraag naar bioscoopkaartjes met Ev en leg in gewone taal uit wat Ev=−0,8 betekent."
           },
           {
             "label": "c",
@@ -1888,7 +1888,7 @@
       "lesson_goals": [
         "Je kunt procentuele prijs- en hoeveelheidsveranderingen met de oude waarde als noemer berekenen.",
         "Je kunt Ev inclusief het teken berekenen.",
-        "Je kunt vraag met |Ev| classificeren als prijselastisch of prijsinelastisch.",
+        "Je kunt vraag met de ongeronde Ev rechtstreeks ten opzichte van −1 en 0 classificeren.",
         "Je kunt verschillen in prijsgevoeligheid met contextgegevens verklaren zonder verder te gaan dan de gegevens."
       ],
       "required_skills": [
@@ -1921,8 +1921,8 @@
       ],
       "short_answer_model": {
         "a": "%ΔP=(12−10)/10×100%=+20%; %ΔQv=(420−500)/500×100%=−16%; Ev=−16%/+20%=−0,8.",
-        "b": "|−0,8|<1: prijsinelastische vraag. De gevraagde hoeveelheid daalt procentueel minder dan de prijs stijgt.",
-        "c": "|−2|>1: prijselastische vraag. StreamNow reageert in deze waarneming procentueel sterker op de prijsverandering dan Bioscoop Nova.",
+        "b": "−1<−0,8<0: prijsinelastische vraag. De gevraagde hoeveelheid daalt procentueel minder dan de prijs stijgt.",
+        "c": "−2<−1: prijselastische vraag. StreamNow reageert in deze waarneming procentueel sterker op de prijsverandering dan Bioscoop Nova.",
         "d": "Bijvoorbeeld: streamingabonnementen hebben meer direct vergelijkbare alternatieven of zijn makkelijker uit te stellen. Dit is plausibel, niet door de cijfers bewezen."
       },
       "source_ref": "references/owned/course-blueprint-v5.md §2.2.1",
@@ -2011,9 +2011,9 @@
       ],
       "short_answer_model": {
         "a": "TO oud=10×500=€5.000 per week; TO nieuw=12×420=€5.040 per week.",
-        "b": "TO stijgt met €40/€5.000×100%=0,8%. Dat past bij |Ev|=0,8<1: de procentuele daling van Q is kleiner dan de procentuele prijsstijging.",
+        "b": "TO stijgt met €40/€5.000×100%=0,8%. Dat past bij −1<Ev=−0,8<0: de procentuele daling van Q is kleiner dan de procentuele prijsstijging.",
         "c": "TO oud=20×1.000=€20.000 per maand; TO nieuw=22×800=€17.600 per maand.",
-        "d": "%ΔTO=(17.600−20.000)/20.000×100%=−12%. TO daalt dus met 12%. Dat past bij |Ev|=2>1: de procentuele daling van Q is groter dan de procentuele prijsstijging.",
+        "d": "%ΔTO=(17.600−20.000)/20.000×100%=−12%. TO daalt dus met 12%. Dat past bij Ev=−2<−1: de procentuele daling van Q is groter dan de procentuele prijsstijging.",
         "e": "Lokale regel: bij een kleine prijsstijging stijgt TO bij prijsinelastische vraag en daalt TO bij prijselastische vraag. Bij een grote, eindige verandering kan het product van beide procentuele factoren afwijken; daarom bereken je TO vóór en na rechtstreeks.",
         "f": "Winst is TO−TK. Omdat kostengegevens ontbreken, bewijzen de omzetgegevens geen hogere winst."
       },
@@ -2317,7 +2317,7 @@
       ],
       "short_answer_model": {
         "1": "Nodig: P €10→€12 en Q 50.000→43.000. De appscore 4,6/5 is niet nodig voor Ev.",
-        "2": "|Ev|=0,7<1, dus de vraag is prijsinelastisch. Bij een prijsverandering van 1% verandert Q in deze waarneming in tegengestelde richting met ongeveer 0,7%.",
+        "2": "−1<Ev=−0,7<0, dus de vraag is prijsinelastisch. Bij een prijsverandering van 1% verandert Q in deze waarneming in tegengestelde richting met ongeveer 0,7%.",
         "3": "TO oud=€10×50.000=€500.000; TO nieuw=€12×43.000=€516.000.",
         "4": "Premium: Ei=15%/8%=1,875, luxegoed. Budget: Ei=−4%/8%=−0,5, inferieur goed. Voor StreamPlus geldt %ΔP concurrent=(9−8)/8×100%=12,5% en Ek=5%/12,5%=0,4. Teller: vraag naar StreamPlus; noemer: prijs van de concurrerende dienst. Positief, dus de diensten zijn substituten.",
         "5": "Q oud=12.000−4.800+4.000+3.000=14.200 abonnementen per maand. Bij Y=€42.000 per jaar is Q=14.400 abonnementen per maand; P en Pc blijven gelijk.",

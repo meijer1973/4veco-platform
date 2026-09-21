@@ -1,0 +1,44 @@
+[
+  {
+    "platform": "old",
+    "lessons": "old",
+    "task": "exercise-routes-20260921",
+    "active_curriculum": "book34-lesson-balance-v3-20260915",
+    "lesson_state": "exercise-route-revision",
+    "files": 1291,
+    "passed": true,
+    "failures": []
+  },
+  {
+    "platform": "old",
+    "lessons": "new",
+    "task": "exercise-routes-20260921",
+    "active_curriculum": "book34-lesson-balance-v3-20260915",
+    "lesson_state": null,
+    "files": 0,
+    "passed": false,
+    "failures": [
+      "Unexpected revision file inventory"
+    ]
+  },
+  {
+    "platform": "new",
+    "lessons": "old",
+    "task": "exercise-routes-20260921",
+    "active_curriculum": "book34-lesson-balance-v3-20260915",
+    "lesson_state": "exercise-route-revision",
+    "files": 1291,
+    "passed": true,
+    "failures": []
+  },
+  {
+    "platform": "new",
+    "lessons": "new",
+    "task": "exercise-routes-20260921",
+    "active_curriculum": "book34-lesson-balance-v3-20260915",
+    "lesson_state": "book2-theory-signed-20260921",
+    "files": 1470,
+    "passed": true,
+    "failures": []
+  }
+]

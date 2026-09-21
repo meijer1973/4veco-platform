@@ -36,7 +36,7 @@ test('lookup uses current selected subjects and version identity',()=>{
  expect(()=>lookupParagraph('4.1.1')).toThrow(/revision/);
 });
 test('Book 2 compatibility accepts only the exact three-source transition',()=>{
- const files=Object.fromEntries(Object.keys(TRANSITIONS).map(p=>[p,fs.readFileSync(path.join(root,p))]));
+ const files=Object.fromEntries(Object.keys(TRANSITIONS).map(p=>[p,require('child_process').execFileSync('git',['show',require('../workflows/book2-signed-authority').ledger.baseline_platform_commit+':'+p],{cwd:root})]));
  for(const [file,[before]] of Object.entries(TRANSITIONS)) {
   expect(acceptsTransition(file,before,files)).toBe(true);
   expect(acceptsTransition(file,'unreviewed',files)).toBe(false);

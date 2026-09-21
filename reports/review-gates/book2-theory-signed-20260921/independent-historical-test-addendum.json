@@ -1,0 +1,22 @@
+{
+  "scope": "Addendum to independent-authority-build-review.md; no final CI or exact-head claim",
+  "command": "node node_modules/jest/bin/jest.js --runInBand --roots build-scripts/workflows --runTestsByPath build-scripts/workflows/check-book-outline-currentness.test.js build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/book2-integration-decision.test.js",
+  "suites_passed": 3,
+  "tests_passed": 217,
+  "tests_failed": 0,
+  "elapsed_seconds": 311.823,
+  "files": [
+    {
+      "path": "build-scripts/workflows/check-book-outline-currentness.test.js",
+      "sha256": "063361f6409e3f6278afbd65058af6900a9337f6f9e8fd5ad6bda1c5181a68bc"
+    },
+    {
+      "path": "build-scripts/workflows/check-book2-target-authority-remediation.test.js",
+      "sha256": "4841d0388753d13b765ed9e203695b46389f52213799568bf59b21d9a2a1b852"
+    },
+    {
+      "path": "build-scripts/workflows/book2-integration-decision.test.js",
+      "sha256": "c4c84f64052e63bb4151d544d9cbd19736130de22d690d85f372be8d467efeed"
+    }
+  ]
+}

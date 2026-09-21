@@ -1,0 +1,200 @@
+{
+  "scope": "Bounded signed convention; no IDs, dependencies, generators, Ei convention, statuses or product-use blocks change. Review before CLI application.",
+  "units": {
+    "A15": {
+      "before": {
+        "procedure": [
+          "Noteer de oude en nieuwe waarden van P en Q.",
+          "Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.",
+          "Bereken Ev = %ΔQv / %ΔP.",
+          "Interpreteer: |Ev| > 1 = elastisch, |Ev| < 1 = inelastisch, |Ev| = 1 = unitair.",
+          "Controleer het teken: Ev is bij een normale vraag altijd negatief."
+        ],
+        "pitfalls": [
+          "Vergeet het minteken niet!"
+        ]
+      },
+      "patch": {
+        "procedure": [
+          "Noteer de oude en nieuwe waarden van P en Q uit dezelfde respectievelijke situaties.",
+          "Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.",
+          "Bereken Ev = %ΔQv / %ΔP met teken; bij %ΔP = 0 is dit gemeten quotiënt niet gedefinieerd.",
+          "Interpreteer het teken en vergelijk Ev rechtstreeks met −1 en 0: Ev < −1 is elastisch, −1 < Ev < 0 is inelastisch, Ev = −1 is unitair elastisch en Ev = 0 is volkomen inelastisch (geen hoeveelheidsreactie).",
+          "Gebruik deze indeling alleen bij de gewone eigen-prijsvraag met overige factoren gelijk; een positieve verhouding bij meerdere veranderende factoren bewijst geen eigen-prijseffect. Behoud de ongeronde Ev bij de indeling."
+        ],
+        "pitfalls": [
+          "Het minteken vergeten of negatief verwarren met inelastisch.",
+          "Een extra absolute-waardestap verplicht stellen; beoordeel berekening, indeling en economische betekenis."
+        ]
+      }
+    },
+    "A82": {
+      "before": {
+        "procedure": [
+          "Lees de vraag en bepaal welke prijs- en hoeveelheidsvariabelen bij de elasticiteit horen.",
+          "Selecteer in de tabel de oude prijs, oude hoeveelheid, nieuwe prijs en nieuwe hoeveelheid en controleer rij, kolom, periode en eenheid.",
+          "Controleer dat oude prijs en oude hoeveelheid bij dezelfde situatie horen en dat nieuwe prijs en nieuwe hoeveelheid bij dezelfde situatie horen.",
+          "Label per variabele de basiswaarde en vergelijkingswaarde.",
+          "Bereken de procentuele verandering van Q en de procentuele verandering van P.",
+          "Bereken Ev = procentuele verandering Q gedeeld door procentuele verandering P.",
+          "Interpreteer teken, absolute waarde en elastisch, inelastisch of unitair elastisch in de economische context."
+        ],
+        "pitfalls": [
+          "De verkeerde tabelrijen of perioden koppelen.",
+          "Oude prijs bij nieuwe hoeveelheid gebruiken of andersom.",
+          "P en Q omwisselen in de elasticiteitsbreuk.",
+          "Absolute veranderingen gebruiken in plaats van procentuele veranderingen.",
+          "Het teken of de absolute waarde negeren bij de interpretatie."
+        ]
+      },
+      "patch": {
+        "procedure": [
+          "Lees de vraag en bepaal welke prijs- en hoeveelheidsvariabelen bij de elasticiteit horen.",
+          "Selecteer in de tabel de oude prijs, oude hoeveelheid, nieuwe prijs en nieuwe hoeveelheid en controleer rij, kolom, periode en eenheid.",
+          "Controleer dat oude prijs en oude hoeveelheid bij dezelfde situatie horen en dat nieuwe prijs en nieuwe hoeveelheid bij dezelfde situatie horen.",
+          "Label per variabele de basiswaarde en vergelijkingswaarde.",
+          "Bereken de procentuele verandering van Q en van P met telkens de oude waarde als noemer en behoud het teken.",
+          "Bereken Ev = procentuele verandering Q gedeeld door procentuele verandering P; bij een prijsverandering van 0% is het quotiënt niet gedefinieerd.",
+          "Interpreteer het teken en vergelijk Ev rechtstreeks met −1 en 0: Ev < −1 is elastisch, −1 < Ev < 0 is inelastisch, Ev = −1 is unitair elastisch en Ev = 0 is volkomen inelastisch (geen hoeveelheidsreactie). Leg de economische betekenis uit.",
+          "Gebruik deze indeling alleen bij de gewone eigen-prijsvraag met overige factoren gelijk; een positieve verhouding bij meerdere veranderende factoren bewijst geen eigen-prijseffect. Behoud de ongeronde Ev bij de indeling."
+        ],
+        "pitfalls": [
+          "De verkeerde tabelrijen of perioden koppelen.",
+          "Oude prijs bij nieuwe hoeveelheid gebruiken of andersom.",
+          "P en Q omwisselen in de elasticiteitsbreuk.",
+          "Absolute veranderingen gebruiken in plaats van procentuele veranderingen.",
+          "Het teken negeren of een negatieve Ev zonder vergelijking met −1 en 0 als inelastisch indelen."
+        ]
+      }
+    },
+    "A83": {
+      "before": {
+        "procedure": [
+          "Lees de titel en bepaal dat de grafiek een vraagrelatie tussen prijs en gevraagde hoeveelheid toont.",
+          "Controleer horizontale as, verticale as, eenheden, schaal en directe labels of legenda.",
+          "Kies twee punten of twee situaties die bij de vraag horen en bepaal of de waarden exact of geschat moeten worden afgelezen.",
+          "Lees bij elk punt de prijs en hoeveelheid af en noteer beide P,Q-paren.",
+          "Bepaal voor prijs en hoeveelheid welke waarde oud of basis is en welke waarde nieuw of vergelijking is.",
+          "Bereken de procentuele verandering van Q en de procentuele verandering van P.",
+          "Bereken Ev = procentuele verandering Q gedeeld door procentuele verandering P.",
+          "Interpreteer teken, absolute waarde en elastisch, inelastisch of unitair elastisch, en controleer of de uitkomst past bij de grafiek."
+        ],
+        "pitfalls": [
+          "Slechts een punt aflezen en daarna een helling berekenen.",
+          "P en Q of de assen verwisselen.",
+          "Geschatte grafiekwaarden behandelen alsof ze exact zijn.",
+          "Absolute veranderingen gebruiken in plaats van procentuele veranderingen.",
+          "De grafiekhelling behandelen alsof die hetzelfde is als elasticiteit.",
+          "Het teken of de absolute waarde negeren bij de interpretatie."
+        ]
+      },
+      "patch": {
+        "procedure": [
+          "Lees de titel en bepaal dat de grafiek een vraagrelatie tussen prijs en gevraagde hoeveelheid toont.",
+          "Controleer horizontale as, verticale as, eenheden, schaal en directe labels of legenda.",
+          "Kies twee punten of twee situaties die bij de vraag horen en bepaal of de waarden exact of geschat moeten worden afgelezen.",
+          "Lees bij elk punt de prijs en hoeveelheid af en noteer beide P,Q-paren.",
+          "Bepaal voor prijs en hoeveelheid welke waarde oud of basis is en welke waarde nieuw of vergelijking is.",
+          "Bereken de procentuele verandering van Q en van P met telkens de oude waarde als noemer en behoud het teken.",
+          "Bereken Ev = procentuele verandering Q gedeeld door procentuele verandering P; bij een prijsverandering van 0% is het quotiënt niet gedefinieerd.",
+          "Interpreteer het teken en vergelijk Ev rechtstreeks met −1 en 0: Ev < −1 is elastisch, −1 < Ev < 0 is inelastisch, Ev = −1 is unitair elastisch en Ev = 0 is volkomen inelastisch (geen hoeveelheidsreactie). Controleer of de uitkomst past bij de grafiek.",
+          "Gebruik deze indeling alleen bij de gewone eigen-prijsvraag met overige factoren gelijk; een positieve verhouding bij meerdere veranderende factoren bewijst geen eigen-prijseffect. Behoud de ongeronde Ev bij de indeling."
+        ],
+        "pitfalls": [
+          "Slechts een punt aflezen en daarna een helling berekenen.",
+          "P en Q of de assen verwisselen.",
+          "Geschatte grafiekwaarden behandelen alsof ze exact zijn.",
+          "Absolute veranderingen gebruiken in plaats van procentuele veranderingen.",
+          "De grafiekhelling behandelen alsof die hetzelfde is als elasticiteit.",
+          "Het teken negeren of een negatieve Ev zonder vergelijking met −1 en 0 als inelastisch indelen."
+        ]
+      }
+    },
+    "A84": {
+      "before": {
+        "procedure": [
+          "Lees uit de bron welke prijsverandering, hoeveelheidsverandering of elasticiteitswaarde gegeven is.",
+          "Bepaal met de absolute waarde van de elasticiteit of de vraag elastisch, inelastisch of unitair elastisch is.",
+          "Bij elastische vraag beweegt omzet tegengesteld aan de prijs: prijs omhoog betekent omzet omlaag en prijs omlaag betekent omzet omhoog.",
+          "Bij inelastische vraag beweegt omzet mee met de prijs: prijs omhoog betekent omzet omhoog en prijs omlaag betekent omzet omlaag.",
+          "Bij unitair elastische vraag blijft omzet ongeveer gelijk omdat prijs- en hoeveelheidsverandering elkaar ongeveer compenseren.",
+          "Gebruik TO = P maal Q of vergelijk de procentuele effecten om de richting van de omzetverandering te onderbouwen.",
+          "Controleer teken, absolute waarde en context, en formuleer het oordeel met verwijzing naar de brongegevens."
+        ],
+        "pitfalls": [
+          "Elastische en inelastische vraag omdraaien bij de omzetrichting.",
+          "Het minteken mechanisch gebruiken zonder de omzetbetekenis te controleren.",
+          "Omzet en winst door elkaar halen.",
+          "Alleen een procentuele verandering berekenen zonder de elasticiteitscategorie te interpreteren."
+        ],
+        "kern": "Beoordeel met brongegevens en prijselasticiteit of omzet stijgt, daalt of ongeveer gelijk blijft: bij elastische vraag beweegt omzet tegengesteld aan de prijs, bij inelastische vraag mee met de prijs, en bij unitair elastische vraag ongeveer niet."
+      },
+      "patch": {
+        "procedure": [
+          "Lees uit de bron welke prijsverandering, hoeveelheidsverandering of elasticiteitswaarde gegeven is.",
+          "Interpreteer het teken en vergelijk Ev rechtstreeks met −1 en 0: Ev < −1 is elastisch, −1 < Ev < 0 is inelastisch, Ev = −1 is unitair elastisch en Ev = 0 is volkomen inelastisch (geen hoeveelheidsreactie).",
+          "Bij kleine veranderingen rond de huidige situatie geldt lokaal: bij elastische vraag beweegt omzet tegengesteld aan de prijs; prijs omhoog betekent omzet omlaag en omgekeerd.",
+          "Lokaal bij −1 < Ev ≤ 0: bij inelastische vraag beweegt omzet mee met de prijs; prijs omhoog betekent omzet omhoog en omgekeerd. Ev = 0 betekent geen hoeveelheidsreactie.",
+          "Lokaal bij Ev = −1: bij unitair elastische vraag blijft omzet ongeveer gelijk omdat de procentuele effecten elkaar ongeveer compenseren.",
+          "Bij gegeven oude en nieuwe P en Q: gebruik TO = P maal Q vóór en na, met correct gepaarde waarden. Een eindige omzetverandering is niet exact de som van de procentuele prijs- en hoeveelheidsverandering.",
+          "Controleer teken, ongeronde indeling, context en economische betekenis; onderbouw met de bron. Omzet is geen winst zonder kosten.",
+          "Gebruik deze indeling alleen bij de gewone eigen-prijsvraag met overige factoren gelijk; een positieve verhouding bij meerdere veranderende factoren bewijst geen eigen-prijseffect. Behoud de ongeronde Ev bij de indeling."
+        ],
+        "pitfalls": [
+          "Elastische en inelastische vraag omdraaien bij de omzetrichting.",
+          "Het minteken mechanisch gebruiken zonder de omzetbetekenis te controleren.",
+          "Omzet en winst door elkaar halen.",
+          "Alleen een procentuele verandering berekenen zonder de elasticiteitscategorie te interpreteren.",
+          "Een lokale omzetregel zonder narekenen toepassen op een eindige verandering; P 10→12 en Q 100→82 geven Ev = −0,9 maar TO 1000→984."
+        ],
+        "kern": "Beoordeel omzet met brongegevens: pas de elasticiteitsregel lokaal bij kleine eigen-prijsveranderingen toe en bereken bij eindige veranderingen TO = P × Q vóór en na; onderscheid omzet van winst."
+      }
+    }
+  },
+  "terms": {
+    "prijselasticiteit-van-de-vraag": {
+      "before": {
+        "definition_nl": "Maat voor de gevoeligheid van de gevraagde hoeveelheid voor een prijsverandering. De waarde is meestal negatief: een hogere prijs leidt tot een lagere gevraagde hoeveelheid.",
+        "example_nl": "Stijgt de prijs met 10% en daalt de gevraagde hoeveelheid met 20%, dan is Ev = −20 / 10 = −2. In absolute waarde > 1, dus prijselastisch.",
+        "pitfall_nl": "Ev is meestal negatief. Staat er \"elasticiteit = 2\", dan wordt bijna altijd |Ev| bedoeld. Het teken vergeten is een klassieke fout."
+      },
+      "patch": {
+        "definition_nl": "Verhouding van de procentuele verandering van de gevraagde hoeveelheid tot de procentuele verandering van de eigen prijs, bij overige factoren gelijk: Ev = %ΔQv / %ΔP. Bij de gewone tegengestelde reactie is Ev negatief; Ev = 0 betekent geen hoeveelheidsreactie.",
+        "example_nl": "Stijgt P met 10% en daalt Qv met 20%, dan is Ev = −20 / 10 = −2. Omdat −2 < −1 is de vraag prijselastisch: Qv reageert procentueel tweemaal zo sterk, in tegengestelde richting.",
+        "pitfall_nl": "Behoud het teken en vergelijk rechtstreeks met −1 en 0; een afzonderlijke absolute-waardestap is niet verplicht. Deel door procentuele veranderingen met oude waarden als basis, niet door veranderingen in aantallen. Bij %ΔP = 0 is het quotiënt niet gedefinieerd. Een positieve verhouding bij meerdere veranderende factoren bewijst geen eigen-prijseffect."
+      }
+    },
+    "prijselastische-vraag": {
+      "before": {
+        "definition_nl": "Vraag waarvan de prijselasticiteit in absolute waarde groter is dan 1: een prijsverandering van 1% zorgt voor een grotere procentuele verandering in de gevraagde hoeveelheid.",
+        "example_nl": "Voor vakantievluchten (|Ev| ≈ 2) leidt een prijsstijging van 10% tot ongeveer 20% minder boekingen — de vraag reageert sterk op prijs."
+      },
+      "patch": {
+        "definition_nl": "Bij de gewone eigen-prijsvraag geldt Ev < −1: de gevraagde hoeveelheid reageert procentueel sterker dan de prijs, in tegengestelde richting en bij overige factoren gelijk.",
+        "example_nl": "In een voorbeeld met Ev = −2 horen bij 10% prijsstijging 20% minder boekingen. Vergelijk −2 rechtstreeks met −1: prijselastisch."
+      }
+    },
+    "prijsinelastische-vraag": {
+      "before": {
+        "definition_nl": "Vraag waarvan de prijselasticiteit in absolute waarde kleiner is dan 1: een prijsverandering van 1% zorgt voor een kleinere procentuele verandering in de gevraagde hoeveelheid.",
+        "example_nl": "Voor insuline (|Ev| ≈ 0,1) verandert de gevraagde hoeveelheid bijna niet als de prijs stijgt — de patiënt heeft het middel hoe dan ook nodig."
+      },
+      "patch": {
+        "definition_nl": "Bij de gewone eigen-prijsvraag geldt −1 < Ev < 0: de gevraagde hoeveelheid reageert procentueel minder sterk dan de prijs, in tegengestelde richting. Ev = 0 is het grensgeval volkomen prijsinelastisch: geen hoeveelheidsreactie.",
+        "example_nl": "Bij Ev = −0,5 horen bij 10% prijsstijging 5% minder gevraagde producten. Omdat −1 < −0,5 < 0 is de vraag prijsinelastisch."
+      }
+    },
+    "prijselasticiteit-en-to": {
+      "before": {
+        "definition_nl": "De richting waarin de totale opbrengst verandert bij een prijswijziging hangt af van de prijselasticiteit van de vraag. Bij een elastische vraag daalt TO als de prijs stijgt; bij een inelastische vraag stijgt TO.",
+        "example_nl": "Bij een elastische vraag (|Ev| > 1) daalt TO bij een prijsstijging: 10% prijsstijging leidt tot >10% afzetdaling, waardoor P × Q kleiner wordt.",
+        "pitfall_nl": null
+      },
+      "patch": {
+        "definition_nl": "Bij kleine eigen-prijsveranderingen geldt lokaal: voor Ev < −1 beweegt TO tegengesteld aan P; voor −1 < Ev ≤ 0 beweegt TO mee met P; bij Ev = −1 blijft TO ongeveer gelijk. Bereken bij gegeven oude en nieuwe P en Q de eindige omzetverandering rechtstreeks met TO = P × Q.",
+        "example_nl": "P stijgt van 10 naar 12 en Q daalt van 100 naar 82: Ev = −18% / 20% = −0,9. Toch daalt TO van 1000 naar 984 (−1,6%). De lokale richtingregel vervangt deze eindige berekening niet.",
+        "pitfall_nl": "De procentuele veranderingen van P en Q optellen als exacte omzetverandering, een positieve verhouding bij meerdere veranderende factoren als eigen-prijselasticiteit behandelen, of omzet zonder kostengegevens gelijkstellen aan winst."
+      }
+    }
+  }
+}

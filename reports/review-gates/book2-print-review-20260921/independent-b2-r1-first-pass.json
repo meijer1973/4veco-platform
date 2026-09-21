@@ -1,0 +1,1012 @@
+{
+  "scope": "Independent early B2-R1 review; fixed8EPSILON candidate",
+  "verdict": "REPAIR REQUIRED for requested decimal robustness; no current integer generator/book regression",
+  "files": [
+    {
+      "path": "engines/skilltree/generators.js",
+      "sha256": "9472aabfd69967ff2771b590f437abf8ff64270ab194f01172298c6b27836953"
+    },
+    {
+      "path": "engines/tests/signed-elasticity.test.js",
+      "sha256": "de03ea26de5b7503662f7cf0fa138688a36ecc75fa99fbf86bea5bccf788b233"
+    }
+  ],
+  "examples": [
+    {
+      "p_old_euro": 9.2,
+      "p_new_euro": 9.66,
+      "q_old": 1000,
+      "q_new": 950,
+      "euro_ev": -0.999999999999998,
+      "euro_class": "inelastisch",
+      "cents_ev": -1,
+      "cents_class": "eenheidselastisch",
+      "expected": "eenheidselastisch"
+    },
+    {
+      "p_old_euro": 9.9,
+      "p_new_euro": 10,
+      "q_old": 990,
+      "q_new": 980,
+      "euro_ev": -1.0000000000000036,
+      "euro_class": "elastisch",
+      "cents_ev": -1,
+      "cents_class": "eenheidselastisch",
+      "expected": "eenheidselastisch"
+    },
+    {
+      "p_old_euro": 9.99,
+      "p_new_euro": 10,
+      "q_old": 999,
+      "q_new": 998,
+      "euro_ev": -1.0000000000000213,
+      "euro_class": "elastisch",
+      "cents_ev": -1,
+      "cents_class": "eenheidselastisch",
+      "expected": "eenheidselastisch"
+    }
+  ],
+  "decimal_unitary_enumeration": {
+    "cases": 11000,
+    "mismatches": 119,
+    "rows": [
+      {
+        "old_euro": 0.2,
+        "new_euro": 0.21,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 0.4,
+        "new_euro": 0.42,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 0.8,
+        "new_euro": 0.84,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 1.6,
+        "new_euro": 1.68,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 3.2,
+        "new_euro": 3.36,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 3.8,
+        "new_euro": 3.99,
+        "pct_change": 5,
+        "ev": -0.9999999999999979,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 4.6,
+        "new_euro": 4.83,
+        "pct_change": 5,
+        "ev": -0.999999999999998,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 6.4,
+        "new_euro": 6.72,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 7.4,
+        "new_euro": 7.77,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 7.6,
+        "new_euro": 7.98,
+        "pct_change": 5,
+        "ev": -0.9999999999999979,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 9.2,
+        "new_euro": 9.66,
+        "pct_change": 5,
+        "ev": -0.999999999999998,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 9.4,
+        "new_euro": 9.87,
+        "pct_change": 5,
+        "ev": -1.0000000000000024,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 9.8,
+        "new_euro": 10.29,
+        "pct_change": 5,
+        "ev": -1.000000000000003,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 10.2,
+        "new_euro": 10.71,
+        "pct_change": 5,
+        "ev": -0.9999999999999968,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 10.6,
+        "new_euro": 11.13,
+        "pct_change": 5,
+        "ev": -0.9999999999999979,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 12.2,
+        "new_euro": 12.81,
+        "pct_change": 5,
+        "ev": -0.999999999999998,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 12.8,
+        "new_euro": 13.44,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 14.8,
+        "new_euro": 15.54,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 15.2,
+        "new_euro": 15.96,
+        "pct_change": 5,
+        "ev": -0.9999999999999979,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 16.2,
+        "new_euro": 17.01,
+        "pct_change": 5,
+        "ev": -0.9999999999999971,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 16.6,
+        "new_euro": 17.43,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 18.4,
+        "new_euro": 19.32,
+        "pct_change": 5,
+        "ev": -0.999999999999998,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 18.8,
+        "new_euro": 19.74,
+        "pct_change": 5,
+        "ev": -1.0000000000000024,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 19.4,
+        "new_euro": 20.37,
+        "pct_change": 5,
+        "ev": -0.9999999999999976,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 19.6,
+        "new_euro": 20.58,
+        "pct_change": 5,
+        "ev": -1.000000000000003,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 20.4,
+        "new_euro": 21.42,
+        "pct_change": 5,
+        "ev": -0.9999999999999968,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 20.6,
+        "new_euro": 21.63,
+        "pct_change": 5,
+        "ev": -1.0000000000000024,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 21.2,
+        "new_euro": 22.26,
+        "pct_change": 5,
+        "ev": -0.9999999999999979,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 23.8,
+        "new_euro": 24.99,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 24.4,
+        "new_euro": 25.62,
+        "pct_change": 5,
+        "ev": -0.999999999999998,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 24.6,
+        "new_euro": 25.83,
+        "pct_change": 5,
+        "ev": -1.0000000000000027,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 25.4,
+        "new_euro": 26.67,
+        "pct_change": 5,
+        "ev": -0.9999999999999976,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 25.6,
+        "new_euro": 26.88,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 29.6,
+        "new_euro": 31.08,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 30.4,
+        "new_euro": 31.92,
+        "pct_change": 5,
+        "ev": -0.9999999999999979,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 31,
+        "new_euro": 32.55,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 32.4,
+        "new_euro": 34.02,
+        "pct_change": 5,
+        "ev": -0.9999999999999971,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 32.6,
+        "new_euro": 34.23,
+        "pct_change": 5,
+        "ev": -1.0000000000000029,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 33.2,
+        "new_euro": 34.86,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 33.8,
+        "new_euro": 35.49,
+        "pct_change": 5,
+        "ev": -0.999999999999997,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 34.2,
+        "new_euro": 35.91,
+        "pct_change": 5,
+        "ev": -1.0000000000000038,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 34.6,
+        "new_euro": 36.33,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 35.8,
+        "new_euro": 37.59,
+        "pct_change": 5,
+        "ev": -0.9999999999999964,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 36.2,
+        "new_euro": 38.01,
+        "pct_change": 5,
+        "ev": -1.0000000000000027,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 36.8,
+        "new_euro": 38.64,
+        "pct_change": 5,
+        "ev": -0.999999999999998,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 37.4,
+        "new_euro": 39.27,
+        "pct_change": 5,
+        "ev": -0.9999999999999976,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 37.6,
+        "new_euro": 39.48,
+        "pct_change": 5,
+        "ev": -1.0000000000000024,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 38.2,
+        "new_euro": 40.11,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 38.8,
+        "new_euro": 40.74,
+        "pct_change": 5,
+        "ev": -0.9999999999999976,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 39.2,
+        "new_euro": 41.16,
+        "pct_change": 5,
+        "ev": -1.000000000000003,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 40.8,
+        "new_euro": 42.84,
+        "pct_change": 5,
+        "ev": -0.9999999999999968,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 41.2,
+        "new_euro": 43.26,
+        "pct_change": 5,
+        "ev": -1.0000000000000024,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 42.4,
+        "new_euro": 44.52,
+        "pct_change": 5,
+        "ev": -0.9999999999999979,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 42.6,
+        "new_euro": 44.73,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 43.8,
+        "new_euro": 45.99,
+        "pct_change": 5,
+        "ev": -0.9999999999999977,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 44.2,
+        "new_euro": 46.41,
+        "pct_change": 5,
+        "ev": -1.0000000000000029,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 45.8,
+        "new_euro": 48.09,
+        "pct_change": 5,
+        "ev": -0.9999999999999971,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 46.2,
+        "new_euro": 48.51,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 47.4,
+        "new_euro": 49.77,
+        "pct_change": 5,
+        "ev": -0.999999999999998,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 47.6,
+        "new_euro": 49.98,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 48.8,
+        "new_euro": 51.24,
+        "pct_change": 5,
+        "ev": -0.999999999999998,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 49.2,
+        "new_euro": 51.66,
+        "pct_change": 5,
+        "ev": -1.0000000000000027,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 50.8,
+        "new_euro": 53.34,
+        "pct_change": 5,
+        "ev": -0.9999999999999976,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 51.2,
+        "new_euro": 53.76,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 54.2,
+        "new_euro": 56.91,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 55.8,
+        "new_euro": 58.59,
+        "pct_change": 5,
+        "ev": -0.9999999999999977,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 59.2,
+        "new_euro": 62.16,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 60.8,
+        "new_euro": 63.84,
+        "pct_change": 5,
+        "ev": -0.9999999999999979,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 62,
+        "new_euro": 65.1,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 64.2,
+        "new_euro": 67.41,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 64.8,
+        "new_euro": 68.04,
+        "pct_change": 5,
+        "ev": -0.9999999999999971,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 65.2,
+        "new_euro": 68.46,
+        "pct_change": 5,
+        "ev": -1.0000000000000029,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 65.8,
+        "new_euro": 69.09,
+        "pct_change": 5,
+        "ev": -0.999999999999998,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 66.4,
+        "new_euro": 69.72,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 66.6,
+        "new_euro": 69.93,
+        "pct_change": 5,
+        "ev": -0.9999999999999962,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 67.4,
+        "new_euro": 70.77,
+        "pct_change": 5,
+        "ev": -1.000000000000003,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 67.6,
+        "new_euro": 70.98,
+        "pct_change": 5,
+        "ev": -0.999999999999997,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 68.4,
+        "new_euro": 71.82,
+        "pct_change": 5,
+        "ev": -1.0000000000000038,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 68.6,
+        "new_euro": 72.03,
+        "pct_change": 5,
+        "ev": -0.9999999999999979,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 69.2,
+        "new_euro": 72.66,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 69.8,
+        "new_euro": 73.29,
+        "pct_change": 5,
+        "ev": -0.9999999999999973,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 70.2,
+        "new_euro": 73.71,
+        "pct_change": 5,
+        "ev": -1.0000000000000027,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 71.4,
+        "new_euro": 74.97,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 71.6,
+        "new_euro": 75.18,
+        "pct_change": 5,
+        "ev": -0.9999999999999964,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 72.4,
+        "new_euro": 76.02,
+        "pct_change": 5,
+        "ev": -1.0000000000000027,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 72.6,
+        "new_euro": 76.23,
+        "pct_change": 5,
+        "ev": -0.9999999999999973,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 73.4,
+        "new_euro": 77.07,
+        "pct_change": 5,
+        "ev": -1.0000000000000036,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 73.6,
+        "new_euro": 77.28,
+        "pct_change": 5,
+        "ev": -0.999999999999998,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 74.8,
+        "new_euro": 78.54,
+        "pct_change": 5,
+        "ev": -0.9999999999999976,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 75.2,
+        "new_euro": 78.96,
+        "pct_change": 5,
+        "ev": -1.0000000000000024,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 76.4,
+        "new_euro": 80.22,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 76.6,
+        "new_euro": 80.43,
+        "pct_change": 5,
+        "ev": -0.9999999999999967,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 77.4,
+        "new_euro": 81.27,
+        "pct_change": 5,
+        "ev": -1.0000000000000027,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 77.6,
+        "new_euro": 81.48,
+        "pct_change": 5,
+        "ev": -0.9999999999999976,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 78.4,
+        "new_euro": 82.32,
+        "pct_change": 5,
+        "ev": -1.000000000000003,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 79.8,
+        "new_euro": 83.79,
+        "pct_change": 5,
+        "ev": -0.9999999999999977,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 80.2,
+        "new_euro": 84.21,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 81.6,
+        "new_euro": 85.68,
+        "pct_change": 5,
+        "ev": -0.9999999999999968,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 82.4,
+        "new_euro": 86.52,
+        "pct_change": 5,
+        "ev": -1.0000000000000024,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 82.6,
+        "new_euro": 86.73,
+        "pct_change": 5,
+        "ev": -0.9999999999999976,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 83.4,
+        "new_euro": 87.57,
+        "pct_change": 5,
+        "ev": -1.000000000000003,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 84.8,
+        "new_euro": 89.04,
+        "pct_change": 5,
+        "ev": -0.9999999999999979,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 85.2,
+        "new_euro": 89.46,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 86.6,
+        "new_euro": 90.93,
+        "pct_change": 5,
+        "ev": -0.999999999999997,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 87.4,
+        "new_euro": 91.77,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 87.6,
+        "new_euro": 91.98,
+        "pct_change": 5,
+        "ev": -0.9999999999999977,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 88.4,
+        "new_euro": 92.82,
+        "pct_change": 5,
+        "ev": -1.0000000000000029,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 89.8,
+        "new_euro": 94.29,
+        "pct_change": 5,
+        "ev": -0.999999999999998,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 90.2,
+        "new_euro": 94.71,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 91.6,
+        "new_euro": 96.18,
+        "pct_change": 5,
+        "ev": -0.9999999999999971,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 92.4,
+        "new_euro": 97.02,
+        "pct_change": 5,
+        "ev": -1.0000000000000022,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 92.6,
+        "new_euro": 97.23,
+        "pct_change": 5,
+        "ev": -0.9999999999999979,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 93.4,
+        "new_euro": 98.07,
+        "pct_change": 5,
+        "ev": -1.0000000000000027,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 94.8,
+        "new_euro": 99.54,
+        "pct_change": 5,
+        "ev": -0.999999999999998,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 95.2,
+        "new_euro": 99.96,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 96.6,
+        "new_euro": 101.43,
+        "pct_change": 5,
+        "ev": -0.9999999999999973,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 97.4,
+        "new_euro": 102.27,
+        "pct_change": 5,
+        "ev": -1.000000000000002,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 97.6,
+        "new_euro": 102.48,
+        "pct_change": 5,
+        "ev": -0.999999999999998,
+        "actual": "inelastisch",
+        "expected": "eenheidselastisch"
+      },
+      {
+        "old_euro": 98.4,
+        "new_euro": 103.32,
+        "pct_change": 5,
+        "ev": -1.0000000000000027,
+        "actual": "elastisch",
+        "expected": "eenheidselastisch"
+      }
+    ]
+  },
+  "current_generator_domain": {
+    "cases": 1334,
+    "mismatches": []
+  },
+  "recommendation": "Use a declared exact/scaled-decimal source comparison for the unitary boundary, or a measured error bound tied to the original subtraction. A fixed epsilon on the quotient is not sufficient when relative changes shrink; retain signed unrounded nonunitary classifications."
+}

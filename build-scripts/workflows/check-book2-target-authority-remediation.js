@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 const ownerDecision = require('./book2-owner-decision');
+const signedSuccessor = require('./book2-signed-authority');
 const integrationDecision = require('./book2-integration-decision');
 
 const ROOT = path.resolve(__dirname, '..', '..');
@@ -115,7 +116,7 @@ function durableLifecycleState(meta, input = readInputs(), options = {}) {
   catch (error) { return { mode: 'invalid', failures: [error.message] }; }
   const expectedById = new Map(expectedRecords.map((record) => [record.id, sha256(canonical(record))]));
   const registryRecords = (input.registry?.exercises || []).filter((record) => record.module === 2);
-  if (sha256(canonical(registryRecords)) !== REVIEWED_PACKAGE_SHA256) failures.push('terminal registry must match the exact approved ordered package');
+  if (sha256(canonical(registryRecords)) !== REVIEWED_PACKAGE_SHA256 && !signedSuccessor.matchesRecords(registryRecords, meta)) failures.push('terminal registry must match the exact approved ordered package');
   if (candidate.status !== DURABLE_TERMINAL_STATUS) failures.push('Issue #229 durable terminal state requires status integrated');
   if (!/^[0-9a-f]{40}$/i.test(String(candidate.integrated_commit || ''))) failures.push('Issue #229 durable terminal state requires a full integrated_commit');
   if (typeof candidate.integration_evidence_ref !== 'string' || candidate.integration_evidence_ref.trim() === '') failures.push('Issue #229 durable terminal state requires integration_evidence_ref');
@@ -170,7 +171,9 @@ function durableLifecycleState(meta, input = readInputs(), options = {}) {
     if (canonical(hold.scope) !== canonical([`paragraph:${subjectId}`])
         || approved !== expectedHash || evidence?.subject_sha256 !== expectedHash
         || evidence?.subject_id !== subjectId
-        || (meta.target_registry_pins || []).find((pin) => pin.id === subjectId)?.target_record_sha256 !== expectedHash) {
+        || !((meta.target_registry_pins || []).find((pin) => pin.id === subjectId)?.target_record_sha256 === expectedHash
+          || (signedSuccessor.matchesMeta(meta) && signedSuccessor.targetSuccessor(subjectId, expectedHash,
+            (meta.target_registry_pins || []).find((pin) => pin.id === subjectId)?.target_record_sha256)))) {
       failures.push(`${id}: terminal target binding, release subject, and current pin must match the approved record hash`);
     }
     if (!ownerDecision.hasApprovedFrozenRecord(meta, expectedRecords[index], hold.target_binding)) {
@@ -391,7 +394,7 @@ function findFailures(input, options = {}) {
   errors.push(...ownerDecision.validateOwnerDecision(input.meta.issue_229_owner_decision));
   errors.push(...ownerDecision.validateEiDecision(input.meta));
   const registryBook2 = (input.registry.exercises || []).filter((item) => item.module === 2);
-  if (canonical(registryBook2) !== canonical(candidates)) errors.push('active registry Book 2 records must exactly equal the candidate package');
+  if (canonical(registryBook2) !== canonical(candidates) && !(durable && signedSuccessor.matchesRecords(registryBook2, input.meta))) errors.push('active registry Book 2 records must exactly equal the candidate package');
   if (input.alignment.candidate_package_sha256 !== packageHash) errors.push('alignment candidate package hash is stale');
   validateAlignmentMarkdown(errors, input.alignment, input.alignmentMarkdown || '', packageHash);
   if (!input.meta.issue_229_candidate || input.meta.issue_229_candidate.package_sha256 !== packageHash) errors.push('outline metadata candidate package hash is stale');

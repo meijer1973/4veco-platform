@@ -1,0 +1,412 @@
+[
+  {
+    "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+    "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493",
+    "physical_pages": [
+      1,
+      2,
+      3,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      108,
+      109,
+      110
+    ],
+    "changed_body_pages": [
+      2,
+      37,
+      38,
+      39,
+      40,
+      41,
+      46,
+      47,
+      48,
+      49,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      82,
+      83,
+      84,
+      85,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      109,
+      110
+    ],
+    "visual_review": "All changed compact navigation bands; complete contents/reference/teacher pages listed in independent-print-review.md; unchanged portions covered by exact text/pixel comparison and prior native review.",
+    "rendered_page_hashes": [
+      {
+        "physical_page": 1,
+        "png_sha256": "92cb4e67de37fa4f63099341c62039cda1ed99f8a499c50d2d0a4f2c4eb5958a"
+      },
+      {
+        "physical_page": 2,
+        "png_sha256": "357f94f5b7543bba3170f3bf4a1a9561ad3faf2a3b005b85cd2c0c525c63124e"
+      },
+      {
+        "physical_page": 3,
+        "png_sha256": "24a572210ce6d88128717d808ae5cf53788350e0eea8d12f240dfa7ad88ffa3a"
+      },
+      {
+        "physical_page": 36,
+        "png_sha256": "d7bb263582ac0b94b671657c39b97e9cb73efdd10cedfd6f96a40ccc51ddd06a"
+      },
+      {
+        "physical_page": 37,
+        "png_sha256": "9db3b32aa14bf8f8fb44f7eda28831ae9b127106e53df197a985b77785d18688"
+      },
+      {
+        "physical_page": 38,
+        "png_sha256": "2cca1357c145ffaf974daecc7aedf2056586c3bb7d985e8268a7abc28e509ac5"
+      },
+      {
+        "physical_page": 39,
+        "png_sha256": "927ddce2a863cbf7e6dd4c1650eac1c56661da87bad0ed616854c86ab3e14e1b"
+      },
+      {
+        "physical_page": 40,
+        "png_sha256": "0a800b1779b611167060695b6984bb7a4ef39fa0a915c03fa2a2c4c7771fac91"
+      },
+      {
+        "physical_page": 41,
+        "png_sha256": "1f38aafc856ad0989137ac3d3c01405629562ca36a6df392fd0989ce70cc84ae"
+      },
+      {
+        "physical_page": 42,
+        "png_sha256": "86f09bcf7e75d186fba9d0042249de5fe707fa98fe1b8e182e53e8487092219b"
+      },
+      {
+        "physical_page": 45,
+        "png_sha256": "65ce6eace91d99a0cd937a27aae2dbf77c4b2f5c6e10100ddde87be5aaabecae"
+      },
+      {
+        "physical_page": 46,
+        "png_sha256": "576f264cf09ad8d138df53335d2f583fedd565b241c69f35b57554e2b8b440bb"
+      },
+      {
+        "physical_page": 47,
+        "png_sha256": "4d6c35fcb1688ee63d47c301a8b847cdb0906f6471ffd31ae049b7947c5cfbea"
+      },
+      {
+        "physical_page": 48,
+        "png_sha256": "a8bce98aaa9bd2ad39198d79e0cb21d3c85735c8073a88512588b674bb5431bb"
+      },
+      {
+        "physical_page": 49,
+        "png_sha256": "5faa2bd0c9252b2a324d742c0d720e655679bcb914fd098590700e6ab6350e00"
+      },
+      {
+        "physical_page": 50,
+        "png_sha256": "2c68c1c6ffa32d3db4b3620397f990b9c46e0dfd7d52cb6090c1e022399ed6f6"
+      },
+      {
+        "physical_page": 53,
+        "png_sha256": "d9b859d7bfd49de5c6052c8294d7902fb78fd60ae82dc109386035600c4e5644"
+      },
+      {
+        "physical_page": 54,
+        "png_sha256": "c6a83d7dbdb6980dff15a1c71b4fe9b0d990f5f4f1d6ef049dfba609444b34c7"
+      },
+      {
+        "physical_page": 55,
+        "png_sha256": "7d8c7d2723231dfd05bfb969c6a93acd00825aa4b2d1b8390f9bdd5b6f84f399"
+      },
+      {
+        "physical_page": 56,
+        "png_sha256": "7a93940e44c3061d5bdd7f055aef4e0a70844649072cc0f2bc61924324b7a732"
+      },
+      {
+        "physical_page": 57,
+        "png_sha256": "23c7dac94c13483389939cbb0cba74cfbd67d65191b63a25c0b152de6f4a890b"
+      },
+      {
+        "physical_page": 58,
+        "png_sha256": "eac1d319676221c11b641867a6d4a373b0a47f56922d0f6c3fa2aa9b296eaffd"
+      },
+      {
+        "physical_page": 59,
+        "png_sha256": "bfad8501ee774b541f3613695d192024bba6c4a41b8aa53699c1785840a29424"
+      },
+      {
+        "physical_page": 60,
+        "png_sha256": "079818d377cd086f9da57c983a57d0444eda440d5a25babde14f5dbd94170692"
+      },
+      {
+        "physical_page": 61,
+        "png_sha256": "0c1fe1a3adb044cb77c1374dafe5527fb91e3be1cf0d6e23317dc17031f432fb"
+      },
+      {
+        "physical_page": 71,
+        "png_sha256": "dd90052ed99a6f5256e090c1071ced8c24b8967307145fe56cca8fda9dee4814"
+      },
+      {
+        "physical_page": 72,
+        "png_sha256": "cae8fadba68733893e5f7262b7454da92fd84e6586766f3238c10ad8b6628614"
+      },
+      {
+        "physical_page": 73,
+        "png_sha256": "bf0d03653d7237de3b464057c220edfc1db64c2f0c8a264103e9ffeb5f74f1a5"
+      },
+      {
+        "physical_page": 74,
+        "png_sha256": "98efad2156510611befe1d4bc6513e2f40a0a66529eea3aa52c1aee593c92d54"
+      },
+      {
+        "physical_page": 75,
+        "png_sha256": "970028f14966036cb8e815ce52cb19d585586afbf7540a5fdd6df8f96393f877"
+      },
+      {
+        "physical_page": 76,
+        "png_sha256": "98367489a0a0e222e9c3203ac84924ea000bde80adaad355e775e428ccb383e0"
+      },
+      {
+        "physical_page": 77,
+        "png_sha256": "00888a613016db2c304557ef109cfafb15a22a313224af037b9a3cc2340eb156"
+      },
+      {
+        "physical_page": 78,
+        "png_sha256": "35f25cfe930f876307ceca70a0ff0d034eea084f3ee9effd0f1c3d84effa0190"
+      },
+      {
+        "physical_page": 81,
+        "png_sha256": "fc243762ac97ef1cc314786bb7bbfef878190c64f22d48386b97f54b0be75808"
+      },
+      {
+        "physical_page": 82,
+        "png_sha256": "e7ff783395052dbd57834979e87ed2e1bbb07ebfc7d2a11b25c6c2a97f4a45bd"
+      },
+      {
+        "physical_page": 83,
+        "png_sha256": "a93871435ae77f8c663ca7f1b72ac198bc25efbc7fa1ec1e38ed51f8d10e8a9f"
+      },
+      {
+        "physical_page": 84,
+        "png_sha256": "445b7a6b0e3b01fc75cbe132a3723cade42fc09b91e24a28924cd7eca1c59a99"
+      },
+      {
+        "physical_page": 85,
+        "png_sha256": "5fd3192970dbf5cc3acb1e751c134a142d72946ad8d3e8060829a903bf1e3744"
+      },
+      {
+        "physical_page": 86,
+        "png_sha256": "ba6c8697187e0aa68a9923da21cca6c744d918eb9d39d63a31d4017b34d9fb2b"
+      },
+      {
+        "physical_page": 91,
+        "png_sha256": "d51da9fe533849d3abca9fc2372e5db758af0ccf85fbccbb644486858ee0f9a5"
+      },
+      {
+        "physical_page": 92,
+        "png_sha256": "9a7569a3e53ef24f2715b4260efddc1b28006939d819c7685a31b3a9dc83f602"
+      },
+      {
+        "physical_page": 93,
+        "png_sha256": "220cda6aab2592422d5a9c00cd58f50f17a08e7bef2605df83fe25e6d5a6d796"
+      },
+      {
+        "physical_page": 94,
+        "png_sha256": "8586dd4f8ca22a3dec24a9b4f0c8ade8e8252710784277beae68ed34a1ea21d5"
+      },
+      {
+        "physical_page": 95,
+        "png_sha256": "aee307af04ee723bb4ce9c788a305886105f4574766ff498f569670dc33637cb"
+      },
+      {
+        "physical_page": 96,
+        "png_sha256": "d52f167c5ce57d3d3277704d9da4646eb59e2d1ec3e357e2f86de8120f73288c"
+      },
+      {
+        "physical_page": 97,
+        "png_sha256": "d8d69e9c8d2da7418a3cfab83c6a2473672aac737f7695623aa60125d2a526f9"
+      },
+      {
+        "physical_page": 98,
+        "png_sha256": "24bf9331391b2aaddcf9f55d1f55a4f5e7c03f33af6a1b385ee2bebc8236b8bb"
+      },
+      {
+        "physical_page": 108,
+        "png_sha256": "4fe4ecb01657cca63aea61092bd40cc94e7a095f712f9f483576e9d3ccb0059b"
+      },
+      {
+        "physical_page": 109,
+        "png_sha256": "7ef9e73e46e2e3fc145a9a4a786ece41e26ed61701d2298f72c497e1baa27a68"
+      },
+      {
+        "physical_page": 110,
+        "png_sha256": "13b9a03962d3bb377e718aedc95b0b6d457d1459207d288c075af06397d07901"
+      }
+    ]
+  },
+  {
+    "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf",
+    "sha256": "7bf9f43e801592b3632063b0720ae38b8a1776831bfaa90703a8ae95e5329bc2",
+    "physical_pages": [
+      1,
+      2,
+      3,
+      57
+    ],
+    "changed_body_pages": [
+      2
+    ],
+    "visual_review": "All changed compact navigation bands; complete contents/reference/teacher pages listed in independent-print-review.md; unchanged portions covered by exact text/pixel comparison and prior native review.",
+    "rendered_page_hashes": [
+      {
+        "physical_page": 1,
+        "png_sha256": "92cb4e67de37fa4f63099341c62039cda1ed99f8a499c50d2d0a4f2c4eb5958a"
+      },
+      {
+        "physical_page": 2,
+        "png_sha256": "bab83560a6b18d21bde148795a2ca333c23a6fbe111fa65d8ca83de874af2074"
+      },
+      {
+        "physical_page": 3,
+        "png_sha256": "b2b4d208999aa6a2e70f243ed9efdcf86749e903fb13e6a84c3961c2159ae2fb"
+      },
+      {
+        "physical_page": 57,
+        "png_sha256": "f424e14b15fa07774316f9242b7edb0cf892faa96737906dd1909e521cf1c593"
+      }
+    ]
+  },
+  {
+    "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Docenteninformatie.pdf",
+    "sha256": "88866a40704c7f13d55f16013765bf71cb928dd10a17aea2861baad440bc6ddc",
+    "physical_pages": [
+      1,
+      2,
+      3,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      19
+    ],
+    "changed_body_pages": [
+      2,
+      8,
+      10,
+      11,
+      12,
+      14
+    ],
+    "visual_review": "All changed compact navigation bands; complete contents/reference/teacher pages listed in independent-print-review.md; unchanged portions covered by exact text/pixel comparison and prior native review.",
+    "rendered_page_hashes": [
+      {
+        "physical_page": 1,
+        "png_sha256": "92cb4e67de37fa4f63099341c62039cda1ed99f8a499c50d2d0a4f2c4eb5958a"
+      },
+      {
+        "physical_page": 2,
+        "png_sha256": "fe01cb676e475bee5cd7db54a868d5a0c17ab962ad4470f613c667fce1424d5e"
+      },
+      {
+        "physical_page": 3,
+        "png_sha256": "af38a2982a1e4baefbff90351e301ea4487e311db6942edcee77e08c03cf9363"
+      },
+      {
+        "physical_page": 7,
+        "png_sha256": "59806c369ae47fe8b1f23aa2ac00336e65f91ea7df626c115975df490a64305c"
+      },
+      {
+        "physical_page": 8,
+        "png_sha256": "845463d4a36220ccab9e27bb050a47852bb546638eb5e2999648273f5becda4e"
+      },
+      {
+        "physical_page": 9,
+        "png_sha256": "06f0d0678edacd476398bf7e2fa118c21d4f35219d5d1f158d539ef7284f1f11"
+      },
+      {
+        "physical_page": 10,
+        "png_sha256": "70cffd4da7e348e8f1eab5ad30109c908253c870c5b3c5d01f07a9c1f3b67b33"
+      },
+      {
+        "physical_page": 11,
+        "png_sha256": "aa622188b08229b2a350ff17b89064442b2889ff835f6ad36e6cd390a5ca0eb9"
+      },
+      {
+        "physical_page": 12,
+        "png_sha256": "6854fbc6340b64852c9ff62897be434f6f66d890f6c99ea4b75ff01982d3ed5c"
+      },
+      {
+        "physical_page": 13,
+        "png_sha256": "104264c1dabe80e90ac627a39c4fffed42152b08e115c33e50a1d6323f01b23a"
+      },
+      {
+        "physical_page": 14,
+        "png_sha256": "eb97d97816dcc50c0f1a72cabf186b4dc2ec9fc223a7d71ff8c0761559da3fca"
+      },
+      {
+        "physical_page": 15,
+        "png_sha256": "b409072107fba3759716197b26b03e1bad398d61961e198b5f23718a20d0eaac"
+      },
+      {
+        "physical_page": 19,
+        "png_sha256": "2721ee48ff3bbed046cb4146f16845383e67982019cdb53ad27ad2a60085bf44"
+      }
+    ]
+  }
+]

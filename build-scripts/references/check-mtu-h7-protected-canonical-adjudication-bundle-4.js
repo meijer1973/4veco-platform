@@ -20,6 +20,7 @@ const {
 } = require('./lib/mtu-h7-bundle4-provenance');
 
 const ROOT = path.resolve(__dirname, '..', '..');
+const signedSuccessor = require('./lib/book2-signed-registry-successor');
 const SPRINT_ID = 'MTU-H7-PROTECTED-CANONICAL-ADJUDICATION-BUNDLE-4';
 const GATE_ID = 'GATE-MTU-H7-protected-canonical-adjudication-bundle-4';
 const CURRENT_MAIN_SHA = resolveCurrentMainSha();
@@ -225,8 +226,10 @@ function validateRenderedEvidence(record, operationId, failures) {
 }
 
 function pdfTextPage(relativePath, pageNumber) {
+  // The sealed transcript hashes were captured with CRLF on Windows. Select
+  // that exact convention on every host; do not rewrite the historical hashes.
   return execFileSync('pdftotext', [
-    '-f', String(pageNumber), '-l', String(pageNumber), '-layout', repoPath(relativePath), '-'
+    '-f', String(pageNumber), '-l', String(pageNumber), '-layout', '-eol', 'dos', repoPath(relativePath), '-'
   ], {
     cwd: ROOT,
     encoding: 'utf8',
@@ -326,6 +329,7 @@ function validate() {
   const diagnosticManifest = readJson('reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json');
   const executionBenchmark = readJson('reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json');
   const mtuRegistry = readJson('references/machine/micro-teaching-units.json');
+  const reviewedRegistry = signedSuccessor.resolve(mtuRegistry);
 
   for (const [name, doc] of [
     ['bundle', bundle],
@@ -624,7 +628,9 @@ function validate() {
       failures.push(`semantic MTU binding set drifted: ${row.operation_id}`);
     }
     for (const item of asArray(binding.mtu_objects)) {
-      const liveUnit = registryById.get(item.id);
+      // Compare the sealed A15 forbidden guard with its exact predecessor only
+      // when the complete reviewed four-unit successor reconstructs that registry.
+      const liveUnit = signedSuccessor.comparisonUnit(reviewedRegistry,row.operation_id,item,registryById.get(item.id));
       const sourceUnit = asArray(blocker.forbidden_unit_guards).find((unit) => unit.id === item.id);
       if (!liveUnit ||
           (item.role === 'forbidden_over_trigger_guard' && (!sourceUnit || !sameJson(semanticUnitSnapshot(sourceUnit), semanticUnitSnapshot(liveUnit)))) ||
@@ -657,7 +663,8 @@ function validate() {
   const sourceHashValidation = validateCanonicalSourceHashes({
     entries: bundle.source_hashes,
     expectedPaths: EXPECTED_SOURCE_FILES,
-    canonicalHashForPath: sha256CanonicalJsonFile
+    canonicalHashForPath: file => file===signedSuccessor.PATH && reviewedRegistry.accepted
+      ? reviewedRegistry.before : sha256CanonicalJsonFile(file)
   });
   failures.push(...sourceHashValidation.failures);
   if (bundle.hashes?.adjudication_matrix !== sha256Object(matrix)) failures.push('matrix hash mismatch');
@@ -702,6 +709,9 @@ function validate() {
       negative_mutations_executed: asArray(negatives.execution_results).length,
       negative_mutations_detected: asArray(negatives.execution_results).filter((result) => result.detected_with_intended_defect_class).length,
       semantically_bound_operations: operations.filter((row) => row.semantic_binding).length,
+      reviewed_registry_successor: reviewedRegistry.accepted
+        ? {before:reviewedRegistry.before,after:reviewedRegistry.after,scope:'exact four-unit signed revision; A15 remains forbidden in both protected operations'}
+        : null,
       historical_base_main_sha: provenance.historicalBaseMainSha,
       current_main_sha: provenance.currentMainSha,
       route: gate.route

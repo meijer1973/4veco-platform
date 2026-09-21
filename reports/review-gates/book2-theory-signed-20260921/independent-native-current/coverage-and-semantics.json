@@ -1,0 +1,1790 @@
+[
+  {
+    "page": 5,
+    "local": 3,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+    "source_sha256": "7d1c31299783c3172cd89bd146c26e2af090b1e41de67d914835c616502a69d0",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\output\\Boek_2_H1_Kosten_en_opbrengsten.pdf",
+    "pdf_sha256": "10aeea0c0f77692be7ce4884a350d224e33f9bfddf0ded6d546e4d9e4fcb1c4d",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Totale kosten: alles bij elkaar",
+        "rows": [
+          [
+            "Q flessen per maand",
+            "TCK € per maand",
+            "TVK € per maand",
+            "TK € per maand"
+          ],
+          [
+            "0",
+            "300",
+            "0",
+            "300"
+          ],
+          [
+            "200",
+            "300",
+            "400",
+            "700"
+          ],
+          [
+            "400",
+            "300",
+            "800",
+            "1.100"
+          ],
+          [
+            "600",
+            "300",
+            "1.200",
+            "1.500"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "4e48e003776f16bf959500c2cdc1ce626c2a470aec00e2227edaad45b13b2a1e",
+    "target_png_sha256": "78b8e377b2b2f82af591fe661b78e2e980b0eb953f58ab68cd378d043dacf2f1"
+  },
+  {
+    "page": 6,
+    "local": 4,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md",
+    "source_sha256": "7d1c31299783c3172cd89bd146c26e2af090b1e41de67d914835c616502a69d0",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\output\\Boek_2_H1_Kosten_en_opbrengsten.pdf",
+    "pdf_sha256": "10aeea0c0f77692be7ce4884a350d224e33f9bfddf0ded6d546e4d9e4fcb1c4d",
+    "fractions": [
+      {
+        "label": "TCK gedeeld door Q",
+        "style": "left:339.104pt;top:149.9355pt;width:27.9207pt;height:31.2493pt"
+      },
+      {
+        "label": "300 gedeeld door Q",
+        "style": "left:383.8164pt;top:149.9355pt;width:25.8347pt;height:31.2493pt"
+      },
+      {
+        "label": "TVK gedeeld door Q",
+        "style": "left:339.3259pt;top:192.4755pt;width:28.5703pt;height:31.2493pt"
+      },
+      {
+        "label": "2Q gedeeld door Q",
+        "style": "left:384.688pt;top:192.4755pt;width:21.8225pt;height:31.2493pt"
+      },
+      {
+        "label": "TK gedeeld door Q",
+        "style": "left:338.3474pt;top:235.0155pt;width:20.6536pt;height:31.2493pt"
+      },
+      {
+        "label": "300 + 2Q gedeeld door Q",
+        "style": "left:375.7927pt;top:235.0155pt;width:53.8088pt;height:31.2493pt"
+      }
+    ],
+    "tables": [
+      {
+        "label": "Tabel bij Gemiddelde kosten: per product",
+        "rows": [
+          [
+            "Q flessen per maand",
+            "GCK € per fles",
+            "GVK € per fles",
+            "GTK € per fles"
+          ],
+          [
+            "200",
+            "300 / 200 = 1,50",
+            "400 / 200 = 2,00",
+            "700 / 200 = 3,50"
+          ],
+          [
+            "400",
+            "300 / 400 = 0,75",
+            "800 / 400 = 2,00",
+            "1.100 / 400 = 2,75"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "feb3d322a3017bf151e4424464e0fd6a2d296f76bec8336501074463b744bda3",
+    "target_png_sha256": "0c7db11923e074e0cd2e67cd4ab8006da72f8751becc904c84e584778fee564a"
+  },
+  {
+    "page": 12,
+    "local": 10,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+    "source_sha256": "33c07c4327027feca0d09f82227ab30851b70519f42d5bc5f8fcdf0c0318be43",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\output\\Boek_2_H1_Kosten_en_opbrengsten.pdf",
+    "pdf_sha256": "10aeea0c0f77692be7ce4884a350d224e33f9bfddf0ded6d546e4d9e4fcb1c4d",
+    "fractions": [
+      {
+        "label": "TO gedeeld door Q",
+        "style": "left:107.2pt;top:448.0828pt;width:25.5146pt;height:36.1428pt"
+      }
+    ],
+    "tables": [],
+    "native_png_sha256": "6dd17aae4766a5063f94de06156c72bd25faf107a1a5f3289e56dfb82b85092b",
+    "target_png_sha256": "f53ddc94032cb1312cb4aefac5f6a0dd0bc0281106fe59e56c9f1dc44bfdb296"
+  },
+  {
+    "page": 13,
+    "local": 11,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+    "source_sha256": "33c07c4327027feca0d09f82227ab30851b70519f42d5bc5f8fcdf0c0318be43",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\output\\Boek_2_H1_Kosten_en_opbrengsten.pdf",
+    "pdf_sha256": "10aeea0c0f77692be7ce4884a350d224e33f9bfddf0ded6d546e4d9e4fcb1c4d",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Van omzet naar winst",
+        "rows": [
+          [
+            "Q wafels/dag",
+            "TO € per dag",
+            "TK € per dag",
+            "Winst = TO − TK € per dag"
+          ],
+          [
+            "0",
+            "0",
+            "250",
+            "−250"
+          ],
+          [
+            "50",
+            "5 × 50 = 250",
+            "250 + 2 × 50 = 350",
+            "250 − 350 = −100"
+          ],
+          [
+            "100",
+            "5 × 100 = 500",
+            "250 + 2 × 100 = 450",
+            "500 − 450 = 50"
+          ]
+        ]
+      },
+      {
+        "label": "Tabel bij Van omzet naar winst",
+        "rows": [
+          [
+            "Q (wafels per dag)",
+            "TO (€ per dag)",
+            "TK (€ per dag)",
+            "Winst (€ per dag)"
+          ],
+          [
+            "83",
+            "415",
+            "416",
+            "415 − 416 = −1   → verlies"
+          ],
+          [
+            "84",
+            "420",
+            "418",
+            "420 − 418 = 2   → winst"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "d5e5d7e2fb677f56c317103b490ac459b7ab0d86bfb90785fc79d646fcf57321",
+    "target_png_sha256": "c74df1d1bfd141959476fc42cae88391b0f87977995cc3244e8006cf0275d9a2"
+  },
+  {
+    "page": 14,
+    "local": 12,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+    "source_sha256": "33c07c4327027feca0d09f82227ab30851b70519f42d5bc5f8fcdf0c0318be43",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\output\\Boek_2_H1_Kosten_en_opbrengsten.pdf",
+    "pdf_sha256": "10aeea0c0f77692be7ce4884a350d224e33f9bfddf0ded6d546e4d9e4fcb1c4d",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Van een tabel naar een grafiek",
+        "rows": [
+          [
+            "Lijn",
+            "Functie",
+            "Punt bij Q = 0",
+            "Punt bij Q = 100"
+          ],
+          [
+            "Opbrengsten",
+            "TO = 5Q",
+            "(0; 0)",
+            "(100; 500)"
+          ],
+          [
+            "Kosten",
+            "TK = 250 + 2Q",
+            "(0; 250)",
+            "(100; 450)"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "cda77b1661c683fe3476e96cb80dee8faaf3946d4fe48a40f4ad97b9a4b8a278",
+    "target_png_sha256": "2e9d8ce75f44d7899b4c3254c9d38e6104156f557acc09689d3d2c5146718f8e"
+  },
+  {
+    "page": 21,
+    "local": 19,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+    "source_sha256": "8cee4de8cc847b58d5c29c3f9bee3df6f4634cd16bed1dc8d45017529ef997d6",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\output\\Boek_2_H1_Kosten_en_opbrengsten.pdf",
+    "pdf_sha256": "10aeea0c0f77692be7ce4884a350d224e33f9bfddf0ded6d546e4d9e4fcb1c4d",
+    "fractions": [
+      {
+        "label": "ΔTK gedeeld door ΔQ",
+        "style": "left:108.448pt;top:326.5192pt;width:35.7451pt;height:39.5pt"
+      },
+      {
+        "label": "ΔTO gedeeld door ΔQ",
+        "style": "left:360.9235pt;top:326.5192pt;width:37.2224pt;height:39.5pt"
+      },
+      {
+        "label": "300 gedeeld door 50",
+        "style": "left:107.9866pt;top:633.5779pt;width:28.6187pt;height:34.8997pt"
+      },
+      {
+        "label": "300 − 260 gedeeld door 50 − 40",
+        "style": "left:353.6915pt;top:633.5779pt;width:65.0947pt;height:34.8997pt"
+      }
+    ],
+    "tables": [],
+    "native_png_sha256": "83a3aea67e80c131854d4b45964ac19168e790dc95e44b88ff864b2eea6c8b71",
+    "target_png_sha256": "3792595795995f4619f19cdcafe466015d4535e4dedcbba85c07346a818e021a"
+  },
+  {
+    "page": 22,
+    "local": 20,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+    "source_sha256": "8cee4de8cc847b58d5c29c3f9bee3df6f4634cd16bed1dc8d45017529ef997d6",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\output\\Boek_2_H1_Kosten_en_opbrengsten.pdf",
+    "pdf_sha256": "10aeea0c0f77692be7ce4884a350d224e33f9bfddf0ded6d546e4d9e4fcb1c4d",
+    "fractions": [
+      {
+        "label": "TK nieuw − TK oud gedeeld door Q nieuw − Q oud",
+        "style": "left:100.5154pt;top:119.1051pt;width:107.1035pt;height:32.3696pt"
+      },
+      {
+        "label": "TO nieuw − TO oud gedeeld door Q nieuw − Q oud",
+        "style": "left:345.2213pt;top:119.1051pt;width:109.4487pt;height:32.3696pt"
+      },
+      {
+        "label": "60 gedeeld door 20",
+        "style": "left:126.8608pt;top:433.1573pt;width:21.4277pt;height:35.5892pt"
+      },
+      {
+        "label": "160 gedeeld door 20",
+        "style": "left:367.1283pt;top:433.1573pt;width:29.1416pt;height:35.5892pt"
+      }
+    ],
+    "tables": [
+      {
+        "label": "Tabel bij Rekenen met stappen in een tabel",
+        "rows": [
+          [
+            "Q producten per week",
+            "TK € per week",
+            "TO € per week",
+            "Gebruik bij de stap 10 → 30"
+          ],
+          [
+            "0",
+            "100",
+            "0",
+            ""
+          ],
+          [
+            "10",
+            "130",
+            "80",
+            "Oude rij"
+          ],
+          [
+            "30",
+            "190",
+            "240",
+            "Nieuwe rij"
+          ]
+        ]
+      },
+      {
+        "label": "Tabel bij Rekenen met stappen in een tabel",
+        "rows": [
+          [
+            "Q producten per week",
+            "Bijbehorende stap",
+            "ΔQ",
+            "MK € per extra product",
+            "MO € per extra product"
+          ],
+          [
+            "0",
+            "—",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "10",
+            "0 → 10",
+            "10",
+            "30 / 10 = 3",
+            "80 / 10 = 8"
+          ],
+          [
+            "30",
+            "10 → 30",
+            "20",
+            "60 / 20 = 3",
+            "160 / 20 = 8"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "623ee4ed60ff4048d69137b8b825aace12afde01a6db88815142b4df9ee93c7a",
+    "target_png_sha256": "4ff7a3c237b24daba3e9eac1b63ddd8de2690f1b3ec08cc7d89705dcbcf8d38d"
+  },
+  {
+    "page": 23,
+    "local": 21,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+    "source_sha256": "8cee4de8cc847b58d5c29c3f9bee3df6f4634cd16bed1dc8d45017529ef997d6",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\output\\Boek_2_H1_Kosten_en_opbrengsten.pdf",
+    "pdf_sha256": "10aeea0c0f77692be7ce4884a350d224e33f9bfddf0ded6d546e4d9e4fcb1c4d",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Als de extra producten steeds meer kosten",
+        "rows": [
+          [
+            "Q schalen per week",
+            "TK € per week",
+            "ΔTK t.o.v. vorige rij, € per week",
+            "ΔQ extra schalen",
+            "MK = ΔTK / ΔQ € per extra schaal"
+          ],
+          [
+            "0",
+            "80",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "4",
+            "96",
+            "96 − 80 = 16",
+            "4",
+            "16 / 4 = 4"
+          ],
+          [
+            "8",
+            "144",
+            "144 − 96 = 48",
+            "4",
+            "48 / 4 = 12"
+          ],
+          [
+            "12",
+            "224",
+            "224 − 144 = 80",
+            "4",
+            "80 / 4 = 20"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "b92d8502c39e85f593b7290dbe73f946854f4b831ae13d254b89369776dd0e81",
+    "target_png_sha256": "0d5865dcfc7ffb32099cbceeda25fdebbf667519a3ff38a9914022f9c802bcb9"
+  },
+  {
+    "page": 24,
+    "local": 22,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+    "source_sha256": "8cee4de8cc847b58d5c29c3f9bee3df6f4634cd16bed1dc8d45017529ef997d6",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\output\\Boek_2_H1_Kosten_en_opbrengsten.pdf",
+    "pdf_sha256": "10aeea0c0f77692be7ce4884a350d224e33f9bfddf0ded6d546e4d9e4fcb1c4d",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Twee ondernemingen vergelijken",
+        "rows": [
+          [
+            "Q prints per week",
+            "TK € per week",
+            "TO € per week",
+            "Winst € per week",
+            "MK € per extra print",
+            "MO € per extra print"
+          ],
+          [
+            "0",
+            "120",
+            "0",
+            "−120",
+            "—",
+            "—"
+          ],
+          [
+            "5",
+            "130",
+            "30",
+            "−100",
+            "2",
+            "6"
+          ],
+          [
+            "10",
+            "140",
+            "60",
+            "−80",
+            "2",
+            "6"
+          ],
+          [
+            "15",
+            "150",
+            "90",
+            "−60",
+            "2",
+            "6"
+          ]
+        ]
+      },
+      {
+        "label": "Tabel bij Twee ondernemingen vergelijken",
+        "rows": [
+          [
+            "Q kunstwerkjes per week",
+            "TK € per week",
+            "TO € per week",
+            "Winst € per week",
+            "MK € per extra kunstwerkje",
+            "MO € per extra kunstwerkje"
+          ],
+          [
+            "0",
+            "40",
+            "0",
+            "−40",
+            "—",
+            "—"
+          ],
+          [
+            "2",
+            "44",
+            "24",
+            "−20",
+            "2",
+            "12"
+          ],
+          [
+            "4",
+            "56",
+            "48",
+            "−8",
+            "6",
+            "12"
+          ],
+          [
+            "6",
+            "76",
+            "72",
+            "−4",
+            "10",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "abf57fc97683055424c5622518e9cde889ababf01d32e599849b4aeb955d7b94",
+    "target_png_sha256": "aa8c4ed03734a5522fa1df3eb373cf2bf7d457a79036b7ce47abaccd257fc31f"
+  },
+  {
+    "page": 30,
+    "local": 28,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/manuscript/2.1 Hoofdstukoverzicht.md",
+    "source_sha256": "4baeae030064565a5f64981d516a43120a8cdd024cb950b036bed4ebf78b5593",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\output\\Boek_2_H1_Kosten_en_opbrengsten.pdf",
+    "pdf_sha256": "10aeea0c0f77692be7ce4884a350d224e33f9bfddf0ded6d546e4d9e4fcb1c4d",
+    "fractions": [
+      {
+        "label": "ΔTK gedeeld door ΔQ",
+        "style": "left:346.7635pt;top:461.3852pt;width:29.9934pt;height:33.4345pt"
+      },
+      {
+        "label": "ΔTO gedeeld door ΔQ",
+        "style": "left:423.6849pt;top:461.3852pt;width:31.1858pt;height:33.4345pt"
+      }
+    ],
+    "tables": [
+      {
+        "label": "Tabel bij Overzicht vóór de gemengde opgaven",
+        "rows": [
+          [
+            "Je zoekt…",
+            "Formule",
+            "Waar kijk je naar?"
+          ],
+          [
+            "Totale kosten",
+            "TK = TCK + TVK",
+            "Constante én variabele kosten."
+          ],
+          [
+            "Gemiddelde kosten",
+            "GCK = TCK / Q GVK = TVK / Q GTK = TK / Q = GCK + GVK",
+            "Verdeel het betreffende totaal over alle Q producten . Alleen bij Q > 0."
+          ],
+          [
+            "Opbrengsten",
+            "TO = P × Q GO = TO / Q",
+            "Hier geldt één vaste prijs: GO = P. Q is de verkochte hoeveelheid."
+          ],
+          [
+            "Winst of verlies",
+            "Winst = TO − TK",
+            "Positief: winst. Negatief: verlies."
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "948ec3d766ffce599b18b59d03b8942540a00a9b6101ec0656c9d33f343e29f2",
+    "target_png_sha256": "9437673b814dbeb4b44635616cd1d3e84b17cbbe7bdc2f7f696b3e967af3d379"
+  },
+  {
+    "page": 38,
+    "local": 2,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+    "source_sha256": "0c361ff88ed6821870ae9f6324918d1513282a33d11099840288016e865132ed",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [
+      {
+        "label": "%ΔQv gedeeld door %ΔP",
+        "style": "left:97.8561pt;top:303.3035pt;width:46.2136pt;height:38.1348pt"
+      }
+    ],
+    "tables": [],
+    "native_png_sha256": "6c1d6012cafbeb12821c6b09c7f9ea95cdb725f5b5391307edc91b71b9f94791",
+    "target_png_sha256": "5c412e6fb02ce07b48bfe467548a9d4fe206c24476a93278d7ed820927f0e4fd"
+  },
+  {
+    "page": 39,
+    "local": 3,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+    "source_sha256": "0c361ff88ed6821870ae9f6324918d1513282a33d11099840288016e865132ed",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [
+      {
+        "label": "nieuw − oud gedeeld door oud",
+        "style": "left:104.2787pt;top:175.0495pt;width:83.1277pt;height:38.1348pt"
+      },
+      {
+        "label": "11 − 10 gedeeld door 10",
+        "style": "left:106.2621pt;top:292.7952pt;width:46.9702pt;height:33.4345pt"
+      },
+      {
+        "label": "190 − 200 gedeeld door 200",
+        "style": "left:361.2538pt;top:292.7952pt;width:61.0063pt;height:33.4345pt"
+      },
+      {
+        "label": "%ΔQv gedeeld door %ΔP",
+        "style": "left:97.8561pt;top:424.8485pt;width:46.2136pt;height:38.1348pt"
+      },
+      {
+        "label": "−5% gedeeld door +10%",
+        "style": "left:163.1004pt;top:424.8485pt;width:42.0894pt;height:38.1348pt"
+      }
+    ],
+    "tables": [],
+    "native_png_sha256": "2889862c48ff50185d26340fe95bd9c47b6505c38f113ddf7d6e7071f0ce4001",
+    "target_png_sha256": "09cf25a42d11fcb741b991dc834d1659257638fc9af7e3c993b424f8a6d591cb"
+  },
+  {
+    "page": 40,
+    "local": 4,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+    "source_sha256": "0c361ff88ed6821870ae9f6324918d1513282a33d11099840288016e865132ed",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [
+      {
+        "label": "−5% gedeeld door +10% ",
+        "style": "left:101.8583pt;top:500pt;width:35pt;height:34.3022pt"
+      },
+      {
+        "label": "−20% gedeeld door +10% ",
+        "style": "left:349.6378pt;top:500pt;width:35pt;height:34.3022pt"
+      }
+    ],
+    "tables": [
+      {
+        "label": "Tabel bij Teken, grootte en betekenis",
+        "rows": [
+          [
+            "Waarde van Ev",
+            "Indeling",
+            "Reactie van Qv ten opzichte van P"
+          ],
+          [
+            "−1 < Ev < 0",
+            "Prijsinelastisch",
+            "Qv verandert procentueel minder sterk ."
+          ],
+          [
+            "Ev = −1",
+            "Unitair elastisch",
+            "Beide veranderingen zijn procentueel even sterk ."
+          ],
+          [
+            "Ev < −1",
+            "Prijselastisch",
+            "Qv verandert procentueel sterker ."
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "86971cf5c3704b6c3a75c69469389a61ae65a9ea567146c487fdba7a8bc2665f",
+    "target_png_sha256": "76a3e96912c4d81f9701cb45f8ab9ce0219df55aca2c2d7c4cde7a91a51652aa"
+  },
+  {
+    "page": 41,
+    "local": 5,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+    "source_sha256": "0c361ff88ed6821870ae9f6324918d1513282a33d11099840288016e865132ed",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [
+      {
+        "label": "−5% gedeeld door +10%",
+        "style": "left:97.8561pt;top:330.5195pt;width:42.0894pt;height:38.1348pt"
+      }
+    ],
+    "tables": [
+      {
+        "label": "Tabel bij Van berekening naar verklaring",
+        "rows": [
+          [
+            "Grootheid",
+            "Oud → nieuw",
+            "Berekening",
+            "Uitkomst"
+          ],
+          [
+            "Prijs P",
+            "€ 20 → € 22",
+            "(22 − 20) / 20 × 100%",
+            "+10%"
+          ],
+          [
+            "Hoeveelheid Qv",
+            "400 → 380",
+            "(380 − 400) / 400 × 100%",
+            "−5%"
+          ]
+        ]
+      },
+      {
+        "label": "Tabel bij Van berekening naar verklaring",
+        "rows": [
+          [
+            "Aanbieder",
+            "Ev",
+            "Vergelijk met −1 en 0",
+            "Indeling"
+          ],
+          [
+            "KlimStudio",
+            "−0,5",
+            "−1 < −0,5 < 0",
+            "Prijsinelastisch"
+          ],
+          [
+            "DansDrop",
+            "−1,5",
+            "−1,5 < −1",
+            "Prijselastisch"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "065db1e6c3c8c60d349879f407eac85bc2966639fb30c36109c8675130eb8654",
+    "target_png_sha256": "c77ca4bd3ec8b596bb7e36bdef847b2a3fa133cca53aca78b70878ca1919496b"
+  },
+  {
+    "page": 46,
+    "local": 10,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+    "source_sha256": "8deb56d44bf325e98387834e5ca043496b63907b225cf864768332c360d279ae",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [],
+    "tables": [],
+    "native_png_sha256": "96b54e02bfc252d1c45b6914affd6784796efcf9dae275274e77bd2fa0cacba9",
+    "target_png_sha256": "1e84776643e21ba17ecc7596effd3b58a124dd6f28e5b614ab0d58f3db9b9223"
+  },
+  {
+    "page": 47,
+    "local": 11,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+    "source_sha256": "8deb56d44bf325e98387834e5ca043496b63907b225cf864768332c360d279ae",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Een vuistregel én een controle",
+        "rows": [
+          [
+            "Vraag rond de huidige situatie",
+            "Kleine prijsstijging",
+            "Kleine prijsdaling"
+          ],
+          [
+            "Prijsinelastisch · −1 < Ev ≤ 0",
+            "TO stijgt.",
+            "TO daalt."
+          ],
+          [
+            "Prijselastisch · Ev < −1",
+            "TO daalt.",
+            "TO stijgt."
+          ],
+          [
+            "Unitair elastisch · Ev = −1",
+            "Effecten ongeveer in evenwicht.",
+            "Effecten ongeveer in evenwicht."
+          ]
+        ]
+      },
+      {
+        "label": "Tabel bij Een vuistregel én een controle",
+        "rows": [
+          [
+            "Situatie",
+            "P",
+            "Q",
+            "TO = P × Q"
+          ],
+          [
+            "Oud",
+            "€ 10",
+            "100",
+            "€ 1.000"
+          ],
+          [
+            "Nieuw",
+            "€ 12",
+            "82",
+            "€ 984"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "1af54e031b84fd502eb49ad24dc1b00ccae7f9c0be0848d2ed616c6a6060e0b1",
+    "target_png_sha256": "ef33fea6c57b575fb5ede078a2cd1745571571ca74dfaaa62a2af1c2719ea918"
+  },
+  {
+    "page": 48,
+    "local": 12,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+    "source_sha256": "8deb56d44bf325e98387834e5ca043496b63907b225cf864768332c360d279ae",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [
+      {
+        "label": "TO nieuw − TO oud gedeeld door TO oud",
+        "style": "left:115.8575pt;top:426.0362pt;width:111.1868pt;height:33.4345pt"
+      },
+      {
+        "label": "1.045 − 1.000 gedeeld door 1.000",
+        "style": "left:77.8163pt;top:463.8662pt;width:80.7891pt;height:33.4346pt"
+      }
+    ],
+    "tables": [
+      {
+        "label": "Tabel bij Omzet vóór en na vergelijken",
+        "rows": [
+          [
+            "Aanbieder",
+            "P oud → nieuw",
+            "Q oud → nieuw",
+            "Gemeten Ev"
+          ],
+          [
+            "PuzzelClub",
+            "€ 10 → € 11",
+            "100 → 95 pakketten",
+            "−0,5"
+          ],
+          [
+            "FotoWorkshop",
+            "€ 20 → € 22",
+            "50 → 40 plaatsen",
+            "−2"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "d41d21ba9962cb029e9ab091e07b9da25ec317b8dde6455fdbd1a8c018cfd282",
+    "target_png_sha256": "3b9821d8c5bf26c85c7b34e3444362764918293a416639e1f488541baa7ad2f3"
+  },
+  {
+    "page": 49,
+    "local": 13,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+    "source_sha256": "8deb56d44bf325e98387834e5ca043496b63907b225cf864768332c360d279ae",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [
+      {
+        "label": "880 − 1.000 gedeeld door 1.000",
+        "style": "left:362.1371pt;top:167.9432pt;width:70.8977pt;height:33.4345pt"
+      }
+    ],
+    "tables": [
+      {
+        "label": "Tabel bij Van uitkomst naar een begrensde conclusie",
+        "rows": [
+          [
+            "Aanbieder",
+            "Indeling",
+            "TO oud",
+            "TO nieuw",
+            "Verandering"
+          ],
+          [
+            "PuzzelClub",
+            "Prijsinelastisch",
+            "€ 1.000",
+            "€ 1.045",
+            "+4,5%"
+          ],
+          [
+            "FotoWorkshop",
+            "Prijselastisch",
+            "€ 1.000",
+            "€ 880",
+            "−12%"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "138a2c2fcb52b17b81692fd89c06afbdd857b13d4b6d6ed6b9f5d3a76baa6e97",
+    "target_png_sha256": "0cfe23704759c9e09b90b0a36de42a19b24fa74b2ef43289b9232f2cf00b6a9b"
+  },
+  {
+    "page": 54,
+    "local": 18,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+    "source_sha256": "0af8a2a60054334ddb364b6ab7372e579564d545827ba8c0a11c71014d0886c3",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Inkomen en de prijs van andere goederen",
+        "rows": [
+          [
+            "Wat verandert?",
+            "Voorbeeld",
+            "Wat onderzoek je?"
+          ],
+          [
+            "Het inkomen",
+            "Meer inkomen; vaker een maaltijd bestellen.",
+            "De reactie op inkomen: Ei ."
+          ],
+          [
+            "De busprijs",
+            "Duurdere bus; meer vraag naar treinritten.",
+            "De relatie tussen twee goederen: Ek ."
+          ],
+          [
+            "De printerprijs",
+            "Duurdere printers; minder vraag naar bijbehorende inkt.",
+            "Ook dit is Ek , maar de richting is anders."
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "c46475adc6d61f798d55936f10f360b2be27c99283b67f671b926f25e18cea30",
+    "target_png_sha256": "9f8ac670da7dae30e2a50e8a24c00e751f850eb6427c1c947c3dbcbcb89df4ec"
+  },
+  {
+    "page": 55,
+    "local": 19,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+    "source_sha256": "0af8a2a60054334ddb364b6ab7372e579564d545827ba8c0a11c71014d0886c3",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [
+      {
+        "label": "%ΔQv gedeeld door %ΔY",
+        "style": "left:94.5638pt;top:175.0495pt;width:46.2136pt;height:38.1348pt"
+      }
+    ],
+    "tables": [
+      {
+        "label": "Tabel bij Wat doet een inkomensverandering?",
+        "rows": [
+          [
+            "Ei",
+            "Categorie in dit boek",
+            "Bij een hoger inkomen"
+          ],
+          [
+            "Ei < 0",
+            "Inferieur goed",
+            "Qv daalt ."
+          ],
+          [
+            "0 < Ei < 1",
+            "Normaal goed",
+            "Qv stijgt procentueel minder sterk dan Y."
+          ],
+          [
+            "Ei > 1",
+            "Luxegoed",
+            "Qv stijgt procentueel sterker dan Y."
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "c028d9003704665142d2c950da4a23f3b30638441c6d96d4ca58f85b6bbc843f",
+    "target_png_sha256": "b6e34dc17f0f1e8e829358f7b5ed526704912177c40f228e3a46c1c0e64f7315"
+  },
+  {
+    "page": 56,
+    "local": 20,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+    "source_sha256": "0af8a2a60054334ddb364b6ab7372e579564d545827ba8c0a11c71014d0886c3",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [
+      {
+        "label": "%ΔQv van goed X gedeeld door %ΔP van goed Z",
+        "style": "left:98.5043pt;top:175.0495pt;width:118.5967pt;height:38.1348pt"
+      },
+      {
+        "label": "−4% gedeeld door +10%",
+        "style": "left:340.4362pt;top:338.0322pt;width:36.9697pt;height:33.4345pt"
+      },
+      {
+        "label": "+6% gedeeld door +10%",
+        "style": "left:94.1566pt;top:351.3942pt;width:36.9697pt;height:33.4345pt"
+      }
+    ],
+    "tables": [],
+    "native_png_sha256": "578bb370420915dd4c934601a7b0746a28b003d40e660ab9d63960b4bccf8bd5",
+    "target_png_sha256": "a90103065c834060b6ca4c5e2bcc3738bea08ee5c01afac3da01a285158886de"
+  },
+  {
+    "page": 57,
+    "local": 21,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+    "source_sha256": "0af8a2a60054334ddb364b6ab7372e579564d545827ba8c0a11c71014d0886c3",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Meerdere factoren in één vraagfunctie",
+        "rows": [
+          [
+            "Symbool",
+            "Betekenis en eenheid",
+            "Beginwaarde"
+          ],
+          [
+            "Qx",
+            "Gevraagde abonnementen van X per maand .",
+            "Te berekenen"
+          ],
+          [
+            "Px",
+            "Maandprijs van DeelFiets X, in euro.",
+            "10"
+          ],
+          [
+            "Pz",
+            "Maandprijs van andere vervoersdienst Z, in euro.",
+            "15"
+          ],
+          [
+            "Y",
+            "Gemiddeld jaarinkomen van de groep, in euro.",
+            "20.000"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "6e556852ed3e24c32a00b86e8839d77728b5c2300925f3e84140c36982f99d90",
+    "target_png_sha256": "e2e4f8161a374fddf8f0f3cb5889a595e364fc4fd2866d0b0a619fb3eb694744"
+  },
+  {
+    "page": 58,
+    "local": 22,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+    "source_sha256": "0af8a2a60054334ddb364b6ab7372e579564d545827ba8c0a11c71014d0886c3",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [
+      {
+        "label": "5,263157…% gedeeld door 10%",
+        "style": "left:90.7743pt;top:271.8802pt;width:77.2083pt;height:33.4345pt"
+      }
+    ],
+    "tables": [
+      {
+        "label": "Tabel bij Verander één factor en zet daarna terug",
+        "rows": [
+          [
+            "Afzonderlijk scenario",
+            "Px",
+            "Pz",
+            "Y",
+            "Qx per maand"
+          ],
+          [
+            "Begin",
+            "10",
+            "15",
+            "20.000",
+            "380"
+          ],
+          [
+            "Alleen hoger inkomen",
+            "10",
+            "15",
+            "22.000",
+            "400"
+          ],
+          [
+            "Opnieuw begin; alleen hogere Pz",
+            "10",
+            "20",
+            "20.000",
+            "390"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "2b191ee38aaeef910136c308280089bb291e072abc66176bf35e15561e6496bb",
+    "target_png_sha256": "9fd84bb25f98f46c1614feebad98d6360e669efdc4c414b610eff4bd0531324b"
+  },
+  {
+    "page": 59,
+    "local": 23,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+    "source_sha256": "0af8a2a60054334ddb364b6ab7372e579564d545827ba8c0a11c71014d0886c3",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Eerst Ei en Ek uit bronnen",
+        "rows": [
+          [
+            "Vraag naar…",
+            "Ei = %ΔQv / %ΔY",
+            "Indeling in deze situatie"
+          ],
+          [
+            "Premium huurscooters",
+            "+20% / +10% = +2",
+            "Ei > 1 → luxegoed ."
+          ],
+          [
+            "Tweedehands scooters",
+            "−5% / +10% = −0,5",
+            "Ei < 0 → inferieur goed ."
+          ]
+        ]
+      },
+      {
+        "label": "Tabel bij Eerst Ei en Ek uit bronnen",
+        "rows": [
+          [
+            "Teller: vraag naar X",
+            "Noemer: prijs van Z",
+            "Ek en relatie"
+          ],
+          [
+            "Deelfietsritten",
+            "Treinritten",
+            "+5% / +10% = +0,5 Positief → substituten ."
+          ],
+          [
+            "Aanvullende stoelreserveringen",
+            "Treinritten",
+            "−8% / +10% = −0,8 Negatief → complementen ."
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "f6579da372059f95ac4cd1d1061fa24a233c2afe0bd10dbd77962d3d0dca3b3e",
+    "target_png_sha256": "00d77774e25f8049706e06ac300e93fa450705a30e29026dcf137ace794f38f6"
+  },
+  {
+    "page": 60,
+    "local": 24,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+    "source_sha256": "0af8a2a60054334ddb364b6ab7372e579564d545827ba8c0a11c71014d0886c3",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [
+      {
+        "label": "+5% gedeeld door +10%",
+        "style": "left:91.8588pt;top:393.1208pt;width:39.7851pt;height:36.0197pt"
+      }
+    ],
+    "tables": [
+      {
+        "label": "Tabel bij Daarna de functie gebruiken",
+        "rows": [
+          [
+            "Scenario",
+            "Px",
+            "Pz",
+            "Y",
+            "Qx"
+          ],
+          [
+            "Begin",
+            "10",
+            "20",
+            "20.000",
+            "400"
+          ],
+          [
+            "Alleen hoger Y",
+            "10",
+            "20",
+            "22.000",
+            "420"
+          ],
+          [
+            "Terug naar begin; alleen hoger Pz",
+            "10",
+            "24",
+            "20.000",
+            "404"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "c7fde648bb2fe97f518dc483dce8eb38482c784c241c20b3b71a1bf39cf224ca",
+    "target_png_sha256": "abb15ad8064c6c4e5c787372d2a74ddf259307b7d4769f231f329426b4e27a29"
+  },
+  {
+    "page": 72,
+    "local": 36,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2 Hoofdstukoverzicht.md",
+    "source_sha256": "08cee39ab799b16916c3e5419db3a0a2283dfdbfea77b687283331c447e9e6be",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H2\\output\\Boek_2_H2_Elasticiteit.pdf",
+    "pdf_sha256": "a54cb9241943131f69c9919a7b03154b5cb98455ee4420d225face01c80e292a",
+    "fractions": [
+      {
+        "label": "%ΔQv gedeeld door %ΔP",
+        "style": "left:66.8583pt;top:172.9498pt;width:43.6457pt;height:36.0196pt"
+      },
+      {
+        "label": "%ΔQv gedeeld door %ΔY",
+        "style": "left:231.0446pt;top:172.9498pt;width:43.6458pt;height:36.0196pt"
+      },
+      {
+        "label": "%ΔQv X gedeeld door %ΔP Z",
+        "style": "left:395.231pt;top:172.9498pt;width:55.3865pt;height:36.0196pt"
+      },
+      {
+        "label": "nieuw − oud gedeeld door oud",
+        "style": "left:66.8583pt;top:451.5138pt;width:78.2021pt;height:36.0196pt"
+      },
+      {
+        "label": "TO nieuw − TO oud gedeeld door TO oud",
+        "style": "left:313.1378pt;top:495.5698pt;width:120.75pt;height:36.0196pt"
+      }
+    ],
+    "tables": [
+      {
+        "label": "Tabel bij Hoofdstukoverzicht",
+        "rows": [
+          [
+            "Je berekent…",
+            "Zo lees je de uitkomst",
+            "Terugzoeken"
+          ],
+          [
+            "Ev",
+            "−1 < Ev < 0: prijsinelastisch; Ev = 0: geen reactie. Ev = −1: unitair elastisch. Ev < −1: prijselastisch.",
+            "§2.2.1 p. 3–4"
+          ],
+          [
+            "Ei",
+            "In dit boek: Ei < 0 inferieur; 0 < Ei < 1 normaal; Ei > 1 luxe. Ei = 0 en Ei = 1 zijn grenswaarden.",
+            "§2.2.3 p. 19"
+          ],
+          [
+            "Ek",
+            "Ek > 0: substituten. Ek < 0: complementen. Ek = 0: geen reactie in deze meting.",
+            "§2.2.3 p. 20"
+          ]
+        ]
+      },
+      {
+        "label": "Tabel bij Hoofdstukoverzicht",
+        "rows": [
+          [
+            "Controle",
+            "Wat doe je?"
+          ],
+          [
+            "Eenheden",
+            "Maandomzet hoort bij verkochte aantallen per maand. In een functie blijft jaarinkomen een jaarinkomen."
+          ],
+          [
+            "Teken",
+            "Houd het teken in Ev, Ei en Ek. Vergelijk Ev met −1 en 0; bij Ei en Ek heeft het teken een andere economische betekenis."
+          ],
+          [
+            "Eén factor",
+            "Bereken de beginsituatie. Verander alleen de gevraagde factor. Zet eerdere wijzigingen terug."
+          ],
+          [
+            "Conclusie",
+            "De omzetregel is lokaal. Bereken TO oud en nieuw rechtstreeks. Meer omzet bewijst geen hogere winst. Een volgende meting kan anders zijn."
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "b785e9a5edab41a2ab989f91518c893100f06322252ba012b1355bb8f6b56945",
+    "target_png_sha256": "548e5381fbadcfdd3df3a441fff708ca04a92b5a9f7cbd451b9d637430c56024"
+  },
+  {
+    "page": 74,
+    "local": 2,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+    "source_sha256": "a1176bcbb5875656d7d554258267cdf39561c1e1fa5597ea4cb36c680b47c90b",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [],
+    "native_png_sha256": "fd0da85cfc7471cb60ea1390b9d39ea3d9610461ee065e2753d20e7c4de3f597",
+    "target_png_sha256": "bbef6de5e647252f2aca86c9011e85f8965da70bf329e45f429315371d2aec1b"
+  },
+  {
+    "page": 75,
+    "local": 3,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+    "source_sha256": "a1176bcbb5875656d7d554258267cdf39561c1e1fa5597ea4cb36c680b47c90b",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Van één koper naar alle kopers",
+        "rows": [
+          [
+            "Koper",
+            "Betalingsbereidheid",
+            "Koopt bij € 20?",
+            "CS"
+          ],
+          [
+            "1",
+            "€ 30",
+            "Ja",
+            "30 − 20 = € 10"
+          ],
+          [
+            "2",
+            "€ 25",
+            "Ja",
+            "25 − 20 = € 5"
+          ],
+          [
+            "3",
+            "€ 15",
+            "Nee",
+            "€ 0 : geen aankoop"
+          ],
+          [
+            "Samen",
+            "",
+            "2 gekochte kaartjes",
+            "CS = € 15"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "18cde1b1404675a920b6fa079c516e53092f7c8646a8536d7c05a6dc009e4b15",
+    "target_png_sha256": "e4822513d56f4104e6528591895c464c3d007aba724d0134f1ebba49fe34b264"
+  },
+  {
+    "page": 76,
+    "local": 4,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+    "source_sha256": "a1176bcbb5875656d7d554258267cdf39561c1e1fa5597ea4cb36c680b47c90b",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Zo teken en bereken je het gebied",
+        "rows": [
+          [
+            "Kies…",
+            "Bereken…",
+            "Punt (Q; P)"
+          ],
+          [
+            "Q = 0",
+            "P = 30 − 0,5 × 0 = 30",
+            "(0; 30)"
+          ],
+          [
+            "P = 0",
+            "0 = 30 − 0,5Q → Q = 60",
+            "(60; 0)"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "6670863cf0ad233b1d98a2edf6631695f0dc532cace0e13720a65f563d70be9b",
+    "target_png_sha256": "b73f5ed3f55bb76af74f500970db60f9c1cba7b224633da9c1bc6399fc71880d"
+  },
+  {
+    "page": 77,
+    "local": 5,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+    "source_sha256": "a1176bcbb5875656d7d554258267cdf39561c1e1fa5597ea4cb36c680b47c90b",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [],
+    "native_png_sha256": "124c9bebbe6752bb0f947a3c7c448bdbd76a173340e8030bac2b8b75e17c0ac7",
+    "target_png_sha256": "5e2a8ecae851c36faacfce346a1a9e064ea6ec77349cb0693966a8ec2a216772"
+  },
+  {
+    "page": 82,
+    "local": 10,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+    "source_sha256": "624ea79522d04855da3521ce5b890a5083f218c02ef8e69df1b4002d420125e2",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [],
+    "native_png_sha256": "8623a71b74e0e9de226256658a516a76bbea92b3e796a279cc71e66fb1369ef5",
+    "target_png_sha256": "be8fdd6d530bcb7ad6d59034e6bfea5050d69a9b0e7253bd72fd3e1e4b4af80f"
+  },
+  {
+    "page": 83,
+    "local": 11,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+    "source_sha256": "624ea79522d04855da3521ce5b890a5083f218c02ef8e69df1b4002d420125e2",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [],
+    "native_png_sha256": "63c9ff300147c27d6d7a6f3c19a460441bf6e36d479bdd6d314e06adba7c7293",
+    "target_png_sha256": "0614ce59a9d6ae75989a4bdbb38b21b37cf88f092300ea7664d09418151714f1"
+  },
+  {
+    "page": 84,
+    "local": 12,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+    "source_sha256": "624ea79522d04855da3521ce5b890a5083f218c02ef8e69df1b4002d420125e2",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Hoe groot is het gezamenlijke voordeel?",
+        "rows": [
+          [
+            "Q",
+            "Betalingsbereidheid",
+            "MK",
+            "Bijdrage van extra handel"
+          ],
+          [
+            "10",
+            "€ 30",
+            "€ 15",
+            "+€ 15 : voordelig."
+          ],
+          [
+            "20",
+            "€ 20",
+            "€ 20",
+            "€ 0 : op de grens."
+          ],
+          [
+            "30",
+            "€ 10",
+            "€ 25",
+            "−€ 15 : nadelig."
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "18c72160199a9c495fa6bc384c47343da98d54150b373aab78836f94048867a9",
+    "target_png_sha256": "4811f367e1639dd69a7111ef8e31d2740264459478998735f08d1d9cf181885b"
+  },
+  {
+    "page": 85,
+    "local": 13,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+    "source_sha256": "624ea79522d04855da3521ce5b890a5083f218c02ef8e69df1b4002d420125e2",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Evenwicht en twee surplusgebieden",
+        "rows": [
+          [
+            "Gebied",
+            "Basis",
+            "Hoogte",
+            "Berekening"
+          ],
+          [
+            "CS",
+            "20",
+            "24 − 14 = 10",
+            "½ × 20 × 10 = € 100"
+          ],
+          [
+            "PS",
+            "20",
+            "14 − 4 = 10",
+            "½ × 20 × 10 = € 100"
+          ],
+          [
+            "TS",
+            "—",
+            "—",
+            "100 + 100 = € 200"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "e0963c9ef4ab34a09aa7b7a6ef1929e29ab4c0e21d78b80a6ca65a768e73af43",
+    "target_png_sha256": "f36e630c5aa50608fbfdbb9da9680afb6bdd8c6fb0ee9150e7b9129f197e8e24"
+  },
+  {
+    "page": 86,
+    "local": 14,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+    "source_sha256": "624ea79522d04855da3521ce5b890a5083f218c02ef8e69df1b4002d420125e2",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij De uitkomsten economisch uitleggen",
+        "rows": [
+          [
+            "Q",
+            "Betalingsbereidheid",
+            "MK",
+            "Extra handel en TS"
+          ],
+          [
+            "10",
+            "€ 19",
+            "€ 9",
+            "+€ 10 : verhoogt TS."
+          ],
+          [
+            "30",
+            "€ 9",
+            "€ 19",
+            "−€ 10 : verlaagt TS."
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "12c0f195914b245373453b1f18ee7ec7a9f83e45488940fa1477e42b568ce321",
+    "target_png_sha256": "da60f6a2a951fb60ae11e97fa1e66837999728aed076a61207116be5284b3945"
+  },
+  {
+    "page": 92,
+    "local": 20,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+    "source_sha256": "3aa64389bed298f244a0e9d94eb8508dcfcca898a0869e17325407e36b6bab39",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Niet elke voordelige transactie gaat door",
+        "rows": [
+          [
+            "Grootheid",
+            "Berekening of gegeven",
+            "Hoeveelheid"
+          ],
+          [
+            "Gevraagd: Qd",
+            "22 = 40 − Qd",
+            "18 posters"
+          ],
+          [
+            "Aangeboden: Qs",
+            "22 = 10 + 0,5Qs",
+            "24 posters"
+          ],
+          [
+            "Boekingsgrens",
+            "Er mogen maximaal 12 boekingen zijn.",
+            "12 posters"
+          ],
+          [
+            "Werkelijk verkocht",
+            "De grens ligt onder Qd én Qs.",
+            "12 posters"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "b87d0151f9e46930fbbe52f2b6735596b89afd2c5d7c87ee476e50b1ad502a8b",
+    "target_png_sha256": "38bf6951f553584bd84530faa304323d8b5e2898817f269a7fc5f279b8bbe428"
+  },
+  {
+    "page": 93,
+    "local": 21,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+    "source_sha256": "3aa64389bed298f244a0e9d94eb8508dcfcca898a0869e17325407e36b6bab39",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [],
+    "native_png_sha256": "3c37fae0c32d75af1006107014319a52dc3e96c81b5c515afa8b0c3f31f6131c",
+    "target_png_sha256": "004d8546c8571231600ba037b4a37ae3e6b5c87865f65a7cbd709661f95d9b43"
+  },
+  {
+    "page": 94,
+    "local": 22,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+    "source_sha256": "3aa64389bed298f244a0e9d94eb8508dcfcca898a0869e17325407e36b6bab39",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Voordeel dat niemand ontvangt",
+        "rows": [
+          [
+            "Postermarkt",
+            "CS",
+            "PS",
+            "TS = CS + PS"
+          ],
+          [
+            "Vrij evenwicht: 20 posters",
+            "€ 200",
+            "€ 100",
+            "€ 300"
+          ],
+          [
+            "Boekingsgrens: 12 posters",
+            "€ 144",
+            "€ 108",
+            "€ 252"
+          ],
+          [
+            "Verandering",
+            "−€ 56",
+            "+€ 8",
+            "−€ 48"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "a49bb5f60a4b5f524ecf779f422b3ca821e4dd22d240662b41364ca13f841abe",
+    "target_png_sha256": "70c64efaa7cb71ccba01cf89cba5e1165b5bcd23eda910bf0fb5ce6a1b3ae8f6"
+  },
+  {
+    "page": 95,
+    "local": 23,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+    "source_sha256": "3aa64389bed298f244a0e9d94eb8508dcfcca898a0869e17325407e36b6bab39",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Kan iemand erop vooruit zonder nadeel voor anderen?",
+        "rows": [
+          [
+            "Controle",
+            "Toepassing op de 13e poster"
+          ],
+          [
+            "1 · Iemand beter af?",
+            "Ja: de nieuwe koper én verkoper hebben voordeel."
+          ],
+          [
+            "2 · Haalbaar?",
+            "Ja: er is technische ruimte en verruiming kost niets."
+          ],
+          [
+            "3 · Niemand slechter af?",
+            "Ja: bestaande transacties en de prijs blijven gelijk; anderen ondervinden geen gevolgen."
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "d69b52a6bc7d07625d02493ba8e9d1208a17de5581fc3b172e69286546bb4df1",
+    "target_png_sha256": "5bfa70f41da6c5d4e38f0d5b4de84bf90b2613e4b567b58b56e5d397619c7078"
+  },
+  {
+    "page": 96,
+    "local": 24,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+    "source_sha256": "3aa64389bed298f244a0e9d94eb8508dcfcca898a0869e17325407e36b6bab39",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [],
+    "native_png_sha256": "7141e3291ddc01b36eb1ab23f64351da6bdf416368d578a17cf332922b4c52e1",
+    "target_png_sha256": "a5006e5494fb30b3b8dc56b03a2948b423afa36baeb84b020bdd08108df7fa98"
+  },
+  {
+    "page": 97,
+    "local": 25,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+    "source_sha256": "3aa64389bed298f244a0e9d94eb8508dcfcca898a0869e17325407e36b6bab39",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [],
+    "native_png_sha256": "29ca8874d13f9a24eb42efc40404ac4fd1ee395bd51cf34706d6a6d9c981cd93",
+    "target_png_sha256": "9ec4851576c64d0b94a08489b14b6b3e1f7b80bbb9dcc079e7f119528290da9c"
+  },
+  {
+    "page": 109,
+    "local": 37,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3 Hoofdstukoverzicht.md",
+    "source_sha256": "ea45c39bd1924bf3db5da9cfa4961fafd0ee521675da5aa5c103b8919fde66b6",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij De hele rekenroute op één pagina",
+        "rows": [
+          [
+            "Situatie",
+            "Werkwijze"
+          ],
+          [
+            "Gegeven prijs",
+            "Vul P in de vraagfunctie in. Controleer of alle gevraagde producten ook worden verkocht."
+          ],
+          [
+            "Vrij evenwicht",
+            "Stel vraag en aanbod gelijk. Bereken Qe en vul die hoeveelheid in voor Pe."
+          ],
+          [
+            "Boekingsgrens",
+            "Bereken Qd en Qs. Gebruik de grens voor de werkelijke transacties. Controleer wie de producten koopt en levert."
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "7d27d1124c13a8540592a2b460522fbd6a10b3f6a6eaf3a00cebf080523c67ae",
+    "target_png_sha256": "54eeff057cf7fc7628f37e8f055505ffe874e1bf789f57a8379f1020bea3db41"
+  },
+  {
+    "page": 110,
+    "local": 38,
+    "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3 Hoofdstukoverzicht.md",
+    "source_sha256": "ea45c39bd1924bf3db5da9cfa4961fafd0ee521675da5aa5c103b8919fde66b6",
+    "pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H3\\output\\Boek_2_H3_Surplus_en_welvaart.pdf",
+    "pdf_sha256": "25e35d857742654907eb67c19cd286ab94e501894239122059a21567ff1ff82f",
+    "fractions": [],
+    "tables": [
+      {
+        "label": "Tabel bij Begrippen en veelgemaakte verwisselingen",
+        "rows": [
+          [
+            "Begrip",
+            "Betekenis in dit hoofdstuk",
+            "Zie p."
+          ],
+          [
+            "Betalingsbereidheid",
+            "Wat een koper maximaal voor een product wil betalen.",
+            "2"
+          ],
+          [
+            "Consumentensurplus (CS)",
+            "Betalingsbereidheid min betaalde prijs, opgeteld over de gekochte producten.",
+            "2–5"
+          ],
+          [
+            "Marginale kosten (MK)",
+            "Extra kosten per extra product. In de gegeven marktmodellen af te lezen op de aanbodlijn.",
+            "10–11"
+          ],
+          [
+            "Producentensurplus (PS)",
+            "Ontvangen prijs min MK, opgeteld over de verkochte producten.",
+            "10–11"
+          ],
+          [
+            "Totaal surplus (TS)",
+            "Het gezamenlijke voordeel van kopers en verkopers: CS + PS .",
+            "12"
+          ],
+          [
+            "Vrij marktevenwicht",
+            "Prijs en hoeveelheid waarbij vraag en aanbod gelijk zijn, zonder de besproken boekingsgrens.",
+            "12–13"
+          ],
+          [
+            "Bindende boekingsgrens",
+            "Een regel die minder transacties toestaat dan bij de gegeven prijs mogelijk zijn.",
+            "20"
+          ],
+          [
+            "Toewijzingsregel (allocatieregel)",
+            "De afspraak over welke kopers en verkopers de toegestane transacties uitvoeren.",
+            "20"
+          ],
+          [
+            "Welvaartsverlies",
+            "Maximaal TS min werkelijk TS, binnen het gegeven model.",
+            "22"
+          ],
+          [
+            "Paretoverbetering",
+            "Een haalbare verandering die minstens één persoon helpt en niemand schaadt.",
+            "23"
+          ],
+          [
+            "Pareto-efficiëntie",
+            "Er is geen haalbare Paretoverbetering meer mogelijk.",
+            "23"
+          ],
+          [
+            "Eerlijke verdeling",
+            "Een oordeel over wie welk voordeel zou moeten krijgen. Dit volgt niet alleen uit TS.",
+            "23"
+          ]
+        ]
+      }
+    ],
+    "native_png_sha256": "1fcf972426948d117ff1a45c8d1fd34fb61764354786c2055250f8c268b4ba19",
+    "target_png_sha256": "c9083f4218e15f24be7397097310a8e5bcd8edd703a432c15ddda3b9ee8b8e10"
+  }
+]

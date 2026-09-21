@@ -146,11 +146,11 @@ F6: {
 B8: {
     title: 'Prijselasticiteit van de vraag',
     sections: [
-        { type: 'uitleg', content: 'De prijselasticiteit van de vraag (Ev) meet hoe sterk de gevraagde hoeveelheid reageert op een prijsverandering. Een Ev van −2 betekent: als de prijs met 1% stijgt, daalt de vraag met 2%. De Ev is altijd negatief (hogere prijs → minder vraag). Als |Ev| > 1 is de vraag elastisch (gevoelig voor prijs), als |Ev| < 1 is de vraag inelastisch (weinig gevoelig).' },
-        { type: 'formule', content: 'Ev = %ΔQv / %ΔP\n\nDaarbij:\n%ΔQv = (ΔQv / Qv) × 100%\n%ΔP = (ΔP / P) × 100%\n\nOf direct: Ev = (ΔQv / ΔP) × (P / Qv)' },
+        { type: 'uitleg', content: 'De prijselasticiteit van de vraag (Ev) vergelijkt procentuele veranderingen van Qv en de eigen prijs, bij overige factoren gelijk. Bereken Ev mét teken en vergelijk rechtstreeks met −1 en 0: Ev < −1 is prijselastisch; −1 < Ev < 0 is prijsinelastisch; Ev = −1 is unitair elastisch. Ev = 0 betekent geen hoeveelheidsreactie: volkomen prijsinelastisch. Bij Ev = −2 reageert Qv procentueel tweemaal zo sterk als P, in tegengestelde richting; bij Ev = −0,5 half zo sterk.' },
+        { type: 'formule', content: 'Ev = %ΔQv / %ΔP\n\nDaarbij:\n%ΔQv = (ΔQv / Qv_oud) × 100%\n%ΔP = (ΔP / P_oud) × 100%\n\nOf direct: Ev = (ΔQv / ΔP) × (P_oud / Qv_oud). Bij %ΔP = 0 is dit gemeten quotiënt niet gedefinieerd.' },
         { type: 'voorbeeld', title: 'Prijselasticiteit berekenen', content: 'De prijs stijgt van €20 naar €22, de vraag daalt van 80 naar 72.\n\n%ΔP = (2/20) × 100% = 10%\n%ΔQv = (−8/80) × 100% = −10%\n\nEv = −10% / 10% = −1\n\nDe vraag is unitair elastisch: de procentuele daling van Q is precies gelijk aan de procentuele stijging van P.' },
         { type: 'tip', content: 'Gebruik de oorspronkelijke waarden (vóór de verandering) als deler bij het berekenen van de procentuele verandering. ΔQ deel je door de oude Q, ΔP door de oude P.' },
-        { type: 'valkuil', content: 'Vergeet het minteken niet! De vraag DAALT als de prijs stijgt, dus ΔQv is negatief. De Ev is daarom altijd negatief. Als je een positief getal uitkomt, heb je waarschijnlijk het teken van ΔQ vergeten.' },
+        { type: 'valkuil', content: 'Behoud het teken en de ongeronde waarde bij de indeling. Negatief betekent niet automatisch inelastisch. Controleer bij een positieve verhouding zowel de berekening als de context: als ook inkomen of reclame verandert, is een eigen-prijseffect niet bewezen. Gebruik deze Ev-indeling niet voor Ei of Ek.' },
         { type: 'check', content: 'Kun je de prijselasticiteit berekenen en bepalen of de vraag elastisch of inelastisch is?' }
     ]
 },

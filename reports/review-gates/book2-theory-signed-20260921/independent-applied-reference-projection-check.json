@@ -1,0 +1,207 @@
+{
+  "baseline": "37cc57bda5096b6b8cb455fe9cd27b20acacd3fe",
+  "scope": "Applied reviewed patches plus exact mandatory CLI projections; read-only independent check",
+  "passed": true,
+  "unit_records": 257,
+  "term_records": 227,
+  "reverse_links_derived_from_baseline_units": true,
+  "derived_term_relationship_changes": [
+    {
+      "term": "collectieve-aanbodlijn",
+      "before": [
+        "D10",
+        "D13"
+      ],
+      "after": [
+        "D10",
+        "D13",
+        "D47"
+      ]
+    },
+    {
+      "term": "collectieve-vraaglijn",
+      "before": [
+        "D10"
+      ],
+      "after": [
+        "D10",
+        "D47"
+      ]
+    },
+    {
+      "term": "evenwichtshoeveelheid",
+      "before": [
+        "A06",
+        "D05"
+      ],
+      "after": [
+        "A06",
+        "D05",
+        "D47"
+      ]
+    },
+    {
+      "term": "evenwichtsprijs",
+      "before": [
+        "A06",
+        "D05",
+        "D07",
+        "D10",
+        "D13"
+      ],
+      "after": [
+        "A06",
+        "D05",
+        "D10",
+        "D13",
+        "D41",
+        "D42",
+        "D43",
+        "D47"
+      ]
+    },
+    {
+      "term": "heffingen",
+      "before": [
+        "D01",
+        "D05",
+        "D07",
+        "D08",
+        "F06",
+        "F10",
+        "H09"
+      ],
+      "after": [
+        "D01",
+        "D05",
+        "D07",
+        "D08",
+        "D41",
+        "D42",
+        "D45",
+        "F06",
+        "F10",
+        "H09"
+      ]
+    },
+    {
+      "term": "marginale-kosten",
+      "before": [
+        "A13",
+        "D17",
+        "D30"
+      ],
+      "after": [
+        "A13",
+        "A20",
+        "A91",
+        "A94",
+        "A95",
+        "D17",
+        "D30"
+      ]
+    },
+    {
+      "term": "prijselasticiteit-van-de-vraag",
+      "before": [
+        "A15",
+        "D06",
+        "D25",
+        "H03"
+      ],
+      "after": [
+        "A15",
+        "D06",
+        "D25",
+        "D45",
+        "H03"
+      ]
+    },
+    {
+      "term": "subsidies",
+      "before": [
+        "D19",
+        "D22",
+        "D29",
+        "F10",
+        "F11",
+        "H09"
+      ],
+      "after": [
+        "D19",
+        "D22",
+        "D29",
+        "D43",
+        "D45",
+        "F10",
+        "F11",
+        "H09"
+      ]
+    },
+    {
+      "term": "variabele-kosten",
+      "before": [
+        "A08",
+        "D26"
+      ],
+      "after": [
+        "A08",
+        "A86",
+        "D26"
+      ]
+    },
+    {
+      "term": "winst",
+      "before": [
+        "A21",
+        "A22",
+        "A29",
+        "A33",
+        "A35",
+        "A36",
+        "D02",
+        "D18",
+        "D30",
+        "F04"
+      ],
+      "after": [
+        "A21",
+        "A22",
+        "A29",
+        "A33",
+        "A35",
+        "A36",
+        "A87",
+        "D02",
+        "D18",
+        "D30",
+        "F04"
+      ]
+    }
+  ],
+  "unit_markdown_matches_baseline_plus_patches_and_cli_render": true,
+  "term_markdown_and_coverage_match_owning_renderers": true,
+  "outline_metadata_unchanged": true,
+  "files": [
+    {
+      "path": "references/machine/micro-teaching-units.json",
+      "sha256": "1c6caa241f65ef56e065517a91d13a012f0865da9c97e8ad596705900aa223c0"
+    },
+    {
+      "path": "references/machine/begrippen.json",
+      "sha256": "3c2a82eaa3cbf14e8591b421fc6979df032a4bed1309590702d1fc7289076c22"
+    },
+    {
+      "path": "references/machine/micro-teaching-units.md",
+      "sha256": "4a894d83a47fde7c8bc2c99a8ab3c033b4f49909de3b3e53ac68b9c816952e20"
+    },
+    {
+      "path": "references/machine/begrippen.md",
+      "sha256": "36578692167e0c1b7b2d041c8d11679e39f1ee1b72d0471dd28a6d5f8a8159f4"
+    },
+    {
+      "path": "reports/begrippen-coverage.md",
+      "sha256": "c8f788895f629c787b71936ea0d627136ff5c9ef629119fd1e47ad21c6104298"
+    }
+  ]
+}

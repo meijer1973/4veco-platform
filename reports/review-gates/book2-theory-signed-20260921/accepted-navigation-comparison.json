@@ -1,0 +1,1226 @@
+{
+  "Boek_2_Compleet.pdf": {
+    "count": 77,
+    "all_rectangles_destinations_match_accepted_target": true,
+    "rectangle_tolerance_pt": 0.01,
+    "links": [
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          334.369,
+          544.252,
+          378.669
+        ],
+        "destination_page": 4
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          340.969,
+          544.252,
+          356.809
+        ],
+        "destination_page": 4
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          537.873,
+          342.969,
+          544.252,
+          357.489
+        ],
+        "destination_page": 4
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          358.809,
+          544.252,
+          372.669
+        ],
+        "destination_page": 4
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          378.669,
+          544.252,
+          422.969
+        ],
+        "destination_page": 12
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          385.269,
+          544.252,
+          401.109
+        ],
+        "destination_page": 12
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          531.493,
+          387.269,
+          544.252,
+          401.789
+        ],
+        "destination_page": 12
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          403.109,
+          544.252,
+          416.969
+        ],
+        "destination_page": 12
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          422.969,
+          544.252,
+          467.269
+        ],
+        "destination_page": 21
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          429.569,
+          544.252,
+          445.409
+        ],
+        "destination_page": 21
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          531.493,
+          431.569,
+          544.252,
+          446.089
+        ],
+        "destination_page": 21
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          447.409,
+          544.252,
+          461.269
+        ],
+        "destination_page": 21
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          467.269,
+          544.252,
+          511.569
+        ],
+        "destination_page": 31
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          473.869,
+          544.252,
+          489.709
+        ],
+        "destination_page": 31
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          531.493,
+          475.869,
+          544.252,
+          490.389
+        ],
+        "destination_page": 31
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          491.709,
+          544.252,
+          505.569
+        ],
+        "destination_page": 31
+      },
+      {
+        "source_page": 21,
+        "rect": [
+          54.0,
+          84.24,
+          119.908,
+          94.2
+        ],
+        "destination_page": 21
+      },
+      {
+        "source_page": 21,
+        "rect": [
+          119.908,
+          84.24,
+          199.869,
+          94.2
+        ],
+        "destination_page": 22
+      },
+      {
+        "source_page": 21,
+        "rect": [
+          199.869,
+          84.24,
+          289.948,
+          94.2
+        ],
+        "destination_page": 23
+      },
+      {
+        "source_page": 21,
+        "rect": [
+          289.948,
+          84.24,
+          368.432,
+          94.2
+        ],
+        "destination_page": 24
+      },
+      {
+        "source_page": 22,
+        "rect": [
+          54.0,
+          84.24,
+          119.369,
+          94.2
+        ],
+        "destination_page": 21
+      },
+      {
+        "source_page": 22,
+        "rect": [
+          119.369,
+          84.24,
+          200.003,
+          94.2
+        ],
+        "destination_page": 22
+      },
+      {
+        "source_page": 22,
+        "rect": [
+          200.003,
+          84.24,
+          290.081,
+          94.2
+        ],
+        "destination_page": 23
+      },
+      {
+        "source_page": 22,
+        "rect": [
+          290.081,
+          84.24,
+          368.565,
+          94.2
+        ],
+        "destination_page": 24
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          54.0,
+          84.24,
+          119.369,
+          94.2
+        ],
+        "destination_page": 21
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          119.369,
+          84.24,
+          199.33,
+          94.2
+        ],
+        "destination_page": 22
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          199.33,
+          84.24,
+          290.202,
+          94.2
+        ],
+        "destination_page": 23
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          290.202,
+          84.24,
+          368.686,
+          94.2
+        ],
+        "destination_page": 24
+      },
+      {
+        "source_page": 24,
+        "rect": [
+          54.0,
+          84.24,
+          119.369,
+          94.2
+        ],
+        "destination_page": 21
+      },
+      {
+        "source_page": 24,
+        "rect": [
+          119.369,
+          84.24,
+          199.33,
+          94.2
+        ],
+        "destination_page": 22
+      },
+      {
+        "source_page": 24,
+        "rect": [
+          199.33,
+          84.24,
+          289.408,
+          94.2
+        ],
+        "destination_page": 23
+      },
+      {
+        "source_page": 24,
+        "rect": [
+          289.408,
+          84.24,
+          368.432,
+          94.2
+        ],
+        "destination_page": 24
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          259.099,
+          544.252,
+          304.524
+        ],
+        "destination_page": 38
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          265.699,
+          544.252,
+          282.139
+        ],
+        "destination_page": 38
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          538.162,
+          267.699,
+          544.252,
+          282.084
+        ],
+        "destination_page": 38
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          284.139,
+          544.252,
+          298.524
+        ],
+        "destination_page": 38
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          304.524,
+          544.252,
+          349.949
+        ],
+        "destination_page": 46
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          311.124,
+          544.252,
+          327.564
+        ],
+        "destination_page": 46
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          532.072,
+          313.124,
+          544.252,
+          327.509
+        ],
+        "destination_page": 46
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          329.564,
+          544.252,
+          343.949
+        ],
+        "destination_page": 46
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          349.949,
+          544.252,
+          395.374
+        ],
+        "destination_page": 54
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          356.549,
+          544.252,
+          372.989
+        ],
+        "destination_page": 54
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          532.072,
+          358.549,
+          544.252,
+          372.934
+        ],
+        "destination_page": 54
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          374.989,
+          544.252,
+          389.374
+        ],
+        "destination_page": 54
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          395.374,
+          544.252,
+          440.799
+        ],
+        "destination_page": 66
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          401.974,
+          544.252,
+          418.414
+        ],
+        "destination_page": 66
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          532.072,
+          403.974,
+          544.252,
+          418.359
+        ],
+        "destination_page": 66
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          420.414,
+          544.252,
+          434.799
+        ],
+        "destination_page": 66
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          440.799,
+          544.252,
+          486.224
+        ],
+        "destination_page": 72
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          447.399,
+          544.252,
+          463.839
+        ],
+        "destination_page": 72
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          532.072,
+          449.399,
+          544.252,
+          463.784
+        ],
+        "destination_page": 72
+      },
+      {
+        "source_page": 37,
+        "rect": [
+          53.858,
+          465.839,
+          544.252,
+          480.224
+        ],
+        "destination_page": 72
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          308.555,
+          544.252,
+          353.305
+        ],
+        "destination_page": 74
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          315.155,
+          544.252,
+          331.235
+        ],
+        "destination_page": 74
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          537.292,
+          315.155,
+          544.252,
+          331.235
+        ],
+        "destination_page": 74
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          315.155,
+          544.252,
+          331.235
+        ],
+        "destination_page": 74
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          333.235,
+          544.252,
+          347.305
+        ],
+        "destination_page": 74
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          353.305,
+          544.252,
+          398.055
+        ],
+        "destination_page": 82
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          359.905,
+          544.252,
+          375.985
+        ],
+        "destination_page": 82
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          530.332,
+          359.905,
+          544.252,
+          375.985
+        ],
+        "destination_page": 82
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          359.905,
+          544.252,
+          375.985
+        ],
+        "destination_page": 82
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          377.985,
+          544.252,
+          392.055
+        ],
+        "destination_page": 82
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          398.055,
+          544.252,
+          442.805
+        ],
+        "destination_page": 92
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          404.655,
+          544.252,
+          420.735
+        ],
+        "destination_page": 92
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          530.332,
+          404.655,
+          544.252,
+          420.735
+        ],
+        "destination_page": 92
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          404.655,
+          544.252,
+          420.735
+        ],
+        "destination_page": 92
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          422.735,
+          544.252,
+          436.805
+        ],
+        "destination_page": 92
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          442.805,
+          544.252,
+          487.555
+        ],
+        "destination_page": 103
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          449.405,
+          544.252,
+          465.485
+        ],
+        "destination_page": 103
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          530.332,
+          449.405,
+          544.252,
+          465.485
+        ],
+        "destination_page": 103
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          449.405,
+          544.252,
+          465.485
+        ],
+        "destination_page": 103
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          467.485,
+          544.252,
+          481.555
+        ],
+        "destination_page": 103
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          487.555,
+          544.252,
+          532.305
+        ],
+        "destination_page": 109
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          494.155,
+          544.252,
+          510.235
+        ],
+        "destination_page": 109
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          530.332,
+          494.155,
+          544.252,
+          510.235
+        ],
+        "destination_page": 109
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          494.155,
+          544.252,
+          510.235
+        ],
+        "destination_page": 109
+      },
+      {
+        "source_page": 73,
+        "rect": [
+          53.858,
+          512.235,
+          544.252,
+          526.305
+        ],
+        "destination_page": 109
+      }
+    ]
+  },
+  "Boek_2_Compleet_Antwoorden.pdf": {
+    "count": 44,
+    "all_rectangles_destinations_match_accepted_target": true,
+    "rectangle_tolerance_pt": 0.01,
+    "links": [
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          434.395,
+          544.252,
+          478.695
+        ],
+        "destination_page": 4
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          440.995,
+          544.252,
+          456.835
+        ],
+        "destination_page": 4
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          458.835,
+          544.252,
+          472.695
+        ],
+        "destination_page": 4
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          478.695,
+          544.252,
+          522.995
+        ],
+        "destination_page": 8
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          485.295,
+          544.252,
+          501.135
+        ],
+        "destination_page": 8
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          503.135,
+          544.252,
+          516.995
+        ],
+        "destination_page": 8
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          522.995,
+          544.252,
+          567.295
+        ],
+        "destination_page": 13
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          529.595,
+          544.252,
+          545.435
+        ],
+        "destination_page": 13
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          547.435,
+          544.252,
+          561.295
+        ],
+        "destination_page": 13
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          567.295,
+          544.252,
+          611.595
+        ],
+        "destination_page": 18
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          573.895,
+          544.252,
+          589.735
+        ],
+        "destination_page": 18
+      },
+      {
+        "source_page": 3,
+        "rect": [
+          53.858,
+          591.735,
+          544.252,
+          605.595
+        ],
+        "destination_page": 18
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          53.858,
+          454.193,
+          544.252,
+          499.618
+        ],
+        "destination_page": 24
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          53.858,
+          460.793,
+          544.252,
+          477.233
+        ],
+        "destination_page": 24
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          53.858,
+          479.233,
+          544.252,
+          493.618
+        ],
+        "destination_page": 24
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          53.858,
+          499.618,
+          544.252,
+          545.043
+        ],
+        "destination_page": 28
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          53.858,
+          506.218,
+          544.252,
+          522.658
+        ],
+        "destination_page": 28
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          53.858,
+          524.658,
+          544.252,
+          539.043
+        ],
+        "destination_page": 28
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          53.858,
+          545.043,
+          544.252,
+          590.468
+        ],
+        "destination_page": 32
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          53.858,
+          551.643,
+          544.252,
+          568.083
+        ],
+        "destination_page": 32
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          53.858,
+          570.083,
+          544.252,
+          584.468
+        ],
+        "destination_page": 32
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          53.858,
+          590.468,
+          544.252,
+          635.893
+        ],
+        "destination_page": 37
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          53.858,
+          597.068,
+          544.252,
+          613.508
+        ],
+        "destination_page": 37
+      },
+      {
+        "source_page": 23,
+        "rect": [
+          53.858,
+          615.508,
+          544.252,
+          629.893
+        ],
+        "destination_page": 37
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          424.187,
+          544.252,
+          468.937
+        ],
+        "destination_page": 42
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          430.787,
+          544.252,
+          446.867
+        ],
+        "destination_page": 42
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          537.292,
+          430.787,
+          544.252,
+          446.867
+        ],
+        "destination_page": 42
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          430.787,
+          544.252,
+          446.867
+        ],
+        "destination_page": 42
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          448.867,
+          544.252,
+          462.937
+        ],
+        "destination_page": 42
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          468.937,
+          544.252,
+          513.687
+        ],
+        "destination_page": 46
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          475.537,
+          544.252,
+          491.617
+        ],
+        "destination_page": 46
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          537.292,
+          475.537,
+          544.252,
+          491.617
+        ],
+        "destination_page": 46
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          475.537,
+          544.252,
+          491.617
+        ],
+        "destination_page": 46
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          493.617,
+          544.252,
+          507.687
+        ],
+        "destination_page": 46
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          513.687,
+          544.252,
+          558.437
+        ],
+        "destination_page": 50
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          520.287,
+          544.252,
+          536.367
+        ],
+        "destination_page": 50
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          530.332,
+          520.287,
+          544.252,
+          536.367
+        ],
+        "destination_page": 50
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          520.287,
+          544.252,
+          536.367
+        ],
+        "destination_page": 50
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          538.367,
+          544.252,
+          552.437
+        ],
+        "destination_page": 50
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          558.437,
+          544.252,
+          603.187
+        ],
+        "destination_page": 54
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          565.037,
+          544.252,
+          581.117
+        ],
+        "destination_page": 54
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          530.332,
+          565.037,
+          544.252,
+          581.117
+        ],
+        "destination_page": 54
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          565.037,
+          544.252,
+          581.117
+        ],
+        "destination_page": 54
+      },
+      {
+        "source_page": 41,
+        "rect": [
+          53.858,
+          583.117,
+          544.252,
+          597.187
+        ],
+        "destination_page": 54
+      }
+    ]
+  }
+}

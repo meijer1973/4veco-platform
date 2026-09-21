@@ -3,7 +3,7 @@
 **Niet met de hand bewerken.** Alle mutaties gaan via `build-scripts/references/term-*.js`.
 Regenereer met `node build-scripts/references/build-begrippen-index.js`.
 
-*Versie 1.0.0 — gegenereerd 2026-05-16.*
+*Versie 1.0.0 — gegenereerd 2026-09-21.*
 
 Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-facing Nederlandse definitie, een syllabus-clause (indien van toepassing), en cross-links naar gerelateerde termen en teaching-units.
 
@@ -60,7 +60,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Engels:** market/collective supply curve
 - **Notatie:** (1)
 - **Voorbeeld:** Als bakker Noa bij € 2 veertig broden aanbiedt en bakker Sven tachtig, ligt het punt (2, 120) op de collectieve aanbodlijn.
-- **Teaching-units:** D10, D13
+- **Teaching-units:** D10, D13, D47
 
 ### collectieve-vraaglijn
 - **Term:** collectieve vraaglijn
@@ -69,7 +69,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Engels:** market/collective demand curve
 - **Notatie:** (1)
 - **Voorbeeld:** Als bij € 4 Nina 5 repen en Stef 3 repen willen kopen, ligt het punt (4, 8) op de collectieve vraaglijn van beiden samen.
-- **Teaching-units:** D10
+- **Teaching-units:** D10, D47
 
 ### complementariteit
 - **Term:** complementariteit
@@ -115,7 +115,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** D1.24
 - **Engels:** equilibrium quantity / equilibrium revenue
 - **Voorbeeld:** Op de broodmarkt uit het voorbeeld hierboven is de evenwichtshoeveelheid 10.000 broden per dag.
-- **Teaching-units:** A06, D05
+- **Teaching-units:** A06, D05, D47
 
 ### evenwichtsopbrengst
 - **Term:** evenwichtsopbrengst
@@ -133,7 +133,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Voorbeeld:** Snijpunt van de collectieve vraag- en aanbodlijn voor brood: zowel vragers als aanbieders komen uit op € 2,50 en 10.000 broden.
 - **Let op:** Markten bewegen richting evenwicht, maar liggen niet per definitie altijd op het snijpunt. Bij verstoringen (heffing, prijsregulering) ontstaat juist een afwijking.
 - **Vermijd:** equilibrium price
-- **Teaching-units:** A06, D05, D07, D10, D13
+- **Teaching-units:** A06, D05, D10, D13, D41, D42, D43, D47
 
 ### gemiddelde-totale-kosten
 - **Term:** gemiddelde totale kosten
@@ -162,7 +162,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Engels:** taxes / subsidies
 - **Voorbeeld:** De accijns op benzine van € 0,80 per liter verschuift de aanbodlijn van benzinepompen € 0,80 omhoog; de pompprijs stijgt, maar niet met de volle € 0,80 als de vraag deels reageert.
 - **Let op:** Wie de heffing economisch betaalt (consument of aanbieder) hangt af van de elasticiteiten, niet van wie volgens de wet moet afdragen.
-- **Teaching-units:** D01, D05, D07, D08, F06, F10, H09
+- **Teaching-units:** D01, D05, D07, D08, D41, D42, D45, F06, F10, H09
 
 ### heterogene-goederen
 - **Term:** heterogene goederen
@@ -233,7 +233,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Voorbeeld:** Stijgen de totale kosten van € 10.000 naar € 10.040 bij één extra paar schoenen, dan is MK = 40 / 1 = € 40.
 - **Let op:** Verwar MK (ΔTK/ΔQ, helling van de TK-lijn) niet met GTK (TK/Q, gemiddelde). MK snijdt GTK in het minimum van de GTK-lijn.
 - **Vermijd:** marginal cost
-- **Teaching-units:** A13, D17, D30
+- **Teaching-units:** A13, A20, A91, A94, A95, D17, D30
 
 ### marginale-opbrengsten
 - **Term:** marginale opbrengsten
@@ -388,37 +388,38 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 
 ### prijselasticiteit-en-to
 - **Term:** prijselasticiteit en TO
-- **Definitie:** De richting waarin de totale opbrengst verandert bij een prijswijziging hangt af van de prijselasticiteit van de vraag. Bij een elastische vraag daalt TO als de prijs stijgt; bij een inelastische vraag stijgt TO.
+- **Definitie:** Bij kleine eigen-prijsveranderingen geldt lokaal: voor Ev < −1 beweegt TO tegengesteld aan P; voor −1 < Ev ≤ 0 beweegt TO mee met P; bij Ev = −1 blijft TO ongeveer gelijk. Bereken bij gegeven oude en nieuwe P en Q de eindige omzetverandering rechtstreeks met TO = P × Q.
 - **Syllabus:** D1.15
 - **Afkorting:** Ev, TO
 - **Engels:** elasticity and revenue
-- **Voorbeeld:** Bij een elastische vraag (|Ev| > 1) daalt TO bij een prijsstijging: 10% prijsstijging leidt tot >10% afzetdaling, waardoor P × Q kleiner wordt.
+- **Voorbeeld:** P stijgt van 10 naar 12 en Q daalt van 100 naar 82: Ev = −18% / 20% = −0,9. Toch daalt TO van 1000 naar 984 (−1,6%). De lokale richtingregel vervangt deze eindige berekening niet.
+- **Let op:** De procentuele veranderingen van P en Q optellen als exacte omzetverandering, een positieve verhouding bij meerdere veranderende factoren als eigen-prijselasticiteit behandelen, of omzet zonder kostengegevens gelijkstellen aan winst.
 
 ### prijselasticiteit-van-de-vraag
 - **Term:** prijselasticiteit van de vraag
-- **Definitie:** Maat voor de gevoeligheid van de gevraagde hoeveelheid voor een prijsverandering. De waarde is meestal negatief: een hogere prijs leidt tot een lagere gevraagde hoeveelheid.
+- **Definitie:** Verhouding van de procentuele verandering van de gevraagde hoeveelheid tot de procentuele verandering van de eigen prijs, bij overige factoren gelijk: Ev = %ΔQv / %ΔP. Bij de gewone tegengestelde reactie is Ev negatief; Ev = 0 betekent geen hoeveelheidsreactie.
 - **Formule:** `Ev = %ΔQv / %ΔP`
 - **Syllabus:** D1.5
 - **Afkorting:** Ev
 - **Engels:** price elasticity of demand
 - **Notatie:** (1)
-- **Voorbeeld:** Stijgt de prijs met 10% en daalt de gevraagde hoeveelheid met 20%, dan is Ev = −20 / 10 = −2. In absolute waarde > 1, dus prijselastisch.
-- **Let op:** Ev is meestal negatief. Staat er "elasticiteit = 2", dan wordt bijna altijd |Ev| bedoeld. Het teken vergeten is een klassieke fout.
-- **Teaching-units:** A15, D06, D25, H03
+- **Voorbeeld:** Stijgt P met 10% en daalt Qv met 20%, dan is Ev = −20 / 10 = −2. Omdat −2 < −1 is de vraag prijselastisch: Qv reageert procentueel tweemaal zo sterk, in tegengestelde richting.
+- **Let op:** Behoud het teken en vergelijk rechtstreeks met −1 en 0; een afzonderlijke absolute-waardestap is niet verplicht. Deel door procentuele veranderingen met oude waarden als basis, niet door veranderingen in aantallen. Bij %ΔP = 0 is het quotiënt niet gedefinieerd. Een positieve verhouding bij meerdere veranderende factoren bewijst geen eigen-prijseffect.
+- **Teaching-units:** A15, D06, D25, D45, H03
 
 ### prijselastische-vraag
 - **Term:** prijselastische vraag
-- **Definitie:** Vraag waarvan de prijselasticiteit in absolute waarde groter is dan 1: een prijsverandering van 1% zorgt voor een grotere procentuele verandering in de gevraagde hoeveelheid.
+- **Definitie:** Bij de gewone eigen-prijsvraag geldt Ev < −1: de gevraagde hoeveelheid reageert procentueel sterker dan de prijs, in tegengestelde richting en bij overige factoren gelijk.
 - **Syllabus:** D1.6
 - **Engels:** elastic / inelastic demand
-- **Voorbeeld:** Voor vakantievluchten (|Ev| ≈ 2) leidt een prijsstijging van 10% tot ongeveer 20% minder boekingen — de vraag reageert sterk op prijs.
+- **Voorbeeld:** In een voorbeeld met Ev = −2 horen bij 10% prijsstijging 20% minder boekingen. Vergelijk −2 rechtstreeks met −1: prijselastisch.
 
 ### prijsinelastische-vraag
 - **Term:** prijsinelastische vraag
-- **Definitie:** Vraag waarvan de prijselasticiteit in absolute waarde kleiner is dan 1: een prijsverandering van 1% zorgt voor een kleinere procentuele verandering in de gevraagde hoeveelheid.
+- **Definitie:** Bij de gewone eigen-prijsvraag geldt −1 < Ev < 0: de gevraagde hoeveelheid reageert procentueel minder sterk dan de prijs, in tegengestelde richting. Ev = 0 is het grensgeval volkomen prijsinelastisch: geen hoeveelheidsreactie.
 - **Syllabus:** D1.6
 - **Engels:** elastic / inelastic demand
-- **Voorbeeld:** Voor insuline (|Ev| ≈ 0,1) verandert de gevraagde hoeveelheid bijna niet als de prijs stijgt — de patiënt heeft het middel hoe dan ook nodig.
+- **Voorbeeld:** Bij Ev = −0,5 horen bij 10% prijsstijging 5% minder gevraagde producten. Omdat −1 < −0,5 < 0 is de vraag prijsinelastisch.
 
 ### producentensurplus
 - **Term:** producentensurplus
@@ -439,7 +440,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Engels:** taxes / subsidies
 - **Voorbeeld:** Een subsidie van € 2.000 per elektrische auto verschuift de aanbodlijn € 2.000 omlaag; de marktprijs voor de consument daalt.
 - **Let op:** Ook het voordeel van een subsidie wordt verdeeld over consument en aanbieder volgens de elasticiteiten; de consumentenprijs daalt niet met het volle subsidiebedrag.
-- **Teaching-units:** D19, D22, D29, F10, F11, H09
+- **Teaching-units:** D19, D22, D29, D43, D45, F10, F11, H09
 
 ### substitueerbaarheid
 - **Term:** substitueerbaarheid
@@ -491,7 +492,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Voorbeeld:** De inkoop van bloem, suiker en gist is per brood vast, maar stijgt evenredig met het aantal gebakken broden: bij 0 broden zijn de variabele kosten € 0.
 - **Let op:** Variabele kosten stijgen mét de productie, maar niet automatisch lineair: bij afnemende meeropbrengsten gaan ze sneller omhoog dan de productie.
 - **Vermijd:** variable cost
-- **Teaching-units:** A08, D26
+- **Teaching-units:** A08, A86, D26
 
 ### verloren-surplus
 - **Term:** verloren surplus
@@ -536,7 +537,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Voorbeeld:** Een schoenwinkel heeft TO = € 24.000 en TK = € 18.000: winst = 24.000 − 18.000 = € 6.000.
 - **Let op:** Winst = TO − TK (alle kosten). Verwar niet met toegevoegde waarde (omzet − leveringen van derden), die alleen de inkoop eraf haalt.
 - **Vermijd:** profit
-- **Teaching-units:** A21, A22, A29, A33, A35, A36, D02, D18, D30, F04
+- **Teaching-units:** A21, A22, A29, A33, A35, A36, A87, D02, D18, D30, F04
 
 ## Domein E: Ruilen over de tijd
 

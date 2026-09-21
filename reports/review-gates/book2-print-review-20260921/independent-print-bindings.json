@@ -1,0 +1,231 @@
+{
+  "verdict": "PASS for bounded source/build/content revision; final commit identities and new remote CI pending",
+  "baseline_pair": {
+    "platform": "55bca26c14ea6680e9b062f1a87cb01cc27dd52e",
+    "lessons": "c07ae61b2635b2a3a59aa81c901273a7a37d5832"
+  },
+  "current_inventory": {
+    "manifest_sha256": "6e8dfbefffb2e7e105da7ddfb7e87030fb2077720de15b8e30d60bac0d7546ca",
+    "files": 1473,
+    "revision_paths": 314,
+    "independently_executed_gate": {
+      "task": "exercise-routes-20260921",
+      "active_curriculum": "book34-lesson-balance-v3-20260915",
+      "lesson_state": "book2-theory-signed-20260921",
+      "files": 1473,
+      "passed": true,
+      "failures": []
+    }
+  },
+  "platform_files": [
+    {
+      "path": "build-scripts/books/book2_print.py",
+      "sha256": "7cdcaf41302d53fca44bb6e5ae64f14e25a2f43c3f66cbbd3a292ab3a4e4d77d"
+    },
+    {
+      "path": "build-scripts/books/assemble_book2_signed.py",
+      "sha256": "1a109b5824387c1edbb5f797f90917cc8a26da0e58e9c460e32779fb463257e0"
+    },
+    {
+      "path": "build-scripts/books/rebuild_book2_signed.py",
+      "sha256": "1a50aeae963425d4f677cb61af22fcf1242cc89fbcfecf3929155640cf619ac5"
+    },
+    {
+      "path": "build-scripts/books/book2_signed_exports.py",
+      "sha256": "babecc457bea819505957f132a1cad261463e67ee5cf3e7ec62fe7fc682342ad"
+    },
+    {
+      "path": "build-scripts/books/verify_book2_signed.py",
+      "sha256": "6c8072faf127beb874d813b14ecd4dc3d61ed2e42bf0dc5c2fdc7a2a89500d2f"
+    },
+    {
+      "path": "build-scripts/books/test_book2_native.py",
+      "sha256": "7b6ce5340309f376331a08e86a07196c8c2853d718381dc92fca20c369051aa9"
+    },
+    {
+      "path": "build-scripts/books/record_book2_signed_revision.js",
+      "sha256": "13e392daa58bb89fd8bf786e25c66db7e65bddbb14655792ea67d0a03540404e"
+    },
+    {
+      "path": "build-scripts/books/book2-signed-revision-pin.json",
+      "sha256": "e6707202d4b762b745b7abc5de78fe3047341a85b9a9ff9c91e5aa9f88fe83ca"
+    },
+    {
+      "path": "build-scripts/books/BOOK2-SIGNED.md",
+      "sha256": "d05febc3dd9201cef3f254c8fd3b1a1874f0982b5717dac8c9a38e3292a119fe"
+    },
+    {
+      "path": "engines/skilltree/generators.js",
+      "sha256": "720309108520e0babc9e76ff20d7efa196f52aa6a32149b1dfc90c566996c2ea"
+    },
+    {
+      "path": "engines/tests/signed-elasticity.test.js",
+      "sha256": "229c6e32af847a2050ad50b0be39521d51645a317e66c6c041ba7ef1f2624287"
+    },
+    {
+      "path": "reports/review-gates/book2-print-review-20260921/navigation-delta.json",
+      "sha256": "b56d71d0ec6b5369ac1cd45ce629dfe7842fa4f26f2b4533f3b5a0a96f6490a5"
+    }
+  ],
+  "lesson_files": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/2.2 Elasticiteit – hoofdstuk.md",
+      "sha256": "f6e5b649df1ae9720d17e2b4d6f0682a0458dfaf449d49ec21cca9bd59d36765"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/Docenten_en_bouwverantwoording.md",
+      "sha256": "eedc86d6a46f1271e338195c92a63977b5523030fee9ee9a7d02b26a5e74b7f5"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/README.md",
+      "sha256": "320db554d4ce2d788d044c10e1d4208119a453479f73f20d00f8fb8db4b18f25"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/00 Hoofdstukopening.md",
+      "sha256": "e841e919f009b00fc43d1a446cd940af2aae6d5e0a5c8350e35541e9280ec92c"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2 Hoofdstukoverzicht.md",
+      "sha256": "a235ff3d8f23c695a853fd399ad8c69a2e3925f94eacdaf818e9685cba011655"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.1 Prijselasticiteit – paragraaf.md",
+      "sha256": "c79150a148e39ad1609ad77712c0f26cc032a83a40106e4aa0096e8af1dbb07b"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "sha256": "dd5aec29637a494da80ad7264f08c7d7ecc7081d9ca23f0e963385127f8166f3"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/manuscript/2.2.3 Inkomenselasticiteit en kruislingse elasticiteit – paragraaf.md",
+      "sha256": "40440809dc4e3d4261ff15d15e05bf8b5396ec346be1f59df3037c4d71984cea"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Docenteninformatie.md",
+      "sha256": "95fef222ef377353c0f3986319707fe85838276e2dd59947aa764c6102437d93"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/2.3 Surplus en welvaart – hoofdstuk.md",
+      "sha256": "29da8e5eb3bb3d35a2f6992f26464a9da84c3fed2e1e335da645c893b96b34af"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/README.md",
+      "sha256": "bc71c7d37f218f6ecd795a01750b919a35548ef2d6ce3fa95a68eafd3334f34c"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/00 Hoofdstukopening.md",
+      "sha256": "918faa5278a8a2c0ef11d3917c81592e6890ae96c004a88bb2870d76873ea4e0"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3 Hoofdstukoverzicht.md",
+      "sha256": "c1f35244be7e03f75bf1dbb69ffbbcfc7656f89676ed32f87cb3d8c474a97036"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.1 Consumentensurplus – paragraaf.md",
+      "sha256": "79abbe55782b3bd3a2ac38f14213654cef38a0111c93a27ab4d95d4394f2ad35"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.2 Producentensurplus en totaal surplus – paragraaf.md",
+      "sha256": "77d485b2078bba0b3faffcb6d0e78d4ce8e55f4ab59de63d470c9214aff92745"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/manuscript/2.3.3 Pareto-efficiëntie en welvaartsverlies – paragraaf.md",
+      "sha256": "73f8bdb4f9ef2b7e7e997a7eef54657d9a2944bb8b65505fefbb5bf33e1bf69d"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/print-pagination.json",
+      "sha256": "ef8062c81b6b1ba9562b0cfc21f09e3c7df6237b7893c8f35a08e0dfdb0ea4ce"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/signed-page-map.json",
+      "sha256": "67c638123e594e0d09f68305bc77593254a197cb59d303f153aa91ccf87d2b32"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/signed-chapter-inputs.json",
+      "sha256": "81007285eedfdb9e6afaabb5183bb1a5409db9db2cfa125ed5e23d08388f2638"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/signed-assembly-manifest.json",
+      "sha256": "5b52b2990b072fc579359453dffb965f5714c70b2b9da77b1bf7e6bddff884d4"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/SIGNED-REVISION-2026-09-21.md",
+      "sha256": "083963191ccfa12e897539e012efe34c5d03acce647efd3332246f36678d0d13"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/_assets/theory-20260921/page-054.json",
+      "sha256": "8c0b06eb474ba119fe93e19800c80811c22d5e84255f74f565652212ab36eac7"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Theorie_43_Herziene_Paginas.pdf",
+      "sha256": "692f95c0a816d93f1cdc1f2f203a8cbd8456b9d9f802eaf9ebdb51bb37ade396"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Theorie_43_Herziene_Paginas.json",
+      "sha256": "3d321862aa157291dee31b20183ba0c19ef324be74ac20f523aa63661b8f6bb6"
+    },
+    {
+      "path": "book2-signed-revision.json",
+      "sha256": "6e8dfbefffb2e7e105da7ddfb7e87030fb2077720de15b8e30d60bac0d7546ca"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
+      "sha256": "e1b4a5648e0eab56d83fe1f69ab05f2bcef8e144905d8630195c6b4da7978493"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf",
+      "sha256": "7bf9f43e801592b3632063b0720ae38b8a1776831bfaa90703a8ae95e5329bc2"
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Docenteninformatie.pdf",
+      "sha256": "88866a40704c7f13d55f16013765bf71cb928dd10a17aea2861baad440bc6ddc"
+    }
+  ],
+  "checks": {
+    "python_tests_passed": 7,
+    "independent_external_map_probe": "PASS (changed map rejected before assembly)",
+    "all_180_body_footers": "PASS",
+    "main_contents_refs": 21,
+    "chapter_contents_refs": 14,
+    "compact_navigation_labels": 124,
+    "diagram_reference_fixes": 2,
+    "complete_pdf_pages": 186,
+    "assembled_chapter_pages": 180,
+    "chapter_links": 121,
+    "paragraph_export_pages": 207,
+    "paragraph_export_links": 20,
+    "theory_extract_pages": 43
+  },
+  "reused_evidence": [
+    {
+      "path": "independent-b2-r1-exact-review.md",
+      "sha256": "7be824e9b059c9883610a1c511a5dd6320a017c83f44d91f8a0d12b4a0b27e67"
+    },
+    {
+      "path": "independent-b2-r1-exact-bindings.json",
+      "sha256": "a53405714a18983f76281adf7594545211b02a95798602d3cf47aac6a516ed83"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "independent-print-comparison.json",
+      "sha256": "ca92c698ec237331823f2c464b06a913fd83045c7209a25a06427ab046b359e2"
+    },
+    {
+      "path": "independent-print-map-probe.json",
+      "sha256": "a5003f93dc9542b3f4a30304e73008c7e3bc9260d4b1b16e70f579415df797be"
+    },
+    {
+      "path": "independent-print-render-coverage.json",
+      "sha256": "def98991d2e1fe630f53efef1bf20d019aac1de4ed4ecb9b0ca5259471b930fa"
+    },
+    {
+      "path": "independent-print-verification.json",
+      "sha256": "272bbe4fae2296d9764223a961de046f7c71d05606c4caaaabb4921322943619"
+    }
+  ],
+  "review": {
+    "path": "independent-print-review.md",
+    "sha256": "6733f034c37475da30455d9dbcf2efe4d825ca53cf67bda6181fb92bd44d07dd"
+  }
+}

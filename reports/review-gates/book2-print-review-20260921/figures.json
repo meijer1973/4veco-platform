@@ -1,0 +1,2465 @@
+{
+  "scope": "All actual bounded native figure JSON sources; no cover/current curriculum/manifest/CI acceptance",
+  "figure_count": 31,
+  "check_count": 101,
+  "failures": [],
+  "figures": [
+    {
+      "page": 5,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/theory-20260921/page-005.json",
+      "sha256": "9bfb1af7b9fad2456970e4c5377043b729bbe56c8ac30777af7ce3dc73c9ff6d",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "TCK=300",
+          "pass": true,
+          "shape_index": 16,
+          "vertices_checked": 2,
+          "max_data_residual": 0.0008237800424240049,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              0.0,
+              300.0008237800424
+            ],
+            [
+              600.0,
+              300.0008237800424
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "TVK=2Q",
+          "pass": true,
+          "shape_index": 17,
+          "vertices_checked": 2,
+          "max_data_residual": 0.00048457649564167746,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              0.0,
+              -0.00048457649564167746
+            ],
+            [
+              600.0,
+              1199.9999030847018
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "TK=300+2Q",
+          "pass": true,
+          "shape_index": 18,
+          "vertices_checked": 2,
+          "max_data_residual": 0.0008237800424240049,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              0.0,
+              300.0008237800424
+            ],
+            [
+              600.0,
+              1500.0
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "At Q400 the vertical TCK gap is300",
+          "pass": true,
+          "shape_index": 19,
+          "actual_vertices": [
+            [
+              400.00532682441093,
+              1100.000274593347
+            ],
+            [
+              400.00532682441093,
+              800.0001776780488
+            ]
+          ],
+          "expected_vertices": [
+            [
+              400,
+              1100
+            ],
+            [
+              400,
+              800
+            ]
+          ],
+          "max_coordinate_error": 0.005326824410929021,
+          "tolerance": 0.015,
+          "area": 0.0,
+          "expected_area": 0.0
+        }
+      ],
+      "geometry_payload_sha256": "78fe798e7c2a7b56704a4b6a75697d07f36381c89d2ed61fba29f0723e2fe5bd",
+      "calibration": {
+        "plot_x0": 106.0292,
+        "plot_x_at_max": 485.242,
+        "q_max": 600,
+        "plot_y0": 666.94116,
+        "plot_y_at_max": 543.1217,
+        "value_max": 1500,
+        "basis": "labeled axes/grid inspected at full size"
+      }
+    },
+    {
+      "page": 6,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/theory-20260921/page-006.json",
+      "sha256": "f5342967ef20d6be3144f6523e67cf30eeb34798701a803281978347120bf917",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "GCK=300/Q on visible Q>0 domain",
+          "pass": true,
+          "shape_index": 17,
+          "vertices_checked": 734,
+          "max_data_residual": 7.394446400343924e-05,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              50.47915049281036,
+              5.9430474256496915
+            ],
+            [
+              187.67182964288122,
+              1.5985453620354013
+            ],
+            [
+              325.6147999223655,
+              0.9213209857193804
+            ],
+            [
+              462.80732084992906,
+              0.6482242922722894
+            ],
+            [
+              600.0,
+              0.49999840998348477
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "GVK=2 for Q>0; Q0 is marked open",
+          "pass": true,
+          "shape_index": 18,
+          "vertices_checked": 2,
+          "max_data_residual": 1.817161727757366e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              0.0,
+              2.0000018171617278
+            ],
+            [
+              600.0,
+              2.0000018171617278
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "GTK=300/Q+2 on visible Q>0 domain",
+          "pass": true,
+          "shape_index": 19,
+          "vertices_checked": 701,
+          "max_data_residual": 4.233933306707627e-05,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              75.21850528252212,
+              5.988362896283221
+            ],
+            [
+              206.4142349625329,
+              3.453408654687024
+            ],
+            [
+              337.6099646425436,
+              2.8885893600637793
+            ],
+            [
+              468.8042703199892,
+              2.639910777359073
+            ],
+            [
+              600.0,
+              2.4999984099834873
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "GTK-GVK=GCK at Q200",
+          "pass": true,
+          "shape_index": 20,
+          "actual_vertices": [
+            [
+              199.994673175589,
+              3.5000006814356475
+            ],
+            [
+              199.994673175589,
+              2.0000018171617278
+            ]
+          ],
+          "expected_vertices": [
+            [
+              200,
+              3.5
+            ],
+            [
+              200,
+              2
+            ]
+          ],
+          "max_coordinate_error": 0.005326824410985864,
+          "tolerance": 0.015,
+          "area": 0.0,
+          "expected_area": 0.0
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "GTK-GVK=GCK at Q400",
+          "pass": true,
+          "shape_index": 23,
+          "actual_vertices": [
+            [
+              400.00532682441093,
+              2.7500035207508517
+            ],
+            [
+              400.00532682441093,
+              2.0000018171617278
+            ]
+          ],
+          "expected_vertices": [
+            [
+              400,
+              2.75
+            ],
+            [
+              400,
+              2
+            ]
+          ],
+          "max_coordinate_error": 0.005326824410929021,
+          "tolerance": 0.015,
+          "area": 0.0,
+          "expected_area": 0.0
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Open-circle center at Q0, GVK2",
+          "pass": true,
+          "actual": 1.9999995457095663,
+          "expected": 2,
+          "tolerance": 0.015
+        }
+      ],
+      "geometry_payload_sha256": "fc0ee127434d22a1384c6733733f0201dd28e334384748d9d236644c2d6d0171",
+      "calibration": {
+        "plot_x0": 106.0292,
+        "plot_x_at_max": 485.242,
+        "q_max": 600,
+        "plot_y0": 631.42914,
+        "plot_y_at_max": 499.35504,
+        "value_max": 6,
+        "basis": "labeled axes/grid inspected at full size"
+      }
+    },
+    {
+      "page": 12,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/theory-20260921/page-012.json",
+      "sha256": "ed97fe4093e6ff84a245d0edd8d8ea0617f6c8cc84e4266552ae2d50da8eac2a",
+      "checks": [
+        {
+          "kind": "live_text_model",
+          "description": "Profit definition diagram",
+          "pass": true,
+          "required": [
+            "TO",
+            "TK",
+            "Winst",
+            "Alle constante én",
+            "variabele kosten"
+          ],
+          "model": "Winst=TO-TK, including constant and variable costs",
+          "actual": "TO Het hele verkoopbedrag − TK Alle constante én variabele kosten = Winst Wat na alle kosten overblijft"
+        }
+      ],
+      "geometry_payload_sha256": "3bea21df62e6edaa4748038eae7ea2d8bf72260563f6cf23f8c88621aebad0fa"
+    },
+    {
+      "page": 14,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/theory-20260921/page-014.json",
+      "sha256": "378f64858d65b81fb74201e00a35c45b50b041737e85a73177955eca6d16b69c",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "TO=5Q",
+          "pass": true,
+          "shape_index": 20,
+          "vertices_checked": 2,
+          "max_data_residual": 0.0001349326772697168,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              1.897350888395082e-05,
+              0.0
+            ],
+            [
+              149.99998861589467,
+              750.0000780121505
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "TK=250+2Q",
+          "pass": true,
+          "shape_index": 21,
+          "vertices_checked": 2,
+          "max_data_residual": 0.00017836888883948632,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              1.897350888395082e-05,
+              249.99985957812893
+            ],
+            [
+              149.99998861589467,
+              549.9998907829894
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "At Q50 loss100",
+          "pass": true,
+          "shape_index": 22,
+          "actual_vertices": [
+            [
+              49.99999620529823,
+              249.99985957812893
+            ],
+            [
+              49.99999620529823,
+              350.00020283159137
+            ]
+          ],
+          "expected_vertices": [
+            [
+              50,
+              250
+            ],
+            [
+              50,
+              350
+            ]
+          ],
+          "max_coordinate_error": 0.00020283159136624818,
+          "tolerance": 0.015,
+          "area": 0.0,
+          "expected_area": 0.0
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "At Q100 profit50",
+          "pass": true,
+          "shape_index": 25,
+          "actual_vertices": [
+            [
+              100.00001138410533,
+              450.0000468072903
+            ],
+            [
+              100.00001138410533,
+              500.0002184340215
+            ]
+          ],
+          "expected_vertices": [
+            [
+              100,
+              500
+            ],
+            [
+              100,
+              450
+            ]
+          ],
+          "max_coordinate_error": 0.00021843402151944247,
+          "tolerance": 0.015,
+          "area": 0.0,
+          "expected_area": 0.0
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Break-even marker Q=250/3",
+          "pass": true,
+          "actual": 83.33333206843274,
+          "expected": 83.33333333333333,
+          "tolerance": 0.015
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Break-even marker TO=TK=1250/3",
+          "pass": true,
+          "actual": 416.66666562650477,
+          "expected": 416.6666666666667,
+          "tolerance": 0.015
+        }
+      ],
+      "geometry_payload_sha256": "caebee770ae049db6617f4a6ef4f2d4fd336eb179739c3679e27014d7baabe78",
+      "calibration": {
+        "plot_x0": 101.61595,
+        "plot_x_at_max": 496.90393,
+        "q_max": 150,
+        "plot_y0": 480.245,
+        "plot_y_at_max": 320.01355,
+        "value_max": 800,
+        "basis": "labeled axes/grid inspected at full size"
+      }
+    },
+    {
+      "page": 21,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/theory-20260921/page-021.json",
+      "sha256": "847a37dfabb775c75a63ed4efe990d9a524d19a54968bdcd64f94e414a14c046",
+      "checks": [
+        {
+          "kind": "live_text_model",
+          "description": "Interval MK diagram",
+          "pass": true,
+          "required": [
+            "Q = 40",
+            "TK = € 260",
+            "Q = 50",
+            "TK = € 300",
+            "ΔQ = 10",
+            "ΔTK = € 40",
+            "€ 4 per extra product"
+          ],
+          "model": "(300-260)/(50-40)=4; units euro per extra product",
+          "actual": "Eerst Q = 40 TK = € 260 → Daarna Q = 50 TK = € 300 → Nieuw − oud ΔQ = 10 ΔTK = € 40 € 40 extra kosten ÷ 10 extra producten = € 4 per extra product."
+        }
+      ],
+      "geometry_payload_sha256": "06d3099639b7d21a612a70e0f835abb577e3235aeff43a47ddb65372f5866167"
+    },
+    {
+      "page": 23,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/_assets/theory-20260921/page-023.json",
+      "sha256": "34bcfcb28211a76fbc37037489583e771d2c9d9c5a0174e05005accee399195d",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "TK=80+Q², sampled finite curve",
+          "pass": true,
+          "shape_index": 31,
+          "vertices_checked": 121,
+          "max_data_residual": 0.00848984759656446,
+          "tolerance": 0.03,
+          "representative_data_points": [
+            [
+              -1.4514724494910876e-06,
+              80.00441945956825
+            ],
+            [
+              3.000000508015357,
+              89.00120372960359
+            ],
+            [
+              5.999999564558265,
+              116.00454745832519
+            ],
+            [
+              8.999998621101172,
+              161.0010776412758
+            ],
+            [
+              12.00000058058898,
+              224.00454936875437
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "Unequal ΔTK over constant ΔQ4",
+          "pass": true,
+          "shape_index": 12,
+          "actual_vertices": [
+            [
+              -1.4514724494910876e-06,
+              80.00002547238948
+            ],
+            [
+              4.00000116117796,
+              80.00002547238948
+            ],
+            [
+              4.00000116117796,
+              96.00006113373465
+            ]
+          ],
+          "expected_vertices": [
+            [
+              0,
+              80
+            ],
+            [
+              4,
+              80
+            ],
+            [
+              4,
+              96
+            ]
+          ],
+          "max_coordinate_error": 6.113373464700089e-05,
+          "tolerance": 0.015,
+          "area": 32.000092223940186,
+          "expected_area": 32.0
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "Unequal ΔTK over constant ΔQ4",
+          "pass": true,
+          "shape_index": 19,
+          "actual_vertices": [
+            [
+              4.00000116117796,
+              96.00006113373465
+            ],
+            [
+              7.99999796793857,
+              96.00006113373465
+            ],
+            [
+              7.99999796793857,
+              143.9999770748495
+            ]
+          ],
+          "expected_vertices": [
+            [
+              4,
+              96
+            ],
+            [
+              8,
+              96
+            ],
+            [
+              8,
+              144
+            ]
+          ],
+          "max_coordinate_error": 6.113373464700089e-05,
+          "tolerance": 0.015,
+          "area": 95.99975524461854,
+          "expected_area": 96.0
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "Unequal ΔTK over constant ΔQ4",
+          "pass": true,
+          "shape_index": 25,
+          "actual_vertices": [
+            [
+              7.99999796793857,
+              143.9999770748495
+            ],
+            [
+              12.00000058058898,
+              143.9999770748495
+            ],
+            [
+              12.00000058058898,
+              223.99996433865482
+            ]
+          ],
+          "expected_vertices": [
+            [
+              8,
+              144
+            ],
+            [
+              12,
+              144
+            ],
+            [
+              12,
+              224
+            ]
+          ],
+          "max_coordinate_error": 3.5661345179960335e-05,
+          "tolerance": 0.015,
+          "area": 160.0000790336104,
+          "expected_area": 160.0
+        }
+      ],
+      "geometry_payload_sha256": "439c44d032de68d4886edf96d90754ed8a7a670d1e2f2f2b64e432593c324d62",
+      "calibration": {
+        "plot_x0": 93.30205,
+        "plot_x_at_max": 506.67538,
+        "q_max": 12,
+        "plot_y0": 551.52612,
+        "plot_y_at_max": 425.8999,
+        "value_max": 240,
+        "basis": "labeled axes/grid inspected at full size"
+      }
+    },
+    {
+      "page": 38,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/_assets/theory-20260921/page-038.json",
+      "sha256": "31a10c05866892c5cc83838cc645a1bdb63a771a00d83296a78a6d6cf6c5fd06",
+      "checks": [
+        {
+          "kind": "numeric_geometry",
+          "description": "Signed percentage bar 5 left",
+          "pass": true,
+          "actual": 0.0,
+          "expected": 0,
+          "tolerance": 0.015
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Signed percentage bar 5 right",
+          "pass": true,
+          "actual": 10.0,
+          "expected": 10,
+          "tolerance": 0.015
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Signed percentage bar 6 left",
+          "pass": true,
+          "actual": -4.999999179586674,
+          "expected": -5,
+          "tolerance": 0.015
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Signed percentage bar 6 right",
+          "pass": true,
+          "actual": 0.0,
+          "expected": 0,
+          "tolerance": 0.015
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Signed percentage bar 7 left",
+          "pass": true,
+          "actual": 0.0,
+          "expected": 0,
+          "tolerance": 0.015
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Signed percentage bar 7 right",
+          "pass": true,
+          "actual": 10.0,
+          "expected": 10,
+          "tolerance": 0.015
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Signed percentage bar 8 left",
+          "pass": true,
+          "actual": -20.00000328165332,
+          "expected": -20,
+          "tolerance": 0.015
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Signed percentage bar 8 right",
+          "pass": true,
+          "actual": 0.0,
+          "expected": 0,
+          "tolerance": 0.015
+        }
+      ],
+      "geometry_payload_sha256": "8364a216f9727a08d0d327867cbc4bd05e61c995bff1a8256589d0146ced8612",
+      "model": "P10→11 is+10%; Q200→190 is−5% (Ev−0.5); Q200→160 is−20% (Ev−2). Equal percentage axis."
+    },
+    {
+      "page": 39,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/_assets/theory-20260921/page-039.json",
+      "sha256": "decd785f87a4d6ecb6f3dff9ac32af87323b744cc1e7a8eb00426e649f10288a",
+      "checks": [
+        {
+          "kind": "live_text_model",
+          "description": "Signed elasticity flow",
+          "pass": true,
+          "required": [
+            "+10%",
+            "−5%",
+            "−5 ÷ 10 = −0,5"
+          ],
+          "model": "Ev=%ΔQv/%ΔP=-5/10=-0.5",
+          "actual": "Eigen prijs P +10% → Gevraagde hoeveelheid Qv −5% → Verhouding Ev −5 ÷ 10 = −0,5"
+        }
+      ],
+      "geometry_payload_sha256": "0e80875146a7327ee75218770c36ffd67b9e47810aaa74a1dbaf250e85537ef6"
+    },
+    {
+      "page": 40,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/_assets/theory-20260921/page-040.json",
+      "sha256": "5dd022b4346954b77f12707a90d1bffdd6e33a7c3418ed18b3890e9248e7f05f",
+      "checks": [
+        {
+          "kind": "numeric_geometry",
+          "description": "Signed number-line marker -1",
+          "pass": true,
+          "actual": -0.9999997765657858,
+          "expected": -1,
+          "tolerance": 0.015,
+          "shape_index": 7
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Signed number-line marker -2",
+          "pass": true,
+          "actual": -2.0000000558585533,
+          "expected": -2,
+          "tolerance": 0.015,
+          "shape_index": 8
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Signed number-line marker -0.5",
+          "pass": true,
+          "actual": -0.5000002234342138,
+          "expected": -0.5,
+          "tolerance": 0.015,
+          "shape_index": 9
+        }
+      ],
+      "geometry_payload_sha256": "34262e57aa02569596df4d0e0c681da85f8544e60df2d15b30b0b87a11d80421",
+      "model": "Non-positive own-price demand: Ev<-1 elastic; -1<Ev<0 inelastic; -1 unit elastic; zero no measured response. Number line is signed, leftward magnitude strengthens."
+    },
+    {
+      "page": 46,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/_assets/theory-20260921/page-046.json",
+      "sha256": "7a5edd3d010ab537b4691e0e360f79e1ce1c289e96db4d46667eeac4a983b97d",
+      "checks": [
+        {
+          "kind": "numeric_geometry",
+          "description": "TO rectangle quantity",
+          "pass": true,
+          "actual": 100.00047986519067,
+          "expected": 100,
+          "tolerance": 0.015,
+          "shape_index": 6
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "TO rectangle price",
+          "pass": true,
+          "actual": 9.999680245959217,
+          "expected": 10,
+          "tolerance": 0.015,
+          "shape_index": 6
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "TO rectangle area",
+          "pass": true,
+          "actual": 999.9728230943896,
+          "expected": 1000,
+          "tolerance": 0.1,
+          "shape_index": 6
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "TO rectangle quantity",
+          "pass": true,
+          "actual": 95.00045465708257,
+          "expected": 95,
+          "tolerance": 0.015,
+          "shape_index": 15
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "TO rectangle price",
+          "pass": true,
+          "actual": 10.999648160295125,
+          "expected": 11,
+          "tolerance": 0.015,
+          "shape_index": 15
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "TO rectangle area",
+          "pass": true,
+          "actual": 1044.9715762959788,
+          "expected": 1045,
+          "tolerance": 0.1,
+          "shape_index": 15
+        }
+      ],
+      "geometry_payload_sha256": "d9767819a7d2454f2f981d066881ecb9f9490fa52d56fee9aeb18fedc9ac1428",
+      "model": "Equal-scale P-Q rectangles: 10×100=1000;11×95=1045, +4.5%. Area represents TO because P is per ticket and Q is tickets/day."
+    },
+    {
+      "page": 47,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/_assets/theory-20260921/page-047.json",
+      "sha256": "d08022b631c610041c5b617e0118bb2a7f405b1bf77ab478e935e745c616debd",
+      "checks": [
+        {
+          "kind": "live_text_model",
+          "description": "Local turnover flow preserves scope",
+          "pass": true,
+          "required": [
+            "Bij een kleine prijsstijging",
+            "Inelastische vraag",
+            "Elastische vraag",
+            "TO ↑",
+            "TO ↓"
+          ],
+          "model": "For a small price increase, weak proportional quantity fall raises local TO; strong fall lowers it. Finite comparison still uses multiplication on same-page native text.",
+          "actual": "Bij een kleine prijsstijging Inelastische vraag: de relatieve hoeveelheidsreactie is zwak. P ↑, Q daalt weinig → TO ↑ Bij een kleine prijsstijging Elastische vraag: de relatieve hoeveelheidsreactie is sterk. P ↑, Q daalt veel → TO ↓"
+        }
+      ],
+      "geometry_payload_sha256": "a637b4675a39a9d2b1d8bb2d16974289093ccf12e08a6aa80c0932d40c08d3e1"
+    },
+    {
+      "page": 48,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/_assets/theory-20260921/page-048.json",
+      "sha256": "89834ab3127dbde9a607488c3f26a27ffc5071e9e25d7068b0b3d596b8e59e1b",
+      "checks": [
+        {
+          "kind": "live_text_model",
+          "description": "Revenue change flow",
+          "pass": true,
+          "required": [
+            "€ 1.000",
+            "+ € 45",
+            "€ 1.045"
+          ],
+          "model": "1045-1000=45;45/1000×100%=4.5%",
+          "actual": "Oude omzet € 1.000 → Verandering + € 45 → Nieuwe omzet € 1.045"
+        }
+      ],
+      "geometry_payload_sha256": "133ee5272e180f409c92aef07aed7dcbce0f9e3cc4edb3db738f19a2847e32d6"
+    },
+    {
+      "page": 54,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/_assets/theory-20260921/page-054.json",
+      "sha256": "8c0b06eb474ba119fe93e19800c80811c22d5e84255f74f565652212ab36eac7",
+      "checks": [
+        {
+          "kind": "live_text_model",
+          "description": "Distinct elasticity denominators",
+          "pass": true,
+          "required": [
+            "Eigen prijs · Ev",
+            "%ΔQv",
+            "%ΔP",
+            "Inkomen · Ei",
+            "%ΔY",
+            "Andere prijs · Ek",
+            "%ΔQv van X",
+            "%ΔP van Z"
+          ],
+          "model": "Ev: quantity/own price; Ei:quantity/income; Ek:quantity of X/price of Z; old percentage denominators preserved in surrounding source",
+          "actual": "Eigen prijs · Ev De prijs van het goed zelf verandert. %ΔQv %ΔP Dit ken je uit §2.2.1. Inkomen · Ei Het inkomen Y van de consumenten verandert. %ΔQv %ΔY Lees verder op p. 53. Andere prijs · Ek De prijs van een ander goed Z verandert. %ΔQv van X %ΔP van Z Lees verder op p. 54."
+        }
+      ],
+      "geometry_payload_sha256": "a20d24415ce3a68fb462327364572c843942747d082d70e955df903fb8609703"
+    },
+    {
+      "page": 55,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/_assets/theory-20260921/page-055.json",
+      "sha256": "808caab8c25299a44f123b151b3aaf733936c7f54598b7b418268c4e512fbee3",
+      "checks": [
+        {
+          "kind": "numeric_geometry",
+          "description": "Ei percentage bar -5",
+          "pass": true,
+          "actual": -5.0,
+          "expected": -5,
+          "tolerance": 0.015,
+          "shape_index": 6
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Ei percentage bar 5",
+          "pass": true,
+          "actual": 5.0,
+          "expected": 5,
+          "tolerance": 0.015,
+          "shape_index": 7
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Ei percentage bar 20",
+          "pass": true,
+          "actual": 19.99999662182781,
+          "expected": 20,
+          "tolerance": 0.015,
+          "shape_index": 8
+        }
+      ],
+      "geometry_payload_sha256": "2b9da2a08f644c9590943da7a2ffa3df0ea136f1503ea9dfe088c35355249941",
+      "model": "Same+10%income gives Q-5/+5/+20 for Ei-0.5/+0.5/+2; existing book labels inferior/normal/luxury and unlabeled0/1 boundaries preserved."
+    },
+    {
+      "page": 56,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/_assets/theory-20260921/page-056.json",
+      "sha256": "56ce70eb44712fe5ef35d480b0f718b78c596eb789f89d1960b018fc69194f59",
+      "checks": [
+        {
+          "kind": "live_text_model",
+          "description": "Cross-price causal direction",
+          "pass": true,
+          "required": [
+            "Prijs van Z verandert",
+            "bus of printer",
+            "Vraag naar X reageert",
+            "treinritten of inkt"
+          ],
+          "model": "Price-good Z is denominator; demand-good X numerator. Bus/train substitute; printer/associated ink complement.",
+          "actual": "Prijs van Z verandert bus of printer → Vraag naar X reageert treinritten of inkt"
+        }
+      ],
+      "geometry_payload_sha256": "facb464f553e775e75d6ebaf14409bc382f03b091fa911e45b77e46e1e7a95d8"
+    },
+    {
+      "page": 57,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H2/_assets/theory-20260921/page-057.json",
+      "sha256": "9c7f40d3c6284d7926cdc3a6915d130755ebcdb1081e6eada6fcafbf222a2692",
+      "checks": [
+        {
+          "kind": "live_text_model",
+          "description": "Function substitution terms",
+          "pass": true,
+          "required": [
+            "−5 × 10 = −50",
+            "+2 × 15 = +30",
+            "+0,01 × 20.000",
+            "= +200"
+          ],
+          "model": "Qx=200-5Px+2Pz+0.01Y; base10,15,20000 ->380; coefficient not elasticity; Y remains annual",
+          "actual": "2 Reken eerst de vermenigvuldigingen uit Eigen prijs −5 × 10 = −50 Hogere Px → lagere Qx. Prijs van Z +2 × 15 = +30 Hogere Pz → hogere Qx. Inkomen +0,01 × 20.000 = +200 Hoger Y → hogere Qx."
+        }
+      ],
+      "geometry_payload_sha256": "7b5c5aae4233c65622a048f538fa92ef036d3ef836dd37bdd0fe91b0871d7b44"
+    },
+    {
+      "page": 74,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-074.json",
+      "sha256": "8c559c524ad56291addd81ebcafba05256d00e5b9757f3f423a89174d7574731",
+      "checks": [
+        {
+          "kind": "numeric_geometry",
+          "description": "Segment boundary euro0",
+          "pass": true,
+          "actual": 0.0,
+          "expected": 0,
+          "tolerance": 0.015,
+          "shape_index": 2
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Segment boundary euro20",
+          "pass": true,
+          "actual": 19.999794056077093,
+          "expected": 20,
+          "tolerance": 0.015,
+          "shape_index": 3
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Segment boundary euro30",
+          "pass": true,
+          "actual": 30.0,
+          "expected": 30,
+          "tolerance": 0.015,
+          "shape_index": 4
+        }
+      ],
+      "geometry_payload_sha256": "b76a1c94c8bbe9784f22ff42e56bcda01661910a81c47edaa9341cda8b82e3d7",
+      "model": "Willingness30=price20+CS10"
+    },
+    {
+      "page": 75,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-075.json",
+      "sha256": "03d3c273395e50cd049b5ae42db9be6065507dceae04353349fa3a2daaea0170",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "Demand equation",
+          "pass": true,
+          "shape_index": 12,
+          "vertices_checked": 2,
+          "max_data_residual": 5.272379013376849e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              6.098647451901597e-06,
+              30.000002223055287
+            ],
+            [
+              59.999993901352546,
+              4.446110597265675e-06
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Price line",
+          "pass": true,
+          "shape_index": 13,
+          "vertices_checked": 2,
+          "max_data_residual": 0.0006409809424212654,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              6.098647451901597e-06,
+              10.000640980942421
+            ],
+            [
+              59.999993901352546,
+              10.000640980942421
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "CS400",
+          "pass": true,
+          "shape_index": 11,
+          "actual_vertices": [
+            [
+              6.098647451901597e-06,
+              10.000640980942421
+            ],
+            [
+              6.098647451901597e-06,
+              30.000002223055287
+            ],
+            [
+              39.99955581517723,
+              10.000640980942421
+            ],
+            [
+              6.098647451901597e-06,
+              10.000640980942421
+            ]
+          ],
+          "expected_vertices": [
+            [
+              0,
+              10
+            ],
+            [
+              0,
+              30
+            ],
+            [
+              40,
+              10
+            ]
+          ],
+          "max_coordinate_error": 0.0006409809424212654,
+          "tolerance": 0.015,
+          "area": 399.98272215136615,
+          "expected_area": 400.0
+        }
+      ],
+      "geometry_payload_sha256": "4cc64cc7ea024b8c617f655779584977dbda736c5aca439983c0f634ce643477",
+      "calibration": {
+        "plot_x0": 100.00226,
+        "plot_x_at_max": 493.53214,
+        "q_max": 60,
+        "plot_y0": 556.83112,
+        "plot_y_at_max": 421.88171,
+        "value_max": 30,
+        "basis": "labeled axes/grid inspected at full size"
+      },
+      "model": "V=30-0.5Q; P10; Q40; CS400"
+    },
+    {
+      "page": 76,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-076.json",
+      "sha256": "b16d5c3f06ee48732bf985f8a09efc51a9e670086b4153dd69a76ca6b27d2359",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "Demand equation",
+          "pass": true,
+          "shape_index": 9,
+          "vertices_checked": 2,
+          "max_data_residual": 6.781004718766893e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              -8.383785325889169e-06,
+              30.000010134518853
+            ],
+            [
+              59.99999329297174,
+              1.0134518850043718e-05
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Price line",
+          "pass": true,
+          "shape_index": 10,
+          "vertices_checked": 2,
+          "max_data_residual": 0.0007415089622924143,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              -8.383785325889169e-06,
+              9.999258491037708
+            ],
+            [
+              59.99999329297174,
+              9.999258491037708
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "CS400",
+          "pass": true,
+          "shape_index": 8,
+          "actual_vertices": [
+            [
+              -8.383785325889169e-06,
+              9.999258491037708
+            ],
+            [
+              -8.383785325889169e-06,
+              30.000010134518853
+            ],
+            [
+              40.00000391243315,
+              9.999258491037708
+            ],
+            [
+              -8.383785325889169e-06,
+              9.999258491037708
+            ]
+          ],
+          "expected_vertices": [
+            [
+              0,
+              10
+            ],
+            [
+              0,
+              30
+            ],
+            [
+              40,
+              10
+            ]
+          ],
+          "max_coordinate_error": 0.0007415089622924143,
+          "tolerance": 0.015,
+          "area": 400.0151558364289,
+          "expected_area": 400.0
+        }
+      ],
+      "geometry_payload_sha256": "b7090f14f28c5988e6503d3d7513d8c2be0daf789ab80be557aedf513ca0bede",
+      "calibration": {
+        "plot_x0": 135.69855,
+        "plot_x_at_max": 493.53214,
+        "q_max": 60,
+        "plot_y0": 488.52094,
+        "plot_y_at_max": 370.11374,
+        "value_max": 30,
+        "basis": "labeled axes/grid inspected at full size"
+      },
+      "model": "V=30-0.5Q; P10; Q40; CS400"
+    },
+    {
+      "page": 77,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-077.json",
+      "sha256": "d24f4e5ecfc9df3192855dda710d5bc3a642ac0165d17c6b91ec3def4cea3f75",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "Demand equation",
+          "pass": true,
+          "shape_index": 11,
+          "vertices_checked": 2,
+          "max_data_residual": 6.394574008083964e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              8.131529935868795e-06,
+              20.000004361691524
+            ],
+            [
+              79.99999186847006,
+              5.815588693630953e-06
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Price line",
+          "pass": true,
+          "shape_index": 12,
+          "vertices_checked": 2,
+          "max_data_residual": 2.1808457688621274e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              8.131529935868795e-06,
+              9.999997819154231
+            ],
+            [
+              79.99999186847006,
+              9.999997819154231
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "CS200",
+          "pass": true,
+          "shape_index": 10,
+          "actual_vertices": [
+            [
+              8.131529935868795e-06,
+              9.999997819154231
+            ],
+            [
+              8.131529935868795e-06,
+              20.000004361691524
+            ],
+            [
+              39.99999999999999,
+              9.999997819154231
+            ],
+            [
+              8.131529935868795e-06,
+              9.999997819154231
+            ]
+          ],
+          "expected_vertices": [
+            [
+              0,
+              10
+            ],
+            [
+              0,
+              20
+            ],
+            [
+              40,
+              10
+            ]
+          ],
+          "max_coordinate_error": 8.131529935868795e-06,
+          "tolerance": 0.015,
+          "area": 200.00009019306958,
+          "expected_area": 200.0
+        }
+      ],
+      "geometry_payload_sha256": "aaff2da5e64f1e27cb70339c66e94f2f2936fe77b2e30d61ff89c27f4cc4c272",
+      "calibration": {
+        "plot_x0": 100.00226,
+        "plot_x_at_max": 493.53214,
+        "q_max": 80,
+        "plot_y0": 433.10504,
+        "plot_y_at_max": 295.54373,
+        "value_max": 20,
+        "basis": "labeled axes/grid inspected at full size"
+      },
+      "model": "V=20-0.25Q; P10; Q40; CS200"
+    },
+    {
+      "page": 82,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-082.json",
+      "sha256": "ec000250e660abcb2c50ab3fbbb5b26880a8f48f8bd0ea88af2d37623a99c49b",
+      "checks": [
+        {
+          "kind": "numeric_geometry",
+          "description": "Segment boundary euro0",
+          "pass": true,
+          "actual": 0.0,
+          "expected": 0,
+          "tolerance": 0.015,
+          "shape_index": 3
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Segment boundary euro20",
+          "pass": true,
+          "actual": 20.000000470728967,
+          "expected": 20,
+          "tolerance": 0.015,
+          "shape_index": 4
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Segment boundary euro35",
+          "pass": true,
+          "actual": 35.000003765831735,
+          "expected": 35,
+          "tolerance": 0.015,
+          "shape_index": 5
+        },
+        {
+          "kind": "numeric_geometry",
+          "description": "Segment boundary euro50",
+          "pass": true,
+          "actual": 50.0,
+          "expected": 50,
+          "tolerance": 0.015,
+          "shape_index": 6
+        }
+      ],
+      "geometry_payload_sha256": "fefd7313ffb2d5cf63c1217c79f32611bbfabc9b13515bf452197147d9531bcb",
+      "model": "Willingness50=MK20+PS15+CS15; price35 distributes gain, PS not profit."
+    },
+    {
+      "page": 83,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-083.json",
+      "sha256": "6a7edbef79b2f480ad18118d6ad4ada5b32509f2d0e524e54e506e811819b03c",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "Demand equation",
+          "pass": true,
+          "shape_index": 11,
+          "vertices_checked": 2,
+          "max_data_residual": 1.2419063841710495e-05,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              39.9999860778352
+            ],
+            [
+              39.99999593423503,
+              -8.353298872569367e-06
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Supply=MK equation within stated domain",
+          "pass": true,
+          "shape_index": 12,
+          "vertices_checked": 2,
+          "max_data_residual": 3.425098963560913e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              10.00000417664944
+            ],
+            [
+              39.99999593423503,
+              30.00000139221648
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Price line",
+          "pass": true,
+          "shape_index": 13,
+          "vertices_checked": 2,
+          "max_data_residual": 1.1137731831922792e-05,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              19.999988862268168
+            ],
+            [
+              39.99999593423503,
+              19.999988862268168
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "PS100",
+          "pass": true,
+          "shape_index": 10,
+          "actual_vertices": [
+            [
+              4.065764967934397e-06,
+              19.999988862268168
+            ],
+            [
+              4.065764967934397e-06,
+              10.00000417664944
+            ],
+            [
+              19.999999999999996,
+              19.999988862268168
+            ],
+            [
+              4.065764967934397e-06,
+              19.999988862268168
+            ]
+          ],
+          "expected_vertices": [
+            [
+              0,
+              20
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              20,
+              20
+            ]
+          ],
+          "max_coordinate_error": 1.1137731831922792e-05,
+          "tolerance": 0.015,
+          "area": 99.99982652739355,
+          "expected_area": 100.0
+        }
+      ],
+      "geometry_payload_sha256": "05842da7a96187376cad3602d0df9ff86298115bb587a8ab80112c82d747d488",
+      "calibration": {
+        "plot_x0": 100.00226,
+        "plot_x_at_max": 493.53214,
+        "q_max": 40,
+        "plot_y0": 468.42657,
+        "plot_y_at_max": 324.77075,
+        "value_max": 40,
+        "basis": "labeled axes/grid inspected at full size"
+      },
+      "model": "V=40-Q; A=MK=10+0.5Q; freeQ20/P20/CS200/PS100/TS300; limitQ12/P22 => CS144,PS108,TS252,DWL48"
+    },
+    {
+      "page": 84,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-084.json",
+      "sha256": "481b0a325eccef3c5e0ccfed1023e82d622c1cc7679a4e46f5c53e4618964c77",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "Demand equation",
+          "pass": true,
+          "shape_index": 12,
+          "vertices_checked": 2,
+          "max_data_residual": 1.7883252702688424e-05,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              40.00001381748773
+            ],
+            [
+              39.99999593423503,
+              1.0363115818594733e-05
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Supply=MK equation within stated domain",
+          "pass": true,
+          "shape_index": 13,
+          "vertices_checked": 2,
+          "max_data_residual": 1.092101226873865e-05,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              10.000002590778944
+            ],
+            [
+              39.99999593423503,
+              29.999987046105247
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Price line",
+          "pass": true,
+          "shape_index": 14,
+          "vertices_checked": 2,
+          "max_data_residual": 5.1815579098501985e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              19.99999481844209
+            ],
+            [
+              39.99999593423503,
+              19.99999481844209
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "CS200",
+          "pass": true,
+          "shape_index": 10,
+          "actual_vertices": [
+            [
+              4.065764967934397e-06,
+              19.99999481844209
+            ],
+            [
+              4.065764967934397e-06,
+              40.00001381748773
+            ],
+            [
+              19.999999999999996,
+              19.99999481844209
+            ],
+            [
+              4.065764967934397e-06,
+              19.99999481844209
+            ]
+          ],
+          "expected_vertices": [
+            [
+              0,
+              20
+            ],
+            [
+              0,
+              40
+            ],
+            [
+              20,
+              20
+            ]
+          ],
+          "max_coordinate_error": 1.3817487733547296e-05,
+          "tolerance": 0.015,
+          "area": 200.00014933276807,
+          "expected_area": 200.0
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "PS100",
+          "pass": true,
+          "shape_index": 11,
+          "actual_vertices": [
+            [
+              4.065764967934397e-06,
+              19.99999481844209
+            ],
+            [
+              4.065764967934397e-06,
+              10.000002590778944
+            ],
+            [
+              19.999999999999996,
+              19.99999481844209
+            ],
+            [
+              4.065764967934397e-06,
+              19.99999481844209
+            ]
+          ],
+          "expected_vertices": [
+            [
+              0,
+              20
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              20,
+              20
+            ]
+          ],
+          "max_coordinate_error": 5.1815579098501985e-06,
+          "tolerance": 0.015,
+          "area": 99.99990194782241,
+          "expected_area": 100.0
+        }
+      ],
+      "geometry_payload_sha256": "b253d848fee475fc4479c7124197fdac97b8e04f41e3a0046d032d1523b4a71c",
+      "calibration": {
+        "plot_x0": 100.00226,
+        "plot_x_at_max": 493.53214,
+        "q_max": 40,
+        "plot_y0": 340.34003,
+        "plot_y_at_max": 224.54474,
+        "value_max": 40,
+        "basis": "labeled axes/grid inspected at full size"
+      },
+      "model": "V=40-Q; A=MK=10+0.5Q; freeQ20/P20/CS200/PS100/TS300; limitQ12/P22 => CS144,PS108,TS252,DWL48"
+    },
+    {
+      "page": 85,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-085.json",
+      "sha256": "c12409b52c9a02a46cb0e60ae087211145d89cc7b5e8613dda1963ce929134df",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "Demand equation",
+          "pass": true,
+          "shape_index": 14,
+          "vertices_checked": 2,
+          "max_data_residual": 0.0007805716954365494,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              24.00000723941553
+            ],
+            [
+              39.99999593423503,
+              3.999221461187048
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Supply=MK equation within stated domain",
+          "pass": true,
+          "shape_index": 15,
+          "vertices_checked": 2,
+          "max_data_residual": 0.0007805716954356612,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              3.999221461187048
+            ],
+            [
+              39.99999593423503,
+              24.00000723941553
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Price line",
+          "pass": true,
+          "shape_index": 16,
+          "vertices_checked": 2,
+          "max_data_residual": 0.00040163674135662575,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              14.000401636741357
+            ],
+            [
+              39.99999593423503,
+              14.000401636741357
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "CS100",
+          "pass": true,
+          "shape_index": 12,
+          "actual_vertices": [
+            [
+              4.065764967934397e-06,
+              14.000401636741357
+            ],
+            [
+              4.065764967934397e-06,
+              24.00000723941553
+            ],
+            [
+              19.999999999999996,
+              14.000401636741357
+            ],
+            [
+              4.065764967934397e-06,
+              14.000401636741357
+            ]
+          ],
+          "expected_vertices": [
+            [
+              0,
+              14
+            ],
+            [
+              0,
+              24
+            ],
+            [
+              20,
+              14
+            ]
+          ],
+          "max_coordinate_error": 0.00040163674135662575,
+          "tolerance": 0.015,
+          "area": 99.99603569871867,
+          "expected_area": 100.0
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "PS100",
+          "pass": true,
+          "shape_index": 13,
+          "actual_vertices": [
+            [
+              4.065764967934397e-06,
+              14.000401636741357
+            ],
+            [
+              4.065764967934397e-06,
+              3.999221461187048
+            ],
+            [
+              19.999999999999996,
+              14.000401636741357
+            ],
+            [
+              4.065764967934397e-06,
+              14.000401636741357
+            ]
+          ],
+          "expected_vertices": [
+            [
+              0,
+              14
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              20,
+              14
+            ]
+          ],
+          "max_coordinate_error": 0.0007785388129519788,
+          "tolerance": 0.015,
+          "area": 100.01178142431904,
+          "expected_area": 100.0
+        }
+      ],
+      "geometry_payload_sha256": "2c56433393e4e32b4a154b6de008e2b196b178fe6b2eb93350a2b6c8268f5d65",
+      "calibration": {
+        "plot_x0": 100.00226,
+        "plot_x_at_max": 493.53214,
+        "q_max": 40,
+        "plot_y0": 512.98553,
+        "plot_y_at_max": 380.37814,
+        "value_max": 24,
+        "basis": "labeled axes/grid inspected at full size"
+      },
+      "model": "V=24-0.5Q; A=MK=4+0.5Q; freeQ20/P14; CS100+PS100=TS200"
+    },
+    {
+      "page": 92,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-092.json",
+      "sha256": "5cecd1853c81eba2fd21eb63931f3a391acbc03457d9e936bab422541a064d1d",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "Demand equation",
+          "pass": true,
+          "shape_index": 10,
+          "vertices_checked": 2,
+          "max_data_residual": 1.3077200414994232e-05,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              40.000006857186165
+            ],
+            [
+              39.99999593423503,
+              1.714296538413536e-05
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Supply=MK equation within stated domain",
+          "pass": true,
+          "shape_index": 11,
+          "vertices_checked": 2,
+          "max_data_residual": 1.3175809987941989e-05,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              9.999988857072497
+            ],
+            [
+              39.99999593423503,
+              30.000000857148258
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Price line",
+          "pass": true,
+          "shape_index": 12,
+          "vertices_checked": 2,
+          "max_data_residual": 3.942882042196061e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              21.999996057117958
+            ],
+            [
+              39.99999593423503,
+              21.999996057117958
+            ]
+          ]
+        }
+      ],
+      "geometry_payload_sha256": "988e401cac9746833a2179e7241dbe4a23e3da87b9b1da794d033481362b33cb",
+      "calibration": {
+        "plot_x0": 100.00226,
+        "plot_x_at_max": 493.53214,
+        "q_max": 40,
+        "plot_y0": 516.56165,
+        "plot_y_at_max": 399.89572,
+        "value_max": 40,
+        "basis": "labeled axes/grid inspected at full size"
+      },
+      "model": "V=40-Q; A=MK=10+0.5Q; freeQ20/P20/CS200/PS100/TS300; limitQ12/P22 => CS144,PS108,TS252,DWL48"
+    },
+    {
+      "page": 93,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-093.json",
+      "sha256": "8b15136120fe2c7a3b3a4a20f25735d08a2b5ceb754041c74e189bada959cd86",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "Demand equation",
+          "pass": true,
+          "shape_index": 12,
+          "vertices_checked": 2,
+          "max_data_residual": 9.567937986787456e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              40.00000550217302
+            ],
+            [
+              39.99999593423503,
+              5.502173016201361e-06
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Supply=MK equation within stated domain",
+          "pass": true,
+          "shape_index": 13,
+          "vertices_checked": 2,
+          "max_data_residual": 1.034700679092282e-05,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              10.000012379889275
+            ],
+            [
+              39.99999593423503,
+              29.999998624456737
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Price line",
+          "pass": true,
+          "shape_index": 14,
+          "vertices_checked": 2,
+          "max_data_residual": 4.126629754352962e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              22.000004126629754
+            ],
+            [
+              39.99999593423503,
+              22.000004126629754
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "CS144 rectangle+triangle",
+          "pass": true,
+          "shape_index": 10,
+          "actual_vertices": [
+            [
+              4.065764967934397e-06,
+              22.000004126629754
+            ],
+            [
+              4.065764967934397e-06,
+              40.00000550217302
+            ],
+            [
+              11.999997560541019,
+              28.000013755432537
+            ],
+            [
+              11.999997560541019,
+              22.000004126629754
+            ],
+            [
+              4.065764967934397e-06,
+              22.000004126629754
+            ]
+          ],
+          "expected_vertices": [
+            [
+              0,
+              22
+            ],
+            [
+              0,
+              40
+            ],
+            [
+              12,
+              28
+            ],
+            [
+              12,
+              22
+            ]
+          ],
+          "max_coordinate_error": 1.3755432537010392e-05,
+          "tolerance": 0.015,
+          "area": 143.99998796335305,
+          "expected_area": 144.0
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "PS108 rectangle+triangle",
+          "pass": true,
+          "shape_index": 11,
+          "actual_vertices": [
+            [
+              4.065764967934397e-06,
+              22.000004126629754
+            ],
+            [
+              4.065764967934397e-06,
+              10.000012379889275
+            ],
+            [
+              11.999997560541019,
+              15.999994497826984
+            ],
+            [
+              11.999997560541019,
+              22.000004126629754
+            ],
+            [
+              4.065764967934397e-06,
+              22.000004126629754
+            ]
+          ],
+          "expected_vertices": [
+            [
+              0,
+              22
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              12,
+              16
+            ],
+            [
+              12,
+              22
+            ]
+          ],
+          "max_coordinate_error": 1.2379889275493383e-05,
+          "tolerance": 0.015,
+          "area": 107.99994970623949,
+          "expected_area": 108.0
+        }
+      ],
+      "geometry_payload_sha256": "d5cf42f760d406dec7772c0990e32de62ae77da470b69fc77b0291972d0445fd",
+      "calibration": {
+        "plot_x0": 100.00226,
+        "plot_x_at_max": 493.53214,
+        "q_max": 40,
+        "plot_y0": 312.28882,
+        "plot_y_at_max": 166.89172,
+        "value_max": 40,
+        "basis": "labeled axes/grid inspected at full size"
+      },
+      "model": "V=40-Q; A=MK=10+0.5Q; freeQ20/P20/CS200/PS100/TS300; limitQ12/P22 => CS144,PS108,TS252,DWL48"
+    },
+    {
+      "page": 94,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-094.json",
+      "sha256": "2555a9e10f7e66d7178b766d40c3f1f307169a826b1af4cba95269ab4904306f",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "Demand equation",
+          "pass": true,
+          "shape_index": 16,
+          "vertices_checked": 2,
+          "max_data_residual": 1.3133492295480664e-05,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              40.000009067727326
+            ],
+            [
+              39.99999593423503,
+              -3.022575779101654e-06
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Supply=MK equation within stated domain",
+          "pass": true,
+          "shape_index": 17,
+          "vertices_checked": 2,
+          "max_data_residual": 5.523556938058505e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              10.000007556439423
+            ],
+            [
+              39.99999593423503,
+              29.99999848871212
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Price line",
+          "pass": true,
+          "shape_index": 18,
+          "vertices_checked": 2,
+          "max_data_residual": 3.9293485087910085e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              4.065764967934397e-06,
+              21.99999607065149
+            ],
+            [
+              39.99999593423503,
+              21.99999607065149
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "DWL48",
+          "pass": true,
+          "shape_index": 14,
+          "actual_vertices": [
+            [
+              11.999997560541019,
+              27.999990327757548
+            ],
+            [
+              19.999999999999996,
+              19.999987909696916
+            ],
+            [
+              11.999997560541019,
+              16.000001813545456
+            ],
+            [
+              11.999997560541019,
+              27.999990327757548
+            ]
+          ],
+          "expected_vertices": [
+            [
+              12,
+              28
+            ],
+            [
+              20,
+              20
+            ],
+            [
+              12,
+              16
+            ]
+          ],
+          "max_coordinate_error": 1.209030308402248e-05,
+          "tolerance": 0.015,
+          "area": 47.9999686935882,
+          "expected_area": 48.0
+        }
+      ],
+      "geometry_payload_sha256": "b9ff3661b583767a9ce69fbb3fee62e0facc7fbdc87fb435b8410763024b5399",
+      "calibration": {
+        "plot_x0": 100.00226,
+        "plot_x_at_max": 493.53214,
+        "q_max": 40,
+        "plot_y0": 457.65619,
+        "plot_y_at_max": 325.31873,
+        "value_max": 40,
+        "basis": "labeled axes/grid inspected at full size"
+      },
+      "model": "V=40-Q; A=MK=10+0.5Q; freeQ20/P20/CS200/PS100/TS300; limitQ12/P22 => CS144,PS108,TS252,DWL48"
+    },
+    {
+      "page": 95,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-095.json",
+      "sha256": "3136a9644947161d96f4a10b191cf3bf1574c6715e7d98ad7a813bc244348b25",
+      "checks": [
+        {
+          "kind": "live_text_model",
+          "description": "Feasible Pareto improvement with unchanged existing transactions",
+          "pass": true,
+          "required": [
+            "27 − 22 = € 5",
+            "22 − 16,50 = € 5,50",
+            "Nieuwe koper",
+            "Nieuwe verkoper"
+          ],
+          "model": "13th poster willingness27,MK16.50,price22 => gains5and5.50. Surrounding source explicitly keeps existing12 transactions fixed, permits costless feasible expansion and no effects on others.",
+          "actual": "Nieuwe koper 27 − 22 = € 5 Voordeel: betaalt minder dan zijn betalingsbereidheid. Nieuwe verkoper 22 − 16,50 = € 5,50 Voordeel: ontvangt meer dan de marginale kosten."
+        }
+      ],
+      "geometry_payload_sha256": "60a8247018a9308b1d537d8d1f1576cff3b5f68ebec6ea2c9803142fadea61f3"
+    },
+    {
+      "page": 96,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-096.json",
+      "sha256": "a148fd7f61c2fd227bcd9bdca24e8f11819a237f80bdf85a58f01bcee2527261",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "Demand equation",
+          "pass": true,
+          "shape_index": 13,
+          "vertices_checked": 2,
+          "max_data_residual": 7.159645537768711e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              2.4394589807606385e-06,
+              30.000004720186556
+            ],
+            [
+              23.99999756054102,
+              6.0000037761492395
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Supply=MK equation within stated domain",
+          "pass": true,
+          "shape_index": 14,
+          "vertices_checked": 2,
+          "max_data_residual": 7.159645537768711e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              2.4394589807606385e-06,
+              6.0000037761492395
+            ],
+            [
+              23.99999756054102,
+              30.000004720186556
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Price line",
+          "pass": true,
+          "shape_index": 15,
+          "vertices_checked": 2,
+          "max_data_residual": 0.0006781334683090279,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              2.4394589807606385e-06,
+              19.99932186653169
+            ],
+            [
+              23.99999756054102,
+              19.99932186653169
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "CS48 rectangle+triangle",
+          "pass": true,
+          "shape_index": 11,
+          "actual_vertices": [
+            [
+              2.4394589807606385e-06,
+              19.99932186653169
+            ],
+            [
+              2.4394589807606385e-06,
+              30.000004720186556
+            ],
+            [
+              8.000177673929105,
+              22.000680965580244
+            ],
+            [
+              8.000177673929105,
+              19.99932186653169
+            ],
+            [
+              2.4394589807606385e-06,
+              19.99932186653169
+            ]
+          ],
+          "expected_vertices": [
+            [
+              0,
+              20
+            ],
+            [
+              0,
+              30
+            ],
+            [
+              8,
+              22
+            ],
+            [
+              8,
+              20
+            ]
+          ],
+          "max_coordinate_error": 0.0006809655802442194,
+          "tolerance": 0.015,
+          "area": 48.00921939654467,
+          "expected_area": 48.0
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "PS80 rectangle+triangle",
+          "pass": true,
+          "shape_index": 12,
+          "actual_vertices": [
+            [
+              2.4394589807606385e-06,
+              19.99932186653169
+            ],
+            [
+              2.4394589807606385e-06,
+              6.0000037761492395
+            ],
+            [
+              8.000177673929105,
+              13.999303929822783
+            ],
+            [
+              8.000177673929105,
+              19.99932186653169
+            ],
+            [
+              2.4394589807606385e-06,
+              19.99932186653169
+            ]
+          ],
+          "expected_vertices": [
+            [
+              0,
+              20
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              8,
+              14
+            ],
+            [
+              8,
+              20
+            ]
+          ],
+          "max_coordinate_error": 0.0006960701772165123,
+          "tolerance": 0.015,
+          "area": 79.99909639489121,
+          "expected_area": 80.0
+        }
+      ],
+      "geometry_payload_sha256": "935313f9d2bc2d9c81610546218a59079a4299c86e23fc80b36ac0c033278ed8",
+      "calibration": {
+        "plot_x0": 100.00226,
+        "plot_x_at_max": 493.53214,
+        "q_max": 24,
+        "plot_y0": 484.00534,
+        "plot_y_at_max": 356.89172,
+        "value_max": 30,
+        "basis": "labeled axes/grid inspected at full size"
+      },
+      "model": "V=30-Q; A=MK=6+Q; freeQ12/P18/TS144; limitQ8/P20 => CS48,PS80,TS128,DWL16"
+    },
+    {
+      "page": 97,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-097.json",
+      "sha256": "333dd638f05b2229dc42cb31b10eb4546dbd0e637b2e1896e2372191dff22177",
+      "checks": [
+        {
+          "kind": "path_equation",
+          "description": "Demand equation",
+          "pass": true,
+          "shape_index": 13,
+          "vertices_checked": 2,
+          "max_data_residual": 1.2010948957197343e-05,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              2.4394589807606385e-06,
+              30.000009571489976
+            ],
+            [
+              23.99999756054102,
+              6.000000957149
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Supply=MK equation within stated domain",
+          "pass": true,
+          "shape_index": 14,
+          "vertices_checked": 2,
+          "max_data_residual": 1.2010948957197343e-05,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              2.4394589807606385e-06,
+              6.000000957149
+            ],
+            [
+              23.99999756054102,
+              30.000009571489976
+            ]
+          ]
+        },
+        {
+          "kind": "path_equation",
+          "description": "Price line",
+          "pass": true,
+          "shape_index": 15,
+          "vertices_checked": 2,
+          "max_data_residual": 3.988120827358443e-06,
+          "tolerance": 0.015,
+          "representative_data_points": [
+            [
+              2.4394589807606385e-06,
+              20.000003988120827
+            ],
+            [
+              23.99999756054102,
+              20.000003988120827
+            ]
+          ]
+        },
+        {
+          "kind": "polygon_geometry",
+          "description": "DWL16",
+          "pass": true,
+          "shape_index": 11,
+          "actual_vertices": [
+            [
+              8.000177673929105,
+              21.999990747559693
+            ],
+            [
+              11.999999999999998,
+              17.999993299957016
+            ],
+            [
+              8.000177673929105,
+              13.99999585235434
+            ],
+            [
+              8.000177673929105,
+              21.999990747559693
+            ]
+          ],
+          "expected_vertices": [
+            [
+              8,
+              22
+            ],
+            [
+              12,
+              18
+            ],
+            [
+              8,
+              14
+            ]
+          ],
+          "max_coordinate_error": 0.000177673929105282,
+          "tolerance": 0.015,
+          "area": 15.999279095147756,
+          "expected_area": 16.0
+        }
+      ],
+      "geometry_payload_sha256": "615a2e4864bdd5e04b534266b219493525457457ad30dfbe49cc921d973df24a",
+      "calibration": {
+        "plot_x0": 100.00226,
+        "plot_x_at_max": 493.53214,
+        "q_max": 24,
+        "plot_y0": 320.39307,
+        "plot_y_at_max": 195.02074,
+        "value_max": 30,
+        "basis": "labeled axes/grid inspected at full size"
+      },
+      "model": "V=30-Q; A=MK=6+Q; freeQ12/P18/TS144; limitQ8/P20 => CS48,PS80,TS128,DWL16"
+    },
+    {
+      "page": 109,
+      "source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H3/_assets/theory-20260921/page-109.json",
+      "sha256": "ec0b1fe3445f2515e974bae5cbbf6f40028391db8a4ce850fdefcf2e7beeac57",
+      "checks": [
+        {
+          "kind": "live_text_model",
+          "description": "Transaction-first surplus flow",
+          "pass": true,
+          "required": [
+            "1 · Hoeveelheid",
+            "2 · Gebieden",
+            "3 · Berekenen",
+            "4 · Uitleggen"
+          ],
+          "model": "Determine actual transactions/allocation -> select actual CS/PS areas -> rectangle/triangle amounts -> efficiency/Pareto limitations.",
+          "actual": "1 · Hoeveelheid Wie handelt echt? → 2 · Gebieden Waar ligt het voordeel? → 3 · Berekenen Welke delen tel je? → 4 · Uitleggen Wat volgt er wel?"
+        }
+      ],
+      "geometry_payload_sha256": "4fc99951f26d21822554ddbc0aeff050721d99c22d8aed9d121fad1131effc84"
+    }
+  ]
+}

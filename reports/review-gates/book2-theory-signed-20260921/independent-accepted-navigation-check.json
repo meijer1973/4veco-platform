@@ -1,0 +1,19 @@
+{
+  "accepted_navigation_record_sha256": "0854ca5dcd9627e20bbc0c4b90b107332cd7adecc5fcd15078bf7231e198e186",
+  "comparisons": [
+    {
+      "pdf": "Boek_2_Compleet.pdf",
+      "links": 77,
+      "all_source_pages_and_destinations_equal": true,
+      "max_rectangle_rounding_error_pt": 0.00045703124999363354,
+      "target_sha256": "113ab27a53320322234fe63f07c4530b9562d6de09bd491a8c2068b31785e53e"
+    },
+    {
+      "pdf": "Boek_2_Compleet_Antwoorden.pdf",
+      "links": 44,
+      "all_source_pages_and_destinations_equal": true,
+      "max_rectangle_rounding_error_pt": 0.00045703124999363354,
+      "target_sha256": "a319481ac1c24a52b760fd47dfca668cf14907eb647daf5dbc104d19c371f632"
+    }
+  ]
+}

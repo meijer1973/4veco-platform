@@ -531,6 +531,7 @@ function releasedPinHasExactSuccessor(hold, pin, holds, seen = new Set()) {
   if (!pin || seen.has(hold.id)) return false;
   const approved = hold.target_binding?.approved_replacement_sha256;
   if (pin.target_record_sha256 === approved) return true;
+  if (require('./book2-signed-authority').targetSuccessor(pin.id, approved, pin.target_record_sha256)) return true;
   seen.add(hold.id);
   const scope = `paragraph:${pin.id}`;
   const successors = holds.filter((next) => next.id !== hold.id

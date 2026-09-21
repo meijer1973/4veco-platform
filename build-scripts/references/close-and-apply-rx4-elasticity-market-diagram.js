@@ -612,6 +612,9 @@ No mutation or student-facing use was authorized for market/welfare duplicate ar
 }
 
 function main() {
+  const liveIds = new Set(readJson('references/machine/micro-teaching-units.json').map(unit => unit.id));
+  assert(!AUTHORIZED_ORDER.some(id => liveIds.has(id)),
+    'Historical RX.4 seeding already applied; use reviewed unit-update deltas for current revisions. No files written.');
   const specs = readJson(SPECS_PATH);
   assert(specs.sprint_id === 'RX.4', 'candidate specs must be RX.4');
 

@@ -1,0 +1,66 @@
+{
+  "lesson_commit": "f00a292d088e3bfed39f41bb4bf8a81963aa468f",
+  "clean_checkout_before_build": true,
+  "owner": "codex-root",
+  "command": "rebuild_book2_signed.py --lesson-root <separate-clean-worktree> --all",
+  "no_received_pdf_inputs": true,
+  "outputs": [
+    {
+      "file": "Boek_2_Compleet.pdf",
+      "pages": 110,
+      "text_pixels_identical": true,
+      "committed_sha256": "a2c8cf236645b343c03a52841e8ef26bbb9d1b0baa363e2355de9450405c0c32",
+      "clean_rebuild_sha256": "c230d4ec97b50033335c05288c2ec043874a95bc3cc10b643e3e9ce519298576"
+    },
+    {
+      "file": "Boek_2_Compleet_Antwoorden.pdf",
+      "pages": 57,
+      "text_pixels_identical": true,
+      "committed_sha256": "684de9a8a984a21a28ffb6ffb4bcb4b9325cc9f426b89d1c0a3903c1e2ffe9dc",
+      "clean_rebuild_sha256": "c601128ab57a50bc66e6ef08a7f1de1397b555893f850242793af0705b7f9f58"
+    },
+    {
+      "file": "Boek_2_Compleet_Docenteninformatie.pdf",
+      "pages": 19,
+      "text_pixels_identical": true,
+      "committed_sha256": "b0d9fa94e7bd4ef01482f53532d6eea20a9e681211ff2fc18e24cfe639c36fdf",
+      "clean_rebuild_sha256": "a35aa53c9afb65aca437808b6b450a0d3739e93f38b76f1b706c57e3326a3295"
+    }
+  ],
+  "verification": {
+    "revision": "book2-theory-signed-20260921",
+    "passed": true,
+    "bundles": [
+      {
+        "kind": "student",
+        "pages": 110,
+        "links": 77,
+        "bookmarks": 20
+      },
+      {
+        "kind": "answers",
+        "pages": 57,
+        "links": 44,
+        "bookmarks": 129
+      },
+      {
+        "kind": "teacher",
+        "pages": 19,
+        "links": 0,
+        "bookmarks": 64
+      }
+    ],
+    "identical_assembled_chapter_pages": 180,
+    "links_checked": 121,
+    "overview": {
+      "h2-overzicht": 72,
+      "h3-overzicht": 109
+    },
+    "cover_geometry": "PASS",
+    "paragraph_exports": {
+      "pages": 207,
+      "links": 20,
+      "text_pixels_navigation": "PASS"
+    }
+  }
+}

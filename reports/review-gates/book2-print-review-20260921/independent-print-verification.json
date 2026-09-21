@@ -1,0 +1,66 @@
+{
+  "revision": "book2-theory-signed-20260921",
+  "passed": true,
+  "bundles": [
+    {
+      "kind": "student",
+      "pages": 110,
+      "links": 77,
+      "bookmarks": 20,
+      "print": {
+        "printed_pages": [
+          1,
+          108
+        ],
+        "contents_references": 15,
+        "viewer_labels": "PASS"
+      }
+    },
+    {
+      "kind": "answers",
+      "pages": 57,
+      "links": 44,
+      "bookmarks": 129,
+      "print": {
+        "printed_pages": [
+          1,
+          55
+        ],
+        "contents_references": 3,
+        "viewer_labels": "PASS"
+      }
+    },
+    {
+      "kind": "teacher",
+      "pages": 19,
+      "links": 0,
+      "bookmarks": 64,
+      "print": {
+        "printed_pages": [
+          1,
+          17
+        ],
+        "contents_references": 3,
+        "viewer_labels": "PASS"
+      }
+    }
+  ],
+  "identical_assembled_chapter_pages": 180,
+  "links_checked": 121,
+  "overview": {
+    "h2-overzicht": 72,
+    "h3-overzicht": 109
+  },
+  "cover_geometry": "PASS",
+  "paragraph_exports": {
+    "pages": 207,
+    "links": 20,
+    "text_pixels_navigation": "PASS"
+  },
+  "theory_extract": {
+    "pages": 43,
+    "text_pixels_page_map": "PASS",
+    "path": "boek/Boek_2_Theorie_43_Herziene_Paginas.pdf",
+    "sha256": "692f95c0a816d93f1cdc1f2f203a8cbd8456b9d9f802eaf9ebdb51bb37ade396"
+  }
+}

@@ -351,6 +351,51 @@
         };
     };
 
+    // Canonical teaching convention: precision reference §15.1. Keep the
+    // unrounded signed quotient for classification, even when display rounds.
+    function classifyDemand(ev) {
+        if (!Number.isFinite(ev)) return 'niet gedefinieerd';
+        if (ev > 0) return 'geen gewone negatieve eigen-prijsindeling';
+        if (ev === 0) return 'volkomen inelastisch';
+        if (ev < -1) return 'elastisch';
+        if (ev === -1) return 'eenheidselastisch';
+        return 'inelastisch';
+    }
+
+    // Treat authored numeric inputs as their decimal values, including scientific
+    // notation. Exact cross-products identify the unitary boundary without a
+    // tolerance that could swallow a genuinely different elasticity.
+    function decimalFraction(value) {
+        var parts = String(value).split('e');
+        var decimal = parts[0].split('.');
+        var places = (decimal[1] || '').length - Number(parts[1] || 0);
+        var numerator = BigInt(decimal.join(''));
+        return places >= 0
+            ? { n: numerator, d: 10n ** BigInt(places) }
+            : { n: numerator * 10n ** BigInt(-places), d: 1n };
+    }
+
+    function exactRelativeChange(oldValue, newValue) {
+        var oldDecimal = decimalFraction(oldValue);
+        var newDecimal = decimalFraction(newValue);
+        return { n: newDecimal.n * oldDecimal.d - oldDecimal.n * newDecimal.d,
+            d: newDecimal.d * oldDecimal.n };
+    }
+
+    function measureDemand(pOld, qOld, pNew, qNew) {
+        if (![pOld, qOld, pNew, qNew].every(Number.isFinite) || pOld <= 0 || qOld <= 0) {
+            throw new RangeError('Oude prijs en hoeveelheid moeten positief zijn voor deze procentberekening.');
+        }
+        var priceChange = (pNew - pOld) / pOld * 100;
+        var quantityChange = (qNew - qOld) / qOld * 100;
+        var priceExact = exactRelativeChange(pOld, pNew);
+        var quantityExact = exactRelativeChange(qOld, qNew);
+        var unitary = priceExact.n !== 0n &&
+            quantityExact.n * priceExact.d === -priceExact.n * quantityExact.d;
+        return { priceChange: priceChange, quantityChange: quantityChange,
+            ev: priceChange === 0 ? NaN : unitary ? -1 : quantityChange / priceChange };
+    }
+
     GEN.A15 = function () {
         var P1 = pick([5, 8, 10, 12, 15, 20, 25, 40, 50]);
         var pctP = pick([5, 10, 20, 25, 50]);
@@ -363,15 +408,15 @@
         if (deltaQ % 1 !== 0) return GEN.A15();
         var Q2 = Q1 + deltaQ;
         if (Q2 <= 0) return GEN.A15();
-        var Ev = round2(pctQ / pctP);
-        var absEv = Math.abs(Ev);
-        var elastic = absEv > 1 ? 'elastisch' : absEv < 1 ? 'inelastisch' : 'eenheidselastisch';
+        var measured = measureDemand(P1, Q1, P2, Q2);
+        var Ev = round2(measured.ev);
+        var elastic = classifyDemand(measured.ev);
         var mcInterp = mcStep(
             'De Ev = ' + Ev + '. De vraag is\u2026',
             elastic,
             ['elastisch', 'inelastisch', 'eenheidselastisch', 'perfect elastisch'],
-            '|Ev| > 1 \u2192 elastisch, |Ev| < 1 \u2192 inelastisch, |Ev| = 1 \u2192 eenheidselastisch.',
-            '|Ev| = ' + absEv + (absEv > 1 ? ' > 1 \u2192 elastisch.' : absEv < 1 ? ' < 1 \u2192 inelastisch.' : ' = 1 \u2192 eenheidselastisch.')
+            'Behoud het teken: Ev < −1 is elastisch; −1 < Ev < 0 is inelastisch; Ev = −1 is eenheidselastisch; Ev = 0 is volkomen inelastisch.',
+            'Vergelijk de ongeronde Ev met −1 en 0: ' + elastic + '. Bij deze eigen-prijsreactie veranderen prijs en hoeveelheid in tegengestelde richting.'
         );
         // Error step: 3 attempts at %ΔQ, one uses wrong base value (P2 instead of Q1)
         var wrongPctQ = round2(((Q2 - Q1) / P2) * 100);
@@ -404,6 +449,11 @@
             ]
         };
     };
+
+    // Expose the actual A15 operations for boundary regression checks without
+    // adding interactive nodes or implementing the blocked RX.4 generators.
+    GEN.A15.classifyDemand = classifyDemand;
+    GEN.A15.measureDemand = measureDemand;
 
     GEN.A16 = function () {
         var Pb1 = pick([5, 8, 10, 15, 20, 25]);

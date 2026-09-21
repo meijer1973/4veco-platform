@@ -3,6 +3,8 @@ const fs = require('fs'), os = require('os'), path = require('path'), {execFileS
 const m = require('./migrate-books34-v3');
 const {lessonState, verifyLessonPackage} = require('./books34-v3-transition');
 const {verifyDelivery, manifestAt, safeFile} = require('./books34-v3-delivery');
+const base=require('../workflows/book2-signed-authority').ledger.baseline_platform_commit;
+const historicalV5=()=>execFileSync('git',['show',base+':'+m.V5],{cwd:m.ROOT});
 const {consumeTarget} = require('./target-source-consumer');
 let temp, platform, lessons, finalLessons, payload, record, manifest, restore;
 const git = (...args) => execFileSync('git', args, {cwd: platform, encoding: 'utf8'});
@@ -19,7 +21,7 @@ beforeAll(() => {
   fs.cpSync(path.join(m.ROOT, m.TRANSPORT), payload, {recursive: true});
   finalLessons = path.join(temp, 'final-lessons');
   fs.cpSync(payload, path.join(finalLessons, m.PACKAGE), {recursive: true});
-  fs.writeFileSync(path.join(finalLessons, 'course_blueprint_v5.md'), fs.readFileSync(path.join(m.ROOT, m.V5)));
+  fs.writeFileSync(path.join(finalLessons, 'course_blueprint_v5.md'), historicalV5());
   manifest = manifestAt(payload).manifest;
   record = JSON.parse(fs.readFileSync(path.join(m.ROOT, m.REGISTRY))).exercises.find(r => r.id === '4.3.2');
   git('init', '-q');
@@ -44,7 +46,7 @@ test('exact v2 lesson projection is explicit; v3 retrieval still has its complet
 });
 
 test('v3 lesson identity alone cannot excuse an absent package', () => {
-  change(path.join(lessons, 'course_blueprint_v5.md'), fs.readFileSync(path.join(m.ROOT, m.V5)));
+  change(path.join(lessons, 'course_blueprint_v5.md'), historicalV5());
   expect(() => lessonState(lessons)).toThrow(/requires the complete v3 package/);
 });
 
@@ -56,7 +58,7 @@ test('partial v3 data cannot be treated as legacy state', () => {
 });
 
 test('unknown blueprint fails instead of selecting transport as a fallback', () => {
-  change(path.join(lessons, 'course_blueprint_v5.md'), fs.readFileSync(path.join(m.ROOT, m.V5), 'utf8') + '\nAltered active identity\n');
+  change(path.join(lessons, 'course_blueprint_v5.md'), String(historicalV5()) + '\nAltered active identity\n');
   expect(() => lessonState(lessons)).toThrow(/Unknown or mixed/);
 });
 
