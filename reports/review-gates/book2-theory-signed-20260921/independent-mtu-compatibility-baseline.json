@@ -1,0 +1,110 @@
+{
+  "scope": "Independent diagnosis and bounded compatibility conditions; implementation review pending",
+  "registry_before": "6588a10086ecd1a0f08ac4ff3870469ad011c13970737b27d66f21f59e2dc1cd",
+  "registry_after": "a67185a7e2f8b3389dccf9ef9108036cd02f0bfe2c270fed0fba15552332aaf8",
+  "registry_unit_counts": [
+    257,
+    257
+  ],
+  "changed_units": [
+    {
+      "id": "A15",
+      "changed_fields": [
+        "procedure",
+        "pitfalls"
+      ],
+      "before_sha256": "eb64a4928068eb55059a08f189d54bc0e7eefdc845e8c957c37675f8e836274f",
+      "after_sha256": "2a93020e8315cb1cd5a7b972c441a062af4f32c50ac3e48df4d290ca8bfbda71"
+    },
+    {
+      "id": "A82",
+      "changed_fields": [
+        "procedure",
+        "pitfalls"
+      ],
+      "before_sha256": "e535212d838ff3806a0a339a984c8a3fb15df23775f4c072b6ecd51b9cb43f8c",
+      "after_sha256": "be0a30239abf28a1bdac8b395e31306c8eefdf0af446c7ea27bd01022230b05e"
+    },
+    {
+      "id": "A83",
+      "changed_fields": [
+        "procedure",
+        "pitfalls"
+      ],
+      "before_sha256": "cf1b4b412d4b38d93f48b8242a53cfb0dd8de0983c1c482ea4102aba82a9d732",
+      "after_sha256": "c08fff354683ee5c0cd826b6473a82d6f172265a3535904d477d01e35aac8360"
+    },
+    {
+      "id": "A84",
+      "changed_fields": [
+        "kern",
+        "procedure",
+        "pitfalls"
+      ],
+      "before_sha256": "42d257839c1e5cb83f5b3f61db05388631c90336b462c738044a9009b8827f18",
+      "after_sha256": "b1207c390004fe845d75ee6156ffacb62477c15182e44631e0d16e49ccf2610d"
+    }
+  ],
+  "affected_historical_bindings": [
+    {
+      "operation_id": "h7-ha23-2-q15-net-ratio-nivellering",
+      "id": "A15",
+      "role": "forbidden_over_trigger_guard",
+      "live_registry_sha256": "eb64a4928068eb55059a08f189d54bc0e7eefdc845e8c957c37675f8e836274f",
+      "semantic_snapshot": {
+        "id": "A15",
+        "name": "Prijselasticiteit van de vraag",
+        "kern": "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is.",
+        "mastery_target": "apply",
+        "procedure": [
+          "Noteer de oude en nieuwe waarden van P en Q.",
+          "Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.",
+          "Bereken Ev = %ΔQv / %ΔP.",
+          "Interpreteer: |Ev| > 1 = elastisch, |Ev| < 1 = inelastisch, |Ev| = 1 = unitair.",
+          "Controleer het teken: Ev is bij een normale vraag altijd negatief."
+        ]
+      }
+    },
+    {
+      "operation_id": "h7-vw24-1-q17-insurance-cost-benefit",
+      "id": "A15",
+      "role": "forbidden_over_trigger_guard",
+      "live_registry_sha256": "eb64a4928068eb55059a08f189d54bc0e7eefdc845e8c957c37675f8e836274f",
+      "semantic_snapshot": {
+        "id": "A15",
+        "name": "Prijselasticiteit van de vraag",
+        "kern": "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is.",
+        "mastery_target": "apply",
+        "procedure": [
+          "Noteer de oude en nieuwe waarden van P en Q.",
+          "Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.",
+          "Bereken Ev = %ΔQv / %ΔP.",
+          "Interpreteer: |Ev| > 1 = elastisch, |Ev| < 1 = inelastisch, |Ev| = 1 = unitair.",
+          "Controleer het teken: Ev is bij een normale vraag altijd negatief."
+        ]
+      }
+    }
+  ],
+  "historical_packets": [
+    {
+      "path": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.json",
+      "sha256": "c1576c18a23b3f99ab5a3bda1bd6f5a151939b20bd95650a97db1d8df016b533",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json",
+      "sha256": "d7c7d88f305a1aa175e3d9224519e5f05a1a4915db466a242b4201914008f45a",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json",
+      "sha256": "54641d6713d2aaf4618558a190eb547688d9fb0e6bf4b0fab3bb1d4861ceb874",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.json",
+      "sha256": "5744825148f8c5c98a971344259ca07c89d71b95dfd935f33f6688e462e93868",
+      "unchanged_from_base": true
+    }
+  ]
+}

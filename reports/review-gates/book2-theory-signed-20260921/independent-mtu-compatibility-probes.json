@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Historical registry still passes unchanged protected packet",
+    "expected": true,
+    "passed": true,
+    "failures": []
+  },
+  {
+    "name": "Actual gate rejects unrelated unit mutation",
+    "expected": false,
+    "passed": true,
+    "failures": [
+      "live MTU semantic binding drifted: h7-ha23-2-q15-net-ratio-nivellering A15",
+      "live MTU semantic binding drifted: h7-vw24-1-q17-insurance-cost-benefit A15",
+      "source hash mismatch: references/machine/micro-teaching-units.json"
+    ]
+  },
+  {
+    "name": "Actual gate rejects partial four-unit application",
+    "expected": false,
+    "passed": true,
+    "failures": [
+      "live MTU semantic binding drifted: h7-ha23-2-q15-net-ratio-nivellering A15",
+      "live MTU semantic binding drifted: h7-vw24-1-q17-insurance-cost-benefit A15",
+      "source hash mismatch: references/machine/micro-teaching-units.json"
+    ]
+  },
+  {
+    "name": "Actual gate rejects registry order drift",
+    "expected": false,
+    "passed": true,
+    "failures": [
+      "live MTU semantic binding drifted: h7-ha23-2-q15-net-ratio-nivellering A15",
+      "live MTU semantic binding drifted: h7-vw24-1-q17-insurance-cost-benefit A15",
+      "source hash mismatch: references/machine/micro-teaching-units.json"
+    ]
+  }
+]

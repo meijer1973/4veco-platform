@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-21T13:13:52.516Z
+Generated: 2026-09-21T13:37:33.877Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-theory-signed-20260921`
-Source commit: `37cc57bda5096b6b8cb455fe9cd27b20acacd3fe`
-Files indexed: 7643
+Source commit: `af0ecc14df4e4f029f5a34695b1367013b90155a`
+Files indexed: 7697
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -50,7 +50,7 @@ Count: 9
 
 ## engines
 
-Count: 89
+Count: 90
 
 - engines/adaptive-seam.js
 - engines/exit-ticket-engine.js
@@ -129,6 +129,7 @@ Count: 89
 - engines/tests/reasoning-engine.test.js
 - engines/tests/reasoning-ui.test.js
 - engines/tests/REFACTOR-NOTES.md
+- engines/tests/signed-elasticity.test.js
 - engines/tests/skill-map-engine.test.js
 - engines/tests/skill-map-route-ui.test.js
 - engines/tests/skilltree-data.test.js
@@ -144,16 +145,25 @@ Count: 89
 
 ## build scripts
 
-Count: 791
+Count: 809
 
 - build-scripts/archive/README.md
 - build-scripts/archive/roundtrip-pptx.py
+- build-scripts/books/assemble_book2_signed.py
 - build-scripts/books/book-manifests/assets/book-1-cover.png
 - build-scripts/books/book-manifests/book-1-print-1.3.4-gemengde-opgaven.md
 - build-scripts/books/book-manifests/book-1-voorwoord.md
 - build-scripts/books/book-manifests/book-1.json
 - build-scripts/books/book-toolchain.json
+- build-scripts/books/book2_native_checks.py
+- build-scripts/books/book2_native_theory.py
+- build-scripts/books/book2_signed_exports.py
 - build-scripts/books/BOOK2-CHAT.md
+- build-scripts/books/book2-signed-lesson-head.txt
+- build-scripts/books/book2-signed-revision-pin.json
+- build-scripts/books/book2-signed-revision.js
+- build-scripts/books/book2-signed-revision.test.js
+- build-scripts/books/BOOK2-SIGNED.md
 - build-scripts/books/books34_assemble.py
 - build-scripts/books/books34_outlines.py
 - build-scripts/books/books34_records.py
@@ -168,14 +178,20 @@ Count: 791
 - build-scripts/books/EXERCISE-ROUTES.md
 - build-scripts/books/lib_book.py
 - build-scripts/books/lib_book.test.js
+- build-scripts/books/project_book2_signed_authority.js
 - build-scripts/books/README.md
+- build-scripts/books/rebuild_book2_signed.py
 - build-scripts/books/rebuild_exercise_routes.py
+- build-scripts/books/record_book2_signed_revision.js
 - build-scripts/books/record_exercise_route_revision.js
 - build-scripts/books/requirements-book2-chat.txt
 - build-scripts/books/requirements-exercise-routes.txt
 - build-scripts/books/test_book2_chat.py
+- build-scripts/books/test_book2_native.py
 - build-scripts/books/test_lib_book.py
 - build-scripts/books/verify_book2_chat.py
+- build-scripts/books/verify_book2_figures.py
+- build-scripts/books/verify_book2_signed.py
 - build-scripts/books/verify_exercise_routes.py
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
@@ -544,6 +560,7 @@ Count: 791
 - build-scripts/references/check-rx3b-producer-graph-lane-review.js
 - build-scripts/references/check-rx4-elasticity-market-diagram-mutations.js
 - build-scripts/references/check-rx4-elasticity-market-diagram-review.js
+- build-scripts/references/check-rx4-signed.test.js
 - build-scripts/references/check-s9a-d04-cli-mutation.js
 - build-scripts/references/check-skill-operation-registry.js
 - build-scripts/references/check-skilltree-generator-readiness.js
@@ -878,6 +895,8 @@ Count: 791
 - build-scripts/workflows/book2-integration-decision.js
 - build-scripts/workflows/book2-integration-decision.test.js
 - build-scripts/workflows/book2-owner-decision.js
+- build-scripts/workflows/book2-signed-authority.js
+- build-scripts/workflows/book2-signed-authority.test.js
 - build-scripts/workflows/check-blueprint-pedagogical-boundaries.js
 - build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js
 - build-scripts/workflows/check-book-outline-currentness.js
@@ -971,7 +990,7 @@ Count: 26
 
 ## validators
 
-Count: 647
+Count: 648
 
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
@@ -1137,6 +1156,7 @@ Count: 647
 - build-scripts/references/check-rx3b-producer-graph-lane-review.js
 - build-scripts/references/check-rx4-elasticity-market-diagram-mutations.js
 - build-scripts/references/check-rx4-elasticity-market-diagram-review.js
+- build-scripts/references/check-rx4-signed.test.js
 - build-scripts/references/check-s9a-d04-cli-mutation.js
 - build-scripts/references/check-skill-operation-registry.js
 - build-scripts/references/check-skilltree-generator-readiness.js
@@ -1623,7 +1643,7 @@ Count: 647
 
 ## references
 
-Count: 1752
+Count: 1753
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/book-outlines/book-2-outline.md
@@ -1639,6 +1659,7 @@ Count: 1752
 - references/authored/book-outlines/migration-live-v5-to-v2.csv
 - references/authored/book-outlines/paragraph-migration-v2-to-v3.csv
 - references/authored/book-outlines/selected-paragraphs.csv
+- references/authored/book2-signed-20260921-authority.json
 - references/authored/course-target-exercises.json
 - references/authored/didactiek-principes.md
 - references/authored/economic_mathematical_precision_reference.md
@@ -3380,7 +3401,7 @@ Count: 1752
 
 ## reports
 
-Count: 4810
+Count: 4843
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4807,6 +4828,39 @@ Count: 4810
 - reports/review-gates/BLUEPRINT-V6-AUTHORITY-PROMOTION-1/review-packet.json
 - reports/review-gates/BOOK1-TEXTBOOK-RENEWAL-20260825/plan.md
 - reports/review-gates/BOOK1-TEXTBOOK-RENEWAL-20260825/rendered-proof.md
+- reports/review-gates/book2-theory-signed-20260921/accepted-navigation-comparison.json
+- reports/review-gates/book2-theory-signed-20260921/actual-native-edit-proof.json
+- reports/review-gates/book2-theory-signed-20260921/actual-native-edit-proof/evidence.json
+- reports/review-gates/book2-theory-signed-20260921/clean-native-rebuild.json
+- reports/review-gates/book2-theory-signed-20260921/companion-coverage.json
+- reports/review-gates/book2-theory-signed-20260921/coverage-and-semantics.json
+- reports/review-gates/book2-theory-signed-20260921/current-assembly-check.json
+- reports/review-gates/book2-theory-signed-20260921/current-figure-check.json
+- reports/review-gates/book2-theory-signed-20260921/elasticity-inventory-disposition.json
+- reports/review-gates/book2-theory-signed-20260921/independent-accepted-navigation-check.json
+- reports/review-gates/book2-theory-signed-20260921/independent-applied-reference-projection-check.json
+- reports/review-gates/book2-theory-signed-20260921/independent-authority-build-bindings.json
+- reports/review-gates/book2-theory-signed-20260921/independent-authority-build-review.md
+- reports/review-gates/book2-theory-signed-20260921/independent-build-failure-probes.json
+- reports/review-gates/book2-theory-signed-20260921/independent-cli-projection-addendum.md
+- reports/review-gates/book2-theory-signed-20260921/independent-companions/coverage.json
+- reports/review-gates/book2-theory-signed-20260921/independent-early-authority-audit.md
+- reports/review-gates/book2-theory-signed-20260921/independent-figure-geometry-current.json
+- reports/review-gates/book2-theory-signed-20260921/independent-figure-geometry-review.md
+- reports/review-gates/book2-theory-signed-20260921/independent-historical-test-addendum.json
+- reports/review-gates/book2-theory-signed-20260921/independent-native-content-review.md
+- reports/review-gates/book2-theory-signed-20260921/independent-native-current-bindings.json
+- reports/review-gates/book2-theory-signed-20260921/independent-native-current/coverage-and-semantics.json
+- reports/review-gates/book2-theory-signed-20260921/independent-native-source-preservation-current.json
+- reports/review-gates/book2-theory-signed-20260921/independent-owned-figure-verifier.json
+- reports/review-gates/book2-theory-signed-20260921/independent-reference-proposal-review.md
+- reports/review-gates/book2-theory-signed-20260921/independent-signed-verifier-current.json
+- reports/review-gates/book2-theory-signed-20260921/independent-signed-verifier-final.json
+- reports/review-gates/book2-theory-signed-20260921/independent-viewer-projection.json
+- reports/review-gates/book2-theory-signed-20260921/pair-matrix.json
+- reports/review-gates/book2-theory-signed-20260921/PORTABLE-LINEAGE.json
+- reports/review-gates/book2-theory-signed-20260921/README.md
+- reports/review-gates/book2-theory-signed-20260921/reference-proposals.json
 - reports/review-gates/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1/review-packet.json
 - reports/review-gates/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1/review-packet.json
 - reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json
@@ -8277,13 +8331,14 @@ Count: 33
 
 ## other
 
-Count: 157
+Count: 158
 
 - .gitattributes
 - .github/ci-python-requirements.txt
 - .github/workflows/authorized-bundle-integration.yml
 - .github/workflows/authorized-pr-integration.yml
 - .github/workflows/cross-repo-bundle-compatibility.yml
+- .github/workflows/paired-book2-signed-ci.yml
 - .github/workflows/paired-exercise-route-ci.yml
 - .github/workflows/paired-paragraph-ci.yml
 - .github/workflows/paragraph-renderer-tests.yml

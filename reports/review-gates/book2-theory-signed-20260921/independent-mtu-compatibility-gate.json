@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "failures": [],
+  "summary": {
+    "protected_operations_prepared": 7,
+    "negative_guards": 7,
+    "negative_mutations_executed": 7,
+    "negative_mutations_detected": 7,
+    "semantically_bound_operations": 7,
+    "reviewed_registry_successor": {
+      "before": "6588a10086ecd1a0f08ac4ff3870469ad011c13970737b27d66f21f59e2dc1cd",
+      "after": "a67185a7e2f8b3389dccf9ef9108036cd02f0bfe2c270fed0fba15552332aaf8",
+      "scope": "exact four-unit signed revision; A15 remains forbidden in both protected operations"
+    },
+    "historical_base_main_sha": "e5f89e730d65c4131d7dd09f805f0db94690e8e6",
+    "current_main_sha": "6298466b03fa5ddb38a72ceb157a4855494e45d8",
+    "route": "READY_FOR_HUMAN_REVIEW"
+  }
+}
