@@ -23,7 +23,9 @@ def source_paths(root):
         sources.update(folder.glob('*Docenten*.md'))
         sources.add(folder/'chapter-order.json')
         sources.update(p for p in (folder/'_assets').rglob('*') if p.is_file())
-    return sorted(sources)
+    # Windows Path ordering folds case; POSIX does not. The record must use one
+    # portable order while still validating every exact case-sensitive path.
+    return sorted(sources,key=lambda p:p.relative_to(root).as_posix().lower())
 
 def record_chapters(root):
     config=json.loads((root/'assembly.json').read_text(encoding='utf8'))
