@@ -226,8 +226,10 @@ function validateRenderedEvidence(record, operationId, failures) {
 }
 
 function pdfTextPage(relativePath, pageNumber) {
+  // The sealed transcript hashes were captured with CRLF on Windows. Select
+  // that exact convention on every host; do not rewrite the historical hashes.
   return execFileSync('pdftotext', [
-    '-f', String(pageNumber), '-l', String(pageNumber), '-layout', repoPath(relativePath), '-'
+    '-f', String(pageNumber), '-l', String(pageNumber), '-layout', '-eol', 'dos', repoPath(relativePath), '-'
   ], {
     cwd: ROOT,
     encoding: 'utf8',
