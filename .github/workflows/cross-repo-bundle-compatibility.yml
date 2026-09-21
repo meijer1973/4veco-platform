@@ -117,6 +117,30 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r .github/ci-python-requirements.txt
 
+      - name: Install Windows PDF text extraction tool
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          # Use the Windows Poppler distribution used by platform-ci, not the
+          # runner's incidental Git/MSYS pdftotext and its different stdout bytes.
+          $headers = @{
+            'User-Agent' = '4veco-bundle-ci'
+            'Accept' = 'application/vnd.github+json'
+            'Authorization' = "Bearer $env:GITHUB_TOKEN"
+          }
+          $release = Invoke-RestMethod -Headers $headers -Uri 'https://api.github.com/repos/oschwartz10612/poppler-windows/releases/tags/v26.09.0-0'
+          $asset = $release.assets | Where-Object { $_.name -match '^Release-.*\.zip$' } | Select-Object -First 1
+          if (-not $asset) { throw 'No Windows Poppler release zip found' }
+          $popplerRoot = Join-Path $env:RUNNER_TEMP 'bundle-poppler'
+          $popplerZip = Join-Path $env:RUNNER_TEMP $asset.name
+          Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $popplerZip
+          Expand-Archive -LiteralPath $popplerZip -DestinationPath $popplerRoot -Force
+          $pdftotext = (Get-ChildItem -LiteralPath $popplerRoot -Filter pdftotext.exe -Recurse -File | Select-Object -First 1).FullName
+          if (-not $pdftotext) { throw 'pdftotext.exe missing from Windows Poppler release' }
+          (Split-Path -Parent $pdftotext) | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
+          & $pdftotext -v
+          if ($LASTEXITCODE -ne 0) { throw 'Windows pdftotext could not run' }
+
       - name: Validate bundle state and write result
         env:
           BUNDLE_ID: ${{ inputs.bundle_id }}
@@ -137,6 +161,9 @@ jobs:
           $env:FOURVECO_LESSEN_SOURCE_REF = 'HEAD'
           $env:FOURVECO_LESSEN_SOURCE_BRANCH = "compatibility/$env:STATE/lesson"
           $env:FOURVECO_INDEX_GENERATED_AT = git -C ..\4veco-lessen show -s --format=%cI HEAD
+          # Refresh only the four agent indexes, as in the integration lane.
+          # The exact candidate's archive inventory is an input, not CI output.
+          $env:FOURVECO_INDEX_VIEW_MODE = 'complete-only'
           $commands = @(
             'node ..\trusted-platform\build-scripts\reports\github-agent-index.js',
             'node ..\trusted-platform\build-scripts\reports\check-agent-index-freshness.js',
