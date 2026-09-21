@@ -25,6 +25,22 @@ describe('cross-repo bundle workflow safety', () => {
     expect(platformCi).toContain('repository: meijer1973/4veco-lessen');
   });
 
+  test('bundle validation uses Windows PDF extraction and leaves candidate archive inventories intact', () => {
+    const steps = require('js-yaml').safeLoad(bundleWorkflow).jobs['bundle-state'].steps;
+    const validation = steps.findIndex(step => step.name === 'Validate bundle state and write result');
+    const extraction = steps.findIndex(step => step.name === 'Install Windows PDF text extraction tool');
+    expect(extraction).toBeGreaterThanOrEqual(0);
+    expect(extraction).toBeLessThan(validation);
+    expect(steps[extraction].run).toContain('oschwartz10612/poppler-windows/releases/tags/v26.09.0-0');
+    expect(steps[extraction].run).toContain('-Filter pdftotext.exe');
+    expect(steps[extraction].run).toContain('$env:GITHUB_PATH');
+    expect(steps[validation].run).toContain("$env:FOURVECO_INDEX_VIEW_MODE = 'complete-only'");
+    expect(steps[validation].run.indexOf("$env:FOURVECO_INDEX_VIEW_MODE = 'complete-only'"))
+      .toBeLessThan(steps[validation].run.indexOf('$commands = @('));
+    expect(steps[validation].run).toContain("'npm run check:platform'");
+    expect(steps[validation].run).toContain("'node build-scripts/ci/check-evidence-line-endings.js'");
+  });
+
   test('bundle workflow checks platform-first, lesson-first, and final exact-ref states', () => {
     expect(bundleWorkflow).toContain('platform-first');
     expect(bundleWorkflow).toContain('lesson-first');
