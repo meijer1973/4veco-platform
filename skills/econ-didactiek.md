@@ -347,7 +347,7 @@ Verdieping:           "De ECB verlaagt de rente. Bouw een keten van minimaal 5 s
 2. **Eén concept per eenheid** → cognitieve belasting laag houden
 3. **Van concreet naar abstract** → eerst context, dan formule (behalve bij verdieping)
 4. **Problem-first** → begin met een motiverend probleem, niet met theorie
-5. **Scaffolding alleen waar nodig** → begeleide inoefening is voor wie het nodig heeft
+5. **Begeleide inoefening als normale leerroute** → bouw ondersteuning met fading in; volg voor Part A de [canonieke oefenroutes](econ-exercise-builder.md#21-the-routes-and-the-constraint)
 6. **Verdieping ≠ meer van hetzelfde** → hogere Bloom-niveaus, niet meer rekenwerk
 7. **Positieve framing** → "begeleide inoefening" en "verdieping", geen negatieve labels
 8. **Fading** → veel hulp bij oefening 1, geen hulp bij de laatste oefening

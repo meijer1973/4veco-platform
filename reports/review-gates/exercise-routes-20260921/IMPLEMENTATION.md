@@ -1,5 +1,7 @@
 # Books 2–4 exercise-route revision
 
+This is the initial implementation record for lesson commit `b946cf04`. The final two wording corrections, superseding lesson/manifest identities and the separate chapter-contents navigation defect are recorded in [WORDING-FOLLOWUP.md](WORDING-FOLLOWUP.md). Current independent paragraph bindings accompany that follow-up; the initial checks below remain historical evidence.
+
 The owner explicitly changed the Part A pedagogical contract on 21 September 2026. Guided practice is normal learning; a challenging route with fewer intermediate steps includes the bonus and leads to the same target. Repetition is additional. The canonical definition is `skills/econ-exercise-builder.md` §2.1; active writing, review, planning and selected-outline guidance refer to it.
 
 ## Scope and preserved inputs

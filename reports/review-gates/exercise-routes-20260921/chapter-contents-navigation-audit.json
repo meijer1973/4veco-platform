@@ -1,0 +1,4571 @@
+[
+  {
+    "book": "3",
+    "chapter": "3.1",
+    "complete_pdf": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+    "complete_pdf_sha256": "d428de7cc7b601e379402bae0900639451fcc1abedd2a2defa079f22522b14b0",
+    "complete_pdf_page": 5,
+    "source_pdf": "edities/books34-v3/books/book-3/chapters/3.1/output/Boek_3_H1_Leerling_v3.pdf",
+    "source_pdf_sha256": "49ec653a23cf266e41eff0763d9d46ffeed2f0e93509ccb02a9bb45cc428e2f2",
+    "source_pdf_page": 1,
+    "current_source_links": [
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          235.99298095703125,
+          544.251953125,
+          274.21795654296875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          242.09295654296875,
+          544.251953125,
+          256.09295654296875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          537.87255859375,
+          244.09295654296875,
+          544.251953125,
+          257.84295654296875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          256.09295654296875,
+          544.251953125,
+          268.71795654296875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          274.21795654296875,
+          544.251953125,
+          312.4429931640625
+        ],
+        "destination_pdf_page": 10,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          280.3179931640625,
+          544.251953125,
+          294.3179931640625
+        ],
+        "destination_pdf_page": 10,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          282.3179931640625,
+          544.251953125,
+          296.0679931640625
+        ],
+        "destination_pdf_page": 10,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          294.3179931640625,
+          544.251953125,
+          306.9429931640625
+        ],
+        "destination_pdf_page": 10,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          312.4429931640625,
+          544.251953125,
+          350.66796875
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          318.54296875,
+          544.251953125,
+          332.54296875
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          320.54296875,
+          544.251953125,
+          334.29296875
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          332.54296875,
+          544.251953125,
+          345.16796875
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          350.66796875,
+          544.251953125,
+          388.8929748535156
+        ],
+        "destination_pdf_page": 28,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          356.7679748535156,
+          544.251953125,
+          370.7679748535156
+        ],
+        "destination_pdf_page": 28,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          358.7679748535156,
+          544.251953125,
+          372.5179748535156
+        ],
+        "destination_pdf_page": 28,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          370.7679748535156,
+          544.251953125,
+          383.3929748535156
+        ],
+        "destination_pdf_page": 28,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          388.8929748535156,
+          544.251953125,
+          427.11798095703125
+        ],
+        "destination_pdf_page": 35,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          394.99298095703125,
+          544.251953125,
+          408.99298095703125
+        ],
+        "destination_pdf_page": 35,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          396.99298095703125,
+          544.251953125,
+          410.74298095703125
+        ],
+        "destination_pdf_page": 35,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          408.99298095703125,
+          544.251953125,
+          421.61798095703125
+        ],
+        "destination_pdf_page": 35,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          427.11798095703125,
+          544.251953125,
+          465.3429870605469
+        ],
+        "destination_pdf_page": 44,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          433.2179870605469,
+          544.251953125,
+          447.2179870605469
+        ],
+        "destination_pdf_page": 44,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          435.2179870605469,
+          544.251953125,
+          448.9679870605469
+        ],
+        "destination_pdf_page": 44,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          447.2179870605469,
+          544.251953125,
+          459.8429870605469
+        ],
+        "destination_pdf_page": 44,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          465.3429870605469,
+          544.251953125,
+          503.5679931640625
+        ],
+        "destination_pdf_page": 48,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          471.4429931640625,
+          544.251953125,
+          485.4429931640625
+        ],
+        "destination_pdf_page": 48,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          473.4429931640625,
+          544.251953125,
+          487.1929931640625
+        ],
+        "destination_pdf_page": 48,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          485.4429931640625,
+          544.251953125,
+          498.0679931640625
+        ],
+        "destination_pdf_page": 48,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      }
+    ],
+    "current_bookpages_source_links": [
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          235.99298095703125,
+          544.251953125,
+          274.21795654296875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          242.09295654296875,
+          544.251953125,
+          256.09295654296875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          537.87255859375,
+          244.09295654296875,
+          544.251953125,
+          257.84295654296875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          256.09295654296875,
+          544.251953125,
+          268.71795654296875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          274.21795654296875,
+          544.251953125,
+          312.4429931640625
+        ],
+        "destination_pdf_page": 10,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          280.3179931640625,
+          544.251953125,
+          294.3179931640625
+        ],
+        "destination_pdf_page": 10,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          282.3179931640625,
+          544.251953125,
+          296.0679931640625
+        ],
+        "destination_pdf_page": 10,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          294.3179931640625,
+          544.251953125,
+          306.9429931640625
+        ],
+        "destination_pdf_page": 10,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          312.4429931640625,
+          544.251953125,
+          350.66796875
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          318.54296875,
+          544.251953125,
+          332.54296875
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          320.54296875,
+          544.251953125,
+          334.29296875
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          332.54296875,
+          544.251953125,
+          345.16796875
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          350.66796875,
+          544.251953125,
+          388.8929748535156
+        ],
+        "destination_pdf_page": 28,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          356.7679748535156,
+          544.251953125,
+          370.7679748535156
+        ],
+        "destination_pdf_page": 28,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          358.7679748535156,
+          544.251953125,
+          372.5179748535156
+        ],
+        "destination_pdf_page": 28,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          370.7679748535156,
+          544.251953125,
+          383.3929748535156
+        ],
+        "destination_pdf_page": 28,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          388.8929748535156,
+          544.251953125,
+          427.11798095703125
+        ],
+        "destination_pdf_page": 35,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          394.99298095703125,
+          544.251953125,
+          408.99298095703125
+        ],
+        "destination_pdf_page": 35,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          396.99298095703125,
+          544.251953125,
+          410.74298095703125
+        ],
+        "destination_pdf_page": 35,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          408.99298095703125,
+          544.251953125,
+          421.61798095703125
+        ],
+        "destination_pdf_page": 35,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          427.11798095703125,
+          544.251953125,
+          465.3429870605469
+        ],
+        "destination_pdf_page": 44,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          433.2179870605469,
+          544.251953125,
+          447.2179870605469
+        ],
+        "destination_pdf_page": 44,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          435.2179870605469,
+          544.251953125,
+          448.9679870605469
+        ],
+        "destination_pdf_page": 44,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          447.2179870605469,
+          544.251953125,
+          459.8429870605469
+        ],
+        "destination_pdf_page": 44,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          465.3429870605469,
+          544.251953125,
+          503.5679931640625
+        ],
+        "destination_pdf_page": 48,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          471.4429931640625,
+          544.251953125,
+          485.4429931640625
+        ],
+        "destination_pdf_page": 48,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          473.4429931640625,
+          544.251953125,
+          487.1929931640625
+        ],
+        "destination_pdf_page": 48,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          485.4429931640625,
+          544.251953125,
+          498.0679931640625
+        ],
+        "destination_pdf_page": 48,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      }
+    ],
+    "current_complete_links": [],
+    "baseline_source_links": [
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          235.99298095703125,
+          544.251953125,
+          274.21795654296875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          242.09295654296875,
+          544.251953125,
+          256.09295654296875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          537.87255859375,
+          244.09295654296875,
+          544.251953125,
+          257.84295654296875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          256.09295654296875,
+          544.251953125,
+          268.71795654296875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          274.21795654296875,
+          544.251953125,
+          312.4429931640625
+        ],
+        "destination_pdf_page": 10,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          280.3179931640625,
+          544.251953125,
+          294.3179931640625
+        ],
+        "destination_pdf_page": 10,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          282.3179931640625,
+          544.251953125,
+          296.0679931640625
+        ],
+        "destination_pdf_page": 10,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          294.3179931640625,
+          544.251953125,
+          306.9429931640625
+        ],
+        "destination_pdf_page": 10,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          312.4429931640625,
+          544.251953125,
+          350.66796875
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          318.54296875,
+          544.251953125,
+          332.54296875
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          320.54296875,
+          544.251953125,
+          334.29296875
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          332.54296875,
+          544.251953125,
+          345.16796875
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          350.66796875,
+          544.251953125,
+          388.8929748535156
+        ],
+        "destination_pdf_page": 28,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          356.7679748535156,
+          544.251953125,
+          370.7679748535156
+        ],
+        "destination_pdf_page": 28,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          358.7679748535156,
+          544.251953125,
+          372.5179748535156
+        ],
+        "destination_pdf_page": 28,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          370.7679748535156,
+          544.251953125,
+          383.3929748535156
+        ],
+        "destination_pdf_page": 28,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          388.8929748535156,
+          544.251953125,
+          427.11798095703125
+        ],
+        "destination_pdf_page": 35,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          394.99298095703125,
+          544.251953125,
+          408.99298095703125
+        ],
+        "destination_pdf_page": 35,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          396.99298095703125,
+          544.251953125,
+          410.74298095703125
+        ],
+        "destination_pdf_page": 35,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          408.99298095703125,
+          544.251953125,
+          421.61798095703125
+        ],
+        "destination_pdf_page": 35,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          427.11798095703125,
+          544.251953125,
+          465.3429870605469
+        ],
+        "destination_pdf_page": 44,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          433.2179870605469,
+          544.251953125,
+          447.2179870605469
+        ],
+        "destination_pdf_page": 44,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          435.2179870605469,
+          544.251953125,
+          448.9679870605469
+        ],
+        "destination_pdf_page": 44,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          447.2179870605469,
+          544.251953125,
+          459.8429870605469
+        ],
+        "destination_pdf_page": 44,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          465.3429870605469,
+          544.251953125,
+          503.5679931640625
+        ],
+        "destination_pdf_page": 48,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          471.4429931640625,
+          544.251953125,
+          485.4429931640625
+        ],
+        "destination_pdf_page": 48,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          473.4429931640625,
+          544.251953125,
+          487.1929931640625
+        ],
+        "destination_pdf_page": 48,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          485.4429931640625,
+          544.251953125,
+          498.0679931640625
+        ],
+        "destination_pdf_page": 48,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      }
+    ],
+    "baseline_complete_links": [],
+    "baseline_commit": "e2843b47c828784ab594d004cef461cea929717f",
+    "first_words": "6\n14\n23\n32\n39\n48\n52\n4VECO · ECONOMIE · 4 VWO · BOEK 3\nOverheidsingrijpen\nWie betaalt, wie profiteert en wat verandert er?\nEen belasting maakt een product duurder. Een subsidie maak"
+  },
+  {
+    "book": "3",
+    "chapter": "3.2",
+    "complete_pdf": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+    "complete_pdf_sha256": "d428de7cc7b601e379402bae0900639451fcc1abedd2a2defa079f22522b14b0",
+    "complete_pdf_page": 53,
+    "source_pdf": "edities/books34-v3/books/book-3/chapters/3.2/output/Boek_3_H2_Leerling_v3.pdf",
+    "source_pdf_sha256": "4da4939344f52af0ab5604512212d270fcf580f01be1d53c5ea930f43471dddb",
+    "source_pdf_page": 1,
+    "current_source_links": [],
+    "current_bookpages_source_links": [],
+    "current_complete_links": [],
+    "baseline_source_links": [],
+    "baseline_complete_links": [],
+    "baseline_commit": "e2843b47c828784ab594d004cef461cea929717f",
+    "first_words": "BOEK 3 · HOOFDSTUK 2\nVolkomen concurrentie:\nproductie en winst\nDe markt bepaalt de prijs. Jij onderzoekt wat één onderneming het beste kan\nproduceren.\nIn dit hoofdstuk maak je twee"
+  },
+  {
+    "book": "3",
+    "chapter": "3.3",
+    "complete_pdf": "edities/books34-v3/books/book-3/output/Boek_3_Compleet_v3.pdf",
+    "complete_pdf_sha256": "d428de7cc7b601e379402bae0900639451fcc1abedd2a2defa079f22522b14b0",
+    "complete_pdf_page": 87,
+    "source_pdf": "edities/books34-v3/books/book-3/chapters/3.3/output/Boek_3_H3_Leerling_v3.pdf",
+    "source_pdf_sha256": "e62f68dc6c75e388f101a677104eb538ba61ac50ecf6fa1349e2da03e07cfa5f",
+    "source_pdf_page": 1,
+    "current_source_links": [
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          385.5126037597656,
+          544.251953125,
+          426.23760986328125
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          391.61260986328125,
+          544.251953125,
+          405.61260986328125
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          537.87255859375,
+          393.61260986328125,
+          544.251953125,
+          407.36260986328125
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          407.61260986328125,
+          544.251953125,
+          420.73760986328125
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          426.23760986328125,
+          544.251953125,
+          466.9626159667969
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          432.3376159667969,
+          544.251953125,
+          446.3376159667969
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          434.3376159667969,
+          544.251953125,
+          448.0876159667969
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          448.3376159667969,
+          544.251953125,
+          461.4626159667969
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          466.9626159667969,
+          544.251953125,
+          507.6876220703125
+        ],
+        "destination_pdf_page": 21,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          473.0626220703125,
+          544.251953125,
+          487.0626220703125
+        ],
+        "destination_pdf_page": 21,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          475.0626220703125,
+          544.251953125,
+          488.8126220703125
+        ],
+        "destination_pdf_page": 21,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          489.0626220703125,
+          544.251953125,
+          502.1876220703125
+        ],
+        "destination_pdf_page": 21,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          507.6876220703125,
+          544.251953125,
+          548.41259765625
+        ],
+        "destination_pdf_page": 31,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          513.78759765625,
+          544.251953125,
+          527.78759765625
+        ],
+        "destination_pdf_page": 31,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          515.78759765625,
+          544.251953125,
+          529.53759765625
+        ],
+        "destination_pdf_page": 31,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          529.78759765625,
+          544.251953125,
+          542.91259765625
+        ],
+        "destination_pdf_page": 31,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          548.41259765625,
+          544.251953125,
+          574.0125732421875
+        ],
+        "destination_pdf_page": 38,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          554.5125732421875,
+          544.251953125,
+          568.5125732421875
+        ],
+        "destination_pdf_page": 38,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          556.5125732421875,
+          544.251953125,
+          570.2625732421875
+        ],
+        "destination_pdf_page": 38,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      }
+    ],
+    "current_bookpages_source_links": [
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          385.5126037597656,
+          544.251953125,
+          426.23760986328125
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          391.61260986328125,
+          544.251953125,
+          405.61260986328125
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          393.61260986328125,
+          544.251953125,
+          407.36260986328125
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          407.61260986328125,
+          544.251953125,
+          420.73760986328125
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          426.23760986328125,
+          544.251953125,
+          466.9626159667969
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          432.3376159667969,
+          544.251953125,
+          446.3376159667969
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          434.3376159667969,
+          544.251953125,
+          448.0876159667969
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          448.3376159667969,
+          544.251953125,
+          461.4626159667969
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          466.9626159667969,
+          544.251953125,
+          507.6876220703125
+        ],
+        "destination_pdf_page": 21,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          473.0626220703125,
+          544.251953125,
+          487.0626220703125
+        ],
+        "destination_pdf_page": 21,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          525.11376953125,
+          475.0626220703125,
+          544.251953125,
+          488.8126220703125
+        ],
+        "destination_pdf_page": 21,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          489.0626220703125,
+          544.251953125,
+          502.1876220703125
+        ],
+        "destination_pdf_page": 21,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          507.6876220703125,
+          544.251953125,
+          548.41259765625
+        ],
+        "destination_pdf_page": 31,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          513.78759765625,
+          544.251953125,
+          527.78759765625
+        ],
+        "destination_pdf_page": 31,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          525.11376953125,
+          515.78759765625,
+          544.251953125,
+          529.53759765625
+        ],
+        "destination_pdf_page": 31,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          529.78759765625,
+          544.251953125,
+          542.91259765625
+        ],
+        "destination_pdf_page": 31,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          548.41259765625,
+          544.251953125,
+          574.0125732421875
+        ],
+        "destination_pdf_page": 38,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          554.5125732421875,
+          544.251953125,
+          568.5125732421875
+        ],
+        "destination_pdf_page": 38,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          525.11376953125,
+          556.5125732421875,
+          544.251953125,
+          570.2625732421875
+        ],
+        "destination_pdf_page": 38,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      }
+    ],
+    "current_complete_links": [],
+    "baseline_source_links": [
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          385.5126037597656,
+          544.251953125,
+          426.23760986328125
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          391.61260986328125,
+          544.251953125,
+          405.61260986328125
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          537.87255859375,
+          393.61260986328125,
+          544.251953125,
+          407.36260986328125
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          407.61260986328125,
+          544.251953125,
+          420.73760986328125
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          426.23760986328125,
+          544.251953125,
+          466.9626159667969
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          432.3376159667969,
+          544.251953125,
+          446.3376159667969
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          434.3376159667969,
+          544.251953125,
+          448.0876159667969
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          448.3376159667969,
+          544.251953125,
+          461.4626159667969
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          466.9626159667969,
+          544.251953125,
+          507.6876220703125
+        ],
+        "destination_pdf_page": 21,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          473.0626220703125,
+          544.251953125,
+          487.0626220703125
+        ],
+        "destination_pdf_page": 21,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          475.0626220703125,
+          544.251953125,
+          488.8126220703125
+        ],
+        "destination_pdf_page": 21,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          489.0626220703125,
+          544.251953125,
+          502.1876220703125
+        ],
+        "destination_pdf_page": 21,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          507.6876220703125,
+          544.251953125,
+          548.41259765625
+        ],
+        "destination_pdf_page": 31,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          513.78759765625,
+          544.251953125,
+          527.78759765625
+        ],
+        "destination_pdf_page": 31,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          515.78759765625,
+          544.251953125,
+          529.53759765625
+        ],
+        "destination_pdf_page": 31,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          529.78759765625,
+          544.251953125,
+          542.91259765625
+        ],
+        "destination_pdf_page": 31,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          548.41259765625,
+          544.251953125,
+          574.0125732421875
+        ],
+        "destination_pdf_page": 38,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          554.5125732421875,
+          544.251953125,
+          568.5125732421875
+        ],
+        "destination_pdf_page": 38,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          556.5125732421875,
+          544.251953125,
+          570.2625732421875
+        ],
+        "destination_pdf_page": 38,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      }
+    ],
+    "baseline_complete_links": [],
+    "baseline_commit": "e2843b47c828784ab594d004cef461cea929717f",
+    "first_words": "88\n97\n107\n117\n124\nBOEK 3 · HOOFDSTUK 3 · ECONOMIE · 4 VWO\nInternationale\nhandel\nWaarom handelen landen?\nEn wie merkt daar de gevolgen van?\nEen shirt, een fiets en een zak rijst kun"
+  },
+  {
+    "book": "4",
+    "chapter": "4.1",
+    "complete_pdf": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+    "complete_pdf_sha256": "2ad8e1f9f15bc948f7058461a26976c616acf25935ddf8360a1abb17ca3d7914",
+    "complete_pdf_page": 5,
+    "source_pdf": "edities/books34-v3/books/book-4/chapters/4.1/output/Boek_4_H1_Leerling_v3.pdf",
+    "source_pdf_sha256": "fc78ecab37dc128b55da5d2ce5194f0b80a14ec0631ce20a7753aa1cab42ee43",
+    "source_pdf_page": 1,
+    "current_source_links": [],
+    "current_bookpages_source_links": [],
+    "current_complete_links": [],
+    "baseline_source_links": [],
+    "baseline_complete_links": [],
+    "baseline_commit": "e2843b47c828784ab594d004cef461cea929717f",
+    "first_words": "BOEK 4 · HOOFDSTUK 1\nVan concurrentie\nnaar monopolie\nWanneer verdwijnt winst door concurrentie? En wat verandert als nieuwe\naanbieders niet gemakkelijk kunnen toetreden?\nIn Boek 3 "
+  },
+  {
+    "book": "4",
+    "chapter": "4.2",
+    "complete_pdf": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+    "complete_pdf_sha256": "2ad8e1f9f15bc948f7058461a26976c616acf25935ddf8360a1abb17ca3d7914",
+    "complete_pdf_page": 53,
+    "source_pdf": "edities/books34-v3/books/book-4/chapters/4.2/output/Boek_4_H2_Leerling_v3.pdf",
+    "source_pdf_sha256": "ea17295db6c3c5a9123d30bcb342a0f1e24dcbb0cd28d1401a52488f5b6320ff",
+    "source_pdf_page": 1,
+    "current_source_links": [
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          269.06201171875,
+          544.251953125,
+          307.2869873046875
+        ],
+        "destination_pdf_page": 3,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          275.1619873046875,
+          544.251953125,
+          289.1619873046875
+        ],
+        "destination_pdf_page": 3,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          537.87255859375,
+          277.1619873046875,
+          544.251953125,
+          290.9119873046875
+        ],
+        "destination_pdf_page": 3,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          289.1619873046875,
+          544.251953125,
+          301.7869873046875
+        ],
+        "destination_pdf_page": 3,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          307.2869873046875,
+          544.251953125,
+          345.5119934082031
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          313.386962890625,
+          544.251953125,
+          327.386962890625
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          315.386962890625,
+          544.251953125,
+          329.136962890625
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          327.386962890625,
+          544.251953125,
+          340.0119934082031
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          345.5119934082031,
+          544.251953125,
+          383.7369689941406
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          351.6119689941406,
+          544.251953125,
+          365.6119689941406
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          353.6119689941406,
+          544.251953125,
+          367.3619689941406
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          365.6119689941406,
+          544.251953125,
+          378.2369689941406
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          383.7369689941406,
+          544.251953125,
+          421.96197509765625
+        ],
+        "destination_pdf_page": 25,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          389.83697509765625,
+          544.251953125,
+          403.83697509765625
+        ],
+        "destination_pdf_page": 25,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          391.83697509765625,
+          544.251953125,
+          405.58697509765625
+        ],
+        "destination_pdf_page": 25,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          403.83697509765625,
+          544.251953125,
+          416.46197509765625
+        ],
+        "destination_pdf_page": 25,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          421.96197509765625,
+          544.251953125,
+          460.1869812011719
+        ],
+        "destination_pdf_page": 36,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          428.0619812011719,
+          544.251953125,
+          442.0619812011719
+        ],
+        "destination_pdf_page": 36,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          430.0619812011719,
+          544.251953125,
+          443.8119812011719
+        ],
+        "destination_pdf_page": 36,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          442.0619812011719,
+          544.251953125,
+          454.6869812011719
+        ],
+        "destination_pdf_page": 36,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          460.1869812011719,
+          544.251953125,
+          498.4119873046875
+        ],
+        "destination_pdf_page": 47,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          466.2869873046875,
+          544.251953125,
+          480.2869873046875
+        ],
+        "destination_pdf_page": 47,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          468.2869873046875,
+          544.251953125,
+          482.0369873046875
+        ],
+        "destination_pdf_page": 47,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          480.2869873046875,
+          544.251953125,
+          492.9119873046875
+        ],
+        "destination_pdf_page": 47,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          498.4119873046875,
+          544.251953125,
+          536.636962890625
+        ],
+        "destination_pdf_page": 53,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          504.5119934082031,
+          544.251953125,
+          518.511962890625
+        ],
+        "destination_pdf_page": 53,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          506.5119934082031,
+          544.251953125,
+          520.261962890625
+        ],
+        "destination_pdf_page": 53,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          518.511962890625,
+          544.251953125,
+          531.136962890625
+        ],
+        "destination_pdf_page": 53,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      }
+    ],
+    "current_bookpages_source_links": [
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          269.06201171875,
+          544.251953125,
+          307.2869873046875
+        ],
+        "destination_pdf_page": 3,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          275.1619873046875,
+          544.251953125,
+          289.1619873046875
+        ],
+        "destination_pdf_page": 3,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          277.1619873046875,
+          544.251953125,
+          290.9119873046875
+        ],
+        "destination_pdf_page": 3,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          289.1619873046875,
+          544.251953125,
+          301.7869873046875
+        ],
+        "destination_pdf_page": 3,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          307.2869873046875,
+          544.251953125,
+          345.5119934082031
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          313.386962890625,
+          544.251953125,
+          327.386962890625
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          315.386962890625,
+          544.251953125,
+          329.136962890625
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          327.386962890625,
+          544.251953125,
+          340.0119934082031
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          345.5119934082031,
+          544.251953125,
+          383.7369689941406
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          351.6119689941406,
+          544.251953125,
+          365.6119689941406
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          353.6119689941406,
+          544.251953125,
+          367.3619689941406
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          365.6119689941406,
+          544.251953125,
+          378.2369689941406
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          383.7369689941406,
+          544.251953125,
+          421.96197509765625
+        ],
+        "destination_pdf_page": 25,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          389.83697509765625,
+          544.251953125,
+          403.83697509765625
+        ],
+        "destination_pdf_page": 25,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          391.83697509765625,
+          544.251953125,
+          405.58697509765625
+        ],
+        "destination_pdf_page": 25,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          403.83697509765625,
+          544.251953125,
+          416.46197509765625
+        ],
+        "destination_pdf_page": 25,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          421.96197509765625,
+          544.251953125,
+          460.1869812011719
+        ],
+        "destination_pdf_page": 36,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          428.0619812011719,
+          544.251953125,
+          442.0619812011719
+        ],
+        "destination_pdf_page": 36,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          430.0619812011719,
+          544.251953125,
+          443.8119812011719
+        ],
+        "destination_pdf_page": 36,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          442.0619812011719,
+          544.251953125,
+          454.6869812011719
+        ],
+        "destination_pdf_page": 36,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          460.1869812011719,
+          544.251953125,
+          498.4119873046875
+        ],
+        "destination_pdf_page": 47,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          466.2869873046875,
+          544.251953125,
+          480.2869873046875
+        ],
+        "destination_pdf_page": 47,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          468.2869873046875,
+          544.251953125,
+          482.0369873046875
+        ],
+        "destination_pdf_page": 47,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          480.2869873046875,
+          544.251953125,
+          492.9119873046875
+        ],
+        "destination_pdf_page": 47,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          498.4119873046875,
+          544.251953125,
+          536.636962890625
+        ],
+        "destination_pdf_page": 53,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          504.5119934082031,
+          544.251953125,
+          518.511962890625
+        ],
+        "destination_pdf_page": 53,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          525.11376953125,
+          506.5119934082031,
+          544.251953125,
+          520.261962890625
+        ],
+        "destination_pdf_page": 53,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          518.511962890625,
+          544.251953125,
+          531.136962890625
+        ],
+        "destination_pdf_page": 53,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      }
+    ],
+    "current_complete_links": [],
+    "baseline_source_links": [
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          269.06201171875,
+          544.251953125,
+          307.2869873046875
+        ],
+        "destination_pdf_page": 3,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          275.1619873046875,
+          544.251953125,
+          289.1619873046875
+        ],
+        "destination_pdf_page": 3,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          537.87255859375,
+          277.1619873046875,
+          544.251953125,
+          290.9119873046875
+        ],
+        "destination_pdf_page": 3,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          289.1619873046875,
+          544.251953125,
+          301.7869873046875
+        ],
+        "destination_pdf_page": 3,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          307.2869873046875,
+          544.251953125,
+          345.5119934082031
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          313.386962890625,
+          544.251953125,
+          327.386962890625
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          315.386962890625,
+          544.251953125,
+          329.136962890625
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          327.386962890625,
+          544.251953125,
+          340.0119934082031
+        ],
+        "destination_pdf_page": 11,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          345.5119934082031,
+          544.251953125,
+          383.7369689941406
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          351.6119689941406,
+          544.251953125,
+          365.6119689941406
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          353.6119689941406,
+          544.251953125,
+          367.3619689941406
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          365.6119689941406,
+          544.251953125,
+          378.2369689941406
+        ],
+        "destination_pdf_page": 19,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          383.7369689941406,
+          544.251953125,
+          421.96197509765625
+        ],
+        "destination_pdf_page": 25,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          389.83697509765625,
+          544.251953125,
+          403.83697509765625
+        ],
+        "destination_pdf_page": 25,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          391.83697509765625,
+          544.251953125,
+          405.58697509765625
+        ],
+        "destination_pdf_page": 25,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          403.83697509765625,
+          544.251953125,
+          416.46197509765625
+        ],
+        "destination_pdf_page": 25,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          421.96197509765625,
+          544.251953125,
+          460.1869812011719
+        ],
+        "destination_pdf_page": 36,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          428.0619812011719,
+          544.251953125,
+          442.0619812011719
+        ],
+        "destination_pdf_page": 36,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          430.0619812011719,
+          544.251953125,
+          443.8119812011719
+        ],
+        "destination_pdf_page": 36,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          442.0619812011719,
+          544.251953125,
+          454.6869812011719
+        ],
+        "destination_pdf_page": 36,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          460.1869812011719,
+          544.251953125,
+          498.4119873046875
+        ],
+        "destination_pdf_page": 47,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          466.2869873046875,
+          544.251953125,
+          480.2869873046875
+        ],
+        "destination_pdf_page": 47,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          468.2869873046875,
+          544.251953125,
+          482.0369873046875
+        ],
+        "destination_pdf_page": 47,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          480.2869873046875,
+          544.251953125,
+          492.9119873046875
+        ],
+        "destination_pdf_page": 47,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          498.4119873046875,
+          544.251953125,
+          536.636962890625
+        ],
+        "destination_pdf_page": 53,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          504.5119934082031,
+          544.251953125,
+          518.511962890625
+        ],
+        "destination_pdf_page": 53,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          506.5119934082031,
+          544.251953125,
+          520.261962890625
+        ],
+        "destination_pdf_page": 53,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          518.511962890625,
+          544.251953125,
+          531.136962890625
+        ],
+        "destination_pdf_page": 53,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      }
+    ],
+    "baseline_complete_links": [],
+    "baseline_commit": "e2843b47c828784ab594d004cef461cea929717f",
+    "first_words": "55\n63\n71\n77\n88\n99\n105\nBOEK 4 · HOOFDSTUK 2 · ECONOMIE · 4 VWO\nMarktvormen\nen marktfalen\nWie wint, wie betaalt\nen wie staat buiten de markt?\nEen aanbieder kan meer winst maken terwi"
+  },
+  {
+    "book": "4",
+    "chapter": "4.3",
+    "complete_pdf": "edities/books34-v3/books/book-4/output/Boek_4_Compleet_v3.pdf",
+    "complete_pdf_sha256": "2ad8e1f9f15bc948f7058461a26976c616acf25935ddf8360a1abb17ca3d7914",
+    "complete_pdf_page": 113,
+    "source_pdf": "edities/books34-v3/books/book-4/chapters/4.3/output/Boek_4_H3_Leerling_v3.pdf",
+    "source_pdf_sha256": "e27de4f8be7a4380054999ef3b120e10230cd87aa02d06cb1c663684ee2ae2a1",
+    "source_pdf_page": 1,
+    "current_source_links": [
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          214.511962890625,
+          544.251953125,
+          252.73699951171875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          220.61199951171875,
+          544.251953125,
+          234.61199951171875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          537.87255859375,
+          222.61199951171875,
+          544.251953125,
+          236.36199951171875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          234.61199951171875,
+          544.251953125,
+          247.23699951171875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          252.73699951171875,
+          544.251953125,
+          290.96197509765625
+        ],
+        "destination_pdf_page": 12,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          258.83697509765625,
+          544.251953125,
+          272.83697509765625
+        ],
+        "destination_pdf_page": 12,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          260.83697509765625,
+          544.251953125,
+          274.58697509765625
+        ],
+        "destination_pdf_page": 12,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          272.83697509765625,
+          544.251953125,
+          285.46197509765625
+        ],
+        "destination_pdf_page": 12,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          290.96197509765625,
+          544.251953125,
+          329.18701171875
+        ],
+        "destination_pdf_page": 20,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          297.06201171875,
+          544.251953125,
+          311.06201171875
+        ],
+        "destination_pdf_page": 20,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          299.06201171875,
+          544.251953125,
+          312.81201171875
+        ],
+        "destination_pdf_page": 20,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          311.06201171875,
+          544.251953125,
+          323.68701171875
+        ],
+        "destination_pdf_page": 20,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          329.18701171875,
+          544.251953125,
+          367.4119873046875
+        ],
+        "destination_pdf_page": 29,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          335.2869873046875,
+          544.251953125,
+          349.2869873046875
+        ],
+        "destination_pdf_page": 29,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          337.2869873046875,
+          544.251953125,
+          351.0369873046875
+        ],
+        "destination_pdf_page": 29,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          349.2869873046875,
+          544.251953125,
+          361.9119873046875
+        ],
+        "destination_pdf_page": 29,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          367.4119873046875,
+          544.251953125,
+          405.6369934082031
+        ],
+        "destination_pdf_page": 37,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          373.5119934082031,
+          544.251953125,
+          387.5119934082031
+        ],
+        "destination_pdf_page": 37,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          375.5119934082031,
+          544.251953125,
+          389.2619934082031
+        ],
+        "destination_pdf_page": 37,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          387.5119934082031,
+          544.251953125,
+          400.1369934082031
+        ],
+        "destination_pdf_page": 37,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          405.6369934082031,
+          544.251953125,
+          443.8619689941406
+        ],
+        "destination_pdf_page": 43,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          411.7369689941406,
+          544.251953125,
+          425.7369689941406
+        ],
+        "destination_pdf_page": 43,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          413.7369689941406,
+          544.251953125,
+          427.4869689941406
+        ],
+        "destination_pdf_page": 43,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          425.7369689941406,
+          544.251953125,
+          438.3619689941406
+        ],
+        "destination_pdf_page": 43,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      }
+    ],
+    "current_bookpages_source_links": [
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          214.511962890625,
+          544.251953125,
+          252.73699951171875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          220.61199951171875,
+          544.251953125,
+          234.61199951171875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          525.11376953125,
+          222.61199951171875,
+          544.251953125,
+          236.36199951171875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          234.61199951171875,
+          544.251953125,
+          247.23699951171875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          252.73699951171875,
+          544.251953125,
+          290.96197509765625
+        ],
+        "destination_pdf_page": 12,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          258.83697509765625,
+          544.251953125,
+          272.83697509765625
+        ],
+        "destination_pdf_page": 12,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          525.11376953125,
+          260.83697509765625,
+          544.251953125,
+          274.58697509765625
+        ],
+        "destination_pdf_page": 12,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          272.83697509765625,
+          544.251953125,
+          285.46197509765625
+        ],
+        "destination_pdf_page": 12,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          290.96197509765625,
+          544.251953125,
+          329.18701171875
+        ],
+        "destination_pdf_page": 20,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          297.06201171875,
+          544.251953125,
+          311.06201171875
+        ],
+        "destination_pdf_page": 20,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          525.11376953125,
+          299.06201171875,
+          544.251953125,
+          312.81201171875
+        ],
+        "destination_pdf_page": 20,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          311.06201171875,
+          544.251953125,
+          323.68701171875
+        ],
+        "destination_pdf_page": 20,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          329.18701171875,
+          544.251953125,
+          367.4119873046875
+        ],
+        "destination_pdf_page": 29,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          335.2869873046875,
+          544.251953125,
+          349.2869873046875
+        ],
+        "destination_pdf_page": 29,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          525.11376953125,
+          337.2869873046875,
+          544.251953125,
+          351.0369873046875
+        ],
+        "destination_pdf_page": 29,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          349.2869873046875,
+          544.251953125,
+          361.9119873046875
+        ],
+        "destination_pdf_page": 29,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          367.4119873046875,
+          544.251953125,
+          405.6369934082031
+        ],
+        "destination_pdf_page": 37,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          373.5119934082031,
+          544.251953125,
+          387.5119934082031
+        ],
+        "destination_pdf_page": 37,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          525.11376953125,
+          375.5119934082031,
+          544.251953125,
+          389.2619934082031
+        ],
+        "destination_pdf_page": 37,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          387.5119934082031,
+          544.251953125,
+          400.1369934082031
+        ],
+        "destination_pdf_page": 37,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          405.6369934082031,
+          544.251953125,
+          443.8619689941406
+        ],
+        "destination_pdf_page": 43,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          411.7369689941406,
+          544.251953125,
+          425.7369689941406
+        ],
+        "destination_pdf_page": 43,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          525.11376953125,
+          413.7369689941406,
+          544.251953125,
+          427.4869689941406
+        ],
+        "destination_pdf_page": 43,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          425.7369689941406,
+          544.251953125,
+          438.3619689941406
+        ],
+        "destination_pdf_page": 43,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      }
+    ],
+    "current_complete_links": [],
+    "baseline_source_links": [
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          214.511962890625,
+          544.251953125,
+          252.73699951171875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          220.61199951171875,
+          544.251953125,
+          234.61199951171875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          537.87255859375,
+          222.61199951171875,
+          544.251953125,
+          236.36199951171875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          234.61199951171875,
+          544.251953125,
+          247.23699951171875
+        ],
+        "destination_pdf_page": 2,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          252.73699951171875,
+          544.251953125,
+          290.96197509765625
+        ],
+        "destination_pdf_page": 12,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          258.83697509765625,
+          544.251953125,
+          272.83697509765625
+        ],
+        "destination_pdf_page": 12,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          260.83697509765625,
+          544.251953125,
+          274.58697509765625
+        ],
+        "destination_pdf_page": 12,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          272.83697509765625,
+          544.251953125,
+          285.46197509765625
+        ],
+        "destination_pdf_page": 12,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          290.96197509765625,
+          544.251953125,
+          329.18701171875
+        ],
+        "destination_pdf_page": 20,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          297.06201171875,
+          544.251953125,
+          311.06201171875
+        ],
+        "destination_pdf_page": 20,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          299.06201171875,
+          544.251953125,
+          312.81201171875
+        ],
+        "destination_pdf_page": 20,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          311.06201171875,
+          544.251953125,
+          323.68701171875
+        ],
+        "destination_pdf_page": 20,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          329.18701171875,
+          544.251953125,
+          367.4119873046875
+        ],
+        "destination_pdf_page": 29,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          335.2869873046875,
+          544.251953125,
+          349.2869873046875
+        ],
+        "destination_pdf_page": 29,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          337.2869873046875,
+          544.251953125,
+          351.0369873046875
+        ],
+        "destination_pdf_page": 29,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          349.2869873046875,
+          544.251953125,
+          361.9119873046875
+        ],
+        "destination_pdf_page": 29,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          367.4119873046875,
+          544.251953125,
+          405.6369934082031
+        ],
+        "destination_pdf_page": 37,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          373.5119934082031,
+          544.251953125,
+          387.5119934082031
+        ],
+        "destination_pdf_page": 37,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          375.5119934082031,
+          544.251953125,
+          389.2619934082031
+        ],
+        "destination_pdf_page": 37,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          387.5119934082031,
+          544.251953125,
+          400.1369934082031
+        ],
+        "destination_pdf_page": 37,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          405.6369934082031,
+          544.251953125,
+          443.8619689941406
+        ],
+        "destination_pdf_page": 43,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          411.7369689941406,
+          544.251953125,
+          425.7369689941406
+        ],
+        "destination_pdf_page": 43,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          531.4931640625,
+          413.7369689941406,
+          544.251953125,
+          427.4869689941406
+        ],
+        "destination_pdf_page": 43,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      },
+      {
+        "kind": 4,
+        "from": [
+          53.85826873779297,
+          425.7369689941406,
+          544.251953125,
+          438.3619689941406
+        ],
+        "destination_pdf_page": 43,
+        "destination_point": [
+          53.85827,
+          793.7008
+        ],
+        "uri": null
+      }
+    ],
+    "baseline_complete_links": [],
+    "baseline_commit": "e2843b47c828784ab594d004cef461cea929717f",
+    "first_words": "114\n124\n132\n141\n149\n155\nBOEK 4 · HOOFDSTUK 3 · ECONOMIE 4 VWO\nArbeidsmarkt\nAls de prijs loon heet\nEen werkgever zoekt personeel. Een werknemer zoekt een baan. Je herkent vraag en a"
+  }
+]

@@ -1,0 +1,27 @@
+from pathlib import Path
+import subprocess, json, hashlib
+import fitz
+
+lessons = Path(__file__).resolve().parents[2] / '4veco-lessen'
+old = 'b946cf04b128a374301e1998653f45583ec97057'
+paths = subprocess.check_output(['git','diff','--name-only','-z',old,'--','*.pdf'],cwd=lessons).decode().split('\0')
+rows = []
+for name in filter(None, paths):
+    before = subprocess.check_output(['git','show',old+':'+name],cwd=lessons)
+    current = Path('\\\\?\\'+str(lessons/name)).read_bytes()
+    a,b = fitz.open(stream=before,filetype='pdf'), fitz.open(stream=current,filetype='pdf')
+    assert len(a)==len(b), name
+    changed = []
+    for i in range(len(a)):
+        ta,tb = a[i].get_text(),b[i].get_text()
+        pa,pb = a[i].get_pixmap(),b[i].get_pixmap()
+        if ta != tb or pa.samples != pb.samples:
+            assert ta.replace('Herhaling is aanvullend.', 'Hoofdstukcheck 7 is aanvullend.') == tb, (name,i+1)
+            changed.append(i+1)
+        def links(page):
+            return [{k:(list(v) if isinstance(v,(fitz.Rect,fitz.Point)) else v) for k,v in x.items() if k not in ('xref','id')} for x in page.get_links()]
+        assert links(a[i]) == links(b[i]), (name,i+1,'links')
+    rows.append({'file':name,'pages':len(a),'changed_pages':changed,'all_other_pages_text_and_pixels_identical':True,'links_identical':True,'sha256':hashlib.sha256(current).hexdigest()})
+result={'baseline_lesson_commit':old,'pdfs':rows,'changed_pdf_count':len(rows),'verified_pages':sum(x['pages'] for x in rows)}
+Path(__file__).with_name('pdf-delta.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+print(json.dumps({'pdfs':len(rows),'pages':result['verified_pages'],'changed':[(x['file'],x['changed_pages']) for x in rows if x['changed_pages']]}))

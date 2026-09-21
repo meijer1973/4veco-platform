@@ -1,0 +1,22 @@
+[
+  {
+    "path": ".github/workflows/paired-exercise-route-ci.yml",
+    "prior_sha256_lf": "abf6f8139a8286ba72024b33ed45b62fd1443cf46aceeffebe2a93a4de73bd32",
+    "current_sha256_lf": "62ff7ce1d4b006733c77b00a3f747446bde085a28b75a9f582725141d3ffeff7"
+  },
+  {
+    "path": "build-scripts/books/exercise-route-lesson-head.txt",
+    "prior_sha256_lf": "b808694cc2e90590f37a078590c1c58fd54ce5c8cb4d05f272e8aa26b9acd356",
+    "current_sha256_lf": "46d76ca7f24780726ac64c845043dd7fc47ae1c39abd9027594f7368b165c810"
+  },
+  {
+    "path": "build-scripts/books/exercise-route-revision-pin.json",
+    "prior_sha256_lf": "ef3cb34815613566c4817547f7f3bca4e930546f35b8226f52195d88692ac4e7",
+    "current_sha256_lf": "263eedcfa6ed4f8973841db604b1d487d8ff4a780604b3e56d6de587cb7154d1"
+  },
+  {
+    "path": "skills/econ-didactiek.md",
+    "prior_sha256_lf": "8fae66fc848f4d1fe4bdb3dcc9a087f5501baa9b5d4476a4a3c5f2606fcbb5ad",
+    "current_sha256_lf": "ea62dcdf93a76a27ee3514b8f6fede26b606a9f77004df14aa6bd56404939a80"
+  }
+]

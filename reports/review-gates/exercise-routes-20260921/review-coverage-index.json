@@ -1,7 +1,7 @@
 [
   {
     "paragraph": "2.1.1",
-    "manifest_digest": "b2f803132a96ea96e945f5c11527fccb630ad2e72f0390b794528c732421e969",
+    "manifest_digest": "922dc4cf39d9078e32e26035a33d5c29f70de74d794fa37fb90417de75a38812",
     "student_pdf_pages": [
       4,
       7,
@@ -21,11 +21,14 @@
       4
     ],
     "report": "2.1.1-review.md",
-    "report_sha256": "b29397a3c8b82a7bd5386466e8b910ca4a2d4e05827edac74850876996a9013c"
+    "report_sha256": "af3143f8e80405e3d9021483a1f8d6486ede953339538382a369590fcaeecae9",
+    "prior_manifest_digest": "b2f803132a96ea96e945f5c11527fccb630ad2e72f0390b794528c732421e969",
+    "prior_report_sha256": "b29397a3c8b82a7bd5386466e8b910ca4a2d4e05827edac74850876996a9013c",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "2.1.2",
-    "manifest_digest": "1880801d21ded24620f2dd693ea3f66b6dc81bfd63730ce579b4d546080fbed4",
+    "manifest_digest": "63cf4d55033f68d6326895949a3cdb0eea04a8fb4f0ff668cbb8578249d856de",
     "student_pdf_pages": [
       15,
       16,
@@ -44,11 +47,14 @@
       4
     ],
     "report": "2.1.2-review.md",
-    "report_sha256": "d66b5bb493e0ce45e6b0cfd5c57c1a06609cf39d23b1f971adc55a8ce30b226e"
+    "report_sha256": "9a1999ac5b77f0f947b53d01d7d2de6da5c76d16bc9d6ddc0a2f1dc6d5603408",
+    "prior_manifest_digest": "1880801d21ded24620f2dd693ea3f66b6dc81bfd63730ce579b4d546080fbed4",
+    "prior_report_sha256": "d66b5bb493e0ce45e6b0cfd5c57c1a06609cf39d23b1f971adc55a8ce30b226e",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "2.1.3",
-    "manifest_digest": "7eeefa338247e6cf772d8d599fe16b95bff25b7d27282d803cbfefb88356d8f9",
+    "manifest_digest": "2d593281409546cba9653bb48c365411fe41815c34e1f8965aa90aa43fd5bbee",
     "student_pdf_pages": [
       24,
       25,
@@ -67,11 +73,14 @@
       4
     ],
     "report": "2.1.3-review.md",
-    "report_sha256": "01676c23a3111e02deeae74a03c9ada97dd4a2eb3e1ad08851613eefd7439c12"
+    "report_sha256": "44832c5928990aa3773f6704bbbf833fbd9de0290de4b78487ed15d2e5b4e876",
+    "prior_manifest_digest": "7eeefa338247e6cf772d8d599fe16b95bff25b7d27282d803cbfefb88356d8f9",
+    "prior_report_sha256": "01676c23a3111e02deeae74a03c9ada97dd4a2eb3e1ad08851613eefd7439c12",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "2.1.4",
-    "manifest_digest": "601b771b49806dd0fb722d4f2ddf7313cc7fc28ea59adb41d6db3d164d5c5524",
+    "manifest_digest": "a565a8fc40852cab4e4cc4157da2a6d02c86e44a74a14803e435bcccb7f05293",
     "student_pdf_pages": [
       31,
       32,
@@ -90,11 +99,14 @@
       4
     ],
     "report": "2.1.4-review.md",
-    "report_sha256": "106025c92a8244694e57cd2bde547915ff9a08b08e62c7ccc378831f9b99772e"
+    "report_sha256": "325ff7d2c7165f0f0e688e969fd19f7052c723f7b5e99f36171e2ffe11a9b868",
+    "prior_manifest_digest": "601b771b49806dd0fb722d4f2ddf7313cc7fc28ea59adb41d6db3d164d5c5524",
+    "prior_report_sha256": "106025c92a8244694e57cd2bde547915ff9a08b08e62c7ccc378831f9b99772e",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "2.2.1",
-    "manifest_digest": "eb51262e0f2779749cf9478371f254d0214b3c7677f59fe81f92dd67fdf8854b",
+    "manifest_digest": "800854772990331879d318f495fda5505dbbee2b5b1036df24d862d43bdf37dd",
     "student_pdf_pages": [
       38,
       41,
@@ -116,11 +128,14 @@
       38
     ],
     "report": "2.2.1-review.md",
-    "report_sha256": "928733e2020e8938d31f179f96c56bfb76000b2b2a2a64cc8ae64f9a160e5362"
+    "report_sha256": "457127bcd20e96395791f9dcefa1d37cb42a2bad6000a5de7c6ff7b36b32ccc8",
+    "prior_manifest_digest": "eb51262e0f2779749cf9478371f254d0214b3c7677f59fe81f92dd67fdf8854b",
+    "prior_report_sha256": "928733e2020e8938d31f179f96c56bfb76000b2b2a2a64cc8ae64f9a160e5362",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "2.2.2",
-    "manifest_digest": "9b2824abb9da69b893c9266dd687a6aaf7e3067a2b0b8ffceaf01f190fa250f6",
+    "manifest_digest": "627f0d113aa8cc88c72bd19b23443017934507d0144c80be5694980872c8306d",
     "student_pdf_pages": [
       49,
       50,
@@ -141,11 +156,14 @@
       38
     ],
     "report": "2.2.2-review.md",
-    "report_sha256": "a211eea28ccf52702cfe99b4c5d53fcc14aae15bce6fc0ba35eebae54ba74c30"
+    "report_sha256": "e9a7a9298eb5938314c3b54e6c93aee21363622fe9f041dabdb47a1067d48deb",
+    "prior_manifest_digest": "9b2824abb9da69b893c9266dd687a6aaf7e3067a2b0b8ffceaf01f190fa250f6",
+    "prior_report_sha256": "a211eea28ccf52702cfe99b4c5d53fcc14aae15bce6fc0ba35eebae54ba74c30",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "2.2.3",
-    "manifest_digest": "a0ac0127c8d5e942cbff7d2628a4632ef89616bc808d4dce2d71cda50b718a1c",
+    "manifest_digest": "ccf973432d35a69979e52403d966d235590a7dd68fa120ab2a46d8f9f7cd9f1b",
     "student_pdf_pages": [
       60,
       61,
@@ -167,11 +185,14 @@
       38
     ],
     "report": "2.2.3-review.md",
-    "report_sha256": "b96505862a9edaf146eeb8a1ada7f569490da1a5b7d149145278b452dae3aa47"
+    "report_sha256": "ad1339ab519151f98db9632fbba292e8b4e7794f2ecf6e093f20646d87bc3f2c",
+    "prior_manifest_digest": "a0ac0127c8d5e942cbff7d2628a4632ef89616bc808d4dce2d71cda50b718a1c",
+    "prior_report_sha256": "b96505862a9edaf146eeb8a1ada7f569490da1a5b7d149145278b452dae3aa47",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "2.2.4",
-    "manifest_digest": "a35680eb142d781ed8e23b0ee034d79aacbb4c900f9b8035903ea904412e55fa",
+    "manifest_digest": "987a682cb4eb917e25a85eb4deae55867a76aee902bc68ac824efac06f7acfaf",
     "student_pdf_pages": [
       66,
       67
@@ -191,11 +212,14 @@
       38
     ],
     "report": "2.2.4-review.md",
-    "report_sha256": "decb58aca3908d2abafa6546831984c76e5b088a31e67c5eb294c74a41f5c53c"
+    "report_sha256": "e5784bdfb0053799919b50fee5cfc16a0d262aed80287c1dd6d75b5724abe453",
+    "prior_manifest_digest": "a35680eb142d781ed8e23b0ee034d79aacbb4c900f9b8035903ea904412e55fa",
+    "prior_report_sha256": "decb58aca3908d2abafa6546831984c76e5b088a31e67c5eb294c74a41f5c53c",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "2.3.1",
-    "manifest_digest": "c3620b607ac1845d705bc82593919fbbd6afb999653b90ce24e63cd594da666c",
+    "manifest_digest": "db7dd42b1d24b6cf498fb72b05d13712901da8202c7f8bbced918bd7214b1d92",
     "student_pdf_pages": [
       74,
       77,
@@ -218,11 +242,14 @@
       74
     ],
     "report": "2.3.1-review.md",
-    "report_sha256": "a2d073c72680ac8a1fec8427f4e6425d94f3a4a3d0629381ce5f55534025c0b8"
+    "report_sha256": "16207a25fce12a6ea33027e45630588990fe429f528faba8a4aa504a24daa9d2",
+    "prior_manifest_digest": "c3620b607ac1845d705bc82593919fbbd6afb999653b90ce24e63cd594da666c",
+    "prior_report_sha256": "a2d073c72680ac8a1fec8427f4e6425d94f3a4a3d0629381ce5f55534025c0b8",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "2.3.2",
-    "manifest_digest": "9398bd514bc29841b05e13a998ba64025d63a96966fa1d5b059433bd551a8757",
+    "manifest_digest": "3dcc473adefeb0f25320286f50113c67c1c03d9faa19bdb94d59352f202736d0",
     "student_pdf_pages": [
       85,
       86,
@@ -245,11 +272,14 @@
       74
     ],
     "report": "2.3.2-review.md",
-    "report_sha256": "b90632d773ef9179e1c21bab6693aa1ba9040b7d7bd8d6caa0b349d799d8b2b3"
+    "report_sha256": "5b669c6c078db1793ec8643ab85b75d88d84da0734ffc9e99f283541201c6f76",
+    "prior_manifest_digest": "9398bd514bc29841b05e13a998ba64025d63a96966fa1d5b059433bd551a8757",
+    "prior_report_sha256": "b90632d773ef9179e1c21bab6693aa1ba9040b7d7bd8d6caa0b349d799d8b2b3",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "2.3.3",
-    "manifest_digest": "23f99d43c411878d2b9c5801667f61974315890d68509634467946b02def0563",
+    "manifest_digest": "9ba2ec4424b01a6370e55829380a7729bde59e22b03fe1710576b6333de20495",
     "student_pdf_pages": [
       97,
       98,
@@ -272,11 +302,14 @@
       74
     ],
     "report": "2.3.3-review.md",
-    "report_sha256": "e436a8dbf795335b7f87918a2ffa8ba48550bade73b368de2289e2727c09e7b6"
+    "report_sha256": "a6eb57fa1f3baed5d0c591efdc12b553d1fd0a7fff4b834864e84f61023a6300",
+    "prior_manifest_digest": "23f99d43c411878d2b9c5801667f61974315890d68509634467946b02def0563",
+    "prior_report_sha256": "e436a8dbf795335b7f87918a2ffa8ba48550bade73b368de2289e2727c09e7b6",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "2.3.4",
-    "manifest_digest": "e81719616b20741a8cc543eda444f1176ccd5fdb7a7a2a21b0f4d2f3ec23990e",
+    "manifest_digest": "ba3f41ccd921ad815cfdb0e32022884178f46c9f88a10f4250ac862a6d132b7e",
     "student_pdf_pages": [
       103,
       104
@@ -297,11 +330,14 @@
       74
     ],
     "report": "2.3.4-review.md",
-    "report_sha256": "9f2cce6534c08a1cefb6ffa4e3c7215936b31c98c997e384a2fa65738ba4f356"
+    "report_sha256": "4221991d6d44ae5e68f3b38e5685b40961b565d128eca6a2937d184e05e7e185",
+    "prior_manifest_digest": "e81719616b20741a8cc543eda444f1176ccd5fdb7a7a2a21b0f4d2f3ec23990e",
+    "prior_report_sha256": "9f2cce6534c08a1cefb6ffa4e3c7215936b31c98c997e384a2fa65738ba4f356",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.1.1",
-    "manifest_digest": "164c67ffabf0c8b170fec50824c0ffa380565633a8775395d3f1ee166215039b",
+    "manifest_digest": "b9add434b6f6b61299f1f5e7440dd7ebf650e26e8bb5e4d1e095edc4c0c53a7c",
     "student_pdf_pages": [
       6,
       8,
@@ -328,11 +364,14 @@
       6
     ],
     "report": "3.1.1-review.md",
-    "report_sha256": "7e584f96a5a3578673782022e449f1f4d9283ec05480d760c225d2096dc99b19"
+    "report_sha256": "6f5c8e1b5a7c1af0a45bc0e860317098f9ab7a64edaa693d0c51b967620e3761",
+    "prior_manifest_digest": "164c67ffabf0c8b170fec50824c0ffa380565633a8775395d3f1ee166215039b",
+    "prior_report_sha256": "7e584f96a5a3578673782022e449f1f4d9283ec05480d760c225d2096dc99b19",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.1.2",
-    "manifest_digest": "30e5012fcf4ba0e7b4af55a67cbd3747b0347f4646b2b53244414a385e029d31",
+    "manifest_digest": "f8b171cb67df4a580b4ebe16225af8649e769656426dc098ff6e2be56d2c19a7",
     "student_pdf_pages": [
       17,
       18,
@@ -358,11 +397,14 @@
       6
     ],
     "report": "3.1.2-review.md",
-    "report_sha256": "cdd0f8b29628bf6106e4e859ab96df78016be85fd99ef5ce14734f861effe557"
+    "report_sha256": "902376836438ab91d462b8449764cc70f5e789f6ec6f5c98c69bb8454ef5754e",
+    "prior_manifest_digest": "30e5012fcf4ba0e7b4af55a67cbd3747b0347f4646b2b53244414a385e029d31",
+    "prior_report_sha256": "cdd0f8b29628bf6106e4e859ab96df78016be85fd99ef5ce14734f861effe557",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.1.3",
-    "manifest_digest": "f33586b6984c1cc07b27308a604d225ebc52e7eed6810a72404d9705e92fcacc",
+    "manifest_digest": "611bf3d5a64465154d69bac7b55862af1db9cef0337d6add9c085227cdca8509",
     "student_pdf_pages": [
       25,
       26,
@@ -389,11 +431,14 @@
       6
     ],
     "report": "3.1.3-review.md",
-    "report_sha256": "e3b4805bc3c465f1146225be28bda86ac1fc2fdc86d112d908c95638b2c55f54"
+    "report_sha256": "c118cd9ea6088bc6317a9f3e3489d7e63a66151bb8f4b439df9917afcd5b8dee",
+    "prior_manifest_digest": "f33586b6984c1cc07b27308a604d225ebc52e7eed6810a72404d9705e92fcacc",
+    "prior_report_sha256": "e3b4805bc3c465f1146225be28bda86ac1fc2fdc86d112d908c95638b2c55f54",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.1.4",
-    "manifest_digest": "1fa1fda7892929f1da53ca181ab79eb74a2fa3ec703025e4df5378b1e04febcf",
+    "manifest_digest": "06ace9f0e028572f03b1bfd2b59c61e59d196a5c40cc222ac2a7acd6e7339c07",
     "student_pdf_pages": [
       33,
       34,
@@ -419,11 +464,14 @@
       6
     ],
     "report": "3.1.4-review.md",
-    "report_sha256": "c0ab24ba687b89e18881f55d76f3d5d86adda7e01ce3b4525abfff7e4f07ab23"
+    "report_sha256": "13ba3c54bb6ed15022b9587842085403f81e4f8fa323594ca9d56f4a00e39bde",
+    "prior_manifest_digest": "1fa1fda7892929f1da53ca181ab79eb74a2fa3ec703025e4df5378b1e04febcf",
+    "prior_report_sha256": "c0ab24ba687b89e18881f55d76f3d5d86adda7e01ce3b4525abfff7e4f07ab23",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.1.5",
-    "manifest_digest": "14fd8822fbf603bc386b343cd85beafba8b7e99d6ac3ff9aa30f8e5603021a1f",
+    "manifest_digest": "684c17c78c1673834dd2afd2cfe81381f6da28898440ac867b8bace1041b3364",
     "student_pdf_pages": [
       41,
       42,
@@ -450,11 +498,14 @@
       6
     ],
     "report": "3.1.5-review.md",
-    "report_sha256": "8ca95330fa27be226abf1f3da22299e4c65e5799337c145ee2751a405f608585"
+    "report_sha256": "901ebb589d32c4697839f1a5c815403ad5d61d7ab01cda61ea145576d5c2398b",
+    "prior_manifest_digest": "14fd8822fbf603bc386b343cd85beafba8b7e99d6ac3ff9aa30f8e5603021a1f",
+    "prior_report_sha256": "8ca95330fa27be226abf1f3da22299e4c65e5799337c145ee2751a405f608585",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.1.6",
-    "manifest_digest": "67b4c082a88ad338986ea69aa121d1d6ba61c625441d7a0534b56fe9800694c9",
+    "manifest_digest": "dfd1b1958a8f52c7a589817e6a3633cb990112e10cf091f73fd99ff5d70a9421",
     "student_pdf_pages": [
       48,
       49
@@ -478,11 +529,14 @@
       6
     ],
     "report": "3.1.6-review.md",
-    "report_sha256": "0470a6ad5789f0dbfcedabbb10d56350bce285120b84a168c03613d49509727b"
+    "report_sha256": "93a4b13ef5a2430e4676845cc671deed7ccc4e05d67cbfbf56ecd591f2fdb876",
+    "prior_manifest_digest": "67b4c082a88ad338986ea69aa121d1d6ba61c625441d7a0534b56fe9800694c9",
+    "prior_report_sha256": "0470a6ad5789f0dbfcedabbb10d56350bce285120b84a168c03613d49509727b",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.2.1",
-    "manifest_digest": "30e1f2a0db18a940e9d46758ce31f951b2ef859857d893c4d3a67cb5b1fcbd31",
+    "manifest_digest": "afebb46f3ed53477ad3b59cbdbda458371c947584ced98bff5cfa2f2b9652e49",
     "student_pdf_pages": [
       54,
       56,
@@ -506,11 +560,14 @@
       54
     ],
     "report": "3.2.1-review.md",
-    "report_sha256": "003b4ae0f0e21751429509f9aad3ec550fe6213f8386414379916e66dc369843"
+    "report_sha256": "2722300639f2027d9b2e35a63a883dc1e8e91d3f2fd8679140ffb71285272f65",
+    "prior_manifest_digest": "30e1f2a0db18a940e9d46758ce31f951b2ef859857d893c4d3a67cb5b1fcbd31",
+    "prior_report_sha256": "003b4ae0f0e21751429509f9aad3ec550fe6213f8386414379916e66dc369843",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.2.2",
-    "manifest_digest": "99e8fb6bcccfea2709d9b78f9d6890b051079548fcc12b934798a41011ea7e2c",
+    "manifest_digest": "2af162fe1f39e8ab223c71992b7bad2101b6c0ee3a39440a88975c0cc49ed15b",
     "student_pdf_pages": [
       64,
       65,
@@ -533,11 +590,14 @@
       54
     ],
     "report": "3.2.2-review.md",
-    "report_sha256": "96b6806bcff8797af582cb708fe14de7c79d88a0da2d6c817d653cd09f5f67f5"
+    "report_sha256": "9adeb8b3786e66ddd0188792cdb9cd62f516bc72e1ba59586d6ae87b2d529b6e",
+    "prior_manifest_digest": "99e8fb6bcccfea2709d9b78f9d6890b051079548fcc12b934798a41011ea7e2c",
+    "prior_report_sha256": "96b6806bcff8797af582cb708fe14de7c79d88a0da2d6c817d653cd09f5f67f5",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.2.3",
-    "manifest_digest": "f75ed80d24976b16f06d262cdf5882a974d3d370b36eb902915ffe6803d03c0e",
+    "manifest_digest": "49fedfb74c2be11a723fbfeec060743cde1bf652026335bf9edaaef4f33b3caa",
     "student_pdf_pages": [
       72,
       73,
@@ -561,11 +621,14 @@
       54
     ],
     "report": "3.2.3-review.md",
-    "report_sha256": "7811827c767c883d6fa13bef634de3a90ae581bfae96f86c08f0b87b486d2729"
+    "report_sha256": "50b84851854c4fb664e33e9fb1aa819758e28ac628ffb94559e78af1aa110ebe",
+    "prior_manifest_digest": "f75ed80d24976b16f06d262cdf5882a974d3d370b36eb902915ffe6803d03c0e",
+    "prior_report_sha256": "7811827c767c883d6fa13bef634de3a90ae581bfae96f86c08f0b87b486d2729",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.2.4",
-    "manifest_digest": "bef57d8cb8576ed7c4d6876c13d532b026bf85e028d71ef354e5c4ca81bc10ba",
+    "manifest_digest": "4755510d91c2e625c14a0e37b325ce036edac55b4e34a4ea1f4911a196e80f65",
     "student_pdf_pages": [
       79,
       80
@@ -587,11 +650,14 @@
       54
     ],
     "report": "3.2.4-review.md",
-    "report_sha256": "37715df7fe281c5a647b1fcf99d700b23955c12929bd2015b91e37562d92051d"
+    "report_sha256": "583c864ff06fb4e10393b87a1c50a9bd16eab2db6b058351a9d90b9137fc2753",
+    "prior_manifest_digest": "bef57d8cb8576ed7c4d6876c13d532b026bf85e028d71ef354e5c4ca81bc10ba",
+    "prior_report_sha256": "37715df7fe281c5a647b1fcf99d700b23955c12929bd2015b91e37562d92051d",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.3.1",
-    "manifest_digest": "20cda45d8c478f5b30f328f81ffb55c4d3e6752a438fde62951ecf22f2ce79d0",
+    "manifest_digest": "a3ce48eb1b126a98a053766ae005c970ec0d8300302e597adf5349c975ec0b81",
     "student_pdf_pages": [
       88,
       91,
@@ -615,11 +681,14 @@
       88
     ],
     "report": "3.3.1-review.md",
-    "report_sha256": "90bb1bcc12d838b30311996f3e40ee78a4f961e75460ba414833174cc12b15be"
+    "report_sha256": "05660bf5a02bae448a54e2ae0dc1067b5a37f6a4c6fd248265da182b10b84cce",
+    "prior_manifest_digest": "20cda45d8c478f5b30f328f81ffb55c4d3e6752a438fde62951ecf22f2ce79d0",
+    "prior_report_sha256": "90bb1bcc12d838b30311996f3e40ee78a4f961e75460ba414833174cc12b15be",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.3.2",
-    "manifest_digest": "49836f94dd782136437413220185b328da5236fb0cf06bd13e3c64ca0d7e5bf3",
+    "manifest_digest": "a6d859896cc7548f3676ba0d2d8be95eef58a52d0f71f1addb8db9fccebd8937",
     "student_pdf_pages": [
       101,
       102,
@@ -642,11 +711,14 @@
       88
     ],
     "report": "3.3.2-review.md",
-    "report_sha256": "45469918169840af478fe394df6e078b91e7c1e0c660fccb99eace317b18231e"
+    "report_sha256": "8f4d1f58fa7dea07efabec51c12a35b9006869bb831b6580778fb269408e6913",
+    "prior_manifest_digest": "49836f94dd782136437413220185b328da5236fb0cf06bd13e3c64ca0d7e5bf3",
+    "prior_report_sha256": "45469918169840af478fe394df6e078b91e7c1e0c660fccb99eace317b18231e",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.3.3",
-    "manifest_digest": "bff74d30dc5561843bcd2099cefb936e7d95488168a2ba815d69901634fc6497",
+    "manifest_digest": "55f3ab3e06d909f75d3a31226a1abbab96bc805f8a852009c39732496545d237",
     "student_pdf_pages": [
       111,
       112,
@@ -670,11 +742,14 @@
       88
     ],
     "report": "3.3.3-review.md",
-    "report_sha256": "ec2984a13a12af7e2dabba7c4b81a800d14412675df5c29fe29dcb0225ea8e6e"
+    "report_sha256": "ac4a707d384bf012415283e2002e90f719a093fc236b90e0ca0e205c4839ec5c",
+    "prior_manifest_digest": "bff74d30dc5561843bcd2099cefb936e7d95488168a2ba815d69901634fc6497",
+    "prior_report_sha256": "ec2984a13a12af7e2dabba7c4b81a800d14412675df5c29fe29dcb0225ea8e6e",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "3.3.4",
-    "manifest_digest": "eaa533d27dc8bb4b301a3ff2ed4ce2cfbd469a15d19830db8f02f0d7e67b709f",
+    "manifest_digest": "77328be6fa810f1e21c78c334440a8a01e3dcf3714537b317ea31fefe7fc3a3a",
     "student_pdf_pages": [
       117,
       118
@@ -696,11 +771,14 @@
       88
     ],
     "report": "3.3.4-review.md",
-    "report_sha256": "2c00948fc2b2ddd530de12252d1be55842bfd4154e1a900948a7b48e36486d3b"
+    "report_sha256": "57a259dc0384445bf5b0fb82dd64c4821caf0fa36d8a4e30fe4738741bc48bc9",
+    "prior_manifest_digest": "eaa533d27dc8bb4b301a3ff2ed4ce2cfbd469a15d19830db8f02f0d7e67b709f",
+    "prior_report_sha256": "2c00948fc2b2ddd530de12252d1be55842bfd4154e1a900948a7b48e36486d3b",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.1.1",
-    "manifest_digest": "633a4d4a1478af9df107e0f182bb5ebe4c0d1e90d55e6cd6e9f16f67c1c3fade",
+    "manifest_digest": "e6240df0952777978df9b4cca27bbf671198a12c978c2fdec1a858f9a98efed1",
     "student_pdf_pages": [
       7,
       10,
@@ -725,11 +803,14 @@
       6
     ],
     "report": "4.1.1-review.md",
-    "report_sha256": "1ba4bf827f05f73539d8fc64f02a1335eb3ab54204c8a575cf80fe2f66a66e79"
+    "report_sha256": "d20ecddfe4a57f4be6e92afab5fce1ac168bb4a6f889a3f4f05639b5fa441bb3",
+    "prior_manifest_digest": "633a4d4a1478af9df107e0f182bb5ebe4c0d1e90d55e6cd6e9f16f67c1c3fade",
+    "prior_report_sha256": "1ba4bf827f05f73539d8fc64f02a1335eb3ab54204c8a575cf80fe2f66a66e79",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.1.2",
-    "manifest_digest": "4824bc62e297e42bc80fa8871845aa6d8b0aca5a93d3ff44fffd641fdc0c1287",
+    "manifest_digest": "625c509bea616c849c15f2204883fc0f2811febe0fdd6d4d3a84675b78a92f19",
     "student_pdf_pages": [
       18,
       19,
@@ -754,11 +835,14 @@
       6
     ],
     "report": "4.1.2-review.md",
-    "report_sha256": "c6e9de73652fd23043648b23b9f900ef0aa377d18cc5231dc3da691c3a85a047"
+    "report_sha256": "f1cdd55a674065db847299d72c9152f1be9dcc97c8ba9660a5234db26fc17cda",
+    "prior_manifest_digest": "4824bc62e297e42bc80fa8871845aa6d8b0aca5a93d3ff44fffd641fdc0c1287",
+    "prior_report_sha256": "c6e9de73652fd23043648b23b9f900ef0aa377d18cc5231dc3da691c3a85a047",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.1.3",
-    "manifest_digest": "a921eb89ba39914b911f6551b36f4534cd1b31e547f2f7aa1ea43a1abde6f25b",
+    "manifest_digest": "abf2ace0b03f3c3a49fc8509397bcbf405c084287e1804c954cf54e2f9b62cb8",
     "student_pdf_pages": [
       28,
       29,
@@ -783,11 +867,14 @@
       6
     ],
     "report": "4.1.3-review.md",
-    "report_sha256": "aec39adaf8c2bee9aaa4f489867f9f75f1a8824e25e055bc56a7b65d8fd28da4"
+    "report_sha256": "aa6eed7b59d9f353e7b5d1be2f37c442f23f15c528045106ec877c4fcc8c39b9",
+    "prior_manifest_digest": "a921eb89ba39914b911f6551b36f4534cd1b31e547f2f7aa1ea43a1abde6f25b",
+    "prior_report_sha256": "aec39adaf8c2bee9aaa4f489867f9f75f1a8824e25e055bc56a7b65d8fd28da4",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.1.4",
-    "manifest_digest": "1d1043f967a7fd57b4e37c6cecc20647e397f5f335be5dd014873713fd99f5cb",
+    "manifest_digest": "fe2893c488dbde8d62e4810c369eec49e3b1b35755e460d8ecbb52298070f224",
     "student_pdf_pages": [
       40,
       41,
@@ -812,11 +899,14 @@
       6
     ],
     "report": "4.1.4-review.md",
-    "report_sha256": "ecd0566fa97f97d12886092e1eadfab7cb7f497199e411760e84c8891485ec1b"
+    "report_sha256": "c8e81e0a62866cbcd4e545faf3d39fafaf5f98c65e714071f859974b880bfc05",
+    "prior_manifest_digest": "1d1043f967a7fd57b4e37c6cecc20647e397f5f335be5dd014873713fd99f5cb",
+    "prior_report_sha256": "ecd0566fa97f97d12886092e1eadfab7cb7f497199e411760e84c8891485ec1b",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.1.5",
-    "manifest_digest": "b83513b5da28c2df2711b7355fb97a5b2e4062a46db29b279c81ade1bbc5185a",
+    "manifest_digest": "5a91d09e146894a33203fb1a199b8f77d08d102881ec32e71e40030ac22119c7",
     "student_pdf_pages": [
       46,
       47
@@ -839,11 +929,14 @@
       6
     ],
     "report": "4.1.5-review.md",
-    "report_sha256": "9809f9864a5753eab812a41b83b5b27b15e54d12a2d5873f6805f1376ccb92b3"
+    "report_sha256": "f855bcb4a679524daf094d94344859b1c97c3cdc5d87a7f6a4ad0bd8c57a3d43",
+    "prior_manifest_digest": "b83513b5da28c2df2711b7355fb97a5b2e4062a46db29b279c81ade1bbc5185a",
+    "prior_report_sha256": "9809f9864a5753eab812a41b83b5b27b15e54d12a2d5873f6805f1376ccb92b3",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.2.1",
-    "manifest_digest": "bb9fd9b6380a32e48d0ccc96249d233aae81d2efa8e35c7a22d18134bf71cdad",
+    "manifest_digest": "679a0b0bb2ffb5c58cf64751fe7c6764f94c119f57fbe019453a96ab2d461ac1",
     "student_pdf_pages": [
       55,
       58,
@@ -870,11 +963,14 @@
       54
     ],
     "report": "4.2.1-review.md",
-    "report_sha256": "ba233031253bf9fabd8aa1ce9865f4b5bab5f0303d9129a44f09c79e7e1496d0"
+    "report_sha256": "e44d3afe1b6d4a8e3c94eb528373ae997f8df2b83ec29752b949ea310b06e60f",
+    "prior_manifest_digest": "bb9fd9b6380a32e48d0ccc96249d233aae81d2efa8e35c7a22d18134bf71cdad",
+    "prior_report_sha256": "ba233031253bf9fabd8aa1ce9865f4b5bab5f0303d9129a44f09c79e7e1496d0",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.2.2",
-    "manifest_digest": "5f7f6d3e47fe13bfb7fe9e6a23b3341e9ddad0cad5f078d8882639099a2d3e74",
+    "manifest_digest": "a5fe7130d16841294ae8668d3e70a0b3ec71c5882c5ff248b282921154c11f22",
     "student_pdf_pages": [
       65,
       66,
@@ -900,11 +996,14 @@
       54
     ],
     "report": "4.2.2-review.md",
-    "report_sha256": "70655f53c1062cdf1293d4b8d4c88ee67c24148f60cac7a77588b3e56f5318ac"
+    "report_sha256": "4888e3135cbcb878ad6fb339799efcaa106fa05409d5b731217b81942c2e4946",
+    "prior_manifest_digest": "5f7f6d3e47fe13bfb7fe9e6a23b3341e9ddad0cad5f078d8882639099a2d3e74",
+    "prior_report_sha256": "70655f53c1062cdf1293d4b8d4c88ee67c24148f60cac7a77588b3e56f5318ac",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.2.3",
-    "manifest_digest": "fff148c5b88e959817e801ba411b25defb6e4da89e83bae4390a9c144faba1bd",
+    "manifest_digest": "4c024c6393043572d430ce000b313baf1489d49744e8c687e3ef41e16a8c699f",
     "student_pdf_pages": [
       72,
       73,
@@ -930,11 +1029,14 @@
       54
     ],
     "report": "4.2.3-review.md",
-    "report_sha256": "5e84883259c56320ed8f7ba6ad89ef6df2b8746b377e7361baaf2ccc41d5870f"
+    "report_sha256": "3c1bf6593e23d95791448605690def268b0b067975c22f0448de6ee70dc3ca33",
+    "prior_manifest_digest": "fff148c5b88e959817e801ba411b25defb6e4da89e83bae4390a9c144faba1bd",
+    "prior_report_sha256": "5e84883259c56320ed8f7ba6ad89ef6df2b8746b377e7361baaf2ccc41d5870f",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.2.4",
-    "manifest_digest": "fe5fbec09ca92aef484ad0091af83131f13fd20fea8cb0ea02f80516fd76d170",
+    "manifest_digest": "eee613f46d89cbdd474051e02d29843e222b259224ecba64adeaa1af80890b70",
     "student_pdf_pages": [
       82,
       83,
@@ -960,11 +1062,14 @@
       54
     ],
     "report": "4.2.4-review.md",
-    "report_sha256": "ba23ee3bf9a6146cf50e5ec29b14eff2490a9d680078f44a42543978195a6507"
+    "report_sha256": "6d4403e417a491503759c0494d18171df496d360e4388b1225e0783aa2f74185",
+    "prior_manifest_digest": "fe5fbec09ca92aef484ad0091af83131f13fd20fea8cb0ea02f80516fd76d170",
+    "prior_report_sha256": "ba23ee3bf9a6146cf50e5ec29b14eff2490a9d680078f44a42543978195a6507",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.2.5",
-    "manifest_digest": "40fd510fd921b905a5e943de5988ca3677c66a85bf6a43f0fc82fe084400e5ee",
+    "manifest_digest": "f64e63f0364f8fb218e1e3af18c3f978dddfad1a868844d31ef34ca82c0881d6",
     "student_pdf_pages": [
       93,
       94,
@@ -990,11 +1095,14 @@
       54
     ],
     "report": "4.2.5-review.md",
-    "report_sha256": "2c52853e1775dd2e6989933dcf23d15be26cf4133a55ef7e0658dbb7e1d86681"
+    "report_sha256": "7e8c122a0ccee9a55b32d37c5fd997c2132ff7b2ee8c315ab5bb1194607d30ad",
+    "prior_manifest_digest": "40fd510fd921b905a5e943de5988ca3677c66a85bf6a43f0fc82fe084400e5ee",
+    "prior_report_sha256": "2c52853e1775dd2e6989933dcf23d15be26cf4133a55ef7e0658dbb7e1d86681",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.2.6",
-    "manifest_digest": "44cc6959a0af5c8b893d4e9ad04c9c5485f7ea11fd33e7a41718015dbe246e84",
+    "manifest_digest": "2231cd5704c5d64670396b200048e511717f7c52817a88ebe744be742767f5bc",
     "student_pdf_pages": [
       100,
       101,
@@ -1021,11 +1129,14 @@
       54
     ],
     "report": "4.2.6-review.md",
-    "report_sha256": "e6140a44597f1834c26dea6009969d4320aa20e477d5d9f0813df5ef0dc63b5d"
+    "report_sha256": "869925d02d44281fcbcbe5e3e8ccda841745dd83828f6f26f5a868bd5e4cb442",
+    "prior_manifest_digest": "44cc6959a0af5c8b893d4e9ad04c9c5485f7ea11fd33e7a41718015dbe246e84",
+    "prior_report_sha256": "e6140a44597f1834c26dea6009969d4320aa20e477d5d9f0813df5ef0dc63b5d",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.2.7",
-    "manifest_digest": "dd80343aec511236f0073f7f72fb0e2567720533a4de4b537666351fdb614042",
+    "manifest_digest": "42b807fbe311d3a49120f6d6cded7509a8d607b96ffdd0877029d121292913e9",
     "student_pdf_pages": [
       105,
       106
@@ -1050,11 +1161,14 @@
       54
     ],
     "report": "4.2.7-review.md",
-    "report_sha256": "db3b30b52d8f1215e5067553c81479a07d48cb507d712b7d84a3b657fc0037cd"
+    "report_sha256": "6ea1e672b678977e2f90a5234e1507ab38814a8d21afdb37c9bf1fdd96baddbf",
+    "prior_manifest_digest": "dd80343aec511236f0073f7f72fb0e2567720533a4de4b537666351fdb614042",
+    "prior_report_sha256": "db3b30b52d8f1215e5067553c81479a07d48cb507d712b7d84a3b657fc0037cd",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.3.1",
-    "manifest_digest": "6ebc41ace7489f4cac0f946cbeeba17a3b9ac75d807ea1493d18578044ccc93b",
+    "manifest_digest": "d7f9461486b24a5009c84ea33ceb747e46d91f04aebe86e1085af2fa24326b2d",
     "student_pdf_pages": [
       114,
       118,
@@ -1081,11 +1195,14 @@
       114
     ],
     "report": "4.3.1-review.md",
-    "report_sha256": "cc3b5baa966876bc0ec4047f45518095547b0ebd9678fcf7d787e97977472857"
+    "report_sha256": "ae61bbc392dabbcf37aed23d86a61901ca466352a42ca949a6557ed1f8bd8020",
+    "prior_manifest_digest": "6ebc41ace7489f4cac0f946cbeeba17a3b9ac75d807ea1493d18578044ccc93b",
+    "prior_report_sha256": "cc3b5baa966876bc0ec4047f45518095547b0ebd9678fcf7d787e97977472857",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.3.2",
-    "manifest_digest": "d4fc2deb6e38d0b866c8a97fdfa0f5833db26a00583215998542bfacb410c814",
+    "manifest_digest": "370494870ad20ac5b7a0061c16c00e5a7ecc6ba40a2988718ce0462b65f59638",
     "student_pdf_pages": [
       127,
       128,
@@ -1110,11 +1227,14 @@
       114
     ],
     "report": "4.3.2-review.md",
-    "report_sha256": "8ec24875ca34351f68b1af6788f9a5e9063c8850eeefd976a10398f6c5c3b6a3"
+    "report_sha256": "fda1e232684779b3124ddae00b7b5360f0c1be172641710238b87c6d25715d08",
+    "prior_manifest_digest": "d4fc2deb6e38d0b866c8a97fdfa0f5833db26a00583215998542bfacb410c814",
+    "prior_report_sha256": "8ec24875ca34351f68b1af6788f9a5e9063c8850eeefd976a10398f6c5c3b6a3",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.3.3",
-    "manifest_digest": "e952e4f762edc32068505754d8da121585b87b81e0b5a1dd5b6f450551e2329e",
+    "manifest_digest": "73b6d0b92d3dfb054b4c5dd03bd78c7e1dd8f7ba37b83caad0398f38c2ee0f5c",
     "student_pdf_pages": [
       136,
       137,
@@ -1140,11 +1260,14 @@
       114
     ],
     "report": "4.3.3-review.md",
-    "report_sha256": "7b4ca00e942a099512fa0c1cf166f0df703c5e3d67e9503d4989503ab9f70112"
+    "report_sha256": "76f7deb2cd34775921998ccd5251c057c4a2d8ad2c6a38fcb4b860538372fa15",
+    "prior_manifest_digest": "e952e4f762edc32068505754d8da121585b87b81e0b5a1dd5b6f450551e2329e",
+    "prior_report_sha256": "7b4ca00e942a099512fa0c1cf166f0df703c5e3d67e9503d4989503ab9f70112",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.3.4",
-    "manifest_digest": "ab171caa29f108cbf707502d5ff7e7d4ca4216daf77c4d9f19555861a514e79b",
+    "manifest_digest": "80ae187b477c48fbaa9f97ba1f0289cc568ff3adb228fcd444db9e105065c5bf",
     "student_pdf_pages": [
       144,
       145,
@@ -1170,11 +1293,14 @@
       114
     ],
     "report": "4.3.4-review.md",
-    "report_sha256": "a5b87147b0e1ec223327cbfe23560c3b18360187c0847d287befba30e0587a71"
+    "report_sha256": "821389a648d93895b4b31737df562dac06eca8d6d462adbff0f5201ff326435f",
+    "prior_manifest_digest": "ab171caa29f108cbf707502d5ff7e7d4ca4216daf77c4d9f19555861a514e79b",
+    "prior_report_sha256": "a5b87147b0e1ec223327cbfe23560c3b18360187c0847d287befba30e0587a71",
+    "followup_evidence": "wording-review-addendum.md"
   },
   {
     "paragraph": "4.3.5",
-    "manifest_digest": "eb6f5092d1ba5be1002e051444ee104b66bd3e1d91fd65d18963ff16f5a86b63",
+    "manifest_digest": "92fe6867ea82caba66a44da3feb55bc14cae14ed59c78c24650df999d9e5ddce",
     "student_pdf_pages": [
       149,
       150,
@@ -1199,6 +1325,9 @@
       114
     ],
     "report": "4.3.5-review.md",
-    "report_sha256": "c03f7bc10981857d18b9176244058007704bd591bce6d28c7d41d48e6d70a275"
+    "report_sha256": "a3baa27209cadc96133db0c5a92de8ccb021990e008ca7af460b4fe818ffc8ac",
+    "prior_manifest_digest": "eb6f5092d1ba5be1002e051444ee104b66bd3e1d91fd65d18963ff16f5a86b63",
+    "prior_report_sha256": "c03f7bc10981857d18b9176244058007704bd591bce6d28c7d41d48e6d70a275",
+    "followup_evidence": "wording-review-addendum.md"
   }
 ]

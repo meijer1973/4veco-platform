@@ -4,7 +4,7 @@
   "revision": "exercise-routes-20260921",
   "scope": "Bounded route revision only; not native paragraph-records.js closure or new target approval",
   "baseline_lesson_commit": "e2843b47c828784ab594d004cef461cea929717f",
-  "edition_manifest_sha256": "c96c8635607855a31a23920c9dd6aadfe764ba3c325545ea93d547b8cd43abe5",
+  "edition_manifest_sha256": "a07127c5fe1e2595067c840608b722235188279441116c638f7e7dc7967f3b07",
   "hash_contract": "Lesson edition files: exact bytes; platform inputs: UTF-8 with LF",
   "platform_inputs": [
     {
@@ -99,8 +99,8 @@
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet.pdf",
-      "bytes": 5631608,
-      "sha256": "8f29719a01148466692a2c92ab1b3b6f18ff5704ffd07086a051ad72b8ee5d3e"
+      "bytes": 5631614,
+      "sha256": "8f0e86882fe48bcab9aa9d99c72fe9d9e5aff737e95b52efed7a66fbb8710065"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/boek/Boek_2_Compleet_Antwoorden.pdf",
@@ -415,7 +415,7 @@
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf",
       "bytes": 597909,
-      "sha256": "7da61e4a3a543349d513db0487bcdc8fc6c9e2faba1639951d13221119f9f58b"
+      "sha256": "64395db98166af40a5d885f49478da50ee28165ddc988782be23b30b7c0ddcc2"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md",
@@ -425,7 +425,7 @@
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
       "bytes": 1023164,
-      "sha256": "92c6bbf89964094f5649739087dac63bb8c96569a3326b90b8787a6b063169d3"
+      "sha256": "3785d452e22d75449b91559d5ba1997c7e635fc81c1c3f3f3ceed65111fb880f"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md",
@@ -435,7 +435,7 @@
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
       "bytes": 1031873,
-      "sha256": "30b4244f971960abc00c0c1bcc1222e141fd5c4abb3c6c7b3cf256c74dc66902"
+      "sha256": "7ba546140438ce91805e25b9a9fbc566d624c8d1d9a0ef68824410633e6dbfb3"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.1 Kostenstructuren/LEESMIJ.md",
@@ -480,7 +480,7 @@
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
       "bytes": 597513,
-      "sha256": "3b404ff811e55176e7f3972e1d7b6a98b007dcadd168ad4009f7028f79392b17"
+      "sha256": "c1c44428387bdf273948d2cc5cf9cb3b47dba091214f739108be8e0582267bfa"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md",
@@ -489,8 +489,8 @@
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
-      "bytes": 1022897,
-      "sha256": "eec67f8aa2168148fb07c5ce182cfcba62e88869a059ae51adff23cdec2c922e"
+      "bytes": 1022891,
+      "sha256": "cd90c82f52f5fca21327dcd4e2b948eacc0499dd5a8bc76ee6fc9bbd7aba5788"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
@@ -500,7 +500,7 @@
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
       "bytes": 1031667,
-      "sha256": "7ac53447e0e1b52b2231ea3ad67b354c1f54766cf749587880cf2b62839d0b2e"
+      "sha256": "2334b050188dda9727692a658395a5559fd360f60175eedea4de57b66a7aec45"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.2 Opbrengsten, winst en break-even/LEESMIJ.md",
@@ -585,7 +585,7 @@
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
       "bytes": 602248,
-      "sha256": "72224b33ffb0faf95da25292671b46486d314b58b7da6b6cd29d0f9c7fadbc03"
+      "sha256": "4665239658ddab3c60a53de4196dc54b5e338df0e29018744bc5ea56aa76a5e4"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
@@ -595,7 +595,7 @@
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
       "bytes": 1029136,
-      "sha256": "f51798e5deb96691cffff38347fb75bbf697d4c78fb2ddf9a09fb772118da269"
+      "sha256": "2238cad5661bf6a2c85d2f46963dd699a6de1a34378a1cba33fd3a80f1c4f91d"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
@@ -605,7 +605,7 @@
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
       "bytes": 1038329,
-      "sha256": "8ac8ca6ffc3cbc8f0a88b3fbf94dc838ce7cfdb678e05f2e61b8a995fa08febe"
+      "sha256": "dbcf83af115f43fdd23e196f6ddd5e8897dfadca5a9abe9f9af65ab19b5ecd78"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.3 Marginale kosten en marginale opbrengsten/LEESMIJ.md",
@@ -640,7 +640,7 @@
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
       "bytes": 599239,
-      "sha256": "d07fdce3d9bcd30ba56f0b76105d71aa21bb9fc93560186a811c59085086deba"
+      "sha256": "028c8f8df00c60503ec39f07cf50c88ad4571427e7ea68462bedd9b121b5e494"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md",
@@ -650,7 +650,7 @@
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
       "bytes": 1023030,
-      "sha256": "ae2e3f166644c868cd33d5324f20a0e4f89c9c5a2453a943e07d59a6cd10d1ce"
+      "sha256": "6b63f0ef28ce5a7bf5d02362b0041c405db01ebd9e22ebf1d756a0f1c466a69d"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/bronnen/H1/paragrafen/2.1.4 Gemengde opgaven/LEESMIJ.md",
@@ -764,8 +764,8 @@
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/hoofdstukken/Boek_2_H2_Elasticiteit.pdf",
-      "bytes": 803779,
-      "sha256": "7f95cb44da191bf9a2258c0299113aadad0cd8f644841e3c294c9370cdee2b2b"
+      "bytes": 803785,
+      "sha256": "40ac47e9adf0c2e896825567637048992a071b69c91e8a34a94f34067d799d55"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/hoofdstukken/Boek_2_H3_Antwoorden.pdf",
@@ -790,12 +790,12 @@
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/route-assembly-manifest.json",
       "bytes": 1374,
-      "sha256": "d162a8ab2949d5d951b43baecfaeaffc16b099f9017f99ce110cfd9ef9560229"
+      "sha256": "84901ff91ee22dfc63bfa98cb7a22905c90a6cec795946be1115734a0f0dae3b"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/route-chapter-inputs.json",
       "bytes": 34308,
-      "sha256": "21abd38352a2680da92da8a922b8dc7231714cfba7e94d573266db6a106bdf46"
+      "sha256": "da5a92005921f2743a2a0ccb4b78130a21af080b85f22b7e8dc4452f78e8057a"
     },
     {
       "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/edities/chat-2026/verify_files.py",

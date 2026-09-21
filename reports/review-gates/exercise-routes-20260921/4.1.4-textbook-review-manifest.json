@@ -4,7 +4,7 @@
   "revision": "exercise-routes-20260921",
   "scope": "Bounded route revision only; not native paragraph-records.js closure or new target approval",
   "baseline_lesson_commit": "e2843b47c828784ab594d004cef461cea929717f",
-  "edition_manifest_sha256": "c96c8635607855a31a23920c9dd6aadfe764ba3c325545ea93d547b8cd43abe5",
+  "edition_manifest_sha256": "a07127c5fe1e2595067c840608b722235188279441116c638f7e7dc7967f3b07",
   "hash_contract": "Lesson edition files: exact bytes; platform inputs: UTF-8 with LF",
   "platform_inputs": [
     {
