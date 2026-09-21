@@ -224,6 +224,15 @@ and integrated paragraph outputs.
 
 ## PART 4: GRAPH GENERATION WORKFLOW
 
+For reference-quality theory pages and the signed own-price elasticity route,
+apply the canonical [precision rules, §15](../references/authored/economic_mathematical_precision_reference.md#15-signed-own-price-elasticity-and-reference-page-precision).
+Keep concept headings, formula conditions, semantic tables and meaningful
+figure descriptions in the editable manuscript. A fixed-page revision retains
+its approved page allocation and exercise dependencies. Recovered PDF layout
+can guide a source port, but full-page image/vector facsimiles do not replace
+semantic authoring. Preserve newer approved route guidance when reconciling
+an older visual target and record that specific deviation for review.
+
 Apply [economic-graph](economic-graph.md) to figures that change. It owns equation
 and domain accuracy, numerical/text agreement, palette, comparable/progressive
 scales, readable labels and programmatic geometry plus final-image verification.

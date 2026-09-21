@@ -1,0 +1,11 @@
+{
+  "owning_generator": "platform\\build-scripts\\tools\\build-skill-tree-viewer.js",
+  "write_intercepted": true,
+  "repo_mutation": false,
+  "exact_in_memory_projection": true,
+  "record_count": 257,
+  "baseline_cached_record_count": 217,
+  "changed_or_new_cached_ids": 46,
+  "current_cache_sha256": "1ad0ee34a030f8e5f76fabfb9cd826b946b6bfd5d5af86a176d8fbad4a0ccb4b",
+  "catalog_sha256": "1c6caa241f65ef56e065517a91d13a012f0865da9c97e8ad596705900aa223c0"
+}

@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-21T08:11:12.859Z
+Generated: 2026-09-21T13:13:52.516Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/exercise-routes-20260921`
-Source commit: `6298466b03fa5ddb38a72ceb157a4855494e45d8`
-Files indexed: 7505
+Source branch: `codex/book2-theory-signed-20260921`
+Source commit: `37cc57bda5096b6b8cb455fe9cd27b20acacd3fe`
+Files indexed: 7643
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -144,7 +144,7 @@ Count: 89
 
 ## build scripts
 
-Count: 775
+Count: 791
 
 - build-scripts/archive/README.md
 - build-scripts/archive/roundtrip-pptx.py
@@ -154,15 +154,29 @@ Count: 775
 - build-scripts/books/book-manifests/book-1.json
 - build-scripts/books/book-toolchain.json
 - build-scripts/books/BOOK2-CHAT.md
+- build-scripts/books/books34_assemble.py
+- build-scripts/books/books34_outlines.py
+- build-scripts/books/books34_records.py
+- build-scripts/books/books34_verify.py
 - build-scripts/books/build_book2_chat.py
 - build-scripts/books/build-book.py
+- build-scripts/books/exercise-route-lesson-head.txt
+- build-scripts/books/exercise-route-review.js
+- build-scripts/books/exercise-route-revision-pin.json
+- build-scripts/books/exercise-route-revision.js
+- build-scripts/books/exercise-route-revision.test.js
+- build-scripts/books/EXERCISE-ROUTES.md
 - build-scripts/books/lib_book.py
 - build-scripts/books/lib_book.test.js
 - build-scripts/books/README.md
+- build-scripts/books/rebuild_exercise_routes.py
+- build-scripts/books/record_exercise_route_revision.js
 - build-scripts/books/requirements-book2-chat.txt
+- build-scripts/books/requirements-exercise-routes.txt
 - build-scripts/books/test_book2_chat.py
 - build-scripts/books/test_lib_book.py
 - build-scripts/books/verify_book2_chat.py
+- build-scripts/books/verify_exercise_routes.py
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
 - build-scripts/ci/check-agent-worktree-safety.js
@@ -357,6 +371,8 @@ Count: 775
 - build-scripts/references/audit-empty-needs.js
 - build-scripts/references/audit-exercise-schema-contract.js
 - build-scripts/references/books34-authority-transition.js
+- build-scripts/references/books34-route-amendment.js
+- build-scripts/references/books34-route-amendment.test.js
 - build-scripts/references/books34-selected-structure.js
 - build-scripts/references/books34-selected-structure.test.js
 - build-scripts/references/books34-v2-structure.js
@@ -955,7 +971,7 @@ Count: 26
 
 ## validators
 
-Count: 646
+Count: 647
 
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
@@ -1360,6 +1376,7 @@ Count: 646
 - reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-next_action.png
 - reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-partial.png
 - reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-wrong_retry.png
+- reports/review-gates/exercise-routes-20260921/check-paragraph-exports.py.txt
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -3363,7 +3380,7 @@ Count: 1752
 
 ## reports
 
-Count: 4689
+Count: 4810
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4793,6 +4810,127 @@ Count: 4689
 - reports/review-gates/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1/review-packet.json
 - reports/review-gates/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1/review-packet.json
 - reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json
+- reports/review-gates/exercise-routes-20260921/2.1.1-review.md
+- reports/review-gates/exercise-routes-20260921/2.1.1-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/2.1.2-review.md
+- reports/review-gates/exercise-routes-20260921/2.1.2-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/2.1.3-review.md
+- reports/review-gates/exercise-routes-20260921/2.1.3-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/2.1.4-review.md
+- reports/review-gates/exercise-routes-20260921/2.1.4-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/2.2.1-review.md
+- reports/review-gates/exercise-routes-20260921/2.2.1-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/2.2.2-review.md
+- reports/review-gates/exercise-routes-20260921/2.2.2-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/2.2.3-review.md
+- reports/review-gates/exercise-routes-20260921/2.2.3-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/2.2.4-review.md
+- reports/review-gates/exercise-routes-20260921/2.2.4-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/2.3.1-review.md
+- reports/review-gates/exercise-routes-20260921/2.3.1-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/2.3.2-review.md
+- reports/review-gates/exercise-routes-20260921/2.3.2-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/2.3.3-review.md
+- reports/review-gates/exercise-routes-20260921/2.3.3-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/2.3.4-review.md
+- reports/review-gates/exercise-routes-20260921/2.3.4-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.1.1-review.md
+- reports/review-gates/exercise-routes-20260921/3.1.1-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.1.2-review.md
+- reports/review-gates/exercise-routes-20260921/3.1.2-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.1.3-review.md
+- reports/review-gates/exercise-routes-20260921/3.1.3-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.1.4-review.md
+- reports/review-gates/exercise-routes-20260921/3.1.4-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.1.5-review.md
+- reports/review-gates/exercise-routes-20260921/3.1.5-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.1.6-review.md
+- reports/review-gates/exercise-routes-20260921/3.1.6-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.2.1-review.md
+- reports/review-gates/exercise-routes-20260921/3.2.1-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.2.2-review.md
+- reports/review-gates/exercise-routes-20260921/3.2.2-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.2.3-review.md
+- reports/review-gates/exercise-routes-20260921/3.2.3-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.2.4-review.md
+- reports/review-gates/exercise-routes-20260921/3.2.4-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.3.1-review.md
+- reports/review-gates/exercise-routes-20260921/3.3.1-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.3.2-review.md
+- reports/review-gates/exercise-routes-20260921/3.3.2-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.3.3-review.md
+- reports/review-gates/exercise-routes-20260921/3.3.3-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/3.3.4-review.md
+- reports/review-gates/exercise-routes-20260921/3.3.4-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.1.1-review.md
+- reports/review-gates/exercise-routes-20260921/4.1.1-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.1.2-review.md
+- reports/review-gates/exercise-routes-20260921/4.1.2-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.1.3-review.md
+- reports/review-gates/exercise-routes-20260921/4.1.3-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.1.4-review.md
+- reports/review-gates/exercise-routes-20260921/4.1.4-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.1.5-review.md
+- reports/review-gates/exercise-routes-20260921/4.1.5-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.2.1-review.md
+- reports/review-gates/exercise-routes-20260921/4.2.1-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.2.2-review.md
+- reports/review-gates/exercise-routes-20260921/4.2.2-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.2.3-review.md
+- reports/review-gates/exercise-routes-20260921/4.2.3-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.2.4-review.md
+- reports/review-gates/exercise-routes-20260921/4.2.4-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.2.5-review.md
+- reports/review-gates/exercise-routes-20260921/4.2.5-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.2.6-review.md
+- reports/review-gates/exercise-routes-20260921/4.2.6-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.2.7-review.md
+- reports/review-gates/exercise-routes-20260921/4.2.7-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.3.1-review.md
+- reports/review-gates/exercise-routes-20260921/4.3.1-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.3.2-review.md
+- reports/review-gates/exercise-routes-20260921/4.3.2-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.3.3-review.md
+- reports/review-gates/exercise-routes-20260921/4.3.3-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.3.4-review.md
+- reports/review-gates/exercise-routes-20260921/4.3.4-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/4.3.5-review.md
+- reports/review-gates/exercise-routes-20260921/4.3.5-textbook-review-manifest.json
+- reports/review-gates/exercise-routes-20260921/amendment-probe-results.json
+- reports/review-gates/exercise-routes-20260921/build-probe-results.json
+- reports/review-gates/exercise-routes-20260921/chapter-contents-navigation-audit.json
+- reports/review-gates/exercise-routes-20260921/chapter-contents-navigation-audit.md
+- reports/review-gates/exercise-routes-20260921/chapter-link-insertion-probe.json
+- reports/review-gates/exercise-routes-20260921/check-paragraph-exports.py.txt
+- reports/review-gates/exercise-routes-20260921/ci-dependency-addendum.md
+- reports/review-gates/exercise-routes-20260921/commit-identity-lf-check.json
+- reports/review-gates/exercise-routes-20260921/compare-wording-delta.py.txt
+- reports/review-gates/exercise-routes-20260921/h3-answer-pixel-delta.json
+- reports/review-gates/exercise-routes-20260921/IMPLEMENTATION.md
+- reports/review-gates/exercise-routes-20260921/independent-final-checks/route-revision-preservation.json
+- reports/review-gates/exercise-routes-20260921/independent-final-checks/route-revision-verification.json
+- reports/review-gates/exercise-routes-20260921/independent-wording-pdf-delta.json
+- reports/review-gates/exercise-routes-20260921/interim-build-review.md
+- reports/review-gates/exercise-routes-20260921/interim-source-review-inputs.json
+- reports/review-gates/exercise-routes-20260921/interim-source-review.md
+- reports/review-gates/exercise-routes-20260921/overall-review-prior-to-wording.md
+- reports/review-gates/exercise-routes-20260921/overall-review.md
+- reports/review-gates/exercise-routes-20260921/paragraph-export-review.json
+- reports/review-gates/exercise-routes-20260921/platform-input-delta.json
+- reports/review-gates/exercise-routes-20260921/probe-route-amendment.cjs.txt
+- reports/review-gates/exercise-routes-20260921/probe-route-build.py.txt
+- reports/review-gates/exercise-routes-20260921/refreshed-binding-check.json
+- reports/review-gates/exercise-routes-20260921/review-coverage-index.json
+- reports/review-gates/exercise-routes-20260921/review-manifest-index.json
+- reports/review-gates/exercise-routes-20260921/reviewed-platform-inputs-current.json
+- reports/review-gates/exercise-routes-20260921/reviewed-platform-inputs.json
+- reports/review-gates/exercise-routes-20260921/route-baseline-audit.md
+- reports/review-gates/exercise-routes-20260921/route-baseline-inventory.json
+- reports/review-gates/exercise-routes-20260921/source-preservation-current.json
+- reports/review-gates/exercise-routes-20260921/visual-coverage.json
+- reports/review-gates/exercise-routes-20260921/WORDING-FOLLOWUP.md
+- reports/review-gates/exercise-routes-20260921/wording-pdf-delta.json
+- reports/review-gates/exercise-routes-20260921/wording-review-addendum.md
 - reports/review-gates/GATE-B2-2.1.1-GOAL-TARGET-DESIGN-1/bundle-urls.md
 - reports/review-gates/GATE-B2-2.1.1-GOAL-TARGET-DESIGN-1/review-packet.json
 - reports/review-gates/GATE-B2-2.1.1-GOAL-TARGET-DESIGN-1/review-packet.md
@@ -8139,13 +8277,14 @@ Count: 33
 
 ## other
 
-Count: 156
+Count: 157
 
 - .gitattributes
 - .github/ci-python-requirements.txt
 - .github/workflows/authorized-bundle-integration.yml
 - .github/workflows/authorized-pr-integration.yml
 - .github/workflows/cross-repo-bundle-compatibility.yml
+- .github/workflows/paired-exercise-route-ci.yml
 - .github/workflows/paired-paragraph-ci.yml
 - .github/workflows/paragraph-renderer-tests.yml
 - .github/workflows/platform-ci.yml

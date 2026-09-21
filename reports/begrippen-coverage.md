@@ -1,6 +1,6 @@
 # Begrippen coverage
 
-*Gegenereerd 2026-05-16 door `build-scripts/references/build-begrippen-index.js`.*
+*Gegenereerd 2026-09-21 door `build-scripts/references/build-begrippen-index.js`.*
 
 Totaal: **227** begrippen (227 live, 0 deprecated).
 
@@ -10,7 +10,7 @@ Totaal: **227** begrippen (227 live, 0 deprecated).
 |---|---:|---:|
 | definition_nl | 0 | 0% |
 | example_nl | 0 | 0% |
-| pitfall_nl | 165 | 73% |
+| pitfall_nl | 164 | 72% |
 | teaching_units (reverse-link) | 130 | 57% |
 | syllabus_clause | 4 | 2% |
 

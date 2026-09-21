@@ -53,7 +53,11 @@ function procedureText(unit) {
 function procedureHasElasticityInterpretation(unit) {
   const text = procedureText(unit);
   return /teken/.test(text)
-    && /absolute waarde/.test(text)
+    && /rechtstreeks met −1 en 0/.test(text)
+    && /ev < −1/.test(text) && /−1 < ev < 0/.test(text)
+    && /ev = −1/.test(text) && /ev = 0/.test(text)
+    && /ongeronde/.test(text) && /positieve verhouding/.test(text)
+    && !/absolute waarde|\|ev\|/.test(text)
     && /elastisch/.test(text)
     && /inelastisch/.test(text);
 }
@@ -65,6 +69,12 @@ function procedureHasA82Pairing(unit) {
     && /nieuwe prijs/.test(text)
     && /nieuwe hoeveelheid/.test(text)
     && /dezelfde situatie/.test(text);
+}
+
+function procedureHasNormalization(unit) {
+  const text = procedureText(unit);
+  return /oude waarde als noemer/.test(text) && /behoud het teken/.test(text)
+    && /prijsverandering van 0% is het quotiënt niet gedefinieerd/.test(text);
 }
 
 function procedureHasA83GraphDiscipline(unit) {
@@ -84,7 +94,10 @@ function procedureHasA84RevenueLogic(unit) {
   return /elastische vraag beweegt omzet tegengesteld aan de prijs/.test(text)
     && /inelastische vraag beweegt omzet mee met de prijs/.test(text)
     && /unitair elastische vraag blijft omzet ongeveer gelijk/.test(text)
-    && /to = p maal q/.test(text);
+    && /to = p maal q/.test(text)
+    && /lokaal/.test(text) && /kleine veranderingen/.test(text)
+    && /−1 < ev ≤ 0/.test(text) && /vóór en na/.test(text)
+    && /eindige/.test(text) && /geen winst/.test(text);
 }
 
 function main() {
@@ -120,7 +133,7 @@ function main() {
     assert(sameArray(unit.needs, EXPECTED_NEEDS[id]), `${id} needs mismatch`);
     assert(unit.generator === EXPECTED_GENERATORS[id], `${id} generator mismatch`);
     assert(Array.isArray(unit.procedure) && unit.procedure.length >= 7, `${id} must have procedure steps`);
-    assert(procedureHasElasticityInterpretation(unit), `${id} must preserve elasticity sign/absolute-value interpretation`);
+    assert(procedureHasElasticityInterpretation(unit), `${id} must preserve elasticity signed interpretation and bounded domain`);
     const blocked = blockById.get(id);
     assert(blocked, `${id} missing from generator block tracking`);
     assert(blocked.generator === EXPECTED_GENERATORS[id], `${id} generator block mismatch`);
@@ -130,6 +143,7 @@ function main() {
   }
 
   assert(procedureHasA82Pairing(byId.get('A82')), 'A82 must explicitly pair old/new P and Q values');
+  for (const id of ['A82', 'A83']) assert(procedureHasNormalization(byId.get(id)), `${id} must normalize by original bases and reject a zero price change`);
   assert(byId.get('A83').name === A83_NAME, 'A83 live name mismatch');
   assert(procedureHasA83GraphDiscipline(byId.get('A83')), 'A83 must encode P-Q graph-source discipline');
   assert(procedureHasA84RevenueLogic(byId.get('A84')), 'A84 must encode elasticity-to-omzet reasoning');
@@ -146,3 +160,5 @@ function main() {
 }
 
 if (require.main === module) main();
+
+module.exports = { procedureHasElasticityInterpretation, procedureHasNormalization, procedureHasA82Pairing, procedureHasA83GraphDiscipline, procedureHasA84RevenueLogic };

@@ -1,0 +1,198 @@
+{
+  "scope": "Interim bounded authority/build source review; not final manifest/pair/CI approval",
+  "platform_files": [
+    {
+      "path": "references/authored/book2-signed-20260921-authority.json",
+      "sha256": "089fa83aaf16aa334d54b392d24f3ed6ed4859cbb8b75ee0b9855d2c81e10d6c"
+    },
+    {
+      "path": "references/authored/economic_mathematical_precision_reference.md",
+      "sha256": "6556088ea3f2955dac36d975d70431a474650babad7ad81dfdfce49e55561727"
+    },
+    {
+      "path": "references/authored/book-outlines/book-2-outline.md",
+      "sha256": "68d510034975e01c664aae3fd13b029a3b7df529bfbc56fb057a1e2bf0c38bfd"
+    },
+    {
+      "path": "references/authored/book-outlines/book-2-outline.meta.json",
+      "sha256": "fe3020af6d5e2070f7e3f555a7cfff6718c757f831a6a2277f1a2cc32316ef74"
+    },
+    {
+      "path": "references/authored/course-target-exercises.json",
+      "sha256": "8a97149472075cc45f395b64374e686a88ea5f5578c0f3fa537906d620816f2c"
+    },
+    {
+      "path": "references/owned/course-blueprint-v5.md",
+      "sha256": "147e0b00c623c1bf716cbf90a83668388cddaf9c89e1849d61e3b6b2d032f453"
+    },
+    {
+      "path": "skills/econ-textbook-paragraph.md",
+      "sha256": "223756303c620615a28242738031b6b9ca466d1e5d3b7a4deb6ed99619e3659b"
+    },
+    {
+      "path": "build-scripts/workflows/book2-signed-authority.js",
+      "sha256": "cec8c05be28019f8f5e3992d6e198768008fdbeb77c6c07696236de7694a23f6"
+    },
+    {
+      "path": "build-scripts/workflows/book2-signed-authority.test.js",
+      "sha256": "019719be11b3c95cb1079d6aca9925dcc36c06e75993bca499abbde9fc0f43d7"
+    },
+    {
+      "path": "build-scripts/workflows/book2-owner-decision.js",
+      "sha256": "79f7ec010c5da6400d20e55f86b26c25f6cbb08ce3c4d321341e0031807910b8"
+    },
+    {
+      "path": "build-scripts/workflows/check-book-outline-currentness.js",
+      "sha256": "c4b59e5e9d71b7ecbfa143b4d2c326f20ff44d353ea4ce2ac773b628c4627071"
+    },
+    {
+      "path": "build-scripts/workflows/check-book2-target-authority-remediation.js",
+      "sha256": "15d1f7c3a024f71eb7bc141c18e4b85e6e3e3981ca93595864b937c8fce92972"
+    },
+    {
+      "path": "build-scripts/references/check-rx4-elasticity-market-diagram-mutations.js",
+      "sha256": "116227f35d1f6df26775ba5b5b7e39deefe1630803b41b1b9fbeb6dd4f8b7c64"
+    },
+    {
+      "path": "build-scripts/references/close-and-apply-rx4-elasticity-market-diagram.js",
+      "sha256": "6f2a6de5cde5e30e360b8caa904d23379e41ff46b777cda37dfe4492326dffcd"
+    },
+    {
+      "path": "build-scripts/references/check-rx4-signed.test.js",
+      "sha256": "6210d1d52cbb1ec912f271b5adfde518c32d61869705d2d6685d0305bbb7df7d"
+    },
+    {
+      "path": "engines/skilltree/generators.js",
+      "sha256": "98aeed717f64d8244eae1c9991c6b4e9c40e76b2e595d570a92a536d5697cc4c"
+    },
+    {
+      "path": "engines/skilltree/explanations.js",
+      "sha256": "b57173a0de667271626636fa115520f172c076389e49a2a3758cc840a7ec0c07"
+    },
+    {
+      "path": "engines/tests/signed-elasticity.test.js",
+      "sha256": "6da5ccdb569d5068c2590751556f18a240abe5260bb892cb573c89658b195187"
+    },
+    {
+      "path": "build-scripts/references/books34-selected-structure.js",
+      "sha256": "9ec50103343741f36949497665764e49d5fbba0832ae8643f52a9e209de379c7"
+    },
+    {
+      "path": "build-scripts/maintenance/check-books34-v3-import.js",
+      "sha256": "a43eece35121f784d2c22433b89e74c2eccfd87fa1d40a69814f777208bc7929"
+    },
+    {
+      "path": "build-scripts/workflows/check-paragraph-lane-scope.js",
+      "sha256": "747a7492dea922cf57cab4b501ab2e11c2deb093d25925f8b3a7a1812cdde35f"
+    },
+    {
+      "path": "build-scripts/books/assemble_book2_signed.py",
+      "sha256": "fdb975389a99512025db5c2b7463d3b5a7df9960080c856f613bdbae5ee832f1"
+    },
+    {
+      "path": "build-scripts/books/rebuild_book2_signed.py",
+      "sha256": "32d887878e9c2c7bb2b322bd8956be042da2d3698ea86c3be3a8bd653aa7b41b"
+    },
+    {
+      "path": "build-scripts/books/book2_native_checks.py",
+      "sha256": "3308b402eab77509b88ecd5b19abd0130cca851898801c54b74bf1abb45ceba0"
+    },
+    {
+      "path": "build-scripts/books/book2_native_theory.py",
+      "sha256": "d1fd7731bf91c52dafbfea91a6beff96960a6462824316b5c2a7626447e93e49"
+    },
+    {
+      "path": "build-scripts/books/book2_signed_exports.py",
+      "sha256": "75e17ded5696bb9a4fa1c5ffb67121921f1c6ec84216359c28addd6d63429f1a"
+    },
+    {
+      "path": "build-scripts/books/test_book2_native.py",
+      "sha256": "5554353a88524bab34247549ee8c8b0df4a57777ab34c9ca07f90db1e28298cc"
+    },
+    {
+      "path": "build-scripts/books/verify_book2_signed.py",
+      "sha256": "b1f5125c3e62f932fbb9216a5a8530847f68795a5a948e32f6998bd649206de0"
+    },
+    {
+      "path": "build-scripts/books/verify_book2_figures.py",
+      "sha256": "05e5581d7e7949546ad8b8122a95912fb906779a552275714ba650508f528ed1"
+    },
+    {
+      "path": "build-scripts/books/book2-signed-revision.js",
+      "sha256": "27b77246d2c987966ee579a924d2a0f6f46e7db315854f41404c656800b44b62"
+    },
+    {
+      "path": "build-scripts/books/book2-signed-revision.test.js",
+      "sha256": "5a3605daf88edb1ee3bf8dbda220605dd6ffbdbd2aecdd8592bb90999e622183"
+    },
+    {
+      "path": "build-scripts/books/record_book2_signed_revision.js",
+      "sha256": "004b65860306fa416df7c8203c48fabaff25c38a26b7d3dc41f1005c63a5a5cc"
+    },
+    {
+      "path": "build-scripts/books/project_book2_signed_authority.js",
+      "sha256": "947c703671ed679a16009f0fdb4c970930b2ad87988857ff3dac7e6cddd2d067"
+    },
+    {
+      "path": "build-scripts/tools/build-skill-tree-viewer.js",
+      "sha256": "933881e2182b1286c22023463b0f6cfa23c761b6e02eeaffbd200d5fd3e1fb1f"
+    },
+    {
+      "path": "tools/skill-tree-viewer/index.html",
+      "sha256": "1ad0ee34a030f8e5f76fabfb9cd826b946b6bfd5d5af86a176d8fbad4a0ccb4b"
+    },
+    {
+      "path": "knowledge/grafiekmeester_representatie_arena.html",
+      "sha256": "263de55e5b41aa9ee46820e19fe5ef73b6282225292343e010ebe213a0d565b1"
+    },
+    {
+      "path": "build-scripts/books/BOOK2-SIGNED.md",
+      "sha256": "eb510ee2cb199d93c8c39553fb251f67d27f59880fbc2884e4e4d7757114eb8d"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "independent-build-failure-probes.json",
+      "sha256": "a147c0189d7d1784eadc007b85b3a8159e92ff8823f2b6cef011cebfa91dbc36"
+    },
+    {
+      "path": "actual-native-edit-proof/evidence.json",
+      "sha256": "22cb274f970a7e6b3157a635947711e0289c9518dc20a53e6b5dca622150e2ef"
+    },
+    {
+      "path": "independent-signed-verifier-current.json",
+      "sha256": "2be2994b240f4b605bc412bfcdf05d1424ffa2fbaed469fd5d16b94628f7a776"
+    },
+    {
+      "path": "independent-owned-figure-verifier.json",
+      "sha256": "b3cf3761a9cf42b9187bed10b084ce80e35e980a44caaed38a69aa92a6aaefc4"
+    },
+    {
+      "path": "independent-viewer-projection.json",
+      "sha256": "7e55e5a95384e50bc440ecdf6c8a6d6295fc133e82ac96f19bcf8ec414a282b3"
+    },
+    {
+      "path": "independent-native-content-review.md",
+      "sha256": "59e29f76aff866fd5e9d84f55e553eb27687ad51d6d0a390aad95a4bc2949dde"
+    }
+  ],
+  "checks": {
+    "signed_jest_tests": 27,
+    "revision_inventory_jest_tests": 11,
+    "native_unittests": 4,
+    "finite_authority_derivation": "PASS",
+    "outline_currentness": "PASS",
+    "durable_target_lifecycle": "PASS",
+    "live_rx4_check": "PASS",
+    "stale_source_assemble_rejects_without_refresh": "PASS",
+    "offpage_displacements_rejected": 4,
+    "actual_manuscript_edit_propagates_without_target_pdf": "PASS",
+    "whole_assembly_chapter_pages": 180,
+    "whole_assembly_link_rectangles_and_targets": 121,
+    "paragraph_export_pages": 207,
+    "paragraph_export_links": 20,
+    "figure_checks": 101,
+    "figure_failures": 0,
+    "viewer_exact_owning_projection": "PASS"
+  }
+}

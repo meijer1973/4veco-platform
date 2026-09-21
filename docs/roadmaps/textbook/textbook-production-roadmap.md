@@ -100,7 +100,7 @@ BOOK2-CHAT-IMPORT-1 is integrated on main. Older rows retain their historical fa
 
 1. A Chapter 2.2 production brief for 2.2.1 Prijselasticiteit, 2.2.2 Elasticiteit en omzet, 2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit, and 2.2.4 Gemengde opgaven: elasticiteit.
 2. A target-exercise readiness check for 2.2.1 through 2.2.4.
-3. An elasticity notation contract: `Ev`/prijselasticiteit wording, negative sign versus absolute-value interpretation, percentage change in `Q` divided by percentage change in `P`, old/new value convention, elastic/inelastic classification, and revenue-effect language.
+3. An elasticity notation contract: `Ev`/prijselasticiteit wording, signed interpretation under [the canonical precision reference §15](../../../references/authored/economic_mathematical_precision_reference.md#15-signed-own-price-elasticity-and-reference-page-precision), percentage change in `Q` divided by percentage change in `P`, old/new value convention, elastic/inelastic classification, and revenue-effect language.
 4. A graph/table contract for movement along demand, price/quantity table interpretation, and omzet rectangles if used.
 5. A misconception list covering percentage-point confusion, missing minus signs, inconsistent denominators, "inelastic means quantity does not change", and unexplained positive-only elasticity.
 6. A style extraction from Book 1 and Chapter 2.1, including answer-skill routines from 2.1.4.

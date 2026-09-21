@@ -1,0 +1,23 @@
+{
+  "owning_entry": "book2_native_theory.page_body and CSS + immutable chapter embedded_html",
+  "actual_source": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\edities\\chat-2026\\bronnen\\H1\\manuscript\\2.1.1 Kostenstructuren – paragraaf.md",
+  "physical_complete_page": 5,
+  "printed_chapter_page": 3,
+  "mutation": "alle flessen samen -> alle kannen samen",
+  "package_pdf_used": false,
+  "checked_actual_layout": true,
+  "before": {
+    "manuscript_sha256": "7d1c31299783c3172cd89bd146c26e2af090b1e41de67d914835c616502a69d0",
+    "pdf_sha256": "e04018dc5b136bc8c465fd0144048a7418bc9122cc5d3f08ba68be0a98279a90",
+    "png_sha256": "c8e409c0638433e096147a98b19897c90ccab42c57de009295d87a59cb3b944a",
+    "pages": 1,
+    "text": "2.1.1 · Totale kosten: alles bij elkaar\nWat kosten alle flessen samen in één maand?\nFles & Co betaalt € 300 huur per maand en € 2 materiaal per fles. Dit zijn alle kosten. Q is het aantal\ngeproduceerde flessen per maand. Het bedrijf kan maximaal 600 flessen per maand maken.\nTotale constante kosten (TCK)\nTCK = 300\nDe huur blijft in totaal € 300, ook bij Q = 0.\nTotale variabele kosten (TVK)\nTVK = 2 × Q = 2Q\n€ 2 materiaal per fles × het aantal flessen.\nTK = TCK + TVK\nTotale kosten (TK)\nTel de constante en variabele kosten op.\nTK = 300 + 2Q\nT = totaal. TCK, TVK en TK zijn hier bedragen in euro per maand.\nVoorbeeld: 200 flessen in één maand\nEerst het materiaal: TVK = 2 × 200 = € 400. Tel daarna de huur erbij:\nTK = 300 + 400 = € 700 per maand.\nQ\nflessen per maand\nTCK\n€ per maand\nTVK\n€ per maand\nTK\n€ per maand\n0\n300\n0\n300\n200\n300\n400\n700\n400\n300\n800\n1.100\n600\n300\n1.200\n1.500\nZo lees je de grafiek\nTCK is horizontaal. TVK begint bij 0; TK begint bij 300. TVK en TK stijgen even snel: voor iedere\nextra fles komt er € 2 materiaal bij.\n0\n300\n600\n900\n1.200\n1.500\n0\n200\n400\n600\nHoeveelheid Q (flessen per maand)\nKosten (€ per maand)\n€ 300\nTK\nTVK\nTCK\nFiguur 2. Bij elke Q ligt TK precies € 300 boven TVK: de verticale afstand is TCK.\nMeer productie: niet alle kosten groeien mee\nVan 200 naar 400 flessen verdubbelt TVK, maar TCK blijft € 300. Daarom stijgt TK van € 700\nnaar € 1.100: de totale kosten verdubbelen niet.\n2.1 Kosten en opbrengsten\n4veco / Boek 2\n3\nEconomie · 4 vwo\n"
+  },
+  "after": {
+    "manuscript_sha256": "6e4c7ec2df33a2b2ad431dadebadd6400469ff7b2183ed826d4e3b81d65cae1a",
+    "pdf_sha256": "2d6988518e488e00000cd4c809d8534b743c39998a674e22349cfcee4b1737fe",
+    "png_sha256": "981d86a65bbbae9474cc8e2d29c9000540d0381d1e9af560f0fd29f35284f53e",
+    "pages": 1,
+    "text": "2.1.1 · Totale kosten: alles bij elkaar\nWat kosten alle kannen samen in één maand?\nFles & Co betaalt € 300 huur per maand en € 2 materiaal per fles. Dit zijn alle kosten. Q is het aantal\ngeproduceerde flessen per maand. Het bedrijf kan maximaal 600 flessen per maand maken.\nTotale constante kosten (TCK)\nTCK = 300\nDe huur blijft in totaal € 300, ook bij Q = 0.\nTotale variabele kosten (TVK)\nTVK = 2 × Q = 2Q\n€ 2 materiaal per fles × het aantal flessen.\nTK = TCK + TVK\nTotale kosten (TK)\nTel de constante en variabele kosten op.\nTK = 300 + 2Q\nT = totaal. TCK, TVK en TK zijn hier bedragen in euro per maand.\nVoorbeeld: 200 flessen in één maand\nEerst het materiaal: TVK = 2 × 200 = € 400. Tel daarna de huur erbij:\nTK = 300 + 400 = € 700 per maand.\nQ\nflessen per maand\nTCK\n€ per maand\nTVK\n€ per maand\nTK\n€ per maand\n0\n300\n0\n300\n200\n300\n400\n700\n400\n300\n800\n1.100\n600\n300\n1.200\n1.500\nZo lees je de grafiek\nTCK is horizontaal. TVK begint bij 0; TK begint bij 300. TVK en TK stijgen even snel: voor iedere\nextra fles komt er € 2 materiaal bij.\n0\n300\n600\n900\n1.200\n1.500\n0\n200\n400\n600\nHoeveelheid Q (flessen per maand)\nKosten (€ per maand)\n€ 300\nTK\nTVK\nTCK\nFiguur 2. Bij elke Q ligt TK precies € 300 boven TVK: de verticale afstand is TCK.\nMeer productie: niet alle kosten groeien mee\nVan 200 naar 400 flessen verdubbelt TVK, maar TCK blijft € 300. Daarom stijgt TK van € 700\nnaar € 1.100: de totale kosten verdubbelen niet.\n2.1 Kosten en opbrengsten\n4veco / Boek 2\n3\nEconomie · 4 vwo\n"
+  }
+}

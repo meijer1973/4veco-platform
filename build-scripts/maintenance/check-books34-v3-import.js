@@ -90,10 +90,13 @@ function verify(options = {}) {
         expected = m.json(value);
       }
       const actual = fs.readFileSync(path.join(root, file));
-      if (file.startsWith(m.SNAPSHOT + '/') ? !actual.equals(expected) : m.text(actual) !== m.text(expected)) failures.push('Unexpected migration/amendment output ' + file);
+      const signed = [m.REGISTRY, m.V5].includes(file) && require('../workflows/book2-signed-authority').matchesFile(file, actual);
+      if (!signed && (file.startsWith(m.SNAPSHOT + '/') ? !actual.equals(expected) : m.text(actual) !== m.text(expected))) failures.push('Unexpected migration/amendment output ' + file);
     }
     for (const record of registry.exercises.filter(r => r.module >= 3)) consumeTarget(record, {platformRoot: root});
-    revision = require('../books/exercise-route-revision').verify({...options, root, lessons});
+    revision = fs.existsSync(path.join(lessons, 'book2-signed-revision.json'))
+      ? require('../books/book2-signed-revision').verify({...options, root, lessons})
+      : require('../books/exercise-route-revision').verify({...options, root, lessons});
     failures.push(...revision.failures);
   } catch (error) { failures.push(error.message); }
   return {task: 'exercise-routes-20260921', active_curriculum: m.REVISION,

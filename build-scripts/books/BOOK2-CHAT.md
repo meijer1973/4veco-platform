@@ -1,6 +1,8 @@
 # Book 2 chat edition: bounded assembly repairs
 
-**Current route revision (21 September 2026):** follow
+**Current Book 2 theory/signed revision:** follow [BOOK2-SIGNED.md](BOOK2-SIGNED.md).
+
+**Historical route revision (21 September 2026):** follow
 [EXERCISE-ROUTES.md](EXERCISE-ROUTES.md) to rebuild edited chapter manuscripts.
 The commands and 180 unchanged historical pages below describe the earlier
 cover/link repair. They are retained as historical reproduction evidence.

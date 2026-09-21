@@ -1,0 +1,186 @@
+{
+  "revision": "book2-theory-signed-20260921",
+  "baseline_platform_commit": "37cc57bda5096b6b8cb455fe9cd27b20acacd3fe",
+  "authorization": "User supplied the 2026-09-21 package and requested execution of its bounded integration. This is a content successor, not a release of planning/production/product holds or merge authorization.",
+  "package_sha256": "afb920f843d2dead8966c3208142e7f7ab82297855e7a27b4035980d06c8ee62",
+  "handoff_sha256": "5a9d5b09d147323730aaa80d57eb561e3ec45c1e30d90322b9c7a26cf9359fa7",
+  "target_changes": [
+    {
+      "id": "2.2.1",
+      "field": [
+        "target_exercise",
+        "subquestions",
+        1,
+        "prompt"
+      ],
+      "before": "Classificeer de vraag naar bioscoopkaartjes met |Ev| en leg in gewone taal uit wat Ev=−0,8 betekent.",
+      "after": "Classificeer de vraag naar bioscoopkaartjes met Ev en leg in gewone taal uit wat Ev=−0,8 betekent."
+    },
+    {
+      "id": "2.2.1",
+      "field": [
+        "lesson_goals",
+        2
+      ],
+      "before": "Je kunt vraag met |Ev| classificeren als prijselastisch of prijsinelastisch.",
+      "after": "Je kunt vraag met de ongeronde Ev rechtstreeks ten opzichte van −1 en 0 classificeren."
+    },
+    {
+      "id": "2.2.1",
+      "field": [
+        "short_answer_model",
+        "b"
+      ],
+      "before": "|−0,8|<1: prijsinelastische vraag. De gevraagde hoeveelheid daalt procentueel minder dan de prijs stijgt.",
+      "after": "−1<−0,8<0: prijsinelastische vraag. De gevraagde hoeveelheid daalt procentueel minder dan de prijs stijgt."
+    },
+    {
+      "id": "2.2.1",
+      "field": [
+        "short_answer_model",
+        "c"
+      ],
+      "before": "|−2|>1: prijselastische vraag. StreamNow reageert in deze waarneming procentueel sterker op de prijsverandering dan Bioscoop Nova.",
+      "after": "−2<−1: prijselastische vraag. StreamNow reageert in deze waarneming procentueel sterker op de prijsverandering dan Bioscoop Nova."
+    },
+    {
+      "id": "2.2.2",
+      "field": [
+        "short_answer_model",
+        "b"
+      ],
+      "before": "TO stijgt met €40/€5.000×100%=0,8%. Dat past bij |Ev|=0,8<1: de procentuele daling van Q is kleiner dan de procentuele prijsstijging.",
+      "after": "TO stijgt met €40/€5.000×100%=0,8%. Dat past bij −1<Ev=−0,8<0: de procentuele daling van Q is kleiner dan de procentuele prijsstijging."
+    },
+    {
+      "id": "2.2.2",
+      "field": [
+        "short_answer_model",
+        "d"
+      ],
+      "before": "%ΔTO=(17.600−20.000)/20.000×100%=−12%. TO daalt dus met 12%. Dat past bij |Ev|=2>1: de procentuele daling van Q is groter dan de procentuele prijsstijging.",
+      "after": "%ΔTO=(17.600−20.000)/20.000×100%=−12%. TO daalt dus met 12%. Dat past bij Ev=−2<−1: de procentuele daling van Q is groter dan de procentuele prijsstijging."
+    },
+    {
+      "id": "2.2.4",
+      "field": [
+        "short_answer_model",
+        "2"
+      ],
+      "before": "|Ev|=0,7<1, dus de vraag is prijsinelastisch. Bij een prijsverandering van 1% verandert Q in deze waarneming in tegengestelde richting met ongeveer 0,7%.",
+      "after": "−1<Ev=−0,7<0, dus de vraag is prijsinelastisch. Bij een prijsverandering van 1% verandert Q in deze waarneming in tegengestelde richting met ongeveer 0,7%."
+    }
+  ],
+  "text_changes": [
+    {
+      "file": "references/authored/book-outlines/book-2-outline.md",
+      "before": "classify by `|Ev|`",
+      "after": "classify unrounded `Ev` directly against `−1` and `0` under the signed own-price convention in the precision reference §15"
+    },
+    {
+      "file": "references/authored/book-outlines/book-2-outline.md",
+      "before": "Because both target contexts yield `|Ev|<1`, instruction/practice must also include one explicit `|Ev|>1` contrast.",
+      "after": "The integrated targets contrast Nova (`Ev=−0.8`) and StreamNow (`Ev=−2`); retain both cases in instruction/practice."
+    },
+    {
+      "file": "references/authored/book-outlines/book-2-outline.md",
+      "before": "classification uses magnitude while direction retains sign",
+      "after": "classification retains the sign and compares directly with −1 and 0"
+    },
+    {
+      "file": "references/authored/book-outlines/book-2-outline.md",
+      "before": "Reuse the cinema/petrol contexts deliberately, then interleave one explicit elastic contrast because both reused cases are inelastic.",
+      "after": "Reuse the integrated Nova/StreamNow contexts deliberately: Nova is inelastic and StreamNow is elastic."
+    },
+    {
+      "file": "references/authored/book-outlines/book-2-outline.md",
+      "before": "direction rules depend on the stated price movement.",
+      "after": "local direction rules include `−1<Ev≤0`; finite changes require direct before/after `TO=P×Q` checks (precision reference §15)."
+    },
+    {
+      "file": "references/authored/book-outlines/book-2-outline.md",
+      "before": "sign represents direction and magnitude represents classification; estimates are local/context-bound.",
+      "after": "classify unrounded signed Ev against −1 and 0; estimates are local/context-bound (precision reference §15)."
+    },
+    {
+      "file": "references/authored/book-outlines/book-2-outline.md",
+      "before": "- Elasticity calculations name the original base, preserve the sign, and use\n  absolute magnitude only for elastic/inelastic classification.",
+      "after": "- Own-price elasticity follows [the canonical precision reference §15](../economic_mathematical_precision_reference.md#15-signed-own-price-elasticity-and-reference-page-precision):\n  original bases, signed unrounded classification, zero and undefined cases,\n  bounded local revenue rules and direct finite-change revenue checks."
+    },
+    {
+      "file": "references/owned/course-blueprint-v5.md",
+      "before": "Reviewed-final in `B2-2.2-TARGET-V5-PROMOTE`. The cinema/petrol target is represented in current student-facing 2.2.1 evidence with old-value percentage denominators, signed `Ev`, and `|Ev|` classification.",
+      "after": "Historical promotion: `B2-2.2-TARGET-V5-PROMOTE` covered the former cinema/petrol target. The active registry now contains the integrated Issue #229 Nova/StreamNow target, still `candidate_review_ready`; the older promotion does not promote that successor. The bounded 2026-09-21 revision uses old-value denominators and signed, unrounded classification under [the canonical precision reference §15](../authored/economic_mathematical_precision_reference.md#15-signed-own-price-elasticity-and-reference-page-precision). See `references/authored/book2-signed-20260921-authority.json` for the exact successor; historical approvals and open holds remain unchanged."
+    }
+  ],
+  "files": [
+    {
+      "path": "references/authored/course-target-exercises.json",
+      "before_sha256": "0396784a621b8e098afc3de7dfac1d8f0b1881f1a449124cf7cb26740475f0a5",
+      "after_sha256": "8a97149472075cc45f395b64374e686a88ea5f5578c0f3fa537906d620816f2c"
+    },
+    {
+      "path": "references/authored/book-outlines/book-2-outline.md",
+      "before_sha256": "2a37c6f51abfb0f2582a7b368cae5d46fe885b9436ad84b520d9b8232388ddd5",
+      "after_sha256": "68d510034975e01c664aae3fd13b029a3b7df529bfbc56fb057a1e2bf0c38bfd"
+    },
+    {
+      "path": "references/owned/course-blueprint-v5.md",
+      "before_sha256": "87df8feff9a99994b9098da4ee19b763da396753078743573401012c9d48f819",
+      "after_sha256": "147e0b00c623c1bf716cbf90a83668388cddaf9c89e1849d61e3b6b2d032f453"
+    },
+    {
+      "path": "references/authored/book-outlines/book-2-outline.meta.json",
+      "before_sha256": "47df6a8102c6a9dc08da9f095a49212de8a64be67f221f17f492785fec2d7f53",
+      "after_sha256": "fe3020af6d5e2070f7e3f555a7cfff6718c757f831a6a2277f1a2cc32316ef74"
+    }
+  ],
+  "meta_sha256": "710e1431c338e4e74e5fbef31caa7b335e6e3c187761606c1c8fc643ee94ca85",
+  "outline_semantic_sha256": "c68376cfd972139a5518fce92e9a3790b2e52c3c43d03f6b4f13489a4b2694f6",
+  "book2_records_sha256": "ef7f6a480c246c9326f67351e3294f57e83c1358ce9c292a322d7b724fc529db",
+  "target_transitions": [
+    {
+      "id": "2.2.1",
+      "before": "61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288",
+      "after": "cff4ee8de9615cb1fac16bd37fa924ef02e823a170e00d6d71352b144f07e9ad"
+    },
+    {
+      "id": "2.2.2",
+      "before": "8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e",
+      "after": "87f3a71b9fa6e36d553d8e34632e3462dfc7d72db6184d0d06523997050bf534"
+    },
+    {
+      "id": "2.2.4",
+      "before": "4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519",
+      "after": "336d6686dd3075ebac55ee86bafc61c5a43ba4176653591ddd3ca952f0ee791e"
+    }
+  ],
+  "projected_authority_sources": [
+    {
+      "path": "references/owned/course-blueprint-v6-three-year.md",
+      "sha256": "f9104a28d669c7f54ab22b72fe5916bcb67830fa9744bb1b4f5deadf46da8ad3",
+      "source_kind": "active_three_year_umbrella"
+    },
+    {
+      "path": "references/owned/course-blueprint-v5.md",
+      "sha256": "147e0b00c623c1bf716cbf90a83668388cddaf9c89e1849d61e3b6b2d032f453",
+      "source_kind": "active_year_1_detail"
+    },
+    {
+      "path": "references/authored/course-target-exercises.json",
+      "sha256": "8a97149472075cc45f395b64374e686a88ea5f5578c0f3fa537906d620816f2c",
+      "source_kind": "active_paragraph_target_registry"
+    },
+    {
+      "path": "references/owned/course-blueprint-pedagogical-boundaries.md",
+      "sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7",
+      "source_kind": "prior_teaching_boundary"
+    },
+    {
+      "path": "skills/econ-exercise-builder.md",
+      "sha256": "8ca4436eb9895ea5840e09162a6aa38e5d3df68bcc021b5404b1759d1531e925",
+      "source_kind": "part_a_exercise_contract"
+    }
+  ],
+  "book12_records_sha256": "2cd5358da486a4bae7eb81ca051ad62440a4ba0e92ad455da4803e55b19577bb"
+}

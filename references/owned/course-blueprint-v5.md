@@ -225,7 +225,7 @@ Count-bearing gemengde-opgaven paragraph. Introduces no new theory. Reviewed aga
 
 ### §2.2.1 - Prijselasticiteit
 
-Reviewed-final in `B2-2.2-TARGET-V5-PROMOTE`. The cinema/petrol target is represented in current student-facing 2.2.1 evidence with old-value percentage denominators, signed `Ev`, and `|Ev|` classification.
+Historical promotion: `B2-2.2-TARGET-V5-PROMOTE` covered the former cinema/petrol target. The active registry now contains the integrated Issue #229 Nova/StreamNow target, still `candidate_review_ready`; the older promotion does not promote that successor. The bounded 2026-09-21 revision uses old-value denominators and signed, unrounded classification under [the canonical precision reference §15](../authored/economic_mathematical_precision_reference.md#15-signed-own-price-elasticity-and-reference-page-precision). See `references/authored/book2-signed-20260921-authority.json` for the exact successor; historical approvals and open holds remain unchanged.
 
 ### §2.2.2 - Elasticiteit en omzet
 

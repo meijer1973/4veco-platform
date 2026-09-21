@@ -1,0 +1,77 @@
+{
+  "scope": "Independent review evidence portability; originals retained outside repositories",
+  "files": [
+    {
+      "file": "independent-build-failure-probes.json",
+      "original_sha256": "ea782240fee6f3e5df01a415cf4d0e1be0501f6940a02eeb151a722db4b3791e",
+      "portable_sha256": "a147c0189d7d1784eadc007b85b3a8159e92ff8823f2b6cef011cebfa91dbc36",
+      "change": "Absolute environment/fixture paths replaced with relative labels; JSON formatting normalized. Review findings unchanged."
+    },
+    {
+      "file": "actual-native-edit-proof/evidence.json",
+      "original_sha256": "22cb274f970a7e6b3157a635947711e0289c9518dc20a53e6b5dca622150e2ef",
+      "portable_sha256": "22cb274f970a7e6b3157a635947711e0289c9518dc20a53e6b5dca622150e2ef",
+      "change": "Absolute environment/fixture paths replaced with relative labels; JSON formatting normalized. Review findings unchanged."
+    },
+    {
+      "file": "independent-signed-verifier-current.json",
+      "original_sha256": "198f88cd7a50659584db6bec77251c47253d95ae13335bb451ad500981e9e2db",
+      "portable_sha256": "2be2994b240f4b605bc412bfcdf05d1424ffa2fbaed469fd5d16b94628f7a776",
+      "change": "Absolute environment/fixture paths replaced with relative labels; JSON formatting normalized. Review findings unchanged."
+    },
+    {
+      "file": "independent-signed-verifier-final.json",
+      "original_sha256": "198f88cd7a50659584db6bec77251c47253d95ae13335bb451ad500981e9e2db",
+      "portable_sha256": "2be2994b240f4b605bc412bfcdf05d1424ffa2fbaed469fd5d16b94628f7a776",
+      "change": "Absolute environment/fixture paths replaced with relative labels; JSON formatting normalized. Review findings unchanged."
+    },
+    {
+      "file": "independent-owned-figure-verifier.json",
+      "original_sha256": "b3cf3761a9cf42b9187bed10b084ce80e35e980a44caaed38a69aa92a6aaefc4",
+      "portable_sha256": "b3cf3761a9cf42b9187bed10b084ce80e35e980a44caaed38a69aa92a6aaefc4",
+      "change": "Absolute environment/fixture paths replaced with relative labels; JSON formatting normalized. Review findings unchanged."
+    },
+    {
+      "file": "independent-viewer-projection.json",
+      "original_sha256": "a180aca2ed9356ad5eef8954f4b27930c6ec933120509dca85b44c649705b19d",
+      "portable_sha256": "7e55e5a95384e50bc440ecdf6c8a6d6295fc133e82ac96f19bcf8ec414a282b3",
+      "change": "Absolute environment/fixture paths replaced with relative labels; JSON formatting normalized. Review findings unchanged."
+    },
+    {
+      "file": "independent-native-content-review.md",
+      "original_sha256": "59e29f76aff866fd5e9d84f55e553eb27687ad51d6d0a390aad95a4bc2949dde",
+      "portable_sha256": "59e29f76aff866fd5e9d84f55e553eb27687ad51d6d0a390aad95a4bc2949dde",
+      "change": "Absolute environment/fixture paths replaced with relative labels; JSON formatting normalized. Review findings unchanged."
+    },
+    {
+      "file": "independent-native-current-bindings.json",
+      "original_sha256": "bd3fbe2812ee69bb0689028a23213f511b2efedb34790c1e19a5dcdada4914fb",
+      "portable_sha256": "bd3fbe2812ee69bb0689028a23213f511b2efedb34790c1e19a5dcdada4914fb",
+      "change": "Absolute environment/fixture paths replaced with relative labels; JSON formatting normalized. Review findings unchanged."
+    },
+    {
+      "file": "independent-historical-test-addendum.json",
+      "original_sha256": "1bb99b7b02c7a1140defa91447add2436447146e798a1fd812062da91266c7f6",
+      "portable_sha256": "1bb99b7b02c7a1140defa91447add2436447146e798a1fd812062da91266c7f6",
+      "change": "Absolute environment/fixture paths replaced with relative labels; JSON formatting normalized. Review findings unchanged."
+    },
+    {
+      "file": "independent-accepted-navigation-check.json",
+      "original_sha256": "9b481292b10690848e41a49fd24b7a29eae573879a7343cf43e1e9d860435c1f",
+      "portable_sha256": "9b481292b10690848e41a49fd24b7a29eae573879a7343cf43e1e9d860435c1f",
+      "change": "Absolute environment/fixture paths replaced with relative labels; JSON formatting normalized. Review findings unchanged."
+    },
+    {
+      "file": "independent-authority-build-bindings.json",
+      "original_sha256": "b31ecfb22677b283b52fe912b8d71e668c0fd3bf2a998f86fe1a004d33b97c49",
+      "portable_sha256": "9944f2c49371f9a11b80c22d5ed3154bda8502d73f44053590c36528ea42c3c0",
+      "change": "Evidence hashes reference portable counterparts; reviewed platform source hashes unchanged."
+    },
+    {
+      "file": "independent-authority-build-review.md",
+      "original_sha256": "743bd56e93f43a41047d8d8d738f1027a45676d31f494a655186f65ba6b66c9a",
+      "portable_sha256": "9190f93417724534400093d9d7b4289a0092add8cea2590fa4105f4cc8461928",
+      "change": "Portable binding reference and paths; explicit later test/navigation evidence addendum. No earlier finding erased."
+    }
+  ]
+}

@@ -64,7 +64,7 @@ afterAll(() => {
 function cloneFiles() {
   const files = Object.fromEntries(Object.entries(readFiles(root)).map(([file, value]) => [file, value === null ? null : Buffer.from(value)]));
   // Retain historical pending regression coverage independently of live activation.
-  for (const file of [META_PATH, OUTLINE_PATH, 'skills/econ-exercise-builder.md']) {
+  for (const file of [META_PATH, OUTLINE_PATH, ...AUTHORITY_PATHS]) {
     files[file] = Buffer.from(ownerDecision.gitText(require('./book2-integration-decision').BASELINE_COMMIT, file));
   }
   return files;

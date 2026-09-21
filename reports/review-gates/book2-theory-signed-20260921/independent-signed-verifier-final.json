@@ -1,0 +1,36 @@
+{
+  "revision": "book2-theory-signed-20260921",
+  "passed": true,
+  "bundles": [
+    {
+      "kind": "student",
+      "pages": 110,
+      "links": 77,
+      "bookmarks": 20
+    },
+    {
+      "kind": "answers",
+      "pages": 57,
+      "links": 44,
+      "bookmarks": 129
+    },
+    {
+      "kind": "teacher",
+      "pages": 19,
+      "links": 0,
+      "bookmarks": 64
+    }
+  ],
+  "identical_assembled_chapter_pages": 180,
+  "links_checked": 121,
+  "overview": {
+    "h2-overzicht": 72,
+    "h3-overzicht": 109
+  },
+  "cover_geometry": "PASS",
+  "paragraph_exports": {
+    "pages": 207,
+    "links": 20,
+    "text_pixels_navigation": "PASS"
+  }
+}

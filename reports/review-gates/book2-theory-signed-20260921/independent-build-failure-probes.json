@@ -1,0 +1,34 @@
+{
+  "stale_source_assemble": {
+    "exit_code": 1,
+    "rejects_stale_input": true,
+    "did_not_refresh_record": true,
+    "stderr": "Traceback (most recent call last):\n  File \"platform\\build-scripts\\books\\rebuild_book2_signed.py\", line 89, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"platform\\build-scripts\\books\\rebuild_book2_signed.py\", line 86, in main\n    build(lessons/EDITION)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"platform\\build-scripts\\books\\assemble_book2_signed.py\", line 51, in build\n    config=validate_inputs(root)\n  File \"platform\\build-scripts\\books\\assemble_book2_signed.py\", line 47, in validate_inputs\n    if not p.resolve().is_relative_to(root.resolve()) or file_record(root,p)!=r:raise ValueError('Stale/unsafe native input: '+r['path'])\n                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Stale/unsafe native input: bronnen/H1/manuscript/2.1.1 Kostenstructuren – paragraaf.md\n"
+  },
+  "physical_page_rejections": [
+    {
+      "left": "650pt",
+      "top": "50pt",
+      "pages": 1,
+      "failure": "page 1: native text outside physical page: Kosten"
+    },
+    {
+      "left": "-200pt",
+      "top": "50pt",
+      "pages": 1,
+      "failure": "page 1: native text outside physical page: Kosten"
+    },
+    {
+      "left": "54pt",
+      "top": "900pt",
+      "pages": 1,
+      "failure": "page 1: native text outside physical page: Kosten"
+    },
+    {
+      "left": "54pt",
+      "top": "-50pt",
+      "pages": 1,
+      "failure": "page 1: native text outside physical page: Kosten"
+    }
+  ]
+}

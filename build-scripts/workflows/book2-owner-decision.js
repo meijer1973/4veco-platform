@@ -65,7 +65,7 @@ function validateEiDecision(meta) {
   for (const [key, value] of Object.entries(expected)) {
     if (!evidence || evidence[key] !== value) failures.push(`H-229-EI-SUPERSESSION semantic decision mismatch: ${key}`);
   }
-  if (meta.semantic_authority?.sha256 !== OUTLINE_HASH) failures.push('H-229-EI-SUPERSESSION semantic outline hash mismatch');
+  if (meta.semantic_authority?.sha256 !== OUTLINE_HASH && !require('./book2-signed-authority').matchesMeta(meta)) failures.push('H-229-EI-SUPERSESSION semantic outline hash mismatch');
   return failures;
 }
 function hasApprovedFrozenRecord(meta, record, binding) {

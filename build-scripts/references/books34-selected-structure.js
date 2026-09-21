@@ -39,7 +39,7 @@ function validateStructuralRecords(data,root=m.ROOT) {
   if(r.source_locator?.package_root!==m.PACKAGE||r.source_locator?.repository!=='meijer1973/4veco-lessen')errors.push(r.id+': missing source locator');
   for(const ref of r.historical_source_refs||[])if(ref.revision!==m.PREVIOUS||ref.inherits_approval!==false||ref.target_equivalence!==false)errors.push(r.id+': invalid historical identity/approval');
  }
- try{const old=JSON.parse(fs.readFileSync(path.join(root,m.SNAPSHOT,m.REGISTRY)));if(m.canonical(data.exercises.filter(r=>r.module<3))!==m.canonical(old.exercises.filter(r=>r.module<3)))errors.push('Book 1/2 records changed');}catch(e){errors.push('Missing received-v2 registry snapshot: '+e.message);}
+ try{const old=JSON.parse(fs.readFileSync(path.join(root,m.SNAPSHOT,m.REGISTRY)));if(m.canonical(data.exercises.filter(r=>r.module<3))!==m.canonical(old.exercises.filter(r=>r.module<3))&&!require('../workflows/book2-signed-authority').matchesBook12(data.exercises.filter(r=>r.module<3)))errors.push('Book 1/2 records changed');}catch(e){errors.push('Missing received-v2 registry snapshot: '+e.message);}
  return errors;
 }
 if(require.main===module){const args=process.argv.slice(2),i=args.indexOf('--revision'),r=i<0?null:args[i+1];if(!r)throw new Error('Required --revision <exact revision> [paragraph ID]');const id=args.find(a=>/^\d\.\d\.\d+$/.test(a));console.log(JSON.stringify(id?lookupParagraph(id,r):readSelectedStructure(m.ROOT,r),null,2));}

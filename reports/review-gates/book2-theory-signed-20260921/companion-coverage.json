@@ -1,0 +1,540 @@
+{
+  "answers": [
+    {
+      "page": 3,
+      "chapter": 1,
+      "local": 1,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 4,
+      "chapter": 1,
+      "local": 2,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 5,
+      "chapter": 1,
+      "local": 3,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 6,
+      "chapter": 1,
+      "local": 4,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 7,
+      "chapter": 1,
+      "local": 5,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 8,
+      "chapter": 1,
+      "local": 6,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 9,
+      "chapter": 1,
+      "local": 7,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 10,
+      "chapter": 1,
+      "local": 8,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 11,
+      "chapter": 1,
+      "local": 9,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 12,
+      "chapter": 1,
+      "local": 10,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 13,
+      "chapter": 1,
+      "local": 11,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 14,
+      "chapter": 1,
+      "local": 12,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 15,
+      "chapter": 1,
+      "local": 13,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 16,
+      "chapter": 1,
+      "local": 14,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 17,
+      "chapter": 1,
+      "local": 15,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 18,
+      "chapter": 1,
+      "local": 16,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 19,
+      "chapter": 1,
+      "local": 17,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 20,
+      "chapter": 1,
+      "local": 18,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 21,
+      "chapter": 1,
+      "local": 19,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 22,
+      "chapter": 1,
+      "local": 20,
+      "pdf_sha256": "ad33b71061a035991e9135902437e581c9e0fd10a0a8c55c4b3c426a2a4fc1a5",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 23,
+      "chapter": 2,
+      "local": 1,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 24,
+      "chapter": 2,
+      "local": 2,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 25,
+      "chapter": 2,
+      "local": 3,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 26,
+      "chapter": 2,
+      "local": 4,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 27,
+      "chapter": 2,
+      "local": 5,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 28,
+      "chapter": 2,
+      "local": 6,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 29,
+      "chapter": 2,
+      "local": 7,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 30,
+      "chapter": 2,
+      "local": 8,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 31,
+      "chapter": 2,
+      "local": 9,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 32,
+      "chapter": 2,
+      "local": 10,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 33,
+      "chapter": 2,
+      "local": 11,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 34,
+      "chapter": 2,
+      "local": 12,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 35,
+      "chapter": 2,
+      "local": 13,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 36,
+      "chapter": 2,
+      "local": 14,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 37,
+      "chapter": 2,
+      "local": 15,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 38,
+      "chapter": 2,
+      "local": 16,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 39,
+      "chapter": 2,
+      "local": 17,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 40,
+      "chapter": 2,
+      "local": 18,
+      "pdf_sha256": "13f46279e5abefd6fdf10e5d257a45029eb9dcc48efc6cee447b1f7293c5126f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 41,
+      "chapter": 3,
+      "local": 1,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 42,
+      "chapter": 3,
+      "local": 2,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 43,
+      "chapter": 3,
+      "local": 3,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 44,
+      "chapter": 3,
+      "local": 4,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 45,
+      "chapter": 3,
+      "local": 5,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 46,
+      "chapter": 3,
+      "local": 6,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 47,
+      "chapter": 3,
+      "local": 7,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 48,
+      "chapter": 3,
+      "local": 8,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 49,
+      "chapter": 3,
+      "local": 9,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 50,
+      "chapter": 3,
+      "local": 10,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 51,
+      "chapter": 3,
+      "local": 11,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 52,
+      "chapter": 3,
+      "local": 12,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 53,
+      "chapter": 3,
+      "local": 13,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 54,
+      "chapter": 3,
+      "local": 14,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 55,
+      "chapter": 3,
+      "local": 15,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 56,
+      "chapter": 3,
+      "local": 16,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 57,
+      "chapter": 3,
+      "local": 17,
+      "pdf_sha256": "2dca9b05fdf703279067aad38263769ecb86601154aebc2116f64f427f8cb43f",
+      "missing": {},
+      "extra": {}
+    }
+  ],
+  "student": [
+    {
+      "page": 42,
+      "pdf_sha256": "040247597ec3d74584d3ca53b0026416f8861b496639f7f02af8fd1b97fe9ce1",
+      "missing": {
+        "hulp": 2,
+        "dan": 1,
+        "deze": 1,
+        "Korte": 1,
+        "Extra": 1,
+        "nodig": 2,
+        "Maak": 1,
+        "eerst": 1,
+        "inoefening.": 1,
+        "Heb": 1,
+        "niet": 1,
+        "Ga": 1,
+        "verder": 1,
+        "oefening.": 1
+      },
+      "extra": {
+        "en": 1,
+        "Startopgaven": 1,
+        "beide": 1,
+        "is": 1,
+        "Normale": 1,
+        "route": 1,
+        "Begeleide": 1,
+        "inoefening": 2,
+        "oefening": 1,
+        "Uitdagende": 1,
+        "minder": 1,
+        "tussenstappen,": 1,
+        "extra": 2,
+        "uitdaging": 1,
+        "Doeloefening": 1,
+        "Denkertje": 1,
+        "Bonusopgave.": 1,
+        "Herhaling": 1,
+        "bij": 2,
+        "routes.": 1,
+        "hoort": 1,
+        "leren": 1,
+        "oefent": 1,
+        "denkstappen": 1,
+        "doet": 1,
+        "steeds": 1,
+        "meer": 1,
+        "zelf.": 1
+      }
+    },
+    {
+      "page": 43,
+      "pdf_sha256": "040247597ec3d74584d3ca53b0026416f8861b496639f7f02af8fd1b97fe9ce1",
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 44,
+      "pdf_sha256": "040247597ec3d74584d3ca53b0026416f8861b496639f7f02af8fd1b97fe9ce1",
+      "missing": {},
+      "extra": {}
+    }
+  ],
+  "teacher": [
+    {
+      "page": 1,
+      "pdf_sha256": "938abc9c9f3835b79f5f89575515fa504c3f6d1bcca114ddf1950c6a0d915664",
+      "text": "4VECO · BOEK 2 · HOOFDSTUK 2.2\nDocenteninformatie\nElasticiteit — zelfstandig bruikbare printeditie\nDit hoofdstuk is opnieuw geschreven voor 4 vwo. De bestaande hoofdstuktekst, voorbeelden en opgaven\nzijn niet als basis gebruikt. De actuele doelopgaven en de auteursrichtlijnen uit de platformrepository\nbepalen wél de inhoudelijke bestemming. De vormgeving sluit aan bij het eerder opgeleverde hoofdstuk 2.1.\nOnderdeel\nLeerlingpagina’s\nKern\nOpening\n1\nPlaats in boek 2; lees- en werkroute.\n2.2.1 Prijselasticiteit\n2–9\nProcenten → Ev → indeling → betekenis en verklaring.\n2.2.2 Elasticiteit en omzet\n10–17\nTO vóór/na; relatieve prijsreactie; grenzen aan advies.\n2.2.3 Inkomen en andere goederen\n18–29\nEi, Ek en één-factor-scenario’s in een vraagfunctie.\n2.2.4 Gemengde opgaven\n30–35\nBronselectie, rekenen, vergelijken en onderbouwd adviseren.\nHoofdstukoverzicht\n36\nEén terugzoekblad met verhoudingen en controles.\nOmvang. De leerlingeditie telt 36 pagina’s, inclusief de opening, theorie, drie volledige uitgewerkte\nvoorbeelden, alle oefeningen en het overzicht. Het afzonderlijke antwoordenboek telt 18 pagina’s. De 38\ngenummerde opgaven zijn verdeeld als 10 + 10 + 11 + 7. Er zijn 13 oorspronkelijke instructieve figuren, naast\nde tabellen.\nGebruik op papier\nLeerlingen werken in een schrift. Zij nemen een tabel over wanneer dat wordt gevraagd. De uitleg, formules,\nhulp, bronnen en voorbeelden staan in het boek; digitaal materiaal is niet nodig. Gebruik een rekenmachine\nen laat tussenuitkomsten ongerond bewaren.\nNormale route: Startopgaven → Begeleide inoefening → Zelfstandige oefening → Doeloefening. Begeleide\ninoefening is voor de meeste leerlingen normaal leren. Uitdagende route: Startopgaven → Zelfstandige\noefening → dezelfde Doeloefening → Bonus, voor wie minder tussenstappen nodig heeft en extra uitdaging\nwil. Herhaling is extra bij beide routes.\nAfdrukken en uitdelen\nDruk de leerlingeditie af op A4 op ware grootte, dubbelzijdig met omslaan aan de lange zijde. De bronnen\nvan StreamPlus staan op pagina 32; de vragen staan ernaast op pagina 33. Plaats vóór het hoofdstuk geen\noneven aantal extra pagina’s als deze spreiding behouden moet blijven. De drie theorie-doeloefeningen zijn\ntelkens op één pagina geplaatst.\nDe antwoorden beginnen per paragraaf opnieuw bij opgave 1, net als de leerlingeditie. De afzonderlijke\nparagraafexports behouden de oorspronkelijke paginanummers zodat verwijzingen blijven werken.\nEconomie · 4 vwo\n1\n"
+    },
+    {
+      "page": 2,
+      "pdf_sha256": "938abc9c9f3835b79f5f89575515fa504c3f6d1bcca114ddf1950c6a0d915664",
+      "text": "Lesroute en lestijd\nBegeleide inoefening is voor de meeste leerlingen een normaal onderdeel van leren. De uitdagende route\nbiedt minder tussenstappen en de bonus, met dezelfde doeloefening. Herhaling is extra bij beide routes. Een\nstartscore bepaalt niet automatisch de route.\nNormale route\nParagraaf\nStart\nBegeleid\nZelfstandig\nDoel\nBonus: uitdagende route\n2.2.1\n1, 2\n3, 4\n5, 6\n7\n8\n2.2.2\n1, 2\n3, 4\n5, 6\n7\n8\n2.2.3\n1, 2\n3, 4, 5\n6, 7\n8\n9\nOpen timingvragen\nDe oude begrotingen selecteerden soms maar een deel van de zelfstandige oefening en lieten begeleide\ninoefening weg. Ze onderbouwen geen volledige 55-minutenroute. Alle tijden hieronder zijn eerdere\nontwerpschattingen, geen metingen.\nParagraaf\nOude selectie zonder begeleiding\nOntbrekende begeleide tijd\n2.2.1\n50 min\neerder 8–15 minuten: samen 58–65 minuten\n2.2.2\n55 min\neerder 8–15 minuten: samen 63–70 minuten\n2.2.3\n55 min\neerder 8–15 minuten of meer: samen 63–70 minuten of meer\nBegroot de volledige normale route op basis van lees-, reken-, teken- en uitlegtijd. Plan aanvullende lestijd;\nschrap geen opgaven of doelbewerkingen. Begroot de bonus afzonderlijk voor de uitdagende route.\nHerhaling blijft aanvullend. Vooral §§2.2.3 en 2.3.3 kunnen twee lessen vragen.\nGemengde paragraaf 2.2.4\nDeze paragraaf heeft geen afzonderlijke begeleide sectie. Werk met 1–4 naar doel 5, met de bestaande\nhoofdstukuitleg als steun. Bonus 6 hoort bij de uitdagende aanpak; de hoofdstukcheck 7 is aanvullend. De\noude geselecteerde lesplanning van 55 minuten was geen begroting van alle gedrukte opgaven of extra\nbegeleiding. De opgaven en doelen blijven behouden.\n4veco / Docenteninformatie\n2.2 Elasticiteit\nEconomie · 4 vwo\n2\n"
+    },
+    {
+      "page": 3,
+      "pdf_sha256": "938abc9c9f3835b79f5f89575515fa504c3f6d1bcca114ddf1950c6a0d915664",
+      "text": "Van leerdoel naar doeloefening\n2.2.1 Prijselasticiteit\nDe doeloefening is opgave 7. Hieronder verwijzen de voorbeeldstappen naar pagina 5. De voorbereiding\nvraagt dezelfde bewerkingen, met andere contexten en overzichtelijkere getallen.\nDoelbewerking\nDoelvraag\nVoorgedaan\nStart / hulp / zelfstandig\nBeide procentveranderingen berekenen; oude\nwaarde als noemer.\n7a\nStappen\n1–2.\n1; 3a–c, 4a–b; 5a, 6a.\nEv mét teken berekenen en rechtstreeks met −1 en\n0 indelen.\n7a–c\nStappen\n2–3.\n2; 3c–d, 4; 5a–b, 6a–b.\nDe relatieve gevoeligheid vergelijken en in woorden\nuitleggen.\n7b–c\nStappen\n2–3.\n2b; 3d, 4c; 5b, 6a.\nEen plausibele prijsgevoeligheidsverklaring geven\nzonder oorzaak te claimen.\n7d\nStap 4.\n3e; 5c. Geen nieuwe\nverklaringsbewerking in de doelvraag.\nDe onafhankelijke oefening bevat ook een prijsdaling. Daardoor kan een leerling het negatieve teken niet\nuitsluitend verbinden aan een daling van Q. Bonus 8 onderzoekt de eenhedeninvariantie van de verhouding.\nOpgaven 9–10 herhalen procenten en vraagfactoren uit boek 1.\n2.2.2 Elasticiteit en omzet\nDe doeloefening is opgave 7. Het uitgewerkte voorbeeld op pagina 12–13 behandelt zowel een inelastische\nals een elastische reactie.\nDoelbewerking\nDoelvraag\nVoorgedaan\nStart / hulp /\nzelfstandig\nOude en nieuwe TO berekenen uit de bijbehorende P en Q.\n7a, 7c\nStappen 1 en 4.\n1; 3a, 4a; 5a, 6a.\nProcentuele omzetverandering berekenen en met Ev verbinden.\n7b, 7d\nStappen 2–4.\n1b; 3b–c, 4a–b; 5a–b.\nDe kleine-veranderingregel onderscheiden van een eindige\nvergelijking.\n7e\nStap 5; theorie p.\n11.\n2a; 4b; 5c en 6a.\nUitleggen waarom omzetgegevens geen winstconclusie dragen.\n7f\nStap 6.\n2b; 3d, 4c; 6b.\nDe voorbereiding houdt prijsrichting, relatieve reactie en omzetrichting uit elkaar. Opgave 6 gebruikt een\nprijsdaling. Bonus 8 laat gelijke omzet zien ondanks een meting van Ev = −0,8. Herhaling 10 toont een\nstijgende omzet én dalende winst met expliciete kostengegevens.\nPapieren start. De docent kan opgave 1 aan het begin van de les laten maken. Dat verandert niet de\nvoorgeschreven drukvolgorde: theorie → uitgewerkt voorbeeld → samenvatting → Startopgaven.\n4veco / Docenteninformatie\n2.2 Elasticiteit\nEconomie · 4 vwo\n3\n"
+    },
+    {
+      "page": 4,
+      "pdf_sha256": "938abc9c9f3835b79f5f89575515fa504c3f6d1bcca114ddf1950c6a0d915664",
+      "text": "Samenhang en voorkennis\n2.2.3 Inkomen, andere prijzen en functies\nDe doeloefening is opgave 8. Het uitgewerkte voorbeeld op pagina 23–24 bevat alle vijf doelbewerkingen;\nhet is niet beperkt tot alleen de eenvoudigste Ei-berekening.\nDoelbewerking\nDoelvraag\nVoorgedaan\nStart / hulp /\nzelfstandig\nEi berekenen; inferieur, normaal en luxe onderscheiden.\n8a–b\nStap 1; normaal via stap 4.\n2a; 3a–b, 4b; 6a en\n7b.\nEk berekenen, beide goederen noemen en relatie indelen.\n8c\nStap 2, positief én\nnegatief.\n2a; 3c, 5a–b; 6b.\nFunctie invullen bij de beginsituatie.\n8d\nStap 3.\n1b; 4a; 7a.\nAlleen Y veranderen; Q, %ΔQ en Ei berekenen; prijzen\ngelijk houden.\n8d\nStap 4.\n1a, 2b; 4b; 7b.\nY terugzetten; alleen Pz veranderen; richting en vaste\nvariabelen noemen.\n8e\nStap 5; terugzetdiagram p.\n22.\n2b; 4c; 7c.\nOpgave 5 confronteert twee tegengestelde kruisverbanden. De gegevens komen uit afzonderlijke\nonderzoeken. De leerling bepaalt de richtingen, maar telt de gemeten procenten niet zomaar op tot een\nbewezen gecombineerd effect. Bonus 9 gaat over twee consumentengroepen, niet over langere\nberekeningen.\n2.2.4 Integreren zonder nieuwe theorie\nDe gemengde doeloefening is opgave 5. Opgave 1 oefent het kiezen van de noemer. Opgave 2 combineert\nEv, omzet en een irrelevant gegeven. Opgave 3 herhaalt Ei, Ek en een inkomensscenario. Opgave 4 oefent\neen advies uit twee bronnen met precies twee niet-bewezen conclusies. Zo verschijnt die antwoordvorm\nniet onverwacht in doelvraag 6. Hoofdstukcheck 7 herneemt alle families; deze is geen nieuwe\ntheorieparagraaf.\nVoorkennis: niet verwarren met bewezen beheersing\nHerkomst\nClassificatie voor deze editie\nBeslissing\nBoek 1: procenten, eenvoudige\nfunctie-invulling en vraagfactoren.\nEerder onderwezen; ophalen vereist.\nStart- en herhalingsopgaven; korte\nrekenuitleg op papier.\nHoofdstuk 2.1: TO en winst.\nEerder onderwezen; ophalen vereist.\n§2.2.2 opgave 1 en herhaling 10; §2.2.3\nopgave 11.\nEv in §2.2.2–3.\nEerder onderwezen; ophalen vereist.\nTeller/noemer en teken expliciet activeren.\nEi, Ek en formele functie-scenario’s bij\nde start van §2.2.3.\nNieuw formeel leren.\nVolledige uitleg en voorbeelden, niet als\nbekende procedure overslaan.\nEerdere losse herkenning van\n‘normaal’ of ‘inferieur’.\nHoogstens kennismaking; geen\nveilige procedurele voorkennis.\nSign-first-classificatie opnieuw\nonderwijzen.\nVoor een concrete klas kan een docent een bewerking als ‘nog niet veilig genoeg om aan te nemen’ markeren\nen extra steun inzetten. Deze editie claimt voor geen enkele leerling dat eerder onderwezen automatisch\nveilig beheerst betekent.\n4veco / Docenteninformatie\n2.2 Elasticiteit\nEconomie · 4 vwo\n4\n"
+    },
+    {
+      "page": 5,
+      "pdf_sha256": "938abc9c9f3835b79f5f89575515fa504c3f6d1bcca114ddf1950c6a0d915664",
+      "text": "Economische precisie en beelden\n1 · Teken, grootte en eenheid blijven afzonderlijk\nBij Ev blijft het teken in de uitkomst staan. Leerlingen vergelijken rechtstreeks met −1 en 0; een afzonderlijke\nabsolute-waardestap is niet verplicht. Bij Ei en Ek heeft het teken een eigen betekenis. Alle elasticiteiten zijn\ndimensieloos; P, Q, inkomen en TO hebben hun eigen eenheden. De teller is steeds een procentuele\nhoeveelheidsverandering, niet een omzetverandering.\n2 · Omzetregel zonder onjuist algemeen voorschrift\nDe kleine-veranderingregel wordt gekoppeld aan de vraag rond de onderzochte situatie. Voor twee gegeven\noude en nieuwe waarden staat de rechtstreekse TO-berekening voorop. Het tegenvoorbeeld op pagina 11\ngebruikt P: 10 → 12 en Q: 100 → 82. Ev = −0,9, maar TO daalt van 1.000 naar 984. Dit is een oorspronkelijk\nrekenvoorbeeld dat de begrenzing uit de doelopgave zichtbaar maakt. Er worden geen afgeleiden of\noptimalisatieregels toegevoegd.\nBij gelijke tegengestelde eindige procenten blijft TO niet automatisch gelijk. De hoofdstukcheck laat\nbijvoorbeeld 1,10 × 0,90 = 0,99 zien. ‘Unitair’ bij de oude-waardemethode mag dus niet worden vertaald als\neen exact gelijkblijvende omzet over elke eindige stap.\n3 · De drie Ei-categorieën blijven die van deze methode\nConform de huidige doelautoriteit: Ei < 0 inferieur; 0 < Ei < 1 normaal; Ei > 1 luxe. De twee grenswaarden\nworden niet van zo’n label voorzien. De tekst zegt bewust ‘in dit boek’. De editie vervangt deze keuze niet\nstilzwijgend door een andere classificatie. Een indeling wordt begrensd tot de onderzochte situatie of groep,\nniet tot een eeuwige eigenschap van een product.\n4 · Functies: eerst invullen, dan één verandering\nDe leerling berekent telkens een volledige beginsituatie, verandert één factor en zet eerdere veranderingen\nterug. Een jaarinkomen blijft een jaarinkomen als de functie dat voorschrijft. Een functiecoëfficiënt wordt\nniet als elasticiteit behandeld. De regionale functie in de StreamPlus-bron heeft haar eigen\nuitgangshoeveelheid; de andere tabel wordt daar niet doorheen gemengd.\n5 · Beelden voeren een inhoudelijke taak uit\nDe procentbalken vergelijken reacties vanaf dezelfde basis. De rekenschema’s tonen teller, noemer en teken.\nDe omzetrechthoeken hebben gelijke asschalen en exact passende oppervlaktes. De tekst verklaart waarom\neen oppervlakte in een P/Q-diagram TO kan zijn, terwijl winst in de TO/TK-grafiek van hoofdstuk 2.1 een\nverticale afstand is. De scenariofiguur begint beide onderzoeken bij dezelfde basis. Het bonusbeeld met prijs,\nQ, inkomen en reclame toont observaties, geen bewezen causale pijlen.\nGrafiekproductie is hier geen doelbewerking. De figuren ondersteunen het begrijpen en lezen; zelfstandig en\nin de doeloefening verdwijnen de rekenhints, niet de benodigde bronnen. Elk bron- of invultabelletje heeft\nbenoemde kolommen en een expliciete taak.\n4veco / Docenteninformatie\n2.2 Elasticiteit\nEconomie · 4 vwo\n5\n"
+    },
+    {
+      "page": 6,
+      "pdf_sha256": "938abc9c9f3835b79f5f89575515fa504c3f6d1bcca114ddf1950c6a0d915664",
+      "text": "Bronbasis, controle en overdracht\nGelezen GitHub-basis, 6 september 2026: platform-main op commit \n96416b6b5bd57094576e9aba0a42d682584ec479. De repositorymaps zijn via de GitHub-connector toegankelijk.\nRechtstreekse raw-downloads waren in de bouwomgeving niet beschikbaar; de relevante broninhoud is via\nde connector gelezen. Er is geen aanwijzing dat deze opgehaalde main-snapshot ouder is dan de genoemde\nintegratie. Niet-gepushte lokale wijzigingen zijn hiermee niet te beoordelen.\nBronpad\nGebruik in dit hoofdstuk\nRESEARCH_AGENT_MAP.md in beide repositories\nToegang, eigenaarschap en bronhiërarchie.\nreferences/authored/book-outlines/book-2-outline.md en\n.meta.json\nPlaats van hoofdstuk 2.2, volgorde, afhankelijkheden en\ngrenzen.\nreferences/authored/course-target-exercises.json\nVier doeloefeningen, doelen, bewerkingen en\npuntwaarden.\nskills/econ-exercise-builder.md\nZeven onderdelen, fading, kernroute, antwoordmodellen\nen bonus.\nskills/econ-textbook-paragraph.md, econ-didactiek.md, economic-\ngraph.md, econ-pdf-builder.md\nProblem-first-uitleg, dual coding, schrijf- en\nproductieregels.\nreferences/authored/\neconomic_mathematical_precision_reference.md\nModelvoorwaarden, eenheden, exacte overeenstemming\ntussen tekst en figuur.\nDe bronregisters in het bronpakket bewaren de exacte paden en beschikbare pins. De vier doelcontexten en\n21 deelvragen zijn woordelijk overgenomen; de lokale controle negeert uitsluitend opmaak en witruimte. De\nregistertabellen zijn afgedrukt. Alleen bronkopjes, leeswijzers, periodeverduidelijkingen en typografie zijn\ntoegevoegd. De contexten en vragen zijn niet vervangen door eigen eenvoudiger doelen.\nWat lokaal is gecontroleerd\nDe reproduceerbare controle in validate.py toetst de oefenvolgorde, nummering, dekking door antwoorden,\ndoelvraagtekst, rekenuitkomsten, functie-scenario’s, teruggezette variabelen, figuurparen, grafiekgeometrie,\npaginalimiet en tekstgrenzen. Het bijgeleverde validation-report.json bevat elk controlepunt en de actuele telling.\nAlle pagina’s van leerling- en antwoordenboek zijn na het renderen visueel bekeken; compacte en grafisch\ngevoelige pagina’s zijn ook afzonderlijk vergroot gecontroleerd.\nWat niet als bewezen wordt geclaimd\nDit is een afgewerkte, lokaal gecontroleerde printeditie, geen gemergde repositoryrelease. Er is geen\nonafhankelijke docent- of leerlingproef uitgevoerd. De 55-minutenbegroting is niet empirisch bevestigd. De\nformele repositoryvalidators, goedkeuringsprocedure en productieholds zijn niet door deze lokale export\nvervangen of afgesloten. De bronstatus candidate_review_ready wordt niet eigenhandig hernoemd.\nVoor opname in de repository\nControleer opnieuw de actuele authority-pins, laat de inhoud en het gerenderde product onafhankelijk\nbeoordelen en doorloop daarna de toepasselijke platformworkflow. Bewerk bronbestanden en bouw\nopnieuw; corrigeer niet alleen een samengestelde PDF. Deze levering wijzigt geen repositorybestanden en\nautoriseert geen merge. De didactische bronnen, nieuwe manuscripten en technische controle zijn in het\nbronpakket bewust van elkaar gescheiden.\n4veco / Docenteninformatie\n2.2 Elasticiteit\nEconomie · 4 vwo\n6\n"
+    }
+  ]
+}

@@ -7,7 +7,7 @@
   "audit_outcome": "VALID_WITH_DERIVED_OUTLINE_REQUIRED",
   "semantic_authority": {
     "path": "references/authored/book-outlines/book-2-outline.md",
-    "sha256": "919c39f64dd212dba37b62902a5bb2e2ce6388c6020a0491e1621017ae2192a1",
+    "sha256": "c68376cfd972139a5518fce92e9a3790b2e52c3c43d03f6b4f13489a4b2694f6",
     "rule": "canonical_human_semantics_live_only_in_markdown",
     "hash_scope": "canonical_utf8_lf_excluding_validated_lifecycle_fields"
   },
@@ -44,17 +44,17 @@
   "authority_sources": [
     {
       "path": "references/owned/course-blueprint-v6-three-year.md",
-      "sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e",
+      "sha256": "f9104a28d669c7f54ab22b72fe5916bcb67830fa9744bb1b4f5deadf46da8ad3",
       "source_kind": "active_three_year_umbrella"
     },
     {
       "path": "references/owned/course-blueprint-v5.md",
-      "sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7",
+      "sha256": "147e0b00c623c1bf716cbf90a83668388cddaf9c89e1849d61e3b6b2d032f453",
       "source_kind": "active_year_1_detail"
     },
     {
       "path": "references/authored/course-target-exercises.json",
-      "sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "sha256": "8a97149472075cc45f395b64374e686a88ea5f5578c0f3fa537906d620816f2c",
       "source_kind": "active_paragraph_target_registry"
     },
     {
@@ -117,13 +117,13 @@
       "id": "2.2.1",
       "kind": "theory",
       "target_status": "candidate_review_ready",
-      "target_record_sha256": "61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288"
+      "target_record_sha256": "cff4ee8de9615cb1fac16bd37fa924ef02e823a170e00d6d71352b144f07e9ad"
     },
     {
       "id": "2.2.2",
       "kind": "theory",
       "target_status": "candidate_review_ready",
-      "target_record_sha256": "8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e"
+      "target_record_sha256": "87f3a71b9fa6e36d553d8e34632e3462dfc7d72db6184d0d06523997050bf534"
     },
     {
       "id": "2.2.3",
@@ -135,7 +135,7 @@
       "id": "2.2.4",
       "kind": "gemengde_opgaven",
       "target_status": "candidate_review_ready",
-      "target_record_sha256": "4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519"
+      "target_record_sha256": "336d6686dd3075ebac55ee86bafc61c5a43ba4176653591ddd3ca952f0ee791e"
     },
     {
       "id": "2.3.1",

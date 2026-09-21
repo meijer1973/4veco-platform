@@ -645,7 +645,73 @@ Before accepting any new paragraph, check the following.
 
 ---
 
-## 15. Repository policy
+## 15. Signed own-price elasticity and reference-page precision
+
+### 15.1 Canonical signed-elasticity procedure
+
+The owner-requested Book 2 revision of 21 September 2026 adopts this teaching
+procedure for ordinary own-price demand. Calculate both percentage changes
+using their **old values** as denominators, then calculate
+`Ev = %ΔQv / %ΔP` **with its sign**. A zero percentage price change makes this
+measured quotient undefined. Keep unrounded values when classifying.
+
+| Signed result | Dutch classification | Interpretation |
+|---|---|---|
+| `−1 < Ev < 0` | Prijsinelastisch | Qv changes proportionally less strongly than P. |
+| `Ev = −1` | Unitair elastisch | Both percentage changes are equally strong. |
+| `Ev < −1` | Prijselastisch | Qv changes proportionally more strongly than P. |
+| `Ev = 0` | Volkomen prijsinelastisch | Qv does not change in this measurement. |
+
+Compare directly with **−1 and 0**. A separate absolute-value calculation and
+`|Ev|` notation are not compulsory and earn no separate point. A voluntarily
+used mathematically equivalent method is not automatically wrong; assess the
+requested calculation, classification and economic interpretation. Ev = −2
+means an opposite percentage response twice as strong; Ev = −0.5 means half
+as strong. Within negative cases, further below zero means a stronger response;
+an unexplained “larger number” is ambiguous.
+
+State the own-price/ceteris-paribus scope. This table does not classify Ei, Ek,
+supply elasticity or positive observed ratios when several factors change.
+A correct ratio alone does not establish causation. Retain the separate Ei/Ek
+sign meanings and the existing income-category convention.
+
+The revenue-direction rule is **local, for small changes**: with `Ev < −1`
+revenue moves oppositely to price; with `−1 < Ev ≤ 0` it moves with price;
+at `Ev = −1` it is approximately unchanged. For given old/new observations,
+calculate `TO = P × Q` before and after. For example, P: 10 → 12 and
+Q: 100 → 82 yield Ev = −0.9 but TO: 1000 → 984 (−1.6%). Do not add the
+percentage changes as an exact revenue calculation or infer profit without costs.
+
+Active goals, rubrics, units, terms, figures and generators follow this section
+through their owning workflows. Preserve official historical questions and
+correction models literally; this convention does not amend a national syllabus.
+Historical reviews retain their original procedure and receive an explicit
+successor reference rather than a retrospective rewrite. Correct internal
+`abs()` arithmetic outside the learner procedure is unaffected.
+
+### 15.2 Reference pages and mathematical contrasts
+
+Use searchable concept headings and put each formula beside its meaning,
+unit and conditions. Contrast easily confused concepts with the same data:
+totals versus averages, all units versus additional units, revenue versus
+profit, offered/demanded versus actually traded quantity, and total surplus
+versus a Pareto improvement. Tables, calculations and figures must describe
+the same model. Preserve approved page allocations and target operations;
+improve hierarchy before shrinking readable type or dropping content.
+
+For Q > 0, break-even TO = TK is equivalent to GO = GTK; with a common
+selling price, P = GTK. Keep continuous and whole feasible quantities distinct.
+For table intervals, use MK = ΔTK/ΔQ and MO = ΔTO/ΔQ with the actual ΔQ;
+an interval average is not automatically the cost of the last individual unit.
+Row profit remains a separate calculation. This does not introduce derivatives
+or formal output optimisation into Book 2 §2.1.3.
+
+Reset previous changes before an independent scenario in a multivariable
+demand function. Identify actual transactions and allocation assumptions before
+calculating surplus. PS is not profit; higher TS alone establishes neither
+fairness nor a feasible Pareto improvement without harm to others.
+
+## 16. Repository policy
 
 When this file conflicts with looser wording elsewhere in the repository, **this file takes precedence** for economic and mathematical precision.
 
