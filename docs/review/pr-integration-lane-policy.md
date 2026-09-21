@@ -227,6 +227,30 @@ longer possible because containment is a live post-merge operation.
 
 ## Cross-Repo Bundle Integration
 
+### Interrupted platform-first integration
+
+If the controller already merged but its intermediate verification interrupted
+the bundle, keep the original authorization and do not merge the lesson directly.
+The trusted local bundle lane supports `--allow-partial-resume` together with
+`--platform-resume-review <json>`. This recovery never reopens or remerges the
+controller. The independent JSON review must bind the original payload, observed
+controller head/merge, current platform main and the complete changed-path set,
+and attest unchanged product files and authority scope. Only reviewed CI/review
+maintenance descendants are permitted; missing, stale or product-changing
+descendants fail closed. The record uses schema_version 1, result PASS or
+PASS WITH FLAGS, path, repository, pr_number, bundle_id,
+reviewed_payload_head_sha, merged_controller_head_sha, merge_commit_sha,
+current_main_sha, changed_paths, product_files_unchanged and
+authority_scope_unchanged.
+
+Supply fresh genuine compatibility with current platform main as both platform
+base and candidate, and the actual lesson main/candidate. Current intermediate
+CI must already be green for those checked-out main commits. The lane rechecks
+authorization lineage, both reviews, branch protection, PR heads and main tips,
+then merges only the lesson at its expected head and verifies final exact-pair
+CI. Dry runs verify existing evidence but never dispatch CI or merge. Failures
+after a merge retain the observed-merge journal.
+
 The required platform `validate-platform` job always represents the state that
 would exist after a platform-first merge: platform candidate head plus lesson
 `main`. It must not substitute a matching lesson branch in the required job.

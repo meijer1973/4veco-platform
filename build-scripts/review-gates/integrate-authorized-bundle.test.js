@@ -5,6 +5,7 @@ const {
   acquirePlatformMainCi,
   generateBundleIntegrationReadiness,
   integrateBundle,
+  resumePlatformFirst,
   INTEGRATION_CONTEXT,
   PLATFORM_REPO,
   refreshPlatformPrCi,
@@ -33,6 +34,106 @@ const lessonBase = '3'.repeat(40);
 const lessonHead = '4'.repeat(40);
 const platformMerge = '5'.repeat(40);
 const lessonMerge = '6'.repeat(40);
+
+describe('platform-first residual recovery', () => {
+  function recovery() {
+    const record = authorization(); record.merge_order = 'platform-first';
+    const main = '7'.repeat(40);
+    const controller = pr(PLATFORM_REPO, 140, platformHead, { state: 'MERGED', mergeCommit: { oid: platformMerge } });
+    let lesson = pr(LESSON_REPO, 34, lessonHead);
+    let lessonMain = lessonBase;
+    const review = { schema_version: 1, result: 'PASS', path: 'independent-recovery.md',
+      repository: PLATFORM_REPO, pr_number: 140, bundle_id: record.bundle_id,
+      reviewed_payload_head_sha: platformHead, merged_controller_head_sha: platformHead,
+      merge_commit_sha: platformMerge, current_main_sha: main,
+      product_files_unchanged: true, authority_scope_unchanged: true, changed_paths: ['.gitattributes'] };
+    const deps = {
+      fetchCompareStatus: jest.fn(() => ({ status: 'ahead' })),
+      fetchComparePaths: jest.fn(() => []),
+      fetchInterveningCommits: jest.fn((repo, from, to) => from === platformMerge && to === main
+        ? [{ changed_paths: ['.gitattributes'] }] : []),
+      summarizeLineage: jest.fn(() => ({ authorization_inherited: true, failures: [] })),
+      fetchReadinessComment: jest.fn(() => ({ ok: true, route: 'READY_FOR_HUMAN_REVIEW' })),
+      fetchReviewThreadState: jest.fn(() => ({ available: true, unresolved_count: 0, requested_changes_count: 0 })),
+      fetchPr: jest.fn(repo => repo === PLATFORM_REPO ? controller : lesson),
+      validatePrState: jest.fn(value => value.state === 'OPEN' ? [] : ['pr_not_open']),
+      recomputeCompatibility: jest.fn(() => ({ ok: true, permitted_merge_orders: ['platform-first'] })),
+      findMainWorkflowRun: jest.fn(() => ({ databaseId: 100, conclusion: 'success' })),
+      verifyPlatformCiRun: jest.fn(() => ({ ok: true })),
+      fetchPlatformBranchProtectionSummary: jest.fn(() => ({ ok: true })),
+      fetchMainSha: jest.fn(repo => repo === PLATFORM_REPO ? main : lessonMain),
+      latestWorkflowRunDatabaseId: jest.fn(() => 100),
+      mergePr: jest.fn(() => { lessonMain = lessonMerge; lesson = { ...lesson, state: 'MERGED', mergeCommit: { oid: lessonMerge } }; return { merged: true }; }),
+      fetchMergedPr: jest.fn(() => lesson),
+      validatePlatformCiRange: jest.fn(() => ({ ok: true })),
+      waitForPlatformMainCi: jest.fn(() => ({ ok: true, run: { databaseId: 101 } })),
+    };
+    const options = { allowPartialResume: true, platformResumeReview: review };
+    const input = { record, platformPr: controller, platformMainSha: main, lessonMainSha: lessonBase, lessonMember: record.members[0] };
+    const journal = { completed_merges: [], merge_invocations: [] };
+    return { deps, options, input, review, journal, run: () => resumePlatformFirst(input, options, deps, journal) };
+  }
+  test('merges only the remaining lesson and checks actual final coordinates', () => {
+    const x = recovery(); const result = x.run();
+    expect(result.phase).toBe('merged_bundle');
+    expect(x.deps.mergePr).toHaveBeenCalledTimes(1);
+    expect(x.deps.mergePr).toHaveBeenCalledWith(LESSON_REPO, 34, lessonHead, x.options);
+    expect(x.deps.recomputeCompatibility).toHaveBeenCalledWith(x.input.record, {
+      platform_base_sha: x.input.platformMainSha, platform_candidate_sha: x.input.platformMainSha,
+      lesson_base_sha: lessonBase, lesson_candidate_sha: lessonHead,
+    });
+    expect(x.deps.waitForPlatformMainCi).toHaveBeenCalledWith(x.input.platformMainSha, expect.objectContaining({ expectedLessonSha: lessonMerge, minDatabaseId: 100 }));
+  });
+  test('dry run verifies real intermediate evidence without dispatch or merge', () => {
+    const x = recovery(); x.options.dryRun = true;
+    expect(x.run().phase).toBe('validated_platform_first_resume');
+    expect(x.deps.verifyPlatformCiRun).toHaveBeenCalled();
+    expect(x.deps.mergePr).not.toHaveBeenCalled();
+    expect(x.deps.waitForPlatformMainCi).not.toHaveBeenCalled();
+  });
+  test.each([
+    ['explicit opt-in', x => { x.options.allowPartialResume = false; }],
+    ['stale main review', x => { x.review.current_main_sha = platformBase; }],
+    ['changed authority', x => { x.review.authority_scope_unchanged = false; }],
+    ['product delta', x => { x.review.changed_paths = ['engines/a.js']; x.deps.fetchInterveningCommits.mockReturnValue([{ changed_paths: ['engines/a.js'] }]); }],
+    ['truncated file list', x => { x.deps.fetchInterveningCommits.mockReturnValue([{ changed_paths: Array(300).fill('.gitattributes') }]); }],
+    ['invalid lineage', x => { x.deps.summarizeLineage.mockReturnValue({ authorization_inherited: false }); }],
+    ['missing containment', x => { x.deps.fetchCompareStatus.mockReturnValue({ status: 'diverged' }); }],
+    ['unresolved review', x => { x.deps.fetchReviewThreadState.mockReturnValue({ available: true, unresolved_count: 1 }); }],
+    ['stale compatibility', x => { x.deps.recomputeCompatibility.mockReturnValue({ ok: false }); }],
+    ['failed intermediate', x => { x.deps.verifyPlatformCiRun.mockReturnValue({ ok: false }); }],
+    ['moving main', x => { x.deps.fetchMainSha.mockReturnValue(platformBase); }],
+    ['protection changed', x => { x.deps.fetchPlatformBranchProtectionSummary.mockReturnValue({ ok: false }); }],
+  ])('refuses %s before mutation', (_name, mutate) => {
+    const x = recovery(); mutate(x); expect(x.run().ok).toBe(false); expect(x.deps.mergePr).not.toHaveBeenCalled();
+  });
+  test('a postmerge failure retains both observed merges', () => {
+    const x = recovery(); x.deps.waitForPlatformMainCi.mockReturnValue({ ok: false, failure: 'bad_artifact', run: { databaseId: 101 } });
+    expect(x.run().ok).toBe(false); expect(x.journal.completed_merges).toHaveLength(2);
+    expect(x.journal.completed_merges[0].resumed).toBe(true);
+    expect(x.journal.completed_merges[1].merge_commit).toBe(lessonMerge);
+  });
+  test('an uncertain merge invocation remains journaled for verification', () => {
+    const x = recovery(); x.deps.mergePr.mockImplementation(() => { throw Error('network interruption'); });
+    expect(x.run).toThrow('network interruption');
+    expect(x.journal.merge_invocations).toHaveLength(1);
+    expect(x.journal.merge_invocations[0]).toMatchObject({ repo: LESSON_REPO, outcome: 'unknown' });
+    expect(x.journal.completed_merges[0].resumed).toBe(true);
+  });
+  test.each([
+    ['head', { headRefOid: '8'.repeat(40) }],
+    ['base', { baseRefName: 'other' }],
+  ])('rejects a different observed lesson %s while retaining the actual merge', (_name, changes) => {
+    const x = recovery();
+    x.deps.fetchMergedPr.mockReturnValue(pr(LESSON_REPO, 34, lessonHead, {
+      state: 'MERGED', mergeCommit: { oid: lessonMerge }, ...changes,
+    }));
+    expect(x.run()).toMatchObject({ ok: false, failure: 'lesson_merge_identity_changed' });
+    expect(x.journal.completed_merges).toHaveLength(2);
+    expect(x.journal.completed_merges[1]).toMatchObject({ merge_commit: lessonMerge, merged_pr: changes });
+    expect(x.deps.waitForPlatformMainCi).not.toHaveBeenCalled();
+  });
+});
 
 function refreshResultFixture({
   previousPlatformHeadSha = platformBase,
